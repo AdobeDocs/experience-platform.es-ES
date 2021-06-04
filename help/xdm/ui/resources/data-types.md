@@ -6,17 +6,16 @@ topic-legacy: tutorial
 type: Tutorial
 description: Obtenga información sobre cómo crear y editar tipos de datos en la interfaz de usuario del Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: bcacf2ebe99c3e397cfd5ceaf418a51bec74e659
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1161'
 ht-degree: 0%
 
 ---
 
 # Crear y editar tipos de datos mediante la interfaz de usuario
 
-En el Modelo de datos de experiencia (XDM), los tipos de datos se utilizan como campos de referencia en clases o grupos de campos de esquema del mismo modo que los campos literales básicos; la diferencia clave es que los tipos de datos pueden definir varios subcampos. Aunque son similares a los grupos de campos en que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque se pueden incluir en cualquier parte de la estructura del esquema, mientras que los grupos de campos solo se pueden agregar en el nivel raíz.
+En Experience Data Model (XDM), los tipos de datos campos reutilizables que contienen varios subcampos. Aunque son similares a los grupos de campos de esquema en que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque se pueden incluir en cualquier parte de la estructura de esquema, mientras que los grupos de campos solo se pueden agregar en el nivel raíz.
 
 Adobe Experience Platform proporciona muchos tipos de datos estándar que se pueden usar para cubrir una amplia variedad de casos de uso comunes de administración de experiencias. Sin embargo, también puede definir sus propios tipos de datos personalizados para satisfacer sus necesidades comerciales únicas.
 
@@ -30,7 +29,7 @@ Aunque no es necesario para esta guía, se recomienda seguir también el tutoria
 
 ## Abra [!DNL Schema Editor] para un tipo de datos
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo [!UICONTROL Schemas] y, a continuación, seleccione la pestaña **[!UICONTROL Data types]** . Se muestra una lista de los tipos de datos disponibles, incluidos los definidos por el Adobe, así como los creados por su organización.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo [!UICONTROL Esquemas] y, a continuación, seleccione la pestaña **[!UICONTROL Tipos de datos]**. Se muestra una lista de los tipos de datos disponibles, incluidos los definidos por el Adobe y los creados por su organización.
 
 ![](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -55,7 +54,11 @@ A partir de aquí, puede avanzar a la [siguiente sección](#add-fields) para emp
 
 ### Editar un tipo de datos existente
 
-Solo se pueden editar los tipos de datos personalizados definidos por su organización. Para reducir la lista mostrada, seleccione el icono de filtro (![Icono de filtro](../../images/ui/resources/data-types/filter.png)) para mostrar los controles de filtrado basados en [!UICONTROL Owner]. Seleccione **[!UICONTROL Customer]** para mostrar solo los tipos de datos personalizados que pertenecen a su organización.
+>[!NOTE]
+>
+>Una vez que se utiliza un tipo de datos existente en un esquema que se ha habilitado para su uso en el Perfil del cliente en tiempo real, solo se pueden realizar cambios no destructivos en ese tipo de datos a partir de entonces. Consulte las [reglas de evolución de esquema](../../schema/composition.md#evolution) para obtener más información.
+
+Solo se pueden editar los tipos de datos personalizados definidos por su organización. Para reducir la lista mostrada, seleccione el icono de filtro (![Icono de filtro](../../images/ui/resources/data-types/filter.png)) para mostrar los controles para filtrar según [!UICONTROL Propietario]. Seleccione **[!UICONTROL Customer]** para mostrar solo los tipos de datos personalizados que pertenecen a su organización.
 
 Seleccione el tipo de datos que desea editar en la lista para abrir el carril derecho, mostrando los detalles del tipo de datos. Seleccione el nombre del tipo de datos en el carril derecho para abrir su estructura en [!DNL Schema Editor].
 
@@ -69,7 +72,7 @@ Para empezar a añadir campos al tipo de datos, seleccione el icono **plus (+)**
 
 Utilice los controles del carril derecho para configurar los detalles del nuevo campo. Consulte la guía sobre la [definición de campos en la interfaz de usuario](../fields/overview.md#define) para ver los pasos específicos sobre cómo configurar y agregar el campo al tipo de datos.
 
-El tipo de datos Restaurant requiere un campo de cadena para representar el nombre del restaurante. Como tal, el [!UICONTROL Field name] se establece como &quot;nombre&quot; y el [!UICONTROL Type] se establece como &quot;[!UICONTROL String]&quot;. Seleccione **[!UICONTROL Apply]** para aplicar los cambios al campo.
+El tipo de datos Restaurant requiere un campo de cadena para representar el nombre del restaurante. Como tal, el [!UICONTROL Nombre de campo] se establece como &quot;nombre&quot; y el [!UICONTROL Tipo] se establece como &quot;[!UICONTROL Cadena]&quot;. Seleccione **[!UICONTROL Apply]** para aplicar los cambios al campo.
 
 ![](../../images/ui/resources/data-types/name-field.png)
 
@@ -77,13 +80,13 @@ Siga agregando más campos al tipo de datos según sea necesario. El tipo de dat
 
 ![](../../images/ui/resources/data-types/more-fields.png)
 
-Además de los campos básicos, también puede anidar tipos de datos adicionales dentro del tipo de datos personalizado. Por ejemplo, el tipo de datos Restaurante requiere un campo que represente la dirección física de la propiedad. En esta situación, puede agregar un nuevo campo &quot;dirección&quot; al que se asigna el tipo de datos estándar &quot;[!UICONTROL Postal address]&quot;.
+Además de los campos básicos, también puede anidar tipos de datos adicionales dentro del tipo de datos personalizado. Por ejemplo, el tipo de datos Restaurante requiere un campo que represente la dirección física de la propiedad. En esta situación, puede agregar un nuevo campo &quot;dirección&quot; al que se asigna el tipo de datos estándar &quot;[!UICONTROL Dirección postal]&quot;.
 
 ![](../../images/ui/resources/data-types/address-field.png)
 
 Esto demuestra la flexibilidad de los tipos de datos en la descripción de los datos: los tipos de datos pueden emplear campos que también son tipos de datos, que pueden contener otros tipos de datos, etc. Esto le permite abstraer y reutilizar patrones de datos comunes en todos los esquemas XDM, lo que facilita la representación de estructuras de datos complejas.
 
-Una vez que haya terminado de agregar campos al tipo de datos, seleccione **[!UICONTROL Save]** para guardar los cambios y agregar el tipo de datos al [!DNL Schema Library].
+Una vez que haya terminado de agregar campos al tipo de datos, seleccione **[!UICONTROL Guardar]** para guardar los cambios y agregar el tipo de datos al [!DNL Schema Library].
 
 ## Añadir el tipo de datos a una clase o grupo de campos
 
@@ -95,7 +98,7 @@ Comience por seguir los pasos relacionados con [la adición de un campo a una cl
 
 Cuando se crea un campo de tipo de objeto con varios subcampos en el [!DNL Schema Editor], se puede convertir ese campo en un tipo de datos para poder utilizar la misma estructura de campo en una clase o grupo de campos diferente.
 
-Para convertir un campo de tipo objeto en un tipo de datos, seleccione el campo en el lienzo. Antes de convertir el campo, asegúrese de que **[!UICONTROL Display name]** sea descriptivo de los datos que contendrá el objeto, ya que este será el nombre del tipo de datos. Cuando esté listo para convertir el campo , seleccione **[!UICONTROL Convert to new data type]** en el carril derecho.
+Para convertir un campo de tipo objeto en un tipo de datos, seleccione el campo en el lienzo. Antes de convertir el campo, asegúrese de que **[!UICONTROL Display name]** sea descriptivo de los datos que contendrá el objeto, ya que se convertirá en el nombre del tipo de datos. Cuando esté listo para convertir el campo, seleccione **[!UICONTROL Convert to new data type]** en el carril derecho.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
@@ -105,6 +108,6 @@ El lienzo actualiza el tipo de datos del campo de &quot;[!UICONTROL Object]&quot
 
 ## Pasos siguientes
 
-Esta guía explica cómo crear y editar tipos de datos mediante la interfaz de usuario de Platform. Para obtener más información sobre las capacidades del espacio de trabajo [!UICONTROL Schemas], consulte la [[!UICONTROL Schemas] descripción general del espacio de trabajo](../overview.md).
+Esta guía explica cómo crear y editar tipos de datos mediante la interfaz de usuario de Platform. Para obtener más información sobre las capacidades del espacio de trabajo [!UICONTROL schemas] , consulte la información general del espacio de trabajo [[!UICONTROL Esquemas]](../overview.md).
 
 Para aprender a administrar los tipos de datos mediante la API [!DNL Schema Registry], consulte la [guía de extremo de los tipos de datos](../../api/data-types.md).
