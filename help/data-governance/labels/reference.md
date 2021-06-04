@@ -5,10 +5,9 @@ title: Glosario de etiquetas de uso de datos
 topic-legacy: labels
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform actualmente.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1983'
 ht-degree: 2%
 
 ---
@@ -24,7 +23,7 @@ Este documento describe las etiquetas de uso de datos principales que proporcion
 Las etiquetas del contrato &quot;C&quot; se utilizan para categorizar los datos que tienen obligaciones contractuales o que están relacionados con las políticas de control de datos de su organización.
 
 | Etiqueta | Definición |
-|---|---|
+| --- | --- |
 | **C1** | Los datos solo se pueden exportar desde Adobe Experience Cloud en un formulario agregado sin incluir identificadores individuales o de dispositivo. [Más información...](#c1) |
 | **C2** | Los datos no se pueden exportar a un tercero. [Más información...](#c2) |
 | **C3** | Los datos no se pueden combinar ni utilizar de otro modo con información directamente identificable. [Más información...](#c3) |
@@ -35,13 +34,14 @@ Las etiquetas del contrato &quot;C&quot; se utilizan para categorizar los datos 
 | **C8** | Los datos no se pueden usar para medir los sitios web ni las aplicaciones de su organización. [Más información...](#c8) |
 | **C9** | Los datos no se pueden utilizar en flujos de trabajo de ciencia de datos. [Más información...](#c9) |
 | **C10** | Los datos no se pueden usar para la activación de identidad vinculada. [Más información...](#c10) |
+| **C11** | Los datos no se pueden compartir con los socios de coincidencia de segmentos. [Más información...](#c11) |
 
 ## Etiquetas de identidad
 
 Las etiquetas &quot;I&quot; de identidad se utilizan para categorizar los datos que pueden identificar a una persona específica o ponerse en contacto con ella.
 
 | Etiqueta | Definición |
-|---|---|
+| --- | --- |
 | **I1** | Datos directamente identificables que pueden identificar a una persona específica o ponerse en contacto con ella, en lugar de con un dispositivo. |
 | **I2** | Datos de identificación indirecta que se pueden utilizar en combinación con otros datos para identificar a una persona concreta o ponerse en contacto con ella. |
 
@@ -52,7 +52,7 @@ Las etiquetas &quot;S&quot; confidenciales se utilizan para categorizar los dato
 Un tipo de datos que puede considerar confidencial puede ser de diferentes tipos de datos geográficos; sin embargo, esta categoría no se limita a los datos geográficos.
 
 | Etiqueta | Definición |
-|---|---|
+| --- | --- |
 | **S1** | Datos que especifican la latitud y la longitud que se pueden usar para determinar la ubicación precisa de un dispositivo. |
 | **S2** | Datos que se pueden utilizar para determinar un área de geovalla definida a grandes rasgos. |
 
@@ -127,3 +127,7 @@ Algunos contratos incluyen prohibiciones explícitas sobre el uso de datos para 
 #### C10 {#c10}
 
 Algunas políticas de uso de datos restringen el uso de datos de identidad vinculados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
+
+#### C11 {#c11}
+
+La coincidencia de segmentos de Adobe Experience Platform le permite hacer coincidir segmentos de origen con preferencias de privacidad y consentimiento, lo que facilita la generación de perfiles enriquecidos y perspectivas descendentes. La etiqueta C11 denota datos que no deben utilizarse en procesos [!DNL Segment Match]. Después de determinar qué conjuntos de datos o campos desea excluir de la coincidencia de segmentos y de agregar la etiqueta C11 en consecuencia, el flujo de trabajo de la coincidencia de segmentos aplica automáticamente la etiqueta.
