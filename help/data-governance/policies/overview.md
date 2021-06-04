@@ -5,10 +5,9 @@ title: Información general sobre las políticas de uso de datos
 topic-legacy: policies
 description: Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -79,11 +78,12 @@ En la tabla siguiente se describen las principales acciones de marketing que el 
 | Acción de marketing | Descripción |
 | --- | --- |
 | Analytics  | Acción que utiliza datos para fines analíticos, como medición, análisis e informes sobre el uso que hacen los clientes de los sitios o aplicaciones de su organización. |
-| Combinación con PII | Acción que combina cualquier información de identificación personal (PII) con datos anónimos. Los contratos para datos procedentes de redes de publicidad, servidores de publicidad y proveedores de datos de terceros suelen incluir prohibiciones contractuales específicas sobre el uso de dichos datos con datos directamente identificables. |
+| Combinación con datos directamente identificables | Acción que combina cualquier información de identificación personal (PII) con datos anónimos. Los contratos para datos procedentes de redes de publicidad, servidores de publicidad y proveedores de datos de terceros suelen incluir prohibiciones contractuales específicas sobre el uso de dichos datos con datos directamente identificables. |
 | Segmentación entre sitios | Acción que utiliza datos para la segmentación de anuncios entre sitios. La combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio, se denomina datos entre sitios. Los datos entre sitios suelen recopilarse y procesarse para hacer inferencias sobre los intereses de los usuarios. |
 | Ciencia de datos | Acción que utiliza datos para flujos de trabajo de ciencia de datos. Algunos contratos incluyen prohibiciones explícitas sobre el uso de datos para la ciencia de datos. A veces se expresan en términos que prohíben el uso de datos para inteligencia artificial (IA), aprendizaje automático (ML) o modelado. |
 | Targeting de correo electrónico | Acción que utiliza datos en campañas de segmentación de correo electrónico. |
 | Exportar a terceros | Acción que exporta datos a procesadores y entidades que no tienen relaciones directas con clientes. Muchos proveedores de datos tienen cláusulas en los contratos que prohíben la exportación de datos desde donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales a menudo restringen la transferencia de datos que recibe de ellos. |
 | Publicidad en el sitio | Acción que usa datos para anuncios en el sitio, incluida la selección y entrega de anuncios en los sitios web o aplicaciones de su organización, o para medir la entrega y efectividad de dichos anuncios. |
 | Personalización en el sitio | Acción que utiliza datos para la personalización de contenido en el sitio. La personalización del sitio es cualquier dato que se utiliza para hacer inferencias sobre los intereses de los usuarios y se utiliza para seleccionar qué contenido o anuncios se proporcionan en función de esas inferencias. |
+| Coincidencia de segmentos | Acción que utiliza datos para la coincidencia de segmentos de Adobe Experience Platform, lo que permite que dos o más usuarios de Platform intercambien datos de segmentos. Al habilitar las políticas que hacen referencia a esta acción, puede restringir los datos que se usan para la coincidencia de segmentos. Por ejemplo, si la política principal &quot;Restringir el uso compartido de datos&quot; está habilitada, los datos con una etiqueta [C11](../labels/reference.md#c11) no se pueden usar para la coincidencia de segmentos. |
 | Personalización de identidad única | Acción que requiere que una sola identidad se utilice con fines de personalización en lugar de vincular identidades de varias fuentes. |
