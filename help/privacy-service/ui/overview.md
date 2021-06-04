@@ -5,10 +5,9 @@ title: Información general sobre la IU de Privacy Service
 topic-legacy: UI guide
 description: Empiece a utilizar la interfaz de usuario del Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones del Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b87861b7482976e6eda1dea22cfe954af9f6aecc
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '175'
 ht-degree: 1%
 
 ---
@@ -19,9 +18,11 @@ Adobe Experience Platform [!DNL Privacy Service] proporciona una API y una inter
 
 ## Inicie sesión en la interfaz de usuario de [!DNL Privacy Service]
 
-Debe tener un Adobe ID para autenticarse en la interfaz de usuario [!DNL Privacy Service]. Además, debe tener privilegios de administrador del sistema dentro de la organización con la que está asociado Adobe ID.
+>[!IMPORTANT]
+>
+>Debe tener un Adobe ID para autenticarse en la interfaz de usuario [!DNL Privacy Service]. Además, debe tener privilegios de administrador del sistema dentro de su organización IMS.
 
-Seleccione **[!UICONTROL Sign In with an Adobe ID]** e introduzca sus credenciales de Adobe ID cuando se le solicite.
+Seleccione **[!UICONTROL Iniciar sesión con un Adobe ID]** e introduzca sus credenciales de Adobe ID cuando se le solicite.
 
 Una vez que haya iniciado sesión, seleccione **[!UICONTROL Privacy UI]**.
 
@@ -29,7 +30,7 @@ Una vez que haya iniciado sesión, seleccione **[!UICONTROL Privacy UI]**.
 
 ### Inicio de sesión desde [!DNL Experience Platform]
 
-Si tiene acceso a la IU de Adobe Experience Platform, también puede acceder a la IU [!DNL Privacy Service] a través de la pestaña **[!UICONTROL Requests]** en el panel de navegación izquierdo.
+Si tiene acceso a la IU de Adobe Experience Platform, también puede acceder a la IU [!DNL Privacy Service] a través de la pestaña **[!UICONTROL Solicitudes]** en el panel de navegación izquierdo.
 
 ![](../images/ui-overview/platform.png)
 
