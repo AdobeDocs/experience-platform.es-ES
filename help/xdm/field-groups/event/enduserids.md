@@ -5,7 +5,7 @@ title: Grupo de campos de esquema de detalles de ID de usuario final
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles del ID de usuario final .
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 >
 >Los nombres de varios grupos de campos de esquema han cambiado. Para obtener más información, consulte el documento [field group name updates](../name-updates.md) .
 
-[!UICONTROL ID de usuario final ] Detalla un grupo de campos de esquema estándar para la  [[!DNL XDM ExperienceEvent] clase](../../classes/individual-profile.md), que se utiliza para describir la información de identidad de una persona en varias aplicaciones de Adobe. El grupo de campos proporciona un objeto `endUserIDs` de nivel raíz, que contiene un campo `_experience` de solo lectura cuyos valores se actualizan automáticamente a medida que se introducen datos.
+[!UICONTROL ID de usuario final ] Detalla un grupo de campos de esquema estándar para la  [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md), que se utiliza para describir la información de identidad de una persona en varias aplicaciones de Adobe. El grupo de campos proporciona un objeto `endUserIDs` de nivel raíz, que contiene un campo `_experience` de solo lectura cuyos valores se actualizan automáticamente a medida que se introducen datos.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
