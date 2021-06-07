@@ -4,20 +4,27 @@ title: Modelo de datos del sector de servicios financieros ERD
 topic-legacy: overview
 description: Vea un diagrama de relaciones de entidades (ERD) que describe un modelo de datos estandarizado para el sector bancario, de servicios financieros y de seguros (BFSI). Este modelo de datos es compatible con Experience Data Model (XDM) para su uso en Adobe Experience Platform.
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Financial services] modelo de datos de la industria ERD
+# [!UICONTROL Modelo de datos del sector de los ] servicios financieros ERD
 
-El siguiente diagrama de relaciones de entidades (ERD) representa un modelo de datos estandarizado para el sector bancario, de servicios financieros y de seguros (BFSI).
+El siguiente diagrama de relaciones de entidades (ERD) representa un modelo de datos estandarizado para el sector bancario, de servicios financieros y de seguros (BFSI). El ERD se presenta intencionalmente de forma desnormalizada y teniendo en cuenta cómo se almacenan los datos en Adobe Experience Platform.
+
+Utilice la siguiente leyenda para interpretar este ERD:
+
+* Cada entidad mostrada en se basa en una clase [Experience Data Model (XDM) subyacente](../composition.md#class).
+* Para una entidad determinada, cada fila marcada en **bold** representa un grupo de campos o un tipo de datos, con los campos relevantes que proporciona enumerados a continuación en texto sin negrita.
+* Los campos más importantes de una entidad determinada se resaltan en rojo.
+* Todas las propiedades que podrían utilizarse para identificar clientes individuales se marcan como &quot;identidad&quot;, con una de estas propiedades marcadas como &quot;identidad principal&quot;.
+* Las relaciones de entidad se marcan como no dependientes, ya que los eventos basados en cookies a menudo no pueden determinar la persona o el individuo que realizó la transacción.
+
+![](../../images/industries/financial.png)
 
 >[!NOTE]
 >
->Para obtener más información sobre los modelos de datos del sector y cómo interpretar este ERD, consulte la [información general del modelo de datos del sector](./overview.md).
-
-![](../../images/industries/financial.png)
+>La entidad Evento de experiencia incluye un campo &quot;_ID&quot;, que representa el atributo de identificador único (`_id`) proporcionado por la clase ExperienceEvent XDM. Consulte el documento de referencia en [XDM ExperienceEvent](../../classes/experienceevent.md) para obtener más información sobre lo que se espera para este valor.
