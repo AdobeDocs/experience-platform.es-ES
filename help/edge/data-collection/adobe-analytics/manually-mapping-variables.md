@@ -4,10 +4,10 @@ description: Obtenga información sobre cómo asignar manualmente variables a Ad
 seo-description: Asignación manual de variables a Adobe Analytics mediante reglas de procesamiento con el SDK web
 keywords: adobe analytics;analytics;variables;asignación de variables;asignar variables;datos de contexto;datos de contexto;reglas de procesamiento;reglas;xdm;esquema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 17%
+source-wordcount: '395'
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Web SDK] puede asignar ciertas variables automá
 
 Para datos XDM que no se asignan automáticamente a [!DNL Analytics], puede utilizar [datos de contexto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html) para que coincidan con su [esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). A continuación, se puede asignar a [!DNL Analytics] utilizando [reglas de procesamiento](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) para rellenar variables [!DNL Analytics].
 
-Además, puede utilizar un conjunto predeterminado de acciones y listas de productos para enviar o recuperar datos con el SDK web de Adobe Experience Platform. Para ello, consulte [Productos](https://experienceleague.adobe.com/docs/experience-platform/edge/implement/commerce.html).
+Además, puede utilizar un conjunto predeterminado de acciones y listas de productos para enviar o recuperar datos con el SDK web de Adobe Experience Platform. Para ello, consulte [Recopilación de información de comercio y producto](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 
 ## Datos de contexto
 
