@@ -4,11 +4,10 @@ title: Información general sobre los modelos de datos del sector
 topic-legacy: overview
 description: Obtenga información sobre los modelos de datos estandarizados para varias verticales del sector que se pueden construir con componentes estándar del Modelo de datos de experiencia (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 0%
+source-wordcount: '353'
+ht-degree: 1%
 
 ---
 
@@ -35,23 +34,11 @@ También se recomienda revisar la [guía de prácticas recomendadas de modelado 
 
 ## Modelo de datos del sector ERD {#erds}
 
-Los modelos verticales del sector representados por los ERD que figuran a continuación se crean intencionadamente de manera desnormalizada y teniendo en cuenta cómo se almacenan los datos en la Plataforma.
-
-Para un ERD determinado, cada entidad mostrada en se basa en una clase XDM subyacente. Para una entidad determinada, cada fila marcada en **bold** representa un grupo de campos o un tipo de datos, con los campos relevantes que proporciona enumerados a continuación en texto sin negrita. Los campos más importantes de una entidad determinada se resaltan en rojo.
-
->[!NOTE]
->
->Algunas entidades pueden incluir un campo &quot;_ID&quot;. Representa el identificador único (`_id`) que Platform asigna automáticamente a las entidades de evento o perfil cuando se incorporan. Sin embargo, puede elegir utilizar sus propios valores de ID únicos para este campo si lo desea.
-
-Todas las propiedades que podrían utilizarse para identificar clientes individuales se marcan como &quot;identidad&quot;, con una de estas propiedades marcadas como &quot;identidad principal&quot;.
-
-Las relaciones de entidad se marcan como no dependientes, ya que los eventos basados en cookies a menudo no pueden determinar la persona o el individuo que realizó la transacción.
-
 Los ERD se proporcionan para las siguientes verticales industriales:
 
-* [[!UICONTROL Retail]](./retail.md)
-* [[!UICONTROL Financial services]](./financial.md)
-* [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
+* [[!UICONTROL Comercial]](./retail.md)
+* [[!UICONTROL Servicios financieros]](./financial.md)
+* [[!UICONTROL Viajes y hospitalidad]](./travel-hospitality.md)
 
 ## Pasos siguientes
 
