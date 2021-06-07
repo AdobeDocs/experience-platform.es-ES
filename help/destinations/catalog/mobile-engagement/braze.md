@@ -2,14 +2,13 @@
 keywords: móvil; brasil; mensajería;
 title: Conexión con el Brazo
 description: Braze es una completa plataforma de participación del cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les encantan.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
+source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '953'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) Conexión [!DNL Braze]
 
@@ -41,7 +40,7 @@ Como especialista en marketing, quiero segmentar usuarios en un destino de parti
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Google Ad Manager] admite la activación de identidades descritas en la tabla siguiente.
+[!DNL Braze] admite la activación de identidades descritas en la tabla siguiente.
 
 | Identidad de Target | Descripción | Consideraciones |
 |---|---|---|
@@ -64,19 +63,19 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DN
 >
 >![Activar destino de Brazo](../../assets/catalog/mobile-engagement/braze/activate.png)
 
-En el paso [!UICONTROL Account], debe proporcionar el token de cuenta [!DNL Braze]. Esta es su clave [!DNL Braze] [!DNL API]. Puede encontrar instrucciones detalladas sobre cómo obtener su clave [!DNL API] aquí: [Información general sobre la clave de API de REST](https://www.braze.com/docs/api/api_key/). Introduzca el token y haga clic en **[!UICONTROL Connect to destination]**.
+En el paso [!UICONTROL Cuenta], debe proporcionar el token de cuenta [!DNL Braze]. Esta es su clave [!DNL Braze] [!DNL API]. Puede encontrar instrucciones detalladas sobre cómo obtener su clave [!DNL API] aquí: [Información general sobre la clave de API de REST](https://www.braze.com/docs/api/api_key/). Introduzca el token y haga clic en **[!UICONTROL Connect to destination]**.
 
 ![Paso de cuenta de destino de Brazo](../../assets/catalog/mobile-engagement/braze/account.png)
 
-Haga clic en **[!UICONTROL Next]**. En el paso [!UICONTROL Authentication], debe introducir los detalles de conexión [!DNL Braze]:
-* **[!UICONTROL Name]**: introduzca un nombre por el que reconozca este destino en el futuro.
-* **[!UICONTROL Description]**: escriba una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL Endpoint Instance]**: pregunte a su  [!DNL Braze] representante qué instancia de extremo debe utilizar.
-* **[!UICONTROL Marketing action]**: las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
+Haga clic en **[!UICONTROL Siguiente]**. En el paso [!UICONTROL Authentication] , debe introducir los detalles de conexión [!DNL Braze]:
+* **[!UICONTROL Nombre]**: introduzca un nombre por el que reconozca este destino en el futuro.
+* **[!UICONTROL Descripción]**: escriba una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL Instancia de extremo]**: pregunte a su  [!DNL Braze] representante qué instancia de extremo debe utilizar.
+* **[!UICONTROL Acción de marketing]**: las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
 ![Paso de autenticación de Brazo](../../assets/catalog/mobile-engagement/braze/authentication.png)
 
-Haga clic en **[!UICONTROL Create destination]**. Se ha creado el destino. Puede hacer clic en **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante, o puede seleccionar **[!UICONTROL Next]** para continuar con el flujo de trabajo y seleccionar segmentos para activarlos. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
+Haga clic en **[!UICONTROL Crear destino]**. Se ha creado el destino. Puede hacer clic en **[!UICONTROL Guardar y salir]** si desea activar los segmentos más adelante, o puede seleccionar **[!UICONTROL Siguiente]** para continuar con el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
 
 ## Activar segmentos {#activate-segments}
 
@@ -99,29 +98,29 @@ En la sección [!UICONTROL Source Field] , haga clic en el botón de flecha situ
 ![Asignación de origen de destino de Brazo](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 En la ventana [!UICONTROL Select source field], puede elegir entre dos categorías de campos XDM:
-* [!UICONTROL Select attributes]: utilice esta opción para asignar un campo específico del esquema XDM a un  [!DNL Braze] atributo.
+* [!UICONTROL Seleccionar atributos]: utilice esta opción para asignar un campo específico del esquema XDM a un  [!DNL Braze] atributo.
 
 ![Atributo de origen de asignación de destino de Brazo](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Select identity namespace]: Utilice esta opción para asignar un área de nombres de  [!DNL Platform] identidad a un área de  [!DNL Braze] nombres.
+* [!UICONTROL Seleccionar área de nombres de identidad]: Utilice esta opción para asignar un área de nombres de  [!DNL Platform] identidad a un área de  [!DNL Braze] nombres.
 
 ![Espacio de nombres de origen de asignación de destino de Brazo](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Elija el campo de origen y haga clic en **[!UICONTROL Select]**.
+Elija el campo de origen y haga clic en **[!UICONTROL Seleccionar]**.
 
-En la sección [!UICONTROL Target Field] , haga clic en el icono de asignación a la derecha del campo .
+En la sección [!UICONTROL Target Field] , haga clic en el icono de asignación a la derecha del campo.
 
 ![Asignación de destino de Brazo](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-En la ventana [!UICONTROL Select target field] , puede elegir entre tres categorías de campos de objetivo:
-* [!UICONTROL Select attributes]: Utilice esta opción para asignar los atributos XDM a  [!DNL Braze] atributos estándar.
-* [!UICONTROL Select identity namespace]: Utilice esta opción para asignar áreas de nombres de  [!DNL Platform] identidad a espacios de nombres de  [!DNL Braze] identidad.
-* [!UICONTROL Select custom attributes]: Utilice esta opción para asignar atributos XDM a  [!DNL Braze] atributos personalizados que haya definido en la  [!DNL Braze] cuenta.
+En la ventana [!UICONTROL Select target field] , puede elegir entre tres categorías de campos de destino:
+* [!UICONTROL Seleccionar atributos]: Utilice esta opción para asignar los atributos XDM a  [!DNL Braze] atributos estándar.
+* [!UICONTROL Seleccionar área de nombres de identidad]: Utilice esta opción para asignar áreas de nombres de  [!DNL Platform] identidad a espacios de nombres de  [!DNL Braze] identidad.
+* [!UICONTROL Seleccione atributos] personalizados: Utilice esta opción para asignar atributos XDM a  [!DNL Braze] atributos personalizados que haya definido en la  [!DNL Braze] cuenta.
 * También puede utilizar esta opción para cambiar el nombre de los atributos XDM existentes a [!DNL Braze]. Por ejemplo, si se asigna un atributo `lastName` XDM a un atributo `Last_Name` personalizado en [!DNL Braze], se creará el atributo `Last_Name` en [!DNL Braze], si no existe, y se le asignará el atributo `lastName` XDM.
 
 ![Campos de asignación de destino de Brazo](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Elija el campo de destino y haga clic en **[!UICONTROL Select]**.
+Elija el campo de destino y haga clic en **[!UICONTROL Seleccionar]**.
 
 Ahora debería ver la asignación de campos en la lista .
 
@@ -149,4 +148,3 @@ Para verificar si los datos se han exportado correctamente al destino [!DNL Braz
 ## Administración y uso de datos {#data-usage-governance}
 
 Todos los destinos [!DNL Adobe Experience Platform] cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, consulte [Información general sobre el control de datos](../../../data-governance/home.md).
-
