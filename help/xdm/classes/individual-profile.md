@@ -5,9 +5,9 @@ title: Clase de perfil individual XDM
 topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ La propia clase [!DNL XDM Individual Profile] proporciona varios valores generad
 | Propiedad | Descripción |
 | --- | --- |
 | `_repo` | Un objeto que contiene los siguientes campos [!UICONTROL DateTime]: <ul><li>`createDate`: La fecha y la hora en que se creó el recurso en el almacén de datos, como cuando se introdujeron por primera vez los datos.</li><li>`modifyDate`: Fecha y hora de la última modificación del recurso.</li></ul> |
-| `_id` | Identificador único del registro. Este campo se utiliza para rastrear la exclusividad de un registro individual, evitar la duplicación de datos y buscar ese registro en servicios descendentes.<br><br>Es importante distinguir que este campo  **no** presenta una identidad relacionada con una persona individual, sino más bien el registro de los datos en sí. Los datos de identidad relacionados con una persona deben relegarse a [campos de identidad](../schema/composition.md#identity) en su lugar. |
+| `_id` | Identificador de cadena único para el registro. Este campo se utiliza para rastrear la exclusividad de un registro individual, evitar la duplicación de datos y buscar ese registro en servicios descendentes. En algunos casos, `_id` puede ser un [identificador único universal (UUID)](https://tools.ietf.org/html/rfc4122) o [identificador único global (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Si transmite datos desde una conexión de origen o realiza la ingesta directamente desde un archivo de parquet, debe generar este valor concatenando una combinación determinada de campos que hagan que el registro sea único, como un ID principal, una marca de tiempo, un tipo de registro, etc. El valor concatenado debe ser una cadena con formato `uri-reference`, lo que significa que se deben eliminar los dos caracteres. Después, el valor concatenado debe tener un cifrado hash con SHA-256 u otro algoritmo de su elección.<br><br>Es importante distinguir que  **este campo no representa una identidad relacionada con una persona** individual, sino el registro de los datos en sí. Los datos de identidad relacionados con una persona deben relegarse a [campos de identidad](../schema/composition.md#identity) proporcionados por grupos de campos compatibles en su lugar. |
 | `createdByBatchID` | El ID del lote ingestado que provocó que se creara el registro. |
 | `modifiedByBatchID` | ID del último lote ingestado que provocó que se actualizara el registro. |
 | `personID` | Un identificador único para la persona a la que se relaciona este registro. Este campo no representa necesariamente una identidad relacionada con la persona a menos que también esté designado como [campo de identidad](../schema/composition.md#identity). |
