@@ -5,7 +5,7 @@ title: Grupo de campos de esquema Detalles del entorno
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles del entorno de ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 >
 >Los nombres de varios grupos de campos de esquema han cambiado. Para obtener más información, consulte el documento [field group name updates](../name-updates.md) .
 
-[!UICONTROL Environment ] Detail es un grupo de campos de esquema estándar para el  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) clasificado que captura información relacionada con los detalles de entorno relacionados con un Evento de experiencia, como detalles del dispositivo, información del explorador, hora local y otra información geográfica.
+[!UICONTROL Environment ] Detail es un grupo de campos de esquema estándar para el  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) clasificado que captura información relacionada con los detalles de entorno relacionados con un Evento de experiencia, como detalles del dispositivo, información del explorador, hora local y otra información geográfica.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
