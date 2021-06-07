@@ -5,7 +5,7 @@ title: Tipo de datos de detalles de página web
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos del Modelo de datos de experiencia (XDM) de la página web.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!UICONTROL Los ] detalles de la página web son un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe los detalles sobre una página web que acaba de cargarse y visualizarse, tal como lo registró un ExperienceEvent.
 
-El tipo de datos está pensado para detalles de página completos y cargas de página iniciales de aplicaciones web de una sola página (SPA). Para las interacciones que se producen en una página cargada que no déclencheur una nueva carga de página, consulte el tipo de datos [web interaction](./web-interactions.md) .
+El tipo de datos está pensado para detalles de página completos y cargas de página iniciales de aplicaciones web de una sola página (SPA). Para las interacciones que se producen en una página cargada que no déclencheur una nueva carga de página, consulte el tipo de datos [web interaction](./web-interaction.md) .
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
