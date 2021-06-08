@@ -5,10 +5,9 @@ title: Tutorial de Data Science Workspace
 topic-legacy: Walkthrough
 description: Este documento proporciona un tutorial para Adobe Experience Platform Data Science Workspace. Específicamente, el flujo de trabajo general que un científico de datos debe llevar a cabo para resolver un problema usando el aprendizaje automático.
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7d98340e7949aadc744513415c4fc7469efd2403
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1695'
 ht-degree: 0%
 
 ---
@@ -39,13 +38,13 @@ Esta descripción general refleja los pasos que un científico de datos debe seg
 
 ### Portátiles en [!DNL Data Science Workspace]
 
-En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Notebooks]** en la pestaña **[!UICONTROL Data Science]** para que vaya a la página de información general [!UICONTROL Notebooks]. En esta página, seleccione la pestaña [!DNL JupyterLab] para iniciar el entorno [!DNL JupyterLab]. La página de aterrizaje predeterminada para [!DNL JupyterLab] es **[!UICONTROL Launcher]**.
+En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Notebooks]** desde la pestaña **[!UICONTROL Data Science]** para que se muestre en la página de información general [!UICONTROL Notebooks]. En esta página, seleccione la pestaña [!DNL JupyterLab] para iniciar el entorno [!DNL JupyterLab]. La página de aterrizaje predeterminada para [!DNL JupyterLab] es **[!UICONTROL Launcher]**.
 
 ![](./images/walkthrough/notebooks.png)
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-Este tutorial utiliza [!DNL Python] 3 en [!DNL JupyterLab Notebooks] para mostrar cómo acceder a los datos y explorarlos. En la página Lanzador se proporcionan muestras de blocs de notas. El bloc de notas de ejemplo **[!UICONTROL Retail Sales]** se utiliza en los ejemplos que se proporcionan a continuación.
+Este tutorial utiliza [!DNL Python] 3 en [!DNL JupyterLab Notebooks] para mostrar cómo acceder a los datos y explorarlos. En la página Lanzador se proporcionan muestras de blocs de notas. El bloc de notas de muestra **[!UICONTROL Retail Sales]** se utiliza en los ejemplos que se proporcionan a continuación.
 
 ### Configuración {#setup}
 
@@ -220,4 +219,4 @@ Este documento abarcaba un flujo de trabajo general de científicos de datos par
 - A continuación, se usa ingeniería de características para realizar modificaciones en el conjunto de datos comercial.
 - Por último, cree modelos de los datos y seleccione qué modelo es el de mejor rendimiento para predecir ventas futuras.
 
-Una vez que esté listo, comience leyendo la [guía del usuario de JupyterLab](./jupyterlab/overview.md) para obtener una descripción general rápida de los blocs de notas en Adobe Experience Platform Data Science Workspace. Además, si le interesa conocer los modelos y las fórmulas, comience leyendo el tutorial [retail sales schema and dataset](./models-recipes/create-retails-sales-dataset.md) . Este tutorial le prepara para tutoriales posteriores de Data Science Workspace que se pueden ver en la página de tutoriales [Data Science Workspace](../tutorials/data-science-workspace.md).
+Una vez que esté listo, comience leyendo la [guía del usuario de JupyterLab](./jupyterlab/overview.md) para obtener una descripción general rápida de los blocs de notas en Adobe Experience Platform Data Science Workspace. Además, si le interesa conocer los modelos y las fórmulas, comience leyendo el tutorial [retail sales schema and dataset](./models-recipes/create-retails-sales-dataset.md) .
