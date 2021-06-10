@@ -5,7 +5,7 @@ title: Apéndice de la API del Registro de Esquemas
 description: Este documento proporciona información complementaria relacionada con el trabajo con la API del Registro de esquemas.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Puede filtrar los resultados utilizando el parámetro `property` , que se utiliz
 | `<=` | Filtra si la propiedad es menor o igual que el valor proporcionado. | `property=version<=5` |
 | `>=` | Filtra por si la propiedad es buena o igual al valor proporcionado. | `property=version>=5` |
 | `~` | Filtra si la propiedad coincide con una expresión regular proporcionada. | `property=title~test$` |
-| (Ninguna) | Al indicar solo el nombre de propiedad, solo se devuelven las entradas en las que existe la propiedad. | `property=title` |
+| (Ninguno) | Al indicar solo el nombre de propiedad, solo se devuelven las entradas en las que existe la propiedad. | `property=title` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -76,7 +76,7 @@ A continuación se muestra una comparación en paralelo que muestra los campos r
   <th>Modo de compatibilidad</th>
   <tr>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "xdm:birthDate": {
               "title": "Fecha de nacimiento",
@@ -97,7 +97,7 @@ A continuación se muestra una comparación en paralelo que muestra los campos r
   </pre>
   </td>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "birthDate": {
               "title": "Fecha de nacimiento",
