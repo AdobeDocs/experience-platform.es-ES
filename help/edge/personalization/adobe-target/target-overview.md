@@ -3,10 +3,10 @@ title: Uso de Adobe Target con el SDK web de Platform
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 202a77e4f9e8c7d5515ea0a5004b1c339f1d58ba
+source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 3%
+source-wordcount: '918'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,7 @@ Las siguientes funciones se han probado y actualmente son compatibles con [!DNL 
 * [Actividades de Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Actividades de segmentación de experiencias](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Pruebas multivariable (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Actividades de Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Informes de impresión y conversión de Target nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [Compatibilidad con VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -176,13 +177,42 @@ alloy("sendEvent", {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30
+        "profile.age": 30,
+	"entity.id" : "123",
+	"entity.genre" : "Drama"
       }
     }
   }
 }) 
 .then(console.log);
 ```
+
+## Solicitar recomendaciones
+
+La siguiente tabla enumera los atributos [!DNL Recommendations] y si cada uno es compatible a través de [!DNL Platform Web SDK]:
+
+| Categoría | Atributo | Estado de asistencia |
+| --- | --- | --- |
+| Recommendations: atributos de entidad predeterminados | entity.id | Admitido |
+|  | entity.name | Admitido |
+|  | entity.categoryId | Admitido |
+|  | entity.pageUrl | Admitido |
+|  | entity.thumbnailUrl | Admitido |
+|  | entity.message | Admitido |
+|  | entity.value | Admitido |
+|  | entity.inventory | Admitido |
+|  | entity.brand | Admitido |
+|  | entity.margin | Admitido |
+|  | entity.event.detailsOnly | Admitido |
+| Recommendations: atributos de entidad personalizados | entity.yourCustomAttributeName | Admitido |
+| Recommendations: parámetros de mbox/página reservados | Excludedids | Admitido |
+|  | cartIds | Admitido |
+|  | productPurchasedId | Admitido |
+| Página o categoría de elemento para la afinidad de la categoría | user.categoryId | Admitido |
+
+## Depuración
+
+mboxTrace y mboxDebug ya no se utilizan. Utilice [[!DNL Platform Web SDK] depuración](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
 
 ## Terminología
 
