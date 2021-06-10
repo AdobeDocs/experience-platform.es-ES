@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
+source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2688'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,11 @@ En el flujo de trabajo **[!UICONTROL Activate destination]** , en la página **[
 ![segmentos a destino](../assets/ui/activate-destinations/email-select-segments.png)
 
 ##  Paso de asignación {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Aplicar transformación"
+>abstract="Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform los hash automáticamente en la activación."
 
 Se aplica a: destinos sociales y destino publicitario de Google Customer Match
 
@@ -239,6 +244,12 @@ Las exportaciones de archivos variarán de las siguientes maneras, en función d
 
 ### Atributos obligatorios {#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatorykey"
+>title="Acerca de los atributos obligatorios"
+>abstract="Seleccione los atributos de esquema XDM que deben incluir todos los perfiles exportados. Los perfiles sin la clave obligatoria no se exportan al destino. Al no seleccionar una clave obligatoria, se exportan todos los perfiles cualificados independientemente de sus atributos."
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Más información en la documentación"
+
 Puede marcar los atributos como obligatorios para asegurarse de que [!DNL Platform] exporta solo los perfiles que incluyen el atributo específico. Como resultado, se puede utilizar como una forma adicional de filtrado. Marcar un atributo como obligatorio es **no** obligatorio.
 
 Al no seleccionar un atributo obligatorio, se exportan todos los perfiles cualificados independientemente de sus atributos.
@@ -246,6 +257,12 @@ Al no seleccionar un atributo obligatorio, se exportan todos los perfiles cualif
 Se recomienda que uno de los atributos sea un [identificador único](../../destinations/catalog/email-marketing/overview.md#identity) del esquema. Para obtener más información sobre los atributos obligatorios, consulte la sección de identidad en la documentación [Destinos de marketing por correo electrónico](../../destinations/catalog/email-marketing/overview.md#identity) .
 
 ### Claves de deduplicación {#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationkey"
+>title="Acerca de las claves de deduplicación"
+>abstract="Elimine varios registros del mismo perfil en los archivos de exportación seleccionando una clave de deduplicación. Seleccione un solo espacio de nombres o hasta dos atributos de esquema XDM como clave de deduplicación. Si no se selecciona una clave de deduplicación, es posible que se dupliquen entradas de perfil en los archivos de exportación."
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Más información en la documentación"
 
 >[!IMPORTANT]
 >
