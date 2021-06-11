@@ -5,10 +5,9 @@ title: Vistas previas y estimaciones de puntos de conexión de API
 topic-legacy: developer guide
 description: A medida que se desarrolla la definición del segmento, puede utilizar las herramientas de estimación y vista previa de Adobe Experience Platform para ver la información de resumen y garantizar que está aislando la audiencia esperada.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a5cc688357e4750dee73baf3fc9af02a9f2e49e3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '978'
 ht-degree: 2%
 
 ---
@@ -25,7 +24,7 @@ A medida que desarrolla una definición de segmento, puede utilizar las herramie
 >
 >Para acceder a métricas similares relacionadas con los datos del perfil del cliente en tiempo real, como el número total de fragmentos de perfil y perfiles combinados dentro de áreas de nombres específicas o el Almacenamiento de datos de perfil en su conjunto, consulte la [guía de extremo de vista previa del perfil (vista previa del estado de muestra)](../../profile/api/preview-sample-status.md), que forma parte de la guía para desarrolladores de la API de perfil.
 
-## Primeros pasos
+## Introducción
 
 Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
@@ -75,7 +74,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
     {
         "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
         "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile"
+        "predicateModel": "_xdm.context.profile",
+        "graphType": "none"
     }'
 ```
 
@@ -84,6 +84,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateExpression` | La expresión PQL por la que se consultan los datos. |
 | `predicateType` | El tipo de predicado para la expresión de consulta en `predicateExpression`. Actualmente, el único valor aceptado para esta propiedad es `pql/text`. |
 | `predicateModel` | Nombre de la clase de esquema [!DNL Experience Data Model] (XDM) en la que se basan los datos de perfil. |
+| `graphType` | El tipo de gráfico desde el que desea obtener el clúster. Los valores admitidos son `none` (no realiza la vinculación de identidad) y `pdg` (realiza la vinculación de identidad en función del gráfico de identidad privado). |
 
 **Respuesta**
 
