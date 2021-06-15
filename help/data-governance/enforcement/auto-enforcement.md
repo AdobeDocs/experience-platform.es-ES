@@ -5,9 +5,9 @@ title: Aplicación automática de directivas
 topic-legacy: guide
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar segmentos en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: 59edc19267913e5156caaa49d01a687d04cf1c6f
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Esta guía requiere una comprensión práctica de los servicios de la plataforma
 * [Administración de datos de Adobe Experience Platform](../home.md): El marco mediante el cual Platform exige el cumplimiento de las normas de uso de datos mediante el uso de etiquetas y políticas.
 * [Perfil](../../profile/home.md) del cliente en tiempo real: Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md): Motor de segmentación dentro de  [!DNL Platform] utilizado para crear segmentos de audiencia a partir de perfiles de clientes en función de los comportamientos y atributos de los clientes.
-* [Destinos](../../destinations/home.md): Los destinos son integraciones prediseñadas con aplicaciones de uso común que permiten la activación perfecta de datos de Platform para campañas de marketing multicanal, campañas de correo electrónico, publicidad de destino y mucho más.
+* [Destinos](../../destinations/home.md): Los destinos son integraciones prediseñadas con aplicaciones de uso común que permiten la activación sin problemas de datos desde Platform para campañas de marketing multicanal, campañas de correo electrónico, publicidad de destino, etc.
 
 ## Flujo de aplicación {#flow}
 
@@ -65,6 +65,12 @@ Cada etapa del cronograma anterior representa una entidad que puede contribuir a
 | Combinar directiva | Las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directiva si las políticas de combinación están configuradas de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Para obtener más información, consulte [merge policy overview](../../profile/merge-policies/overview.md) . |
 | Segmento | Las reglas de segmentos definen qué atributos deben incluirse en los perfiles de cliente. Dependiendo de los campos que incluya una definición de segmento, el segmento heredará cualquier etiqueta de uso aplicada para esos campos. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas heredadas están restringidas por las políticas aplicables del destino de destino según su caso de uso de marketing. |
 | Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una política de uso de datos. En otras palabras, el caso de uso de marketing que defina para un destino determina qué políticas de uso de datos son aplicables a ese destino. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas de uso están restringidas por las políticas aplicables del destino de destino. |
+
+>[!IMPORTANT]
+>
+>Algunas políticas de uso de datos pueden especificar dos o más etiquetas con una relación AND. Por ejemplo, una directiva podría restringir una acción de marketing si las etiquetas `C1` Y `C2` están presentes, pero no restringe la misma acción si solo está presente una de esas etiquetas.
+>
+>En cuanto a la aplicación automática, el marco de control de datos no considera la activación de segmentos independientes en un destino como una combinación de datos. Por lo tanto, la directiva de ejemplo `C1 AND C2` se aplica **NOT** si estas etiquetas se incluyen en segmentos separados. En su lugar, esta política solo se aplica cuando ambas etiquetas están presentes en el mismo segmento tras la activación.
 
 Cuando se producen infracciones de directiva, los mensajes resultantes que aparecen en la interfaz de usuario proporcionan herramientas útiles para explorar el linaje de datos de contribución de la infracción para ayudar a resolver el problema. Más información en la siguiente sección.
 
