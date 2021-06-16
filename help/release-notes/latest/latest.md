@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
+source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1306'
 ht-degree: 3%
 
 ---
@@ -82,7 +82,6 @@ Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherente
 
 | Función | Descripción |
 | ------- | ----------- |
-| Combinar actualizaciones del flujo de trabajo de directivas | Al crear y actualizar políticas de combinación en la interfaz de usuario, los usuarios ahora pueden obtener una vista previa de 20 perfiles de muestra basados en el esquema de unión. Esto permite a los usuarios obtener una vista previa del aspecto que tendrán los perfiles de cliente antes de guardar las configuraciones de directivas de combinación. Para obtener más información, consulte la [guía de interfaz de usuario de políticas de combinación](../../profile/merge-policies/ui-guide.md). |
 | Informe de superposición de conjunto de datos | El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del almacén de perfiles al exponer los conjuntos de datos que contribuyen en mayor medida a la audiencia a la que se puede dirigir. Además de proporcionar perspectivas sobre los datos de perfil, este informe ayuda a los usuarios a realizar acciones para optimizar el uso de licencias, como establecer un límite para la vida útil de ciertos datos. Para obtener más información, siga el tutorial sobre [generación del informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md). |
 
 Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos [!DNL Profile], lea en primer lugar la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
