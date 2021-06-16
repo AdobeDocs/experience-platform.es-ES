@@ -5,10 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '2066'
 ht-degree: 1%
 
 ---
@@ -229,6 +228,34 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 **Parámetros**
 
 - `IF EXISTS`: Si se especifica esto, no se genera ninguna excepción si la tabla no  **** contiene ningún texto.
+
+## SOLTAR BASE DE DATOS
+
+El comando `DROP DATABASE` descarta una base de datos existente.
+
+```sql
+DROP DATABASE [IF EXISTS] db_name
+```
+
+**Parámetros**
+
+- `IF EXISTS`: Si se especifica esto, no se genera ninguna excepción si la base de datos no  **** contiene ninguna.
+
+## ESQUEMA DE COLOCACIÓN
+
+El comando `DROP SCHEMA` coloca un esquema existente.
+
+```sql
+DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
+```
+
+**Parámetros**
+
+- `IF EXISTS`: Si se especifica esto, no se genera ninguna excepción si el esquema no  **** contiene ninguna.
+
+- `RESTRICT`: Valor predeterminado para el modo . Si se especifica esto, el esquema solo se perderá si **no** contiene ninguna tabla.
+
+- `CASCADE`: Si se especifica esto, el esquema se perderá junto con todas las tablas presentes en el esquema.
 
 ## CREAR VISTA
 
