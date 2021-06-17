@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de la API de administración de entornos aislados
 topic-legacy: developer guide
 description: El extremo /sandboxes de la API de Sandbox le permite administrar entornos limitados en Adobe Experience Platform mediante programación.
-source-git-commit: f84898a87a8a86783220af7f74e17f464a780918
+source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1440'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Los entornos limitados de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a su entorno de producción. El extremo `/sandboxes` de la API [!DNL Sandbox] le permite administrar mediante programación entornos limitados en Platform.
 
-## Primeros pasos
+## Introducción
 
 El extremo de API utilizado en esta guía forma parte de la [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
@@ -348,11 +348,7 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) con los detalles del ent
 
 ## Restablecer un simulador para pruebas {#reset}
 
->[!IMPORTANT]
->
->No se puede restablecer el entorno limitado de producción predeterminado si Adobe Analytics también está utilizando el gráfico de identidad alojado en él para la función [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o si Adobe Audience Manager también está utilizando el gráfico de identidad alojado en él para la función [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) .
-
-Los entornos limitados de desarrollo tienen una función de &quot;restablecimiento de fábrica&quot; que elimina todos los recursos no predeterminados de un entorno limitado. Puede restablecer un simulador para pruebas realizando una solicitud de PUT que incluya el `name` del simulador para pruebas en la ruta de solicitud.
+Los entornos limitados tienen una función de &quot;restablecimiento de fábrica&quot; que elimina todos los recursos no predeterminados de un entorno limitado. Puede restablecer un simulador para pruebas realizando una solicitud de PUT que incluya el `name` del simulador para pruebas en la ruta de solicitud.
 
 **Formato de API**
 
@@ -363,6 +359,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Parámetro | Descripción |
 | --- | --- |
 | `{SANDBOX_NAME}` | La propiedad `name` del simulador de pruebas que desea restablecer. |
+| `validationOnly` | Un parámetro opcional que permite realizar una comprobación previa de la operación de restablecimiento del simulador para pruebas sin realizar la solicitud real. Establezca este parámetro en `validationOnly=true` para comprobar si el simulador de pruebas que va a restablecer contiene datos de uso compartido de segmentos, Adobe Analytics o Adobe Audience Manager. |
 
 **Solicitud**
 
@@ -370,7 +367,7 @@ La siguiente solicitud restablece un simulador de pruebas denominado &quot;acme-
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -386,6 +383,10 @@ curl -X PUT \
 
 **Respuesta**
 
+>[!NOTE]
+>
+>Una vez que se restablece un simulador para pruebas, el sistema tarda unos 30 segundos en aprovisionar.
+
 Una respuesta correcta devuelve los detalles del entorno limitado actualizado, mostrando que su `state` está &quot;restableciendo&quot;.
 
 ```json
@@ -399,18 +400,76 @@ Una respuesta correcta devuelve los detalles del entorno limitado actualizado, m
 }
 ```
 
->[!NOTE]
->
->Una vez que se restablece un simulador para pruebas, el sistema tarda unos 30 segundos en aprovisionar. Una vez aprovisionado, el `state` del entorno limitado se convierte en &quot;activo&quot; o &quot;fallido&quot;.
+El entorno limitado de producción predeterminado y los entornos limitados de producción creados por el usuario no se pueden restablecer si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Analytics para la función [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Audience Manager para la función [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
 
-La siguiente tabla contiene posibles excepciones que podrían impedir que se restablezca un simulador para pruebas:
+A continuación se muestra una lista de posibles excepciones que podrían impedir que se restablezca un simulador para pruebas:
 
-| Código de error | Descripción |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+Puede restablecer un simulador para pruebas de producción que se utilice para el uso compartido de segmentos bidireccionales con [!DNL Audience Manager] o [!DNL Audience Core Service] agregando el parámetro `ignoreWarnings` a su solicitud.
+
+**Formato de API**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
+```
+
+| Parámetro | Descripción |
 | --- | --- |
-| `2074-400` | No se puede restablecer este simulador para pruebas porque Adobe Analytics también está utilizando el gráfico de identidad alojado en este simulador para la función Análisis entre dispositivos (CDA). |
-| `2075-400` | Este simulador para pruebas no se puede restablecer porque Adobe Audience Manager también está utilizando el gráfico de identidad alojado en este simulador para la función Destinos basados en personas (PBD). |
-| `2076-400` | Este simulador para pruebas no se puede restablecer porque Adobe Audience Manager también está utilizando el gráfico de identidad alojado en este simulador para la función Destinos basados en personas (PBD), así como Adobe Analytics para la función Análisis entre dispositivos (CDA). |
-| `2077-400` | Advertencia: Sandbox `{SANDBOX_NAME}` se utiliza para el uso compartido de segmentos bidireccional con Adobe Audience Manager o el servicio principal de audiencia. |
+| `{SANDBOX_NAME}` | La propiedad `name` del simulador de pruebas que desea restablecer. |
+| `ignoreWarnings` | Un parámetro opcional que le permite omitir la comprobación de validación y forzar el restablecimiento de un simulador para pruebas de producción que se utiliza para el uso compartido de segmentos bidireccionales con [!DNL Audience Manager] o [!DNL Audience Core Service]. Este parámetro no se puede aplicar a un entorno limitado de producción predeterminado. |
+
+**Solicitud**
+
+La siguiente solicitud restablece un simulador de pruebas de producción denominado &quot;acme&quot;.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve los detalles del entorno limitado actualizado, mostrando que su `state` está &quot;restableciendo&quot;.
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## Eliminación de un simulador para pruebas {#delete}
 
@@ -433,14 +492,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Parámetro | Descripción |
 | --- | --- |
 | `{SANDBOX_NAME}` | El `name` del simulador de pruebas que desea eliminar. |
+| `validationOnly` | Un parámetro opcional que permite realizar una comprobación previa de la operación de eliminación del simulador para pruebas sin realizar la solicitud real. Establezca este parámetro en `validationOnly=true` para comprobar si el simulador de pruebas que va a restablecer contiene datos de uso compartido de segmentos, Adobe Analytics o Adobe Audience Manager. |
+| `ignoreWarnings` | Un parámetro opcional que le permite omitir la comprobación de validación y forzar la eliminación de un simulador para pruebas de producción creado por el usuario que se utiliza para el uso compartido de segmentos bidireccionales con [!DNL Audience Manager] o [!DNL Audience Core Service]. Este parámetro no se puede aplicar a un entorno limitado de producción predeterminado. |
 
 **Solicitud**
 
-La siguiente solicitud elimina un simulador para pruebas llamado &quot;acme-dev&quot;.
+La siguiente solicitud elimina un simulador para pruebas de producción denominado &quot;acme&quot;.
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -452,8 +513,8 @@ Una respuesta correcta devuelve los detalles actualizados del entorno limitado, 
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"
