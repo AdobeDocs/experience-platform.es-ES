@@ -5,9 +5,9 @@ title: Acceso a datos en equipos portátiles de Jupyterlab
 topic-legacy: Developer Guide
 description: Esta guía se centra en cómo utilizar los equipos portátiles Jupyter, creados dentro de Data Science Workspace para acceder a sus datos.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
+source-git-commit: 9e41db60580146fa90542ed00ceedd4eecb88b47
 workflow-type: tm+mt
-source-wordcount: '3290'
+source-wordcount: '3294'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 Cada núcleo soportado proporciona funcionalidades incorporadas que permiten leer datos de Platform desde un conjunto de datos dentro de un bloc de notas. Actualmente, JupyterLab en Adobe Experience Platform Data Science Workspace admite portátiles para [!DNL Python], R, PySpark y Scala. Sin embargo, la compatibilidad con la paginación de datos se limita a los [!DNL Python] y los portátiles R. Esta guía se centra en cómo utilizar los portátiles JupyterLab para acceder a sus datos.
 
-## Primeros pasos
+## Introducción
 
 Antes de leer esta guía, consulte la [[!DNL JupyterLab] guía del usuario](./overview.md) para obtener una introducción de alto nivel a [!DNL JupyterLab] y su función dentro de Data Science Workspace.
 
@@ -362,7 +362,7 @@ Con la introducción de [!DNL Spark] 2.4, `%dataset` la magia personalizada se s
 **Uso**
 
 ```scala
-%dataset {action} --datasetId {id} --dataFrame {df}`
+%dataset {action} --datasetId {id} --dataFrame {df} --mode batch
 ```
 
 **Descripción**
@@ -373,8 +373,8 @@ Un comando mágico personalizado [!DNL Data Science Workspace] para leer o escri
 | --- | --- | --- |
 | `{action}` | Tipo de acción que se realizará en el conjunto de datos. Hay dos acciones disponibles: &quot;leer&quot; o &quot;escribir&quot;. | Sí |
 | `--datasetId {id}` | Se utiliza para proporcionar el ID del conjunto de datos para leer o escribir. | Sí |
-| `--dataFrame {df}` | Los pandas dataframe. <ul><li> Cuando la acción es &quot;leída&quot;, {df} es la variable donde están disponibles los resultados de la operación de lectura del conjunto de datos. </li><li> Cuando la acción es &quot;write&quot;, este dataframe {df} se escribe en el conjunto de datos. </li></ul> | Sí |
-| `--mode` | Un parámetro adicional que cambia la forma en que se leen los datos. Los parámetros permitidos son &quot;por lotes&quot; e &quot;interactivo&quot;. De forma predeterminada, el modo está configurado en &quot;interactivo&quot;. Se recomienda utilizar el modo &quot;por lotes&quot; al leer grandes cantidades de datos. | No |
+| `--dataFrame {df}` | Los pandas dataframe. <ul><li> Cuando la acción es &quot;leída&quot;, {df} es la variable donde los resultados de la operación de lectura del conjunto de datos están disponibles (como un dataframe). </li><li> Cuando la acción es &quot;write&quot;, este dataframe {df} se escribe en el conjunto de datos. </li></ul> | Sí |
+| `--mode` | Un parámetro adicional que cambia la forma en que se leen los datos. Los parámetros permitidos son &quot;por lotes&quot; e &quot;interactivo&quot;. De forma predeterminada, el modo está configurado en &quot;batch&quot;.<br> Se recomienda el modo &quot;interactivo&quot; para aumentar el rendimiento de la consulta en conjuntos de datos más pequeños. | Sí |
 
 >[!TIP]
 >
@@ -382,8 +382,8 @@ Un comando mágico personalizado [!DNL Data Science Workspace] para leer o escri
 
 **Ejemplos**
 
-- **Ejemplo** de lectura:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **Ejemplo** de escritura:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+- **Ejemplo** de lectura:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0 --mode batch`
+- **Ejemplo** de escritura:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode batch`
 
 >[!IMPORTANT]
 >
@@ -449,7 +449,7 @@ Las siguientes celdas filtran un conjunto de datos [!DNL ExperienceEvent] a los 
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-%dataset read --datasetId {DATASET_ID} --dataFrame df
+%dataset read --datasetId {DATASET_ID} --dataFrame df --mode batch
 
 df.createOrReplaceTempView("event")
 timepd = spark.sql("""
@@ -511,7 +511,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
 
@@ -568,7 +568,7 @@ df1.write.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
 ```
