@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Simulador para pruebas
 topic-legacy: user guide
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con entornos limitados en la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
+source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Una vez que haya terminado de crear el simulador para pruebas, actualice la pág
 
 >[!IMPORTANT]
 >
->No se puede restablecer el entorno limitado de producción predeterminado si Adobe Analytics también está utilizando el gráfico de identidad alojado en él para la función [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o si Adobe Audience Manager también está utilizando el gráfico de identidad alojado en él para la función [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) . Tampoco se pueden restablecer los entornos limitados de producción que se utilizan para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia.
+>No se puede restablecer el entorno limitado de producción predeterminado si Adobe Analytics también está utilizando el gráfico de identidad alojado en él para la función [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o si Adobe Audience Manager también está utilizando el gráfico de identidad alojado en él para la función [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) .
 
 Al restablecer un entorno limitado de producción o desarrollo, se eliminan todos los recursos asociados a dicho entorno limitado (esquemas, conjuntos de datos, etc.), al tiempo que se mantienen el nombre del entorno limitado y los permisos asociados. Este simulador de pruebas &quot;limpio&quot; sigue estando disponible con el mismo nombre para los usuarios que tienen acceso a él.
 
@@ -88,29 +88,29 @@ Después de unos momentos, aparece un cuadro de confirmación en la parte inferi
 
 ![success](../images/ui/success.png)
 
-### Mensajes de error
+### Advertencias
 
-No se puede restablecer un entorno limitado de producción predeterminado que contenga datos CDA y devuelve el siguiente error.
+No se puede restablecer un entorno limitado de producción predeterminado que contenga datos CDA y devuelve la siguiente advertencia.
 
 ![cda](../images/ui/cda.png)
 
-Tampoco se puede restablecer un entorno limitado de producción predeterminado que contenga datos PBD y devuelve el siguiente error.
+Tampoco se puede restablecer un entorno limitado de producción predeterminado que contenga datos PBD y devuelve la siguiente advertencia.
 
 ![pbd](../images/ui/pbd.png)
 
-Tampoco se puede restablecer un entorno limitado de producción predeterminado que contenga datos tanto para CDA como para PBD, y devuelve el siguiente error.
+Tampoco se puede restablecer un entorno limitado de producción predeterminado que contenga datos tanto para CDA como para PBD, y devuelve la siguiente advertencia.
 
 ![both](../images/ui/both.png)
 
-Tampoco se puede restablecer un simulador para pruebas de producción que se utilice para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia y devuelve el siguiente error.
+Puede restablecer un simulador para pruebas de producción que se utilice para el uso compartido bidireccional de segmentos con [!DNL Audience Manager] o [!DNL Audience Core Service]. Seleccione [!UICONTROL Continuar] para continuar con el restablecimiento.
 
-![seg](../images/ui/seg.png)
+![both](../images/ui/seg.png)
 
 ## Eliminación de un simulador para pruebas
 
 >[!IMPORTANT]
 >
->El entorno limitado de producción predeterminado no se puede eliminar y los entornos limitados de producción que se utilizan para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia tampoco se pueden eliminar.
+>No se puede eliminar el entorno limitado de producción predeterminado.
 
 Al eliminar un entorno limitado de producción o desarrollo, se eliminan permanentemente todos los recursos asociados a dicho entorno limitado, incluidos los permisos.
 
@@ -126,9 +126,9 @@ En la ventana de confirmación final, introduzca el nombre del simulador de prue
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-Un simulador para pruebas de producción que se utiliza para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia no se puede eliminar y devuelve el siguiente error.
+Un entorno limitado de producción creado por el usuario que se utiliza para el uso compartido de segmentos bidireccionales con [!DNL Audience Manager] o [!DNL Audience Core Service] se puede eliminar después de la siguiente advertencia.
 
-![seg](../images/ui/seg.png)
+![seg](../images/ui/delete-seg.png)
 
 ## Pasos siguientes
 
