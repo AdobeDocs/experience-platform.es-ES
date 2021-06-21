@@ -4,7 +4,7 @@ title: Información general sobre los destinos de marketing por correo electrón
 type: Tutorial
 description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como por ejemplo el envío de campañas de correo electrónico promocionales.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -63,7 +63,7 @@ Para obtener información sobre este paso, consulte el paso [Select attributes](
 Adobe recomienda seleccionar un identificador único del [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Este es el campo en el que se desactivan las identidades de usuario. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de fidelidad o un número de teléfono. Consulte la siguiente tabla para los identificadores únicos más comunes y su campo XDM en el esquema.
 
 | Identificador único | Campo XDM en Esquema unificado |
------------------ | ---------------------------
+|----------------- | ---------------------------|
 | Dirección de correo electrónico | `personalEmail.address` |
 | Phone | `mobilePhone.number` |
 | ID del programa de fidelidad | `Customer-defined XDM field` |
@@ -73,7 +73,7 @@ Adobe recomienda seleccionar un identificador único del [esquema de unión](../
 En el selector de campos Esquema, elija qué otros campos desea exportar al destino de correo electrónico. Algunas opciones recomendadas son:
 
 | Esquema | Campo XDM |
------- | ---------
+|------ | ---------|
 | Nombre | `person.name.firstName` |
 | Apellidos | `person.name.lastName` |
 | Teléfono | `mobilePhone.number` |
