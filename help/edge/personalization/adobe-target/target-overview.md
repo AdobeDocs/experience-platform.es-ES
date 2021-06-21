@@ -3,9 +3,9 @@ title: Uso de Adobe Target con el SDK web de Platform
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
+source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '932'
 ht-degree: 5%
 
 ---
@@ -159,32 +159,24 @@ El código [!DNL Platform Web SDK] típico que utiliza este comando tiene el sig
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
-   data: { // Freeform stuff (event & profile) }
+   data: { // Freeform data }
 });
 ```
 
-**Código de muestra**
+**Envío de atributos de perfil a Adobe Target:**
 
 ```
 alloy("sendEvent", {
   renderDecisions: true,
-  xdm: {
-    device: {
-      screenWidth: 9999
-    }
-  },
   data: {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30,
-	"entity.id" : "123",
-	"entity.genre" : "Drama"
+        "profile.age": 30
       }
     }
   }
-}) 
-.then(console.log);
+});
 ```
 
 ## Solicitar recomendaciones
@@ -209,6 +201,22 @@ La siguiente tabla enumera los atributos [!DNL Recommendations] y si cada uno es
 |  | cartIds | Admitido |
 |  | productPurchasedId | Admitido |
 | Página o categoría de elemento para la afinidad de la categoría | user.categoryId | Admitido |
+
+**Envío de atributos de Recommendations a Adobe Target:**
+
+```
+alloy("sendEvent", {
+  renderDecisions: true,
+  data: {
+    __adobe: {
+      target: {
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
 
 ## Depuración
 
