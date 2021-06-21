@@ -6,8 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: El marco de Model Insights proporciona al científico de datos herramientas en Data Science Workspace para tomar decisiones rápidas e informadas para modelos óptimos de aprendizaje automático basados en experimentos.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -44,7 +43,7 @@ Existen dos maneras de incorporar métricas a las fórmulas. Una es utilizar las
 Las evaluaciones predeterminadas se calculan como parte de los algoritmos de clasificación. Estos son algunos valores predeterminados para los evaluadores que están implementados actualmente:
 
 | Clase de evaluador | `evaluation.class` |
---- | ---
+|--- | ---|
 | DefaultBinaryClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator` |
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | Evaluador de recomendaciones | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
