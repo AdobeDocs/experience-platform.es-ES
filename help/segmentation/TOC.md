@@ -4,10 +4,10 @@ user-guide-title: Servicio de segmentación de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree segmentos y genere audiencias a partir de los datos del perfil del cliente en tiempo real.
 feature: Segmentos
-source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 21%
+ht-degree: 27%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 21%
 - [Tipos de datos de segmentación](data-types.md)
 - API de segmentación {#api}
    - [Información general](api/overview.md)
-   - [Primeros pasos](api/getting-started.md)
+   - [Introducción](api/getting-started.md)
    - [Segmentación de Edge](api/edge-segmentation.md)
    - [Exportar trabajos](api/export-jobs.md)
    - [Previsión y estimaciones](api/previews-and-estimates.md)
@@ -36,14 +36,14 @@ ht-degree: 21%
    - [Segmentación por transmisión](ui/streaming-segmentation.md)
    - [Segmentación por transmisión (vídeo)](video/streaming-segmentation-overview.md)
    - [Refactorización de restricciones de tiempo](ui/segment-refactoring.md)
-- [Respeto de las exclusiones](honoring-opt-outs.md)
+- [Respeto del consentimiento](consents.md)
 - [Segmentación de varias entidades](multi-entity-segmentation.md)
 - Idioma de consulta de perfil {#pql}
    - [Información general](pql/overview.md)
    - [Funciones booleanas](pql/boolean-functions.md)
    - [Funciones de comparación](pql/comparison-functions.md)
    - [Funciones de matriz, lista y conjunto](pql/array-functions.md)
-   - [Asignar funciones](pql/map-functions.md)
+   - [Funciones de asignación](pql/map-functions.md)
    - [Funciones de cadena](pql/string-functions.md)
    - [Funciones de objeto](pql/object-functions.md)
    - [Funciones aritméticas](pql/arithmetic-functions.md)
