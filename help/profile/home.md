@@ -4,14 +4,14 @@ title: Información general del perfil del cliente en tiempo real
 topic-legacy: guide
 description: El perfil del cliente en tiempo real es un almacén de entidades de búsqueda genérica que combina datos de varios activos de datos empresariales y, a continuación, proporciona acceso a esos datos en forma de perfiles de cliente individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
 
 ---
 
-# Información general del [!DNL Real-time Customer Profile]
+# [!DNL Real-time Customer Profile] sobre validación
 
 Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con [!DNL Real-time Customer Profile], puede ver una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes. Esta descripción general le ayudará a comprender la función y el uso de [!DNL Real-time Customer Profile] en [!DNL Experience Platform].
 
@@ -120,7 +120,7 @@ En cuanto al acceso a los datos, el control de datos desempeña un papel clave e
 
 ### Gestión de solicitudes de exclusión y privacidad de datos
 
-[!DNL Experience Platform] permite a los clientes enviar solicitudes de exclusión relacionadas con el uso y almacenamiento de sus datos en  [!DNL Real-time Customer Profile]. Para obtener más información sobre cómo se gestionan las solicitudes de exclusión, consulte la documentación sobre [cumplimiento de las solicitudes de exclusión](../segmentation/honoring-opt-outs.md).
+[!DNL Experience Platform] permite a los clientes enviar solicitudes de exclusión relacionadas con el uso y almacenamiento de sus datos en  [!DNL Real-time Customer Profile]. Para obtener más información sobre cómo se gestionan las solicitudes de exclusión, consulte la documentación sobre [cumplimiento de las solicitudes de exclusión](../segmentation/consents.md).
 
 ## Pasos siguientes y recursos adicionales
 
