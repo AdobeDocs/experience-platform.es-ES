@@ -2,14 +2,13 @@
 title: Seguimiento de eventos con el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo rastrear eventos del SDK web de Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;enviar señalización;documentUnloading;descarga de documento;onBeforeEventSend;
-translation-type: tm+mt
-source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
+exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
+source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1462'
 ht-degree: 0%
 
 ---
-
 
 # Seguimiento de eventos
 
@@ -75,9 +74,32 @@ En este ejemplo, la capa de datos se clona serializándola en JSON y luego deser
 >
 >Los datos que se pueden enviar en cada evento del campo XDM tienen un límite de 32 kB.
 
+
 ### Envío de datos que no sean XDM
 
-Actualmente, no se admite el envío de datos que no coinciden con un esquema XDM. Se ha planificado lanzar una versión compatible para una fecha futura.
+Los datos que no coinciden con un esquema XDM deben enviarse utilizando la opción `data` del comando `sendEvent`. Esta función es compatible con las versiones 2.5.0 y posteriores del SDK web.
+
+Esto resulta útil si necesita actualizar un perfil de Adobe Target o enviar atributos de Recommendations de Target. [Obtenga más información sobre estas funciones de Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
+
+En el futuro, podrá enviar toda la capa de datos en la opción `data` y asignarla al servidor XDM.
+
+**Envío de atributos de perfil y Recommendations a Adobe Target:**
+
+```
+alloy("sendEvent", {
+  data: {
+    __adobe: {
+      target: {
+        "profile.gender": "female",
+        "profile.age": 30,
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
+
 
 ### Configuración `eventType` {#event-types}
 
@@ -90,7 +112,7 @@ En un evento de experiencia XDM, hay un campo opcional `eventType`. Contiene el 
 | advertising.timePlayed | Describe la cantidad de tiempo que un usuario emplea en un recurso de medios temporizados específico |
 | advertising.federated | Indica si se creó un evento de experiencia mediante una federación de datos (uso compartido de datos entre clientes) |
 | advertising.clicks | Acciones de clic en un anuncio |
-| advertising.conversions | Una acción o acciones predefinidas por el cliente que desencadena un evento para la evaluación del rendimiento |
+| advertising.conversions | Una acción o acciones predefinidas por el cliente que déclencheur un evento para la evaluación del rendimiento |
 | advertising.firstQuartiles | Un anuncio de vídeo digital se ha reproducido a una velocidad normal del 25% de su duración |
 | advertising.impressions | Impresión o impresiones de un anuncio a un usuario final con el potencial de ser visto |
 | advertising.midpoints | Un anuncio de vídeo digital se ha reproducido a una velocidad normal durante el 50% de su duración |
@@ -158,11 +180,11 @@ alloy("sendEvent", {
 
 ### Adición de información de identidad
 
-La información de identidad personalizada también se puede agregar al evento. Consulte [Recuperación del Experience Cloud ID](../identity/overview.md).
+La información de identidad personalizada también se puede agregar al evento. Consulte [Recuperación del ID de Experience Cloud](../identity/overview.md).
 
 ## Uso de la API sendBeacon
 
-Puede ser complicado enviar datos de evento justo antes de que el usuario de la página web haya navegado fuera. Si la solicitud tarda demasiado, el explorador puede cancelar la solicitud. Algunos exploradores han implementado una API estándar web llamada `sendBeacon` para permitir que los datos se recopilen más fácilmente durante este tiempo. Al utilizar `sendBeacon`, el explorador realiza la solicitud web en el contexto de navegación global. Esto significa que el explorador realiza la solicitud de señalización en segundo plano y no mantiene presionada la navegación de la página. Para indicar a Adobe Experience Platform [!DNL Web SDK] que utilice `sendBeacon`, añada la opción `"documentUnloading": true` al comando de evento.  Vea el siguiente ejemplo:
+Puede ser complicado enviar datos de evento justo antes de que el usuario de la página web haya navegado fuera. Si la solicitud tarda demasiado, el explorador puede cancelar la solicitud. Algunos exploradores han implementado una API estándar web llamada `sendBeacon` para permitir que los datos se recopilen más fácilmente durante este tiempo. Al utilizar `sendBeacon`, el explorador realiza la solicitud web en el contexto de navegación global. Esto significa que el explorador realiza la solicitud de señalización en segundo plano y no mantiene presionada la navegación de la página. Para indicar a Adobe Experience Platform [!DNL Web SDK] que utilice `sendBeacon`, añada la opción `"documentUnloading": true` al comando event.  Vea el siguiente ejemplo:
 
 
 ```javascript
