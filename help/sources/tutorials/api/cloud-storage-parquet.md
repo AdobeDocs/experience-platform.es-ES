@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para ayudarle a seguir los pasos necesarios para introducir datos de Apache Parquet desde un sistema de almacenamiento en la nube de terceros.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1099'
 ht-degree: 2%
 
 ---
@@ -20,7 +19,7 @@ ht-degree: 2%
 
 Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos necesarios para introducir datos de Parquet desde un sistema de almacenamiento en la nube de terceros.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
@@ -43,7 +42,7 @@ Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tut
 
 Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
-- `x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
@@ -308,7 +307,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Crear una conexión de destino {#target}
+## Creación de una conexión de destino {#target}
 
 Ahora tiene los identificadores únicos para una conexión de base de datos, un esquema de destino y un conjunto de datos de destino. Con estos identificadores, se puede crear una conexión de destino mediante la API [!DNL Flow Service] para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
