@@ -4,16 +4,16 @@ description: Obtenga información sobre los distintos tipos de acciones proporci
 solution: Experience Platform
 feature: SDK web
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 7e87f5b29d388b34681217e392c3f1ae8f2b67ee
+source-git-commit: 27b26605cd03ff6d83a9a5bd308e55fcdc955da6
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 8%
+source-wordcount: '547'
+ht-degree: 4%
 
 ---
 
 # Tipos de acción
 
-Después de configurar la [extensión del SDK web de Adobe Experience Platform](web-sdk-extension.md) para [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure los tipos de acción.
+Después de configurar la [extensión del SDK web de Adobe Experience Platform](web-sdk-extension-configuration.md) para [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure los tipos de acción.
 
 Esta página describe los tipos de acción disponibles.
 
@@ -26,8 +26,8 @@ Existen otros campos en el tipo de acción Enviar evento que también pueden res
 - **Tipo:** este campo permite especificar un tipo de evento que se registrará en el esquema XDM. Consulte la [documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) para obtener más información sobre los tipos de evento predeterminados.
 - **ID de combinación:** si desea especificar un  [ID de ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) combinación para el evento, puede hacerlo en este campo. Tenga en cuenta que las soluciones posteriores no pueden combinar los datos de evento en este momento.
 - **ID de conjunto de datos:** si necesita enviar datos a un conjunto de datos que no sea el especificado en su conjunto de datos, puede especificar ese ID de conjunto de datos aquí.
-- **El documento se descargará:** si desea asegurarse de que los eventos llegan al servidor aunque el usuario salga de la página, marque la  **[!UICONTROL Document will unload]** casilla de verificación. Esto permite que los eventos lleguen al servidor, pero las respuestas se ignoran.
-- **Renderizar decisiones de personalización visual:** si desea procesar contenido personalizado en la página, marque la  **[!UICONTROL Render visual personalization decisions]** casilla de verificación. También puede especificar ámbitos de decisión si es necesario. Consulte la [documentación de personalización](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) para obtener más información sobre el procesamiento de contenido personalizado.
+- **El documento se descargará:** si desea asegurarse de que los eventos llegan al servidor aunque el usuario salga de la página, marque la casilla de verificación  **[!UICONTROL Document will]** unloadbox. Esto permite que los eventos lleguen al servidor, pero las respuestas se ignoran.
+- **Renderizar decisiones de personalización visual:** si desea procesar contenido personalizado en la página, marque la casilla  **[!UICONTROL Render visual personalization]** decisionss. También puede especificar ámbitos de decisión si es necesario. Consulte la [documentación de personalización](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) para obtener más información sobre el procesamiento de contenido personalizado.
 
 ## Definir consentimiento
 
