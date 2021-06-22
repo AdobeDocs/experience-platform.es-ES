@@ -4,9 +4,9 @@ title: Tablero de segmentos
 description: 'Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,11 @@ Los datos de atributo de la instantánea muestran los datos exactamente como apa
 
 ## Exploración del panel de segmentos
 
-Para ir al tablero de segmentos dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Segments]** en el carril izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Overview]** para mostrar el tablero.
+Para ir al tablero [!UICONTROL Segments] dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Segments]** en el carril izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Overview]** para mostrar el tablero.
+
+>[!NOTE]
+>
+>Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos o políticas de combinación creadas, el tablero [!UICONTROL Segments] no está visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con la segmentación.
 
 ![](../images/segments/dashboard-overview.png)
 
