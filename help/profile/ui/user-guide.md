@@ -4,9 +4,9 @@ title: Guía de la interfaz de usuario del perfil del cliente en tiempo real
 topic-legacy: guide
 description: El perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,19 @@ Esta guía de la interfaz de usuario requiere conocer los distintos [!DNL Experi
 
 ## Información general
 
-En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Profiles]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Overview]**. Esta ficha contiene vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con perfiles.
+En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Profiles]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Overview]** que muestra el panel [!UICONTROL Profiles].
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos o políticas de combinación creadas, el panel [!UICONTROL Perfiles] no está visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con el Perfil del cliente en tiempo real.
 
-### Panel de perfiles
+###  Panel de perfiles  {#profile-dashboard}
 
-Para algunos usuarios, al seleccionar **[!UICONTROL Perfiles]** en el panel de navegación izquierdo y abrir la pestaña **[!UICONTROL Información general]** , aparece un tablero que resume las métricas clave relacionadas con los datos del perfil.
+El tablero **[!UICONTROL Profiles]** describe métricas clave relacionadas con los datos de perfil de su organización.
 
-Para obtener más información, consulte la [Guía del tablero de perfil](profile-dashboard.md).
+Para obtener más información, consulte la [Guía del tablero de perfil](../../dashboards/guides/profiles.md).
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## Examinar
 
