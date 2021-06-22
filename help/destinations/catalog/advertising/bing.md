@@ -2,14 +2,13 @@
 keywords: 'publicidad; bing; '
 title: Conexión de Microsoft Bing
 description: Con el destino de la conexión de Microsoft Bing, puede ejecutar campañas digitales con objetivo de audiencia y redireccionamiento en toda la publicidad de presentación de Microsoft.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
+source-git-commit: 2931efa6f67a042255fb1d31c0683f73d817b55b
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 1%
+source-wordcount: '533'
+ht-degree: 0%
 
 ---
-
 
 # [!DNL Microsoft Bing] connection  {#bing-destination}
 
@@ -25,7 +24,7 @@ Como especialista en marketing, quiero poder usar segmentos creados a partir de 
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL The Trade Desk] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
 
 | Identidad de Target | Descripción |
 |---|---|
@@ -41,7 +40,7 @@ Si desea crear su primer destino con [!DNL Microsoft Bing] y no ha habilitado la
 
 Al configurar el destino, debe proporcionar la siguiente información:
 
-* [!UICONTROL Account ID]: este es su  [!DNL Bing Ads CID], en formato entero.
+* [!UICONTROL ID de cuenta]: este es su  [!DNL Bing Ads CID], en formato entero.
 
 ## Conectarse al destino {#connect-destination}
 
@@ -57,14 +56,14 @@ Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL A
 
 En el paso **[!UICONTROL Authentication]** debe introducir los detalles de conexión de destino:
 
-* **[!UICONTROL Name]**: Un nombre por el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Description]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL Account ID]**: Su  [!DNL Bing Ads CID].
-* **[!UICONTROL Marketing action]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
+* **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL ID de cuenta]**: Su  [!DNL Bing Ads CID].
+* **[!UICONTROL Acción de marketing]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
 ![Autenticación de destino de Microsoft Bing](../../assets/catalog/advertising/bing/authentication.png)
 
-Haga clic en **[!UICONTROL Create destination]**. Se ha creado el destino. Puede hacer clic en [!UICONTROL Save & Exit] si desea activar segmentos más adelante, o puede hacer clic en [!UICONTROL Next] para continuar con el flujo de trabajo y seleccionar segmentos para activarlos. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
+Haga clic en **[!UICONTROL Crear destino]**. Se ha creado el destino. Puede hacer clic en [!UICONTROL Guardar y salir] si desea activar los segmentos más adelante, o puede hacer clic en [!UICONTROL Siguiente] para continuar con el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
 
 ## Activar segmentos {#activate-segments}
 
