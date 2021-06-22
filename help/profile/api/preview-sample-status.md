@@ -3,18 +3,18 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Vista previa del punto final de la API de estado de muestra (vista previa del perfil)
 description: Mediante el extremo de estado de muestra de vista previa, que forma parte de la API de perfil de cliente en tiempo real, puede obtener una vista previa de la muestra de éxito más reciente de los datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar un informe de superposición de conjuntos de datos.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 459eb626101b7382b8fe497835cc19f7d7adc6b2
+source-git-commit: 0c7dc02ed0bacf7e0405b836f566149a872fc31a
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2450'
 ht-degree: 1%
 
 ---
 
 # Vista previa del punto final del estado de muestra (vista previa del perfil)
 
-Adobe Experience Platform le permite introducir datos de clientes de varias fuentes para crear un perfil unificado y robusto para cada uno de sus clientes. A medida que los datos se incorporan en Platform, se ejecuta un trabajo de ejemplo para actualizar el recuento de perfiles y otras métricas relacionadas con perfiles.
+Adobe Experience Platform le permite introducir datos de clientes de varias fuentes para crear un perfil unificado y robusto para cada uno de sus clientes. A medida que los datos se incorporan en Platform, se ejecuta un trabajo de muestra para actualizar el recuento de perfiles y otras métricas relacionadas con los datos del perfil del cliente en tiempo real.
 
-Los resultados de este trabajo de muestra se pueden ver mediante el extremo `/previewsamplestatus` de la API de perfil del cliente en tiempo real. Este extremo también se puede usar para enumerar distribuciones de perfiles por conjunto de datos y área de nombres de identidad, así como para generar un informe de superposición de conjuntos de datos para ganar visibilidad en la composición del almacén de perfiles de su organización. Esta guía explica los pasos necesarios para ver estas métricas usando el extremo `/previewsamplestatus` de la API.
+Los resultados de este trabajo de muestra se pueden ver mediante el extremo `/previewsamplestatus` , parte de la API de perfil del cliente en tiempo real. Este extremo también se puede usar para enumerar distribuciones de perfiles tanto por conjunto de datos como por área de nombres de identidad, así como para generar un informe de superposición de conjuntos de datos y un informe de superposición de identidad para ganar visibilidad en la composición del almacén de perfiles de su organización. Esta guía explica los pasos necesarios para ver estas métricas usando el extremo `/previewsamplestatus` de la API.
 
 >[!NOTE]
 >
@@ -124,7 +124,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 | Parámetro | Descripción |
 |---|---|
-| `date` | Especifique la fecha del informe a devolver. Si se ejecutaron varios informes en la fecha, se devolverá el informe más reciente de esa fecha. Si no existe un informe para la fecha especificada, se devuelve un error 404. Si no se especifica ninguna fecha, se devuelve el informe más reciente. Formato: AAAA-MM-DD. Ejemplo: `date=2024-12-31` |
+| `date` | Especifique la fecha del informe a devolver. Si se ejecutaron varios informes en la fecha, se devuelve el informe más reciente de esa fecha. Si no existe un informe para la fecha especificada, se devuelve un error 404 (No encontrado). Si no se especifica ninguna fecha, se devuelve el informe más reciente. Formato: AAAA-MM-DD. Ejemplo: `date=2024-12-31` |
 
 **Solicitud**
 
@@ -204,15 +204,15 @@ La respuesta incluye una matriz `data`, que contiene una lista de objetos de con
 | `createdUser` | El ID de usuario del usuario que creó el conjunto de datos. |
 | `reportTimestamp` | Marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto corresponde a la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
 
-## Enumerar la distribución de perfiles por espacio de nombres
+## Enumerar la distribución de perfiles por área de nombres de identidad
 
-Puede realizar una solicitud de GET al extremo `/previewsamplestatus/report/namespace` para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles.
+Puede realizar una solicitud de GET al extremo `/previewsamplestatus/report/namespace` para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles. Esto incluye tanto las identidades estándar proporcionadas por el Adobe como las identidades personalizadas definidas por su organización.
 
 Las áreas de nombres de identidad son un componente importante del servicio de identidad de Adobe Experience Platform que sirve como indicadores del contexto con el que se relacionan los datos del cliente. Para obtener más información, comience por leer la [descripción general del área de nombres de identidad](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
->El número total de perfiles por área de nombres (sumando los valores mostrados para cada área de nombres) siempre será mayor que la métrica de recuento de perfiles porque un perfil podría asociarse con varias áreas de nombres. Por ejemplo, si un cliente interactúa con la marca en más de un canal, se asociarán varias áreas de nombres con ese cliente individual.
+>El número total de perfiles por área de nombres (sumando los valores mostrados para cada área de nombres) puede ser mayor que la métrica de recuento de perfiles porque un perfil podría asociarse con varias áreas de nombres. Por ejemplo, si un cliente interactúa con la marca en más de un canal, se asociarán varias áreas de nombres con ese cliente individual.
 
 **Formato de API**
 
@@ -223,7 +223,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 | Parámetro | Descripción |
 |---|---|
-| `date` | Especifique la fecha del informe a devolver. Si se ejecutaron varios informes en la fecha, se devolverá el informe más reciente de esa fecha. Si no existe un informe para la fecha especificada, se devuelve un error 404. Si no se especifica ninguna fecha, se devuelve el informe más reciente. Formato: AAAA-MM-DD. Ejemplo: `date=2024-12-31` |
+| `date` | Especifique la fecha del informe a devolver. Si se ejecutaron varios informes en la fecha, se devuelve el informe más reciente de esa fecha. Si no existe un informe para la fecha especificada, se devuelve un error 404 (No encontrado). Si no se especifica ninguna fecha, se devuelve el informe más reciente. Formato: AAAA-MM-DD. Ejemplo: `date=2024-12-31` |
 
 **Solicitud**
 
@@ -301,9 +301,9 @@ La respuesta incluye una matriz `data`, con objetos individuales que contienen l
 | `code` | El `code` del espacio de nombres. Esto se puede encontrar al trabajar con áreas de nombres mediante la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md) y también se denomina [!UICONTROL Símbolo de identidad] en la interfaz de usuario del Experience Platform. Para obtener más información, visite [identity namespace overview](../../identity-service/namespaces.md). |
 | `value` | El valor `id` del área de nombres. Esto se puede encontrar al trabajar con áreas de nombres mediante la [API del servicio de identidad](../../identity-service/api/list-namespaces.md). |
 
-## Generar informe de superposición de conjuntos de datos
+## Generar el informe de superposición de conjuntos de datos
 
-El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del almacén de perfiles de su organización al exponer los conjuntos de datos que contribuyen más a la audiencia a la que se puede dirigir (perfiles). Además de proporcionar perspectivas sobre los datos, este informe puede ayudarle a realizar acciones para optimizar el uso de licencias, como configurar un TTL para determinados conjuntos de datos.
+El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del almacén de perfiles de su organización al exponer los conjuntos de datos que contribuyen más a la audiencia a la que se puede dirigir (perfiles combinados). Además de proporcionar perspectivas sobre los datos, este informe puede ayudarle a realizar acciones para optimizar el uso de licencias, como configurar un TTL para determinados conjuntos de datos.
 
 Puede generar el informe de superposición de conjuntos de datos realizando una solicitud de GET al extremo `/previewsamplestatus/report/dataset/overlap` .
 
@@ -352,6 +352,8 @@ Una solicitud correcta devuelve Estado HTTP 200 (OK) y el informe de superposici
 | `data` | El objeto `data` contiene listas de conjuntos de datos separados por coma y sus respectivos recuentos de perfiles. |
 | `reportTimestamp` | Marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto corresponde a la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
 
+### Interpretación del informe de superposición de conjuntos de datos
+
 Los resultados del informe se pueden interpretar desde los conjuntos de datos y recuentos de perfiles de la respuesta. Consideremos el siguiente objeto de informe de ejemplo `data`:
 
 ```json
@@ -366,7 +368,102 @@ Este informe proporciona la siguiente información:
 * Hay 107 perfiles que están compuestos solamente de datos del conjunto de datos `5eeda0032af7bb19162172a7`.
 * Hay un total de 454.642 perfiles en la organización.
 
+## Generar el informe de superposición de identidad
+
+El informe de superposición de identidad proporciona visibilidad sobre la composición del almacén de perfiles de su organización al exponer las identidades que más contribuyen a la audiencia a la que se puede dirigir (perfiles combinados). Esto incluye tanto las identidades estándar proporcionadas por el Adobe como las identidades personalizadas definidas por su organización.
+
+Puede generar el informe de superposición de identidad realizando una solicitud de GET al extremo `/previewsamplestatus/report/identity/overlap` .
+
+**Formato de API**
+
+```http
+GET /previewsamplestatus/report/identity/overlap
+GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+```
+
+| Parámetro | Descripción |
+|---|---|
+| `date` | Especifique la fecha del informe a devolver. Si se ejecutaron varios informes en la misma fecha, se devuelve el informe más reciente de esa fecha. Si no existe un informe para la fecha especificada, se devuelve un error 404 (No encontrado). Si no se especifica ninguna fecha, se devuelve el informe más reciente. Formato: AAAA-MM-DD. Ejemplo: `date=2024-12-31` |
+
+**Solicitud**
+
+La siguiente solicitud utiliza el parámetro `date` para devolver el informe más reciente de la fecha especificada.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Respuesta**
+
+Una solicitud correcta devuelve Estado HTTP 200 (OK) y el informe de superposición de identidad.
+
+```json
+{
+    "data": {
+        "Email,crmid,loyal": 2,
+        "ECID,Email,crmid": 7,
+        "ECID,Email,mobilenr": 12,
+        "AAID,ECID,loyal": 1,
+        "mobilenr": 25,
+        "AAID,ECID": 1508,
+        "ECID,crmid": 1,
+        "AAID,ECID,crmid": 2,
+        "Email,crmid": 328,
+        "CORE": 49,
+        "AAID": 446,
+        "crmid,loyal": 20988,
+        "Email": 10904,
+        "crmid": 249,
+        "ECID,Email": 74,
+        "Phone": 40,
+        "Email,Phone,loyal": 48,
+        "AAID,AVID,ECID": 85,
+        "Email,loyal": 1002,
+        "AAID,ECID,Email,Phone,crmid": 5,
+        "AAID,ECID,Email,crmid,loyal": 23,
+        "AAID,AVID,ECID,Email,crmid": 2,
+        "AVID": 3,
+        "AAID,ECID,Phone": 1,
+        "loyal": 43,
+        "ECID,Email,crmid,loyal": 6,
+        "AAID,ECID,Email,Phone,crmid,loyal": 1,
+        "AAID,ECID,Email": 2,
+        "AAID,ECID,Email,crmid": 142,
+        "AVID,ECID": 24,
+        "ECID": 6565
+    },
+    "reportTimestamp": "2021-12-29T16:55:03.624"
+}
+```
+
+| Propiedad | Descripción |
+|---|---|
+| `data` | El objeto `data` contiene listas separadas por coma con combinaciones únicas de códigos de área de nombres de identidad y sus respectivos recuentos de perfil. |
+| Códigos de área de nombres | El `code` es un formulario corto para cada nombre de área de nombres de identidad. Se puede encontrar una asignación de cada `code` a su `name` utilizando la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md). El `code` también se denomina [!UICONTROL Símbolo de identidad] en la interfaz de usuario del Experience Platform. Para obtener más información, visite [identity namespace overview](../../identity-service/namespaces.md). |
+| `reportTimestamp` | Marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto corresponde a la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
+
+### Interpretación del informe de superposición de identidad
+
+Los resultados del informe se pueden interpretar a partir de las identidades y recuentos de perfiles de la respuesta. El valor numérico de cada fila indica cuántos perfiles están compuestos por esa combinación exacta de áreas de nombres de identidad estándar y personalizadas.
+
+Consideremos el siguiente extracto del objeto `data`:
+
+```json
+  "AAID,ECID,Email,crmid": 142,
+  "AVID,ECID": 24,
+  "ECID": 6565
+```
+
+Este informe proporciona la siguiente información:
+* Existen 142 perfiles compuestos por `AAID`, `ECID` e `Email` identidades estándar, así como desde un espacio de nombres de identidad `crmid` personalizado.
+* Hay 24 perfiles compuestos por `AAID` y `ECID` áreas de nombres de identidad.
+* Hay 6.565 perfiles que incluyen solo una identidad `ECID`.
+
 ## Pasos siguientes
 
-Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el Almacenamiento de perfiles y ejecutar el informe de superposición de conjuntos de datos, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre las definiciones de segmentos. Esta información ayuda a garantizar que está aislando la audiencia esperada en el segmento. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones de segmentos mediante la API de segmentación, visite la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
+Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el Almacenamiento de perfiles y ejecutar informes de superposición múltiple, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre las definiciones de segmentos. Esta información ayuda a garantizar que está aislando la audiencia esperada en el segmento. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones de segmentos mediante la API de segmentación, visite la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
 
