@@ -2,10 +2,10 @@
 title: Casos de uso compatibles con el SDK web de Adobe Experience Platform
 description: Descubra qué casos de uso son compatibles con el SDK web de Adobe Experience Platform.
 keywords: sdk web;casos de uso
-source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
+source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 16%
+source-wordcount: '574'
+ht-degree: 15%
 
 ---
 
@@ -40,7 +40,7 @@ Esta página enumera los casos de uso admitidos para el SDK web, con vínculos a
 | --- | --- |
 | Enviar eventos de experiencia |  |
 | Offer Decisioning | [Documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| Envío de datos al perfil de datos del cliente en tiempo real con baja latencia |
+| Si el conjunto de datos está habilitado para el perfil, la capacidad de enviar datos al perfil de datos del cliente en tiempo real en tiempo real |  |
 | Enviar datos al Customer Journey Analytics en tiempo real |  |
 | Escribir consentimiento en perfil | [Documentación](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | Reenviar datos del lado del servidor en tiempo real a terceros | [Documentación](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -87,6 +87,10 @@ Esta página enumera los casos de uso admitidos para el SDK web, con vínculos a
 | Compatibilidad con atributos del visitante |  |
 | Scripts de perfil |  |
 | XDM se convierte en parámetros de mbox |  |
+| Ofertas de redireccionamiento compatibles con los informes de A4T | [Documentación](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| Actualización del perfil de Target | [Documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Recomendaciones |  |
+| mBox ID de terceros |  |
 
 {style=&quot;table-layout:auto&quot;}
 
