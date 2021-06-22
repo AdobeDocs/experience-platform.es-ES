@@ -4,9 +4,9 @@ title: Panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ El tablero [!UICONTROL Destinations] muestra una instantánea de los destinos qu
 ## Exploración del panel de destinos
 
 Para ir al panel de destinos dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Destinations]** en el carril izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Overview]** para mostrar el panel.
+
+>[!NOTE]
+>
+>Si su organización es nueva para Experience Platform y aún no tiene destinos activos, el panel [!UICONTROL Destinations] y la pestaña [!UICONTROL Overview] no están visibles. En su lugar, al seleccionar [!UICONTROL Destinations] en el panel de navegación izquierdo, se muestra la pestaña [!UICONTROL Catalog]. Para obtener más información sobre la pestaña [!UICONTROL Catalog], consulte la [[!UICONTROL Destinations] guía del espacio de trabajo](../../destinations/ui/destinations-workspace.md).
 
 ![](../images/destinations/dashboard-overview.png)
 
