@@ -4,11 +4,10 @@ description: Obtenga información sobre cómo configurar el SDK web de Adobe Exp
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 keywords: configurar;configuración;SDK;edge;Web SDK;configurar;edgeConfigId;contexto;web;dispositivo;entorno;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;configuración del sdk web;preoculhideStyle;opacidad;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled third;PartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-translation-type: tm+mt
-source-git-commit: 2895975b9c103e6afba7db221223b4ef2116caf3
+source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 8%
+source-wordcount: '839'
+ht-degree: 14%
 
 ---
 
@@ -70,7 +69,7 @@ Indica si la depuración está habilitada. Al establecer esta configuración en 
 
 ### `edgeDomain` {#edge-domain}
 
-Rellene este campo con el dominio de origen. Para obtener más información, consulte la [documentación](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+Rellene este campo con el dominio de origen. Para obtener más información, consulte la [documentación](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=es).
 
 El dominio es similar a `data.{customerdomain.com}` para un sitio web en www.{customerdomain.com}.
 
@@ -94,7 +93,7 @@ Su ID de organización [!DNL Experience Cloud] asignado. Al configurar varias in
 
 {style=&quot;table-layout:auto&quot;}
 
-Indica si los datos asociados con clics en vínculos se recopilan automáticamente. Consulte [Seguimiento automático de vínculos](../data-collection/track-links.md#automaticLinkTracking) para obtener más información.
+Indica si los datos asociados con clics en vínculos se recopilan automáticamente. Consulte [Seguimiento automático de vínculos](../data-collection/track-links.md#automaticLinkTracking) para obtener más información. Los vínculos también se etiquetan como vínculos de descarga si incluyen un atributo de descarga o si el vínculo termina con una extensión de archivo. Los calificadores del vínculo de descarga se pueden configurar con una expresión regular. El valor predeterminado es `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
