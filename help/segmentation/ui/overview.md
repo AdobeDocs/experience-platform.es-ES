@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1561'
 ht-degree: 0%
 
 ---
@@ -31,15 +31,19 @@ También es importante conocer dos términos clave que se utilizan en este docum
 
 ## Información general
 
-En la [[!DNL Experience Platform] UI](https://platform.adobe.com/), seleccione **[!UICONTROL Segmentos]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Información general]**. Esta ficha contiene vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con segmentos.
+En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Segments]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Overview]** que muestra el panel [!UICONTROL Segments].
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos o políticas de combinación creadas, el tablero [!UICONTROL Segments] no está visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con los segmentos.
 
-### Panel de segmentos
+###  Tablero de segmentos  {#segments-dashboard}
 
-Para algunos usuarios, al seleccionar **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y abrir la pestaña **[!UICONTROL Información general]** , aparece un tablero que describe las métricas clave relacionadas con los datos del segmento.
+El tablero **[!UICONTROL Segments]** describe métricas clave relacionadas con los datos de segmentos de su organización.
 
-Para obtener más información, consulte la [guía del tablero de segmentos](segment-dashboard.md).
+Para obtener más información, consulte la [guía del tablero de segmentos](../../dashboards/guides/segments.md).
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Examinar
 
