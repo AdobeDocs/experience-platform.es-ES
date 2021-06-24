@@ -5,10 +5,9 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-translation-type: tm+mt
-source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
+source-git-commit: 9c8f19e8b5259bcef526273addbd7711ef6082fb
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -31,13 +30,13 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 - [Información general sobre el conector de Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Crear una conexión de origen de Adobe Audience Manager en la interfaz de usuario](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Resumen del conector de datos de las clasificaciones de Adobe Analytics](connectors/adobe-applications/classifications.md)
+- [Resumen de la conexión de fuentes de datos de las clasificaciones de Adobe Analytics](connectors/adobe-applications/classifications.md)
 - [Crear una conexión de fuente de datos de clasificaciones de Adobe Analytics en la interfaz de usuario](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Información general del conector de datos de Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Descripción general de la conexión de origen de datos del grupo de informes de Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Crear una conexión de origen de Adobe Analytics en la interfaz de usuario](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Creación de una conexión de origen de Atributos del cliente en la interfaz de usuario](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] información general del conector](connectors/adobe-applications/marketo/marketo.md)
-- [Creación de una conexión de  [!DNL Marketo Engage] recursos en la interfaz de usuario](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Crear una conexión de origen [!DNL Marketo Engage] en la interfaz de usuario](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Publicidad
 
@@ -131,15 +130,15 @@ Experience Platform permite la ingesta de datos desde un sistema de protocolos d
 
 ## Control de acceso para fuentes en la ingesta de datos
 
-Los permisos para los orígenes en la ingesta de datos se pueden administrar en Adobe Admin Console. Puede acceder a los permisos a través de la pestaña **[!UICONTROL Permissions]** en un perfil de producto determinado. Desde el panel **[!UICONTROL Edit Permissions]**, puede acceder a los permisos pertenecientes a los orígenes a través de la entrada de menú **[!UICONTROL data ingestion]**. El permiso **[!UICONTROL View Sources]** concede acceso de solo lectura a los orígenes disponibles en la pestaña **[!UICONTROL Catalog]** y a los orígenes autenticados en la pestaña **[!UICONTROL Browse]**, mientras que el permiso **[!UICONTROL Manage Sources]** concede acceso completo a los orígenes de lectura, creación, edición y desactivación.
+Los permisos para los orígenes en la ingesta de datos se pueden administrar en Adobe Admin Console. Puede acceder a los permisos a través de la pestaña **[!UICONTROL Permissions]** en un perfil de producto determinado. Desde el panel **[!UICONTROL Editar permisos]**, puede acceder a los permisos pertenecientes a los orígenes a través de la entrada de menú **[!UICONTROL ingesta de datos]**. El permiso **[!UICONTROL Ver fuentes]** concede acceso de solo lectura a los orígenes disponibles en la pestaña **[!UICONTROL Catálogo]** y a los orígenes autenticados en la pestaña **[!UICONTROL Examinar]**, mientras que el permiso **[!UICONTROL Administrar fuentes]** concede acceso completo a la lectura, creación, edición y desactivación de los orígenes.
 
 La siguiente tabla describe cómo se comporta la interfaz de usuario en función de diferentes combinaciones de estos permisos:
 
 | Nivel de permiso | Descripción |
 | ---- | ----|
-| **[!UICONTROL View Sources]** Activado | Conceda acceso de solo lectura a los orígenes de cada tipo de origen en la pestaña Catálogo, así como a las pestañas Examinar, Cuentas y Flujo de datos. |
-| **[!UICONTROL Manage Sources]** Activado | Además de las funciones incluidas en **[!UICONTROL View Sources]**, concede acceso a la opción **[!UICONTROL Connect Source]** en **[!UICONTROL Catalog]** y a la opción **[!UICONTROL Select Data]** en **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** también le permite activar o desactivar  **[!UICONTROL DataFlows]** y editar sus programaciones. |
-| **[!UICONTROL View Sources]** Desactivado y  **[!UICONTROL Manage Sources]** desactivado | Revocar todo el acceso a las fuentes. |
+| **[!UICONTROL Ver]** fuentesActivado | Conceda acceso de solo lectura a los orígenes de cada tipo de origen en la pestaña Catálogo, así como a las pestañas Examinar, Cuentas y Flujo de datos. |
+| **[!UICONTROL Administrar]** fuentes | Además de las funciones incluidas en **[!UICONTROL Ver fuentes]**, concede acceso a la opción **[!UICONTROL Conectar origen]** en **[!UICONTROL Catálogo]** y a la opción **[!UICONTROL Seleccionar datos]** en **[!UICONTROL Examinar]**. **[!UICONTROL Administrar]** fuentes también le permite habilitar o deshabilitar los flujos de  **** datos y editar sus programaciones. |
+| **[!UICONTROL Ver]** fuentesDesactivar y  **[!UICONTROL Administrar]** fuentesDesactivar | Revocar todo el acceso a las fuentes. |
 
 Para obtener más información sobre los permisos disponibles otorgados a través del Admin Console, incluidas las cuatro fuentes, consulte la [descripción general del control de acceso](../access-control/home.md).
 
