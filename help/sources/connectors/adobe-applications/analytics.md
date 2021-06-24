@@ -5,9 +5,9 @@ title: Conector de origen de Adobe Analytics para datos de grupos de informes
 topic-legacy: overview
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 9defe1c3087c2f1284ceedede9d274a51cf97b96
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '542'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,8 @@ Para obtener información detallada sobre la asignación de campos que se produc
 
 ## ¿Cuál es la latencia esperada para los datos de Analytics en la plataforma?
 
+La latencia esperada para los datos de Analytics en la plataforma se describe en la siguiente tabla. La latencia variará según la configuración del cliente, los volúmenes de datos y las aplicaciones del consumidor. Por ejemplo, si la implementación de Analytics está configurada con `A4T`, la latencia a la canalización aumentará a 5-10 minutos.
+
 | Datos de análisis | Latencia esperada |
 | -------------- | ---------------- |
 | Nuevos datos para [!DNL Real-time Customer Profile] (A4T **no** habilitados) | &lt; 2 minutos |
@@ -53,7 +55,7 @@ Para obtener información detallada sobre la asignación de campos que se produc
 
 >[!NOTE]
 >
->La latencia variará según la configuración del cliente, los volúmenes de datos y las aplicaciones del consumidor. Por ejemplo, si la implementación [!DNL Analytics] está configurada con `A4T` la latencia a la canalización aumentará a 5-10 minutos.
+>Los datos de relleno de Analytics no se incorporan en [!DNL Profile] y, por lo tanto, no se contabilizan en los perfiles de licencia.
 
 ## Identificadores primarios en datos [!DNL Analytics]
 
