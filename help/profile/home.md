@@ -2,16 +2,16 @@
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;perfil unificado;perfil unificado;unificado;perfil;rtcp;gráficos XDM
 title: Información general del perfil del cliente en tiempo real
 topic-legacy: guide
-description: El perfil del cliente en tiempo real es un almacén de entidades de búsqueda genérica que combina datos de varios activos de datos empresariales y, a continuación, proporciona acceso a esos datos en forma de perfiles de cliente individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
+description: El perfil del cliente en tiempo real combina datos de varias fuentes y proporciona acceso a esos datos en forma de perfiles de cliente individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile] sobre validación
+# Información general del [!DNL Real-time Customer Profile]
 
 Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con [!DNL Real-time Customer Profile], puede ver una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes. Esta descripción general le ayudará a comprender la función y el uso de [!DNL Real-time Customer Profile] en [!DNL Experience Platform].
 
@@ -35,11 +35,7 @@ El Almacenamiento de perfiles utiliza una infraestructura de Microsoft Azure Cos
 
 Experience Platform proporciona una serie de protecciones que le ayudan a evitar la creación de esquemas del [Modelo de datos de experiencia (XDM)](../xdm/home.md) que el Perfil del cliente en tiempo real no puede admitir. Esto incluye límites leves que resultarán en una degradación del rendimiento, así como límites duros que resultarán en errores y averías del sistema. Para obtener más información, incluida una lista de directrices y ejemplos de casos de uso, consulte la documentación de [Protección de perfil](guardrails.md).
 
-### (Beta) Panel de perfiles {#profile-dashboard}
-
->[!IMPORTANT]
->
->La funcionalidad del panel está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+### Panel de perfiles {#profile-dashboard}
 
 La interfaz de usuario del Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del perfil del cliente en tiempo real, tal como se capturan durante una instantánea diaria. Para obtener información sobre cómo acceder y trabajar con el tablero [!DNL Profile] en la interfaz de usuario, así como información detallada sobre las métricas mostradas en el tablero, consulte la [Guía de la interfaz de usuario del tablero de perfil](ui/profile-dashboard.md).
 
