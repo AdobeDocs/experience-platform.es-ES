@@ -5,10 +5,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le muestra cómo habilitar un conjunto de datos para utilizarlo con el perfil del cliente en tiempo real y el servicio de identidad mediante las API de Adobe Experience Platform.
 exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: bcca4d6212ee3f0d661549eca359ab8c8aaf905c
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1061'
 ht-degree: 1%
 
 ---
@@ -43,17 +42,13 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
 
-- Autorización: Portador `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
+Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado `Content-Type` adicional. El valor correcto de este encabezado se muestra en las solicitudes de muestra donde es necesario.
 
-- Content-Type: application/json
-
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación. Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
-
-- x-sandbox-name: `{SANDBOX_NAME}`
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado `x-sandbox-name` que especifique el nombre del simulador para pruebas en el que se realizará la operación. Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
 
 ## Crear un conjunto de datos habilitado para [!DNL Profile] y [!DNL Identity] {#create-a-dataset-enabled-for-profile-and-identity}
 
@@ -213,23 +208,21 @@ PATCH /dataSets/{DATASET_ID}
 ```shell
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "tags" : {
-        "unifiedProfile": ["enabled:true"],
-        "unifiedIdentity": ["enabled:true"]
-    }
-  }'
+  -d '[
+        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true"] },
+        { "op": "add", "path": "/tags/unifiedIdentity", "value": ["enabled:true"] }	
+      ]'
 ```
 
-El cuerpo de la solicitud incluye una propiedad `tags`, que contiene dos subpropiedades: `"unifiedProfile"` y `"unifiedIdentity"`. Los valores de estas subpropiedades son matrices que contienen la cadena `"enabled:true"`.
+El cuerpo de la solicitud incluye de `path` a dos tipos de etiquetas, `unifiedProfile` y `unifiedIdentity`. Los `value` de cada son matrices que contienen la cadena `enabled:true`.
 
 ****
-RespuestaUna solicitud correcta del PATCH devuelve el Estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. Ahora se han agregado las etiquetas `"unifiedProfile"` y `"unifiedIdentity"` y el conjunto de datos está habilitado para su uso por los servicios de Perfil e identidad.
+RespuestaUna solicitud correcta del PATCH devuelve el Estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. Ahora se han agregado las etiquetas `unifiedProfile` y `unifiedIdentity` y el conjunto de datos está habilitado para su uso por los servicios de Perfil e identidad.
 
 ```json
 [
