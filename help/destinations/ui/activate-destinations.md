@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
+source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2826'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Para activar los datos en los destinos, debe haber [conectado correctamente a un
 
 Los pasos del flujo de trabajo de activación varían ligeramente entre los tipos de destino. A continuación se describe el flujo de trabajo completo para todos los tipos de destino.
 
-## Seleccione qué destino activar los datos en {#select-destination}
+## Seleccione a qué destino activar los datos {#select-destination}
 
 Se aplica a: Todos los destinos
 
@@ -37,7 +37,7 @@ En la interfaz de usuario de Adobe Experience Platform, vaya a **[!UICONTROL Des
 
 Siga los pasos de la siguiente sección para seleccionar los segmentos que desea activar.
 
-## [!UICONTROL Seleccionar paso ] de segmentos  {#select-segments}
+## [!UICONTROL Seleccionar paso ] de segmentos {#select-segments}
 
 Se aplica a: Todos los destinos
 
@@ -149,8 +149,13 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para que los archivos ex
    >
    >La opción para exportar archivos a una hora determinada del día se encuentra actualmente en fase beta y solo está disponible para un número determinado de clientes.
 
+   >[!IMPORTANT]
+   >
+   >Dependiendo de cuándo termine de ejecutarse el trabajo de exportación de perfiles y cuándo el servicio de destino inicie el trabajo de activación de segmentos, es posible que la primera exportación de archivos incremental o completa no contenga todos los datos de relleno necesarios. Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, se recomienda configurar la primera hora de exportación de archivos después de las 22 PM GMT del día siguiente. Se trata de una limitación que se abordará en futuras versiones.
+
 3. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
 4. Seleccione **[!UICONTROL Crear]** para guardar la programación.
+
 
 ### Exportar archivos incrementales {#export-incremental-files}
 
@@ -173,7 +178,11 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para que los archivo
 
    >[!IMPORTANT]
    >
-   >La opción para seleccionar la hora del día para la exportación solo está disponible para un número determinado de clientes. Los clientes que no sean de la versión beta pueden exportar archivos incrementales una vez al día, a las 23:00 UTC (7:00 EST).
+   >La opción para seleccionar la hora del día para la exportación solo está disponible para un número determinado de clientes.
+
+   >[!IMPORTANT]
+   >
+   >Dependiendo de cuándo termine de ejecutarse el trabajo de exportación de perfiles y cuándo el servicio de destino inicie el trabajo de activación de segmentos, es posible que la primera exportación de archivos incremental o completa no contenga todos los datos de relleno necesarios. Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, se recomienda configurar la primera hora de exportación de archivos después de las 22 PM GMT del día siguiente. Se trata de una limitación que se abordará en futuras versiones.
 
 3. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
 4. Seleccione **[!UICONTROL Crear]** para guardar la programación.
@@ -204,7 +213,7 @@ Seleccione **[!UICONTROL Aplicar cambios]** para confirmar la selección.
 
 Una vez que haya terminado de configurar todos los segmentos, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-## **[!UICONTROL Paso de]** programación de segmentos  {#segment-schedule}
+## **[!UICONTROL Paso de]** programación de segmentos {#segment-schedule}
 
 Se aplica a: destinos publicitarios, destinos sociales
 
@@ -224,7 +233,7 @@ En la página **[!UICONTROL Programación del segmento]** puede establecer la fe
 
 ![introducir id de aplicación](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL Seleccionar paso de]** atributos  {#select-attributes}
+## **[!UICONTROL Seleccionar paso de]** atributos {#select-attributes}
 
 Se aplica a: destinos de marketing por correo electrónico y destinos de almacenamiento en la nube
 
