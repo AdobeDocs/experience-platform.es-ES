@@ -5,9 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
+source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3708'
 ht-degree: 0%
 
 ---
@@ -59,13 +59,18 @@ Los campos que suelen marcarse como &quot;[!UICONTROL Identity]&quot; incluyen: 
 
 Es importante tener en cuenta las identidades de los clientes durante la fase de planificación del esquema para garantizar que los datos se recopilen y creen el perfil más sólido posible. Consulte la descripción general de [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md) para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
 
+Existen dos maneras de enviar datos de identidad a Platform:
+
+1. Añadir descriptores de identidad a campos individuales, ya sea a través de la [IU del Editor de esquemas](../ui/fields/identity.md) o utilizando la [API del Registro de Esquemas](../api/descriptors.md#create)
+1. Uso de un campo [`identityMap`](#identityMap)
+
 #### `identityMap` {#identityMap}
 
 `identityMap` es un campo de tipo map que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Este campo se puede utilizar para proporcionar información de identidad para los esquemas, en lugar de definir valores de identidad dentro de la estructura del propio esquema.
 
-El principal inconveniente del uso de `identityMap` es que las identidades se incrustan en los datos y, como resultado, se vuelven menos visibles. Si va a introducir datos sin procesar, debe definir campos de identidad individuales dentro de la estructura de esquema real.
+El principal inconveniente del uso de `identityMap` es que las identidades se incrustan en los datos y, como resultado, se vuelven menos visibles. Si va a introducir datos sin procesar, debe definir campos de identidad individuales dentro de la estructura de esquema real. Los esquemas que utilizan `identityMap` tampoco pueden participar en las relaciones.
 
-Sin embargo, los mapas de identidad pueden resultar especialmente útiles si está recopilando datos de fuentes que almacenan identidades como [!DNL Airship] o Adobe Audience Manager. Además, se requieren mapas de identidad si utiliza el [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+Sin embargo, los mapas de identidad pueden resultar especialmente útiles si está recopilando datos de fuentes que almacenan identidades juntas (como [!DNL Airship] o Adobe Audience Manager), o si hay un número variable de identidades para un esquema. Además, se requieren mapas de identidad si utiliza el [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 Un ejemplo de mapa de identidad simple sería el siguiente:
 
