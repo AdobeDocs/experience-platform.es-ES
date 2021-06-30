@@ -5,10 +5,9 @@ title: Descripción general del conector de origen de almacenamiento de tablas d
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Azure Table Storage a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -35,11 +34,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Azure Table Storage] a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen de Azure Table Storage mediante la API de Flow Service](../../tutorials/api/create/databases/ats.md)
-- [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
-- [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
+- [Creación de una conexión base de almacenamiento de tablas de Azure mediante la API de servicio de flujo](../../tutorials/api/create/databases/ats.md)
+- [Explorar la estructura de datos y el contenido de un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
+- [Creación de un flujo de datos para un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conectar [!DNL Azure Table Storage] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de Azure Table Storage en la interfaz de usuario](../../tutorials/ui/create/databases/ats.md)
-- [Configuración de un flujo de datos para una conexión de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
+- [Crear un flujo de datos para una conexión de origen de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
