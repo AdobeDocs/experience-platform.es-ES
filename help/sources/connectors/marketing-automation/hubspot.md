@@ -5,9 +5,9 @@ title: Descripción general del conector de origen HubSpot
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar HubSpot a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL HubSpot] a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen HubSpot mediante la API de servicio de flujo](../../tutorials/api/create/marketing-automation/hubspot.md)
-- [Explorar un sistema de automatización de marketing mediante la API de servicio de flujo](../../tutorials/api/explore/marketing-automation.md)
-- [Recopilación de datos de automatización de marketing mediante la API de servicio de flujo](../../tutorials/api/collect/marketing-automation.md)
+- [Creación de una conexión base de HubSpot mediante la API de servicio de flujo](../../tutorials/api/create/marketing-automation/hubspot.md)
+- [Explorar la estructura de datos y el contenido de una fuente de automatización de marketing mediante la API de servicio de flujo](../../tutorials/api/explore/marketing-automation.md)
+- [Creación de un flujo de datos para una fuente de automatización de marketing mediante la API de servicio de flujo](../../tutorials/api/collect/marketing-automation.md)
 
 ## Conectar [!DNL HubSpot] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de HubSpot en la interfaz de usuario](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [Configurar un flujo de datos para una conexión de automatización de marketing en la interfaz de usuario](../../tutorials/ui/dataflow/marketing-automation.md)
+- [Crear un flujo de datos para una conexión de origen de automatización de marketing en la interfaz de usuario](../../tutorials/ui/dataflow/marketing-automation.md)
