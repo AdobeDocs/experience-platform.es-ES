@@ -1,28 +1,27 @@
 ---
 keywords: Experience Platform;inicio;temas populares;conector PayPal;PayPal;Paypal
 solution: Experience Platform
-title: Crear una conexión de origen de PayPal mediante la API de servicio de flujo
+title: Crear una conexión base de PayPal mediante la API de servicio de flujo
 topic-legacy: overview
 type: Tutorial
 description: Aprenda a conectar PayPal a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5cb853da21e41b38c88f25a4989a602dbcfceabc
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 2%
+source-wordcount: '478'
+ht-degree: 1%
 
 ---
 
-# Crear una conexión de origen [!DNL PayPal] mediante la API [!DNL Flow Service]
+# Crear una conexión base [!DNL PayPal] utilizando la API [!DNL Flow Service]
 
 >[!NOTE]
 >
 >El conector [!DNL PayPal] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL PayPal] al Experience Platform.
+Este tutorial le guía por los pasos para crear una conexión base para [!DNL PayPal] mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
@@ -42,33 +41,19 @@ Para que [!DNL Flow Service] se conecte con [!DNL PayPal], debe proporcionar val
 | `host` | La URL de la instancia [!DNL PayPal]. (predeterminado: api.sandbox.paypal.com). |
 | `clientId` | El ID de cliente asociado con su aplicación [!DNL PayPal]. |
 | `clientSecret` | El secreto de cliente asociado a la aplicación [!DNL PayPal]. |
-| `connectionSpec.id` | Identificador único necesario para crear una conexión. El ID de especificación de conexión para [!DNL PayPal] es: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL PayPal] es: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
 Para obtener más información sobre cómo empezar, consulte [este documento de PayPal](https://developer.paypal.com/docs/api/overview/#get-credentials).
 
-### Leer llamadas de API de ejemplo
+### Uso de las API de plataforma
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-### Recopilar valores para encabezados necesarios
+## Creación de una conexión base
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
-
-* `Content-Type: application/json`
-
-## Crear una conexión
-
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cada cuenta [!DNL PayPal], ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Para crear un ID de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL PayPal] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -78,7 +63,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión [!DNL PayPal], su ID de especificación de conexión única debe proporcionarse como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL PayPal] es `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+La siguiente solicitud crea una conexión base para [!DNL PayPal]:
 
 ```shell
 curl -X POST \
