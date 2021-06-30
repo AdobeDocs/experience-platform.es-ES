@@ -5,10 +5,9 @@ title: Información general del conector de origen SFTP
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar un servidor SFTP a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -44,11 +43,11 @@ La documentación siguiente proporciona información sobre cómo conectar un ser
 
 ### Uso de las API
 
-- [Creación de una conexión de origen SFTP mediante la API del servicio de flujo](../../tutorials/api/create/cloud-storage/sftp.md)
-- [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
-- [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
+- [Creación de una conexión base SFTP mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/sftp.md)
+- [Explorar la estructura de datos y el contenido de un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
+- [Crear un flujo de datos para un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso de la interfaz de usuario
 
 - [Creación de una conexión de origen SFTP en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [Configurar un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Crear un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
