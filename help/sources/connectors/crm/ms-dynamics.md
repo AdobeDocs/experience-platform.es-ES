@@ -5,10 +5,9 @@ title: Información general del conector de origen de Microsoft Dynamics
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Microsoft Dynamics a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '279'
 ht-degree: 1%
 
 ---
@@ -31,11 +30,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Microsoft Dynamics] a [!DNL Platform] mediante API
 
-- [Crear una conexión de origen de Microsoft Dynamics mediante la API de servicio de flujo](../../tutorials/api/create/crm/ms-dynamics.md)
-- [Explorar un sistema CRM mediante la API de servicio de flujo](../../tutorials/api/explore/crm.md)
-- [Recopilación de datos CRM mediante la API de servicio de flujo](../../tutorials/api/collect/crm.md)
+- [Creación de una conexión base de Microsoft Dynamics mediante la API de servicio de flujo](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Explorar la estructura de datos y el contenido de un origen de CRM mediante la API de servicio de flujo](../../tutorials/api/explore/crm.md)
+- [Crear un flujo de datos para un origen CRM mediante la API de servicio de flujo](../../tutorials/api/collect/crm.md)
 
 ## Conectar [!DNL Microsoft Dynamics] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de Microsoft Dynamics en la interfaz de usuario](../../tutorials/ui/create/crm/dynamics.md)
-- [Configurar un flujo de datos para una conexión CRM en la interfaz de usuario](../../tutorials/ui/dataflow/crm.md)
+- [Crear un flujo de datos para una conexión CRM en la interfaz de usuario](../../tutorials/ui/dataflow/crm.md)
