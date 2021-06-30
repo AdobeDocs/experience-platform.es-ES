@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Veeva CRM;veeva crm;veeva;crm
 solution: Experience Platform
-title: Información general del conector de origen
+title: Información general del conector de origen de Veeva CRM
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Veeva CRM a Adobe Experience Platform mediante API o la interfaz de usuario.
-source-git-commit: 5b8c6ae7c45048e026b018b6c91478648fdbea85
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Veeva CRM] a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen de Veeva CRM mediante la API de servicio de flujo](../../tutorials/api/create/crm/veeva.md)
-- [Explorar un sistema CRM mediante la API de servicio de flujo](../../tutorials/api/explore/crm.md)
-- [Recopilación de datos CRM mediante la API de servicio de flujo](../../tutorials/api/collect/crm.md)
+- [Creación de una conexión base de Veeva CRM mediante la API de servicio de flujo](../../tutorials/api/create/crm/veeva.md)
+- [Explorar la estructura de datos y el contenido de un origen de CRM mediante la API de servicio de flujo](../../tutorials/api/explore/crm.md)
+- [Crear un flujo de datos para un origen CRM mediante la API de servicio de flujo](../../tutorials/api/collect/crm.md)
 
 ## Conectar [!DNL Veeva CRM] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de Microsoft Dynamics en la interfaz de usuario](../../tutorials/ui/create/crm/veeva.md)
-- [Configurar un flujo de datos para una conexión CRM en la interfaz de usuario](../../tutorials/ui/dataflow/crm.md)
+- [Crear un flujo de datos para una conexión de origen CRM en la interfaz de usuario](../../tutorials/ui/dataflow/crm.md)
