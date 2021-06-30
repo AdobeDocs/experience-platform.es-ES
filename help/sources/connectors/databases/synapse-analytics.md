@@ -5,9 +5,9 @@ title: Información general sobre el conector de origen de Azure synapse Analyti
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Azure synapse Analytics a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Azure Synapse Analytics] a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen de Azure synapse Analytics mediante la API de servicio de flujo](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
-- [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
+- [Creación de una conexión base de Azure synapse Analytics mediante la API de servicio de flujo](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Explorar la estructura de datos y el contenido de un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
+- [Creación de un flujo de datos para un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conectar [!DNL Azure Synapse Analytics] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Creación de una conexión de origen de Azure synapse Analytics en la interfaz de usuario](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [Configuración de un flujo de datos para una conexión de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
+- [Crear un flujo de datos para una conexión de origen de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
