@@ -1,28 +1,27 @@
 ---
 keywords: Experience Platform;inicio;temas populares;google adwords;Google AdWords;adwords
 solution: Experience Platform
-title: Creación de una conexión de origen de Google AdWords mediante la API de servicio de flujo
+title: Creación de una conexión base de Google AdWords mediante la API de servicio de flujo
 topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Google AdWords mediante la API de servicio de flujo.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ff0f6bc6b8a57b678b329fe2b47c53919e0e2d64
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
 
-# Crear una conexión de origen [!DNL Google AdWords] mediante la API [!DNL Flow Service]
+# Crear una conexión base [!DNL Google AdWords] utilizando la API [!DNL Flow Service]
 
 >[!NOTE]
 >
 >El conector [!DNL Google AdWords] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Experience Platform] con [!DNL Google AdWords].
+Este tutorial le guía por los pasos para crear una conexión base para [!DNL Google AdWords] (en adelante denominada &quot;[!DNL AdWords]&quot;) mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
@@ -31,46 +30,32 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
 * [Fuentes](../../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
 * [Simuladores para pruebas](../../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a la publicidad mediante la API [!DNL Flow Service].
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL AdWords] mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
-Para que [!DNL Flow Service] se conecte con AdWords, debe proporcionar valores para las siguientes propiedades de conexión:
+Para que [!DNL Flow Service] se conecte con [!DNL AdWords], debe proporcionar valores para las siguientes propiedades de conexión:
 
-| **Credencial** | **Descripción** |
-| -------------- | --------------- |
-| `clientCustomerId` | El ID de cliente de la cuenta de AdWords. |
+| Credencial | Descripción |
+| ---------- | ----------- |
+| `clientCustomerId` | El ID de cliente de la cuenta [!DNL AdWords]. |
 | `developerToken` | El token de desarrollador asociado a la cuenta de administrador. |
-| `refreshToken` | Token de actualización obtenido de [!DNL Google] para autorizar el acceso a AdWords. |
+| `refreshToken` | Token de actualización obtenido de [!DNL Google] para autorizar el acceso a [!DNL AdWords]. |
 | `clientId` | El ID de cliente de la aplicación [!DNL Google] utilizada para adquirir el token de actualización. |
 | `clientSecret` | El secreto de cliente de la aplicación [!DNL Google] utilizada para adquirir el token de actualización. |
-| `connectionSpec` | Identificador único necesario para crear una conexión. El ID de especificación de conexión para [!DNL Google AdWords] es: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL AdWords] es: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 Para obtener más información sobre estos valores, consulte este [documento de Google AdWords](https://developers.google.com/adwords/api/docs/guides/authentication).
 
-### Leer llamadas de API de ejemplo
+### Uso de las API de plataforma
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-### Recopilar valores para encabezados necesarios
+## Creación de una conexión base
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
-
-* `Content-Type: application/json`
-
-## Crear una conexión
-
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cada cuenta [!DNL Google AdWords], ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Para crear un ID de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL AdWords] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -80,7 +65,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión [!DNL Google AdWords], su ID de especificación de conexión única debe proporcionarse como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Google AdWords] es `d771e9c1-4f26-40dc-8617-ce58c4b53702`.
+La siguiente solicitud crea una conexión base para [!DNL AdWords]:
 
 ```shell
 curl -X POST \
@@ -89,7 +74,7 @@ curl -X POST \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
+    -H 'Content-Type: application/json'
     -d '{
         "name": "google-AdWords connection",
         "description": "Connection for google-AdWords",
@@ -122,7 +107,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles de la conexión recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar sus datos en el siguiente tutorial.
+Una respuesta correcta devuelve detalles de la conexión base recién creada, incluido su identificador único (`id`). Este ID es necesario en el paso siguiente para crear una conexión de origen.
 
 ```json
 {
@@ -133,4 +118,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión [!DNL Google AdWords] utilizando la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial, mientras aprende a explorar [los sistemas publicitarios mediante la API de servicio de flujo](../../explore/advertising.md).
+Siguiendo este tutorial, ha creado una conexión base [!DNL AdWords] utilizando la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial, mientras aprende a explorar [los sistemas publicitarios mediante la API de servicio de flujo](../../explore/advertising.md).
