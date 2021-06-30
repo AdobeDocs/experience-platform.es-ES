@@ -1,26 +1,29 @@
 ---
-source-git-commit: b9816767556b9d50cf2ff5268816d1de6b85fc63
+title: Migración del lago de datos a Gen2
+description: Obtenga información sobre las nuevas funciones que proporciona la migración de Data Lake a Gen2 en Adobe Experience Platform.
+exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
+
 # Migración de Data Lake de Adobe Experience Platform a Gen2
 
-Adobe Experience Platform está migrando a Gen2 Data Lake. Esta es una nueva generación de laca de datos que proporciona a los usuarios de la Plataforma beneficios como replicación geográfica, controles de acceso basados en roles (RBAC) más precisos y una mejor escala.
+Adobe Experience Platform está migrando al lago de datos Gen2. Se trata de una nueva generación de lago de datos que proporciona a los usuarios de Platform beneficios como replicación geográfica, controles de acceso basados en roles (RBAC) más precisos y una mejor escala.
 
 ## Impacto del usuario
 
-Mientras que Adobe está migrando el Data Lake de Gen1 a Gen 2, los usuarios podrán **leer** desde Data Lake, pero todas las capacidades que **escriben** en Data Lake se verán afectadas. A continuación se muestra una lista de las capacidades afectadas:
+Mientras que el Adobe está migrando el lago de datos de Gen1 a Gen 2, los usuarios podrán **leer** desde el lago de datos, pero todas las funcionalidades que **escribir** en el lago de datos se verán afectadas. A continuación se muestra una lista de las capacidades afectadas:
 
-- **Fuentes**: Los datos provenientes de las fuentes y de diversos flujos de trabajo de ingestión de datos se retrasarán. Los usuarios verán sus datos una vez que se complete la migración.
-- **Servicio** de consulta: Los usuarios pueden realizar consultas pero no podrán escribir el resultado de la consulta en un conjunto de datos.
-- **Perfil** del cliente en tiempo real: Durante la migración no estarán disponibles los datos ingeridos en el almacén de Perfiles mediante **ingestión por lotes** . Sin embargo, durante la migración estarán disponibles los datos ingestados mediante **transmisión** por secuencias. Además, las exportaciones de Perfiles no estarán disponibles durante la migración.
-- **Área de trabajo** de ciencias de datos: Las escrituras de Data Science Workspace fallarán.
-- **Servicio** de segmentación: Las audiencias derivadas de la segmentación por **lotes** no se pueden activar durante la migración. No se verán afectadas las audiencias derivadas de la segmentación de **flujo continuo** .
-- **Customer Journey Analytics**: Es posible que los datos de los informes de Customer Journey Analytics estén desactualizados y no se actualicen durante la migración, ya que los lotes no se están ingeriendo en Data Lake.
+- **Fuentes**: Se retrasarán los datos procedentes de los orígenes y de varios flujos de trabajo de consumo de datos. Los usuarios verán sus datos una vez completada la migración.
+- **Servicio** de consultas: Los usuarios pueden realizar consultas, pero no podrán escribir el resultado de la consulta en un conjunto de datos.
+- **Perfil** del cliente en tiempo real: Los datos introducidos en el Almacenamiento de perfiles mediante  **** lotes no estarán disponibles durante la migración. Sin embargo, los datos introducidos mediante la ingesta de **streaming** estarán disponibles durante la migración. Además, las exportaciones de perfil no estarán disponibles durante la migración.
+- **Data Science Workspace**: Las escrituras de Data Science Workspace fallarán.
+- **Servicio** de segmentación: Las audiencias derivadas de la segmentación por  **** lotes no se pueden activar durante la migración. Las audiencias derivadas de la segmentación **streaming** no se verán afectadas.
+- **Customer Journey Analytics**: Los datos de los informes de Customer Journey Analytics pueden estar desactualizados y no se actualizarán durante la migración, ya que los lotes no se incorporan en Data Lake.
 
-## Comunicación a los usuarios de la plataforma
+## Comunicación con los usuarios de la plataforma
 
-El Adobe se pondrá en contacto con los administradores del sistema para analizar en detalle el impacto de la migración y confirmar las fechas y horas de migración para las organizaciones de IMS específicas.
+El Adobe se pondrá en contacto con los administradores del sistema para analizar en detalle el impacto de la migración y confirmar las fechas y horas de migración para organizaciones específicas de IMS.
