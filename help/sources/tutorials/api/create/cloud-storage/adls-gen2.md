@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Azure Data Lake Storage Gen2;almacenamiento azure data lake;Azure
 solution: Experience Platform
-title: Crear una conexión de origen de Azure Data Lake Storage Gen2 mediante la API de servicio de flujo
+title: Creación de una conexión base de Azure Data Lake Storage Gen2 mediante la API de servicio de flujo
 topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Azure Data Lake Storage Gen2 mediante la API de servicio de flujo.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '524'
 ht-degree: 1%
 
 ---
 
-# Crear una conexión de origen [!DNL Azure] Data Lake Storage Gen2 mediante la API [!DNL Flow Service]
+# Crear una conexión base [!DNL Azure Data Lake Storage Gen2] utilizando la API [!DNL Flow Service]
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Experience Platform] a [!DNL Azure] Data Lake Storage Gen2 (en adelante, &quot;ADLS Gen2&quot;).
+Este tutorial le guía por los pasos para crear una conexión base para [!DNL Azure Data Lake Storage Gen2] (en adelante denominada &quot;ADLS Gen2&quot;) mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
@@ -35,36 +34,23 @@ Para que [!DNL Flow Service] se conecte a ADLS Gen2, debe proporcionar valores p
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `url` | La dirección URL. |
+| `url` | El punto final para ADLS Gen2. El patrón de punto final es: `https://<accountname>.dfs.core.windows.net`. |
 | `servicePrincipalId` | El ID de cliente de la aplicación. |
 | `servicePrincipalKey` | La clave de la aplicación. |
 | `tenant` | La información del inquilino que contiene su aplicación. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para ADLS Gen2 es: `0ed90a81-07f4-4586-8190-b40eccef1c5a`. |
 
 Para obtener más información sobre estos valores, consulte [este documento de ADLS Gen2](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
-### Leer llamadas de API de ejemplo
+### Uso de las API de plataforma
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-### Recopilar valores para encabezados necesarios
+## Creación de una conexión base
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
-
-* `Content-Type: application/json`
-
-## Crear una conexión
-
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta de ADLS Gen2, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Para crear un ID de conexión base, realice una solicitud de POST al extremo `/connections` mientras proporciona las credenciales de autenticación ADLS Gen2 como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -74,7 +60,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión ADLS-Gen2, su ID de especificación de conexión única debe proporcionarse como parte de la solicitud del POST. El ID de especificación de conexión para ADLS-Gen2 es `0ed90a81-07f4-4586-8190-b40eccef1c5a`.
+La siguiente solicitud crea una conexión base para ADLS Gen2:
 
 ```shell
 curl -X POST \
@@ -113,7 +99,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles de la conexión recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar el almacenamiento en la nube en el siguiente paso.
+Una respuesta correcta devuelve detalles de la conexión base recién creada, incluido su identificador único (`id`). Este ID es necesario en el paso siguiente para crear una conexión de origen.
 
 ```json
 {
