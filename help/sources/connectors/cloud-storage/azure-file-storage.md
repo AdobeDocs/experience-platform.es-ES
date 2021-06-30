@@ -5,9 +5,9 @@ title: Descripción general del conector de origen de almacenamiento de archivos
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar el almacenamiento de archivos de Azure a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ### Uso de API
 
-- [Creación de una conexión de origen de almacenamiento de archivos de Azure mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
-- [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
-- [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
+- [Creación de una conexión base de almacenamiento de archivos de Azure mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Explorar la estructura de datos y el contenido de un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
+- [Crear un flujo de datos para un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso de la interfaz de usuario
 
 - [Crear una conexión de origen de almacenamiento de archivos de Azure en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configurar un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Crear un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
