@@ -5,10 +5,9 @@ title: Descripción general del conector de origen Apache Hive en Azure HDInsigh
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Apache Hive en Azure HDInsights a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Apache Hive] en [!DNL Azure HDInsights] a [!DNL Platform] mediante API
 
-- [Creación de una Apache Hive en la conexión de origen de Azure HDInsights mediante la API de servicio de flujo](../../tutorials/api/create/databases/hive.md)
-- [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
-- [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
+- [Creación de una Apache Hive en la conexión base de Azure HDInsights mediante la API de servicio de flujo](../../tutorials/api/create/databases/hive.md)
+- [Explorar la estructura de datos y el contenido de un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
+- [Creación de un flujo de datos para un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conectar [!DNL Apache Hive] en [!DNL Azure HDInsights] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear un Apache Hive en la conexión de origen de Azure HDInsights en la interfaz de usuario](../../tutorials/ui/create/databases/hive.md)
-- [Configuración de un flujo de datos para una conexión de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
+- [Crear un flujo de datos para una conexión de origen de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
