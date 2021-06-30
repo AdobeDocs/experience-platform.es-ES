@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;perfil unificado;perfil unificado;unificado;perfil;rtcp;gráficos XDM
 title: Descripción general de las funciones de accesibilidad de Experience Platform
-topic: guía
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform se compromete a proporcionar funciones accesibles e inclusivas a todas las personas.
-source-git-commit: 81db01c3e8d332e1fc8127d779c3a584bb498858
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '311'
 ht-degree: 1%
 
 ---
