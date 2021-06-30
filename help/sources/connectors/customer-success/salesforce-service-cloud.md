@@ -5,10 +5,9 @@ title: Información general sobre el conector de origen de nube de Salesforce Se
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Salesforce Service Cloud a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -27,11 +26,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Salesforce Service Cloud ]a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen de Salesforce Service Cloud mediante la API de servicio de flujo](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
-- [Explorar un sistema de éxito de cliente mediante la API de servicio de flujo](../../tutorials/api/explore/customer-success.md)
-- [Recopilar datos de un sistema de éxito de cliente mediante la API de servicio de flujo](../../tutorials/api/collect/customer-success.md)
+- [Creación de una conexión base de Salesforce Service Cloud mediante la API de servicio de flujo](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
+- [Explorar la estructura de datos y el contenido de una fuente de éxito de cliente mediante la API de servicio de flujo](../../tutorials/api/explore/customer-success.md)
+- [Crear un flujo de datos para un origen de éxito de cliente mediante la API de servicio de flujo](../../tutorials/api/collect/customer-success.md)
 
 ## Conectar [!DNL Salesforce Service Cloud] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de Salesforce Service Cloud en la interfaz de usuario](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-- [Configurar el flujo de datos para una conexión de éxito de cliente en la interfaz de usuario](../../tutorials/ui/dataflow/customer-success.md)
+- [Crear un flujo de datos para una conexión de origen de éxito de cliente en la interfaz de usuario](../../tutorials/ui/dataflow/customer-success.md)
