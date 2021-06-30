@@ -5,9 +5,9 @@ title: Información general del conector de origen ServiceNow
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar ServiceNow a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL ServiceNow] a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen ServiceNow mediante la API de servicio de flujo](../../tutorials/api/create/customer-success/servicenow.md)
-- [Explorar un sistema de éxito de cliente mediante la API de servicio de flujo](../../tutorials/api/explore/customer-success.md)
-- [Recopilar datos de un sistema de éxito de cliente mediante la API de servicio de flujo](../../tutorials/api/collect/customer-success.md)
+- [Creación de una conexión base de ServiceNow mediante la API de servicio de flujo](../../tutorials/api/create/customer-success/servicenow.md)
+- [Explorar la estructura de datos y el contenido de una fuente de éxito de cliente mediante la API de servicio de flujo](../../tutorials/api/explore/customer-success.md)
+- [Crear un flujo de datos para un origen de éxito de cliente mediante la API de servicio de flujo](../../tutorials/api/collect/customer-success.md)
 
 ## Conectar [!DNL ServiceNow] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de ServiceNow en la interfaz de usuario](../../tutorials/ui/create/customer-success/servicenow.md)
-- [Configurar el flujo de datos para una conexión de éxito de cliente en la interfaz de usuario](../../tutorials/ui/dataflow/customer-success.md)
+- [Crear un flujo de datos para una conexión de origen de éxito de cliente en la interfaz de usuario](../../tutorials/ui/dataflow/customer-success.md)
