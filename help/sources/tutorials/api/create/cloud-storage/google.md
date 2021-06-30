@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Google Cloud Storage;google cloud storage;google;Google
 solution: Experience Platform
-title: Creación de una conexión de origen de almacenamiento de Google Cloud mediante la API de servicio de flujo
+title: Creación de una conexión de base de almacenamiento de Google Cloud mediante la API de servicio de flujo
 topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de almacenamiento de Google Cloud mediante la API de servicio de flujo.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 2%
+source-wordcount: '483'
+ht-degree: 1%
 
 ---
 
-# Crear una conexión de origen [!DNL Google Cloud Storage] mediante la API [!DNL Flow Service]
+# Crear una conexión base [!DNL Google Cloud Storage] utilizando la API [!DNL Flow Service]
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Experience Platform] a una cuenta [!DNL Google Cloud Storage].
+Este tutorial le guía por los pasos para crear una conexión base para [!DNL Google Cloud Storage] mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
@@ -35,34 +34,20 @@ Para que [!DNL Flow Service] se conecte con su cuenta [!DNL Google Cloud Storage
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| Acceso a ID de clave | Cadena alfanumérica de 61 caracteres utilizada para autenticar su cuenta [!DNL Google Cloud Storage] en Platform. |
-| Clave de acceso secreta | Una cadena de 40 caracteres codificada en base a 64 que se utiliza para autenticar su cuenta [!DNL Google Cloud Storage] en Platform. |
+| `accessKeyId` | Cadena alfanumérica de 61 caracteres utilizada para autenticar su cuenta [!DNL Google Cloud Storage] en Platform. |
+| `secretAccessKey` | Una cadena de 40 caracteres codificada en base a 64 que se utiliza para autenticar su cuenta [!DNL Google Cloud Storage] en Platform. |
 
 Para obtener más información sobre estos valores, consulte la guía [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Para ver los pasos sobre cómo generar su propio ID de clave de acceso y clave de acceso secreta, consulte [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
-### Leer llamadas de API de ejemplo
+### Uso de las API de plataforma
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-### Recopilar valores para encabezados necesarios
+## Creación de una conexión base
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
-
-* `Content-Type: application/json`
-
-## Crear una conexión
-
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cada cuenta [!DNL Google Cloud Storage], ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Para crear un ID de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL Google Cloud Storage] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -72,7 +57,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión [!DNL Google Cloud Storage], su ID de especificación de conexión única debe proporcionarse como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Google Cloud Storage] es `32e8f412-cdf7-464c-9885-78184cb113fd`.
+La siguiente solicitud crea una conexión base para [!DNL Google Cloud Storage]:
 
 ```shell
 curl -X POST \
