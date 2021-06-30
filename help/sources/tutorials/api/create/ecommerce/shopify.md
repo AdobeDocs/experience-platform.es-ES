@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Shopify;shopify;comercio electrónico
 solution: Experience Platform
-title: Creación de una conexión de origen de conector Shopify mediante la API de servicio de flujo
+title: Creación de una conexión base de conector Shopify mediante la API de servicio de flujo
 topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Shopify a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e8c6620a6d2447a577bd56192030ff4353c62c62
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '448'
 ht-degree: 2%
 
 ---
 
-# Crear una conexión de origen [!DNL Shopify] mediante la API [!DNL Flow Service]
+# Crear una conexión base [!DNL Shopify] utilizando la API [!DNL Flow Service]
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial utiliza la API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) para guiarle por los pasos para conectar [!DNL Shopify] con [!DNL Experience Platform].
+Este tutorial le guía por los pasos para crear una conexión base para [!DNL Shopify] (en adelante denominada &quot;[!DNL Shopify]&quot;) mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
@@ -37,33 +36,19 @@ Para que [!DNL Flow Service] se conecte con [!DNL Shopify], debe proporcionar va
 | ---------- | ----------- |
 | `host` | El punto final del servidor [!DNL Shopify]. |
 | `accessToken` | El token de acceso de su cuenta de usuario [!DNL Shopify]. |
-| `connectionSpec` | Identificador único necesario para crear una conexión. El ID de especificación de conexión para [!DNL Shopify] es: `4f63aa36-bd48-4e33-bb83-49fbcd11c708` |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL Shopify] es: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
 Para obtener más información sobre cómo empezar, consulte este [documento de autenticación Shopify](https://shopify.dev/concepts/about-apis/authentication).
 
-### Leer llamadas de API de ejemplo
+### Uso de las API de plataforma
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-### Recopilar valores para encabezados necesarios
+## Creación de una conexión base
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
-
-* `Content-Type: application/json`
-
-## Crear una conexión
-
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cada cuenta [!DNL Shopify], ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Para crear un ID de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL Shopify] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -73,7 +58,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión [!DNL Shopify], su ID de especificación de conexión única debe proporcionarse como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Shopify] es `4f63aa36-bd48-4e33-bb83-49fbcd11c708`.
+La siguiente solicitud crea una conexión base para [!DNL Shopify]:
 
 ```shell
 curl -X POST \
@@ -90,7 +75,7 @@ curl -X POST \
             "specName": "Basic Authentication",
             "params": {
                 "host": "{HOST}",
-                "accessToken": "{ACCCESS_TOKEN}"
+                "accessToken": "{ACCESS_TOKEN}"
             }
         },
         "connectionSpec": {
