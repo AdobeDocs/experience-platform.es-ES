@@ -2,12 +2,11 @@
 keywords: Experience Platform;inicio;asignador;conjunto de asignaciones;asignación;
 solution: Experience Platform
 title: Información general sobre los conjuntos de asignaciones
-topic: sobre validación
+topic-legacy: overview
 description: Aprenda a utilizar conjuntos de asignaciones con la preparación de datos de Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 4c06f621eb6fba8daa6501d56255cddbbcfdbda2
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '959'
 ht-degree: 0%
 
 ---
