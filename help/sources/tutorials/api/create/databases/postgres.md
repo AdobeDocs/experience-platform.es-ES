@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;inicio;temas populares;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
-title: Creación de una conexión de origen PostgreSQL mediante la API de servicio de flujo
+title: Creación de una conexión base PostgreSQL mediante la API de servicio de flujo
 topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a PostgreSQL mediante la API de servicio de flujo.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '445'
 ht-degree: 2%
 
 ---
 
-# Crear una conexión de origen [!DNL PostgreSQL] mediante la API [!DNL Flow Service]
+# Crear una conexión base [!DNL PostgreSQL] utilizando la API [!DNL Flow Service]
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Experience Platform] con [!DNL PostgreSQL] (en adelante denominada &quot;PSQL&quot;).
+Este tutorial le guía por los pasos para crear una conexión base para [!DNL PostgreSQL] mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+
 
 ## Primeros pasos
 
@@ -27,52 +27,38 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
 * [Fuentes](../../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
 * [Simuladores para pruebas](../../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que debe conocer para conectarse correctamente a PSQL mediante la API [!DNL Flow Service].
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL PostgreSQL] mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
-Para que [!DNL Flow Service] se conecte con PSQL, debe proporcionar la siguiente propiedad de conexión:
+Para que [!DNL Flow Service] se conecte con [!DNL PostgreSQL], debe proporcionar la siguiente propiedad de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión asociada a su cuenta PSQL. El patrón de cadena de conexión PSQL es: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | ID utilizado para generar una conexión. El ID de especificación de conexión fija para PSQL es `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `connectionString` | La cadena de conexión asociada a su cuenta [!DNL PostgreSQL]. El patrón de cadena de conexión [!DNL PostgreSQL] es: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL PostgreSQL] es `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
-Para obtener más información sobre la obtención de una cadena de conexión, consulte [este documento PSQL](https://www.postgresql.org/docs/9.2/app-psql.html).
+Para obtener más información sobre la obtención de una cadena de conexión, consulte este [[!DNL PostgreSQL] documento](https://www.postgresql.org/docs/9.2/app-psql.html).
 
-### Leer llamadas de API de ejemplo
+### Uso de las API de plataforma
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-### Recopilar valores para encabezados necesarios
+## Creación de una conexión base
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
-
-* `Content-Type: application/json`
-
-## Crear una conexión
-
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta PSQL, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Para crear un ID de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL PostgreSQL] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
-```http
+```https
 POST /connections
 ```
 
 **Solicitud**
 
-Para crear una conexión PSQL, su ID de especificación de conexión única debe proporcionarse como parte de la solicitud del POST. El ID de especificación de conexión para PSQL es `74a1c565-4e59-48d7-9d67-7c03b8a13137`.
+La siguiente solicitud crea una conexión base para [!DNL PostgreSQL]:
 
 ```shell
 curl -X POST \
@@ -100,12 +86,12 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | ------------- | --------------- |
-| `auth.params.connectionString` | La cadena de conexión asociada a su cuenta PSQL. El patrón de cadena de conexión PSQL es: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | El ID de especificación de conexión para PSQL es: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `auth.params.connectionString` | La cadena de conexión asociada a su cuenta [!DNL PostgreSQL]. El patrón de cadena de conexión [!DNL PostgreSQL] es: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | Los ID de especificación de conexión [!DNL PostgreSQL]: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único (`id`) de la conexión base recién creada. Este ID es necesario para explorar la base de datos PSQL en el siguiente tutorial.
+Una respuesta correcta devuelve el identificador único (`id`) de la conexión base recién creada. Este ID es necesario para explorar la base de datos [!DNL PostgreSQL] en el siguiente tutorial.
 
 ```json
 {
@@ -116,4 +102,4 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión b
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión PSQL utilizando la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión en el siguiente tutorial, mientras aprende a explorar las [bases de datos o los sistemas NoSQL mediante la API de servicio de flujo](../../explore/database-nosql.md).
+Siguiendo este tutorial, ha creado una conexión [!DNL PostgreSQL] utilizando la API [!DNL Flow Service] y ha obtenido el valor de ID exclusivo de la conexión. Puede utilizar este ID de conexión en el siguiente tutorial, mientras aprende a explorar las [bases de datos o los sistemas NoSQL mediante la API de servicio de flujo](../../explore/database-nosql.md).
