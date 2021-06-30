@@ -5,10 +5,9 @@ title: Información general sobre el conector de origen de almacenamiento de obj
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar el Almacenamiento de objetos de Oracle a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -40,11 +39,11 @@ La siguiente documentación proporciona información sobre cómo conectar el Alm
 
 ### Uso de API
 
-- [Creación de una conexión de origen de almacenamiento de objetos de Oracle mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
-- [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
-- [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
+- [Creación de una conexión base de almacenamiento de objetos de Oracle mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
+- [Explorar la estructura de datos y el contenido de un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
+- [Crear un flujo de datos para un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso de la interfaz de usuario
 
 - [Creación de una conexión de origen de Almacenamiento de objetos de Oracle en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/oracle-object-storage.md)
-- [Configurar un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Crear un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
