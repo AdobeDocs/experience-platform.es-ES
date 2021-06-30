@@ -5,10 +5,9 @@ title: Información general del conector de origen HDFS de Apache
 topic-legacy: overview
 description: Aprenda a conectar el HDFS de Apache a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -42,11 +41,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ### Uso de API
 
-- [Creación de una conexión de origen HDFS mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/hdfs.md)
-- [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
-- [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
+- [Creación de una conexión base de HDFS mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/hdfs.md)
+- [Explorar la estructura de datos y el contenido de un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
+- [Crear un flujo de datos para un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso de la interfaz de usuario
 
 - [Creación de una conexión de origen de HDFS de Apache en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/hdfs.md)
-- [Configurar un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Crear un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
