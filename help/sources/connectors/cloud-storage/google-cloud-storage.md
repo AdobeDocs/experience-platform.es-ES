@@ -5,10 +5,9 @@ title: Información general sobre el conector de origen de almacenamiento de Goo
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Google Cloud Storage a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -29,11 +28,11 @@ Para conectarse a Platform, primero debe habilitar la interoperabilidad para su 
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-Aparece la página **[!UICONTROL Settings]**. Desde aquí puede ver información sobre su [!DNL Google] ID de proyecto y detalles sobre su cuenta [!DNL Google Cloud Storage]. Para acceder a la configuración de interoperabilidad, seleccione **[!UICONTROL Interoperability]** en el encabezado superior.
+Aparece la página **[!UICONTROL Configuración]**. Desde aquí puede ver información sobre su [!DNL Google] ID de proyecto y detalles sobre su cuenta [!DNL Google Cloud Storage]. Para acceder a la configuración de interoperabilidad, seleccione **[!UICONTROL Interoperability]** en el encabezado superior.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-La página **[!UICONTROL Interoperability]** contiene información sobre la autenticación, las claves de acceso y el proyecto predeterminado asociado a su cuenta de servicio. Para generar un nuevo ID de clave de acceso y una clave de acceso secreta para su cuenta de servicio, seleccione **[!UICONTROL Create a Key for a Service Account]**.
+La página **[!UICONTROL Interoperability]** contiene información sobre la autenticación, las claves de acceso y el proyecto predeterminado asociado con su cuenta de servicio. Para generar un nuevo ID de clave de acceso y una clave de acceso secreta para su cuenta de servicio, seleccione **[!UICONTROL Crear una clave para una cuenta de servicio]**.
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
@@ -56,11 +55,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ### Uso de API
 
-- [Creación de una conexión de origen de almacenamiento de Google Cloud mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/google.md)
-- [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
-- [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
+- [Creación de una conexión de base de almacenamiento de Google Cloud mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/google.md)
+- [Explorar la estructura de datos y el contenido de un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
+- [Crear un flujo de datos para un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso de la interfaz de usuario
 
 - [Crear una conexión de origen de Google Cloud Storage en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-- [Configurar un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Crear un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
