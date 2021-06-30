@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Coincidencia de segmentos;coincidencia de segmentos
 solution: Experience Platform
 title: Información general sobre la coincidencia de segmentos
-topic: sobre validación
+topic-legacy: overview
 description: Coincidencia de segmentos es un servicio para compartir segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, regulada y compatible con la privacidad.
-source-git-commit: 481160f83e82c80ea5b73e9b56003dc625a34b5e
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1900'
 ht-degree: 1%
 
 ---
