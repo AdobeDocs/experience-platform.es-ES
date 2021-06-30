@@ -5,10 +5,9 @@ title: Descripción general del conector de origen de Azure Data Lake Storage Ge
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Azure Data Lake Storage Gen2 a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -44,11 +43,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ### Uso de API
 
-- [Creación de una conexión de origen ADLS-Gen2 mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/adls-gen2.md)
-- [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
-- [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
+- [Creación de una conexión base de ADLS-Gen2 mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Explorar la estructura de datos y el contenido de un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
+- [Crear un flujo de datos para un origen de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso de la interfaz de usuario
 
 - [Creación de una conexión de origen ADLS-Gen2 en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [Configurar un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Crear un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
