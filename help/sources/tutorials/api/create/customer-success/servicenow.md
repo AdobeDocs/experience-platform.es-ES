@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicenow;ServiceNow
 solution: Experience Platform
-title: Crear una conexión de origen de ServiceNow mediante la API de servicio de flujo
+title: Crear una conexión base de ServiceNow mediante la API de servicio de flujo
 topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor de ServiceNow mediante la API de servicio de flujo.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: ff0f6bc6b8a57b678b329fe2b47c53919e0e2d64
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 2%
+source-wordcount: '478'
+ht-degree: 1%
 
 ---
 
-# Crear una conexión de origen [!DNL ServiceNow] mediante la API [!DNL Flow Service]
+# Crear una conexión base [!DNL ServiceNow] utilizando la API [!DNL Flow Service]
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Experience Platform] a un servidor [!DNL ServiceNow].
+Este tutorial le guía por los pasos para crear una conexión base para [!DNL Google ServiceNow] mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
@@ -37,32 +37,19 @@ Para que [!DNL Flow Service] se conecte a [!DNL ServiceNow], debe proporcionar v
 | `endpoint` | El extremo del servidor [!DNL ServiceNow]. |
 | `username` | El nombre de usuario utilizado para conectarse al servidor [!DNL ServiceNow] para la autenticación. |
 | `password` | La contraseña para conectarse al servidor [!DNL ServiceNow] para la autenticación. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL ServiceNow] es: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
 
 Para obtener más información sobre cómo empezar, consulte [este documento de ServiceNow](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 
-### Leer llamadas de API de ejemplo
+### Uso de las API de plataforma
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-### Recopilar valores para encabezados necesarios
+## Creación de una conexión base
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
-
-* `Content-Type: application/json`
-
-## Crear una conexión
-
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cada cuenta [!DNL ServiceNow], ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Para crear un ID de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL ServiceNow] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -72,7 +59,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión [!DNL ServiceNow], su ID de especificación de conexión única debe proporcionarse como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL ServiceNow] es `eb13cb25-47ab-407f-ba89-c0125281c563`.
+La siguiente solicitud crea una conexión base para [!DNL ServiceNow]:
 
 ```shell
 curl -X POST \
@@ -100,12 +87,12 @@ curl -X POST \
     }'
 ```
 
-| Propiedad | Descripción |
-| ------------- | --------------- |
+| Parámetro | Descripción |
+| --------- | ----------- |
 | `auth.params.server` | El punto final del servidor [!DNL ServiceNow]. |
 | `auth.params.username` | El nombre de usuario utilizado para conectarse al servidor [!DNL ServiceNow] para la autenticación. |
 | `auth.params.password` | La contraseña para conectarse al servidor [!DNL ServiceNow] para la autenticación. |
-| `connectionSpec.id` | El ID de especificación de conexión asociado a [!DNL ServiceNow]. |
+| `connectionSpec.id` | El ID de especificación de conexión [!DNL ServiceNow]: `eb13cb25-47ab-407f-ba89-c0125281c563` |
 
 **Respuesta**
 
