@@ -5,10 +5,9 @@ title: Descripción general del conector de origen de Data Explorer de Azure
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar la Data Explorer de Azure a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -35,11 +34,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Azure Data Explorer] a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen de Data Explorer de Azure mediante la API de servicio de flujo](../../tutorials/api/create/databases/data-explorer.md)
-- [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
-- [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
+- [Creación de una conexión base de Data Explorer de Azure mediante la API de servicio de flujo](../../tutorials/api/create/databases/data-explorer.md)
+- [Explorar la estructura de datos y el contenido de un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
+- [Creación de un flujo de datos para un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conectar [!DNL Azure Data Explorer] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de Data Explorer de Azure en la interfaz de usuario](../../tutorials/ui/create/databases/data-explorer.md)
-- [Configuración de un flujo de datos para una conexión de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
+- [Crear un flujo de datos para una conexión de origen de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
