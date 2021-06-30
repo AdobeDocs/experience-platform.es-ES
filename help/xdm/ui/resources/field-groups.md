@@ -3,11 +3,10 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Crear y editar grupos de campos de esquema en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar grupos de campos de esquema en la interfaz de usuario del Experience Platform.
-topic: Guía del usuario
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+topic-legacy: user guide
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -35,7 +34,7 @@ Una vez que haya abierto el esquema en [!DNL Schema Editor], seleccione **[!UICO
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Aparece un cuadro de diálogo que muestra una lista de los grupos de campos existentes para su organización. Cerca de la parte superior del cuadro de diálogo, seleccione **[!UICONTROL Create new field group]**. Aquí puede proporcionar **[!UICONTROL Display name]** y **[!UICONTROL Description]** para el grupo de campos. Cuando termine, seleccione **[!UICONTROL Add field group]**.
+Aparece un cuadro de diálogo que muestra una lista de los grupos de campos existentes para su organización. Cerca de la parte superior del cuadro de diálogo, seleccione **[!UICONTROL Crear nuevo grupo de campos]**. Aquí puede proporcionar un **[!UICONTROL Display name]** y **[!UICONTROL Description]** para el grupo de campos. Cuando termine, seleccione **[!UICONTROL Agregar grupo de campos]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -53,13 +52,13 @@ Para editar un grupo de campos existente, primero debe abrir un esquema que empl
 
 Una vez abierto el esquema en el editor, puede empezar a [añadir campos al grupo de campos](#add-fields).
 
-## Agregar campos a un grupo de campos {#add-fields}
+## Adición de campos a un grupo de campos {#add-fields}
 
 Para agregar campos a un grupo de campos en [!DNL Schema Editor], comience seleccionando el nombre del grupo de campos en el carril izquierdo y, a continuación, seleccione el icono **plus (+)** situado junto al nombre del esquema en el lienzo.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Aparece un **[!UICONTROL New field]** en el lienzo y el carril derecho se actualiza para mostrar los controles que configuran las propiedades del campo. Consulte la guía sobre la [definición de campos en la interfaz de usuario](../fields/overview.md#define) para ver los pasos específicos sobre cómo configurar y agregar el campo al grupo de campos.
+En el lienzo aparece un **[!UICONTROL New field]** y el carril derecho se actualiza para mostrar los controles y configurar las propiedades del campo. Consulte la guía sobre la [definición de campos en la interfaz de usuario](../fields/overview.md#define) para ver los pasos específicos sobre cómo configurar y agregar el campo al grupo de campos.
 
 Siga agregando tantos campos como sea necesario al grupo de campos. Cuando termine, seleccione **[!UICONTROL Save]** para guardar el esquema y el grupo de campos.
 
@@ -69,6 +68,6 @@ Si el mismo grupo de campos ya está empleado en otros esquemas, los campos reci
 
 ## Pasos siguientes
 
-Esta guía explica cómo crear y editar grupos de campos mediante la interfaz de usuario de Platform. Para obtener más información sobre las capacidades del espacio de trabajo [!UICONTROL Schemas], consulte la [[!UICONTROL Schemas] descripción general del espacio de trabajo](../overview.md).
+Esta guía explica cómo crear y editar grupos de campos mediante la interfaz de usuario de Platform. Para obtener más información sobre las capacidades del espacio de trabajo [!UICONTROL schemas] , consulte la información general del espacio de trabajo [[!UICONTROL Esquemas]](../overview.md).
 
 Para obtener información sobre cómo administrar grupos de campos mediante la API [!DNL Schema Registry], consulte la [guía de extremo de grupos de campos](../../api/field-groups.md).
