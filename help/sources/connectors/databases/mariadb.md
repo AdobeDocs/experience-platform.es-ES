@@ -4,14 +4,13 @@ solution: Experience Platform
 title: Descripción general del conector de origen MariaDB
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar MariaDB a Adobe Experience Platform mediante API o la interfaz de usuario.
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL MariaDB] connector
 
@@ -27,11 +26,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL MariaDB] a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen de MariaDB mediante la API de servicio de flujo](../../tutorials/api/create/databases/mariadb.md)
-- [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
-- [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
+- [Creación de una conexión base de MariaDB mediante la API de servicio de flujo](../../tutorials/api/create/databases/mariadb.md)
+- [Explorar la estructura de datos y el contenido de un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
+- [Creación de un flujo de datos para un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conectar [!DNL MariaDB] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de MariaDB en la interfaz de usuario](../../tutorials/ui/create/databases/mariadb.md)
-- [Configuración de un flujo de datos para una conexión de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
+- [Crear un flujo de datos para una conexión de origen de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
