@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Ingesta de datos, fuentes
-source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
+source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '619'
 ht-degree: 13%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 13%
    - Transmisión {#streaming}
       - [Conector de API HTTP](connectors/streaming/http.md)
 - Tutoriales de API {#api-tutorials}
-   - Crear una conexión de origen {#create}
+   - Crear una conexión base {#create}
       - Publicidad {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Almacenamiento en la nube {#cloud-storage}
@@ -138,7 +138,7 @@ ht-degree: 13%
       - [Explorar datos de almacenamiento en la nube](tutorials/api/explore/cloud-storage.md)
       - [Explorar datos CRM](tutorials/api/explore/crm.md)
       - [Explorar los datos de éxito de los clientes](tutorials/api/explore/customer-success.md)
-      - [Explorar datos de base de datos o sin datos SQL](tutorials/api/explore/database-nosql.md)
+      - [Explorar datos de base de datos](tutorials/api/explore/database-nosql.md)
       - [Explorar datos de comercio electrónico](tutorials/api/explore/ecommerce.md)
       - [Explorar datos de automatización de marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorar datos de pago](tutorials/api/explore/payments.md)
@@ -148,7 +148,7 @@ ht-degree: 13%
       - [Recopilar datos de almacenamiento en la nube](tutorials/api/collect/cloud-storage.md)
       - [Recopilar datos CRM](tutorials/api/collect/crm.md)
       - [Recopilar datos de éxito de clientes](tutorials/api/collect/customer-success.md)
-      - [Recopilar datos de base de datos o datos NoSQL](tutorials/api/collect/database-nosql.md)
+      - [Recopilar datos de base de datos](tutorials/api/collect/database-nosql.md)
       - [Recopilar datos de comercio electrónico](tutorials/api/collect/ecommerce.md)
       - [Recopilación de datos de automatización de mercadotecnia](tutorials/api/collect/marketing-automation.md)
       - [Recopilar datos de pago](tutorials/api/collect/payments.md)
