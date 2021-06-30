@@ -5,10 +5,9 @@ title: Información general del conector de origen de SQL Server
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Microsoft SQL Server a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Microsoft] SQL Server a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen de Microsoft SQL Server mediante la API de servicio de flujo](../../tutorials/api/create/databases/sql-server.md)
-- [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
-- [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
+- [Creación de una conexión base de Microsoft SQL Server mediante la API de servicio de flujo](../../tutorials/api/create/databases/sql-server.md)
+- [Explorar la estructura de datos y el contenido de un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
+- [Creación de un flujo de datos para un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conectar [!DNL Microsoft] SQL Server a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de Microsoft SQL Server en la interfaz de usuario](../../tutorials/ui/create/databases/sql-server.md)
-- [Configuración de un flujo de datos para una conexión de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
+- [Crear un flujo de datos para una conexión de origen de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
