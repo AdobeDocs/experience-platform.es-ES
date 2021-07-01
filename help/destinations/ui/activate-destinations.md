@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a670823139eab37d319e834de5e3025d44e9c9b4
+source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2806'
 ht-degree: 0%
 
 ---
@@ -147,8 +147,7 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para que los archivos ex
 
    >[!IMPORTANT]
    >
-   >La opción para exportar archivos a una hora determinada del día se encuentra actualmente en fase beta y solo está disponible para un número determinado de clientes.
-   ><br> <br> Debido al modo en que se configuran los procesos de Experience Platform internos, es posible que la primera exportación incremental o completa de archivos no contenga todos los datos de relleno necesarios.  <br> <br> Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, se recomienda configurar la primera hora de exportación de archivos después de las 22 PM GMT del día siguiente. Se trata de una limitación que se abordará en futuras versiones.
+   >La opción para exportar archivos a una hora determinada del día está actualmente en fase beta y solo está disponible para un número determinado de clientes.<br> <br> Debido a la forma en que se configuran los procesos de Experience Platform internos, es posible que la primera exportación incremental o completa de archivos no contenga todos los datos de relleno.  <br> <br> Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, Adobe recomienda configurar la hora de exportación del primer archivo después de las 22 PM GMT del día siguiente. Se trata de una limitación que se abordará en futuras versiones.
 
 3. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
 4. Seleccione **[!UICONTROL Crear]** para guardar la programación.
@@ -175,7 +174,7 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para que los archivo
 
    >[!IMPORTANT]
    >
-   >La opción para seleccionar la hora del día para la exportación solo está disponible para un número determinado de clientes. <br> <br> Debido al modo en que se configuran los procesos de Experience Platform internos, es posible que la primera exportación incremental o completa de archivos no contenga todos los datos de relleno necesarios.  <br> <br> Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, se recomienda configurar la primera hora de exportación de archivos después de las 22 PM GMT del día siguiente. Se trata de una limitación que se abordará en futuras versiones.
+   >La opción para seleccionar la hora del día para la exportación solo está disponible para un número determinado de clientes. <br> <br> Debido a la forma en que se configuran los procesos de Experience Platform internos, es posible que la primera exportación incremental o completa de archivos no contenga todos los datos de relleno.  <br> <br> Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, Adobe recomienda configurar la hora de exportación del primer archivo después de las 22 PM GMT del día siguiente. Se trata de una limitación que se abordará en futuras versiones.
 
 3. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
 4. Seleccione **[!UICONTROL Crear]** para guardar la programación.
