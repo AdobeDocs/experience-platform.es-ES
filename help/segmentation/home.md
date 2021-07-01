@@ -5,10 +5,9 @@ title: Información general del servicio de segmentación
 topic-legacy: overview
 description: Obtenga información sobre el servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3e92494351e487468e6292c34763e5b2281fd6c5
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -44,6 +43,8 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >[!NOTE]
 >
 >En caso de que se amplíe un esquema, todas las cargas futuras deben actualizar los campos recién añadidos en consecuencia. Para obtener más información sobre la personalización de [!DNL Experience Data Model] (XDM), visite el [tutorial del Editor de esquemas](../xdm/tutorials/create-schema-ui.md).
+>
+>Además, si el tiempo de vida (TTL) está habilitado en el conjunto de datos, esto podría afectar a la pertenencia del segmento creado. Para obtener más información sobre TTL y cómo puede afectar a la segmentación, lea la [Guía TTL del servicio de perfil](../profile/apply-ttl.md).
 
 ## Evaluar segmentos
 
