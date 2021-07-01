@@ -4,10 +4,10 @@ description: Obtenga información sobre cómo asignar manualmente variables a Ad
 seo-description: Asignación manual de variables a Adobe Analytics mediante reglas de procesamiento con el SDK web
 keywords: adobe analytics;analytics;variables;asignación de variables;asignar variables;datos de contexto;datos de contexto;reglas de procesamiento;reglas;xdm;esquema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
+source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 16%
+source-wordcount: '403'
+ht-degree: 13%
 
 ---
 
@@ -21,7 +21,7 @@ Además, puede utilizar un conjunto predeterminado de acciones y listas de produ
 
 ## Datos de contexto
 
-Para que los utilice [!DNL Analytics], los datos XDM se acoplan con notación de puntos y se ponen a disposición como `contextData`. La siguiente lista de pares de valores muestra un ejemplo de `context data`:
+Para que los utilice [!DNL Analytics], los datos XDM se acoplan con notación de puntos y se ponen a disposición como `contextData`. La siguiente lista de pares de valores muestra un ejemplo del aspecto del `context data` cuando se aplana:
 
 ```json
 {
