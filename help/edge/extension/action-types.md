@@ -4,10 +4,10 @@ description: Obtenga información sobre los distintos tipos de acciones proporci
 solution: Experience Platform
 feature: SDK web
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 27b26605cd03ff6d83a9a5bd308e55fcdc955da6
+source-git-commit: 17ebf50965136f2c075f21eb3ecdcb1ce6da0b7d
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 4%
+source-wordcount: '595'
+ht-degree: 3%
 
 ---
 
@@ -24,6 +24,7 @@ Envía un evento al Adobe [!DNL Experience Platform] para que Adobe Experience P
 Existen otros campos en el tipo de acción Enviar evento que también pueden resultar útiles en función de la implementación. Tenga en cuenta que todos estos campos son opcionales.
 
 - **Tipo:** este campo permite especificar un tipo de evento que se registrará en el esquema XDM. Consulte la [documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) para obtener más información sobre los tipos de evento predeterminados.
+- **Datos:** Los datos que no coinciden con un esquema XDM se pueden enviar utilizando este campo. Este campo es útil si está intentando actualizar un perfil de Adobe Target o enviar atributos de Recommendations de Target. Para ver ejemplos, consulte nuestra [documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).
 - **ID de combinación:** si desea especificar un  [ID de ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) combinación para el evento, puede hacerlo en este campo. Tenga en cuenta que las soluciones posteriores no pueden combinar los datos de evento en este momento.
 - **ID de conjunto de datos:** si necesita enviar datos a un conjunto de datos que no sea el especificado en su conjunto de datos, puede especificar ese ID de conjunto de datos aquí.
 - **El documento se descargará:** si desea asegurarse de que los eventos llegan al servidor aunque el usuario salga de la página, marque la casilla de verificación  **[!UICONTROL Document will]** unloadbox. Esto permite que los eventos lleguen al servidor, pero las respuestas se ignoran.
