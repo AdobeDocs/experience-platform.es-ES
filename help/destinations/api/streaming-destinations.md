@@ -6,10 +6,9 @@ description: Este documento cubre la creación de destinos de flujo continuo med
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2024'
 ht-degree: 1%
 
 ---
@@ -28,7 +27,7 @@ Este tutorial utiliza el destino [!DNL Amazon Kinesis] en todos los ejemplos, pe
 
 Si prefiere utilizar la interfaz de usuario en Platform para conectarse a un destino y activar datos, consulte los tutoriales [Connect a destination](../ui/connect-destination.md) y [Activate profiles and segments to a destination](../ui/activate-destinations.md) .
 
-## Introducción
+## Introducción 
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
@@ -45,11 +44,11 @@ Para completar los pasos de este tutorial, debe tener preparadas las siguientes 
 * Para conexiones [!DNL Amazon Kinesis]: `accessKeyId`, `secretKey`, `region` o `connectionUrl`
 * Para conexiones [!DNL Azure Event Hubs]: `sasKeyName`, `sasKey`, `namespace`
 
-### Leyendo llamadas de API de ejemplo {#reading-sample-api-calls}
+### Leer llamadas de API de ejemplo {#reading-sample-api-calls}
 
 Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
-### Recopile valores para encabezados opcionales y requeridos {#gather-values}
+### Recopilar valores para encabezados opcionales y requeridos {#gather-values}
 
 Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
@@ -155,7 +154,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Utilice el ID de especificación de conexión para el servicio de perfil unificado:  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilice el ID de especificación de conexión para el servicio de perfil -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Respuesta**
 
@@ -185,7 +184,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -200,11 +199,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Utilice el ID que ha obtenido en el paso anterior.
-* `{CONNECTION_SPEC_ID}`: Utilice el ID de especificación de conexión para el servicio de perfil unificado:  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilice el ID de especificación de conexión para el servicio de perfil -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único (`id`) para la conexión de origen recién creada al servicio de perfil unificado. Esto confirma que se ha conectado correctamente a los datos del Experience Platform. Almacene este valor tal como es necesario en un paso posterior.
+Una respuesta correcta devuelve el identificador único (`id`) para la conexión de origen recién creada al servicio de perfil. Esto confirma que se ha conectado correctamente a los datos del Experience Platform. Almacene este valor tal como es necesario en un paso posterior.
 
 ```json
 {
@@ -213,7 +212,7 @@ Una respuesta correcta devuelve el identificador único (`id`) para la conexión
 ```
 
 
-## Conectarse al destino de flujo {#connect-to-streaming-destination}
+## Conectarse al destino de flujo continuo {#connect-to-streaming-destination}
 
 ![Pasos de destino paso 3](../assets/api/streaming-destination/step3.png)
 
@@ -470,7 +469,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Utilice el flujo de datos obtenido en el paso anterior.
 * `{ETAG}`: Utilice la etiqueta que obtuvo en el paso anterior.
-* `{SEGMENT_ID}`: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleccione **[!UICONTROL Segmentation Service API]** en el menú de navegación de la izquierda y busque la operación `GET /segment/definitions` en **[!UICONTROL Segment Definitions]**.
+* `{SEGMENT_ID}`: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleccione **[!UICONTROL API del servicio de segmentación]** en el menú de navegación de la izquierda y busque la operación `GET /segment/definitions` en **[!UICONTROL Definiciones de segmentos]**.
 * `{PROFILE_ATTRIBUTE}`: Por ejemplo,  `personalEmail.address` o  `person.lastName`
 
 **Respuesta**
@@ -594,7 +593,7 @@ La respuesta devuelta debe incluir en el parámetro `transformations` los segmen
 }
 ```
 
-## Uso de colecciones Postman para conectarse a destinos de flujo continuo {#collections}
+## Uso de colecciones Postman para conectarse a destinos de flujo continuo  {#collections}
 
 Para conectarse a los destinos de flujo continuo descritos en este tutorial de forma más sencilla, puede utilizar [[!DNL Postman]](https://www.postman.com/).
 
