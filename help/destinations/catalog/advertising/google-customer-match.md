@@ -3,9 +3,9 @@ keywords: coincidencia de clientes de google;coincidencia de clientes de Google;
 title: Conexión de Google Customer Match
 description: Google Customer Match le permite utilizar sus datos en línea y sin conexión para llegar a sus clientes y volver a interactuar con ellos en todas las propiedades de Google que usted posee y gestiona, como Search, Shopping, Gmail y YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
+source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ Una destacada compañía tecnológica lanzó un nuevo teléfono. Para promociona
 
 Para promocionar la versión, cargan direcciones de correo electrónico de su base de datos CRM en Experience Platform, utilizando las direcciones de correo electrónico como identificadores. Los segmentos se crean en función de los clientes que poseen modelos de teléfono más antiguos. A continuación, los segmentos se envían a [!DNL Google Customer Match], de modo que la empresa pueda dirigirse a los clientes actuales, a los clientes que son propietarios de modelos de teléfono antiguos y a clientes similares en [!DNL YouTube].
 
-## Administración de datos para destinos [!DNL Google Customer Match] {#data-governance}
+## Control de datos para destinos [!DNL Google Customer Match] {#data-governance}
 
 Algunos destinos en Experience Platform tienen ciertas reglas y obligaciones para los datos enviados a la plataforma de destino o recibidos de ella. Usted es el responsable de comprender las limitaciones y obligaciones de sus datos y cómo utiliza esos datos en Adobe Experience Platform y en la plataforma de destino. Adobe Experience Platform proporciona herramientas de control de datos para ayudarle a administrar algunas de esas obligaciones de uso de datos. [Obtenga ](../../../data-governance/labels/overview.md) más información sobre las herramientas y políticas de control de datos.
 
-## Identidades admitidas {#supported-identities}
+## Identidades compatibles {#supported-identities}
 
 [!DNL Google Customer Match] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
 
@@ -52,9 +52,11 @@ Algunos destinos en Experience Platform tienen ciertas reglas y obligaciones par
 
 **Exportación de segmentos** : está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono y otros) utilizados en el  [!DNL Google Customer Match] destino.
 
-## [!DNL Google Customer Match] requisitos previos de la cuenta  {#google-account-prerequisites}
+## [!DNL Google Customer Match] requisitos previos de la cuenta {#google-account-prerequisites}
 
 Antes de configurar un destino [!DNL Google Customer Match] en el Experience Platform, asegúrese de leer y cumplir la directiva de Google para usar [!DNL Customer Match], que se describe en la [documentación de soporte de Google](https://support.google.com/google-ads/answer/6299717).
+
+A continuación, asegúrese de que su cuenta [!DNL Google] esté configurada para un nivel de acceso [!DNL Standard] o superior. Consulte la [documentación de Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obtener más información.
 
 ### Lista de permitidos {#allowlist}
 
@@ -68,7 +70,7 @@ Google permite automáticamente a los clientes con cuentas compatibles aparecer 
 
 En función del tipo de ID que ingrese en Adobe Experience Platform, debe cumplir sus requisitos correspondientes.
 
-## Requisitos de hash de números de teléfono {#phone-number-hashing-requirements}
+## Requisitos de hash de número telefónico {#phone-number-hashing-requirements}
 
 Existen dos métodos para activar los números de teléfono en [!DNL Google Customer Match]:
 
