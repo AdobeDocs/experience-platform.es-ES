@@ -5,9 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
+source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
 workflow-type: tm+mt
-source-wordcount: '3708'
+source-wordcount: '3726'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ La estandarización es un concepto clave detrás de [!DNL Experience Platform]. 
 
 La infraestructura en la que se crea [!DNL Experience Platform], conocida como [!DNL XDM System], facilita los flujos de trabajo basados en esquemas e incluye los [!DNL Schema Registry], [!DNL Schema Editor], los metadatos de esquema y los patrones de consumo de servicio. Consulte la [información general del sistema XDM](../home.md) para obtener más información.
 
-Existen varias ventajas clave para crear y utilizar esquemas en [!DNL Experience Platform]. En primer lugar, los esquemas permiten un mejor control de los datos y la minimización de los mismos, lo que es especialmente importante con las regulaciones de privacidad. En segundo lugar, la creación de esquemas con los componentes estándar de Adobe permite obtener perspectivas integradas y utilizar servicios AI/ML con personalizaciones mínimas. Por último, los esquemas proporcionan infraestructura para la información sobre el uso compartido de datos y la orquestación eficiente.
+Existen varias ventajas clave para aprovechar los esquemas en [!DNL Experience Platform]. En primer lugar, los esquemas permiten un mejor control de los datos y la minimización de los mismos, lo que es especialmente importante con las regulaciones de privacidad. En segundo lugar, la creación de esquemas con los componentes estándar de Adobe permite obtener perspectivas integradas y utilizar servicios AI/ML con personalizaciones mínimas. Por último, los esquemas proporcionan infraestructura para la información sobre el uso compartido de datos y la orquestación eficiente.
 
 ## Planificación del esquema
 
@@ -68,7 +68,7 @@ Existen dos maneras de enviar datos de identidad a Platform:
 
 `identityMap` es un campo de tipo map que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Este campo se puede utilizar para proporcionar información de identidad para los esquemas, en lugar de definir valores de identidad dentro de la estructura del propio esquema.
 
-El principal inconveniente del uso de `identityMap` es que las identidades se incrustan en los datos y, como resultado, se vuelven menos visibles. Si va a introducir datos sin procesar, debe definir campos de identidad individuales dentro de la estructura de esquema real. Los esquemas que utilizan `identityMap` tampoco pueden participar en las relaciones.
+El principal inconveniente del uso de `identityMap` es que las identidades se incrustan en los datos y, como resultado, se vuelven menos visibles. Si va a introducir datos sin procesar, debe definir campos de identidad individuales dentro de la estructura de esquema real. Los esquemas que usan `identityMap` tampoco pueden participar en las relaciones.
 
 Sin embargo, los mapas de identidad pueden resultar especialmente útiles si está recopilando datos de fuentes que almacenan identidades juntas (como [!DNL Airship] o Adobe Audience Manager), o si hay un número variable de identidades para un esquema. Además, se requieren mapas de identidad si utiliza el [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
@@ -111,7 +111,7 @@ Como se muestra en el ejemplo anterior, cada clave del objeto `identityMap` repr
 
 A medida que la naturaleza de las experiencias digitales sigue evolucionando, también lo hacen los esquemas utilizados para representarlas. Por lo tanto, un esquema bien diseñado puede adaptarse y evolucionar según sea necesario, sin causar cambios destructivos en versiones anteriores del esquema.
 
-Dado que el mantenimiento de la compatibilidad con versiones anteriores es crucial para la evolución del esquema, [!DNL Experience Platform] aplica un principio de versiones puramente aditivo para garantizar que cualquier revisión del esquema solo genere actualizaciones y cambios no destructivos. En otras palabras, no se admiten los **cambios de interrupción.**
+Dado que mantener la compatibilidad con versiones anteriores es crucial para la evolución del esquema, [!DNL Experience Platform] aplica un principio de versiones puramente aditivo. Este principio garantiza que cualquier revisión del esquema solo produzca actualizaciones y cambios no destructivos. En otras palabras, no se admiten los **cambios de interrupción.**
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ En la tabla siguiente se desglosan los cambios compatibles al editar esquemas, g
 
 | Cambios admitidos | Cambios que se rompen (no compatible) |
 | --- | --- |
-| <ul><li>Adición de nuevos campos al recurso</li><li>Hacer opcional un campo obligatorio</li><li>Cambio del nombre para mostrar y la descripción del recurso</li></ul> | <ul><li>Eliminación de campos definidos previamente</li><li>Introducción de nuevos campos obligatorios</li><li>Cambio del nombre o redefinición de campos existentes</li><li>Eliminación o restricción de los valores de campo admitidos anteriormente</li><li>Mover atributos a una ubicación diferente en el árbol</li></ul> |
+| <ul><li>Adición de nuevos campos al recurso</li><li>Hacer opcional un campo obligatorio</li><li>Cambio del nombre para mostrar y la descripción del recurso</li><li>Activación del esquema para participar en el perfil</li></ul> | <ul><li>Eliminación de campos definidos previamente</li><li>Introducción de nuevos campos obligatorios</li><li>Cambio del nombre o redefinición de campos existentes</li><li>Eliminación o restricción de los valores de campo admitidos anteriormente</li><li>Mover los campos existentes a una ubicación diferente del árbol</li><li>Eliminación del esquema</li><li>Desactivación de la participación del esquema en el perfil</li></ul> |
 
 ### Esquemas e ingesta de datos
 
@@ -299,7 +299,7 @@ A la hora de diseñar los esquemas, deben tenerse en cuenta algunos factores cla
 | Objetos | Campos de forma libre |
 | --- | --- |
 | Aumenta la anidación | Menos o no anidar |
-| Crea agrupaciones de campos lógicos | Los campos se colocan en ubicaciones específicas |
+| Crea agrupaciones de campos lógicos | Los campos se colocan en ubicaciones ad hoc |
 
 {style=&quot;table-layout:auto&quot;}
 
