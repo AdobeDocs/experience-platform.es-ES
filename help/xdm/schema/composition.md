@@ -5,9 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
 workflow-type: tm+mt
-source-wordcount: '3726'
+source-wordcount: '3629'
 ht-degree: 0%
 
 ---
@@ -161,6 +161,12 @@ Los grupos de campos definen con qué clases son compatibles en función del com
 
 Por ejemplo, para capturar detalles como &quot;[!UICONTROL Nombre]&quot; y &quot;[!UICONTROL Dirección principal]&quot; para su esquema &quot;[!UICONTROL Miembros de lealtad]&quot;, podría utilizar grupos de campos estándar que definan esos conceptos comunes. Sin embargo, los conceptos específicos de casos de uso menos comunes (como &quot;[!UICONTROL Nivel de programa de lealtad]&quot;) no suelen tener un grupo de campos predefinido. En este caso, debe definir su propio grupo de campos para capturar esta información.
 
+>[!NOTE]
+>
+>Se recomienda encarecidamente utilizar grupos de campos estándar siempre que sea posible en los esquemas, ya que estos campos se entienden implícitamente en los servicios [!DNL Experience Platform] y ofrecen buena coherencia cuando se utilizan en los componentes [!DNL Platform].
+>
+>Los campos proporcionados por los componentes estándar (como &quot;Nombre&quot; y &quot;Dirección de correo electrónico&quot;) contienen connotaciones añadidas que van más allá de los tipos de campo escalar básicos, lo que indica a [!DNL Platform] que cualquier campo que comparta el mismo tipo de datos se comportará de la misma manera. Se puede confiar en que este comportamiento sea coherente independientemente de la procedencia de los datos o del servicio [!DNL Platform] del que se utilicen los datos.
+
 Recuerde que los esquemas están compuestos de &quot;cero o más&quot; grupos de campos, por lo que esto significa que puede componer un esquema válido sin utilizar ningún grupo de campos.
 
 La siguiente captura de pantalla muestra cómo se representan los grupos de campos en la interfaz de usuario de Platform. En este ejemplo, se agrega un solo grupo de campos ([!UICONTROL Demographic Details]) a un esquema que proporciona una agrupación de campos a la estructura del esquema.
@@ -209,24 +215,6 @@ Los intervalos válidos de estos tipos escalares pueden restringirse aún más a
 >[!NOTE]
 >
 >El tipo de campo &quot;map&quot; permite obtener datos de pares de clave-valor, incluidos varios valores para una sola clave. Los mapas solo se pueden definir en el nivel del sistema, lo que significa que puede encontrar un mapa en un esquema del sector o definido por el proveedor, pero no está disponible para su uso en los campos definidos. La [guía para desarrolladores de la API del Registro de Esquemas](../api/getting-started.md) contiene más información sobre la definición de tipos de campo.
-
-Algunas operaciones de datos utilizadas por los servicios y aplicaciones descendentes imponen restricciones en tipos de campo específicos. Los servicios afectados incluyen, entre otros:
-
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)
-* [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Segmentation]](../../segmentation/home.md)
-* [[!DNL Query Service]](../../query-service/home.md)
-* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
-
-Antes de crear un esquema para utilizarlo en servicios descendentes, revise la documentación apropiada para esos servicios para comprender mejor los requisitos y restricciones de campo para las operaciones de datos para las que está previsto el esquema.
-
-### Campos XDM
-
-Además de los campos básicos y la capacidad de definir sus propios tipos de datos, XDM proporciona un conjunto estándar de campos y tipos de datos que los servicios [!DNL Experience Platform] entienden implícitamente y ofrecen buena coherencia cuando se utilizan en los componentes [!DNL Platform].
-
-Estos campos, como &quot;Nombre&quot; y &quot;Dirección de correo electrónico&quot;, contienen connotaciones añadidas más allá de los tipos de campo escalar básicos, lo que indica a [!DNL Platform] que cualquier campo que comparta el mismo tipo de datos XDM se comportará de la misma manera. Se puede confiar en que este comportamiento sea coherente independientemente de la procedencia de los datos o del servicio [!DNL Platform] del que se utilicen los datos.
-
-Consulte el [diccionario de campos XDM](field-dictionary.md) para obtener una lista completa de los campos XDM disponibles. Se recomienda utilizar campos XDM y tipos de datos siempre que sea posible para admitir la coherencia y estandarización en [!DNL Experience Platform].
 
 ## Ejemplo de composición
 
