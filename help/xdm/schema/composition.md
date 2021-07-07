@@ -5,7 +5,7 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '3726'
 ht-degree: 0%
@@ -167,7 +167,7 @@ La siguiente captura de pantalla muestra cómo se representan los grupos de camp
 
 ![](../images/schema-composition/field-group.png)
 
-Para obtener la lista más actualizada de los grupos de campos XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/mixins). También puede consultar la guía sobre [exploración de los componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
+Para obtener la lista más actualizada de los grupos de campos XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/fieldgroups). También puede consultar la guía sobre [exploración de los componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
 
 ### Tipo de datos {#data-type}
 
