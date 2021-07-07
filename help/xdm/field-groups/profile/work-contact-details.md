@@ -5,7 +5,7 @@ title: Grupo de campos de esquema Detalles de contacto de trabajo
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de contacto de trabajo .
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 3%
@@ -34,5 +34,5 @@ ht-degree: 3%
 
 Para obtener más información sobre el grupo de campos, consulte el repositorio XDM público:
 
-* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)
-* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.schema.json)
+* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.example.1.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.schema.json)
