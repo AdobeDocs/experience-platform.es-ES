@@ -5,7 +5,7 @@ title: Grupo de campos de esquema de detalles de ID de usuario final
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles del ID de usuario final .
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%
@@ -38,5 +38,5 @@ ht-degree: 2%
 
 Para obtener más información sobre el grupo de campos, consulte el repositorio XDM público:
 
-* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.example.1.json)
-* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.schema.json)
+* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)
