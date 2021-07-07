@@ -5,7 +5,7 @@ title: Grupo de campos de esquema de detalles de contacto personal
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de contacto personales .
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 6%
@@ -35,5 +35,5 @@ ht-degree: 6%
 
 Para obtener más información sobre el grupo de campos, consulte el repositorio XDM público:
 
-* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
-* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
+* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
