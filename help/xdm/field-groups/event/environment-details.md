@@ -5,7 +5,7 @@ title: Grupo de campos de esquema Detalles del entorno
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles del entorno de ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `device` | [Dispositivo](../../data-types/device.md) | Describe una instancia de dispositivo, aplicación o explorador de dispositivo identificada que se puede rastrear entre sesiones, normalmente mediante cookies. |
+| `device` | [Device](../../data-types/device.md) | Describe una instancia de dispositivo, aplicación o explorador de dispositivo identificada que se puede rastrear entre sesiones, normalmente mediante cookies. |
 | `environment` | [Entorno](../../data-types/environment.md) | Describe información sobre el contexto de situación de la observación de eventos, detallando específicamente información transitoria como las versiones de red o software. |
 | `placeContext` | [Contexto del lugar](../../data-types/place-context.md) | Describe las circunstancias transitorias relacionadas con la observación del evento. Algunos ejemplos son la información específica de la configuración regional, como el tiempo, la hora local, el tráfico, el día de la semana, la jornada laboral frente a las vacaciones y las horas de trabajo. |
 
@@ -33,5 +33,5 @@ ht-degree: 3%
 
 Para obtener más información sobre el grupo de campos, consulte el repositorio XDM público:
 
-* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.example.1.json)
-* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.schema.json)
+* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.example.1.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.schema.json)
