@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 6864e4518b17dc843b3e74c0f9b03ab756d9c581
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '2590'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Para trabajar con políticas de combinación mediante la interfaz de usuario, co
 
 El extremo de API utilizado en esta guía forma parte de [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
 
-## Componentes de directivas de combinación {#components-of-merge-policies}
+## Componentes de políticas de combinación {#components-of-merge-policies}
 
 Las políticas de combinación son privadas para su organización de IMS, lo que le permite crear distintas políticas para combinar esquemas de las formas específicas que necesite. Cualquier API que acceda a datos [!DNL Profile] requiere una directiva de combinación, aunque se utilizará una predeterminada si no se proporciona explícitamente. [!DNL Platform] proporciona a las organizaciones una directiva de combinación predeterminada, o bien puede crear una directiva de combinación para una clase de esquema de Experience Data Model (XDM) específica y marcarla como predeterminada para su organización.
 
@@ -185,7 +185,7 @@ Donde el valor de `name` es el nombre de la clase XDM en la que se basa el esque
 
 Para obtener más información sobre XDM y trabajar con esquemas en Experience Platform, comience leyendo la [información general del sistema XDM](../../xdm/home.md).
 
-## Acceso a directivas de combinación {#access-merge-policies}
+## Acceso a las directivas de combinación {#access-merge-policies}
 
 Con la API [!DNL Real-time Customer Profile], el extremo `/config/mergePolicies` permite realizar una solicitud de búsqueda para ver una política de combinación específica por su ID, o acceder a todas las directivas de combinación de su organización de IMS, filtradas según criterios específicos. También puede utilizar el extremo `/config/mergePolicies/bulk-get` para recuperar varias políticas de combinación por sus ID. Los pasos para realizar cada una de estas llamadas se describen en las siguientes secciones.
 
@@ -761,9 +761,9 @@ Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediant
 
 Para trabajar con marcas de hora personalizadas mediante la interfaz de usuario, consulte la sección [Uso de marcas de hora personalizadas](../merge-policies/overview.md#custom-timestamps) en la [información general sobre políticas de combinación](../merge-policies/overview.md).
 
-#### [!DNL External Source System Audit Details] detalles del grupo de campos  {#field-group-details}
+#### [!DNL External Source System Audit Details] detalles del grupo de campos {#field-group-details}
 
-El siguiente ejemplo muestra campos rellenados correctamente en el grupo de campos [!DNL External Source System Audit Details]. El grupo de campos completo JSON también se puede ver en el repositorio [del Modelo de datos de experiencia pública (XDM)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) de GitHub.
+El siguiente ejemplo muestra campos rellenados correctamente en el grupo de campos [!DNL External Source System Audit Details]. El grupo de campos completo JSON también se puede ver en el repositorio [del Modelo de datos de experiencia pública (XDM)](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/external-source-system-audit-details.schema.json) de GitHub.
 
 ```json
 {
