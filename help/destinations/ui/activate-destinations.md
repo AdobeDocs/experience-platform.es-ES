@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
+source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
 workflow-type: tm+mt
-source-wordcount: '2806'
+source-wordcount: '2928'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,9 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para que los archivos ex
 3. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
 4. Seleccione **[!UICONTROL Crear]** para guardar la programación.
 
+>[!IMPORTANT]
+>
+>Si se cambia la programación de exportación de archivos, desde cualquier configuración de programación hasta la exportación completa de archivos, con la **[!UICONTROL Frequency]** establecida en **[!UICONTROL Once]**, para los segmentos que ya se han exportado, no se exporta un nuevo archivo de relleno. Para exportar un nuevo archivo de relleno con una programación diferente, debe crear una nueva instancia de destino. Se trata de una limitación que se abordará en futuras versiones.
 
 ### Exportar archivos incrementales {#export-incremental-files}
 
@@ -178,6 +181,10 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para que los archivo
 
 3. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
 4. Seleccione **[!UICONTROL Crear]** para guardar la programación.
+
+>[!IMPORTANT]
+>
+>Si se cambia la programación de exportación de archivos, desde cualquier configuración de programación hasta la exportación completa de archivos, con la **[!UICONTROL Frequency]** establecida en **[!UICONTROL Once]**, para los segmentos que ya se han exportado, no se exporta un nuevo archivo de relleno. Para exportar un nuevo archivo de relleno con una programación diferente, debe crear una nueva instancia de destino. Se trata de una limitación que se abordará en futuras versiones.
 
 ### Configurar nombres de archivo {#file-names}
 
