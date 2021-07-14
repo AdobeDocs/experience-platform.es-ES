@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: El perfil del cliente en tiempo real le permite crear una sola vista de clientes individuales dentro de Adobe Experience Platform recopilando datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para su procesamiento posterior.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1526'
 ht-degree: 2%
 
 ---
@@ -66,9 +65,6 @@ curl -X POST \
         "schemaRef": {
           "id": "https://ns.adobe.com/xdm/context/profile__union",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-        },
-        "fileDescription": {
-          "persisted": true
         }
       }'
 ```
@@ -77,7 +73,6 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Un nombre descriptivo para el conjunto de datos. |
 | `schemaRef.id` | El ID de la vista de unión (esquema) con la que se asociará el conjunto de datos. |
-| `fileDescription.persisted` | Un valor booleano que, cuando se establece en `true`, permite que el conjunto de datos persista en la vista de unión. |
 
 **Respuesta**
 
