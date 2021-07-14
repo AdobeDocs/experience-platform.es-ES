@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para aprender a evaluar segmentos y acceder a resultados de segmentos mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1552'
 ht-degree: 0%
 
 ---
@@ -144,7 +143,7 @@ Las secciones siguientes describen estas opciones con más detalle.
 
 Si conoce el perfil específico al que desea acceder, puede hacerlo usando la API [!DNL Real-time Customer Profile]. Los pasos completos para acceder a perfiles individuales están disponibles en el tutorial [Acceso a datos del perfil del cliente en tiempo real mediante la API de perfil](../../profile/api/entities.md).
 
-## Exportar un segmento {#export}
+## Exportación de segmentos {#export}
 
 Una vez que un trabajo de segmentación se haya completado correctamente (el valor del atributo `status` es &quot;SUCCEEDED&quot;), puede exportar la audiencia a un conjunto de datos al que se pueda acceder y en el que se pueda actuar.
 
@@ -191,9 +190,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/xdm/context/profile__union",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true
     }
 }'
 ```
@@ -202,7 +198,6 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Un nombre descriptivo para el conjunto de datos. |
 | `schemaRef.id` | El ID de la vista de unión (esquema) con la que se asociará el conjunto de datos. |
-| `fileDescription.persisted` | Un valor booleano que, cuando se establece en `true`, permite que el conjunto de datos persista en la vista de unión. |
 
 **Respuesta**
 
