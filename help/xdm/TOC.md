@@ -4,9 +4,9 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases del Modelo de datos de experiencia (XDM) y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Esquemas
-source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '311'
 ht-degree: 18%
 
 ---
@@ -33,10 +33,11 @@ ht-degree: 18%
 * Grupos de campos de esquema {#field-groups}
    * Grupos de campos de perfil {#profile}
       * [Detalles demográficos](./field-groups/profile/demographic-details.md)
+      * [Consentimiento TCF 2.0 de IAB](./field-groups/profile/iab.md)
       * [Mapa de identidades](./field-groups/profile/identitymap.md)
       * [Detalles de fidelidad](./field-groups/profile/loyalty-details.md)
       * [Detalles de contacto personal](./field-groups/profile/personal-contact-details.md)
-      * [Privacidad/Personalización/Preferencias de marketing (consentimientos)](./field-groups/profile/consents.md)
+      * [Consentimientos y preferencias](./field-groups/profile/consents.md)
       * [Detalles de pertenencia a segmentos](./field-groups/profile/segmentation.md)
       * [Detalles de contacto de trabajo](./field-groups/profile/work-contact-details.md)
    * Grupos de campos de eventos {#event}
@@ -45,6 +46,7 @@ ht-degree: 18%
       * [Detalles del comercio](./field-groups/event/commerce-details.md)
       * [Detalles del ID de usuario final](./field-groups/event/enduserids.md)
       * [Detalles del entorno](./field-groups/event/environment-details.md)
+      * [Consentimiento TCF 2.0 de IAB](./field-groups/event/iab.md)
       * [Detalles web](./field-groups/event/web-details.md)
    * [Actualizaciones del nombre del grupo de campos](./field-groups/name-updates.md)
 * Tipos de datos {#data-types}
@@ -52,6 +54,7 @@ ht-degree: 18%
    * [Señalización](./data-types/beacon.md)
    * [Detalles del explorador](./data-types/browser-details.md)
    * [Comercio](./data-types/commerce.md)
+   * [Cadena de consentimiento](./data-types/consent-string.md)
    * [Consentimientos y preferencias](./data-types/consents.md)
    * [Device](./data-types/device.md)
    * [Correo electrónico Dirección](./data-types/email-address.md)
@@ -61,7 +64,7 @@ ht-degree: 18%
    * [Campo de preferencia de marketing genérico](./data-types/marketing-field.md)
    * [Campo de preferencia de marketing genérico con suscripciones](./data-types/marketing-field-subscriptions.md)
    * [Campo de preferencia de personalización genérica](./data-types/personalization-field.md)
-   * [Geografía ](./data-types/geo.md)
+   * [Geografía](./data-types/geo.md)
    * [Círculo geográfico](./data-types/geo-circle.md)
    * [Coordenadas geográficas](./data-types/geo-coordinates.md)
    * [Detalles de interacción geográfica](./data-types/geo-interaction-details.md)
