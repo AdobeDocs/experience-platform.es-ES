@@ -5,7 +5,7 @@ title: Configuración de un conjunto de datos para capturar datos de consentimie
 topic-legacy: getting started
 description: Obtenga información sobre cómo configurar un esquema y conjunto de datos del Modelo de datos de experiencia (XDM) para capturar datos de consentimiento y preferencias en Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3f6191bb3ddfdd24b1c2ed19ba4293402f56d2e5
+source-git-commit: ff793c207a181ca6d2486e7fd6ef5c4f57744fba
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Este documento proporciona los pasos para configurar un conjunto de datos para p
 
 >[!IMPORTANT]
 >
->Los ejemplos de esta guía utilizan un conjunto estandarizado de campos para representar los valores de consentimiento del cliente, tal como se define en el tipo de datos [Consents &amp; Preferences XDM](../../../../xdm/data-types/consents.md). La estructura de estos campos pretende proporcionar un modelo de datos eficiente que abarque muchos casos de uso comunes de recopilación de consentimiento.
+>Los ejemplos de esta guía utilizan un conjunto estandarizado de campos para representar los valores de consentimiento del cliente, tal como se define en el grupo de campos de esquema [[!UICONTROL Consents and Preferences]](../../../../xdm/field-groups/profile/consents.md). La estructura de estos campos pretende proporcionar un modelo de datos eficiente que abarque muchos casos de uso comunes de recopilación de consentimiento.
 >
 >Sin embargo, también puede definir sus propios grupos de campos para representar el consentimiento según sus propios modelos de datos. Consulte con su equipo legal para obtener la aprobación de un modelo de datos de consentimiento que se ajuste a sus necesidades comerciales, en función de las siguientes opciones:
 >
@@ -41,9 +41,9 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >
 >Este tutorial supone que conoce el esquema [!DNL Profile] de Platform que desea utilizar para capturar la información de atributos del cliente. Independientemente del método que utilice para recopilar datos de consentimiento, este esquema debe estar [habilitado para Perfil del cliente en tiempo real](../../../../xdm/ui/resources/schemas.md#profile). Además, la identidad principal del esquema no puede ser un campo directamente identificable que esté prohibido utilizar en publicidad basada en intereses, como una dirección de correo electrónico. Consulte a su asesor legal si no está seguro de qué campos están restringidos.
 
-## Estructura del grupo de campos Consentimientos y preferencias {#structure}
+## [!UICONTROL Consentimientos y ] preferencias estructura de grupo de campos {#structure}
 
-El grupo de campos [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (en adelante, el &quot;grupo de campos Consentimientos y preferencias&quot;) proporciona campos de consentimiento estandarizados a un esquema. Actualmente, este grupo de campos solo es compatible con esquemas basados en la clase [!DNL XDM Individual Profile].
+El grupo de campos [!UICONTROL Consents and Preferences] proporciona campos de consentimiento estandarizados a un esquema. Actualmente, este grupo de campos solo es compatible con esquemas basados en la clase [!DNL XDM Individual Profile].
 
 El grupo de campos proporciona un único campo de tipo de objeto, `consents`, cuyas subpropiedades capturan un conjunto de campos de consentimiento estandarizados. El siguiente JSON es un ejemplo del tipo de datos que `consents` espera al ingerirlos:
 
@@ -92,9 +92,9 @@ El grupo de campos proporciona un único campo de tipo de objeto, `consents`, cu
 
 >[!NOTE]
 >
->Para obtener más información sobre la estructura y el significado de las subpropiedades en `consents`, consulte la descripción general del tipo de datos [Consentimientos y preferencias](../../../../xdm/data-types/consents.md).
+>Para obtener más información sobre la estructura y el significado de las subpropiedades en `consents`, consulte la descripción general del grupo de campos [[!UICONTROL Consentimientos y preferencias]](../../../../xdm/field-groups/profile/consents.md).
 
-## Agregue el grupo de campos Consentimientos y preferencias al esquema [!DNL Profile] {#add-field-group}
+## Agregue el grupo de campos [!UICONTROL Consentimientos y preferencias] al esquema [!DNL Profile] {#add-field-group}
 
 En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]** para mostrar una lista de esquemas existentes. Desde aquí, seleccione el nombre del esquema habilitado para [!DNL Profile] al que desea agregar campos de consentimiento. Las capturas de pantalla de esta sección utilizan el esquema &quot;Miembros de lealtad&quot; integrado en el tutorial [de creación de esquemas](../../../../xdm/tutorials/create-schema-ui.md) como ejemplo.
 
@@ -108,7 +108,7 @@ Aparece el [!DNL Schema Editor], que muestra la estructura del esquema en el lie
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Agregar grupo de campos]**. Desde aquí, seleccione **[!UICONTROL Privacidad/Personalización/Preferencias de marketing (consentimientos)]** en la lista. Si lo desea, puede utilizar la barra de búsqueda para reducir los resultados y localizar más fácilmente el grupo de campos. Una vez seleccionado el grupo de campos, seleccione **[!UICONTROL Add field group]**.
+Aparece el cuadro de diálogo **[!UICONTROL Agregar grupo de campos]**. Desde aquí, seleccione **[!UICONTROL Consentimientos y preferencias]** en la lista. Si lo desea, puede utilizar la barra de búsqueda para reducir los resultados y localizar más fácilmente el grupo de campos. Una vez seleccionado el grupo de campos, seleccione **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
@@ -164,15 +164,15 @@ La siguiente sección contiene información adicional sobre la creación de un c
 
 ### Añadir campos de consentimiento y preferencia personalizados al esquema {#custom-consent}
 
-Si necesita capturar señales de consentimiento adicionales fuera de las representadas por el grupo de campos estándar [!DNL Consents & Preferences] , puede utilizar componentes XDM personalizados para mejorar el esquema de consentimiento para adaptarlo a sus necesidades comerciales particulares. En esta sección se describen los principios básicos de cómo personalizar el esquema de consentimiento para introducir estas señales en Perfil.
+Si necesita capturar señales de consentimiento adicionales fuera de las representadas por el grupo de campos [!UICONTROL Consentimientos y preferencias] estándar, puede utilizar componentes XDM personalizados para mejorar el esquema de consentimiento para adaptarlo a sus necesidades comerciales particulares. En esta sección se describen los principios básicos de cómo personalizar el esquema de consentimiento para introducir estas señales en Perfil.
 
 >[!IMPORTANT]
 >
 >Los SDK web y móviles de Platform no admiten campos personalizados en sus comandos de cambio de consentimiento. Actualmente, la única forma de introducir campos de consentimiento personalizados en Perfil es mediante [ingesta por lotes](../../../../ingestion/batch-ingestion/overview.md) o una [conexión de origen](../../../../sources/home.md).
 
-Se recomienda utilizar el grupo de campos [!DNL Consents & Preferences] como base para la estructura de los datos de consentimiento y añadir campos adicionales según sea necesario, en lugar de intentar crear toda la estructura desde cero.
+Es muy recomendable utilizar el grupo de campos [!UICONTROL Consentimientos y preferencias] como base para la estructura de los datos de consentimiento y añadir campos adicionales según sea necesario, en lugar de intentar crear toda la estructura desde cero.
 
-Para añadir campos personalizados a la estructura de un grupo de campos estándar, primero debe crear un grupo de campos personalizado. Después de agregar el grupo de campos [!DNL Consents & Preferences] al esquema, seleccione el icono **plus (+)** en la sección **[!UICONTROL Grupos de campos]** y, a continuación, seleccione **[!UICONTROL Crear nuevo grupo de campos]**. Proporcione un nombre y una descripción opcional para el grupo de campos y, a continuación, seleccione **[!UICONTROL Agregar grupo de campos]**.
+Para añadir campos personalizados a la estructura de un grupo de campos estándar, primero debe crear un grupo de campos personalizado. Después de agregar el grupo de campos [!UICONTROL Consentimientos y preferencias] al esquema, seleccione el icono **plus (+)** en la sección **[!UICONTROL Grupos de campos]** y, a continuación, seleccione **[!UICONTROL Crear nuevo grupo de campos]**. Proporcione un nombre y una descripción opcional para el grupo de campos y, a continuación, seleccione **[!UICONTROL Agregar grupo de campos]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
