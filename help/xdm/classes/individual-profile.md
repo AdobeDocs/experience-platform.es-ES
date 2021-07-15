@@ -5,9 +5,9 @@ title: Clase de perfil individual XDM
 topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 79fcc44ec5e08f63bfd5eed6e90d7538273f4dab
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ Adobe proporciona varios grupos de campos estándar para su uso con la clase [!D
 * [[!UICONTROL Mapa de identidades]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Detalles de fidelidad]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Detalles de contacto personal]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Privacidad/Personalización/Preferencias de marketing (consentimientos)]](../field-groups/profile/consents.md)
+* [[!UICONTROL Consentimientos y preferencias]](../field-groups/profile/consents.md)
 * [[!UICONTROL Detalles de pertenencia a segmentos]](../field-groups/profile/segmentation.md)
 * [[!UICONTROL Detalles de contacto de trabajo]](../field-groups/profile/work-contact-details.md)
 
