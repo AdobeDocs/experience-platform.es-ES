@@ -5,9 +5,9 @@ title: Respeto del consentimiento en los segmentos
 topic-legacy: overview
 description: Obtenga información sobre cómo cumplir las preferencias de consentimiento del cliente para la recopilación y el uso compartido de datos personales en operaciones de segmentos.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 6d11a94d45b4a089ca6960aaf1ce78ae654ebc3f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Las regulaciones legales de privacidad, como la [!DNL California Consumer Privac
 
 Si un cliente ha retirado o retenido el consentimiento para compartir sus datos personales, es importante que su organización respete esa preferencia al generar audiencias para actividades de marketing. Este documento describe cómo integrar los valores de consentimiento del cliente en las definiciones de segmentos mediante la interfaz de usuario del Experience Platform.
 
-## Introducción
+## Primeros pasos
 
 El respeto de los valores de consentimiento del cliente requiere comprender los distintos servicios [!DNL Adobe Experience Platform] implicados. Antes de iniciar este tutorial, asegúrese de que está familiarizado con los siguientes servicios:
 
@@ -28,7 +28,7 @@ El respeto de los valores de consentimiento del cliente requiere comprender los 
 
 ## Campos de esquema de consentimiento
 
-Para respetar el consentimiento y las preferencias del cliente, uno de los esquemas que forma parte del esquema de unión [!UICONTROL XDM Individual Profile] debe contener el grupo de campos estándar **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]**.
+Para respetar el consentimiento y las preferencias del cliente, uno de los esquemas que forma parte del esquema de unión [!UICONTROL XDM Individual Profile] debe contener el grupo de campos estándar **[!UICONTROL Consents and Preferences]**.
 
 Para obtener más información sobre la estructura y el caso de uso previsto de cada uno de los atributos proporcionados por el grupo de campos, consulte la [guía de referencia de consentimientos y preferencias](../xdm/field-groups/profile/consents.md). Para obtener instrucciones paso a paso sobre cómo añadir un grupo de campos a un esquema, consulte la [guía de la interfaz de usuario de XDM](../xdm/ui/resources/schemas.md#add-field-groups).
 
