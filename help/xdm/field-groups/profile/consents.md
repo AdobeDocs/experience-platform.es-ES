@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: Privacidad/Personalización/Preferencias de marketing (consentimientos) Grupo de campos de esquema
+title: Grupo de campos de esquema consentimientos y preferencias
 topic-legacy: overview
-description: Este documento proporciona una descripción general del grupo de campos de esquema Privacidad/Personalización/Preferencias de marketing (consentimientos).
+description: Este documento proporciona una descripción general del grupo de campos de esquema Consentimientos y Preferencias .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2316'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Grupo de campos Privacidad/Personalización/Preferencias de marketing (consentimientos)] 
+# [!UICONTROL Consentimientos y ] preferencias, grupo de campos
 
-[!UICONTROL Privacidad/Personalización/Preferencias de marketing (consentimientos)]  (en adelante, el grupo de  [!DNL Privacy & Consents] campos) es un grupo de campos estándar para la  [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md), que se utiliza para capturar el consentimiento del cliente y la información de preferencias.
+[!UICONTROL Consentimientos y ]preferencias es un grupo de campos estándar para la  [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md), que se utiliza para capturar el consentimiento del cliente y la información de preferencias.
 
 >[!NOTE]
 >
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->El grupo de campos [!DNL Consents & Preferences] está diseñado para cubrir una serie de casos de uso de administración de preferencias y consentimiento. Como resultado, este documento describe el uso de los campos del grupo de campos en términos generales y solo realiza sugerencias sobre cómo debe interpretar el uso de estos campos. Consulte con su equipo legal de privacidad para alinear la estructura del grupo de campos con la forma en que su organización interpreta y presenta estas elecciones de consentimiento y preferencias a sus clientes.
+>El grupo de campos [!UICONTROL Consentimientos y preferencias] está diseñado para cubrir una serie de casos de uso de administración de preferencias y consentimiento. Como resultado, este documento describe el uso de los campos del grupo de campos en términos generales y solo realiza sugerencias sobre cómo debe interpretar el uso de estos campos. Consulte con su equipo legal de privacidad para alinear la estructura del grupo de campos con la forma en que su organización interpreta y presenta estas elecciones de consentimiento y preferencias a sus clientes.
 
-El grupo de campos [!DNL Consents & Preferences] proporciona varios campos utilizados para capturar información de **consentimiento** y **preferencia**.
+El grupo de campos [!UICONTROL Consentimientos y preferencias] proporciona varios campos utilizados para capturar la información **consentimiento** y **preferencia**.
 
 Un consentimiento es una opción que permite a un cliente especificar cómo se pueden utilizar sus datos. La mayoría de los consentimientos tienen un aspecto jurídico, ya que algunas jurisdicciones requieren la obtención de permiso antes de poder utilizar los datos de una manera determinada o requieren que el cliente tenga la opción de detener ese uso (exclusión) si no se requiere consentimiento afirmativo.
 
@@ -42,7 +42,7 @@ La siguiente captura de pantalla muestra cómo se representa la estructura del g
 >
 >Consulte la guía de [Exploración de recursos XDM](../../ui/explore.md) para ver los pasos sobre cómo buscar cualquier recurso XDM e inspeccionar su estructura en la interfaz de usuario de Platform.
 
-El siguiente JSON muestra un ejemplo del tipo de datos que el grupo de campos [!DNL Consents & Preferences] puede procesar. En las secciones que siguen se proporciona información sobre el uso específico de cada uno de estos campos.
+El siguiente JSON muestra un ejemplo del tipo de datos que el grupo de campos [!UICONTROL Consentimientos y preferencias] puede procesar. En las secciones que siguen se proporciona información sobre el uso específico de cada uno de estos campos.
 
 ```json
 {
@@ -343,12 +343,12 @@ No se espera que establezca este valor directamente, ya que el SDK de Adobe Expe
 
 ## Ingesta de datos mediante el grupo de campos {#ingest}
 
-Para utilizar el grupo de campos [!DNL Consents & Preferences] para introducir datos de consentimiento de sus clientes, debe crear un conjunto de datos basado en un esquema que contenga ese grupo de campos.
+Para utilizar el grupo de campos [!UICONTROL Consentimientos y preferencias] para introducir datos de consentimiento de los clientes, debe crear un conjunto de datos basado en un esquema que contenga ese grupo de campos.
 
-Consulte el tutorial sobre la [creación de un esquema en la interfaz de usuario](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para ver los pasos sobre cómo asignar grupos de campos a campos. Una vez creado un esquema que contiene un campo con el grupo de campos [!DNL Consents & Preferences] , consulte la sección sobre [creación de un conjunto de datos](../../../catalog/datasets/user-guide.md#create) en la guía del usuario del conjunto de datos, siguiendo los pasos para crear un conjunto de datos con un esquema existente.
+Consulte el tutorial sobre la [creación de un esquema en la interfaz de usuario](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para ver los pasos sobre cómo asignar grupos de campos a campos. Una vez creado un esquema que contiene un campo con el grupo de campos [!UICONTROL Consentimientos y preferencias] , consulte la sección [creación de un conjunto de datos](../../../catalog/datasets/user-guide.md#create) en la guía del usuario del conjunto de datos, siguiendo los pasos para crear un conjunto de datos con un esquema existente.
 
 >[!IMPORTANT]
-Si desea enviar datos de consentimiento a [!DNL Real-time Customer Profile], es necesario crear un esquema habilitado para [!DNL Profile] basado en la clase [!DNL XDM Individual Profile] que contiene el grupo de campos [!DNL Consents & Preferences]. El conjunto de datos que cree en función de ese esquema también debe estar habilitado para [!DNL Profile]. Consulte los tutoriales vinculados anteriormente para ver los pasos específicos relacionados con los requisitos [!DNL Real-time Customer Profile] para esquemas y conjuntos de datos.
+Si desea enviar datos de consentimiento a [!DNL Real-time Customer Profile], es necesario crear un esquema habilitado para [!DNL Profile] basado en la clase [!DNL XDM Individual Profile] que contiene el grupo de campos [!UICONTROL Consentimientos y preferencias]. El conjunto de datos que cree en función de ese esquema también debe estar habilitado para [!DNL Profile]. Consulte los tutoriales vinculados anteriormente para ver los pasos específicos relacionados con los requisitos [!DNL Real-time Customer Profile] para esquemas y conjuntos de datos.
 Además, también debe asegurarse de que las políticas de combinación estén configuradas para priorizar los conjuntos de datos que contienen los datos de consentimiento y preferencias más recientes, a fin de que los perfiles de clientes se actualicen correctamente. Consulte la descripción general de [merge policy](../../../rtcdp/profile/merge-policies.md) para obtener más información.
 
 ## Gestión de cambios de consentimiento y preferencias
@@ -357,7 +357,7 @@ Cuando un cliente cambia sus consentimientos o preferencias en el sitio web, est
 
 ## Apéndice {#appendix}
 
-Las secciones siguientes proporcionan información de referencia adicional sobre el grupo de campos [!DNL Consents & Preferences].
+Las secciones siguientes proporcionan información de referencia adicional sobre el grupo de campos [!UICONTROL Consentimientos y preferencias].
 
 ### Valores aceptados para `val` {#choice-values}
 
@@ -399,6 +399,6 @@ La siguiente tabla describe los valores aceptados para `preferred`:
 
 {style=&quot;table-layout:auto&quot;}
 
-### Esquema [!DNL Consents & Preferences] completo {#full-schema}
+### Esquema [!UICONTROL Consentimientos y preferencias] completo {#full-schema}
 
-Para ver el esquema completo del grupo de campos [!DNL Consents & Preferences], consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Para ver el esquema completo del grupo de campos [!UICONTROL Consentimientos y preferencias], consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
