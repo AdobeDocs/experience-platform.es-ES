@@ -3,10 +3,9 @@ title: Compatibilidad con las preferencias de consentimiento del cliente mediant
 description: Obtenga información sobre cómo admitir las preferencias de consentimiento con el SDK web de Adobe Experience Platform.
 keywords: consentimiento;defaultConsent;consentimiento predeterminado;setConsent;grupo de campos Privacidad del perfil;grupo de campos Privacidad del evento de experiencia;grupo de campos Privacidad;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -54,7 +53,7 @@ El SDK admite las versiones 1.0 y 2.0 del estándar de consentimiento de Adobe E
 
 ### Uso de la versión 2.0 estándar de Adobe
 
-Si utiliza Adobe Experience Platform, debe incluir un grupo de campos de esquema de privacidad en el esquema de perfil. Consulte [Control, privacidad y seguridad en Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) para obtener más información sobre la versión 2.0 estándar de Adobe. Puede agregar datos dentro del objeto de valor que se encuentra debajo y que corresponde al esquema del campo `consents` del grupo de campos de perfil Consentimientos y preferencias.
+Si utiliza Adobe Experience Platform, debe incluir un grupo de campos de esquema de privacidad en el esquema de perfil. Consulte [Control, privacidad y seguridad en Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) para obtener más información sobre la versión 2.0 estándar de Adobe. Puede agregar datos dentro del objeto de valor que se encuentra debajo y que corresponde al esquema del campo `consents` del grupo de campos de perfil [!UICONTROL Consentimientos y preferencias].
 
 Si el usuario decide participar, ejecute el comando `setConsent` con la preferencia recopilada establecida en `y` de la siguiente manera:
 
