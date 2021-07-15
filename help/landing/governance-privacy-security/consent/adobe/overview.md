@@ -5,9 +5,9 @@ title: Procesamiento de consentimiento en Adobe Experience Platform
 topic-legacy: getting started
 description: Aprenda a procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,11 @@ En la versión actual de compatibilidad con el procesamiento de consentimiento e
 
 >[!NOTE]
 >
->Para obtener más información sobre la estructura de los campos de consentimiento XDM mencionados anteriormente, consulte la guía del tipo de datos [Consents &amp; Preferences](../../../../xdm/data-types/consents.md).
+>Para obtener más información sobre la estructura de los campos de consentimiento XDM mencionados anteriormente, consulte la guía sobre el tipo de datos [[!UICONTROL Consentimientos y preferencias]](../../../../xdm/data-types/consents.md).
 
 Una vez configurado el sistema, el SDK web de la plataforma interpreta el valor del consentimiento de la recopilación de datos para el usuario actual a fin de determinar si los datos deben enviarse a la red perimetral de Adobe Experience Platform, dejarse caer del cliente o persistir hasta que el permiso de recopilación de datos se establezca en sí o no.
 
-## Determine cómo generar datos de consentimiento del cliente dentro de su CMP {#consent-data}
+## Determinar cómo generar datos de consentimiento del cliente dentro de su CMP {#consent-data}
 
 Dado que cada sistema CMP es único, debe determinar la mejor manera de permitir que sus clientes den su consentimiento mientras interactúan con su servicio. Una forma común de conseguirlo es mediante un cuadro de diálogo de consentimiento de cookie, similar al siguiente ejemplo:
 
@@ -76,7 +76,7 @@ Una vez que haya creado un conjunto de datos habilitado para [!DNL Profile] para
 >
 >Si no tiene conjuntos de datos en conflicto, debe establecer la prioridad de la marca de tiempo para la política de combinación. Esto ayuda a garantizar que el consentimiento más reciente especificado por un cliente sea la configuración de consentimiento que se utiliza.
 
-Para obtener más información sobre cómo trabajar con políticas de combinación, comience por leer la [información general de directivas de combinación](../../../../profile/merge-policies/overview.md). Al configurar las políticas de combinación, debe asegurarse de que los perfiles incluyan todos los atributos de consentimiento necesarios proporcionados por el grupo de campos de esquema Consentimientos y preferencias , tal como se describe en la guía de [preparación del conjunto de datos](./dataset.md).
+Para obtener más información sobre cómo trabajar con políticas de combinación, comience por leer la [información general de directivas de combinación](../../../../profile/merge-policies/overview.md). Al configurar las políticas de combinación, debe asegurarse de que los perfiles incluyan todos los atributos de consentimiento necesarios proporcionados por el grupo de campos de esquema [!UICONTROL Consents and Preferences] , tal y como se describe en la guía sobre [preparación del conjunto de datos](./dataset.md).
 
 ## Incorporar datos de consentimiento a Platform
 
@@ -102,7 +102,7 @@ Puede ingerir datos de consentimiento compatibles con XDM desde un archivo CSV m
 
 Siga el tutorial sobre [asignación de un archivo CSV a XDM](../../../../ingestion/tutorials/map-a-csv-file.md) para aprender a convertir los campos de datos a XDM e incorporarlos en Platform. Al seleccionar [!UICONTROL Destination] para la asignación, asegúrese de seleccionar la opción **[!UICONTROL Use existing dataset]** y elija el conjunto de datos de consentimiento [!DNL Profile] habilitado que creó anteriormente.
 
-## Pruebe la implementación {#test-implementation}
+## Probar la implementación {#test-implementation}
 
 Después de haber introducido los datos de consentimiento del cliente en su conjunto de datos habilitado para [!DNL Profile] , puede comprobar los perfiles actualizados para ver si contienen atributos de consentimiento.
 
