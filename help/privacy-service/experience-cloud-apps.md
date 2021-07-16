@@ -5,9 +5,9 @@ title: Aplicaciones Privacy Service y Experience Cloud
 topic-legacy: overview
 description: Este documento proporciona una referencia sobre cómo configurar distintas aplicaciones de Experience Cloud para operaciones relacionadas con la privacidad.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 55d6d8ad7b0fc5457dc0fdc981aaa92717adbe68
+source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '594'
 ht-degree: 13%
 
 ---
@@ -49,9 +49,9 @@ La siguiente es una lista de aplicaciones [!DNL Experience Cloud] que no están 
 | [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Información general sobre las funcionalidades del RGPD para Adobe Campaign Classic. |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Información general sobre cómo un administrador de privacidad del cliente o AEM administrador puede gestionar las solicitudes de RGPD. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Pasos para realizar solicitudes de acceso y eliminación del RGPD mediante Livefyre. |
-| [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/client-side-info/deploy-javascript-tags-to-opt-in-to-launch.html) | Cómo los desarrolladores pueden usar las extensiones y el creador de reglas para definir las soluciones de inclusión y de exclusión. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Asegúrese de que las instalaciones del Magento Commerce cumplan los requisitos de la legislación específica de privacidad. |
 | [Marketo](https://www.marketo.com/company/trust/gdpr/) | Descubra cómo se aplican las normas de privacidad a Marketo. |
+| [Etiquetas en Adobe Experience Platform](../tags/ui/client-side/consent.md) | Cómo los desarrolladores pueden usar las extensiones y el creador de reglas para definir las soluciones de inclusión y de exclusión. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Descubra cómo Workfront recopila datos personales y cómo un interesado puede enviar una solicitud de privacidad a través de un formulario. |
 
 {style=&quot;table-layout:auto&quot;}
