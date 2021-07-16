@@ -1,0 +1,60 @@
+---
+title: Tipos de condición para extensiones de Edge
+description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo condición para una extensión de Edge en Adobe Experience Platform.
+source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+workflow-type: tm+mt
+source-wordcount: '277'
+ht-degree: 63%
+
+---
+
+# Tipos de condición para extensiones de Edge
+
+>[!NOTE]
+>
+> Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+Un módulo de biblioteca de tipo condición evalúa si algo es verdadero o falso y devuelve un valor booleano.
+
+>[!IMPORTANT]
+>
+>Este documento abarca los tipos de condición para extensiones de borde. Si está desarrollando una extensión web, consulte la guía sobre [tipos de condición para extensiones web](../web/condition-types.md) en su lugar.
+>
+>Este documento también supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones de etiquetas. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
+
+Por ejemplo, si desea evaluar si el usuario está en el host `example.com`, el módulo puede tener este aspecto.
+
+```js
+module.exports = (context) => {
+  const URL = context.arc.event.xdm.web.webpageDetails.URL;
+  return URL.endsWith("adobelaunch.com");
+};
+```
+
+Si desea que el nombre de host se pueda configurar por el usuario para permitir la entrada de un nombre de host y guardarlo en el objeto de configuración, el objeto podría tener un aspecto similar al de este ejemplo.
+
+```js
+{
+  "hostname": "example.com"
+}
+```
+
+Para poder modificar el nombre de host definido por el usuario, el módulo deberá cambiar a lo siguiente:
+
+```js
+module.exports = (context) => {
+  const URL = context.arc.event.xdm.web.webpageDetails.URL;
+  return URL.endsWith(settings.hostname);
+};
+```
+
+## Resultado de la condición
+
+El resultado devuelto por un módulo de condición puede ser uno de los siguientes:
+
+1. Un valor booleano (`true` o `false`).
+1. Una [promesa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) que devuelve un valor booleano una vez resuelto.
+
+## Contexto del módulo Biblioteca
+
+Todos los módulos de condición tienen acceso a una variable `context` que se proporciona cuando se invoca el módulo. Puede obtener más información [aquí](./context.md).
