@@ -2,9 +2,9 @@
 title: Casos de uso compatibles con el SDK web de Adobe Experience Platform
 description: Descubra qué casos de uso son compatibles con el SDK web de Adobe Experience Platform.
 keywords: sdk web;casos de uso
-source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '565'
 ht-degree: 15%
 
 ---
@@ -43,7 +43,7 @@ Esta página enumera los casos de uso admitidos para el SDK web, con vínculos a
 | Si el conjunto de datos está habilitado para el perfil, la capacidad de enviar datos al perfil de datos del cliente en tiempo real en tiempo real |  |
 | Enviar datos al Customer Journey Analytics en tiempo real |  |
 | Escribir consentimiento en perfil | [Documentación](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
-| Reenviar datos del lado del servidor en tiempo real a terceros | [Documentación](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
+| Reenviar datos del lado del servidor en tiempo real a terceros | [Documentación](../../tags/ui/event-forwarding/overview.md) |
 | Compatibilidad con el área de nombres de identidad |  |
 
 {style=&quot;table-layout:auto&quot;}
