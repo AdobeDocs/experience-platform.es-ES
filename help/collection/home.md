@@ -5,9 +5,9 @@ title: Información general sobre la recopilación de datos
 topic-legacy: overview
 description: Obtenga información sobre las distintas tecnologías que intervienen en la recopilación de datos sobre las experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: a150c23dffde9431953a019509e9554159052d21
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '313'
 ht-degree: 3%
 
 ---
@@ -43,6 +43,6 @@ Platform Edge Network es una red global de servidores distribuidos, rápidos y c
 
 ## Transformar, enriquecer y enviar datos de forma rápida y segura
 
-[Adobe Experience Platform Launch Server ](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html) Sidecan puede aprovechar cualquier flujo de datos de Platform. Puede transformar, enriquecer y enviar datos a cualquier destino que no sea de Adobe con una latencia extrema y baja sin agregar código de terceros al dispositivo cliente, lo que permite una recopilación y distribución de datos más rápidas y seguras.
+[El reenvío de eventos en Adobe Experience ](../tags/ui/event-forwarding/overview.md) Platform puede aprovechar cualquier flujo de datos de Platform. Puede transformar, enriquecer y enviar datos a cualquier destino que no sea de Adobe con una latencia extrema y baja sin agregar código de terceros al dispositivo cliente, lo que permite una recopilación y distribución de datos más rápidas y seguras.
 
 ![](./images/launch.png)
