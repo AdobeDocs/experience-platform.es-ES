@@ -1,9 +1,9 @@
 ---
 title: Información general sobre la extensión de Adobe Analytics Product String
 description: Obtenga información sobre la extensión de la etiqueta de cadena de producto de Adobe Analytics en Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '524'
 ht-degree: 95%
 
 ---
@@ -93,4 +93,4 @@ Esta acción debe ir acompañada de una acción “Adobe Analytics - Set Variabl
 ### Requisitos
 
 * Una [capa de datos](https://theblog.adobe.com/data-layers-buzzword-best-practice/) basada en objetos con variables para todos los datos relacionados con el producto (como el ID del producto, cantidad, precio). Esta extensión no funciona con capas de datos basadas en una matriz.
-* Se debe instalar la extensión de [Adobe Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html?lang=es).
+* Se debe instalar la extensión de [Adobe Analytics](../analytics/overview.md).
