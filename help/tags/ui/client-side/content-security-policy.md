@@ -1,10 +1,10 @@
 ---
 title: Ayuda sobre Política de seguridad de contenido (CSP)
 description: Obtenga información sobre cómo lidiar con las restricciones de la Política de seguridad de contenido (CSP) al integrar su sitio web con etiquetas en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1087'
-ht-degree: 59%
+source-wordcount: '1079'
+ht-degree: 58%
 
 ---
 
@@ -64,7 +64,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **Etiqueta `<meta>` HTML**
 
 
-Hay un requisito previo muy importante: Debe cargar la biblioteca de etiquetas [asincrónicamente](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/asynchronous-deployment.html?lang=es). Esto no funciona con una carga sincrónica de la biblioteca de etiquetas (lo que provoca errores de consola y reglas que no se ejecutan correctamente).
+Hay un requisito previo muy importante: Debe cargar la biblioteca de etiquetas [asincrónicamente](./asynchronous-deployment.md). Esto no funciona con una carga sincrónica de la biblioteca de etiquetas (lo que provoca errores de consola y reglas que no se ejecutan correctamente).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
