@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de la extensión Core
 description: Últimas notas de la versión de la extensión Core en Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1211'
 ht-degree: 90%
 
 ---
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. Si está configurado, todos los scripts en línea que agrega una etiqueta a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de Platform Launch se puedan seguir cargando en un entorno CSP. Puede leer más sobre el uso de Platform Launch con un CSP [aquí](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/content-security-policy.html).
+* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. Si está configurado, todos los scripts en línea que agrega una etiqueta a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de Platform Launch se puedan seguir cargando en un entorno CSP. Puede leer más sobre el uso de Platform Launch con un CSP [aquí](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junio de 2019
 
