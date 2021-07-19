@@ -1,10 +1,10 @@
 ---
 title: Guía de inicio rápido
 description: Obtenga información sobre cómo empezar a trabajar rápidamente con las etiquetas en Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1562'
-ht-degree: 45%
+source-wordcount: '1533'
+ht-degree: 44%
 
 ---
 
@@ -134,8 +134,6 @@ Para obtener más información sobre los distintos estados y opciones disponible
 ## Recursos adicionales
 
 Para obtener más información sobre las etiquetas, consulte estos recursos:
-
-[https://forums.adobe.com/community/experience-cloud/platform/launchAsk](https://forums.adobe.com/community/experience-cloud/platform/launchAsk) y responda preguntas, aporte ideas y vote las ideas de otros. Inicie sesión con su Adobe ID.
 
 * **[Comunidad](https://forums.adobe.com/community/experience-cloud/platform/launch)** de recopilación de datos: Formule y responda preguntas, aporte ideas y vote las ideas de otros. Inicie sesión con su Adobe ID.
 * **[Documentos para desarrolladores](https://developer.adobelaunch.com/)**: Participe en la comunidad de desarrolladores de etiquetas para crear extensiones o utilizar las API de etiquetas
