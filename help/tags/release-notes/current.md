@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión
 description: Últimas notas de la versión para etiquetas en Adobe Experience Platform.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 67%
+source-wordcount: '498'
+ht-degree: 54%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 67%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 19 de julio de 2021
+
+**Ajustes en el derecho &quot;Administrar propiedades&quot;** : el derecho Administrar propiedades encontró un problema en el que un usuario tenía el permiso para crear una nueva propiedad, pero no podía verla después de crearla (como se describe en el hilo de la comunidad  [aquí](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). Una corrección ya está activa y los permisos se aplican tal como se describe en el artículo.
+
+>[!NOTE]
+>
+>Si asigna el nuevo derecho &quot;Editar propiedad&quot; a un grupo de usuarios, la interfaz de usuario no se actualizará para habilitar los campos en la pantalla de configuración de propiedades. En una próxima versión se implementará una solución para este problema.
 
 ## 17 de mayo de 2021
 
