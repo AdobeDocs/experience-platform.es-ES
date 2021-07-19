@@ -1,14 +1,22 @@
 ---
 title: Notas de la versión de la extensión Common Analytics Plugins
 description: Últimas notas de la versión de la extensión de etiqueta de complementos de Analytics comunes en Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 94%
+source-wordcount: '314'
+ht-degree: 92%
 
 ---
 
 # Notas de la versión de Common Analytics Plugins
+
+## 23 de junio de 2021
+
+### Extensión de complementos de Analytics comunes 3.0.6
+
+#### Correcciones de errores
+
+* Se ha corregido un problema en el cual getPercentPageViewed se dañaba al usar caracteres especiales
 
 ## 20 de mayo de 2021
 
