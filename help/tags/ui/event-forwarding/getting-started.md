@@ -1,9 +1,9 @@
 ---
 title: Introducción Al Reenvío De Eventos
 description: Siga este tutorial paso a paso para empezar a utilizar el reenvío de eventos en Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '906'
 ht-degree: 48%
 
 ---
@@ -110,7 +110,7 @@ Cree su propiedad en la interfaz de usuario de recopilación de datos y, a conti
 
 1. Seleccione el dominio de Edge.
 
-Consulte la [documentación de la extensión del SDK web](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html?lang=es) para obtener más opciones de configuración.
+Consulte la [documentación de la extensión del SDK web](../../extensions/web/sdk/overview.md) para obtener más opciones de configuración.
 
 ## Creación de una regla de etiqueta para enviar datos al SDK web de Platform
 
