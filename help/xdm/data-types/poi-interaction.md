@@ -5,9 +5,9 @@ title: Tipo de datos de interacción del punto de interés
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de interacción de puntos de interés.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '188'
 ht-degree: 2%
 
 ---
@@ -28,5 +28,5 @@ ht-degree: 2%
 
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
-* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)
-* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.schema.json)
+* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.schema.json)
