@@ -1,15 +1,14 @@
 ---
-keywords: LinkedIn;linkedin;LinkedIn;etiqueta de perspectiva de LinkedIn;etiqueta de perspectiva;etiqueta de perspectiva
-title: Extensión de la etiqueta de LinkedIn Insight
-description: La extensión de etiqueta de LinkedIn Insight es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+keywords: linkedIn;linkedin;Linkedin;Etiqueta de perspectiva de LinkedIn;etiqueta de perspectiva
+title: Extensión de la etiqueta linkedIn Insight
+description: La extensión LinkedIn Insight Tag es un destino publicitario de Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
+exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '477'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL LinkedIn Insight Tag] Extensión {#linkedin-insights-extension}
 
@@ -21,7 +20,7 @@ Instale el [!DNL LinkedIn Insight Tag] para utilizar las características demogr
 
 Este destino es una extensión de Adobe Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Platform launch en Platform, consulte [Información general sobre las extensiones de Adobe Experience Platform Launch](../launch-extensions/overview.md).
 
-![Extensión de etiquetas de LinkedIn Insight](../../assets/catalog/advertising/linkedin/catalog.png)
+![Extensión de etiquetas de linkedIn Insight](../../assets/catalog/advertising/linkedin/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
@@ -37,23 +36,23 @@ En la [Platform interface](http://platform.adobe.com/), vaya a **[!UICONTROL Des
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
-Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Configure]** en el carril derecho. Si el control **[!UICONTROL Configure]** está atenuado, le falta el permiso **[!UICONTROL manage_properties]**. Consulte [Requisitos previos](#prerequisites).
+Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Configurar]** en el carril derecho. Si el control **[!UICONTROL Configure]** aparece atenuado, le falta el permiso **[!UICONTROL manage_properties]**. Consulte [Requisitos previos](#prerequisites).
 
-En la ventana **[!UICONTROL Select available Platform Launch property]**, seleccione la propiedad de Platform launch en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad en Platform launch. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la sección [Properties page](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentación de Platform launch.
+En la ventana **[!UICONTROL Select available Platform launch property]**, seleccione la propiedad de Platform launch en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad en Platform launch. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la sección [Properties page](../../../tags/ui/administration/companies-and-properties.md#properties-page) de la documentación de Platform launch.
 
 El flujo de trabajo le lleva al Platform launch para completar la instalación.
 
 Para obtener información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte [LinkedIn Insight Tag](https://business.linkedin.com/marketing-solutions/insight-tag).
 
-También puede instalar la extensión directamente en la [interfaz de Adobe Experience Platform Launch](https://launch.adobe.com/). Consulte [Añadir una nueva extensión](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) en la documentación de Platform launch.
+También puede instalar la extensión directamente en la [interfaz de Adobe Experience Platform Launch](https://launch.adobe.com/). Consulte [Añadir una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) en la documentación de Platform launch.
 
 ## Cómo utilizar la extensión {#how-to-use}
 
 Una vez instalada la extensión, puede empezar a configurar las reglas para ella directamente en el Platform launch.
 
-En Platform launch, puede configurar reglas para las extensiones instaladas para que envíen datos de evento al destino de la extensión solo en determinadas situaciones. Para obtener más información sobre la configuración de reglas para las extensiones, consulte [Documentación de reglas](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+En Platform launch, puede configurar reglas para las extensiones instaladas para que envíen datos de evento al destino de la extensión solo en determinadas situaciones. Para obtener más información sobre la configuración de reglas para las extensiones, consulte [Documentación de reglas](../../../tags/ui/managing-resources/rules.md).
 
-## Configurar, actualizar y eliminar extensión {#configure-upgrade-delete}
+## Configurar, actualizar y eliminar extensiones {#configure-upgrade-delete}
 
 Puede configurar, actualizar y eliminar extensiones en la interfaz de Platform launch.
 
@@ -61,4 +60,4 @@ Puede configurar, actualizar y eliminar extensiones en la interfaz de Platform l
 >
 >Si la extensión ya está instalada en una de las propiedades, la interfaz de usuario de Platform sigue mostrando **[!UICONTROL Install]** para la extensión. Inicie el flujo de trabajo de instalación tal como se describe en [Install extension](#install-extension) para llegar al Platform launch y configurar o eliminar la extensión.
 
-Para actualizar la extensión, consulte [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) en la documentación de Platform launch.
+Para actualizar la extensión, consulte [Extension upgrade](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) en la documentación de Platform launch.
