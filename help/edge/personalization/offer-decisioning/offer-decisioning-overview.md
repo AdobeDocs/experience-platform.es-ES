@@ -3,9 +3,9 @@ title: Uso del Offer decisioning con el SDK web de Platform
 description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer decisioning.
 keywords: offer decisioning;toma de decisiones;SDK web;SDK web de plataforma;ofertas personalizadas;entrega de ofertas;entrega de ofertas;personalización de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 6b3548e2db596d56aeacec8f2d5cdd29ddc09bf2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '779'
 ht-degree: 3%
 
 ---
@@ -65,7 +65,7 @@ Para habilitar el Offer decisioning, debe realizar los siguientes pasos:
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Siga las instrucciones para [instalar el SDK](../../fundamentals/installing-the-sdk.md) (El SDK puede instalarse de forma independiente o a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Esta es una [guía de inicio rápido para Platform launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)).
+1. Siga las instrucciones para [instalar el SDK](../../fundamentals/installing-the-sdk.md) (El SDK puede instalarse de forma independiente o a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Esta es una [guía de inicio rápido para Platform launch](../../../tags/quick-start/quick-start.md)).
 1. [Configure el ](../../fundamentals/configuring-the-sdk.md) SDK para el Offer decisioning. A continuación se proporcionan pasos adicionales específicos del Offer decisioning.
 
    * SDK instalado de forma independiente
@@ -83,26 +83,26 @@ Para habilitar el Offer decisioning, debe realizar los siguientes pasos:
          ```
    * SDK instalado de platform launch
 
-      1. [Crear una propiedad de Platform launch](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
+      1. [Crear una propiedad de Platform launch](../../../tags/ui/administration/companies-and-properties.md)
       1. [Añadir el código incrustado de Platform launch](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Instale y configure la extensión del SDK web de Platform con el Datastream que acaba de crear seleccionando la configuración en la lista desplegable &quot;Datastream&quot;. Consulte la documentación sobre [extensiones](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html).
+      1. Instale y configure la extensión del SDK web de Platform con el Datastream que acaba de crear seleccionando la configuración en la lista desplegable &quot;Datastream&quot;. Consulte la documentación sobre [extensiones](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Cree los [Elementos de datos](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html) necesarios. Como mínimo, debe crear un mapa de identidad del SDK web de plataforma y un elemento de datos de objeto XDM del SDK web de plataforma .
+      1. Cree los [Elementos de datos](../../../tags/ui/managing-resources/data-elements.md) necesarios. Como mínimo, debe crear un mapa de identidad del SDK web de plataforma y un elemento de datos de objeto XDM del SDK web de plataforma .
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. Cree sus [Reglas](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+      1. Cree sus [Reglas](../../../tags/ui/managing-resources/rules.md).
 
          * Añada una acción de Platform Web SDK Send Event y añada el `decisionScopes` correspondiente a la configuración de esa acción
 
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-      1. [Cree y publique una ](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) biblioteca que contenga todas las reglas, elementos de datos y extensiones relevantes que haya configurado
+      1. [Cree y publique una ](../../../tags/ui/publishing/libraries.md) biblioteca que contenga todas las reglas, elementos de datos y extensiones relevantes que haya configurado
 
 
 
