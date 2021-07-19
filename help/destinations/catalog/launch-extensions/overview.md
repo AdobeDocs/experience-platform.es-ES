@@ -3,9 +3,9 @@ keywords: extensiones de launch;extensión de launch;destinos de launch; extensi
 title: Extensión de Adobe Experience Platform Launch
 description: Adobe Experience Platform Launch es la próxima generación de funcionalidades de administración de etiquetas de Adobe. Platform Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 20a9103dd96116f3099bccc9eeb678be5ac2bb79
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '600'
 ht-degree: 14%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform Launch es la función de administración de etiquetas 
 Para obtener una introducción a las funciones de Experience Platform Launch, consulte los recursos a continuación:
 
 - Documentación [de Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=es)
-- Adobe Experience Platform Launch [vídeos de inicio rápido](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Comience con [Introducción a Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) y [Información general del proceso de publicación](https://helpx.adobe.com/es/analytics/how-to/adobe-launch-publishing-process.html), a continuación, pase a los conceptos siguientes.
+- Adobe Experience Platform Launch [vídeos de inicio rápido](../../../tags/quick-start/videos.md). Comience con [Introducción a Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) y [Información general del proceso de publicación](https://helpx.adobe.com/es/analytics/how-to/adobe-launch-publishing-process.html), a continuación, pase a los conceptos siguientes.
 
 ## Cómo encontrar las extensiones de Platform launch en la interfaz de Platform {#how-to-find-extensions-in-interface}
 
@@ -41,7 +41,7 @@ Adobe Experience Platform Launch es gratuito para los clientes Experience Cloud 
 >
 >Aunque no puede activar segmentos en extensiones de Platform launch, puede configurar reglas para que solo reenvíen datos de evento en determinadas situaciones. Más información abajo.
 
-Puede crear *reglas* que determinen cuándo reenviar los datos de evento a las extensiones. Esta potente funcionalidad permite reenviar datos de evento solo en determinadas situaciones, en lugar de enviar datos de evento en cada interacción. Para obtener más información, lea sobre las reglas en la [documentación de Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+Puede crear *reglas* que determinen cuándo reenviar los datos de evento a las extensiones. Esta potente funcionalidad permite reenviar datos de evento solo en determinadas situaciones, en lugar de enviar datos de evento en cada interacción. Para obtener más información, lea sobre las reglas en la [documentación de Adobe Experience Platform Launch](../../../tags/ui/managing-resources/rules.md).
 
 ## Casos de uso de ejemplo para extensiones de Platform launch {#extensions-use-cases}
 
