@@ -5,10 +5,9 @@ title: Supervisión de la ingesta de datos
 topic-legacy: overview
 description: En esta guía del usuario se proporcionan pasos sobre cómo monitorizar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-translation-type: tm+mt
-source-git-commit: 6bedd5ec0865e858a337155deb80309a54e30892
+source-git-commit: 3fadf7006c8ea058e469067b61950ed2d2d12e3f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ Esta guía del usuario proporciona pasos sobre cómo monitorizar los datos en la
 
 ## Monitorización de la transmisión de datos de extremo a extremo
 
-En la [IU del Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Monitoring]** en el menú de navegación de la izquierda, seguido de **[!UICONTROL Streaming end-to-end]**.
+En la [interfaz de usuario del Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Monitorización]** en el menú de navegación de la izquierda, seguido de **[!UICONTROL Streaming end-to-end]**.
 
 Aparece la página de monitorización **[!UICONTROL Streaming end-to-end]**. Este espacio de trabajo proporciona un gráfico que muestra la tasa de recepción de eventos transmitidos por [!DNL Platform], un gráfico que muestra la tasa de eventos transmitidos que [[!DNL Real-time Customer Profile]](../../profile/home.md) procesaron correctamente, así como una lista detallada de datos entrantes.
 
@@ -55,6 +54,10 @@ Los detalles de un registro de flujo continuo con errores muestran la misma info
 
 Además, los registros fallidos proporcionan detalles sobre los errores que se produjeron al procesar el lote. En el siguiente ejemplo, se produjo un error de análisis al convertir o validar los datos.
 
+>[!NOTE]
+>
+>Si hay errores en las filas incorporadas, estas filas **no** se eliminarán a menos que el mensaje resultante dé como resultado un XDM no válido.
+
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## Monitorización de la ingesta de datos de extremo a extremo por lotes
@@ -76,5 +79,9 @@ Los detalles de un lote con errores muestran la misma información que un lote c
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
 Además, los lotes con errores proporcionan detalles sobre los errores que se produjeron al procesar el lote. En el ejemplo siguiente, se produjo un error con el lote ingerido porque tiene el número máximo de identidades para la persona.
+
+>[!NOTE]
+>
+>Si hay errores en las filas incorporadas, estas filas **no** se eliminarán a menos que el mensaje resultante dé como resultado un XDM no válido.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)
