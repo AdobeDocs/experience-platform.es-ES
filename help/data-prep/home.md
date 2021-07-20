@@ -5,10 +5,9 @@ title: Información general sobre la preparación de datos
 topic-legacy: overview
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-translation-type: tm+mt
-source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
+source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -25,6 +24,10 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 - Obtener una vista previa de los datos tal y como están manipulados en la preparación de datos
 
 La preparación de datos también aplica varias validaciones de datos intrínsecas para garantizar que la integridad de los datos se mantenga a medida que se incorporan. Siempre que sea posible, Data Prep asigna automáticamente los esquemas de datos entrantes a XDM. Los ingenieros de datos pueden cambiar, corregir y eliminar las asignaciones sugeridas y sustituirlas por las asignaciones según corresponda.
+
+>[!NOTE]
+>
+>A menos que el mensaje resultante sea XDM no válido, cualquier error de transformación en la preparación de datos dará como resultado que esos atributos se establezcan en `null`, mientras que el resto de la fila se ingerirá. Si la fila no se resuelve en un XDM no válido, la fila **no** se ingerirá. En ambos casos, el error se documenta.
 
 ## Asignación
 
