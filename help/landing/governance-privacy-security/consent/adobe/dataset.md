@@ -5,9 +5,9 @@ title: Configuración de un conjunto de datos para capturar datos de consentimie
 topic-legacy: getting started
 description: Obtenga información sobre cómo configurar un esquema y conjunto de datos del Modelo de datos de experiencia (XDM) para capturar datos de consentimiento y preferencias en Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: ff793c207a181ca6d2486e7fd6ef5c4f57744fba
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ El lienzo vuelve a aparecer y muestra que el objeto `consents` se ha agregado a 
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-Si el esquema que ha editado lo utiliza el [!UICONTROL Conjunto de datos de perfil] especificado en la configuración perimetral del SDK web de plataforma, ese conjunto de datos ahora incluirá los nuevos campos de consentimiento. Ahora puede volver a la [guía de procesamiento de consentimiento](./overview.md#merge-policies) para continuar el proceso de configuración de Experience Platform para procesar los datos de consentimiento.
+Si el esquema que ha editado lo utiliza el [!UICONTROL Conjunto de datos de perfil] especificado en el conjunto de datos del SDK web de plataforma, ese conjunto de datos ahora incluirá los nuevos campos de consentimiento. Ahora puede volver a la [guía de procesamiento de consentimiento](./overview.md#merge-policies) para continuar el proceso de configuración de Experience Platform para procesar los datos de consentimiento.
 
 Si no ha creado un conjunto de datos para este esquema, siga los pasos de la siguiente sección.
 
@@ -150,7 +150,7 @@ Finalmente, seleccione **[!UICONTROL Enable]** en la ventana de confirmación pa
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-El conjunto de datos ahora se guarda y se habilita para su uso en [!DNL Profile]. Si planea utilizar el SDK web de Platform para enviar datos de consentimiento al perfil, debe seleccionar este conjunto de datos como [!UICONTROL Conjunto de datos de perfil] al configurar la [configuración perimetral](../../../../edge/fundamentals/datastreams.md).
+El conjunto de datos ahora se guarda y se habilita para su uso en [!DNL Profile]. Si planea utilizar el SDK web de Platform para enviar datos de consentimiento al perfil, debe seleccionar este conjunto de datos como [!UICONTROL Conjunto de datos de perfil] al configurar el [conjunto de datos](../../../../edge/fundamentals/datastreams.md).
 
 ## Pasos siguientes
 
