@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 7a1cd379eb002f92c19fbe0e569d5fac90ab5334
+source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '3054'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,21 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para que los archivos ex
 ![Exportar archivos completos](../assets/ui/activate-destinations/export-full-files.png)
 
 1. Utilice el selector **[!UICONTROL Frequency]** para elegir entre exportaciones únicas (**[!UICONTROL Once]**) o **[!UICONTROL Daily]**. Exportar un archivo completo **[!UICONTROL Daily]** exporta el archivo todos los días desde la fecha de inicio hasta la fecha de finalización a las 12:00 AM UTC (7:00 PM EST).
+
+   >[!IMPORTANT]
+   >
+   >Al establecer la fecha de inicio y finalización, **[!UICONTROL Fecha de inicio]** indica cuándo está programado que se inicien las exportaciones de archivos y **[!UICONTROL Fecha de finalización]** indica cuándo está programado que se detengan las exportaciones de archivos. Las exportaciones de archivos comienzan en **[!UICONTROL Fecha de inicio]**, pero no incluyen la **[!UICONTROL Fecha de finalización]**.
+   >
+   >Por ejemplo, si establece la siguiente programación:
+   >
+   >* Exportar: Incremental cada 3 horas
+   >* Fecha de inicio: 19/7
+   >* Fecha final: 21/7
+
+   >
+   >Los archivos comenzarán a exportarse el 19 de septiembre y dejarán de exportarse el 20 de julio a las 23:59:59 UTC. No habrá archivos entregados el 21 de setiembre.
+
+
 2. Utilice el selector **[!UICONTROL Time]** para elegir la hora del día, en formato [!DNL UTC], en la que se debe realizar la exportación. Exportar un archivo **[!UICONTROL Daily]** exporta el archivo todos los días desde la fecha de inicio hasta la fecha de finalización en el momento seleccionado.
 
    >[!IMPORTANT]
@@ -167,11 +182,27 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para que los archivo
 ![Exportar archivos incrementales](../assets/ui/activate-destinations/export-incremental-files.png)
 
 1. Utilice el selector **[!UICONTROL Frequency]** para elegir entre las exportaciones **[!UICONTROL Daily]** o **[!UICONTROL Por hora]**. Exportar un archivo incremental **[!UICONTROL Daily]** exporta el archivo todos los días desde la fecha de inicio hasta la fecha de finalización a las 12:00 PM UTC (7:00 AM EST).
+
+
+   >[!IMPORTANT]
+   >
+   >Al establecer la fecha de inicio y finalización, **[!UICONTROL Fecha de inicio]** indica cuándo está programado que se inicien las exportaciones de archivos y **[!UICONTROL Fecha de finalización]** indica cuándo está programado que se detengan las exportaciones de archivos. Las exportaciones de archivos comienzan en **[!UICONTROL Fecha de inicio]**, pero no incluyen la **[!UICONTROL Fecha de finalización]**.
+   >
+   >Por ejemplo, si establece la siguiente programación:
+   >
+   >* Exportar: Incremental cada 3 horas
+   >* Fecha de inicio: 19/7
+   >* Fecha final: 21/7
+
+   >
+   >Los archivos comenzarán a exportarse el 19 de septiembre y dejarán de exportarse el 20 de julio a las 23:59:59 UTC. No habrá archivos entregados el 21 de setiembre.
+
    * Al seleccionar **[!UICONTROL Por hora]**, utilice el selector **[!UICONTROL Cada]** para elegir entre las opciones de horas **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** y **[!UICONTROL 12]**.
 
       >[!IMPORTANT]
       >
       >La opción para exportar archivos incrementales cada 3, 6, 8 o 12 horas está actualmente en fase beta y solo está disponible para un número determinado de clientes. Los clientes que no sean de la versión beta pueden exportar archivos incrementales una vez al día.
+
 
 2. Utilice el selector **[!UICONTROL Time]** para elegir la hora del día, en formato [!DNL UTC], en la que se debe realizar la exportación.
 
