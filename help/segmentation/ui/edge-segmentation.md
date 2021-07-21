@@ -5,10 +5,9 @@ title: Guía de la interfaz de usuario de segmentación de Edge
 topic-legacy: ui guide
 description: La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-translation-type: tm+mt
-source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
+source-git-commit: 8375d5a35ef652335c60b4b8b4571bf42ec1924a
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '345'
 ht-degree: 4%
 
 ---
@@ -32,9 +31,7 @@ Una consulta se puede evaluar con segmentación de Edge si cumple cualquiera de 
 | Consulta de frecuencia | Cualquier definición de segmento que haga referencia a un evento que se produzca al menos un determinado número de veces. |  |
 | Consulta de frecuencia que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un evento que se produzca al menos un determinado número de veces y que tenga uno o más atributos de perfil. |  |
 
-Si la consulta coincide con cualquiera de los tipos de consulta anteriores, puede activarla para la segmentación perimetral activando la opción **[!UICONTROL Evaluate as streaming segment on the edge]**.
-
-![](../images/ui/edge-segmentation/mark-on-edge.png)
+Si la consulta coincide con cualquiera de los tipos de consulta anteriores, se evaluará automáticamente mediante la segmentación perimetral.
 
 Los siguientes tipos de consulta son **no** compatibles actualmente con la segmentación de Edge:
 
