@@ -5,11 +5,10 @@ title: 'Segmentación de Edge con la API '
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación perimetral con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 3%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +30,7 @@ Esta guía para desarrolladores requiere una comprensión práctica de los diver
 
 Para realizar llamadas correctamente a [!DNL Data Prep] extremos de API, lea la guía de [introducción a las API de Platform](../../landing/api-guide.md) para obtener más información sobre los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
-## Tipos de consulta de segmentación de Edge {#query-types}
+## Tipos de consultas de segmentación de Edge {#query-types}
 
 Para que un segmento se evalúe mediante segmentación de Edge, la consulta debe cumplir las siguientes directrices:
 
@@ -168,7 +167,7 @@ Una respuesta correcta devuelve una matriz de segmentos en su organización de I
 
 ## Crear un segmento que esté habilitado para la segmentación perimetral
 
-Puede crear un segmento habilitado para la segmentación perimetral realizando una solicitud de POST al extremo `/segment/definitions` . Además de hacer coincidir uno de los tipos de consulta de segmentación [edge enumerados arriba](#query-types), debe establecer el indicador `evaluationInfo.synchronous.enabled` en la carga útil como verdadero.
+Puede crear un segmento que esté habilitado para la segmentación perimetral realizando una solicitud de POST al extremo `/segment/definitions` que coincida con uno de los tipos de consulta de segmentación [edge enumerados arriba](#query-types).
 
 **Formato de API**
 
@@ -201,18 +200,9 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "synchronous": {
-            "enabled": true
-        }
     }
 }'
 ```
-
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `evaluationInfo.synchronous.enabled` | El objeto `evaluationInfo` determina el tipo de evaluación que se realizará en la definición del segmento. Para utilizar la segmentación perimetral, establezca `evaluationInfo.synchronous.enabled` con un valor de `true`. |
 
 **Respuesta**
 
