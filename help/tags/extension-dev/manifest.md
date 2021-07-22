@@ -1,9 +1,9 @@
 ---
 title: Manifiesto de extensión
 description: Obtenga información sobre cómo configurar un archivo de manifiesto JSON que informe a Adobe Experience Platform sobre cómo utilizar correctamente su extensión.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2646'
 ht-degree: 77%
 
 ---
@@ -22,7 +22,7 @@ Un manifiesto de extensión debe constar de lo siguiente:
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | El nombre de la extensión. Debe ser diferente al de todas las demás extensiones de Reactor y debe cumplir con las [reglas de nomenclatura](#naming-rules). **Las etiquetas lo utilizan como identificador y no se debe cambiar después de publicar la extensión.** |
+| `name` | El nombre de la extensión. Debe ser diferente al de todas las demás extensiones de y debe cumplir con las [reglas de nomenclatura](#naming-rules). **Las etiquetas lo utilizan como identificador y no se debe cambiar después de publicar la extensión.** |
 | `platform` | La plataforma para la extensión. El único valor aceptado en este momento es `web`. |
 | `version` | La versión de la extensión. Debe seguir el formato de versión [semver](http://semver.org/). Esto es coherente con [npm version field](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | El nombre legible en lenguaje natural de su extensión. Esto se mostrará a los usuarios de Platform. No es necesario mencionar &quot;etiquetas&quot; o &quot;extensión&quot;; los usuarios ya sabrán que están viendo una extensión de etiqueta. |
