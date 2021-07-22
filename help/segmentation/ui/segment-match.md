@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre la coincidencia de segmentos
 topic-legacy: overview
 description: Coincidencia de segmentos es un servicio para compartir segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, regulada y compatible con la privacidad.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 1%
@@ -12,11 +12,11 @@ ht-degree: 1%
 ---
 
 
-# (Alpha) [!DNL Segment Match] información general
+# (Beta) Información general de [!DNL Segment Match]
 
 >[!IMPORTANT]
 >
->[!DNL Segment Match] está actualmente en alfa. La documentación y las funciones están sujetas a cambios.
+>[!DNL Segment Match] está actualmente en versión beta. La documentación y las funciones están sujetas a cambios.
 
 Adobe Experience Platform Segment Match es un servicio para compartir segmentos que permite a dos o más usuarios de Platform intercambiar datos de segmentos de forma segura, regulada y compatible con la privacidad. [!DNL Segment Match] utiliza estándares de privacidad de plataforma e identificadores personales como correos electrónicos con hash, números de teléfono con hash y identificadores de dispositivo como IDFA y GAID.
 
