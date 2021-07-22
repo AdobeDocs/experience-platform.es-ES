@@ -4,9 +4,9 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Para ir al tablero [!UICONTROL Profiles] dentro de la interfaz de usuario de Pla
 
 ### Modificación del tablero [!UICONTROL Profiles]
 
-Puede modificar el aspecto del panel [!UICONTROL Perfiles] seleccionando **[!UICONTROL Modificar tablero]**. Esto le permite mover, agregar y quitar utilidades del tablero, así como acceder a la [!UICONTROL biblioteca de utilidades] para explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
+Puede modificar el aspecto del panel [!UICONTROL Perfiles] seleccionando **[!UICONTROL Modificar tablero]**. Esto le permite mover, agregar y quitar utilidades del tablero, así como acceder a la **[!UICONTROL biblioteca de utilidades]** para explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
 
-Consulte la documentación [modificación de tableros](../modify.md) y [biblioteca de utilidades](../widget-library.md) para obtener más información.
+Consulte la documentación [modificación de tableros](../customize/modify.md) y [descripción general de la biblioteca de utilidades](../customize/widget-library.md) para obtener más información.
 
 ## Combinar directivas
 
@@ -63,9 +63,11 @@ El tablero está compuesto por widgets, que son métricas de solo lectura que pr
 
 La fecha y hora de &quot;última actualización&quot; de un widget muestra cuándo se tomó la última instantánea de los datos. La fecha y la hora de la instantánea se proporcionan en UTC; no se encuentra en la zona horaria del usuario individual o de la organización de IMS.
 
-## Widgets disponibles
+## Widgets estándar
 
-Experience Platform proporciona varias utilidades que puede utilizar para visualizar distintas métricas relacionadas con los datos de perfil. Seleccione el nombre de una utilidad para obtener más información:
+Adobe proporciona varios widgets estándar que puede utilizar para visualizar distintas métricas relacionadas con los datos del perfil. También puede crear utilidades personalizadas para compartirlas con su organización mediante la [!UICONTROL biblioteca de utilidades]. Para obtener más información sobre la creación de utilidades personalizadas, comience leyendo la [descripción general de la biblioteca de utilidades](../customize/widget-library.md).
+
+Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
 * [[!UICONTROL Recuento de perfiles]](#profile-count)
 * [[!UICONTROL Perfiles añadidos]](#profiles-added)
