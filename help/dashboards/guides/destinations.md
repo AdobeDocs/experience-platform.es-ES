@@ -4,9 +4,9 @@ title: Panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero 
 
 Para obtener una descripción general de los destinos, así como un catálogo de todos los destinos disponibles dentro de Experience Platform, visite la [documentación de destinos](../../destinations/home.md).
 
-##  Destinos, datos de tablero  {#destinations-dashboard-data}
+##  Destinos, datos de tablero {#destinations-dashboard-data}
 
 El tablero [!UICONTROL Destinations] muestra una instantánea de los destinos que su organización ha habilitado en Experience Profile. Los datos de la instantánea muestran los datos exactamente como aparecen en el momento concreto en que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos y el panel de destinos no se actualiza en tiempo real.
 
@@ -35,9 +35,17 @@ Para ir al panel de destinos dentro de la interfaz de usuario de Platform, selec
 
 ![](../images/destinations/dashboard-overview.png)
 
-## Widgets disponibles
+### Modificación del panel de destinos
 
-Experience Platform proporciona varias utilidades que puede utilizar para visualizar distintas métricas relacionadas con los destinos. Seleccione el nombre de una utilidad para obtener más información:
+Puede modificar el aspecto del panel de destinos seleccionando **[!UICONTROL Modificar tablero]**. Esto le permite mover, agregar y quitar utilidades del tablero, así como acceder a la **[!UICONTROL biblioteca de utilidades]** para explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
+
+Consulte la documentación [modificación de tableros](../customize/modify.md) y [descripción general de la biblioteca de utilidades](../customize/widget-library.md) para obtener más información.
+
+## Widgets estándar
+
+Adobe proporciona varios widgets estándar que puede utilizar para visualizar distintas métricas relacionadas con los destinos. También puede crear utilidades personalizadas para compartirlas con su organización mediante la [!UICONTROL biblioteca de utilidades]. Para obtener más información sobre la creación de utilidades personalizadas, comience leyendo la [descripción general de la biblioteca de utilidades](../customize/widget-library.md).
+
+Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
 * [[!UICONTROL Destinos más utilizados]](#most-used-destinations)
 * [[!UICONTROL Destinos creados recientemente]](#recently-created-destinations)
