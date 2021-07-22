@@ -6,7 +6,7 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
+source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 0%
@@ -169,7 +169,7 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para que los archivos ex
 
 >[!IMPORTANT]
 >
->Actualmente no se puede cambiar la programación de exportación de archivos para segmentos que ya se han exportado. Para volver a exportar segmentos con una programación diferente, debe crear una nueva instancia de destino. Se trata de una limitación que se abordará en futuras versiones.
+>Actualmente no se puede cambiar la programación de exportación de archivos para segmentos que ya se han guardado. Para volver a exportar segmentos con una programación diferente, debe crear una nueva instancia de destino. Se trata de una limitación que se abordará en futuras versiones.
 
 ### Exportar archivos incrementales {#export-incremental-files}
 
@@ -215,7 +215,7 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para que los archivo
 
 >[!IMPORTANT]
 >
->Actualmente no se puede cambiar la programación de exportación de archivos para segmentos que ya se han exportado. Para volver a exportar segmentos con una programación diferente, debe crear una nueva instancia de destino. Se trata de una limitación que se abordará en futuras versiones.
+>Actualmente no se puede cambiar la programación de exportación de archivos para segmentos que ya se han guardado. Para volver a exportar segmentos con una programación diferente, debe crear una nueva instancia de destino. Se trata de una limitación que se abordará en futuras versiones.
 
 ### Configurar nombres de archivo {#file-names}
 
