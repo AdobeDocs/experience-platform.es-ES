@@ -4,9 +4,9 @@ title: Tablero de segmentos
 description: 'Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Para ir al tablero [!UICONTROL Segments] dentro de la interfaz de usuario de Pla
 
 ### Modificación del tablero [!UICONTROL Segments]
 
-Puede modificar el aspecto del tablero [!UICONTROL Segments] seleccionando **[!UICONTROL Modify dashboard]**. Esto le permite mover, agregar y quitar utilidades del tablero, así como acceder a la [!UICONTROL biblioteca de utilidades] para explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
+Puede modificar el aspecto del tablero [!UICONTROL Segments] seleccionando **[!UICONTROL Modify dashboard]**. Esto le permite mover, agregar y quitar utilidades del tablero, así como acceder a la **[!UICONTROL biblioteca de utilidades]** para explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
 
-Consulte la documentación [modificación de tableros](../modify.md) y [biblioteca de utilidades](../widget-library.md) para obtener más información.
+Consulte la documentación [modificación de tableros](../customize/modify.md) y [descripción general de la biblioteca de utilidades](../customize/widget-library.md) para obtener más información.
 
 ## Seleccionar un segmento
 
@@ -61,9 +61,11 @@ La fecha y hora de &quot;última actualización&quot; de un widget muestra cuán
 
 ![](../images/segments/widget-timestamp.png)
 
-## Widgets disponibles
+## Widgets estándar
 
-Experience Platform proporciona varias utilidades que puede utilizar para visualizar distintas métricas relacionadas con su segmento. Seleccione el nombre de una utilidad para obtener más información:
+Adobe proporciona varios widgets estándar que puede utilizar para visualizar distintas métricas relacionadas con los segmentos. También puede crear utilidades personalizadas para compartirlas con su organización mediante la [!UICONTROL biblioteca de utilidades]. Para obtener más información sobre la creación de utilidades personalizadas, comience leyendo la [descripción general de la biblioteca de utilidades](../customize/widget-library.md).
+
+Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
 * [[!UICONTROL Tamaño de la audiencia]](#audience-size)
 * [[!UICONTROL Tendencia del tamaño de la audiencia]](#audience-size-trend)
