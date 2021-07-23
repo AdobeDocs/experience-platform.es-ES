@@ -1,10 +1,10 @@
 ---
 title: Información general sobre la extensión de audio y vídeo de Adobe Medium Analytics (3.x SDK) for Audio and Video
 description: Obtenga información sobre la extensión de etiquetas de Adobe Medium Analytics (3.x SDK) for Audio and Video en Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 88%
+source-wordcount: '763'
+ht-degree: 87%
 
 ---
 
@@ -84,7 +84,7 @@ Puede obtener el reproductor de muestra aquí: [Reproductor de muestra MA](https
 
 ### Uso de otras extensiones
 
-La extensión MA expone `media` como un módulo compartido a otras extensiones. (Para obtener más información sobre los módulos compartidos, consulte [Shared Modules documentation](https://developer.adobelaunch.com/extensions/shared_modules/).)
+La extensión MA expone `media` como un módulo compartido a otras extensiones. (Para obtener más información sobre los módulos compartidos, consulte [Shared Modules documentation](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
