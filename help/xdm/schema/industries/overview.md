@@ -4,9 +4,9 @@ title: Información general sobre los modelos de datos del sector
 topic-legacy: overview
 description: Obtenga información sobre los modelos de datos estandarizados para varias verticales del sector que se pueden construir con componentes estándar del Modelo de datos de experiencia (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
+source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -38,6 +38,7 @@ Los ERD se proporcionan para las siguientes verticales industriales:
 
 * [[!UICONTROL Comercial]](./retail.md)
 * [[!UICONTROL Servicios financieros]](./financial.md)
+* [[!UICONTROL Telecomunicaciones]](./telecom.md)
 * [[!UICONTROL Viajes y hospitalidad]](./travel-hospitality.md)
 
 ## Pasos siguientes
