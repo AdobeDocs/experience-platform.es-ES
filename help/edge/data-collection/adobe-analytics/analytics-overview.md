@@ -1,33 +1,32 @@
 ---
 title: Envío de datos a Adobe Analytics mediante el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo enviar datos a Adobe Analytics con el SDK web de Adobe Experience Platform.
-keywords: adobe analytics;analytics;datos asignados;vars asignadas;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+keywords: adobe analytics;analytics;datos asignados;vars asignados;
+exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 7%
 
 ---
 
-
 # Envío de datos a Adobe Analytics
 
-Adobe Experience Platform [!DNL Web SDK] puede enviar datos a Adobe Analytics. Esto funciona traduciendo `xdm` a un formato que puede utilizar Adobe Analytics.
+Adobe Experience Platform [!DNL Web SDK] puede enviar datos a Adobe Analytics. Esto funciona traduciendo `xdm` a un formato que Adobe Analytics puede utilizar.
 
 ## Configuración
 
-Adobe Analytics recopila automáticamente los datos que envía si tiene un grupo de informes asignado en la interfaz de usuario de configuración del cliente. Aquí puede asignar uno o más sistemas de informes a una configuración determinada. Una vez asignado un grupo de informes, los datos empezarán a fluir automáticamente.
+Adobe Analytics recopila automáticamente los datos que envía si tiene un grupo de informes asignado en la interfaz de usuario de configuración del cliente. Aquí puede asignar uno o más informes a una configuración determinada. Una vez asignado un grupo de informes, los datos empezarán a fluir automáticamente.
 
 ## Datos asignados automáticamente
 
-Adobe Experience Platform [!DNL Edge Network] asigna automáticamente muchas variables XDM. La lista completa de estas variables se muestra [aquí](automatically-mapped-vars.md).
+Adobe Experience Platform [!DNL Edge Network] asigna automáticamente muchas variables XDM. La lista completa de estas variables se enumera [aquí](automatically-mapped-vars.md).
 
 ## Datos asignados manualmente
 
 Se puede acceder a todos los datos recopilados por la red perimetral mediante reglas de procesamiento. Los datos se acoplan con notación de puntos y están disponibles como contextData.
 
-Si tuvieras un esquema así.
+Si tenía un esquema similar a este.
 
 ```javascript
 {
@@ -52,7 +51,7 @@ Si tuvieras un esquema así.
 }
 ```
 
-A continuación, estas serían las claves de datos de contexto disponibles para usted.
+Estas serían las claves de datos de contexto disponibles para usted.
 
 ```javascript
 a.x.key //value
@@ -65,6 +64,6 @@ a.x.arrayofobjects.0.obj1key //objval0
 a.x.arrayofobjects.1.obj2key //objval1
 ```
 
-Este es un ejemplo de una regla de procesamiento que utilizaría estos datos.
+A continuación, se muestra un ejemplo de una regla de procesamiento que utilizaría estos datos.
 
-![Interfaz de reglas de procesamiento](../../../assets/edge_analytics_processing_rules.png)
+![Interfaz de reglas de procesamiento](./assets/edge_analytics_processing_rules.png)
