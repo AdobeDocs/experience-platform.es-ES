@@ -3,7 +3,7 @@ title: Configurar el almacén de datos para el SDK web del Experience Platform
 description: 'Aprenda a configurar los flujos de datos. '
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;id;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Su organización debe estar aprovisionada para esta función. Póngase en contac
 
 Los Datastreams se pueden crear en el Adobe [!DNL Experience Platform Launch] mediante la herramienta de configuración Datastream.
 
-![navegación de la herramienta datastreams](../../assets/datastreams_config.png)
+![navegación de la herramienta datastreams](../images/datastreams/config.png)
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ A continuación se muestran los ajustes disponibles para cada entorno de configu
 
 La sección ID de terceros es la única sección que siempre está activada. Tiene dos configuraciones disponibles: &quot;[!UICONTROL Sincronización de ID de terceros habilitada]&quot; y &quot;[!UICONTROL ID de contenedor de sincronización de ID de terceros]&quot;.
 
-![Sección Identidad de la interfaz de usuario de configuración](../../assets/edge_configuration_identity.png)
+![Sección Identidad de la interfaz de usuario de configuración](../images/datastreams/edge_configuration_identity.png)
 
 ### [!UICONTROL Sincronización de ID de terceros habilitada]
 
@@ -53,9 +53,9 @@ Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que d
 
 La configuración que se muestra aquí le permite enviar datos a Adobe Experience Platform. Solo debe habilitar esta sección si ha comprado Adobe Experience Platform.
 
-![Bloque de configuración de Adobe Experience Platform](../../assets/edge_configuration_aep.png)
+![Bloque de configuración de Adobe Experience Platform](../images/datastreams/edge_configuration_aep.png)
 
-### [!UICONTROL Sandbox]
+### [!UICONTROL Entorno de pruebas]
 
 Los entornos limitados son ubicaciones en Adobe Experience Platform que permiten a los clientes aislar entre sí sus datos e implementaciones. Para obtener más información sobre cómo funcionan, consulte la [Documentación de entornos limitados](../../sandboxes/home.md).
 
@@ -71,7 +71,7 @@ Los conjuntos de datos admiten el envío de datos a conjuntos de datos que tiene
 
 Para configurar Adobe Target, debe proporcionar un código de cliente. Los demás campos son opcionales.
 
-![Bloque de configuración de Adobe Target](../../assets/edge_configuration_target.png)
+![Bloque de configuración de Adobe Target](../images/datastreams/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ Adobe recomienda configurarlo de forma diferente para cada uno de los entornos d
 
 Todo lo que se necesita para enviar datos a Adobe Audience Manager es habilitar esta sección. Los demás ajustes son opcionales, pero se recomienda.
 
-![Bloque de configuración de Audience Manager de Adobe](../../assets/edge_configuration_aam.png)
+![Bloque de configuración de Audience Manager de Adobe](../images/datastreams/edge_configuration_aam.png)
 
 ### [!UICONTROL Destinos de cookies habilitados]
 
@@ -111,7 +111,7 @@ Permite que el SDK comparta información de segmentos a través de [Destinos de 
 
 Controla si los datos se envían a Adobe Analytics. Encontrará más información en la [Información general de Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Bloque de configuración de Adobe Analytics](../../assets/edge_configuration_aa.png)
+![Bloque de configuración de Adobe Analytics](../images/datastreams/edge_configuration_aa.png)
 
 ### [!UICONTROL ID del grupo de informes]
 
