@@ -3,9 +3,9 @@ title: Uso de Adobe Target con el SDK web de Platform
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
+source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '1220'
 ht-degree: 5%
 
 ---
@@ -17,13 +17,29 @@ ht-degree: 5%
 Las siguientes funciones se han probado y actualmente son compatibles con [!DNL Target]:
 
 * [Pruebas A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [Creación de informes de conversión e impresión de A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [Creación de informes de conversión e impresión de A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es)
 * [Actividades de Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Actividades de segmentación de experiencias](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Pruebas multivariable (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 * [Actividades de Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Informes de impresión y conversión de Target nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [Compatibilidad con VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+
+## [!DNL Platform Web SDK] diagrama del sistema
+
+El diagrama siguiente le ayuda a comprender el flujo de trabajo de las decisiones de borde [!DNL Target] y [!DNL Platform Web SDK].
+
+![Diagrama de la toma de decisiones perimetrales de Adobe Target con el SDK web de Platform](./assets/target-platform-web-sdk.png)
+
+| La llamada | Detalles |
+| --- | --- |
+| 1 | El dispositivo carga el [!DNL Platform Web SDK]. El [!DNL Platform Web SDK] envía una solicitud a la red perimetral con datos XDM, el ID de entorno de Datastreams, los parámetros transferidos y el ID de cliente (opcional). La página (o los contenedores) está oculta previamente. |
+| 2 | La red perimetral envía la solicitud a los servicios Edge para enriquecerla con el ID del visitante, el consentimiento y otra información de contexto del visitante, como la geolocalización y los nombres descriptivos del dispositivo. |
+| 3 | La red perimetral envía la solicitud de personalización enriquecida al perímetro [!DNL Target] con el ID de visitante y los parámetros transferidos. |
+| 4 | Los scripts de perfil se ejecutan y luego se alimentan en el almacenamiento de perfiles [!DNL Target]. El almacenamiento de perfiles obtiene segmentos de la [!UICONTROL Biblioteca de audiencias] (por ejemplo, segmentos compartidos desde [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
+| 5 | En función de los parámetros de solicitud de URL y los datos de perfil, [!DNL Target] determina qué actividades y experiencias se mostrarán para el visitante en la vista de página actual y para futuras vistas de recuperación previa. [!DNL Target] a continuación, lo devuelve a la red perimetral. |
+| 6 | a. La red perimetral envía la respuesta de personalización a la página, incluyendo de forma opcional los valores de perfil para una personalización adicional. El contenido personalizado de la página actual se muestra lo más rápido posible y sin parpadeo del contenido predeterminado.<br>b. El contenido personalizado para las vistas que se muestran como resultado de las acciones del usuario en una aplicación de una sola página (SPA) se almacena en caché para que se pueda aplicar instantáneamente sin una llamada al servidor adicional cuando se activan las vistas. &#x200B;<br>c. La red perimetral envía el ID de visitante y otros valores en cookies, como consentimiento, ID de sesión, identidad, comprobación de cookies, personalización, etc. |
+| 7 | La red perimetral reenvía los detalles de [!UICONTROL Analytics for Target] (A4T) (actividad, experiencia y metadatos de conversión) al &#x200B; perimetral [!DNL Analytics]. |
 
 ## Habilitación de [!DNL Adobe Target]
 
@@ -124,7 +140,7 @@ Al definir audiencias para las actividades [!DNL Target] que se entregan mediant
 Si tiene [!DNL Target] actividades con audiencias predefinidas que utilizan parámetros personalizados o un perfil de usuario, no se entregan correctamente mediante el SDK. En lugar de usar parámetros personalizados o el perfil de usuario, debe utilizar XDM en su lugar. Sin embargo, hay campos de objetivo de audiencia integrados compatibles con el [!DNL Platform Web SDK] que no requieren XDM. Estos campos están disponibles en la interfaz de usuario [!DNL Target] que no requieren XDM:
 
 * Biblioteca de segmentos
-* Geografía 
+* Geografía
 * Red
 * Operating System
 * Páginas del sitio
