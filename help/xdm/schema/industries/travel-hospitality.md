@@ -4,9 +4,9 @@ title: Modelo de datos ERD de la industria de viajes y hospitalidad
 topic-legacy: overview
 description: Vea un diagrama de relación de entidades (ERD) que describe un modelo de datos estandarizado para el sector de viajes y hostelería, compatible con Experience Data Model (XDM) para su uso en Adobe Experience Platform.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # [!UICONTROL Modelo de datos de la industria de viajes y ] hospitalidad ERD
 
 El siguiente diagrama de relación de entidades (ERD) representa un modelo de datos estandarizado para el sector de viajes y hostelería. El ERD se presenta intencionalmente de forma desnormalizada y teniendo en cuenta cómo se almacenan los datos en Adobe Experience Platform.
+
+>[!NOTE]
+>
+>El ERD como se describe es una recomendación sobre cómo debe modelar sus datos para este caso de uso del sector. Para utilizar este modelo de datos en Platform, debe crear los esquemas recomendados y sus relaciones usted mismo. Consulte las guías sobre la administración de [esquemas](../../ui/resources/schemas.md) y [relaciones](../../tutorials/relationship-ui.md) en la interfaz de usuario para obtener más información.
 
 Utilice la siguiente leyenda para interpretar este ERD:
 
