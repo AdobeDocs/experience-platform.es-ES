@@ -4,9 +4,9 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases del Modelo de datos de experiencia (XDM) y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Esquemas
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '320'
 ht-degree: 18%
 
 ---
@@ -40,11 +40,13 @@ ht-degree: 18%
       * [Detalles de contacto personal](./field-groups/profile/personal-contact-details.md)
       * [Consentimientos y preferencias](./field-groups/profile/consents.md)
       * [Detalles de pertenencia a segmentos](./field-groups/profile/segmentation.md)
+      * [Suscripción a Telecom](./field-groups/profile/telecom-subscription.md)
       * [Detalles de contacto de trabajo](./field-groups/profile/work-contact-details.md)
    * Grupos de campos de eventos {#event}
       * [Detalles de marketing de campaña](./field-groups/event/campaign-marketing-details.md)
       * [Detalles del canal](./field-groups/event/channel-details.md)
       * [Detalles del comercio](./field-groups/event/commerce-details.md)
+      * [Detalles del comercio de dispositivos](./field-groups/event/device-trade-in-details.md)
       * [Detalles del ID de usuario final](./field-groups/event/enduserids.md)
       * [Detalles del entorno](./field-groups/event/environment-details.md)
       * [Consentimiento TCF 2.0 de IAB](./field-groups/event/iab.md)
@@ -57,6 +59,7 @@ ht-degree: 18%
    * [Comercio](./data-types/commerce.md)
    * [Cadena de consentimiento](./data-types/consent-string.md)
    * [Consentimientos y preferencias](./data-types/consents.md)
+   * [Moneda](./data-types/currency.md)
    * [Device](./data-types/device.md)
    * [Correo electrónico Dirección](./data-types/email-address.md)
    * [Entorno](./data-types/environment.md)
@@ -85,6 +88,7 @@ ht-degree: 18%
    * [Elemento de lista de productos](./data-types/product-list-item.md)
    * [Buscar](./data-types/search.md)
    * [Suscripción](./data-types/subscription.md)
+   * [Suscripción a Telecom](./data-types/telecom-subscription.md)
    * [Información web](./data-types/web-information.md)
    * [Interacción web](./data-types/web-interaction.md)
    * [Detalles de la página web](./data-types/webpage-details.md)
