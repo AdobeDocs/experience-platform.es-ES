@@ -6,21 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de PayPal utilizando la interfaz de usuario de Adobe Experience Platform.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6b6bd67e70267e81c144c37549b0dcba20534eb6
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '453'
 ht-degree: 1%
 
 ---
 
 # Crear una conexión de origen [!DNL PayPal] en la interfaz de usuario
 
->[!NOTE]
->
-> El conector [!DNL PayPal] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
-
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL PayPal] mediante la interfaz de usuario [!DNL Platform].
+Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona pasos para crear un conector de origen [!DNL PayPal] mediante la interfaz de usuario de Platform.
 
 ## Primeros pasos
 
@@ -35,7 +30,7 @@ Si ya tiene una conexión [!DNL PayPal] válida, puede omitir el resto de este d
 
 ### Recopilar las credenciales necesarias
 
-Para acceder a su [!DNL PayPal] cuenta [!DNL Platform], debe proporcionar los siguientes valores:
+Para acceder a su [!DNL PayPal] plataforma de cuenta, debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -47,13 +42,13 @@ Para obtener más información sobre cómo empezar, consulte este [[!DNL PayPal]
 
 ## Conecte su cuenta [!DNL PayPal]
 
-Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta [!DNL PayPal] a [!DNL Platform].
+Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta [!DNL PayPal] a Platform.
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Sources]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes para las que puede crear una cuenta.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Orígenes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Orígenes]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes con las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
-En la categoría **[!UICONTROL Payments]**, seleccione **[!UICONTROL PayPal]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configure]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear un nuevo conector [!DNL PayPal].
+En la categoría **[!UICONTROL Payments]**, seleccione **[!UICONTROL PayPal]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear un nuevo conector [!DNL PayPal].
 
 ![catálogo](../../../../images/tutorials/create/paypal/catalog.png)
 
@@ -67,10 +62,10 @@ Si está utilizando credenciales nuevas, seleccione **[!UICONTROL New account]**
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la cuenta [!DNL PayPal] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
+Para conectar una cuenta existente, seleccione la cuenta [!DNL PayPal] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![existente](../../../../images/tutorials/create/paypal/existing.png)
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta [!DNL PayPal]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir los datos de pago en [!DNL Platform]](../../dataflow/payments.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta [!DNL PayPal]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir los datos de pago en Platform](../../dataflow/payments.md).
