@@ -3,25 +3,29 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
+source-git-commit: e158b8129fe5afe71af48b7c64ca34b00e79965c
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Notas de la versión
 
-## Versión 2.5.0, junio de 2021
+## Versión 2.6.0: 27 de julio de 2021
+
+* Proporciona más contenido de personalización en la promesa resuelta `sendEvent`, incluidos los tokens de respuesta de Adobe Target. Cuando se ejecuta el comando `sendEvent`, se devuelve una promesa, que finalmente se resuelve con un objeto `result` que contiene información recibida del servidor. Este objeto result incluye una propiedad denominada `decisions`. Esta propiedad `decisions` ha quedado obsoleta. Se ha agregado una nueva propiedad, `propositions`. Esta nueva propiedad proporciona a los clientes acceso a más contenido de personalización, incluidos tokens de respuesta. Próximamente habrá más documentación disponible.
+
+## Versión 2.5.0: junio de 2021
 
 * Se ha agregado compatibilidad con ofertas de personalización de redireccionamiento.
 * Los anchos y las alturas de las ventanillas que se recopilan automáticamente y que son valores negativos ya no se enviarán al servidor.
 * Cuando se cancela un evento devolviendo `false` una llamada de retorno `onBeforeEventSend`, ahora se registra un mensaje.
 * Se ha corregido un problema por el cual partes específicas de datos XDM destinados a un solo evento se incluían en varios eventos.
 
-## Versión 2.4.0, marzo de 2021
+## Versión 2.4.0: marzo de 2021
 
-* El SDK ahora puede [instalarse como un paquete npm](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
+* El SDK ahora puede [instalarse como un paquete npm](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=es).
 * Se agregó compatibilidad con una opción `out` al [configurar el consentimiento predeterminado](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), que descarta todos los eventos hasta que se recibe el consentimiento (la opción `pending` existente coloca en cola los eventos y los envía una vez que se recibe el consentimiento).
 * Ahora se puede utilizar la [devolución de llamada onBeforeEventSend](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) para evitar que se envíe un evento.
 * Ahora utiliza un grupo de campos de esquema XDM en lugar de `meta.personalization` al enviar eventos sobre el contenido personalizado que se está procesando o haciendo clic en él.
@@ -33,7 +37,7 @@ ht-degree: 4%
 * Corrección de errores: Los eventos de notificación de interacción de personalización contendrían información duplicada sobre la misma actividad cuando un usuario navegaba a una nueva vista de aplicación de una sola página, regresaba a la vista original y hacía clic en un elemento que cumplía los requisitos para la conversión.
 * Corrección de errores: Si el primer evento enviado por el SDK tenía `documentUnloading` establecido en `true`, [`sendBeacon`](https://developer.mozilla.org/es-ES/docs/Web/API/Navigator/sendBeacon) se utilizaría para enviar el evento, lo que provocaba un error en cuanto a la identidad que no se estaba estableciendo.
 
-## Versión 2.3.0, noviembre de 2020
+## Versión 2.3.0: noviembre de 2020
 
 * Se ha agregado compatibilidad nonce para permitir políticas de seguridad de contenido más estrictas.
 * Se ha agregado compatibilidad con la personalización para aplicaciones de una sola página.
@@ -43,12 +47,12 @@ ht-degree: 4%
 * Corrección de errores: Algunos errores del explorador que contenían una propiedad `message` de solo lectura no se gestionaban correctamente, lo que provocaba que se mostrara un error diferente al cliente.
 * Corrección de errores: Si se ejecuta el SDK dentro de un iframe, se producirá un error si la página HTML del iframe procede de un subdominio diferente al de la página HTML de la ventana principal.
 
-## Versión 2.2.0, octubre de 2020
+## Versión 2.2.0: octubre de 2020
 
 * Corrección de errores: El objeto Opt-in impedía que Alloy realizara llamadas cuando `idMigrationEnabled` es `true`.
 * Corrección de errores: Haga que Alloy tenga en cuenta las solicitudes que deben devolver ofertas de personalización para evitar un problema que parpadee.
 
-## Versión 2.1.0, agosto de 2020
+## Versión 2.1.0: agosto de 2020
 
 * Elimine el comando `syncIdentity` y permita que se pasen esos ID en el comando `sendEvent`.
 * Compatibilidad con el estándar de consentimiento IAB 2.0.
