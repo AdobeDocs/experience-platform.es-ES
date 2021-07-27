@@ -5,10 +5,9 @@ title: Punto final de API de consultas programadas
 topic-legacy: scheduled queries
 description: Las secciones siguientes recorren las distintas llamadas de API que puede realizar para consultas programadas con la API del servicio de consulta.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e99b57706bb5bdb0abaf4209a259b478d9406783
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1010'
 ht-degree: 3%
 
 ---
@@ -125,7 +124,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas pr
 
 ### Crear una nueva consulta programada
 
-Puede crear una nueva consulta programada realizando una solicitud de POST al extremo `/schedules` .
+Puede crear una nueva consulta programada realizando una solicitud de POST al extremo `/schedules` . Cuando crea una consulta programada en la API, también puede verla en el Editor de consultas. Para obtener más información sobre las consultas programadas en la interfaz de usuario, lea la [documentación del Editor de consultas](../ui/user-guide.md#scheduled-queries).
 
 **Formato de API**
 
