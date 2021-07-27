@@ -1,10 +1,10 @@
 ---
 title: Tipos de acción para extensiones de Edge
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de acción para una extensión de etiqueta en una propiedad edge.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 49%
+source-wordcount: '381'
+ht-degree: 45%
 
 ---
 
@@ -14,13 +14,22 @@ ht-degree: 49%
 >
 >Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Un módulo de biblioteca de tipo acción está diseñado para realizar una acción predefinida. El autor define completamente el efecto de esta acción. El módulo se puede crear como señalización o incluso transformar algunos datos del evento.
+En una regla de etiqueta, una acción es algo que se realiza después de que las condiciones de la regla hayan pasado la evaluación. Los tipos de acción los proporcionan las extensiones y el autor de la extensión los define por completo.
+
+Por ejemplo, una extensión podría proporcionar un tipo de acción &quot;mostrar chat de asistencia&quot; que puede mostrar un cuadro de diálogo de chat de asistencia técnica para ayudar a los usuarios con problemas para efectuar sus pagos.
+
+Este documento explica cómo definir tipos de acción para una extensión edge en Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Este documento describe los tipos de acciones para las extensiones de Edge. Si va a desarrollar una extensión web, consulte la guía sobre [tipos de acciones para extensiones web](../web/action-types.md) en su lugar.
+>Si va a desarrollar una extensión web, consulte la guía sobre [tipos de acciones para extensiones web](../web/action-types.md) en su lugar.
 >
->Este documento también supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones de etiquetas. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
+>Este documento también supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones Edge. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
+
+Los tipos de acción suelen consistir en lo siguiente:
+
+1. Vista que se muestra en la interfaz de usuario de la recopilación de datos y que permite a los usuarios modificar la configuración de la acción.
+2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y realizar una acción.
 
 Por ejemplo, un módulo para reenviar algunos datos a un extremo de terceros puede tener este aspecto.
 
