@@ -1,24 +1,33 @@
 ---
 title: Tipos de evento para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo evento para una extensión web en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 5a6549577c61817f6fe239e1e9e47ab06d2bc807
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 44%
+source-wordcount: '1047'
+ht-degree: 33%
 
 ---
 
-# Tipos de eventos
+# Tipos de eventos para extensiones web
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Un módulo de biblioteca de tipo de evento está diseñado para detectar cuándo se produce una actividad y, a continuación, llamar a una función para activar una regla asociada. El evento que se está detectando se puede personalizar. ¿Podría detectar cuándo un usuario realiza un gesto determinado, se desplaza rápidamente o interactúa con algo?
+En una regla de etiqueta, un evento es una actividad que debe producirse para que una regla se active. Por ejemplo, una extensión web podría proporcionar un tipo de evento de &quot;gesto&quot; que observe si se produce un determinado gesto de ratón o contacto. Una vez que se produce el gesto, la lógica de evento activaría la regla.
+
+Un módulo de biblioteca de tipo de evento está diseñado para detectar cuándo se produce una actividad y, a continuación, llamar a una función para activar una regla asociada. El evento que se está detectando se puede personalizar. Por ejemplo, podría detectar cuándo un usuario realiza un gesto determinado, se desplaza rápidamente o interactúa con algo.
+
+Este documento explica cómo definir tipos de eventos para una extensión web en Adobe Experience Platform.
 
 >[!NOTE]
 >
->Este documento supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones de etiquetas. Consulte la información general sobre el [formato del módulo de biblioteca](./format.md) para obtener una introducción a su implementación antes de volver a esta guía.
+>Este documento supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones web. Consulte la información general sobre el [formato del módulo de biblioteca](./format.md) para obtener una introducción a su implementación antes de volver a esta guía.
+
+Los tipos de eventos se definen mediante extensiones y suelen consistir en lo siguiente:
+
+1. Se muestra una [vista](./views.md) en la interfaz de usuario de la recopilación de datos que permite a los usuarios modificar la configuración del evento.
+2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y observar que se produzca una determinada actividad.
 
 `module.exports` acepte los  `settings` parámetros  `trigger` y . Esto permite la personalización del tipo de evento.
 
@@ -95,9 +104,9 @@ trigger({
 
 ## Respeto del orden de reglas
 
-Las etiquetas de Adobe Experience Platform permiten a los usuarios solicitar reglas. Por ejemplo, un usuario puede crear dos reglas que utilicen el tipo de evento de cambio de orientación y para personalizar el orden en que se activan las reglas. Suponiendo que el usuario de Adobe Experience Platform especifique un valor de orden de `2` para el evento de cambio de orientación en la Regla A y un valor de orden de `1` para el evento de cambio de orientación en la Regla B. Esto indica que cuando la orientación cambia en un dispositivo móvil, la Regla B debe activarse antes de la Regla A (las reglas con valores de orden inferior se activan primero).
+Las etiquetas permiten a los usuarios solicitar reglas. Por ejemplo, un usuario puede crear dos reglas que utilicen el tipo de evento de cambio de orientación y para personalizar el orden en que se activan las reglas. Suponiendo que el usuario de Adobe Experience Platform especifique un valor de orden de `2` para el evento de cambio de orientación en la Regla A y un valor de orden de `1` para el evento de cambio de orientación en la Regla B. Esto indica que cuando la orientación cambia en un dispositivo móvil, la Regla B debe activarse antes de la Regla A (las reglas con valores de orden inferior se activan primero).
 
-Como se mencionó anteriormente, la función exportada en nuestro módulo de evento se llamará una vez para cada regla que se haya configurado para utilizar nuestro tipo de evento. Cada vez que se llama a la función exportada, se pasa una función `trigger` única vinculada a una regla específica. En el escenario que se acaba de describir, se llamará una vez a nuestra función exportada con una función `trigger` asociada a la regla B y, a continuación, otra vez con una función `trigger` asociada a la regla A. La regla B es la primera porque el usuario le ha dado un valor de orden inferior al de la regla A. Cuando nuestro módulo de biblioteca detecta un cambio de orientación, es importante que llamemos a las funciones `trigger` en el mismo orden en que se proporcionaron al módulo de biblioteca.
+Como se mencionó anteriormente, la función exportada en nuestro módulo de evento se llamará una vez para cada regla que se haya configurado para utilizar nuestro tipo de evento. Cada vez que se llama a la función exportada, se pasa una función `trigger` única vinculada a una regla específica. En el escenario que se acaba de describir, se llama una vez a nuestra función exportada con una función `trigger` vinculada a la regla B y otra con una función `trigger` vinculada a la regla A. La regla B va primero porque el usuario le ha dado un valor de orden inferior al de la regla A. Cuando nuestro módulo de biblioteca detecta un cambio de orientación, es importante que llamemos a las funciones `trigger` en el mismo orden en que se proporcionaron al módulo de biblioteca.
 
 En el código de ejemplo siguiente, observe que cuando se detecta un cambio de orientación, las funciones desencadenadoras se llaman en el mismo orden en que se proporcionaron a la función exportada:
 
