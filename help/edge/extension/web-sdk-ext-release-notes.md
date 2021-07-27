@@ -3,10 +3,10 @@ title: Notas de la versión de la extensión del SDK web de Adobe Experience Pla
 description: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
 seo-description: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ec841a028d2a6acbdb1c1406026bbd4574cbc2ee
+source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 73%
+source-wordcount: '1096'
+ht-degree: 56%
 
 ---
 
@@ -14,9 +14,16 @@ ht-degree: 73%
 
 Este documento cubre las notas de la versión de la extensión web SDK de Adobe Experience Platform para Adobe Experience Platform Launch. Para ver las notas de la última versión del SDK, consulte las [Notas de la versión del SDK web de Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## 1 de junio de 2021
+## Versión 2.6.0: 27 de julio de 2021
 
-### SDK web de Adobe Experience Platform 2.5.0
+* Las etiquetas, las descripciones y los mensajes de error que utilizan el término &quot;configuración perimetral&quot; se han cambiado para que el término &quot;conjunto de datos&quot; se ajuste a la terminología más reciente de Adobe Experience Platform.
+* En la vista de configuración de la extensión, se agregó compatibilidad para gestionar grandes cantidades de conjuntos de datos y entornos de conjuntos de datos.
+* En la vista de elementos de datos de objeto XDM, se agregó compatibilidad para administrar grandes cantidades de esquemas.
+* Se ha añadido un tipo de evento Send Event Complete , que se puede utilizar para ejecutar una regla después de enviar un evento al servidor y recibir una respuesta. Próximamente habrá más documentación disponible.
+* El tipo de evento Decisiones recibidas está en desuso. En su lugar, utilice el tipo de evento Enviar evento completado .
+* La interfaz de usuario y la gestión de errores se han mejorado en general.
+
+## Versión 2.5.0: 1 de junio de 2021
 
 Contiene la versión 2.5.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
@@ -24,9 +31,7 @@ Contiene la versión 2.5.0 de la biblioteca del SDK web de Adobe Experience Plat
 * En la vista de elementos de datos de objeto XDM, se corrigió un problema en el que se generaba un error si el usuario tenía acceso a entornos limitados de Adobe Experience Platform pero no al entorno limitado configurado como predeterminado para la organización.
 * En la vista de elementos de datos de objeto XDM, se corrigió un problema en el que un campo de esquema requerido se consideraría no válido aunque el objeto principal no contuviera valores.
 
-## 9 de marzo de 2021
-
-### SDK web de Adobe Experience Platform 2.4.0
+## Versión 2.4.0: 9 de marzo de 2021
 
 Contiene la versión 2.4.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
@@ -37,46 +42,25 @@ Contiene la versión 2.4.0 de la biblioteca del SDK web de Adobe Experience Plat
 * Ahora aparece un mejor error en la interfaz de usuario del elemento de datos Objeto XDM si el token de acceso del usuario no es válido o está aprovisionado incorrectamente.
 * Se ha corregido un error de origen cruzado (que no afecta al funcionamiento de la extensión) que se mostraba en la consola del desarrollador del explorador al ver un elemento de datos de objeto XDM.
 
-## 4 de noviembre de 2020
-
-### SDK web de Adobe Experience Platform 2.3.0
+## Versión 2.3.0: 4 de noviembre de 2020
 
 Contiene la versión 2.3.0 de la biblioteca del SDK web de Adobe Experience Platform.
-
-#### Funcionalidades
 
 * Se añadió la compatibilidad con el uso de un elemento de datos al configurar el consentimiento predeterminado.
 * Capacidad añadida para buscar esquemas XDM con el tipo de elemento de datos Objeto XDM.
 * Se ha añadido la función de clonación de datos XDM dentro del tipo de acción Enviar evento para garantizar que los cambios posteriores en el objeto de datos XDM no se reflejen en la solicitud.
 
-## 1 de octubre de 2020
-
-### SDK web de Adobe Experience Platform 2.2.0
-
-#### Correcciones de errores
+## Versión 2.2.0 - 1 de octubre de 2020
 
 * Cuando los clientes intentaban crear un objeto XDM a partir de esquemas de simulación de pruebas, se topaban con problemas de autenticación. La API que llama a Platform ahora conoce los entornos, por lo que los usuarios solo reciben los esquemas a los que tienen acceso para editar.
-
-#### Funcionalidades
-
 * Al utilizar el elemento de datos `identityMap`, las Áreas de nombres ahora se rellenan previamente en un menú desplegable, por lo que no es necesario rellenarlas en forma manual.
 * Se ha modificado la interfaz de usuario del elemento de datos `xdmObject`. En la nueva interfaz de usuario, puede ver qué campos se han rellenado sin tener que introducir cada elemento en el objeto.
 
-
-## 26 de agosto de 2020
-
-### SDK web de Adobe Experience Platform 2.1.1
-
-#### Funcionalidades
+## Versión 2.1.1: 26 de agosto de 2020
 
 * Se corrige un problema en el cual los entornos limitados de Adobe Experience Platform de la vista de objetos XDM no se mostraban correctamente. Si, al utilizar esta versión de la extensión, no se muestra el simulador para pruebas previsto en la lista, el usuario debe consultar al administrador de Adobe Experience Platform para asegurarse de que los permisos de acceso estén configurados correctamente.
 
-
-## 5 de agosto de 2020
-
-### SDK web de Adobe Experience Platform 2.1.0
-
-#### Funcionalidades
+## Versión 2.1.0: 5 de agosto de 2020
 
 * Cambio radical: Elimine la acción `syncIdentity` y permita que se pasen esos ID en la acción `sendEvent`. Desactive cualquier regla existente que utilice esta acción antes de actualizar la extensión.
 * Actualización a Alloy 2.1.0 ([Notas de la versión](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
@@ -86,21 +70,11 @@ Contiene la versión 2.3.0 de la biblioteca del SDK web de Adobe Experience Plat
 * Compatibilidad para pasar un mapa de identidad en la acción `setConsent`.
 * Compatibilidad con la selección de un simulador para pruebas de Platform en el elemento de datos de objeto XDM.
 
-
-## 26 de mayo de 2020
-
-### SDK web de Adobe Experience Platform 1.0.0
-
-#### Funcionalidades
+## Versión 1.0.0: 26 de mayo de 2020
 
 * Compatibilidad con la selección del entorno desde el servicio de configuración.
 
-
-## 4 de mayo de 2020
-
-### SDK web de Adobe Experience Platform 0.1.2
-
-#### Funcionalidades
+## Versión 0.1.2: 4 de mayo de 2020
 
 * Se cambió el nombre `configId` a `edgeConfigId`.
 * Se cambió el nombre `viewStart` a `renderDecisions`, que se establece en «false» de forma predeterminada. Si se establece en «true», las ofertas de Personalización se recuperan y se procesan de manera automática.
@@ -117,20 +91,12 @@ Estas decisiones se arrojan desde el comando `sendEvent` solo si `renderDecision
 * Al habilitar la depuración mediante `_satellite` , ahora se habilita la depuración en el SDK web de Adobe Experience Platform.
 * Mayor compatibilidad con valores ingresados en el objeto XDM: booleanos, números y decimales.
 
-## 16 de marzo de 2020
-
-### SDK web de Adobe Experience Platform 0.0.10
-
-#### Funcionalidades
+## Versión 0.0.10: 16 de marzo de 2020
 
 * Combinó los conceptos de inclusión y exclusión en `Consent`, y agregó un nuevo comando `setConsent`.
 * Se añadió un nuevo elemento de datos de tipo `XDM Object` que permite la asignación de JavaScript/JSON a XDM.
 
-## 18 de febrero de 2020
-
-### SDK web de Adobe Experience Platform 0.0.7
-
-#### Funcionalidades
+## Versión 0.0.7: 18 de febrero de 2020
 
 * Se eliminaron las opciones idSyncContainerId, datasetId, schemaId, urlDestinationsEnabled y cookieDestinationsEnabled
 * Se agregó la compatibilidad con guiones en el valor de opciones de edgeDomain
@@ -139,61 +105,17 @@ Estas decisiones se arrojan desde el comando `sendEvent` solo si `renderDecision
 * Al ejecutar un comando no válido, se registrará una lista de nombres de comando válidos en la consola
 * Se ha añadido la casilla de verificación para alternar la compatibilidad con cookies de terceros con la extensión Adobe Experience Platform Launch. Esto deshabilita las llamadas a demdex.net
 
-## 20 de diciembre de 2019
-
-### SDK web de Adobe Experience Platform 0.0.5
-
-#### Funcionalidades
+## Versión 0.0.5: 20 de diciembre de 2019
 
 * Agregar configuraciones del Rastreador de actividades a la extensión de Platform Launch
 * Exponer EventType y EventMergeId en el comando de eventos
 * Agregar la configuración onBeforeEventSend a la extensión de Platform Launch
 * Agregar la configuración edgeBasePath a la extensión de Platform Launch
 
-#### Actualizar a Alloy versión 0.0.10, que incluye los siguientes cambios:
-
-* Implementar el almacenamiento de clientes: la lógica de estado y cookies se trasladó al servidor
-* Exponer EventType y EventMergeId en el comando de eventos
-* Usar sendBeacon para el seguimiento de vínculos que no sean vínculos de salida
-* Devolver las sincronizaciones de ID menos la verificación de caducidad
-* El comando setCustomerIds no asigna los ID en páginas que no sean de SSL (http)
-* Pasar el dominio de APEX al servidor para utilizarlo al configurar el estado o las cookies
-* Recoger el ECID de la respuesta con un nuevo tipo de control
-* Eliminar valores predeterminados para las configuraciones de activación e identidad
-* Cambiar el nombre de las opciones de consulta y trasladarlas a meta
-* Migración ECID heredada
-
-#### Correcciones de errores
-
-* Cuando aparece el código de estado inesperado, se analiza y se da formato al cuerpo de respuesta del mensaje de error
-* Por la configuración, se sobrescribe al ejecutar el comando de depuración o al usar alloy_debug
-
-## 25 de noviembre de 2019
-
-### SDK web de Adobe Experience Platform 0.0.3
-
-#### Funcionalidades
+## Versión 0.0.3: 25 de noviembre de 2019
 
 * Nuevos campos de ID de combinación y Tipo en la acción Enviar evento. El ID de combinación se asigna a `xdm.eventMergeID` en el esquema XDM y Tipo se asigna a `xdm.eventType` en el esquema XDM.
-* Se mejoró la administración de errores y la generación de informes
-* Ahora se utiliza `sendBeacon` para todos los vínculos
 
-#### Correcciones de errores
+## Versión 0.0.2: 18 de noviembre de 2019
 
-* Se ha corregido un problema que impedía que, durante la sesión, se alternase la depuración a través de un Query String Parameter o del comando `debug`.
-
-## 18 de noviembre de 2019
-
-### SDK web de Adobe Experience Platform 0.0.2
-
-#### Funcionalidades
-
-* Creación de la extensión
-* Compatibilidad con ECID sin bibliotecas ni llamadas de red adicionales
-* Compatibilidad con el servicio de inclusión
-* Compatibilidad con el envío de XDM a Platform
-* Compatibilidad con dominios propios
-* Recopilar automáticamente el contexto del navegador
-* Código fuente totalmente abierto ([extensión](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy))
-* Registro detallado
-* Capacidad para ocultar errores en la producción
+* Versión inicial
