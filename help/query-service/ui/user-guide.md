@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Editor de consultas
 topic-legacy: query editor
 description: El Editor de consultas es una herramienta interactiva que proporciona el servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente en la interfaz de usuario del Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 7eaa808ecc644fdb9bc6b3fe1347c7651d54a33b
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1572'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Para obtener más información sobre los conceptos y características de [!DNL Query Service], consulte la [Información general del servicio de consulta](../home.md). Para obtener más información sobre cómo navegar por la interfaz de usuario del servicio de consulta en [!DNL Platform], consulte la [Información general de la interfaz de usuario del servicio de consulta](./overview.md).
 
-## Introducción
+## Primeros pasos
 
 [!DNL Query Editor] proporciona una ejecución flexible de consultas mediante la conexión a  [!DNL Query Service], y las consultas solo se ejecutarán mientras esta conexión esté activa.
 
@@ -80,7 +80,57 @@ Mientras visualiza una consulta en [!DNL Query Editor], el panel **[!UICONTROL D
 
 ![Imagen](../images/ui/query-editor/query-details.png)
 
-Este panel le permite generar un conjunto de datos de salida directamente desde la interfaz de usuario, eliminar o asignar un nombre a la consulta mostrada y ver el código SQL en un formato fácil de copiar en la pestaña **[!UICONTROL SQL Query]**. Este panel también muestra metadatos útiles, como la última vez que se modificó la consulta y quién la modificó, si corresponde. Para generar un conjunto de datos, seleccione **[!UICONTROL Output Dataset]**. Aparece el cuadro de diálogo **[!UICONTROL Conjunto de datos de salida]**. Introduzca un nombre y una descripción y, a continuación, seleccione **[!UICONTROL Ejecutar consulta]**. El nuevo conjunto de datos se muestra en la pestaña **[!UICONTROL Datasets]** de la interfaz de usuario [!DNL Query Service] en [!DNL Platform].
+Este panel le permite generar un conjunto de datos de salida directamente desde la interfaz de usuario, eliminar o asignar un nombre a la consulta mostrada y agregar una programación a la consulta.
+
+Este panel también muestra metadatos útiles, como la última vez que se modificó la consulta y quién la modificó, si corresponde. Para generar un conjunto de datos, seleccione **[!UICONTROL Output Dataset]**. Aparece el cuadro de diálogo **[!UICONTROL Conjunto de datos de salida]**. Introduzca un nombre y una descripción y, a continuación, seleccione **[!UICONTROL Ejecutar consulta]**. El nuevo conjunto de datos se muestra en la pestaña **[!UICONTROL Datasets]** de la interfaz de usuario [!DNL Query Service] en [!DNL Platform].
+
+### Consultas programadas {#scheduled-queries}
+
+>[!NOTE]
+>
+> Solo puede añadir una programación a una consulta que ya se haya creado, guardado y ejecutado. Además, **not** podrá agregar una programación a una consulta parametrizada.
+
+Para añadir una programación a una consulta, seleccione **[!UICONTROL Add schedule]**.
+
+![Imagen](../images/ui/query-editor/add-schedule.png)
+
+Aparece la página **[!UICONTROL Schedule details]**. En esta página, puede elegir la frecuencia de la consulta programada, las fechas en las que se ejecutará la consulta programada y el conjunto de datos al que exportar la consulta.
+
+![Imagen](../images/ui/query-editor/schedule-details.png)
+
+Puede elegir las siguientes opciones para **[!UICONTROL Frequency]**:
+
+- **[!UICONTROL Por hora]**: La consulta programada se ejecutará cada hora para el período de fecha seleccionado.
+- **[!UICONTROL Diario]**: La consulta programada se ejecutará cada X días a la hora y el periodo de fecha seleccionados. Tenga en cuenta que la hora seleccionada es **UTC** y no su zona horaria local.
+- **[!UICONTROL Semanal]**: La consulta seleccionada se ejecutará en los días de la semana, la hora y el período de fecha seleccionado. Tenga en cuenta que la hora seleccionada es **UTC** y no su zona horaria local.
+- **[!UICONTROL Mensual]**: La consulta seleccionada se ejecutará todos los meses del día, la hora y el período de fecha seleccionado. Tenga en cuenta que la hora seleccionada es **UTC** y no su zona horaria local.
+- **[!UICONTROL Anual]**: La consulta seleccionada se ejecutará cada año en el día, mes, hora y período de fecha que haya seleccionado. Tenga en cuenta que la hora seleccionada es **UTC** y no su zona horaria local.
+
+Para el conjunto de datos, tiene la opción de usar un conjunto de datos existente o crear un nuevo conjunto de datos.
+
+>[!IMPORTANT]
+>
+> Como está utilizando un conjunto de datos existente o creando uno nuevo, **no** necesita incluir `INSERT INTO` o `CREATE TABLE AS SELECT` como parte de la consulta, ya que los conjuntos de datos ya están establecidos. Si incluye `INSERT INTO` o `CREATE TABLE AS SELECT` como parte de las consultas programadas, se producirá un error.
+
+Después de confirmar todos estos detalles, seleccione **[!UICONTROL Save]** para crear una programación.
+
+La página de detalles de la consulta vuelve a aparecer y ahora muestra los detalles de la programación recién creada, incluido el ID de programación, la propia programación y el conjunto de datos de salida de la programación. Puede utilizar el ID de programación para buscar más información sobre las ejecuciones de la propia consulta programada. Para obtener más información, consulte la [guía de extremos de ejecución de consultas programadas](../api/runs-scheduled-queries.md).
+
+>[!NOTE]
+>
+> Solo puede programar **una** plantilla de consulta mediante la interfaz de usuario. Si desea agregar programaciones adicionales a una plantilla de consulta, deberá utilizar la API . Si ya se ha agregado una programación mediante la API, **no** se agregarán programaciones adicionales mediante la interfaz de usuario. Si ya hay varias programaciones adjuntas a una plantilla de consulta, solo se mostrará la programación más antigua. Para aprender a añadir programaciones usando la API, lea la [guía de extremo de consultas programadas](../api/scheduled-queries.md).
+>
+> Además, debe actualizar la página si desea asegurarse de que tiene el estado más reciente de la programación que está viendo.
+
+#### Eliminar una programación
+
+Puede eliminar una programación seleccionando **[!UICONTROL Delete a schedule]**.
+
+![Imagen](../images/ui/query-editor/delete-schedule.png)
+
+>[!IMPORTANT]
+>
+> Si desea eliminar una programación para una consulta, primero debe deshabilitarla.
 
 ### Almacenamiento de consultas
 
