@@ -3,9 +3,9 @@ title: Procesamiento de datos de consentimiento del cliente mediante el SDK web 
 topic-legacy: getting started
 description: Obtenga información sobre cómo integrar el SDK web de Adobe Experience Platform para procesar datos de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1285'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 3%
 El SDK web de Adobe Experience Platform le permite recuperar las señales de consentimiento del cliente generadas por las plataformas de administración de consentimiento (CMP) y enviarlas a Adobe Experience Platform siempre que se produzca un evento de cambio de consentimiento.
 
 **El SDK no interactúa con ninguna CMP lista para usar**. Depende de usted determinar cómo integrar el SDK en su sitio web, detectar cambios de consentimiento en el CMP y llamar al comando correspondiente. Este documento proporciona instrucciones generales sobre cómo integrar su CMP con el SDK web de Platform.
+
+>[!NOTE]
+>
+>Esta guía explica los pasos para integrar el SDK a través de una extensión de etiqueta en la interfaz de usuario de recopilación de datos. Si desea utilizar la versión independiente del SDK en su lugar, consulte los siguientes documentos:
+>
+>* [Configurar un conjunto de datos](../../../../edge/fundamentals/datastreams.md)
+* [Instalación del SDK](../../../../edge/fundamentals/installing-the-sdk.md)
+* [Configuración del SDK para los comandos de consentimiento](../../../../edge/consent/supporting-consent.md)
+
 
 ## Requisitos previos
 
@@ -36,7 +45,7 @@ Después de crear una configuración nueva o de seleccionar una existente para e
 
 | Campo Datastream | Valor |
 | --- | --- |
-| [!UICONTROL Sandbox] | Nombre de la plataforma [sandbox](../../../../sandboxes/home.md) que contiene la conexión de flujo continuo necesaria y los conjuntos de datos para configurar el conjunto de datos. |
+| [!UICONTROL Entorno de pruebas] | Nombre de la plataforma [sandbox](../../../../sandboxes/home.md) que contiene la conexión de flujo continuo necesaria y los conjuntos de datos para configurar el conjunto de datos. |
 | [!UICONTROL Entrada de flujo continuo] | Conexión de flujo continuo válida para el Experience Platform. Consulte el tutorial sobre la [creación de una conexión de flujo continuo](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
 | [!UICONTROL Conjunto de datos del evento] | Conjunto de datos [!DNL XDM ExperienceEvent] que planea usar para enviar datos de evento a mediante el SDK. Aunque es necesario que proporcione un conjunto de datos de evento para crear un conjunto de datos de Platform, tenga en cuenta que actualmente no se admite el envío de datos de consentimiento directamente a través de eventos. |
 | [!UICONTROL Conjunto de datos de perfil] | El conjunto de datos habilitado para [!DNL Profile] con campos de consentimiento del cliente que creó anteriormente. |
@@ -44,7 +53,7 @@ Después de crear una configuración nueva o de seleccionar una existente para e
 Cuando termine, seleccione **[!UICONTROL Save]** en la parte inferior de la pantalla y continúe siguiendo las indicaciones adicionales para completar la configuración.
 
 
-## Instalación y configuración de la extensión web SDK de Platform
+## Instalación y configuración del SDK web de Platform
 
 Una vez creado un conjunto de datos como se describe en la sección anterior, debe configurar la extensión del SDK web de plataforma que implementará en su sitio. Si no tiene la extensión SDK instalada en la propiedad de Platform launch, seleccione **[!UICONTROL Extensions]** en el panel de navegación izquierdo, seguido de la pestaña **[!UICONTROL Catalog]**. A continuación, seleccione **[!UICONTROL Install]** en la extensión del SDK de plataforma dentro de la lista de extensiones disponibles.
 
@@ -86,7 +95,7 @@ Una vez creado el elemento de datos, vuelva a la página de configuración de la
 
 Una vez que haya terminado de configurar la extensión, esta se puede integrar en el sitio web. Consulte la [guía de publicación](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) en la documentación de Platform launch para obtener información detallada sobre cómo implementar la compilación de biblioteca actualizada.
 
-## Creación de comandos de cambio de consentimiento
+## Creación de comandos de cambio de consentimiento {#commands}
 
 Una vez que haya integrado la extensión de SDK en su sitio web, puede empezar a utilizar el comando Platform Web SDK `setConsent` para enviar datos de consentimiento a Platform.
 
@@ -96,8 +105,7 @@ Hay dos escenarios en los que se debe llamar a `setConsent` en el sitio:
 1. Como parte de un enlace CMP o un detector de eventos que detecta cambios en la configuración del consentimiento
 
 >[!NOTE]
->
->Para obtener una introducción a la sintaxis común de los comandos del SDK de Platform, consulte el documento sobre [ejecución de comandos](../../../../edge/fundamentals/executing-commands.md).
+Para obtener una introducción a la sintaxis común de los comandos del SDK de Platform, consulte el documento sobre [ejecución de comandos](../../../../edge/fundamentals/executing-commands.md).
 
 El comando `setConsent` espera dos argumentos:
 
@@ -138,8 +146,7 @@ alloy("setConsent", {
 | `value` | La información de consentimiento actualizada del cliente, proporcionada como un objeto XDM que se ajusta a la estructura de los campos de consentimiento del conjunto de datos con perfil habilitado. |
 
 >[!NOTE]
->
->Si está utilizando otros estándares de consentimiento junto con `Adobe` (como `IAB TCF`), puede agregar objetos adicionales a la matriz `consent` para cada estándar. Cada objeto debe contener valores adecuados para `standard`, `version` y `value` para el estándar de consentimiento que representan.
+Si está utilizando otros estándares de consentimiento junto con `Adobe` (como `IAB TCF`), puede agregar objetos adicionales a la matriz `consent` para cada estándar. Cada objeto debe contener valores adecuados para `standard`, `version` y `value` para el estándar de consentimiento que representan.
 
 El siguiente JavaScript proporciona un ejemplo de una función que gestiona los cambios de preferencias de consentimiento en un sitio web, que puede utilizarse como una rellamada en un detector de eventos o un vínculo CMP:
 
