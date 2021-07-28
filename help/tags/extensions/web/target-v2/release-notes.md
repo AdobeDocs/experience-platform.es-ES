@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de la extensión Adobe Target v2
 description: Últimas notas de la versión de la extensión de etiqueta Adobe Target v2 en Adobe Experience Platform.
-source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 62%
@@ -12,7 +12,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 ## 20 de julio de 2021
 
@@ -28,7 +28,7 @@ ht-degree: 62%
 - Los tokens de respuesta ya están disponibles al utilizar `triggerView()`
 - Se ha corregido un error relacionado con el evento `CONTENT_RENDERING_NO_OFFERS` . Ahora se activa correctamente cuando no hay contenido devuelto desde Target
 - Los detalles de las métricas de clics de A4T se devuelven correctamente al usar solicitudes de recuperación previa
-- La generación UUID ya no utiliza `Math.random()`, sino que se basa en `window.crypto`
+- La generación UUID ya no utiliza `Math.random()`, sino que depende de `window.crypto`
 - `sessionId` la caducidad de la cookie se amplía correctamente en cada llamada de red
 - SPA inicialización de la caché de vista ahora se gestiona correctamente y respeta la configuración `viewsEnable`
 
@@ -36,7 +36,7 @@ ht-degree: 62%
 
 ### Extensión 0.14.2 de la versión 2.0 de Adobe Target
 
-- Se ha corregido un error por el que el paquete de Launch final contenía dos versiones de at.js, una con la opción de decisión en el dispositivo y otra sin ella.
+- Se ha corregido un error por el que el paquete final contenía dos versiones de at.js, una con la opción de decisión en el dispositivo y otra sin ella.
 
 ## 19 de mayo de 2021
 
