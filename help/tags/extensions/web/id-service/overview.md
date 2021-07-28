@@ -1,10 +1,10 @@
 ---
 title: Información general sobre la extensión de Adobe Experience Cloud Identity Service
 description: Obtenga información sobre la extensión de etiqueta del servicio de identidad de Adobe Experience Cloud en Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 96%
+source-wordcount: '797'
+ht-degree: 94%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta referencia para obtener información acerca de cómo configurar la extensión del Adobe Experience Cloud ID y las opciones disponibles al utilizar esta extensión para generar una regla.
 
