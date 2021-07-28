@@ -1,10 +1,10 @@
 ---
 title: Información general de la extensión Common Analytics
 description: Obtenga información sobre la extensión de etiqueta de Analytics comunes en Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 70%
+source-wordcount: '549'
+ht-degree: 66%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta referencia para obtener información sobre cómo configurar la extensión de complementos de Analytics comunes y las opciones disponibles al utilizar esta extensión para aumentar la extensión de [!DNL Adobe Analytics].
 
