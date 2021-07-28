@@ -1,10 +1,10 @@
 ---
 title: Conceder acceso al usuario
 description: Configure las cuentas de usuario y los permisos de las etiquetas de los integrantes del equipo en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 25%
+source-wordcount: '738'
+ht-degree: 22%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Antes de comenzar a usar su extension_package, debe configurar los integrantes de su equipo con cuentas y permisos de usuario.  Esto se hace en [Adobe Admin Console](https://adminconsole.adobe.com/).
 
@@ -39,7 +39,7 @@ Algunos de ustedes pueden tener acceso a más de una organización (organizació
 
 Un perfil de producto es un grupo. Los derechos individuales se asignan a los perfiles de producto para que los usuarios del perfil hereden estos derechos.
 
-Elija el enlace **[!UICONTROL Products]** en la parte superior y **[!UICONTROL Experience Cloud]** en la parte izquierda. Si no incluye Adobe Experience Platform Launch en la lista, los clientes deben ponerse en contacto con el equipo de su cuenta y los socios deben enviar un correo electrónico a <ExchangeTechEC@adobe.com>.
+Elija el enlace **[!UICONTROL Products]** en la parte superior y **[!UICONTROL Experience Cloud]** en la parte izquierda. Si no aparece la interfaz de usuario de recopilación de datos en la lista, los clientes deben ponerse en contacto con el equipo de su cuenta y los socios deben enviar un correo electrónico <ExchangeTechEC@adobe.com>.
 
 ![Ficha Productos de Admin Console](../images/getting-started/admin-console-products-launch.png)
 
