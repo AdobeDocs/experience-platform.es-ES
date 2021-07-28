@@ -1,10 +1,10 @@
 ---
 title: Módulos compartidos en extensiones web
 description: Obtenga información sobre cómo definir módulos de biblioteca compartidos para extensiones web en Adobe Experience Platform.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 72%
+source-wordcount: '272'
+ht-degree: 65%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Un módulo compartido es un mecanismo mediante el cual puede comunicarse con otras extensiones. Por ejemplo, la extensión A puede cargar un fragmento de datos asincrónicamente y ponerlo a disposición de la extensión B mediante una [promesa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
