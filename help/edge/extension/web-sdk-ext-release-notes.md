@@ -1,18 +1,17 @@
 ---
 title: Notas de la versión de la extensión del SDK web de Adobe Experience Platform
-description: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
-seo-description: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
+description: Extensión de etiquetas de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1096'
-ht-degree: 56%
+source-wordcount: '1071'
+ht-degree: 52%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Web SDK
 
-Este documento cubre las notas de la versión de la extensión web SDK de Adobe Experience Platform para Adobe Experience Platform Launch. Para ver las notas de la última versión del SDK, consulte las [Notas de la versión del SDK web de Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+Este documento cubre las notas de la versión de la extensión de etiqueta del SDK web de Adobe Experience Platform. Para ver las notas de la última versión del SDK, consulte las [Notas de la versión del SDK web de Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## Versión 2.6.0: 27 de julio de 2021
 
@@ -103,14 +102,14 @@ Estas decisiones se arrojan desde el comando `sendEvent` solo si `renderDecision
 * La solicitud realizada durante la migración de ID se envía al extremo demdex para mejorar la identificación entre dominios cuando no se define la cookie demdex
 * La solicitud realizada durante la migración de ID siempre espera una respuesta para confirmar que se definió la cookie de identidad
 * Al ejecutar un comando no válido, se registrará una lista de nombres de comando válidos en la consola
-* Se ha añadido la casilla de verificación para alternar la compatibilidad con cookies de terceros con la extensión Adobe Experience Platform Launch. Esto deshabilita las llamadas a demdex.net
+* Se ha añadido la casilla de verificación para alternar la compatibilidad con cookies de terceros con la extensión de etiquetas. Esto deshabilita las llamadas a demdex.net
 
 ## Versión 0.0.5: 20 de diciembre de 2019
 
-* Agregar configuraciones del Rastreador de actividades a la extensión de Platform Launch
+* Agregar configuraciones del Rastreador de actividades a la extensión de etiquetas
 * Exponer EventType y EventMergeId en el comando de eventos
-* Agregar la configuración onBeforeEventSend a la extensión de Platform Launch
-* Agregar la configuración edgeBasePath a la extensión de Platform Launch
+* Agregar la configuración onBeforeEventSend a la extensión de etiquetas
+* Agregar la configuración edgeBasePath a la extensión de etiquetas
 
 ## Versión 0.0.3: 25 de noviembre de 2019
 
