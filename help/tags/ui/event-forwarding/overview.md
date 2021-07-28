@@ -1,10 +1,10 @@
 ---
 title: Información general sobre el reenvío de eventos
 description: Obtenga información sobre el reenvío de eventos en Adobe Experience Platform, que le permite utilizar la red perimetral de plataforma para ejecutar tareas sin cambiar la implementación de etiquetas.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 42%
+source-wordcount: '547'
+ht-degree: 39%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 El reenvío de eventos en Adobe Experience Platform disminuye el peso de la página web y la aplicación al utilizar la red perimetral de Adobe Experience Platform para ejecutar tareas normalmente realizadas en el cliente. Las reglas de reenvío de eventos pueden transformar y enviar datos a nuevos destinos sin cambiar las implementaciones del lado del cliente.
 
