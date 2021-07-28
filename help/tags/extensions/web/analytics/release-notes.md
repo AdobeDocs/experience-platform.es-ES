@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de la extensión de Adobe Analytics
 description: Últimas notas de la versión de la extensión de etiqueta Adobe Analytics en Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1220'
-ht-degree: 95%
+source-wordcount: '1221'
+ht-degree: 94%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 ## 6 de agosto de 2020
 
