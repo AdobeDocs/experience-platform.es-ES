@@ -4,9 +4,9 @@ user-guide-title: Ayuda de etiquetas
 breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Recopilación de datos
-source-git-commit: 5da1fd18e0032c5e3d6695639f98a7ee683819f1
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '378'
 ht-degree: 79%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 79%
 * Primeros pasos {#get-started}
    * [Guía de inicio rápido](./quick-start/quick-start.md)
    * [Guías de implementación](./quick-start/implementation-guides.md)
-   * [Vídeos](./quick-start/videos.md)
 * Interfaz de usuario de recopilación de datos {#ui}
    * [Información general](./ui/managing-resources/overview.md)
    * Extensiones {#extensions}
