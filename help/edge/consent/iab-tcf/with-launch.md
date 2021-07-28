@@ -1,24 +1,23 @@
 ---
-title: Integración de la compatibilidad con IAB TCF 2.0 mediante Platform launch y la extensión del SDK web de la plataforma
-description: Obtenga información sobre cómo configurar el consentimiento IAB TCF 2.0 con Adobe Experience Platform Launch y la extensión web SDK de Adobe Experience Platform.
+title: Integración de la compatibilidad con IAB TCF 2.0 mediante etiquetas y la extensión del SDK web de la plataforma
+description: Obtenga información sobre cómo configurar el consentimiento IAB TCF 2.0 con etiquetas y la extensión Adobe Experience Platform Web SDK.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
 
-# Integración de la compatibilidad con IAB TCF 2.0 mediante Platform launch y la extensión del SDK web de la plataforma
+# Integración de la compatibilidad con IAB TCF 2.0 mediante etiquetas y la extensión de Platform Web SDK
 
-El SDK web de Adobe Experience Platform es compatible con el marco de transparencia y consentimiento de la agencia de publicidad interactiva, versión 2.0 (IAB TCF 2.0). Esta guía le muestra cómo configurar una propiedad de Adobe Experience Platform Launch para enviar información de consentimiento TCF de IAB 2.0 a Adobe mediante la extensión web SDK de Adobe Experience Platform para Experience Platform Launch.
+El SDK web de Adobe Experience Platform es compatible con el marco de transparencia y consentimiento de la agencia de publicidad interactiva, versión 2.0 (IAB TCF 2.0). Esta guía le muestra cómo configurar una propiedad tag para enviar información de consentimiento TCF de IAB 2.0 a Adobe mediante la extensión de etiqueta SDK web de Adobe Experience Platform.
 
-Si no desea utilizar Experience Platform Launch, consulte la guía sobre el [uso de IAB TCF 2.0 sin Experience Platform Launch](./without-launch.md).
+Si no desea utilizar etiquetas, consulte la guía sobre el uso de [IAB TCF 2.0 sin etiquetas](./without-launch.md).
 
 ## Primeros pasos
 
-Para utilizar IAB TCF 2.0 con Experience Platform Launch y la extensión del SDK web de plataforma, debe tener disponible un esquema XDM y un conjunto de datos.
+Para utilizar IAB TCF 2.0 con etiquetas y la extensión Platform Web SDK, debe tener disponible un esquema XDM y un conjunto de datos.
 
 Además, esta guía requiere que conozca bien el SDK web de Adobe Experience Platform. Para obtener una actualización rápida, lea la [información general del SDK web de Adobe Experience Platform](../../home.md) y la documentación de las [preguntas más frecuentes](../../web-sdk-faq.md).
 
@@ -30,7 +29,7 @@ Para obtener más información sobre cómo configurar el consentimiento predeter
 
 ## Actualización del perfil con información de consentimiento {#consent-code-1}
 
-Para llamar a la acción `setConsent` cuando las preferencias de consentimiento de los clientes hayan cambiado, debe crear una nueva regla de Experience Platform Launch. Comience agregando un nuevo evento y elija el tipo de evento &quot;Custom Code&quot; de la extensión principal.
+Para llamar a la acción `setConsent` cuando las preferencias de consentimiento de los clientes hayan cambiado, debe crear una nueva regla de etiqueta. Comience agregando un nuevo evento y elija el tipo de evento &quot;Custom Code&quot; de la extensión principal.
 
 Utilice el siguiente ejemplo de código para el nuevo evento:
 
@@ -75,11 +74,11 @@ Este código personalizado hace dos cosas:
 
 La cadena de consentimiento debe incluirse en el evento de experiencia XDM. Para ello, utilice el elemento de datos Objeto XDM . Comience creando un nuevo elemento de datos de objeto XDM o, alternativamente, utilice uno que ya haya creado para enviar eventos. Si ha añadido el grupo de campos del esquema de privacidad de eventos de experiencia al esquema, debe tener una clave `consentStrings` en el objeto XDM.
 
-1. Seleccione **[!UICONTROL consentStrings]**.
+1. Seleccione **[!UICONTROL permissionStrings]**.
 
-1. Elija **[!UICONTROL Provide individual items]** y seleccione **[!UICONTROL Add Item]**.
+1. Elija **[!UICONTROL Proporcionar elementos individuales]** y seleccione **[!UICONTROL Agregar elemento]**.
 
-1. Expanda el encabezado **[!UICONTROL consentString]**, expanda el primer elemento y, a continuación, rellene los valores siguientes:
+1. Expanda el encabezado **[!UICONTROL permissionString]** y expanda el primer elemento y, a continuación, rellene los valores siguientes:
 
 * `consentStandard`: TCF de IAB
 * `consentStandardVersion`: 2,0
