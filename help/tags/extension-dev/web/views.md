@@ -1,9 +1,9 @@
 ---
 title: Vistas en extensiones web
 description: 'Obtenga información sobre cómo definir vistas para módulos de biblioteca en las extensiones web de Adobe Experience Platform '
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2063'
 ht-degree: 77%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Cada tipo de evento, condición, acción o elemento de datos puede proporcionar una vista que permita al usuario proporcionar la configuración. La extensión también puede tener una [vista de configuración de extensión](../configuration.md) de nivel superior que permita a los usuarios proporcionar la configuración global de toda la extensión. El proceso de creación de una vista es idéntico en todos los tipos de vistas.
 
