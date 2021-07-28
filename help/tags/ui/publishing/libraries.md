@@ -1,10 +1,10 @@
 ---
 title: Bibliotecas
 description: Obtenga información sobre el concepto de bibliotecas de etiquetas y cómo funcionan dentro de Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 78%
+source-wordcount: '791'
+ht-degree: 76%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Una biblioteca es un conjunto de instrucciones que establece la interacción entre las extensiones, los elementos de datos y las reglas una vez que se han implementado. Al crear una biblioteca, debe especificar los cambios que desea realizar en la biblioteca. En la fase de compilación, estos cambios se combinan con todo lo que se ha enviado, aprobado o publicado en bibliotecas anteriores.
 
