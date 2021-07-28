@@ -5,9 +5,9 @@ title: Información general sobre la recopilación de datos
 topic-legacy: overview
 description: Obtenga información sobre las distintas tecnologías que intervienen en la recopilación de datos sobre las experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '304'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,8 @@ La recopilación de datos es compatible con las siguientes fuentes del lado del 
 Las tecnologías de recopilación de datos proporcionadas por el Experience Platform se centran en la capacidad de detección y accesibilidad de los conjuntos de datos ingestados. Estas tecnologías comprenden lo siguiente:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [Etiquetas](../tags/home.md)
+* [Reenvío de eventos](../tags/ui/event-forwarding/overview.md)
 * [SDK web de Adobe Experience Platform](../edge/home.md)
 * [Modelo de datos de experiencia (XDM)](../xdm/home.md)
 
@@ -37,7 +38,7 @@ Los SDK web y móviles de Adobe Experience Platform contraen y comprimen todas l
 
 ## Proceso de conmutación para implementar la tecnología de Adobe
 
-Platform Edge Network es una red global de servidores distribuidos, rápidos y confiables que pueden recibir y procesar datos a una escala tremenda. Con Platform launch, puede configurar [datastreams](../edge/fundamentals/datastreams.md) para productos como Adobe Target, Adobe Audience Manager y Adobe Analytics, que le permiten activar estos productos en el servidor sin cambiar el código del lado del cliente.
+Platform Edge Network es una red global de servidores distribuidos, rápidos y confiables que pueden recibir y procesar datos a una escala tremenda. Con las etiquetas, puede configurar [datastreams](../edge/fundamentals/datastreams.md) para productos como Adobe Target, Adobe Audience Manager y Adobe Analytics, que le permiten activar estos productos en el servidor sin cambiar el código del lado del cliente.
 
 ![](./images/deploy.png)
 
