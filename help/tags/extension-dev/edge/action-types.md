@@ -1,10 +1,10 @@
 ---
 title: Tipos de acción para extensiones de Edge
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de acción para una extensión de etiqueta en una propiedad edge.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 45%
+source-wordcount: '382'
+ht-degree: 41%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En una regla de etiqueta, una acción es algo que se realiza después de que las condiciones de la regla hayan pasado la evaluación. Los tipos de acción los proporcionan las extensiones y el autor de la extensión los define por completo.
 
