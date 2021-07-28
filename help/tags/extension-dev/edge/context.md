@@ -1,10 +1,10 @@
 ---
 title: Módulos de extensión de Edge en contexto
 description: Obtenga información sobre el objeto de contexto y la función que desempeña en la interacción con los módulos de biblioteca en las extensiones de etiqueta de las propiedades edge.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 84%
+source-wordcount: '747'
+ht-degree: 82%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+> Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Todos los módulos de biblioteca de las extensiones de Edge reciben un objeto `context` cuando se ejecutan. Este documento describe las propiedades que proporciona el objeto `context` y la función que desempeñan en los módulos de biblioteca.
 
