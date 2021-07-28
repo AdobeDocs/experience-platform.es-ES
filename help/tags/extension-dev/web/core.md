@@ -1,10 +1,10 @@
 ---
 title: Módulos de biblioteca principales para extensiones web
 description: Obtenga información sobre los módulos de biblioteca principales que puede utilizar en las extensiones web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 92%
+source-wordcount: '350'
+ht-degree: 87%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Este documento proporciona una lista de los módulos de biblioteca principales que puede utilizar en sus extensiones web. Puede acceder a estos módulos mediante el comando `require('@adobe/{MODULE}')`, donde `{MODULE}` corresponde al nombre del módulo principal que desea utilizar.
 
