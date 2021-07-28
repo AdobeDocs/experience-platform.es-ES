@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de la extensión Adobe Experience Cloud Identity Service
 description: Últimas notas de la versión de la extensión de etiqueta del servicio de Adobe Experience Cloud ID en Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 86%
+source-wordcount: '521'
+ht-degree: 83%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Para obtener las notas de la versión del propio servicio de ID de Experience Cloud y no solo de la extensión de etiquetas de Adobe Experience Platform, consulte: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es)
 
