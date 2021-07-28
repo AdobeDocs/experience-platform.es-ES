@@ -1,10 +1,10 @@
 ---
 title: Prueba de códigos incrustados con Adobe Experience Platform Debugger
 description: Aprenda a utilizar Platform Debugger para probar localmente los distintos códigos incrustados para Adobe Experience Platform en el sitio web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 85%
+source-wordcount: '516'
+ht-degree: 82%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 A medida que realice cambios en las compilaciones de la biblioteca de etiquetas en Adobe Experience Platform, debe probar estos cambios antes de implementar la compilación en el entorno de producción. Si no tiene un entorno de ensayo o desarrollo dedicado para su sitio web, puede utilizar Adobe Experience Platform Debugger para probar localmente los distintos códigos incrustados del sitio.
 
