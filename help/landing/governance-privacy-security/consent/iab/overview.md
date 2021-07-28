@@ -5,9 +5,9 @@ title: Compatibilidad con IAB TCF 2.0 en Experience Platform
 topic-legacy: privacy events
 description: Aprenda a configurar sus operaciones de datos y esquemas para transmitir las opciones de consentimiento del cliente al activar segmentos en destinos en Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2559'
+source-wordcount: '2563'
 ht-degree: 1%
 
 ---
@@ -119,13 +119,13 @@ Una vez configurado el CMP para generar cadenas de consentimiento, debe integrar
 
 ### Crear un nuevo conjunto de datos
 
-Para que el SDK envíe datos al Experience Platform, primero debe crear un nuevo conjunto de datos para Platform en [!DNL Adobe Experience Platform Launch]. Se proporcionan pasos específicos para crear una nueva configuración en la [documentación del SDK](../../../../edge/fundamentals/datastreams.md).
+Para que el SDK envíe datos a Experience Platform, primero debe crear un nuevo conjunto de datos para Platform en la interfaz de usuario de recopilación de datos. En la [documentación del SDK](../../../../edge/fundamentals/datastreams.md) se proporcionan pasos específicos para crear un nuevo conjunto de datos.
 
-Después de proporcionar un nombre único para la configuración, seleccione el botón de alternancia situado junto a **[!UICONTROL Adobe Experience Platform]**. A continuación, utilice los siguientes valores para completar el resto del formulario:
+Después de proporcionar un nombre único para el conjunto de datos, seleccione el botón de alternancia situado junto a **[!UICONTROL Adobe Experience Platform]**. A continuación, utilice los siguientes valores para completar el resto del formulario:
 
 | Campo Datastream | Valor |
 | --- | --- |
-| [!UICONTROL Sandbox] | Nombre de la plataforma [sandbox](../../../../sandboxes/home.md) que contiene la conexión de flujo continuo necesaria y los conjuntos de datos para configurar el conjunto de datos. |
+| [!UICONTROL Entorno de pruebas] | Nombre de la plataforma [sandbox](../../../../sandboxes/home.md) que contiene la conexión de flujo continuo necesaria y los conjuntos de datos para configurar el conjunto de datos. |
 | [!UICONTROL Entrada de flujo continuo] | Conexión de flujo continuo válida para el Experience Platform. Consulte el tutorial sobre la [creación de una conexión de flujo continuo](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
 | [!UICONTROL Conjunto de datos del evento] | Seleccione el conjunto de datos [!DNL XDM ExperienceEvent] creado en el [paso anterior](#datasets). Si ha incluido el grupo de campos [[!UICONTROL IAB TCF 2.0 Consent]](../../../../xdm/field-groups/event/iab.md) en el esquema de este conjunto de datos, puede rastrear eventos de cambio de consentimiento a lo largo del tiempo mediante el comando [`sendEvent`](#sendEvent), almacenando esos datos en este conjunto de datos. Tenga en cuenta que los valores de consentimiento almacenados en este conjunto de datos **no** se utilizan en los flujos de trabajo de aplicación automática. |
 | [!UICONTROL Conjunto de datos de perfil] | Seleccione el conjunto de datos [!DNL XDM Individual Profile] creado en el [paso anterior](#datasets). Al responder a los enlaces de cambio de consentimiento de CMP mediante el comando [`setConsent`](#setConsent), los datos recopilados se almacenan en este conjunto de datos. Dado que este conjunto de datos tiene habilitado Perfil, los valores de consentimiento almacenados en este conjunto de datos se respetan durante los flujos de trabajo de aplicación automática. |
