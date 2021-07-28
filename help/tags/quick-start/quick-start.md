@@ -1,10 +1,10 @@
 ---
 title: Guía de inicio rápido
 description: Obtenga información sobre cómo empezar a trabajar rápidamente con las etiquetas en Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 44%
+source-wordcount: '1532'
+ht-degree: 42%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las etiquetas son la nueva generación de tecnología de administración de etiquetas de Adobe Experience Platform. Se ha creado desde cero para admitir un ecosistema abierto y sostenible en el que cualquier persona puede crear sus propias integraciones que los clientes de Adobe pueden implementar en sus sitios. Es una aplicación API First, por lo que todo lo que se puede hacer a través de la IU también se puede hacer mediante una API.
 
@@ -26,8 +26,6 @@ Flujo de trabajo de etiquetas básicas:
 6. Realizar pruebas en el entorno de desarrollo.
 7. Enviar a producción.
 
-Para ver un vídeo introductorio, consulte la documentación de [vídeos introductorios](videos.md).
-
 ## 1. Configurar grupos y usuarios
 
 Las etiquetas están totalmente integradas con su Adobe ID. Los permisos de usuario se administran mediante el Admin Console con otros productos y soluciones de Adobe de [!DNL Creative Cloud], [!DNL Document Cloud] y el Experience Cloud.
@@ -38,7 +36,7 @@ Para obtener instrucciones detalladas sobre cómo crear grupos y agregar usuario
 
 ## 2. Iniciar sesión
 
-Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario de la recopilación de datos. Para ello, vaya directamente a la [pantalla de inicio de sesión del Experience Cloud](https://experiencecloud.adobe.com) y seleccione **[!UICONTROL Iniciar / Recopilación de datos]** en la pestaña Acceso rápido.
+Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario de la recopilación de datos. Para ello, vaya directamente a la [pantalla de inicio de sesión del Experience Cloud](https://experiencecloud.adobe.com) y seleccione la IU de recopilación de datos en la pestaña Acceso rápido .
 
 >[!NOTE]
 >
@@ -56,7 +54,7 @@ Una extensión es una integración creada por Adobe o un socio de Adobe que aña
 
 Todas las propiedades nuevas llevan instalada la [Extensión principal](../extensions/web/core/overview.md). Las propiedades móviles incluyen extensiones adicionales. La Extensión principal se crea mediante Adobe para proporcionar un conjunto de elementos de datos sólido y robusto para sus reglas de datos y tipos de eventos para sus reglas. La mayoría de las acciones que puede querer realizar (obtener un ECID, enviar señalizaciones [!DNL Adobe Analytics], cargar el mbox global de [!DNL Target], etc.) provienen de las extensiones que se instalan del catálogo.
 
-Lo que hace que las etiquetas en Platform sean verdaderamente únicas es que cualquier persona puede crear estas extensiones. ¿Necesita soltar un píxel de remarketing de Facebook en el sitio? Compruebe la extensión desarrollada por Facebook. ¿Desea lo mismo para Twitter o Linked In? Use esas extensiones. ¿Necesita llevar a cabo una encuesta? Consulte Question Pro o Foresee. ¿Necesita administrar la privacidad y el consentimiento de los usuarios finales para ayudarles con [!DNL GDPR]? Eche un vistazo a Evidon y Trust Arc. ¿Desea ver una perspectiva granular del comportamiento de los usuarios individuales en el sitio? Puede probar con Clicktale. Para obtener más información, consulte [Añadir una nueva extensión](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Lo que hace que las etiquetas en Platform sean verdaderamente únicas es que cualquier persona puede crear estas extensiones. ¿Necesita soltar un píxel de remarketing de Facebook en el sitio? Compruebe la extensión desarrollada por Facebook. ¿Desea lo mismo para Twitter o Linked In? Use esas extensiones. ¿Necesita llevar a cabo una encuesta? Consulte Question Pro o Foresee. ¿Necesita administrar la privacidad y el consentimiento de los usuarios finales para ayudarles con [!DNL GDPR]? Eche un vistazo a Evidon y Trust Arc. ¿Desea ver una perspectiva granular del comportamiento de los usuarios individuales en el sitio? Puede probar con Clicktale. Para obtener más información, consulte la sección [adición de una nueva extensión](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Crear elementos de datos y reglas
 
