@@ -1,10 +1,10 @@
 ---
 title: Crear un listado de intercambio para una extensión
 description: Obtenga información sobre cómo añadir la extensión al catálogo público en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 63%
+ht-degree: 59%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Adobe Experience Platform tiene un único catálogo unificado en el que los usuarios pueden ver las extensiones de etiquetas que están disponibles para la instalación. Este catálogo está disponible dentro del producto y contiene extensiones de tres tipos:
 
@@ -44,7 +44,6 @@ Si ya tiene una cuenta de empresa o si no tiene previsto completar la lista, pue
    >[!NOTE]
    >
    >Este formato de archivo es diferente al que se utiliza en el código de extensión. La extensión contendrá un archivo svg como [icono](../manifest.md).
-   
    - **Imagen destacada** : obtenga atención con una imagen que puede ser independiente y mostrará su marca y resaltará su aplicación. La imagen destacada es la que se muestra cuando alguien comparte un vínculo a su lista de Exchange o publica sobre ella en medios sociales. Por lo tanto, debe ser una representación modelo de su marca.
    - **Logotipo del editor de la aplicación**: se trata del logotipo de su empresa. Asegúrese de que el icono tenga las dimensiones adecuadas de 1280 x 720 o de 2560 x 1440 (16:9) en formato png o jpg, respectivamente.
    - **Instrucciones de configuración** : Informe a los clientes sobre cómo configurar la extensión de Adobe Experience Platform. Asegúrese de que comprendan la configuración que deben realizar, así como los pasos siguientes que deben seguir cuando la [vista de la configuración](../configuration.md) aparezca inmediatamente después de instalar la extensión en una propiedad. 
@@ -69,4 +68,4 @@ Cuando actualice la extensión o solo necesite actualizar el listado de Exchange
 
 ## Vinculación del paquete de extensión al listado
 
-Una vez aprobado el listado y disponible públicamente, le recomendamos que proporcione un enlace al listado público en el campo `exchange_url` del archivo `extension.json` dentro del paquete de extensión.  Esto creará un vínculo de Más información dentro del catálogo de extensiones de Platform Launch para que los usuarios dentro del producto puedan encontrar el listado y su información adicional.
+Una vez aprobado el listado y disponible públicamente, le recomendamos que proporcione un enlace al listado público en el campo `exchange_url` del archivo `extension.json` dentro del paquete de extensión.  Esto creará un vínculo &quot;Más información&quot; dentro del catálogo de extensiones de etiqueta para que los usuarios dentro del producto puedan encontrar su lista y su información adicional.
