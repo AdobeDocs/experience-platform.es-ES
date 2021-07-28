@@ -1,10 +1,10 @@
 ---
 title: Información general sobre alojamientos administrados por Adobe
 description: Obtenga información sobre la opción de alojamiento predeterminada para implementar compilaciones de biblioteca de etiquetas en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 66%
+source-wordcount: '1175'
+ht-degree: 65%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Los hosts administrados por Adobe son la configuración de host predeterminada para implementar las compilaciones de su biblioteca de etiquetas en Adobe Experience Platform. Al crear una nueva propiedad a través de la interfaz de usuario de recopilación de datos, se crea un host predeterminado administrado por Adobe.
 
@@ -89,7 +89,7 @@ Los encabezados de control de caché solo se aplican a la compilación de la bib
 
 ## Uso del alojamiento administrado por Adobe en la interfaz de usuario de la recopilación de datos
 
-La primera vez que se crea una propiedad en la [interfaz de usuario de recopilación de datos](http://launch.adobe.com/es), se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
+La primera vez que se crea una propiedad en la [interfaz de usuario de recopilación de datos](https://experience.adobe.com/#/data-collection/), se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
 
 >[!NOTE]
 >
