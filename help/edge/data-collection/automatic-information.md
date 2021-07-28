@@ -3,9 +3,9 @@ title: Información recopilada automáticamente en el SDK web de Adobe Experienc
 description: Información general sobre cada parte de información que el SDK de Adobe Experience Platform recopila automáticamente.
 keywords: recopilar información;contexto;configurar;dispositivo;screenHeight;altura de pantalla;orientación de pantalla;orientación de pantalla;ancho de pantalla;entorno;altura de ventanilla;altura de ventanilla;anchura de ventanilla;anchura de ventanilla;detalles del navegador;detalles de implementación;detalles de implementación;nombre;versión;contexto;hora local;hora local;zona horaria local;desplazamiento de zona horaria local;desplazamiento de zona horaria local marca de tiempo;web;url;webPageDetails;detalles de página web;webReferrer;web Referrer;horizontal;vertical;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '511'
 ht-degree: 6%
 
 ---
@@ -30,7 +30,7 @@ Altura de la pantalla (en píxeles).
 
 | **Ruta en carga útil:** | **Valores posibles:** |
 | --------------------------------------- | ------------------------- |
-| `events[].xdm.device.screenOrientation` | `landscape` O bien `portrait` |
+| `events[].xdm.device.screenOrientation` | `landscape` o `portrait` |
 
 La orientación de la pantalla.
 
@@ -82,7 +82,7 @@ Información sobre el SDK utilizado para recopilar el evento.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-El identificador del kit de desarrollo de software (SDK).  Este campo utiliza una URI para mejorar la exclusividad entre los identificadores proporcionados por diferentes bibliotecas de software. Cuando se utiliza la biblioteca independiente, el valor es `https://ns.adobe.com/experience/alloy`. Cuando la biblioteca se utiliza como parte de la extensión de Platform launch, el valor es `https://ns.adobe.com/experience/alloy+reactor`.
+El identificador del kit de desarrollo de software (SDK).  Este campo utiliza una URI para mejorar la exclusividad entre los identificadores proporcionados por diferentes bibliotecas de software. Cuando se utiliza la biblioteca independiente, el valor es `https://ns.adobe.com/experience/alloy`. Cuando la biblioteca se utiliza como parte de la extensión de etiquetas, el valor es `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Versión
 
@@ -90,7 +90,7 @@ El identificador del kit de desarrollo de software (SDK).  Este campo utiliza un
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-Cuando se utiliza la biblioteca independiente, el valor es simplemente la versión de la biblioteca. Cuando la biblioteca se utiliza como parte de la extensión de Platform launch, esta es la versión de la biblioteca y la versión de la extensión de Platform launch unidas con &quot;+&quot;. Por ejemplo, si la versión de la biblioteca fuera 2.1.0 y la versión de la extensión de Platform launch fuera 2.1.3, el valor sería `2.1.0+2.1.3`.
+Cuando se utiliza la biblioteca independiente, el valor es simplemente la versión de la biblioteca. Cuando la biblioteca se utiliza como parte de la extensión de etiquetas, esta es la versión de la biblioteca y la versión de la extensión de etiqueta unida con &quot;+&quot;. Por ejemplo, si la versión de la biblioteca fuera 2.1.0 y la versión de la extensión de etiqueta fuera 2.1.3, el valor sería `2.1.0+2.1.3`.
 
 ### Entorno
 
