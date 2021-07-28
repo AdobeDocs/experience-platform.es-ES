@@ -1,10 +1,10 @@
 ---
 title: Implementar etiquetas de JavaScript para administrar el consentimiento del cliente
 description: Obtenga información sobre cómo administrar las señales de inclusión y exclusión de clientes para distintas soluciones de Adobe en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 87%
+source-wordcount: '651'
+ht-degree: 84%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 La combinación de la legislación del [Reglamento General de Protección de Datos (RGPD)](https://gdpr-info.eu/art-7-gdpr/) de la Unión Europea y [ePrivacy](https://medium.com/mydata/consent-lost-gdpr-and-found-eprivacy-e85cf881ffb) requiere que las compañías puedan gestionar el consentimiento de los usuarios. Es posible que los clientes de Adobe exijan a los visitantes que acepten su inclusión antes de que se ejecuten las soluciones de Adobe para un visitante determinado. Los visitantes deben tener la capacidad de gestionar su estado de inclusión y exclusión.
 
