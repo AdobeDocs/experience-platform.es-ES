@@ -1,46 +1,51 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión del Experience Platform para el 30 de junio de 2021.
+description: Notas de la versión del Experience Platform para el 28 de julio de 2021.
 doc-type: release notes
-last-update: June 30, 2021
+last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
+source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 6%
+source-wordcount: '387'
+ht-degree: 10%
 
 ---
 
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de publicación: 30 de junio de 2021**
+**Fecha de la versión: 28 de julio de 2021**
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Perfil del cliente en tiempo real](#profile)
-- [Entornos aislados](#sandboxes)
+- [Data Science Workspace](#dsw)
+- [Modelo de datos de experiencia (XDM)](#xdm)
 - [Fuentes](#sources)
 
-## Perfil del cliente en tiempo real {#profile}
+## Data Science Workspace {#dsw}
 
-Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de los clientes en una vista unificada, que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
+Data Science Workspace utiliza el aprendizaje automático y la inteligencia artificial para crear perspectivas a partir de sus datos. Integrado en Adobe Experience Platform, Data Science Workspace le ayuda a hacer predicciones utilizando sus recursos de contenido y datos en las soluciones de Adobe.
 
-| Función | Descripción |
-| ------- | ----------- |
-| Combinar actualizaciones del flujo de trabajo de directivas | Al crear y actualizar políticas de combinación en la interfaz de usuario, los usuarios ahora pueden obtener una vista previa de 20 perfiles de muestra basados en el esquema de unión. Esto permite a los usuarios obtener una vista previa del aspecto que tendrán los perfiles de cliente antes de guardar las configuraciones de directivas de combinación. Para obtener más información, consulte la [guía de interfaz de usuario de políticas de combinación](../../profile/merge-policies/ui-guide.md). |
-| Informe de superposición de identidad | El informe de superposición de identidad forma parte de la API del perfil del cliente en tiempo real y proporciona visibilidad sobre la composición del almacén de perfiles. Con el extremo `/previewsamplestatus` , el informe de superposición de identidad expone las identidades que más contribuyen a la audiencia a la que se puede dirigir. Para obtener más información, visite la [vista previa de la guía de extremo de la API de estado de muestra](../../profile/api/preview-sample-status.md). |
-
-Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos [!DNL Profile], lea en primer lugar la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
-
-## Entornos aislados {#sandboxes}
-
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. A menudo, las empresas ejecutan varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, asegurando al mismo tiempo el cumplimiento de las normas operacionales. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+**Nuevas funciones**
 
 | Función | Descripción |
-| ------- | ----------- |
-| Mejoras en el restablecimiento del entorno limitado de producción | Ahora puede restablecer los entornos limitados de producción que se utilizan para el uso compartido bidireccional de segmentos con Adobe Audience Manager o el servicio principal de audiencia. Esto se puede hacer desde la interfaz de usuario o utilizando los nuevos parámetros `validationOnly` y `ignoreWarnings` en la API. Para obtener más información, consulte los tutoriales sobre [cómo restablecer un simulador de pruebas en la interfaz de usuario](../../sandboxes/ui/user-guide.md) y [cómo restablecer un simulador de pruebas en la API](../../sandboxes/api/sandboxes.md). |
+| --- | --- |
+| Actualizaciones de biblioteca y sistema operativo | Data Science Workspace ha realizado actualizaciones importantes de la biblioteca y el sistema operativo para mejorar la funcionalidad y el uso. Esto incluye JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 con soporte para CUDA 11 y CUDNN 8, y más. Para aprender a ver las bibliotecas disponibles en JupyterLab, visite la sección [bibliotecas compatibles](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) en la documentación de información general de los blocs de notas de JupyterLab. |
+
+Para obtener información más general sobre Data Science Workspace, consulte [Información general sobre Data Science Workspace](../../data-science-workspace/home.md).
+
+## Modelo de datos de experiencia (XDM) {#xdm}
+
+Experience Data Model (XDM) es una especificación de código abierto diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para los datos en forma de esquemas, que permiten a cualquier aplicación comunicarse con los servicios de Platform.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Filtro del sector de las telecomunicaciones | Al agregar grupos de campos a un esquema en la interfaz de usuario, ahora puede filtrar por sector de telecomunicaciones. Consulte el [diagrama de relación de entidades del sector de las telecomunicaciones (ERD)](../../xdm/schema/industries/telecom.md) para ver un modelo de datos recomendado para casos de uso de telecomunicaciones. |
+
+Para obtener información más general sobre XDM en Platform, consulte [Información general del sistema XDM](../../xdm/home.md).
 
 ## Fuentes {#sources}
 
@@ -50,7 +55,7 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 
 | Función | Descripción |
 | ------- | ----------- |
-| [!DNL Veeva CRM] (Beta) | Ahora puede conectar [!DNL Veeva CRM] al Experience Platform mediante la API [!DNL Flow Service] o la interfaz de usuario. Consulte la [[!DNL Veeva CRM] descripción general del conector](../../sources/connectors/crm/veeva.md) para obtener más información. |
-| Compatibilidad con la monitorización de flujos de datos de flujo continuo | Ahora puede utilizar el espacio de trabajo de la IU de fuentes para supervisar las actividades de consumo de datos de fuentes de flujo continuo con las métricas y el estado correspondientes. Consulte el tutorial sobre [monitorización de flujos de datos de flujo continuo](../../sources/tutorials/ui/monitor-streaming.md) para obtener más información. |
+| Fuentes beta que se trasladan a GA | Se han promocionado las siguientes fuentes de beta a GA: <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
+| [!DNL Salesforce Marketing Cloud] (Beta) | Ahora puede conectar [!DNL Salesforce Marketing Cloud] al Experience Platform mediante la API [!DNL Flow Service] o la interfaz de usuario. Consulte la [[!DNL Salesforce Marketing Cloud] descripción general del conector](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md) para obtener más información. |
 
 Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
