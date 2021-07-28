@@ -1,10 +1,10 @@
 ---
 title: Estándar de compatibilidad con versiones anteriores
 description: Obtenga información sobre el estándar de compatibilidad con versiones anteriores en Adobe Experience Platform que garantiza que las versiones actualizadas de las extensiones de etiquetas sean compatibles con versiones anteriores.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 86%
+source-wordcount: '833'
+ht-degree: 84%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las actualizaciones de una extensión de etiqueta en Adobe Experience Platform deben ser compatibles con versiones anteriores de la extensión. Esto significa que:
 
