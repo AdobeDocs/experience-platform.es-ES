@@ -1,10 +1,10 @@
 ---
 title: Tipos de condición para extensiones de Edge
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo condición para una extensión de Edge en Adobe Experience Platform.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 57%
+source-wordcount: '408'
+ht-degree: 53%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+> Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En una regla de etiqueta, se evalúa una condición después de que se haya producido un evento. Todas las condiciones deben devolver el valor verdadero para que la regla pueda continuar el procesamiento. Las extensiones proporcionan los tipos de condición y evalúan si algo es verdadero o falso, lo que devuelve un valor booleano.
 
