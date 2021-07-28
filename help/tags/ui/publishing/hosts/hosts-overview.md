@@ -1,10 +1,10 @@
 ---
 title: Información general sobre alojamientos
 description: Obtenga información acerca de las distintas opciones de alojamiento disponibles en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 92%
+source-wordcount: '166'
+ht-degree: 81%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las extensiones, las reglas y los elementos de datos son componentes básicos. Cuando desee hacer que la aplicación haga algo, estos componentes se añaden a las bibliotecas y, después, una biblioteca se “crea” en una compilación. Estas compilaciones se envían a una ubicación alojada.
 
