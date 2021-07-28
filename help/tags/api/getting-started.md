@@ -1,9 +1,9 @@
 ---
 title: Introducción a la API de Reactor
 description: Obtenga información sobre cómo empezar a usar la API de Reactor, incluidos los pasos para generar las credenciales de acceso necesarias.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ La siguiente pantalla le solicita que seleccione uno o más perfiles de producto
 
 >[!NOTE]
 >
->Su organización gestiona los perfiles de producto a través de Adobe Admin Console y contienen conjuntos específicos de permisos para funciones granulares en Adobe Experience Platform Launch. Los perfiles de producto y sus permisos solo los pueden administrar usuarios con privilegios de administrador en su organización. Si no está seguro de qué perfiles de producto desea seleccionar para la API, póngase en contacto con su administrador.
+>Su organización gestiona los perfiles de producto a través de Adobe Admin Console y contienen conjuntos específicos de permisos para funciones granulares. Los perfiles de producto y sus permisos solo los pueden administrar usuarios con privilegios de administrador en su organización. Si no está seguro de qué perfiles de producto desea seleccionar para la API, póngase en contacto con su administrador.
 
 Seleccione los perfiles de producto que desee en la lista y, a continuación, seleccione **Guardar API configurada** para completar el registro de la API.
 
@@ -98,7 +98,7 @@ Se genera un nuevo token de acceso y se proporciona un botón para copiar el tok
 
 #### Generar tokens de acceso mediante programación {#program}
 
-Si utiliza la integración de Launch para una aplicación, puede generar mediante programación tokens de acceso a través de solicitudes de API. Para ello, debe obtener los siguientes valores:
+Si utiliza la integración para una aplicación, puede generar mediante programación tokens de acceso a través de solicitudes de API. Para ello, debe obtener los siguientes valores:
 
 * ID del cliente (`{API_KEY}`)
 * Secreto de cliente (`{SECRET}`)
@@ -160,7 +160,7 @@ Comience por intentar hacer una llamada API a [list all company](./endpoints/com
 >
 >Es posible que no tenga ninguna empresa en su organización. En este caso, la respuesta será el estado HTTP 404 (no encontrado). Siempre que no obtenga un error 403 (prohibido), sus credenciales de acceso son válidas y funcionan.
 
-Una vez que confirme que sus credenciales de acceso funcionan, siga explorando la documentación de referencia de otras API para conocer las muchas funcionalidades de la API.
+Una vez que confirme que sus credenciales de acceso funcionan, siga explorando la documentación de referencia de otras API para conocer las muchas capacidades de la API.
 
 ## Recursos adicionales
 
