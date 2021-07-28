@@ -1,10 +1,10 @@
 ---
 title: Información general sobre la publicación
 description: Obtenga información acerca del proceso de publicación de cambios en las bibliotecas de códigos de administración de etiquetas en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 83%
+source-wordcount: '609'
+ht-degree: 80%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Adobe Experience Platform permite encapsular los cambios realizados en el código de gestión de etiquetas en las bibliotecas individuales. Dado que diferentes equipos ahora pueden desarrollar varias bibliotecas en paralelo, estas bibliotecas deben seguir un proceso intencionado y autorizado para combinar los cambios antes de insertarlas en el entorno de producción.
 
