@@ -1,10 +1,10 @@
 ---
 title: Tipos de condición para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de condición para una extensión de etiqueta en una propiedad web.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 67%
+source-wordcount: '498'
+ht-degree: 64%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En el contexto de una regla, se evalúa una condición después de que se haya producido un evento. Todas las condiciones deben devolver el valor verdadero para que la regla pueda continuar el procesamiento. La excepción es cuando los usuarios colocan explícitamente condiciones en un bloque de &quot;excepción&quot;, en cuyo caso todas las condiciones dentro del bloque deben devolver false para que la regla siga procesándose.
 
