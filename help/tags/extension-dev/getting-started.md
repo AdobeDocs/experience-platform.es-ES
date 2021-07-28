@@ -1,10 +1,10 @@
 ---
 title: Introducción al desarrollo de extensiones
 description: Empiece a desarrollar sus propias extensiones de etiquetas en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 94%
+source-wordcount: '430'
+ht-degree: 90%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Para ayudarle con la utilización y la creación de extensiones, utilizaremos la herramienta de andamiaje de código abierto proporcionada por ingenieros de Adobe para crear los archivos y la estructura de archivos necesarios para su paquete de extensión con el objetivo de que lo único que le quede por hacer sea la parte más valiosa: escribir el código.
 
