@@ -1,9 +1,9 @@
 ---
 title: Cargar e implementar pruebas de extremo a extremo para una extensión
 description: Obtenga información sobre cómo validar, cargar y probar la extensión en Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2392'
 ht-degree: 35%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Para probar las extensiones de etiquetas en Adobe Experience Platform, utilice la API de etiquetas o las herramientas de línea de comandos para cargar los paquetes de extensión. A continuación, utilice la interfaz de usuario de recopilación de datos para instalar el paquete de extensión en una propiedad y ejercer sus capacidades dentro de una biblioteca de etiquetas y crear.
 
