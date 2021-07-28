@@ -1,10 +1,10 @@
 ---
 title: Extensiones
 description: Descubra cómo funcionan las extensiones de etiquetas en Adobe Experience Platform.
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 77%
+source-wordcount: '497'
+ht-degree: 70%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Una extensión es un conjunto de código empaquetado que amplía las funcionalidades proporcionadas por las etiquetas o el reenvío de eventos.
 
@@ -26,15 +26,13 @@ Las extensiones determinan los elementos disponibles al crear propiedades, regla
 
 Utilice los enlaces de la parte superior de la lista Extensions para ver las extensiones instaladas, el catálogo de extensiones o las actualizaciones.
 
-Seleccione una extensión y, a continuación, seleccione [!UICONTROL Configurar] para ver y modificar la configuración de la extensión. Consulte [Add a new extension](#add-a-new-extension) para obtener información sobre las opciones de extensión.
+Seleccione una extensión y, a continuación, seleccione [!UICONTROL Configurar] para ver y modificar la configuración de la extensión. Para obtener más información, consulte la sección sobre [adición de una nueva extensión](#add-a-new-extension) para obtener información sobre las opciones de extensión.
 
 >[!IMPORTANT]
 >
 >Los cambios no surtirán efecto hasta [que se publiquen](../../publishing/overview.md).
 
 De forma predeterminada, Adobe proporciona extensiones compatibles con integraciones comunes. Las extensiones se pueden modificar mediante configuraciones personalizadas. Las configuraciones se proporcionan a través de las extensiones. Para crear una configuración, seleccione la tarjeta de extensión y, a continuación, seleccione **[!UICONTROL Añadir nueva configuración]**.
-
-Para ver un vídeo introductorio, consulte [Extensiones](../../../quick-start/videos.md).
 
 ## Catálogo de extensiones
 
