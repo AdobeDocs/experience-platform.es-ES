@@ -3,10 +3,10 @@ title: Procesamiento de datos de consentimiento del cliente mediante el SDK web 
 topic-legacy: getting started
 description: Obtenga información sobre cómo integrar el SDK web de Adobe Experience Platform para procesar datos de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 3%
+source-wordcount: '1254'
+ht-degree: 1%
 
 ---
 
@@ -29,15 +29,15 @@ El SDK web de Adobe Experience Platform le permite recuperar las señales de con
 
 Este tutorial supone que ya ha determinado cómo generar datos de consentimiento dentro de su CMP y ha creado un conjunto de datos que contiene campos de consentimiento que se han habilitado para Perfil del cliente en tiempo real. Para obtener más información sobre estos pasos, consulte la información general sobre el [procesamiento del consentimiento en Experience Platform](./overview.md) antes de volver a esta guía.
 
-Además, esta guía requiere una comprensión práctica de las extensiones de Adobe Experience Platform Launch y de cómo se instalan en aplicaciones web. Consulte la siguiente documentación para obtener más información:
+Además, esta guía requiere una comprensión práctica de las extensiones de etiquetas y de cómo se instalan en aplicaciones web. Consulte la siguiente documentación para obtener más información:
 
-* [Información general sobre el platform launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=es)
-* [Guía de inicio rápido](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html?lang=es)
-* [Información general sobre la publicación](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=es)
+* [Información general sobre etiquetas](../../../../tags/home.md)
+* [Guía de inicio rápido](../../../../tags/quick-start/quick-start.md)
+* [Información general sobre la publicación](../../../../tags/ui/publishing/overview.md)
 
 ## Configurar un conjunto de datos
 
-Para que el SDK envíe datos a Experience Platform, debe tener configurado un conjunto de datos existente para Platform en Adobe Experience Platform Launch. Además, el [!UICONTROL Conjunto de datos de perfil] que seleccione para la configuración debe contener campos de consentimiento estandarizados.
+Para que el SDK envíe datos a Experience Platform, debe tener configurado un conjunto de datos para Platform en la interfaz de usuario de recopilación de datos. Además, el [!UICONTROL Conjunto de datos de perfil] que seleccione para la configuración debe contener campos de consentimiento estandarizados.
 
 Después de crear una configuración nueva o de seleccionar una existente para editarla, seleccione el botón de alternancia situado junto a **[!UICONTROL Adobe Experience Platform]**. A continuación, utilice los valores que se indican a continuación para completar el formulario.
 
@@ -55,7 +55,7 @@ Cuando termine, seleccione **[!UICONTROL Save]** en la parte inferior de la pant
 
 ## Instalación y configuración del SDK web de Platform
 
-Una vez creado un conjunto de datos como se describe en la sección anterior, debe configurar la extensión del SDK web de plataforma que implementará en su sitio. Si no tiene la extensión SDK instalada en la propiedad de Platform launch, seleccione **[!UICONTROL Extensions]** en el panel de navegación izquierdo, seguido de la pestaña **[!UICONTROL Catalog]**. A continuación, seleccione **[!UICONTROL Install]** en la extensión del SDK de plataforma dentro de la lista de extensiones disponibles.
+Una vez creado un conjunto de datos como se describe en la sección anterior, debe configurar la extensión del SDK web de plataforma que implementará en su sitio. Si no tiene la extensión SDK instalada en la propiedad tag, seleccione **[!UICONTROL Extensions]** en el panel de navegación izquierdo, seguido de la pestaña **[!UICONTROL Catalog]**. A continuación, seleccione **[!UICONTROL Install]** en la extensión del SDK de plataforma dentro de la lista de extensiones disponibles.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
@@ -72,16 +72,16 @@ Con la extensión de SDK instalada, tiene la opción de crear un elemento de dat
 En este caso de uso, puede implementar lo siguiente para establecer el consentimiento predeterminado en función de la región del usuario:
 
 1. Determine la región del usuario en el servidor web.
-1. Antes de la etiqueta de script de Platform launch (código incrustado) en la página web, represente una etiqueta de script independiente que establezca una variable `adobeDefaultConsent` en función de la región del usuario.
+1. Antes de la etiqueta `script` (código incrustado) en la página web, renderice una etiqueta `script` independiente que establezca una variable `adobeDefaultConsent` basada en la región del usuario.
 1. Configure un elemento de datos que utilice la variable JavaScript `adobeDefaultConsent` y utilice este elemento de datos como valor de consentimiento predeterminado para el usuario.
 
 Si la región del usuario está determinada por una CMP, puede realizar los siguientes pasos:
 
 1. Gestione el evento &quot;CMP loaded&quot; en la página.
-1. En el controlador de eventos, establezca una variable `adobeDefaultConsent` basada en la región del usuario y, a continuación, cargue el script de la biblioteca de Platform launch mediante JavaScript.
+1. En el controlador de eventos, establezca una variable `adobeDefaultConsent` basada en la región del usuario y, a continuación, cargue el script de la biblioteca de etiquetas mediante JavaScript.
 1. Configure un elemento de datos que utilice la variable JavaScript `adobeDefaultConsent` y utilice este elemento de datos como valor de consentimiento predeterminado para el usuario.
 
-Para crear un elemento de datos en la interfaz de usuario del Platform launch, seleccione **[!UICONTROL Elementos de datos]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Agregar elemento de datos]** para navegar hasta el cuadro de diálogo de creación de elementos de datos.
+Para crear un elemento de datos en la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Elementos de datos]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Agregar elemento de datos]** para navegar hasta el cuadro de diálogo de creación de elementos de datos.
 
 A partir de aquí, debe crear un elemento de datos [!UICONTROL Variable JavaScript] basado en `adobeDefaultConsent`. Seleccione **[!UICONTROL Guardar]** cuando haya terminado.
 
@@ -93,7 +93,7 @@ Una vez creado el elemento de datos, vuelva a la página de configuración de la
 
 ### Implementar la extensión en el sitio web
 
-Una vez que haya terminado de configurar la extensión, esta se puede integrar en el sitio web. Consulte la [guía de publicación](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) en la documentación de Platform launch para obtener información detallada sobre cómo implementar la compilación de biblioteca actualizada.
+Una vez que haya terminado de configurar la extensión, esta se puede integrar en el sitio web. Consulte la [guía de publicación](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=es) en la documentación de etiquetas para obtener información detallada sobre cómo implementar la compilación de biblioteca actualizada.
 
 ## Creación de comandos de cambio de consentimiento {#commands}
 
