@@ -4,9 +4,9 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
+source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Puede modificar el aspecto del panel [!UICONTROL Perfiles] seleccionando **[!UIC
 
 Consulte la documentación [modificación de tableros](../customize/modify.md) y [descripción general de la biblioteca de utilidades](../customize/widget-library.md) para obtener más información.
 
-## Combinar directivas
+## Combinar directivas {#merge-policies}
 
 Las métricas que se muestran en el panel [!UICONTROL Perfiles] se basan en políticas de combinación que se aplican a los datos del perfil del cliente en tiempo real. Cuando los datos se reúnen desde varias fuentes para crear el perfil del cliente, es posible que los datos contengan valores en conflicto (por ejemplo, un conjunto de datos puede enumerar a un cliente como &quot;único&quot;, mientras que otro conjunto de datos puede enumerar al cliente como &quot;casado&quot;). Es tarea de la directiva de combinación determinar qué datos se priorizan y muestran como parte del perfil.
 
@@ -79,29 +79,39 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 
 El widget **[!UICONTROL Profile count]** muestra el número total de perfiles combinados dentro del almacén de datos del perfil en el momento en que se tomó la instantánea. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
 
-Para obtener más información sobre fragmentos y perfiles combinados, comience leyendo la sección *Fragmentos de perfil vs perfiles combinados* de la [Información general del perfil del cliente en tiempo real](../../profile/home.md).
+Para obtener más información, consulte la sección [sobre políticas de combinación que se encuentra más arriba en este documento](#merge-policies).
+
+>[!NOTE]
+>
+>El widget [!UICONTROL Profile count] puede mostrar un número diferente al recuento de perfiles mostrado en la pestaña [!UICONTROL Browse] de la sección [!UICONTROL Profiles] de la interfaz de usuario por varios motivos. El motivo más común es que la pestaña [!UICONTROL Browse] hace referencia al número total de perfiles combinados en función de la política de combinación predeterminada de su organización, mientras que el widget [!UICONTROL Profile count] hace referencia al número total de perfiles combinados en función de la política de combinación que ha seleccionado ver en el panel.
+>
+>Otro motivo común se debe a las diferencias entre el momento en que se toma la instantánea del panel y el momento en que se ejecuta el trabajo de muestra para la pestaña [!UICONTROL Browse]. Puede ver cuándo se actualizó por última vez el widget [!UICONTROL Profile count] mirando la marca de tiempo del widget y para obtener más información sobre cómo se activa el trabajo de muestra en la pestaña [!UICONTROL Browse], consulte la sección [profile count en la guía de interfaz de usuario del perfil del cliente en tiempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Perfiles añadidos] {#profiles-added}
 
-La utilidad **[!UICONTROL Profiles added]** muestra el número total de perfiles combinados que se agregaron al almacén de datos de perfil desde la última instantánea que se realizó. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
+La utilidad **[!UICONTROL Profiles added]** muestra el número total de perfiles combinados que se agregaron al almacén de datos de perfil desde la última instantánea que se realizó. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo. Puede utilizar el selector desplegable para ver los perfiles agregados en los últimos 30 días, 90 días o 12 meses.
 
-Puede utilizar el selector desplegable para ver los perfiles agregados en los últimos 30 días, 90 días o 12 meses.
+>[!NOTE]
+>
+>El widget [!UICONTROL Profiles added] refleja el número de perfiles agregados al sistema según la configuración inicial de la organización. Por ejemplo, si se agregaran cuatro millones de perfiles durante la configuración y se agregara un millón de perfiles adicionales durante los últimos 30 días, el widget [!UICONTROL Perfiles agregados] mostraría &quot;1 000 000&quot;, mientras que el widget [!UICONTROL Recuento de perfiles] mostraría &quot;5 000 00&quot;.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Tendencia del recuento de perfiles] {#profiles-count-trend}
 
-La utilidad **[!UICONTROL Profiles count pattern]** muestra el número total de perfiles combinados que se han agregado diariamente al almacén de datos de perfil durante los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si ingeryera perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea.
+La utilidad **[!UICONTROL Profiles count pattern]** muestra el número total de perfiles combinados que se han agregado diariamente al almacén de datos de perfil durante los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si ingeryera perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil para formar un único perfil para cada individuo.
 
-El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil para formar un único perfil para cada individuo.
+Para obtener más información, consulte la sección [sobre políticas de combinación que se encuentra más arriba en este documento](#merge-policies).
 
 ![](../images/profiles/profile-count-trend.png)
 
 ### [!UICONTROL Perfiles por identidad] {#profiles-by-identity}
 
 La utilidad **[!UICONTROL Profiles by identity]** muestra el desglose de identidades en todos los perfiles combinados del almacén de perfiles. El número total de perfiles por identidad (es decir, sumando los valores mostrados para cada área de nombres) puede ser mayor que el número total de perfiles combinados, ya que un perfil podría tener varias áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con la marca en más de un canal, se asociarán varias áreas de nombres con ese cliente individual.
+
+Para obtener más información, consulte la sección [sobre políticas de combinación que se encuentra más arriba en este documento](#merge-policies).
 
 Para obtener más información sobre las identidades, visite la [documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
 
@@ -111,9 +121,9 @@ Para obtener más información sobre las identidades, visite la [documentación 
 
 La utilidad **[!UICONTROL Identity overlap]** muestra un diagrama de Venn o un diagrama de conjunto, que muestra la superposición de perfiles en el almacén de perfiles que contienen varias identidades.
 
-Después de utilizar los menús desplegables del widget para seleccionar las identidades que desea comparar, aparecen círculos que muestran el tamaño relativo de cada identidad, y el número de perfiles que contienen ambas áreas de nombres se representa por el tamaño de la superposición entre los círculos.
+Después de utilizar los menús desplegables del widget para seleccionar las identidades que desea comparar, aparecen círculos que muestran el tamaño relativo de cada identidad, y el número de perfiles que contienen ambas áreas de nombres se representa por el tamaño de la superposición entre los círculos. Si un cliente interactúa con su marca en más de un canal, se asociarán varias identidades con ese cliente individual, por lo que es probable que su organización tenga varios perfiles que contengan fragmentos de más de una identidad.
 
-Si un cliente interactúa con su marca en más de un canal, se asociarán varias identidades con ese cliente individual, por lo que es probable que su organización tenga varios perfiles que contengan fragmentos de más de una identidad.
+Para obtener más información sobre los fragmentos de perfil, comience por leer la sección sobre [fragmentos de perfil vs perfiles combinados](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) en la descripción general del perfil del cliente en tiempo real.
 
 Para obtener más información sobre las identidades, visite la [documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
 
