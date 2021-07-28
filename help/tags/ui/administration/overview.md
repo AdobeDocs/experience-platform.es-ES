@@ -1,10 +1,10 @@
 ---
 title: Información general sobre administración
 description: Obtenga información clave sobre los administradores de Adobe Experience Platform Launch.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 60%
+source-wordcount: '109'
+ht-degree: 44%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Los siguientes documentos contienen información útil para los administradores de etiquetas de Adobe Experience Platform:
 
