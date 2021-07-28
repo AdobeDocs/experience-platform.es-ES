@@ -1,10 +1,10 @@
 ---
 title: Información general sobre la extensión del reenvío de eventos principales
 description: Obtenga información sobre la extensión de reenvío de eventos principales en Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 94%
+source-wordcount: '1724'
+ht-degree: 92%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 La extensión de reenvío de eventos principales proporciona los eventos, condiciones y tipos de datos predeterminados para el reenvío de eventos en Adobe Experience Platform.
 
@@ -165,7 +165,7 @@ Para acceder al valor de un elemento de datos en el código personalizado, utili
 getDataElementValue('productName') 
 ```
 
-Las acciones de Platform Launch Server Side se ejecutan secuencialmente. También es posible que el código personalizado de una acción arroje un valor que se pueda utilizar en una acción posterior. El valor devuelto puede provenir del código dentro de esa acción o del cuerpo de respuesta de una llamada realizada a un origen externo. Para hacer referencia a datos de una acción ejecutada anteriormente en una sola regla en la que se utiliza la extensión Core, cree un elemento de datos de tipo `Path` y utilice la siguiente ruta para hacer referencia al valor de una variable denominada `productCategory` definida en el código personalizado dentro de la extensión Core:
+Las acciones de reenvío de eventos se ejecutan secuencialmente. También es posible que el código personalizado de una acción arroje un valor que se pueda utilizar en una acción posterior. El valor devuelto puede provenir del código dentro de esa acción o del cuerpo de respuesta de una llamada realizada a un origen externo. Para hacer referencia a datos de una acción ejecutada anteriormente en una sola regla en la que se utiliza la extensión Core, cree un elemento de datos de tipo `Path` y utilice la siguiente ruta para hacer referencia al valor de una variable denominada `productCategory` definida en el código personalizado dentro de la extensión Core:
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 
