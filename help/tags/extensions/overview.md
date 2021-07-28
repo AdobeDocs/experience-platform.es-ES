@@ -1,12 +1,11 @@
 ---
 title: Extensiones de Adobe
-seo-title: Extensiones de Adobe en Adobe Experience Platform Launch
 description: Documentación de las extensiones de etiquetas en Adobe Experience Platform.
-seo-description: Documentación de las extensiones de Adobe Experience Platform Launch proporcionadas por las soluciones de Adobe.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+seo-description: Documentación de las extensiones de etiquetas proporcionadas por las soluciones de Adobe.
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 62%
+source-wordcount: '81'
+ht-degree: 24%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Obtenga información sobre las extensiones de etiqueta disponibles en la biblioteca de extensiones [!DNL Adobe Experience Platform] .
 
