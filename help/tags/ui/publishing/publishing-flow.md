@@ -1,10 +1,10 @@
 ---
 title: Flujo de publicación
 description: Conozca el proceso de creación de bibliotecas, realización de pruebas de compilaciones y aprobación para su producción en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1498'
-ht-degree: 92%
+source-wordcount: '1499'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 El flujo de publicación de etiquetas en Adobe Experience Platform hace referencia al proceso de creación de bibliotecas, prueba de compilaciones y aprobación para su producción.
 
@@ -63,7 +63,7 @@ En la tabla siguiente se describen las acciones disponibles para una biblioteca 
 | [!UICONTROL Envío y compilación para ensayo] | Esto solo lo puede realizar un usuario con derechos de desarrollo y aprobación. Esta acción anula la asignación de la biblioteca del entorno de desarrollo, mueve la biblioteca al estado [!UICONTROL Enviado] y la compila en el entorno de ensayo. La última compilación de la biblioteca debe ser correcta para que esta opción esté habilitada. |
 | [!UICONTROL Aprobar para publicación] | Esto solo lo puede realizar un usuario con derechos de desarrollo y aprobación. Esta acción anula la asignación de la biblioteca del entorno de desarrollo y la mueve al estado [!UICONTROL Aprobado], lo que omite el entorno de ensayo y el estado [!UICONTROL Enviado] por completo. La última compilación de la biblioteca debe ser correcta para que esta opción esté habilitada. |
 | [!UICONTROL Aprobar y publicar en producción] | Esto solo lo puede realizar un usuario con derechos de desarrollo, aprobación y publicación. Esta acción anula la asignación de la biblioteca del entorno de desarrollo, la mueve al estado [!UICONTROL Aprobado] y la publica en producción. Una vez finalizada la compilación de la producción, la biblioteca pasará al estado [!UICONTROL Publicado]. La última compilación de la biblioteca debe ser correcta para que esta opción esté habilitada. |
-| [!UICONTROL Eliminar] | Quite la biblioteca de Platform Launch. Esto no quita la compilación del entorno. |
+| [!UICONTROL Eliminar] | Elimine la biblioteca del sistema. Esto no quita la compilación del entorno. |
 
 ### [!UICONTROL Enviado] {#submitted}
 
