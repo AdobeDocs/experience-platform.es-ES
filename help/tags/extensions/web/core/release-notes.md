@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de la extensión Core
 description: Últimas notas de la versión de la extensión Core en Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 90%
+source-wordcount: '1210'
+ht-degree: 86%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 ## 20 de mayo de 2021
 
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. Si está configurado, todos los scripts en línea que agrega una etiqueta a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de Platform Launch se puedan seguir cargando en un entorno CSP. Puede leer más sobre el uso de Platform Launch con un CSP [aquí](../../../ui/client-side/content-security-policy.md).
+* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. Si está configurado, todos los scripts en línea que agrega una etiqueta a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de etiquetas se puedan seguir cargando en un entorno CSP. Puede leer más sobre el uso de etiquetas con un CSP [aquí](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junio de 2019
 
