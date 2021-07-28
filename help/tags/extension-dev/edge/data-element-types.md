@@ -1,10 +1,10 @@
 ---
 title: Tipos de elementos de datos para extensiones de Edge
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de elemento de datos para una extensión de etiqueta en una propiedad edge.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 35%
+source-wordcount: '435'
+ht-degree: 31%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En las etiquetas, los elementos de datos son alias para fragmentos de datos de una página web o móvil, independientemente de dónde se encuentren esos datos dentro del evento recibido por el servidor. Las reglas pueden hacer referencia a un elemento de datos y este puede actuar como una abstracción para acceder a estos fragmentos de datos. Cuando la ubicación de los datos cambie en el futuro (como cambiar la clave de evento que contiene el valor), se puede reconfigurar un solo elemento de datos, mientras que todas las reglas que hacen referencia a ese elemento de datos pueden permanecer sin cambios.
 
