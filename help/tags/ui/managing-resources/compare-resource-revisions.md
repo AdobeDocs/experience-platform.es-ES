@@ -1,10 +1,10 @@
 ---
 title: Comparar revisiones de recursos
 description: Obtenga información sobre cómo ver el historial de revisiones de un recurso de etiquetas en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 96%
+source-wordcount: '910'
+ht-degree: 94%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Comparar revisiones de recursos para ver el historial de un recurso individual. Puede comparar el estado actual del recurso con versiones anteriores o comparar la versión de un recurso publicada actualmente con el conjunto más reciente de cambios que se han guardado.
 
