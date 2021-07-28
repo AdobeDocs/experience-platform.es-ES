@@ -1,10 +1,10 @@
 ---
 title: Propiedades
 description: Conozca cómo las extensiones, los entornos y las bibliotecas están organizados y agrupados para su organización en Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 70%
+source-wordcount: '1178'
+ht-degree: 69%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 ## Propiedades web
 
@@ -21,8 +21,6 @@ Una propiedad web es una colección de reglas, elementos de datos, extensiones c
 ## Propiedades móviles
 
 Un tipo de propiedad móvil puede contener varias aplicaciones. Por ejemplo, en una propiedad móvil puede gestionar el mismo conjunto de reglas y extensiones en varias aplicaciones iOS y Android.
-
-Para ver un videotutorial, consulte [Creación de su primera propiedad](../../quick-start/videos.md).
 
 ## Prácticas recomendadas para la planificación de propiedades {#best-practices-for-planning-properties}
 
