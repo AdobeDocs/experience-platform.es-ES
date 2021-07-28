@@ -1,10 +1,10 @@
 ---
 title: Alojamientos de SFTP
 description: Aprenda a configurar etiquetas en Adobe Experience Platform para enviar compilaciones de biblioteca a un servidor SFTP autoalojado y protegido.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 48%
+source-wordcount: '527'
+ht-degree: 44%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Si no quiere que Adobe administre sus bibliotecas alojadas, la otra opción que tiene es que Adobe Experience Platform envíe compilaciones a un servidor SFTP protegido que usted aloje.
 
