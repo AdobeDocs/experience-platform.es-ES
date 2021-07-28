@@ -1,10 +1,10 @@
 ---
 title: Variable gratuita turbine
 description: Obtenga información sobre el objeto turbine , una variable gratuita que proporciona información y utilidades específicas del tiempo de ejecución de etiquetas de Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 58%
+source-wordcount: '577'
+ht-degree: 51%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 El objeto `turbine` es una &quot;variable gratuita&quot; que entra en el ámbito de los módulos de biblioteca de su extensión. Proporciona información y utilidades específicas del tiempo de ejecución de etiquetas de Adobe Experience Platform y siempre está disponible para los módulos de biblioteca sin utilizar `require()`.
 
@@ -90,7 +90,7 @@ Recupera un módulo que se ha compartido desde otra extensión. Si no se encuent
 turbine.logger.error('Error!');
 ```
 
-La utilidad de registro se utiliza para registrar mensajes en la consola. Los mensajes solo se mostrarán en la consola si el usuario ha activado la depuración. La manera recomendada de activar la depuración es utilizar la extensión de Chrome [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda) o [ Launch and DTM Switch](https://chrome.google.com/webstore/detail/adobe-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk). Como alternativa, el usuario puede ejecutar el siguiente comando `_satellite.setDebug(true)` dentro de la consola del desarrollador del explorador. El registrador tiene los métodos siguientes:
+La utilidad de registro se utiliza para registrar mensajes en la consola. Los mensajes solo se mostrarán en la consola si el usuario ha activado la depuración. La forma recomendada de activar la depuración es utilizar [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Como alternativa, el usuario puede ejecutar el siguiente comando `_satellite.setDebug(true)` dentro de la consola del desarrollador del explorador. El registrador tiene los métodos siguientes:
 
 * `logger.log(message: string)`: Registra un mensaje en la consola.
 * `logger.info(message: string)`: Registra un mensaje informativo en la consola.
