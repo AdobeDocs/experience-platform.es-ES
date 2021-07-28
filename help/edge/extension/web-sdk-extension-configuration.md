@@ -1,10 +1,10 @@
 ---
 title: Configuración del SDK web de Adobe Experience Platform
-description: Obtenga información sobre la extensión del SDK web de Adobe Experience Platform para Adobe Experience Platform Launch
+description: Obtenga información sobre la extensión de la etiqueta SDK web de Adobe Experience Platform.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: e5b43a65bb9907f333f1ffedfbeed00f02f8ef39
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1034'
 ht-degree: 8%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 8%
 
 La extensión del SDK web de Adobe Experience Platform envía datos a Adobe Experience Cloud desde las propiedades web a través de Adobe Experience Platform Edge Network. La extensión le permite transmitir datos a Platform, sincronizar identidades, procesar señales de consentimiento del cliente y recopilar automáticamente datos de contexto.
 
-Este documento explica cómo configurar la extensión en la interfaz de usuario de Adobe Experience Platform Launch.
+Este documento explica cómo configurar la extensión en la interfaz de usuario de la recopilación de datos.
 
 ## Configurar la extensión de
 
-Si la extensión del SDK web de Platform ya se ha instalado para una propiedad, abra la propiedad en la interfaz de usuario del Platform launch y seleccione la pestaña **[!UICONTROL Extensions]**. En el SDK web de Platform, seleccione **[!UICONTROL Configurar]**.
+Si la extensión del SDK web de Platform ya se ha instalado para una propiedad, abra la propiedad en la interfaz de usuario de recopilación de datos y seleccione la pestaña **[!UICONTROL Extensions]**. En el SDK web de Platform, seleccione **[!UICONTROL Configurar]**.
 
 ![](../images/extension/overview/configure.png)
 
@@ -35,7 +35,7 @@ Las opciones de configuración en la parte superior de la página indican a Adob
 
 ### [!UICONTROL Nombre]
 
-La extensión del SDK web de Adobe Experience Platform admite varias instancias en la página. El nombre se utiliza para enviar datos a varias organizaciones con una sola configuración de Platform launch.
+La extensión del SDK web de Adobe Experience Platform admite varias instancias en la página. El nombre se utiliza para enviar datos a varias organizaciones con una configuración de etiqueta.
 
 El nombre predeterminado de la extensión es &quot;[!DNL alloy]&quot;. Sin embargo, puede cambiar el nombre de la instancia a cualquier nombre de objeto JavaScript válido.
 
