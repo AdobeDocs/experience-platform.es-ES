@@ -1,10 +1,10 @@
 ---
 title: Implementación de bibliotecas de terceros
 description: Obtenga información sobre los distintos métodos para alojar bibliotecas de terceros en las extensiones de etiquetas de Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 69%
+source-wordcount: '1330'
+ht-degree: 67%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Uno de los objetivos principales de las extensiones de etiquetas en Adobe Experience Platform es permitirle implementar fácilmente las tecnologías de marketing (bibliotecas) existentes en el sitio web. Con las extensiones, puede implementar bibliotecas proporcionadas por redes de envío de contenido de terceros (CDN) sin tener que editar manualmente el HTML del sitio web.
 
