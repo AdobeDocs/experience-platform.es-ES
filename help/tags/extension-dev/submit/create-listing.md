@@ -44,6 +44,7 @@ Si ya tiene una cuenta de empresa o si no tiene previsto completar la lista, pue
    >[!NOTE]
    >
    >Este formato de archivo es diferente al que se utiliza en el código de extensión. La extensión contendrá un archivo svg como [icono](../manifest.md).
+
    - **Imagen destacada** : obtenga atención con una imagen que puede ser independiente y mostrará su marca y resaltará su aplicación. La imagen destacada es la que se muestra cuando alguien comparte un vínculo a su lista de Exchange o publica sobre ella en medios sociales. Por lo tanto, debe ser una representación modelo de su marca.
    - **Logotipo del editor de la aplicación**: se trata del logotipo de su empresa. Asegúrese de que el icono tenga las dimensiones adecuadas de 1280 x 720 o de 2560 x 1440 (16:9) en formato png o jpg, respectivamente.
    - **Instrucciones de configuración** : Informe a los clientes sobre cómo configurar la extensión de Adobe Experience Platform. Asegúrese de que comprendan la configuración que deben realizar, así como los pasos siguientes que deben seguir cuando la [vista de la configuración](../configuration.md) aparezca inmediatamente después de instalar la extensión en una propiedad. 
