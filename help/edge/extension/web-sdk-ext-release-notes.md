@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión del SDK web de Adobe Experience Platform
 description: Extensión de etiquetas de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 52%
+source-wordcount: '1093'
+ht-degree: 53%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 52%
 
 Este documento cubre las notas de la versión de la extensión de etiqueta del SDK web de Adobe Experience Platform. Para ver las notas de la última versión del SDK, consulte las [Notas de la versión del SDK web de Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Versión 2.6.1: 29 de julio de 2021
+
+Contiene la versión 2.6.1 de la biblioteca del SDK web de Adobe Experience Platform.
+
 ## Versión 2.6.0: 27 de julio de 2021
+
+Contiene la versión 2.6.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
 * Las etiquetas, las descripciones y los mensajes de error que utilizan el término &quot;configuración perimetral&quot; se han cambiado para que el término &quot;conjunto de datos&quot; se ajuste a la terminología más reciente de Adobe Experience Platform.
 * En la vista de configuración de la extensión, se agregó compatibilidad para gestionar grandes cantidades de conjuntos de datos y entornos de conjuntos de datos.
