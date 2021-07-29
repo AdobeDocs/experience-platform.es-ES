@@ -3,14 +3,18 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e158b8129fe5afe71af48b7c64ca34b00e79965c
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '670'
+ht-degree: 5%
 
 ---
 
 # Notas de la versión
+
+## Versión 2.6.1: 29 de julio de 2021
+
+* Se ha corregido un problema en el cual la personalización de renderización para una vista de aplicación de una sola página que no tiene contenido de personalización generaba un error y provocaba que se rechazara la promesa devuelta por el comando `sendEvent`.
 
 ## Versión 2.6.0: 27 de julio de 2021
 
