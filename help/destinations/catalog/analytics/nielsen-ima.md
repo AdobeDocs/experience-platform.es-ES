@@ -3,9 +3,9 @@ keywords: Nielsen IMA Handler;nielsen ima handler;nielsen ima;Nielsen ima;Nielse
 title: Extensión del controlador IMA de Nielsen
 description: La extensión del controlador IMA de Nielsen es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: a6f8260b-063d-4784-9f26-8b3dacd4ba58
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '425'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ Este destino es una extensión de etiqueta. Para obtener más información sobre
 
 Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que han comprado Platform.
 
-Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Experience Platform. Etiquetas ofrecidas a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones. y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
+Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones. y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
 
 ## Extensión de instalación {#install-extension}
 
