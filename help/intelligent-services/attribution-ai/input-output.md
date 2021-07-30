@@ -5,7 +5,7 @@ title: Entrada y salida en Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: En el siguiente documento se describen las diferentes entradas y productos utilizados en la Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
+source-git-commit: a49218103669758404a4ddf3f9833b8b2d9b7fc6
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 3%
@@ -99,7 +99,7 @@ La Attribution AI genera lo siguiente:
 
 ![](./images/input-output/schema_output.gif)
 
-### Puntuaciones granulares en bruto {#raw-granular-scores}
+### Puntuaciones granulares sin procesar {#raw-granular-scores}
 
 La Attribution AI genera puntuaciones de atribución en el nivel más granular posible para que pueda cortar y fragmentar las puntuaciones en cualquier columna de puntuación. Para ver estas puntuaciones en la interfaz de usuario, lea la sección [visualización de las rutas de puntuación sin procesar](#raw-score-path). Para descargar las puntuaciones con la API, visite el documento [descargar puntuaciones en Attribution AI](./download-scores.md).
 
@@ -141,7 +141,7 @@ La siguiente tabla describe los campos de esquema de la salida de ejemplo de las
 | identity (objeto) | False | Contiene los detalles del usuario utilizado para crear el modelo, como `id` y `namespace`. |
 | id (cadena) | True | ID de identidad del usuario, como ID de cookie o AAID o MCID, etc. <br> **Ejemplo:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Área de nombres de identidad utilizada para crear las rutas y, por lo tanto, el modelo. <br> **Ejemplo:** aaid |
-| touchpointsDetail (matriz de objetos) | True | La lista de detalles de puntos de contacto que llevan a la conversión ordenada por incidencia de punto de contacto o marca de tiempo. |
+| touchpointsDetail (matriz de objetos) | True | La lista de detalles de puntos de contacto que llevan a la conversión solicitada por | incidencia de touchpoint o marca de tiempo. |
 | touchpointName (cadena) | True | Nombre del punto de contacto que se configuró durante la configuración. <br> **Ejemplo:** PAID_SEARCH_CLICK |
 | partituras (objeto) | True | Contribución de Touchpoint a esta conversión como puntuación. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección [puntuaciones de atribución agregadas](#aggregated-attribution-scores). |
 | touchPoint (objeto) | True | Metadatos de Touchpoint. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección [puntuaciones agregadas](#aggregated-scores). |
