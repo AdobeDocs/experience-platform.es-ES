@@ -3,9 +3,9 @@ keywords: bizible;extensión bizible;destino bizible
 title: Extensión Bizible
 description: La extensión Bizible es un destino de correo electrónico en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '446'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Información general {#overview}
 
-[!DNL Bizible] es la solución de atribución B2B líder del sector que le proporciona una visibilidad inigualable de sus datos, para que pueda tomar decisiones inteligentes que impulsen el crecimiento.
+[!DNL Bizible] es la solución de atribución B2B líder del sector que le proporciona una visibilidad inigualable de sus datos, de modo que pueda tomar decisiones inteligentes que impulsen el crecimiento.
 
-[!DNL Bizible] es una extensión de correo electrónico en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] es una extensión de correo electrónico en Adobe Experience Platform. Para obtener más información sobre Bizible, lea [Atribución de marketing](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) en los recursos de información general de Bizible.
 
 Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte la [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
@@ -41,8 +41,6 @@ Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICON
 Seleccione la propiedad tag en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la documentación de etiquetas [](../../../tags/ui/administration/companies-and-properties.md).
 
 El flujo de trabajo le lleva a la interfaz de usuario de recopilación de datos para completar la instalación.
-
-Para obtener información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la página [Bizible en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 También puede instalar la extensión directamente en la [interfaz de usuario de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la guía [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
 
