@@ -3,9 +3,9 @@ keywords: PebblePost;pebblepost;Correo directo programático de PebblePost;Pebbl
 title: Extensión PebblePost
 description: La extensión PebblePost es un destino de correo electrónico en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '485'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL PebblePost's Programmatic Direct Mail®] ayuda a los especialistas en marketing digital a conectar el interés y la intención en línea con medios tangibles y sin conexión que se convierten. Los especialistas en marketing pueden aprovechar los segmentos de datos personalizados que han creado en Adobe para ahora dirigirse a los consumidores con una impresión de medios local relevante, de larga duración. Analice el rendimiento en tiempo real en función de la actividad de la ruta de respuesta y las conversiones in situ.
 
-[!DNL PebblePost] es una extensión de correo electrónico en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost] es una extensión de correo electrónico en Adobe Experience Platform. Para obtener más información sobre PebblePost, lea la [publicación del blog de integración](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 
 Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte la [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
@@ -41,8 +41,6 @@ Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICON
 Seleccione la propiedad en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la sección [Properties page](../../../tags/ui/administration/companies-and-properties.md#properties-page) de la documentación de etiquetas.
 
 El flujo de trabajo le guía por los pasos para completar la instalación.
-
-Para obtener información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la página [PebblePost en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 
 También puede instalar la extensión directamente en la [interfaz de usuario de recopilación de datos](https://experience.adobe.com/#/data-collection/). Para obtener más información, consulte la sección sobre [adición de una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) en la documentación de etiquetas.
 
