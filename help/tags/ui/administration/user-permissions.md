@@ -1,7 +1,7 @@
 ---
 title: Permisos de usuario
 description: Obtenga información sobre los diferentes permisos de etiquetas disponibles para los usuarios de Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e93cb075dc8c8d01fcda3edf0014f86a47b5b710
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 74%
@@ -75,7 +75,6 @@ Los permisos disponibles en este grupo son:
 Los derechos de compañía se aplican a permisos que abarcan varias propiedades. Actualmente, existen dos:
 
 * **Administrar propiedades:** esta opción le permite crear nuevas propiedades en la interfaz de usuario de la recopilación de datos y modificar los metadatos y la configuración en el nivel de propiedad. También puede eliminar propiedades. Lea la [documentación de propiedades](companies-and-properties.md) para obtener más información. Normalmente esta función recae sobre los administradores.
-* 
 * Concede la capacidad de crear nuevas propiedades y modificar los metadatos y la configuración en el nivel de propiedad. También puede eliminar propiedades. Puede obtener más información sobre las propiedades [aquí](companies-and-properties.md). Normalmente esta función recae sobre los administradores.
 * **Develop Extensions:** otorga la capacidad de crear y modificar paquetes de extensión que sean propiedad de la compañía, incluidas versiones privadas y solicitudes de lanzamiento público.
 * **Administrar configuraciones de aplicación:** Esta opción solo está disponible para los clientes con licencia de Adobe Journey Optimizer o cualquier otra solución que les permita acceder a la mensajería móvil en la aplicación y a la mensajería push.  Esto le permite administrar las aplicaciones de las que conoce el Experience Cloud, así como las credenciales push necesarias para comunicarse con el servicio de Firebase Cloud Messaging y el servicio de notificaciones push de Apple.
