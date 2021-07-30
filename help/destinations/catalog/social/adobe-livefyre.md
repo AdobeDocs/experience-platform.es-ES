@@ -3,10 +3,10 @@ keywords: livefyre;extensión livefyre
 title: Extensión de Adobe Livefyre
 description: La extensión Adobe Livefyre es un destino social en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 5%
+source-wordcount: '452'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 Adobe Livefyre le permite descubrir, organizar y publicar un flujo constante de contenido generado por el usuario en su sitio web para crear experiencias auténticas y altamente personalizadas.
 
-Adobe Livefyre es una extensión social de Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
+Adobe Livefyre es una extensión social de Adobe Experience Platform. Para obtener más información sobre el Adobe Livefyre, lea la [Guía de implementación de Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en).
 
 Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte la [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
@@ -42,10 +42,7 @@ Seleccione la propiedad tag en la que desea instalar la extensión. También tie
 
 El flujo de trabajo le lleva a la interfaz de usuario de recopilación de datos para completar la instalación.
 
-Para obtener información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la página [Adobe Livefyre en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
-
 También puede instalar la extensión directamente en la [interfaz de usuario de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la guía [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
-
 
 ## Cómo utilizar la extensión {#how-to-use}
 
