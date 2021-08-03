@@ -5,10 +5,9 @@ title: Descargar puntuaciones en Attribution AI
 topic-legacy: Downloading scores
 description: Este documento sirve como guía para descargar puntuaciones para Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7219c44e1d8812506ee97367f27076b55a40203b
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1053'
 ht-degree: 2%
 
 ---
@@ -23,9 +22,9 @@ Attribution AI le permite descargar puntuaciones en el formato de archivo Parque
 
 Además, para acceder a las puntuaciones de Attribution AI, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite la [guía del usuario de Attribution AI](./user-guide.md). Si ha creado recientemente una instancia de servicio y sigue siendo de formación y puntuación, espere 24 horas para que termine de ejecutarse.
 
-## Busque su ID de conjunto de datos {#dataset-id}
+## Búsqueda del ID del conjunto de datos {#dataset-id}
 
-En la instancia de servicio para obtener información sobre las Attribution AI, haga clic en el menú desplegable *Más acciones* en la navegación superior derecha y, a continuación, seleccione **[!UICONTROL Access scores]**.
+En la instancia de servicio para obtener información sobre las Attribution AI, haga clic en el menú desplegable *Más acciones* en la navegación superior derecha y, a continuación, seleccione **[!UICONTROL Puntuaciones de acceso]**.
 
 ![más acciones](./images/download-scores/more-actions.png)
 
@@ -33,7 +32,7 @@ Aparece un nuevo cuadro de diálogo que contiene un vínculo a la documentación
 
 ![ID de conjunto de datos](../customer-ai/images/download-scores/access-scores.png)
 
-## Recupere su ID de lote {#retrieve-your-batch-id}
+## Recuperar el ID de lote {#retrieve-your-batch-id}
 
 Con el ID del conjunto de datos del paso anterior, debe realizar una llamada a la API del catálogo para recuperar un ID de lote. Para esta llamada de API se utilizan parámetros de consulta adicionales para devolver el último lote correcto en lugar de una lista de lotes pertenecientes a su organización. Para devolver lotes adicionales, aumente el número del parámetro de consulta `limit` a la cantidad que desee que se devuelva. Para obtener más información sobre los tipos de parámetros de consulta disponibles, consulte la guía sobre el [filtrado de datos del catálogo utilizando parámetros de consulta](../../catalog/api/filter-data.md).
 
@@ -261,7 +260,7 @@ La respuesta descarga el archivo solicitado en en el directorio actual. En este 
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-Las puntuaciones descargadas estarán en formato Parquet y necesitarán un [!DNL Spark]-shell o un lector de parquet para ver las puntuaciones. Para la visualización de puntuación sin procesar, puede utilizar [Apache Parquet tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Las herramientas de parquet pueden analizar los datos con [!DNL Spark].
+Las puntuaciones descargadas estarán en formato Parquet y necesitarán un [!DNL Spark]-shell o un lector de parquet para ver las puntuaciones. Para la visualización de puntuación sin procesar, puede utilizar [Apache Parquet tools](https://parquet.apache.org/documentation/latest/). Las herramientas de parquet pueden analizar los datos con [!DNL Spark].
 
 ## Pasos siguientes
 
