@@ -5,10 +5,9 @@ title: Información general sobre la interfaz de usuario de JupyterLab
 topic-legacy: Overview
 description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con Jupyter Notebooks, código y datos. Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91003bf142008bcb1277269b45d8a55234ea6564
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1831'
 ht-degree: 3%
 
 ---
@@ -118,7 +117,7 @@ En [!DNL JupyterLab] seleccione el icono de engranaje en la esquina superior der
 
 ### Finalizar y reiniciar [!DNL JupyterLab]
 
-En [!DNL JupyterLab], puede finalizar la sesión para evitar que se utilicen más recursos. Comience por seleccionar el **icono de energía** ![icono de energía](../images/jupyterlab/user-guide/power_button.png) y, a continuación, seleccione **[!UICONTROL Shut Down]** en la ventana emergente que aparece para finalizar la sesión. Las sesiones de bloc de notas finalizan automáticamente después de 12 horas sin actividad.
+En [!DNL JupyterLab], puede finalizar la sesión para evitar que se utilicen más recursos. Comience por seleccionar el **icono de energía** ![icono de energía](../images/jupyterlab/user-guide/power_button.png) y, a continuación, seleccione **[!UICONTROL Apagar]** en la ventana emergente que aparece para finalizar la sesión. Las sesiones de bloc de notas finalizan automáticamente después de 12 horas sin actividad.
 
 Para reiniciar [!DNL JupyterLab], seleccione el **icono de reinicio** ![icono de reinicio](../images/jupyterlab/user-guide/restart_button.png) situado directamente a la izquierda del icono de energía y, a continuación, seleccione **[!UICONTROL Restart]** en la ventana emergente que aparece.
 
@@ -255,6 +254,11 @@ Para obtener más información sobre cada uno de los blocs de notas compatibles 
 
 ## Bibliotecas compatibles {#supported-libraries}
 
-Para obtener una lista de paquetes compatibles con Python, R y PySpark, copie y pegue `!pip list --format=columns` en una celda nueva y, a continuación, ejecute la celda. Una lista de paquetes compatibles se rellena en orden alfabético.
+Para obtener una lista de paquetes compatibles con Python, R y PySpark, copie y pegue `!conda list` en una celda nueva y, a continuación, ejecute la celda. Una lista de paquetes compatibles se rellena en orden alfabético.
 
 ![ejemplo](../images/jupyterlab/user-guide/libraries.PNG)
+
+Además, se utilizan las siguientes dependencias, pero no se enumeran:
+* CUDA 11.2
+* CUDNN 8.1
+
