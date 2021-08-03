@@ -5,9 +5,9 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Administración de datos
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '144'
 ht-degree: 36%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 36%
    * Adobe Target {#adobe-target}
       * [Información general](personalization/adobe-target/target-overview.md)
       * [Implementación de aplicación de una sola página](personalization/adobe-target/spa-implementation.md)
+      * [Acceso a tokens de respuesta](personalization/adobe-target/accessing-response-tokens.md)
    * Offer Decisioning {#offer-decisioning}
       * [Información general](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentimiento {#consent}
@@ -54,6 +55,7 @@ ht-degree: 36%
       * [Integrar sin etiquetas](consent/iab-tcf/without-launch.md)
 * Extensión de etiqueta de SDK web {#extension}
    * [Extensión de SDK web](extension/web-sdk-extension-configuration.md)
+   * [Tipos de eventos](extension/event-types.md)
    * [Tipos de acción](extension/action-types.md)
    * [Tipos de elementos de datos](extension/data-element-types.md)
    * [Acceso al ECID](extension/accessing-the-ecid.md)
