@@ -3,7 +3,7 @@ keywords: twitter;Twitter;etiqueta de sitio web universal de twitter;etiqueta de
 title: Extensión de la etiqueta del sitio web universal de twitter
 description: La extensión Twitter Universal Website Tag es un destino publicitario de Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Exp
 
 Para instalar la extensión [!DNL Twitter Universal Website Tag]:
 
-En la [Platform interface](http://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+En la [Platform interface](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
