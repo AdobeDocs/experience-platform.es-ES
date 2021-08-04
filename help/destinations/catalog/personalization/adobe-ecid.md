@@ -3,7 +3,7 @@ Keywords: ECID;ecid
 title: Extensión de Experience Cloud ID Service
 description: La extensión del servicio de ID de Experience Cloud es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 4%
@@ -32,7 +32,7 @@ Para utilizar esta extensión, necesita acceder a las etiquetas en Platform. Las
 
 Para instalar la extensión [!DNL Experience Cloud] del servicio de ID:
 
-En la [Platform interface](http://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+En la [Platform interface](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
