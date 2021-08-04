@@ -3,7 +3,7 @@ keywords: Extensiones Flashtalk OneTag;Extensión Flashtalk OneTag;destinos Flas
 title: Extensión Flashtalk OneTag
 description: La extensión Flashtalk OneTag es un destino publicitario de Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: e0dcbe9d-6fed-4b86-839e-661b7df8580e
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Exp
 
 Para instalar la extensión [!DNL Flashtalking OneTag]:
 
-En la [Platform interface](http://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+En la [Platform interface](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
