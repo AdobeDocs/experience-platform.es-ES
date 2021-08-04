@@ -3,7 +3,7 @@ keywords: extensión de demandbase;demandbase;destino de demandbase
 title: Extensión de Demandbase
 description: La extensión de Demandbase es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: 112a9575-4527-4a32-9610-a9d18ffd84f1
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 5%
@@ -32,7 +32,7 @@ Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Exp
 
 Para instalar la extensión [!DNL Demandbase]:
 
-En la [Platform interface](http://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+En la [Platform interface](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
