@@ -16,4 +16,3 @@ ht-degree: 74%
 # Colección Adobe Experience Platform {#collection}
 
 - [Información general sobre la recopilación de datos](home.md)
-- 
