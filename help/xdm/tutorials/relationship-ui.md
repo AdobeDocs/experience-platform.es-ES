@@ -6,11 +6,10 @@ description: Este documento proporciona un tutorial para definir una relación e
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 1%
+source-wordcount: '1000'
+ht-degree: 0%
 
 ---
 
@@ -50,9 +49,21 @@ El esquema de origen &quot;[!DNL Loyalty Members]&quot; se basa en la clase [!DN
 
 ### [!DNL Hotels] esquema
 
-El esquema de destino &quot;[!DNL Hotels]&quot; se basa en una clase &quot;[!DNL Hotels]&quot; personalizada y contiene campos que describen un hotel. El campo `hotelId` sirve como identidad principal para el esquema en un espacio de nombres personalizado `hotelId`. Al igual que el esquema [!DNL Loyalty Members] , este esquema también se ha habilitado para [!DNL Real-time Customer Profile].
+El esquema de destino &quot;[!DNL Hotels]&quot; se basa en una clase &quot;[!DNL Hotels]&quot; personalizada y contiene campos que describen un hotel.
 
 ![](../images/tutorials/relationship/hotels.png)
+
+Para participar en una relación, el esquema de destino debe tener una identidad principal. En este ejemplo, el campo `hotelId` se utiliza como identidad principal, utilizando un área de nombres de identidad &quot;ID de hotel&quot; personalizada.
+
+![Identidad primaria del hotel](../images/tutorials/relationship/hotel-identity.png)
+
+>[!NOTE]
+>
+>Para aprender a crear áreas de nombres de identidad personalizadas, consulte la [documentación del servicio de identidad](../../identity-service/namespaces.md#manage-namespaces).
+
+Una vez configurada la identidad principal, el esquema de destino debe habilitarse para [!DNL Real-time Customer Profile].
+
+![Habilitar para perfil](../images/tutorials/relationship/hotel-profile.png)
 
 ## Crear un grupo de campos de esquema de relación
 
@@ -66,11 +77,11 @@ Comience por seleccionar **[!UICONTROL Add]** en la sección **[!UICONTROL Field
 
 ![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-Aparece el cuadro de diálogo [!UICONTROL Add field group]. Desde aquí, seleccione **[!UICONTROL Create new field group]**. En los campos de texto que aparecen, introduzca un nombre para mostrar y una descripción para el nuevo grupo de campos. Seleccione **[!UICONTROL Add field groups]** cuando haya terminado.
+Aparece el cuadro de diálogo [!UICONTROL Agregar grupo de campos]. Desde aquí, seleccione **[!UICONTROL Crear nuevo grupo de campos]**. En los campos de texto que aparecen, introduzca un nombre para mostrar y una descripción para el nuevo grupo de campos. Seleccione **[!UICONTROL Add field groups]** cuando termine.
 
 ![](../images/tutorials/relationship/create-field-group.png)
 
-El lienzo vuelve a aparecer con &quot;[!DNL Favorite Hotel]&quot; en la sección **[!UICONTROL Field groups]**. Seleccione el nombre del grupo de campos y, a continuación, seleccione **[!UICONTROL Add field]** junto al campo de nivel raíz `Loyalty Members`.
+El lienzo vuelve a aparecer con &quot;[!DNL Favorite Hotel]&quot; en la sección **[!UICONTROL Grupos de campos]**. Seleccione el nombre del grupo de campos y, a continuación, seleccione **[!UICONTROL Add field]** junto al campo root-level `Loyalty Members`.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -78,7 +89,7 @@ Aparece un nuevo campo en el lienzo debajo del espacio de nombres `_tenantId`. E
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Cuando termine, seleccione **[!UICONTROL Apply]**.
+Cuando termine, seleccione **[!UICONTROL Aplicar]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
@@ -94,7 +105,7 @@ Seleccione el campo `favoriteHotel` en el lienzo y, a continuación, desplácese
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Seleccione el menú desplegable para **[!UICONTROL Reference schema]** y seleccione el esquema de destino para la relación (&quot;[!DNL Hotels]&quot; en este ejemplo). Si el esquema de destino está habilitado para [!DNL Profile], el campo **[!UICONTROL Reference identity namespace]** se establece automáticamente en el área de nombres de la identidad principal del esquema de destino. Si el esquema no tiene una identidad principal definida, debe seleccionar manualmente el área de nombres que desea utilizar en el menú desplegable. Seleccione **[!UICONTROL Apply]** cuando haya terminado.
+Seleccione el menú desplegable de **[!UICONTROL Reference schema]** y seleccione el esquema de destino para la relación (&quot;[!DNL Hotels]&quot; en este ejemplo). Si el esquema de destino está habilitado para [!DNL Profile], el campo **[!UICONTROL Reference identity namespace]** se establece automáticamente en el área de nombres de la identidad principal del esquema de destino. Si el esquema no tiene una identidad principal definida, debe seleccionar manualmente el área de nombres que desea utilizar en el menú desplegable. Seleccione **[!UICONTROL Aplicar]** cuando termine.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
