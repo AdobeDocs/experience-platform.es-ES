@@ -2,7 +2,7 @@
 title: Acceso a tokens de respuesta mediante el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo acceder a los tokens de respuesta con el SDK web de Adobe Experience Platform.
 keywords: personalización;target;adobe target;renderdecisions;sendEvent;decisionScopes;result.decisions,tokens de respuesta;
-source-git-commit: 5ae7488e715ff97d2b667c40505b79433eb74f49
+source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -55,7 +55,7 @@ alloy("sendEvent", {
             var activityName = item.meta["activity.name"];
             // Ignore duplicates
             if (activityNames.indexOf(activityName) === -1) {
-              activityNames.push(item.meta);
+              activityNames.push(activityName);
             }
           }
         });
