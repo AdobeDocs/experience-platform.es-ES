@@ -3,9 +3,9 @@ keywords: coincidencia de clientes de google;coincidencia de clientes de Google;
 title: Conexión de Google Customer Match
 description: Google Customer Match le permite utilizar sus datos en línea y sin conexión para llegar a sus clientes y volver a interactuar con ellos en todas las propiedades de Google que usted posee y gestiona, como Search, Shopping, Gmail y YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
+source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Configuración del destino: tutorial de vídeo {#video}
 
-El siguiente vídeo muestra los pasos para configurar un destino [!DNL Google Customer Match] y activar segmentos. Los pasos también se describen secuencialmente en las secciones siguientes.
+El siguiente vídeo muestra los pasos para configurar un destino social y activar segmentos. El vídeo utiliza LinkedIn como ejemplo, pero los pasos son similares en destinos sociales, incluido [!DNL Google Customer Match]. Los pasos del vídeo también se muestran secuencialmente en las secciones siguientes.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
