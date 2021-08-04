@@ -5,10 +5,10 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene información sobre los códigos de error comunes que encuentra y las posibles causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e3557fe75680153f051b8a864ad8f6aca5f743ee
+source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 1%
+source-wordcount: '525'
+ht-degree: 6%
 
 ---
 
@@ -51,8 +51,8 @@ SELECT a._company AS _company,
 a._id AS _id,
 a.timestamp AS timestamp
 FROM actual_dataset a
-WHERE timestamp >= To_timestamp('2021-01-21 12:00:00')
-AND timestamp < To_timestamp('2021-01-21 13:00:00')
+WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
+AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
 ```
 
@@ -85,15 +85,20 @@ No puede utilizar caracteres comodín para obtener todos los datos de las filas,
 
 ## Errores de API PostgreSQL
 
-| Código de error y estado de conexión | Descripción | Posible causa |
-| ------------------------------- | ----------- | -------------- |
-| **28P01** Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
-| **28000** Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
-| **42P12** Inicio: autenticación | No se encontraron tablas | No se encontraron tablas para su uso |
-| **Consulta 42601**  | Error de sintaxis | Error de sintaxis o comando no válido |
-| **Consulta 58000**  | Error del sistema | Fallo interno del sistema |
-| **Consulta 42P01**  | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
-| **Consulta 42P07**  | La tabla existe | La tabla ya existe con el mismo nombre (CREATE TABLE) |
-| **Consulta 53400**  | El LÍMITE supera el valor máximo | El usuario especificó una cláusula LIMIT superior a 100.000 |
-| **Consulta 53400**  | Tiempo de espera de la instrucción | La declaración en directo presentada tardó más de 10 minutos |
-| **08P01** N/D | Tipo de mensaje no admitido | Tipo de mensaje no admitido |
+| Código de error | Estado de la conexión | Descripción | Posible causa |
+| ---------- | ---------------- | ----------- | -------------- |
+| **08P01** | N/D | Tipo de mensaje no admitido | Tipo de mensaje no admitido |
+| **28P01** | Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
+| **28000** | Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
+| **42P12** | Inicio: autenticación | No se encontraron tablas | No se encontraron tablas para su uso |
+| **42601** | Consulta | Error de sintaxis | Error de sintaxis o comando no válido |
+| **42P01** | Consulta | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
+| **42P07** | Consulta | La tabla existe | Ya existe una tabla con el mismo nombre (CREATE TABLE) |
+| **53400** | Consulta | El LÍMITE supera el valor máximo | El usuario especificó una cláusula LIMIT superior a 100.000 |
+| **53400** | Consulta | Tiempo de espera de la instrucción | La declaración en directo presentada tardó más de 10 minutos |
+| **58000** | Consulta | Error del sistema | Fallo interno del sistema |
+| **0A000** | Consulta/Comando | No admitido | La función/funcionalidad de la consulta/comando no es compatible |
+| **42501** | Consulta de TABLA DE COLOCACIÓN | El servicio de consulta no crea la tabla de pérdidas | El servicio de consultas no creó la tabla que se está quitando con la instrucción `CREATE TABLE` |
+| **42501** | Consulta de TABLA DE COLOCACIÓN | Tabla no creada por el usuario autenticado | El usuario que ha iniciado sesión actualmente no ha creado la tabla que se está quitando |
+| **42P01** | Consulta de TABLA DE COLOCACIÓN | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
+| **42P12** | Consulta de TABLA DE COLOCACIÓN | No se encontró ninguna tabla para `dbName`: compruebe el `dbName` | No se encontraron tablas en la base de datos actual |
