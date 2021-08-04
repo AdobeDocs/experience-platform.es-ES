@@ -3,7 +3,7 @@ keywords: InMoment;intime;Intime;integración con launch
 title: Extensión InMoment
 description: La extensión InMoment es un destino de encuesta en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 5%
@@ -32,7 +32,7 @@ Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Exp
 
 Para instalar la extensión [!DNL InMoment]:
 
-En la [Platform interface](http://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+En la [Platform interface](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
