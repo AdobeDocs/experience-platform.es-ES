@@ -3,9 +3,9 @@ keywords: Conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión facebook
 description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
+source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1176'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Para dirigirlos a través de los medios sociales, pueden incorporar los datos de
 
 A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pertenencia asociados y los niveles de cliente, para crear nuevos segmentos de audiencia a los que pueden dirigirse mediante el destino [!DNL Facebook] .
 
-## Identidades admitidas {#supported-identities}
+## Identidades compatibles {#supported-identities}
 
 [!DNL Facebook Custom Audiences] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
 
@@ -69,7 +69,7 @@ Antes de enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cump
 
 En función del tipo de ID que ingrese en Adobe Experience Platform, debe cumplir sus requisitos correspondientes.
 
-## Requisitos de hash de números de teléfono {#phone-number-hashing-requirements}
+## Requisitos de hash de número telefónico {#phone-number-hashing-requirements}
 
 Existen dos métodos para activar los números de teléfono en [!DNL Facebook]:
 
@@ -112,7 +112,7 @@ Antes de utilizar el espacio de nombres `Extern_ID` para enviar datos a [!DNL Fa
 
 Para conectarse al destino [!DNL Facebook], consulte [Flujo de trabajo de autenticación de destinos sociales](./workflow.md).
 
-El siguiente vídeo también muestra los pasos para configurar un destino [!DNL Facebook] y activar segmentos.
+El siguiente vídeo también muestra los pasos para configurar un destino social y activar segmentos. El vídeo utiliza LinkedIn como ejemplo, pero los pasos son similares en los destinos sociales.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
