@@ -3,7 +3,7 @@ keywords: linkedIn;linkedin;Linkedin;Etiqueta de perspectiva de LinkedIn;etiquet
 title: Extensión de la etiqueta linkedIn Insight
 description: La extensión LinkedIn Insight Tag es un destino publicitario de Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Exp
 
 Para instalar la extensión [!DNL LinkedIn Insight Tag]:
 
-En la [Platform interface](http://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+En la [Platform interface](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
