@@ -3,7 +3,7 @@ keywords: bing;seguimiento de eventos de anuncios de bing;rastreo de eventos;UET
 title: Extensión de seguimiento de eventos universales (UET) de Bing Ads
 description: La extensión de seguimiento de eventos universales (UET) de Bing Ads es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: f2fc4d1f-01b0-4813-902c-9a3c30a8fa78
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 4%
@@ -32,7 +32,7 @@ Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Exp
 
 Para instalar la extensión [!DNL Bing Ads Universal Event Tracking] (UET):
 
-En la [Platform interface](http://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+En la [Platform interface](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
