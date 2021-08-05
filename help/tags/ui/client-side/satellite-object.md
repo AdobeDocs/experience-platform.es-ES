@@ -1,10 +1,10 @@
 ---
 title: Referencia de objeto de satélite de etiquetas
 description: Obtenga información acerca del objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 51%
+source-wordcount: '1258'
+ht-degree: 45%
 
 ---
 
@@ -130,7 +130,13 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 Esto registra una advertencia en la consola del explorador. El mensaje se muestra si el usuario habilita o no la depuración de etiquetas.
 
-## `cookie`
+## `cookie` {#cookie}
+
+`_satellite.cookie` contiene funciones para leer y escribir cookies. Es una copia expuesta de la biblioteca de terceros js-cookie. Para obtener más información sobre el uso más avanzado de esta biblioteca, consulte la [documentación de js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+
+### Configurar una cookie {#cookie-set}
+
+Para configurar una cookie, utilice `_satellite.cookie.set()`.
 
 **Código**
 
@@ -138,9 +144,41 @@ Esto registra una advertencia en la consola del explorador. El mensaje se muestr
 _satellite.cookie.set(name: string, value: string[, attributes: Object])
 ```
 
+>[!NOTE]
+>
+>En el antiguo método [`setCookie`](#setCookie) de configuración de cookies, el tercer argumento (opcional) de esta llamada a la función era un entero que indicaba el tiempo de vida (TTL) de la cookie en días. En este nuevo método, se acepta un objeto &quot;attributes&quot; como tercer argumento. Para establecer un TTL para una cookie mediante el nuevo método, debe proporcionar una propiedad `expires` en el objeto attributes y establecerla en el valor deseado. Esto se muestra en el siguiente ejemplo.
+
+**Ejemplo**
+
+La siguiente llamada de función escribe una cookie que caduca en una semana.
+
+```javascript
+_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
+```
+
+### Recuperar una cookie {#cookie-get}
+
+Para recuperar una cookie, utilice `_satellite.cookie.get()`.
+
+**Código**
+
 ```javascript
 _satellite.cookie.get(name: string) => string
 ```
+
+**Ejemplo**
+
+La siguiente llamada de función lee una cookie previamente establecida.
+
+```javascript
+var product = _satellite.cookie.get('product');
+```
+
+### Eliminar una cookie {#cookie-remove}
+
+Para eliminar una cookie, utilice `_satellite.cookie.remove()`.
+
+**Código**
 
 ```javascript
 _satellite.cookie.remove(name: string)
@@ -148,22 +186,11 @@ _satellite.cookie.remove(name: string)
 
 **Ejemplo**
 
-```javascript
-// Writing a cookie that expires in one week.
-_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
-```
+La siguiente llamada de función elimina una cookie previamente establecida.
 
 ```javascript
-// Reading a previously set cookie.
-var product = _satellite.cookie.get('product');
-```
-
-```javascript
-// Removing a previously set cookie.
 _satellite.cookie.remove('product');
 ```
-
-Esta es una utilidad para leer y escribir cookies. Es una copia expuesta de la biblioteca de terceros js-cookie. Para un uso más avanzado, consulte la [documentación de uso de js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage) (vínculo externo).
 
 ## `buildInfo`
 
@@ -236,11 +263,11 @@ Se puede pasar un nivel de registro opcional que afecte al estilo y el filtrado 
 
 Si no proporciona un nivel de registro ni transmite ningún otro valor de nivel, el mensaje se registra como mensaje normal.
 
-## `setCookie`
+## `setCookie` {#setCookie}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Este método se ha desaprobado. Utilice `_satellite.cookie.set()` en su lugar.
+>Este método se ha desaprobado. Utilice [`_satellite.cookie.set()`](#cookie-set) en su lugar.
 
 **Código**
 
@@ -258,9 +285,9 @@ Esto establece una cookie en el explorador del usuario. La cookie persistirá du
 
 ## `readCookie`
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Este método se ha desaprobado. Utilice `_satellite.cookie.get()` en su lugar.
+>Este método se ha desaprobado. Utilice [`_satellite.cookie.get()`](#cookie-get) en su lugar.
 
 **Código**
 
@@ -280,7 +307,7 @@ Se lee una cookie desde el explorador del usuario.
 
 >[!NOTE]
 >
->Este método se ha desaprobado. Utilice `_satellite.cookie.remove()` en su lugar.
+>Este método se ha desaprobado. Utilice [`_satellite.cookie.remove()`](#cookie-remove) en su lugar.
 
 **Código**
 
