@@ -1,14 +1,14 @@
 ---
-title: Referencia de objeto de satélite de etiquetas
-description: Obtenga información acerca del objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en Adobe Experience Platform.
-source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
+title: Referencia de objeto satelital
+description: Obtenga información sobre el objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
+source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
 workflow-type: tm+mt
-source-wordcount: '1258'
-ht-degree: 45%
+source-wordcount: '1251'
+ht-degree: 43%
 
 ---
 
-# Adobe Experience Platform tags Referencia de objeto Satellite
+# Referencia de objeto satélite
 
 >[!NOTE]
 >
