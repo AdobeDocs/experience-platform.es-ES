@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;paneles;tablero;perfiles;se
 title: Creación de utilidades personalizadas para tableros
 description: 'Esta guía proporciona instrucciones paso a paso para crear utilidades personalizadas para utilizarlas en tableros de Adobe Experience Platform. '
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: a07eb2baec48ad514ff0afc0548f53baf34da561
+source-git-commit: 4a578721cfc5e6e35179bec82886808fd6e18b53
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -41,11 +41,11 @@ Seleccione la pestaña **[!UICONTROL Personalizado]** para comenzar a crear widg
 
 ## Creación de un widget personalizado
 
-Para crear un widget personalizado, seleccione **[!UICONTROL Crear]** en el centro de la biblioteca de widgets o, si ya se han creado widgets personalizados, seleccione **[!UICONTROL Crear widget]** en la esquina superior derecha de la biblioteca de widgets.
+Para crear un widget personalizado, seleccione **[!UICONTROL Crear widget]** en la esquina superior derecha de la biblioteca de widgets o, si este es el primer widget personalizado de la organización, seleccione **[!UICONTROL Crear]** en el centro de la biblioteca de widgets.
 
 ![](../images/customization/create-widget.png)
 
-En el cuadro de diálogo **[!UICONTROL Crear utilidad]**, puede proporcionar un título y una descripción para la nueva utilidad y elegir el atributo que desea que muestre la utilidad.
+En el cuadro de diálogo **[!UICONTROL Crear utilidad]**, proporcione un título y una descripción para el nuevo widget y elija el atributo que desea que se muestre el widget.
 
 >[!NOTE]
 >
@@ -59,23 +59,59 @@ Para elegir un atributo, seleccione el botón de opción situado junto al atribu
 
 ![](../images/customization/create-widget-dialog.png)
 
-## Vista previa de un widget personalizado
+## Seleccionar una visualización
 
-En el cuadro de diálogo aparece una vista previa del nuevo widget, que muestra un gráfico de barras horizontales con datos ficticios.
+Después de seleccionar un atributo, aparece una vista previa del nuevo widget en el cuadro de diálogo. La inteligencia artificial se utiliza para seleccionar automáticamente una visualización que se ajuste mejor a los datos de atributo y para proporcionar opciones de visualización adicionales que puede seleccionar manualmente.
+
+En función del atributo , la API recomienda diferentes opciones de visualización. La lista completa de visualizaciones incluye:
+
+* Gráfico de barras horizontales: Las líneas horizontales se utilizan para representar valores.
+* Gráfico de barras verticales: Las líneas verticales se utilizan para representar valores.
+* Gráfico circular: Al igual que un gráfico circular, los valores se muestran como partes o partes de un todo.
+* Diagrama de dispersión: Utiliza un eje horizontal y vertical para indicar valores.
+* Gráfico de líneas: Los valores se muestran utilizando una sola línea para mostrar los cambios a lo largo de un período de tiempo.
+* Tarjeta de número: Muestra un número de resumen para representar un valor de clave única.
+* Tabla de datos: Los valores se muestran como filas en una tabla.
 
 >[!NOTE]
 >
->La única métrica que actualmente se admite para todos los atributos es el recuento de perfiles y la única visualización que actualmente se admite para los widgets personalizados es un gráfico de barras horizontal.
+>La única métrica admitida actualmente para todos los atributos es el recuento de perfiles.
 >
 >Los datos que se muestran en el widget de ejemplo solo tienen fines ilustrativos. La vista previa no muestra datos reales de su organización.
 
+Para guardar la nueva utilidad y volver a la pestaña [!UICONTROL Personalizado], seleccione **[!UICONTROL Crear]**.
+
 ![](../images/customization/create-widget-select-attribute.png)
 
-Para guardar la nueva utilidad y volver a la pestaña [!UICONTROL Personalizado], seleccione **[!UICONTROL Crear]**. La nueva utilidad ya está disponible para agregarse a un tablero. Para ello, elija la utilidad de la biblioteca y seleccione **[!UICONTROL Agregar utilidad]**.
+La nueva utilidad ya está disponible para agregarse a un tablero. Para ello, elija la utilidad de la biblioteca y seleccione **[!UICONTROL Agregar utilidad]**.
 
-## Archivar un widget personalizado
+![](../images/customization/custom-widgets-new.png)
 
-Una vez agregado un widget a la biblioteca, se puede archivar con el botón **[!UICONTROL Archive]**. También puede editar el widget para actualizar los campos de título o descripción.
+## Ocultar un widget personalizado
+
+Después de agregar un widget a la biblioteca, se puede ocultar seleccionando los puntos suspensivos (`...`) en la tarjeta del widget y luego seleccionando **[!UICONTROL Ocultar widget]**. También puede obtener una vista previa y editar el widget desde la misma lista desplegable.
+
+Para ver los widgets que se han ocultado, seleccione **[!UICONTROL Mostrar widgets ocultos]** en la esquina superior derecha de la biblioteca de widgets.
+
+>[!WARNING]
+>
+>Ocultar un widget en la biblioteca no elimina el widget de los tableros de usuarios individuales. Si una utilidad ya no debe utilizarse en su organización, asegúrese de comunicarla directamente a todos los usuarios de Platform, ya que deberán eliminarla de sus tableros.
+
+![](../images/customization/hide-widget.png)
+
+## Editar un widget personalizado
+
+Puede editar widgets personalizados en la biblioteca de utilidades seleccionando los elipses (`...`) en la tarjeta de la utilidad y luego seleccionando **[!UICONTROL Editar]** en el menú desplegable.
+
+![](../images/customization/custom-widget-edit.png)
+
+En el cuadro de diálogo **[!UICONTROL Editar utilidad]**, puede editar el título y la descripción del widget, así como previsualizar y seleccionar distintas visualizaciones. Después de realizar las ediciones, seleccione **[!UICONTROL Guardar]** para guardar los cambios y volver a la pestaña de widgets personalizados.
+
+>[!WARNING]
+>
+>La edición de un widget en la biblioteca no actualiza el widget para usuarios individuales. Si se ha actualizado un widget, asegúrese de comunicarlo directamente a todos los usuarios de Platform, ya que deberán eliminar el widget obsoleto de sus tableros y, a continuación, seleccionar y agregar el widget actualizado desde la biblioteca de widgets.
+
+![](../images/customization/edit-widget.png)
 
 ## Pasos siguientes
 
