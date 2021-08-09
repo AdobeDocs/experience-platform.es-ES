@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1577'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Segm
 >
 >Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos o políticas de combinación creadas, el tablero [!UICONTROL Segments] no está visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con los segmentos.
 
-###  Tablero de segmentos  {#segments-dashboard}
+###  Tablero de segmentos {#segments-dashboard}
 
 El tablero **[!UICONTROL Segments]** describe métricas clave relacionadas con los datos de segmentos de su organización.
 
@@ -82,6 +82,10 @@ La barra lateral derecha contiene información sobre todos los segmentos dentro 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
 Al seleccionar la fila de la definición del segmento, se proporciona un resumen de la definición del segmento, incluidas las opciones para editarlo o eliminarlo, la audiencia cualificada para el segmento, el tamaño total de audiencia, además del nombre, descripción, método de evaluación, fecha creada y fecha de la última modificación del segmento.
+
+>[!NOTE]
+>
+> **no** podrá eliminar un segmento que se utilice en una activación de destino.
 
 ![](../images/ui/overview/segment-browse-details.png)
 
@@ -153,7 +157,7 @@ Para obtener información más detallada sobre el uso del espacio de trabajo [!D
 
 Una vez creadas las definiciones de segmento, puede evaluarlas mediante una evaluación a petición o programada (continua). Evaluación significa mover [!DNL Real-time Customer Profile] datos a través de definiciones de segmento para producir las audiencias correspondientes. Una vez creadas, las audiencias se guardan y almacenan para que se puedan exportar con las API [!DNL Experience Platform].
 
-La evaluación bajo demanda implica el uso de la API para realizar evaluaciones y crear audiencias según sea necesario, mientras que la evaluación programada (también conocida como &quot;segmentación programada&quot;) le permite crear una programación recurrente para evaluar definiciones de segmentos en un momento específico (a un máximo, una vez al día).
+La evaluación bajo demanda implica el uso de la API para realizar evaluaciones y crear audiencias según sea necesario, mientras que la evaluación programada (también conocida como &quot;segmentación programada&quot;) le permite crear una programación recurrente para evaluar definiciones de segmentos en un momento específico (como máximo, una vez al día).
 
 ### Habilitar la segmentación programada {#enable-scheduled-segmentation}
 
