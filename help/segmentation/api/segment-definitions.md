@@ -5,10 +5,9 @@ title: Punto final de la API de definiciones de segmentos
 topic-legacy: developer guide
 description: El extremo de definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación definiciones de segmentos para su organización.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1188'
 ht-degree: 3%
 
 ---
@@ -473,6 +472,10 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
 ## Eliminar una definición de segmento específica {#delete}
 
 Puede solicitar la eliminación de una definición de segmento específica realizando una solicitud de DELETE al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea eliminar en la ruta de solicitud.
+
+>[!NOTE]
+>
+> **no** podrá eliminar un segmento que se utilice en una activación de destino.
 
 **Formato de API**
 
