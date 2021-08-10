@@ -2,14 +2,13 @@
 keywords: Publicidades de Google;publicidades de Google;adwords de Google;Google AdWords;Google Adwords
 title: Conexión de Google Ads
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por clic en publicidad en búsquedas basadas en texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Ads] connection
 
@@ -62,10 +61,10 @@ Tenga en cuenta los siguientes detalles que son específicos de destinos [!DNL G
 
 Antes de crear el [!DNL Google Ads] destino en Platform, debe ponerse en contacto con [!DNL Google] para que el Adobe se incluya en la lista de proveedores de datos permitidos y para que su cuenta se agregue a la lista de permitidos . Póngase en contacto con [!DNL Google] y proporcione la siguiente información:
 
-* **ID de cuenta** : es el ID de cuenta de Adobe con  [!DNL Google]. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
-* **ID**  de cliente: es el ID de cuenta de cliente de Adobe con  [!DNL Google]. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
+* **ID de cuenta**: ID de cuenta de Adobe con Google. ID de cuenta: 87933855.
+* **ID** de cliente: ID de cuenta de cliente de Adobe con Google. ID de cliente: 89690775.
 * El tipo de cuenta: **AdWords**
-* **ID de Google AdWords** : Este es su ID con  [!DNL Google]. El formato de ID suele ser 123-456-7890.
+* **ID de Google AdWords**: Este es su ID con  [!DNL Google]. El formato de ID suele ser 123-456-7890.
 
 ## Configurar destino
 
@@ -77,15 +76,15 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DN
 >
 >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
-En el paso **Setup** del flujo de trabajo de creación de destino, rellene [!UICONTROL Basic Information] para el destino.
+En el paso **Configuración** del flujo de trabajo de creación de destino, rellene la [!UICONTROL Información básica] para el destino.
 
 ![Información básica de Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
 
-* **[!UICONTROL Name]**: Rellene el nombre preferido para este destino.
-* **[!UICONTROL Description]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
-* **[!UICONTROL Account Type]**: AdWords es la única opción disponible.
-* **[!UICONTROL Account ID]**: Rellene su ID de cuenta con  [!DNL Google Ads]. El formato de ID suele ser 123-456-7890.
-* **[!UICONTROL Marketing action]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
+* **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
+* **[!UICONTROL Tipo]** de cuenta: AdWords es la única opción disponible.
+* **[!UICONTROL ID de cuenta]**: Rellene su ID de cuenta con  [!DNL Google Ads]. El formato de ID suele ser 123-456-7890.
+* **[!UICONTROL Acción de marketing]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
 ## Activar segmentos en [!DNL Google Ads]
 
