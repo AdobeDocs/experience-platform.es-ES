@@ -2,14 +2,13 @@
 keywords: DoubleClick Gestor de ofertas;DoubleClick Gestor de ofertas;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
 title: Conexión de Google Display y Video 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de redireccionamiento y segmentación de audiencia en todas las fuentes de inventario de dispositivos de visualización, vídeo y móviles.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Display & Video 360] connection
 
@@ -56,8 +55,8 @@ Tenga en cuenta los siguientes detalles que son específicos de destinos [!DNL G
 
 Antes de crear el [!DNL Google Display & Video 360] destino en Platform, debe ponerse en contacto con Google para solicitar que el Adobe se incluya en la lista de proveedores de datos permitidos y que su cuenta se agregue a la lista de permitidos . Póngase en contacto con Google y proporcione la siguiente información:
 
-* **ID de cuenta** : es el ID de cuenta de Adobe con Google. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
-* **ID**  de cliente: es el ID de cuenta de cliente de Adobe con Google. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
+* **ID de cuenta**: ID de cuenta de Adobe con Google. ID de cuenta: 87933855.
+* **ID** de cliente: ID de cuenta de cliente de Adobe con Google. ID de cliente: 89690775.
 * **El tipo** de cuenta: utilice  **[!DNL Invite advertiser]** para permitir que las audiencias se compartan únicamente con una marca específica de su cuenta de Display &amp; Video 360 o  **[!DNL Invite partner]** para permitir que las audiencias se compartan con todas las marcas de su cuenta de Display &amp; Video 360.
 
 ## Configurar destino
@@ -70,17 +69,17 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DN
 >
 >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre [!UICONTROL Activate] y [!UICONTROL Configure], consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
-En el paso **Setup** del flujo de trabajo de creación de destino, rellene [!UICONTROL Basic Information] para el destino, así como las acciones de marketing que deben aplicarse a este destino.
+En el paso **Configuración** del flujo de trabajo de creación de destino, rellene la [!UICONTROL Información básica] para el destino, así como las acciones de marketing que deben aplicarse a este destino.
 
 ![Información básica Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
 
-* **[!UICONTROL Name]**: Rellene el nombre preferido para este destino.
-* **[!UICONTROL Description]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
-* **[!UICONTROL Account Type]**: Seleccione una opción, en función de su cuenta con Google:
+* **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
+* **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
+* **[!UICONTROL Tipo]** de cuenta: Seleccione una opción, en función de su cuenta con Google:
    * Utilice `Invite Advertiser` para permitir que las audiencias se compartan únicamente con una marca específica de su cuenta de Display &amp; Video 360.
    * Utilice `Invite Partner` para permitir que las audiencias se compartan con todas las marcas de su cuenta de Display &amp; Video 360.
-* **[!UICONTROL Account ID]**: Rellene su ID de  **[!DNL Invite partner]** cuenta  **[!DNL Invite advertiser]** o con Google. Normalmente, se trata de un ID de seis o siete dígitos.
-* **[!UICONTROL Marketing action]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
+* **[!UICONTROL ID de cuenta]**: Rellene su ID de  **[!DNL Invite partner]** cuenta  **[!DNL Invite advertiser]** o con Google. Normalmente, se trata de un ID de seis o siete dígitos.
+* **[!UICONTROL Acción de marketing]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
