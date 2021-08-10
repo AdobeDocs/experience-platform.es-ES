@@ -4,10 +4,10 @@ user-guide-title: Ayuda de etiquetas
 breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Recopilación de datos
-source-git-commit: bddad4476d6943c7549028e93c84c8ca29059dc0
+source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 80%
+source-wordcount: '378'
+ht-degree: 79%
 
 ---
 
@@ -88,9 +88,6 @@ ht-degree: 80%
       * Información sobre Adobe Experience Manager Asset Insights {#asset-insights}
          * [Información general](./extensions/web/asset-insights/overview.md)
          * [Notas de la versión](./extensions/web/asset-insights/release-notes.md)
-      * Adobe Experience Manager Forms {#forms}
-         * [Información general](./extensions/web/forms/overview.md)
-         * [Notas de la versión](./extensions/web/forms/release-notes.md)
       * Adobe Medium Analytics para audio y vídeo {#media-analytics}
          * [Información general](./extensions/web/media-analytics/overview.md)
          * [Notas de la versión](./extensions/web/media-analytics/release-notes.md)
