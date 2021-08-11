@@ -4,9 +4,9 @@ title: Guía de la interfaz de usuario del perfil del cliente en tiempo real
 topic-legacy: guide
 description: El perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---
@@ -19,91 +19,123 @@ ht-degree: 0%
 
 Esta guía de la interfaz de usuario requiere conocer los distintos [!DNL Experience Platform] servicios relacionados con la administración de [!DNL Real-time Customer Profiles]. Antes de leer esta guía o de trabajar en la interfaz de usuario, revise la documentación de los siguientes servicios:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Real-time Customer Profile] información general](../home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Identity Service]](../../identity-service/home.md): Habilita  [!DNL Real-time Customer Profile] mediante el puente de identidades de fuentes de datos dispares a medida que se incorporan en  [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia del cliente.
 
-## Información general
+## Información general de 
 
-En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Profiles]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Overview]** que muestra el panel [!UICONTROL Profiles].
+En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Profiles]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Overview]** que muestra el panel de perfiles.
 
 >[!NOTE]
 >
 >Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos o políticas de combinación creadas, el panel [!UICONTROL Perfiles] no está visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con el Perfil del cliente en tiempo real.
 
-###  Panel de perfiles  {#profile-dashboard}
+### Panel de perfiles {#profile-dashboard}
 
-El tablero **[!UICONTROL Profiles]** describe métricas clave relacionadas con los datos de perfil de su organización.
+El panel de perfiles describe las métricas clave relacionadas con los datos de perfil de la organización.
 
-Para obtener más información, consulte la [Guía del tablero de perfil](../../dashboards/guides/profiles.md).
+Para obtener más información, consulte la [guía del panel de perfiles](../../dashboards/guides/profiles.md).
 
 ![](../../dashboards/images/profiles/dashboard-overview.png)
 
-## Examinar
+##  Métricas de la pestaña Explorar
 
-Seleccione la pestaña **[!UICONTROL Browse]** para examinar los perfiles por identidad.
+Seleccione la pestaña **[!UICONTROL Browse]** para mostrar varias métricas relacionadas con los datos de perfil de su organización. También puede utilizar esta ficha para explorar el almacén de perfiles mediante una política de combinación o una identidad, tal como se describe en la siguiente sección de esta guía.
 
-![](../images/user-guide/profiles-browse.png)
+A la derecha de la pestaña **[!UICONTROL Browse]** se encuentra el [profile count](#profile-count), así como una lista de [perfiles por namespace](#profiles-by-namespace).
 
-### Métricas de perfil {#profile-metrics}
+>[!NOTE]
+>
+>Estas métricas de perfil pueden variar con respecto a las métricas mostradas en el [panel de perfil](#profile-dashboard) porque se evalúan con la política de combinación predeterminada de su organización. Para obtener más información sobre cómo trabajar con políticas de combinación, incluida cómo definir una directiva de combinación predeterminada, consulte [merge policy overview](../merge-policies/overview.md).
 
-A la derecha de la pestaña **[!UICONTROL Browse]** hay varias métricas importantes relacionadas con los datos de perfil, incluido su [recuento de perfiles](#profile-count) total, así como una lista de [perfiles por área de nombres](#profiles-by-namespace).
+Además de estas métricas, esta sección proporciona una última fecha y hora de actualización, que muestra cuándo se evaluaron las métricas por última vez.
 
-Estas métricas de perfil se evalúan mediante la política de combinación predeterminada de su organización. Para obtener más información sobre cómo trabajar con políticas de combinación, incluida cómo definir una directiva de combinación predeterminada, consulte [merge policy overview](../merge-policies/overview.md).
-
-Además de estas métricas, la sección de métricas de perfil también proporciona una fecha y hora de última actualización, que muestra cuándo se evaluaron las métricas por última vez.
-
-![](../images/user-guide/profiles-profile-metrics.png)
+![](../images/user-guide/profiles-browse-metrics.png)
 
 ### Recuento de perfiles {#profile-count}
 
-El recuento de perfiles muestra el número total de perfiles que tiene la organización en [!DNL Experience Platform], después de que la política de combinación predeterminada de la organización se haya fusionado con fragmentos de perfil para formar un único perfil para cada cliente individual. En otras palabras, su organización puede tener varios fragmentos de perfil relacionados con un único cliente que interactúa con su marca a través de diferentes canales, pero estos fragmentos se fusionarían juntos (según la política de combinación predeterminada) y devolverían un recuento de &quot;1&quot; perfil porque todos están relacionados con la misma persona.
+El recuento de perfiles muestra el número total de perfiles que tiene la organización en Experience Platform, después de que la política de combinación predeterminada de la organización haya combinado fragmentos de perfil para formar un único perfil para cada cliente individual. En otras palabras, su organización puede tener varios fragmentos de perfil relacionados con un único cliente que interactúa con su marca a través de diferentes canales, pero estos fragmentos se fusionarían juntos (según la política de combinación predeterminada) y devolverían un recuento de &quot;1&quot; perfil porque todos están relacionados con la misma persona.
 
 El recuento de perfiles también incluye perfiles con atributos (datos de registro) y perfiles que solo contienen datos de series temporales (eventos), como perfiles de Adobe Analytics. El recuento de perfiles se actualiza regularmente para proporcionar un número total actualizado de perfiles dentro de Platform.
 
+#### Actualización de la métrica de recuento de perfiles
+
 Cuando la ingesta de registros en el almacén [!DNL Profile] aumenta o disminuye el recuento en más del 5 %, se activa un trabajo para actualizar el recuento. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingesta por lotes, en un plazo de 15 minutos tras la ingesta correcta de un lote en el Almacenamiento de perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento de perfiles.
 
-### Perfiles por área de nombres {#profiles-by-namespace}
+### [!UICONTROL Perfiles por área de nombres] {#profiles-by-namespace}
 
 La métrica **[!UICONTROL Perfiles por área de nombres]** muestra el recuento total y el desglose de áreas de nombres en todos los perfiles combinados en el Almacenamiento de perfiles. El número total de perfiles por área de nombres (es decir, sumando los valores mostrados para cada área de nombres) siempre será mayor que la métrica de recuento de perfiles porque un perfil podría tener varias áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con la marca en más de un canal, se asociarán varias áreas de nombres con ese cliente individual.
 
+#### Actualización de la métrica [!UICONTROL Perfiles por área de nombres]
+
 De forma similar a la métrica [recuento de perfiles](#profile-count), cuando la ingesta de registros en el almacén [!DNL Profile] aumenta o disminuye el recuento en más del 5%, se activa un trabajo para actualizar las métricas del área de nombres. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingesta por lotes, en un plazo de 15 minutos tras la ingesta correcta de un lote en el almacén [!DNL Profile], si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar las métricas.
 
-### Combinar directiva
+## Utilice la pestaña [!UICONTROL Browse] para ver los perfiles
 
-El selector **[!UICONTROL Merge policy]** selecciona automáticamente la directiva de combinación predeterminada para su organización. Si no desea utilizar esa política de combinación, puede seleccionar `X` junto a la directiva de combinación predeterminada para abrir el cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]**, donde puede elegir otra política de combinación.
+En la pestaña **[!UICONTROL Browse]** puede ver perfiles de muestra mediante una política de combinación o buscar perfiles específicos utilizando un espacio de nombres y un valor de identidad.
+
+![](../images/user-guide/browse-by-dropdown.png)
+
+### Examinar por [!UICONTROL Política de combinación]
+
+El selector **[!UICONTROL Examinar por]** está establecido en [!UICONTROL Política de combinación] de forma predeterminada y la **[!UICONTROL Política de combinación]** seleccionada es la política de combinación predeterminada para su organización.
 
 Para obtener más información sobre las políticas de combinación y su función dentro de Platform, consulte la [información general sobre las políticas de combinación](../merge-policies/overview.md).
 
-![](../images/user-guide/profiles-search-merge-policy.png)
+![](../images/user-guide/browse-by-merge-policy.png)
 
-### Área de nombres de identidad
+Los perfiles mostrados representan una muestra de hasta 20 perfiles del almacén de perfiles de su organización, una vez aplicada la política de combinación seleccionada. Los perfiles de muestra de la política de combinación seleccionada se actualizan cuando se agregan nuevos datos al almacén de perfiles de su organización.
 
-El selector **[!UICONTROL Área de nombres de identidad]** abre un cuadro de diálogo en el que puede elegir el área de nombres de identidad por el que desea buscar y puede personalizar los atributos que se muestran en la búsqueda seleccionando el icono de filtro y eligiendo qué atributos desea agregar o quitar.
+Para ver los detalles de uno de los perfiles de ejemplo, seleccione el **[!UICONTROL ID de perfil]**. Para obtener más información, consulte la sección más adelante en esta guía sobre la [visualización de detalles de perfil](#profile-detail).
 
-![](../images/user-guide/profiles-search-filter.png)
+![](../images/user-guide/sample-profiles.png)
 
-En el cuadro de diálogo **[!UICONTROL Seleccionar área de nombres de identidad]**, elija el área de nombres en la que desea buscar o utilice la barra de búsqueda del cuadro de diálogo para empezar a escribir el nombre de un área de nombres. Puede seleccionar un área de nombres para ver detalles adicionales y una vez encontrado el área de nombres que desee utilizar, puede seleccionar el botón de opción y pulsar **[!UICONTROL Select]** para continuar.
+Para elegir una política de combinación diferente, seleccione `X` junto al nombre de la política de combinación y utilice el selector para abrir el cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]**.
+
+![](../images/user-guide/merge-policy-select.png)
+
+Para elegir una política de combinación en el cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]**, seleccione el botón de opción situado junto al nombre de la política y, a continuación, utilice **[!UICONTROL Seleccionar]** para volver a la pestaña [!UICONTROL Examinar]. A continuación, puede seleccionar **[!UICONTROL View]** para actualizar los perfiles de muestra y ver un muestreo de perfiles con la nueva política de combinación aplicada.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
+
+### Examinar por [!UICONTROL Identity]
+
+Con el selector **[!UICONTROL Examinar por]**, puede elegir [!UICONTROL Identidad] para buscar un perfil específico por un valor de identidad. La navegación por una identidad también requiere que proporcione una política de combinación, un área de nombres de identidad y un valor de identidad.
+
+![](../images/user-guide/browse-by-identity.png)
+
+Utilice el selector **[!UICONTROL Merge policy]** para abrir el cuadro de diálogo **[!UICONTROL Select merge policy]** y elija la política de combinación que desea utilizar.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
+
+A continuación, utilice el selector **[!UICONTROL Identity namespace]** para abrir el cuadro de diálogo **[!UICONTROL Select identity namespace]** y elija el área de nombres en el que desea buscar. Si su organización tiene muchos espacios de nombres, puede utilizar la barra de búsqueda del cuadro de diálogo para empezar a escribir el nombre de un espacio de nombres.
+
+Puede seleccionar un área de nombres para ver detalles adicionales o seleccionar el botón de opción para elegir un área de nombres. A continuación, puede utilizar **[!UICONTROL Select]** para continuar.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
-### Valor de identidad
+Después de seleccionar un [!UICONTROL espacio de nombres de identidad] y volver a la pestaña [!UICONTROL Browse], puede introducir un **[!UICONTROL valor de identidad]** relacionado con el espacio de nombres seleccionado.
 
-Después de seleccionar un área de nombres de identidad, vuelva a la pestaña **[!UICONTROL Browse]** donde puede introducir un **[!UICONTROL Identity value]**. Este valor es específico de un perfil de cliente individual y debe ser una entrada válida para el área de nombres proporcionada. Por ejemplo, seleccionar el área de nombres de identidad &quot;Correo electrónico&quot; requeriría un valor de identidad en forma de dirección de correo electrónico válida.
+>[!NOTE]
+>
+>Este valor es específico de un perfil de cliente individual y debe ser una entrada válida para el área de nombres proporcionada. Por ejemplo, seleccionar el área de nombres de identidad &quot;Correo electrónico&quot; requeriría un valor de identidad en forma de dirección de correo electrónico válida.
 
-![](../images/user-guide/profiles-show-profile.png)
+![](../images/user-guide/browse-by-identity-values.png)
 
-Una vez introducido un valor, seleccione **[!UICONTROL Mostrar perfil]** y se devuelve un solo perfil que coincida con el valor. Seleccione el **[!UICONTROL ID de perfil]** para ver los detalles del perfil.
+Una vez introducido un valor, seleccione **[!UICONTROL View]** y se devuelve un solo perfil que coincida con el valor. Seleccione el **[!UICONTROL ID de perfil]** para ver los detalles del perfil.
 
-![](../images/user-guide/profiles-display-profile.png)
+![](../images/user-guide/browse-by-identity-profile.png)
 
-### Detalles de perfil {#profile-detail}
+## Ver detalles de perfil {#profile-detail}
 
-Al seleccionar el **[!UICONTROL ID de perfil]**, se abre la pestaña **[!UICONTROL Detail]**. La información de perfil mostrada en la pestaña **[!UICONTROL Detail]** se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual. Esto incluye detalles del cliente, como atributos básicos, identidades vinculadas y preferencias de canal. Los campos predeterminados mostrados también se pueden cambiar en el nivel de organización para mostrar los atributos de perfil preferidos. Para obtener más información sobre la personalización de estos campos, incluidas las instrucciones paso a paso para agregar y eliminar atributos y cambiar el tamaño de los paneles del tablero, consulte la [guía de personalización de detalles del perfil](profile-customization.md).
+Después de seleccionar un **[!UICONTROL ID de perfil]**, se abre la pestaña **[!UICONTROL Detail]**. La información de perfil mostrada en la pestaña **[!UICONTROL Detail]** se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual. Esto incluye detalles del cliente, como atributos básicos, identidades vinculadas y preferencias de canal.
+
+Los campos predeterminados mostrados también se pueden cambiar en el nivel de organización para mostrar los atributos de perfil preferidos. Para obtener más información sobre la personalización de estos campos, incluidas las instrucciones paso a paso para agregar y eliminar atributos y cambiar el tamaño de los paneles del tablero, consulte la [guía de personalización de detalles del perfil](profile-customization.md).
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Puede ver información adicional relacionada con el perfil individual seleccionando otra de las pestañas disponibles. Estas pestañas incluyen atributos, eventos y pertenencia a segmentos, que muestran los segmentos para los que el perfil está cualificado actualmente.
+Puede ver información adicional relacionada con el perfil individual seleccionando otra de las pestañas disponibles. Estas pestañas incluyen atributos, eventos y la pestaña de pertenencia a segmentos que muestra los segmentos para los que el perfil está cualificado actualmente.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
@@ -125,4 +157,4 @@ Para obtener más información sobre los esquemas de unión, visite la [guía de
 
 ## Pasos siguientes
 
-Al leer esta guía, ahora sabe cómo ver y administrar sus datos [!DNL Profile] mediante la interfaz de usuario [!DNL Experience Platform]. Para obtener información sobre cómo trabajar con datos de perfil mediante la API de perfil de cliente en tiempo real, consulte la [Guía para desarrolladores de perfil](../api/overview.md).
+Al leer esta guía, sabe cómo ver y administrar los datos de perfil de su organización mediante la interfaz de usuario del Experience Platform. Para obtener información sobre cómo trabajar con datos de perfil mediante API de Experience Platform, consulte la [Guía de API de perfil de cliente en tiempo real](../api/overview.md).
