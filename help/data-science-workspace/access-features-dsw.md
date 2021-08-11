@@ -5,11 +5,10 @@ title: Acceso y funciones de Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: El siguiente documento describe los permisos de Data Science Workspace y el acceso a las funciones.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 3%
+source-wordcount: '685'
+ht-degree: 2%
 
 ---
 
@@ -21,26 +20,28 @@ El siguiente documento describe los permisos de Data Science Workspace y el acce
 
 - **Portátiles:** proporciona un entorno de desarrollo interactivo ([JupyterLab](./jupyterlab/overview.md)) para explorar, analizar y modelar los datos en el Experience Platform.
 - **Modelos:** proporciona las herramientas que se utilizan para crear, publicar y almacenar fórmulas y modelos de aprendizaje automático avanzados. Para obtener más información, visite el tutorial [crear y publicar un modelo de aprendizaje automático](./models-recipes/create-publish-model.md).
-- **Servicios:** contiene servicios proporcionados por el Adobe, como  [Intelligent ](../intelligent-services/home.md) Services, y cualquier servicio personalizado que haya creado con Data Science Workspace.
+- **Servicios:** contiene servicios proporcionados por el Adobe, como  [servicios AI/ML ](../intelligent-services/home.md) y cualquier servicio personalizado creado con Data Science Workspace.
 
 ¿Por qué solo veo la pestaña Servicios?
 
-- Es posible que su organización solo tenga derecho a la plataforma de datos del cliente en tiempo real (RTCDP), que incluye el servicio inteligente AI del cliente.
+- Es posible que su organización solo tenga derecho a la plataforma de datos del cliente en tiempo real (RTCDP), que incluye el servicio AI/ML del cliente.
 
 Si no puede ver ninguna de las pestañas **Data Science** y desea utilizar las funciones de Data Science Workspace, póngase en contacto con el administrador de su empresa para comprobar si dispone de una licencia de Adobe Experience Platform Intelligence.
 
-## complemento del paquete Adobe Experience Platform Intelligence
+## Empaquetado de Data Science Workspace
 
-La siguiente tabla describe algunas de las diferencias clave para Data Science Workspace con y sin el complemento del paquete Adobe Experience Platform Intelligence :
+Las funcionalidades de Data Science Workspace están disponibles en el paquete de Adobe Experience Platform Intelligence y en el complemento de Advanced Intelligence Pack
+
+La siguiente tabla describe algunas de las diferencias clave entre las autorizaciones de Data Science Workspace con y sin el complemento de Advanced Intelligence Pack:
 
 >[!NOTE]
 >
->Puede obtener una licencia de más de un complemento del paquete de inteligencia y el aumento de la capacidad se añade a su derecho general. Por ejemplo, si tiene licencia de dos complementos de paquete de Adobe Experience Platform Intelligence, tiene derecho a un total de 20 usuarios de Notebook simultáneos.
+>Puede obtener una licencia de más de un Advanced Intelligence Pack Addon y el aumento de la capacidad se agrega a su asignación general. Por ejemplo, si tiene licencia de dos complementos de Adobe Experience Platform Advanced Intelligence Pack, tiene derecho a un total de 20 usuarios de Notebook simultáneos.
 
-|  | [!DNL Data Science Workspace] | [!DNL Data Science Workspace] con el complemento del paquete de inteligencia |
+| Derechos de Data Science Workspace | Solo paquete de inteligencia de Adobe Experience Platform | Adobe Experience Platform Intelligence más el complemento Advanced Intelligence Pack |
 | --- | :---: | :---: |
 | Número de usuarios de portátiles admitidos. | 5 usuarios simultáneos | El primer paquete agrega 5 usuarios simultáneos y las compras adicionales agregan 10 usuarios simultáneos por paquete. |
-| Permite portátiles Jupyter integrados para análisis de datos exploratorios y creación de modelos (R, Python, Scala, PySpark) | X | X |
+| Permite Jupyter Notebooks integrados para análisis de datos exploratorios y creación de modelos. | X (admite bibliotecas R, Python y Scala) | X (añade bibliotecas PySpark y Spark ML) |
 | Integración nativa con Query Service. Capacidad para explorar y dar forma a conjuntos de datos mediante SQL en portátiles. | X | X |
 | Acceso a plantillas de portátiles creadas previamente para análisis predictivos. | X | X |
 | Capacite y puntee manualmente los modelos con Jupyter Notebooks. | X | X |
@@ -62,11 +63,11 @@ Para utilizar Data Science Workspace, el permiso &quot;Administrar Data Science 
 
 ## Compatibilidad con Sandbox
 
-Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform. Cada instancia de Platform admite un simulador para pruebas de producción y varios entornos limitados que no sean de producción, cada uno de los cuales mantiene su propia biblioteca de recursos de Platform. Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a su entorno limitado de producción. Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../sandboxes/home.md).
+Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform. Cada instancia de Platform admite varios entornos limitados de producción y entornos limitados que no sean de producción, cada uno de los cuales mantiene su propia biblioteca de recursos de Platform. Los entornos limitados que no son de producción permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a los entornos limitados de producción. Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../sandboxes/home.md).
 
 Actualmente, Data Science Workspace tiene la siguiente limitación de entornos limitados:
 
-- Los recursos de cómputo se comparten entre el entorno limitado de producción y los entornos limitados que no son de producción.
+- Los recursos de cómputo se comparten entre los entornos limitados de producción y sin producción.
 
 ## Pasos siguientes
 
