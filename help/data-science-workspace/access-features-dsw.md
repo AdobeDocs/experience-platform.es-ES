@@ -5,9 +5,9 @@ title: Acceso y funciones de Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: El siguiente documento describe los permisos de Data Science Workspace y el acceso a las funciones.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
+source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ Para utilizar Data Science Workspace, el permiso &quot;Administrar Data Science 
 
 ## Compatibilidad con Sandbox
 
-Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform. Cada instancia de Platform admite varios entornos limitados de producción y entornos limitados que no sean de producción, cada uno de los cuales mantiene su propia biblioteca de recursos de Platform. Los entornos limitados que no son de producción permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a los entornos limitados de producción. Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../sandboxes/home.md).
+Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform. Cada instancia de Platform admite varios entornos limitados de producción y sin producción, cada uno de los cuales mantiene su propia biblioteca de recursos de Platform. Los entornos limitados que no son de producción permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a los entornos limitados de producción. Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../sandboxes/home.md).
 
 Actualmente, Data Science Workspace tiene la siguiente limitación de entornos limitados:
 
