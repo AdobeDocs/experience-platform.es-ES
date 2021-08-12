@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-translation-type: tm+mt
-source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
+source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1371'
 ht-degree: 2%
 
 ---
@@ -304,13 +303,13 @@ Con el conjunto de datos, la conexión de flujo continuo y el flujo de datos cre
 **Formato de API**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | El valor `id` de la conexión de flujo continuo recién creada. |
-| `synchronousValidation` | Un parámetro de consulta opcional diseñado para fines de desarrollo. Si se establece en `true`, se puede utilizar para comentarios inmediatos a fin de determinar si la solicitud se ha enviado correctamente. De forma predeterminada, este valor se establece en `false`. |
+| `syncValidation` | Un parámetro de consulta opcional diseñado para fines de desarrollo. Si se establece en `true`, se puede utilizar para comentarios inmediatos a fin de determinar si la solicitud se ha enviado correctamente. De forma predeterminada, este valor se establece en `false`. Tenga en cuenta que si establece este parámetro de consulta en `true`, la tasa de la solicitud estará limitada a 60 veces por minuto por `CONNECTION_ID`. |
 
 **Solicitud**
 
@@ -325,7 +324,7 @@ La solicitud de ejemplo siguiente incorpora datos de series temporales con un no
 >Tanto `xdmEntity._id` como `xdmEntity.timestamp` son los únicos campos obligatorios para los datos de series temporales. Además, la siguiente llamada de API **no** requiere encabezados de autenticación.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
   -d '{
     "header": {
@@ -412,7 +411,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profil
     "inletId": "{CONNECTION_ID}",
     "xactionId": "1584479347507:2153:240",
     "receivedTimeMs": 1584479347507,
-    "synchronousValidation": {
+    "syncValidation": {
         "status": "pass"
     }
 }
@@ -423,7 +422,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profil
 | `{CONNECTION_ID}` | El `inletId` de la conexión de flujo continuo creada anteriormente. |
 | `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a los Adobes a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
 | `receivedTimeMs`: Marca de tiempo (época en milisegundos) que muestra la hora a la que se recibió la solicitud. |
-| `synchronousValidation.status` | Dado que se ha agregado el parámetro de consulta `synchronousValidation=true`, este valor aparecerá. Si la validación se ha realizado correctamente, el estado será `pass`. |
+| `syncValidation.status` | Dado que se ha agregado el parámetro de consulta `syncValidation=true`, este valor aparecerá. Si la validación se ha realizado correctamente, el estado será `pass`. |
 
 ## Recuperar los datos de series temporales recién introducidos
 
