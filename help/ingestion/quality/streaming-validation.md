@@ -6,8 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 'La introducción por transmisión le permite cargar sus datos en Adobe Experience Platform mediante la transmisión de puntos de conexión en tiempo real. Las API de ingesta de transmisión admiten dos modos de validación: sincrónica y asincrónica.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 3%
@@ -63,7 +62,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 La validación sincrónica es un método de validación que proporciona información inmediata sobre el motivo del error de ingesta. Sin embargo, al producirse un error, los registros en los que se ha producido un error en la validación se pierden e impiden que se envíen de forma descendente. Como resultado, la validación sincrónica solo debe utilizarse durante el proceso de desarrollo. Al realizar la validación sincrónica, se informa a los autores de llamadas del resultado de la validación XDM y, si ha fallado, del motivo del error.
 
-De forma predeterminada, la validación sincrónica no está activada. Para habilitarlo, debe pasar el parámetro de consulta opcional `synchronousValidation=true` al realizar llamadas de API. Además, la validación sincrónica actualmente solo está disponible si el punto final del flujo está en el centro de datos de VA7.
+De forma predeterminada, la validación sincrónica no está activada. Para habilitarlo, debe pasar el parámetro de consulta opcional `syncValidation=true` al realizar llamadas de API. Además, la validación sincrónica actualmente solo está disponible si el punto final del flujo está en el centro de datos de VA7.
 
 Si un mensaje falla durante la validación sincrónica, el mensaje no se escribirá en la cola de salida, lo que proporciona comentarios inmediatos a los usuarios.
 
@@ -74,7 +73,7 @@ Si un mensaje falla durante la validación sincrónica, el mensaje no se escribi
 **Formato de API**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Parámetro | Descripción |
@@ -86,7 +85,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 Envíe la siguiente solicitud para introducir datos en la entrada de datos con validación sincrónica:
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
   -d '{JSON_PAYLOAD}'
 ```
@@ -185,7 +184,7 @@ Con la validación asíncrona habilitada, una respuesta correcta devuelve lo sig
     "inletId": "f6ca9706d61de3b78be69e2673ad68ab9fb2cece0c1e1afc071718a0033e6877",
     "xactionId": "1555445493896:8600:8",
     "receivedTimeMs": 1555445493932,
-    "synchronousValidation": {
+    "syncValidation": {
         "skipped": true
     }
 }
