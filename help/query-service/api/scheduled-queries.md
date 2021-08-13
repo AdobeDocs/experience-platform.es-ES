@@ -5,10 +5,10 @@ title: Punto final de API de consultas programadas
 topic-legacy: scheduled queries
 description: Las secciones siguientes recorren las distintas llamadas de API que puede realizar para consultas programadas con la API del servicio de consulta.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: e99b57706bb5bdb0abaf4209a259b478d9406783
+source-git-commit: 0b1afcb23e070209006383d27eb68edcf92d02cd
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 3%
+source-wordcount: '1113'
+ht-degree: 2%
 
 ---
 
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | Nombre de la base de datos para la que está creando una consulta programada. |
 | `query.sql` | La consulta SQL que desea crear. |
 | `query.name` | Nombre de la consulta programada. |
-| `schedule.schedule` | La programación cron de la consulta. Para obtener más información sobre las programaciones de cron, lea la documentación de [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). En este ejemplo, &quot;30 * * * *&quot; significa que la consulta se ejecutará cada hora con la marca de 30 minutos. |
+| `schedule.schedule` | La programación cron de la consulta. Para obtener más información sobre las programaciones de cron, lea la documentación de [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). En este ejemplo, &quot;30 * * * *&quot; significa que la consulta se ejecutará cada hora con la marca de 30 minutos.<br><br>También puede utilizar las siguientes expresiones taquigráfica:<ul><li>`@once`: La consulta solo se ejecuta una vez.</li><li>`@hourly`: La consulta se ejecuta cada hora al principio de la hora. Esto equivale a la expresión cron `0 * * * *`.</li><li>`@daily`: La consulta se ejecuta una vez al día a medianoche. Esto equivale a la expresión cron `0 0 * * *`.</li><li>`@weekly`: La consulta se ejecuta una vez a la semana, el domingo, a medianoche. Esto equivale a la expresión cron `0 0 * * 0`.</li><li>`@monthly`: La consulta se ejecuta una vez al mes, el primer día del mes, a medianoche. Esto equivale a la expresión cron `0 0 1 * *`.</li><li>`@yearly`: La consulta se ejecuta una vez al año, el 1 de enero, a medianoche. Esto equivale a la expresión cron `1 0 0 1 1 *`. |
 | `schedule.startDate` | La fecha de inicio de la consulta programada, escrita como una marca de tiempo UTC. |
 
 **Respuesta**
