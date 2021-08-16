@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de la extensión Core
 description: Últimas notas de la versión de la extensión Core en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 86%
+source-wordcount: '1293'
+ht-degree: 81%
 
 ---
 
@@ -13,6 +13,16 @@ ht-degree: 86%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 11 de agosto de 2021
+
+Versión 3.0.0
+
+* PDCL-6153: Añade compatibilidad para extraer de forma fiable la URL completa para las acciones de código personalizado en caché.
+
+La versión 3.0.0 de la extensión principal está acompañada de cambios en [v27.2.0 del motor de ejecución web de Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite a los usuarios cargar su biblioteca entre muchas regiones de alojamiento gestionadas por Adobe si la empresa del usuario admite CDN Premium.
+
+Esta actualización es opcional y retrocompatible para los usuarios sin CDN Premium, y obligatoria para los clientes que tienen CDN Premium habilitado en su empresa.
 
 ## 20 de mayo de 2021
 
