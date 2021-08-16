@@ -1,10 +1,10 @@
 ---
 title: Punto de búsqueda
 description: Aprenda a realizar llamadas al extremo /search en la API de Reactor.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 2%
+source-wordcount: '662'
+ht-degree: 1%
 
 ---
 
@@ -43,25 +43,15 @@ Para obtener información detallada sobre cómo utilizar esta funcionalidad, con
 
 El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de reglas {#list}
+## Realizar una búsqueda {#perform}
 
-Puede recuperar una lista de reglas pertenecientes a una propiedad realizando una solicitud de GET.
+Puede realizar una búsqueda realizando una solicitud de POST.
 
 **Formato de API**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| Parámetro | Descripción |
-| --- | --- |
-| `PROPERTY_ID` | El `id` de la propiedad cuyos componentes desea enumerar. |
-
-{style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->Mediante parámetros de consulta, las reglas enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -71,6 +61,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {
