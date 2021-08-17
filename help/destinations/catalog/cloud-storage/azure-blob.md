@@ -2,80 +2,56 @@
 keywords: Azure Blob;destino de Blob;s3;destino de azure blob
 title: Conexión de Azure Blob
 description: Cree una conexión saliente en directo al almacenamiento del blob de Azure para exportar periódicamente archivos de datos de Adobe Experience Platform delimitados por tabulaciones o CSV.
-translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
+source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '416'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Azure Blob] connection
 
 ## Información general {#overview}
 
-[!DNL Azure Blob] (en adelante, &quot;[!DNL Blob]&quot;) es la solución de almacenamiento de objetos de Microsoft para la nube. Este tutorial proporciona pasos para crear un destino [!DNL Blob] mediante la interfaz de usuario [!DNL Platform].
+[!DNL Azure Blob] (en lo sucesivo denominada  [!DNL Blob]) es la solución de almacenamiento de objetos de Microsoft para la nube. Este tutorial proporciona pasos para crear un destino [!DNL Blob] mediante la interfaz de usuario [!DNL Platform].
 
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
-   - [Aspectos básicos de la composición](../../../xdm/schema/composition.md) del esquema: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Tutorial del Editor de esquemas](../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+   * [Aspectos básicos de la composición](../../../xdm/schema/composition.md) del esquema: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   * [Tutorial del Editor de esquemas](../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
+* [[!DNL Real-time Customer Profile]](../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Si ya tiene un destino de Blob válido, puede omitir el resto de este documento y continuar con el tutorial sobre la [activación de segmentos a su destino](../../ui/activate-destinations.md).
+Si ya tiene un destino [!DNL Blob] válido, puede omitir el resto de este documento y continuar con el tutorial sobre la [activación de segmentos en el destino](../../ui/activate-destinations.md).
 
 ## Formatos de archivo compatibles {#file-formats}
 
 [!DNL Experience Platform] admite el siguiente formato de archivo para exportar a  [!DNL Blob]:
 
-- Valores separados por delimitadores (DSV): Actualmente, la compatibilidad con archivos de datos con formato DSV está limitada a valores separados por coma. En el futuro se admitirán los archivos DSV generales. Para obtener más información sobre los archivos compatibles, lea la sección almacenamiento en la nube en el tutorial sobre [activación de destinos](../../ui/activate-destinations.md#esp-and-cloud-storage).
+* Valores separados por delimitadores (DSV): Actualmente, la compatibilidad con archivos de datos con formato DSV está limitada a valores separados por coma. En el futuro se admitirán los archivos DSV generales. Para obtener más información sobre los archivos compatibles, lea la sección almacenamiento en la nube en el tutorial sobre [activación de destinos](../../ui/activate-destinations.md#esp-and-cloud-storage).
 
-## Conecte su cuenta de Blob {#connect-destination}
+## Conectarse al destino {#connect}
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Destinations]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de destinos con los que puede crear una cuenta.
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar el destino específico con el que desea trabajar usando la opción de búsqueda.
+### Parámetros de conexión {#parameters}
 
-En la categoría **[!UICONTROL Cloud Storage]**, seleccione **[!UICONTROL Azure Blob Storage]**, seguido de **[!UICONTROL Configure]**.
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
-![Catalog](../../assets/catalog/cloud-storage/blob/catalog.png)
+* **[!UICONTROL Cadena]** de conexión: la cadena de conexión es necesaria para acceder a los datos del almacenamiento de blob. El patrón de la cadena de conexión [!DNL Blob] comienza por: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
+   * Para obtener más información sobre la configuración de la cadena de conexión [!DNL Blob], consulte [Configuración de una cadena de conexión para una cuenta de almacenamiento de Azure](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) en la documentación de Microsoft.
 
->[!NOTE]
->
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
-
-Aparece la página **[!UICONTROL Connect to Azure Blob Storage]**. En esta página, puede usar credenciales nuevas o existentes.
-
-## Nueva cuenta {#new-account}
-
-Si está utilizando credenciales nuevas, seleccione **[!UICONTROL New account]**. En el formulario de entrada que aparece, proporcione la cadena de conexión. La cadena de conexión es necesaria para acceder a los datos del almacenamiento del blob. El patrón de la cadena de conexión [!DNL Blob] comienza por: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
-
-Para obtener más información sobre la configuración de la cadena de conexión [!DNL Blob], consulte [Configuración de una cadena de conexión para una cuenta de almacenamiento de Azure](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) en la documentación de Microsoft.
+* Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
+* **[!UICONTROL Nombre]**: introduzca un nombre que le ayudará a identificar este destino.
+* **[!UICONTROL Descripción]**: introduzca una descripción de este destino.
+* **[!UICONTROL Ruta de acceso]** de la carpeta: introduzca la ruta a la carpeta de destino que alojará los archivos exportados.
+* **[!UICONTROL Contenedor]**: introduzca el nombre del  [!DNL Azure Blob Storage] contenedor que usará este destino.
 
 Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
 
-![Nueva cuenta](../../assets/catalog/cloud-storage/blob/new.png)
+## Activar segmentos en este destino {#activate}
 
-## Cuenta existente {#existing-account}
-
-Para conectar una cuenta existente, seleccione la cuenta [!DNL Blob] con la que desea conectarse y, a continuación, seleccione **Siguiente** para continuar.
-
-![Cuenta existente](../../assets/catalog/cloud-storage/blob/existing.png)
-
-## Autenticación {#authentication}
-
-Aparece la página **Autenticación**. En el formulario de entrada que aparece, indique un nombre, una descripción opcional, la ruta de la carpeta y el contenedor de los archivos.
-
-En este paso, también puede seleccionar cualquier **[!UICONTROL Marketing actions]** que deba aplicarse a este destino. Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
-
-Cuando termine, seleccione **[!UICONTROL Create destination]**.
-
-![Autenticación](../../assets/catalog/cloud-storage/blob/authentication.png)
-
-## Pasos siguientes {#activate-segments}
-
-Al seguir este tutorial, ha establecido una conexión con su cuenta [!DNL Blob]. Ahora puede continuar con el siguiente tutorial y [activar segmentos en su destino](../../ui/activate-destinations.md).
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
