@@ -3,10 +3,10 @@ keywords: móvil; brasil; mensajería;
 title: Conexión con el Brazo
 description: Braze es una completa plataforma de participación del cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les encantan.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 1%
+source-wordcount: '789'
+ht-degree: 2%
 
 ---
 
@@ -38,7 +38,7 @@ Tenga en cuenta los siguientes detalles que son específicos del destino [!DNL B
 
 Como especialista en marketing, quiero segmentar usuarios en un destino de participación móvil, con segmentos incorporados en [!DNL Adobe Experience Platform]. Además, quiero ofrecerles experiencias personalizadas basadas en atributos de sus perfiles [!DNL Adobe Experience Platform] en cuanto los segmentos y perfiles se actualicen en [!DNL Adobe Experience Platform].
 
-## Identidades admitidas {#supported-identities}
+## Identidades compatibles {#supported-identities}
 
 [!DNL Braze] admite la activación de identidades descritas en la tabla siguiente.
 
@@ -51,37 +51,24 @@ Como especialista en marketing, quiero segmentar usuarios en un destino de parti
 **[!DNL Profile-based]** - está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos) o identidades, según la asignación de campos.
 [!DNL Adobe Experience Platform] los segmentos se exportan a  [!DNL Braze] en el  `AdobeExperiencePlatformSegments` atributo .
 
-## Conectarse al destino {#connect-destination}
+## Conectarse al destino {#connect}
 
-En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DNL Braze] y seleccione **[!UICONTROL Configure]**.
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-![Configurar destino de Brazo](../../assets/catalog/mobile-engagement/braze/configure.png)
+### Parámetros de conexión {#parameters}
 
->[!NOTE]
->
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
->
->![Activar destino de Brazo](../../assets/catalog/mobile-engagement/braze/activate.png)
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
-En el paso [!UICONTROL Cuenta], debe proporcionar el token de cuenta [!DNL Braze]. Esta es su clave [!DNL Braze] [!DNL API]. Puede encontrar instrucciones detalladas sobre cómo obtener su clave [!DNL API] aquí: [Información general sobre la clave de API de REST](https://www.braze.com/docs/api/api_key/). Introduzca el token y haga clic en **[!UICONTROL Connect to destination]**.
-
-![Paso de cuenta de destino de Brazo](../../assets/catalog/mobile-engagement/braze/account.png)
-
-Haga clic en **[!UICONTROL Siguiente]**. En el paso [!UICONTROL Authentication] , debe introducir los detalles de conexión [!DNL Braze]:
+* **[!UICONTROL Token]** de cuenta en el espacio: Esta es tu  [!DNL Braze] [!DNL API] llave. Puede encontrar instrucciones detalladas sobre cómo obtener su clave [!DNL API] aquí: [Información general sobre la clave de API de REST](https://www.braze.com/docs/api/api_key/).
 * **[!UICONTROL Nombre]**: introduzca un nombre por el que reconozca este destino en el futuro.
 * **[!UICONTROL Descripción]**: escriba una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL Instancia de extremo]**: pregunte a su  [!DNL Braze] representante qué instancia de extremo debe utilizar.
-* **[!UICONTROL Acción de marketing]**: las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
-![Paso de autenticación de Brazo](../../assets/catalog/mobile-engagement/braze/authentication.png)
+## Activar segmentos en este destino {#activate}
 
-Haga clic en **[!UICONTROL Crear destino]**. Se ha creado el destino. Puede hacer clic en **[!UICONTROL Guardar y salir]** si desea activar los segmentos más adelante, o puede seleccionar **[!UICONTROL Siguiente]** para continuar con el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
 
-## Activar segmentos {#activate-segments}
-
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md#select-attributes) para obtener información sobre el flujo de trabajo de activación de segmentos.
-
-## Asignación de campos {#field-mapping}
+## Consideraciones de asignación {#mapping-considerations}
 
 Para enviar correctamente los datos de audiencia de [!DNL Adobe Experience Platform] al destino [!DNL Braze] , debe pasar por el paso de asignación de campos.
 
@@ -145,6 +132,6 @@ La asignación correcta tendría este aspecto:
 
 Para verificar si los datos se han exportado correctamente al destino [!DNL Braze] , compruebe su cuenta [!DNL Braze]. [!DNL Adobe Experience Platform] los segmentos se exportan a  [!DNL Braze] en el  `AdobeExperiencePlatformSegments` atributo .
 
-## Administración y uso de datos {#data-usage-governance}
+## Uso y gobernanza de los datos {#data-usage-governance}
 
 Todos los destinos [!DNL Adobe Experience Platform] cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, consulte [Información general sobre el control de datos](../../../data-governance/home.md).
