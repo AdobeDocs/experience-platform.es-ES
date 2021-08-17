@@ -4,9 +4,9 @@ title: Información general sobre los destinos de marketing por correo electrón
 type: Tutorial
 description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como por ejemplo el envío de campañas de correo electrónico promocionales.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 4%
 
 ---
@@ -70,9 +70,9 @@ Lea los artículos de destino de marketing por correo electrónico para aprender
 
 ## Activar segmentos en destinos de marketing por correo electrónico {#activate}
 
-Para obtener instrucciones sobre cómo activar segmentos en destinos de marketing de correo electrónico, consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md).
+Para obtener instrucciones sobre cómo activar segmentos en destinos de marketing por correo electrónico, consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md).
 
 ## Recursos adicionales
 
-* [Activar datos en destinos](../../ui/activate-destinations.md)
+* [Activar datos de audiencia en destinos de exportación de perfiles en lote](../../ui/activate-batch-profile-destinations.md)
 * [Cree destinos de marketing por correo electrónico y active los datos mediante la API de servicio de flujo](../../api/email-marketing.md)
