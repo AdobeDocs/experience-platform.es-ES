@@ -3,9 +3,9 @@ keywords: publicidad; la oficina de comercio; oficina de publicidad
 title: La conexión con el mostrador de comercio
 description: Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de redireccionamiento y segmentación de audiencia en distintas fuentes de inventario de dispositivos móviles, vídeo y visualización.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 2%
 
 ---
@@ -63,9 +63,9 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
+Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
-En el paso [Programación de segmentos](../../ui/activate-destinations.md#segment-schedule), debe asignar manualmente los segmentos a su ID correspondiente o nombre descriptivo en la plataforma de destino.
+En el paso [Programación de segmentos](../../ui/activate-segment-streaming-destinations.md#scheduling), debe asignar manualmente los segmentos a su ID correspondiente o nombre descriptivo en la plataforma de destino.
 
 Al asignar segmentos, le recomendamos que utilice el nombre del segmento de Platform o una forma más corta de él, para facilitar su uso. Sin embargo, el ID de segmento o el nombre de su destino no necesitan coincidir con el de su cuenta de Platform. El destino reflejará cualquier valor que inserte en el campo de asignación.
 
