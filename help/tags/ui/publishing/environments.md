@@ -1,9 +1,9 @@
 ---
 title: Entornos
 description: Obtenga información sobre el concepto de entornos de etiquetas y cómo funcionan dentro de Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1468'
 ht-degree: 79%
 
 ---
@@ -128,7 +128,7 @@ Para obtener más información sobre esta configuración, consulte la guía de [
 
 #### Implementación sincrónica
 
-Cuando el explorador lee un código incrustado mediante una implementación sincrónica, recupera la biblioteca de etiquetas y la ejecuta antes de continuar cargando la página. También es así como funciona la [Dynamic Tag Management (DTM)](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html).
+Cuando el explorador lee un código incrustado mediante una implementación sincrónica, recupera la biblioteca de etiquetas y la ejecuta antes de continuar cargando la página.
 
 Los códigos incrustados sincrónicos constan de dos etiquetas `<script>` que deben colocarse dentro del HTML del sitio web. Una etiqueta `<script>` debe colocarse en el documento `<head>`, mientras que la otra debe colocarse justo antes de la etiqueta `</body>` de cierre.
 
