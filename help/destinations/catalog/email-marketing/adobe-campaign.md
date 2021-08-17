@@ -3,9 +3,9 @@ keywords: correo electrónico;correo electrónico;destinos de correo electrónic
 title: Conexión Adobe Campaign
 description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y entregar campañas en todos sus canales en línea y sin conexión.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '722'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Para enviar datos de segmentos a Adobe Campaign, primero debe [conectar el desti
 
 ## Tipo de exportación {#export-type}
 
-**Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono y apellidos), tal como se elige en el paso  **[!UICONTROL Select]** attributess del flujo de trabajo de activación de  [destino](../../ui/activate-destinations.md#select-attributes).
+**Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono y apellidos), tal como se elige en el paso  **[!UICONTROL Seleccionar]** atributos del flujo de trabajo de activación de  [audiencia](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## LISTA DE PERMITIDOS de direcciones IP {#allow-list}
 
@@ -54,20 +54,20 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 * **[!UICONTROL Descripción]**: Escriba una descripción para el destino.
 * **[!UICONTROL Nombre del depósito]**:  *Para conexiones* S3. Introduzca la ubicación del espacio S3 donde [!DNL Platform] depositará los datos de exportación como archivos CSV o delimitados por tabuladores.
 * **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en la ubicación de almacenamiento donde  [!DNL Platform] depositará los datos de exportación como archivos CSV o delimitados por tabuladores.
-* **[!UICONTROL Contenedor]**:  *Para conexiones* Blob. El contenedor que contiene el Blob en el que se encuentra la ruta de la carpeta.
+* **[!UICONTROL Contenedor]**:  *Para conexiones* Blob. El contenedor que alberga el Blob en el que se encuentra la ruta de la carpeta.
 * **[!UICONTROL Formato]** de archivo:  **** CSVo  **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a su ubicación de almacenamiento.
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
+Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
-## Atributos de destino {#destination-attributes}
+### Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](../../ui/activate-destinations.md) en este destino, Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Seleccionar qué campos de esquema utilizar como atributos de destino en los archivos exportados](./overview.md#destination-attributes).
+Al activar segmentos en este destino, Adobe recomienda que seleccione un identificador único del [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte las [prácticas recomendadas al activar audiencias en destinos de marketing por correo electrónico](overview.md#best-practices).
 
 ## Datos exportados {#exported-data}
 
-Para destinos [!DNL Adobe Campaign], [!DNL Platform] crea un archivo `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube](../../ui/activate-destinations.md#esp-and-cloud-storage) en el tutorial de activación de segmentos.
+Para destinos [!DNL Adobe Campaign], [!DNL Platform] crea un archivo `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [verificación de la activación de segmentos](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de segmentos.
 
 ## Configuración de la importación de datos en Adobe Campaign {#import-data-into-campaign}
 
