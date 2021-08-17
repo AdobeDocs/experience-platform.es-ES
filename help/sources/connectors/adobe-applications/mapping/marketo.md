@@ -5,10 +5,10 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
@@ -176,7 +176,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 {style=&quot;table-layout:auto&quot;}
 
-## Membresías de lista estáticas {#static-list-memnberships}
+## Pertenencia a listas estáticas {#static-list-memnberships}
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -310,7 +310,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 >[!NOTE]
 >
->El campo de origen `to_object('ECID',arrays_to_objects('id',explode(ecids)))` es un campo calculado que debe añadirse utilizando la opción [!UICONTROL Add calculated field] en la interfaz de usuario de Platform. Consulte el tutorial sobre [adición de campos calculados](../../../../ingestion/tutorials/map-a-csv-file.md) para obtener más información.
+>El campo de origen `to_object('ECID',arrays_to_objects('id',explode(ecids)))` es un campo calculado que debe añadirse utilizando la opción [!UICONTROL Add calculated field] en la interfaz de usuario de Platform. Consulte el tutorial sobre [adición de campos calculados](../../../../data-prep/calculated-fields.md) para obtener más información.
 
 ## Pasos siguientes
 
