@@ -6,9 +6,9 @@ description: Este documento cubre la creación de destinos de marketing por corr
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1705'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Este tutorial utiliza el destino de Adobe Campaign en todos los ejemplos, pero l
 
 ![Información general: los pasos para crear un destino y activar segmentos](../assets/api/email-marketing/overview.png)
 
-Si prefiere utilizar la interfaz de usuario en Platform para conectar un destino y activar datos, consulte los tutoriales [Connect a destination](../ui/connect-destination.md) y [Activate profiles and segments to a destination](../ui/activate-destinations.md) .
+Si prefiere utilizar la interfaz de usuario en Platform para conectar un destino y activar datos, consulte los tutoriales [Connect a destination](../ui/connect-destination.md) y [Activate audience data to batch profile export destinos](../ui/activate-batch-profile-destinations.md) .
 
 ## Introducción 
 
