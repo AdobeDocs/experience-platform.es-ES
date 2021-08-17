@@ -4,7 +4,7 @@ title: Crear una nueva conexión de destino
 type: Tutorial
 description: Este tutorial enumera los pasos para conectarse a un destino en Adobe Experience Platform
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 1c67d9eb1b7762ecfcad5b0b7db5c317621f144e
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%
@@ -65,4 +65,4 @@ Introduzca los detalles de conexión de la plataforma de destino y seleccione **
 
    ![Conectarse al destino](../assets/ui/connect-destinations/connect-destination.png)
 
-1. Seleccione **[!UICONTROL Guardar y salir]** para guardar la configuración de destino o seleccione **[!UICONTROL Siguiente]** para continuar con los datos de audiencia [flujo de activación](activate-destinations.md).
+1. Seleccione **[!UICONTROL Guardar y salir]** para guardar la configuración de destino o seleccione **[!UICONTROL Siguiente]** para continuar con los datos de audiencia [flujo de activación](activation-overview.md).
