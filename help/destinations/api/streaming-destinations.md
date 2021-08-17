@@ -6,9 +6,9 @@ description: Este documento cubre la creación de destinos de flujo continuo med
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2025'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial utiliza el destino [!DNL Amazon Kinesis] en todos los ejemplos, pe
 
 ![Información general: los pasos para crear un destino de flujo continuo y activar segmentos](../assets/api/streaming-destination/overview.png)
 
-Si prefiere utilizar la interfaz de usuario en Platform para conectarse a un destino y activar datos, consulte los tutoriales [Connect a destination](../ui/connect-destination.md) y [Activate profiles and segments to a destination](../ui/activate-destinations.md) .
+Si prefiere utilizar la interfaz de usuario en Platform para conectarse a un destino y activar datos, consulte los tutoriales [Connect a destination](../ui/connect-destination.md) y [Activate audience data to streaming segment export destinos](../ui/activate-segment-streaming-destinations.md) .
 
 ## Introducción 
 
