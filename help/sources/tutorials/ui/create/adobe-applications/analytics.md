@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 952b2caa6983b331c046618aff255131a6480e67
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1441'
 ht-degree: 1%
 
 ---
@@ -134,7 +134,7 @@ La siguiente documentación proporciona más recursos para comprender la prepara
 
 * [Resumen de la preparación de datos](../../../../../data-prep/home.md)
 * [Funciones de asignación de preparación de datos](../../../../../data-prep/functions.md)
-* [Asignación de un archivo CSV a un esquema XDM y adición de campos calculados](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+* [Añadir campos calculados](../../../../../data-prep/calculated-fields.md)
 
 ### Proporcionar detalles de flujo de datos
 
