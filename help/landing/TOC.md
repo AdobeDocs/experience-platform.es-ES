@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: abd09eb26e7487442e4ded5b7aa4258df6b6c5fe
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 21%
+source-wordcount: '197'
+ht-degree: 23%
 
 ---
 
@@ -27,7 +26,7 @@ ht-degree: 21%
    * [Guía de la interfaz de usuario de Platform](ui-guide.md)
    * [Visita a la interfaz de usuario de Platform (vídeo)](video/platform-ui.md)
    * [Guía de la interfaz de usuario de flujos de trabajo](workflows.md)
-   * [Compatibilidad con navegadores e idiomas](browser-language-support.md)
+   * [Compatibilidad con exploradores e idiomas](browser-language-support.md)
 * API de Experience Platform {#platform-apis}
    * [Introducción a las API de Platform](api-guide.md)
    * [Autenticar y acceder a las API de Platform](api-authentication.md)
@@ -51,6 +50,8 @@ ht-degree: 21%
       * IAB TCF 2.0 {#iab}
          * [Información general](./governance-privacy-security/consent/iab/overview.md)
          * [Configuración de un conjunto de datos para capturar datos de consentimiento y preferencias](./governance-privacy-security/consent/iab/dataset.md)
+   * Registros de auditoría (Beta) {#audit-logs}
+      * [Información general](./governance-privacy-security/audit-logs/overview.md)
 * [Panel de uso de licencias](license-usage-dashboard.md)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Migración de lago de datos Gen2](adls2-gen2-migration.md)
