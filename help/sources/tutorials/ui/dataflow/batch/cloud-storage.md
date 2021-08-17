@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 5478143e681257c6885d99d83380a35de263ed3d
+source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2001'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Aparece el cuadro de diálogo **[!UICONTROL Select schema]**. Seleccione el esqu
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de asignador para transformar los datos de origen a fin de derivar valores calculados o calculados. Para obtener más información sobre las funciones de asignación y asignación de datos, consulte el tutorial sobre [asignación de datos CSV a campos de esquema XDM](../../../../../ingestion/tutorials/map-a-csv-file.md).
+En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para obtener más información sobre las funciones del asignador y los campos calculados, consulte la [Guía de funciones de preparación de datos](../../../../../data-prep/functions.md) o la [guía de campos calculados](../../../../../data-prep/calculated-fields.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
