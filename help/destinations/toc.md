@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinos
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '467'
 ht-degree: 11%
 
 ---
@@ -79,7 +79,6 @@ ht-degree: 11%
       * [Extensión de seguimiento de conversión de contexto](./catalog/analytics/yext.md)
    * Destinos de almacenamiento en la nube {#cloud-storage}
       * [Resumen de destinos de Cloud Storage](./catalog/cloud-storage/overview.md)
-      * [Crear un destino de almacenamiento en la nube](./catalog/cloud-storage/workflow.md)
       * [(Beta) Conexión de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexión Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexión de Azure Blob](./catalog/cloud-storage/azure-blob.md)
@@ -119,7 +118,6 @@ ht-degree: 11%
       * [Extensión de personalización web de Marketo](./catalog/personalization/marketo-web-personalization.md)
    * Destinos sociales{#social}
       * [Información general sobre destinos sociales](./catalog/social/overview.md)
-      * [Crear un destino social](./catalog/social/workflow.md)
       * [Extensión de Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Conexión facebook](./catalog/social/facebook.md)
       * [Conexión de Audiencias coincidentes de linkedIn](./catalog/social/linkedin.md)
