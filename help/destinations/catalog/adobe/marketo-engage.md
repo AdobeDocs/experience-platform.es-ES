@@ -1,15 +1,15 @@
 ---
 title: Destino del Marketo Engage
 description: Marketo Engage es la única solución integral de administración de experiencias del cliente (CXM) para marketing, publicidad, análisis y comercio. Permite automatizar y administrar actividades desde la administración de posibles clientes de CRM y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
-source-git-commit: 9b1c805f0717d0ed2c5759420d20abf5dcdeaabc
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '325'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) Destino del Marketo Engage {#beta-marketo-engage-destination}
+# (Beta) destino del Marketo Engage {#beta-marketo-engage-destination}
 
 >[!IMPORTANT]
 >
@@ -21,7 +21,7 @@ Marketo Engage es la única solución integral de administración de experiencia
 
 El conector de segmento permite a los especialistas en marketing insertar los segmentos creados en Adobe Experience Platform en Marketo, donde aparecerán como listas estáticas.
 
-## Identidades admitidas {#supported-identities}
+## Identidades compatibles {#supported-identities}
 
 | Identidad de Target | Descripción |
 |---|---|
@@ -36,6 +36,14 @@ Exportación de segmentos: está exportando todos los miembros de un segmento (a
 
 Las instrucciones sobre cómo configurar el destino [se encuentran aquí](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en).
 
+## Conectarse al destino {#connect}
+
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
+
 ## Uso y administración de datos {#data-usage-governance}
 
 Todos los destinos [!DNL Adobe Experience Platform] cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, consulte la [Información general sobre el control de datos](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+
+## Activar segmentos en este destino {#activate}
+
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
