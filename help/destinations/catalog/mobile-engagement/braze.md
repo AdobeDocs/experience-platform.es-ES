@@ -3,9 +3,9 @@ keywords: móvil; brasil; mensajería;
 title: Conexión con el Brazo
 description: Braze es una completa plataforma de participación del cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les encantan.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '791'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
+Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
 ## Consideraciones de asignación {#mapping-considerations}
 
