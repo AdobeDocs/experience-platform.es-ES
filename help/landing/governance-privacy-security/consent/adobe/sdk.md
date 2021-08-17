@@ -3,9 +3,9 @@ title: Procesamiento de datos de consentimiento del cliente mediante el SDK web 
 topic-legacy: getting started
 description: Obtenga información sobre cómo integrar el SDK web de Adobe Experience Platform para procesar datos de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1247'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,7 @@ Una vez creado el elemento de datos, vuelva a la página de configuración de la
 
 ### Implementar la extensión en el sitio web
 
-Una vez que haya terminado de configurar la extensión, esta se puede integrar en el sitio web. Consulte la [guía de publicación](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=es) en la documentación de etiquetas para obtener información detallada sobre cómo implementar la compilación de biblioteca actualizada.
+Una vez que haya terminado de configurar la extensión, esta se puede integrar en el sitio web. Consulte la [guía de publicación](../../../../tags/ui/publishing/overview.md) en la documentación de etiquetas para obtener información detallada sobre cómo implementar la compilación de biblioteca actualizada.
 
 ## Creación de comandos de cambio de consentimiento {#commands}
 
