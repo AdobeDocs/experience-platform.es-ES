@@ -5,9 +5,9 @@ title: Información general sobre la preparación de datos
 topic-legacy: overview
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,12 @@ La preparación de datos también aplica varias validaciones de datos intrínsec
 Una asignación es una asociación de un atributo de entrada o campo calculado a un atributo XDM. Un único atributo se puede asignar a varios atributos XDM creando asignaciones individuales.
 
 Para obtener más información sobre las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md).
+
+### Campos calculados
+
+Los campos calculados permiten que se creen valores en función de los atributos del esquema de entrada. Estos valores se pueden asignar a atributos en el esquema de destino y se les puede proporcionar un nombre y una descripción para facilitar la referencia.
+
+Para obtener más información sobre los campos calculados, consulte la [guía de campos calculados](./functions.md#calculated-fields).
 
 ## Conjunto de asignaciones
 
