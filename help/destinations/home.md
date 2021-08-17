@@ -5,10 +5,10 @@ seo-title: Información general sobre los destinos
 description: Obtenga información sobre cómo activar datos de Adobe Experience Platform en destinos para campañas de marketing en canales múltiples, correos electrónicos, publicidad segmentada y mucho más.
 seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos desde Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 1%
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Una de las funcionalidades principales de Platform es la ingesta de sus datos de
 ## Pasos de destinos {#steps}
 
 * Elija entre un [catálogo de autoservicio](./catalog/overview.md) de todos los destinos disponibles en Platform.
-* Utilice destinos para [activar](./ui/activate-destinations.md) y enviar perfiles o segmentos a plataformas de automatización de marketing, plataformas de publicidad digital y mucho más.
+* Utilice destinos para y envíe perfiles o segmentos a plataformas de automatización de marketing, plataformas de publicidad digital y mucho más.
 * Programe exportaciones de datos a sus destinos preferidos en ocasiones regulares.
 
 ## Controles {#controls}
@@ -66,4 +66,8 @@ Para obtener más información sobre la selección de acciones de marketing en e
 * [Destinos de marketing por correo electrónico](./catalog/email-marketing/overview.md)
 * [Destinos sociales](./catalog/social/overview.md)
 
-Para obtener más información sobre las violaciones de políticas de datos en el flujo de trabajo de activación de segmentos, consulte el paso Revisar en [Activar perfiles y segmentos en un destino](./ui/activate-destinations.md#review).
+Para obtener más información sobre las violaciones de políticas de datos en el flujo de trabajo de activación de segmentos, consulte el paso Revisar en las siguientes guías:
+
+* [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](./ui/activate-segment-streaming-destinations.md#review)
+* [Activar datos de audiencia en destinos de exportación de perfil de flujo continuo](./ui/activate-streaming-profile-destinations.md#review)
+* [Activar datos de audiencia en destinos de exportación de perfiles en lote](./ui/activate-batch-profile-destinations.md#review)
