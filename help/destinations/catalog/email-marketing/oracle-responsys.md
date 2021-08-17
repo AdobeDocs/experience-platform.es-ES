@@ -3,9 +3,9 @@ keywords: correo electrónico;correo electrónico;destinos de correo electrónic
 title: Conexión de Responsys de oracle
 description: Responsys es una herramienta de marketing por correo electrónico para campañas de marketing en canales múltiples que ofrece Oracle para personalizar las interacciones entre correo electrónico, móvil, visualización y social.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Para enviar datos de segmentos a [!DNL Oracle Responsys], primero debe [conectar
 
 ## Tipo de exportación {#export-type}
 
-**Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono y apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo de activación de  [destino](../../ui/activate-destinations.md#select-attributes).
+**Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo de activación de  [audiencias](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## LISTA DE PERMITIDOS de direcciones IP {#allow-list}
 
@@ -67,15 +67,15 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
+Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
-## Atributos de destino {#destination-attributes}
+### Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](../../ui/activate-destinations.md) en este destino, Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Seleccionar qué campos de esquema utilizar como atributos de destino en los archivos exportados](./overview.md#destination-attributes).
+Al activar segmentos en este destino, Adobe recomienda que seleccione un identificador único del [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte las [prácticas recomendadas al activar audiencias en destinos de marketing por correo electrónico](overview.md#best-practices).
 
 ## Datos exportados {#exported-data}
 
-Para destinos [!DNL Oracle Responsys], Platform crea un archivo `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube](../../ui/activate-destinations.md#esp-and-cloud-storage) en el tutorial de activación de segmentos.
+Para destinos [!DNL Oracle Responsys], Platform crea un archivo `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [verificación de la activación de segmentos](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de segmentos.
 
 ## Configurar la importación de datos en [!DNL Oracle Responsys] {#import-data-into-responsys}
 
