@@ -3,9 +3,9 @@ keywords: Publicidades de Google;publicidades de Google;adwords de Google;Google
 title: Conexión de Google Ads
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por clic en publicidad en búsquedas basadas en texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: ca388912d6634f72cab15a6bfb3e9f92264e52db
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Tenga en cuenta los siguientes detalles que son específicos de destinos [!DNL G
 >
 >Si desea crear su primer destino con [!DNL Google Ads] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con el Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
 
-## Identidades admitidas {#supported-identities}
+## Identidades compatibles {#supported-identities}
 
 [!DNL Google Ad Manager] admite la activación de identidades descritas en la tabla siguiente.
 
@@ -66,29 +66,22 @@ Antes de crear el [!DNL Google Ads] destino en Platform, debe ponerse en contact
 * El tipo de cuenta: **AdWords**
 * **ID de Google AdWords**: Este es su ID con  [!DNL Google]. El formato de ID suele ser 123-456-7890.
 
-## Configurar destino
+## Conectarse al destino {#connect}
 
-En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DNL Google Ads] y seleccione **[!UICONTROL Configure]**.
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-![Conectar destino de Google Ads](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+### Parámetros de conexión {#parameters}
 
->[!NOTE]
->
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
-
-En el paso **Configuración** del flujo de trabajo de creación de destino, rellene la [!UICONTROL Información básica] para el destino.
-
-![Información básica de Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
 * **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
 * **[!UICONTROL Tipo]** de cuenta: AdWords es la única opción disponible.
 * **[!UICONTROL ID de cuenta]**: Rellene su ID de cuenta con  [!DNL Google Ads]. El formato de ID suele ser 123-456-7890.
-* **[!UICONTROL Acción de marketing]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
-## Activar segmentos en [!DNL Google Ads]
+## Activar segmentos en este destino {#activate}
 
-Para obtener instrucciones sobre cómo activar segmentos en [!DNL Google Ads], consulte [Activar datos en destinos](../../ui/activate-destinations.md).
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
 
 ## Datos exportados
 
