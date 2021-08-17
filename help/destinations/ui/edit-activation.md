@@ -6,10 +6,9 @@ seo-title: Editar flujos de activación
 description: Siga los pasos de este artículo para editar un flujo de activación existente en Adobe Experience Platform.
 seo-description: Siga los pasos de este artículo para editar un flujo de activación existente en Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -18,7 +17,7 @@ ht-degree: 0%
 
 Siga los pasos a continuación para editar los flujos de activación existentes en Adobe Experience Platform:
 
-1. Inicie sesión en la [IU del Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Browse]** en el encabezado superior para ver los destinos existentes.
+1. Inicie sesión en la [interfaz de usuario del Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Browse]** en el encabezado superior para ver los destinos existentes.
 
    ![Examinar destinos](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -34,4 +33,4 @@ Siga los pasos a continuación para editar los flujos de activación existentes 
 
    ![Detalles de destino](../assets/ui/edit-activation/destination-details.png)
 
-5. Consulte [Activar perfiles y segmentos en un destino](activate-destinations.md) para obtener más información sobre cómo activar nuevos segmentos.
+5. Consulte [Información general sobre la activación](activation-overview.md) para obtener más información sobre cómo activar nuevos segmentos.
