@@ -3,10 +3,10 @@ keywords: extensiones de etiqueta;extensión de etiqueta;destinos de inicio; ext
 title: Extensiones de etiquetas en Adobe Experience Platform
 description: Adobe Experience Platform proporciona la siguiente generación de funcionalidades de administración de etiquetas de Adobe. Platform le ofrece una alternativa sencilla para implementar y gestionar todas las etiquetas de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 1%
+source-wordcount: '508'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform proporciona la siguiente generación de funcionalidade
 
 Para obtener una introducción a las etiquetas, consulte los recursos a continuación:
 
-- [Información general sobre etiquetas](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=es)
+- [Información general sobre etiquetas](../../../tags/home.md)
 - [Guía de inicio rápido](../../../tags/quick-start/quick-start.md)
 
 ## Búsqueda de extensiones de etiquetas en la interfaz de Platform {#how-to-find-extensions-in-interface}
