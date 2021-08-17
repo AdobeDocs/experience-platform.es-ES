@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino de kinesis;kinesis
 title: Conexión de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real al almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 4febcef82c6da4534051cbe68820984814786224
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
@@ -77,27 +77,19 @@ El ejemplo siguiente muestra los derechos de acceso mínimos necesarios para exp
 
 Para obtener más información sobre el control del acceso para [!DNL Kinesis] flujos de datos, lea el siguiente [[!DNL Kinesis] documento](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-## Conectar destino {#connect-destination}
+## Conectarse al destino {#connect}
 
-Consulte [Flujo de trabajo de destinos de almacenamiento en la nube ](./workflow.md)para obtener instrucciones sobre cómo conectarse a los destinos de almacenamiento en la nube, incluidos los admitidos por [!DNL Amazon].
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-Para destinos [!DNL Amazon Kinesis] , introduzca la siguiente información en el flujo de trabajo de creación de destino:
+### Parámetros de conexión {#parameters}
 
-## Paso de cuenta {#account-step}
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
 * **[!DNL Amazon Web Services]clave de acceso y clave** secreta: En  [!DNL Amazon Web Services], genere un  `access key - secret access key` par para conceder a Platform acceso a su  [!DNL Amazon Kinesis] cuenta. Obtenga más información en la [documentación de los servicios web de Amazon](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **región**: Indique a qué  [!DNL Amazon Web Services] región se retransmitirán los datos.
-
-![Campos de entrada en el paso de cuenta](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
-
-## Paso de autenticación {#authentication-step}
-
 * **Nombre**: Proporcione un nombre a la conexión para  [!DNL Amazon Kinesis]
 * **Descripción**: Proporcione una descripción para la conexión a  [!DNL Amazon Kinesis].
 * **flujo**: Proporcione el nombre de un flujo de datos existente en su  [!DNL Amazon Kinesis] cuenta. Platform exportará datos a este flujo.
-* **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
-
-![Campos de entrada en el paso de autenticación](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 
@@ -107,9 +99,9 @@ Para destinos [!DNL Amazon Kinesis] , introduzca la siguiente información en el
 
 -->
 
-## Activar segmentos {#activate-segments}
+## Activar segmentos en este destino {#activate}
 
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener información sobre el flujo de trabajo de activación de segmentos.
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
 
 ## Datos exportados {#exported-data}
 
