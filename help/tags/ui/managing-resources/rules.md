@@ -1,7 +1,7 @@
 ---
 title: Reglas
 description: Descubra cómo funcionan las extensiones de etiquetas en Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1977'
 ht-degree: 82%
@@ -168,7 +168,7 @@ Adobe no puede garantizar que se activen otras reglas y que se necesite el códi
 * **JavaScript:** JavaScript se carga desde el servidor como texto normal, dentro de una etiqueta script, y se añade al documento mediante Postscribe. Si la regla tiene varios scripts personalizados de JavaScript, estos se cargan en paralelo desde el servidor, pero se ejecutan en el mismo orden configurado en la regla.
 * **HTML:** el HTML se carga desde el servidor y se añade al documento mediante Postscribe. Si la regla tiene varios scripts personalizados de HTML, estos se cargan en paralelo desde el servidor, pero se ejecutan en el mismo orden configurado en la regla.
 
-## Secuencia de componentes de regla
+## Secuencia de componentes de regla {#sequencing}
 
 El comportamiento del entorno de tiempo de ejecución de etiquetas depende de si **[!UICONTROL Run rule components in sequence]** está activado o desactivado para la propiedad.
 
