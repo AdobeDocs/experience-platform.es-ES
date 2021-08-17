@@ -3,9 +3,9 @@ keywords: Azure Blob;destino de Blob;s3;destino de azure blob
 title: Conexión de Azure Blob
 description: Cree una conexión saliente en directo al almacenamiento del blob de Azure para exportar periódicamente archivos de datos de Adobe Experience Platform delimitados por tabulaciones o CSV.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '400'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,13 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
    * [Tutorial del Editor de esquemas](../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Si ya tiene un destino [!DNL Blob] válido, puede omitir el resto de este documento y continuar con el tutorial sobre la [activación de segmentos en el destino](../../ui/activate-destinations.md).
+Si ya tiene un destino [!DNL Blob] válido, puede omitir el resto de este documento y continuar con el tutorial sobre la [activación de segmentos en el destino](../../ui/activate-batch-profile-destinations.md).
 
 ## Formatos de archivo compatibles {#file-formats}
 
 [!DNL Experience Platform] admite el siguiente formato de archivo para exportar a  [!DNL Blob]:
 
-* Valores separados por delimitadores (DSV): Actualmente, la compatibilidad con archivos de datos con formato DSV está limitada a valores separados por coma. En el futuro se admitirán los archivos DSV generales. Para obtener más información sobre los archivos compatibles, lea la sección almacenamiento en la nube en el tutorial sobre [activación de destinos](../../ui/activate-destinations.md#esp-and-cloud-storage).
+* Valores separados por delimitadores (DSV): Actualmente, la compatibilidad con archivos de datos con formato DSV está limitada a valores separados por coma. En el futuro se admitirán los archivos DSV generales.
 
 ## Conectarse al destino {#connect}
 
@@ -54,4 +54,4 @@ Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cif
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
+Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
