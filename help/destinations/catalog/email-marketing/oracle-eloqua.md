@@ -3,10 +3,10 @@ keywords: correo electrónico;correo electrónico;destinos de correo electrónic
 title: Conexión oracle Eloqua
 description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de marketing que ofrece Oracle y que tiene como objetivo ayudar a los especialistas en marketing B2B y a las organizaciones a administrar las campañas de marketing y la generación de posibles clientes de ventas.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '672'
-ht-degree: 0%
+source-wordcount: '500'
+ht-degree: 1%
 
 ---
 
@@ -20,41 +20,41 @@ Para enviar datos de segmentos a [!DNL Oracle Eloqua], primero debe [conectar el
 
 **Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono y apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo de activación de  [destino](../../ui/activate-destinations.md#select-attributes).
 
-## LISTA DE PERMITIDOS de dirección IP {#allow-list}
+## LISTA DE PERMITIDOS de direcciones IP {#allow-list}
 
 Al configurar destinos de marketing por correo electrónico con almacenamiento SFTP, Adobe recomienda que agregue ciertos rangos de IP a la lista de permitidos.
 
 Consulte la [lista de permitidos de direcciones IP para destinos de almacenamiento en la nube](../cloud-storage/ip-address-allow-list.md) si necesita agregar IP de Adobe a su lista de permitidos.
 
-## Conectarse al destino {#connect-destination}
+## Conectarse al destino {#connect}
 
-En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DNL Oracle Eloqua] y, a continuación, seleccione **[!UICONTROL Configure]**.
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
->[!NOTE]
->
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre [!UICONTROL Activate] y [!UICONTROL Configure], consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
+Este destino admite los siguientes tipos de conexión:
 
-![Conectarse a Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/catalog.png)
+* **[!UICONTROL SFTP con contraseña]**
+* **[!UICONTROL SFTP con clave SSH]**
 
-En el paso **[!UICONTROL Cuenta]**, si anteriormente ha configurado una conexión con su destino de almacenamiento en la nube, seleccione **[!UICONTROL Cuenta existente]** y elija una de las conexiones existentes. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión. Complete las credenciales de autenticación de la cuenta y seleccione **[!UICONTROL Connect to destination]**. Para [!DNL Oracle Eloqua], puede seleccionar entre **[!UICONTROL SFTP con contraseña]** y **[!UICONTROL SFTP con clave SSH]**.
+### Parámetros de conexión {#parameters}
 
-![Conectar cuenta Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/connection-type.png)
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
-Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Conectar con destino]**.
+* Para conexiones **[!UICONTROL SFTP con contraseña]**, debe proporcionar:
+   * [!UICONTROL Dominio]
+   * [!UICONTROL Puerto]
+   * [!UICONTROL Nombre de usuario]
+   * [!UICONTROL Contraseña]
+* Para conexiones **[!UICONTROL SFTP con clave SSH]**, debe proporcionar:
+   * [!UICONTROL Dominio]
+   * [!UICONTROL Puerto]
+   * [!UICONTROL Nombre de usuario]
+   * [!UICONTROL Clave SSH]
 
-- Para conexiones **[!UICONTROL SFTP con contraseña]**, debe proporcionar [!UICONTROL Dominio], [!UICONTROL Puerto], [!UICONTROL Nombre de usuario] y [!UICONTROL Contraseña].
-- Para conexiones **[!UICONTROL SFTP con clave SSH]**, debe proporcionar [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL User name] y [!UICONTROL SSH Key].
-
-Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en la sección **[!UICONTROL Clave]**. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
-
-![Eloqua se conecta al destino](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
-
-En el paso **[!UICONTROL Authentication]** , rellene la información relevante para su destino como se muestra a continuación:
-- **[!UICONTROL Nombre]**: Elija un nombre relevante para el destino.
-- **[!UICONTROL Descripción]**: Escriba una descripción para el destino.
-- **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en su ubicación de almacenamiento donde Platform depositará sus datos de exportación como archivos CSV o delimitados por tabuladores.
-- **[!UICONTROL Formato]** de archivo:  **** CSVo  **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a su ubicación de almacenamiento.
-- **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
+* Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en la sección **[!UICONTROL Clave]**. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
+* **[!UICONTROL Nombre]**: Elija un nombre relevante para el destino.
+* **[!UICONTROL Descripción]**: Escriba una descripción para el destino.
+* **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en su ubicación de almacenamiento donde Platform depositará sus datos de exportación como archivos CSV o delimitados por tabuladores.
+* **[!UICONTROL Formato]** de archivo:  **** CSVo  **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a su ubicación de almacenamiento.
 
 <!--
 
@@ -64,17 +64,13 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 -->
 
-![Información básica de Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
+## Activar segmentos en este destino {#activate}
 
-Haga clic en **[!UICONTROL Crear destino]** después de rellenar los campos anteriores. El destino se ha creado y puede [activar segmentos](../../ui/activate-destinations.md) en el destino.
-
-## Activar segmentos {#activate-segments}
-
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener información sobre el flujo de trabajo de activación de segmentos.
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
 
 ## Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](../../ui/activate-destinations.md) en el destino [!DNL Oracle Eloqua], Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Seleccionar qué campos de esquema utilizar como atributos de destino en los archivos exportados](./overview.md#destination-attributes).
+Al [activar segmentos](../../ui/activate-destinations.md) en este destino, Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Seleccionar qué campos de esquema utilizar como atributos de destino en los archivos exportados](./overview.md#destination-attributes).
 
 ## Datos exportados {#exported-data}
 
