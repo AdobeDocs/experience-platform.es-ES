@@ -3,10 +3,10 @@ keywords: correo electrónico;correo electrónico;destinos de correo electrónic
 title: Conexión de Marketing Cloud de Salesforce
 seo-description: Salesforce Marketing Cloud es un grupo de marketing digital conocido anteriormente como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes personalicen su experiencia.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 0%
+source-wordcount: '496'
+ht-degree: 1%
 
 ---
 
@@ -22,37 +22,41 @@ Para enviar datos de segmentos a [!DNL Salesforce Marketing Cloud], primero debe
 
 **Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono y apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo de activación de  [destino](../../ui/activate-destinations.md#select-attributes).
 
-## LISTA DE PERMITIDOS de dirección IP {#allow-list}
+## LISTA DE PERMITIDOS de direcciones IP {#allow-list}
 
 Al configurar destinos de marketing por correo electrónico con almacenamiento SFTP, Adobe recomienda que agregue ciertos rangos de IP a la lista de permitidos.
 
 Consulte la [lista de permitidos de direcciones IP para destinos de almacenamiento en la nube](../cloud-storage/ip-address-allow-list.md) si necesita agregar IP de Adobe a su lista de permitidos.
 
-## Conectar destino {#connect-destination}
+## Conectarse al destino {#connect}
 
-En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DNL Salesforce Marketing Cloud] y, a continuación, seleccione **[!UICONTROL Configure]**.
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-![Conectarse a Salesforce](../../assets/catalog/email-marketing/salesforce/catalog.png)
+Este destino admite los siguientes tipos de conexión:
 
-En el paso **[!UICONTROL Cuenta]**, si anteriormente ha configurado una conexión con su destino de almacenamiento en la nube, seleccione **[!UICONTROL Cuenta existente]** y elija una de las conexiones existentes. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión. Complete las credenciales de autenticación de la cuenta y seleccione **[!UICONTROL Connect to destination]**. Para [!DNL Salesforce Marketing Cloud], puede seleccionar entre **[!UICONTROL SFTP con contraseña]** y **[!UICONTROL SFTP con clave SSH]**.
+* **[!UICONTROL SFTP con contraseña]**
+* **[!UICONTROL SFTP con clave SSH]**
 
-![Conectar la cuenta de Marketing Cloud de Salesforce](../../assets/catalog/email-marketing/salesforce/connection-type.png)
+### Parámetros de conexión {#parameters}
 
-Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Configurar]**.
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
-- Para conexiones **[!UICONTROL SFTP con contraseña]**, debe proporcionar [!UICONTROL Dominio], [!UICONTROL Puerto], [!UICONTROL Nombre de usuario] y [!UICONTROL Contraseña].
-- Para conexiones **[!UICONTROL SFTP con clave SSH]**, debe proporcionar [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL User name] y [!UICONTROL SSH Key].
+* Para conexiones **[!UICONTROL SFTP con contraseña]**, debe proporcionar:
+   * [!UICONTROL Dominio]
+   * [!UICONTROL Puerto]
+   * [!UICONTROL Nombre de usuario]
+   * [!UICONTROL Contraseña]
+* Para conexiones **[!UICONTROL SFTP con clave SSH]**, debe proporcionar:
+   * [!UICONTROL Dominio]
+   * [!UICONTROL Puerto]
+   * [!UICONTROL Nombre de usuario]
+   * [!UICONTROL Clave SSH]
 
-Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en la sección **[!UICONTROL Clave]**. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
-
-![Rellene la información de Salesforce](../../assets/catalog/email-marketing/salesforce/account-info.png)
-
-En el paso **[!UICONTROL Authentication]** , rellene la información relevante para su destino como se muestra a continuación:
-- **[!UICONTROL Nombre]**: Elija un nombre relevante para el destino.
-- **[!UICONTROL Descripción]**: Escriba una descripción para el destino.
-- **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en su ubicación de almacenamiento donde Platform depositará sus datos de exportación como archivos CSV o delimitados por tabuladores.
-- **[!UICONTROL Formato]** de archivo:  **** CSVo  **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a su ubicación de almacenamiento.
-- **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
+* Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en la sección **[!UICONTROL Clave]**. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
+* **[!UICONTROL Nombre]**: Elija un nombre relevante para el destino.
+* **[!UICONTROL Descripción]**: Escriba una descripción para el destino.
+* **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en su ubicación de almacenamiento donde Platform depositará sus datos de exportación como archivos CSV o delimitados por tabuladores.
+* **[!UICONTROL Formato]** de archivo:  **** CSVo  **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a su ubicación de almacenamiento.
 
 <!--
 
@@ -62,17 +66,13 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 -->
 
-![Información básica de Salesforce](../../assets/catalog/email-marketing/salesforce/basic-information.png)
+## Activar segmentos en este destino {#activate}
 
-Haga clic en **[!UICONTROL Crear destino]** después de rellenar los campos anteriores. El destino ahora está conectado y puede [activar segmentos](../../ui/activate-destinations.md) en el destino.
-
-## Activar segmentos {#activate-segments}
-
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener información sobre el flujo de trabajo de activación de segmentos.
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
 
 ## Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](../../ui/activate-destinations.md) en el destino [!DNL Salesforce Marketing Cloud], Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Seleccionar qué campos de esquema utilizar como atributos de destino en los archivos exportados](./overview.md#destination-attributes).
+Al [activar segmentos](../../ui/activate-destinations.md) en este destino, Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Seleccionar qué campos de esquema utilizar como atributos de destino en los archivos exportados](./overview.md#destination-attributes).
 
 ## Datos exportados {#exported-data}
 
