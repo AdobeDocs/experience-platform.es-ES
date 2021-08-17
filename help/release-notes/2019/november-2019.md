@@ -5,8 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
 source-wordcount: '1883'
 ht-degree: 2%
@@ -78,7 +77,7 @@ Consulte el [catálogo de destino](../../destinations/catalog/overview.md) para 
 
 **Limitaciones conocidas**
 
-* El control para permitir programas de activación personalizados en el [flujo de activación](../../destinations/ui/activate-destinations.md#activate-data) (paso de programación) no está disponible con la versión inicial.
+* El control para permitir programas de activación personalizados en el flujo de activación (paso de programación) no está disponible con la versión inicial.
 * Actualmente no hay forma de editar o eliminar una configuración de destino. Para solucionar esta limitación, puede habilitar o deshabilitar el destino en la esquina superior derecha de la [página de detalles de destino](../../destinations/ui/destination-details-page.md).
 * Actualmente no hay ninguna validación para los detalles de la cuenta, la ruta o las credenciales al conectarse a su cuenta de destino o almacenamiento. Asegúrese de que está introduciendo las credenciales correctas y compruebe dos veces si hay errores ortográficos o errores ortográficos.
 * No se han realizado renovaciones de credenciales con la versión inicial. Una vez que una cuenta ha caducado o necesita actualizarse, debe crear una nueva conexión de destino y volver a asignar los segmentos asignados anteriormente.
@@ -116,7 +115,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] permite a los científic
 
 Para obtener más información, consulte la [información general de Data Science Workspace](../../data-science-workspace/home.md).
 
-## [!DNL Experience Data Model] Sistema (XDM)  {#xdm}
+## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
 La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 
