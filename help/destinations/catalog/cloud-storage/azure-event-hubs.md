@@ -3,9 +3,9 @@ keywords: Destino del centro de eventos de Azure;centro de eventos de azure;azur
 title: Conexión (Beta) !DNL Azure Event Hubs]
 description: Cree una conexión saliente en tiempo real a su almacenamiento de !DNL Azure Event Hubs] para transmitir datos desde el Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '474'
 ht-degree: 2%
 
 ---
@@ -38,31 +38,23 @@ Por ejemplo, un cliente potencial descargó un libro blanco que los califica par
 
 **Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono y apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo de activación de  [destino](../../ui/activate-destinations.md#select-attributes).
 
-## Conectar destino {#connect-destination}
+## Conectarse al destino {#connect}
 
-Consulte [Flujo de trabajo de destinos de almacenamiento en la nube ](./workflow.md)para obtener instrucciones sobre cómo conectarse a los destinos de almacenamiento en la nube, incluido [!DNL Azure Event Hubs].
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-Para destinos [!DNL Azure Event Hubs] , introduzca la siguiente información en el flujo de trabajo de creación de destino:
+### Parámetros de conexión {#parameters}
 
-## Paso de cuenta {#account-step}
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Nombre de clave]** SAS y clave  **[!UICONTROL SAS]**: Rellene el nombre y la clave de la clave SAS. Obtenga información sobre cómo autenticarse en [!DNL Azure Event Hubs] con claves SAS en la [documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Área de nombres]**: Rellene el  [!DNL Azure Event Hubs] espacio de nombres. Obtenga información sobre los espacios de nombres [!DNL Azure Event Hubs] en la [Documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-
-![Entrada requerida en el paso de cuenta](../../assets/catalog/cloud-storage/event-hubs/account.png)
-
-## Paso de autenticación {#authentication-step}
-
 * **[!UICONTROL Nombre]**: Rellene un nombre para la conexión a  [!DNL Azure Event Hubs].
 * **[!UICONTROL Descripción]**: Proporcione una descripción de la conexión.  Ejemplos: &quot;Clientes de nivel Premium&quot;, &quot;Hombres interesados en el kitesurf&quot;.
 * **[!UICONTROL eventHubName]**: Proporcione un nombre para la emisión a su  [!DNL Azure Event Hubs] destino.
-* **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
-![Datos necesarios en el paso de autenticación](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
+## Activar segmentos en este destino {#activate}
 
-## Activar segmentos {#activate-segments}
-
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener información sobre el flujo de trabajo de activación de segmentos.
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
 
 ## Datos exportados {#exported-data}
 
