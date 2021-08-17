@@ -3,10 +3,10 @@ keywords: conexión linkedin;conexión linkedin;destinos linkedin;linkedin;
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para segmentación, personalización y supresión de audiencias, en función de correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 8ec6f1eb38f4865daaa4fe4cd749a9014742dce6
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 1%
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Linke
 
 Una empresa de software organiza una conferencia y quiere mantenerse en contacto con los participantes, y mostrarles ofertas personalizadas basadas en su estado de asistencia a la conferencia. La empresa puede ingerir direcciones de correo electrónico o ID de dispositivos móviles desde su propio [!DNL CRM] en Adobe Experience Platform. A continuación, pueden generar segmentos a partir de sus propios datos sin conexión y enviarlos a la plataforma social [!DNL LinkedIn], lo que optimiza su gasto en publicidad.
 
-## Identidades admitidas {#supported-identities}
+## Identidades compatibles {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
 
@@ -59,12 +59,12 @@ Para obtener más información sobre la ingesta de direcciones de correo electr�
 
 Si selecciona hash para las direcciones de correo electrónico usted mismo, asegúrese de cumplir con los siguientes requisitos:
 
-- Recorte todos los espacios al principio y al final de la cadena de correo electrónico. Por ejemplo: `johndoe@example.com`, no `<space>johndoe@example.com<space>`;
-- Al hash de las cadenas de correo electrónico, asegúrese de usar un hash para la cadena en minúsculas;
-   - Ejemplo: `example@email.com`, no `EXAMPLE@EMAIL.COM`;
-- Asegúrese de que la cadena con hash esté en minúscula
-   - Ejemplo: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, no `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-- No sal la cadena.
+* Recorte todos los espacios al principio y al final de la cadena de correo electrónico. Por ejemplo: `johndoe@example.com`, no `<space>johndoe@example.com<space>`;
+* Al hash de las cadenas de correo electrónico, asegúrese de usar un hash para la cadena en minúsculas;
+   * Ejemplo: `example@email.com`, no `EXAMPLE@EMAIL.COM`;
+* Asegúrese de que la cadena con hash esté en minúscula
+   * Ejemplo: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, no `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+* No sal la cadena.
 
 >[!NOTE]
 >
@@ -77,17 +77,29 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 
 ![Transformación de asignación de identidad](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## Conectarse al destino {#connect-destination}
+## Conectarse al destino {#connect}
 
-Para conectarse al destino [!DNL LinkedIn Matched Audiences], consulte [Flujo de trabajo de autenticación de destinos sociales](./workflow.md).
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL LinkedIn Matched Audiences] y activar segmentos.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## Activar segmentos en [!DNL LinkedIn Matched Audiences] {#activate-segments}
+>[!NOTE]
+>
+>La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-Para obtener instrucciones sobre cómo activar segmentos en [!DNL LinkedIn Matched Audiences], consulte [Activar datos en destinos](../../ui/activate-destinations.md).
+### Parámetros de conexión {#parameters}
+
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
+
+* **[!UICONTROL Nombre]**: un nombre por el cual reconocerá este destino en el futuro.
+* **[!UICONTROL Descripción]**: una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL ID de cuenta]**: su  [!DNL LinkedIn Campaign Manager Account ID]. Puede encontrar este ID en su cuenta [!DNL LinkedIn Campaign Manager].
+
+## Activar segmentos en este destino {#activate}
+
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
 
 ## Datos exportados {#exported-data}
 
