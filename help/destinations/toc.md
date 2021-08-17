@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinos
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '492'
 ht-degree: 11%
 
 ---
@@ -21,9 +21,13 @@ ht-degree: 11%
    * [Conectarse a destinos de marketing por correo electrónico y activar datos mediante la API de servicio de flujo](./api/email-marketing.md)
 * Guías de la interfaz de usuario {#ui}
    * [Espacio de trabajo de destinos](./ui/destinations-workspace.md)
-   * [Conectarse a un destino](./ui/connect-destination.md)
+   * [Crear una nueva conexión de destino](./ui/connect-destination.md)
+   * Activar datos de audiencia en destinos{#activate}
+      * [Información general de Activation](./ui/activation-overview.md)
+      * [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](./ui/activate-segment-streaming-destinations.md)
+      * [Activar datos de audiencia en destinos de exportación de perfil de flujo continuo](./ui/activate-streaming-profile-destinations.md)
+      * [Activar datos de audiencia en destinos de exportación de perfiles en lote](./ui/activate-batch-profile-destinations.md)
    * [Ver detalles de destino](./ui/destination-details-page.md)
-   * [Activar perfiles y segmentos en un destino](./ui/activate-destinations.md)
    * [Actualizar cuentas de destino](./ui/update-accounts.md)
    * [Editar flujos de activación](./ui/edit-activation.md)
    * [Eliminar destinos](./ui/delete-destinations.md)
