@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c06e7b5c70613dc560fb5c0dcc28590206fc1734
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 7%
@@ -60,8 +60,8 @@ Los destinos son integraciones prediseñadas con plataformas de destino que perm
 
 | Función | Descripción |
 | --- | --- |
-| [Exportaciones de archivos incrementales más rápidas](../../destinations/ui/activate-destinations.md#export-incremental-files) | Ahora puede programar exportaciones de archivos incrementales para destinos basados en archivos cada 3, 6, 8 y 12 horas. Actualmente no se puede cambiar la programación de exportación de archivos para segmentos que ya se han guardado. Para volver a exportar segmentos con una programación diferente, debe crear una nueva instancia de destino. Se trata de una limitación que se abordará en futuras versiones. |
-| [Compatibilidad con claves de deduplicación](../../destinations/ui/activate-destinations.md#deduplication-keys) | Elimine varios registros del mismo perfil en los archivos de exportación seleccionando una clave de deduplicación. Puede seleccionar un solo espacio de nombres o hasta dos atributos de esquema XDM como clave de deduplicación. |
+| [Exportaciones de archivos incrementales más rápidas](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | Ahora puede programar exportaciones de archivos incrementales para destinos basados en archivos cada 3, 6, 8 y 12 horas. Actualmente no se puede cambiar la programación de exportación de archivos para segmentos que ya se han guardado. Para volver a exportar segmentos con una programación diferente, debe crear una nueva instancia de destino. Se trata de una limitación que se abordará en futuras versiones. |
+| [Compatibilidad con claves de deduplicación](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | Elimine varios registros del mismo perfil en los archivos de exportación seleccionando una clave de deduplicación. Puede seleccionar un solo espacio de nombres o hasta dos atributos de esquema XDM como clave de deduplicación. |
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
