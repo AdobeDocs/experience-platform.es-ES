@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Conexión de Google Ad Manager
 description: Google Ad Manager, anteriormente conocido como DoubleClick for Publishers o DoubleClick AdX, es una plataforma de servicio de publicidad de Google que proporciona a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -59,19 +59,13 @@ Antes de crear el [!DNL Google Ad Manager] destino en Platform, debe ponerse en 
 * **ID del vínculo de audiencia** : esta es su cuenta con  [!DNL Google Ad Manager]
 * El tipo de cuenta. DFP de un comprador de Google o AdX.
 
-## Configurar destino
+## Conectarse al destino {#connect}
 
-En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione **[!DNL Google Ad Manager]** y seleccione **[!UICONTROL Configure]**.
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-![Conectar destino de Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/catalog.png)
+### Parámetros de conexión {#parameters}
 
->[!NOTE]
->
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
-
-En el paso **Configuración** del flujo de trabajo de creación de destino, rellene la [!UICONTROL Información básica] para el destino.
-
-![Información básica Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/setup.png)
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
 * **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
@@ -79,15 +73,14 @@ En el paso **Configuración** del flujo de trabajo de creación de destino, rell
    * Usar `DFP by Google` para [!DNL DoubleClick] para editores
    * Usar `AdX buyer` para [!DNL Google AdX]
 * **[!UICONTROL ID de cuenta]**: Rellene su ID de cuenta con  [!DNL Google]. Puede ser su ID de red o su ID de vínculo de audiencia. Normalmente, se trata de un ID de ocho dígitos.
-* **[!UICONTROL Acción de marketing]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
 >Al configurar un destino [!DNL Google Ad Manager], trabaje con su [!DNL Google Account Manager] o representante de Adobe para comprender qué tipo de cuenta tiene.
 
-## Activar segmentos en [!DNL Google Ad Manager]
+## Activar segmentos en este destino {#activate}
 
-Para obtener instrucciones sobre cómo activar segmentos en [!DNL Google Ad Manager], consulte [Activar datos en destinos](../../ui/activate-destinations.md).
+Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
 
 ## Datos exportados
 
