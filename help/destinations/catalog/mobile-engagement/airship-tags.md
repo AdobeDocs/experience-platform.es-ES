@@ -3,9 +3,9 @@ keywords: etiquetas de aerolíneas;destino de aerolíneas
 title: Conexión de etiquetas de la aeronave
 description: Transfiera sin problemas los datos de audiencia de Adobe a la nave aérea como etiquetas de audiencia para segmentar dentro de la nave aérea.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: e413933920028e3239f6044111d9cf215c865eba
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '705'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
+Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
 ## Consideraciones de asignación {#mapping-considerations}
 
