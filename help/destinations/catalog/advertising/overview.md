@@ -1,51 +1,56 @@
 ---
 keywords: destinos de publicidad;destinos;destinos de plataforma
-title: Descripción general de los destinos de publicidad
-seo-title: Descripción general de los destinos de publicidad
-description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
-seo-description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+title: Información general sobre los destinos publicitarios
+seo-title: Información general sobre los destinos publicitarios
+description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas con estas plataformas.
+seo-description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas con estas plataformas.
+exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 0%
+source-wordcount: '248'
+ht-degree: 1%
 
 ---
 
+# Información general sobre los destinos publicitarios {#advertising-destinations}
 
-# Descripción general de los destinos de publicidad {#advertising-destinations}
+## Información general {#overview}
 
-Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
+Conecte Adobe Experience Platform a plataformas publicitarias de terceros, como plataformas del lado de la demanda (DSP), plataformas del lado de suministro (SSP), redes de publicidad y comparta audiencias seudónimas con estas plataformas.
 
 Al conectarse a un destino publicitario, las audiencias se envían como ID a la plataforma de destino, donde se asignan a un ID conocido por la plataforma de destino.
 
-Actualmente, Platform admite los destinos de publicidad que se indican a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
+## Destinos publicitarios admitidos {#supported-destinations}
 
-## Conexiones
+Actualmente, Experience Platform es compatible con los destinos publicitarios que se enumeran a continuación.
 
-Para comprender la diferencia entre conexiones y extensiones, consulte [Conexiones](../../destination-types.md#connections) en la página Tipos de destino y Categorías.
+Para comprender la diferencia entre conexiones y extensiones, consulte [Conexiones](../../destination-types.md#connections) en la página Tipos de destino y categorías.
 
-- [Conexión de Google Display y Video 360](./google-dv360.md)
-- [Conexión de Google Ads](./google-ads-destination.md)
-- [Conexión con Google Ad Manager](./google-ad-manager.md)
-- [Conexión de Coincidencia de clientes de Google](./google-customer-match.md)
-- [Conexión de Microsoft Bing](./bing.md)
-- [La conexión con el mostrador de comercio](./tradedesk.md)
+### Conexiones
 
-## Extensiones
+* [Conexión de Google Display y Video 360](google-dv360.md)
+* [Conexión de Google Ads](google-ads-destination.md)
+* [Conexión de Google Ad Manager](google-ad-manager.md)
+* [Conexión de Google Customer Match](google-customer-match.md)
+* [Conexión de Microsoft Bing](bing.md)
+* [La conexión con el mostrador de comercio](tradedesk.md)
 
-Para comprender la diferencia entre las conexiones y las extensiones, consulte [Extensiones](../../destination-types.md#extensions) en la página Tipos y Categorías de Destino.
+### Extensiones
 
-- [Extensión Adobe Advertising Cloud](./adobe-advertising-cloud.md)
-- [Extensión de la etiqueta de conversión de publicidad de Awin](./awin-conversiontag.md)
-- [Extensión Awin Advertising Mastertag](./awin-mastertag.md)
-- [Extensión de seguimiento de Eventos universales de Bing Ads](./bing-ads.md)
-- [Extensión de rama](./branch.md)
-- [Extensión de Floodlight de DoubleClick](./doubleclick-floodlight.md)
-- [Extensión de píxeles de Facebook](./facebook-pixel.md)
-- [Extensión Flashtalk OneTag](./flashtalking.md)
-- [Extensión Google Ads](./google-ads-extension.md)
-- [Extensión gtag de Google](./gtag-advertising.md)
-- [Extensión de etiqueta de LinkedIn Insight](./linkedin.md)
-- [Extensión de seguimiento de conversión de Pinterest](./pinterest.md)
-- [Extensión de etiqueta de sitio web universal de Twitter](./twitter-uwt.md)
+* [Extensión de Adobe Advertising Cloud](adobe-advertising-cloud.md)
+* [Extensión de la etiqueta de conversión de publicidad de Awin](awin-conversiontag.md)
+* [Extensión de Awin Advertising Mastertag](awin-mastertag.md)
+* [Extensión de seguimiento de eventos universales de Bing Ads](bing-ads.md)
+* [Extensión de rama](branch.md)
+* [Extensión de DoubleClick Floodlight](doubleclick-floodlight.md)
+* [Extensión de facebook Pixel](facebook-pixel.md)
+* [Extensión Flashtalk OneTag](flashtalking.md)
+* [Extensión de Google Ads](google-ads-extension.md)
+* [Extensión de Google Gtag](gtag-advertising.md)
+* [Extensión de la etiqueta linkedIn Insight](linkedin.md)
+* [Extensión de seguimiento de conversión de pinterest](pinterest.md)
+* [Extensión de la etiqueta del sitio web universal de twitter](twitter-uwt.md)
+
+## Conectarse a un nuevo destino publicitario {#connect-destination}
+
+Para enviar segmentos a destinos de publicidad para sus campañas, Platform debe conectarse primero al destino. Consulte el [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
