@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo con Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1061'
 ht-degree: 0%
 
 ---
@@ -34,7 +33,7 @@ En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
-En la categoría **[!UICONTROL Streaming]**, seleccione **[!UICONTROL HTTP API]** y luego seleccione **[!UICONTROL Add data]**.
+En la categoría **[!UICONTROL Streaming]**, seleccione **[!UICONTROL HTTP API]** y, a continuación, seleccione **[!UICONTROL Add data]**.
 
 ![catálogo](../../../../images/tutorials/create/http/catalog.png)
 
@@ -50,8 +49,8 @@ Para utilizar una cuenta existente, seleccione la cuenta de API HTTP con la que 
 
 Si está creando una cuenta nueva, seleccione **[!UICONTROL New account]**. En el formulario de entrada que aparece, indique un nombre de cuenta y una descripción opcional. También tendrá la opción de proporcionar las siguientes propiedades de configuración:
 
-- **[!UICONTROL Authentication]:** Esta propiedad determina si la conexión de flujo continuo requiere autenticación. La autenticación garantiza que los datos se recopilen a partir de fuentes de confianza. Si está trabajando con información de identificación personal (PII), esta propiedad debe estar activada. De forma predeterminada, esta propiedad está desactivada.
-- **[!UICONTROL XDM compatible]:** Esta propiedad indica si esta conexión de flujo continuo enviará eventos compatibles con esquemas XDM. De forma predeterminada, esta propiedad está desactivada.
+- **[!UICONTROL Autenticación]:** Esta propiedad determina si la conexión de flujo continuo requiere autenticación. La autenticación garantiza que los datos se recopilen a partir de fuentes de confianza. Si está trabajando con información de identificación personal (PII), esta propiedad debe estar activada. De forma predeterminada, esta propiedad está desactivada.
+- **[!UICONTROL XDM compatible]:** esta propiedad indica si esta conexión de flujo continuo envía eventos compatibles con esquemas XDM. De forma predeterminada, esta propiedad está desactivada.
 
 Cuando termine, seleccione **[!UICONTROL Connect to source]** y luego seleccione **[!UICONTROL Next]** para continuar.
 
@@ -59,13 +58,13 @@ Cuando termine, seleccione **[!UICONTROL Connect to source]** y luego seleccione
 
 ## Seleccionar datos
 
-Después de crear la conexión API HTTP, aparece el paso **[!UICONTROL Select data]**, que le proporciona una interfaz para cargar y previsualizar los datos.
+Después de crear la conexión de API HTTP, aparece el paso **[!UICONTROL Select data]**, que proporciona una interfaz para cargar y previsualizar los datos.
 
-Seleccione **[!UICONTROL Upload files]** para cargar los datos. Como alternativa, puede arrastrar y soltar los datos en la sección [!UICONTROL Drag and drop files] de la interfaz.
+Seleccione **[!UICONTROL Upload files]** para cargar los datos. También puede arrastrar y soltar los datos en la sección [!UICONTROL Arrastrar y soltar archivos] de la interfaz.
 
 ![add-data](../../../../images/tutorials/create/http/add-data.png)
 
-Con los datos cargados, puede utilizar el lado derecho de la interfaz para obtener una vista previa de la jerarquía de archivos. Seleccione **[!UICONTROL Next]** para continuar.
+Con los datos cargados, puede utilizar el lado derecho de la interfaz para obtener una vista previa de la jerarquía de archivos. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![preview-sample-data](../../../../images/tutorials/create/http/preview-sample-data.png)
 
@@ -79,29 +78,29 @@ Elija un conjunto de datos para los datos entrantes en los que se van a introduc
 
 ### Crear un nuevo conjunto de datos
 
-Para crear un nuevo conjunto de datos, seleccione **[!UICONTROL New dataset]**. En el formulario que aparece, proporcione el nombre, una descripción opcional y el esquema de destino para el conjunto de datos. Si selecciona un esquema habilitado para [!DNL Profile], puede elegir si el conjunto de datos también debe estar habilitado para [!DNL Profile].
+Para crear un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]**. En el formulario que aparece, proporcione el nombre, una descripción opcional y el esquema de destino para el conjunto de datos. Si selecciona un esquema habilitado para [!DNL Profile], puede elegir si el conjunto de datos también debe estar habilitado para [!DNL Profile].
 
 ![conjunto de datos nuevo](../../../../images/tutorials/create/http/new-dataset.png)
 
 ### Usar un conjunto de datos existente
 
-Para usar un conjunto de datos existente, seleccione **[!UICONTROL Existing dataset]**. En el formulario que aparece, seleccione el conjunto de datos que desea utilizar. Una vez que seleccione un conjunto de datos, puede elegir si el conjunto de datos debe estar habilitado para [!DNL Profile].
+Para usar un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]**. En el formulario que aparece, seleccione el conjunto de datos que desea utilizar. Una vez que seleccione un conjunto de datos, puede elegir si el conjunto de datos debe estar habilitado para [!DNL Profile].
 
 ![conjunto de datos existente](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Asignación de campos estándar
 
-En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para obtener más información sobre las funciones de asignación y asignación de datos, consulte el tutorial sobre [asignación de datos CSV a campos de esquema XDM](../../../../../ingestion/tutorials/map-a-csv-file.md).
+En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para obtener más información sobre las funciones del asignador y los campos calculados, consulte la [Guía de funciones de preparación de datos](../../../../../data-prep/functions.md) o la [guía de campos calculados](../../../../../data-prep/calculated-fields.md).
 
-Para agregar un nuevo campo de origen, seleccione **[!UICONTROL Add new mapping]**.
+Para añadir un nuevo campo de origen, seleccione **[!UICONTROL Add new mapping]**.
 
 ![add-new-mapping](../../../../images/tutorials/create/http/add-new-mapping.png)
 
-Se muestra un nuevo campo de origen y un nuevo emparejamiento de campos de destino. Para añadir un nuevo campo de origen, seleccione el icono de flecha situado junto a la barra de entrada [!UICONTROL Select source field].
+Se muestra un nuevo campo de origen y un nuevo emparejamiento de campos de destino. Para agregar un nuevo campo de origen, seleccione el icono de flecha junto a la barra de entrada [!UICONTROL Select source field].
 
 ![select-source-field](../../../../images/tutorials/create/http/select-source-field.png)
 
-El panel [!UICONTROL Select attributes] le permite explorar la jerarquía de archivos y seleccionar un campo de origen específico para asignarlo a un campo XDM de destino. Una vez seleccionado el campo de origen que desea asignar, seleccione **[!UICONTROL Select]** para continuar.
+El panel [!UICONTROL Seleccionar atributos] le permite explorar la jerarquía de archivos y seleccionar un campo de origen específico para asignarlo a un campo XDM de destino. Una vez seleccionado el campo de origen que desea asignar, seleccione **[!UICONTROL Select]** para continuar.
 
 ![select-attributes](../../../../images/tutorials/create/http/select-attributes.png)
 
@@ -109,7 +108,7 @@ Con un campo de origen seleccionado, ahora puede identificar el campo XDM de des
 
 ![select-target-field](../../../../images/tutorials/create/http/select-target-field.png)
 
-Aparece la ventana [!UICONTROL Map source field to target field] , que proporciona una interfaz para explorar el esquema del conjunto de datos de destinatario. Seleccione el campo de destino que coincida con el campo de origen y, a continuación, seleccione **[!UICONTROL Select]** para continuar.
+Aparece la ventana [!UICONTROL Map source field to target field], que proporciona una interfaz para explorar el esquema del conjunto de datos de destino. Seleccione el campo de destino que coincida con el campo de origen y, a continuación, seleccione **[!UICONTROL Select]** para continuar.
 
 ![map-to-target-field](../../../../images/tutorials/create/http/map-to-target-field.png)
 
@@ -121,7 +120,7 @@ Una vez que todos los campos de origen estén asignados a los campos XDM de dest
 
 Aparece el paso **[!UICONTROL Dataflow detail]**. En esta página, puede proporcionar detalles para el flujo de datos creado dando un nombre y una descripción opcional.
 
-Después de proporcionar detalles para el flujo de datos, seleccione **[!UICONTROL Next]**.
+Después de proporcionar detalles para el flujo de datos, seleccione **[!UICONTROL Siguiente]**.
 
 ![dataflow-detail](../../../../images/tutorials/create/http/dataflow-detail.png)
 
@@ -129,8 +128,8 @@ Después de proporcionar detalles para el flujo de datos, seleccione **[!UICONTR
 
 Aparece el paso **[!UICONTROL Review]**, que le permite revisar los detalles del flujo de datos antes de crearlo. Los detalles se agrupan dentro de las siguientes categorías:
 
-- **[!UICONTROL Connection]**: Muestra el nombre de la cuenta, la plataforma de origen y el nombre de origen.
-- **[!UICONTROL Assign dataset and map fields]**: Muestra el conjunto de datos de destino y el esquema al que se adhiere el conjunto de datos.
+- **[!UICONTROL Conexión]**: Muestra el nombre de la cuenta, la plataforma de origen y el nombre de origen.
+- **[!UICONTROL Asignación de campos]** de conjunto de datos y asignación: Muestra el conjunto de datos de destino y el esquema al que se adhiere el conjunto de datos.
 
 Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL Finish]**.
 
