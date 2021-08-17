@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de flujo continuo de segmento.
 seo-description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de flujo continuo de segmento.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,11 @@ Utilice las casillas de verificación a la izquierda de los nombres de los segme
 ![Seleccionar segmentos](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
 ## Asignación de atributos e identidades {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Aplicar transformación"
+>abstract="Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform los hash automáticamente en la activación."
 
 >[!IMPORTANT]
 >
