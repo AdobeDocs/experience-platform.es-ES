@@ -2,34 +2,64 @@
 keywords: destino de almacenamiento en la nube;almacenamiento en la nube
 title: Resumen de destinos de Cloud Storage
 description: Adobe Experience Platform puede enviar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.
-translation-type: tm+mt
-source-git-commit: 4f636de9f0cac647793564ce37c6589d096b61f7
+exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
 
+# Información general sobre los destinos de almacenamiento en la nube {#cloud-storage-destinations}
 
-# Resumen de destinos de almacenamiento en la nube {#cloud-storage-destinations}
+## Información general {#overview}
 
-Adobe Experience Platform puede entregar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores para [!DNL Amazon S3], [!DNL Azure Blob] y SFTP. Para los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] , los datos se transmiten fuera del Experience Platform en formato JSON.
+Adobe Experience Platform puede entregar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores para [!DNL Amazon S3], [!DNL Azure Blob] y SFTP. Para los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] , los datos se transmiten fuera del Experience Platform en formato [!DNL JSON] .
 
 ![Destinos de almacenamiento en la nube de Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
-Para obtener información sobre cómo conectarse a destinos de almacenamiento en la nube, consulte [Flujo de trabajo para crear destinos de almacenamiento en la nube](./workflow.md).
+## Destinos de almacenamiento en la nube admitidos {#supported-destinations}
 
-## Tipo de exportación de datos
+Adobe Experience Platform admite los siguientes destinos de almacenamiento en la nube:
 
-**Exportación basada en perfiles** : se exportan detalles sobre las personas de la audiencia. Estos detalles son necesarios para la personalización y pueden incluir atributos, eventos, suscripciones a segmentos, etc.
+* [Conexión de Amazon Kinesis](amazon-kinesis.md)
+* [Conexión Amazon S3](amazon-s3.md)
+* [Conexión de Azure Blob](azure-blob.md)
+* [Conexión de los centros de eventos de Azure](azure-event-hubs.md)
+* [Conexión SFTP](sftp.md)
 
-## Destinos de almacenamiento en la nube disponibles
+## Conectarse a un nuevo destino de almacenamiento en la nube {#connect-destination}
 
-- [Conexión Amazon S3](./amazon-s3.md)
-- [Conexión de Azure Blob](./azure-blob.md)
-- [Conexión SFTP](./sftp.md)
+Para enviar segmentos a destinos de almacenamiento en la nube para sus campañas, Platform debe conectarse primero al destino. Consulte el [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
 
-## Destinos de flujo de almacenamiento en la nube disponibles
 
-- [Conexión de Amazon Kinesis](./amazon-kinesis.md)
-- [Conexión de los centros de eventos de Azure](./azure-event-hubs.md)
+## Uso de macros para crear una carpeta en su ubicación de almacenamiento {#use-macros}
+
+>[!NOTE]
+>
+> La funcionalidad descrita en esta sección está disponible actualmente solo para destinos de [Amazon S3](amazon-s3.md).
+
+Para crear una carpeta personalizada por archivo de segmento en su ubicación de almacenamiento, puede utilizar macros en el campo de entrada de ruta de carpeta. Inserte las macros al final del campo de entrada, como se muestra a continuación.
+
+![Cómo usar macros para crear una carpeta en el almacenamiento](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+Los ejemplos siguientes hacen referencia a un segmento de muestra `Luxury Audience` con ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+
+**Macro 1:`%SEGMENT_NAME%`**
+
+Entrada: `acme/campaigns/2021/%SEGMENT_NAME%`
+Ruta de carpeta en su ubicación de almacenamiento: `acme/campaigns/2021/Luxury Audience`
+
+**Macro 2:`%SEGMENT_ID%`**
+
+Entrada: `acme/campaigns/2021/%SEGMENT_ID%`
+Ruta de carpeta en su ubicación de almacenamiento: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**Macro 3:`%SEGMENT_NAME%/%SEGMENT_ID%`**
+
+Entrada: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+Ruta de carpeta en su ubicación de almacenamiento: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+## Tipo de exportación de datos {#export-type}
+
+Los destinos de almacenamiento en la nube admiten **exportación basada en perfiles**. Esto significa que está exportando detalles sobre las personas en la audiencia. Estos detalles son necesarios para la personalización y pueden incluir atributos, eventos, suscripciones a segmentos, etc.
