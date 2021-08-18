@@ -5,7 +5,7 @@ seo-title: Información general sobre los destinos publicitarios
 description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas con estas plataformas.
 seo-description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas con estas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 * [Extensión de Google Ads](google-ads-extension.md)
 * [Extensión de Google Gtag](gtag-advertising.md)
 * [Extensión de la etiqueta linkedIn Insight](linkedin.md)
-* [Extensión de seguimiento de conversión de pinterest](pinterest.md)
+* [Extensión de seguimiento de conversión de pinterest](pinterest-extension.md)
 * [Extensión de la etiqueta del sitio web universal de twitter](twitter-uwt.md)
 
 ## Conectarse a un nuevo destino publicitario {#connect-destination}
