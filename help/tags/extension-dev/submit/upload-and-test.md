@@ -1,7 +1,7 @@
 ---
 title: Cargar e implementar pruebas de extremo a extremo para una extensión
 description: Obtenga información sobre cómo validar, cargar y probar la extensión en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 35%
