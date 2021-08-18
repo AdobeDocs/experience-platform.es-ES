@@ -3,9 +3,9 @@ keywords: coincidencia de clientes de google;coincidencia de clientes de Google;
 title: Conexión de Google Customer Match
 description: Google Customer Match le permite utilizar sus datos en línea y sin conexión para llegar a sus clientes y volver a interactuar con ellos en todas las propiedades de Google que usted posee y gestiona, como Search, Shopping, Gmail y YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1494'
 ht-degree: 0%
 
 ---
@@ -138,6 +138,35 @@ En el paso **[!UICONTROL Programación de segmentos]**, debe proporcionar el [!U
 ![ID de aplicación de coincidencia de clientes de Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
 Para obtener más información sobre cómo encontrar el [!DNL App ID], consulte la [documentación oficial de Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+
+### Ejemplo de asignación: activación de datos de audiencia en [!DNL Google Customer Match] {#example-gcm}
+
+Este es un ejemplo de asignación de identidad correcta al activar datos de audiencia en [!DNL Google Customer Match].
+
+Selección de campos de origen:
+
+* Seleccione el espacio de nombres `Email` como identidad de origen si las direcciones de correo electrónico que utiliza no tienen valores hash.
+* Seleccione el espacio de nombres `Email_LC_SHA256` como identidad de origen si ha pasado por hash las direcciones de correo electrónico del cliente sobre la ingesta de datos a [!DNL Platform], de acuerdo con los [!DNL Google Customer Match] [requisitos de hash de correo electrónico](#hashing-requirements).
+* Seleccione el espacio de nombres `PHONE_E.164` como identidad de origen si los datos están formados por números de teléfono sin hash. [!DNL Platform] realizará un hash de los números de teléfono para cumplir con los  [!DNL Google Customer Match] requisitos.
+* Seleccione el espacio de nombres `Phone_SHA256_E.164` como identidad de origen si ha hash los números de teléfono sobre la ingesta de datos en [!DNL Platform], de acuerdo con los [!DNL Facebook] [requisitos de hash de números de teléfono](#phone-number-hashing-requirements).
+* Seleccione el espacio de nombres `IDFA` como identidad de origen si los datos constan de [!DNL Apple] ID de dispositivo.
+* Seleccione el espacio de nombres `GAID` como identidad de origen si los datos constan de [!DNL Android] ID de dispositivo.
+* Seleccione el espacio de nombres `Custom` como identidad de origen si los datos constan de otro tipo de identificadores.
+
+Selección de campos de destino:
+
+* Seleccione el espacio de nombres `Email_LC_SHA256` como identidad de destino cuando los espacios de nombres de origen sean `Email` o `Email_LC_SHA256`.
+* Seleccione el espacio de nombres `Phone_SHA256_E.164` como identidad de destino cuando los espacios de nombres de origen sean `PHONE_E.164` o `Phone_SHA256_E.164`.
+* Seleccione los espacios de nombres `IDFA` o `GAID` como identidad de destino cuando los espacios de nombres de origen sean `IDFA` o `GAID`.
+* Seleccione el espacio de nombres `User_ID` como identidad de destino cuando el espacio de nombres de origen sea personalizado.
+
+![Asignación de identidad](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+
+Los datos de espacios de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarlos.
+
+Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación.
+
+![Transformación de asignación de identidad](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Verifique que la activación del segmento se haya realizado correctamente {#verify-activation}
 
