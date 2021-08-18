@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activar datos de audiencia en destinos de exportación de perfiles en lote
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 seo-description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2008'
 ht-degree: 1%
 
 ---
@@ -270,7 +270,7 @@ Consideremos los dos perfiles siguientes.
 }
 ```
 
-### Caso de uso de deduplicación 1: sin deduplicación
+### Caso de uso de deduplicación 1: sin deduplicación {#deduplication-use-case-1}
 
 Si no se utiliza ninguna deduplicación, el archivo de exportación contendría las siguientes entradas.
 
@@ -280,7 +280,7 @@ Si no se utiliza ninguna deduplicación, el archivo de exportación contendría 
 | johndoe@example.com | John | D |
 
 
-### Caso de uso de deduplicación 2: deduplicación basada en el área de nombres de identidad
+### Caso de uso de deduplicación 2: deduplicación basada en el área de nombres de identidad {#deduplication-use-case-2}
 
 Suponiendo que el espacio de nombres [!DNL Email] deduplique, el archivo de exportación contendría las siguientes entradas. El Perfil B es el último que cumple los requisitos para el segmento, por lo que es el único que se exporta.
 
@@ -289,7 +289,7 @@ Suponiendo que el espacio de nombres [!DNL Email] deduplique, el archivo de expo
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
 
-### Caso de uso de deduplicación 3: deduplicación basada en un único atributo de perfil
+### Caso de uso de deduplicación 3: deduplicación basada en un único atributo de perfil {#deduplication-use-case-3}
 
 Suponiendo que el atributo `personal Email` deduplique, el archivo de exportación contendría la siguiente entrada. El Perfil B es el último que cumple los requisitos para el segmento, por lo que es el único que se exporta.
 
@@ -298,7 +298,7 @@ Suponiendo que el atributo `personal Email` deduplique, el archivo de exportaci�
 | johndoe@example.com | John | D |
 
 
-### Caso de uso de deduplicación 4: deduplicación basada en dos atributos de perfil (clave de deduplicación compuesta)
+### Caso de uso de deduplicación 4: deduplicación basada en dos atributos de perfil {#deduplication-use-case-4}
 
 Suponiendo que la deduplicación se realice mediante la clave compuesta `personalEmail + lastName`, el archivo de exportación contendrá las siguientes entradas.
 
