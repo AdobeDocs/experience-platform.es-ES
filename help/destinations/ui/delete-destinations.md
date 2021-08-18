@@ -4,9 +4,9 @@ title: Eliminar destinos
 type: Tutorial
 description: Este tutorial enumera los pasos para eliminar un destino existente en la interfaz de usuario de Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -40,10 +40,10 @@ Siga los pasos a continuación para eliminar un destino de la pestaña [!UICONTR
 
    ![Filtrar destinos](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Seleccione el botón ![Delete button](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** en la columna **[!UICONTROL Platform]** para eliminar un destino existente.
+3. Seleccione el botón ![More button](../assets/ui/delete-destinations/more-icon.png) en la columna Name y, a continuación, seleccione ![Delete button](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** para eliminar una conexión de destino existente.
    ![Eliminar destinos](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. Seleccione **[!UICONTROL Delete]** para confirmar la eliminación del destino.
+4. Seleccione **[!UICONTROL Delete]** para confirmar la eliminación de la conexión de destino.
 
    ![Confirmar eliminación de destino](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
