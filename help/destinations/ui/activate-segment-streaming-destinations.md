@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de flujo continuo de segmento.
 seo-description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de flujo continuo de segmento.
-source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
+source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
@@ -76,63 +76,9 @@ Algunos destinos de flujo continuo de segmentos requieren que seleccione atribut
 
 1. Para agregar más asignaciones, repita los pasos del 1 al 5.
 
-### Ejemplo de asignación: activación de datos de audiencia en [!DNL Facebook Custom Audience] {#example-facebook}
 
-A continuación se muestra un ejemplo de asignación de identidad correcta al activar datos de audiencia en [!DNL Facebook Custom Audience].
 
-Selección de campos de origen:
 
-* Seleccione el espacio de nombres `Email` como identidad de origen si las direcciones de correo electrónico que utiliza no tienen valores hash.
-* Seleccione el espacio de nombres `Email_LC_SHA256` como identidad de origen si ha pasado por hash las direcciones de correo electrónico del cliente sobre la ingesta de datos a [!DNL Platform], de acuerdo con los [!DNL Facebook] [requisitos de hash de correo electrónico](../catalog/social/facebook.md#email-hashing-requirements).
-* Seleccione el espacio de nombres `PHONE_E.164` como identidad de origen si los datos están formados por números de teléfono sin hash. [!DNL Platform] realizará un hash de los números de teléfono para cumplir con los  [!DNL Facebook] requisitos.
-* Seleccione el espacio de nombres `Phone_SHA256` como identidad de origen si ha hash los números de teléfono sobre la ingesta de datos en [!DNL Platform], de acuerdo con los [!DNL Facebook] [requisitos de hash de números de teléfono](../catalog/social/facebook.md#phone-number-hashing-requirements).
-* Seleccione el espacio de nombres `IDFA` como identidad de origen si los datos constan de [!DNL Apple] ID de dispositivo.
-* Seleccione el espacio de nombres `GAID` como identidad de origen si los datos constan de [!DNL Android] ID de dispositivo.
-* Seleccione el espacio de nombres `Custom` como identidad de origen si los datos constan de otro tipo de identificadores.
-
-Selección de campos de destino:
-
-* Seleccione el espacio de nombres `Email_LC_SHA256` como identidad de destino cuando los espacios de nombres de origen sean `Email` o `Email_LC_SHA256`.
-* Seleccione el espacio de nombres `Phone_SHA256` como identidad de destino cuando los espacios de nombres de origen sean `PHONE_E.164` o `Phone_SHA256`.
-* Seleccione los espacios de nombres `IDFA` o `GAID` como identidad de destino cuando los espacios de nombres de origen sean `IDFA` o `GAID`.
-* Seleccione el espacio de nombres `Extern_ID` como identidad de destino cuando el espacio de nombres de origen sea personalizado.
-
->[!IMPORTANT]
->
->Los datos de espacios de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarlos.
-> 
->Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación.
-
-![Asignación de identidad](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
-### Ejemplo de asignación: activación de datos de audiencia en [!DNL Google Customer Match] {#example-gcm}
-
-Este es un ejemplo de asignación de identidad correcta al activar datos de audiencia en [!DNL Google Customer Match].
-
-Selección de campos de origen:
-
-* Seleccione el espacio de nombres `Email` como identidad de origen si las direcciones de correo electrónico que utiliza no tienen valores hash.
-* Seleccione el espacio de nombres `Email_LC_SHA256` como identidad de origen si ha pasado por hash las direcciones de correo electrónico del cliente sobre la ingesta de datos a [!DNL Platform], de acuerdo con los [!DNL Google Customer Match] [requisitos de hash de correo electrónico](../catalog/social/../advertising/google-customer-match.md).
-* Seleccione el espacio de nombres `PHONE_E.164` como identidad de origen si los datos están formados por números de teléfono sin hash. [!DNL Platform] realizará un hash de los números de teléfono para cumplir con los  [!DNL Google Customer Match] requisitos.
-* Seleccione el espacio de nombres `Phone_SHA256_E.164` como identidad de origen si ha hash los números de teléfono sobre la ingesta de datos en [!DNL Platform], de acuerdo con los [!DNL Facebook] [requisitos de hash de números de teléfono](../catalog/social/../advertising/google-customer-match.md).
-* Seleccione el espacio de nombres `IDFA` como identidad de origen si los datos constan de [!DNL Apple] ID de dispositivo.
-* Seleccione el espacio de nombres `GAID` como identidad de origen si los datos constan de [!DNL Android] ID de dispositivo.
-* Seleccione el espacio de nombres `Custom` como identidad de origen si los datos constan de otro tipo de identificadores.
-
-Selección de campos de destino:
-
-* Seleccione el espacio de nombres `Email_LC_SHA256` como identidad de destino cuando los espacios de nombres de origen sean `Email` o `Email_LC_SHA256`.
-* Seleccione el espacio de nombres `Phone_SHA256_E.164` como identidad de destino cuando los espacios de nombres de origen sean `PHONE_E.164` o `Phone_SHA256_E.164`.
-* Seleccione los espacios de nombres `IDFA` o `GAID` como identidad de destino cuando los espacios de nombres de origen sean `IDFA` o `GAID`.
-* Seleccione el espacio de nombres `User_ID` como identidad de destino cuando el espacio de nombres de origen sea personalizado.
-
-![Asignación de identidad](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
-
-Los datos de espacios de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarlos.
-
-Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación.
-
-![Transformación de asignación de identidad](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Programar exportación de segmentos {#scheduling}
 
