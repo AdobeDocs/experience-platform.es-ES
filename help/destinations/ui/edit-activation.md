@@ -6,9 +6,9 @@ seo-title: Editar flujos de activación
 description: Siga los pasos de este artículo para editar un flujo de activación existente en Adobe Experience Platform.
 seo-description: Siga los pasos de este artículo para editar un flujo de activación existente en Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
@@ -29,8 +29,10 @@ Siga los pasos a continuación para editar los flujos de activación existentes 
 
    ![Seleccionar destino](../assets/ui/edit-activation/destination-select.png)
 
-4. Aparecerá la página de detalles del destino, que muestra sus controles disponibles. Seleccione **[!UICONTROL Activate]** en el carril derecho para cambiar los segmentos que se enviarán al destino.
+4. Aparece la página **[!UICONTROL Dataflow run]** para el destino, que muestra sus controles disponibles. Seleccione **[!UICONTROL Activate]** en el carril derecho para cambiar los segmentos que se enviarán al destino.
+
+   Además, puede editar el nombre y la descripción del destino.
 
    ![Detalles de destino](../assets/ui/edit-activation/destination-details.png)
 
-5. Consulte [Información general sobre la activación](activation-overview.md) para obtener más información sobre cómo activar nuevos segmentos.
+5. Consulte [Información general sobre la activación](activation-overview.md) para obtener más información sobre cómo activar nuevos segmentos en los destinos.
