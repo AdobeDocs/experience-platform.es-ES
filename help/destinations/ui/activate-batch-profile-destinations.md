@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activar datos de audiencia en destinos de exportación de perfiles en lote
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 seo-description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
-source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
+source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '1990'
 ht-degree: 1%
 
 ---
@@ -58,24 +58,28 @@ Seleccione el botón **[!UICONTROL Create schedule]** correspondiente al segment
 
 ### Exportar archivos completos {#export-full-files}
 
-Seleccione **[!UICONTROL Exportar archivos completos]** para que los archivos exportados contengan una instantánea completa de todos los perfiles aptos para ese segmento.
+Seleccione **[!UICONTROL Exportar archivos completos]** para almacenar en déclencheur la exportación de un archivo que contenga una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado.
 
 ![Exportar archivos completos](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. Utilice el selector **[!UICONTROL Frequency]** para elegir entre exportaciones únicas (**[!UICONTROL Once]**) o **[!UICONTROL Daily]**. Exportar un archivo completo **[!UICONTROL Daily]** exporta el archivo todos los días desde la fecha de inicio hasta la fecha de finalización a las 12:00 AM UTC (7:00 PM EST).
-2. Utilice el selector **[!UICONTROL Time]** para elegir la hora del día, en formato [!DNL UTC], en la que se debe realizar la exportación. Exportar un archivo **[!UICONTROL Daily]** exporta el archivo todos los días desde la fecha de inicio hasta la fecha de finalización en el momento seleccionado.
+1. Utilice el selector **[!UICONTROL Frequency]** para seleccionar la frecuencia de exportación:
+
+   * **[!UICONTROL Una vez]**: programe una única exportación de archivos bajo demanda.
+   * **[!UICONTROL Diario]**: programar exportaciones de archivos completas una vez al día, todos los días, desde la fecha de inicio hasta la fecha de finalización a las 12:00 AM UTC (7:00 PM EST).
+
+1. Utilice el selector **[!UICONTROL Time]** para elegir la hora del día, en formato [!DNL UTC], en la que se debe realizar la exportación. Exportar un archivo **[!UICONTROL Daily]** exporta el archivo todos los días desde la fecha de inicio hasta la fecha de finalización en el momento seleccionado.
 
    >[!IMPORTANT]
    >
-   >La opción para exportar archivos a una hora determinada del día está actualmente en fase beta y solo está disponible para un número determinado de clientes.<br> <br> Debido a la forma en que se configuran los procesos de Experience Platform internos, es posible que la primera exportación incremental o completa de archivos no contenga todos los datos de relleno.  <br> <br> Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, Adobe recomienda configurar la hora de exportación del primer archivo después de las 22 PM GMT del día siguiente. Se trata de una limitación que se abordará en futuras versiones.
+   >Debido a la forma en que se configuran los procesos de Experience Platform internos, es posible que la primera exportación incremental o completa de archivos no contenga todos los datos de relleno. <br> <br> Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, Adobe recomienda configurar la hora de exportación del primer archivo después de las 22 PM GMT del día siguiente. Se trata de una limitación que se abordará en futuras versiones.
 
-3. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
-4. Seleccione **[!UICONTROL Crear]** para guardar la programación.
+1. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
+1. Seleccione **[!UICONTROL Crear]** para guardar la programación.
 
 
 ### Exportar archivos incrementales {#export-incremental-files}
 
-Seleccione **[!UICONTROL Exportar archivos incrementales]** para que los archivos exportados contengan solo los perfiles que cumplen los requisitos para ese segmento desde la última exportación.
+Seleccione **[!UICONTROL Exportar archivos incrementales]** para almacenar en déclencheur una exportación en la que el primer archivo sea una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado y los archivos posteriores sean cualificaciones de perfil incrementales desde la exportación anterior.
 
 >[!IMPORTANT]
 >
@@ -83,12 +87,10 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para que los archivo
 
 ![Exportar archivos incrementales](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. Utilice el selector **[!UICONTROL Frequency]** para elegir entre las exportaciones **[!UICONTROL Daily]** o **[!UICONTROL Por hora]**. Exportar un archivo incremental **[!UICONTROL Daily]** exporta el archivo todos los días desde la fecha de inicio hasta la fecha de finalización a las 12:00 PM UTC (7:00 AM EST).
-   * Al seleccionar **[!UICONTROL Por hora]**, utilice el selector **[!UICONTROL Cada]** para elegir entre las opciones de horas **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** y **[!UICONTROL 12]**.
+1. Utilice el selector **[!UICONTROL Frequency]** para seleccionar la frecuencia de exportación:
 
-      >[!IMPORTANT]
-      >
-      >La opción para exportar archivos incrementales cada 3, 6, 8 o 12 horas está actualmente en fase beta y solo está disponible para un número determinado de clientes. Los clientes que no sean de la versión beta pueden exportar archivos incrementales una vez al día.
+   * **[!UICONTROL Diario]**: programar exportaciones de archivos incrementales una vez al día, todos los días, desde la fecha de inicio hasta la fecha de finalización a las 12:00 AM UTC (7:00 PM EST).
+   * **[!UICONTROL Por hora]**: programar exportaciones de archivos incrementales cada 3,6,7 ó 12 horas.
 
 2. Utilice el selector **[!UICONTROL Time]** para elegir la hora del día, en formato [!DNL UTC], en la que se debe realizar la exportación.
 
@@ -164,6 +166,8 @@ Las exportaciones de archivos variarán de las siguientes maneras, en función d
 >abstract="Seleccione los atributos de esquema XDM que deben incluir todos los perfiles exportados. Los perfiles sin la clave obligatoria no se exportan al destino. Al no seleccionar una clave obligatoria, se exportan todos los perfiles cualificados independientemente de sus atributos."
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Más información en la documentación"
 
+Un atributo obligatorio es una casilla de verificación habilitada por el usuario que garantiza que todos los registros de perfil contengan el atributo seleccionado. Por ejemplo: todos los perfiles exportados contienen una dirección de correo electrónico. &#x200B;
+
 Puede marcar los atributos como obligatorios para asegurarse de que [!DNL Platform] exporta solo los perfiles que incluyen el atributo específico. Como resultado, se puede utilizar como una forma adicional de filtrado. Marcar un atributo como obligatorio es **no** obligatorio.
 
 Al no seleccionar un atributo obligatorio, se exportan todos los perfiles cualificados independientemente de sus atributos.
@@ -178,9 +182,7 @@ Se recomienda que uno de los atributos sea un [identificador único](../../desti
 >abstract="Elimine varios registros del mismo perfil en los archivos de exportación seleccionando una clave de deduplicación. Seleccione un solo espacio de nombres o hasta dos atributos de esquema XDM como clave de deduplicación. Si no se selecciona una clave de deduplicación, es posible que se dupliquen entradas de perfil en los archivos de exportación."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Más información en la documentación"
 
->[!IMPORTANT]
->
->La opción para utilizar claves de deduplicación se encuentra actualmente en fase beta y solo está disponible para un número determinado de clientes.
+Una clave de deduplicación es una clave principal definida por el usuario que determina la identidad por la cual los usuarios desean que sus perfiles se dedupliquen &#x200B;.
 
 Las claves de deduplicación eliminan la posibilidad de tener varios registros del mismo perfil en un archivo de exportación.
 
