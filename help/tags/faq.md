@@ -1,10 +1,10 @@
 ---
-title: Preguntas frecuentes
+title: Guía de solución de problemas de etiquetas
 description: Obtenga respuestas a las preguntas más frecuentes sobre las etiquetas en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 30%
+source-wordcount: '1055'
+ht-degree: 26%
 
 ---
 
@@ -92,6 +92,16 @@ La mayoría de los clientes de Adobe utilizan funciones de plataforma web más m
 ## ¿Las etiquetas funcionan en aplicaciones móviles nativas?
 
 ¡Sí! Las etiquetas ahora admiten propiedades y configuración móviles para los nuevos SDK para móviles [Adobe Experience Platform](https://sdkdocs.com) para implementar la recopilación y el envío de datos en un entorno nativo de aplicaciones móviles. Acceda a [la documentación](https://sdkdocs.com) para obtener más información.
+
+## ¿Por qué la interfaz de usuario indica que hubo un error al cargar mi cuenta?
+
+Si recibe un mensaje que indica que se ha producido un error al cargar su cuenta, significa que su cuenta no pertenece a ningún perfil de producto para etiquetas. Consulte la guía de [administración de permisos](./ui/administration/manage-permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para conceder acceso a la interfaz de usuario de recopilación de datos.
+
+## ¿Por qué no puedo añadir ninguna propiedad en la interfaz de usuario?
+
+Si no puede crear ninguna propiedad nueva al iniciar sesión en la interfaz de usuario de la recopilación de datos, significa que su cuenta no pertenece a un perfil de producto que tenga derecho de gestión de propiedades.
+
+Consulte la guía de [administración de permisos](./ui/administration/manage-permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para otorgar derechos de gestión de propiedades. Para obtener más información sobre los distintos derechos de las etiquetas, consulte la descripción general de [permisos de usuario para las etiquetas](./ui/administration/user-permissions.md).
 
 ## ¿Y si tengo más preguntas?
 
