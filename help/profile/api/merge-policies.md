@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: acf88ba3c4181fce85ffec3b0041a30b7bb14cef
 workflow-type: tm+mt
-source-wordcount: '2590'
+source-wordcount: '2263'
 ht-degree: 1%
 
 ---
@@ -135,7 +135,7 @@ Un fragmento de perfil es la información de perfil de una sola identidad de la 
 
 Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
 
-* **`timestampOrdered`**: (predeterminado) Asigne prioridad al perfil que se actualizó por última vez. Con este tipo de combinación, el atributo `data` no es obligatorio. `timestampOrdered` también admite marcas de hora personalizadas que tendrán prioridad al combinar fragmentos de perfil dentro de conjuntos de datos o entre ellos. Para obtener más información, consulte la sección Apéndice sobre [uso de marcas de hora personalizadas](#custom-timestamps).
+* **`timestampOrdered`**: (predeterminado) Asigne prioridad al perfil que se actualizó por última vez. Con este tipo de combinación, el atributo `data` no es obligatorio.
 * **`dataSetPrecedence`** : Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que proceden. Esto se puede usar cuando se prefiere o confía en la información presente en un conjunto de datos sobre los datos de otro conjunto de datos. Al utilizar este tipo de combinación, se requiere el atributo `order` , ya que enumera los conjuntos de datos en orden de prioridad.
    * **`order`**: Cuando se utiliza &quot;dataSetPrecedence&quot;, se debe proporcionar una  `order` matriz con una lista de conjuntos de datos. Los conjuntos de datos que no estén incluidos en la lista no se combinarán. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La matriz `order` enumera los ID de los conjuntos de datos en orden de prioridad.
 
@@ -739,40 +739,6 @@ Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cue
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de cliente dentro de Platform y para crear segmentos de audiencia a partir de sus datos [!DNL Real-time Customer Profile] . Consulte la [documentación del servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md) para empezar a definir y trabajar con segmentos.
+Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de cliente dentro de Platform y para crear segmentos de audiencia a partir de sus datos [!DNL Real-time Customer Profile] .
 
-## Apéndice
-
-Esta sección proporciona información complementaria relacionada con el trabajo con políticas de combinación.
-
-### Uso de marcas de hora personalizadas {#custom-timestamps}
-
-A medida que los registros se incorporan en el Experience Platform, se obtiene una marca de tiempo del sistema en el momento de la ingesta y se añade al registro. Cuando se selecciona `timestampOrdered` como tipo `attributeMerge` para una directiva de combinación, los perfiles se combinan en función de la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo para cuando el registro se incorporó a Platform.
-
-Ocasionalmente puede haber casos de uso, como rellenar datos o garantizar el orden correcto de los eventos si los registros se introducen de forma desordenada, en los que es necesario proporcionar una marca de tiempo personalizada y hacer que la directiva de combinación respete la marca de tiempo personalizada en lugar de la marca de tiempo del sistema.
-
-Para utilizar una marca de tiempo personalizada, el [[!DNL External Source System Audit Details] grupo de campos de esquema](#field-group-details) debe agregarse al esquema de perfil. Una vez añadida, la marca de tiempo personalizada se puede rellenar con el campo `xdm:lastUpdatedDate` . Cuando se ingesta un registro con el campo `xdm:lastUpdatedDate` rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si `xdm:lastUpdatedDate` no está presente o no se rellena, Platform seguirá usando la marca de tiempo del sistema.
-
->[!NOTE]
->
->Debe asegurarse de que la marca de tiempo `xdm:lastUpdatedDate` se rellene al enviar un PATCH en el mismo registro.
-
-Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la API del Registro de esquemas, incluido cómo añadir grupos de campos a esquemas, visite el [tutorial para crear un esquema con la API](../../xdm/tutorials/create-schema-api.md).
-
-Para trabajar con marcas de hora personalizadas mediante la interfaz de usuario, consulte la sección [Uso de marcas de hora personalizadas](../merge-policies/overview.md#custom-timestamps) en la [información general sobre políticas de combinación](../merge-policies/overview.md).
-
-#### [!DNL External Source System Audit Details] detalles del grupo de campos {#field-group-details}
-
-El siguiente ejemplo muestra campos rellenados correctamente en el grupo de campos [!DNL External Source System Audit Details]. El grupo de campos completo JSON también se puede ver en el repositorio [del Modelo de datos de experiencia pública (XDM)](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/external-source-system-audit-details.schema.json) de GitHub.
-
-```json
-{
-  "xdm:createdBy": "{CREATED_BY}",
-  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
-  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
- }
-```
+Consulte la [documentación del servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md) para empezar a definir y trabajar con segmentos.
