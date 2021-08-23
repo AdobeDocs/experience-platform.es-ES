@@ -2,9 +2,9 @@
 title: Casos de uso compatibles con el SDK web de Adobe Experience Platform
 description: Descubra qué casos de uso son compatibles con el SDK web de Adobe Experience Platform.
 keywords: sdk web;casos de uso
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '565'
 ht-degree: 14%
 
 ---
@@ -91,6 +91,7 @@ Esta página enumera los casos de uso admitidos para el SDK web, con vínculos a
 | Actualización del perfil de Target | [Documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | Recomendaciones |  |
 | mBox ID de terceros |  |
+| Tokens de respuesta | [Documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style=&quot;table-layout:auto&quot;}
 
