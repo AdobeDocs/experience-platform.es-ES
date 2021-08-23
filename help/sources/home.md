@@ -5,9 +5,9 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,12 @@ Experience Platform permite la ingesta de datos desde un sistema de comercio ele
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
+### Sistema local
+
+Experience Platform permite la ingesta de datos desde el sistema local. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
+
+- [Carga de archivo local](connectors/local-system/local-file-upload.md)
+
 ### Automatización de la mercadotecnia
 
 Experience Platform permite la ingesta de datos desde un sistema de automatización de marketing de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
@@ -122,7 +128,6 @@ Experience Platform permite la ingesta de datos desde un sistema de pagos de ter
 El Experience Platform es compatible con la ingesta de datos de fuentes de flujo continuo. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
-
 
 ### Protocolos
 
