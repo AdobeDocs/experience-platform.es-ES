@@ -4,7 +4,7 @@ title: Guía de la interfaz de usuario de políticas de combinación
 type: Documentation
 description: Al unir datos de varias fuentes en Experience Platform, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear la vista unificada. Esta guía proporciona instrucciones paso a paso para trabajar con políticas de combinación mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
 workflow-type: tm+mt
 source-wordcount: '2193'
 ht-degree: 0%
