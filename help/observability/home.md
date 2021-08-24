@@ -5,10 +5,9 @@ title: Información general sobre Observability Insights
 topic-legacy: overview
 description: Adobe Experience Platform Observability Insights es una API de RESTful que le permite exponer métricas clave en actividades de Platform. Estas métricas proporcionan información sobre las estadísticas de uso de Platform, las comprobaciones de estado de los servicios de Platform, las tendencias históricas y los indicadores de rendimiento de varias funcionalidades de Platform.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0a64737c805f5e1a4856aa49084a61e64e401ed6
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '290'
 ht-degree: 1%
 
 ---
@@ -23,11 +22,17 @@ La API [!DNL Observability Insights] es una API de RESTful que le permite expone
 
 Para obtener más información sobre cómo trabajar con la API, consulte la [[!DNL Observability Insights] guía para desarrolladores de API](./api/overview.md).
 
-## Notificaciones de eventos
+## Alertas (Beta)
 
-[!DNL Observability Insights] le permite suscribirse a notificaciones de eventos relacionadas con actividades de Adobe Experience Platform. Al suscribirse a eventos, puede configurar sus propios protocolos descendentes para cuando se haya completado un trabajo, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se han producido errores durante el proceso.
+>[!IMPORTANT]
+>
+>Las alertas en Adobe Experience Platform aún no están disponibles para todos los usuarios. Esta función está en fase beta y aún se está probando. Esta sección está sujeta a cambios.
 
-Consulte la descripción general de [notificaciones de eventos](./notifications/overview.md) para obtener más información.
+Experience Platform le permite suscribirse a alertas basadas en métricas de Observabilidad específicas cuando se alcanza un determinado conjunto de condiciones en sus operaciones de Platform. Una alerta puede adoptar la forma de una notificación única o puede repetirse durante un intervalo de tiempo predefinido hasta que se hayan resuelto las condiciones que activaron la alerta.
+
+Al suscribirse a las alertas, puede configurar sus propios protocolos descendentes para cuándo se ha completado un trabajo, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se ha producido algún error durante el proceso.
+
+Consulte la información general sobre [alertas](./alerts/overview.md) para obtener más información.
 
 ## Pasos siguientes
 
