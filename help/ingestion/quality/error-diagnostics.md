@@ -5,10 +5,9 @@ title: Recuperación de diagnósticos de error de ingesta de datos
 topic-legacy: overview
 description: Este documento proporciona información sobre la monitorización de la ingesta de lotes, la administración de errores de ingesta parcial de lotes, así como una referencia para tipos de ingesta parcial de lotes.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 104e6eb258136caa2192b61c793697baf95b55eb
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '979'
 ht-degree: 2%
 
 ---
@@ -147,17 +146,19 @@ Si los lotes contienen errores, debe recuperar la información de error sobre es
 
 ### Comprobar estado {#check-status}
 
-Para comprobar el estado del lote ingestado, debe proporcionar el ID del lote en la ruta de una solicitud de GET.
+Para comprobar el estado del lote ingestado, debe proporcionar el ID del lote en la ruta de una solicitud de GET. Para obtener más información sobre el uso de esta llamada de API, lea la [guía de extremo del catálogo](../../catalog/api/list-objects.md).
 
 **Formato de API**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
+GET /catalog/batches/{BATCH_ID}?{FILTER}
 ```
 
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{BATCH_ID}` | El valor `id` del lote del que desea comprobar el estado. |
+| `{FILTER}` | Un parámetro de consulta utilizado para filtrar los resultados devueltos en la respuesta. Los parámetros múltiples se separan con ampersands (`&`). Para obtener más información, lea la guía sobre el [filtrado de datos del catálogo](../../catalog/api/filter-data.md). |
 
 **Solicitud**
 
@@ -301,7 +302,7 @@ Este tutorial trata sobre cómo monitorizar los errores de ingesta parcial de lo
 
 Esta sección proporciona información complementaria sobre los tipos de error de ingesta.
 
-### Tipos de error de ingesta parcial de lotes {#partial-ingestion-types}
+### Tipos de error parciales de ingesta por lotes {#partial-ingestion-types}
 
 La ingesta parcial de lotes tiene tres tipos de error diferentes al ingerir datos:
 
