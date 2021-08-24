@@ -4,10 +4,10 @@ description: Notas de la versión del Experience Platform para el 25 de agosto d
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
+source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 12%
+source-wordcount: '457'
+ht-degree: 9%
 
 ---
 
@@ -20,6 +20,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [Perspectivas de la capacidad de observación](#observability)
 - [Perfil del cliente en tiempo real](#profile)
+- [Fuentes](#sources)
 
 ## Perspectivas de la capacidad de observación {#observability}
 
@@ -42,3 +43,15 @@ Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherente
 | Examinar perfiles por política de combinación o identidad | Al examinar perfiles en Experience Platform, ahora puede examinar por política de combinación para obtener una vista previa de 20 perfiles de muestra basados en la política de combinación seleccionada. También puede examinar por identidad para buscar un perfil específico mediante un área de nombres de identidad y un valor de identidad relacionado. Para obtener más información, consulte la [Guía de la interfaz de usuario del perfil del cliente en tiempo real](../../profile/ui/user-guide.md). |
 
 Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de perfil, lea en primer lugar la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
+
+## Fuentes {#sources}
+
+Adobe Experience Platform puede ingerir datos de fuentes externas, al mismo tiempo que le permite estructurarlos, etiquetarlos y mejorarlos mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+
+Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
+
+| Función | Descripción |
+| ------- | ----------- |
+| Conector de origen de carga de archivos locales | Se ha cambiado el nombre de la categoría de ingesta de archivos a sistema local, lo que permite llevar los archivos locales directamente a Platform mediante el conector de carga de archivos local. Los datos introducidos a través de este conector se pueden supervisar mediante el panel de control. Consulte la [descripción general del origen de carga de archivos locales](../../sources/connectors/local-system/local-file-upload.md) para obtener más información. |
+
+Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
