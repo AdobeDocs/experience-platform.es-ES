@@ -5,10 +5,9 @@ title: Notificaciones de ingesta de datos
 topic-legacy: overview
 description: Para ayudar a monitorizar el proceso de ingesta, Adobe Experience Platform permite suscribirse a un conjunto de eventos que se publican en cada paso del proceso y le notifican el estado de los datos introducidos y cualquier posible fallo.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '681'
 ht-degree: 1%
 
 ---
@@ -25,7 +24,7 @@ Para ayudar a monitorizar el proceso de ingesta, [!DNL Experience Platform] perm
 
 Para recibir notificaciones de ingesta de datos, debe utilizar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) para registrar un enlace web en la integración de Experience Platform.
 
-Siga el tutorial sobre [suscribirse a [!DNL Adobe I/O Event] notifications](../../observability/notifications/subscribe.md) para conocer los pasos detallados sobre cómo hacerlo.
+Siga el tutorial sobre [suscribirse a [!DNL Adobe I/O Event] notifications](../../observability/alerts/subscribe.md) para conocer los pasos detallados sobre cómo hacerlo.
 
 >[!IMPORTANT]
 >
@@ -33,7 +32,7 @@ Siga el tutorial sobre [suscribirse a [!DNL Adobe I/O Event] notifications](../.
 
 ## Recibir notificaciones de ingesta de datos
 
-Una vez que haya registrado correctamente su vínculo web y se hayan introducido nuevos datos, puede empezar a recibir notificaciones de eventos. Estos eventos se pueden ver mediante el propio enlace web o seleccionando la pestaña **[!UICONTROL Debug Tracing]** en la descripción general del registro de eventos del proyecto en Adobe Developer Console.
+Una vez que haya registrado correctamente su vínculo web y se hayan introducido nuevos datos, puede empezar a recibir notificaciones de eventos. Estos eventos se pueden ver mediante el propio enlace web o seleccionando la pestaña **[!UICONTROL Seguimiento de depuración]** en la descripción general del registro de eventos del proyecto en Adobe Developer Console.
 
 El siguiente JSON es un ejemplo de una carga útil de notificación que se enviaría a su enlace web en caso de un evento de ingesta por lotes fallido:
 
@@ -73,7 +72,7 @@ Para ver el esquema completo de las notificaciones de eventos, consulte el [repo
 
 ## Pasos siguientes
 
-Una vez que haya registrado [!DNL Platform] notificaciones en el proyecto, puede ver los eventos recibidos de [!UICONTROL Project overview]. Consulte la guía de [seguimiento de eventos de Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) para obtener instrucciones detalladas sobre cómo rastrear los eventos.
+Una vez que haya registrado [!DNL Platform] notificaciones en el proyecto, puede ver los eventos recibidos desde la [!UICONTROL Información general del proyecto]. Consulte la guía de [seguimiento de eventos de Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) para obtener instrucciones detalladas sobre cómo rastrear los eventos.
 
 ## Apéndice
 
