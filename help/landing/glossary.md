@@ -5,9 +5,9 @@ title: Glosario de Adobe Experience Platform
 topic-legacy: getting started
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
 workflow-type: tm+mt
-source-wordcount: '7225'
+source-wordcount: '7386'
 ht-degree: 1%
 
 ---
@@ -136,13 +136,15 @@ ht-degree: 1%
 
 **Acción de marketing de objetivo entre sitios**: Acción de marketing que utiliza datos para la segmentación de anuncios entre sitios. La combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio, se denomina datos entre sitios. Los datos entre sitios suelen recopilarse y procesarse para hacer inferencias sobre los intereses de los clientes.
 
-**Área de nombres de identidad personalizada**: Su organización puede crear áreas de nombres de identidad personalizadas para representar las identidades de una organización o un caso empresarial específicos.
+**Área de nombres de identidad personalizada**: Su organización puede crear áreas de nombres de identidad personalizadas para representar identidades de una organización o un caso empresarial específicos.
 
 **Etiquetas** personalizadas: Las etiquetas de uso de datos personalizadas le permiten crear y aplicar etiquetas específicas a campos de datos que satisfagan necesidades comerciales específicas.
 
 **Customer AI**: Customer AI es un servicio inteligente de Adobe Sensei que enriquece los perfiles de los clientes con tendencias basadas en AI y potencia la segmentación de clientes y los esfuerzos de determinación de objetivos.
 
 ## D
+
+**Diario**: En el contexto de las exportaciones de archivos programadas, programa las exportaciones de archivos completas o incrementales una vez al día, todos los días, desde la fecha de inicio hasta la fecha de finalización a la hora especificada por el usuario.
 
 **Diccionario** de datos: En el contexto de las etiquetas, un diccionario de datos (también conocido como mapa de datos) es un conjunto de elementos de datos definidos dentro de una propiedad.
 
@@ -179,6 +181,8 @@ ht-degree: 1%
 **ID** de conjunto de datos: Identificador generado por Adobe para un conjunto de datos ingerido.
 
 **Resultado** del conjunto de datos: El resultado del conjunto de datos proporciona un mecanismo para determinar qué se utilizará la opción &quot;Crear tabla como selección&quot; para una  [!DNL Query Service] ejecución determinada.
+
+**Clave** de deduplicación: Clave principal definida por el usuario que determina la identidad por la cual los usuarios desean que sus perfiles se dedupliquen. &#x200B;
 
 **Columna** Delta: Una columna delta permite seleccionar un campo de datos de origen para representar una marca de tiempo para la ingesta incremental.
 
@@ -224,6 +228,10 @@ ht-degree: 1%
 
 **Evento de experiencia**: Un evento de experiencia representa una instantánea del sistema cuando se produce una interacción o un evento relacionado con una experiencia de cliente. Los eventos de experiencia son registros de hechos inmutables de lo que ha sucedido y representan lo que ha sucedido sin agregación ni interpretación. En Experience Data Model (XDM), este concepto se captura en la clase [!DNL XDM ExperienceEvent].
 
+**Exportar archivo** completo: Archivo de exportación que contiene una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado.
+
+**Exportar archivos** incrementales: Una serie de archivos exportados en los que el primer archivo es una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado y los archivos posteriores son cualificaciones de perfil incrementales desde la exportación anterior.
+
 **Extensión**: En el contexto de las etiquetas , una extensión es un paquete de funcionalidad añadido a una propiedad de etiqueta . Una extensión suele centrarse en una solución de marketing o análisis concreta y proporciona las herramientas necesarias para implementar esa tecnología en un entorno de cliente.
 
 **Paquete de extensión**: En el contexto de las etiquetas , un paquete de extensión es un archivo ZIP creado y cargado por un desarrollador de extensiones que proporciona todo lo necesario para que los usuarios de etiquetas instalen la extensión dentro de su propiedad. Un paquete de extensión contiene un manifiesto que especifica información sobre la extensión, el código HTML/JavaScript necesario para que los usuarios finales configuren el comportamiento de la extensión de etiqueta y el JavaScript ejecutable entregado al entorno del cliente (si es necesario).
@@ -253,6 +261,8 @@ ht-degree: 1%
 ## H
 
 **Host**: En el contexto de las etiquetas, un host especifica la ubicación, el dominio y las credenciales de usuario necesarios para que el sistema envíe una compilación.
+
+**Por hora**: En el contexto de las exportaciones de archivos programadas, programa las exportaciones de archivos incrementales cada 3, 6, 7 ó 12 horas.
 
 ## I
 
@@ -314,6 +324,8 @@ ht-degree: 1%
 
 **Modelo** de aprendizaje automático: Un modelo de aprendizaje automático es un ejemplo de una fórmula de aprendizaje automático que se enseña mediante datos y configuraciones históricos para resolver un caso de uso empresarial. En Adobe Experience Platform Data Science Workspace, los modelos de aprendizaje automático se denominan fórmulas.
 
+**Atributo** obligatorio: Casilla de verificación habilitada por el usuario que garantiza que todos los registros de perfil contengan el atributo seleccionado. Por ejemplo: todos los perfiles exportados contienen una dirección de correo electrónico.
+
 **Asignación**: La asignación de datos es el proceso de asignación de campos de datos de origen a campos de destino relacionados en un destino.
 
 **Acción de marketing**: En el marco de control de datos, una acción de marketing (también conocida como caso de uso de marketing) es una acción que realiza un consumidor de datos de Experience Platform, para la cual es necesario comprobar si hay infracciones de las políticas de uso de datos.
@@ -343,6 +355,8 @@ ht-degree: 1%
 **Acción** de marketing de personalización en el sitio: Acción de marketing que utiliza datos para la personalización de contenido en el sitio. La personalización en el sitio es cualquier dato que se utiliza para hacer inferencias sobre los intereses de los usuarios y se utiliza para seleccionar qué contenido o anuncios se proporcionan en función de esas inferencias.
 
 **Acción de marketing de segmentación en el sitio**: Acción de marketing que usa datos para los anuncios en el sitio, incluida la selección y entrega de anuncios en los sitios web o aplicaciones de su organización, o para medir el envío y la eficacia de dichos anuncios.
+
+**Una vez**: En el contexto de las exportaciones de archivos programadas, programa una exportación de archivos completa, única y a petición.
 
 **Sobrescribir estrategia** de guardado: La estrategia de guardado &quot;Sobrescribir&quot; es una opción para introducir datos de terceros a través de una conexión, donde puede especificar si los datos introducidos se sobrescribirán en una programación especificada.
 
