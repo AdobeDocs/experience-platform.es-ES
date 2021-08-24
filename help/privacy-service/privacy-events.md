@@ -5,10 +5,9 @@ title: Suscripción a eventos de Privacy Service
 topic-legacy: privacy events
 description: Obtenga información sobre cómo suscribirse a eventos de Privacy Service mediante un enlace web preconfigurado.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '437'
 ht-degree: 1%
 
 ---
@@ -39,11 +38,11 @@ Consulte la siguiente documentación del Privacy Service antes de iniciar este t
 
 Para recibir [!DNL Privacy Service Events], debe utilizar Adobe Developer Console para registrar un enlace web en la integración de [!DNL Privacy Service].
 
-Siga el tutorial sobre [suscribirse a [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) para conocer los pasos detallados sobre cómo hacerlo. Asegúrese de elegir **[!UICONTROL Privacy Service Events]** como proveedor de eventos para acceder a los eventos enumerados anteriormente.
+Siga el tutorial sobre [suscribirse a [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) para conocer los pasos detallados sobre cómo hacerlo. Asegúrese de elegir **[!UICONTROL Eventos de Privacy Service]** como proveedor de eventos para acceder a los eventos enumerados arriba.
 
 ## Recibir [!DNL Privacy Service Event] notificaciones
 
-Una vez que haya registrado correctamente sus trabajos de weblock y privacy, puede empezar a recibir notificaciones de eventos. Estos eventos se pueden ver mediante el propio enlace web o seleccionando la pestaña **[!UICONTROL Debug Tracing]** en la descripción general del registro de eventos del proyecto en Adobe Developer Console.
+Una vez que haya registrado correctamente sus trabajos de weblock y privacy, puede empezar a recibir notificaciones de eventos. Estos eventos se pueden ver mediante el propio enlace web o seleccionando la pestaña **[!UICONTROL Seguimiento de depuración]** en la descripción general del registro de eventos del proyecto en Adobe Developer Console.
 
 ![](images/privacy-events/debug-tracing.png)
 
