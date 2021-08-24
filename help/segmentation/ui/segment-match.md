@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre la coincidencia de segmentos
 topic-legacy: overview
 description: Coincidencia de segmentos es un servicio para compartir segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, regulada y compatible con la privacidad.
-source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
+source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1982'
 ht-degree: 1%
 
 ---
@@ -74,6 +74,17 @@ Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campo
 [!DNL Segment Match] utiliza la etiqueta C11, una etiqueta de contrato específica de  [!DNL Segment Match] que puede agregar manualmente a cualquier conjunto de datos o atributo para asegurarse de que se excluyan del proceso de uso compartido de  [!DNL Segment Match] socios. La etiqueta C11 denota datos que no deben utilizarse en procesos [!DNL Segment Match]. Después de determinar qué conjuntos de datos o campos desea excluir de [!DNL Segment Match] y de agregar la etiqueta C11 en consecuencia, el flujo de trabajo [!DNL Segment Match] aplica automáticamente la etiqueta. [!DNL Segment Match] habilita automáticamente la directiva  [!UICONTROL Restrict data ] sharing core. Para obtener instrucciones específicas sobre cómo aplicar etiquetas de uso de datos a conjuntos de datos, consulte el tutorial sobre [administración de etiquetas de uso de datos en la interfaz de usuario](../../data-governance/labels/user-guide.md).
 
 Para obtener una lista de las etiquetas de uso de datos y sus definiciones, consulte el [glosario de etiquetas de uso de datos](../../data-governance/labels/reference.md). Para obtener información sobre las políticas de uso de datos, consulte la [información general sobre las políticas de uso de datos](../../data-governance/policies/overview.md).
+
+### Explicación de los permisos de [!DNL Segment Match]
+
+Hay dos permisos asociados con [!DNL Segment Match]:
+
+| Permiso | Descripción |
+| --- | --- |
+| Administrar conexiones de uso compartido de audiencias | Este permiso le permite completar el proceso de protocolo de enlace con el socio, que conecta dos organizaciones IMS para habilitar los flujos [!DNL Segment Match]. |
+| Administrar audiencias compartidas | Este permiso le permite crear, editar y publicar fuentes (el paquete de datos utilizado para [!DNL Segment Match]) con socios activos (socios que el usuario administrador ha conectado con **[!UICONTROL Audience Share Connections]** acceso). |
+
+Consulte la [descripción general del control de acceso](../../access-control/home.md) para obtener más información sobre el control de acceso y los permisos.
 
 ## [!DNL Segment Match] flujo de trabajo completo
 
