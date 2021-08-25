@@ -7,8 +7,7 @@ landing-page-description: Encuentre respuestas a las preguntas más frecuentes y
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-translation-type: tm+mt
-source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 4%
@@ -19,13 +18,13 @@ ht-degree: 4%
 
 Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform, así como una guía de solución de problemas de alto nivel para detectar errores comunes que se puedan encontrar en cualquier API [!DNL Experience Platform]. Para obtener guías de solución de problemas sobre los servicios [!DNL Platform] individuales, consulte el [directorio de solución de problemas del servicio](#service-troubleshooting-directory) a continuación.
 
-## Preguntas más frecuentes {#faq}
+## Preguntas frecuentes {#faq}
 
 A continuación encontrará una lista de las respuestas a las preguntas más frecuentes sobre Adobe Experience Platform.
 
 ## ¿Qué son las [!DNL Experience Platform] API? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] ofrece varias API de RESTful que utilizan solicitudes HTTP para acceder a los  [!DNL Platform] recursos. Cada una de estas API de servicio expone varios puntos finales y le permite realizar operaciones de lista (GET), búsqueda (GET), edición (PUT y/o PATCH) y eliminación (DELETE) de recursos. Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la [documentación de referencia de la API](http://www.adobe.com/go/platform-api-reference-en) en Adobe I/O.
+[!DNL Experience Platform] ofrece varias API de RESTful que utilizan solicitudes HTTP para acceder a los  [!DNL Platform] recursos. Cada una de estas API de servicio expone varios puntos finales y le permite realizar operaciones de lista (GET), búsqueda (GET), edición (PUT y/o PATCH) y eliminación (DELETE) de recursos. Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la [documentación de referencia de la API](https://www.adobe.com/go/platform-api-reference-en) en Adobe I/O.
 
 ## ¿Cómo se da formato a una solicitud de API? {#how-do-i-format-an-api-request}
 
@@ -97,7 +96,7 @@ Los siguientes códigos de estado se pueden encontrar en cualquier API [!DNL Exp
 
 ## Solicitar errores de encabezado {#request-header-errors}
 
-Todas las llamadas de API en [!DNL Platform] requieren encabezados de solicitud específicos. Para ver qué encabezados son necesarios para servicios individuales, consulte la [documentación de referencia de API](http://www.adobe.com/go/platform-api-reference-en). Para encontrar los valores de los encabezados de autenticación necesarios, consulte el [Tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Si falta alguno de estos encabezados o no es válido al realizar una llamada a la API, pueden producirse los siguientes errores.
+Todas las llamadas de API en [!DNL Platform] requieren encabezados de solicitud específicos. Para ver qué encabezados son necesarios para servicios individuales, consulte la [documentación de referencia de API](https://www.adobe.com/go/platform-api-reference-en). Para encontrar los valores de los encabezados de autenticación necesarios, consulte el [Tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Si falta alguno de estos encabezados o no es válido al realizar una llamada a la API, pueden producirse los siguientes errores.
 
 ### Falta el token OAuth {#oauth-token-is-missing}
 
