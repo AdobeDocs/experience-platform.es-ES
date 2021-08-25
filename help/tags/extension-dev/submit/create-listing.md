@@ -1,7 +1,7 @@
 ---
 title: Crear un listado de intercambio para una extensión
 description: Obtenga información sobre cómo añadir la extensión al catálogo público en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8705cfa65cb1d3a738610821ece827c2af33615
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 59%
@@ -41,9 +41,9 @@ Si ya tiene una cuenta de empresa o si no tiene previsto completar la lista, pue
 1. Proporcione la información de su anuncio. Para obtener información detallada sobre App Manager, consulte el [artículo completo](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). La información de la lista debería ser muy clara sobre qué hace la extensión y por qué resulta útil. La lista funciona como un espacio de marketing para la aplicación. Promocione la extensión aquí con descripciones claras, vínculos a páginas de aterrizaje del sitio, vínculos a documentos de ayuda o direcciones de correo electrónico de asistencia, etc. Aunque el espacio en las vistas de extensión es limitado, la lista de Exchange ofrece la oportunidad de promocionar tanto la extensión como la empresa. A continuación se presentan sugerencias para mejorar la promoción de la extensión de :
    - **Icono de la aplicación**: asegúrese de que el icono de la lista de Exchange tenga las dimensiones adecuadas de 512 x 512 para archivos png o una proporción de aspecto de 1:1 para jpg.
 
-   >[!NOTE]
-   >
-   >Este formato de archivo es diferente al que se utiliza en el código de extensión. La extensión contendrá un archivo svg como [icono](../manifest.md).
+      >[!NOTE]
+      >
+      >Este formato de archivo es diferente al que se utiliza en el código de extensión. La extensión contendrá un archivo svg como [icono](../manifest.md).
 
    - **Imagen destacada** : obtenga atención con una imagen que puede ser independiente y mostrará su marca y resaltará su aplicación. La imagen destacada es la que se muestra cuando alguien comparte un vínculo a su lista de Exchange o publica sobre ella en medios sociales. Por lo tanto, debe ser una representación modelo de su marca.
    - **Logotipo del editor de la aplicación**: se trata del logotipo de su empresa. Asegúrese de que el icono tenga las dimensiones adecuadas de 1280 x 720 o de 2560 x 1440 (16:9) en formato png o jpg, respectivamente.
