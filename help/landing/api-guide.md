@@ -5,8 +5,7 @@ title: Introducción a las API de Adobe Experience Platform
 topic-legacy: api guide
 description: Adobe Experience Platform proporciona servicios de API estrechamente vinculados entre sí. Esta guía contiene información sobre los servicios disponibles, los encabezados necesarios para las operaciones de CRUD, los mensajes de error, las colecciones Postman y las llamadas de API de ejemplo.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%
@@ -51,7 +50,7 @@ Postman es una plataforma de colaboración para el desarrollo de API que le perm
 
 Para obtener más información sobre Postman, incluido cómo configurar un entorno, una lista de colecciones disponibles y cómo importar colecciones, visite la [documentación de Platform Postman](postman.md).
 
-## Leyendo llamadas de API de ejemplo {#sample-api}
+## Leer llamadas de API de ejemplo {#sample-api}
 
 Los formatos de solicitud varían según la API de plataforma que se utilice. La mejor manera de estructurar las llamadas de API es seguir los ejemplos proporcionados en la documentación del servicio de Platform en particular que está utilizando.
 
@@ -138,7 +137,7 @@ Para obtener más información sobre extremos específicos en las API de platafo
 | [[!DNL Segmentation Service] Guía de API](.././segmentation/api/overview.md) | La API [!DNL Segmentation Service] permite a los desarrolladores administrar mediante programación las operaciones de segmentación en Adobe Experience Platform. Esto incluye la generación de segmentos y audiencias a partir de los datos del perfil del cliente en tiempo real. |
 | [[!DNL Sensei Machine Learning] Guía de API](.././data-science-workspace/api/getting-started.md) <br>  (Data Science Workspace) | La API [!DNL Sensei Machine Learning] proporciona un mecanismo para que los científicos de datos organicen y administren los servicios de aprendizaje automático (ML) desde la incorporación de algoritmos, la experimentación y la implementación de servicios. |
 
-Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la [documentación de referencia de la API](http://www.adobe.com/go/platform-api-reference-en) en Adobe I/O.
+Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la [documentación de referencia de la API](https://www.adobe.com/go/platform-api-reference-en) en Adobe I/O.
 
 ## Pasos siguientes
 
