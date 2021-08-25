@@ -1,12 +1,12 @@
 ---
 title: Variables de Adobe Analytics asignadas automáticamente en el SDK web de Adobe Experience Platform
 description: Descubra qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Experience Platform
-seo-description: Descubra qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Adobe Experience Platform
+seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;asignación automática;asignación automática;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
+source-git-commit: 09c6986fcd3682377725ded389496d5076e9e1e2
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,8 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | `placeContext.geo.postalCode` | `zip` | Asignación ZIP del parámetro de consulta AppMeasurement. |
 | `placeContext.geo.stateProvince` | `state` | Asignación STATE del parámetro de consulta AppMeasurement. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | Parámetro de consulta AppMeasurement Evento de comercialización de productos / Asignación de Evars. |
-| `productlistitems.[N].name` | `products` | Parámetro de consulta AppMeasurement Asignación de nombres de productos. |
+| `productListItems[N].lineItemId` | `products` | Parámetro de consulta AppMeasurement Asignación de nombres de productos. |
+| `productlistitems.[N].name` | `products` | Parámetro de consulta AppMeasurement Productos Asignación de categorías. |
 | `productlistitems.[N].priceTotal` | `products` | Parámetro de consulta AppMeasurement Asignación de precios de productos. |
 | `productlistitems.[N].quantity` | `products` | Parámetro de consulta AppMeasurement Asignación de cantidad de productos. |
 | `web.webInteraction.URL` | `pev1` | Asignación del parámetro de consulta AppMeasurement PAGE_EVENT_VAR1 . |
