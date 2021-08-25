@@ -5,7 +5,7 @@ title: Glosario de Adobe Experience Platform
 topic-legacy: getting started
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
 source-wordcount: '7386'
 ht-degree: 1%
@@ -262,7 +262,7 @@ ht-degree: 1%
 
 **Host**: En el contexto de las etiquetas, un host especifica la ubicación, el dominio y las credenciales de usuario necesarios para que el sistema envíe una compilación.
 
-**Por hora**: En el contexto de las exportaciones de archivos programadas, programa las exportaciones de archivos incrementales cada 3, 6, 7 ó 12 horas.
+**Por hora**: En el contexto de las exportaciones de archivos programadas, programa las exportaciones de archivos incrementales cada 3, 6, 8 ó 12 horas.
 
 ## I
 
