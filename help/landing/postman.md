@@ -5,8 +5,7 @@ title: Postman en Adobe Experience Platform
 topic-legacy: api guide
 description: Este documento contiene pasos que describen cómo configurar un entorno Postman, importar colecciones Postman y una lista de colecciones disponibles para cada servicio de Platform.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 0%
@@ -25,13 +24,13 @@ La siguiente guía de vídeo describe la creación y configuración del entorno 
 
 ## Colecciones Postman {#collections}
 
-Puede encontrar una carpeta que contenga todas las colecciones Postman disponibles en, visitando el [Experience Platform Postman muestra el repositorio de GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternativamente, se puede encontrar un vínculo de recopilación de Postman en cada archivo de intercambio individual en la [documentación de referencia de la API](http://www.adobe.com/go/platform-api-reference-en) en el Adobe I/O.
+Puede encontrar una carpeta que contenga todas las colecciones Postman disponibles en, visitando el [Experience Platform Postman muestra el repositorio de GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternativamente, se puede encontrar un vínculo de recopilación de Postman en cada archivo de intercambio individual en la [documentación de referencia de la API](https://www.adobe.com/go/platform-api-reference-en) en el Adobe I/O.
 
 Para descargar una colección de Postman, seleccione **[!DNL Raw]** en la página de GitHub para cargar el archivo JSON sin procesar en una nueva pestaña. A continuación, haga clic con el botón derecho y seleccione **[!DNL Save as]** para guardar el archivo en un destino local de su elección.
 
 ![JSON sin procesar](./images/api-guide/raw-collection.PNG)
 
-## Importar una colección de Postman {#import}
+## Importar una colección Postman {#import}
 
 Para utilizar una [colección Postman](#collections), debe tener configurado un entorno. Una vez completada la configuración del entorno, seleccione el selector **[!DNL Manage Environments]** en la esquina superior derecha.
 
