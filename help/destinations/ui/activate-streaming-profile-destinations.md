@@ -2,12 +2,12 @@
 keywords: activar destinos de perfil;activar destinos;activar datos; activar destinos de marketing por correo electrónico; activar destinos de almacenamiento en la nube
 title: Activar datos de audiencia en destinos de exportación de perfil de flujo continuo
 type: Tutorial
-seo-title: Activar datos de audiencia en destinos de exportación de perfil de flujo continuo
+seo-title: Activate audience data to streaming profile export destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles de flujo continuo.
-seo-description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles de flujo continuo.
-source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
+source-git-commit: d13920250fafd2ba4ff37dd5d4a45d417ed3ecc7
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,17 @@ Para activar los datos en los destinos, debe haber [conectado correctamente a un
 
 ## Seleccione el destino {#select-destination}
 
-1. Vaya a **[!UICONTROL Connections > Destinations]** y seleccione la pestaña **[!UICONTROL Browse]**.
+1. Vaya a **[!UICONTROL Connections > Destinations]** y seleccione la pestaña **[!UICONTROL Catalog]**.
 
-   ![Ficha Exploración de destino](../assets/ui/activate-streaming-profile-destinations/browse-tab.png)
+   ![Ficha Catálogo de destino](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Seleccione el botón **[!UICONTROL Add segments]** correspondiente al destino en el que desea activar los segmentos, como se muestra en la imagen siguiente.
+1. Seleccione **[!UICONTROL Activar segmentos]** en la tarjeta correspondiente al destino donde desee activar los segmentos, como se muestra en la imagen siguiente.
 
-   ![Activar botones](../assets/ui/activate-streaming-profile-destinations/activate-buttons-browse.png)
+   ![Botón Activar segmentos](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+
+1. Seleccione la conexión de destino que desee utilizar para activar los segmentos y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+
+   ![Seleccionar destino](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. Cambie a la siguiente sección para [seleccionar sus segmentos](#select-segments).
 
