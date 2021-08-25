@@ -2,11 +2,11 @@
 keywords: plataforma;destinos;espacio de trabajo de destinos;espacio de trabajo;iu;iu de destinos;catálogo;catálogo de destinos
 title: Espacio de trabajo de destinos
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema. Se describen en las secciones siguientes.
-seo-description: En Adobe Experience Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
+seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 2%
 
 ---
@@ -40,14 +40,14 @@ La interfaz de usuario [!DNL Platform] proporciona varias opciones de búsqueda 
 * Alternar entre [!UICONTROL Todos los destinos] y [!UICONTROL Mis destinos]. Cuando selecciona **[!UICONTROL Todos los destinos]**, se muestran todos los destinos [!DNL Platform] disponibles. Al seleccionar **[!UICONTROL Mis destinos]**, solo puede ver los destinos con los que ha establecido una conexión.
 * Seleccione para ver **[!UICONTROL Conexiones]** o **[!UICONTROL Extensiones]**. Para comprender la diferencia entre las dos categorías, consulte [Tipos de destino y Categorías](../destination-types.md).
 
-![filtrado de destinos y demostración de búsqueda](../assets/ui/workspace/destinations-search-and-filter.gif)
+![Catálogo](../assets/ui/workspace/catalog.png)
 
-Las tarjetas de destino contienen un control **[!UICONTROL Configure]** o **[!UICONTROL Activate]** y un control secundario que muestra más opciones. Estos controles se describen a continuación:
+Las tarjetas de destino contienen un control **[!UICONTROL Set up]** o **[!UICONTROL Activate segments]** y un control secundario que muestra más opciones. Estos controles se describen a continuación:
 
 | Control | Descripción |
 |---------|----------|
-| [!UICONTROL Configurar] | Permite crear una conexión con el destino. |
-| [!UICONTROL Activar] | Una vez que haya establecido una conexión con el destino, puede activar segmentos. |
+| [!UICONTROL Configuración] | Permite crear una conexión con el destino. |
+| [!UICONTROL Activar segmentos] | Una vez que haya establecido una conexión con el destino, puede activar segmentos. |
 | [!UICONTROL Ver cuenta] | Ver las cuentas que se han conectado para un destino. |
 | [!UICONTROL Ver flujos de datos] | Ver los flujos de activación de datos que existen para un destino. |
 | [!UICONTROL Ver documentación] | Abre un vínculo a la página de documentación para ese destino específico, para obtener más información y para ayudarle a configurarla. |
@@ -72,7 +72,7 @@ La pestaña **[!UICONTROL Browse]** muestra los destinos con los que ha establec
 
 >[!TIP]
 >
-> * Seleccione los tres puntos de la columna [!UICONTROL Name] y utilice el botón ![Add segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate ]**para enviar segmentos a ese destino.
+> * Seleccione los tres puntos de la columna [!UICONTROL Name] y utilice el botón ![Add segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments ]**para enviar segmentos a ese destino.
 > * Seleccione los tres puntos de la columna [!UICONTROL Name] y utilice el botón ![Delete destinos button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete ]**para [eliminar](delete-destinations.md) una conexión existente a un destino.
 
 
