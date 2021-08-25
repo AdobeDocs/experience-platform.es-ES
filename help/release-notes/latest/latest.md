@@ -1,91 +1,46 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión del Experience Platform para el 28 de julio de 2021.
-doc-type: release notes
-last-update: July 28, 2021
-author: ens60013
+description: Últimas notas de la versión de Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 7%
+source-wordcount: '459'
+ht-degree: 10%
 
 ---
 
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 28 de julio de 2021**
+**Fecha de lanzamiento: 25 de agosto de 2021**
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Data Science Workspace](#dsw)
-- [Flujos de datos](#destinations)
-- [Destinos](#destinations)
-- [Modelo de datos de experiencia (XDM)](#xdm)
-- [Servicio de consultas](#query)
+- [Perspectivas de la capacidad de observación](#observability)
+- [Perfil del cliente en tiempo real](#profile)
 - [Fuentes](#sources)
 
-## Data Science Workspace {#dsw}
+## Perspectivas de la capacidad de observación {#observability}
 
-Data Science Workspace utiliza el aprendizaje automático y la inteligencia artificial para crear perspectivas a partir de sus datos. Integrado en Adobe Experience Platform, Data Science Workspace le ayuda a hacer predicciones utilizando sus recursos de contenido y datos en las soluciones de Adobe.
+Observability Insights permite supervisar las actividades de Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
 
-**Nuevas funciones**
+**Nuevas características**
 
 | Función | Descripción |
 | --- | --- |
-| Actualizaciones de biblioteca y sistema operativo | Data Science Workspace ha realizado actualizaciones importantes de la biblioteca y el sistema operativo para mejorar la funcionalidad y el uso. Esto incluye JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 con soporte para CUDA 11 y CUDNN 8, y más. Para aprender a ver las bibliotecas disponibles en JupyterLab, visite la sección [bibliotecas compatibles](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) en la documentación de información general de los blocs de notas de JupyterLab. |
+| Alertas | Ahora puede suscribirse a alertas importantes relacionadas con flujos de trabajo que se ejecutan en Platform. Después de suscribirse a reglas de alerta específicas, recibirá notificaciones en la interfaz de usuario y correos electrónicos cuando se produzca un evento de ciclo de vida importante (como la incorporación de datos correcta) o si hay problemas que requieran su atención (como un error en el flujo de ingesta o un trabajo de segmento que tarde más de lo esperado). Para obtener más información, consulte la [descripción general de las alertas](../../observability/alerts/overview.md). |
 
-Para obtener información más general sobre Data Science Workspace, consulte [Información general sobre Data Science Workspace](../../data-science-workspace/home.md).
+Consulte [Observability Insights overview](../../observability/home.md) para obtener más información sobre el servicio.
 
-## Flujos de datos {#dataflows}
+## Perfil del cliente en tiempo real {#profile}
 
-En Platform, los datos se incorporan de muchas fuentes diferentes, se analizan dentro del sistema y se activan en una amplia variedad de destinos. Platform facilita el proceso de seguimiento de este flujo de datos potencialmente no lineal al proporcionar transparencia con flujos de datos.
-
-Los flujos de datos son una representación de trabajos que mueven datos a través de Platform. Estos flujos de datos se configuran en distintos servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, donde el servicio de identidad y el perfil del cliente en tiempo real los utilizan antes de activarse finalmente en los destinos.
-
-**Nuevas funciones**
+Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de los clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
 
 | Función | Descripción |
 | ------- | ----------- |
-| Panel de destinos | Ahora puede utilizar el panel de monitorización para controlar los flujos de datos de los destinos. Para obtener más información, lea el tutorial sobre [destinos de monitorización en la interfaz de usuario](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) |
+| Examinar perfiles por política de combinación o identidad | Al examinar perfiles en Experience Platform, ahora puede examinar por política de combinación para obtener una vista previa de 20 perfiles de muestra basados en la política de combinación seleccionada. También puede examinar por identidad para buscar un perfil específico mediante un área de nombres de identidad y un valor de identidad relacionado. Para obtener más información, consulte la [Guía de la interfaz de usuario del perfil del cliente en tiempo real](../../profile/ui/user-guide.md). |
 
-Para obtener información más general sobre los flujos de datos, consulte la [descripción general de los flujos de datos](../../dataflows/home.md). Para obtener más información sobre los destinos, consulte [información general sobre destinos](../../destinations/home.md).
-
-## Destinos {#destinations}
-
-Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos desde Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
-
-**Nuevas funciones**
-
-| Función | Descripción |
-| --- | --- |
-| [Exportaciones de archivos incrementales más rápidas](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | Ahora puede programar exportaciones de archivos incrementales para destinos basados en archivos cada 3, 6, 8 y 12 horas. Actualmente no se puede cambiar la programación de exportación de archivos para segmentos que ya se han guardado. Para volver a exportar segmentos con una programación diferente, debe crear una nueva instancia de destino. Se trata de una limitación que se abordará en futuras versiones. |
-| [Compatibilidad con claves de deduplicación](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | Elimine varios registros del mismo perfil en los archivos de exportación seleccionando una clave de deduplicación. Puede seleccionar un solo espacio de nombres o hasta dos atributos de esquema XDM como clave de deduplicación. |
-
-## Modelo de datos de experiencia (XDM) {#xdm}
-
-Experience Data Model (XDM) es una especificación de código abierto diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para los datos en forma de esquemas, que permiten a cualquier aplicación comunicarse con los servicios de Platform.
-
-| Función | Descripción |
-| --- | --- |
-| Filtro del sector de las telecomunicaciones | Al agregar grupos de campos a un esquema en la interfaz de usuario, ahora puede filtrar por sector de telecomunicaciones. Consulte el [diagrama de relación de entidades del sector de las telecomunicaciones (ERD)](../../xdm/schema/industries/telecom.md) para ver un modelo de datos recomendado para casos de uso de telecomunicaciones. |
-
-Para obtener información más general sobre XDM en Platform, consulte [Información general del sistema XDM](../../xdm/home.md).
-
-## Servicio de consultas {#query}
-
-El servicio de consulta ofrece la capacidad de usar SQL estándar para consultar datos en Adobe Experience Platform, admitiendo una variedad de casos de uso de análisis y administración de datos. Se trata de una herramienta sin servidor que le permite unir conjuntos de datos del lago de datos y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en informes, Data Science Workspace o para su incorporación al Perfil del cliente en tiempo real.
-
-Puede utilizar el servicio de consulta para crear ecosistemas de análisis de datos, creando una imagen de los clientes en sus distintos canales de interacción. Estos canales pueden incluir sistemas de puntos de venta, web, móviles o CRM.
-
-**Nuevas funciones**
-
-| Función | Descripción |
-| ------- | ----------- |
-| Consultas programadas | Ahora puede programar consultas en Platform mediante el Editor de consultas. Para obtener más información, lea la documentación del [Editor de consultas](../../query-service/ui/user-guide.md#scheduled-queries). |
-
-Para obtener más información, consulte la [Documentación del servicio de consulta](../../query-service/home.md).
+Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de perfil, lea en primer lugar la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
 
 ## Fuentes {#sources}
 
@@ -95,7 +50,6 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 
 | Función | Descripción |
 | ------- | ----------- |
-| Fuentes beta que se trasladan a GA | Se han promocionado las siguientes fuentes de beta a GA: <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
-| [!DNL Salesforce Marketing Cloud] (Beta) | Ahora puede conectar [!DNL Salesforce Marketing Cloud] al Experience Platform mediante la API [!DNL Flow Service] o la interfaz de usuario. Consulte la [[!DNL Salesforce Marketing Cloud] descripción general del conector](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md) para obtener más información. |
+| Conector de origen de carga de archivos locales | Se ha cambiado el nombre de la categoría de ingesta de archivos a sistema local, lo que permite llevar los archivos locales directamente a Platform mediante el conector de carga de archivos local. Los datos introducidos a través de este conector se pueden supervisar mediante el panel de control. Consulte la [descripción general del origen de carga de archivos locales](../../sources/connectors/local-system/local-file-upload.md) para obtener más información. |
 
 Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
