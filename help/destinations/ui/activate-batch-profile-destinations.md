@@ -2,12 +2,12 @@
 keywords: activar destinos de perfil;activar destinos;activar datos; activar destinos de marketing por correo electrónico; activar destinos de almacenamiento en la nube
 title: Activar datos de audiencia en destinos de exportación de perfiles en lote
 type: Tutorial
-seo-title: Activar datos de audiencia en destinos de exportación de perfiles en lote
+seo-title: Activate audience data to batch profile export destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
-seo-description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
-source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1905'
 ht-degree: 1%
 
 ---
@@ -90,7 +90,7 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para almacenar en d�
 1. Utilice el selector **[!UICONTROL Frequency]** para seleccionar la frecuencia de exportación:
 
    * **[!UICONTROL Diario]**: programar exportaciones de archivos incrementales una vez al día, todos los días, en el momento especificado.
-   * **[!UICONTROL Por hora]**: programar exportaciones de archivos incrementales cada 3,6,7 ó 12 horas.
+   * **[!UICONTROL Por hora]**: programar exportaciones de archivos incrementales cada 3, 6, 8 o 12 horas.
 
 2. Utilice el selector **[!UICONTROL Time]** para elegir la hora del día, en formato [!DNL UTC], en la que se debe realizar la exportación.
 
@@ -320,8 +320,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 >* Los campos se configuran como atributos proyectados para el destino de destino.
 
 >
-> 
-Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, en el paso de revisión se mostrará una infracción de la política de uso de datos. Para obtener más información, consulte [Control de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, en el paso de revisión se mostrará una infracción de la política de uso de datos. Para obtener más información, consulte [Control de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ## Consulte {#review}
 
