@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
+source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2154'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 El servicio de consulta de Adobe Experience Platform permite utilizar ANSI SQL estándar para las instrucciones `SELECT` y otros comandos limitados. Este documento cubre la sintaxis SQL admitida por [!DNL Query Service].
 
-## SELECT consultas {#select-queries}
+## Consultas SELECT {#select-queries}
 
 La siguiente sintaxis define una consulta `SELECT` compatible con [!DNL Query Service]:
 
@@ -117,6 +117,15 @@ SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Cus
 Tenga en cuenta que una cláusula `SNAPSHOT` funciona con un alias de tabla o tabla pero no sobre una subconsulta o vista. Una cláusula `SNAPSHOT` funcionará en cualquier parte donde se pueda aplicar una consulta `SELECT` de una tabla.
 
 Además, puede utilizar `HEAD` y `TAIL` como valores de desplazamiento especiales para las cláusulas de instantánea. El uso de `HEAD` hace referencia a un desplazamiento antes de la primera instantánea, mientras que `TAIL` hace referencia a un desplazamiento después de la última instantánea.
+
+>[!NOTE]
+>
+>Si realiza una consulta entre dos ID de instantánea y la instantánea de inicio ha caducado, pueden producirse las dos situaciones siguientes, en función de si se ha establecido el indicador opcional de comportamiento de reserva (`resolve_fallback_snapshot_on_failure`):
+>
+>- Si se establece el indicador de comportamiento de reserva opcional, Query Service elegirá la instantánea más temprana disponible, la definirá como instantánea de inicio y devolverá los datos entre la instantánea más temprana disponible y la instantánea final especificada. Estos datos son **inclusivos** de la primera instantánea disponible.
+>
+>- Si no se establece el indicador de comportamiento alternativo opcional, se devuelve un error.
+
 
 ### cláusula WHERE
 
