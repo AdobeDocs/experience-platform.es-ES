@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Esta guía muestra cómo crear, ver, actualizar y eliminar atributos calculados mediante la API de perfil del cliente en tiempo real.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2272'
 ht-degree: 2%
 
 ---
@@ -25,7 +24,7 @@ Para obtener más información sobre los atributos calculados, comience leyendo 
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la [API del perfil del cliente en tiempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+El extremo de API utilizado en esta guía forma parte de la [API del perfil del cliente en tiempo real](https://www.adobe.com/go/profile-apis-en).
 
 Antes de continuar, consulte la [guía de introducción a la API de perfil](../api/getting-started.md) para ver los vínculos a la documentación recomendada, una guía para leer las llamadas de API de ejemplo que aparecen en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 

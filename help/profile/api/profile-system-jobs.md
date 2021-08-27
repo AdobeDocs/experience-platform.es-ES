@@ -5,11 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite eliminar un conjunto de datos o lote del almacén de perfiles para eliminar los datos del perfil del cliente en tiempo real que ya no sean necesarios o que se hayan agregado por error. Esto requiere el uso de la API de perfil para crear un trabajo del sistema de perfil o eliminar una solicitud.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 2%
+source-wordcount: '1316'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +22,7 @@ Adobe Experience Platform le permite introducir datos de varias fuentes y crear 
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte de [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Ver solicitudes de eliminación
 

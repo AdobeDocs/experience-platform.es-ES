@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, haciendo que los datos adecuados estén disponibles y se actualicen continuamente a medida que se produzcan cambios. Esto se hace mediante el uso de bordes, un servidor ubicado geográficamente que almacena datos y lo hace fácilmente accesible para las aplicaciones.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1959'
 ht-degree: 2%
 
 ---
@@ -19,7 +18,7 @@ Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus cliente
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
+El extremo de API utilizado en esta guía forma parte de [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
 
 >[!NOTE]
 >
@@ -148,10 +147,10 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| `type` **(Requerido)** | Tipo de destino que se va a crear. El único valor aceptado, &quot;EDGE&quot;, crea un destino de borde. |
-| `dataCenters` **(Requerido)** | Matriz de cadenas que enumera los bordes hacia los que se deben enrutar las proyecciones. Puede contener uno o más de los siguientes valores: &quot;OR1&quot; - Estados Unidos Occidental, &quot;VA5&quot; - Estados Unidos Oriental, &quot;NLD1&quot; - EMEA. |
-| `ttl` **(Requerido)** | Especifica la caducidad de la proyección. Intervalo de valores aceptado: 600 a 604800. Valor predeterminado: 3600. |
-| `replicationPolicy` **(Requerido)** | Define el comportamiento de la replicación de datos desde el concentrador hasta los bordes.  Valores compatibles: PROACTIVO, REACTIVO. Valor predeterminado: REACTIVO. |
+| `type` **(Obligatorio)** | Tipo de destino que se va a crear. El único valor aceptado, &quot;EDGE&quot;, crea un destino de borde. |
+| `dataCenters` **(Obligatorio)** | Matriz de cadenas que enumera los bordes hacia los que se deben enrutar las proyecciones. Puede contener uno o más de los siguientes valores: &quot;OR1&quot; - Estados Unidos Occidental, &quot;VA5&quot; - Estados Unidos Oriental, &quot;NLD1&quot; - EMEA. |
+| `ttl` **(Obligatorio)** | Especifica la caducidad de la proyección. Intervalo de valores aceptado: 600 a 604800. Valor predeterminado: 3600. |
+| `replicationPolicy` **(Obligatorio)** | Define el comportamiento de la replicación de datos desde el concentrador hasta los bordes.  Valores compatibles: PROACTIVO, REACTIVO. Valor predeterminado: REACTIVO. |
 
 **Respuesta**
 
