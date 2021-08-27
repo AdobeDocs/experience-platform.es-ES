@@ -4,11 +4,10 @@ title: Guía de API del servicio de segmentación
 topic-legacy: guide
 description: La API del servicio de segmentación permite a los desarrolladores administrar mediante programación las operaciones de segmentación en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 0%
+source-wordcount: '497'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +17,7 @@ ht-degree: 0%
 
 La API [!DNL Segmentation Service] proporciona varios extremos que le permiten administrar mediante programación sus operaciones de segmentación en [!DNL Experience Platform]. Este documento de información general proporciona introducciones de alto nivel a cada uno de estos puntos finales y vínculos a sus guías de puntos finales asociadas para obtener más información. Antes de leer las guías de puntos finales individuales, consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, la lectura de llamadas de API de ejemplo y más.
 
-Para ver todos los extremos disponibles y las operaciones de CRUD, consulte la [referencia de la API del servicio de segmentación](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml).
+Para ver todos los extremos disponibles y las operaciones de CRUD, consulte la [referencia de la API del servicio de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
 ## Exportar trabajos
 
@@ -34,7 +33,7 @@ Las estimaciones proporcionan información estadística para definiciones de seg
 
 Para obtener más información sobre el uso de estos extremos, lea la [guía de vistas previas y estimaciones de puntos finales](./previews-and-estimates.md).
 
-## Programaciones
+## Planificador
 
 Los programas son una herramienta que se puede utilizar para ejecutar automáticamente los trabajos de segmentación por lotes una vez al día. Puede utilizar el extremo `/config/schedules` para recuperar una lista de programaciones, crear una nueva programación, recuperar detalles de una programación específica, actualizar una programación específica o eliminar una programación específica.
 

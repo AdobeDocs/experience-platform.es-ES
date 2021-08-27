@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de flujo continuo y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1111'
-ht-degree: 2%
+source-wordcount: '1107'
+ht-degree: 3%
 
 ---
 
@@ -40,7 +40,7 @@ Este tutorial también requiere que tenga un ID de conexión de origen válido p
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
 - [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
-## Crear un esquema XDM de destino {#target-schema}
+## Creación de un esquema XDM de destino {#target-schema}
 
 Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se contienen los datos de origen. Este esquema XDM de destino también amplía la clase XDM [!DNL Individual Profile].
 
@@ -152,7 +152,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ## Creación de un conjunto de datos de destino
 
-Con un esquema XDM de destino creado y su `$id` único, ahora puede crear un conjunto de datos de destino para contener los datos de origen. Para crear un conjunto de datos de destinatario, realice una solicitud de POST al extremo `dataSets` de la [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), mientras proporciona el ID del esquema de destino dentro de la carga útil.
+Con un esquema XDM de destino creado y su `$id` único, ahora puede crear un conjunto de datos de destino para contener los datos de origen. Para crear un conjunto de datos de destinatario, realice una solicitud de POST al extremo `dataSets` de la [API del servicio de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), mientras proporciona el ID del esquema de destino dentro de la carga útil.
 
 **Formato de API**
 
@@ -203,7 +203,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Crear una conexión de destino {#target-connection}
+## Creación de una conexión de destino {#target-connection}
 
 Las conexiones de destino crean y administran una conexión de destino a Platform o a cualquier ubicación en la que aterricen los datos transferidos. Las conexiones de destino contienen información sobre el destino de los datos, el formato de los datos y el ID de conexión de destino necesario para crear un flujo de datos. Las instancias de conexión de Target son específicas de un inquilino y de una organización de IMS.
 

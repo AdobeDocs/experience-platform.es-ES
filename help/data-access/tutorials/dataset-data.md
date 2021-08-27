@@ -6,11 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Obtenga información sobre cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos en Adobe Experience Platform. También se le presentarán algunas de las funciones únicas de la API de acceso a datos, como paginación y descargas parciales.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 2%
+source-wordcount: '1390'
+ht-degree: 4%
 
 ---
 
@@ -62,7 +61,7 @@ Antes de empezar a utilizar la API [!DNL Data Access] , debe identificar la ubic
 - `GET /batches`: Devuelve una lista de lotes de su organización
 - `GET /dataSetFiles`: Devuelve una lista de archivos de su organización
 
-Para obtener una lista completa de los extremos en la API [!DNL Catalog], consulte la [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Para obtener una lista completa de los extremos en la API [!DNL Catalog], consulte la [Referencia de API](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 ## Recupere una lista de lotes en su organización de IMS
 
@@ -193,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-Puede encontrar una lista completa de parámetros y filtros en la [Referencia de la API del catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Puede encontrar una lista completa de parámetros y filtros en la [Referencia de la API del catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 ## Recuperar una lista de todos los archivos pertenecientes a un lote concreto
 

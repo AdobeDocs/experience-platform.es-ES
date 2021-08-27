@@ -5,15 +5,14 @@ title: Guía de API del servicio de catálogo
 topic-legacy: developer guide
 description: La API del servicio de catálogo permite a los desarrolladores administrar metadatos de conjuntos de datos en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 0%
+source-wordcount: '596'
+ht-degree: 3%
 
 ---
 
-# [!DNL Catalog Service] Guía de API
+# Guía de la API de [!DNL Catalog Service]
 
 [!DNL Catalog Service] es el sistema de registro para la ubicación y el linaje de datos dentro de Adobe Experience Platform. [!DNL Catalog] actúa como un almacén de metadatos o un &quot;catálogo&quot; donde puede encontrar información sobre sus datos dentro de  [!DNL Experience Platform], sin necesidad de acceder a los datos en sí. Consulte [[!DNL Catalog] overview](../home.md) para obtener más información.
 
@@ -65,6 +64,6 @@ Dado que algunas consultas pueden suponer una carga pesada para la API, se han i
 
 Este documento abarcaba los conocimientos previos necesarios para realizar llamadas a la API [!DNL Catalog]. Ahora puede continuar con las llamadas de ejemplo que se proporcionan en esta guía para desarrolladores y seguir junto con sus instrucciones.
 
-La mayoría de los ejemplos de esta guía utilizan el extremo `/dataSets` , pero los principios se pueden aplicar a otros extremos dentro de [!DNL Catalog] (como `/batches` y `/accounts`). Consulte la [Referencia de la API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) para obtener una lista completa de todas las llamadas y operaciones disponibles para cada extremo.
+La mayoría de los ejemplos de esta guía utilizan el extremo `/dataSets` , pero los principios se pueden aplicar a otros extremos dentro de [!DNL Catalog] (como `/batches` y `/accounts`). Consulte la [Referencia de la API del servicio de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/) para obtener una lista completa de todas las llamadas y operaciones disponibles para cada extremo.
 
 Para ver un flujo de trabajo paso a paso que muestre cómo la API [!DNL Catalog] está implicada en la ingesta de datos, consulte el tutorial sobre la [creación de un conjunto de datos](../datasets/create.md).

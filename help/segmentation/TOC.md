@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Servicio de segmentación de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree segmentos y genere audiencias a partir de los datos del perfil del cliente en tiempo real.
-feature: Segmentos
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+feature: Segments
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '159'
 ht-degree: 27%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 27%
 - [Tipos de datos de segmentación](data-types.md)
 - API de segmentación {#api}
    - [Información general](api/overview.md)
-   - [Introducción](api/getting-started.md)
+   - [Primeros pasos](api/getting-started.md)
    - [Segmentación de Edge](api/edge-segmentation.md)
    - [Exportar trabajos](api/export-jobs.md)
    - [Previsión y estimaciones](api/previews-and-estimates.md)
-   - [Programaciones](api/schedules.md)
+   - [Planificador](api/schedules.md)
    - [Definiciones de segmentos](api/segment-definitions.md)
    - [Trabajos de segmentos](api/segment-jobs.md)
    - [Búsqueda de segmentos](api/segment-search.md)
@@ -61,5 +61,5 @@ ht-degree: 27%
    - [Importación y uso de audiencias externas](tutorials/using-external-audiences.md)
    - [Crear un conjunto de datos para exportar datos](tutorials/create-dataset-export-segment.md)
    - [Aplicar el cumplimiento de uso de datos para los segmentos](tutorials/governance.md)
-- [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
+- [Referencia de API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)

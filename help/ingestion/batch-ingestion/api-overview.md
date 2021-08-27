@@ -5,17 +5,16 @@ title: Guía de API de ingesta de lotes
 topic-legacy: developer guide
 description: Este documento proporciona una descripción general completa del uso de las API de ingesta por lotes.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2556'
-ht-degree: 6%
+source-wordcount: '2552'
+ht-degree: 7%
 
 ---
 
 # Guía de API de ingesta por lotes
 
-Este documento proporciona una descripción general completa del uso de [API de ingesta por lotes](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Este documento proporciona una descripción general completa del uso de [API de ingesta por lotes](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 El apéndice de este documento proporciona información sobre los [datos de formato que se utilizarán para la ingesta](#data-transformation-for-batch-ingestion), incluidos archivos de datos CSV y JSON de muestra.
 
@@ -59,11 +58,11 @@ Al ingerir datos, es importante comprender cómo funcionan los esquemas [!DNL Ex
 
 Hay cierta flexibilidad a la hora de introducir datos: si un tipo no coincide con lo que hay en el esquema de destino, los datos se convertirán al tipo de destino expresado. Si no puede, fallará el lote con un `TypeCompatibilityException`.
 
-Por ejemplo, ni JSON ni CSV tienen un tipo de fecha o fecha y hora. Como resultado, estos valores se expresan utilizando [cadenas con formato ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tiempo Unix formateados en milisegundos (15312639 59000) y se convierten en el momento de la ingesta al tipo XDM de destino.
+Por ejemplo, ni JSON ni CSV tienen un tipo de fecha o fecha y hora. Como resultado, estos valores se expresan utilizando [cadenas con formato ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tiempo Unix formateado en milisegundos (15312639 59000) y se convierten en el momento de la ingesta al tipo XDM de destino.
 
 La tabla siguiente muestra las conversiones admitidas al introducir datos.
 
-| Entrante (fila) frente a Target (col.) | Cadena | Byte | Corto | Número entero | Largo | Duplicada | Fecha | Date-Time | Objeto | Mapa |
+| Entrante (fila) frente a Target (col.) | Cadena | Byte | Corto | Número entero | Largo | Duplicada | Fecha  | Date-Time | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Cadena | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
@@ -71,7 +70,7 @@ La tabla siguiente muestra las conversiones admitidas al introducir datos.
 | Número entero | X | X | X | X | X | X |  |  |  |  |
 | Largo | X | X | X | X | X | X | X | X |  |  |
 | Duplicada | X | X | X | X | X | X |  |  |  |  |
-| Fecha |  |  |  |  |  |  | X |  |  |  |
+| Fecha  |  |  |  |  |  |  | X |  |  |  |
 | Date-Time |  |  |  |  |  |  |  | X |  |  |
 | Objeto |  |  |  |  |  |  |  |  | X | X |
 | Mapa |  |  |  |  |  |  |  |  | X | X |

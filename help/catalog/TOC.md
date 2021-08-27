@@ -2,12 +2,11 @@
 audience: user
 user-guide-title: Guía de catálogos y conjuntos de datos
 user-guide-description: Explore el linaje de datos, los metadatos, las descripciones de los archivos, los directorios y los conjuntos de datos dentro del lago de datos.
-feature: Gestión de datos
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Management
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 23%
+source-wordcount: '102'
+ht-degree: 22%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 23%
 
 * [Información general del servicio de catálogo](home.md)
 * API del servicio de catálogo {#api}
-   * [Introducción](api/getting-started.md)
+   * [Primeros pasos](api/getting-started.md)
    * [Filtrado de datos del catálogo mediante parámetros de consulta](api/filter-data.md)
    * [Objetos de lista](api/list-objects.md)
    * [Buscar un objeto](api/look-up-object.md)
@@ -34,5 +33,5 @@ ht-degree: 23%
    * [Crear y rellenar un conjunto de datos mediante API](datasets/create.md)
 * [Procesamiento de solicitudes de privacidad en Data Lake](privacy.md)
 * [Protección de datos en el Experience Platform](data-protection.md)
-* [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [Referencia de API](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)

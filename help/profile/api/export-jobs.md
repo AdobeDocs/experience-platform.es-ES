@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: El perfil del cliente en tiempo real le permite crear una sola vista de clientes individuales dentro de Adobe Experience Platform recopilando datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para su procesamiento posterior.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b47a52920f82a962ff044a0dacf9777b6eeae447
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1517'
 ht-degree: 2%
 
 ---
@@ -433,7 +433,7 @@ Una solicitud de eliminación correcta devuelve el estado HTTP 204 (sin contenid
 
 ## Pasos siguientes
 
-Una vez finalizada correctamente la exportación, los datos están disponibles en el Experience Platform Data Lake . A continuación, puede utilizar la [API de acceso a datos](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) para acceder a los datos mediante la `batchId` asociada a la exportación. Según el tamaño de la exportación, los datos pueden estar en trozos y el lote puede constar de varios archivos.
+Una vez finalizada correctamente la exportación, los datos están disponibles en el Experience Platform Data Lake . A continuación, puede utilizar la [API de acceso a datos](https://www.adobe.io/experience-platform-apis/references/data-access/) para acceder a los datos mediante la `batchId` asociada a la exportación. Según el tamaño de la exportación, los datos pueden estar en trozos y el lote puede constar de varios archivos.
 
 Para obtener instrucciones paso a paso sobre cómo utilizar la API de acceso a datos para acceder y descargar archivos por lotes, siga el [Tutorial de acceso a datos](../../data-access/tutorials/dataset-data.md).
 

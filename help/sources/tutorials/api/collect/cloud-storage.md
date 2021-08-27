@@ -6,11 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un almacenamiento en la nube de terceros y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1804'
-ht-degree: 1%
+source-wordcount: '1800'
+ht-degree: 2%
 
 ---
 
@@ -131,7 +130,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 }
 ```
 
-### Crear una conexión de origen utilizando archivos comprimidos {#using-compressed-files}
+### Crear una conexión de origen con archivos comprimidos {#using-compressed-files}
 
 **Solicitud**
 
@@ -189,7 +188,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 }
 ```
 
-## Crear un esquema XDM de destino {#target-schema}
+## Creación de un esquema XDM de destino {#target-schema}
 
 Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se contienen los datos de origen.
 
@@ -302,7 +301,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ## Creación de un conjunto de datos de destino
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destino dentro de la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API del servicio de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), proporcionando el ID del esquema de destino dentro de la carga útil.
 
 **Formato de API**
 
@@ -344,7 +343,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Crear una conexión de destino {#target-connection}
+## Creación de una conexión de destino {#target-connection}
 
 Una conexión de destino representa la conexión con el destino en el que llegan los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija asociado al lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -403,7 +402,7 @@ Una respuesta correcta devuelve el identificador único de la nueva conexión de
 }
 ```
 
-## Crear una asignación {#mapping}
+## Creación de una asignación {#mapping}
 
 Para que los datos de origen se introduzcan en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se logra realizando una solicitud de POST al servicio de conversión con asignaciones de datos definidas dentro de la carga útil de la solicitud.
 

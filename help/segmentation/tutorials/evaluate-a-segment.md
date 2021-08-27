@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para aprender a evaluar segmentos y acceder a resultados de segmentos mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -223,7 +223,7 @@ Puede encontrar información más detallada sobre el uso de este extremo en la [
 
 ## Pasos siguientes
 
-Una vez finalizada correctamente la exportación, los datos están disponibles en [!DNL Data Lake] en [!DNL Experience Platform]. A continuación, puede utilizar [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) para acceder a los datos mediante el `batchId` asociado con la exportación. Dependiendo del tamaño del segmento, los datos pueden estar en trozos y el lote puede constar de varios archivos.
+Una vez finalizada correctamente la exportación, los datos están disponibles en [!DNL Data Lake] en [!DNL Experience Platform]. A continuación, puede utilizar [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) para acceder a los datos mediante el `batchId` asociado con la exportación. Dependiendo del tamaño del segmento, los datos pueden estar en trozos y el lote puede constar de varios archivos.
 
 Para obtener instrucciones paso a paso sobre cómo utilizar la API [!DNL Data Access] para acceder y descargar archivos por lotes, siga el [Tutorial de acceso a datos](../../data-access/tutorials/dataset-data.md).
 

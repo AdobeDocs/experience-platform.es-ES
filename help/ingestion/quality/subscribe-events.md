@@ -5,16 +5,16 @@ title: Notificaciones de ingesta de datos
 topic-legacy: overview
 description: Para ayudar a monitorizar el proceso de ingesta, Adobe Experience Platform permite suscribirse a un conjunto de eventos que se publican en cada paso del proceso y le notifican el estado de los datos introducidos y cualquier posible fallo.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 1%
+source-wordcount: '677'
+ht-degree: 2%
 
 ---
 
 # Notificaciones de ingesta de datos
 
-El proceso de ingesta de datos en Adobe Experience Platform consta de varios pasos. Una vez que identifique los archivos de datos que deben ingerirse en [!DNL Platform], el proceso de ingesta comienza y cada paso se produce de forma consecutiva hasta que los datos se incorporan correctamente o no. El proceso de ingesta se puede iniciar utilizando la [API de ingesta de datos de Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) o utilizando la interfaz de usuario [!DNL Experience Platform].
+El proceso de ingesta de datos en Adobe Experience Platform consta de varios pasos. Una vez que identifique los archivos de datos que deben ingerirse en [!DNL Platform], el proceso de ingesta comienza y cada paso se produce de forma consecutiva hasta que los datos se incorporan correctamente o no. El proceso de ingesta se puede iniciar utilizando la [API de ingesta de datos de Adobe Experience Platform](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) o utilizando la interfaz de usuario [!DNL Experience Platform].
 
 Los datos cargados en [!DNL Platform] deben seguir varios pasos para llegar a su destino, al [!DNL Data Lake] o al [!DNL Real-time Customer Profile] almacén de datos. Cada paso implica procesar los datos, validarlos y, después, almacenarlos antes de pasarlos al siguiente paso. En función de la cantidad de datos introducidos, este proceso puede llevar mucho tiempo y siempre existe la posibilidad de que el proceso falle debido a errores de validación, semántica o procesamiento. En caso de error, es necesario corregir los problemas de datos y, a continuación, se debe reiniciar todo el proceso de ingesta utilizando los archivos de datos corregidos.
 

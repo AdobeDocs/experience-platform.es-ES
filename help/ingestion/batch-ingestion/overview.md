@@ -5,10 +5,9 @@ title: Información general sobre la ingesta de lotes
 topic-legacy: overview
 description: La API de ingesta de datos de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos introducidos pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1218'
 ht-degree: 2%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 2%
 
 La API de ingesta de datos de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos introducidos pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro [!DNL Experience Data Model] (XDM).
 
-La [referencia de la API de ingesta de datos](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) proporciona información adicional sobre estas llamadas a la API.
+La [referencia de la API de ingesta de datos](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) proporciona información adicional sobre estas llamadas a la API.
 
 El diagrama siguiente describe el proceso de ingesta por lotes:
 

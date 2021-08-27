@@ -6,10 +6,10 @@ description: Este documento cubre la creación de destinos de flujo continuo med
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2025'
-ht-degree: 1%
+source-wordcount: '2021'
+ht-degree: 2%
 
 ---
 
@@ -70,7 +70,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Documentación de Swagger {#swagger-docs}
 
-Puede encontrar la documentación de referencia adjunta para todas las llamadas a la API en este tutorial en Swagger. Consulte la [documentación de la API del servicio de flujo en Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
+Puede encontrar la documentación de referencia adjunta para todas las llamadas a la API en este tutorial en Swagger. Consulte la [documentación de la API del servicio de flujo en Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
 
 ## Obtener la lista de destinos de flujo continuo disponibles {#get-the-list-of-available-streaming-destinations}
 

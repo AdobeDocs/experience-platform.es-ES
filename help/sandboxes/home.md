@@ -5,9 +5,9 @@ title: Información general de entornos limitados
 topic-legacy: overview
 description: Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de las aplicaciones de experiencia digital.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ En la [interfaz de usuario del Experience Platform](https://platform.adobe.com),
 
 ## Sandboxes en las API de Experience Platform
 
-Al realizar llamadas a las API de Experience Platform, se debe proporcionar un nombre de simulador de pruebas en el encabezado `x-sandbox-name`. Por ejemplo, al realizar una llamada a [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) para ver todos los conjuntos de datos dentro del entorno limitado de producción, el nombre del entorno limitado (&quot;prod&quot;) se proporciona como un encabezado en la solicitud de API:
+Al realizar llamadas a las API de Experience Platform, se debe proporcionar un nombre de simulador de pruebas en el encabezado `x-sandbox-name`. Por ejemplo, al realizar una llamada a [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) para ver todos los conjuntos de datos dentro del entorno limitado de producción, el nombre del entorno limitado (&quot;prod&quot;) se proporciona como un encabezado en la solicitud de API:
 
 ```shell
 curl -X GET \
