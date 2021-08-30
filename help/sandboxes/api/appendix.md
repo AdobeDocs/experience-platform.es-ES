@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de la API de Sandbox
 description: Este documento proporciona información complementaria relacionada con el trabajo con la API de espacio aislado.
 topic-legacy: developer guide
-source-git-commit: e4067f79e9da106fe2d2a86fa0024c2e5fe5d0ba
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '124'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Este documento proporciona información complementaria relacionada con el trabaj
 
 ## Uso de parámetros de consulta {#query}
 
-La [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) admite el uso de parámetros de consulta en la página y filtrar los resultados al enumerar entornos limitados.
+La [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) admite el uso de parámetros de consulta en la página y filtrar los resultados al enumerar entornos limitados.
 
 >[!NOTE]
 >

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Punto final de la API de administración de entornos aislados
 topic-legacy: developer guide
 description: El extremo /sandboxes de la API de Sandbox le permite administrar entornos limitados en Adobe Experience Platform mediante programación.
-source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 2%
+source-wordcount: '1436'
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 Los entornos limitados de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a su entorno de producción. El extremo `/sandboxes` de la API [!DNL Sandbox] le permite administrar mediante programación entornos limitados en Platform.
 
-## Introducción
+## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte de la [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Recuperar una lista de entornos limitados {#list}
 

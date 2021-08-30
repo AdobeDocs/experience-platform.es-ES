@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Guía de la API de Sandbox
 topic-legacy: developer guide
 description: Los entornos limitados de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a su entorno de producción.
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 0%
+source-wordcount: '330'
+ht-degree: 2%
 
 ---
 
-# [!DNL Sandbox] Guía de API
+# Guía de la API de [!DNL Sandbox]
 
 La API [!DNL Sandbox] proporciona varios extremos que le permiten administrar mediante programación todos los entornos limitados disponibles para usted dentro de su organización de IMS. Estos extremos se describen a continuación. Visite las guías de puntos finales individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, leer llamadas de API de ejemplo y más.
 
-Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [[!DNL Sandbox] referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml).
+Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [[!DNL Sandbox] referencia de API](https://www.adobe.io/experience-platform-apis/references/sandbox).
 
 ## Entornos aislados disponibles
 
