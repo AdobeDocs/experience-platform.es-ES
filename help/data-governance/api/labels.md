@@ -5,11 +5,10 @@ title: Punto final de API de etiquetas
 topic-legacy: developer guide
 description: Obtenga información sobre cómo administrar las etiquetas de uso de datos en Experience Platform mediante la API del servicio de directivas.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 3%
+source-wordcount: '506'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +22,7 @@ Las etiquetas de uso de datos le permiten clasificar los datos según las polít
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
+El extremo de API utilizado en esta guía forma parte de [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
 
 ## Recuperar una lista de etiquetas {#list}
 

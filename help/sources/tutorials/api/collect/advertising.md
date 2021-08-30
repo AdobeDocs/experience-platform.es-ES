@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación publicitaria de terceros e ingerirlos en Platform mediante conectores de origen y la API de servicio de flujo.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1543'
 ht-degree: 2%
 
 ---
@@ -156,7 +156,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se contienen los datos de origen. Este esquema XDM de destino también amplía la clase XDM [!DNL Individual Profile].
 
-Se puede crear un esquema XDM de destino realizando una solicitud de POST a la [API del Registro de Esquemas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Se puede crear un esquema XDM de destino realizando una solicitud de POST a la [API del Registro de Esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Formato de API**
 

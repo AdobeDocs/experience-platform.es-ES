@@ -5,9 +5,9 @@ title: Información general sobre las políticas de uso de datos
 topic-legacy: policies
 description: Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunt
 >
 >Las acciones de marketing por sí mismas no restringen el uso de los datos. Deben incluirse en las políticas de uso de datos habilitadas para que esas acciones se evalúen en caso de infracciones de políticas.
 
-Cuando el uso de los datos se produce en el servicio de su organización, se deben indicar las acciones de marketing relevantes para que se puedan identificar todas las infracciones de políticas. A continuación, puede utilizar la [API del servicio de directivas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para comprobar si hay infracciones de directivas en la integración.
+Cuando el uso de los datos se produce en el servicio de su organización, se deben indicar las acciones de marketing relevantes para que se puedan identificar todas las infracciones de políticas. A continuación, puede utilizar la [API del servicio de directivas](https://www.adobe.io/experience-platform-apis/references/policy-service/) para comprobar si hay infracciones de directivas en la integración.
 
 >[!NOTE]
 >

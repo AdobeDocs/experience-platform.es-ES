@@ -1,28 +1,28 @@
 ---
-title: Extremo de paquetes de extensión
+title: Extremo de paquetes de extensiones
 description: Aprenda a realizar llamadas al extremo /extension_packages en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 5%
+source-wordcount: '951'
+ht-degree: 73%
 
 ---
 
-# Extremo de paquetes de extensión
+# Extremo de paquetes de extensiones
 
 >[!WARNING]
 >
->La implementación del punto final `/extension_packages` está en proceso de cambio a medida que se agregan, eliminan y vuelven a trabajar las funciones.
+>La implementación del extremo `/extension_packages` está en proceso de cambio a medida que se añaden, eliminan y vuelven a trabajar las funciones.
 
-Un paquete de extensión representa una [extensión](./extensions.md) creada por un desarrollador de extensiones. Un paquete de extensión define capacidades adicionales que se pueden poner a disposición de los usuarios de etiquetas. Normalmente, estas capacidades se presentan en forma de [componentes de regla](./rule-components.md) (eventos, condiciones y acciones) y [elementos de datos](./data-elements.md), pero también pueden incluir módulos principales y módulos compartidos.
+Un paquete de extensiones representa una [extensión](./extensions.md) creada por un desarrollador de extensiones. Un paquete de extensiones define capacidades adicionales que se pueden poner a disposición de los usuarios de etiquetas. Normalmente, estas capacidades se presentan en forma de [componentes de regla](./rule-components.md) (eventos, condiciones y acciones) y [elementos de datos](./data-elements.md), pero también pueden incluir módulos principales y módulos compartidos.
 
-Los paquetes de extensión se muestran en el catálogo de extensiones dentro de la interfaz de usuario de recopilación de datos para que los usuarios los instalen. Para añadir un paquete de extensión a una propiedad, se crea una extensión con un vínculo al paquete de extensión.
+Los paquetes de extensiones se muestran en el catálogo de extensiones dentro de la interfaz de usuario de recopilación de datos para que los usuarios los instalen. Para añadir un paquete de extensiones a una propiedad, se crea una extensión con un vínculo al paquete de extensiones.
 
-Un paquete de extensión pertenece a la [empresa](./companies.md) del desarrollador que lo creó.
+Un paquete de extensiones pertenece a la [empresa](./companies.md) del desarrollador que lo creó.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
 Además de comprender cómo se realizan llamadas a la API de Reactor, también es importante comprender cómo afectan los atributos `status` y `availability` de un paquete de extensión a las acciones que se pueden realizar en él. Estas se explican en las secciones siguientes.
 
@@ -50,9 +50,9 @@ Hay niveles de disponibilidad para un paquete de extensión: `development`, `pri
 >
 >Cuando se crea un paquete de extensión, `availability` se establece en `development`. Una vez finalizada la prueba, puede realizar la transición del paquete de extensión a `private` o `public`.
 
-## Recuperar una lista de paquetes de extensión {#list}
+## Recuperación de una lista de paquetes de extensión {#list}
 
-Puede recuperar una lista de paquetes de extensión realizando una solicitud de GET a `/extension_packages`.
+Puede recuperar una lista de paquetes de extensiones realizando una petición GET a `/extension_packages`.
 
 **Formato de API**
 
@@ -62,7 +62,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, los paquetes de extensión enumerados se pueden filtrar según los siguientes atributos:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, los paquetes de extensiones enumerados se pueden filtrar según los siguientes atributos:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía de [respuestas de filtrado](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -78,7 +78,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de paquetes de extensión.
+Una respuesta correcta devuelve una lista de paquetes de extensiones.
 
 ```json
 {
@@ -234,9 +234,9 @@ Una respuesta correcta devuelve una lista de paquetes de extensión.
 }
 ```
 
-## Buscar un paquete de extensión {#lookup}
+## Búsqueda de un paquete de extensiones {#lookup}
 
-Puede buscar un paquete de extensión proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar un paquete de extensiones proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -246,7 +246,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensión que desea buscar. |
+| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones que desea buscar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -264,7 +264,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del paquete de extensión, incluidos los recursos delegados como `actions`, `conditions`, `data_elements`, etc. La respuesta de ejemplo siguiente se ha truncado para el espacio.
+Una respuesta correcta devuelve los detalles del paquete de extensiones, incluidos los recursos delegados como `actions`, `conditions`, `data_elements`, etc. La respuesta de ejemplo siguiente se ha truncado para el espacio.
 
 ```json
 {
@@ -471,9 +471,9 @@ Una respuesta correcta devuelve los detalles del paquete de extensión, incluido
 
 ## Creación de un paquete de extensión {#create}
 
-Los paquetes de extensión se crean mediante una herramienta de scaffolding Node.js y se guardan en el equipo local antes de enviarse a la API de Reactor. Para obtener más información sobre la configuración de un paquete de extensión, consulte la guía sobre [introducción al desarrollo de extensiones](../../extension-dev/getting-started.md).
+Los paquetes de extensiones se crean mediante una herramienta de andamiaje de Node.js y se guardan en el equipo local antes de enviarse a la API de Reactor. Para obtener más información sobre la configuración de un paquete de extensiones, consulte la guía sobre [introducción al desarrollo de extensiones](../../extension-dev/getting-started.md).
 
-Una vez creado el archivo del paquete de extensión, puede enviarlo a la API de Reactor mediante una solicitud del POST.
+Una vez creado el archivo del paquete de extensiones, puede enviarlo a la API de React mediante una petición POST.
 
 **Formato de API**
 
@@ -483,7 +483,7 @@ POST /extension_packages
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo paquete de extensión. Se hace referencia a la ruta local al archivo del paquete que se está cargando como datos de formulario (`package`) y, por lo tanto, este extremo requiere un encabezado `Content-Type` de `multipart/form-data`.
+La siguiente solicitud crea un nuevo paquete de extensiones. Se hace referencia a la ruta local al archivo del paquete que se está cargando como datos de formulario (`package`) y, por lo tanto, este punto final requiere un encabezado `Content-Type` de `multipart/form-data`.
 
 ```shell
 curl -X POST \
@@ -497,7 +497,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del paquete de extensión recién creado.
+Una respuesta correcta devuelve los detalles del paquete de extensiones recién creado.
 
 ```json
 {
@@ -702,7 +702,7 @@ Una respuesta correcta devuelve los detalles del paquete de extensión recién c
 }
 ```
 
-## Actualizar un paquete de extensión {#update}
+## Actualización de un paquete de extensiones {#update}
 
 Puede actualizar un paquete de extensión incluyendo su ID en la ruta de una solicitud de PATCH.
 
@@ -714,13 +714,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensión que desea actualizar. |
+| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones que desea actualizar. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
-Al igual que con [la creación de un paquete de extensión](#create), se debe cargar una versión local del paquete actualizado a través de los datos del formulario.
+Al igual que con [la creación de un paquete de extensiones](#create), se debe cargar una versión local del paquete actualizado a través de los datos del formulario.
 
 ```shell
 curl -X PATCH \
@@ -734,7 +734,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del paquete de extensión actualizado.
+Una respuesta correcta devuelve los detalles del paquete de extensiones actualizado.
 
 ```json
 {
@@ -939,9 +939,9 @@ Una respuesta correcta devuelve los detalles del paquete de extensión actualiza
 }
 ```
 
-## Liberar en privado un paquete de extensión {#private-release}
+## Liberación en privado de un paquete de extensiones {#private-release}
 
-Una vez que haya completado la prueba del paquete de extensión, puede publicarlo en privado. Esto lo hace disponible para cualquier propiedad de su empresa.
+Una vez que haya completado la prueba del paquete de extensiones, puede publicarlo en privado. Esto lo hace disponible para cualquier propiedad de su empresa.
 
 Una vez que haya salido en privado, puede iniciar el proceso de publicación rellenando el [formulario de solicitud de versión pública](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
 
@@ -953,7 +953,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensión que desea publicar de forma privada. |
+| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones que desea publicar de forma privada. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -981,7 +981,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del paquete de extensión.
+Una respuesta correcta devuelve los detalles del paquete de extensiones.
 
 ```json
 {
@@ -1186,9 +1186,9 @@ Una respuesta correcta devuelve los detalles del paquete de extensión.
 }
 ```
 
-## Suspender un paquete de extensión {#discontinue}
+## Suspensión de un paquete de extensiones {#discontinue}
 
-Puede suspender un paquete de extensión estableciendo su atributo `discontinued` en `true` mediante una solicitud del PATCH.
+Puede suspender un paquete de extensiones estableciendo su atributo `discontinued` en `true` mediante una petición PATCH.
 
 **Formato de API**
 
@@ -1198,7 +1198,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensión que desea suspender. |
+| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones que desea suspender. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1226,7 +1226,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del paquete de extensión.
+Una respuesta correcta devuelve los detalles del paquete de extensiones.
 
 ```json
 {
@@ -1279,9 +1279,9 @@ Una respuesta correcta devuelve los detalles del paquete de extensión.
 }
 ```
 
-## Enumerar las versiones de un paquete de extensión
+## Enumeración de las versiones de un paquete de extensiones
 
-Puede enumerar las versiones de un paquete de extensión añadiendo `/versions` a la ruta de una solicitud de búsqueda.
+Puede enumerar las versiones de un paquete de extensiones añadiendo `/versions` a la ruta de una solicitud de búsqueda.
 
 **Formato de API**
 
@@ -1291,7 +1291,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 
 | Parámetro | Descripción |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensión que cuyas versiones desea enumerar. |
+| `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones cuyas versiones desea enumerar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1309,4 +1309,4 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de versiones anteriores del paquete de extensión. Se ha omitido una respuesta de ejemplo para el espacio.
+Una respuesta correcta devuelve una matriz de versiones anteriores del paquete de extensiones. Se ha omitido una respuesta de ejemplo para el espacio.

@@ -1,14 +1,14 @@
 ---
-title: Punto final de hosts
+title: Extremo de hosts
 description: Aprenda a realizar llamadas al extremo /hosts en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 7%
+source-wordcount: '765'
+ht-degree: 99%
 
 ---
 
-# Punto final de hosts
+# Extremo de hosts
 
 >[!NOTE]
 >
@@ -24,11 +24,11 @@ Más de un entorno dentro de una propiedad puede utilizar un host. Es común ten
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de hosts {#list}
+## Recuperación de una lista de hosts {#list}
 
-Puede recuperar una lista de hosts de una propiedad incluyendo el ID de la propiedad en la ruta de una solicitud de GET.
+Puede recuperar una lista de hosts de una propiedad, incluyendo el ID de la propiedad en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -44,7 +44,7 @@ GET /properties/{PROPERTY_ID}/hosts
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, los hosts enumerados se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, los hosts enumerados se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Consulte la guía de [filtrado respuestas](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -108,9 +108,9 @@ Una respuesta correcta devuelve una lista de hosts de la propiedad especificada.
 }
 ```
 
-## Buscar un host {#lookup}
+## Búsqueda de un host {#lookup}
 
-Puede buscar un host proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar un host proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -175,9 +175,9 @@ Una respuesta correcta devuelve los detalles del host.
 }
 ```
 
-## Crear un host {#create}
+## Creación de un host {#create}
 
-Puede crear un nuevo host realizando una solicitud de POST.
+Puede crear un nuevo host realizando una petición POST.
 
 **Formato de API**
 
@@ -193,7 +193,7 @@ POST /properties/{PROPERTY_ID}/hosts
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo host para la propiedad especificada. La llamada también asocia el host con una extensión existente a través de la propiedad `relationships` . Consulte la guía sobre [relaciones](../guides/relationships.md) para obtener más información.
+La siguiente solicitud crea un nuevo host para la propiedad especificada. La llamada también asocia el host con una extensión existente a través de la propiedad `relationships`. Consulte la guía de [relaciones](../guides/relationships.md) para obtener más información.
 
 ```shell
 curl -X POST \
@@ -221,7 +221,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `attributes.name` | **(Obligatorio)** Un nombre legible en lenguaje natural para el host. |
-| `attributes.type_of` | **(Obligatorio)** El tipo de host. Puede ser una de las dos opciones: <ul><li>`akamai` para hosts administrados por  [Adobe](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` para hosts  [SFTP](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.type_of` | **(Obligatorio)** El tipo de host. Puede ser una de las dos opciones: <ul><li>`akamai` para [hosts administrados por Adobe](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` para [hosts SFTP](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
 | `attributes.encrypted_private_key` | Una clave privada opcional que se utilizará para la autenticación de host. |
 | `attributes.path` | Ruta de acceso que se anexará a la dirección URL `server`. |
 | `attributes.port` | Un entero que indica el puerto de servidor específico que se va a utilizar. |
@@ -270,13 +270,13 @@ Una respuesta correcta devuelve los detalles del host recién creado.
 }
 ```
 
-## Actualizar un host {#update}
+## Actualización de un host {#update}
 
 >[!NOTE]
 >
 >Solo se pueden actualizar los hosts SFTP.
 
-Puede actualizar un host incluyendo su ID en la ruta de una solicitud de PATCH.
+Puede actualizar un host incluyendo su ID en la ruta de una petición PATCH.
 
 **Formato de API**
 
@@ -292,7 +292,7 @@ PATCH /hosts/{HOST_ID}
 
 **Solicitud**
 
-La siguiente solicitud actualiza el `name` para un host existente.
+La siguiente solicitud actualiza el `name` de un host existente.
 
 ```shell
 curl -X PATCH \
@@ -359,9 +359,9 @@ Una respuesta correcta devuelve los detalles del host actualizado.
 }
 ```
 
-## Eliminar un host
+## Eliminación de un host
 
-Puede eliminar un host incluyendo su ID en la ruta de una solicitud de DELETE.
+Puede eliminar un host incluyendo su ID en la ruta de una petición DELETE.
 
 **Formato de API**
 
@@ -389,13 +389,13 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) sin cuerpo de respuesta, lo que indica que el host se ha eliminado.
 
-## Recuperar recursos relacionados para un host {#related}
+## Recuperación de recursos relacionados para un host {#related}
 
 Las siguientes llamadas muestran cómo recuperar los recursos relacionados para un host. Cuando [busca un host](#lookup), estas relaciones se enumeran en la propiedad `relationships`.
 
-Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de reactor.
+Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de Reactor.
 
-### Buscar la propiedad relacionada para un host {#property}
+### Búsqueda de la propiedad relacionada para un host {#property}
 
 Puede buscar la propiedad que posee un host anexando `/property` a la ruta de una solicitud de consulta.
 

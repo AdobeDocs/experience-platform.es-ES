@@ -1,26 +1,26 @@
 ---
-title: Punto final de las notas
+title: Extremo de las notas
 description: Aprenda a realizar llamadas al extremo /notes en la API de Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 7%
+source-wordcount: '526'
+ht-degree: 99%
 
 ---
 
-# Punto final de las notas
+# Extremo de las notas
 
-En la API de Reactor, las notas son anotaciones que se pueden agregar a determinados recursos. Las notas son esencialmente comentarios sobre sus respectivos recursos. El contenido de las notas no afecta al comportamiento de los recursos y se puede utilizar en varios casos de uso, entre los que se incluyen los siguientes:
+En la API de Reactor, las notas son anotaciones que se pueden añadir a determinados recursos. Las notas son esencialmente comentarios sobre sus respectivos recursos. El contenido de las notas no afecta al comportamiento de los recursos y se puede utilizar en varios casos de uso, entre los que se incluyen los siguientes:
 
 * Proporcionar información básica
-* Funcionamiento como listas de tareas pendientes
+* Usarlas como listas de tareas pendientes
 * Pasar consejos sobre el uso de los recursos
 * Dar instrucciones a otros integrantes del equipo
-* Registro del contexto histórico
+* Registrar el contexto histórico
 
 El extremo `/notes` de la API de Reactor le permite administrar estas notas de forma programada.
 
-Las notas se pueden aplicar en los siguientes recursos:
+Las notas se pueden aplicar a los siguientes recursos:
 
 * [Elementos de datos](./data-elements.md)
 * [Extensiones](./extensions.md)
@@ -29,21 +29,21 @@ Las notas se pueden aplicar en los siguientes recursos:
 * [Regla componentes](./rule-components.md)
 * [Reglas](./rules.md)
 
-Estos seis tipos se conocen colectivamente como recursos &quot;notables&quot;. Cuando se elimina un recurso notable, también se eliminan sus notas asociadas.
+Estos seis tipos se conocen colectivamente como recursos “anotables”. Cuando se elimina un recurso anotable, también se eliminan sus notas asociadas.
 
 >[!NOTE]
 >
->Para los recursos que pueden tener varias revisiones, cualquier nota debe crearse en la revisión actual (head). No podrán adjuntarse a otras revisiones.
+>Para los recursos que pueden tener varias revisiones, cualquier nota debe crearse en la revisión actual (principal). No podrán adjuntarse a otras revisiones.
 >
->Sin embargo, las notas pueden seguir siendo leídas de las revisiones. En estos casos, la API devuelve solo las notas que existían antes de la creación de la revisión. Proporcionan una instantánea de las anotaciones tal y como estaban cuando se cortó la revisión. Por el contrario, leer las notas de la revisión actual (head) devuelve todas sus notas.
+>Sin embargo, las notas pueden seguirse leyendo desde las revisiones. En estos casos, la API devuelve solo las notas que existían antes de la creación de la revisión. Proporcionan una instantánea de las anotaciones tal y como estaban cuando se cortó la revisión. Por el contrario, leer las notas de la revisión actual (principal) devuelve todas sus notas.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de notas {#list}
+## Recuperación de una lista de notas {#list}
 
-Puede recuperar una lista de notas para un recurso anexando `/notes` a la ruta de una solicitud de GET para el recurso en cuestión.
+Puede recuperar una lista de notas para un recurso añadiendo `/notes` a la ruta de una petición GET para el recurso en cuestión.
 
 **Formato de API**
 
@@ -53,7 +53,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | Parámetro | Descripción |
 | --- | --- |
-| `RESOURCE_TYPE` | Tipo de recurso para el que está recuperando notas. Debe tener uno de los siguientes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_TYPE` | El tipo de recurso para el que recupera notas. Debe tener uno de los siguientes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | El `id` del recurso específico cuyas notas desea enumerar. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -117,9 +117,9 @@ Una respuesta correcta devuelve una lista de notas adjuntas al recurso especific
 }
 ```
 
-## Buscar una nota {#lookup}
+## Búsqueda de una nota {#lookup}
 
-Puede buscar una nota proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar una nota proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -185,7 +185,7 @@ Una respuesta correcta devuelve los detalles de la nota.
 >
 >Antes de crear una nota nueva, tenga en cuenta que las notas no se pueden editar y la única forma de eliminarlas es eliminar el recurso correspondiente.
 
-Puede crear una nota nueva anexando `/notes` a la ruta de una solicitud de POST para el recurso en cuestión.
+Puede crear una nota nueva añadiendo `/notes` a la ruta de una petición POST para el recurso en cuestión.
 
 **Formato de API**
 
@@ -195,7 +195,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | Parámetro | Descripción |
 | --- | --- |
-| `RESOURCE_TYPE` | Tipo de recurso para el que está creando una nota. Debe tener uno de los siguientes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_TYPE` | El tipo de recurso para el que crea una nota. Debe tener uno de los siguientes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | El `id` del recurso específico para el que desea crear una nota. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -223,7 +223,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `type` | **(Obligatorio)** El tipo de recurso que se está actualizando. Para este extremo, el valor debe ser `notes`. |
+| `type` | **(Obligatorio)** El tipo de recurso que se actualiza. Para este extremo, el valor debe ser `notes`. |
 | `attributes.text` | **(Obligatorio)** El texto que contiene la nota. Cada nota está limitada a 512 caracteres Unicode. |
 
 {style=&quot;table-layout:auto&quot;}

@@ -6,10 +6,10 @@ description: Este documento proporciona un tutorial para definir una relación "
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 2%
+source-wordcount: '1365'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ La capacidad de comprender las relaciones entre los clientes y sus interacciones
 
 Aunque las relaciones de esquema se pueden inferir mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto solo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas pertenecientes a diferentes clases, se debe agregar un campo de relación dedicado a un esquema de origen que haga referencia a la identidad de un esquema de destino.
 
-Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por su organización mediante el [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por su organización mediante el [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Primeros pasos
 

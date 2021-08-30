@@ -1,16 +1,16 @@
 ---
-title: Genera punto final
-description: Aprenda a realizar llamadas al extremo /build en la API de Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Extremo compilaciones
+description: Aprenda a realizar llamadas al extremo /builds en la API de Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 8%
+source-wordcount: '833'
+ht-degree: 99%
 
 ---
 
-# Genera punto final
+# Extremo compilaciones
 
-Las extensiones, las reglas y los elementos de datos son los componentes básicos de las etiquetas en Adobe Experience Platform. Cuando quiera que la aplicación haga algo, estos componentes básicos se añaden a una [biblioteca](./libraries.md). Para implementar una biblioteca en la aplicación de experiencia, la biblioteca se compila en una compilación. El extremo `/builds` de la API de reactor le permite administrar las compilaciones mediante programación dentro de la aplicación de experiencia.
+Las extensiones, las reglas y los elementos de datos son los componentes básicos de las etiquetas en Adobe Experience Platform. Cuando quiera que la aplicación haga algo, estos componentes básicos se añaden a una [biblioteca](./libraries.md). Para implementar una biblioteca en una aplicación de experiencia, se compila en una compilación. El extremo `/builds` de la API de Reactor le permite administrar las compilaciones mediante programación dentro de la aplicación de experiencia.
 
 Una compilación es el archivo (o archivos) real que se carga en la aplicación web y móvil. El contenido de cada compilación varía en función de los siguientes factores:
 
@@ -18,17 +18,17 @@ Una compilación es el archivo (o archivos) real que se carga en la aplicación 
 * La configuración del [entorno](./environments.md) en el que se crea la biblioteca
 * La plataforma de la [propiedad](./properties.md) a la que pertenece la compilación
 
-Una compilación pertenece exactamente a una biblioteca. Una biblioteca puede tener muchas compilaciones.
+Una compilación pertenece a exactamente una biblioteca. Una biblioteca puede tener muchas compilaciones.
 
-Para obtener información más general sobre las compilaciones y cómo se ajustan al flujo de trabajo de publicación para las etiquetas, consulte [información general de publicación](../../ui/publishing/overview.md).
+Para obtener información más general acerca de las compilaciones y cómo se ajustan al flujo de trabajo de publicación para etiquetas, consulte [información general de publicación](../../ui/publishing/overview.md).
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de compilaciones {#list}
+## Recuperación de una lista de compilaciones {#list}
 
-Puede enumerar las compilaciones de una biblioteca determinada incluyendo el ID de la biblioteca en la ruta de una solicitud de GET.
+Puede enumerar las compilaciones de una biblioteca determinada incluyendo el ID de la biblioteca en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -44,7 +44,7 @@ GET /libraries/{LIBRARY_ID}/builds
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, las compilaciones enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, las compilaciones enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía de [respuestas de filtrado](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -143,9 +143,9 @@ Una respuesta correcta devuelve una lista de compilaciones para la biblioteca es
 }
 ```
 
-## Buscar una compilación {#lookup}
+## Búsqueda de una compilación {#lookup}
 
-Puede buscar una compilación proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar una compilación proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -245,9 +245,9 @@ Una respuesta correcta devuelve los detalles de la compilación.
 }
 ```
 
-## Crear una compilación {#create}
+## Creación de una compilación {#create}
 
-Puede crear una compilación para una biblioteca que incluya el ID de la biblioteca en la ruta de una solicitud del POST.
+Puede crear una compilación para una biblioteca que incluya el ID de la biblioteca en la ruta de una petición POST.
 
 **Formato de API**
 
@@ -257,7 +257,7 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | Parámetro | Descripción |
 | --- | --- |
-| `LIBRARY_ID` | El `id` de la biblioteca en la que está definiendo la compilación. |
+| `LIBRARY_ID` | El `id` de la biblioteca en la que define la compilación. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -347,9 +347,9 @@ Una respuesta correcta devuelve los detalles de la compilación recién creada.
 }
 ```
 
-## Volver a publicar una compilación {#republish}
+## Republicación de una compilación {#republish}
 
-Puede volver a publicar una compilación desde una [biblioteca publicada](./libraries.md#publish) incluyendo su ID en la ruta de una solicitud del PATCH.
+Puede volver a publicar una compilación desde una [biblioteca publicada](./libraries.md#publish) incluyendo su ID en la ruta de una petición PATCH.
 
 **Formato de API**
 
@@ -389,7 +389,7 @@ curl -X PATCH \
 | --- | --- |
 | `id` | El `id` de la compilación que desea actualizar. Debe coincidir con el valor `{BUILD_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `builds`. |
-| `meta.action` | Tipo de acción del PATCH que se va a realizar. Debe estar establecido en `republish`. |
+| `meta.action` | El tipo de acción PATCH que se va a realizar. Debe definirse en `republish`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -468,15 +468,15 @@ Una respuesta correcta devuelve los detalles de la compilación republicada.
 }
 ```
 
-## Recuperar recursos relacionados para una compilación {#related}
+## Recuperación de recursos relacionados de una compilación {#related}
 
-Las siguientes llamadas muestran cómo recuperar los recursos relacionados para una compilación. Cuando [busca una compilación](#lookup), estas relaciones se enumeran en la propiedad `relationships`.
+Las siguientes llamadas muestran cómo recuperar los recursos relacionados de una compilación. Cuando [busca una compilación](#lookup), estas relaciones se enumeran en la propiedad `relationships`.
 
-Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de reactor.
+Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de Reactor.
 
-### Lista de los elementos de datos relacionados para una compilación {#data-elements}
+### Enumeración de los elementos de datos relacionados de una compilación {#data-elements}
 
-Puede enumerar los elementos de datos relacionados para una compilación adjuntando `/data_elements` a la ruta de una solicitud de búsqueda.
+Puede enumerar los elementos de datos relacionados de una compilación adjuntando `/data_elements` a la ruta de una solicitud de búsqueda.
 
 **Formato de API**
 
@@ -615,9 +615,9 @@ Una respuesta correcta devuelve una lista de elementos de datos relacionados con
 }
 ```
 
-### Enumerar las extensiones relacionadas para una compilación {#extensions}
+### Enumeración de las extensiones relacionadas de una compilación {#extensions}
 
-Puede enumerar las extensiones relacionadas para una compilación adjuntando `/extensions` a la ruta de una solicitud de búsqueda.
+Puede enumerar las extensiones relacionadas de una compilación adjuntando `/extensions` a la ruta de una solicitud de búsqueda.
 
 **Formato de API**
 
@@ -746,9 +746,9 @@ Una respuesta correcta devuelve una lista de extensiones relacionadas con la com
 }
 ```
 
-### Enumerar las reglas relacionadas para una compilación {#rules}
+### Enumeración de las reglas relacionadas de una compilación {#rules}
 
-Puede enumerar las reglas relacionadas para una compilación adjuntando `/rules` a la ruta de una solicitud de consulta.
+Puede enumerar las reglas relacionadas de una compilación adjuntando `/rules` a la ruta de una solicitud de consulta.
 
 **Formato de API**
 
@@ -859,9 +859,9 @@ Una respuesta correcta devuelve una lista de reglas relacionadas con la compilac
 }
 ```
 
-### Buscar una biblioteca relacionada para una compilación {#library}
+### Búsqueda de una biblioteca relacionada para una compilación {#library}
 
-Puede recuperar la biblioteca relacionada para una compilación anexando `/library` a la ruta de una solicitud de consulta.
+Puede recuperar la biblioteca relacionada de una compilación añadiendo `/library` a la ruta de una solicitud de consulta.
 
 **Formato de API**
 
@@ -972,9 +972,9 @@ curl -X GET \
 }
 ```
 
-### Buscar el entorno relacionado para una compilación {#environment}
+### Búsqueda del entorno relacionado para una compilación {#environment}
 
-Puede recuperar el entorno relacionado para una compilación anexando `/environment` a la ruta de una solicitud de consulta.
+Puede recuperar el entorno relacionado de una compilación añadiendo `/environment` a la ruta de una solicitud de consulta.
 
 **Formato de API**
 

@@ -5,9 +5,9 @@ title: Guía de API del Registro de Esquemas
 description: La API del Registro de esquemas permite a los desarrolladores administrar mediante programación todos los esquemas y recursos relacionados del Modelo de datos de experiencia (XDM) dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
+source-git-commit: 6ba8da07a4fb36c6e8bd2ede8ac415edaabe0ef6
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '983'
 ht-degree: 5%
 
 ---
@@ -24,7 +24,7 @@ Estos extremos se describen a continuación. Visite las guías de puntos finales
 >
 >XDM utiliza el formato de esquema JSON para describir y validar la estructura de los datos de experiencia del cliente incorporados. Antes de trabajar con la API del Registro de esquemas, se recomienda que revise la [documentación oficial del Esquema JSON](https://json-schema.org/) para comprender mejor esta tecnología subyacente.
 
-Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [referencia de la API del Registro de Esquemas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [referencia de la API del Registro de Esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Esquemas
 

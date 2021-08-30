@@ -4,11 +4,10 @@ solution: Experience Platform
 title: 'Administrar etiquetas de uso de datos mediante API '
 topic-legacy: developer guide
 description: La API del servicio de conjunto de datos le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funcionalidades del catálogo de datos de Adobe Experience Platform, pero está separado de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 2%
+source-wordcount: '1141'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 2%
 
 Este documento proporciona pasos sobre cómo administrar las etiquetas de uso de datos mediante la API [!DNL Policy Service] y la API [!DNL Dataset Service].
 
-El [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
+El [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
 
 La API [!DNL Dataset Service] le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las capacidades del catálogo de datos de Adobe Experience Platform, pero está separado de la API [!DNL Catalog Service] que administra los metadatos del conjunto de datos.
 
@@ -353,7 +352,7 @@ Una respuesta correcta devuelve las etiquetas que se han agregado al conjunto de
 }
 ```
 
-## Eliminar etiquetas de un conjunto de datos {#remove-dataset-labels}
+## Eliminación de etiquetas de un conjunto de datos {#remove-dataset-labels}
 
 Puede eliminar las etiquetas aplicadas a un conjunto de datos realizando una solicitud de DELETE a la API [!DNL Dataset Service].
 

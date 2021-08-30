@@ -1,14 +1,14 @@
 ---
-title: Punto final de bibliotecas
-description: Aprenda a realizar llamadas al extremo /library en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Extremo de bibliotecas
+description: Aprenda a realizar llamadas al extremo de las bibliotecas en la API de Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 8%
+source-wordcount: '1584'
+ht-degree: 99%
 
 ---
 
-# Punto final de bibliotecas
+# Extremo de bibliotecas
 
 Una biblioteca es una colección de recursos de etiquetas ([extensiones](./extensions.md), [reglas](./rules.md) y [elementos de datos](./data-elements.md)) que representan el comportamiento deseado de una [propiedad](./properties.md). El extremo `/libraries` de la API de Reactor le permite administrar de forma programada las bibliotecas dentro de las propiedades de etiquetas.
 
@@ -16,13 +16,13 @@ Una biblioteca pertenece exactamente a una propiedad. Una propiedad puede tener 
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
 Antes de trabajar con bibliotecas en la API de Reactor, es importante comprender las funciones que desempeñan el estado y los entornos de la biblioteca al determinar qué acciones se pueden realizar en una biblioteca en particular. Consulte la guía del [flujo de publicación de la biblioteca](../../ui/publishing/publishing-flow.md) para obtener más información.
 
 ## Recuperar una lista de bibliotecas {#list}
 
-Puede recuperar una lista de bibliotecas para una propiedad incluyendo el ID de la propiedad en la ruta de una solicitud de GET.
+Puede recuperar una lista de bibliotecas para una propiedad incluyendo el ID de la propiedad en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -38,7 +38,7 @@ GET /properties/{PROPERTY_ID}/libraries
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, las bibliotecas enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, las bibliotecas enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Consulte la guía de [respuestas de filtrado](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -148,7 +148,7 @@ Una respuesta correcta devuelve una lista de bibliotecas para la propiedad espec
 
 ## Buscar una biblioteca {#lookup}
 
-Puede buscar una biblioteca proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar una biblioteca proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -259,7 +259,7 @@ Una respuesta correcta devuelve los detalles de la biblioteca.
 
 ## Crear una biblioteca. {#create}
 
-Puede crear una nueva biblioteca realizando una solicitud de POST.
+Puede crear una nueva biblioteca realizando una petición POST.
 
 **Formato de API**
 
@@ -409,7 +409,7 @@ Los elementos de datos, las extensiones, las reglas y el entorno asociados a una
 
 ### Añadir recursos a una biblioteca {#add-resources}
 
-Puede añadir recursos a una biblioteca anexando `/relationships` a la ruta de una solicitud del POST, seguido del tipo de recurso.
+Puede añadir recursos a una biblioteca anexando `/relationships` a la ruta de una petición POST, seguido del tipo de recurso.
 
 **Formato de API**
 
@@ -480,9 +480,9 @@ Una respuesta correcta devuelve los detalles de las relaciones agregadas. Al rea
 }
 ```
 
-### Reemplazar los recursos de una biblioteca {#replace-resources}
+### Reemplazo de recursos de una biblioteca {#replace-resources}
 
-Puede reemplazar todos los recursos existentes de un tipo determinado para una biblioteca anexando `/relationships` a la ruta de una solicitud del PATCH, seguido del tipo de recurso que está reemplazando.
+Puede reemplazar todos los recursos existentes de un tipo determinado para una biblioteca anexando `/relationships` a la ruta de una petición PATCH, seguido del tipo de recurso que está reemplazando.
 
 **Formato de API**
 
@@ -547,7 +547,7 @@ Una respuesta correcta devuelve los detalles de las relaciones actualizadas. Al 
 
 ### Eliminación de recursos de una biblioteca {#remove-resources}
 
-Puede eliminar los recursos existentes de una biblioteca anexando `/relationships` a la ruta de una solicitud del DELETE, seguido del tipo de recurso que está eliminando.
+Puede eliminar los recursos existentes de una biblioteca anexando `/relationships` a la ruta de una petición DELETE, seguido del tipo de recurso que está eliminando.
 
 **Formato de API**
 
@@ -609,7 +609,7 @@ Una respuesta correcta devuelve los detalles de las relaciones actualizadas para
 
 ## Asignar una biblioteca a un entorno {#environment}
 
-Puede asignar una biblioteca a un entorno `/relationships/environment` a la ruta de una solicitud del POST.
+Puede asignar una biblioteca a un entorno `/relationships/environment` a la ruta de una petición POST.
 
 **Formato de API**
 
@@ -644,7 +644,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID del entorno al que asigna la biblioteca. |
-| `type` | Debe estar establecido en `environments`. |
+| `type` | Debe definirse en `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -667,7 +667,7 @@ Una respuesta correcta devuelve los detalles de la relación. Al realizar una [s
 
 ## Transición de una biblioteca {#transition}
 
-Puede realizar la transición de una biblioteca a un estado de publicación diferente incluyendo su ID en la ruta de una solicitud de PATCH y proporcionando un valor `meta.action` apropiado en la carga útil.
+Puede realizar la transición de una biblioteca a un estado de publicación diferente incluyendo su ID en la ruta de una petición PATCH y proporcionando un valor `meta.action` apropiado en la carga útil.
 
 **Formato de API**
 
@@ -705,7 +705,7 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `meta.action` | La acción de transición específica que desea realizar en la biblioteca de . Las siguientes acciones están disponibles, según el estado de publicación actual de la biblioteca: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
+| `meta.action` | La acción de transición específica que desea realizar en la biblioteca. Las siguientes acciones están disponibles, según el estado de publicación actual de la biblioteca: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
 | `id` | El `id` de la biblioteca que desea actualizar. Debe coincidir con el valor `{LIBRARY_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `libraries`. |
 
@@ -904,15 +904,15 @@ curl -X POST \
 
 ## Administrar notas de una biblioteca {#notes}
 
-Las bibliotecas son recursos &quot;notables&quot;, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para bibliotecas y otros recursos compatibles.
+Las bibliotecas son recursos con notas, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para bibliotecas y otros recursos compatibles.
 
-## Recuperar recursos relacionados para una biblioteca {#related}
+## Recuperar recursos relacionados de una biblioteca {#related}
 
-Las siguientes llamadas muestran cómo recuperar los recursos relacionados para una biblioteca. Cuando [busca una biblioteca](#lookup), estas relaciones se enumeran en la propiedad `relationships`.
+Las siguientes llamadas muestran cómo recuperar los recursos relacionados de una biblioteca. Cuando [busca una biblioteca](#lookup), estas relaciones se enumeran en la propiedad `relationships`.
 
 Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de reactor.
 
-### Lista de los elementos de datos relacionados para una biblioteca {#data-elements}
+### Lista de los elementos de datos relacionados de una biblioteca {#data-elements}
 
 Puede enumerar los elementos de datos que utiliza una biblioteca anexando `/data_elements` a la ruta de una solicitud de búsqueda.
 
@@ -1184,7 +1184,7 @@ Una respuesta correcta devuelve una lista de extensiones que utilizan la bibliot
 }
 ```
 
-### Enumerar las reglas relacionadas para una biblioteca {#rules}
+### Enumerar las reglas relacionadas de una biblioteca {#rules}
 
 Puede enumerar las reglas que utiliza una biblioteca anexando `/rules` a la ruta de una solicitud de búsqueda.
 
@@ -1297,9 +1297,9 @@ Una respuesta correcta devuelve una lista de reglas que utilizan la biblioteca e
 }
 ```
 
-### Buscar el entorno relacionado para una biblioteca {#related-environment}
+### Buscar el entorno relacionado de una biblioteca {#related-environment}
 
-Puede buscar el entorno al que se asigna una biblioteca anexando `/environment` a la ruta de una solicitud de GET.
+Puede buscar el entorno al que se asigna una biblioteca anexando `/environment` a la ruta de una petición GET.
 
 **Formato de API**
 
@@ -1411,7 +1411,7 @@ Una respuesta correcta devuelve los detalles del entorno al que está asignada l
 
 ### Buscar la propiedad relacionada de una biblioteca {#property}
 
-Puede buscar la propiedad que posee una biblioteca anexando `/property` a la ruta de una solicitud de GET.
+Puede buscar la propiedad que posee una biblioteca anexando `/property` a la ruta de una petición GET.
 
 **Formato de API**
 
@@ -1532,9 +1532,9 @@ Una respuesta correcta devuelve los detalles de la propiedad que posee la biblio
 }
 ```
 
-### Buscar una biblioteca en el flujo ascendente {#upstream}
+### Buscar el orden ascendente de una biblioteca {#upstream}
 
-Puede buscar la siguiente biblioteca en orden ascendente desde una biblioteca anexando `/upstream_library` a la ruta de una solicitud de GET.
+Puede buscar la siguiente biblioteca ascendente desde una biblioteca anexando `/upstream_library` a la ruta de una petición GET.
 
 **Formato de API**
 

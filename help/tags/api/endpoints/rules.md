@@ -1,30 +1,30 @@
 ---
 title: Extremo de reglas
 description: Aprenda a realizar llamadas al extremo /rules en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 8%
+source-wordcount: '933'
+ht-degree: 99%
 
 ---
 
 # Extremo de reglas
 
-En el contexto de las etiquetas de recopilación de datos, las reglas controlan el comportamiento de los recursos en una biblioteca implementada. Una regla está compuesta por uno o más [componentes de regla](./rule-components.md), existe para unir los componentes de regla de manera lógica. El extremo `/rules` de la API de Reactor le permite administrar las reglas de etiquetas mediante programación.
+En el contexto de las etiquetas de recopilación de datos, las reglas controlan el comportamiento de los recursos en una biblioteca implementada. Una regla está compuesta por uno o más [componentes de regla](./rule-components.md) y existe para unirlos de manera lógica. El extremo `/rules` de la API de Reactor le permite administrar las reglas de etiquetas mediante programación.
 
 >[!NOTE]
 >
->Este documento explica cómo administrar las reglas en la API de Reactor. Para obtener información sobre cómo interactuar con reglas en la interfaz de usuario de recopilación de datos, consulte la [guía de la interfaz de usuario](../../ui/managing-resources/rules.md).
+>Este documento explica cómo administrar las reglas en la API de Reactor. Para obtener información sobre cómo interactuar con reglas en la IU de recopilación de datos, consulte la [guía de la IU](../../ui/managing-resources/rules.md).
 
-Una regla pertenece exactamente a una [propiedad](./properties.md). Una propiedad puede tener muchas reglas.
+Una regla pertenece a exactamente una [propiedad](./properties.md). Una propiedad puede tener muchas reglas.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de reglas {#list}
+## Recuperación de una lista de reglas {#list}
 
-Puede recuperar una lista de reglas pertenecientes a una propiedad realizando una solicitud de GET.
+Puede recuperar una lista de reglas pertenecientes a una propiedad realizando una petición GET.
 
 **Formato de API**
 
@@ -40,7 +40,7 @@ GET /properties/{PROPERTY_ID}/rules
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, las reglas enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, las reglas enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte la guía de [filtrado de respuestas](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -139,13 +139,13 @@ Una respuesta correcta devuelve una lista de reglas para la propiedad especifica
 }
 ```
 
-## Buscar una regla {#lookup}
+## Búsqueda de una regla {#lookup}
 
-Puede buscar una regla proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar una regla proporcionando su ID en la ruta de una petición GET.
 
 >[!NOTE]
 >
->Cuando se eliminan las reglas, se marcan como eliminadas, pero en realidad no se eliminan del sistema. Por lo tanto, es posible recuperar una regla eliminada. Las reglas eliminadas se pueden identificar mediante la presencia de una propiedad `meta.deleted_at` .
+>Cuando se eliminan las reglas, se marcan como eliminadas, pero en realidad no se eliminan del sistema. Por lo tanto, es posible recuperar una regla eliminada. Las reglas eliminadas se pueden identificar mediante la presencia de una propiedad `meta.deleted_at`.
 
 **Formato de API**
 
@@ -247,7 +247,7 @@ Una respuesta correcta devuelve los detalles de la regla.
 
 ## Crear una regla {#create}
 
-Puede crear una regla nueva realizando una solicitud de POST.
+Puede crear una regla nueva realizando una petición POST.
 
 **Formato de API**
 
@@ -285,7 +285,7 @@ curl -X POST \
 | --- | --- |
 | `attributes.name` | **(Obligatorio)** Un nombre legible en lenguaje natural para la regla. |
 | `attributes.enabled` | Un valor booleano que indica si la regla está habilitada. |
-| `type` | Tipo de recurso que se está creando. Para este extremo, el valor debe ser `rules`. |
+| `type` | El tipo de recurso que se crea. Para este extremo, el valor debe ser `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -363,13 +363,13 @@ Una respuesta correcta devuelve los detalles de la regla recién creada.
 }
 ```
 
-## Agregar eventos, condiciones y acciones a una regla {#components}
+## Adición de eventos, condiciones y acciones a una regla {#components}
 
-Una vez que haya [creado una regla](#create), puede empezar a crear su lógica añadiendo eventos, condiciones y acciones (denominadas colectivamente componentes de regla). Consulte la sección [creación de un componente de regla](./rule-components.md#create) en la guía de extremo `/rule_components` para obtener información sobre cómo hacerlo en la API de reactor.
+Una vez que haya [creado una regla](#create), puede empezar a crear su lógica añadiendo eventos, condiciones y acciones (denominados en su conjunto componentes de regla). Consulte la sección [creación de un componente de regla](./rule-components.md#create) en la guía del extremo `/rule_components` para obtener información sobre cómo hacerlo en la API de Reactor.
 
-## Actualizar una regla {#update}
+## Actualización de una regla {#update}
 
-Puede actualizar los atributos de una regla incluyendo su ID en la ruta de una solicitud del PATCH.
+Puede actualizar los atributos de una regla incluyendo su ID en la ruta de una petición PATCH.
 
 **Formato de API**
 
@@ -487,9 +487,9 @@ Una respuesta correcta devuelve los detalles de la regla actualizada.
 }
 ```
 
-## Eliminar una regla
+## Eliminación de una regla
 
-Puede eliminar una regla incluyendo su ID en la ruta de una solicitud del DELETE.
+Puede eliminar una regla incluyendo su ID en la ruta de una petición DELETE.
 
 **Formato de API**
 
@@ -517,19 +517,19 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) sin cuerpo de respuesta, lo que indica que la regla se ha eliminado.
 
-## Administrar notas de una regla {#notes}
+## Administración de notas de una regla {#notes}
 
-Las reglas son recursos &quot;notables&quot;, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para reglas y otros recursos compatibles.
+Las reglas son recursos “anotables”, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía del extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para reglas y otros recursos compatibles.
 
-## Recuperar recursos relacionados para una regla {#related}
+## Recuperación de recursos relacionados de una regla {#related}
 
-Las siguientes llamadas muestran cómo recuperar los recursos relacionados para una regla. Cuando [busca una regla](#lookup), estas relaciones se enumeran en la regla `relationships`.
+Las siguientes llamadas muestran cómo recuperar los recursos relacionados de una regla. Cuando [busca una regla](#lookup), estas relaciones se enumeran en la regla `relationships`.
 
-Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de reactor.
+Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de Reactor.
 
-### Lista de las bibliotecas relacionadas de una regla {#libraries}
+### Enumeración de las bibliotecas relacionadas de una regla {#libraries}
 
-Puede enumerar las bibliotecas que utilizan una regla en particular anexando `/libraries` a la ruta de una solicitud de búsqueda.
+Puede enumerar las bibliotecas que utilizan una regla en particular añadiendo `/libraries` a la ruta de una solicitud de búsqueda.
 
 **Formato de API**
 
@@ -649,7 +649,7 @@ Una respuesta correcta devuelve una lista de bibliotecas que utilizan la regla e
 }
 ```
 
-### Enumerar las revisiones relacionadas de una regla {#revisions}
+### Enumeración de las revisiones relacionadas de una regla {#revisions}
 
 Puede enumerar las revisiones de una regla adjuntando `/revisions` a la ruta de una solicitud de consulta.
 
@@ -827,9 +827,9 @@ Una respuesta correcta devuelve una lista de revisiones que utilizan la regla es
 }
 ```
 
-### Buscar un origen relacionado para una regla {#origin}
+### Búsqueda de un origen relacionado de una regla {#origin}
 
-Puede buscar el origen (versión anterior) de una regla anexando `/origin` a la ruta de una solicitud de búsqueda.
+Puede buscar el origen (versión anterior) de una regla añadiendo `/origin` a la ruta de una solicitud de búsqueda.
 
 **Formato de API**
 
@@ -929,7 +929,7 @@ Una respuesta correcta devuelve los detalles de la extensión de la regla especi
 }
 ```
 
-### Buscar la propiedad relacionada para una regla {#property}
+### Búsqueda de la propiedad relacionada de una regla {#property}
 
 Puede buscar la propiedad que posee una regla adjuntando `/property` a la ruta de una solicitud de consulta.
 

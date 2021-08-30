@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Ayuda de Administración de datos de Adobe Experience Platform
 breadcrumb-title: Guía de administración de datos
 user-guide-description: Aplique restricciones al uso de datos utilizando etiquetas, acciones de marketing y políticas.
-feature: Gobierno de datos
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Governance
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '94'
 ht-degree: 35%
 
 ---
@@ -36,5 +35,5 @@ ht-degree: 35%
    * [Políticas](api/policies.md)
    * [Acciones de marketing](api/marketing-actions.md)
    * [Evaluación](api/evaluation.md)
-* [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [Referencia de API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 * [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)

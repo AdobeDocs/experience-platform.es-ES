@@ -5,10 +5,9 @@ title: Información general sobre las etiquetas de uso de datos
 topic-legacy: labels
 description: La administración de datos de Adobe Experience Platform permite aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada uno según las políticas de uso de datos relacionadas. Este documento proporciona información general sobre las etiquetas de uso de datos en Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
@@ -49,13 +48,13 @@ Puede administrar las etiquetas de uso de datos mediante las API [!DNL Experienc
 
 ### Uso de la interfaz de usuario
 
-El espacio de trabajo **[!UICONTROL Policies]** en la interfaz de usuario [!DNL Experience Platform] le permite ver y administrar las etiquetas principales y personalizadas de su organización. El espacio de trabajo **[!DNL Datasets]** permite aplicar etiquetas a conjuntos de datos y campos. Para obtener más información, consulte la [guía del usuario de etiquetas](user-guide.md).
+El espacio de trabajo **[!UICONTROL Directivas]** en la interfaz de usuario de [!DNL Experience Platform] le permite ver y administrar etiquetas principales y personalizadas para su organización. El espacio de trabajo **[!DNL Datasets]** permite aplicar etiquetas a conjuntos de datos y campos. Para obtener más información, consulte la [guía del usuario de etiquetas](user-guide.md).
 
 ### Uso de API
 
-El extremo `/labels` de la [API del servicio de directivas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) le permite administrar mediante programación las etiquetas de uso de datos, incluida la creación de etiquetas personalizadas. Consulte la [guía de extremo de etiquetas](../api/labels.md) para obtener más información.
+El extremo `/labels` de la [API del servicio de directivas](https://www.adobe.io/experience-platform-apis/references/policy-service/) le permite administrar mediante programación las etiquetas de uso de datos, incluida la creación de etiquetas personalizadas. Consulte la [guía de extremo de etiquetas](../api/labels.md) para obtener más información.
 
-La [API del servicio de conjunto de datos](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) se utiliza para administrar etiquetas para conjuntos de datos y campos. Consulte la guía sobre [administración de etiquetas de conjuntos de datos](./dataset-api.md) para obtener más información.
+La [API del servicio de conjunto de datos](https://www.adobe.io/experience-platform-apis/references/dataset-service/) se utiliza para administrar etiquetas para conjuntos de datos y campos. Consulte la guía sobre [administración de etiquetas de conjuntos de datos](./dataset-api.md) para obtener más información.
 
 ## Pasos siguientes
 

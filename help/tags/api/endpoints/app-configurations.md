@@ -1,26 +1,26 @@
 ---
-title: Punto final de las configuraciones de aplicación
-description: Aprenda a realizar llamadas al extremo /app_configuration en la API de Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Extremo de las configuraciones de aplicación
+description: Aprenda a realizar llamadas al extremo /app_configurations en la API de Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 7%
+source-wordcount: '586'
+ht-degree: 99%
 
 ---
 
-# Punto final de las configuraciones de aplicación
+# Extremo de las configuraciones de aplicación
 
 >[!WARNING]
 >
->La implementación del punto final `/app_configurations` está en proceso de cambio a medida que se agregan, eliminan y vuelven a trabajar las funciones.
+>La implementación del extremo `/app_configurations` está en proceso de cambio a medida que se añaden, eliminan y vuelven a trabajar las funciones.
 
 Las configuraciones de aplicación permiten almacenar y recuperar las credenciales para usarlas más adelante. El extremo `/app_configurations` de la API de Reactor le permite administrar mediante programación las configuraciones de aplicación dentro de la aplicación de experiencia.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de configuraciones de aplicación {#list}
+## Recuperación de una lista de configuraciones de aplicación {#list}
 
 **Formato de API**
 
@@ -30,13 +30,13 @@ GET /companies/{COMPANY_ID}/app_configurations
 
 | Parámetro | Descripción |
 | --- | --- |
-| `COMPANY_ID` | El `id` de la [empresa](./companies.md) que posee las configuraciones de la aplicación. |
+| `COMPANY_ID` | El `id` de la [compañía](./companies.md) que posee las configuraciones de la aplicación. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, las configuraciones de aplicación enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, las configuraciones de aplicación enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Consulte la guía de [filtrado de respuestas](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -98,9 +98,9 @@ Una respuesta correcta devuelve una lista de configuraciones de aplicación.
 }
 ```
 
-## Buscar una configuración de aplicación {#lookup}
+## Búsqueda de una configuración de aplicación {#lookup}
 
-Puede buscar una configuración de aplicación proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar una configuración de aplicación proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -163,9 +163,9 @@ Una respuesta correcta devuelve los detalles de la configuración de la aplicaci
 }
 ```
 
-## Crear una configuración de aplicación {#create}
+## Creación de una configuración de aplicación {#create}
 
-Puede crear una nueva configuración de aplicación realizando una solicitud de POST.
+Puede crear una nueva configuración de aplicación realizando una petición POST.
 
 **Formato de API**
 
@@ -175,7 +175,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 
 | Parámetro | Descripción |
 | --- | --- |
-| `COMPANY_ID` | El `id` de la [empresa](./companies.md) en la que define la configuración de la aplicación. |
+| `COMPANY_ID` | El `id` de la [compañía](./companies.md) en la que define la configuración de la aplicación. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -211,7 +211,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `platform` | La plataforma en la que se ejecuta la aplicación (web o móvil). Esto determina qué servicios de mensajería están disponibles. |
-| `messaging_service` | El servicio de mensajería asociado a la aplicación, como [Apple Push Notification service (APNS)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) y [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Esto determina qué tipos de claves se pueden utilizar. |
+| `messaging_service` | El servicio de mensajería asociado a la aplicación, como [Apple Push Notification service (APNs)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) y [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Esto determina qué tipos de claves se pueden utilizar. |
 | `key_type` | Representa el protocolo que admite un proveedor de servicios push y determina el formato del objeto `push_credential`. A medida que evolucionan los protocolos para los servicios de mensajería, se crean nuevos valores `key_type` para admitir los protocolos actualizados. |
 | `push_credential` | El valor de credencial real, que se cifra en reposo. Normalmente, este campo no se descifra ni se incluye en las respuestas de API. Solo ciertos servicios de Adobe pueden obtener una respuesta que contenga una credencial push descifrada. |
 
@@ -254,9 +254,9 @@ Una respuesta correcta devuelve los detalles de la configuración de la aplicaci
 }
 ```
 
-## Actualizar la configuración de una aplicación
+## Actualización de la configuración de una aplicación
 
-Puede actualizar una configuración de aplicación incluyendo su ID en la ruta de una solicitud del PUT.
+Puede actualizar una configuración de aplicación incluyendo su ID en la ruta de una petición PUT.
 
 **Formato de API**
 
@@ -337,9 +337,9 @@ Una respuesta correcta devuelve los detalles de la configuración actualizada de
 }
 ```
 
-## Eliminar una configuración de aplicación
+## Eliminación de una configuración de aplicación
 
-Puede eliminar una configuración de aplicación incluyendo su ID en la ruta de una solicitud del DELETE.
+Puede eliminar una configuración de aplicación incluyendo su ID en la ruta de una petición DELETE.
 
 **Formato de API**
 

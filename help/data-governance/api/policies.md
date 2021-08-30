@@ -5,11 +5,10 @@ title: Punto final de API de directivas
 topic-legacy: developer guide
 description: Las políticas de uso de datos son reglas que adopta su organización que describen los tipos de acciones de marketing que puede realizar o de las que está restringido el uso de los datos en el Experience Platform. El extremo /policy se utiliza para todas las llamadas de API relacionadas con la visualización, la creación, la actualización o la eliminación de directivas de uso de datos.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1817'
-ht-degree: 2%
+source-wordcount: '1813'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +18,7 @@ Las políticas de uso de datos son reglas que describen los tipos de acciones de
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
+El extremo de API utilizado en esta guía forma parte de la [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
 
 ## Recuperar una lista de directivas {#list}
 
@@ -606,7 +605,7 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) con un cuerpo en blanco.
 
 Puede confirmar la eliminación intentando buscar (GET) la directiva de nuevo. Debería recibir un error HTTP 404 (no encontrado) si la directiva se ha eliminado correctamente.
 
-## Recupere una lista de directivas principales habilitadas {#list-enabled-core}
+## Recuperar una lista de directivas principales habilitadas {#list-enabled-core}
 
 De forma predeterminada, solo participan en la evaluación las políticas de uso de datos activadas. Puede recuperar una lista de directivas principales que su organización actualmente habilita realizando una solicitud de GET al extremo `/enabledCorePolicies` .
 
@@ -658,7 +657,7 @@ Una respuesta correcta devuelve la lista de directivas principales habilitadas e
 }
 ```
 
-## Actualice la lista de directivas principales habilitadas {#update-enabled-core}
+## Actualizar la lista de directivas principales habilitadas {#update-enabled-core}
 
 De forma predeterminada, solo participan en la evaluación las políticas de uso de datos activadas. Al realizar una solicitud de PUT al extremo `/enabledCorePolicies` , puede actualizar la lista de directivas principales habilitadas para su organización mediante una sola llamada.
 

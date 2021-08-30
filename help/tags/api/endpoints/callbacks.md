@@ -1,18 +1,18 @@
 ---
-title: Punto de conexión de llamada
+title: Punto de conexión de llamadas
 description: Aprenda a realizar llamadas al extremo /callbacks en la API de Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 8%
+source-wordcount: '621'
+ht-degree: 99%
 
 ---
 
-# Punto de conexión de llamada
+# Punto de conexión de llamadas
 
 Una llamada de retorno es un mensaje que la API de Reactor envía a una URL específica (normalmente una que aloja su organización).
 
-Las llamadas de retorno están pensadas para utilizarse junto con [eventos de auditoría](./audit-events.md) para rastrear actividades en la API de Reactor. Cada vez que se genera un evento de auditoría de un tipo determinado, una llamada de retorno puede enviar un mensaje coincidente a la dirección URL especificada.
+Las llamadas de retorno están pensadas para utilizarse junto con [eventos de auditoría](./audit-events.md) para rastrear actividades en la API de Reactor. Cada vez que se genera un evento de auditoría de un tipo determinado, una llamada de retorno puede enviar un mensaje correspondiente a la dirección URL especificada.
 
 El servicio detrás de la URL especificada en la llamada de retorno debe responder con el código de estado HTTP 200 (OK) o 201 (Created). Si el servicio no responde con ninguno de estos códigos de estado, se vuelve a intentar enviar el mensaje en los siguientes intervalos:
 
@@ -34,11 +34,11 @@ Una llamada de retorno pertenece exactamente a una [propiedad](./properties.md).
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Llamadas de retorno de lista {#list}
+## Listado de llamadas de retorno {#list}
 
-Puede enumerar todas las llamadas de retorno en una propiedad realizando una solicitud de GET.
+Puede enumerar todas las llamadas de retorno en una propiedad realizando una petición GET.
 
 **Formato de API**
 
@@ -54,7 +54,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, las llamadas de retorno enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, las llamadas de retorno enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Consulte la guía de [filtrado de respuestas](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -115,9 +115,9 @@ Una respuesta correcta devuelve una lista de llamadas de retorno para la propied
 }
 ```
 
-## Buscar una devolución de llamada {#lookup}
+## Búsqueda de una llamada de retorno {#lookup}
 
-Puede buscar una llamada de retorno proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar una llamada de retorno proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -127,7 +127,7 @@ GET /callbacks/{CALLBACK_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `CALLBACK_ID` | El `id` de la rellamada que desea buscar. |
+| `CALLBACK_ID` | El `id` de la llamada de retorno que desea buscar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -179,9 +179,9 @@ Una respuesta correcta devuelve los detalles de la llamada de retorno.
 }
 ```
 
-## Crear una llamada de retorno {#create}
+## Creación de una llamada de retorno {#create}
 
-Puede crear una nueva llamada de retorno realizando una solicitud de POST.
+Puede crear una nueva llamada de retorno realizando una petición POST.
 
 **Formato de API**
 
@@ -191,7 +191,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | Parámetro | Descripción |
 | --- | --- |
-| `PROPERTY_ID` | El `id` de la [propiedad](./properties.md) en la que está definiendo la rellamada. |
+| `PROPERTY_ID` | El `id` de la [propiedad](./properties.md) en la que está definiendo la llamada de retorno. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -219,7 +219,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `url` | El destino URL del mensaje de llamada de retorno. La URL debe utilizar la extensión de protocolo HTTPS. |
-| `subscriptions` | Matriz de cadenas que indica los tipos de eventos de auditoría que van a almacenar en déclencheur la llamada de retorno. Consulte la [guía de extremo de eventos de auditoría](./audit-events.md) para obtener una lista de posibles tipos de eventos. |
+| `subscriptions` | Matriz de cadenas que indica los tipos de eventos de auditoría que desencadenarán la llamada de retorno. Consulte la [guía de extremos de eventos de auditoría](./audit-events.md) para obtener una lista de posibles tipos de eventos. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -259,9 +259,9 @@ Una respuesta correcta devolverá los detalles de la llamada de retorno recién 
 }
 ```
 
-## Actualizar una llamada de retorno
+## Actualización de una llamada de retorno
 
-Puede actualizar una llamada de retorno incluyendo su ID en la ruta de una solicitud del PUT.
+Puede actualizar una llamada de retorno incluyendo su ID en la ruta de una petición PUT.
 
 **Formato de API**
 
@@ -271,7 +271,7 @@ PUT /callbacks/{CALLBACK_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `CALLBACK_ID` | El `id` de la rellamada que desea actualizar. |
+| `CALLBACK_ID` | El `id` de la llamada de retorno que desea actualizar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -303,7 +303,7 @@ curl -X PUT \
 | Propiedad | Descripción |
 | --- | --- |
 | `attributes` | Un objeto cuyas propiedades representan los atributos que se van a actualizar para la llamada de retorno. Cada clave representa el atributo de llamada de retorno particular que se va a actualizar, junto con el valor correspondiente al que se debe actualizar.<br><br>Se pueden actualizar los atributos siguientes para las llamadas de retorno:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | El `id` de la rellamada que desea actualizar. Debe coincidir con el valor `{CALLBACK_ID}` proporcionado en la ruta de solicitud. |
+| `id` | El `id` de la llamada de retorno que desea actualizar. Debe coincidir con el valor `{CALLBACK_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `callbacks`. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -345,9 +345,9 @@ Una respuesta correcta devuelve los detalles de la llamada de retorno actualizad
 }
 ```
 
-## Eliminar una llamada de retorno
+## Eliminación de una llamada de retorno
 
-Puede eliminar una llamada de retorno incluyendo su ID en la ruta de una solicitud del DELETE.
+Puede eliminar una llamada de retorno incluyendo su ID en la ruta de una petición DELETE.
 
 **Formato de API**
 
@@ -357,7 +357,7 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `CALLBACK_ID` | El `id` de la rellamada que desea eliminar. |
+| `CALLBACK_ID` | El `id` de la llamada de retorno que desea eliminar. |
 
 {style=&quot;table-layout:auto&quot;}
 

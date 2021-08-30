@@ -5,9 +5,9 @@ title: Desarrollo de integraciones de ETL para Adobe Experience Platform
 topic-legacy: overview
 description: La guía de integración de ETL describe los pasos generales para crear conectores seguros y de alto rendimiento para el Experience Platform y la ingesta de datos en Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '4083'
+source-wordcount: '4075'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ La guía de integración de ETL describe los pasos generales para crear conector
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Autenticación y autorización para API de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
-- [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Esta guía también incluye ejemplos de llamadas API para utilizar al diseñar un conector ETL, con vínculos a documentación que describe cada servicio [!DNL Experience Platform] y el uso de su API, con más detalle.
 
@@ -257,7 +257,7 @@ De forma similar a los pasos para [ver esquema del conjunto de datos](#view-data
 
 >[!NOTE]
 >
->Cuando el campo &quot;schema&quot; está vacío o ausente por completo, el conector debe leer el campo &quot;schemaRef&quot; y utilizar la [API del Registro del esquema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml), como se muestra en los pasos anteriores, para [ver un esquema del conjunto de datos](#view-dataset-schema).
+>Cuando el campo &quot;schema&quot; está vacío o ausente por completo, el conector debe leer el campo &quot;schemaRef&quot; y utilizar la [API del Registro del esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/), como se muestra en los pasos anteriores, para [ver un esquema del conjunto de datos](#view-dataset-schema).
 
 ### La propiedad &quot;observableSchema&quot;
 

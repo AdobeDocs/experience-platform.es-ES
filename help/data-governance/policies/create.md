@@ -6,17 +6,16 @@ topic-legacy: policies
 type: Tutorial
 description: La API del servicio de directivas le permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos. Este documento proporciona un tutorial paso a paso para crear una política mediante la API del servicio de directivas.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1215'
 ht-degree: 2%
 
 ---
 
 # Crear una directiva de uso de datos en la API
 
-La [API del servicio de directivas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) le permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos.
+La [API del servicio de directivas](https://www.adobe.io/experience-platform-apis/references/policy-service/) le permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos.
 
 Este documento proporciona un tutorial paso a paso para crear una política mediante la API [!DNL Policy Service]. Para obtener una guía más completa de las diferentes operaciones disponibles en la API, consulte la [Guía para desarrolladores del Servicio de directivas](../api/getting-started.md).
 

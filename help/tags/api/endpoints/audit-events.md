@@ -1,10 +1,10 @@
 ---
 title: Extremo de eventos de auditoría
 description: Aprenda a realizar llamadas al extremo /audit_events en la API de Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 4%
+source-wordcount: '262'
+ht-degree: 98%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 4%
 
 >[!WARNING]
 >
->La implementación del punto final `/audit_events` está en proceso de cambio a medida que se agregan, eliminan y vuelven a trabajar las funciones.
+>La implementación del extremo `/audit_events` está en proceso de cambio a medida que se añaden, eliminan y vuelven a trabajar las funciones.
 
-Un evento de auditoría es un registro de un cambio específico a otro recurso en la API de Reactor, generado en el momento en que se realiza el cambio. Estos son eventos del sistema a los que se puede suscribir mediante el uso de una [rellamada](./callbacks.md). El punto final `/audit_events` de la API de Reactor le permite administrar mediante programación eventos de auditoría dentro de la aplicación de experiencia.
+Un evento de auditoría es un registro de un cambio específico a otro recurso en la API de Reactor, generado en el momento en que se realiza el cambio. Estos son eventos del sistema a los que se puede suscribir mediante el uso de una [llamada de retorno](./callbacks.md). El extremo `/audit_events` de la API de Reactor le permite administrar mediante programación eventos de auditoría dentro de la aplicación de experiencia.
 
 Los eventos de auditoría se estructuran en forma de `{RESOURCE_TYPE}.{EVENT}`, como `build.created` o `rule.updated`.
 
@@ -38,11 +38,11 @@ Se admiten los siguientes eventos para cada tipo de recurso:
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
 ## Recuperar una lista de eventos de auditoría {#list}
 
-Puede recuperar una lista de eventos de auditoría para todas las propiedades de su organización realizando una solicitud de GET al extremo `/audit_events` .
+Puede recuperar una lista de eventos de auditoría para todas las propiedades de su organización realizando una petición GET al punto final `/audit_events`.
 
 **Formato de API**
 
@@ -159,7 +159,7 @@ Una respuesta correcta devuelve una lista de eventos de auditoría. La respuesta
 
 ## Buscar un evento de auditoría {#lookup}
 
-Puede consultar un evento de auditoría proporcionando su ID en la ruta de una solicitud de GET.
+Puede consultar un evento de auditoría proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 

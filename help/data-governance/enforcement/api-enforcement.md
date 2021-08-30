@@ -6,17 +6,16 @@ topic-legacy: guide
 type: Tutorial
 description: Una vez que haya creado etiquetas de uso de datos para sus datos y haya creado políticas de uso para acciones de marketing contra esas etiquetas, puede utilizar la API del servicio de políticas para evaluar si una acción de marketing realizada en un conjunto de datos o un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 1%
+source-wordcount: '1002'
+ht-degree: 2%
 
 ---
 
 # Aplicar políticas de uso de datos mediante la API [!DNL Policy Service]
 
-Una vez que haya creado etiquetas de uso de datos para sus datos y haya creado políticas de uso para acciones de marketing contra esas etiquetas, puede utilizar [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar si una acción de marketing realizada en un conjunto de datos o un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de API.
+Una vez que haya creado etiquetas de uso de datos para sus datos y haya creado políticas de uso para acciones de marketing contra esas etiquetas, puede utilizar [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) para evaluar si una acción de marketing realizada en un conjunto de datos o un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de API.
 
 >[!NOTE]
 >

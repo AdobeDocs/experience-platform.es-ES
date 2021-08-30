@@ -6,11 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial trata los pasos para aplicar el cumplimiento de los estándares de uso de datos para segmentos de audiencia del perfil del cliente en tiempo real que utilizan API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 1%
+source-wordcount: '1358'
+ht-degree: 2%
 
 ---
 
@@ -126,7 +125,7 @@ Una respuesta correcta devuelve los detalles de la definición del segmento.
 | -------- | ----------- |
 | `mergePolicyId` | ID de la directiva de combinación utilizada para la definición del segmento. Se utilizará en el siguiente paso. |
 
-## Busque los conjuntos de datos de origen de la directiva de combinación {#datasets}
+## Buscar los conjuntos de datos de origen de la directiva de combinación {#datasets}
 
 Las políticas de combinación contienen información sobre sus conjuntos de datos de origen, que a su vez contienen etiquetas de uso de datos. Puede buscar los detalles de una directiva de combinación proporcionando el ID de la directiva de combinación en una solicitud de GET a la API [!DNL Profile]. Puede encontrar más información sobre las políticas de combinación en la [guía de extremo de directivas de combinación](../../profile/api/merge-policies.md).
 
@@ -189,7 +188,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación.
 >
 > En este paso se supone que tiene al menos una política de uso de datos activa que impide que se realicen acciones de marketing específicas en datos que contengan determinadas etiquetas. Si no tiene ninguna política de uso aplicable para los conjuntos de datos que se están evaluando, siga el [tutorial de creación de directivas](../../data-governance/policies/create.md) para crear uno antes de continuar con este paso.
 
-Una vez que haya obtenido los ID de los conjuntos de datos de origen de la directiva de combinación, puede utilizar la [API del servicio de directiva](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar esos conjuntos de datos con acciones de marketing específicas a fin de comprobar si hay infracciones de la directiva de uso de datos.
+Una vez que haya obtenido los ID de los conjuntos de datos de origen de la directiva de combinación, puede utilizar la [API del servicio de directiva](https://www.adobe.io/experience-platform-apis/references/policy-service/) para evaluar esos conjuntos de datos con acciones de marketing específicas a fin de comprobar si hay infracciones de la directiva de uso de datos.
 
 Para evaluar los conjuntos de datos, debe proporcionar el nombre de la acción de marketing en la ruta de una solicitud de POST, al mismo tiempo que proporciona los ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
 

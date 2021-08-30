@@ -1,33 +1,33 @@
 ---
 title: Extremo de entornos
 description: Aprenda a realizar llamadas al extremo /environment en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 8%
+source-wordcount: '1038'
+ht-degree: 99%
 
 ---
 
 # Extremo de entornos
 
-Cuando se compila una [biblioteca](./libraries.md) en una [compilación](./builds.md) en la API de reactor, el contenido exacto de la compilación depende de la configuración del entorno y los recursos incluidos en la biblioteca. Específicamente, el entorno determina lo siguiente:
+Cuando se compila una [biblioteca](./libraries.md) en una [compilación](./builds.md) en la API de Reactor, el contenido exacto de la compilación depende de la configuración del entorno y los recursos incluidos en la biblioteca. Específicamente, el entorno determina lo siguiente:
 
-1. **Destino**: Ubicación en la que desea que se implemente la compilación. Esto se controla seleccionando un [host](./hosts.md) para que el entorno lo utilice.
+1. **Destino**: Es la ubicación donde desea implementar la compilación. Se controla mediante la selección de un [host](./hosts.md) para el entorno que desea utilizar.
 1. **Archivo**: Puede elegir recuperar la compilación como un conjunto de archivos implementables o comprimirla en un formato de archivo. Esto se controla mediante la configuración `archive` del entorno.
 
 El formato de destino y archivo configurado por el entorno cambia la forma en que se hace referencia a la compilación en la aplicación (la referencia es un [código incrustado](../../ui/publishing/environments.md#embed-code)). Si realiza cambios en el destino o el formato de archivo, debe realizar una actualización correspondiente en la aplicación para utilizar la nueva referencia.
 
-Los entornos se dividen en tres tipos (o etapas), y cada tipo tiene un límite diferente al número total que puede tener:
+Los entornos se dividen en tres tipos (o etapas) y cada tipo tiene un límite diferente al número total que puede tener:
 
 | Tipo de entorno | Número permitido |
 | --- | --- |
 | Desarrollo | (Sin límite) |
-| Ensayo | One |
-| Producción | One |
+| Ensayo | Uno |
+| Producción | Uno |
 
 {style=&quot;table-layout:auto&quot;}
 
-Estos tipos de entorno tienen un comportamiento similar, pero se utilizan en diferentes etapas del flujo de trabajo de publicación de etiquetas [a1/>.](../../ui/publishing/publishing-flow.md)
+Estos tipos de entorno tienen un comportamiento similar, pero se utilizan en diferentes etapas del [flujo de trabajo de publicación de etiquetas](../../ui/publishing/publishing-flow.md).
 
 Un entorno pertenece exactamente a una [propiedad](./properties.md).
 
@@ -35,11 +35,11 @@ Para obtener información más general sobre los entornos, consulte la sección 
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
 ## Recuperar una lista de entornos {#list}
 
-Puede recuperar una lista de entornos para una propiedad incluyendo el ID de la propiedad en la ruta de una solicitud de GET.
+Puede recuperar una lista de entornos para una propiedad incluyendo el ID de la propiedad en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -55,7 +55,7 @@ GET /properties/{PROPERTY_ID}/environments
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, los entornos enumerados se pueden filtrar según los atributos siguientes:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, los entornos enumerados se pueden filtrar según los atributos siguientes:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía de [filtrado de respuestas](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -163,7 +163,7 @@ Una respuesta correcta devuelve una lista de entornos para la propiedad especifi
 
 ## Buscar un entorno {#lookup}
 
-Puede buscar un entorno proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar un entorno proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -272,7 +272,7 @@ Una respuesta correcta devuelve los detalles del entorno.
 
 ## Crear un entorno {#create}
 
-Puede crear un nuevo entorno realizando una solicitud de POST.
+Puede crear un nuevo entorno realizando una petición POST.
 
 **Formato de API**
 
@@ -288,7 +288,7 @@ POST /properties/{PROPERTY_ID}/environments
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo entorno para la propiedad especificada. La llamada también asocia el entorno con un host existente a través de la propiedad `relationships` . Consulte la guía sobre [relaciones](../guides/relationships.md) para obtener más información.
+La siguiente solicitud crea un nuevo entorno para la propiedad especificada. La llamada también asocia el entorno con un host existente a través de la propiedad `relationships`. Consulte la guía de [relaciones](../guides/relationships.md) para obtener más información.
 
 ```shell
 curl -X POST \
@@ -325,8 +325,8 @@ curl -X POST \
 | `attributes.archive` | Un valor booleano que indica si la compilación está en formato de archivo. |
 | `attributes.archive_passphrase` | Una contraseña de cadena que se puede utilizar para desbloquear el archivo. |
 | `attributes.path` | Una ruta desde la dirección URL del host para el entorno. |
-| `attributes.stage` | La etapa del entorno (desarrollo, ensayo o producción). |
-| `id` | El `id` del entorno que desea actualizar. Debe coincidir con el valor `{ENVIRONMENT_ID}` proporcionado en la ruta de solicitud. |
+| `attributes.stage` | La fase del entorno (desarrollo, ensayo o producción). |
+| `id` | La `id` del entorno que desea actualizar. Debe coincidir con el valor `{ENVIRONMENT_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -412,9 +412,9 @@ Una respuesta correcta devuelve los detalles del entorno recién creado.
 }
 ```
 
-## Actualizar un entorno {#update}
+## Actualización de un entorno {#update}
 
-Puede actualizar un entorno incluyendo su ID en la ruta de una solicitud de PATCH.
+Puede actualizar un entorno incluyendo su ID en la ruta de una petición PATCH.
 
 **Formato de API**
 
@@ -452,8 +452,8 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `attributes` | Un objeto cuyas propiedades representan los atributos que se van a actualizar para el entorno. Se pueden actualizar los siguientes atributos de entorno: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Consulte la llamada de ejemplo para [crear un entorno](#create) para obtener una lista de atributos y su caso de uso. |
-| `id` | El `id` del entorno que desea actualizar. Debe coincidir con el valor `{ENVIRONMENT_ID}` proporcionado en la ruta de solicitud. |
+| `attributes` | Un objeto cuyas propiedades representan los atributos que se van a actualizar para el entorno. Se pueden actualizar los siguientes atributos de entorno: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Consulte la llamada de ejemplo para [crear un entorno](#create) y obtener una lista de atributos y su caso de uso. |
+| `id` | La `id` del entorno que desea actualizar. Debe coincidir con el valor `{ENVIRONMENT_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -539,9 +539,9 @@ Una respuesta correcta devuelve los detalles del entorno actualizado.
 }
 ```
 
-## Eliminar un entorno
+## Eliminación de un entorno
 
-Puede eliminar un entorno incluyendo su ID en la ruta de una solicitud del DELETE.
+Puede eliminar un entorno incluyendo su ID en la ruta de una petición DELETE.
 
 **Formato de API**
 
@@ -690,7 +690,7 @@ Una respuesta correcta devuelve una lista de compilaciones que utilizan el entor
 
 ### Buscar un entorno en el host relacionado {#host}
 
-Puede buscar el host que utiliza un entorno añadiendo `/host` a la ruta de una solicitud de GET.
+Puede buscar el host que utiliza un entorno añadiendo `/host` a la ruta de una petición GET.
 
 >[!NOTE]
 >
@@ -761,7 +761,7 @@ Una respuesta correcta devuelve los detalles del host que utiliza el entorno esp
 
 ### Buscar una biblioteca relacionada para un entorno {#library}
 
-Puede buscar la biblioteca que utiliza un entorno anexando `/library` a la ruta de una solicitud de GET.
+Puede buscar la biblioteca que utiliza un entorno anexando `/library` a la ruta de una petición GET.
 
 **Formato de API**
 
@@ -876,7 +876,7 @@ Una respuesta correcta devuelve los detalles de la biblioteca que utiliza el ent
 
 ### Buscar la propiedad relacionada para un entorno {#property}
 
-Puede buscar la propiedad que posee un entorno añadiendo `/property` a la ruta de una solicitud de GET.
+Puede buscar la propiedad que posee un entorno añadiendo `/property` a la ruta de una petición GET.
 
 **Formato de API**
 

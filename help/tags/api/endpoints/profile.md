@@ -1,26 +1,26 @@
 ---
-title: Punto final de perfiles
+title: Extremo de perfiles
 description: Aprenda a realizar llamadas al extremo /profiles en la API de Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 5%
+source-wordcount: '170'
+ht-degree: 97%
 
 ---
 
-# Punto de conexión del perfil
+# Extremo del perfil
 
-En la API de Reactor, un perfil representa a un usuario de Adobe Experience Platform. La API de Reactor no mantiene su propia base de datos de usuarios y permisos, sino que se basa en los ID de Adobe administrados por el [sistema de administración de identidades (IMS)](https://helpx.adobe.com/es/enterprise/using/identity.html) del Adobe.
+En la API de Reactor, un perfil representa a un usuario de Adobe Experience Platform. La API de Reactor no mantiene su propia base de datos de usuarios y permisos, sino que se basa en los ID de Adobe administrados por el [Sistema de administración de identidades (IMS) de Adobe](https://helpx.adobe.com/es/enterprise/using/identity.html).
 
-Un perfil contiene toda la información sobre el usuario que ha iniciado sesión, incluidas todas las organizaciones de IMS a las que pertenece, los perfiles de producto a los que pertenece dentro de cada organización y los derechos que tiene de cada perfil de producto.
+Un perfil contiene toda la información acerca del usuario que ha iniciado sesión, incluidas todas las organizaciones de IMS a las que pertenece, los perfiles de producto a los que pertenece dentro de cada organización y los derechos que tiene de cada perfil de producto.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar el perfil actual {#lookup}
+## Recuperación del perfil actual {#lookup}
 
-Puede recuperar los detalles del perfil registrado actualmente realizando una solicitud de GET al extremo `/profile` .
+Puede recuperar los detalles del perfil registrado actualmente realizando una petición GET al extremo `/profile`.
 
 **Formato de API**
 

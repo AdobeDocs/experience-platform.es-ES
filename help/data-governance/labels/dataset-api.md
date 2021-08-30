@@ -5,17 +5,16 @@ title: 'Administrar etiquetas de uso de datos para conjuntos de datos mediante A
 topic-legacy: developer guide
 description: La API del servicio de conjunto de datos le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funcionalidades del catálogo de datos de Adobe Experience Platform, pero está separado de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '957'
 ht-degree: 2%
 
 ---
 
 # Administrar etiquetas de uso de datos para conjuntos de datos mediante API
 
-El [[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las capacidades del catálogo de datos de Adobe Experience Platform, pero está separado de la API [!DNL Catalog Service] que administra los metadatos del conjunto de datos.
+El [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las capacidades del catálogo de datos de Adobe Experience Platform, pero está separado de la API [!DNL Catalog Service] que administra los metadatos del conjunto de datos.
 
 Este documento explica cómo administrar etiquetas para conjuntos de datos y campos mediante [!DNL Dataset Service API]. Para ver los pasos sobre cómo administrar las etiquetas de uso de datos por sí mismas mediante llamadas API, consulte la [guía de extremo de etiquetas](../api/labels.md) para [!DNL Policy Service API].
 
@@ -150,7 +149,7 @@ Una respuesta correcta devuelve las etiquetas que se han agregado al conjunto de
 }
 ```
 
-## Eliminar etiquetas de un conjunto de datos {#remove}
+## Eliminación de etiquetas de un conjunto de datos {#remove}
 
 Puede eliminar las etiquetas aplicadas a un conjunto de datos realizando una solicitud de DELETE a la API [!DNL Dataset Service].
 
@@ -200,7 +199,7 @@ Para obtener más información sobre la administración de conjuntos de datos en
 
 La siguiente sección contiene información adicional sobre cómo trabajar con etiquetas mediante la API del servicio de conjuntos de datos.
 
-### [!DNL If-Match] header  {#if-match}
+### [!DNL If-Match] header {#if-match}
 
 Al realizar llamadas de API que actualizan las etiquetas existentes de un conjunto de datos (PUT y DELETE), se debe incluir un encabezado `If-Match` que indica la versión actual de la entidad de etiqueta del conjunto de datos en el servicio de conjunto de datos. Para evitar conflictos de datos, el servicio solo actualizará la entidad del conjunto de datos si la cadena `If-Match` incluida coincide con la última etiqueta de versión generada por el sistema para ese conjunto de datos.
 

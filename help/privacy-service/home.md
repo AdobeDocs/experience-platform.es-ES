@@ -5,11 +5,10 @@ title: Información general del Privacy Service
 topic-legacy: overview
 description: Privacy Service le permite facilitar el cumplimiento automatizado de las normas legales de privacidad en sus operaciones de datos de Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '1390'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -60,7 +59,7 @@ Según las [!DNL Experience Cloud] aplicaciones que utilice su sistema CRM, el t
 
 El documento sobre [datos de identidad para solicitudes de privacidad](./identity-data.md) proporciona información más detallada sobre los tipos de información de identidad que se aceptan para [!DNL Privacy Service]. El documento también proporciona instrucciones sobre cómo aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada de los clientes a medida que interactúan con el sitio web y enviar esos datos a [!DNL Privacy Service] en solicitudes de API.
 
-### Comience a realizar solicitudes de privacidad {#requests}
+### Comenzar a realizar solicitudes de privacidad {#requests}
 
 Una vez que haya determinado las necesidades de privacidad de su empresa y haya decidido qué valores de identidad se enviarán a [!DNL Privacy Service], puede empezar a realizar solicitudes de privacidad. [!DNL Privacy Service] le permite enviar solicitudes de privacidad a través de la API o la interfaz de usuario.
 
@@ -74,7 +73,7 @@ Una vez que haya determinado las necesidades de privacidad de su empresa y haya 
 
 #### Uso de la API
 
-El [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) proporciona varios puntos finales para la creación y administración de trabajos de privacidad mediante llamadas a la API RESTful, lo que le permite abordar mediante programación el cumplimiento de la normativa de privacidad para sus aplicaciones [!DNL Experience Cloud]. Para ver los pasos detallados sobre cómo utilizar la API, consulte la [guía para desarrolladores de API de Privacy Service](api/getting-started.md).
+El [[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) proporciona varios puntos finales para la creación y administración de trabajos de privacidad mediante llamadas a la API RESTful, lo que le permite abordar mediante programación el cumplimiento de la normativa de privacidad para sus aplicaciones [!DNL Experience Cloud]. Para ver los pasos detallados sobre cómo utilizar la API, consulte la [guía para desarrolladores de API de Privacy Service](api/getting-started.md).
 
 #### Uso de la interfaz de usuario
 
@@ -82,9 +81,9 @@ El [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/hom
 >
 >Actualmente, la interfaz de usuario [!DNL Privacy Service] solo admite solicitudes de acceso y eliminación. Todas las solicitudes de exclusión deben realizarse a través de la API .
 
-La interfaz de usuario [!DNL Privacy Service] le permite crear y supervisar trabajos de privacidad mediante una interfaz gráfica. La interfaz de usuario incluye un widget **[!UICONTROL Status Report]** que proporciona una representación visual del estado de todas las solicitudes activas y le permite crear nuevas solicitudes utilizando el **[!UICONTROL Request Builder]** integrado o cargando archivos JSON. Para obtener más información sobre el uso de la interfaz de usuario, consulte la [guía del usuario del Privacy Service](ui/overview.md).
+La interfaz de usuario [!DNL Privacy Service] le permite crear y supervisar trabajos de privacidad mediante una interfaz gráfica. La interfaz de usuario incluye un widget **[!UICONTROL Informe de estado]** que proporciona una representación visual del estado de todas las solicitudes activas y le permite crear nuevas solicitudes utilizando el **[!UICONTROL Creador de solicitudes]** integrado o cargando archivos JSON. Para obtener más información sobre el uso de la interfaz de usuario, consulte la [guía del usuario del Privacy Service](ui/overview.md).
 
-### Supervisar los trabajos de privacidad {#monitor}
+### Supervisar trabajos de privacidad {#monitor}
 
 Una vez que haya realizado trabajos de privacidad, tiene varias opciones para monitorizar su estado y sus resultados:
 

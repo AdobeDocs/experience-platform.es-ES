@@ -1,14 +1,14 @@
 ---
-title: Punto de búsqueda
-description: Aprenda a realizar llamadas al extremo /search en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Extremo de la búsqueda
+description: Aprenda a realizar llamadas al extremo de la búsqueda en la API de Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 1%
+source-wordcount: '658'
+ht-degree: 97%
 
 ---
 
-# Punto de búsqueda
+# Extremo de la búsqueda
 
 El extremo `/search` de la API de Reactor proporciona una forma de encontrar recursos que coincidan con los criterios deseados, expresados como una consulta.
 
@@ -33,7 +33,7 @@ Todas las consultas tienen ámbitos de la empresa actual y propiedades accesible
 >
 >La funcionalidad de búsqueda tiene las siguientes advertencias y excepciones:
 >* meta no se puede buscar y no se devuelve en los resultados de búsqueda.
->* Campos de esquema para delegados de paquetes de extensión (acciones, condiciones, etc.) se pueden buscar como texto, no como una estructura de datos anidada.
+>* Campos de esquema para delegados de paquetes de extensiones (acciones, condiciones, etc.) se pueden buscar como texto, no como una estructura de datos anidada.
 >* Actualmente, las consultas de rango solo admiten números enteros.
 
 
@@ -41,7 +41,7 @@ Para obtener información detallada sobre cómo utilizar esta funcionalidad, con
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
 ## Realizar una búsqueda {#perform}
 
@@ -95,7 +95,7 @@ curl -X POST \
 | --- | --- |
 | `from` | El número de resultados por el que se desplaza la respuesta. |
 | `size` | Cantidad máxima de resultados que se van a devolver. Los resultados no pueden superar los 100 elementos. |
-| `query` | Un objeto que representa la consulta de búsqueda. Para cada propiedad de este objeto, la clave debe representar una ruta de campo para la consulta y el valor debe ser un objeto cuyas subpropiedades determinen qué consultar.<br><br>Para cada ruta de campo, se pueden utilizar las siguientes subpropiedades:<ul><li>`exists`: Devuelve true si el campo existe en el recurso.</li><li>`value`: Devuelve true si el valor del campo coincide con el valor de esta propiedad.</li><li>`value_operator`: La lógica booleana utilizada para determinar cómo se debe gestionar una  `value` consulta. Los valores permitidos son `AND` y `OR`. Cuando se excluye, se asume la lógica `AND`. Consulte la sección sobre [lógica del operador de valores](#value-operator) para obtener más información.</li><li>`range` Devuelve true si el valor del campo se encuentra dentro de un intervalo numérico específico. El propio intervalo está determinado por las siguientes subpropiedades:<ul><li>`gt`: Buenos que el valor proporcionado, no inclusivo.</li><li>`gte`: Buenos o iguales al valor proporcionado.</li><li>`lt`: Menor que el valor proporcionado, no incluido.</li><li>`lte`: Menor o igual que el valor proporcionado.</li></ul></li></ul> |
+| `query` | Un objeto que representa la consulta de búsqueda. Para cada propiedad de este objeto, la clave debe representar una ruta de campo para la consulta y el valor debe ser un objeto cuyas subpropiedades determinen qué consultar.<br><br>Para cada ruta de campo, se pueden utilizar las siguientes subpropiedades:<ul><li>`exists`: Devuelve true si el campo existe en el recurso.</li><li>`value`: Devuelve true si el valor del campo coincide con el valor de esta propiedad.</li><li>`value_operator`: La lógica booleana utilizada para determinar cómo se debe gestionar una consulta `value`. Los valores permitidos son `AND` y `OR`. Cuando se excluye, se asume la lógica `AND`. Consulte la sección sobre la [lógica del operador de valores](#value-operator) para obtener más información.</li><li>`range` Devuelve true si el valor del campo se encuentra dentro de un intervalo numérico específico. El propio intervalo está determinado por las siguientes subpropiedades:<ul><li>`gt`: Mayor que el valor proporcionado, no inclusivo.</li><li>`gte`: Mayor o igual al valor proporcionado.</li><li>`lt`: Menor que el valor proporcionado, no incluido.</li><li>`lte`: Menor o igual que el valor proporcionado.</li></ul></li></ul> |
 | `sort` | Matriz de objetos que indica el orden en que se ordenarán los resultados. Cada objeto debe contener una sola propiedad: la clave representa la ruta del campo por la que ordenar y el valor representa el criterio de ordenación (`asc` para ascendente, `desc` para descendente). |
 | `resource_types` | Matriz de cadenas que indica los tipos de recurso específicos que se van a buscar. |
 
@@ -210,15 +210,15 @@ Una respuesta correcta devuelve una lista de recursos coincidentes para la consu
 
 ## Apéndice
 
-La siguiente sección contiene información adicional sobre el uso del extremo `/search` .
+La siguiente sección contiene información adicional sobre el uso del extremo `/search`.
 
-### lógica del operador de valor {#value-operator}
+### Lógica del operador de valor {#value-operator}
 
 Los valores de consulta de búsqueda se dividen en términos que coinciden con los documentos indexados. Entre cada término, se asume una relación `AND`.
 
 Cuando se utiliza `AND` como `value_operator`, un valor de consulta de `My Rule Holiday Sale` se interpreta como documentos con un campo que contiene `My AND Rule AND Holiday AND Sale`.
 
-Cuando se utiliza `OR` como `value_operator`, un valor de consulta de `My Rule Holiday Sale` se interpreta como documentos con un campo que contiene `My OR Rule OR Holiday OR Sale`. Cuantos más términos coincidan, más `match_score`. Debido a la naturaleza de la coincidencia de términos parciales, cuando nada coincide con el valor deseado, puede obtener un conjunto de resultados en el que el valor solo coincida en un nivel muy básico, como algunos caracteres de texto.
+Cuando se utiliza `OR` como `value_operator`, un valor de consulta de `My Rule Holiday Sale` se interpreta como documentos con un campo que contiene `My OR Rule OR Holiday OR Sale`. Cuantos más términos coincidan, más alto será el `match_score`. Debido a la naturaleza de la coincidencia de términos parciales, cuando nada coincide con el valor deseado, puede obtener un conjunto de resultados en el que el valor solo coincida en un nivel muy básico, como algunos caracteres de texto.
 
 ### Convenciones de coincidencia {#conventions}
 
@@ -228,19 +228,19 @@ La siguiente tabla desglosa las convenciones de coincidencia para los tipos de c
 
 | Tipo de campo | Convenciones de coincidencia |
 | --- | --- |
-| Cadenas | Texto con análisis de términos parciales, sin distinción de mayúsculas y minúsculas |
-| Valores de enumeración | Coincidencia exacta, con distinción de mayúsculas y minúsculas |
+| Cadenas | Texto con análisis de términos parciales, sin distinción entre mayúsculas y minúsculas |
+| Valores de enumeración | Coincidencia exacta, con distinción entre mayúsculas y minúsculas |
 | Enteros | Coincidencia exacta |
-| Flotantes | Coincidencia exacta |
+| Float | Coincidencia exacta |
 | Marcas de hora | Coincidencia exacta (formato DateTime) |
-| Mostrar nombres | Texto con análisis de términos parciales, sin distinción de mayúsculas y minúsculas |
+| Mostrar nombres | Texto con análisis de términos parciales, sin distinción entre mayúsculas y minúsculas |
 
 Existen convenciones adicionales para campos específicos que aparecen en la API:
 
 | Campo | Convenciones de coincidencia |
 | --- | --- |
-| `id` | Coincidencia exacta, con distinción de mayúsculas y minúsculas |
-| `delegate_descriptor_id` | Coincidencia exacta, con distinción de mayúsculas y minúsculas, con términos divididos en `::` |
-| `name` | Coincidencia exacta, con distinción de mayúsculas y minúsculas |
-| `settings` | Texto con análisis de términos parciales, sin distinción de mayúsculas y minúsculas |
-| `type` | Coincidencia exacta, con distinción de mayúsculas y minúsculas |
+| `id` | Coincidencia exacta, con distinción entre mayúsculas y minúsculas |
+| `delegate_descriptor_id` | Coincidencia exacta, con distinción entre mayúsculas y minúsculas, con términos divididos en `::` |
+| `name` | Coincidencia exacta, con distinción entre mayúsculas y minúsculas |
+| `settings` | Texto con análisis de términos parciales, sin distinción entre mayúsculas y minúsculas |
+| `type` | Coincidencia exacta, con distinción entre mayúsculas y minúsculas |

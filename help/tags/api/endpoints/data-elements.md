@@ -1,30 +1,30 @@
 ---
-title: Punto final de Data Elements
+title: Extremo de elementos de datos
 description: Aprenda a realizar llamadas al extremo /data_elements en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1415'
-ht-degree: 6%
+source-wordcount: '1411'
+ht-degree: 99%
 
 ---
 
-# Punto final de Data Elements
+# Extremo de elementos de datos
 
-Un elemento de datos funciona como una variable que apunta a un fragmento importante de datos dentro de la aplicación. Los elementos de datos se utilizan en las configuraciones [rules](./rules.md) y [extension](./extensions.md). Cuando se activa una regla durante la ejecución en un explorador o una aplicación, el valor del elemento de datos se resuelve y se utiliza dentro de la regla. Los elementos de datos funcionan igual para las configuraciones de extensión.
+Un elemento de datos funciona como una variable que apunta a un fragmento importante de datos dentro de la aplicación. Los elementos de datos se utilizan en las configuraciones [reglas](./rules.md) y [extensión](./extensions.md). Cuando se activa una regla durante la ejecución en un explorador o una aplicación, el valor del elemento de datos se resuelve y se utiliza dentro de la regla. Los elementos de datos funcionan igual para las configuraciones de extensión.
 
 El uso conjunto de varios elementos de datos resulta en un diccionario de datos o un mapa de datos. Este diccionario representa los datos que Adobe Experience Platform conoce y puede utilizar.
 
-Un elemento de datos pertenece exactamente a una [propiedad](./properties.md). Una propiedad puede tener muchos elementos de datos.
+Un elemento de datos pertenece a exactamente una [propiedad](./properties.md). Una propiedad puede tener muchos elementos de datos.
 
-Para obtener información más general sobre los elementos de datos y su uso en etiquetas, consulte la [guía de elementos de datos](../../ui/managing-resources/data-elements.md) en la documentación de la interfaz de usuario.
+Para obtener información más general sobre los elementos de datos y su uso en etiquetas, consulte la [guía de elementos de datos](../../ui/managing-resources/data-elements.md) en la documentación de la IU.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de elementos de datos {#list}
+## Recuperación de una lista de elementos de datos {#list}
 
-Puede recuperar una lista de elementos de datos para una propiedad incluyendo el ID de la propiedad en la ruta de una solicitud de GET.
+Puede recuperar una lista de elementos de datos para una propiedad incluyendo el ID de la propiedad en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -40,7 +40,7 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, los elementos de datos enumerados se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, los elementos de datos enumerados se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte la guía de [filtrado respuestas](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -167,9 +167,9 @@ Una respuesta correcta devuelve una lista de elementos de datos para la propieda
 }
 ```
 
-## Buscar un elemento de datos {#lookup}
+## Búsqueda de un elemento de datos {#lookup}
 
-Puede buscar un elemento de datos proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar un elemento de datos proporcionando su ID en la ruta de una petición GET.
 
 >[!NOTE]
 >
@@ -303,7 +303,7 @@ Una respuesta correcta devuelve los detalles del elemento de datos.
 
 ## Crear un elemento de datos {#create}
 
-Puede crear un nuevo elemento de datos realizando una solicitud de POST.
+Puede crear un nuevo elemento de datos realizando una petición POST.
 
 **Formato de API**
 
@@ -319,7 +319,7 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo elemento de datos para la propiedad especificada. La llamada también asocia el elemento de datos con una extensión existente a través de la propiedad `relationships` . Consulte la guía sobre [relaciones](../guides/relationships.md) para obtener más información.
+La siguiente solicitud crea un nuevo elemento de datos para la propiedad especificada. La llamada también asocia el elemento de datos con una extensión existente a través de la propiedad `relationships`. Consulte la guía de [relaciones](../guides/relationships.md) para obtener más información.
 
 ```shell
 curl -X POST \
@@ -355,7 +355,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `attributes.name` | **(Obligatorio)** Un nombre legible en lenguaje natural para el elemento de datos. |
-| `attributes.delegate_descriptor_id` | **(Obligatorio)** Una cadena con formato que asocia el elemento de datos con un paquete de extensión. Todos los elementos de datos deben asociarse con un paquete de extensión cuando se crean por primera vez, ya que cada paquete de extensión define los tipos compatibles con sus elementos de datos delegados, así como el comportamiento deseado. Para obtener más información, consulte la guía de [ID de descriptor delegado](../guides/delegate-descriptor-ids.md) . |
+| `attributes.delegate_descriptor_id` | **(Obligatorio)** Una cadena con formato que asocia el elemento de datos con un paquete de extensión. Todos los elementos de datos deben asociarse con un paquete de extensión cuando se crean por primera vez, ya que cada paquete de extensión define los tipos compatibles con sus elementos de datos delegados, así como el comportamiento deseado. Para obtener más información, consulte la guía de [ID de descriptor delegado](../guides/delegate-descriptor-ids.md). |
 | `attributes.settings` | Un objeto JSON de configuración representado como una cadena. |
 | `attributes.default_value` | Un valor predeterminado que se devolverá si el elemento de datos se evalúa como `undefined`. |
 | `attributes.enabled` | Un valor booleano que indica si el elemento de datos está habilitado. |
@@ -467,9 +467,9 @@ Una respuesta correcta devolverá los detalles del elemento de datos recién cre
 }
 ```
 
-## Actualizar un elemento de datos {#update}
+## Actualización de un elemento de datos {#update}
 
-Puede actualizar un elemento de datos incluyendo su ID en la ruta de una solicitud del PATCH.
+Puede actualizar un elemento de datos incluyendo su ID en la ruta de una petición PATCH.
 
 **Formato de API**
 
@@ -507,7 +507,7 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `attributes` | Un objeto cuyas propiedades representan los atributos que se van a actualizar para el elemento de datos. Se pueden actualizar todos los atributos del elemento de datos. Consulte la llamada de ejemplo para [crear un elemento de datos](#create) para obtener una lista de atributos y su caso de uso. |
+| `attributes` | Un objeto cuyas propiedades representan los atributos que se van a actualizar para el elemento de datos. Se pueden actualizar todos los atributos del elemento de datos. Consulte la llamada de ejemplo para [crear un elemento de datos](#create), y obtener una lista de atributos y su caso de uso. |
 | `id` | El `id` del elemento de datos que desea actualizar. Debe coincidir con el valor `{DATA_ELEMENT_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `data_elements`. |
 
@@ -615,11 +615,11 @@ Una respuesta correcta devuelve los detalles del elemento de datos actualizado.
 }
 ```
 
-## Revisar un elemento de datos {#revise}
+## Revisión de un elemento de datos {#revise}
 
-Al revisar un elemento de datos, se crea una nueva revisión del elemento de datos con la revisión actual (head). Cada revisión de un elemento de datos tendrá su propio ID. El elemento de datos original se puede descubrir mediante un vínculo de origen.
+Al revisar un elemento de datos, se crea una nueva revisión de este con la revisión actual (principal). Cada revisión de un elemento de datos tendrá su propio ID. El elemento de datos original se puede descubrir mediante un vínculo de origen.
 
-Puede revisar un elemento de datos suministrando una propiedad `meta.action` con un valor de `revise` en el cuerpo de una solicitud de PATCH.
+Puede revisar un elemento de datos suministrando una propiedad `meta.action` con un valor de `revise` en el cuerpo de una petición PATCH.
 
 **Formato de API**
 
@@ -658,10 +658,10 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `attributes` | Un objeto cuyas propiedades representan los atributos que se van a actualizar para el elemento de datos. Se pueden actualizar todos los atributos del elemento de datos. Consulte la llamada de ejemplo para [crear un elemento de datos](#create) para obtener una lista de atributos y su caso de uso. |
+| `attributes` | Un objeto cuyas propiedades representan los atributos que se van a actualizar para el elemento de datos. Se pueden actualizar todos los atributos del elemento de datos. Consulte la llamada de ejemplo para [crear un elemento de datos](#create), y obtener una lista de atributos y su caso de uso. |
 | `meta.action` | Cuando se incluye con un valor de `revise`, esta propiedad indica que se debe crear una nueva revisión para el elemento de datos. |
 | `id` | El `id` del elemento de datos que desea revisar. Debe coincidir con el valor `{DATA_ELEMENT_ID}` proporcionado en la ruta de solicitud. |
-| `type` | Tipo de recurso que se está revisando. Para este extremo, el valor debe ser `data_elements`. |
+| `type` | El tipo de recurso que se revisa. Para este extremo, el valor debe ser `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -767,9 +767,9 @@ Una respuesta correcta devuelve los detalles de la nueva revisión para el eleme
 }
 ```
 
-## Eliminar un elemento de datos
+## Eliminación de un elemento de datos
 
-Puede eliminar un elemento de datos incluyendo su ID en la ruta de una solicitud del DELETE.
+Puede eliminar un elemento de datos incluyendo su ID en la ruta de una petición DELETE.
 
 **Formato de API**
 
@@ -797,19 +797,19 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) sin cuerpo de respuesta, lo que indica que el elemento de datos se ha eliminado.
 
-## Administrar notas de un elemento de datos {#notes}
+## Administración de notas de un elemento de datos {#notes}
 
-Los elementos de datos son recursos &quot;notables&quot;, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para elementos de datos y otros recursos compatibles.
+Los elementos de datos son recursos “anotables”, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para elementos de datos y otros recursos compatibles.
 
-## Recuperar recursos relacionados para un elemento de datos {#related}
+## Recuperación de recursos relacionados para un elemento de datos {#related}
 
 Las siguientes llamadas muestran cómo recuperar los recursos relacionados para un elemento de datos. Cuando [busca un elemento de datos](#lookup), estas relaciones se enumeran en la propiedad `relationships`.
 
-Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de reactor.
+Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de Reactor.
 
-### Enumerar las bibliotecas relacionadas para un elemento de datos {#libraries}
+### Enumeración de las bibliotecas relacionadas para un elemento de datos {#libraries}
 
-Puede enumerar las bibliotecas que utilizan un elemento de datos anexando `/libraries` a la ruta de una solicitud de búsqueda.
+Puede enumerar las bibliotecas que utilizan un elemento de datos añadiendo `/libraries` a la ruta de una solicitud de búsqueda.
 
 **Formato de API**
 
@@ -929,9 +929,9 @@ Una respuesta correcta devuelve una lista de bibliotecas que utilizan el element
 }
 ```
 
-### Enumerar las revisiones relacionadas para un elemento de datos {#revisions}
+### Enumeración de las revisiones relacionadas para un elemento de datos {#revisions}
 
-Puede enumerar las revisiones anteriores de un elemento de datos adjuntando `/revisions` a la ruta de una solicitud de consulta.
+Puede enumerar las revisiones anteriores de un elemento de datos añadiendo `/revisions` a la ruta de una solicitud de consulta.
 
 **Formato de API**
 
@@ -1163,9 +1163,9 @@ Una respuesta correcta devuelve una lista de revisiones para el elemento de dato
 }
 ```
 
-### Buscar la extensión relacionada para un elemento de datos {#extension}
+### Búsqueda de la extensión relacionada para un elemento de datos {#extension}
 
-Puede consultar la extensión que utiliza un elemento de datos anexando `/extension` a la ruta de una solicitud de GET.
+Puede consultar la extensión que utiliza un elemento de datos añadiendo `/extension` a la ruta de una petición GET.
 
 **Formato de API**
 
@@ -1283,9 +1283,9 @@ Una respuesta correcta devuelve los detalles de la extensión que utiliza el ele
 }
 ```
 
-### Buscar el origen relacionado para un elemento de datos {#origin}
+### Búsqueda del origen relacionado para un elemento de datos {#origin}
 
-Puede buscar el origen de un elemento de datos anexando `/origin` a la ruta de una solicitud de GET. El origen de un elemento de datos es la revisión anterior que se actualizó para crear la revisión actual.
+Puede buscar el origen de un elemento de datos añadiendo `/origin` a la ruta de una petición GET. El origen de un elemento de datos es la revisión anterior que se actualizó para crear la actual.
 
 **Formato de API**
 
@@ -1413,9 +1413,9 @@ Una respuesta correcta devuelve los detalles del origen del elemento de datos es
 }
 ```
 
-### Buscar la propiedad relacionada para un elemento de datos {#property}
+### Búsqueda de la propiedad relacionada para un elemento de datos {#property}
 
-Puede buscar la propiedad que posee un elemento de datos anexando `/property` a la ruta de una solicitud de GET.
+Puede buscar la propiedad que posee un elemento de datos añadiendo `/property` a la ruta de una petición GET.
 
 **Formato de API**
 

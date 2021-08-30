@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Guía de Observability Insights
 user-guide-description: Controle las actividades de la Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
-feature: Administración de datos
-source-git-commit: 905d364796911f35111d42c46c91744bc18304f2
+feature: Data Management
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 45%
+source-wordcount: '54'
+ht-degree: 46%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 45%
    * [Reglas de alerta estándar](./alerts/rules.md)
    * [Guía de la interfaz de usuario](./alerts/ui.md)
    * [Suscripción a las notificaciones de eventos de E/S](./alerts/subscribe.md)
-* [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
+* [Referencia de API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)

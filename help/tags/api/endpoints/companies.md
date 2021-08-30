@@ -1,26 +1,26 @@
 ---
 title: Extremo empresarial
-description: Aprenda a realizar llamadas al extremo /company en la API de Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+description: Aprenda a realizar llamadas al extremo /companies en la API de Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 4%
+source-wordcount: '243'
+ht-degree: 97%
 
 ---
 
 # Extremo empresarial
 
-Una empresa representa una organización de clientes, normalmente un negocio. En la API de Reactor, estas empresas coinciden con 1:1 con el ID de organización de IMS. Los usuarios de API solo tienen visibilidad de las empresas a las que tienen acceso. Una empresa puede contener muchas [propiedades](./properties.md). Una propiedad pertenece exactamente a una empresa.
+Una compañía representa una organización de clientes, normalmente una empresa. En la API de Reactor, estas compañías coinciden 1:1 con el ID de organización de IMS. Los usuarios de API solo tienen visibilidad de las compañías a las que tienen acceso. Una compañía puede contener muchas [propiedades](./properties.md). Una propiedad pertenece a exactamente una compañía.
 
 El extremo `/companies` de la API de reactor le permite recuperar mediante programación las empresas a las que tiene acceso dentro de su aplicación de experiencia.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de empresas {#list}
+## Recuperación de una lista de compañías {#list}
 
-Puede enumerar las empresas a las que está autorizado a utilizar realizando una solicitud de GET al extremo `/companies` . En la mayoría de los casos, hay exactamente una.
+Puede enumerar las empresas que está autorizado a utilizar realizando una petición GET al extremo `/companies`. En la mayoría de los casos, hay exactamente una.
 
 **Formato de API**
 
@@ -30,7 +30,7 @@ GET /companies
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, las empresas que cotizan en bolsa pueden filtrarse según los atributos siguientes:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, las empresas enumeradas pueden filtrarse según los atributos siguientes:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía de [respuestas de filtrado](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de empresas a las que tiene acceso.
+Una respuesta correcta devuelve una lista de compañías a las que tiene acceso.
 
 ```json
 {
@@ -106,9 +106,9 @@ Una respuesta correcta devuelve una lista de empresas a las que tiene acceso.
 }
 ```
 
-## Buscar una empresa {#lookup}
+## Búsqueda de una compañía {#lookup}
 
-Puede buscar una empresa específica incluyendo su ID en la ruta de una solicitud de GET.
+Puede buscar una compañía específica incluyendo su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -118,7 +118,7 @@ GET /companies/{COMPANY_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{COMPANY_ID}` | El valor `id` de la empresa que desea buscar. |
+| `{COMPANY_ID}` | El valor `id` de la compañía que desea buscar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -136,7 +136,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la empresa.
+Una respuesta correcta devuelve los detalles de la compañía.
 
 ```json
 {

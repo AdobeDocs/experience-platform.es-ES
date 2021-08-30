@@ -5,11 +5,10 @@ title: Puntos finales de API de evaluación de políticas
 topic-legacy: developer guide
 description: Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API del servicio de directivas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 1%
+source-wordcount: '1540'
+ht-degree: 2%
 
 ---
 
@@ -27,9 +26,9 @@ Las solicitudes de evaluación se pueden realizar de una de las tres maneras sig
 
 ## Primeros pasos
 
-Los extremos de API utilizados en esta guía forman parte de la [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
+Los extremos de API utilizados en esta guía forman parte de la [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
 
-## Evaluar para infracciones de directivas usando etiquetas de uso de datos {#labels}
+## Evaluar para infracciones de directiva usando etiquetas de uso de datos {#labels}
 
 Puede evaluar infracciones de directivas en función de la presencia de un conjunto específico de etiquetas de uso de datos mediante el uso del parámetro de consulta `duleLabels` en una solicitud de GET.
 
@@ -122,7 +121,7 @@ Una respuesta correcta incluye una matriz `violatedPolicies`, que contiene los d
 }
 ```
 
-## Evaluar para infracciones de políticas usando conjuntos de datos {#datasets}
+## Evaluar para infracciones de directiva usando conjuntos de datos {#datasets}
 
 Puede evaluar las infracciones de políticas en función de un conjunto de uno o más conjuntos de datos desde los que se pueden recopilar las etiquetas de uso de datos. Esto se realiza realizando una solicitud de POST al extremo `/constraints` para una acción de marketing específica y proporcionando una lista de ID de conjuntos de datos dentro del cuerpo de la solicitud.
 
@@ -348,7 +347,7 @@ Una respuesta correcta incluye una matriz `violatedPolicies`, que contiene los d
 | `duleLabels` | El objeto response incluye una matriz `duleLabels` que contiene una lista consolidada de todas las etiquetas encontradas dentro de los conjuntos de datos especificados. Esta lista incluye etiquetas de nivel de conjunto de datos y campo en todos los campos dentro del conjunto de datos. |
 | `discoveredLabels` | La respuesta también incluye una matriz `discoveredLabels` que contiene objetos para cada conjunto de datos, que muestra `datasetLabels` desglosada en etiquetas de nivel de conjunto de datos y campo. Cada etiqueta de nivel de campo muestra la ruta al campo específico con esa etiqueta. |
 
-## Evaluar para infracciones de directiva usando campos específicos de conjuntos de datos {#fields}
+## Evaluar para infracciones de directiva usando campos específicos del conjunto de datos {#fields}
 
 Puede evaluar infracciones de directiva basadas en un subconjunto de campos desde uno o varios conjuntos de datos, de modo que solo se evalúen las etiquetas de uso de datos aplicadas a esos campos.
 

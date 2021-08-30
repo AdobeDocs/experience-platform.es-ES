@@ -5,21 +5,20 @@ title: Guía de API del servicio de directivas
 topic-legacy: developer guide
 description: La API del servicio de directivas permite a los desarrolladores administrar las etiquetas y políticas de uso de datos en Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 0%
+source-wordcount: '500'
+ht-degree: 5%
 
 ---
 
-# [!DNL Policy Service] Guía de API
+# Guía de la API de [!DNL Policy Service]
 
 Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de [!DNL Experience Platform] en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de uso de los datos y el control del uso de los datos para las acciones de marketing.
 
 La API [!DNL Policy Service] proporciona varios puntos finales que le permiten administrar mediante programación las etiquetas y políticas de uso de datos, así como evaluar las acciones de marketing en caso de infracciones de políticas. Estos extremos se describen a continuación. Visite las guías de puntos finales individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, leer llamadas de API de ejemplo y más.
 
-Para ver todos los extremos disponibles y todas las operaciones de CRUD, visite el [[!DNL Policy Service] Intercambio de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Para ver todos los extremos disponibles y todas las operaciones de CRUD, visite el [[!DNL Policy Service] Intercambio de API](https://www.adobe.io/experience-platform-apis/references/policy-service/).
 
 ## Etiquetas
 

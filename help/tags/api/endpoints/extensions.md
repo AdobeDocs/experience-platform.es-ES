@@ -1,26 +1,26 @@
 ---
-title: Extremo de Extensiones
+title: Extremo de extensiones
 description: Aprenda a realizar llamadas al extremo /extensions en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 8%
+source-wordcount: '977'
+ht-degree: 99%
 
 ---
 
-# Extremo de Extensiones
+# Extremo de extensiones
 
-En la API de Reactor, una extensión representa la instancia instalada de un [paquete de extensión](./extension-packages.md). Una extensión hace que las funciones definidas por un paquete de extensión estén disponibles para una [propiedad](./properties.md). Estas funciones se aprovechan al crear [extensiones](./data-elements.md) y [componentes de regla](./rule-components.md).
+En la API de Reactor, una extensión representa la instancia instalada de un [paquete de extensiones](./extension-packages.md). Una extensión hace que las funciones definidas por un paquete de extensiones estén disponibles para una [propiedad](./properties.md). Estas funciones se aprovechan al crear [extensiones](./data-elements.md) y [componentes de regla](./rule-components.md).
 
 Una extensión pertenece exactamente a una propiedad. Una propiedad puede tener muchas extensiones, pero no más de una instancia instalada de un paquete de extensión determinado.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de extensiones {#list}
+## Recuperación de una lista de extensiones {#list}
 
-Puede recuperar una lista de extensiones para una propiedad realizando una solicitud de GET.
+Puede recuperar una lista de extensiones para una propiedad realizando una petición GET.
 
 **Formato de API**
 
@@ -36,7 +36,7 @@ GET properties/{PROPERTY_ID}/extensions
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, las extensiones enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, las extensiones enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Consulte la guía de [filtrado respuestas](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -153,9 +153,9 @@ Una respuesta correcta devuelve una lista de extensiones definidas en la propied
 }
 ```
 
-## Buscar una extensión {#lookup}
+## Búsqueda de una extensión {#lookup}
 
-Puede buscar una extensión proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar una extensión proporcionando su ID en la ruta de una petición GET.
 
 >[!NOTE]
 >
@@ -279,7 +279,7 @@ Una respuesta correcta devuelve los detalles de la extensión.
 
 ## Creación o actualización de una extensión {#create}
 
-Las extensiones se crean haciendo referencia a un [paquete de extensión](./extension-packages.md) y agregando la extensión instalada a una propiedad. Cuando finaliza la tarea de instalación, se devuelve una respuesta que indica si la extensión se ha instalado correctamente.
+Las extensiones se crean haciendo referencia a un [paquete de extensiones](./extension-packages.md) y añadiendo la extensión instalada a una propiedad. Cuando finaliza la tarea de instalación, se devuelve una respuesta que indica si la extensión se ha instalado correctamente.
 
 **Formato de API**
 
@@ -324,8 +324,8 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `relationships.extension_package` | **(Obligatorio)** Un objeto que hace referencia al ID del paquete de extensión que se está instalando. |
-| `attributes.delegate_descriptor_id` | Si la extensión requiere una configuración personalizada, también requiere un ID de descriptor delegado. Para obtener más información, consulte la guía de [ID de descriptor delegado](../guides/delegate-descriptor-ids.md) . |
+| `relationships.extension_package` | **(Obligatorio)** Un objeto que hace referencia al ID del paquete de extensión que se instala. |
+| `attributes.delegate_descriptor_id` | Si la extensión requiere una configuración personalizada, también requiere un ID de descriptor delegado. Para obtener más información, consulte la guía de [ID de descriptor delegado](../guides/delegate-descriptor-ids.md). |
 | `attributes.enabled` | Un booleano que indica si la extensión está habilitada. |
 | `attributes.settings` | Un objeto JSON de configuración representado como una cadena. |
 
@@ -423,9 +423,9 @@ Una respuesta correcta devuelve los detalles de la extensión recién creada.
 }
 ```
 
-## Revisar una extensión {#revise}
+## Revisión de una extensión {#revise}
 
-Puede revisar una extensión incluyendo su ID en la ruta de una solicitud del PATCH.
+Puede revisar una extensión incluyendo su ID en la ruta de una petición PATCH.
 
 **Formato de API**
 
@@ -441,7 +441,7 @@ PATCH /extensions/{EXTENSION_ID}
 
 **Solicitud**
 
-Al igual que con [la creación de una extensión](#create), se debe cargar una versión local del paquete revisado a través de los datos del formulario.
+Al igual que con la [creación de una extensión](#create), se debe cargar una versión local del paquete revisado a través de los datos del formulario.
 
 ```shell
 curl -X PATCH \
@@ -563,9 +563,9 @@ Una respuesta correcta devuelve los detalles de la extensión revisada, con su p
 }
 ```
 
-## Eliminar una extensión {#private-release}
+## Eliminación de una extensión {#private-release}
 
-Puede eliminar una extensión incluyendo su ID en la ruta de una solicitud del DELETE.
+Puede eliminar una extensión incluyendo su ID en la ruta de una petición DELETE.
 
 **Formato de API**
 
@@ -593,19 +593,19 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) sin cuerpo de respuesta, lo que indica que la extensión se ha eliminado.
 
-## Administrar notas de una extensión {#notes}
+## Administración de notas de una extensión {#notes}
 
-Las extensiones son recursos &quot;notables&quot;, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para extensiones y otros recursos compatibles.
+Las extensiones son recursos “anotables”, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para extensiones y otros recursos compatibles.
 
-## Recuperar recursos relacionados para una extensión {#related}
+## Recuperación de recursos relacionados para una extensión {#related}
 
 Las siguientes llamadas muestran cómo recuperar los recursos relacionados para una extensión. Cuando [busca una extensión](#lookup), estas relaciones se enumeran en la propiedad `relationships`.
 
-Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de reactor.
+Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de Reactor.
 
-### Enumerar las bibliotecas relacionadas para una extensión {#libraries}
+### Enumeración de las bibliotecas relacionadas para una extensión {#libraries}
 
-Puede enumerar las bibliotecas que utilizan una extensión anexando `/libraries` a la ruta de una solicitud de búsqueda.
+Puede enumerar las bibliotecas que utilizan una extensión añadiendo `/libraries` a la ruta de una solicitud de búsqueda.
 
 **Formato de API**
 
@@ -725,7 +725,7 @@ Una respuesta correcta devuelve una lista de bibliotecas que utilizan la extensi
 }
 ```
 
-### Enumerar las revisiones relacionadas para una extensión {#revisions}
+### Enumeración de las revisiones relacionadas para una extensión {#revisions}
 
 Puede enumerar las revisiones anteriores de una extensión adjuntando `/revisions` a la ruta de una solicitud de consulta.
 
@@ -939,9 +939,9 @@ Una respuesta correcta devuelve una lista de revisiones para la extensión espec
 }
 ```
 
-### Buscar el paquete de extensión relacionado para una extensión {#extension}
+### Búsqueda del paquete de extensión relacionado para una extensión {#extension}
 
-Puede buscar el paquete de extensión en el que se basa una extensión añadiendo `/extension_package` a la ruta de una solicitud de GET.
+Puede buscar el paquete de extensión en el que se basa una extensión añadiendo `/extension_package` a la ruta de una petición GET.
 
 **Formato de API**
 
@@ -1174,9 +1174,9 @@ Una respuesta correcta devuelve los detalles del paquete de extensión en los qu
 }
 ```
 
-### Buscar el origen relacionado para una extensión {#origin}
+### Búsqueda del origen relacionado para una extensión {#origin}
 
-Puede buscar el origen de una extensión añadiendo `/origin` a la ruta de una solicitud de GET. El origen de una extensión es la revisión anterior que se actualizó para crear la revisión actual.
+Puede buscar el origen de una extensión añadiendo `/origin` a la ruta de una petición GET. El origen de una extensión es la revisión anterior que se actualizó para crear la revisión actual.
 
 **Formato de API**
 
@@ -1294,9 +1294,9 @@ Una respuesta correcta devuelve los detalles del origen de la extensión especif
 }
 ```
 
-### Buscar la propiedad relacionada para una extensión {#property}
+### Búsqueda de la propiedad relacionada para una extensión {#property}
 
-Puede buscar la propiedad que posee una extensión anexando `/property` a la ruta de una solicitud de GET.
+Puede buscar la propiedad que posee una extensión anexando `/property` a la ruta de una petición GET.
 
 **Formato de API**
 

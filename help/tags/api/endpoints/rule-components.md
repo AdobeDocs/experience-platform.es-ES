@@ -1,16 +1,16 @@
 ---
 title: Extremo de componentes de regla
 description: Aprenda a realizar llamadas al extremo /rule_components en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 6%
+source-wordcount: '1207'
+ht-degree: 99%
 
 ---
 
 # Extremo de componentes de regla
 
-En las etiquetas de recopilación de datos, [rules](./rules.md) controlan el comportamiento de los recursos en una [biblioteca](./libraries.md) implementada. **Los** componentes de regla son las partes individuales que componen una regla. Si una regla es una fórmula, un componente de regla es uno de los ingredientes. El extremo `/rule_components` de la API de reactor le permite administrar mediante programación los componentes de regla.
+En las etiquetas de recopilación de datos, [las reglas](./rules.md) controlan el comportamiento de los recursos en una [biblioteca](./libraries.md) implementada. **Los componentes de regla** son las partes individuales que componen una regla. Si una regla es una fórmula, un componente de regla es uno de los ingredientes. El punto final `/rule_components` de la API de Reactor le permite administrar mediante programación los componentes de regla.
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ Los componentes de regla tienen tres tipos básicos:
 
 | Tipo de componente de regla | Descripción |
 | --- | --- |
-| Eventos | Un evento es el déclencheur de una regla. La regla se inicia cuando el evento se produce durante la ejecución en el dispositivo cliente. &quot;[!UICONTROL Library Load]&quot;, &quot;[!UICONTROL Page Top]&quot; y &quot;[!UICONTROL Click]&quot; son ejemplos de eventos. |
+| Eventos | Un evento es el activador de una regla. La regla se inicia cuando el evento se produce durante la ejecución en el dispositivo cliente. [!UICONTROL Library Load], [!UICONTROL Page Top] y [!UICONTROL Click] son ejemplos de eventos. |
 | Condiciones | Una condición es una evaluación de si se cumplen ciertos criterios antes de ejecutar cualquier acción. Una vez que se produce un evento, se evalúan las condiciones. Las acciones de la regla solo se ejecutan si se cumplen todas las condiciones. |
 | Acciones | Estas son las acciones que desea que realice la regla, como enviar una señalización de Adobe Analytics, recuperar un ID de visitante personalizado o activar un mbox concreto. |
 
@@ -32,11 +32,11 @@ Un componente de regla lo proporciona exactamente una [extensión](./extensions.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de componentes de regla {#list}
+## Recuperación de una lista de componentes de regla {#list}
 
-Puede recuperar una lista de componentes de regla que pertenezcan a una regla incluyendo el ID de la regla en la ruta de una solicitud de GET.
+Puede recuperar una lista de componentes de regla que pertenezcan a una regla, incluyendo el ID de la regla en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -52,7 +52,7 @@ GET /rules/{RULE_ID}/rule_components
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, los componentes de regla enumerados se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, los componentes de regla enumerados se pueden filtrar según los atributos siguientes:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte la guía de [respuestas de filtrado](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -173,9 +173,9 @@ Una respuesta correcta devuelve una lista de componentes de regla para la regla 
 }
 ```
 
-## Buscar un componente de regla {#lookup}
+## Búsqueda de un componente de regla {#lookup}
 
-Puede buscar un componente de regla proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar un componente de regla proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -297,9 +297,9 @@ Una respuesta correcta devuelve los detalles del componente de regla.
 }
 ```
 
-## Crear un componente de regla {#create}
+## Creación de un componente de regla {#create}
 
-Puede crear un nuevo componente de regla realizando una solicitud de POST.
+Puede crear un nuevo componente de regla realizando una petición POST.
 
 **Formato de API**
 
@@ -315,7 +315,7 @@ POST /rules/{RULE_ID}/rule_components
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo componente de regla para la regla especificada. La llamada también asocia el componente de regla con una extensión existente a través de la propiedad `relationships`. Consulte la guía sobre [relaciones](../guides/relationships.md) para obtener más información.
+La siguiente solicitud crea un nuevo componente de regla para la regla especificada. La llamada también asocia el componente de regla con una extensión existente a través de la propiedad `relationships`. Consulte la guía de [relaciones](../guides/relationships.md) para obtener más información.
 
 ```shell
 curl -X POST \
@@ -358,15 +358,15 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Obligatorio)** Los tipos de componentes de regla que puede definir se proporcionan mediante paquetes de  [extensión](./extension-packages.md). Al crear un nuevo componente de regla, debe proporcionar un ID de descriptor delegado para indicar en qué paquete de extensión se basa este componente de regla, el tipo del componente (evento, condición o acción) y el nombre del componente específico definido por la extensión (como el evento &quot;Clic&quot; en la extensión principal).<br><br>Consulte la guía de  [ID de descriptor ](../guides/delegate-descriptor-ids.md) delegado para obtener más información. |
+| `attributes.delegate_descriptor_id` | **(Obligatorio)** Los tipos de componentes de regla que puede definir se proporcionan mediante paquetes de [extensiones](./extension-packages.md). Al crear un nuevo componente de regla, debe proporcionar un ID de descriptor delegado para indicar en qué paquete de extensiones se basa este componente de regla, el tipo del componente (evento, condición o acción) y el nombre del componente específico definido por la extensión (como el evento de clic en la extensión principal).<br><br>Consulte la guía del [ID de descriptor](../guides/delegate-descriptor-ids.md) delegado para obtener más información. |
 | `attributes.name` | **(Obligatorio)** Un nombre legible en lenguaje natural para el componente de regla. |
-| `attributes.delay_next` | Un booleano que indica si se deben retrasar las acciones posteriores. |
+| `attributes.delay_next` | Un valor booleano que indica si se deben retrasar las acciones posteriores. |
 | `attributes.order` | Un entero que indica el orden para cargar el componente por tipo. |
-| `attributes.rule_order` | Un entero que indica la prioridad para que la regla asociada se active. |
+| `attributes.rule_order` | Un entero que indica la prioridad con que la regla asociada se debe activar. |
 | `attributes.settings` | Un objeto JSON de configuración representado como una cadena. |
 | `attributes.timeout` | Un entero que indica el tiempo de espera de la acción que se ejecuta en secuencia. |
-| `relationships` | Objeto que establece las relaciones necesarias para el componente de regla. Deben establecerse dos relaciones: <ol><li>`extension`: Extensión que define este componente de regla. Debe ser la misma extensión cuyo paquete de extensión esté indicado por `delegate_descriptor_id`.</li><li>`rules`: Regla en la que se define este componente. Debe ser el mismo ID de regla que se proporcione en la ruta de solicitud.</li></ol>Para obtener información más general sobre las relaciones, consulte la [guía de relaciones](../guides/relationships.md). |
-| `type` | Tipo de recurso que se está creando. Para este extremo, el valor debe ser `rule_components`. |
+| `relationships` | Un objeto que establece las relaciones necesarias para el componente de regla. Deben establecerse dos relaciones: <ol><li>`extension`: Extensión que define este componente de regla. Debe ser la misma extensión cuyo paquete de extensión esté indicado por `delegate_descriptor_id`.</li><li>`rules`: Regla en la que se define este componente. Debe ser el mismo ID de regla que se proporcione en la ruta de solicitud.</li></ol>Para obtener información más general sobre las relaciones, consulte la [guía de relaciones](../guides/relationships.md). |
+| `type` | El tipo de recurso que se crea. Para este extremo, el valor debe ser `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -466,9 +466,9 @@ Una respuesta correcta devolverá los detalles del componente de regla recién c
 }
 ```
 
-## Actualizar un componente de regla {#update}
+## Actualización de un componente de regla {#update}
 
-Puede actualizar un componente de regla incluyendo su ID en la ruta de una solicitud del PATCH.
+Puede actualizar un componente de regla incluyendo su ID en la ruta de una petición PATCH.
 
 >[!NOTE]
 >
@@ -613,9 +613,9 @@ Una respuesta correcta devuelve los detalles del componente de regla actualizado
 }
 ```
 
-## Eliminar un componente de regla
+## Eliminación de un componente de regla
 
-Puede eliminar un componente de regla incluyendo su ID en la ruta de una solicitud del DELETE.
+Puede eliminar un componente de regla incluyendo su ID en la ruta de una petición DELETE.
 
 **Formato de API**
 
@@ -643,17 +643,17 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) sin cuerpo de respuesta, lo que indica que se ha eliminado el componente de regla.
 
-## Administrar notas de un componente de regla {#notes}
+## Administración de notas de un componente de regla {#notes}
 
-Los componentes de regla son recursos &quot;notables&quot;, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para componentes de regla y otros recursos compatibles.
+Los componentes de regla son recursos “notables”, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para componentes de regla y otros recursos compatibles.
 
-## Recuperar recursos relacionados para un componente de regla {#related}
+## Recuperación de recursos relacionados para un componente de regla {#related}
 
 Las siguientes llamadas muestran cómo recuperar los recursos relacionados para un componente de regla. Cuando [busca un componente de regla](#lookup), estas relaciones se enumeran en el componente de regla `relationships`.
 
-Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de reactor.
+Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de Reactor.
 
-### Enumerar las reglas relacionadas para un componente de regla {#rules}
+### Enumeración de reglas relacionadas para un componente de regla {#rules}
 
 Puede enumerar las reglas que utilizan un componente de regla en particular anexando `/rules` a la ruta de una solicitud de consulta.
 
@@ -757,7 +757,7 @@ Una respuesta correcta devuelve una lista de reglas que utilizan el componente d
 }
 ```
 
-### Buscar la extensión relacionada para un componente de regla {#extension}
+### Búsqueda de la extensión relacionada para un componente de regla {#extension}
 
 Puede buscar la extensión que proporciona un componente de regla anexando `/extension` a la ruta de una solicitud de consulta.
 

@@ -1,18 +1,18 @@
 ---
 title: Extremo de propiedades
 description: Aprenda a realizar llamadas al extremo /properties en la API de Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 9%
+source-wordcount: '1146'
+ht-degree: 99%
 
 ---
 
 # Extremo de propiedades
 
-Una propiedad es una construcción de contenedor que contiene la mayoría de los demás recursos disponibles en la API de reactor. Las propiedades se administran mediante programación mediante el extremo `/properties` .
+Una propiedad es una construcción de contenedor que sostiene la mayoría de los demás recursos disponibles en la API de Reactor. Las propiedades se administran mediante programación usando el extremo `/properties`.
 
-En la jerarquía de recursos, una propiedad es el propietario de lo siguiente:
+En la jerarquía de recursos, una propiedad es la propietaria de lo siguiente:
 
 * [Versiones](./builds.md)
 * [Llamadas](./callbacks.md)
@@ -24,17 +24,17 @@ En la jerarquía de recursos, una propiedad es el propietario de lo siguiente:
 * [Regla componentes](./rule-components.md)
 * [Reglas](./rules.md)
 
-Una propiedad pertenece exactamente a una [empresa](./companies.md). Una empresa puede tener muchas propiedades.
+Una propiedad pertenece a exactamente una [compañía](./companies.md). Una compañía puede tener muchas propiedades.
 
-Para obtener información más general sobre las propiedades y su función en la administración de etiquetas, consulte la descripción general de [empresas y propiedades](../../ui/administration/companies-and-properties.md).
+Para obtener más información general acerca de las propiedades y su función en la administración de etiquetas, consulte la descripción general de [compañías y propiedades](../../ui/administration/companies-and-properties.md).
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [API del reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-## Recuperar una lista de propiedades {#list}
+## Recuperación de una lista de propiedades {#list}
 
-Puede recuperar una lista de propiedades pertenecientes a la empresa incluyendo el ID de la empresa en la ruta de una solicitud de GET.
+Puede recuperar una lista de propiedades pertenecientes a la compañía incluyendo el ID de la empresa en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -44,13 +44,13 @@ GET /companies/{COMPANY_ID}/properties
 
 | Parámetro | Descripción |
 | --- | --- |
-| `COMPANY_ID` | El `id` de la empresa que posee las propiedades que desea enumerar. |
+| `COMPANY_ID` | El `id` de la compañía que posee las propiedades que desea enumerar. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Mediante parámetros de consulta, las propiedades enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía sobre [filtrado de respuestas](../guides/filtering.md) para obtener más información.
+>Mediante parámetros de consulta, las propiedades enumeradas se pueden filtrar según los atributos siguientes:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte la guía de [filtrado de respuestas](../guides/filtering.md) para obtener más información.
 
 **Solicitud**
 
@@ -66,7 +66,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de propiedades para la empresa especificada.
+Una respuesta correcta devuelve una lista de propiedades para la compañía especificada.
 
 ```json
 {
@@ -256,9 +256,9 @@ Una respuesta correcta devuelve una lista de propiedades para la empresa especif
 }
 ```
 
-## Buscar una propiedad {#lookup}
+## Búsqueda de una propiedad {#lookup}
 
-Puede buscar una propiedad proporcionando su ID en la ruta de una solicitud de GET.
+Puede buscar una propiedad proporcionando su ID en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -381,7 +381,7 @@ Una respuesta correcta devuelve los detalles de la propiedad.
 
 ## Crear una propiedad {#create}
 
-Puede crear una nueva propiedad realizando una solicitud de POST.
+Puede crear una nueva propiedad realizando una petición POST.
 
 **Formato de API**
 
@@ -391,13 +391,13 @@ POST /company/{COMPANY_ID}/properties
 
 | Parámetro | Descripción |
 | --- | --- |
-| `COMPANY_ID` | El `id` de la empresa en la que está definiendo la propiedad. |
+| `COMPANY_ID` | El `id` de la compañía en la que está definiendo la propiedad. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva propiedad para la propiedad especificada. La llamada también asocia la propiedad con una extensión existente a través de la propiedad `relationships` . Consulte la guía sobre [relaciones](../guides/relationships.md) para obtener más información.
+La siguiente solicitud crea una nueva propiedad para la propiedad especificada. La llamada también asocia la propiedad con una extensión existente a través de la propiedad `relationships`. Consulte la guía de [relaciones](../guides/relationships.md) para obtener más información.
 
 ```shell
 curl -X POST \
@@ -428,11 +428,11 @@ curl -X POST \
 | --- | --- |
 | `attributes.name` | **(Obligatorio)** Un nombre legible en lenguaje natural para la propiedad. |
 | `attributes.platform` | **(Obligatorio)** La plataforma de la propiedad. Puede ser `web` para propiedades web o `mobile` o `edge` para propiedades móviles. |
-| `attributes.domains` | **(Necesario para propiedades web)** Matriz de dominios URL de la propiedad. |
+| `attributes.domains` | **(Necesario para propiedades web)** Una matriz de dominios URL de la propiedad. |
 | `attributes.development` | Un booleano que indica si se trata de una propiedad de desarrollo. |
 | `attributes.privacy` | Una cadena que puede utilizarse para hacer referencia a consideraciones relacionadas con la privacidad para la propiedad. |
 | `attributes.rule_component_sequencing_enabled` | Un booleano para saber si la secuenciación de componentes de regla debe habilitarse para esta propiedad. |
-| `attributes.ssl_enabled` | Un booleano para saber si Secure Sockets Layer (SSL) debe estar habilitado para esta propiedad. |
+| `attributes.ssl_enabled` | Un booleano para saber si la capa de sockets seguros (SSL) debe estar habilitada para esta propiedad. |
 | `attributes.undefined_vars_return_empty` | Un booleano para saber si las variables indefinidas deben devolverse como vacías para esta propiedad. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `properties`. |
 
@@ -533,9 +533,9 @@ Una respuesta correcta devuelve los detalles de la propiedad recién creada.
 }
 ```
 
-## Actualizar una propiedad {#update}
+## Actualización de una propiedad {#update}
 
-Puede actualizar una propiedad incluyendo su ID en la ruta de una solicitud del PATCH.
+Puede actualizar una propiedad incluyendo su ID en la ruta de una petición PATCH.
 
 **Formato de API**
 
@@ -679,7 +679,7 @@ Una respuesta correcta devuelve los detalles de la propiedad actualizada.
 
 ## Eliminar una propiedad
 
-Puede eliminar una propiedad incluyendo su ID en la ruta de una solicitud del DELETE.
+Puede eliminar una propiedad incluyendo su ID en la ruta de una petición DELETE.
 
 **Formato de API**
 
@@ -707,19 +707,19 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) sin cuerpo de respuesta, lo que indica que la propiedad se ha eliminado.
 
-## Administrar notas de una propiedad {#notes}
+## Administración de notas de una propiedad {#notes}
 
-Las propiedades son recursos &quot;notables&quot;, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para propiedades y otros recursos compatibles.
+Las propiedades son recursos “anotables”, lo que significa que puede crear y recuperar notas basadas en texto en cada recurso individual. Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo administrar notas para propiedades y otros recursos compatibles.
 
-## Recuperar recursos relacionados para una propiedad {#related}
+## Recuperación de recursos relacionados para una propiedad {#related}
 
 Las siguientes llamadas muestran cómo recuperar los recursos relacionados para una propiedad. Cuando [busca una propiedad](#lookup), estas relaciones se enumeran en la propiedad `relationships`.
 
-Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de reactor.
+Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de Reactor.
 
-### Enumerar las llamadas de retorno relacionadas para una propiedad {#callbacks}
+### Enumeración de las llamadas de retorno relacionadas para una propiedad {#callbacks}
 
-Puede enumerar las [llamadas de retorno](./callbacks.md) registradas en una propiedad anexando `/callbacks` a la ruta de una solicitud de consulta.
+Puede enumerar las [llamadas de retorno](./callbacks.md) registradas en una propiedad añadiendo `/callbacks` a la ruta de una solicitud de consulta.
 
 **Formato de API**
 
@@ -792,7 +792,7 @@ Una respuesta correcta devuelve una lista de llamadas de retorno que son propied
 }
 ```
 
-### Lista de los elementos de datos relacionados para una propiedad {#data-elements}
+### Enumeración de los elementos de datos relacionados para una propiedad {#data-elements}
 
 Puede enumerar los [elementos de datos](./data-elements.md) que son propiedad de una propiedad adjuntando `/data_elements` a la ruta de una solicitud de consulta.
 
@@ -933,7 +933,7 @@ Una respuesta correcta devuelve una lista de elementos de datos que son propieda
 }
 ```
 
-### Enumerar los entornos relacionados para una propiedad {#environments}
+### Enumeración de los entornos relacionados para una propiedad {#environments}
 
 Puede enumerar los [entornos](./environments.md) que son propiedad de una propiedad adjuntando `/environments` a la ruta de una solicitud de consulta.
 
@@ -1053,7 +1053,7 @@ Una respuesta correcta devuelve una lista de entornos que son propiedad de la pr
 }
 ```
 
-### Enumerar las extensiones relacionadas de una propiedad {#extensions}
+### Enumeración de las extensiones relacionadas para una propiedad {#extensions}
 
 Puede enumerar las [extensiones](./extensions.md) que son propiedad de una propiedad adjuntando `/extensions` a la ruta de una solicitud de consulta.
 
@@ -1184,7 +1184,7 @@ Una respuesta correcta devuelve una lista de extensiones que son propiedad de la
 }
 ```
 
-### Enumerar los hosts relacionados para una propiedad {#hosts}
+### Enumeración de los hosts relacionados para una propiedad {#hosts}
 
 Puede enumerar los [hosts](./hosts.md) que utiliza una propiedad añadiendo `/hosts` a la ruta de una solicitud de consulta.
 
@@ -1262,7 +1262,7 @@ Una respuesta correcta devuelve una lista de hosts que utiliza una propiedad esp
 }
 ```
 
-### Enumerar las reglas relacionadas para una propiedad {#rules}
+### Enumeración de las reglas relacionadas para una propiedad {#rules}
 
 Puede enumerar las [reglas](./rules.md) que utiliza una propiedad añadiendo `/rules` a la ruta de una solicitud de consulta.
 
@@ -1375,9 +1375,9 @@ Una respuesta correcta devuelve una lista de reglas que usa una propiedad especi
 }
 ```
 
-### Buscar una propiedad en la empresa relacionada {#company}
+### Búsqueda de la compañía relacionada de una propiedad {#company}
 
-Puede consultar la empresa propietaria de una propiedad adjuntando `/company` a la ruta de una solicitud de consulta.
+Puede consultar la compañía propietaria de una propiedad adjuntando `/company` a la ruta de una solicitud de consulta.
 
 **Formato de API**
 
@@ -1405,7 +1405,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la empresa de la propiedad especificada.
+Una respuesta correcta devuelve los detalles de la compañía de la propiedad especificada.
 
 ```json
 {
