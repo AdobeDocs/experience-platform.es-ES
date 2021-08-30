@@ -5,15 +5,14 @@ title: Guía de API del servicio de identidad
 topic-legacy: API guide
 description: La API del servicio de identidad permite a los desarrolladores administrar la identificación de clientes entre dispositivos, canales cruzados y casi en tiempo real mediante gráficos de identidad en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 0%
+source-wordcount: '767'
+ht-degree: 3%
 
 ---
 
-# [!DNL Identity Service] Guía de API
+# Guía de la API de [!DNL Identity Service]
 
 Adobe Experience Platform [!DNL Identity Service] administra la identificación entre dispositivos, entre canales y casi en tiempo real de sus clientes en lo que se conoce como gráfico de identidad dentro de Adobe Experience Platform.
 
@@ -80,7 +79,7 @@ Cuando se mantiene una identidad, [!DNL Identity Service] genera y asigna un ID 
 
 Para limitar la carga útil en las respuestas, las API adaptan sus respuestas al tipo de construcción de identidad utilizada. Es decir, si pasa XID, las respuestas tendrán XID, si pasa identidades compuestas, la respuesta seguirá la estructura utilizada en la solicitud.
 
-Los ejemplos de este documento no abarcan toda la funcionalidad de la API [!DNL Identity Service]. Para obtener la API completa, consulte la [Referencia de API de Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
+Los ejemplos de este documento no abarcan toda la funcionalidad de la API [!DNL Identity Service]. Para obtener la API completa, consulte la [Referencia de API de Swagger](https://www.adobe.io/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >

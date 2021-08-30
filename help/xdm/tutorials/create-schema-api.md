@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial utiliza la API del Registro de esquemas para guiarle por los pasos necesarios para componer un esquema con una clase estándar.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 1%
+source-wordcount: '2422'
+ht-degree: 2%
 
 ---
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Puede enumerar los valores &quot;xdm:namespace&quot; disponibles o crear otros nuevos, utilizando [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). El valor de &quot;xdm:property&quot; puede ser &quot;xdm:code&quot; o &quot;xdm:id&quot;, en función del &quot;xdm:namespace&quot; utilizado.
+>Puede enumerar los valores &quot;xdm:namespace&quot; disponibles o crear otros nuevos, utilizando [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). El valor de &quot;xdm:property&quot; puede ser &quot;xdm:code&quot; o &quot;xdm:id&quot;, en función del &quot;xdm:namespace&quot; utilizado.
 
 **Respuesta**
 

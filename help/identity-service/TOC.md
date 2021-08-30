@@ -3,12 +3,11 @@ audience: user
 user-guide-title: Servicio de ID de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de identidad de Experience Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
-feature: Identidades
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Identities
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 30%
+source-wordcount: '92'
+ht-degree: 32%
 
 ---
 
@@ -30,5 +29,5 @@ ht-degree: 30%
    - [Visor de gráficos de identidad](ui/identity-graph-viewer.md)
 - [Información general de ECID](ecid.md)
 - [Guía de resolución de problemas](troubleshooting-guide.md)
-- [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
+- [Referencia de API](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
