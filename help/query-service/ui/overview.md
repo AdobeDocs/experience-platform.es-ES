@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 30c3ca4aa3e8f42140566c8fdf9fbc855ec72e1b
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '614'
 ht-degree: 3%
 
 ---
@@ -57,7 +57,7 @@ La pestaña **[!UICONTROL Log]** proporciona una lista de consultas que se han e
 
 ## Credenciales
 
-La pestaña **[!UICONTROL Credentials]** muestra sus [!DNL Postgres] credenciales. Seleccione el icono **[!UICONTROL Copy]** situado junto a cualquier campo para almacenar su contenido en el búfer del teclado. Para obtener más información sobre cómo utilizar estas credenciales para conectarse con clientes externos, lea la [guía de conexión con clientes](../clients/overview.md).
+La pestaña **[!UICONTROL Credentials]** muestra las credenciales que caducan y las que no caducan. Para obtener más información sobre cómo utilizar estas credenciales para conectarse con clientes externos, lea la [guía de credenciales](../clients/overview.md).
 
 ![Imagen](../images/ui/overview/credentials.png)
 

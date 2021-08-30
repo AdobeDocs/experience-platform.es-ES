@@ -5,10 +5,9 @@ title: Conexión de PSQL al servicio de consulta
 topic-legacy: connect
 description: PSQL es una interfaz de línea de comandos que viene cuando instala PostgreSQL en su equipo. Puede instalarlo siguiendo estas instrucciones.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '275'
 ht-degree: 1%
 
 ---
@@ -21,7 +20,7 @@ PSQL es una interfaz de línea de comandos que se instala al instalar [!DNL Post
 >
 > En esta guía se da por hecho que ya tiene acceso a [!DNL PSQL] y está familiarizado con su uso. Puede encontrar más información sobre [!DNL PSQL] en la [documentación oficial [!DNL PSQL]](https://www.postgresql.org/docs/current/app-psql.html.
 
-Después de instalar PSQL en el equipo, está listo para conectar PSQL con el servicio de consulta. Vuelva a la [!DNL Platform] interfaz de usuario y, a continuación, seleccione **[!UICONTROL Queries]**, seguido de **[!UICONTROL Credentials]**.
+Después de instalar PSQL en el equipo, está listo para conectar PSQL con el servicio de consulta. Vuelva a la interfaz de usuario [!DNL Platform] y seleccione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciales]**.
 
 ![Imagen](../images/clients/psql/connect-bi.png)
 
@@ -29,7 +28,7 @@ Seleccione el icono para copiar la sección etiquetada **[!UICONTROL PSQL Comman
 
 >[!IMPORTANT]
 >
->Si está en un equipo, utilice un editor de texto para eliminar los saltos de línea en la cadena de comandos y, a continuación, copie la cadena. Además, si utiliza la versión 12.0 o la buena, deberá agregar `PGGSSENCMODE=disable` a la cadena de conexión.
+>Si está en un equipo, utilice un editor de texto para eliminar los saltos de línea en la cadena de comandos y, a continuación, copie la cadena. Si utiliza la versión 12.0 o buena, deberá agregar `PGGSSENCMODE=disable` a la cadena de conexión. Además, si utiliza credenciales que no caducan, asegúrese de reemplazar el campo de contraseña por la contraseña de credencial que no caduque. Para obtener más información sobre las credenciales que no caducan, lea la [guía de credenciales](../ui/credentials.md).
 
 Debería ver un resultado como este:
 
