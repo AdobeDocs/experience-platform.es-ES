@@ -5,15 +5,14 @@ title: Guía de API del Registro de Esquemas
 description: La API del Registro de esquemas permite a los desarrolladores administrar mediante programación todos los esquemas y recursos relacionados del Modelo de datos de experiencia (XDM) dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-# [!DNL Schema Registry] Guía de API
+# Guía de la API de [!DNL Schema Registry]
 
 El [!DNL Schema Registry] se utiliza para acceder a la biblioteca de esquemas en Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la cual se puede acceder a todos los recursos de biblioteca disponibles.
 
@@ -79,4 +78,4 @@ Consulte la [guía de extremo del registro de auditoría](./audit-log.md) para o
 
 ## Pasos siguientes
 
-Para empezar a realizar llamadas mediante la API del Registro de esquemas, lea la [guía de introducción](./getting-started.md) y, a continuación, seleccione una de las guías de puntos finales para aprender a utilizar puntos finales específicos.
+Para empezar a realizar llamadas mediante la API de Registro de esquemas, lea la [guía de introducción](./getting-started.md) y, a continuación, seleccione una de las guías de extremos para aprender a utilizar extremos específicos.

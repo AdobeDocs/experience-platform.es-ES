@@ -1,10 +1,10 @@
 ---
 title: Información general sobre la extensión Adobe Analytics
-description: Obtenga información sobre la extensión de etiqueta Adobe Analytics en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información acerca de la extensión de etiqueta de Adobe Analytics en Adobe Experience Platform.
+source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -88,7 +88,7 @@ Permite insertar código principal de [AppMeasurement.js](https://experienceleag
 
 >[!NOTE]
 >
->El validador utilizado en el editor de código de etiquetas está diseñado para identificar los problemas con el código escrito por el desarrollador. El código que ha pasado por un proceso de reducción (como el código AppMeasurement.js descargado del Administrador de códigos) puede recibir falsas advertencias sobre problemas por el validador de etiquetas, que generalmente se pueden ignorar.
+>El validador utilizado en el editor de código de etiquetas se ha diseñado para identificar los problemas con el código escrito por el desarrollador. El código que ha pasado por un proceso de minificación (como el código AppMeasurement.js descargado del Administrador de códigos) pueden recibir falsas advertencias sobre problemas por el validador de etiquetas, que generalmente se pueden ignorar.
 
 #### Configurar los siguientes grupos de informes en el rastreador
 
@@ -110,7 +110,7 @@ Seleccione una opción en la sección General de la página de configuración. L
 
 Habilita o deshabilita el rastreo en base a las cookies de privacidad de la UE.
 
-Al marcar la casilla de verificación Cumplimiento de la UE, aparece el campo [!UICONTROL Rastrear nombre de la cookie]. La cookie de seguimiento (Tracking Cookie) sobrescribe el nombre de la cookie de seguimiento predeterminada. Puede personalizar el nombre que utilizan las etiquetas para rastrear el estado de exclusión para recibir otras cookies.
+Al marcar la casilla de verificación Cumplimiento de la UE, aparece el campo [!UICONTROL Rastrear nombre de la cookie]. La cookie de seguimiento (Tracking Cookie) sobrescribe el nombre de la cookie de seguimiento predeterminada. Puede personalizar el nombre que utilizan las etiquetas para rastrear el estado de exclusión y recibir otras cookies.
 
 Cuando se carga una página, el sistema comprueba si hay una cookie denominada sat\_track configurada (o el nombre de cookie personalizado especificado en la página Editar propiedad). Consideremos la información siguiente:
 
@@ -270,7 +270,7 @@ Aparecen las siguientes opciones:
 
 Adobe Audience Manager asigna el subdominio Audience Manager. A veces se denomina “Nombre de socio” o “Subdominio de socio”. Póngase en contacto con su asesor de Adobe o con el Servicio de atención al cliente si no conoce su Nombre de socio.
 
-Puede configurar opciones avanzadas seleccionando **Mostrar configuración avanzada** e introduciendo sus preferencias.
+Puede establecer la configuración avanzada seleccionando **Mostrar configuración avanzada** e introduciendo sus preferencias.
 
 ![](../../../images/an-ext-aam-adv.png)
 
@@ -367,7 +367,7 @@ Utilice el editor para indicar el código personalizado de la página.
 
 Seleccione si desea incrementar una vista de página.
 
-#### No incremente una vista de página: s.t()
+#### No incremente una vista de página: s.tl()
 
 Seleccione si no desea incrementar una vista de página.
 
