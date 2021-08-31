@@ -3,9 +3,9 @@ keywords: Publicidades de Google;publicidades de Google;adwords de Google;Google
 title: Conexión de Google Ads
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por clic en publicidad en búsquedas basadas en texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: f04ea9aed586c8582286de82bfeee3f6f04cc360
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ Tenga en cuenta los siguientes detalles que son específicos de destinos [!DNL G
 
 **Exportación de segmentos** : está exportando todos los miembros de un segmento (audiencia) al destino de Google.
 
-## Requisitos previos
+## Requisitos previos {#prerequisites}
 
 ### Cuenta existente [!DNL Google Ads]
 
@@ -95,7 +95,7 @@ Al configurar este destino, puede recibir el siguiente error:
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-Este error se produce cuando los clientes intentan configurar el destino sin una cuenta [!DNL Google Ads] existente.
+Este error se produce cuando las cuentas de cliente no cumplen los [requisitos previos](#prerequisites) o cuando los clientes intentan configurar el destino sin una cuenta [!DNL Google Ads] existente.
 
 [!DNL Google] ha desaprobado nuevas integraciones de  [!DNL Google Ads] cookies con proveedores de terceros. Para realizar los pasos [allow-list](#allow-listing), debe tener una integración existente con [!DNL Google Ads].
 
