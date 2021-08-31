@@ -6,10 +6,10 @@ description: Este documento cubre la creación de destinos de marketing por corr
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1705'
-ht-degree: 1%
+source-wordcount: '1701'
+ht-degree: 2%
 
 ---
 
@@ -66,7 +66,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Documentación de Swagger
 
-Puede encontrar la documentación de referencia adjunta para todas las llamadas a la API en este tutorial en Swagger. Consulte la [documentación de la API del servicio de flujo en Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
+Puede encontrar la documentación de referencia adjunta para todas las llamadas a la API en este tutorial en Swagger. Consulte la [documentación de la API del servicio de flujo en Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
 
 ## Obtener la lista de destinos disponibles {#get-the-list-of-available-destinations}
 

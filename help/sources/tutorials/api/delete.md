@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo eliminar una cuenta mediante la API de servicio de flujo.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '589'
 ht-degree: 2%
 
 ---
@@ -20,7 +19,7 @@ Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial trata los pasos para eliminar con el [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial trata los pasos para eliminar con la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 

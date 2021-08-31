@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para monitorizar los datos de ejecución del flujo para obtener información completa, errores y métricas mediante la API del servicio de flujo.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '629'
 ht-degree: 1%
 
 ---
@@ -20,7 +19,7 @@ Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial trata los pasos para monitorizar los datos de ejecución del flujo para la integridad, los errores y las métricas que utilizan [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial trata los pasos para monitorizar los datos de ejecución del flujo para la integridad, los errores y las métricas que utilizan la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 

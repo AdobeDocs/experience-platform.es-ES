@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar un sistema de archivos distribuido de Hadoop Apache a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 1%
+source-wordcount: '461'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial le guía por los pasos para crear una conexión base para [!DNL Apache Hadoop Distributed File System] (en adelante denominada &quot;[!DNL HDFS]&quot;) mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial le guía por los pasos para crear una conexión base para [!DNL Apache Hadoop Distributed File System] (en adelante denominada &quot;[!DNL HDFS]&quot;) mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 

@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una base de datos e introducirlos en Platform mediante conectores de origen y API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1619'
 ht-degree: 2%
 
 ---
 
 # Recopilación de datos de una base de datos mediante conectores de origen y API
 
-Este tutorial trata los pasos para recuperar datos de una base de datos de terceros e ingerirlos en Platform a través de conectores de origen y la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial trata los pasos para recuperar datos de una base de datos de terceros e ingerirlos en Platform a través de conectores de origen y la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 
@@ -30,7 +30,7 @@ Este tutorial también requiere que tenga una comprensión práctica de los sigu
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): La API de ingesta de lotes permite introducir datos en el Experience Platform como archivos por lotes.
 * [Simuladores para pruebas](../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a una base de datos de terceros mediante la API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a una base de datos de terceros mediante la API [!DNL Flow Service].
 
 ### Leer llamadas de API de ejemplo
 
@@ -431,7 +431,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ## Recuperar especificaciones de flujo de datos {#specs}
 
-Un flujo de datos es responsable de recopilar datos de las fuentes y traerlos a Platform. Para crear un flujo de datos, primero debe obtener las especificaciones del flujo de datos realizando una solicitud de GET a la API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Las especificaciones de flujo de datos son responsables de recopilar datos de una base de datos externa o sistema NoSQL.
+Un flujo de datos es responsable de recopilar datos de las fuentes y traerlos a Platform. Para crear un flujo de datos, primero debe obtener las especificaciones del flujo de datos realizando una solicitud de GET a la API [!DNL Flow Service]. Las especificaciones de flujo de datos son responsables de recopilar datos de una base de datos externa o sistema NoSQL.
 
 **Formato de API**
 

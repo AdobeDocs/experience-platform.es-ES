@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de flujo continuo y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1099'
 ht-degree: 3%
 
 ---
 
 # Crear un flujo de datos de flujo continuo para los datos sin procesar mediante la API [!DNL Flow Service]
 
-Este tutorial trata los pasos para recuperar datos sin procesar de un conector de origen de flujo continuo y llevarlos al Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial trata los pasos para recuperar datos sin procesar de un conector de origen de flujo continuo y llevarlos al Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 

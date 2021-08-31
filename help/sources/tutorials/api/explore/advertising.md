@@ -5,10 +5,10 @@ title: Explorar un sistema publicitario mediante la API de servicio de flujo
 topic-legacy: overview
 description: El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas. Este tutorial utiliza la API de servicio de flujo para explorar los sistemas publicitarios.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: 8aa8dfcc4f8a36d0898a9cc079bd98b89e3589a1
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 2%
+source-wordcount: '502'
+ht-degree: 3%
 
 ---
 
@@ -16,12 +16,11 @@ ht-degree: 2%
 
 Con la creación de una conexión de base, ahora puede utilizar el ID de conexión de base único para desplazarse por la estructura de datos y el contenido de la fuente y explorarlos. Esto le permite identificar los elementos específicos, así como sus respectivos tipos de datos y formatos, antes de crear un flujo de datos y llevarlos a Adobe Experience Platform.
 
-Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). para explorar los sistemas publicitarios.
+Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para explorar los sistemas publicitarios.
 
 ## Primeros pasos
 
 >[!IMPORTANT]
-
 Este tutorial requiere que tenga el ID de conexión base único para la fuente de publicidad. Si no tiene este ID, consulte el tutorial sobre la [conexión de una fuente de publicidad al tutorial de Platform](../../api/create/advertising/ads.md).
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:

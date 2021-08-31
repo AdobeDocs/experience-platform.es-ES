@@ -5,17 +5,16 @@ title: Explorar un sistema de almacenamiento en voz alta mediante la API de serv
 topic-legacy: overview
 description: Este tutorial utiliza la API de servicio de flujo para explorar un sistema de almacenamiento en la nube de terceros.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 1%
+source-wordcount: '812'
+ht-degree: 2%
 
 ---
 
 # Explorar un sistema de almacenamiento en la nube mediante la API [!DNL Flow Service]
 
-Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) para explorar un sistema de almacenamiento en la nube de terceros.
+Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para explorar un sistema de almacenamiento en la nube de terceros.
 
 ## Primeros pasos
 
@@ -187,7 +186,7 @@ Una respuesta correcta devuelve la estructura del archivo consultado, incluidos 
 
 ## Uso de parámetros de consulta {#query}
 
-La [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) admite el uso de parámetros de consulta para previsualizar e inspeccionar diferentes tipos de archivos.
+La [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) admite el uso de parámetros de consulta para previsualizar e inspeccionar diferentes tipos de archivos.
 
 | Parámetro | Descripción |
 | --------- | ----------- |

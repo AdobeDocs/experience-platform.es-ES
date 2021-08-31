@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un sistema de automatización de marketing y llevarlos a Adobe Experience Platform mediante conectores de origen y API.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1564'
 ht-degree: 2%
 
 ---
 
 # Recopilación de datos de automatización de marketing mediante conectores de origen y API
 
-Este tutorial trata los pasos para recuperar datos de un sistema de automatización de marketing de terceros e ingerirlos en Platform a través de conectores de origen y la API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial cubre los pasos para recuperar datos de un sistema de automatización de marketing de terceros e ingerirlos en Platform a través de conectores de origen y la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 

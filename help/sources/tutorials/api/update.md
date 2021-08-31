@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para actualizar los detalles y las credenciales de una cuenta mediante la API de servicio de flujo.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '683'
 ht-degree: 2%
 
 ---
@@ -18,7 +17,7 @@ ht-degree: 2%
 
 En algunas circunstancias, puede ser necesario actualizar los detalles de una conexión de origen existente. [!DNL Flow Service] permite agregar, editar y eliminar detalles de un lote o conexión de flujo continuo existente, como su nombre, descripción y credenciales.
 
-Este tutorial trata los pasos para actualizar los detalles y las credenciales de una conexión mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial trata los pasos para actualizar los detalles y las credenciales de una conexión mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 
