@@ -5,10 +5,9 @@ title: Entrada y salida en Customer AI
 topic-legacy: Getting started
 description: Obtenga más información sobre los eventos, entradas y salidas necesarios que utiliza Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: c534b66d7617023df8dbac57115036146c2cab01
 workflow-type: tm+mt
-source-wordcount: '2878'
+source-wordcount: '2971'
 ht-degree: 1%
 
 ---
@@ -65,29 +64,35 @@ La Customer AI se basa en diferentes tipos de eventos para crear funciones de mo
 
 No es necesario tener datos para cada uno de los eventos estándar enumerados a continuación, pero ciertos eventos son necesarios para determinados escenarios. Si tiene alguno de los datos de eventos estándar disponibles, se recomienda incluirlos en el esquema. Por ejemplo, si desea crear una aplicación de Customer AI para predecir eventos de compra, sería útil tener datos de los tipos de datos `Commerce` y `Web page details`.
 
-Para ver un grupo de campos en la interfaz de usuario de Platform, seleccione la pestaña **[!UICONTROL Schemas]** en el carril izquierdo seguido de la pestaña **[!UICONTROL Field groups]** .
+Para ver un grupo de campos en la interfaz de usuario de Platform, seleccione la pestaña **[!UICONTROL Esquemas]** en el carril izquierdo seguido de la pestaña **[!UICONTROL Grupos de campos]**.
 
 | Grupo de campos | Tipo de evento | Ruta de campo XDM |
 | --- | --- | --- |
-| [!UICONTROL Commerce Details] | pedido | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
+| [!UICONTROL Detalles del comercio] | pedido | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
 |  | cierres de compra | <li> commerce.checkouts.value </li> <li> productListItems.SKU </li> |
 |  | compras | <li> commerce.purchases.value </li> <li> productListItems.SKU </li> |
 |  | productListRemovals | <li> commerce.productListRemovals.value </li> <li> productListItems.SKU </li> |
 |  | productListOpens | <li> commerce.productListOpens.value </li> <li> productListItems.SKU </li> |
 |  | productViews | <li> commerce.productViews.value </li> <li> productListItems.SKU </li> |
-| [!UICONTROL Web Details] | webVisit | web.webPageDetails.name |
+| [!UICONTROL Detalles web] | webVisit | web.webPageDetails.name |
 |  | webInteraction | web.webInteraction.linkClicks.value |
-| [!UICONTROL Application Details] | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
+| [!UICONTROL Detalles de la aplicación] | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
 |  | applicationCrashes | <li> application.crashes.value </li> <li> application.name </li> |
 |  | applicationFeatureUsages | <li> application.featureUsages.value </li> <li> application.name </li> |
 |  | applicationFirstLaunches | <li> application.firstLaunches.value </li> <li> application.name </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> application.name </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> application.name </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
-| [!UICONTROL Search Details] | búsqueda | search.keywords |
+| [!UICONTROL Detalles de búsqueda] | búsqueda | search.keywords |
 
-Además, Customer AI puede utilizar los datos de suscripción para crear modelos de mejor reproducción. Se necesitan datos de suscripción para cada perfil que utiliza el formato de tipo de datos [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) . La mayoría de los campos son opcionales, sin embargo, para un modelo de pérdida óptimo es muy recomendable proporcionar datos para tantos campos como sea posible, como `startDate`, `endDate` y cualquier otro detalle relevante.
+Además, Customer AI puede utilizar los datos de suscripción para crear modelos de mejor reproducción. Se necesitan datos de suscripción para cada perfil con el formato de tipo de datos [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) . La mayoría de los campos son opcionales, sin embargo, para un modelo de pérdida óptimo es muy recomendable proporcionar datos para tantos campos como sea posible, como `startDate`, `endDate` y cualquier otro detalle relevante.
+
+### Adición de grupos de campos personalizados
+
+Si tiene información adicional, desea incluir además de los [campos de evento estándar](#standard-events) utilizados por Customer AI. Se proporciona una opción de eventos personalizados durante la [configuración de instancia](./user-guide/configure.md#custom-events).
+
+Si el conjunto de datos seleccionado incluye eventos personalizados, como una reserva de hotel o restaurante definida en el esquema, puede agregarlos a la instancia. La Customer AI utiliza estos eventos personalizados adicionales para mejorar la calidad del modelo y ofrecer resultados más precisos.
 
 ### Datos históricos {#data-requirements}
 
