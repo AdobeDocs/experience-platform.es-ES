@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
-feature: Ingesta de datos, fuentes
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+feature: Data Ingestion, Sources
+source-git-commit: ebe620b078096349c514420746902ce406a910d1
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 13%
+source-wordcount: '643'
+ht-degree: 14%
 
 ---
 
@@ -248,4 +248,5 @@ ht-degree: 13%
 - [Notificaciones de ejecución de flujo](notifications.md)
 - [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md)
 - [Preguntas frecuentes](./troubleshooting.md)
+- [Referencia de API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
