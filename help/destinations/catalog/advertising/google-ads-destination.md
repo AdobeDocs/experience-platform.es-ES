@@ -3,10 +3,10 @@ keywords: Publicidades de Google;publicidades de Google;adwords de Google;Google
 title: Conexión de Google Ads
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por clic en publicidad en búsquedas basadas en texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 0%
+source-wordcount: '698'
+ht-degree: 2%
 
 ---
 
@@ -53,7 +53,7 @@ Tenga en cuenta los siguientes detalles que son específicos de destinos [!DNL G
 >
 > [!DNL Google] ha desaprobado nuevas integraciones de  [!DNL Google Ads] cookies con proveedores de terceros. Para realizar los pasos de lista de permitidos en la siguiente sección, debe tener una integración existente con [!DNL Google Ads]. Como resultado, el método recomendado para utilizar [!DNL Google Ads] es configurar una integración [!DNL Google Customer Match]. Para obtener más información sobre la creación de una integración [!DNL Google Customer Match], lea el tutorial sobre la creación de una conexión [[!DNL Google Customer Match]](./google-customer-match.md).
 
-### Lista de permitidos
+### Permitir inclusión en la lista {#allow-listing}
 
 >[!NOTE]
 >
@@ -83,7 +83,20 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 
 Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
-
 ## Datos exportados
 
 Para verificar si los datos se han exportado correctamente al destino [!DNL Google Ads] , compruebe su cuenta [!DNL Google Ads]. Si la activación se ha realizado correctamente, las audiencias se rellenan en la cuenta.
+
+## Resolución de problemas {#troubleshooting}
+
+### 400 Mensaje de error de solicitud incorrecta {#bad-request}
+
+Al configurar este destino, puede recibir el siguiente error:
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+Este error se produce cuando los clientes intentan configurar el destino sin una cuenta [!DNL Google Ads] existente.
+
+[!DNL Google] ha desaprobado nuevas integraciones de  [!DNL Google Ads] cookies con proveedores de terceros. Para realizar los pasos [allow-list](#allow-listing), debe tener una integración existente con [!DNL Google Ads].
+
+El método recomendado para utilizar [!DNL Google Ads] es configurar una integración [[!DNL Google Customer Match]](google-customer-match.md).

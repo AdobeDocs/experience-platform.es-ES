@@ -3,7 +3,7 @@ keywords: Conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión facebook
 description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 1%
@@ -177,7 +177,7 @@ Para [!DNL Facebook], una activación correcta significa que se crearía una aud
 
 ### 400 Mensaje de error de solicitud incorrecta {#bad-request}
 
-Al activar segmentos en [!DNL Facebook], puede recibir el siguiente error:
+Al configurar este destino, puede recibir el siguiente error:
 
 `{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 
