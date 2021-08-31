@@ -5,7 +5,7 @@ title: Procesamiento de consentimiento en Adobe Experience Platform
 topic-legacy: getting started
 description: Aprenda a procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 1c398cdac45141b4886d984db32fbac7ca60265c
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -88,7 +88,7 @@ En las subsecciones siguientes se proporcionan detalles sobre cada uno de estos 
 
 ### Configuración del SDK web del Experience Platform para procesar los datos de consentimiento {#web-sdk}
 
-Una vez que haya configurado su CMP para que detecte eventos de cambio de consentimiento en su sitio web, puede integrar el SDK web del Experience Platform para que reciba la configuración de consentimiento actualizada y la envíe a Platform en cada carga de página y cada vez que se produzcan eventos de cambio de consentimiento. Consulte la guía sobre [configuración del SDK web para procesar los datos de consentimiento del cliente](./sdk.md) para obtener más información.
+Una vez que haya configurado su CMP para que detecte eventos de cambio de consentimiento en su sitio web, puede integrar el SDK web del Experience Platform para que reciba la configuración de consentimiento actualizada y la envíe a Platform en cada carga de página y cada vez que se produzcan eventos de cambio de consentimiento. Consulte la guía sobre [configuración del SDK web para procesar los datos de consentimiento del cliente](../sdk.md) para obtener más información.
 
 ### Configuración del SDK de Experience Platform Mobile para procesar los datos de consentimiento {#mobile-sdk}
 
