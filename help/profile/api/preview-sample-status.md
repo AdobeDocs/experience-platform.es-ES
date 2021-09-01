@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;vista previa;ejemplo
 title: Vista previa del punto final de la API de estado de muestra (vista previa del perfil)
-description: Mediante el extremo de estado de muestra de vista previa, que forma parte de la API de perfil de cliente en tiempo real, puede obtener una vista previa de la muestra de éxito más reciente de los datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar un informe de superposición de conjuntos de datos.
+description: Mediante el extremo de estado de muestra de vista previa, que forma parte de la API de perfil de cliente en tiempo real, puede obtener una vista previa del último ejemplo correcto de datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar informes que muestren la superposición de conjuntos de datos, la superposición de identidades y los perfiles desconocidos.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 0c7dc02ed0bacf7e0405b836f566149a872fc31a
+source-git-commit: 8b1ba51f1f59b88a85d103cc40c18ac15d8648f6
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2882'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Adobe Experience Platform le permite introducir datos de clientes de varias fuentes para crear un perfil unificado y robusto para cada uno de sus clientes. A medida que los datos se incorporan en Platform, se ejecuta un trabajo de muestra para actualizar el recuento de perfiles y otras métricas relacionadas con los datos del perfil del cliente en tiempo real.
 
-Los resultados de este trabajo de muestra se pueden ver mediante el extremo `/previewsamplestatus` , parte de la API de perfil del cliente en tiempo real. Este extremo también se puede usar para enumerar distribuciones de perfiles tanto por conjunto de datos como por área de nombres de identidad, así como para generar un informe de superposición de conjuntos de datos y un informe de superposición de identidad para ganar visibilidad en la composición del almacén de perfiles de su organización. Esta guía explica los pasos necesarios para ver estas métricas usando el extremo `/previewsamplestatus` de la API.
+Los resultados de este trabajo de muestra se pueden ver mediante el extremo `/previewsamplestatus` , parte de la API de perfil del cliente en tiempo real. Este extremo también se puede usar para enumerar distribuciones de perfiles tanto por conjunto de datos como por área de nombres de identidad, así como para generar múltiples informes con el fin de ganar visibilidad en la composición del Almacenamiento de perfiles de su organización. Esta guía explica los pasos necesarios para ver estas métricas usando el extremo `/previewsamplestatus` de la API.
 
 >[!NOTE]
 >
@@ -36,14 +36,14 @@ Para obtener más información sobre los perfiles y su función en el Experience
 
 ## Activación del trabajo de muestra
 
-Como los datos habilitados para el perfil del cliente en tiempo real se incorporan en [!DNL Platform], se almacenan en el almacén de datos del perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
+Como los datos habilitados para el perfil del cliente en tiempo real se incorporan en [!DNL Platform], se almacenan en el almacén de datos del perfil. Cuando la ingesta de registros en el Almacenamiento de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
 
 * Para **flujos de trabajo de datos de flujo continuo**, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si lo ha hecho, se activa automáticamente un trabajo de muestra para actualizar el recuento.
-* Para la **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se cumple el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del trabajo de muestra más reciente que se ha realizado correctamente, así como la distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
+* Para la **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el Almacenamiento de perfiles, si se cumple el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del trabajo de muestra más reciente que se ha realizado correctamente, así como la distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
 
 El recuento de perfiles y los perfiles por métricas de espacio de nombres también están disponibles en la sección [!UICONTROL Perfiles] de la interfaz de usuario del Experience Platform. Para obtener información sobre cómo acceder a los datos de perfil mediante la interfaz de usuario, visite la [[!DNL Profile] guía de la interfaz de usuario](../ui/user-guide.md).
 
-## Ver el último estado de muestra {#view-last-sample-status}
+## Ver el estado de la última muestra {#view-last-sample-status}
 
 Puede realizar una solicitud de GET al extremo `/previewsamplestatus` para ver los detalles del último trabajo de muestra exitoso que se ejecutó para su organización IMS. Esto incluye el número total de perfiles de la muestra, así como la métrica de recuento de perfiles o el número total de perfiles que su organización tiene en Experience Platform.
 
@@ -101,7 +101,7 @@ La respuesta incluye los detalles del último trabajo de muestra exitoso que se 
 | `numRowsToRead` | Número total de perfiles combinados en la muestra. |
 | `sampleJobRunning` | Un valor booleano que devuelve `true` cuando un trabajo de muestra está en curso. Proporciona transparencia a la latencia que se produce desde el momento en que se carga un archivo por lotes a cuando realmente se agrega al Almacenamiento de perfiles. |
 | `cosmosDocCount` | Recuento total de documentos en Cosmos. |
-| `totalFragmentCount` | Número total de fragmentos de perfil en el almacén de perfiles. |
+| `totalFragmentCount` | Número total de fragmentos de perfil en el Almacenamiento de perfiles. |
 | `lastSuccessfulBatchTimestamp` | Última marca de tiempo de ingesta por lotes correcta. |
 | `streamingDriven` | *Este campo ha quedado obsoleto y no contiene significado para la respuesta.* |
 | `totalRows` | Número total de perfiles combinados en Experience Platform, también conocidos como &quot;recuento de perfiles&quot;. |
@@ -206,7 +206,7 @@ La respuesta incluye una matriz `data`, que contiene una lista de objetos de con
 
 ## Enumerar la distribución de perfiles por área de nombres de identidad
 
-Puede realizar una solicitud de GET al extremo `/previewsamplestatus/report/namespace` para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles. Esto incluye tanto las identidades estándar proporcionadas por el Adobe como las identidades personalizadas definidas por su organización.
+Puede realizar una solicitud de GET al extremo `/previewsamplestatus/report/namespace` para ver el desglose por área de nombres de identidad en todos los perfiles combinados en el Almacenamiento de perfiles. Esto incluye tanto las identidades estándar proporcionadas por el Adobe como las identidades personalizadas definidas por su organización.
 
 Las áreas de nombres de identidad son un componente importante del servicio de identidad de Adobe Experience Platform que sirve como indicadores del contexto con el que se relacionan los datos del cliente. Para obtener más información, comience por leer la [descripción general del área de nombres de identidad](../../identity-service/namespaces.md).
 
@@ -303,7 +303,7 @@ La respuesta incluye una matriz `data`, con objetos individuales que contienen l
 
 ## Generar el informe de superposición de conjuntos de datos
 
-El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del almacén de perfiles de su organización al exponer los conjuntos de datos que contribuyen más a la audiencia a la que se puede dirigir (perfiles combinados). Además de proporcionar perspectivas sobre los datos, este informe puede ayudarle a realizar acciones para optimizar el uso de licencias, como configurar un TTL para determinados conjuntos de datos.
+El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del Almacenamiento de perfiles de su organización al exponer los conjuntos de datos que contribuyen más a la audiencia a la que se puede dirigir (perfiles combinados). Además de proporcionar perspectivas sobre los datos, este informe puede ayudarle a realizar acciones para optimizar el uso de licencias, como configurar un TTL para determinados conjuntos de datos.
 
 Puede generar el informe de superposición de conjuntos de datos realizando una solicitud de GET al extremo `/previewsamplestatus/report/dataset/overlap` .
 
@@ -363,22 +363,23 @@ Los resultados del informe se pueden interpretar desde los conjuntos de datos y 
 ```
 
 Este informe proporciona la siguiente información:
+
 * Hay 123 perfiles compuestos de datos procedentes de los siguientes conjuntos de datos: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Hay 454.412 perfiles compuestos de datos procedentes de estos dos conjuntos de datos: `5d92921872831c163452edc8` y `5eb2cdc6fa3f9a18a7592a98`.
 * Hay 107 perfiles que están compuestos solamente de datos del conjunto de datos `5eeda0032af7bb19162172a7`.
 * Hay un total de 454.642 perfiles en la organización.
 
-## Generar el informe de superposición de identidad
+## Generar el informe de superposición de área de nombres de identidad
 
-El informe de superposición de identidad proporciona visibilidad sobre la composición del almacén de perfiles de su organización al exponer las identidades que más contribuyen a la audiencia a la que se puede dirigir (perfiles combinados). Esto incluye tanto las identidades estándar proporcionadas por el Adobe como las identidades personalizadas definidas por su organización.
+El informe de superposición de área de nombres de identidad proporciona visibilidad sobre la composición del Almacenamiento de perfiles de su organización al exponer los espacios de nombres de identidad que contribuyen más a la audiencia a la que se puede dirigir (perfiles combinados). Esto incluye las áreas de nombres de identidad estándar proporcionadas por el Adobe, así como las áreas de nombres de identidad personalizadas definidas por la organización.
 
-Puede generar el informe de superposición de identidad realizando una solicitud de GET al extremo `/previewsamplestatus/report/identity/overlap` .
+Puede generar el informe de superposición de área de nombres de identidad realizando una solicitud de GET al extremo `/previewsamplestatus/report/namespace/overlap` .
 
 **Formato de API**
 
 ```http
-GET /previewsamplestatus/report/identity/overlap
-GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+GET /previewsamplestatus/report/namespace/overlap
+GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 ```
 
 | Parámetro | Descripción |
@@ -391,7 +392,7 @@ La siguiente solicitud utiliza el parámetro `date` para devolver el informe má
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -399,7 +400,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una solicitud correcta devuelve Estado HTTP 200 (OK) y el informe de superposición de identidad.
+Una solicitud correcta devuelve HTTP Status 200 (OK) y el informe de superposición de área de nombres de identidad.
 
 ```json
 {
@@ -446,7 +447,7 @@ Una solicitud correcta devuelve Estado HTTP 200 (OK) y el informe de superposici
 | Códigos de área de nombres | El `code` es un formulario corto para cada nombre de área de nombres de identidad. Se puede encontrar una asignación de cada `code` a su `name` utilizando la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md). El `code` también se denomina [!UICONTROL Símbolo de identidad] en la interfaz de usuario del Experience Platform. Para obtener más información, visite [identity namespace overview](../../identity-service/namespaces.md). |
 | `reportTimestamp` | Marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto corresponde a la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
 
-### Interpretación del informe de superposición de identidad
+### Interpretación del informe de superposición de área de nombres de identidad
 
 Los resultados del informe se pueden interpretar a partir de las identidades y recuentos de perfiles de la respuesta. El valor numérico de cada fila indica cuántos perfiles están compuestos por esa combinación exacta de áreas de nombres de identidad estándar y personalizadas.
 
@@ -459,11 +460,137 @@ Consideremos el siguiente extracto del objeto `data`:
 ```
 
 Este informe proporciona la siguiente información:
+
 * Existen 142 perfiles compuestos por `AAID`, `ECID` e `Email` identidades estándar, así como desde un espacio de nombres de identidad `crmid` personalizado.
 * Hay 24 perfiles compuestos por `AAID` y `ECID` áreas de nombres de identidad.
 * Hay 6.565 perfiles que incluyen solo una identidad `ECID`.
 
+## Generar el informe de perfiles desconocidos
+
+Puede obtener más visibilidad sobre la composición del Almacenamiento de perfiles de su organización a través del informe de perfiles desconocidos. Un &quot;perfil desconocido&quot; se refiere a cualquier perfil que no esté vinculado ni inactivo durante un período de tiempo determinado. Un perfil &quot;no vinculado&quot; es un perfil que contiene solo un fragmento de perfil, mientras que un perfil &quot;inactivo&quot; es cualquier perfil que no haya agregado nuevos eventos para el período de tiempo especificado. El informe perfiles desconocidos proporciona un desglose de perfiles durante un período de 7, 30, 60, 90 y 120 días.
+
+Puede generar el informe de perfiles desconocidos realizando una solicitud de GET al extremo `/previewsamplestatus/report/unknownProfiles` .
+
+**Formato de API**
+
+```http
+GET /previewsamplestatus/report/unknownProfiles
+```
+
+**Solicitud**
+
+La siguiente solicitud devuelve el informe de perfiles desconocidos.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Respuesta**
+
+Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de perfiles desconocidos.
+
+>[!NOTE]
+>
+>A los efectos de esta guía, el informe se ha truncado para incluir solo períodos de tiempo `"120days"` y &quot;`7days`&quot;. El informe completo de perfiles desconocidos proporciona un desglose de perfiles durante un período de 7, 30, 60, 90 y 120 días.
+
+```json
+{
+  "data": {
+      "totalNumberOfProfiles": 63606,
+      "totalNumberOfEvents": 130977,
+      "unknownProfiles": {
+          "120days": {
+              "countOfProfiles": 1644,
+              "eventsAssociated": 26824,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 18,
+                      "eventsAssociated": 95
+                  },
+                  "loyal": {
+                      "countOfProfiles": 26,
+                      "eventsAssociated": 71
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1600,
+                      "eventsAssociated": 26658
+                  }
+              }
+          },
+          "7days": {
+              "countOfProfiles": 1782,
+              "eventsAssociated": 29151,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 19,
+                      "eventsAssociated": 97
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1734,
+                      "eventsAssociated": 28591
+                  },
+                  "loyal": {
+                      "countOfProfiles": 29,
+                      "eventsAssociated": 463
+                  }
+              }
+          }
+      }
+  },
+  "reportTimestamp": "2025-08-25T22:14:55.186"
+}
+```
+
+| Propiedad | Descripción |
+|---|---|
+| `data` | El objeto `data` contiene la información devuelta para el informe de perfiles desconocidos. |
+| `totalNumberOfProfiles` | Recuento total de perfiles únicos en el Almacenamiento de perfiles. Esto equivale al recuento de audiencias a las que se puede dirigir. Incluye perfiles conocidos y desconocidos. |
+| `totalNumberOfEvents` | El número total de eventos de experiencias en el Almacenamiento de perfiles. |
+| `unknownProfiles` | Un objeto que contiene un desglose de perfiles desconocidos (no vinculados e inactivos) por periodo de tiempo. El informe perfiles desconocidos proporciona un desglose de perfiles para períodos de tiempo de 7, 30, 60, 90 y 120 días. |
+| `countOfProfiles` | Recuento de perfiles desconocidos para el periodo de tiempo o el recuento de perfiles desconocidos para el área de nombres. |
+| `eventsAssociated` | El número de eventos de Experience para el intervalo de tiempo o el número de eventos para el espacio de nombres. |
+| `nsDistribution` | Un objeto que contiene áreas de nombres de identidad individuales con la distribución de perfiles y eventos desconocidos para cada área de nombres. Nota: Si agrega el total `countOfProfiles` para cada área de nombres de identidad en el objeto `nsDistribution` es igual al `countOfProfiles` para el período de tiempo. Lo mismo ocurre con `eventsAssociated` por área de nombres y el total `eventsAssociated` por período de tiempo. |
+| `reportTimestamp` | Marca de tiempo del informe. |
+
+### Interpretación del informe de perfiles desconocidos
+
+Los resultados del informe pueden proporcionar información sobre cuántos perfiles inactivos e inactivos tiene la organización en su Almacenamiento de perfiles.
+
+Consideremos el siguiente extracto del objeto `data`:
+
+```json
+  "7days": {
+    "countOfProfiles": 1782,
+    "eventsAssociated": 29151,
+    "nsDistribution": {
+      "Email": {
+        "countOfProfiles": 19,
+        "eventsAssociated": 97
+      },
+      "ECID": {
+        "countOfProfiles": 1734,
+        "eventsAssociated": 28591
+      },
+      "loyal": {
+        "countOfProfiles": 29,
+        "eventsAssociated": 463
+      }
+    }
+  }
+```
+
+Este informe proporciona la siguiente información:
+
+* Hay 1782 perfiles que contienen solo un fragmento de perfil y no tienen eventos nuevos durante los últimos siete días.
+* Hay 29.151 ExperienceEvents asociadas con los 1.782 perfiles desconocidos.
+* Hay 1734 perfiles desconocidos que contienen un solo fragmento de perfil del área de nombres de identidad de ECID.
+* Hay 28.591 eventos asociados con los 1.734 perfiles desconocidos que contienen un solo fragmento de perfil del área de nombres de identidad de ECID.
+
 ## Pasos siguientes
 
-Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el Almacenamiento de perfiles y ejecutar informes de superposición múltiple, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre las definiciones de segmentos. Esta información ayuda a garantizar que está aislando la audiencia esperada en el segmento. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones de segmentos mediante la API de segmentación, visite la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
+Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el Almacenamiento de perfiles y ejecutar varios informes sobre los datos, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre las definiciones de segmentos. Esta información ayuda a garantizar que está aislando la audiencia esperada en el segmento. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones de segmentos mediante la API de segmentación, visite la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de API del perfil del cliente en tiempo real
 description: La API de perfil de cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de perfil, incluidos la visualización de perfiles, la creación y actualización de políticas de combinación, la exportación o la muestra de datos de perfil y la eliminación de datos de perfil que ya no son necesarios o que se añadieron por error. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Para obtener más información sobre las políticas de combinación y su funció
 
 ## Vista previa del estado de la muestra ([!DNL Profile] vista previa) {#profile-preview}
 
-Como los datos habilitados para Perfil se incorporan en Experience Platform, se almacenan en el almacén de datos de Perfil. A medida que aumenta o disminuye el número de registros en el almacén de perfiles, se ejecuta un trabajo de ejemplo que incluye información sobre cuántos fragmentos de perfil y perfiles combinados hay en el almacén de datos. Con la API de perfil puede obtener una vista previa de la muestra de éxito más reciente, así como la distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad. Para empezar a utilizar el extremo `/profilepreviewstatus` , consulte la [guía de extremo del estado de la muestra de vista previa](preview-sample-status.md).
+A medida que los datos se incorporan en Platform, se ejecuta un trabajo de muestra para actualizar el recuento de perfiles y otras métricas relacionadas con los datos del perfil del cliente en tiempo real. Los resultados de este trabajo de muestra se pueden ver mediante el extremo `/previewsamplestatus` , parte de la API de perfil del cliente en tiempo real. Este extremo también se puede usar para enumerar distribuciones de perfiles tanto por conjunto de datos como por área de nombres de identidad, así como para generar múltiples informes con el fin de ganar visibilidad en la composición del Almacenamiento de perfiles de su organización.  Para empezar a utilizar el extremo `/profilepreviewstatus` , consulte la [guía de extremo del estado de la muestra de vista previa](preview-sample-status.md).
 
 ## Trabajos del sistema de perfiles {#profile-system-jobs}
 
