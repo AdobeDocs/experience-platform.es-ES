@@ -3,9 +3,9 @@ keywords: Conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión facebook
 description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
@@ -62,6 +62,9 @@ Antes de enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cump
    >
    > Al configurar los permisos para Adobe Experience Cloud, debe habilitar el permiso **Administrar campañas**. El permiso es necesario para la integración [!DNL Adobe Experience Platform].
 * Lea y firme las [!DNL Facebook Custom Audiences] Condiciones de servicio. Para ello, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, donde `accountID` es su [!DNL Facebook Ad Account ID].
+   >[!IMPORTANT]
+   >
+   >Al firmar los [!DNL Facebook Custom Audiences] Términos del servicio, asegúrese de utilizar la misma cuenta de usuario que utilizó para autenticarse en la API de Facebook.
 
 ## Requisitos de coincidencia de ID {#id-matching-requirements}
 
