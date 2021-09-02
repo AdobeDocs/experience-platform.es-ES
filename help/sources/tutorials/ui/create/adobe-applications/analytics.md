@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: e28158bbd4e89e5fcf19f4dc89f266d737b34e65
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
 
 # Crear una conexión de origen de Adobe Analytics en la interfaz de usuario
 
-Este tutorial proporciona los pasos para crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir datos del grupo de informes [!DNL Analytics] en Adobe Experience Platform.
+Este tutorial proporciona los pasos para crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir datos del [!DNL Analytics] grupo de informes en Adobe Experience Platform.
 
 ## Primeros pasos
 
@@ -30,7 +30,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 Es importante comprender los siguientes términos clave utilizados en este documento:
 
 * **Atributo** estándar: Los atributos estándar son cualquier atributo predefinido por Adobe. Contienen el mismo significado para todos los clientes y están disponibles en los grupos de campos de esquema [!DNL Analytics] y de datos de origen [!DNL Analytics] .
-* **Atributo** personalizado: Los atributos personalizados son cualquier atributo de la jerarquía de dimensiones personalizada en  [!DNL Analytics]. También se encuentran entre los esquemas definidos por el Adobe, pero diferentes clientes pueden interpretarlos de forma diferente. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obtener más información sobre las eVars.
+* **Atributo** personalizado: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizadas de  [!DNL Analytics]. Los atributos personalizados se utilizan en una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden variar en su uso de Grupo de informes a Grupo de informes. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obtener más información sobre las eVars.
 * **Cualquier atributo de los grupos** de campos personalizados: Los atributos que se originan a partir de grupos de campos creados por clientes se definen como usuarios y no se consideran atributos estándar ni personalizados.
 * **Nombres** descriptivos: Los nombres descriptivos son etiquetas proporcionadas por el ser humano para variables personalizadas en una  [!DNL Analytics] implementación. Consulte la siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obtener más información sobre nombres descriptivos.
 
@@ -46,15 +46,15 @@ En la categoría **[!UICONTROL Aplicaciones de Adobe]**, seleccione **[!UICONTRO
 
 ### Seleccionar datos
 
-Aparece el paso **[!UICONTROL Analytics source add data]**. Seleccione **[!UICONTROL Grupo de informes]** para empezar a crear una conexión de origen para los datos del grupo de informes de Analytics y, a continuación, seleccione el grupo de informes que desee ingerir. Seleccione **[!UICONTROL Siguiente]** para continuar.
+Aparece el paso **[!UICONTROL Analytics source add data]**. Seleccione **[!UICONTROL Grupo de informes]** para empezar a crear una conexión de origen para los datos del grupo de informes de Analytics y, a continuación, seleccione el grupo de informes que desee ingerir. Los grupos de informes que no se pueden seleccionar ya se han incorporado, ya sea en este simulador para pruebas o en otro simulador para pruebas. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 >[!NOTE]
 >
->Se pueden realizar varias conexiones entrantes a un origen para introducir datos diferentes.
+>Se pueden realizar varias conexiones entrantes para incorporar varios grupos de informes, pero solo se puede utilizar un grupo de informes con la plataforma de datos del cliente en tiempo real a la vez.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Asignación
 
@@ -66,7 +66,7 @@ La página [!UICONTROL Mapping] proporciona una interfaz para asignar los campos
 
 >[!TIP]
 >
->En el menú de selección de esquema solo se muestran los esquemas que tienen el grupo de campos de plantilla [!DNL Analytics]. Se omiten otros esquemas. Si no hay esquemas adecuados disponibles para los datos del grupo de informes, debe crear un nuevo esquema. Para ver los pasos detallados sobre la creación de esquemas, consulte la guía sobre la [creación y edición de esquemas en la IU](../../../../../xdm/ui/resources/schemas.md).
+>En el menú de selección de esquema solo se muestran los esquemas que tienen el grupo de campos de plantilla [!DNL Analytics]. Se omiten otros esquemas. Si no hay esquemas adecuados disponibles para los datos del grupo de informes, debe crear un esquema nuevo. Para ver los pasos detallados sobre la creación de esquemas, consulte la guía sobre la [creación y edición de esquemas en la IU](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
@@ -74,9 +74,9 @@ La sección [!UICONTROL Map standard fields] muestra los paneles para [!UICONTRO
 
 | Asignación de campos estándar | Descripción |
 | --- | --- |
-| [!UICONTROL Asignaciones estándar aplicadas] | El panel [!UICONTROL Asignaciones estándar aplicadas] muestra el número total de atributos estándar asignados. Las asignaciones estándar hacen referencia a conjuntos de asignación entre atributos estándar en los datos de origen [!DNL Analytics] y atributos estándar en el grupo de campos [!DNL Analytics]. Están preasignados y no se pueden editar. |
-| [!UICONTROL Asignaciones estándar no coincidentes] | El panel [!UICONTROL Asignaciones estándar no coincidentes] hace referencia al número de atributos estándar asignados que contienen conflictos de nombres descriptivos. Estos conflictos aparecen cuando se vuelve a utilizar un esquema que ya tiene un conjunto completo de descriptores de campo. Puede continuar con el flujo de datos [!DNL Analytics] incluso con conflictos de nombres prácticos. |
-| [!UICONTROL Asignaciones personalizadas] | El panel [!UICONTROL Asignaciones personalizadas] muestra el número de atributos personalizados asignados, incluidas eVars, props y listas. Las asignaciones personalizadas hacen referencia a conjuntos de asignaciones entre atributos personalizados en los datos de origen [!DNL Analytics] y atributos personalizados en el grupo de campos [!DNL Analytics]. Los atributos personalizados se pueden asignar a otros atributos personalizados, así como a atributos estándar. |
+| [!UICONTROL Asignaciones estándar aplicadas] | El panel [!UICONTROL Asignaciones estándar aplicadas] muestra el número total de atributos asignados. Las asignaciones estándar hacen referencia a conjuntos de asignaciones entre todos los atributos de los datos de origen [!DNL Analytics] y los atributos correspondientes del grupo de campos [!DNL Analytics]. Están preasignados y no se pueden editar. |
+| [!UICONTROL Asignaciones estándar no coincidentes] | El panel [!UICONTROL Asignaciones estándar no coincidentes] hace referencia al número de atributos asignados que contienen conflictos de nombres descriptivos. Estos conflictos aparecen cuando se vuelve a utilizar un esquema que ya tiene un conjunto completo de descriptores de campo de un grupo de informes diferente. Puede continuar con el flujo de datos [!DNL Analytics] incluso con conflictos de nombres prácticos. |
+| [!UICONTROL Asignaciones personalizadas] | El panel [!UICONTROL Asignaciones personalizadas] muestra el número de atributos personalizados asignados, incluidas eVars, props y listas. Las asignaciones personalizadas hacen referencia a conjuntos de asignación entre atributos personalizados en los datos de origen [!DNL Analytics] y atributos en grupos de campos personalizados incluidos en el esquema seleccionado. |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
@@ -92,7 +92,7 @@ Platform detecta automáticamente los conjuntos de asignaciones para cualquier c
 
 ![asignación](../../../../images/tutorials/create/analytics/mapping.png)
 
-Si hay conflictos de nombres prácticos en los conjuntos de asignaciones, puede continuar con el flujo de datos [!DNL Analytics], reconociendo que los descriptores de campos serán los mismos. También puede optar por crear un nuevo esquema con un conjunto de descriptores en blanco.
+Si hay conflictos de nombres prácticos entre el grupo de informes de origen y el esquema seleccionado, puede continuar con el flujo de datos [!DNL Analytics], reconociendo que los descriptores de campo no se cambiarán. También puede optar por crear un nuevo esquema con un conjunto de descriptores en blanco.
 
 Seleccione **[!UICONTROL Siguiente]** para continuar.
 
@@ -147,7 +147,7 @@ Aparece el paso **[!UICONTROL Dataflow detail]**, donde debe proporcionar un nom
 Aparece el paso [!UICONTROL Review], que le permite revisar el nuevo flujo de datos de Analytics antes de crearlo. Los detalles de la conexión se agrupan por categorías, entre ellas:
 
 * [!UICONTROL Conexión]: Muestra la plataforma de origen de la conexión.
-* [!UICONTROL Tipo] de datos: Muestra el grupo de informes seleccionado y su ID del grupo de informes correspondiente.
+* [!UICONTROL Tipo] de datos: Muestra el grupo de informes seleccionado y su ID de grupo de informes correspondiente.
 
 ![review](../../../../images/tutorials/create/analytics/review.png)
 
@@ -181,7 +181,7 @@ Para eliminar un flujo de datos, diríjase a la página [!UICONTROL Flujos de da
 
 ## Pasos siguientes y recursos adicionales
 
-Una vez creada la conexión, se crea automáticamente un esquema de destino y un flujo de datos para contener los datos entrantes. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando se complete la ingesta inicial, los [!DNL Analytics] datos y se utilizarán en servicios de Platform descendentes como [!DNL Real-time Customer Profile] y el servicio de segmentación. Consulte los siguientes documentos para obtener más información:
+Una vez creada la conexión, el flujo de datos se crea automáticamente para contener los datos entrantes y rellenar un conjunto de datos con el esquema seleccionado. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando se complete la ingesta inicial, los [!DNL Analytics] datos y se utilizarán en servicios de Platform descendentes como [!DNL Real-time Customer Profile] y el servicio de segmentación. Consulte los siguientes documentos para obtener más información:
 
 * [Información general del [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
 * [Información general del [!DNL Segmentation Service]](../../../../../segmentation/home.md)
