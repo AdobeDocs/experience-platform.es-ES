@@ -5,9 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
+source-git-commit: 2bd7c12209a1944aa954ba4490bb0c57f2a5ea61
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3684'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Este documento proporciona una introducción a los esquemas [!DNL Experience Dat
 
 ## Explicación de los esquemas
 
-Un esquema es un conjunto de reglas que representan y validan la estructura y el formato de los datos. En un nivel superior, los esquemas proporcionan una definición abstracta de un objeto real (como una persona) y describen qué datos deben incluirse en cada instancia de ese objeto (como nombre, apellido, cumpleaños, etc.).
+Un esquema es un conjunto de reglas que representan y validan la estructura y el formato de los datos. En un nivel superior, los esquemas proporcionan una definición abstracta de un objeto real (como una persona) y describen qué datos se deben incluir en cada instancia de ese objeto (como nombre, apellido, cumpleaños, etc.).
 
 Además de describir la estructura de los datos, los esquemas aplican restricciones y expectativas a los datos para que se puedan validar a medida que se desplaza de un sistema a otro. Estas definiciones estándar permiten interpretar los datos de forma coherente, independientemente del origen, y eliminan la necesidad de realizar traducciones entre aplicaciones.
 
@@ -68,7 +68,11 @@ Existen dos maneras de enviar datos de identidad a Platform:
 
 `identityMap` es un campo de tipo map que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Este campo se puede utilizar para proporcionar información de identidad para los esquemas, en lugar de definir valores de identidad dentro de la estructura del propio esquema.
 
-El principal inconveniente del uso de `identityMap` es que las identidades se incrustan en los datos y, como resultado, se vuelven menos visibles. Si va a introducir datos sin procesar, debe definir campos de identidad individuales dentro de la estructura de esquema real. Los esquemas que usan `identityMap` tampoco pueden participar en las relaciones.
+El principal inconveniente del uso de `identityMap` es que las identidades se incrustan en los datos y, como resultado, se vuelven menos visibles. Si va a introducir datos sin procesar, debe definir campos de identidad individuales dentro de la estructura de esquema real.
+
+>[!NOTE]
+>
+>Un esquema que utilice `identityMap` puede utilizarse como esquema de origen en una relación, pero no puede utilizarse como esquema de destino. Esto se debe a que todos los esquemas de destino deben tener una identidad visible que se pueda asignar en un campo de referencia dentro del esquema de origen. Consulte la guía de la interfaz de usuario sobre [relaciones](../tutorials/relationship-ui.md) para obtener más información sobre los requisitos de los esquemas de origen y destino.
 
 Sin embargo, los mapas de identidad pueden resultar especialmente útiles si está recopilando datos de fuentes que almacenan identidades juntas (como [!DNL Airship] o Adobe Audience Manager), o si hay un número variable de identidades para un esquema. Además, se requieren mapas de identidad si utiliza el [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
