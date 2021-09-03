@@ -5,9 +5,9 @@ title: Clase XDM ExperienceEvent
 topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM ExperienceEvent y prácticas recomendadas para el modelado de datos de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1745'
 ht-degree: 1%
 
 ---
@@ -82,18 +82,18 @@ La siguiente tabla describe los valores aceptados para `eventType`, junto con su
 
 | Valor | Definición |
 | --- | --- |
-| `advertising.completes` | Se ha visto hasta el final un recurso de medios temporizados. Esto no significa necesariamente que el usuario haya visto todo el vídeo, ya que el usuario podría haber omitido. |
-| `advertising.timePlayed` | Describe la cantidad de tiempo que un usuario emplea en un recurso de medios temporizados específico. |
-| `advertising.federated` | Indica si un evento de experiencia se creó mediante una federación de datos (uso compartido de datos entre clientes). |
 | `advertising.clicks` | Haga clic en las acciones de un anuncio. |
+| `advertising.completes` | Se ha visto hasta el final un recurso de medios temporizados. Esto no significa necesariamente que el usuario haya visto todo el vídeo, ya que el usuario podría haber omitido. |
 | `advertising.conversions` | Acciones predefinidas realizadas por un cliente que déclencheur un evento para la evaluación del rendimiento. |
+| `advertising.federated` | Indica si un evento de experiencia se creó mediante una federación de datos (uso compartido de datos entre clientes). |
 | `advertising.firstQuartiles` | Un anuncio de vídeo digital se ha reproducido a una velocidad normal del 25% de su duración. |
 | `advertising.impressions` | Impresión(s) de un anuncio a un cliente con el potencial de ser visto. |
 | `advertising.midpoints` | Un anuncio de vídeo digital se ha reproducido a una velocidad normal durante el 50% de su duración. |
 | `advertising.starts` | Se ha empezado a reproducir un anuncio de vídeo digital. |
 | `advertising.thirdQuartiles` | Un anuncio de vídeo digital se ha reproducido a una velocidad normal durante el 75% de su duración. |
-| `web.webpagedetails.pageViews` | Una página web ha recibido una o más vistas. |
-| `web.webinteraction.linkClicks` | Se ha seleccionado un vínculo una o más veces. |
+| `advertising.timePlayed` | Describe la cantidad de tiempo que un usuario emplea en un recurso de medios temporizados específico. |
+| `application.close` | Se cerró una aplicación o se envió al fondo. |
+| `application.launch` | Se ha iniciado o introducido una aplicación en primer plano. |
 | `commerce.checkouts` | Se ha producido un evento de cierre de compra para una lista de productos. Puede haber más de un evento de cierre de compra si hay varios pasos en un proceso de cierre de compra. Si hay varios pasos, la marca de tiempo y la página/experiencia a la que se hace referencia para cada evento se utilizan para identificar cada evento individual (paso), representado en orden. |
 | `commerce.productListAdds` | Se ha agregado un producto a la lista de productos o al carro de compras. |
 | `commerce.productListOpens` | Se ha inicializado o creado una nueva lista de productos (carro de compras). |
@@ -103,9 +103,32 @@ La siguiente tabla describe los valores aceptados para `eventType`, junto con su
 | `commerce.productViews` | Un producto ha recibido una o más vistas. |
 | `commerce.purchases` | Se ha aceptado una solicitud. Esta es la única acción necesaria en una conversión de comercio. Un evento de compra debe tener una lista de productos referenciada. |
 | `commerce.saveForLaters` | Se ha guardado una lista de productos para su uso futuro, como una lista de deseos de productos. |
+| `decisioning.propositionDisplay` | Se mostró una propuesta de decisión a una persona. |
+| `decisioning.propositionInteract` | Una persona interactuó con una propuesta de decisión. |
 | `delivery.feedback` | Eventos de comentarios de un envío, como un envío de correo electrónico. |
+| `directMarketing.emailBounced` | Un correo electrónico dirigido a una persona rebotó. |
+| `directMarketing.emailBouncedSoft` | Un correo electrónico enviado a una persona devuelta por correo electrónico. |
+| `directMarketing.emailClicked` | Una persona hizo clic en un vínculo de un correo electrónico de marketing. |
+| `directMarketing.emailDelivered` | Se entregó correctamente un correo electrónico al servicio de correo electrónico de una persona |
+| `directMarketing.emailOpened` | Una persona abrió un correo electrónico de marketing. |
+| `directMarketing.emailUnsubscribed` | Una persona canceló la suscripción de un correo electrónico de marketing. |
+| `leadOperation.convertLead` | Se ha convertido un posible cliente. |
+| `leadOperation.interestingMoment` | Se grabó un momento interesante para una persona. |
+| `leadOperation.newLead` | Se creó un posible cliente. |
+| `leadOperation.scoreChanged` | Se ha cambiado el valor del atributo de puntuación del posible cliente. |
+| `leadOperation.statusInCampaignProgressionChanged` | El estado de un posible cliente en una campaña ha cambiado. |
+| `listOperation.addToList` | Se agregó una persona a una lista de marketing. |
+| `listOperation.removeFromList` | Se eliminó a una persona de una lista de marketing. |
 | `message.feedback` | Eventos de comentarios como enviados/rechazados/errores para mensajes enviados a un cliente. |
 | `message.tracking` | Eventos de seguimiento como acciones de apertura/clic/personalizadas en mensajes enviados a un cliente. |
+| `opportunityEvent.addToOpportunity` | Se agregó una persona a una oportunidad. |
+| `opportunityEvent.opportunityUpdated` | Se actualizó una oportunidad. |
+| `opportunityEvent.removeFromOpportunity` | Una persona fue sacada de una oportunidad. |
+| `pushTracking.applicationOpened` | Una persona abrió una aplicación desde una notificación push. |
+| `pushTracking.customAction` | Una persona hizo clic en una acción personalizada en una notificación push. |
+| `web.formFilledOut` | Una persona rellenó un formulario en una página web. |
+| `web.webinteraction.linkClicks` | Se ha seleccionado un vínculo una o más veces. |
+| `web.webpagedetails.pageViews` | Una página web ha recibido una o más vistas. |
 
 {style=&quot;table-layout:auto&quot;}
 
