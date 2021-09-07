@@ -2,16 +2,20 @@
 title: Notas de la versión de la extensión del SDK web de Adobe Experience Platform
 description: Extensión de etiquetas de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
+source-git-commit: a4a41a91429104b302e223034bf15f9839ddb5ad
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 51%
+source-wordcount: '1185'
+ht-degree: 49%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Web SDK
 
 Este documento cubre las notas de la versión de la extensión de etiqueta del SDK web de Adobe Experience Platform. Para ver las notas de la última versión del SDK, consulte las [Notas de la versión del SDK web de Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versión 2.7.1: 7 de septiembre de 2021
+
+Contiene la versión 2.6.4 de la biblioteca del SDK web de Adobe Experience Platform.
 
 ## Versión 2.7.0: 16 de agosto de 2021
 
@@ -70,7 +74,7 @@ Contiene la versión 2.3.0 de la biblioteca del SDK web de Adobe Experience Plat
 ## Versión 2.2.0 - 1 de octubre de 2020
 
 * Cuando los clientes intentaban crear un objeto XDM a partir de esquemas de simulación de pruebas, se topaban con problemas de autenticación. La API que llama a Platform ahora conoce los entornos, por lo que los usuarios solo reciben los esquemas a los que tienen acceso para editar.
-* Al utilizar el elemento de datos `identityMap`, las Áreas de nombres ahora se rellenan previamente en un menú desplegable, por lo que no es necesario rellenarlas en forma manual.
+* Al utilizar el elemento de datos `identityMap` , las áreas de nombres ahora se rellenan previamente en un menú desplegable, por lo que no es necesario rellenarlas manualmente.
 * Se ha modificado la interfaz de usuario del elemento de datos `xdmObject`. En la nueva interfaz de usuario, puede ver qué campos se han rellenado sin tener que introducir cada elemento en el objeto.
 
 ## Versión 2.1.1: 26 de agosto de 2020
