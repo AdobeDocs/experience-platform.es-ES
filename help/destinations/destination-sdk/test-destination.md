@@ -1,9 +1,10 @@
 ---
-description: 'Como parte del SDK de destino, Adobe proporciona herramientas para desarrolladores que le ayudan a configurar y probar el destino. Esta página describe cómo probar la configuración de destino. '
+description: Como parte del SDK de destino, Adobe proporciona herramientas para desarrolladores que le ayudan a configurar y probar el destino. Esta página describe cómo probar la configuración de destino.
 title: Probar la configuración de destino
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -228,4 +229,4 @@ Para obtener descripciones de los parámetros de solicitud y respuesta, consulte
 
 ## Pasos siguientes
 
-Después de confirmar que el destino está configurado correctamente, utilice el proceso de documentación de autoservicio [Adobe](./docs-framework/documentation-instructions.md) para crear una página de documentación para el destino.
+Después de probar el destino y confirmar que está configurado correctamente, utilice la [API de publicación de destino](./destination-publish-api.md) para enviar la configuración a Adobe para su revisión.

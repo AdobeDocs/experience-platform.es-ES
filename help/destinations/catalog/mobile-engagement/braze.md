@@ -3,18 +3,14 @@ keywords: móvil; brasil; mensajería;
 title: Conexión con el Brazo
 description: Braze es una completa plataforma de participación del cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les encantan.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 2%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
-# (Beta) Conexión [!DNL Braze]
-
->[!IMPORTANT]
->
->El destino Braze en Adobe Experience Platform está actualmente en versión beta. La documentación y las funciones están sujetas a cambios.
+# [!DNL Braze] connection
 
 ## Información general {#overview}
 
@@ -99,11 +95,9 @@ En la sección [!UICONTROL Target Field] , haga clic en el icono de asignación 
 
 ![Asignación de destino de Brazo](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-En la ventana [!UICONTROL Select target field] , puede elegir entre tres categorías de campos de destino:
-* [!UICONTROL Seleccionar atributos]: Utilice esta opción para asignar los atributos XDM a  [!DNL Braze] atributos estándar.
+En la ventana [!UICONTROL Select target field] , puede elegir entre dos categorías de campos de destino:
 * [!UICONTROL Seleccionar área de nombres de identidad]: Utilice esta opción para asignar áreas de nombres de  [!DNL Platform] identidad a espacios de nombres de  [!DNL Braze] identidad.
-* [!UICONTROL Seleccione atributos] personalizados: Utilice esta opción para asignar atributos XDM a  [!DNL Braze] atributos personalizados que haya definido en la  [!DNL Braze] cuenta.
-* También puede utilizar esta opción para cambiar el nombre de los atributos XDM existentes a [!DNL Braze]. Por ejemplo, si se asigna un atributo `lastName` XDM a un atributo `Last_Name` personalizado en [!DNL Braze], se creará el atributo `Last_Name` en [!DNL Braze], si no existe, y se le asignará el atributo `lastName` XDM.
+* [!UICONTROL Seleccione atributos] personalizados: Utilice esta opción para asignar atributos XDM a  [!DNL Braze] atributos personalizados que haya definido en la  [!DNL Braze] cuenta. <br> También puede utilizar esta opción para cambiar el nombre de los atributos XDM existentes a  [!DNL Braze]. Por ejemplo, si se asigna un atributo `lastName` XDM a un atributo `Last_Name` personalizado en [!DNL Braze], se creará el atributo `Last_Name` en [!DNL Braze], si no existe, y se le asignará el atributo `lastName` XDM.
 
 ![Campos de asignación de destino de Brazo](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
