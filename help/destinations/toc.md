@@ -4,10 +4,10 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
+source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 11%
+source-wordcount: '627'
+ht-degree: 10%
 
 ---
 
@@ -58,6 +58,7 @@ ht-degree: 11%
       * [Extensión de la etiqueta linkedIn Insight](./catalog/advertising/linkedin.md)
       * [Conexión de Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensión de seguimiento de conversión de pinterest](./catalog/advertising/pinterest-extension.md)
+      * [Conexión de lista de clientes de pinterest](./catalog/advertising/pinterest.md)
       * [La conexión con el mostrador de comercio](./catalog/advertising/tradedesk.md)
       * [Extensión de la etiqueta del sitio web universal de twitter](./catalog/advertising/twitter-uwt.md)
       * [Conexión de Yahoo/Verizon DataX](./catalog/advertising/datax.md)
@@ -108,9 +109,9 @@ ht-degree: 11%
       * [Información general de la extensión de etiquetas](./catalog/launch-extensions/overview.md)
    * Destinos de participación móvil {#mobile-engagement}
       * [Información general sobre los destinos de participación del dispositivo móvil](./catalog/mobile-engagement/overview.md)
-      * [(Beta) Conexión de Atributos de Aeronaves](./catalog/mobile-engagement/airship-attributes.md)
-      * [(Beta) Conexión de las etiquetas de los buques aéreos](./catalog/mobile-engagement/airship-tags.md)
-      * [(Beta) Conexión en formato Braze](./catalog/mobile-engagement/braze.md)
+      * [Conexión de atributos de aeronave](./catalog/mobile-engagement/airship-attributes.md)
+      * [Conexión de etiquetas de la aeronave](./catalog/mobile-engagement/airship-tags.md)
+      * [Conexión con el Brazo](./catalog/mobile-engagement/braze.md)
    * Destinos personalizados {#personalization}
       * [Información general sobre los destinos de personalización](./catalog/personalization/overview.md)
       * [Extensión de Adobe Target](./catalog/personalization/adobe-target.md)
@@ -138,5 +139,38 @@ ht-degree: 11%
       * [Extensión de etiquetas de Invoca](./catalog/voice/invoca.md)
       * [Extensión de Medallia](./catalog/voice/medallia.md)
       * [Extensión de la bandeja de entrada de URL de Talk](./catalog/voice/talkurl.md)
+* SDK de destino {#destination-sdk}
+   * [Información general](./destination-sdk/overview.md)
+   * [Requisitos previos de integración](./destination-sdk/integration-prerequisites.md)
+   * [Primeros pasos](./destination-sdk/getting-started.md)
+   * Funcionalidad del SDK de destino {#functionality}
+      * [Opciones de Configuration](./destination-sdk/configuration-options.md)
+      * [Configuración de destino](./destination-sdk/destination-configuration.md)
+      * [Especificaciones de servidor y plantilla](./destination-sdk/server-and-template-configuration.md)
+      * [Formato del mensaje](./destination-sdk/message-format.md)
+      * [Gestión de metadatos de audiencia](./destination-sdk/audience-metadata-management.md)
+      * [Configuración de autenticación](./destination-sdk/credentials-configuration.md)
+      * [Autenticación OAuth 2](./destination-sdk/oauth2-authentication.md)
+      * Herramientas para desarrolladores {#developer-tools}
+         * [Creación y prueba de una plantilla de transformación de mensaje](./destination-sdk/create-template.md)
+         * [Probar la configuración de destino](./destination-sdk/test-destination.md)
+   * Referencia de API {#api-reference}
+      * [Operaciones de API de extremo de destinos](./destination-sdk/destination-configuration-api.md)
+      * [Operaciones de API de extremo del servidor de destino](./destination-sdk/destination-server-api.md)
+      * [Operaciones de API de extremo de metadatos de audiencia](./destination-sdk/audience-metadata-api.md)
+      * [Operaciones de API de extremo de credenciales](./destination-sdk/credentials-configuration-api.md)
+      * [Publicar operaciones de API de extremo](./destination-sdk/destination-publish-api.md)
+      * Referencia de herramientas para desarrolladores {#developer-tools-reference}
+         * [Obtener operaciones de API de plantilla de ejemplo](./destination-sdk/sample-template-api.md)
+         * [Operaciones de API de plantilla de procesamiento](./destination-sdk/render-template-api.md)
+         * [Operaciones de API de prueba de destino](./destination-sdk/destination-testing-api.md)
+         * [Ejemplos de operaciones de API de generación de perfiles](./destination-sdk/sample-profile-generation-api.md)
+   * Guías {#guides}
+      * [Utilice el SDK de destino para configurar su destino](./destination-sdk/configure-destination-instructions.md)
+   * Documentar el destino {#document-destination}
+      * [Documentar el destino en Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [Utilice la interfaz web de GitHub para crear una página de documentación de destino](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [Utilice un editor de texto en el entorno local para crear una página de documentación de destino](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [Plantilla de autoservicio de documentación](./destination-sdk/docs-framework/self-service-template.md)
 * [Preguntas frecuentes](./destinations-faq.md)
 * [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
