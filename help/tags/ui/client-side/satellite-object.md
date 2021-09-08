@@ -1,10 +1,11 @@
 ---
 title: Referencia de objeto satelital
 description: Obtenga información sobre el objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
-source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 43%
+source-wordcount: '1285'
+ht-degree: 83%
 
 ---
 
@@ -30,7 +31,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` activa todas las reglas utilizando el tipo de evento Direct Call que se ha configurado con el identificador dado de la extensión de la etiqueta Core . El ejemplo anterior activa todas las reglas utilizando un tipo de evento Direct Call en el que el identificador configurado es `contact_submit`. También se transmite un objeto opcional que contiene información relacionada. Se puede acceder al objeto de detalle introduciendo `%event.detail%` en un campo de texto en una condición o acción o `event.detail` dentro del editor de código en una condición o acción Custom Code.
+`track` activa todas las reglas utilizando el tipo de evento Direct Call que se ha configurado con el identificador dado de la extensión de etiqueta Core. El ejemplo anterior activa todas las reglas utilizando un tipo de evento Direct Call en el que el identificador configurado es `contact_submit`. También se transmite un objeto opcional que contiene información relacionada. Se puede acceder al objeto de detalle introduciendo `%event.detail%` en un campo de texto en una condición o acción o `event.detail` dentro del editor de código en una condición o acción Custom Code.
 
 ## `getVar`
 
@@ -46,9 +47,9 @@ _satellite.getVar(name: string) => *
 var product = _satellite.getVar('product');
 ```
 
-En el ejemplo proporcionado, si existe un elemento de datos con un nombre coincidente, se devuelve el valor del elemento de datos. Si no existe ningún elemento de datos que coincida, se verifica si se ha establecido previamente una variable personalizada con un nombre que coincida usando `_satellite.setVar()`. Si se encuentra una variable personalizada que coincida, se devuelve su valor.
+En el ejemplo proporcionado, si existe un elemento de datos con un nombre que coincida, se devuelve el valor del elemento de datos. Si no existe ningún elemento de datos que coincida, se verifica si se ha establecido previamente una variable personalizada con un nombre que coincida usando `_satellite.setVar()`. Si se encuentra una variable personalizada que coincida, se devuelve su valor.
 
-Tenga en cuenta que en muchos campos de formulario de la interfaz de usuario de Recopilación de datos, puede utilizar la sintaxis `%%` para hacer referencia a variables, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, al usar %product% se accede al valor del elemento de datos del producto o de la variable personalizada.
+Tenga en cuenta que puede utilizar la sintaxis `%%` para hacer referencia a las variables en muchos campos de formulario de la interfaz de usuario de recopilación de datos, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, al usar %product% se accede al valor del elemento de datos del producto o de la variable personalizada.
 
 ## `setVar`
 
@@ -114,7 +115,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-El objeto `logger` permite registrar un mensaje en la consola del explorador. El mensaje solo se muestra si el usuario habilita la depuración de etiquetas (llamando a `_satellite.setDebug(true)` o utilizando una extensión adecuada del explorador).
+El objeto `logger` permite registrar un mensaje en la consola del explorador. El mensaje se muestra únicamente si el usuario habilita la depuración de etiquetas (llamando a `_satellite.setDebug(true)` o utilizando una extensión adecuada del explorador).
 
 ### Registro de advertencias de obsolescencia
 
@@ -128,7 +129,7 @@ _satellite.logger.deprecation(message: string)
 _satellite.logger.deprecation('This method is no longer supported, please use [new example] instead.');
 ```
 
-Esto registra una advertencia en la consola del explorador. El mensaje se muestra si el usuario habilita o no la depuración de etiquetas.
+Registra una advertencia en la consola del explorador. El mensaje aparece independientemente de si el usuario ha habilitado o no la depuración de etiquetas.
 
 ## `cookie` {#cookie}
 
@@ -200,11 +201,11 @@ _satellite.cookie.remove('product');
 _satellite.buildInfo
 ```
 
-Este objeto contiene información sobre la compilación de la biblioteca de tiempo de ejecución de etiquetas actual. El objeto contiene las siguientes propiedades:
+Este objeto contiene información acerca de la compilación de la biblioteca de tiempo de ejecución de etiquetas actual. El objeto contiene las siguientes propiedades:
 
 ### `turbineVersion`
 
-Proporciona la versión [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilizada dentro de la biblioteca actual.
+Proporciona la versión de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilizada dentro de la biblioteca actual.
 
 ### `turbineBuildDate`
 
@@ -214,7 +215,31 @@ La fecha ISO 8601 en que se creó la versión de [Turbine](https://www.npmjs.com
 
 La fecha ISO 8601 en que se creó la biblioteca actual.
 
-### `environment`
+Este ejemplo muestra los valores de los objetos:
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**Código**
+
+```javascript
+_satellite.environment
+```
+
+Este objeto contiene información sobre el entorno en el que se implementa la biblioteca de tiempo de ejecución de etiquetas actual. El objeto contiene las siguientes propiedades:
+
+### `id`
+
+ID del entorno.
+
+### `stage`
 
 El entorno para el que se creó esta biblioteca. Los valores posibles son:
 
@@ -226,10 +251,8 @@ Este ejemplo muestra los valores de los objetos:
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 
@@ -251,9 +274,9 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` registra un mensaje en la consola del explorador. El mensaje solo se muestra si el usuario habilita la depuración de etiquetas (llamando a `_satellite.setDebug(true)` o utilizando una extensión adecuada del explorador).
+`notify` registra un mensaje en la consola del explorador. El mensaje se muestra únicamente si el usuario habilita la depuración de etiquetas (llamando a `_satellite.setDebug(true)` o utilizando una extensión adecuada del explorador).
 
-Se puede pasar un nivel de registro opcional que afecte al estilo y el filtrado del mensaje que se está registrando. Estos son los niveles compatibles:
+Se puede transmitir un nivel de registro opcional que afecte al diseño y al filtrado del mensaje que se registra. Estos son los niveles compatibles:
 
 3 - Mensajes informativos.
 
@@ -281,7 +304,7 @@ _satellite.setCookie(name: string, value: string, days: number)
 _satellite.setCookie('product', 'Circuit Pro', 3);
 ```
 
-Esto establece una cookie en el explorador del usuario. La cookie persistirá durante el número de días especificado.
+Establece una cookie en el explorador del usuario. La cookie persistirá durante el número de días especificado.
 
 ## `readCookie`
 
@@ -301,7 +324,7 @@ _satellite.readCookie(name: string) => string
 var product = _satellite.readCookie('product');
 ```
 
-Se lee una cookie desde el explorador del usuario.
+Lee una cookie desde el explorador del usuario.
 
 ## `removeCookie`
 
@@ -321,7 +344,7 @@ _satellite.removeCookie(name: string)
 _satellite.removeCookie('product');
 ```
 
-Esto elimina una cookie del explorador del usuario.
+Quita una cookie del explorador del usuario.
 
 ## Funciones de depuración
 
@@ -399,15 +422,15 @@ En la página web que ejecuta una biblioteca de etiquetas, añada un fragmento d
 </html>
 ```
 
-En el primer elemento de secuencia de comandos, como la biblioteca de etiquetas aún no se ha cargado, se crea el objeto `_satellite` inicial y se inicializa una matriz en `_satellite._monitors`. A continuación, el script añade un objeto de monitor a esa matriz. El objeto monitor puede especificar los siguientes métodos a los que la biblioteca de etiquetas llamará posteriormente:
+En el primer elemento de script, ya que la biblioteca de etiquetas aún no se ha cargado, se crea el objeto `_satellite` inicial y se inicia una matriz en `_satellite._monitors`. A continuación, el script añade un objeto de monitor a esa matriz. El objeto de monitor puede especificar los siguientes métodos a los que la biblioteca de etiquetas llama posteriormente:
 
 ### `ruleTriggered`
 
-Esta función se llama después de que un evento déclencheur una regla antes de que se hayan procesado las condiciones y acciones de la regla. El objeto de evento transmitido a `ruleTriggered` contiene información sobre la regla activada.
+Se llama a esta función después de que un evento desencadene una regla, pero antes de que se hayan procesado las condiciones y acciones de la regla. El objeto de evento transmitido a `ruleTriggered` contiene información sobre la regla activada.
 
 ### `ruleCompleted`
 
-Se llama a esta función después de que una regla se haya procesado completamente. En otras palabras, el evento se ha producido, todas las condiciones han pasado y todas las acciones se han ejecutado. El objeto de evento pasado a `ruleCompleted` contiene información sobre la regla que se completó.
+Se llama a esta función después de que una regla se haya procesado completamente. En otras palabras, el evento se ha producido, todas las condiciones se han transmitido y todas las acciones se han ejecutado. El objeto de evento enviado a `ruleCompleted` contiene información acerca de la regla que se ha completado.
 
 ### `ruleConditionFailed`
 
@@ -417,7 +440,7 @@ Si se llama a `ruleTriggered`, se llama a `ruleCompleted` o `ruleConditionFailed
 
 >[!NOTE]
 >
->Un monitor no tiene que especificar los tres métodos (`ruleTriggered`, `ruleCompleted` y `ruleConditionFailed`). Las etiquetas de Adobe Experience Platform funcionan con los métodos compatibles con el monitor.
+>Un monitor no tiene que especificar los tres métodos (`ruleTriggered`, `ruleCompleted` y `ruleConditionFailed`). Las etiquetas de Adobe Experience Platform funcionan con los métodos compatibles proporcionados por el monitor.
 
 ### Prueba del monitor
 
@@ -430,4 +453,4 @@ Si abre la página en [!DNL Chrome], abre la consola del explorador y selecciona
 
 ![](../../images/debug.png)
 
-Se pueden agregar vínculos adicionales o información adicional a estos controladores según sea necesario.
+Se pueden añadir nuevos enlaces o información adicional a estos controladores según sea necesario.
