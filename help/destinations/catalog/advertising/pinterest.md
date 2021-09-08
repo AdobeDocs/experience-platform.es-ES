@@ -1,7 +1,7 @@
 ---
 title: Conexión de lista de clientes de pinterest
 description: Cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
-source-git-commit: 9bd309ae9d9edf56de855422abd109af1a10cffc
+source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 2%
@@ -21,8 +21,8 @@ Cree audiencias a partir de las listas de clientes, personas que hayan visitado 
 
 ## Requisitos previos {#prerequisites}
 
-* El usuario tendría que autenticarse con una cuenta de Pinterest que tenga acceso a la cuenta del anunciante a la que desee agregar una audiencia. Puede encontrar más información sobre cómo compartir cuentas de anunciantes aquí: https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts. Concretamente, el usuario necesitaría los niveles de acceso de &quot;audiencia&quot;.
-* Puede encontrar más información sobre los formatos de identidad de listas de clientes aquí: https://help.pinterest.com/en/business/article/audience-targeting.
+* El usuario tendría que autenticarse con una cuenta de Pinterest que tenga acceso a la cuenta del anunciante a la que desee agregar una audiencia. Los detalles sobre cómo compartir cuentas de anunciantes se pueden encontrar [aquí](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Concretamente, el usuario necesitaría los niveles de acceso de &quot;audiencia&quot;.
+* Los detalles sobre los formatos de identidad de lista de clientes se pueden encontrar [aquí](https://help.pinterest.com/en/business/article/audience-targeting).
 
 
 ## Identidades compatibles {#supported-identities}
@@ -76,4 +76,4 @@ Todos los destinos [!DNL Adobe Experience Platform] cumplen las políticas de us
 
 ## Recursos adicionales {#additional-resources}
 
-Para obtener más información, consulte la página del Centro de ayuda de Pinterest (https://help.pinterest.com/en/business/article/audience-targeting) .
+Consulte la [página del Centro de ayuda de Pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obtener más información.
