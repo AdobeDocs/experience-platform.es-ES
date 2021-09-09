@@ -2,10 +2,10 @@
 title: Variable gratuita turbine
 description: Obtenga información acerca del objeto turbine, una variable gratuita que proporciona información y utilidades específicas del tiempo de ejecución de la etiqueta de Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 89%
+source-wordcount: '619'
+ht-degree: 86%
 
 ---
 
@@ -117,6 +117,7 @@ Utilidad de registro utilizada para registrar mensajes en la consola. Los mensaj
 * `logger.warn(message: string)`: Registra un mensaje de advertencia en la consola.
 * `logger.error(message: string)`: Registra un mensaje de error en la consola.
 * `logger.debug(message: string)`: Registra un mensaje de depuración en la consola. (Solo visible cuando el registro `verbose` está habilitado en la consola del explorador.)
+* `logger.deprecation(message: string)`: Registra un mensaje de advertencia a la consola si el usuario ha habilitado o no la depuración de etiquetas.
 
 ### `onDebugChanged`
 
