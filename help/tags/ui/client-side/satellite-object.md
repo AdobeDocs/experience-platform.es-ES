@@ -2,9 +2,9 @@
 title: Referencia de objeto satelital
 description: Obtenga información sobre el objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 83%
 
 ---
@@ -227,34 +227,27 @@ Este ejemplo muestra los valores de los objetos:
 
 ## `environment`
 
+Este objeto contiene información sobre el entorno en el que se implementa la biblioteca de tiempo de ejecución de etiquetas actual.
+
 **Código**
 
 ```javascript
 _satellite.environment
 ```
 
-Este objeto contiene información sobre el entorno en el que se implementa la biblioteca de tiempo de ejecución de etiquetas actual. El objeto contiene las siguientes propiedades:
-
-### `id`
-
-ID del entorno.
-
-### `stage`
-
-El entorno para el que se creó esta biblioteca. Los valores posibles son:
-
-* Desarrollo
-* Ensayo
-* Producción
-
-Este ejemplo muestra los valores de los objetos:
+El objeto contiene las siguientes propiedades:
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `id` | ID del entorno. |
+| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging` y `production`. |
 
 ## `notify`
 

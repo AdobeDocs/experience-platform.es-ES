@@ -3,18 +3,14 @@ keywords: atributos de la aeronave;destino de la aeronave
 title: Conexión de atributos de aeronave
 description: Transfiera sin problemas los datos de audiencia de Adobe a la nave aérea como atributos de audiencia para la segmentación dentro de la nave aérea.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 1%
+source-wordcount: '706'
+ht-degree: 0%
 
 ---
 
-# (Beta) Conexión [!DNL Airship Attributes] {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->El destino [!DNL Airship Attributes] en Adobe Experience Platform está actualmente en versión beta. La documentación y las funciones están sujetas a cambios.
+# [!DNL Airship Attributes] connection {#airship-attributes-destination}
 
 ## Información general {#overview}
 

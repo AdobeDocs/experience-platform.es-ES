@@ -3,18 +3,14 @@ keywords: etiquetas de aerolíneas;destino de aerolíneas
 title: Conexión de etiquetas de la aeronave
 description: Transfiera sin problemas los datos de audiencia de Adobe a la nave aérea como etiquetas de audiencia para segmentar dentro de la nave aérea.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: e413933920028e3239f6044111d9cf215c865eba
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 1%
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
-# (Beta) Conexión [!DNL Airship Tags] {#airship-tags-destination}
-
->[!IMPORTANT]
->
->El destino [!DNL Airship Tags] en Adobe Experience Platform está actualmente en versión beta. La documentación y las funciones están sujetas a cambios.
+# [!DNL Airship Tags] connection {#airship-tags-destination}
 
 ## Información general
 
