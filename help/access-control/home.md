@@ -5,7 +5,7 @@ topic-legacy: overview
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto del Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 3%
@@ -68,7 +68,7 @@ Se puede conceder acceso a los usuarios a uno o más entornos limitados de un pe
 
 El permiso &quot;Administración de entornos limitados&quot; permite a los usuarios administrar, ver o restablecer entornos limitados.
 
-### Permisos
+### Permisos {#permissions}
 
 La ficha Permisos de un perfil de producto muestra los entornos limitados y los permisos activos para ese perfil:
 
