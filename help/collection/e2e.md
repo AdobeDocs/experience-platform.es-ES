@@ -1,16 +1,16 @@
 ---
-title: Información general de extremo a extremo de la recopilación de datos de Adobe Experience Platform
-description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante la recopilación de datos de Adobe Experience Platform.
-source-git-commit: b14d592c8beb5fc545ae0682000e4e05b6dac3a0
+title: Información general de extremo a extremo de la recopilación de datos
+description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las tecnologías de recopilación de datos proporcionadas por Adobe Experience Platform.
+source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2568'
 ht-degree: 0%
 
 ---
 
-# Información general completa sobre la recopilación de datos de Adobe Experience Platform
+# Resumen de la recopilación de datos integral
 
-La recopilación de datos de Adobe Experience Platform proporciona varias tecnologías que funcionan juntas para recopilar y transferir sus datos a otros productos de Adobe o a destinos de terceros. Para enviar datos de evento desde la aplicación a la red perimetral de Adobe Experience Platform, es importante comprender estas tecnologías principales y cómo configurarlas para que entreguen los datos a los destinos que necesite, cuando sea necesario.
+En Adobe Experience Platform, la recopilación de datos hace referencia a varias tecnologías que trabajan juntas para recopilar y transferir sus datos a otros productos de Adobe o a destinos de terceros. Para enviar datos de evento desde la aplicación a la red perimetral de Adobe Experience Platform, es importante comprender estas tecnologías principales y cómo configurarlas para que entreguen los datos a los destinos que necesite, cuando sea necesario.
 
 Esta guía proporciona un tutorial de alto nivel sobre cómo enviar un evento a través de la red perimetral mediante tecnologías de recopilación de datos. En concreto, el tutorial explica los pasos de instalación y configuración de la extensión de etiqueta del SDK web de Adobe Experience Platform en la interfaz de usuario de la recopilación de datos.
 
