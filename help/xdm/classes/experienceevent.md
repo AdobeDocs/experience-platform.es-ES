@@ -5,9 +5,9 @@ title: Clase XDM ExperienceEvent
 topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM ExperienceEvent y prácticas recomendadas para el modelado de datos de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
+source-git-commit: 5405a2e2312e81db210a97a759681f66faa8b1fa
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1759'
 ht-degree: 1%
 
 ---
@@ -68,8 +68,14 @@ Adobe proporciona varios grupos de campos estándar para su uso con la clase [!D
 * [[!UICONTROL Detalles de marketing de campaña]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Detalles del canal]](../field-groups/event/channel-details.md)
 * [[!UICONTROL Detalles del comercio]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Detalles del comercio de dispositivos]](../field-groups/event/device-trade-in-details.md)
+* [[!UICONTROL Reserva de comedor]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL Detalles del ID de usuario final]](../field-groups/event/enduserids.md)
 * [[!UICONTROL Detalles del entorno]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Reserva de vuelo]](../field-groups/event/flight-reservation.md)
+* [[!UICONTROL Consentimiento TCF 2.0 de IAB]](../field-groups/event/iab.md)
+* [[!UICONTROL Reserva de alojamiento]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL Detalles de la reserva]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Detalles web]](../field-groups/event/web-details.md)
 
 ## Apéndice
@@ -107,7 +113,7 @@ La siguiente tabla describe los valores aceptados para `eventType`, junto con su
 | `decisioning.propositionInteract` | Una persona interactuó con una propuesta de decisión. |
 | `delivery.feedback` | Eventos de comentarios de un envío, como un envío de correo electrónico. |
 | `directMarketing.emailBounced` | Un correo electrónico dirigido a una persona rebotó. |
-| `directMarketing.emailBouncedSoft` | Un correo electrónico enviado a una persona devuelta por correo electrónico. |
+| `directMarketing.emailBouncedSoft` | Un mensaje de correo electrónico dirigido a una persona devuelta por correo electrónico. |
 | `directMarketing.emailClicked` | Una persona hizo clic en un vínculo de un correo electrónico de marketing. |
 | `directMarketing.emailDelivered` | Se entregó correctamente un correo electrónico al servicio de correo electrónico de una persona |
 | `directMarketing.emailOpened` | Una persona abrió un correo electrónico de marketing. |

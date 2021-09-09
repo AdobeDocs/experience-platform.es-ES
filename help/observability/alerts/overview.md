@@ -2,13 +2,14 @@
 keywords: Experience Platform;inicio;temas populares;intervalo de fechas
 title: Información general sobre alertas
 description: Obtenga información sobre las alertas en Adobe Experience Platform, incluida la estructura de cómo se definen las reglas de alerta.
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '740'
 ht-degree: 3%
 
 ---
-
 
 # Información general sobre las alertas
 
@@ -56,6 +57,10 @@ Las alertas se pueden recibir y administrar a través de dos canales:
 Las alertas se pueden enviar a un enlace web configurado para facilitar la automatización eficaz de la supervisión de actividades. Para recibir alertas a través de weblock, debe registrar el weblink para las alertas de Platform en Adobe Developer Console. Consulte la guía sobre [suscripción a notificaciones de eventos de Adobe I/O](./subscribe.md) para conocer los pasos específicos.
 
 ### Interfaz de usuario de Platform {#ui}
+
+La interfaz de usuario de Platform le permite ver las alertas recibidas y administrar las reglas de alerta. El siguiente vídeo ofrece una introducción a estas funciones.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Para trabajar con alertas en la interfaz de usuario de Platform, debe tener activados los siguientes permisos de control de acceso mediante Adobe Admin Console:
 
