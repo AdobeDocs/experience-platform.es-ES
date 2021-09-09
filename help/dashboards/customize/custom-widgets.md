@@ -2,8 +2,7 @@
 keywords: Experience Platform;interfaz de usuario;IU;paneles;tablero;perfiles;segmentos;destinos;uso de licencias;utilidades;métricas;
 title: Creación de utilidades personalizadas para tableros
 description: 'Esta guía proporciona instrucciones paso a paso para crear utilidades personalizadas para utilizarlas en tableros de Adobe Experience Platform. '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 4a578721cfc5e6e35179bec82886808fd6e18b53
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%
