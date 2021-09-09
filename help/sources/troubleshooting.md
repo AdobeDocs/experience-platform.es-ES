@@ -5,10 +5,9 @@ title: Solución de problemas de fuentes
 topic-legacy: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre las fuentes en Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5f42c6ade63244c5c0bca2d6f879e43014474a83
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -74,3 +73,7 @@ Se debe utilizar la ingesta parcial si **no** tiene restricciones, como que todo
 ### ¿Cuál es el umbral de error típico de ingesta parcial?
 
 No hay ningún &quot;umbral de error típico&quot; para la ingesta parcial. En su lugar, este valor puede variar de un caso de uso a otro. De forma predeterminada, el umbral de error se establece en 5 %.
+
+### ¿Cuánto tarda un estado de ejecución de flujo en actualizarse después de la creación de un nuevo flujo de datos?
+
+Las ejecuciones de flujo no se generan instantáneamente y pueden tardar entre dos y tres minutos en actualizarse después de la `startTime` designada. La comprobación del estado de una ejecución de flujo, inmediatamente después de la creación de un nuevo flujo de datos, no devuelve información sobre el `lastRunDetails` de la ejecución del flujo, ya que no ha sucedido aún. Se recomienda permitir que el flujo de datos se genere unos minutos antes de comprobar el estado de la ejecución del flujo.
