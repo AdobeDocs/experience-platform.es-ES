@@ -4,10 +4,10 @@ title: Modelo de datos ERD de la industria de viajes y hospitalidad
 topic-legacy: overview
 description: Vea un diagrama de relación de entidades (ERD) que describe un modelo de datos estandarizado para el sector de viajes y hostelería, compatible con Experience Data Model (XDM) para su uso en Adobe Experience Platform.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
+source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 0%
+source-wordcount: '451'
+ht-degree: 1%
 
 ---
 
@@ -32,3 +32,16 @@ Utilice la siguiente leyenda para interpretar este ERD:
 >[!NOTE]
 >
 >La entidad Evento de experiencia incluye un campo &quot;_ID&quot;, que representa el atributo de identificador único (`_id`) proporcionado por la clase ExperienceEvent XDM. Consulte el documento de referencia en [XDM ExperienceEvent](../../classes/experienceevent.md) para obtener más información sobre lo que se espera para este valor.
+
+## [!UICONTROL Casos de uso de viajes y ] hospitalidad
+
+En la siguiente tabla se describen las clases recomendadas y los grupos de campo de esquema para varios casos de uso comunes en la industria de viajes y hospitalidad.
+
+| Caso de uso | Clases recomendadas y grupos de campos |
+| --- | --- |
+| Venta cruzada de restaurantes y otros lugares de interés para huéspedes del mercado y clientes con próximas reservas de hotel. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Detalles de la reserva](../../field-groups/event/reservation-details.md)</li><li>[Reserva de alojamiento](../../field-groups/event/lodging-reservation.md)</li><li>[Reserva de comedor](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[Perfil](../../classes/individual-profile.md)** individual XDM:<ul><li>[Detalles demográficos](../../field-groups/profile/demographic-details.md)</li><li>[Detalles de contacto personal](../../field-groups/profile/personal-contact-details.md)</li><li>[Detalles de contacto de trabajo](../../field-groups/profile/work-contact-details.md)</li></ul></li></ul> |
+| Para los huéspedes del hotel y clientes con reservas de hotel, el hotel ofrece servicio de lavandería. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Detalles de la reserva](../../field-groups/event/reservation-details.md)</li><li>[Reserva de comedor](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[Perfil](../../classes/individual-profile.md)** individual XDM:<ul><li>[Detalles demográficos](../../field-groups/profile/demographic-details.md)</li><li>[Detalles de contacto personal](../../field-groups/profile/personal-contact-details.md)</li><li>[Detalles de contacto de trabajo](../../field-groups/profile/work-contact-details.md)</li><li>[Detalles de fidelidad](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| Hotel de alta venta y otros lugares de interés para huéspedes en el mercado y clientes con próximas reservas de hotel. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Detalles de la reserva](../../field-groups/event/reservation-details.md)</li><li>[Reserva de alojamiento](../../field-groups/event/lodging-reservation.md)</li></ul></li><li>**[Perfil](../../classes/individual-profile.md)** individual XDM:<ul><li>[Detalles demográficos](../../field-groups/profile/demographic-details.md)</li><li>[Detalles de contacto personal](../../field-groups/profile/personal-contact-details.md)</li><li>[Detalles de contacto de trabajo](../../field-groups/profile/work-contact-details.md)</li><li>[Detalles de fidelidad](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| Para los clientes en el mercado y los clientes con reservas de hotel, venda vuelos y otros lugares de interés. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Detalles de la reserva](../../field-groups/event/reservation-details.md)</li><li>[Reserva de vuelo](../../field-groups/event/flight-reservation.md)</li></ul></li><li>**[Perfil](../../classes/individual-profile.md)** individual XDM:<ul><li>[Detalles demográficos](../../field-groups/profile/demographic-details.md)</li><li>[Detalles de contacto personal](../../field-groups/profile/personal-contact-details.md)</li><li>[Detalles de contacto de trabajo](../../field-groups/profile/work-contact-details.md)</li><li>[Detalles de fidelidad](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}

@@ -4,10 +4,10 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases del Modelo de datos de experiencia (XDM) y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
-source-git-commit: 6b3a1cc4cfba5475aba781a1d0511a59e399135f
+source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 18%
+source-wordcount: '324'
+ht-degree: 17%
 
 ---
 
@@ -47,9 +47,13 @@ ht-degree: 18%
       * [Detalles del canal](./field-groups/event/channel-details.md)
       * [Detalles del comercio](./field-groups/event/commerce-details.md)
       * [Detalles del comercio de dispositivos](./field-groups/event/device-trade-in-details.md)
+      * [Reserva de comedor](./field-groups/event/dining-reservation.md)
       * [Detalles del ID de usuario final](./field-groups/event/enduserids.md)
       * [Detalles del entorno](./field-groups/event/environment-details.md)
+      * [Reserva de vuelo](./field-groups/event/flight-reservation.md)
       * [Consentimiento TCF 2.0 de IAB](./field-groups/event/iab.md)
+      * [Reserva de alojamiento](./field-groups/event/lodging-reservation.md)
+      * [Detalles de la reserva](./field-groups/event/reservation-details.md)
       * [Detalles web](./field-groups/event/web-details.md)
    * [Actualizaciones del nombre del grupo de campos](./field-groups/name-updates.md)
 * Tipos de datos {#data-types}
@@ -89,6 +93,7 @@ ht-degree: 18%
    * [Buscar](./data-types/search.md)
    * [Suscripción](./data-types/subscription.md)
    * [Suscripción a Telecom](./data-types/telecom-subscription.md)
+   * [Transacción](./data-types/transaction.md)
    * [Información web](./data-types/web-information.md)
    * [Interacción web](./data-types/web-interaction.md)
    * [Detalles de la página web](./data-types/webpage-details.md)
