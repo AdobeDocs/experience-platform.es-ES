@@ -2,9 +2,9 @@
 title: Información general de extremo a extremo de la recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las tecnologías de recopilación de datos proporcionadas por Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
+source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Consulte la [descripción general de la interfaz de usuario de control de acceso
 
 ## Resumen del proceso
 
-El proceso de configuración de la red perimetral para su sitio web se puede resumir de la siguiente manera:
+El proceso de configuración de la recopilación de datos para el sitio web se puede resumir de la siguiente manera:
 
 1. [Cree un ](#schema) esquema para determinar cómo se estructurarán los datos al enviarlos a la red perimetral.
 1. [Cree un ](#datastream) campo de datos para configurar a qué destinos desea que se envíen los datos.
