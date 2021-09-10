@@ -1,10 +1,11 @@
 ---
 description: En esta página se enumeran y describen todas las operaciones de API que puede realizar con el extremo API `/authoring/testing/template/render` para procesar datos exportados para su destino, en función de la plantilla de transformación de mensajes.
 title: Operaciones de API de plantilla de procesamiento
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 1%
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -42,6 +43,8 @@ POST authoring/testing/template/render
 | `destinationId` | El ID de la configuración de destino para la que se procesan los datos exportados. |
 | `template` | Versión de la plantilla con caracteres de escape en función de la cual se están procesando los datos exportados. |
 | `profiles` | Si desea añadir perfiles al cuerpo de la llamada, puede generarlos utilizando la [Sample profile generation API](./sample-profile-generation-api.md). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 Puede procesar los datos exportados como se muestra en los ejemplos siguientes:

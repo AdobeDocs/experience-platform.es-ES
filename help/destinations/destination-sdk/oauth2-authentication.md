@@ -1,7 +1,8 @@
 ---
 description: Esta página describe los distintos flujos de autenticación de OAuth 2 admitidos por el SDK de destino y proporciona instrucciones para configurar la autenticación OAuth 2 para su destino.
 title: Autenticación OAuth 2
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 5%

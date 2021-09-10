@@ -1,9 +1,10 @@
 ---
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/testing/destinationInstance/`, para comprobar si el destino está configurado correctamente y para verificar la integridad de los flujos de datos en el destino configurado.
 title: Operaciones de API de prueba de destino
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '657'
 ht-degree: 2%
 
 ---
@@ -158,6 +159,7 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la respuesta de API
 | `results.httpCalls.response` | Incluye la respuesta recibida por Adobe desde el destino. |
 | `inputProfiles` | Incluye los perfiles que se exportaron en la llamada al destino. Los perfiles coinciden con el esquema de origen. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Pruebe la configuración de destino con perfiles añadidos a la llamada {#test-with-added-profiles}
 

@@ -1,9 +1,10 @@
 ---
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/Destinations/publish`.
 title: Operaciones de extremo de la API de Publish Destinations
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 0564a132-42f4-478c-9197-9b051acf093c
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 5%
 
 ---
@@ -123,6 +124,8 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de destinos env
 | `publishDetailsList.allowedOrgs` | Cadena | Devuelve las organizaciones de Experience Platform para las que debe estar disponible el destino. |
 | `publishDetailsList.status` | Cadena | El estado de la solicitud de publicación de destino. Los valores posibles son `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. |
 | `publishDetailsList.publishedDate` | Cadena | La fecha en la que se envió el destino para su publicación, en tiempo de época. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Actualizar una solicitud de publicación de destino existente {#update}
 
