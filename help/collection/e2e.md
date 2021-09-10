@@ -1,9 +1,10 @@
 ---
 title: Información general de extremo a extremo de la recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las tecnologías de recopilación de datos proporcionadas por Adobe Experience Platform.
-source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
+source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2619'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 En Adobe Experience Platform, la recopilación de datos hace referencia a varias tecnologías que trabajan juntas para recopilar y transferir sus datos a otros productos de Adobe o a destinos de terceros. Para enviar datos de evento desde la aplicación a la red perimetral de Adobe Experience Platform, es importante comprender estas tecnologías principales y cómo configurarlas para que entreguen los datos a los destinos que necesite, cuando sea necesario.
 
-Esta guía proporciona un tutorial de alto nivel sobre cómo enviar un evento a través de la red perimetral mediante tecnologías de recopilación de datos. En concreto, el tutorial explica los pasos de instalación y configuración de la extensión de etiqueta del SDK web de Adobe Experience Platform en la interfaz de usuario de la recopilación de datos.
+Esta guía proporciona un tutorial de alto nivel sobre cómo enviar un evento a través de la red perimetral mediante tecnologías de recopilación de datos. En concreto, el tutorial explica los pasos de instalación y configuración de la extensión de etiqueta del SDK web de Adobe Experience Platform en la interfaz de usuario de recopilación de datos (anteriormente Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -179,9 +180,26 @@ Una vez que haya terminado de asignar los datos al esquema, proporcione un nombr
 
 Después de guardar el elemento de datos, el siguiente paso es crear una regla que lo envíe a la red perimetral siempre que se produzca un evento determinado en el sitio web (como cuando un cliente añada un producto a un carro de compras).
 
-Por ejemplo, esta sección muestra cómo crear una regla que se déclencheur cuando un cliente añada un artículo al carro de compras. Sin embargo, puede configurar reglas para prácticamente cualquier evento que se pueda producir en el sitio web.
+Puede configurar reglas para prácticamente cualquier evento que se pueda producir en el sitio web. Por ejemplo, esta sección muestra cómo crear una regla que se déclencheur cuando un cliente envía un formulario. El siguiente HTML representa una página web simple con un formulario &quot;Añadir al carro&quot;, que será el asunto de la regla:
 
-Seleccione **[!UICONTROL Rules]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Crear nueva regla]**.
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Reglas]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Crear nueva regla]**.
 
 ![Reglas](./images/e2e/rules.png)
 
@@ -189,13 +207,13 @@ En la siguiente pantalla, proporcione un nombre para la regla. A partir de aquí
 
 ![Asignar nombre a la regla](./images/e2e/name-rule.png)
 
-Aparece la página de configuración de eventos. Para configurar un evento, primero debe seleccionar el tipo de evento. Las extensiones proporcionan los tipos de eventos. Para configurar un evento de &quot;envío de formulario&quot;, por ejemplo, seleccione la extensión **[!UICONTROL Core]** y, a continuación, seleccione el tipo de evento **[!UICONTROL Submit]** en la categoría **[!UICONTROL Form]**. En el cuadro de diálogo de configuración que aparece, puede proporcionar el selector de CSS para el formulario concreto en el que desea que se active esta regla.
+Aparece la página de configuración de eventos. Para configurar un evento, primero debe seleccionar el tipo de evento. Las extensiones proporcionan los tipos de eventos. Para configurar un evento de &quot;envío de formulario&quot;, por ejemplo, seleccione la extensión **[!UICONTROL Core]** y, a continuación, seleccione el tipo de evento **[!UICONTROL Submit]** en la categoría **[!UICONTROL Form]**.
 
 >[!NOTE]
 >
 >Para obtener más información sobre los distintos tipos de eventos proporcionados por las extensiones web de Adobe, incluido cómo configurarlos, consulte la [referencia de las extensiones de Adobe](../tags/extensions/web/overview.md) en la documentación de etiquetas.
 
-Seleccione **[!UICONTROL Conservar cambios]** para agregar el evento a la regla.
+El suceso de envío de formulario le permite utilizar un [selector de CSS](https://www.w3schools.com/css/css_selectors.asp) para hacer referencia a un elemento específico en el que la regla debe activarse. En el ejemplo siguiente, se utiliza el ID `add-to-cart-form` para que esta regla solo se active para el formulario &quot;Añadir al carro&quot;. Seleccione **[!UICONTROL Conservar cambios]** para agregar el evento a la regla.
 
 ![Configuración de eventos](./images/e2e/event-config.png)
 
