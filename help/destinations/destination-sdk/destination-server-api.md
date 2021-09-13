@@ -2,9 +2,9 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/destination-servers`. Las especificaciones de servidor y plantilla para su destino se pueden configurar en el SDK de destino de Adobe Experience Platform a través del punto final común "/authoring/destination-servers".
 title: Operaciones de API de extremo del servidor de destino
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
+source-git-commit: 3ab19995d9520c35701912087158bf63755c55c8
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '837'
 ht-degree: 5%
 
 ---
@@ -70,8 +70,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationServerType` | Cadena | `URL_BASED` actualmente es la única opción disponible. |
 | `urlBasedDestination.url.templatingStrategy` | Cadena | <ul><li>Utilice `PEBBLE_V1` si el Adobe necesita transformar la dirección URL en el campo `value` que aparece a continuación. Utilice esta opción si tiene un punto final como: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilice `NONE` si no se necesita ninguna transformación en el lado del Adobe, por ejemplo si tiene un punto final como: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Cadena | Rellene la dirección del extremo de API al que se debe conectar el Experience Platform. |
-| `urlBasedDestination.maxUsersPerRequest` | Número entero | Adobe puede agregar varios perfiles exportados en una sola llamada HTTP. Especifique el número máximo de perfiles que su extremo debe recibir en una sola llamada HTTP. Tenga en cuenta que esta es una agregación de mejor esfuerzo. Por ejemplo, si especifica el valor 100, los Adobes pueden enviar cualquier número de perfiles menores que 100 en una llamada. <br> Si el servidor no acepta varios usuarios por solicitud, establezca este valor en 1. |
-| `urlBasedDestination.splitUserById` | Booleano | Utilice este indicador si la llamada al destino debe dividirse por identidad. Establezca este indicador como `true` si el servidor solo acepta una identidad por llamada, para un área de nombres determinada. |
 | `httpTemplate.httpMethod` | Cadena | Método que Adobe utilizará en las llamadas al servidor. Las opciones son `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Cadena | En su lugar, utilice `PEBBLE_V1`. |
 | `httpTemplate.requestBody.value` | Cadena | Esta cadena es la versión con caracteres de escape que transforma los datos de los clientes de Platform al formato que el servicio espera. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la [sección Uso de plantillas](./message-format.md#using-templating). </li><li> Para obtener más información sobre el escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para ver un ejemplo de transformación sencilla, consulte la transformación [Atributos de perfil](./message-format.md#attributes). </li></ul> |
