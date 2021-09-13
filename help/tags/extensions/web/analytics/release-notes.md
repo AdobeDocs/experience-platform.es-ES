@@ -1,10 +1,11 @@
 ---
 title: Notas de la versión de la extensión de Adobe Analytics
-description: Últimas notas de la versión de la extensión de etiqueta Adobe Analytics en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Últimas notas de la versión de la extensión de etiquetas de Adobe Analytics en Adobe Experience Platform.
+exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
+source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
 workflow-type: tm+mt
-source-wordcount: '1221'
-ht-degree: 94%
+source-wordcount: '1249'
+ht-degree: 97%
 
 ---
 
@@ -13,6 +14,15 @@ ht-degree: 94%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 24 de agosto de 2021
+
+### Extensión de Adobe Analytics 1.8.6
+
+#### Correcciones de errores
+
+* Se ha actualizado [AppMeasurement a v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es).
+* Se ha actualizado el nombre del vínculo de reserva a la lógica del Activity Map espejo en lugar de utilizar el HTML interior.
 
 ## 6 de agosto de 2020
 
@@ -24,7 +34,7 @@ ht-degree: 94%
 
 #### Funcionalidades
 
-* Se ha actualizado [AppMeasurement a la versión 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es).
+* Se ha actualizado [AppMeasurement a la versión 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * La IU pequeña cambia para que la configuración adicional aparezca contraída en un acordeón en lugar de una casilla de verificación.
 
 ## 2 de junio de 2020
@@ -148,7 +158,7 @@ ht-degree: 94%
 
 #### Correcciones de errores
 
-* Se volvió a ejecutar la extensión después de que se encontrara un error en appMeasurement 2.13.0. appMeasurement 2.13.0 estaba ocasionando un problema que no enviaba el ECID, por lo que si instaló 1.7.3 recomendamos actualizar a 1.7.4 para evitar este problema. Tenga en cuenta que clearVars se seguirán usando hasta que se publique una versión actualizada de appMeasurement
+* Se volvió a ejecutar la extensión después de que se encontrara un error en AppMeasurement 2.13.0. estaba ocasionando un problema que no enviaba el ECID, por lo que si instaló 1.7.3 recomendamos actualizar a 1.7.4 para evitar este problema. Tenga en cuenta que clearVars se seguirán usando hasta que se publique una versión actualizada de AppMeasurement
 
 ## 12 de abril de 2019
 
@@ -156,7 +166,7 @@ ht-degree: 94%
 
 #### Correcciones de errores
 
-* Se ha actualizado la extensión de Adobe Analytics Extension a appMeasurement 2.13.0, que incluye una corrección de un problema conocido de clearVars.
+* Se ha actualizado la extensión de Adobe Analytics Extension a AppMeasurement 2.13.0, que incluye una corrección de un problema conocido de clearVars.
 
 ## 21 de marzo de 2019
 
@@ -165,7 +175,7 @@ ht-degree: 94%
 #### Funcionalidades
 
 * Se ha actualizado la extensión de Adobe Analytics a DIL 9.1.
-* Se ha actualizado la extensión de Adobe Analytics a appMeasurement 2.12.
+* Se ha actualizado la extensión de Adobe Analytics a AppMeasurement 2.12.
 * Se ha actualizado la vista de extensión de Adobe Analytics a React-Spectrum.
 * Al configurar los grupos de informes en la página de configuración, ahora verá una lista desplegable de todos los grupos de informes de su empresa para que sea más fácil seleccionar el grupo de informes adecuado.
 
@@ -255,7 +265,7 @@ ht-degree: 94%
 #### **Funcionalidades**
 
 * AppMeasurement se ha actualizado a la versión 2.6
-* El rastreador de Analytics inicializado ahora se expone a través de un módulo compartido en la extensión de etiquetas de Adobe Experience Platform, de modo que otras extensiones pueden incluir código para interactuar con él.
+* El rastreador de Analytics inicializado ahora se expone a través de un módulo compartido en la extensión de etiquetas de Adobe Experience Platform, de modo que otras extensiones puedan incluir código para interactuar con él.
 
 #### **Correcciones de errores**
 
