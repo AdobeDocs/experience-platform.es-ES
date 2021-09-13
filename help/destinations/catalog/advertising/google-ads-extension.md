@@ -3,9 +3,9 @@ keywords: Google ads;google ads;extensión de google ads;extensión de Google Ad
 title: Extensión de Google Ads
 description: La extensión Google Ads es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: b563ce68-7b04-4cfb-b0c3-151f34ec7c1a
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '475'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Este destino es una extensión de etiqueta. Para obtener más información sobre
 
 Esta extensión está disponible en el catálogo de destinos para todos los clientes que hayan comprado Platform.
 
-Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones. y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
+Para utilizar esta extensión, es necesario acceder a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
 ## Extensión de instalación {#install-extension}
 
