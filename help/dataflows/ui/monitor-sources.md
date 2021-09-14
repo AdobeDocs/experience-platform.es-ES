@@ -6,15 +6,18 @@ title: Monitorizar flujos de datos para orígenes en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a5b52d7cc2a39ce15b5a9568df14c86624ae069a
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
 
 # Monitorización de flujos de datos para orígenes en la interfaz de usuario
+
+>[!IMPORTANT]
+>
+>El panel de monitorización no admite actualmente fuentes de transmisión, como [HTTP API source](../../sources/connectors/streaming/http.md). En este momento, solo puede utilizar el panel para controlar los orígenes de lotes.
 
 En Adobe Experience Platform, los datos se incorporan a partir de una amplia variedad de fuentes, se analizan en el Experience Platform y se activan en una amplia variedad de destinos. Platform facilita el proceso de seguimiento de este flujo de datos potencialmente no lineal al proporcionar transparencia con flujos de datos.
 
@@ -41,23 +44,23 @@ En el centro del tablero se encuentra el panel [!UICONTROL Source ingestion], qu
 
 ![panel de monitorización](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
-De forma predeterminada, los datos mostrados contienen tasas de ingesta de las últimas 24 horas. Seleccione **[!UICONTROL Last 24 hours]** para ajustar el lapso de tiempo de los registros mostrados.
+De forma predeterminada, los datos mostrados contienen tasas de ingesta de las últimas 24 horas. Seleccione **[!UICONTROL Últimas 24 horas]** para ajustar el lapso de tiempo de los registros mostrados.
 
 ![fecha de cambio](../assets/ui/monitor-sources/change-date.png)
 
-Aparece una ventana emergente de calendario que proporciona opciones para intervalos de tiempo de ingesta alternativos. Seleccione **[!UICONTROL Last 30 days]** y luego seleccione **[!UICONTROL Apply]**
+Aparece una ventana emergente de calendario que proporciona opciones para intervalos de tiempo de ingesta alternativos. Seleccione **[!UICONTROL Últimos 30 días]** y, a continuación, seleccione **[!UICONTROL Aplicar]**
 
 ![ajuste del intervalo de tiempo](../assets/ui/monitor-sources/adjust-timeframe.png)
 
-Los gráficos están habilitados de forma predeterminada y puede deshabilitarlos para expandir la lista de fuentes a continuación. Seleccione la opción **[!UICONTROL Metrics and graphs]** para desactivar los gráficos.
+Los gráficos están habilitados de forma predeterminada y puede deshabilitarlos para expandir la lista de fuentes a continuación. Seleccione la opción **[!UICONTROL Métricas y gráficos]** para desactivar los gráficos.
 
 ![métricas y gráficos](../assets/ui/monitor-sources/metrics-graphs.png)
 
 | Ingesta de origen | Descripción |
 | ---------------- | ----------- |
-| [!UICONTROL Records ingested ] | El número total de registros introducidos. |
-| [!UICONTROL Records failed] | El número total de registros que no se incorporaron debido a errores en los datos. |
-| [!UICONTROL Total failed dataflows] | El número total de flujos de datos con estado `failed`. |
+| [!UICONTROL Registros ingestados  ] | El número total de registros introducidos. |
+| [!UICONTROL Error de registros] | El número total de registros que no se incorporaron debido a errores en los datos. |
+| [!UICONTROL Total de flujos de datos fallidos] | El número total de flujos de datos con estado `failed`. |
 
 La lista de consumo de origen muestra todas las fuentes que contienen al menos una cuenta existente. La lista también incluye información sobre la tasa de ingesta de cada fuente, el número de registros fallidos y el número total de flujos de datos fallidos en función del lapso de tiempo aplicado.
 
@@ -67,7 +70,7 @@ Para ordenar por la lista de fuentes, seleccione **[!UICONTROL My sources]** y l
 
 ![ordenar por categoría](../assets/ui/monitor-sources/sort-by-category.png)
 
-Para ver todos los flujos de datos existentes en todas las fuentes, seleccione **[!UICONTROL Dataflows]**.
+Para ver todos los flujos de datos existentes en todas las fuentes, seleccione **[!UICONTROL Flujos de datos]**.
 
 ![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
 
@@ -75,7 +78,7 @@ Como alternativa, puede introducir una fuente en la barra de búsqueda para aisl
 
 ![búsqueda](../assets/ui/monitor-sources/search.png)
 
-Aparecerá una lista de flujos de datos. Para reducir la lista y centrarse en los flujos de datos con errores, seleccione **[!UICONTROL Show failures only]**.
+Aparecerá una lista de flujos de datos. Para reducir la lista y centrarse en los flujos de datos con errores, seleccione **[!UICONTROL Mostrar solo errores]**.
 
 ![show-failure-only](../assets/ui/monitor-sources/show-failures-only.png)
 
@@ -87,31 +90,31 @@ La página de ejecución del flujo de datos muestra información sobre la fecha 
 
 ![dataflow run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
 
-La página [!UICONTROL Dataflow run details] muestra información sobre los metadatos del flujo de datos, el estado de ingesta parcial y el resumen de errores. El resumen del error contiene el error específico de nivel superior que muestra en qué paso el proceso de ingesta encontró un error.
+La página [!UICONTROL Detalles de ejecución del flujo de datos] muestra información sobre los metadatos del flujo de datos, el estado de ingesta parcial y el resumen de errores. El resumen del error contiene el error específico de nivel superior que muestra en qué paso el proceso de ingesta encontró un error.
 
 Desplácese hacia abajo para ver información más específica sobre el error que se ha producido.
 
 ![dataflow-run-details](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-El panel [!UICONTROL Dataflow run errors] muestra el código de error y error específico que provocó el error de ingesta del flujo de datos. En este escenario, se produjo un error de transformación del asignador, que dio como resultado un error de 24 registros.
+El panel [!UICONTROL Errores de ejecución de flujo de datos] muestra el error específico y el código de error que provocó el error de ingesta del flujo de datos. En este escenario, se produjo un error de transformación del asignador, que dio como resultado un error de 24 registros.
 
 Seleccione **[!UICONTROL Files]** para obtener más información.
 
 ![dataflow run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
 
-El panel [!UICONTROL Files] contiene información sobre el nombre y la ruta del archivo.
+El panel [!UICONTROL Archivos] contiene información sobre el nombre y la ruta del archivo.
 
-Para una representación más granular del error, seleccione **[!UICONTROL Preview error diagnostics]**.
+Para obtener una representación más granular del error, seleccione **[!UICONTROL Vista previa de diagnósticos de error]**.
 
 ![files](../assets/ui/monitor-sources/files.png)
 
-Aparece la ventana [!UICONTROL Error diagnostics preview], que muestra una previsualización de hasta 100 errores en el flujo de datos. Puede seleccionar **[!UICONTROL Download]** para recuperar un comando curl, que luego le permite descargar los diagnósticos de error.
+Aparece la ventana [!UICONTROL Error diagnostic preview], que muestra una previsualización de hasta 100 errores en el flujo de datos. Puede seleccionar **[!UICONTROL Download]** para recuperar un comando curl, que luego le permite descargar los diagnósticos de error.
 
-Cuando haya terminado, seleccione **[!UICONTROL Close]**
+Cuando haya terminado, seleccione **[!UICONTROL Cerrar]**
 
 ![diagnóstico de errores](../assets/ui/monitor-sources/error-diagnostics.png)
 
-Puede utilizar el sistema de rutas de exploración del encabezado superior para volver al tablero [!UICONTROL Monitoring]. Seleccione **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** para volver a la página anterior y, a continuación, seleccione **[!UICONTROL Dataflow: Loyalty Data Ingestion Demo - Failed]** para volver a la página de flujos de datos.
+Puede utilizar el sistema de rutas de exploración del encabezado superior para volver al tablero [!UICONTROL Monitoring]. Seleccione **[!UICONTROL Ejecutar inicio: 14/2/2021, 9:47 PM]** para volver a la página anterior y, a continuación, seleccione **[!UICONTROL Flujo de datos: Demostración de ingesta de datos de fidelidad: error]** al volver a la página de flujos de datos.
 
 ![rutas de exploración](../assets/ui/monitor-sources/breadcrumbs.png)
 
@@ -125,7 +128,7 @@ En la página flujos de datos, busque un flujo de datos correcto y seleccione el
 
 ![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
 
-La página [!UICONTROL Source ingestion] contiene información que confirma la ingesta correcta de su flujo de datos. Desde aquí, puede empezar a monitorizar el recorrido de su flujo de datos desde el nivel de origen, hasta [!DNL Identity Service] y luego hasta [!DNL Profile].
+La página [!UICONTROL Origen ingesta] contiene información que confirma la ingesta correcta del flujo de datos. Desde aquí, puede empezar a monitorizar el recorrido de su flujo de datos desde el nivel de origen, hasta [!DNL Identity Service] y luego hasta [!DNL Profile].
 
 Seleccione **[!UICONTROL Identities]** para ver la ingesta en la etapa [!UICONTROL Identities].
 
@@ -141,21 +144,21 @@ Seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png)
 
 | Métricas de identidad | Descripción |
 | ---------------- | ----------- |
-| [!UICONTROL Records received] | Número de registros recibidos de [!DNL Data Lake]. |
-| [!UICONTROL Records failed] | Número de registros que no se incorporaron en Platform debido a errores en los datos. |
-| [!UICONTROL Records skipped] | El número de registros que se incorporaron, pero no en [!DNL Identity Service] porque solo había un identificador en la fila de registro. |
-| [!UICONTROL Records ingested] | Número de registros ingeridos en [!DNL Identity Service]. |
-| [!UICONTROL Total records] | Recuento total de todos los registros, incluidos los registros con errores, los registros omitidos, los [!DNL Identities] agregados y los registros duplicados. |
-| [!UICONTROL Identities added] | Número de identificadores nuevos netos agregados a [!DNL Identity Service]. |
-| [!UICONTROL Graphs created] | Número de nuevos gráficos de identidad netos creados en [!DNL Identity Service]. |
-| [!UICONTROL Graphs updated] | Número de gráficos de identidad existentes actualizados con bordes nuevos. |
-| [!UICONTROL Failed dataflow runs] | Número de ejecuciones de flujo de datos que han fallado. |
-| [!UICONTROL Processing time] | Marca de tiempo desde el inicio de la ingesta hasta la finalización. |
-| [!UICONTROL Status] | Define el estado general de un flujo de datos. Los valores de estado posibles son: <ul><li>`Success`: Indica que un flujo de datos está activo y que está incorporando datos según la programación proporcionada.</li><li>`Failed`: Indica que el proceso de activación de un flujo de datos se ha interrumpido debido a errores. </li><li>`Processing`: Indica que el flujo de datos aún no está activo. Este estado se encuentra a menudo inmediatamente después de crear un nuevo flujo de datos.</li></ul> |
+| [!UICONTROL Registros recibidos] | Número de registros recibidos de [!DNL Data Lake]. |
+| [!UICONTROL Error de registros] | Número de registros que no se incorporaron en Platform debido a errores en los datos. |
+| [!UICONTROL Registros omitidos] | El número de registros que se incorporaron, pero no en [!DNL Identity Service] porque solo había un identificador en la fila de registro. |
+| [!UICONTROL Registros ingestados] | Número de registros ingeridos en [!DNL Identity Service]. |
+| [!UICONTROL Registros totales] | Recuento total de todos los registros, incluidos los registros con errores, los registros omitidos, los [!DNL Identities] agregados y los registros duplicados. |
+| [!UICONTROL Identidades agregadas] | Número de identificadores nuevos netos agregados a [!DNL Identity Service]. |
+| [!UICONTROL Gráficos creados] | Número de nuevos gráficos de identidad netos creados en [!DNL Identity Service]. |
+| [!UICONTROL Gráficos actualizados] | Número de gráficos de identidad existentes actualizados con bordes nuevos. |
+| [!UICONTROL Se ejecutaron errores en el flujo de datos] | Número de ejecuciones de flujo de datos que han fallado. |
+| [!UICONTROL Tiempo de procesamiento] | Marca de tiempo desde el inicio de la ingesta hasta la finalización. |
+| [!UICONTROL Estado] | Define el estado general de un flujo de datos. Los valores de estado posibles son: <ul><li>`Success`: Indica que un flujo de datos está activo y que está incorporando datos según la programación proporcionada.</li><li>`Failed`: Indica que el proceso de activación de un flujo de datos se ha interrumpido debido a errores. </li><li>`Processing`: Indica que el flujo de datos aún no está activo. Este estado se encuentra a menudo inmediatamente después de crear un nuevo flujo de datos.</li></ul> |
 
-La página [!UICONTROL Dataflow run details] muestra más información sobre la ejecución del flujo de datos [!DNL Identity], incluido su ID de organización de IMS y el ID de ejecución del flujo de datos. Esta página también muestra el código de error y el mensaje de error correspondientes proporcionados por [!DNL Identity Service], en caso de que se produzca algún error en el proceso de ingesta.
+La página [!UICONTROL Detalles de la ejecución del flujo de datos] muestra más información sobre la ejecución del flujo de datos [!DNL Identity], incluido su ID de organización de IMS y su ID de ejecución del flujo de datos. Esta página también muestra el código de error y el mensaje de error correspondientes proporcionados por [!DNL Identity Service], en caso de que se produzca algún error en el proceso de ingesta.
 
-Seleccione **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** para volver a la página anterior.
+Seleccione **[!UICONTROL Ejecutar inicio: 14/2/2021, 9:47 PM]** para volver a la página anterior.
 
 ![identities-dataflow run](../assets/ui/monitor-sources/identities-dataflow-run.png)
 
@@ -173,16 +176,16 @@ Seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png)
 
 | Métricas de perfil | Descripción |
 | --------------- | ----------- |
-| [!UICONTROL Records received] | Número de registros recibidos de [!DNL Data Lake]. |
-| [!UICONTROL Records failed ] | El número de registros que se incorporaron, pero no en [!DNL Profile] debido a errores. |
-| [!UICONTROL Profile fragments added] | Número de nuevos fragmentos [!DNL Profile] netos añadidos. |
-| [!UICONTROL Profile fragments updated] | El número de fragmentos existentes [!DNL Profile] actualizados |
-| [!UICONTROL Total Profile fragments] | El número total de registros escritos en [!DNL Profile], incluidos todos los fragmentos [!DNL Profile] existentes actualizados y los nuevos fragmentos [!DNL Profile] creados. |
-| [!UICONTROL Failed dataflow runs] | Número de ejecuciones de flujo de datos que han fallado. |
-| [!UICONTROL Processing time] | Marca de tiempo desde el inicio de la ingesta hasta la finalización. |
-| [!UICONTROL Status] | Define el estado general de un flujo de datos. Los valores de estado posibles son: <ul><li>`Success`: Indica que un flujo de datos está activo y que está incorporando datos según la programación proporcionada.</li><li>`Failed`: Indica que el proceso de activación de un flujo de datos se ha interrumpido debido a errores. </li><li>`Processing`: Indica que el flujo de datos aún no está activo. Este estado se encuentra a menudo inmediatamente después de crear un nuevo flujo de datos.</li></ul> |
+| [!UICONTROL Registros recibidos] | Número de registros recibidos de [!DNL Data Lake]. |
+| [!UICONTROL Error de registros  ] | El número de registros que se incorporaron, pero no en [!DNL Profile] debido a errores. |
+| [!UICONTROL Se han añadido fragmentos de perfil] | Número de nuevos fragmentos [!DNL Profile] netos añadidos. |
+| [!UICONTROL Fragmentos de perfil actualizados] | El número de fragmentos existentes [!DNL Profile] actualizados |
+| [!UICONTROL Fragmentos totales de perfil] | El número total de registros escritos en [!DNL Profile], incluidos todos los fragmentos [!DNL Profile] existentes actualizados y los nuevos fragmentos [!DNL Profile] creados. |
+| [!UICONTROL Se ejecutaron errores en el flujo de datos] | Número de ejecuciones de flujo de datos que han fallado. |
+| [!UICONTROL Tiempo de procesamiento] | Marca de tiempo desde el inicio de la ingesta hasta la finalización. |
+| [!UICONTROL Estado] | Define el estado general de un flujo de datos. Los valores de estado posibles son: <ul><li>`Success`: Indica que un flujo de datos está activo y que está incorporando datos según la programación proporcionada.</li><li>`Failed`: Indica que el proceso de activación de un flujo de datos se ha interrumpido debido a errores. </li><li>`Processing`: Indica que el flujo de datos aún no está activo. Este estado se encuentra a menudo inmediatamente después de crear un nuevo flujo de datos.</li></ul> |
 
-La página [!UICONTROL Dataflow run details] muestra más información sobre la ejecución del flujo de datos [!DNL Profile], incluido su ID de organización de IMS y el ID de ejecución del flujo de datos. Esta página también muestra el código de error y el mensaje de error correspondientes proporcionados por [!DNL Profile], en caso de que se produzca algún error en el proceso de ingesta.
+La página [!UICONTROL Detalles de la ejecución del flujo de datos] muestra más información sobre la ejecución del flujo de datos [!DNL Profile], incluido su ID de organización de IMS y su ID de ejecución del flujo de datos. Esta página también muestra el código de error y el mensaje de error correspondientes proporcionados por [!DNL Profile], en caso de que se produzca algún error en el proceso de ingesta.
 
 ![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
 
