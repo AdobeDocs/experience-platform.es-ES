@@ -2,9 +2,9 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino para el SDK de destino
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1557'
 ht-degree: 5%
 
 ---
@@ -247,6 +247,8 @@ Esta sección le permite establecer las políticas de agregación que utilizará
 Una política de agregación determina cómo se combinan los perfiles exportados en las exportaciones de datos. Entre las opciones disponibles se encuentran:
 * Mejor agregación de esfuerzos
 * Agregación configurable (tal y como se muestra en la configuración anterior)
+
+Lea la sección sobre [uso de la plantilla](./message-format.md#using-templating) y los [ejemplos clave de agregación](./message-format.md#template-aggregation-key) para comprender cómo incluir la política de agregación en la plantilla de transformación de mensajes en función de la política de agregación seleccionada.
 
 ### Mejor agregación de esfuerzos {#best-effort-aggregation}
 

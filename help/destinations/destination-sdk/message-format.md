@@ -3,9 +3,10 @@ description: Utilice el contenido de esta página junto con el resto de las opci
 seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
 seo-title: Message format
 title: Formato del mensaje
-source-git-commit: d60933d2083b7befcfa8beba4b1630f372c08cfa
+exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1982'
 ht-degree: 3%
 
 ---
@@ -93,17 +94,15 @@ En esta sección se proporcionan varios ejemplos de cómo se realizan estas tran
 
 1. Ejemplos de transformación simples. Aprenda cómo funciona la plantilla con transformaciones simples para los campos [Atributos de perfil](./message-format.md#attributes), [Pertenencia a segmento](./message-format.md#segment-membership) y [Identidad](./message-format.md#identities).
 2. Se han aumentado los ejemplos de complejidad de las plantillas que combinan los campos anteriores: [Cree una plantilla que envíe segmentos e identidades](./message-format.md#segments-and-identities) y [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](./message-format.md#segments-identities-attributes).
-3. Análisis más profundo, que muestra dos ejemplos de plantillas de socios del sector.
+3. Las plantillas incluyen la clave de agregación. Cuando se utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) en la configuración de destino, el Experience Platform agrupa los perfiles exportados a su destino según criterios como ID de segmento, estado del segmento o áreas de nombres de identidad.
 
 ### Atributos de perfil {#attributes}
 
 Para transformar los atributos de perfil exportados a su destino, consulte los ejemplos de código y JSON a continuación.
 
-
 >[!IMPORTANT]
 >
 >Para obtener una lista de todos los atributos de perfil disponibles en Adobe Experience Platform, consulte el [diccionario de campos XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
-
 
 
 **Entrada**
@@ -776,7 +775,311 @@ El `json` siguiente representa los datos exportados fuera de Adobe Experience Pl
 }
 ```
 
-### Referencia: Contexto y funciones utilizadas en las plantillas de transformación
+### Incluya una clave de agregación en la plantilla para agrupar los perfiles exportados por varios criterios. {#template-aggregation-key}
+
+Cuando utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) en la configuración de destino, puede editar la plantilla de transformación de mensajes para agrupar los perfiles exportados a su destino en función de criterios como ID de segmento, alias de segmento, pertenencia a segmentos o áreas de nombres de identidad, como se muestra en los ejemplos siguientes.
+
+#### Ejemplo del uso de la clave de agregación de ID de segmento en la plantilla {#aggregation-key-segment-id}
+
+Si utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, puede utilizar `segmentId` en la plantilla para agrupar perfiles en los mensajes HTTP exportados a su destino:
+
+**Entrada**
+
+Tenga en cuenta los cuatro perfiles siguientes, en los que los dos primeros forman parte del segmento con el ID de segmento `788d8874-8007-4253-92b7-ee6b6c20c6f3` y los otros dos forman parte del segmento con el ID de segmento `8f812592-3f06-416b-bd50-e7831848a31a`.
+
+Perfil 1:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Hermione"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Perfil 2:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Harry"
+      },
+      "birthDate":{
+         "value":"1980/07/31"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Perfil 3:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Tom"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Perfil 4:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Jerry"
+      },
+      "birthDate":{
+         "value":"1940/01/01"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+**Plantilla**
+
+>[!IMPORTANT]
+>
+>Para todas las plantillas que utilice, debe omitir los caracteres no permitidos, como las comillas dobles `""` antes de insertar la plantilla en la [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo omitir las comillas dobles, consulte el capítulo 9 en el [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+    "profiles": [
+        {% for profile in input.profiles %}
+        {
+            {% for attribute in profile.attributes %}
+            "{{ attribute.key }}":
+                {% if attribute.value is empty %}
+                    null
+                {% else %}
+                    "{{ attribute.value.value }}"
+                {% endif %}
+            {% if not loop.last %},{% endif %}
+            {% endfor %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+    "audienceId": "{{input.aggregationKey.segmentId}}"
+}
+```
+
+**Resultado**
+
+Cuando se exportan a su destino, los perfiles se dividen en dos grupos, según su ID de segmento.
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Hermione",
+            "birthDate": null
+        },
+        {
+            "firstName": "Harry",
+            "birthDate": "1980/07/31"
+        }
+    ],
+    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+}
+```
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Tom",
+            "birthDate": null
+        },
+        {
+            "firstName": "Jerry",
+            "birthDate": "1940/01/01"
+        }
+    ],
+    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+}
+```
+
+#### Ejemplo del uso de la clave de agregación de alias de segmento en la plantilla {#aggregation-key-segment-alias}
+
+Si utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, puede utilizar un alias de segmento en la plantilla para agrupar perfiles en los mensajes HTTP exportados a su destino.
+
+Añada la línea siguiente a la plantilla para agrupar los perfiles exportados en función del alias del segmento.
+
+```python
+"customerList={{input.aggregationKey.segmentAlias}}"
+```
+
+#### Ejemplo del uso de la clave de agregación del estado del segmento en la plantilla {#aggregation-key-segment-status}
+
+Si utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) y establece `includeSegmentId` y `includeSegmentStatus` como verdadero, puede utilizar el estado del segmento en la plantilla para agrupar perfiles en los mensajes HTTP exportados a su destino en función de si los perfiles deben agregarse o eliminarse de los segmentos.
+
+Los valores posibles son:
+
+* realizado
+* existente
+* exitado
+
+Añada la línea siguiente a la plantilla para añadir o eliminar perfiles de segmentos, según los valores anteriores.:
+
+```python
+"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+```
+
+#### Ejemplo del uso de la clave de agregación del área de nombres de identidad en la plantilla {#aggregation-key-identity}
+
+A continuación, se muestra un ejemplo en el que la [agregación configurable](./destination-configuration.md#configurable-aggregation) de la configuración de destino se configura para agregar perfiles exportados por áreas de nombres de identidad, en el formulario `"identityNamespaces": ["email", "phone"]`
+
+**Entrada**
+
+Perfil 1:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e1@example.com"
+         },
+         {
+            "id":"e2@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744111222"
+         }
+      ]
+   }
+}
+```
+
+Perfil 2:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e3@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744333444"
+         },
+         {
+            "id":"+40744555666"
+         }
+      ]
+   }
+}
+```
+
+**Plantilla**
+
+>[!IMPORTANT]
+>
+>Para todas las plantillas que utilice, debe omitir los caracteres no permitidos, como las comillas dobles `""` antes de insertar la plantilla en la [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo omitir las comillas dobles, consulte el capítulo 9 en el [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.identityNamespaces %}
+                "{{ns}}": [
+                    {% for id in profile.identityMap[ns] %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+**Resultado**
+
+El `json` siguiente representa los datos exportados fuera de Adobe Experience Platform.
+
+```json
+{
+   "profiles":[
+      {
+         "email":[
+            "e1@example.com",
+            "e2@example.com"
+         ],
+         "phone":[
+            "+40744111222"
+         ]
+      },
+      {
+         "email":[
+            "e3@example.com"
+         ],
+         "phone":[
+            "+40744333444",
+            "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+#### Ejemplo del uso de la clave de agregación en una plantilla de URL
+
+Tenga en cuenta que, según su caso de uso, también puede utilizar las claves de agregación descritas aquí en una URL, como se muestra a continuación:
+
+```python
+https://api.example.com/audience/{{input.aggregationKey.segmentId}}
+```
+
+### Referencia: Contexto y funciones utilizadas en las plantillas de transformación {#reference}
 
 El contexto proporcionado a la plantilla contiene `input` (los perfiles/datos que se exportan en esta llamada) y `destination` (datos sobre el destino al que ese Adobe envía datos, válidos para todos los perfiles).
 
