@@ -1,7 +1,7 @@
 ---
 title: Conexión de lista de clientes de pinterest
 description: Cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
-source-git-commit: e6fa353c74c652f82ff187692de8784463d0fd01
+source-git-commit: a071aaaf5e9b8ef9223ef4f9ea204460f18bf95e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 2%
