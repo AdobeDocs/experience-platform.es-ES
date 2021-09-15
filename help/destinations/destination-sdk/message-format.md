@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Formato del mensaje
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1972'
 ht-degree: 3%
 
 ---
@@ -779,7 +779,7 @@ El `json` siguiente representa los datos exportados fuera de Adobe Experience Pl
 
 Cuando utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) en la configuración de destino, puede editar la plantilla de transformación de mensajes para agrupar los perfiles exportados a su destino en función de criterios como ID de segmento, alias de segmento, pertenencia a segmentos o áreas de nombres de identidad, como se muestra en los ejemplos siguientes.
 
-#### Ejemplo del uso de la clave de agregación de ID de segmento en la plantilla {#aggregation-key-segment-id}
+#### Utilizar la clave de agregación de ID de segmento en la plantilla {#aggregation-key-segment-id}
 
 Si utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, puede utilizar `segmentId` en la plantilla para agrupar perfiles en los mensajes HTTP exportados a su destino:
 
@@ -942,7 +942,7 @@ Cuando se exportan a su destino, los perfiles se dividen en dos grupos, según s
 }
 ```
 
-#### Ejemplo del uso de la clave de agregación de alias de segmento en la plantilla {#aggregation-key-segment-alias}
+#### Utilizar la clave de agregación de alias de segmento en la plantilla {#aggregation-key-segment-alias}
 
 Si utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, puede utilizar un alias de segmento en la plantilla para agrupar perfiles en los mensajes HTTP exportados a su destino.
 
@@ -952,7 +952,7 @@ Añada la línea siguiente a la plantilla para agrupar los perfiles exportados e
 "customerList={{input.aggregationKey.segmentAlias}}"
 ```
 
-#### Ejemplo del uso de la clave de agregación del estado del segmento en la plantilla {#aggregation-key-segment-status}
+#### Utilizar la clave de agregación del estado del segmento en la plantilla {#aggregation-key-segment-status}
 
 Si utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) y establece `includeSegmentId` y `includeSegmentStatus` como verdadero, puede utilizar el estado del segmento en la plantilla para agrupar perfiles en los mensajes HTTP exportados a su destino en función de si los perfiles deben agregarse o eliminarse de los segmentos.
 
@@ -968,7 +968,7 @@ Añada la línea siguiente a la plantilla para añadir o eliminar perfiles de se
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
 ```
 
-#### Ejemplo del uso de la clave de agregación del área de nombres de identidad en la plantilla {#aggregation-key-identity}
+#### Utilizar la clave de agregación del área de nombres de identidad en la plantilla {#aggregation-key-identity}
 
 A continuación, se muestra un ejemplo en el que la [agregación configurable](./destination-configuration.md#configurable-aggregation) de la configuración de destino se configura para agregar perfiles exportados por áreas de nombres de identidad, en el formulario `"identityNamespaces": ["email", "phone"]`
 
@@ -1071,7 +1071,7 @@ El `json` siguiente representa los datos exportados fuera de Adobe Experience Pl
 }
 ```
 
-#### Ejemplo del uso de la clave de agregación en una plantilla de URL
+#### Utilizar la clave de agregación en una plantilla de URL
 
 Tenga en cuenta que, según su caso de uso, también puede utilizar las claves de agregación descritas aquí en una URL, como se muestra a continuación:
 
