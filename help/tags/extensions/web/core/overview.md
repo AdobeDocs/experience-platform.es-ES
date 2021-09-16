@@ -1,10 +1,11 @@
 ---
 title: Información general de la extensión Core
-description: Obtenga información sobre la extensión de la etiqueta principal en Adobe Experience Platform.
-source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
+description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '4905'
-ht-degree: 75%
+source-wordcount: '5130'
+ht-degree: 94%
 
 ---
 
@@ -14,92 +15,92 @@ ht-degree: 75%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-La extensión de etiqueta principal es la extensión predeterminada lanzada con Adobe Experience Platform.
+La extensión de etiquetas Core es la extensión predeterminada lanzada con Adobe Experience Platform.
 
-Este documento proporciona información sobre las opciones disponibles al utilizar la extensión principal para generar una regla.
+Este documento proporciona información sobre las opciones disponibles al utilizar la extensión Core para generar una regla.
 
 ## Tipos de eventos de la Extensión principal {#core-extension-event-types}
 
-En este tema se describen los tipos de eventos disponibles en la Extensión principal. Para obtener información sobre las opciones que se pueden configurar para varios tipos de eventos diferentes, consulte la sección [Opciones](#options).
+En este tema se describen los tipos de eventos disponibles en la Extensión principal. Para obtener más información sobre las opciones que se pueden configurar para distintos tipos de eventos, consulte la sección [Opciones](#options).
 
 ### Eventos basados en el explorador
 
 #### Tab Blur
 
-El evento tab-blur déclencheur la acción cuando una pestaña pierde el foco. No hay configuraciones para este tipo de evento.
+El evento de desenfoque de pestañas activa la acción cuando una pestaña pierde el enfoque. No hay configuraciones para este tipo de evento.
 
 #### Tab Focus
 
-El evento de selección de pestañas déclencheur la acción cuando una pestaña recibe Focus. No hay configuraciones para este tipo de evento.
+El evento de enfoque de pestañas activa la acción cuando una pestaña recibe el enfoque. No hay configuraciones para este tipo de evento.
 
 ### Form
 
 #### Blur
 
-El suceso blur déclencheur la acción cuando un formulario pierde el foco. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+El evento de desenfoque activa la acción cuando un formulario pierde el enfoque. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 #### Focus
 
-El suceso focus déclencheur la acción cuando un formulario recibe Focus. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+El evento de enfoque activa la acción cuando un formulario recibe el enfoque. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 #### Submit
 
-El suceso submit déclencheur la acción cuando se envía un formulario. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+El evento de envío activa la acción cuando se envía un formulario. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 ### Eventos controlados por teclado
 
 #### Key Press
 
-El evento déclencheur cuando se pulsa una tecla. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento cuando se pulsa una tecla. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 ### Eventos basados en medios
 
 #### Media Ended
 
-El evento déclencheur cuando termina el contenido. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento cuando terminan los medios. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 #### Datos cargados en medios
 
-El evento déclencheur cuando el medio carga datos. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento cuando los medios cargan datos. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 #### Media Pause
 
-El evento déclencheur cuando se pone en pausa el contenido. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento cuando se pausa el medio. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 #### Media Play
 
-El evento déclencheur cuando se reproduce el contenido. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento cuando se reproduce el medio. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 #### Media Stalled
 
-El evento se déclencheur si se bloquean los medios. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento si se bloquean los medios. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
-#### Media-Time Played
+#### Tiempo de medio reproducido
 
-El evento se déclencheur si el medio se reproduce durante un período de tiempo especificado. Debe especificar la duración durante la cual se debe reproducir el contenido para poder almacenar en déclencheur el evento. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento si el medio se reproduce durante un periodo de tiempo determinado. Debe especificar la duración durante la cual se debe reproducir el medio para activar el evento. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 
-#### Media-Volume Changed
+#### Volumen del medio cambiado
 
-El evento se déclencheur si el volumen aumenta o se reduce. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento si el volumen aumenta o se reduce. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 ### Eventos orientados a dispositivos móviles
 
 #### Orientation Change
 
-El evento déclencheur si cambia la orientación del dispositivo. Debe especificar la duración durante la cual debe cambiar la orientación para poder establecer el déclencheur del evento. No hay configuraciones para este tipo de evento.
+Se activa el evento si cambia la orientación del dispositivo. Debe especificar la duración durante la cual debe cambiar la orientación para activar del evento. No hay configuraciones para este tipo de evento.
 
 #### Zoom Change
 
-El evento se déclencheur si el usuario amplía o reduce el tamaño. No hay configuraciones para este tipo de evento.
+Se activa el evento si el usuario amplía o reduce la imagen. No hay configuraciones para este tipo de evento.
 
 ### Eventos controlados con el ratón
 
 #### Click
 
-El evento déclencheur si el elemento especificado está seleccionado (se hizo clic). También se pueden especificar valores de propiedad que deben tener el valor “True” para el elemento antes de activar el evento.
+Se activa el evento si se selecciona el elemento especificado (al hacer clic). También se pueden especificar valores de propiedad que deben tener el valor “True” para el elemento antes de activar el evento.
 
-Si el elemento es una etiqueta delimitadora (`<a>`) para el contenido vinculado, también puede especificar si desea retrasar la navegación durante un período de tiempo. Esto puede resultar útil si la regla requiere tiempo adicional para ejecutarse y normalmente no se completaría antes de que se navegue la página.
+`<a>`Si el elemento es una etiqueta de anclaje al contenido vinculado, también puede especificar si se retrasará la navegación durante un período de tiempo. Esto puede resultar útil si la regla requiere tiempo adicional para ejecutarse y normalmente no se completaría antes de que se navegue la página.
 
 >[!WARNING]
 >
@@ -107,25 +108,25 @@ Si el elemento es una etiqueta delimitadora (`<a>`) para el contenido vinculado,
 
 Cuando se retrasa el vínculo, Platform impide que el explorador salga de la página. A continuación, realiza una redirección de JavaScript al destino original después del tiempo de espera especificado. Esto es especialmente peligroso cuando el marcado de la página tiene etiquetas `<a>` donde la funcionalidad deseada no aleja al usuario de la página. Si no puede resolver el problema de ninguna otra manera, debe ser extremadamente preciso en la definición del selector para que este evento se active exactamente donde lo necesita y no en otro lugar.
 
-El valor de retraso del vínculo predeterminado es 100 milisegundos. Tenga en cuenta que las etiquetas siempre esperarán el tiempo especificado y no están conectadas a la ejecución de las acciones de la regla de ninguna manera. Es posible que el retraso obligue al usuario a esperar más tiempo del necesario, y también que el retraso no sea lo suficientemente largo como para que todas las acciones de la regla se completen correctamente. Los retrasos más largos proporcionan más tiempo para la ejecución de reglas, pero también empeoran la experiencia del usuario.
+El valor de retraso del vínculo predeterminado es 100 milisegundos. Tenga en cuenta que las etiquetas siempre esperarán la cantidad de tiempo especificada y no está conectado a la ejecución de las acciones de la regla de ninguna manera. Es posible que el retraso obligue al usuario a esperar más tiempo del necesario, y también que el retraso no sea lo suficientemente largo como para que todas las acciones de la regla se completen correctamente. Los retrasos más largos proporcionan más tiempo para la ejecución de reglas, pero también empeoran la experiencia del usuario.
 
-Para corregir el retraso, es necesario proporcionar el elemento seleccionado que déclencheur el evento y la cantidad de tiempo específica antes de activarlo.
+Para corregir el retraso, es necesario proporcionar el elemento seleccionado que activa el evento y la cantidad de tiempo específica antes de activarlo.
 
 Para ver las opciones avanzadas, consulte la sección [Opciones](#options) para obtener más información.
 
 #### Hover
 
-El evento se déclencheur si el usuario pasa el ratón sobre un elemento especificado. También debe configurar si la regla se activa inmediatamente o después de un número determinado de milisegundos. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento si el usuario pasa el ratón sobre un elemento especificado. Además, configure si la regla se activa inmediatamente o después de un número determinado de milisegundos. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 ### Otros eventos
 
 #### Custom Event
 
-El evento déclencheur si se produce un tipo de evento personalizado. Las funciones de JavaScript con nombre definidas en cualquier otra parte de la base de código pueden utilizarse como tipo de evento personalizado. Debe especificar el nombre del tipo de evento personalizado y configurar cualquier otra configuración como se describe en la sección [Opciones](#options) a continuación.
+Se activa el evento si se produce un tipo de evento personalizado. Las funciones de JavaScript con nombre definidas en cualquier otra parte de la base de código pueden utilizarse como tipo de evento personalizado. Especifique el nombre del tipo de evento personalizado y, a continuación, configure las demás opciones como se describe en [Opciones](#options).
 
 #### Data Element Changed
 
-El evento déclencheur si cambia un elemento de datos especificado. Debe proporcionar un nombre para el elemento de datos. Puede seleccionar el elemento de datos escribiendo su nombre en el campo de texto o seleccionando el icono de elemento de datos a la derecha del campo de texto y eligiendo de una lista proporcionada dentro del cuadro de diálogo que aparece.
+Se activa el evento si cambia un elemento de datos especificado. Debe proporcionar un nombre para el elemento de datos. Puede seleccionar el elemento de datos escribiendo su nombre en el campo de texto o seleccionando el icono de elemento de datos a la derecha del campo de texto y eligiendo de una lista proporcionada dentro del cuadro de diálogo que aparece.
 
 #### Direct Call
 
@@ -133,39 +134,39 @@ El evento de llamada directa evita la detección de eventos y los sistemas de b�
 
 #### Element Exists
 
-El evento déclencheur si existe un elemento especificado. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento si el elemento especificado existe. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 #### Enters Viewport
 
-El evento déclencheur si el usuario entra en una ventanilla especificada. Debe proporcionar un selector de CSS como criterio para dirigirse a los elementos coincidentes. También debe configurar si la regla se activa inmediatamente o después de un número determinado de milisegundos, y si el evento debe activarse en déclencheur cada vez que se produzca el evento o solo la primera vez.
+Se activa el evento si el usuario entra en una ventanilla especificada. Debe proporcionar un selector de CSS como criterio para dirigirse a los elementos coincidentes. También debe configurar si la regla se activa inmediatamente o después de un número determinado de milisegundos, y si el evento debe activarse cada vez que se produzca el evento o solo la primera vez.
 
 Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 #### History Change
 
-El evento se déclencheur si se produce un evento pushState o hashchange. No hay configuraciones para este tipo de evento.
+El evento se activa si se produce un evento pushState o hashchange. No hay configuraciones para este tipo de evento.
 
 #### Tiempo invertido en la página
 
-El evento se déclencheur si el usuario permanece en la página durante un número determinado de segundos. Debe especificar la cantidad de segundos que deben transcurrir antes de activar el evento.
+Se activa el evento si el usuario permanece en la página durante una determinada cantidad de segundos. Especifique la cantidad de segundos que deben transcurrir antes de activar el evento.
 
 ### Eventos de carga de página
 
 #### DOM Ready
 
-El evento déclencheur cuando el DOM está listo y el usuario puede interactuar con la página. No hay configuraciones para este tipo de evento.
+Se activa el evento cuando el DOM está listo y el usuario puede interactuar con la página. No hay configuraciones para este tipo de evento.
 
 #### Library Loaded (Page Top) {#library-loaded-page-top}
 
-El evento se déclencheur en cuanto se carga la biblioteca de etiquetas. No hay configuraciones para este tipo de evento.
+El evento se activa en cuanto se carga la biblioteca de etiquetas. No hay configuraciones para este tipo de evento.
 
 #### Page Bottom {#page-bottom}
 
-Los déclencheur del evento una vez que se ha llamado a `_satellite.pageBottom();`. Al cargar la biblioteca de etiquetas de forma asíncrona, no se debe utilizar este tipo de evento. No hay configuraciones para este tipo de evento.
+Se activa el evento una vez que se realiza la llamada a `_satellite.pageBottom();` Al cargar la biblioteca de etiquetas de forma asíncrona, no se debe utilizar este tipo de evento. No hay configuraciones para este tipo de evento.
 
 #### Window Loaded
 
-El evento se déclencheur cuando el explorador llama a onLoad y la página ha terminado de cargarse. No hay configuraciones para este tipo de evento.
+Se activa el evento cuando el explorador llama a onLoad y la página termina de cargarse. No hay configuraciones para este tipo de evento.
 
 ### Opciones {#options}
 
@@ -555,11 +556,11 @@ Ejecute la regla en un explorador e inspeccione el objeto de evento registrado e
 
 ### Procesamiento de acciones de Custom Code
 
-La Extensión principal, disponible para todos los usuarios de Adobe Experience Platform, contiene una acción de código personalizado para ejecutar JavaScript o HTML proporcionados por el usuario. A menudo, es útil que los usuarios comprendan cómo se procesan las reglas con acciones de Custom Code.
+La extensión principal, disponible para todos los usuarios de Adobe Experience Platform, contiene una acción de código personalizado para ejecutar JavaScript o HTML proporcionados por el usuario. A menudo, es útil que los usuarios comprendan cómo se procesan las reglas con acciones de Custom Code.
 
 #### Reglas que utilizan los eventos Page Top o Page Bottom
 
-El código de las acciones personalizadas está incrustado en la biblioteca de etiquetas principal. El código se escribe en el documento usando document.write. Si una regla tiene varias acciones Custom Code, el código se escribe en el orden configurado en la regla.
+El código de las acciones personalizadas está incrustado en la biblioteca principal de etiquetas. El código se escribe en el documento usando document.write. Si una regla tiene varias acciones Custom Code, el código se escribe en el orden configurado en la regla.
 
 #### Reglas que utilizan cualquier evento distinto a Page Top o Page Bottom
 
@@ -569,7 +570,7 @@ Cuando se utiliza document.write después de que una página se haya cargado nor
 
 #### Validación de Custom Code
 
-El validador utilizado en el editor de código de etiquetas está diseñado para identificar los problemas con el código escrito por el desarrollador. El código que ha pasado por un proceso de reducción (como el código AppMeasurement.js descargado del Administrador de códigos) puede recibir falsas advertencias sobre problemas por el validador que generalmente se pueden ignorar.
+El validador utilizado en el editor de código de etiquetas se ha diseñado para identificar los problemas con el código escrito por el desarrollador. El código que ha pasado por un proceso de reducción (como el código AppMeasurement.js descargado del Administrador de códigos) puede recibir falsas advertencias sobre problemas por el validador que generalmente se pueden ignorar.
 
 #### Secuencia de acciones
 
@@ -581,7 +582,7 @@ Al crear una acción de Custom Code de JavaScript, puede devolver una [promesa](
 
 >[!NOTE]
 >
->Esto solo funciona cuando JavaScript no está configurado para ejecutarse globalmente. Si está ejecutando la acción de Custom Code en el ámbito global, las etiquetas tratarán la promesa como resuelta inmediatamente y pasarán al siguiente elemento de la cola de procesamiento.
+>Esto solo funciona cuando JavaScript no está configurado para ejecutarse globalmente. Si está ejecutando la acción de código personalizado en el ámbito global, las etiquetas tratarán la promesa como resuelta inmediatamente y pasará al siguiente elemento de la cola de procesamiento.
 
 Ejemplo de una acción de Custom Code de JavaScript que arroja una promesa:
 
@@ -599,7 +600,7 @@ return new Promise(function(resolve, reject) {
 
 *HTML*
 
-Al crear una acción de Custom Code HTML, una función denominada `onCustomCodeSuccess()` estará disponible para usar en el Custom Code. Puede llamar a esta función para indicar que el código personalizado se ha completado y que las etiquetas pueden pasar a ejecutar acciones posteriores. Por otro lado, si el Custom Code falla de alguna manera, puede llamar a `onCustomCodeFailure()`. Esto informará a las etiquetas de que no ejecuten las acciones posteriores de esa regla.
+Al crear una acción de Custom Code HTML, una función denominada `onCustomCodeSuccess()` estará disponible para usar en el Custom Code. Puede llamar a esta función para indicar que el código personalizado se ha completado y que las etiquetas pueden pasar a ejecutar acciones posteriores. Por otro lado, si el Custom Code falla de alguna manera, puede llamar a `onCustomCodeFailure()`. Esto informará a las etiquetas que no ejecuten las acciones posteriores a esa regla.
 
 Ejemplo de una acción de Custom Code HTML que utiliza las llamadas de retorno nuevas:
 
@@ -681,7 +682,7 @@ Obtener el valor de:
 
 Es posible hacer referencia a cualquier objeto JavaScript o variable mediante el campo de ruta.
 
-Los elementos de datos de etiquetas se pueden utilizar para capturar las variables JavaScript de marcado o las propiedades de objeto. Estos valores se pueden usar dentro de las extensiones o reglas personalizadas haciendo referencia a los elementos de datos de etiquetas. Si la fuente de los datos cambia, solo es necesario actualizar la referencia a la fuente dentro de la interfaz de usuario de la recopilación de datos.
+Los elementos de datos de etiquetas se pueden utilizar para capturar las variables de JavaScript de marcado o las propiedades de objeto. Estos valores se pueden usar dentro de las extensiones o reglas personalizadas haciendo referencia a los elementos de datos de etiquetas. Si la fuente de los datos cambia, solo es necesario actualizar la referencia a la fuente dentro de la interfaz de usuario de la recopilación de datos.
 
 En el ejemplo siguiente, el marcado contiene una variable de JavaScript llamada `Page_Name`.
 
@@ -692,9 +693,9 @@ En el ejemplo siguiente, el marcado contiene una variable de JavaScript llamada 
 </script>
 ```
 
-Cuando cree el elemento de datos en la interfaz de usuario de recopilación de datos, simplemente proporcione la ruta a esa variable.
+Cuando cree el elemento de datos en la interfaz de usuario de la recopilación de datos, simplemente proporcione la ruta a esa variable.
 
-Si utiliza un objeto de recopilación de datos como parte de la capa de datos, utilice la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos como, por ejemplo, `_myData.pageName` o `digitalData.pageName`, etc.
+Si utiliza un objeto de recopilación de datos como parte de la capa de datos, solo tiene que utilizar la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos como, por ejemplo, `_myData.pageName` o `digitalData.pageName`, etc.
 
 #### Ejemplo:
 
@@ -756,7 +757,7 @@ El almacenamiento de sesión es similar al almacenamiento local, excepto que los
 
 ### Comportamiento de los visitantes
 
-De forma similar a Información de página , este elemento de datos utiliza tipos de comportamiento comunes para enriquecer la lógica dentro de las reglas y otras soluciones de Platform.
+De manera similar a Información de página, este elemento de datos utiliza tipos de comportamiento comunes para enriquecer la lógica dentro de las reglas y otras soluciones de Platform.
 
 Seleccione uno de los siguientes atributos de comportamiento del visitante:
 
@@ -774,3 +775,36 @@ Algunos casos de uso común son:
 * Si esta es la página de aterrizaje para la visita, rellenar una métrica de Analytics
 * Mostrar una oferta nueva al visitante después de un determinado número de sesiones
 * Mostrar una sugerencia de suscripción al boletín en el caso de los visitantes nuevos
+
+### Valor condicional
+
+Un envoltorio para la condición [Value Comparison](#value-comparison-value-comparison). En función del resultado de la comparación, devolverá uno de los dos valores disponibles en el formulario. De este modo, puede manejar &quot;If... Entonces... Si no...&quot; escenarios sin necesidad de reglas adicionales.
+
+### Entorno de tiempo de ejecución
+
+Permite seleccionar una de las siguientes variables:
+
+* Etapa de entorno : devuelve `_satellite.environment.stage` para diferenciar entre entornos de desarrollo, ensayo y producción.
+* Fecha de compilación de la biblioteca: Devuelve `turbine.buildInfo.buildDate`, que contiene el mismo valor que `_satellite.buildInfo.buildDate`.
+* Nombre de propiedad: Devuelve `_satellite.property.name` para obtener el nombre de la propiedad de Launch.
+* ID de propiedad: Devuelve `_satellite.property.id` para obtener el ID de la propiedad de Launch.
+* Nombre de regla: Devuelve `event.$rule.name` que contiene el nombre de la regla ejecutada.
+* ID de regla: Devuelve `event.$rule.id` que contiene el ID de la regla ejecutada.
+* Tipo de evento : devuelve `event.$type` que contiene el tipo de evento que activó la regla.
+* Carga útil de detalles de eventos : Devuelve `event.detail` que contiene la carga útil de un evento personalizado o una regla de llamada directa.
+* Identificador de llamada directa : Devuelve `event.identifier` que contiene el identificador de una regla de llamada directa.
+
+### Atributos de dispositivo
+
+Devuelve uno de los siguientes atributos de dispositivo de visitante:
+
+* Tamaño de la ventana del explorador
+* Tamaño de la pantalla
+
+### Herramientas de JavaScript
+
+Es un envoltorio para operaciones comunes de JavaScript. Recibe un elemento de datos como entrada. Devuelve el resultado de una de las siguientes transformaciones del valor del elemento de datos:
+
+* Manipulación de cadenas básica (reemplazar, subcadena, coincidencia regex, primer y último índice, dividir, fracción)
+* Operaciones básicas de matriz (fracción, unión, pop, desplazamiento)
+* Operaciones universales básicas (fracción, longitud)
