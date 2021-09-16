@@ -4,9 +4,9 @@ title: Guía de la interfaz de usuario del perfil del cliente en tiempo real
 topic-legacy: guide
 description: El perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
+source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -75,15 +75,21 @@ De forma similar a la métrica [recuento de perfiles](#profile-count), cuando la
 
 En la pestaña **[!UICONTROL Browse]** puede ver perfiles de muestra mediante una política de combinación o buscar perfiles específicos utilizando un espacio de nombres y un valor de identidad.
 
-![](../images/user-guide/browse-by-dropdown.png)
+![](../images/user-guide/browse-by-none-selected.png)
 
 ### Examinar por [!UICONTROL Política de combinación]
 
-El selector **[!UICONTROL Examinar por]** está establecido en [!UICONTROL Política de combinación] de forma predeterminada y la **[!UICONTROL Política de combinación]** seleccionada es la política de combinación predeterminada para su organización.
+La pestaña **[!UICONTROL Browse]** está establecida en la directiva de combinación predeterminada para su organización de forma predeterminada. Para elegir una política de combinación diferente, seleccione `X` junto al nombre de la política de combinación y utilice el selector para abrir el cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]**.
 
-Para obtener más información sobre las políticas de combinación y su función dentro de Platform, consulte la [información general sobre las políticas de combinación](../merge-policies/overview.md).
+>[!NOTE]
+>
+>Si no hay ninguna política de combinación seleccionada, utilice el botón de selección situado junto al campo **[!UICONTROL Merge policy]** para abrir el cuadro de diálogo de selección.
 
 ![](../images/user-guide/browse-by-merge-policy.png)
+
+Para elegir una política de combinación en el cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]**, seleccione el botón de opción situado junto al nombre de la política y, a continuación, utilice **[!UICONTROL Seleccionar]** para volver a la pestaña [!UICONTROL Examinar]. A continuación, puede seleccionar **[!UICONTROL View]** para actualizar los perfiles de muestra y ver un muestreo de perfiles con la nueva política de combinación aplicada.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
 
 Los perfiles mostrados representan una muestra de hasta 20 perfiles del almacén de perfiles de su organización, una vez aplicada la política de combinación seleccionada. Los perfiles de muestra de la política de combinación seleccionada se actualizan cuando se agregan nuevos datos al almacén de perfiles de su organización.
 
@@ -91,21 +97,16 @@ Para ver los detalles de uno de los perfiles de ejemplo, seleccione el **[!UICON
 
 ![](../images/user-guide/sample-profiles.png)
 
-Para elegir una política de combinación diferente, seleccione `X` junto al nombre de la política de combinación y utilice el selector para abrir el cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]**.
+Para obtener más información sobre las políticas de combinación y su función dentro de Platform, consulte la [información general sobre las políticas de combinación](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policy-select.png)
-
-Para elegir una política de combinación en el cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]**, seleccione el botón de opción situado junto al nombre de la política y, a continuación, utilice **[!UICONTROL Seleccionar]** para volver a la pestaña [!UICONTROL Examinar]. A continuación, puede seleccionar **[!UICONTROL View]** para actualizar los perfiles de muestra y ver un muestreo de perfiles con la nueva política de combinación aplicada.
-
-![](../images/user-guide/select-merge-policy-dialog.png)
 
 ### Examinar por [!UICONTROL Identity]
 
-Con el selector **[!UICONTROL Examinar por]**, puede elegir [!UICONTROL Identidad] para buscar un perfil específico por un valor de identidad. La navegación por una identidad también requiere que proporcione una política de combinación, un área de nombres de identidad y un valor de identidad.
+En la pestaña **[!UICONTROL Browse]**, puede utilizar un área de nombres de identidad para buscar un perfil específico por un valor de identidad. La navegación por una identidad requiere que proporcione una política de combinación, un área de nombres de identidad y un valor de identidad.
 
 ![](../images/user-guide/browse-by-identity.png)
 
-Utilice el selector **[!UICONTROL Merge policy]** para abrir el cuadro de diálogo **[!UICONTROL Select merge policy]** y elija la política de combinación que desea utilizar.
+Si es necesario, utilice el selector **[!UICONTROL Merge policy]** para abrir el cuadro de diálogo **[!UICONTROL Select merge policy]** y elija la política de combinación que desea utilizar.
 
 ![](../images/user-guide/select-merge-policy-dialog.png)
 
