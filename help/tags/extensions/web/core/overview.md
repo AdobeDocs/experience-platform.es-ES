@@ -2,10 +2,10 @@
 title: Información general de la extensión Core
 description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
-source-wordcount: '5130'
-ht-degree: 94%
+source-wordcount: '5257'
+ht-degree: 92%
 
 ---
 
@@ -708,6 +708,61 @@ Proporcione el nombre del elemento de almacenamiento local en el campo Local Sto
 El almacenamiento local proporciona a los exploradores una forma de almacenar información de página a página ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). El almacenamiento local funciona de forma muy similar a las cookies, pero es mucho más amplio y flexible.
 
 Utilice el campo proporcionado para especificar el valor que ha creado para un elemento de almacenamiento local, como `lastProductViewed.`
+
+### Objetos combinados
+
+Seleccione varios elementos de datos que proporcionen un objeto. Estos objetos se combinarán en profundidad (recursivamente) para producir un nuevo objeto. Los objetos de origen no se modificarán. Si se encuentra una propiedad en la misma ubicación de varios objetos de origen, se utilizará el valor del último objeto. Si un valor de propiedad de origen es `undefined`, no invalidará un valor de un objeto de origen anterior. Si las matrices se encuentran en la misma ubicación en varios objetos de origen, las matrices se concatenarán.
+
+Por ejemplo, supongamos que selecciona un elemento de datos que proporciona el siguiente objeto:
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+Supongamos que también selecciona otro elemento de datos que proporciona el siguiente objeto:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+El resultado del elemento de datos Objetos combinados sería el siguiente objeto:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
 
 ### Información de página
 
