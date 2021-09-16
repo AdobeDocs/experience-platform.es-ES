@@ -4,9 +4,9 @@ description: Descubra qué variables se asignan automáticamente en Adobe Analyt
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;asignación automática;asignación automática;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: b2d949232674bb4c4ebcb7754726730b966a0e02
+source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '907'
 ht-degree: 5%
 
 ---
@@ -19,21 +19,21 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | ---------- | ------------------------- | ----------------------------------------- |
 | application.id | c.a.appid | Asignación de datos de contexto de AppMeasurement `c.a.appid`. |
 | application.launches.value | c.a.launches | Asignación de datos de contexto de AppMeasurement `c.a.launches`. |
-| commerce.checkouts.id | Events | `scCheckout` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| commerce.checkouts.value | Events | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_CHECKOUT, utilizando el delimitador `,`. |
+| commerce.checkouts.id | de reacción | `scCheckout` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| commerce.checkouts.value | de reacción | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_CHECKOUT, utilizando el delimitador `,`. |
 | commerce.order.currencyCode | cc | Asignación de CURRENCY del parámetro de consulta AppMeasurement. |
 | commerce.order.purchaseID | pi | Asignación del parámetro de consulta AppMeasurement PURCHASEID . |
-| commerce.productListAdds.id | Events | `scAdd` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| commerce.productListAdds.value | Events | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_ADD, utilizando el delimitador `,`. |
-| commerce.productListOpens.id | Events | `scOpen` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| commerce.productListOpens.value | Events | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_OPEN, utilizando el delimitador `,`. |
-| commerce.productListRemovals.id | Events | `scRemove` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| commerce.productListRemovals.value | Events | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_REMOVE, utilizando el delimitador `,`. |
-| commerce.productListViews.id | Events | `scView` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| commerce.productListViews.value | Events | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_VIEW, utilizando el delimitador `,`. |
-| commerce.productViews.id | Events | `prodView` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| commerce.productViews.value | Events | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_PROD_VIEW, utilizando el delimitador `,`. |
-| commerce.purchases.value | Events | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_PURCHASE, utilizando el delimitador `,`. |
+| commerce.productListAdds.id | de reacción | `scAdd` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| commerce.productListAdds.value | de reacción | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_ADD, utilizando el delimitador `,`. |
+| commerce.productListOpens.id | de reacción | `scOpen` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| commerce.productListOpens.value | de reacción | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_OPEN, utilizando el delimitador `,`. |
+| commerce.productListRemovals.id | de reacción | `scRemove` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| commerce.productListRemovals.value | de reacción | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_REMOVE, utilizando el delimitador `,`. |
+| commerce.productListViews.id | de reacción | `scView` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| commerce.productListViews.value | de reacción | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_VIEW, utilizando el delimitador `,`. |
+| commerce.productViews.id | de reacción | `prodView` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| commerce.productViews.value | de reacción | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_PROD_VIEW, utilizando el delimitador `,`. |
+| commerce.purchases.value | de reacción | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_PURCHASE, utilizando el delimitador `,`. |
 | device.colorDepth | c | Asignación del parámetro de consulta AppMeasurement C_COLOR. |
 | device.screenHeight | s | Parámetro de consulta AppMeasurement Asignación de resolución de pantalla. |
 | device.screenWidth | s | Parámetro de consulta AppMeasurement Asignación de resolución de pantalla. |
@@ -88,9 +88,8 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | placeContext.geo.longitude | lon | Asignación del parámetro de consulta AppMeasurement en LONGITUDE. |
 | placeContext.geo.postalCode | zip | Asignación ZIP del parámetro de consulta AppMeasurement. |
 | placeContext.geo.stateProvince | estado | Asignación STATE del parámetro de consulta AppMeasurement. |
-| productlistiitems.[N]._[NAME_SPACE].* | Productos | Parámetro de consulta AppMeasurement Evento de comercialización de productos / Asignación de Evars. |
-| productListItems[N].lineItemId | Productos | Parámetro de consulta AppMeasurement Asignación de nombres de productos. |
-| productlistiitems.[N].name | Productos | Parámetro de consulta AppMeasurement Productos Asignación de categorías. |
+| productListItems[N].lineItemId | Productos | Parámetro de consulta AppMeasurement Productos Asignación de categorías. |
+| productlistiitems.[N].name | Productos | Parámetro de consulta AppMeasurement Asignación de nombres de productos. |
 | productlistiitems.[N].priceTotal | Productos | Parámetro de consulta AppMeasurement Asignación de precios de productos. |
 | productlistiitems.[N].quantity | Productos | Parámetro de consulta AppMeasurement Asignación de cantidad de productos. |
 | web.webInteraction.URL | pev1 | Asignación del parámetro de consulta AppMeasurement PAGE_EVENT_VAR1 . |
