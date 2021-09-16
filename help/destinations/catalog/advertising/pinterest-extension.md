@@ -1,7 +1,7 @@
 ---
 title: Extensión de seguimiento de conversión de pinterest
 description: La extensión de seguimiento de conversión de Pinterest es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
-source-git-commit: e6fa353c74c652f82ff187692de8784463d0fd01
+source-git-commit: e7959e678ec7d086a50f3142e9e64b34adb57214
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 4%
