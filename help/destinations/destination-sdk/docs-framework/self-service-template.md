@@ -2,7 +2,7 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para el destino en el catálogo de Adobe Experience Platform. // Reemplazar por el párrafo de la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 396b9a9ec1509abedba96797f68ad3e5aa2e5988
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 1%
@@ -59,8 +59,7 @@ ht-degree: 1%
 
 Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino *YOURDESTINATION*, estos son ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver utilizando este destino.
 
-
-### Caso de uso n.º 1
+### Caso de uso número 1
 
 *Para plataformas de mensajería móvil:*
 
