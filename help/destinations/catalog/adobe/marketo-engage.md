@@ -1,13 +1,13 @@
 ---
 title: Destino del Marketo Engage
 description: Marketo Engage es la única solución integral de administración de experiencias del cliente (CXM) para marketing, publicidad, análisis y comercio. Permite automatizar y administrar actividades desde la administración de posibles clientes de CRM y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+source-git-commit: 1f18e07af7ef0d90f882fa668c5659330bce5960
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '307'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) destino del Marketo Engage {#beta-marketo-engage-destination}
 
@@ -32,18 +32,26 @@ El conector de segmento permite a los especialistas en marketing insertar los se
 
 Exportación de segmentos: está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en el destino del Marketo Engage.
 
-## Configurar {#set-up}
+## Configuración del destino y activación de segmentos {#set-up}
 
-Las instrucciones sobre cómo configurar el destino [se encuentran aquí](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en).
+Para obtener instrucciones detalladas sobre cómo configurar el destino y activar segmentos, lea [Insertar un segmento de Adobe Experience Platform en una lista estática de Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) en la documentación de Marketo.
 
-## Conectarse al destino {#connect}
+<!--
 
-Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
+## Connect to the destination {#connect}
 
-## Uso y administración de datos {#data-usage-governance}
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+
+-->
+
+## Uso y gobernanza de los datos {#data-usage-governance}
 
 Todos los destinos [!DNL Adobe Experience Platform] cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, consulte la [información general sobre el control de datos](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
-## Activar segmentos en este destino {#activate}
+<!--
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+## Activate segments to this destination {#activate}
+
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+
+-->
