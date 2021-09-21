@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de base de datos.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: b0b993842b1015f5503fe2ae5a23d9188eeaad48
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 Además, este tutorial requiere que ya haya creado una cuenta de base de datos. Puede encontrar una lista de tutoriales para crear diferentes conectores de base de datos en la interfaz de usuario en la [información general de conectores de origen](../../../home.md).
 
-## Seleccionar datos
+## Añadir datos
 
-Después de crear la cuenta de la base de datos, aparece el paso **[!UICONTROL Select data]**, que proporciona una interfaz interactiva para explorar la jerarquía de la base de datos.
+Después de crear la cuenta de la base de datos, aparece el paso **[!UICONTROL Add data]**, que proporciona una interfaz interactiva para explorar la jerarquía de la base de datos.
 
-- La mitad izquierda de la interfaz es un explorador que muestra la lista de bases de datos de su cuenta.
+- La mitad izquierda de la interfaz es un navegador que muestra la lista de tablas de datos de su cuenta.
 - La mitad derecha de la interfaz permite previsualizar hasta 100 filas de datos.
 
 Puede utilizar la opción **[!UICONTROL Search]** en la parte superior de la página para identificar rápidamente los datos de origen que desea utilizar.
@@ -41,7 +41,7 @@ Puede utilizar la opción **[!UICONTROL Search]** en la parte superior de la pá
 >
 >La opción de datos de la fuente de búsqueda está disponible para todos los conectores de origen basados en tablas, excepto los conectores de Analytics, Clasificaciones, Centros de eventos y Kinesis.
 
-Una vez que encuentre los datos de origen, seleccione el directorio y haga clic en **[!UICONTROL Next]**.
+Una vez que encuentre los datos de origen, seleccione la tabla y, a continuación, seleccione **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
 
