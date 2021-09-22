@@ -3,9 +3,9 @@ title: Procesamiento de datos de consentimiento del cliente mediante el SDK web 
 topic-legacy: getting started
 description: Obtenga información sobre cómo integrar el SDK web de Adobe Experience Platform para procesar datos de consentimiento del cliente en Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 1780e08a9e45fd87891bbb1727c464aadb0e9b31
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
-source-wordcount: '1270'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -97,6 +97,10 @@ Una vez que haya terminado de configurar la extensión, esta se puede integrar e
 ## Creación de comandos de cambio de consentimiento {#commands}
 
 Una vez que haya integrado la extensión de SDK en su sitio web, puede empezar a utilizar el comando Platform Web SDK `setConsent` para enviar datos de consentimiento a Platform.
+
+>[!IMPORTANT]
+>
+>El comando `setConsent` solo actualiza los datos directamente en el almacén de perfiles y no envía ningún dato al lago de datos.
 
 Hay dos escenarios en los que se debe llamar a `setConsent` en el sitio:
 
@@ -194,6 +198,8 @@ var setConsent = function () {
 ## Gestión de respuestas del SDK
 
 Todos los comandos [!DNL Platform SDK] devuelven promesas que indican si la llamada se ha realizado correctamente o no. A continuación, puede utilizar estas respuestas para lógica adicional, como mostrar mensajes de confirmación al cliente. Consulte la sección sobre [gestión correcta o falla](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) en la guía sobre la ejecución de comandos del SDK para ver ejemplos específicos.
+
+Una vez que haya realizado correctamente `setConsent` llamadas con el SDK, puede utilizar el visor de perfiles en la interfaz de usuario de Platform para verificar si los datos están aterrizando en el almacén de perfiles. Consulte la sección sobre [navegación por perfiles por identidad](../../../profile/ui/user-guide.md#browse-identity) para obtener más información.
 
 ## Pasos siguientes
 

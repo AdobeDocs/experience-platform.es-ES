@@ -4,7 +4,7 @@ title: Guía de la interfaz de usuario del perfil del cliente en tiempo real
 topic-legacy: guide
 description: El perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
 source-wordcount: '1568'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Para ver los detalles de uno de los perfiles de ejemplo, seleccione el **[!UICON
 Para obtener más información sobre las políticas de combinación y su función dentro de Platform, consulte la [información general sobre las políticas de combinación](../merge-policies/overview.md).
 
 
-### Examinar por [!UICONTROL Identity]
+### Examinar por [!UICONTROL Identity] {#browse-identity}
 
 En la pestaña **[!UICONTROL Browse]**, puede utilizar un área de nombres de identidad para buscar un perfil específico por un valor de identidad. La navegación por una identidad requiere que proporcione una política de combinación, un área de nombres de identidad y un valor de identidad.
 
