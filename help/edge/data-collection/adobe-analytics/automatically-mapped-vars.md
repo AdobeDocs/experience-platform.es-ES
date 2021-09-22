@@ -4,7 +4,7 @@ description: Descubra qué variables se asignan automáticamente en Adobe Analyt
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;asignación automática;asignación automática;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
+source-git-commit: 7809e64abab80f72af979e685f268c0799e74eca
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 5%
@@ -46,7 +46,7 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | environment.browserDetails.viewportWidth | bw | Asignación del parámetro de consulta AppMeasurement para BROWSER_WIDTH . |
 | environment.connectionType | ct | Asignación del parámetro de consulta AppMeasurement CT_CONNECT_TYPE. |
 | environment.ipV4 | X-Forwarded-For | Esta es una asignación de encabezados HTTP, X-FORWARDED-FOR. |
-| identityMap.ECID.[0].id | mid | Asignación de MID del parámetro de consulta AppMeasurement. |
+| identityMap.ECID[0].id | mid | Asignación de MID del parámetro de consulta AppMeasurement. |
 | marketing.trackingCode | Versión 0 | Asignación del parámetro de consulta AppMeasurement en CAMPAIGN. |
 | media.mediaTimed.completes.value | c.a.media.complete | Datos de contexto de AppMeasurement. |
 | media.mediaTimed.dropBeforeStart.value | c.a.media.view, c.a.media.timePlayed, c.a.media.play | Datos de contexto de AppMeasurement. |
@@ -58,10 +58,10 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | media.mediaTimed.pauses.value | c.a.media.pauseCount | Asignación de datos de contexto de AppMeasurement `c.a.media.pauseCount`. |
 | media.mediaTimed.primaryAssetReference.@id | c.a.media.asset | Datos de contexto de AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | Asignación de datos de contexto de AppMeasurement `c.a.media.friendlyName`. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name | c.a.media.originator | Datos de contexto de AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator[N].iptc4xmpExt:Name | c.a.media.originator | Datos de contexto de AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | Asignación de datos de contexto de AppMeasurement `c.a.media.episode`. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre | c.a.media.genre | Datos de contexto de AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue | c.a.media.rating | Datos de contexto de AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating[N].iptc4xmpExt:RatingValue | c.a.media.rating | Datos de contexto de AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | Asignación de datos de contexto de AppMeasurement `c.a.media.season`. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | Asignación de datos de contexto de AppMeasurement `a.media.name`. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | Asignación de datos de contexto de AppMeasurement `c.a.media.show`. |
@@ -89,9 +89,9 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | placeContext.geo.postalCode | zip | Asignación ZIP del parámetro de consulta AppMeasurement. |
 | placeContext.geo.stateProvince | estado | Asignación STATE del parámetro de consulta AppMeasurement. |
 | productListItems[N].lineItemId | Productos | Parámetro de consulta AppMeasurement Productos Asignación de categorías. |
-| productlistiitems.[N].name | Productos | Parámetro de consulta AppMeasurement Asignación de nombres de productos. |
-| productlistiitems.[N].priceTotal | Productos | Parámetro de consulta AppMeasurement Asignación de precios de productos. |
-| productlistiitems.[N].quantity | Productos | Parámetro de consulta AppMeasurement Asignación de cantidad de productos. |
+| productlistiitems[N].name | Productos | Parámetro de consulta AppMeasurement Asignación de nombres de productos. |
+| productlistiitems[N].priceTotal | Productos | Parámetro de consulta AppMeasurement Asignación de precios de productos. |
+| productlistiitems[N].quantity | Productos | Parámetro de consulta AppMeasurement Asignación de cantidad de productos. |
 | web.webInteraction.URL | pev1 | Asignación del parámetro de consulta AppMeasurement PAGE_EVENT_VAR1 . |
 | web.webInteraction.name | pev2 | Asignación del parámetro de consulta AppMeasurement PAGE_EVENT_VAR2 . |
 | web.webInteraction.type | pe | `web.webInteraction.type=other` a  `pe=lnk_o`;  `web.webInteraction.type=download` a  `pe=lnk_d`;  `web.webInteraction.type=exit` a  `pe=lnk_e` |
