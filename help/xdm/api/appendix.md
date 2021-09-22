@@ -5,9 +5,9 @@ title: Apéndice de la API del Registro de Esquemas
 description: Este documento proporciona información complementaria relacionada con el trabajo con la API del Registro de esquemas.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
+source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '984'
 ht-degree: 1%
 
 ---
@@ -30,9 +30,9 @@ Los parámetros de consulta más comunes para la paginación incluyen:
 
 | Parámetro | Descripción |
 | --- | --- |
-| `start` | Especifique dónde deben comenzar los resultados enumerados. Este valor se puede obtener del atributo `_page.next` de una respuesta de lista y se puede utilizar para acceder a la siguiente página de resultados. Si el valor `_page.next` es nulo, no hay ninguna página adicional disponible. |
-| `limit` | Limite el número de recursos devueltos. Ejemplo: `limit=5` devolverá una lista de cinco recursos. |
 | `orderby` | Ordene los resultados por una propiedad específica. Ejemplo: `orderby=title` ordenará los resultados por título en orden ascendente (A-Z). Si se añade un `-` antes del valor del parámetro (`orderby=-title`), los elementos se ordenarán por título en orden descendente (Z-A). |
+| `limit` | Cuando se utiliza junto con un parámetro `orderby` , `limit` restringe el número máximo de elementos que deben devolverse para una solicitud determinada. Este parámetro no se puede usar sin un parámetro `orderby` presente.<br><br>El  `limit` parámetro especifica un número entero positivo (entre  `0` y  `500`) como un  ** número hintas al número máximo de elementos que deben devolverse. Por ejemplo, `limit=5` devuelve solo cinco recursos en la lista. Sin embargo, este valor no se respeta estrictamente. El tamaño real de la respuesta puede ser menor o mayor, ya que está limitado por la necesidad de proporcionar el funcionamiento fiable del parámetro `start`, si se proporciona uno. |
+| `start` | Cuando se utiliza junto con un parámetro `orderby` , `start` especifica dónde debe comenzar la lista de elementos de la subconfiguración. Este parámetro no se puede usar sin un parámetro `orderby` presente. Este valor se puede obtener del atributo `_page.next` de una respuesta de lista y se puede utilizar para acceder a la siguiente página de resultados. Si el valor `_page.next` es nulo, no hay ninguna página adicional disponible.<br><br>Normalmente, este parámetro se omite para obtener la primera página de resultados. Después, `start` debe configurarse con el valor máximo de la propiedad de ordenación principal del campo `orderby` recibido en la página anterior. A continuación, la respuesta de API devuelve entradas que comienzan con las que tienen una propiedad de ordenación principal de `orderby` estrictamente buena (para ascendente) o estrictamente inferiores (para descendente) al valor especificado.<br><br>Por ejemplo, si el  `orderby` parámetro se establece en  `orderby=name,firstname`, el  `start` parámetro contendrá un valor para la  `name` propiedad. En este caso, si desea mostrar las 20 entradas siguientes de un recurso inmediatamente después del nombre &quot;Miller&quot;, debe utilizar: `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -49,7 +49,7 @@ Puede filtrar los resultados utilizando el parámetro `property` , que se utiliz
 | `<=` | Filtra si la propiedad es menor o igual que el valor proporcionado. | `property=version<=5` |
 | `>=` | Filtra por si la propiedad es buena o igual al valor proporcionado. | `property=version>=5` |
 | `~` | Filtra si la propiedad coincide con una expresión regular proporcionada. | `property=title~test$` |
-| (Ninguno) | Al indicar solo el nombre de propiedad, solo se devuelven las entradas en las que existe la propiedad. | `property=title` |
+| (Ninguna) | Al indicar solo el nombre de propiedad, solo se devuelven las entradas en las que existe la propiedad. | `property=title` |
 
 {style=&quot;table-layout:auto&quot;}
 
