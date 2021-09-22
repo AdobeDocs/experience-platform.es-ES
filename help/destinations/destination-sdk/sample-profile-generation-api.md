@@ -1,10 +1,10 @@
 ---
-description: En esta página se enumeran y describen todas las operaciones de API que puede realizar con el extremo de API `/authoring/sample-profiles`, para generar perfiles de muestra y utilizarlos en las pruebas de destino.
+description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/sample-profiles`, para generar perfiles de muestra y utilizarlos en pruebas de destino.
 title: Ejemplos de operaciones de API de generación de perfiles
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '833'
 ht-degree: 3%
 
 ---
@@ -28,6 +28,10 @@ Puede generar perfiles de ejemplo basados en el esquema de origen XDM de Adobe o
 Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API de , incluido cómo obtener el permiso de creación de destino necesario y los encabezados necesarios.
 
 ## Generación de perfiles de muestra basados en el esquema de origen {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>Agregue los perfiles de muestra generados aquí a las llamadas HTTP cuando [pruebe el destino](./test-destination.md).
 
 Puede generar perfiles de muestra basados en el esquema de origen realizando una solicitud de GET al extremo `authoring/sample-profiles/` y proporcionando el ID de una instancia de destino que ha creado en función de la configuración de destino que desea probar.
 
@@ -176,6 +180,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con el número especificado d
 {style=&quot;table-layout:auto&quot;}
 
 ## Generación de perfiles de muestra basados en el esquema de destino {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>Utilice los perfiles de ejemplo generados aquí al crear la plantilla, en el paso [plantilla de renderización](./render-template-api.md#multiple-profiles-with-body).
 
 Puede generar perfiles de ejemplo basados en el esquema de destino que realice una solicitud de GET al extremo `authoring/sample-profiles/` y proporcione el ID de destino de la configuración de destino en función del cual esté creando la plantilla.
 

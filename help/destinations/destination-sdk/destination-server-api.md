@@ -2,10 +2,10 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/destination-servers`. Las especificaciones de servidor y plantilla para su destino se pueden configurar en el SDK de destino de Adobe Experience Platform a través del punto final común "/authoring/destination-servers".
 title: Operaciones de API de extremo del servidor de destino
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 3ab19995d9520c35701912087158bf63755c55c8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 5%
+source-wordcount: '845'
+ht-degree: 6%
 
 ---
 
@@ -66,14 +66,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parámetro | Tipo | Descripción |
 | -------- | ----------- | ----------- |
-| `name` | Cadena | Representa un nombre descriptivo del servidor, visible solo para el Adobe. Este nombre no es visible para socios o clientes. Ejemplo `Moviestar destination server`. |
-| `destinationServerType` | Cadena | `URL_BASED` actualmente es la única opción disponible. |
-| `urlBasedDestination.url.templatingStrategy` | Cadena | <ul><li>Utilice `PEBBLE_V1` si el Adobe necesita transformar la dirección URL en el campo `value` que aparece a continuación. Utilice esta opción si tiene un punto final como: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilice `NONE` si no se necesita ninguna transformación en el lado del Adobe, por ejemplo si tiene un punto final como: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Cadena | Rellene la dirección del extremo de API al que se debe conectar el Experience Platform. |
-| `httpTemplate.httpMethod` | Cadena | Método que Adobe utilizará en las llamadas al servidor. Las opciones son `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | Cadena | En su lugar, utilice `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Cadena | Esta cadena es la versión con caracteres de escape que transforma los datos de los clientes de Platform al formato que el servicio espera. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la [sección Uso de plantillas](./message-format.md#using-templating). </li><li> Para obtener más información sobre el escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para ver un ejemplo de transformación sencilla, consulte la transformación [Atributos de perfil](./message-format.md#attributes). </li></ul> |
-| `httpTemplate.contentType` | Cadena | El tipo de contenido que acepta el servidor. Es muy probable que este valor sea `application/json`. |
+| `name` | Cadena | *Requerido.* Representa un nombre descriptivo del servidor, visible solo para el Adobe. Este nombre no es visible para socios o clientes. Ejemplo `Moviestar destination server`. |
+| `destinationServerType` | Cadena | *Requerido.* `URL_BASED` actualmente es la única opción disponible. |
+| `urlBasedDestination.url.templatingStrategy` | Cadena | *Requerido.* <ul><li>Utilice `PEBBLE_V1` si el Adobe necesita transformar la dirección URL en el campo `value` que aparece a continuación. Utilice esta opción si tiene un punto final como: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilice `NONE` si no se necesita ninguna transformación en el lado del Adobe, por ejemplo si tiene un punto final como: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | Cadena | *Requerido.* Rellene la dirección del extremo de API al que se debe conectar el Experience Platform. |
+| `httpTemplate.httpMethod` | Cadena | *Requerido.* Método que Adobe utilizará en las llamadas al servidor. Las opciones son `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpTemplate.requestBody.templatingStrategy` | Cadena | *Requerido.* En su lugar, utilice `PEBBLE_V1`. |
+| `httpTemplate.requestBody.value` | Cadena | *Requerido.* Esta cadena es la versión con caracteres de escape que transforma los datos de los clientes de Platform al formato que el servicio espera.  <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la [sección Uso de plantillas](./message-format.md#using-templating). </li><li> Para obtener más información sobre el escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para ver un ejemplo de transformación sencilla, consulte la transformación [Atributos de perfil](./message-format.md#attributes). </li></ul> |
+| `httpTemplate.contentType` | Cadena | *Requerido.* El tipo de contenido que acepta el servidor. Es muy probable que este valor sea `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -1,9 +1,10 @@
 ---
 description: Como parte del SDK de destino, Adobe proporciona herramientas para desarrolladores que le ayudan a configurar y probar el destino. En esta página se describe cómo crear y probar una plantilla de transformación de mensaje.
 title: Creación y prueba de una plantilla de transformación de mensaje
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-Si el ID de destino que proporciona corresponde a una plantilla de servidor de destino con `maxUsersPerRequest=1`, la solicitud devuelve una plantilla de ejemplo similar a esta:
+Si el ID de destino que proporciona corresponde a una configuración de destino con [mejor agregación de esfuerzo](./destination-configuration.md#best-effort-aggregation) y `maxUsersPerRequest=1` en la política de agregación, la solicitud devuelve una plantilla de ejemplo similar a esta:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -101,7 +102,7 @@ Si el ID de destino que proporciona corresponde a una plantilla de servidor de d
 }
 ```
 
-Si el ID de destino que proporciona corresponde a una plantilla de servidor de destino con `maxUsersPerRequest` bueno a uno, la solicitud devuelve una plantilla de ejemplo similar a esta:
+Si el ID de destino que proporciona corresponde a una plantilla de servidor de destino con [agregación configurable](./destination-configuration.md#configurable-aggregation) o [agregación de mejor esfuerzo](./destination-configuration.md#best-effort-aggregation) con `maxUsersPerRequest` buena que una, la solicitud devuelve una plantilla de ejemplo similar a esta:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

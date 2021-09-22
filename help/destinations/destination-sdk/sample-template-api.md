@@ -1,10 +1,11 @@
 ---
 description: En esta página se enumeran y describen todas las operaciones de API que puede realizar con el extremo API `/authoring/testing/template/sample` para obtener una plantilla de transformación de mensaje de prueba para su destino.
 title: Obtener operaciones de API de plantilla de ejemplo
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 2%
+source-wordcount: '401'
+ht-degree: 1%
 
 ---
 
@@ -58,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 Una respuesta correcta devuelve el estado HTTP 200 con una plantilla de ejemplo que puede editar para que coincida con el formato de datos esperado.
 
-Si el ID de destino que proporciona corresponde a una plantilla de servidor de destino con `maxUsersPerRequest=1`, la solicitud devuelve una plantilla de ejemplo similar a esta:
+Si el ID de destino que proporciona corresponde a una configuración de destino con [mejor agregación de esfuerzo](./destination-configuration.md#best-effort-aggregation) y `maxUsersPerRequest=1` en la política de agregación, la solicitud devuelve una plantilla de ejemplo similar a esta:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +92,7 @@ Si el ID de destino que proporciona corresponde a una plantilla de servidor de d
 }
 ```
 
-Si el ID de destino que proporciona corresponde a una plantilla de servidor de destino con `maxUsersPerRequest` bueno a uno, la solicitud devuelve una plantilla de ejemplo similar a esta:
+Si el ID de destino que proporciona corresponde a una plantilla de servidor de destino con [agregación configurable](./destination-configuration.md#configurable-aggregation) o [agregación de mejor esfuerzo](./destination-configuration.md#best-effort-aggregation) con `maxUsersPerRequest` buena que una, la solicitud devuelve una plantilla de ejemplo similar a esta:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
