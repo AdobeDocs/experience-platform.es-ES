@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Core
 description: Últimas notas de la versión de la extensión Core en Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
+source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 81%
+source-wordcount: '1522'
+ht-degree: 76%
 
 ---
 
@@ -14,6 +14,22 @@ ht-degree: 81%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 23 de septiembre de 2021
+
+Versión 3.2.1
+
+* Se ha corregido un error en el que la inicialización de la vista de elementos de datos de valor condicional no funcionaba correctamente cuando los valores de campo eran 0.
+
+## 23 de septiembre de 2021
+
+Versión 3.2.0
+
+Se introdujeron los siguientes cambios en el elemento de datos Valor condicional :
+
+* Agregue una casilla para los valores condicionales y de reserva que permita al usuario elegir si desea que el valor devuelto sea undefined .
+* Los valores numéricos se exponen como números en el objeto de configuración.
+* Ya no es necesario un valor condicional para que se pueda comportar del mismo modo que el valor de reserva.
 
 ## 17 de septiembre de 2021
 
