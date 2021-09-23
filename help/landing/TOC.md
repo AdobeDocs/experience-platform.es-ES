@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
-source-git-commit: a154ff9dd2a2091a427f7e650a9cb6bc57cbdfb5
+source-git-commit: a0954c6134c532fbcecadd8b4b8775fdf28711da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 23%
+source-wordcount: '205'
+ht-degree: 22%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 23%
 
 * [Información general de plataforma](home.md)
 * [Información general de la plataforma (vídeo)](video/platform-overview.md)
+* [Tutoriales de Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Una experiencia de cliente ofrecida por Platform (vídeo)](video/customer-experience.md)
 * [Entre bastidores de una experiencia de cliente ofrecida por Platform (vídeo)](video/customer-experience-bts.md)
 * Primeros pasos {#getting-started}
