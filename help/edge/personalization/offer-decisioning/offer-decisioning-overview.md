@@ -3,9 +3,9 @@ title: Uso del Offer decisioning con el SDK web de Platform
 description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer decisioning.
 keywords: offer decisioning;toma de decisiones;SDK web;SDK web de plataforma;ofertas personalizadas;entrega de ofertas;entrega de ofertas;personalización de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a688fed26a8f641347ed1c625bfe448004f75b0
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '826'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->El uso de Offer decisioning en el SDK web de Adobe Experience Platform está disponible actualmente en acceso anticipado para determinados usuarios. Esta funcionalidad no está disponible para todas las organizaciones de IMS.
+>El uso de Offer decisioning en el SDK web de Adobe Experience Platform está disponible en acceso anticipado para determinados usuarios. Esta funcionalidad no está disponible para todas las organizaciones de IMS.
 
 Adobe Experience Platform [!DNL Web SDK] puede entregar y procesar ofertas personalizadas que se administran en Offer decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario (IU) o las API de Offer decisioning.
 
@@ -30,7 +30,7 @@ Es importante comprender la siguiente terminología al trabajar con Offer decisi
 
 * **Contenedor:** un contenedor es un mecanismo de aislamiento para mantener separadas diferentes preocupaciones. El ID de contenedor es el primer elemento de ruta para todas las API de repositorio. Todos los objetos de decisión residen dentro de un contenedor.
 
-* **Ámbitos de decisión:** Para Offer decisioning, estas son las cadenas codificadas Base64 de JSON que contienen los ID de actividad y ubicación que desea que utilice el servicio de offer decisioning para proponer ofertas.
+* **Ámbitos de decisión:** Para el Offer decisioning, los ámbitos de decisión son las cadenas codificadas Base64 de JSON que contienen los ID de actividad y ubicación que desea que utilice el servicio de offer decisioning para proponer ofertas.
 
    *Ámbito de la decisión JSON:*
 
@@ -55,11 +55,11 @@ Es importante comprender la siguiente terminología al trabajar con Offer decisi
 
 * **Datastreams:** Para obtener más información, lea la documentación de  [](../../fundamentals/datastreams.md) datastreamsdocumentation.
 
-* **Identidad**: Para obtener más información, consulte esta documentación que describe cómo el SDK web de  [Platform aprovecha el servicio](../../identity/overview.md) de identidad.
+* **Identidad**: Para obtener más información, consulte esta documentación que describe cómo utiliza el SDK web de  [Platform el servicio](../../identity/overview.md) de identidad.
 
 ## Activación del Offer decisioning
 
-Para habilitar el Offer decisioning, debe realizar los siguientes pasos:
+Para habilitar el Offer decisioning, realice los pasos siguientes:
 
 1. Adobe Experience Platform habilitado en su [almacén de datos](../../fundamentals/datastreams.md) y marque la casilla &quot;Offer decisioning&quot;
 
@@ -85,7 +85,7 @@ Para habilitar el Offer decisioning, debe realizar los siguientes pasos:
 
       1. [Crear una propiedad de etiqueta](../../../tags/ui/administration/companies-and-properties.md)
       1. [Añadir el código de incrustación de ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Instale y configure la extensión del SDK web de Platform con el Datastream que acaba de crear seleccionando la configuración en la lista desplegable &quot;Datastream&quot;. Consulte la documentación sobre [extensiones](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. Instale y configure la extensión del SDK web de Platform con el Datastream que ha creado seleccionando la configuración en la lista desplegable &quot;Datastream&quot;. Consulte la documentación sobre [extensiones](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
@@ -329,3 +329,7 @@ Para habilitar el Offer decisioning, debe realizar los siguientes pasos:
 | `content` | Contenido asociado con la oferta propuesta en formato de cadena. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | Contenido de imagen asociado con la oferta propuesta en formato de URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | Características asociadas con la oferta propuesta en el formato de un objeto JSON. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+
+## Limitaciones
+
+Algunas restricciones de oferta actualmente no son compatibles con los flujos de trabajo móviles de Experience Edge, por ejemplo, Restricción. El valor del campo Restricción especifica el número de veces que se puede presentar una oferta en todos los usuarios. Para obtener más información, consulte [Documentación de reglas y restricciones de idoneidad para ofertas](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
