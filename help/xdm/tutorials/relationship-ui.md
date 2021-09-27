@@ -6,14 +6,18 @@ description: Este documento proporciona un tutorial para definir una relación e
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
+source-git-commit: 2118dc175b421e856c6b0a33a83a7238f01b7ee3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1020'
 ht-degree: 0%
 
 ---
 
 # Defina una relación entre dos esquemas con el [!DNL Schema Editor]
+
+>[!NOTE]
+>
+>Si utiliza la plataforma de datos del cliente en tiempo real B2B Edition, consulte la guía sobre la [creación de relaciones B2B](./relationship-b2b.md) en su lugar.
 
 La capacidad de comprender las relaciones entre los clientes y sus interacciones con la marca a través de varios canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de los esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
 

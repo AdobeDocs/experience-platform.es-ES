@@ -1,9 +1,9 @@
 ---
 title: Clase de relación de persona de cuenta comercial XDM
 description: Este documento proporciona información general sobre la clase de relación de persona de cuenta empresarial XDM en el Modelo de datos de experiencia (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '324'
 ht-degree: 3%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Esta clase solo está disponible para organizaciones que tienen acceso a la edición B2B de la plataforma de datos del cliente en tiempo real.
+>Esta clase solo está disponible para organizaciones que tienen acceso a la plataforma de datos del cliente en tiempo real B2B Edition.
 
 [!UICONTROL XDM Business Account Person ] una clase estándar del Experience Data Model (XDM) que captura las propiedades mínimas requeridas de una persona asociada a una cuenta comercial.
 
@@ -35,3 +35,5 @@ ht-degree: 3%
 | `personRole` | Cadena | Función de la persona en la relación entre cuenta y persona. |
 | `relationEndDate` | DateTime | La fecha en la que finalizó la relación entre la cuenta y la persona. |
 | `relationStartDate` | DateTime | La fecha en la que se inició la relación entre la cuenta y la persona. |
+
+Consulte la guía sobre las [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.

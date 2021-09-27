@@ -1,9 +1,9 @@
 ---
 title: Clase de lista de marketing empresarial XDM
 description: Este documento proporciona información general sobre la clase XDM Business Marketing List en Experience Data Model (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '200'
 ht-degree: 3%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Esta clase solo está disponible para organizaciones que tienen acceso a la edición B2B de la plataforma de datos del cliente en tiempo real.
+>Esta clase solo está disponible para organizaciones que tienen acceso a la plataforma de datos del cliente en tiempo real B2B Edition.
 
 [!UICONTROL XDM Business Marketing ] List es una clase estándar de Experience Data Model (XDM) que captura las propiedades mínimas requeridas de una lista de marketing. Las listas de marketing permiten priorizar a los clientes potenciales que tienen más probabilidades de comprar un producto.
 
@@ -26,3 +26,5 @@ ht-degree: 3%
 | `marketingListDescription` | Cadena | Una descripción para la lista de marketing. |
 | `marketingListID` | Cadena | Un ID único para la entidad de la lista de marketing. |
 | `marketingListName` | Cadena | Nombre de la lista de marketing. |
+
+Consulte la guía sobre las [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.
