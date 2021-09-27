@@ -1,18 +1,18 @@
 ---
 title: Clase de miembros de la lista de marketing empresarial XDM
 description: Este documento proporciona información general sobre la clase de miembros de la lista de marketing empresarial XDM en el modelo de datos de experiencia (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '236'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM Business Marketing List ] Membersclass
+# [!UICONTROL XDM Business Marketing List ] Membersclass (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Esta clase solo está disponible para organizaciones que tienen acceso a la plataforma de datos del cliente en tiempo real B2B Edition.
+>Esta clase está disponible como parte de la plataforma de datos del cliente en tiempo real B2B Edition, que actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 [!UICONTROL La ] pertenencia a la lista de marketing empresarial XDM es una clase estándar del Modelo de datos de experiencia (XDM) que describe miembros, personas o contactos asociados con una lista de marketing.
 

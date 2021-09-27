@@ -1,18 +1,18 @@
 ---
 title: Clase de cuenta comercial XDM
 description: Este documento proporciona información general sobre la clase de cuenta empresarial XDM en el Modelo de datos de experiencia (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '172'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM Business ] Accountclass
+# [!UICONTROL XDM Business ] Accountclass (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Esta clase solo está disponible para organizaciones que tienen acceso a la plataforma de datos del cliente en tiempo real B2B Edition.
+>Esta clase está disponible como parte de la plataforma de datos del cliente en tiempo real B2B Edition, que actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 [!UICONTROL XDM Business ] Account es una clase estándar del Experience Data Model (XDM) que captura las propiedades mínimas requeridas de una cuenta comercial.
 
