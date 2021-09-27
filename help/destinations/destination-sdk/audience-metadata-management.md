@@ -1,7 +1,8 @@
 ---
 description: Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias de forma programada en el destino. Adobe proporciona una plantilla de metadatos de audiencia extensible, que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la plantilla, Adobe la utilizará para estructurar las llamadas de API al destino.
 title: Gestión de metadatos de audiencia
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 1%
@@ -54,7 +55,7 @@ Puede utilizar la plantilla genérica para [crear una nueva plantilla de audienc
 
 El equipo de ingeniería de Adobes puede trabajar con usted para expandir la plantilla genérica con campos personalizados si sus casos de uso lo requieren.
 
-## Ejemplos de plantilla {#template-examples}
+## Ejemplos de configuración {#configuration-examples}
 
 Esta sección incluye tres ejemplos de configuraciones de metadatos de audiencia genéricas, para su referencia, junto con descripciones de las secciones principales de la configuración. Observe cómo la dirección URL, los encabezados, la solicitud y el cuerpo de respuesta difieren entre las tres configuraciones de ejemplo. Esto se debe a las diferentes especificaciones de la API de marketing de las tres plataformas de muestra.
 
