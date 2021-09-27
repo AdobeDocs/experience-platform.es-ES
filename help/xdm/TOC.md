@@ -4,10 +4,10 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases del Modelo de datos de experiencia (XDM) y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+source-git-commit: cf0f0a46cc337d21c47a9b3a2fc12f8a7a6cb828
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 17%
+source-wordcount: '375'
+ht-degree: 15%
 
 ---
 
@@ -31,6 +31,15 @@ ht-degree: 17%
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Definición del segmento](./classes/segment-definition.md)
+   * Clases B2B {#b2b}
+      * [Cuenta comercial XDM](./classes/b2b/business-account.md)
+      * [Relación de persona de cuenta comercial XDM](./classes/b2b/business-account-person-relation.md)
+      * [Campaña empresarial XDM](./classes/b2b/business-campaign.md)
+      * [Miembros de XDM Business Campaign](./classes/b2b/business-campaign-members.md)
+      * [Oportunidad comercial XDM](./classes/b2b/business-opportunity.md)
+      * [Relación de persona de oportunidad comercial XDM](./classes/b2b/business-opportunity-person-relation.md)
+      * [Lista de marketing empresarial XDM](./classes/b2b/business-marketing-list.md)
+      * [Miembros de la lista de marketing empresarial XDM](./classes/b2b/business-marketing-list-members.md)
 * Grupos de campos de esquema {#field-groups}
    * Grupos de campos de perfil {#profile}
       * [Detalles demográficos](./field-groups/profile/demographic-details.md)
@@ -42,6 +51,8 @@ ht-degree: 17%
       * [Detalles de pertenencia a segmentos](./field-groups/profile/segmentation.md)
       * [Suscripción a Telecom](./field-groups/profile/telecom-subscription.md)
       * [Detalles de contacto de trabajo](./field-groups/profile/work-contact-details.md)
+      * [Componentes de persona empresarial XDM](./field-groups/profile/business-person-components.md)
+      * [Detalles de persona comercial XDM](./field-groups/profile/business-person-details.md)
    * Grupos de campos de eventos {#event}
       * [Detalles de marketing de campaña](./field-groups/event/campaign-marketing-details.md)
       * [Detalles del canal](./field-groups/event/channel-details.md)
@@ -57,9 +68,10 @@ ht-degree: 17%
       * [Detalles web](./field-groups/event/web-details.md)
    * [Actualizaciones del nombre del grupo de campos](./field-groups/name-updates.md)
 * Tipos de datos {#data-types}
-   * [de asistencia al cliente](./data-types/application.md)
+   * [Aplicación](./data-types/application.md)
    * [Señalización](./data-types/beacon.md)
    * [Detalles del explorador](./data-types/browser-details.md)
+   * [Fuente B2B](./data-types/b2b-source.md)
    * [Comercio](./data-types/commerce.md)
    * [Cadena de consentimiento](./data-types/consent-string.md)
    * [Consentimientos y preferencias](./data-types/consents.md)
@@ -68,6 +80,7 @@ ht-degree: 17%
    * [Correo electrónico Dirección](./data-types/email-address.md)
    * [Entorno](./data-types/environment.md)
    * [Canal de experiencia](./data-types/experience-channel.md)
+   * [Atributos de auditoría del sistema de fuentes externas](./data-types/external-source-system-audit-attributes.md)
    * [Campo de consentimiento genérico](./data-types/consent-field.md)
    * [Campo de preferencia de marketing genérico](./data-types/marketing-field.md)
    * [Campo de preferencia de marketing genérico con suscripciones](./data-types/marketing-field-subscriptions.md)

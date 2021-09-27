@@ -5,9 +5,9 @@ title: Clase de perfil individual XDM
 topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -42,12 +42,17 @@ La propia clase [!DNL XDM Individual Profile] proporciona varios valores generad
 
 Adobe proporciona varios grupos de campos estándar para su uso con la clase [!DNL XDM Individual Profile]. A continuación se muestra una lista de algunos grupos de campos utilizados con frecuencia para la clase :
 
+* [[!UICONTROL Consentimientos y preferencias]](../field-groups/profile/consents.md)
 * [[!UICONTROL Detalles demográficos]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL Mapa de identidades]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Detalles de fidelidad]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Detalles de contacto personal]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Consentimientos y preferencias]](../field-groups/profile/consents.md)
 * [[!UICONTROL Detalles de pertenencia a segmentos]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL Suscripción a Telecom]](../field-groups/profile/telecom-subscription.md)
 * [[!UICONTROL Detalles de contacto de trabajo]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Componentes]](../field-groups/profile/business-person-components.md) de persona empresarial XDM\*
+* [[!UICONTROL Detalles]](../field-groups/profile/business-person-details.md) de persona empresarial XDM\*
+
+*\*Este grupo de campos solo está disponible para organizaciones con acceso a la edición B2B de la plataforma de datos del cliente en tiempo real.*
 
 Para obtener una lista completa de todos los grupos de campos compatibles con [!DNL XDM Individual Profile], consulte el [Repositorio de GitHub XDM](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).
