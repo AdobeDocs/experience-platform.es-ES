@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de API del perfil del cliente en tiempo real
 description: La API de perfil de cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de perfil, incluidos la visualización de perfiles, la creación y actualización de políticas de combinación, la exportación o la muestra de datos de perfil y la eliminación de datos de perfil que ya no son necesarios o que se añadieron por error. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '963'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ A medida que los datos se incorporan en Platform, se ejecuta un trabajo de muest
 ## Trabajos del sistema de perfiles {#profile-system-jobs}
 
 Los datos habilitados para perfiles que se incorporan en [!DNL Platform] se almacenan en el [!DNL Data Lake], así como en el [!DNL Real-time Customer Profile] almacén de datos. En ocasiones puede ser necesario eliminar un conjunto de datos o lote del almacén [!DNL Profile] para eliminar los datos que ya no necesita o que se añadieron por error. Esto requiere utilizar la API para crear un [!DNL Profile System Job], también conocido como &quot;[!DNL delete request]&quot;, que se puede modificar, supervisar o eliminar si es necesario. Para aprender a trabajar con solicitudes de eliminación mediante el extremo `/system/jobs` de la API [!DNL Real-time Customer Profile], siga los pasos descritos en la [guía de extremo de trabajos del sistema de perfiles](profile-system-jobs.md).
+
+## Actualizar atributos de perfiles {#update-profile}
+
+En ocasiones puede ser necesario actualizar los datos en el Almacenamiento de perfiles de su organización. Por ejemplo, es posible que necesite corregir registros o cambiar un valor de atributo. Esto se puede hacer mediante la ingesta por lotes o de flujo continuo y requiere un conjunto de datos habilitado para Perfil configurado con una etiqueta de actualización. Para obtener más información sobre cómo configurar un conjunto de datos para actualizaciones de atributos, consulte el tutorial para [habilitar un conjunto de datos para Perfil y actualizar](../../catalog/datasets/enable-upsert.md).
 
 ## Pasos siguientes {#next-steps}
 

@@ -2,90 +2,26 @@
 keywords: Experience Platform;inicio;temas populares;ingesta por lotes;ingesta por lotes;ingesta;guía para desarrolladores;guía de api;cargar;ingesta de parquet;ingesta de json;
 solution: Experience Platform
 title: Guía de API de ingesta de lotes
-topic-legacy: developer guide
-description: Este documento proporciona una descripción general completa del uso de las API de ingesta por lotes.
+description: Este documento proporciona una guía completa para los desarrolladores que trabajan con API de ingesta por lotes para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 7%
+source-wordcount: '2373'
+ht-degree: 5%
 
 ---
 
-# Guía de API de ingesta por lotes
+# Guía para desarrolladores de ingesta por lotes
 
-Este documento proporciona una descripción general completa del uso de [API de ingesta por lotes](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+Este documento proporciona una guía completa sobre el uso de [extremos](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) de la API de ingesta por lotes en Adobe Experience Platform. Para obtener información general sobre las API de ingesta por lotes, incluidos los requisitos previos y las prácticas recomendadas, lea en primer lugar la [información general de la API de ingesta por lotes](overview.md).
 
 El apéndice de este documento proporciona información sobre los [datos de formato que se utilizarán para la ingesta](#data-transformation-for-batch-ingestion), incluidos archivos de datos CSV y JSON de muestra.
 
 ## Primeros pasos
 
-La ingesta de datos proporciona una API RESTful mediante la cual puede realizar operaciones CRUD básicas con los tipos de objeto admitidos.
+Los extremos de API utilizados en esta guía forman parte de la [API de ingesta de datos](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). La ingesta de datos proporciona una API RESTful mediante la cual puede realizar operaciones CRUD básicas con los tipos de objeto admitidos.
 
-Las secciones siguientes proporcionan información adicional que debe conocer o tener disponible para realizar llamadas correctamente a la API de ingesta de lotes.
-
-Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
-
-- [Ingesta por lotes](./overview.md): Permite introducir datos en Adobe Experience Platform como archivos por lotes.
-- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
-- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
-
-### Leer llamadas de API de ejemplo
-
-Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
-
-### Recopilar valores para encabezados necesarios
-
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
->[!NOTE]
->
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
-
-Las solicitudes que contienen una carga útil (POST, PUT, PATCH) pueden requerir un encabezado `Content-Type` adicional. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada .
-
-## Tipos
-
-Al ingerir datos, es importante comprender cómo funcionan los esquemas [!DNL Experience Data Model] (XDM). Para obtener más información sobre cómo se asignan los tipos de campo XDM a diferentes formatos, lea la [Guía para desarrolladores del Registro de Esquemas](../../xdm/api/getting-started.md).
-
-Hay cierta flexibilidad a la hora de introducir datos: si un tipo no coincide con lo que hay en el esquema de destino, los datos se convertirán al tipo de destino expresado. Si no puede, fallará el lote con un `TypeCompatibilityException`.
-
-Por ejemplo, ni JSON ni CSV tienen un tipo de fecha o fecha y hora. Como resultado, estos valores se expresan utilizando [cadenas con formato ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tiempo Unix formateado en milisegundos (15312639 59000) y se convierten en el momento de la ingesta al tipo XDM de destino.
-
-La tabla siguiente muestra las conversiones admitidas al introducir datos.
-
-| Entrante (fila) frente a Target (col.) | Cadena | Byte | Corto | Número entero | Largo | Duplicada | Fecha  | Date-Time | Objeto | Mapa |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Cadena | X | X | X | X | X | X | X | X |  |  |
-| Byte | X | X | X | X | X | X |  |  |  |  |
-| Corto | X | X | X | X | X | X |  |  |  |  |
-| Número entero | X | X | X | X | X | X |  |  |  |  |
-| Largo | X | X | X | X | X | X | X | X |  |  |
-| Duplicada | X | X | X | X | X | X |  |  |  |  |
-| Fecha  |  |  |  |  |  |  | X |  |  |  |
-| Date-Time |  |  |  |  |  |  |  | X |  |  |
-| Objeto |  |  |  |  |  |  |  |  | X | X |
-| Mapa |  |  |  |  |  |  |  |  | X | X |
-
->[!NOTE]
->
->Los booleanos y las matrices no se pueden convertir a otros tipos.
-
-## Restricciones de ingesta
-
-La ingesta de datos por lotes tiene algunas restricciones:
-- Número máximo de archivos por lote: 1500
-- Tamaño máximo del lote: 100 GB
-- Número máximo de propiedades o campos por fila: 10000
-- Número máximo de lotes por minuto, por usuario: 138
+Antes de continuar, revise la [información general de la API de ingesta por lotes](overview.md) y la [guía de introducción](getting-started.md).
 
 ## Ingesta de archivos JSON
 
@@ -157,7 +93,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Cargar archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar el ID de lote de la respuesta de creación del lote para cargar los archivos en el lote. Puede cargar varios archivos en el lote.
 
 >[!NOTE]
 >
@@ -231,7 +167,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## Ingesta de archivos de parquet
+## Ingesta de archivos de parquet {#ingest-parquet-files}
 
 >[!NOTE]
 >
@@ -812,6 +748,21 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
+## Parche de un lote
+
+En ocasiones puede ser necesario actualizar los datos en el Almacenamiento de perfiles de su organización. Por ejemplo, es posible que necesite corregir registros o cambiar un valor de atributo. Adobe Experience Platform admite la actualización o el parche de datos del Almacenamiento de perfiles mediante una acción de actualización o &quot;parche de un lote&quot;.
+
+>[!NOTE]
+>
+>Estas actualizaciones solo se permiten en registros de perfil, no en eventos de experiencia.
+
+Se requiere lo siguiente para parche de un lote:
+
+- **Conjunto de datos habilitado para actualizaciones de perfiles y atributos.** Esto se realiza mediante etiquetas de conjuntos de datos y requiere que se agregue una  `isUpsert:true` etiqueta específica a la  `unifiedProfile` matriz. Para obtener más información sobre los pasos que muestran cómo crear un conjunto de datos o configurar un conjunto de datos existente para su actualización, siga el tutorial para [habilitar un conjunto de datos para actualizaciones de perfil](../../catalog/datasets/enable-upsert.md).
+- **Archivo de parquet que contiene los campos que se van a parchear y los campos de identidad para el perfil.** El formato de datos para la revisión de un lote es similar al proceso normal de ingesta por lotes. La entrada necesaria es un archivo Parquet y, además de los campos que se van a actualizar, los datos cargados deben contener los campos de identidad para que coincidan con los datos del Almacenamiento de perfiles.
+
+Una vez que tenga un conjunto de datos habilitado para Profile y upsert, y un archivo de parquet que contenga los campos que desea parche, así como los campos de identidad necesarios, puede seguir los pasos para [ingesta de archivos de parquet](#ingest-parquet-files) para completar el parche mediante la ingesta por lotes.
+
 ## Reproducir un lote
 
 Si desea reemplazar un lote ya ingestado, puede hacerlo con &quot;reproducción por lotes&quot;: esta acción equivale a eliminar el lote antiguo e ingerir uno nuevo en su lugar.
@@ -963,6 +914,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 ```
 
 ## Apéndice
+
+La siguiente sección contiene información adicional para la ingesta de datos en Experience Platform mediante ingesta por lotes.
 
 ### Transformación de datos para la ingesta por lotes
 

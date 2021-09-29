@@ -1,0 +1,273 @@
+---
+keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API;habilitar conjunto de datos
+title: Habilitar un conjunto de datos para actualizaciones de perfil mediante API
+type: Tutorial
+description: Este tutorial le muestra cómo utilizar las API de Adobe Experience Platform para habilitar un conjunto de datos con capacidades de "actualización" para realizar actualizaciones en los datos del perfil del cliente en tiempo real.
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
+workflow-type: tm+mt
+source-wordcount: '967'
+ht-degree: 2%
+
+---
+
+
+# Habilitar un conjunto de datos para actualizaciones de perfil mediante API
+
+Este tutorial trata el proceso de activación de un conjunto de datos con capacidades de &quot;actualización&quot; para realizar actualizaciones en los datos del perfil del cliente en tiempo real. Esto incluye pasos para crear un nuevo conjunto de datos y configurar un conjunto de datos existente.
+
+## Primeros pasos
+
+Este tutorial requiere una comprensión práctica de varios servicios de Adobe Experience Platform involucrados en la administración de conjuntos de datos con perfil habilitado. Antes de comenzar este tutorial, revise la documentación de estos servicios de plataforma DNL relacionados:
+
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Catalog Service]](../../catalog/home.md): Una API de RESTful que permite crear conjuntos de datos y configurarlos para  [!DNL Real-time Customer Profile] y  [!DNL Identity Service].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia del cliente.
+- [Ingesta por lotes](../../ingestion/batch-ingestion/overview.md)
+
+Las secciones siguientes proporcionan información adicional que debe conocer para realizar llamadas correctamente a las API de Platform.
+
+### Leer llamadas de API de ejemplo
+
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+
+### Recopilar valores para encabezados necesarios
+
+Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
+
+Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado `Content-Type` adicional. El valor correcto de este encabezado se muestra en las solicitudes de muestra donde es necesario.
+
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado `x-sandbox-name` que especifique el nombre del simulador para pruebas en el que se realizará la operación. Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+
+## Crear un conjunto de datos habilitado para las actualizaciones de perfil
+
+Al crear un nuevo conjunto de datos, puede habilitar ese conjunto de datos para Perfil y habilitar las capacidades de actualización en el momento de la creación.
+
+>[!NOTE]
+>
+>Para crear un nuevo conjunto de datos habilitado para Perfil, debe conocer el ID de un esquema XDM existente que esté habilitado para Perfil. Para obtener información sobre cómo buscar o crear un esquema habilitado para perfil, consulte el tutorial sobre la [creación de un esquema mediante la API del Registro de esquemas](../../xdm/tutorials/create-schema-api.md).
+
+Para crear un conjunto de datos habilitado para Perfil y actualizaciones, utilice una solicitud de POST al extremo `/dataSets` .
+
+**Formato de API**
+
+```http
+POST /dataSets
+```
+
+**Solicitud**
+
+Al incluir `unifiedProfile` en `tags` en el cuerpo de la solicitud, el conjunto de datos se habilitará para [!DNL Profile] al crearlo. Dentro de la matriz `unifiedProfile`, al agregar `isUpsert:true` se agregará la capacidad de que el conjunto de datos admita actualizaciones.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/catalog/dataSets \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "fields":[],
+        "schemaRef" : {
+          "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
+          "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
+        },
+        "tags" : {
+          "unifiedProfile": [
+            "enabled:true",
+            "isUpsert:true"
+          ]
+        }
+      }'
+```
+
+| Propiedad | Descripción |
+|---|---|
+| `schemaRef.id` | El ID del esquema habilitado para [!DNL Profile] en el que se basará el conjunto de datos. |
+| `{TENANT_ID}` | El espacio de nombres dentro de [!DNL Schema Registry] que contiene recursos pertenecientes a su organización de IMS. Consulte la sección [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) de la guía para desarrolladores de [!DNL Schema Registry] para obtener más información. |
+
+**Respuesta**
+
+Una respuesta correcta muestra una matriz que contiene el ID del conjunto de datos recién creado en forma de `"@/dataSets/{DATASET_ID}"`.
+
+```json
+[
+    "@/dataSets/5b020a27e7040801dedbf46e"
+] 
+```
+
+## Configurar un conjunto de datos existente {#configure-an-existing-dataset}
+
+Los siguientes pasos tratan sobre cómo configurar un conjunto de datos habilitado para Perfil existente para la funcionalidad de actualización (&quot;actualización&quot;).
+
+>[!NOTE]
+>
+>Para configurar un conjunto de datos habilitado para Perfil existente para &quot;upsert&quot;, primero debe deshabilitar el conjunto de datos para Perfil y luego volver a habilitarlo junto a la etiqueta `isUpsert` . Si el conjunto de datos existente no está habilitado para Perfil, puede continuar directamente con los pasos para [habilitar el conjunto de datos para Perfil y actualizar](#enable-the-dataset). Si no está seguro, los siguientes pasos le muestran cómo comprobar si el conjunto de datos ya está habilitado.
+
+### Comprobar si el conjunto de datos está habilitado para Perfil
+
+Con la API [!DNL Catalog], puede inspeccionar un conjunto de datos existente para determinar si está habilitado para su uso en [!DNL Real-time Customer Profile]. La siguiente llamada recupera los detalles de un conjunto de datos por ID.
+
+**Formato de API**
+
+```http
+GET /dataSets/{DATASET_ID}
+```
+
+| Parámetro | Descripción |
+|---|---|
+| `{DATASET_ID}` | El ID de un conjunto de datos que desea inspeccionar. |
+
+**Solicitud**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Respuesta**
+
+```json
+{
+    "5b020a27e7040801dedbf46e": {
+        "name": "{DATASET_NAME}",
+        "imsOrg": "{IMS_ORG}",
+        "tags": {
+            "adobe/pqs/table": [
+                "unifiedprofileingestiontesteventsdataset"
+            ],
+            "unifiedProfile": [
+                "enabled:true"
+            ]
+        },
+        "lastBatchId": "{BATCH_ID}",
+        "lastBatchStatus": "success",
+        "dule": {},
+        "statsCache": {
+            "startDate": null,
+            "endDate": null
+        },
+        "namespace": "ACP",
+        "state": "DRAFT",
+        "version": "1.0.1",
+        "created": 1536536917382,
+        "updated": 1539793978215,
+        "createdClient": "{CLIENT_CREATED}",
+        "createdUser": "{CREATED_BY}",
+        "updatedUser": "{CREATED_BY}",
+        "viewId": "{VIEW_ID}",
+        "status": "enabled",
+        "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
+        "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
+        "schema": "{SCHEMA}",
+        "schemaMetadata": {
+            "primaryKey": [],
+            "delta": [],
+            "dule": [],
+            "gdpr": []
+        },
+        "schemaRef": {
+            "id": "https://ns.adobe.com/xdm/context/experienceevent",
+            "contentType": "application/vnd.adobe.xed+json"
+        }
+    }
+}
+```
+
+En la propiedad `tags` puede ver que `unifiedProfile` está presente con el valor `enabled:true`. Por lo tanto, [!DNL Real-time Customer Profile] está habilitado para este conjunto de datos.
+
+### Deshabilitar el conjunto de datos para el perfil
+
+Para configurar un conjunto de datos habilitado para perfil para actualizaciones, primero debe deshabilitar la etiqueta `unifiedProfile` y luego volver a habilitarla junto a la etiqueta `isUpsert` . Esto se realiza mediante dos solicitudes de PATCH, una para deshabilitar y otra para volver a habilitar.
+
+>[!WARNING]
+>
+>Los datos introducidos en el conjunto de datos mientras está deshabilitado no se incorporarán en el Almacenamiento de perfiles. Se recomienda evitar la ingesta de datos en el conjunto de datos hasta que se vuelva a habilitar para Perfil.
+
+**Formato de API**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| Parámetro | Descripción |
+|---|---|
+| `{DATASET_ID}` | El ID de un conjunto de datos que desea actualizar. |
+
+**Solicitud**
+
+El primer cuerpo de solicitud del PATCH incluye una `path` a `unifiedProfile` configuración `value` en `enabled:false` para deshabilitar la etiqueta.
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+  -H 'Content-Type:application/json-patch+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '[
+        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] },
+      ]'
+```
+
+****
+RespuestaUna solicitud correcta del PATCH devuelve el Estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La etiqueta `unifiedProfile` se ha deshabilitado.
+
+```json
+[
+    "@/dataSets/5b020a27e7040801dedbf46e"
+]
+```
+
+### Habilitar el conjunto de datos para Perfil y actualizar {#enable-the-dataset}
+
+Se puede habilitar un conjunto de datos existente para las actualizaciones de perfiles y atributos mediante una única solicitud de PATCH.
+
+**Formato de API**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| Parámetro | Descripción |
+|---|---|
+| `{DATASET_ID}` | El ID de un conjunto de datos que desea actualizar. |
+
+**Solicitud**
+
+El cuerpo de la solicitud incluye una configuración `path` para `unifiedProfile` para incluir las etiquetas `enabled` y `isUpsert`, ambas configuradas como `true`.`value`
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+  -H 'Content-Type:application/json-patch+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '[
+        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+      ]'
+```
+
+****
+RespuestaUna solicitud correcta del PATCH devuelve el Estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La etiqueta `unifiedProfile` ahora se ha habilitado y configurado para actualizaciones de atributos.
+
+```json
+[
+    "@/dataSets/5b020a27e7040801dedbf46e"
+]
+```
+
+## Pasos siguientes
+
+Ahora, los flujos de trabajo de ingesta por lotes y de transmisión pueden utilizar el conjunto de datos habilitado para perfiles y para servidor para realizar actualizaciones en los datos del perfil. Para obtener más información sobre la ingesta de datos en Adobe Experience Platform, comience por leer la [información general sobre la ingesta de datos](../../ingestion/home.md).

@@ -3,13 +3,13 @@ keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución
 title: Generar el informe de superposición de conjunto de datos
 type: Tutorial
 description: Este tutorial describe los pasos necesarios para generar el informe de superposición de conjuntos de datos mediante la API de perfil del cliente en tiempo real.
-source-git-commit: f30f87527f5e903c851a140e7cbaad1964a48803
+exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
 
 ---
-
 
 # Generar el informe de superposición de conjuntos de datos
 
@@ -82,7 +82,7 @@ Para solicitar el informe de superposición de conjuntos de datos mediante Postm
 * Introduzca los valores que generó durante la autenticación en la columna `VALUE` , sustituyendo los llaves (`{{ }}`) y cualquier contenido dentro de los llaves.
 * Introduzca la ruta de solicitud con o sin el parámetro opcional `date`:
    `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap`\
-   O bien
+   o
    `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=YYYY-MM-DD`
 
 | Parámetro | Descripción |
@@ -124,6 +124,7 @@ Para interpretar los resultados del informe, considere el siguiente ejemplo:
 ```
 
 Este informe proporciona la siguiente información:
+
 * Hay 123 perfiles compuestos de datos procedentes de los siguientes conjuntos de datos: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Hay 454.412 perfiles compuestos de datos procedentes de estos dos conjuntos de datos: `5d92921872831c163452edc8` y `5eb2cdc6fa3f9a18a7592a98`.
 * Hay 107 perfiles que están compuestos solamente de datos del conjunto de datos `5eeda0032af7bb19162172a7`.

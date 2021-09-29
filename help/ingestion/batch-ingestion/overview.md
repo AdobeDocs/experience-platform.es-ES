@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;ingesta de datos;lote;habilitar conjunto de datos;información general sobre ingesta por lotes;información general;información general sobre ingesta por lotes
 solution: Experience Platform
-title: Información general sobre la ingesta de lotes
+title: Información general sobre la API de ingesta de lotes
 topic-legacy: overview
 description: La API de ingesta de datos de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos introducidos pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 2%
+source-wordcount: '1388'
+ht-degree: 6%
 
 ---
 
-# Información general sobre la ingesta por lotes
+# Información general sobre la API de ingesta por lotes
 
-La API de ingesta de datos de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos introducidos pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro [!DNL Experience Data Model] (XDM).
+La API de ingesta de datos de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos que se introducen pueden ser datos de perfil de un archivo plano (como un archivo de parquet) o datos que se ajustan a un esquema conocido del registro [!DNL Experience Data Model] (XDM).
 
 La [referencia de la API de ingesta de datos](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) proporciona información adicional sobre estas llamadas a la API.
 
@@ -22,14 +22,9 @@ El diagrama siguiente describe el proceso de ingesta por lotes:
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
-## Uso de la API
+## Primeros pasos
 
-La API [!DNL Data Ingestion] permite introducir datos como lotes (una unidad de datos que consta de uno o más archivos que se van a introducir como una sola unidad) en [!DNL Experience Platform] en tres pasos básicos:
-
-1. Cree un nuevo lote.
-2. Cargue archivos a un conjunto de datos especificado que coincida con el esquema XDM de los datos.
-3. Indica el final del lote.
-
+Los extremos de API utilizados en esta guía forman parte de la [API de ingesta de datos](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ### [!DNL Data Ingestion] requisitos previos
 
@@ -43,33 +38,55 @@ La API [!DNL Data Ingestion] permite introducir datos como lotes (una unidad de 
 - El tamaño recomendado del lote está entre 256 MB y 100 GB.
 - Cada lote debe contener como máximo 1500 archivos.
 
-Para cargar un archivo de más de 512 MB, el archivo deberá dividirse en trozos más pequeños. Las instrucciones para cargar un archivo grande se encuentran [aquí](#large-file-upload---create-file).
+### Restricciones de ingesta por lotes
 
-### Leer llamadas de API de ejemplo
+La ingesta de datos por lotes tiene algunas restricciones:
 
-Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
-
-### Recopilar valores para encabezados necesarios
-
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
-
-- Autorización: Portador `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
-
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
+- Número máximo de archivos por lote: 1500
+- Tamaño máximo del lote: 100 GB
+- Número máximo de propiedades o campos por fila: 10000
+- Número máximo de lotes por minuto, por usuario: 138
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+>Para cargar un archivo de más de 512 MB, el archivo deberá dividirse en trozos más pequeños. Las instrucciones para cargar un archivo grande se encuentran en la sección [large file upload of this document](#large-file-upload---create-file).
 
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
+### Tipos
 
-- Content-Type: application/json
+Al ingerir datos, es importante comprender cómo funcionan los esquemas [!DNL Experience Data Model] (XDM). Para obtener más información sobre cómo se asignan los tipos de campo XDM a diferentes formatos, lea la [Guía para desarrolladores del Registro de Esquemas](../../xdm/api/getting-started.md).
 
-### Crear un lote
+Hay cierta flexibilidad a la hora de introducir datos: si un tipo no coincide con lo que hay en el esquema de destino, los datos se convertirán al tipo de destino expresado. Si no puede, fallará el lote con un `TypeCompatibilityException`.
+
+Por ejemplo, ni JSON ni CSV tienen un tipo `date` o `date-time`. Como resultado, estos valores se expresan utilizando [cadenas con formato ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tiempo Unix formateado en milisegundos (15312639 59000) y se convierten en el momento de la ingesta al tipo XDM de destino.
+
+La tabla siguiente muestra las conversiones admitidas al introducir datos.
+
+| Entrante (fila) frente a Target (col.) | Cadena | Byte | Corto | Número entero | Largo | Duplicada | Fecha  | Date-Time | Objeto | Mapa |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Cadena | X | X | X | X | X | X | X | X |  |  |
+| Byte | X | X | X | X | X | X |  |  |  |  |
+| Corto | X | X | X | X | X | X |  |  |  |  |
+| Número entero | X | X | X | X | X | X |  |  |  |  |
+| Largo | X | X | X | X | X | X | X | X |  |  |
+| Duplicada | X | X | X | X | X | X |  |  |  |  |
+| Fecha  |  |  |  |  |  |  | X |  |  |  |
+| Date-Time |  |  |  |  |  |  |  | X |  |  |
+| Objeto |  |  |  |  |  |  |  |  | X | X |
+| Mapa |  |  |  |  |  |  |  |  | X | X |
+
+>[!NOTE]
+>
+>Los booleanos y las matrices no se pueden convertir a otros tipos.
+
+## Uso de la API
+
+La API [!DNL Data Ingestion] permite introducir datos como lotes (una unidad de datos que consta de uno o más archivos que se van a introducir como una sola unidad) en [!DNL Experience Platform] en tres pasos básicos:
+
+1. Cree un nuevo lote.
+2. Cargue archivos a un conjunto de datos especificado que coincida con el esquema XDM de los datos.
+3. Indica el final del lote.
+
+## Crear un lote
 
 Para poder agregar datos a un conjunto de datos, estos deben vincularse a un lote que luego se cargará en un conjunto de datos especificado.
 
@@ -130,7 +147,11 @@ Puede cargar archivos mediante la API de carga de archivos pequeños. Sin embarg
 
 >[!NOTE]
 >
->Los ejemplos siguientes utilizan el formato de archivo [Apache Parquet](https://parquet.apache.org/documentation/latest/). Puede encontrar un ejemplo que use el formato de archivo JSON en la [guía para desarrolladores de ingesta por lotes](./api-overview.md).
+>La ingesta por lotes se puede utilizar para actualizar los datos de forma incremental en el Almacenamiento de perfiles. Para obtener más información, consulte la sección sobre la [actualización de un lote](#patch-a-batch) en la [guía para desarrolladores sobre ingesta por lotes](api-overview.md).
+
+>[!INFO]
+>
+>Los ejemplos siguientes utilizan el formato de archivo [Apache Parquet](https://parquet.apache.org/documentation/latest/). Puede encontrar un ejemplo que use el formato de archivo JSON en la [guía para desarrolladores de ingesta por lotes](api-overview.md).
 
 ### Carga de archivo pequeño
 
