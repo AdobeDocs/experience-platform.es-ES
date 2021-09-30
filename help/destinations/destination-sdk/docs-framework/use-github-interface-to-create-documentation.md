@@ -2,9 +2,9 @@
 title: 'Utilice la interfaz web de GitHub para crear una página de documentación de destino '
 description: Las instrucciones de esta página muestran cómo usar la interfaz web de GitHub para crear una página de documentación para el destino del Experience Platform y enviarla para su revisión.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '780'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 ## Configuración del entorno de creación de GitHub {#set-up-environment}
 
 1. En el explorador, vaya a `https://github.com/AdobeDocs/experience-platform.en`.
-2. Para [ramificar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) el repositorio, haga clic en **Fork** como se muestra en la imagen siguiente.
+2. Para [ramificar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) el repositorio, haga clic en **Fork** como se muestra a continuación. Esto crea una copia del repositorio del Experience Platform en su propia cuenta de GitHub.
 
    ![Repositorio de documentación de Adobe de ramificación](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 >
 >Tenga en cuenta que no hay nada que pueda romper aquí. Al seguir las instrucciones de esta sección, simplemente está sugiriendo una actualización de la documentación. El equipo de documentación de Adobe Experience Platform aprobará o editará la actualización sugerida.
 
-1. Después de guardar el archivo y cargar las imágenes que desee, puede abrir una solicitud de extracción (PR) para fusionar la rama de trabajo en la rama maestra del repositorio de documentación de Adobe. Asegúrese de que la rama en la que ha trabajado esté seleccionada y seleccione **Contribute > Pull request**.
+1. Después de guardar el archivo y cargar las imágenes que desee, puede abrir una solicitud de extracción (PR) para fusionar la rama de trabajo en la rama maestra del repositorio de documentación de Adobe. Asegúrese de que la rama en la que ha trabajado esté seleccionada y seleccione **Contribute > Abrir solicitud de extracción**.
 
 ![Crear solicitud de extracción](./assets/ssd-create-pull-request-1.gif)
 

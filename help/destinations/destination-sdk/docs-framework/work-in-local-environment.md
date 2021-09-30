@@ -2,9 +2,9 @@
 title: Utilice un editor de texto en el entorno local para crear una página de documentación de destino
 description: Las instrucciones de esta página muestran cómo utilizar un editor de texto para trabajar en el entorno local con el fin de crear una página de documentación para el destino del Experience Platform y enviarla para su revisión.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Las instrucciones de esta página le muestran cómo utilizar un editor de texto 
 ## Conéctese a GitHub y configure su entorno de creación local {#set-up-environment}
 
 1. En el explorador, vaya a `https://github.com/AdobeDocs/experience-platform.en`
-2. Para [ramificar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) el repositorio, haga clic en **Fork** como se muestra en la captura de pantalla.
+2. Para [ramificar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) el repositorio, haga clic en **Fork** como se muestra a continuación. Esto crea una copia del repositorio del Experience Platform en su propia cuenta de GitHub.
 
    ![Repositorio de documentación de Adobe de ramificación](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ Las instrucciones de esta página le muestran cómo utilizar un editor de texto 
 
    ![Impulse su compromiso](./assets/push-local-to-remote.png)
 
-1. En la interfaz web de GitHub, abra una solicitud de extracción (PR) para fusionar la rama de trabajo en la rama maestra del repositorio de documentación de Adobe. Asegúrese de que la rama en la que trabajó esté seleccionada y seleccione **Pull request**.
+1. En la interfaz web de GitHub, abra una solicitud de extracción (PR) para fusionar la rama de trabajo en la rama maestra del repositorio de documentación de Adobe. Asegúrese de que la rama en la que ha trabajado esté seleccionada y seleccione **Contribute > Abrir solicitud de extracción**.
 
    ![Crear solicitud de extracción](./assets/ssd-create-pull-request-1.gif)
 
