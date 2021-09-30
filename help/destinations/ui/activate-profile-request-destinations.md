@@ -1,13 +1,13 @@
 ---
 keywords: activar destinos de solicitud de perfil;activar datos;destinos de solicitud de perfil
-title: Activar datos de audiencia en destinos de solicitud de perfil
+title: Activar datos de audiencia en destinos de solicitud de perfil (Beta)
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de solicitud de perfil.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Para activar los datos en los destinos, debe haber [conectado correctamente a un
 
 ### Política de combinación de segmentos {#merge-policy}
 
-Actualmente, los destinos de solicitud de perfil solo admiten la activación de segmentos que utilizan la directiva de combinación predeterminada. Si se intenta activar segmentos con una política de combinación diferente, se producirá un error en la página [[!UICONTROL Revisar]](#review).
+Actualmente, los destinos de solicitud de perfil solo admiten la activación de segmentos que utilizan la [directiva de combinación predeterminada](../../segmentation/ui/segment-builder.md#merge-policies).
 
 ## Seleccione el destino {#select-destination}
 
