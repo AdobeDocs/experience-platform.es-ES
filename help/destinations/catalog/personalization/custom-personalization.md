@@ -1,0 +1,104 @@
+---
+keywords: personalización personalizada; destino; destino personalizado de experience platform;
+title: Destino de personalización personalizado
+description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real 1:1 y basada en la pertenencia a segmentos de un perfil de usuario.
+source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+workflow-type: tm+mt
+source-wordcount: '573'
+ht-degree: 1%
+
+---
+
+# Conexión personalizada personalizada (Beta) {#custom-personalization-connection}
+
+## Información general {#overview}
+
+>[!IMPORTANT]
+>
+>La conexión de personalización personalizada en Adobe Experience Platform está actualmente en versión beta. La documentación y la funcionalidad están sujetas a cambios.
+
+Este destino proporciona una forma de recuperar información de segmentos de Adobe Experience Platform a plataformas de personalización externas, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en sitios web de clientes.
+
+## Requisitos previos {#prerequisites}
+
+Esta integración es ofrecida por el [Adobe Experience Platform Web SDK](../../../edge/home.md). Debe utilizar este SDK para utilizar este destino.
+
+## Tipo de exportación {#export-type}
+
+**Solicitud de perfil** : está solicitando todos los segmentos asignados en el destino de personalización personalizada para un solo perfil. Se pueden configurar diferentes destinos personalizados para distintos conjuntos de datos de recopilación de datos de Adobe.
+
+## Casos de uso {#use-cases}
+
+Este destino comparte audiencias con servidores de publicidad y aplicaciones de personalización que no son de Adobe, que se utilizarán en tiempo real para decidir qué usuarios de publicidad deben ver en un sitio web.
+
+### Caso de uso n.º 1
+
+**Personalización de una página de inicio**
+
+Un sitio web de ventas y alquiler de casa quiere personalizar su página de inicio en función de las cualificaciones de los segmentos en Adobe Experience Platform. La empresa puede seleccionar qué audiencias deben obtener una experiencia personalizada y asignarlas al destino de personalización personalizado que se ha configurado para su aplicación de personalización que no es de Adobe como criterios de objetivo.
+
+**Publicidad en el sitio dirigida**
+
+Con un destino personalizado independiente para su servidor de publicidad, el mismo sitio web puede dirigirse a la publicidad en el sitio con un conjunto diferente de segmentos de Adobe Experience Platform como criterios de objetivo.
+
+## Conectarse al destino {#connect}
+
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
+
+### Parámetros de conexión {#parameters}
+
+Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
+
+* **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
+* **[!UICONTROL Descripción]**: Escriba una descripción para el destino. Por ejemplo, puede mencionar para qué campaña utiliza este destino. Este campo es opcional.
+* **[!UICONTROL Alias]** de integración: Este valor se envía al SDK web del Experience Platform como nombre de objeto JSON.
+* **[!UICONTROL ID de almacén de datos]**: Esto determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Consulte [Configuración de un conjunto de datos](../../../edge/fundamentals/datastreams.md) para obtener más información.
+
+## Activar segmentos en este destino {#activate}
+
+Lea [Activar perfiles y segmentos en destinos de solicitud de perfil](../../ui/activate-profile-request-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+
+## Datos exportados {#exported-data}
+
+Si utiliza [Etiquetas de Adobe](../../../tags/home.md) para implementar el SDK web de Experience Platform, utilice la funcionalidad [enviar evento completo](../../../edge/extension/event-types.md) y su acción de código personalizado tendrá una variable `event.destinations` que puede utilizar para ver los datos exportados.
+
+Si no utiliza [Etiquetas de Adobe](../../../tags/home.md) para implementar el SDK web de Experience Platform, utilice la funcionalidad [de gestión de respuestas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) .
+
+La respuesta JSON de Adobe Experience Platform se puede analizar para encontrar el alias de integración correspondiente de la aplicación que está integrando con Adobe Experience Platform. Los ID de segmento se pueden pasar al código de la aplicación como parámetros de objetivo. A continuación se muestra un ejemplo de cómo se vería esto específico para la respuesta de destino.
+
+```
+alloy("sendEvent", {
+  "renderDecisions": true,
+  "xdm": {
+    "commerce": {
+      "order": {
+        "purchaseID": "a8g784hjq1mnp3",
+        "purchaseOrderNumber": "VAU3123",
+        "currencyCode": "USD",
+        "priceTotal": 999.98
+      }
+    }
+  }
+}).then(function(results) {
+    if(results.destinations) { // Looking to see if the destination results are there
+ 
+        // Get the destination with a particular alias
+        var personalizationDestinations = results.destinations.filter(x => x.alias == “personalizationAlias”)
+        if(personalizationDestinations.length > 0) {
+             // Code to pass the segment IDs into the system that corresponds to personalizationAlias
+        }
+        var adServerDestinations = results.destinations.filter(x => x.alias == “adServerAlias”)
+        if(adServerDestinations.length > 0) {
+            // Code to pass the segment ids into the system that corresponds to adServerAlias
+        }
+     }
+   })
+  .catch(function(error) {
+    // Tracking the event failed.
+  });
+```
+
+
+## Uso y gobernanza de los datos {#data-usage-governance}
+
+Todos los destinos [!DNL Adobe Experience Platform] cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](../../../data-governance/home.md).
