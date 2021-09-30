@@ -4,9 +4,9 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
+source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,9 @@ La utilidad **[!UICONTROL Profiles added]** muestra el número total de perfiles
 
 >[!NOTE]
 >
->El widget [!UICONTROL Profiles added] refleja el número de perfiles agregados al sistema según la configuración inicial de la organización. Por ejemplo, si se agregaran cuatro millones de perfiles durante la configuración y se agregara un millón de perfiles adicionales durante los últimos 30 días, el widget [!UICONTROL Perfiles agregados] mostraría &quot;1 000 000&quot;, mientras que el widget [!UICONTROL Recuento de perfiles] mostraría &quot;5 000 00&quot;.
+>El widget [!UICONTROL Profiles added] refleja el número de perfiles agregados al sistema según la configuración inicial de la organización. Para obtener más información sobre la adición de perfiles al Almacenamiento de perfiles, consulte la [Documentación del perfil del cliente en tiempo real](../../profile/home.md).
+>
+>Por ejemplo, si se agregaran cuatro millones de perfiles durante la configuración y se agregara un millón de perfiles adicionales durante los últimos 30 días, el widget [!UICONTROL Perfiles agregados] mostraría &quot;1 000 000&quot;, mientras que el widget [!UICONTROL Recuento de perfiles] mostraría &quot;5 000 00&quot;.
 
 ![](../images/profiles/profiles-added.png)
 
