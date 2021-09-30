@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Guía de la plataforma de datos del cliente en tiempo real
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
-source-git-commit: 89cd5a89bb33e4ea8b3412adebee49921e788ebd
+source-git-commit: db61b8b1ea7f39578769a195ac13f83bde3eaf43
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 48%
+source-wordcount: '120'
+ht-degree: 45%
 
 ---
 
@@ -42,5 +42,6 @@ ht-degree: 48%
    * [Esquemas en tiempo real CDP B2B Edition](schemas/b2b.md)
 * Fuentes {#sources}
    * [Resumen de fuentes](sources/sources-overview.md)
+   * [Fuentes en tiempo real CDP B2B Edition](sources/b2b.md)
 * [Notas de la versión del Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
 * [Glosario de Experience Platform](https://www.adobe.com/go/platform-glossary-en)
