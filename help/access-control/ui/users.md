@@ -5,36 +5,29 @@ title: Administrar usuarios de un perfil de producto
 topic-legacy: user guide
 description: Este documento muestra cómo administrar usuarios para un perfil de producto en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 58655e5ff2c4d3a3b36c5067f2e99c021410c697
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '191'
 ht-degree: 1%
 
 ---
 
 # Administrar usuarios de un perfil de producto
 
-Para asignar o eliminar usuarios de un perfil de producto, abra la página de detalles del perfil y vaya a la pestaña **[!UICONTROL Users]**. Desde aquí, haga clic en **[!UICONTROL Add User]**.
+Para asignar o eliminar usuarios de un perfil de producto, abra la página de detalles del perfil y vaya a la pestaña **[!UICONTROL Users]**. Desde aquí, seleccione **[!UICONTROL Agregar usuario]**.
 
-![add-users-button](../images/add-users-button.png)
+![add-user](../images/add-user.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Add User]**. Con el campo de búsqueda, puede buscar usuarios para agregar por nombre o por correo electrónico. Mientras escribe, los usuarios coincidentes aparecerán en una ventana de autocompletado debajo del cuadro de texto.
-
-![add-user-autocomplete](../images/add-user-autocomplete.png)
+Aparece el cuadro de diálogo **[!UICONTROL Agregar usuario]**. Con el campo de búsqueda, puede buscar usuarios para agregar por nombre o por correo electrónico. Mientras escribe, los usuarios coincidentes aparecerán en una ventana de autocompletado debajo del cuadro de texto.
 
 >[!NOTE]
 >
 >Si un usuario no aparece en la ventana de autocompletar, introduzca su dirección de correo electrónico completa en la barra de búsqueda. Se enviará una invitación al correo electrónico con instrucciones sobre cómo configurar una cuenta de Adobe ID.
 
-Una vez que haya seleccionado un usuario, haga clic en **[!UICONTROL Save]** para agregarlo al perfil del producto.
+Una vez que haya seleccionado un usuario, seleccione **[!UICONTROL Save]** para agregarlo al perfil del producto.
 
-![add-user-save](../images/add-user-save.png)
-
-La pestaña **[!UICONTROL Users]** del perfil de producto vuelve a aparecer y ahora aparece el usuario añadido.
-
-![añadido por el usuario](../images/user-added.png)
+![save-user](../images/save-user.png)
 
 ## Pasos siguientes
 
-Ahora que ha aprendido a controlar el acceso a las funciones [!DNL Platform] a través de [!DNL Admin Console], consulte la sección del apéndice en la [información general del control de acceso](../home.md) para obtener más información sobre cada permiso individual y las funcionalidades [!DNL Platform] a las que conceden acceso.
+Ahora que ha aprendido a controlar el acceso a las funciones de Platform a través de [!DNL Admin Console], consulte la sección del apéndice en la [información general del control de acceso](../home.md) para obtener más información sobre cada permiso individual y las funcionalidades de Platform a las que conceden acceso.
