@@ -5,10 +5,10 @@ title: Guía de la interfaz de usuario del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: af122e5064fc5618266948d46c438d1776cdd0cf
+source-git-commit: 696db8081ab8225d79cd468b7435770d407d3e3d
 workflow-type: tm+mt
-source-wordcount: '1310'
-ht-degree: 0%
+source-wordcount: '1148'
+ht-degree: 1%
 
 ---
 
@@ -36,77 +36,32 @@ La sección **[!UICONTROL Credenciales de caducidad]** proporciona la siguiente 
 
 Puede utilizar credenciales que no caduquen para configurar una conexión más permanente con un cliente externo.
 
-Para poder crear credenciales que no caduquen, debe configurar los permisos **Sandboxes** y **Administrar integración del servicio de consulta** para su organización en Adobe Admin Console.
+### Requisitos previos
 
-Inicie sesión en [Adobe Admin Console](https://adminconsole.adobe.com/) y seleccione la organización correspondiente en la barra de navegación superior.
+Para poder generar credenciales que no caduquen, debe completar los siguientes pasos en Adobe Admin Console:
 
-En la sección [!UICONTROL Products and services] de [!UICONTROL Overview], seleccione **Adobe Experience Platform**.
+1. Inicie sesión en [Adobe Admin Console](https://adminconsole.adobe.com/) y seleccione la organización correspondiente en la barra de navegación superior.
+2. [Seleccione un perfil de producto.](../../access-control/ui/browse.md)
+3. [Configure los permisos de  **** Sandboxesy  **Administrar** ](../../access-control/ui/permissions.md) integración del servicio de consultas para el perfil del producto.
+4. [Agregue un nuevo usuario a un ](../../access-control/ui/users.md) perfil de producto para que se les concedan los permisos configurados.
+5. [Agregue al usuario como ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) administrador de perfiles de producto para permitir la creación de cuentas para cualquier perfil de producto activo.
+6. [Añada el usuario como ](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) desarrollador de perfiles de producto para crear una integración.
 
-![Panel de Adobe Admin Console](../images/ui/credentials/adobe-admin-console-dashboard.png)
+Para obtener más información sobre cómo asignar permisos, lea la documentación sobre [control de acceso](../../access-control/home.md).
 
-Aparecerá la página Detalles de Adobe Experience Platform. A continuación, cree un nuevo perfil. Seleccione [!UICONTROL **Nuevo perfil**].
+Todos los permisos necesarios ahora están configurados en Adobe Developer Console para que el usuario utilice la función de credenciales caducadas.
 
-![Página Detalles de Adobe Experience Platform](../images/ui/credentials/aep-details.png)
+### Generar credenciales
 
-Aparece un cuadro de diálogo de creación de perfiles. Escriba un nombre descriptivo para el nuevo perfil y seleccione [!UICONTROL **Guardar**]. Aparece la página [!UICONTROL Configuración] del nuevo perfil. Seleccione la pestaña [!UICONTROL **Permisos**] en las opciones disponibles.
-
-### Habilitar permisos del servicio de consulta
-
-Para asegurarse de que los permisos correctos del servicio de consulta están habilitados para su organización, busque y seleccione la categoría [!UICONTROL **Query Service**] en la lista.
-
-![Categoría del servicio de consulta de la pestaña Permisos resaltada](../images/ui/credentials/permissions-tab-query-service-category.png)
-
-Aparece el espacio de trabajo [!UICONTROL Editar permisos] para el servicio de consulta. Seleccione el icono de signo más (**+**) para [!UICONTROL **Administrar consultas**] y [!UICONTROL **Administrar integración del servicio de consultas**] para agregarlos a la columna [!UICONTROL Elementos de permisos incluidos]. A continuación, seleccione [!UICONTROL **Save**] para confirmar los cambios.
-
-![Guardar elementos de permiso incluidos](../images/ui/credentials/edit-permissions-for-query-service-profile.png)
-
-Esto le devuelve a la ficha Configuración > Permisos .
-
-### Habilitar permisos de Sandbox
-
-Para asegurarse de que el entorno limitado correcto está seleccionado para su organización, busque y seleccione la categoría [!UICONTROL **Sandboxes**] en la lista.
-
-![Pestaña Permisos Categoría de los entornos limitados resaltados](../images/ui/credentials/permissions-tab-sandboxes-category.png)
-
-Aparecerá el espacio de trabajo Simuladores para pruebas. Desde [!UICONTROL Available Permission Items], busque el entorno limitado correspondiente, en esta imagen es el entorno limitado del producto. Seleccione el icono de signo más (**+**) para agregarlo a los [!UICONTROL Elementos de permiso incluidos]. A continuación, seleccione [!UICONTROL **Save**] para confirmar los cambios.
-
-![Agregar permiso del Simulador para pruebas de producto](../images/ui/credentials/prod-sandbox.png)
-
-Esto le devuelve a la ficha Configuración > Permisos .
-
-Se requieren tres pasos más para permitir que un usuario acceda a la función de cuenta que no caduca.
-
-- Agregue un nuevo usuario para otorgar los permisos recién creados a . Seleccione la pestaña [!UICONTROL **Users**], seguida de [!UICONTROL **Add User**].
-
-![Ficha Usuario Botón Agregar usuario resaltado](../images/ui/credentials/users-tab-new-user.png)
-
-Aparecerá el cuadro de diálogo crear usuario. Introduzca un nombre y un correo electrónico para el nuevo usuario y seleccione [!UICONTROL **Save**].
-
-- El usuario debe agregarse como administrador para permitir la creación de cuentas para cualquier perfil de producto activo. Para agregar el usuario recién creado como administrador. seleccione la pestaña [!UICONTROL **Administradores**], seguido de [!UICONTROL **Agregar administradores**].
-
-![Ficha Administración Botón Agregar administrador resaltado](../images/ui/credentials/admins-tab-add-admin.png)
-
-Aparecerá el cuadro de diálogo agregar administrador. Introduzca los detalles del nuevo administrador en los campos de texto y seleccione [!UICONTROL **Save**].
-
-- El usuario debe añadirse como desarrollador para que se cree una integración. Seleccione la pestaña **Developers**, seguida de **Add Developer**.
-
-![Pestaña Desarrolladores Botón Agregar desarrollador resaltado](../images/ui/credentials/developers-tab-add-developer.png)
-
-Aparece el cuadro de diálogo agregar desarrollador . Introduzca los detalles del nuevo desarrollador en los campos de texto y seleccione **Save**.
-
-Para obtener más información sobre cómo asignar permisos, lea la documentación sobre [Control de acceso](../../access-control/home.md).
-
-Todos los permisos necesarios ahora están configurados en la consola del desarrollador de Adobe para que el usuario utilice la función de credenciales caducadas.
-
-Para crear un conjunto de credenciales que no caducan, en el espacio de trabajo Credenciales de consultas seleccione **[!UICONTROL Generar credenciales]**.
+Para crear un conjunto de credenciales que no caducan, vuelva a la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo para acceder al espacio de trabajo [!UICONTROL Consultas]. A continuación, seleccione la pestaña **[!UICONTROL Credentials]** seguida de **[!UICONTROL Generate credentials]**.
 
 ![](../images/ui/credentials/generate-credentials.png)
 
-Aparece el modal de generación de credenciales. Para crear credenciales que no caduquen, debe proporcionar los siguientes detalles:
+Aparece un cuadro de diálogo que le permite generar credenciales. Para crear credenciales que no caduquen, debe proporcionar los siguientes detalles:
 
 - **[!UICONTROL Nombre]**: Nombre de las credenciales que está generando.
 - **[!UICONTROL Descripción]**: (Opcional) Descripción de las credenciales que está generando.
-- **[!UICONTROL Asignado a]**: El usuario al que se asignarán las credenciales. Este valor debe ser la dirección de correo electrónico del usuario que está creando las credenciales.
+- **[!UICONTROL Asignado a]**: Usuario al que se asignarán las credenciales. Este valor debe ser la dirección de correo electrónico del usuario que está creando las credenciales.
 - **[!UICONTROL Contraseña]**  (opcional) Una contraseña opcional para sus credenciales. Si la contraseña no está establecida, Adobe generará automáticamente una contraseña.
 
 Una vez que haya proporcionado todos los detalles requeridos, seleccione **[!UICONTROL Generate credentials]** para generar sus credenciales.
@@ -115,9 +70,9 @@ Una vez que haya proporcionado todos los detalles requeridos, seleccione **[!UIC
 
 >[!IMPORTANT]
 >
->Una vez seleccionado el botón **[!UICONTROL Generate credentials]** , se descarga un archivo JSON de configuración en el equipo local. Dado que el Adobe **not** registra la credencial generada, **debe** almacenar de forma segura el archivo descargado y mantener un registro de la credencial.
+>Una vez seleccionado el botón **[!UICONTROL Generate credentials]** , se descarga un archivo JSON de configuración en el equipo local. Dado que el Adobe **not** registra las credenciales generadas, debe almacenar de forma segura el archivo descargado y mantener un registro de las credenciales.
 >
->Además, si las credenciales no se utilizan durante 90 días, se cancelarán.
+>Además, si las credenciales no se utilizan durante 90 días, se eliminarán.
 
 El archivo JSON de configuración contiene información como el nombre de cuenta técnica, el ID de cuenta técnica y las credenciales. Se proporciona en el siguiente formato.
 
@@ -125,7 +80,7 @@ El archivo JSON de configuración contiene información como el nombre de cuenta
 {"technicalAccountName":"9F0A21EE-B8F3-4165-9871-846D3C8BC49E@TECHACCT.ADOBE.COM","credential":"3d184fa9e0b94f33a7781905c05203ee","technicalAccountId":"4F2611B8613AA3670A495E55"}
 ```
 
-Ahora que ha guardado las credenciales generadas, seleccione **[!UICONTROL Cerrar]**. Ahora puede ver una lista de todas sus credenciales que no caducan.
+Una vez guardadas las credenciales generadas, seleccione **[!UICONTROL Cerrar]**. Ahora puede ver una lista de todas sus credenciales que no caducan.
 
 ![](../images/ui/credentials/list-credentials.png)
 
@@ -135,7 +90,7 @@ Al editar una credencial que no caduca, aparece un modal. Puede proporcionar los
 
 - **[!UICONTROL Nombre]**: Nombre de las credenciales que está generando.
 - **[!UICONTROL Descripción]**: (Opcional) Descripción de las credenciales que está generando.
-- **[!UICONTROL Asignado a]**: El usuario al que se asignarán las credenciales. Este valor debe ser la dirección de correo electrónico del usuario que está creando las credenciales.
+- **[!UICONTROL Asignado a]**: Usuario al que se asignarán las credenciales. Este valor debe ser la dirección de correo electrónico del usuario que está creando las credenciales.
 
 ![](../images/ui/credentials/update-credentials.png)
 
@@ -143,21 +98,25 @@ Una vez que haya proporcionado todos los detalles requeridos, seleccione **[!UIC
 
 ## Uso de credenciales para conectarse a clientes externos
 
-Puede utilizar las credenciales que caducan o que no caducan para conectarse con clientes externos, como Aqua Data Studio, Looker o Power BI.
+Puede utilizar las credenciales que caducan o que no caducan para conectarse con clientes externos, como Aqua Data Studio, Looker o Power BI. El método de entrada para estas credenciales variará según el cliente externo. Consulte la documentación del cliente externo para obtener instrucciones específicas sobre el uso de estas credenciales.
 
-La tabla siguiente contiene la lista de parámetros y su descripción, que normalmente se requieren para conectarse a clientes externos.
+La imagen indica la ubicación de cada parámetro que se encuentra en la interfaz de usuario, excepto la contraseña de las credenciales que no caducan. Aunque sus archivos de configuración JSON proporcionan credenciales que no caducan, puede ver sus credenciales que caducan en la pestaña **Credentials** de la interfaz de usuario.
+
+![](../images/ui/credentials/expiring-credentials.png)
+
+En la tabla siguiente se describen los parámetros que suelen ser necesarios para conectarse a clientes externos.
 
 >[!NOTE]
 >
->Cuando se conecta a un host con credenciales que no caducan, sigue siendo necesario utilizar todos los parámetros enumerados en la sección [!UICONTROL EXPIRING CREDENTIALS] excepto la contraseña.
+>Cuando se conecta a un host con credenciales que no caducan, sigue siendo necesario utilizar todos los parámetros enumerados en la sección [!UICONTROL EXPIRING CREDENTIALS] excepto la contraseña y el nombre de usuario.
 
 | Parámetro | Descripción |
 |---|---|
-| **Servidor/Host** | Nombre del servidor/host al que se está conectando. Este valor adopta la forma de `server.adobe.io` y se puede encontrar en **[!UICONTROL Host]**. |
-| **Puerto** | Puerto para el servidor/host al que se está conectando. Este valor se puede encontrar en **[!UICONTROL Port]**. Un valor de ejemplo para el puerto sería `80`. |
-| **Database** | La base de datos a la que se está conectando. Este valor se puede encontrar en **[!UICONTROL Database]**. Un valor de ejemplo para la base de datos sería `prod:all`. |
-| **Nombre de usuario** | El nombre de usuario del usuario que se está conectando al cliente externo. Esto toma la forma de una cadena alfanumérica antes de `@AdobeOrg`. Este valor se encuentra en **[!UICONTROL Nombre de usuario]**. |
-| **Contraseña** | La contraseña del usuario que se está conectando al cliente externo. <ul><li>Si está utilizando credenciales que caducan, esto se encuentra en **[!UICONTROL Contraseña]** dentro de la sección de credenciales que caducan.</li><li>Si utiliza credenciales que no caducan, este valor comprende los argumentos de technicalAccountID y las credenciales tomadas del archivo JSON de configuración. El valor de la contraseña adopta la forma: `{technicalAccountId}:{credential}`.</li></ul> |
+| Servidor/Host | Nombre del servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan y adopta la forma `server.adobe.io`. El valor se encuentra en **[!UICONTROL Host]** en la sección [!UICONTROL CREDENCIALES DE CADUCIDAD].</ul></li> |
+| Puerto | Puerto para el servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Puerto]** en la sección [!UICONTROL CREDENCIALES QUE CADUCAN]. Un valor de ejemplo para el puerto sería `80`.</ul></li> |
+| Database | La base de datos a la que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Database]** en la sección [!UICONTROL EXPIRING CREDENTIALS]. Un valor de ejemplo para la base de datos sería `prod:all`.</ul></li> |
+| Nombre de usuario | El nombre de usuario del usuario que se está conectando al cliente externo. <ul><li>Si está utilizando credenciales que caducan, esto toma la forma de una cadena alfanumérica antes de `@AdobeOrg`. Este valor se encuentra en **[!UICONTROL Nombre de usuario]**.</li><li>Si utiliza credenciales que no caducan, es una cadena de su elección, aunque **no puede** ser la misma que el valor `technicalAccountID` encontrado en el archivo JSON de configuración.</li></ul> |
+| Contraseña | La contraseña del usuario que se está conectando al cliente externo. <ul><li>Si está utilizando credenciales que caducan, esto se encuentra en **[!UICONTROL Password]** en la sección [!UICONTROL EXPIRING CREDENTIALS].</li><li>Si utiliza credenciales que no caducan, este valor son los argumentos concatenados de technicalAccountID y las credenciales tomadas del archivo JSON de configuración. El valor de la contraseña adopta la forma: `{technicalAccountId}:{credential}`.</li></ul> |
 
 ## Pasos siguientes
 
