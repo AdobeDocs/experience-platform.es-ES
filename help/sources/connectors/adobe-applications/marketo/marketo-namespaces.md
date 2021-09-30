@@ -1,28 +1,24 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conector de origen de Marketo;áreas de nombres;esquemas
+keywords: Experience Platform;inicio;temas populares;conector de origen de Marketo;áreas de nombres;esquemas;b2b;B2B
 solution: Experience Platform
-title: Espacios de nombres de Marketo
+title: Esquemas y áreas de nombres B2B
 topic-legacy: overview
-description: Este documento proporciona información general sobre las áreas de nombres personalizadas necesarias al crear un conector de origen de Marketo Engage.
+description: Este documento proporciona información general sobre los espacios de nombres personalizados necesarios al crear un conector de origen B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 609b951cbde880a9f354b343adb1796def0a812c
+source-git-commit: a67e411c7d07bc5d94876b6bafbbea5056b7a9bc
 workflow-type: tm+mt
-source-wordcount: '1677'
-ht-degree: 5%
+source-wordcount: '1573'
+ht-degree: 4%
 
 ---
 
-# (Beta) [!DNL Marketo Engage] áreas de nombres y esquemas
+# Esquemas y áreas de nombres B2B
 
->[!IMPORTANT]
->
->El origen [!DNL Marketo Engage] está actualmente en versión beta. La función y la documentación están sujetas a cambios.
+Este documento proporciona información sobre la configuración subyacente para los espacios de nombres y esquemas que se van a utilizar con orígenes B2B. Este documento también proporciona detalles sobre la configuración de la utilidad de automatización de Postman necesaria para generar esquemas y áreas de nombres B2B.
 
-Este documento proporciona información sobre la configuración subyacente para los espacios de nombres B2B y esquemas utilizados con [!DNL Marketo Engage] (en adelante denominados &quot;[!DNL Marketo]&quot;). Este documento también proporciona detalles sobre la configuración de la utilidad de automatización de Postman necesaria para generar esquemas y áreas de nombres [!DNL Marketo] B2B.
+## Configuración de espacios de nombres B2B y utilidad de generación automática de esquemas
 
-## Configure el espacio de nombres [!DNL Marketo] y la utilidad de generación automática de esquemas
-
-El primer paso para utilizar el espacio de nombres [!DNL Marketo] y la utilidad de generación automática de esquemas es configurar la consola del desarrollador de Platform y el entorno [!DNL Postman].
+El primer paso para utilizar el espacio de nombres B2B y la utilidad de generación automática de esquemas es configurar la consola del desarrollador de Platform y el entorno [!DNL Postman].
 
 - Puede descargar el entorno y la colección de utilidades de generación automática de esquemas y espacios de nombres desde este [repositorio de GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
 - Para obtener información sobre el uso de las API de plataforma, incluidos detalles sobre cómo recopilar valores para los encabezados necesarios y leer llamadas de API de ejemplo, consulte la guía de [introducción a las API de plataforma](../../../../landing/api-guide.md).
@@ -48,11 +44,6 @@ La siguiente tabla contiene valores de ejemplo, así como información adicional
 | `SANDBOX_NAME` | Nombre de la partición de entorno limitado virtual que está utilizando. | `prod` |
 | `TENANT_ID` | Un ID utilizado para garantizar que los recursos que crea tengan un espacio de nombres adecuado y estén contenidos en su organización de IMS. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Punto final de URL al que está realizando llamadas de API. Este valor es fijo y siempre se establece en: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
-| `munchkinId` | El ID exclusivo de su cuenta [!DNL Marketo]. Consulte el tutorial sobre [la autenticación de su [!DNL Marketo] instancia](./marketo-auth.md) para obtener información sobre cómo recuperar su `munchkinId`. | `123-ABC-456` |
-| `sfdc_org_id` | El ID de organización de su cuenta [!DNL Salesforce]. Consulte la siguiente [[!DNL Salesforce] guía](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) para obtener más información sobre cómo adquirir su ID de organización [!DNL Salesforce]. | `00D4W000000FgYJUA0` |
-| `msd_org_id` | El ID de organización de su cuenta [!DNL Dynamics]. Consulte la siguiente [[!DNL Microsoft Dynamics] guía](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name) para obtener más información sobre cómo adquirir su ID de organización [!DNL Dynamics]. | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` |
-| `has_abm` | Un valor booleano que indica si está suscrito a [!DNL Marketo Account-Based Marketing]. | `false` |
-| `has_msi` | Un valor booleano que indica si está suscrito a [!DNL Marketo Sales Insight]. | `false` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -64,83 +55,38 @@ En la interfaz [!DNL Postman], seleccione la carpeta raíz de la utilidad del ge
 
 ![carpeta raíz](../images/marketo/root-folder.png)
 
-Aparece la interfaz [!DNL Runner]. Desde aquí, asegúrese de que todas las casillas de verificación estén seleccionadas y, a continuación, seleccione **[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**.
+Aparece la interfaz [!DNL Runner]. Desde aquí, asegúrese de que todas las casillas de verificación estén seleccionadas y, a continuación, seleccione **[!DNL Run Namespaces and Schemas Autogeneration Utility]**.
 
 ![run-generator](../images/marketo/run-generator.png)
 
-Una solicitud correcta crea los espacios de nombres B2B y esquemas según las especificaciones beta.
+Una solicitud correcta crea los espacios de nombres y esquemas necesarios para B2B.
 
-## [!DNL Marketo] áreas de nombres
+## Espacios de nombres B2B
 
-Las áreas de nombres de identidad son un componente de [[!DNL Identity Service]](../../../../identity-service/home.md) que sirve como indicadores del contexto al que se relaciona una identidad.
+Las áreas de nombres de identidad son un componente de [[!DNL Identity Service]](../../../../identity-service/home.md) que sirve para distinguir el contexto o el tipo de una identidad. Una identidad completa incluye un valor de ID y un área de nombres. Consulte la [descripción general de los espacios de nombres](../../../../identity-service/namespaces.md) para obtener más información.
 
-Una identidad completa incluye un valor de ID y un área de nombres. Se requiere un nuevo espacio de nombres personalizado para cada nueva combinación de [!DNL Marketo] instancia y conjunto de datos. Por ejemplo, un conector de origen [!DNL Marketo] que incorpora el conjunto de datos `programs` requiere su propio espacio de nombres personalizado, y otro conector de origen de Marketo que incorpora el mismo conjunto de datos también requiere su propio nuevo espacio de nombres personalizado. Consulte la [descripción general de los espacios de nombres](../../../../identity-service/namespaces.md) para obtener más información.
+Las áreas de nombres B2B se utilizan en la identidad principal de la entidad.
 
-El espacio de nombres [!DNL Marketo] se utiliza en la identidad principal de la entidad.
-
-La siguiente tabla contiene información sobre la configuración subyacente para los espacios de nombres [!DNL Marketo].
+La siguiente tabla contiene información sobre la configuración subyacente para los espacios de nombres B2B.
 
 >[!NOTE]
 >
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
-| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Tipo de emisor | Tipo de entidad emisora | Ejemplo de ID de Munchkin |
-| --- | --- | --- | --- | --- | --- |
-| `marketo_person_{MUNCHKIN_ID}` | generado automáticamente | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
-| `marketo_company_{MUNCHKIN_ID}` | generado automáticamente | `B2B_ACCOUNT` | [!DNL Marketo] | `company` | `123-ABC-789` |
-| `marketo_opportunity_{MUNCHKIN_ID}` | generado automáticamente | `B2B_OPPORTUNITY` | [!DNL Marketo] | `opportunity` | `123-ABC-789` |
-| `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | generado automáticamente | `B2B_OPPORTUNITY_PERSON` | [!DNL Marketo] | `opportunity contact role` | `123-ABC-789` |
-| `marketo_program_{MUNCHKIN_ID}` | generado automáticamente | `B2B_CAMPAIGN` | [!DNL Marketo] | `program` | `123-ABC-789` |
-| `marketo_program_member_{MUNCHKIN_ID}` | generado automáticamente | `B2B_CAMPAIGN_MEMBER` | [!DNL Marketo] | `program member` | `123-ABC-789` |
-| `marketo_static_list_{MUNCHKIN_ID}` | generado automáticamente | `B2B_MARKETING_LIST` | [!DNL Marketo] | `static list` | `123-ABC-789` |
-| `marketo_static_list_member_{MUNCHKIN_ID}` | generado automáticamente | `B2B_MARKETING_LIST_MEMBER` | [!DNL Marketo] | `static list member` | `123-ABC-789` |
-| `marketo_named_account_{MUNCHKIN_ID}` | generado automáticamente | `B2B_ACCOUNT` | [!DNL Marketo] | `named account` | `123-ABC-789` |
+| Nombre para mostrar | Símbolo de identidad | Tipo de identidad |
+| --- | --- | --- |
+| Persona B2B | `b2b_person` | `CROSS_DEVICE` |
+| Cuenta B2B | `b2b_account` | `B2B_ACCOUNT` |
+| Oportunidad B2B | `b2b_opportunity` | `B2B_OPPORTUNITY` |
+| Relación de persona de oportunidad B2B | `b2b_opportunity_person_relation` | `B2B_OPPORTUNITY_PERSON` |
+| Campaña B2B | `b2b_campaign` | `B2B_CAMPAIGN` |
+| Miembro de la campaña B2B | `b2b_campaign_member` | `B2B_CAMPAIGN_MEMBER` |
+| Lista de marketing B2B | `b2b_marketing_list` | `B2B_MARKETING_LIST` |
+| Miembro de la Lista de Marketing B2B | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
 
 {style=&quot;table-layout:auto&quot;}
 
-### [!DNL Salesforce] áreas de nombres
-
-Si está suscrito a la integración [!DNL Salesforce] , el espacio de nombres [!DNL Salesforce] se utiliza en la identidad secundaria de la entidad.
-
-La siguiente tabla contiene información sobre la configuración subyacente para los espacios de nombres [!DNL Salesforce].
-
->[!NOTE]
->
->Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
-
-| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Tipo de emisor | Tipo de entidad emisora | [!DNL Salesforce] ejemplo de ID de organización de suscripción |
-| --- | --- | --- | --- | --- | --- |
-| `salesforce_lead_{SALESFORCE_ORGANIZATION_ID}` | generado automáticamente | `CROSS_DEVICE` | [!DNL Salesforce] | `lead` | `00DA0000000Hz79` |
-| `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | generado automáticamente | `B2B_ACCOUNT` | [!DNL Salesforce] | `account` | `00DA0000000Hz79` |
-| `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | generado automáticamente | `B2B_OPPORTUNITY` | [!DNL Salesforce] | `opportunity` | `00DA0000000Hz79` |
-| `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | generado automáticamente | `B2B_OPPORTUNITY_PERSON` | [!DNL Salesforce] | `opportunity contact role` | `00DA0000000Hz79` |
-| `salesforce_campaign_{SALESFORCE_ORGANIZATION_ID}` | generado automáticamente | `B2B_CAMPAIGN` | [!DNL Salesforce] | `campaign` | `00DA0000000Hz79` |
-| `salesforce_campaign_member_{SALESFORCE_ORGANIZATION_ID}` | generado automáticamente | `B2B_CAMPAIGN_MEMBER` | [!DNL Salesforce] | `campaign member` | `00DA0000000Hz79` |
-
-{style=&quot;table-layout:auto&quot;}
-
-### [!DNL Microsoft Dynamics] áreas de nombres
-
-Si está suscrito a la integración [!DNL Dynamics] , el espacio de nombres [!DNL Dynamics] se utiliza como identidad secundaria de la entidad.
-
-La siguiente tabla contiene información sobre la configuración subyacente para los espacios de nombres [!DNL Dynamics].
-
->[!NOTE]
->
->Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
-
-| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Tipo de emisor | Tipo de entidad emisora | [!DNL Dynamics] ejemplo de ID de organización de suscripción |
-| --- | --- | --- | --- | --- | --- |
-| `microsoft_person_{DYNAMICS_ID}` | generado automáticamente | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_account_{DYNAMICS_ID}` | generado automáticamente | `B2B_ACCOUNT` | [!DNL Microsoft] | `account` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_opportunity_{DYNAMICS_ID}` | generado automáticamente | `B2B_OPPORTUNITY` | [!DNL Microsoft] | `opportunity` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | generado automáticamente | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_campaign_{DYNAMICS_ID}` | generado automáticamente | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_campaign_member_{DYNAMICS_ID}` | generado automáticamente | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-
-{style=&quot;table-layout:auto&quot;}
-
-## [!DNL Marketo] esquemas
+## Esquemas B2B
 
 Experience Platform utiliza esquemas para describir la estructura de los datos de una manera uniforme y reutilizable. Al definir los datos de manera uniforme en todos los sistemas, resulta más fácil conservar el significado y, por lo tanto, obtener valor de los datos.
 
@@ -148,7 +94,7 @@ Antes de poder introducir los datos en Platform, se debe componer un esquema par
 
 Para obtener más información sobre el modelo de composición de esquema, incluidos los principios de diseño y las prácticas recomendadas, consulte los [conceptos básicos de la composición de esquema](../../../../xdm/schema/composition.md).
 
-La siguiente tabla contiene información sobre la configuración subyacente de los esquemas [!DNL Marketo].
+La siguiente tabla contiene información sobre la configuración subyacente de los esquemas B2B.
 
 >[!NOTE]
 >
@@ -156,16 +102,15 @@ La siguiente tabla contiene información sobre la configuración subyacente de l
 
 | Nombre del esquema | Clase base | Grupos de campo | [!DNL Profile] en Esquema | Identidad primaria | Área de nombres de identidad principal | Identidad secundaria | Área de nombres de identidad secundaria | Relación | Notas |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `[!DNL Marketo] Company {MUNCHKIN_ID}` | Cuenta comercial XDM | Detalles de la cuenta comercial de XDM | Habilitado | `accountID` en la clase base | `marketo_company_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` en la clase base | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` en el grupo de campos Detalles de cuenta comercial XDM</li><li>Tipo: uno a uno</li><li>Esquema de referencia: `[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_company_{MUNCHKIN_ID}`</li></ul> |
-| `[!DNL Marketo] Person {MUNCHKIN_ID}` | Perfil individual XDM | <ul><li>Detalles de persona comercial XDM</li><li>Componentes de persona empresarial XDM</li><li>Mapa de identidades</li></ul> | Habilitado | `personID` en la clase base | `marketo_person_{MUNCHKIN_ID}` | <ol><li>`extSourceSystemAudit.externalID` del grupo de campos Detalles de persona comercial XDM</li><li>`workEmail.address` del grupo de campos Detalles de persona comercial XDM</li><li>`identityMap` del grupo de campos de mapa de identidad</ol></li> | <ol><li>`salesforce_lead_{SALESFORCE_ORGANIZATION_ID}`</li><li>Correo electrónico</li><li>ECID</li></ol> | <ul><li>`personComponents.sourceAccountID` del grupo de campos Componentes de persona empresarial XDM</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: `[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_company_{MUNCHKIN_ID}`</li><li>Propiedad de destino: `accountID`</li><li>Nombre de relación del esquema actual: Cuenta</li><li>Nombre de relación del esquema de referencia: People</li></ul> |
-| `[!DNL Marketo] Opportunity {MUNCHKIN_ID}` | Oportunidad comercial XDM | Detalles de oportunidades comerciales de XDM | Habilitado | `opportunityID` en la clase base | `marketo_opportunity_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` en la clase base | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountID` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: `[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_company_{MUNCHKIN_ID}`</li><li>Propiedad de destino: `accountID`</li><li>Nombre de relación del esquema actual: Cuenta</li><li>Nombre de relación del esquema de referencia: Oportunidades</li></ul> |
-| `[!DNL Marketo] Opportunity Contact Role {MUNCHKIN_ID}` | Relación de persona de oportunidad comercial XDM | Ninguna | Habilitado | `opportunityPersonID` en la clase base | `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` en la clase base | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | Primera relación<ul><li>`personID` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: `[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_person_{MUNCHKIN_ID}`</li><li>Propiedad de destino: `personID`</li><li>Nombre de relación del esquema actual: Persona</li><li>Nombre de relación del esquema de referencia: Oportunidades</li></ul>Segunda relación<ul><li>`opportunityID` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: `[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_opportunity_{MUNCHKIN_ID}`</li><li>Propiedad de destino: `opportunityID`</li><li>Nombre de relación del esquema actual: Oportunidad</li><li>Nombre de relación del esquema de referencia: People</li></ul> |
-| `[!DNL Marketo] Program {MUNCHKIN_ID}` | Campaña empresarial XDM | Detalles de la campaña empresarial XDM | Habilitado | `campaignID` en la clase base | `marketo_program_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` en la clase base | `salesforce_campaign_{SALESFORCE_ORGANIZATION_ID}` |
-| `[!DNL Marketo] Program Member {MUNCHKIN_ID}` | Miembro de XDM Business Campaign | Detalles del miembro de la campaña empresarial XDM | Habilitado | `campaignMemberID` en la clase base | `marketo_program_member_{MUNCHKIN_ID}` | Ninguna | Ninguna | Primera relación<ul><li>`personID` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Persona de Marketo {MUNCHKIN_ID}</li><li>Área de nombres: `marketo_person_{MUNCHKIN_ID}`</li><li>Propiedad de destino: `personID`</li><li>Nombre de relación del esquema actual: Persona</li><li>Nombre de relación del esquema de referencia: Programas</li></ul>Segunda relación<ul><li>`campaignID` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: `[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_program_{MUNCHKIN_ID}`</li><li>Propiedad de destino: `campaignID`</li><li>Nombre de relación del esquema actual: Programa</li><li>Nombre de relación del esquema de referencia: People</li></ul> |
-| `[!DNL Marketo] Static List {MUNCHKIN_ID}` | Lista de marketing empresarial XDM | Ninguna | Habilitado | `marketingListID` en la clase base | `marketo_static_list_{MUNCHKIN_ID}` | Ninguna | Ninguna | Ninguna | La lista estática no está sincronizada desde [!DNL Salesforce] y, por lo tanto, no tiene una identidad secundaria. |
-| `[!DNL Marketo] Static List Member {MUNCHKIN_ID}` | Miembros de la lista de marketing empresarial XDM | Ninguna | Habilitado | `marketingListMemberID` en la clase base | `marketo_static_list_member_{MUNCHKIN_ID}` | Ninguna | Ninguna | Primera relación<ul><li>`personID` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: `[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_person_{MUNCHKIN_ID}`</li><li>Propiedad de destino: `personID`</li><li>Nombre de relación del esquema actual: Persona</li><li>Nombre de relación del esquema de referencia: Listas</li></ul>Segunda relación<ul><li>`marketingListID` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: `[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_static_list_{MUNCHKIN_ID}`</li><li>Propiedad de destino: `marketingListID`</li><li>Nombre de relación del esquema actual: Lista</li><li>Nombre de relación del esquema de referencia: People</li></ul> | El miembro de la lista estática no está sincronizado desde [!DNL Salesforce] y, por lo tanto, no tiene una identidad secundaria. |
-| `[!DNL Marketo] Named Account {MUNCHKIN_ID}` | Cuenta comercial XDM | Detalles de la cuenta comercial de XDM | Habilitado | `accountID` en la clase base | `marketo_named_account_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` en la clase base | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` en el grupo de campos Detalles de cuenta comercial XDM</li><li>Tipo: uno a uno</li><li>Esquema de referencia: `[!DNL Marketo] Named Account {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_named_account_{MUNCHKIN_ID}` |
-| [!DNL Marketo] Actividad `{MUNCHKIN ID}` | XDM ExperienceEvent | <ul><li>Visite WebPage</li><li>Nuevo posible cliente</li><li>Convertir posible cliente</li><li>Agregar a lista</li><li>Quitar de la lista</li><li>Agregar a oportunidad</li><li>Eliminar de oportunidad</li><li>Formulario rellenado</li><li>Clics en vínculos</li><li>Correo electrónico enviado</li><li>Correo electrónico abierto</li><li>Correo electrónico en el que se hizo clic</li><li>Correo electrónico rechazado</li><li>Correo electrónico rechazado leve</li><li>Cancelación de suscripción de correo electrónico</li><li>Puntuación cambiada</li><li>Oportunidad actualizada</li><li>Cambio del estado en la progresión de la campaña</li><li>Identificador de persona</li><li>URL web de Marketo | Habilitado | `personID` del grupo de campos Identificador de persona | `marketo_person_{MUNCHKIN_ID}` | Ninguna | Ninguna | Primera relación<ul><li>`listOperations.listID` field</li><li>Tipo: uno a uno</li><li>Esquema de referencia: `[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_static_list_{MUNCHKIN_ID}`</li></ul>Segunda relación<ul><li>`opportunityEvent.opportunityID` field</li><li>Tipo: uno a uno</li><li>Esquema de referencia: `[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_opportunity_{MUNCHKIN_ID}`</li></ul>Tercera relación<ul><li>`leadOperation.campaignProgression.campaignID` field</li><li>Tipo: uno a uno</li><li>Esquema de referencia: `[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>Área de nombres: `marketo_program_{MUNCHKIN_ID}`</li></ul> | La identidad principal del esquema `[!DNL Marketo] Activity {MUNCHKIN_ID}` es `personID`, que es la misma que la identidad principal del esquema `[!DNL Marketo] Person {MUNCHKIN_ID}`. |
+| Cuenta B2B | Cuenta comercial XDM | Detalles de la cuenta comercial de XDM | Habilitado | `accountKey.sourceKey` en la clase base | Cuenta B2B | `extSourceSystemAudit.externalKey.sourceKey` en la clase base | Cuenta B2B | <ul><li>`accountParentKey.sourceKey` en el grupo de campos Detalles de cuenta comercial XDM</li><li>Propiedad de destino: `/accountKey/sourceKey`</li><li>Tipo: uno a uno</li><li>Esquema de referencia: Cuenta B2B</li><li>Área de nombres: Cuenta B2B</li></ul> |
+| Persona B2B | Perfil individual XDM | <ul><li>Detalles de persona comercial XDM</li><li>Componentes de persona empresarial XDM</li><li>Mapa de identidades</li><li>Detalles de consentimiento y preferencia</li></ul> | Habilitado | `b2b.personKey.sourceKey` en el grupo de campos Detalles de persona empresarial XDM | Persona B2B | <ol><li>`extSourceSystemAudit.externalKey.sourceKey` del grupo de campos Detalles de persona comercial XDM</li><li>`workEmail.address` del grupo de campos Detalles de persona comercial XDM</ol></li> | <ol><li>Persona B2B</li><li>Correo electrónico</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey` del grupo de campos Componentes de persona empresarial XDM</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Cuenta B2B</li><li>Área de nombres: Cuenta B2B</li><li>Propiedad de destino: accountKey.sourceKey</li><li>Nombre de relación del esquema actual: Cuenta</li><li>Nombre de relación del esquema de referencia: People</li></ul> |
+| Oportunidad B2B | Oportunidad comercial XDM | Detalles de oportunidades comerciales de XDM | Habilitado | `opportunityKey.sourceKey` en la clase base | Oportunidad B2B | `extSourceSystemAudit.externalKey.sourceKey` en la clase base | Oportunidad B2B | <ul><li>`accountKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Cuenta B2B</li><li>Área de nombres: Cuenta B2B</li><li>Propiedad de destino: `accountKey.sourceKey`</li><li>Nombre de relación del esquema actual: Cuenta</li><li>Nombre de relación del esquema de referencia: Oportunidades</li></ul> |
+| Relación de persona de oportunidad B2B | Relación de persona de oportunidad comercial XDM | Ninguna | Habilitado | `opportunityPersonKey.sourceKey` en la clase base | Relación de persona de oportunidad B2B | `extSourceSystemAudit.externalKey.sourceKey` en la clase base | Relación de persona de oportunidad B2B | **Primera relación**<ul><li>`personKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Persona B2B</li><li>Área de nombres: Persona B2B</li><li>Propiedad de destino: b2b.personKey.sourceKey</li><li>Nombre de relación del esquema actual: Persona</li><li>Nombre de relación del esquema de referencia: Oportunidades</li></ul>**Segunda relación**<ul><li>`opportunityKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Oportunidad B2B </li><li>Área de nombres: Oportunidad B2B </li><li>Propiedad de destino: `opportunityKey.sourceKey`</li><li>Nombre de relación del esquema actual: Oportunidad</li><li>Nombre de relación del esquema de referencia: People</li></ul> |
+| Campaña B2B | Campaña empresarial XDM | Detalles de la campaña empresarial XDM | Habilitado | `campaignKey.sourceKey` en la clase base | Campaña B2B | `extSourceSystemAudit.externalKey.sourceKey` en la clase base | Campaña B2B |
+| Miembro de la campaña B2B | Miembro de XDM Business Campaign | Detalles del miembro de la campaña empresarial XDM | Habilitado | `ccampaignMemberKey.sourceKey` en la clase base | Miembro de la campaña B2B | `extSourceSystemAudit.externalKey.sourceKey` en la clase base | Miembro de la campaña B2B | **Primera relación**<ul><li>`personKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Persona B2B</li><li>Área de nombres: Persona B2B</li><li>Propiedad de destino: `b2b.personKey.sourceKey`</li><li>Nombre de relación del esquema actual: Persona</li><li>Nombre de relación del esquema de referencia: Campañas</li></ul>**Segunda relación**<ul><li>`campaignKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Campaña B2B</li><li>Área de nombres: Campaña B2B</li><li>Propiedad de destino: `campaignKey.sourceKey`</li><li>Nombre de relación del esquema actual: Campaign</li><li>Nombre de relación del esquema de referencia: People</li></ul> |
+| Lista de marketing B2B | Lista de marketing empresarial XDM | Ninguna | Habilitado | `marketingListKey.sourceKey` en la clase base | Lista de marketing B2B | Ninguna | Ninguna | Ninguna | La lista estática no está sincronizada desde [!DNL Salesforce] y, por lo tanto, no tiene una identidad secundaria. |
+| Miembro de la Lista de Marketing B2B | Miembros de la lista de marketing empresarial XDM | Ninguna | Habilitado | `marketingListMemberKey.sourceKey` en la clase base | Miembro de la Lista de Marketing B2B | Ninguna | Ninguna | **Primera relación**<ul><li>`PersonKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Persona B2B</li><li>Área de nombres: Persona B2B</li><li>Propiedad de destino: `b2b.personKey.sourceKey`</li><li>Nombre de relación del esquema actual: Persona</li><li>Nombre de relación del esquema de referencia: Listas de marketing</li></ul>**Segunda relación**<ul><li>`marketingListKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Lista de marketing B2B</li><li>Área de nombres: Lista de marketing B2B</li><li>Propiedad de destino: `marketingListKey.sourceKey`</li><li>Nombre de relación del esquema actual: Lista de marketing</li><li>Nombre de relación del esquema de referencia: People</li></ul> | El miembro de la lista estática no está sincronizado desde [!DNL Salesforce] y, por lo tanto, no tiene una identidad secundaria. |
+| Actividad B2B | XDM ExperienceEvent | <ul><li>Visite WebPage</li><li>Nuevo posible cliente</li><li>Convertir posible cliente</li><li>Agregar a lista</li><li>Quitar de la lista</li><li>Agregar a oportunidad</li><li>Eliminar de oportunidad</li><li>Formulario rellenado</li><li>Clics en vínculos</li><li>Correo electrónico enviado</li><li>Correo electrónico abierto</li><li>Correo electrónico en el que se hizo clic</li><li>Correo electrónico rechazado</li><li>Correo electrónico rechazado leve</li><li>Cancelación de suscripción de correo electrónico</li><li>Puntuación cambiada</li><li>Oportunidad actualizada</li><li>Cambio del estado en la progresión de la campaña</li><li>Identificador de persona</li><li>URL web de Marketo</li><li>Momento interesante</li></ul> | Habilitado | `personKey.sourceKey` del grupo de campos Identificador de persona | Persona B2B | Ninguna | Ninguna | **Primera relación**<ul><li>`listOperations.listKey.sourceKey` field</li><li>Tipo: uno a uno</li><li>Esquema de referencia: Lista de marketing B2B</li><li>Área de nombres: Lista de marketing B2B</li></ul>**Segunda relación**<ul><li>`opportunityEvent.opportunityKey.sourceKey` field</li><li>Tipo: uno a uno</li><li>Esquema de referencia: Oportunidad B2B</li><li>Área de nombres: Oportunidad B2B</li></ul>**Tercera relación**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` field</li><li>Tipo: uno a uno</li><li>Esquema de referencia: Campaña B2B</li><li>Área de nombres: Campaña B2B</li></ul> | `ExperienceEvent` es diferente a las entidades. La identidad del evento de experiencia es la persona que realizó la actividad. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -5,18 +5,14 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: 8680f0f3f67548cbf18c1aa0f0c68c5810c40f90
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 13%
+source-wordcount: '532'
+ht-degree: 9%
 
 ---
 
-# (Beta) [!DNL Marketo Engage] asignaciones de campos
-
->[!IMPORTANT]
->
->El origen [!DNL Marketo Engage] está actualmente en versión beta. Sus características y la documentación están sujetas a cambios.
+# [!DNL Marketo Engage] asignaciones de campos
 
 Las tablas siguientes contienen las asignaciones entre los campos de los nueve conjuntos de datos [!DNL Marketo] y los campos correspondientes del Modelo de datos de experiencia (XDM).
 
@@ -25,8 +21,12 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
-| `personID` | `personID` | Identidad primaria |
+| `"Marketo"` | `personKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `personID` | `personKey.sourceID` |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `eventType` | `eventType` |
+| `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
@@ -38,9 +38,9 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `web.webPageDetails.isPersonalizedURL` | `web.webPageDetails.isPersonalizedURL` |
 | `web.webPageDetails.queryParameters` | `web.webPageDetails.queryParameters` |
 | `web.webReferrer.URL` | `web.webReferrer.URL` |
-| `listOperations.listID` | `listOperations.listID` |
+| `iif(${listOperations\.listID} != null && ${listOperations\.listID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", ${listOperations\.listID}, "sourceKey", concat(${listOperations\.listID},"@${MUNCHKIN_ID}.Marketo")), null)` | `listOperations.listKey` |
 | `opportunityEvent.isPrimary` | `opportunityEvent.isPrimary` |
-| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `iif(${opportunityEvent\.opportunityID} != null && ${opportunityEvent\.opportunityID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${opportunityEvent\.opportunityID}, "sourceKey", concat(${opportunityEvent\.opportunityID},"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityEvent.opportunityKey` |
 | `opportunityEvent.role` | `opportunityEvent.role` |
 | `leadOperation.newLead.createdDate` | `leadOperation.newLead.createdDate` |
 | `leadOperation.newLead.formName` | `leadOperation.newLead.formName` |
@@ -53,6 +53,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `leadOperation.convertLead.isSentNotificationEmail` | `leadOperation.convertLead.isSentNotificationEmail` |
 | `directMarketing.mailingID` | `directMarketing.mailingID` |
 | `directMarketing.mailingName` | `directMarketing.mailingName` |
+| `directMarketing.testVariantName` | `directMarketing.testVariantName` |
 | `directMarketing.testVariantID` | `directMarketing.testVariantID` |
 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |
 | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |
@@ -75,10 +76,8 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `leadOperation.changeScore.scoreAttributeID` | `leadOperation.changeScore.scoreAttributeID` |
 | `leadOperation.changeScore.scoreAttributeName` | `leadOperation.changeScore.scoreAttributeName` |
 | `leadOperation.changeScore.urgency` | `leadOperation.changeScore.urgency` |
-| `opportunityEvent.dataValueChanges.attributeName` | `opportunityEvent.dataValueChanges.attributeName` |
-| `opportunityEvent.dataValueChanges.newValue` | `opportunityEvent.dataValueChanges.newValue` |
-| `opportunityEvent.dataValueChanges.oldValue` | `opportunityEvent.dataValueChanges.oldValue` |
-| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `json_to_object(${opportunityEvent\.dataValueChanges})` | `opportunityEvent.dataValueChanges` |
+| `iif(${leadOperation\.campaignProgression\.campaignID} != null && ${leadOperation\.campaignProgression\.campaignID} != "" , to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", ${leadOperation\.campaignProgression\.campaignID}, "sourceKey", concat(${leadOperation\.campaignProgression\.campaignID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.campaignProgression.campaignKey` |
 | `leadOperation.campaignProgression.campaignID` | `leadOperation.campaignProgression.campaignID` |
 | `leadOperation.campaignProgression.isAcquiredBy` | `leadOperation.campaignProgression.isAcquiredBy` |
 | `leadOperation.campaignProgression.isSuccessful` | `leadOperation.campaignProgression.isSuccessful` |
@@ -87,6 +86,10 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `leadOperation.campaignProgression.oldStatusID` | `leadOperation.campaignProgression.oldStatusID` |
 | `leadOperation.campaignProgression.oldStatusName` | `leadOperation.campaignProgression.oldStatusName` |
 | `leadOperation.campaignProgression.reason` | `leadOperation.campaignProgression.reason` |
+| `leadOperation.interestingMoment.date` | `leadOperation.interestingMoment.date` |
+| `leadOperation.interestingMoment.description` | `leadOperation.interestingMoment.description` |
+| `leadOperation.interestingMoment.source` | `leadOperation.interestingMoment.source` |
+| `leadOperation.interestingMoment.type` | `leadOperation.interestingMoment.type` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -94,8 +97,11 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignID` | Identidad principal |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Identidad secundaria |
+| `"Marketo"` | `campaignKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `id` | `campaignKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -104,8 +110,12 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `cost` | `actualCost.amount` |
-| `parentProgramId` | `parentCampaignID` |
+| `iif(parentProgramId != null && parentProgramId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", parentProgramId, "sourceKey", concat(parentProgramId,"@${MUNCHKIN_ID}.Marketo")), null)` | `parentCampaignKey` |
 | `integrationPartner` | `integrationPartnerName` |
+| `webinarSessionName` | `webinarSessionName` |
+| `webinarSessionDescription` | `webinarSessionDescription` |
+| `webinarHistorySyncStatus` | `webinarHistorySyncStatus` |
+| `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
 
@@ -115,10 +125,13 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignMemberID` | Identidad principal |
-| `programId` | `campaignID` | Relación |
-| `leadId` | `personID` | Relación |
-| `acquiredByCampaignID` | `acquiredByCampaignID` |
+| `"Marketo"` | `campaignMemberKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `id` | `campaignMemberKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Relación |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relación |
+| `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
 | `reachedSuccess` | `hasReachedSuccess` |
 | `isExhausted` | `isExhausted` |
 | `statusName` | `memberStatus` |
@@ -129,7 +142,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `sfdc.crmId` | `extSourceSystemAudit.externalID` |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -142,8 +155,11 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | Identidad principal |
-| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | Identidad secundaria |
+| `"Marketo"` | `accountKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `concat(id, ".mkto_org")` | `accountKey.sourceID` |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | Identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -160,7 +176,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
-| `mktoCdpParentOrgId` | `accountParentID` |
+| `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -168,7 +184,10 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `id` | `marketingListID` | Identidad principal |
+| `"Marketo"` | `marketingListKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` se reemplazará como parte de la API de exploración. |
+| `id` | `marketingListKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -176,13 +195,16 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 {style=&quot;table-layout:auto&quot;}
 
-## Pertenencia a listas estáticas {#static-list-memnberships}
+## Pertenencia a listas estáticas {#static-list-memberships}
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `staticListMemberID` | `marketingListMemberID` | Identidad principal |
-| `staticListID` | `marketingListID` | Relación |
-| `personID` | `personID` | Relación |
+| `"Marketo"` | `marketingListMemberKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `staticListMemberID` | `marketingListMemberKey.sourceID` |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relación |
+| `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relación |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -195,8 +217,11 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | Identidad principal |
-| `crmGuid` | `extSourceSystemAudit.externalID` | Identidad secundaria |
+| `"Marketo"` | `accountKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -208,7 +233,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `logoUrl` | `accountOrganization.logoUrl` |
 | `numberOfEmployees` | `accountOrganization.numberOfEmployees` |
 | `name` | `accountName` |
-| `parentAccountId` | `accountParentID` |
+| `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -217,9 +242,11 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityID` | Identidad principal |
-| `externalOpportunityId` | `extSourceSystemAudit.externalID` | Identidad secundaria |
-| `mktoCdpAccountOrgId` | `accountID` | Relación |
+| `"Marketo"` | `opportunityKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `id` | `opportunityKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
@@ -237,7 +264,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId` | `campaignID` | Solo se recomienda si utiliza la integración de Salesforce. |
+| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Este conjunto de datos de origen solo está disponible para los usuarios con la integración [!DNL Salesforce] . |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -248,10 +275,13 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityPersonID` | Identidad principal |
-| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | Identidad secundaria |
-| `mktoCdpOpptyId` | `opportunityID` | Relación |
-| `leadId` | `personID` | Relación |
+| `"Marketo"` | `opportunityPersonKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `id` | `opportunityPersonKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará como parte de la API de exploración. |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
+| `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relación |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relación |
 | `role` | `personRole` |
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -263,8 +293,13 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `id` | `personID` | Identidad primaria |
-| `contactCompany` | `b2b.accountID` |
+| `"Marketo"` | `b2b.personKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `id` | `b2b.personKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Si la cancelación de la suscripción es `true` (por ejemplo, valor = `1`), establezca `consents.marketing.email.val` como (`n`). Si la cancelación de la suscripción es `false` (por ejemplo, valor = `0`), establezca `consents.marketing.email.val` como `null`. |
+| `unsubscribedReason` | `consents.marketing.email.reason` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
 | `leadScore` | `b2b.personScore` |
@@ -272,10 +307,9 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `leadStatus` | `b2b.personStatus` |
 | `personType` | `b2b.personType` |
 | `leadPartitionId` | `b2b.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Identidad secundaria |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | El `extSourceSystemAudit.externalKey` es la identidad secundaria. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -298,13 +332,12 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `leadStatus` | `personComponents.personStatus` |
 | `personType` | `personComponents.personType` |
 | `leadPartitionId` | `personComponents.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `personComponents.sourceConvertedContactID` |
-| `contactCompany` | `personComponents.sourceAccountID` |
-| `sfdcContactId` | `personComponents.sourceExternalID` | Solo se recomienda si utiliza la integración de Salesforce. |
-| `id` | `personComponents.sourcePersonID` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourceAccountKey` |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `personComponents.sourceExternalKey` |
+| `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
+| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Se trata de un campo calculado. |
 
 {style=&quot;table-layout:auto&quot;}
 

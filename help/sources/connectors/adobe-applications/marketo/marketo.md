@@ -4,20 +4,15 @@ solution: Experience Platform
 title: Conector del Marketo Engage
 topic-legacy: overview
 description: Este documento proporciona información general sobre el conector de origen del Marketo Engage, incluida información sobre su autenticación, asignación y latencia de datos.
-translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
+source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
 
-
-# Conector (Beta) [!DNL Marketo Engage]
-
->[!IMPORTANT]
->
->El origen [!DNL Marketo Engage] está actualmente en versión beta. Sus características y la documentación están sujetas a cambios.
+# [!DNL Marketo Engage] connector
 
 Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
@@ -64,7 +59,7 @@ La siguiente tabla describe la latencia esperada para incorporar [!DNL Marketo] 
 
 | Destino | Latencia esperada |
 | ----------- | ---------------- |
-| [!DNL Real-time Customer Profile] | &lt; 1=&quot;&quot; minute=&quot;&quot;> |
+| [!DNL Real-time Customer Profile] | &lt; 1 minuto |
 | Lago de datos | &lt; 60 minutos |
 
 ## Pasos siguientes y recursos adicionales
