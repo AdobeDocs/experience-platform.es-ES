@@ -5,9 +5,9 @@ title: Información general sobre el área de nombres de identidad
 topic-legacy: overview
 description: Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1598'
 ht-degree: 2%
 
 ---
@@ -79,7 +79,7 @@ Para ver los espacios de nombres de identidad en la interfaz de usuario, selecci
 
 ![navegar](./images/browse.png)
 
-En la interfaz principal de la página aparece una lista de áreas de nombres de identidad que muestra información sobre sus nombres, símbolos de identidad, fecha de la última actualización y si son un espacio de nombres estándar o personalizado. El carril derecho contiene información sobre [!UICONTROL Identidades únicas] y [!UICONTROL Intensidad del gráfico de identidad]. [!UICONTROL Las ] identidades únicas hacen referencia al número de identidades que existen en el entorno limitado en particular que está utilizando, mientras que la  [!UICONTROL fortaleza del gráfico de ] identidad muestra información sobre el número de ID de cookies y no de cookies dentro del entorno limitado.
+En la interfaz principal de la página aparece una lista de áreas de nombres de identidad que muestra información sobre sus nombres, símbolos de identidad, fecha de la última actualización y si son un espacio de nombres estándar o personalizado. El carril derecho contiene información sobre la [!UICONTROL solidez del gráfico de identidad].
 
 ![identidades](./images/identities.png)
 

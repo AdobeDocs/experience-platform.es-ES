@@ -5,7 +5,7 @@ title: Guía de la interfaz de usuario de segmentación de Edge
 topic-legacy: ui guide
 description: La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 8f2540902cdcff99627393429424dbfe1de2d3da
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >La segmentación de Edge está actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
-La segmentación de Edge es la capacidad de evaluar segmentos en Adobe Experience Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
+La segmentación perimetral es la capacidad de evaluar segmentos en Adobe Experience Platform de forma instantánea [en el perímetro](../../edge/home.md), habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 
 ## Tipos de consultas de segmentación de Edge
 

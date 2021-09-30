@@ -1,19 +1,19 @@
 ---
 title: Detalles de persona comercial XDM Grupo de campos de esquema
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de persona empresarial XDM.
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
+source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '562'
 ht-degree: 5%
 
 ---
 
+# [!UICONTROL XDM Business Person ] Detailsschema grupo de campos (Beta)
 
-# [!UICONTROL Detalles de persona comercial XDM ] Grupo de campos de esquema
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Este grupo de campos solo está disponible para organizaciones que tienen acceso a la edición B2B de la plataforma de datos del cliente en tiempo real.
+>Este grupo de campos está disponible como parte de la Plataforma de datos de clientes en tiempo real B2B Edition, que actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 [!UICONTROL XDM Business Person ] Detailsis es un grupo de campos de esquema estándar para la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) clase que captura información sobre una persona individual en el contexto de una empresa de empresa a empresa (B2B).
 

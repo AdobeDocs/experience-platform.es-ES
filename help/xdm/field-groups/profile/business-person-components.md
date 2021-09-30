@@ -1,19 +1,19 @@
 ---
 title: Grupo de campos de esquema de componentes de persona empresarial XDM
 description: Este documento proporciona una descripción general del grupo de campos de esquema de componentes de persona empresarial XDM.
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '441'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL XDM Business Person ] Componentes Grupo de campos de esquema (Beta)
 
-# [!UICONTROL XDM Business Person ] ComponentesGrupo de campos de esquema
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Este grupo de campos solo está disponible para organizaciones que tienen acceso a la edición B2B de la Plataforma de datos del cliente en tiempo real (CDP en tiempo real).
+>Este grupo de campos está disponible como parte de la Plataforma de datos de clientes en tiempo real B2B Edition, que actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 [!UICONTROL Los ] componentes de persona empresarial XDM son un grupo de campos de esquema estándar para la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) clase que captura varios registros de origen para una persona y otros atributos que son necesarios para la segmentación de personas.
 

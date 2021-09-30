@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Data Ingestion, Sources
-source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
+source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '656'
 ht-degree: 14%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 14%
          - [Conector del Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guía de autenticación del Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [esquemas y áreas de nombres de Marketo Engage](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Publicidad {#advertising}
+   - Advertising {#advertising}
       - [Conector de Google AdWords](connectors/advertising/ads.md)
    - Almacenamiento en la nube {#cloud-storage}
       - [Conector de Amazon Kinesis](connectors/cloud-storage/kinesis.md)
@@ -40,6 +40,7 @@ ht-degree: 14%
       - [Conector de Azure Blob](connectors/cloud-storage/blob.md)
       - [Conector de los centros de eventos de Azure](connectors/cloud-storage/eventhub.md)
       - [Conector de almacenamiento de archivos de Azure](connectors/cloud-storage/azure-file-storage.md)
+      - [Zona de aterrizaje de datos](connectors/cloud-storage/data-landing-zone.md)
       - [Conector FTP](connectors/cloud-storage/ftp.md)
       - [Conector de almacenamiento de Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -97,6 +98,7 @@ ht-degree: 14%
          - [Almacenamiento de Azure Data Lake Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Centros de eventos de Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Almacenamiento de archivos de Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [Zona de aterrizaje de datos](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Almacenamiento de Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -185,6 +187,7 @@ ht-degree: 14%
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
          - [Centros de eventos de Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Almacenamiento de archivos de Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [Zona de aterrizaje de datos](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Almacenamiento de Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)

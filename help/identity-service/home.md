@@ -5,9 +5,9 @@ title: Información general del servicio de identidad
 topic-legacy: overview
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales y impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 947d8803416cee584b35a8d480929e2684d0057f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1792'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,6 @@ Antes de profundizar en los detalles de [!DNL Identity Service], aquí hay un br
 | Área de nombres de identidad | Un área de nombres de identidad sirve para distinguir el contexto o el tipo de una identidad. Por ejemplo, una identidad distingue &quot;name<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como un ID de CRM numérico. Las áreas de nombres de identidad se utilizan para buscar identidades individuales y proporcionar el contexto para los valores de identidad. Esto le permite determinar que dos fragmentos [!DNL Profile] que contienen ID principales diferentes, pero que comparten el mismo valor para el área de nombres de identidad `email`, son en realidad la misma persona. Consulte la [descripción general del área de nombres de identidad](./namespaces.md) para obtener más información. |
 | Gráfico de identidad | Un gráfico de identidad es un mapa de relaciones entre distintas identidades, que le permite visualizar y comprender mejor qué identidades de cliente se vinculan entre sí y cómo. Consulte el tutorial sobre [uso del visor de gráficos de identidad](./ui/identity-graph-viewer.md) para obtener más información. |
 | Información de identificación personal (PII) | PII es información que puede identificar directamente a un cliente, como una dirección de correo electrónico o un número de teléfono. Los valores PII suelen utilizarse para hacer coincidir. múltiples identidades de un cliente en diferentes sistemas. |
-| Identidad única | Una identidad única es una identidad que existe únicamente en un entorno limitado concreto. |
 | Identidades desconocidas o anónimas | Las identidades desconocidas o anónimas son indicadores que aíslan los dispositivos sin identificar a la persona real que utiliza el dispositivo. Las identidades desconocidas y anónimas incluyen información como la dirección IP y el ID de cookie de un visitante. Aunque las identidades anónimas y desconocidas pueden proporcionar datos de comportamiento, están limitadas hasta que un cliente proporcione su PII. |
 
 ## ¿Qué es [!DNL Identity Service]?

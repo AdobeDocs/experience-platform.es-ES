@@ -5,7 +5,7 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 048b3bbbe170a892eedc9f8ee0e130fcbfad6b86
+source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 - [[!DNL Marketo Engage] información general del conector](connectors/adobe-applications/marketo/marketo.md)
 - [Crear una conexión de origen [!DNL Marketo Engage] en la interfaz de usuario](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Publicidad
+### Advertising
 
 Experience Platform permite la ingesta de datos desde un sistema de publicidad de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
@@ -55,6 +55,7 @@ Las fuentes de almacenamiento en la nube pueden traer sus propios datos a Platfo
 - [[!DNL Apache HDFS] connector](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] connector](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
 - [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
 - [[!DNL Google PubSub] connector](connectors/cloud-storage/google-pubsub.md)

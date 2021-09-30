@@ -1,10 +1,11 @@
 ---
 title: Clase de relación de persona de oportunidad empresarial XDM
 description: Este documento proporciona una descripción general de la clase de relación de persona de oportunidad empresarial XDM en el Modelo de datos de experiencia (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 2%
+source-wordcount: '270'
+ht-degree: 4%
 
 ---
 
@@ -30,5 +31,7 @@ ht-degree: 2%
 | `isPrimary` | Booleano | Indica si la persona es el contacto principal de esta oportunidad. |
 | `personID` | Cadena | Identificador único de la persona en la relación oportunidad-persona. |
 | `personRole` | Cadena | El papel de la persona en la relación oportunidad-persona. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte la guía sobre las [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.

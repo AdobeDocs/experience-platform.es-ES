@@ -1,10 +1,11 @@
 ---
 title: Clase de campaña empresarial XDM
 description: Este documento proporciona una descripción general de la clase XDM Business Campaign en Experience Data Model (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 3%
+source-wordcount: '194'
+ht-degree: 5%
 
 ---
 
@@ -27,5 +28,7 @@ ht-degree: 3%
 | `campaignID` | Cadena | Un identificador único para la entidad de campaña. |
 | `campaignName` | Cadena | Nombre de la campaña. |
 | `campaignType` | Cadena | El tipo de campaña o audiencia de destino. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte la guía sobre las [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.

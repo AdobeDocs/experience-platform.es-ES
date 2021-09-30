@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
+source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 11%
+source-wordcount: '290'
+ht-degree: 12%
 
 ---
 
@@ -15,21 +15,8 @@ ht-degree: 11%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Ingesta de datos](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Fuentes](#sources)
-
-## Ingesta de datos {#ingestion}
-
-La ingesta de datos de Adobe Experience Platform representa los múltiples métodos mediante los cuales Platform ingesta datos de varias fuentes, así como la forma en que se mantienen esos datos dentro del lago de datos para su uso por parte de los servicios de Platform descendente.
-
-**Nuevas funciones**
-
-| Función | Descripción |
-|------- | -----------|
-| Actualizar o aplicar parches registros de perfil utilizando la ingesta por lotes | El perfil del cliente en tiempo real ahora permite actualizar los atributos de perfil en datos de registro de perfil individuales mediante la ingesta por lotes. Para obtener más información, consulte la [guía para desarrolladores de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md). |
-
-Para obtener más información sobre la ingesta de datos en Platform, visite la [Documentación sobre la ingesta de datos](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 

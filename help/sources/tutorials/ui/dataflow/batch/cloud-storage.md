@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
+source-git-commit: e980ca69517d6e51ce00f102492829aabaa52976
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2002'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,7 @@ Tenga en cuenta que no puede asignar entre distintos tipos. Por ejemplo, no se p
 
 >[!TIP]
 >
->[!DNL Platform] proporciona recomendaciones inteligentes para campos asignados automáticamente basadas en el esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
+>Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
 
 Seleccione **[!UICONTROL Preview data]** para ver los resultados de asignación de hasta 100 filas de datos de ejemplo del conjunto de datos seleccionado.
 

@@ -1,10 +1,11 @@
 ---
 title: Clase de cuenta comercial XDM
 description: Este documento proporciona información general sobre la clase de cuenta empresarial XDM en el Modelo de datos de experiencia (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '172'
-ht-degree: 2%
+source-wordcount: '175'
+ht-degree: 4%
 
 ---
 
@@ -24,5 +25,7 @@ ht-degree: 2%
 | `extSourceSystemAudit` | [[!UICONTROL Atributos de auditoría del sistema de fuentes externas]](../../data-types/external-source-system-audit-attributes.md) | Si la cuenta procede de un sistema de origen externo, este objeto captura los atributos de auditoría de ese sistema. |
 | `_id` | Cadena | Identificador único del registro. Se trata de un valor generado por el sistema que es independiente del `accountID`. |
 | `accountID` | Cadena | Identificador único de la entidad de cuenta. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte la guía sobre las [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.

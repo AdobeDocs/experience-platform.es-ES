@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform proporciona una serie de protecciones que le ayudan a evitar la creación de modelos de datos que el perfil del cliente en tiempo real no puede admitir. Este documento describe las prácticas recomendadas y restricciones que se deben tener en cuenta al modelar datos de perfil.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 441c2978b90a4703874787b3ed8b94c4a7779aa8
+source-git-commit: c351ee91367082cc5fbfc89da50aa2db5e415ea8
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1962'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform proporciona una serie de protecciones que le ayudan a 
 >
 >Las barreras y límites descritos en este documento se están mejorando constantemente. Vuelva regularmente para ver las actualizaciones.
 
-## Introducción
+## Primeros pasos
 
 Se recomienda leer la siguiente documentación de servicios de Experience Platform antes de intentar crear modelos de datos para usarlos en [!DNL Real-time Customer Profile]. Para trabajar con modelos de datos y las barreras descritas en este documento, es necesario conocer los distintos servicios de Experience Platform involucrados en la administración de [!DNL Real-time Customer Profile] entidades:
 
@@ -48,10 +48,6 @@ El modelo de datos de almacenamiento [!DNL Profile] consta de dos tipos de entid
 
    ![](images/guardrails/profile-and-dimension-entities.png)
 
-## Fragmentos de perfil
-
-Hay varias protecciones en este documento que hacen referencia a &quot;fragmentos de perfil&quot;. El perfil del cliente en tiempo real está compuesto por varios fragmentos de perfil. Cada fragmento representa los datos de la identidad desde un conjunto de datos donde es la identidad principal. Esto significa que un fragmento puede contener un ID principal y datos de evento (serie temporal) en un conjunto de datos de ExperienceEvent de XDM o puede estar compuesto por un ID principal y datos de registro (atributos independientes del tiempo) en un conjunto de datos de Perfil individual de XDM.
-
 ## Tipos de límite
 
 Al definir el modelo de datos, se recomienda permanecer dentro de los márgenes de protección proporcionados para garantizar un rendimiento adecuado y evitar errores en el sistema.
@@ -62,6 +58,10 @@ Las protecciones proporcionadas en este documento incluyen dos tipos de límite:
 
 * **Límite estricto:** un límite estricto proporciona un máximo absoluto para el sistema. Si se supera un límite estricto, se producirán averías y errores, lo que impedirá que el sistema funcione según lo esperado.
 
+## Fragmentos de perfil
+
+En este documento, existen varias protecciones que hacen referencia a &quot;fragmentos de perfil&quot;. En Experience Platform, se combinan varios fragmentos de perfil para formar el Perfil del cliente en tiempo real. Cada fragmento representa una identidad principal única y los datos de registro o evento correspondientes para ese ID dentro de un conjunto de datos determinado. Para obtener más información sobre los fragmentos de perfil, consulte [Información general del perfil](home.md#profile-fragments-vs-merged-profiles).
+
 ## Protecciones del modelo de datos
 
 Se recomienda adherirse a las siguientes protecciones al crear un modelo de datos para utilizarlo con [!DNL Real-time Customer Profile].
@@ -70,11 +70,13 @@ Se recomienda adherirse a las siguientes protecciones al crear un modelo de dato
 
 | Seguridad | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Número de conjuntos de datos recomendados para contribuir al esquema de unión [!DNL Profile] | 20 | Leve | **Se recomienda un máximo de 20 conjuntos de datos  [!DNL Profile]habilitados.** Para habilitar otro conjunto de datos para  [!DNL Profile], primero se debe eliminar o deshabilitar un conjunto de datos existente. |
+| Número de conjuntos de datos habilitados para perfil | 20 | Leve | **Un máximo de 20 conjuntos de datos pueden contribuir al esquema de  [!DNL Profile] unión.** Para habilitar otro conjunto de datos para  [!DNL Profile], primero se debe eliminar o deshabilitar un conjunto de datos existente. El límite de 20 conjuntos de datos incluye conjuntos de datos de otras soluciones de Adobe (por ejemplo, Adobe Analytics). |
+| Número de conjuntos de datos de grupos de informes de Adobe Analytics habilitados para Perfil | 1 | Leve | **Se debe habilitar un máximo de un (1) conjunto de datos de grupo de informes de Analytics para Perfil.** Si intenta habilitar varios conjuntos de datos de grupos de informes de Analytics para Perfil, puede tener consecuencias no deseadas para la calidad de los datos. Para obtener más información, consulte la sección sobre [Conjuntos de datos de Adobe Analytics](#aa-datasets) en el apéndice de este documento. |
 | Número de relaciones de varias entidades recomendadas | 5 | Leve | **Se recomienda un máximo de 5 relaciones de varias entidades definidas entre entidades principales y entidades de dimensión.** No se deben realizar asignaciones de relación adicionales hasta que se elimine o desactive una relación existente. |
 | Profundidad máxima de JSON para el campo de ID utilizado en la relación de varias entidades | 4 | Leve | **La profundidad máxima recomendada de JSON para un campo de ID utilizado en relaciones entre varias entidades es 4.** Esto significa que, en un esquema altamente anidado, los campos anidados con más de 4 niveles de profundidad no deben utilizarse como campo de ID en una relación. |
 | Cardinalidad de matriz en un fragmento de perfil | &lt;=500 | Leve | **La cardinalidad óptima de la matriz en un fragmento de perfil (datos independientes del tiempo) es  &lt;>** |
 | Cardinalidad de matriz en ExperienceEvent | &lt;=10 | Leve | **La cardinalidad óptima de la matriz en un ExperienceEvent (datos de series temporales) es  &lt;>** |
+| Límite de recuento de identidades para el gráfico de identidad de perfil individual | 50 | Grave | **El número máximo de identidades en un gráfico de identidad para un perfil individual es 50.** Los perfiles con más de 50 identidades se excluyen de la segmentación, las exportaciones y las búsquedas. |
 
 ### Protecciones de entidades Dimension
 
@@ -98,8 +100,8 @@ Las siguientes limitaciones hacen referencia al tamaño de los datos y se recomi
 | --- | --- | --- | --- |
 | Tamaño máximo de ExperienceEvent | 10 KB | Grave | **El tamaño máximo de un evento es de 10 KB.** La ingesta continuará, pero se perderán todos los eventos de más de 10 KB. |
 | Tamaño máximo del registro de perfil | 100 KB | Grave | **El tamaño máximo de un registro de perfil es de 100 KB.** La ingesta continuará, pero se perderán los registros de perfil superiores a 100 KB. |
-| Tamaño máximo del fragmento de perfil | 50 MB | Grave | **El tamaño máximo de un fragmento de perfil es de 50 MB.** La segmentación, las exportaciones y las búsquedas pueden fallar en cualquier  [fragmentación de ](#profile-fragments) perfil que supere los 50 MB. |
-| Tamaño máximo de almacenamiento de perfiles | 50 MB | Leve | **El tamaño máximo de un perfil almacenado es de 50 MB.** Añadir nuevos  [fragmentos de ](#profile-fragments) perfil en un perfil de más de 50 MB afectará al rendimiento del sistema. |
+| Tamaño máximo del fragmento de perfil | 50 MB | Grave | **El tamaño máximo de un fragmento de perfil único es de 50 MB.** La segmentación, las exportaciones y las búsquedas pueden fallar en cualquier  [fragmentación de ](#profile-fragments) perfil que supere los 50 MB. |
+| Tamaño máximo de almacenamiento de perfiles | 50 MB | Leve | **El tamaño máximo de un perfil almacenado es de 50 MB.** Añadir nuevos  [fragmentos de ](#profile-fragments) perfil en un perfil de más de 50 MB afectará al rendimiento del sistema. Por ejemplo, un perfil podría contener un solo fragmento de 50 MB o varios fragmentos en varios conjuntos de datos con un tamaño total combinado de 50 MB. Si se intenta almacenar un perfil con un solo fragmento de más de 50 MB, o con varios fragmentos que suman más de 50 MB en tamaño combinado, el rendimiento del sistema se verá afectado. |
 | Número de lotes de Perfil o ExperienceEvent ingestados por día | 90 | Leve | **El número máximo de lotes de Perfil o ExperienceEvent ingestados por día es de 90.** Esto significa que el total combinado de lotes de Perfil y ExperienceEvent ingestados cada día no puede superar los 90. La ingesta de lotes adicionales afectará el rendimiento del sistema. |
 
 ### Protecciones de entidades Dimension
@@ -119,3 +121,13 @@ Las protecciones descritas en esta sección hacen referencia al número y la nat
 | Número máximo de segmentos por simulador de pruebas | 10K | Leve | **El número máximo de segmentos que una organización puede crear es de 10 000 por simulador de pruebas.** Una organización puede tener más de 10 000 segmentos en total, siempre que haya menos de 10 000 segmentos en cada entorno limitado individual. Si intenta crear segmentos adicionales, el rendimiento del sistema se verá degradado. |
 | Número máximo de segmentos de flujo continuo por simulador de pruebas | 500 | Leve | **El número máximo de segmentos de flujo continuo que puede crear una organización es de 500 por simulador de pruebas.** Una organización puede tener más de 500 segmentos de flujo continuo en total, siempre que haya menos de 500 segmentos de flujo continuo en cada simulador de pruebas individual. Si intenta crear segmentos de flujo adicionales, el rendimiento del sistema se verá degradado. |
 | Número máximo de segmentos por lote por entorno limitado | 10K | Leve | **El número máximo de segmentos por lotes que una organización puede crear es de 10 000 por simulador de pruebas.** Una organización puede tener más de 10 000 segmentos de lote en total, siempre que haya menos de 10 000 segmentos de lote en cada entorno limitado individual. Si intenta crear segmentos de lote adicionales, el rendimiento del sistema se verá degradado. |
+
+## Apéndice
+
+Esta sección proporciona detalles adicionales para protecciones individuales.
+
+### Conjuntos de datos de grupos de informes de Adobe Analytics en Platform {#aa-datasets}
+
+Se debe habilitar un máximo de un (1) conjunto de datos del grupo de informes de Adobe Analytics para Perfil. Se trata de un límite leve, lo que significa que puede habilitar más de un conjunto de datos de Analytics para Perfil, pero no se recomienda, ya que puede tener consecuencias no deseadas para sus datos. Esto se debe a las diferencias entre los esquemas del Modelo de datos de experiencia (XDM), que proporcionan la estructura semántica para los datos en Experience Platform y permiten la coherencia en la interpretación de los datos, y la naturaleza personalizable de las eVars y las variables de conversión en Adobe Analytics.
+
+Por ejemplo, en Adobe Analytics, una sola organización puede tener varios grupos de informes. Si el grupo de informes A designa el eVar 4 como &quot;término de búsqueda interna&quot; y el grupo de informes B designa el eVar 4 como &quot;dominio de referencia&quot;, estos valores se incorporarán en el mismo campo del perfil, lo que provocará confusión y degradará la calidad de los datos.

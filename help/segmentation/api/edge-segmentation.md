@@ -5,9 +5,9 @@ title: 'Segmentación de Edge con la API '
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación perimetral con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '636'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ Esta guía para desarrolladores requiere una comprensión práctica de los diver
 - [[!DNL Segmentation]](../home.md): Proporciona la capacidad de crear segmentos y audiencias a partir de los  [!DNL Real-time Customer Profile] datos.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia del cliente.
 
-Para realizar llamadas correctamente a [!DNL Data Prep] extremos de API, lea la guía de [introducción a las API de Platform](../../landing/api-guide.md) para obtener más información sobre los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Para realizar llamadas correctamente a cualquier extremo de API de Experience Platform, lea la guía de [introducción a las API de Platform](../../landing/api-guide.md) para obtener más información sobre los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
 ## Tipos de consultas de segmentación de Edge {#query-types}
 
