@@ -4,9 +4,9 @@ title: Guía de la interfaz de usuario del perfil del cliente en tiempo real
 topic-legacy: guide
 description: El perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
+source-git-commit: 771be1f5939066295c01eb573a13dbb740e8c776
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -136,9 +136,33 @@ Los campos predeterminados mostrados también se pueden cambiar en el nivel de o
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Puede ver información adicional relacionada con el perfil individual seleccionando otra de las pestañas disponibles. Estas pestañas incluyen atributos, eventos y la pestaña de pertenencia a segmentos que muestra los segmentos para los que el perfil está cualificado actualmente.
+Puede ver información adicional relacionada con el perfil de cliente individual seleccionando otra de las pestañas disponibles. Estas pestañas incluyen atributos, eventos y la pestaña de pertenencia a segmentos que muestra los segmentos para los que el perfil está cualificado actualmente.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
+
+### Ficha Atributos
+
+La pestaña **[!UICONTROL Attributes]** proporciona una vista de lista que resume todos los atributos relacionados con un solo perfil, después de aplicar la política de combinación especificada.
+
+Estos atributos también se pueden ver como un objeto JSON seleccionando **[!UICONTROL View JSON]**. Esto resulta útil para los usuarios que deseen comprender mejor cómo se introducen los atributos de perfil en Platform.
+
+![](../images/user-guide/profiles-attributes.png)
+
+### Ficha Eventos
+
+La pestaña **[!UICONTROL Events]** contiene datos relacionados con ExperienceEvents asociados al cliente. Esto puede incluir aperturas de correo electrónico, actividades del carro de compras, vistas de página y más. Al seleccionar **[!UICONTROL Ver todo]** para cualquier evento individual, se proporcionan campos y valores adicionales que se capturan como parte del evento.
+
+Los eventos también se pueden ver como un objeto JSON seleccionando **[!UICONTROL View JSON]**. Esto resulta útil para comprender cómo se capturan los eventos en Platform.
+
+![](../images/user-guide/profiles-events.png)
+
+### Pestaña Pertenencia a segmentos
+
+La pestaña **[!UICONTROL Segment membership]** muestra una lista con el nombre y la descripción de los segmentos a los que pertenece actualmente el perfil de cliente individual. Esta lista se actualiza automáticamente a medida que el perfil se califica o caduca a partir de los segmentos. El recuento total de segmentos para los que el perfil está cualificado actualmente se muestra en la parte derecha de la pestaña .
+
+Para obtener más información sobre la segmentación en Experience Platform, consulte la [documentación del Servicio de segmentación del Experience Platform de Adobes](../../segmentation/home.md).
+
+![](../images/user-guide/profiles-segment-membership.png)
 
 ## Combinar directivas
 
