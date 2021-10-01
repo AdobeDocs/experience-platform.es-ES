@@ -4,9 +4,8 @@ title: Información general de CDP B2B Edition en tiempo real
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Descripción general de la cuenta de la plataforma de datos del cliente en tiempo real B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
-hide: true
-hidefromtoc: true
-source-git-commit: 193e709ccf6d4cec0a1ce2182f0106cc20c155ab
+exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
+source-git-commit: e54bd747a332e37920e24ce07602470f8ad74231
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 1%
