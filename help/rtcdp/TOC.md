@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Guía de la plataforma de datos del cliente en tiempo real
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
-source-git-commit: 8030eb8798ffe2bc9cb299203bafb6c53a9edebc
+source-git-commit: 213f6f1cad7ab2bec6f62f292f3492bd9aefc69c
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 43%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -37,6 +37,7 @@ ht-degree: 43%
 * Segmentos {#segmentation}
    * [Información general sobre la segmentación](segmentation/segmentation-overview.md)
    * [Guía del Generador de segmentos](segmentation/segment-builder-guide.md)
+   * [Segmentación B2B](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * Esquemas {#schemas}
    * [Información general sobre esquemas](schemas/overview.md)
