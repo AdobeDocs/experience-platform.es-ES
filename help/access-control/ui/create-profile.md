@@ -5,9 +5,9 @@ title: Crear un nuevo perfil de producto en Adobe Admin Console
 topic-legacy: user guide
 description: Este documento cubre los pasos necesarios para crear un nuevo perfil de producto en Adobe Admin Console. Para empezar a crear un nuevo perfil, vaya a la pestaña Perfiles de producto y haga clic en Nuevo perfil.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ La siguiente pantalla le solicita que elija qué servicios de plataforma incluir
 
 Los clientes con derecho a la edición B2B o B2P tienen acceso a la IU B2B. La interfaz de usuario B2B se puede aprovisionar para los usuarios mediante el [!UICONTROL menú Enable services]. Seleccione el botón situado junto a [!UICONTROL B2B UI] para habilitar el servicio para un perfil de producto determinado y, a continuación, seleccione **[!UICONTROL Guardar]**.
 
-La opción de IU B2B permite a los usuarios ver los flujos de trabajo B2B en la administración de cuentas y oportunidades, así como crear segmentos relacionados con B2B.
+La opción de IU B2B permite a los usuarios ver los flujos de trabajo B2B en la administración de cuentas y oportunidades, así como crear segmentos relacionados con B2B. Para obtener más información, consulte la documentación de [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)
 
