@@ -3,9 +3,10 @@ title: Flujos de trabajo basados en el campo en el Editor de esquemas (Beta)
 description: Aprenda a añadir individualmente campos de grupos de campos existentes a los esquemas del Modelo de datos de experiencia (XDM).
 hide: true
 hidefromtoc: true
-source-git-commit: 139d453c3758f4f137cd1b31307b61dc777fc1c1
+exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
+source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -50,6 +51,26 @@ El lienzo vuelve a aparecer con solo los campos seleccionados presentes en la es
 
 ![Campos añadidos](../images/ui/field-based-workflows/fields-added.png)
 
+## Añadir campos estándar directamente a un esquema
+
+Puede agregar campos de grupos de campos estándar directamente a un esquema sin necesidad de conocer previamente su grupo de campos correspondiente. Para agregar un campo estándar a un esquema, seleccione el icono de signo más (**+**) junto al nombre del esquema en el lienzo. Un marcador de posición **[!UICONTROL Campo sin título]** aparece en la estructura del esquema y el carril correcto se actualiza para mostrar los controles que deben configurar el campo.
+
+![Marcador de posición de campo](../images/ui/field-based-workflows/root-custom-field.png)
+
+En **[!UICONTROL Field name]**, empiece a escribir el nombre del campo que desee agregar. El sistema busca automáticamente campos estándar que coincidan con la consulta y los enumera en **[!UICONTROL Campos estándar recomendados]**, incluidos los grupos de campos a los que pertenecen.
+
+![Campos estándar recomendados](../images/ui/field-based-workflows/standard-field-search.png)
+
+Aunque algunos campos estándar comparten el mismo nombre, su estructura puede variar según el grupo de campos del que provengan. Si un campo estándar está anidado dentro de un objeto principal en la estructura del grupo de campos, el campo principal también se incluye en el esquema si se agrega el campo secundario.
+
+Seleccione el icono de vista previa (![Preview icon](../images/ui/field-based-workflows/preview-icon.png)) situado junto a un campo estándar para ver la estructura de su grupo de campos y comprender mejor cómo se puede anidar. Para añadir el campo estándar al esquema, seleccione el icono del signo más (![Plus icon](../images/ui/field-based-workflows/add-icon.png)).
+
+![Añadir campo estándar](../images/ui/field-based-workflows/add-standard-field.png)
+
+El lienzo se actualiza para mostrar el campo estándar añadido al esquema, incluidos los campos principales anidados dentro de la estructura del grupo de campos. El nombre del grupo de campos también aparece en **[!UICONTROL Grupos de campos]** en el carril izquierdo. Si desea agregar más campos del mismo grupo de campos, seleccione **[!UICONTROL Administrar campos relacionados]** en el carril derecho.
+
+![Campo estándar añadido](../images/ui/field-based-workflows/standard-field-added.png)
+
 ## Añadir campos personalizados directamente a un esquema
 
 Si ya ha [creado grupos de campos personalizados](./resources/field-groups.md#create), puede añadir campos personalizados directamente al esquema sin necesidad de añadirlos por separado a un grupo de campos personalizados de antemano.
@@ -62,7 +83,11 @@ Para añadir campos al nivel raíz de un esquema, seleccione el icono de signo m
 
 ![Campo personalizado raíz](../images/ui/field-based-workflows/root-custom-field.png)
 
-Utilice los controles del carril derecho para proporcionar un nombre, un nombre para mostrar y un tipo de datos para el campo. En **[!UICONTROL Asignar grupo de campos]**, seleccione el grupo de campos personalizados al que desea asociar el nuevo campo.
+Comience a escribir el nombre del campo personalizado que desee agregar y el sistema empezará a buscar automáticamente campos estándar coincidentes. Para crear un nuevo campo personalizado en su lugar, seleccione la opción superior anexada con **([!UICONTROL Nuevo campo])**.
+
+![Campo nuevo](../images/ui/field-based-workflows/custom-field-search.png)
+
+A partir de aquí, proporcione un nombre para mostrar y un tipo de datos para el campo. En **[!UICONTROL Asignar grupo de campos]**, seleccione el grupo de campos personalizados al que desea asociar el nuevo campo.
 
 ![Seleccionar grupo de campos](../images/ui/field-based-workflows/select-field-group.png)
 
@@ -78,7 +103,7 @@ El nuevo campo se agrega al lienzo y tiene un área de nombres bajo su [ID de in
 >
 >El resto de los campos proporcionados por el grupo de campos personalizados seleccionado se eliminan del esquema de forma predeterminada. Si desea añadir algunos de estos campos al esquema, seleccione un campo perteneciente al grupo y, a continuación, seleccione **[!UICONTROL Manage related fields]** en el carril derecho.
 
-### Añadir campos a la estructura de los grupos de campos estándar
+### Añadir campos personalizados a la estructura de los grupos de campos estándar
 
 Si el esquema en el que está trabajando tiene un campo de tipo objeto proporcionado por un grupo de campos estándar, puede agregar sus propios campos personalizados a ese objeto estándar. Seleccione el icono de signo más (**+**) junto a la raíz del objeto y proporcione los detalles del campo personalizado en el carril derecho.
 
