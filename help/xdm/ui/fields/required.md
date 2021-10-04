@@ -1,15 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;obligatorio;campo;
-solution: Experience Platform
 title: Definición de campos requeridos en la interfaz de usuario
 description: Obtenga información sobre cómo definir un campo XDM requerido en la interfaz de usuario del Experience Platform.
-topic-legacy: user guide
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1d04bf56c51506f84c5156e6d2ed6c9f58f15235
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 1%
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +16,21 @@ En el Modelo de datos de experiencia (XDM), un campo obligatorio indica que debe
 
 Cuando [define un nuevo campo](./overview.md#define) en la interfaz de usuario de Adobe Experience Platform, puede definirlo como un campo obligatorio seleccionando la casilla **[!UICONTROL Required]** en el carril derecho. Seleccione **[!UICONTROL Apply]** para aplicar el cambio al esquema.
 
-![](../../images/ui/fields/special/required.png)
+![Casilla de verificación requerida](../../images/ui/fields/required/root.png)
 
-Una vez aplicado el campo, su ruta aparece en **[!UICONTROL Required fields]** en el carril izquierdo. Si el campo está anidado, también aparecerán los campos principales según sea necesario.
+Si el campo es un atributo de nivel raíz bajo el objeto de ID de inquilino, su ruta aparece inmediatamente en **[!UICONTROL Campos requeridos]** en el carril izquierdo.
 
-![](../../images/ui/fields/special/required-applied.png)
+![Campo requerido de nivel raíz](../../images/ui/fields/required/applied.png)
+
+Sin embargo, si un campo obligatorio está anidado en un objeto que no está marcado como requerido, el campo anidado no aparece en **[!UICONTROL Campos requeridos]** en el carril izquierdo.
+
+En el ejemplo siguiente, el campo `loyaltyId` está configurado como necesario, pero su objeto principal `loyalty` no lo está. En este caso, no se producirían errores de validación si se excluyera `loyalty` al introducir datos, aunque el campo secundario `loyaltyId` esté marcado como necesario. En otras palabras, mientras que `loyalty` es opcional, debe contener un campo `loyaltyId` en el caso de que se incluya.
+
+![Campo obligatorio anidado](../../images/ui/fields/required/nested.png)
+
+Si desea que un campo anidado siempre sea necesario en un esquema, también debe definir todos los campos principales como sea necesario (con la excepción del objeto de ID de inquilino).
+
+![Campos obligatorios principal y secundario](../../images/ui/fields/required/parent-and-child.png)
 
 ## Pasos siguientes
 
