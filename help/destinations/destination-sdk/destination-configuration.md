@@ -2,9 +2,9 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino para el SDK de destino
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1552'
 ht-degree: 5%
 
 ---
@@ -63,7 +63,12 @@ A continuación se muestra un ejemplo de configuración para un destino ficticio
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+               
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -214,7 +219,7 @@ Obtenga más información en la [descripción general del área de nombres de id
 | `acceptsAttributes` | Booleano | Indica si el destino acepta atributos de perfil estándar. Normalmente, estos atributos se resaltan en la documentación de nuestros socios. |
 | `acceptsCustomNamespaces` | Booleano | Indica si los clientes pueden configurar áreas de nombres personalizadas en el destino. |
 | `allowedAttributesTransformation` | Cadena | *No se muestra en la configuración* de ejemplo. Se utiliza, por ejemplo, cuando el cliente [!DNL Platform] tiene direcciones de correo electrónico simples como atributo y la plataforma solo acepta correos electrónicos con hash. Aquí es donde proporcionaría la transformación que debe aplicarse (por ejemplo, transformar el correo electrónico a minúsculas y luego a hash). |
-| `acceptedGlobalNamespaces` | - | *No se muestra en la configuración* de ejemplo. Se utiliza para casos en los que la plataforma acepta [áreas de nombres de identidad estándar](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por ejemplo, IDFA), por lo que puede restringir a los usuarios de Platform a que solo seleccionen estas áreas de nombres de identidad. |
+| `acceptedGlobalNamespaces` | - | Se utiliza para casos en los que la plataforma acepta [áreas de nombres de identidad estándar](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por ejemplo, IDFA), por lo que puede restringir a los usuarios de Platform a que solo seleccionen estas áreas de nombres de identidad. |
 
 {style=&quot;table-layout:auto&quot;}
 

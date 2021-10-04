@@ -2,9 +2,9 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/testing/destinationInstance/`, para comprobar si el destino está configurado correctamente y para verificar la integridad de los flujos de datos en el destino configurado.
 title: Operaciones de API de prueba de destino
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '664'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,8 @@ En esta página se enumeran y describen todas las operaciones de API que puede r
 Se realizan solicitudes al extremo de prueba con o sin añadir perfiles a la llamada. Si no envía ningún perfil en la solicitud, Adobe los generará internamente y los agregará a la solicitud.
 
 Puede utilizar la [API de generación de perfiles de muestra](./sample-profile-generation-api.md) para crear perfiles que se utilizarán en solicitudes a la API de prueba de destino.
+
+## Obtención del ID de instancia de destino {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >

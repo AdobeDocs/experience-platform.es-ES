@@ -2,9 +2,9 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/Destinations`.
 title: Operaciones de extremo de la API de destinos
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
 workflow-type: tm+mt
-source-wordcount: '2381'
+source-wordcount: '2352'
 ht-degree: 5%
 
 ---
@@ -77,7 +77,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -85,7 +85,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -172,14 +176,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.isRequired` | Booleano | Indica si este campo es necesario en el flujo de trabajo de configuración de destino. |
 | `customerDataFields.enum` | Cadena | Representa el campo personalizado como un menú desplegable y enumera las opciones disponibles para el usuario. |
 | `customerDataFields.pattern` | Cadena | Aplica un patrón para el campo personalizado, si es necesario. Utilice expresiones regulares para aplicar un patrón. Por ejemplo, si los ID de cliente no incluyen números o guiones bajos, introduzca `^[A-Za-z]+$` en este campo. |
-| `uiAttributes.documentationLink` | Cadena | Se refiere a la página de documentación de [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para su destino. Utilice `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, donde `YOURDESTINATION` es el nombre de su destino. Para un destino llamado Moviestar, debe utilizar `http://www.adobe.com/go/destinations-moviestar-en`. |
+| `uiAttributes.documentationLink` | Cadena | Se refiere a la página de documentación de [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para su destino. Utilice `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, donde `YOURDESTINATION` es el nombre de su destino. Para un destino llamado Moviestar, debe utilizar `https://www.adobe.com/go/destinations-moviestar-en`. |
 | `uiAttributes.category` | Cadena | Se refiere a la categoría asignada a su destino en Adobe Experience Platform. Para obtener más información, lea [Categorías de destino](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Utilice uno de los siguientes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `uiAttributes.connectionType` | Cadena | `Server-to-server` actualmente es la única opción disponible. |
 | `uiAttributes.frequency` | Cadena | `Streaming` actualmente es la única opción disponible. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica si el destino acepta atributos de perfil estándar. Normalmente, estos atributos se resaltan en la documentación de nuestros socios. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica si los clientes pueden configurar áreas de nombres personalizadas en el destino. |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | Cadena | _No se muestra en la configuración_ de ejemplo. Se utiliza, por ejemplo, cuando el cliente [!DNL Platform] tiene direcciones de correo electrónico simples como atributo y la plataforma solo acepta correos electrónicos con hash. Aquí es donde proporcionaría la transformación que debe aplicarse (por ejemplo, transformar el correo electrónico a minúsculas y luego a hash). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _No se muestra en la configuración_ de ejemplo. Se utiliza para casos en los que la plataforma acepta [áreas de nombres de identidad estándar](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por ejemplo, IDFA), por lo que puede restringir a los usuarios de Platform a que solo seleccionen estas áreas de nombres de identidad. <br> Cuando utilice  `acceptedGlobalNamespaces`, puede utilizar  `"requiredTransformation":"sha256(lower($))"` para escribir en minúsculas y hash las direcciones de correo electrónico o los números de teléfono. Para ver cómo se utiliza este parámetro, consulte la configuración en la sección siguiente [Actualizar una configuración de destino](./destination-configuration-api.md#update). |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Se utiliza para casos en los que la plataforma acepta [áreas de nombres de identidad estándar](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por ejemplo, IDFA), por lo que puede restringir a los usuarios de Platform a que solo seleccionen estas áreas de nombres de identidad. <br> Cuando utilice  `acceptedGlobalNamespaces`, puede utilizar  `"requiredTransformation":"sha256(lower($))"` para escribir en minúsculas y hash las direcciones de correo electrónico o los números de teléfono. |
 | `destinationDelivery.authenticationRule` | Cadena | Indica cómo se conectan los clientes [!DNL Platform] con el destino. Los valores aceptados son `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilice `CUSTOMER_AUTHENTICATION` si los clientes de Platform inician sesión en su sistema mediante un nombre de usuario y contraseña, un token al portador u otro método de autenticación. Por ejemplo, puede seleccionar esta opción si también selecciona `authType: OAUTH2` o `authType:BEARER` en `customerAuthenticationConfigurations`. </li><li> Utilice `PLATFORM_AUTHENTICATION` si existe un sistema de autenticación global entre el Adobe y el destino y el cliente [!DNL Platform] no necesita proporcionar ninguna credencial de autenticación para conectarse al destino. En este caso, debe crear un objeto credentials utilizando la configuración [Credentials](./credentials-configuration.md). </li><li>Utilice `NONE` si no se requiere autenticación para enviar datos a la plataforma de destino. </li></ul> |
 | `destinationDelivery.destinationServerId` | Cadena | El `instanceId` de la [plantilla de servidor de destino](./destination-server-api.md) utilizada para este destino. |
 | `backfillHistoricalProfileData` | Booleano | Controla si los datos del perfil histórico se exportan cuando los segmentos se activan en el destino. <br> <ul><li> `true`:  [!DNL Platform] envía los perfiles de usuario históricos que cumplen los requisitos para el segmento antes de que se active el segmento. </li><li> `false`:  [!DNL Platform] solo incluye perfiles de usuario que cumplen los requisitos para el segmento una vez activado el segmento. </li></ul> |
@@ -279,7 +283,7 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de configuracio
             }
          ],
          "uiAttributes":{
-            "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+            "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
             "category":"mobile",
             "connectionType":"Server-to-server",
             "frequency":"Streaming"
@@ -287,7 +291,12 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de configuracio
          "identityNamespaces":{
             "external_id":{
                "acceptsAttributes":true,
-               "acceptsCustomNamespaces":true
+               "acceptsCustomNamespaces":true,
+               "acceptedGlobalNamespaces":{
+                  "Email":{
+                     
+                  }
+               }
             },
             "another_id":{
                "acceptsAttributes":true,
@@ -379,14 +388,14 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de configuracio
 | `customerDataFields.isRequired` | Booleano | Indica si este campo es necesario en el flujo de trabajo de configuración de destino. |
 | `customerDataFields.enum` | Cadena | Representa el campo personalizado como un menú desplegable y enumera las opciones disponibles para el usuario. |
 | `customerDataFields.pattern` | Cadena | Aplica un patrón para el campo personalizado, si es necesario. Utilice expresiones regulares para aplicar un patrón. Por ejemplo, si los ID de cliente no incluyen números o guiones bajos, introduzca `^[A-Za-z]+$` en este campo. |
-| `uiAttributes.documentationLink` | Cadena | Se refiere a la página de documentación de [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para su destino. Utilice `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, donde `YOURDESTINATION` es el nombre de su destino. Para un destino llamado Moviestar, debe utilizar `http://www.adobe.com/go/destinations-moviestar-en` |
+| `uiAttributes.documentationLink` | Cadena | Se refiere a la página de documentación de [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para su destino. Utilice `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, donde `YOURDESTINATION` es el nombre de su destino. Para un destino llamado Moviestar, debe utilizar `https://www.adobe.com/go/destinations-moviestar-en` |
 | `uiAttributes.category` | Cadena | Se refiere a la categoría asignada a su destino en Adobe Experience Platform. Para obtener más información, lea [Categorías de destino](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Utilice uno de los siguientes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
 | `uiAttributes.connectionType` | Cadena | `Server-to-server` actualmente es la única opción disponible. |
 | `uiAttributes.frequency` | Cadena | `Streaming` actualmente es la única opción disponible. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica si el destino acepta atributos de perfil estándar. Normalmente, estos atributos se resaltan en la documentación de nuestros socios. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica si los clientes pueden configurar áreas de nombres personalizadas en el destino. Obtenga más información sobre [áreas de nombres personalizadas](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) en Adobe Experience Platform. |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | Cadena | _No se muestra en la configuración_ de ejemplo. Se utiliza, por ejemplo, cuando el cliente [!DNL Platform] tiene direcciones de correo electrónico simples como atributo y la plataforma solo acepta correos electrónicos con hash. Aquí es donde proporcionaría la transformación que debe aplicarse (por ejemplo, transformar el correo electrónico a minúsculas y luego a hash). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _No se muestra en la configuración_ de ejemplo. Se utiliza para casos en los que la plataforma acepta [áreas de nombres de identidad estándar](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por ejemplo, IDFA), por lo que puede restringir a los usuarios de Platform a que solo seleccionen estas áreas de nombres de identidad. |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Se utiliza para casos en los que la plataforma acepta [áreas de nombres de identidad estándar](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por ejemplo, IDFA), por lo que puede restringir a los usuarios de Platform a que solo seleccionen estas áreas de nombres de identidad. |
 | `destinationDelivery.authenticationRule` | Cadena | Indica cómo se conectan los clientes [!DNL Platform] con el destino. Los valores aceptados son `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilice `CUSTOMER_AUTHENTICATION` si los clientes de Platform inician sesión en su sistema mediante un nombre de usuario y contraseña, un token al portador u otro método de autenticación. Por ejemplo, puede seleccionar esta opción si también selecciona `authType: OAUTH2` o `authType:BEARER` en `customerAuthenticationConfigurations`. </li><li> Utilice `PLATFORM_AUTHENTICATION` si existe un sistema de autenticación global entre el Adobe y el destino y el cliente [!DNL Platform] no necesita proporcionar ninguna credencial de autenticación para conectarse al destino. En este caso, debe crear un objeto credentials utilizando la configuración [Credentials](./credentials-configuration.md). </li><li>Utilice `NONE` si no se requiere autenticación para enviar datos a la plataforma de destino. </li></ul> |
 | `destinationDelivery.destinationServerId` | Cadena | El `instanceId` de la [plantilla de servidor de destino](./destination-server-api.md) utilizada para este destino. |
 | `inputSchemaId` | Cadena | Este campo se genera automáticamente y no requiere la introducción de datos. |
@@ -465,7 +474,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -473,7 +482,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -647,7 +660,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -655,7 +668,12 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+               
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
