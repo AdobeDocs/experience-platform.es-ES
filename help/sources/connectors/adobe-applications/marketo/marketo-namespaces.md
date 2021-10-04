@@ -5,14 +5,18 @@ title: Esquemas y áreas de nombres B2B
 topic-legacy: overview
 description: Este documento proporciona información general sobre los espacios de nombres personalizados necesarios al crear un conector de origen B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: a67e411c7d07bc5d94876b6bafbbea5056b7a9bc
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1588'
 ht-degree: 4%
 
 ---
 
-# Esquemas y áreas de nombres B2B
+# (Beta) Espacios de nombres y esquemas B2B
+
+>[!IMPORTANT]
+>
+>Esta función está actualmente en fase beta. La documentación y la funcionalidad están sujetas a cambios.
 
 Este documento proporciona información sobre la configuración subyacente para los espacios de nombres y esquemas que se van a utilizar con orígenes B2B. Este documento también proporciona detalles sobre la configuración de la utilidad de automatización de Postman necesaria para generar esquemas y áreas de nombres B2B.
 
