@@ -2,7 +2,7 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino para el SDK de destino
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
+source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 5%
@@ -92,7 +92,6 @@ A continuación se muestra un ejemplo de configuración para un destino ficticio
       "mapUserInput":false,
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -175,7 +174,7 @@ Esta sección permite a los socios introducir campos personalizados. En la confi
 
 ## Atributos de interfaz de usuario {#ui-attributes}
 
-Esta sección se refiere a los elementos de IU de la configuración anterior que el Adobe debe utilizar para el destino en la interfaz de usuario de Adobe Experience Platform. Consulte a continuación:
+Esta sección se refiere a los elementos de IU de la configuración anterior que el Adobe debe utilizar para el destino en la interfaz de usuario de Adobe Experience Platform. Vea lo siguiente:
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
