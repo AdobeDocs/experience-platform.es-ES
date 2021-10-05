@@ -4,9 +4,9 @@ title: Tipo de datos de consentimientos y preferencias
 description: El tipo de datos Consent for Privacy, Personalization and Marketing Preferences está diseñado para admitir la recopilación de permisos y preferencias de cliente generados por las plataformas de administración de consentimiento (CMP) y otras fuentes a partir de sus operaciones de datos.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: da6131494d80dbd2bbd4496876f044f5026b0e12
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '2039'
 ht-degree: 2%
 
 ---
@@ -89,7 +89,7 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 >Puede generar datos JSON de muestra para cualquier esquema XDM que defina en Experience Platform para ayudar a visualizar cómo se deben asignar los datos de consentimiento y preferencias del cliente. Consulte la siguiente documentación para obtener más información:
 >
 >* [Generar datos de ejemplo en la interfaz de usuario](../ui/sample.md)
-* [Generar datos de ejemplo en la API](../api/sample-data.md)
+>* [Generar datos de ejemplo en la API](../api/sample-data.md)
 
 
 ## `consents` {#choices}
@@ -179,8 +179,10 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 `personalize` captura las preferencias de los clientes con respecto a las formas en que se pueden utilizar sus datos para la personalización. Los clientes pueden desactivar casos de uso de personalización específicos o excluirse por completo de la personalización.
 
 >[!IMPORTANT]
-`personalize` no cubre casos de uso de marketing. Por ejemplo, si un cliente decide excluirse de la personalización para todos los canales, no debería dejar de recibir comunicaciones a través de esos canales. En su lugar, los mensajes que reciben deben ser genéricos y no estar basados en su perfil.
-Por el mismo ejemplo, si un cliente decide excluirse del marketing directo para todos los canales (a través de `marketing`, explicado en la [siguiente sección](#marketing)), entonces ese cliente no debería recibir ningún mensaje, aunque la personalización esté permitida.
+>
+>`personalize` no cubre casos de uso de marketing. Por ejemplo, si un cliente decide excluirse de la personalización para todos los canales, no debería dejar de recibir comunicaciones a través de esos canales. En su lugar, los mensajes que reciben deben ser genéricos y no estar basados en su perfil.
+>
+>Por el mismo ejemplo, si un cliente decide excluirse del marketing directo para todos los canales (a través de `marketing`, explicado en la [siguiente sección](#marketing)), entonces ese cliente no debería recibir ningún mensaje, aunque la personalización esté permitida.
 
 ```json
 "personalize": {
@@ -256,8 +258,10 @@ Para utilizar el tipo de datos [!UICONTROL Consents and Preferences] para introd
 Consulte el tutorial sobre la [creación de un esquema en la interfaz de usuario](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para ver los pasos sobre cómo asignar tipos de datos a los campos. Una vez creado un esquema que contiene un campo con el tipo de datos [!UICONTROL Consentimientos y preferencias] , consulte la sección sobre [creación de un conjunto de datos](../../catalog/datasets/user-guide.md#create) en la guía del usuario del conjunto de datos, siguiendo los pasos para crear un conjunto de datos con un esquema existente.
 
 >[!IMPORTANT]
-Si desea enviar datos de consentimiento a [!DNL Real-time Customer Profile], es necesario crear un esquema habilitado para [!DNL Profile] basado en la clase [!DNL XDM Individual Profile] que contiene el tipo de datos [!UICONTROL Consentimientos y preferencias]. El conjunto de datos que cree en función de ese esquema también debe estar habilitado para [!DNL Profile]. Consulte los tutoriales vinculados anteriormente para ver los pasos específicos relacionados con los requisitos [!DNL Real-time Customer Profile] para esquemas y conjuntos de datos.
-Además, también debe asegurarse de que las políticas de combinación estén configuradas para priorizar los conjuntos de datos que contienen los datos de consentimiento y preferencias más recientes, a fin de que los perfiles de clientes se actualicen correctamente. Consulte la descripción general de [merge policy](../../rtcdp/profile/merge-policies.md) para obtener más información.
+>
+>Si desea enviar datos de consentimiento a [!DNL Real-time Customer Profile], es necesario crear un esquema habilitado para [!DNL Profile] basado en la clase [!DNL XDM Individual Profile] que contiene el tipo de datos [!UICONTROL Consentimientos y preferencias]. El conjunto de datos que cree en función de ese esquema también debe estar habilitado para [!DNL Profile]. Consulte los tutoriales vinculados anteriormente para ver los pasos específicos relacionados con los requisitos [!DNL Real-time Customer Profile] para esquemas y conjuntos de datos.
+>
+>Además, también debe asegurarse de que las políticas de combinación estén configuradas para priorizar los conjuntos de datos que contienen los datos de consentimiento y preferencias más recientes, a fin de que los perfiles de clientes se actualicen correctamente. Consulte la descripción general de [merge policy](../../rtcdp/profile/merge-policies.md) para obtener más información.
 
 ## Gestión de cambios de consentimiento y preferencias
 
@@ -273,10 +277,12 @@ La siguiente tabla describe los valores aceptados para `val`:
 
 | Valor | Título | Descripción |
 | --- | --- | --- |
-| `y` | Sí | El cliente ha elegido el consentimiento o la preferencia. En otras palabras, **dan** su consentimiento para el uso de sus datos como se indica en el consentimiento o preferencia en cuestión. |
-| `n` | No | El cliente ha excluido el consentimiento o la preferencia. En otras palabras, **no** dan su consentimiento para el uso de sus datos como se indica en el consentimiento o preferencia en cuestión. |
+| `y` | Sí (opción de inclusión) | El cliente ha elegido el consentimiento o la preferencia. En otras palabras, **dan** su consentimiento para el uso de sus datos como se indica en el consentimiento o preferencia en cuestión. |
+| `n` | No (exclusión) | El cliente ha excluido el consentimiento o la preferencia. En otras palabras, **no** dan su consentimiento para el uso de sus datos como se indica en el consentimiento o preferencia en cuestión. |
 | `p` | Verificación pendiente | El sistema aún no ha recibido un consentimiento definitivo o un valor de preferencia. Esto se utiliza generalmente como parte de un consentimiento que requiere una verificación en dos pasos. Por ejemplo, si un cliente decide recibir correos electrónicos, ese consentimiento se establece en `p` hasta que seleccione un vínculo en un correo electrónico para verificar que ha proporcionado la dirección de correo electrónico correcta, momento en el que el consentimiento se actualiza a `y`.<br><br>Si este consentimiento o preferencia no utiliza un proceso de verificación de dos conjuntos, entonces la  `p` opción puede utilizarse para indicar que el cliente aún no ha respondido a la solicitud de consentimiento. Por ejemplo, puede establecer automáticamente el valor en `p` en la primera página de un sitio web antes de que el cliente haya respondido a la solicitud de consentimiento. En jurisdicciones que no requieren consentimiento explícito, también puede utilizarlo para indicar que el cliente no ha excluido explícitamente la solicitud (es decir, se asume el consentimiento). |
 | `u` | Unknown | Se desconoce la información de consentimiento o preferencias del cliente. |
+| `dy` | Predeterminado de Sí (opción de inclusión) | El cliente no ha proporcionado un valor de consentimiento por sí mismo y se trata como una opción de inclusión (&quot;Sí&quot;) de forma predeterminada. En otras palabras, se asume el consentimiento hasta que el cliente indique lo contrario.<br><br>Tenga en cuenta que si las leyes o los cambios en la política de privacidad de su empresa producen cambios en los valores predeterminados de algunos o de todos los usuarios, debe actualizar manualmente todos los perfiles que contengan valores predeterminados. |
+| `dn` | Valor predeterminado de no (exclusión) | El cliente no ha proporcionado un valor de consentimiento por sí mismo y se trata como un valor de exclusión (&quot;No&quot;) de forma predeterminada. En otras palabras, se supone que el cliente ha denegado el consentimiento hasta que indique lo contrario.<br><br>Tenga en cuenta que si las leyes o los cambios en la política de privacidad de su empresa producen cambios en los valores predeterminados de algunos o de todos los usuarios, debe actualizar manualmente todos los perfiles que contengan valores predeterminados. |
 | `LI` | Interés legítimo | El interés legítimo de las empresas en recopilar y procesar estos datos con el fin especificado supera el daño potencial que supone para la persona. |
 | `CT` | Contrato | La recopilación de datos con el fin especificado es necesaria para cumplir las obligaciones contractuales con la persona. |
 | `CP` | Cumplimiento de una obligación legal | La recopilación de datos con el fin especificado es necesaria para cumplir las obligaciones jurídicas de la empresa. |
