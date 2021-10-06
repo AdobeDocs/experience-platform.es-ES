@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Ayuda de etiquetas
 breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
-feature: Recopilación de datos
-source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
+feature: Data Collection
+source-git-commit: 549124c4c10677cc3691706c804894956c7ef592
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 79%
+source-wordcount: '378'
+ht-degree: 88%
 
 ---
 
@@ -154,7 +154,7 @@ ht-degree: 79%
    * [Alojamiento de bibliotecas de terceros](./extension-dev/third-party-libraries.md)
    * [Variable gratuita Turbine](./extension-dev/turbine.md)
    * [Estándar de compatibilidad con versiones anteriores](./extension-dev/backwards-compatibility.md)
-* API de reactor {#api}
+* API de Reactor {#api}
    * [Información general](./api/overview.md)
    * [Primeros pasos](./api/getting-started.md)
    * Puntos de conexión {#endpoints}
@@ -163,7 +163,7 @@ ht-degree: 79%
       * [Elementos de datos](./api/endpoints/data-elements.md)
       * [Reglas](./api/endpoints/rules.md)
       * [Regla componentes](./api/endpoints/rule-components.md)
-      * [Paquetes de extensión](./api/endpoints/extension-packages.md)
+      * [Paquetes de extensiones](./api/endpoints/extension-packages.md)
       * [Extensiones](./api/endpoints/extensions.md)
       * [Bibliotecas](./api/endpoints/libraries.md)
       * [Versiones](./api/endpoints/builds.md)
@@ -176,9 +176,9 @@ ht-degree: 79%
       * [Perfil](./api/endpoints/profile.md)
       * [Buscar](./api/endpoints/search.md)
    * Guías {#guides}
-      * [Delegar ID de descriptor](./api/guides/delegate-descriptor-ids.md)
-      * [Cifrar valores](./api/guides/encrypting-values.md)
-      * [Error handling](./api/guides/error-handling.md)
+      * [Delegación de ID de descriptor](./api/guides/delegate-descriptor-ids.md)
+      * [Cifrado de valores](./api/guides/encrypting-values.md)
+      * [Control de errores](./api/guides/error-handling.md)
       * [Filtrado de respuestas](./api/guides/filtering.md)
       * [Paginación de respuestas](./api/guides/pagination.md)
       * [Clasificación de respuestas](./api/guides/sorting.md)
