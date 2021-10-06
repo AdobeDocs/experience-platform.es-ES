@@ -4,9 +4,9 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
+source-git-commit: 05f2ba2e8e7abadeef18a908ba8b0e9a02d4c3f8
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Para obtener una descripción general de todas las funciones de perfil de la int
 
 ## Datos de tablero de perfil
 
-El tablero [!UICONTROL Profiles] muestra una instantánea de los datos de atributos (registros) que su organización tiene dentro del Almacenamiento de perfiles en el Experience Platform. La instantánea no incluye datos de ningún evento (serie temporal).
+El tablero [!UICONTROL Profiles] muestra una instantánea de los datos de atributos (registros) que su organización tiene en el Experience Platform Almacenamiento de perfiles . La instantánea no incluye datos de ningún evento (serie temporal).
 
 Los datos de atributo de la instantánea muestran los datos exactamente como aparecen en el momento concreto en que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos y el panel Perfil no se actualiza en tiempo real.
 
@@ -77,7 +77,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 
 ### [!UICONTROL Recuento de perfiles] {#profile-count}
 
-El widget **[!UICONTROL Profile count]** muestra el número total de perfiles combinados dentro del almacén de datos del perfil en el momento en que se tomó la instantánea. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
+El widget **[!UICONTROL Profile count]** muestra el número total de perfiles combinados dentro del Almacenamiento de perfiles en el momento en que se tomó la instantánea. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
 
 Para obtener más información, consulte la sección [sobre políticas de combinación que se encuentra más arriba en este documento](#merge-policies).
 
@@ -91,19 +91,17 @@ Para obtener más información, consulte la sección [sobre políticas de combin
 
 ### [!UICONTROL Perfiles añadidos] {#profiles-added}
 
-La utilidad **[!UICONTROL Profiles added]** muestra el número total de perfiles combinados que se agregaron al almacén de datos de perfil desde la última instantánea que se realizó. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo. Puede utilizar el selector desplegable para ver los perfiles agregados en los últimos 30 días, 90 días o 12 meses.
+La utilidad **[!UICONTROL Profiles added]** muestra el número total de perfiles combinados que se agregaron al Almacenamiento de perfiles desde la última instantánea que se tomó. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo. Puede utilizar el selector desplegable para ver los perfiles agregados en los últimos 30 días, 90 días o 12 meses.
 
 >[!NOTE]
 >
->El widget [!UICONTROL Profiles added] refleja el número de perfiles agregados al sistema según la configuración inicial de la organización. Para obtener más información sobre la adición de perfiles al Almacenamiento de perfiles, consulte la [Documentación del perfil del cliente en tiempo real](../../profile/home.md).
->
->Por ejemplo, si se agregaran cuatro millones de perfiles durante la configuración y se agregara un millón de perfiles adicionales durante los últimos 30 días, el widget [!UICONTROL Perfiles agregados] mostraría &quot;1 000 000&quot;, mientras que el widget [!UICONTROL Recuento de perfiles] mostraría &quot;5 000 00&quot;.
+>El widget [!UICONTROL Perfiles añadidos] refleja el número de perfiles añadidos después de configurar el Almacenamiento de perfiles y de ingerirlos. En otras palabras, si su organización configuró el Almacenamiento de perfiles e ingerió 4 000 000 en el Día 1, en un plazo de 24 horas el panel estaría disponible, sin embargo el widget [!UICONTROL Perfiles agregados] se establecería en 0. Esto se hace para evitar un pico asociado con la ingesta inicial de perfiles en el sistema. En los próximos 30 días, su organización ingesta 1 000 000 perfiles adicionales en el Almacenamiento de perfiles. Una vez tomada la siguiente instantánea, la utilidad [!UICONTROL Perfiles añadidos] mostraría un total de 1000 000 perfiles añadidos, mientras que la utilidad [!UICONTROL Recuento de perfiles] mostraría 5000 000 perfiles totales.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Tendencia del recuento de perfiles] {#profiles-count-trend}
 
-La utilidad **[!UICONTROL Profiles count pattern]** muestra el número total de perfiles combinados que se han agregado diariamente al almacén de datos de perfil durante los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si ingeryera perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil para formar un único perfil para cada individuo.
+La utilidad **[!UICONTROL Profiles count pattern]** muestra el número total de perfiles combinados que se han agregado diariamente al Almacenamiento de perfiles durante los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si ingeryera perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil para formar un único perfil para cada individuo.
 
 Para obtener más información, consulte la sección [sobre políticas de combinación que se encuentra más arriba en este documento](#merge-policies).
 
@@ -111,7 +109,7 @@ Para obtener más información, consulte la sección [sobre políticas de combin
 
 ### [!UICONTROL Perfiles por identidad] {#profiles-by-identity}
 
-La utilidad **[!UICONTROL Profiles by identity]** muestra el desglose de identidades en todos los perfiles combinados del almacén de perfiles. El número total de perfiles por identidad (es decir, sumando los valores mostrados para cada área de nombres) puede ser mayor que el número total de perfiles combinados, ya que un perfil podría tener varias áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con la marca en más de un canal, se asociarán varias áreas de nombres con ese cliente individual.
+La utilidad **[!UICONTROL Profiles by identity]** muestra el desglose de identidades en todos los perfiles combinados del Almacenamiento de perfiles. El número total de perfiles por identidad (es decir, sumando los valores mostrados para cada área de nombres) puede ser mayor que el número total de perfiles combinados, ya que un perfil podría tener varias áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con la marca en más de un canal, se asociarán varias áreas de nombres con ese cliente individual.
 
 Para obtener más información, consulte la sección [sobre políticas de combinación que se encuentra más arriba en este documento](#merge-policies).
 
@@ -121,7 +119,7 @@ Para obtener más información sobre las identidades, visite la [documentación 
 
 ### [!UICONTROL Superposición de identidad] {#identity-overlap}
 
-La utilidad **[!UICONTROL Identity overlap]** muestra un diagrama de Venn o un diagrama de conjunto, que muestra la superposición de perfiles en el almacén de perfiles que contienen varias identidades.
+La utilidad **[!UICONTROL Identity overlap]** muestra un diagrama de Venn o un diagrama de conjunto, que muestra la superposición de perfiles en el Almacenamiento de perfiles que contienen varias identidades.
 
 Después de utilizar los menús desplegables del widget para seleccionar las identidades que desea comparar, aparecen círculos que muestran el tamaño relativo de cada identidad, y el número de perfiles que contienen ambas áreas de nombres se representa por el tamaño de la superposición entre los círculos. Si un cliente interactúa con su marca en más de un canal, se asociarán varias identidades con ese cliente individual, por lo que es probable que su organización tenga varios perfiles que contengan fragmentos de más de una identidad.
 
