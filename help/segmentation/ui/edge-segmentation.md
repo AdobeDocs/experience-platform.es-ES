@@ -5,16 +5,16 @@ title: Guía de la interfaz de usuario de segmentación de Edge
 topic-legacy: ui guide
 description: La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: 6bb1f417b5856f153adebe4deaac4fab264ef3a8
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '417'
 ht-degree: 3%
 
 ---
 
 # Guía de la interfaz de usuario de segmentación de Edge (beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >La segmentación de Edge está actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
@@ -22,7 +22,15 @@ La segmentación perimetral es la capacidad de evaluar segmentos en Adobe Experi
 
 ## Tipos de consultas de segmentación de Edge
 
-Una consulta se puede evaluar con segmentación de Edge si cumple cualquiera de los siguientes criterios:
+Actualmente solo se pueden evaluar los tipos de consulta seleccionados con segmentación de Edge. Las siguientes secciones proporcionan una lista de tipos de consulta que pueden evaluarse con segmentación de Edge y los que no son compatibles actualmente.
+
+### Tipos de consulta admitidos
+
+Una consulta se puede evaluar con segmentación de Edge si cumple cualquiera de los criterios descritos en la siguiente tabla.
+
+>[!NOTE]
+>
+>Si la consulta coincide con cualquiera de los tipos de consulta de la tabla siguiente, se evaluará automáticamente mediante la segmentación de Edge. El sistema determina esta capacidad automáticamente en función de la expresión de consulta.
 
 | Tipo de consulta | Detalles | Ejemplo |
 | ---------- | ------- | ------- |
@@ -31,7 +39,7 @@ Una consulta se puede evaluar con segmentación de Edge si cumple cualquiera de 
 | Visita entrante con un periodo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a un solo evento entrante en un plazo de 24 horas. |  |
 | Visita entrante que hace referencia a un perfil con un periodo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a un solo evento entrante en un plazo de 24 horas y uno o más atributos de perfil |  |
 
-Si la consulta coincide con cualquiera de los tipos de consulta anteriores, se evaluará automáticamente mediante la segmentación perimetral.
+### Tipos de consulta no admitidos actualmente
 
 Los siguientes tipos de consulta son **no** compatibles actualmente con la segmentación de Edge:
 
@@ -43,6 +51,4 @@ Los siguientes tipos de consulta son **no** compatibles actualmente con la segme
 
 ## Pasos siguientes
 
-Esta guía del usuario explica cómo evaluar segmentos con segmentación de Edge en Adobe Experience Platform.
-
-Para obtener más información sobre el uso de la interfaz de usuario de Adobe Experience Platform, lea la [Guía del usuario de segmentación](./overview.md). Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la [guía de la API de segmentación de Edge](../api/edge-segmentation.md).
+Esta guía explica cómo evaluar segmentos con segmentación de Edge en Adobe Experience Platform. Para obtener más información sobre el uso de la interfaz de usuario del Experience Platform, lea la [Guía del usuario de segmentación](./overview.md). Para aprender a realizar acciones similares y trabajar con segmentos mediante API de Experience Platform, visite la [guía de la API de segmentación de Edge](../api/edge-segmentation.md).
