@@ -1,18 +1,18 @@
 ---
 keywords: políticas de combinación rtcdp;políticas de combinación rtcdp
-title: Combinar directivas en la plataforma de datos del cliente en tiempo real
-description: Uso de políticas de combinación en la plataforma de datos del cliente en tiempo real
+title: Combinar directivas en Real-time Customer Data Platform
+description: Uso de directivas de combinación en Real-time Customer Data Platform
 exl-id: 1a9d9549-a7de-46d7-a23e-dd41829839c5
-source-git-commit: 36f64b3a1e75c9badaee29e28408504eabac64fe
+source-git-commit: 5611a5abc7d1ed7781108b6f263e7550092b715d
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
-# Combinar directivas en la plataforma de datos del cliente en tiempo real
+# Información general sobre las directivas de combinación
 
-Basado en Adobe Experience Platform, [!DNL Real-time Customer Data Platform] permite reunir datos de múltiples fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada del cliente.
+Adobe Experience Platform le permite agrupar los datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada del perfil.
 
 A través de una API de RESTful y la interfaz de usuario del Experience Platform, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización. También puede especificar preferencias con respecto a las fuentes de datos y determinar qué datos tienen prioridad en caso de que surja un conflicto al fusionar.
 

@@ -1,38 +1,45 @@
 ---
-keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinación rtcdp;perfil del cliente en tiempo real
-title: Información general del Perfil del cliente en tiempo real
-seo-title: Perfil del cliente en tiempo real en la plataforma de datos del cliente en tiempo real
-description: Descubra cómo la plataforma de datos de clientes en tiempo real le permite dirigir experiencias relevantes, coherentes y coordinadas para sus clientes mediante Perfiles de clientes en tiempo real.
-seo-description: Plataforma de datos del cliente en tiempo real, Perfil, datos, experiencias, canales
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinación rtcdp;perfil de cliente en tiempo real
+title: Explicación del perfil del cliente en tiempo real en CDP en tiempo real
+description: Descubra cómo Real-time Customer Data Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes mediante el perfil del cliente en tiempo real.
+exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
+source-git-commit: 6579e371a8729e926b7061418c786150a27d4876
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
 
+# Resumen del perfil del cliente en tiempo real
 
-# Información general del [!DNL Real-time Customer Profile]
-
-[!DNL Real-time Customer Profile] le permite ver una vista holística de cada cliente mediante la combinación de datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar sus datos dispares de clientes en una vista unificada que ofrece una cuenta procesable con marca de hora de cada interacción con los clientes.
+El perfil del cliente en tiempo real le permite ver una vista holística de cada cliente al combinar datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Cada perfil de cliente individual le permite consolidar sus distintos datos de cliente en una vista unificada que ofrece una cuenta procesable y con marca de tiempo de cada interacción con los clientes.
 
 ## Perfiles en [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] le permite dirigir experiencias coherentes y coordinadas para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Ofrecer estas experiencias personalizadas para que se sientan relevantes y oportunas no es poca cosa, pero se puede lograr mediante el uso de [!DNL Real-time Customer Profile], parte de Adobe Experience Platform. CDP en tiempo real se basa en [!DNL Experience Platform] y utiliza muchos de los [!DNL Experience Platform] servicios y funcionalidades, incluida la creación de perfiles. Estas vistas agregadas de un cliente individual reúnen datos de sus muchos canales de mercadotecnia y de los diversos sistemas que su organización utiliza actualmente para almacenar datos de clientes.
+[!DNL Real-time Customer Data Platform] le permite ofrecer experiencias coordinadas y coherentes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. El envío de estas experiencias personalizadas para que se sientan relevantes y oportunas no es poca cosa, pero se puede lograr mediante el uso de Perfil del cliente en tiempo real, que forma parte de Adobe Experience Platform.
 
-## Identidades y Áreas de nombres de identidad
+CDP en tiempo real se basa en el Experience Platform y utiliza muchas de las funcionalidades y características principales del Experience Platform, incluida la creación de perfiles. Estas vistas agregadas de un cliente individual aúnan datos de sus muchos canales de marketing y los diversos sistemas que su organización está utilizando actualmente para almacenar datos de clientes.
 
-A medida que los datos del cliente se reúnen, se combinan en un único perfil mediante el uso de identidades y la capacidad de unir estas identidades a medida que se conoce más información sobre cada cliente. Para obtener más información sobre identidades y Áreas de nombres de identidad, consulte la [descripción general de identidades](/help/rtcdp/profile/identities-overview.md).
+## Mejoras de perfil para CDP en tiempo real, B2B Edition
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition está actualmente en versión beta. La documentación y la funcionalidad están sujetas a cambios.
+
+Además de las funciones de perfil soportadas por CDP en tiempo real, puede utilizar CDP en tiempo real, B2B Edition para examinar información importante asociada a un individuo, como una cuenta y oportunidades. Para obtener más información sobre las mejoras de perfil para CDP en tiempo real, B2B Edition, comience leyendo la [guía de exploración de perfiles](profile-browse.md).
+
+## Identidades y áreas de nombres de identidad
+
+A medida que los datos de los clientes se agrupan, se combinan en un perfil único mediante el uso de identidades y la capacidad de unir estas identidades a medida que se conoce más información sobre cada cliente. Para obtener más información sobre identidades y áreas de nombres de identidad, consulte la [información general sobre identidades](identities-overview.md).
 
 ## Combinar directivas
 
-Al reunir los datos del cliente, las políticas de combinación son las reglas que [!DNL Platform] utiliza para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Para obtener más información sobre las políticas de combinación, consulte [información general de las directivas de combinación](/help/rtcdp/profile/merge-policies.md).
+Al unir los datos de los clientes, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Para obtener más información sobre las políticas de combinación, consulte [merge policy overview](merge-policies.md).
 
 ## Visor de perfiles
 
-[!DNL Platform] le permite realizar fácilmente vistas de perfiles de clientes y buscar perfiles específicos mediante varios atributos. Para obtener más información sobre cómo vista de perfiles dentro de [!DNL Platform], consulte la [información general del visor de perfil](/help/rtcdp/profile/profile-viewer.md).
+Platform le permite ver fácilmente los perfiles de los clientes y buscar perfiles específicos mediante varios atributos. Para obtener más información sobre cómo ver perfiles dentro de Platform, consulte la [descripción general de la exploración de perfiles](profile-browse.md).
 
 ## Pasos siguientes
 
-Después de leer esta descripción general, ahora debe comprender cómo CDP en tiempo real utiliza [!DNL Real-time Customer Profile] para impulsar la personalización a escala de canales múltiples. Al unir identidades de diferentes fuentes, puede ver una imagen completa de cada uno de sus clientes individuales, lo que le permite llevar sus campañas de mercadotecnia a un nivel completamente nuevo. Para obtener información más detallada, incluidos tutoriales y prácticas recomendadas para trabajar con datos [!DNL Real-time Customer Profile] en la interfaz de usuario y mediante API, consulte la [documentación de Perfil del cliente en tiempo real](../../profile/home.md).
+Al unir datos de diferentes fuentes, puede ver una imagen completa de cada uno de sus clientes, lo que le permite llevar las campañas de marketing a un nivel completamente nuevo. Para obtener información más detallada, incluidas las prácticas recomendadas y los tutoriales para trabajar con datos del perfil del cliente en tiempo real en la interfaz de usuario y mediante API, consulte la [Documentación del perfil del cliente en tiempo real](../../profile/home.md).
