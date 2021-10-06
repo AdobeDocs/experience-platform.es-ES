@@ -5,10 +5,10 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene información sobre los códigos de error comunes que encuentra y las posibles causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
+source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 6%
+source-wordcount: '699'
+ht-degree: 4%
 
 ---
 
@@ -60,6 +60,10 @@ LIMIT 100;
 
 Al consultar los datos de series temporales, debe utilizar el filtro de marcas de tiempo siempre que sea posible para realizar un análisis más preciso.
 
+>[!NOTE]
+>
+> La cadena de fecha **debe** tener el formato `yyyy-mm-ddTHH24:MM:SS`.
+
 A continuación se puede ver un ejemplo del uso del filtro de marca de tiempo:
 
 ```sql
@@ -74,6 +78,60 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 ### ¿Debo usar caracteres comodín, como *, para obtener todas las filas de mis conjuntos de datos?
 
 No puede utilizar caracteres comodín para obtener todos los datos de las filas, ya que el servicio de consulta debe tratarse como **almacén de columnas** en lugar de como sistema de almacén tradicional basado en filas.
+
+### ¿Debería utilizar `NOT IN` en mi consulta SQL?
+
+El operador `NOT IN` se utiliza a menudo para recuperar filas que no se encuentran en otra tabla o instrucción SQL. Este operador puede ralentizar el rendimiento y devolver resultados inesperados si las columnas que se comparan aceptan `NOT NULL` o si tiene un gran número de registros.
+
+En lugar de utilizar `NOT IN`, puede utilizar `NOT EXISTS` o `LEFT OUTER JOIN`.
+
+Por ejemplo, si tiene creadas las tablas siguientes:
+
+```sql
+CREATE TABLE T1 (ID INT)
+CREATE TABLE T2 (ID INT)
+INSERT INTO T1 VALUES (1)
+INSERT INTO T1 VALUES (2)
+INSERT INTO T1 VALUES (3)
+INSERT INTO T2 VALUES (1)
+INSERT INTO T2 VALUES (2)
+```
+
+Si utiliza el operador `NOT EXISTS` , puede duplicar con el operador `NOT IN` mediante la siguiente consulta:
+
+```sql
+SELECT ID FROM T1
+WHERE NOT EXISTS
+(SELECT ID FROM T2 WHERE T1.ID = T2.ID)
+```
+
+Alternativamente, si está utilizando el operador `LEFT OUTER JOIN`, puede replicar utilizando el operador `NOT IN` utilizando la siguiente consulta:
+
+```sql
+SELECT T1.ID FROM T1
+LEFT OUTER JOIN T2 ON T1.ID = T2.ID
+WHERE T2.ID IS NULL
+```
+
+### ¿Cuál es el uso correcto de los operadores `OR` y `UNION`?
+
+### ¿Cómo utilizo correctamente el operador `CAST` para convertir mis marcas de hora en consultas SQL?
+
+Al utilizar el operador `CAST` para convertir una marca de tiempo, debe incluir la fecha **y la hora**.
+
+Por ejemplo, si falta el componente de tiempo, como se muestra a continuación, se producirá un error:
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021' AS timestamp)
+```
+
+A continuación se muestra un uso correcto del operador `CAST`:
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
+```
 
 ## Errores de API de REST
 

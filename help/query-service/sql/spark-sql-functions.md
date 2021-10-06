@@ -5,10 +5,9 @@ title: Spark SQL Functions in Query Service
 topic-legacy: spark sql functions
 description: Esta documentación contiene información sobre las funciones Spark SQL que amplían la funcionalidad SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 07b3483a3e8c666e769a0d00d08fa4784d10813d
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3909'
 ht-degree: 1%
 
 ---
@@ -154,8 +153,8 @@ Para obtener información más detallada sobre las funciones, incluida su sintax
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Devuelve el primer día después de la entrada |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Devuelve el trimestre de la entrada |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Devuelve el segundo de la cadena |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Convierte la cadena en una fecha |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Convierte la cadena en una marca de tiempo |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Convierte la cadena en una fecha. **Nota:** La cadena  **** debe tener el formato  `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Convierte la cadena en una marca de tiempo. **Nota:** La cadena  **** debe tener el formato  `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Convierte la cadena en una marca de tiempo Unix |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Convierte la cadena en una marca de tiempo UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Trunca la fecha |
@@ -164,7 +163,7 @@ Para obtener información más detallada sobre las funciones, incluida su sintax
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | Devuelve la semana del año de una fecha determinada |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | Devuelve el año de la cadena |
 
-### Arreglos {#arrays}
+### Matrices {#arrays}
 
 | Función | Descripción |
 | -------- | ----------- |
