@@ -3,9 +3,9 @@ title: API de higiene de datos (Alpha)
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
+source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '525'
 ht-degree: 2%
 
 ---
@@ -106,6 +106,8 @@ curl -X POST \
 | --- | --- |
 | `companyContexts` | Matriz que contiene información de autenticación para su organización. Debe contener un solo objeto con las siguientes propiedades: <ul><li>`namespace`: Debe definirse en `imsOrgID`.</li><li>`value`: Su ID de organización de IMS. Este es el mismo valor que se proporciona en el encabezado `x-gw-ims-org-id`.</li></ul> |
 | `users` | Matriz que contiene una colección de al menos un usuario cuya información desea eliminar. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`: Identificador de un usuario que se utiliza para clasificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella o buscarla más adelante.</li><li>`action`: Matriz que enumera las acciones deseadas que deben realizarse en los datos del usuario. Debe contener un solo valor de cadena: `delete`.</li><li>`userIDs`: Una colección de identidades para el usuario. El número de identidades que un solo usuario puede tener está limitado a nueve. Cada identidad contiene las siguientes propiedades: <ul><li>`namespace`: El espacio de  [nombres de ](../identity-service/namespaces.md) identidad asociado al ID. Puede ser un [espacio de nombres estándar](./api/appendix.md#standard-namespaces) reconocido por Platform o puede ser un espacio de nombres personalizado definido por su organización. El tipo de área de nombres utilizado debe reflejarse en la propiedad `type` .</li><li>`value`: El valor de identidad.</li><li>`type`: Debe establecerse en  `standard` si utiliza un espacio de nombres reconocido globalmente o  `custom` si utiliza un espacio de nombres definido por su organización.</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
