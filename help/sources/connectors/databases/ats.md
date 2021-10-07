@@ -5,9 +5,9 @@ title: Descripción general del conector de origen de almacenamiento de tablas d
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Azure Table Storage a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,6 @@ Experience Platform permite la ingesta de datos desde una base de datos de terce
 ## LISTA DE PERMITIDOS de direcciones IP
 
 Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
-
->[!IMPORTANT]
->
->El conector de origen [!DNL Azure Table Storage] actualmente no admite conectividad de la misma región con Platform. Esto significa que si la instancia de Azure está usando la misma región de red que Platform, no se puede establecer una conexión con orígenes de Platform. Actualmente, solo se admite la conectividad entre regiones. Póngase en contacto con el administrador de cuentas de Adobe para obtener más información.
 
 La documentación siguiente proporciona información sobre cómo conectar [!DNL Azure Table Storage] a Platform mediante API o la interfaz de usuario:
 

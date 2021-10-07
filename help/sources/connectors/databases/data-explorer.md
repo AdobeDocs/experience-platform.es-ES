@@ -5,9 +5,9 @@ title: Descripción general del conector de origen de Data Explorer de Azure
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar la Data Explorer de Azure a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -25,10 +25,6 @@ Se admiten diferentes tipos de bases de datos de terceros, incluidos los almacen
 ## LISTA DE PERMITIDOS de direcciones IP
 
 Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
-
->[!IMPORTANT]
->
->El conector de origen [!DNL Azure Data Explorer] actualmente no admite conectividad de la misma región con Platform. Esto significa que si la instancia de Azure está usando la misma región de red que Platform, no se puede establecer una conexión con orígenes de Platform. Actualmente, solo se admite la conectividad entre regiones. Póngase en contacto con el administrador de cuentas de Adobe para obtener más información.
 
 La documentación siguiente proporciona información sobre cómo conectar [!DNL Azure Data Explorer] a [!DNL Platform] mediante API o la interfaz de usuario:
 
