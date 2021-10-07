@@ -2,9 +2,10 @@
 keywords: personalización personalizada; destino; destino personalizado de experience platform;
 title: Conexión personalizada personalizada (Beta)
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real 1:1 y basada en la pertenencia a segmentos de un perfil de usuario.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
+source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 1%
 
 ---
@@ -61,6 +62,28 @@ Lea [Activar perfiles y segmentos en destinos de solicitud de perfil](../../ui/a
 ## Datos exportados {#exported-data}
 
 Si utiliza [Etiquetas de Adobe](../../../tags/home.md) para implementar el SDK web de Experience Platform, utilice la funcionalidad [enviar evento completo](../../../edge/extension/event-types.md) y su acción de código personalizado tendrá una variable `event.destinations` que puede utilizar para ver los datos exportados.
+
+Este es un valor de ejemplo para la variable `event.destinations` :
+
+```
+[
+   {
+      "type":"profileLookup",
+      "destinationId":"7bb4cb8d-8c2e-4450-871d-b7824f547111",
+      "alias":"personalizationAlias",
+      "segments":[
+         {
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         },
+         {
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         }
+      ]
+   }
+]
+```
 
 Si no utiliza [Etiquetas de Adobe](../../../tags/home.md) para implementar el SDK web de Experience Platform, utilice la funcionalidad [de gestión de respuestas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) para ver los datos exportados.
 
