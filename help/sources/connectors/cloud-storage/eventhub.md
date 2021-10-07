@@ -5,10 +5,9 @@ title: Descripción general del conector de origen de los centros de eventos de 
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar los centros de eventos de Azure a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-translation-type: tm+mt
-source-git-commit: 6dac267be93241bffb4eb5092a6e8da5093c63a6
+source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -19,10 +18,6 @@ ht-degree: 0%
 Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS, [!DNL Google Cloud Platform] y [!DNL Azure]. Puede introducir los datos de estos sistemas en [!DNL Platform].
 
 Las fuentes de almacenamiento en la nube pueden traer sus propios datos a [!DNL Platform] sin necesidad de descargar, formatear o cargar. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o delimitados. Cada paso del proceso se integra en el flujo de trabajo Orígenes . [!DNL Platform] permite introducir datos desde  [!DNL Azure Event Hubs] en tiempo real.
-
-## LISTA DE PERMITIDOS de direcciones IP
-
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 ## Conectar [!DNL Azure Event Hubs] a [!DNL Platform]
 

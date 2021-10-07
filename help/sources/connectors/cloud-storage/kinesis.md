@@ -5,10 +5,9 @@ title: Información general sobre el conector de origen de Amazon Kinesis
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Amazon Kinesis a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-translation-type: tm+mt
-source-git-commit: af11bc966889be54fc27e02f3eee321519cef88f
+source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -18,10 +17,6 @@ ht-degree: 0%
 Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS, [!DNL Google Cloud Platform] y [!DNL Azure]. Puede introducir los datos de estos sistemas en [!DNL Platform].
 
 Las fuentes de almacenamiento en la nube pueden traer sus propios datos a [!DNL Platform] sin necesidad de descargar, formatear o cargar. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o delimitados. Cada paso del proceso se integra en el flujo de trabajo Orígenes . [!DNL Platform] permite introducir datos desde  [!DNL Amazon Kinesis] en tiempo real.
-
-## LISTA DE PERMITIDOS de direcciones IP
-
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 ## Requisitos previos
 
