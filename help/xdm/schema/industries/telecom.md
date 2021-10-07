@@ -3,15 +3,15 @@ solution: Experience Platform
 title: Modelo de datos ERD del sector de las telecomunicaciones
 topic-legacy: overview
 description: Vea un diagrama de relación de entidades (ERD) que describe un modelo de datos estandarizado para el sector de las telecomunicaciones, compatible con el modelo de datos de experiencias (XDM) para su uso en Adobe Experience Platform.
-source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
+exl-id: 96f267ce-a177-4384-a512-841c89d942ba
+source-git-commit: 421b4a448370f9903b8bc826fd9be9e5b2e11c59
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 0%
+source-wordcount: '422'
+ht-degree: 1%
 
 ---
 
-
-#  Modelo de datos del sector de las telecomunicaciones ERD
+#  Modelo de datos de la industria de las telecomunicaciones ERD
 
 El siguiente diagrama de relación de entidades (ERD) representa un modelo de datos estandarizado para el sector de las telecomunicaciones. El ERD se presenta intencionalmente de forma desnormalizada y teniendo en cuenta cómo se almacenan los datos en Adobe Experience Platform.
 
@@ -33,3 +33,15 @@ Utilice la siguiente leyenda para interpretar este ERD:
 >[!NOTE]
 >
 >La entidad Evento de experiencia incluye un campo &quot;_ID&quot;, que representa el atributo de identificador único (`_id`) proporcionado por la clase ExperienceEvent XDM. Consulte el documento de referencia en [XDM ExperienceEvent](../../classes/experienceevent.md) para obtener más información sobre lo que se espera para este valor.
+
+##  Casos de uso de telecomunicaciones
+
+La siguiente tabla describe las clases recomendadas y los grupos de campos de esquema para varios casos de uso comunes en el sector de las telecomunicaciones.
+
+| Caso de uso | Clases recomendadas y grupos de campos |
+| --- | --- |
+| Comprender a los clientes que son buenos candidatos para oportunidades de ventas cruzadas o de incremento de ventas en función de sus carteras actuales y su comportamiento de navegación. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Detalles de ventas adicionales]](../../field-groups/event/upsell-details.md)</li><li>[[!UICONTROL Detalles de la actualización]](../../field-groups/event/upgrade-details.md)</li></ul></li><li>**[[!UICONTROL Perfil]](../../classes/individual-profile.md)** individual XDM:<ul><li>[[!UICONTROL Suscripción a Telecom]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL Detalles demográficos]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Detalles de contacto personal]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| Reasigne como objetivo a los abandonadores del carro de compras mediante anuncios relevantes y correos electrónicos personalizados automatizados. Suprima los anuncios cuando se conviertan. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Detalles del comercio]](../../field-groups/event/upsell-details.md)  (para capturar abandonos del carro de compras)</li></ul></li><li>**[[!UICONTROL Perfil]](../../classes/individual-profile.md)** individual XDM:<ul><li>[[!UICONTROL Suscripción a Telecom]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL Detalles demográficos]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Detalles de contacto personal]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| Cuando se marca que un cliente tiene probabilidad de producirse (según la interacción de un empleado o un algoritmo automatizado de aprendizaje automático), envíe los detalles del cliente a canales digitales y no digitales. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Detalles de marketing de campaña]](../../field-groups/event/campaign-marketing-details.md)</li><li>[[!UICONTROL Detalles del canal]](../../field-groups/event/channel-details.md)</li><li>Un grupo de campos personalizado con contenido personalizado</li></ul></li><li>**[[!UICONTROL Perfil]](../../classes/individual-profile.md)** individual XDM:<ul><li>[[!UICONTROL Detalles demográficos]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Detalles de contacto personal]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
