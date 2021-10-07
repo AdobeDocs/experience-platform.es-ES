@@ -2,9 +2,9 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino para el SDK de destino
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1727'
 ht-degree: 5%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 5%
 
 ## Información general {#overview}
 
-Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
+Esta configuración le permite indicar información esencial como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
+
+Esta configuración también conecta a esta las demás configuraciones necesarias para que funcione su destino (servidor de destino y metadatos de audiencia). Lea cómo puede hacer referencia a las dos configuraciones en una [sección más abajo](./destination-configuration.md#connecting-all-configurations).
 
 Puede configurar la funcionalidad descrita en este documento utilizando el extremo `/authoring/destinations` de la API. Lea [Destinations API endpoint operations](./destination-configuration-api.md) para obtener una lista completa de las operaciones que puede realizar en el punto final.
 
 ## Ejemplo de configuración {#example-configuration}
 
-A continuación se muestra un ejemplo de configuración para un destino ficticio, Moviestar, que tiene extremos en cuatro ubicaciones del mundo. El destino pertenece a la categoría destinos móviles . Las secciones siguientes desglosan cómo se construye esta configuración.
+A continuación se muestra un ejemplo de configuración de un destino ficticio, Moviestar, que tiene extremos en cuatro ubicaciones del mundo. El destino pertenece a la categoría destinos móviles . Las secciones siguientes desglosan cómo se construye esta configuración.
 
 ```json
 {
@@ -118,14 +120,15 @@ A continuación se muestra un ejemplo de configuración para un destino ficticio
             ]
          }
       }
-   }
+   },
+   "backfillHistoricalProfileData":true
 }
 ```
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
 | `name` | Cadena | Indica el título del destino en el catálogo de Experience Platform. |
-| `description` | Cadena | Proporcione una descripción que el Adobe utilizará en el catálogo de destinos del Experience Platform para su tarjeta de destino. Apunte a no más de 4-5 frases. |
+| `description` | Cadena | Proporcione una descripción para su tarjeta de destino en el catálogo de destinos de Experience Platform. Apunte a no más de 4-5 frases. |
 | `status` | Cadena | Indica el estado del ciclo vital de la tarjeta de destino. Los valores aceptados son `TEST`, `PUBLISHED` y `DELETED`. Utilice `TEST` la primera vez que configure el destino. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -193,7 +196,7 @@ Utilice los parámetros de `schemaConfig` para habilitar el paso de asignación 
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
-| `profileFields` | Matriz | *No se muestra en la configuración de ejemplo anterior.* Al agregar predefinidos  `profileFields`, los usuarios tendrán la opción de asignar atributos de Experience Platform a los atributos predefinidos en el lado del destino. |
+| `profileFields` | Matriz | *No se muestra en la configuración de ejemplo anterior.* Al agregar predefinidos  `profileFields`, los usuarios Experience Platform tienen la opción de asignar atributos de Platform a los atributos predefinidos en el lado del destino. |
 | `profileRequired` | Booleano | Utilice `true` si los usuarios deben poder asignar atributos de perfil de Experience Platform a atributos personalizados en el lado del destino, como se muestra en el ejemplo de configuración anterior. |
 | `segmentRequired` | Booleano | Utilice siempre `segmentRequired:true`. |
 | `identityRequired` | Booleano | Utilice `true` si los usuarios deben poder asignar áreas de nombres de identidad del Experience Platform al esquema deseado. |
@@ -204,7 +207,7 @@ Utilice los parámetros de `schemaConfig` para habilitar el paso de asignación 
 
 Los parámetros de esta sección determinan cómo se rellenan las identidades y los atributos de destino en el paso de asignación de la interfaz de usuario del Experience Platform, donde los usuarios asignan sus esquemas XDM al esquema en el destino.
 
-Adobe necesita saber qué [!DNL Platform] identidades podrán exportar los clientes a su destino. Algunos ejemplos son [!DNL Experience Cloud ID], correo electrónico con hash, ID de dispositivo ([!DNL IDFA], [!DNL GAID]). Estos valores son [!DNL Platform] áreas de nombres de identidad que los clientes pueden asignar a áreas de nombres de identidad desde su destino.
+Debe indicar las identidades [!DNL Platform] que los clientes pueden exportar al destino. Algunos ejemplos son [!DNL Experience Cloud ID], correo electrónico con hash, ID de dispositivo ([!DNL IDFA], [!DNL GAID]). Estos valores son [!DNL Platform] áreas de nombres de identidad que los clientes pueden asignar a áreas de nombres de identidad desde su destino.
 
 Las áreas de nombres de identidad no requieren una correspondencia de 1 a 1 entre [!DNL Platform] y el destino.
 Por ejemplo, los clientes podrían asignar un espacio de nombres [!DNL Platform] [!DNL IDFA] a un espacio de nombres [!DNL IDFA] desde el destino, o pueden asignar el mismo espacio de nombres [!DNL Platform] [!DNL IDFA] a un espacio de nombres [!DNL Customer ID] en el destino.
@@ -215,9 +218,9 @@ Obtenga más información en la [descripción general del área de nombres de id
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
-| `acceptsAttributes` | Booleano | Indica si el destino acepta atributos de perfil estándar. Normalmente, estos atributos se resaltan en la documentación de nuestros socios. |
+| `acceptsAttributes` | Booleano | Indica si el destino acepta atributos de perfil estándar. Normalmente, estos atributos se resaltan en la documentación de los socios. |
 | `acceptsCustomNamespaces` | Booleano | Indica si los clientes pueden configurar áreas de nombres personalizadas en el destino. |
-| `allowedAttributesTransformation` | Cadena | *No se muestra en la configuración* de ejemplo. Se utiliza, por ejemplo, cuando el cliente [!DNL Platform] tiene direcciones de correo electrónico simples como atributo y la plataforma solo acepta correos electrónicos con hash. Aquí es donde proporcionaría la transformación que debe aplicarse (por ejemplo, transformar el correo electrónico a minúsculas y luego a hash). |
+| `allowedAttributesTransformation` | Cadena | *No se muestra en la configuración* de ejemplo. Se utiliza, por ejemplo, cuando el cliente [!DNL Platform] tiene direcciones de correo electrónico simples como atributo y la plataforma solo acepta correos electrónicos con hash. En este objeto, puede aplicar la transformación que debe aplicarse (por ejemplo, transformar el correo electrónico en minúsculas y, a continuación, en hash). Para ver un ejemplo, consulte `requiredTransformation` en la [referencia de API de configuración de destino](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | - | Se utiliza para casos en los que la plataforma acepta [áreas de nombres de identidad estándar](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por ejemplo, IDFA), por lo que puede restringir a los usuarios de Platform a que solo seleccionen estas áreas de nombres de identidad. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -242,11 +245,19 @@ A través de `audienceTemplateId`, esta sección también vincula esta configura
 
 Los parámetros que se muestran en la configuración anterior se describen en la [referencia de API de extremo de destinos](./destination-configuration-api.md).
 
+## Conexión de esta configuración a toda la información necesaria para el destino {#connecting-all-configurations}
+
+Algunos ajustes del destino se pueden configurar mediante el servidor de destino o el extremo de metadatos de audiencia. El extremo de configuración de destino conecta todos estos ajustes haciendo referencia a las configuraciones de la siguiente manera:
+
+* Utilice `destinationServerId` para hacer referencia al servidor de destino y a la configuración de plantilla configurada para el destino.
+* Utilice `audienceMetadataId` para hacer referencia a la configuración de metadatos de audiencia configurada para el destino.
+
+
 ## Política de agregación {#aggregation}
 
 ![Directiva de agregación en la plantilla de configuración](./assets/aggregation-configuration.png)
 
-Esta sección le permite establecer las políticas de agregación que utilizará el Experience Platform al exportar datos a su destino.
+Esta sección le permite establecer las políticas de agregación que debe utilizar el Experience Platform al exportar los datos a su destino.
 
 Una política de agregación determina cómo se combinan los perfiles exportados en las exportaciones de datos. Entre las opciones disponibles se encuentran:
 * Mejor agregación de esfuerzos
@@ -260,7 +271,7 @@ Lea la sección sobre [uso de la plantilla](./message-format.md#using-templating
 >
 >Utilice esta opción si el extremo de la API acepta menos de 100 perfiles por llamada de API.
 
-Esta opción funciona mejor para destinos que prefieren menos perfiles por solicitud y prefieren tomar más solicitudes con menos datos que menos solicitudes con más datos.
+Esta opción funciona mejor para destinos que prefieren menos perfiles por solicitud y prefieren aceptar más solicitudes con menos datos que menos solicitudes con más datos.
 
 Utilice el parámetro `maxUsersPerRequest` para especificar el número máximo de perfiles que el destino puede tener en una solicitud.
 
@@ -277,10 +288,10 @@ Esta opción le permite:
 
 Para obtener explicaciones detalladas de los parámetros de agregación, consulte la página de referencia [Destinations API endpoint operations](./destination-configuration-api.md), donde se describe cada parámetro.
 
-<!--
+## Calificaciones históricas de perfil
 
-commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+Puede utilizar el parámetro `backfillHistoricalProfileData` en la configuración de destinos para determinar si se deben exportar a su destino las cualificaciones históricas de perfil.
 
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-
--->
+| Parámetro | Tipo | Descripción |
+|---------|----------|------|
+| `backfillHistoricalProfileData` | Booleano | Controla si los datos del perfil histórico se exportan cuando los segmentos se activan en el destino. <br> <ul><li> `true`:  [!DNL Platform] envía los perfiles de usuario históricos que cumplen los requisitos para el segmento antes de que se active el segmento. </li><li> `false`:  [!DNL Platform] solo incluye perfiles de usuario que cumplen los requisitos para el segmento una vez activado el segmento. </li></ul> |
