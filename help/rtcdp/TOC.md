@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Guía de la plataforma de datos del cliente en tiempo real
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
-source-git-commit: 8e7ceaa5f62ee7647b5a53c494c9b3acb43c14c7
+source-git-commit: 2d9b1df064f0e2a5aa981d0144fefecc9d0a4146
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 35%
+source-wordcount: '171'
+ht-degree: 32%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 35%
    * [Calidad de los datos en la plataforma](datasets/data-quality.md)
 * Destinos {#destinations}
    * [Información general sobre los destinos](destinations/overview.md)
+   * [Destinos en tiempo real CDP B2B Edition](destinations/b2b.md)
 * Identidades {#identity}
    * [Identidades y áreas de nombres de identidad](profile/identities-overview.md)
 * Administración de datos y privacidad {#privacy}
@@ -45,7 +46,7 @@ ht-degree: 35%
 * Segmentos {#segmentation}
    * [Información general sobre la segmentación](segmentation/segmentation-overview.md)
    * [Guía del Generador de segmentos](segmentation/segment-builder-guide.md)
-   * [Segmentación B2B](segmentation/b2b.md)
+   * [Segmentación en tiempo real CDP B2B Edition](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * Esquemas {#schemas}
    * [Información general sobre esquemas](schemas/overview.md)

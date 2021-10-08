@@ -1,14 +1,15 @@
 ---
 title: Información general sobre casos de uso de segmentación para CDP B2B Edition en tiempo real.
-description: Información general sobre los diversos casos de uso disponibles de CDP B2B Edition en tiempo real.
-source-git-commit: e85d4b108e2d4a6a88772c071d9281603b695ada
+description: Una visión general de los diversos casos de uso disponibles de CDP B2B Edition en tiempo real.
+exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
+source-git-commit: cc4bd6f3b70a90b53aaaf6a4c31d23fddd8a3f44
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1122'
 ht-degree: 1%
 
 ---
 
-# Información general sobre los casos de uso de segmentación para la plataforma de datos del cliente en tiempo real B2B Edition (Beta)
+# Información general sobre los casos de uso de segmentación para Real-time Customer Data Platform B2B Edition (Beta)
 
 <!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
 
@@ -20,7 +21,7 @@ Este documento proporciona ejemplos sobre la segmentación disponible para CDP B
 
 >[!NOTE]
 >
->Los atributos requeridos para estos casos de uso de segmentación solo están disponibles para los clientes de la Plataforma de datos del cliente en tiempo real B2B Edition. Para obtener más información sobre CDP en tiempo real, incluidas las funciones y funcionalidades disponibles para cada tipo de licencia, comience leyendo la [información general de CDP en tiempo real](../overview.md).
+>Los atributos necesarios para estos casos de uso de segmentación solo están disponibles para los clientes de Real-time Customer Data Platform B2B Edition. Para obtener más información sobre CDP en tiempo real, incluidas las funciones y funcionalidades disponibles para cada tipo de licencia, comience leyendo la [información general de CDP en tiempo real](../overview.md).
 
 ## Requisitos previos
 
@@ -37,7 +38,7 @@ Una vez cumplidos estos requisitos, puede combinar estos atributos para casos de
 
 Una vez que los esquemas de unión de las clases B2B tienen relaciones establecidas y se han utilizado para introducir datos, sus atributos están disponibles en el carril izquierdo del Generador de segmentos.
 
-Las clases B2B y sus atributos se añaden con una etiqueta `B2B` dentro del espacio de trabajo Segmentación para diferenciarlas de las disponibles como estándar en la plataforma de datos del cliente en tiempo real.
+Las clases B2B y sus atributos se añaden con una etiqueta `B2B` dentro del espacio de trabajo Segmentación para diferenciarlas de las disponibles como estándar en Real-time Customer Data Platform.
 
 Para crear segmentos de forma eficaz para casos de uso B2B, es importante tener un conocimiento profundo del esquema y comprender el aspecto que tiene el modelo de datos. También es útil tener en cuenta la ruta que toman los datos de un objeto de datos a otro.
 
@@ -55,7 +56,7 @@ Esta relación se refleja dentro del Generador de segmentos mediante el uso de c
 
 ![ejemplo de clave de origen con el generador de segmentos en el espacio de trabajo de segmentación](../assets/segmentation/source-key-segmentation-example.png)
 
-Consulte los [esquemas en la documentación de la Plataforma de datos del cliente en tiempo real B2B Edition](../schemas/b2b.md) para obtener más información sobre las clases B2B disponibles.
+Consulte los [esquemas de la documentación de Real-time Customer Data Platform B2B Edition](../schemas/b2b.md) para obtener más información sobre las clases B2B disponibles.
 
 Los casos de uso siguientes proporcionan información sobre qué clases se utilizan para establecer relaciones entre los distintos esquemas para lograr estos resultados. Estos ejemplos se pueden utilizar para ayudarle a crear sus propios segmentos.
 

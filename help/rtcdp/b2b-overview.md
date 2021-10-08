@@ -1,24 +1,24 @@
 ---
-keywords: RTCDP;CDP;B2B Edition;Plataforma de datos del cliente en tiempo real;plataforma de datos del cliente en tiempo real;cdp en tiempo real;b2b;cdp;Customer AI
+keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;plataforma de datos de clientes en tiempo real;cdp en tiempo real;b2b;cdp;Customer AI
 title: Información general de CDP B2B Edition en tiempo real
 seo-title: Real-time Customer Data Platform B2B Edition overview
-description: Descripción general de la cuenta de la plataforma de datos del cliente en tiempo real B2B Edition
+description: Descripción general de la cuenta de Real-time Customer Data Platform B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: e54bd747a332e37920e24ce07602470f8ad74231
+source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1057'
 ht-degree: 1%
 
 ---
 
-# Información general sobre la plataforma de datos del cliente en tiempo real B2B Edition
+# Información general de Real-time Customer Data Platform B2B Edition
 
 >[!IMPORTANT]
 >
 >CDP B2B Edition en tiempo real está actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
-El CDP B2B Edition en tiempo real, que se basa en la plataforma de datos del cliente en tiempo real (CDP en tiempo real), está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
+El CDP B2B Edition en tiempo real, que se basa en Real-time Customer Data Platform (CDP en tiempo real), está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
 
 Hay mejoras en una variedad de funcionalidades de Adobe Experience Platform que distinguen CDP B2B Edition en tiempo real de su contraparte B2C. Incluyen mejoras en el Modelo de datos de experiencia (XDM) para casos de uso B2B, actualizaciones para la resolución de identidades y la segmentación de perfiles, así como un conector y destino personalizado para [!DNL Marketo Engage]. El conector [!DNL Marketo] permite que las marcas B2B conecten sus datos de participación B2B líderes en el sector con información de comportamiento para nutrir posibles clientes y mejorar las operaciones de marketing basadas en cuentas.
 
@@ -69,22 +69,16 @@ Platform permite la ingesta de datos de fuentes externas, al tiempo que permite 
 >
 >La fuente [!DNL Marketo] es **no** necesaria para utilizar CDP B2B Edition en tiempo real.
 
-Consulte las fuentes en la documentación de CDP B2B Edition en tiempo real para obtener más información sobre Marketo y la introducción de datos B2B en Platform.
-
-<!-- PLACEHOLDER [sources in Real-time CDP B2B Edition](./sources/b2b) -->
+Consulte las [fuentes en la documentación de CDP B2B Edition](./sources/b2b.md) en tiempo real para obtener más información sobre Marketo y la introducción de datos B2B en Platform.
 
 ## Destinos B2B
 
-Todos los destinos de Experience Platform como [!DNL Google], [!DNL Linkedin] o [!DNL Facebook] están disponibles y son totalmente compatibles con CDP B2B Edition en tiempo real. También hay un destino [!DNL Marketo Engage] que transmite datos desde [!DNL Marketo] o desde Platform y lo hace disponible como audiencias.
+Los destinos de Experience Platform como Google, Linkedin y Facebook están disponibles y son totalmente compatibles con CDP B2B Edition en tiempo real. También existe un destino de Marketo Engage que transmite datos de pertenencia a segmentos desde Platform y lo hace disponible como listas en Marketo.
 
-El destino [!DNL Marketo] proporciona una manera rápida y sencilla de extraer información del Experience Platform a [!DNL Marketo]. El destino permite a los especialistas en marketing insertar segmentos creados en Adobe Experience Platform en [!DNL Marketo]. En [!DNL Marketo], estas audiencias están disponibles como listas estáticas.
-
-Para empresas con más de un CRM, CDP B2B Edition en tiempo real proporciona la opción de configurar conectores de destino para separar instancias de [!DNL Marketo] o CRM. Si es necesario, puede configurar los conectores de destino para cada instancia y enviar audiencias a cada una de las instancias de CRM de forma independiente.
+Para empresas con más de un CRM, CDP B2B Edition en tiempo real proporciona la opción de configurar conectores de destino para separar instancias de Marketo o CRM. Si es necesario, puede configurar los conectores de destino para cada instancia y enviar audiencias a cada una de las instancias de CRM de forma independiente.
 
 ## Pasos siguientes
 
 Ahora que comprende mejor los beneficios para los especialistas en marketing que ofrece CDP B2B Edition en tiempo real, y las diferencias entre ella y CDP en tiempo real, puede aprender a aplicar estas funciones a su propia organización IMS.
 
-<!-- PLACEHOLDER [example use case for Real-time CDP B2B Edition]() -->
-
-Para comprender cómo CDP B2B Edition en tiempo real puede beneficiar a su modelo de servicio de empresa a empresa, consulte el ejemplo de uso para CDP B2B Edition en tiempo real. También puede consultar la documentación de [esquemas en la plataforma de datos del cliente en tiempo real B2B Edition](./schemas/b2b.md) para obtener instrucciones más específicas sobre la creación de esquemas y la definición de relaciones para entidades de datos B2B esenciales.
+Para comprender cómo CDP B2B Edition en tiempo real puede beneficiar a su modelo de servicio de empresa a empresa, consulte el [ejemplo de caso de uso para CDP B2B Edition](./b2b-use-case.md) en tiempo real. También puede consultar los [esquemas en la documentación de Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) para obtener instrucciones más específicas sobre la creación de esquemas y la definición de relaciones para entidades de datos B2B esenciales.
