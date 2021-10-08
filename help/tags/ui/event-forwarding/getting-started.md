@@ -1,10 +1,11 @@
 ---
-title: Introducción Al Reenvío De Eventos
+title: Introducción al reenvío de eventos
 description: Siga este tutorial paso a paso para empezar a utilizar el reenvío de eventos en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: f82bfac9-dc2d-44de-a308-651300f107df
+source-git-commit: 406c7e90c315c1807f5f3dd2b32462868b312197
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 46%
+ht-degree: 92%
 
 ---
 
@@ -17,11 +18,11 @@ ht-degree: 46%
 Para utilizar el reenvío de eventos en Adobe Experience Platform, los datos deben enviarse a Adobe Experience Platform Edge Network mediante una o varias de las tres opciones siguientes:
 
 * [SDK web de Adobe Experience Platform](../../extensions/web/sdk/overview.md)
-* [SDK de Adobe Experience Platform Mobile](https://sdkdocs.com)
-* [API de servidor a servidor](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+* [SDK móvil de Adobe Experience Platform](https://sdkdocs.com)
+* [API de servidor a servidor](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=es)
 
 >[!NOTE]
->El SDK web de Platform y el SDK de Platform Mobile no requieren la implementación mediante etiquetas en Adobe Experience Platform. Sin embargo, el método recomendado es utilizar etiquetas para implementar estos SDK.
+>El SDK web de Platform y el SDK móvil de Platform no requieren implementación a través de etiquetas en Adobe Experience Platform. Sin embargo, el método recomendado es utilizar etiquetas para implementar estos SDK.
 
 Después de enviar datos a Edge Network, puede activar las soluciones de Adobe para enviar datos allí. Para enviar datos a una solución que no sea de Adobe, configúrela en el reenvío de eventos.
 
@@ -30,7 +31,7 @@ Después de enviar datos a Edge Network, puede activar las soluciones de Adobe p
 * Adobe Experience Platform Collection Enterprise (póngase en contacto con su administrador de cuentas para conocer los precios)
 * Reenvío de eventos en Adobe Experience Platform
 * SDK web o móvil de Adobe Experience Platform, configurados para enviar datos a Edge Network
-* Asignación de datos al modelo de datos de Experience (XDM) (esta asignación se puede realizar con etiquetas)
+* Los datos deben asignarse al modelo de datos de experiencia (XDM) (esta asignación puede realizarse utilizando etiquetas)
 
 ## Creación de un esquema XDM
 
@@ -40,11 +41,11 @@ En Adobe Experience Platform, puede crear su propio esquema.
 
 1. Asigne al esquema un nombre y una descripción breve.
 
-1. Puede agregar el grupo de campos &quot;Detalles web de ExperienceEvent&quot; seleccionando **[!UICONTROL Agregar]** junto a **[!UICONTROL Grupos de campos]**.
+1. Puede añadir el grupo de campo Detalles web de ExperienceEvent seleccionando **[!UICONTROL Añadir]** junto a **[!UICONTROL Grupos de campo]**.
 
    >[!NOTE]
    >
-   >Si lo desea, se pueden agregar varios grupos de campos.
+   >Puede añadir varios grupos de campo si lo desea.
 
 1. Guarde el esquema y anote el nombre que le ha asignado.
 
@@ -52,7 +53,7 @@ Para obtener más información sobre esquemas, consulte la [Ayuda del sistema de
 
 ## Crear una propiedad de reenvío de eventos
 
-En la interfaz de usuario de la recopilación de datos, cree una propiedad de tipo &quot;Edge&quot;.
+En la interfaz de usuario de la recopilación de datos, cree una propiedad de tipo Edge.
 
 1. Seleccione **[!UICONTROL Nueva propiedad]**.
 
@@ -65,13 +66,13 @@ En la interfaz de usuario de la recopilación de datos, cree una propiedad de ti
 Después de crear la propiedad, vaya a la pestaña **[!UICONTROL Entornos]** de la nueva propiedad y tome
 nota de los ID de entorno. Si la organización de Adobe utilizada en el conjunto de datos difiere de la organización de Adobe utilizada en el reenvío de eventos, puede copiar el ID de entorno de la pestaña **[!UICONTROL Environments]** y pegarlo al crear un conjunto de datos. De lo contrario, puede seleccionar el entorno de un menú desplegable.
 
-## Crear un conjunto de datos
+## Crear un flujo de datos
 
-Para crear el conjunto de datos en Adobe Experience Platform, utilice el ID de entorno generado al crear la propiedad de reenvío de eventos.
+Para crear un flujo de datos en Adobe Experience Platform, utilice el ID de entorno generado al crear la propiedad de reenvío de eventos.
 
-1. Utilice el vínculo del carril izquierdo de la interfaz de usuario de la recopilación de datos para abrir la interfaz de conjuntos de datos.
+1. Utilice el vínculo del carril izquierdo de la interfaz de usuario de la recopilación de datos para abrir la interfaz de flujos de datos.
 
-1. Seleccione **[!UICONTROL Datastreams]**.
+1. Seleccione **[!UICONTROL Flujo de datos]**.
 
 1. Asigne un nombre a la configuración y proporcione una descripción opcional.
 La descripción ayuda a identificar las configuraciones en una lista de varias configuraciones.
@@ -82,13 +83,13 @@ La descripción ayuda a identificar las configuraciones en una lista de varias c
 
 ## Habilitar el reenvío de eventos
 
-A continuación, configure la red perimetral para enviar datos al reenvío de eventos y a otros productos de Adobe.
+A continuación, configure Edge Network para enviar datos a reenvío de eventos y a otros productos de Adobe.
 
-1. En la interfaz de usuario de los conjuntos de datos, seleccione la propiedad que ha creado.
+1. En la interfaz de usuario de flujos de datos, seleccione la propiedad que ha creado.
 
 1. Seleccione el entorno Desarrollo, Producción o Ensayo.
 
-   O bien, para enviar datos a un entorno de reenvío de eventos fuera de la organización de Adobe, seleccione **[!UICONTROL Switch to Advanced Mode]** y pegue un ID. El ID se proporciona al crear una propiedad de reenvío de eventos.
+   O bien, para enviar datos a un entorno fuera de Adobe, seleccione **[!UICONTROL Cambiar a Modo avanzado]** y pegue su valor en un ID. El ID se proporciona al crear un evento reenviado a una propiedad.
 
 1. Active las herramientas necesarias y configúrelas según sea necesario.
 
@@ -98,7 +99,7 @@ A continuación, configure la red perimetral para enviar datos al reenvío de ev
 
 Después de realizar la configuración, anote los ID de entorno para la nueva propiedad.
 
-## Configurar la extensión del SDK web de etiquetas para enviar datos al conjunto de datos creado anteriormente
+## Configurar la extensión web SDK de Platform para que envíe datos al conjunto de datos creado anteriormente
 
 Cree su propiedad en la interfaz de usuario de recopilación de datos y, a continuación, utilice la extensión web SDK de Adobe Experience Platform para configurarla.
 
@@ -114,7 +115,7 @@ Consulte la [documentación de la extensión del SDK web](../../extensions/web/s
 
 ## Creación de una regla de etiqueta para enviar datos al SDK web de Platform
 
-Una vez que se haya implementado lo anterior, genere definiciones de datos, reglas, etc. que usen el reenvío de eventos y las etiquetas, pero que solo necesiten una solicitud de la página.
+Cuando todo lo anterior esté listo, podrá generar las definiciones de datos, las reglas, etc. que utilicen el reenvío de eventos y etiquetas, pero que solo necesiten una única solicitud de la página.
 
 Cree una regla de carga de página con la extensión del SDK web de Platform y el tipo de acción Enviar evento:
 
@@ -134,7 +135,7 @@ Para otro ejemplo, puede crear una regla que envíe la capa de datos a Edge si e
 
 ## Resumen
 
-Con lo siguiente en su lugar, ahora puede crear reglas de reenvío de eventos para reenviar datos a destinos que no sean de Adobe.
+Con lo siguiente, ahora podrá crear reglas de reenvío de eventos para reenviar datos a destinos que no son de Adobe.
 
 * Esquema del modelo de datos de Experience (tenga en cuenta el nombre que le ha asignado).
 * Una propiedad de reenvío de eventos (realice un seguimiento del ID de propiedad y los ID de entorno).
