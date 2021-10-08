@@ -4,9 +4,9 @@ description: Aprenda a añadir individualmente campos de grupos de campos existe
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
+source-git-commit: 0bac76ce754468bd7e5396b6f68fbcfc3d6e4aed
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Los flujos de trabajo descritos en este documento están actualmente en fase beta. La funcionalidad y la documentación están sujetas a cambios.
+>Los flujos de trabajo descritos en este documento están actualmente en fase beta y es posible que su organización no tenga acceso a ellos aún. La funcionalidad descrita en esta documentación está sujeta a cambios.
 
 Adobe Experience Platform proporciona un conjunto sólido de [grupos de campos](../schema/composition.md#field-group) estandarizados para su uso en esquemas del Modelo de datos de experiencia (XDM). La estructura y la semántica detrás de estos grupos de campo están cuidadosamente diseñadas para satisfacer una amplia variedad de casos de uso de segmentación y otras aplicaciones posteriores en Platform. También puede definir sus propios grupos de campos personalizados para satisfacer necesidades comerciales únicas.
 
@@ -43,7 +43,7 @@ Si desea quitar varios campos, puede administrar el grupo de campos como un todo
 
 ![Administrar campos relacionados](../images/ui/field-based-workflows/manage-related-fields.png)
 
-Aparece un cuadro de diálogo que muestra la estructura del grupo de campos en cuestión. Desde aquí puede utilizar las casillas de verificación proporcionadas para seleccionar o anular la selección de los campos que necesite. Cuando esté satisfecho, seleccione **[!UICONTROL Add fields]**.
+Aparece un cuadro de diálogo que muestra la estructura del grupo de campos en cuestión. Desde aquí puede utilizar las casillas de verificación proporcionadas para seleccionar o anular la selección de los campos que necesite. Cuando esté satisfecho, seleccione **[!UICONTROL Confirm]**.
 
 ![Seleccionar campos del grupo de campos](../images/ui/field-based-workflows/select-fields.png)
 
@@ -73,23 +73,23 @@ El lienzo se actualiza para mostrar el campo estándar añadido al esquema, incl
 
 ## Añadir campos personalizados directamente a un esquema
 
-Si ya ha [creado grupos de campos personalizados](./resources/field-groups.md#create), puede añadir campos personalizados directamente al esquema sin necesidad de añadirlos por separado a un grupo de campos personalizados de antemano.
-
->[!WARNING]
->
->Al agregar un campo personalizado a un esquema, aún debe seleccionar un grupo de campos personalizados existente para que se asocie a él. Esto significa que, para agregar campos personalizados directamente a un esquema, debe tener al menos un grupo de campos personalizados previamente definido en el simulador de pruebas en el que esté trabajando. Además, cualquier otro esquema que emplee ese grupo de campos personalizados también heredará el campo recién agregado después de guardar los cambios.
+Al igual que el flujo de trabajo para los campos estándar, también puede añadir sus propios campos personalizados directamente a un esquema.
 
 Para añadir campos al nivel raíz de un esquema, seleccione el icono de signo más (**+**) junto al nombre del esquema en el lienzo. Un marcador de posición **[!UICONTROL Campo sin título]** aparece en la estructura del esquema y el carril correcto se actualiza para mostrar los controles que deben configurar el campo.
 
 ![Campo personalizado raíz](../images/ui/field-based-workflows/root-custom-field.png)
 
-Comience a escribir el nombre del campo personalizado que desee agregar y el sistema empezará a buscar automáticamente campos estándar coincidentes. Para crear un nuevo campo personalizado en su lugar, seleccione la opción superior anexada con **([!UICONTROL Nuevo campo])**.
+Comience a escribir el nombre del campo que desee añadir y el sistema empezará automáticamente a buscar campos estándar coincidentes. Para crear un nuevo campo personalizado en su lugar, seleccione la opción superior anexada con **([!UICONTROL Nuevo campo])**.
 
 ![Campo nuevo](../images/ui/field-based-workflows/custom-field-search.png)
 
-A partir de aquí, proporcione un nombre para mostrar y un tipo de datos para el campo. En **[!UICONTROL Asignar grupo de campos]**, seleccione el grupo de campos personalizados al que desea asociar el nuevo campo.
+A partir de aquí, proporcione un nombre para mostrar y un tipo de datos para el campo. En **[!UICONTROL Asignar grupo de campos]**, debe seleccionar un grupo de campos para el nuevo campo al que desea asociar. Empiece a escribir el nombre del grupo de campos y, si ha creado anteriormente [grupos de campos personalizados](./resources/field-groups.md#create), estos aparecerán en la lista desplegable. También puede escribir un nombre único en el campo para crear un nuevo grupo de campos.
 
 ![Seleccionar grupo de campos](../images/ui/field-based-workflows/select-field-group.png)
+
+>[!WARNING]
+>
+>Si selecciona un grupo de campos personalizado existente, cualquier otro esquema que emplee ese grupo de campos también heredará el campo recién agregado después de guardar los cambios. Por este motivo, seleccione únicamente un grupo de campos existente si desea este tipo de propagación. De lo contrario, debe optar por crear un nuevo grupo de campos personalizados.
 
 Cuando termine, seleccione **[!UICONTROL Aplicar]**.
 
@@ -110,6 +110,8 @@ Si el esquema en el que está trabajando tiene un campo de tipo objeto proporcio
 ![Añadir campo al objeto estándar](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
 Después de aplicar los cambios, el nuevo campo aparece debajo del espacio de nombres del ID del inquilino dentro del objeto estándar. Esta área de nombres anidada evita conflictos de nombre de campo dentro del propio grupo de campos para evitar que se rompan los cambios en otros esquemas que utilizan el mismo grupo de campos.
+
+![Campo añadido al objeto estándar](../images/ui/field-based-workflows/added-to-standard-object.png)
 
 ## Pasos siguientes
 
