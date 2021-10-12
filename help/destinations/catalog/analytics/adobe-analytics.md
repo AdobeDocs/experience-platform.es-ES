@@ -3,7 +3,7 @@ keywords: Extensión de Analytics, extensión de Analytics, analytics de destino
 title: Extensión de Adobe Analytics
 description: La extensión de Adobe Analytics es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 10%
@@ -42,7 +42,7 @@ Seleccione la propiedad tag en la que desea instalar la extensión. También tie
 
 El flujo de trabajo le lleva a la interfaz de usuario de recopilación de datos para completar la instalación.
 
-Para obtener información sobre las opciones de configuración de la extensión, consulte la [página de la extensión de Adobe Analytics](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html) documentación de las etiquetas.
+Para obtener información sobre las opciones de configuración de la extensión, consulte la [página de la extensión de Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) documentación de las etiquetas.
 
 También puede instalar la extensión directamente en la [interfaz de usuario de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la guía [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
 

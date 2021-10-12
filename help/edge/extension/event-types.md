@@ -2,17 +2,18 @@
 title: Tipos de eventos en la extensión del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo utilizar los tipos de eventos proporcionados por la extensión web SDK de Adobe Experience Platform en Adobe Experience Platform Launch.
 solution: Experience Platform
-feature: SDK web
-source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
+feature: Web SDK
+exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
 
 # Tipos de eventos
 
-En esta página se describen los tipos de eventos de Adobe Experience Platform proporcionados por la extensión de etiqueta SDK web de Adobe Experience Platform. Se utilizan para [generar reglas](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html) y no se deben confundir con el campo [`eventType` en XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=es).
+En esta página se describen los tipos de eventos de Adobe Experience Platform proporcionados por la extensión de etiqueta SDK web de Adobe Experience Platform. Se utilizan para [generar reglas](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) y no se deben confundir con el campo [`eventType` en XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=es).
 
 ## [!UICONTROL Enviar evento finalizado]
 
@@ -169,12 +170,12 @@ En este ejemplo, si las propuestas se encuentran en el servidor que coincide con
 ]
 ```
 
-En este punto, puede procesar el contenido de la propuesta como desee. En este ejemplo, la propuesta que coincide con el ámbito `discount` es una propuesta HTML creada con el Compositor de experiencias basadas en formularios de Adobe Target. Supongamos que tiene un elemento en la página con el ID de `daily-special` y desea procesar el contenido de la propuesta `discount` en el elemento `daily-special`. Haga lo siguiente:
+En este punto, puede procesar el contenido de la propuesta como desee. En este ejemplo, la propuesta que coincide con el ámbito `discount` es una propuesta de HTML creada con el Compositor de experiencias basadas en formularios de Adobe Target. Supongamos que tiene un elemento en la página con el ID de `daily-special` y desea procesar el contenido de la propuesta `discount` en el elemento `daily-special`. Haga lo siguiente:
 
 1. Extraiga propuestas del objeto `event`.
 1. Bucle por cada propuesta, buscando la propuesta con un alcance de `discount`.
 1. Si encuentra una propuesta, realice un bucle por cada elemento de la propuesta, buscando el elemento que sea contenido HTML. (Es mejor comprobarlo que asumir).
-1. Si encuentra un elemento que contenga contenido HTML, busque el elemento `daily-special` en la página y reemplace su HTML por el contenido personalizado.
+1. Si encuentra un elemento que contenga contenido de HTML, busque el elemento `daily-special` en la página y reemplace su HTML por el contenido personalizado.
 
 El código personalizado dentro de la acción [!UICONTROL Custom Code] puede aparecer de la siguiente manera:
 
@@ -260,8 +261,3 @@ if (propositions) {
   // them in some other way.
 }
 ```
-
-
-
-
-
