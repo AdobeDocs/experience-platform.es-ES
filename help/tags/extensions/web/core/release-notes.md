@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Core
 description: Últimas notas de la versión de la extensión Core en Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
+source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
-source-wordcount: '1522'
-ht-degree: 76%
+source-wordcount: '1543'
+ht-degree: 75%
 
 ---
 
@@ -14,6 +14,13 @@ ht-degree: 76%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 8 de octubre de 2021
+
+Versión 3.2.2
+
+* Se ha corregido el esquema JSON del elemento de datos de valor condicional para todos los operadores disponibles.
+* Corrección https://github.com/adobe/reactor-extension-core/issues/64.
 
 ## 23 de septiembre de 2021
 
