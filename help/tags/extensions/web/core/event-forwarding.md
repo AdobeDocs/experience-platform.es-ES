@@ -1,20 +1,22 @@
 ---
-title: Información general sobre la extensión del reenvío de eventos principales
-description: Obtenga información sobre la extensión de reenvío de eventos principales en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+title: Información general sobre la extensión del reenvío de eventos principal
+description: Obtenga información acerca de la extensión de reenvío de eventos principal en Adobe Experience Platform.
+feature: Event Forwarding
+exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '1724'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
-# Información general sobre la extensión del reenvío de eventos principales
+# Información general sobre la extensión del reenvío de eventos principal
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-La extensión de reenvío de eventos principales proporciona los eventos, condiciones y tipos de datos predeterminados para el reenvío de eventos en Adobe Experience Platform.
+La extensión de reenvío de eventos principal proporciona los eventos, condiciones y tipos de datos predeterminados para el reenvío de eventos en Adobe Experience Platform.
 
 Utilice esta referencia para obtener información sobre las opciones disponibles al utilizar esta extensión para generar una regla.
 
@@ -224,4 +226,4 @@ arc.event.xdm.page.pageName
 
 >[!NOTE]
 >
->La llamada `interact` del cliente tiene `events`, pero para el reenvío de eventos necesita `event`. Esto se debe a que el reenvío de eventos inspecciona cada evento individualmente y no como un lote de eventos múltiples como se muestra en el cliente.
+>La llamada `interact` del cliente tiene `events`, pero para el reenvío de eventos necesita `event`. Esto se debe a que el reenvío de eventos inspecciona cada evento individualmente y no como un lote de varios eventos, como se muestra en el cliente.

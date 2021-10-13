@@ -2,8 +2,8 @@
 audience: user
 user-guide-title: Guía de Observability Insights
 user-guide-description: Controle las actividades de la Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
-feature: Data Management
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+feature: Observability
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 46%

@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
-feature: Data Ingestion, Sources
-source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
+feature: Sources
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 14%
@@ -62,10 +62,10 @@ ht-degree: 14%
       - [Conector de azure synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de almacenamiento de tablas de Azure](connectors/databases/ats.md)
       - [Conector de la Couchbase](connectors/databases/couchbase.md)
-      - [Conector Google BigQuery](connectors/databases/bigquery.md)
+      - [Conector BigQuery de Google](connectors/databases/bigquery.md)
       - [Conector GreenPlum](connectors/databases/greenplum.md)
       - [Conector HP Vertica](connectors/databases/hp-vertica.md)
-      - [Conector IBM DB2](connectors/databases/ibm-db2.md)
+      - [Conector DB2 de IBM](connectors/databases/ibm-db2.md)
       - [Conector MariaDB](connectors/databases/mariadb.md)
       - [Conector de Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Conector MySQL](connectors/databases/mysql.md)
@@ -100,7 +100,7 @@ ht-degree: 14%
          - [Almacenamiento de archivos de Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Zona de aterrizaje de datos](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Almacenamiento de Google Cloud](tutorials/api/create/cloud-storage/google.md)
+         - [Almacenamiento en la nube de Google](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Almacenamiento de objetos de oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -189,7 +189,7 @@ ht-degree: 14%
          - [Almacenamiento de archivos de Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Zona de aterrizaje de datos](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Almacenamiento de Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Almacenamiento en la nube de Google](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Almacenamiento de objetos de oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
