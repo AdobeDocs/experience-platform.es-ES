@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión de Adobe Analytics
 description: Últimas notas de la versión de la extensión de etiquetas de Adobe Analytics en Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
+source-git-commit: 83e9ebf65e904c6343fe44932a2b7b1a72039187
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 97%
+source-wordcount: '1262'
+ht-degree: 96%
 
 ---
 
@@ -14,6 +14,15 @@ ht-degree: 97%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 16 de septiembre de 2021
+
+### Extensión de Adobe Analytics 1.8.7
+
+#### Correcciones de errores
+
+* AppMeasurement actualizado a la versión 2.2.2.
+* Se ha eliminado buildInfo.environment obsoleto
 
 ## 24 de agosto de 2021
 
