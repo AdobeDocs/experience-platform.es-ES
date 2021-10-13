@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Punto final de la API de administración de entornos aislados
 topic-legacy: developer guide
 description: El extremo /sandboxes de la API de Sandbox le permite administrar entornos limitados en Adobe Experience Platform mediante programación.
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 3%
+source-wordcount: '1489'
+ht-degree: 4%
 
 ---
 
@@ -190,6 +191,10 @@ Una respuesta correcta devolverá los detalles del entorno limitado, incluidos `
 | `eTag` | Identificador de una versión específica del simulador de pruebas. Este valor, que se utiliza para el control de versiones y la eficacia del almacenamiento en caché, se actualiza cada vez que se realiza un cambio en el simulador para pruebas. |
 
 ## Creación de un simulador de pruebas {#create}
+
+>[!NOTE]
+>
+>Cuando se crea un nuevo simulador para pruebas, primero debe agregar ese nuevo simulador para pruebas al perfil del producto en [Adobe Admin Console](https://adminconsole.adobe.com/) para poder empezar a usar el nuevo simulador para pruebas. Consulte la documentación sobre [administración de permisos para un perfil de producto](../../access-control/ui/permissions.md) para obtener información sobre cómo aprovisionar un simulador para pruebas a un perfil de producto.
 
 Puede crear un nuevo entorno limitado de desarrollo o producción realizando una solicitud de POST al extremo `/sandboxes` .
 
@@ -400,7 +405,7 @@ Una respuesta correcta devuelve los detalles del entorno limitado actualizado, m
 }
 ```
 
-El entorno limitado de producción predeterminado y los entornos limitados de producción creados por el usuario no se pueden restablecer si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Analytics para la función [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Audience Manager para la función [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
+El entorno limitado de producción predeterminado y los entornos limitados de producción creados por el usuario no se pueden restablecer si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Analytics para la función [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) o si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Audience Manager para la función [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
 
 A continuación se muestra una lista de posibles excepciones que podrían impedir que se restablezca un simulador para pruebas:
 
