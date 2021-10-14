@@ -5,9 +5,9 @@ title: Esquemas y áreas de nombres B2B
 topic-legacy: overview
 description: Este documento proporciona información general sobre los espacios de nombres personalizados necesarios al crear un conector de origen B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: 15fd870565d50bd4e320a1acf61413f45c1f537c
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1679'
 ht-degree: 4%
 
 ---
@@ -87,6 +87,7 @@ La siguiente tabla contiene información sobre la configuración subyacente para
 | Miembro de la campaña B2B | `b2b_campaign_member` | `B2B_CAMPAIGN_MEMBER` |
 | Lista de marketing B2B | `b2b_marketing_list` | `B2B_MARKETING_LIST` |
 | Miembro de la Lista de Marketing B2B | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
+| Relación de persona de cuenta B2B | `b2b_account_person_relation` | `B2B_ACCOUNT_PERSON` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -115,6 +116,7 @@ La siguiente tabla contiene información sobre la configuración subyacente de l
 | Lista de marketing B2B | Lista de marketing empresarial XDM | Ninguna | Habilitado | `marketingListKey.sourceKey` en la clase base | Lista de marketing B2B | Ninguna | Ninguna | Ninguna | La lista estática no está sincronizada desde [!DNL Salesforce] y, por lo tanto, no tiene una identidad secundaria. |
 | Miembro de la Lista de Marketing B2B | Miembros de la lista de marketing empresarial XDM | Ninguna | Habilitado | `marketingListMemberKey.sourceKey` en la clase base | Miembro de la Lista de Marketing B2B | Ninguna | Ninguna | **Primera relación**<ul><li>`PersonKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Persona B2B</li><li>Área de nombres: Persona B2B</li><li>Propiedad de destino: `b2b.personKey.sourceKey`</li><li>Nombre de relación del esquema actual: Persona</li><li>Nombre de relación del esquema de referencia: Listas de marketing</li></ul>**Segunda relación**<ul><li>`marketingListKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Lista de marketing B2B</li><li>Área de nombres: Lista de marketing B2B</li><li>Propiedad de destino: `marketingListKey.sourceKey`</li><li>Nombre de relación del esquema actual: Lista de marketing</li><li>Nombre de relación del esquema de referencia: People</li></ul> | El miembro de la lista estática no está sincronizado desde [!DNL Salesforce] y, por lo tanto, no tiene una identidad secundaria. |
 | Actividad B2B | XDM ExperienceEvent | <ul><li>Visite WebPage</li><li>Nuevo posible cliente</li><li>Convertir posible cliente</li><li>Agregar a lista</li><li>Quitar de la lista</li><li>Agregar a oportunidad</li><li>Eliminar de oportunidad</li><li>Formulario rellenado</li><li>Clics en vínculos</li><li>Correo electrónico enviado</li><li>Correo electrónico abierto</li><li>Correo electrónico en el que se hizo clic</li><li>Correo electrónico rechazado</li><li>Correo electrónico rechazado leve</li><li>Cancelación de suscripción de correo electrónico</li><li>Puntuación cambiada</li><li>Oportunidad actualizada</li><li>Cambio del estado en la progresión de la campaña</li><li>Identificador de persona</li><li>URL web de Marketo</li><li>Momento interesante</li></ul> | Habilitado | `personKey.sourceKey` del grupo de campos Identificador de persona | Persona B2B | Ninguna | Ninguna | **Primera relación**<ul><li>`listOperations.listKey.sourceKey` field</li><li>Tipo: uno a uno</li><li>Esquema de referencia: Lista de marketing B2B</li><li>Área de nombres: Lista de marketing B2B</li></ul>**Segunda relación**<ul><li>`opportunityEvent.opportunityKey.sourceKey` field</li><li>Tipo: uno a uno</li><li>Esquema de referencia: Oportunidad B2B</li><li>Área de nombres: Oportunidad B2B</li></ul>**Tercera relación**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` field</li><li>Tipo: uno a uno</li><li>Esquema de referencia: Campaña B2B</li><li>Área de nombres: Campaña B2B</li></ul> | `ExperienceEvent` es diferente a las entidades. La identidad del evento de experiencia es la persona que realizó la actividad. |
+| Relación de persona de cuenta B2B | Relación de persona de cuenta comercial XDM | Mapa de identidad | Habilitado | `accountPersonKey.sourceKey` en la clase base | Relación de persona de cuenta B2B | Ninguna | Ninguna | **Primera relación**<ul><li>`personKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Persona B2B</li><li>Área de nombres: Persona B2B</li><li>Propiedad de destino: `b2b.personKey.SourceKey`</li><li>Nombre de relación del esquema actual: People</li><li>Nombre de relación del esquema de referencia: Cuenta</li></ul>**Segunda relación**<ul><li>`accountKey.sourceKey` en la clase base</li><li>Tipo: Varios a uno</li><li>Esquema de referencia: Cuenta B2B</li><li>Área de nombres: Cuenta B2B</li><li>Propiedad de destino: `accountKey.sourceKey`</li><li>Nombre de relación del esquema actual: Cuenta</li><li>Nombre de relación del esquema de referencia: People</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
