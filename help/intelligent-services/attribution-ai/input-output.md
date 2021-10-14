@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;introducción;Attribution ai;temas populares;Attribution ai input;Attribution ai output;
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Entrada y salida en Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: En el siguiente documento se describen las diferentes entradas y productos utilizados en la Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: a49218103669758404a4ddf3f9833b8b2d9b7fc6
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 3%
@@ -45,9 +45,9 @@ No todas las columnas del esquema [!DNL Consumer Experience Event] (CEE) son obl
 | Marketing.trackingCode | Touchpoint |
 | Marketing.campaignname | Touchpoint |
 | Marketing.campaigngroup | Touchpoint |
-| Comercio | Conversión |
+| Commerce | Conversión |
 
-Normalmente, la atribución se ejecuta en columnas de conversión como pedidos, compras y cierres de compra en &quot;comercio&quot;. Las columnas para &quot;canal&quot; y &quot;marketing&quot; se utilizan para definir puntos de contacto para la Attribution AI (por ejemplo, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Para obtener resultados y perspectivas óptimos, se recomienda incluir tantas columnas de conversión y punto de contacto como sea posible. Además, no se limita solo a las columnas anteriores. Puede incluir cualquier otra columna recomendada o personalizada como conversión o definición de punto de contacto.
+Normalmente, la atribución se ejecuta en columnas de conversión como pedidos, compras y cierres de compra en &quot;comercio&quot;. The columns for &quot;channel&quot; and &quot;marketing&quot; are used to define touchpoints for Attribution AI (for example, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). For optimal results and insights, it is highly recommended that you include as many conversion and touchpoint columns as possible. Además, no se limita solo a las columnas anteriores. Puede incluir cualquier otra columna recomendada o personalizada como conversión o definición de punto de contacto.
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ La Attribution AI genera lo siguiente:
 
 ![](./images/input-output/schema_output.gif)
 
-### Puntuaciones granulares sin procesar {#raw-granular-scores}
+### Raw granular scores {#raw-granular-scores}
 
 La Attribution AI genera puntuaciones de atribución en el nivel más granular posible para que pueda cortar y fragmentar las puntuaciones en cualquier columna de puntuación. Para ver estas puntuaciones en la interfaz de usuario, lea la sección [visualización de las rutas de puntuación sin procesar](#raw-score-path). Para descargar las puntuaciones con la API, visite el documento [descargar puntuaciones en Attribution AI](./download-scores.md).
 
@@ -118,7 +118,7 @@ La siguiente tabla describe los campos de esquema de la salida de ejemplo de las
 | identityMap (Map) | True | identityMap del usuario similar al formato CEE XDM. |
 | eventType (String) | True | El tipo de evento principal para este registro de serie temporal. <br> **Ejemplo:** &quot;Pedido&quot;, &quot;Compra&quot;, &quot;Visita&quot; |
 | eventMergeId (cadena) | True | Un ID para correlacionar o combinar varias [!DNL Experience Events] juntas que son esencialmente el mismo evento o deben combinarse. El productor de datos debe rellenarlo antes de su incorporación. <br> **Ejemplo:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _id (cadena) | False | Identificador único del evento de serie temporal. <br> **Ejemplo:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _id (cadena) | False | A unique identifier for the time-series event. <br> **Ejemplo:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _tenantId (objeto) | False | El contenedor de objeto de nivel superior correspondiente a su ID de tentante. <br> **Ejemplo:** _atsdsnmmsv2 |
 | your_schema_name (objeto) | False | Puntee la fila con el evento de conversión en todos los eventos de punto de contacto asociados con él y sus metadatos. <br> **Ejemplo:** Puntuaciones de Attribution AI - Nombre de modelo__2020 |
 | segmentación (cadena) | True | Segmento de conversión, como la segmentación geográfica con la que se basa el modelo. En caso de ausencia de segmentos, el segmento es el mismo que conversionName. <br> **Ejemplo:** ORDER_US |
@@ -142,7 +142,7 @@ La siguiente tabla describe los campos de esquema de la salida de ejemplo de las
 | id (cadena) | True | ID de identidad del usuario, como ID de cookie o AAID o MCID, etc. <br> **Ejemplo:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Área de nombres de identidad utilizada para crear las rutas y, por lo tanto, el modelo. <br> **Ejemplo:** aaid |
 | touchpointsDetail (matriz de objetos) | True | La lista de detalles de puntos de contacto que llevan a la conversión solicitada por | incidencia de touchpoint o marca de tiempo. |
-| touchpointName (cadena) | True | Nombre del punto de contacto que se configuró durante la configuración. <br> **Ejemplo:** PAID_SEARCH_CLICK |
+| touchpointName (cadena) | True | Nombre del punto de contacto que se configuró durante la configuración. <br> **Example:** PAID_SEARCH_CLICK |
 | partituras (objeto) | True | Contribución de Touchpoint a esta conversión como puntuación. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección [puntuaciones de atribución agregadas](#aggregated-attribution-scores). |
 | touchPoint (objeto) | True | Metadatos de Touchpoint. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección [puntuaciones agregadas](#aggregated-scores). |
 
@@ -212,7 +212,7 @@ Las puntuaciones agregadas se pueden descargar en formato CSV desde la interfaz 
 | event_type (String) | Definido por el usuario | True | El tipo de evento principal para este registro de serie temporal <br> **Ejemplo**: Conversión de pago |
 | media_type (String) | ENUM | False | Describe si el tipo de medio es de pago, propio o ganado. <br> **Ejemplo**: PAGO, PROPIEDAD |
 | channel (String) | ENUM | False | La propiedad `channel._type` que se utiliza para proporcionar una clasificación aproximada de canales con propiedades similares en [!DNL Consumer Experience Event] XDM. <br> **Ejemplo**: BUSCAR |
-| action (String) | ENUM | False | La propiedad `mediaAction` se utiliza para proporcionar un tipo de acción de medio de evento de experiencia. <br> **Ejemplo**: HAGA CLIC EN |
+| action (String) | ENUM | False | La propiedad `mediaAction` se utiliza para proporcionar un tipo de acción de medio de evento de experiencia. <br> **Example**: CLICK |
 | campaign_group (String) | Definido por el usuario | True | Nombre del grupo de campañas en el que se agrupan varias campañas como &quot;50%_DISCOUNT&quot;. <br> **Ejemplo**: COMERCIAL |
 | campaign_name (String) | Definido por el usuario | True | Nombre de la campaña utilizada para identificar la campaña de marketing como &quot;50%_DISCOUNT_USA&quot; o &quot;50%_DISCOUNT_ASIA&quot;. <br> **Ejemplo**: Venta de Acción de Gracias |
 

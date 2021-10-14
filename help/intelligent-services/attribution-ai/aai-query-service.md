@@ -1,14 +1,13 @@
 ---
 keywords: perspectivas;ai de atribución;perspectivas de ai de atribución;servicio de consulta AAI;consultas de atribución;puntuaciones de atribución
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Análisis de puntuaciones de atribución mediante el servicio de consulta
 topic-legacy: Attribution AI queries
 description: Aprenda a utilizar el servicio de consulta de Adobe Experience Platform para analizar las puntuaciones de Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ Cada fila de los datos representa una conversión, en la que la información de 
 
 ## Búsqueda de rutas de datos
 
-En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Datasets]** en el panel de navegación izquierdo. Aparece la página **[!UICONTROL Datasets]**. A continuación, seleccione la pestaña **[!UICONTROL Browse]** y busque el conjunto de datos de salida para sus puntuaciones de Attribution AI.
+En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Datasets]** en el panel de navegación izquierdo. Aparece la página **[!UICONTROL Conjuntos de datos]**. A continuación, seleccione la pestaña **[!UICONTROL Browse]** y busque el conjunto de datos de salida para sus puntuaciones de Attribution AI.
 
 ![Acceso a la instancia](./images/aai-query/datasets_browse.png)
 
@@ -33,7 +32,7 @@ Seleccione el conjunto de datos de salida. Aparece la página de actividad del c
 
 ![página de actividad del conjunto de datos](./images/aai-query/select_preview.png)
 
-En la página de actividad del conjunto de datos, seleccione **[!UICONTROL Preview dataset]** en la esquina superior derecha para obtener una vista previa de los datos y asegurarse de que se incorporaron según lo esperado.
+En la página de actividad del conjunto de datos, seleccione **[!UICONTROL Vista previa del conjunto de datos]** en la esquina superior derecha para obtener una vista previa de los datos y asegurarse de que se introdujeron según lo esperado.
 
 ![vista previa del conjunto de datos](./images/aai-query/preview_dataset.JPG)
 
@@ -41,13 +40,13 @@ Después de obtener una vista previa de los datos, seleccione el esquema en el c
 
 ![seleccione el esquema](./images/aai-query/select_schema.png)
 
-Con el esquema de puntuación, puede seleccionar o buscar un valor. Una vez seleccionado, el carril lateral **[!UICONTROL Field properties]** se abre y le permite copiar la ruta para utilizarla en la creación de consultas.
+Con el esquema de puntuación, puede seleccionar o buscar un valor. Una vez seleccionado, se abre el carril lateral **[!UICONTROL Field properties]**, que permite copiar la ruta para utilizarla en la creación de consultas.
 
 ![copiar la ruta](./images/aai-query/copy_path.png)
 
 ## Acceso al servicio de consultas
 
-Para acceder al servicio de consulta desde la interfaz de usuario de Platform, comience seleccionando **[!UICONTROL Queries]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Browse]** . Se carga una lista de las consultas guardadas anteriormente.
+Para acceder al servicio de consulta desde la interfaz de usuario de Platform, comience seleccionando **[!UICONTROL Consultas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]**. Se carga una lista de las consultas guardadas anteriormente.
 
 ![examinar el servicio de consultas](./images/aai-query/query_tab.png)
 

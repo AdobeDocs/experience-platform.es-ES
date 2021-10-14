@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;perspectivas;ai de atribución;temas populares;perspectivas de ai de atribución
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Descubra las perspectivas en Attribution AI
 topic-legacy: Attribution AI insights
 description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ Para utilizar perspectivas para la Attribution AI, debe tener disponible una ins
 
 ## Información general sobre perspectivas de instancias de servicio
 
-En la interfaz de usuario [!DNL Adobe Experience Platform], seleccione **[!UICONTROL Services]** en el panel de navegación izquierdo. El explorador **[!UICONTROL Services]** aparece y muestra los servicios inteligentes de Adobe disponibles. En el contenedor para Attribution AI, seleccione **[!UICONTROL Open]**.
+En la interfaz de usuario de [!DNL Adobe Experience Platform], seleccione **[!UICONTROL Services]** en el panel de navegación izquierdo. Aparece el explorador **[!UICONTROL Services]** y muestra los servicios inteligentes de Adobe disponibles. En el contenedor para Attribution AI, seleccione **[!UICONTROL Abrir]**.
 
 ![Acceso a la instancia](./images/insights/open_Attribution_ai.png)
 
@@ -43,7 +42,7 @@ A continuación, aparecerá la página de perspectivas de esa instancia de servi
 
 ### Detalles de instancias de servicio
 
-Para ver detalles adicionales de una instancia de servicio, seleccione **[!UICONTROL Show more]** en la parte superior derecha.
+Para ver detalles adicionales de una instancia de servicio, seleccione **[!UICONTROL Mostrar más]** en la parte superior derecha.
 
 ![mostrar más](./images/insights/show-more.png)
 
@@ -53,22 +52,22 @@ Aparecerá una lista detallada. Para obtener más información sobre cualquiera 
 
 ### Editar una instancia
 
-Para editar una instancia, seleccione **[!UICONTROL Edit]** en la navegación superior derecha.
+Para editar una instancia, seleccione **[!UICONTROL Edit]** en el panel de navegación superior derecho.
 ![haga clic en el botón editar](./images/insights/edit-button.png)
 
-Aparece el cuadro de diálogo de edición, que le permite editar el nombre, la descripción y la frecuencia de puntuación de la instancia. Si el estado de la instancia está deshabilitado, no se puede editar la frecuencia de puntuación. Para confirmar los cambios y cerrar el cuadro de diálogo, seleccione **[!UICONTROL Save]** en la esquina inferior derecha.
+Aparece el cuadro de diálogo de edición, que le permite editar el nombre, la descripción y la frecuencia de puntuación de la instancia. Si el estado de la instancia está deshabilitado, no se puede editar la frecuencia de puntuación. Para confirmar los cambios y cerrar el cuadro de diálogo, seleccione **[!UICONTROL Guardar]** en la esquina inferior derecha.
 
 ![editar popover](./images/insights/edit-popover.png)
 
 ### Más acciones {#more-actions}
 
-El botón **[!UICONTROL More actions]** se encuentra en la navegación superior derecha junto a **[!UICONTROL Edit]**. Al seleccionar **[!UICONTROL More actions]** se abre un menú desplegable que le permite seleccionar una de las siguientes operaciones:
+El botón **[!UICONTROL Más acciones]** se encuentra en la navegación superior derecha junto a **[!UICONTROL Editar]**. Al seleccionar **[!UICONTROL Más acciones]** se abre un menú desplegable que le permite seleccionar una de las siguientes operaciones:
 
-- **[!UICONTROL Clone]**: Clona la instancia.
-- **[!UICONTROL Delete]**: Elimina la instancia.
-- **[!UICONTROL Download summary data]**: Descarga un archivo CSV que contiene los datos de resumen.
-- **[!UICONTROL Access scores]**: La selección de  **[!UICONTROL Access scores]** le redirige a las puntuaciones de  [acceso para el tutorial](./download-scores.md) de Attribution AI.
-- **[!UICONTROL View run history]**: Aparece una ventana emergente que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
+- **[!UICONTROL Clonar]**: Clona la instancia.
+- **[!UICONTROL Eliminar]**: Elimina la instancia.
+- **[!UICONTROL Descargar datos]** de resumen: Descarga un archivo CSV que contiene los datos de resumen.
+- **[!UICONTROL Puntuaciones]** de acceso: Si selecciona  **[!UICONTROL Puntuaciones de]** acceso, se le redirigirá a las puntuaciones de  [acceso para el tutorial](./download-scores.md) de Attribution AI.
+- **[!UICONTROL Ver el historial]** de ejecución: Aparece una ventana emergente que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
 
 ![más acciones](./images/insights/more-actions.png)
 
@@ -80,7 +79,7 @@ Las perspectivas de Attribution AI le permiten filtrar sus datos y actualizar au
 
 Cuando se crea una nueva instancia en Attribution AI, uno de los campos obligatorios es &quot;Eventos de conversión&quot;. Los eventos de conversión son objetivos empresariales que identifican el impacto de las actividades de marketing, como pedidos de comercio electrónico, compras en el almacén y visitas a sitios web.
 
-Desde la instancia, la lista desplegable **[!UICONTROL Conversion events]** le permite seleccionar cualquiera de los eventos definidos para la instancia a fin de filtrar los datos. Al seleccionar eventos específicos, se cambian las visualizaciones de la interfaz de usuario para rellenar solo las conversiones que pertenecen a esos eventos.
+Desde la instancia, la lista desplegable **[!UICONTROL Conversion events]** permite seleccionar cualquiera de los eventos definidos para la instancia a fin de filtrar los datos. Al seleccionar eventos específicos, se cambian las visualizaciones de la interfaz de usuario para rellenar solo las conversiones que pertenecen a esos eventos.
 
 ![evento de conversión](./images/insights/conversion-event.png)
 
@@ -100,16 +99,16 @@ Este filtro permite seleccionar cualquier región configurada en el proceso de c
 
 ### Añadir filtros
 
-Puede agregar filtros adicionales seleccionando el icono **filter** para abrir la ventana emergente **[!UICONTROL Add filters]**. La ventana emergente **[!UICONTROL Add filters]** le permite filtrar por canal, geografía, tipo de medio y producto. Solo los filtros aplicables a una instancia de servicio se rellenan con el indicador . Por ejemplo, si no ha proporcionado datos geográficos ni un tipo de medios, esos atributos de filtro no estarán disponibles para su instancia.
+Puede agregar filtros adicionales seleccionando el icono **filter** para abrir la ventana emergente **[!UICONTROL Add filters]**. La ventana emergente **[!UICONTROL Add filters]** permite filtrar por canal, geografía, tipo de medio y producto. Solo los filtros aplicables a una instancia de servicio se rellenan con el indicador . Por ejemplo, si no ha proporcionado datos geográficos ni un tipo de medios, esos atributos de filtro no estarán disponibles para su instancia.
 
 ![filtros adicionales](./images/insights/additional-filters.png)
 
 ![apertura de filtros](./images/insights/filter-popover.png)
 
-- **[!UICONTROL Channel]:** La selección del atributo de canal permite filtrar cualquiera de los canales de marketing disponibles. Puede seleccionar varios canales para compararlos.
-- **[!UICONTROL Geography]:** La selección del atributo geografía permite filtrar los códigos de país según los modelos de región. Este filtro puede estar presente o no en función de los datos. Los códigos de país tienen dos caracteres. Consulte la lista completa de código de país [aquí](https://datahub.io/core/country-list).
-- **[!UICONTROL Media type]:** La selección del atributo de tipo de medio le permite filtrar cualquiera de los tipos de medios definidos.
-- **[!UICONTROL Product]:** La selección del atributo product permite filtrar desde cualquier producto que se haya introducido inicialmente en la creación de la instancia.
+- **[!UICONTROL Canal]:** la selección del atributo de canal permite filtrar cualquiera de los canales de marketing disponibles. Puede seleccionar varios canales para compararlos.
+- **[!UICONTROL Geografía]:** la selección del atributo geografía permite filtrar los códigos de país según los modelos de región. Este filtro puede estar presente o no en función de los datos. Los códigos de país tienen dos caracteres. Consulte la lista completa de código de país [aquí](https://datahub.io/core/country-list).
+- **[!UICONTROL Tipo] de medio:** la selección del atributo de tipo de medio permite filtrar cualquiera de los tipos de medios definidos.
+- **[!UICONTROL Producto]:** la selección del atributo de producto le permite filtrar desde cualquier producto que se haya introducido inicialmente en la creación de la instancia.
 
 ### Date Range
 
@@ -125,7 +124,7 @@ Información general del ![](./images/insights/Overview.png)
 
 ## Tendencias semanales
 
-La tarjeta **[!UICONTROL Weekly trends]** desglosa la conversión total según el intervalo de fechas establecido durante el proceso de filtrado.
+La tarjeta **[!UICONTROL Weekly Trends]** desglosa la conversión total por el intervalo de fechas establecido durante el proceso de filtrado.
 
 Al seleccionar los puntos suspensivos en la parte superior derecha de la tarjeta **Weekly Trends** , se muestra un menú desplegable que le permite seleccionar tendencias diarias, semanales o mensuales.
 
@@ -137,21 +136,21 @@ Al pasar el ratón por encima de la línea de datos de un modelo de atribución 
 
 La tarjeta **[!UICONTROL Breakdown by channel]** se utiliza para determinar el número total de conversiones en relación con cada canal. Esta tarjeta puede utilizarse para ayudar a tomar decisiones sobre la eficacia de cada canal y el retorno de la inversión.
 
-Al seleccionar los puntos suspensivos en la parte superior derecha de la tarjeta **[!UICONTROL Breakdown by channel]** se abre un menú desplegable que le permite rellenar los datos en función de los puntos de contacto.
+Al seleccionar los puntos suspensivos en la parte superior derecha de la tarjeta **[!UICONTROL Breakdown by channel]** se abre un menú desplegable que le permite rellenar datos en función de los puntos de contacto.
 
 ![canal de desglose](./images/insights/channel-breakdown.png)
 
 ## Campañas principales
 
-La tarjeta **[!UICONTROL Top campaigns]** muestra información general sobre las campañas y el rendimiento de la campaña en cada canal. Esta tarjeta puede ayudar a informar a su equipo de la eficacia de una campaña específica para un canal determinado y proporcionar perspectivas como en qué campañas debería invertir más.
+La tarjeta **[!UICONTROL Principales campañas]** muestra información general sobre las campañas y el rendimiento de la campaña en cada canal. Esta tarjeta puede ayudar a informar a su equipo de la eficacia de una campaña específica para un canal determinado y proporcionar perspectivas como en qué campañas debería invertir más.
 
 ![campañas principales](./images/insights/top-campaigns.png)
 
 ## Desglose por posición del punto de contacto
 
-Al seleccionar la pestaña **[!UICONTROL Path Analysis]**, se cargan los gráficos **[!UICONTROL Breakdown by touchpoint position]** y **[!UICONTROL Top conversion paths]**.
+Al seleccionar la pestaña **[!UICONTROL Path Analysis]** , se cargan los gráficos **[!UICONTROL Breakdown by touchpoint position]** y **[!UICONTROL Top conversion paths]**.
 
-El gráfico **[!UICONTROL Breakdown by touchpoint position]** es un desglose de conversiones atribuidas por posición del punto de contacto comparado entre todas las rutas de conversión. Este gráfico le ayuda a comprender qué puntos de contacto son más efectivos en las distintas etapas de la ruta de conversión. Los escenarios son el inicio, el reproductor y más cercanos.
+El gráfico **[!UICONTROL Desglose por posición del punto de contacto]** es un desglose de las conversiones atribuidas por posición del punto de contacto comparado entre todas las rutas de conversión. Este gráfico le ayuda a comprender qué puntos de contacto son más efectivos en las distintas etapas de la ruta de conversión. Los escenarios son el inicio, el reproductor y más cercanos.
 
 - **Inicio:** indica que el punto de contacto fue el primer contacto en una ruta de conversión.
 - **Reproductor:** indica que el punto de contacto no fue el primer o el último contacto que produjo una conversión.
@@ -164,17 +163,17 @@ La suma de la contribución porcentual para un modelo de atribución en todos lo
 
 ## Rutas de conversión principales
 
-El gráfico **[!UICONTROL Top conversion paths]** muestra las puntuaciones algorítmicas y con influencia en las rutas de conversión principales de las regiones seleccionadas. Este gráfico le permite visualizar qué puntos de contacto contribuyen a las conversiones y cuál es la puntuación de atribución para cada punto de contacto. Puede utilizar esta información para ver las rutas más frecuentes de una determinada región y ver si surgen patrones entre los distintos conjuntos de puntos de contacto.
+El gráfico **[!UICONTROL Principales rutas de conversión]** muestra las puntuaciones algorítmicas y con influencia en las rutas de conversión principales de las regiones seleccionadas. Este gráfico le permite visualizar qué puntos de contacto contribuyen a las conversiones y cuál es la puntuación de atribución para cada punto de contacto. Puede utilizar esta información para ver las rutas más frecuentes de una determinada región y ver si surgen patrones entre los distintos conjuntos de puntos de contacto.
 
 ![Rutas de usuario más comunes](./images/insights/Touchpoint-paths.png)
 
 ## Eficacia de los puntos de contacto
 
-Al seleccionar la pestaña **[!UICONTROL Touchpoint Effectiveness]**, se carga la tarjeta **[!UICONTROL Touchpoint effectiveness]** . Esta tarjeta utiliza la distribución de datos de Attribution AI para mostrar información para cada punto de contacto. Los datos de esta tabla solo se generan para períodos de tiempo específicos según se indica en la fecha **[!UICONTROL As of]** en la parte superior derecha de la tarjeta.
+Al seleccionar la ficha **[!UICONTROL Eficacia de los puntos de contacto]**, se carga la tarjeta **[!UICONTROL Eficacia de los puntos de contacto]**. Esta tarjeta utiliza la distribución de datos de Attribution AI para mostrar información para cada punto de contacto. Los datos de esta tabla solo se generan para períodos de tiempo específicos según se indica en la fecha **[!UICONTROL As of]** en la parte superior derecha de la tarjeta.
 
 ![selección de efectividad de touchpoint](./images/insights/Touchpoint-effectiveness.png)
 
-Puede utilizar la información de la tarjeta **[!UICONTROL Touchpoint effectiveness]** para comprender cómo un punto de contacto contribuye a una conversión. También puede ver la eficacia de cada punto de contacto con las siguientes métricas de rendimiento:
+Puede utilizar la información de tarjeta **[!UICONTROL Touchpoint effective]** para comprender cómo un touchpoint contribuye a una conversión. También puede ver la eficacia de cada punto de contacto con las siguientes métricas de rendimiento:
 
 **Las rutas tocaron**: Esta métrica muestra un porcentaje de rutas que logran o no lograr la conversión para el punto de contacto. Verá conversiones atribuidas más altas si la proporción de rutas (porcentaje) que logran la conversión en rutas que no logran la conversión es alta.
 
@@ -189,7 +188,7 @@ Un mayor volumen de puntos de contacto no garantiza una medida de mayor eficienc
 
 ## Pasos siguientes
 
-Una vez que haya terminado de filtrar los datos y pueda mostrar la información adecuada, tiene la opción de acceder a las puntuaciones. Para obtener una guía detallada sobre cómo acceder a las puntuaciones, visite el tutorial [access score in Attribution AI](./download-scores.md) . Además, también puede descargar los datos de resumen como se indica en [más acciones](#more-actions). Al seleccionar &quot;Descargar datos de resumen&quot; se descargarán los datos de resumen agregados por fechas.
+Una vez que haya terminado de filtrar los datos y pueda mostrar la información adecuada, tiene la opción de acceder a las puntuaciones. Para obtener una guía detallada sobre cómo acceder a sus puntuaciones, visite el tutorial [access score in Attribution AI](./download-scores.md) . Además, también puede descargar los datos de resumen como se indica en [más acciones](#more-actions). Al seleccionar &quot;Descargar datos de resumen&quot; se descargarán los datos de resumen agregados por fechas.
 
 ## Recursos adicionales
 

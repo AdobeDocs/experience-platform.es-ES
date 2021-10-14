@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;puntuaciones de descarga;ai del cliente;temas populares;Exportar;exportar;descarga de la interfaz del cliente;puntuaciones de la asistencia del cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Descargar puntuaciones en Customer AI
 topic-legacy: Downloading scores
 description: Customer AI permite descargar puntuaciones en el formato de archivo Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 2%
+source-wordcount: '961'
+ht-degree: 3%
 
 ---
 
@@ -28,9 +28,9 @@ Actualmente, hay dos formas de descargar puntuaciones de Customer AI:
 1. Si desea descargar las puntuaciones en el nivel individual o no tiene habilitado el Perfil del cliente en tiempo real, comience por navegar a [buscando su ID de conjunto de datos](#dataset-id).
 2. Si tiene el perfil habilitado y desea descargar segmentos configurados mediante Customer AI, vaya a [descargar un segmento configurado con Customer AI](#segment).
 
-## Busque su ID de conjunto de datos {#dataset-id}
+## Búsqueda del ID del conjunto de datos {#dataset-id}
 
-Dentro de la instancia de servicio para Customer AI insights, haga clic en el menú desplegable *More actions* en la navegación superior derecha y seleccione **[!UICONTROL Access scores]**.
+Dentro de la instancia de servicio para Customer AI insights, haga clic en el menú desplegable *More actions* en la navegación superior derecha y, a continuación, seleccione **[!UICONTROL Access score]**.
 
 ![más acciones](../images/insights/more-actions.png)
 
@@ -38,7 +38,7 @@ Aparece un nuevo cuadro de diálogo que contiene un vínculo a la documentación
 
 ![ID de conjunto de datos](../images/download-scores/access-scores.png)
 
-## Recupere su ID de lote {#retrieve-your-batch-id}
+## Recuperar el ID de lote {#retrieve-your-batch-id}
 
 Con el ID del conjunto de datos del paso anterior, debe realizar una llamada a la API del catálogo para recuperar un ID de lote. Para esta llamada de API se utilizan parámetros de consulta adicionales para devolver el último lote correcto en lugar de una lista de lotes pertenecientes a su organización. Para devolver lotes adicionales, aumente el número del parámetro de consulta limit a la cantidad deseada que desee que se devuelva. Para obtener más información sobre los tipos de parámetros de consulta disponibles, consulte la guía sobre el [filtrado de datos del catálogo utilizando parámetros de consulta](../../../catalog/api/filter-data.md).
 

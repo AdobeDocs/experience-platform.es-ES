@@ -1,17 +1,18 @@
 ---
 keywords: Experience Platform;introducción;ai del cliente;temas populares;entrada de la interfaz del cliente;salida de la interfaz del cliente;solución de problemas de la interfaz del cliente;errores de la interfaz del cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Solución de errores de Customer AI
 topic-legacy: Getting started
 description: Encuentre respuestas a errores comunes en Customer AI.
 type: Documentation
-source-git-commit: ceb203899cda83aa79b994d45798d6147c3ff3b8
+exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
 
 ---
-
 
 # Solución de errores de Customer AI
 
@@ -44,4 +45,3 @@ Si los datos no parecen ser el problema, intente cambiar la condición de poblac
 Si la restricción de la población elegible no funcionaba o no era posible, cambie la ventana de predicción.
 
 - Intente cambiar la ventana de predicción a 7 días y vea si el error sigue ocurriendo. Si el error ya no se produce, esto indica que es posible que no tenga datos suficientes para la ventana de predicción definida.
-

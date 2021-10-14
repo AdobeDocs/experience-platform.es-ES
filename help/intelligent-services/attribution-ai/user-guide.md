@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;guía del usuario;ai de atribución;temas populares;región
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Guía de la interfaz de usuario de Attribution AI
 topic-legacy: User guide
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1765'
 ht-degree: 1%
 
 ---
@@ -21,33 +20,33 @@ Este documento sirve como guía para interactuar con Attribution AI en la interf
 
 ## Crear una instancia
 
-En la interfaz de usuario de [!DNL Adobe Experience Platform], haga clic en **[!UICONTROL Services]** en el panel de navegación izquierdo. El explorador **[!UICONTROL Services]** aparece y muestra los servicios inteligentes de Adobe disponibles. En el contenedor para Attribution AI, haga clic en **[!UICONTROL Open]**.
+En la interfaz de usuario de [!DNL Adobe Experience Platform], haga clic en **[!UICONTROL Services]** en el panel de navegación izquierdo. Aparece el explorador **[!UICONTROL Services]** y muestra los servicios inteligentes de Adobe disponibles. En el contenedor para Attribution AI, haga clic en **[!UICONTROL Abrir]**.
 
 ![Acceso a la instancia](./images/user-guide/open_Attribution_ai.png)
 
 Aparecerá la página del servicio de Attribution AI. Esta página enumera las instancias de servicio de Attribution AI y muestra información sobre ellas, como el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización.
 
-Puede encontrar la métrica **[!UICONTROL Total conversion events scored]** ubicada en el lado inferior derecho del contenedor **[!UICONTROL Create instance]** . Esta métrica rastrea el número total de eventos de conversión marcados por Attribution AI para el año natural actual, incluidos todos los entornos de espacio aislado y las instancias de servicio eliminadas.
+Puede encontrar la métrica **[!UICONTROL Eventos de conversión totales clasificados]** en la parte inferior derecha del contenedor **[!UICONTROL Crear instancia]** . Esta métrica rastrea el número total de eventos de conversión marcados por Attribution AI para el año natural actual, incluidos todos los entornos de espacio aislado y las instancias de servicio eliminadas.
 
 ![](./images/user-guide/total_conversions.png)
 
-Las instancias de servicio se pueden editar, clonar y eliminar utilizando los controles del lado derecho de la interfaz de usuario. Para mostrar estos controles, seleccione una instancia de su **[!UICONTROL Service instances]** existente. Los controles contienen la siguiente información:
+Las instancias de servicio se pueden editar, clonar y eliminar utilizando los controles del lado derecho de la interfaz de usuario. Para mostrar estos controles, seleccione una instancia de las **[!UICONTROL instancias de servicio]** existentes. Los controles contienen la siguiente información:
 
-- **[!UICONTROL Edit]**: La selección de  **[!UICONTROL Edit]** permite modificar una instancia de servicio existente. Puede editar el nombre, la descripción, el estado y la frecuencia de puntuación de la instancia.
-- **[!UICONTROL Clone]**: Al seleccionar  **[!UICONTROL Clone]** se copia la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
-- **[!UICONTROL Delete]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
-- **[!UICONTROL Data source]**: Un vínculo al conjunto de datos que utiliza esta instancia.
-- **[!UICONTROL Last run details]**: Esto solo se muestra cuando falla una ejecución. Aquí se muestra información sobre por qué la ejecución falló, como códigos de error.
+- **[!UICONTROL Editar]**: La selección de  **** Editar permite modificar una instancia de servicio existente. Puede editar el nombre, la descripción, el estado y la frecuencia de puntuación de la instancia.
+- **[!UICONTROL Clonar]**: Si selecciona  **** Clonecopia la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
+- **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
+- **[!UICONTROL Fuente]** de datos: Un vínculo al conjunto de datos que utiliza esta instancia.
+- **[!UICONTROL Detalles]** de la última ejecución: Esto solo se muestra cuando falla una ejecución. Aquí se muestra información sobre por qué la ejecución falló, como códigos de error.
 
 ![](./images/user-guide/side_panel.png)
 
-- **[!UICONTROL Conversion events]**: Información general rápida sobre los eventos de conversión configurados para esta instancia.
-- **[!UICONTROL Lookback window]**: El lapso de tiempo definido que indica cuántos días antes de que se incluyan los puntos de contacto del evento de conversión.
+- **[!UICONTROL Eventos]** de conversión: Información general rápida sobre los eventos de conversión configurados para esta instancia.
+- **[!UICONTROL Ventana]** retrospectiva: El lapso de tiempo definido que indica cuántos días antes de que se incluyan los puntos de contacto del evento de conversión.
 - **[!UICONTROL Touchpoints]**: Una lista de todos los puntos de contacto definidos al crear esta instancia.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Seleccione **[!UICONTROL Create instance]** para comenzar.
+Seleccione **[!UICONTROL Crear instancia]** para comenzar.
 
 ![Crear instancia](./images/user-guide/landing_page.png)
 
@@ -57,7 +56,7 @@ A continuación, aparece la página de configuración para la Attribution AI, do
 
 ### Asigne un nombre a la instancia
 
-En **[!UICONTROL Basic information]**, proporcione un nombre y una descripción opcional para su instancia de servicio.
+En **[!UICONTROL Información básica]**, proporcione un nombre y una descripción opcional para su instancia de servicio.
 
 ![asignación de nombres a instancias](./images/user-guide/naming_instance.png)
 
@@ -75,9 +74,9 @@ Después de completar la información básica, haga clic en el menú desplegable
 
 Existen tres tipos diferentes de datos de entrada que se utilizan para definir eventos:
 
-- **Eventos de conversión:** objetivos comerciales que identifican el impacto de las actividades de marketing, como pedidos de comercio electrónico, compras en el almacén y visitas a sitios web.
+- **Conversion events:** Business objectives that identify the impact of marketing activities, such as, e-commerce orders, in-store purchases, and website visits.
 - **Ventana retrospectiva:** Proporciona un lapso de tiempo que indica cuántos días antes de que se incluyan los puntos de contacto del evento de conversión.
-- **Touchpoints:** eventos de marketing a nivel de destinatario, individuo o cookie utilizados para evaluar el impacto numérico o basado en ingresos de las conversiones.
+- **Touchpoints:** recipient, individual, and or cookie-level marketing events used to evaluate the numeric or revenue-based impact of conversions.
 
 ### Definir eventos de conversión {#define-conversion-events}
 
@@ -93,7 +92,7 @@ Una vez seleccionado un evento, aparece un nuevo menú desplegable a la derecha.
 
 ![sin lista desplegable](./images/user-guide/conversion_event_1.png)
 
-Los botones **[!UICONTROL Add event]** y **[!UICONTROL Add Group]** se utilizan para definir aún más la conversión. Según la conversión que defina, es posible que necesite utilizar los botones **[!UICONTROL Add event]** y **[!UICONTROL Add group]** para proporcionar un contexto más amplio.
+Los botones **[!UICONTROL Add event]** y **[!UICONTROL Add Group]** se utilizan para definir aún más la conversión. Depending on the conversion you are defining, you may need to use the **[!UICONTROL Add event]** and **[!UICONTROL Add group]** buttons to provide further context.
 
 ![agregar evento](./images/user-guide/add_event.png)
 
@@ -101,9 +100,9 @@ Al hacer clic en **[!UICONTROL Add event]** se crean campos adicionales que se p
 
 ![agregar menú de evento](./images/user-guide/add_event_result.png)
 
-Al hacer clic en **[!UICONTROL Add Group]** se da la opción de crear campos adicionales separados del original. Con la adición de grupos, aparece un botón azul *And*. Al hacer clic en **And** se proporciona una opción para cambiar el parámetro a contener &quot;O&quot;. &quot;O&quot; se utiliza para definir varias rutas de conversión correctas. &quot;And&quot; amplía la ruta de conversión para incluir condiciones adicionales.
+Al hacer clic en **[!UICONTROL Agregar grupo]** se da la opción de crear campos adicionales separados del original. Con la adición de grupos, aparece un botón azul *And*. Al hacer clic en **And** se proporciona una opción para cambiar el parámetro a contener &quot;O&quot;. &quot;O&quot; se utiliza para definir varias rutas de conversión correctas. &quot;And&quot; amplía la ruta de conversión para incluir condiciones adicionales.
 
-![mediante y o](./images/user-guide/and_or.png)
+![using and or](./images/user-guide/and_or.png)
 
 Si necesita más de una conversión, haga clic en **Agregar conversión** para crear una tarjeta de conversión nueva. Puede repetir el proceso anterior para definir varias conversiones.
 
@@ -159,9 +158,9 @@ Una vez que haya terminado de definir todos los puntos de contacto necesarios, d
 
 ## Configuración avanzada de capacitación y puntuación
 
-La última página de Attribution AI es la página **[!UICONTROL Advanced]** que se utiliza para configurar la formación y la puntuación.
+La última página de Attribution AI es la página **[!UICONTROL Avanzado]** que se utiliza para configurar la formación y la puntuación.
 
-![página nueva avanzada](./images/user-guide/advanced_settings.png)
+![new page advanced](./images/user-guide/advanced_settings.png)
 
 ### Programar capacitación
 
@@ -189,15 +188,15 @@ De forma predeterminada, se crea un conjunto de datos de puntuación para cada i
 
 Los comportamientos de los clientes pueden variar de forma significativa según el país y la región geográfica. Para las empresas globales, el uso de modelos basados en países o regiones puede aumentar la precisión de atribución. Cada región agregada crea un nuevo modelo con los datos de esa región.
 
-Para definir una nueva región, comience haciendo clic en **[!UICONTROL Add region]**. En el contenedor que aparece, proporcione un nombre para la región. Solo se rellena un valor (&quot;placeContext.geo.countryCode&quot;) en la lista desplegable **[!UICONTROL Enter Field Name]**. Seleccione este valor.
+To define a new region, start by clicking **[!UICONTROL Add region]**. En el contenedor que aparece, proporcione un nombre para la región. Solo se rellena un valor (&quot;placeContext.geo.countryCode&quot;) en la lista desplegable **[!UICONTROL Introducir nombre de campo]**. Seleccione este valor.
 
 ![Seleccionar región en](./images/user-guide/select_region_att.png)
 
-A continuación, seleccione un operador.
+Next, select an operator.
 
 ![operador de región](./images/user-guide/region_operators.png)
 
-Por último, escriba el código de país en la lista desplegable **[!UICONTROL Enter Field Value]**.
+Por último, escriba el código de país en la lista desplegable **[!UICONTROL Introducir valor de campo]**.
 
 >[!NOTE]
 >
@@ -205,7 +204,7 @@ Por último, escriba el código de país en la lista desplegable **[!UICONTROL E
 
 ![region](./images/user-guide/region-based.png)
 
-### Ventana de capacitación {#training-window}
+### Training window {#training-window}
 
 Para garantizar que obtiene el modelo más preciso posible, es importante entrenar el modelo con datos históricos que representen su negocio. De forma predeterminada, el modelo se forma utilizando 2 trimestres (6 meses) de datos de eventos de conversión. Seleccione la lista desplegable para cambiar el valor predeterminado. Puede optar por entrenar con entre uno y cuatro trimestres de datos (de 3 a 12 meses).
 
@@ -215,7 +214,7 @@ Para garantizar que obtiene el modelo más preciso posible, es importante entren
 
 ![ventana de formación](./images/user-guide/training_window.png)
 
-Una vez seleccionada la ventana de formación, haga clic en **[!UICONTROL Finish]** en la esquina superior derecha. Espere un tiempo para que los datos se procesen. Una vez finalizada, aparece un cuadro de diálogo de apertura que confirma que la configuración de la instancia ha finalizado. Haga clic en **[!UICONTROL Ok]** para redirigirlo a la página **[!UICONTROL Service instances]** donde podrá ver la instancia de servicio.
+Una vez seleccionada la ventana de formación, haga clic en **[!UICONTROL Finish]** en la esquina superior derecha. Espere un tiempo para que los datos se procesen. Una vez finalizada, aparece un cuadro de diálogo de apertura que confirma que la configuración de la instancia ha finalizado. Haga clic en **[!UICONTROL Ok]** para redirigirse a la página **[!UICONTROL Service instances]** donde podrá ver la instancia de servicio.
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
 

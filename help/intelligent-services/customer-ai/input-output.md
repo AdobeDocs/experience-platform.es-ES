@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform;introducción;ai del cliente;temas populares;entrada de ayuda del cliente;salida de ai del cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Entrada y salida en Customer AI
 topic-legacy: Getting started
 description: Obtenga más información sobre los eventos, entradas y salidas necesarios que utiliza Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: c534b66d7617023df8dbac57115036146c2cab01
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '2971'
 ht-degree: 1%
@@ -154,13 +155,13 @@ Es posible que se requiera cualquiera de los [tipos de evento](#standard-events)
 
 Los tipos de eventos que se enumeran a continuación son necesarios para una salida óptima de Customer AI con este objetivo de predicción en particular. Es posible excluir un evento requerido en función del objetivo de la predicción, sin embargo, si se excluyen varios eventos, los resultados pueden ser deficientes.
 
-- pedido
+- order
 - cierres de compra
 - compras
 - webVisit
 - búsqueda
 
-En este ejemplo, `order`, `checkouts` y `purchases` se utilizan para indicar que se compró una suscripción y su tipo.
+In this example, `order`, `checkouts`, and `purchases` are used to indicate that a subscription was purchased and its type.
 
 Además, para un modelo preciso, se recomienda utilizar algunas de las propiedades disponibles en el [tipo de datos de suscripción](../../xdm/data-types/subscription.md).
 
@@ -247,9 +248,9 @@ En este ejemplo, `order`, `checkouts` y `purchases` se utilizan cuando es necesa
 
 Es posible que se requiera cualquiera de los [tipos de evento](#standard-events) restantes en función de la complejidad de su objetivo y población elegible al configurar la instancia de Customer AI. Se recomienda que, si los datos están disponibles para un tipo de datos determinado, se incluyan en el esquema.
 
-### Escenario 7: Características realizadas (Adobe Audience Manager)
+### Scenario 7: Traits realized (Adobe Audience Manager)
 
-**Objetivo de predicción:** prediga la propensión a que se realicen algunos rasgos.
+**Prediction goal:** Predict the propensity for some traits to be realized.
 
 **Tipos de eventos estándar requeridos:**
 
