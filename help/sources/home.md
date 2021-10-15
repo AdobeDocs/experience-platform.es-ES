@@ -5,7 +5,7 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
+source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -117,6 +117,8 @@ Experience Platform permite la ingesta de datos desde el sistema local. Consulte
 Experience Platform permite la ingesta de datos desde un sistema de automatización de marketing de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
 - [[!DNL HubSpot] connector](connectors/marketing-automation/hubspot.md)
+- [[!DNL MailChimp Campaign]](./tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+- [[!DNL MailChimp Members]](./tutorials/api/create/marketing-automation/mailchimp-members.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Pagos
