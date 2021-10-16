@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 12%
+source-wordcount: '376'
+ht-degree: 11%
 
 ---
 
@@ -15,8 +15,21 @@ ht-degree: 12%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [Ingesta de datos](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Fuentes](#sources)
+
+## Ingesta de datos {#ingestion}
+
+La ingesta de datos de Adobe Experience Platform representa los múltiples métodos mediante los cuales Platform ingesta datos de varias fuentes, así como la forma en que se mantienen esos datos dentro del lago de datos para su uso por parte de los servicios de Platform descendente.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+|------- | -----------|
+| Actualizar o aplicar parches registros de perfil utilizando la ingesta por lotes | El perfil del cliente en tiempo real ahora permite actualizar los atributos de perfil en datos de registro de perfil individuales mediante la ingesta por lotes. Para obtener más información, consulte la [guía para desarrolladores de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md). |
+
+Para obtener más información sobre la ingesta de datos en Platform, visite la [Documentación sobre la ingesta de datos](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -38,7 +51,7 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 
 | Función | Descripción |
 | --- | --- |
-| [!DNL Data Landing Zone] | Ahora puede crear una conexión de origen [!DNL Data Landing Zone] utilizando la [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] es una interfaz de  [!DNL Azure Blob] almacenamiento de información aprovisionada por Platform, que le permite acceder a una instalación de almacenamiento de archivos segura y basada en la nube para ingerir y extraer archivos dentro y fuera de Platform. Consulte [[!DNL Data Landing Zone] overview](../../sources/connectors/cloud-storage/data-landing-zone.md) para obtener más información. |
+| [!DNL Data Landing Zone] | Ahora puede crear una conexión de origen [!DNL Data Landing Zone] utilizando la [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] es una interfaz de  [!DNL Azure Blob] almacenamiento de información aprovisionada por Platform, que le permite acceder a un servicio de almacenamiento de archivos seguro y basado en la nube para introducir archivos en Platform. Consulte [[!DNL Data Landing Zone] overview](../../sources/connectors/cloud-storage/data-landing-zone.md) para obtener más información. |
 | [!DNL Snowflake] | Ahora puede crear una conexión de origen [!DNL Snowflake] utilizando la [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/databases/snowflake.md) para llevar los datos de la base de datos [!DNL Snowflake] a Platform. Consulte [[!DNL Snowflake] overview](../../sources/connectors/databases/snowflake.md) para obtener más información. |
 | [!DNL SFTP] mejoras de la fuente | Puede establecer manualmente un número de puerto personalizado al crear una conexión de origen [!DNL SFTP]. Consulte [[!DNL SFTP] overview](../../sources/connectors/cloud-storage/sftp.md) para obtener más información. |
 
