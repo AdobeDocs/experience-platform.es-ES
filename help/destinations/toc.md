@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '645'
 ht-degree: 10%
 
 ---
@@ -53,9 +53,9 @@ ht-degree: 10%
       * [Conexión de Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Extensión de Google Ads](./catalog/advertising/google-ads-extension.md)
       * [Conexión de Google Ad Manager](./catalog/advertising/google-ad-manager.md)
-      * [Conexión de Google Customer Match](./catalog/advertising/google-customer-match.md)
-      * [Conexión de Google Display y Video 360](./catalog/advertising/google-dv360.md)
-      * [Extensión de Google Gtag](./catalog/advertising/gtag-advertising.md)
+      * [Conexión Google Customer Match](./catalog/advertising/google-customer-match.md)
+      * [Conexión de pantalla y vídeo de Google 360](./catalog/advertising/google-dv360.md)
+      * [Extensión de etiqueta de Google](./catalog/advertising/gtag-advertising.md)
       * [Extensión de la etiqueta linkedIn Insight](./catalog/advertising/linkedin.md)
       * [Conexión de Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensión de seguimiento de conversión de pinterest](./catalog/advertising/pinterest-extension.md)
@@ -92,7 +92,7 @@ ht-degree: 10%
       * [(Beta) Conexión de los centros de eventos de Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Conexión SFTP](./catalog/cloud-storage/sftp.md)
       * [LISTA DE PERMITIDOS de direcciones IP](./catalog/cloud-storage/ip-address-allow-list.md)
-   * Destinos {#data-management} de la plataforma de gestión de datos
+   * Destinos de la plataforma de gestión de datos {#data-management}
       * [Información general sobre los destinos de la plataforma de gestión de datos (DMP)](./catalog/data-management/overview.md)
       * [extensión del DIL del Audience Manager](./catalog/data-management/aam-dil-extension.md)
    * Destinos de correo electrónico {#email}
@@ -137,7 +137,7 @@ ht-degree: 10%
       * [Extensión InMoment](./catalog/survey/inmoment.md)
       * [Extensión de comentarios del sitio web de Qualtrics](./catalog/survey/qualtrics.md)
       * [Extensión de los estudios de interceptación de QuestionPro](./catalog/survey/web-intercept-surveys.md)
-   * Voz de los destinos de cliente {#voice}
+   * Voz de los destinos del cliente {#voice}
       * [Descripción general de los destinos de la voz del cliente](./catalog/voice/overview.md)
       * [Confirmar extensión de comentarios digitales](./catalog/voice/confirmit-digital-feedback.md)
       * [Extensión de etiquetas de Invoca](./catalog/voice/invoca.md)
@@ -170,7 +170,7 @@ ht-degree: 10%
          * [Operaciones de API de prueba de destino](./destination-sdk/destination-testing-api.md)
          * [Ejemplos de operaciones de API de generación de perfiles](./destination-sdk/sample-profile-generation-api.md)
    * Guías {#guides}
-      * [Utilice el SDK de destino para configurar su destino](./destination-sdk/configure-destination-instructions.md)
+      * [Usar el SDK de destino para configurar un destino de flujo continuo](./destination-sdk/configure-destination-instructions.md)
    * Documentar el destino {#document-destination}
       * [Documentar el destino en Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Utilice la interfaz web de GitHub para crear una página de documentación de destino](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
