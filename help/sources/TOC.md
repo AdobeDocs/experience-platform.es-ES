@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '644'
 ht-degree: 14%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 14%
 
 - [Información general sobre conectores de origen](home.md)
 - Conectores de origen disponibles {#connectors}
-   - Aplicaciones de Adobe {#adobe-applications}
+   - aplicaciones de Adobe {#adobe-applications}
       - [Conector de origen de las clasificaciones de Analytics](connectors/adobe-applications/classifications.md)
       - [Conector de origen de Analytics](connectors/adobe-applications/analytics.md)
       - [Conector de origen del Audience Manager](connectors/adobe-applications/audience-manager.md)
@@ -87,7 +87,7 @@ ht-degree: 14%
    - Transmisión {#streaming}
       - [Conector de API HTTP](connectors/streaming/http.md)
 - Tutoriales de API {#api-tutorials}
-   - Crear una conexión base {#create}
+   - Creación de una conexión base {#create}
       - Publicidad {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Almacenamiento en la nube {#cloud-storage}
@@ -130,7 +130,7 @@ ht-degree: 14%
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - eCommerce {#ecommerce}
+      - comercio electrónico {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Automatización de marketing {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
@@ -153,7 +153,7 @@ ht-degree: 14%
       - [Explorar datos de automatización de marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorar datos de pago](tutorials/api/explore/payments.md)
       - [Explorar datos de protocolo](tutorials/api/explore/protocols.md)
-   - Recopilar datos {#collect}
+   - Recopilación de datos {#collect}
       - [Recopilación de datos publicitarios](tutorials/api/collect/advertising.md)
       - [Recopilar datos de almacenamiento en la nube](tutorials/api/collect/cloud-storage.md)
       - [Recopilar datos CRM](tutorials/api/collect/crm.md)
@@ -164,16 +164,14 @@ ht-degree: 14%
       - [Recopilar datos de pago](tutorials/api/collect/payments.md)
       - [Recopilación de datos de protocolo](tutorials/api/collect/protocols.md)
       - [Recopilación de datos de flujo continuo](tutorials/api/collect/streaming.md)
-   - [Ingesta de datos de parquet desde un sistema de almacenamiento en la nube de terceros](tutorials/api/cloud-storage-parquet.md)
-   - [Creación de una conexión de conjunto de datos](tutorials/api/create-dataset-base-connection.md)
    - [Monitorizar flujos de datos](tutorials/api/monitor.md)
    - [Actualizar cuentas](tutorials/api/update.md)
    - [Actualizar flujos de datos](tutorials/api/update-dataflows.md)
    - [Eliminar cuentas](tutorials/api/delete.md)
    - [Eliminar flujos de datos](tutorials/api/delete-dataflows.md)
-- Tutoriales de interfaz de usuario {#ui-tutorials}
+- Tutoriales de la interfaz de usuario {#ui-tutorials}
    - Crear una conexión de origen {#create}
-      - Aplicaciones de Adobe {#adobe-applications}
+      - aplicaciones de Adobe {#adobe-applications}
          - [Adobe Analytics (datos de grupos de informes)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (datos de clasificaciones)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -222,7 +220,7 @@ ht-degree: 14%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
-      - eCommerce {#ecommerce}
+      - comercio electrónico {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Sistema local {#local-system}
          - [Carga de archivo local](tutorials/ui/create/local-system/local-file-upload.md)
@@ -235,7 +233,7 @@ ht-degree: 14%
          - [OData genérico](tutorials/ui/create/protocols/odata.md)
       - Transmisión {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
-   - Configurar un flujo de datos {#dataflow}
+   - Configuración de un flujo de datos {#dataflow}
       - [Flujo de datos de conexión publicitaria](tutorials/ui/dataflow/advertising.md)
       - [Flujo de datos de conexión de almacenamiento en la nube por lotes](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Flujo de datos de conexión de almacenamiento en la nube de transmisión](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

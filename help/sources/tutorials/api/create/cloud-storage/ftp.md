@@ -6,41 +6,41 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor FTP (Protocolo de transferencia de archivos) mediante la API de servicio de flujo.
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '476'
 ht-degree: 2%
 
 ---
 
-# Creación de una conexión base FTP mediante la API [!DNL Flow Service]
+# Cree una conexión base FTP usando la variable [!DNL Flow Service] API
 
 >[!NOTE]
 >
->El conector FTP está en versión beta. Las funciones y la documentación están sujetas a cambios. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+>El conector FTP está en versión beta. Las funciones y la documentación están sujetas a cambios. Consulte la [Resumen de fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial le guía por los pasos para crear una conexión base para [!DNL FTP] (Protocolo de transferencia de archivos) mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial le guía por los pasos para crear una conexión base para [!DNL FTP] (Protocolo de transferencia de archivos) que utiliza la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
-* [Simuladores para pruebas](../../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que debe conocer para conectarse correctamente a un servidor [!DNL FTP] mediante la API [!DNL Flow Service].
+Las secciones siguientes proporcionan información adicional que debe conocer para conectarse correctamente a un [!DNL FTP] servidor que utiliza la variable [!DNL Flow Service] API.
 
 ### Recopilar las credenciales necesarias
 
-Para que [!DNL Flow Service] se conecte a [!DNL FTP], debe proporcionar valores para las siguientes propiedades de conexión:
+Para [!DNL Flow Service] para conectarse a [!DNL FTP], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `host` | El nombre o la dirección IP asociados con su servidor [!DNL FTP]. |
-| `username` | El nombre de usuario con acceso a su servidor [!DNL FTP]. |
-| `password` | La contraseña de su servidor [!DNL FTP]. |
+| `host` | El nombre o la dirección IP asociados con su [!DNL FTP] servidor. |
+| `username` | El nombre de usuario con acceso a su [!DNL FTP] servidor. |
+| `password` | La contraseña de su [!DNL FTP] servidor. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL FTP] es: `fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
 
 ### Uso de las API de plataforma
@@ -51,7 +51,7 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 
 Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL FTP] como parte de los parámetros de solicitud.
+Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar su [!DNL FTP] credenciales de autenticación como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -109,4 +109,4 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión r
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión FTP utilizando la API [!DNL Flow Service] y ha obtenido el valor de ID exclusivo de la conexión. Puede utilizar este ID de conexión para [explorar las tiendas en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md) o [incorporar datos de parqué mediante la API de servicio de flujo](../../cloud-storage-parquet.md).
+Siguiendo este tutorial, ha creado una conexión FTP utilizando la variable [!DNL Flow Service] y han obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión para [explorar las tiendas en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md).
