@@ -5,10 +5,10 @@ title: 'Segmentación de Edge con la API '
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación perimetral con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: c89971668839555347e9b84c7c0a4ff54a394c1a
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 4%
+source-wordcount: '917'
+ht-degree: 2%
 
 ---
 
@@ -16,17 +16,17 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->El siguiente documento indica cómo realizar la segmentación perimetral mediante la API. Para obtener información sobre cómo realizar la segmentación perimetral mediante la interfaz de usuario, lea la [guía de la interfaz de segmentación de Edge](../ui/edge-segmentation.md). Además, la segmentación de Edge se encuentra actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
+>El siguiente documento indica cómo realizar la segmentación perimetral mediante la API. Para obtener información sobre la realización de segmentación de Edge mediante la interfaz de usuario, lea la [guía de la interfaz de usuario de segmentación de Edge](../ui/edge-segmentation.md). Además, la segmentación de Edge se encuentra actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
 La segmentación de Edge es la capacidad de evaluar segmentos en Adobe Experience Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 
 ## Primeros pasos
 
-Esta guía para desarrolladores requiere una comprensión práctica de los diversos servicios [!DNL Adobe Experience Platform] que intervienen en la segmentación de Edge. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Esta guía para desarrolladores requiere una comprensión práctica de las distintas [!DNL Adobe Experience Platform] servicios relacionados con la segmentación de Edge. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
-- [[!DNL Segmentation]](../home.md): Proporciona la capacidad de crear segmentos y audiencias a partir de los  [!DNL Real-time Customer Profile] datos.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia del cliente.
+- [[!DNL Segmentation]](../home.md): Proporciona la capacidad de crear segmentos y audiencias a partir de [!DNL Real-time Customer Profile] datos.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Para realizar llamadas correctamente a cualquier extremo de API de Experience Platform, lea la guía de [introducción a las API de Platform](../../landing/api-guide.md) para obtener más información sobre los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
@@ -34,28 +34,25 @@ Para realizar llamadas correctamente a cualquier extremo de API de Experience Pl
 
 Para que un segmento se evalúe mediante segmentación de Edge, la consulta debe cumplir las siguientes directrices:
 
-| Tipo de consulta | Detalles |
-| ---------- | ------- |
-| Visita entrante | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. |
-| Visita entrante que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. |
-| Visita entrante con un periodo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a un solo evento entrante en un plazo de 24 horas. |
-| Visita entrante que hace referencia a un perfil con un periodo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a un solo evento entrante en un plazo de 24 horas y uno o más atributos de perfil |
-
-{style=&quot;table-layout:auto&quot;}
-
-Los siguientes tipos de consulta son **no** compatibles actualmente con la segmentación de Edge:
-
-| Tipo de consulta | Detalles |
-| ---------- | ------- |
-| Varios eventos | Si una consulta contiene más de un evento, no se puede evaluar mediante la segmentación perimetral. |
-| Consulta de frecuencia | Cualquier definición de segmento que haga referencia a un evento que se produzca al menos un determinado número de veces. |
-| Consulta de frecuencia que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un evento que se produzca al menos un determinado número de veces y que tenga uno o más atributos de perfil. |
+| Tipo de consulta | Detalles | Ejemplo |
+| ---------- | ------- | ------- |
+| Un solo evento | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. | Personas que han agregado un elemento al carro de compras. |
+| Un solo evento que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a uno o más atributos de perfil y a un solo evento entrante sin restricciones de tiempo. | Personas que viven en Estados Unidos que visitaron la página principal. |
+| Se ha anulado un evento único con un atributo de perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante denegado y a uno o más atributos de perfil | Personas que viven en Estados Unidos y que tienen **not** visité la página principal. |
+| Un solo evento dentro de un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a un solo evento entrante en un plazo de 24 horas. | Personas que visitaron la página principal en las últimas 24 horas. |
+| Un evento único con un atributo de perfil con un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a uno o más atributos de perfil y a un evento entrante único denegado en un plazo de 24 horas. | Personas que viven en Estados Unidos que visitaron la página principal en las últimas 24 horas. |
+| Se ha anulado un evento único con un atributo de perfil en un periodo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a uno o más atributos de perfil y a un evento entrante único denegado en un plazo de 24 horas. | Personas que viven en Estados Unidos y que tienen **not** visité la página principal en las últimas 24 horas. |
+| Evento de frecuencia dentro de un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a un evento que se produce un determinado número de veces dentro de un intervalo de tiempo de 24 horas. | Personas que visitaron la página principal **al menos** cinco veces en las últimas 24 horas. |
+| Evento de frecuencia con un atributo de perfil dentro de un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a uno o más atributos de perfil y a un evento que se produce un determinado número de veces dentro de un intervalo de tiempo de 24 horas. | Personas de los Estados Unidos que visitaron la página principal **al menos** cinco veces en las últimas 24 horas. |
+| Evento de frecuencia anulado con un perfil dentro de un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a uno o más atributos de perfil y a un evento rechazado que tenga lugar un determinado número de veces dentro de un intervalo de tiempo de 24 horas. | Personas que no han visitado la página principal **more** más de cinco veces en las últimas 24 horas. |
+| Varias visitas entrantes dentro de un perfil de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a varios eventos que se producen dentro de un intervalo de tiempo de 24 horas. | Personas que visitaron la página principal **o** visité la página de cierre de compra en las últimas 24 horas. |
+| Varios eventos con un perfil dentro de un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a uno o más atributos de perfil y a varios eventos que se producen en un periodo de tiempo de 24 horas. | Personas de los Estados Unidos que visitaron la página principal **y** visité la página de cierre de compra en las últimas 24 horas. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Recuperar todos los segmentos habilitados para la segmentación de aristas
 
-Puede recuperar una lista de todos los segmentos habilitados para la segmentación de Edge dentro de su organización IMS realizando una solicitud de GET al extremo `/segment/definitions` .
+Puede recuperar una lista de todos los segmentos habilitados para la segmentación de Edge dentro de su organización de IMS realizando una solicitud de GET al `/segment/definitions` punto final.
 
 **Formato de API**
 
@@ -78,7 +75,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de segmentos en su organización de IMS que están habilitados para la segmentación de Edge. Puede encontrar información más detallada sobre la definición de segmento devuelta en la [guía de extremo de definiciones de segmento](./segment-definitions.md).
+Una respuesta correcta devuelve una matriz de segmentos en su organización de IMS que están habilitados para la segmentación de Edge. Encontrará información más detallada sobre la definición de segmento devuelta en la [guía de extremo de definiciones de segmentos](./segment-definitions.md).
 
 ```json
 {
@@ -167,7 +164,7 @@ Una respuesta correcta devuelve una matriz de segmentos en su organización de I
 
 ## Crear un segmento que esté habilitado para la segmentación perimetral
 
-Puede crear un segmento que esté habilitado para la segmentación perimetral realizando una solicitud de POST al extremo `/segment/definitions` que coincida con uno de los tipos de consulta de segmentación [edge enumerados arriba](#query-types).
+Puede crear un segmento que esté habilitado para la segmentación perimetral realizando una solicitud de POST al `/segment/definitions` punto final que coincida con uno de los [tipos de consulta de segmentación de aristas enumerados arriba](#query-types).
 
 **Formato de API**
 
@@ -179,7 +176,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->El ejemplo siguiente es una solicitud estándar para crear un segmento. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre la [creación de un segmento](../tutorials/create-a-segment.md).
+>El ejemplo siguiente es una solicitud estándar para crear un segmento. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre [creación de segmentos](../tutorials/create-a-segment.md).
 
 ```shell
 curl -X POST \
@@ -250,4 +247,4 @@ Una respuesta correcta devuelve los detalles de la definición de segmento reci�
 
 Ahora que sabe cómo crear segmentos con segmentación perimetral habilitada, puede utilizarlos para habilitar casos de uso de personalización de la misma página y de la siguiente página.
 
-Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la [guía del usuario del Generador de segmentos](../ui/segment-builder.md).
+Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la [Guía del usuario del Generador de segmentos](../ui/segment-builder.md).
