@@ -1,10 +1,11 @@
 ---
 title: Relaciones en la API de Reactor
 description: Descubra cómo se establecen las relaciones de recursos en la API de Reactor, incluidos los requisitos de relación para cada recurso.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 10%
+source-wordcount: '807'
+ht-degree: 99%
 
 ---
 
@@ -14,19 +15,19 @@ Los recursos de la API de Reactor suelen estar relacionados entre sí. Este docu
 
 Según el tipo de recurso en cuestión, se requieren algunas relaciones. Una relación necesaria implica que el recurso principal no puede existir sin la relación. Todas las demás relaciones son opcionales.
 
-Independientemente de si son necesarias o opcionales, el sistema establece automáticamente las relaciones cuando se crean los recursos relevantes o deben crearse manualmente. En el caso de la creación manual de relaciones, hay dos métodos posibles en función del recurso en cuestión:
+Independientemente de si son necesarias u opcionales, el sistema establece automáticamente las relaciones cuando se crean los recursos relevantes, o deben crearse manualmente. En el caso de la creación manual de relaciones, hay dos métodos posibles en función del recurso en cuestión:
 
 * [Crear por carga útil](#payload)
-* [Crear por dirección URL](#url)  (solo para bibliotecas)
+* [Crear por dirección URL](#url) (solo para bibliotecas)
 
-Consulte la sección sobre [requisitos de relación](#requirements) para obtener una lista de las relaciones compatibles con cada tipo de recurso y los métodos necesarios para establecer esas relaciones cuando corresponda.
+Consulte la sección sobre [requisitos de relación](#requirements) para obtener una lista de las relaciones compatibles con cada tipo de recurso y los métodos necesarios para establecerlas cuando corresponda.
 
-## Crear una relación por carga útil {#payload}
+## Creación de una relación por carga útil {#payload}
 
 Algunas relaciones deben establecerse manualmente al crear inicialmente un recurso. Para ello, debe proporcionar un objeto `relationship` en la carga útil de la solicitud cuando cree el recurso principal por primera vez. Algunos ejemplos de estas relaciones son:
 
-* [Creación de un ](../endpoints/data-elements.md#create) elemento de datos con las extensiones requeridas
-* [Creación de un ](../endpoints/environments.md#create) entorno con la relación de host necesaria
+* [Creación de un elemento de datos](../endpoints/data-elements.md#create) con las extensiones requeridas
+* [Creación de un entorno](../endpoints/environments.md#create) con la relación de host necesaria
 
 **Formato de API**
 
@@ -36,14 +37,14 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{PROPERTY_ID}` | ID de la propiedad a la que pertenece el recurso. |
-| `{RESOURCE_TYPE}` | Tipo de recurso que se va a crear. |
+| `{PROPERTY_ID}` | El ID de la propiedad a la que pertenece el recurso. |
+| `{RESOURCE_TYPE}` | El tipo de recurso que se va a crear. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo `rule_component`, estableciendo relaciones con `rules` y un `extension`.
+La siguiente solicitud crea un nuevo `rule_component`, y establece relaciones con `rules` y una `extension`.
 
 ```shell
 curl -X POST \
@@ -84,17 +85,17 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `relationships` | Un objeto que debe proporcionarse al crear relaciones mediante carga útil. Cada clave de este objeto representa un tipo de relación específico. En el ejemplo anterior, se establecen las relaciones `extension` y `rules`, que son específicas de `rule_components`. Para obtener más información sobre los tipos de relación compatibles con distintos recursos, consulte la sección sobre [requisitos de relación por recurso](#relationship-requirements-by-resource). |
-| `data` | Cada tipo de relación proporcionado en el objeto `relationship` debe contener una propiedad `data`, que hace referencia a `id` y `type` del recurso con el que se está estableciendo una relación. Puede crear una relación con varios recursos del mismo tipo dando formato a la propiedad `data` como una matriz de objetos, cada uno de los cuales contiene `id` y `type` de un recurso aplicable. |
-| `id` | ID exclusivo de un recurso. Cada `id` debe ir acompañado de una propiedad `type` del mismo nivel, que indique el tipo de recurso en cuestión. |
+| `data` | Cada tipo de relación proporcionado en el objeto `relationship` debe contener una propiedad `data`, que hace referencia a `id` y `type` del recurso con el que se establece una relación. Puede crear una relación con varios recursos del mismo tipo dando formato a la propiedad `data` como una matriz de objetos, cada uno de los cuales contiene `id` y `type` de un recurso aplicable. |
+| `id` | El ID único de un recurso. Cada `id` debe acompañarse de una propiedad `type` del mismo nivel, que indique el tipo de recurso en cuestión. |
 | `type` | El tipo de recurso al que hace referencia un campo `id` del mismo nivel. Los valores aceptados incluyen `data_elements`, `rules`, `extensions` y `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Crear una relación por dirección URL {#url}
+## Creación de una relación por dirección URL {#url}
 
-A diferencia de otros recursos, las bibliotecas establecen relaciones a través de sus propios `/relationship` extremos dedicados. Algunos ejemplos son:
+A diferencia de otros recursos, las bibliotecas establecen relaciones a través de sus propios extremos de `/relationship` dedicados. Algunos ejemplos son:
 
-* [Añadir extensiones, elementos de datos y reglas a una biblioteca](../endpoints/libraries.md#add-resources)
+* [Adición de extensiones, elementos de datos y reglas a una biblioteca](../endpoints/libraries.md#add-resources)
 * [Asignación de una biblioteca a un entorno](../endpoints/libraries.md#environment)
 
 **Formato de API**
@@ -105,9 +106,9 @@ POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TY
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{PROPERTY_ID}` | ID de la propiedad a la que pertenece la biblioteca. |
+| `{PROPERTY_ID}` | El ID de la propiedad a la que pertenece la biblioteca. |
 | `{LIBRARY_ID}` | El ID de la biblioteca para la que desea crear una relación. |
-| `{RESOURCE_TYPE}` | Tipo de recurso al que se dirige la relación. Los valores disponibles incluyen `environment`, `data_elements`, `extensions` y `rules`. |
+| `{RESOURCE_TYPE}` | El tipo de recurso al que se dirige la relación. Los valores de ejemplo incluyen `environment`, `data_elements`, `extensions` y `rules`. |
 
 **Solicitud**
 
@@ -132,12 +133,12 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `data` | Un objeto que hace referencia a `id` y `type` del recurso de destino para la relación. Si está creando una relación con varios recursos del mismo tipo (como `extensions` y `rules`), la propiedad `data` debe tener el formato de una matriz de objetos, cada uno de los cuales contenga las propiedades `id` y `type` de un recurso aplicable. |
-| `id` | ID exclusivo de un recurso. Cada `id` debe ir acompañado de una propiedad `type` del mismo nivel, que indique el tipo de recurso en cuestión. |
+| `id` | El ID único de un recurso. Cada `id` debe acompañarse de una propiedad `type` del mismo nivel, que indique el tipo de recurso en cuestión. |
 | `type` | El tipo de recurso al que hace referencia un campo `id` del mismo nivel. Los valores aceptados incluyen `data_elements`, `rules`, `extensions` y `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Necesidades de relación por recurso {#requirements}
+## Requisitos de relación por recurso {#requirements}
 
 En las tablas siguientes se describen las relaciones disponibles para cada tipo de recurso, independientemente de si se requieren o no esas relaciones, y el método aceptado para crear manualmente la relación cuando corresponda.
 
@@ -294,3 +295,11 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | `property` | ✓ |  |  |
 | `origin` | ✓ |  |  |
 | `rule_components` |  |  |  |
+
+### Secretos
+
+| Relación | Requerido | Crear por carga útil | Crear por dirección URL |
+| :--- | :---: | :---: | :---: |
+| `property` | ✓ |  | ✓ |
+| `environment` | ✓ | ✓ |  |
+

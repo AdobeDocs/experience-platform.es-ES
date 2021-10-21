@@ -4,10 +4,10 @@ user-guide-title: Ayuda de etiquetas
 breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 88%
+source-wordcount: '380'
+ht-degree: 87%
 
 ---
 
@@ -86,7 +86,7 @@ ht-degree: 88%
          * [Información general](./extensions/web/sdk/overview.md)
       * Conector de Adobe Experience Platform Cloud {#cloud-connector}
          * [Información general](./extensions/web/cloud-connector/overview.md)
-      * Información sobre Adobe Experience Manager Asset Insights {#asset-insights}
+      * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Información general](./extensions/web/asset-insights/overview.md)
          * [Notas de la versión](./extensions/web/asset-insights/release-notes.md)
       * Adobe Medium Analytics para audio y vídeo {#media-analytics}
@@ -113,7 +113,7 @@ ht-degree: 88%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Información general](./extensions/web/marketo/overview.md)
          * [Notas de la versión](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] seguimiento de vídeo  {#brightcove}
+      * [!DNL BrightCove] seguimiento de vídeo {#brightcove}
          * [Información general](./extensions/web/brightcove/overview.md)
          * [Notas de la versión](./extensions/web/brightcove/release-notes.md)
       * Extensión de seguimiento de vídeos de [!DNL YouTube] {#youtube}
@@ -175,6 +175,7 @@ ht-degree: 88%
       * [Notas](./api/endpoints/notes.md)
       * [Perfil](./api/endpoints/profile.md)
       * [Buscar](./api/endpoints/search.md)
+      * [Secretos](./api/endpoints/secrets.md)
    * Guías {#guides}
       * [Delegación de ID de descriptor](./api/guides/delegate-descriptor-ids.md)
       * [Cifrado de valores](./api/guides/encrypting-values.md)
@@ -184,6 +185,7 @@ ht-degree: 88%
       * [Clasificación de respuestas](./api/guides/sorting.md)
       * [Relaciones](./api/guides/relationships.md)
       * [Búsqueda de recursos](./api/guides/search.md)
+      * [Secretos](./api/guides/secrets.md)
 * [Preguntas frecuentes](./faq.md)
 * [Actualizaciones terminológicas](./term-updates.md)
 * Notas de la versión {#release-notes}

@@ -1,10 +1,11 @@
 ---
 title: Extremo de las notas
 description: Aprenda a realizar llamadas al extremo /notes en la API de Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 99%
+source-wordcount: '527'
+ht-degree: 98%
 
 ---
 
@@ -28,6 +29,7 @@ Las notas se pueden aplicar a los siguientes recursos:
 * [Propiedades](./properties.md)
 * [Regla componentes](./rule-components.md)
 * [Reglas](./rules.md)
+* [Secretos](./secrets.md)
 
 Estos seis tipos se conocen colectivamente como recursos “anotables”. Cuando se elimina un recurso anotable, también se eliminan sus notas asociadas.
 

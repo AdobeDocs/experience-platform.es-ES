@@ -1,10 +1,11 @@
 ---
 title: Guía de la API de Reactor
 description: La API de Reactor permite a los desarrolladores administrar mediante programación todos los recursos para etiquetas en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 153eab11-db08-499e-80d1-c56f254372ce
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 99%
+source-wordcount: '1082'
+ht-degree: 95%
 
 ---
 
@@ -113,6 +114,10 @@ Consulte la [guía de extremo de perfil](./endpoints/profile.md) para obtener in
 ## Buscar
 
 El extremo `/search` proporciona una forma de encontrar recursos que coincidan con un criterio deseado, expresado como consulta. Todas las consultas están enfocadas a su compañía y propiedades accesibles actuales. Consulte la [guía de extremo de búsqueda](./endpoints/search.md) para conocer cómo utilizar esta funcionalidad.
+
+## Secretos
+
+Un secreto contiene credenciales que permiten que el reenvío de eventos se autentique en otro sistema para el intercambio seguro de datos. Consulte la [guía de secretos](./guides/secrets.md) para obtener información general sobre cómo funcionan los secretos en el reenvío de eventos, y la variable [guía de extremo secret](./endpoints/secrets.md) para aprender a administrarlas en la API de Reactor.
 
 ## Pasos siguientes
 
