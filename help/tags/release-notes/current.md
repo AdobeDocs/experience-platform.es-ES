@@ -1,10 +1,11 @@
 ---
 title: Notas de la versión
-description: Últimas notas de la versión para etiquetas en Adobe Experience Platform.
-source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
+description: Las notas de la versión más recientes para etiquetas de Adobe Experience Platform.
+exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
+source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 54%
+source-wordcount: '578'
+ht-degree: 68%
 
 ---
 
@@ -14,9 +15,19 @@ ht-degree: 54%
 >
 >Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
+## 21 de octubre de 2021
+
+**Enviar datos a puntos de conexión autenticados en el reenvío de eventos** - Utilizando secretos, puede enviar datos a puntos finales que requieran los siguientes protocolos de autenticación:
+
+* **[!UICONTROL Token]**: Una cadena única de caracteres que representan un valor de token de autenticación.
+* **[!UICONTROL HTTP simple]**: Contiene dos atributos de cadena para un nombre de usuario y una contraseña.
+* **[!UICONTROL OAuth2]**: Contiene varios atributos para admitir la variable [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) especificación.
+
+Para obtener más información, consulte las guías de [administración de secretos en la interfaz de usuario de recopilación de datos](../ui/event-forwarding/secrets.md) o [administración de secretos en la API de Reactor](../api/guides/secrets.md).
+
 ## 19 de julio de 2021
 
-**Ajustes en el derecho &quot;Administrar propiedades&quot;** : el derecho Administrar propiedades encontró un problema en el que un usuario tenía el permiso para crear una nueva propiedad, pero no podía verla después de crearla (como se describe en el hilo de la comunidad  [aquí](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). Una corrección ya está activa y los permisos se aplican tal como se describe en el artículo.
+**Ajustes a la derecha &quot;Administrar propiedades&quot;** - El derecho de gestión de propiedades encontró un problema en el que un usuario tenía el permiso para crear una nueva propiedad, pero no podía verla después de crearla (como se describe en el subproceso de comunidad) [here](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). Una corrección ya está activa y los permisos se aplican tal como se describe en el artículo.
 
 >[!NOTE]
 >
@@ -32,9 +43,9 @@ ht-degree: 54%
 
 ## 22 de abril de 2021
 
-**Recopilación de datos en Adobe Experience Platform** : el envío de datos a Adobe no se trata solo de implementar etiquetas en el sitio o de configurar en la aplicación.  El uso de los SDK de Experience Platform y de la red perimetral requiere acceso a otras funcionalidades de Platform. Esto requería iniciar sesión en varias herramientas diferentes, pero ahora están juntas en un solo lugar.
+**Recopilación de datos de Adobe Experience Platform**: El envío de datos a Adobe no se trata solo de implementar etiquetas en el sitio o de configurar en la aplicación.  El uso de los SDK de Experience Platform y de la red perimetral requiere acceso a otras funcionalidades de Platform. Esto requería iniciar sesión en varias herramientas diferentes, pero ahora están juntas en un solo lugar.
 
-La recopilación de datos en Platform consta de seis funciones y la navegación recién optimizada solo contendrá los elementos a los que tienen acceso su empresa y su cuenta de usuario.  Algunos de los nombres de las capacidades también se han actualizado para que coincidan con los patrones de nomenclatura de Experience Platform.
+La recopilación de datos en Platform consta de seis funciones, y la navegación recién optimizada solo contendrá los elementos a los que tienen acceso su compañía y su cuenta de usuario.  Algunos de los nombres de las capacidades también se han actualizado para que coincidan con los patrones de nomenclatura de Experience Platform.
 
 * Cliente (anteriormente conocido como &quot;lado del cliente&quot;)
 * Datastreams (anteriormente conocido como &quot;Configuración de Edge&quot;)
@@ -47,12 +58,12 @@ Esperamos recibir más actualizaciones a medida que Experience Platform y la rec
 
 ## 18 de febrero de 2021
 
-* Se ha actualizado la interfaz de usuario de recopilación de datos para la versión 3 del espectro de reacción
+* Se ha actualizado la interfaz de usuario de Recopilación de datos a react-spectrum v3
 * Se han actualizado las tarjetas de extensión a los últimos patrones de espectro
 * Se ha aumentado el tamaño de los campos de nombre en toda la aplicación
 
 ## 13 de enero de 2021
 
-**Disponibilidad general: Reenvío de** eventosEnvíe datos de nivel de evento a la red perimetral de Adobe Experience Platform y, a continuación, utilice el reenvío de eventos para transformar, enriquecer y enviar esos datos a un extremo que no sea de Adobe mediante los servidores de Adobe, no el cliente, con baja latencia.
+**Disponibilidad general: Reenvío de eventos** Envíe datos de nivel de evento a Adobe Experience Platform Edge Network y, a continuación, utilice el reenvío de eventos para transformar, enriquecer y enviar dichos datos a un punto final que no sea de Adobe mediante los servidores de Adobe, no del cliente, con baja latencia.
 
-Consulte la [descripción general del reenvío de eventos](../ui/event-forwarding/overview.md) y [guía de introducción](../ui/event-forwarding/getting-started.md) para obtener más información.
+Consulte la [información general sobre el reenvío de eventos](../ui/event-forwarding/overview.md) y [guía de introducción](../ui/event-forwarding/getting-started.md) para obtener más información.
