@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d65bcf62f0de29dc293a1a1313178a408613a024
+source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1691'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Para trabajar con definiciones de segmentos es necesario comprender las distinta
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] permite dividir los datos almacenados en [!DNL Experience Platform] que se relaciona con individuos (como clientes, posibles clientes, usuarios u organizaciones) en grupos más pequeños.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permite la creación de perfiles de clientes al unir identidades de fuentes de datos dispares que se están incorporando en [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que los datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 
 También es importante conocer dos términos clave que se utilizan en este documento y comprender la diferencia entre ellos:
 - **Definición del segmento**: Conjunto de reglas utilizado para describir características o comportamientos clave de una audiencia objetivo.
