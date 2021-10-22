@@ -1,10 +1,10 @@
 ---
 title: Guía de API del Privacy Service
 description: Aprenda a utilizar la API de Privacy Service para administrar mediante programación los trabajos de privacidad de aplicaciones de Adobe Experience Cloud compatibles.
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
 workflow-type: tm+mt
 source-wordcount: '265'
-ht-degree: 13%
+ht-degree: 3%
 
 ---
 
@@ -30,4 +30,4 @@ Algunas regulaciones requieren el consentimiento explícito del cliente antes de
 
 ## Pasos siguientes
 
-Para empezar a realizar llamadas mediante la API de Registro de esquemas, lea la [guía de introducción](./getting-started.md) y, a continuación, seleccione una de las guías de extremos para aprender a utilizar extremos específicos.
+Para empezar a realizar llamadas mediante la API del Privacy Service, lea la [guía de introducción](./getting-started.md) a continuación, seleccione una de las guías de punto final para aprender a utilizar puntos finales específicos.
