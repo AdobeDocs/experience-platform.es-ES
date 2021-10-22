@@ -5,10 +5,9 @@ title: Gestión de formatos de datos con la preparación de datos
 topic-legacy: overview
 description: Este documento ofrece información general sobre cómo se gestionan los distintos tipos de datos en la preparación de datos.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 13%
 
 ---
@@ -17,13 +16,13 @@ ht-degree: 13%
 
 La preparación de datos puede gestionar de forma fiable diferentes formatos de datos introducidos en Adobe Experience Platform. Este documento describe cómo se tratan los diferentes formatos de datos con la preparación de datos.
 
-## Booleanos {#booleans}
+## Booleano {#booleans}
 
 Si el tipo de origen es una cadena y el tipo de destino es booleano, la preparación de datos puede analizar automáticamente el valor y convertir el valor de origen en booleano.
 
-Los valores `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true` y `TRUE` se analizan automáticamente como `true`.
+Los valores `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true`y `TRUE` se analizan automáticamente para `true`.
 
-Los valores `n`, `N`, `no`, `NO`, `off`, `OFF`, `false` y `FALSE` se analizan automáticamente como `false`.
+Los valores `n`, `N`, `no`, `NO`, `off`, `OFF`, `false`y `FALSE` se analizan automáticamente para `false`.
 
 ## Fechas {#dates}
 
@@ -33,7 +32,7 @@ La preparación de datos admite funciones de fecha, tanto como cadenas como obje
 
 La función date convierte cadenas y objetos datetime para que se conviertan en un objeto ZonianDateTime con formato ISO 8601.
 
-**Format**
+**Formato**
 
 ```http
 date({DATE}, {FORMAT}, {DEFAULT_DATE})
@@ -42,10 +41,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{DATE}` | Requerido. La cadena que representa la fecha. |
-| `{FORMAT}` | Opcional. La cadena que representa el formato de la fecha. Puede encontrar más información sobre el formato de cadena en la sección [cadena de formato de fecha y hora](#format). |
+| `{FORMAT}` | Opcional. La cadena que representa el formato de la fecha de origen. Encontrará más información sobre el formato de cadena en la [sección de cadena de formato de fecha y hora](#format). |
 | `{DEFAULT_DATE}` | Opcional. La fecha predeterminada que se devolverá si la fecha proporcionada es nula. |
 
-Por ejemplo, la expresión `date(orderDate, "yyyy-MM-dd")` convertirá un valor `orderDate` de &quot;31 de diciembre de 2020&quot; en un valor de fecha y hora de &quot;2020-12-31&quot;.
+Por ejemplo, la expresión `date(orderDate, "yyyy-MM-dd")` convertirá un `orderDate` valor de &quot;31 de diciembre de 2020&quot; en un valor de fecha y hora de &quot;2020-12-31&quot;.
 
 ### Conversiones de funciones de fecha
 
