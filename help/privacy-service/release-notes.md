@@ -5,8 +5,7 @@ title: Notas de la versión del Privacy Service
 topic-legacy: release notes
 description: Últimas notas de la versión de Adobe Experience Platform Privacy Service.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 6%
@@ -15,11 +14,11 @@ ht-degree: 6%
 
 # [!DNL Privacy Service] notas de la versión
 
-Este documento contiene información sobre las nuevas funciones de Adobe Experience Platform [!DNL Privacy Service], así como las mejoras y correcciones de errores importantes.
+Este documento contiene información sobre las nuevas funciones de Adobe Experience Platform [!DNL Privacy Service], así como mejoras y correcciones de errores importantes.
 
 >[!NOTE]
 >
->Las notas de la última versión de otros [!DNL Experience Platform] servicios se encuentran [aquí](../release-notes/latest/latest.md).
+>Las últimas notas de la versión de otros [!DNL Experience Platform] se pueden encontrar los servicios [here](../release-notes/latest/latest.md).
 
 ## 9 de septiembre de 2020
 
@@ -27,7 +26,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 | Función | Descripción |
 | --- | --- |
-| Apoyo a LGPD (Brasil) | Los trabajos de privacidad ahora se pueden crear bajo la normativa [!DNL Lei Geral de Proteção de Dados] (LGPD) de Brasil. Estos trabajos se rastrean bajo el código de regulación `lgpd_bra`. |
+| Apoyo a LGPD (Brasil) | Ahora se pueden crear trabajos de privacidad bajo la [!DNL Lei Geral de Proteção de Dados] (LGPD). Estos trabajos se rastrean bajo el código de regulación `lgpd_bra`. |
 
 ## 8 de abril de 2020
 
@@ -35,9 +34,9 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con PDPA | [!DNL Privacy] ahora se pueden crear y rastrear solicitudes bajo la Ley de Protección de Datos Personales (PDPA) en Tailandia. Al realizar solicitudes de privacidad en la API, la matriz `regulation` acepta el valor &quot;pdpa_tha&quot;. |
-| Tipos de área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de área de nombres en el Creador de solicitudes en la interfaz de usuario [!DNL Privacy Service]. Consulte la [guía del usuario](ui/user-guide.md) para obtener más información. |
-| Desaprobación de punto final antiguo | El antiguo extremo de API (`data/privacy/gdpr`) ha quedado obsoleto. |
+| Compatibilidad con PDPA | [!DNL Privacy] ahora se pueden crear y rastrear solicitudes bajo la Ley de Protección de Datos Personales (PDPA) en Tailandia. Al realizar solicitudes de privacidad en la API, la variable `regulation` array acepta el valor &quot;pdpa_tha&quot;. |
+| Tipos de área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de área de nombres en el Creador de solicitudes en el [!DNL Privacy Service] IU. Consulte la [guía del usuario](ui/user-guide.md) para obtener más información. |
+| Desaprobación de punto final antiguo | El antiguo extremo de la API (`data/privacy/gdpr`) está en desuso. |
 
 ## 14 de enero de 2020
 
@@ -45,16 +44,16 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 | Función | Descripción |
 | --- | --- |
-| [!DNL Privacy Service] cambio de marca | El anteriormente llamado &quot;Servicio de RGPD&quot; se ha cambiado a [!DNL Privacy Service] ya que el servicio ha crecido para admitir otras regulaciones además del RGPD. |
-| Nuevos extremos de API | La ruta base para la API [!DNL Privacy Service] se ha actualizado de `/data/privacy/gdpr` a `/data/core/privacy/jobs` |
-| Nueva propiedad `regulation` necesaria | Al crear nuevos trabajos en la API [!DNL Privacy Service], se debe proporcionar una propiedad `regulation` en la carga útil de la solicitud para indicar en qué regulación se debe realizar un seguimiento del trabajo. Los valores aceptados son `gdpr` y `ccpa`. Consulte el documento sobre [trabajos de privacidad](api/privacy-jobs.md) en la guía para desarrolladores de [!DNL Privacy Service] para obtener más información. |
-| Compatibilidad con la autenticación de Adobe Primetime | [!DNL Privacy Service] ahora acepta solicitudes de acceso/eliminación de la autenticación de Adobe Primetime, utilizando  `primetimeAuthentication` como valor de producto. Consulte la [Documentación de autenticación de Primetime](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) para obtener más información. |
+| [!DNL Privacy Service] cambio de marca | El anteriormente denominado &quot;Servicio de RGPD&quot; se ha cambiado a [!DNL Privacy Service] ya que el servicio ha crecido para admitir otras regulaciones además del RGPD. |
+| Nuevos extremos de API | Ruta base para la variable [!DNL Privacy Service] La API se ha actualizado desde `/data/privacy/gdpr` a `/data/core/privacy/jobs` |
+| Nuevo obligatorio `regulation` property | Al crear nuevos trabajos en el [!DNL Privacy Service] API, un `regulation` debe proporcionarse en la carga útil de la solicitud para indicar en qué regulación debe rastrearse el trabajo. Los valores aceptados son `gdpr` y `ccpa`. Consulte el documento en [trabajos de privacidad](api/privacy-jobs.md) en el [!DNL Privacy Service] Guía de API para obtener más información. |
+| Compatibilidad con la autenticación de Adobe Primetime | [!DNL Privacy Service] ahora acepta solicitudes de acceso/eliminación de la autenticación de Adobe Primetime mediante `primetimeAuthentication` como su valor de producto. Consulte la [Documentación de autenticación de Primetime](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) para obtener más información. |
 
 ### Mejoras
 
 * [!DNL Privacy Service] Mejoras en la interfaz de usuario:
    * Separe las páginas de seguimiento de trabajos para las regulaciones del RGPD y la CCPA.
-   * Nuevo menú desplegable *Tipo de reglamento* para cambiar entre los datos de seguimiento del RGPD y la CCPA.
+   * Nuevo *Tipo de regulación* para cambiar entre los datos de seguimiento del RGPD y la CCPA.
 
 ## 25 de julio de 2019
 
@@ -62,21 +61,21 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 | Función | Descripción |
 | --- | --- |
-| Panel de métricas de solicitud | El nuevo panel de métricas de la interfaz de usuario [!DNL Privacy Service] proporciona visibilidad de las solicitudes de RGPD enviadas, erróneas y completadas. |
-| Creador de solicitudes | Para prestar servicios a organizaciones con usuarios técnicos y no técnicos que envían solicitudes de RGPD, se ha añadido la funcionalidad &quot;Crear solicitud&quot; a la interfaz de usuario. La capacidad de envío de archivos JSON aún está disponible en la interfaz de usuario [!DNL Privacy Service] para las organizaciones que prefieran seguir usándola. |
+| Panel de métricas de solicitud | El nuevo panel de métricas de [!DNL Privacy Service] La interfaz de usuario proporciona visibilidad de las solicitudes de RGPD enviadas, erróneas y completadas. |
+| Creador de solicitudes | Para prestar servicios a organizaciones con usuarios técnicos y no técnicos que envían solicitudes de RGPD, se ha añadido la funcionalidad &quot;Crear solicitud&quot; a la interfaz de usuario. La capacidad de envío de archivos JSON aún está disponible en el [!DNL Privacy Service] IU para las organizaciones que prefieran seguir usándola. |
 | Notificaciones de eventos de trabajo del RGPD | Las notificaciones de eventos sobre los estados de trabajos del RGPD son un elemento crítico para muchos flujos de trabajo. Aunque las notificaciones se entregaron anteriormente mediante avisos de correo electrónico individuales, las notificaciones de eventos del RGPD son mensajes que aprovechan los eventos de Adobe I/O, que se envían a un enlace web configurado para facilitar la automatización de las solicitudes de trabajo. [!DNL Privacy Service] Los usuarios de la interfaz de usuario pueden suscribirse a los eventos del RGPD de Adobe I/O para recibir actualizaciones cuando se haya completado un producto o el trabajo del RGPD. |
 
 ## 18 de abril de 2019
 
 ### Mejoras
 
-* Intervalo predeterminado para la tabla de estado en la interfaz de usuario [!DNL Privacy Service] modificada a un intervalo de 7 días.
+* Intervalo predeterminado para la tabla de estado en la variable [!DNL Privacy Service] La interfaz de usuario se ha modificado a un intervalo de 7 días.
 * Mejor gestión de excepciones internas.
 * Se ha mejorado el rendimiento al introducir el almacenamiento en caché para llamadas internas comunes con tasas de cambio de datos bajas.
 
 ### Correcciones de errores
 
-* Se ha añadido información de registro que faltaba para las consultas filtradas para el extremo `GET /` en la API [!DNL Privacy Service].
+* Se ha agregado la información de registro que faltaba para las consultas filtradas para la variable `GET /` en la variable [!DNL Privacy Service] API.
 
 ## 11 de abril de 2019
 
@@ -96,9 +95,9 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 ### Mejoras
 
-* Aplique el campo `include` en cada envío del POST.
-* Aplique el campo `include` al cargar JSON.
+* Aplicar la variable `include` en cada envío de POST.
+* Aplicar la variable `include` al cargar JSON.
 
 ### Correcciones de errores
 
-* Se ha corregido un problema en el cual los clientes no podían cargar la interfaz de usuario [!DNL Privacy Service].
+* Se ha corregido un problema en el cual los clientes no podían cargar el [!DNL Privacy Service] IU.

@@ -5,17 +5,16 @@ title: Punto final de la API de trabajos de privacidad
 topic-legacy: developer guide
 description: Obtenga información sobre cómo administrar los trabajos de privacidad para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-translation-type: tm+mt
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
 source-wordcount: '1362'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
 # Punto final de trabajos de privacidad
 
-Este documento explica cómo trabajar con trabajos de privacidad mediante llamadas API. Específicamente, cubre el uso del extremo `/job` en la API [!DNL Privacy Service]. Antes de leer esta guía, consulte la [sección de introducción](./getting-started.md#getting-started) para obtener información importante que debe conocer para realizar llamadas correctamente a la API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Este documento explica cómo trabajar con trabajos de privacidad mediante llamadas API. En concreto, abarca el uso de la variable `/job` en la variable [!DNL Privacy Service] API. Antes de leer esta guía, consulte [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar correctamente llamadas a la API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
 >[!NOTE]
 >
@@ -23,11 +22,11 @@ Este documento explica cómo trabajar con trabajos de privacidad mediante llamad
 
 ## Enumerar todos los trabajos {#list}
 
-Puede ver una lista de todos los trabajos de privacidad disponibles dentro de su organización realizando una solicitud de GET al extremo `/jobs` .
+Puede ver una lista de todos los trabajos de privacidad disponibles en su organización realizando una solicitud de GET a la `/jobs` punto final.
 
 **Formato de API**
 
-Este formato de solicitud utiliza un parámetro de consulta `regulation` en el extremo `/jobs` , por lo que comienza con un signo de interrogación (`?`) como se muestra a continuación. La respuesta está paginada, lo que le permite usar otros parámetros de consulta (`page` y `size`) para filtrar la respuesta. Puede separar varios parámetros mediante el uso de ampersands (`&`).
+Este formato de solicitud utiliza un `regulation` parámetro de consulta en la variable `/jobs` , por lo tanto comienza con un signo de interrogación (`?`) como se muestra a continuación. La respuesta está paginada, lo que le permite utilizar otros parámetros de consulta (`page` y `size`) para filtrar la respuesta. Puede separar varios parámetros usando el símbolo &amp; (`&`).
 
 ```http
 GET /jobs?regulation={REGULATION}
@@ -62,19 +61,19 @@ Una respuesta correcta devuelve una lista de trabajos, cada uno de los cuales co
 
 ### Acceso a páginas posteriores
 
-Para obtener el siguiente conjunto de resultados en una respuesta paginada, debe realizar otra llamada de API al mismo extremo mientras aumenta el parámetro de consulta `page` en 1.
+Para obtener el siguiente conjunto de resultados en una respuesta paginada, debe realizar otra llamada de API al mismo extremo mientras aumenta la variable `page` parámetro de consulta por 1.
 
 ## Crear un trabajo de privacidad {#create-job}
 
-Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación sobre los interesados cuyos datos desee acceder, eliminar o excluir de la venta. Una vez que tenga los datos requeridos, deben proporcionarse en la carga útil de una solicitud de POST al extremo `/jobs` .
+Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación sobre los interesados cuyos datos desee acceder, eliminar o excluir de la venta. Una vez que tenga los datos requeridos, estos deben proporcionarse en la carga útil de una solicitud del POST al `/jobs` punto final.
 
 >[!NOTE]
 >
->Las aplicaciones compatibles con Adobe Experience Cloud utilizan valores diferentes para identificar interesados. Consulte la guía de [aplicaciones de Privacy Service y Experience Cloud](../experience-cloud-apps.md) para obtener más información sobre los identificadores necesarios para sus aplicaciones. Para obtener instrucciones más generales sobre cómo determinar qué ID se van a enviar a [!DNL Privacy Service], consulte el documento sobre [datos de identidad en solicitudes de privacidad](../identity-data.md).
+>Las aplicaciones compatibles con Adobe Experience Cloud utilizan valores diferentes para identificar interesados. Consulte la guía de [aplicaciones de Privacy Service y Experience Cloud](../experience-cloud-apps.md) para obtener más información sobre los identificadores necesarios para sus aplicaciones. Para obtener instrucciones más generales sobre cómo determinar a qué ID enviar a [!DNL Privacy Service], consulte el documento en [datos de identidad en solicitudes de privacidad](../identity-data.md).
 
-La API [!DNL Privacy Service] admite dos tipos de solicitudes de trabajo para datos personales:
+La variable [!DNL Privacy Service] La API admite dos tipos de solicitudes de trabajo para datos personales:
 
-* [Acceso y/o eliminación](#access-delete): Acceder (leer) o eliminar datos personales.
+* [Acceso o eliminación](#access-delete): Acceder (leer) o eliminar datos personales.
 * [Exclusión de la venta](#opt-out): Marque los datos personales como no vendidos.
 
 >[!IMPORTANT]
@@ -154,13 +153,13 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `companyContexts` **(Requerido)** | Matriz que contiene información de autenticación para su organización. Cada identificador enumerado incluye los siguientes atributos: <ul><li>`namespace`: El espacio de nombres de un identificador.</li><li>`value`: El valor del identificador.</li></ul>Es **obligatorio** que uno de los identificadores utilice `imsOrgId` como `namespace`, con su `value` que contenga el ID único para su organización de IMS. <br/><br/>Los identificadores adicionales pueden ser calificadores de empresa específicos del producto (por ejemplo,  `Campaign`), que identifican una integración con una aplicación de Adobe que pertenece a su organización. Los posibles valores incluyen nombres de cuenta, códigos de cliente, ID de inquilino u otros identificadores de aplicación. |
-| `users` **(Requerido)** | Matriz que contiene una colección de al menos un usuario cuya información desea acceder o eliminar. Se puede proporcionar un máximo de 1000 ID de usuario en una única solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`: Identificador de un usuario que se utiliza para clasificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella o buscarla más adelante.</li><li>`action`: Matriz que enumera las acciones deseadas que deben realizarse en los datos del usuario. Según las acciones que desee realizar, esta matriz debe incluir `access`, `delete` o ambas.</li><li>`userIDs`: Una colección de identidades para el usuario. El número de identidades que un solo usuario puede tener está limitado a nueve. Cada identidad consiste en un `namespace`, un `value` y un calificador de área de nombres (`type`). Consulte el [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> Para obtener una explicación más detallada de `users` y `userIDs`, consulte la [guía de solución de problemas](../troubleshooting-guide.md#user-ids). |
-| `include` **(Requerido)** | Una matriz de productos de Adobe para incluir en el procesamiento. Si falta este valor o está vacío, se rechazará la solicitud. Incluya únicamente productos con los que su organización tenga una integración. Consulte la sección sobre [valores de producto aceptados](appendix.md) en el apéndice para obtener más información. |
-| `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para procesar los ID en las aplicaciones (actualmente solo es compatible con [!DNL Analytics]). Si se omite, el valor predeterminado es `false`. |
-| `priority` | Una propiedad opcional utilizada por Adobe Analytics que establece la prioridad para el procesamiento de solicitudes. Los valores aceptados son `normal` y `low`. Si se omite `priority`, el comportamiento predeterminado es `normal`. |
-| `analyticsDeleteMethod` | Una propiedad opcional que especifica cómo debe gestionar Adobe Analytics los datos personales. Se aceptan dos valores posibles para este atributo: <ul><li>`anonymize`: Todos los datos a los que hace referencia la recopilación determinada de ID de usuario se vuelven anónimos. Si se omite `analyticsDeleteMethod`, este es el comportamiento predeterminado.</li><li>`purge`: Todos los datos se eliminan por completo.</li></ul> |
-| `regulation` **(Requerido)** | La regulación del trabajo de privacidad. Se aceptan los siguientes valores: <ul><li>`gdpr` (Unión Europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nueva Zelanda)</li><li>`pdpa_tha` (Tailandia)</li></ul> |
+| `companyContexts` **(Obligatorio)** | Matriz que contiene información de autenticación para su organización. Cada identificador enumerado incluye los siguientes atributos: <ul><li>`namespace`: El espacio de nombres de un identificador.</li><li>`value`: El valor del identificador.</li></ul>Es **obligatorio** que uno de los identificadores utiliza `imsOrgId` como su `namespace`, con su `value` que contiene el ID exclusivo de su organización de IMS. <br/><br/>Los identificadores adicionales pueden ser calificadores de empresa específicos del producto (por ejemplo, `Campaign`), que identifican una integración con una aplicación de Adobe que pertenece a su organización. Los posibles valores incluyen nombres de cuenta, códigos de cliente, ID de inquilino u otros identificadores de aplicación. |
+| `users` **(Obligatorio)** | Matriz que contiene una colección de al menos un usuario cuya información desea acceder o eliminar. Se puede proporcionar un máximo de 1000 ID de usuario en una única solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`: Identificador de un usuario que se utiliza para clasificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella o buscarla más adelante.</li><li>`action`: Matriz que enumera las acciones deseadas que deben realizarse en los datos del usuario. En función de las acciones que desee realizar, esta matriz debe incluir `access`, `delete`, o ambas.</li><li>`userIDs`: Una colección de identidades para el usuario. El número de identidades que un solo usuario puede tener está limitado a nueve. Cada identidad consiste en una `namespace`, `value`y un calificador de área de nombres (`type`). Consulte la [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> Para obtener una explicación más detallada de `users` y `userIDs`, consulte la [guía de solución de problemas](../troubleshooting-guide.md#user-ids). |
+| `include` **(Obligatorio)** | Una matriz de productos de Adobe para incluir en el procesamiento. Si falta este valor o está vacío, se rechazará la solicitud. Incluya únicamente productos con los que su organización tenga una integración. Consulte la sección sobre [valores de producto aceptados](appendix.md) en el apéndice para obtener más información. |
+| `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para el procesamiento de los ID en las aplicaciones (actualmente solo compatible con [!DNL Analytics]). Si se omite, el valor predeterminado es `false`. |
+| `priority` | Una propiedad opcional utilizada por Adobe Analytics que establece la prioridad para el procesamiento de solicitudes. Los valores aceptados son `normal` y `low`. If `priority` se omite, el comportamiento predeterminado es `normal`. |
+| `analyticsDeleteMethod` | Una propiedad opcional que especifica cómo debe gestionar Adobe Analytics los datos personales. Se aceptan dos valores posibles para este atributo: <ul><li>`anonymize`: Todos los datos a los que hace referencia la recopilación determinada de ID de usuario se vuelven anónimos. If `analyticsDeleteMethod` se omite, este es el comportamiento predeterminado.</li><li>`purge`: Todos los datos se eliminan por completo.</li></ul> |
+| `regulation` **(Obligatorio)** | La regulación del trabajo de privacidad. Se aceptan los siguientes valores: <ul><li>`gdpr` (Unión Europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nueva Zelanda)</li><li>`pdpa_tha` (Tailandia)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -220,7 +219,7 @@ Una vez que haya enviado correctamente la solicitud de trabajo, puede continuar 
 
 ## Comprobar el estado de un trabajo {#check-status}
 
-Puede recuperar información sobre un trabajo específico, como su estado de procesamiento actual, incluyendo el `jobId` de ese trabajo en la ruta de una solicitud de GET al extremo `/jobs` .
+Puede recuperar información sobre un trabajo específico, como su estado de procesamiento actual, incluyendo el de ese trabajo `jobId` en la ruta de una solicitud de GET al `/jobs` punto final.
 
 >[!IMPORTANT]
 >
@@ -234,13 +233,13 @@ GET /jobs/{JOB_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{JOB_ID}` | El ID del trabajo que desea buscar. Este ID se devuelve en `jobId` en respuestas de API correctas para [crear un trabajo](#create-job) y [enumerar todos los trabajos](#list). |
+| `{JOB_ID}` | El ID del trabajo que desea buscar. Este ID se devuelve en `jobId` en respuestas de API correctas para [creación de un trabajo](#create-job) y [listar todos los trabajos](#list). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
-La siguiente solicitud recupera los detalles del trabajo cuyo `jobId` se proporciona en la ruta de solicitud.
+La siguiente solicitud recupera los detalles del trabajo cuya `jobId` se proporciona en la ruta de solicitud.
 
 ```shell
 curl -X GET \
@@ -326,13 +325,13 @@ Una respuesta correcta devuelve los detalles del trabajo especificado.
 
 | Propiedad | Descripción |
 | --- | --- |
-| `productStatusResponse` | Cada objeto de la matriz `productResponses` contiene información sobre el estado actual del trabajo con respecto a una aplicación [!DNL Experience Cloud] específica. |
-| `productStatusResponse.status` | La categoría de estado actual del trabajo. Consulte la siguiente tabla para obtener una lista de [categorías de estado disponibles](#status-categories) y sus significados correspondientes. |
+| `productStatusResponse` | Cada objeto dentro de la variable `productResponses` matriz contiene información sobre el estado actual del trabajo con respecto a un [!DNL Experience Cloud] aplicación. |
+| `productStatusResponse.status` | La categoría de estado actual del trabajo. Consulte la tabla siguiente para obtener una lista de [categorías de estado disponibles](#status-categories) y sus significados correspondientes. |
 | `productStatusResponse.message` | Estado específico del trabajo, correspondiente a la categoría de estado. |
-| `productStatusResponse.responseMsgCode` | Código estándar para los mensajes de respuesta del producto recibidos por [!DNL Privacy Service]. Los detalles del mensaje se proporcionan en `responseMsgDetail`. |
+| `productStatusResponse.responseMsgCode` | Un código estándar para los mensajes de respuesta de producto recibidos por [!DNL Privacy Service]. Los detalles del mensaje se proporcionan en `responseMsgDetail`. |
 | `productStatusResponse.responseMsgDetail` | Una explicación más detallada del estado del trabajo. Los mensajes para estados similares pueden variar entre productos. |
-| `productStatusResponse.results` | Para ciertos estados, algunos productos pueden devolver un objeto `results` que proporciona información adicional que no está cubierta por `responseMsgDetail`. |
-| `downloadURL` | Si el estado del trabajo es `complete`, este atributo proporciona una URL para descargar los resultados del trabajo como archivo ZIP. Este archivo está disponible para su descarga durante 60 días después de que finalice el trabajo. |
+| `productStatusResponse.results` | Para ciertos estados, algunos productos pueden devolver un `results` objeto que proporciona información adicional que no abarca `responseMsgDetail`. |
+| `downloadURL` | Si el estado del trabajo es `complete`, este atributo proporciona una dirección URL para descargar los resultados del trabajo como archivo ZIP. Este archivo está disponible para su descarga durante 60 días después de que finalice el trabajo. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -351,8 +350,8 @@ La siguiente tabla enumera las diferentes categorías posibles de estado del tra
 
 >[!NOTE]
 >
->Un trabajo enviado puede permanecer en estado `processing` si tiene un trabajo secundario dependiente que aún se está procesando.
+>Un trabajo enviado puede permanecer en un `processing` si tiene un trabajo secundario dependiente que aún se está procesando.
 
 ## Pasos siguientes
 
-Ahora sabe cómo crear y monitorizar trabajos de privacidad mediante la API [!DNL Privacy Service]. Para obtener información sobre cómo realizar las mismas tareas utilizando la interfaz de usuario, consulte la [información general de la interfaz de usuario del Privacy Service](../ui/overview.md).
+Ahora sabe cómo crear y monitorizar trabajos de privacidad utilizando la variable [!DNL Privacy Service] API. Para obtener información sobre cómo realizar las mismas tareas utilizando la interfaz de usuario, consulte la [Información general sobre la IU de Privacy Service](../ui/overview.md).

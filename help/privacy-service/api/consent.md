@@ -5,23 +5,22 @@ title: Punto final de la API de consentimiento
 topic-legacy: developer guide
 description: Obtenga información sobre cómo administrar las solicitudes de consentimiento del cliente para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-translation-type: tm+mt
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
 source-wordcount: '247'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
 # Punto final de consentimiento
 
-Algunas regulaciones requieren el consentimiento explícito del cliente antes de que se puedan recopilar sus datos personales. El extremo `/consent` de la API [!DNL Privacy Service] le permite procesar solicitudes de consentimiento del cliente e integrarlas en su flujo de trabajo de privacidad.
+Algunas regulaciones requieren el consentimiento explícito del cliente antes de que se puedan recopilar sus datos personales. La variable `/consent` en la variable [!DNL Privacy Service] La API de le permite procesar solicitudes de consentimiento del cliente e integrarlas en su flujo de trabajo de privacidad.
 
-Antes de utilizar esta guía, consulte la sección [introducción](./getting-started.md) para obtener información sobre los encabezados de autenticación requeridos que se presentan en la llamada de API de ejemplo a continuación.
+Antes de utilizar esta guía, consulte la [introducción](./getting-started.md) guía para obtener información sobre los encabezados de autenticación requeridos que se presentan en la llamada de API de ejemplo a continuación.
 
 ## Procesamiento de una solicitud de consentimiento del cliente
 
-Las solicitudes de consentimiento se procesan realizando una solicitud de POST al extremo `/consent` .
+Las solicitudes de consentimiento se procesan realizando una solicitud del POST al `/consent` punto final.
 
 **Formato de API**
 
@@ -31,7 +30,7 @@ POST /consent
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo trabajo de consentimiento para los ID de usuario proporcionados en la matriz `entities`.
+La siguiente solicitud crea un nuevo trabajo de consentimiento para los ID de usuario proporcionados en la variable `entities` matriz.
 
 ```shell
 curl -X POST \
@@ -62,17 +61,17 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `optOutOfSale` | Cuando se establece en true, indica que los usuarios proporcionados en `entities` desean excluirse de la venta o del uso compartido de sus datos personales. |
-| `entities` | Matriz de objetos que indica los usuarios a los que se aplica la solicitud de consentimiento. Cada objeto contiene un `namespace` y una matriz de `values` para hacer coincidir a los usuarios individuales con ese espacio de nombres. |
-| `nameSpace` | Cada objeto de la matriz `entities` debe contener uno de los [espacios de nombres de identidad estándar](./appendix.md#standard-namespaces) reconocidos por la API del Privacy Service. |
-| `values` | Matriz de valores para cada usuario, correspondiente con el `nameSpace` proporcionado. |
+| `optOutOfSale` | Cuando se establece en true, indica que los usuarios proporcionados en `entities` desean excluir la venta o el uso compartido de sus datos personales. |
+| `entities` | Matriz de objetos que indica los usuarios a los que se aplica la solicitud de consentimiento. Cada objeto contiene un `namespace` y una matriz de `values` para hacer coincidir usuarios individuales con ese espacio de nombres. |
+| `nameSpace` | Cada objeto del `entities` la matriz debe contener uno de los [áreas de nombres de identidad estándar](./appendix.md#standard-namespaces) reconocido por la API de Privacy Service. |
+| `values` | Una matriz de valores para cada usuario, correspondiente con los valores proporcionados `nameSpace`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo determinar qué valores de identidad de cliente se van a enviar a [!DNL Privacy Service], consulte la guía [que proporciona datos de identidad](../identity-data.md).
+>Para obtener más información sobre cómo determinar a qué valores de identidad de cliente enviar [!DNL Privacy Service], consulte la guía de [proporcionar datos de identidad](../identity-data.md).
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) sin carga útil, lo que indica que la solicitud fue aceptada por [!DNL Privacy Service] y se está procesando.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) sin carga útil, lo que indica que la solicitud fue aceptada por [!DNL Privacy Service] y se está procesando.
