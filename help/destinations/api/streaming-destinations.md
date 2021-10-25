@@ -6,10 +6,10 @@ description: Este documento cubre la creación de destinos de flujo continuo med
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '2021'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -17,23 +17,23 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] de Platform están actualmente en versión beta. La documentación y las funciones están sujetas a cambios.
+>La variable [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] los destinos en Platform están actualmente en versión beta. La documentación y las funciones están sujetas a cambios.
 
-Este tutorial muestra cómo utilizar las llamadas de API para conectarse a los datos de Adobe Experience Platform, crear una conexión con un destino de almacenamiento en la nube de flujo continuo ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) o [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
+En este tutorial se explica cómo utilizar las llamadas de API para conectarse a los datos de Adobe Experience Platform y crear una conexión con un destino de almacenamiento en la nube de flujo continuo ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) o [Centros de eventos de Azure](../catalog/cloud-storage/azure-event-hubs.md)), cree un flujo de datos para el nuevo destino creado y active los datos para el nuevo destino creado.
 
-Este tutorial utiliza el destino [!DNL Amazon Kinesis] en todos los ejemplos, pero los pasos son idénticos para [!DNL Azure Event Hubs].
+Este tutorial utiliza la variable [!DNL Amazon Kinesis] destino en todos los ejemplos, pero los pasos son idénticos para [!DNL Azure Event Hubs].
 
 ![Información general: los pasos para crear un destino de flujo continuo y activar segmentos](../assets/api/streaming-destination/overview.png)
 
-Si prefiere utilizar la interfaz de usuario en Platform para conectarse a un destino y activar datos, consulte los tutoriales [Connect a destination](../ui/connect-destination.md) y [Activate audience data to streaming segment export destinos](../ui/activate-segment-streaming-destinations.md) .
+Si prefiere usar la interfaz de usuario en Platform para conectarse a un destino y activar datos, consulte la [Conectar un destino](../ui/connect-destination.md) y [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../ui/activate-segment-streaming-destinations.md) tutoriales.
 
 ## Introducción 
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
-* [[!DNL Catalog Service]](../../catalog/home.md):  [!DNL Catalog] es el sistema de registro para la ubicación y el linaje de los datos dentro de Experience Platform.
-* [Simuladores para pruebas](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] es el sistema de registro para la ubicación y el linaje de los datos dentro de Experience Platform.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que debe conocer para activar los datos en destinos de flujo continuo en Platform.
 
@@ -41,8 +41,8 @@ Las secciones siguientes proporcionan información adicional que debe conocer pa
 
 Para completar los pasos de este tutorial, debe tener preparadas las siguientes credenciales, según el tipo de destinos a los que esté conectando y activando segmentos.
 
-* Para conexiones [!DNL Amazon Kinesis]: `accessKeyId`, `secretKey`, `region` o `connectionUrl`
-* Para conexiones [!DNL Azure Event Hubs]: `sasKeyName`, `sasKey`, `namespace`
+* Para [!DNL Amazon Kinesis] conexiones: `accessKeyId`, `secretKey`, `region` o `connectionUrl`
+* Para [!DNL Azure Event Hubs] conexiones: `sasKeyName`, `sasKey`, `namespace`
 
 ### Leer llamadas de API de ejemplo {#reading-sample-api-calls}
 
@@ -50,7 +50,7 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilar valores para encabezados opcionales y requeridos {#gather-values}
 
-Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -62,7 +62,7 @@ Los recursos del Experience Platform se pueden aislar en entornos limitados virt
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en Experience Platform, consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+>Para obtener más información sobre los entornos limitados en el Experience Platform, consulte la [documentación general de entorno limitado](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
@@ -70,13 +70,13 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Documentación de Swagger {#swagger-docs}
 
-Puede encontrar la documentación de referencia adjunta para todas las llamadas a la API en este tutorial en Swagger. Consulte la [documentación de la API del servicio de flujo en Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
+Puede encontrar la documentación de referencia adjunta para todas las llamadas a la API en este tutorial en Swagger. Consulte la [Documentación de la API del servicio de flujo en el Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
 
 ## Obtener la lista de destinos de flujo continuo disponibles {#get-the-list-of-available-streaming-destinations}
 
 ![Pasos de destino paso 1](../assets/api/streaming-destination/step1.png)
 
-Como primer paso, debe decidir a qué destino de flujo se activan los datos. Para empezar, realice una llamada para solicitar una lista de destinos disponibles a los que puede conectarse y activar segmentos. Realice la siguiente solicitud de GET al extremo `connectionSpecs` para devolver una lista de destinos disponibles:
+Como primer paso, debe decidir a qué destino de flujo se activan los datos. Para empezar, realice una llamada para solicitar una lista de destinos disponibles a los que puede conectarse y activar segmentos. Realice la siguiente solicitud de GET a la `connectionSpecs` para devolver una lista de destinos disponibles:
 
 **Formato de API**
 
@@ -98,7 +98,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Respuesta**
 
-Una respuesta correcta contiene una lista de destinos disponibles y sus identificadores únicos (`id`). Almacene el valor del destino que planea utilizar, tal como se requerirá en pasos adicionales. Por ejemplo, si desea conectar y enviar segmentos a [!DNL Amazon Kinesis] o [!DNL Azure Event Hubs], busque el siguiente fragmento en la respuesta:
+Una respuesta correcta contiene una lista de destinos disponibles y sus identificadores únicos (`id`). Almacene el valor del destino que planea utilizar, tal como se requerirá en pasos adicionales. Por ejemplo, si desea conectarse y enviar segmentos a [!DNL Amazon Kinesis] o [!DNL Azure Event Hubs], busque el siguiente fragmento en la respuesta:
 
 ```json
 {
@@ -154,7 +154,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Utilice el ID de especificación de conexión para el servicio de perfil -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Usar el ID de especificación de conexión para el servicio de perfil - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Respuesta**
 
@@ -199,11 +199,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Utilice el ID que ha obtenido en el paso anterior.
-* `{CONNECTION_SPEC_ID}`: Utilice el ID de especificación de conexión para el servicio de perfil -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Usar el ID de especificación de conexión para el servicio de perfil - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único (`id`) para la conexión de origen recién creada al servicio de perfil. Esto confirma que se ha conectado correctamente a los datos del Experience Platform. Almacene este valor tal como es necesario en un paso posterior.
+Una respuesta correcta devuelve el identificador único (`id`) para la conexión de origen recién creada con el servicio de perfil. Esto confirma que se ha conectado correctamente a los datos del Experience Platform. Almacene este valor tal como es necesario en un paso posterior.
 
 ```json
 {
@@ -265,14 +265,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`: Utilice el ID de especificación de conexión que obtuvo en el paso  [Obtener la lista de destinos](#get-the-list-of-available-destinations) disponibles.
-* `{AUTHENTICATION_CREDENTIALS}`: rellene el nombre del destino de flujo continuo:  `Aws Kinesis authentication credentials` o  `Azure EventHub authentication credentials`.
-* `{ACCESS_ID}`:  *Para  [!DNL Amazon Kinesis] conexiones.* Su ID de acceso para su ubicación de almacenamiento de Amazon Kinesis.
-* `{SECRET_KEY}`:  *Para  [!DNL Amazon Kinesis] conexiones.* La clave secreta para la ubicación de almacenamiento de Amazon Kinesis.
-* `{REGION}`:  *Para  [!DNL Amazon Kinesis] conexiones.* Región de la  [!DNL Amazon Kinesis] cuenta donde Platform transmitirá los datos.
-* `{SAS_KEY_NAME}`:  *Para  [!DNL Azure Event Hubs] conexiones.* Rellene su nombre de clave SAS. Obtenga información sobre cómo autenticarse en [!DNL Azure Event Hubs] con claves SAS en la [documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{SAS_KEY}`:  *Para  [!DNL Azure Event Hubs] conexiones.* Rellene la clave SAS. Obtenga información sobre cómo autenticarse en [!DNL Azure Event Hubs] con claves SAS en la [documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{EVENT_HUB_NAMESPACE}`:  *Para  [!DNL Azure Event Hubs] conexiones.* Complete el espacio de  [!DNL Azure Event Hubs] nombres donde Platform transmitirá sus datos. Para obtener más información, consulte [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) en la documentación [!DNL Microsoft].
+* `{CONNECTION_SPEC_ID}`: Utilice el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de destinos disponibles](#get-the-list-of-available-destinations).
+* `{AUTHENTICATION_CREDENTIALS}`: rellene el nombre del destino de flujo continuo: `Aws Kinesis authentication credentials` o `Azure EventHub authentication credentials`.
+* `{ACCESS_ID}`: *Para [!DNL Amazon Kinesis] conexiones.* Su ID de acceso para su ubicación de almacenamiento de Amazon Kinesis.
+* `{SECRET_KEY}`: *Para [!DNL Amazon Kinesis] conexiones.* La clave secreta para la ubicación de almacenamiento de Amazon Kinesis.
+* `{REGION}`: *Para [!DNL Amazon Kinesis] conexiones.* La región de su [!DNL Amazon Kinesis] cuenta en la que Platform transmitirá los datos.
+* `{SAS_KEY_NAME}`: *Para [!DNL Azure Event Hubs] conexiones.* Rellene su nombre de clave SAS. Obtenga información sobre cómo autenticarse en [!DNL Azure Event Hubs] con claves SAS en la variable [Documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* `{SAS_KEY}`: *Para [!DNL Azure Event Hubs] conexiones.* Rellene la clave SAS. Obtenga información sobre cómo autenticarse en [!DNL Azure Event Hubs] con claves SAS en la variable [Documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* `{EVENT_HUB_NAMESPACE}`: *Para [!DNL Azure Event Hubs] conexiones.* Complete la variable [!DNL Azure Event Hubs] área de nombres donde Platform transmitirá los datos. Para obtener más información, consulte [Crear un espacio de nombres de centros de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) en el [!DNL Microsoft] documentación.
 
 **Respuesta**
 
@@ -326,14 +326,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Utilice el ID de conexión base que obtuvo en el paso anterior.
-* `{CONNECTION_SPEC_ID}`: Utilice la especificación de conexión que obtuvo en el paso  [Obtener la lista de destinos](#get-the-list-of-available-destinations) disponibles.
-* `{NAME_OF_DATA_STREAM}`:  *Para  [!DNL Amazon Kinesis] conexiones.* Proporcione el nombre del flujo de datos existente en su  [!DNL Amazon Kinesis] cuenta. Platform exportará datos a este flujo.
-* `{REGION}`:  *Para  [!DNL Amazon Kinesis] conexiones.* Región de la cuenta de Amazon Kinesis donde Platform transmitirá los datos.
-* `{EVENT_HUB_NAME}`:  *Para  [!DNL Azure Event Hubs] conexiones.* Rellene el  [!DNL Azure Event Hub] nombre donde Platform transmitirá sus datos. Para obtener más información, consulte [Creación de un centro de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) en la documentación de [!DNL Microsoft].
+* `{CONNECTION_SPEC_ID}`: Utilice la especificación de conexión obtenida en el paso [Obtener la lista de destinos disponibles](#get-the-list-of-available-destinations).
+* `{NAME_OF_DATA_STREAM}`: *Para [!DNL Amazon Kinesis] conexiones.* Proporcione el nombre del flujo de datos existente en su [!DNL Amazon Kinesis] cuenta. Platform exportará datos a este flujo.
+* `{REGION}`: *Para [!DNL Amazon Kinesis] conexiones.* Región de la cuenta de Amazon Kinesis donde Platform transmitirá los datos.
+* `{EVENT_HUB_NAME}`: *Para [!DNL Azure Event Hubs] conexiones.* Complete la variable [!DNL Azure Event Hub] nombre donde Platform transmitirá sus datos. Para obtener más información, consulte [Creación de un centro de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) en el [!DNL Microsoft] documentación.
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único (`id`) de la conexión de destino recién creada al destino de flujo continuo. Almacene este valor tal como es necesario en pasos posteriores.
+Una respuesta correcta devuelve el identificador único (`id`) para la conexión de destino recién creada con el destino de flujo continuo. Almacene este valor tal como es necesario en pasos posteriores.
 
 ```json
 {
@@ -400,9 +400,9 @@ curl -X POST \
 }
 ```
 
-* `{FLOW_SPEC_ID}`: El ID de especificación de flujo para destinos basados en perfiles es  `71471eba-b620-49e4-90fd-23f1fa0174d8`. Utilice este valor en la llamada de .
-* `{SOURCE_CONNECTION_ID}`: Utilice el ID de conexión de origen que obtuvo en el paso  [Conectar con su Experience Platform](#connect-to-your-experience-platform-data).
-* `{TARGET_CONNECTION_ID}`: Utilice el ID de conexión de destino que obtuvo en el paso  [Conectar con destino](#connect-to-streaming-destination) de flujo continuo.
+* `{FLOW_SPEC_ID}`: El ID de especificación de flujo para destinos basados en perfiles es `71471eba-b620-49e4-90fd-23f1fa0174d8`. Utilice este valor en la llamada de .
+* `{SOURCE_CONNECTION_ID}`: Utilice el ID de conexión de origen que obtuvo en el paso [Conectarse al Experience Platform](#connect-to-your-experience-platform-data).
+* `{TARGET_CONNECTION_ID}`: Utilice el ID de conexión de destino que obtuvo en el paso [Conectarse al destino de flujo continuo](#connect-to-streaming-destination).
 
 **Respuesta**
 
@@ -422,7 +422,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado y
 
 Después de crear todas las conexiones y el flujo de datos, ahora puede activar los datos de perfil en la plataforma de flujo continuo. En este paso, se selecciona qué segmentos y qué atributos de perfil se envían al destino y se pueden programar y enviar datos al destino.
 
-Para activar segmentos en el nuevo destino, debe realizar una operación de PATCH JSON similar al ejemplo siguiente. Puede activar varios segmentos y atributos de perfil en una llamada. Para obtener más información sobre el PATCH JSON, consulte la [especificación RFC](https://tools.ietf.org/html/rfc6902).
+Para activar segmentos en el nuevo destino, debe realizar una operación de PATCH JSON similar al ejemplo siguiente. Puede activar varios segmentos y atributos de perfil en una llamada. Para obtener más información sobre el PATCH JSON, consulte la [Especificación de RFC](https://tools.ietf.org/html/rfc6902).
 
 **Formato de API**
 
@@ -469,8 +469,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Utilice el flujo de datos obtenido en el paso anterior.
 * `{ETAG}`: Utilice la etiqueta que obtuvo en el paso anterior.
-* `{SEGMENT_ID}`: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleccione **[!UICONTROL API del servicio de segmentación]** en el menú de navegación de la izquierda y busque la operación `GET /segment/definitions` en **[!UICONTROL Definiciones de segmentos]**.
-* `{PROFILE_ATTRIBUTE}`: Por ejemplo,  `personalEmail.address` o  `person.lastName`
+* `{SEGMENT_ID}`: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleccione **[!UICONTROL API del servicio de segmentación]** en el menú de navegación de la izquierda, y busque `GET /segment/definitions` operación en **[!UICONTROL Definiciones de segmentos]**.
+* `{PROFILE_ATTRIBUTE}`: Por ejemplo, `personalEmail.address` o `person.lastName`
 
 **Respuesta**
 
@@ -507,7 +507,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Respuesta**
 
-La respuesta devuelta debe incluir en el parámetro `transformations` los segmentos y atributos de perfil que envió en el paso anterior. Un parámetro `transformations` de muestra en la respuesta podría tener el siguiente aspecto:
+La respuesta devuelta debe incluirse en la variable `transformations` parámetros de los segmentos y atributos de perfil que envió en el paso anterior. Un ejemplo `transformations` en la respuesta podría tener el siguiente aspecto:
 
 ```json
 "transformations": [
@@ -553,12 +553,12 @@ La respuesta devuelta debe incluir en el parámetro `transformations` los segmen
 
 >[!IMPORTANT]
 >
-> Además de los atributos de perfil y los segmentos del paso [Activate data to your new destination](#activate-data), los datos exportados en [!DNL AWS Kinesis] y [!DNL Azure Event Hubs] también incluirán información sobre el mapa de identidad. Representa las identidades de los perfiles exportados (por ejemplo [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID móvil, ID de Google, dirección de correo electrónico, etc.). Consulte un ejemplo a continuación.
+> Además de los atributos de perfil y los segmentos del paso [Activar datos en el nuevo destino](#activate-data), los datos exportados en [!DNL AWS Kinesis] y [!DNL Azure Event Hubs] también incluirá información sobre el mapa de identidad. Representa las identidades de los perfiles exportados (por ejemplo [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID móvil, Google ID, dirección de correo electrónico, etc.). Vea el ejemplo siguiente.
 
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {
@@ -599,24 +599,24 @@ Para conectarse a los destinos de flujo continuo descritos en este tutorial de f
 
 [!DNL Postman] es una herramienta que puede utilizar para realizar llamadas a la API y administrar bibliotecas de llamadas y entornos predefinidos.
 
-Para este tutorial específico, se han adjuntado las siguientes [!DNL Postman] colecciones:
+Para este tutorial específico, haga lo siguiente [!DNL Postman] se han adjuntado colecciones:
 
 * [!DNL AWS Kinesis] [!DNL Postman] colección
 * [!DNL Azure Event Hubs] [!DNL Postman] colección
 
-Haga clic [aquí](../assets/api/streaming-destination/DestinationPostmanCollection.zip) para descargar el archivo de colecciones.
+Haga clic en [here](../assets/api/streaming-destination/DestinationPostmanCollection.zip) para descargar el archivo de colecciones.
 
-Cada colección incluye las solicitudes y variables de entorno necesarias, para [!DNL AWS Kinesis] y [!DNL Azure Event Hub], respectivamente.
+Cada colección incluye las solicitudes y variables de entorno necesarias para [!DNL AWS Kinesis]y [!DNL Azure Event Hub], respectivamente.
 
 ### Cómo utilizar las colecciones Postman
 
-Para conectarse correctamente a los destinos mediante las colecciones [!DNL Postman] adjuntas, siga estos pasos:
+Para conectarse correctamente a los destinos utilizando el [!DNL Postman] colecciones, siga estos pasos:
 
 * Descargar e instalar [!DNL Postman];
-* [](../assets/api/streaming-destination/DestinationPostmanCollection.zip) Descargue y descomprima las colecciones adjuntas;
+* [Descargar](../assets/api/streaming-destination/DestinationPostmanCollection.zip) y descomprimir las colecciones adjuntas;
 * Importe las colecciones de sus carpetas correspondientes en Postman;
 * Rellene las variables de entorno según las instrucciones de este artículo;
-* Ejecute las [!DNL API] solicitudes de Postman, según las instrucciones de este artículo.
+* Ejecute el [!DNL API] solicitudes de Postman, basadas en las instrucciones de este artículo.
 
 ## Pasos siguientes
 

@@ -3,52 +3,52 @@ keywords: flujo continuo;
 title: Conexión HTTP
 description: El destino HTTP en Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 3%
 
 ---
 
-# (Alpha) Conexión [!DNL HTTP]
+# (Alpha) [!DNL HTTP] connection
 
 >[!IMPORTANT]
 >
->El destino [!DNL HTTP] en Platform está actualmente en alfa. La documentación y las funciones están sujetas a cambios.
+>La variable [!DNL HTTP] el destino en Platform está actualmente en alfa. La documentación y las funciones están sujetas a cambios.
 
 ## Información general {#overview}
 
-El destino [!DNL HTTP] es un destino de flujo continuo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a [!DNL HTTP] extremos de terceros.
+La variable [!DNL HTTP] el destino es un [!DNL Adobe Experience Platform] destino de flujo continuo que le ayuda a enviar datos de perfil a terceros [!DNL HTTP] extremos.
 
 Para enviar datos de perfil a [!DNL HTTP] extremos, primero debe conectarse al destino en [[!DNL Adobe Experience Platform]](#connect-destination).
 
 ## Casos de uso {#use-cases}
 
-El destino [!DNL HTTP] está dirigido a clientes que necesitan exportar datos de perfil XDM y segmentos de audiencia a [!DNL HTTP] extremos genéricos.
+La variable [!DNL HTTP] El destino se dirige a los clientes que necesitan exportar datos de perfil XDM y segmentos de audiencia a genéricos [!DNL HTTP] extremos.
 
 [!DNL HTTP] los endpoints pueden ser sistemas propios de los clientes o soluciones de terceros.
 
 ## Conectarse al destino {#connect}
 
-Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../ui/connect-destination.md).
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../ui/connect-destination.md).
 
 ### Parámetros de conexión {#parameters}
 
-Mientras [configura](../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
+While [configuración](../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 
-* **[!UICONTROL httpEndpoint]**: el  [!DNL URL] del extremo HTTP al que desea enviar los datos de perfil.
-   * De forma opcional, puede agregar parámetros de consulta a [!UICONTROL httpEndpoint] [!DNL URL].
-* **[!UICONTROL authEndpoint]**: el  [!DNL URL] del extremo HTTP utilizado para la  [!DNL OAuth2] autenticación.
-* **[!UICONTROL ID]** de cliente: el  [!DNL clientID] parámetro utilizado en las credenciales del  [!DNL OAuth2] cliente.
-* **[!UICONTROL Secreto]** del cliente: el  [!DNL clientSecret] parámetro utilizado en las credenciales del  [!DNL OAuth2] cliente.
+* **[!UICONTROL httpEndpoint]**: el [!DNL URL] del extremo HTTP al que desea enviar los datos de perfil.
+   * De forma opcional, puede agregar parámetros de consulta al [!UICONTROL httpEndpoint] [!DNL URL].
+* **[!UICONTROL authEndpoint]**: el [!DNL URL] del extremo HTTP utilizado para [!DNL OAuth2] autenticación.
+* **[!UICONTROL ID de cliente]**: el [!DNL clientID] parámetro utilizado en [!DNL OAuth2] credenciales del cliente.
+* **[!UICONTROL Secreto del cliente]**: el [!DNL clientSecret] parámetro utilizado en [!DNL OAuth2] credenciales del cliente.
 
    >[!NOTE]
    >
-   >Actualmente solo se admiten [!DNL OAuth2] credenciales de cliente.
+   >Solo [!DNL OAuth2] actualmente se admiten credenciales de cliente.
 
 * **[!UICONTROL Nombre]**: introduzca un nombre por el que reconozca este destino en el futuro.
 * **[!UICONTROL Descripción]**: escriba una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL Encabezados]** personalizados: introduzca los encabezados personalizados que desee incluir en las llamadas de destino, siguiendo este formato:  `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL Encabezados personalizados]**: introduzca los encabezados personalizados que desee incluir en las llamadas de destino, siguiendo este formato: `header1:value1,header2:value2,...headerN:valueN`.
 
    >[!IMPORTANT]
    >
@@ -56,20 +56,20 @@ Mientras [configura](../ui/connect-destination.md) este destino, debe proporcion
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar datos de audiencia en destinos de exportación de perfil de flujo continuo](../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de perfil de flujo continuo](../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
 ### Atributos de destino {#attributes}
 
-En el paso [[!UICONTROL Select attributes]](../ui/activate-streaming-profile-destinations.md#select-attributes), Adobe recomienda seleccionar un identificador único del [esquema de unión](../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino.
+En el [[!UICONTROL Seleccionar atributos]](../ui/activate-streaming-profile-destinations.md#select-attributes) paso, Adobe recomienda seleccionar un identificador único de su [esquema de unión](../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino.
 
 ## Datos exportados {#exported-data}
 
-Los datos [!DNL Experience Platform] exportados llegan al destino [!DNL HTTP] en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha clasificado para un segmento determinado y ha salido de otro segmento. Las identidades de este posible cliente son [!DNL ECID] y correo electrónico.
+Su exportación [!DNL Experience Platform] los datos llegan a su [!DNL HTTP] destino en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha clasificado para un segmento determinado y ha salido de otro segmento. Las identidades de esta perspectiva son [!DNL ECID] y correo electrónico.
 
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {
