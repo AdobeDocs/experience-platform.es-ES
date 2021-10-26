@@ -5,9 +5,9 @@ title: Información general del sistema XDM
 topic-legacy: overview
 description: La estandarización y la interoperabilidad son conceptos clave detrás de Adobe Experience Platform. Experience Data Model (XDM), impulsado por el Adobe, es un esfuerzo por estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
+source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2015'
 ht-degree: 2%
 
 ---
@@ -51,14 +51,19 @@ Para obtener más información sobre cómo administrar e interactuar con esquema
 
 ## Comportamientos de datos en el sistema XDM {#data-behaviors}
 
-Los datos que se van a usar en el Experience Platform se agrupan en dos tipos de comportamiento:
+Los datos que se van a usar en el Experience Platform se agrupan en tres tipos de comportamiento:
 
-* **Registrar datos**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
-* **Datos de series temporales**: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirectamente.
+* **Registro**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
+* **Serie temporal**: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirectamente.
+* **Ad Hoc**: Captura campos a los que se les asigna un nombre para su uso solamente mediante un único conjunto de datos. Los esquemas específicos se utilizan en varios flujos de trabajo de ingesta de datos para el Experience Platform, incluida la ingesta de archivos CSV y la creación de ciertos tipos de conexiones de origen.
 
 Todos los esquemas XDM describen datos que pueden clasificarse como registros o series temporales. El comportamiento de los datos de un esquema se define mediante la clase del esquema, que se asigna a un esquema cuando se crea por primera vez. Las clases XDM describen el menor número de propiedades que debe contener un esquema para representar un comportamiento de datos determinado.
 
-Aunque puede definir sus propias clases dentro del [!DNL Schema Registry], se recomienda usar las clases preferidas **[!UICONTROL Perfil individual XDM]** y **[!UICONTROL XDM ExperienceEvent]** para datos de registros y series temporales, respectivamente. Estas clases se describen con más detalle a continuación.
+Aunque puede definir sus propias clases dentro del [!DNL Schema Registry], se recomienda utilizar las clases estándar **[!UICONTROL Perfil individual XDM]** y **[!UICONTROL XDM ExperienceEvent]** para datos de registros y series temporales, respectivamente. Estas clases se describen con más detalle a continuación.
+
+>[!NOTE]
+>
+>No hay clases estándar basadas en el comportamiento ad-hoc. Los esquemas específicos los generan automáticamente los procesos de Platform que los utilizan, pero también pueden [creada manualmente mediante la API del Registro de esquemas](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL Perfil individual XDM] {#xdm-individual-profile}
 
