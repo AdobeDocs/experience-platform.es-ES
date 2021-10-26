@@ -5,7 +5,7 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 - [Crear una conexión de origen de Adobe Analytics en la interfaz de usuario](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Creación de una conexión de origen de Atributos del cliente en la interfaz de usuario](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] información general del conector](connectors/adobe-applications/marketo/marketo.md)
-- [Crear una conexión de origen [!DNL Marketo Engage] en la interfaz de usuario](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Cree un [!DNL Marketo Engage] conexión de origen en la interfaz de usuario](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Advertising
 
@@ -64,11 +64,12 @@ Las fuentes de almacenamiento en la nube pueden traer sus propios datos a Platfo
 
 ### Administración de la relación con los clientes (CRM)
 
-Los sistemas CRM proporcionan datos que pueden ayudar a crear relaciones con los clientes, lo que a su vez crea lealtad e impulsa la retención de los clientes. Experience Platform proporciona soporte para la ingesta de datos CRM desde [!DNL Microsoft Dynamics 365] y [!DNL Salesforce]. Consulte los siguientes documentos relacionados para obtener más información:
+Los sistemas CRM proporcionan datos que pueden ayudar a crear relaciones con los clientes, lo que a su vez crea lealtad e impulsa la retención de los clientes. El Experience Platform es compatible con la ingesta de datos CRM desde [!DNL Microsoft Dynamics 365] y [!DNL Salesforce]. Consulte los siguientes documentos relacionados para obtener más información:
 
 - [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
 ### Éxito del cliente
 
@@ -141,21 +142,21 @@ Experience Platform permite la ingesta de datos desde un sistema de protocolos d
 
 ## Control de acceso para fuentes en la ingesta de datos
 
-Los permisos para los orígenes en la ingesta de datos se pueden administrar en Adobe Admin Console. Puede acceder a los permisos a través de la pestaña **[!UICONTROL Permissions]** en un perfil de producto determinado. Desde el panel **[!UICONTROL Editar permisos]**, puede acceder a los permisos pertenecientes a los orígenes a través de la entrada de menú **[!UICONTROL ingesta de datos]**. El permiso **[!UICONTROL Ver fuentes]** concede acceso de solo lectura a los orígenes disponibles en la pestaña **[!UICONTROL Catálogo]** y a los orígenes autenticados en la pestaña **[!UICONTROL Examinar]**, mientras que el permiso **[!UICONTROL Administrar fuentes]** concede acceso completo a la lectura, creación, edición y desactivación de los orígenes.
+Los permisos para los orígenes en la ingesta de datos se pueden administrar en Adobe Admin Console. Puede acceder a los permisos a través de la **[!UICONTROL Permisos]** en un perfil de producto determinado. En el **[!UICONTROL Editar permisos]** , puede acceder a los permisos pertenecientes a orígenes a través de la **[!UICONTROL ingesta de datos]** para abrir el Navegador. La variable **[!UICONTROL Ver fuentes]** el permiso concede acceso de solo lectura a las fuentes disponibles en la variable **[!UICONTROL Catálogo]** y fuentes autenticadas en la **[!UICONTROL Examinar]** mientras que la variable **[!UICONTROL Administrar fuentes]** concede acceso completo a las fuentes de lectura, creación, edición y desactivación.
 
 La siguiente tabla describe cómo se comporta la interfaz de usuario en función de diferentes combinaciones de estos permisos:
 
 | Nivel de permiso | Descripción |
 | ---- | ----|
-| **[!UICONTROL Ver]** fuentesActivado | Conceda acceso de solo lectura a los orígenes de cada tipo de origen en la pestaña Catálogo, así como a las pestañas Examinar, Cuentas y Flujo de datos. |
-| **[!UICONTROL Administrar]** fuentes | Además de las funciones incluidas en **[!UICONTROL Ver fuentes]**, concede acceso a la opción **[!UICONTROL Conectar origen]** en **[!UICONTROL Catálogo]** y a la opción **[!UICONTROL Seleccionar datos]** en **[!UICONTROL Examinar]**. **[!UICONTROL Administrar]** fuentes también le permite habilitar o deshabilitar los flujos de  **** datos y editar sus programaciones. |
-| **[!UICONTROL Ver]** fuentesDesactivar y  **[!UICONTROL Administrar]** fuentesDesactivar | Revocar todo el acceso a las fuentes. |
+| **[!UICONTROL Ver fuentes]** Activado | Conceda acceso de solo lectura a los orígenes de cada tipo de origen en la pestaña Catálogo, así como a las pestañas Examinar, Cuentas y Flujo de datos. |
+| **[!UICONTROL Administrar fuentes]** Activado | Además de las funciones incluidas en **[!UICONTROL Ver fuentes]**, otorga acceso a **[!UICONTROL Conectar origen]** en **[!UICONTROL Catálogo]** y **[!UICONTROL Seleccionar datos]** en **[!UICONTROL Examinar]**. **[!UICONTROL Administrar fuentes]** también le permite habilitar o deshabilitar **[!UICONTROL Flujos de datos]** y editar sus programaciones. |
+| **[!UICONTROL Ver fuentes]** Off y **[!UICONTROL Administrar fuentes]** Off | Revocar todo el acceso a las fuentes. |
 
-Para obtener más información sobre los permisos disponibles otorgados a través del Admin Console, incluidas las cuatro fuentes, consulte la [descripción general del control de acceso](../access-control/home.md).
+Para obtener más información sobre los permisos disponibles otorgados a través del Admin Console, incluidas las cuatro fuentes, consulte [información general sobre el control de acceso](../access-control/home.md).
 
 ## Términos y condiciones {#terms-and-conditions}
 
-Al utilizar cualquiera de las fuentes etiquetadas como beta (&quot;Beta&quot;), reconoce que la versión beta se proporciona ***&quot;tal cual&quot; sin garantía de ningún tipo***.
+Al utilizar cualquiera de las fuentes etiquetadas como beta (&quot;Beta&quot;), reconoce que se proporciona la versión beta ***&quot;tal cual&quot; sin garantía de ningún tipo***.
 
 Adobe no tendrá obligación de mantener, corregir, actualizar, cambiar, modificar o de otro modo admitir la versión beta. Se le aconseja que tenga precaución y no dependa en modo alguno del funcionamiento o rendimiento correctos de la versión Beta y/o de los materiales que la acompañen. La versión beta se considera información confidencial del Adobe.
 
