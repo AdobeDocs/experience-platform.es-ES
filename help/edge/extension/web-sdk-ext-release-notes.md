@@ -2,16 +2,22 @@
 title: Notas de la versión de la extensión del SDK web de Adobe Experience Platform
 description: Extensión de etiquetas de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 07a280f906c5bcc69a0bffc529e1d1c8280f771a
+source-git-commit: e199553a2dcfd2d86d101f19d01e85556c90d05b
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 49%
+source-wordcount: '1244'
+ht-degree: 48%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Web SDK
 
-Este documento cubre las notas de la versión de la extensión de etiqueta del SDK web de Adobe Experience Platform. Para ver las notas de la última versión del SDK, consulte las [Notas de la versión del SDK web de Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+Este documento cubre las notas de la versión de la extensión de etiqueta del SDK web de Adobe Experience Platform. Para ver las últimas notas de la versión del propio SDK, consulte la [Notas de la versión del SDK web de plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versión 2.8.0: 26 de octubre de 2021
+
+Contiene la versión 2.7.0 de la biblioteca del SDK web de Adobe Experience Platform.
+
+* Puede encontrar información adicional de Experience Edge en el evento Enviar evento completado, incluido `inferences` y `destinations`. El formato de estas propiedades puede cambiar, ya que estas funciones se están desplegando como parte de una versión beta. Para obtener más información, consulte [Seguimiento de eventos.](../fundamentals/tracking-events.md)
 
 ## Versión 2.7.3: 7 de septiembre de 2021
 
@@ -50,7 +56,7 @@ Contiene la versión 2.6.0 de la biblioteca del SDK web de Adobe Experience Plat
 
 Contiene la versión 2.5.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
-* Se ha agregado un campo `data` a la acción Enviar evento. La siguiente documentación describirá cómo se puede utilizar en determinados casos.
+* Se ha añadido un `data` a la acción Enviar evento . La siguiente documentación describirá cómo se puede utilizar en determinados casos.
 * En la vista de elementos de datos de objeto XDM, se corrigió un problema en el que se generaba un error si el usuario tenía acceso a entornos limitados de Adobe Experience Platform pero no al entorno limitado configurado como predeterminado para la organización.
 * En la vista de elementos de datos de objeto XDM, se corrigió un problema en el que un campo de esquema requerido se consideraría no válido aunque el objeto principal no contuviera valores.
 
@@ -58,10 +64,10 @@ Contiene la versión 2.5.0 de la biblioteca del SDK web de Adobe Experience Plat
 
 Contiene la versión 2.4.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
-* Se ha añadido la casilla de verificación [&quot;descarga de documento&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) a la interfaz de usuario de acción Enviar evento .
-* Se agregó compatibilidad con una opción `out` al [configurar el consentimiento predeterminado](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), que descarta todos los eventos hasta que se recibe el consentimiento (la opción `pending` existente coloca en cola los eventos y los envía una vez que se recibe el consentimiento).
+* Se ha añadido [&quot;descarga de documento&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) casilla de verificación para enviar la interfaz de usuario de acción del evento.
+* Se ha agregado compatibilidad con un `out` cuando [configuración del consentimiento predeterminado](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) que descarta todos los eventos hasta que se recibe el consentimiento (la variable `pending` pone en cola los eventos y los envía una vez recibido el consentimiento).
 * Se ha añadido una información sobre herramientas al campo de consentimiento predeterminado.
-* Se agregó compatibilidad con el estándar [Consent 2.0 del Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Se ha agregado compatibilidad con [Consentimiento de Adobe 2.0 estándar](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * Ahora aparece un mejor error en la interfaz de usuario del elemento de datos Objeto XDM si el token de acceso del usuario no es válido o está aprovisionado incorrectamente.
 * Se ha corregido un error de origen cruzado (que no afecta al funcionamiento de la extensión) que se mostraba en la consola del desarrollador del explorador al ver un elemento de datos de objeto XDM.
 
@@ -76,7 +82,7 @@ Contiene la versión 2.3.0 de la biblioteca del SDK web de Adobe Experience Plat
 ## Versión 2.2.0 - 1 de octubre de 2020
 
 * Cuando los clientes intentaban crear un objeto XDM a partir de esquemas de simulación de pruebas, se topaban con problemas de autenticación. La API que llama a Platform ahora conoce los entornos, por lo que los usuarios solo reciben los esquemas a los que tienen acceso para editar.
-* Al utilizar el elemento de datos `identityMap` , las áreas de nombres ahora se rellenan previamente en un menú desplegable, por lo que no es necesario rellenarlas manualmente.
+* Al usar la variable `identityMap` elemento de datos, las áreas de nombres ahora se rellenan previamente en un menú desplegable, por lo que no es necesario rellenarlas en forma manual.
 * Se ha modificado la interfaz de usuario del elemento de datos `xdmObject`. En la nueva interfaz de usuario, puede ver qué campos se han rellenado sin tener que introducir cada elemento en el objeto.
 
 ## Versión 2.1.1: 26 de agosto de 2020
@@ -111,7 +117,7 @@ Estas decisiones se arrojan desde el comando `sendEvent` solo si `renderDecision
 * Se ha corregido un problema en el ID de combinación de eventos que se restablecía cada vez que se hacía referencia al elemento de datos.
 * Se ha cambiado el nombre de la acción de `setCustomerIds` a `syncIdentity`.
 * Se ha añadido un comando `getIdentity`. Esto se puede consumir mediante Custom Code, solo por ahora.
-* Al habilitar la depuración mediante `_satellite` , ahora se habilita la depuración en el SDK web de Adobe Experience Platform.
+* Habilitación de la depuración mediante `_satellite` ahora habilita la depuración en el SDK web de Adobe Experience Platform.
 * Mayor compatibilidad con valores ingresados en el objeto XDM: booleanos, números y decimales.
 
 ## Versión 0.0.10: 16 de marzo de 2020
