@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '661'
 ht-degree: 15%
 
 ---
@@ -85,6 +85,7 @@ ht-degree: 15%
       - [Conector PayPal](connectors/payments/paypal.md)
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
+      - [Conector de API de REST genérico](connectors/protocols/generic-rest.md)
    - Transmisión {#streaming}
       - [Conector de API HTTP](connectors/streaming/http.md)
 - Tutoriales de API {#api-tutorials}
@@ -143,6 +144,7 @@ ht-degree: 15%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [OData genérico](tutorials/api/create/protocols/odata.md)
+         - [API de REST genérica](tutorials/api/create/protocols/generic-rest.md)
       - Transmisión {#streaming}
          - [API HTTP](tutorials/api/create/streaming/http.md)
    - Explorar datos {#explore}
@@ -234,6 +236,7 @@ ht-degree: 15%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [OData genérico](tutorials/ui/create/protocols/odata.md)
+         - [API de REST genérica](tutorials/ui/create/protocols/generic-rest.md)
       - Transmisión {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
    - Configuración de un flujo de datos {#dataflow}

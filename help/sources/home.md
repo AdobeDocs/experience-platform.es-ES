@@ -5,9 +5,9 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,8 @@ El Experience Platform es compatible con la ingesta de datos de fuentes de flujo
 
 Experience Platform permite la ingesta de datos desde un sistema de protocolos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
-- [[!DNL Generic OData] connector](connectors/protocols/odata.md)
+- [[!DNL Generic OData]](connectors/protocols/odata.md)
+- [[!DNL Genereic REST API]](connectors/protocols/generic-rest.md)
 
 ## Control de acceso para fuentes en la ingesta de datos
 
