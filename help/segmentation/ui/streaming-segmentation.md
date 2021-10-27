@@ -5,10 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-translation-type: tm+mt
-source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
+source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '840'
 ht-degree: 0%
 
 ---
@@ -17,9 +16,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->El siguiente documento indica cómo utilizar la segmentación de flujo continuo mediante la interfaz de usuario de . Para obtener información sobre el uso de la segmentación de flujo continuo mediante la API, consulte la [guía de la API de segmentación de flujo continuo](../api/streaming-segmentation.md).
+>El siguiente documento indica cómo utilizar la segmentación de flujo continuo mediante la interfaz de usuario de . Para obtener información sobre el uso de la segmentación de flujo continuo mediante la API, lea la [guía de API de segmentación por secuencias](../api/streaming-segmentation.md).
 
-La segmentación por transmisión en [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real, mientras se concentra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos de flujo continuo llegan a [!DNL Platform], lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar ya que los datos se pasan a [!DNL Platform], lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
+Segmentación por transmisión en [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real, mientras se centran en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos de flujo continuo llegan a [!DNL Platform], aliviando la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que se pasan los datos a [!DNL Platform], lo que significa que la pertenencia a un segmento se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 
 >[!NOTE]
 >
@@ -31,22 +30,22 @@ La segmentación por transmisión en [!DNL Adobe Experience Platform] permite a 
 
 >[!NOTE]
 >
->Para que la segmentación de flujo continuo funcione, debe habilitar la segmentación programada para la organización. Para obtener más información sobre la activación de la segmentación programada, consulte [la sección de segmentación de flujo continuo en la guía del usuario de segmentación](./overview.md#scheduled-segmentation).
+>Para que la segmentación de flujo continuo funcione, debe habilitar la segmentación programada para la organización. Para obtener más información sobre la activación de la segmentación programada, consulte [la sección segmentación de flujo continuo en la guía del usuario Segmentación](./overview.md#scheduled-segmentation).
 
 Una consulta se evaluará automáticamente con la segmentación de flujo continuo si cumple cualquiera de los siguientes criterios:
 
 | Tipo de consulta | Detalles | Ejemplo |
 | ---------- | ------- | ------- |
-| Visita entrante | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Visita entrante dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Visita entrante con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un solo evento entrante con un intervalo de tiempo. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
+| Un solo evento | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
+| Un solo evento dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Un solo evento con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un solo evento entrante con un intervalo de tiempo. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |  |
-| Visita entrante que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Visita entrante que hace referencia a un perfil dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o más atributos de perfil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se utiliza un segmento de segmentos, la descalificación del perfil se producirá  **cada 24 horas**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
-| Varios eventos que hacen referencia a un perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| Un solo evento con un atributo de perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. **Nota:** La consulta se evalúa inmediatamente cuando se produce el evento. Sin embargo, en el caso de un evento de perfil, debe esperar 24 horas para incorporarse. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
+| Un solo evento con un atributo de perfil dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o más atributos de perfil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se utiliza un segmento de segmentos, se producirá la descalificación del perfil **cada 24 horas**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
+| Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
-Una definición de segmento **no** se habilitará para la segmentación de flujo continuo en los siguientes escenarios:
+Una definición de segmento **not** esté habilitado para la segmentación de flujo continuo en los siguientes casos:
 
 - La definición del segmento incluye segmentos o rasgos de Adobe Audience Manager (AAM).
 - La definición del segmento incluye varias entidades (consultas de varias entidades).
@@ -56,7 +55,7 @@ Además, se aplican algunas directrices al realizar segmentación de flujo conti
 | Tipo de consulta | Pauta |
 | ---------- | -------- |
 | Consulta de evento único | No hay límites en la ventana retrospectiva. |
-| Consulta con historial de eventos | <ul><li>La ventana retrospectiva está limitada a **un día**.</li><li>Existe una condición estricta de ordenación de tiempo **debe** entre los eventos.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **no puede** ser una negación.</li></ul> |
+| Consulta con historial de eventos | <ul><li>La ventana retrospectiva se limita a **un día**.</li><li>Condición estricta de orden de tiempo **must** existen entre los eventos.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **cannot** ser una negación.</li></ul> |
 
 Si se modifica una definición de segmento para que ya no cumpla los criterios de segmentación de flujo continuo, la definición del segmento pasará automáticamente de &quot;Transmisión&quot; a &quot;Lote&quot;.
 
@@ -66,7 +65,7 @@ Después de crear un segmento con la transmisión habilitada, puede ver los deta
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-En concreto, se muestran detalles sobre **[!UICONTROL total qualified audience size]**. El **[!UICONTROL Total qualified audience size]** muestra el número total de audiencias cualificadas de la última ejecución de trabajo de segmentos completada. Si un trabajo de segmento no se completó en las últimas 24 horas, el número de audiencias se tomará de una estimación en su lugar.
+Específicamente, detalles sobre la variable **[!UICONTROL tamaño total de audiencia cualificada]** se muestran. La variable **[!UICONTROL Tamaño total de audiencia cualificada]** muestra el número total de audiencias cualificadas de la última ejecución de trabajo de segmento completada. Si un trabajo de segmento no se completó en las últimas 24 horas, el número de audiencias se tomará de una estimación en su lugar.
 
 Debajo hay un gráfico de líneas que muestra el número de segmentos calificados y descalificados en las últimas 24 horas. La lista desplegable se puede ajustar para mostrar las últimas 24 horas, la semana pasada o los últimos 30 días.
 

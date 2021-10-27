@@ -5,11 +5,10 @@ title: 'Evaluar eventos en tiempo casi real con segmentación por transmisión '
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-translation-type: tm+mt
-source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
+source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 1%
+source-wordcount: '1411'
+ht-degree: 2%
 
 ---
 
@@ -17,9 +16,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->El siguiente documento indica cómo utilizar la segmentación de flujo continuo mediante la API de . Para obtener información sobre el uso de la segmentación de flujo continuo mediante la interfaz de usuario, lea la [guía de la interfaz de segmentación de flujo](../ui/streaming-segmentation.md).
+>El siguiente documento indica cómo utilizar la segmentación de flujo continuo mediante la API de . Para obtener información sobre el uso de la segmentación de flujo continuo mediante la interfaz de usuario, lea la [guía de la interfaz de usuario de segmentación por secuencias](../ui/streaming-segmentation.md).
 
-La segmentación por transmisión en [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real, mientras se concentra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos de flujo continuo llegan a [!DNL Platform], lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar ya que los datos se pasan a [!DNL Platform], lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
+Segmentación por transmisión en [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real, mientras se centran en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos de flujo continuo llegan a [!DNL Platform], aliviando la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que se pasan los datos a [!DNL Platform], lo que significa que la pertenencia a un segmento se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -29,33 +28,33 @@ La segmentación por transmisión en [!DNL Adobe Experience Platform] permite a 
 
 ## Primeros pasos
 
-Esta guía para desarrolladores requiere una comprensión práctica de los diversos servicios [!DNL Adobe Experience Platform] que intervienen en la segmentación de flujo continuo. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Esta guía para desarrolladores requiere una comprensión práctica de las distintas [!DNL Adobe Experience Platform] servicios relacionados con la segmentación de flujo continuo. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
-- [[!DNL Segmentation]](../home.md): Proporciona la capacidad de crear segmentos y audiencias a partir de los  [!DNL Real-time Customer Profile] datos.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia del cliente.
+- [[!DNL Segmentation]](../home.md): Proporciona la capacidad de crear segmentos y audiencias a partir de [!DNL Real-time Customer Profile] datos.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas a las API [!DNL Platform] correctamente.
+Las secciones siguientes proporcionan información adicional que debe conocer para realizar llamadas a [!DNL Platform] API.
 
 ### Leer llamadas de API de ejemplo
 
-Esta guía para desarrolladores proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Esta guía para desarrolladores proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+>Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -63,26 +62,26 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Es posible que se requieran encabezados adicionales para completar solicitudes específicas. Los encabezados correctos se muestran en cada uno de los ejemplos de este documento. Preste especial atención a las solicitudes de muestra para asegurarse de que se incluyen todos los encabezados necesarios.
 
-### Tipos de consulta habilitados para la segmentación por transmisión {#streaming-segmentation-query-types}
+### Tipos de consultas habilitadas para la segmentación por transmisión {#streaming-segmentation-query-types}
 
 >[!NOTE]
 >
->Deberá habilitar la segmentación programada para la organización para que funcione la segmentación de flujo continuo. Puede encontrar información sobre cómo habilitar la segmentación programada en la sección [habilitar la segmentación programada](#enable-scheduled-segmentation)
+>Deberá habilitar la segmentación programada para la organización para que funcione la segmentación de flujo continuo. La información sobre cómo habilitar la segmentación programada se encuentra en la [habilitar la sección de segmentación programada](#enable-scheduled-segmentation)
 
 Para que un segmento se evalúe utilizando la segmentación de flujo continuo, la consulta debe cumplir las siguientes directrices.
 
 | Tipo de consulta | Detalles |
 | ---------- | ------- |
-| Visita entrante | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. |
-| Visita entrante dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante. |
-| Visita entrante con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un solo evento entrante con un intervalo de tiempo. |
+| Un solo evento | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. |
+| Un solo evento dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante. |
+| Un solo evento con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un solo evento entrante con un intervalo de tiempo. |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
-| Visita entrante que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. |
-| Visita entrante que hace referencia a un perfil dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o más atributos de perfil. |
-| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se utiliza un segmento de segmentos, la descalificación del perfil se producirá  **cada 24 horas**. |
-| Varios eventos que hacen referencia a un perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. |
+| Un solo evento con un atributo de perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. **Nota:** La consulta se evalúa inmediatamente cuando se produce el evento. Sin embargo, en el caso de un evento de perfil, debe esperar 24 horas para incorporarse. |
+| Un solo evento con un atributo de perfil dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o más atributos de perfil. |
+| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se utiliza un segmento de segmentos, se producirá la descalificación del perfil **cada 24 horas**. |
+| Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. |
 
-Una definición de segmento **no** se habilitará para la segmentación de flujo continuo en los siguientes escenarios:
+Una definición de segmento **not** esté habilitado para la segmentación de flujo continuo en los siguientes casos:
 
 - La definición del segmento incluye segmentos o rasgos de Adobe Audience Manager (AAM).
 - La definición del segmento incluye varias entidades (consultas de varias entidades).
@@ -92,11 +91,11 @@ Además, se aplican algunas directrices al realizar segmentación de flujo conti
 | Tipo de consulta | Pauta |
 | ---------- | -------- |
 | Consulta de evento único | No hay límites en la ventana retrospectiva. |
-| Consulta con historial de eventos | <ul><li>La ventana retrospectiva está limitada a **un día**.</li><li>Existe una condición estricta de ordenación de tiempo **debe** entre los eventos.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **no puede** ser una negación.</li></ul> |
+| Consulta con historial de eventos | <ul><li>La ventana retrospectiva se limita a **un día**.</li><li>Condición estricta de orden de tiempo **must** existen entre los eventos.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **cannot** ser una negación.</li></ul> |
 
 ## Recuperar todos los segmentos habilitados para la segmentación de flujo continuo
 
-Puede recuperar una lista de todos los segmentos que están habilitados para la segmentación de flujo continuo dentro de su organización IMS realizando una solicitud de GET al extremo `/segment/definitions` .
+Puede recuperar una lista de todos los segmentos que están habilitados para la segmentación de flujo continuo dentro de su organización IMS realizando una solicitud de GET al `/segment/definitions` punto final.
 
 **Formato de API**
 
@@ -209,7 +208,7 @@ Una respuesta correcta devuelve una matriz de segmentos en su organización de I
 
 ## Creación de segmentos con flujo continuo activado
 
-Un segmento se habilitará automáticamente para la transmisión si coincide con uno de los [tipos de segmentación de flujo continuo enumerados arriba](#streaming-segmentation-query-types).
+Se habilitará automáticamente la transmisión de un segmento si coincide con uno de los [tipos de segmentación de flujo continuo enumerados arriba](#streaming-segmentation-query-types).
 
 **Formato de API**
 
@@ -244,7 +243,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Se trata de una solicitud estándar &quot;crear un segmento&quot;. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre la [creación de un segmento](../tutorials/create-a-segment.md).
+>Se trata de una solicitud estándar &quot;crear un segmento&quot;. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre [creación de segmentos](../tutorials/create-a-segment.md).
 
 **Respuesta**
 
@@ -294,11 +293,11 @@ Una vez habilitada la evaluación de flujo continuo, se debe crear una línea de
 
 >[!NOTE]
 >
->La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para [!DNL XDM Individual Profile]. Si su organización tiene más de cinco directivas de combinación para [!DNL XDM Individual Profile] dentro de un entorno limitado único, no podrá utilizar la evaluación programada.
+>La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para [!DNL XDM Individual Profile]. Si su organización tiene más de cinco directivas de combinación para [!DNL XDM Individual Profile] en un entorno limitado, no se puede utilizar la evaluación programada.
 
 ### Crear una programación
 
-Al realizar una solicitud de POST al extremo `/config/schedules` , puede crear una programación e incluir la hora específica en la que se debe activar la programación.
+Haciendo una solicitud de POST al `/config/schedules` , puede crear una programación e incluir la hora específica en la que se debe activar la programación.
 
 **Formato de API**
 
@@ -331,11 +330,11 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `name` | **(Obligatorio)** El nombre de la programación. Debe ser una cadena. |
-| `type` | **(Obligatorio)** El tipo de trabajo en formato de cadena. Los tipos admitidos son `batch_segmentation` y `export`. |
+| `name` | **(Obligatorio)** Nombre de la programación. Debe ser una cadena. |
+| `type` | **(Obligatorio)** El tipo de trabajo en formato de cadena. Los tipos compatibles son `batch_segmentation` y `export`. |
 | `properties` | **(Obligatorio)** Un objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `properties.segments` | **(Necesario cuando es  `type` igual a  `batch_segmentation`)**  El uso de  `["*"]` garantiza que se incluyen todos los segmentos. |
-| `schedule` | **(Obligatorio)** Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar la ejecución de un trabajo más de una vez durante un período de 24 horas. El ejemplo mostrado (`0 0 1 * * ?`) significa que el trabajo se activa todos los días a la 1:00:00 UTC. Para obtener más información, consulte la documentación de [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). |
+| `properties.segments` | **(obligatorio cuando `type` es igual que `batch_segmentation`)** Uso `["*"]` garantiza que se incluyan todos los segmentos. |
+| `schedule` | **(Obligatorio)** Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar la ejecución de un trabajo más de una vez durante un período de 24 horas. El ejemplo mostrado (`0 0 1 * * ?`) significa que el trabajo se activa todos los días a las 1.:00:00 UTC. Para obtener más información, consulte [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentación. |
 | `state` | *(Opcional)* Cadena que contiene el estado de programación. Valores disponibles: `active` y `inactive`. El valor predeterminado es `inactive`. Una organización de IMS solo puede crear una programación. Los pasos para actualizar la programación están disponibles más adelante en este tutorial. |
 
 **Respuesta**
@@ -368,7 +367,7 @@ Una respuesta correcta devuelve los detalles de la programación recién creada.
 
 ### Activación de una programación
 
-De forma predeterminada, una programación está inactiva cuando se crea a menos que la propiedad `state` esté establecida en `active` en el cuerpo de la solicitud de creación (POST). Puede habilitar una programación (establezca `state` en `active`) realizando una solicitud de PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta.
+De forma predeterminada, una programación está inactiva cuando se crea a menos que el `state` la propiedad se establece en `active` en el cuerpo de la solicitud create (POST). Puede activar una programación (establezca la variable `state` a `active`) realizando una solicitud de PATCH al `/config/schedules` y incluyendo el ID de la programación en la ruta.
 
 **Formato de API**
 
@@ -378,7 +377,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Solicitud**
 
-La siguiente solicitud utiliza [JSON Patch formatting](http://jsonpatch.com/) para actualizar el `state` de la programación a `active`.
+La siguiente solicitud utiliza [Formato de parche JSON](http://jsonpatch.com/) para actualizar el `state` de la programación a `active`.
 
 ```shell
 curl -X POST \
@@ -407,4 +406,4 @@ Se puede utilizar la misma operación para deshabilitar una programación reempl
 
 Ahora que ha habilitado los segmentos nuevos y existentes para la segmentación de flujo continuo y la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear segmentos con transmisión habilitada para su organización.
 
-Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la [guía del usuario del Generador de segmentos](../ui/segment-builder.md).
+Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la [Guía del usuario del Generador de segmentos](../ui/segment-builder.md).
