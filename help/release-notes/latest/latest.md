@@ -1,47 +1,34 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
+source-git-commit: f4e9750685d641c83b4ceed79af739de43343aef
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 11%
+source-wordcount: '315'
+ht-degree: 12%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de versión: 29 de septiembre de 2021**
+**Fecha de la versión: 27 de octubre de 2021**
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Ingesta de datos](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Fuentes](#sources)
-
-## Ingesta de datos {#ingestion}
-
-La ingesta de datos de Adobe Experience Platform representa los múltiples métodos mediante los cuales Platform ingesta datos de varias fuentes, así como la forma en que se mantienen esos datos dentro del lago de datos para su uso por parte de los servicios de Platform descendente.
-
-**Nuevas funciones**
-
-| Función | Descripción |
-|------- | -----------|
-| Actualizar o aplicar parches registros de perfil utilizando la ingesta por lotes | El perfil del cliente en tiempo real ahora permite actualizar los atributos de perfil en datos de registro de perfil individuales mediante la ingesta por lotes. Para obtener más información, consulte la [guía para desarrolladores de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md). |
-
-Para obtener más información sobre la ingesta de datos en Platform, visite la [Documentación sobre la ingesta de datos](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
 
-**Nuevas funciones**
+**Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con flujos de datos de flujo continuo | Ahora puede utilizar funciones de preparación de datos al crear un flujo de datos de flujo continuo para [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] y [!DNL Google PubSub]. Consulte el tutorial sobre [creación de un flujo de datos de flujo continuo para fuentes de almacenamiento en la nube](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md) para obtener más información. |
+| Función  de `contains_key` | La variable `contains_key` se ha introducido, lo que permite comprobar si el objeto existe en el origen. Esta función reemplaza a la función `is_set` , que ahora está en desuso. |
+| Mensajes de error | Mensajes de error devueltos por el `/mappingSets/preview` en la API de preparación de datos ahora son coherentes con los mensajes de error generados durante el tiempo de ejecución. |
 
-Para obtener más información sobre [!DNL Data Prep], consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
+Consulte la [[!DNL Data Prep] información general](../../data-prep/home.md) para obtener más información sobre este servicio.
 
 ## Fuentes {#sources}
 
@@ -51,8 +38,8 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 
 | Función | Descripción |
 | --- | --- |
-| [!DNL Data Landing Zone] | Ahora puede crear una conexión de origen [!DNL Data Landing Zone] utilizando la [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] es una interfaz de  [!DNL Azure Blob] almacenamiento de información aprovisionada por Platform, que le permite acceder a un servicio de almacenamiento de archivos seguro y basado en la nube para introducir archivos en Platform. Consulte [[!DNL Data Landing Zone] overview](../../sources/connectors/cloud-storage/data-landing-zone.md) para obtener más información. |
-| [!DNL Snowflake] | Ahora puede crear una conexión de origen [!DNL Snowflake] utilizando la [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/databases/snowflake.md) para llevar los datos de la base de datos [!DNL Snowflake] a Platform. Consulte [[!DNL Snowflake] overview](../../sources/connectors/databases/snowflake.md) para obtener más información. |
-| [!DNL SFTP] mejoras de la fuente | Puede establecer manualmente un número de puerto personalizado al crear una conexión de origen [!DNL SFTP]. Consulte [[!DNL SFTP] overview](../../sources/connectors/cloud-storage/sftp.md) para obtener más información. |
+| [!DNL Amazon S3] mejoras de la fuente | Ahora puede usar la variable `s3SessionToken` para conectar su [!DNL Amazon S3] cuenta a Platform con credenciales de seguridad temporales. Este token le permite proporcionar acceso temporal y a corto plazo a su [!DNL Amazon S3] recursos para usuarios en entornos de confianza. Consulte la [[!DNL Amazon S3] documentación](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obtener más información. |
+| [!DNL Generic REST API] (Beta) | Ahora puede crear un [!DNL Generic REST API] conexión de origen utilizando la variable [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) o [interfaz de usuario](../../sources/tutorials/ui/create/protocols/generic-rest.md) para traer datos de una aplicación REST genérica a Platform. Consulte la [[!DNL Generic REST API] información general](../../sources/connectors/protocols/generic-rest.md) para obtener más información. |
+| [!DNL Zoho CRM] (Beta) | Ahora puede crear un [!DNL Zoho CRM] conexión de origen utilizando la variable [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) o [interfaz de usuario](../../sources/tutorials/ui/create/crm/zoho.md) para obtener datos de su [!DNL Zoho CRM] a Platform. Consulte la [[!DNL Zoho CRM] información general](../../sources/connectors/crm/zoho.md) para obtener más información. |
 
-Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
+Para obtener más información sobre las fuentes, consulte la [información general sobre fuentes](../../sources/home.md).
