@@ -1,55 +1,55 @@
 ---
 keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de api;tutorial;crear una conexión de flujo continuo;ingesta de flujo continuo;ingesta;
 solution: Experience Platform
-title: Creación de una conexión de flujo continuo mediante la API
+title: Creación de una conexión de flujo de API HTTP mediante la API
 topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 4ceeac5a7ae4a57787b37f6758851c49e02aa909
+source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
 workflow-type: tm+mt
-source-wordcount: '1268'
-ht-degree: 4%
+source-wordcount: '1567'
+ht-degree: 3%
 
 ---
 
 
-# Creación de una conexión de flujo continuo mediante la API
+# Creación de [!DNL HTTP API] conexión de flujo continuo mediante la API
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para guiarle por los pasos necesarios para crear una conexión de flujo continuo mediante la API del servicio de flujo.
+Este tutorial utiliza la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para ayudarle a crear una conexión de flujo continuo mediante la API de servicio de flujo.
 
 ## Primeros pasos
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia.
+- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil unificado y de cliente en tiempo real basado en datos agregados de varias fuentes.
 
-Además, la creación de una conexión de flujo continuo requiere que tenga un esquema XDM de destino y un conjunto de datos. Para aprender a crearlos, lea el tutorial sobre [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) o el tutorial sobre [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).
+Además, la creación de una conexión de flujo continuo requiere que tenga un esquema XDM de destino y un conjunto de datos. Para aprender a crearlos, lea el tutorial sobre [datos de registro de flujo continuo](../../../../../ingestion/tutorials/streaming-record-data.md) o el tutorial en [transmisión de datos de series temporales](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas correctamente a las API de ingesta de transmisión.
 
 ### Leer llamadas de API de ejemplo
 
-Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidas las pertenecientes a [!DNL Flow Service], están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../../../../sandboxes/home.md).
+>Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../../../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -71,7 +71,7 @@ POST /flowservice/connections
 
 **Solicitud**
 
-Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud del POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de la especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud del POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -103,7 +103,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.sourceId` | El ID de la conexión de flujo continuo que desea crear. |
 | `auth.params.dataType` | Tipo de datos de la conexión de flujo continuo. Este valor debe ser `xdm`. |
 | `auth.params.name` | Nombre de la conexión de flujo continuo que desea crear. |
-| `connectionSpec.id` | La especificación de conexión `id` para conexiones de flujo continuo. |
+| `connectionSpec.id` | Especificación de conexión `id` para conexiones de flujo continuo. |
 
 **Respuesta**
 
@@ -118,7 +118,7 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la conexión 
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `id` | El `id` de la conexión recién creada. Esto será referido como `{CONNECTION_ID}`. |
+| `id` | La variable `id` de la conexión recién creada. Esto se denominará `{CONNECTION_ID}`. |
 | `etag` | Identificador asignado a la conexión, que especifica la revisión de la conexión. |
 
 ### Conexión autenticada
@@ -133,7 +133,7 @@ POST /flowservice/connections
 
 **Solicitud**
 
-Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud del POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de la especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud del POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -168,7 +168,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.dataType` | Tipo de datos de la conexión de flujo continuo. Este valor debe ser `xdm`. |
 | `auth.params.name` | Nombre de la conexión de flujo continuo que desea crear. |
 | `auth.params.authenticationRequired` | El parámetro que especifica que la conexión de flujo continuo creada |
-| `connectionSpec.id` | La especificación de conexión `id` para conexiones de flujo continuo. |
+| `connectionSpec.id` | Especificación de conexión `id` para conexiones de flujo continuo. |
 
 **Respuesta**
 
@@ -183,7 +183,7 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la conexión 
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `id` | El `id` de la conexión recién creada. Esto será referido como `{CONNECTION_ID}`. |
+| `id` | La variable `id` de la conexión recién creada. Esto se denominará `{CONNECTION_ID}`. |
 | `etag` | Identificador asignado a la conexión, que especifica la revisión de la conexión. |
 
 ## Obtener URL de extremo de flujo continuo
@@ -198,7 +198,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | El valor `id` de la conexión que ha creado anteriormente. |
+| `{CONNECTION_ID}` | La variable `id` de la conexión que ha creado anteriormente. |
 
 **Solicitud**
 
@@ -212,7 +212,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre la conexión solicitada. La URL del extremo de flujo continuo se crea automáticamente con la conexión y se puede recuperar utilizando el valor `inletUrl`.
+Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre la conexión solicitada. La URL del extremo de flujo continuo se crea automáticamente con la conexión y se puede recuperar mediante la función `inletUrl` valor.
 
 ```json
 {
@@ -249,9 +249,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 }
 ```
 
-## Crear una conexión de origen
+## Crear una conexión de origen {#source}
 
-Después de crear la conexión base, deberá crear una conexión de origen. Al crear una conexión de origen, necesitará el valor `id` de la conexión base creada.
+Después de crear la conexión base, deberá crear una conexión de origen. Al crear una conexión de origen, necesitará la variable `id` de la conexión base creada.
 
 **Formato de API**
 
@@ -282,7 +282,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 con detalles de la conexión de origen recién creada, incluido su identificador único (`id`).
+Una respuesta correcta devuelve el estado HTTP 201 con información detallada de la conexión de origen recién creada, incluido su identificador único (`id`).
 
 ```json
 {
@@ -291,11 +291,25 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la conexión 
 }
 ```
 
-## Creación de una conexión de destino
+## Creación de un esquema XDM de destino {#target-schema}
+
+Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se contienen los datos de origen.
+
+Se puede crear un esquema XDM de destino realizando una solicitud de POST al [API del Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+
+Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial sobre [creación de un esquema con la API](../../../../../xdm/api/schemas.md).
+
+### Creación de un conjunto de datos de destino {#target-dataset}
+
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST al [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporciona el ID del esquema de destino dentro de la carga útil.
+
+Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, consulte el tutorial en [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
+
+## Creación de una conexión de destino {#target}
 
 Una conexión de destino representa la conexión con el destino en el que llegan los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija asociado al lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ahora tiene los identificadores únicos, un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, se puede crear una conexión de destino mediante la API [!DNL Flow Service] para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Ahora tiene los identificadores únicos, un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino utilizando la variable [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato de API**
 
@@ -340,9 +354,71 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la conexión 
 }
 ```
 
+## Creación de una asignación {#mapping}
+
+Para que los datos de origen se introduzcan en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiera el conjunto de datos de destino.
+
+Para crear un conjunto de asignaciones, realice una solicitud de POST al `mappingSets` punto final del [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) al proporcionar el esquema XDM de destino `$id` y los detalles de los conjuntos de asignación que desea crear.
+
+**Formato de API**
+
+```http
+POST /mappingSets
+```
+
+**Solicitud**
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/mappingSets' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "version": 0,
+        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+        "xdmVersion": "1.0",
+        "mappings": [
+            {
+                "destinationXdmPath": "person.name.firstName",
+                "sourceAttribute": "firstName",
+                "identity": false,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.lastName",
+                "sourceAttribute": "lastName",
+                "identity": false,
+                "version": 0
+            }
+        ]
+    }'
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `xdmSchema` | La variable `$id` del esquema XDM de destino. |
+
+**Respuesta**
+
+Una respuesta correcta devuelve detalles de la asignación recién creada, incluido su identificador único (`id`). Este ID es necesario en un paso posterior para crear un flujo de datos.
+
+```json
+{
+    "id": "380b032b445a46008e77585e046efe5e",
+    "version": 0,
+    "createdDate": 1604960750613,
+    "modifiedDate": 1604960750613,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
+}
+```
+
 ## Crear un flujo de datos
 
-Con las conexiones de origen y destino creadas, ahora puede crear un flujo de datos. El flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST al extremo `/flows` .
+Con las conexiones de origen y destino creadas, ahora puede crear un flujo de datos. El flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST al `/flows` punto final.
 
 **Formato de API**
 
@@ -361,20 +437,36 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample flow",
-    "description": "Sample flow description",
-    "flowSpec": {
-        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
-        "version": "1.0"
-    },
-    "sourceConnectionIds": [
-        "{SOURCE_CONNECTION_ID}"
-    ],
-    "targetConnectionIds": [
-        "{TARGET_CONNECTION_ID}"
-    ]
-}'
+        "name": "HTTP API streaming dataflow",
+        "description": "HTTP API streaming dataflow",
+        "flowSpec": {
+            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+            "version": "1.0"
+        },
+        "sourceConnectionIds": [
+            "63070871-ec3f-4cb5-af47-cf7abb25e8bb"
+        ],
+        "targetConnectionIds": [
+            "98a2a72e-a80f-49ae-aaa3-4783cc9404c2"
+        ],
+        "transformations": [
+            {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "380b032b445a46008e77585e046efe5e",
+                "mappingVersion": 0
+            }
+            }
+        ]
+    }'
 ```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `flowSpec.id` | El ID de especificación de flujo para [!DNL HTTP API]. Este ID es: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `sourceConnectionIds` | La variable [ID de conexión de origen](#source) recuperado en un paso anterior. |
+| `targetConnectionIds` | La variable [ID de conexión de target](#target) recuperado en un paso anterior. |
+| `transformations.params.mappingId` | La variable [ID de asignación](#mapping) recuperado en un paso anterior. |
 
 **Respuesta**
 
@@ -389,9 +481,9 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles del flujo de dat
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión HTTP de flujo continuo, que le permite utilizar el extremo de flujo continuo para introducir datos en Platform. Para obtener instrucciones para crear una conexión de flujo continuo en la interfaz de usuario, lea el [tutorial de creación de una conexión de flujo continuo](../../../ui/create/streaming/http.md).
+Siguiendo este tutorial, ha creado una conexión HTTP de flujo continuo, que le permite utilizar el extremo de flujo continuo para introducir datos en Platform. Para obtener instrucciones para crear una conexión de flujo continuo en la interfaz de usuario, lea la [creación de un tutorial de conexión de flujo continuo](../../../ui/create/streaming/http.md).
 
-Para aprender a transmitir datos a Platform, lea el tutorial sobre [transmisión de datos de series temporales](../../../../../ingestion/tutorials/streaming-time-series-data.md) o el tutorial sobre [transmisión de datos de registros](../../../../../ingestion/tutorials/streaming-record-data.md).
+Para aprender a transmitir datos a Platform, lea cualquiera de los tutoriales sobre [transmisión de datos de series temporales](../../../../../ingestion/tutorials/streaming-time-series-data.md) o el tutorial en [datos de registro de flujo continuo](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Apéndice
 
@@ -399,9 +491,9 @@ Esta sección proporciona información complementaria sobre la creación de cone
 
 ### Envío de mensajes a una conexión de flujo continuo autenticada
 
-Si una conexión de flujo continuo tiene la autenticación habilitada, el cliente deberá agregar el encabezado `Authorization` a su solicitud.
+Si una conexión de flujo continuo tiene habilitada la autenticación, el cliente deberá agregar la variable `Authorization` a su solicitud.
 
-Si el encabezado `Authorization` no está presente o se envía un token de acceso no válido/caducado, se devuelve una respuesta HTTP 401 no autorizada, con una respuesta similar a la que se muestra a continuación:
+Si la variable `Authorization` no está presente o se envía un token de acceso no válido/caducado, se devolverá una respuesta HTTP 401 no autorizada, con una respuesta similar a la que se muestra a continuación:
 
 **Respuesta**
 
@@ -428,7 +520,7 @@ POST /collection/{CONNECTION_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | El valor `id` de la conexión de flujo continuo recién creada. |
+| `{CONNECTION_ID}` | La variable `id` de la conexión de flujo continuo recién creada. |
 
 **Solicitud**
 

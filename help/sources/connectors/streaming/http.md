@@ -4,20 +4,18 @@ solution: Experience Platform
 title: Información general del conector de origen de API HTTP
 description: Obtenga información sobre cómo crear conectores de flujo continuo para conectarse con Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: 6122a704aff23c3ac762563628859e141e7bfa45
+source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
-# Conector de API HTTP
-
->[!IMPORTANT]
->
->Actualmente, las funciones de asignador para la fuente de API HTTP solo son compatibles con la API y no con la interfaz de usuario.
+# [!DNL HTTP API] connector
 
 Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+
+Puede usar la variable [!DNL HTTP API] conector de origen para transmitir los datos a Platform. La variable [!DNL HTTP API] el origen es compatible con [!DNL Data Prep] , lo que le permite asignar cualquier dato que no sea compatible con XDM a un conjunto de datos compatible con XDM.
 
 La siguiente documentación proporciona información sobre cómo crear un conector de flujo continuo de API HTTP con el que conectarse [!DNL Platform] mediante API o la interfaz de usuario:
 
