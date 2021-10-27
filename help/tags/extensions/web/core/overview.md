@@ -2,10 +2,10 @@
 title: Información general de la extensión Core
 description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
+source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
 workflow-type: tm+mt
-source-wordcount: '5257'
-ht-degree: 92%
+source-wordcount: '5292'
+ht-degree: 91%
 
 ---
 
@@ -219,7 +219,13 @@ Especifique el nombre y el valor de la cookie que deben darse para activar una a
 
 #### Custom Code
 
-Especifique cualquier Custom Code que deba darse como condición del evento. Utilice el editor de código integrado para introducir el código personalizado.
+Especifique cualquier Custom Code que deba darse como condición del evento.
+
+>[!NOTE]
+>
+>JavaScript ES6+ ahora se admite en código personalizado. Tenga en cuenta que algunos exploradores más antiguos no admiten ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los exploradores web compatibles.
+
+Utilice el editor de código integrado para introducir el código personalizado:
 
 1. Seleccione **[!UICONTROL Abrir editor]**.
 1. Escriba el Custom Code.
@@ -711,7 +717,7 @@ Utilice el campo proporcionado para especificar el valor que ha creado para un e
 
 ### Objetos combinados
 
-Seleccione varios elementos de datos que proporcionen un objeto. Estos objetos se combinarán en profundidad (recursivamente) para producir un nuevo objeto. Los objetos de origen no se modificarán. Si se encuentra una propiedad en la misma ubicación de varios objetos de origen, se utilizará el valor del último objeto. Si un valor de propiedad de origen es `undefined`, no invalidará un valor de un objeto de origen anterior. Si las matrices se encuentran en la misma ubicación en varios objetos de origen, las matrices se concatenarán.
+Seleccione varios elementos de datos que proporcionen un objeto. Estos objetos se combinarán en profundidad (recursivamente) para producir un nuevo objeto. Los objetos de origen no se modificarán. Si se encuentra una propiedad en la misma ubicación de varios objetos de origen, se utilizará el valor del último objeto. Si el valor de la propiedad de origen es `undefined`, no invalidará un valor de un objeto de origen anterior. Si las matrices se encuentran en la misma ubicación en varios objetos de origen, las matrices se concatenarán.
 
 Por ejemplo, supongamos que selecciona un elemento de datos que proporciona el siguiente objeto:
 
@@ -833,21 +839,21 @@ Algunos casos de uso común son:
 
 ### Valor condicional
 
-Un envoltorio para la condición [Value Comparison](#value-comparison-value-comparison). En función del resultado de la comparación, devolverá uno de los dos valores disponibles en el formulario. De este modo, puede manejar &quot;If... Entonces... Si no...&quot; escenarios sin necesidad de reglas adicionales.
+Un envoltorio para el [Value Comparison](#value-comparison-value-comparison) condición. En función del resultado de la comparación, devolverá uno de los dos valores disponibles en el formulario. De este modo, puede manejar &quot;If... Entonces... Si no...&quot; escenarios sin necesidad de reglas adicionales.
 
 ### Entorno de tiempo de ejecución
 
 Permite seleccionar una de las siguientes variables:
 
-* Etapa de entorno : devuelve `_satellite.environment.stage` para diferenciar entre entornos de desarrollo, ensayo y producción.
-* Fecha de compilación de la biblioteca: Devuelve `turbine.buildInfo.buildDate`, que contiene el mismo valor que `_satellite.buildInfo.buildDate`.
-* Nombre de propiedad: Devuelve `_satellite.property.name` para obtener el nombre de la propiedad de Launch.
-* ID de propiedad: Devuelve `_satellite.property.id` para obtener el ID de la propiedad de Launch.
-* Nombre de regla: Devuelve `event.$rule.name` que contiene el nombre de la regla ejecutada.
-* ID de regla: Devuelve `event.$rule.id` que contiene el ID de la regla ejecutada.
-* Tipo de evento : devuelve `event.$type` que contiene el tipo de evento que activó la regla.
-* Carga útil de detalles de eventos : Devuelve `event.detail` que contiene la carga útil de un evento personalizado o una regla de llamada directa.
-* Identificador de llamada directa : Devuelve `event.identifier` que contiene el identificador de una regla de llamada directa.
+* Entorno, etapa - Devuelve `_satellite.environment.stage` para diferenciar entre entornos de desarrollo/ensayo/producción.
+* Fecha de compilación de la biblioteca: Devuelve `turbine.buildInfo.buildDate` que contiene el mismo valor que `_satellite.buildInfo.buildDate`.
+* Nombre de propiedad - Devuelve `_satellite.property.name` para obtener el nombre de la propiedad de Launch.
+* ID de propiedad - Devuelve `_satellite.property.id` para obtener el ID de la propiedad de Launch
+* Nombre de regla - Devuelve `event.$rule.name` que contiene el nombre de la regla ejecutada.
+* ID de regla - Devuelve `event.$rule.id` que contiene el ID de la regla ejecutada.
+* Tipo de evento: Devuelve `event.$type` que contiene el tipo de evento que activó la regla.
+* Carga útil de detalles de eventos - Devuelve `event.detail` que contiene la carga útil de un evento personalizado o una regla de llamada directa.
+* Identificador de llamada directa: devuelve `event.identifier` que contiene el identificador de una regla de llamada directa.
 
 ### Atributos de dispositivo
 
