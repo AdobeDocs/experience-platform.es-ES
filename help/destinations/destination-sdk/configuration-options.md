@@ -4,7 +4,7 @@ seo-description: The destinations service in Adobe Experience Platform uses conf
 seo-title: Configuration options in Destination SDK
 title: Opciones de configuración en el SDK de destino
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 2%
@@ -17,12 +17,12 @@ ht-degree: 2%
 
 El servicio de destinos en Adobe Experience Platform utiliza plantillas de configuración para varios componentes que crean la funcionalidad de destinos. Estos componentes combinados permiten al Experience Platform conectarse a socios de destino, enviar mensajes personalizados y activar datos de perfil en todo el ecosistema digital. Las plantillas utilizadas en Adobe Experience Platform son:
 
-* **Configuración** de destino: Contiene información básica sobre el destino. Esta configuración incluye los tipos de identidad que su destino puede admitir y varios atributos de interfaz de usuario para su tarjeta de destino en la interfaz de usuario de Adobe Experience Platform.
-* **Especificaciones** de servidor y plantilla: Une información sobre las especificaciones del servidor y la plantilla utilizada por Adobe para entregar cargas útiles a su destino.
-   * **Especificaciones** del servidor: Una plantilla que almacena los detalles del punto final.
-   * **Especificaciones de plantilla**: En esta plantilla, puede definir cómo transformar los campos de atributos de perfil entre el esquema XDM y el formato que admite su plataforma. Para obtener información detallada sobre los idiomas de plantilla admitidos, los formatos de mensaje y la información requerida por Adobe para configurar la integración con su plataforma, lea [Message format](./message-format.md).
-* **Configuración** de autenticación: Estos ajustes definen cómo se conectan los usuarios de Adobe Experience Platform con el destino.
-* **Configuración** de metadatos de audiencia: Esta plantilla le permite configurar la forma en que se crean, actualizan o eliminan las audiencias o segmentos mediante programación en el destino.
+* **Configuración de destino**: Contiene información básica sobre el destino. Esta configuración incluye los tipos de identidad que su destino puede admitir y varios atributos de interfaz de usuario para su tarjeta de destino en la interfaz de usuario de Adobe Experience Platform.
+* **Especificaciones de servidor y plantilla**: Une información sobre las especificaciones del servidor y la plantilla utilizada por Adobe para entregar cargas útiles a su destino.
+   * **Especificaciones del servidor**: Una plantilla que almacena los detalles del punto final.
+   * **Especificaciones de plantilla**: En esta plantilla, puede definir cómo transformar los campos de atributos de perfil entre el esquema XDM y el formato que admite su plataforma. Para obtener información detallada sobre los idiomas de plantilla admitidos, los formatos de mensaje y la información requerida por Adobe para configurar la integración con su plataforma, lea [Formato del mensaje](./message-format.md).
+* **Configuración de autenticación**: Estos ajustes definen cómo se conectan los usuarios de Adobe Experience Platform con el destino.
+* **Configuración de metadatos de audiencia**: Esta plantilla le permite configurar la forma en que se crean, actualizan o eliminan las audiencias o segmentos mediante programación en el destino.
 
 ![Plantillas y configuraciones del SDK de destino](./assets/self-service-configuration.png)
 
@@ -34,9 +34,9 @@ Las páginas siguientes proporcionan más detalles sobre la funcionalidad y las 
 |--- |--- |
 | [Configuración de destino](./destination-configuration.md) | [Operaciones de extremo de la API de destinos](./destination-configuration-api.md) |
 | [Especificaciones de servidor y plantilla](./server-and-template-configuration.md) | [Operaciones de extremo de API de servidores de destino](./destination-server-api.md) |
-| [Configuración de autenticación](./credentials-configuration.md) | [Operaciones de API de extremo de credenciales](./credentials-configuration-api.md) |
+| [Configuración de autenticación](./authentication-configuration.md) | [Operaciones de API de extremo de credenciales](./credentials-configuration-api.md) |
 | [Gestión de metadatos de audiencia](./audience-metadata-management.md) | [Operaciones de API de extremo de metadatos de audiencia](./audience-metadata-api.md) |
-| [Configuración de OAuth 2](./oauth2-authentication.md) | Realice la configuración utilizando el parámetro `customerAuthenticationConfigurations` en el extremo [/API de destinos](./destination-configuration-api.md). |
+| [Configuración de OAuth 2](./oauth2-authentication.md) | Configure usando la variable `customerAuthenticationConfigurations` en el [punto final de la API /destinos](./destination-configuration-api.md). |
 | [Formato del mensaje](./message-format.md) | - |
 | [Pruebas de destino](./test-destination.md) | [Operaciones de API de prueba de destino](./destination-testing-api.md) |
 | [Publicación de destino](./configure-destination-instructions.md#publish-destination) | [Operaciones de API de publicación de destino](./destination-publish-api.md) |

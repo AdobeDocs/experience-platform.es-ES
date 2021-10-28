@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: e6d922800c17312df8529061c56d8a2deac46662
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '657'
 ht-degree: 10%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 # Destinos {#destinations}
 
-* [Información general sobre los destinos](./home.md)
+* [Destinos sobre validación](./home.md)
 * [Tipos y categorías de destino](./destination-types.md)
 * Tutoriales de API {#api}
    * [Conectarse a destinos de flujo continuo y activar datos mediante la API de servicio de flujo](./api/streaming-destinations.md)
@@ -153,12 +153,14 @@ ht-degree: 10%
       * [Especificaciones de servidor y plantilla](./destination-sdk/server-and-template-configuration.md)
       * [Formato del mensaje](./destination-sdk/message-format.md)
       * [Gestión de metadatos de audiencia](./destination-sdk/audience-metadata-management.md)
-      * [Configuración de autenticación](./destination-sdk/credentials-configuration.md)
-      * [Autenticación OAuth 2](./destination-sdk/oauth2-authentication.md)
+      * Autenticación {#authentication}
+         * [Configuración de autenticación](./destination-sdk/authentication-configuration.md)
+         * [Autenticación OAuth 2](./destination-sdk/oauth2-authentication.md)
       * Herramientas para desarrolladores {#developer-tools}
          * [Creación y prueba de una plantilla de transformación de mensaje](./destination-sdk/create-template.md)
          * [Probar la configuración de destino](./destination-sdk/test-destination.md)
-   * Referencia de API {#api-reference}
+   * Operaciones de API {#api}
+      * [Referencia de la API del SDK de destino (creación de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Operaciones de API de extremo de destinos](./destination-sdk/destination-configuration-api.md)
       * [Operaciones de API de extremo del servidor de destino](./destination-sdk/destination-server-api.md)
       * [Operaciones de API de extremo de metadatos de audiencia](./destination-sdk/audience-metadata-api.md)

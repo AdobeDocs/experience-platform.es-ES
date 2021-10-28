@@ -1,9 +1,10 @@
 ---
 description: En esta página se describe cómo autenticarse y empezar a utilizar el SDK de destino de Adobe Experience Platform. Incluye instrucciones sobre cómo obtener las credenciales de autenticación de Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino.
 title: Introducción al SDK de destino
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '540'
 ht-degree: 2%
 
 ---
@@ -16,13 +17,13 @@ En esta página se describe cómo autenticarse y empezar a utilizar el SDK de de
 
 ## Terminología {#terminology}
 
-Esta guía utiliza conceptos específicos de la plataforma, como organización de IMS y entornos limitados. Consulte el [glosario del Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) para ver las definiciones de estos y otros términos.
+Esta guía utiliza conceptos específicos de la plataforma, como organización de IMS y entornos limitados. Consulte la [glosario del Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) para las definiciones de estos y otros términos.
 
 ## Obtenga las credenciales de autenticación necesarias {#obtain-authentication-credentials}
 
-El SDK de destino utiliza la puerta de enlace [Adobe I/O](https://www.adobe.io/) para la autenticación. Para realizar llamadas de API a puntos finales de SDK de destino, debe proporcionar ciertos encabezados en las llamadas de API. Trabaje con el equipo de Adobe Exchange para configurar la autenticación en la [Consola del desarrollador de Adobe](http://console.adobe.io/).
+El SDK de destino utiliza la variable [Adobe I/O](https://www.adobe.io/) puerta de enlace para la autenticación. Para realizar llamadas de API a puntos finales de SDK de destino, debe proporcionar ciertos encabezados en las llamadas de API. Trabaje con el equipo de Adobe Exchange para configurar la autenticación para usted en el [Adobe Developer Console](http://console.adobe.io/).
 
-Para realizar llamadas correctamente a puntos finales de API de SDK de destino, siga el [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Inicie el tutorial desde el paso &quot;[Generate an API key, IMS Org ID y client secret](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. El equipo de Adobe Exchange se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en las llamadas a la API del SDK de destino, como se muestra a continuación:
+Para realizar correctamente llamadas a puntos finales de API de SDK de destino, siga las instrucciones de [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Inicie el tutorial desde el &quot;[Generar una clave de API, el ID de organización de IMS y el secreto del cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. El equipo de Adobe Exchange se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en las llamadas a la API del SDK de destino, como se muestra a continuación:
 
 * `x-api-key: {API_KEY}`, también denominado ID de cliente
 * `x-gw-ims-org-id: {IMS_ORG}`, también denominado ID de organización
@@ -55,7 +56,7 @@ El equipo de Adobe Exchange le proporciona su nombre de simulador de pruebas, qu
 
 ## Control de acceso basado en roles (RBAC) {#rbac}
 
-Para utilizar los extremos de la API del SDK de destino descritos en la [documentación de referencia](./configuration-options.md), necesita el permiso de control de acceso **[!UICONTROL Destination Authoring]**. Trabaje con el equipo de Adobe Exchange para obtener este permiso asignado en [Adobe Admin Console](https://adminconsole.adobe.com/).
+Para utilizar los extremos de la API del SDK de destino descritos en la sección [documentación de referencia](./configuration-options.md), necesita el **[!UICONTROL Creación de destinos]** permiso de control de acceso. Trabaje con el equipo de Adobe Exchange para obtener este permiso asignado en [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Permiso de creación de destino](./assets/destination-authoring-permission.png)
 
@@ -72,4 +73,6 @@ Para obtener más información, lea los siguientes documentos de Control de acce
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir los pasos de este artículo, obtuvo las credenciales de autenticación en Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino. A continuación, puede configurar un destino mediante el SDK de destino. Lea [Use el SDK de destino para configurar su destino](./configure-destination-instructions.md) para los pasos siguientes.
+Al seguir los pasos de este artículo, obtuvo las credenciales de autenticación en Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino. A continuación, puede configurar un destino mediante el SDK de destino.
+* Lectura [Utilice el SDK de destino para configurar su destino](./configure-destination-instructions.md) para los pasos siguientes.
+* Para todas las operaciones, consulte la [Documentación de la API de creación de destino](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).

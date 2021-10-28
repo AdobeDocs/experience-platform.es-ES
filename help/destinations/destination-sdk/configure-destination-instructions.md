@@ -2,9 +2,9 @@
 description: En esta página se enumeran y describen los pasos para configurar un destino de flujo continuo mediante el SDK de destino.
 title: Cómo utilizar el SDK de destino para configurar un destino de flujo continuo
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ Si utiliza una configuración de metadatos de audiencia, debe conectarla a la co
 Dependiendo de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` en la configuración de destino anterior, puede configurar la autenticación para el destino utilizando la variable `/destination` o `/credentials` punto final.
 
 * **Caso más común**: Si ha seleccionado `"authenticationRule": "CUSTOMER_AUTHENTICATION"` en la configuración de destino y su destino admite el método de autenticación OAuth 2, lea [Autenticación OAuth 2](./oauth2-authentication.md).
-* Si ha seleccionado `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulte [Configuración de credenciales](./credentials-configuration.md) en la documentación de referencia.
+* Si ha seleccionado `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulte [Configuración de autenticación](./authentication-configuration.md#when-to-use).
 
 ## Paso 6: Probar el destino {#test-destination}
 
