@@ -5,36 +5,36 @@ title: Aplicaciones Privacy Service y Experience Cloud
 topic-legacy: overview
 description: Este documento proporciona una referencia sobre cómo configurar distintas aplicaciones de Experience Cloud para operaciones relacionadas con la privacidad.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
+source-git-commit: f0dc33dcd4803f157e411d8baf3b2d2f96cea5e1
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 13%
+source-wordcount: '600'
+ht-degree: 16%
 
 ---
 
-# [!DNL Privacy Service] y  [!DNL Experience Cloud] aplicaciones
+# [!DNL Privacy Service] y [!DNL Experience Cloud] aplicaciones
 
-Adobe Experience Platform [!DNL Privacy Service] se ha creado para admitir solicitudes de privacidad de varias aplicaciones de Adobe Experience Cloud. Cada aplicación admite diferentes valores de producto e ID para identificar interesados.
+Adobe Experience Platform [!DNL Privacy Service] está diseñada para admitir solicitudes de privacidad de varias aplicaciones de Adobe Experience Cloud. Cada aplicación admite diferentes valores de producto e ID para identificar interesados.
 
-Este documento sirve como referencia para la documentación de la aplicación [!DNL Experience Cloud] que describe cómo configurar esa aplicación para operaciones relacionadas con la privacidad. Esto incluye cómo dar formato y etiquetar los datos. Se tratan dos categorías de solicitudes:
+Este documento sirve como referencia para [!DNL Experience Cloud] documentación de la aplicación que describe cómo configurar esa aplicación para operaciones relacionadas con la privacidad. Esto incluye cómo dar formato y etiquetar los datos. Se tratan dos categorías de solicitudes:
 
-* [Aplicaciones integradas con el Privacy Service](#integrated): Aplicaciones que pueden enviar solicitudes de acceso, eliminación o exclusión a  [!DNL Privacy Service].
-* [Aplicaciones de autoservicio](#self-serve): Aplicaciones que deben administrar sus solicitudes de privacidad internamente y no pueden comunicarse con  [!DNL Privacy Service] directamente.
+* [Aplicaciones integradas con el Privacy Service](#integrated): Aplicaciones que pueden enviar solicitudes de acceso, eliminación o exclusión a [!DNL Privacy Service].
+* [Aplicaciones de autoservicio](#self-serve): Aplicaciones que deben administrar sus solicitudes de privacidad internamente y que no pueden comunicarse con [!DNL Privacy Service] directamente.
 
-Revise la documentación de sus aplicaciones [!DNL Experience Cloud] para aprender a dar formato a sus solicitudes de privacidad y qué valores se admiten para dichas solicitudes.
+Revise la documentación de su [!DNL Experience Cloud] para aprender a dar formato a sus solicitudes de privacidad y qué valores se admiten para dichas solicitudes.
 
 ## Aplicaciones integradas con [!DNL Privacy Service] {#integrated}
 
-A continuación se muestra una lista de aplicaciones [!DNL Experience Cloud] que están integradas con [!DNL Privacy Service], incluidas las [!DNL Privacy Service] capacidades con las que son compatibles, y vínculos a documentación para obtener más información.
+La siguiente es una lista de [!DNL Experience Cloud] aplicaciones integradas con [!DNL Privacy Service], incluido el [!DNL Privacy Service] son compatibles con y están vinculados a la documentación para obtener más información.
 
-| de asistencia al cliente | Acceso/eliminación | Exclusión de la venta | Documentación y consideraciones |
+| Aplicación | Acceso/eliminación | Exclusión de la venta | Documentación y consideraciones |
 | --- | :---: | :---: | --- |
 | Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Documentación de acceso/eliminación para el RGPD](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Documentación de acceso/eliminación para la CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentación de exclusión de la venta para la CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
-| Adobe Analytics | ✓ | ✓ | <ul><li>[Documentación de acceso/eliminación](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=es)</li><li>[!DNL Analytics] gestiona las solicitudes de exclusión mediante variables de informes de  [privacidad](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html)</li></ul> |
+| Adobe Analytics | ✓ | ✓ | <ul><li>[Documentación de acceso/eliminación](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=es)</li><li>[!DNL Analytics] gestiona las solicitudes de exclusión utilizando [variables de informes de privacidad](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html?lang=es)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Documentación de acceso/eliminación](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentación de exclusión](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Documentación de acceso/eliminación](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=es)</li><li>[Documentación de exclusión](../segmentation/consents.md)</li></ul> |
 | Atributos del cliente de Adobe (CRS) | ✓ | N/D | <ul><li>[Documentación de acceso/eliminación para el RGPD](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[Documentación de acceso/eliminación para la CCPA](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>Los atributos del cliente no tienen la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Documentación de acceso/eliminación para el lago de datos](../catalog/privacy.md)</li><li>[Documentación de acceso y eliminación para el perfil del cliente en tiempo real](../profile/privacy.md)</li><li>[!DNL Experience Platform] respeta las solicitudes de  [exclusión para segmentos](../segmentation/consents.md) de audiencia.</li></ul> |
+| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Documentación de acceso/eliminación para el lago de datos](../catalog/privacy.md)</li><li>[Documentación de acceso o eliminación para el servicio de identidad](../identity-service/privacy.md)</li><li>[Documentación de acceso y eliminación para el perfil del cliente en tiempo real](../profile/privacy.md)</li><li>[!DNL Experience Platform] honores [solicitudes de exclusión para segmentos de audiencia](../segmentation/consents.md).</li></ul> |
 | Autenticación de Adobe Primetime | ✓ | N/D | <ul><li>[Documentación de acceso/eliminación](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] no tiene la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
 | Adobe Target | ✓ | N/D | <ul><li>[Documentación de acceso/eliminación](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=es)</li><li>[!DNL Target] no tiene la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
 
@@ -42,11 +42,11 @@ A continuación se muestra una lista de aplicaciones [!DNL Experience Cloud] que
 
 ## Aplicaciones de autoservicio {#self-serve}
 
-La siguiente es una lista de aplicaciones [!DNL Experience Cloud] que no están integradas con [!DNL Privacy Service] y deben administrar internamente sus preocupaciones de privacidad. Se proporcionan vínculos a la documentación de cada aplicación, junto con descripciones del contenido de la documentación.
+La siguiente es una lista de [!DNL Experience Cloud] aplicaciones que no están integradas con [!DNL Privacy Service] y deben administrar internamente sus preocupaciones de privacidad. Se proporcionan vínculos a la documentación de cada aplicación, junto con descripciones del contenido de la documentación.
 
-| de asistencia al cliente | Descripción de la documentación |
+| Aplicación | Descripción de la documentación |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Información general sobre las funcionalidades del RGPD para Adobe Campaign Classic. |
+| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=es) | Información general sobre las funcionalidades del RGPD para Adobe Campaign Classic. |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Información general sobre cómo un administrador de privacidad del cliente o AEM administrador puede gestionar las solicitudes de RGPD. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Pasos para realizar solicitudes de acceso y eliminación del RGPD mediante Livefyre. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Asegúrese de que las instalaciones del Magento Commerce cumplan los requisitos de la legislación específica de privacidad. |
