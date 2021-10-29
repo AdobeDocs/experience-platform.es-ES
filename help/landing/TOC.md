@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
-source-git-commit: a0954c6134c532fbcecadd8b4b8775fdf28711da
+source-git-commit: 030d6761b36e5bc7e6e12b0524a810a13e060e55
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '233'
 ht-degree: 22%
 
 ---
@@ -37,14 +37,18 @@ ht-degree: 22%
 * Documentación de plataforma {#documentation}
    * [Información general](documentation/overview.md)
    * [Compatibilidad de idiomas](documentation/language-support.md)
-* Plataforma en el ecosistema de Adobe {#ecosystem}
-   * [Servicios de aplicaciones](application-services.md)
+* Servicios de aplicaciones creados en Platform {#ecosystem}
+   * [Información general](application-services.md)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
+   * [Real-time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Aplicaciones y servicios inteligentes (vídeo)](video/application-intelligent-services.md)
    * [Integraciones de plataforma con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
-* Administración, privacidad y seguridad {#governance-privacy-security}
+* Gobernanza, privacidad y seguridad {#governance-privacy-security}
    * [Información general](./governance-privacy-security/overview.md)
    * Gestión de consentimiento {#consent}
-      * estándar de Adobe {#adobe}
+      * Adobe estándar {#adobe}
          * [Información general](./governance-privacy-security/consent/adobe/overview.md)
          * [Configuración de un conjunto de datos para capturar datos de consentimiento y preferencias](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
