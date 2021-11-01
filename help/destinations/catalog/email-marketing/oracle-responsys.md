@@ -3,9 +3,9 @@ keywords: correo electrónico;correo electrónico;destinos de correo electrónic
 title: Conexión de Responsys de oracle
 description: Responsys es una herramienta de marketing por correo electrónico para campañas de marketing en canales múltiples que ofrece Oracle para personalizar las interacciones entre correo electrónico, móvil, visualización y social.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '475'
 ht-degree: 1%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 1%
 
 ## Información general {#overview}
 
-[](https://www.oracle.com/cx/marketing/campaign-management/) Responsya es una herramienta de marketing por correo electrónico para campañas de marketing en canales múltiples que ofrece  [!DNL Oracle] para personalizar las interacciones entre correo electrónico, móvil, visualización y social.
+[Responsys](https://www.oracle.com/cx/marketing/campaign-management/) es una herramienta de marketing por correo electrónico para campañas de marketing en canales múltiples que ofrece [!DNL Oracle] para personalizar las interacciones entre correo electrónico, móvil, visualización y social.
 
-Para enviar datos de segmentos a [!DNL Oracle Responsys], primero debe [conectarse al destino](#connect-destination) en Adobe Experience Platform y luego [configurar una importación de datos](#import-data-into-responsys) desde su ubicación de almacenamiento a [!DNL Oracle Responsys].
+Para enviar datos de segmentos a [!DNL Oracle Responsys], primero debe [conectarse al destino](#connect-destination) en Adobe Experience Platform y, a continuación, [configuración de una importación de datos](#import-data-into-responsys) desde su ubicación de almacenamiento a [!DNL Oracle Responsys].
 
 ## Tipo de exportación {#export-type}
 
-**Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo de activación de  [audiencias](../../ui/activate-batch-profile-destinations.md#select-attributes).
+**Basado en perfiles** - está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal y como se elige en la pantalla de atributos seleccionados del [flujo de trabajo de activación de audiencia](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## LISTA DE PERMITIDOS de direcciones IP {#allow-list}
 
 Al configurar destinos de marketing por correo electrónico con almacenamiento SFTP, Adobe recomienda que agregue ciertos rangos de IP a la lista de permitidos.
 
-Consulte la [lista de permitidos de direcciones IP para destinos de almacenamiento en la nube](../cloud-storage/ip-address-allow-list.md) si necesita agregar IP de Adobe a su lista de permitidos.
+Consulte [LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube](../cloud-storage/ip-address-allow-list.md) si necesita agregar direcciones IP de Adobe a su lista de permitidos.
 
 ## Conectarse al destino {#connect}
 
-Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 Este destino admite los siguientes tipos de conexión:
 
@@ -39,23 +39,23 @@ Este destino admite los siguientes tipos de conexión:
 
 ### Parámetros de conexión {#parameters}
 
-Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
+While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 
-* Para conexiones **[!UICONTROL SFTP con contraseña]**, debe proporcionar:
+* Para **[!UICONTROL SFTP con contraseña]** conexiones, debe proporcionar:
    * [!UICONTROL Dominio]
    * [!UICONTROL Puerto]
    * [!UICONTROL Nombre de usuario]
    * [!UICONTROL Contraseña]
-* Para conexiones **[!UICONTROL SFTP con clave SSH]**, debe proporcionar:
+* Para **[!UICONTROL SFTP con clave SSH]** conexiones, debe proporcionar:
    * [!UICONTROL Dominio]
    * [!UICONTROL Puerto]
    * [!UICONTROL Nombre de usuario]
    * [!UICONTROL Clave SSH]
-* Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en la sección **[!UICONTROL Clave]**. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
+* Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en el **[!UICONTROL Clave]** para obtener más información. La clave pública debe escribirse como un [!DNL Base64] cadena codificada.
 * **[!UICONTROL Nombre]**: Elija un nombre relevante para el destino.
 * **[!UICONTROL Descripción]**: Escriba una descripción para el destino.
-* **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en su ubicación de almacenamiento donde Platform depositará sus datos de exportación como archivos CSV o delimitados por tabuladores.
-* **[!UICONTROL Formato]** de archivo:  **** CSVo  **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a su ubicación de almacenamiento.
+* **[!UICONTROL Ruta de carpeta]**: Proporcione la ruta en su ubicación de almacenamiento donde Platform depositará los datos de exportación como archivos CSV.
+* **[!UICONTROL Formato del archivo]**: **CSV** o **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a su ubicación de almacenamiento.
 
 <!--
 
@@ -67,16 +67,16 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de perfiles en lote](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
 ### Atributos de destino {#destination-attributes}
 
-Al activar segmentos en este destino, Adobe recomienda que seleccione un identificador único del [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte las [prácticas recomendadas al activar audiencias en destinos de marketing por correo electrónico](overview.md#best-practices).
+Al activar segmentos en este destino, Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [prácticas recomendadas al activar audiencias en destinos de marketing por correo electrónico](overview.md#best-practices).
 
 ## Datos exportados {#exported-data}
 
-Para destinos [!DNL Oracle Responsys], Platform crea un archivo `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [verificación de la activación de segmentos](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de segmentos.
+Para [!DNL Oracle Responsys] destinos, Platform crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [verificar activación de segmentos](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de segmentos.
 
 ## Configurar la importación de datos en [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-Después de conectar [!DNL Platform] al almacenamiento [!DNL SFTP], debe configurar la importación de datos desde su ubicación de almacenamiento en [!DNL Oracle Responsys]. Para obtener información sobre cómo lograr esto, consulte [Importación de contactos o cuentas](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) en [!DNL Oracle Responsys Help Center].
+Después de conectar [!DNL Platform] a su [!DNL SFTP] , debe configurar la importación de datos desde la ubicación de almacenamiento en [!DNL Oracle Responsys]. Para obtener información sobre cómo hacerlo, consulte [Importación de contactos o cuentas](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) en el [!DNL Oracle Responsys Help Center].

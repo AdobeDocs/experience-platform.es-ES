@@ -3,9 +3,9 @@ keywords: destino de almacenamiento en la nube;almacenamiento en la nube
 title: Resumen de destinos de Cloud Storage
 description: Adobe Experience Platform puede enviar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Adobe Experience Platform puede entregar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores para [!DNL Amazon S3], [!DNL Azure Blob] y SFTP. Para los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] , los datos se transmiten fuera del Experience Platform en formato [!DNL JSON] .
+Adobe Experience Platform puede entregar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV para [!DNL Amazon S3], [!DNL Azure Blob] y SFTP. Para [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] destinos, los datos se transmiten fuera del Experience Platform [!DNL JSON] formato.
 
 ![Destinos de almacenamiento en la nube de Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -30,14 +30,14 @@ Adobe Experience Platform admite los siguientes destinos de almacenamiento en la
 
 ## Conectarse a un nuevo destino de almacenamiento en la nube {#connect-destination}
 
-Para enviar segmentos a destinos de almacenamiento en la nube para sus campañas, Platform debe conectarse primero al destino. Consulte el [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
+Para enviar segmentos a destinos de almacenamiento en la nube para sus campañas, Platform debe conectarse primero al destino. Consulte la [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
 
 
 ## Uso de macros para crear una carpeta en su ubicación de almacenamiento {#use-macros}
 
 >[!NOTE]
 >
-> La funcionalidad descrita en esta sección está disponible actualmente solo para destinos de [Amazon S3](amazon-s3.md).
+> La funcionalidad descrita en esta sección está disponible actualmente para [Amazon S3](amazon-s3.md) solo destinos.
 
 Para crear una carpeta personalizada por archivo de segmento en su ubicación de almacenamiento, puede utilizar macros en el campo de entrada de ruta de carpeta. Inserte las macros al final del campo de entrada, como se muestra a continuación.
 
@@ -62,4 +62,4 @@ Ruta de carpeta en su ubicación de almacenamiento: `acme/campaigns/2021/Luxury 
 
 ## Tipo de exportación de datos {#export-type}
 
-Los destinos de almacenamiento en la nube admiten **exportación basada en perfiles**. Esto significa que está exportando detalles sobre las personas en la audiencia. Estos detalles son necesarios para la personalización y pueden incluir atributos, eventos, suscripciones a segmentos, etc.
+Compatibilidad con destinos de almacenamiento en la nube **Exportación basada en perfiles**. Esto significa que está exportando detalles sobre las personas en la audiencia. Estos detalles son necesarios para la personalización y pueden incluir atributos, eventos, suscripciones a segmentos, etc.

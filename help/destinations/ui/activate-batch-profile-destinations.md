@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: 99835d0b3d8ab64422be7f878cf556ac8890b123
+exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
+source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1958'
 ht-degree: 1%
 
 ---
-
 
 # Activar datos de audiencia en destinos de exportación de perfiles en lote
 
@@ -21,15 +21,15 @@ En este artículo se explica el flujo de trabajo necesario para activar los dato
 
 ## Requisitos previos {#prerequisites}
 
-Para activar los datos en los destinos, debe haber [conectado correctamente a un destino](./connect-destination.md). Si aún no lo ha hecho, vaya al [catálogo de destinos](../catalog/overview.md), busque los destinos admitidos y configure el destino que desea utilizar.
+Para activar datos en destinos, debe haber [conectado a un destino](./connect-destination.md). Si aún no lo ha hecho, vaya a la [catálogo de destinos](../catalog/overview.md), busque los destinos compatibles y configure el destino que desea utilizar.
 
 ## Seleccione el destino {#select-destination}
 
-1. Vaya a **[!UICONTROL Connections > Destinations]** y seleccione la pestaña **[!UICONTROL Catalog]**.
+1. Vaya a **[!UICONTROL Conexiones > Destinos]** y seleccione **[!UICONTROL Catálogo]** pestaña .
 
    ![Ficha Catálogo de destino](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. Seleccione **[!UICONTROL Activar segmentos]** en la tarjeta correspondiente al destino donde desee activar los segmentos, como se muestra en la imagen siguiente.
+1. Select **[!UICONTROL Activar segmentos]** en la tarjeta correspondiente al destino en el que desea activar los segmentos, como se muestra en la imagen siguiente.
 
    ![Botón Activar segmentos](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
 
@@ -37,7 +37,7 @@ Para activar los datos en los destinos, debe haber [conectado correctamente a un
 
    ![Seleccionar destino](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
-1. Cambie a la siguiente sección para [seleccionar sus segmentos](#select-segments).
+1. Mover a la siguiente sección a [seleccione sus segmentos](#select-segments).
 
 ## Seleccione los segmentos {#select-segments}
 
@@ -48,7 +48,7 @@ Utilice las casillas de verificación a la izquierda de los nombres de los segme
 
 ## Programar exportación de segmentos {#scheduling}
 
-[!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube en forma de  [!DNL CSV] archivos. En la página **[!UICONTROL Scheduling]** puede configurar la programación y los nombres de archivo para cada segmento que exporte. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
+[!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube en forma de [!DNL CSV] archivos. En el **[!UICONTROL Programación]** , puede configurar la programación y los nombres de archivo para cada segmento que exporte. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
 
 >[!IMPORTANT]
 > 
@@ -56,37 +56,37 @@ Utilice las casillas de verificación a la izquierda de los nombres de los segme
 >
 >Los nombres de archivos divididos se añaden con un número que indica que el archivo forma parte de una exportación más grande, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Seleccione el botón **[!UICONTROL Create schedule]** correspondiente al segmento que desea enviar al destino.
+Seleccione el **[!UICONTROL Crear programación]** correspondiente al segmento que desea enviar al destino.
 
 ![Botón Crear programación](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exportar archivos completos {#export-full-files}
 
-Seleccione **[!UICONTROL Exportar archivos completos]** para almacenar en déclencheur la exportación de un archivo que contenga una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado.
+Select **[!UICONTROL Exportar archivos completos]** para almacenar en déclencheur la exportación de un archivo que contenga una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado.
 
 ![Exportar archivos completos](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. Utilice el selector **[!UICONTROL Frequency]** para seleccionar la frecuencia de exportación:
+1. Utilice la variable **[!UICONTROL Frecuencia]** para seleccionar la frecuencia de exportación:
 
    * **[!UICONTROL Una vez]**: programe una única exportación de archivos completos bajo demanda.
    * **[!UICONTROL Diario]**: programar exportaciones de archivos completas una vez al día, todos los días, en el momento especificado.
 
-1. Utilice el selector **[!UICONTROL Time]** para elegir la hora del día, en formato [!DNL UTC], en la que se debe realizar la exportación.
+1. Utilice la variable **[!UICONTROL Tiempo]** para elegir la hora del día, en [!DNL UTC] , cuándo se debe realizar la exportación.
 
    >[!IMPORTANT]
    >
    >Debido a la forma en que se configuran los procesos de Experience Platform internos, es posible que la primera exportación incremental o completa de archivos no contenga todos los datos de relleno. <br> <br> Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, Adobe recomienda configurar la hora de exportación del primer archivo después de las 22 PM GMT del día siguiente. Esta limitación se abordará en futuras versiones.
 
-1. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
+1. Utilice la variable **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
    >[!TIP]
    >
    > Para las exportaciones diarias, configure la fecha de inicio y finalización para que coincidan con la duración de las campañas en las plataformas descendentes.
-1. Seleccione **[!UICONTROL Crear]** para guardar la programación.
+1. Select **[!UICONTROL Crear]** para guardar la programación.
 
 
 ### Exportar archivos incrementales {#export-incremental-files}
 
-Seleccione **[!UICONTROL Exportar archivos incrementales]** para almacenar en déclencheur una exportación en la que el primer archivo sea una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado y los archivos posteriores sean cualificaciones de perfil incrementales desde la exportación anterior.
+Select **[!UICONTROL Exportar archivos incrementales]** para almacenar en déclencheur una exportación en la que el primer archivo es una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado y los archivos posteriores son cualificaciones de perfil incrementales desde la exportación anterior.
 
 >[!IMPORTANT]
 >
@@ -94,22 +94,22 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para almacenar en d�
 
 ![Exportar archivos incrementales](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. Utilice el selector **[!UICONTROL Frequency]** para seleccionar la frecuencia de exportación:
+1. Utilice la variable **[!UICONTROL Frecuencia]** para seleccionar la frecuencia de exportación:
 
    * **[!UICONTROL Diario]**: programar exportaciones de archivos incrementales una vez al día, todos los días, en el momento especificado.
    * **[!UICONTROL Por hora]**: programar exportaciones de archivos incrementales cada 3, 6, 8 o 12 horas.
 
-1. Utilice el selector **[!UICONTROL Time]** para elegir la hora del día, en formato [!DNL UTC], en la que se debe realizar la exportación.
+1. Utilice la variable **[!UICONTROL Tiempo]** para elegir la hora del día, en [!DNL UTC] , cuándo se debe realizar la exportación.
 
    >[!IMPORTANT]
    >
    >Debido a la forma en que se configuran los procesos de Experience Platform internos, es posible que la primera exportación incremental o completa de archivos no contenga todos los datos de relleno. <br> <br> Para garantizar una exportación de datos de relleno completa y actualizada tanto para archivos completos como incrementales, Adobe recomienda configurar la hora de exportación del primer archivo después de las 22 PM GMT del día siguiente. Esta limitación se abordará en futuras versiones.
 
-1. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
+1. Utilice la variable **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que se debe realizar la exportación.
    >[!TIP]
    >
    >Configure la fecha de inicio y finalización para que coincidan con la duración de las campañas en las plataformas descendentes.
-1. Seleccione **[!UICONTROL Crear]** para guardar la programación.
+1. Select **[!UICONTROL Crear]** para guardar la programación.
 
 ### Configurar nombres de archivo {#file-names}
 
@@ -125,15 +125,15 @@ En el editor de nombres de archivo, puede seleccionar diferentes componentes par
 
 El nombre de destino y el ID de segmento no se pueden eliminar de los nombres de archivo. Además de esto, puede agregar lo siguiente:
 
-* **[!UICONTROL Nombre]** del segmento: Puede anexar el nombre del segmento al nombre del archivo.
-* **[!UICONTROL Fecha y hora]**: Seleccione entre añadir un  `MMDDYYYY_HHMMSS` formato o una marca de tiempo de 10 dígitos Unix del momento en que se generan los archivos. Elija una de estas opciones si desea que los archivos tengan un nombre de archivo dinámico generado con cada exportación incremental.
-* **[!UICONTROL Texto]** personalizado: Agregue texto personalizado a los nombres de archivo.
+* **[!UICONTROL Nombre del segmento]**: Puede anexar el nombre del segmento al nombre del archivo.
+* **[!UICONTROL Fecha y hora]**: Seleccione entre añadir una `MMDDYYYY_HHMMSS` o una marca de tiempo de Unix de 10 dígitos del momento en que se generan los archivos. Elija una de estas opciones si desea que los archivos tengan un nombre de archivo dinámico generado con cada exportación incremental.
+* **[!UICONTROL Texto personalizado]**: Agregue texto personalizado a los nombres de archivo.
 
-Seleccione **[!UICONTROL Aplicar cambios]** para confirmar la selección.
+Select **[!UICONTROL Aplicar cambios]** para confirmar la selección.
 
 >[!IMPORTANT]
 > 
->Si no selecciona el componente **[!UICONTROL Fecha y hora]**, los nombres de archivo serán estáticos y el nuevo archivo exportado sobrescribirá el archivo anterior en su ubicación de almacenamiento con cada exportación. Cuando se ejecuta un trabajo de importación recurrente desde una ubicación de almacenamiento a una plataforma de marketing por correo electrónico, esta es la opción recomendada.
+>Si no selecciona el **[!UICONTROL Fecha y hora]** , los nombres de archivo serán estáticos y el nuevo archivo exportado sobrescribirá el archivo anterior en su ubicación de almacenamiento con cada exportación. Cuando se ejecuta un trabajo de importación recurrente desde una ubicación de almacenamiento a una plataforma de marketing por correo electrónico, esta es la opción recomendada.
 
 Una vez que haya terminado de configurar todos los segmentos, seleccione **[!UICONTROL Siguiente]** para continuar.
 
@@ -142,15 +142,15 @@ Una vez que haya terminado de configurar todos los segmentos, seleccione **[!UIC
 Para los destinos basados en perfiles, debe seleccionar los atributos de perfil que desea enviar al destino de destino.
 
 
-1. En la página **[!UICONTROL Select attributes]**, seleccione **[!UICONTROL Add new field]**.
+1. En el **[!UICONTROL Seleccionar atributos]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
 
    ![Añadir nueva asignación](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
-1. Seleccione la flecha a la derecha de la entrada **[!UICONTROL Schema field]**.
+1. Seleccione la flecha a la derecha del **[!UICONTROL Campo Esquema]** entrada.
 
    ![Seleccionar campo de origen](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. En la página **[!UICONTROL Select field]**, seleccione los atributos XDM que desea enviar al destino y, a continuación, elija **[!UICONTROL Select]**.
+1. En el **[!UICONTROL Seleccionar campo]** , seleccione los atributos XDM que desea enviar al destino y, a continuación, elija **[!UICONTROL Select]**.
 
    ![Seleccionar página de campo de origen](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
@@ -160,9 +160,9 @@ Para los destinos basados en perfiles, debe seleccionar los atributos de perfil 
 >
 > Adobe Experience Platform prefiere la selección con cuatro atributos recomendados y utilizados comúnmente del esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-Las exportaciones de archivos variarán de las siguientes maneras, en función de si se selecciona `segmentMembership.status`:
-* Si se selecciona el campo `segmentMembership.status`, los archivos exportados incluyen **[!UICONTROL miembros activos]** en la instantánea completa inicial y miembros **[!UICONTROL activos]** y **[!UICONTROL caducados]** en las exportaciones incrementales posteriores.
-* Si el campo `segmentMembership.status` no está seleccionado, los archivos exportados incluyen solo miembros **[!UICONTROL activos]** en la instantánea completa inicial y en las exportaciones incrementales posteriores.
+Las exportaciones de archivos variarán de las siguientes maneras, en función de si `segmentMembership.status` está seleccionada:
+* Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales posteriores.
+* Si la variable `segmentMembership.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
 
 ![atributos recomendados](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
 
@@ -176,11 +176,11 @@ Las exportaciones de archivos variarán de las siguientes maneras, en función d
 
 Un atributo obligatorio es una casilla de verificación habilitada por el usuario que garantiza que todos los registros de perfil contengan el atributo seleccionado. Por ejemplo: todos los perfiles exportados contienen una dirección de correo electrónico. &#x200B;
 
-Puede marcar los atributos como obligatorios para asegurarse de que [!DNL Platform] exporta solo los perfiles que incluyen el atributo específico. Como resultado, se puede utilizar como una forma adicional de filtrado. Marcar un atributo como obligatorio es **no** obligatorio.
+Puede marcar los atributos como obligatorios para asegurarse de que [!DNL Platform] exporta solo los perfiles que incluyen el atributo específico. Como resultado, se puede utilizar como una forma adicional de filtrado. Marcar un atributo como obligatorio es **not** obligatorio.
 
 Al no seleccionar un atributo obligatorio, se exportan todos los perfiles cualificados independientemente de sus atributos.
 
-Se recomienda que uno de los atributos sea un [identificador único](../../destinations/catalog/email-marketing/overview.md#identity) del esquema. Para obtener más información sobre los atributos obligatorios, consulte la sección de identidad en la documentación [Destinos de marketing por correo electrónico](../../destinations/catalog/email-marketing/overview.md#identity) .
+Se recomienda que uno de los atributos sea un [identificador único](../../destinations/catalog/email-marketing/overview.md#identity) del esquema. Para obtener más información sobre los atributos obligatorios, consulte la sección de identidad en la sección [Destinos de marketing por correo electrónico](../../destinations/catalog/email-marketing/overview.md#identity) documentación.
 
 ### Claves de deduplicación {#deduplication-keys}
 
@@ -197,8 +197,8 @@ Las claves de deduplicación eliminan la posibilidad de tener varios registros d
 Existen tres maneras de utilizar las claves de deduplicación en [!DNL Platform]:
 
 * Uso de un solo área de nombres de identidad como [!UICONTROL clave de deduplicación]
-* Uso de un atributo de perfil único de un perfil [!DNL XDM] como [!UICONTROL clave de deduplicación]
-* Uso de una combinación de dos atributos de perfil de un perfil [!DNL XDM] como clave compuesta
+* Uso de un atributo de perfil único de un [!DNL XDM] perfil como [!UICONTROL clave de deduplicación]
+* Uso de una combinación de dos atributos de perfil de un [!DNL XDM] perfil como clave compuesta
 
 >[!IMPORTANT]
 >
@@ -292,7 +292,7 @@ Si no se utiliza ninguna deduplicación, el archivo de exportación contendría 
 
 ### Caso de uso de deduplicación 2: deduplicación basada en el área de nombres de identidad {#deduplication-use-case-2}
 
-Suponiendo que el espacio de nombres [!DNL Email] deduplique, el archivo de exportación contendría las siguientes entradas. El Perfil B es el último que cumple los requisitos para el segmento, por lo que es el único que se exporta.
+Suponiendo que la deduplicación se realice mediante la función [!DNL Email] , el archivo de exportación contendría las siguientes entradas. El Perfil B es el último que cumple los requisitos para el segmento, por lo que es el único que se exporta.
 
 | Correo electrónico* | personalEmail | firstName | lastName |
 |---|---|---|---|
@@ -301,7 +301,7 @@ Suponiendo que el espacio de nombres [!DNL Email] deduplique, el archivo de expo
 
 ### Caso de uso de deduplicación 3: deduplicación basada en un único atributo de perfil {#deduplication-use-case-3}
 
-Suponiendo que el atributo `personal Email` deduplique, el archivo de exportación contendría la siguiente entrada. El Perfil B es el último que cumple los requisitos para el segmento, por lo que es el único que se exporta.
+Suponiendo que la deduplicación se realice mediante la función `personal Email` , el archivo de exportación contendría la siguiente entrada. El Perfil B es el último que cumple los requisitos para el segmento, por lo que es el único que se exporta.
 
 | personalEmail* | firstName | lastName |
 |---|---|---|
@@ -310,7 +310,7 @@ Suponiendo que el atributo `personal Email` deduplique, el archivo de exportaci�
 
 ### Caso de uso de deduplicación 4: deduplicación basada en dos atributos de perfil {#deduplication-use-case-4}
 
-Suponiendo que la deduplicación se realice mediante la clave compuesta `personalEmail + lastName`, el archivo de exportación contendrá las siguientes entradas.
+Suponiendo la deduplicación por la clave compuesta `personalEmail + lastName`, el archivo de exportación contendría las siguientes entradas.
 
 | personalEmail* | lastName* | firstName |
 |---|---|---|
@@ -318,7 +318,7 @@ Suponiendo que la deduplicación se realice mediante la clave compuesta `persona
 | johndoe@example.com | Doe | John |
 
 
-Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID] o una dirección de correo electrónico como clave de deduplicación para garantizar que todos los registros de perfil se identifiquen de forma única.
+Adobe recomienda seleccionar un área de nombres de identidad como un [!DNL CRM ID] o dirección de correo electrónico como clave de deduplicación, para garantizar que todos los registros de perfil se identifiquen de forma única.
 
 >[!NOTE]
 > 
@@ -328,26 +328,26 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 >* Los campos se configuran como atributos proyectados para el destino de destino.
 
 >
-> Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, en el paso de revisión se mostrará una infracción de la política de uso de datos. Para obtener más información, consulte [Control de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, se le mostraría una infracción de la política de uso de datos en el paso de revisión. Para obtener más información, consulte [Control de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ## Consulte {#review}
 
-En la página **[!UICONTROL Revisar]**, puede ver un resumen de su selección. Seleccione **[!UICONTROL Cancelar]** para desglosar el flujo, **[!UICONTROL Atrás]** para modificar la configuración o **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
+En el **[!UICONTROL Consulte]** , puede ver un resumen de su selección. Select **[!UICONTROL Cancelar]** para desglosar el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
 
 >[!IMPORTANT]
 >
->En este paso, Adobe Experience Platform comprueba las infracciones de la directiva de uso de datos. A continuación se muestra un ejemplo en el que se infringe una política. No puede completar el flujo de trabajo de activación de segmentos hasta que no haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de políticas, consulte [Aplicación de políticas](../../rtcdp/privacy/data-governance-overview.md#enforcement) en la sección de documentación de control de datos.
+>En este paso, Adobe Experience Platform comprueba las infracciones de la directiva de uso de datos. A continuación se muestra un ejemplo en el que se infringe una política. No puede completar el flujo de trabajo de activación de segmentos hasta que no haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de políticas, consulte [Aplicación de políticas](../../rtcdp/privacy/data-governance-overview.md#enforcement) en la sección documentación de control de datos .
 
 ![violación de la política de datos](../assets/common/data-policy-violation.png)
 
-Si no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finish]** para confirmar la selección y empezar a enviar datos al destino.
+Si no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
 
 ![Consulte](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ## Verificación de la activación de segmentos {#verify}
 
 
-Para destinos de marketing por correo electrónico y destinos de almacenamiento en la nube, Adobe Experience Platform crea un archivo `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Espere a que se cree un nuevo archivo en la ubicación de almacenamiento todos los días. El formato de archivo predeterminado es:
+Para destinos de marketing por correo electrónico y destinos de almacenamiento en la nube, Adobe Experience Platform crea un `.csv` en la ubicación de almacenamiento proporcionada. Espere a que se cree un nuevo archivo en la ubicación de almacenamiento todos los días. El formato de archivo predeterminado es:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Los archivos que recibiría en tres días consecutivos podrían tener este aspecto:
@@ -358,4 +358,4 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004090
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-La presencia de estos archivos en su ubicación de almacenamiento es la confirmación de que la activación se ha realizado correctamente. Para comprender cómo se estructuran los archivos exportados, puede [descargar un archivo .csv de muestra](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). Este archivo de ejemplo incluye los atributos de perfil `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` y `personalEmail.address`.
+La presencia de estos archivos en su ubicación de almacenamiento es la confirmación de que la activación se ha realizado correctamente. Para comprender la estructura de los archivos exportados, puede [descargar un archivo .csv de ejemplo](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). Este archivo de ejemplo incluye los atributos de perfil `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`y `personalEmail.address`.

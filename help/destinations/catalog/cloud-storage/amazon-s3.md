@@ -1,11 +1,11 @@
 ---
 keywords: Amazon S3;destino S3;s3;amazon s3
 title: Conexión Amazon S3
-description: Cree una conexión saliente en directo al almacenamiento de Amazon Web Services (AWS) S3 para exportar periódicamente archivos de datos CSV o delimitados por tabuladores de Adobe Experience Platform a sus propios bloques S3.
+description: Cree una conexión saliente en directo al almacenamiento de Amazon Web Service (AWS) S3 para exportar periódicamente archivos de datos CSV de Adobe Experience Platform a sus propios bloques S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
@@ -14,37 +14,37 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Cree una conexión saliente en directo a su almacenamiento [!DNL Amazon Web Services] (AWS) S3 para exportar periódicamente archivos de datos CSV o delimitados por tabuladores desde Adobe Experience Platform a sus propios bloques S3.
+Cree una conexión de salida activa con su [!DNL Amazon Web Services] (AWS) Almacenamiento S3 para exportar periódicamente archivos de datos CSV de Adobe Experience Platform a sus propios bloques S3.
 
 ## Tipo de exportación {#export-type}
 
-**Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono y apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo de activación de  [destino](../../ui/activate-segment-streaming-destinations.md#mapping).
+**Basado en perfiles** - está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal y como se elige en la pantalla de atributos seleccionados del [flujo de trabajo de activación de destino](../../ui/activate-segment-streaming-destinations.md#mapping).
 
 ![Tipo de exportación basado en perfiles de Amazon S3](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## Conectarse al destino {#connect}
 
-Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 ### Parámetros de conexión {#parameters}
 
-Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
+While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 
-* **[!DNL Amazon S3]clave** de acceso y clave  **[!DNL Amazon S3]secreta**: En  [!DNL Amazon S3], genere un  `access key - secret access key` par para conceder a Platform acceso a su  [!DNL Amazon S3] cuenta. Obtenga más información en la [documentación de los servicios web de Amazon](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]clave de acceso** y **[!DNL Amazon S3]clave secreta**: En [!DNL Amazon S3], genere un `access key - secret access key` par para conceder acceso a Platform a su [!DNL Amazon S3] cuenta. Obtenga más información en la [Documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Nombre]**: introduzca un nombre que le ayudará a identificar este destino.
 * **[!UICONTROL Descripción]**: introduzca una descripción de este destino.
-* **[!UICONTROL Nombre]** del depósito: introduzca el nombre del  [!DNL Amazon S3] contenedor que usará este destino.
-* **[!UICONTROL Ruta de acceso]** de la carpeta: introduzca la ruta a la carpeta de destino que alojará los archivos exportados.
+* **[!UICONTROL Nombre del depósito]**: introduzca el nombre del [!DNL Amazon S3] contenedor que utilizará este destino.
+* **[!UICONTROL Ruta de carpeta]**: introduzca la ruta a la carpeta de destino que alojará los archivos exportados.
 
-Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
+Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como un [!DNL Base64] cadena codificada.
 
 >[!TIP]
 >
->En el flujo de trabajo de conexión de destino, puede crear una carpeta personalizada en el almacenamiento de Amazon S3 por archivo de segmento exportado. Lea [Use macros para crear una carpeta en su ubicación de almacenamiento](overview.md#use-macros) para obtener instrucciones.
+>En el flujo de trabajo de conexión de destino, puede crear una carpeta personalizada en el almacenamiento de Amazon S3 por archivo de segmento exportado. Lectura [Utilice macros para crear una carpeta en su ubicación de almacenamiento](overview.md#use-macros) para obtener instrucciones.
 
-### Permisos [!DNL Amazon S3] requeridos {#required-s3-permission}
+### Requerido [!DNL Amazon S3] permissions {#required-s3-permission}
 
-Para conectar y exportar datos correctamente a su ubicación de almacenamiento [!DNL Amazon S3], cree un usuario de Administración de identidad y acceso (IAM) para [!DNL Platform] en [!DNL Amazon S3] y asigne permisos para las siguientes acciones:
+Para conectar y exportar datos correctamente a su [!DNL Amazon S3] ubicación de almacenamiento, cree un usuario de Identity and Access Management (IAM) para [!DNL Platform] en [!DNL Amazon S3] y asigne permisos para las siguientes acciones:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -65,8 +65,8 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de perfiles en lote](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
 ## Datos exportados {#exported-data}
 
-Para destinos [!DNL Amazon S3], [!DNL Platform] crea un archivo `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Activación de datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) en el tutorial de activación de segmentos.
+Para [!DNL Amazon S3] destinos, [!DNL Platform] crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Activar datos de audiencia en destinos de exportación de perfiles en lote](../../ui/activate-batch-profile-destinations.md) en el tutorial de activación de segmentos.
