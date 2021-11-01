@@ -1,10 +1,11 @@
 ---
 title: Notas de la versión de la extensión Adobe Target v2
-description: Últimas notas de la versión de la extensión de etiqueta Adobe Target v2 en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Notas de la versión de la extensión de etiquetas de Adobe Target v2 en Adobe Experience Platform.
+exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
+source-git-commit: 42a1ceac3de2244bef858bf03eabe4910ae597f8
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 62%
+source-wordcount: '589'
+ht-degree: 94%
 
 ---
 
@@ -13,6 +14,12 @@ ht-degree: 62%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 28 de octubre de 2021
+
+### Extensión 0.16.0 de la versión 2.0 de Adobe Target
+
+- Se ha actualizado para admitir la versión 2.7.0 de at.js , que ahora está disponible para su descarga desde Adobe Target.
 
 ## 20 de julio de 2021
 
@@ -24,19 +31,19 @@ ht-degree: 62%
 
 ### Extensión 0.15.0 de la versión 2.0 de Adobe Target
 
-- Agregue un atributo seguro a las cookies siempre que la configuración de at.js secureOnly esté establecida en true
+- Se añade un atributo seguro a las cookies cada vez que la configuración de at.js secureOnly se establece en verdadera
 - Los tokens de respuesta ya están disponibles al utilizar `triggerView()`
-- Se ha corregido un error relacionado con el evento `CONTENT_RENDERING_NO_OFFERS` . Ahora se activa correctamente cuando no hay contenido devuelto desde Target
-- Los detalles de las métricas de clics de A4T se devuelven correctamente al usar solicitudes de recuperación previa
+- Se ha corregido un error relacionado con el evento `CONTENT_RENDERING_NO_OFFERS`. Ahora se activa correctamente cuando no hay contenido devuelto desde Target
+- Los detalles de las métricas de clic de A4T se devuelven correctamente al usar solicitudes de captura previa.
 - La generación UUID ya no utiliza `Math.random()`, sino que depende de `window.crypto`
-- `sessionId` la caducidad de la cookie se amplía correctamente en cada llamada de red
-- SPA inicialización de la caché de vista ahora se gestiona correctamente y respeta la configuración `viewsEnable`
+- La caducidad de la cookie `sessionId` se amplía correctamente en cada llamada de red
+- La inicialización de la caché de la vista SPA ahora se gestiona correctamente y respeta la configuración `viewsEnable`
 
 ## 2 de junio de 2021
 
 ### Extensión 0.14.2 de la versión 2.0 de Adobe Target
 
-- Se ha corregido un error por el que el paquete final contenía dos versiones de at.js, una con la opción de decisión en el dispositivo y otra sin ella.
+- Se ha corregido el error del paquete de final que contenía dos versiones de at.js, una con Toma de decisiones en el dispositivo y otra sin esta opción.
 
 ## 19 de mayo de 2021
 
@@ -57,7 +64,7 @@ ht-degree: 62%
 ### Extensión 0.13.7 de la versión 2.0 de Adobe Target
 
 - Se ha corregido un problema por el que `targetPageParams` se incluía en las solicitudes de mbox. `targetPageParams` solo debe incluirse en las solicitudes de `pageLoad`.
-- Se ha corregido un problema con los objetos globales de documento y ventana en la extensión de etiqueta al reemplazar las dependencias de objeto globales por referencias directas a ellos.
+- Se ha corregido un problema con los objetos globales de documento y ventana en la extensión de etiqueta al reemplazar las dependencias de objeto global por referencias directas a ellos.
 - Se ha actualizado at.js a la versión 2.4.1.
 
 ## 25 de enero de 2021
@@ -89,7 +96,7 @@ ht-degree: 62%
 ### Extensión 0.13.2 de la versión 2.0 de Adobe Target
 
 - Se ha corregido un problema que se producía al usar CNAME y el reemplazo perimetral, por el cual at.js 1.x podía crear, de manera incorrecta, el dominio del servidor, lo que provocaba un error en la solicitud de Target.
-- Se ha corregido un problema en el cual, al usar la extensión de etiqueta v2 para las extensiones de etiqueta Target y Adobe Analytics, Target demoraba la llamada de sendBeacon de Analytics.
+- Se ha corregido un problema en el cual, al usar la extensión de etiquetas v2 para las extensiones de etiquetas Target y Adobe Analytics, Target demoraba la llamada de sendBeacon de Analytics.
 - Se ha mejorado la configuración de `deviceIdLifetime` al permitir que sea reemplazable mediante `targetGlobalSettings`.
 
 ## 25 de marzo de 2020
@@ -109,7 +116,7 @@ ht-degree: 62%
 - Anteriormente, la biblioteca de ECID realizaba dos llamadas de bloqueo antes de que at.js pudiera recuperar experiencias. Esto se ha reducido a una sola llamada, lo que mejora significativamente el rendimiento.
 
 >[!NOTE]
->Actualice la extensión de la etiqueta ECID a la versión 4.4.1 para aprovechar esta mejora de rendimiento.
+>Actualice la extensión de etiqueta de ECID a la versión 4.4.1 para disfrutar de esta mejora de rendimiento.
 
 ## 31 de julio de 2019
 
@@ -122,4 +129,4 @@ ht-degree: 62%
 
 ### Extensión 0.11.0 de la versión 2.0 de Adobe Target
 
-- Nueva extensión de etiqueta compatible con at.js 2.1
+- Nueva extensión de etiquetas compatible con at.js 2.1
