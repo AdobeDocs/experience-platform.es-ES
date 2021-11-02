@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Azure Data Lake Storage Gen2 mediante la API de servicio de flujo.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
+source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Para [!DNL Flow Service] para conectarse a ADLS Gen2, debe proporcionar valores 
 | `servicePrincipalId` | El ID de cliente de la aplicación. |
 | `servicePrincipalKey` | La clave de la aplicación. |
 | `tenant` | La información del inquilino que contiene su aplicación. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para ADLS Gen2 es: `0ed90a81-07f4-4586-8190-b40eccef1c5a`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para ADLS Gen2 es: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
 
 Para obtener más información sobre estos valores, consulte [este documento ADLS Gen2](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
@@ -83,7 +83,7 @@ curl -X POST \
             }
         },
         "connectionSpec": {
-            "id": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
             "version": "1.0"
         }
     }'
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | El ID de principal de servicio de su cuenta de ADLS Gen2. |
 | `auth.params.servicePrincipalKey` | La clave principal de servicio de su cuenta ADLS Gen2. |
 | `auth.params.tenant` | La información del inquilino de su cuenta de ADLS Gen2. |
-| `connectionSpec.id` | El ID de especificación de conexión ADLS Gen2: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
+| `connectionSpec.id` | El ID de especificación de conexión ADLS Gen2: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
 
 **Respuesta**
 
