@@ -5,9 +5,9 @@ title: Punto final de la API de métricas
 topic-legacy: developer guide
 description: Obtenga información sobre cómo recuperar métricas de observabilidad en Experience Platform mediante la API de Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
+source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1866'
 ht-degree: 6%
 
 ---
@@ -18,7 +18,7 @@ Las métricas de capacidad de observación proporcionan información sobre las e
 
 >[!NOTE]
 >
->El punto final (V1) de las métricas de la versión anterior ya no se utiliza. Este documento se centra exclusivamente en la versión actual (V2). Para obtener más información sobre el extremo V1 para implementaciones heredadas, consulte la [Referencia de API](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>La versión anterior del punto final de métricas (V1) ha quedado obsoleta. Este documento se centra exclusivamente en la versión actual (V2). Para obtener más información sobre el extremo V1 para implementaciones heredadas, consulte la [Referencia de API](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## Primeros pasos
 
