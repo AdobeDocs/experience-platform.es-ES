@@ -5,7 +5,7 @@ title: (Beta) Activar segmentos de audiencia mediante la API de activación ad h
 description: Este artículo ilustra el flujo de trabajo completo para activar segmentos mediante la API de activación ad hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: d5b383ec4e9f6e2f05a0e5834e3998789a67ce32
+source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 2%
@@ -124,9 +124,9 @@ Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo
 
 Una vez completado el trabajo de exportación de segmentos, puede almacenar en déclencheur la activación.
 
->[!WARNING]
+>[!NOTE]
 >
->Puede activar un máximo de 50 segmentos por cada trabajo de activación ad-hoc. Si intenta activar más segmentos, el trabajo fallará.
+>Puede activar un máximo de 20 segmentos por cada trabajo de activación ad-hoc. Si intenta activar más segmentos, el trabajo fallará.
 
 ### Solicitud
 
