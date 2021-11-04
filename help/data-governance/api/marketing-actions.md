@@ -5,22 +5,22 @@ title: Punto final de la API de acciones de marketing
 topic-legacy: developer guide
 description: Una acción de marketing, en el contexto de la Administración de datos de Adobe Experience Platform, es una acción que realiza un consumidor de datos de Experience Platform, para la cual es necesario comprobar si hay infracciones de las políticas de uso de datos.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '732'
 ht-degree: 3%
 
 ---
 
 # Punto final de las acciones de marketing
 
-Una acción de marketing, en el contexto de Adobe Experience Platform [!DNL Data Governance], es una acción que realiza un [!DNL Experience Platform] consumidor de datos, para la cual es necesario comprobar si hay infracciones de las políticas de uso de datos.
+Una acción de marketing, en el contexto de la Administración de datos de Adobe Experience Platform, es una acción que [!DNL Experience Platform] toma del consumidor de datos, para lo cual es necesario comprobar si hay infracciones de las políticas de uso de datos.
 
-Puede administrar las acciones de marketing para su organización mediante el extremo `/marketingActions` de la API del servicio de directivas.
+Puede administrar las acciones de marketing de su organización mediante la `/marketingActions` en la API del servicio de directivas.
 
 ## Primeros pasos
 
-Los extremos de API utilizados en esta guía forman parte de la [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
+Los extremos de API que se utilizan en esta guía forman parte del [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
 
 ## Recuperar una lista de acciones de marketing {#list}
 
@@ -48,7 +48,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de cada acción de marketing recuperada, incluidas sus `name` y `href`. El valor `href` se utiliza para identificar la acción de marketing al [crear una directiva de uso de datos](policies.md#create-policy).
+Una respuesta correcta devuelve los detalles de cada acción de marketing recuperada, incluida su `name` y `href`. La variable `href` se utiliza para identificar la acción de marketing cuando [creación de una directiva de uso de datos](policies.md#create-policy).
 
 ```json
 {
@@ -102,12 +102,12 @@ Una respuesta correcta devuelve los detalles de cada acción de marketing recupe
 | --- | --- |
 | `_page.count` | El número total de acciones de marketing devueltas. |
 | `children` | Matriz de objetos que contienen los detalles de las acciones de marketing recuperadas. |
-| `name` | Nombre de la acción de marketing, que actúa como su identificador único cuando [busca una acción de marketing específica](#lookup). |
-| `_links.self.href` | Una referencia URI para la acción de marketing, que se puede utilizar para completar la matriz `marketingActionsRefs` al [crear una directiva de uso de datos](policies.md#create-policy). |
+| `name` | El nombre de la acción de marketing, que actúa como su identificador único cuando [buscar una acción de marketing específica](#lookup). |
+| `_links.self.href` | Una referencia URI para la acción de marketing, que se puede utilizar para completar la variable `marketingActionsRefs` matriz cuando [creación de una directiva de uso de datos](policies.md#create-policy). |
 
 ## Buscar una acción de marketing específica {#lookup}
 
-Puede consultar los detalles de una acción de marketing específica incluyendo la propiedad `name` de la acción de marketing en la ruta de una solicitud de GET.
+Busque los detalles de una acción de marketing específica incluyendo el informe `name` en la ruta de una solicitud de GET.
 
 **Formato de API**
 
@@ -118,7 +118,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | La propiedad `name` de la acción de marketing que desea buscar. |
+| `{MARKETING_ACTION_NAME}` | La variable `name` propiedad de la acción de marketing que desea buscar. |
 
 **Solicitud**
 
@@ -135,7 +135,7 @@ curl -X GET \
 
 **Respuesta**
 
-El objeto response contiene los detalles de la acción de marketing, incluida la ruta (`_links.self.href`) necesaria para hacer referencia a la acción de marketing al [definir una directiva de uso de datos](policies.md#create-policy) (`marketingActionsRefs`).
+El objeto response contiene los detalles de la acción de marketing, incluida la ruta (`_links.self.href`) necesario para hacer referencia a la acción de marketing cuando [definición de una directiva de uso de datos](policies.md#create-policy) (`marketingActionsRefs`).
 
 ```JSON
 {
@@ -172,7 +172,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva acción de marketing llamada `crossSiteTargeting`, siempre que en el sistema aún no exista una acción de marketing del mismo nombre. Si existe una acción de marketing `crossSiteTargeting`, esta llamada actualiza esa acción de marketing en función de las propiedades proporcionadas en la carga útil.
+La siguiente solicitud crea una nueva acción de marketing llamada `crossSiteTargeting`, siempre que en el sistema aún no exista una acción de marketing del mismo nombre. Si `crossSiteTargeting` existe una acción de marketing; esta llamada actualiza esa acción de marketing en función de las propiedades proporcionadas en la carga útil.
 
 ```shell
 curl -X PUT \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | Nombre de la acción de marketing que se va a crear o actualizar. <br><br>**IMPORTANTE**: Esta propiedad debe coincidir con  `{MARKETING_ACTION_NAME}` en la ruta de acceso; de lo contrario, se producirá un error HTTP 400 (solicitud incorrecta). En otras palabras, una vez creada una acción de marketing, su propiedad `name` no se puede cambiar. |
+| `name` | Nombre de la acción de marketing que se va a crear o actualizar. <br><br>**IMPORTANTE**: Esta propiedad debe coincidir con el `{MARKETING_ACTION_NAME}` en la ruta, de lo contrario, se producirá un error HTTP 400 (solicitud incorrecta). En otras palabras, una vez creada una acción de marketing, su `name` no se puede cambiar. |
 | `description` | Una descripción opcional para proporcionar un contexto adicional para la acción de marketing. |
 
 **Respuesta**

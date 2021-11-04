@@ -4,9 +4,9 @@ title: Guía de la interfaz de usuario de políticas de combinación
 type: Documentation
 description: Al unir datos de varias fuentes en Experience Platform, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear la vista unificada. Esta guía proporciona instrucciones paso a paso para trabajar con políticas de combinación mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e0a75a75e5dbb0318ec8785d887d7a156d28f5bd
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2319'
 ht-degree: 0%
 
 ---
@@ -193,7 +193,7 @@ Una vez que haya realizado los cambios necesarios, revise la directiva de combin
 
 ## Infracción de la política de control de datos
 
-Al crear o actualizar una directiva de combinación, se realiza una comprobación para determinar si la directiva de combinación infringe alguna de las políticas de uso de datos definidas por su organización. Las políticas de uso de datos forman parte de Adobe Experience Platform [!DNL Data Governance] y son reglas que describen los tipos de acciones de marketing que puede realizar, o de las que se le restringe, en una determinada [!DNL Platform] datos. Por ejemplo, si se utilizara una directiva de combinación para crear un segmento que se activara en un destino de terceros y su organización tuviera una directiva de uso de datos que impidiera la exportación de datos específicos a terceros, recibirá una **[!UICONTROL Se ha detectado una violación de la política de control de datos]** al intentar guardar la directiva de combinación.
+Al crear o actualizar una directiva de combinación, se realiza una comprobación para determinar si la directiva de combinación infringe alguna de las políticas de uso de datos definidas por su organización. Las políticas de uso de datos forman parte de la Administración de datos de Adobe Experience Platform y son reglas que describen los tipos de acciones de marketing que puede realizar, o de las que se le restringe, en función de determinadas [!DNL Platform] datos. Por ejemplo, si se utilizara una directiva de combinación para crear un segmento que se activara en un destino de terceros y su organización tuviera una directiva de uso de datos que impidiera la exportación de datos específicos a terceros, recibirá una **[!UICONTROL Se ha detectado una violación de la política de control de datos]** al intentar guardar la directiva de combinación.
 
 Esta notificación incluye una lista de las políticas de uso de datos que se han infringido y le permite ver los detalles de la infracción seleccionando una directiva en la lista. Al seleccionar una directiva violada, la variable **[!UICONTROL Línea de datos]** proporciona el motivo de la infracción y las activaciones afectadas, cada una de las cuales proporciona más detalles sobre cómo se ha violado la política de uso de datos.
 

@@ -4,16 +4,16 @@ title: Información general del perfil del cliente en tiempo real
 topic-legacy: guide
 description: El perfil del cliente en tiempo real combina datos de varias fuentes y proporciona acceso a esos datos en forma de perfiles de cliente individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1890'
 ht-degree: 0%
 
 ---
 
 # Información general del [!DNL Real-time Customer Profile]
 
-Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con [!DNL Real-time Customer Profile], puede ver una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes. Esta descripción general le ayudará a comprender la función y el uso de [!DNL Real-time Customer Profile] en [!DNL Experience Platform].
+Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. con [!DNL Real-time Customer Profile], puede ver una vista holística de cada cliente individual combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes. Esta descripción general le ayudará a comprender la función y el uso de [!DNL Real-time Customer Profile] en [!DNL Experience Platform].
 
 ## [!DNL Profile] en Experience Platform
 
@@ -27,29 +27,29 @@ La relación entre Perfil del cliente en tiempo real y otros servicios dentro de
 
 ### Almacenamiento de datos de perfil
 
-Aunque [!DNL Real-time Customer Profile] procesa los datos ingestados y utiliza Adobe Experience Platform [!DNL Identity Service] para combinar los datos relacionados mediante la asignación de identidades, mantiene sus propios datos en el almacén de datos [!DNL Profile]. El almacén [!DNL Profile] es independiente de los datos del catálogo en el lago de datos y de los datos [!DNL Identity Service] en el gráfico de identidad.
+Aunque [!DNL Real-time Customer Profile] procesa los datos introducidos y utiliza Adobe Experience Platform [!DNL Identity Service] para combinar datos relacionados mediante asignación de identidad, mantiene sus propios datos en la variable [!DNL Profile] almacén de datos. La variable [!DNL Profile] el almacén es independiente de los datos del catálogo en el lago de datos y [!DNL Identity Service] datos en el gráfico de identidad.
 
-El Almacenamiento de perfiles utiliza una infraestructura de Microsoft Azure Cosmos DB y Platform Data Lake utiliza el almacenamiento de Microsoft Azure Data Lake.
+El Almacenamiento de perfiles utiliza una infraestructura de base de datos de Microsoft Azure Cosmos y Platform Data Lake utiliza el almacenamiento de datos de Microsoft Azure.
 
 ### Protecciones de perfil
 
-Experience Platform proporciona una serie de protecciones que le ayudan a evitar la creación de esquemas del [Modelo de datos de experiencia (XDM)](../xdm/home.md) que el Perfil del cliente en tiempo real no puede admitir. Esto incluye límites leves que resultarán en una degradación del rendimiento, así como límites duros que resultarán en errores y averías del sistema. Para obtener más información, incluida una lista de directrices y ejemplos de casos de uso, consulte la documentación de [Protección de perfil](guardrails.md).
+El Experience Platform proporciona una serie de protecciones que le ayudan a evitar la creación de [Esquemas del Modelo de datos de experiencia (XDM)](../xdm/home.md) que no admite el perfil de cliente en tiempo real. Esto incluye límites leves que resultarán en una degradación del rendimiento, así como límites duros que resultarán en errores y averías del sistema. Para obtener más información, incluida una lista de directrices y ejemplos de casos de uso, lea la [Protecciones de perfil](guardrails.md) documentación.
 
 ### Panel de perfiles {#profile-dashboard}
 
-La interfaz de usuario del Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del perfil del cliente en tiempo real, tal como se capturan durante una instantánea diaria. Para obtener información sobre cómo acceder y trabajar con el tablero [!DNL Profile] en la interfaz de usuario, así como información detallada sobre las métricas mostradas en el tablero, consulte la [Guía de la interfaz de usuario del tablero de perfil](ui/profile-dashboard.md).
+La interfaz de usuario del Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del perfil del cliente en tiempo real, tal como se capturan durante una instantánea diaria. Para aprender a acceder y trabajar con [!DNL Profile] tablero en la interfaz de usuario e información detallada sobre las métricas mostradas en el tablero, consulte [Guía de la interfaz de usuario del panel del perfil](ui/profile-dashboard.md).
 
 ### Fragmentos de perfil frente a perfiles combinados {#profile-fragments-vs-merged-profiles}
 
 Cada perfil de cliente individual está compuesto por varios fragmentos de perfil que se han combinado para formar una sola vista de ese cliente. Por ejemplo, si un cliente interactúa con la marca a través de varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan a Platform, se combinan para crear un perfil único para ese cliente.
 
-En otras palabras, los fragmentos de perfil representan una identidad principal única y los datos correspondientes de [registro](#record-data) o [evento](#time-series-events) para ese ID dentro de un conjunto de datos determinado.
+En otras palabras, los fragmentos de perfil representan una identidad principal única y la [record](#record-data) o [evento](#time-series-events) datos para ese ID dentro de un conjunto de datos determinado.
 
-Cuando los datos de varios conjuntos de datos entran en conflicto (por ejemplo, un fragmento enumera al cliente como &quot;soltero&quot; mientras que el otro indica al cliente como &quot;casado&quot;), la [política de combinación](#merge-policies) determina qué información se debe priorizar e incluir en el perfil del individuo. Por lo tanto, es probable que el número total de fragmentos de perfil dentro de Platform sea siempre mayor que el número total de perfiles combinados, ya que cada perfil suele estar compuesto por varios fragmentos de varios conjuntos de datos.
+Cuando los datos de varios conjuntos de datos entran en conflicto (por ejemplo, un fragmento enumera al cliente como &quot;soltero&quot; mientras que el otro indica al cliente como &quot;casado&quot;), la variable [combinar directiva](#merge-policies) determina qué información se va a priorizar y a incluir en el perfil para el individuo. Por lo tanto, es probable que el número total de fragmentos de perfil dentro de Platform sea siempre mayor que el número total de perfiles combinados, ya que cada perfil suele estar compuesto por varios fragmentos de varios conjuntos de datos.
 
 ### Registrar datos {#record-data}
 
-Un perfil es una representación de un asunto, una organización o un individuo, compuesta por muchos atributos (también conocidos como datos de registro). Por ejemplo, el perfil de un producto puede incluir un SKU y una descripción, mientras que el perfil de una persona contiene información como nombre, apellido y dirección de correo electrónico. Con [!DNL Experience Platform], puede personalizar perfiles para que utilicen datos específicos relevantes para su negocio. La clase estándar [!DNL Experience Data Model] (XDM), [!DNL XDM Individual Profile], es la clase preferida sobre la que se crea un esquema al describir datos de registros de clientes y proporciona la integración de datos a muchas interacciones entre los servicios de Platform. Para obtener más información sobre cómo trabajar con esquemas en [!DNL Experience Platform], comience leyendo la [información general del sistema XDM](../xdm/home.md).
+Un perfil es una representación de un asunto, una organización o un individuo, compuesta por muchos atributos (también conocidos como datos de registro). Por ejemplo, el perfil de un producto puede incluir un SKU y una descripción, mientras que el perfil de una persona contiene información como nombre, apellido y dirección de correo electrónico. Uso [!DNL Experience Platform], puede personalizar perfiles para utilizar datos específicos relevantes para su empresa. La [!DNL Experience Data Model] (XDM), [!DNL XDM Individual Profile], es la clase preferida sobre la que se crea un esquema al describir datos de registros de clientes y proporciona la información integral a muchas interacciones entre los servicios de Platform. Para obtener más información sobre cómo trabajar con esquemas en [!DNL Experience Platform], comience leyendo el [Información general del sistema XDM](../xdm/home.md).
 
 ### Eventos de series temporales {#time-series-events}
 
@@ -57,21 +57,21 @@ Los datos de series temporales proporcionan una instantánea del sistema en el m
 
 ### Identidades
 
-Cada empresa quiere comunicarse con sus clientes de una manera que se sienta personal. Sin embargo, uno de los desafíos de ofrecer experiencias digitales relevantes a los clientes es comprender cómo unir sus datos desconectados, lo que a menudo se propaga a través de diferentes canales digitales, como tabletas, teléfonos móviles y portátiles. [!DNL Identity Service] le permite crear una imagen completa de su cliente vinculando identidades de varios canales y creando un gráfico de identidad para cada cliente. Visite la [información general del servicio de identidad](../identity-service/home.md) para obtener más información.
+Cada empresa quiere comunicarse con sus clientes de una manera que se sienta personal. Sin embargo, uno de los desafíos de ofrecer experiencias digitales relevantes a los clientes es comprender cómo unir sus datos desconectados, lo que a menudo se propaga a través de diferentes canales digitales, como tabletas, teléfonos móviles y portátiles. [!DNL Identity Service] le permite crear una imagen completa de su cliente vinculando identidades de varios canales y creando un gráfico de identidad para cada cliente. Visite la [Información general del servicio de identidad](../identity-service/home.md) para obtener más información.
 
 ### Combinar directivas
 
-Al unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se utilizarán para crear el perfil del cliente.
+Al unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes, las políticas de combinación son las reglas que [!DNL Platform] utiliza para determinar cómo se priorizarán los datos y qué datos se utilizarán para crear el perfil del cliente.
 
 Cuando hay datos conflictivos de varios conjuntos de datos, la política de combinación determina cómo se deben tratar esos datos y qué valor se debe utilizar. A través de las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización.
 
-Para obtener más información sobre las políticas de combinación y su función en el Experience Platform, lea en primer lugar la [información general de las políticas de combinación](merge-policies/overview.md).
+Para obtener más información sobre las políticas de combinación y su función en el Experience Platform, comience leyendo el [información general sobre políticas de combinación](merge-policies/overview.md).
 
 ### Esquemas de unión {#profile-fragments-and-union-schemas}
 
-Una de las características clave de [!DNL Real-time Customer Profile] es la capacidad de unificar los datos de varios canales. Cuando se utiliza [!DNL Real-time Customer Profile] para acceder a una entidad, puede proporcionarle una vista combinada de todos los fragmentos de perfil de esa entidad en todos los conjuntos de datos, denominados &quot;vista de unión&quot; y posibles gracias a lo que se conoce como esquema de unión.
+Una de las características principales de [!DNL Real-time Customer Profile] es la capacidad de unificar datos de varios canales. When [!DNL Real-time Customer Profile] se utiliza para acceder a una entidad, puede proporcionarle una vista combinada de todos los fragmentos de perfil de esa entidad en todos los conjuntos de datos, denominada &quot;vista de unión&quot; y posible a través de lo que se conoce como esquema de unión.
 
-Para obtener más información sobre los esquemas de unión, incluido cómo acceder a los esquemas de unión en la interfaz de usuario, visite la [guía de la interfaz de usuario del esquema de unión](ui/union-schema.md).
+Para obtener más información sobre los esquemas de unión, incluido cómo acceder a los esquemas de unión en la interfaz de usuario, visite [guía de la interfaz de usuario del esquema de unión](ui/union-schema.md).
 
 ### (Alpha) Atributos calculados
 
@@ -79,52 +79,52 @@ Para obtener más información sobre los esquemas de unión, incluido cómo acce
 >
 >La funcionalidad de atributo calculada está en alfa. La documentación y la funcionalidad están sujetas a cambios.
 
-Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con elementos como el valor de compra de por vida, el tiempo entre compras o el número de aperturas de aplicaciones, sin que sea necesario realizar cálculos complejos manualmente cada vez que se necesite la información. Para obtener más información sobre los atributos calculados, incluida la comprensión de la función que los atributos calculados juegan dentro de Adobe Experience Platform, comience por leer la [descripción general de los atributos calculados](computed-attributes/overview.md).
+Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con elementos como el valor de compra de por vida, el tiempo entre compras o el número de aperturas de aplicaciones, sin que sea necesario realizar cálculos complejos manualmente cada vez que se necesite la información. Para obtener más información sobre los atributos calculados, incluida la comprensión de la función que los atributos calculados juegan en Adobe Experience Platform, comience por leer la [información general sobre atributos calculados](computed-attributes/overview.md).
 
 ## Perfiles y segmentos
 
-Adobe Experience Platform [!DNL Segmentation Service] produce las audiencias necesarias para impulsar las experiencias para sus clientes individuales. Cuando se crea un segmento de audiencia, el ID de ese segmento se agrega a la lista de pertenencia a segmentos para todos los perfiles aptos. Las reglas de segmentos se crean y aplican a los datos [!DNL Real-time Customer Profile] mediante las API de RESTful y la interfaz de usuario del Generador de segmentos. Para obtener más información sobre la segmentación, comience leyendo la [información general del Servicio de segmentación](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] produce las audiencias necesarias para potenciar las experiencias de cada cliente. Cuando se crea un segmento de audiencia, el ID de ese segmento se agrega a la lista de pertenencia a segmentos para todos los perfiles aptos. Las reglas de segmentos se crean y aplican a [!DNL Real-time Customer Profile] datos mediante las API de RESTful y la interfaz de usuario del Generador de segmentos. Para obtener más información sobre la segmentación, comience leyendo el [Información general del servicio de segmentación](../segmentation/home.md).
 
 ### Incorporación por secuencias y segmentación por secuencias
 
-La entrada en tiempo real es posible a través de un proceso llamado ingesta de flujo continuo. A medida que se incorporan los datos de perfil y serie temporal, [!DNL Real-time Customer Profile] decide automáticamente incluir o excluir esos datos de los segmentos a través de un proceso continuo llamado segmentación de flujo continuo, antes de combinarlos con los datos existentes y actualizar la vista de unión. Como resultado, puede realizar cálculos instantáneamente y tomar decisiones para ofrecer experiencias mejoradas e individualizadas a los clientes a medida que interactúan con su marca. Durante la ingesta, los datos también se someten a validación para garantizar que se introduzcan correctamente y se ajusten al esquema en el que se basa el conjunto de datos. Para obtener más información sobre qué validación se realiza durante la ingesta, comience por leer la [descripción general de la calidad de la ingesta de datos](../ingestion/quality/overview.md).
+La entrada en tiempo real es posible a través de un proceso llamado ingesta de flujo continuo. A medida que se incorporan los datos de perfil y serie temporal, [!DNL Real-time Customer Profile] decide incluir o excluir automáticamente esos datos de segmentos a través de un proceso continuo llamado segmentación de flujo continuo, antes de combinarlos con datos existentes y actualizar la vista de unión. Como resultado, puede realizar cálculos instantáneamente y tomar decisiones para ofrecer experiencias mejoradas e individualizadas a los clientes a medida que interactúan con su marca. Durante la ingesta, los datos también se someten a validación para garantizar que se introduzcan correctamente y se ajusten al esquema en el que se basa el conjunto de datos. Para obtener más información sobre qué validación se realiza durante la ingesta, comience por leer la [información general sobre la calidad de la ingesta de datos](../ingestion/quality/overview.md).
 
 ## Proyecciones perimetrales
 
-Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante lo que se conoce como bordes. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan perímetros para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde. Para obtener más información y empezar a trabajar con proyecciones mediante la API [!DNL Real-time Customer Profile], consulte la [guía de puntos finales de proyección de Edge](api/edge-projections.md).
+Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante lo que se conoce como bordes. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan perímetros para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde. Para obtener más información y empezar a trabajar con las proyecciones, use la variable [!DNL Real-time Customer Profile] API, consulte [guía de extremos de proyección de edge](api/edge-projections.md).
 
 ## Ingesta de datos en [!DNL Profile]
 
-[!DNL Platform] se puede configurar para enviar datos de registros y series temporales a  [!DNL Profile], admitiendo la ingesta de flujo en tiempo real y la ingesta por lotes. Para obtener más información, consulte el tutorial que describe cómo [agregar datos al perfil del cliente en tiempo real](tutorials/add-profile-data.md).
+[!DNL Platform] se puede configurar para que envíe datos de registros y series temporales a [!DNL Profile], que admite la ingesta de flujo continuo en tiempo real y la ingesta por lotes. Para obtener más información, consulte el tutorial que describe cómo [agregar datos al perfil del cliente en tiempo real](tutorials/add-profile-data.md).
 
 >[!NOTE]
 >
->Los datos recopilados mediante soluciones de Adobe, incluidas [!DNL Analytics Cloud], [!DNL Marketing Cloud] y [!DNL Advertising Cloud], se transfieren a [!DNL Experience Platform] y se incorporan a [!DNL Profile].
+>Datos recopilados mediante soluciones de Adobe, incluidas [!DNL Analytics Cloud], [!DNL Marketing Cloud]y [!DNL Advertising Cloud], fluye a [!DNL Experience Platform] y se incorpora en [!DNL Profile].
 
 ### Métricas de ingesta de perfiles
 
-Observability Insights permite exponer métricas clave en Adobe Experience Platform. Además de las estadísticas de uso de [!DNL Experience Platform] y los indicadores de rendimiento para varias funcionalidades de [!DNL Platform] , existen métricas específicas relacionadas con el perfil que permiten conocer las tasas de solicitudes entrantes, las tasas de ingesta exitosas, los tamaños de registro ingeridos y mucho más. Para obtener más información, comience por leer la [información general de la API de Observability Insights](../observability/api/overview.md) y para obtener una lista completa de las métricas del Perfil del cliente en tiempo real, consulte la documentación sobre [métricas disponibles](../observability/api/metrics.md#available-metrics).
+Observability Insights permite exponer métricas clave en Adobe Experience Platform. Además de [!DNL Experience Platform] estadísticas de uso e indicadores de rendimiento para varios [!DNL Platform] existen métricas específicas relacionadas con el perfil que permiten conocer las tasas de solicitudes entrantes, las tasas de ingesta correctas, los tamaños de registro ingestados y mucho más. Para obtener más información, comience por leer la [Información general sobre la API de Observability Insights](../observability/api/overview.md)y para obtener una lista completa de las métricas del perfil del cliente en tiempo real, consulte la documentación de [métricas disponibles](../observability/api/metrics.md#available-metrics).
 
 ## Actualizar datos del Almacenamiento de perfiles
 
-En ocasiones puede ser necesario actualizar los datos en el Almacenamiento de perfiles de su organización. Por ejemplo, es posible que necesite corregir registros o cambiar un valor de atributo. Esto se puede hacer mediante la ingesta por lotes o de flujo continuo y requiere un conjunto de datos habilitado para Perfil configurado con una etiqueta de actualización. Para obtener más información sobre cómo configurar un conjunto de datos para actualizaciones de atributos, consulte el tutorial para [habilitar un conjunto de datos para Perfil y actualizar](../catalog/datasets/enable-upsert.md).
+En ocasiones puede ser necesario actualizar los datos en el Almacenamiento de perfiles de su organización. Por ejemplo, es posible que necesite corregir registros o cambiar un valor de atributo. Esto se puede hacer mediante la ingesta por lotes o de flujo continuo y requiere un conjunto de datos habilitado para Perfil configurado con una etiqueta de actualización. Para obtener más información sobre cómo configurar un conjunto de datos para actualizaciones de atributos, consulte el tutorial para [activación de un conjunto de datos para Perfil y actualizar](../catalog/datasets/enable-upsert.md).
 
-## [!DNL Data governance] y [!DNL Privacy]
+## Administración de datos y [!DNL Privacy]
 
-[!DNL Data governance] es una serie de estrategias y tecnologías que se utilizan para administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos.
+Administración de datos es una serie de estrategias y tecnologías que se utilizan para administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos.
 
-En cuanto al acceso a los datos, el control de datos desempeña un papel clave en [!DNL Experience Platform] a varios niveles:
+En lo que respecta al acceso a los datos, el control de los datos desempeña un papel clave en [!DNL Experience Platform] en distintos niveles:
 
 * Etiquetado del uso de los datos
 * Políticas de acceso a los datos
 * Control de acceso de datos para acciones de marketing
 
-[!DNL Data governance] se administra en varios puntos. Entre ellas, decidir qué datos se introducen en [!DNL Platform] y qué datos se pueden acceder después de la ingesta para una acción de marketing determinada. Para obtener más información, comience por leer la [información general del control de datos](../data-governance/home.md).
+La administración de datos se realiza en varios puntos. Entre ellas, decidir en qué datos se introducen [!DNL Platform] y a qué datos se puede acceder después de la ingesta para una acción de marketing determinada. Para obtener más información, comience por leer la [información general sobre la administración de datos](../data-governance/home.md).
 
 ### Gestión de solicitudes de exclusión y privacidad de datos
 
-[!DNL Experience Platform] permite a los clientes enviar solicitudes de exclusión relacionadas con el uso y almacenamiento de sus datos en  [!DNL Real-time Customer Profile]. Para obtener más información sobre cómo se gestionan las solicitudes de exclusión, consulte la documentación sobre [cumplimiento de las solicitudes de exclusión](../segmentation/consents.md).
+[!DNL Experience Platform] permite a los clientes enviar solicitudes de exclusión relacionadas con el uso y almacenamiento de sus datos en [!DNL Real-time Customer Profile]. Para obtener más información sobre cómo se gestionan las solicitudes de exclusión, consulte la documentación de [cumplimiento de las solicitudes de exclusión](../segmentation/consents.md).
 
 ## Pasos siguientes y recursos adicionales
 
-Para obtener más información sobre cómo trabajar con datos del perfil del cliente en tiempo real mediante la interfaz de usuario del Experience Platform o la API de perfil, comience por leer la [Guía del desarrollador de la ](ui/user-guide.md) o la [Guía del desarrollador de API](api/overview.md), respectivamente.
+Para obtener más información sobre cómo trabajar con datos del perfil del cliente en tiempo real mediante la interfaz de usuario del Experience Platform o la API de perfil, comience por leer la [Guía de la interfaz de usuario del perfil](ui/user-guide.md) o [Guía para desarrolladores de API](api/overview.md), respectivamente.

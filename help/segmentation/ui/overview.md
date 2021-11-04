@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -199,7 +199,7 @@ Puede encontrar más información sobre la segmentación de aristas en la secci�
 >
 >Las infracciones de directiva solo se aplican si está creando un segmento que se ha asignado a un destino.
 
-Una vez que haya terminado de crear su segmento, el control de datos de Adobe Experience Platform analizará el segmento para asegurarse de que no haya infracciones de directiva dentro del segmento. Consulte la [[!DNL Data Governance] información general](../../data-governance/home.md) para obtener más información.
+Una vez que haya terminado de crear su segmento, el control de datos de Adobe Experience Platform analizará el segmento para asegurarse de que no haya infracciones de directiva dentro del segmento. Consulte la [Información general sobre la administración de datos](../../data-governance/home.md) para obtener más información.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
