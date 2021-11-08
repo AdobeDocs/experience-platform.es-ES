@@ -21,11 +21,11 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-The ad-hoc activation API allows marketers to programmatically activate audience segments to destinations, in a fast and efficient manner, for situations where immediate activation is required.
+La API de activación ad hoc permite a los especialistas en marketing activar mediante programación segmentos de audiencia en destinos de forma rápida y eficaz en situaciones en las que se requiera una activación inmediata.
 
-The diagram below illustrates the end-to-end workflow for activating segments via the ad-hoc activation API, including the segmentation jobs that take place in Platform every 24 hours.
+El diagrama siguiente ilustra el flujo de trabajo completo para activar segmentos mediante la API de activación ad hoc, incluidos los trabajos de segmentación que se realizan en Platform cada 24 horas.
 
-![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
+![activación ad hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
 >[!NOTE]
 >
@@ -38,9 +38,9 @@ The diagram below illustrates the end-to-end workflow for activating segments vi
 Un minorista en línea está preparando una venta flash limitada y quiere notificar a los clientes con un breve aviso. A través de la API de activación ad hoc del Experience Platform, el equipo de marketing puede exportar segmentos bajo demanda y enviar rápidamente correos electrónicos promocionales a la base de clientes.
 
 
-### Current events or breaking news
+### Eventos actuales o noticias de último minuto
 
-A hotel expects inclement weather over the following days, and the team wants to inform the arriving guests quickly, so they can plan accordingly. The marketing team can use the Experience Platform ad-hoc activation API to export segments on-demand, and notify the guests.
+Un hotel espera que el tiempo sea inclemente en los próximos días, y el equipo quiere informar a los clientes rápidamente, para que puedan planear en consecuencia. El equipo de marketing puede utilizar la API de activación ad hoc de Experience Platform para exportar segmentos bajo demanda y notificar a los clientes.
 
 ### Pruebas de integración
 
@@ -51,27 +51,27 @@ Los administradores de TI pueden utilizar la API de activación ad hoc del Exper
 
 Tenga en cuenta las siguientes limitaciones al utilizar la API de activación ad hoc.
 
-* Actualmente, cada trabajo de activación ad-hoc puede activar hasta 20 segmentos. Attempting to activate more than 20 segments per job will cause the job to fail. This behavior is subject to change in future releases.
-* Ad-hoc activation jobs cannot run in parallel with scheduled [segment export jobs](../../segmentation/api/export-jobs.md). Before running an ad-hoc activation job, make sure the scheduled segment export job has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. Por ejemplo, si el flujo de datos de activación muestra un **[!UICONTROL Procesamiento]** espera a que finalice antes de ejecutar el trabajo de activación ad hoc.
+* Actualmente, cada trabajo de activación ad-hoc puede activar hasta 20 segmentos. Si se intentan activar más de 20 segmentos por trabajo, el trabajo fallará. Este comportamiento está sujeto a cambios en futuras versiones.
+* Los trabajos de activación específicos no se pueden ejecutar en paralelo con los programados [trabajos de exportación de segmentos](../../segmentation/api/export-jobs.md). Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo de exportación de segmentos programado haya finalizado. Consulte [control de flujo de datos de destino](../../dataflows/ui/monitor-destinations.md) para obtener información sobre cómo monitorizar el estado de los flujos de activación. Por ejemplo, si el flujo de datos de activación muestra un **[!UICONTROL Procesamiento]** espera a que finalice antes de ejecutar el trabajo de activación ad hoc.
 * No ejecute más de un trabajo de activación ad hoc concurrente por segmento.
 
 ## Consideraciones sobre la segmentación {#segmentation-considerations}
 
-Adobe Experience Platform ejecuta trabajos de segmentación programados una vez cada 24 horas. The ad-hoc activation API runs based on the latest segmentation results.
+Adobe Experience Platform ejecuta trabajos de segmentación programados una vez cada 24 horas. La API de activación ad hoc se ejecuta en función de los resultados de segmentación más recientes.
 
 ## Paso 1: Requisitos previos {#prerequisites}
 
 Antes de realizar llamadas a las API de Adobe Experience Platform, asegúrese de cumplir los siguientes requisitos previos:
 
 * Tiene una cuenta de organización de IMS con acceso a Adobe Experience Platform.
-* Su cuenta de Experience Platform tiene la variable `developer` y `user` funciones habilitadas para el perfil de producto de la API de Adobe Experience Platform. Contact your [Admin Console](../../access-control/home.md) administrator to enable these roles for your account.
-* You have an Adobe ID. Si no tiene un Adobe ID, vaya a la sección [Adobe Developer Console](https://developer.adobe.com/console) y cree una cuenta nueva.
+* Su cuenta de Experience Platform tiene la variable `developer` y `user` funciones habilitadas para el perfil de producto de la API de Adobe Experience Platform. Póngase en contacto con su [Admin Console](../../access-control/home.md) para habilitar estas funciones en su cuenta.
+* Tiene un Adobe ID. Si no tiene un Adobe ID, vaya a la sección [Adobe Developer Console](https://developer.adobe.com/console) y cree una cuenta nueva.
 
 ## Paso 2: Recopilar credenciales {#credentials}
 
 Para realizar llamadas a las API de Platform, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
+* Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -97,11 +97,11 @@ Consulte el siguiente tutorial para obtener instrucciones detalladas sobre cómo
 
 ## Paso 4: Obtenga el último ID de trabajo de exportación de segmentos {#segment-export-id}
 
-After you configure an activation flow for your batch destination, scheduled segmentation jobs start running automatically every 24 hours.
+Después de configurar el flujo de activación para el destino por lotes, los trabajos de segmentación programados empiezan a ejecutarse automáticamente cada 24 horas.
 
-Para poder ejecutar el trabajo de activación ad-hoc, debe obtener el ID del trabajo de exportación de segmentos más reciente. You must pass this ID in the ad-hoc activation job request.
+Para poder ejecutar el trabajo de activación ad-hoc, debe obtener el ID del trabajo de exportación de segmentos más reciente. Debe pasar este ID en la solicitud de trabajo de activación ad hoc.
 
-Follow the instructions described [here](../../segmentation/api/export-jobs.md#retrieve-list) to retrieve a list of all the segment export jobs.
+Siga las instrucciones descritas [here](../../segmentation/api/export-jobs.md#retrieve-list) para recuperar una lista de todos los trabajos de exportación de segmentos.
 
 En la respuesta, busque el primer registro que incluye la propiedad schema a continuación.
 
@@ -156,8 +156,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate segments. |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | The IDs of the segments that you want to activate to the selected destination. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | ID de las instancias de destino en las que desea activar segmentos. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | ID de los segmentos que desea activar en el destino seleccionado. |
 | <ul><li>`exportId1`</li></ul> | El ID devuelto en la respuesta del [exportación de segmentos](../../segmentation/api/export-jobs.md#retrieve-list) trabajo. Consulte [Paso 4: Obtenga el último ID de trabajo de exportación de segmentos](#segment-export-id) para obtener instrucciones sobre cómo encontrar este ID. |
 
 ### Respuesta
@@ -179,10 +179,10 @@ Una respuesta correcta devuelve el estado HTTP 200.
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `segment` | ID del segmento activado. |
-| `order` | The ID of the destination to which the segment was activated. |
-| `statusURL` | La URL de estado del flujo de activación. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
+| `order` | ID del destino en el que se activó el segmento. |
+| `statusURL` | La URL de estado del flujo de activación. Puede realizar un seguimiento del progreso del flujo mediante la [API del servicio de flujo](../../sources/tutorials/api/monitor.md). |
 
 
-## API error handling
+## Gestión de errores de API
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+Los extremos de la API del SDK de destino siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) y [errores en el encabezado de la solicitud](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) en la guía de solución de problemas de Platform.
