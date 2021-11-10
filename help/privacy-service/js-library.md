@@ -5,9 +5,9 @@ title: Información general de la biblioteca JavaScript de privacidad de Adobe
 topic-legacy: overview
 description: La biblioteca JavaScript de privacidad de Adobe permite recuperar identidades de interesados para usarlas en Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 7f3a0594147a8cea292263f60aa45dc5ebb8484e
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '1012'
 ht-degree: 6%
 
 ---
@@ -46,8 +46,9 @@ Dado que las tres funciones representan procesos asíncronos, cualquier identida
 Para empezar a usar la variable [!DNL Privacy JS Library], debe instalarlo en el equipo mediante uno de los métodos siguientes:
 
 * Instale utilizando npm ejecutando el siguiente comando: `npm install @adobe/adobe-privacy`
-* Instale el [Extensión de la etiqueta de privacidad de Adobe](../tags/extensions/web/privacy/overview.md) bajo el nombre `AdobePrivacy`
 * Descargue desde [Repositorio de GitHub Experience Cloud](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+
+También puede instalar la biblioteca a través de una extensión de etiqueta en la interfaz de usuario de la recopilación de datos. Consulte la descripción general de la [Extensión de la etiqueta de privacidad de Adobe](../tags/extensions/web/privacy/overview.md) para obtener más información.
 
 ## Cree una instancia de [!DNL Privacy JS Library]
 
@@ -64,7 +65,7 @@ var adobePrivacy = new AdobePrivacy({
 
 Para obtener una lista completa de los parámetros admitidos para las distintas soluciones de Adobe, consulte la sección del apéndice de [Parámetros de configuración de la solución Adobe](#adobe-solution-configuration-parameters).
 
-## Ejemplos de código
+## Ejemplos de código {#samples}
 
 Los siguientes ejemplos de código muestran cómo usar el [!DNL Privacy JS Library] para varios escenarios comunes, siempre que no utilice etiquetas.
 
@@ -176,26 +177,26 @@ Al leer este documento, se le han introducido las funcionalidades principales de
 
 Esta sección contiene información complementaria para usar la variable [!DNL Privacy JS Library].
 
-### Parámetros de configuración de la solución Adobe
+### Parámetros de configuración de la solución Adobe {#config-params}
 
 A continuación se muestra una lista de los parámetros de configuración aceptados para las soluciones de Adobe admitidas, que se utilizan cuando [creación de instancias de un objeto AdobePrivacy](#instantiate-the-privacy-js-library).
+
+**Todas las soluciones**
+
+| Parámetro | Descripción |
+| --- | --- |
+| `key` | ID único que identifica al usuario o al interesado. Esta propiedad está diseñada para utilizarse con sus propios fines de seguimiento interno y no se utiliza en el Adobe. |
 
 **Adobe Analytics**
 
 | Parámetro | Descripción |
 | --- | --- |
-| `cookieDomainPeriods` | El número de puntos en un dominio para el seguimiento de cookies (el valor predeterminado es 2). |
-| `dataCenter` | Centro de datos de recopilación de datos de Adobe. Esto solo debe incluirse si se especifica en la señalización web de JavaScript. Los valores posibles son: <ul><li>&quot;d1&quot;: Centro de datos de San José.</li><li>&quot;d2&quot;: Centro de datos de Dallas.</li></ul> |
-| `reportSuite` | ID del grupo de informes tal como se especifica en la señalización web de JavaScript (por ejemplo, &quot;s_code.js&quot; o &quot;dtm&quot;). |
-| `trackingServer` | Dominio de recopilación de datos (no SSL). Esto solo debe incluirse si se especifica en la señalización web de JavaScript. |
-| `trackingServerSecure` | Dominio de recopilación de datos (SSL). Esto solo debe incluirse si se especifica en la señalización web de JavaScript. |
-| `visitorNamespace` | Área de nombres utilizada para agrupar visitantes. Esto solo debe incluirse si se especifica en la señalización web de JavaScript. |
-
-**Adobe Target**
-
-| Parámetro | Descripción |
-| --- | --- |
-| `clientCode` | Código de cliente que identifica a un cliente en el sistema Adobe Target. |
+| `cookieDomainPeriods` | El número de puntos de un dominio utilizado para el seguimiento de cookies (el valor predeterminado es `2`, p. ej. `.domain.com`). No la defina aquí a menos que se especifique en la señalización web de JavaScript. |
+| `dataCenter` | El centro de datos de recopilación de datos de Adobe. Esto solo debe incluirse si se especifica en la señalización web de JavaScript. Los valores posibles son: <ul><li>`d1`: Centro de datos de San José</li><li>`d2`: Centro de datos de Dallas</li></ul> |
+| `reportSuite` | El ID del grupo de informes que se especifica en la señalización web de JavaScript (por ejemplo, `s_code.js` o `dtm`). |
+| `trackingServer` | Un dominio de recopilación de datos que no es SSL. Esto solo debe incluirse si se especifica en la señalización web de JavaScript. |
+| `trackingServerSecure` | Un dominio de recopilación de datos SSL. Esto solo debe incluirse si se especifica en la señalización web de JavaScript. |
+| `visitorNamespace` | El espacio de nombres utilizado para agrupar visitantes. Esto solo debe incluirse si se especifica en la señalización web de JavaScript. |
 
 **Adobe Audience Manager**
 
@@ -203,8 +204,14 @@ A continuación se muestra una lista de los parámetros de configuración acepta
 | --- | --- |
 | `aamUUIDCookieName` | Nombre de la cookie de origen que contiene el ID de usuario único devuelto desde Adobe Audience Manager. |
 
-**Servicio de Adobe ID (ECID)**
+**Servicio de identidad de Adobe Experience Cloud (ECID)**
 
 | Parámetro | Descripción |
 | --- | --- |
 | `imsOrgID` | Su ID de la organización IMS. |
+
+**Adobe Target**
+
+| Parámetro | Descripción |
+| --- | --- |
+| `clientCode` | Código de cliente que identifica a un cliente en el sistema Adobe Target. |

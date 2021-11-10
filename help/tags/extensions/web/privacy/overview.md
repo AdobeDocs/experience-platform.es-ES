@@ -1,10 +1,11 @@
 ---
 title: Información general sobre la extensión Adobe Privacy
-description: Obtenga información sobre la extensión de la etiqueta de privacidad de Adobe en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información acerca de la extensión de etiquetas Adobe Privacy en Adobe Experience Platform.
+exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
+source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 92%
+source-wordcount: '909'
+ht-degree: 9%
 
 ---
 
@@ -14,96 +15,100 @@ ht-degree: 92%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-La extensión de Adobe Privacy proporciona funcionalidad para recopilar y eliminar ID de usuario asignados a usuarios finales por soluciones de Adobe.
+La extensión de la etiqueta de privacidad de Adobe le permite recopilar y eliminar ID de usuario asignados a usuarios finales por soluciones de Adobe en dispositivos del lado del cliente. Los ID recopilados se pueden enviar a [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) para acceder a los datos personales del individuo relacionado o eliminarlos en aplicaciones de Adobe Experience Cloud compatibles.
 
-## Configurar soluciones durante la instalación
+Esta guía explica cómo instalar y configurar la extensión de privacidad de Adobe en la interfaz de usuario de recopilación de datos.
 
-Al instalar la extensión de privacidad de Adobe desde el Catálogo de extensiones, se le pedirá que seleccione las soluciones que desee actualizar. Actualmente puede actualizar las siguientes soluciones:
+>[!NOTE]
+>
+>Si prefiere instalar estas funcionalidades sin utilizar etiquetas, consulte la [Resumen de la biblioteca JavaScript de privacidad](../../../../privacy-service/js-library.md) para ver los pasos sobre cómo implementar mediante código sin procesar.
 
-* Analytics (AA)
-* Audience Manager (AAM)
-* Target
-* Servicio de visitante
-* Adcloud
-* Seleccione una o varias soluciones y, a continuación, seleccione Actualizar.
-* Cuando haya seleccionado y configurado las soluciones, seleccione Guardar. La extensión de privacidad de Adobe se agrega a la lista de extensiones instaladas.
+## Instale y configure la extensión de 
 
-   A continuación se describen las opciones de cada solución.
+En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seguido del **[!UICONTROL Catálogo]** pestaña . Utilice la barra de búsqueda para reducir la lista de extensiones disponibles hasta que encuentre la privacidad de Adobe. Select **[!UICONTROL Instalar]** para continuar.
 
-### Analytics
+![Instalación de la extensión](../../../images/extensions/privacy/install.png)
 
-![](../../../images/ext-privacy-aa.jpg)
+La siguiente pantalla le permite configurar de qué fuentes y soluciones desea que recopile ID de la extensión. Las siguientes soluciones son compatibles con la extensión :
 
-De forma predeterminada, debe especificar el grupo de informes introduciendo una cadena o seleccionando un elemento de datos.
+* Adobe Analytics (AA)
+* Adobe Audience Manager (AAM)
+* Adobe Target
+* Servicio de identidad de Adobe Experience Cloud (visitante o ECID)
+* Adobe Advertising Cloud (AdCloud)
 
-Para configurar otros elementos, seleccione **[!UICONTROL Elegir un elemento]**, seleccione el elemento que desea configurar y, a continuación, seleccione **[!UICONTROL Añadir]** y escriba el parámetro o el elemento de datos solicitado.
+Seleccione una o varias soluciones y, a continuación, seleccione **[!UICONTROL Actualizar]**.
 
-### Audience Manager
+![Seleccionar soluciones](../../../images/extensions/privacy/select-solutions.png)
 
-![](../../../images/ext-privacy-aam.jpg)
+La pantalla se actualiza para mostrar entradas para los parámetros de configuración necesarios en función de las soluciones seleccionadas.
 
-Seleccione **[!UICONTROL Elegir un elemento]**, seleccione el elemento que desea configurar y, a continuación, seleccione **[!UICONTROL Añadir]** y escriba el parámetro o elemento de datos solicitado. Actualmente, solo puede configurar `aamUUIDCookieName`.
+![Propiedades requeridas](../../../images/extensions/privacy/required-properties.png)
 
-### Target
+Con el menú desplegable que aparece a continuación, también puede agregar parámetros adicionales específicos de la solución a la configuración.
 
-![](../../../images/ext-privacy-target.jpg)
+![Propiedades opcionales](../../../images/extensions/privacy/optional-properties.png)
 
-Introduzca el código de cliente de Target.
+>[!NOTE]
+>
+>Consulte la sección sobre [parámetros de configuración](../../../../privacy-service/js-library.md#config-params) en la descripción general de la biblioteca JavaScript de privacidad para obtener más información sobre los valores de configuración aceptados para cada solución admitida.
 
-### Servicio de visitante
+Una vez que haya terminado de agregar parámetros para las soluciones seleccionadas, seleccione **[!UICONTROL Guardar]** para guardar la configuración.
 
-![](../../../images/ext-privacy-visitor.jpg)
+![Propiedades opcionales](../../../images/extensions/privacy/save-config.png)
 
-Introduzca su ID de organización de IMS.
+## Uso de la extensión {#using}
 
-### Adcloud
+La extensión de privacidad de Adobe proporciona tres tipos de acciones que se pueden usar en una [regla](../../../ui/managing-resources/rules.md) cuando se produce un determinado evento y se cumplen determinadas condiciones:
 
-![](../../../images/ext-privacy-adcloud.jpg)
+* **[!UICONTROL Recuperar identidades]**: Se recupera la información de identidad almacenada del usuario.
+* **[!UICONTROL Eliminar identidades]**: Se elimina la información de identidad almacenada del usuario.
+* **[!UICONTROL Recuperar y eliminar identidades]**: La información de identidad almacenada del usuario se recupera y se elimina.
 
-No hay parámetros específicos que configurar para adcloud.
+Para cada una de las acciones anteriores, debe proporcionar una función de llamada de retorno JavaScript que acepte y gestione los datos de identidad recuperados como parámetro de objeto. Desde aquí, puede almacenar estas identidades, mostrarlas o enviarlas a la [API de Privacy Service](../../../../privacy-service/api/overview.md) según sea necesario.
 
-## Configurar la extensión de Adobe Privacy
+Al utilizar la extensión de etiqueta de privacidad de Adobe, debe proporcionar la función de llamada de retorno necesaria en forma de elemento de datos. Consulte la siguiente sección para ver los pasos sobre cómo configurar este elemento de datos.
+
+### Definir un elemento de datos para gestionar identidades
+
+En la interfaz de usuario de la recopilación de datos, inicie el proceso de creación de un nuevo elemento de datos seleccionando **[!UICONTROL Elementos de datos]** en la navegación izquierda, seguido de **[!UICONTROL Añadir elemento de datos]**. Una vez que esté en la pantalla de configuración, seleccione **[!UICONTROL Principal]** para la extensión y **[!UICONTROL Código personalizado]** para el tipo de elemento de datos. Desde aquí, seleccione **[!UICONTROL Abrir editor]** en el panel derecho.
+
+![Seleccionar tipo de elemento de datos](../../../images/extensions/privacy/data-element-type.png)
+
+En el cuadro de diálogo que aparece, defina una función de JavaScript que gestione las identidades recuperadas. La rellamada debe aceptar un único argumento de tipo de objeto (`ids` en el ejemplo siguiente). A continuación, la función puede gestionar los ID como desee y también puede invocar cualquier variable y función que esté disponible globalmente en el sitio para un procesamiento posterior.
+
+>[!NOTE]
+>
+>Para obtener más información sobre la estructura de la variable `ids` que se espera que gestione la función de llamada de retorno, consulte la sección [muestras de código](../../../../privacy-service/js-library.md#samples) en la descripción general de la biblioteca JavaScript de privacidad.
+
+Cuando termine, seleccione **[!UICONTROL Guardar]**.
+
+![Definir la función de llamada de retorno](../../../images/extensions/privacy/define-custom-code.png)
+
+Puede seguir creando otros elementos de datos de código personalizado si necesita llamadas de retorno diferentes para eventos diferentes.
+
+### Crear una regla con una acción de privacidad
+
+Después de configurar un elemento de datos de llamada de retorno para administrar los ID recuperados, puede crear una regla que invoque la extensión de privacidad de Adobe siempre que se produzca un evento determinado en el sitio junto con cualquier otra condición que requiera.
+
+Al configurar la acción para la regla, seleccione **[!UICONTROL Privacidad del Adobe]** para la extensión de . Para el tipo de acción, seleccione una de las [tres funciones](#using) proporcionado por la extensión de .
+
+![Seleccionar tipo de acción](../../../images/extensions/privacy/action-type.png)
+
+El panel derecho le solicita que seleccione un elemento de datos que servirá como llamada de retorno de la acción. Seleccione el icono de base de datos (![Icono de base de datos](../../../images/extensions/privacy/database.png)) y elija el elemento de datos que creó anteriormente desde la lista. Select **[!UICONTROL Conservar cambios]** para continuar.
+
+![Seleccionar elemento de datos](../../../images/extensions/privacy/add-data-element.png)
+
+Desde aquí, puede continuar configurando la regla para que la acción de privacidad del Adobe se active según los eventos y las condiciones que requiera. Cuando esté satisfecho, seleccione **[!UICONTROL Guardar]**.
+
+![Guarde la regla](../../../images/extensions/privacy/save-rule.png)
+
+Ahora puede añadir la regla a una biblioteca para implementarla como una compilación en el sitio web para realizar pruebas. Consulte la descripción general de la [flujo de publicación de etiquetas](../../../ui/publishing/overview.md) para obtener más información.
+
+## Desactivar o desinstalar la extensión
 
 Después de instalar la extensión, puede desactivarla o eliminarla. Seleccione **[!UICONTROL Configurar]** en la tarjeta de privacidad de Adobe de sus extensiones instaladas y, a continuación, seleccione **[!UICONTROL Deshabilitar]** o **[!UICONTROL Desinstalar]**.
 
-## Acciones
+## Pasos siguientes
 
-Las siguientes acciones están disponibles cuando se configura una regla con la extensión de privacidad de Adobe.
-
-### Recuperar identidades
-
-Cuando se cumplan los eventos y las condiciones, recupere la información de identidad que esté almacenada para el visitante.
-
-Escriba el nombre de una función JavaScript a la que desee enviar los datos. Esta función o método gestiona las identidades recuperadas. Dependerá de usted si los almacena, los muestra o los envía a la API de Adobe RGPD.
-
-### Eliminar identidades
-
-Cuando se cumplan los eventos y las condiciones, quite la información de identidad que esté almacenada para el visitante.
-
-Escriba el nombre de una función JavaScript a la que desee enviar los datos. Esta función o método gestiona las identidades recuperadas. Dependerá de usted si los almacena, los muestra o los envía a la API de Adobe RGPD.
-
-### Recuperar y eliminar identidades
-
-Cuando se cumplan los eventos y las condiciones, recupere la información de identidad que esté almacenada para el visitante y, a continuación, quítela.
-
-## Tutorial: Configuración de la extensión Privacy
-
-A continuación, se muestra un ejemplo combinado de la configuración de un elemento de datos y su uso con la extensión Privacy.
-
-1. Crear un elemento de datos `privacyFunc`.
-
-   ```JavaScript
-   window.privacyFunc = function(a,b){
-       console.log(a,b);
-   }
-   return window.privacyFunc
-   ```
-
-1. Cree una regla para ejecutarla en la carga de biblioteca (parte superior de la página), con una acción de la extensión Adobe Privacy. Seleccione `privacyFunc` como elemento de datos.
-
-   * **Extensión**: Adobe Privacy
-   * **Tipo de acción**: Recuperar identidades
-Este tipo de acción muestra las identidades creadas, eliminadas o no eliminadas.
-   * **Nombre**: Recuperar identidades
-
-1. Actualice la biblioteca de desarrollo y, a continuación, publique y realice pruebas.
+Esta guía abarcaba el uso de la extensión de etiqueta de privacidad de Adobe en la interfaz de usuario de recopilación de datos. Para obtener más información sobre las funcionalidades proporcionadas por la extensión, incluidos ejemplos de cómo emplearla con código sin procesar, consulte la [Resumen de la biblioteca JavaScript de privacidad](../../../../privacy-service/js-library.md) en la documentación del Privacy Service.
