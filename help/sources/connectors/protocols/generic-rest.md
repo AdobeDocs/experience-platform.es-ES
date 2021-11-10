@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre el conector de origen de API de REST genérico
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar la API genérica de REST a Adobe Experience Platform mediante API o la interfaz de usuario.
-source-git-commit: 127c2764b8414ee9b59d49ec04cbbd28269ca496
+source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,3 @@ La siguiente documentación proporciona información sobre cómo conectar un [!D
 - [Creación de una conexión base de API de REST genérica mediante la API de servicio de flujo](../../tutorials/api/create/protocols/generic-rest.md)
 - [Explorar la estructura de datos y el contenido de un origen de protocolos mediante la API de servicio de flujo](../../tutorials/api/explore/protocols.md)
 - [Creación de un flujo de datos para un origen de protocolos mediante la API de servicio de flujo](../../tutorials/api/collect/protocols.md)
-
-## Connect [!DNL Generic REST API] a [!DNL Platform] uso de la interfaz de usuario
-
-- [Creación de una conexión de origen de API de REST genérica en la interfaz de usuario](../../tutorials/ui/create/protocols/generic-rest.md)
-- [Creación de un flujo de datos para una conexión de origen de protocolos en la interfaz de usuario](../../tutorials/ui/dataflow/protocols.md)
-
-
