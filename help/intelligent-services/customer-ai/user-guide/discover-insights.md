@@ -6,9 +6,9 @@ title: Descubra perspectivas con Customer AI
 topic-legacy: Discovering insights
 description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 63d6ec7d72b448e9d1bf1da96a1f148838d99cec
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1716'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,11 @@ Este documento sirve como guía para interactuar con perspectivas de instancias 
 
 ## Primeros pasos
 
-Para utilizar perspectivas para Customer AI, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite [Configuración de una instancia AI del cliente](./configure.md). Si ha creado recientemente una instancia de servicio y sigue siendo de formación y puntuación, espere 24 horas para que termine de ejecutarse.
+Para utilizar perspectivas para Customer AI, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite [Configuración de una instancia de Customer AI](./configure.md). Si ha creado recientemente una instancia de servicio y sigue siendo de formación y puntuación, espere 24 horas para que termine de ejecutarse.
 
 ## Información general de la instancia de servicio
 
-En la interfaz de usuario de [!DNL Adobe Experience Platform], haga clic en **[!UICONTROL Services]** en el panel de navegación izquierdo. Aparece el explorador *Services* y muestra los servicios inteligentes disponibles. En el contenedor de Customer AI, haga clic en **[!UICONTROL Open]**.
+En el [!DNL Adobe Experience Platform] IU, seleccione **[!UICONTROL Servicios]** en el panel de navegación izquierdo. La variable *Servicios* aparece y muestra los servicios inteligentes disponibles. En el contenedor para Customer AI, seleccione **[!UICONTROL Apertura]**.
 
 ![Acceso a la instancia](../images/insights/navigate-to-service.png)
 
@@ -41,42 +41,54 @@ Seleccione un nombre de instancia de servicio para comenzar.
 
 ![Crear instancia](../images/insights/click-the-name.png)
 
-A continuación, la página perspectivas de esa instancia de servicio aparece con la opción de seleccionar **[!UICONTROL Últimas puntuaciones]** o **[!UICONTROL Resumen de rendimiento]**. La pestaña predeterminada **[!UICONTROL Últimas puntuaciones]** proporciona visualizaciones de los datos. Las visualizaciones y lo que puede hacer con los datos se explican con más detalle en esta guía.
+A continuación, la página de perspectivas de esa instancia de servicio aparece con la opción para seleccionar **[!UICONTROL Últimas puntuaciones]** o **[!UICONTROL Resumen de rendimiento]**. La pestaña predeterminada **[!UICONTROL Últimas puntuaciones]** proporciona visualizaciones de sus datos. Las visualizaciones y lo que puede hacer con los datos se explican con más detalle en esta guía.
 
-La pestaña **[!UICONTROL Performance summary]** muestra las tasas reales de pérdida o conversión de cada bloque de propensión. Para obtener más información, consulte la sección sobre [métricas de resumen de rendimiento](#performance-metrics).
+La variable **[!UICONTROL Resumen de rendimiento]** muestra las tasas reales de pérdida o conversión de cada bloque de propensión. Para obtener más información, consulte la sección sobre [métricas de resumen de rendimiento](#performance-metrics).
 
 ![página de configuración](../images/insights/landing_page_insights.png)
 
-### Detalles de instancias de servicio
+## Detalles de instancias de servicio
 
 Existen dos formas de ver los detalles de instancias de servicio: desde el panel o dentro de la instancia de servicio.
 
+### Panel de instancias de servicio
+
 Para ver una descripción general de los detalles de la instancia de servicio dentro del panel, seleccione un contenedor de instancia de servicio, evitando el hipervínculo adjunto al nombre. Se abre un carril derecho que proporciona detalles adicionales. Los controles contienen lo siguiente:
 
-- **[!UICONTROL Editar]**: La selección de  **** Editar permite modificar una instancia de servicio existente. Puede editar el nombre, la descripción y la frecuencia de puntuación de la instancia.
-- **[!UICONTROL Clonar]**: Al seleccionar  **** Clonecopies, se configura la instancia de servicio seleccionada actualmente. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
+- **[!UICONTROL Editar]**: Selección **[!UICONTROL Editar]** permite modificar una instancia de servicio existente. Puede editar el nombre, la descripción y la frecuencia de puntuación de la instancia.
+- **[!UICONTROL Clonar]**: Selección **[!UICONTROL Clonar]** copia la configuración de la instancia de servicio seleccionada actualmente. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
 - **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
-- **[!UICONTROL Fuente]** de datos: Un vínculo al conjunto de datos utilizado por esta instancia.
-- **[!UICONTROL Frecuencia]** de ejecución: La frecuencia con la que se produce una puntuación y el momento en que se realiza.
-- **[!UICONTROL Definición]** de puntuación: Información general rápida sobre el objetivo que configuró para esta instancia.
+- **[!UICONTROL Fuente de datos]**: Un vínculo al conjunto de datos utilizado por esta instancia.
+- **[!UICONTROL Frecuencia de ejecución]**: La frecuencia con la que se produce una puntuación y el momento en que se realiza.
+- **[!UICONTROL Definición de la puntuación]**: Información general rápida sobre el objetivo que configuró para esta instancia.
 
 ![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->En caso de que falle una ejecución de puntuación, se proporciona un mensaje de error. El mensaje de error aparece en **Últimos detalles de ejecución** en el carril derecho, que solo es visible para las ejecuciones fallidas.
+>En caso de que falle una ejecución de puntuación, se proporciona un mensaje de error. El mensaje de error aparece debajo de **Detalles de la última ejecución** en el carril derecho, que solo es visible para las ejecuciones fallidas.
 
 ![error al ejecutar el mensaje](../images/insights/failed-run.png)
 
-La segunda manera de ver detalles adicionales para una instancia de servicio se encuentra dentro de la página de perspectivas. Puede hacer clic en **[!UICONTROL Mostrar más]** en la parte superior derecha para rellenar una lista desplegable. Los detalles se enumeran, como la definición de puntuación, cuándo se creó y el tipo de tendencia. Para obtener más información sobre cualquiera de las propiedades enumeradas, visite [Configuración de una instancia AI del cliente](./configure.md).
+### Mostrar lista desplegable de más perspectivas
+
+La segunda manera de ver detalles adicionales para una instancia de servicio se encuentra dentro de la página de perspectivas. Select **[!UICONTROL Mostrar más]** en la parte superior derecha para rellenar una lista desplegable. Los detalles se enumeran, como la definición de puntuación, cuándo se creó, el tipo de tendencia y los conjuntos de datos utilizados. Para obtener más información sobre cualquiera de las propiedades enumeradas, visite [Configuración de una instancia de Customer AI](./configure.md).
 
 ![mostrar más](../images/insights/landing-show-more.png)
 
-![mostrar más](../images/insights/show-more.png)
+### Rendimiento de vista previa del conjunto de datos AI del cliente
+
+Si AI del cliente utiliza más de un conjunto de datos, un hipervínculo etiquetado **[!UICONTROL Múltiple]** seguido del número de conjuntos de datos entre corchetes `()` se proporciona.
+
+![varios conjuntos de datos](../images/insights/insights-multi-datasets.png)
+
+Al seleccionar el vínculo de varios conjuntos de datos, se abre la ventana emergente de vista previa del conjunto de datos de Customer AI . Cada color de la vista previa representa un conjunto de datos como se muestra con la clave de color a la izquierda de las columnas del conjunto de datos. En este ejemplo, solo puede ver que **Conjunto de datos 1** contiene el `PROP1` para abrir el Navegador.
+
+![mostrar más](../images/insights/dataset-preview.png)
 
 ### Editar una instancia
 
-Para editar una instancia, haga clic en **[!UICONTROL Editar]** en el panel de navegación superior derecho.
+Para editar una instancia, seleccione **[!UICONTROL Editar]** en la barra de navegación superior derecha.
 
 ![haga clic en el botón editar](../images/insights/edit-button.png)
 
@@ -86,12 +98,12 @@ Aparece el cuadro de diálogo de edición, que le permite editar el nombre, la d
 
 ### Más acciones
 
-El botón **[!UICONTROL Más acciones]** se encuentra en la navegación superior derecha junto a **[!UICONTROL Editar]**. Al hacer clic en **[!UICONTROL Más acciones]** se abre un menú desplegable que le permite seleccionar una de las siguientes operaciones:
+La variable **[!UICONTROL Más acciones]** se encuentra en la navegación superior derecha junto a **[!UICONTROL Editar]**. Selección **[!UICONTROL Más acciones]** abre un menú desplegable que le permite seleccionar una de las siguientes operaciones:
 
-- **[!UICONTROL Clonar]**: Al seleccionar  **** Clonecopies, se configura la instancia de servicio. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
+- **[!UICONTROL Clonar]**: Selección **[!UICONTROL Clonar]** copia la configuración de la instancia de servicio. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
 - **[!UICONTROL Eliminar]**: Elimina la instancia.
-- **[!UICONTROL Puntuaciones]** de acceso: Al seleccionar  **[!UICONTROL Puntuaciones de]** acceso , se abre un cuadro de diálogo que contiene un vínculo a las puntuaciones de  [descarga del ](./download-scores.md) tutorial de AI del cliente, mientras que el cuadro de diálogo también proporciona el ID del conjunto de datos necesario para realizar llamadas de API.
-- **[!UICONTROL Ver el historial]** de ejecución: Aparecerá un cuadro de diálogo que contiene una lista de todas las ejecuciones de puntuación asociadas a la instancia de servicio.
+- **[!UICONTROL Puntuaciones de acceso]**: Selección **[!UICONTROL Puntuaciones de acceso]** abre un cuadro de diálogo que contiene un vínculo a la variable [descarga de puntuaciones para Customer AI](./download-scores.md) , el cuadro de diálogo también proporciona el id de conjunto de datos necesario para realizar llamadas de API.
+- **[!UICONTROL Ver historial de ejecución]**: Aparecerá un cuadro de diálogo que contiene una lista de todas las ejecuciones de puntuación asociadas a la instancia de servicio.
 
 ![más acciones](../images/insights/more-actions.png)
 
@@ -111,7 +123,7 @@ Puede situarse sobre cualquier color del anillo para ver información adicional,
 
 ## Distribución de puntuaciones
 
-La tarjeta **[!UICONTROL Distribution of Score]** le proporciona un resumen visual de la población en función de la puntuación. Los colores que se ven en la tarjeta [!UICONTROL Distribution of Score] representan el tipo de puntuación de tendencia generada. Al pasar el ratón por encima de cualquiera de las distribuciones de puntuación, se obtiene el recuento exacto que pertenece a esa distribución.
+La variable **[!UICONTROL Distribución de puntuaciones]** le ofrece un resumen visual de la población basado en la puntuación. Los colores que se ven en la [!UICONTROL Distribución de puntuaciones] representa el tipo de puntuación de tendencia generada. Al pasar el ratón por encima de cualquiera de las distribuciones de puntuación, se obtiene el recuento exacto que pertenece a esa distribución.
 
 ![distribución de puntuaciones](../images/insights/distribution-of-scores.png)
 
@@ -135,17 +147,17 @@ Puede ver que los perfiles con baja tendencia a convertir tienen menos probabili
 
 ### Creación de segmentos
 
-Al seleccionar el botón **[!UICONTROL Crear segmento]** en cualquiera de los contenedores para obtener una propensión baja, media y alta, se le redirige al Generador de segmentos.
+Al seleccionar la variable **[!UICONTROL Crear segmento]** en cualquiera de los contenedores para baja, media y alta propensión le redirige al generador de segmentos.
 
 >[!NOTE]
 >
->El botón **[!UICONTROL Crear segmento]** solo está disponible si el perfil del cliente en tiempo real está habilitado para el conjunto de datos. Para obtener más información sobre cómo habilitar el perfil del cliente en tiempo real, visite [Información general del perfil del cliente en tiempo real](../../../rtcdp/overview.md).
+>La variable **[!UICONTROL Crear segmento]** solo está disponible si Perfil del cliente en tiempo real está habilitado para el conjunto de datos. Para obtener más información sobre cómo habilitar el perfil del cliente en tiempo real, visite la [Resumen del perfil del cliente en tiempo real](../../../rtcdp/overview.md).
 
 ![Haga clic en crear segmento](../images/insights/influential-factors-create-segment.png)
 
 ![Creación de segmentos](../images/insights/create-segment.png)
 
-El generador de segmentos se utiliza para definir un segmento. Al seleccionar **[!UICONTROL Crear segmento]** en la página Perspectivas, Customer AI agrega automáticamente la información de bloques seleccionada al segmento. Para terminar de crear el segmento, simplemente rellene los contenedores *Name* y *Description* ubicados en el carril derecho de la interfaz de usuario del generador de segmentos. Una vez que haya dado un nombre y una descripción al segmento, haga clic en **[!UICONTROL Guardar]** en la parte superior derecha.
+El generador de segmentos se utiliza para definir un segmento. Al seleccionar **[!UICONTROL Crear segmento]** desde la página Perspectivas , Customer AI agrega automáticamente al segmento la información de bloques seleccionada. Para terminar de crear el segmento, simplemente rellene el **Nombre** y **Descripción** contenedores ubicados en el carril derecho de la interfaz de usuario del generador de segmentos. Después de dar un nombre y una descripción al segmento, seleccione **[!UICONTROL Guardar]** en la parte superior derecha.
 
 >[!NOTE]
 >
@@ -153,13 +165,13 @@ El generador de segmentos se utiliza para definir un segmento. Al seleccionar **
 
 ![Relleno de segmentos](../images/insights/segment-saving.png)
 
-Para ver el nuevo segmento en la interfaz de usuario de Platform, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. La página **[!UICONTROL Examinar]** aparece y muestra todos los segmentos disponibles.
+Para ver el nuevo segmento en la interfaz de usuario de Platform, seleccione **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. La variable **[!UICONTROL Examinar]** aparece y muestra todos los segmentos disponibles.
 
 ![Todos sus segmentos](../images/insights/Segments-dashboard.png)
 
 ## Métricas de resumen de rendimiento {#performance-metrics}
 
-La pestaña **[!UICONTROL Performance summary]** muestra las tasas de conversión o pérdida reales, separadas en cada uno de los bloques de tendencia marcados por Customer AI.
+La variable **[!UICONTROL Resumen de rendimiento]** La pestaña muestra las tasas reales de pérdida o conversión, separadas en cada uno de los bloques de inclinación marcados por Customer AI.
 
 ![Ficha Resumen del rendimiento](../images/insights/summary_tab.png)
 
@@ -169,21 +181,21 @@ Al pasar el ratón por encima de las líneas, se muestra la fecha y la tasa real
 
 ![Ejemplo de depósito](../images/insights/churn_tab.png)
 
-Puede filtrar el intervalo de tiempo para ver las tasas esperadas y reales que se muestran. Seleccione el **icono de calendario** ![icono](../images/insights/calendar_icon.png)y, a continuación, seleccione un nuevo intervalo de fechas. Los resultados de cada uno de los bloques se actualizan para mostrarse dentro del nuevo intervalo de fechas.
+Puede filtrar el intervalo de tiempo para ver las tasas esperadas y reales que se muestran. Seleccione el **icono de calendario** ![icono](../images/insights/calendar_icon.png)a continuación, seleccione un nuevo intervalo de fechas. Los resultados de cada uno de los bloques se actualizan para mostrarse dentro del nuevo intervalo de fechas.
 
 ![Selector de fecha](../images/insights/date_selector.png)
 
 ### Tasas de ejecución de puntuación individual
 
-La mitad inferior de la pestaña **[!UICONTROL Performance summary]** muestra los resultados de cada ejecución de puntuación individual. Seleccione la fecha desplegable en la parte superior derecha para mostrar los resultados de una ejecución de puntuación diferente.
+La mitad inferior de **[!UICONTROL Resumen de rendimiento]** muestra los resultados de cada ejecución de puntuación individual. Seleccione la fecha desplegable en la parte superior derecha para mostrar los resultados de una ejecución de puntuación diferente.
 
-Dependiendo de si está pronosticando la pérdida o conversión, el gráfico [!UICONTROL Distribution of Score] muestra la distribución de perfiles alterados/convertidos y no producidos/no convertidos en cada incremento.
+Dependiendo de si está pronosticando la pérdida o conversión, la variable [!UICONTROL Distribución de puntuaciones] graph muestra la distribución de perfiles reproducidos/convertidos y no reproducidos/no convertidos en cada incremento.
 
 ![puntuación individual](../images/insights/scoring_tab.png)
 
 ## Pasos siguientes
 
-Este documento describía las perspectivas proporcionadas por una instancia de servicio de Customer AI. Ahora puede continuar con el tutorial sobre la [descarga de puntuaciones en Customer AI](./download-scores.md) o examinar las otras [guías de servicios inteligentes de Adobe](../../home.md) que se ofrecen.
+Este documento describía las perspectivas proporcionadas por una instancia de servicio de Customer AI. Ahora puede continuar con el tutorial en [descarga de puntuaciones en Customer AI](./download-scores.md) o examinar el otro [Servicios inteligentes de Adobe](../../home.md) guías que se ofrecen.
 
 ## Recursos adicionales
 
