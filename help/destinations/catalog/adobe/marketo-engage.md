@@ -2,18 +2,14 @@
 title: Destino del Marketo Engage
 description: Marketo Engage es la única solución integral de administración de experiencias del cliente (CXM) para marketing, publicidad, análisis y comercio. Permite automatizar y administrar actividades desde la administración de posibles clientes de CRM y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6ea82e0589843f15b1486e1242aa68ef8e2fe9d3
+source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '282'
 ht-degree: 1%
 
 ---
 
-# (Beta) destino del Marketo Engage {#beta-marketo-engage-destination}
-
->[!IMPORTANT]
->
->El destino de Marketo Engage en Adobe Experience Platform está actualmente en versión beta. La documentación y la funcionalidad están sujetas a cambios.
+# destino del Marketo Engage {#beta-marketo-engage-destination}
 
 ## Información general {#overview}
 
@@ -46,7 +42,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ## Uso y gobernanza de los datos {#data-usage-governance}
 
-Todos los destinos [!DNL Adobe Experience Platform] cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, consulte la [información general sobre el control de datos](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] exige el control de datos; consulte [información general sobre la administración de datos](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 <!--
 

@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 9%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 9%
 * [Tipos y categorías de destino](./destination-types.md)
 * Tutoriales de API {#api}
    * [Conectarse a destinos de flujo continuo y activar datos mediante la API de servicio de flujo](./api/streaming-destinations.md)
-   * [Conectarse a destinos de marketing por correo electrónico y activar datos mediante la API de servicio de flujo](./api/email-marketing.md)
+   * [Conéctese a destinos de marketing por correo electrónico y active los datos mediante la API de servicio de flujo](./api/email-marketing.md)
    * [(Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc](./api/ad-hoc-activation-api.md)
 * Guías de la interfaz de usuario {#ui}
    * [Espacio de trabajo de destinos](./ui/destinations-workspace.md)
@@ -39,7 +39,7 @@ ht-degree: 9%
    * [ Conexión HTTP (Alpha)](./catalog/http-destination.md)
    * Destinos de Adobe{#adobe}
       * [Información general sobre los destinos de Adobe](./catalog/adobe/overview.md)
-      * [Conexión del Marketo Engage (Beta)](./catalog/adobe/marketo-engage.md)
+      * [conexión del Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [uso compartido de segmentos del Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinos publicitarios{#advertising}
       * [Información general sobre los destinos publicitarios](./catalog/advertising/overview.md)
@@ -148,7 +148,7 @@ ht-degree: 9%
    * [Información general](./destination-sdk/overview.md)
    * [Requisitos previos de integración](./destination-sdk/integration-prerequisites.md)
    * [Primeros pasos](./destination-sdk/getting-started.md)
-   * Funcionalidad del SDK de destino {#functionality}
+   * Funcionalidad de Destination SDK {#functionality}
       * [Opciones de Configuration](./destination-sdk/configuration-options.md)
       * [Configuración de destino](./destination-sdk/destination-configuration.md)
       * [Especificaciones de servidor y plantilla](./destination-sdk/server-and-template-configuration.md)
@@ -161,7 +161,7 @@ ht-degree: 9%
          * [Creación y prueba de una plantilla de transformación de mensaje](./destination-sdk/create-template.md)
          * [Probar la configuración de destino](./destination-sdk/test-destination.md)
    * Operaciones de API {#api}
-      * [Referencia de la API del SDK de destino (creación de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Referencia de la API de Destination SDK (creación de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Operaciones de API de extremo de destinos](./destination-sdk/destination-configuration-api.md)
       * [Operaciones de API de extremo del servidor de destino](./destination-sdk/destination-server-api.md)
       * [Operaciones de API de extremo de metadatos de audiencia](./destination-sdk/audience-metadata-api.md)
@@ -173,7 +173,7 @@ ht-degree: 9%
          * [Operaciones de API de prueba de destino](./destination-sdk/destination-testing-api.md)
          * [Ejemplos de operaciones de API de generación de perfiles](./destination-sdk/sample-profile-generation-api.md)
    * Guías {#guides}
-      * [Usar el SDK de destino para configurar un destino de flujo continuo](./destination-sdk/configure-destination-instructions.md)
+      * [Usar Destination SDK para configurar un destino de flujo continuo](./destination-sdk/configure-destination-instructions.md)
    * Documentar el destino {#document-destination}
       * [Documentar el destino en Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Utilice la interfaz web de GitHub para crear una página de documentación de destino](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
