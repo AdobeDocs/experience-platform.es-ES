@@ -2,20 +2,16 @@
 title: Detalles de persona comercial XDM Grupo de campos de esquema
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de persona empresarial XDM.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 5%
+source-wordcount: '533'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL XDM Business Person ] Detailsschema grupo de campos (Beta)
+# [!UICONTROL Detalles de persona comercial XDM] grupo de campos de esquema
 
->[!IMPORTANT]
->
->Este grupo de campos está disponible como parte de la Plataforma de datos de clientes en tiempo real B2B Edition, que actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
-
-[!UICONTROL XDM Business Person ] Detailsis es un grupo de campos de esquema estándar para la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) clase que captura información sobre una persona individual en el contexto de una empresa de empresa a empresa (B2B).
+[!UICONTROL Detalles de persona comercial XDM] es un grupo de campos de esquema estándar para la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) que captura información sobre una persona en el contexto de una empresa de empresa a empresa (B2B).
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -56,7 +52,7 @@ ht-degree: 5%
 | `workAddress` | [Dirección postal](../../data-types/postal-address.md) | La dirección de trabajo de la persona. |
 | `workEmail` | [Dirección de correo electrónico](../../data-types/email-address.md) | La dirección de correo electrónico del trabajo de la persona. |
 | `workPhone` | [Número de teléfono](../../data-types/phone-number.md) | El número de teléfono de trabajo de la persona. |
-| `identityMap` | Mapa | Campo de mapa que contiene un conjunto de identidades con espacio de nombres para la persona. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en los  [conceptos básicos de la ](../../schema/composition.md#identityMap) composición de esquemas para obtener más información sobre su caso de uso. |
+| `identityMap` | Mapa | Campo de mapa que contiene un conjunto de identidades con espacio de nombres para la persona. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en la [conceptos básicos de la composición del esquema](../../schema/composition.md#identityMap) para obtener más información sobre su caso de uso. |
 | `organizations` | Matriz de cadenas | Lista de nombres de organización donde trabaja la persona. |
 
 {style=&quot;table-layout:auto&quot;}

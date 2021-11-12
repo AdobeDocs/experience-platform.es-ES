@@ -2,20 +2,16 @@
 title: Clase de relación de persona de oportunidad empresarial XDM
 description: Este documento proporciona una descripción general de la clase de relación de persona de oportunidad empresarial XDM en el Modelo de datos de experiencia (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '242'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL XDM Business Oportunity Person ] Relationship (Beta)
+# [!UICONTROL Relación de persona de oportunidad comercial XDM] class
 
->[!IMPORTANT]
->
->Esta clase está disponible como parte de la plataforma de datos del cliente en tiempo real B2B Edition, que actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
-
-[!UICONTROL La ] relación de persona de oportunidad comercial XDM es una clase estándar del Modelo de datos de experiencia (XDM) que captura las propiedades mínimas requeridas de una persona asociada con una oportunidad comercial.
+[!UICONTROL Relación de persona de oportunidad comercial XDM] es una clase de modelo de datos de experiencia (XDM) estándar que captura las propiedades mínimas requeridas de una persona asociada con una oportunidad comercial.
 
 ![](../../images/classes/b2b/business-opportunity-person-relation.png)
 
@@ -34,4 +30,4 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-Consulte la guía sobre las [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.
+Consulte la guía de [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.

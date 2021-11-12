@@ -2,20 +2,16 @@
 title: Clase de oportunidad empresarial XDM
 description: Este documento proporciona información general sobre la clase de oportunidad empresarial XDM en el Modelo de datos de experiencia (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 5%
+source-wordcount: '197'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Clase de ] oportunidad empresarial XDM (Beta)
+# [!UICONTROL Oportunidad comercial XDM] class
 
->[!IMPORTANT]
->
->Esta clase está disponible como parte de la plataforma de datos del cliente en tiempo real B2B Edition, que actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
-
-[!UICONTROL XDM Business ] Oportunityes una clase estándar de Experience Data Model (XDM) que captura las propiedades mínimas requeridas de una oportunidad comercial.
+[!UICONTROL Oportunidad comercial XDM] es una clase estándar de Experience Data Model (XDM) que captura las propiedades mínimas requeridas de una oportunidad comercial.
 
 ![](../../images/classes/b2b/business-opportunity.png)
 
@@ -24,7 +20,7 @@ ht-degree: 5%
 | `accountKey` | [[!UICONTROL Fuente B2B]](../../data-types/b2b-source.md) | Identificador compuesto de la cuenta a la que se asocia esta oportunidad. |
 | `extSourceSystemAudit` | [[!UICONTROL Atributos de auditoría del sistema de fuentes externas]](../../data-types/external-source-system-audit-attributes.md) | Si la oportunidad proviene de un sistema de origen externo, este objeto captura los atributos de auditoría de ese sistema. |
 | `opportunityKey` | [[!UICONTROL Fuente B2B]](../../data-types/b2b-source.md) | Identificador compuesto de la entidad de oportunidad. |
-| `_id` | Cadena | Identificador único del registro. Se trata de un valor generado por el sistema que es independiente del `opportunityID`. |
+| `_id` | Cadena | Identificador único del registro. Se trata de un valor generado por el sistema que es independiente del valor `opportunityID`. |
 | `accountID` | Cadena | Un ID único para la cuenta a la que se asocia esta oportunidad. |
 | `opportunityDescription` | Cadena | Una descripción de la oportunidad. |
 | `opportunityID` | Cadena | Un ID único para la entidad de oportunidad. |
@@ -34,4 +30,4 @@ ht-degree: 5%
 
 {style=&quot;table-layout:auto&quot;}
 
-Consulte la guía sobre las [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.
+Consulte la guía de [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.

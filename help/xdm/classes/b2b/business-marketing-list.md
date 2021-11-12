@@ -2,20 +2,16 @@
 title: Clase de lista de marketing empresarial XDM
 description: Este documento proporciona información general sobre la clase XDM Business Marketing List en Experience Data Model (XDM).
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '185'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL XDM Business Marketing ] Listclass (Beta)
+# [!UICONTROL Lista de marketing empresarial XDM] class
 
->[!IMPORTANT]
->
->Esta clase está disponible como parte de la plataforma de datos del cliente en tiempo real B2B Edition, que actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
-
-[!UICONTROL XDM Business Marketing ] List es una clase estándar de Experience Data Model (XDM) que captura las propiedades mínimas requeridas de una lista de marketing. Las listas de marketing permiten priorizar a los clientes potenciales que tienen más probabilidades de comprar un producto.
+[!UICONTROL Lista de marketing empresarial XDM] es una clase estándar de Experience Data Model (XDM) que captura las propiedades mínimas requeridas de una lista de marketing. Las listas de marketing permiten priorizar a los clientes potenciales que tienen más probabilidades de comprar un producto.
 
 ![](../../images/classes/b2b/business-marketing-list.png)
 
@@ -23,11 +19,11 @@ ht-degree: 4%
 | --- | --- | --- |
 | `extSourceSystemAudit` | [[!UICONTROL Atributos de auditoría del sistema de fuentes externas]](../../data-types/external-source-system-audit-attributes.md) | Si la lista de marketing proviene de un sistema de origen externo, este objeto captura los atributos de auditoría de ese sistema. |
 | `marketingListKey` | [[!UICONTROL Fuente B2B]](../../data-types/b2b-source.md) | Identificador compuesto de la entidad de la lista de marketing. |
-| `_id` | Cadena | Identificador único del registro. Se trata de un valor generado por el sistema que es independiente del `marketingListID`. |
+| `_id` | Cadena | Identificador único del registro. Se trata de un valor generado por el sistema que es independiente del valor `marketingListID`. |
 | `marketingListDescription` | Cadena | Una descripción para la lista de marketing. |
 | `marketingListID` | Cadena | Un ID único para la entidad de la lista de marketing. |
 | `marketingListName` | Cadena | Nombre de la lista de marketing. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Consulte la guía sobre las [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.
+Consulte la guía de [relaciones de esquema en tiempo real CDP B2B Edition](../../tutorials/relationship-b2b.md) para conocer cómo se relaciona esta clase conceptualmente con las otras clases B2B y cómo puede establecer estas relaciones en la interfaz de usuario de Adobe Experience Platform.

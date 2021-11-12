@@ -4,9 +4,9 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases del Modelo de datos de experiencia (XDM) y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+source-git-commit: eea5cfe6111d25da4a7978d3924861250059cc7e
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 14%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 14%
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Definición del segmento](./classes/segment-definition.md)
-   * Clases B2B (Beta) {#b2b}
+   * Clases B2B {#b2b}
       * [Cuenta comercial XDM](./classes/b2b/business-account.md)
       * [Relación de persona de cuenta comercial XDM](./classes/b2b/business-account-person-relation.md)
       * [Campaña empresarial XDM](./classes/b2b/business-campaign.md)
@@ -74,7 +74,7 @@ ht-degree: 14%
    * [Señalización](./data-types/beacon.md)
    * [Detalles del explorador](./data-types/browser-details.md)
    * [Fuente B2B](./data-types/b2b-source.md)
-   * [Comercio](./data-types/commerce.md)
+   * [Commerce](./data-types/commerce.md)
    * [Cadena de consentimiento](./data-types/consent-string.md)
    * [Consentimientos y preferencias](./data-types/consents.md)
    * [Moneda](./data-types/currency.md)
@@ -113,7 +113,7 @@ ht-degree: 14%
    * [Información web](./data-types/web-information.md)
    * [Interacción web](./data-types/web-interaction.md)
    * [Detalles de la página web](./data-types/webpage-details.md)
-*  EsquemasIU  {#ui}
+* [!UICONTROL Esquemas] IU {#ui}
    * [Información general](./ui/overview.md)
    * [Exploración de recursos XDM](./ui/explore.md)
    * Crear y editar recursos {#resources}
@@ -132,7 +132,7 @@ ht-degree: 14%
    * [Flujos de trabajo basados en el campo](./ui/field-based-workflows.md)
    * [Generar datos XDM de muestra](./ui/sample.md)
    * [Exportar esquemas XDM](./ui/export.md)
-* API del Registro de Esquemas {#api}
+* API del Registro de esquemas {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
    * [Esquemas](api/schemas.md)
@@ -153,7 +153,7 @@ ht-degree: 14%
    * [Creación de un esquema en la API](tutorials/create-schema-api.md)
    * [Definir una relación de esquema en la interfaz de usuario](tutorials/relationship-ui.md)
    * [Definir una relación de esquema en la API](tutorials/relationship-api.md)
-   * [Definir una relación de esquema en CDP B2B Edition en tiempo real (Beta)](tutorials/relationship-b2b.md)
+   * [Definir una relación de esquema en CDP B2B Edition en tiempo real](tutorials/relationship-b2b.md)
    * [Creación de un esquema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
