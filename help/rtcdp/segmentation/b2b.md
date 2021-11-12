@@ -1,21 +1,15 @@
 ---
-title: Información general sobre los casos de uso de segmentación para CDP B2B Edition en tiempo real (Beta)
+title: Información general sobre los casos de uso de segmentación para CDP B2B Edition en tiempo real
 description: Una visión general de los diversos casos de uso disponibles de CDP B2B Edition en tiempo real.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 1%
+source-wordcount: '1096'
+ht-degree: 0%
 
 ---
 
-# Información general sobre los casos de uso de segmentación para Real-time Customer Data Platform B2B Edition (Beta)
-
-<!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
-
->[!IMPORTANT]
->
->CDP B2B Edition en tiempo real está actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
+# Información general sobre los casos de uso de segmentación para Real-time Customer Data Platform B2B Edition
 
 Este documento proporciona ejemplos sobre la segmentación disponible para CDP B2B Edition en tiempo real y cómo se pueden combinar los distintos tipos de atributos para casos de uso comunes B2B.
 
