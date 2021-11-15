@@ -6,7 +6,7 @@ title: Configuración de una instancia de AI del cliente
 topic-legacy: Instance creation
 description: Los servicios inteligentes proporcionan Customer AI como un servicio de Adobe Sensei fácil de usar que se puede configurar para diferentes casos de uso. Las secciones siguientes proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 52ab1527d3021500d934afe56cfc751116f784a4
+source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
 workflow-type: tm+mt
 source-wordcount: '2299'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Después de seleccionar los conjuntos de datos que desea utilizar, seleccione la
 
 Selección del icono de información ![icono de información](../images/user-guide/info-icon.png) junto al conjunto de datos se abre la ventana emergente de vista previa del conjunto de datos.
 
-![Seleccionar y buscar un conjunto de datos](../images/user-guide/dataset-info-2.png)
+![Seleccionar y buscar un conjunto de datos](../images/user-guide/dataset-info.png)
 
 La vista previa del conjunto de datos contiene datos como la hora de la última actualización, el esquema de origen y una vista previa de las diez primeras columnas.
 
@@ -85,8 +85,8 @@ Hay un valor de porcentaje de integridad del conjunto de datos en la vista previ
 >[!NOTE]
 >
 >La integridad del conjunto de datos se calcula mediante la ventana de formación máxima para Customer AI (un año). Esto significa que no se tienen en cuenta los datos que tengan más de un año al mostrar el valor de integridad del conjunto de datos.
-<!-- training dataset completness needs to change -->
-![Complejidad del conjunto de datos](../images/user-guide/dataset-info.png)
+
+![Complejidad del conjunto de datos](../images/user-guide/dataset-info-2.png)
 
 ### Seleccionar una identidad {#identity}
 
