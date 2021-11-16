@@ -4,10 +4,10 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
+source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 15%
+source-wordcount: '741'
+ht-degree: 14%
 
 ---
 
@@ -257,6 +257,25 @@ ht-degree: 15%
    - [Actualizar flujos de datos](tutorials/ui/update-dataflows.md)
    - [Eliminar cuentas](tutorials/ui/delete-accounts.md)
    - [Eliminar flujos de datos](tutorials/ui/delete.md)
+- [SDK de fuentes] {#sources-sdk}
+   - [Información general](sources-sdk/overview.md)
+   - [Funcionalidad del SDK de fuentes] {#functionality}
+      - [Opciones de Configuration](sources-sdk/config/config.md)
+      - [Configurar la especificación de autenticación](sources-sdk/config/authspec.md)
+      - [Configuración de la especificación de origen](sources-sdk/config/sourcespec.md)
+      - [Configuración de la especificación de exploración](sources-sdk/config/explorespec.md)
+   - [Tutoriales de API del SDK de fuentes] {#sdk-tutorials}
+      - [Información general sobre la API del SDK de fuentes](sources-sdk/api/overview.md)
+      - [Primeros pasos](sources-sdk/api/getting-started.md)
+      - [Crear una especificación de conexión](sources-sdk/api/create.md)
+      - [Actualizar una especificación de conexión](sources-sdk/api/update-connection-specs.md)
+      - [Actualización de una especificación de flujo](sources-sdk/api/update-flow-specs.md)
+      - [Enviar el origen](sources-sdk/api/submit.md)
+   - [Documentar el origen] {#document}
+      - [Documentar el origen en Adobe Experience Platform](sources-sdk/documentation/overview.md)
+      - [Utilice la interfaz web de GitHub para crear una página de documentación de fuentes](sources-sdk/documentation/github.md)
+      - [Utilice un editor de texto en el entorno local para crear una página de documentación de fuentes](sources-sdk/documentation/text-editor.md)
+      - [Plantilla de autoservicio de documentación](sources-sdk/documentation/template.md)
 - [Notificaciones de ejecución de flujo](notifications.md)
 - [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md)
 - [Preguntas frecuentes](./troubleshooting.md)
