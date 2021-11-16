@@ -4,7 +4,7 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
+source-git-commit: 83aefe6a0880b201e376f458279461888e531741
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 14%
@@ -257,14 +257,14 @@ ht-degree: 14%
    - [Actualizar flujos de datos](tutorials/ui/update-dataflows.md)
    - [Eliminar cuentas](tutorials/ui/delete-accounts.md)
    - [Eliminar flujos de datos](tutorials/ui/delete.md)
-- [SDK de fuentes] {#sources-sdk}
+- [SDK de fuentes] {#sdk}
    - [Información general](sources-sdk/overview.md)
-   - [Funcionalidad del SDK de fuentes] {#functionality}
+   - [Fuentes de configuración del SDK] {#config}
       - [Opciones de Configuration](sources-sdk/config/config.md)
       - [Configurar la especificación de autenticación](sources-sdk/config/authspec.md)
       - [Configuración de la especificación de origen](sources-sdk/config/sourcespec.md)
       - [Configuración de la especificación de exploración](sources-sdk/config/explorespec.md)
-   - [Tutoriales de API del SDK de fuentes] {#sdk-tutorials}
+   - [Tutoriales de API del SDK de fuentes] {#sdk-api}
       - [Información general sobre la API del SDK de fuentes](sources-sdk/api/overview.md)
       - [Primeros pasos](sources-sdk/api/getting-started.md)
       - [Crear una especificación de conexión](sources-sdk/api/create.md)
