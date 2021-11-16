@@ -3,9 +3,9 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 96%
 
 ---
@@ -61,9 +61,5 @@ Es importante tener en cuenta las siguientes diferencias entre el reenvío de ev
 * Secuencia de acciones de regla
 
    En la sección Acción de una regla, las reglas del reenvío de eventos siempre se ejecutan secuencialmente. Asegúrese de que el orden de las acciones es correcto al guardar una regla. Esta secuencia de ejecución no se puede elegir como con las etiquetas.
-
-* Versiones JavaScript de código personalizado
-
-   Las etiquetas utilizan la versión de JavaScript es5. El reenvío de eventos utiliza la versión es6.
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->

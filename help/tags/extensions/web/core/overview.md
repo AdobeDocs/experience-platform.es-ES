@@ -2,10 +2,10 @@
 title: Información general de la extensión Core
 description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '5292'
-ht-degree: 91%
+source-wordcount: '5362'
+ht-degree: 90%
 
 ---
 
@@ -542,6 +542,10 @@ En esta sección se describen los tipos de acción disponibles en la Extensión 
 
 ### Código personalizado
 
+>[!NOTE]
+>
+>JavaScript ES6+ ahora se admite en código personalizado. Tenga en cuenta que algunos exploradores más antiguos no admiten ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los exploradores web compatibles.
+
 Proporcione el código que se ejecuta después de activar el evento y de evaluar las condiciones.
 
 1. Asigne un nombre al código de acción.
@@ -645,6 +649,10 @@ Cualquier valor de cadena constante al que se pueda hacer referencia en acciones
 `string`
 
 ### Custom Code
+
+>[!NOTE]
+>
+>JavaScript ES6+ ahora se admite en código personalizado. Tenga en cuenta que algunos exploradores más antiguos no admiten ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los exploradores web compatibles.
 
 Puede introducir código JavaScript personalizado en la IU si selecciona la opción Abrir editor e inserta código en la ventana del editor.
 

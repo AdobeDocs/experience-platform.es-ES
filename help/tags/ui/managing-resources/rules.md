@@ -1,10 +1,11 @@
 ---
 title: Reglas
-description: Descubra cómo funcionan las extensiones de etiquetas en Adobe Experience Platform.
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+description: Conozca cómo funcionan las extensiones de etiquetas en Adobe Experience Platform.
+exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1977'
-ht-degree: 82%
+source-wordcount: '1969'
+ht-degree: 99%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 82%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Las etiquetas de Adobe Experience Platform siguen un sistema basado en reglas. Buscan interacción de usuarios y datos asociados. Cuando se cumplen los criterios descritos en las reglas, la regla activa la extensión, script o el código del lado del cliente identificados.
+Las etiquetas de Adobe Experience Platform siguen un sistema basado en reglas. Buscan la interacción de usuarios y datos asociados. Cuando se cumplen los criterios descritos en las reglas, la regla activa la extensión, script o el código del lado del cliente identificados.
 
 Genere reglas para integrar los datos y las funciones de marketing y tecnología publicitaria que unifique productos dispares en una única solución.
 
@@ -22,7 +23,7 @@ Genere reglas para integrar los datos y las funciones de marketing y tecnología
 
 **Eventos (If):** el evento es lo que desea que busque la regla. Se define seleccionando un evento, cualquier condición aplicable y cualquier excepción.
 
-**Acciones (Then):** las activaciones se producen cuando se producen eventos de una regla y se cumplen todas las condiciones. Una regla de déclencheur puede realizar tantas acciones discretas como desee y puede controlar el orden en que se producen estas acciones. Por ejemplo, una única regla para una página de agradecimiento de comercio electrónico puede activar las herramientas de análisis y las etiquetas de terceros desde una única regla. No es necesario crear reglas independientes para cada herramienta o etiqueta.
+**Acciones (Then):** las activaciones se producen cuando se producen eventos de una regla y se cumplen todas las condiciones. Una regla de etiquetas puede activar tantas acciones discretas como desee y puede controlar el orden en que se producen dichas acciones. Por ejemplo, una única regla para una página de agradecimiento de comercio electrónico puede activar las herramientas de análisis y las etiquetas de terceros desde una única regla. No es necesario crear reglas independientes para cada herramienta o etiqueta.
 
 Puede añadir más tipos de eventos. Los eventos múltiples se unen con un operador OR, por lo que las condiciones de la regla se evalúan si se cumplen algunos de los eventos.
 
@@ -36,9 +37,9 @@ Los eventos con cualquier condición son la porción *If* de una regla.
 
 Si se produce un evento específico, se evalúan las condiciones y las acciones especificadas se realizan en caso necesario.
 
-* **Eventos**: Especifique uno o más eventos que deben llevarse a cabo para almacenar en déclencheur la regla. Los eventos múltiples se unen mediante un operador OR. Cualquiera de los eventos especificados activa la regla.
+* **Eventos**: Especifique uno o más eventos que deben llevarse a cabo para activar la regla. Los eventos múltiples se unen mediante un operador OR. Cualquiera de los eventos especificados activa la regla.
 
-* **Condiciones**: Reduzca el evento configurando cualquier condición que deba ser verdadera para que un evento pueda almacenar en déclencheur la regla. Una excepción se define como una condición NOT. Las condiciones múltiples se unen mediante un operador AND.
+* **Condiciones**: Limite el evento configurando cualquier condición que deba ser verdadera para que un evento active la regla. Una excepción se define como una condición NOT. Las condiciones múltiples se unen mediante un operador AND.
 
 Los eventos disponibles dependen de las extensiones instaladas. Para obtener más información sobre los eventos de la extensión principal, consulte [Tipos de eventos de la extensión principal](../../extensions/web/core/overview.md#core-extension-event-types).
 
@@ -46,7 +47,7 @@ Los eventos disponibles dependen de las extensiones instaladas. Para obtener má
 
 Las acciones son la porción *Then* de una regla. Definen lo que desea que ocurra cuando se ejecute la regla. Cuando se activa un evento, si las condiciones se evalúan como “true” y las excepciones como “false”, se realizan las acciones. Puede arrastrar y soltar acciones para ordenarlas según lo desee.
 
-## Creación de reglas
+## Crear una regla
 
 Cree una regla que especifique qué acciones se producen si se cumple una condición.
 
@@ -64,7 +65,7 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
 
    >[!IMPORTANT]
    >
-   >En una regla del lado del cliente, los elementos de datos se identifican mediante token con el símbolo `%` al principio y al final del nombre del elemento de datos. Por ejemplo, `%viewportHeight%`. En una regla de reenvío de eventos, los elementos de datos reciben el token `{{` al principio y `}}` al final del nombre del elemento de datos. Por ejemplo, `{{viewportHeight}}`.
+   >En una regla del lado del cliente, los elementos de datos se identifican mediante token con el símbolo `%` al principio y al final del nombre del elemento de datos. Por ejemplo, `%viewportHeight%`. En una regla del lado del servidor, los elementos de datos se identifican mediante token con el símbolo `{{` al principio y `}}` al final del nombre del elemento de datos. Por ejemplo, `{{viewportHeight}}`.
 
    Para hacer referencia a datos de Edge Network, la ruta del elemento de datos debe ser `arc.event._<element>_`.
 
@@ -124,9 +125,9 @@ La ordenación de reglas permite controlar el orden de ejecución de las reglas 
 
 Suele ser importante que las reglas se activen en un orden específico. Ejemplos: (1) tiene varias reglas que establecen condicionalmente las variables [!DNL Analytics] y debe asegurarse de que la regla con Send Beacon se ejecute la última. (2) tiene una regla que activa [!DNL Target] y otra regla que activa [!DNL Analytics], y desea que la regla de [!DNL Target] se ejecute primero.
 
-Finalmente, la responsabilidad de ejecutar las acciones en orden recae en el desarrollador de la extensión del tipo de evento que está utilizando. Los desarrolladores de extensiones de Adobe se aseguran de que sus extensiones funcionan según lo previsto. En el caso de las extensiones de terceros, Adobe proporciona directrices a los desarrolladores de extensiones para que implementen esto correctamente, pero depende de ellos hacerlo correctamente.
+Finalmente, la responsabilidad de ejecutar las acciones en orden recae en el desarrollador de la extensión del tipo de evento que está utilizando. Los desarrolladores de extensiones de Adobe se aseguran de que sus extensiones funcionan según lo previsto. En el caso de las extensiones de terceros, Adobe orienta a los desarrolladores de extensiones para implementar esto de forma adecuada, pero depende de ellos hacerlo correctamente.
 
-Adobe recomienda encarecidamente que ordene las reglas con números positivos entre 1 y 100 (el valor predeterminado es 50). Al ser más sencillo resulta mejor. Recuerde que debe mantener su orden. Sin embargo, el Adobe reconoce que puede haber casos excepcionales en los que esto parezca restrictivo, por lo que se permiten otros números. Las etiquetas admiten números entre +/- 2.147.483.648. También puede utilizar aproximadamente una docena de cifras decimales, pero si considera que necesita hacerlo en su situación actual, debe reconsiderar algunas de las decisiones que ha tomado para llegar a dicha situación.
+Adobe recomienda encarecidamente que ordene las reglas con números positivos entre 1 y 100 (el valor predeterminado es 50). Al ser más sencillo resulta mejor. Recuerde que debe mantener su orden. Sin embargo, Adobe reconoce que pueden darse casos excepcionales en los que esto parezca muy restrictivo, por lo que se permiten otros números. Las etiquetas admiten números entre +/- 2 147 483 648. También puede utilizar aproximadamente una docena de cifras decimales, pero si considera que necesita hacerlo en su situación actual, debe reconsiderar algunas de las decisiones que ha tomado para llegar a dicha situación.
 
 >[!IMPORTANT]
 >
@@ -153,13 +154,9 @@ Los eventos y las condiciones de las reglas siempre se incluyen en la biblioteca
 
 Estos eventos deben ejecutarse casi siempre (a menos que las condiciones se evalúen como false). Por lo tanto, para que sean más eficaces, se incluye el archivo al que hace referencia el código incrustado en la biblioteca principal.
 
-* **JavaScript:** JavaScript está incrustado en la biblioteca de etiquetas principal. El script personalizado se coloca dentro de una etiqueta script y se escribe en el documento mediante `document.write`. Si la regla tiene varios scripts personalizados, se escriben en orden.
+* **JavaScript:** JavaScript está incrustado en la biblioteca principal de etiquetas. El script personalizado se coloca dentro de una etiqueta script y se escribe en el documento mediante `document.write`. Si la regla tiene varios scripts personalizados, se escriben en orden.
 
-   >[!NOTE]
-   >
-   >Las etiquetas utilizan JavaScript ES5. El reenvío de eventos utiliza ES6.
-
-* **HTML:** el HTML se incrusta en la biblioteca de etiquetas principal. `document.write` se utiliza para escribir el HTML en el documento. Si la regla tiene varios scripts personalizados, se escriben en orden.
+* **HTML:** El HTML se incrusta en la biblioteca principal de etiquetas. `document.write` se utiliza para escribir el HTML en el documento. Si la regla tiene varios scripts personalizados, se escriben en orden.
 
 ### Reglas con cualquier otro evento
 
@@ -170,11 +167,11 @@ Adobe no puede garantizar que se activen otras reglas y que se necesite el códi
 
 ## Secuencia de componentes de regla {#sequencing}
 
-El comportamiento del entorno de tiempo de ejecución de etiquetas depende de si **[!UICONTROL Run rule components in sequence]** está activado o desactivado para la propiedad.
+El comportamiento del entorno de tiempo de ejecución de etiquetas depende de si **[!UICONTROL Ejecutar componentes de regla en secuencia]** está activado o desactivado en la propiedad.
 
 ### Habilitado
 
-Si se habilita, cuando se activa un evento en tiempo de ejecución, las condiciones y acciones de la regla se agregan a una cola de procesamiento (según el orden definido) y se procesan de uno en uno según FIFO. La etiqueta espera a que finalice el componente antes de pasar al siguiente.
+Si se habilita, cuando se activa un evento en tiempo de ejecución, las condiciones y acciones de la regla se agregan a una cola de procesamiento (según el orden definido) y se procesan de uno en uno según FIFO. La etiqueta espera la finalización del componente antes de pasar al siguiente.
 
 Si una condición se evalúa como falsa o alcanza el tiempo de espera definido, las siguientes condiciones y acciones de esa regla se eliminan de la cola.
 
@@ -182,7 +179,7 @@ Si una acción falla o alcanza el tiempo de espera definido, las acciones poster
 
 >[!NOTE]
 >
->Con esta configuración habilitada, todas las condiciones y acciones se ejecutan de forma asíncrona, incluso si se ha cargado la biblioteca de etiquetas de forma sincrónica.
+>Con esta configuración habilitada, todas las condiciones y acciones se ejecutan de forma asíncrona, incluso si se ha cargado la biblioteca de etiquetas de manera síncrona
 
 ### Desactivado
 
