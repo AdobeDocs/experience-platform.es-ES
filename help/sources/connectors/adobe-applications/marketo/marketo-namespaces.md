@@ -5,9 +5,9 @@ title: Esquemas y áreas de nombres B2B
 topic-legacy: overview
 description: Este documento proporciona información general sobre los espacios de nombres personalizados necesarios al crear un conector de origen B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1688'
 ht-degree: 4%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 4%
 # Esquemas y áreas de nombres B2B
 
 Este documento proporciona información sobre la configuración subyacente para los espacios de nombres y esquemas que se van a utilizar con orígenes B2B. Este documento también proporciona detalles sobre la configuración de la utilidad de automatización de Postman necesaria para generar esquemas y áreas de nombres B2B.
+
+>[!IMPORTANT]
+>
+>Debe tener acceso a [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) para que los esquemas B2B participen en [Perfil del cliente en tiempo real](../../../../profile/home.md).
 
 ## Configuración de espacios de nombres B2B y utilidad de generación automática de esquemas
 
