@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: 83aefe6a0880b201e376f458279461888e531741
+source-git-commit: b8793a4346e3f6017bdac07a1dd8df75a7341066
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '731'
 ht-degree: 14%
 
 ---
@@ -259,23 +259,20 @@ ht-degree: 14%
    - [Eliminar flujos de datos](tutorials/ui/delete.md)
 - [SDK de fuentes] {#sdk}
    - [Información general](sources-sdk/overview.md)
-   - [Fuentes de configuración del SDK] {#config}
-      - [Opciones de Configuration](sources-sdk/config/config.md)
-      - [Configurar la especificación de autenticación](sources-sdk/config/authspec.md)
-      - [Configuración de la especificación de origen](sources-sdk/config/sourcespec.md)
-      - [Configuración de la especificación de exploración](sources-sdk/config/explorespec.md)
-   - [Tutoriales de API del SDK de fuentes] {#sdk-api}
-      - [Información general sobre la API del SDK de fuentes](sources-sdk/api/overview.md)
-      - [Primeros pasos](sources-sdk/api/getting-started.md)
-      - [Crear una especificación de conexión](sources-sdk/api/create.md)
-      - [Actualizar una especificación de conexión](sources-sdk/api/update-connection-specs.md)
-      - [Actualización de una especificación de flujo](sources-sdk/api/update-flow-specs.md)
-      - [Enviar el origen](sources-sdk/api/submit.md)
-   - [Documentar el origen] {#document}
-      - [Documentar el origen en Adobe Experience Platform](sources-sdk/documentation/overview.md)
-      - [Utilice la interfaz web de GitHub para crear una página de documentación de fuentes](sources-sdk/documentation/github.md)
-      - [Utilice un editor de texto en el entorno local para crear una página de documentación de fuentes](sources-sdk/documentation/text-editor.md)
-      - [Plantilla de autoservicio de documentación](sources-sdk/documentation/template.md)
+   - [Opciones de Configuration](sources-sdk/config/config.md)
+   - [Configurar la especificación de autenticación](sources-sdk/config/authspec.md)
+   - [Configuración de la especificación de origen](sources-sdk/config/sourcespec.md)
+   - [Configuración de la especificación de exploración](sources-sdk/config/explorespec.md)
+   - [Información general sobre la API del SDK de fuentes](sources-sdk/api/api-overview.md)
+   - [Primeros pasos](sources-sdk/api/getting-started.md)
+   - [Crear una especificación de conexión](sources-sdk/api/create.md)
+   - [Actualizar una especificación de conexión](sources-sdk/api/update-connection-specs.md)
+   - [Actualización de una especificación de flujo](sources-sdk/api/update-flow-specs.md)
+   - [Enviar el origen](sources-sdk/api/submit.md)
+   - [Documentar el origen en Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+   - [Utilice la interfaz web de GitHub para crear una página de documentación de fuentes](sources-sdk/documentation/github.md)
+   - [Utilice un editor de texto en el entorno local para crear una página de documentación de fuentes](sources-sdk/documentation/text-editor.md)
+   - [Plantilla de autoservicio de documentación](sources-sdk/documentation/template.md)
 - [Notificaciones de ejecución de flujo](notifications.md)
 - [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md)
 - [Preguntas frecuentes](./troubleshooting.md)

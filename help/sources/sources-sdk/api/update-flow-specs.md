@@ -5,7 +5,7 @@ topic-legacy: developer guide
 description: El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante la API de servicio de flujo para el SDK de fuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
@@ -616,4 +616,4 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo cons
 
 ## Pasos siguientes
 
-Con la nueva especificación de conexión agregada a la especificación de flujo adecuada, ahora puede continuar probando y enviando el nuevo origen. Consulte la guía de [prueba y envío de una nueva fuente](./overview.md#submit) para obtener más información.
+Con la nueva especificación de conexión agregada a la especificación de flujo adecuada, ahora puede continuar probando y enviando el nuevo origen. Consulte la guía de [prueba y envío de una nueva fuente](./submit.md) para obtener más información.
