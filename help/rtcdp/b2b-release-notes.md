@@ -3,9 +3,9 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 title: Notas de la versión de Adobe Experience Platform Real-time Customer Data Platform B2B Edition
 description: Últimas notas de la versión de Adobe Experience Platform Real-time Customer Data Platform B2B Edition.
-source-git-commit: f5d9252b25793bd9233b5bc8dcc83be464ce7fdd
+source-git-commit: 4417670d167d7390d0e82ac5c32a1a6b46a15226
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '445'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Para obtener más información sobre la CDP B2B Edition en tiempo real, consulte
 
 | Función | Descripción |
 |---|---|
-| Conector de origen del Marketo Engage | Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. El conector de origen del Marketo Engage es una solución completa para la administración de posibles clientes y los especialistas en marketing B2B. |
+| Conector de origen del Marketo Engage | El conector de origen del Marketo Engage permite a los especialistas en marketing introducir sin problemas los datos de una o varias instancias de Marketo en su instancia de Adobe Experience Platform y proporciona una solución completa para la administración de posibles clientes y los especialistas en marketing B2B. |
 | Destino del Marketo Engage | La variable [Destino de Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) permite a los especialistas en marketing insertar en Marketo los segmentos creados en Adobe Experience Platform, donde aparecerán como listas estáticas. |
 
 Para obtener más información sobre el conector de origen de Marketo, consulte la [información general](../sources/connectors/adobe-applications/marketo/marketo.md)
