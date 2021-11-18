@@ -5,9 +5,9 @@ seo-title: Destinations overview
 description: Obtenga información sobre cómo activar datos de Adobe Experience Platform en destinos para campañas de marketing en canales múltiples, correos electrónicos, publicidad segmentada y mucho más.
 seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: c93e23d334ffe3cbee049f120a7b6c5e7e69d0ea
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Una de las funcionalidades principales de Platform es la ingesta de sus datos de
 ## Pasos de destinos {#steps}
 
 * Elija entre [catálogo de autoservicio](./catalog/overview.md) de todos los destinos disponibles en Platform.
-* Utilice destinos para y envíe perfiles o segmentos a plataformas de automatización de marketing, plataformas de publicidad digital y mucho más.
+* Utilice destinos para enviar perfiles o segmentos a plataformas de automatización de marketing, plataformas de publicidad digital y mucho más.
 * Programe exportaciones de datos a sus destinos preferidos en ocasiones regulares.
 
 ## Controles {#controls}
