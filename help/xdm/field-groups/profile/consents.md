@@ -4,9 +4,9 @@ title: Grupo de campos de esquema consentimientos y preferencias
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Consentimientos y Preferencias .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: d2c71423165776bf7c106a7503514c5acc284f8e
+source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ La variable [!UICONTROL Consentimientos y preferencias] grupo de campos proporci
 >
 >Consulte la guía de [exploración de recursos XDM](../../ui/explore.md) a para ver los pasos sobre cómo buscar cualquier recurso XDM e inspeccionar su estructura en la interfaz de usuario de Platform.
 
-El siguiente JSON muestra un ejemplo del tipo de datos que el [!UICONTROL Consentimientos y preferencias] grupo de campos puede procesarse. En las secciones que siguen se proporciona información sobre el uso específico de cada uno de estos campos.
+El siguiente JSON muestra un ejemplo del tipo de datos que el [!UICONTROL Consentimientos y preferencias] grupo de campos puede procesarse. Para obtener información sobre cómo utilizar la mayoría de los campos proporcionados por el grupo de campos, consulte la guía de [Tipo de datos consentimientos y preferencias](../../data-types/consents.md). Las subsecciones siguientes se centran en los atributos únicos que el grupo de campos agrega al tipo de datos.
 
 ```json
 {
@@ -96,8 +96,6 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el [!UICONTROL Consen
 >* [Generar datos de ejemplo en la interfaz de usuario](../../ui/sample.md)
 >* [Generar datos de ejemplo en la API](../../api/sample-data.md)
 
-
-Para obtener información sobre cómo utilizar la mayoría de los campos proporcionados por el grupo de campos, consulte la guía de [Tipo de datos consentimientos y preferencias](../../data-types/consents.md). Las subsecciones siguientes se centran en los atributos únicos que el grupo de campos agrega al tipo de datos.
 
 ### `idSpecific`
 
