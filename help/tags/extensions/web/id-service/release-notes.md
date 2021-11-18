@@ -1,10 +1,11 @@
 ---
 title: Notas de la versión de la extensión Adobe Experience Cloud Identity Service
-description: Últimas notas de la versión de la extensión de etiqueta del servicio de Adobe Experience Cloud ID en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Últimas notas de la versión de la extensión de etiqueta Adobe Experience Cloud Identity Service en Adobe Experience Platform.
+exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
+source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 83%
+ht-degree: 96%
 
 ---
 
@@ -14,9 +15,9 @@ ht-degree: 83%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Para obtener las notas de la versión del propio servicio de ID de Experience Cloud y no solo de la extensión de etiquetas de Adobe Experience Platform, consulte: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es)
+Para obtener las notas de la versión del propio Experience Cloud Identity Service, y no solo de la extensión de etiqueta de Adobe Experience Platform, consulte: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es)
 
-## 3 de noviembre de 2020
+## 3 de noviembre de 2021
 
 ### Extensión de Experience Cloud ID 5.2.1
 
@@ -123,7 +124,7 @@ Los detalles de estos valores de atributos se encuentran en [web.dev](https://we
 #### **Funcionalidades**
 
 * Se ha actualizado visitor.js en 4.3
-* Se ha agregado el tipo de elemento de datos para ECID como parte de la extensión de etiqueta
+* Se ha añadido el tipo de elemento de datos para ECID como parte de la extensión de etiqueta
 
    ![](../../../images/ecid-data-element.png)
 
