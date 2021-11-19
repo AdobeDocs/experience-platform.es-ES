@@ -1,13 +1,13 @@
 ---
 keywords: Catálogo;catálogo
 title: Descripción general del catálogo de destinos
-seo-title: Descripción general del catálogo de destinos
+seo-title: Destinations catalog overview
 description: El catálogo de destinos proporciona una lista de los destinos disponibles que están listos para recibir datos. Estos destinos incluyen soluciones de Adobe, plataformas publicitarias, plataformas de encuestas, plataformas de marketing por correo electrónico y mucho más.
-seo-description: El catálogo de destinos proporciona una lista de los destinos disponibles que están listos para recibir datos. Estos destinos incluyen soluciones de Adobe, plataformas publicitarias, plataformas de encuestas, plataformas de marketing por correo electrónico y mucho más.
+seo-description: The Destinations catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, and more.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -22,14 +22,15 @@ Examine el catálogo para determinar qué plataformas de destino son mejores par
 
 Puede activar los datos en diferentes categorías de destino en Adobe Experience Platform. Los vínculos siguientes proporcionan más información sobre cada categoría de destino:
 
-- [Información general sobre los destinos de Adobe](adobe/overview.md)
-- [Información general sobre los destinos publicitarios](advertising/overview.md)
-- [Información general sobre los destinos de Analytics](analytics/overview.md)
-- [Información general sobre los destinos de almacenamiento en la nube](cloud-storage/overview.md)
-- [Información general sobre los destinos de la plataforma de gestión de datos (DMP)](data-management/overview.md)
-- [Información general sobre los destinos de marketing por correo electrónico](email-marketing/overview.md)
-- [Información general sobre los destinos de participación del dispositivo móvil](mobile-engagement/overview.md)
-- [Información general sobre los destinos de personalización](personalization/overview.md)
-- [Información general sobre destinos sociales](social/overview.md)
-- [Información general sobre los destinos de encuesta](survey/overview.md)
-- [Descripción general de los destinos de la voz del cliente](voice/overview.md)
+- [Adobe [!UICONTROL destinos] información general](adobe/overview.md)
+- [[!UICONTROL Publicidad] [!UICONTROL destinos] información general](advertising/overview.md)
+- [[!UICONTROL Analytics] [!UICONTROL destinos] información general](analytics/overview.md)
+- [[!UICONTROL Almacenamiento en la nube] [!UICONTROL destinos] información general](cloud-storage/overview.md)
+- [[!UICONTROL Plataforma de gestión de datos] (DMP) [!UICONTROL destinos] información general](data-management/overview.md)
+- [[!UICONTROL Marketing por correo electrónico] [!UICONTROL destinos] información general](email-marketing/overview.md)
+- [[!UICONTROL Participación móvil] [!UICONTROL destinos] información general](mobile-engagement/overview.md)
+- [[!UICONTROL Personalización] [!UICONTROL destinos] información general](personalization/overview.md)
+- [[!UICONTROL Social] [!UICONTROL destinos] información general](social/overview.md)
+- [[!UICONTROL Transmisión] [!UICONTROL destinos] (vínculos a destino HTTP)](streaming/http-destination.md)
+- [[!UICONTROL Encuesta] [!UICONTROL destinos] información general](survey/overview.md)
+- [[!UICONTROL Voz del cliente] [!UICONTROL destinos] información general](voice/overview.md)

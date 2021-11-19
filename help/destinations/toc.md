@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: a01730fce4f7746389fc48e700c259567492d0ee
+source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '680'
 ht-degree: 9%
 
 ---
@@ -36,7 +36,6 @@ ht-degree: 9%
    * [Monitorizar flujos de datos](./ui/monitor-dataflows.md)
 * Catálogo de destinos {#catalog}
    * [Descripción general del catálogo de destinos](./catalog/overview.md)
-   * [ Conexión HTTP (Alpha)](./catalog/http-destination.md)
    * Destinos de Adobe{#adobe}
       * [Información general sobre los destinos de Adobe](./catalog/adobe/overview.md)
       * [conexión del Marketo Engage](./catalog/adobe/marketo-engage.md)
@@ -132,6 +131,8 @@ ht-degree: 9%
       * [Conexión facebook](./catalog/social/facebook.md)
       * [Conexión de Audiencias coincidentes de linkedIn](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
+   * Destinos de transmisión {#streaming}
+      * [ Conexión de API HTTP (Beta)](./catalog/streaming/http-destination.md)
    * Destinos de Survey {#survey}
       * [Información general sobre los destinos de encuesta](./catalog/survey/overview.md)
       * [Destino de la extensión forestal](./catalog/survey/foresee.md)
