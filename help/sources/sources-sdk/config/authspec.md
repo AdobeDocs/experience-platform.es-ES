@@ -5,13 +5,13 @@ topic-legacy: overview
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar el SDK de fuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
+source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
 
 ---
-
 
 # Configuración de especificaciones de autenticación para el SDK de fuentes
 
@@ -180,7 +180,7 @@ La autenticación básica es un tipo de autenticación que le permite acceder a 
 | Propiedad | Descripción | Ejemplo |
 | --- | --- | --- |
 | `authSpec.name` | Muestra el nombre del tipo de autenticación admitido. | `Basic Authentication` |
-| `authSpec.type` | Define el tipo de autenticación que admite el origen. | `oAuth2-refresh-code` |
+| `authSpec.type` | Define el tipo de autenticación que admite el origen. | `BasicAuthentication` |
 | `authSpec.spec` | Contiene información sobre el esquema, el tipo de datos y las propiedades de la autenticación. |
 | `authSpec.spec.$schema` | Define el esquema utilizado para la autenticación. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Define el tipo de datos del esquema. | `object` |
