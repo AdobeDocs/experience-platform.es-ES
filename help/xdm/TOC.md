@@ -4,9 +4,9 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases del Modelo de datos de experiencia (XDM) y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
-source-git-commit: eea5cfe6111d25da4a7978d3924861250059cc7e
+source-git-commit: a7f95dd5b0b84a8ca5c7a69b5a30e5c3dba16007
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '402'
 ht-degree: 14%
 
 ---
@@ -155,6 +155,7 @@ ht-degree: 14%
    * [Definir una relación de esquema en la API](tutorials/relationship-api.md)
    * [Definir una relación de esquema en CDP B2B Edition en tiempo real](tutorials/relationship-b2b.md)
    * [Creación de un esquema ad-hoc (API)](tutorials/ad-hoc.md)
+   * [Ampliación de un campo de enumeración suave (API)](tutorials/extend-soft-enum.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
