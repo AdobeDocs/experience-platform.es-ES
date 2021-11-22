@@ -6,9 +6,9 @@ title: Monitorizar flujos de datos para destinos en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 9396f44aafc7d6e863d09b369440f507998dce2c
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1785'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,18 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 | Error | La variable `Error` indica que se ha interrumpido el proceso de activación de un flujo de datos. |
 
 ### El flujo de datos se ejecuta en los destinos de flujo continuo
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesactivated"
+>title="Identidades activadas"
+>abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Más información en la documentación"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesexcluded"
+>title="Identidades excluidas"
+>abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Más información en la documentación"
 
 Para los destinos de flujo continuo, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona una actualización por hora para los datos de métricas en las ejecuciones de flujo de datos. Las estadísticas más destacadas etiquetadas son para identidades.
 

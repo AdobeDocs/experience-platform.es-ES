@@ -3,9 +3,9 @@ keywords: Conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión facebook
 description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1558'
 ht-degree: 1%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 1%
 
 ## Información general {#overview}
 
-Active perfiles para sus campañas [!DNL Facebook] para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
+Activar perfiles para [!DNL Facebook] campañas para segmentación, personalización y supresión de audiencia basadas en correos electrónicos con hash.
 
-Puede usar este destino para la segmentación de audiencia en toda la familia [!DNL Facebook’s] de aplicaciones compatibles con [!DNL Custom Audiences], incluidas [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] y [!DNL Messenger]. La selección de la aplicación con la que quiere ejecutar la campaña se indica en el nivel de colocación de [!DNL Facebook Ads Manager].
+Puede usar este destino para la segmentación de audiencias en [!DNL Facebook’s] familia de aplicaciones compatibles con [!DNL Custom Audiences], incluyendo [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network]y [!DNL Messenger]. La selección de la aplicación con la que quiere ejecutar la campaña se indica en el nivel de colocación de [!DNL Facebook Ads Manager].
 
 ![Destino de facebook en la interfaz de usuario de Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
 ## Casos de uso
 
-Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Facebook], estos son dos casos de uso de muestra que los clientes de Adobe Experience Platform pueden resolver mediante esta función.
+Para ayudarle a comprender mejor cómo y cuándo usar la variable [!DNL Facebook] destino, estos son dos casos de uso de muestra que los clientes de Adobe Experience Platform pueden resolver mediante esta función.
 
 ### Caso de uso número 1
 
-Un comerciante en línea quiere llegar a los clientes existentes a través de plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. El comerciante en línea puede ingerir direcciones de correo electrónico desde su propio CRM a Adobe Experience Platform, crear segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a la plataforma social [!DNL Facebook], lo que optimiza su gasto en publicidad.
+Un comerciante en línea quiere llegar a los clientes existentes a través de plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. El comerciante en línea puede ingerir direcciones de correo electrónico desde su propio CRM a Adobe Experience Platform, crear segmentos a partir de sus propios datos sin conexión y enviar estos segmentos al [!DNL Facebook] plataforma social, optimizando su gasto publicitario.
 
 ### Caso de uso n.º 2
 
@@ -34,18 +34,18 @@ Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro) y dese
 
 Para dirigirlos a través de los medios sociales, pueden incorporar los datos de clientes de su CRM a Adobe Experience Platform, utilizando las direcciones de correo electrónico como identificadores.
 
-A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pertenencia asociados y los niveles de cliente, para crear nuevos segmentos de audiencia a los que pueden dirigirse mediante el destino [!DNL Facebook] .
+A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pertenencia asociados y los niveles de cliente, para crear nuevos segmentos de audiencia a los que pueden dirigirse mediante el [!DNL Facebook] destino.
 
 ## Identidades compatibles {#supported-identities}
 
-[!DNL Facebook Custom Audiences] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
+[!DNL Facebook Custom Audiences] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
 | Identidad de Target | Descripción | Consideraciones |
 |---|---|---|
 | GAID | Google Advertising ID | Seleccione la identidad objetivo GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
-| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Adobe Experience Platform admite los números de teléfono con texto sin formato y con hash SHA256. Siga las instrucciones de la sección [ID match requirements](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono sin formato y con hash, respectivamente. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Siga las instrucciones de la sección [ID match requirements](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para las direcciones de correo electrónico con texto sin formato y con hash, respectivamente. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Adobe Experience Platform admite los números de teléfono con texto sin formato y con hash SHA256. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para los números de teléfono sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos. |
+| email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para el texto sin formato y las direcciones de correo electrónico con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
 
 ## Tipo de exportación {#export-type}
@@ -54,21 +54,21 @@ A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pe
 
 ## Requisitos previos de cuenta de facebook {#facebook-account-prerequisites}
 
-Antes de enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cumplir los siguientes requisitos:
+Antes de poder enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cumplir los siguientes requisitos:
 
-* Su cuenta de usuario [!DNL Facebook] debe tener el permiso **[!DNL Manage campaigns]** habilitado para la cuenta de anuncio que planea usar.
-* La cuenta empresarial de **Adobe Experience Cloud** debe agregarse como socio publicitario en su [!DNL Facebook Ad Account]. En su lugar, utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador empresarial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
+* Su [!DNL Facebook] la cuenta de usuario debe tener la variable **[!DNL Manage campaigns]** permiso habilitado para la cuenta de anuncio que planea usar.
+* La variable **Adobe Experience Cloud** la cuenta comercial debe agregarse como socio de publicidad en su [!DNL Facebook Ad Account]. En su lugar, utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador empresarial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
    >[!IMPORTANT]
    >
-   > Al configurar los permisos para Adobe Experience Cloud, debe habilitar el permiso **Administrar campañas**. El permiso es necesario para la integración [!DNL Adobe Experience Platform].
-* Lea y firme las [!DNL Facebook Custom Audiences] Condiciones de servicio. Para ello, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, donde `accountID` es su [!DNL Facebook Ad Account ID].
+   > Al configurar los permisos para Adobe Experience Cloud, debe habilitar la variable **Administración de campañas** permiso. El permiso es necesario para la variable [!DNL Adobe Experience Platform] integración.
+* Lea y firme el [!DNL Facebook Custom Audiences] Condiciones de servicio. Para ello, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, donde `accountID` es su [!DNL Facebook Ad Account ID].
    >[!IMPORTANT]
    >
-   >Al firmar los [!DNL Facebook Custom Audiences] Términos del servicio, asegúrese de utilizar la misma cuenta de usuario que utilizó para autenticarse en la API de Facebook.
+   >Al firmar el [!DNL Facebook Custom Audiences] Términos del servicio, asegúrese de utilizar la misma cuenta de usuario que utilizó para autenticarse en la API de Facebook.
 
 ## Requisitos de coincidencia de ID {#id-matching-requirements}
 
-[!DNL Facebook] exige que no se envíe con claridad ninguna información de identificación personal (PII). Por lo tanto, las audiencias activadas en [!DNL Facebook] pueden desactivarse mediante identificadores *hash*, como direcciones de correo electrónico o números de teléfono.
+[!DNL Facebook] exige que no se envíe con claridad ninguna información de identificación personal (PII). Por lo tanto, las audiencias activadas en [!DNL Facebook] se puede desactivar *hash* identificadores, como direcciones de correo electrónico o números de teléfono.
 
 En función del tipo de ID que ingrese en Adobe Experience Platform, debe cumplir sus requisitos correspondientes.
 
@@ -76,19 +76,19 @@ En función del tipo de ID que ingrese en Adobe Experience Platform, debe cumpli
 
 Existen dos métodos para activar los números de teléfono en [!DNL Facebook]:
 
-* **Ingesta de números** de teléfono sin procesar: puede introducir números de teléfono sin procesar en el  [!DNL E.164] formato  [!DNL Platform]. Se colocan automáticamente en hash al activarse. Si elige esta opción, asegúrese de introducir siempre sus números de teléfono sin procesar en el espacio de nombres `Phone_E.164`.
-* **Ingesta de números** de teléfono con hash: puede prehash sus números de teléfono antes de ingerirlos a  [!DNL Platform]. Si elige esta opción, asegúrese de introducir siempre los números de teléfono con hash en el espacio de nombres `Phone_SHA256`.
+* **Ingesta de números de teléfono sin procesar**: puede ingerir números de teléfono sin procesar en la [!DNL E.164] formatear en [!DNL Platform]. Se colocan automáticamente en hash al activarse. Si elige esta opción, asegúrese de introducir siempre sus números de teléfono sin procesar en la `Phone_E.164` espacio de nombres.
+* **Ingesta de números de teléfono con hash**: puede prehash sus números de teléfono antes de ingerirlos a [!DNL Platform]. Si elige esta opción, asegúrese de ingerir siempre sus números de teléfono con hash en la variable `Phone_SHA256` espacio de nombres.
 
 >[!NOTE]
 >
->Los números de teléfono introducidos en el espacio de nombres `Phone` no se pueden activar en [!DNL Facebook].
+>Números de teléfono introducidos en la variable `Phone` el espacio de nombres no se puede activar en [!DNL Facebook].
 
 
 ## Requisitos de hash de correo electrónico {#email-hashing-requirements}
 
-Puede hash sobre las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o usar las direcciones de correo electrónico claramente en el Experience Platform, y tener [!DNL Platform] hash sobre ellas cuando se activen.
+Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform o utilizar las direcciones de correo electrónico claramente en Experience Platform, y [!DNL Platform] Hágalos en la activación.
 
-Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la [información general sobre la ingesta por lotes](/help/ingestion/batch-ingestion/overview.md) y la [información general sobre la ingesta de flujo](/help/ingestion/streaming-ingestion/overview.md).
+Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la [información general sobre la ingesta de lotes](/help/ingestion/batch-ingestion/overview.md) y [información general sobre la ingesta de transmisión](/help/ingestion/streaming-ingestion/overview.md).
 
 Si selecciona hash para las direcciones de correo electrónico usted mismo, asegúrese de cumplir con los siguientes requisitos:
 
@@ -101,41 +101,47 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 
 >[!NOTE]
 >
->Los datos de espacios de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarlos.
-> Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación.
-> La opción **[!UICONTROL Aplicar transformación]** solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir espacios de nombres.
+>Los datos de las áreas de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarse.
+> Los datos de origen de atributos no se colocan automáticamente en hash. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos.
+> La variable **[!UICONTROL Aplicar transformación]** solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir espacios de nombres.
 
 ![Transformación de asignación de identidad](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Uso de áreas de nombres personalizadas {#custom-namespaces}
 
-Antes de utilizar el espacio de nombres `Extern_ID` para enviar datos a [!DNL Facebook], asegúrese de sincronizar sus propios identificadores con [!DNL Facebook Pixel]. Consulte la [documentación oficial de Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obtener información detallada.
+Antes de usar la variable `Extern_ID` espacio de nombres para enviar datos a [!DNL Facebook], asegúrese de sincronizar sus propios identificadores mediante [!DNL Facebook Pixel]. Consulte la [Documentación oficial de facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obtener información detallada.
 
 ## Conectarse al destino {#connect}
 
-Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-El siguiente vídeo también muestra los pasos para configurar un destino [!DNL Facebook] y activar segmentos.
+El siguiente vídeo muestra también los pasos para configurar un [!DNL Facebook] dirigir y activar segmentos.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte el [tutorial de configuración de destino](../../ui/connect-destination.md).
+>La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte la [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 ### Parámetros de conexión {#parameters}
 
-Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
+While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: su  [!DNL Facebook Ad Account ID]. Puede encontrar este ID en su cuenta [!DNL Facebook Ads Manager]. Al introducir este ID, anteponga siempre `act_`.
+* **[!UICONTROL ID de cuenta]**: your [!DNL Facebook Ad Account ID]. Puede encontrar este ID en su [!DNL Facebook Ads Manager] cuenta. Al introducir este ID, anteponga siempre con `act_`.
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience"
+>title="Origen de la audiencia"
+>abstract="Elija cómo se recopilaron originalmente los datos del cliente en el segmento. Los datos se mostrarán en Facebook cuando un usuario sea el objetivo del segmento"
+>additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Más información en la documentación"
 
-En el paso **[!UICONTROL Segment schedule]**, debe proporcionar el [!UICONTROL Origin of audience] al enviar segmentos a [!DNL Facebook Custom Audiences].
+Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+
+En el **[!UICONTROL Programación de segmentos]** paso, debe proporcionar la variable [!UICONTROL Origen de la audiencia] al enviar segmentos a [!DNL Facebook Custom Audiences].
 
 ![Origen de audiencia de facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -145,36 +151,36 @@ A continuación se muestra un ejemplo de asignación de identidad correcta al ac
 
 Selección de campos de origen:
 
-* Seleccione el espacio de nombres `Email` como identidad de origen si las direcciones de correo electrónico que utiliza no tienen valores hash.
-* Seleccione el espacio de nombres `Email_LC_SHA256` como identidad de origen si ha pasado por hash las direcciones de correo electrónico del cliente sobre la ingesta de datos a [!DNL Platform], de acuerdo con los [!DNL Facebook] [requisitos de hash de correo electrónico](#email-hashing-requirements).
-* Seleccione el espacio de nombres `PHONE_E.164` como identidad de origen si los datos están formados por números de teléfono sin hash. [!DNL Platform] realizará un hash de los números de teléfono para cumplir con los  [!DNL Facebook] requisitos.
-* Seleccione el espacio de nombres `Phone_SHA256` como identidad de origen si ha hash los números de teléfono sobre la ingesta de datos en [!DNL Platform], de acuerdo con los [!DNL Facebook] [requisitos de hash de números de teléfono](#phone-number-hashing-requirements).
-* Seleccione el espacio de nombres `IDFA` como identidad de origen si los datos constan de [!DNL Apple] ID de dispositivo.
-* Seleccione el espacio de nombres `GAID` como identidad de origen si los datos constan de [!DNL Android] ID de dispositivo.
-* Seleccione el espacio de nombres `Custom` como identidad de origen si los datos constan de otro tipo de identificadores.
+* Seleccione el `Email` área de nombres como identidad de origen si las direcciones de correo electrónico que utiliza no tienen valores hash.
+* Seleccione el `Email_LC_SHA256` área de nombres como identidad de origen si ha pasado por hash las direcciones de correo electrónico del cliente en la ingesta de datos en [!DNL Platform], según [!DNL Facebook] [requisitos de hash de correo electrónico](#email-hashing-requirements).
+* Seleccione el `PHONE_E.164` área de nombres como identidad de origen si los datos están formados por números de teléfono sin hash. [!DNL Platform] hash de los números de teléfono con los que cumplir [!DNL Facebook] requisitos.
+* Seleccione el `Phone_SHA256` área de nombres como identidad de origen si ha hash los números de teléfono en la ingesta de datos en [!DNL Platform], según [!DNL Facebook] [requisitos de hash de número telefónico](#phone-number-hashing-requirements).
+* Seleccione el `IDFA` área de nombres como identidad de origen si los datos constan de [!DNL Apple] ID de dispositivo.
+* Seleccione el `GAID` área de nombres como identidad de origen si los datos constan de [!DNL Android] ID de dispositivo.
+* Seleccione el `Custom` área de nombres como identidad de origen si sus datos constan de otro tipo de identificadores.
 
 Selección de campos de destino:
 
-* Seleccione el espacio de nombres `Email_LC_SHA256` como identidad de destino cuando los espacios de nombres de origen sean `Email` o `Email_LC_SHA256`.
-* Seleccione el espacio de nombres `Phone_SHA256` como identidad de destino cuando los espacios de nombres de origen sean `PHONE_E.164` o `Phone_SHA256`.
-* Seleccione los espacios de nombres `IDFA` o `GAID` como identidad de destino cuando los espacios de nombres de origen sean `IDFA` o `GAID`.
-* Seleccione el espacio de nombres `Extern_ID` como identidad de destino cuando el espacio de nombres de origen sea personalizado.
+* Seleccione el `Email_LC_SHA256` área de nombres como identidad de destino cuando las áreas de nombres de origen son `Email` o `Email_LC_SHA256`.
+* Seleccione el `Phone_SHA256` área de nombres como identidad de destino cuando las áreas de nombres de origen son `PHONE_E.164` o `Phone_SHA256`.
+* Seleccione el `IDFA` o `GAID` áreas de nombres como identidad de destino cuando las áreas de nombres de origen son `IDFA` o `GAID`.
+* Seleccione el `Extern_ID` como identidad de destino cuando el espacio de nombres de origen es personalizado.
 
 >[!IMPORTANT]
 >
->Los datos de espacios de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarlos.
+>Los datos de las áreas de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarse.
 > 
->Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación.
+>Los datos de origen de atributos no se colocan automáticamente en hash. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos.
 
 ![Asignación de identidad](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Datos exportados {#exported-data}
 
-Para [!DNL Facebook], una activación correcta significa que se crearía una audiencia personalizada [!DNL Facebook] mediante programación en [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). La pertenencia a segmentos en la audiencia se agregaría y eliminaría ya que los usuarios están cualificados o no cumplen los requisitos para los segmentos activados.
+Para [!DNL Facebook], una activación correcta significa que [!DNL Facebook] la audiencia personalizada se crearía mediante programación en [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). La pertenencia a segmentos en la audiencia se agregaría y eliminaría ya que los usuarios están cualificados o no cumplen los requisitos para los segmentos activados.
 
 >[!TIP]
 >
->La integración entre Adobe Experience Platform y [!DNL Facebook] admite los rellenos históricos de audiencias. Todas las cualificaciones históricas de segmentos se envían a [!DNL Facebook] al activar los segmentos en el destino.
+>La integración entre Adobe Experience Platform y [!DNL Facebook] admite los rellenos históricos de audiencia. Todas las cualificaciones históricas de segmentos se envían a [!DNL Facebook] al activar los segmentos en el destino.
 
 ## Resolución de problemas {#troubleshooting}
 
@@ -184,6 +190,6 @@ Al configurar este destino, puede recibir el siguiente error:
 
 `{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 
-Este error se produce cuando los clientes utilizan cuentas recién creadas y los permisos [!DNL Facebook] aún no están activos.
+Este error se produce cuando los clientes utilizan cuentas recién creadas y la variable [!DNL Facebook] los permisos de aún no están activos.
 
-Si recibe el mensaje de error `400 Bad Request` después de seguir los pasos en [Requisitos previos de cuenta de Facebook](#facebook-account-prerequisites), permita que entren en vigor unos días para que los permisos de [!DNL Facebook] entren en vigor.
+Si recibe la variable `400 Bad Request` mensaje de error después de seguir los pasos indicados en [Requisitos previos de cuenta de facebook](#facebook-account-prerequisites), dedique unos días a la [!DNL Facebook] permisos para entrar en vigor.
