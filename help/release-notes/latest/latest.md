@@ -1,10 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 15%
+source-wordcount: '798'
+ht-degree: 13%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 15%
 Nuevas funciones de Adobe Experience Platform:
 
 - [Real-time Customer Data Platform edición B2B](#B2B)
+- [(Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc](#ad-hoc-activation)
 
 ## Actualizaciones de funciones existentes
 
@@ -62,6 +64,10 @@ Las clases XDM estándar B2B, los grupos de campos y los tipos de datos están d
 
 Consulte la [Esquemas en Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentación para obtener más información sobre la captura de entidades de datos B2B.
 
+### (Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc {#ad-hoc-activation}
+
+La API de activación ad hoc permite a los especialistas en marketing activar mediante programación segmentos de audiencia en destinos de forma rápida y eficaz en situaciones en las que se requiera una activación inmediata. La activación de audiencias ad-hoc solo es compatible con [destinos basados en archivos por lotes](../../destinations/destination-types.md#file-based) y está actualmente en versión beta. Para obtener más información, consulte la [documentación de la API de activación ad hoc](../../destinations/api/ad-hoc-activation-api.md).
+
 ### Attribution AI {#attribution-ai}
 
 Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
@@ -85,3 +91,4 @@ La AI del cliente disponible en Real-time Customer Data Platform se utiliza para
 | Atributos de perfil personalizados | La AI del cliente ahora admite la definición de campos de conjuntos de datos de perfil personalizados (con marcas de hora) en los datos, además de los campos de evento estándar. El uso de esta opción le permite agregar atributos de perfil adicionales que considere influyentes, lo que puede mejorar la calidad del modelo y proporcionar resultados más precisos. |
 
 Para obtener más información sobre Customer AI, consulte la [Documentación de Customer AI](../../intelligent-services/customer-ai/overview.md).
+
