@@ -3,8 +3,7 @@ title: Recopilación de información comercial y de producto mediante el SDK web
 description: Aprenda a añadir datos relacionados con productos o un carro de compras mediante el SDK web de Adobe Experience Platform.
 keywords: products;comercio;medidas;medida;pedido;cartAbandons;cierres de compra;productListAdd;productListOpens;productListRemovals;productListReopens;productListViews;productViews;compras;saveForLaters;currencyCode;pagos;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 22d15dde62f3113167684c7a76a2265e6f0e7bab
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 6%
@@ -15,34 +14,34 @@ ht-degree: 6%
 
 Si tiene productos en el sitio, este es un conjunto predeterminado de cosas que puede querer enviar para habilitar el máximo número de funcionalidades desde el Adobe. Aunque se trata de una sugerencia, proporciona un conjunto de datos muy sólido desde el principio.
 
-Este documento utiliza el grupo de campos de esquema [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md). El grupo de campos `commerce` se divide en dos partes: el objeto `commerce` y la matriz `productListItems`. El objeto `commerce` permite indicar qué acciones están ocurriendo con la matriz `productListItems`.
+Este documento utiliza la variable [Detalles comerciales de ExperienceEvent](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) grupo de campos de esquema. La variable `commerce` el grupo de campos se divide en dos partes: el `commerce` y `productListItems` matriz. La variable `commerce` El objeto permite indicar qué acciones están sucediendo con el `productListItems` matriz.
 
 >[!TIP]
 >
->Si está familiarizado con Adobe Analytics, el `commerce` está más relacionado con la variable `events`. El `productListItems` está más relacionado con la variable `products`.
+>Si está familiarizado con Adobe Analytics, la variable `commerce` está más estrechamente relacionado con el `events` variable. La variable `productListItems` está más estrechamente relacionado con el `products` variable.
 
 ## Acciones relacionadas con los productos
 
-A continuación se muestra una lista de `measures` disponibles en el objeto `commerce`.
+A continuación se muestra una lista de `measures` disponible en el `commerce` objeto.
 
 >[!TIP]
 >
->Una medida tiene dos campos: `id` y `value`. La mayoría de las veces solo utilizará el campo `value` (por ejemplo, `'value':1`). El campo `id` le permite establecer un identificador único que puede utilizar para realizar un seguimiento del momento en que se envió la medida. Consulte la documentación de XDM para [Measure](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
+>Una medida tiene dos campos: `id` y `value`. La mayoría de las veces, utilizará la variable `value` solo campo (por ejemplo, `'value':1`). La variable `id` permite establecer un identificador único que se puede utilizar para realizar un seguimiento del momento en que se envió la medida. Consulte la documentación de XDM para [Medida](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
 | **Medida** | **Recomendación** | **Descripción** |
 |---|---|---|
 | [cartAbandons](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmcartabandons) | Opcional | El usuario ya no puede acceder ni comprar un carro de compras. |
 | [cierres de compra](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmcheckouts) | Muy recomendado | Un usuario ya no está buscando productos, pero está en proceso de adquirir un producto. |
-| [productListAdd](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistadds) | Muy recomendado | Un producto se añade a una lista. Asegúrese de configurar el producto en `productListItems` al mismo tiempo. |
+| [productListAdd](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistadds) | Muy recomendado | Un producto se añade a una lista. Asegúrese de establecer el producto en la variable `productListItems` al mismo tiempo. |
 | [productListOpens](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistopens) | Opcional | Se crea una nueva lista de productos. (Por ejemplo, se crea un nuevo carro de compras). |
 | [productListRemovals](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistremovals) | Muy recomendado | Un producto se elimina de una lista de productos. |
 | [productListReopens](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistreopens) | Opcional | El usuario reactiva una lista de productos. Esto suele ocurrir en campañas de remarketing. |
 | [productListViews](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistviews) | Muy recomendado | Se ve una lista de productos. |
-| [productViews](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductviews) | Muy recomendado | Se ha producido una vista de un producto. Asegúrese de establecer el producto visualizado en `productListItems`. |
+| [productViews](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductviews) | Muy recomendado | Se ha producido una vista de un producto. Asegúrese de establecer el producto visualizado en la variable `productListItems`. |
 | [compras](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmpurchases) | Muy recomendado | Se acepta un pedido. Debe tener una lista de productos. |
 | [saveForLaters](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmsaveforlaters) | Opcional | Un producto se guarda para uso futuro. |
 
-A continuación, se muestra un ejemplo de cómo establecería estos `Measures` en el SDK.
+A continuación, se muestra un ejemplo de cómo configurar estas `Measures` en el SDK.
 
 ```javascript
 alloy("sendEvent", {
@@ -60,9 +59,9 @@ El objeto commerce también tiene un campo especial para recopilar detalles de p
 
 | **Pedido** | **Opción** | **Recomendación** | **Descripción** |
 |---|---|---|---|
-| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) |  |  | La moneda [ISO 4217](https://es.wikipedia.org/wiki/ISO_4217) para el total del pedido. |
-| [payments[paymentItems]](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpayments) |  |  | La lista de pagos de un pedido. Un [paymentItem](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#payment-item-schema) incluye lo siguiente. |
-|  | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) | Opcional | La moneda [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) para este método de pago. |
+| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) |  |  | La variable [ISO 4217](https://es.wikipedia.org/wiki/ISO_4217) moneda para el total del pedido. |
+| [payments[paymentItems]](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpayments) |  |  | La lista de pagos de un pedido. A [paymentItem](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#payment-item-schema) incluye lo siguiente: |
+|  | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) | Opcional | La variable [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) para este método de pago. |
 |  | [paymentAmount](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymentamount) | Muy recomendado | El valor del pago en el código de moneda especificado. |
 |  | [paymentType](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype) | Muy recomendado | El tipo de pago (por ejemplo, `credit_card`, `gift_card`, `paypal`). Consulte la lista de [valores conocidos](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype-known-values) para obtener más información. |
 |  | [transactionID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmtransactionid) | Opcional | Un ID exclusivo para esta transacción de pago. |
@@ -114,17 +113,17 @@ La lista de productos indica qué productos están relacionados con la acción c
 
 | **Campo** | **Recomendación** | **Descripción** |
 |---|---|---|
-| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Opcional | La moneda [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) para el producto. Esto solo es útil cuando se pueden tener productos con diferentes códigos de moneda y cuando se aplican. Por ejemplo, cuando hay una compra o un anuncio al carro de compras. |
-| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Muy recomendado | Solo debe configurarse cuando corresponda. Por ejemplo, puede que no sea posible establecer en `productView` porque las diferentes variaciones del producto pueden tener precios diferentes pero en un `productListAdds`. |
+| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Opcional | La variable [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) moneda para el producto. Esto solo es útil cuando se pueden tener productos con diferentes códigos de moneda y cuando se aplican. Por ejemplo, cuando hay una compra o un anuncio al carro de compras. |
+| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Muy recomendado | Solo debe configurarse cuando corresponda. Por ejemplo, es posible que no sea posible establecer en `productView` porque las diferentes variaciones del producto pueden tener precios diferentes pero en un `productListAdds`. |
 | [producto](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | Muy recomendado | ID XDM para el producto. |
-| [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | Muy recomendado | Método que el visitante utilizó para agregar un elemento de producto a la lista. Se configura con `productListAdds` medidas y solo se debe usar cuando se agrega un producto a la lista. Algunos ejemplos son `add to cart button`, `quick add` y `upsell`. |
+| [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | Muy recomendado | Método que el visitante utilizó para agregar un elemento de producto a la lista. Configure con `productListAdds` y solo debe usarse cuando se agrega un producto a la lista. Los ejemplos incluyen `add to cart button`, `quick add` y `upsell`. |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | Muy recomendado | Se establece en el nombre para mostrar o en el nombre legible en lenguaje natural del producto. |
 | [cantidad](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmquantity) | Muy recomendado | Número de unidades que el cliente ha indicado que requiere del producto. Debe configurarse en `productListAdds`, `productListRemoves`, `purchases`, `saveForLaters`, etc. |
 | [SKU](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md) | Muy recomendado | Conservar unidad de mantenimiento. Es el identificador único del producto. |
 
 ## Ejemplos
 
-`productView` evento
+`productViews` evento
 
 ```javascript
 alloy("sendEvent",{
@@ -148,7 +147,7 @@ alloy("sendEvent",{
 });
 ```
 
-`productView` evento
+`productListAdds` evento
 
 ```javascript
 alloy("sendEvent",{
@@ -178,7 +177,7 @@ alloy("sendEvent",{
 });
 ```
 
-`checkout` evento
+`checkouts` evento
 
 ```javascript
 alloy("sendEvent",{
@@ -206,7 +205,7 @@ alloy("sendEvent",{
 });
 ```
 
-`purchase` evento
+`order` evento
 
 ```javascript
 alloy("sendEvent",{
