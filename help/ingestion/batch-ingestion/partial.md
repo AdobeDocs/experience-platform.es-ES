@@ -5,10 +5,9 @@ title: Información general sobre la ingesta parcial de lotes
 topic-legacy: overview
 description: Este documento proporciona un tutorial para administrar la ingesta parcial de lotes.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 636d6dcbe8eb73b7898fc3794f6b4567956e5618
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -23,52 +22,52 @@ Este documento proporciona un tutorial para administrar la ingesta parcial de lo
 
 Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform implicados en la ingesta parcial de lotes. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [Ingesta por lotes](./overview.md): Método que  [!DNL Platform] ingesta y almacena datos de archivos de datos, como CSV y Parquet.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia del cliente.
+- [Ingesta por lotes](./overview.md): El método que [!DNL Platform] Ingesta y almacena datos de archivos de datos, como CSV y Parquet.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas a las API [!DNL Platform] correctamente.
+Las secciones siguientes proporcionan información adicional que debe conocer para realizar llamadas a [!DNL Platform] API.
 
 ### Leer llamadas de API de ejemplo
 
-Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+>Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../sandboxes/home.md).
 
 ## Habilitar un lote para la ingesta parcial de lotes en la API {#enable-api}
 
 >[!NOTE]
 >
->En esta sección se describe cómo habilitar un lote para la ingesta parcial de lotes mediante la API. Para obtener instrucciones sobre el uso de la interfaz de usuario, lea el paso [habilitar un lote para la ingesta parcial por lotes en el paso UI](#enable-ui) .
+>En esta sección se describe cómo habilitar un lote para la ingesta parcial de lotes mediante la API. Para obtener instrucciones sobre el uso de la interfaz de usuario, lea la [habilitar un lote para la ingesta parcial de lotes en la interfaz de usuario](#enable-ui) paso a paso.
 
 Puede crear un nuevo lote con la ingesta parcial activada.
 
-Para crear un nuevo lote, siga los pasos de la [guía para desarrolladores de ingesta por lotes](./api-overview.md). Una vez que llegue al paso **[!UICONTROL Create batch]** , agregue el siguiente campo dentro del cuerpo de la solicitud:
+Para crear un nuevo lote, siga los pasos de la sección [guía para desarrolladores sobre ingesta por lotes](./api-overview.md). Una vez que llegue al **[!UICONTROL Crear lote]** , añada el siguiente campo dentro del cuerpo de la solicitud:
 
 ```json
 {
     "enableErrorDiagnostics": true,
-    "partialIngestionPercentage": 5
+    "partialIngestionPercent": 5
 }
 ```
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `enableErrorDiagnostics` | Un indicador que permite a [!DNL Platform] generar mensajes de error detallados sobre el lote. |
-| `partialIngestionPercentage` | El porcentaje de errores aceptables antes de todo el lote fallará. Por lo tanto, en este ejemplo, un máximo del 5 % del lote puede ser de errores antes de que falle. |
+| `enableErrorDiagnostics` | Un indicador que permita [!DNL Platform] para generar mensajes de error detallados sobre el lote. |
+| `partialIngestionPercent` | El porcentaje de errores aceptables antes de todo el lote fallará. Por lo tanto, en este ejemplo, un máximo del 5 % del lote puede ser de errores antes de que falle. |
 
 
 ## Habilitar un lote para la ingesta parcial de lotes en la interfaz de usuario {#enable-ui}
@@ -77,21 +76,21 @@ Para crear un nuevo lote, siga los pasos de la [guía para desarrolladores de in
 >
 >En esta sección se describe cómo habilitar un lote para la ingesta parcial de lotes mediante la interfaz de usuario. Si ya ha habilitado un lote para la ingesta parcial de lotes mediante la API, puede pasar a la siguiente sección.
 
-Para habilitar un lote para la ingesta parcial a través de la interfaz de usuario de [!DNL Platform], puede crear un nuevo lote a través de conexiones de origen, crear un nuevo lote en un conjunto de datos existente o crear un nuevo lote a través de &quot;[!UICONTROL Map CSV to XDM flow]&quot;.
+Para habilitar un lote para la ingesta parcial a través de la variable [!DNL Platform] La interfaz de usuario de puede crear un nuevo lote a través de conexiones de origen, crear un nuevo lote en un conjunto de datos existente o crear un nuevo lote a través de la[!UICONTROL Asignación de CSV al flujo XDM]&quot;.
 
 ### Crear una nueva conexión de origen {#new-source}
 
-Para crear una nueva conexión de origen, siga los pasos que se enumeran en la [Información general de orígenes](../../sources/home.md). Una vez que llegue al paso **[!UICONTROL Dataflow detail]**, tome nota de los campos **[!UICONTROL Partial ingestion]** y **[!UICONTROL Error diagnostics]**.
+Para crear una nueva conexión de origen, siga los pasos indicados en la sección [Resumen de fuentes](../../sources/home.md). Una vez que llegue al **[!UICONTROL Detalles de flujo de datos]** , tome nota del **[!UICONTROL Ingesta parcial]** y **[!UICONTROL Diagnóstico de errores]** campos.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-La opción **[!UICONTROL Partial ingestion]** le permite habilitar o deshabilitar el uso de la ingesta parcial de lotes.
+La variable **[!UICONTROL Ingesta parcial]** permite habilitar o deshabilitar el uso de la ingesta parcial de lotes.
 
-La opción **[!UICONTROL Error diagnostics]** solo aparece cuando la opción **[!UICONTROL Partial ingestion]** está desactivada. Esta función permite a [!DNL Platform] generar mensajes de error detallados sobre los lotes ingeridos. Si la opción **[!UICONTROL Partial ingestion]** está activada, los diagnósticos de error mejorados se aplican automáticamente.
+La variable **[!UICONTROL Diagnóstico de errores]** la opción de alternancia solo aparece cuando la variable **[!UICONTROL Ingesta parcial]** la opción está desactivada. Esta función permite [!DNL Platform] para generar mensajes de error detallados sobre los lotes ingestados. Si la variable **[!UICONTROL Ingesta parcial]** activa, los diagnósticos de error mejorados se aplican automáticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-El **[!UICONTROL Error threshold]** permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5%.
+La variable **[!UICONTROL Umbral de error]** permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5%.
 
 ### Usar un conjunto de datos existente {#existing-dataset}
 
@@ -99,29 +98,29 @@ Para utilizar un conjunto de datos existente, comience seleccionando un conjunto
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-La opción **[!UICONTROL Partial ingestion]** le permite habilitar o deshabilitar el uso de la ingesta parcial de lotes.
+La variable **[!UICONTROL Ingesta parcial]** permite habilitar o deshabilitar el uso de la ingesta parcial de lotes.
 
-La opción **[!UICONTROL Error diagnostics]** solo aparece cuando la opción **[!UICONTROL Partial ingestion]** está desactivada. Esta función permite a [!DNL Platform] generar mensajes de error detallados sobre los lotes ingeridos. Si la opción **[!UICONTROL Partial ingestion]** está activada, los diagnósticos de error mejorados se aplican automáticamente.
+La variable **[!UICONTROL Diagnóstico de errores]** la opción de alternancia solo aparece cuando la variable **[!UICONTROL Ingesta parcial]** la opción está desactivada. Esta función permite [!DNL Platform] para generar mensajes de error detallados sobre los lotes ingestados. Si la variable **[!UICONTROL Ingesta parcial]** activa, los diagnósticos de error mejorados se aplican automáticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-El **[!UICONTROL Error threshold]** permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5%.
+La variable **[!UICONTROL Umbral de error]** permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5%.
 
-Ahora, puede cargar datos mediante el botón **Add data**, que se incorporará mediante ingesta parcial.
+Ahora puede cargar datos mediante la variable **Añadir datos** y se incorporará mediante ingesta parcial.
 
-### Utilice el flujo [!UICONTROL Map CSV to XDM schema]&quot; {#map-flow}
+### Utilice el[!UICONTROL Asignación de CSV al esquema XDM]&quot; flujo {#map-flow}
 
-Para utilizar el flujo &quot;[!UICONTROL Map CSV to XDM schema]&quot;, siga los pasos que se enumeran en el tutorial [Asignar un archivo CSV](../tutorials/map-a-csv-file.md). Una vez que llegue al paso **[!UICONTROL Add data]**, tome nota de los campos **[!UICONTROL Partial ingestion]** y **[!UICONTROL Error diagnostics]**.
+Para usar el[!UICONTROL Asignación de CSV al esquema XDM]&quot;, siga los pasos enumerados en la [Asignación de un tutorial de archivo CSV](../tutorials/map-a-csv-file.md). Una vez que llegue al **[!UICONTROL Añadir datos]** , tome nota del **[!UICONTROL Ingesta parcial]** y **[!UICONTROL Diagnóstico de errores]** campos.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-La opción **[!UICONTROL Partial ingestion]** le permite habilitar o deshabilitar el uso de la ingesta parcial de lotes.
+La variable **[!UICONTROL Ingesta parcial]** permite habilitar o deshabilitar el uso de la ingesta parcial de lotes.
 
-La opción **[!UICONTROL Error diagnostics]** solo aparece cuando la opción **[!UICONTROL Partial ingestion]** está desactivada. Esta función permite a [!DNL Platform] generar mensajes de error detallados sobre los lotes ingeridos. Si la opción **[!UICONTROL Partial ingestion]** está activada, los diagnósticos de error mejorados se aplican automáticamente.
+La variable **[!UICONTROL Diagnóstico de errores]** la opción de alternancia solo aparece cuando la variable **[!UICONTROL Ingesta parcial]** la opción está desactivada. Esta función permite [!DNL Platform] para generar mensajes de error detallados sobre los lotes ingestados. Si la variable **[!UICONTROL Ingesta parcial]** activa, los diagnósticos de error mejorados se aplican automáticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL Error threshold]** permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5%.
+**[!UICONTROL Umbral de error]** permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5%.
 
 ## Pasos siguientes {#next-steps}
 
