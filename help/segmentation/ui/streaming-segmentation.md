@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 58b546ea83774672dd36ca6cd952e229410aa645
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '1200'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,10 @@ Segmentación por transmisión en [!DNL Adobe Experience Platform] permite a los
 
 >[!NOTE]
 >
->La segmentación por transmisión solo se puede utilizar para evaluar los datos que se transmiten a Platform. En otras palabras, los datos ingeridos mediante la ingesta por lotes no se evaluarán mediante la segmentación de flujo continuo y se evaluarán junto con el trabajo de segmento programado por la noche.
 >
->Además, los segmentos evaluados con la segmentación de flujo continuo pueden variar entre la pertenencia ideal y real si el segmento se basa en otro segmento que se evalúa mediante la segmentación por lotes. Por ejemplo, si el segmento A se basa en el segmento B y el segmento B se evalúa mediante la segmentación por lotes, ya que el segmento B solo se actualiza cada 24 horas, el segmento A se alejará más de los datos reales hasta que se vuelva a sincronizar con la actualización del segmento B.
+>Los segmentos evaluados con la segmentación de flujo continuo pueden variar entre la pertenencia ideal y real si el segmento se basa en otro segmento que se evalúa mediante la segmentación por lotes. Por ejemplo, si el segmento A se basa en el segmento B y el segmento B se evalúa mediante la segmentación por lotes, ya que el segmento B solo se actualiza cada 24 horas, el segmento A se alejará más de los datos reales hasta que se vuelva a sincronizar con la actualización del segmento B.
 
-## Tipos de consultas de segmentación por transmisión
+## Tipos de consultas de segmentación por transmisión {#query-types}
 
 >[!NOTE]
 >
@@ -50,7 +49,7 @@ Una definición de segmento **not** esté habilitado para la segmentación de fl
 - La definición del segmento incluye segmentos o rasgos de Adobe Audience Manager (AAM).
 - La definición del segmento incluye varias entidades (consultas de varias entidades).
 
-Además, se aplican algunas directrices al realizar segmentación de flujo continuo:
+Tenga en cuenta las siguientes directrices cuando realice la segmentación de flujo continuo:
 
 | Tipo de consulta | Pauta |
 | ---------- | -------- |
@@ -58,6 +57,8 @@ Además, se aplican algunas directrices al realizar segmentación de flujo conti
 | Consulta con historial de eventos | <ul><li>La ventana retrospectiva se limita a **un día**.</li><li>Condición estricta de orden de tiempo **must** existen entre los eventos.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **cannot** ser una negación.</li></ul> |
 
 Si se modifica una definición de segmento para que ya no cumpla los criterios de segmentación de flujo continuo, la definición del segmento pasará automáticamente de &quot;Transmisión&quot; a &quot;Lote&quot;.
+
+Además, la descalificación de segmentos, similar a la calificación de segmentos, se produce en tiempo real. Como resultado, si una audiencia ya no cumple los requisitos para un segmento, quedará inmediatamente sin clasificar. Por ejemplo, si la definición del segmento requiere &quot;Todos los usuarios que compraron zapatos rojos en las últimas tres horas&quot;, después de tres horas, todos los perfiles que inicialmente calificaron para la definición del segmento no se calificarán.
 
 ## Detalles del segmento de segmentación por transmisión
 
@@ -82,3 +83,33 @@ Para obtener más información sobre las definiciones de segmentos, lea la secci
 En esta guía del usuario se explica cómo funcionan las definiciones de segmentos con transmisión habilitada en Adobe Experience Platform y cómo se monitorizan los segmentos con transmisión habilitada.
 
 Para obtener más información sobre el uso de la interfaz de usuario de Adobe Experience Platform, lea la [Guía del usuario de segmentación](./overview.md).
+
+## Apéndice
+
+La siguiente sección enumera las preguntas más frecuentes sobre la segmentación de flujo continuo:
+
+La siguiente sección enumera las preguntas más frecuentes sobre la segmentación de flujo continuo:
+
+### ¿La &quot;incalificación&quot; de la segmentación por transmisión también se produce en tiempo real?
+
+En la mayoría de los casos, la descalificación de la segmentación de flujo continuo se produce en tiempo real. Sin embargo, los segmentos de flujo continuo que utilizan segmentos de segmentos sí **not** no cumple los requisitos en tiempo real, en lugar de no cumplir los requisitos después de 24 horas.
+
+### ¿En qué datos funciona la segmentación por secuencias?
+
+La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los segmentos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo.
+
+### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
+
+Un segmento se define como segmentación por lotes o de flujo continuo basada en una combinación de tipo de consulta y duración del historial de eventos. Puede encontrar una lista de los segmentos que se evaluarán como un segmento de flujo continuo en la [sección tipos de consulta de segmentación de flujo continuo](#query-types).
+
+### ¿Puede un usuario definir un segmento como segmentación por lotes o de flujo continuo?
+
+En este momento, el usuario no puede definir si un segmento se evalúa mediante ingesta por lotes o de flujo continuo, ya que el sistema determinará automáticamente con qué método se evaluará el segmento.
+
+### ¿Por qué el número de segmentos &quot;cualificados totales&quot; sigue aumentando mientras que el número de &quot;Últimos X días&quot; permanece en cero en la sección de detalles del segmento?
+
+El número total de segmentos cualificados se obtiene del trabajo diario de segmentación, que incluye audiencias que cumplen los requisitos para segmentos de flujo y por lotes. Este valor se muestra tanto para los segmentos de lote como de flujo continuo.
+
+El número de &quot;Últimos X días&quot; **only** incluye audiencias cualificadas en segmentación de flujo continuo y **only** aumenta si ha transmitido datos al sistema y cuenta para esa definición de flujo continuo. Este valor es **only** para segmentos de flujo continuo. Como resultado, este valor **may** se muestra como 0 para los segmentos por lotes.
+
+Como resultado, si ve que el número en &quot;Últimos X días&quot; es cero y el gráfico de líneas también está reportando cero, tiene **not** transmite todos los perfiles al sistema que cumplen los requisitos para ese segmento.

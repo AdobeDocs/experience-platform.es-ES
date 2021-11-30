@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para aprender a evaluar segmentos y acceder a resultados de segmentos mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -86,12 +86,11 @@ La evaluación a petición le permite crear un trabajo de segmento para generar 
 
 ### Crear un trabajo de segmento
 
-Un trabajo de segmento es un proceso asincrónico que crea un nuevo segmento de audiencia. Hace referencia a una definición de segmento, así como a cualquier política de combinación que controle cómo [!DNL Real-time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmento se completa correctamente, puede recopilar información variada sobre el segmento, como los errores que puedan haberse producido durante el procesamiento y el tamaño definitivo de la audiencia.
+Un trabajo de segmento es un proceso asincrónico que crea un segmento de audiencia bajo demanda. Hace referencia a una definición de segmento, así como a cualquier política de combinación que controle cómo [!DNL Real-time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmento se completa correctamente, puede recopilar información variada sobre el segmento, como los errores que puedan haberse producido durante el procesamiento y el tamaño definitivo de la audiencia. Es necesario ejecutar un trabajo de segmento cada vez que desee actualizar la audiencia que actualmente se califica para la definición del segmento.
 
 Puede crear un nuevo trabajo de segmento realizando una solicitud de POST al `/segment/jobs` en la variable [!DNL Real-time Customer Profile] API.
 
 Puede encontrar información más detallada sobre el uso de este extremo en la sección [guía de extremo de trabajos de segmentos](../api/segment-jobs.md#create)
-
 
 ### Buscar estado del trabajo del segmento
 

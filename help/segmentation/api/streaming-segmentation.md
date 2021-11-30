@@ -5,10 +5,10 @@ title: 'Evaluar eventos en tiempo casi real con segmentación por transmisión '
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 2%
+source-wordcount: '1828'
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Es posible que se requieran encabezados adicionales para completar solicitudes específicas. Los encabezados correctos se muestran en cada uno de los ejemplos de este documento. Preste especial atención a las solicitudes de muestra para asegurarse de que se incluyen todos los encabezados necesarios.
 
-### Tipos de consultas habilitadas para la segmentación por transmisión {#streaming-segmentation-query-types}
+### Tipos de consultas habilitadas para la segmentación por transmisión {#query-types}
 
 >[!NOTE]
 >
@@ -86,12 +86,16 @@ Una definición de segmento **not** esté habilitado para la segmentación de fl
 - La definición del segmento incluye segmentos o rasgos de Adobe Audience Manager (AAM).
 - La definición del segmento incluye varias entidades (consultas de varias entidades).
 
-Además, se aplican algunas directrices al realizar segmentación de flujo continuo:
+Tenga en cuenta las siguientes directrices cuando realice la segmentación de flujo continuo:
 
 | Tipo de consulta | Pauta |
 | ---------- | -------- |
 | Consulta de evento único | No hay límites en la ventana retrospectiva. |
 | Consulta con historial de eventos | <ul><li>La ventana retrospectiva se limita a **un día**.</li><li>Condición estricta de orden de tiempo **must** existen entre los eventos.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **cannot** ser una negación.</li></ul> |
+
+Si se modifica una definición de segmento para que ya no cumpla los criterios de segmentación de flujo continuo, la definición del segmento pasará automáticamente de &quot;Transmisión&quot; a &quot;Lote&quot;.
+
+Además, la descalificación de segmentos, similar a la calificación de segmentos, se produce en tiempo real. Como resultado, si una audiencia ya no cumple los requisitos para un segmento, quedará inmediatamente sin clasificar. Por ejemplo, si la definición del segmento requiere &quot;Todos los usuarios que compraron zapatos rojos en las últimas tres horas&quot;, después de tres horas, todos los perfiles que inicialmente calificaron para la definición del segmento no se calificarán.
 
 ## Recuperar todos los segmentos habilitados para la segmentación de flujo continuo
 
@@ -208,7 +212,7 @@ Una respuesta correcta devuelve una matriz de segmentos en su organización de I
 
 ## Creación de segmentos con flujo continuo activado
 
-Se habilitará automáticamente la transmisión de un segmento si coincide con uno de los [tipos de segmentación de flujo continuo enumerados arriba](#streaming-segmentation-query-types).
+Se habilitará automáticamente la transmisión de un segmento si coincide con uno de los [tipos de segmentación de flujo continuo enumerados arriba](#query-types).
 
 **Formato de API**
 
@@ -407,3 +411,31 @@ Se puede utilizar la misma operación para deshabilitar una programación reempl
 Ahora que ha habilitado los segmentos nuevos y existentes para la segmentación de flujo continuo y la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear segmentos con transmisión habilitada para su organización.
 
 Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la [Guía del usuario del Generador de segmentos](../ui/segment-builder.md).
+
+## Apéndice
+
+La siguiente sección enumera las preguntas más frecuentes sobre la segmentación de flujo continuo:
+
+### ¿La &quot;incalificación&quot; de la segmentación por transmisión también se produce en tiempo real?
+
+En la mayoría de los casos, la descalificación de la segmentación de flujo continuo se produce en tiempo real. Sin embargo, los segmentos de flujo continuo que utilizan segmentos de segmentos sí **not** no cumple los requisitos en tiempo real, en lugar de no cumplir los requisitos después de 24 horas.
+
+### ¿En qué datos funciona la segmentación por secuencias?
+
+La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los segmentos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo.
+
+### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
+
+Un segmento se define como segmentación por lotes o de flujo continuo basada en una combinación de tipo de consulta y duración del historial de eventos. Puede encontrar una lista de los segmentos que se evaluarán como un segmento de flujo continuo en la [sección tipos de consulta de segmentación de flujo continuo](#query-types).
+
+### ¿Puede un usuario definir un segmento como segmentación por lotes o de flujo continuo?
+
+En este momento, el usuario no puede definir si un segmento se evalúa mediante ingesta por lotes o de flujo continuo, ya que el sistema determinará automáticamente con qué método se evaluará el segmento.
+
+### ¿Por qué el número de segmentos &quot;cualificados totales&quot; sigue aumentando mientras que el número de &quot;Últimos X días&quot; permanece en cero en la sección de detalles del segmento?
+
+El número total de segmentos cualificados se obtiene del trabajo diario de segmentación, que incluye audiencias que cumplen los requisitos para segmentos de flujo y por lotes. Este valor se muestra tanto para los segmentos de lote como de flujo continuo.
+
+El número de &quot;Últimos X días&quot; **only** incluye audiencias cualificadas en segmentación de flujo continuo y **only** aumenta si ha transmitido datos al sistema y cuenta para esa definición de flujo continuo. Este valor es **only** para segmentos de flujo continuo. Como resultado, este valor **may** se muestra como 0 para los segmentos por lotes.
+
+Como resultado, si ve que el número en &quot;Últimos X días&quot; es cero y el gráfico de líneas también está reportando cero, tiene **not** transmite todos los perfiles al sistema que cumplen los requisitos para ese segmento.
