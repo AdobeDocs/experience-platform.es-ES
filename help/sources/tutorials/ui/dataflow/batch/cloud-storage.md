@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 873a23d06696c98633f76e37a8b4a1d9b1d25c8b
+source-git-commit: 65007d1ee7934e2b3c98601b0a51542ce24bafd0
 workflow-type: tm+mt
-source-wordcount: '2061'
+source-wordcount: '2082'
 ht-degree: 0%
 
 ---
@@ -192,8 +192,8 @@ Una vez que haya proporcionado los valores adecuados a la programación, selecci
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="Suscripción a las alertas de fuentes"
->abstract="Marque esta opción para suscribirse a las alertas de notificación para sus flujos de datos de origen."
->text="Learn more in documentation"
+>abstract="Seleccione las opciones a las que desee suscribirse para recibir alertas de notificación para sus flujos de datos de origen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="Más información en la documentación"
 
 La variable **[!UICONTROL Detalles de flujo de datos]** aparece, lo que le permite asignar un nombre y describir brevemente el nuevo flujo de datos.
 
