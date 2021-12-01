@@ -3,9 +3,9 @@ keywords: Conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión facebook
 description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -138,6 +138,21 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 >title="Origen de la audiencia"
 >abstract="Elija cómo se recopilaron originalmente los datos del cliente en el segmento. Los datos se mostrarán en Facebook cuando un usuario sea el objetivo del segmento"
 >additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Más información en la documentación"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="Origen de la audiencia"
+>abstract="Los anunciantes recopilaron datos directamente de los clientes."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="Origen de la audiencia"
+>abstract="Los anunciantes recopilaron datos directamente de sus socios."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="Origen de la audiencia"
+>abstract="Los anunciantes recopilaron datos directamente de sus clientes y socios."
 
 Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
