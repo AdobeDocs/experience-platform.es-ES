@@ -1,10 +1,11 @@
 ---
 title: Bibliotecas de alojamiento propio
-description: Aprenda a implementar el alojamiento propio para las compilaciones de la biblioteca de etiquetas en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Aprenda a implementar el alojamiento propio para las compilaciones de su biblioteca de etiquetas en Adobe Experience Platform.
+exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
+source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 71%
+source-wordcount: '489'
+ht-degree: 96%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 71%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Las etiquetas en Adobe Experience Platform permiten la producción de un conjunto de archivos llamados [build](../builds.md). Este conjunto de archivos controla el comportamiento de la aplicación en tiempo de ejecución.
+Las etiquetas en Adobe Experience Platform permiten la producción de un conjunto de archivos llamados [compilación](../builds.md). Este conjunto de archivos controla el comportamiento de la aplicación en tiempo de ejecución.
 
 Las compilaciones deben alojarse en alguna parte para que los dispositivos cliente puedan recuperarlas en el tiempo de ejecución según lo necesiten.
 
@@ -32,7 +33,7 @@ La razón principal para utilizar el alojamiento administrado es la comodidad. E
 
 ## Alojamiento propio
 
-Si no desea que Adobe administre los archivos alojados, debe alojarlos por su cuenta. Para alojar los archivos, debe obtener las compilaciones completadas de Platform y asegurarse de que los archivos pasan por el ciclo de lanzamiento de la empresa hasta los servidores administrados por la empresa.
+Si no desea que Adobe administre los archivos alojados, debe alojarlos por su cuenta. Para alojar los archivos, debe obtener las compilaciones completadas de Platform y asegurarse de que los archivos pasan por el ciclo de lanzamiento de la empresa hasta los servidores administrados de la empresa.
 
 ### ¿Por qué utilizar el alojamiento propio?
 
@@ -40,9 +41,8 @@ Existen varias razones para elegir alojar sus propios archivos de compilación.
 
 * Algunos exploradores bloquean el dominio assets.adobedtm.com basándose en la configuración de privacidad configurada por el usuario final
 * El alojamiento propio reduce la cantidad necesaria de búsquedas de DNS
-* Debe utilizar HTTP/2
 * Necesita establecer ciertos encabezados específicos por motivos de seguridad
-* Sus requisitos de control de caché difieren de la configuración predeterminada de Adobe
+* Los requisitos de control de caché difieren de la configuración predeterminada de Adobe
 * Desea controlar mejor la ubicación de los nodos periféricos
 * Su organización tiene requisitos legales y de seguridad que le impiden utilizar la opción administrada por Adobe
 
