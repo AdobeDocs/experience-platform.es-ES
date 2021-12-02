@@ -5,11 +5,10 @@ breadcrumb-title: Guía de Data Science Workspace
 user-guide-description: Utilice el aprendizaje automático para desarrollar, preparar y valorar modelos y fórmulas con Adobe Sensei y JupyterLab Notebooks.
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 18%
+source-wordcount: '248'
+ht-degree: 16%
 
 ---
 
@@ -19,13 +18,13 @@ ht-degree: 18%
 * [Información general de Data Science Workspace](home.md)
 * [Acceso y funciones de Data Science Workspace](access-features-dsw.md)
 * [Recorrido por Data Science Workspace](walkthrough.md)
-* Portátiles JupyterLab {#jupyterlab}
+* Portátiles de JupyterLab {#jupyterlab}
    * [Información general](jupyterlab/overview.md)
    * [Acceso a datos](jupyterlab/access-notebook-data.md)
    * [Analizar los datos](jupyterlab/analyze-your-data.md)
    * [Servicio de consultas](jupyterlab/query-service.md)
    * [Análisis de datos exploratorios (EDA)](jupyterlab/eda-notebook.md)
-   * [Crear una fórmula](jupyterlab/create-a-recipe.md)
+   * [Creación de un modelo mediante el generador de fórmulas](jupyterlab/create-a-model.md)
    * [Colaborar en JupyterLab mediante Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizaje automático de Sensei {#api}
    * [Primeros pasos](api/getting-started.md)
@@ -53,6 +52,7 @@ ht-degree: 18%
    * [Acceso a datos de Spark](authoring/spark.md)
 * Tutoriales de modelo y fórmula {#models-recipes}
    * [Creación y publicación de un modelo de aprendizaje automático](models-recipes/create-publish-model.md)
+   * [Creación de esquemas y conjuntos de datos de Luma de demostración](models-recipes/create-luma-data.md)
    * [Crear el esquema y el conjunto de datos de ventas minoristas](models-recipes/create-retails-sales-dataset.md)
    * [Vista previa de esquemas y conjuntos de datos](models-recipes/preview-schema-data.md)
    * [Empaquete archivos de origen en una fórmula](models-recipes/package-source-files-recipe.md)

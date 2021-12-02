@@ -5,17 +5,16 @@ title: Creación de modelos mediante el SDK de la plataforma Adobe Experience Pl
 topic-legacy: SDK authoring
 description: Este tutorial le proporciona información sobre la conversión de data_access_sdk_python al nuevo Python platform_sdk en Python y R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
 
 ---
 
-# Creación de modelos con el SDK [!DNL Platform] de Adobe Experience Platform
+# Creación de modelos con Adobe Experience Platform [!DNL Platform] SDK
 
-Este tutorial le proporciona información sobre la conversión de `data_access_sdk_python` al nuevo Python `platform_sdk` tanto en Python como en R. Este tutorial proporciona información sobre las siguientes operaciones:
+Este tutorial le proporciona información sobre la conversión `data_access_sdk_python` al nuevo Python `platform_sdk` en Python y R. Este tutorial proporciona información sobre las siguientes operaciones:
 
 - [Generar autenticación](#build-authentication)
 - [Lectura básica de los datos](#basic-reading-of-data)
@@ -23,7 +22,7 @@ Este tutorial le proporciona información sobre la conversión de `data_access_s
 
 ## Generar autenticación {#build-authentication}
 
-La autenticación es necesaria para realizar llamadas a [!DNL Adobe Experience Platform] y está compuesta por clave de API, ID de organización de IMS, un token de usuario y un token de servicio.
+La autenticación es necesaria para realizar llamadas a [!DNL Adobe Experience Platform], y se compone de clave de API, ID de organización de IMS, un token de usuario y un token de servicio.
 
 ### Python
 
@@ -68,9 +67,9 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Lectura básica de datos {#basic-reading-of-data}
+## Lectura básica de los datos {#basic-reading-of-data}
 
-Con el nuevo SDK [!DNL Platform], el tamaño máximo de lectura es de 32 GB, con un tiempo máximo de lectura de 10 minutos.
+Con el nuevo [!DNL Platform] SDK, el tamaño máximo de lectura es de 32 GB, con un tiempo máximo de lectura de 10 minutos.
 
 Si el tiempo de lectura está tardando demasiado, puede intentar utilizar una de las siguientes opciones de filtrado:
 
@@ -81,7 +80,7 @@ Si el tiempo de lectura está tardando demasiado, puede intentar utilizar una de
 
 >[!NOTE]
 >
->La organización IMS se configura dentro de `client_context`.
+>La organización IMS se configura dentro de la variable `client_context`.
 
 ### Python
 
@@ -105,9 +104,9 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filtrar por desajuste y limitar {#filter-by-offset-and-limit}
+## Filtrar por desplazamiento y límite {#filter-by-offset-and-limit}
 
-Ya no se admite el filtrado por ID de lote, por lo que debe utilizar `offset` y `limit` para ampliar el ámbito de lectura de los datos.
+Dado que ya no se admite el filtrado por ID de lote, para ampliar el ámbito de lectura de los datos, debe utilizar `offset` y `limit`.
 
 ### Python
 
@@ -147,14 +146,14 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-El nuevo SDK [!DNL Platform] admite las siguientes operaciones:
+El nuevo [!DNL Platform] El SDK admite las siguientes operaciones:
 
 | Operación | Función |
 | --------- | -------- |
 | Es igual a (`=`) | `eq()` |
 | Greater than (`>`) | `gt()` |
-| Greater than or equal to (`>=`) | `ge()` |
-| Less than (`<`) | `lt()` |
+| Mayor o igual que (`>=`) | `ge()` |
+| Menos de (`<`) | `lt()` |
 | Less than or equal to (`<=`) | `le()` |
 | Y (`&`) | `And()` |
 | O (`|`) | `Or()` |
@@ -197,7 +196,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->La organización IMS se configura dentro de `client_context`.
+>La organización IMS se configura dentro de la variable `client_context`.
 
 Para escribir datos en Python y R, utilice uno de los siguientes ejemplos:
 
@@ -222,4 +221,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Pasos siguientes
 
-Una vez configurado el cargador de datos `platform_sdk`, los datos se preparan y luego se dividen en los conjuntos de datos `train` y `val`. Para obtener más información sobre la preparación de datos y la ingeniería de características, visite la sección sobre [preparación de datos e ingeniería de características](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula utilizando [!DNL JupyterLab] blocs de notas.
+Una vez que haya configurado la variable `platform_sdk` cargador de datos, los datos se preparan y luego se dividen en el `train` y `val` conjuntos de datos. Para obtener más información sobre la preparación de datos y la ingeniería de características, visite la sección de [preparación de datos e ingeniería de características](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula con [!DNL JupyterLab] portátiles.

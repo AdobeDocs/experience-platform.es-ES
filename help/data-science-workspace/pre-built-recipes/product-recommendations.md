@@ -5,11 +5,10 @@ title: Fórmula de recomendación de producto
 topic-legacy: overview
 description: La fórmula de Product Recommendations le permite ofrecer recomendaciones de productos personalizadas que se adaptan a las necesidades y los intereses de sus clientes. Con un modelo de predicción preciso, el historial de compras de un cliente puede proporcionarle información sobre qué productos puede interesarle.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -27,14 +26,14 @@ La fórmula de Product Recommendations utiliza el aprendizaje automático para a
 
 ## ¿Cómo empiezo?
 
-Para empezar, siga el tutorial de Adobe Experience Platform Lab (consulte el vínculo de Lab que aparece a continuación). Este tutorial le muestra cómo crear la fórmula de Product Recommendations en un bloc de notas de Jupyter siguiendo el flujo de trabajo [bloc de notas a fórmula](../jupyterlab/create-a-recipe.md) e implementando la fórmula en [!DNL Experience Platform] [!DNL Data Science Workspace].
+Para empezar, siga el tutorial de Adobe Experience Platform Lab (consulte el vínculo de Lab que aparece a continuación). Este tutorial le muestra cómo crear la fórmula de Product Recommendations en un Jupyter Notebook siguiendo las [portátil a fórmula](../jupyterlab/create-a-model.md) flujo de trabajo e implementación de la fórmula en [!DNL Experience Platform] [!DNL Data Science Workspace].
 
 * [Laboratorio: Predecir el futuro con Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Recursos de laboratorio](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Esquema de datos
 
-Esta fórmula utiliza [XDM schemas](../../xdm/schema/field-dictionary.md) personalizadas para modelar los datos de entrada y salida:
+Esta fórmula utiliza [Esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar los datos de entrada y salida:
 
 ### Esquema de datos de entrada
 

@@ -6,8 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Esta guía se centra en cómo utilizar el bloc de notas de análisis de datos exploratorios (EDA) para descubrir patrones en los datos web, agregar eventos con un objetivo de predicción, limpiar datos agregados y comprender la relación entre los predictores y un objetivo.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 0%
@@ -24,11 +23,11 @@ La segunda parte comienza por realizar un análisis descriptivo de los datos agr
 
 ## Primeros pasos
 
-Antes de leer esta guía, consulte la [[!DNL JupyterLab] guía del usuario](./overview.md) para obtener una introducción de alto nivel a [!DNL JupyterLab] y su función dentro de Data Science Workspace. Además, si está utilizando sus propios datos, revise la documentación para el [acceso a los datos en [!DNL Jupyterlab] blocs de notas](./access-notebook-data.md). Esta guía contiene información importante sobre los límites de datos del bloc de notas.
+Antes de leer esta guía, revise la [[!DNL JupyterLab] guía del usuario](./overview.md) para una introducción de alto nivel a [!DNL JupyterLab] y su función en Data Science Workspace. Además, si está utilizando sus propios datos, consulte la documentación para [acceso a datos en [!DNL Jupyterlab] portátiles](./access-notebook-data.md). Esta guía contiene información importante sobre los límites de datos del bloc de notas.
 
-Este bloc de notas utiliza un conjunto de datos de valores medios en forma de datos de Adobe Analytics Experience Events que se encuentran en el Analysis Workspace de Analytics. Para utilizar el bloc de notas EDA, debe definir la tabla de datos con los siguientes valores `target_table` y `target_table_id`. Se puede utilizar cualquier conjunto de datos de valores medios.
+Este bloc de notas utiliza un conjunto de datos de valores medios en forma de datos de Adobe Analytics Experience Events que se encuentran en el Analysis Workspace de Analytics. Para utilizar el bloc de notas EDA, debe definir la tabla de datos con los valores siguientes `target_table` y `target_table_id`. Se puede utilizar cualquier conjunto de datos de valores medios.
 
-Para encontrar estos valores, siga los pasos descritos en la sección [write to a dataset in python](./access-notebook-data.md#write-python) de la guía de acceso a datos de JupyterLab. El nombre del conjunto de datos (`target_table`) se encuentra en el directorio del conjunto de datos. Una vez que hace clic con el botón derecho en el conjunto de datos para explorar o escribir datos en un bloc de notas, se proporciona un ID de conjunto de datos (`target_table_id`) en la entrada de código ejecutable.
+Para buscar estos valores, siga los pasos descritos en la sección [escribir en un conjunto de datos en python](./access-notebook-data.md#write-python) de la guía de acceso a datos de JupyterLab. El nombre del conjunto de datos (`target_table`) se encuentra en el directorio del conjunto de datos. Una vez que haga clic con el botón derecho en el conjunto de datos para explorar o escribir datos en un bloc de notas, un ID de conjunto de datos (`target_table_id`) se proporciona en la entrada de código ejecutable.
 
 ## Detección de datos
 
@@ -66,9 +65,9 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Conectarse a Adobe Experience Platform [!DNL Query Service]
 
-[!DNL JupyterLab] en Platform le permite utilizar SQL en un  [!DNL Python] bloc de notas para acceder a los datos a través del  [servicio de consulta](https://www.adobe.com/go/query-service-home-en). El acceso a los datos a través de [!DNL Query Service] puede resultar útil para tratar con conjuntos de datos grandes debido a sus tiempos de ejecución superiores. Tenga en cuenta que la consulta de datos mediante [!DNL Query Service] tiene un límite de tiempo de procesamiento de diez minutos.
+[!DNL JupyterLab] en Platform le permite utilizar SQL en un [!DNL Python] bloc de notas para acceder a datos a través de [Servicio de consultas](https://www.adobe.com/go/query-service-home-en). Acceso a los datos mediante [!DNL Query Service] puede ser útil para trabajar con conjuntos de datos grandes debido a sus tiempos de ejecución superiores. Tenga en cuenta que la consulta de datos mediante [!DNL Query Service] tiene un límite de tiempo de procesamiento de diez minutos.
 
-Antes de utilizar [!DNL Query Service] en [!DNL JupyterLab], asegúrese de tener una comprensión práctica de la sintaxis [[!DNL Query Service] SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
+Antes de usar [!DNL Query Service] en [!DNL JupyterLab], asegúrese de tener una comprensión práctica de la variable [[!DNL Query Service] Sintaxis SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
 Para utilizar el servicio de consulta en JupyterLab, primero debe crear una conexión entre el bloc de notas Python en funcionamiento y el servicio de consulta. Esto se puede lograr ejecutando la siguiente celda.
 
@@ -78,7 +77,7 @@ qs_connect()
 
 ### Definir el conjunto de datos de valores medios para la exploración
 
-Para empezar a consultar y explorar datos, se debe proporcionar una tabla de conjuntos de datos de valores medios. Copie y reemplace los valores `table_name` y `table_id` con sus propios valores de tabla de datos.
+Para empezar a consultar y explorar datos, se debe proporcionar una tabla de conjuntos de datos de valores medios. Copie y reemplace el `table_name` y `table_id` con sus propios valores de tabla de datos.
 
 ```python
 target_table = "table_name"
@@ -120,7 +119,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### Detección de conjuntos de datos
 
-Una vez configurados todos los parámetros, iniciados [!DNL Query Service] y con un intervalo de fechas, estará listo para empezar a leer filas de datos. Debe limitar el número de filas leídas.
+Una vez configurados todos los parámetros, comience [!DNL Query Service]y tengan un intervalo de fechas, estará listo para empezar a leer filas de datos. Debe limitar el número de filas leídas.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -285,7 +284,7 @@ iplot(fig)
 
 **Los diez productos vistos**
 
-Esta consulta proporciona una lista de los diez productos más vistos. En el ejemplo siguiente, se utiliza la función `Explode()` para devolver cada producto del objeto `productlistitems` a su propia fila. Esto le permite hacer una consulta anidada para agregar vistas de productos para diferentes SKU.
+Esta consulta proporciona una lista de los diez productos más vistos. En el ejemplo siguiente, la variable `Explode()` se utiliza para devolver cada producto de la variable `productlistitems` a su propia fila. Esto le permite hacer una consulta anidada para agregar vistas de productos para diferentes SKU.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -369,7 +368,7 @@ threshold = 1
 
 ### Agregación de datos para la creación de funciones y objetivos
 
-Para comenzar el análisis exploratorio, debe crear un objetivo en el nivel de perfil, seguido de agregar su conjunto de datos. En este ejemplo, se proporcionan dos consultas. La primera consulta contiene la creación de un objetivo. La segunda consulta debe actualizarse para incluir todas las variables que no sean las de la primera consulta. Puede que desee actualizar el `limit` para la consulta. Después de realizar las siguientes consultas, los datos agregados ya están disponibles para la exploración.
+Para comenzar el análisis exploratorio, debe crear un objetivo en el nivel de perfil, seguido de agregar su conjunto de datos. En este ejemplo, se proporcionan dos consultas. La primera consulta contiene la creación de un objetivo. La segunda consulta debe actualizarse para incluir todas las variables que no sean las de la primera consulta. Es posible que desee actualizar la variable `limit` para la consulta. Después de realizar las siguientes consultas, los datos agregados ya están disponibles para la exploración.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -517,7 +516,7 @@ Para identificar periféricos, este ejemplo utiliza el intervalo intercuartil. E
 
 >[!TIP]
 >
->La corrección de valores atípicos requiere que conozca el negocio y la industria en los que está trabajando. A veces, no se puede dejar caer una observación sólo porque es un caso atípico. Los valores atípicos pueden ser observaciones legítimas y a menudo son las más interesantes. Para obtener más información sobre la colocación de periféricos, visite el [paso opcional de limpieza de datos](#optional-data-clean).
+>La corrección de valores atípicos requiere que conozca el negocio y la industria en los que está trabajando. A veces, no se puede dejar caer una observación sólo porque es un caso atípico. Los valores atípicos pueden ser observaciones legítimas y a menudo son las más interesantes. Para obtener más información sobre cómo soltar periféricos, visite [paso opcional de limpieza de datos](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -630,11 +629,11 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Una vez que haya eliminado las columnas de un solo valor, compruebe si hay errores en las columnas restantes con el comando `Data.columns` en una celda nueva.
+Una vez que haya eliminado las columnas de un solo valor, compruebe si hay errores en las columnas restantes utilizando la variable `Data.columns` en una celda nueva.
 
 ### Correcto para los valores que faltan
 
-La siguiente sección contiene algunos enfoques de ejemplo para corregir los valores que faltan. Sin embargo, en los datos anteriores solo faltaba un valor en una columna, las celdas de ejemplo por debajo de los valores correctos para todos los tipos de datos. Se incluyen:
+La siguiente sección contiene algunos enfoques de ejemplo para corregir los valores que faltan. Sin embargo, en los datos anteriores, solo faltaba un valor en una columna, las celdas de ejemplo por debajo de los valores correctos para todos los tipos de datos. Se incluyen:
 
 - Tipos de datos numéricos: entrada 0 o máx., si procede
 - Tipos de datos categóricos: valor modal de entrada
@@ -680,7 +679,7 @@ El análisis de variables se utiliza para ayudar a comprender la relación entre
 - **Diagrama de pares**: Las parcelas son una forma sencilla de visualizar las relaciones entre cada variable. Genera una matriz de relaciones entre cada variable de los datos.
 - **Mapa de calor**: Los mapas de calor son el coeficiente de correlación para todas las variables del conjunto de datos.
 - **Diagrama de cajas**: Los gráficos de cajas son una forma estandarizada de mostrar la distribución de datos en función de un resumen de cinco números (mínimo, primer cuartil (primer trimestre), mediana, tercer cuartil (tercer trimestre) y máximo).
-- **Diagrama de recuento**: Un gráfico de recuento es como un histograma o un gráfico de barras para algunas características categóricas. Muestra el número de ocurrencias de un elemento en función de un determinado tipo de categoría.
+- **Recuento del argumento**: Un gráfico de recuento es como un histograma o un gráfico de barras para algunas características categóricas. Muestra el número de ocurrencias de un elemento en función de un determinado tipo de categoría.
 
 Para entender la relación entre la variable &quot;objetivo&quot; y los predictores/características, los gráficos se utilizan en función de los tipos de datos. Para las características numéricas, debe utilizar un diagrama de cuadro si la variable &quot;objetivo&quot; es categórica, así como un diagrama de par y mapa de calor si la variable &quot;objetivo&quot; es numérica.
 
@@ -804,13 +803,13 @@ else:
 
 ![perspectiva de ejemplo](../images/jupyterlab/eda/insight.PNG)
 
-## Paso opcional de limpieza de datos {#optional-data-clean}
+## Paso de limpieza de datos opcional {#optional-data-clean}
 
 La corrección de valores atípicos requiere que conozca el negocio y la industria en los que está trabajando. A veces, no se puede dejar caer una observación sólo porque es un caso atípico. Los valores atípicos pueden ser observaciones legítimas y a menudo son las más interesantes.
 
-Para obtener más información sobre periféricos y si deben soltarlos o no, lea esta entrada del [factor de análisis](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+Para obtener más información sobre periféricos y si los suelta o no, lea esta entrada desde el [factor de análisis](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
-El siguiente ejemplo de celda limita y coloca en el suelo puntos de datos que son periféricos usando [intervalo de intercuartil](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
+El siguiente ejemplo de celda limita y coloca en el suelo puntos de datos que son periféricos mediante [intervalo intercuartil](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
 
 ```python
 TARGET = Data.TARGET
@@ -832,4 +831,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 Una vez finalizado el análisis de datos exploratorios, está listo para empezar a crear un modelo. Como alternativa, puede utilizar los datos y las perspectivas que ha derivado para crear un tablero con herramientas como Power BI.
 
-Adobe Experience Platform separa el proceso de creación del modelo en dos etapas distintas: Fórmulas (una instancia de modelo) y Modelos. Para comenzar el proceso de creación de fórmulas, visite la documentación de [creación de una fórmula en JupyerLab Notebooks](./create-a-recipe.md). Este documento contiene información y ejemplos para crear, entrenar y anotar, una fórmula dentro de [!DNL JupyterLab] Notebooks.
+Adobe Experience Platform separa el proceso de creación del modelo en dos etapas distintas: Fórmulas (una instancia de modelo) y Modelos. Para comenzar el proceso de creación de la fórmula, visite la documentación de [creación de una fórmula en JupyerLab Notebooks](./create-a-model.md). Este documento contiene información y ejemplos para crear, entrenar y puntuar, una fórmula dentro de [!DNL JupyterLab] Portátiles.

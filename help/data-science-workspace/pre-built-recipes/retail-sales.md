@@ -3,10 +3,9 @@ keywords: Experience Platform;fórmula de ventas minoristas;Data Science Workspa
 solution: Experience Platform
 title: Fórmula de ventas minoristas
 topic-legacy: overview
-description: La fórmula Venta minorista permite predecir la previsión de ventas de todas las tiendas que se hayan creado durante un período determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre la demanda y las políticas de precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
+description: La fórmula Venta minorista permite predecir la previsión de ventas de todas las tiendas creadas durante un período determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre la demanda y las políticas de precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
@@ -15,7 +14,7 @@ ht-degree: 2%
 
 # Receta de ventas minoristas
 
-La fórmula Venta minorista permite predecir la previsión de ventas de todas las tiendas que se hayan creado durante un período determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre la demanda y las políticas de precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
+La fórmula Venta minorista permite predecir la previsión de ventas de todas las tiendas creadas durante un período determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre la demanda y las políticas de precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
 
 El siguiente documento responderá preguntas como:
 * ¿Para quién se ha creado esta receta?
@@ -28,17 +27,17 @@ Un minorista enfrenta muchos desafíos para seguir siendo competitivo en el merc
 
 ## ¿Qué hace esta receta?
 
-La fórmula de previsión de ventas minoristas utiliza el aprendizaje automático para predecir las tendencias de venta. Para ello, la fórmula aprovecha la riqueza de datos históricos de venta minorista y el algoritmo de aprendizaje automático o retroceso de aumento de degradado personalizado para predecir las ventas con una semana de antelación. El modelo utiliza el historial de compras anterior y establece de forma predeterminada parámetros de configuración predeterminados determinados por nuestros científicos de datos para mejorar la precisión predictiva.
+La fórmula de previsión de ventas minoristas utiliza el aprendizaje automático para predecir las tendencias de venta. Para ello, la fórmula aprovecha la riqueza de datos comerciales históricos y el algoritmo de aprendizaje automático o retroceso que aumenta el degradado personalizado para predecir las ventas con una semana de antelación. El modelo utiliza el historial de compras anterior y establece de forma predeterminada parámetros de configuración predeterminados determinados por nuestros científicos de datos para mejorar la precisión predictiva.
 
 ## ¿Cómo empiezo?
 
-Para empezar, siga este [tutorial](../jupyterlab/create-a-recipe.md).
+Para empezar, siga esta [tutorial](../jupyterlab/create-a-model.md).
 
 Este tutorial explicará la creación de la fórmula de ventas minoristas en un bloc de notas de Jupyter y el uso del bloc de notas en el flujo de trabajo de fórmula para crear la fórmula en Adobe Experience Platform.
 
 ## Esquema de datos
 
-Esta fórmula utiliza [XDM schemas](../../xdm/schema/field-dictionary.md) para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
+Esta fórmula utiliza [Esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
 
 | Nombre del campo | Tipo |
 | --- | --- |
@@ -57,7 +56,7 @@ Esta fórmula utiliza [XDM schemas](../../xdm/schema/field-dictionary.md) para m
 
 ## Algoritmo
 
-En primer lugar, se carga el conjunto de datos de capacitación en el esquema *DSWRetailSales*. A partir de aquí, el modelo se entrena utilizando un [algoritmo de regresión de aumento de degradado](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). La mejora de degradado utiliza la idea de que los estudiantes débiles (uno que sea al menos ligeramente mejor que una oportunidad aleatoria) pueden formar una sucesión de estudiantes centrados en mejorar las debilidades del alumno anterior. Juntos, se pueden usar para crear un poderoso modelo predictivo.
+En primer lugar, el conjunto de datos de formación en la variable *DSWRetailSales* se ha cargado el esquema. Desde aquí, el modelo se entrena usando un [algoritmo de regresión de aumento de degradado](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). La mejora de degradado utiliza la idea de que los estudiantes débiles (uno que sea al menos ligeramente mejor que una oportunidad aleatoria) pueden formar una sucesión de estudiantes centrados en mejorar las debilidades del alumno anterior. Juntos, se pueden usar para crear un poderoso modelo predictivo.
 
 El proceso consta de tres elementos: una función de pérdida, un aprendiz débil y un modelo aditivo.
 
