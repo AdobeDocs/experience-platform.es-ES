@@ -2,9 +2,9 @@
 title: Información general sobre registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d4beb7691c8fb38359425509a40572ea9b09fd26
+source-git-commit: d258ddef6a904fee5a4676a513fc426663342c91
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '658'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 Para aumentar la transparencia y visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform permite auditar la actividad de los usuarios para diversos servicios y capacidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de manera eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
 
-En un sentido básico, un registro de auditoría indica a **quién** realizó **qué** acción y **cuándo**. Cada acción registrada en un registro contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y atributos adicionales relevantes para el tipo de acción.
+En un sentido básico, un registro de auditoría informa **who** performed **what** acción y **when**. Cada acción registrada en un registro contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y atributos adicionales relevantes para el tipo de acción.
 
 Este documento cubre los registros de auditoría en Platform, incluido cómo verlos y administrarlos en la interfaz de usuario o la API.
 
@@ -39,11 +39,11 @@ En la tabla siguiente se describen las acciones en las que los registros de audi
 
 Cuando la función está habilitada para su organización, los registros de auditoría se recopilan automáticamente a medida que se produce la actividad. No es necesario habilitar manualmente la recopilación de registros.
 
-Para ver y exportar los registros de auditoría, debe tener el permiso de control de acceso &quot;Ver registros de auditoría&quot; concedido (que se encuentra en la categoría &quot;Control de datos&quot;). Para obtener información sobre cómo administrar permisos individuales para funciones de Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
+Para ver y exportar los registros de auditoría, debe tener el permiso de control de acceso &quot;Ver registros de auditoría&quot; concedido (que se encuentra en la categoría &quot;Control de datos&quot;). Para obtener información sobre cómo administrar permisos individuales para las funciones de Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
 
 ## Administración de registros de auditoría en la interfaz de usuario
 
-Puede ver los registros de auditoría de distintas funciones de Experience Platform en el espacio de trabajo **[!UICONTROL Audits]** de la interfaz de usuario de Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de los más recientes a los menos recientes.
+Puede ver los registros de auditoría de las distintas funciones del Experience Platform en el **[!UICONTROL Auditorías]** en la interfaz de usuario de Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de los más recientes a los menos recientes.
 
 ![Panel de registros de auditoría](../../images/audit-logs/audits.png)
 
@@ -53,7 +53,9 @@ Seleccione un evento de la lista para ver sus detalles en el carril derecho.
 
 ![Detalles del evento](../../images/audit-logs/select-event.png)
 
-Seleccione el icono de canal (![Filtro icono](../../images/audit-logs/icon.png)) para mostrar una lista de controles de filtro para ayudar a reducir los resultados.
+### Filtrar registros de auditoría
+
+Seleccione el icono de canal (![Icono de filtro](../../images/audit-logs/icon.png)) para mostrar una lista de controles de filtro para ayudar a reducir los resultados.
 
 ![Filtros](../../images/audit-logs/filters.png)
 
@@ -62,28 +64,32 @@ Los siguientes filtros están disponibles para eventos de auditoría en la inter
 | Filtro | Descripción |
 | --- | --- |
 | [!UICONTROL Categoría] | Utilice el menú desplegable para filtrar los resultados mostrados por [categoría](#category). |
-| [!UICONTROL Acción] | Filtrar por acción. Actualmente solo se pueden filtrar las acciones [!UICONTROL Create] y [!UICONTROL Delete]. |
-| [!UICONTROL Estado de control de acceso] | Filtre por si la acción fue permitida (completada) o denegada debido a la falta de permisos de [control de acceso](../../../access-control/home.md). |
+| [!UICONTROL Acción] | Filtrar por acción. Actualmente solo [!UICONTROL Crear] y [!UICONTROL Eliminar] las acciones se pueden filtrar. |
+| [!UICONTROL Estado de control de acceso] | Filtrar por si la acción fue permitida (completada) o denegada debido a la falta de [control de acceso](../../../access-control/home.md) permisos. |
 | [!UICONTROL Fecha] | Seleccione una fecha de inicio o una fecha de finalización para definir un intervalo de fechas por el que filtrar los resultados. |
 
 Para quitar un filtro, seleccione la &quot;X&quot; en el icono de la píldora para el filtro en cuestión o seleccione **[!UICONTROL Borrar todo]** para eliminar todos los filtros.
 
 ![Borrar filtros](../../images/audit-logs/clear-filters.png)
 
-<!-- (Planned for post-beta release)
-### Export an audit log
+### Exportar registros de auditoría
 
-Select **[!UICONTROL Download log]** to export an audit log.
--->
+Para exportar la lista actual de registros de auditoría, seleccione **[!UICONTROL Descargar registro]**.
+
+![Descargar registro](../../images/audit-logs/download.png)
+
+En el cuadro de diálogo que aparece, seleccione el formato que desee (ya sea **[!UICONTROL CSV]** o **[!UICONTROL JSON]**) y, a continuación, seleccione **[!UICONTROL Descargar]**. El explorador descarga el archivo generado y lo guarda en el equipo.
+
+![Seleccionar formato de descarga](../../images/audit-logs/select-download-format.png)
 
 ## Administración de registros de auditoría en la API
 
-Todas las acciones que puede realizar en la interfaz de usuario también se pueden realizar mediante llamadas a la API . Consulte el [documento de referencia de API](https://www.adobe.io/experience-platform-apis/references/audit-query/) para obtener más información.
+Todas las acciones que puede realizar en la interfaz de usuario también se pueden realizar mediante llamadas a la API . Consulte la [Documento de referencia de API](https://www.adobe.io/experience-platform-apis/references/audit-query/) para obtener más información.
 
 ## Administración de registros de auditoría para Adobe Admin Console
 
-Para aprender a administrar los registros de auditoría de las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+Para obtener información sobre cómo administrar los registros de auditoría de actividades en Adobe Admin Console, consulte lo siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Pasos siguientes
 
-Esta guía abarcaba cómo administrar los registros de auditoría en Experience Platform. Para obtener más información sobre cómo monitorizar las actividades de Platform, consulte la documentación sobre [Observability Insights](../../../observability/home.md) y [monitorización de la incorporación de datos](../../../ingestion/quality/monitor-data-ingestion.md).
+Esta guía abarcaba cómo administrar los registros de auditoría en Experience Platform. Para obtener más información sobre cómo monitorizar las actividades de Platform, consulte la documentación de [Perspectivas de la capacidad de observación](../../../observability/home.md) y [monitorización de la ingesta de datos](../../../ingestion/quality/monitor-data-ingestion.md).
