@@ -2,10 +2,10 @@
 title: Notas de la versión
 description: Las notas de la versión más recientes para etiquetas de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
+source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 68%
+source-wordcount: '658'
+ht-degree: 60%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 68%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se está convirtiendo en un conjunto de tecnologías de recopilación de datos en Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 15 de noviembre de 2021
+
+**Aceptar código ES6 en etiquetas** - Las extensiones y el código personalizado que contienen código ES6 ahora se pueden utilizar en etiquetas. En el catálogo de extensiones verá una etiqueta ES6+ dentro de la tarjeta de cada extensión que contenga código ES6. IE10 e IE11 no admiten código ES6. Antes de usar código ES6 en sus bibliotecas de etiquetas, siga con la debida diligencia.
+
+**Uso de Terser como compresor de JavaScript** - Uglifier fue reemplazado por Terser. A partir de esta versión, Terser minifica todas las bibliotecas de etiquetas.
 
 ## 21 de octubre de 2021
 
