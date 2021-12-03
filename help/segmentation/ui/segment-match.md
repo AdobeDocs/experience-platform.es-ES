@@ -5,7 +5,7 @@ title: Información general sobre la coincidencia de segmentos
 topic-legacy: overview
 description: Coincidencia de segmentos es un servicio para compartir segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, regulada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: ba215f20db3bfead8beba8f1dea98bfc37e4358c
+source-git-commit: 105ddf70aafe8c92b5a64959ba1c4cefa5eb6f12
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 1%
@@ -59,7 +59,7 @@ La lista de áreas de nombres admitidas es la siguiente:
 
 Debe proporcionar una configuración de consentimiento y establecer su valor predeterminado en `opt-in` o `opt-out` para una comprobación de consentimiento.
 
-La comprobación de consentimiento de inclusión y exclusión determina si puede operar con el consentimiento para compartir datos de usuario de forma predeterminada. Si el valor predeterminado de la configuración de consentimiento está establecido en `opt-in`, los datos de usuario se pueden compartir, a menos que un usuario se excluya explícitamente. Si el valor predeterminado es `opt-out`, los datos de usuario no se pueden compartir, a menos que un usuario participe explícitamente.
+La comprobación de consentimiento de inclusión y exclusión determina si puede operar con el consentimiento para compartir datos de usuario de forma predeterminada. Si el valor predeterminado de la configuración de consentimiento está establecido en `opt-out`, los datos de usuario se pueden compartir, a menos que un usuario se excluya explícitamente. Si el valor predeterminado es `opt-in`, los datos de usuario no se pueden compartir, a menos que un usuario participe explícitamente.
 
 La configuración de consentimiento predeterminada para [!DNL Segment Match] está configurado como `opt-out`. Para aplicar un modelo de inclusión a los datos, envíe una solicitud por correo electrónico al administrador de cuentas de Adobe.
 
