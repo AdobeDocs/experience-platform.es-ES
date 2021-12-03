@@ -1,27 +1,27 @@
 ---
-title: Configuración del SDK web de Adobe Experience Platform
-description: Obtenga información sobre la extensión de la etiqueta SDK web de Adobe Experience Platform.
+title: Configurar la extensión del SDK web de Adobe Experience Platform
+description: Configurar la extensión de la etiqueta SDK web de Adobe Experience Platform en la interfaz de usuario de la recopilación de datos.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 8%
+source-wordcount: '1049'
+ht-degree: 7%
 
 ---
 
-# Información general
+# Configurar la extensión del SDK web de Adobe Experience Platform
 
-La extensión del SDK web de Adobe Experience Platform envía datos a Adobe Experience Cloud desde las propiedades web a través de Adobe Experience Platform Edge Network. La extensión le permite transmitir datos a Platform, sincronizar identidades, procesar señales de consentimiento del cliente y recopilar automáticamente datos de contexto.
+La extensión de etiqueta del SDK web de Adobe Experience Platform envía datos a Adobe Experience Cloud desde las propiedades web a través de Adobe Experience Platform Edge Network. La extensión le permite transmitir datos a Platform, sincronizar identidades, procesar señales de consentimiento del cliente y recopilar automáticamente datos de contexto.
 
 Este documento explica cómo configurar la extensión en la interfaz de usuario de la recopilación de datos.
 
-## Configurar la extensión de
+## Primeros pasos
 
-Si la extensión del SDK web de Platform ya se ha instalado para una propiedad, abra la propiedad en la interfaz de usuario de recopilación de datos y seleccione la pestaña **[!UICONTROL Extensions]**. En el SDK web de Platform, seleccione **[!UICONTROL Configurar]**.
+Si la extensión del SDK web de Platform ya se ha instalado para una propiedad, abra la propiedad en la interfaz de usuario de la recopilación de datos y seleccione la **[!UICONTROL Extensiones]** pestaña . En el SDK web de Platform, seleccione **[!UICONTROL Configurar]**.
 
 ![](../images/extension/overview/configure.png)
 
-Si todavía no ha instalado la extensión, seleccione la pestaña **[!UICONTROL Catalog]**. En la lista de extensiones disponibles, busque la extensión del SDK web de Platform y seleccione **[!UICONTROL Install]**.
+Si aún no ha instalado la extensión, seleccione la opción **[!UICONTROL Catálogo]** pestaña . En la lista de extensiones disponibles, busque la extensión web SDK de Platform y seleccione **[!UICONTROL Instalar]**.
 
 ![](../images/extension/overview/install.png)
 
@@ -41,11 +41,11 @@ El nombre predeterminado de la extensión es &quot;[!DNL alloy]&quot;. Sin embar
 
 ### **[!UICONTROL ID de organización de IMS]**
 
-El [!UICONTROL IMS Organization ID] es la organización a la que desea que se envíen los datos en el Adobe. La mayoría de las veces, utilice el valor predeterminado que se rellena automáticamente. Cuando tenga varias instancias en la página, rellene este campo con el valor de la segunda organización a la que desee enviar datos.
+La variable [!UICONTROL ID de organización IMS] es la organización a la que desea que se envíen los datos en el Adobe. La mayoría de las veces, utilice el valor predeterminado que se rellena automáticamente. Cuando tenga varias instancias en la página, rellene este campo con el valor de la segunda organización a la que desee enviar datos.
 
 ### **[!UICONTROL Dominio de Edge]**
 
-El [!UICONTROL Dominio perimetral] es el dominio desde el cual la extensión de Adobe Experience Platform envía y recibe datos. La extensión requiere que utilice un CNAME de origen para el tráfico de producción. El dominio de terceros predeterminado funciona para entornos de desarrollo, pero no es adecuado para entornos de producción. Las instrucciones sobre cómo configurar un CNAME de origen se enumeran [aquí](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=es).
+La variable [!UICONTROL Dominio de Edge] es el dominio desde el cual la extensión de Adobe Experience Platform envía y recibe datos. La extensión requiere que utilice un CNAME de origen para el tráfico de producción. El dominio de terceros predeterminado funciona para entornos de desarrollo, pero no es adecuado para entornos de producción. Las instrucciones sobre cómo configurar un CNAME de origen se enumeran [aquí](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=es).
 
 ## [!UICONTROL Corrientes de datos]
 
@@ -58,7 +58,7 @@ Consulte la guía de [datastreams](../fundamentals/datastreams.md) para obtener 
 
 ![](../images/extension/overview/privacy.png)
 
-La sección [!UICONTROL Privacidad] le permite configurar el modo en que el SDK gestiona las señales de consentimiento del usuario desde el sitio web. Específicamente, le permite seleccionar el nivel predeterminado de consentimiento que se asume de un usuario si no se ha proporcionado ninguna otra preferencia de consentimiento explícito. El nivel de consentimiento predeterminado no se guarda en el perfil del usuario. La tabla siguiente desglosa lo que implica cada opción:
+La variable [!UICONTROL Privacidad] le permite configurar el modo en que el SDK gestiona las señales de consentimiento del usuario desde el sitio web. Específicamente, le permite seleccionar el nivel predeterminado de consentimiento que se asume de un usuario si no se ha proporcionado ninguna otra preferencia de consentimiento explícito. El nivel de consentimiento predeterminado no se guarda en el perfil del usuario. La tabla siguiente desglosa lo que implica cada opción:
 
 | [!UICONTROL Nivel de consentimiento predeterminado] | Descripción |
 | --- | --- |
@@ -85,7 +85,7 @@ Esta opción permite al SDK intentar almacenar un identificador de usuario en un
 
 ![](../images/extension/overview/personalization.png)
 
-Si desea ocultar ciertas partes si el sitio mientras se carga contenido personalizado, puede especificar los elementos que desea ocultar en el editor de estilos de preocultación. A continuación, puede copiar el fragmento de preocultación predeterminado que se le ha proporcionado y pegarlo dentro del elemento `<head>`del sitio HTML.
+Si desea ocultar ciertas partes si el sitio mientras se carga contenido personalizado, puede especificar los elementos que desea ocultar en el editor de estilos de preocultación. A continuación, puede copiar el fragmento de preocultación predeterminado que se le ha proporcionado y pegarlo en el `<head>`del sitio del HTML.
 
 ## [!UICONTROL Recopilación de datos]
 
@@ -93,15 +93,15 @@ Si desea ocultar ciertas partes si el sitio mientras se carga contenido personal
 
 ### [!UICONTROL Función Callback]
 
-La función de llamada de retorno proporcionada en la extensión también se denomina [`onBeforeEventSend` función](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) en la biblioteca. Esta función le permite modificar eventos globalmente antes de enviarlos a Adobe Edge Network. Puede encontrar más información detallada sobre cómo utilizar esta función [aquí](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+La función de llamada de retorno proporcionada en la extensión también se denomina [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) en la biblioteca. Esta función le permite modificar eventos globalmente antes de enviarlos a Adobe Edge Network. Encontrará información más detallada sobre cómo utilizar esta función [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL Haga clic en la recopilación de datos]
 
-El SDK puede recopilar automáticamente información sobre clics en vínculos. De forma predeterminada, esta función está habilitada, pero se puede deshabilitar con esta opción. Los vínculos también se etiquetan como vínculos de descarga si contienen una de las expresiones de descarga enumeradas en el cuadro de texto [!UICONTROL Download Link Qualifier]. Adobe le proporciona algunos calificadores de vínculo de descarga predeterminados, pero estos se pueden editar en cualquier momento.
+El SDK puede recopilar automáticamente información sobre clics en vínculos. De forma predeterminada, esta función está habilitada, pero se puede deshabilitar con esta opción. Los vínculos también se etiquetan como vínculos de descarga si contienen una de las expresiones de descarga enumeradas en la variable [!UICONTROL Descargar calificador de vínculo] cuadro de texto. Adobe le proporciona algunos calificadores de vínculo de descarga predeterminados, pero estos se pueden editar en cualquier momento.
 
 ### [!UICONTROL Datos de contexto recopilados automáticamente]
 
-De forma predeterminada, el SDK recopila ciertos datos de contexto relacionados con el dispositivo, la web, el entorno y el contexto de lugar. Si desea ver una lista de la información que recopila el Adobe, puede encontrarla [aquí](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Si no desea que se recopilen estos datos o solo desea que se recopilen determinadas categorías de datos, puede cambiar estas opciones.
+De forma predeterminada, el SDK recopila ciertos datos de contexto relacionados con el dispositivo, la web, el entorno y el contexto de lugar. Si desea ver una lista de los Adobes de información recopilados, puede encontrarla [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Si no desea que se recopilen estos datos o solo desea que se recopilen determinadas categorías de datos, puede cambiar estas opciones.
 
 ## [!UICONTROL Configuración avanzada]
 
