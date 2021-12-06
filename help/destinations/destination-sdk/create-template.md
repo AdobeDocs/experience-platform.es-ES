@@ -1,10 +1,10 @@
 ---
-description: Como parte del SDK de destino, Adobe proporciona herramientas para desarrolladores que le ayudan a configurar y probar el destino. En esta página se describe cómo crear y probar una plantilla de transformación de mensaje.
+description: Como parte de Destination SDK, Adobe proporciona herramientas para desarrolladores que le ayudarán a configurar y probar el destino. En esta página se describe cómo crear y probar una plantilla de transformación de mensaje.
 title: Creación y prueba de una plantilla de transformación de mensaje
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -13,49 +13,53 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Como parte del SDK de destino, Adobe proporciona herramientas para desarrolladores que le ayudan a configurar y probar el destino. En esta página se describe cómo crear y probar una plantilla de transformación de mensaje. Para obtener información sobre cómo probar el destino, lea [Probar la configuración de destino](./test-destination.md).
+Como parte de Destination SDK, Adobe proporciona herramientas para desarrolladores que le ayudarán a configurar y probar el destino. En esta página se describe cómo crear y probar una plantilla de transformación de mensaje. Para obtener información sobre cómo probar el destino, lea [Probar la configuración de destino](./test-destination.md).
 
-Para **crear y probar una plantilla de transformación de mensaje** entre el esquema de destino en Adobe Experience Platform y el formato de mensaje admitido por el destino, utilice la *Template authoring tool* que se describe a continuación.  Obtenga más información sobre la transformación de datos entre el esquema de origen y destino en el [documento de formato de mensaje](./message-format.md#using-templating).
+Hasta **crear y probar una plantilla de transformación de mensaje** entre el esquema de destino en Adobe Experience Platform y el formato de mensaje admitido por el destino, use el *Herramienta de creación de plantillas* a continuación.  Obtenga más información sobre la transformación de datos entre el esquema de origen y destino en la variable [documento de formato de mensaje](./message-format.md#using-templating).
 
-A continuación se ilustra cómo la creación y prueba de una plantilla de transformación de mensaje encaja en el [flujo de trabajo de configuración de destino](./configure-destination-instructions.md) en el SDK de destino:
+A continuación se ilustra cómo la creación y prueba de una plantilla de transformación de mensaje encaja en el [flujo de trabajo de configuración de destino](./configure-destination-instructions.md) en Destination SDK:
 
 ![Gráfico de dónde encaja el paso crear plantilla en el flujo de trabajo de configuración de destino](./assets/create-template-step.png)
 
 ## Por qué debe crear y probar una plantilla de transformación de mensaje {#why-create-message-transformation-template}
 
-Uno de los primeros pasos para crear su destino en el SDK de destino es pensar en cómo se transforma el formato de datos para la pertenencia a un segmento, las identidades y los atributos de perfil al exportarlo de Adobe Experience Platform a su destino. Busque información sobre la transformación entre el esquema XDM de Adobe y el esquema de destino en el documento [message format document](./message-format.md#using-templating).
+Uno de los primeros pasos para crear su destino en Destination SDK es pensar en cómo se transforma el formato de datos para la pertenencia a un segmento, las identidades y los atributos de perfil al exportarlo de Adobe Experience Platform a su destino. Busque información sobre la transformación entre el esquema XDM de Adobe y el esquema de destino en la [documento de formato de mensaje](./message-format.md#using-templating).
 
 Para que la transformación tenga éxito, debe proporcionar una plantilla de transformación, similar a esta: [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](./message-format.md#segments-identities-attributes).
 
 Adobe proporciona una herramienta de plantilla que le permite crear y probar la plantilla de mensaje que transforma los datos del formato XDM de Adobe al formato admitido por el destino. La herramienta tiene dos extremos de API que puede utilizar:
-* Utilice la *API de plantilla de ejemplo* para obtener una plantilla de ejemplo.
-* Use la *API de plantilla de renderización* para procesar la plantilla de ejemplo y poder comparar el resultado con el formato de datos esperado del destino. Después de comparar los datos exportados con el formato de datos esperado por el destino, puede editar la plantilla. De este modo, los datos exportados que genere coincidirán con el formato de datos esperado por el destino.
-
-## Cómo utilizar la API de plantilla de muestra y la API de plantilla de renderización para crear una plantilla para el destino {#iterative-process}
-
-El proceso para obtener y probar la plantilla es iterativo. Repita los pasos siguientes hasta que los perfiles exportados coincidan con el formato de datos esperado del destino.
-
-1. Primero, [obtenga una plantilla de ejemplo](./create-template.md#sample-template-api).
-2. Utilice la plantilla de ejemplo como punto de partida para crear un borrador propio.
-3. Llame al [extremo de la API de plantilla de renderización](./create-template.md#render-template-api) con su propia plantilla. Adobe genera perfiles de muestra basados en el esquema y devuelve el resultado o cualquier error encontrado.
-4. Compare los datos exportados con el formato de datos esperado por el destino. Si es necesario, edite la plantilla.
-5. Repita este proceso hasta que los perfiles exportados coincidan con el formato de datos esperado del destino.
+* Utilice la variable *API de plantilla de ejemplo* para obtener una plantilla de ejemplo.
+* Utilice la variable *API de plantilla de renderizado* para procesar la plantilla de ejemplo y poder comparar el resultado con el formato de datos esperado del destino. Después de comparar los datos exportados con el formato de datos esperado por el destino, puede editar la plantilla. De este modo, los datos exportados que genere coincidirán con el formato de datos esperado por el destino.
 
 ## Pasos que se deben completar antes de crear la plantilla {#prerequisites}
 
 Antes de crear la plantilla, asegúrese de completar los pasos siguientes:
 
-1. [Cree una configuración](./destination-server-api.md) de servidor de destino. La plantilla que va a generar es diferente, en función del valor que proporcione para el parámetro `maxUsersPerRequest`.
-   * Utilice `maxUsersPerRequest=1` si desea que una llamada de API a su destino incluya un solo perfil, junto con sus cualificaciones de segmento, identidades y atributos de perfil.
-   * Utilice `maxUsersPerRequest` con un valor bueno a uno si desea que una llamada de API al destino incluya varios perfiles, junto con sus clasificaciones de segmentos, identidades y atributos de perfil.
-2. [Cree una ](./destination-configuration-api.md#create) configuración de destino y añada el ID de la configuración del servidor de destino en  `destinationDelivery.destinationServerId`.
-3. [Obtenga el ID de la ](./destination-configuration-api.md#retrieve-list) configuración de destino que acaba de crear, de modo que pueda utilizarlo en la herramienta de creación de plantillas.
+1. [Crear una configuración de servidor de destino](./destination-server-api.md). La plantilla que va a generar es diferente en función del valor que proporcione para la variable `maxUsersPerRequest` parámetro.
+   * Uso `maxUsersPerRequest=1` si desea que una llamada de API a su destino incluya un solo perfil, junto con sus cualificaciones de segmento, identidades y atributos de perfil.
+   * Uso `maxUsersPerRequest` con un valor bueno a uno si desea que una llamada de API a su destino incluya varios perfiles, junto con sus cualificaciones de segmento, identidades y atributos de perfil.
+2. [Crear una configuración de destino](./destination-configuration-api.md#create) y añada el ID de la configuración del servidor de destino en `destinationDelivery.destinationServerId`.
+3. [Obtención del ID de la configuración de destino](./destination-configuration-api.md#retrieve-list) que acaba de crear, de modo que pueda utilizarlo en la herramienta de creación de plantillas.
+
+## Cómo utilizar la API de plantilla de muestra y la API de plantilla de renderización para crear una plantilla para el destino {#iterative-process}
+
+>[!TIP]
+>
+>Antes de crear y editar la plantilla de transformación de mensajes, puede empezar llamando a la función [extremo de API de plantilla de renderizado](./render-template-api.md#render-exported-data) con una plantilla sencilla que exporta sus perfiles sin procesar sin aplicar ninguna transformación. La sintaxis de la plantilla simple es: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+
+El proceso para obtener y probar la plantilla es iterativo. Repita los pasos siguientes hasta que los perfiles exportados coincidan con el formato de datos esperado del destino.
+
+1. Primero, [obtener una plantilla de ejemplo](./create-template.md#sample-template-api).
+2. Utilice la plantilla de ejemplo como punto de partida para crear un borrador propio.
+3. Llame a la función [extremo de API de plantilla de renderizado](./create-template.md#render-template-api) con su propia plantilla. Adobe genera perfiles de muestra basados en el esquema y devuelve el resultado o cualquier error encontrado.
+4. Compare los datos exportados con el formato de datos esperado por el destino. Si es necesario, edite la plantilla.
+5. Repita este proceso hasta que los perfiles exportados coincidan con el formato de datos esperado del destino.
 
 ## Obtener una plantilla de ejemplo mediante la API de plantilla de ejemplo {#sample-template-api}
 
 >[!NOTE]
 >
->Para obtener toda la documentación de referencia de la API, lea [Obtener operaciones de API de plantilla de muestra](./sample-template-api.md).
+>Para obtener toda la documentación de referencia de la API, lea [Obtener operaciones de API de plantilla de ejemplo](./sample-template-api.md).
 
 Agregue un ID de destino a la llamada, como se muestra a continuación, y la respuesta devolverá un ejemplo de plantilla correspondiente al ID de destino.
 
@@ -69,7 +73,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-Si el ID de destino que proporciona corresponde a una configuración de destino con [mejor agregación de esfuerzo](./destination-configuration.md#best-effort-aggregation) y `maxUsersPerRequest=1` en la política de agregación, la solicitud devuelve una plantilla de ejemplo similar a esta:
+Si el ID de destino que proporciona corresponde a una configuración de destino con [agregación del mejor esfuerzo](./destination-configuration.md#best-effort-aggregation) y `maxUsersPerRequest=1` en la política de agregación, la solicitud devuelve una plantilla de ejemplo similar a esta:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -102,7 +106,7 @@ Si el ID de destino que proporciona corresponde a una configuración de destino 
 }
 ```
 
-Si el ID de destino que proporciona corresponde a una plantilla de servidor de destino con [agregación configurable](./destination-configuration.md#configurable-aggregation) o [agregación de mejor esfuerzo](./destination-configuration.md#best-effort-aggregation) con `maxUsersPerRequest` buena que una, la solicitud devuelve una plantilla de ejemplo similar a esta:
+Si el ID de destino que proporciona corresponde a una plantilla de servidor de destino con [agregación configurable](./destination-configuration.md#configurable-aggregation) o [agregación del mejor esfuerzo](./destination-configuration.md#best-effort-aggregation) con `maxUsersPerRequest` bueno que uno, la solicitud devuelve una plantilla de ejemplo similar a esta:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -147,11 +151,11 @@ Antes de utilizar la plantilla para procesar perfiles que coincidan con el forma
 
 ![Vídeo que muestra cómo escapar caracteres de una plantilla mediante una herramienta de escape de caracteres en línea](./assets/escape-characters.gif)
 
-Puede utilizar una herramienta de escape de caracteres en línea. La demostración anterior utiliza el [formateador de escape JSON](https://jsonformatter.org/json-escape).
+Puede utilizar una herramienta de escape de caracteres en línea. La demostración anterior utiliza la variable [Formato de escape JSON](https://jsonformatter.org/json-escape).
 
 ## API de plantilla de procesamiento {#render-template-api}
 
-Después de crear una plantilla de transformación de mensaje con la [API de plantilla de ejemplo](./create-template.md#sample-template-api), puede [procesar la plantilla](./render-template-api.md) para generar los datos exportados en función de ella. Esto le permite comprobar si los perfiles que Adobe Experience Platform exportaría a su destino coinciden con el formato esperado de su destino.
+Después de crear una plantilla de transformación de mensaje con la variable [API de plantilla de ejemplo](./create-template.md#sample-template-api), puede [procesar la plantilla](./render-template-api.md) para generar datos exportados basados en él. Esto le permite comprobar si los perfiles que Adobe Experience Platform exportaría a su destino coinciden con el formato esperado de su destino.
 
 Consulte la referencia de la API para ver ejemplos de llamadas que puede realizar:
 
@@ -162,4 +166,4 @@ Edite la plantilla y realice llamadas al extremo API de plantilla de renderizaci
 
 ## Añada la plantilla con caracteres de escape a la configuración del servidor de destino
 
-Una vez que esté satisfecho con la plantilla de transformación de mensajes, agréguela a la [configuración del servidor de destino](./server-and-template-configuration.md), en `httpTemplate.requestBody.value`.
+Una vez que esté satisfecho con la plantilla de transformación de mensajes, agréguela a su [configuración del servidor de destino](./server-and-template-configuration.md), en `httpTemplate.requestBody.value`.

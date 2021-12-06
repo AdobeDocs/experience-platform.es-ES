@@ -2,9 +2,9 @@
 description: En esta página se enumeran y describen todas las operaciones de API que puede realizar con el extremo API `/authoring/testing/template/render` para procesar datos exportados para su destino, en función de la plantilla de transformación de mensajes.
 title: Operaciones de API de plantilla de procesamiento
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 5ecfd6e7f2f783d31642b7d81cc34b51eb0d6307
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,8 @@ Antes de continuar, revise la [guía de introducción](./getting-started.md) par
 ## Representar perfiles exportados basados en la plantilla de transformación de mensajes {#render-exported-data}
 
 Puede procesar perfiles exportados realizando una solicitud de POST al `authoring/testing/template/render` y proporcionando el ID de destino de la configuración de destino y la plantilla que ha creado utilizando la variable [punto final de la API de plantilla de ejemplo](./sample-template-api.md).
+
+Puede empezar utilizando una plantilla sencilla que exporta sus perfiles sin procesar sin aplicar ninguna transformación y luego pasar a una plantilla más compleja que aplique transformaciones a los perfiles. La sintaxis de la plantilla simple es: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
