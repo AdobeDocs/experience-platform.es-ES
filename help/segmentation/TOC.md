@@ -4,9 +4,9 @@ user-guide-title: Servicio de segmentación de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree segmentos y genere audiencias a partir de los datos del perfil del cliente en tiempo real.
 feature: Segments
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '163'
 ht-degree: 27%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 27%
    - [Segmentación de Edge](api/edge-segmentation.md)
    - [Exportar trabajos](api/export-jobs.md)
    - [Previsión y estimaciones](api/previews-and-estimates.md)
-   - [Planificador](api/schedules.md)
+   - [Programaciones](api/schedules.md)
    - [Definiciones de segmentos](api/segment-definitions.md)
    - [Trabajos de segmentos](api/segment-jobs.md)
    - [Búsqueda de segmentos](api/segment-search.md)
@@ -31,11 +31,13 @@ ht-degree: 27%
    - [Información general](ui/overview.md)
    - [Panel de segmentos](ui/segment-dashboard.md)
    - [Generador de segmentos](ui/segment-builder.md)
-   - [Coincidencia de segmentos](ui/segment-match.md)
    - [Segmentación de Edge](ui/edge-segmentation.md)
    - [Segmentación por transmisión](ui/streaming-segmentation.md)
    - [Segmentación por transmisión (vídeo)](video/streaming-segmentation-overview.md)
    - [Refactorización de restricciones de tiempo](ui/segment-refactoring.md)
+   - Coincidencia de segmentos {#segment-match}
+      - [Información general sobre la coincidencia de segmentos](ui/segment-match/overview.md)
+      - [Resolución de problemas](ui/segment-match/troubleshooting.md)
 - [Respeto del consentimiento](consents.md)
 - [Segmentación de varias entidades](multi-entity-segmentation.md)
 - Idioma de consulta de perfil {#pql}
