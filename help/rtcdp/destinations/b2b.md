@@ -2,9 +2,9 @@
 title: Destinos en Real-time Customer Data Platform B2B Edition
 description: Información general sobre la función de los destinos en Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 >Si no utiliza Real-time Customer Data Platform B2B Edition, consulte la [descripción general de los destinos](../../destinations/home.md) en su lugar.
 
 Los destinos de Experience Platform totalmente compatibles con CDP B2B Edition en tiempo real incluyen Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads y Google Ad Manager.
+
+Para comprender cómo se ajustan los destinos a su flujo de trabajo B2B, consulte la [tutorial completo](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
 Real-time Customer Data Platform B2B Edition le permite exportar sus datos B2B a través del conector de destino del Marketo Engage. Con el destino de Marketo Engage, puede insertar los segmentos creados en Adobe Experience Platform en Marketo, donde aparecerán como listas estáticas.
 

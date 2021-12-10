@@ -2,9 +2,9 @@
 title: Fuentes en Real-time Customer Data Platform B2B Edition
 description: Información general sobre la función de las fuentes en Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ Real-time Customer Data Platform B2B Edition le permite incorporar sus datos B2B
 >[!TIP]
 >
 >Aunque Real-time Customer Data Platform B2B Edition ofrece una amplia gama de fuentes externas desde las que introducir datos, no tiene tantas como las disponibles para Real-time Customer Data Platform. Para saber qué conectores de origen están disponibles para su organización, puede ver el catálogo de fuentes en la interfaz de usuario de Platform. Para acceder al catálogo, seleccione **Fuentes** en el panel de navegación izquierdo, seleccione **Catálogo**.
+
+Para comprender cómo se ajustan las fuentes a su flujo de trabajo B2B, consulte la [tutorial completo](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 Consulte la [información general sobre conectores de origen](../../sources/home.md) para obtener más información sobre los tipos de fuentes disponibles en Adobe Experience Platform.
 

@@ -2,10 +2,10 @@
 title: Grupo de campos de esquema de componentes de persona empresarial XDM
 description: Este documento proporciona una descripción general del grupo de campos de esquema de componentes de persona empresarial XDM.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 83329002a1fe51e49818a203191c7082f9589037
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 3%
+source-wordcount: '554'
+ht-degree: 2%
 
 ---
 
@@ -16,6 +16,15 @@ ht-degree: 3%
 Cuando se crea un perfil para una persona mediante [Perfil del cliente en tiempo real](../../../profile/home.md) en la edición B2B de CDP en tiempo real, la información utilizada para crear ese perfil puede provenir potencialmente de muchos registros de origen. Por ejemplo, si una persona trabaja para dos empresas diferentes, muchos sistemas CRM crearían una copia duplicada intencionalmente de esa persona, de modo que una copia esté vinculada a la Empresa A, mientras que la otra esté vinculada a la Empresa B. Al introducir esos datos en Adobe Experience Platform, este grupo de campos se utiliza para combinar esos diferentes registros de origen en una sola representación.
 
 El grupo de campos proporciona un nivel raíz `personComponents` , que es una matriz de objetos. Cada objeto de la matriz representa un registro de origen diferente.
+
+>[!IMPORTANT]
+>
+>Debe seguir los patrones de ingesta como se describe en la sección [documentación de fuentes](../../../rtcdp/sources/b2b.md). No se garantiza que funcionen otros métodos de asignación de campos.
+>
+>Por ejemplo, cada objeto de la variable `personComponents` la matriz se envía de forma individual durante los patrones de ingesta estándar y, a continuación, Platform la agrega a la matriz. Si se agrega manualmente una matriz de objetos al componente de persona comercial, se devolverá un error.
+>Debe utilizar la utilidad de generación automática al crear esquemas para los datos B2B. Consulte la documentación para obtener instrucciones sobre cómo utilizar la variable [Área de nombres B2B y utilidad de generación automática de esquemas](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Si no utiliza la utilidad de generación automática y desea asignar manualmente el modelo de datos, asegúrese de leer la documentación en [las clases del Modelo de datos de experiencia (XDM) de Real-time Customer Data Platform B2B Edition](../../../rtcdp/schemas/b2b.md) antes de asignar los datos.
+>
+>Consulte la [tutorial completo](../../../rtcdp/b2b-tutorial.md) para obtener información sobre los flujos de trabajo recomendados para datos B2B.
 
 ![](../../images/field-groups/business-person-components.png)
 
