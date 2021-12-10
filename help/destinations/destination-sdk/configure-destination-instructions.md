@@ -2,9 +2,9 @@
 description: En esta página se enumeran y describen los pasos para configurar un destino de flujo continuo mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino de flujo continuo
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
+source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 A continuación se muestra un ejemplo de configuración para una plantilla de destino creada mediante el uso de la variable `/destinations` extremo de API. Para obtener más información sobre esta plantilla, consulte [Configuración de destino](./destination-configuration.md).
 
 Para conectar el servidor y la configuración de plantilla en el paso 1 a esta configuración de destino, añada el ID de instancia del servidor y la configuración de plantilla como `destinationServerId` aquí.
+
+>[!IMPORTANT]
+>
+>Para crear un destino configurado correctamente, debe *must* agregar al menos una identidad de destino en `identityNamespaces`, como se muestra a continuación. Si no se configura ninguna identidad de destino, los usuarios no podrán continuar más allá del [Paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flujo de trabajo de activación.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
