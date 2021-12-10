@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
+source-git-commit: 1fa7663cc8bebca98f284593e98163315acda478
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,12 @@ Después de crear un segmento con la transmisión habilitada, puede ver los deta
 Específicamente, detalles sobre la variable **[!UICONTROL tamaño total de audiencia cualificada]** se muestran. La variable **[!UICONTROL Tamaño total de audiencia cualificada]** muestra el número total de audiencias cualificadas de la última ejecución de trabajo de segmento completada. Si un trabajo de segmento no se completó en las últimas 24 horas, el número de audiencias se tomará de una estimación en su lugar.
 
 Debajo hay un gráfico de líneas que muestra el número de segmentos calificados y descalificados en las últimas 24 horas. La lista desplegable se puede ajustar para mostrar las últimas 24 horas, la semana pasada o los últimos 30 días.
+
+>[!NOTE]
+>
+>Un segmento se considera cualificado si pasa de no tener estado a realizado o si pasa de salir a realizarse. Un segmento se considera no clasificado si pasa de realizarse a salir o de existente a salido.
+>
+>Encontrará más información sobre estos estados en la tabla de estado de la [información general sobre segmentación](./overview.md#browse).
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
