@@ -1,10 +1,11 @@
 ---
 title: Búsqueda de recursos en la API de Reactor
 description: Obtenga información sobre cómo buscar recursos en la API de Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+exl-id: cb594e60-3e24-457e-bfb3-78ec84d3e39a
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -20,13 +21,13 @@ El extremo `/search` de la API de Reactor le permite realizar consultas estructu
 
 Los siguientes ejemplos muestran algunos conceptos básicos para utilizar la funcionalidad de búsqueda de la API.
 
-### Buscar en varios campos
+### Búsqueda en varios campos
 
 Se puede realizar una búsqueda en varios campos utilizando caracteres comodín en el nombre del campo. Por ejemplo, para buscar en varios campos de atributos, utilice `attributes.*` como nombre de campo.
 
 ```json
 {
-  "data" : {
+  "data": {
     "query": {
       "attributes.*": {
         "value": "evar7"
@@ -38,7 +39,7 @@ Se puede realizar una búsqueda en varios campos utilizando caracteres comodín 
 
 >[!IMPORTANT]
 >
->Normalmente, los valores de búsqueda deben coincidir con el tipo de datos que se busca. Por ejemplo, un valor de consulta de `evar7` contra un campo entero fallaría. Al buscar en varios campos, el requisito de tipo de consulta se vuelve indulgente para evitar errores, pero puede producir resultados no deseados.
+>Normalmente, los valores de búsqueda deben coincidir con el tipo de datos que se busca. Por ejemplo, un valor de consulta de `evar7` frente a un campo entero daría error. Al buscar en varios campos, el requisito de tipo de consulta se vuelve indulgente para evitar errores, pero puede producir resultados no deseados.
 
 ### Consultas de ámbito a tipos de recursos específicos
 
@@ -46,7 +47,7 @@ Puede asignar un ámbito de búsqueda a un tipo de recurso específico suministr
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -68,7 +69,7 @@ La propiedad `sort` se puede utilizar para ordenar las respuestas. Por ejemplo, 
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -104,7 +105,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.name": {
               "value": "Adobe"
@@ -114,7 +115,7 @@ curl -X POST \
       }'
 ```
 
-### Cualquier recurso que haga referencia a &quot;evar7&quot;
+### Cualquier recurso que haga referencia a evar7
 
 ```shell
 curl -X POST \
@@ -125,7 +126,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.*": {
               "value": "evar7"
@@ -135,7 +136,7 @@ curl -X POST \
       }'
 ```
 
-### Elementos de datos de un tipo delegado de &quot;código personalizado&quot;
+### Elementos de datos de un tipo delegado de código personalizado
 
 ```shell
 curl -X POST \
@@ -146,7 +147,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.delegate_descriptor_id": {
               "value": "custom-code"
@@ -168,7 +169,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.settings": {
               "value": "myDataElement8"
@@ -190,7 +191,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "relationships.property.data.id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -201,7 +202,7 @@ curl -X POST \
       }'
 ```
 
-### Buscar un recurso por ID
+### Búsqueda de un recurso por ID
 
 ```shell
 curl -X POST \
@@ -212,7 +213,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -222,7 +223,7 @@ curl -X POST \
       }'
 ```
 
-### Realice una búsqueda utilizando la lógica de términos &quot;O&quot;
+### Realice una búsqueda utilizando la lógica de términos OR
 
 ```shell
 curl -X POST \
@@ -233,7 +234,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.display_name": {
               "value": "My Rule Holiday Sale",

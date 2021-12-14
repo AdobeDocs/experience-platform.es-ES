@@ -1,7 +1,8 @@
 ---
 title: Extensión de la capa de datos del cliente de Adobe
 description: Obtenga información acerca de la extensión de la etiqueta de capa de datos del cliente de Adobe en Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 100%

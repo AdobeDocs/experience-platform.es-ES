@@ -3,7 +3,7 @@ title: Seguimiento de eventos con el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo rastrear eventos del SDK web de Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;enviar señalización;documentUnloading;descarga de documento;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: ac167a205d2bc7e18d320bc1270da7e99bd05975
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 1%
@@ -92,8 +92,8 @@ alloy("sendEvent", {
       target: {
         "profile.gender": "female",
         "profile.age": 30,
-        "entity.id" : "123",
-        "entity.genre" : "Drama"
+        "entity.id": "123",
+        "entity.genre": "Drama"
       }
     }
   }
@@ -124,7 +124,7 @@ alloy("sendEvent", {
 });
 ```
 
-Alternativamente, la variable `eventType` se puede pasar al comando event usando la variable `type` . En segundo plano, esto se añade a los datos XDM. Tener `type` como opción le permite configurar más fácilmente la variable `eventType` sin tener que modificar la carga útil XDM.
+Alternativamente, la variable `eventType` se puede pasar al comando event usando la variable `type` . En segundo plano, esto se añade a los datos XDM. Tener `type` como una opción le permite configurar la variable `eventType` sin tener que modificar la carga útil XDM.
 
 
 ```javascript

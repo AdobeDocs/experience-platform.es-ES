@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: El perfil del cliente en tiempo real le permite crear una sola vista de clientes individuales dentro de Adobe Experience Platform recopilando datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para su procesamiento posterior.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: b47a52920f82a962ff044a0dacf9777b6eeae447
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 2%
@@ -14,33 +14,33 @@ ht-degree: 2%
 
 # Exportar extremo de trabajos
 
-[!DNL Real-time Customer Profile] le permite crear una sola vista de clientes individuales recopilando datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para su procesamiento posterior. Por ejemplo, los segmentos de audiencia de datos [!DNL Profile] se pueden exportar para su activación y los atributos de perfil se pueden exportar para la creación de informes.
+[!DNL Real-time Customer Profile] le permite crear una sola vista de clientes individuales recopilando datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para su procesamiento posterior. Por ejemplo, segmentos de audiencia de [!DNL Profile] los datos se pueden exportar para su activación y los atributos de perfil se pueden exportar para la creación de informes.
 
 Este documento proporciona instrucciones paso a paso para la creación y administración de trabajos de exportación mediante la [API de perfil](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >
->Esta guía cubre el uso de trabajos de exportación en [!DNL Profile API]. Para obtener información sobre cómo administrar los trabajos de exportación para el servicio de segmentación de Adobe Experience Platform, consulte la guía sobre [exportar trabajos en la API de segmentación](../../profile/api/export-jobs.md).
+>Esta guía cubre el uso de trabajos de exportación en la variable [!DNL Profile API]. Para obtener información sobre cómo administrar los trabajos de exportación para el servicio de segmentación de Adobe Experience Platform, consulte la guía de [exportar trabajos en la API de segmentación](../../profile/api/export-jobs.md).
 
-Además de crear un trabajo de exportación, también puede acceder a los datos [!DNL Profile] utilizando el extremo `/entities`, también conocido como &quot;[!DNL Profile Access]&quot;. Consulte la [guía de extremo de entidades](./entities.md) para obtener más información. Para ver los pasos sobre cómo acceder a los datos [!DNL Profile] mediante la interfaz de usuario, consulte la [guía del usuario](../ui/user-guide.md).
+Además de crear un trabajo de exportación, también puede acceder a [!DNL Profile] los datos que utilizan la variable `/entities` punto final, también conocido como &quot;[!DNL Profile Access]&quot;. Consulte la [guía de extremo de entidades](./entities.md) para obtener más información. Para ver los pasos sobre cómo acceder a [!DNL Profile] datos mediante la interfaz de usuario, consulte [guía del usuario](../ui/user-guide.md).
 
 ## Primeros pasos
 
-Los extremos de API utilizados en esta guía forman parte de la API [!DNL Real-time Customer Profile]. Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
+Los extremos de API que se utilizan en esta guía forman parte del [!DNL Real-time Customer Profile] API. Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
 
 ## Creación de un trabajo de exportación
 
-La exportación de datos [!DNL Profile] requiere primero la creación de un conjunto de datos en el que se exportan los datos y, a continuación, el inicio de un nuevo trabajo de exportación. Estos dos pasos se pueden lograr mediante las API de Experience Platform, mientras que el primero utiliza la API de servicio de catálogo y el segundo utiliza la API de perfil de cliente en tiempo real. Las instrucciones detalladas para completar cada paso se describen en las secciones siguientes.
+Exportación [!DNL Profile] Los datos de primero requieren la creación de un conjunto de datos en el que se exportan los datos y, a continuación, el inicio de un nuevo trabajo de exportación. Estos dos pasos se pueden lograr mediante las API de Experience Platform, mientras que el primero utiliza la API de servicio de catálogo y el segundo utiliza la API de perfil de cliente en tiempo real. Las instrucciones detalladas para completar cada paso se describen en las secciones siguientes.
 
 ### Creación de un conjunto de datos de destino
 
-Al exportar datos [!DNL Profile], primero debe crearse un conjunto de datos de destino. Es importante que el conjunto de datos esté configurado correctamente para garantizar que la exportación se realice correctamente.
+Al exportar [!DNL Profile] , primero se debe crear un conjunto de datos de destino. Es importante que el conjunto de datos esté configurado correctamente para garantizar que la exportación se realice correctamente.
 
-Una de las consideraciones clave es el esquema en el que se basa el conjunto de datos (`schemaRef.id` en la solicitud de muestra de API que aparece a continuación). Para exportar datos de perfil, el conjunto de datos debe basarse en el [!DNL XDM Individual Profile] Esquema de unión (`https://ns.adobe.com/xdm/context/profile__union`). Un esquema de unión es un esquema de solo lectura generado por el sistema que agrega los campos de esquemas que comparten la misma clase. En este caso, es la clase [!DNL XDM Individual Profile]. Para obtener más información sobre los esquemas de vista de unión, consulte la sección [unión en la guía de composición de esquema](../../xdm/schema/composition.md#union).
+Una de las consideraciones clave es el esquema en el que se basa el conjunto de datos (`schemaRef.id` en la solicitud de muestra de API que aparece a continuación). Para exportar datos de perfil, el conjunto de datos debe basarse en la variable [!DNL XDM Individual Profile] Esquema de unión (`https://ns.adobe.com/xdm/context/profile__union`). Un esquema de unión es un esquema de solo lectura generado por el sistema que agrega los campos de esquemas que comparten la misma clase. En este caso, es decir, la variable [!DNL XDM Individual Profile] Clase . Para obtener más información sobre los esquemas de vista de unión, consulte la [sección unión en la guía de composición de esquemas básicos](../../xdm/schema/composition.md#union).
 
-Los pasos siguientes en este tutorial describen cómo crear un conjunto de datos que haga referencia al esquema de unión [!DNL XDM Individual Profile] mediante la API [!DNL Catalog]. También puede utilizar la interfaz de usuario [!DNL Platform] para crear un conjunto de datos que haga referencia al esquema de unión. Los pasos para utilizar la interfaz de usuario se describen en [este tutorial de interfaz de usuario para exportar segmentos](../../segmentation/tutorials/create-dataset-export-segment.md), pero también se pueden aplicar aquí. Una vez completado, puede volver a este tutorial para continuar con los pasos para [iniciar un nuevo trabajo de exportación](#initiate).
+Los pasos que siguen en este tutorial describen cómo crear un conjunto de datos que haga referencia a la variable [!DNL XDM Individual Profile] Esquema de unión que utiliza la variable [!DNL Catalog] API. También puede usar la variable [!DNL Platform] interfaz de usuario para crear un conjunto de datos que haga referencia al esquema de unión. Los pasos para utilizar la interfaz de usuario se describen en [este tutorial de interfaz de usuario para exportar segmentos](../../segmentation/tutorials/create-dataset-export-segment.md) pero también son aplicables aquí. Una vez completado, puede volver a este tutorial para continuar con los pasos de [inicio de un nuevo trabajo de exportación](#initiate).
 
-Si ya tiene un conjunto de datos compatible y conoce su ID, puede continuar directamente con el paso para [iniciar un nuevo trabajo de exportación](#initiate).
+Si ya tiene un conjunto de datos compatible y conoce su ID, puede continuar directamente con el paso para [inicio de un nuevo trabajo de exportación](#initiate).
 
 **Formato de API**
 
@@ -86,7 +86,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID único de solo lec
 
 ### Iniciar trabajo de exportación {#initiate}
 
-Una vez que tenga un conjunto de datos que mantenga la unión, puede crear un trabajo de exportación para mantener los datos de perfil en el conjunto de datos realizando una solicitud de POST al extremo `/export/jobs` en la API de perfil del cliente en tiempo real y proporcionando los detalles de los datos que desea exportar en el cuerpo de la solicitud.
+Una vez que tenga un conjunto de datos que persista en la unión, puede crear un trabajo de exportación para mantener los datos de perfil en el conjunto de datos realizando una solicitud de POST al `/export/jobs` en la API del perfil del cliente en tiempo real y proporcionando los detalles de los datos que desea exportar en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -112,7 +112,7 @@ curl -X POST \
       "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
       "version": 1
     },
-    "additionalFields" : {
+    "additionalFields": {
       "eventList": {
         "fields": "environment.browserDetails.name,environment.browserDetails.version",
         "filter": {
@@ -137,8 +137,8 @@ curl -X POST \
 | `mergePolicy.id` | El ID de la directiva de combinación. |
 | `mergePolicy.version` | Versión específica de la directiva de combinación que se va a utilizar. Si se omite este valor, se pasará de forma predeterminada a la versión más reciente. |
 | `additionalFields.eventList` | *(Opcional)* Controla los campos de evento de serie temporal exportados para objetos secundarios o asociados proporcionando una o más de las siguientes configuraciones:<ul><li>`eventList.fields`: Controle los campos que desea exportar.</li><li>`eventList.filter`: Especifica criterios que limitan los resultados incluidos de objetos asociados. Espera un valor mínimo necesario para la exportación, normalmente una fecha.</li><li>`eventList.filter.fromIngestTimestamp`: Filtra los eventos de series temporales a los que se han introducido después de la marca de tiempo proporcionada. No es la hora del evento en sí, sino la hora de ingesta de los eventos.</li></ul> |
-| `destination` | **(Obligatorio)** Información de destino de los datos exportados:<ul><li>`destination.datasetId`:  **(Obligatorio)** El ID del conjunto de datos donde se exportan los datos.</li><li>`destination.segmentPerBatch`:  *(Opcional)* Un valor booleano que, si no se proporciona, toma el valor predeterminado  `false`. Un valor de `false` exporta todos los ID de segmento en un único ID de lote. Un valor de `true` exporta un ID de segmento en un ID de lote. Tenga en cuenta que establecer el valor en `true` puede afectar al rendimiento de la exportación por lotes.</li></ul> |
-| `schema.name` | **(Obligatorio)** El nombre del esquema asociado con el conjunto de datos donde se exportan los datos. |
+| `destination` | **(Obligatorio)** Información de destino de los datos exportados:<ul><li>`destination.datasetId`: **(Obligatorio)** ID del conjunto de datos donde se exportan los datos.</li><li>`destination.segmentPerBatch`: *(Opcional)* Un valor booleano que, si no se proporciona, toma el valor predeterminado `false`. Un valor de `false` exporta todos los ID de segmento en un único ID de lote. Un valor de `true` exporta un ID de segmento en un ID de lote. Tenga en cuenta que configurar el valor para que sea `true` puede afectar al rendimiento de la exportación por lotes.</li></ul> |
+| `schema.name` | **(Obligatorio)** Nombre del esquema asociado con el conjunto de datos donde se exportan los datos. |
 
 >[!NOTE]
 >
@@ -169,7 +169,7 @@ Una respuesta correcta devuelve un conjunto de datos rellenado con datos de perf
         }
     },
     "destination": {
-      "dataSetId" : "5cf6bcf79ecc7c14530fe436",
+      "dataSetId": "5cf6bcf79ecc7c14530fe436",
       "segmentPerBatch": false,
       "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
@@ -181,7 +181,7 @@ Una respuesta correcta devuelve un conjunto de datos rellenado con datos de perf
 
 ## Enumerar todos los trabajos de exportación
 
-Puede devolver una lista de todos los trabajos de exportación para una organización de IMS en particular realizando una solicitud de GET al extremo `export/jobs` . La solicitud también admite los parámetros de consulta `limit` y `offset`, como se muestra a continuación.
+Puede devolver una lista de todos los trabajos de exportación de una organización de IMS en particular realizando una solicitud de GET a la `export/jobs` punto final. La solicitud también admite los parámetros de consulta `limit` y `offset`, como se muestra a continuación.
 
 **Formato de API**
 
@@ -195,7 +195,7 @@ GET /export/jobs?{QUERY_PARAMETERS}
 | `start` | Desplazar la página de resultados devueltos, según la hora de creación de la solicitud. Ejemplo: `start=4` |
 | `limit` | Limite el número de resultados devueltos. Ejemplo: `limit=10` |
 | `page` | Devolver una página específica de resultados, según la hora de creación de la solicitud. Ejemplo: `page=2` |
-| `sort` | Ordene los resultados por un campo específico en orden ascendente ( **`asc`** ) o descendente ( **`desc`** ). El parámetro de ordenación no funciona cuando se devuelven varias páginas de resultados. Ejemplo: `sort=updateTime:asc` |
+| `sort` | Ordenar los resultados por un campo específico en orden ascendente ( **`asc`** ) o descendente ( **`desc`** ). El parámetro de ordenación no funciona cuando se devuelven varias páginas de resultados. Ejemplo: `sort=updateTime:asc` |
 
 **Solicitud**
 
@@ -210,7 +210,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye un objeto `records` que contiene los trabajos de exportación creados por su organización IMS.
+La respuesta incluye un `records` que contiene los trabajos de exportación creados por su organización de IMS.
 
 ```json
 {
@@ -327,7 +327,7 @@ La respuesta incluye un objeto `records` que contiene los trabajos de exportaci�
 
 ## Monitorización del progreso de exportación
 
-Para ver los detalles de un trabajo de exportación específico o monitorizar su estado a medida que se procesa, puede realizar una solicitud de GET al extremo `/export/jobs` e incluir el `id` del trabajo de exportación en la ruta. El trabajo de exportación se completa una vez que el campo `status` devuelve el valor &quot;SUCCEEDED&quot;.
+Para ver los detalles de un trabajo de exportación específico o monitorizar su estado a medida que se procesa, puede realizar una solicitud de GET al `/export/jobs` e incluya la variable `id` del trabajo de exportación en la ruta. El trabajo de exportación se completa una vez finalizado el `status` devuelve el valor &quot;SUCCEEDED&quot;.
 
 **Formato de API**
 
@@ -337,7 +337,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | Parámetro | Descripción |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | El `id` del trabajo de exportación al que desea acceder. |
+| `{EXPORT_JOB_ID}` | La variable `id` del trabajo de exportación al que desea acceder. |
 
 **Solicitud**
 
@@ -388,7 +388,7 @@ curl -X GET \
       }
     },
     "destination": {
-      "dataSetId" : "5cf6bcf79ecc7c14530fe436",
+      "dataSetId": "5cf6bcf79ecc7c14530fe436",
       "segmentPerBatch": false,
       "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
@@ -404,7 +404,7 @@ curl -X GET \
 
 ## Cancelar un trabajo de exportación
 
-Experience Platform le permite cancelar un trabajo de exportación existente, lo que puede resultar útil por varios motivos, incluido si el trabajo de exportación no se completó o se quedó estancado en la fase de procesamiento. Para cancelar un trabajo de exportación, puede realizar una solicitud de DELETE al extremo `/export/jobs` e incluir el `id` del trabajo de exportación que desea cancelar en la ruta de solicitud.
+Experience Platform le permite cancelar un trabajo de exportación existente, lo que puede resultar útil por varios motivos, incluido si el trabajo de exportación no se completó o se quedó estancado en la fase de procesamiento. Para cancelar un trabajo de exportación, puede realizar una solicitud de DELETE al `/export/jobs` e incluya la variable `id` del trabajo de exportación que desea cancelar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -414,7 +414,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | Parámetro | Descripción |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | El `id` del trabajo de exportación al que desea acceder. |
+| `{EXPORT_JOB_ID}` | La variable `id` del trabajo de exportación al que desea acceder. |
 
 **Solicitud**
 
@@ -433,13 +433,13 @@ Una solicitud de eliminación correcta devuelve el estado HTTP 204 (sin contenid
 
 ## Pasos siguientes
 
-Una vez finalizada correctamente la exportación, los datos están disponibles en el Experience Platform Data Lake . A continuación, puede utilizar la [API de acceso a datos](https://www.adobe.io/experience-platform-apis/references/data-access/) para acceder a los datos mediante la `batchId` asociada a la exportación. Según el tamaño de la exportación, los datos pueden estar en trozos y el lote puede constar de varios archivos.
+Una vez finalizada correctamente la exportación, los datos están disponibles en el Experience Platform Data Lake . A continuación, puede usar la variable [API de acceso a datos](https://www.adobe.io/experience-platform-apis/references/data-access/) para acceder a los datos mediante la variable `batchId` asociado a la exportación. Según el tamaño de la exportación, los datos pueden estar en trozos y el lote puede constar de varios archivos.
 
-Para obtener instrucciones paso a paso sobre cómo utilizar la API de acceso a datos para acceder y descargar archivos por lotes, siga el [Tutorial de acceso a datos](../../data-access/tutorials/dataset-data.md).
+Para obtener instrucciones paso a paso sobre cómo utilizar la API de acceso a datos para acceder y descargar archivos por lotes, siga las instrucciones de [Tutorial de acceso a datos](../../data-access/tutorials/dataset-data.md).
 
 También puede acceder a los datos del perfil del cliente en tiempo real exportados correctamente mediante el servicio de consulta de Adobe Experience Platform. Con la interfaz de usuario o la API de RESTful, el servicio de consulta le permite escribir, validar y ejecutar consultas sobre datos dentro del lago de datos.
 
-Para obtener más información sobre cómo consultar los datos de audiencia, consulte la [documentación del servicio de consulta](../../query-service/home.md).
+Para obtener más información sobre cómo consultar los datos de audiencia, consulte la [Documentación del servicio de consultas](../../query-service/home.md).
 
 ## Apéndice
 
@@ -447,7 +447,7 @@ La siguiente sección contiene información adicional sobre los trabajos de expo
 
 ### Ejemplos de carga útil de exportación adicionales
 
-La llamada de API de ejemplo que se muestra en la sección [inicio de un trabajo de exportación](#initiate) crea un trabajo que contiene datos de perfil (registro) y de evento (serie temporal). En esta sección se proporcionan ejemplos de carga útil de solicitud adicionales para limitar la exportación a fin de que contenga un tipo de datos o el otro.
+Llamada de API de ejemplo que se muestra en la sección de [inicio de un trabajo de exportación](#initiate) crea un trabajo que contiene datos de perfil (registro) y de evento (serie temporal). En esta sección se proporcionan ejemplos de carga útil de solicitud adicionales para limitar la exportación a fin de que contenga un tipo de datos o el otro.
 
 La siguiente carga útil crea un trabajo de exportación que solo contiene datos de perfil (sin eventos):
 
@@ -477,7 +477,7 @@ Para crear un trabajo de exportación que solo contenga datos de evento (sin atr
       "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
       "version": 1
     },
-    "additionalFields" : {
+    "additionalFields": {
       "eventList": {
         "fields": "environment.browserDetails.name,environment.browserDetails.version",
         "filter": {
@@ -497,4 +497,4 @@ Para crear un trabajo de exportación que solo contenga datos de evento (sin atr
 
 ### Exportación de segmentos
 
-También puede usar el extremo exportar trabajos para exportar segmentos de audiencia en lugar de datos de [!DNL Profile]. Consulte la guía sobre [trabajos de exportación en la API de segmentación](../../segmentation/api/export-jobs.md) para obtener más información.
+También puede usar el extremo exportar trabajos para exportar segmentos de audiencia en lugar de [!DNL Profile] datos. Consulte la guía de [exportar trabajos en la API de segmentación](../../segmentation/api/export-jobs.md) para obtener más información.

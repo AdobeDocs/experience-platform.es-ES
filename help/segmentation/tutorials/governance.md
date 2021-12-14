@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial trata los pasos para aplicar el cumplimiento de los estándares de uso de datos para segmentos de audiencia del perfil del cliente en tiempo real que utilizan API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%
@@ -168,7 +168,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación.
     "attributeMerge": {
         "type":"dataSetPrecedence", 
         "data": {
-            "order" : ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
+            "order": ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
         }
     },
     "default": false,
@@ -201,7 +201,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing asociada con la política de uso de datos por la que está evaluando los conjuntos de datos. Dependiendo de si la directiva fue definida por Adobe o por su organización, debe usar `/marketingActions/core` o `/marketingActions/custom`, respectivamente. |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing asociada con la política de uso de datos por la que está evaluando los conjuntos de datos. Según si la directiva fue definida por Adobe o por su organización, debe usar `/marketingActions/core` o `/marketingActions/custom`, respectivamente. |
 
 **Solicitud**
 

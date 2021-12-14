@@ -1,7 +1,8 @@
 ---
 title: Notas de la versión de la extensión de capa de datos del cliente de Adobe
 description: Últimas notas de la versión de la extensión de capa de datos del cliente de Adobe en Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+exl-id: 8fa3a210-6c85-4162-84cf-15c6e3cfcb9e
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 100%

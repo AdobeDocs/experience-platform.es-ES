@@ -4,18 +4,18 @@ title: Tipo de datos de consentimientos y preferencias
 description: El tipo de datos Consent for Privacy, Personalization and Marketing Preferences está diseñado para admitir la recopilación de permisos y preferencias de cliente generados por las plataformas de administración de consentimiento (CMP) y otras fuentes a partir de sus operaciones de datos.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: da6131494d80dbd2bbd4496876f044f5026b0e12
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Tipo de datos ] Consentimientos y preferencias
+# [!UICONTROL Consentimientos y preferencias] tipo de datos
 
-El tipo de datos [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] (denominado en adelante el tipo de datos &quot;[!UICONTROL Consents and Preferences]&quot;) es un tipo de datos [!DNL Experience Data Model] (XDM) diseñado para admitir la recopilación de permisos y preferencias de cliente generados por las plataformas de administración de consentimiento (CMP) y otras fuentes de sus operaciones de datos.
+La variable [!UICONTROL Consentimiento para las preferencias de privacidad, personalización y marketing] tipo de datos (en lo sucesivo denominado &quot;el[!UICONTROL Consentimientos y preferencias] tipo de datos&quot;) es un [!DNL Experience Data Model] (XDM) tipo de datos diseñado para admitir la recopilación de permisos y preferencias de cliente generados por las plataformas de administración de consentimiento (CMP) y otras fuentes de sus operaciones de datos.
 
-Este documento cubre la estructura y el uso previsto de los campos proporcionados por el tipo de datos [!UICONTROL Consents and Preferences].
+Este documento cubre la estructura y el uso previsto de los campos proporcionados por la [!UICONTROL Consentimientos y preferencias] tipo de datos.
 
 ## Requisitos previos {#prerequisites}
 
@@ -28,16 +28,16 @@ Este documento requiere una comprensión práctica de XDM y el uso de los esquem
 
 >[!IMPORTANT]
 >
->El tipo de datos [!UICONTROL Consents and Preferences] está diseñado para cubrir una serie de casos de uso de administración de preferencias y consentimiento. Como resultado, este documento describe el uso de los campos del tipo de datos en términos generales y solo realiza sugerencias sobre cómo debe interpretar el uso de estos campos. Consulte con su equipo legal de privacidad para alinear la estructura del tipo de datos con la forma en que su organización interpreta y presenta estas elecciones de consentimiento y preferencias a sus clientes.
+>La variable [!UICONTROL Consentimientos y preferencias] el tipo de datos está diseñado para cubrir una amplia gama de casos de uso de administración de preferencias y consentimiento. Como resultado, este documento describe el uso de los campos del tipo de datos en términos generales y solo realiza sugerencias sobre cómo debe interpretar el uso de estos campos. Consulte con su equipo legal de privacidad para alinear la estructura del tipo de datos con la forma en que su organización interpreta y presenta estas elecciones de consentimiento y preferencias a sus clientes.
 
-El tipo de datos [!UICONTROL Consents and Preferences] proporciona varios campos utilizados para capturar la información **permission** y **priority**.
+La variable [!UICONTROL Consentimientos y preferencias] el tipo de datos proporciona varios campos utilizados para capturar **permission** y **preferencias** información.
 
 Un consentimiento es una opción que permite a un cliente especificar cómo se pueden utilizar sus datos. La mayoría de los consentimientos tienen un aspecto jurídico, ya que algunas jurisdicciones requieren la obtención de permiso antes de poder utilizar los datos de una manera determinada o requieren que el cliente tenga la opción de detener ese uso (exclusión) si no se requiere consentimiento afirmativo.
 
 Una preferencia es una opción que permite al cliente especificar cómo se deben gestionar los distintos aspectos de su experiencia con una marca. Se dividen en dos categorías:
 
-* **Preferencias** de personalización: Preferencias sobre cómo la marca debe personalizar las experiencias entregadas a un cliente.
-* **Preferencias** de marketing: Preferencias sobre si una marca puede ponerse en contacto con un cliente a través de varios canales.
+* **Preferencias de personalización**: Preferencias sobre cómo la marca debe personalizar las experiencias entregadas a un cliente.
+* **Preferencias de marketing**: Preferencias sobre si una marca puede ponerse en contacto con un cliente a través de varios canales.
 
 La siguiente captura de pantalla muestra cómo se representa la estructura del tipo de datos en la interfaz de usuario de Platform:
 
@@ -45,9 +45,9 @@ La siguiente captura de pantalla muestra cómo se representa la estructura del t
 
 >[!TIP]
 >
->Consulte la guía de [Exploración de recursos XDM](../ui/explore.md) para ver los pasos sobre cómo buscar cualquier recurso XDM e inspeccionar su estructura en la interfaz de usuario de Platform.
+>Consulte la guía de [exploración de recursos XDM](../ui/explore.md) a para ver los pasos sobre cómo buscar cualquier recurso XDM e inspeccionar su estructura en la interfaz de usuario de Platform.
 
-El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UICONTROL Consentimientos y preferencias] puede procesar. En las secciones que siguen se proporciona información sobre el uso específico de cada uno de estos campos.
+El siguiente JSON muestra un ejemplo del tipo de datos que el [!UICONTROL Consentimientos y preferencias] el tipo de datos puede procesarse. En las secciones que siguen se proporciona información sobre el uso específico de cada uno de estos campos.
 
 ```json
 {
@@ -131,14 +131,14 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 `collect` representa el consentimiento del cliente para que se recopilen sus datos.
 
 ```json
-"collect" : {
+"collect": {
   "val": "y"
 }
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `val` | La opción de consentimiento proporcionada por el cliente para este caso de uso. Consulte el [apéndice](#choice-values) para conocer los valores y definiciones aceptados. |
+| `val` | La opción de consentimiento proporcionada por el cliente para este caso de uso. Consulte la [apéndice](#choice-values) para valores y definiciones aceptados. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -147,14 +147,14 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 `adID` representa el consentimiento del cliente para saber si se puede usar un ID de anunciante (IDFA o GAID) para vincular al cliente entre aplicaciones en este dispositivo.
 
 ```json
-"adID" : {
+"adID": {
   "val": "y"
 }
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `val` | La opción de consentimiento proporcionada por el cliente para este caso de uso. Consulte el [apéndice](#choice-values) para conocer los valores y definiciones aceptados. |
+| `val` | La opción de consentimiento proporcionada por el cliente para este caso de uso. Consulte la [apéndice](#choice-values) para valores y definiciones aceptados. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -163,14 +163,14 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 `share` representa el consentimiento del cliente para saber si sus datos se pueden compartir con (o vender a) terceros.
 
 ```json
-"share" : {
+"share": {
   "val": "y"
 }
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `val` | La opción de consentimiento proporcionada por el cliente para este caso de uso. Consulte el [apéndice](#choice-values) para conocer los valores y definiciones aceptados. |
+| `val` | La opción de consentimiento proporcionada por el cliente para este caso de uso. Consulte la [apéndice](#choice-values) para valores y definiciones aceptados. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -182,7 +182,7 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 >
 >`personalize` no cubre casos de uso de marketing. Por ejemplo, si un cliente decide excluirse de la personalización para todos los canales, no debería dejar de recibir comunicaciones a través de esos canales. En su lugar, los mensajes que reciben deben ser genéricos y no estar basados en su perfil.
 >
->Por el mismo ejemplo, si un cliente decide excluirse del marketing directo para todos los canales (a través de `marketing`, explicado en la [siguiente sección](#marketing)), entonces ese cliente no debería recibir ningún mensaje, aunque la personalización esté permitida.
+>Por el mismo ejemplo, si un cliente decide excluirse del marketing directo para todos los canales (a través de `marketing`, tal y como se explica en la sección [sección siguiente](#marketing)), el cliente no debe recibir ningún mensaje, aunque la personalización esté permitida.
 
 ```json
 "personalize": {
@@ -195,7 +195,7 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 | Propiedad | Descripción |
 | --- | --- |
 | `content` | Representa las preferencias del cliente para el contenido personalizado en el sitio web o la aplicación. |
-| `val` | La preferencia de personalización proporcionada por el cliente para el caso de uso especificado. En los casos en los que no sea necesario pedir al cliente que dé su consentimiento, el valor de este campo debe indicar la base sobre la que debe realizarse la personalización. Consulte el [apéndice](#choice-values) para conocer los valores y definiciones aceptados. |
+| `val` | La preferencia de personalización proporcionada por el cliente para el caso de uso especificado. En los casos en los que no sea necesario pedir al cliente que dé su consentimiento, el valor de este campo debe indicar la base sobre la que debe realizarse la personalización. Consulte la [apéndice](#choice-values) para valores y definiciones aceptados. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -224,13 +224,13 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 
 | Propiedad | Descripción |
 | --- | --- |
-| `preferred` | Indica el canal preferido del cliente para recibir comunicaciones. Consulte el [apéndice](#preferred-values) para conocer los valores aceptados. |
-| `any` | Representa las preferencias del cliente para el marketing directo en su conjunto. La preferencia de consentimiento proporcionada en este campo se considera la preferencia &quot;predeterminada&quot; para cualquier canal de marketing, a menos que se sobrescriba por los subcampos adicionales proporcionados en `marketing`. Si planea utilizar opciones de consentimiento más granulares, se recomienda excluir este campo.<br><br>Si el valor se establece en  `n`, se debe ignorar toda configuración de personalización más específica. Si el valor se establece en `y`, todas las opciones de personalización más específicas también deben tratarse como `y`, a menos que se configuren explícitamente en `n`. Si el valor no está establecido, se deben respetar los valores de cada opción de personalización según se especifique. |
+| `preferred` | Indica el canal preferido del cliente para recibir comunicaciones. Consulte la [apéndice](#preferred-values) para valores aceptados. |
+| `any` | Representa las preferencias del cliente para el marketing directo en su conjunto. La preferencia de consentimiento proporcionada en este campo se considera la preferencia &quot;predeterminada&quot; para cualquier canal de marketing, a menos que se sobrescriba por los subcampos adicionales proporcionados en `marketing`. Si planea utilizar opciones de consentimiento más granulares, se recomienda excluir este campo.<br><br>Si el valor está establecido en `n`, se deben ignorar todos los ajustes de personalización más específicos. Si el valor está establecido en `y`, todas las opciones de personalización más específicas también deben tratarse como `y`, a menos que se establezca explícitamente en `n`. Si el valor no está establecido, se deben respetar los valores de cada opción de personalización según se especifique. |
 | `email` | Indica si el cliente acepta recibir mensajes de correo electrónico. |
 | `push` | Indica si el cliente permite recibir notificaciones push. |
 | `sms` | Indica si el cliente acepta recibir mensajes de texto. |
-| `val` | La preferencia proporcionada por el cliente para el caso de uso especificado. En los casos en los que no sea necesario pedir al cliente que dé su consentimiento, el valor de este campo debe indicar la base sobre la que se debe llevar a cabo el caso de uso de marketing. Consulte el [apéndice](#choice-values) para conocer los valores y definiciones aceptados. |
-| `time` | Marca de fecha y hora ISO 8601 del momento en que se cambió la preferencia de marketing, si corresponde. Tenga en cuenta que si la marca de tiempo de cualquier preferencia individual es la misma que la proporcionada en `metadata`, este campo no se debe configurar para esa preferencia. |
+| `val` | La preferencia proporcionada por el cliente para el caso de uso especificado. En los casos en los que no sea necesario pedir al cliente que dé su consentimiento, el valor de este campo debe indicar la base sobre la que se debe llevar a cabo el caso de uso de marketing. Consulte la [apéndice](#choice-values) para valores y definiciones aceptados. |
+| `time` | Marca de fecha y hora ISO 8601 del momento en que se cambió la preferencia de marketing, si corresponde. Tenga en cuenta que si la marca de tiempo de cualquier preferencia individual es la misma que la proporcionada en `metadata`, este campo no se debe definir para esa preferencia. |
 | `reason` | Cuando un cliente se excluye de un caso de uso de marketing, este campo de cadena representa el motivo por el que el cliente se excluyó. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -247,21 +247,21 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 
 | Propiedad | Descripción |
 | --- | --- |
-| `time` | Marca de tiempo ISO 8601 para la última vez que se actualizaron los consentimientos y preferencias del cliente. Este campo se puede utilizar en lugar de aplicar marcas de tiempo a las preferencias individuales para reducir la carga y la complejidad. Si se proporciona un valor `time` en una preferencia individual, se anula la marca de tiempo `metadata` de esa preferencia en particular. |
+| `time` | Marca de tiempo ISO 8601 para la última vez que se actualizaron los consentimientos y preferencias del cliente. Este campo se puede utilizar en lugar de aplicar marcas de tiempo a las preferencias individuales para reducir la carga y la complejidad. Proporcionar un `time` bajo una preferencia individual anula la `metadata` marca de tiempo para esa preferencia en particular. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Ingesta de datos mediante el tipo de datos {#ingest}
 
-Para utilizar el tipo de datos [!UICONTROL Consents and Preferences] para introducir datos de consentimiento de los clientes, debe crear un conjunto de datos basado en un esquema que contenga ese tipo de datos.
+Para usar la variable [!UICONTROL Consentimientos y preferencias] tipo de datos para introducir datos de consentimiento de sus clientes, debe crear un conjunto de datos basado en un esquema que contenga ese tipo de datos.
 
-Consulte el tutorial sobre la [creación de un esquema en la interfaz de usuario](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para ver los pasos sobre cómo asignar tipos de datos a los campos. Una vez creado un esquema que contiene un campo con el tipo de datos [!UICONTROL Consentimientos y preferencias] , consulte la sección sobre [creación de un conjunto de datos](../../catalog/datasets/user-guide.md#create) en la guía del usuario del conjunto de datos, siguiendo los pasos para crear un conjunto de datos con un esquema existente.
+Consulte el tutorial en [creación de un esquema en la interfaz de usuario](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para ver los pasos sobre cómo asignar tipos de datos a campos. Una vez que haya creado un esquema que contenga un campo con la variable [!UICONTROL Consentimientos y preferencias] tipo de datos, consulte la sección sobre [creación de un conjunto de datos](../../catalog/datasets/user-guide.md#create) en la guía del usuario del conjunto de datos, siga los pasos para crear un conjunto de datos con un esquema existente.
 
 >[!IMPORTANT]
 >
->Si desea enviar datos de consentimiento a [!DNL Real-time Customer Profile], es necesario crear un esquema habilitado para [!DNL Profile] basado en la clase [!DNL XDM Individual Profile] que contiene el tipo de datos [!UICONTROL Consentimientos y preferencias]. El conjunto de datos que cree en función de ese esquema también debe estar habilitado para [!DNL Profile]. Consulte los tutoriales vinculados anteriormente para ver los pasos específicos relacionados con los requisitos [!DNL Real-time Customer Profile] para esquemas y conjuntos de datos.
+>Si desea enviar datos de consentimiento a [!DNL Real-time Customer Profile], es necesario que cree un [!DNL Profile]esquema habilitado según el [!DNL XDM Individual Profile] clase que contiene el [!UICONTROL Consentimientos y preferencias] tipo de datos. El conjunto de datos que cree en función de ese esquema también debe estar habilitado para [!DNL Profile]. Consulte los tutoriales vinculados anteriormente para ver los pasos específicos relacionados con [!DNL Real-time Customer Profile] requisitos para esquemas y conjuntos de datos.
 >
->Además, también debe asegurarse de que las políticas de combinación estén configuradas para priorizar los conjuntos de datos que contienen los datos de consentimiento y preferencias más recientes, a fin de que los perfiles de clientes se actualicen correctamente. Consulte la descripción general de [merge policy](../../rtcdp/profile/merge-policies.md) para obtener más información.
+>Además, también debe asegurarse de que las políticas de combinación estén configuradas para priorizar los conjuntos de datos que contienen los datos de consentimiento y preferencias más recientes, a fin de que los perfiles de clientes se actualicen correctamente. Consulte la descripción general sobre [combinar directivas](../../rtcdp/profile/merge-policies.md) para obtener más información.
 
 ## Gestión de cambios de consentimiento y preferencias
 
@@ -269,7 +269,7 @@ Cuando un cliente cambia sus consentimientos o preferencias en el sitio web, est
 
 ## Apéndice {#appendix}
 
-Las secciones siguientes proporcionan información de referencia adicional sobre el tipo de datos [!UICONTROL Consentimientos y preferencias].
+En las secciones siguientes se proporciona información adicional de referencia sobre la variable [!UICONTROL Consentimientos y preferencias] tipo de datos.
 
 ### Valores aceptados para `val` {#choice-values}
 
@@ -277,9 +277,9 @@ La siguiente tabla describe los valores aceptados para `val`:
 
 | Valor | Título | Descripción |
 | --- | --- | --- |
-| `y` | Sí (opción de inclusión) | El cliente ha elegido el consentimiento o la preferencia. En otras palabras, **dan** su consentimiento para el uso de sus datos como se indica en el consentimiento o preferencia en cuestión. |
-| `n` | No (exclusión) | El cliente ha excluido el consentimiento o la preferencia. En otras palabras, **no** dan su consentimiento para el uso de sus datos como se indica en el consentimiento o preferencia en cuestión. |
-| `p` | Verificación pendiente | El sistema aún no ha recibido un consentimiento definitivo o un valor de preferencia. Esto se utiliza generalmente como parte de un consentimiento que requiere una verificación en dos pasos. Por ejemplo, si un cliente decide recibir correos electrónicos, ese consentimiento se establece en `p` hasta que seleccione un vínculo en un correo electrónico para verificar que ha proporcionado la dirección de correo electrónico correcta, momento en el que el consentimiento se actualiza a `y`.<br><br>Si este consentimiento o preferencia no utiliza un proceso de verificación de dos conjuntos, entonces la  `p` opción puede utilizarse para indicar que el cliente aún no ha respondido a la solicitud de consentimiento. Por ejemplo, puede establecer automáticamente el valor en `p` en la primera página de un sitio web antes de que el cliente haya respondido a la solicitud de consentimiento. En jurisdicciones que no requieren consentimiento explícito, también puede utilizarlo para indicar que el cliente no ha excluido explícitamente la solicitud (es decir, se asume el consentimiento). |
+| `y` | Sí (opción de inclusión) | El cliente ha elegido el consentimiento o la preferencia. En otras palabras, **do** el consentimiento para el uso de sus datos, tal como se indica en el consentimiento o preferencia de que se trate. |
+| `n` | No (exclusión) | El cliente ha excluido el consentimiento o la preferencia. En otras palabras, **no** el consentimiento para el uso de sus datos, tal como se indica en el consentimiento o preferencia de que se trate. |
+| `p` | Verificación pendiente | El sistema aún no ha recibido un consentimiento definitivo o un valor de preferencia. Esto se utiliza generalmente como parte de un consentimiento que requiere una verificación en dos pasos. Por ejemplo, si un cliente decide recibir correos electrónicos, ese consentimiento se establece en `p` hasta que seleccionen un vínculo en un correo electrónico para verificar que han proporcionado la dirección de correo electrónico correcta, en cuyo momento el consentimiento se actualizaría a `y`.<br><br>Si este consentimiento o preferencia no utiliza un proceso de verificación de dos conjuntos, la variable `p` en su lugar, se puede utilizar para indicar que el cliente aún no ha respondido al mensaje de consentimiento. Por ejemplo, puede establecer automáticamente el valor en `p` en la primera página de un sitio web, antes de que el cliente haya respondido a la solicitud de consentimiento. En jurisdicciones que no requieren consentimiento explícito, también puede utilizarlo para indicar que el cliente no ha excluido explícitamente la solicitud (es decir, se asume el consentimiento). |
 | `u` | Unknown | Se desconoce la información de consentimiento o preferencias del cliente. |
 | `dy` | Predeterminado de Sí (opción de inclusión) | El cliente no ha proporcionado un valor de consentimiento por sí mismo y se trata como una opción de inclusión (&quot;Sí&quot;) de forma predeterminada. En otras palabras, se asume el consentimiento hasta que el cliente indique lo contrario.<br><br>Tenga en cuenta que si las leyes o los cambios en la política de privacidad de su empresa producen cambios en los valores predeterminados de algunos o de todos los usuarios, debe actualizar manualmente todos los perfiles que contengan valores predeterminados. |
 | `dn` | Valor predeterminado de no (exclusión) | El cliente no ha proporcionado un valor de consentimiento por sí mismo y se trata como un valor de exclusión (&quot;No&quot;) de forma predeterminada. En otras palabras, se supone que el cliente ha denegado el consentimiento hasta que indique lo contrario.<br><br>Tenga en cuenta que si las leyes o los cambios en la política de privacidad de su empresa producen cambios en los valores predeterminados de algunos o de todos los usuarios, debe actualizar manualmente todos los perfiles que contengan valores predeterminados. |
@@ -313,6 +313,6 @@ La siguiente tabla describe los valores aceptados para `preferred`:
 
 {style=&quot;table-layout:auto&quot;}
 
-### Esquema [!UICONTROL Consentimientos y preferencias] completo {#full-schema}
+### Completa [!UICONTROL Consentimientos y preferencias] esquema {#full-schema}
 
-Para ver el esquema completo del tipo de datos [!UICONTROL Consents and Preferences], consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).
+Para ver el esquema completo de la variable [!UICONTROL Consentimientos y preferencias] tipo de datos, consulte [repositorio oficial XDM](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).

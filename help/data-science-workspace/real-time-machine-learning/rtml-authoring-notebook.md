@@ -5,10 +5,9 @@ title: Administrar portátiles de aprendizaje automático en tiempo real
 topic-legacy: Training and scoring a ML model
 description: La siguiente guía describe los pasos necesarios para crear una aplicación de aprendizaje automático en tiempo real en Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
-source-wordcount: '1650'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
@@ -19,15 +18,15 @@ ht-degree: 0%
 >
 >El aprendizaje automático en tiempo real aún no está disponible para todos los usuarios. Esta función está en alfa y aún se está probando. Este documento está sujeto a cambios.
 
-La siguiente guía describe los pasos necesarios para crear una aplicación de aprendizaje automático en tiempo real. Utilizando el Adobe proporcionado **[!UICONTROL Real-time ML]** Python bloc template, esta guía abarca la formación de un modelo, la creación de un DSL, la publicación de DSL a Edge y la puntuación de la solicitud. A medida que avanza en la implementación del modelo de aprendizaje automático en tiempo real, se espera que modifique la plantilla para adaptarla a las necesidades del conjunto de datos.
+La siguiente guía describe los pasos necesarios para crear una aplicación de aprendizaje automático en tiempo real. Uso del Adobe proporcionado **[!UICONTROL ML en tiempo real]** Plantilla de bloc de notas Python, esta guía abarca la formación de un modelo, la creación de un DSL, la publicación de DSL a Edge y la puntuación de la solicitud. A medida que avanza en la implementación del modelo de aprendizaje automático en tiempo real, se espera que modifique la plantilla para adaptarla a las necesidades del conjunto de datos.
 
 ## Crear un bloc de notas de aprendizaje automático en tiempo real
 
-En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Notebooks]** dentro de **Data Science**. A continuación, seleccione **[!UICONTROL JupyterLab]** y permita que el entorno se cargue algún tiempo.
+En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Portátiles]** desde **Ciencia de datos**. A continuación, seleccione **[!UICONTROL JupyterLab]** y permitir que el entorno se cargue un poco de tiempo.
 
 ![abrir JupyterLab](../images/rtml/open-jupyterlab.png)
 
-Aparece el [!DNL JupyterLab] lanzador. Desplácese hacia abajo hasta *Aprendizaje automático en tiempo real* y seleccione el bloc de notas **[!UICONTROL Real-time ML]**. Se abre una plantilla que contiene celdas de bloc de notas de ejemplo con un conjunto de datos de ejemplo.
+La variable [!DNL JupyterLab] aparece el lanzador. Desplácese hacia abajo hasta *Aprendizaje automático en tiempo real* y seleccione **[!UICONTROL ML en tiempo real]** bloc de notas. Se abre una plantilla que contiene celdas de bloc de notas de ejemplo con un conjunto de datos de ejemplo.
 
 ![python en blanco](../images/rtml/authoring-notebook.png)
 
@@ -37,7 +36,7 @@ Comience importando todos los paquetes necesarios para su modelo. Asegúrese de 
 
 >[!NOTE]
 >
->Su lista de importaciones puede diferir según el modelo que desee hacer. Esta lista cambiará a medida que se añadan nuevos nodos con el paso del tiempo. Consulte la [guía de referencia de nodos](./node-reference.md) para obtener una lista completa de los nodos disponibles.
+>Su lista de importaciones puede diferir según el modelo que desee hacer. Esta lista cambiará a medida que se añadan nuevos nodos con el paso del tiempo. Consulte la [guía de referencia de nodo](./node-reference.md) para obtener una lista completa de los nodos disponibles.
 
 ```python
 from pprint import pprint
@@ -73,26 +72,26 @@ pprint(nf.discover_nodes())
 
 ## Formación de un modelo de aprendizaje automático en tiempo real
 
-Con una de las siguientes opciones, se escribe código [!DNL Python] para leer, preprocesar y analizar datos. A continuación, debe entrenar su propio modelo ML, serializarlo en formato ONNX y luego cargarlo en la tienda del modelo de aprendizaje automático en tiempo real.
+Con una de las siguientes opciones, va a escribir [!DNL Python] código para leer, preprocesar y analizar datos. A continuación, debe entrenar su propio modelo ML, serializarlo en formato ONNX y luego cargarlo en la tienda del modelo de aprendizaje automático en tiempo real.
 
 - [Formación de su propio modelo en portátiles JupyterLab](#training-your-own-model)
 - [Carga de su propio modelo ONNX preentrenado a portátiles JupyterLab](#pre-trained-model-upload)
 
-### Capacitación de su propio modelo {#training-your-own-model}
+### Formación de su propio modelo {#training-your-own-model}
 
 Comience cargando los datos de la formación.
 
 >[!NOTE]
 >
->En la plantilla **Real-time ML** , el [conjunto de datos CSV de seguro de automóvil](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) se toma de [!DNL Github].
+>En el **ML en tiempo real** plantilla, la variable [conjunto de datos CSV de seguro de coche](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) se toma de [!DNL Github].
 
 ![Carga de datos de capacitación](../images/rtml/load_training.png)
 
-Si desea utilizar un conjunto de datos desde Adobe Experience Platform, quite el comentario de la celda siguiente. A continuación, debe reemplazar `DATASET_ID` por el valor apropiado.
+Si desea utilizar un conjunto de datos desde Adobe Experience Platform, quite el comentario de la celda siguiente. A continuación, debe reemplazar `DATASET_ID` con el valor apropiado.
 
 ![conjunto de datos rtml](../images/rtml/rtml-dataset.png)
 
-Para acceder a un conjunto de datos en su bloc de notas [!DNL JupyterLab], seleccione la pestaña **Data** en la navegación izquierda de [!DNL JupyterLab]. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Datasets]** y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explore Data in Notebook]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas. Esta celda tiene su `dataset_id`.
+Para acceder a un conjunto de datos en su [!DNL JupyterLab] bloc de notas, seleccione **Datos** en la navegación izquierda de [!DNL JupyterLab]. La variable **[!UICONTROL Conjuntos de datos]** y **[!UICONTROL Esquemas]** aparecen los directorios. Select **[!UICONTROL Conjuntos de datos]** y haga clic con el botón derecho y, a continuación, seleccione la **[!UICONTROL Explorar datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desea utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas. Esta celda tiene su `dataset_id`.
 
 ![acceso al conjunto de datos](../images/rtml/access-dataset.png)
 
@@ -100,7 +99,7 @@ Una vez finalizada, haga clic con el botón secundario y elimine la celda que ge
 
 ### Propiedades de formación
 
-Con la plantilla proporcionada, modifique cualquiera de las propiedades de formación en `config_properties`.
+Con la plantilla proporcionada, modifique cualquiera de las propiedades de formación dentro de `config_properties`.
 
 ```python
 config_properties = {
@@ -113,18 +112,18 @@ config_properties = {
 
 ### Preparar el modelo
 
-Con la plantilla **[!UICONTROL Real-time ML]**, debe analizar, procesar previamente, entrenar y evaluar su modelo ML. Esto se hace mediante la aplicación de transformaciones de datos y la creación de un flujo de formación.
+Al usar la variable **[!UICONTROL ML en tiempo real]** plantilla, debe analizar, preprocesar, entrenar y evaluar su modelo ML. Esto se hace mediante la aplicación de transformaciones de datos y la creación de un flujo de formación.
 
 **Transformaciones de datos**
 
-La celda **[!UICONTROL Real-time ML]** plantillas **Data Transformations** debe modificarse para que funcione con su propio conjunto de datos. Normalmente, esto implica cambiar el nombre de las columnas, el resumen de datos y la preparación/ingeniería de funciones de datos.
+La variable **[!UICONTROL ML en tiempo real]** plantillas **Transformaciones de datos** La celda debe modificarse para que funcione con su propio conjunto de datos. Normalmente, esto implica cambiar el nombre de las columnas, el resumen de datos y la preparación/ingeniería de funciones de datos.
 
 >[!NOTE]
 >
->El siguiente ejemplo se ha condensado para fines de legibilidad utilizando `[ ... ]`. Consulte y expanda la sección de transformaciones de datos de las plantillas *ML* en tiempo real para la celda de código completa.
+>El siguiente ejemplo se ha condensado para facilitar la lectura mediante `[ ... ]`. Consulte y amplíe el *ML en tiempo real* plantillas transformaciones de datos para la celda de código completa.
 
 ```python
-df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
+df1.rename(columns = {config_properties['ten_id']+'.identification.ecid': 'ecid',
                      [ ... ]}, inplace=True)
 df1 = df1[['ecid', 'km', 'cartype', 'age', 'gender', 'carbrand', 'leasing', 'city', 
        'country', 'nationality', 'primaryuser', 'purchase', 'pricequote', 'timestamp']]
@@ -159,7 +158,7 @@ df1['gender'].fillna('notgiven', inplace=True)
 
 [ ... ]
 
-df1['city'] = df1.groupby('country')['city'].transform(lambda x : x.fillna(x.mode()))
+df1['city'] = df1.groupby('country')['city'].transform(lambda x: x.fillna(x.mode()))
 df1.dropna(subset = ['pricequote'], inplace=True)
 print("df1 shape 3", df1.shape)
 print(df1)
@@ -196,7 +195,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-Ejecute la celda proporcionada para ver un resultado de ejemplo. La tabla de salida devuelta del conjunto de datos `carinsurancedataset.csv` devuelve las modificaciones que ha definido.
+Ejecute la celda proporcionada para ver un resultado de ejemplo. La tabla de salida devuelta por la variable `carinsurancedataset.csv` conjunto de datos devuelve las modificaciones que ha definido.
 
 ![Ejemplo de transformaciones de datos](../images/rtml/table-return.png)
 
@@ -204,7 +203,7 @@ Ejecute la celda proporcionada para ver un resultado de ejemplo. La tabla de sal
 
 A continuación, debe crear la canalización de formación. Esto se parece a cualquier otro archivo de canalización de formación, excepto que necesita convertir y generar un archivo ONNX.
 
-Con las transformaciones de datos definidas en la celda anterior, modifique la plantilla. El siguiente código resaltado a continuación se utiliza para generar un archivo ONNX en la canalización de funciones. Consulte la plantilla *Real-time ML* para obtener la celda completa del código de canalización.
+Con las transformaciones de datos definidas en la celda anterior, modifique la plantilla. El siguiente código resaltado a continuación se utiliza para generar un archivo ONNX en la canalización de funciones. Consulte la *ML en tiempo real* plantilla para la celda de código de canalización completa.
 
 ```python
 #for generating onnx
@@ -246,7 +245,7 @@ model.generate_onnx_resources()
 
 >[!NOTE]
 >
->Cambie el valor de cadena `model_path` (`model.onnx`) para cambiar el nombre del modelo.
+>Cambie el `model_path` valor de cadena (`model.onnx`) para cambiar el nombre del modelo.
 
 ```python
 model_path = "model.onnx"
@@ -261,18 +260,18 @@ model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
-print("Model ID : ", model_id)
+print("Model ID: ", model_id)
 ```
 
 ![Modelo ONNX](../images/rtml/onnx-model-rail.png)
 
-### Carga de su propio modelo de ONNX preentrenado {#pre-trained-model-upload}
+### Carga de su propio modelo ONNX preentrenado {#pre-trained-model-upload}
 
-Utilizando el botón de carga ubicado en [!DNL JupyterLab] blocs de notas, cargue su modelo ONNX preentrenado en el entorno [!DNL Data Science Workspace] de portátiles.
+Uso del botón de carga ubicado en [!DNL JupyterLab] portátiles, cargue su modelo de ONNX preentrenado en el [!DNL Data Science Workspace] entorno de portátiles.
 
 ![icono de carga](../images/rtml/upload.png)
 
-A continuación, cambie el valor de la cadena `model_path` en el bloc de notas *Real-time ML* para que coincida con el nombre del modelo ONNX. Una vez finalizado, ejecute la celda *Set model path* y luego ejecute la celda *Upload your model to RTML Model Store*. Tanto la ubicación del modelo como el ID del modelo se devuelven en la respuesta cuando se realiza correctamente.
+A continuación, cambie la variable `model_path` valor de cadena en la variable *ML en tiempo real* portátil para que coincida con su nombre de modelo ONNX. Una vez finalizado, ejecute el *Establecer ruta del modelo* y luego ejecute el *Cargar el modelo a la tienda de modelos RTML* celda. Tanto la ubicación del modelo como el ID del modelo se devuelven en la respuesta cuando se realiza correctamente.
 
 ![cargar su propio modelo](../images/rtml/upload-own-model.png)
 
@@ -288,9 +287,9 @@ Esta sección describe la creación de un DSL. Va a crear los nodos que incluyen
 
 >[!NOTE]
 >
-> Es probable que tenga varios nodos en función del tipo de datos que utilice. El siguiente ejemplo describe solo un nodo en la plantilla *Real-time ML*. Consulte la sección *Plantillas ML* en tiempo real *Creación de nodos* para ver la celda de código completa.
+> Es probable que tenga varios nodos en función del tipo de datos que utilice. El siguiente ejemplo describe solo un nodo en la variable *ML en tiempo real* plantilla. Consulte la *ML en tiempo real* plantillas *Creación de nodos* para la celda de código completa.
 
-El nodo Pandas siguiente utiliza `"import": "map"` para importar el nombre del método como una cadena en los parámetros, seguido de introducir los parámetros como una función de asignación. El ejemplo siguiente lo hace utilizando `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Una vez que haya colocado el mapa, tiene la opción de establecer `inplace` como `True` o `False`. Establezca `inplace` como `True` o `False` en función de si desea aplicar la transformación en su lugar o no. De forma predeterminada, `"inplace": False` crea una nueva columna. La compatibilidad para proporcionar un nuevo nombre de columna se establece para añadirse en una versión posterior. La última línea `cols` puede ser un nombre de columna único o una lista de columnas. Especifique las columnas en las que desea aplicar la transformación. En este ejemplo se especifica `leasing`. Para obtener más información sobre los nodos disponibles y cómo utilizarlos, visite la [guía de referencia de nodos](./node-reference.md).
+El nodo Pandas siguiente utiliza `"import": "map"` para importar el nombre del método como una cadena en los parámetros, seguido de introducir los parámetros como una función de asignación. El ejemplo siguiente hace esto utilizando `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Una vez que haya colocado el mapa, tiene la opción de establecer `inplace` como `True` o `False`. Establezca `inplace` como `True` o `False` en función de si desea aplicar la transformación en su lugar o no. De forma predeterminada `"inplace": False` crea una columna nueva. La compatibilidad para proporcionar un nuevo nombre de columna se establece para añadirse en una versión posterior. La última línea `cols` puede ser un nombre de columna único o una lista de columnas. Especifique las columnas en las que desea aplicar la transformación. En este ejemplo `leasing` se ha especificado. Para obtener más información sobre los nodos disponibles y cómo utilizarlos, visite [guía de referencia de nodo](./node-reference.md).
 
 ```python
 # Renaming leasing column using Pandas Node
@@ -330,7 +329,7 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-A continuación, conecte los nodos con los bordes. Cada tuple es una conexión [!DNL Edge].
+A continuación, conecte los nodos con los bordes. Cada tuple es una [!DNL Edge] conexión.
 
 >[!TIP]
 >
@@ -347,7 +346,7 @@ dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
 pprint(json.loads(dsl))
 ```
 
-Una vez finalizado, se devuelve un objeto `edge` que contiene cada uno de los nodos y los parámetros asignados a ellos.
+Una vez finalizada, una `edge` se devuelve con cada uno de los nodos y los parámetros que se les asignaron.
 
 ![retorno de borde](../images/rtml/edge-return.png)
 
@@ -355,13 +354,13 @@ Una vez finalizado, se devuelve un objeto `edge` que contiene cada uno de los no
 
 >[!NOTE]
 >
->Adobe Experience Platform Hub implementa y administra temporalmente aprendizaje automático en tiempo real. Para obtener más información, consulte la sección de información general sobre [Arquitectura de aprendizaje automático en tiempo real](./home.md#architecture).
+>Adobe Experience Platform Hub implementa y administra temporalmente aprendizaje automático en tiempo real. Para obtener más información, consulte la sección Información general de [Arquitectura de aprendizaje automático en tiempo real](./home.md#architecture).
 
-Ahora que ha creado un gráfico DSL, puede implementarlo en [!DNL Edge].
+Ahora que ha creado un gráfico DSL, puede implementarlo en la variable [!DNL Edge].
 
 >[!IMPORTANT]
 >
->No publicar en [!DNL Edge] con frecuencia, esto puede sobrecargar los nodos [!DNL Edge]. No se recomienda publicar el mismo modelo varias veces.
+>No publicar para [!DNL Edge] a menudo, esto puede sobrecargar el [!DNL Edge] nodos. No se recomienda publicar el mismo modelo varias veces.
 
 ```python
 edge_utils = EdgeUtils()
@@ -372,13 +371,13 @@ print(f'Service ID: {service_id}')
 
 ### Actualización del DSL y republicación en Edge (opcional)
 
-Si no necesita actualizar su DSL, puede saltar a [Scoring](#scoring).
+Si no necesita actualizar su DSL, puede saltar a [puntuación](#scoring).
 
 >[!NOTE]
 >
 >Las siguientes celdas solo son necesarias si desea actualizar un DSL existente que se ha publicado en Edge.
 
-Es probable que sus modelos sigan desarrollándose. En lugar de crear un servicio completamente nuevo, es posible actualizar un servicio existente con el nuevo modelo. Puede definir un nodo que desee actualizar, asignarlo a un nuevo ID y, a continuación, volver a cargar el nuevo DSL en [!DNL Edge].
+Es probable que sus modelos sigan desarrollándose. En lugar de crear un servicio completamente nuevo, es posible actualizar un servicio existente con el nuevo modelo. Puede definir un nodo que desee actualizar, asignarlo a un nuevo ID y, a continuación, volver a cargar el nuevo DSL en la variable [!DNL Edge].
 
 En el siguiente ejemplo, el nodo 0 se actualiza con un nuevo ID.
 
@@ -410,7 +409,7 @@ Se le devuelve el DSL actualizado.
 
 ## Puntuación {#scoring}
 
-Después de publicar en [!DNL Edge], la puntuación se realiza mediante una solicitud del POST de un cliente. Normalmente, esto se puede hacer desde una aplicación cliente que necesita puntuaciones ML. También puedes hacerlo desde Postman. La plantilla **[!UICONTROL Real-time ML]** utiliza EdgeUtils para demostrar este proceso.
+Después de publicar en [!DNL Edge], la puntuación se realiza mediante una solicitud del POST de un cliente. Normalmente, esto se puede hacer desde una aplicación cliente que necesita puntuaciones ML. También puedes hacerlo desde Postman. La variable **[!UICONTROL ML en tiempo real]** plantilla utiliza EdgeUtils para demostrar este proceso.
 
 >[!NOTE]
 >
@@ -422,21 +421,21 @@ import time
 time.sleep(20)
 ```
 
-Con el mismo esquema utilizado en la formación, se generan datos de puntuación de muestra. Estos datos se utilizan para crear un datafame de puntuación y luego se convierten en un diccionario de puntuación. Consulte la plantilla *Real-time ML* para obtener la celda de código completa.
+Con el mismo esquema utilizado en la formación, se generan datos de puntuación de muestra. Estos datos se utilizan para crear un datafame de puntuación y luego se convierten en un diccionario de puntuación. Consulte la *ML en tiempo real* plantilla para la celda de código completa.
 
 ![Datos de puntuación](../images/rtml/generate-score-data.png)
 
 ### Puntuación frente al extremo de Edge
 
-Utilice la siguiente celda dentro de la plantilla *Real-time ML* para comparar su servicio [!DNL Edge].
+Utilice la siguiente celda dentro del *ML en tiempo real* plantilla para comparar su [!DNL Edge] servicio.
 
 ![Puntuación frente al borde](../images/rtml/scoring-edge.png)
 
-Una vez finalizada la puntuación, se devuelve el resultado [!DNL Edge] URL, Carga útil y puntuado del [!DNL Edge].
+Una vez finalizada la puntuación, la variable [!DNL Edge] URL, carga útil y resultados puntuados desde la variable [!DNL Edge] se muestran como
 
-## Enumere las aplicaciones implementadas desde [!DNL Edge]
+## Enumere las aplicaciones implementadas desde la [!DNL Edge]
 
-Para generar una lista de las aplicaciones implementadas actualmente en [!DNL Edge], ejecute la siguiente celda de código. Esta celda no se puede editar ni eliminar.
+Para generar una lista de las aplicaciones implementadas actualmente en la variable [!DNL Edge], ejecute la siguiente celda de código. Esta celda no se puede editar ni eliminar.
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -457,11 +456,11 @@ La respuesta devuelta es una matriz de los servicios implementados.
 ]
 ```
 
-## Eliminar una aplicación o ID de servicio implementados del [!DNL Edge] (opcional)
+## Elimine una aplicación o ID de servicio implementados del [!DNL Edge] (opcional)
 
 >[!CAUTION]
 >
->Esta celda se utiliza para eliminar la aplicación Edge implementada. No utilice la siguiente celda a menos que necesite eliminar una aplicación [!DNL Edge] implementada.
+>Esta celda se utiliza para eliminar la aplicación Edge implementada. No utilice la siguiente celda a menos que necesite eliminar una [!DNL Edge] aplicación.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
@@ -472,4 +471,4 @@ else:
 
 ## Pasos siguientes
 
-Siguiendo el tutorial anterior, ha entrenado y cargado correctamente un modelo ONNX en la tienda de modelos de aprendizaje automático en tiempo real. Además, ha marcado e implementado su modelo de aprendizaje automático en tiempo real. Si desea obtener más información sobre los nodos disponibles para la creación de modelos, visite la [guía de referencia de nodos](./node-reference.md).
+Siguiendo el tutorial anterior, ha entrenado y cargado correctamente un modelo ONNX en la tienda de modelos de aprendizaje automático en tiempo real. Además, ha marcado e implementado su modelo de aprendizaje automático en tiempo real. Si desea obtener más información sobre los nodos disponibles para la creación de modelos, visite [guía de referencia de nodo](./node-reference.md).

@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 9af59d5a4fda693a2aef8e590a7754f0e1c1ac8d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2469'
 ht-degree: 2%
@@ -143,7 +143,7 @@ Un fragmento de perfil es la información de perfil de una sola identidad de la 
 Donde `{ATTRIBUTE_MERGE_TYPE}` es una de las siguientes:
 
 * **`timestampOrdered`**: (predeterminado) Asigne prioridad al perfil que se actualizó por última vez. Con este tipo de combinación, la variable `data` no es obligatorio.
-* **`dataSetPrecedence`** : Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que proceden. Esto se puede usar cuando se prefiere o confía en la información presente en un conjunto de datos sobre los datos de otro conjunto de datos. Al utilizar este tipo de combinación, la variable `order` es obligatorio, ya que enumera los conjuntos de datos en orden de prioridad.
+* **`dataSetPrecedence`**: Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que proceden. Esto se puede usar cuando se prefiere o confía en la información presente en un conjunto de datos sobre los datos de otro conjunto de datos. Al utilizar este tipo de combinación, la variable `order` es obligatorio, ya que enumera los conjuntos de datos en orden de prioridad.
    * **`order`**: Cuando se usa &quot;dataSetPrecedence&quot;, se usa una variable `order` la matriz debe proporcionarse con una lista de conjuntos de datos. Los conjuntos de datos que no estén incluidos en la lista no se combinarán. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La variable `order` matriz enumera los ID de los conjuntos de datos en orden de prioridad.
 
 #### Ejemplo `attributeMerge` objeto que utiliza `dataSetPrecedence` type
@@ -151,7 +151,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es una de las siguientes:
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -483,12 +483,12 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]

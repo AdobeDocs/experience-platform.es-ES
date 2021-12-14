@@ -5,7 +5,7 @@ title: Entrada y salida en Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: En el siguiente documento se describen las diferentes entradas y productos utilizados en la Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 3%
@@ -87,7 +87,7 @@ Longitud mínima de los datos requerida = ventana de formación + ventana retros
 >
 > La longitud mínima de datos necesaria para una aplicación con configuraciones predeterminadas es: 2 trimestres (180 días) + 56 días = 236 días.
 
-Ejemplo :
+Ejemplo:
 
 - Desea atribuir eventos de conversión que se hayan producido en los últimos 90 días (3 meses) y rastrear todos los puntos de contacto que se hayan producido en las 4 semanas anteriores al evento de conversión. La duración de los datos de entrada debe abarcar los últimos 90 días + 28 días (4 semanas). La ventana de capacitación es de 90 días y la ventana retrospectiva es de 28 días, con un total de 118 días.
 
@@ -139,7 +139,7 @@ La siguiente tabla describe los campos de esquema de la salida de ejemplo de las
 | skuId (cadena) | True | Unidad de mantenimiento de existencias (SKU), el identificador único de un producto definido por el proveedor. <br> **Ejemplo:** MJ-03-XS-Black |
 | timestamp (DateTime) | True | Marca de tiempo de la conversión. <br> **Ejemplo:** 2020-06-09T00:01:51,000Z |
 | passThrough (objeto) | True | Columnas de conjuntos de datos de puntuación adicionales especificadas por el usuario al configurar el modelo. |
-| commerce_order_purchaseCity (cadena) | True | Columna del conjunto de datos de puntuación adicional. <br> **Ejemplo:** ciudad : San José |
+| commerce_order_purchaseCity (cadena) | True | Columna del conjunto de datos de puntuación adicional. <br> **Ejemplo:** ciudad: San José |
 | customerProfile (objeto) | False | Detalles de identidad del usuario utilizado para crear el modelo. |
 | identity (objeto) | False | Contiene los detalles del usuario utilizado para crear el modelo, como `id` y `namespace`. |
 | id (cadena) | True | ID de identidad del usuario, como ID de cookie, AAID o MCID, etc. <br> **Ejemplo:** 17348762725408656344688320891369597404 |

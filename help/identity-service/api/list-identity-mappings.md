@@ -5,11 +5,10 @@ title: Enumerar asignaciones de identidad
 topic-legacy: API guide
 description: Una asignación es una colección de todas las identidades de un clúster, para un espacio de nombres especificado.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -40,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 2: Proporcione la identidad como área de nombres (`ns`, por su nombre) y valor de ID (`id`).
+Opción 2: Proporcione la identidad como área de nombres (`ns`, por nombre) y valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -51,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 3: Proporcione la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata la [obtención del XID para una identidad](./list-native-id.md).
+Opción 3: Proporcione la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que cubre [obtención del XID para una identidad](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -64,7 +63,7 @@ curl -X GET \
 
 ### Obtener asignaciones de identidad para varias identidades
 
-Utilice el método `POST` como equivalente por lotes del método `GET` descrito anteriormente para recuperar asignaciones para varias identidades.
+Utilice la variable `POST` como equivalente de lote de `GET` método descrito anteriormente para recuperar asignaciones para varias identidades.
 
 >[!NOTE]
 >
@@ -87,7 +86,7 @@ Opción 1: Proporcione una lista de XID para los que recuperar asignaciones.
 }
 ```
 
-Opción 2: Proporcione una lista de identidades como ID compuestos, donde cada una asigna un nombre al valor de ID y al área de nombres por ID de área de nombres. En este ejemplo se demuestra el uso de este método al sobrescribir el `graph-type` predeterminado de &quot;Gráfico privado&quot;.
+Opción 2: Proporcione una lista de identidades como ID compuestos, donde cada una asigna un nombre al valor de ID y al área de nombres por ID de área de nombres. Este ejemplo demuestra el uso de este método al sobrescribir el valor predeterminado `graph-type` de &quot;Private Graph&quot;.
 
 ```shell
 {
@@ -116,7 +115,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: 111111@AdobeOrg' \
   -d '{
-        "xids" : ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
+        "xids": ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
         "targetNs": "0",
         "graph-type": "Private Graph"
       }' | json_pp
@@ -146,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Si no se encontraron identidades relacionadas con la entrada proporcionada, se devuelve un código de respuesta `HTTP 204` sin contenido.
+Si no se encontraron identidades relacionadas con la entrada proporcionada, se muestra una `HTTP 204` el código de respuesta se devuelve sin contenido.
 
 **Respuesta**
 
@@ -185,8 +184,8 @@ Si no se encontraron identidades relacionadas con la entrada proporcionada, se d
 ```
 
 - `lastAssociationTime`: Marca de fecha y hora en la que la identidad de entrada se asoció por última vez a esta identidad.
-- `regions`: Proporciona el  `regionId` y  `lastAssociationTime` para dónde se vio la identidad.
+- `regions`: Proporciona la variable `regionId` y `lastAssociationTime` por dónde se vio la identidad.
 
 ## Pasos siguientes
 
-Continúe con el siguiente tutorial para [list available namespaces](./list-namespaces.md).
+Continúe con el siguiente tutorial a [listar espacios de nombres disponibles](./list-namespaces.md).

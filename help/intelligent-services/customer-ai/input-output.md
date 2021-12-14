@@ -6,7 +6,7 @@ title: Entrada y salida en Customer AI
 topic-legacy: Getting started
 description: Obtenga más información sobre los eventos, entradas y salidas necesarios que utiliza Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 1%
@@ -114,7 +114,7 @@ Longitud mínima de los datos requeridos = población elegible + ventana de resu
 >
 > 30 es el número mínimo de días necesarios para la población elegible. Si no se proporciona, el valor predeterminado es 120 días.
 
-Ejemplos :
+Ejemplos:
 
 - Desea predecir si es probable que un cliente compre un reloj en los próximos 30 días. También desea puntuar a los usuarios que tienen alguna actividad web en los últimos 60 días. En este caso, la longitud mínima de los datos requerida = 60 días + 30 días. La población elegible es de 60 días y el período de espera es de 30 días, con un total de 90 días.
 

@@ -1,7 +1,8 @@
 ---
 title: Extremo de la búsqueda
 description: Aprenda a realizar llamadas al extremo de la búsqueda en la API de Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 97%
@@ -64,7 +65,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "from": 0,
           "size": 25,
           "query": {

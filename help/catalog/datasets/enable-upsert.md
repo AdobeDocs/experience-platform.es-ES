@@ -3,13 +3,13 @@ keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución
 title: Habilitar un conjunto de datos para actualizaciones de perfil mediante API
 type: Tutorial
 description: Este tutorial le muestra cómo utilizar las API de Adobe Experience Platform para habilitar un conjunto de datos con capacidades de "actualización" para realizar actualizaciones en los datos del perfil del cliente en tiempo real.
-source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
+exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 2%
 
 ---
-
 
 # Habilitar un conjunto de datos para actualizaciones de perfil mediante API
 
@@ -20,27 +20,27 @@ Este tutorial trata el proceso de activación de un conjunto de datos con capaci
 Este tutorial requiere una comprensión práctica de varios servicios de Adobe Experience Platform involucrados en la administración de conjuntos de datos con perfil habilitado. Antes de comenzar este tutorial, revise la documentación de estos servicios de plataforma DNL relacionados:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
-- [[!DNL Catalog Service]](../../catalog/home.md): Una API de RESTful que permite crear conjuntos de datos y configurarlos para  [!DNL Real-time Customer Profile] y  [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia del cliente.
+- [[!DNL Catalog Service]](../../catalog/home.md): Una API de RESTful que le permite crear conjuntos de datos y configurarlos para [!DNL Real-time Customer Profile] y [!DNL Identity Service].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 - [Ingesta por lotes](../../ingestion/batch-ingestion/overview.md)
 
 Las secciones siguientes proporcionan información adicional que debe conocer para realizar llamadas correctamente a las API de Platform.
 
 ### Leer llamadas de API de ejemplo
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado `Content-Type` adicional. El valor correcto de este encabezado se muestra en las solicitudes de muestra donde es necesario.
+Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un `Content-Type` encabezado. El valor correcto de este encabezado se muestra en las solicitudes de muestra donde es necesario.
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado `x-sandbox-name` que especifique el nombre del simulador para pruebas en el que se realizará la operación. Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un `x-sandbox-name` encabezado que especifica el nombre del simulador de pruebas en el que se realizará la operación. Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../sandboxes/home.md).
 
 ## Crear un conjunto de datos habilitado para las actualizaciones de perfil
 
@@ -48,9 +48,9 @@ Al crear un nuevo conjunto de datos, puede habilitar ese conjunto de datos para 
 
 >[!NOTE]
 >
->Para crear un nuevo conjunto de datos habilitado para Perfil, debe conocer el ID de un esquema XDM existente que esté habilitado para Perfil. Para obtener información sobre cómo buscar o crear un esquema habilitado para perfil, consulte el tutorial sobre la [creación de un esquema mediante la API del Registro de esquemas](../../xdm/tutorials/create-schema-api.md).
+>Para crear un nuevo conjunto de datos habilitado para Perfil, debe conocer el ID de un esquema XDM existente que esté habilitado para Perfil. Para obtener información sobre cómo buscar o crear un esquema habilitado para perfil, consulte el tutorial en [creación de un esquema mediante la API del Registro de esquemas](../../xdm/tutorials/create-schema-api.md).
 
-Para crear un conjunto de datos habilitado para Perfil y actualizaciones, utilice una solicitud de POST al extremo `/dataSets` .
+Para crear un conjunto de datos habilitado para Perfil y actualizaciones, utilice una solicitud de POST para `/dataSets` punto final.
 
 **Formato de API**
 
@@ -60,7 +60,7 @@ POST /dataSets
 
 **Solicitud**
 
-Al incluir `unifiedProfile` en `tags` en el cuerpo de la solicitud, el conjunto de datos se habilitará para [!DNL Profile] al crearlo. Dentro de la matriz `unifiedProfile`, al agregar `isUpsert:true` se agregará la capacidad de que el conjunto de datos admita actualizaciones.
+Incluyendo `unifiedProfile` under `tags` en el cuerpo de la solicitud, el conjunto de datos se habilitará para [!DNL Profile] al crearlo. Dentro de `unifiedProfile` matriz, adición `isUpsert:true` agregará la capacidad para que el conjunto de datos admita actualizaciones.
 
 ```shell
 curl -X POST \
@@ -72,11 +72,11 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "fields":[],
-        "schemaRef" : {
+        "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
           "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
-        "tags" : {
+        "tags": {
           "unifiedProfile": [
             "enabled:true",
             "isUpsert:true"
@@ -87,8 +87,8 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| `schemaRef.id` | El ID del esquema habilitado para [!DNL Profile] en el que se basará el conjunto de datos. |
-| `{TENANT_ID}` | El espacio de nombres dentro de [!DNL Schema Registry] que contiene recursos pertenecientes a su organización de IMS. Consulte la sección [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) de la guía para desarrolladores de [!DNL Schema Registry] para obtener más información. |
+| `schemaRef.id` | El ID de la variable [!DNL Profile]esquema habilitado para , en el que se basará el conjunto de datos. |
+| `{TENANT_ID}` | El espacio de nombres dentro de la variable [!DNL Schema Registry] que contiene recursos pertenecientes a su organización de IMS. Consulte la [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) de la sección [!DNL Schema Registry] guía para desarrolladores para obtener más información. |
 
 **Respuesta**
 
@@ -106,11 +106,11 @@ Los siguientes pasos tratan sobre cómo configurar un conjunto de datos habilita
 
 >[!NOTE]
 >
->Para configurar un conjunto de datos habilitado para Perfil existente para &quot;upsert&quot;, primero debe deshabilitar el conjunto de datos para Perfil y luego volver a habilitarlo junto a la etiqueta `isUpsert` . Si el conjunto de datos existente no está habilitado para Perfil, puede continuar directamente con los pasos para [habilitar el conjunto de datos para Perfil y actualizar](#enable-the-dataset). Si no está seguro, los siguientes pasos le muestran cómo comprobar si el conjunto de datos ya está habilitado.
+>Para configurar un conjunto de datos habilitado para Perfil existente para &quot;upsert&quot;, primero debe deshabilitar el conjunto de datos para Perfil y luego volver a habilitarlo junto con el `isUpsert` etiqueta. Si el conjunto de datos existente no está habilitado para Perfil, puede continuar directamente con los pasos de [activación del conjunto de datos para Perfil y actualizar](#enable-the-dataset). Si no está seguro, los siguientes pasos le muestran cómo comprobar si el conjunto de datos ya está habilitado.
 
 ### Comprobar si el conjunto de datos está habilitado para Perfil
 
-Con la API [!DNL Catalog], puede inspeccionar un conjunto de datos existente para determinar si está habilitado para su uso en [!DNL Real-time Customer Profile]. La siguiente llamada recupera los detalles de un conjunto de datos por ID.
+Al usar la variable [!DNL Catalog] API, puede inspeccionar un conjunto de datos existente para determinar si está habilitado para usarse en [!DNL Real-time Customer Profile]. La siguiente llamada recupera los detalles de un conjunto de datos por ID.
 
 **Formato de API**
 
@@ -182,11 +182,11 @@ curl -X GET \
 }
 ```
 
-En la propiedad `tags` puede ver que `unifiedProfile` está presente con el valor `enabled:true`. Por lo tanto, [!DNL Real-time Customer Profile] está habilitado para este conjunto de datos.
+En el `tags` puede ver que `unifiedProfile` está presente con el valor `enabled:true`. Por lo tanto, [!DNL Real-time Customer Profile] está habilitado para este conjunto de datos.
 
 ### Deshabilitar el conjunto de datos para el perfil
 
-Para configurar un conjunto de datos habilitado para perfil para actualizaciones, primero debe deshabilitar la etiqueta `unifiedProfile` y luego volver a habilitarla junto a la etiqueta `isUpsert` . Esto se realiza mediante dos solicitudes de PATCH, una para deshabilitar y otra para volver a habilitar.
+Para configurar un conjunto de datos habilitado para perfiles para actualizaciones, primero debe deshabilitar la variable `unifiedProfile` y vuelva a activarla junto a la etiqueta `isUpsert` etiqueta. Esto se realiza mediante dos solicitudes de PATCH, una para deshabilitar y otra para volver a habilitar.
 
 >[!WARNING]
 >
@@ -204,7 +204,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **Solicitud**
 
-El primer cuerpo de solicitud del PATCH incluye una `path` a `unifiedProfile` configuración `value` en `enabled:false` para deshabilitar la etiqueta.
+El primer cuerpo de solicitud del PATCH incluye un `path` a `unifiedProfile` configurar la variable `value` a `enabled:false` para deshabilitar la etiqueta .
 
 ```shell
 curl -X PATCH \
@@ -219,8 +219,8 @@ curl -X PATCH \
       ]'
 ```
 
-****
-RespuestaUna solicitud correcta del PATCH devuelve el Estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La etiqueta `unifiedProfile` se ha deshabilitado.
+**Respuesta**
+Una solicitud de PATCH correcta devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La variable `unifiedProfile` La etiqueta de ahora se ha deshabilitado.
 
 ```json
 [
@@ -244,7 +244,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **Solicitud**
 
-El cuerpo de la solicitud incluye una configuración `path` para `unifiedProfile` para incluir las etiquetas `enabled` y `isUpsert`, ambas configuradas como `true`.`value`
+El cuerpo de la solicitud incluye un `path` a `unifiedProfile` configurar la variable `value` para incluir el `enabled` y `isUpsert` etiquetas, ambas configuradas como `true`.
 
 ```shell
 curl -X PATCH \
@@ -259,8 +259,8 @@ curl -X PATCH \
       ]'
 ```
 
-****
-RespuestaUna solicitud correcta del PATCH devuelve el Estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La etiqueta `unifiedProfile` ahora se ha habilitado y configurado para actualizaciones de atributos.
+**Respuesta**
+Una solicitud de PATCH correcta devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La variable `unifiedProfile` ahora se ha habilitado y configurado para las actualizaciones de atributos.
 
 ```json
 [

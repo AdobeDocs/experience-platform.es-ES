@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de API de ingesta de lotes
 description: Este documento proporciona una guía completa para los desarrolladores que trabajan con API de ingesta por lotes para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 5%
@@ -13,15 +13,15 @@ ht-degree: 5%
 
 # Guía para desarrolladores de ingesta por lotes
 
-Este documento proporciona una guía completa sobre el uso de [extremos](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) de la API de ingesta por lotes en Adobe Experience Platform. Para obtener información general sobre las API de ingesta por lotes, incluidos los requisitos previos y las prácticas recomendadas, lea en primer lugar la [información general de la API de ingesta por lotes](overview.md).
+Este documento proporciona una guía completa sobre el uso de [extremos de API de ingesta por lotes](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) en Adobe Experience Platform. Para obtener una descripción general de las API de ingesta por lotes, incluidos los requisitos previos y las prácticas recomendadas, comience leyendo el [información general sobre la API de ingesta por lotes](overview.md).
 
-El apéndice de este documento proporciona información sobre los [datos de formato que se utilizarán para la ingesta](#data-transformation-for-batch-ingestion), incluidos archivos de datos CSV y JSON de muestra.
+El apéndice de este documento proporciona información para [formatear datos para su uso en ingesta](#data-transformation-for-batch-ingestion), incluidos archivos de datos CSV y JSON de ejemplo.
 
 ## Primeros pasos
 
-Los extremos de API utilizados en esta guía forman parte de la [API de ingesta de datos](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). La ingesta de datos proporciona una API RESTful mediante la cual puede realizar operaciones CRUD básicas con los tipos de objeto admitidos.
+Los extremos de API utilizados en esta guía forman parte del [API de inserción de datos](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). La ingesta de datos proporciona una API RESTful mediante la cual puede realizar operaciones CRUD básicas con los tipos de objeto admitidos.
 
-Antes de continuar, revise la [información general de la API de ingesta por lotes](overview.md) y la [guía de introducción](getting-started.md).
+Antes de continuar, revise la [información general sobre la API de ingesta por lotes](overview.md) y [guía de introducción](getting-started.md).
 
 ## Ingesta de archivos JSON
 
@@ -35,7 +35,7 @@ En primer lugar, debe crear un lote, con JSON como formato de entrada. Al crear 
 
 >[!NOTE]
 >
->Los ejemplos siguientes son para JSON de una sola línea. Para ingerir JSON multilínea, será necesario establecer el indicador `isMultiLineJson` . Para obtener más información, lea la [guía de solución de problemas de ingesta por lotes](./troubleshooting.md).
+>Los ejemplos siguientes son para JSON de una sola línea. Para ingerir JSON multilínea, la variable `isMultiLineJson` se debe establecer el indicador . Para obtener más información, lea la [guía de solución de problemas de ingesta por lotes](./troubleshooting.md).
 
 **Formato de API**
 
@@ -50,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -97,7 +97,7 @@ Ahora que ha creado un lote, puede utilizar el ID de lote de la respuesta de cre
 
 >[!NOTE]
 >
->Consulte la sección del apéndice para ver un [ejemplo de un archivo de datos JSON con formato correcto](#data-transformation-for-batch-ingestion).
+>Consulte la sección del apéndice para ver una [ejemplo de archivo de datos JSON con formato correcto](#data-transformation-for-batch-ingestion).
 
 **Formato de API**
 
@@ -122,7 +122,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -157,7 +157,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -184,7 +184,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "Content-Type: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -232,7 +232,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Cargar archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar la variable `batchId` desde antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
 **Formato de API**
 
@@ -257,7 +257,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
@@ -292,7 +292,7 @@ POST /batches/{BATCH_ID}?action=complete
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -450,7 +450,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Completar archivo grande
 
-Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar la variable `batchId` desde antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
 **Formato de API**
 
@@ -501,7 +501,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -513,7 +513,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Ingesta de archivos CSV
 
-Para introducir archivos CSV, deberá crear una clase, un esquema y un conjunto de datos que admita CSV. Para obtener información detallada sobre cómo crear la clase y el esquema necesarios, siga las instrucciones proporcionadas en el [tutorial de creación de esquema ad-hoc](../../xdm/api/ad-hoc.md).
+Para introducir archivos CSV, deberá crear una clase, un esquema y un conjunto de datos que admita CSV. Para obtener información detallada sobre cómo crear la clase y el esquema necesarios, siga las instrucciones que se proporcionan en la sección [tutorial de creación de esquema ad-hoc](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -569,7 +569,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
             "datasetId": "{DATASET_ID}",
@@ -617,11 +617,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Cargar archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar la variable `batchId` desde antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
 >[!NOTE]
 >
->Consulte la sección del apéndice para ver un [ejemplo de un archivo de datos CSV con formato correcto](#data-transformation-for-batch-ingestion).
+>Consulte la sección del apéndice para ver una [ejemplo de archivo de datos CSV con formato correcto](#data-transformation-for-batch-ingestion).
 
 **Formato de API**
 
@@ -646,7 +646,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.csv"
 ```
@@ -678,7 +678,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -708,7 +708,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=ABORT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -720,7 +720,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminar un lote {#delete-a-batch}
 
-Se puede eliminar un lote realizando la siguiente solicitud de POST con el parámetro de consulta `action=REVERT` al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, lo que lo hace apto para la recolección de basura. El lote se recopilará asincrónicamente, momento en el que se marcará como &quot;eliminado&quot;.
+Se puede eliminar un lote realizando la siguiente solicitud de POST con la variable `action=REVERT` parámetro de consulta al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, lo que lo hace apto para la recolección de basura. El lote se recopilará asincrónicamente, momento en el que se marcará como &quot;eliminado&quot;.
 
 **Formato de API**
 
@@ -738,7 +738,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=REVERT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -758,10 +758,10 @@ En ocasiones puede ser necesario actualizar los datos en el Almacenamiento de pe
 
 Se requiere lo siguiente para parche de un lote:
 
-- **Conjunto de datos habilitado para actualizaciones de perfiles y atributos.** Esto se realiza mediante etiquetas de conjuntos de datos y requiere que se agregue una  `isUpsert:true` etiqueta específica a la  `unifiedProfile` matriz. Para obtener más información sobre los pasos que muestran cómo crear un conjunto de datos o configurar un conjunto de datos existente para su actualización, siga el tutorial para [habilitar un conjunto de datos para actualizaciones de perfil](../../catalog/datasets/enable-upsert.md).
+- **Conjunto de datos habilitado para actualizaciones de perfiles y atributos.** Esto se realiza mediante etiquetas de conjuntos de datos y requiere una `isUpsert:true` se agregará a la variable `unifiedProfile` matriz. Para obtener más información sobre los pasos que muestran cómo crear un conjunto de datos o configurar un conjunto de datos existente para su actualización, siga el tutorial de [activación de un conjunto de datos para actualizaciones de perfil](../../catalog/datasets/enable-upsert.md).
 - **Archivo de parquet que contiene los campos que se van a parchear y los campos de identidad para el perfil.** El formato de datos para la revisión de un lote es similar al proceso normal de ingesta por lotes. La entrada necesaria es un archivo Parquet y, además de los campos que se van a actualizar, los datos cargados deben contener los campos de identidad para que coincidan con los datos del Almacenamiento de perfiles.
 
-Una vez que tenga un conjunto de datos habilitado para Profile y upsert, y un archivo de parquet que contenga los campos que desea parche, así como los campos de identidad necesarios, puede seguir los pasos para [ingesta de archivos de parquet](#ingest-parquet-files) para completar el parche mediante la ingesta por lotes.
+Una vez que tenga un conjunto de datos habilitado para Perfil y confirmación, y un archivo de parqué que contenga los campos que desea parche, así como los campos de identidad necesarios, puede seguir los pasos para [ingesta de archivos de parquet](#ingest-parquet-files) para completar el parche mediante ingestión por lotes.
 
 ## Reproducir un lote
 
@@ -769,7 +769,7 @@ Si desea reemplazar un lote ya ingestado, puede hacerlo con &quot;reproducción 
 
 ### Crear lote
 
-En primer lugar, debe crear un lote, con JSON como formato de entrada. Al crear el lote, deberá proporcionar un ID de conjunto de datos. También debe asegurarse de que todos los archivos cargados como parte del lote se ajustan al esquema XDM vinculado al conjunto de datos proporcionado. Además, debe proporcionar los lotes antiguos como referencia en la sección de repetición. En el siguiente ejemplo, está reproduciendo lotes con ID `batchIdA` y `batchIdB`.
+En primer lugar, debe crear un lote, con JSON como formato de entrada. Al crear el lote, deberá proporcionar un ID de conjunto de datos. También debe asegurarse de que todos los archivos cargados como parte del lote se ajustan al esquema XDM vinculado al conjunto de datos proporcionado. Además, debe proporcionar los lotes antiguos como referencia en la sección de repetición. En el ejemplo siguiente, está reproduciendo lotes con ID de `batchIdA` y `batchIdB`.
 
 **Formato de API**
 
@@ -784,7 +784,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -843,7 +843,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Cargar archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar la variable `batchId` desde antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
 **Formato de API**
 
@@ -868,7 +868,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -903,7 +903,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -919,9 +919,9 @@ La siguiente sección contiene información adicional para la ingesta de datos e
 
 ### Transformación de datos para la ingesta por lotes
 
-Para poder introducir un archivo de datos en [!DNL Experience Platform], la estructura jerárquica del archivo debe cumplir con el esquema [Experience Data Model (XDM)](../../xdm/home.md) asociado con el conjunto de datos que se está cargando en.
+Para ingerir un archivo de datos en [!DNL Experience Platform], la estructura jerárquica del archivo debe cumplir con el [Modelo de datos de experiencia (XDM)](../../xdm/home.md) esquema asociado con el conjunto de datos que se está cargando en.
 
-Puede encontrar información sobre cómo asignar un archivo CSV para cumplir con un esquema XDM en el documento [transformaciones de ejemplo](../../etl/transformations.md), junto con un ejemplo de archivo de datos JSON con formato correcto. Los archivos de muestra proporcionados en el documento se pueden encontrar aquí:
+Puede encontrar información sobre cómo asignar un archivo CSV para cumplir con un esquema XDM en la [transformaciones de muestra](../../etl/transformations.md) , junto con un ejemplo de un archivo de datos JSON con formato correcto. Los archivos de muestra proporcionados en el documento se pueden encontrar aquí:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

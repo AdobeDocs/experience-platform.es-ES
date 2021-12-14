@@ -5,8 +5,7 @@ title: Referencia de nodo de aprendizaje automático en tiempo real
 topic-legacy: Nodes reference
 description: Un nodo es la unidad fundamental de la que se forman los gráficos. Cada nodo realiza una tarea específica y se puede encadenar utilizando vínculos para formar un gráfico que represente una canalización ML. La tarea realizada por un nodo representa una operación en los datos de entrada, como una transformación de datos o esquema, o una inferencia de aprendizaje automático. El nodo envía el valor transformado o inferido a los nodos siguientes.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -25,7 +24,7 @@ La siguiente guía describe las bibliotecas de nodos compatibles con el aprendiz
 
 ## Descubrimiento de nodos para su uso en la canalización ML
 
-Copie el siguiente código en un bloc de notas [!DNL Python] para ver todos los nodos disponibles para usar.
+Copie el siguiente código en un [!DNL Python] bloc de notas para ver todos los nodos disponibles para usar.
 
 ```python
 from pprint import pprint
@@ -83,9 +82,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-El siguiente nodo Pandas permite importar cualquier método `pd.DataFrame` o cualquier función general de nivel superior de los paneles. Para obtener más información sobre los métodos de Pandas, visite la [documentación de los métodos de Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obtener más información sobre las funciones de nivel superior, visite la [Guía de referencia de la API de Pandas para funciones generales](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+El siguiente nodo Pandas permite importar cualquier `pd.DataFrame` o cualquier función general de nivel superior de los paneles. Para obtener más información sobre los métodos Pandas, visite [Documentación de métodos Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obtener más información sobre las funciones de nivel superior, visite [Guía de referencia de la API Pandas para funciones generales](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-El nodo siguiente utiliza `"import": "map"` para importar el nombre del método como una cadena en los parámetros, seguido de introducir los parámetros como una función de asignación. El ejemplo siguiente lo hace utilizando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Una vez que haya colocado el mapa, tiene la opción de establecer `inplace` como `True` o `False`. Establezca `inplace` como `True` o `False` en función de si desea aplicar la transformación en su lugar o no. De forma predeterminada, `"inplace": False` crea una nueva columna. La compatibilidad para proporcionar un nuevo nombre de columna se establece para añadirse en una versión posterior. La última línea `cols` puede ser un nombre de columna único o una lista de columnas. Especifique las columnas en las que desea aplicar la transformación. En este ejemplo se especifica `device`.
+El nodo siguiente utiliza `"import": "map"` para importar el nombre del método como una cadena en los parámetros, seguido de introducir los parámetros como una función de asignación. El ejemplo siguiente hace esto utilizando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Una vez que haya colocado el mapa, tiene la opción de establecer `inplace` como `True` o `False`. Establezca `inplace` como `True` o `False` en función de si desea aplicar la transformación en su lugar o no. De forma predeterminada `"inplace": False` crea una columna nueva. La compatibilidad para proporcionar un nuevo nombre de columna se establece para añadirse en una versión posterior. La última línea `cols` puede ser un nombre de columna único o una lista de columnas. Especifique las columnas en las que desea aplicar la transformación. En este ejemplo `device` se ha especificado.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -116,7 +115,7 @@ model_train = ScikitLearn(params={
     "model_path": "resources/model.onnx",
     "params": {
         "model": "sklearn.linear_model.LogisticRegression",
-        "model_params": {"solver" : 'lbfgs'}
+        "model_params": {"solver": 'lbfgs'}
     }})
 msg6 = model_train.process(msg5)
 ```
@@ -128,7 +127,7 @@ msg6 = model_train.process(msg5)
 | mode | Tren/prueba (cadena). |
 | model_path | Ruta al modelo guardado localmente en formato onx. |
 | params.model | Ruta de importación absoluta al modelo (cadena), por ejemplo: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Para obtener más información, consulte la documentación de [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) del modelo. |
+| params.model_params | Parámetros de modelo, consulte la [API sklearn (mapa/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentación para obtener más información. |
 | node_instance.process(data_message_from_previous_node) | El método `process()` toma DataMsg del nodo anterior y aplica la transformación. Esto depende del nodo actual que se esté utilizando. |
 
 ### Split
@@ -142,4 +141,4 @@ msg5 = splitter.process(msg4)
 
 ## Pasos siguientes
 
-El siguiente paso es crear nodos para utilizarlos en la puntuación de un modelo de aprendizaje automático en tiempo real. Para obtener más información, consulte la [Guía del usuario del bloc de notas de aprendizaje automático en tiempo real](./rtml-authoring-notebook.md).
+El siguiente paso es crear nodos para utilizarlos en la puntuación de un modelo de aprendizaje automático en tiempo real. Para obtener más información, consulte la [Guía del usuario del ordenador portátil de aprendizaje automático en tiempo real](./rtml-authoring-notebook.md).

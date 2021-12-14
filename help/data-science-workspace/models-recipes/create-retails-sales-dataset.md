@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales de Adobe Experience Platform Data Science Workspace. Una vez finalizado, el esquema de ventas minoristas y los conjuntos de datos estarán disponibles para usted y los miembros de su organización de IMS en Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -67,11 +67,11 @@ El esquema de ventas minoristas y los conjuntos de datos se crean automáticamen
        kernel_type: Python
    ```
 
-   - `platform_gateway` : La ruta de acceso base para llamadas a API. No modifique este valor.
-   - `ims_token` : Su `{ACCESS_TOKEN}` va aquí.
-   - `ingest_data` : Para este tutorial, establezca este valor como `"True"` para crear los esquemas y conjuntos de datos de ventas minoristas. Un valor de `"False"` solo creará los esquemas.
-   - `build_recipe_artifacts` : Para este tutorial, establezca este valor como `"False"` para evitar que la secuencia de comandos genere un artefacto de fórmula.
-   - `kernel_type` : Tipo de ejecución del artefacto de fórmula. Deje este valor como `Python` if `build_recipe_artifacts` se configura como `"False"`, en caso contrario, especifique el tipo de ejecución correcto.
+   - `platform_gateway`: La ruta de acceso base para llamadas a API. No modifique este valor.
+   - `ims_token`: Su `{ACCESS_TOKEN}` va aquí.
+   - `ingest_data`: Para este tutorial, establezca este valor como `"True"` para crear los esquemas y conjuntos de datos de ventas minoristas. Un valor de `"False"` solo creará los esquemas.
+   - `build_recipe_artifacts`: Para este tutorial, establezca este valor como `"False"` para evitar que la secuencia de comandos genere un artefacto de fórmula.
+   - `kernel_type`: Tipo de ejecución del artefacto de fórmula. Deje este valor como `Python` if `build_recipe_artifacts` se configura como `"False"`, en caso contrario, especifique el tipo de ejecución correcto.
 
 4. En el `Titles` , proporcione la siguiente información según corresponda para los datos de muestra de ventas minoristas, guarde y cierre el archivo después de que se hayan realizado las ediciones. Ejemplo que se muestra a continuación:
 
