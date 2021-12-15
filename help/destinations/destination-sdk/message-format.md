@@ -2,7 +2,7 @@
 description: Esta página trata el formato de mensaje y la transformación del perfil en los datos exportados de Adobe Experience Platform a los destinos.
 title: Formato del mensaje
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
 source-wordcount: '1981'
 ht-degree: 2%
@@ -15,21 +15,21 @@ ht-degree: 2%
 
 Para comprender el formato de mensaje y la configuración de perfil y el proceso de transformación en el lado del Adobe, familiarícese con los siguientes conceptos de Experience Platform:
 
-* **Modelo de datos de experiencia (XDM)**. [Información general ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es) de XDM y   [Cómo crear un esquema de XDM en Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
-* **Clase**. [Cree y edite clases en la interfaz de usuario](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
-* **Mapa de identidades**. El mapa de identidad representa un mapa de todas las identidades de los usuarios finales en Adobe Experience Platform. Consulte `xdm:identityMap` en el [diccionario del campo XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
-* **SegmentMembership**. El atributo [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM informa de los segmentos a los que pertenece un perfil. Para los tres valores diferentes del campo `status`, lea la documentación del grupo de campos [Segment Membership Details schema group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
+* **Modelo de datos de experiencia (XDM)**. [Información general de XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es) y  [Cómo crear un esquema XDM en Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
+* **Clase**. [Crear y editar clases en la interfaz de usuario](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
+* **Mapa de identidades**. El mapa de identidad representa un mapa de todas las identidades de los usuarios finales en Adobe Experience Platform. Consulte `xdm:identityMap` en el [Diccionario de campo XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
+* **SegmentMembership**. La variable [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) El atributo XDM informa de los segmentos a los que pertenece un perfil. Para los tres valores diferentes de la variable `status` , lea la documentación en [Grupo de campos de esquema Detalles de pertenencia a segmentos](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
 ## Información general {#overview}
 
-Utilice el contenido de esta página junto con el resto de las [opciones de configuración para destinos de socio](./configuration-options.md). Esta página trata el formato de mensaje y la transformación del perfil en los datos exportados de Adobe Experience Platform a los destinos. La otra página trata aspectos específicos sobre cómo conectar y autenticarse en el destino.
+Use el contenido de esta página junto con el resto de la variable [opciones de configuración para destinos de socio](./configuration-options.md). Esta página trata el formato de mensaje y la transformación del perfil en los datos exportados de Adobe Experience Platform a los destinos. La otra página trata aspectos específicos sobre cómo conectar y autenticarse en el destino.
 
 Adobe Experience Platform exporta datos a un número significativo de destinos, en varios formatos de datos. Algunos ejemplos de tipos de destino son plataformas publicitarias (Google), redes sociales (Facebook) y ubicaciones de almacenamiento en la nube (Amazon S3, Azure Event Hubs).
 
 El Experience Platform puede ajustar el formato de mensaje de los perfiles exportados para que coincidan con el formato esperado de su parte. Para comprender esta personalización, son importantes los siguientes conceptos:
 * El esquema XDM de origen (1) y destino (2) en Adobe Experience Platform
 * El formato de mensaje esperado en el lado del socio (3) y
-* La capa de transformación entre el esquema XDM y el formato de mensaje esperado, que puede definir creando una [plantilla de transformación de mensaje](./message-format.md#using-templating).
+* La capa de transformación entre el esquema XDM y el formato de mensaje esperado, que puede definir creando un [plantilla de transformación de mensaje](./message-format.md#using-templating).
 
 ![Transformación de esquema a JSON](./assets/transformations-3-steps.png)
 
@@ -41,11 +41,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Esquema XDM de origen (1)**: Este elemento hace referencia al esquema que utilizan los clientes en Experience Platform. En Experience Platform, en el [paso de asignación](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) del flujo de trabajo de activación de destino, los clientes asignarían campos desde su esquema de origen al esquema de destino del destino (2).
+**Esquema XDM de origen (1)**: Este elemento hace referencia al esquema que utilizan los clientes en Experience Platform. En Experience Platform, en la variable [paso de asignación](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) del flujo de trabajo de activación de destino, los clientes asignarían campos desde su esquema de origen al esquema de destino del destino (2).
 
-**Esquema XDM de Target (2)**: En función del esquema estándar JSON (3) del formato esperado del destino, puede definir atributos e identidades de perfil en el esquema XDM de destino. Puede hacerlo en la configuración de destinos, en los objetos [schemaConfig](./destination-configuration.md#schema-configuration) y [identityNamespaces](./destination-configuration.md#identities-and-attributes).
+**Esquema XDM de Target (2)**: En función del esquema estándar JSON (3) del formato esperado del destino, puede definir atributos e identidades de perfil en el esquema XDM de destino. Puede hacerlo en la configuración de destinos, en la [schemaConfig](./destination-configuration.md#schema-configuration) y [identityNamespaces](./destination-configuration.md#identities-and-attributes) objetos.
 
-**Esquema estándar JSON de los atributos de perfil de destino (3)**: Este elemento representa un  [esquema ](https://json-schema.org/learn/miscellaneous-examples.html) JSON de todos los atributos de perfil que admite su plataforma y sus tipos (por ejemplo: objeto, cadena, matriz). Los campos de ejemplo que su destino podría admitir son `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, etc. Necesita una [plantilla de transformación de mensajes](./message-format.md#using-templating) para adaptar los datos exportados fuera del Experience Platform al formato esperado.
+**Esquema estándar JSON de los atributos de perfil de destino (3)**: Este elemento representa un [esquema JSON](https://json-schema.org/learn/miscellaneous-examples.html) de todos los atributos de perfil que admite su plataforma y sus tipos (por ejemplo: objeto, cadena, matriz). Los campos de ejemplo con los que podría ser compatible su destino podrían ser `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, etc. Necesita un [plantilla de transformación de mensaje](./message-format.md#using-templating) para adaptar los datos exportados fuera del Experience Platform al formato esperado.
 
 Basándose en las transformaciones de esquema descritas anteriormente, así es como cambia una configuración de perfil entre el esquema XDM de origen y un esquema de muestra en el lado del socio:
 
@@ -56,11 +56,11 @@ Basándose en las transformaciones de esquema descritas anteriormente, así es c
 
 ## Introducción: transformación de tres atributos básicos {#getting-started}
 
-Para demostrar el proceso de transformación del perfil, el ejemplo siguiente utiliza tres atributos de perfil comunes en Adobe Experience Platform: **nombre**, **apellidos** y **dirección de correo electrónico**.
+Para demostrar el proceso de transformación del perfil, el ejemplo siguiente utiliza tres atributos de perfil comunes en Adobe Experience Platform: **nombre**, **apellido** y **dirección de correo electrónico**.
 
 >[!NOTE]
 >
->El cliente asigna los atributos del esquema XDM de origen al esquema XDM de socio en la interfaz de usuario de Adobe Experience Platform, en el paso **Mapping** del [activate destination workflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
+>El cliente asigna los atributos del esquema XDM de origen al esquema XDM de socio en la interfaz de usuario de Adobe Experience Platform, en la variable **Asignación** del [activar flujo de trabajo de destino](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 Supongamos que su plataforma puede recibir un formato de mensaje como:
 
@@ -89,13 +89,13 @@ Teniendo en cuenta el formato de mensaje, las transformaciones correspondientes 
 
 ## Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a segmentos {#using-templating}
 
-Adobe utiliza un lenguaje de plantilla similar a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) para transformar los campos del esquema XDM en un formato compatible con el destino.
+Adobe utiliza un idioma de plantilla similar al [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) para transformar los campos del esquema XDM en un formato compatible con el destino.
 
 Esta sección proporciona varios ejemplos de cómo se realizan estas transformaciones: desde el esquema XDM de entrada, a través de la plantilla y la salida a formatos de carga útil aceptados por el destino. Los ejemplos siguientes se presentan con una complejidad creciente, como se indica a continuación:
 
-1. Ejemplos de transformación simples. Aprenda cómo funciona la plantilla con transformaciones simples para los campos [Atributos de perfil](./message-format.md#attributes), [Pertenencia a segmento](./message-format.md#segment-membership) y [Identidad](./message-format.md#identities).
-2. Se han aumentado los ejemplos de complejidad de las plantillas que combinan los campos anteriores: [Cree una plantilla que envíe segmentos e identidades](./message-format.md#segments-and-identities) y [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](./message-format.md#segments-identities-attributes).
-3. Plantillas que incluyen la clave de agregación. Cuando se utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) en la configuración de destino, el Experience Platform agrupa los perfiles exportados a su destino según criterios como ID de segmento, estado del segmento o áreas de nombres de identidad.
+1. Ejemplos de transformación simples. Aprenda cómo funciona la plantilla con transformaciones sencillas para [Atributos de perfil](./message-format.md#attributes), [Pertenencia a segmentos](./message-format.md#segment-membership)y [Identidad](./message-format.md#identities) campos.
+2. Se han aumentado los ejemplos de complejidad de las plantillas que combinan los campos anteriores: [Crear una plantilla que envíe segmentos e identidades](./message-format.md#segments-and-identities) y [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](./message-format.md#segments-identities-attributes).
+3. Plantillas que incluyen la clave de agregación. Cuando utilice [agregación configurable](./destination-configuration.md#configurable-aggregation) en la configuración de destino, el Experience Platform agrupa los perfiles exportados a su destino según criterios como ID de segmento, estado del segmento o áreas de nombres de identidad.
 
 ### Atributos de perfil {#attributes}
 
@@ -103,7 +103,7 @@ Para transformar los atributos de perfil exportados a su destino, consulte los e
 
 >[!IMPORTANT]
 >
->Para obtener una lista de todos los atributos de perfil disponibles en Adobe Experience Platform, consulte el [diccionario de campos XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
+>Para obtener una lista de todos los atributos de perfil disponibles en Adobe Experience Platform, consulte la [Diccionario de campo XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 
 
 **Entrada**
@@ -140,7 +140,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no permitidos, como las comillas dobles `""` antes de insertar la plantilla en la [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo omitir las comillas dobles, consulte el capítulo 9 en el [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que utilice, debe omitir los caracteres ilegales, como las comillas dobles `""` antes de insertar la plantilla en el [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo escapar entre comillas dobles, consulte el capítulo 9 en la sección [JSON estándar](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -182,8 +182,8 @@ Perfil 2:
 
 ### Pertenencia a segmentos {#segment-membership}
 
-El atributo [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM informa de los segmentos a los que pertenece un perfil.
-Para los tres valores diferentes del campo `status`, lea la documentación del grupo de campos [Segment Membership Details schema group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
+La variable [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) El atributo XDM informa de los segmentos a los que pertenece un perfil.
+Para los tres valores diferentes de la variable `status` , lea la documentación en [Grupo de campos de esquema Detalles de pertenencia a segmentos](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
 **Entrada**
 
@@ -238,7 +238,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no permitidos, como las comillas dobles `""` antes de insertar la plantilla en la [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo omitir las comillas dobles, consulte el capítulo 9 en el [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que utilice, debe omitir los caracteres ilegales, como las comillas dobles `""` antes de insertar la plantilla en el [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo escapar entre comillas dobles, consulte el capítulo 9 en la sección [JSON estándar](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -297,7 +297,7 @@ Perfil 2:
 
 ### Identidades {#identities}
 
-Para obtener información sobre las identidades en el Experience Platform, consulte la [descripción general del área de nombres de identidad](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=es).
+Para obtener información sobre las identidades en el Experience Platform, consulte la [Información general del área de nombres de identidad](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=es).
 
 **Entrada**
 
@@ -342,7 +342,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no permitidos, como las comillas dobles `""` antes de insertar la plantilla en la [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo omitir las comillas dobles, consulte el capítulo 9 en el [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que utilice, debe omitir los caracteres ilegales, como las comillas dobles `""` antes de insertar la plantilla en el [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo escapar entre comillas dobles, consulte el capítulo 9 en la sección [JSON estándar](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -480,7 +480,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no permitidos, como las comillas dobles `""` antes de insertar la plantilla en la [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo omitir las comillas dobles, consulte el capítulo 9 en el [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que utilice, debe omitir los caracteres ilegales, como las comillas dobles `""` antes de insertar la plantilla en el [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo escapar entre comillas dobles, consulte el capítulo 9 en la sección [JSON estándar](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -528,7 +528,7 @@ Perfil 2:
 
 **Resultado**
 
-El `json` siguiente representa los datos exportados fuera de Adobe Experience Platform.
+La variable `json` a continuación, representa los datos exportados desde Adobe Experience Platform.
 
 ```json
 {
@@ -662,7 +662,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no permitidos, como las comillas dobles `""` antes de insertar la plantilla en la [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo omitir las comillas dobles, consulte el capítulo 9 en el [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que utilice, debe omitir los caracteres ilegales, como las comillas dobles `""` antes de insertar la plantilla en el [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo escapar entre comillas dobles, consulte el capítulo 9 en la sección [JSON estándar](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -720,7 +720,7 @@ Perfil 2:
 
 **Resultado**
 
-El `json` siguiente representa los datos exportados fuera de Adobe Experience Platform.
+La variable `json` a continuación, representa los datos exportados desde Adobe Experience Platform.
 
 ```json
 {
@@ -778,13 +778,13 @@ El `json` siguiente representa los datos exportados fuera de Adobe Experience Pl
 
 ### Incluya la clave de agregación en la plantilla para acceder a los perfiles exportados agrupados por varios criterios {#template-aggregation-key}
 
-Cuando utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) en la configuración de destino, puede agrupar los perfiles exportados a su destino según criterios como ID de segmento, alias de segmento, pertenencia a segmentos o áreas de nombres de identidad.
+Cuando utilice [agregación configurable](./destination-configuration.md#configurable-aggregation) en la configuración de destino, puede agrupar los perfiles exportados a su destino según criterios como ID de segmento, alias de segmento, pertenencia a segmentos o áreas de nombres de identidad.
 
 En la plantilla de transformación de mensajes, puede acceder a las claves de agregación mencionadas anteriormente, como se muestra en los ejemplos de las secciones siguientes. Utilice las claves de agregación para estructurar el mensaje HTTP exportado fuera del Experience Platform de modo que coincida con el formato y los límites de velocidad esperados por el destino.
 
 #### Utilizar la clave de agregación de ID de segmento en la plantilla {#aggregation-key-segment-id}
 
-Si utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, los perfiles de los mensajes HTTP exportados a su destino se agrupan por ID de segmento. Consulte a continuación cómo puede acceder al ID de segmento en la plantilla.
+Si usa [agregación configurable](./destination-configuration.md#configurable-aggregation) y establezca `includeSegmentId` como true, los perfiles de los mensajes HTTP exportados a su destino se agrupan por ID de segmento. Consulte a continuación cómo puede acceder al ID de segmento en la plantilla.
 
 **Entrada**
 
@@ -881,9 +881,9 @@ Perfil 4:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no permitidos, como las comillas dobles `""` antes de insertar la plantilla en la [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo omitir las comillas dobles, consulte el capítulo 9 en el [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que utilice, debe omitir los caracteres ilegales, como las comillas dobles `""` antes de insertar la plantilla en el [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo escapar entre comillas dobles, consulte el capítulo 9 en la sección [JSON estándar](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Observe a continuación cómo se utiliza `audienceId` en la plantilla para acceder a los ID de segmento. En este ejemplo se asume que utiliza `audienceId` para la pertenencia a segmentos en su taxonomía de destino. En su lugar, puede utilizar cualquier otro nombre de campo, según su propia taxonomía.
+Aviso a continuación: `audienceId` se utiliza en la plantilla para acceder a los ID de segmento. Este ejemplo asume que se utiliza `audienceId` para la pertenencia a segmentos en su taxonomía de destino. En su lugar, puede utilizar cualquier otro nombre de campo, según su propia taxonomía.
 
 ```python
 {
@@ -935,7 +935,7 @@ Cuando se exportan a su destino, los perfiles se dividen en dos grupos, según s
 
 #### Utilizar la clave de agregación de alias de segmento en la plantilla {#aggregation-key-segment-alias}
 
-Si utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, también puede acceder a los alias de segmento en la plantilla.
+Si usa [agregación configurable](./destination-configuration.md#configurable-aggregation) y establezca `includeSegmentId` como true, también puede acceder al alias del segmento en la plantilla.
 
 Añada la línea siguiente a la plantilla para acceder a los perfiles exportados agrupados por alias de segmento.
 
@@ -945,7 +945,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### Utilizar la clave de agregación del estado del segmento en la plantilla {#aggregation-key-segment-status}
 
-Si utiliza [agregación configurable](./destination-configuration.md#configurable-aggregation) y establece `includeSegmentId` y `includeSegmentStatus` como verdadero, puede acceder al estado del segmento en la plantilla. De este modo, puede agrupar perfiles en los mensajes HTTP exportados a su destino en función de si se deben añadir o eliminar perfiles de segmentos.
+Si usa [agregación configurable](./destination-configuration.md#configurable-aggregation) y establezca `includeSegmentId` y `includeSegmentStatus` como true, puede acceder al estado del segmento en la plantilla. De este modo, puede agrupar perfiles en los mensajes HTTP exportados a su destino en función de si se deben añadir o eliminar perfiles de segmentos.
 
 Los valores posibles son:
 
@@ -961,7 +961,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Utilizar la clave de agregación del área de nombres de identidad en la plantilla {#aggregation-key-identity}
 
-A continuación, se muestra un ejemplo en el que la [agregación configurable](./destination-configuration.md#configurable-aggregation) de la configuración de destino se configura para agregar perfiles exportados por áreas de nombres de identidad, en el formulario `"namespaces": ["email", "phone"]` y `"namespaces": ["GAID", "IDFA"]`. Consulte el parámetro `groups` en la [referencia de la API de configuración de destino](./destination-configuration-api.md) para obtener más información sobre esta agrupación.
+A continuación se muestra un ejemplo en el que la variable [agregación configurable](./destination-configuration.md#configurable-aggregation) en la configuración de destino se configura para agregar perfiles exportados por áreas de nombres de identidad, en el formulario `"namespaces": ["email", "phone"]` y `"namespaces": ["GAID", "IDFA"]`. Consulte la `groups` en el [referencia de la API de configuración de destino](./destination-configuration-api.md) para obtener más información sobre esta agrupación.
 
 **Entrada**
 
@@ -1033,7 +1033,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no permitidos, como las comillas dobles `""` antes de insertar la plantilla en la [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo omitir las comillas dobles, consulte el capítulo 9 en el [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que utilice, debe omitir los caracteres ilegales, como las comillas dobles `""` antes de insertar la plantilla en el [configuración del servidor de destino](./server-and-template-configuration.md#template-specs). Para obtener más información sobre cómo escapar entre comillas dobles, consulte el capítulo 9 en la sección [JSON estándar](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 Observe que `input.aggregationKey.identityNamespaces` se utiliza en la plantilla siguiente
 
@@ -1117,13 +1117,13 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 ### Referencia: Contexto y funciones utilizadas en las plantillas de transformación {#reference}
 
-El contexto proporcionado a la plantilla contiene `input` (los perfiles/datos que se exportan en esta llamada) y `destination` (datos sobre el destino al que ese Adobe envía datos, válidos para todos los perfiles).
+El contexto proporcionado a la plantilla contiene `input`  (los perfiles o datos que se exportan en esta llamada) y `destination` (datos sobre el destino al que envía los datos ese Adobe, válidos para todos los perfiles).
 
 En la tabla siguiente se describen las funciones de los ejemplos anteriores.
 
 | Función | Descripción |
 |---------|----------|
-| `input.profile` | El perfil, representado como [JsonNode](http://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Sigue el esquema XDM de socio mencionado anteriormente en esta página. |
+| `input.profile` | El perfil, representado como un [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Sigue el esquema XDM de socio mencionado anteriormente en esta página. |
 | `destination.segmentAliases` | Asigne ID de segmentos en el espacio de nombres de Adobe Experience Platform para segmentar alias en el sistema del socio. |
 | `destination.segmentNames` | Asigne nombres de segmento en el espacio de nombres de Adobe Experience Platform a nombres de segmento en el sistema del socio. |
 | `addedSegments(listOfSegments)` | Devuelve solo los segmentos que tienen estado `realized` o `existing`. |

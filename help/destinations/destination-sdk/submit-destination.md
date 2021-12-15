@@ -1,9 +1,10 @@
 ---
 description: Esta página proporciona toda la información que debe enviar para su revisión a un destino creado con Destination SDK.
 title: Enviar para revisión un destino creado en Destination SDK
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -211,10 +212,6 @@ Proporcione el ID de la solicitud de publicación para su destino. Para obtener 
 ## Documentación de destino PR (solicitud de extracción) para integraciones producidas
 
 Si es un proveedor de software independiente (ISV) o un integrador de sistemas (SI) que crea un [integración de productos](./overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](./docs-framework/documentation-instructions.md) para crear una página de documentación del producto para el destino. Como parte del proceso de envío, proporcione la solicitud de extracción (PR) para la documentación de destino.
-
-Algunos ejemplos de PR de socios de integración existentes son:
-* [Documentación de destino de Yahoo](https://github.com/AdobeDocs/experience-platform.en/pull/110);
-* [Documentación de destino de la aeronave PR](https://github.com/AdobeDocs/experience-platform.en/pull/54).
 
 ## Logotipo de destino
 
