@@ -1,14 +1,15 @@
 ---
-title: Secretos de reenvío de eventos
+title: Configuración de secretos en el reenvío de eventos
 description: Aprenda a configurar secretos en la interfaz de usuario de recopilación de datos para autenticarse en los puntos finales utilizados en las propiedades de reenvío de eventos.
-source-git-commit: 43d593cd8adf5a29c3283a328c24b0994009222b
+exl-id: eefd87d7-457f-422a-b159-5b428da54189
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1449'
 ht-degree: 1%
 
 ---
 
-# Secretos de reenvío de eventos
+# Configuración de secretos en el reenvío de eventos
 
 En el reenvío de eventos, un secreto es un recurso que representa una credencial de autenticación para otro sistema, lo que permite el intercambio seguro de datos. Los secretos solo se pueden crear dentro de las propiedades de reenvío de eventos.
 

@@ -4,9 +4,9 @@ user-guide-title: Ayuda de etiquetas
 breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
-source-git-commit: 7368b6e69522cce9343df78c31a712bfdbfedfe3
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '382'
 ht-degree: 87%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 87%
 * Reenvío de eventos {#event-forwarding}
    * [Información general](./ui/event-forwarding/overview.md)
    * [Primeros pasos](./ui/event-forwarding/getting-started.md)
-   * [Secretos](./ui/event-forwarding/secrets.md)
+   * [Configuración de secretos](./ui/event-forwarding/secrets.md)
 * Administración {#admin}
    * [Información general](./ui/administration/overview.md)
    * [Compañías y propiedades](./ui/administration/companies-and-properties.md)
