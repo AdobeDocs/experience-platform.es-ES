@@ -5,9 +5,9 @@ title: Información general del servicio de segmentación
 topic-legacy: overview
 description: Obtenga información sobre el servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1507'
 ht-degree: 0%
 
 ---
@@ -61,18 +61,6 @@ Para obtener más información sobre la segmentación de flujo continuo, lea la 
 Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, este segmento se guarda y se almacena para que pueda exportarlo para utilizarlo.
 
 Los segmentos por lotes se evalúan automáticamente cada 24 horas. Si desea evaluar un segmento de lote bajo demanda, puede utilizar un trabajo de segmento. Para obtener más información sobre los trabajos de segmentos, lea la [documentación de trabajos de segmentos](./api/segment-jobs.md).
-
-**Segmentación incremental (beta)**
-
-Los segmentos por lotes se evalúan cada 24 horas. Sin embargo, para los segmentos existentes, la segmentación incremental mantiene los segmentos actualizados durante hasta una hora.
-
-La segmentación incremental se ejecuta con nuevos datos que llegan al almacén de perfiles. Sin embargo, se aplican las siguientes advertencias para la segmentación incremental:
-
-- Para cualquier segmento nuevo o modificado recientemente, los perfiles con datos nuevos empezarán a clasificarse en la siguiente ejecución incremental. Sin embargo, los perfiles sin cambios se pondrán al día en el siguiente trabajo de segmentación por lotes completo.
-- Los segmentos de varias entidades se actualizarán en la segmentación incremental. Si hay actualizaciones de entidad, cualquier perfil con nuevos datos empezará a utilizarlos en la siguiente ejecución incremental. Sin embargo, los perfiles sin cambios se pondrán al día en el siguiente trabajo de segmentación por lotes completo.
-- Los eventos que se pierdan en el periodo de tiempo de un segmento se reconciliarán en el siguiente trabajo de segmentación por lotes completo.
-
-Para obtener información sobre cómo evaluar segmentos, consulte la [tutorial de evaluación de segmentos](./tutorials/evaluate-a-segment.md).
 
 ### Segmentación de Edge
 
