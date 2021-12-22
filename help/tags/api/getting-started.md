@@ -1,7 +1,8 @@
 ---
 title: Introducción a la API de Reactor
 description: Obtenga información sobre cómo empezar a usar la API de Reactor, incluidos los pasos para generar las credenciales de acceso necesarias.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 97%
@@ -20,7 +21,7 @@ Esta guía explica cómo utilizar la consola de desarrollador de Adobe para reco
 
 ## Obtener acceso de desarrollador a Adobe Experience Platform
 
-Para poder generar valores de autenticación para la API de Reactor, debe tener acceso de desarrollador a Experience Platform. Para obtener acceso de desarrollador, siga los pasos iniciales en el [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=es). Una vez que llegue al paso Generar credenciales de acceso en Adobe Developer Console, vuelva a este tutorial para generar las credenciales específicas de la API de Reactor.
+Para poder generar valores de autenticación para la API de Reactor, debe tener acceso de desarrollador a Experience Platform. Para obtener acceso de desarrollador, siga los pasos iniciales en el [tutorial de autenticación de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Una vez que llegue al paso Generar credenciales de acceso en Adobe Developer Console, vuelva a este tutorial para generar las credenciales específicas de la API de Reactor.
 
 ## Generar credenciales de acceso
 
