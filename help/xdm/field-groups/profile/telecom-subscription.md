@@ -4,31 +4,32 @@ solution: Experience Platform
 title: Grupo de campos de esquema de suscripción de telecomunicaciones
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema de suscripción a telecomunicaciones.
-source-git-commit: 19675e4042c28061a4b2ed4e68374d5e09216ba1
+exl-id: 00c20081-09d0-425c-9894-0f957558bd43
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 5%
+source-wordcount: '730'
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Grupo de campos ] Subscriptionschema de telecomunicaciones
+# [!UICONTROL Suscripción a Telecom] grupo de campos de esquema
 
 >[!NOTE]
 >
->Los nombres de varios grupos de campos de esquema han cambiado. Para obtener más información, consulte el documento [field group name updates](../name-updates.md) .
+>Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento en [actualizaciones del nombre del grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL La ] suscripción de telecomunicaciones es un grupo de campos de esquema estándar para la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) clase que describe el plan de suscripción de telecomunicaciones de un cliente, incluidos los precios, los paquetes y las suscripciones a productos individuales.
+[!UICONTROL Suscripción a Telecom] es un grupo de campos de esquema estándar para la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) que describe el plan de suscripción de telecomunicaciones de un cliente, incluidos los precios, paquetes y suscripciones a productos individuales.
 
-El grupo de campos proporciona un único campo de tipo de objeto, `telecomSubscription`, cuyas propiedades se describen a continuación.
+El grupo de campos proporciona un único campo de tipo objeto, `telecomSubscription`, cuyas propiedades se describen a continuación.
 
 ![Estructura de suscripción de telecomunicaciones](../../images/field-groups/telecom-subscription/structure.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `internetSubscription` | Matriz de objetos | Describe los detalles del plan de suscripción a Internet, como el límite de datos, el tipo de conexión y los detalles de velocidad. Consulte la sección [más abajo](#internetSubscription) para obtener más información. |
-| `landlineSubscription` | Matriz de objetos | Describe los detalles del plan de suscripción de línea fija, incluidas las características seleccionadas, los minutos y los planes de marcado. Consulte la sección [más abajo](#landlineSubscription) para obtener más información. |
-| `mediaSubscription` | Matriz de objetos | Describe los detalles del plan de suscripción de medios, incluido el número de canales y los servicios de flujo incluidos. Consulte la sección [más abajo](#mediaSubscription) para obtener más información. |
-| `mobileSubscription` | Matriz de objetos | Describe los detalles del plan de suscripción móvil, incluido el número de líneas, las tasas de datos, el coste, etc. Consulte la sección [más abajo](#mobileSubscription) para obtener más información. |
+| `internetSubscription` | Matriz de objetos | Describe los detalles del plan de suscripción a Internet, como el límite de datos, el tipo de conexión y los detalles de velocidad. Consulte la [sección inferior](#internetSubscription) para obtener más información. |
+| `landlineSubscription` | Matriz de objetos | Describe los detalles del plan de suscripción de línea fija, incluidas las características seleccionadas, los minutos y los planes de marcado. Consulte la [sección inferior](#landlineSubscription) para obtener más información. |
+| `mediaSubscription` | Matriz de objetos | Describe los detalles del plan de suscripción de medios, incluido el número de canales y los servicios de flujo incluidos. Consulte la [sección inferior](#mediaSubscription) para obtener más información. |
+| `mobileSubscription` | Matriz de objetos | Describe los detalles del plan de suscripción móvil, incluido el número de líneas, las tasas de datos, el coste, etc. Consulte la [sección inferior](#mobileSubscription) para obtener más información. |
 | `primarySubscriber` | [[!UICONTROL Persona]](../../data-types/person.md) | Describe el propietario de la suscripción. |
 | `bundleName` | Cadena | Captura el nombre de cualquier tipo de paquete de suscripción en el que esté inscrito el cliente, como `Internet + Media`. |
 | `primaryPartyID` | Cadena | Un identificador de la persona principal responsable de la suscripción, que normalmente podría ser su número de teléfono del dispositivo. |
@@ -42,7 +43,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 ## `internetSubscription` {#internetSubscription}
 
-`internetSubscription` proporciona una matriz de objetos. A continuación se describe la estructura de cada objeto.
+`internetSubscription` se proporciona como una matriz de objetos. A continuación se describe la estructura de cada objeto.
 
 ![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
@@ -59,7 +60,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 ## `landlineSubscription` {#landlineSubscription}
 
-`landlineSubscription` proporciona una matriz de objetos. A continuación se describe la estructura de cada objeto.
+`landlineSubscription` se proporciona como una matriz de objetos. A continuación se describe la estructura de cada objeto.
 
 ![landlineSubscription](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
@@ -70,7 +71,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 | `callBlocking` | Booleano | Indica si las características de suscripción de línea fija incluyen el bloqueo de llamadas. |
 | `callForwarding` | Booleano | Indica si las funciones de suscripción de línea fija incluyen el reenvío de llamadas. |
 | `callWaiting` | Booleano | Indica si las características de suscripción de línea fija incluyen llamada en espera. |
-| `callerID` | Booleano | Indica si las funciones de suscripción de línea fija incluyen el identificador de llamada. |
+| `callerID` | Booleano | Indica si las funciones de suscripción de línea fija incluyen el ID de llamador. |
 | `internationalCalling` | Booleano | Indica si las características de suscripción de línea fija incluyen llamadas internacionales. |
 | `minutes` | Número entero | Número de minutos mensuales disponibles dentro de la suscripción. |
 | `threeWayCalling` | Booleano | Indica si las funciones de suscripción de línea fija incluyen llamadas tridireccionales. |
@@ -82,7 +83,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 ## `mediaSubscription` {#mediaSubscription}
 
-`mediaSubscription` proporciona una matriz de objetos. A continuación se describe la estructura de cada objeto.
+`mediaSubscription` se proporciona como una matriz de objetos. A continuación se describe la estructura de cada objeto.
 
 ![mediaSubscription](../../images/field-groups/telecom-subscription/mediaSubscription.png)
 
@@ -96,7 +97,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 ## `mobileSubscription` {#mobileSubscription}
 
-`mobileSubscription` proporciona una matriz de objetos. A continuación se describe la estructura de cada objeto.
+`mobileSubscription` se proporciona como una matriz de objetos. A continuación se describe la estructura de cada objeto.
 
 ![mobileSubscription](../../images/field-groups/telecom-subscription/mobileSubscription.png)
 
@@ -109,4 +110,3 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 | `portedNumber` | Booleano | Indica si el cliente transfiere su número desde otro operador. |
 
 {style=&quot;table-layout:auto&quot;}
-
