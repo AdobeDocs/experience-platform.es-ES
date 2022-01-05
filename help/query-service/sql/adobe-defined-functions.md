@@ -5,8 +5,7 @@ title: Funciones SQL definidas por Adobe en Query Service
 topic-legacy: functions
 description: Este documento proporciona información sobre las funciones definidas por el Adobe disponibles en Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 63b6236a7e3689afb2ebaa763349b3102697424e
 workflow-type: tm+mt
 source-wordcount: '2913'
 ht-degree: 2%
@@ -15,17 +14,17 @@ ht-degree: 2%
 
 # Funciones SQL definidas por Adobe en Query Service
 
-Las funciones definidas por el Adobe, en este caso denominadas ADF, son funciones creadas previamente en Adobe Experience Platform Query Service que ayudan a realizar tareas comunes relacionadas con el negocio en los datos [!DNL Experience Event]. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) y [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) como las que se encuentran en Adobe Analytics.
+Las funciones definidas por el Adobe, en este caso denominadas ADF, son funciones creadas previamente en el servicio de consulta de Adobe Experience Platform que ayudan a realizar tareas comunes relacionadas con el negocio en [!DNL Experience Event] datos. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) y [Atribución](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=es) como los que se encuentran en Adobe Analytics.
 
-Este documento proporciona información sobre las funciones definidas por Adobe disponibles en [!DNL Query Service].
+Este documento proporciona información sobre las funciones definidas por el Adobe disponibles en [!DNL Query Service].
 
 ## Funciones de ventana {#window-functions}
 
 La mayoría de la lógica empresarial requiere la recopilación de los puntos de contacto de un cliente y su pedido por tiempo. Este soporte es proporcionado por [!DNL Spark] SQL en forma de funciones de ventana. Las funciones Window son parte de SQL estándar y son compatibles con muchos otros motores SQL.
 
-Una función window actualiza una agregación y devuelve un solo elemento para cada fila del subconjunto ordenado. La función de agregación más básica es `SUM()`. `SUM()` toma las filas y le da un total. Si, en su lugar, aplica `SUM()` a una ventana, convirtiéndola en una función de ventana, recibirá una suma acumulativa con cada fila.
+Una función window actualiza una agregación y devuelve un solo elemento para cada fila del subconjunto ordenado. La función de agregación más básica es `SUM()`. `SUM()` toma las filas y le da un total. Si lo prefiere, debe aplicar `SUM()` en una ventana, convirtiéndola en una función de ventana, recibirá una suma acumulativa con cada fila.
 
-La mayoría de los [!DNL Spark] asistentes SQL son funciones de ventana que actualizan cada fila de la ventana, con el estado de esa fila añadido.
+La mayoría de [!DNL Spark] Los asistentes SQL son funciones de ventana que actualizan cada fila de la ventana, con el estado de esa fila añadido.
 
 **Sintaxis de la consulta**
 
@@ -41,11 +40,11 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 ## Sessionization
 
-Cuando se trabaja con datos [!DNL Experience Event] procedentes de un sitio web, una aplicación móvil, un sistema de respuesta de voz interactivo o cualquier otro canal de interacción con el cliente, es útil que los eventos se puedan agrupar en un período de actividad relacionado. Normalmente, tiene una intención específica de impulsar su actividad como investigar un producto, pagar una factura, comprobar el saldo de la cuenta, rellenar una solicitud, etc.
+Cuando trabaje con [!DNL Experience Event] datos procedentes de un sitio web, una aplicación móvil, un sistema de respuesta de voz interactivo o cualquier otro canal de interacción con el cliente, ayuda a que los eventos se puedan agrupar en torno a un periodo de actividad relacionado. Normalmente, tiene una intención específica de impulsar su actividad como investigar un producto, pagar una factura, comprobar el saldo de la cuenta, rellenar una solicitud, etc.
 
 Esta agrupación, o sesionización de datos, ayuda a asociar los eventos para descubrir más contexto sobre la experiencia del cliente.
 
-Para obtener más información sobre la sesionización en Adobe Analytics, consulte la documentación sobre [sesiones con reconocimiento de contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html.
+Para obtener más información sobre la sesionización en Adobe Analytics, consulte la documentación de [sesiones según el contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Sintaxis de la consulta**
 
@@ -58,7 +57,7 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | Campo de marca de tiempo encontrado en el conjunto de datos. |
 | `{EXPIRATION_IN_SECONDS}` | Número de segundos necesarios entre eventos para clasificar el final de la sesión actual y el inicio de una nueva sesión. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -94,7 +93,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `session` . La columna `session` consta de los siguientes componentes:
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `session` para abrir el Navegador. La variable `session` se compone de los siguientes componentes:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -103,7 +102,7 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 | Parámetros | Descripción |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | La diferencia en tiempo, en segundos, entre el registro actual y el registro anterior. |
-| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la `PARTITION BY` de la función de ventana. |
+| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la variable `PARTITION BY` de la función window. |
 | `{IS_NEW}` | Un booleano que se utiliza para identificar si un registro es el primero de una sesión. |
 | `{DEPTH}` | Profundidad del registro actual dentro de la sesión. |
 
@@ -122,7 +121,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Campo de marca de tiempo encontrado en el conjunto de datos. |
 | `{TEST_EXPRESSION}` | Expresión con la que desea comprobar los campos de los datos. Por ejemplo, `application.launches > 0`. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -159,7 +158,7 @@ SELECT
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `session` . La columna `session` consta de los siguientes componentes:
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `session` para abrir el Navegador. La variable `session` se compone de los siguientes componentes:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -168,7 +167,7 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 | Parámetros | Descripción |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | La diferencia en tiempo, en segundos, entre el registro actual y el registro anterior. |
-| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la `PARTITION BY` de la función de ventana. |
+| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la variable `PARTITION BY` de la función window. |
 | `{IS_NEW}` | Un booleano que se utiliza para identificar si un registro es el primero de una sesión. |
 | `{DEPTH}` | Profundidad del registro actual dentro de la sesión. |
 
@@ -187,7 +186,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Campo de marca de tiempo encontrado en el conjunto de datos. |
 | `{TEST_EXPRESSION}` | Expresión con la que desea comprobar los campos de los datos. Por ejemplo, `application.launches > 0`. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -224,7 +223,7 @@ SELECT
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `session` . La columna `session` consta de los siguientes componentes:
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `session` para abrir el Navegador. La variable `session` se compone de los siguientes componentes:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -233,7 +232,7 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 | Parámetros | Descripción |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | La diferencia en tiempo, en segundos, entre el registro actual y el registro anterior. |
-| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la `PARTITION BY` de la función de ventana. |
+| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la variable `PARTITION BY` de la función window. |
 | `{IS_NEW}` | Un booleano que se utiliza para identificar si un registro es el primero de una sesión. |
 | `{DEPTH}` | Profundidad del registro actual dentro de la sesión. |
 
@@ -241,13 +240,13 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 
 Asociar las acciones de los clientes al éxito es una parte importante para comprender los factores que influyen en las experiencias de los clientes. Los siguientes ADF admiten atribución de primer toque y atribución de último toque con diferentes configuraciones de caducidad.
 
-Para obtener más información sobre la atribución en Adobe Analytics, consulte la [información general de la Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html) en la guía del panel Atribución [!DNL Analytics].
+Para obtener más información sobre la atribución en Adobe Analytics, consulte la [Información general sobre la Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html) en el [!DNL Analytics] Guía del panel Atribución.
 
 ### Atribución de primer contacto
 
-Esta consulta devuelve el valor de atribución de primer contacto y los detalles de un solo canal en el conjunto de datos [!DNL Experience Event] de destino. La consulta devuelve un objeto `struct` con el valor de primer contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
+Esta consulta devuelve el valor de atribución de primer contacto y los detalles de un solo canal en el destino [!DNL Experience Event] conjunto de datos. La consulta devuelve un valor `struct` objeto con el valor de primer contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
 
-Esta consulta es útil si desea ver qué interacción provocó una serie de acciones del cliente. En el ejemplo que se muestra a continuación, el código de seguimiento inicial (`em:946426`) de los datos [!DNL Experience Event] se atribuye al 100% (`1.0`) responsabilidad por las acciones del cliente, ya que fue la primera interacción.
+Esta consulta es útil si desea ver qué interacción provocó una serie de acciones del cliente. En el ejemplo que se muestra a continuación, el código de seguimiento inicial (`em:946426`) en el [!DNL Experience Event] Los datos se atribuyen al 100% (`1.0`) responsabilidad por las acciones del cliente, ya que fue la primera interacción.
 
 **Sintaxis de la consulta**
 
@@ -261,7 +260,7 @@ ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PAR
 | `{CHANNEL_NAME}` | Etiqueta del objeto devuelto. |
 | `{CHANNEL_VALUE}` | La columna o campo que es el canal de destino de la consulta. |
 
-Puede encontrar una explicación de los parámetros dentro de `OVER()` en la sección [window functions section](#window-functions).
+Una explicación de los parámetros de `OVER()` se encuentra en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -295,7 +294,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `first_touch` . La columna `first_touch` consta de los siguientes componentes:
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `first_touch` para abrir el Navegador. La variable `first_touch` se compone de los siguientes componentes:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -303,16 +302,16 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{NAME}` | El `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
-| `{VALUE}` | El valor de `{CHANNEL_VALUE}` que es el primer contacto en el [!DNL Experience Event] |
-| `{TIMESTAMP}` | Marca de tiempo del [!DNL Experience Event] donde se produjo el primer contacto. |
+| `{NAME}` | La variable `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
+| `{VALUE}` | El valor de `{CHANNEL_VALUE}` que es el primer toque de la variable [!DNL Experience Event] |
+| `{TIMESTAMP}` | La marca de tiempo del [!DNL Experience Event] donde se produjo el primer contacto. |
 | `{FRACTION}` | Atribución del primer contacto, expresada como fracción decimal. |
 
 ### Atribución de último contacto
 
-Esta consulta devuelve el valor de atribución de último contacto y los detalles para un solo canal en el conjunto de datos [!DNL Experience Event] de destinatario. La consulta devuelve un objeto `struct` con el valor de último contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
+Esta consulta devuelve el valor de atribución de último contacto y los detalles de un solo canal en el destino [!DNL Experience Event] conjunto de datos. La consulta devuelve un valor `struct` objeto con el valor de último contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
 
-Esta consulta es útil si desea ver la interacción final en una serie de acciones del cliente. En el ejemplo que se muestra a continuación, el código de seguimiento del objeto devuelto es la última interacción de cada registro [!DNL Experience Event]. A cada código se le atribuye una responsabilidad del 100 % (`1.0`) por las acciones del cliente, ya que fue la última interacción.
+Esta consulta es útil si desea ver la interacción final en una serie de acciones del cliente. En el ejemplo que se muestra a continuación, el código de seguimiento del objeto devuelto es la última interacción de cada [!DNL Experience Event] registro. Cada código se atribuye al 100% (`1.0`) responsabilidad por las acciones del cliente, ya que fue la última interacción.
 
 **Sintaxis de la consulta**
 
@@ -326,7 +325,7 @@ ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PART
 | `{CHANNEL_NAME}` | Etiqueta del objeto devuelto. |
 | `{CHANNEL_VALUE}` | La columna o campo que es el canal de destino de la consulta. |
 
-Puede encontrar una explicación de los parámetros dentro de `OVER()` en la sección [window functions section](#window-functions).
+Una explicación de los parámetros de `OVER()` se encuentra en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -359,7 +358,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `last_touch` . La columna `last_touch` consta de los siguientes componentes:
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `last_touch` para abrir el Navegador. La variable `last_touch` se compone de los siguientes componentes:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -367,16 +366,16 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 
 | Parámetros | Descripción |
 | ---------- | ----------- |
-| `{NAME}` | El `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
-| `{VALUE}` | El valor de `{CHANNEL_VALUE}` que es el último contacto en el [!DNL Experience Event] |
-| `{TIMESTAMP}` | Marca de tiempo del [!DNL Experience Event] donde se utilizó el `channelValue`. |
+| `{NAME}` | La variable `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
+| `{VALUE}` | El valor de `{CHANNEL_VALUE}` que es el último toque de la variable [!DNL Experience Event] |
+| `{TIMESTAMP}` | La marca de tiempo del [!DNL Experience Event] donde `channelValue` se ha utilizado. |
 | `{FRACTION}` | Atribución del último contacto, expresada como fracción decimal. |
 
 ### Atribución de primer contacto con condición de caducidad
 
-Esta consulta devuelve el valor de atribución de primer contacto y los detalles de un solo canal en el conjunto de datos [!DNL Experience Event] de destino, que caduca después o antes de una condición. La consulta devuelve un objeto `struct` con el valor de primer contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
+Esta consulta devuelve el valor de atribución de primer contacto y los detalles de un solo canal en el destino [!DNL Experience Event] conjunto de datos, que caduca después o antes de una condición. La consulta devuelve un valor `struct` objeto con el valor de primer contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
 
-Esta consulta es útil si desea ver qué interacción produjo una serie de acciones del cliente dentro de una parte del conjunto de datos [!DNL Experience Event] determinada por una condición de su elección. En el ejemplo que se muestra a continuación, se registra una compra (`commerce.purchases.value IS NOT NULL`) en cada uno de los cuatro días mostrados en los resultados (15, 21, 23 y 29 de julio) y el código de seguimiento inicial de cada día se atribuye un 100% (`1.0`) de responsabilidad por las acciones del cliente.
+Esta consulta es útil si desea ver qué interacción generó una serie de acciones del cliente dentro de una parte del [!DNL Experience Event] conjunto de datos determinado por una condición de su elección. En el ejemplo que se muestra a continuación, se registra una compra (`commerce.purchases.value IS NOT NULL`) en cada uno de los cuatro días mostrados en los resultados (15, 21, 23 y 29 de julio) y el código de seguimiento inicial en cada día se atribuye al 100% (`1.0`) responsabilidad por las acciones del cliente.
 
 **Sintaxis de la consulta**
 
@@ -392,9 +391,9 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
 | `{CHANNEL_NAME}` | Etiqueta del objeto devuelto. |
 | `{CHANNEL_VALUE}` | La columna o campo que es el canal de destino de la consulta. |
 | `{EXP_CONDITION}` | Condición que determina el punto de caducidad del canal. |
-| `{EXP_BEFORE}` | Un booleano que indica si el canal caduca antes o después de que se cumpla la condición especificada, `{EXP_CONDITION}`. Esto se habilita principalmente para las condiciones de caducidad de una sesión, para garantizar que no se seleccione el primer contacto de una sesión anterior. De forma predeterminada, este valor se establece en `false`. |
+| `{EXP_BEFORE}` | Un booleano que indica si el canal caduca antes o después de la condición especificada, `{EXP_CONDITION}`, se cumple. Esto se habilita principalmente para las condiciones de caducidad de una sesión, para garantizar que no se seleccione el primer contacto de una sesión anterior. De forma predeterminada, este valor se establece en `false`. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -427,7 +426,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `first_touch` . La columna `first_touch` consta de los siguientes componentes:
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `first_touch` para abrir el Navegador. La variable `first_touch` se compone de los siguientes componentes:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -435,14 +434,14 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 
 | Parámetros | Descripción |
 | ---------- | ----------- |
-| `{NAME}` | El `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
-| `{VALUE}` | El valor de `CHANNEL_VALUE}` que es el primer contacto en el [!DNL Experience Event], antes del `{EXP_CONDITION}`. |
-| `{TIMESTAMP}` | Marca de tiempo del [!DNL Experience Event] donde se produjo el primer contacto. |
+| `{NAME}` | La variable `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
+| `{VALUE}` | El valor de `CHANNEL_VALUE}` que es el primer toque de la variable [!DNL Experience Event], antes de que `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | La marca de tiempo del [!DNL Experience Event] donde se produjo el primer contacto. |
 | `{FRACTION}` | Atribución del primer contacto, expresada como fracción decimal. |
 
 ### Atribución de primer contacto con tiempo de espera de caducidad
 
-Esta consulta devuelve el valor de atribución de primer contacto y los detalles de un solo canal en el conjunto de datos [!DNL Experience Event] de destino durante un período de tiempo especificado. La consulta devuelve un objeto `struct` con el valor de primer contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
+Esta consulta devuelve el valor de atribución de primer contacto y los detalles de un solo canal en el destino [!DNL Experience Event] conjunto de datos de un período de tiempo especificado. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
 
 Esta consulta es útil si desea ver qué interacción, dentro de un intervalo de tiempo seleccionado, llevó a una acción del cliente. En el ejemplo que se muestra a continuación, el primer contacto devuelto para cada acción del cliente es la primera interacción dentro de los siete días anteriores (`expTimeout = 86400 * 7`).
 
@@ -461,7 +460,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(
 | `{CHANNEL_VALUE}` | La columna o campo que es el canal de destino de la consulta. |
 | `{EXP_TIMEOUT}` | Período de tiempo previo al evento de canal, en segundos, que la consulta busca un evento de primer contacto. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -494,7 +493,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `first_touch` . La columna `first_touch` consta de los siguientes componentes:
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `first_touch` para abrir el Navegador. La variable `first_touch` se compone de los siguientes componentes:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -502,16 +501,16 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 
 | Parámetros | Descripción |
 | ---------- | ----------- |
-| `{NAME}` | El `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
-| `{VALUE}` | El valor de `CHANNEL_VALUE}` que es el primer contacto dentro del intervalo especificado `{EXP_TIMEOUT}`. |
-| `{TIMESTAMP}` | Marca de tiempo del [!DNL Experience Event] donde se produjo el primer contacto. |
+| `{NAME}` | La variable `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
+| `{VALUE}` | El valor de `CHANNEL_VALUE}` que es el primer contacto dentro del `{EXP_TIMEOUT}` intervalo. |
+| `{TIMESTAMP}` | La marca de tiempo del [!DNL Experience Event] donde se produjo el primer contacto. |
 | `{FRACTION}` | Atribución del primer contacto, expresada como fracción decimal. |
 
 ### Atribución de último contacto con condición de caducidad
 
-Esta consulta devuelve el valor de atribución de último contacto y los detalles de un solo canal en el conjunto de datos [!DNL Experience Event] de destinatario, que caduca después o antes de una condición. La consulta devuelve un objeto `struct` con el valor de último contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
+Esta consulta devuelve el valor de atribución de último contacto y los detalles de un solo canal en el destino [!DNL Experience Event] conjunto de datos, que caduca después o antes de una condición. La consulta devuelve un valor `struct` objeto con el valor de último contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
 
-Esta consulta es útil si desea ver la última interacción en una serie de acciones del cliente dentro de una parte del conjunto de datos [!DNL Experience Event] determinado por una condición de su elección. En el ejemplo que se muestra a continuación, se registra una compra (`commerce.purchases.value IS NOT NULL`) en cada uno de los cuatro días mostrados en los resultados (15, 21, 23 y 29 de julio) y el último código de seguimiento de cada día se atribuye el 100% (`1.0`) de responsabilidad por las acciones del cliente.
+Esta consulta es útil si desea ver la última interacción en una serie de acciones del cliente dentro de una parte de la variable [!DNL Experience Event] conjunto de datos determinado por una condición de su elección. En el ejemplo que se muestra a continuación, se registra una compra (`commerce.purchases.value IS NOT NULL`) en cada uno de los cuatro días mostrados en los resultados (15, 21, 23 y 29 de julio) y el último código de seguimiento de cada día se atribuye al 100% (`1.0`) responsabilidad por las acciones del cliente.
 
 **Sintaxis de la consulta**
 
@@ -527,7 +526,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
 | `{CHANNEL_NAME}` | Etiqueta del objeto devuelto. |
 | `{CHANNEL_VALUE}` | La columna o campo que es el canal de destino de la consulta. |
 | `{EXP_CONDITION}` | Condición que determina el punto de caducidad del canal. |
-| `{EXP_BEFORE}` | Un booleano que indica si el canal caduca antes o después de que se cumpla la condición especificada, `{EXP_CONDITION}`. Esto se habilita principalmente para las condiciones de caducidad de una sesión, para garantizar que no se seleccione el primer contacto de una sesión anterior. De forma predeterminada, este valor se establece en `false`. |
+| `{EXP_BEFORE}` | Un booleano que indica si el canal caduca antes o después de la condición especificada, `{EXP_CONDITION}`, se cumple. Esto se habilita principalmente para las condiciones de caducidad de una sesión, para garantizar que no se seleccione el primer contacto de una sesión anterior. De forma predeterminada, este valor se establece en `false`. |
 
 **Consulta de ejemplo**
 
@@ -560,7 +559,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `last_touch` . La columna `last_touch` consta de los siguientes componentes:
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `last_touch` para abrir el Navegador. La variable `last_touch` se compone de los siguientes componentes:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -568,14 +567,14 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 
 | Parámetros | Descripción |
 | ---------- | ----------- |
-| `{NAME}` | El `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
-| `{VALUE}` | El valor de `{CHANNEL_VALUE}` que es el último contacto en [!DNL Experience Event], antes de `{EXP_CONDITION}`. |
-| `{TIMESTAMP}` | Marca de tiempo del [!DNL Experience Event] donde se produjo el último contacto. |
+| `{NAME}` | La variable `{CHANNEL_NAME}`, que se introdujo como etiqueta en el ADF. |
+| `{VALUE}` | El valor de `{CHANNEL_VALUE}` que es el último toque de la variable [!DNL Experience Event], antes de que `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | La marca de tiempo del [!DNL Experience Event] donde ocurrió el último contacto. |
 | `{FRACTION}` | Atribución del último contacto, expresada como fracción decimal. |
 
 ### Atribución de último contacto con tiempo de espera de caducidad
 
-Esta consulta devuelve el valor de atribución de último contacto y los detalles de un solo canal en el conjunto de datos [!DNL Experience Event] de destino durante un período de tiempo especificado. La consulta devuelve un objeto `struct` con el valor de último contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
+Esta consulta devuelve el valor de atribución de último contacto y los detalles de un solo canal en el destino [!DNL Experience Event] conjunto de datos de un período de tiempo especificado. La consulta devuelve un valor `struct` objeto con el valor de último contacto, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
 
 Esta consulta es útil si desea ver la última interacción dentro de un intervalo de tiempo seleccionado. En el ejemplo que se muestra a continuación, el último contacto devuelto para cada acción del cliente es la interacción final en los siete días siguientes (`expTimeout = 86400 * 7`).
 
@@ -590,11 +589,11 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{TIMESTAMP}` | Campo de marca de tiempo encontrado en el conjunto de datos. |
-| `{CHANNEL_NAME}` | Etiqueta del objeto devuelto |
+| `{CHANNEL_NAME}` | The label for the returned object |
 | `{CHANNEL_VALUE}` | La columna o campo que es el canal de destino de la consulta |
 | `{EXP_TIMEOUT}` | La ventana de tiempo después del evento de canal, en segundos, que la consulta busca un evento de último contacto. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -627,7 +626,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `last_touch` . La columna `last_touch` consta de los siguientes componentes:
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `last_touch` para abrir el Navegador. La variable `last_touch` se compone de los siguientes componentes:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -635,9 +634,9 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `
 
 | Parámetros | Descripción |
 | ---------- | ----------- |
-| `{NAME}` | El `{CHANNEL_NAME}`, introducido como etiqueta en el ADF. |
-| `{VALUE}` | El valor de `{CHANNEL_VALUE}` que es el último contacto dentro del intervalo especificado `{EXP_TIMEOUT}` |
-| `{TIMESTAMP}` | Marca de tiempo del [!DNL Experience Event] donde se produjo el último contacto |
+| `{NAME}` | La variable `{CHANNEL_NAME}`, introducida como etiqueta en el ADF. |
+| `{VALUE}` | El valor de `{CHANNEL_VALUE}` que es el último contacto dentro del `{EXP_TIMEOUT}` intervalo |
+| `{TIMESTAMP}` | La marca de tiempo del [!DNL Experience Event] donde se produjo el último contacto |
 | `{FRACTION}` | Atribución del último contacto, expresada como fracción decimal. |
 
 ## Control de rutas
@@ -648,7 +647,7 @@ Los siguientes ADF admiten el establecimiento de vistas de rutas desde sus relac
 
 ### Página anterior
 
-Determina el valor anterior de un campo concreto a un número definido de pasos dentro de la ventana. Observe en el ejemplo que la función `WINDOW` está configurada con un fotograma de `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` configurando el ADF para que observe la fila actual y todas las filas posteriores.
+Determina el valor anterior de un campo concreto a un número definido de pasos dentro de la ventana. Observe en el ejemplo que la variable `WINDOW` se configura con un fotograma de `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` configurar el ADF para que observe la fila actual y todas las filas posteriores.
 
 **Sintaxis de la consulta**
 
@@ -660,9 +659,9 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | La columna o campo del evento. |
 | `{SHIFT}` | (Opcional) El número de eventos fuera del evento actual. De forma predeterminada, el valor es 1. |
-| `{IGNORE_NULLS}` | (Opcional) Un booleano que indica si se deben ignorar los valores nulos `{KEY}`. De forma predeterminada, el valor es `false`. |
+| `{IGNORE_NULLS}` | (Opcional) Un booleano que indica si es nulo `{KEY}` Los valores de deben ignorarse. De forma predeterminada, el valor es `false`. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -695,11 +694,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `previous_page` . El valor dentro de la columna `previous_page` se basa en el `{KEY}` utilizado en el ADF.
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `previous_page` para abrir el Navegador. El valor dentro de la variable `previous_page` se basa en la variable `{KEY}` se utiliza en el ADF.
 
 ### Página siguiente
 
-Determina el siguiente valor de un campo concreto a un número definido de pasos de la ventana. Observe en el ejemplo que la función `WINDOW` está configurada con un fotograma de `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` configurando el ADF para que observe la fila actual y todas las filas posteriores.
+Determina el siguiente valor de un campo concreto a un número definido de pasos de la ventana. Observe en el ejemplo que la variable `WINDOW` se configura con un fotograma de `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` configurar el ADF para que observe la fila actual y todas las filas posteriores.
 
 **Sintaxis de la consulta**
 
@@ -711,9 +710,9 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | La columna o campo del evento. |
 | `{SHIFT}` | (Opcional) El número de eventos fuera del evento actual. De forma predeterminada, el valor es 1. |
-| `{IGNORE_NULLS}` | (Opcional) Un booleano que indica si se deben ignorar los valores nulos `{KEY}`. De forma predeterminada, el valor es `false`. |
+| `{IGNORE_NULLS}` | (Opcional) Un booleano que indica si es nulo `{KEY}` Los valores de deben ignorarse. De forma predeterminada, el valor es `false`. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -747,7 +746,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `previous_page` . El valor dentro de la columna `previous_page` se basa en el `{KEY}` utilizado en el ADF.
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `previous_page` para abrir el Navegador. El valor dentro de la variable `previous_page` se basa en la variable `{KEY}` se utiliza en el ADF.
 
 ## Tiempo intermedio
 
@@ -771,7 +770,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | La expresión para clasificar el evento anterior. |
 | `{TIME_UNIT}` | Unidad de salida. El valor posible incluye días, horas, minutos y segundos. De forma predeterminada, el valor es seconds. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -815,7 +814,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `average_minutes_since_registration` . El valor de la columna `average_minutes_since_registration` es la diferencia en el tiempo entre los eventos actuales y los anteriores. La unidad de tiempo se definió anteriormente en `{TIME_UNIT}`.
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `average_minutes_since_registration` para abrir el Navegador. El valor dentro de la variable `average_minutes_since_registration` es la diferencia en tiempo entre los eventos actual y anterior. La unidad de tiempo se definió anteriormente en la variable `{TIME_UNIT}`.
 
 ### Intervalo de tiempo entre la siguiente coincidencia
 
@@ -831,9 +830,9 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | --------- | ----------- |
 | `{TIMESTAMP}` | Campo de marca de hora que se encuentra en el conjunto de datos rellenado en todos los eventos. |
 | `{EVENT_DEFINITION}` | La expresión para clasificar el siguiente evento. |
-| `{TIME_UNIT}` | (Opcional) Unidad de salida. El valor posible incluye días, horas, minutos y segundos. De forma predeterminada, el valor es seconds. |
+| `{TIME_UNIT}` | (Optional) The unit of output. Possible value include days, hours, minutes, and seconds. By default, the value is seconds. |
 
-Puede encontrar una explicación de los parámetros dentro de la función `OVER()` en la sección [window functions ](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -877,11 +876,11 @@ LIMIT 10
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la columna `average_minutes_until_order_confirmation` . El valor dentro de la columna `average_minutes_until_order_confirmation` es la diferencia en el tiempo entre los eventos actual y siguiente. La unidad de tiempo se definió anteriormente en `{TIME_UNIT}`.
+Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `average_minutes_until_order_confirmation` para abrir el Navegador. El valor dentro de la variable `average_minutes_until_order_confirmation` es la diferencia en tiempo entre los eventos actual y siguiente. La unidad de tiempo se definió anteriormente en la variable `{TIME_UNIT}`.
 
 ## Pasos siguientes
 
-Con las funciones descritas aquí, puede escribir consultas para acceder a sus propios [!DNL Experience Event] conjuntos de datos mediante [!DNL Query Service]. Para obtener más información sobre la creación de consultas en [!DNL Query Service], consulte la documentación sobre [creación de consultas](../best-practices/writing-queries.md).
+Con las funciones descritas aquí, puede escribir consultas para acceder a las suyas [!DNL Experience Event] conjuntos de datos mediante [!DNL Query Service]. Para obtener más información sobre la creación de consultas en [!DNL Query Service], consulte la documentación de [creación de consultas](../best-practices/writing-queries.md).
 
 ## Recursos adicionales
 
