@@ -5,27 +5,27 @@ title: Tipo de datos de dirección de correo electrónico
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de la dirección de correo electrónico.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: fe6abe468025ab3373f802954aedceeb1af625fe
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '236'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Tipo de datos de ] direcciones de correo electrónico
+# [!UICONTROL Dirección de correo electrónico] tipo de datos
 
-[!UICONTROL La ] dirección de correo electrónico es un tipo de datos XDM estándar que describe los detalles de una dirección de correo electrónico.
+[!UICONTROL Dirección de correo electrónico] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe los detalles de una dirección de correo electrónico.
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
 | Propiedad | Descripción |
 | --- | --- |
-| `address` | La dirección técnica del correo electrónico tal como se define comúnmente en RFC2822 y los estándares posteriores (por ejemplo, `name@domain.com`). |
-| `label` | Información de visualización adicional que puede estar disponible. Por ejemplo, si un correo electrónico tiene una visualización de dirección enriquecida de Microsoft Outlook de `John Smith smithjr@company.uk`, `John Smith` se colocará en este campo. |
-| `primary` | Indica si esta es la dirección de correo electrónico principal del individuo. Un perfil solo puede tener una dirección de correo electrónico `primary` en un momento determinado. |
+| `address` | La dirección técnica del correo electrónico tal como se define comúnmente en RFC2822 y las normas posteriores (por ejemplo, `name@domain.com`).<br><br>En XDM, las direcciones de correo electrónico deben contener un dominio de nivel superior válido para pasar la validación. Consulte lo siguiente [documento](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) para obtener una lista completa de los dominios de nivel superior válidos definidos por la Autoridad de números asignados de Internet (IANA). |
+| `label` | Información de visualización adicional que puede estar disponible. Por ejemplo, si un correo electrónico tiene una dirección enriquecida de Microsoft Outlook, se muestra la `John Smith smithjr@company.uk`, `John Smith` se colocarían en este campo. |
+| `primary` | Indica si esta es la dirección de correo electrónico principal del individuo. Un perfil solo puede tener uno `primary` dirección de correo electrónico en un momento determinado. |
 | `status` | Indica si la dirección de correo electrónico se puede utilizar actualmente |
-| `statusReason` | Una descripción del `status` actual. |
-| `type` | La forma en que la cuenta se relaciona con la persona (como `work` o `personal`). |
+| `statusReason` | Una descripción de la `status`. |
+| `type` | La forma en que la cuenta se relaciona con la persona (por ejemplo, `work` o `personal`). |
 
 {style=&quot;table-layout:auto&quot;}
 
