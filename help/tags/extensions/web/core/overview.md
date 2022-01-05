@@ -2,10 +2,10 @@
 title: Información general de la extensión Core
 description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
 workflow-type: tm+mt
-source-wordcount: '5362'
-ht-degree: 90%
+source-wordcount: '5492'
+ht-degree: 87%
 
 ---
 
@@ -128,9 +128,13 @@ Se activa el evento si se produce un tipo de evento personalizado. Las funciones
 
 Se activa el evento si cambia un elemento de datos especificado. Debe proporcionar un nombre para el elemento de datos. Puede seleccionar el elemento de datos escribiendo su nombre en el campo de texto o seleccionando el icono de elemento de datos a la derecha del campo de texto y eligiendo de una lista proporcionada dentro del cuadro de diálogo que aparece.
 
-#### Direct Call
+#### Direct Call {#direct-call-event}
 
-El evento de llamada directa evita la detección de eventos y los sistemas de búsqueda. Las reglas de llamada directa son perfectas para situaciones en las que desea decir a Platform exactamente lo que está ocurriendo. Además, son también perfectas para cuando Platform no puede detectar un evento en el DOM, como con Adobe Flash. Especifique la cadena `_satellite.track` en el campo de texto del identificador.
+Un evento de llamada directa evita los sistemas de detección de eventos y búsqueda. Las reglas de Direct Call son perfectas para situaciones en las que desea decirle al sistema exactamente lo que está ocurriendo. Además, son ideales cuando el sistema no puede detectar un evento en el DOM.
+
+Al definir un evento de llamada directa, debe especificar una cadena que actuará como identificador de este evento. Si [acción de llamada directa de déclencheur](#direct-call-action) que contenga el mismo identificador se activa, todas las reglas de evento de llamada directa que escuchen ese identificador se ejecutarán.
+
+![Captura de pantalla de un evento de llamada directa en la interfaz de usuario de la recopilación de datos](../../../images/extensions/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -625,6 +629,14 @@ setTimeout(function() {
 }, 1000);
 </script>
 ```
+
+### Llamada directa de déclencheur {#direct-call-action}
+
+Esta acción déclencheur todas las reglas que utilizan una [evento de llamada directa](#direct-call-event). Al configurar la acción, debe proporcionar la cadena de identificador para el evento de llamada directa que desee almacenar en déclencheur. De forma opcional, también puede pasar datos al evento de llamada directa a través de un `detail` , que puede contener un conjunto personalizado de pares de clave-valor.
+
+![Captura de pantalla de una acción de llamada directa de Déclencheur en la interfaz de usuario de recopilación de datos](../../../images/extensions/core/direct-call-action.png)
+
+La acción se asigna directamente a la variable [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) en el `satellite` , a la que se puede acceder mediante código del lado del cliente.
 
 ## Tipos de Data Elements de Extensión principal
 
