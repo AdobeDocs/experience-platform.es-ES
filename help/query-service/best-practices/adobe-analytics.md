@@ -5,23 +5,22 @@ title: Consultas de ejemplo para datos de Adobe Analytics
 topic-legacy: queries
 description: Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en ExperienceEvents de XDM y se introducen en Adobe Experience Platform como conjuntos de datos para usted. Este documento describe una serie de casos de uso en los que el servicio de consulta de Adobe Experience Platform utiliza estos datos, y las consultas de ejemplo incluidas deben funcionar con sus conjuntos de datos de Adobe Analytics.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b140037ed5f055a8e7c583540910cc6b18bbf0bd
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1052'
 ht-degree: 1%
 
 ---
 
 # Consultas de ejemplo para datos de Adobe Analytics
 
-Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en datos que se ajustan a la clase [!DNL XDM ExperienceEvent] y se introducen en Adobe Experience Platform como conjuntos de datos.
+Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en datos que se ajustan al [!DNL XDM ExperienceEvent] e ingerida en Adobe Experience Platform como conjuntos de datos.
 
-Este documento describe una serie de casos de uso en los que Adobe Experience Platform [!DNL Query Service] hace uso de estos datos, incluidas las consultas de ejemplo, deberían funcionar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación sobre [Asignación de campos de Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obtener más información sobre la asignación a [!DNL Experience Events].
+Este documento describe una serie de casos de uso en los que Adobe Experience Platform [!DNL Query Service] utiliza estos datos, incluidas las consultas de ejemplo, que deben funcionar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación sobre [Asignación de campos de Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obtener más información sobre la asignación a [!DNL Experience Events].
 
 ## Primeros pasos
 
-Los ejemplos SQL de este documento requieren que edite el SQL y rellene los parámetros esperados para las consultas en función del conjunto de datos, el eVar, el evento o el lapso de tiempo que le interese evaluar. Proporcione parámetros donde vea `{ }` en los ejemplos SQL que siguen.
+Los ejemplos SQL de este documento requieren que edite el SQL y rellene los parámetros esperados para las consultas en función del conjunto de datos, el eVar, el evento o el lapso de tiempo que le interese evaluar. Proporcione parámetros donde quiera que vea `{ }` en los ejemplos SQL siguientes.
 
 ## Ejemplos SQL de uso común
 
@@ -119,6 +118,10 @@ GROUP BY Day, Hour
 ORDER BY Hour;
 ```
 
+## Anulación de duplicación
+
+El servicio de consulta de Adobe Experience Platform admite la deduplicación de datos. Consulte la [Anulación de duplicación de datos en la documentación del servicio de consulta](./deduplication.md) para obtener información sobre cómo generar nuevos valores en el momento de la consulta [!DNL Experience Event] conjuntos de datos.
+
 ## Variables de comercialización (sintaxis del producto)
 
 
@@ -128,9 +131,9 @@ En Adobe Analytics, los datos personalizados de nivel de producto se pueden reco
 
 Estas variables se denominan variables de comercialización de sintaxis de producto. Esto permite la recopilación de información, como una &quot;cantidad de descuento&quot; por producto o información sobre la &quot;ubicación en la página&quot; del producto en los resultados de búsqueda del cliente.
 
-Para obtener más información sobre el uso de la sintaxis del producto, lea la documentación de Adobe Analytics sobre la [implementación de eVars con sintaxis de producto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
+Para obtener más información sobre el uso de la sintaxis del producto, consulte la documentación de Adobe Analytics sobre [implementación de eVars con sintaxis de producto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
 
-Las secciones siguientes describen los campos XDM necesarios para acceder a las variables de comercialización en su conjunto de datos [!DNL Analytics] :
+Las secciones siguientes describen los campos XDM necesarios para acceder a las variables de comercialización de su [!DNL Analytics] conjunto de datos:
 
 #### eVars
 
@@ -152,7 +155,7 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 
 #### Consultas de ejemplo
 
-Esta es una consulta de ejemplo que devuelve un eVar y un evento de comercialización para el primer producto que se encuentra en `productListItems`.
+Esta es una consulta de ejemplo que devuelve un eVar y un evento de comercialización para el primer producto que se encuentra en la variable `productListItems`.
 
 ```sql
 SELECT
@@ -166,7 +169,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-Esta siguiente consulta explota la matriz `productListItems` y devuelve cada eVar y evento de comercialización por producto. El campo `_id` se incluye para mostrar la relación con la visita original. El valor `_id` es una clave principal única para el conjunto de datos.
+Esta siguiente consulta explota el `productListItems` y devuelve cada eVar y evento de comercialización por producto. La variable `_id` se incluye para mostrar la relación con la visita original. La variable `_id` es una clave principal única para el conjunto de datos.
 
 ```sql
 SELECT
@@ -201,14 +204,14 @@ Otro tipo de variable de comercialización que se encuentra en Adobe Analytics e
 
 1. Un usuario realiza una búsqueda interna de &quot;sombrero de invierno&quot; que establece Sintaxis de conversión habilitada eVar de comercialización 6 como &quot;búsqueda interna:sombrero de invierno&quot;
 2. El usuario hace clic en &quot;waffle beanie&quot; y aterriza en la página de detalles del producto.\
-   a. Aterrizaje aquí desencadena un evento `Product View` para el &quot;waffle beanie&quot; por $12.99.\
-   b. Como `Product View` está configurado como un evento de enlace, el producto &quot;waffle beanie&quot; está ahora enlazado al valor eVar6 de &quot;internal search:winter hat&quot;. Cada vez que se recopile el producto &quot;waffle beanie&quot;, se asociará a &quot;internal search:winter hat&quot; hasta que (1) se alcance la configuración de caducidad o (2) se establezca un nuevo valor de eVar6 y se produzca de nuevo el evento de enlace con ese producto.
-3. El usuario agrega el producto al carro de compras y activa el evento `Cart Add` .
+   a. Aquí el aterrizaje se dispara `Product View` para el evento &quot;waffle beanie&quot; por $12.99.\
+   b. Porque `Product View` se configura como un evento de enlace que el producto &quot;waffle beanie&quot; está ahora enlazado al valor eVar6 de &quot;internal search:winter hat&quot;. Cada vez que se recopile el producto &quot;waffle beanie&quot;, se asociará a &quot;internal search:winter hat&quot; hasta que (1) se alcance la configuración de caducidad o (2) se establezca un nuevo valor de eVar6 y se produzca de nuevo el evento de enlace con ese producto.
+3. El usuario agrega el producto al carro de compras y activa la variable `Cart Add` evento.
 4. El usuario realiza otra búsqueda interna de &quot;camisa de verano&quot; que establece la Sintaxis de conversión habilitada eVar de comercialización 6 en &quot;búsqueda interna:camisa de verano&quot;
 5. El usuario hace clic en &quot;camiseta deportiva&quot; y llega a la página de detalles del producto.\
-   a. Aterrizaje aquí dispara un evento `Product View` para &quot;camiseta deportiva por $19.99.\
-   b. El evento `Product View` sigue siendo nuestro evento de enlace, por lo que ahora el producto &quot;camiseta deportiva&quot; está ahora enlazado al valor eVar6 de &quot;búsqueda interna:camisa de verano&quot; y el producto anterior &quot;waffle beanie&quot; está todavía enlazado a un valor eVar6 de &quot;búsqueda interna:waffle beanie&quot;.
-6. El usuario agrega el producto al carro de compras y activa el evento `Cart Add` .
+   a. Aquí el aterrizaje se dispara `Product View` evento para &quot;camiseta deportiva por 19,99 $.\
+   b. La variable `Product View` el evento sigue siendo nuestro evento de enlace, por lo que ahora el producto &quot;camiseta deportiva&quot; está ahora enlazado al valor eVar6 de &quot;búsqueda interna:camisa de verano&quot; y el producto anterior &quot;waffle beanie&quot; está todavía enlazado a un valor eVar6 de &quot;búsqueda interna:waffle beanie&quot;.
+6. El usuario agrega el producto al carro de compras y activa la variable `Cart Add` evento.
 7. El usuario cierra la compra con ambos productos.
 
 En los informes, los pedidos, los ingresos, las vistas de productos y los adiciones al carro de compras se podrán registrar en relación con el eVar 6 y se alinearán con la actividad del producto enlazado.
@@ -218,9 +221,9 @@ En los informes, los pedidos, los ingresos, las vistas de productos y los adicio
 | búsqueda interna:camisa de verano | 19,99 | 1 | 1 | 1 |
 | búsqueda interna:sombrero de invierno | 12,99 | 1 | 1 | 1 |
 
-Para obtener más información sobre el uso de la sintaxis de conversión, lea la documentación de Adobe Analytics sobre la [implementación de eVars con sintaxis de conversión](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
+Para obtener más información sobre el uso de la sintaxis de conversión, consulte la documentación de Adobe Analytics sobre [implementación de eVars con sintaxis de conversión](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
-Estos son los campos XDM para producir la sintaxis de conversión en el conjunto de datos [!DNL Analytics]:
+Estos son los campos XDM para generar la sintaxis de conversión en la [!DNL Analytics] conjunto de datos:
 
 #### eVars
 
