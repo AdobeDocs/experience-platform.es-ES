@@ -2,9 +2,9 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/testing/destinationInstance/`, para comprobar si el destino está configurado correctamente y para verificar la integridad de los flujos de datos en el destino configurado.
 title: Operaciones de API de prueba de destino
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 52ce788f6947300b607dfc2efa09d028f9c2ddd7
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -321,7 +321,7 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la respuesta de API
 
 ## Gestión de errores de API {#api-error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) y [errores en el encabezado de la solicitud](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API del Destination SDK siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
 ## Pasos siguientes
 

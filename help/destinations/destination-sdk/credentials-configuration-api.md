@@ -2,9 +2,9 @@
 description: En esta página se describen todas las operaciones de API que se pueden realizar con el extremo de API `/authoring/credentials`.
 title: Operaciones de API de extremo de credenciales
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '712'
 ht-degree: 5%
 
 ---
@@ -400,8 +400,8 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta HTTP 
 
 ## Gestión de errores de API
 
-Los extremos de la API del SDK de destino siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) y [errores en el encabezado de la solicitud](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API del Destination SDK siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cuándo utilizar el extremo de credenciales y cómo configurar una configuración de credenciales utilizando la variable `/authoring/credentials` Punto final de API o `/authoring/destinations` punto final. Lectura [cómo utilizar el SDK de destino para configurar su destino](./configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración de su destino.
+Después de leer este documento, ahora sabe cuándo utilizar el extremo de credenciales y cómo configurar una configuración de credenciales utilizando la variable `/authoring/credentials` Punto final de API o `/authoring/destinations` punto final. Lectura [cómo usar Destination SDK para configurar el destino](./configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración de su destino.

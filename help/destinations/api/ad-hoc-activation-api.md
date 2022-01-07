@@ -5,13 +5,13 @@ title: (Beta) Activar segmentos de audiencia en destinos por lotes mediante la A
 description: Este artículo ilustra el flujo de trabajo completo para activar segmentos de audiencia mediante la API de activación ad hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
+exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1047'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc
 
@@ -185,4 +185,4 @@ Una respuesta correcta devuelve el estado HTTP 200.
 
 ## Gestión de errores de API
 
-Los extremos de la API del SDK de destino siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) y [errores en el encabezado de la solicitud](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API del Destination SDK siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.

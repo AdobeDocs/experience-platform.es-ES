@@ -1,9 +1,10 @@
 ---
 description: En esta página se describen todas las operaciones de API que se pueden realizar con el extremo de la API `/authoring/audience-templates`.
 title: Operaciones de API de extremo de metadatos de audiencia
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '879'
 ht-degree: 5%
 
 ---
@@ -12,17 +13,17 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->**Punto final** de API:  `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**Punto de conexión de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/audience-templates` . Para obtener una descripción de cuándo utilizar este extremo, lea [gestión de metadatos de audiencia](./audience-metadata-management.md).
+En esta página se enumeran y describen todas las operaciones de API que puede realizar mediante la `/authoring/audience-templates` extremo de API. Para obtener una descripción de cuándo usar este extremo, lea [gestión de metadatos de audiencia](./audience-metadata-management.md).
 
 ## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API de , incluido cómo obtener el permiso de creación de destino necesario y los encabezados necesarios.
+Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API de , incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
 
 ## Creación de una nueva plantilla de audiencia {#create}
 
-Puede crear una nueva plantilla de audiencia realizando una solicitud de POST al extremo `/authoring/audience-templates` .
+Puede crear una nueva plantilla de audiencia realizando una solicitud de POST al `/authoring/audience-templates` punto final.
 
 **Formato de API**
 
@@ -33,7 +34,7 @@ POST /authoring/audience-templates
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva plantilla de metadatos de audiencia, configurada por los parámetros proporcionados en la carga útil. La carga útil siguiente incluye todos los parámetros aceptados por el extremo `/authoring/audience-templates` . Tenga en cuenta que no es necesario agregar todos los parámetros en la llamada de y que la plantilla se puede personalizar, según los requisitos de la API.
+La siguiente solicitud crea una nueva plantilla de metadatos de audiencia, configurada por los parámetros proporcionados en la carga útil. La carga útil siguiente incluye todos los parámetros aceptados por la variable `/authoring/audience-templates` punto final. Tenga en cuenta que no es necesario agregar todos los parámetros en la llamada de y que la plantilla se puede personalizar, según los requisitos de la API.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -163,10 +164,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `httpMethod` | Cadena | Método utilizado en el punto final para crear, actualizar, eliminar o validar mediante programación el segmento o la audiencia en el destino. Por ejemplo: `POST`, `PUT`, `DELETE` |
 | `headers.header` | Cadena | Especifica los encabezados HTTP que deben agregarse a la llamada a la API. Por ejemplo, `"Content-Type"` |
 | `headers.value` | Cadena | Especifica el valor de los encabezados HTTP que deben agregarse a la llamada a la API. Por ejemplo, `"application/x-www-form-urlencoded"` |
-| `requestBody` | Cadena | Especifica el contenido del cuerpo del mensaje que se debe enviar a la API. Los parámetros que deben añadirse al objeto `requestBody` dependen de los campos que acepte la API. Para ver un ejemplo, consulte el [primer ejemplo de plantilla](./audience-metadata-management.md#example-1) en el documento de funcionalidad de metadatos de audiencia . |
-| `responseFields.name` | Cadena | Especifique los campos de respuesta que devuelve la API cuando se llama a . Para ver un ejemplo, consulte los [ejemplos de plantilla](./audience-metadata-management.md#examples) en el documento de funcionalidad de metadatos de audiencia . |
+| `requestBody` | Cadena | Especifica el contenido del cuerpo del mensaje que se debe enviar a la API. Los parámetros que deben añadirse a la variable `requestBody` dependen de los campos que acepte la API. Para ver un ejemplo, consulte la [primer ejemplo de plantilla](./audience-metadata-management.md#example-1) en el documento de funcionalidad de metadatos de audiencia . |
+| `responseFields.name` | Cadena | Especifique los campos de respuesta que devuelve la API cuando se llama a . Para ver un ejemplo, consulte la [ejemplos de plantilla](./audience-metadata-management.md#examples) en el documento de funcionalidad de metadatos de audiencia . |
 | `responseFields.value` | Cadena | Especifique el valor de los campos de respuesta que su API devuelve cuando se llama a . |
-| `responseErrorFields.name` | Cadena | Especifique los campos de respuesta que devuelve la API cuando se llama a . Para ver un ejemplo, consulte los ejemplos de plantillas [](./audience-metadata-management.md#examples) en el documento de funcionalidad de metadatos de audiencia . |
+| `responseErrorFields.name` | Cadena | Especifique los campos de respuesta que devuelve la API cuando se llama a . Para ver un ejemplo, consulte la [ ejemplos de plantilla](./audience-metadata-management.md#examples) en el documento de funcionalidad de metadatos de audiencia . |
 | `responseErrorFields.value` | Cadena | Analiza los mensajes de error devueltos en las respuestas de llamadas de API desde el destino. Estos mensajes de error se enviarán a los usuarios de la interfaz de usuario del Experience Platform. |
 | `validations.field` | Cadena | Indica si se deben ejecutar las validaciones para cualquier campo antes de que se realicen llamadas de API al destino. Por ejemplo, puede utilizar `{{validations.accountId}}` para validar el ID de cuenta del usuario. |
 | `validations.regex` | Cadena | Indica cómo se debe estructurar el campo para que pase la validación. |
@@ -179,7 +180,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la plantilla 
 
 ## Actualizar plantilla de audiencia {#update}
 
-Puede actualizar una plantilla de audiencia existente realizando una solicitud de PUT al extremo `/authoring/audience-templates` y proporcionando el ID de instancia de la plantilla de audiencia que desea actualizar. En el cuerpo de la llamada a , proporcione la plantilla actualizada.
+Puede actualizar una plantilla de audiencia existente realizando una solicitud de PUT al `/authoring/audience-templates` y proporcionando el ID de instancia de la plantilla de audiencia que desea actualizar. En el cuerpo de la llamada a , proporcione la plantilla actualizada.
 
 **Formato de API**
 
@@ -295,7 +296,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## Recuperar una lista de plantillas de audiencia {#retrieve-list}
 
-Puede recuperar una lista de todas las plantillas de audiencia para su organización IMS realizando una solicitud de GET al extremo `/authoring/audience-templates` .
+Puede recuperar una lista de todas las plantillas de audiencia para su organización IMS realizando una solicitud de GET al `/authoring/audience-templates` punto final.
 
 **Formato de API**
 
@@ -318,7 +319,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **Respuesta**
 
-La siguiente respuesta devuelve el estado HTTP 200 con una lista de plantillas de metadatos de audiencia a las que tiene acceso, según el ID de organización de IMS y el nombre del entorno limitado que ha utilizado. Un `instanceId` corresponde a la plantilla de un destino. La respuesta se trunca para su brevedad.
+La siguiente respuesta devuelve el estado HTTP 200 con una lista de plantillas de metadatos de audiencia a las que tiene acceso, según el ID de organización de IMS y el nombre del entorno limitado que ha utilizado. One `instanceId` corresponde a la plantilla de un destino. La respuesta se trunca para su brevedad.
 
 ```json
 {
@@ -426,7 +427,7 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de plantillas d
 
 ## Recuperar una plantilla de audiencia específica {#get}
 
-Puede recuperar información detallada sobre una plantilla de audiencia específica realizando una solicitud de GET al extremo `/authoring/audience-templates` y proporcionando el ID de instancia de la plantilla de audiencia que desea recuperar.
+Puede recuperar información detallada sobre una plantilla de audiencia específica realizando una solicitud de GET al `/authoring/audience-templates` y proporcionando el ID de instancia de la plantilla de audiencia que desea recuperar.
 
 **Formato de API**
 
@@ -563,7 +564,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Eliminar una plantilla de audiencia específica {#delete}
 
-Puede eliminar la plantilla de audiencia especificada realizando una solicitud de DELETE al extremo `/authoring/audience-templates` y proporcionando el ID de la plantilla de audiencia que desea eliminar en la ruta de solicitud.
+Puede eliminar la plantilla de audiencia especificada realizando una solicitud de DELETE al `/authoring/audience-templates` y proporcionando el ID de la plantilla de audiencia que desea eliminar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -573,7 +574,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | El `id` de la plantilla de audiencia que desea eliminar. |
+| `{INSTANCE_ID}` | La variable `id` de la plantilla de audiencia que desea eliminar. |
 
 **Solicitud**
 
@@ -591,8 +592,8 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta HTTP 
 
 ## Gestión de errores de API
 
-Los extremos de la API del SDK de destino siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte los [códigos de estado de API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) y [errores de encabezado de solicitud](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API del Destination SDK siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cuándo usar plantillas de metadatos de audiencia y cómo configurar una plantilla de metadatos de audiencia usando el extremo de API `/authoring/audience-templates`. Lea [cómo utilizar el SDK de destino para configurar su destino](./configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración de su destino.
+Después de leer este documento, ahora sabe cuándo usar plantillas de metadatos de audiencia y cómo configurar una plantilla de metadatos de audiencia usando la variable `/authoring/audience-templates` extremo de API. Lectura [cómo usar Destination SDK para configurar el destino](./configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración de su destino.
