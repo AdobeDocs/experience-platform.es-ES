@@ -6,32 +6,35 @@ title: Eliminar cuentas de conexión de origen en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 609f7a5de51840fe657ca72df99c90da56c8f466
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 # Eliminar cuentas de conexión de origen
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona pasos para eliminar cuentas del espacio de trabajo **[!UICONTROL Sources]**.
+Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona los pasos para eliminar cuentas del **[!UICONTROL Fuentes]** espacio de trabajo.
 
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
-   - [Aspectos básicos de la composición](../../../xdm/schema/composition.md) del esquema: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Tutorial del Editor de esquemas](../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+   - [Aspectos básicos de la composición del esquema](../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   - [Tutorial del Editor de esquemas](../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ## Eliminar cuentas mediante la interfaz de usuario
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Sources]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes para las que puede crear cuentas y flujos de datos. Cada origen muestra la cantidad de cuentas existentes y flujos de datos asociados a ellas.
+>[!TIP]
+>
+>Antes de eliminar la cuenta de origen, debe eliminar los flujos de datos existentes asociados a la cuenta de origen. Para eliminar flujos de datos existentes, consulte el tutorial sobre [eliminación de flujos de datos de origen en la interfaz de usuario](./delete.md).
 
-Seleccione **[!UICONTROL Accounts]** para acceder a la página **[!UICONTROL Accounts]**.
+Iniciar sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder a la **[!UICONTROL Fuentes]** espacio de trabajo. La variable **[!UICONTROL Catálogo]** muestra una variedad de fuentes para las que puede crear cuentas y flujos de datos. Cada origen muestra la cantidad de cuentas existentes y flujos de datos asociados a ellas.
+
+Select **[!UICONTROL Cuentas]** para acceder a la **[!UICONTROL Cuentas]** página.
 
 ![catalog-accounts](../../images/tutorials/delete-accounts/catalog.png)
 
@@ -47,18 +50,18 @@ Seleccione la cuenta que desee eliminar.
 
 ![dataflows-sort](../../images/tutorials/delete-accounts/sort.png)
 
-El panel **[!UICONTROL Properties]** aparece a la derecha de la pantalla y contiene información sobre la cuenta seleccionada.
+La variable **[!UICONTROL Propiedades]** aparece a la derecha de la pantalla, con información sobre la cuenta seleccionada.
 
-Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea eliminar. Aparece un panel emergente con las opciones **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** y **[!UICONTROL Delete]**. Seleccione **[!UICONTROL Delete]** para eliminar la cuenta.
+Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea eliminar. Aparece un panel emergente que proporciona las opciones para **[!UICONTROL Añadir datos]**, **[!UICONTROL Editar detalles]** y **[!UICONTROL Eliminar]**. Select **[!UICONTROL Eliminar]** para eliminar la cuenta.
 
 ![dataflows-sort](../../images/tutorials/delete-accounts/delete.png)
 
-Aparece un cuadro de diálogo de confirmación final, seleccione **[!UICONTROL Delete]** para completar el proceso.
+Aparece un cuadro de diálogo de confirmación final, seleccione **[!UICONTROL Eliminar]** para completar el proceso.
 
 ![delete](../../images/tutorials/delete-accounts/confirm.png)
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL Sources]** para eliminar cuentas existentes.
+Al seguir este tutorial, ha utilizado correctamente la variable **[!UICONTROL Fuentes]** espacio de trabajo para eliminar cuentas existentes.
 
-Para ver los pasos sobre cómo realizar estas operaciones mediante programación utilizando la API [!DNL Flow Service], consulte el tutorial sobre la [eliminación de conexiones mediante la API de servicio de flujo](../../tutorials/api/delete.md)
+Para ver los pasos sobre cómo realizar estas operaciones mediante programación usando la variable [!DNL Flow Service] API, consulte el tutorial sobre [eliminación de conexiones mediante la API de servicio de flujo](../../tutorials/api/delete.md)
