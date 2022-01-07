@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
+source-git-commit: 54da385fa3e275137164423a0bec71445b0242e4
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '686'
 ht-degree: 9%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 9%
    * [Conectarse a destinos de flujo continuo y activar datos mediante la API de servicio de flujo](./api/streaming-destinations.md)
    * [Conéctese a destinos de marketing por correo electrónico y active los datos mediante la API de servicio de flujo](./api/email-marketing.md)
    * [(Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc](./api/ad-hoc-activation-api.md)
+   * [Eliminar cuentas de destino](./api/delete-destination-account.md)
+   * [Eliminar flujos de datos de destino](./api/delete-destination-dataflow.md)
 * Guías de la interfaz de usuario {#ui}
    * [Espacio de trabajo de destinos](./ui/destinations-workspace.md)
    * [Crear una nueva conexión de destino](./ui/connect-destination.md)
@@ -149,7 +151,7 @@ ht-degree: 9%
    * [Información general](./destination-sdk/overview.md)
    * [Requisitos previos de integración](./destination-sdk/integration-prerequisites.md)
    * [Primeros pasos](./destination-sdk/getting-started.md)
-   * Funcionalidad de Destination SDK {#functionality}
+   * funcionalidad de Destination SDK {#functionality}
       * [Opciones de Configuration](./destination-sdk/configuration-options.md)
       * [Configuración de destino](./destination-sdk/destination-configuration.md)
       * [Especificaciones de servidor y plantilla](./destination-sdk/server-and-template-configuration.md)
@@ -162,7 +164,7 @@ ht-degree: 9%
          * [Creación y prueba de una plantilla de transformación de mensaje](./destination-sdk/create-template.md)
          * [Probar la configuración de destino](./destination-sdk/test-destination.md)
    * Operaciones de API {#api}
-      * [Referencia de la API de Destination SDK (creación de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Referencia de la API del Destination SDK (creación de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Operaciones de API de extremo de destinos](./destination-sdk/destination-configuration-api.md)
       * [Operaciones de API de extremo del servidor de destino](./destination-sdk/destination-server-api.md)
       * [Operaciones de API de extremo de metadatos de audiencia](./destination-sdk/audience-metadata-api.md)

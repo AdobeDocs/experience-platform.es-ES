@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Activation overview
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform en varios tipos de destinos.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
+source-git-commit: f4ae6831569e8a5b458c42f76810212174f04811
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 1%
 
 ---
-
 
 # Información general de Activation
 
@@ -19,7 +19,7 @@ Adobe Experience Platform admite una amplia gama de destinos. El flujo de trabaj
 
 ## Métodos de activación {#activation-methods}
 
-Después de [configurar los destinos](connect-destination.md), puede activar los segmentos de audiencia de varias formas:
+Tras [configurar el destino](connect-destination.md), puede activar los segmentos de audiencia de varias formas:
 
 ### Activar audiencias desde el catálogo de destinos
 
@@ -29,19 +29,19 @@ Consulte las siguientes guías para obtener información detallada sobre la acti
 * [Activar datos de audiencia en destinos de exportación de perfil de flujo continuo](activate-streaming-profile-destinations.md)
 * [Activar datos de audiencia en destinos de exportación de perfiles en lote](activate-batch-profile-destinations.md)
 
-### Activar audiencias desde la página [!UICONTROL Browse]
+### Activar audiencias desde el [!UICONTROL Examinar] página
 
-Siga los pasos a continuación para activar los datos en los destinos desde la página **[!UICONTROL Browse]**.
+Siga los pasos a continuación para activar los datos en los destinos desde la variable **[!UICONTROL Examinar]** página.
 
-1. Vaya a **[!UICONTROL Connections > Destinations]** y seleccione la pestaña **[!UICONTROL Browse]**.
+1. Vaya a **[!UICONTROL Conexiones > Destinos]** y seleccione **[!UICONTROL Examinar]** pestaña .
 
    ![Ficha Examinar](../assets/ui/activation-overview/browse-tab.png)
 
-1. Busque la conexión de destino que desea utilizar para activar los segmentos, seleccione los tres puntos en la columna [!UICONTROL Name] y, a continuación, seleccione **[!UICONTROL Activate segments]**.
+1. Busque la conexión de destino que desea utilizar para activar los segmentos, seleccione los tres puntos en la [!UICONTROL Nombre] y, a continuación, seleccione **[!UICONTROL Activar segmentos]**.
 
    ![Botón Activar segmentos](../assets/ui/activation-overview/activate-segments.png)
 
-1. Según el destino seleccionado, siga los pasos descritos en los artículos siguientes, empezando por el paso **[!UICONTROL Select segments]**, para finalizar el flujo de trabajo de activación:
+1. En función del destino seleccionado, siga los pasos descritos en los artículos siguientes, empezando por el **[!UICONTROL Seleccionar segmentos]** para finalizar el flujo de trabajo de activación:
 
    * [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](activate-segment-streaming-destinations.md)
    * [Activar datos de audiencia en destinos de exportación de perfil de flujo continuo](activate-streaming-profile-destinations.md)
