@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Eliminar una cuenta de destino mediante la API de servicio de flujo
 type: Tutorial
 description: Obtenga información sobre cómo eliminar una cuenta de destino mediante la API de servicio de flujo.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '769'
 ht-degree: 1%
 
 ---
@@ -184,4 +185,4 @@ Los extremos de API de este tutorial siguen los principios generales del mensaje
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha utilizado correctamente la variable [!DNL Flow Service] para eliminar cuentas de destino existentes.
+Al seguir este tutorial, ha utilizado correctamente la variable [!DNL Flow Service] para eliminar cuentas de destino existentes. Para obtener más información sobre el uso de destinos, consulte la [información general sobre destinos](/help/destinations/home.md).

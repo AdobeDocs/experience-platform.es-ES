@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Eliminar un flujo de datos de destino mediante la API de servicio de flujo
 type: Tutorial
 description: Obtenga información sobre cómo eliminar flujos de datos en destinos de flujo y por lotes mediante la API de servicio de flujo.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
@@ -90,3 +91,5 @@ Los extremos de API de este tutorial siguen los principios generales del mensaje
 Al seguir este tutorial, ha utilizado correctamente la variable [!DNL Flow Service] API para eliminar un flujo de datos existente a un destino.
 
 Para ver los pasos sobre cómo realizar estas operaciones mediante la interfaz de usuario, consulte el tutorial sobre [eliminación de flujos de datos en la interfaz de usuario](../ui/delete-destinations.md).
+
+Ahora puede continuar y [eliminar cuentas de destino](/help/destinations/api/delete-destination-account.md) usando la variable [!DNL Flow Service] API.
