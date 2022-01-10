@@ -3,9 +3,9 @@ keywords: flujo continuo;
 title: Conexión de API HTTP
 description: El destino de la API HTTP en Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
+source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
@@ -76,7 +76,7 @@ Tenga en cuenta que todos los atributos asignados se exportan para un perfil, in
 
 ## Datos exportados {#exported-data}
 
-Su exportación [!DNL Experience Platform] los datos llegan a su [!DNL HTTP] destino en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha clasificado para un segmento determinado y ha salido de otro segmento. Las identidades de esta perspectiva son [!DNL ECID] y correo electrónico.
+Su exportación [!DNL Experience Platform] los datos llegan a su [!DNL HTTP] destino en formato JSON. Por ejemplo, la exportación siguiente contiene un perfil que se ha clasificado para un segmento determinado y ha salido de otro, e incluye el nombre, los apellidos, la fecha de nacimiento y la dirección de correo electrónico personal del atributo de perfil. Las identidades de este perfil son ECID y correo electrónico.
 
 ```json
 {
