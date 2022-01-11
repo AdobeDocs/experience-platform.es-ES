@@ -4,9 +4,9 @@ title: Habilitar un conjunto de datos para perfil y servicio de identidad median
 type: Tutorial
 description: Este tutorial le muestra cómo habilitar un conjunto de datos para utilizarlo con el perfil del cliente en tiempo real y el servicio de identidad mediante las API de Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Este tutorial trata el proceso de activación de un conjunto de datos para su us
 
 ## Primeros pasos
 
-Este tutorial requiere una comprensión práctica de varios servicios de Adobe Experience Platform involucrados en la administración de conjuntos de datos con perfil habilitado. Antes de comenzar este tutorial, revise la documentación de estos servicios de plataforma DNL relacionados:
+Este tutorial requiere una comprensión práctica de varios servicios de Adobe Experience Platform involucrados en la administración de conjuntos de datos con perfil habilitado. Antes de comenzar este tutorial, revise la documentación de estas [!DNL Platform] servicios:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 - [[!DNL Identity Service]](../../identity-service/home.md): Habilitación [!DNL Real-time Customer Profile] al unir identidades de fuentes de datos dispares que se están incorporando en [!DNL Platform].
