@@ -1,9 +1,10 @@
 ---
 title: Ejemplo de consultas de carga incremental
 description: La función de carga incremental utiliza funciones de bloques anónimos y de instantánea para proporcionar una solución casi en tiempo real que permita mover datos del lago de datos al almacén de datos e ignorar los datos coincidentes.
-source-git-commit: fb464c6e6b1972f5a2653872385517749936691a
+exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
+source-git-commit: 943886078fe31a12542c297133ac6a0a0d551e08
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
@@ -22,11 +23,11 @@ Los ejemplos SQL de este documento requieren que conozca las capacidades anónim
 
 Para obtener instrucciones sobre cualquier terminología utilizada en esta guía, consulte la [Guía de sintaxis SQL](../sql/syntax.md).
 
-## Pasos
+## Carga incremental de datos
 
 Los pasos siguientes muestran cómo crear y cargar datos de forma incremental mediante instantáneas y la función de bloques anónimos. El patrón de diseño se puede utilizar como plantilla para su propia secuencia de consultas.
 
-1. Cree un `checkpoint_log` para realizar un seguimiento de la instantánea más reciente utilizada para procesar los datos correctamente. La tabla de seguimiento (`checkpoint_log` en este ejemplo) primero debe inicializarse a `null` para procesar un conjunto de datos de forma incremental.
+1 Cree un `checkpoint_log` para realizar un seguimiento de la instantánea más reciente utilizada para procesar los datos correctamente. La tabla de seguimiento (`checkpoint_log` en este ejemplo) primero debe inicializarse a `null` para procesar un conjunto de datos de forma incremental.
 
 ```SQL
 DROP TABLE IF EXISTS checkpoint_log;
@@ -39,7 +40,7 @@ SELECT
    WHERE false;
 ```
 
-1. Rellene el `checkpoint_log` con un registro vacío para el conjunto de datos que necesita procesamiento incremental. `DIM_TABLE_ABC` es el conjunto de datos que se va a procesar en el ejemplo siguiente. En la primera ocasión de la transformación `DIM_TABLE_ABC`, el `last_snapshot_id` se inicializa como `null`. Esto le permite procesar todo el conjunto de datos en la primera vez e incrementarlo posteriormente.
+2 Rellene el `checkpoint_log` con un registro vacío para el conjunto de datos que necesita procesamiento incremental. `DIM_TABLE_ABC` es el conjunto de datos que se va a procesar en el ejemplo siguiente. En la primera ocasión de la transformación `DIM_TABLE_ABC`, el `last_snapshot_id` se inicializa como `null`. Esto le permite procesar todo el conjunto de datos en la primera vez e incrementarlo posteriormente.
 
 ```SQL
 INSERT INTO
@@ -51,20 +52,19 @@ INSERT INTO
        CURRENT_TIMESTAMP process_timestamp;
 ```
 
-1. Siguiente, inicializar `DIM_TABLE_ABC_Incremental` para contener la salida procesada de `DIM_TABLE_ABC`. El bloque anónimo de la variable **obligatorio** la sección de ejecución del ejemplo SQL a continuación, como se describe en los pasos uno a cuatro, se ejecuta secuencialmente para procesar los datos de forma incremental.
+3 A continuación, inicialice `DIM_TABLE_ABC_Incremental` para contener la salida procesada de `DIM_TABLE_ABC`. El bloque anónimo de la variable **obligatorio** la sección de ejecución del ejemplo SQL a continuación, como se describe en los pasos uno a cuatro, se ejecuta secuencialmente para procesar los datos de forma incremental.
 
-   1. Configure las variables `from_snapshot_id` que indica desde dónde comienza el procesamiento. La variable `from_snapshot_id` en el ejemplo se consulta desde el `checkpoint_log` tabla para usar con `DIM_TABLE_ABC`. En la ejecución inicial, el ID de instantánea será `null` lo que significa que se procesará todo el conjunto de datos.
-   2. Configure las variables `to_snapshot_id` como ID de instantánea actual de la tabla de origen (`DIM_TABLE_ABC`). En el ejemplo, esto se consulta desde la tabla de metadatos de la tabla de origen.
-   3. Utilice la variable `CREATE` palabra clave que crear `DIM_TABLE_ABC_Incremenal` como tabla de destino. La tabla de destino conserva los datos procesados del conjunto de datos de origen (`DIM_TABLE_ABC`). Esto permite procesar los datos de la tabla de origen entre `from_snapshot_id` y `to_snapshot_id`, que se anexará gradualmente a la tabla de destino.
-   4. Actualice el `checkpoint_log` con la variable `to_snapshot_id` para los datos de origen que `DIM_TABLE_ABC` se ha procesado correctamente.
-   5. Si falla alguna de las consultas ejecutadas secuencialmente del bloque anónimo, la variable **opcional** se ejecuta. Esto devuelve un error y finaliza el proceso.
+1. Configure las variables `from_snapshot_id` que indica desde dónde comienza el procesamiento. La variable `from_snapshot_id` en el ejemplo se consulta desde el `checkpoint_log` tabla para usar con `DIM_TABLE_ABC`. En la ejecución inicial, el ID de instantánea será `null` lo que significa que se procesará todo el conjunto de datos.
+2. Configure las variables `to_snapshot_id` como ID de instantánea actual de la tabla de origen (`DIM_TABLE_ABC`). En el ejemplo, esto se consulta desde la tabla de metadatos de la tabla de origen.
+3. Utilice la variable `CREATE` palabra clave que crear `DIM_TABLE_ABC_Incremenal` como tabla de destino. La tabla de destino conserva los datos procesados del conjunto de datos de origen (`DIM_TABLE_ABC`). Esto permite procesar los datos de la tabla de origen entre `from_snapshot_id` y `to_snapshot_id`, que se anexará gradualmente a la tabla de destino.
+4. Actualice el `checkpoint_log` con la variable `to_snapshot_id` para los datos de origen que `DIM_TABLE_ABC` se ha procesado correctamente.
+5. Si falla alguna de las consultas ejecutadas secuencialmente del bloque anónimo, la variable **opcional** se ejecuta. Esto devuelve un error y finaliza el proceso.
 
 >[!NOTE]
 >
 >La variable `history_meta('source table name')` es un método conveniente que se utiliza para obtener acceso a instantáneas disponibles en un conjunto de datos.
 
 ```SQL
-$$
 BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -86,17 +86,16 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
-1. Utilice la lógica de carga de datos incrementales en el ejemplo de bloque anónimo a continuación para permitir que cualquier nuevo dato del conjunto de datos de origen (desde la marca de tiempo más reciente), se procese y se añada a la tabla de destino en una cadencia normal. En el ejemplo, los datos cambian a `DIM_TABLE_ABC` se procesarán y adjuntarán a `DIM_TABLE_ABC_incremental`.
+4 Utilice la lógica de carga de datos incrementales en el ejemplo de bloque anónimo a continuación para permitir que cualquier nuevo dato del conjunto de datos de origen (desde la marca de tiempo más reciente), se procese y se añada a la tabla de destino en una cadencia normal. En el ejemplo, los datos cambian a `DIM_TABLE_ABC` se procesarán y adjuntarán a `DIM_TABLE_ABC_incremental`.
 
 >[!NOTE]
 >
 > `_ID` es la clave principal en ambos `DIM_TABLE_ABC_Incremental` y `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-$$
 BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -118,7 +117,7 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
 Esta lógica se puede aplicar a cualquier tabla para realizar cargas incrementales.
@@ -138,7 +137,6 @@ SET resolve_fallback_snapshot_on_failure=true;
 El bloque de código completo tiene el siguiente aspecto:
 
 ```SQL
-$$
 BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
@@ -160,7 +158,7 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
 ## Pasos siguientes

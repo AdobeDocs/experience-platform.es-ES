@@ -5,7 +5,7 @@ title: Conexión de PSQL al servicio de consulta
 topic-legacy: connect
 description: PSQL es una interfaz de línea de comandos que viene cuando instala PostgreSQL en su equipo. Puede instalarlo siguiendo estas instrucciones.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: 06d3a8aa6f2f73c2d5392a76fb5b36b18691cf0d
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 1%
@@ -14,17 +14,17 @@ ht-degree: 1%
 
 # Conexión de PSQL al servicio de consulta
 
-PSQL es una interfaz de línea de comandos que se instala al instalar [!DNL PostgreSQL] en el equipo. Este documento cubre los pasos para conectar PSQL con Adobe Experience Platform [!DNL Query Service].
+PSQL es una interfaz de línea de comandos que se instala al instalar [!DNL PostgreSQL] en su máquina. Este documento cubre los pasos para conectar PSQL con Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> En esta guía se da por hecho que ya tiene acceso a [!DNL PSQL] y está familiarizado con su uso. Puede encontrar más información sobre [!DNL PSQL] en la [documentación oficial [!DNL PSQL]](https://www.postgresql.org/docs/current/app-psql.html.
+> Esta guía asume que ya tiene acceso a [!DNL PSQL] y están familiarizados con su uso. Más información sobre [!DNL PSQL] se encuentra en la variable [oficial [!DNL PSQL] documentación](https://www.postgresql.org/docs/current/app-psql.html).
 
-Después de instalar PSQL en el equipo, está listo para conectar PSQL con el servicio de consulta. Vuelva a la interfaz de usuario [!DNL Platform] y seleccione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciales]**.
+Después de instalar PSQL en el equipo, está listo para conectar PSQL con el servicio de consulta. Vuelva a la [!DNL Platform] IU y, a continuación, seleccione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciales]**.
 
 ![Imagen](../images/clients/psql/connect-bi.png)
 
-Seleccione el icono para copiar la sección etiquetada **[!UICONTROL PSQL Command]** y luego pegue la cadena de comandos en un terminal o ventana de línea de comandos antes de pulsar Intro.
+Seleccione el icono para copiar la sección etiquetada **[!UICONTROL Comando PSQL]**, pegue la cadena de comandos en un terminal o en una ventana de línea de comandos antes de pulsar Intro.
 
 >[!IMPORTANT]
 >
@@ -43,4 +43,4 @@ Si no ve al menos la versión 10.5, entonces necesita descargar esa versión o m
 
 ## Pasos siguientes
 
-Ahora que se ha conectado con [!DNL Query Service], puede utilizar PSQL para escribir consultas. Para obtener más información sobre cómo escribir y ejecutar consultas, lea la guía sobre [consultas en ejecución](../best-practices/writing-queries.md).
+Ahora que está conectado con [!DNL Query Service], puede utilizar PSQL para escribir consultas. Para obtener más información sobre cómo escribir y ejecutar consultas, lea la guía de [ejecución de consultas](../best-practices/writing-queries.md).
