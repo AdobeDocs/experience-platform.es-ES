@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f529a49c994d20f4b8da4c0d6bfe4c06a1a32655
+source-git-commit: a3596624c16da6369f8901d448bb381c37e3510e
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2194'
 ht-degree: 1%
 
 ---
@@ -72,7 +72,7 @@ Seleccione el **[!UICONTROL Crear programación]** correspondiente al segmento q
 >id="platform_destinations_activate_exportoptions"
 >title="Opciones de exportación de archivos"
 >abstract="Seleccione Exportar archivos completos para exportar una instantánea completa de todos los perfiles que cumplen los requisitos para el segmento. Seleccione Exportar archivos incrementales para exportar solo los perfiles que cumplen los requisitos del segmento desde la última exportación. La primera exportación incremental de archivos incluye todos los perfiles que cumplen los requisitos para el segmento, actuando como relleno. Los futuros archivos incrementales incluyen solo los perfiles que cumplen los requisitos para el segmento desde la primera exportación de archivos incrementales."
->additional-url="https://www.adobe.com/go/destinations-incremental-files-en" text="Exportar archivos incrementales"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Exportar archivos incrementales"
 
 Select **[!UICONTROL Exportar archivos completos]** para almacenar en déclencheur la exportación de un archivo que contenga una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado.
 
