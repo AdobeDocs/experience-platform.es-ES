@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: Conexión SFTP
 description: Cree una conexión saliente en directo al servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,12 @@ Cree una conexión saliente en directo al servidor SFTP para exportar periódica
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 ### Parámetros de conexión {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_rsa"
+>title="Clave pública RSA"
+>abstract="Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como una cadena codificada Base64."
+>text="Learn more in documentation"
 
 While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 

@@ -6,9 +6,9 @@ title: Monitorizar flujos de datos para destinos en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
+source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1797'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
 - [Destinos](../../destinations/home.md): Los destinos son integraciones prediseñadas con aplicaciones de uso común que permiten la activación perfecta de datos de Platform para campañas de marketing multicanal, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-## Monitorización de flujos de datos en el espacio de trabajo Destinations
+## Monitorización de flujos de datos en el espacio de trabajo Destinations {#monitor-dataflows-in-the-destinations-workspace}
 
 En el **[!UICONTROL Destinos]** dentro de la interfaz de usuario de Platform, vaya a **[!UICONTROL Examinar]** y seleccione el nombre de un destino que desea ver.
 
@@ -45,18 +45,24 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 | Procesamiento | La variable `Processing` indica que un flujo de datos aún no está activo. Este estado se encuentra a menudo inmediatamente después de crear un nuevo flujo de datos. |
 | Error | La variable `Error` indica que se ha interrumpido el proceso de activación de un flujo de datos. |
 
-### El flujo de datos se ejecuta en los destinos de flujo continuo
+### El flujo de datos se ejecuta en los destinos de flujo continuo {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated"
 >title="Identidades activadas"
 >abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Más información en la documentación"
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded"
 >title="Identidades excluidas"
 >abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="Identidades fallidas"
+>abstract="Recuento de identidades de perfil individuales que fallaron para el destino seleccionado. Consulte los diagnósticos de errores para obtener más información."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Más información en la documentación"
 
 Para los destinos de flujo continuo, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona una actualización por hora para los datos de métricas en las ejecuciones de flujo de datos. Las estadísticas más destacadas etiquetadas son para identidades.
@@ -93,7 +99,7 @@ La página de detalles también muestra una lista de identidades que han fallado
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### El flujo de datos se ejecuta en destinos por lotes
+### El flujo de datos se ejecuta en destinos por lotes {#dataflow-runs-for-batch-destinations}
 
 Para los destinos de lote, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona datos de métricas sobre las ejecuciones de flujo de datos. Se muestra una lista de ejecuciones individuales y sus métricas particulares, junto con los siguientes totales de identidades:
 
