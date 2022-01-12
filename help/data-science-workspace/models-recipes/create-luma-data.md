@@ -5,13 +5,13 @@ title: Creación de esquemas web y conjuntos de datos de Luma
 topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le proporciona los requisitos previos y los recursos necesarios para el modelo de propensión de demostración de Luma.
-source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
+exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
+source-git-commit: f57ca64c34f569f4402cb998af72e1e9022510ca
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%
 
 ---
-
 
 # Creación de esquemas y conjuntos de datos del modelo de propensión de Luma
 
