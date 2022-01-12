@@ -1,10 +1,11 @@
 ---
 title: Descripción general del proceso de envío de extensiones
-description: Conozca los pasos para enviar la extensión en Adobe Experience Platform desde el desarrollo hasta la versión.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Conozca los pasos para presentar su extensión de Adobe Experience Platform desde el desarrollo hasta el lanzamiento.
+exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 34%
+source-wordcount: '238'
+ht-degree: 84%
 
 ---
 
@@ -28,8 +29,8 @@ Seleccione el vínculo correspondiente para obtener más información sobre cada
 
 ## Asistencia
 
-La compatibilidad está disponible a través del espacio de trabajo del Slack de la comunidad de desarrolladores de etiquetas mientras crea y prueba la extensión. El espacio de trabajo del Slack es una comunidad en línea en la que los autores de extensiones se admiten entre sí. Puede solicitar acceso en [http://join.launchdevelopers.chat](http://join.launchdevelopers.chat).
+La compatibilidad está disponible a través del espacio de trabajo de Slack de la comunidad de desarrolladores de etiquetas mientras crea y prueba la extensión. El espacio de trabajo de Slack es una comunidad en línea en la que los autores de extensiones colaboran. Puede solicitar el acceso mediante lo siguiente [formulario en línea](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >
->Aunque hay miembros del equipo de Adobe en este espacio de trabajo de Slack, es un recurso de la comunidad que no está patrocinado por el Adobe ni moderado por él.
+>Aunque hay miembros del equipo de Adobe en el espacio de trabajo de Slack, es un recurso de la comunidad que ni patrocina ni modera Adobe.

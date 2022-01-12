@@ -5,7 +5,7 @@ title: Notas de la versión del Privacy Service
 topic-legacy: release notes
 description: Últimas notas de la versión de Adobe Experience Platform Privacy Service.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 6%
@@ -34,7 +34,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con PDPA | [!DNL Privacy] ahora se pueden crear y rastrear solicitudes bajo la Ley de Protección de Datos Personales (PDPA) en Tailandia. Al realizar solicitudes de privacidad en la API, la variable `regulation` array acepta el valor &quot;pdpa_tha&quot;. |
+| Compatibilidad con PDPA | [!DNL Privacy] Ahora se pueden crear solicitudes y realizar seguimientos de las mismas según la Ley de Protección de Datos Personales (PDPA) de Tailandia. Al realizar solicitudes de privacidad en la API, la variable `regulation` array acepta el valor &quot;pdpa_tha&quot;. |
 | Tipos de área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de área de nombres en el Creador de solicitudes en el [!DNL Privacy Service] IU. Consulte la [guía del usuario](ui/user-guide.md) para obtener más información. |
 | Desaprobación de punto final antiguo | El antiguo extremo de la API (`data/privacy/gdpr`) está en desuso. |
 
@@ -47,7 +47,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 | [!DNL Privacy Service] cambio de marca | El anteriormente denominado &quot;Servicio de RGPD&quot; se ha cambiado a [!DNL Privacy Service] ya que el servicio ha crecido para admitir otras regulaciones además del RGPD. |
 | Nuevos extremos de API | Ruta base para la variable [!DNL Privacy Service] La API se ha actualizado desde `/data/privacy/gdpr` a `/data/core/privacy/jobs` |
 | Nuevo obligatorio `regulation` property | Al crear nuevos trabajos en el [!DNL Privacy Service] API, un `regulation` debe proporcionarse en la carga útil de la solicitud para indicar en qué regulación debe rastrearse el trabajo. Los valores aceptados son `gdpr` y `ccpa`. Consulte el documento en [trabajos de privacidad](api/privacy-jobs.md) en el [!DNL Privacy Service] Guía de API para obtener más información. |
-| Compatibilidad con la autenticación de Adobe Primetime | [!DNL Privacy Service] ahora acepta solicitudes de acceso/eliminación de la autenticación de Adobe Primetime mediante `primetimeAuthentication` como su valor de producto. Consulte la [Documentación de autenticación de Primetime](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) para obtener más información. |
+| Compatibilidad con la autenticación de Adobe Primetime | [!DNL Privacy Service] ahora acepta solicitudes de acceso/eliminación de la autenticación de Adobe Primetime mediante `primetimeAuthentication` como su valor de producto. Consulte la [Documentación de autenticación de Primetime](https://tve.helpdocsonline.com/how-to-make-a-privacy-request) para obtener más información. |
 
 ### Mejoras
 

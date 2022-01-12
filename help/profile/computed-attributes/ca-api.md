@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Esta guía muestra cómo crear, ver, actualizar y eliminar atributos calculados mediante la API de perfil del cliente en tiempo real.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2275'
 ht-degree: 2%
 
 ---
@@ -508,7 +508,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Solicitud**
 
-Esta solicitud utiliza [Formato de parche JSON](http://jsonpatch.com/) para actualizar el &quot;valor&quot; del campo &quot;expresión&quot;.
+Esta solicitud utiliza [Formato de parche JSON](https://datatracker.ietf.org/doc/html/rfc6902) para actualizar el &quot;valor&quot; del campo &quot;expresión&quot;.
 
 ```shell
 curl -X PATCH \

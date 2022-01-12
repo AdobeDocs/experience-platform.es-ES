@@ -5,9 +5,9 @@ title: Punto final de la API de métricas
 topic-legacy: developer guide
 description: Obtenga información sobre cómo recuperar métricas de observabilidad en Experience Platform mediante la API de Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 6%
 
 ---
@@ -84,8 +84,8 @@ curl -X POST \
 | `metrics` | Matriz de objetos, uno para cada métrica que desee recuperar. |
 | `name` | El nombre de una métrica reconocida por Observability Insights. Consulte la [apéndice](#available-metrics) para obtener una lista completa de los nombres de métricas aceptados. |
 | `filters` | Campo opcional que permite filtrar métricas por conjuntos de datos específicos. El campo es una matriz de objetos (uno para cada filtro), con cada objeto que contiene las siguientes propiedades: <ul><li>`name`: Tipo de entidad con la que filtrar las métricas. Actualmente, solo `dataSets` es compatible.</li><li>`value`: El ID de uno o más conjuntos de datos. Se pueden proporcionar varios ID de conjuntos de datos como una sola cadena, con cada ID separado por caracteres de barra vertical (`\|`).</li><li>`groupBy`: Cuando se establece en true, indica que la variable `value` representa varios conjuntos de datos cuyos resultados de métricas deberían devolverse por separado. Si se establece en false, los resultados de métricas para esos conjuntos de datos se agrupan.</li></ul> |
-| `aggregator` | Especifica la función de agregación que debe utilizarse para agrupar varios registros de series temporales en resultados únicos. Para obtener información detallada sobre los acumuladores disponibles, consulte la [Documentación de OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | Campo opcional que permite especificar una función de agregación para reducir la tasa de muestreo de los datos de métricas ordenando los campos en intervalos (o &quot;bloques&quot;). El intervalo para la disminución de resolución se determina mediante la variable `granularity` propiedad. Para obtener información detallada sobre la disminución de muestras, consulte la [Documentación de OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `aggregator` | Especifica la función de agregación que debe utilizarse para agrupar varios registros de series temporales en resultados únicos. Para obtener información detallada sobre los acumuladores disponibles, consulte la [Documentación de OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `downsample` | Campo opcional que permite especificar una función de agregación para reducir la tasa de muestreo de los datos de métricas ordenando los campos en intervalos (o &quot;bloques&quot;). El intervalo para la disminución de resolución se determina mediante la variable `granularity` propiedad. Para obtener información detallada sobre la disminución de muestras, consulte la [Documentación de OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
 {style=&quot;table-layout:auto&quot;}
 

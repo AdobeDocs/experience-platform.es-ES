@@ -5,9 +5,9 @@ title: 'Evaluar eventos en tiempo casi real con segmentación por transmisión '
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1831'
 ht-degree: 1%
 
 ---
@@ -338,7 +338,7 @@ curl -X POST \
 | `type` | **(Obligatorio)** El tipo de trabajo en formato de cadena. Los tipos compatibles son `batch_segmentation` y `export`. |
 | `properties` | **(Obligatorio)** Un objeto que contiene propiedades adicionales relacionadas con la programación. |
 | `properties.segments` | **(obligatorio cuando `type` es igual que `batch_segmentation`)** Uso `["*"]` garantiza que se incluyan todos los segmentos. |
-| `schedule` | **(Obligatorio)** Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar la ejecución de un trabajo más de una vez durante un período de 24 horas. El ejemplo mostrado (`0 0 1 * * ?`) significa que el trabajo se activa todos los días a las 1.:00:00 UTC. Para obtener más información, consulte [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentación. |
+| `schedule` | **(Obligatorio)** Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar la ejecución de un trabajo más de una vez durante un período de 24 horas. El ejemplo mostrado (`0 0 1 * * ?`) significa que el trabajo se activa todos los días a las 1.:00:00 UTC. Para obtener más información, consulte [formato de expresión cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentación. |
 | `state` | *(Opcional)* Cadena que contiene el estado de programación. Valores disponibles: `active` y `inactive`. El valor predeterminado es `inactive`. Una organización de IMS solo puede crear una programación. Los pasos para actualizar la programación están disponibles más adelante en este tutorial. |
 
 **Respuesta**
@@ -381,7 +381,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Solicitud**
 
-La siguiente solicitud utiliza [Formato de parche JSON](http://jsonpatch.com/) para actualizar el `state` de la programación a `active`.
+La siguiente solicitud utiliza [Formato de parche JSON](https://datatracker.ietf.org/doc/html/rfc6902) para actualizar el `state` de la programación a `active`.
 
 ```shell
 curl -X POST \

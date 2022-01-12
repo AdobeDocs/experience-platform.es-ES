@@ -1,40 +1,39 @@
 ---
-keywords: administración de rtcdp información general;administración información general
-title: Información general sobre la administración de la plataforma de datos del cliente en tiempo real
-seo-title: Visión general de la administración de CDP en tiempo real
-description: 'Este documento proporciona una visión general de las funciones de administración de la Plataforma de datos de clientes en tiempo real, con tecnología de Adobe Experience Platform. '
-seo-description: descripción de seo
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+keywords: información general sobre administración de rtcdp;información general sobre administración
+title: Información general sobre la administración de Real-time Customer Data Platform
+seo-title: Real-Time CDP administration overview
+description: 'Este documento proporciona información general sobre las funciones de administración de Real-time Customer Data Platform, con tecnología de Adobe Experience Platform. '
+seo-description: seo description
+exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 0%
+source-wordcount: '282'
+ht-degree: 1%
 
 ---
 
-
-# Información general sobre la administración de la plataforma de datos para clientes en tiempo real
+# Información general sobre la administración de Real-time Customer Data Platform
 
 Este documento proporciona una visión general de las capacidades de administración de [!DNL Real-time Customer Data Platform], con tecnología de Adobe Experience Platform.
 
 [!DNL Experience Platform] permite a los administradores administrar el control de acceso basado en roles para los usuarios, así como administrar entornos limitados virtuales para el desarrollo de aplicaciones.
 
-Las siguientes secciones proporcionan introducciones a los componentes centrales de las capacidades de administración [!DNL Experience Platform] e incluyen vínculos a la documentación [!DNL Experience Platform] donde se proporciona información más detallada.
+En las secciones siguientes se presentan los componentes centrales de [!DNL Experience Platform] funciones de administración e incluye vínculos a [!DNL Experience Platform] documentación donde se proporciona información más detallada.
 
 ## Control de acceso
 
-Control de acceso se administra a través de [Adobe Admin Console](http://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en [!DNL Admin Console], permitiéndole vincular a los usuarios con permisos y entornos limitados. Con esta función, los administradores pueden otorgar o restringir el acceso a capacidades específicas de CDP en tiempo real para conjuntos definidos de usuarios.
+El control de acceso se administra mediante la variable [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles de producto de [!DNL Admin Console], lo que le permite vincular usuarios con permisos y entornos limitados. Con esta función, los administradores pueden conceder o restringir acceso a funcionalidades específicas de CDP en tiempo real para conjuntos definidos de usuarios.
 
-Para obtener más información sobre control de acceso, consulte la [información general de control de acceso](../../access-control/home.md) en la [!DNL Experience Platform] documentación.
+Para obtener más información sobre el control de acceso, consulte la [información general sobre el control de acceso](../../access-control/home.md) en el [!DNL Experience Platform] documentación.
 
 >[!IMPORTANT]
 >
->Para obtener una guía detallada sobre cómo otorgar acceso a las capacidades de CDP en tiempo real, incluida la activación de la visibilidad en la interfaz de usuario, siga los pasos que se proporcionan en la [guía del usuario de control de acceso](../../access-control/ui/overview.md), específicamente los que se utilizan para administrar detalles y servicios adicionales para un perfil de productos.
+>Para obtener una guía detallada sobre la concesión de acceso a las capacidades de CDP en tiempo real, incluida la activación de la visibilidad en la interfaz de usuario, siga los pasos que se proporcionan en la [guía del usuario de control de acceso](../../access-control/ui/overview.md), específicamente para administrar detalles y servicios adicionales para un perfil de producto.
 
-## Sandboxes
+## Entornos aislados
 
-Adobe Experience Platform (y CDP en tiempo real, por extensión) está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las compañías suelen ejecutar varias aplicaciones de experiencia digital en paralelo y deben ocuparse del desarrollo, las pruebas y la implementación de estas aplicaciones, al tiempo que garantizan el cumplimiento de normas operacionales.
+Adobe Experience Platform (y CDP en tiempo real por extensión) se ha creado para enriquecer las aplicaciones de experiencia digital a escala global. A menudo, las empresas ejecutan varias aplicaciones de experiencia digital en paralelo y necesitan ocuparse del desarrollo, las pruebas y la implementación de estas aplicaciones, al tiempo que garantizan el cumplimiento de las normas operacionales.
 
-Para satisfacer esta necesidad, Adobe Experience Platform proporciona &quot;entornos limitados&quot;, lo que le permite dividir una sola instancia [!DNL Platform] en entornos virtuales independientes que se pueden utilizar para desarrollar y desarrollar aplicaciones de experiencia digital.
+Para satisfacer esta necesidad, Adobe Experience Platform proporciona &quot;entornos limitados&quot;, lo que le permite particionar un solo [!DNL Platform] en entornos virtuales independientes que se pueden usar para desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../../sandboxes/home.md) en la documentación de [!DNL Experience Platform].
+Para obtener más información sobre los entornos limitados, consulte la [información general sobre los entornos limitados](../../sandboxes/home.md) en el [!DNL Experience Platform] documentación.

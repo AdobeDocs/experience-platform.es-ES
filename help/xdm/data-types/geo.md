@@ -5,16 +5,16 @@ title: Tipo de datos geográficos
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos Geo XDM.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 5%
 
 ---
 
-#  Tipo de datos geográficos
+# [!UICONTROL Geografía] tipo de datos
 
- Geografía es un tipo de datos XDM estándar que describe el área geográfica donde se observó un evento.
+[!UICONTROL Geografía] es un tipo de datos XDM estándar que describe el área geográfica donde se observó un evento.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
@@ -23,11 +23,11 @@ ht-degree: 5%
 | `_schema` | [[!UICONTROL Coordenadas geográficas]](./geo-coordinates.md) | Describe las coordenadas geográficas de un lugar. |
 | `_id` | Cadena | ID único generado por el sistema para las coordenadas. |
 | `city` | Cadena | El nombre de la ciudad. |
-| `countryCode` | Cadena | Código <a href="https://datahub.io/core/country-list">ISO 3166-1 alfa-2</a> de dos caracteres para el país. |
+| `countryCode` | Cadena | Los dos caracteres <a href="https://datahub.io/core/country-list">ISO 3166-1 alfa-2</a> para el país. |
 | `dmaID` | Número entero | La investigación de medios de comunicación de Nielsen designó zona de mercado. |
 | `msaID` | Número entero | El área estadística metropolitana en los Estados Unidos donde se produjo la observación. |
 | `postalCode` | Cadena | El código postal de la ubicación. Los códigos postales no están disponibles para todos los países. En algunos países, esto solo contiene parte del código postal. |
-| `stateProvince` | Cadena | Estado o provincia de la observación. El formato sigue el estándar [ISO 3166-2 (país y subdivisión)](http://www.unece.org/cefact/locode/subdivisions.html). |
+| `stateProvince` | Cadena | Estado o provincia de la observación. El formato sigue a la variable [ISO 3166-2 (país y subdivisión)](https://www.unece.org/cefact/locode/subdivisions.html) estándar. |
 
 {style=&quot;table-layout:auto&quot;}
 

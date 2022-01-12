@@ -1,10 +1,11 @@
 ---
 title: Módulos de biblioteca de extensiones web
 description: Obtenga información sobre el formato de los módulos de biblioteca para extensiones web en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 72%
+source-wordcount: '378'
+ht-degree: 93%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 72%
 
 Un módulo de biblioteca es un fragmento de código reutilizable proporcionado por una extensión que se emite dentro de la biblioteca de tiempo de ejecución de etiquetas en Adobe Experience Platform. A continuación, esta biblioteca se ejecuta en el sitio web del cliente. Por ejemplo, un tipo de evento `gesture` tendrá un módulo de biblioteca que se ejecutará en el sitio web del cliente para detectar los gestos del usuario.
 
-El módulo de biblioteca está estructurado como [módulo CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1.1). Dentro de un módulo CommonJS, encontrará las siguientes variables disponibles para el uso:
+El módulo de biblioteca está estructurado como [módulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules). Dentro de un módulo CommonJS, encontrará las siguientes variables disponibles para el uso:
 
 ## [!DNL require]
 
@@ -60,7 +61,7 @@ Esta es una alternativa a `module.exports`, pero su uso es más limitado. Lea [E
 
 ## Ejecución y almacenamiento en caché
 
-Cuando se ejecuta la biblioteca de tiempo de ejecución de etiquetas, los módulos se &quot;instalan&quot; inmediatamente y sus exportaciones se almacenan en caché. Suponga que tiene el módulo siguiente:
+Cuando se ejecute la biblioteca de tiempo de ejecución de etiquetas, los módulos se &quot;instalarán&quot; inmediatamente y sus exportaciones se almacenarán en la caché. Suponga que tiene el módulo siguiente:
 
 ```javascript
 console.log('runs on startup');
@@ -70,4 +71,4 @@ module.exports = function(settings) {
 }
 ```
 
-`runs on startup` se registrarán inmediatamente, mientras que solo se  `runs when necessary` registrarán una vez que el motor de etiquetas llame a la función exportada. Aunque puede que no sea necesario para el propósito de su módulo en particular, puede aprovechar esto realizando la configuración necesaria antes de exportar la función.
+`runs on startup` se registrará inmediatamente, mientras que `runs when necessary` solo se registrará cuando el motor de etiquetas haya llamado a la función exportada. Aunque puede que no sea necesario para el propósito de su módulo en particular, puede aprovechar esto realizando la configuración necesaria antes de exportar la función.

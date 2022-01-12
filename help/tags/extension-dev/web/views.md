@@ -1,10 +1,11 @@
 ---
 title: Vistas en extensiones web
 description: 'Obtenga información sobre cómo definir vistas para módulos de biblioteca en las extensiones web de Adobe Experience Platform '
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '2063'
-ht-degree: 77%
+ht-degree: 99%
 
 ---
 
@@ -24,19 +25,19 @@ Asegúrese de incluir una etiqueta `doctype` en el archivo HTML. Normalmente, es
 <!DOCTYPE html>
 ```
 
-## Inclusión de las etiquetas de la secuencia de comandos de iframe
+## Inclusión de las etiquetas de la secuencia de scripts de iframe
 
-Incluya las etiquetas del script iframe en el HTML de la vista:
+Incluya el script iframe de las etiquetas en el código HTML de su vista:
 
 ```html
 <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
 ```
 
-Esta secuencia de comandos proporciona una API de comunicación para permitir que la vista se comunique con la aplicación de etiquetas.
+Este script proporciona una API de comunicación que permite a la vista comunicarse con la aplicación de las etiquetas.
 
 ## Registro con la API de comunicación de puente de extensión
 
-Una vez cargado el script de iframe, deberá proporcionar algunos métodos a las etiquetas que utilizará para la comunicación. Llame a `window.extensionBridge.register` y pase un objeto como se indica a continuación:
+Una vez que se haya cargado el script de iframe, deberá proporcionar a las etiquetas algunos métodos que utilizará para la comunicación. Llame a `window.extensionBridge.register` y pase un objeto como se indica a continuación:
 
 ```js
 window.extensionBridge.register({
@@ -64,22 +65,22 @@ Deberá modificar el contenido de cada uno de los métodos para adaptarlo a los 
 
 ### [!DNL init]
 
-Las etiquetas llamarán al método `init` en cuanto la vista se haya cargado en el iframe. Se pasará un solo argumento (`info`) que debe ser un objeto que contenga las propiedades siguientes:
+Las etiquetas llamárán al método `init` en cuanto la vista se haya cargado en el iframe. Se pasará un solo argumento (`info`) que debe ser un objeto que contenga las propiedades siguientes:
 
 | Propiedad | Descripción |
 | --- | --- |
 | `settings` | Objeto que contiene opciones de configuración que se guardaron anteriormente desde esta vista. Si `settings` es `null`, quiere decir que el usuario está creando la configuración inicial en lugar de cargar una versión guardada. Si `settings` es un objeto, debe utilizarlo para rellenar la vista, ya que el usuario está optando por editar la configuración mantenida anteriormente. |
 | `extensionSettings` | Configuración guardada desde la vista de configuración de la extensión. Esto puede resultar útil para acceder a las opciones de configuración de extensión de vistas que no son la vista de configuración de extensión. Si la vista actual es la vista de configuración de la extensión, utilice `settings`. |
 | `propertySettings` | Objeto que contiene la configuración de la propiedad. Consulte la [guía del objeto turbine](../turbine.md#property-settings) para obtener más información sobre el contenido de este objeto. |
-| `tokens` | Objeto que contiene tokens de API. Para acceder a las API de Adobe desde la vista, normalmente deberá utilizar un token IMS en `tokens.imsAccess`. Este token solo estará disponible para las extensiones desarrolladas por Adobe. Si es un empleado de Adobe que representa una extensión creada por el Adobe, [envíe un correo electrónico al equipo de ingeniería de recopilación de datos](mailto:reactor@adobe.com) y proporcione el nombre de la extensión para que podamos agregarla a la lista de permitidos. |
+| `tokens` | Objeto que contiene tokens de API. Para acceder a las API de Adobe desde la vista, normalmente deberá utilizar un token IMS en `tokens.imsAccess`. Este token solo estará disponible para las extensiones desarrolladas por Adobe. Si es usted un empleado de Adobe que representa una extensión creada por Adobe, [envíe un correo electrónico al equipo de ingenería de recopilación de datos](mailto:reactor@adobe.com) y proporcione el nombre de la extensión para que podamos añadirla a la lista de permitidos. |
 | `company` | Objeto que contiene una sola propiedad, `orgId`, que representa su Adobe Experience Cloud ID (cadena alfanumérica de 24 caracteres). |
-| `schema` | Objeto con el formato [Esquema JSON](http://json-schema.org/). Este objeto provendrá del [manifiesto de extensión](../manifest.md) y puede resultar útil para validar el formulario. |
+| `schema` | Objeto con el formato [Esquema JSON](https://json-schema.org/). Este objeto provendrá del [manifiesto de extensión](../manifest.md) y puede resultar útil para validar el formulario. |
 
 La vista debe utilizar esta información para procesar y administrar su formulario. Es probable que solo necesite tratar con `info.settings`, aunque también se proporciona la otra información por si es necesario.
 
 ### [!DNL validate]
 
-Se llamará al método `validate` después de que el usuario pulse el botón &quot;Guardar&quot;. Debe devolver uno de los elementos siguientes:
+Se llamará al método `validate` después de que el usuario pulse el botón Guardar. Debe devolver uno de los elementos siguientes:
 
 * Un valor booleano que indica si la entrada del usuario es válida.
 * Una promesa de resolución posterior con un valor booleano que indica si la entrada del usuario es válida.
@@ -90,16 +91,16 @@ Si los datos introducidos por el usuario no son válidos, esto es algo que debe 
 
 ### [!DNL getSettings]
 
-Se llamará al método `getSettings` después de que el usuario pulse el botón &quot;Guardar&quot; y de que la vista se haya validado. La función debe devolver uno de los elementos siguientes:
+Se llamará al método `getSettings` después de que el usuario pulse el botón Guardar y valide la vista. La función debe devolver uno de los elementos siguientes:
 
 * Un objeto que contenga la configuración en función de la entrada del usuario.
 * Una promesa de resolución posterior con un objeto que contenga la configuración basada en los datos introducidos por el usuario.
 
-Este objeto de configuración se emitirá posteriormente en la biblioteca de tiempo de ejecución de etiquetas. El contenido de este objeto está a su discreción. El objeto debe ser serializable y deserializable desde y hacia JSON. Los valores como las funciones o las instancias de [RegExp](https://developer.mozilla.org/es-ES/docs/Web/JavaScript/Reference/Global_Objects/RegExp) no cumplen estos criterios y, por lo tanto, no están permitidos.
+Este objeto de configuración se emitirá más adelante en la biblioteca de tiempo de ejecución de etiquetas. El contenido de este objeto está a su discreción. El objeto debe ser serializable y deserializable desde y hacia JSON. Los valores como las funciones o las instancias de [RegExp](https://developer.mozilla.org/es-ES/docs/Web/JavaScript/Reference/Global_Objects/RegExp) no cumplen estos criterios y, por lo tanto, no están permitidos.
 
 ## Utilización de las vistas compartidas
 
-El objeto `window.extensionBridge` tiene varios métodos que le permiten aprovechar las vistas existentes disponibles mediante etiquetas para no tener que reproducirlas en la vista. Los métodos disponibles son los siguientes:
+El objeto `window.extensionBridge` tiene varios métodos que le permiten aprovechar las ventajas que ofrecen las vistas existentes disponibles mediante las etiquetas para que no tenga que reproducirlas en su vista. Los métodos disponibles son los siguientes:
 
 ### [!DNL openCodeEditor]
 
@@ -129,7 +130,7 @@ Al llamar a este método, se mostrará un modal que permite al usuario probar y 
 | Propiedad | Descripción |
 | --- | --- |
 | `pattern` | Patrón de expresión regular que debe utilizarse como valor inicial del campo de patrón dentro del comprobador. Normalmente, esto se proporciona cuando el usuario está editando una expresión regular existente. Si no se proporciona, el campo de patrón estará vacío inicialmente. |
-| `flags` | Indicadores de expresión regular que debe utilizar el probador. Como ejemplo, `gi` indicaría el indicador de coincidencia global y el indicador de omisión de mayúsculas y minúsculas. Estos indicadores no son modificables por el usuario dentro del comprobador, pero se utilizan para mostrar los indicadores específicos que la extensión utilizará al ejecutar la expresión regular. Si no se proporciona, no se utilizarán indicadores dentro del comprobador. Consulte la [documentación de RegExp de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) para obtener más información sobre los indicadores de expresiones regulares.<br><br>Un escenario común es una extensión que permite a los usuarios alternar entre mayúsculas y minúsculas para una expresión regular. Para admitir esto, la extensión normalmente proporcionaría una casilla de verificación dentro de su vista de extensión que, cuando se activa, habilita la insensibilidad a las mayúsculas y minúsculas (representada por el indicador `i` ). El objeto de configuración guardado por la vista tendría que representar si la casilla de verificación se marcó para que el módulo de biblioteca que ejecuta la expresión regular pueda saber si debe utilizar el indicador `i`. Además, cuando la vista de extensión desea abrir el evaluador de expresiones regulares, tendría que pasar el indicador `i` si la casilla de verificación no distingue entre mayúsculas y minúsculas está marcada. Esto permite al usuario probar correctamente la expresión regular con la insensibilidad de mayúsculas y minúsculas habilitada. |
+| `flags` | Indicadores de expresión regular que debe utilizar el probador. Como ejemplo, `gi` indicaría el indicador de coincidencia global y el indicador de omisión de mayúsculas y minúsculas. Estos indicadores no son modificables por el usuario dentro del comprobador, pero se utilizan para mostrar los indicadores específicos que la extensión utilizará al ejecutar la expresión regular. Si no se proporciona, no se utilizarán indicadores dentro del comprobador. Consulte la [documentación de RegExp de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) para obtener más información sobre los indicadores de expresiones regulares.<br><br>Un escenario común es una extensión que permite a los usuarios alternar entre mayúsculas y minúsculas para una expresión regular. Para admitir esto, la extensión suele incluir una casilla de verificación dentro de su vista de extensión que, al activarse, no hace distinción entre mayúsculas y minúsculas (representada por el indicador `i`). El objeto de configuración guardado por la vista tendría que representar si la casilla de verificación se marcó para que el módulo de biblioteca que ejecuta la expresión regular pueda saber si debe utilizar el indicador `i`. Además, cuando la vista de extensión desee abrir el comprobador de expresión regular, deberá pasar el indicador `i` si se marca la casilla de verificación para no hacer distinción entre mayúsculas y minúsculas. Esto permite al usuario probar correctamente la expresión regular con la omisión de distinción entre mayúsculas y minúsculas habilitada. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
@@ -145,11 +146,11 @@ El objeto `options` debe contener una sola propiedad booleana, `tokenize`. Esta 
 
 ## Elementos de datos complementarios {#supporting-data-elements}
 
-Es probable que las vistas tengan campos de formulario en los que los usuarios desean aprovechar los elementos de datos. Por ejemplo, si la vista tiene un campo de texto en el que el usuario debe introducir un nombre de producto, puede que no tenga sentido que el usuario escriba un valor codificado en el campo. En su lugar, es posible que deseen que el valor del campo sea dinámico (determinado en tiempo de ejecución) y utilizar un elemento de datos para ello.
+Es probable que sus vistas tengan campos de formulario en los que los usuarios deseen utilizar elementos de datos. Por ejemplo, si la vista tiene un campo de texto en el que el usuario debe introducir un nombre de producto, puede que no tenga sentido que el usuario escriba un valor incrustado en el campo. En su lugar, es posible que deseen que el valor del campo sea dinámico (determinado en tiempo de ejecución) y utilizar un elemento de datos para ello.
 
-Como ejemplo, supongamos que vamos a crear una extensión que envía una señalización para rastrear una conversión. Supongamos también que uno de los datos que envía nuestra señalización es un nombre de producto. Nuestra vista de extensión que permite al usuario configurar la señalización probablemente tendría un campo de texto para el nombre del producto. Normalmente, no tendría mucho sentido que el usuario de Platform escribiese un nombre de producto estático como &quot;Calzone Oven XL&quot;, puesto que el nombre del producto probablemente dependa de la página desde la que se enviará la señalización. Este es un excelente caso para utilizar un elemento de datos.
+Como ejemplo, supongamos que vamos a crear una extensión que envía una señalización para rastrear una conversión. Supongamos también que uno de los datos que envía nuestra señalización es un nombre de producto. Es probable que nuestra vista de extensión que permite al usuario configurar la señalización tenga un campo de texto para el nombre del producto. Normalmente, no tendría mucho sentido que el usuario de Platform escribiese un nombre de producto estático como &quot;Calzone Oven XL&quot;, puesto que el nombre del producto probablemente dependa de la página desde la que se enviará la señalización. Este es un excelente caso para utilizar un elemento de datos.
 
-Si un usuario desea utilizar el elemento de datos denominado `productname` para el valor del nombre del producto, puede escribir el nombre del elemento de datos con símbolos de porcentaje a ambos lados (`%productname%`). Nos referimos al nombre del elemento de datos acortado con signos de porcentaje como un &quot;token de elemento de datos&quot;. Los usuarios de la plataforma a menudo están familiarizados con esta construcción. La extensión, a su vez, guardaría el token del elemento de datos dentro del objeto `settings` que exporta. El objeto de configuración puede tener el aspecto siguiente:
+Si un usuario desea utilizar el elemento de datos denominado `productname` para el valor del nombre del producto, puede escribir el nombre del elemento de datos con símbolos de porcentaje a ambos lados (`%productname%`). Nos referimos al nombre del elemento de datos acortado con signos de porcentaje como un “token de elemento de datos”. Los usuarios de Platform suelen estar familiarizados con esta construcción. La extensión, a su vez, guardaría el token del elemento de datos dentro del objeto `settings` que exporta. El objeto de configuración puede tener el aspecto siguiente:
 
 ```js
 {
@@ -157,7 +158,7 @@ Si un usuario desea utilizar el elemento de datos denominado `productname` para 
 }
 ```
 
-En tiempo de ejecución, antes de pasar el objeto de configuración al módulo de biblioteca, se analiza el objeto de configuración y se reemplazan los tokens de elemento de datos por sus valores respectivos. Si en tiempo de ejecución, el valor del elemento de datos `productname` era `Ceiling Medallion Pro 2000`, el objeto de configuración que se pasaría al módulo de biblioteca sería el siguiente:
+En tiempo de ejecución, antes de pasar el objeto de configuración al módulo de biblioteca, se analiza el objeto de configuración y se reemplazan los tokens de elemento de datos por sus valores respectivos. Si en el tiempo de ejecución, el valor del elemento de datos `productname` fuese `Ceiling Medallion Pro 2000`, el objeto de configuración que se pasaría al módulo de biblioteca sería el siguiente:
 
 ```js
 {
@@ -215,7 +216,7 @@ Por otro lado, supongamos que el objeto de configuración persistente fuese el s
 }
 ```
 
-En este caso, como el valor de `productName` es más que un token de elemento de datos único, el resultado siempre será una cadena. Cada token de elemento de datos se reemplazará por su valor respectivo tras convertirse en cadena. Si en el tiempo de ejecución, el valor de `productname` era `Ceiling Medallion Pro` (una cadena) y `modelnumber` era `2000` (un número), el objeto de configuración resultante pasado al módulo de biblioteca sería:
+En este caso, como el valor de `productName` es más que un token de elemento de datos único, el resultado siempre será una cadena. Cada token de elemento de datos se reemplazará por su valor respectivo tras convertirse en cadena. Si, en el tiempo de ejecución, el valor de `productname` fuese `Ceiling Medallion Pro` (una cadena) y `modelnumber` fuese `2000` (un número), el objeto de configuración resultante pasado al módulo de la biblioteca sería el siguiente:
 
 ```js
 {
