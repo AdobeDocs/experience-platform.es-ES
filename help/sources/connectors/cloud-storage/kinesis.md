@@ -5,35 +5,39 @@ title: Información general sobre el conector de origen de Amazon Kinesis
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Amazon Kinesis a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: 5f4355a9d3ef39ee63581fc70dbf0f6e7d674814
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
 # [!DNL Amazon Kinesis] connector
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS, [!DNL Google Cloud Platform] y [!DNL Azure]. Puede introducir los datos de estos sistemas en [!DNL Platform].
+Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS, [!DNL Google Cloud Platform]y [!DNL Azure]. Puede incorporar los datos de estos sistemas a [!DNL Platform].
 
-Las fuentes de almacenamiento en la nube pueden traer sus propios datos a [!DNL Platform] sin necesidad de descargar, formatear o cargar. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o delimitados. Cada paso del proceso se integra en el flujo de trabajo Orígenes . [!DNL Platform] permite introducir datos desde  [!DNL Amazon Kinesis] en tiempo real.
+Las fuentes de almacenamiento en la nube pueden incorporar sus propios datos a [!DNL Platform] sin necesidad de descargar, formatear o cargar. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o delimitados. Cada paso del proceso se integra en el flujo de trabajo Orígenes . [!DNL Platform] permite introducir datos de [!DNL Amazon Kinesis] en tiempo real.
+
+>[!NOTE]
+>
+>El factor de escala para [!DNL Kinesis] debe aumentarse si necesita ingerir datos de gran volumen. Actualmente, el volumen máximo de datos que puede obtener de su [!DNL Kinesis] La cuenta a Platform es de 4000 registros por segundo. Para ampliar e incorporar datos de mayor volumen, póngase en contacto con su representante de Adobe.
 
 ## Requisitos previos
 
-La siguiente sección proporciona más información sobre la configuración previa necesaria para poder crear una conexión de origen [!DNL Kinesis].
+En la siguiente sección se proporciona más información sobre la configuración de requisitos previos necesaria para poder crear una [!DNL Kinesis] conexión de origen.
 
 ### Configuración de la directiva de acceso
 
-Un flujo [!DNL Kinesis] requiere los siguientes permisos para crear una conexión de origen:
+A [!DNL Kinesis] La secuencia requiere los siguientes permisos para crear una conexión de origen:
 
 - `GetShardIterator`
 - `GetRecords`
 - `DescribeStream`
 - `ListStreams`
 
-Estos permisos se organizan a través de la consola [!DNL Kinesis] y Platform los comprueba una vez que introduce las credenciales y selecciona el flujo de datos.
+Estos permisos se organizan mediante la variable [!DNL Kinesis] y son verificados por Platform una vez que haya introducido sus credenciales y seleccionado el flujo de datos.
 
-El ejemplo siguiente muestra los derechos de acceso mínimos necesarios para crear una conexión de origen [!DNL Kinesis].
+El ejemplo siguiente muestra los derechos de acceso mínimos necesarios para crear un [!DNL Kinesis] conexión de origen.
 
 ```json
 {
@@ -62,7 +66,7 @@ El ejemplo siguiente muestra los derechos de acceso mínimos necesarios para cre
 | `kinesis:DescribeStream` | Acción que devuelve información sobre el flujo, incluido el mapa compartido, que es necesario para generar un ID compartido. |
 | `kinesis:ListStreams` | Acción necesaria para enumerar los flujos disponibles que puede seleccionar en la interfaz de usuario. |
 
-Para obtener más información sobre el control del acceso para [!DNL Kinesis] flujos de datos, consulte el siguiente [[!DNL Kinesis] documento](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+Para obtener más información sobre cómo controlar el acceso a [!DNL Kinesis] flujos de datos, consulte lo siguiente [[!DNL Kinesis] documento](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ### Configurar el tipo de iterador
 
@@ -76,13 +80,13 @@ Para obtener más información sobre el control del acceso para [!DNL Kinesis] f
 | `TRIM_HORIZON` | Los datos se leen a partir del registro de datos más antiguo. |
 | `LATEST` | Los datos se leen a partir del registro de datos más reciente. |
 
-Actualmente, una fuente de interfaz de usuario [!DNL Kinesis] solo admite `TRIM_HORIZON`, mientras que la API admite `TRIM_HORIZON` y `LATEST` como modos de obtener datos. El valor predeterminado del iterador que utiliza Platform para el origen [!DNL Kinesis] es `TRIM_HORIZON`.
+A [!DNL Kinesis] El origen de la interfaz de usuario solo es compatible actualmente `TRIM_HORIZON`, mientras que la API admite ambas `TRIM_HORIZON` y `LATEST` como modos para obtener datos. El valor de iterador predeterminado que utiliza Platform para la variable [!DNL Kinesis] el origen es `TRIM_HORIZON`.
 
-Para obtener más información sobre los tipos de iterador, consulte el siguiente [[!DNL Kinesis] documento](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
+Para obtener más información sobre los tipos de iteradores, consulte lo siguiente [[!DNL Kinesis] documento](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
-## Conectar [!DNL Amazon Kinesis] a [!DNL Platform]
+## Connect [!DNL Amazon Kinesis] a [!DNL Platform]
 
-La documentación siguiente proporciona información sobre cómo conectar [!DNL Amazon Kinesis] a [!DNL Platform] mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectar [!DNL Amazon Kinesis] a [!DNL Platform] mediante API o la interfaz de usuario:
 
 ### Uso de API
 
