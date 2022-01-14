@@ -5,16 +5,16 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene información sobre los códigos de error comunes que encuentra y las posibles causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
+source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '769'
 ht-degree: 4%
 
 ---
 
 # [!DNL Query Service] guía de solución de problemas
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de consultas y proporciona una lista de códigos de error que se ven con más frecuencia al utilizar el servicio de consultas. Para preguntas y solución de problemas relacionados con otros servicios de Adobe Experience Platform, consulte la [guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de consultas y proporciona una lista de códigos de error que se ven con más frecuencia al utilizar el servicio de consultas. Para preguntas y solución de problemas relacionados con otros servicios de Adobe Experience Platform, consulte la [Guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
 
 ## Preguntas frecuentes
 
@@ -62,7 +62,7 @@ Al consultar los datos de series temporales, debe utilizar el filtro de marcas d
 
 >[!NOTE]
 >
-> La cadena de fecha **debe** tener el formato `yyyy-mm-ddTHH24:MM:SS`.
+> La cadena de fecha **must** estar en formato `yyyy-mm-ddTHH24:MM:SS`.
 
 A continuación se puede ver un ejemplo del uso del filtro de marca de tiempo:
 
@@ -77,13 +77,13 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 
 ### ¿Debo usar caracteres comodín, como *, para obtener todas las filas de mis conjuntos de datos?
 
-No puede utilizar caracteres comodín para obtener todos los datos de las filas, ya que el servicio de consulta debe tratarse como **almacén de columnas** en lugar de como sistema de almacén tradicional basado en filas.
+No puede utilizar comodines para obtener todos los datos de las filas, ya que el servicio de consultas debe tratarse como un **almacén de columnas** en lugar de un sistema de tienda tradicional basado en filas.
 
-### ¿Debería utilizar `NOT IN` en mi consulta SQL?
+### ¿Debería usar `NOT IN` en mi consulta SQL?
 
-El operador `NOT IN` se utiliza a menudo para recuperar filas que no se encuentran en otra tabla o instrucción SQL. Este operador puede ralentizar el rendimiento y devolver resultados inesperados si las columnas que se comparan aceptan `NOT NULL` o si tiene un gran número de registros.
+La variable `NOT IN` se utiliza a menudo para recuperar filas que no se encuentran en otra tabla o instrucción SQL. Este operador puede ralentizar el rendimiento y devolver resultados inesperados si las columnas que se comparan aceptan `NOT NULL`o tiene un gran número de registros.
 
-En lugar de utilizar `NOT IN`, puede utilizar `NOT EXISTS` o `LEFT OUTER JOIN`.
+En lugar de usar `NOT IN`, puede usar una de las opciones siguientes: `NOT EXISTS` o `LEFT OUTER JOIN`.
 
 Por ejemplo, si tiene creadas las tablas siguientes:
 
@@ -97,7 +97,7 @@ INSERT INTO T2 VALUES (1)
 INSERT INTO T2 VALUES (2)
 ```
 
-Si utiliza el operador `NOT EXISTS` , puede duplicar con el operador `NOT IN` mediante la siguiente consulta:
+Si está utilizando la variable `NOT EXISTS` operador, puede replicar utilizando la variable `NOT IN` mediante la siguiente consulta:
 
 ```sql
 SELECT ID FROM T1
@@ -105,7 +105,7 @@ WHERE NOT EXISTS
 (SELECT ID FROM T2 WHERE T1.ID = T2.ID)
 ```
 
-Alternativamente, si está utilizando el operador `LEFT OUTER JOIN`, puede replicar utilizando el operador `NOT IN` utilizando la siguiente consulta:
+Alternativamente, si está utilizando la variable `LEFT OUTER JOIN` operador, puede replicar utilizando el `NOT IN` mediante la siguiente consulta:
 
 ```sql
 SELECT T1.ID FROM T1
@@ -113,11 +113,11 @@ LEFT OUTER JOIN T2 ON T1.ID = T2.ID
 WHERE T2.ID IS NULL
 ```
 
-### ¿Cuál es el uso correcto de los operadores `OR` y `UNION`?
+### ¿Cuál es el uso correcto de la variable `OR` y `UNION` operadores?
 
-### ¿Cómo utilizo correctamente el operador `CAST` para convertir mis marcas de hora en consultas SQL?
+### ¿Cómo utilizo correctamente el `CAST` operador para convertir mis marcas de hora en consultas SQL?
 
-Al utilizar el operador `CAST` para convertir una marca de tiempo, debe incluir la fecha **y la hora**.
+Al usar la variable `CAST` para convertir una marca de tiempo, debe incluir ambas fechas **y** tiempo.
 
 Por ejemplo, si falta el componente de tiempo, como se muestra a continuación, se producirá un error:
 
@@ -126,12 +126,16 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021' AS timestamp)
 ```
 
-A continuación se muestra un uso correcto del operador `CAST`:
+Un uso correcto de la variable `CAST` se muestra a continuación:
 
 ```sql
 SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ```
+
+### ¿Cómo puedo descargar los resultados de mi consulta como archivo CSV?
+
+Esta no es una función que el servicio de consulta ofrezca directamente. Sin embargo, si la variable [!DNL PostgreSQL] cliente utilizado para conectarse al servidor de base de datos tiene la capacidad , la respuesta de una consulta SELECT se puede escribir y descargar como archivo CSV. Consulte la documentación de la utilidad o herramienta de terceros que está utilizando para obtener aclaraciones sobre este proceso.
 
 ## Errores de API de REST
 
@@ -156,7 +160,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 | **53400** | Consulta | Tiempo de espera de la instrucción | La declaración en directo presentada tardó más de 10 minutos |
 | **58000** | Consulta | Error del sistema | Fallo interno del sistema |
 | **0A000** | Consulta/Comando | No admitido | La función/funcionalidad de la consulta/comando no es compatible |
-| **42501** | Consulta de TABLA DE COLOCACIÓN | El servicio de consulta no crea la tabla de pérdidas | El servicio de consultas no creó la tabla que se está quitando con la instrucción `CREATE TABLE` |
+| **42501** | Consulta de TABLA DE COLOCACIÓN | El servicio de consulta no crea la tabla de pérdidas | El servicio de consultas no creó la tabla que se está soltando mediante el `CREATE TABLE` statement |
 | **42501** | Consulta de TABLA DE COLOCACIÓN | Tabla no creada por el usuario autenticado | El usuario que ha iniciado sesión actualmente no ha creado la tabla que se está quitando |
 | **42P01** | Consulta de TABLA DE COLOCACIÓN | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
 | **42P12** | Consulta de TABLA DE COLOCACIÓN | No se encontró ninguna tabla para `dbName`: compruebe el `dbName` | No se encontraron tablas en la base de datos actual |
