@@ -5,10 +5,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: ccda6d3e16fd6b9966c2f30491feed5fafec47f2
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 35%
+source-wordcount: '141'
+ht-degree: 37%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 35%
       * [Información general](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentimiento {#consent}
    * [Apoyo al consentimiento](consent/supporting-consent.md)
-   * Marco de transparencia y consentimiento IAB 2.0 {#iab-tcf}
+   * Marco de transparencia y consentimiento de IAB 2.0 {#iab-tcf}
       * [Información general](consent/iab-tcf/overview.md)
       * [Integración con etiquetas](consent/iab-tcf/with-launch.md)
       * [Integrar sin etiquetas](consent/iab-tcf/without-launch.md)
@@ -62,4 +62,4 @@ ht-degree: 35%
    * [Notas de la versión de la extensión del SDK web](extension/web-sdk-ext-release-notes.md)
 * [Notas de la versión](release-notes.md)
 * [Preguntas frecuentes](web-sdk-faq.md)
-* [Publicaciones de blog](blog-posts.md)
+* [Recursos](resources.md)
