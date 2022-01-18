@@ -6,9 +6,9 @@ title: Monitorizar flujos de datos para destinos en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
+source-git-commit: 567cfd5ecec23d35317a46a3126a608cc4792a73
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1897'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,11 @@ La página de detalles también muestra una lista de identidades que han fallado
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="La activación de destino contiene información sobre el estado de activación del segmento y métricas tomadas del Perfil del cliente en tiempo real para generar identidades únicas."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Trabajos de segmentos"
+>abstract="El panel de trabajos del segmento contiene información sobre los trabajos de evaluación y exportación de todos los segmentos."
 
 Para acceder a la [!UICONTROL Monitorización] tablero, seleccione **[!UICONTROL Monitorización]** (![icono de monitorización](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en el [!UICONTROL Monitorización] página, seleccione [!UICONTROL Destinos]. La variable [!UICONTROL Monitorización] tablero contiene métricas e información sobre los trabajos de ejecución de destino.
 
