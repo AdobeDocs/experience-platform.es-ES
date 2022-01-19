@@ -3,14 +3,20 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7d7a9357f17b941a8f7800be86f211bb1276698d
+source-git-commit: a768cde86215ed9aad19e45362c6185276456703
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '852'
 ht-degree: 4%
 
 ---
 
 # Notas de la versión
+
+## Versión 2.8.0: 19 de enero de 2022
+
+* Compatibilidad con selectores DOM de sombra para la personalización.
+* Se ha cambiado el nombre de los tipos de eventos de personalización. (`display` y `click` se `decisioning.propositionDisplay` y `decisioning.propositionInteract`)
+* Se ha corregido un problema en el cual las ofertas de HTML con etiquetas de script en línea agregaban dos veces las etiquetas de script a la página aunque el script solo se ejecutara una vez.
 
 ## Versión 2.7.0: 26 de octubre de 2021
 
