@@ -6,7 +6,7 @@ title: Monitorizar flujos de datos para orígenes en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 507fa2981f99cad26b117eb576c9dc18080886c8
+source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 0%
@@ -41,13 +41,13 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Ingesta de origen"
->abstract="El procesamiento de fuentes contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. <br> Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
+>abstract="El procesamiento de fuentes contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="Detalles de ejecución de flujo de datos"
->abstract="El procesamiento de fuentes contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. <br> Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
+>abstract="El procesamiento de fuentes contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
 En el [Interfaz de usuario de Platform](https://platform.adobe.com), seleccione **[!UICONTROL Monitorización]** desde el panel de navegación izquierdo para acceder a la [!UICONTROL Monitorización] tablero. La variable [!UICONTROL Monitorización] tablero contiene métricas e información sobre todos los flujos de datos de fuentes, incluida la información sobre el estado del tráfico de datos de una fuente a otra [!DNL Identity Service]y [!DNL Profile].
@@ -151,7 +151,7 @@ Select **[!UICONTROL Identidades]** para ver la ingesta en el [!UICONTROL Identi
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Procesamiento de identidad"
->abstract="El procesamiento de identidad contiene información sobre los registros ingestados al servicio de identidad, incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados. <br> Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
+>abstract="El procesamiento de identidad contiene información sobre los registros ingestados al servicio de identidad, incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
 La variable [!UICONTROL Procesamiento de identidad] La página contiene información sobre los registros ingestados en [!DNL Identity Service], incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados.
