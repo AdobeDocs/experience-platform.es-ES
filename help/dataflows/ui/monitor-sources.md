@@ -6,9 +6,9 @@ title: Monitorizar flujos de datos para orígenes en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
+source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1856'
 ht-degree: 0%
 
 ---
@@ -154,6 +154,11 @@ Select **[!UICONTROL Identidades]** para ver la ingesta en el [!UICONTROL Identi
 >abstract="El procesamiento de identidad contiene información sobre los registros ingestados al servicio de identidad, incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_identity"
+>title="Detalles de ejecución de flujo de datos"
+>abstract="La página de detalles de ejecución del flujo de datos muestra más información sobre la ejecución del flujo de datos de identidad, incluido su ID de organización de IMS y el ID de ejecución del flujo de datos."
+
 La variable [!UICONTROL Procesamiento de identidad] La página contiene información sobre los registros ingestados en [!DNL Identity Service], incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados.
 
 Seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) al lado del tiempo de inicio de ejecución del flujo de datos para ver más información sobre su [!DNL Identity] ejecute dataflow.
@@ -191,6 +196,11 @@ En el [!UICONTROL Procesamiento de identidad] página, seleccione **[!UICONTROL 
 >title="Procesamiento de perfiles"
 >abstract="El procesamiento de perfiles contiene información sobre los registros ingeridos al servicio Perfil, incluido el número de fragmentos de perfil creados, los fragmentos de perfil actualizados y el número total de fragmentos de perfil."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_profile"
+>title="Detalles de ejecución de flujo de datos"
+>abstract="La página de detalles de ejecución de flujo de datos muestra más información sobre la ejecución de flujo de datos de perfil, incluido su ID de organización de IMS y el ID de ejecución de flujo de datos."
 
 La variable [!UICONTROL Procesamiento de perfiles] La página contiene información sobre los registros ingestados en [!DNL Profile], incluido el número de fragmentos de perfil creados, los fragmentos de perfil actualizados y el número total de fragmentos de perfil.
 

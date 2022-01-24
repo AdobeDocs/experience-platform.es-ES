@@ -6,9 +6,9 @@ title: Monitorizar flujos de datos para destinos en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 567cfd5ecec23d35317a46a3126a608cc4792a73
+source-git-commit: b9f9e709fe51000a32eaea7a1a7c76488a36dd9b
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '2050'
 ht-degree: 0%
 
 ---
@@ -65,6 +65,35 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 >abstract="Recuento de identidades de perfil individuales que fallaron para el destino seleccionado. Consulte los diagnósticos de errores para obtener más información."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Más información en la documentación"
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation_streaming"
+>title="Detalles de ejecución de flujo de datos"
+>abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación del segmento y métricas tomadas del Perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas ."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received_streaming"
+>title="Perfiles recibidos"
+>abstract="Número total de perfiles recibidos en el flujo de datos. Este valor se actualiza cada 60 minutos."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesactivated_streaming"
+>title="Identidades activadas"
+>abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesexcluded_streaming"
+>title="Identidades excluidas"
+>abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed_streaming"
+>title="Identidades fallidas"
+>abstract="Recuento de identidades de perfil individuales que fallaron para el destino seleccionado. Consulte los diagnósticos de errores para obtener más información."
+>text="Learn more in documentation"
+
 Para los destinos de flujo continuo, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona una actualización por hora para los datos de métricas en las ejecuciones de flujo de datos. Las estadísticas más destacadas etiquetadas son para identidades.
 
 Las identidades representan las diferentes facetas de un perfil. Por ejemplo, si un perfil contiene un número de teléfono y una dirección de correo electrónico, ese perfil tendrá dos identidades.
@@ -102,15 +131,33 @@ La página de detalles también muestra una lista de identidades que han fallado
 ### El flujo de datos se ejecuta en destinos por lotes {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_activation"
+>id="platform_monitoring_profiles_received"
+>title="Perfiles recibidos"
+>abstract="Número total de perfiles recibidos en el flujo de datos. Este valor se actualiza cada 60 minutos."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation_batch"
 >title="Detalles de ejecución de flujo de datos"
 >abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación del segmento y métricas tomadas del Perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas ."
 
 >[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
+>id="platform_monitoring_profiles_received_batch"
 >title="Perfiles recibidos"
 >abstract="Número total de perfiles recibidos en el flujo de datos. Este valor se actualiza cada 60 minutos."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Más información en la documentación"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesactivated_batch"
+>title="Identidades activadas"
+>abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesexcluded_batch"
+>title="Identidades excluidas"
+>abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
+>text="Learn more in documentation"
 
 Para los destinos de lote, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona datos de métricas sobre las ejecuciones de flujo de datos. Se muestra una lista de ejecuciones individuales y sus métricas particulares, junto con los siguientes totales de identidades:
 
