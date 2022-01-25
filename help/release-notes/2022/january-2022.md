@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 49fd8615353a4029b0e98ba90e8438f8ff512e7b
+source-git-commit: 641fcab89b849d91a075fa5058421950bc7fecd7
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 12%
+source-wordcount: '431'
+ht-degree: 10%
 
 ---
 
@@ -14,9 +14,22 @@ ht-degree: 12%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [Alertas](#alerts)
 - [Preparación de datos](#data-prep)
 - [Entornos aislados](#sandboxes)
 - [Servicio de segmentación](#segmentation)
+
+## Alertas {#alerts}
+
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Platform. Puede suscribirse a distintas reglas de alerta a través de la [!UICONTROL Alertas] en la interfaz de usuario de Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Nuevas reglas de alerta | Ya hay disponibles varias reglas de alerta nuevas para flujos de trabajo relacionados con la ingesta de datos, identidades, perfiles, segmentación y activación. Consulte la descripción general sobre [reglas de alerta](../../observability/alerts/rules.md) para la lista actualizada de tipos de alertas. |
+
+Para obtener más información sobre las alertas en Platform, consulte la [información general sobre alertas](../../observability/alerts/overview.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -34,6 +47,8 @@ Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Da
 
 Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. A menudo, las empresas ejecutan varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, asegurando al mismo tiempo el cumplimiento de las normas operacionales. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
+**Funciones actualizadas**
+
 | Función | Descripción |
 | --- | --- |
 | Mejoras en la interfaz de usuario de los Simuladores para pruebas | El indicador del simulador para pruebas ahora está integrado en el encabezado de todas las aplicaciones de interfaz de usuario de Platform. El indicador del simulador de pruebas muestra el nombre, la región y el tipo del simulador de pruebas, y también le permite acceder a un menú desplegable para alternar entre entornos limitados. Para obtener más información, consulte la [guía de la interfaz de usuario de sandbox](../../sandboxes/ui/user-guide.md). |
@@ -43,6 +58,8 @@ Para obtener más información sobre los entornos limitados, consulte la [inform
 ## Servicio de segmentación {#segmentation}
 
 [!DNL Segmentation Service] define un subconjunto de perfiles determinado describiendo los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+
+**Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
