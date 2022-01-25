@@ -3,18 +3,15 @@ keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación
 solution: Experience Platform
 title: Preguntas frecuentes sobre la coincidencia de segmentos (Beta)
 description: Coincidencia de segmentos es un servicio para compartir segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, regulada y compatible con la privacidad.
-source-git-commit: 81ef2030ff26d2aee146316fcdab41d9311e84c7
+exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
+source-git-commit: 50795be308649052037be62153109eadab02c9a1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
 # [!DNL Segment Match] preguntas más frecuentes (Beta)
-
->[!IMPORTANT]
->
->La coincidencia de segmentos está actualmente en fase beta y es posible que su organización no tenga acceso a ella todavía. La funcionalidad descrita en esta documentación está sujeta a cambios.
 
 Esta guía proporciona respuestas a preguntas legales y de privacidad que se plantean a menudo sobre la coincidencia de segmentos de Adobe Experience Platform.
 
