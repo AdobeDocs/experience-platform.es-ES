@@ -5,7 +5,7 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Snowflake mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 76b3e3e9bcb27eb2bd6981ae6eb109410ae16336
+source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Para acceder a su cuenta de Snowflake en [!DNL Platform], debe proporcionar el s
 | Database | La variable [!DNL Snowflake] base de datos contiene los datos que desea que sean compatibles con Platform. |
 | Nombre de usuario | El nombre de usuario de la variable [!DNL Snowflake] cuenta. |
 | Contraseña | La contraseña de la variable [!DNL Snowflake] cuenta de usuario. |
-| Cadena de conexión | La cadena de conexión utilizada para conectarse a su [!DNL Snowflake] instancia. El patrón de cadena de conexión para [!DNL Snowflake] es `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| Cadena de conexión | La cadena de conexión utilizada para conectarse a su [!DNL Snowflake] instancia. El patrón de cadena de conexión para [!DNL Snowflake] es `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 Para obtener más información sobre estos valores, consulte [este documento de Snowflake](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
 
