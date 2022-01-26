@@ -2,10 +2,10 @@
 keywords: personalización; target; destino; personalización de destinos; configurar destinos de personalización; la misma página; página siguiente;
 title: Configurar destinos de personalización para la personalización de la misma página y de la página siguiente
 type: Tutorial
-seo-title: Configure personalization destinations for same-page and next-page personalization
-description: Obtenga información sobre cómo configurar destinos de personalización para la personalización de la misma página y de la página siguiente
-seo-description: Configure personalization destinations for same-page and next-page personalization
-source-git-commit: 628e7a993a3566322e0249a5a9864cf6b3fe4493
+seo-title: Configure personalization destinations for same-page and next-page personalization.
+description: Obtenga información sobre cómo configurar destinos de personalización para la personalización de la misma página y de la página siguiente.
+seo-description: Configure personalization destinations for same-page and next-page personalization.
+source-git-commit: 24e8d088dd79304e0bf0335b7c3df2ef75baf81d
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 1%
