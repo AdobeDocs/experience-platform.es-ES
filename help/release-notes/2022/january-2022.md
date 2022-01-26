@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 641fcab89b849d91a075fa5058421950bc7fecd7
+source-git-commit: 9cd9307d54d0950d4f67d5d8cee9c6412a558275
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 10%
+source-wordcount: '708'
+ht-degree: 7%
 
 ---
 
@@ -14,10 +14,12 @@ ht-degree: 10%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Alertas](#alerts)
-- [Preparación de datos](#data-prep)
-- [Entornos aislados](#sandboxes)
-- [Servicio de segmentación](#segmentation)
+- [Alertas {#alerts}](#alerts-alerts)
+- [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+- [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
+- [Servicio de consultas {#query-service}](#query-service-query-service)
+- [Zonas protegidas {#sandboxes}](#sandboxes-sandboxes)
+- [Servicio de segmentación {#segmentation}](#segmentation-service-segmentation)
 
 ## Alertas {#alerts}
 
@@ -42,6 +44,29 @@ Para obtener más información sobre las alertas en Platform, consulte la [infor
 | Experiencia de asignación consolidada | La nueva interfaz de asignación en la interfaz de usuario de Platform le ofrece una experiencia de asignación coherente para aprovechar las recomendaciones de asignación inteligente, configurar manualmente las reglas de asignación y depurar cualquier error que se produzca en los conjuntos de asignación. Para obtener más información, consulte la [[!DNL Data Prep] Guía de la interfaz de usuario](../../data-prep/home.md). |
 
 Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
+
+## [!DNL Dashboards] {#dashboards}
+
+[!DNL Dashboards] hace cosas bonitas.
+
+| Función | Descripción |
+|---------|-------------|
+| Subtítulos inteligentes | Un algoritmo de aprendizaje automático proporciona automáticamente perspectivas sobre sus datos de perfil y audiencia, e ilustra patrones y tendencias durante un período de 30 a 90 días o 12 meses. Los subtítulos incluyen información sobre <ul><li>Forma general y estadísticas</li><li>Tendencias y cambios bruscos</li><li>Patrones estacionales</li><li>Anomalías inesperadas</li></ul> Puede encontrar más información en la [tableros de perfiles](../../dashboards/guides/profiles.md#profiles-count-trend) y [tableros de segmentos](../../dashboards/guides/segments.md#audience-size-trend) documentación. |
+| Inventario de tableros | Acceda a los informes preconfigurados de paneles de perfil, segmentos y destinos, incluidas las integraciones instaladas, como Power BI, en una ubicación centralizada. Para obtener más información, consulte la [[!DNL Dashboards] información general](../../dashboards/home.md). |
+| Plantillas de informe de PowerBI | Cree, personalice o amplíe métricas a partir de los modelos de datos de informes de perfil, segmentos y destino usando los nuevos gráficos de Power BI. El flujo de trabajo de instalación automatizada le permite compartir sus perspectivas de marketing en su organización desde el entorno de PowerBI. Para obtener más información, consulte la [[!DNL Dashboards] información general](../../dashboards/home.md). |
+
+Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL Dashboards] información general](../../dashboards/home.md).
+
+## Servicio de consultas {#query-service}
+
+[!DNL Query Service] permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL Data Lake]. Puede unirse a cualquier conjunto de datos desde la [!DNL Data Lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para su uso en informes, Data Science Workspace o para su incorporación al perfil del cliente en tiempo real.
+
+| Función | Descripción |
+|----------------------|-----------------------|
+| Bloque anónimo | La construcción SQL de bloque anónimo permite desglosar los trabajos de preparación de datos a gran escala en el servicio de consulta en tareas más pequeñas y, a continuación, reutilizarlos y ejecutarlos en secuencia para la carga de datos incremental. Para obtener más información, consulte la [Información general del servicio de consultas](../../query-service/home.md). |
+| Organización de conjuntos de datos | Proporciona una estructura de datos lógica y coherente para organizar los recursos de datos y utilizarlos con el servicio de consulta a medida que crezca la cantidad de recursos de datos dentro del entorno limitado. Para obtener más información, consulte la [Información general del servicio de consultas](../../query-service/home.md). |
+
+Para obtener más información, consulte [!DNL Query Service], consulte la [[!DNL Query Service] información general](../../query-service/home.md).
 
 ## Entornos aislados {#sandboxes}
 
