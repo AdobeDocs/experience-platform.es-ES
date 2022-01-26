@@ -4,9 +4,9 @@ title: Introducción a los paneles Experience Platform
 type: Documentation
 description: Explore varios tableros en Adobe Experience Platform para ver información importante sobre los datos de su organización, tal como se capturan en las instantáneas diarias.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
+source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,19 @@ Los tableros proporcionan informes integrados sobre los datos de su organizació
 
 ## Introducción a los paneles
 
-Para acceder a los tableros, vaya a la sección correspondiente dentro de la interfaz de usuario (IU) de Platform. Una vez en la sección , seleccione la pestaña **[!UICONTROL Overview]**, si no se selecciona automáticamente, para ver el tablero.
+Para ver y administrar los tableros, vaya a **[!UICONTROL Tableros]** en la interfaz de usuario (IU) del Experience Platform y seleccione la **[!UICONTROL Examinar]** para acceder al inventario del tablero.
+
+También puede acceder a los tableros navegando a la sección correspondiente dentro de la interfaz de usuario del tablero que desee ver. Para ver el tablero de los perfiles, por ejemplo, vaya a la **[!UICONTROL Perfiles]** espacio de trabajo y seleccione **[!UICONTROL Información general]** pestaña .
 
 Los datos de la instantánea muestran los datos exactamente como aparecen en el momento concreto en que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos y los tableros no se actualizan en tiempo real.
 
 >[!NOTE]
 >
 >Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el panel hasta que se tome la siguiente instantánea.
+
+## Inventario de tableros
+
+Para ver los pasos detallados sobre cómo usar la variable **[!UICONTROL Tableros]** espacio de trabajo para ver todos los tableros disponibles, consulte [guía de inventario del tablero](./inventory.md).
 
 ## Tableros disponibles
 
