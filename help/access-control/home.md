@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto del Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 2effccfa9b1975292f350369201269099dc1b2a1
+source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
 workflow-type: tm+mt
-source-wordcount: '1383'
-ht-degree: 3%
+source-wordcount: '1384'
+ht-degree: 4%
 
 ---
 
@@ -85,7 +85,7 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 | [!DNL Data Modeling] | [!UICONTROL Administrar relaciones] | Acceso para leer, crear, editar y eliminar relaciones de esquema. |
 | [!DNL Data Modeling] | [!UICONTROL Administrar metadatos de identidad] | Acceso para leer, crear, editar y eliminar metadatos de identidad para esquemas. |
 | [!DNL Data Management] | [!UICONTROL Administrar conjuntos de datos] | Acceso para leer, crear, editar y eliminar conjuntos de datos. Acceso de solo lectura para esquemas. |
-| [!DNL Data Management] | [!UICONTROL Conjuntos de datos de vistas] | Acceso de solo lectura para conjuntos de datos y esquemas. |
+| [!DNL Data Management] | [!UICONTROL Ver conjuntos de datos] | Acceso de solo lectura para conjuntos de datos y esquemas. |
 | [!DNL Data Management] | [!UICONTROL Supervisión de datos] | Acceso de solo lectura a conjuntos de datos y flujos de monitoreo. |
 | [!DNL Profile Management] | [!UICONTROL Administrar perfiles] | Acceso para leer, crear, editar y eliminar conjuntos de datos que se utilizan para perfiles de clientes. Acceso de solo lectura a perfiles disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Ver perfiles] | Acceso de solo lectura a perfiles disponibles. |
@@ -103,7 +103,7 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 | [!DNL Destinations] | [!UICONTROL Administrar destinos] | Acceso para leer, crear, editar y deshabilitar destinos. |
 | [!DNL Destinations] | [!UICONTROL Ver destinos] | Acceso de solo lectura a destinos disponibles en la variable **[!UICONTROL Catálogo]** y destinos autenticados en la **[!UICONTROL Examinar]** pestaña . |
 | [!DNL Destinations] | [!UICONTROL Activar destinos] | Capacidad para activar datos en destinos activos que se hayan creado. Este permiso requiere &quot;Ver destinos&quot; o &quot;Administrar [!UICONTROL Destinos&quot;] se concede al usuario que activará los destinos. |
-| [!DNL Destinations] | [!UICONTROL Creación de destinos] | Capacidad para crear destinos mediante [SDK de destino de Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
+| [!DNL Destinations] | [!UICONTROL Creación de destinos] | Capacidad para crear destinos mediante [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Administrar fuentes] | Acceso para leer, crear, editar y deshabilitar orígenes. |
 | [!DNL Data Ingestion] | [!UICONTROL Ver fuentes] | Acceso de solo lectura a los orígenes disponibles en la **[!UICONTROL Catálogo]** y fuentes autenticadas en la **[!UICONTROL Examinar]** pestaña . |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acceso para crear, aceptar y rechazar apretadores de manos de socios para conectar dos organizaciones IMS y habilitar [!DNL Segment Match] flujos. |
@@ -112,7 +112,7 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 | Gobierno de datos | [!UICONTROL Aplicar etiquetas de uso de datos] | Acceso para leer, crear y eliminar etiquetas de uso. |
 | Gobierno de datos | [!UICONTROL Administrar políticas de uso de datos] | Acceso para leer, crear, editar y eliminar políticas de uso de datos. |
 | Gobierno de datos | [!UICONTROL Ver directivas de uso de datos] | Acceso de solo lectura para directivas de uso de datos pertenecientes a su organización. |
-| Gobierno de datos | [!UICONTROL Ver registro de auditoría] | Acceso de solo lectura para ver grabado [registros de auditoría](../landing/governance-privacy-security/audit-logs/overview.md) de las actividades de la plataforma. |
+| Gobierno de datos | [!UICONTROL Ver registro de actividades del usuario] | Acceso de solo lectura para ver grabado [registros de auditoría](../landing/governance-privacy-security/audit-logs/overview.md) de las actividades de la plataforma. |
 | [!DNL Dashboards] | [!UICONTROL Ver panel de uso de licencias] | Acceso de solo lectura para ver el panel de uso de licencias. |
 | [!DNL Dashboards] | [!UICONTROL Administrar tableros estándar] | Agregue atributos personalizados que aún no estén en el almacén de datos. |
 | [!DNL Query Service] | [!UICONTROL Administrar consultas] | Acceso para leer, crear, editar y eliminar consultas SQL estructuradas para datos de Platform. |

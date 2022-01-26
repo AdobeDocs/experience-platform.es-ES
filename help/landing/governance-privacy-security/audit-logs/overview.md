@@ -2,9 +2,9 @@
 title: Información general sobre registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d258ddef6a904fee5a4676a513fc426663342c91
+source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '659'
 ht-degree: 5%
 
 ---
@@ -39,7 +39,7 @@ En la tabla siguiente se describen las acciones en las que los registros de audi
 
 Cuando la función está habilitada para su organización, los registros de auditoría se recopilan automáticamente a medida que se produce la actividad. No es necesario habilitar manualmente la recopilación de registros.
 
-Para ver y exportar los registros de auditoría, debe tener el permiso de control de acceso &quot;Ver registros de auditoría&quot; concedido (que se encuentra en la categoría &quot;Control de datos&quot;). Para obtener información sobre cómo administrar permisos individuales para las funciones de Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
+Para ver y exportar los registros de auditoría, debe tener la variable **[!UICONTROL Ver registro de actividades del usuario]** permiso de control de acceso concedido (encontrado en la sección [!UICONTROL Administración de datos] ). Para obtener información sobre cómo administrar permisos individuales para las funciones de Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
 
 ## Administración de registros de auditoría en la interfaz de usuario
 
