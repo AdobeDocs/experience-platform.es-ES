@@ -1,94 +1,109 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
+source-git-commit: 74e2ebd324265744702a385dbaca2ac4a10ea1f7
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 13%
+source-wordcount: '959'
+ht-degree: 6%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 17 de noviembre de 2021**
-
-## Nuevas funciones
-
-Nuevas funciones de Adobe Experience Platform:
-
-- [Real-time Customer Data Platform edición B2B](#B2B)
-- [(Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc](#ad-hoc-activation)
-
-## Actualizaciones de funciones existentes
+**Fecha de la versión: 26 de enero de 2022**
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Attribution AI](#attribution-ai)
-- [Customer AI](#customer-ai)
+- [Alertas](#alerts)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Dashboards]](#dashboards)
+- [Servicio de consultas](#query-service)
+- [Entornos aislados](#sandboxes)
+- [Servicio de segmentación](#segmentation)
+- [Fuentes](#sources)
 
-### Real-time Customer Data Platform edición B2B {#B2B}
+## Alertas {#alerts}
 
-**Fecha de la versión: 12 de noviembre de 2021**
-
-El CDP B2B Edition en tiempo real, que se basa en Real-time Customer Data Platform (CDP en tiempo real), está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
-
-Hay mejoras en una variedad de funcionalidades de Adobe Experience Platform que distinguen CDP B2B Edition en tiempo real de su contraparte B2C. Incluyen mejoras en el Modelo de datos de experiencia (XDM) para casos de uso B2B, actualizaciones de la resolución de identidades y la segmentación de perfiles, así como un conector y un destino personalizados para el Marketo Engage. El conector Marketo permite a las marcas B2B conectar sus datos de participación B2B líderes en el sector con información de comportamiento para nutrir posibles clientes y mejorar las operaciones de marketing basadas en cuentas.
-
--[Nuevas ediciones B2B y B2P](#editions)
--[Nuevos conectores de origen y destino de datos de Marketo](#marketo)
--[XDM estándar B2B](#XDM)
-
-### Nuevas ediciones B2B y B2P {#editions}
-
-Las nuevas ediciones B2B y B2P que proporcionan datos y funcionalidades B2B tanto a los productos CDP en tiempo real como a los productos de Activación de plataforma están disponibles para su compra.
-
-Para obtener más información sobre CDP B2B Edition en tiempo real, consulte la [información general](../../rtcdp/overview.md).
-
-### Nuevos conectores de origen y destino de datos de Marketo {#marketo}
-
-Los nuevos conectores de origen y destino de datos de Marketo transmiten los datos de Marketo a las audiencias de Platform y Platform de vuelta a Marketo. Disponible para todos los usuarios de Platform.
-
-| Función | Descripción |
-|----------|-------------|
-| Conector de origen del Marketo Engage | La variable [Conector de origen del Marketo Engage](../../sources/connectors/adobe-applications/marketo/marketo.md) permite a los especialistas en marketing introducir sin problemas datos de una o más instancias de Marketo en su instancia de Adobe Experience Platform y proporciona una solución completa para la administración de posibles clientes y los especialistas en marketing B2B. |
-| Destino del Marketo Engage | La variable [Destino de Marketo](../../destinations/catalog/adobe/marketo-engage.md) permite a los especialistas en marketing insertar en Marketo los segmentos creados en Adobe Experience Platform, donde aparecerán como listas estáticas. |
-
-### XDM estándar B2B {#XDM}
-
-Las clases XDM estándar B2B, los grupos de campos y los tipos de datos están disponibles para todos los usuarios de Platform.
-
-| Función | Descripción |
-|-----------|--------------|
-| Clases estándar B2B XDM | Real-time Customer Data Platform B2B Edition proporciona varios XDM estándar que capturan detalles sobre entidades de datos B2B esenciales, como cuentas, oportunidades, campañas, etc. |
-
-Consulte la [Esquemas en Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentación para obtener más información sobre la captura de entidades de datos B2B.
-
-### (Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc {#ad-hoc-activation}
-
-La API de activación ad hoc permite a los especialistas en marketing activar mediante programación segmentos de audiencia en destinos de forma rápida y eficaz en situaciones en las que se requiera una activación inmediata. La activación de audiencias ad-hoc solo es compatible con [destinos basados en archivos por lotes](../../destinations/destination-types.md#file-based) y está actualmente en versión beta. Para obtener más información, consulte la [documentación de la API de activación ad hoc](../../destinations/api/ad-hoc-activation-api.md).
-
-### Attribution AI {#attribution-ai}
-
-Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
-
-| Función | Descripción |
-|-----------|---------------|
-| Compatibilidad con varios conjuntos de datos | Ahora, Attribution AI puede ingerir fácilmente varios conjuntos de datos directamente en la interfaz de usuario sin necesidad de asignar y unir cada conjunto de datos. Esta nueva capacidad de ahorro de tiempo proporciona puntuaciones más potentes y precisas con datos más completos de varios conjuntos de datos. |
-| Asignación de canales de medios y campos de campaña | Ahora, Attribution AI admite la asignación de canales de medios y campos de campaña. La asignación de canales de medios entre conjuntos de datos mejora las perspectivas derivadas de la Attribution AI y ayuda a proporcionar resultados más claros que son fáciles de interpretar. |
-
-Para obtener más información sobre la Attribution AI, consulte la [documentación de Attribution AI](../../intelligent-services/attribution-ai/overview.md).
-
-### Customer AI {#customer-ai}
-
-La AI del cliente disponible en Real-time Customer Data Platform se utiliza para generar puntuaciones de tendencia personalizadas, como la pérdida y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Platform. Puede suscribirse a distintas reglas de alerta a través de la [!UICONTROL Alertas] en la interfaz de usuario de Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
 
 **Funciones actualizadas**
 
 | Función | Descripción |
-|-----------|-------------|
-| Compatibilidad con varios conjuntos de datos | La AI del cliente ahora puede ingerir fácilmente varios conjuntos de datos directamente en la interfaz de usuario sin necesidad de asignar y unir cada conjunto de datos. Esta nueva capacidad de ahorro de tiempo proporciona puntuaciones más potentes y precisas con datos más completos de varios conjuntos de datos. |
-| Atributos de perfil personalizados | La AI del cliente ahora admite la definición de campos de conjuntos de datos de perfil personalizados (con marcas de hora) en los datos, además de los campos de evento estándar. El uso de esta opción le permite agregar atributos de perfil adicionales que considere influyentes, lo que puede mejorar la calidad del modelo y proporcionar resultados más precisos. |
+| --- | --- |
+| Nuevas reglas de alerta | Ya hay disponibles varias reglas de alerta nuevas para flujos de trabajo relacionados con la ingesta de datos, identidades, perfiles, segmentación y activación. Consulte la descripción general sobre [reglas de alerta](../../observability/alerts/rules.md) para la lista actualizada de tipos de alertas. |
+| Alertas en contexto para flujos de datos de origen | Ahora puede suscribirse para recibir mensajes de alerta sobre el estado de sus flujos de datos durante el flujo de trabajo de ingesta. Para obtener más información, consulte la guía de [suscripción a alertas de fuentes en la interfaz de usuario](../../sources/tutorials/ui/alerts.md). |
 
-Para obtener más información sobre Customer AI, consulte la [Documentación de Customer AI](../../intelligent-services/customer-ai/overview.md).
+Para obtener más información sobre las alertas en Platform, consulte la [información general sobre alertas](../../observability/alerts/overview.md).
 
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver perspectivas importantes sobre los datos de su organización, tal como se capturan durante las instantáneas diarias.
+
+| Función | Descripción |
+| --- | --- |
+| Subtítulos inteligentes | Un algoritmo de aprendizaje automático proporciona automáticamente perspectivas sobre sus datos de perfil y audiencia, e ilustra patrones y tendencias durante un período de 30 a 90 días o 12 meses. Los subtítulos incluyen información sobre <ul><li>Forma general y estadísticas</li><li>Tendencias y cambios bruscos</li><li>Patrones estacionales</li><li>Anomalías inesperadas</li></ul> Puede encontrar más información en la [tableros de perfiles](../../dashboards/guides/profiles.md#profiles-count-trend) y [tableros de segmentos](../../dashboards/guides/segments.md#audience-size-trend) documentación. |
+| Inventario de tableros | Acceda a los informes preconfigurados de paneles de perfil, segmentos y destinos, incluidas las integraciones instaladas, como Power BI, en una ubicación centralizada. Para obtener más información, consulte la [[!DNL Dashboards] información general](../../dashboards/home.md). |
+| Plantillas de informe de PowerBI | Cree, personalice o amplíe métricas a partir de los modelos de datos de informes de perfil, segmentos y destino usando los nuevos gráficos de Power BI. El flujo de trabajo de instalación automatizada le permite compartir sus perspectivas de marketing en su organización desde el entorno de PowerBI. Para obtener más información, consulte la [[!DNL Dashboards] información general](../../dashboards/home.md). |
+
+Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL Dashboards] información general](../../dashboards/home.md).
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Experiencia de asignación consolidada | La nueva interfaz de asignación en la interfaz de usuario de Platform le ofrece una experiencia de asignación coherente para aprovechar las recomendaciones de asignación inteligente, configurar manualmente las reglas de asignación y depurar cualquier error que se produzca en los conjuntos de asignación. Para obtener más información, consulte la [[!DNL Data Prep] Guía de la interfaz de usuario](../../data-prep/ui/mapping.md). |
+
+Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
+
+## Servicio de consultas {#query-service}
+
+[!DNL Query Service] permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL Data Lake]. Puede unirse a cualquier conjunto de datos desde la [!DNL Data Lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para su uso en informes, Data Science Workspace o para su incorporación al perfil del cliente en tiempo real.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Bloque anónimo | La construcción SQL de bloque anónimo permite desglosar los trabajos de preparación de datos a gran escala en el servicio de consulta en tareas más pequeñas y, a continuación, reutilizarlos y ejecutarlos en secuencia para la carga de datos incremental. Para obtener más información, consulte la [Información general del servicio de consultas](../../query-service/home.md). |
+| Organización de conjuntos de datos | Proporciona una estructura de datos lógica y coherente para organizar los recursos de datos y utilizarlos con el servicio de consulta a medida que crezca la cantidad de recursos de datos dentro del entorno limitado. Para obtener más información, consulte la [Información general del servicio de consultas](../../query-service/home.md). |
+
+Para obtener más información, consulte [!DNL Query Service], consulte la [[!DNL Query Service] información general](../../query-service/home.md).
+
+## Entornos aislados {#sandboxes}
+
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. A menudo, las empresas ejecutan varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, asegurando al mismo tiempo el cumplimiento de las normas operacionales. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Mejoras en la interfaz de usuario de los Simuladores para pruebas | El indicador del simulador para pruebas ahora está integrado en el encabezado de todas las aplicaciones de interfaz de usuario de Platform. El indicador del simulador de pruebas muestra el nombre, la región y el tipo del simulador de pruebas, y también le permite acceder a un menú desplegable para alternar entre entornos limitados. Para obtener más información, consulte la [guía de la interfaz de usuario de sandbox](../../sandboxes/ui/user-guide.md). |
+
+Para obtener más información sobre los entornos limitados, consulte la [información general sobre los entornos limitados](../../sandboxes/home.md).
+
+## Servicio de segmentación {#segmentation}
+
+[!DNL Segmentation Service] define un subconjunto de perfiles determinado describiendo los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Coincidencia de segmentos | Segment Match es un servicio de colaboración de datos que permite a dos o más usuarios de Platform intercambiar datos, en función de identificadores comunes, de forma segura, regulada y compatible con la privacidad. La coincidencia de segmentos utiliza estándares de privacidad de plataforma e identificadores personales como correos electrónicos con hash, números de teléfono con hash y identificadores de dispositivo como IDFA y GAID. Para obtener más información, consulte la [Información general sobre la coincidencia de segmentos](../../segmentation/ui/segment-match/overview.md). |
+
+Para obtener más información, consulte [!DNL Segmentation Service], consulte la [Información general sobre la segmentación](../../segmentation/home.md).
+
+## Fuentes {#sources}
+
+Adobe Experience Platform puede ingerir datos de fuentes externas, al mismo tiempo que le permite estructurarlos, etiquetarlos y mejorarlos mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+
+Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
+
+| Función | Descripción |
+| --- | --- |
+| Fuentes beta que se trasladan a GA | Se han promocionado las siguientes fuentes de beta a GA: <ul><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Veeva CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
+| [!DNL Event Hubs] mejoras de la fuente | La variable [!DNL Event Hubs] el origen ahora admite un tipo de autenticación de clave SAS no raíz para conectarse y crear una conexión de origen. Para obtener más información, consulte la [[!DNL Event Hubs] información general](../../sources/connectors/cloud-storage/eventhub.md). |
+| [!DNL SFTP] mejoras de la fuente | La variable [!DNL SFTP] source ahora le permite establecer un número establecido de conexiones simultáneas máximas que un flujo de datos puede utilizar para conectarse al servidor SFTP. Para obtener más información, consulte la [[!DNL SFTP] información general](../../sources/connectors/cloud-storage/sftp.md). |
