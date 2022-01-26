@@ -1,28 +1,24 @@
 ---
 keywords: personalización personalizada; destino; destino personalizado de experience platform;
 title: Conexión personalizada personalizada (Beta)
-description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real 1:1 y basada en la pertenencia a segmentos de un perfil de usuario.
+description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a segmentos de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '575'
 ht-degree: 1%
 
 ---
 
-# Conexión personalizada personalizada (Beta) {#custom-personalization-connection}
+# Conexión personalizada personalizada {#custom-personalization-connection}
 
 ## Información general {#overview}
-
->[!IMPORTANT]
->
->La conexión de personalización personalizada en Adobe Experience Platform está actualmente en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 Este destino proporciona una forma de recuperar información de segmentos de Adobe Experience Platform a plataformas de personalización externas, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en sitios web de clientes.
 
 ## Requisitos previos {#prerequisites}
 
-Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platform](../../../edge/home.md). Debe utilizar este SDK para utilizar este destino.
+Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platform](../../../edge/home.md) o [SDK de Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/). Debe utilizar uno de estos SDK para utilizar este destino.
 
 ## Tipo de exportación {#export-type}
 
@@ -73,12 +69,10 @@ Este es un valor de muestra para la variable `event.destinations` variable:
       "alias":"personalizationAlias",
       "segments":[
          {
-            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          },
          {
-            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          }
       ]
    }

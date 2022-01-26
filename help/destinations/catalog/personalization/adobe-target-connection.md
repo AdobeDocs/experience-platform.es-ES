@@ -1,24 +1,20 @@
 ---
 keywords: personalización de target; destino; destino de experience platform target;destino de adobe target;
-title: Conexión de Adobe Target (Beta)
-description: Adobe Target es una aplicación que proporciona personalización y experimentación en tiempo real, 1:1 y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
+title: Conexión Adobe Target
+description: Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '432'
 ht-degree: 1%
 
 ---
 
-# Conexión de Adobe Target (Beta) {#adobe-target-connection}
+# Conexión Adobe Target {#adobe-target-connection}
 
 ## Información general {#overview}
 
->[!IMPORTANT]
->
->La conexión de Adobe Target en Adobe Experience Platform está actualmente en fase beta. La documentación y la funcionalidad están sujetas a cambios.
-
-Adobe Target es una aplicación que proporciona personalización y experimentación en tiempo real, 1:1 , con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
+Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 
 Adobe Target es una conexión personalizada en Adobe Experience Platform.
 
