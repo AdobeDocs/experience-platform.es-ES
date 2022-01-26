@@ -5,7 +5,7 @@ title: Guía de la interfaz de usuario del Simulador para pruebas
 topic-legacy: user guide
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con entornos limitados en la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59b608ba06028f7f345f6a59dab333a4fdf2d225
+source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%
@@ -88,7 +88,7 @@ En la ventana de confirmación final, introduzca el nombre del simulador de prue
 
 >[!WARNING]
 >
->No se puede eliminar el entorno limitado de producción predeterminado. Sin embargo, un simulador para pruebas de producción creado por el usuario que se utiliza para compartir segmentos bidireccionales con [!DNL Audience Manager] o [!DNL Audience Core Service] se puede eliminar después de un mensaje de advertencia.
+>No se puede eliminar el entorno limitado de producción predeterminado. Sin embargo, cualquier simulador para pruebas de producción creado por el usuario que se use para compartir segmentos bidireccionales con [!DNL Audience Manager] o [!DNL Audience Core Service] se puede eliminar después de un mensaje de advertencia.
 
 Al eliminar un entorno limitado de producción o desarrollo, se eliminan permanentemente todos los recursos asociados a dicho entorno limitado, incluidos los permisos.
 
