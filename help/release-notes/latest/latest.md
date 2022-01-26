@@ -1,7 +1,8 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 74e2ebd324265744702a385dbaca2ac4a10ea1f7
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: 78f9b8434d577909ccb1c62211a802e05c8291e1
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 6%
@@ -58,6 +59,31 @@ Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL D
 | Experiencia de asignación consolidada | La nueva interfaz de asignación en la interfaz de usuario de Platform le ofrece una experiencia de asignación coherente para aprovechar las recomendaciones de asignación inteligente, configurar manualmente las reglas de asignación y depurar cualquier error que se produzca en los conjuntos de asignación. Para obtener más información, consulte la [[!DNL Data Prep] Guía de la interfaz de usuario](../../data-prep/ui/mapping.md). |
 
 Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
+
+<!--
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+| Feature | Description |
+| ----------- | ----------- |
+| Placeholder for next-hit personalization | Description |
+| Placeholder for batch monitoring | Description |
+| Placeholder for re-introducing scheduling in the UI | Description |
+| Placeholder for Marketo destination update | Description |
+
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| Placeholder for Target | Description |
+| Placeholder for Custom Personalization | Description |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+-->
 
 ## Servicio de consultas {#query-service}
 
