@@ -5,7 +5,7 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 9%
@@ -343,7 +343,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 
 >[!NOTE]
 >
->La variable `to_object('ECID',arrays_to_objects('id',explode(ecids)))` el campo de origen es un campo calculado que debe añadirse utilizando la variable [!UICONTROL Añadir campo calculado] en la interfaz de usuario de Platform. Consulte el tutorial en [adición de campos calculados](../../../../data-prep/calculated-fields.md) para obtener más información.
+>La variable `to_object('ECID',arrays_to_objects('id',explode(ecids)))` el campo de origen es un campo calculado que debe añadirse utilizando la variable [!UICONTROL Añadir campo calculado] en la interfaz de usuario de Platform. Consulte el tutorial en [adición de campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obtener más información.
 
 ## Pasos siguientes
 

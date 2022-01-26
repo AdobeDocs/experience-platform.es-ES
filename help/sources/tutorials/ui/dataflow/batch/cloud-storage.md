@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
+source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '2040'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ La variable **[!UICONTROL Seleccionar esquema]** se abre. Seleccione el esquema 
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para obtener más información sobre las funciones del asignador y los campos calculados, consulte [Guía de funciones de preparación de datos](../../../../../data-prep/functions.md) o [guía de campos calculados](../../../../../data-prep/calculated-fields.md).
+En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para ver los pasos completos sobre el uso de la interfaz del asignador y los campos calculados, consulte la [Guía de la interfaz de usuario de preparación de datos](../../../../../data-prep/ui/mapping.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 

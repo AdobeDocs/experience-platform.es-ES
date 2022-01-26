@@ -5,7 +5,7 @@ title: Clase XDM ExperienceEvent
 topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM ExperienceEvent y prácticas recomendadas para el modelado de datos de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '1758'
 ht-degree: 1%
@@ -53,7 +53,7 @@ Ciertas interacciones en las aplicaciones de experiencia pueden dar como resulta
 
 [Preparación de datos de Adobe Experience Platform](../../data-prep/home.md) permite asignar, transformar y validar datos desde y hacia XDM. Uso de los [funciones de asignación](../../data-prep/functions.md) proporcionado por el servicio, puede invocar operadores lógicos para priorizar, transformar y/o consolidar datos de registros de eventos múltiples al ingerirlos en Experience Platform. En el ejemplo anterior, puede designar `eventType` como campo calculado que daría prioridad a una &quot;vista de producto&quot; sobre una &quot;vista de página&quot; cada vez que se produjeran ambos.
 
-Si está introduciendo datos manualmente en Platform a través de la interfaz de usuario, consulte la guía de [campos calculados](../../data-prep/calculated-fields.md) para ver pasos específicos sobre cómo crear campos calculados.
+Si está introduciendo datos manualmente en Platform a través de la interfaz de usuario, consulte la guía de [campos calculados](../../data-prep/ui/mapping.md#calculated-fields) para ver pasos específicos sobre cómo crear campos calculados.
 
 Si está transmitiendo datos a Platform mediante una conexión de origen, puede configurar la fuente para que utilice campos calculados en su lugar. Consulte la [documentación de su fuente particular](../../sources/home.md) para obtener instrucciones sobre cómo implementar campos calculados al configurar la conexión.
 
