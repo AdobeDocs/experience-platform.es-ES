@@ -2,13 +2,13 @@
 keywords: Experience Platform;inicio;temas populares;monitorizar cuentas;monitorizar flujos de datos;flujos de datos;destinos
 description: Los destinos le permiten activar sus datos desde Adobe Experience Platform a innumerables socios externos. Este tutorial proporciona instrucciones sobre cómo monitorizar los flujos de datos de los destinos mediante la interfaz de usuario del Experience Platform.
 solution: Experience Platform
-title: Monitorizar flujos de datos para destinos en la interfaz de usuario
+title: Monitorización de flujos de datos para destinos en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b66c39016b2ccd4a4e24899f9e59f9a80cdc531b
+source-git-commit: fbcaa4c9010835f7a21f9f555671f6de2344f892
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '3204'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Los destinos le permiten activar sus datos desde Adobe Experience Platform a inn
 
 El panel de monitorización proporciona una representación visual del recorrido de un flujo de datos, incluido el destino al que se activan los datos. Este tutorial proporciona instrucciones sobre cómo monitorizar los flujos de datos directamente en el espacio de trabajo de destinos o utilizar el panel de monitorización para monitorizar los flujos de datos de los destinos mediante la interfaz de usuario del Experience Platform.
 
-## Primeros pasos
+## Primeros pasos {#getting-started}
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
@@ -32,7 +32,7 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
 
 En el **[!UICONTROL Destinos]** dentro de la interfaz de usuario de Platform, vaya a **[!UICONTROL Examinar]** y seleccione el nombre de un destino que desea ver.
 
-![](../assets/ui/monitor-destinations/select-destination.png)
+![Seleccionar vista de destino](../assets/ui/monitor-destinations/select-destination.png)
 
 Aparecerá una lista de flujos de datos existentes. En esta página hay una lista de flujos de datos visibles, que incluye información sobre su destino, nombre de usuario, número de flujos de datos y estado.
 
@@ -104,7 +104,7 @@ Se muestra una lista de ejecuciones individuales y sus métricas particulares, j
 - **[!UICONTROL Identidades excluidas]**: Número total de identidades de perfil que se omiten para la activación en función de atributos que faltan y de la infracción de consentimiento.
 - **[!UICONTROL Identidades fallidas]**: Número total de identidades de perfil que no se activan en el destino debido a errores.
 
-![](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
+![El flujo de datos ejecuta los detalles para los destinos de flujo continuo](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 
@@ -115,18 +115,18 @@ Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 - **[!UICONTROL Identidades excluidas]**: El número total de identidades de perfil que se excluyen de la activación debido a la ausencia de atributos y a la infracción de consentimiento.
 - **[!UICONTROL Identidades fallidas]** Número total de identidades de perfil que no se activan en el destino debido a errores.
 - **[!UICONTROL Tasa de activación]**: El porcentaje de identidades recibidas que se han activado o omitido correctamente. La fórmula siguiente muestra cómo se calcula este valor:
-   ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
+   ![Fórmula de tasa de activación](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Estado]**: Representa el estado en el que se encuentra el flujo de datos: o [!UICONTROL Completado] o [!UICONTROL Procesamiento]. [!UICONTROL Completado] significa que todas las identidades de la ejecución del flujo de datos correspondiente se exportaron dentro del período de una hora. [!UICONTROL Procesamiento] significa que la ejecución del flujo de datos aún no ha finalizado.
 
 Para ver los detalles de una ejecución de flujo de datos determinada, seleccione la hora de inicio de la ejecución en la lista.
 
 La página de detalles de una ejecución de flujo de datos contiene información adicional como el número de perfiles recibidos, el número de identidades activadas, el número de identidades fallidas y el número de identidades excluidas.
 
-![](../assets/ui/monitor-destinations/dataflow-details-stream.png)
+![Detalles del flujo de datos para destinos de flujo continuo](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
 La página de detalles también muestra una lista de identidades que han fallado y las identidades que se excluyeron. Se muestra información sobre las identidades fallidas y excluidas, incluido el código de error, el recuento de identidades y la descripción. De forma predeterminada, la lista muestra las identidades con errores. Para mostrar las identidades omitidas, seleccione la opción **[!UICONTROL Identidades excluidas]** alternar.
 
-![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+![Registros de flujo de datos para destinos de flujo continuo](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### El flujo de datos se ejecuta en destinos por lotes {#dataflow-runs-for-batch-destinations}
 
@@ -169,7 +169,7 @@ Para los destinos de lote, la variable [!UICONTROL Ejecuciones de flujo de datos
 - **[!UICONTROL Identidades activadas]**: Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado.
 - **[!UICONTROL Identidades excluidas]**: Recuento de identidades de perfil individuales excluidas de la activación para el destino seleccionado, en función de atributos que faltan y de la infracción de consentimiento.
 
-![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
+![Flujo de datos ejecuta la vista para destinos por lotes](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
 Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 
@@ -184,7 +184,7 @@ Para ver los detalles de una ejecución de flujo de datos específica, seleccion
 
 >[!NOTE]
 >
->Las ejecuciones de flujo de datos se generan en función de la frecuencia de programación del flujo de datos de destino. Se realiza una ejecución de flujo de datos independiente para cada política de combinación aplicada a un segmento.
+>Las ejecuciones de flujo de datos se generan en función de la frecuencia de programación del flujo de datos de destino. Se realiza una ejecución de flujo de datos independiente para cada [combinar directiva](../../profile/merge-policies/overview.md) aplicado a un segmento.
 
 La página de detalles de un flujo de datos, además de los detalles mostrados en la lista de flujos de datos, muestra información más específica sobre el flujo de datos:
 
@@ -192,11 +192,29 @@ La página de detalles de un flujo de datos, además de los detalles mostrados e
 - **[!UICONTROL Archivos totales]**: El número total de archivos exportados en el flujo de datos.
 - **[!UICONTROL Última actualización]**: La última vez que se actualizó la ejecución del flujo de datos.
 
-![](../assets/ui/monitor-destinations/dataflow-batch.png)
+![Detalles de ejecución de flujo de datos para destinos de lote](../assets/ui/monitor-destinations/dataflow-batch.png)
 
 La página de detalles también muestra una lista de identidades que han fallado y las identidades que se excluyeron. Se muestra información sobre las identidades fallidas y excluidas, incluido el código de error y la descripción. De forma predeterminada, la lista muestra las identidades con errores. Para mostrar las identidades excluidas, seleccione la **[!UICONTROL Identidades excluidas]** alternar.
 
-![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+![Registros de flujo de datos para destinos de lote](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+
+## Monitorización del panel Trabajos de segmentos {#monitoring-segment-jobs-dashboard}
+
+Para acceder a la [!UICONTROL Trabajos de segmentos] tablero, seleccione **[!UICONTROL Monitorización]** (![icono de monitorización](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en el [!UICONTROL Monitorización] página, seleccione [!UICONTROL Trabajos de segmentos]. La variable [!UICONTROL Monitorización] tablero contiene métricas e información sobre los trabajos de evaluación y exportación de segmentos.
+
+![Panel de monitorización de trabajos de segmentos](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
+
+Utilice la variable [!UICONTROL Trabajos de segmentos] tablero para comprender si la evaluación y exportación de perfiles se realizan a tiempo y sin excepciones, de modo que los servicios descendentes para la activación de destinos puedan tener los datos de perfil evaluados más recientes.
+
+Las siguientes métricas están disponibles para trabajos de segmentos:
+
+| Métrica | Descripción |
+---------|----------|
+| **[!UICONTROL Trabajo de segmentos]** | Indica el nombre del trabajo del segmento. |
+| **[!UICONTROL Tipo]** | Indica el tipo de trabajo del segmento: exportación o evaluación. Tenga en cuenta que en ambos casos, el trabajo del segmento se evalúa o exporta *all* segmentos que pertenecen a una organización. |
+| **[!UICONTROL Inicio del trabajo]** | La fecha y hora en que se inició el trabajo del segmento. |
+| **[!UICONTROL Fin del trabajo]** | La fecha y hora en que se completó el trabajo del segmento. |
+| **[!UICONTROL Estado]** | Estado del trabajo completado (éxito o error). |
 
 ## Panel Destinos de monitorización {#monitoring-destinations-dashboard}
 
@@ -212,54 +230,128 @@ La página de detalles también muestra una lista de identidades que han fallado
 
 Para acceder a la [!UICONTROL Monitorización] tablero, seleccione **[!UICONTROL Monitorización]** (![icono de monitorización](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en el [!UICONTROL Monitorización] página, seleccione [!UICONTROL Destinos]. La variable [!UICONTROL Monitorización] tablero contiene métricas e información sobre los trabajos de ejecución de destino.
 
-En el centro del panel se encuentra el panel Activación, que contiene métricas y gráficos que muestran datos sobre la tasa de activación de los datos que se exportan a los destinos.
+Utilice la variable [!UICONTROL Destinos] tablero para obtener una idea general del estado de los flujos de activación. Comience obteniendo perspectivas a nivel agregado para todos los destinos de flujo continuo y por lotes y, a continuación, explore en profundidad las vistas para flujos de datos, ejecuciones de flujos de datos y segmentos activados para obtener una visión detallada de los datos de activación. Las pantallas de [!UICONTROL Monitorización] tablero proporciona información procesable mediante métricas y descripciones de errores para ayudarle a solucionar cualquier problema que pueda surgir en los escenarios de activación.
 
-![](../assets/ui/monitor-destinations/dashboard-graph.png)
+En el centro del panel se encuentra la variable [!UICONTROL Activation] , que contiene métricas y gráficos que muestran datos sobre la tasa de activación de los datos exportados a destinos de flujo continuo, así como sobre los flujos de datos por lotes fallidos que se ejecutan a destinos por lotes.
+
+![Gráficos de activación por flujo continuo y por lotes](../assets/ui/monitor-destinations/dashboard-graph.png)
 
 
-De forma predeterminada, los datos mostrados contienen las tasas de activación de las últimas 24 horas. Select **[!UICONTROL Últimas 24 horas]** para ajustar el lapso de tiempo de los registros mostrados. Las opciones disponibles incluyen **[!UICONTROL Últimas 24 horas]**, **[!UICONTROL Últimos 7 días]** y **[!UICONTROL Últimos 30 días]**. También puede seleccionar las fechas en la ventana emergente de calendario que aparece. Una vez seleccionadas las fechas, seleccione **[!UICONTROL Aplicar]** para ajustar el lapso de tiempo de la información mostrada.
+De forma predeterminada, los datos mostrados contienen la información de activación de las últimas 24 horas. Select **[!UICONTROL Últimas 24 horas]** para ajustar el lapso de tiempo de los registros mostrados. Las opciones disponibles incluyen **[!UICONTROL Últimas 24 horas]**, **[!UICONTROL Últimos 7 días]** y **[!UICONTROL Últimos 30 días]**. También puede seleccionar las fechas en la ventana emergente de calendario que aparece. Una vez seleccionadas las fechas, seleccione **[!UICONTROL Aplicar]** para ajustar el lapso de tiempo de la información mostrada.
 
 >[!NOTE]
 >
->La siguiente captura de pantalla muestra la tasa de activación de los últimos 30 días en lugar de las últimas 24 horas. Para ajustar el intervalo de tiempo, seleccione **[!UICONTROL Últimos 30 días]**.
+>La siguiente captura de pantalla muestra la tasa de activación y el flujo de datos por lotes se ejecuta durante los últimos 30 días en lugar de las últimas 24 horas. Para ajustar el intervalo de tiempo, seleccione **[!UICONTROL Últimos 30 días]**.
 
-![](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
+![Cambiar el intervalo de fechas de retrospectiva para destinos activados](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-El gráfico se muestra de forma predeterminada y puede deshabilitarlo para expandir la lista de destinos a continuación. Seleccione el **[!UICONTROL Métricas y gráficos]** para desactivar los gráficos.
+Utilice el icono de flecha (![icono de flecha](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) para expandir o descartar las tarjetas en la parte superior de la pantalla, que muestran de un vistazo información sobre los detalles de activación, en función del tipo de destino: flujo continuo o lote:
 
-La variable **[!UICONTROL Activation]** muestra una lista de destinos que contienen al menos una cuenta existente. Esta lista también incluye información sobre los perfiles recibidos, los registros de perfil activados, los registros de perfil fallidos, los registros de perfil omitidos, el total de flujos de datos fallidos y la última fecha actualizada para estos destinos.
+- **[!UICONTROL Tasa de activación de transmisión]**: Representa el porcentaje de identidades recibidas que se han activado o omitido correctamente. La fórmula utilizada para calcular este porcentaje se describe más arriba en esta página, en la sección [El flujo de datos se ejecuta en los destinos de flujo continuo](#dataflow-runs-for-streaming-destinations) para obtener más información.
+- **[!UICONTROL Se ejecuta un flujo de datos fallido por lotes]**: Representa el número de ejecuciones de flujo de datos fallidas en el intervalo de tiempo seleccionado.
 
-![](../assets/ui/monitor-destinations/dashboard-destinations.png)
+![Mostrar o rechazar tarjetas en la parte superior de la página](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
 
-También puede filtrar la lista de destinos para que solo muestre la categoría de destinos seleccionada. Seleccione el **[!UICONTROL Mis destinos]** y seleccione el tipo de destino al que desee filtrar.
+La variable **[!UICONTROL Activation]** se muestra de forma predeterminada y puede deshabilitarlo para expandir la lista de destinos a continuación. Seleccione el **[!UICONTROL Métricas y gráficos]** para desactivar los gráficos.
 
-![](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
+La variable **[!UICONTROL Activation]** muestra una lista de destinos que contienen al menos una cuenta existente. Esta lista también incluye información sobre los perfiles recibidos, las identidades activadas, las identidades fallidas, las identidades excluidas, la tasa de activación, el total de flujos de datos fallidos y la última fecha de actualización para estos destinos. No todas las métricas están disponibles para todos los tipos de destino. La tabla siguiente describe qué métricas están disponibles por tipo de destino, flujo continuo o lote.
 
-Además, puede introducir un destino en la barra de búsqueda para aislarlo en un solo destino. Si desea ver los flujos de datos del destino, puede seleccionar el filtro ![filter](../assets/ui/monitor-destinations/filter.png) junto a él para ver una lista de sus flujos de datos activos.
+| Métrica | Tipo de destino |
+---------|----------|
+| **[!UICONTROL Perfiles recibidos]** | Transmisión por lotes |
+| **[!UICONTROL Identidades activadas]** | Transmisión por lotes |
+| **[!UICONTROL Identidades fallidas]** | Transmisión |
+| **[!UICONTROL Identidades excluidas]** | Transmisión por lotes |
+| **[!UICONTROL Tasa de activación]** | Transmisión |
+| **[!UICONTROL Total de flujos de datos fallidos]** | Lote |
+| **[!UICONTROL Última actualización]** | Transmisión por lotes |
 
-![](../assets/ui/monitor-destinations/filtered-destinations.png)
+![Tableta todos los destinos activados](../assets/ui/monitor-destinations/dashboard-destinations.png)
+
+También puede filtrar la lista de destinos para que solo muestre la categoría de destinos seleccionada. Seleccione el **[!UICONTROL Mis destinos]** y seleccione la [categoría de destino](/help/destinations/destination-types.md#categories) que desea filtrar.
+
+![Filtrado de destinos mediante el selector desplegable](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
+
+Además, puede introducir un destino en la barra de búsqueda para aislarlo en un solo destino. Si desea ver los flujos de datos del destino, puede seleccionar el filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) junto a él para ver una lista de sus flujos de datos activos.
+
+![Filtrar destinos mediante la barra de búsqueda](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 Si desea ver todos los flujos de datos existentes en todos los destinos, seleccione **[!UICONTROL Flujos de datos]**.
 
-Se muestra una lista de flujos de datos, agrupados por destino. Para ver detalles adicionales de un flujo de datos específico, localice el destino que desee monitorizar y seleccione el filtro ![filter](../assets/ui/monitor-destinations/filter.png) a su lado y luego seleccionar el filtro ![filter](../assets/ui/monitor-destinations/filter.png) al lado del flujo de datos, desea obtener más información.
+Aparece una lista de flujos de datos, ordenados por la última ejecución de flujo de datos. Para ver detalles adicionales de un flujo de datos específico, localice el destino que desee monitorizar y seleccione el filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) a su lado y luego seleccionar el filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) al lado del flujo de datos, desea obtener más información.
 
-![](../assets/ui/monitor-destinations/dashboard-dataflows.png)
+![Todos los flujos de datos resaltados en el panel de monitorización](../assets/ui/monitor-destinations/dashboard-dataflows.png)
+
+Una vez que seleccione un flujo de datos para una inspección adicional, la página de detalles del flujo de datos contiene un interruptor que le permite ver los datos activados en el flujo de datos, desglosado por ejecuciones o segmentos de flujo de datos.
+
+### Vista de ejecución de flujo de datos {#dataflow-runs-view}
+
+When **[!UICONTROL Ejecuciones de flujo de datos]** está seleccionada, puede ver una lista de ejecuciones de flujo de datos para el flujo de datos seleccionado e información adicional sobre cada ejecución.
+
+>[!INFO]
+>
+>Para flujos de datos a destinos de flujo continuo, se desglosa un flujo de datos en ventanas por hora. Cada ventana por hora genera un ID de ejecución de flujo de datos correspondiente.
+>
+>Para flujos de datos a destinos por lotes, cada segmento tiene una ejecución de flujo de datos correspondiente generada, basada en la frecuencia programada de activación del segmento. Por ejemplo, si configura una activación programada diaria para cinco segmentos en el mismo flujo de datos de destino, se generarán cinco ejecuciones de flujo de datos independientes cada día.
+
+![Panel de ejecuciones de flujo](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
+
+Utilice la variable **[!UICONTROL Mostrar solo errores]** alternar para mostrar solo las ejecuciones fallidas de un flujo de datos.
+
+![Ejecución de flujo de datos: mostrar errores solo alternar](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
+
+### Vista de nivel de segmento {#segment-level-view}
+
+When **[!UICONTROL Segmentos]** , verá una lista de los segmentos que se activaron en el flujo de datos seleccionado, dentro del intervalo de tiempo seleccionado. Esta pantalla incluye información a nivel de segmento sobre las identidades activadas, las identidades excluidas, así como el estado y la hora de la última ejecución del flujo de datos. Al revisar las métricas de identidades excluidas y activadas, puede verificar si un segmento se ha activado correctamente o no.
+
+Por ejemplo, está activando un segmento llamado &quot;Miembros de fidelidad en California&quot; en un destino de Amazon S3 &quot;Miembros de fidelidad en California en diciembre&quot;. Supongamos que hay 100 perfiles en el segmento seleccionado, pero solo 80 de 100 perfiles contienen atributos de ID de fidelidad y ha definido las reglas de asignación de exportación como `loyalty.id` es obligatorio. En este caso, en un nivel de segmento, verá 80 identidades activadas y 20 identidades excluidas.
+
+>[!IMPORTANT]
+>
+>Tenga en cuenta las limitaciones actuales relacionadas con las métricas de nivel de segmento:
+>- Actualmente, la vista de nivel de segmento solo está disponible para destinos de lote.
+>- Actualmente, las métricas de nivel de segmento solo se registran para las ejecuciones de flujo de datos correctas. No se registran para las ejecuciones de flujo de datos fallidas y los registros excluidos.
 
 
-La página de ejecución del flujo de datos muestra información sobre las ejecuciones del flujo de datos, incluido el tiempo de inicio de la ejecución del flujo de datos, el tiempo de procesamiento, los perfiles recibidos, las identidades activadas, las identidades excluidas, las identidades fallidas, la tasa de activación y el estado. Para ver más detalles sobre una ejecución de flujo de datos específica, seleccione el filtro ![filter](../assets/ui/monitor-destinations/filter.png) junto a la hora de inicio de la ejecución del flujo de datos.
+![Segmentos en el panel de flujo de datos](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
-![](../assets/ui/monitor-destinations/dashboard-dataflows-filter.png)
+En la vista de nivel de segmento, las métricas se acumulan en varias ejecuciones de flujo de datos dentro del intervalo de tiempo seleccionado. Si hay varias ejecuciones de flujo de datos, puede explorar en profundidad desde el nivel de segmento para ver el desglose de cada ejecución de flujo de datos, filtrado según el segmento seleccionado.
+Uso del botón de filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) para explorar en profundidad la vista de las ejecuciones de flujo de datos para cada segmento del flujo de datos.
 
-La página de detalles de flujos de datos, además de los detalles mostrados en la lista de flujos de datos, muestra información más específica sobre el flujo de datos:
+### Página de ejecución de flujo de datos {#dataflow-runs-page}
+
+La página de ejecución del flujo de datos muestra información sobre las ejecuciones del flujo de datos, incluido el tiempo de inicio de la ejecución del flujo de datos, el tiempo de procesamiento, los perfiles recibidos, las identidades activadas, las identidades excluidas, las identidades fallidas, la tasa de activación y el estado.
+
+Al explorar en profundidad la página de ejecución del flujo de datos desde el [vista de nivel de segmento](#segment-level-view), tiene la opción de filtrar las ejecuciones del flujo de datos mediante las siguientes opciones:
+
+- **[!UICONTROL El flujo de datos se ejecuta con identidades fallidas]**: Para el segmento seleccionado, esta opción enumera todas las ejecuciones de flujo de datos que no se pudieron activar. Para inspeccionar por qué fallaron las identidades en una determinada ejecución de flujo de datos, consulte la [página de detalles de ejecución de flujo de datos](#dataflow-run-details-page) para ese flujo de datos.
+- **[!UICONTROL El flujo de datos se ejecuta con identidades omitidas]**: Para el segmento seleccionado, esta opción enumera todas las ejecuciones de flujo de datos en las que algunas identidades no se activaron completamente y algunos perfiles se omitieron. Para inspeccionar por qué se omitieron las identidades en una determinada ejecución de flujo de datos, consulte la [página de detalles de ejecución de flujo de datos](#dataflow-run-details-page) para ese flujo de datos.
+- **[!UICONTROL El flujo de datos se ejecuta con identidades activadas]**: Para el segmento seleccionado, esta opción enumera todas las ejecuciones de flujo de datos que tienen identidades activadas correctamente.
+
+![El filtrado del flujo de datos se ejecuta para segmentos](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
+
+Para ver más detalles sobre una ejecución de flujo de datos específica, seleccione el filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) al lado del tiempo de inicio de ejecución del flujo de datos para ver la página de detalles de ejecución del flujo de datos.
+
+![El flujo de datos ejecuta el filtro en el panel de monitorización](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
+
+### Página de detalles de ejecución de flujo de datos {#dataflow-run-details-page}
+
+La página de detalles de ejecución del flujo de datos, además de los detalles mostrados en la lista de ejecuciones del flujo de datos, muestra información más específica sobre el flujo de datos:
 
 - **[!UICONTROL ID de ejecución de flujo de datos]**: ID del flujo de datos.
 - **[!UICONTROL ID de organización de IMS]**: La organización IMS a la que pertenece el flujo de datos.
 - **[!UICONTROL Última actualización]**: La última vez que se actualizó la ejecución del flujo de datos.
 
-La página de detalles también muestra una lista de identidades que han fallado y las identidades que se excluyeron. Se muestra información sobre las identidades fallidas y excluidas, incluido el código de error, el recuento de identidades y la descripción. De forma predeterminada, la lista muestra las identidades con errores. Para mostrar las identidades omitidas, seleccione la opción **[!UICONTROL Identidades excluidas]** alternar.
+La página de detalles también tiene un interruptor para cambiar entre los errores de ejecución del flujo de datos y los segmentos. Esta opción solo está disponible para ejecuciones de flujo de datos en destinos por lotes.
 
-![](../assets/ui/monitor-destinations/identities-excluded.png)
+La vista de errores de ejecución de flujo de datos muestra una lista de identidades que fallaron y las identidades que se excluyeron. Se muestra información sobre las identidades fallidas y excluidas, incluido el código de error, el recuento de identidades y la descripción. De forma predeterminada, la lista muestra las identidades con errores. Para mostrar las identidades omitidas, seleccione la opción **[!UICONTROL Identidades excluidas]** alternar.
 
-## Pasos siguientes
+![Alternancia de identidades excluidas](../assets/ui/monitor-destinations/identities-excluded.png)
+
+When **[!UICONTROL Segmentos]** está seleccionada, verá una lista de los segmentos que se activaron en la ejecución del flujo de datos seleccionado. Esta pantalla incluye información a nivel de segmento sobre las identidades activadas, las identidades excluidas, así como el estado y la hora de la última ejecución del flujo de datos.
+
+![Ejecución de flujo de datos: vista de segmentos](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
+
+## Pasos siguientes {#next-steps}
 
 Al seguir esta guía, ahora sabe cómo monitorizar los flujos de datos tanto para los destinos de lote como de flujo continuo, incluida toda la información relevante, como el tiempo de procesamiento, la tasa de activación y el estado. Para obtener más información sobre los flujos de datos en Platform, lea la [información general sobre flujos de datos](../home.md). Para obtener más información sobre los destinos, lea la [información general sobre destinos](../../destinations/home.md).
