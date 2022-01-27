@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Configure personalization destinations for same-page and next-page personalization.
 description: Obtenga información sobre cómo configurar destinos de personalización para la personalización de la misma página y de la página siguiente.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
-source-git-commit: 24e8d088dd79304e0bf0335b7c3df2ef75baf81d
+exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
+source-git-commit: dd9493077706b102467493e90b363ac202550eee
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 1%
 
 ---
-
 
 # Configurar destinos de personalización para la personalización de la misma página y de la página siguiente
 
@@ -50,11 +50,11 @@ Siga las instrucciones indicadas en [creación de una directiva de combinación]
 
 Una vez creado el [!DNL Active-On-Edge] política de combinación, debe crear un nuevo segmento en Platform.
 
-Siga las [generador de segmentos](../../segmentation/ui/segment-builder.md) guía para crear el nuevo segmento y asegúrese de [asignarlo](../../segmentation/ui/segment-builder.md#merge-policies) el [!DNL Active-On-Edge] política de combinación que creó en el paso 3.
+Siga las [generador de segmentos](../../segmentation/ui/segment-builder.md) guía para crear el nuevo segmento y asegúrese de [asignarlo](../../segmentation/ui/segment-builder.md#merge-policies) el [!DNL Active-On-Edge] política de combinación que ha creado en el paso 3.
 
 ## Paso 5: Activar el segmento en el destino
 
-El último paso del proceso de configuración es activar el segmento que creó en el paso 4 hasta el destino que creó en el paso 2.
+El último paso del proceso de configuración es activar el segmento que ha creado en el paso 4 al destino que ha creado en el paso 2.
 
 Para ello, siga esta [tutorial de activación](../ui/activate-profile-request-destinations.md).
 
