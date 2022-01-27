@@ -6,7 +6,7 @@ title: Monitorización de flujos de datos para destinos en la interfaz de usuari
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fbcaa4c9010835f7a21f9f555671f6de2344f892
+source-git-commit: e75dec7d71c301ea16cc5bfb6bad948964180c4d
 workflow-type: tm+mt
 source-wordcount: '3204'
 ht-degree: 0%
@@ -200,6 +200,11 @@ La página de detalles también muestra una lista de identidades que han fallado
 
 ## Monitorización del panel Trabajos de segmentos {#monitoring-segment-jobs-dashboard}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Trabajos de segmentos"
+>abstract="El panel de trabajos del segmento contiene información sobre los trabajos de evaluación y exportación de todos los segmentos."
+
 Para acceder a la [!UICONTROL Trabajos de segmentos] tablero, seleccione **[!UICONTROL Monitorización]** (![icono de monitorización](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en el [!UICONTROL Monitorización] página, seleccione [!UICONTROL Trabajos de segmentos]. La variable [!UICONTROL Monitorización] tablero contiene métricas e información sobre los trabajos de evaluación y exportación de segmentos.
 
 ![Panel de monitorización de trabajos de segmentos](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
@@ -222,11 +227,6 @@ Las siguientes métricas están disponibles para trabajos de segmentos:
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="La activación de destino contiene información sobre el estado de activación del segmento y métricas tomadas del Perfil del cliente en tiempo real para generar identidades únicas."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Trabajos de segmentos"
->abstract="El panel de trabajos del segmento contiene información sobre los trabajos de evaluación y exportación de todos los segmentos."
 
 Para acceder a la [!UICONTROL Monitorización] tablero, seleccione **[!UICONTROL Monitorización]** (![icono de monitorización](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en el [!UICONTROL Monitorización] página, seleccione [!UICONTROL Destinos]. La variable [!UICONTROL Monitorización] tablero contiene métricas e información sobre los trabajos de ejecución de destino.
 
