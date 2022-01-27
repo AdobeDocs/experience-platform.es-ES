@@ -4,45 +4,45 @@ title: Espacio de trabajo de destinos
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema. Se describen en las secciones siguientes.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '883'
 ht-degree: 2%
 
 ---
 
 # Espacio de trabajo de destinos {#destinations-workspace}
 
-En Adobe Experience Platform, seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Destinations].
+En Adobe Experience Platform, seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda para acceder a la [!UICONTROL Destinos] espacio de trabajo.
 
-El espacio de trabajo [!UICONTROL Destinations] consta de cinco secciones, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts] y [!UICONTROL System View], que se describen en las secciones siguientes.
+La variable [!UICONTROL Destinos] workspace consta de cinco secciones, [!UICONTROL Información general], [!UICONTROL Catálogo], [!UICONTROL Examinar], [!UICONTROL Cuentas]y [!UICONTROL Vista del sistema], descrito en las secciones siguientes.
 
 ![Información general sobre destinos](../assets/ui/workspace/destinations-overview.png)
 
 ## Información general de  {#overview}
 
-La pestaña **[!UICONTROL Overview]** muestra el panel [!UICONTROL Destinations], que proporciona métricas clave relacionadas con los datos de destino de la organización. Para obtener más información, consulte la [[!UICONTROL Destinations] guía del tablero](../../dashboards/guides/destinations.md).
+La variable **[!UICONTROL Información general]** muestra la [!UICONTROL Destinos] tablero, que proporciona métricas clave relacionadas con los datos de destino de su organización. Para obtener más información, visite [[!UICONTROL Destinos] guía del tablero](../../dashboards/guides/destinations.md).
 
 >[!NOTE]
 >
->Si su organización es nueva para Experience Platform y aún no tiene destinos activos, el panel [!UICONTROL Destinations] y la pestaña [!UICONTROL Overview] no están visibles. En su lugar, al seleccionar [!UICONTROL Destinations] en el panel de navegación izquierdo, se muestra la pestaña [[!UICONTROL Catalog]](#catalog).
+>Si su organización es nueva en Experience Platform y aún no tiene destinos activos, la variable [!UICONTROL Destinos] tablero y [!UICONTROL Información general] no están visibles. En su lugar, seleccione [!UICONTROL Destinos] en la navegación izquierda, se muestra la variable [[!UICONTROL Catálogo] ficha](#catalog).
 
 ![](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catálogo] {#catalog}
 
-La pestaña **[!UICONTROL Catalog]** muestra una lista de todos los destinos disponibles en [!DNL Platform] a los que puede enviar datos.
+La variable **[!UICONTROL Catálogo]** muestra una lista de todos los destinos disponibles en [!DNL Platform], a la que puede enviar datos.
 
-La interfaz de usuario [!DNL Platform] proporciona varias opciones de búsqueda y filtro en la página del catálogo de destinos:
+La variable [!DNL Platform] la interfaz de usuario de proporciona varias opciones de búsqueda y filtro en la página del catálogo de destinos:
 
 * Utilice la funcionalidad de búsqueda de la página para localizar un destino específico.
-* Filtre los destinos mediante el control [!UICONTROL Categories].
-* Alternar entre [!UICONTROL Todos los destinos] y [!UICONTROL Mis destinos]. Cuando selecciona **[!UICONTROL Todos los destinos]**, se muestran todos los destinos [!DNL Platform] disponibles. Al seleccionar **[!UICONTROL Mis destinos]**, solo puede ver los destinos con los que ha establecido una conexión.
-* Seleccione para ver **[!UICONTROL Conexiones]** o **[!UICONTROL Extensiones]**. Para comprender la diferencia entre las dos categorías, consulte [Tipos de destino y Categorías](../destination-types.md).
+* Filtre los destinos usando la variable [!UICONTROL Categorías] control.
+* Alternar entre [!UICONTROL Todos los destinos] y [!UICONTROL Mis destinos]. Al seleccionar **[!UICONTROL Todos los destinos]**, todo disponible [!DNL Platform] se muestran los destinos de . Al seleccionar **[!UICONTROL Mis destinos]**, solo puede ver los destinos con los que ha establecido una conexión.
+* Seleccione para ver **[!UICONTROL Conexiones]** y/o **[!UICONTROL Extensiones]**. Para comprender la diferencia entre las dos categorías, consulte [Tipos y categorías de destino](../destination-types.md).
 
 ![Catálogo](../assets/ui/workspace/catalog.png)
 
-Las tarjetas de destino contienen un control **[!UICONTROL Set up]** o **[!UICONTROL Activate segments]** y un control secundario que muestra más opciones. Estos controles se describen a continuación:
+Las tarjetas de destino contienen un **[!UICONTROL Configuración]** o **[!UICONTROL Activar segmentos]** y un control secundario que muestra más opciones. Estos controles se describen a continuación:
 
 | Control | Descripción |
 |---------|----------|
@@ -60,20 +60,21 @@ Seleccione una tarjeta de destino en el catálogo para abrir el carril derecho. 
 
 ![Opciones de catálogo de destino](../assets/ui/workspace/destination-right-rail.png)
 
-Para obtener más información sobre las categorías de destino y la información sobre cada destino, consulte [Destination catalog](../catalog/overview.md) y [Destination types and categories](../destination-types.md).
+Para obtener más información sobre las categorías de destino y sobre cada destino, consulte la [Catálogo de destino](../catalog/overview.md) y [Tipos y categorías de destino](../destination-types.md).
 
 ## [!UICONTROL Cuentas] {#accounts}
 
-La pestaña **[!UICONTROL Accounts]** le muestra detalles sobre las conexiones que ha establecido con varios destinos y le permite actualizar los detalles de conexión existentes. Consulte [Actualizar cuentas](update-accounts.md) para obtener instrucciones detalladas.
+La variable **[!UICONTROL Cuentas]** muestra detalles sobre las conexiones que ha establecido con varios destinos y le permite actualizar los detalles de conexión existentes. Consulte [Actualizar cuentas](update-accounts.md) para obtener instrucciones detalladas.
 
 ## [!UICONTROL Examinar] {#browse}
 
-La pestaña **[!UICONTROL Browse]** muestra los destinos con los que ha establecido una conexión. Los destinos con la opción **[!UICONTROL Enabled/Disabled]** activada establecen el destino como activo o inactivo, respectivamente. También puede ver los destinos en los que tiene datos fluyendo seleccionando **[!UICONTROL Segments]** > **[!UICONTROL Browse]** y un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la pestaña Examinar:
+La variable **[!UICONTROL Examinar]** muestra los destinos con los que ha establecido una conexión. Destinos con la variable **[!UICONTROL Habilitado/Deshabilitado]** active establecer el destino en activo o inactivo, respectivamente. También puede ver los destinos en los que tiene datos fluyendo seleccionando **[!UICONTROL Segmentos]** > **[!UICONTROL Examinar]** y seleccionar un segmento para inspeccionarlo. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la pestaña Examinar:
 
 >[!TIP]
 >
-> * Seleccione los tres puntos de la columna [!UICONTROL Name] y utilice el botón ![Add segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments ]**para enviar segmentos a ese destino.
-> * Seleccione los tres puntos de la columna [!UICONTROL Name] y utilice el botón ![Delete destinos button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete ]**para [eliminar](delete-destinations.md) una conexión existente a un destino.
+> * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Botón Activar segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activar segmentos ]**para enviar segmentos a ese destino.
+> * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Botón Eliminar](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Eliminar ]**botón para [remove](delete-destinations.md) una conexión existente a un destino.
+> * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Botón Monitorización](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Monitorización ]**para ver la información de activación de este destino en el [panel de monitorización](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
@@ -84,7 +85,7 @@ La pestaña **[!UICONTROL Browse]** muestra los destinos con los que ha establec
 | [!UICONTROL Estado de ejecución del último flujo] | Estado de la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
 | [!UICONTROL Fecha de ejecución del último flujo] | Hora y fecha en que se produjo la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
 | [!UICONTROL Destino] | La plataforma de destino que seleccionó para el flujo de activación. |
-| [!UICONTROL Tipo de conexión] | Representa el tipo de conexión con su espacio de almacenamiento o destino. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3, FTP o [!DNL Azure Blob].</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor.</li><li>Para destinos de flujo continuo: Puede ser [!DNL Azure Event Hubs] o [!DNL Amazon Kinesis].</li></ul> |
+| [!UICONTROL Tipo de conexión] | Representa el tipo de conexión con su espacio de almacenamiento o destino. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3, FTP o [!DNL Azure Blob].</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor.</li><li>Para destinos de flujo continuo: Puede [!DNL Azure Event Hubs] o [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nombre de usuario] | Credenciales de cuenta que ha seleccionado para el flujo de destino. |
 | [!UICONTROL Datos de activación] | Indica el número de segmentos que se están activando en este destino. Seleccione este control para obtener más información sobre los segmentos activados. Consulte [Datos de activación](/help/destinations/ui/destination-details-page.md#activation-data) en la página de detalles de destino para obtener más información sobre los segmentos activados. |
 | [!UICONTROL Creado] | La fecha y la hora UTC en que se creó el flujo de activación al destino. |
@@ -94,11 +95,11 @@ Haga clic en una fila de destino para que aparezca más información sobre el de
 
 ![Haga clic en la fila de destino](../assets/ui/workspace/click-destination-row.png)
 
-Seleccione el nombre del destino para ver información sobre los segmentos activados en este destino. Haga clic en **[!UICONTROL Editar activación]** para modificar o agregar a los segmentos que se envían a este destino.
+Seleccione el nombre del destino para ver información sobre los segmentos activados en este destino. Haga clic en **[!UICONTROL Editar activación]** para modificar o añadir a los segmentos que se envían a este destino.
 
 ## [!UICONTROL Vista del sistema] {#system-view}
 
-La pestaña **[!UICONTROL System View]** muestra una representación gráfica de los flujos de activación que ha configurado en Adobe Experience Platform.
+La variable **[!UICONTROL Vista del sistema]** muestra una representación gráfica de los flujos de activación que ha configurado en Adobe Experience Platform.
 
 ![Flujos de datos1](../assets/ui/workspace/data-flows1.png)
 
