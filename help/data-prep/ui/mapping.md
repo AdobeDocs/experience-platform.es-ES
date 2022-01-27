@@ -2,7 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;asignación de csv;asignación de archivo csv;asignación de archivo csv a xdm;asignación de csv a xdm;guía de ui;asignador;asignación;preparación de datos;preparación de datos;preparación de datos;
 title: Guía de la interfaz de usuario de preparación de datos
 description: Este documento proporciona instrucciones sobre cómo utilizar las funciones de preparación de datos en la interfaz de usuario de Platform para asignar archivos CSV a un esquema XDM.
-source-git-commit: 4c2e3380881e6a032100ef00502b55112f3b103f
+exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
+source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
 workflow-type: tm+mt
 source-wordcount: '1665'
 ht-degree: 1%
@@ -80,18 +81,18 @@ La variable **[!UICONTROL asignación]** La interfaz de le proporciona una herra
 
 ### Explicación de la interfaz de asignación
 
-La interfaz de asignación incluye un panel que proporciona información sobre el estado de los conjuntos de asignaciones en el contexto del flujo de trabajo de ingesta. El panel muestra los siguientes detalles sobre los conjuntos de asignaciones:
+La interfaz de asignación incluye un panel que proporciona información sobre el estado de los campos de asignación en el contexto del flujo de trabajo de ingesta. El panel muestra los siguientes detalles sobre los campos de asignación:
 
 | Propiedad | Descripción |
 | --- | --- |
 | [!UICONTROL Campos asignados] | Muestra el número total de campos de origen asignados a un campo XDM de destino, independientemente de los errores. |
 | [!UICONTROL Campos requeridos] | Muestra el número de campos de asignación necesarios. |
-| [!UICONTROL Campos de identidad] | Muestra el número total de conjuntos de asignaciones definidos como identidad. Estos conjuntos de asignaciones se representan mediante un icono de huella digital. |
-| [!UICONTROL Errores] | Muestra el número de conjuntos de asignación erróneos. |
+| [!UICONTROL Campos de identidad] | Muestra el número total de campos de asignación definidos como identidad. Estos campos de asignación se representan mediante un icono de huella digital. |
+| [!UICONTROL Errores] | Muestra el número de campos de asignación erróneos. |
 
 ![panel superior](../images/ui/mapping/top-panel.png)
 
-La interfaz de asignación también proporciona un panel de opciones que puede elegir para interactuar o filtrar mejor a través de los conjuntos de asignaciones.
+La interfaz de asignación también proporciona un panel de opciones que puede elegir para interactuar o filtrar mejor a través de los campos de asignación.
 
 ![segundo panel](../images/ui/mapping/second-panel.png)
 
@@ -112,11 +113,11 @@ Las opciones de filtrado son:
 | [!UICONTROL Campos sin asignar] | Esta opción filtra el esquema de origen para mostrar solo los campos que aún no se han asignado. |
 | [!UICONTROL Campos con recomendación] | Esta opción filtra el esquema de origen para mostrar solo los campos que contienen recomendaciones de asignación. |
 
-Select **[!UICONTROL Campos con errores]** para ver todos los conjuntos de asignación con errores.
+Select **[!UICONTROL Campos con errores]** para ver todos los campos de asignación con errores.
 
 ![filter](../images/ui/mapping/filter.png)
 
-Se muestra una vista aislada de los conjuntos de asignación erróneos, lo que le permite solucionar errores mediante recomendaciones de asignación inteligente o a través del árbol de asignación manual.
+Se muestra una vista aislada de los campos de asignación erróneos, lo que le permite solucionar errores mediante recomendaciones de asignación inteligente o a través del árbol de asignación manual.
 
 ![fields-with-errors](../images/ui/mapping/fields-with-errors.png)
 
@@ -176,13 +177,13 @@ Durante la vista previa, la columna de identidad se prioriza como el primer camp
 
 ![preview-screen](../images/ui/mapping/preview-screen.png)
 
-Para quitar todos los conjuntos de asignaciones, seleccione **[!UICONTROL Borrar todas las asignaciones]**.
+Para quitar todos los campos de asignación, seleccione **[!UICONTROL Borrar todas las asignaciones]**.
 
 ![clear-all](../images/ui/mapping/clear-all.png)
 
 ### Uso de la interfaz de asignación
 
-Platform proporciona automáticamente recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso o corregir cualquier conjunto de asignaciones duplicadas para borrar cualquier error.
+Platform proporciona automáticamente recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso o corregir cualquier campo de asignación duplicado para borrar cualquier error.
 
 ![mapping-interface](../images/ui/mapping/mapping-interface.png)
 
@@ -200,7 +201,7 @@ También puede seleccionar **[!UICONTROL Seleccionar manualmente]** para utiliza
 
 ![recc-panel](../images/ui/mapping/recc-panel.png)
 
-La interfaz de asignación de esquema de destino aparece en la misma vista que los conjuntos de asignación, lo que permite modificar los pares de asignación dentro de la misma pantalla. Seleccione el campo de destino que se adapte a su caso de uso o corrija sus errores.
+La interfaz de asignación de esquema de destino aparece en la misma vista que los campos de asignación, lo que permite modificar los pares de asignación dentro de la misma pantalla. Seleccione el campo de destino que se adapte a su caso de uso o corrija sus errores.
 
 ![select-target-field](../images/ui/mapping/select-target-field.png)
 
