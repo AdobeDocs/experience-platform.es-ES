@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -171,7 +171,7 @@ Proporcione valores para la programación y seleccione **[!UICONTROL Siguiente]*
 
 >[!NOTE]
 >
->Para la ingesta por lotes, cada flujo de datos resultante selecciona los archivos que se van a ingerir de su origen en función de sus **última modificación** marca de tiempo. Esto significa que los flujos de datos por lotes seleccionan los archivos del origen que son nuevos o que se han modificado desde la última ejecución del flujo de datos.
+>Para la ingesta por lotes, cada flujo de datos resultante selecciona los archivos que se van a ingerir de su origen en función de sus **última modificación** marca de tiempo. Esto significa que los flujos de datos por lotes seleccionan los archivos del origen que son nuevos o que se han modificado desde la última ejecución del flujo. Además, debe asegurarse de que haya un lapso de tiempo suficiente entre la carga de archivos y la ejecución de un flujo programado, ya que es posible que los archivos que no se carguen completamente en la cuenta de almacenamiento en la nube antes del tiempo de ejecución del flujo programado no se recojan para su incorporación.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
