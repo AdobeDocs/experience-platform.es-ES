@@ -2,13 +2,13 @@
 keywords: Experience Platform;inicio;temas populares
 title: Procesamiento de solicitudes de privacidad en el servicio de identidad
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes de acceso, exclusión de la venta o eliminación de sus datos personales, según lo establecido en numerosas normas de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el servicio de identidad.
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
+source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
-
 
 # Procesamiento de solicitudes de privacidad en [!DNL Identity Service]
 
@@ -50,6 +50,10 @@ Además, la variable `include` matriz de la carga útil de solicitud debe inclui
 
 La siguiente solicitud crea un nuevo trabajo de privacidad en el RGPD para los datos de un único cliente en la variable [!DNL Identity] tienda. Se proporcionan dos valores de identidad para el cliente en la variable `userIDs` matriz; una que utilice el estándar `Email` área de nombres de identidad y la otra utilizando un `ECID` namespace, también incluye el valor de producto para [!DNL Identity] (`Identity`) en el `include` matriz:
 
+>[!TIP]
+>
+>Al eliminar un espacio de nombres personalizado mediante la API, debe especificar el símbolo de identidad como el espacio de nombres, en lugar del nombre para mostrar.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
@@ -89,6 +93,10 @@ curl -X POST \
 ```
 
 ### Uso de la interfaz de usuario
+
+>[!TIP]
+>
+>Al eliminar un área de nombres personalizada mediante la interfaz de usuario, debe especificar el símbolo de identidad como área de nombres, en lugar del nombre para mostrar. Además, no puede eliminar espacios de nombres personalizados en la interfaz de usuario para entornos limitados que no sean de producción.
 
 Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Identidad]** under **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en [!DNL Identity Service].
 
