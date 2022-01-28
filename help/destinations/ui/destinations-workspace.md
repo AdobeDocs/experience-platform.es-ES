@@ -4,9 +4,9 @@ title: Espacio de trabajo de destinos
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema. Se describen en las secciones siguientes.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
+source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '887'
 ht-degree: 2%
 
 ---
@@ -74,7 +74,7 @@ La variable **[!UICONTROL Examinar]** muestra los destinos con los que ha establ
 >
 > * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Botón Activar segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activar segmentos ]**para enviar segmentos a ese destino.
 > * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Botón Eliminar](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Eliminar ]**botón para [remove](delete-destinations.md) una conexión existente a un destino.
-> * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Botón Monitorización](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Monitorización ]**para ver la información de activación de este destino en el [panel de monitorización](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Ver en el botón de monitorización](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Ver en monitorización ]**para ver la información de activación de este destino en el [panel de monitorización](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
