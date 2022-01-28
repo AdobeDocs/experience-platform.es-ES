@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
-source-git-commit: 703e49a20fae0fbf527275e1385f596d01642954
+source-git-commit: 5a27b725d945fcfc3908b2299f770796ce4fdbd1
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1337'
 ht-degree: 4%
 
 ---
@@ -44,8 +44,8 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 | Función | Descripción |
 | --- | --- |
 | Subtítulos inteligentes | Un algoritmo de aprendizaje automático proporciona automáticamente perspectivas sobre sus datos de perfil y audiencia, e ilustra patrones y tendencias durante un período de 30 a 90 días o 12 meses. Los subtítulos incluyen información sobre <ul><li>Forma general y estadísticas</li><li>Tendencias y cambios bruscos</li><li>Patrones estacionales</li><li>Anomalías inesperadas</li></ul> Puede encontrar más información en la [tableros de perfiles](../../dashboards/guides/profiles.md#profiles-count-trend) y [tableros de segmentos](../../dashboards/guides/segments.md#audience-size-trend) documentación. |
-| Inventario de tableros | Acceda a los informes preconfigurados de paneles de perfil, segmentos y destinos, incluidas las integraciones instaladas, como Power BI, en una ubicación centralizada. Para obtener más información, consulte la [[!DNL Dashboards] información general](../../dashboards/home.md). |
-| Plantillas de informe de PowerBI | Cree, personalice o amplíe métricas a partir de los modelos de datos de informes de perfil, segmentos y destino usando los nuevos gráficos de Power BI. El flujo de trabajo de instalación automatizada le permite compartir sus perspectivas de marketing en su organización desde el entorno de PowerBI. Para obtener más información, consulte la [[!DNL Dashboards] información general](../../dashboards/home.md). |
+| Inventario de tableros | Acceda a los informes preconfigurados de paneles de perfil, segmentos y destinos, incluidas las integraciones instaladas, como Power BI, en una ubicación centralizada. Para obtener más información, consulte la [[!DNL Dashboards] documentación de inventario](../../dashboards/inventory.md). |
+| Plantillas de informe de PowerBI | Cree, personalice o amplíe métricas a partir de los modelos de datos de informes de perfil, segmentos y destino usando los nuevos gráficos de Power BI. El flujo de trabajo de instalación automatizada le permite compartir sus perspectivas de marketing en su organización desde el entorno de PowerBI. Para obtener más información, consulte la [Documentación de plantilla de informe de PowerBI](../../dashboards/integrations/power-bi.md). |
 
 Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL Dashboards] información general](../../dashboards/home.md).
 
@@ -91,8 +91,8 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 | Función | Descripción |
 | --- | --- |
-| Bloque anónimo | La construcción SQL de bloque anónimo permite desglosar los trabajos de preparación de datos a gran escala en el servicio de consulta en tareas más pequeñas y, a continuación, reutilizarlos y ejecutarlos en secuencia para la carga de datos incremental. Para obtener más información, consulte la [Información general del servicio de consultas](../../query-service/home.md). |
-| Organización de conjuntos de datos | Proporciona una estructura de datos lógica y coherente para organizar los recursos de datos y utilizarlos con el servicio de consulta a medida que crezca la cantidad de recursos de datos dentro del entorno limitado. Para obtener más información, consulte la [Información general del servicio de consultas](../../query-service/home.md). |
+| Bloque anónimo | La construcción SQL de bloque anónimo permite desglosar los trabajos de preparación de datos a gran escala en el servicio de consulta en tareas más pequeñas y, a continuación, reutilizarlos y ejecutarlos en secuencia para la carga de datos incremental. Para obtener más información, consulte la [consultas de ejemplo para documentación de bloques anónimos](../../query-service/best-practices/anonymous-block.md). |
+| Organización de conjuntos de datos | Proporciona una estructura de datos lógica y coherente para organizar los recursos de datos y utilizarlos con el servicio de consulta a medida que crezca la cantidad de recursos de datos dentro del entorno limitado. Para obtener más información, consulte la [organizar la documentación de recursos de datos](../../query-service/best-practices/organize-data-assets.md). |
 
 Para obtener más información, consulte [!DNL Query Service], consulte la [[!DNL Query Service] información general](../../query-service/home.md).
 
