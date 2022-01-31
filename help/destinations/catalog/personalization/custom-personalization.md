@@ -3,9 +3,9 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión personalizada personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a segmentos de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: cfbf8fb29d15badd10bafe35c558d95e534d23e8
+source-git-commit: d0638ea80c03bf9d5ce76e27e3a4fc7358bfe83c
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '635'
 ht-degree: 1%
 
 ---
@@ -39,6 +39,12 @@ Un sitio web de ventas y alquiler de casa quiere personalizar su página de inic
 Con un destino personalizado independiente para su servidor de publicidad, el mismo sitio web puede dirigirse a la publicidad en el sitio con un conjunto diferente de segmentos de Adobe Experience Platform como criterios de objetivo.
 
 ## Conectarse al destino {#connect}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_custom_personalization_datastream"
+>title="Acerca de los ID de conjunto de datos"
+>abstract="Esta opción determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Debe configurar un conjunto de datos para poder configurar el destino."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Aprenda a configurar un conjunto de datos."
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
