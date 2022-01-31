@@ -2,30 +2,39 @@
 title: Notas de la versión de la extensión Adobe Target v2
 description: Notas de la versión de la extensión de etiquetas de Adobe Target v2 en Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 644be95d9f90e20622c4f8ad68252ac57c09a288
+source-git-commit: 824fea41bc7e7082814648efd58184f5208e5e6f
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 90%
+source-wordcount: '642'
+ht-degree: 70%
 
 ---
 
-# Notas de la versión de la extensión de Adobe Target v2
+# Notas de la versión de la extensión Adobe Target v2
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
+## 28 de enero de 2022
+
+### Extensión 0.17.1 de la versión 2.0 de Adobe Target
+
+- Se ha actualizado para admitir `at.js` v2.8.1
+- Fijo `pageLoad` no asignado a `target-global-mbox` en modo de ejecución híbrida ODD
+- Se ha corregido un problema con los detalles de análisis para `mbox` solicitud
+- Se han actualizado las dependencias de desarrollo para corregir las vulnerabilidades de seguridad
+
 ## 7 de enero de 2022
 
 ### Extensión 0.17.0 de la versión 2.0 de Adobe Target
 
-- Se ha actualizado para admitir at.js v2.8.0, que ahora recopila datos de uso de funciones y telemetría de rendimiento.  Los datos personales no se recopilan. Para desactivar esta función, establezca `telemetryEnabled` a `false` en `targetGlobalSettings`.
+- Se ha actualizado para admitir `at.js` v2.8.0, que ahora recopila datos de uso de funciones y telemetría de rendimiento.  Los datos personales no se recopilan. Para desactivar esta función, establezca `telemetryEnabled` a `false` en `targetGlobalSettings`.
 
 ## 28 de octubre de 2021
 
 ### Extensión 0.16.0 de la versión 2.0 de Adobe Target
 
-- Se ha actualizado para admitir la versión 2.7.0 de at.js , que ahora está disponible para su descarga desde Adobe Target.
+- Se ha actualizado para admitir `at.js` v2.7.0, ahora disponible para su descarga desde Adobe Target.
 
 ## 20 de julio de 2021
 
@@ -37,7 +46,7 @@ ht-degree: 90%
 
 ### Extensión 0.15.0 de la versión 2.0 de Adobe Target
 
-- Se añade un atributo seguro a las cookies cada vez que la configuración de at.js secureOnly se establece en verdadera
+- Agregue un atributo seguro a las cookies siempre que `at.js` ajustes secureOnly está establecido en true
 - Los tokens de respuesta ya están disponibles al utilizar `triggerView()`
 - Se ha corregido un error relacionado con el evento `CONTENT_RENDERING_NO_OFFERS`. Ahora se activa correctamente cuando no hay contenido devuelto desde Target
 - Los detalles de las métricas de clic de A4T se devuelven correctamente al usar solicitudes de captura previa.
@@ -49,7 +58,7 @@ ht-degree: 90%
 
 ### Extensión 0.14.2 de la versión 2.0 de Adobe Target
 
-- Se ha corregido el error del paquete de final que contenía dos versiones de at.js, una con Toma de decisiones en el dispositivo y otra sin esta opción.
+- Corregir un error en el que el paquete final contiene dos `at.js` versiones, una con On-Device Decisioning y otra sin.
 
 ## 19 de mayo de 2021
 
@@ -61,8 +70,8 @@ ht-degree: 90%
 
 ### Extensión 0.14 de la versión 2.0 de Adobe Target
 
-- Se ha añadido una nueva acción Cargar destinatario con [Toma de decisiones en el dispositivo](./overview.md#load-target-with-on-device-decisioning), que carga at.js 2.5 con capacidades de toma de decisiones en el dispositivo
-- Se ha actualizado at.js a la versión 2.5
+- Se ha añadido una nueva acción Cargar destinatario con [Toma de decisiones en el dispositivo](./overview.md#load-target-with-on-device-decisioning), que carga 2.5 con capacidades de toma de decisiones en el dispositivo`at.js`
+- Actualizado `at.js` a 2,5
 
 
 ## 25 de marzo de 2021
@@ -71,7 +80,7 @@ ht-degree: 90%
 
 - Se ha corregido un problema por el que `targetPageParams` se incluía en las solicitudes de mbox. `targetPageParams` solo debe incluirse en las solicitudes de `pageLoad`.
 - Se ha corregido un problema con los objetos globales de documento y ventana en la extensión de etiqueta al reemplazar las dependencias de objeto global por referencias directas a ellos.
-- Se ha actualizado at.js a la versión 2.4.1.
+- Actualizado `at.js` a 2.4.1.
 
 ## 25 de enero de 2021
 
@@ -88,7 +97,7 @@ ht-degree: 90%
 
 - Se ha corregido un error que hacía que los parámetros de mbox no se mostraran en la IU
 - Actualizaciones de promoción de la marca
-- Actualización de at.js a la versión 2.3.3.
+- Se ha actualizado el `at.js` versión a 2.3.3
 
 ## 24 de julio de 2020
 
@@ -101,7 +110,7 @@ ht-degree: 90%
 
 ### Extensión 0.13.2 de la versión 2.0 de Adobe Target
 
-- Se ha corregido un problema que se producía al usar CNAME y el reemplazo perimetral, por el cual at.js 1.x podía crear, de manera incorrecta, el dominio del servidor, lo que provocaba un error en la solicitud de Target.
+- Se ha corregido un problema que se producía al usar CNAME y la anulación de perímetros, en el que `at.js` Es posible que 1.x cree incorrectamente el dominio del servidor, lo que provoca que la solicitud de Target falle
 - Se ha corregido un problema en el cual, al usar la extensión de etiquetas v2 para las extensiones de etiquetas Target y Adobe Analytics, Target demoraba la llamada de sendBeacon de Analytics.
 - Se ha mejorado la configuración de `deviceIdLifetime` al permitir que sea reemplazable mediante `targetGlobalSettings`.
 
@@ -109,7 +118,7 @@ ht-degree: 90%
 
 ### Extensión 0.13.0 de la versión 2.0 de Adobe Target
 
-- Se ha actualizado at.js a la versión 2.3.
+- Actualizado `at.js` a v2.3.
 - Se añadió compatibilidad de Mbox global de Target en la API de adobe.target.getOffer.
 - Se corrigió un problema en el que los parámetros y los parámetros de carga de página no se procesaban correctamente.
 
@@ -117,9 +126,9 @@ ht-degree: 90%
 
 ### Extensión 0.12.0 de la versión 2.0 de Adobe Target
 
-- Se ha actualizado at.js a la versión 2.2.
-- Se ha mejorado el rendimiento de las integraciones entre la biblioteca de Experience Cloud ID (ECID) 4.4 y at.js 2.2.
-- Anteriormente, la biblioteca de ECID realizaba dos llamadas de bloqueo antes de que at.js pudiera recuperar experiencias. Esto se ha reducido a una sola llamada, lo que mejora significativamente el rendimiento.
+- Actualizado `at.js` a v2.2.
+- Se ha mejorado el rendimiento de las integraciones entre la biblioteca de ID de Experience Cloud (ECID) 4.4 y `at.js` 2.2.
+- Anteriormente, la biblioteca ECID realizaba dos llamadas de bloqueo antes de `at.js` podría recuperar experiencias. Esto se ha reducido a una sola llamada, lo que mejora significativamente el rendimiento.
 
 >[!NOTE]
 >Actualice la extensión de etiqueta de ECID a la versión 4.4.1 para disfrutar de esta mejora de rendimiento.
@@ -128,11 +137,11 @@ ht-degree: 90%
 
 ### Extensión 0.11.1 de la versión 2.0 de Adobe Target
 
-- Versión actualizada para utilizar at.js 2.1.1.
+- Versión de extensión actualizada para usar `at.js` 2.1.1
 - Se añadió una corrección para la gestión de parámetros.
 
 ## 3 de junio de 2019
 
 ### Extensión 0.11.0 de la versión 2.0 de Adobe Target
 
-- Nueva extensión de etiquetas compatible con at.js 2.1
+- Nueva extensión de etiqueta compatible `at.js` 2,1
