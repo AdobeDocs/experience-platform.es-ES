@@ -2,9 +2,9 @@
 title: Información general sobre registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '657'
 ht-degree: 5%
 
 ---
@@ -65,7 +65,7 @@ Los siguientes filtros están disponibles para eventos de auditoría en la inter
 | --- | --- |
 | [!UICONTROL Categoría] | Utilice el menú desplegable para filtrar los resultados mostrados por [categoría](#category). |
 | [!UICONTROL Acción] | Filtrar por acción. Actualmente solo [!UICONTROL Crear] y [!UICONTROL Eliminar] las acciones se pueden filtrar. |
-| [!UICONTROL Estado de control de acceso] | Filtrar por si la acción fue permitida (completada) o denegada debido a la falta de [control de acceso](../../../access-control/home.md) permisos. |
+| [!UICONTROL Estado] | Filtrar por si la acción fue permitida (completada) o denegada debido a la falta de [control de acceso](../../../access-control/home.md) permisos. |
 | [!UICONTROL Fecha] | Seleccione una fecha de inicio o una fecha de finalización para definir un intervalo de fechas por el que filtrar los resultados. |
 
 Para quitar un filtro, seleccione la &quot;X&quot; en el icono de la píldora para el filtro en cuestión o seleccione **[!UICONTROL Borrar todo]** para eliminar todos los filtros.
