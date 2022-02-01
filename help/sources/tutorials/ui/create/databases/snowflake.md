@@ -5,18 +5,14 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Snowflake mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
+source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '445'
 ht-degree: 2%
 
 ---
 
 # Cree un [!DNL Snowflake] conexión de origen en la interfaz de usuario
-
->[!NOTE]
->
-> La variable [!DNL Snowflake] El conector está en versión beta. Consulte la [Resumen de fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Este tutorial proporciona los pasos para crear un [!DNL Snowflake] conector de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
