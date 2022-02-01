@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1571'
 ht-degree: 1%
 
 ---
@@ -61,6 +61,16 @@ La variable **[!UICONTROL Agregar datos de origen de Analytics]** aparece. Selec
 >[!IMPORTANT]
 >
 >La función de soporte de preparación de datos para la variable [!DNL Analytics] el origen está en versión beta.
+
+Antes de poder asignar su [!DNL Analytics] para dirigirse al esquema XDM, primero debe seleccionar si utiliza un esquema predeterminado o uno personalizado.
+
+Un esquema predeterminado crea un nuevo esquema en su nombre, que contiene la variable [!DNL Analytics] grupo de campos. Para utilizar un esquema predeterminado, seleccione **[!UICONTROL Esquema predeterminado]**.
+
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+Con un esquema personalizado, puede elegir cualquier esquema disponible para su [!DNL Analytics] siempre que ese esquema tenga [!DNL Analytics] grupo de campos. Para utilizar un esquema personalizado, seleccione **[!UICONTROL Esquema personalizado]**.
+
+![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 La variable [!UICONTROL Asignación] proporciona una interfaz para asignar campos de origen a los campos de esquema de destino correspondientes. Desde aquí, puede asignar variables personalizadas a nuevos grupos de campos de esquema y aplicar cálculos según lo admite la preparación de datos. Seleccione un esquema de destino para iniciar el proceso de asignación.
 
