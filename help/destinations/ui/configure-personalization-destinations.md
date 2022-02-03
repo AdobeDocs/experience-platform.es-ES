@@ -6,16 +6,14 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Obtenga información sobre cómo configurar destinos de personalización para la personalización de la misma página y de la página siguiente.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 1%
+source-wordcount: '367'
+ht-degree: 0%
 
 ---
 
 # Configurar destinos de personalización para la personalización de la misma página y de la página siguiente
-
-## Información general {#overview}
 
 Uso de Adobe Experience Platform [segmentación de arista](../../segmentation/ui/edge-segmentation.md) para permitir a los clientes crear y segmentar segmentos de audiencia a gran escala, en tiempo real.
 
@@ -23,11 +21,15 @@ Esta capacidad le ayuda a configurar casos de uso de personalización de la mism
 
 Este artículo proporciona instrucciones paso a paso sobre cómo configurar los destinos de Experience Platform y personalización para estos casos de uso.
 
-## Paso 1: Configuración de un conjunto de datos del SDK web de Experience Platform {#configure-datastream}
+## Paso 1: Configuración de un conjunto de datos en la interfaz de usuario de la recopilación de datos {#configure-datastream}
 
-El primer paso para configurar el caso de uso de personalización es configurar un [!DNL Web SDK datastream].
+El primer paso para configurar el destino de personalización es configurar un conjunto de datos para el SDK web del Experience Platform. Esto se realiza en la interfaz de usuario de la recopilación de datos.
 
-Siga las instrucciones descritas en la sección [configuración de datastream](../../edge/fundamentals/datastreams.md) documentación.
+Al configurar el conjunto de datos, en **[!UICONTROL Adobe Experience Platform]** asegúrese de que ambas **[!UICONTROL Segmentación de Edge]** y **[!UICONTROL Destinos de personalización]** están seleccionados.
+
+![Configuración del almacén de datos](../assets/ui/configure-personalization-destinations/datastream-config.png)
+
+Para obtener más información sobre cómo configurar un conjunto de datos, siga las instrucciones descritas en la sección [Documentación del SDK web de plataforma](../../edge/fundamentals/datastreams.md).
 
 ## Paso 2: Configurar el destino personalizado {#configure-destination}
 
