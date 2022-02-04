@@ -4,9 +4,9 @@ title: Espacio de trabajo de destinos
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema. Se describen en las secciones siguientes.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
+source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
@@ -64,11 +64,30 @@ Para obtener más información sobre las categorías de destino y sobre cada des
 
 ## [!UICONTROL Cuentas] {#accounts}
 
-La variable **[!UICONTROL Cuentas]** muestra detalles sobre las conexiones que ha establecido con varios destinos y le permite actualizar los detalles de conexión existentes. Consulte [Actualizar cuentas](update-accounts.md) para obtener instrucciones detalladas.
+La variable **[!UICONTROL Cuentas]** muestra detalles sobre las conexiones establecidas con varios destinos y permite actualizar o eliminar detalles de cuentas existentes. Consulte la siguiente tabla para obtener toda la información que puede obtener en cada cuenta de destino.
+
+>[!TIP]
+>
+> * Seleccione los tres puntos del [!UICONTROL Plataforma] y utilice la variable ![Botón Activar segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activar segmentos ]**para enviar segmentos a ese destino.
+> * Seleccione los tres puntos del [!UICONTROL Plataforma] y utilice la variable ![Botón Editar detalles](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Editar detalles ]**botón para [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
+> * Seleccione los tres puntos del [!UICONTROL Plataforma] y utilice la variable ![Botón Eliminar](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Eliminar ]**botón para [delete](delete-destination-account.md) una cuenta de destino existente.
+
+
+![Ficha Cuentas](../assets/ui/workspace/destination-account-options.png)
+
+| Elemento | Descripción |
+|---|---|
+| [!UICONTROL Plataforma] | Destino para el que ha configurado la conexión. |
+| [!UICONTROL Tipo de conexión] | Representa el tipo de conexión de la cuenta a su espacio de almacenamiento o destino. Según el destino, las opciones de autenticación son: <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3, FTP o Azure Blob.</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor</li><li>Para destinos de almacenamiento en la nube Amazon S3: Clave de acceso </li><li>Para destinos de almacenamiento en la nube SFTP: Autenticación básica para SFTP</li><li>Autenticación OAuth 1 u OAuth 2</li><li>Autenticación de token del portador</li></ul> |
+| [!UICONTROL Nombre de usuario] | El nombre de usuario seleccionado en la variable [asistente de conexión de destino](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Destinos] | Representa el número de flujos de datos de destino correctos únicos conectados con la información básica creada para un destino. |
+| [!UICONTROL Con autorización] | La fecha en la que se autorizó la conexión a este destino. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Examinar] {#browse}
 
-La variable **[!UICONTROL Examinar]** muestra los destinos con los que ha establecido una conexión. Destinos con la variable **[!UICONTROL Habilitado/Deshabilitado]** active establecer el destino en activo o inactivo, respectivamente. También puede ver los destinos en los que tiene datos fluyendo seleccionando **[!UICONTROL Segmentos]** > **[!UICONTROL Examinar]** y seleccionar un segmento para inspeccionarlo. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la pestaña Examinar:
+La variable **[!UICONTROL Examinar]** muestra los destinos con los que ha establecido una conexión. Destinos con la variable **[!UICONTROL Habilitado/Deshabilitado]** active establecer el destino en activo o inactivo, respectivamente. También puede ver los destinos en los que tiene datos fluyendo seleccionando **[!UICONTROL Segmentos]** > **[!UICONTROL Examinar]** y seleccionar un segmento para inspeccionarlo. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la variable [!UICONTROL Examinar] pestaña:
 
 >[!TIP]
 >
