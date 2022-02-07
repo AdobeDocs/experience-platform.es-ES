@@ -2,7 +2,7 @@
 title: Ejemplo de consultas de carga incremental
 description: La función de carga incremental utiliza funciones de bloques anónimos y de instantánea para proporcionar una solución casi en tiempo real que permita mover datos del lago de datos al almacén de datos e ignorar los datos coincidentes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 943886078fe31a12542c297133ac6a0a0d551e08
+source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
@@ -65,7 +65,7 @@ INSERT INTO
 >La variable `history_meta('source table name')` es un método conveniente que se utiliza para obtener acceso a instantáneas disponibles en un conjunto de datos.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -86,7 +86,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END 
+$$;
 ```
 
 4 Utilice la lógica de carga de datos incrementales en el ejemplo de bloque anónimo a continuación para permitir que cualquier nuevo dato del conjunto de datos de origen (desde la marca de tiempo más reciente), se procese y se añada a la tabla de destino en una cadencia normal. En el ejemplo, los datos cambian a `DIM_TABLE_ABC` se procesarán y adjuntarán a `DIM_TABLE_ABC_incremental`.
@@ -96,7 +97,7 @@ EXCEPTION
 > `_ID` es la clave principal en ambos `DIM_TABLE_ABC_Incremental` y `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -117,7 +118,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 Esta lógica se puede aplicar a cualquier tabla para realizar cargas incrementales.
@@ -137,7 +139,7 @@ SET resolve_fallback_snapshot_on_failure=true;
 El bloque de código completo tiene el siguiente aspecto:
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -158,7 +160,8 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 ## Pasos siguientes

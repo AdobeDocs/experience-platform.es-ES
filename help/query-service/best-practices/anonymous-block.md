@@ -2,7 +2,7 @@
 title: Ejemplo de consultas de bloques anónimas
 description: El bloque anónimo es una sintaxis SQL admitida por Adobe Experience Platform Query Service, que le permite ejecutar de forma eficaz una secuencia de consultas
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -33,18 +33,14 @@ Cabe señalar que un bloque es una instrucción ejecutable y, por lo tanto, pued
 La siguiente consulta muestra un ejemplo de cómo encadenar sentencias SQL. Consulte la [Sintaxis SQL en Query Service](../sql/syntax.md) documento para obtener más información sobre cualquiera de las sintaxis SQL utilizadas.
 
 ```SQL
-BEGIN
-     
+$$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
-    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-     
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
     EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
-     
-END;
+END
+$$;
 ```
-
-<!-- The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the `SNAPSHOT` feature. -->
 
 En el ejemplo siguiente, `SET` persiste en el resultado de un `SELECT` en la variable local especificada. La variable tiene un alcance del bloque anónimo.
 
@@ -53,10 +49,11 @@ El ID de la instantánea se almacena como una variable local (`@current_sid`). A
 Una instantánea de base de datos es una vista estática de sólo lectura de una base de datos de SQL Server. Para obtener más información [información sobre la cláusula de instantánea](../sql/syntax.md#SNAPSHOT-clause) consulte la documentación de sintaxis SQL.
 
 ```SQL
-BEGIN                                             
+$$ BEGIN                                             
   SET @current_sid = SELECT parent_id  FROM (SELECT history_meta('your_table_name')) WHERE  is_current = true;
-  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
-END;
+  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                           
+END
+$$;
 ```
 
 ## Pasos siguientes
