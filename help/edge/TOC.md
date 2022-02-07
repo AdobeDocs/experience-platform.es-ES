@@ -3,12 +3,12 @@ solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
-user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
+user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red de Edge.
 feature: Web SDK
-source-git-commit: ccda6d3e16fd6b9966c2f30491feed5fafec47f2
+source-git-commit: 2b6a64bed3033cc5e4f97ed838050dab4400a282
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 37%
+source-wordcount: '146'
+ht-degree: 30%
 
 ---
 
@@ -45,6 +45,7 @@ ht-degree: 37%
       * [Información general](personalization/adobe-target/target-overview.md)
       * [Implementación de aplicación de una sola página](personalization/adobe-target/spa-implementation.md)
       * [Acceso a tokens de respuesta](personalization/adobe-target/accessing-response-tokens.md)
+      * [Uso de un ID de terceros de mbox](personalization/adobe-target/using-mbox-3rdpartyid.md)
    * Offer Decisioning {#offer-decisioning}
       * [Información general](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentimiento {#consent}
