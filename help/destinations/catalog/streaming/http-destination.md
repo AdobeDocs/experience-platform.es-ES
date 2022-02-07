@@ -3,9 +3,9 @@ keywords: flujo continuo;
 title: Conexión de API HTTP
 description: El destino de la API HTTP en Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: bf36592fe4ea7b9d9b6703f3aca8fd8344fe5c9f
+source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1275'
 ht-degree: 1%
 
 ---
@@ -103,27 +103,19 @@ En todos los casos descritos anteriormente, solo los perfiles en los que se han 
 
 Tenga en cuenta que todos los atributos asignados se exportan para un perfil, independientemente de dónde estén los cambios. Por lo tanto, en el ejemplo anterior, todos los atributos asignados para esos cinco perfiles nuevos se exportan incluso si los atributos en sí no han cambiado.
 
-### Qué determina una actualización y qué se incluye en la exportación {#what-determines-export-what-is-included}
+### Qué determina una exportación de datos y qué se incluye en la exportación {#what-determines-export-what-is-included}
 
 En cuanto a los datos exportados para un perfil determinado, es importante comprender los dos conceptos diferentes de *qué determina una exportación de datos a su destino de API HTTP* y *qué datos se incluyen en la exportación*.
 
 | Qué determina una exportación de destino | Qué se incluye en la exportación de destino |
 |---------|----------|
-| <ul><li>Los atributos y segmentos asignados sirven como señal para una actualización de destino. Esto significa que si cualquier segmento asignado cambia de estado (de nulo a realizado o de realizado/existente a existente) o si se actualiza cualquier atributo asignado, se inicia una exportación de destino.</li><li>Dado que actualmente las identidades no se pueden asignar a destinos de API HTTP, los cambios en cualquier identidad en un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es o no el mismo valor. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>Todos los segmentos (con el estado de pertenencia más reciente), independientemente de si están asignados en el flujo de datos o no, se incluyen en la `segmentMembership` objeto.</li><li>Todas las identidades del `identityMap` también se incluyen (actualmente, el Experience Platform no admite la asignación de identidad en el destino de API HTTP).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
+| <ul><li>Los atributos y segmentos asignados sirven como señal para una exportación de destino. Esto significa que si cualquier segmento asignado cambia de estado (de nulo a realizado o de realizado/existente a existente) o si se actualiza cualquier atributo asignado, se inicia una exportación de destino.</li><li>Dado que actualmente las identidades no se pueden asignar a destinos de API HTTP, los cambios en cualquier identidad en un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es o no el mismo valor. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>Todos los segmentos (con el estado de pertenencia más reciente), independientemente de si están asignados en el flujo de datos o no, se incluyen en la `segmentMembership` objeto.</li><li>Todas las identidades del `identityMap` también se incluyen (actualmente, el Experience Platform no admite la asignación de identidad en el destino de API HTTP).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
 
 {style=&quot;table-layout:fixed&quot;}
 
 Por ejemplo, considere este flujo de datos a un destino HTTP donde se seleccionan tres segmentos en el flujo de datos y se asignan cuatro atributos al destino.
 
 ![Flujo de datos de destino de la API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
-
-<!--
-
-![HTTP API destination dataflow](/help/destinations/assets/catalog/http/dataflow-destination.png)
-
-![Mapped attributes](/help/destinations/assets/catalog/http/mapped-attributes.png)
-
--->
 
 Una exportación de perfil al destino se puede determinar mediante un perfil que cumpla los requisitos de uno de los *tres segmentos asignados*. Sin embargo, en la exportación de datos, en la variable `segmentMembership` (consulte [Datos exportados](#exported-data) a continuación), podrían aparecer otros segmentos sin asignar, si ese perfil en particular es miembro de ellos. Si un perfil es apto para el segmento Cliente con Autos DeLorean pero también es miembro de los segmentos de fans de películas y ciencia ficción &quot;Volver al futuro&quot; vistos, entonces estos otros dos segmentos también estarán presentes en `segmentMembership` de la exportación de datos, aunque no estén asignados en el flujo de datos.
 
