@@ -1,42 +1,42 @@
 ---
 keywords: Experience Platform;inicio;temas populares; notificaciones
-description: Al suscribirse a los eventos de Adobe I/O, puede utilizar webhooks para recibir notificaciones sobre los estados de ejecución de flujo de sus conexiones de origen. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que contribuyeron al error de una ejecución.
+description: Al suscribirse a los eventos de Adobe I/O, puede utilizar webhooks para recibir notificaciones sobre los estados de ejecución de flujo de sus conexiones de origen. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que han contribuido al error de una ejecución.
 solution: Experience Platform
 title: Notificaciones de ejecución de flujo
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
 
 # Notificaciones de ejecución de flujo
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios [!DNL Platform]. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) La API se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de  [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
-Con Eventos de Adobe I/O, puede suscribirse a eventos y utilizar webhooks para recibir notificaciones sobre el estado de sus ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que contribuyeron al error de una ejecución.
+Con Eventos de Adobe I/O, puede suscribirse a eventos y utilizar webhooks para recibir notificaciones sobre el estado de sus ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que han contribuido al error de una ejecución.
 
 Este documento proporciona pasos sobre cómo suscribirse a eventos, registrar enlaces web y recibir notificaciones que contengan información sobre el estado de las ejecuciones de flujo.
 
 ## Primeros pasos
 
-Este tutorial supone que ya ha creado al menos una conexión de origen cuyo flujo desea monitorizar. Si todavía no ha configurado una conexión de origen, comience por visitar la [información general de las fuentes](./home.md) para configurar el origen que elija antes de volver a esta guía.
+Este tutorial supone que ya ha creado al menos una conexión de origen cuyo flujo desea monitorizar. Si todavía no ha configurado una conexión de origen, comience por visitar la [información general sobre fuentes](./home.md) para configurar el origen que elija antes de volver a esta guía.
 
-Este documento también requiere una comprensión práctica de los webhooks y cómo conectar un weblock de una aplicación a otra. Consulte la [[!DNL I/O Events] documentación](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para obtener una introducción a los enlaces web.
+Este documento también requiere una comprensión práctica de los webhooks y cómo conectar un weblock de una aplicación a otra. Consulte la [[!DNL I/O Events] documentación](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para una introducción a los webhooks.
 
 ## Registro de un enlace web para notificaciones de ejecución de flujo
 
-Para recibir notificaciones de ejecución de flujo, debe utilizar Adobe Developer Console para registrar un enlace web en la integración de [!DNL Experience Platform].
+Para recibir notificaciones de ejecución de flujo, debe utilizar Adobe Developer Console para registrar un enlace web en su [!DNL Experience Platform] integración.
 
-Siga el tutorial sobre [suscribirse a [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) para conocer los pasos detallados sobre cómo hacerlo.
+Siga el tutorial en [suscripción a notificaciones de [!DNL I/O Event]](../observability/alerts/subscribe.md) para ver los pasos detallados sobre cómo hacerlo.
 
 >[!IMPORTANT]
 >
->Durante el proceso de suscripción, asegúrese de seleccionar **[!UICONTROL Platform notifications]** como proveedor de eventos y seleccione las siguientes suscripciones de eventos:
+>Durante el proceso de suscripción, asegúrese de seleccionar **[!UICONTROL Notificaciones de la plataforma]** como proveedor de eventos y seleccione las siguientes suscripciones de eventos:
 >
 >* **[!UICONTROL Ejecución de flujo de fuente de Experience Platform correcta]**
 >* **[!UICONTROL Error en la ejecución del flujo del origen del Experience Platform]**
@@ -46,7 +46,7 @@ Siga el tutorial sobre [suscribirse a [!DNL I/O Event] notifications](../observa
 
 Con el enlace web conectado y la suscripción del evento completada, puede empezar a recibir notificaciones de ejecución de flujo a través del panel de weblock.
 
-Una notificación devuelve información como el número de trabajos de ingesta ejecutados, el tamaño del archivo y los errores. Una notificación también devuelve una carga útil asociada con su ejecución de flujo en formato JSON. La carga útil de respuesta puede clasificarse como `sources_flow_run_success` o `sources_flow_run_failure`.
+Una notificación devuelve información como el número de trabajos de ingesta ejecutados, el tamaño del archivo y los errores. Una notificación también devuelve una carga útil asociada con su ejecución de flujo en formato JSON. La carga útil de respuesta se puede clasificar como `sources_flow_run_success` o `sources_flow_run_failure`.
 
 >[!IMPORTANT]
 >
@@ -54,7 +54,7 @@ Una notificación devuelve información como el número de trabajos de ingesta e
 
 ### Correcto
 
-Una respuesta correcta devuelve un conjunto de `metrics` que definen las características de una ejecución de flujo específica y `activities` que describen cómo se transforman los datos.
+Una respuesta correcta devuelve un conjunto de `metrics` que definen las características de un flujo de trabajo específico y `activities` esto describe cómo se transforman los datos.
 
 ```json
 {
@@ -147,7 +147,7 @@ Una respuesta correcta devuelve un conjunto de `metrics` que definen las caracte
           "outputFileCount": 10,
           "extensions": {
             "manifest": {
-              "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
+              "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
             }
           }
         },
@@ -313,11 +313,11 @@ La siguiente respuesta es un ejemplo de una ejecución de flujo fallida, con un 
 
 >[!NOTE]
 >
->Consulte el [apéndice](#errors) para obtener más información sobre los mensajes de error.
+>Consulte la [apéndice](#errors) para obtener más información sobre los mensajes de error.
 
 ## Pasos siguientes
 
-Ahora puede suscribirse a eventos que le permitan recibir notificaciones en tiempo real sobre sus estados de ejecución de flujo. Para obtener más información sobre las ejecuciones y fuentes de flujo, consulte la [información general de las fuentes](./home.md).
+Ahora puede suscribirse a eventos que le permitan recibir notificaciones en tiempo real sobre sus estados de ejecución de flujo. Para obtener más información sobre las ejecuciones y fuentes de flujo, consulte la [información general sobre fuentes](./home.md).
 
 ## Apéndice
 
