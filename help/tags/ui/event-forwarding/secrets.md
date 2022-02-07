@@ -2,9 +2,9 @@
 title: Configuración de secretos en el reenvío de eventos
 description: Aprenda a configurar secretos en la interfaz de usuario de recopilación de datos para autenticarse en los puntos finales utilizados en las propiedades de reenvío de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ Puede reintentar o actualizar un intercambio secreto desde la pantalla de edici�
 | Tipo secreto | Reintentar protocolo |
 | --- | --- |
 | [!UICONTROL Token] | Select **[!UICONTROL Secreto de Exchange]** para volver a intentar el intercambio secreto. Este control solo está disponible cuando hay un entorno adjunto al secreto. |
-| [!UICONTROL HTTP] | Si no hay ningún entorno adjunto al secreto, seleccione **[!UICONTROL Secreto de Exchange]** para cambiar la credencial a base64. Si hay un entorno adjunto, seleccione **[!UICONTROL Secreto de Exchange e Deploy]** para intercambiar a base64 e implementar el secreto en Cloudfee. |
+| [!UICONTROL HTTP] | Si no hay ningún entorno adjunto al secreto, seleccione **[!UICONTROL Secreto de Exchange]** para cambiar la credencial a base64. Si hay un entorno adjunto, seleccione **[!UICONTROL Secreto de Exchange e Deploy]** para intercambiar a base64 e implementar el secreto. |
 | [!UICONTROL OAuth2] | Select **[!UICONTROL Generar token]** para intercambiar las credenciales y devolver un token de acceso del proveedor de autenticación. |
 
 ## Eliminar un secreto
