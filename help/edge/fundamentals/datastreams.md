@@ -3,9 +3,9 @@ title: Configurar el almacén de datos para el SDK web del Experience Platform
 description: 'Aprenda a configurar los flujos de datos. '
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;id;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: d3f1a6a5f3f10b8ccbe73ebc744dc60bbbf1bb07
+source-git-commit: 012ebbadc7149747df1414360eca6451836d6bbc
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ La configuración que se muestra aquí le permite enviar datos a Adobe Experienc
 
 | Campo | Descripción |
 | --- | --- |
-| [!UICONTROL Entorno de pruebas] | **(Obligatorio)** Seleccione el entorno limitado de Platform al que desee enviar los datos. Los entornos limitados son particiones virtuales en Adobe Experience Platform que le permiten aislar los datos y las implementaciones de otras personas de su organización. Para obtener más información sobre cómo funcionan, consulte la [documentación de entornos limitados](../../sandboxes/home.md). |
+| [!UICONTROL Entorno de pruebas] | **(Obligatorio)** Seleccione el entorno limitado de Platform al que desee enviar los datos. Los entornos limitados son particiones virtuales en Adobe Experience Platform que le permiten aislar los datos y las implementaciones de otras personas de su organización.<br><br>Una vez creado un conjunto de datos, su simulador de pruebas no se puede cambiar. La variable [!UICONTROL Sandbox] por lo tanto, el campo de selección no está disponible al editar un conjunto de datos existente.<br><br>Para obtener más información sobre la función de los entornos limitados en el Experience Platform, consulte la [documentación de entornos limitados](../../sandboxes/home.md). |
 | [!UICONTROL Conjunto de datos del evento] | **(Obligatorio)** Seleccione el conjunto de datos de Platform al que se transmitirán los datos de eventos del cliente. Este esquema debe utilizar la variable [Clase XDM ExperienceEvent](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Conjunto de datos de perfil] | Seleccione el conjunto de datos de Platform al que se enviarán los datos de atributos del cliente. Este esquema debe utilizar la variable [Clase de perfil individual XDM](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Seleccione esta casilla de verificación para habilitar el Offer decisioning para una implementación del SDK web de Platform. Consulte la guía de [uso del Offer decisioning con el SDK web de Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) para obtener más información sobre la implementación. Para obtener más información sobre las funciones de Offer decisioning, consulte la [Documentación de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=es). |
