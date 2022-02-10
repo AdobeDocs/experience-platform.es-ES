@@ -6,23 +6,22 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le muestra cómo aprovechar las API de aprendizaje automático de Sensei para crear un experimento y una ejecución de experimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---
 
-# Puntuación de un modelo mediante [!DNL Sensei Machine Learning API]
+# Puntuación de un modelo mediante la variable [!DNL Sensei Machine Learning API]
 
-Este tutorial le muestra cómo aprovechar las API para crear un experimento y una ejecución de experimento. Para obtener una lista detallada de la documentación de API, consulte [este documento](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
+Este tutorial le muestra cómo aprovechar las API para crear un experimento y una ejecución de experimento. Para obtener una lista de todos los extremos de la API de aprendizaje automático de Sensei, consulte [este documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Crear un experimento programado para la puntuación
 
-De forma similar a Experimentos programados para formación, la creación de un experimento programado para la puntuación también se realiza incluyendo una sección `template` en el parámetro body. Además, el campo `name` en `tasks` en el cuerpo se establece como `score`.
+De forma similar a los experimentos programados para formación, la creación de un experimento programado para la puntuación también se realiza incluyendo un `template` al parámetro body. Además, la variable `name` campo bajo `tasks` en el cuerpo se establece como `score`.
 
-El siguiente es un ejemplo de creación de un experimento que se ejecutará cada 20 minutos a partir de `startTime` y se ejecutará hasta `endTime`.
+A continuación se muestra un ejemplo de creación de un experimento que se ejecutará cada 20 minutos a partir de `startTime` y se ejecutará hasta `endTime`.
 
 **Solicitud**
 
@@ -110,7 +109,7 @@ A continuación se muestra la respuesta después de crear el experimento program
 
 ### Crear una ejecución de experimento para la puntuación
 
-Ahora, con el modelo entrenado, podemos crear una Carrera de Experimento para la puntuación. El valor del parámetro `modelId` es el parámetro `id` devuelto en la solicitud del modelo de GET anterior.
+Ahora, con el modelo entrenado, podemos crear una Carrera de Experimento para la puntuación. El valor de la variable `modelId` es el parámetro `id` parámetro devuelto en la solicitud del modelo de GET anterior.
 
 **Solicitud**
 
@@ -219,7 +218,7 @@ Dado que hay varias ejecuciones de experimento para un experimento específico, 
 
 ### Detener y eliminar un experimento programado
 
-Si desea detener la ejecución de un experimento programado antes de su `endTime`, esto se puede hacer consultando una solicitud de DELETE al `{EXPERIMENT_ID}`
+Si desea detener la ejecución de un experimento programado antes de su `endTime`, esto se puede hacer consultando una solicitud del DELETE al `{EXPERIMENT_ID}`
 
 **Solicitud**
 
