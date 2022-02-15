@@ -1,10 +1,10 @@
 ---
-title: Comparación de at.js con el SDK web de Platform
-description: Descubra cómo se comparan las funciones de at.js con los SDK web
+title: Comparación de at.js con el SDK web de Experience Platform
+description: Descubra cómo se comparan las funciones de at.js con el SDK web de Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
-source-git-commit: 95c6d0d20ee04affb4b67c3d9f90d80e655e2752
+source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2277'
 ht-degree: 6%
 
 ---
@@ -129,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-El SDK WEB de AEP envía automáticamente una notificación con las ofertas ejecutadas por el SDK WEB. Este es un ejemplo del aspecto de una carga útil de solicitud de notificación:
+El SDK web de Experience Platform envía automáticamente una notificación con las ofertas ejecutadas por el SDK WEB. Este es un ejemplo del aspecto de una carga útil de solicitud de notificación:
 
 ```json
 {
@@ -638,7 +638,7 @@ adobe.target.triggerView("homeView")
 
 ### Uso del SDK web
 
-Para realizar el déclencheur o la señal de un cambio de vista de una aplicación de una sola página, establezca la variable `web.webPageDetails.viewName` en el `xdm` de `sendEvent` comando. El SDK WEB de AEP comprobará la caché de la vista, si hay ofertas para el `viewName` especificado en `sendEvent` se ejecutarán y se enviará un evento de notificación de visualización.
+Para realizar el déclencheur o la señal de un cambio de vista de una aplicación de una sola página, establezca la variable `web.webPageDetails.viewName` en el `xdm` de `sendEvent` comando. El SDK web comprobará la caché de la vista si hay ofertas para el `viewName` especificado en `sendEvent` se ejecutarán y se enviará un evento de notificación de visualización.
 
 **Ejemplo**
 
