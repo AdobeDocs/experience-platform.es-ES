@@ -5,10 +5,10 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene información sobre los códigos de error comunes que encuentra y las posibles causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
+source-git-commit: 03cd013e35872bcc30c68508d9418cb888d9e260
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 4%
+source-wordcount: '1106'
+ht-degree: 3%
 
 ---
 
@@ -54,6 +54,53 @@ FROM actual_dataset a
 WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
 AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
+```
+
+### ¿Cómo puedo cambiar la zona horaria a y desde una marca de tiempo UTC?
+
+Adobe Experience Platform mantiene los datos en formato UTC (hora universal coordinada). Un ejemplo del formato UTC es `2021-12-22T19:52:05Z`
+
+El servicio de consulta admite funciones SQL integradas para convertir una marca de tiempo determinada a formato UTC y desde él. Ambas `to_utc_timestamp()` y `from_utc_timestamp()` Los métodos emplean dos parámetros: marca de tiempo y zona horaria.
+
+| Parámetro | Descripción |
+|---|---|
+| Marca de tiempo | La marca de tiempo puede escribirse en formato UTC o en formato simple `{year-month-day}` formato. Si no se proporciona ninguna hora, el valor predeterminado es la medianoche de la mañana de un día determinado. |
+| Zona horaria | La zona horaria se escribe en un `{continent/city})` formato. Debe ser uno de los códigos de zona horaria reconocidos, tal como se encuentran en la variable [base de datos TZ de dominio público](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
+#### Convertir a la marca de tiempo UTC
+
+La variable `to_utc_timestamp()` interpreta los parámetros dados y los convierte **a la marca de tiempo de su zona horaria local** en formato UTC. Por ejemplo, la zona horaria de Seúl, Corea del Sur, es UTC/GMT +9 horas. Al proporcionar una marca de hora de solo fecha, el método utiliza un valor predeterminado de medianoche por la mañana. La marca de tiempo y la zona horaria se convierten al formato UTC desde la hora de esa región hasta la marca de tiempo UTC de su región local.
+
+```SQL
+SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
+```
+
+La consulta devuelve una marca de tiempo en la hora local del usuario. En este caso, las 3 pm del día anterior, ya que Seúl tiene nueve horas de anticipación.
+
+```
+2021-08-30 15:00:00
+```
+
+Otro ejemplo: si la marca de tiempo dada era `2021-07-14 12:40:00.0` para el `Asia/Seoul` zona horaria, la marca de tiempo UTC devuelta sería `2021-07-14 03:40:00.0`
+
+El resultado de la consola que se proporciona en la interfaz de usuario del servicio de consulta es un formato más legible por el ser humano:
+
+```
+8/30/2021, 3:00 PM
+```
+
+### Convertir desde la marca de tiempo UTC
+
+La variable `from_utc_timestamp()` interpreta los parámetros dados **desde la marca de tiempo de su zona horaria local** y proporciona la marca de tiempo equivalente de la región deseada en formato UTC. En el siguiente ejemplo, la hora es las 2:40 p.m. en la zona horaria local del usuario. La zona horaria de Seúl que se pasa como variable supera las nueve horas de la zona horaria local.
+
+```SQL
+SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
+```
+
+La consulta devuelve una marca de tiempo en formato UTC para la zona horaria transferida como parámetro. El resultado es nueve horas antes de la zona horaria que ejecutó la consulta.
+
+```
+8/31/2021, 11:40 PM
 ```
 
 ### ¿Cómo debo filtrar mis datos de series temporales?
@@ -149,7 +196,7 @@ Esta no es una función que el servicio de consulta ofrezca directamente. Sin em
 
 | Código de error | Estado de la conexión | Descripción | Posible causa |
 | ---------- | ---------------- | ----------- | -------------- |
-| **08P01** | N/D | Tipo de mensaje no admitido | Tipo de mensaje no admitido |
+| **08P01** | N/A | Tipo de mensaje no admitido | Tipo de mensaje no admitido |
 | **28P01** | Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
 | **28000** | Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
 | **42P12** | Inicio: autenticación | No se encontraron tablas | No se encontraron tablas para su uso |
