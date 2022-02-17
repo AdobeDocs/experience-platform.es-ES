@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
 source-wordcount: '2188'
 ht-degree: 1%
@@ -71,7 +71,7 @@ Seleccione el **[!UICONTROL Crear programación]** correspondiente al segmento q
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Opciones de exportación de archivos"
->abstract="Seleccione Exportar archivos completos para exportar una instantánea completa de todos los perfiles que cumplen los requisitos para el segmento. Seleccione Exportar archivos incrementales para exportar solo los perfiles que cumplen los requisitos del segmento desde la última exportación. La primera exportación incremental de archivos incluye todos los perfiles que cumplen los requisitos para el segmento, actuando como relleno. Los futuros archivos incrementales incluyen solo los perfiles que cumplen los requisitos para el segmento desde la primera exportación de archivos incrementales."
+>abstract="Select **Exportar archivos completos** para exportar una instantánea completa de todos los perfiles que cumplen los requisitos para el segmento. Select **Exportar archivos incrementales** para exportar solo los perfiles que cumplen los requisitos para el segmento desde la última exportación. <br> La primera exportación incremental de archivos incluye todos los perfiles que cumplen los requisitos para el segmento, actuando como relleno. Los futuros archivos incrementales incluyen solo los perfiles que cumplen los requisitos para el segmento desde la primera exportación de archivos incrementales."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Exportar archivos incrementales"
 
 Select **[!UICONTROL Exportar archivos completos]** para almacenar en déclencheur la exportación de un archivo que contenga una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado.
@@ -348,7 +348,6 @@ Adobe recomienda seleccionar un área de nombres de identidad como un [!DNL CRM 
 >
 >* Los campos se utilizan en la definición del segmento.
 >* Los campos se configuran como atributos proyectados para el destino de destino.
-
 >
 > Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, se le mostraría una infracción de la política de uso de datos en el paso de revisión. Para obtener más información, consulte [Control de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 

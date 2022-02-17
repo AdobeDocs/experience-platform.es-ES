@@ -3,9 +3,9 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión Adobe Target
 description: Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '474'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platfor
 
 ## Casos de uso {#use-cases}
 
-**Personalización de un banner de página principal**
+**Personalizing a home page banner**
 
 Una empresa de ventas y alquiler de casa quiere personalizar su página principal con un banner, según las clasificaciones de segmentos del cliente en Adobe Experience Platform. La empresa puede seleccionar qué audiencias deben obtener una experiencia personalizada y enviarlas a Adobe Target como criterios de objetivo para su oferta de Target.
 
@@ -46,7 +46,7 @@ Una empresa de ventas y alquiler de casa quiere personalizar su página principa
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-Adobe Experience Platform se conecta automáticamente a la instancia de Adobe Target de su empresa. No se requiere autenticación.
+Adobe Experience Platform automatically connects to your company&#39;s Adobe Target instance. There is no authentication required.
 
 ### Parámetros de conexión {#parameters}
 
@@ -60,7 +60,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 Lectura [Activar perfiles y segmentos en destinos de solicitud de perfil](../../ui/activate-profile-request-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
-## Datos exportados {#exported-data}
+## Exported data {#exported-data}
 
 Adobe Target lee datos de perfil de Adobe Experience Platform Edge Network, por lo que no se exportan datos.
 

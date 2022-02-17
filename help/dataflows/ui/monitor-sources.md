@@ -6,9 +6,9 @@ title: Monitorizar flujos de datos para orígenes en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Ingesta de origen"
->abstract="El procesamiento de fuentes contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
+>abstract="La vista de consumo de origen contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -151,7 +151,7 @@ Select **[!UICONTROL Identidades]** para ver la ingesta en el [!UICONTROL Identi
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Procesamiento de identidad"
->abstract="El procesamiento de identidad contiene información sobre los registros ingestados al servicio de identidad, incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
+>abstract="La vista de procesamiento de identidad contiene información sobre los registros ingestados al servicio de identidad, incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -194,7 +194,7 @@ En el [!UICONTROL Procesamiento de identidad] página, seleccione **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Procesamiento de perfiles"
->abstract="El procesamiento de perfiles contiene información sobre los registros ingeridos al servicio Perfil, incluido el número de fragmentos de perfil creados, los fragmentos de perfil actualizados y el número total de fragmentos de perfil."
+>abstract="La vista de procesamiento de perfil contiene información sobre los registros ingestados al servicio de perfil, incluido el número de fragmentos de perfil creados, los fragmentos de perfil actualizados y el número total de fragmentos de perfil."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
