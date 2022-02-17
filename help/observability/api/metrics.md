@@ -5,7 +5,7 @@ title: Punto final de la API de métricas
 topic-legacy: developer guide
 description: Obtenga información sobre cómo recuperar métricas de observabilidad en Experience Platform mediante la API de Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 6%
@@ -201,7 +201,7 @@ La tabla siguiente resume las métricas de Adobe Experience Platform [!DNL Data 
 
 | Métrica de perspectivas | Descripción | Parámetro de consulta de ID |
 | ---- | ---- | ---- |
-| timeseries.ingestion.dataset.new.count | Número total de conjuntos de datos creados. | N/D |
+| timeseries.ingestion.dataset.new.count | Número total de conjuntos de datos creados. | N/A |
 | timeseries.ingestion.dataset.size | Tamaño acumulado de todos los datos ingeridos para un conjunto de datos para o todos los conjuntos de datos. | ID de conjunto de datos |
 | timeseries.ingestion.dataset.dailysize | Tamaño de los datos introducidos en base al uso diario para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
 | timeseries.ingestion.dataset.batchfailed.count | Número de lotes en los que se ha producido un error en un conjunto de datos o en todos los conjuntos de datos. | ID de conjunto de datos |
@@ -282,7 +282,7 @@ La tabla siguiente resume las métricas de [!DNL Real-time Customer Profile].
 | timeseries.profiles.dataset.batchsuccess.count | Número de [!DNL Profile] lotes introducidos para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
 | timeseries.profiles.dataset.batchfailed.count | Número de [!DNL Profile] los lotes fallaron para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
 | platform.ups.ingest.streaming.request.m1_rate | Tasa de solicitud entrante. | Organización IMS (**Requerido**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Tasa de éxito de ingesta. | Organización IMS (**Requerido**) |
+| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Tasa de éxito de ingesta. | Organización IMS (**Requerido**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | Tasa de registros nuevos introducidos para un conjunto de datos. | ID del conjunto de datos (**Requerido**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Tasa de registros con marca de tiempo desordenados para la solicitud de creación de un conjunto de datos. | ID del conjunto de datos (**Requerido**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Marca de tiempo para la última solicitud de registro de creación de un conjunto de datos. | ID del conjunto de datos (**Requerido**) |
