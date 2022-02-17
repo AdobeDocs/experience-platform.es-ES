@@ -5,9 +5,9 @@ title: Procesamiento de solicitudes de privacidad en perfil del cliente en tiemp
 type: Documentation
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes de acceso, exclusión de la venta o eliminación de sus datos personales, según lo establecido en numerosas normas de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el Perfil del cliente en tiempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
+source-git-commit: 6cb30dc9e7e76ff9ca060f83405196fa09ed0ebb
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Las secciones siguientes describen cómo realizar solicitudes de privacidad para
 >
 >El Privacy Service solo puede procesar [!DNL Profile] datos que utilizan una directiva de combinación que no realiza la vinculación de identidad. Si utiliza la interfaz de usuario para confirmar si sus solicitudes de privacidad se están procesando, asegúrese de que está utilizando una directiva con &quot;[!DNL None]&quot; [!UICONTROL Vinculación de ID] tipo . En otras palabras, no puede usar una directiva de combinación donde [!UICONTROL Vinculación de ID] se configura como &quot;[!UICONTROL Gráfico privado]&quot;.
 >
->![](./images/privacy/no-id-stitch.png)
+>![La vinculación de ID de la directiva de combinación se establece en Ninguno](./images/privacy/no-id-stitch.png)
 >
 >También es importante tener en cuenta que no se puede garantizar la cantidad de tiempo que una solicitud de privacidad puede tardar en completarse. Si se producen cambios en su [!DNL Profile] durante el procesamiento de una solicitud, no se puede garantizar si esos registros se procesan o no.
 
@@ -111,7 +111,7 @@ curl -X POST \
 
 Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Lago de datos AEP]** y/o **[!UICONTROL Perfil]** under **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en la variable [!DNL Data Lake] o [!DNL Real-time Customer Profile], respectivamente.
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![Se está creando una solicitud de trabajo de acceso en la interfaz de usuario, con la opción Perfil seleccionada en Productos](./images/privacy/product-value.png)
 
 ## Fragmentos de perfil en solicitudes de privacidad {#fragments}
 
@@ -137,7 +137,11 @@ When [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Pr
 >
 >Aunque una solicitud de eliminación correcta elimina los datos de atributo recopilados para un cliente (o conjunto de clientes), la solicitud no elimina las asociaciones establecidas en el gráfico de identidad.
 >
->Por ejemplo, una solicitud de eliminación que utilice el `email_id` y `customer_id` elimina todos los datos de atributos almacenados bajo esos ID. Sin embargo, cualquier dato que posteriormente se incorpore en el mismo `customer_id` seguirá estando asociado con el `email_id`, ya que la asociación sigue existiendo.
+>Por ejemplo, una solicitud de eliminación que utiliza el `email_id` y `customer_id` elimina todos los datos de atributos almacenados bajo esos ID. Sin embargo, cualquier dato que posteriormente se incorpore en el mismo `customer_id` seguirá estando asociado con el `email_id`, ya que la asociación sigue existiendo.
+>
+>Además, el Privacy Service solo puede procesar [!DNL Profile] datos que utilizan una directiva de combinación que no realiza la vinculación de identidad. Si utiliza la interfaz de usuario para confirmar si sus solicitudes de privacidad se están procesando, asegúrese de que está utilizando una directiva con &quot;[!DNL None]&quot; [!UICONTROL Vinculación de ID] tipo . En otras palabras, no puede usar una directiva de combinación donde [!UICONTROL Vinculación de ID] se configura como &quot;[!UICONTROL Gráfico privado]&quot;.
+>
+>![La vinculación de ID de la directiva de combinación se establece en Ninguno](./images/privacy/no-id-stitch.png)
 
 En futuras versiones, [!DNL Platform] enviará confirmación a [!DNL Privacy Service] después de eliminar físicamente los datos.
 
