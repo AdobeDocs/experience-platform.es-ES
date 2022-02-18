@@ -6,9 +6,9 @@ title: Monitorización de flujos de datos para destinos en la interfaz de usuari
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 18a6a693f664211428d4c153fd9849cc3ac2ee47
 workflow-type: tm+mt
-source-wordcount: '3205'
+source-wordcount: '3124'
 ht-degree: 0%
 
 ---
@@ -46,24 +46,6 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 | Error | La variable `Error` indica que se ha interrumpido el proceso de activación de un flujo de datos. |
 
 ### El flujo de datos se ejecuta en los destinos de flujo continuo {#dataflow-runs-for-streaming-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesactivated"
->title="Identidades activadas"
->abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesexcluded"
->title="Identidades excluidas"
->abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesfailed"
->title="Identidades fallidas"
->abstract="Recuento de identidades de perfil individuales que fallaron para el destino seleccionado. Consulte los diagnósticos de errores para obtener más información."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Más información en la documentación"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
@@ -129,12 +111,6 @@ La página de detalles también muestra una lista de identidades que han fallado
 ![Registros de flujo de datos para destinos de flujo continuo](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### El flujo de datos se ejecuta en destinos por lotes {#dataflow-runs-for-batch-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
->title="Perfiles recibidos"
->abstract="Número total de perfiles recibidos en el flujo de datos. Este valor se actualiza cada 60 minutos."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
