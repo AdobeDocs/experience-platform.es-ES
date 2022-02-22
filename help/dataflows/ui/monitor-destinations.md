@@ -6,9 +6,9 @@ title: Monitorización de flujos de datos para destinos en la interfaz de usuari
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 18a6a693f664211428d4c153fd9849cc3ac2ee47
+source-git-commit: 387e10038f61a7444a16f4e6270a62082446c09d
 workflow-type: tm+mt
-source-wordcount: '3124'
+source-wordcount: '3269'
 ht-degree: 0%
 
 ---
@@ -90,8 +90,10 @@ Se muestra una lista de ejecuciones individuales y sus métricas particulares, j
 
 Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 
-- **[!UICONTROL Inicio de la ejecución del flujo de datos]**: Hora a la que comenzó la ejecución del flujo de datos.
-- **[!UICONTROL Tiempo de procesamiento]**: Cantidad de tiempo que tardó el flujo de datos en procesarse.
+- **[!UICONTROL Inicio de la ejecución del flujo de datos]**: Hora a la que comenzó la ejecución del flujo de datos. Para las ejecuciones de flujo de datos de flujo continuo, el Experience Platform captura métricas basadas en el inicio de la ejecución del flujo de datos, en forma de métricas por hora. Para las ejecuciones de flujo de datos de flujo continuo, si una ejecución de flujo de datos comenzó, por ejemplo, a las 22:30, la métrica muestra la hora de inicio a las 22:00 en la interfaz de usuario.
+- **[!UICONTROL Tiempo de procesamiento]**: Cantidad de tiempo que tardó la ejecución del flujo de datos en procesarse.
+   - Para **[!UICONTROL complete]** se ejecuta, la métrica de tiempo de procesamiento siempre muestra una hora.
+   - Para ejecuciones de flujo de datos que aún están en una **[!UICONTROL procesamiento]** , la ventana para capturar todas las métricas permanece abierta durante más de una hora, para procesar todas las métricas que se correspondan con la ejecución del flujo de datos. Por ejemplo, si se ejecuta un flujo de datos que comenzó a las 9:30 a.m., es posible que permanezca en estado de procesamiento durante una hora y treinta minutos para capturar y procesar todas las métricas. A continuación, una vez que se cierre la ventana de procesamiento y el estado del flujo de datos se actualice a **complete**, el tiempo de procesamiento mostrado se cambia a una hora.
 - **[!UICONTROL Perfiles recibidos]**: Número total de perfiles recibidos en el flujo de datos.
 - **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil que se activaron correctamente en el destino seleccionado.
 - **[!UICONTROL Identidades excluidas]**: El número total de identidades de perfil que se excluyen de la activación debido a la ausencia de atributos y a la infracción de consentimiento.
