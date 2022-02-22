@@ -4,10 +4,10 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: d6b633c5c53c3deba9e27c91ec2ced78d3ca9c9e
+source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
 workflow-type: tm+mt
-source-wordcount: '735'
-ht-degree: 14%
+source-wordcount: '741'
+ht-degree: 15%
 
 ---
 
@@ -81,6 +81,7 @@ ht-degree: 14%
       - [Conector de carga de archivos locales](connectors/local-system/local-file-upload.md)
    - Automatización de marketing {#marketing-automation}
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
+      - [Conector Mailchimp](connectors/marketing-automation/mailchimp.md)
       - [Marketing Cloud de Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagos {#payments}
       - [Conector PayPal](connectors/payments/paypal.md)
@@ -232,6 +233,8 @@ ht-degree: 14%
          - [Carga de archivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Automatización de marketing {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [Campañas Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
+         - [Miembros de Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Marketing Cloud de Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagos {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
