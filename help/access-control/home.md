@@ -5,9 +5,9 @@ topic-legacy: overview
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto del Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: a3ee014656f135a0701b33f938384d3ab4316a99
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1392'
 ht-degree: 4%
 
 ---
@@ -52,7 +52,7 @@ En el [!DNL Admin Console], los permisos se asignan a los usuarios mediante el u
 | Perfil del producto | Acceso a Simulador para pruebas | Permisos |
 | --- | --- | --- |
 | Acceso predeterminado a todo en producción | Producción | Todos los permisos aplicables a [!DNL Experience Platform], excepto para permisos de administración de espacio aislado. |
-| Administradores de Simulador para pruebas | N/D | Proporciona acceso solo a permisos de administración de espacio aislado. |
+| Administradores de Simulador para pruebas | N/A | Proporciona acceso solo a permisos de administración de espacio aislado. |
 
 ## Sandboxes y permisos
 
@@ -97,6 +97,7 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 | [!DNL Profile Management] | [!UICONTROL Evaluar un segmento en una audiencia] | Capacidad para generar perfiles para una audiencia mediante la evaluación de una definición de segmento. |
 | [!DNL Identities] | [!UICONTROL Administrar áreas de nombres de identidad] | Acceso para leer, crear, editar y eliminar áreas de nombres de identidad. |
 | [!DNL Identities] | [!UICONTROL Ver espacios de nombres de identidad] | Acceso de solo lectura para áreas de nombres de identidad. |
+| [!DNL Identities] | [!UICONTROL Ver gráfico de identidad] | Acceso de solo lectura para gráficos de identidad. |
 | [!DNL Sandbox Administration] | [!UICONTROL Administrar entornos limitados] | Acceso para leer, crear, editar y eliminar entornos limitados. |
 | [!DNL Sandbox Administration] | [!UICONTROL Entornos aislados de vistas] | Acceso de solo lectura para entornos limitados pertenecientes a su organización. |
 | [!DNL Sandbox Administration] | [!UICONTROL Restablecer un Simulador para pruebas] | Posibilidad de restablecer un simulador para pruebas. |
