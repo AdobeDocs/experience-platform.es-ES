@@ -3,7 +3,7 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión Adobe Target
 description: Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 61a3a05466eca30ba08fcaf32a3f00e0ca49f325
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 1%
@@ -28,15 +28,11 @@ Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platfor
 
 ## Casos de uso {#use-cases}
 
-**Personalizing a home page banner**
+**Personalización de un banner de página principal**
 
 Una empresa de ventas y alquiler de casa quiere personalizar su página principal con un banner, según las clasificaciones de segmentos del cliente en Adobe Experience Platform. La empresa puede seleccionar qué audiencias deben obtener una experiencia personalizada y enviarlas a Adobe Target como criterios de objetivo para su oferta de Target.
 
 ## Conectarse al destino {#connect}
-
->[!IMPORTANT]
->
->Antes de crear una [!DNL Adobe Target] conexión, le recomendamos que lea nuestra guía sobre cómo [configurar destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para casos de uso de personalización de la misma página y de la siguiente página, en varios componentes de Experience Platform.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
@@ -44,9 +40,13 @@ Una empresa de ventas y alquiler de casa quiere personalizar su página principa
 >abstract="Esta opción determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Debe configurar un conjunto de datos para poder configurar el destino."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Aprenda a configurar un conjunto de datos."
 
+>[!IMPORTANT]
+>
+>Antes de crear una [!DNL Adobe Target] conexión, le recomendamos que lea nuestra guía sobre cómo [configurar destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para casos de uso de personalización de la misma página y de la siguiente página, en varios componentes de Experience Platform.
+
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-Adobe Experience Platform automatically connects to your company&#39;s Adobe Target instance. There is no authentication required.
+Adobe Experience Platform se conecta automáticamente a la instancia de Adobe Target de su empresa. No se requiere autenticación.
 
 ### Parámetros de conexión {#parameters}
 
@@ -60,7 +60,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 Lectura [Activar perfiles y segmentos en destinos de solicitud de perfil](../../ui/activate-profile-request-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
-## Exported data {#exported-data}
+## Datos exportados {#exported-data}
 
 Adobe Target lee datos de perfil de Adobe Experience Platform Edge Network, por lo que no se exportan datos.
 
