@@ -4,18 +4,15 @@ solution: Experience Platform
 title: Información general sobre el conector de origen Zoho CRM
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Zoho CRM a Adobe Experience Platform mediante API o la interfaz de usuario.
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
+source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Zoho CRM]
-
->[!NOTE]
->
->La variable [!DNL Zoho CRM] el origen está en versión beta. Consulte la [Resumen de fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+# [!DNL Zoho CRM]
 
 Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
