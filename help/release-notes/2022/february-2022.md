@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 762a4b7336f1c26b79883db9484d8f5fc7bff53c
+source-git-commit: 07dc417cbeb5ac0a59d2405986e9bb771b0735f2
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 10%
+source-wordcount: '573'
+ht-degree: 7%
 
 ---
 
@@ -14,9 +14,25 @@ ht-degree: 10%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [Recopilación de datos](#data-collection)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Fuentes](#sources)
+
+## Recopilación de datos {#data-collection}
+
+Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Flujo de trabajo de IU mejorado para la configuración del conjunto de datos | Se ha actualizado el flujo de trabajo para crear un nuevo conjunto de datos en la interfaz de usuario de la recopilación de datos. Al añadir servicios a un conjunto de datos, solo los servicios a los que tiene acceso se incluirán en la lista de opciones. Consulte la guía de [configuración de un conjunto de datos](../../edge/fundamentals/datastreams.md) para obtener más información. |
+| Preparación de datos para la recopilación de datos | Si utiliza el SDK web de Adobe Experience Platform, ahora puede aprovechar las funciones de preparación de datos para asignar los datos al Modelo de datos de experiencia (XDM) en el servidor. Consulte la sección sobre [Preparación de datos para la recopilación de datos](../../edge/fundamentals/datastreams.md#data-prep) en la guía de conjuntos de datos para obtener más información. |
+| ID de dispositivos de origen | Ahora puede enviar sus propios ID de dispositivo a la red perimetral de Adobe Experience Platform al recopilar datos de clientes mediante el SDK web de Platform, lo que proporciona una solución alternativa a las recientes restricciones del explorador en los planes de vida de cookies de terceros. Consulte la guía de [ID de dispositivos de origen](../../edge/identity/first-party-device-ids.md) para obtener más información. |
+
+Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
+
 
 ## [!DNL Data Prep] {#data-prep}
 
