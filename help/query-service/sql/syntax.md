@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 91fc4c50eb9a5ab64de3445b47465eec74a61736
+source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2360'
 ht-degree: 1%
 
 ---
@@ -217,14 +217,37 @@ INSERT INTO table_name select_query
 
 **Ejemplo**
 
+>[!NOTE]
+>
+>El siguiente es un ejemplo inventado y simplemente con fines instructivos.
+
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
->[!NOTE]
+>[!INFO]
+> 
 > La variable `SELECT` statement **no debe** se adjuntará entre paréntesis (). Además, el esquema del resultado de la variable `SELECT` debe ajustarse a la de la tabla definida en la `INSERT INTO` instrucción. Puede proporcionar un `SNAPSHOT` para leer los deltas incrementales en la tabla de destino.
+
+La mayoría de los campos de un esquema XDM real no se encuentran en el nivel raíz y SQL no permite el uso de la notación de puntos. Para obtener un resultado realista mediante campos anidados, debe asignar cada campo en la `INSERT INTO` ruta.
+
+Hasta `INSERT INTO` rutas anidadas, utilice la siguiente sintaxis:
+
+```sql
+INSERT INTO [dataset]
+SELECT struct([source field1] as [target field in schema],
+[source field2] as [target field in schema],
+[source field3] as [target field in schema]) [tenant name]
+FROM [dataset]
+```
+
+**Ejemplo**
+
+```sql
+INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCity, Country as SupplierCountry) _Adobe FROM OnlineCustomers;
+```
 
 ## TABLA DE COLOCACIÓN
 
