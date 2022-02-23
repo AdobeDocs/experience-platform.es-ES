@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Descripción general del conector Mailchimp
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Mailchimp a Adobe Experience Platform mediante API o la interfaz de usuario.
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
 # [!DNL Mailchimp] connector
-
 
 Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
@@ -27,9 +27,15 @@ La siguiente documentación proporciona información sobre cómo conectar [!DNL 
 ## Connect [!DNL Mailchimp Campaigns] a Platform
 
 * [Crear una conexión de origen para traer [!DNL Mailchimp Campaigns] datos a Platform mediante API](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-* [Crear una conexión de origen para traer [!DNL Mailchimp Campaigns] datos a Platform mediante la interfaz de usuario](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+
+<!--
+* [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+-->
 
 ## Connect [!DNL Mailchimp Members] a Platform
 
 * [Crear una conexión de origen para traer [!DNL Mailchimp Members] datos a Platform mediante API](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-* [Crear una conexión de origen para traer [!DNL Mailchimp Members] datos a Platform mediante la interfaz de usuario](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+
+<!--
+* [Create a source connection to bring [!DNL Mailchimp Members] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+-->

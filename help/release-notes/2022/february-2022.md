@@ -1,7 +1,8 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
+source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 7%
@@ -37,7 +38,7 @@ Para obtener más información sobre la recopilación de datos en Platform, cons
 
 [!DNL Data Prep] permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
 
-**Funciones actualizadas**
+**Nueva función**
 
 | Función | Descripción |
 | --- | --- |

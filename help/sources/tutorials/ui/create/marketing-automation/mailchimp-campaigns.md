@@ -4,15 +4,17 @@ solution: Experience Platform
 title: Creación de una conexión de origen de MailChimp Campaigns utilizando la interfaz de usuario de Platform
 topic-legacy: tutorial
 description: Aprenda a conectar Adobe Experience Platform a campañas de MailChimp mediante la interfaz de usuario de Platform.
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+hide: true
+hidefromtoc: true
+exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
 
 ---
 
-
-# Cree un [!DNL MailChimp Campaigns] conexión de origen mediante la interfaz de usuario de Platform
+# Cree un [!DNL Mailchimp Campaigns] conexión de origen mediante la interfaz de usuario de Platform
 
 Este tutorial proporciona los pasos para crear un [!DNL Mailchimp] conector de origen a ingesta [!DNL Mailchimp Campaigns] datos a Adobe Experience Platform mediante la interfaz de usuario.
 
@@ -98,4 +100,3 @@ La página se actualiza en un árbol de esquema interactivo que le permite explo
 ## Pasos siguientes
 
 Con [!DNL Mailchimp] cuenta autenticada y su [!DNL Mailchimp Campaigns] datos seleccionados, ahora puede empezar a crear un flujo de datos para llevar los datos a Platform. Para ver los pasos detallados sobre cómo crear un flujo de datos, consulte la documentación de [creación de un flujo de datos para traer datos de automatización de marketing a Platform](../../dataflow/marketing-automation.md).
-
