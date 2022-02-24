@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
+source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '745'
 ht-degree: 15%
 
 ---
@@ -181,6 +181,7 @@ ht-degree: 15%
          - [Adobe Analytics (datos de grupos de informes)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (datos de clasificaciones)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicidad {#create}
