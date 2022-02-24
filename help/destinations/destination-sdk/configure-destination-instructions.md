@@ -1,10 +1,10 @@
 ---
-description: En esta página se enumeran y describen los pasos para configurar un destino de flujo continuo mediante Destination SDK.
+description: En esta página se enumeran y describen los pasos para configurar un destino de flujo continuo mediante el Destination SDK .
 title: Usar Destination SDK para configurar un destino de flujo continuo
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,9 @@ ht-degree: 0%
 
 Esta página describe cómo utilizar la información de [Opciones de configuración en el SDK de Destinations](./configuration-options.md) y en otros documentos de referencia de API y funcionalidad de Destination SDK para configurar un [destino de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). Los pasos se muestran en orden secuencial a continuación.
 
->[!NOTE]
->
->Actualmente no se puede configurar un destino de lote mediante Destination SDK.
-
 ## Requisitos previos {#prerequisites}
 
-Antes de avanzar a los pasos que se ilustran a continuación, lea la [Introducción a Destination SDK](./getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
+Antes de avanzar a los pasos que se ilustran a continuación, lea la [introducción al Destination SDK](./getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
 
 ## Pasos para utilizar las opciones de configuración en Destination SDK para configurar el destino {#steps}
 
@@ -29,7 +25,7 @@ Antes de avanzar a los pasos que se ilustran a continuación, lea la [Introducci
 
 ## Paso 1: Creación de un servidor y una configuración de plantilla {#create-server-template-configuration}
 
-Comience creando un servidor y una configuración de plantilla utilizando el `/destinations-server` punto final (leer [Referencia de API](./destination-server-api.md)). Para obtener más información sobre el servidor y la configuración de plantillas, consulte [Especificaciones de servidor y plantilla](./configuration-options.md#server-and-template) en la sección de referencia.
+Comience creando un servidor y una configuración de plantilla utilizando el `/destinations-server` punto final (leer [Referencia de API](destination-server-api.md)). Para obtener más información sobre el servidor y la configuración de plantillas, consulte [Especificaciones de servidor y plantilla](server-and-template-configuration.md) en la sección de referencia.
 
 A continuación se muestra un ejemplo de configuración. Tenga en cuenta que la plantilla de transformación de mensajes de la sección `requestBody.value` se aborda en el paso 3, [Crear plantilla de transformación](./configure-destination-instructions.md#create-transformation-template).
 
@@ -58,7 +54,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Paso 2: Crear configuración de destino {#create-destination-configuration}
 
-A continuación se muestra un ejemplo de configuración para una plantilla de destino creada mediante el uso de la variable `/destinations` extremo de API. Para obtener más información sobre esta plantilla, consulte [Configuración de destino](./destination-configuration.md).
+A continuación se muestra un ejemplo de configuración para una plantilla de destino creada mediante el uso de la variable `/destinations` extremo de API. Para obtener más información sobre esta configuración, consulte [Configuración de destino](./destination-configuration.md).
 
 Para conectar el servidor y la configuración de plantilla en el paso 1 a esta configuración de destino, añada el ID de instancia del servidor y la configuración de plantilla como `destinationServerId` aquí.
 
@@ -156,11 +152,11 @@ Una vez que haya creado una plantilla de transformación de mensaje que funcione
 
 ## Paso 4: Crear configuración de metadatos de audiencia {#create-audience-metadata-configuration}
 
-Para algunos destinos, Destination SDK requiere que configure una configuración de metadatos de audiencia para crear, actualizar o eliminar audiencias mediante programación en el destino. Consulte [Gestión de metadatos de audiencia](./audience-metadata-management.md) para obtener información sobre cuándo debe configurar esta configuración y cómo hacerlo.
+Para algunos destinos, Destination SDK requiere que configure una configuración de metadatos de audiencia para crear, actualizar o eliminar audiencias de forma programada en el destino. Consulte [Gestión de metadatos de audiencia](./audience-metadata-management.md) para obtener información sobre cuándo debe configurar esta configuración y cómo hacerlo.
 
 Si utiliza una configuración de metadatos de audiencia, debe conectarla a la configuración de destino que creó en el paso 2. Añada el ID de instancia de la configuración de metadatos de audiencia a la configuración de destino como `audienceTemplateId`.
 
-## Paso 5: Crear configuración de credenciales / Configurar autenticación {#set-up-authentication}
+## Paso 5: Configuración de la autenticación {#set-up-authentication}
 
 Dependiendo de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` en la configuración de destino anterior, puede configurar la autenticación para el destino utilizando la variable `/destination` o `/credentials` punto final.
 

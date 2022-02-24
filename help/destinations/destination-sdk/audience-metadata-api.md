@@ -2,7 +2,7 @@
 description: En esta página se describen todas las operaciones de API que se pueden realizar con el extremo de la API `/authoring/audience-templates`.
 title: Operaciones de API de extremo de metadatos de audiencia
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 5%
@@ -26,7 +26,6 @@ Antes de continuar, revise la [guía de introducción](./getting-started.md) par
 Puede crear una nueva plantilla de audiencia realizando una solicitud de POST al `/authoring/audience-templates` punto final.
 
 **Formato de API**
-
 
 ```http
 POST /authoring/audience-templates
@@ -146,6 +145,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -183,7 +207,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la plantilla 
 Puede actualizar una plantilla de audiencia existente realizando una solicitud de PUT al `/authoring/audience-templates` y proporcionando el ID de instancia de la plantilla de audiencia que desea actualizar. En el cuerpo de la llamada a , proporcione la plantilla actualizada.
 
 **Formato de API**
-
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -292,7 +315,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
    }
 }
 ```
-
 
 ## Recuperar una lista de plantillas de audiencia {#retrieve-list}
 
@@ -430,7 +452,6 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de plantillas d
 Puede recuperar información detallada sobre una plantilla de audiencia específica realizando una solicitud de GET al `/authoring/audience-templates` y proporcionando el ID de instancia de la plantilla de audiencia que desea recuperar.
 
 **Formato de API**
-
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}

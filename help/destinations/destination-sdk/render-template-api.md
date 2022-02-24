@@ -2,7 +2,7 @@
 description: En esta página se enumeran y describen todas las operaciones de API que puede realizar con el extremo API `/authoring/testing/template/render` para procesar datos exportados para su destino, en función de la plantilla de transformación de mensajes.
 title: Operaciones de API de plantilla de procesamiento
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: b337d65bcdfbb65da1b751645ddc649d30440dc7
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 1%
@@ -30,7 +30,6 @@ Puede empezar utilizando una plantilla sencilla que exporta sus perfiles sin pro
 >[!TIP]
 >
 >* El ID de destino que debe usar aquí es el `instanceId` que corresponde a una configuración de destino, creada con el `/destinations` punto final. Consulte la [operaciones de API de configuración de destino](./destination-configuration-api.md#retrieve-list).
-
 
 
 **Formato de API**

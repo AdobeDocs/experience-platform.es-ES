@@ -1,11 +1,11 @@
 ---
-description: En esta página se describe cómo autenticarse y empezar a usar Adobe Experience Platform Destination SDK. Incluye instrucciones sobre cómo obtener las credenciales de autenticación de Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino.
+description: En esta página se describe cómo autenticarse y empezar a utilizar Adobe Experience Platform Destination SDK. Incluye instrucciones sobre cómo obtener las credenciales de autenticación de Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino.
 title: Introducción a Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: d5ce6c8ccdd29b9bcf90a1c2d08085f3be4cf33f
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 3%
+source-wordcount: '613'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 ## Información general {#overview}
 
-En esta página se describe cómo autenticarse y empezar a usar Adobe Experience Platform Destination SDK. Incluye instrucciones sobre cómo obtener las credenciales de autenticación de Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino.
+En esta página se describe cómo autenticarse y empezar a utilizar Adobe Experience Platform Destination SDK. Incluye instrucciones sobre cómo obtener las credenciales de autenticación de Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino.
 
 ## Terminología {#terminology}
 
@@ -21,7 +21,7 @@ Esta guía utiliza conceptos específicos de la plataforma, como organización d
 
 ## Obtenga las credenciales de autenticación necesarias {#obtain-authentication-credentials}
 
-Destination SDK utiliza la variable [Adobe I/O](https://www.adobe.io/) puerta de enlace para la autenticación. Para realizar llamadas de API a extremos de Destination SDK, debe proporcionar ciertos encabezados en las llamadas de API. Trabaje con el equipo de Adobe Exchange para configurar la autenticación para usted en el [Adobe Developer Console](https://developer.adobe.com/console).
+El Destination SDK utiliza la variable [Adobe I/O](https://www.adobe.io/) puerta de enlace para la autenticación. Para realizar llamadas de API a extremos de Destination SDK, debe proporcionar ciertos encabezados en las llamadas de API. Trabaje con el equipo de Adobe Exchange para configurar la autenticación para usted en el [Adobe Developer Console](https://developer.adobe.com/console).
 
 Para realizar llamadas correctamente a puntos finales de API de Destination SDK, siga la [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Inicie el tutorial desde el &quot;[Generar una clave de API, el ID de organización de IMS y el secreto del cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. El equipo de Adobe Exchange se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en las llamadas a la API de Destination SDK, como se muestra a continuación:
 
@@ -48,15 +48,15 @@ You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-i
 
 ## Propiedad de destino y entornos limitados {#destination-ownership}
 
-Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Las solicitudes para Destination SDK requieren encabezados que especifiquen el nombre del simulador para pruebas en el que se realiza la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Las solicitudes al Destination SDK requieren encabezados que especifiquen el nombre del simulador para pruebas en el que se realiza la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-El equipo de Adobe Exchange le proporciona su nombre de simulador de pruebas, que debe utilizar en llamadas a puntos finales de API de Destination SDK.
+El equipo de Adobe Exchange le proporciona su nombre de simulador de pruebas, que debe usar en las llamadas a los extremos de la API del Destination SDK.
 
 ## Control de acceso basado en roles (RBAC) {#rbac}
 
-Para utilizar los extremos de la API de Destination SDK descritos en la sección [documentación de referencia](./configuration-options.md), necesita el **[!UICONTROL Creación de destinos]** permiso de control de acceso. Trabaje con el equipo de Adobe Exchange para obtener este permiso asignado en [Adobe Admin Console](https://adminconsole.adobe.com/).
+Para utilizar los extremos de API del Destination SDK descritos en la sección [documentación de referencia](./configuration-options.md), necesita el **[!UICONTROL Creación de destinos]** permiso de control de acceso. Trabaje con el equipo de Adobe Exchange para obtener este permiso asignado en [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Permiso de creación de destino](./assets/destination-authoring-permission.png)
 
@@ -73,7 +73,12 @@ Para obtener más información, lea los siguientes documentos de Control de acce
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir los pasos de este artículo, obtuvo las credenciales de autenticación en Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino. A continuación, puede configurar un destino con Destination SDK.
-* Lectura [Usar Destination SDK para configurar el destino](./configure-destination-instructions.md) para los pasos siguientes.
+Al seguir los pasos de este artículo, obtuvo las credenciales de autenticación en Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino. A continuación, puede configurar un destino mediante Destination SDK.
+
+* Lea las siguientes guías de configuración, según el tipo de destino:
+
+   * [Usar Destination SDK para configurar un destino de flujo continuo](./configure-destination-instructions.md)
+   * [(Beta) Usar el Destination SDK para configurar un destino basado en archivos](./configure-file-based-destination-instructions.md)
+
 * Para todas las operaciones, consulte la [Documentación de la API de creación de destino](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Utilice la variable [API de creación de destino colección Postman](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) para configurar el destino mediante los extremos de la API de Destination SDK. Para empezar a usar Postman, consulte la [pasos para importar entornos y colecciones](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) y [guía de vídeo para crear el entorno Postman](https://video.tv.adobe.com/v/28832).

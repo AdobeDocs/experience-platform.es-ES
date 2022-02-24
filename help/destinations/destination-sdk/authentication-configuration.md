@@ -1,10 +1,10 @@
 ---
-description: Utilice las configuraciones de autenticación admitidas en el SDK de destino de Adobe Experience Platform para autenticar usuarios y activar datos en el punto final de destino.
+description: Utilice las configuraciones de autenticación admitidas en Adobe Experience Platform Destination SDK para autenticar usuarios y activar datos en el punto final de destino.
 title: Configuración de autenticación
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: e6d922800c17312df8529061c56d8a2deac46662
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
@@ -13,18 +13,32 @@ ht-degree: 0%
 
 ## Tipos de autenticación compatibles {#supported-authentication-types}
 
-El SDK de destino de Adobe Experience Platform admite varios tipos de autenticación:
+La configuración de autenticación que seleccione determina cómo se autentica el Experience Platform en el destino, en la interfaz de usuario de Platform.
+
+Adobe Experience Platform Destination SDK admite varios tipos de autenticación:
 
 * Autenticación del portador
+* (Beta) Autenticación de Amazon S3
+* (Beta) Cadena de conexión de Azure
+* (Beta) Principal del servicio de Azure
+* (Beta) SFTP con clave SSH
+* (Beta) SFTP con contraseña
 * OAuth 2 con código de autorización
 * OUAth 2 con concesión de contraseña
 * OAuth 2 con concesión de credenciales de cliente
 
-Puede configurar la información de autenticación de su destino mediante el `customerAuthenticationConfigurations` parámetros de la variable `/destinations` punto final. Consulte la [sección configuraciones de autenticación de cliente](./destination-configuration.md#customer-authentication-configurations) en el artículo de configuración de destino y en las secciones siguientes para obtener información específica sobre las configuraciones de cada tipo de autenticación.
+Puede configurar la información de autenticación de su destino mediante el `customerAuthenticationConfigurations` parámetros de la variable `/destinations` punto final.
+
+Consulte las secciones siguientes para obtener detalles de configuración de autenticación para cada tipo de destino:
+
+* [Configuraciones de autenticación para destinos de flujo continuo](destination-configuration.md#customer-authentication-configurations)
+* [Configuraciones de autenticación para destinos basados en archivos](file-based-destination-configuration.md#customer-authentication-configurations)
 
 ## Autenticación del portador {#bearer}
 
-Para configurar la autenticación de tipo al portador para sus destinos, solo necesita configurar la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
+La autenticación del portador es compatible con los destinos de flujo continuo en el Experience Platform.
+
+Para configurar la autenticación de tipo al portador para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
 
 ```json
    "customerAuthenticationConfigurations":[
@@ -34,9 +48,101 @@ Para configurar la autenticación de tipo al portador para sus destinos, solo ne
    ]
 ```
 
-## Autenticación OAuth 2 {#oauth2}
+## (Beta) [!DNL Amazon S3] autenticación {#s3}
 
-Para obtener información sobre cómo configurar los distintos flujos de OAuth 2 admitidos, así como para la compatibilidad con OAuth 2 personalizado, consulte la documentación del SDK de destino en [Autenticación OAuth 2](./oauth2-authentication.md).
+[!DNL Amazon S3] la autenticación es compatible con destinos basados en archivos en Experience Platform.
+
+>[!IMPORTANT]
+>
+>La compatibilidad con destinos basados en archivos en Adobe Experience Platform Destination SDK actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
+
+Para configurar la autenticación de Amazon S3 para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
+
+```json
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"S3"
+      }
+   ]
+```
+
+## (Beta) [!DNL Azure Blob Storage] {#blob}
+
+[!DNL Azure Blob Storage] la autenticación es compatible con destinos basados en archivos en Experience Platform.
+
+>[!IMPORTANT]
+>
+>La compatibilidad con destinos basados en archivos en Adobe Experience Platform Destination SDK actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
+
+Para configurar [!DNL Azure Blob] autenticación para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
+
+```json
+   "customerAuthenticationConfigurations":[
+     {
+        "authType":"AZURE_CONNECTION_STRING"
+     }
+  ]
+```
+
+## (Beta) [!DNL Azure Data Lake Storage] {#adls}
+
+[!DNL Azure Data Lake Storage] la autenticación es compatible con destinos basados en archivos en Experience Platform.
+
+>[!IMPORTANT]
+>
+>La compatibilidad con destinos basados en archivos en Adobe Experience Platform Destination SDK actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
+
+Para configurar [!DNL Azure Data Lake Storage] (ADLS) autenticación para su destino, configure el `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
+
+```json
+   "customerAuthenticationConfigurations":[
+     {
+        "authType":"AZURE_SERVICE_PRINCIPAL"
+     }
+  ]
+```
+
+## (Beta) [!DNL SFTP] autenticación con [!DNL SSH] key {#sftp-ssh}
+
+[!DNL SFTP] autenticación con [!DNL SSH] se admite para destinos basados en archivos en Experience Platform.
+
+>[!IMPORTANT]
+>
+>La compatibilidad con destinos basados en archivos en Adobe Experience Platform Destination SDK actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
+
+Para configurar la autenticación SFTP con la clave SSH para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
+
+```json
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"SFTP_WITH_SSH_KEY"
+      }
+   ]
+```
+
+## (Beta) [!DNL SFTP] autenticación con contraseña {#sftp-password}
+
+[!DNL SFTP] la autenticación con contraseña es compatible con destinos basados en archivos en Experience Platform.
+
+>[!IMPORTANT]
+>
+>La compatibilidad con destinos basados en archivos en Adobe Experience Platform Destination SDK actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
+
+Para configurar la autenticación SFTP con contraseña para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
+
+```json
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"SFTP_WITH_PASSWORD"
+      }
+   ]
+```
+
+## [!DNL OAuth 2] autenticación {#oauth2}
+
+[!DNL OAuth 2] la autenticación es compatible con los destinos de flujo continuo en Experience Platform.
+
+Para obtener información sobre cómo configurar los distintos flujos de OAuth 2 compatibles, así como para la compatibilidad con OAuth 2 personalizada, lea la documentación del Destination SDK en [Autenticación OAuth 2](./oauth2-authentication.md).
 
 
 ## Cuándo usar la variable `/credentials` Punto de conexión de API {#when-to-use}

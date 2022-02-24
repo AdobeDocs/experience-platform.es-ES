@@ -1,8 +1,8 @@
 ---
-description: Esta página proporciona toda la información que debe enviar para su revisión a un destino creado con Destination SDK.
+description: Esta página proporciona toda la información que debe enviar para su revisión a un destino creado mediante Destination SDK.
 title: Enviar para revisión un destino creado en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Antes de que el destino se pueda publicar en la variable [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md), debe proporcionar al Adobe cierta información sobre el destino y las pruebas que ha realizado para garantizar que los usuarios disfruten de la mejor experiencia posible al activar datos en su plataforma.
 
-Esta página enumera toda la información que debe proporcionar al enviar o actualizar un destino creado mediante Adobe Experience Platform Destination SDK. Para enviar correctamente un destino en Adobe Experience Platform, envíe un correo electrónico a <aepdestsdk@adobe.com> que incluye:
+Esta página enumera toda la información que debe proporcionar al enviar o actualizar un destino que creó con Adobe Experience Platform Destination SDK. Para enviar correctamente un destino en Adobe Experience Platform, envíe un correo electrónico a <aepdestsdk@adobe.com> que incluye:
 
 * Descripción de los casos de uso que resuelve su destino. Esto no es necesario si está actualizando una configuración de destino existente.
 * Pruebe los resultados después de usar el extremo de la API de destino de prueba para realizar una llamada HTTP al destino. Comparta con el Adobe:
@@ -37,6 +37,7 @@ Proporcione una descripción de los casos de uso que resuelva su destino para lo
 ## Resultados de la prueba después de usar la API de destino de la prueba
 
 Proporcione los resultados de la prueba después de usar la variable [API de destino de prueba](./test-destination.md) para realizar una llamada HTTP a su destino. Esto incluye:
+
 * La solicitud de API completa (encabezados y cuerpo) realizada al extremo de destino mediante la API de prueba.
 * La respuesta de API recibida del extremo de destino.
 
