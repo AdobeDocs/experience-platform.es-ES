@@ -1,10 +1,11 @@
 ---
 title: Información general sobre la extensión Adobe Analytics
 description: Obtenga información acerca de la extensión de etiqueta de Adobe Analytics en Adobe Experience Platform.
-source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
+exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
+source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 98%
+source-wordcount: '2275'
+ht-degree: 95%
 
 ---
 
@@ -327,13 +328,22 @@ Especifique cada nivel en la jerarquía.
 
 Si lo desea, configure jerarquías adicionales.
 
+#### Nombre de la página
+
+Este valor hace referencia al nombre de una página determinada y corresponde a la variable [`pageName` variable](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) en Analytics.
+
+>[!IMPORTANT]
+>
+>En las implementaciones de Adobe Experience Manager, esta variable indica AEM dónde almacenar el informe de Analytics recuperado. Para garantizar que los informes se mantengan correctamente, la cadena del nombre de la página debe tener el formato de una ruta al sitio separada por dos puntos.
+>
+>Por ejemplo, una página web en `content/we-retail/language-masters/en/men.html` debe tener el valor de nombre de página de `content:we-retail:language-masters:en:men`.
+
 #### Otra información
 
 Especifique otra información utilizada por sus páginas.
 
 Esta configuración incluye:
 
-* Nombre de página
 * URL de página
 * Servidor
 * Canal
