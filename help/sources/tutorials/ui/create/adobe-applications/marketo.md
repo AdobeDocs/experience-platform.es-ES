@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial proporciona pasos para crear un conector de origen de Marketo Engage en la interfaz de usuario para introducir datos B2B en Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: cffa2edf5746f0412bf8366c32ea777ca1974334
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1369'
 ht-degree: 0%
 
 ---
@@ -52,19 +52,19 @@ En el [!UICONTROL aplicaciones de Adobe] categoría, seleccione **[!UICONTROL Ma
 
 ![catálogo](../../../../images/tutorials/create/marketo/catalog.png)
 
-La variable **[!UICONTROL Conectarse al Marketo Engage]** se abre. En esta página puede usar una cuenta nueva o acceder a una existente.
-
-### Nueva cuenta
-
-Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, indique un nombre de cuenta, una descripción opcional y su [!DNL Marketo] credenciales de autenticación. Cuando termine, seleccione **[!UICONTROL Conectar a origen]** y, a continuación, permita que la nueva conexión se establezca durante algún tiempo.
-
-![new-account](../../../../images/tutorials/create/marketo/new.png)
+La variable **[!UICONTROL Conectar cuenta de Marketo Engage]** se abre. En esta página puede usar una cuenta nueva o acceder a una existente.
 
 ### Cuenta existente
 
 Para crear un flujo de datos con una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y, a continuación, seleccione [!DNL Marketo] cuenta que desee utilizar. Select **[!UICONTROL Siguiente]** para continuar.
 
 ![existente](../../../../images/tutorials/create/marketo/existing.png)
+
+### Nueva cuenta
+
+Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, indique un nombre de cuenta, una descripción opcional y su [!DNL Marketo] credenciales de autenticación. Cuando termine, seleccione **[!UICONTROL Conectar a origen]** y, a continuación, permita que la nueva conexión se establezca durante algún tiempo.
+
+![new](../../../../images/tutorials/create/marketo/new.png)
 
 ## Seleccionar un conjunto de datos
 
@@ -74,41 +74,53 @@ La mitad izquierda de la interfaz es un navegador de directorios, que muestra lo
 
 >[!NOTE]
 >
->A efectos de abreviación, el siguiente tutorial utiliza [!UICONTROL Cuentas con nombre] como ejemplo, pero los pasos descritos a continuación se aplican a cualquiera de los 10 [!DNL Marketo] conjuntos de datos.
+>A efectos de abreviación, el siguiente tutorial utiliza [!UICONTROL Oportunidades] como ejemplo, pero los pasos descritos a continuación se aplican a cualquiera de los 10 [!DNL Marketo] conjuntos de datos.
 
 Seleccione el conjunto de datos que desee ingerir primero y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Mapa [!DNL Marketo] esquemas para Platform
+## Proporcionar detalles de flujo de datos
 
-La variable [!UICONTROL Asignación] aparece un paso que proporciona una interfaz para asignar [!DNL Marketo] esquemas para Platform.
+La variable [!UICONTROL Detalles de flujo de datos] le permite seleccionar si desea utilizar un conjunto de datos existente o un nuevo conjunto de datos. Durante este proceso, también puede configurar las opciones de [!UICONTROL Conjunto de datos del perfil], [!UICONTROL Diagnóstico de errores], [!UICONTROL Ingesta parcial]y [!UICONTROL Alertas].
 
-Elija un conjunto de datos para los datos entrantes en los que se van a introducir. Puede usar un conjunto de datos existente o crear un conjunto de datos nuevo.
+![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
 ### Usar un conjunto de datos existente
 
-Para introducir datos en un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]** y, a continuación, seleccione el icono del conjunto de datos.
+Para introducir datos en un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]**. Puede recuperar un conjunto de datos existente mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable. Una vez que haya seleccionado un conjunto de datos, proporcione un nombre y una descripción para el flujo de datos.
 
 ![conjunto de datos existente](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-La variable **[!UICONTROL Seleccionar conjunto de datos]** se abre. Busque el conjunto de datos con el esquema adecuado que desee utilizar, selecciónelo y, a continuación, seleccione **[!UICONTROL Confirmar]**.
-
-![select-existing-dataset](../../../../images/tutorials/create/marketo/select-dataset.png)
-
 ### Usar un nuevo conjunto de datos
 
-Para introducir datos en un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** e introduzca un nombre y una descripción para el conjunto de datos en los campos proporcionados.
+Para introducir en un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** y, a continuación, proporcione un nombre de conjunto de datos de salida y una descripción opcional. A continuación, seleccione un esquema para asignarlo mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de esquemas existentes en el menú desplegable. Una vez que haya seleccionado un esquema, proporcione un nombre y una descripción para el flujo de datos.
 
-Puede buscar un esquema introduciendo su nombre en la variable **[!UICONTROL Seleccionar esquema]** barra de búsqueda. También puede seleccionar el icono desplegable para ver una lista de los esquemas existentes. También puede seleccionar **[!UICONTROL Búsqueda avanzada]** para acceder a la página de los esquemas existentes, incluidos sus respectivos detalles.
+![conjunto de datos nuevo](../../../../images/tutorials/create/marketo/new-dataset.png)
 
-Alternar el **[!UICONTROL Conjunto de datos del perfil]** para habilitar el conjunto de datos de target [!DNL Profile], lo que le permite crear una vista holística de los atributos y comportamientos de una entidad. Datos de todos [!DNL Profile]Los conjuntos de datos habilitados para se incluirán en [!DNL Profile] Los cambios y se aplican cuando guarda el flujo de datos.
+### Habilitar [!DNL Profile] y diagnóstico de errores
 
-![create-new-dataset](../../../../images/tutorials/create/marketo/new-dataset-schema.png)
+A continuación, seleccione la **[!UICONTROL Conjunto de datos del perfil]** alternar para habilitar su conjunto de datos para [!DNL Profile]. Esto le permite crear una vista holística de los atributos y comportamientos de una entidad. Datos de todos [!DNL Profile]Los conjuntos de datos habilitados para se incluirán en [!DNL Profile] Los cambios y se aplican cuando guarda el flujo de datos.
 
-Una vez que haya seleccionado un esquema, desplácese hacia abajo para ver el cuadro de diálogo de asignación para empezar a asignar su [!DNL Marketo] los campos del conjunto de datos a los campos XDM de destino correspondientes.
+[!UICONTROL Diagnóstico de errores] permite generar mensajes de error detallados para cualquier registro erróneo que se produzca en el flujo de datos, mientras que [!UICONTROL Ingesta parcial] le permite introducir datos que contengan errores, hasta un umbral determinado que defina manualmente. Consulte la [información general sobre la ingesta parcial de lotes](../../../../../ingestion/batch-ingestion/partial.md) para obtener más información.
 
-### Asigne un [!DNL Marketo] campos de origen del conjunto de datos para dirigirse a campos XDM
+>[!IMPORTANT]
+>
+>La variable [!DNL Marketo] El conector utiliza la ingesta por lotes para introducir todos los registros históricos y utiliza la ingesta de flujo continuo para las actualizaciones en tiempo real. Esto permite que el conector continúe transmitiendo durante la ingesta de registros erróneos. Active la variable **[!UICONTROL Ingesta parcial]** alterne y establezca la variable [!UICONTROL Umbral de error %] para evitar que falle el flujo de datos.
+
+![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+
+### Habilitar alertas
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de fuentes mediante la interfaz de usuario](../../alerts.md).
+
+Cuando haya terminado de proporcionar detalles al flujo de datos, seleccione **[!UICONTROL Siguiente]**.
+
+![alertas](../../../../images/tutorials/create/marketo/alerts.png)
+
+## Asigne un [!DNL Marketo] campos de origen del conjunto de datos para dirigirse a campos XDM
+
+La variable [!UICONTROL Asignación] aparece, proporcionando una interfaz para asignar los campos de origen del esquema de origen a los campos XDM de destino adecuados en el esquema de destino.
 
 Cada [!DNL Marketo] el conjunto de datos tiene que seguir sus propias reglas de asignación específicas. Consulte lo siguiente para obtener más información sobre cómo asignar [!DNL Marketo] conjuntos de datos para XDM:
 
@@ -123,33 +135,11 @@ Cada [!DNL Marketo] el conjunto de datos tiene que seguir sus propias reglas de 
 * [Funciones de contacto de oportunidad](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-contact-roles)
 * [Personas](../../../../connectors/adobe-applications/mapping/marketo.md#persons)
 
-Select **[!UICONTROL Vista previa de datos]** para ver los resultados de asignación en función del conjunto de datos seleccionado.
+En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para ver los pasos completos sobre el uso de la interfaz de asignación, consulte la [Guía de la interfaz de usuario de preparación de datos](../../../../../data-prep/ui/mapping.md).
 
 ![asignación](../../../../images/tutorials/create/marketo/mapping.png)
 
-La variable [!UICONTROL Vista previa] popover proporciona una interfaz para explorar los resultados de asignación de hasta 100 filas de datos de ejemplo del conjunto de datos seleccionado.
-
-![vista previa](../../../../images/tutorials/create/marketo/mapping-preview.png)
-
-Una vez que los campos de origen estén asignados a los campos de destino adecuados, seleccione **[!UICONTROL Cerrar]**.
-
-## Proporcionar detalles de flujo de datos
-
-La variable [!UICONTROL Detalles de flujo de datos] , lo que le permite proporcionar un nombre y una breve descripción del nuevo flujo de datos.
-
-![dataflow-detail](../../../../images/tutorials/create/marketo/dataflow-detail.png)
-
-Active la variable **[!UICONTROL Diagnóstico de errores]** para permitir la generación detallada de mensajes de error para lotes recién ingestados, que puede descargar mediante la API. Para obtener más información, consulte el tutorial sobre [recuperación de diagnóstico de error de ingesta de datos](../../../../../ingestion/quality/error-diagnostics.md).
-
-![errors](../../../../images/tutorials/create/marketo/errors.png)
-
-La variable [!DNL Marketo] El conector utiliza la ingesta por lotes para introducir todos los registros históricos y utiliza la ingesta de flujo continuo para las actualizaciones en tiempo real. Esto permite que el conector continúe transmitiendo durante la ingesta de registros erróneos. Active la variable **[!UICONTROL Ingesta parcial]** alterne y establezca la variable [!UICONTROL Umbral de error %] para evitar que falle el flujo de datos.
-
-**[!UICONTROL Ingesta parcial]** permite introducir datos que contengan errores hasta un umbral determinado. Para obtener más información, consulte la [información general sobre la ingesta parcial de lotes](../../../../../ingestion/batch-ingestion/partial.md).
-
-Una vez que haya proporcionado los detalles del flujo de datos y haya establecido el umbral de error en max, seleccione **[!UICONTROL Siguiente]**.
-
-![ingesta parcial](../../../../images/tutorials/create/marketo/partial-ingestion.png)
+Una vez que los conjuntos de asignaciones estén listos, seleccione **[!UICONTROL Siguiente]** y permitir que se cree un nuevo flujo de datos durante unos momentos.
 
 ## Revise el flujo de datos
 
@@ -158,7 +148,7 @@ La variable **[!UICONTROL Consulte]** , lo que le permite revisar el nuevo flujo
 * **[!UICONTROL Conexión]**: Muestra el tipo de origen, la ruta de acceso relevante de la entidad de origen elegida y la cantidad de columnas dentro de esa entidad de origen.
 * **[!UICONTROL Asignación de campos de conjunto de datos y asignación]**: Muestra en qué conjunto de datos se están incorporando los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
 
-Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]** y permitir que se cree un flujo de datos.
+Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Guardar e incorporar]** y permitir que se cree un flujo de datos.
 
 ![review](../../../../images/tutorials/create/marketo/review.png)
 
