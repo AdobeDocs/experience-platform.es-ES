@@ -1,18 +1,18 @@
 ---
-title: Envío de datos a Adobe Analytics mediante el SDK web de Adobe Experience Platform
+title: Uso de Adobe Analytics con el SDK web de Platform
 description: Obtenga información sobre cómo enviar datos a Adobe Analytics con el SDK web de Adobe Experience Platform.
 keywords: adobe analytics;analytics;datos asignados;vars asignados;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '189'
 ht-degree: 7%
 
 ---
 
-# Envío de datos a Adobe Analytics
+# Uso de Adobe Analytics con el SDK web de Platform
 
-Adobe Experience Platform [!DNL Web SDK] puede enviar datos a Adobe Analytics. Esto funciona traduciendo `xdm` a un formato que Adobe Analytics puede utilizar.
+Adobe Experience Platform [!DNL Web SDK] puede enviar datos a Adobe Analytics. Esto funciona traduciendo `xdm` en un formato que Adobe Analytics pueda utilizar.
 
 ## Configuración
 
@@ -20,7 +20,7 @@ Adobe Analytics recopila automáticamente los datos que envía si tiene un grupo
 
 ## Datos asignados automáticamente
 
-Adobe Experience Platform [!DNL Edge Network] asigna automáticamente muchas variables XDM. La lista completa de estas variables se enumera [aquí](automatically-mapped-vars.md).
+Adobe Experience Platform [!DNL Edge Network] asigna automáticamente muchas variables XDM. Se muestra la lista completa de estas variables [here](automatically-mapped-vars.md).
 
 ## Datos asignados manualmente
 
