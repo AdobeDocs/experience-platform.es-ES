@@ -1,23 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Google PubSub;google pubsub
 solution: Experience Platform
-title: Crear una conexión de Google PubSub Source mediante la API de servicio de flujo
+title: Create a Google PubSub Source Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Google PubSub mediante la API de servicio de flujo.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '724'
 ht-degree: 2%
 
 ---
 
-# Cree un [!DNL Google PubSub] Conexión de origen mediante la API de servicio de flujo
-
->[!NOTE]
->
->La variable [!DNL Google PubSub] El conector está en versión beta. Consulte la [Resumen de fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+# Create a [!DNL Google PubSub] Source Connection Using the Flow Service API
 
 Este tutorial le guía por los pasos para conectarse [!DNL Google PubSub] (en lo sucesivo, &quot;el[!DNL PubSub]&quot;) al Experience Platform, usando el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -32,13 +28,13 @@ Las secciones siguientes proporcionan información adicional que deberá conocer
 
 ### Recopilar las credenciales necesarias
 
-Para [!DNL Flow Service] para conectarse a [!DNL PubSub], debe proporcionar valores para las siguientes propiedades de conexión:
+In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide values for the following connection properties:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
 | `projectId` | ID del proyecto necesario para la autenticación [!DNL PubSub]. |
 | `credentials` | La credencial o clave necesaria para autenticarse [!DNL PubSub]. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones de destino de origen y base. La variable [!DNL PubSub] el ID de especificación de conexión es: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source target connections. La variable [!DNL PubSub] el ID de especificación de conexión es: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Para obtener más información sobre estos valores, consulte esta [[!DNL PubSub] autenticación](https://cloud.google.com/pubsub/docs/authentication) documento. Para utilizar la autenticación basada en cuentas de servicio, consulte esta [[!DNL PubSub] guía sobre la creación de cuentas de servicio](https://cloud.google.com/docs/authentication/production#create_service_account) para ver los pasos sobre cómo generar sus credenciales.
 
@@ -52,7 +48,7 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 
 ## Creación de una conexión base
 
-El primer paso para crear una conexión de origen es autenticar su [!DNL PubSub] y genere un ID de conexión base. Un ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar elementos específicos que desee introducir, incluida información sobre sus tipos de datos y formatos.
+El primer paso para crear una conexión de origen es autenticar su [!DNL PubSub] y genere un ID de conexión base. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
 Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar su [!DNL PubSub] credenciales de autenticación como parte de los parámetros de solicitud.
 
@@ -91,7 +87,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `auth.params.projectId` | ID del proyecto necesario para la autenticación [!DNL PubSub]. |
+| `auth.params.projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `auth.params.credentials` | La credencial o clave necesaria para autenticarse [!DNL PubSub]. |
 | `connectionSpec.id` | La variable [!DNL PubSub] id. de especificación de conexión: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
@@ -152,11 +148,11 @@ curl -X POST \
 | `name` | Nombre de la conexión de origen. Asegúrese de que el nombre de la conexión de origen sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de origen. |
 | `description` | Un valor opcional que puede proporcionar para incluir más información sobre la conexión de origen. |
 | `baseConnectionId` | El ID de conexión base de su [!DNL PubSub] fuente que se generó en el paso anterior. |
-| `connectionSpec.id` | El ID de especificación de conexión fija para [!DNL PubSub]. Este ID es: `70116022-a743-464a-bbfe-e226a7f8210c` |
-| `data.format` | El formato de la variable [!DNL PubSub] datos que desea ingerir. Actualmente, el único formato de datos admitido es `json`. |
+| `connectionSpec.id` | The fixed connection specification ID for [!DNL PubSub]. This ID is: `70116022-a743-464a-bbfe-e226a7f8210c` |
+| `data.format` | The format of the [!DNL PubSub] data that you want to ingest. Currently, the only supported data format is `json`. |
 | `params.topicId` | El ID del tema define el recurso con nombre específico que los editores envían a los mensajes |
 | `params.subscriptionId` | El ID de suscripción define el recurso con nombre específico que representa el flujo de mensajes de un solo tema específico que se enviarán a la aplicación de suscripción. |
-| `params.dataType` | Este parámetro define el tipo de datos que se están incorporando. Los tipos de datos admitidos son: `raw` y `xdm`. |
+| `params.dataType` | Este parámetro define el tipo de datos que se están incorporando. Supported data types include: `raw` and `xdm`. |
 
 **Respuesta**
 

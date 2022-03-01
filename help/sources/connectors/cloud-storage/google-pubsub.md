@@ -3,33 +3,29 @@ keywords: Experience Platform;inicio;temas populares;Google PubSub;google pubsub
 solution: Experience Platform
 title: Descripción general del conector Google PubSub Source
 topic-legacy: overview
-description: Obtenga información sobre cómo conectar Google PubSub a Adobe Experience Platform mediante API o la interfaz de usuario.
+description: Learn how to connect Google PubSub to Adobe Experience Platform using APIs or the user interface.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
-# Conector (Beta) [!DNL Google PubSub]
+# [!DNL Google PubSub] connector
 
->[!NOTE]
->
->El conector [!DNL Google PubSub] está en versión beta. Consulte [sources overview](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como [!DNL AWS], [!DNL Google Cloud Platform]y [!DNL Azure], lo que le permite introducir datos de estos sistemas en Platform para utilizarlos en servicios y destinos descendentes.
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como [!DNL AWS], [!DNL Google Cloud Platform] y [!DNL Azure], lo que le permite introducir datos de estos sistemas en Platform para usarlos en servicios y destinos descendentes.
+Cloud storage sources can bring your data into Platform without the need to download, format, or upload. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o delimitados. Every step of the process is integrated into the sources workflow. Platform allows you to bring in data from [!DNL Azure Event Hubs] in real time.
 
-Las fuentes de almacenamiento en la nube pueden llevar sus datos a Platform sin necesidad de descargar, formatear o cargar. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o delimitados. Cada paso del proceso se integra en el flujo de trabajo de fuentes. Platform le permite incorporar datos de [!DNL Azure Event Hubs] en tiempo real.
+## Connect [!DNL Google PubSub] to Platform
 
-## Conectar [!DNL Google PubSub] a Platform
+The documentation below provides information on how to connect [!DNL Google PubSub] to Platform using APIs or the user interface:
 
-La documentación siguiente proporciona información sobre cómo conectar [!DNL Google PubSub] a Platform mediante API o la interfaz de usuario:
+### Using APIs
 
-### Uso de API
-
-- [Creación de una conexión de origen Google PubSub mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/google-pubsub.md)
-- [Recopilación de datos de flujo continuo mediante la API del servicio de flujo](../../tutorials/api/collect/streaming.md)
+- [Create a Google PubSub source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/google-pubsub.md)
+- [Collect streaming data using the Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### Uso de la interfaz de usuario
 

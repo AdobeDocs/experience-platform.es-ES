@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
+source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1578'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Es importante comprender los siguientes términos clave utilizados en este docum
 
 ## Crear una conexión de origen con Adobe Analytics
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Fuentes]** desde el panel de navegación izquierdo para acceder a la [!UICONTROL Fuentes] espacio de trabajo. La variable [!UICONTROL Catálogo] muestra una variedad de fuentes con las que puede crear una cuenta.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Fuentes]** desde el panel de navegación izquierdo para acceder a la [!UICONTROL Fuentes] espacio de trabajo. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede utilizar la barra de búsqueda para reducir los orígenes mostrados.
 
@@ -44,9 +44,9 @@ En el **[!UICONTROL aplicaciones de Adobe]** categoría, seleccione **[!UICONTRO
 
 ![catálogo](../../../../images/tutorials/create/analytics/catalog.png)
 
-### Seleccionar datos
+### Selección de datos
 
-La variable **[!UICONTROL Agregar datos de origen de Analytics]** aparece. Select **[!UICONTROL Grupo de informes]** para empezar a crear una conexión de origen para los datos del grupo de informes de Analytics y, a continuación, seleccione el grupo de informes que desee ingerir. Los grupos de informes que no se pueden seleccionar ya se han incorporado, ya sea en este simulador para pruebas o en otro simulador para pruebas. Select **[!UICONTROL Siguiente]** para continuar.
+The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTROL Report Suite]** to start creating a source connection for Analytics Report Suite data, and then select the Report Suite you would like to ingest. Report Suites that are not selectable have already been ingested, either in this sandbox or in a different sandbox. Select **[!UICONTROL Siguiente]** para continuar.
 
 >[!NOTE]
 >
@@ -57,6 +57,10 @@ La variable **[!UICONTROL Agregar datos de origen de Analytics]** aparece. Selec
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Asignación
+
+>[!IMPORTANT]
+>
+>Compatibilidad de la preparación de datos con el [!DNL Analytics] el origen está actualmente en versión beta. La función y la documentación están sujetas a cambios.
 
 Antes de poder asignar su [!DNL Analytics] para dirigirse al esquema XDM, primero debe seleccionar si utiliza un esquema predeterminado o uno personalizado.
 
@@ -128,7 +132,7 @@ A continuación, seleccione el icono de asignación en [!UICONTROL Campo de dest
 
 ![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
 
-Al igual que el esquema de origen, se puede utilizar la interfaz para navegar por la estructura del esquema de destino y seleccionar el campo de destino al que desea asignar. Una vez seleccionado el campo de destino correspondiente, seleccione **[!UICONTROL Select]**.
+Al igual que el esquema de origen, se puede utilizar la interfaz para navegar por la estructura del esquema de destino y seleccionar el campo de destino al que desea asignar. Once you have selected the appropriate target field, select **[!UICONTROL Select]**.
 
 ![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
 
@@ -139,12 +143,12 @@ Una vez completado el conjunto de asignaciones personalizadas, seleccione **[!UI
 La siguiente documentación proporciona más recursos para comprender la preparación de datos, los campos calculados y las funciones de asignación:
 
 * [Resumen de la preparación de datos](../../../../../data-prep/home.md)
-* [Funciones de asignación de preparación de datos](../../../../../data-prep/functions.md)
-* [Añadir campos calculados](../../../../../data-prep/ui/mapping.md#calculated-fields)
+* [Data Prep mapping functions](../../../../../data-prep/functions.md)
+* [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 ### Proporcionar detalles de flujo de datos
 
-La variable **[!UICONTROL Detalles de flujo de datos]** , donde debe proporcionar un nombre y una descripción opcional para el flujo de datos. Select **[!UICONTROL Siguiente]** cuando termine.
+The **[!UICONTROL Dataflow detail]** step appears, where you must provide a name and an optional description for the dataflow. Select **[!UICONTROL Next]** when finished.
 
 ![dataflow-detail](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
@@ -165,11 +169,11 @@ Una vez creado el flujo de datos, puede monitorizar los datos que se están inco
 
 La variable **Flujos de datos** se abre. En esta página hay un par de flujos de conjuntos de datos, incluida información sobre su nombre, datos de origen, tiempo de creación y estado.
 
-El conector crea una instancia de dos flujos de conjuntos de datos. Un flujo representa los datos de relleno y el otro es para los datos activos. Los datos de relleno no están configurados para Perfil, pero se envían al lago de datos para casos analíticos y de ciencia de datos.
+The connector instantiates two dataset flows. Un flujo representa los datos de relleno y el otro es para los datos activos. Los datos de relleno no están configurados para Perfil, pero se envían al lago de datos para casos analíticos y de ciencia de datos.
 
 Para obtener más información sobre el relleno, los datos activos y sus latencias respectivas, consulte la [Resumen de los conectores de datos de Analytics](../../../../connectors/adobe-applications/analytics.md).
 
-Seleccione el flujo del conjunto de datos que desee ver en la lista.
+Select the dataset flow you wish to view from the list.
 
 ![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
