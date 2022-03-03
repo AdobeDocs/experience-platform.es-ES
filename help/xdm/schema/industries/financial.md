@@ -1,34 +1,44 @@
 ---
 solution: Experience Platform
-title: Modelo de datos del sector de servicios financieros ERD
+title: Financial Services Industry Data Model ERD
 topic-legacy: overview
-description: Vea un diagrama de relaciones de entidades (ERD) que describe un modelo de datos estandarizado para el sector bancario, de servicios financieros y de seguros (BFSI). Este modelo de datos es compatible con Experience Data Model (XDM) para su uso en Adobe Experience Platform.
+description: View an entity relationship diagram (ERD) that describes a standardized data model for the banking, financial services, and insurance (BFSI) industry. This data model is compatible with Experience Data Model (XDM) for use in Adobe Experience Platform.
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
-source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
+source-git-commit: 345380c9d4e371bc90acee1f35e75f9da8f9394e
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 0%
+source-wordcount: '436'
+ht-degree: 1%
 
 ---
 
-# [!UICONTROL Modelo de datos del sector de los ] servicios financieros ERD
+# 
 
-El siguiente diagrama de relaciones de entidades (ERD) representa un modelo de datos estandarizado para el sector bancario, de servicios financieros y de seguros (BFSI). El ERD se presenta intencionalmente de forma desnormalizada y teniendo en cuenta cómo se almacenan los datos en Adobe Experience Platform.
+The following entity relationship diagram (ERD) represents a standardized data model for the banking, financial services, and insurance (BFSI) industry. The ERD is intentionally presented in a de-normalized fashion and with consideration for how data is stored in Adobe Experience Platform.
 
 >[!NOTE]
 >
->El ERD como se describe es una recomendación sobre cómo debe modelar sus datos para este caso de uso del sector. Para utilizar este modelo de datos en Platform, debe crear los esquemas recomendados y sus relaciones usted mismo. Consulte las guías sobre la administración de [esquemas](../../ui/resources/schemas.md) y [relaciones](../../tutorials/relationship-ui.md) en la interfaz de usuario para obtener más información.
+>The ERD as described is a recommendation for how you should model your data for this industry use case. To make use of this data model in Platform, you must construct the recommended schemas and their relationships yourself. [](../../ui/resources/schemas.md)[](../../tutorials/relationship-ui.md)
 
-Utilice la siguiente leyenda para interpretar este ERD:
+Use the following legend to interpret this ERD:
 
-* Cada entidad mostrada en se basa en una clase [Experience Data Model (XDM) subyacente](../composition.md#class).
-* Para una entidad determinada, cada fila marcada en **bold** representa un grupo de campos o un tipo de datos, con los campos relevantes que proporciona enumerados a continuación en texto sin negrita.
-* Los campos más importantes de una entidad determinada se resaltan en rojo.
-* Todas las propiedades que podrían utilizarse para identificar clientes individuales se marcan como &quot;identidad&quot;, con una de estas propiedades marcadas como &quot;identidad principal&quot;.
-* Las relaciones de entidad se marcan como no dependientes, ya que los eventos basados en cookies a menudo no pueden determinar la persona o el individuo que realizó la transacción.
+* [](../composition.md#class)
+* ****
+* The most important fields for a given entity are highlighted in red.
+* All the properties that could be used to identify individual customers are marked as &quot;identity&quot;, with one of these properties marked as a &quot;primary identity&quot;.
+* Entity relationships are marked as non-dependent, since cookie-based events often cannot determine the person or individual who did the transaction.
 
 ![](../../images/industries/financial.png)
 
 >[!NOTE]
 >
->La entidad Evento de experiencia incluye un campo &quot;_ID&quot;, que representa el atributo de identificador único (`_id`) proporcionado por la clase ExperienceEvent XDM. Consulte el documento de referencia en [XDM ExperienceEvent](../../classes/experienceevent.md) para obtener más información sobre lo que se espera para este valor.
+>`_id` [](../../classes/experienceevent.md)
+
+## 
+
+The following table outlines the recommended classes and schema field groups for several common financial use cases.
+
+| Caso de uso | Recommended classes and field groups |
+| --- | --- |
+| Drive personalization at scale for preferred segments through omnichannel reporting insights and automating journeys to increase enrollment to a preferred rewards program. | <ul><li>**[[!UICONTROL Producto]](../../classes/product.md)**:<ul><li>[](../../field-groups/product/product-category.md)</li></ul></li><li>**[](../../classes/experienceevent.md)**<ul><li>[](../../field-groups/event/card-actions.md)</li><li>[](../../field-groups/event/quote-request-details.md)</li><li>[](../../field-groups/event/deposit-details.md)</li><li>[](../../field-groups/event/channel-details.md)</li><li>[](../../field-groups/event/balance-transfers.md)</li></ul></li><li>**[](../../classes/individual-profile.md)**<ul><li>[](../../field-groups/profile/demographic-details.md)</li><li>[](../../field-groups/profile/personal-contact-details.md)</li><li>[](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| Optimize cross-channel personalization across online and offline channels. | <ul><li>**[[!UICONTROL Producto]](../../classes/product.md)**:<ul><li>[](../../field-groups/product/product-category.md)</li></ul></li><li>**[](../../classes/experienceevent.md)**<ul><li>[](../../field-groups/event/channel-details.md)</li></ul></li><li>**[](../../classes/individual-profile.md)**<ul><li>[](../../field-groups/profile/demographic-details.md)</li><li>[](../../field-groups/profile/personal-contact-details.md)</li><li>[](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| Drive new revenue opportunities by using insights gained from cross-channel behavior analysis, identifying patterns of product usage that could lead to new product offers. | <ul><li>**[[!UICONTROL Política]](../../classes/policy.md)**</li><li>**[[!UICONTROL Producto]](../../classes/product.md)**:<ul><li>[](../../field-groups/product/product-category.md)</li></ul></li><li>**[](../../classes/experienceevent.md)**<ul><li>[](../../field-groups/event/card-actions.md)</li><li>[](../../field-groups/event/support-site-search.md)</li><li>[](../../field-groups/event/deposit-details.md)</li><li>[](../../field-groups/event/channel-details.md)</li></ul></li><li>**[](../../classes/individual-profile.md)**<ul><li>[](../../field-groups/profile/demographic-details.md)</li><li>[](../../field-groups/profile/personal-contact-details.md)</li><li>[](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
