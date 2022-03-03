@@ -2,10 +2,10 @@
 title: Configurar la extensión del SDK web de Adobe Experience Platform
 description: Configurar la extensión de la etiqueta SDK web de Adobe Experience Platform en la interfaz de usuario de la recopilación de datos.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
+source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 7%
+source-wordcount: '1047'
+ht-degree: 6%
 
 ---
 
@@ -45,7 +45,7 @@ La variable [!UICONTROL ID de organización IMS] es la organización a la que de
 
 ### **[!UICONTROL Dominio de Edge]**
 
-La variable [!UICONTROL Dominio de Edge] es el dominio desde el cual la extensión de Adobe Experience Platform envía y recibe datos. La extensión requiere que utilice un CNAME de origen para el tráfico de producción. El dominio de terceros predeterminado funciona para entornos de desarrollo, pero no es adecuado para entornos de producción. Las instrucciones sobre cómo configurar un CNAME de origen se enumeran [aquí](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=es).
+La variable [!UICONTROL Dominio de Edge] es el dominio desde el cual la extensión de Adobe Experience Platform envía y recibe datos. Adobe recomienda utilizar un dominio de origen (CNAME) para esta extensión. El dominio de terceros predeterminado funciona para entornos de desarrollo, pero no es adecuado para entornos de producción. Las instrucciones sobre cómo configurar un CNAME de origen se enumeran [aquí](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=es).
 
 ## [!UICONTROL Corrientes de datos]
 
