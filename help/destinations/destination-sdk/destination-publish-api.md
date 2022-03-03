@@ -2,9 +2,9 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/Destinations/publish`.
 title: Operaciones de extremo de la API de Publish Destinations
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 6ad556e3b7bf15f1d6ff522307ff232b8fd947d3
+source-git-commit: 702a5b7154724faa9f5e6847b462e0ae90475571
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '718'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 En esta página se enumeran y describen todas las operaciones de API que puede realizar mediante la `/authoring/destinations/publish` extremo de API.
 
-Después de configurar y probar el destino, puede enviarlo a Adobe para su revisión y publicación.
+Después de configurar y probar el destino, puede enviarlo a Adobe para su revisión y publicación. Lectura [Enviar para revisión un destino creado en Destination SDK](./submit-destination.md) para todos los demás pasos que debe realizar como parte del proceso de envío de destino.
 
 Utilice el extremo de la API de destinos de publicación para enviar una solicitud de publicación cuando:
 
@@ -52,19 +52,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -d '
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "destinationAccess":"LIMITED",
-   "allowedOrgs":[
-      "xyz@AdobeOrg",
-      "lmn@AdobeOrg"
-   ]
+   "destinationAccess":"ALL"
 }
 ```
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
 | `destinationId` | Cadena | El ID de destino de la configuración de destino que envía para su publicación. Obtenga el ID de destino de una configuración de destino utilizando la variable [referencia de la API de configuración de destino](./destination-configuration-api.md#retrieve-list). |
-| `destinationAccess` | Cadena | `ALL` o `LIMITED`. Especifique si desea que el destino aparezca en el catálogo para todos los clientes Experience Platform o solo para determinadas organizaciones. <br> **Nota**: Si usa `LIMITED`, el destino solo se publicará para su organización Experience Platform. Si desea publicar el destino en un subconjunto de organizaciones de Experience Platform con fines de prueba de clientes, póngase en contacto con el servicio de asistencia técnica de Adobe. |
-| `allowedOrgs` | Cadena | Si usa `"destinationAccess":"LIMITED"`, especifique las organizaciones de Experience Platform para las que estará disponible el destino. |
+| `destinationAccess` | Cadena | Uso `ALL` para que su destino aparezca en el catálogo para todos los clientes Experience Platform. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -84,7 +79,7 @@ GET /authoring/destinations/publish
 
 **Solicitud**
 
-La siguiente solicitud recuperará la lista de destinos enviados para publicación a la que tiene acceso, según la configuración de la organización y el simulador de pruebas de IMS.
+La siguiente solicitud recupera la lista de destinos enviados para la publicación a los que tiene acceso, según la configuración de la organización y el simulador de pruebas de IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -103,12 +98,12 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de destinos env
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
       {
-         "configId":"string",
-         "allowedOrgs":[
-            "xyz@AdobeOrg",
-            "lmn@AdobeOrg"
-         ],
-         "status":"TEST",
+         "configId":"123cs780-ce29-434f-921e-4ed6ec2a6c35",
+         "allowedOrgs": [
+            "*"
+         ],    
+         "status":"PUBLISHED",
+         "destinationType": "PUBLIC",
          "publishedDate":"1630617746"
       }
    ]
@@ -119,47 +114,12 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de destinos env
 |---------|----------|------|
 | `destinationId` | Cadena | El ID de destino de la configuración de destino que ha enviado para su publicación. |
 | `publishDetailsList.configId` | Cadena | El ID exclusivo de la solicitud de publicación de destino para el destino enviado. |
-| `publishDetailsList.allowedOrgs` | Cadena | Devuelve las organizaciones de Experience Platform para las que debe estar disponible el destino. |
-| `publishDetailsList.status` | Cadena | El estado de la solicitud de publicación de destino. Los valores posibles son `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. |
+| `publishDetailsList.allowedOrgs` | Cadena | Devuelve las organizaciones de Experience Platform para las que está disponible el destino. <br> <ul><li> Para `"destinationType": "PUBLIC"`, este parámetro devuelve `"*"`, lo que significa que el destino está disponible para todas las organizaciones de Experience Platform.</li><li> Para `"destinationType": "DEV"`, este parámetro devuelve el ID de organización de la organización que utilizó para crear y probar el destino.</li></ul> |
+| `publishDetailsList.status` | Cadena | El estado de la solicitud de publicación de destino. Los valores posibles son `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinos con valor `PUBLISHED` están activas y pueden utilizarlas los clientes Experience Platform. |
+| `publishDetailsList.destinationType` | Cadena | Tipo de destino. Los valores pueden `DEV` y `PUBLIC`. `DEV` corresponde al destino de su organización de Experience Platform. `PUBLIC` corresponde al destino que ha enviado para su publicación. Piense en estas dos opciones en términos de Git, donde la variable `DEV` representa su rama de creación local y la `PUBLIC` representa la rama principal remota. |
 | `publishDetailsList.publishedDate` | Cadena | La fecha en la que se envió el destino para su publicación, en tiempo de época. |
 
 {style=&quot;table-layout:auto&quot;}
-
-## Actualizar una solicitud de publicación de destino existente {#update}
-
-Puede actualizar las organizaciones permitidas en una solicitud de publicación de destino existente realizando una solicitud de PUT al `/authoring/destinations/publish` y proporcione el ID del destino para el que desea actualizar las organizaciones permitidas. En el cuerpo de la llamada, proporcione las organizaciones permitidas actualizadas.
-
-**Formato de API**
-
-```http
-PUT /authoring/destinations/publish/{DESTINATION_ID}
-```
-
-| Parámetro | Descripción |
-| -------- | ----------- |
-| `{DESTINATION_ID}` | El ID del destino para el que desea actualizar la solicitud de publicación. |
-
-**Solicitud**
-
-La siguiente solicitud actualiza una solicitud de publicación de destino existente, configurada por los parámetros proporcionados en la carga útil. En la llamada de ejemplo siguiente, actualizamos las organizaciones permitidas.
-
-```shell
-curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destinations/publish/1230e5e4-4ab8-4655-ae1e-a6296b30f2ec \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-{
-   "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "destinationAccess":"LIMITED",
-   "allowedOrgs":[
-      "abc@AdobeOrg",
-      "def@AdobeOrg"
-   ]
-}
-```
 
 ## Obtener el estado de una solicitud de publicación de destino específica {#get}
 
@@ -194,13 +154,30 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
       {
-         "configId":"string",
+         "configId":"ab41387c0-4772-4709-a3ce-6d5fee654520",
          "allowedOrgs":[
-            "xyz@AdobeOrg",
-            "lmn@AdobeOrg"
+            "716543205DB85F7F0A495E5B@AdobeOrg"
          ],
          "status":"TEST",
-         "publishedDate":"string"
+         "destinationType":"DEV"
+      },
+      {
+         "configId":"cd568c67-f25e-47e4-b9a2-d79297a20b27",
+         "allowedOrgs":[
+            "*"
+         ],
+         "status":"DEPRECATED",
+         "destinationType":"PUBLIC",
+         "publishedDate":1630525501009
+      },
+      {
+         "configId":"ef6f07154-09bc-4bee-8baf-828ea9c92fba",
+         "allowedOrgs":[
+            "*"
+         ],
+         "status":"PUBLISHED",
+         "destinationType":"PUBLIC",
+         "publishedDate":1630531586002
       }
    ]
 }
