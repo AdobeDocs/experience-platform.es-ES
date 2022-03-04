@@ -5,9 +5,9 @@ title: Información general sobre la recopilación de datos
 topic-legacy: overview
 description: Obtenga información sobre las distintas tecnologías que intervienen en la recopilación de datos sobre las experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
+source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '478'
 ht-degree: 6%
 
 ---
@@ -59,6 +59,10 @@ Platform Edge Network es una red global de servidores distribuidos, rápidos y c
 [Reenvío de eventos](../tags/ui/event-forwarding/overview.md) puede aprovechar cualquier conjunto de datos del Experience Platform, lo que le permite transformar, enriquecer y enviar datos a cualquier destino que no sea de Adobe con latencia extrema baja y sin añadir ningún código de terceros al dispositivo cliente.
 
 ![Reenvío de eventos](./images/home/event-forwarding.png)
+
+>[!NOTE]
+>
+>El reenvío de eventos es una función de pago que solo se incluye como parte de la oferta Conexiones de Real-time Customer Data Platform.
 
 ## Pasos siguientes
 
