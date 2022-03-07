@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
+source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 7%
+source-wordcount: '720'
+ht-degree: 5%
 
 ---
 
@@ -15,9 +15,22 @@ ht-degree: 7%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Recopilación de datos](#data-collection)
 - [[!DNL Identity Service]](#identity)
 - [Fuentes](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform proporciona varios [!DNL dashboards] a través de la cual puede ver perspectivas importantes sobre los datos de su organización, tal como se capturan durante las instantáneas diarias.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Nuevas utilidades de destinos estándar | Los siguientes widgets estándar le permiten visualizar distintas métricas relacionadas con sus destinos.<ul><li>Segmentos activados recientemente por destino. Esta utilidad muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido.</li><li>Tendencia del tamaño de la audiencia. Esta utilidad representa la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino.</li><li>Segmentos no asignados por identidad. Esta utilidad enumera los cinco segmentos sin asignar principales clasificados por recuento de identidad descendente para un destino e identidad determinados.</li><li>Segmentos asignados por identidad. Esta utilidad enumera los cinco segmentos asignados principales. Los segmentos se ordenan de mayor a menor según sus respectivos recuentos de ID de origen que coincidan con el ID de destino seleccionado en el menú desplegable del widget.</li><li>Audiencias comunes. Esta utilidad proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable de la utilidad.</li></ul> Para obtener más información sobre los widgets estándar disponibles, consulte la [documentación del panel de destinos .](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+
+Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL Dashboards] información general](../../dashboards/home.md).
 
 ## Recopilación de datos {#data-collection}
 
