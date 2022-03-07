@@ -4,10 +4,10 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
+source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 0%
+source-wordcount: '2324'
+ht-degree: 1%
 
 ---
 
@@ -43,6 +43,26 @@ Puede modificar el aspecto del [!UICONTROL Perfiles] tablero seleccionando **[!U
 
 Consulte la [modificación de tableros](../customize/modify.md) y [información general de la biblioteca de utilidades](../customize/widget-library.md) documentación para obtener más información.
 
+## (Beta) Perspectivas de la eficiencia del perfil {#profile-efficiency-insights}
+
+>[!IMPORTANT]
+>
+>La funcionalidad de perspectiva de eficacia de perfil se encuentra actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+
+La variable [!UICONTROL Eficacia] proporciona métricas sobre la calidad y exhaustividad de los datos de perfil mediante el uso de widgets de eficacia de perfil. Estas utilidades ilustran de un vistazo la composición de sus perfiles, las tendencias en la integridad a lo largo del tiempo y las evaluaciones de la calidad de sus datos de perfil.
+
+[El panel de eficacia del perfil.](../images/profiles/attributes-quality-assessment.png)
+
+Consulte la [sección widgets de eficacia de perfil](#profile-efficacy-widgets) para obtener más información sobre los widgets disponibles actualmente.
+
+El diseño de este tablero también se puede personalizar seleccionando [**[!UICONTROL Modificar tablero]**](../customize/modify.md) de la variable [!UICONTROL Información general] pestaña .
+
+## Explorar perfiles {#browse-profiles}
+
+La variable [!UICONTROL Examinar] le permite buscar y ver los perfiles de solo lectura introducidos en su organización de IMS. Desde aquí puede ver información importante perteneciente al perfil sobre sus preferencias, eventos anteriores, interacciones y segmentos
+
+Para obtener más información sobre las capacidades de visualización de perfiles proporcionadas en la interfaz de usuario de Platform, consulte la documentación de [exploración de perfiles en Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+
 ## Combinar directivas {#merge-policies}
 
 Las métricas que se muestran en la variable [!UICONTROL Perfiles] Los tableros se basan en políticas de combinación que se aplican a los datos del perfil del cliente en tiempo real. Cuando los datos se reúnen desde varias fuentes para crear el perfil del cliente, es posible que los datos contengan valores en conflicto (por ejemplo, un conjunto de datos puede enumerar a un cliente como &quot;único&quot;, mientras que otro conjunto de datos puede enumerar al cliente como &quot;casado&quot;). Es tarea de la directiva de combinación determinar qué datos se priorizan y muestran como parte del perfil.
@@ -56,6 +76,14 @@ El tablero seleccionará automáticamente una política de combinación para mos
 >El menú desplegable muestra solamente las políticas de combinación relacionadas con la clase de perfil individual XDM. Sin embargo, si la organización ha creado varias políticas de combinación, puede significar que tendrá que desplazarse para ver la lista completa de las políticas de combinación disponibles.
 
 ![](../images/profiles/select-merge-policy.png)
+
+## Esquemas de unión
+
+La variable [!UICONTROL Esquema de unión] dashboard muestra el esquema de unión para una clase XDM específica. Seleccione la [!UICONTROL **Clase**] lista desplegable, puede ver los esquemas de unión de diferentes clases XDM.
+
+Los esquemas de unión están compuestos por varios esquemas que comparten la misma clase y que se han habilitado para Perfil. Permiten ver en una sola vista, una combinación de todos los campos contenidos dentro de cada esquema que comparte la misma clase.
+
+Consulte la guía de la interfaz de usuario del esquema de unión para obtener más información [visualización de esquemas de unión en la interfaz de usuario de Platform](../../profile/ui/union-schema.md#view-union-schemas).
 
 ## Widgets y métricas
 
@@ -134,6 +162,59 @@ Para obtener más información sobre los fragmentos de perfil, comience por leer
 Para obtener más información sobre las identidades, visite [Documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+## (Beta) Widgets de eficacia del perfil {#profile-efficacy-widgets}
+
+>[!IMPORTANT]
+>
+>Los widgets de eficiencia de perfil están actualmente en versión beta y no están disponibles para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+
+Adobe proporciona varias utilidades para evaluar la integridad de los perfiles introducidos disponibles para su análisis de datos. Cada una de las utilidades de eficacia del perfil se puede filtrar mediante la política de combinación. Para cambiar el filtro de directiva de combinación, seleccione la opción[!UICONTROL Perfiles mediante una directiva de combinación] y elija la política adecuada en la lista disponible.
+
+Para obtener más información sobre cada una de las utilidades de eficacia de perfil, seleccione el nombre de un widget en la siguiente lista:
+
+* [[!UICONTROL Evaluación de la calidad de los atributos]](#attribute-quality-assessment)
+* [[!UICONTROL Complejidad del perfil]](#profile-completeness)
+* [[!UICONTROL Tendencia de integridad del perfil]](#profile-completeness-trend)
+
+### (Beta) [!UICONTROL Evaluación de la calidad de los atributos] {#attribute-quality-assessment}
+
+Este widget muestra la integridad y cardinalidad de cada atributo de perfil desde la última fecha de procesamiento. Esta información se presenta como una tabla con cuatro columnas donde cada fila de la tabla representa un único atributo.
+
+| Columna | Descripción |
+|---|---|
+| Atributo | Nombre del atributo. |
+| Perfiles | Número de perfiles que tienen este atributo y se rellenan con valores no nulos. |
+| Complejidad | Este porcentaje está determinado por el número total de perfiles que tienen este atributo y que se rellenan con valores no nulos. El número se calcula dividiendo el número total de perfiles por el número total de valores no vacíos en los perfiles de ese atributo. |
+| Cardinalidad | El número total de **único** valores no nulos de este atributo. Se mide en todos los perfiles. |
+
+![El widget de evaluación de la calidad de los atributos](../images/profiles/attributes-quality-assessment.png)
+
+### (Beta) [!UICONTROL Perfiles completos] {#profile-completeness}
+
+Este widget crea un gráfico circular de la integridad del perfil desde la última fecha de procesamiento. La integridad de un perfil se mide por el porcentaje de atributos que se rellenan con valores no nulos entre todos los atributos observados.
+
+Este widget muestra la proporción de perfiles con una integridad alta, media o baja. De forma predeterminada, hay tres niveles de integridad configurados:
+
+* Alto contenido: Los perfiles tienen más del 70 % de atributos completados.
+* Complejidad media: Los perfiles tienen menos del 70 % y más del 30 % de atributos completados.
+* Baja exhaustividad: Los perfiles tienen menos del 30 % de atributos rellenados.
+
+![Los perfiles mediante la utilidad de integridad](../images/profiles/profiles-by-completeness.png)
+
+### (Beta) [!UICONTROL Tendencia de integridad del perfil] {#profile-completeness-trend}
+
+Este widget crea un gráfico de columnas apiladas para mostrar la tendencia de la integridad del perfil a lo largo del tiempo. La integridad se mide mediante el porcentaje de atributos que se rellenan con valores no nulos entre todos los atributos observados. Clasifica la integridad del perfil como alta, media o baja desde la última fecha de procesamiento.
+
+El eje x representa el tiempo, el eje y representa el número de perfiles y los colores representan los tres niveles de integridad del perfil.
+
+Los tres niveles de integridad son:
+
+* Alto contenido: Los perfiles tienen más del 70 % de atributos completados.
+* Complejidad media: Los perfiles tienen menos del 70 % y más del 30 % de atributos completados.
+* Baja exhaustividad: Los perfiles tienen menos del 30 % de atributos rellenados.
+
+![El widget de tendencia de la compleción de perfiles](../images/profiles/profiles-completeness-trend.png)
 
 ## Pasos siguientes
 
