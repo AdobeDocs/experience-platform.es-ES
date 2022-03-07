@@ -3,7 +3,7 @@ title: Configurar el almacén de datos para el SDK web del Experience Platform
 description: 'Obtenga información sobre cómo configurar Datastreams. '
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;id;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0141f0a83ca7b444015d98d8ce11199b400f77a5
+source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 2%
@@ -70,7 +70,7 @@ Las subsecciones siguientes tratan los pasos básicos para asignar los datos den
 
 Select **[!UICONTROL Guardar y agregar asignaciones]** después de completar la [paso básico de configuración](#configure)y **[!UICONTROL Seleccionar datos]** aparece. A partir de aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que planea enviar a Platform. Puede seleccionar la opción para cargar el objeto como archivo o pegar el objeto sin procesar en el cuadro de texto proporcionado.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >El objeto JSON debe tener un solo nodo raíz `data` para pasar la validación.
 
