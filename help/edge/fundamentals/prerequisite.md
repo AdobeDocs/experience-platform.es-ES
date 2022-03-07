@@ -3,10 +3,10 @@ title: Requisitos previos para utilizar el SDK web de Adobe Experience Platform
 description: Obtenga información sobre los requisitos previos para utilizar el SDK web de Adobe Experience Platform.
 keywords: dominio de origen;CNAME;esquema;crear esquema;launch;extensión de sdk web aep;extensión;id de configuración;herramienta de configuración;elemento de datos;crear elemento de datos;objeto XDM;sendEvent;enviar evento;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: a9b63d2ad2c1adbd647c0c3a43331cddffa8a04e
+source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Para utilizar el SDK web de Adobe Experience Platform, primero debe:
 
-- Aprovisione a su organización para esta función. Si desea obtener acceso, rellene lo siguiente [formulario](https://adobe.ly/websdkaccess) y Adobe le proporcionarán acceso a secuencias de datos y Adobe Experience Platform (si es necesario). Tenga en cuenta que el Adobe le proporcionará el acceso necesario para utilizar de forma limitada con el SDK sin coste adicional.
+- Aprovisione a su organización para esta función. Si desea obtener acceso, rellene lo siguiente [formulario](https://adobe.ly/websdkaccess) y Adobe le proporcionarán acceso a Datastreams y Adobe Experience Platform (si es necesario). Tenga en cuenta que el Adobe le proporcionará el acceso necesario para utilizar de forma limitada con el SDK sin coste adicional.
 - Se recomienda tener habilitado el dominio de origen (CNAME). Si ya tiene un CNAME para Adobe Analytics, debe utilizarlo. Las pruebas en desarrollo funcionan sin un CNAME, pero Adobe recomienda tenerlo antes de ir a producción. Aunque la implementación de CNAME no proporciona ningún beneficio en términos de duración de las cookies, puede evitar que ciertos bloqueadores de anuncios y navegadores menos comunes bloqueen las solicitudes de SDK. En estos casos, el uso de un CNAME puede impedir que la recopilación de datos se interrumpa para los usuarios que utilizan estas herramientas.
 
 >[!IMPORTANT]
