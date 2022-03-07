@@ -2,12 +2,10 @@
 title: ID de dispositivo de origen en el SDK web de Platform
 description: Obtenga información sobre cómo configurar ID de dispositivos de origen (FPID) para el SDK web de Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-hide: true
-hidefromtoc: true
-source-git-commit: c094e72232f9ac44d10a1919a00024e5faa27b2b
+source-git-commit: 700dea7ed7f35797b3a3fe4bf09f5e266577363b
 workflow-type: tm+mt
-source-wordcount: '1680'
-ht-degree: 0%
+source-wordcount: '1776'
+ht-degree: 1%
 
 ---
 
@@ -27,36 +25,44 @@ En esta guía se asume que está familiarizado con el funcionamiento de los dato
 
 ## Uso de FPID
 
-Las cookies de origen son más eficaces cuando se establecen utilizando un servidor de propiedad del cliente que aprovecha un registro A de DNS en lugar de un CNAME DNS. Con los ID de dispositivo de origen, puede establecer sus propios ID de dispositivo en cookies mediante registros A de DNS. Estos ID se pueden enviar al Adobe y utilizar como semillas para generar ECID que seguirán siendo los identificadores principales en las aplicaciones de Adobe Experience Cloud.
+Los FPID realizan un seguimiento de los visitantes mediante el uso de cookies de origen. Las cookies de origen son más eficaces cuando se establecen con un servidor que aprovecha un DNS [Un registro](https://datatracker.ietf.org/doc/html/rfc1035) (para IPv4) o [Registro AAAA](https://datatracker.ietf.org/doc/html/rfc3596) (para IPv6), a diferencia de un CNAME DNS o un código JavaScript.
+
+>[!IMPORTANT]
+>
+>Los registros o registros AAAA solo se admiten para configurar y rastrear cookies. El método principal de recopilación de datos es mediante un CNAME DNS. En otras palabras, los FPID se establecen utilizando un registro A o AAAA, y luego se envían a Adobe mediante un CNAME.
+>
+>La variable [Programa de certificados administrados por Adobe](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) también es compatible con la recopilación de datos de origen.
+
+Una vez establecida una cookie FPID, su valor se puede recuperar y enviar a Adobe a medida que se recopilan los datos del evento. Los FPID recopilados se utilizan como semillas para generar ECID, que siguen siendo los identificadores principales en las aplicaciones de Adobe Experience Cloud.
 
 Para enviar un FPID para un visitante de un sitio web a la red perimetral de plataforma, debe incluir el FPID en la variable `identityMap` para ese visitante. Consulte la sección más adelante en este documento en [uso de FPID en `identityMap`](#identityMap) para obtener más información.
 
-## Requisitos de formato de ID
+### Requisitos de formato de ID
 
 La red perimetral de plataforma solo acepta ID que cumplan con la [Formato UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Los ID de dispositivo que no estén en formato UUIDv4 se rechazarán.
 
 La generación de un UUID casi siempre resultará en un ID aleatorio único, con la probabilidad de que se produzca un conflicto insignificante. UUIDv4 no se puede enviar utilizando direcciones IP o cualquier otra información personal identificable (PII). Los UUID son ubicuos y se pueden encontrar bibliotecas para prácticamente todos los lenguajes de programación para generarlos.
 
-## Configuración de una cookie mediante un registro A de DNS
+## Configuración de una cookie con su propio servidor
 
-Se pueden utilizar diversos métodos para configurar una cookie de forma que evite que se restrinja debido a las políticas del explorador:
+Al configurar una cookie con un servidor que usted posee, se pueden utilizar diversos métodos para evitar que la cookie se restrinja debido a las políticas del explorador:
 
 * Generar cookies mediante lenguajes de secuencias de comandos del lado del servidor
 * Establecer cookies como respuesta a una solicitud de API realizada a un subdominio u otro extremo del sitio
 * Generar cookies mediante un CMS
 * Generar cookies mediante una CDN
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Cookies configuradas con el `document.cookie` casi nunca estará protegido de las políticas del explorador que restringen la duración de las cookies.
 
-## Cuándo configurar la cookie
+### Cuándo configurar la cookie
 
 La cookie FPID debe configurarse de forma ideal antes de realizar cualquier solicitud a la red perimetral. Sin embargo, en los casos en que esto no sea posible, se sigue generando un ECID utilizando métodos existentes y actúa como identificador principal siempre que exista la cookie.
 
 Suponiendo que el ECID se vea eventualmente afectado por una directiva de eliminación de explorador, pero el FPID no, el FPID se convertirá en el identificador principal de la próxima visita y se utilizará para sembrarlo en cada visita posterior.
 
-## Configuración de la caducidad de la cookie
+### Configuración de la caducidad de la cookie
 
 Configurar la caducidad de una cookie es algo que debe considerarse cuidadosamente a medida que implementa la funcionalidad FPID. Al tomar esta decisión, debe tener en cuenta los países o regiones en los que opera su organización, junto con las leyes y políticas de cada una de esas regiones.
 
