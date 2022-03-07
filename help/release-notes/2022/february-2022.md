@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
+source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '502'
 ht-degree: 7%
 
 ---
@@ -16,7 +16,6 @@ ht-degree: 7%
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [Recopilación de datos](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Fuentes](#sources)
 
@@ -33,18 +32,6 @@ Platform proporciona un conjunto de tecnologías que le permiten recopilar datos
 | ID de dispositivos de origen | Ahora puede enviar sus propios ID de dispositivo a la red perimetral de Adobe Experience Platform al recopilar datos de clientes mediante el SDK web de Platform, lo que proporciona una solución alternativa a las recientes restricciones del explorador en los planes de vida de cookies de terceros. Consulte la guía de [ID de dispositivos de origen](../../edge/identity/first-party-device-ids.md) para obtener más información. |
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
-
-**Nueva función**
-
-| Función | Descripción |
-| --- | --- |
-| [!DNL Data Prep] compatibilidad con el conector de origen de Adobe Analytics | El conector de origen de Adobe Analytics ahora admite las funciones de preparación de datos, lo que le permite asignar los datos del grupo de informes de Analytics a un esquema XDM de destino al crear un flujo de datos. Consulte el tutorial en [creación de un conector de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
-
-Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
 
 ## [!DNL Identity Service] {#identity}
 
