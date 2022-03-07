@@ -5,9 +5,9 @@ seo-title: Frequently asked questions
 description: Respuestas a las preguntas más frecuentes sobre los destinos de Adobe Experience Platform
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
+source-git-commit: b2636377eda6740dceb9bc07fbcc082b85ff3c94
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '864'
 ht-degree: 4%
 
 ---
@@ -78,6 +78,12 @@ Para obtener explicaciones detalladas sobre los requisitos de coincidencia de ID
 **¿Puedo crear varios destinos de Facebook en la interfaz de usuario de Platform para cuentas de Facebook independientes?**
 
 Sí. Un destino de Facebook en Experience Platform es 1:1 para una cuenta publicitaria en Facebook. Puede crear un destino de Facebook independiente para cada cuenta de publicidad de Facebook en su empresa. Siga las [tutorial de conexión de destino](/help/destinations/ui/connect-destination.md) y conéctese a una cuenta de Facebook independiente para cada nuevo destino de Facebook en la interfaz de usuario de Platform. No hay límite en el número de cuentas publicitarias de Facebook a las que puede conectarse.
+
+## Coincidencia de clientes de Google {#google-customer-match}
+
+**Al exportar segmentos a Google Customer Match, ¿por qué veo números adicionales anexados al final de los nombres de segmentos en la interfaz de Google?**
+
+Google requiere nombres de segmento únicos. Los números que está viendo son [Marcas de hora UNIX](https://www.unixtimestamp.com/) y se añaden para mantener los nombres de los segmentos únicos, si ha asignado el mismo segmento a varios destinos de Google.
 
 ## Audiencias coincidentes de linkedIn {#linkedin}
 
