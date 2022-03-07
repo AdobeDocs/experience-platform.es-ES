@@ -2,7 +2,7 @@
 title: Información general de extremo a extremo de la recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las tecnologías de recopilación de datos proporcionadas por Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: d326267cacf8d678937e8c959de8acbfbbb88c93
+source-git-commit: a1369c0d7af5808d7ff830ce017e686f7697181e
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 0%
@@ -103,7 +103,7 @@ En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL
 
 Los requisitos de configuración de un conjunto de datos dependen de los productos y capacidades a los que envía los datos. Para obtener información detallada sobre las opciones de configuración de cada producto, consulte la [información general sobre datastreams](../edge/fundamentals/datastreams.md).
 
-## Instalación y configuración del SDK web
+## Instalación y configuración del SDK web {#install}
 
 Una vez que haya creado un esquema y un conjunto de datos, el siguiente paso es instalar y configurar el SDK web de Platform para que empiece a enviar datos a la red perimetral.
 
