@@ -4,7 +4,7 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Consulte la [modificación de tableros](../customize/modify.md) y [información 
 
 La variable [!UICONTROL Eficacia] proporciona métricas sobre la calidad y exhaustividad de los datos de perfil mediante el uso de widgets de eficacia de perfil. Estas utilidades ilustran de un vistazo la composición de sus perfiles, las tendencias en la integridad a lo largo del tiempo y las evaluaciones de la calidad de sus datos de perfil.
 
-[El panel de eficacia del perfil.](../images/profiles/attributes-quality-assessment.png)
+![El panel de eficacia del perfil.](../images/profiles/attributes-quality-assessment.png)
 
 Consulte la [sección widgets de eficacia de perfil](#profile-efficacy-widgets) para obtener más información sobre los widgets disponibles actualmente.
 
