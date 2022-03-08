@@ -6,9 +6,9 @@ title: Monitorización de flujos de datos para destinos en la interfaz de usuari
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 042a739593b291cdd7193437906a16dc889a3b4b
+source-git-commit: 0a6813d5d614d86940b042e03d2ab4f083644600
 workflow-type: tm+mt
-source-wordcount: '3358'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -56,25 +56,21 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 >id="platform_monitoring_profiles_received_streaming"
 >title="Perfiles recibidos"
 >abstract="Número total de perfiles recibidos en el flujo de datos. Este valor se actualiza cada 60 minutos."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identidades activadas"
 >abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de segmentos exportados."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="Identidades excluidas"
 >abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Identidades fallidas"
 >abstract="Recuento de identidades de perfil individuales que fallaron para el destino seleccionado. Consulte los diagnósticos de errores para obtener más información."
->text="Learn more in documentation"
 
 Para los destinos de flujo continuo, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona una actualización por hora para los datos de métricas en las ejecuciones de flujo de datos. Las estadísticas más destacadas etiquetadas son para identidades.
 
@@ -118,29 +114,22 @@ La página de detalles también muestra una lista de identidades que han fallado
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Detalles de ejecución de flujo de datos"
 >abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación del segmento y métricas tomadas del Perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas ."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_activation_batch"
->title="Detalles de ejecución de flujo de datos"
->abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación del segmento y métricas tomadas del Perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas ."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=en#dataflow-runs-for-streaming-destinations" text="El flujo de datos se ejecuta en los destinos de flujo continuo"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="Perfiles recibidos"
 >abstract="Número total de perfiles recibidos en el flujo de datos. Este valor se actualiza cada 60 minutos."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identidades activadas"
 >abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de segmentos exportados."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Identidades excluidas"
 >abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
->text="Learn more in documentation"
 
 Para los destinos de lote, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona datos de métricas sobre las ejecuciones de flujo de datos. Se muestra una lista de ejecuciones individuales y sus métricas particulares, junto con los siguientes totales de identidades:
 

@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 6c64e8400c85865aab4e8cfb9e86850562ba97aa
 workflow-type: tm+mt
-source-wordcount: '2188'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +51,7 @@ Utilice las casillas de verificación a la izquierda de los nombres de los segme
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Programación"
->abstract="Establezca el tipo de exportación del archivo (archivos completos o archivos incrementales) y la frecuencia de exportación."
+>abstract="Utilice el icono de lápiz para establecer el tipo de exportación del archivo (archivos completos o archivos incrementales) y la frecuencia de exportación."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Más información en la documentación"
 
 [!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube en forma de [!DNL CSV] archivos. En el **[!UICONTROL Programación]** , puede configurar la programación y los nombres de archivo para cada segmento que exporte. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
@@ -133,7 +133,6 @@ Select **[!UICONTROL Exportar archivos incrementales]** para almacenar en décle
 >id="platform_destinations_activate_filename"
 >title="Configurar nombre de archivo"
 >abstract="Para los destinos basados en archivos, se genera un nombre de archivo único por segmento. Utilice el editor de nombres de archivo para crear y editar un nombre de archivo único o mantener el nombre predeterminado."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="Más información en la documentación"
 
 Los nombres de archivo predeterminados constan del nombre de destino, el ID de segmento y un indicador de fecha y hora. Por ejemplo, puede editar los nombres de archivo exportados para distinguir entre diferentes campañas o para que se añada el tiempo de exportación de datos a los archivos.
 
