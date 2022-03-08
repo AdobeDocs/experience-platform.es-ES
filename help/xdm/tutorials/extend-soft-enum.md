@@ -1,9 +1,10 @@
 ---
 title: Ampliación de un campo de enumeración suave
 description: Obtenga información sobre cómo ampliar un campo de enumeración suave en la API del Registro de esquemas.
-source-git-commit: 2d85db789e6e6a28402bb68122a3b5cfe9d0c5dc
+exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -197,4 +198,4 @@ Después de aplicar el cambio, el Registro de esquemas responde con lo siguiente
 
 ## Pasos siguientes
 
-Esta guía explica cómo ampliar las enumeraciones leves en la API del Registro de esquemas. Para obtener más información sobre cómo definir diferentes tipos de campos en la API, consulte la guía de [Restricciones de tipo de campo XDM](../schema/field-constraints.md#define-fields).
+Esta guía explica cómo ampliar las enumeraciones leves en la API del Registro de esquemas. Consulte la guía de [definición de campos personalizados en la API](./custom-fields-api.md) para obtener más información sobre cómo crear distintos tipos de campos.
