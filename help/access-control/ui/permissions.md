@@ -5,7 +5,7 @@ title: Administrar Permisos Para Un Perfil De Producto
 topic-legacy: user guide
 description: El control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funcionalidades de Platform mediante Adobe Admin Console. Este documento sirve como guía para administrar los permisos de un perfil de producto para Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 099bfc0098ebf5a2325f344215c6b21f1c347473
+source-git-commit: 4881b456cbb6281f35cf1bdcb81e1d21fe764297
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -14,40 +14,40 @@ ht-degree: 0%
 
 # Administrar permisos para un perfil de producto
 
-Inmediatamente después de [crear un nuevo perfil de producto](#create-a-new-product-profile), se le pedirá que configure los permisos del perfil. Si está editando permisos para un perfil existente, seleccione el perfil en la pestaña **[!UICONTROL Product Profiles]** para abrir la página de detalles del perfil y, a continuación, seleccione **[!UICONTROL Permissions]**.
+Inmediatamente después de [creación de un nuevo perfil de producto](#create-a-new-product-profile), se le pedirá que configure los permisos del perfil. Si está editando permisos para un perfil existente, seleccione el perfil en el **[!UICONTROL Perfiles de producto]** pestaña para abrir la página de detalles del perfil y, a continuación, seleccione **[!UICONTROL Permisos]**.
 
 ![permissions](../images/permissions.png)
 
 Los permisos se dividen en categorías y se enumeran en esta página. La lista muestra el nombre de la categoría, el número de permisos que contiene (y cuántos están activos) y su descripción.
 
-Seleccione cualquier categoría de la lista para abrir la página **[!UICONTROL Editar permisos]**.
+Seleccione cualquier categoría de la lista para abrir el **[!UICONTROL Editar permisos]** página.
 
 ![edit-permissions](../images/edit-permissions.png)
 
-La página **[!UICONTROL Editar permisos]** proporciona un espacio de trabajo para agregar y quitar permisos del perfil de producto seleccionado. La parte izquierda de la pantalla muestra una lista de categorías de permisos. Al seleccionar una categoría, se cambian los permisos que se muestran en **[!UICONTROL Elementos de permisos disponibles]**.
+La variable **[!UICONTROL Editar permisos]** proporciona un espacio de trabajo para agregar y quitar permisos del perfil de producto seleccionado. La parte izquierda de la pantalla muestra una lista de categorías de permisos. Al seleccionar una categoría, se cambian los permisos que se muestran en **[!UICONTROL Elementos de permisos disponibles]**.
 
-Por ejemplo, para actualizar los permisos para Administración de perfiles, seleccione **[!UICONTROL Administración de perfiles]**.
+Por ejemplo, para actualizar los permisos para el modelado de datos, seleccione **[!UICONTROL Modelado de datos]**.
 
 ![administración de perfiles](../images/profile-management.png)
 
-Para agregar un permiso, seleccione el icono más **(+)** junto al nombre del permiso. Como alternativa, puede seleccionar **[!UICONTROL Agregar todo]** para agregar todos los permisos de la categoría actual al perfil. Los permisos añadidos aparecen en **[!UICONTROL Elementos de permisos incluidos]**.
+Para añadir un permiso, seleccione el signo más **(+)** junto al nombre del permiso. También puede seleccionar **[!UICONTROL Agregar todo]** para agregar todos los permisos de la categoría actual al perfil. Los permisos añadidos aparecen en **[!UICONTROL Elementos de permiso incluidos]**.
 
 ![add-permission](../images/add-permission.png)
 
 >[!NOTE]
 >
->La lista **[!UICONTROL Elementos de permisos incluidos]** solo muestra los permisos agregados de la categoría seleccionada actualmente.
+>La variable **[!UICONTROL Elementos de permisos incluidos]** solo muestra los permisos añadidos de la categoría seleccionada actualmente.
 
-Para quitar un permiso, seleccione el icono **X** junto al nombre del permiso o seleccione **[!UICONTROL Quitar todo]** para eliminar todos los permisos de la categoría actual. Los permisos eliminados vuelven a aparecer en **[!UICONTROL Elementos de permisos disponibles]**.
+Para quitar un permiso, seleccione la opción **X** junto al nombre del permiso o seleccione **[!UICONTROL Eliminar todo]** para eliminar todos los permisos de la categoría actual. Los permisos eliminados vuelven a aparecer en **[!UICONTROL Elementos de permiso disponibles]**.
 
 Continúe pasando por las categorías disponibles y agregando los permisos que desee. Cuando termine, seleccione **[!UICONTROL Guardar]**.
 
 ![remove-permission](../images/remove-permission.png)
 
-La pestaña **[!UICONTROL Permisos]** del perfil del producto vuelve a aparecer y muestra que los permisos seleccionados ya están activos.
+La variable **[!UICONTROL Permisos]** para el perfil de producto, vuelve a aparecer y muestra que los permisos seleccionados ya están activos.
 
 ![permissions-update](../images/permissions-updated.png)
 
 ## Pasos siguientes
 
-Con los permisos establecidos, puede continuar con el siguiente paso para [administrar detalles y servicios para un perfil de producto](details-and-services.md)
+Con los permisos establecidos, puede continuar con el paso siguiente a [administrar detalles y servicios para un perfil de producto](details-and-services.md)
