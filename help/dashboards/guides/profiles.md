@@ -4,7 +4,7 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
+source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -43,11 +43,11 @@ Puede modificar el aspecto del [!UICONTROL Perfiles] tablero seleccionando **[!U
 
 Consulte la [modificación de tableros](../customize/modify.md) y [información general de la biblioteca de utilidades](../customize/widget-library.md) documentación para obtener más información.
 
-## (Beta) Perspectivas de la eficiencia del perfil {#profile-efficiency-insights}
+## (Beta) Perspectivas de eficacia del perfil {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->La funcionalidad de perspectiva de eficacia de perfil se encuentra actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>La funcionalidad de la perspectiva de eficacia del perfil está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 La variable [!UICONTROL Eficacia] proporciona métricas sobre la calidad y exhaustividad de los datos de perfil mediante el uso de widgets de eficacia de perfil. Estas utilidades ilustran de un vistazo la composición de sus perfiles, las tendencias en la integridad a lo largo del tiempo y las evaluaciones de la calidad de sus datos de perfil.
 
@@ -167,7 +167,7 @@ Para obtener más información sobre las identidades, visite [Documentación del
 
 >[!IMPORTANT]
 >
->Los widgets de eficiencia de perfil están actualmente en versión beta y no están disponibles para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>Los widgets de eficacia de perfil están actualmente en versión beta y no están disponibles para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 Adobe proporciona varias utilidades para evaluar la integridad de los perfiles introducidos disponibles para su análisis de datos. Cada una de las utilidades de eficacia del perfil se puede filtrar mediante la política de combinación. Para cambiar el filtro de directiva de combinación, seleccione la opción[!UICONTROL Perfiles mediante una directiva de combinación] y elija la política adecuada en la lista disponible.
 

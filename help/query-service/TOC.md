@@ -4,9 +4,9 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar datos en el lago de datos de Platform.
 feature: Queries
-source-git-commit: c3baf586f5e11e085114b1f26422d191b1067281
+source-git-commit: 341b34c9acd7b3e19369ec30c4ba643c0cf1b829
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '149'
 ht-degree: 20%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 20%
    - [Directrices generales para la ejecución de consultas](best-practices/writing-queries.md)
    - [Directrices para la organización de recursos de datos](./best-practices/organize-data-assets.md)
    - [Trabajo con estructuras de datos anidadas](best-practices/nested-data-structures.md)
-   - [Ejemplos de consultas de bloques anónimas](best-practices/anonymous-block.md)
+   - [Bloque anónimo](best-practices/anonymous-block.md)
    - [Carga incremental](best-practices/incremental-load.md)
    - [Deduplicación de datos](best-practices/deduplication.md)
 - Consultas de ejemplo {#sample-queries}
