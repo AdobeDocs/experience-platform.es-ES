@@ -5,9 +5,9 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene información sobre los códigos de error comunes que encuentra y las posibles causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3292'
 ht-degree: 1%
 
 ---
@@ -489,8 +489,7 @@ FROM <table_name>
 
 ## Herramientas de terceros {#third-party-tools}
 
-+++Respuesta Esta sección incluye información sobre el uso de herramientas de terceros como PSQL y Power BI.
-+++
+Esta sección incluye información sobre el uso de herramientas de terceros como PSQL y Power BI.
 
 ### ¿Puedo conectar el servicio de consulta a una herramienta de terceros?
 
