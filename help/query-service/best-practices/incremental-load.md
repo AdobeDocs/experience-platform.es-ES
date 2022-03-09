@@ -1,15 +1,15 @@
 ---
-title: Ejemplo de consultas de carga incremental
+title: Carga incremental en el servicio de consulta
 description: La función de carga incremental utiliza funciones de bloques anónimos y de instantánea para proporcionar una solución casi en tiempo real que permita mover datos del lago de datos al almacén de datos e ignorar los datos coincidentes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
-# Ejemplos de consultas de carga de datos incrementales
+# Carga incremental en el servicio de consulta
 
 El patrón de diseño de carga incremental es una solución para administrar datos. El patrón solo procesa la información del conjunto de datos que se ha creado o modificado desde la última ejecución de carga.
 

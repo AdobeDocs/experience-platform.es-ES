@@ -4,9 +4,9 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar datos en el lago de datos de Platform.
 feature: Queries
-source-git-commit: 7dd0f69b51ebda5e43fc0e832be249ed2a0eebe1
+source-git-commit: c3baf586f5e11e085114b1f26422d191b1067281
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '151'
 ht-degree: 20%
 
 ---
@@ -32,12 +32,13 @@ ht-degree: 20%
    - [Directrices generales para la ejecución de consultas](best-practices/writing-queries.md)
    - [Directrices para la organización de recursos de datos](./best-practices/organize-data-assets.md)
    - [Trabajo con estructuras de datos anidadas](best-practices/nested-data-structures.md)
-   - [Deduplicación de datos](best-practices/deduplication.md)
-   - [Ejemplos de consultas de eventos de experiencia](best-practices/experience-event-queries.md)
-   - [Ejemplos de consultas de Adobe Analytics](best-practices/adobe-analytics.md)
-   - [Ejemplos de consultas de Adobe Target](best-practices/adobe-target.md)
    - [Ejemplos de consultas de bloques anónimas](best-practices/anonymous-block.md)
    - [Carga incremental](best-practices/incremental-load.md)
+   - [Deduplicación de datos](best-practices/deduplication.md)
+- Consultas de ejemplo {#sample-queries}
+   - [Ejemplos de consultas de eventos de experiencia](sample-queries/experience-event.md)
+   - [Ejemplos de consultas de Adobe Analytics](sample-queries/adobe-analytics.md)
+   - [Ejemplos de consultas de Adobe Target](sample-queries/adobe-target.md)
 - Referencia SQL {#sql}
    - [Información general de SQL](sql/overview.md)
    - [Sintaxis SQL](sql/syntax.md)
