@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Adobe Experience Cloud Identity Service
 description: Últimas notas de la versión de la extensión de etiqueta Adobe Experience Cloud Identity Service en Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
+source-git-commit: 04dfe55fec06d08a0caef7aee5bf8d85c6056149
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 96%
+source-wordcount: '614'
+ht-degree: 83%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 96%
 
 Para obtener las notas de la versión del propio Experience Cloud Identity Service, y no solo de la extensión de etiqueta de Adobe Experience Platform, consulte: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es)
 
-## 3 de noviembre de 2021
+## 9 de marzo de 2022
 
-### Extensión de Experience Cloud ID 5.2.1
+### Extensión de Experience Cloud ID 5.4.0
 
 #### **Funcionalidades**
 
-* Este parche contiene una corrección que permite la escritura de cookies desde un iFrame con el atributo `SameSite=None` en el explorador Google Chrome.
+* Esta versión contiene la última versión de Visitante 5.4.0, que tiene las siguientes actualizaciones:
+
+   * Capacidad para configurar la duración de la `s_ecid` cookie mediante cookieLifetime config
+   * Actualización de un problema del explorador Firefox que se produce cuando una página se carga en un iFrame secundario
+
+## 10 de octubre de 2021
+
+### Extensión de Experience Cloud ID 5.3.1
+
+#### **Funcionalidades**
+
+* Esta versión contiene la última versión de Visitante 5.3.0, que tiene las siguientes nuevas actualizaciones:
+
+   * Algoritmo actualizado para generar ECID local
+   * Última inclusión con `Secure` y `SameSite` indicadores para la cookie de privacidad
+   * Corrección de un problema con el explorador Firefox cuando una página se carga en un iFrame secundario
 
 ## 12 de enero de 2021
 
@@ -32,6 +47,14 @@ Para obtener las notas de la versión del propio Experience Cloud Identity Servi
 #### **Funcionalidades**
 
 * La actualización al parche de VisitorJS 5.2.0 con una corrección para DataElement de ECID no se pudo realizar cuando se recibió el consentimiento.
+
+## 3 de noviembre de 2020
+
+### Extensión de Experience Cloud ID 5.2.1
+
+#### **Funcionalidades**
+
+* Este parche contiene una corrección que permite la escritura de cookies desde un iFrame con el atributo `SameSite=None` en el explorador Google Chrome.
 
 ## 27 de octubre de 2020
 
