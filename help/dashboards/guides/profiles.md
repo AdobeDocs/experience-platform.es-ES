@@ -4,9 +4,9 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
+source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
 workflow-type: tm+mt
-source-wordcount: '2324'
+source-wordcount: '2329'
 ht-degree: 1%
 
 ---
@@ -169,7 +169,7 @@ Para obtener más información sobre las identidades, visite [Documentación del
 >
 >Los widgets de eficacia de perfil están actualmente en versión beta y no están disponibles para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-Adobe proporciona varias utilidades para evaluar la integridad de los perfiles introducidos disponibles para su análisis de datos. Cada una de las utilidades de eficacia del perfil se puede filtrar mediante la política de combinación. Para cambiar el filtro de directiva de combinación, seleccione la opción[!UICONTROL Perfiles mediante una directiva de combinación] y elija la política adecuada en la lista disponible.
+Adobe proporciona múltiples utilidades para evaluar la integridad de los perfiles incorporados disponibles para su análisis de datos. Cada una de las utilidades de eficacia del perfil se puede filtrar mediante la política de combinación. Para cambiar el filtro de directiva de combinación, seleccione la opción[!UICONTROL Perfiles mediante una directiva de combinación] y elija la política adecuada en la lista disponible.
 
 Para obtener más información sobre cada una de las utilidades de eficacia de perfil, seleccione el nombre de un widget en la siguiente lista:
 
@@ -196,9 +196,9 @@ Este widget crea un gráfico circular de la integridad del perfil desde la últi
 
 Este widget muestra la proporción de perfiles con una integridad alta, media o baja. De forma predeterminada, hay tres niveles de integridad configurados:
 
-* Alto contenido: Los perfiles tienen más del 70 % de atributos completados.
-* Complejidad media: Los perfiles tienen menos del 70 % y más del 30 % de atributos completados.
-* Baja exhaustividad: Los perfiles tienen menos del 30 % de atributos rellenados.
+* Alto contenido: Los perfiles tienen más del 70% de los atributos rellenados.
+* Complejidad media: Los perfiles tienen menos del 70 % y más del 30 % de los atributos rellenados.
+* Baja exhaustividad: Los perfiles tienen menos del 30% de los atributos rellenados.
 
 ![Los perfiles mediante la utilidad de integridad](../images/profiles/profiles-by-completeness.png)
 
@@ -210,9 +210,9 @@ El eje x representa el tiempo, el eje y representa el número de perfiles y los 
 
 Los tres niveles de integridad son:
 
-* Alto contenido: Los perfiles tienen más del 70 % de atributos completados.
-* Complejidad media: Los perfiles tienen menos del 70 % y más del 30 % de atributos completados.
-* Baja exhaustividad: Los perfiles tienen menos del 30 % de atributos rellenados.
+* Alto contenido: Los perfiles tienen más del 70% de los atributos rellenados.
+* Complejidad media: Los perfiles tienen menos del 70 % y más del 30 % de los atributos rellenados.
+* Baja exhaustividad: Los perfiles tienen menos del 30% de los atributos rellenados.
 
 ![El widget de tendencia de la compleción de perfiles](../images/profiles/profiles-completeness-trend.png)
 
