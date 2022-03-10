@@ -4,9 +4,9 @@ user-guide-title: Ayuda de etiquetas
 breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '386'
 ht-degree: 87%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 87%
    * [Bibliotecas](./ui/publishing/libraries.md)
    * [Bibliotecas de alojamiento propio](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Volver a publicar una biblioteca](./ui/publishing/republish.md)
+   * [Compatibilidad con CDN Premium (Beta)](./ui/publishing/premium-cdn.md)
 * Información del lado del cliente {#client-side}
    * [Información general](./ui/client-side/overview.md)
    * [Implementación asíncrona](./ui/client-side/asynchronous-deployment.md)
