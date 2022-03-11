@@ -1,9 +1,10 @@
 ---
 title: Compatibilidad de CDN Premium con etiquetas
 description: Obtenga información sobre la función de CDN premium para etiquetas y cómo se puede utilizar para entregar el contenido en varias regiones geográficas.
-source-git-commit: 530fc1ad3f389ffb5d77ddf6aa0b0b3208f1d532
+exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
+source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -20,21 +21,13 @@ Para tener en cuenta esto, las etiquetas en Experience Platform proporcionan una
 
 La compatibilidad con CDN Premium es una función de pago que su organización debe adquirir para habilitarla y utilizarla. Esta guía explica cómo configurar y utilizar esta función en la interfaz de usuario de recopilación de datos después de comprarla.
 
-## Habilitar CDN premium para una empresa
+## Habilitar la CDN premium para su organización
 
-La CDN Premium está habilitada a nivel de empresa, lo que significa que debe tener permisos de edición de la empresa para habilitar la función.
-
-En la interfaz de usuario de la recopilación de datos, vaya a **[!UICONTROL Etiquetas]** > **[!UICONTROL Compañías]**. Desde aquí, seleccione la empresa para la que desea habilitar la función y, a continuación, seleccione **[!UICONTROL Configurar]** .
-
-![Seleccione una empresa para configurar](../../images/ui/publishing/premium-cdn/configure-property.png)
-
-En el cuadro de diálogo de configuración que aparece, seleccione la opción para **[!UICONTROL CDN Premium habilitado]** antes de seleccionar **[!UICONTROL Guardar]** para confirmar los cambios.
-
-![Habilitar la opción de CDN premium](../../images/ui/publishing/premium-cdn/enable-premium-cdn.png)
+La CDN Premium está habilitada a nivel de empresa. Una vez que su organización haya adquirido la función de CDN premium, un administrador de Adobe habilitará para su empresa en la interfaz de usuario de recopilación de datos.
 
 ## Reconstruya e instale bibliotecas de etiquetas con códigos incrustados actualizados
 
-Habilitar la función de CDN premium no significa que los recursos de etiquetas se replicen inmediatamente y estén listos para utilizarse en las nuevas regiones. Solo significa que ahora puede elegir cuándo activar esta funcionalidad.
+Una vez activada la CDN Premium, no significa que los recursos de etiquetas se repliquen inmediatamente y estén listos para utilizarse en las nuevas regiones. Solo significa que ahora puede elegir cuándo activar esta funcionalidad.
 
 >[!IMPORTANT]
 >
