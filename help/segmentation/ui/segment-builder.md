@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Generador de segmentos
 topic-legacy: ui guide
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6f4d250750d36c516a9a5730b5ced91e47d3bf05
+source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2457'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ La variable **[!UICONTROL Atributos]** le permite explorar [!DNL Profile] atribu
 
 ### Eventos
 
-La variable **[!UICONTROL Eventos]** le permite crear una audiencia en función de eventos o acciones que se hayan realizado con [!DNL XDM ExperienceEvent] elementos de datos. También puede encontrar Tipos de eventos en la **[!UICONTROL Eventos]** , que son una colección de eventos que se utilizan con más frecuencia para permitirle crear sus segmentos más rápidamente.
+La variable **[!UICONTROL Eventos]** le permite crear una audiencia en función de eventos o acciones que se hayan realizado con [!DNL XDM ExperienceEvent] elementos de datos. También puede encontrar Tipos de eventos en la **[!UICONTROL Eventos]** , que son una colección de eventos que se utilizan con frecuencia para permitirle crear sus segmentos más rápidamente.
 
 Además de poder buscar [!DNL ExperienceEvent] también puede buscar tipos de eventos. Los tipos de eventos utilizan la misma lógica de codificación que [!DNL ExperienceEvents], sin que sea necesario que busque en la [!DNL XDM ExperienceEvent] buscando el evento correcto. Por ejemplo, si se utiliza la barra de búsqueda para buscar &quot;carro&quot;, se devuelven los Tipos de eventos .[!UICONTROL AddCart]&quot; y &quot;[!UICONTROL RemoveCart]&quot;, que son dos acciones del carro de compras que se usan con mucha frecuencia al crear definiciones de segmentos.
 
@@ -112,7 +112,15 @@ Para agregar una regla nueva a la definición del segmento, arrastre un mosaico 
 
 >[!IMPORTANT]
 >
->Los últimos cambios realizados en Adobe Experience Platform han actualizado el uso de la variable `OR` y `AND` operadores lógicos entre eventos. Estas actualizaciones no afectarán a los segmentos existentes. Sin embargo, estos cambios afectarán a todas las actualizaciones subsiguientes de segmentos existentes y nuevas creaciones de segmentos. Lea el [actualización de constantes temporales](./segment-refactoring.md) para obtener más información.
+>Los últimos cambios realizados en Adobe Experience Platform han actualizado el uso de la variable `OR` y `AND` operadores lógicos entre eventos. Estas actualizaciones no afectarán a los segmentos existentes. Sin embargo, estos cambios afectarán a todas las actualizaciones posteriores de segmentos existentes y nuevas creaciones de segmentos. Lea el [actualización de constantes temporales](./segment-refactoring.md) para obtener más información.
+
+Al seleccionar un valor para el atributo, verá una lista de valores de enumeración que puede ser el atributo.
+
+![](../images/ui/segment-builder/enum-list.png)
+
+Si selecciona un valor de esta lista de enumeraciones, el valor se delineará con un borde sólido. Sin embargo, para los campos que utilizan `meta:enum` (suave) enumeraciones, también puede seleccionar un valor que sea **not** de la lista de enumeraciones. Si crea su propio valor, se delineará con un borde de puntos, junto con una advertencia de que este valor no está en la lista de enumeración.
+
+![](../images/ui/segment-builder/enum-warning.png)
 
 ### Adición de audiencias
 
