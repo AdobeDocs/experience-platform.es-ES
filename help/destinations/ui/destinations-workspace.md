@@ -4,9 +4,9 @@ title: Espacio de trabajo de destinos
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema. Se describen en las secciones siguientes.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---
@@ -107,8 +107,8 @@ La variable **[!UICONTROL Examinar]** muestra los destinos con los que ha establ
 | [!UICONTROL Tipo de conexión] | Representa el tipo de conexión con su espacio de almacenamiento o destino. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3, FTP o [!DNL Azure Blob].</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor.</li><li>Para destinos de flujo continuo: Puede [!DNL Azure Event Hubs] o [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nombre de usuario] | Credenciales de cuenta que ha seleccionado para el flujo de destino. |
 | [!UICONTROL Datos de activación] | Indica el número de segmentos que se están activando en este destino. Seleccione este control para obtener más información sobre los segmentos activados. Consulte [Datos de activación](/help/destinations/ui/destination-details-page.md#activation-data) en la página de detalles de destino para obtener más información sobre los segmentos activados. |
-| [!UICONTROL Creado] | La fecha y la hora UTC en que se creó el flujo de activación al destino. |
-| [!UICONTROL Estado] | `Active` o `Inactive`. Indica si se están activando datos en este destino. |
+| [!UICONTROL Creado] | La fecha y la hora UTC en que se creó el flujo de activación al destino. Seleccione el símbolo de flecha hacia arriba o hacia abajo para ordenar los flujos de activación por primero más reciente o más antiguo. |
+| [!UICONTROL Estado] | `Enabled` o `Disabled`. Indica si se están activando datos en este destino. |
 
 Haga clic en una fila de destino para que aparezca más información sobre el destino en el carril derecho.
 
