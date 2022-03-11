@@ -5,7 +5,7 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
+source-git-commit: 5be496cec28ab99c057834005aa1f014cea7406c
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Con Experience Platform, puede centralizar los datos que recopila de fuentes dif
 
 Las fuentes en Experience Platform se agrupan en las siguientes categorías:
 
-### aplicaciones de Adobe
+### aplicaciones de Adobe {#adobe-applications}
 
 Experience Platform permite la ingesta de datos desde otras aplicaciones de Adobe, incluidas Adobe Analytics y Adobe Audience Manager. Consulte los siguientes documentos relacionados para obtener más información:
 
@@ -38,13 +38,13 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 - [[!DNL Marketo Engage] información general del conector](connectors/adobe-applications/marketo/marketo.md)
 - [Cree un [!DNL Marketo Engage] conexión de origen en la interfaz de usuario](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Advertising
+### Advertising {#advertising}
 
 Experience Platform permite la ingesta de datos desde un sistema de publicidad de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
 
-### Almacenamiento en la nube
+### Almacenamiento en la nube {#cloud-storage}
 
 Las fuentes de almacenamiento en la nube pueden traer sus propios datos a Platform sin necesidad de descargar, formatear o cargar. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o delimitados. Cada paso del proceso se integra en el flujo de trabajo Orígenes mediante la interfaz de usuario. Consulte los siguientes documentos relacionados para obtener más información:
 
@@ -62,7 +62,7 @@ Las fuentes de almacenamiento en la nube pueden traer sus propios datos a Platfo
 - [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
-### Administración de la relación con los clientes (CRM)
+### Administración de la relación con los clientes (CRM) {#crm}
 
 Los sistemas CRM proporcionan datos que pueden ayudar a crear relaciones con los clientes, lo que a su vez crea lealtad e impulsa la retención de los clientes. El Experience Platform es compatible con la ingesta de datos CRM desde [!DNL Microsoft Dynamics 365] y [!DNL Salesforce]. Consulte los siguientes documentos relacionados para obtener más información:
 
@@ -71,14 +71,14 @@ Los sistemas CRM proporcionan datos que pueden ayudar a crear relaciones con los
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### Éxito del cliente
+### Éxito del cliente {#customer-success}
 
 Experience Platform proporciona asistencia para la ingesta de datos desde una aplicación de éxito de cliente de terceros. Consulte los siguientes documentos relacionados para obtener más información:
 
 - [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
 
-### Database
+### Database {#database}
 
 Experience Platform permite la ingesta de datos desde una base de datos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
@@ -101,19 +101,19 @@ Experience Platform permite la ingesta de datos desde una base de datos de terce
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
 - [[!DNL Snowflake] connector](connectors/databases/snowflake.md)
 
-### eCommerce
+### eCommerce {#ecommerce}
 
 Experience Platform permite la ingesta de datos desde un sistema de comercio electrónico de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
-### Sistema local
+### Sistema local {#local-system}
 
 Experience Platform permite la ingesta de datos desde el sistema local. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
 - [Carga de archivo local](connectors/local-system/local-file-upload.md)
 
-### Automatización de la mercadotecnia
+### Automatización de la mercadotecnia {#marketing-automation}
 
 Experience Platform permite la ingesta de datos desde un sistema de automatización de marketing de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
@@ -121,19 +121,19 @@ Experience Platform permite la ingesta de datos desde un sistema de automatizaci
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### Pagos
+### Pagos {#payments}
 
 Experience Platform permite la ingesta de datos desde un sistema de pagos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
 
-### Transmisión
+### Transmisión {#streaming}
 
 El Experience Platform es compatible con la ingesta de datos de fuentes de flujo continuo. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### Protocolos
+### Protocolos {#protocols}
 
 Experience Platform permite la ingesta de datos desde un sistema de protocolos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 

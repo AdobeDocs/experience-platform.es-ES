@@ -1,151 +1,133 @@
 ---
 keywords: Experience Platform;inicio;temas populares;conector de comercio electrónico;eCommerce
 solution: Experience Platform
-title: Configurar un flujo de datos para una conexión de origen de comercio electrónico en la interfaz de usuario
+title: Crear un flujo de datos con un origen de comercio electrónico en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
-description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un [!DNL Platform] conjunto de datos. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de comercio electrónico.
+description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de comercio electrónico mediante la interfaz de usuario de Platform.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1386'
 ht-degree: 0%
 
 ---
 
-# Configurar un flujo de datos para una conexión de comercio electrónico en la interfaz de usuario
+# Crear un flujo de datos mediante una fuente de comercio electrónico en la interfaz de usuario
 
-Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un [!DNL Platform] conjunto de datos. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el uso de su **[!UICONTROL comercio electrónico]** cuenta.
-
-## Primeros pasos
-
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
-
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-   - [Aspectos básicos de la composición del esquema](../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Tutorial del Editor de esquemas](../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-- [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
-
-Además, este tutorial requiere que ya haya creado un **[!UICONTROL comercio electrónico]** cuenta. Una lista de tutoriales para crear diferentes **[!UICONTROL comercio electrónico]** Los conectores de la interfaz de usuario se encuentran en la [información general sobre conectores de origen](../../../home.md).
-
-## Seleccionar datos
-
-Después de crear el **[!UICONTROL comercio electrónico]** cuenta, la variable **[!UICONTROL Seleccionar datos]** aparece, proporcionando una interfaz interactiva para explorar la jerarquía de archivos.
-
-- La mitad izquierda de la interfaz es un navegador de directorios, que muestra los archivos y directorios del servidor.
-- La mitad derecha de la interfaz permite previsualizar hasta 100 filas de datos de un archivo compatible.
-
-Puede usar la variable **[!UICONTROL Buscar]** en la parte superior de la página para identificar rápidamente los datos de origen que desea utilizar.
+Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos en Adobe Experience Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para un origen de comercio electrónico mediante la interfaz de usuario de Platform.
 
 >[!NOTE]
 >
->La opción de datos de la fuente de búsqueda está disponible para todos los conectores de origen basados en tablas, excepto los conectores de Analytics, Clasificaciones, Centros de eventos y Kinesis.
+>Para crear un flujo de datos, ya debe tener una cuenta autenticada con un origen de comercio electrónico. Puede encontrar una lista de tutoriales para crear distintas cuentas de origen de comercio electrónico en la interfaz de usuario en la [información general sobre fuentes](../../../home.md#ecommerce).
 
-Una vez que encuentre los datos de origen, seleccione el directorio y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+## Primeros pasos
 
-![select-data](../../../images/tutorials/dataflow/ecommerce/select-data.png)
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
 
-## Asignación de campos de datos a un esquema XDM
+* [Fuentes](../../../home.md): Platform permite la ingesta de datos de varias fuentes, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+   * [Aspectos básicos de la composición del esquema](../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   * [Tutorial del Editor de esquemas](../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
+* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Data Prep]](../../../../data-prep/home.md): Permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
 
-La variable **[!UICONTROL Asignación]** aparece, proporcionando una interfaz interactiva para asignar los datos de origen a un [!DNL Platform] conjunto de datos.
+## Adición de datos
 
-Elija un conjunto de datos para los datos entrantes en los que se van a introducir. Puede usar un conjunto de datos existente o crear un conjunto de datos nuevo.
+Después de crear su cuenta de origen de comercio electrónico, la variable **[!UICONTROL Añadir datos]** aparece, proporcionando una interfaz para explorar la jerarquía de tablas de la cuenta de origen de comercio electrónico.
 
-### Usar un conjunto de datos existente
+* La mitad izquierda de la interfaz es un explorador que muestra una lista de tablas de datos incluidas en la cuenta. La interfaz también incluye una opción de búsqueda que permite identificar rápidamente los datos de origen que desea utilizar.
+* La mitad derecha de la interfaz es un panel de vista previa, que le permite obtener una vista previa de hasta 100 filas de datos.
 
-Para introducir datos en un conjunto de datos existente, seleccione **[!UICONTROL Usar conjunto de datos existente]** y, a continuación, haga clic en el icono del conjunto de datos.
-
-![use-existing-dataset](../../../images/tutorials/dataflow/ecommerce/use-existing-dataset.png)
-
-La variable **[!UICONTROL Seleccionar conjunto de datos]** se abre. Busque el conjunto de datos que desea utilizar, selecciónelo y haga clic en **[!UICONTROL Continuar]**.
-
-![select-existing-dataset](../../../images/tutorials/dataflow/ecommerce/select-existing-dataset.png)
-
-### Usar un nuevo conjunto de datos
-
-Para introducir datos en un nuevo conjunto de datos, seleccione **[!UICONTROL Crear nuevo conjunto de datos]** e introduzca un nombre y una descripción para el conjunto de datos en los campos proporcionados.
-
-Puede adjuntar un campo de esquema introduciendo un nombre de esquema en la variable **[!UICONTROL Seleccionar esquema]** barra de búsqueda. También puede seleccionar el icono desplegable para ver una lista de los esquemas existentes. También puede seleccionar **[!UICONTROL Búsqueda avanzada]** para acceder a la pantalla de los esquemas existentes, incluidos sus respectivos detalles.
-
-Durante este paso, puede habilitar su conjunto de datos para [!DNL Real-time Customer Profile] y crear una vista holística de los atributos y comportamientos de una entidad. Los datos de todos los conjuntos de datos habilitados se incluirán en [!DNL Profile] Los cambios y se aplican cuando guarda el flujo de datos.
-
-Alternar el **[!UICONTROL Conjunto de datos del perfil]** para habilitar el conjunto de datos de target [!DNL Profile].
-
-![create-new-dataset](../../../images/tutorials/dataflow/ecommerce/new-dataset.png)
-
-La variable **[!UICONTROL Seleccionar esquema]** se abre. Seleccione el esquema que desea aplicar al nuevo conjunto de datos y haga clic en **[!UICONTROL Listo]**.
-
-![select-schema](../../../images/tutorials/dataflow/ecommerce/select-schema.png)
-
-En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para ver los pasos completos sobre el uso de la interfaz del asignador y los campos calculados, consulte la [Guía de la interfaz de usuario de preparación de datos](../../../../data-prep/ui/mapping.md).
-
->[!TIP]
+>[!NOTE]
 >
->Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
+>La opción de fuente de datos de búsqueda está disponible para todas las fuentes basadas en tablas, excluyendo Adobe Analytics. [!DNL Amazon Kinesis]y [!DNL Azure Event Hubs].
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+Una vez que encuentre los datos de origen, seleccione la tabla y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
-Select **[!UICONTROL Vista previa de datos]** para ver los resultados de asignación de hasta 100 filas de datos de ejemplo del conjunto de datos seleccionado.
-
-Durante la vista previa, la columna de identidad se prioriza como el primer campo, ya que es la información clave necesaria al validar los resultados de la asignación.
-
-![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
-
-Una vez asignados los datos de origen, seleccione **[!UICONTROL Cerrar]**.
-
-## Programar ejecuciones de ingesta
-
-La variable **[!UICONTROL Programación]** , lo que le permite configurar una programación de ingesta para que ingrese automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. La siguiente tabla describe los diferentes campos configurables para la programación:
-
-| Campo | Descripción |
-| --- | --- |
-| Frecuencia | Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`y `Week`. |
-| Intervalo | Un entero que define el intervalo para la frecuencia seleccionada. |
-| Hora de inicio | Marca de tiempo UTC que indica cuándo se configura la primera ingesta. |
-| Relleno | Un valor booleano que determina qué datos se introducen inicialmente. If **[!UICONTROL Relleno]** está activada, todos los archivos actuales de la ruta especificada se incorporarán durante la primera ingesta programada. If **[!UICONTROL Relleno]** está desactivado, solo se introducen los archivos que se cargan entre la primera ejecución de la ingesta y la hora de inicio. Los archivos cargados antes de la hora de inicio no se incorporarán. |
-| Columna Delta | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se incorporarán en función de la marca de tiempo de la columna seleccionada. |
-
-Los flujos de datos están diseñados para introducir datos automáticamente y de forma programada. Comience por seleccionar la frecuencia de ingesta. A continuación, configure el intervalo para designar el periodo entre dos ejecuciones de flujo. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15.
-
-Para definir la hora de inicio de la ingesta, ajuste la fecha y la hora que se muestran en el cuadro de hora de inicio. También puede seleccionar el icono de calendario para editar el valor de la hora de inicio. La hora de inicio debe ser buena o igual a la hora UTC actual.
-
-Select **[!UICONTROL Cargar datos incrementales por]** para asignar la columna delta. Este campo proporciona una distinción entre datos nuevos y existentes.
-
-![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
-
-### Configurar un flujo de datos de ingesta único
-
-Para configurar la ingesta única, seleccione la flecha desplegable de frecuencia y seleccione **[!UICONTROL Una vez]**.
-
->[!TIP]
->
->**[!UICONTROL Intervalo]** y **[!UICONTROL Relleno]** no son visibles durante una ingesta única.
-
-Una vez que haya proporcionado los valores adecuados a la programación, seleccione **[!UICONTROL Siguiente]**.
-
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
 ## Proporcionar detalles de flujo de datos
 
-La variable **[!UICONTROL Detalles de flujo de datos]** aparece, lo que le permite asignar un nombre y describir brevemente el nuevo flujo de datos.
+The [!UICONTROL Dataflow detail] page allows you to select whether you want to use an existing dataset or a new dataset. Durante este proceso, también puede configurar las opciones de [!UICONTROL Conjunto de datos del perfil], [!UICONTROL Diagnóstico de errores], [!UICONTROL Ingesta parcial]y [!UICONTROL Alertas].
 
-Durante este proceso, también puede habilitar **[!UICONTROL Ingesta parcial]** y **[!UICONTROL Diagnóstico de errores]**. Habilitación **[!UICONTROL Ingesta parcial]** permite introducir datos que contengan errores hasta un umbral determinado. Una vez **[!UICONTROL Ingesta parcial]** está activada, arrastre el **[!UICONTROL Umbral de error %]** para ajustar el umbral de error del lote. Como alternativa, puede ajustar manualmente el umbral seleccionando el cuadro de entrada. Para obtener más información, consulte la [información general sobre la ingesta parcial de lotes](../../../../ingestion/batch-ingestion/partial.md).
+![dataflow-detail](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
-Proporcione valores para el flujo de datos y seleccione **[!UICONTROL Siguiente]**.
+### Use an existing dataset
 
-![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. Puede recuperar un conjunto de datos existente mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable. Una vez que haya seleccionado un conjunto de datos, proporcione un nombre y una descripción para el flujo de datos.
+
+![existing-dataset](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
+
+### Usar un nuevo conjunto de datos
+
+To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. A continuación, seleccione un esquema para asignarlo mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de esquemas existentes en el menú desplegable. Una vez que haya seleccionado un esquema, proporcione un nombre y una descripción para el flujo de datos.
+
+![conjunto de datos nuevo](../../../images/tutorials/dataflow/table-based/new-dataset.png)
+
+### Habilitar [!DNL Profile] y diagnóstico de errores
+
+A continuación, seleccione la **[!UICONTROL Conjunto de datos del perfil]** alternar para habilitar su conjunto de datos para [!DNL Profile]. Esto le permite crear una vista holística de los atributos y comportamientos de una entidad. Datos de todos [!DNL Profile]Los conjuntos de datos habilitados para se incluirán en [!DNL Profile] Los cambios y se aplican cuando guarda el flujo de datos.
+
+[!UICONTROL Diagnóstico de errores] permite generar mensajes de error detallados para cualquier registro erróneo que se produzca en el flujo de datos, mientras que [!UICONTROL Ingesta parcial] le permite introducir datos que contengan errores, hasta un umbral determinado que defina manualmente. Consulte la [información general sobre la ingesta parcial de lotes](../../../../ingestion/batch-ingestion/partial.md) para obtener más información.
+
+![profile-and-errors](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
+
+### Habilitar alertas
+
+You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../alerts.md).
+
+Cuando haya terminado de proporcionar detalles al flujo de datos, seleccione **[!UICONTROL Siguiente]**.
+
+![alertas](../../../images/tutorials/dataflow/table-based/alerts.png)
+
+## Asignación de campos de datos a un esquema XDM
+
+La variable [!UICONTROL Asignación] aparece, proporcionando una interfaz para asignar los campos de origen del esquema de origen a los campos XDM de destino adecuados en el esquema de destino.
+
+Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para ver los pasos completos sobre el uso de la interfaz del asignador y los campos calculados, consulte la [Guía de la interfaz de usuario de preparación de datos](../../../../data-prep/ui/mapping.md).
+
+Una vez asignados correctamente los datos de origen, seleccione **[!UICONTROL Siguiente]**.
+
+![mapping](../../../images/tutorials/dataflow/table-based/mapping.png)
+
+## Schedule ingestion runs
+
+The [!UICONTROL Scheduling] step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. By default, scheduling is set to `Once`. To adjust your ingestion frequency, select **[!UICONTROL Frequency]** and then select an option from the dropdown menu.
+
+>[!TIP]
+>
+>Interval and backfill are not visible during a one-time ingestion.
+
+![programación](../../../images/tutorials/dataflow/table-based/scheduling.png)
+
+Si establece la frecuencia de ingesta en `Minute`, `Hour`, `Day`o `Week`, debe configurar un intervalo para establecer un intervalo de tiempo definido entre cada ingesta. Por ejemplo, una frecuencia de ingesta establecida en `Day` y un intervalo establecido en `15` significa que el flujo de datos está programado para la ingesta de datos cada 15 días.
+
+Durante este paso, también puede activar **relleno** y defina una columna para la ingesta incremental de datos. El relleno se utiliza para introducir datos históricos, mientras que la columna que defina para la ingesta incremental permite diferenciar nuevos datos de los datos existentes.
+
+Consulte la siguiente tabla para obtener más información sobre las configuraciones de programación.
+
+| Campo | Descripción |
+| --- | --- |
+| Frecuencia | Frecuencia con la que se produce una ingesta. Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`y `Week`. |
+| Intervalo | Un entero que define el intervalo para la frecuencia seleccionada. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15. |
+| Hora de inicio | Marca de tiempo UTC que indica cuándo se configura la primera ingesta. La hora de inicio debe ser buena o igual a la hora UTC actual. |
+| Relleno | Un valor booleano que determina qué datos se introducen inicialmente. Si el relleno está habilitado, todos los archivos actuales de la ruta especificada se incorporarán durante la primera ingesta programada. Si el relleno está desactivado, solo se incorporarán los archivos que se cargan entre la primera ejecución de la ingesta y la hora de inicio. Los archivos cargados antes de la hora de inicio no se incorporarán. |
+| Cargar datos incrementales por | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se incorporarán en función de la marca de tiempo de la columna seleccionada. |
+
+![relleno](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Revise el flujo de datos
 
 La variable **[!UICONTROL Consulte]** , lo que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
-- **[!UICONTROL Conexión]**: Muestra el tipo de origen, la ruta correspondiente del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
-- **[!UICONTROL Asignación de campos de conjunto de datos y asignación]**: Muestra en qué conjunto de datos se están incorporando los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
-- **[!UICONTROL Programación]**: Muestra el período, la frecuencia y el intervalo activos del programa de ingesta.
+* **[!UICONTROL Conexión]**: Muestra el tipo de origen, la ruta correspondiente del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
+* **[!UICONTROL Asignación de campos de conjunto de datos y asignación]**: Muestra en qué conjunto de datos se están incorporando los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
+* **[!UICONTROL Scheduling]**: Shows the active period, frequency, and interval of the ingestion schedule.
 
-Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finalizar]** y permitir que se cree un flujo de datos.
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![review](../../../images/tutorials/dataflow/ecommerce/review.png)
+![review](../../../images/tutorials/dataflow/table-based/review.png)
 
 ## Monitorizar el flujo de datos
 
@@ -157,7 +139,15 @@ Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado i
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente un flujo de datos para **[!UICONTROL comercio electrónico]** datos y obtuvo información sobre la monitorización de conjuntos de datos. Los datos entrantes ahora se pueden usar en el flujo descendente [!DNL Platform] servicios como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado correctamente un flujo de datos para traer los datos de su fuente de comercio electrónico a Platform. Los datos entrantes ahora se pueden usar en el flujo descendente [!DNL Platform] servicios como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-- [Información general del [!DNL Real-time Customer Profile]](../../../../profile/home.md)
-- [Información general del [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
+* [Información general del [!DNL Real-time Customer Profile]](../../../../profile/home.md)
+* [Información general del [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
+
+
+>[!WARNING]
+>
+> La interfaz de usuario de Platform que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las últimas capturas de pantalla y funciones de la interfaz de usuario.
+>
+>[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
+
