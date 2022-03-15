@@ -2,9 +2,9 @@
 title: Notas de la versión de la extensión del SDK web de Adobe Experience Platform
 description: Extensión de etiquetas de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1290'
 ht-degree: 48%
 
 ---
@@ -12,6 +12,12 @@ ht-degree: 48%
 # Notas de la versión de Adobe Experience Platform Web SDK
 
 Este documento cubre las notas de la versión de la extensión de etiqueta del SDK web de Adobe Experience Platform. Para ver las últimas notas de la versión del propio SDK, consulte la [Notas de la versión del SDK web de plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versión 2.10.0: 10 de marzo de 2022
+
+* Actualice el fragmento de ocultamiento previo que está disponible para copiar en la página de configuración para trabajar con el editor de VEC de Adobe Target actualizado.
+
+Contiene la versión 2.9.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
 ## Versión 2.9.0: 19 de enero de 2022
 
