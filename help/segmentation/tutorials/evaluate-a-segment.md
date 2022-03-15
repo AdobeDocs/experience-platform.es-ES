@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para aprender a evaluar segmentos y acceder a resultados de segmentos mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -153,7 +153,7 @@ Se requieren los siguientes pasos para exportar la audiencia:
 - [Monitorización del progreso de exportación](#monitor-export-progress) - Compruebe el progreso actual del proceso de exportación.
 - [Leer datos de audiencia](#next-steps) - Recupere los perfiles individuales XDM resultantes que representan a los miembros de su audiencia.
 
-### Creación de un conjunto de datos de destino
+### Creación de un conjunto de datos de destino {#create-dataset}
 
 Al exportar una audiencia, primero debe crearse un conjunto de datos de destino. Es importante que el conjunto de datos esté configurado correctamente para garantizar que la exportación se realice correctamente.
 
