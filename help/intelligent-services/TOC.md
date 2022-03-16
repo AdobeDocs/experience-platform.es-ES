@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Ayuda de Servicios inteligentes
 breadcrumb-title: Guía de servicios inteligentes
 user-guide-description: Utilice los servicios inteligentes de IA para generar puntuaciones, descubrir perspectivas y crear segmentos a partir de los datos de eventos de marketing.
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 43405e50d0c418a8ee988f4d10b187cc4941c5ea
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 23%
+source-wordcount: '123'
+ht-degree: 22%
 
 ---
 
@@ -24,6 +24,7 @@ ht-degree: 23%
    - [Perspectivas de Discover](attribution-ai/discover-insights.md)
    - [Descargar puntuaciones](attribution-ai/download-scores.md)
    - [Analizar puntuaciones mediante el servicio de consulta](attribution-ai/aai-query-service.md)
+   - [Solución de problemas de error](attribution-ai/troubleshooting.md)
 - AI de contenido y comercio (beta) {#content-commerce-ai}
    - [Información general](content-commerce-ai/overview.md)
    - [Primeros pasos](content-commerce-ai/getting-started.md)
@@ -37,7 +38,7 @@ ht-degree: 23%
    - [Información general](customer-ai/overview.md)
    - [Introducción a Customer AI](customer-ai/getting-started.md)
    - [Entrada y salida](customer-ai/input-output.md)
-   - Guías de la IU{#user-guide}
+   - Guías de la interfaz de usuario{#user-guide}
       - [Configurar una instancia](customer-ai/user-guide/configure.md)
       - [Perspectivas de Discover](customer-ai/user-guide/discover-insights.md)
       - [Crear segmentos con puntuaciones de Customer AI](customer-ai/user-guide/create-segment.md)
