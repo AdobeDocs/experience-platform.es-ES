@@ -3,9 +3,9 @@ title: Configurar el almacén de datos para el SDK web del Experience Platform
 description: 'Obtenga información sobre cómo configurar Datastreams. '
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;id;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
+source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1944'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Este documento trata los pasos para configurar un conjunto de datos en la interf
 
 >[!NOTE]
 >
->Su organización debe estar aprovisionada para esta función a fin de acceder a ella en la interfaz de usuario de . Si no tiene acceso, póngase en contacto con su gestor de éxito de los clientes (CSM) para que se le ponga en la lista de permitidos.
+>Su organización debe estar aprovisionada para esta función a fin de acceder a ella en la interfaz de usuario de . Si no tiene acceso, rellene lo siguiente [formulario](http://adobe.ly/websdkaccess) y le concederemos el acceso necesario.
 
 ## Acceda a la [!UICONTROL Datastreams] workspace
 
