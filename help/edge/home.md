@@ -3,9 +3,9 @@ title: Información general del SDK web de Adobe Experience Platform
 description: Aprenda a utilizar el SDK web de Adobe Experience Platform para integrar las funcionalidades de Platform en su sitio web.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk web;SDK;SDK web;Launch;iniciar
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 1048f19e2395f63fac8c4218ed92a546b8071a93
+source-git-commit: 71857ffc5e671f4d9a0502fb95d89d30fdec1f15
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -62,9 +62,4 @@ El siguiente vídeo muestra Adobe Experience Platform [!DNL Web SDK] y Adobe Exp
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-Este producto evoluciona constantemente y crece para dar soporte a cada vez más casos de uso. Para mantenerse al día con las últimas novedades, consulte la [página de casos de uso admitidos](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). Esta página enumera los casos de uso que admitimos actualmente, con vínculos a más información cuando está disponible.
-
-* **Casos de uso aún no compatibles:** Estos son casos de uso que están en nuestra hoja de ruta para ser apoyados en el futuro.
-* **Casos De Uso En Curso:** Estos son los casos de uso en los que el equipo está trabajando para su lanzamiento.
-* **Casos de uso compatibles:** Estos son los casos de uso compatibles y que funcionan hoy en día.
-* **Casos de uso que no admitiremos:** Estos son los casos de uso que hemos tomado la decisión de no apoyar.
+Este producto evoluciona constantemente y crece para dar soporte a cada vez más casos de uso. Para mantenerse al día con las últimas novedades y ver lo que admitimos actualmente, consulte la [página de casos de uso admitidos](https://github.com/orgs/adobe/projects/18/views/1).
