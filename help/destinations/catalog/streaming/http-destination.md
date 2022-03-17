@@ -3,10 +3,10 @@ keywords: flujo continuo;
 title: Conexión de API HTTP
 description: El destino de la API HTTP en Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1275'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +27,17 @@ Para enviar datos de perfil a extremos HTTP, primero debe [conectarse al destino
 El destino HTTP está dirigido a clientes que necesitan exportar datos de perfil XDM y segmentos de audiencia a extremos HTTP genéricos.
 
 Los extremos HTTP pueden ser sistemas propios de los clientes o soluciones de terceros.
+
+## Tipo de exportación y frecuencia {#export-type-frequency}
+
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla seleccionar atributos de perfil del [flujo de trabajo de activación de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Requisitos previos {#prerequisites}
 

@@ -2,10 +2,10 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para el destino en el catálogo de Adobe Experience Platform. // Reemplazar por el párrafo de la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 1%
+source-wordcount: '1066'
+ht-degree: 2%
 
 ---
 
@@ -51,11 +51,22 @@ ht-degree: 1%
 
 {style=&quot;table-layout:auto&quot;}
 
-## Tipo de exportación {#export-type}
+## Tipo de exportación y frecuencia {#export-type-frequency}
 
-**Exportación de segmentos** - está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en la variable *YOURDESTINATION* destino.
+*En la tabla, mantenga solo las líneas que correspondan a su destino. Debe tener una línea para Export type y otra para Export frequency. Elimine los valores que no se apliquen al destino.*
 
-## Casos de uso
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en la variable *YOURDESTINATION* destino. |
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Lote]** | Los destinos de lote exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Casos de uso {#use-cases}
 
 Para ayudarle a comprender mejor cómo y cuándo debe usar la variable *YOURDESTINATION* destino, aquí hay ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver utilizando este destino.
 
@@ -79,7 +90,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 While [configuración](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) Para este destino, debe proporcionar la siguiente información:
 
-*Agregue los campos que los clientes deben rellenar al configurar un nuevo destino. Estos campos son específicos del destino y dependen de la configuración en el SDK de destino. Es posible que los campos del destino no sean los mismos que los que se enumeran a continuación.*
+*Agregue los campos que los clientes deben rellenar al configurar un nuevo destino. Estos campos son específicos de destino y dependen de la configuración en Destination SDK. Es posible que los campos del destino no sean los mismos que los que se enumeran a continuación.*
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.

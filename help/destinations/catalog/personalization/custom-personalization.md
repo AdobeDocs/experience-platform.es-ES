@@ -3,9 +3,9 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión personalizada personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a segmentos de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: 95d287f3eac08064da35aea7c4cb22ea901c7324
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platfor
 >
 >Antes de crear una conexión de personalización personalizada, lea la guía sobre cómo [configurar destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para casos de uso de personalización de la misma página y de la siguiente página, en varios componentes de Experience Platform.
 
-## Tipo de exportación {#export-type}
+## Tipo de exportación y frecuencia {#export-type-frequency}
 
 **Solicitud de perfil** : está solicitando todos los segmentos asignados en el destino de personalización personalizado para un solo perfil. Se pueden configurar diferentes destinos de personalización personalizados para diferentes [Almacenes de datos de recopilación de datos de Adobe](../../../edge/fundamentals/datastreams.md).
 

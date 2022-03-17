@@ -3,10 +3,10 @@ keywords: correo electrónico;correo electrónico;destinos de correo electrónic
 title: Conexión de Responsys de oracle
 description: Responsys es una herramienta de marketing por correo electrónico para campañas de marketing en canales múltiples que ofrece Oracle para personalizar las interacciones entre correo electrónico, móvil, visualización y social.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 1%
+source-wordcount: '522'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +18,16 @@ ht-degree: 1%
 
 Para enviar datos de segmentos a [!DNL Oracle Responsys], primero debe [conectarse al destino](#connect-destination) en Adobe Experience Platform y, a continuación, [configuración de una importación de datos](#import-data-into-responsys) desde su ubicación de almacenamiento a [!DNL Oracle Responsys].
 
-## Tipo de exportación {#export-type}
+## Tipo de exportación y frecuencia {#export-type-frequency}
 
-**Basado en perfiles** - está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal y como se elige en la pantalla de atributos seleccionados del [flujo de trabajo de activación de audiencia](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla seleccionar atributos de perfil del [flujo de trabajo de activación de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frecuencia de exportación | **[!UICONTROL Lote]** | Los destinos de lote exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## LISTA DE PERMITIDOS de direcciones IP {#allow-list}
 
@@ -43,12 +50,12 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 * Para **[!UICONTROL SFTP con contraseña]** conexiones, debe proporcionar:
    * [!UICONTROL Dominio]
-   * [!UICONTROL Puerto]
+   * [!UICONTROL Puerto ]
    * [!UICONTROL Nombre de usuario]
    * [!UICONTROL Contraseña]
 * Para **[!UICONTROL SFTP con clave SSH]** conexiones, debe proporcionar:
    * [!UICONTROL Dominio]
-   * [!UICONTROL Puerto]
+   * [!UICONTROL Puerto ]
    * [!UICONTROL Nombre de usuario]
    * [!UICONTROL Clave SSH]
 * Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en el **[!UICONTROL Clave]** para obtener más información. La clave pública debe escribirse como un [!DNL Base64] cadena codificada.

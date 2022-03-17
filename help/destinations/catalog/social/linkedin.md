@@ -3,10 +3,10 @@ keywords: conexión linkedin;conexión linkedin;destinos linkedin;linkedin;
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para segmentación, personalización y supresión de audiencias, en función de correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 0%
+source-wordcount: '834'
+ht-degree: 2%
 
 ---
 
@@ -14,48 +14,56 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Active perfiles para sus campañas [!DNL LinkedIn] para segmentación, personalización y supresión de audiencias, en función de correos electrónicos con hash e ID móviles.
+Activar perfiles para [!DNL LinkedIn] campañas para segmentación, personalización y supresión de audiencias, basadas en correos electrónicos con hash e ID móviles.
 
 ![Destino de linkedIn en la interfaz de usuario de Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Casos de uso
 
-Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL LinkedIn Matched Audiences], este es un caso de uso que los clientes de Adobe Experience Platform pueden resolver utilizando esta función.
+Para ayudarle a comprender mejor cómo y cuándo usar la variable [!DNL LinkedIn Matched Audiences] destino, este es un caso de uso que los clientes de Adobe Experience Platform pueden resolver utilizando esta función.
 
-Una empresa de software organiza una conferencia y quiere mantenerse en contacto con los participantes, y mostrarles ofertas personalizadas basadas en su estado de asistencia a la conferencia. La empresa puede ingerir direcciones de correo electrónico o ID de dispositivos móviles desde su propio [!DNL CRM] en Adobe Experience Platform. A continuación, pueden generar segmentos a partir de sus propios datos sin conexión y enviarlos a la plataforma social [!DNL LinkedIn], lo que optimiza su gasto en publicidad.
+Una empresa de software organiza una conferencia y quiere mantenerse en contacto con los participantes, y mostrarles ofertas personalizadas basadas en su estado de asistencia a la conferencia. La empresa puede ingerir direcciones de correo electrónico o ID de dispositivos móviles por su cuenta [!DNL CRM] en Adobe Experience Platform. A continuación, pueden generar segmentos a partir de sus propios datos sin conexión y enviarlos al [!DNL LinkedIn] plataforma social, optimizando su gasto publicitario.
 
 ## Identidades compatibles {#supported-identities}
 
-[!DNL LinkedIn Matched Audiences] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
+[!DNL LinkedIn Matched Audiences] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
 | Identidad de Target | Descripción | Consideraciones |
 |---|---|---|
 | GAID | Google Advertising ID | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres IDFA. |
-| email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para los correos electrónicos de texto sin formato y con hash, respectivamente. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para el texto sin formato y los correos electrónicos con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos. |
 
+{style=&quot;table-layout:auto&quot;}
 
-## Tipo de exportación {#export-type}
+## Tipo de exportación y frecuencia {#export-type-frequency}
 
-**Exportación de segmentos** : está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono y otros) utilizados en el  [!DNL LinkedIn Matched Audiences] destino.
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono y otros) utilizados en la variable [!DNL LinkedIn Matched Audiences] destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Requisitos previos de cuenta de linkedIn {#LinkedIn-account-prerequisites}
 
-Antes de usar el destino [!UICONTROL Audiencia coincidente con LinkedIn] , asegúrese de que su cuenta [!DNL LinkedIn Campaign Manager] tenga el nivel de permiso [!DNL Creative Manager] o superior.
+Antes de usar la variable [!UICONTROL Audiencia coincidente de linkedIn] destino, asegúrese de que su [!DNL LinkedIn Campaign Manager] La cuenta tiene el [!DNL Creative Manager] nivel de permiso o superior.
 
-Para obtener información sobre cómo editar los permisos de usuario de [!DNL LinkedIn Campaign Manager], consulte [Agregar, editar y eliminar permisos de usuario en cuentas publicitarias](https://www.linkedin.com/help/lms/answer/5753) en la documentación de LinkedIn.
+Para aprender a editar su [!DNL LinkedIn Campaign Manager] permisos de usuario, consulte [Agregar, editar y eliminar permisos de usuario en cuentas publicitarias](https://www.linkedin.com/help/lms/answer/5753) en la documentación de LinkedIn.
 
 ## Requisitos de coincidencia de ID {#id-matching-requirements}
 
-[!DNL LinkedIn Matched Audiences] exige que no se envíe con claridad ninguna información de identificación personal (PII). Por lo tanto, las audiencias activadas en [!DNL LinkedIn Matched Audiences] pueden desactivarse mediante identificadores *hash*, como direcciones de correo electrónico o ID de dispositivos móviles.
+[!DNL LinkedIn Matched Audiences] exige que no se envíe con claridad ninguna información de identificación personal (PII). Por lo tanto, las audiencias activadas en [!DNL LinkedIn Matched Audiences] se puede desactivar *hash* identificadores, como direcciones de correo electrónico o ID de dispositivos móviles.
 
 En función del tipo de ID que ingrese en Adobe Experience Platform, debe cumplir sus requisitos correspondientes.
 
 ## Requisitos de hash de correo electrónico {#email-hashing-requirements}
 
-Puede hash sobre las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o usar las direcciones de correo electrónico claramente en el Experience Platform, y tener [!DNL Platform] hash sobre ellas cuando se activen.
+Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform o utilizar las direcciones de correo electrónico claramente en Experience Platform, y [!DNL Platform] Hágalos en la activación.
 
-Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la [información general sobre la ingesta por lotes](/help/ingestion/batch-ingestion/overview.md) y la [información general sobre la ingesta de flujo](/help/ingestion/streaming-ingestion/overview.md).
+Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la [información general sobre la ingesta de lotes](/help/ingestion/batch-ingestion/overview.md) y [información general sobre la ingesta de transmisión](/help/ingestion/streaming-ingestion/overview.md).
 
 Si selecciona hash para las direcciones de correo electrónico usted mismo, asegúrese de cumplir con los siguientes requisitos:
 
@@ -68,43 +76,43 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 
 >[!NOTE]
 >
->Los datos de espacios de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarlos.
+>Los datos de las áreas de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarse.
 > Los datos de origen de atributos no se colocan automáticamente en hash.
 > 
-> Durante el paso [Asignación de identidad](../../ui/activate-segment-streaming-destinations.md#mapping), cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] hash automáticamente los datos al activarlos.
+> Durante el [Asignación de identidades](../../ui/activate-segment-streaming-destinations.md#mapping) cuando el campo de origen contenga atributos sin hash, marque la casilla **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos.
 > 
-> La opción **[!UICONTROL Aplicar transformación]** solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir espacios de nombres.
+> La variable **[!UICONTROL Aplicar transformación]** solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir espacios de nombres.
 
 ![Transformación de asignación de identidad](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Conectarse al destino {#connect}
 
-Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-El siguiente vídeo también muestra los pasos para configurar un destino [!DNL LinkedIn Matched Audiences] y activar segmentos.
+El siguiente vídeo muestra también los pasos para configurar un [!DNL LinkedIn Matched Audiences] dirigir y activar segmentos.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte el [tutorial de configuración de destino](../../ui/connect-destination.md).
+>La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte la [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 ### Parámetros de conexión {#parameters}
 
-Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
+While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Nombre]**: un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: su  [!DNL LinkedIn Campaign Manager Account ID]. Puede encontrar este ID en su cuenta [!DNL LinkedIn Campaign Manager].
+* **[!UICONTROL ID de cuenta]**: your [!DNL LinkedIn Campaign Manager Account ID]. Puede encontrar este ID en su [!DNL LinkedIn Campaign Manager] cuenta.
 
 ## Activar segmentos en este destino {#activate}
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
 ## Datos exportados {#exported-data}
 
-Una activación correcta significa que se crearía una audiencia [!DNL LinkedIn] personalizada mediante programación en [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). La pertenencia a segmentos en la audiencia se agregaría y eliminaría ya que los usuarios están cualificados o no cumplen los requisitos para los segmentos activados.
+Una activación correcta significa que [!DNL LinkedIn] la audiencia personalizada se crearía mediante programación en [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). La pertenencia a segmentos en la audiencia se agregaría y eliminaría ya que los usuarios están cualificados o no cumplen los requisitos para los segmentos activados.
 
 >[!TIP]
 >
->La integración entre Adobe Experience Platform y [!DNL LinkedIn Matched Audiences] admite los rellenos históricos de audiencias. Todas las cualificaciones históricas de segmentos se envían a [!DNL LinkedIn] al activar los segmentos en el destino.
+>La integración entre Adobe Experience Platform y [!DNL LinkedIn Matched Audiences] admite los rellenos históricos de audiencia. Todas las cualificaciones históricas de segmentos se envían a [!DNL LinkedIn] al activar los segmentos en el destino.

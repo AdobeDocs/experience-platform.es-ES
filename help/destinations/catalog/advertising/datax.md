@@ -2,10 +2,10 @@
 title: Conexión de datos de Verizon MediaYahoo
 description: DataX es una infraestructura agregada de Verizon Media/Yahoo que aloja varios componentes que permiten a Verizon Media/Yahoo intercambiar datos con sus socios externos de forma segura, automatizada y escalable.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 2%
+source-wordcount: '651'
+ht-degree: 3%
 
 ---
 
@@ -73,9 +73,16 @@ Verizon Media admite la activación de identidades descritas en la tabla siguien
 
 {style=&quot;table-layout:auto&quot;}
 
-## Tipo de exportación {#export-type}
+## Tipo de exportación y frecuencia {#export-type-frequency}
 
-**Exportación de segmentos** : exporta todos los miembros de un segmento (audiencia) con los identificadores (correo electrónico) utilizados en el destino de Verizon Media.
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) con los identificadores (correo electrónico, GAID, IDFA) utilizados en el destino de Verizon Media. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Casos de uso {#use-cases}
 

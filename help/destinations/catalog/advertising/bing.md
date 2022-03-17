@@ -3,10 +3,10 @@ keywords: 'publicidad; bing; '
 title: Conexión de Microsoft Bing
 description: Con el destino de la conexión de Microsoft Bing, puede ejecutar campañas digitales de redireccionamiento y segmentación de audiencia en toda la publicidad de presentación de Microsoft.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -30,9 +30,20 @@ Como especialista en marketing, quiero poder usar segmentos creados a partir de 
 |---|---|
 | MAID | Microsoft Advertising ID |
 
-## Tipo de exportación {#export-type}
+{style=&quot;table-layout:auto&quot;}
+
+## Tipo de exportación y frecuencia {#export-type-frequency}
 
 **[!DNL Segment Export]** - está exportando todos los miembros de un segmento (audiencia) a la [!DNL Microsoft Bing] destino.
+
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) al [!DNL Microsoft Bing] destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Requisitos previos {#prerequisites}
 

@@ -3,10 +3,10 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión Adobe Target
 description: Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 1%
+source-wordcount: '530'
+ht-degree: 2%
 
 ---
 
@@ -26,9 +26,16 @@ Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platfor
 >
 >Antes de crear una [!DNL Adobe Target] conexión, lea la guía sobre cómo [configurar destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para casos de uso de personalización de la misma página y de la siguiente página, en varios componentes de Experience Platform.
 
-## Tipo de exportación {#export-type}
+## Tipo de exportación y frecuencia {#export-type-frequency}
 
-**Solicitud de perfil** : está solicitando todos los segmentos asignados en el destino de Adobe Target para un solo perfil.
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!DNL Profile request]** | Está solicitando todos los segmentos asignados en el destino de Adobe Target para un solo perfil. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Casos de uso {#use-cases}
 

@@ -4,9 +4,9 @@ title: Tipos y categorías de destino
 seo-title: Destination types and categories
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -30,15 +30,15 @@ En Adobe Experience Platform, distinguimos entre dos tipos de destino: conexione
 Los destinos de exportación de perfil reciben datos sin procesar, a menudo con direcciones de correo electrónico como clave principal. Actualmente, el Experience Platform admite dos tipos de destinos de exportación de perfil:
 
 * [Destinos de exportación de perfiles de transmisión](#streaming-profile-export)
-* [Destinos basados en archivos](#file-based)
+* [Destinos por lotes (basados en archivos)](#file-based)
 
 ### Destinos de exportación de perfiles de transmisión {#streaming-profile-export}
 
 Los destinos de exportación de perfiles de flujo continuo reciben datos de segmentos y perfiles como flujos de datos de Experience Platform. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) y [Centros de eventos de Azure](catalog/cloud-storage/azure-event-hubs.md) son ejemplos de estos destinos.
 
-### Destinos basados en archivos {#file-based}
+### Destinos por lotes (basados en archivos) {#file-based}
 
-Los destinos basados en archivos reciben `.csv` archivos que contienen perfiles o atributos. [Amazon S3](catalog/cloud-storage/amazon-s3.md) es un ejemplo de destino en el que puede depositar archivos que contengan exportaciones de perfiles.
+Los destinos basados en archivos reciben `.csv` archivos que contienen perfiles o atributos. [Amazon S3](catalog/cloud-storage/amazon-s3.md) es un ejemplo de destino en el que puede exportar archivos que contengan exportaciones de perfiles.
 
 ## Destinos de exportación de segmentos de transmisión {#streaming-destinations}
 

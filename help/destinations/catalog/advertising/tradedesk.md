@@ -3,10 +3,10 @@ keywords: publicidad; la oficina de comercio; oficina de publicidad
 title: La conexión con el mostrador de comercio
 description: Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de redireccionamiento y segmentación de audiencia en distintas fuentes de inventario de dispositivos móviles, vídeo y visualización.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 2%
+source-wordcount: '552'
+ht-degree: 3%
 
 ---
 
@@ -34,9 +34,18 @@ Como especialista en marketing, quiero poder usar segmentos creados a partir de 
 | IDFA | [!DNL Apple ID for Advertisers] |
 | El identificador del servicio de asistencia al cliente | ID del anunciante en la plataforma de asistencia técnica |
 
-## Tipo de exportación {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**[!DNL Segment export]** : exporta todos los miembros de un segmento (audiencia) al destino.
+## Tipo de exportación y frecuencia {#export-type-frequency}
+
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) al destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Requisitos previos {#prerequisites}
 
