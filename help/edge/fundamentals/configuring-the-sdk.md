@@ -4,20 +4,20 @@ description: Obtenga información sobre cómo configurar el SDK web de Adobe Exp
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configurar;configuración;SDK;edge;Web SDK;configurar;edgeConfigId;contexto;web;dispositivo;entorno;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;configuración del sdk web;preoculhideStyle;opacidad;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled third;PartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '860'
 ht-degree: 15%
 
 ---
 
 # Configuración del SDK web de Platform
 
-La configuración del SDK se realiza con el comando `configure`.
+La configuración del SDK se realiza con la variable `configure` comando.
 
 >[!IMPORTANT]
 >
->`configure` es  ** siempre el primer comando llamado .
+>`configure` es *always* el primer comando llamado.
 
 ```javascript
 alloy("configure", {
@@ -34,7 +34,7 @@ Hay muchas opciones que se pueden configurar durante la configuración. Todas la
 
 >[!NOTE]
 >
->**Las configuraciones de Edge se han cambiado a Datastreams. Un ID de conjunto de datos es igual que un ID de configuración.**
+>**Las configuraciones de Edge se han cambiado a Datastreams. Un ID de conjunto de datos es el mismo que un ID de configuración.**
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
@@ -42,7 +42,7 @@ Hay muchas opciones que se pueden configurar durante la configuración. Todas la
 
 {style=&quot;table-layout:auto&quot;}
 
-Su ID de configuración asignado, que vincula el SDK a las cuentas y la configuración adecuadas. Al configurar varias instancias dentro de una sola página, debe configurar un `edgeConfigId` diferente para cada instancia.
+Su ID de configuración asignado, que vincula el SDK a las cuentas y la configuración adecuadas. Al configurar varias instancias en una sola página, debe configurar una `edgeConfigId` para cada instancia.
 
 ### `context`
 
@@ -52,7 +52,7 @@ Su ID de configuración asignado, que vincula el SDK a las cuentas y la configur
 
 {style=&quot;table-layout:auto&quot;}
 
-Indica las categorías de contexto que se recopilarán automáticamente tal como se describe en [Información automática](../data-collection/automatic-information.md). Si no se especifica esta configuración, todas las categorías se utilizan de forma predeterminada.
+Indica las categorías de contexto que se recopilarán automáticamente, tal como se describe en [Información automática](../data-collection/automatic-information.md). Si no se especifica esta configuración, todas las categorías se utilizan de forma predeterminada.
 
 ### `debugEnabled`
 
@@ -62,7 +62,7 @@ Indica las categorías de contexto que se recopilarán automáticamente tal como
 
 {style=&quot;table-layout:auto&quot;}
 
-Indica si la depuración está habilitada. Al establecer esta configuración en `true` se habilitarán las siguientes funciones:
+Indica si la depuración está habilitada. Establecer esta configuración como `true` habilita las siguientes funciones:
 
 | **Función** | **Función** |
 | ---------------------- | ------------------ |
@@ -76,6 +76,16 @@ Rellene este campo con el dominio de origen. Para obtener más información, con
 
 El dominio es similar a `data.{customerdomain.com}` para un sitio web en www.{customerdomain.com}.
 
+### `edgeBasePath` {#edge-base-path}
+
+Ruta después del edgeDomain utilizado para comunicarse e interactuar con los servicios de Adobe.  A menudo, esto solo cambiaría cuando no se usara el entorno de producción predeterminado.
+
+| **Tipo** | **Requerido** | **Valor predeterminado** |
+| -------- | ------------ | ----------------- |
+| Cadena | No | ee |
+
+{style=&quot;table-layout:auto&quot;}
+
 ### `orgId`
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
@@ -84,7 +94,7 @@ El dominio es similar a `data.{customerdomain.com}` para un sitio web en www.{cu
 
 {style=&quot;table-layout:auto&quot;}
 
-Su ID de organización [!DNL Experience Cloud] asignado. Al configurar varias instancias dentro de una página, debe configurar un `orgId` diferente para cada instancia.
+Su asignación [!DNL Experience Cloud] ID de organización. Al configurar varias instancias dentro de una página, debe configurar una `orgId` para cada instancia.
 
 ## Recopilación de datos
 
@@ -106,7 +116,7 @@ Indica si los datos asociados con clics en vínculos se recopilan automáticamen
 
 {style=&quot;table-layout:auto&quot;}
 
-Configure una llamada de retorno que se llame para cada evento justo antes de enviarla. Se envía un objeto con el campo `xdm` a la rellamada. Para cambiar lo que se envía, modifique el objeto `xdm`. Dentro de la rellamada, el objeto `xdm` ya tiene los datos pasados en el comando event y la información recopilada automáticamente. Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de eventos](tracking-events.md#modifying-events-globally).
+Configure una llamada de retorno que se llame para cada evento justo antes de enviarla. Un objeto con el campo `xdm` se envía a la rellamada. Para cambiar lo que se envía, modifique la variable `xdm` objeto. Dentro de la devolución de llamada, la variable `xdm` ya tiene los datos pasados en el comando event y la información recopilada automáticamente. Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de eventos](tracking-events.md#modifying-events-globally).
 
 ## Opciones de privacidad
 
@@ -118,11 +128,11 @@ Configure una llamada de retorno que se llame para cada evento justo antes de en
 
 {style=&quot;table-layout:auto&quot;}
 
-Establece el consentimiento predeterminado del usuario. Utilice esta configuración cuando no haya preferencias de consentimiento guardadas para el usuario. Los demás valores válidos son `"pending"` y `"out"`. Este valor predeterminado no se mantiene en el perfil del usuario. El perfil del usuario solo se actualiza cuando se llama a `setConsent`.
+Establece el consentimiento predeterminado del usuario. Utilice esta configuración cuando no haya preferencias de consentimiento guardadas para el usuario. Los demás valores válidos son `"pending"` y `"out"`. Este valor predeterminado no se mantiene en el perfil del usuario. El perfil del usuario solo se actualiza cuando `setConsent` se llama.
 * `"in"`: Cuando se establece esta configuración o no se proporciona ningún valor, el trabajo continúa sin las preferencias de consentimiento del usuario.
 * `"pending"`: Cuando se establece esta configuración, el trabajo se pone en cola hasta que el usuario proporcione las preferencias de consentimiento.
 * `"out"`: Cuando se establece esta configuración, el trabajo se descarta hasta que el usuario proporcione las preferencias de consentimiento.
-Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se interrumpe en función de sus preferencias. Consulte [Consentimiento de soporte](../consent/supporting-consent.md) para obtener más información.
+Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se interrumpe en función de sus preferencias. Consulte [Compatibilidad con el consentimiento](../consent/supporting-consent.md) para obtener más información.
 
 ## Opciones de personalización
 
@@ -136,7 +146,7 @@ Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se i
 
 Se utiliza para crear una definición de estilo CSS que oculte áreas de contenido de su página web mientras se carga contenido personalizado desde el servidor. Si no se proporciona esta opción, el SDK no intenta ocultar ninguna área de contenido mientras se carga el contenido personalizado, lo que potencialmente resulta en un &quot;parpadeo&quot;.
 
-Por ejemplo, si un elemento de la página web tiene un ID de `container`, cuyo contenido predeterminado desea ocultar mientras se carga contenido personalizado desde el servidor, utilice el siguiente estilo de preocultación:
+Por ejemplo, si un elemento de la página web tiene un ID de `container`, cuyo contenido predeterminado desea ocultar mientras se carga contenido personalizado desde el servidor, use el siguiente estilo de preocultación:
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -152,7 +162,7 @@ Por ejemplo, si un elemento de la página web tiene un ID de `container`, cuyo c
 
 {style=&quot;table-layout:auto&quot;}
 
-Habilita [!DNL Audience Manager] destinos de cookies, lo que permite configurar cookies en función de la calificación de segmentos.
+Habilitación [!DNL Audience Manager] destinos de cookies, que permite configurar cookies en función de la calificación de segmentos.
 
 ### `urlDestinationsEnabled`
 
@@ -162,7 +172,7 @@ Habilita [!DNL Audience Manager] destinos de cookies, lo que permite configurar 
 
 {style=&quot;table-layout:auto&quot;}
 
-Habilita [!DNL Audience Manager] destinos de URL, lo que permite activar direcciones URL en función de la calificación de segmentos.
+Habilitación [!DNL Audience Manager] Destinos de URL, que permite activar direcciones URL en función de la calificación de segmentos.
 
 ## Opciones de identidad
 
