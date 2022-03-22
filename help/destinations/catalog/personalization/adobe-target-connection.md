@@ -3,7 +3,7 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión Adobe Target
 description: Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 2%
@@ -49,7 +49,7 @@ Una empresa de ventas y alquiler de casa quiere personalizar su página principa
 >id="platform_destinations_target_datastream"
 >title="Acerca de los ID de conjunto de datos"
 >abstract="Esta opción determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Debe configurar un conjunto de datos para poder configurar el destino."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Aprenda a configurar un conjunto de datos."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Obtenga información sobre cómo configurar un conjunto de datos"
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
