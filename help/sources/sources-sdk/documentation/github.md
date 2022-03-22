@@ -6,9 +6,10 @@ topic-legacy: tutorial
 description: Este documento proporciona pasos sobre cómo utilizar la interfaz web de GitHub para crear documentación y enviar una solicitud de extracción (PR).
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
+source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -35,7 +36,11 @@ Una vez finalizada la ramificación, seleccione **maestro** e introduzca un nomb
 
 ![create-branch](../assets/create-branch.png)
 
-En la estructura de carpetas de GitHub del repositorio ramificado, navegue hasta `experience-platform.en/help/sources/tutorials/api/create/` y, a continuación, seleccione la categoría adecuada para el origen en la lista. Por ejemplo, si está creando documentación para una nueva fuente de almacenamiento en la nube, seleccione **almacenamiento en la nube**.
+En la estructura de carpetas de GitHub del repositorio ramificado, vaya a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) y, a continuación, seleccione la categoría adecuada para el origen en la lista. Por ejemplo, si está creando documentación para una nueva fuente de almacenamiento en la nube, seleccione **almacenamiento en la nube**.
+
+>[!TIP]
+>
+>Si está creando documentación para la interfaz de usuario de , vaya a [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) y seleccione la categoría adecuada para el origen. Para añadir las imágenes, vaya a [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) a continuación, agregue las capturas de pantalla a la `sdk` carpeta.
 
 ![almacenamiento en la nube](../assets/cloud-storage.png)
 

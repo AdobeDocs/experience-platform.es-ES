@@ -6,9 +6,10 @@ topic-legacy: overview
 description: El paso final antes de que la nueva fuente se pueda publicar en Adobe Experience Platform es documentar la nueva fuente.
 hide: true
 hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
+source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,10 @@ En un nivel superior, para crear documentación para la fuente, debe crear una r
 
 Puede utilizar un [plantilla de documentación](./template.md) para ayudarle a crear documentación para su origen. A continuación, encontrará instrucciones sobre cómo editar la plantilla y abrir una solicitud de extracción. La documentación enviada para su nueva fuente será revisada y publicada por el equipo de documentación de Adobe.
 
-También puede descargar el [plantilla de documentación aquí](../assets/template.zip).
+También puede descargar las plantillas de documentación siguientes:
+
+* [Plantilla de documentación de API](../assets/template.zip)
+* [Plantilla de documentación de la interfaz de usuario](../assets/ui-template.zip)
 
 ## Crear la nueva página de origen
 

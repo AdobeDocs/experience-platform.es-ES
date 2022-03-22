@@ -6,9 +6,10 @@ topic-legacy: overview
 description: El SDK de fuentes de Adobe Experience Platform es un conjunto de API de configuración que le permiten integrar un origen basado en la API de REST mediante la API de servicio de flujo para llevar los datos al Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
+exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
+source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ A continuación se describe el proceso paso a paso para configurar el origen en 
    * Consulte la guía de [configuración de las especificaciones de origen](./config/sourcespec.md);
    * Consulte la guía de [configuración de las especificaciones de exploración](./config/explorespec.md);
 * Para empezar a documentar la fuente, consulte la [información general sobre la creación de documentación para el SDK de fuentes](./documentation/doc-overview.md)
-   * Puede usar esta [plantilla de documentación de fuentes](./documentation/template.md) para estructurar la documentación;
+   * Puede usar esta [plantilla de documentación de la API de fuentes](./documentation/template.md) para estructurar la documentación de la API;
+   * Puede usar esta [plantilla de documentación de la interfaz de usuario de fuentes](./documentation/ui-template.md) para estructurar la documentación de la interfaz de usuario;
    * Consulte la guía de [uso de la interfaz web de GitHub](./documentation/github.md) para ver los pasos sobre cómo crear documentación con GitHub;
    * Consulte la guía de [uso de un editor de texto](./documentation/text-editor.md) para ver los pasos sobre cómo crear documentación utilizando el equipo local.
-
