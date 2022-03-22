@@ -5,10 +5,10 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
+source-git-commit: 575352d8ee6da092fd0fc3a3033e481ee59bd7d3
 workflow-type: tm+mt
-source-wordcount: '2360'
-ht-degree: 1%
+source-wordcount: '2378'
+ht-degree: 2%
 
 ---
 
@@ -182,11 +182,11 @@ La siguiente sintaxis define una `CREATE TABLE AS SELECT` (CTAS) consulta:
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-**Parámetros**
-
-- `schema`: Título del esquema XDM. Utilice esta cláusula solo si desea utilizar un esquema XDM existente para el nuevo conjunto de datos creado por la consulta CTAS.
-- `rowvalidation`: (Opcional) Especifica si el usuario desea la validación de nivel de fila de cada lote nuevo introducido para el conjunto de datos recién creado. El valor predeterminado es `true`.
-- `select_query`: A `SELECT` instrucción. La sintaxis de la variable `SELECT` La consulta se puede encontrar en el [Sección SELECT queries](#select-queries).
+| Parámetros | Descripción |
+| ----- | ----- |
+| `schema` | Título del esquema XDM. Utilice esta cláusula solo si desea utilizar un esquema XDM existente para el nuevo conjunto de datos creado por la consulta CTAS. |
+| `rowvalidation` | (Opcional) Especifica si el usuario desea la validación de nivel de fila de cada lote nuevo introducido para el conjunto de datos recién creado. El valor predeterminado es `true`. |
+| `select_query` | A `SELECT` instrucción. La sintaxis de la variable `SELECT` La consulta se puede encontrar en el [Sección SELECT queries](#select-queries). |
 
 **Ejemplo**
 
@@ -210,10 +210,10 @@ La variable `INSERT INTO` se define de la siguiente manera:
 INSERT INTO table_name select_query
 ```
 
-**Parámetros**
-
-- `table_name`: El nombre de la tabla en la que desea insertar la consulta.
-- `select_query`: A `SELECT` instrucción. La sintaxis de la variable `SELECT` La consulta se puede encontrar en el [Sección SELECT queries](#select-queries).
+| Parámetros | Descripción |
+| ----- | ----- |
+| `table_name` | El nombre de la tabla en la que desea insertar la consulta. |
+| `select_query` | A `SELECT` instrucción. La sintaxis de la variable `SELECT` La consulta se puede encontrar en el [Sección SELECT queries](#select-queries). |
 
 **Ejemplo**
 
@@ -257,9 +257,9 @@ La variable `DROP TABLE` suelta una tabla existente y elimina el directorio asoc
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-**Parámetros**
-
-- `IF EXISTS`: Si se especifica esto, no se genera ninguna excepción si la tabla **not** existe.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `IF EXISTS` | Si se especifica esto, no se genera ninguna excepción si la tabla **not** existe. |
 
 ## SOLTAR BASE DE DATOS
 
@@ -269,9 +269,9 @@ La variable `DROP DATABASE` suelta una base de datos existente.
 DROP DATABASE [IF EXISTS] db_name
 ```
 
-**Parámetros**
-
-- `IF EXISTS`: Si se especifica esto, no se genera ninguna excepción si la base de datos **not** existe.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `IF EXISTS` | Si se especifica esto, no se genera ninguna excepción si la base de datos **not** existe. |
 
 ## ESQUEMA DE COLOCACIÓN
 
@@ -281,13 +281,11 @@ La variable `DROP SCHEMA` coloca un esquema existente.
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
 
-**Parámetros**
-
-- `IF EXISTS`: Si se especifica esto, no se genera ninguna excepción si el esquema sí **not** existe.
-
-- `RESTRICT`: Valor predeterminado para el modo . Si se especifica esto, el esquema solo se perderá si **no** contiene cualquier tabla.
-
-- `CASCADE`: Si se especifica esto, el esquema se perderá junto con todas las tablas presentes en el esquema.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `IF EXISTS` | Si se especifica esto, no se genera ninguna excepción si el esquema sí **not** existe. |
+| `RESTRICT` | Valor predeterminado para el modo . Si se especifica esto, el esquema solo se perderá si **no** contiene cualquier tabla. |
+| `CASCADE` | Si se especifica esto, el esquema se perderá junto con todas las tablas presentes en el esquema. |
 
 ## CREAR VISTA
 
@@ -297,10 +295,10 @@ La siguiente sintaxis define una `CREATE VIEW` consulta:
 CREATE VIEW view_name AS select_query
 ```
 
-**Parámetros**
-
-- `view_name`: Nombre de la vista que se va a crear.
-- `select_query`: A `SELECT` instrucción. La sintaxis de la variable `SELECT` La consulta se puede encontrar en el [Sección SELECT queries](#select-queries).
+| Parámetros | Descripción |
+| ------ | ------ |
+| `view_name` | Nombre de la vista que se va a crear. |
+| `select_query` | A `SELECT` instrucción. La sintaxis de la variable `SELECT` La consulta se puede encontrar en el [Sección SELECT queries](#select-queries). |
 
 **Ejemplo**
 
@@ -318,10 +316,10 @@ La siguiente sintaxis define una `DROP VIEW` consulta:
 DROP VIEW [IF EXISTS] view_name
 ```
 
-**Parámetro**
-
-- `IF EXISTS`: Si se especifica esto, no se genera ninguna excepción si la vista **not** existe.
-- `view_name`: Nombre de la vista que se va a eliminar.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `IF EXISTS` | Si se especifica esto, no se genera ninguna excepción si la vista **not** existe. |
+| `view_name` | Nombre de la vista que se va a eliminar. |
 
 **Ejemplo**
 
@@ -396,10 +394,10 @@ La variable `SET` establece una propiedad y devuelve el valor de una propiedad e
 SET property_key = property_value
 ```
 
-**Parámetros**
-
-- `property_key`: El nombre de la propiedad que desea enumerar o modificar.
-- `property_value`: El valor que desea que la propiedad se establezca como.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `property_key` | El nombre de la propiedad que desea enumerar o modificar. |
+| `property_value` | El valor que desea que la propiedad se establezca como. |
 
 Para devolver el valor de cualquier configuración, utilice `SET [property key]` sin `property_value`.
 
@@ -447,10 +445,10 @@ La variable `DECLARE` permite al usuario crear un cursor, que se puede utilizar 
 DECLARE name CURSOR FOR query
 ```
 
-**Parámetros**
-
-- `name`: Nombre del cursor que se va a crear.
-- `query`: A `SELECT` o `VALUES` que proporciona las filas que devolverá el cursor.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `name` | Nombre del cursor que se va a crear. |
+| `query` | A `SELECT` o `VALUES` que proporciona las filas que devolverá el cursor. |
 
 ### EJECUTAR
 
@@ -462,10 +460,10 @@ Si la variable `PREPARE` que creó la sentencia especificó algunos parámetros,
 EXECUTE name [ ( parameter ) ]
 ```
 
-**Parámetros**
-
-- `name`: Nombre de la instrucción preparada que se va a ejecutar.
-- `parameter`: El valor real de un parámetro en la instrucción preparada. Debe ser una expresión que genere un valor compatible con el tipo de datos de este parámetro, tal como se determina cuando se creó la instrucción preparada.  Si hay varios parámetros para la instrucción preparada, se separan con comas.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `name` | Nombre de la instrucción preparada que se va a ejecutar. |
+| `parameter` | El valor real de un parámetro en la instrucción preparada. Debe ser una expresión que genere un valor compatible con el tipo de datos de este parámetro, tal como se determina cuando se creó la instrucción preparada.  Si hay varios parámetros para la instrucción preparada, se separan con comas. |
 
 ### EXPLAIN
 
@@ -482,11 +480,11 @@ ANALYZE
 FORMAT { TEXT | JSON }
 ```
 
-**Parámetros**
-
-- `ANALYZE`: Si la variable `option` contains `ANALYZE`, se muestran los tiempos de ejecución y otras estadísticas.
-- `FORMAT`: Si la variable `option` contains `FORMAT`, especifica el formato de salida, que puede ser `TEXT` o `JSON`. La salida no textual contiene la misma información que el formato de salida de texto, pero es más fácil de analizar para los programas. El valor predeterminado de este parámetro es `TEXT`.
-- `statement`: Cualquiera `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`o `CREATE MATERIALIZED VIEW AS` cuyo plan de ejecución desea ver.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `ANALYZE` | Si la variable `option` contains `ANALYZE`, se muestran los tiempos de ejecución y otras estadísticas. |
+| `FORMAT` | Si la variable `option` contains `FORMAT`, especifica el formato de salida, que puede ser `TEXT` o `JSON`. La salida no textual contiene la misma información que el formato de salida de texto, pero es más fácil de analizar para los programas. El valor predeterminado de este parámetro es `TEXT`. |
+| `statement` | Cualquiera `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`o `CREATE MATERIALIZED VIEW AS` cuyo plan de ejecución desea ver. |
 
 >[!IMPORTANT]
 >
@@ -515,10 +513,10 @@ La variable `FETCH` recupera filas utilizando un cursor creado anteriormente.
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-**Parámetros**
-
-- `num_of_rows`: Número de filas que se van a recuperar.
-- `cursor_name`: Nombre del cursor desde el que se recupera la información.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `num_of_rows` | Número de filas que se van a recuperar. |
+| `cursor_name` | Nombre del cursor desde el que se recupera la información. |
 
 ### PREPARAR {#prepare}
 
@@ -532,10 +530,10 @@ De forma opcional, puede especificar una lista de tipos de datos de parámetros.
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-**Parámetros**
-
-- `name`: Nombre de la declaración preparada.
-- `data_type`: Tipos de datos de los parámetros de la instrucción preparada. Si el tipo de datos de un parámetro no aparece en la lista, el tipo se puede inferir desde el contexto. Si necesita agregar varios tipos de datos, puede agregarlos en una lista separada por comas.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `name` | Nombre de la declaración preparada. |
+| `data_type` | Tipos de datos de los parámetros de la instrucción preparada. Si el tipo de datos de un parámetro no aparece en la lista, el tipo se puede inferir desde el contexto. Si necesita agregar varios tipos de datos, puede agregarlos en una lista separada por comas. |
 
 ### RETROSPECTIVA
 
@@ -568,13 +566,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-**Parámetros**
-
 Puede encontrar más información sobre los parámetros de consulta SELECT estándar en la [Sección de consulta SELECT](#select-queries). Esta sección solo enumerará los parámetros que son exclusivos de `SELECT INTO` comando.
 
-- `TEMPORARY` o `TEMP`: Un parámetro opcional. Si se especifica, la tabla que se crea será una tabla temporal.
-- `UNLOGGED`: Un parámetro opcional. Si se especifica, la tabla que se crea como será una tabla sin registrar. Puede encontrar más información sobre las tablas no registradas en la [Documentación PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html).
-- `new_table`: Nombre de la tabla que se va a crear.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `TEMPORARY` o `TEMP` | Un parámetro opcional. Si se especifica, la tabla que se crea será una tabla temporal. |
+| `UNLOGGED` | Un parámetro opcional. Si se especifica, la tabla que se crea como será una tabla sin registrar. Puede encontrar más información sobre las tablas no registradas en la [Documentación PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `new_table` | Nombre de la tabla que se va a crear. |
 
 **Ejemplo**
 
@@ -593,15 +591,10 @@ SHOW name
 SHOW ALL
 ```
 
-**Parámetros**
-
-- `name`: Nombre del parámetro de tiempo de ejecución del que desea obtener información. Los valores posibles del parámetro de tiempo de ejecución incluyen los siguientes valores:
-   - `SERVER_VERSION`: Este parámetro muestra el número de versión del servidor.
-   - `SERVER_ENCODING`: Este parámetro muestra la codificación del conjunto de caracteres del lado del servidor.
-   - `LC_COLLATE`: Este parámetro muestra la configuración regional de la base de datos para la intercalación (orden de texto).
-   - `LC_CTYPE`: Este parámetro muestra la configuración regional de la base de datos para la clasificación de caracteres.
-      `IS_SUPERUSER`: Este parámetro muestra si la función actual tiene privilegios de superusuario.
-- `ALL`: Mostrar los valores de todos los parámetros de configuración con descripciones.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `name` | Nombre del parámetro de tiempo de ejecución del que desea obtener información. Los valores posibles del parámetro de tiempo de ejecución incluyen los siguientes valores:<br>`SERVER_VERSION`: Este parámetro muestra el número de versión del servidor.<br>`SERVER_ENCODING`: Este parámetro muestra la codificación del conjunto de caracteres del lado del servidor.<br>`LC_COLLATE`: Este parámetro muestra la configuración regional de la base de datos para la intercalación (orden de texto).<br>`LC_CTYPE`: Este parámetro muestra la configuración regional de la base de datos para la clasificación de caracteres.<br>`IS_SUPERUSER`: Este parámetro muestra si la función actual tiene privilegios de superusuario. |
+| `ALL` | Mostrar los valores de todos los parámetros de configuración con descripciones. |
 
 **Ejemplo**
 
@@ -628,10 +621,10 @@ COPY query
     [  WITH FORMAT 'format_name']
 ```
 
-**Parámetros**
-
-- `query`: La consulta que desea copiar.
-- `format_name`: El formato en el que desea copiar la consulta. La variable `format_name` puede ser uno de `parquet`, `csv`o `json`. De forma predeterminada, el valor es `parquet`.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `query` | La consulta que desea copiar. |
+| `format_name` | El formato en el que desea copiar la consulta. La variable `format_name` puede ser uno de `parquet`, `csv`o `json`. De forma predeterminada, el valor es `parquet`. |
 
 >[!NOTE]
 >
@@ -657,13 +650,13 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name
 ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
 
-**Parámetros**
-
-- `table_name`: El nombre de la tabla que está editando.
-- `constraint_name`: Nombre de la restricción que desea agregar o eliminar.
-- `column_name`: Nombre de la columna a la que está agregando una restricción.
-- `referenced_table_name`: El nombre de la tabla a la que hace referencia la clave externa.
-- `primary_column_name`: Nombre de la columna a la que se hace referencia mediante la clave externa.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `table_name` | El nombre de la tabla que está editando. |
+| `constraint_name` | Nombre de la restricción que desea agregar o eliminar. |
+| `column_name` | Nombre de la columna a la que está agregando una restricción. |
+| `referenced_table_name` | El nombre de la tabla a la que hace referencia la clave externa. |
+| `primary_column_name` | Nombre de la columna a la que se hace referencia mediante la clave externa. |
 
 >[!NOTE]
 >
@@ -679,11 +672,11 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
-**Parámetros**
-
-- `table_name`: El nombre de la tabla que está editando.
-- `column_name`: El nombre de la columna que desea agregar.
-- `data_type`: El tipo de datos de la columna que desea agregar. Los tipos de datos admitidos son los siguientes: bigint, char, cadena, fecha, fecha, hora de fecha, doble, precisión doble, entero, smallint, tinyint, varchar.
+| Parámetros | Descripción |
+| ------ | ------ |
+| `table_name` | El nombre de la tabla que está editando. |
+| `column_name` | El nombre de la columna que desea agregar. |
+| `data_type` | El tipo de datos de la columna que desea agregar. Los tipos de datos admitidos son los siguientes: bigint, char, cadena, fecha, fecha, hora de fecha, doble, precisión doble, entero, smallint, tinyint, varchar. |
 
 ### MOSTRAR CLAVES PRINCIPALES
 
