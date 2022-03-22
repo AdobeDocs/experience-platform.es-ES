@@ -5,23 +5,22 @@ title: Punto final de API de parámetros de conexión
 topic-legacy: connection parameters
 description: Puede recuperar los parámetros de conexión para utilizar el servicio interactivo realizando una solicitud de GET al extremo /connection_parameters.
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: cff95575530e0db00d34ff1ea4c90e5422b6562d
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 1%
+source-wordcount: '130'
+ht-degree: 3%
 
 ---
 
 # Extremo de parámetros de conexión
 
-## Ejemplo de llamadas a API
+## Llamada de API de ejemplo
 
-Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+La siguiente sección lo acompaña durante la llamada a la API que puede realizar mediante la función [!DNL Query Service] API. La llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Solicitar parámetros de conexión
 
-Puede recuperar los parámetros de conexión realizando una solicitud de GET al extremo `/connection_parameters` . Para obtener más información sobre los clientes que utilizan parámetros de conexión para conectarse mediante el servicio interactivo, lea la documentación sobre [Query Service clients](../clients/overview.md).
+Puede recuperar los parámetros de conexión realizando una solicitud de GET al `/connection_parameters` punto final. Para obtener más información sobre los clientes que utilizan parámetros de conexión para conectarse mediante el servicio interactivo, lea la documentación de [Clientes del servicio de consultas](../clients/overview.md).
 
 **Formato de API**
 
