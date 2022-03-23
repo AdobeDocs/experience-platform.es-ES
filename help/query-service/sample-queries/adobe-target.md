@@ -5,18 +5,18 @@ title: Consultas de ejemplo para datos de Adobe Target
 topic-legacy: queries
 description: Los datos de Adobe Target se transforman en un esquema XDM de Evento de experiencia y se incorporan en Experience Platform como conjuntos de datos para usted. Este documento contiene consultas de ejemplo para usar el servicio de consulta con sus conjuntos de datos de Adobe Target.
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: 76847d8286776a554e55209fa1b334c98b02d76b
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
 
 # Consultas de ejemplo para datos de Adobe Target
 
-Los datos de Adobe Target se transforman en un esquema XDM de Evento de experiencia y se incorporan en Adobe Experience Platform como conjuntos de datos para usted. Existen muchos casos de uso para el servicio de consulta de Adobe Experience Platform con estos datos, y las siguientes consultas de ejemplo deberían funcionar con sus conjuntos de datos de Adobe Target.
+Los datos introducidos desde Adobe Target se transforman en un esquema XDM de Evento de experiencia y se incorporan en Adobe Experience Platform como conjuntos de datos. El servicio de consulta de Adobe Experience Platform facilita muchos casos de uso para estos datos, y las siguientes consultas de ejemplo deberían funcionar con sus conjuntos de datos de Adobe Target.
 
-En Experience Platform, el nombre del conjunto de datos creado automáticamente es &quot;Adobe Target Experience Events&quot;. Al utilizar este conjunto de datos con consultas, debe utilizar el nombre `adobe_target_experience_events`.
+En Experience Platform, el nombre de un conjunto de datos creado automáticamente es &quot;Adobe Target Experience Events&quot;. Cuando utilice este conjunto de datos con consultas, utilice el nombre `adobe_target_experience_events`.
 
 ## Asignación parcial de campos XDM de alto nivel
 
