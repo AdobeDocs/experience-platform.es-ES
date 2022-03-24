@@ -5,9 +5,9 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene información sobre los códigos de error comunes que encuentra y las posibles causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
+source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3413'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,8 @@ La siguiente lista de respuestas a las preguntas más frecuentes se divide en la
 - [General](#general)
 - [Exportación de datos](#exporting-data)
 - [Herramientas de terceros](#third-party-tools)
+- [Errores de API PostgreSQL](#postgresql-api-errors)
+- [Errores de API de REST](#rest-api-errors)
 
 ## Preguntas generales del servicio de consultas {#general}
 
@@ -36,9 +38,9 @@ Esta sección incluye información sobre rendimiento, límites y procesos.
 +++Respuesta Una posible causa es la función de autocompletar. La función procesa ciertos comandos de metadatos que ocasionalmente pueden ralentizar el editor durante la edición de consultas.
 +++
 
-### ¿Puedo utilizar Postman para la API del servicio de consulta?
+### ¿Puedo usar Postman para la API del servicio de consulta?
 
-+++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante Postman (una aplicación gratuita de terceros). Observe el [Guía de configuración de Postman](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para su uso con Postman. Consulte la documentación oficial para [instrucciones sobre cómo iniciar, ejecutar y compartir colecciones Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante Postman (una aplicación gratuita de terceros). Observe el [Guía de configuración de Postman](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para su uso con Postman. Consulte la documentación oficial para [instrucciones sobre cómo iniciar, ejecutar y compartir colecciones de Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### ¿Hay un límite en el número máximo de filas devueltas desde una consulta a través de la interfaz de usuario?
@@ -434,38 +436,9 @@ WHERE T2.ID IS NULL
 
 +++
 
-## Errores de API de REST
-
-| Código de estado HTTP | Descripción | Posibles causas |
-|------------------|-----------------------|----------------------------|
-| 400 | Solicitud incorrecta | Consulta no formada o no válida |
-| 401 | Error de autenticación | Token de autenticación no válido |
-| 500 | Error interno del servidor | Fallo interno del sistema |
-
-## Errores de API PostgreSQL
-
-| Código de error | Estado de la conexión | Descripción | Posible causa |
-|------------|---------------------------|-------------|----------------|
-| **08P01** | N/A | Tipo de mensaje no admitido | Tipo de mensaje no admitido |
-| **28P01** | Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
-| **28000** | Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
-| **42P12** | Inicio: autenticación | No se encontraron tablas | No se encontraron tablas para su uso |
-| **42601** | Consulta | Error de sintaxis | Error de sintaxis o comando no válido |
-| **42P01** | Consulta | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
-| **42P07** | Consulta | La tabla existe | Ya existe una tabla con el mismo nombre (CREATE TABLE) |
-| **53400** | Consulta | El LÍMITE supera el valor máximo | El usuario especificó una cláusula LIMIT superior a 100.000 |
-| **53400** | Consulta | Tiempo de espera de la instrucción | La declaración en directo presentada tardó más de 10 minutos |
-| **58000** | Consulta | Error del sistema | Fallo interno del sistema |
-| **0A000** | Consulta/Comando | No admitido | La función/funcionalidad de la consulta/comando no es compatible |
-| **42501** | Consulta de TABLA DE COLOCACIÓN | El servicio de consulta no crea la tabla de pérdidas | El servicio de consultas no creó la tabla que se está soltando mediante el `CREATE TABLE` statement |
-| **42501** | Consulta de TABLA DE COLOCACIÓN | Tabla no creada por el usuario autenticado | El usuario que ha iniciado sesión actualmente no ha creado la tabla que se está quitando |
-| **42P01** | Consulta de TABLA DE COLOCACIÓN | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
-| **42P12** | Consulta de TABLA DE COLOCACIÓN | No se encontró ninguna tabla para `dbName`: compruebe el `dbName` | No se encontraron tablas en la base de datos actual |
-
 ## Exportación de datos {#exporting-data}
 
 Esta sección proporciona información sobre la exportación de datos y límites.
-
 
 ### ¿Existe alguna forma de extraer datos del servicio de consulta después del procesamiento de la consulta y guardar los resultados en un archivo CSV?
 
@@ -524,3 +497,51 @@ El propósito de añadir la capa de servidor de caché es almacenar en caché lo
 
 +++Respuesta No, la conectividad pgAdmin no es compatible. A [lista de clientes de terceros disponibles e instrucciones sobre cómo conectarlos al servicio de consulta](./clients/overview.md) en la documentación.
 +++
+
+## Errores de API PostgreSQL {#postgresql-api-errors}
+
+La siguiente tabla proporciona códigos de error PSQL y sus posibles causas.
+
+| Código de error | Estado de la conexión | Descripción | Posible causa |
+|------------|---------------------------|-------------|----------------|
+| **08P01** | N/A | Tipo de mensaje no admitido | Tipo de mensaje no admitido |
+| **28P01** | Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
+| **28000** | Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
+| **42P12** | Inicio: autenticación | No se encontraron tablas | No se encontraron tablas para su uso |
+| **42601** | Consulta | Error de sintaxis | Error de sintaxis o comando no válido |
+| **42P01** | Consulta | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
+| **42P07** | Consulta | La tabla existe | Ya existe una tabla con el mismo nombre (CREATE TABLE) |
+| **53400** | Consulta | El LÍMITE supera el valor máximo | El usuario especificó una cláusula LIMIT superior a 100.000 |
+| **53400** | Consulta | Tiempo de espera de la instrucción | La declaración en directo presentada tardó más de 10 minutos |
+| **58000** | Consulta | Error del sistema | Fallo interno del sistema |
+| **0A000** | Consulta/Comando | No admitido | La función/funcionalidad de la consulta/comando no es compatible |
+| **42501** | Consulta de TABLA DE COLOCACIÓN | El servicio de consulta no crea la tabla de pérdidas | El servicio de consultas no creó la tabla que se está soltando mediante el `CREATE TABLE` statement |
+| **42501** | Consulta de TABLA DE COLOCACIÓN | Tabla no creada por el usuario autenticado | El usuario que ha iniciado sesión actualmente no ha creado la tabla que se está quitando |
+| **42P01** | Consulta de TABLA DE COLOCACIÓN | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
+| **42P12** | Consulta de TABLA DE COLOCACIÓN | No se encontró ninguna tabla para `dbName`: compruebe el `dbName` | No se encontraron tablas en la base de datos actual |
+
+### ¿Por qué recibí un código de error 58000 al usar el método history_meta() en mi tabla?
+
++++Responder A La `history_meta()` se utiliza para acceder a una instantánea desde un conjunto de datos. Anteriormente, si se ejecutaba una consulta en un conjunto de datos vacío en Azure Data Lake Storage (ADLS), se recibía un código de error 58000 que indicaba que el conjunto de datos no existe. A continuación se muestra un ejemplo del antiguo error del sistema.
+
+```shell
+ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
+```
+
+Este error se producía porque no había ningún valor devuelto para la consulta. Este comportamiento se ha corregido para que devuelva el siguiente mensaje:
+
+```text
+Query complete in {timeframe}. 0 rows returned. 
+```
+
++++
+
+## Errores de API de REST {#rest-api-errors}
+
+La siguiente tabla proporciona códigos de error HTTP y sus posibles causas.
+
+| Código de estado HTTP | Descripción | Posibles causas |
+|------------------|-----------------------|----------------------------|
+| 400 | Solicitud incorrecta | Consulta no formada o no válida |
+| 401 | Error de autenticación | Token de autenticación no válido |
+| 500 | Error interno del servidor | Fallo interno del sistema |

@@ -3,11 +3,11 @@ keywords: Experience Platform;inicio;temas populares;servicio de consulta;servic
 solution: Experience Platform
 title: Consultas de ejemplo para datos de Adobe Analytics
 topic-legacy: queries
-description: Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en ExperienceEvents de XDM y se introducen en Adobe Experience Platform como conjuntos de datos para usted. Este documento describe una serie de casos de uso en los que el servicio de consulta de Adobe Experience Platform utiliza estos datos, y las consultas de ejemplo incluidas deben funcionar con sus conjuntos de datos de Adobe Analytics.
+description: Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en XDM ExperienceEvents e se incorporan en Adobe Experience Platform como conjuntos de datos. Este documento describe una serie de casos de uso en los que Query Service utiliza estos datos e incluye consultas de ejemplo diseñadas para trabajar con sus conjuntos de datos de Adobe Analytics.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: bb5ece5e48ca5e3bb97aa1367515f510ab03deee
+source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1066'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en datos que se ajustan al [!DNL XDM ExperienceEvent] e ingerida en Adobe Experience Platform como conjuntos de datos.
 
-Este documento describe una serie de casos de uso en los que Adobe Experience Platform [!DNL Query Service] utiliza estos datos, incluidas las consultas de ejemplo, que deben funcionar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación sobre [Asignación de campos de Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obtener más información sobre la asignación a [!DNL Experience Events].
+Este documento describe una serie de casos de uso en los que Adobe Experience Platform [!DNL Query Service] utiliza estos datos, incluidas las consultas de ejemplo diseñadas para trabajar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación sobre [Asignación de campos de Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obtener más información sobre la asignación a [!DNL Experience Events].
 
 ## Primeros pasos
 
@@ -24,7 +24,7 @@ Los ejemplos SQL de este documento requieren que edite el SQL y rellene los par�
 
 ## Ejemplos SQL de uso común
 
-Los siguientes ejemplos muestran consultas SQL de uso común para analizar los datos de Adobe Analytics.
+Los siguientes ejemplos muestran consultas SQL para casos de uso comunes a fin de analizar los datos de Adobe Analytics.
 
 ### Recuento de visitantes por hora de un día determinado
 
@@ -120,14 +120,15 @@ ORDER BY Hour;
 
 ## Anulación de duplicación
 
-El servicio de consulta de Adobe Experience Platform admite la deduplicación de datos. Consulte la [Anulación de duplicación de datos en la documentación del servicio de consulta](../best-practices/deduplication.md) para obtener información sobre cómo generar nuevos valores en el momento de la consulta [!DNL Experience Event] conjuntos de datos.
+[!DNL Query Service] admite la deduplicación de datos. Consulte la [Deduplicación de datos en [!DNL Query Service] documentación](../best-practices/deduplication.md) para obtener información sobre cómo generar nuevos valores en el momento de la consulta [!DNL Experience Event] conjuntos de datos.
 
 ## Variables de comercialización (sintaxis del producto)
 
+Las secciones siguientes proporcionan campos XDM y consultas de ejemplo que puede utilizar para acceder a las variables de comercialización de su [!DNL Analytics] conjunto de datos.
 
 ### Sintaxis del producto
 
-En Adobe Analytics, los datos personalizados de nivel de producto se pueden recopilar mediante variables configuradas especialmente llamadas variables de comercialización. Se basan en un eVar o en eventos personalizados. La diferencia entre estas variables y su uso estándar es que representan un valor independiente para cada producto encontrado en la visita, en lugar de representar un solo valor para la visita.
+En Adobe Analytics, los datos personalizados de nivel de producto se pueden recopilar mediante variables configuradas especialmente llamadas variables de comercialización. Se basan en un eVar o en eventos personalizados. La diferencia entre estas variables y su uso habitual es que representan un valor independiente para cada producto encontrado en la visita, en lugar de representar un solo valor para la visita.
 
 Estas variables se denominan variables de comercialización de sintaxis de producto. Esto permite la recopilación de información, como una &quot;cantidad de descuento&quot; por producto o información sobre la &quot;ubicación en la página&quot; del producto en los resultados de búsqueda del cliente.
 
@@ -205,7 +206,7 @@ Otro tipo de variable de comercialización que se encuentra en Adobe Analytics e
 1. Un usuario realiza una búsqueda interna de &quot;sombrero de invierno&quot; que establece Sintaxis de conversión habilitada eVar de comercialización 6 como &quot;búsqueda interna:sombrero de invierno&quot;
 2. El usuario hace clic en &quot;waffle beanie&quot; y aterriza en la página de detalles del producto.\
    a. Aquí el aterrizaje se dispara `Product View` para el evento &quot;waffle beanie&quot; por $12.99.\
-   b. Porque `Product View` se configura como un evento de enlace que el producto &quot;waffle beanie&quot; está ahora enlazado al valor eVar6 de &quot;internal search:winter hat&quot;. Cada vez que se recopile el producto &quot;waffle beanie&quot;, se asociará a &quot;internal search:winter hat&quot; hasta que (1) se alcance la configuración de caducidad o (2) se establezca un nuevo valor de eVar6 y se produzca de nuevo el evento de enlace con ese producto.
+   b. Since `Product View` está configurado como un evento de enlace, el producto &quot;waffle beanie&quot; está ahora enlazado al valor eVar6 de &quot;internal search:winter hat&quot;. Cada vez que se recopile el producto &quot;waffle beanie&quot;, se asociará a &quot;internal search:winter hat&quot; hasta que (1) se alcance la configuración de caducidad o (2) se establezca un nuevo valor de eVar6 y se produzca de nuevo el evento de enlace con ese producto.
 3. El usuario agrega el producto al carro de compras y activa la variable `Cart Add` evento.
 4. El usuario realiza otra búsqueda interna de &quot;camisa de verano&quot; que establece la Sintaxis de conversión habilitada eVar de comercialización 6 en &quot;búsqueda interna:camisa de verano&quot;
 5. El usuario hace clic en &quot;camiseta deportiva&quot; y llega a la página de detalles del producto.\
