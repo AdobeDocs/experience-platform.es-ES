@@ -4,9 +4,9 @@ title: Campo de preferencia de marketing genérico con tipo de datos de suscripc
 topic-legacy: overview
 description: Este documento proporciona información general sobre el campo de preferencia de marketing genérico con el tipo de datos XDM de suscripciones.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: bccf97d85421fcb2f8fe153ad0ddbef4975b6f7e
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -59,29 +59,31 @@ Algunas empresas permiten a los clientes aceptar distintas suscripciones asociad
 El siguiente JSON representa un campo de marketing de ejemplo para un canal de marketing de llamada telefónica que contiene un `subscriptions` mapa. Cada clave de la variable `subscriptions` representa una suscripción individual para el canal de marketing. A su vez, cada suscripción contiene un valor de inclusión (`val`).
 
 ```json
-"phone-marketing-field": {
+"email-marketing-field": {
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
     "loyalty-offers": {
       "val": "y",
       "type": "sales",
+      "topics": ["discounts", "early-access"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2019-01-01T15:52:25+00:00",
           "source": "website"
         }
       }
     },
-    "overdrawn-account": {
+    "newsletters": {
       "val": "y",
-      "type": "issues",
+      "type": "advertising",
+      "topics": ["hardware"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2021-01-01T08:32:53+07:00",
           "source": "website"
         },
-        "301-555-1527": {
+        "tparan@example.com": {
           "time": "2020-02-03T07:54:21+07:00",
           "source": "call center"
         }
@@ -93,7 +95,9 @@ El siguiente JSON representa un campo de marketing de ejemplo para un canal de m
 
 | Propiedad | Descripción |
 | --- | --- |
+| `val` | La variable [valor de consentimiento](#val) para la suscripción. |
 | `type` | El tipo de suscripción. Puede ser cualquier cadena descriptiva, siempre que tenga 15 caracteres o menos. |
+| `topics` | Matriz de cadenas que representan las áreas de interés a las que se suscribió un cliente y que pueden utilizarse para enviarle contenido relevante. |
 | `subscribers` | Campo opcional de tipo asignación que representa un conjunto de identificadores (como direcciones de correo electrónico o números de teléfono) que se han suscrito a una suscripción determinada. Cada clave de este objeto representa el identificador en cuestión y contiene dos subpropiedades: <ul><li>`time`: Marca de tiempo ISO 8601 del momento de la suscripción de la identidad, si procede.</li><li>`source`: Origen del suscriptor. Puede ser cualquier cadena descriptiva, siempre que tenga 15 caracteres o menos.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
