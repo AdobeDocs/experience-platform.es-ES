@@ -5,9 +5,9 @@ title: Información general sobre la API de ingesta de lotes
 topic-legacy: overview
 description: La API de ingesta de datos de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos introducidos pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -61,7 +61,7 @@ Por ejemplo, ni JSON ni CSV tienen un `date` o `date-time` tipo . Como resultado
 
 La tabla siguiente muestra las conversiones admitidas al introducir datos.
 
-| Entrante (fila) frente a Target (col.) | Cadena | Byte | Corto | Número entero | Largo | Duplicada | Fecha  | Date-Time | Objeto | Mapa |
+| Entrante (fila) frente a Target (col.) | Cadena | Byte | Corto | Número entero | Largo | Duplicada | Fecha | Date-Time | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Cadena | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
@@ -69,7 +69,7 @@ La tabla siguiente muestra las conversiones admitidas al introducir datos.
 | Número entero | X | X | X | X | X | X |  |  |  |  |
 | Largo | X | X | X | X | X | X | X | X |  |  |
 | Duplicada | X | X | X | X | X | X |  |  |  |  |
-| Fecha  |  |  |  |  |  |  | X |  |  |  |
+| Fecha |  |  |  |  |  |  | X |  |  |  |
 | Date-Time |  |  |  |  |  |  |  | X |  |  |
 | Objeto |  |  |  |  |  |  |  |  | X | X |
 | Mapa |  |  |  |  |  |  |  |  | X | X |
@@ -151,7 +151,7 @@ Puede cargar archivos mediante la API de carga de archivos pequeños. Sin embarg
 
 >[!INFO]
 >
->Los ejemplos siguientes utilizan la variable [Apache Parquet](https://parquet.apache.org/documentation/latest/) formato de archivo. Puede encontrar un ejemplo que utilice el formato de archivo JSON en la [guía para desarrolladores sobre ingesta por lotes](api-overview.md).
+>Los ejemplos siguientes utilizan la variable [Apache Parquet](https://parquet.apache.org/docs/) formato de archivo. Puede encontrar un ejemplo que utilice el formato de archivo JSON en la [guía para desarrolladores sobre ingesta por lotes](api-overview.md).
 
 ### Carga de archivo pequeño
 
