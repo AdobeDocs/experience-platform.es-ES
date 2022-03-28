@@ -3,9 +3,9 @@ title: Configurar el almacén de datos para el SDK web del Experience Platform
 description: 'Obtenga información sobre cómo configurar Datastreams. '
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;id;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
+source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
 workflow-type: tm+mt
-source-wordcount: '1944'
+source-wordcount: '2004'
 ht-degree: 2%
 
 ---
@@ -49,6 +49,16 @@ Aparecerá el flujo de trabajo de creación del conjunto de datos, empezando por
 Si está configurando este conjunto de datos para utilizarlo en Experience Platform y utiliza el SDK web de plataforma, también debe seleccionar una [esquema del Modelo de datos de experiencias (XDM) basado en eventos](../../xdm/classes/experienceevent.md) para representar los datos que planea introducir.
 
 ![Configuración básica de un conjunto de datos](../images/datastreams/configure.png)
+
+Select **[!UICONTROL Opciones avanzadas]** para mostrar controles adicionales para configurar el conjunto de datos.
+
+![Opciones de configuración avanzadas](../images/datastreams/advanced-options.png)
+
+| Configuración | Descripción |
+| --- | --- |
+| [!UICONTROL Ubicación geográfica] | Determina si se producen búsquedas de GPS en función de la dirección IP del usuario. La configuración predeterminada **[!UICONTROL Ninguna]** deshabilita las búsquedas de GPS, mientras que la función **[!UICONTROL Ciudad]** proporciona coordenadas GPS a dos decimales. |
+| [!UICONTROL Cookie de ID de origen] | Cuando está habilitada, esta configuración indica a la red perimetral que haga referencia a una cookie especificada al buscar una [ID de dispositivo de origen](../identity/first-party-device-ids.md), en lugar de buscar este valor en el mapa de identidad.<br><br>Al habilitar esta configuración, debe proporcionar el nombre de la cookie en la que se espera que se almacene el ID. |
+| [!UICONTROL Sincronización de ID de terceros] | Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que diferentes sincronizaciones de ID se ejecuten en momentos diferentes. Cuando está habilitada, esta configuración le permite especificar qué contenedor de sincronizaciones de ID se ejecuta para este conjunto de datos. |
 
 El resto de esta sección se centra en los pasos para asignar datos a un esquema de evento de Platform seleccionado. Si utiliza el SDK móvil o no está configurando el conjunto de datos para la plataforma, seleccione **[!UICONTROL Guardar]** antes de pasar a la siguiente sección de [agregar servicios al conjunto de datos](#add-services).
 
@@ -199,16 +209,6 @@ Este servicio controla si los datos se envían a [reenvío de eventos](../../tag
 >[!NOTE]
 >
 >Puede seleccionar **[!UICONTROL Introducir ID manualmente]** para escribir los nombres de propiedad y entorno en lugar de usar los menús desplegables.
-
-### [!UICONTROL Sincronización de ID de terceros] configuración
-
-La sección ID de terceros es la única sección que siempre está activada. Tiene dos configuraciones disponibles: &quot;[!UICONTROL Sincronización de ID de terceros habilitada]&quot; y &quot;[!UICONTROL ID de contenedor de sincronización de ID de terceros]&quot;.
-
-![Sección de sincronización de ID de terceros de la interfaz de usuario de configuración](../images/datastreams/third-party-id-sync-config.png)
-
-| Configuración | Descripción |
-| --- | --- |
-| [!UICONTROL ID de contenedor de sincronización de ID de terceros] | Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que diferentes sincronizaciones de ID se ejecuten en momentos diferentes. Esto controla qué contenedor de sincronizaciones de ID se ejecuta para este conjunto de datos. |
 
 ## Pasos siguientes
 
