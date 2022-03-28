@@ -3,9 +3,9 @@ title: Configurar el almacén de datos para el SDK web del Experience Platform
 description: 'Obtenga información sobre cómo configurar Datastreams. '
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;id;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
+source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1995'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Este documento trata los pasos para configurar un conjunto de datos en la interf
 
 >[!NOTE]
 >
->Su organización debe estar aprovisionada para esta función a fin de acceder a ella en la interfaz de usuario de . Si no tiene acceso, rellene lo siguiente [formulario](http://adobe.ly/websdkaccess) y le concederemos el acceso necesario.
+>Su organización debe estar aprovisionada para esta función a fin de acceder a ella en la interfaz de usuario de . Por favor, rellene lo siguiente: [formulario](https://adobe.ly/websdkaccess) para solicitar el acceso necesario.
 
 ## Acceda a la [!UICONTROL Datastreams] workspace
 
@@ -60,13 +60,13 @@ Select **[!UICONTROL Opciones avanzadas]** para mostrar controles adicionales pa
 | [!UICONTROL Cookie de ID de origen] | Cuando está habilitada, esta configuración indica a la red perimetral que haga referencia a una cookie especificada al buscar una [ID de dispositivo de origen](../identity/first-party-device-ids.md), en lugar de buscar este valor en el mapa de identidad.<br><br>Al habilitar esta configuración, debe proporcionar el nombre de la cookie en la que se espera que se almacene el ID. |
 | [!UICONTROL Sincronización de ID de terceros] | Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que diferentes sincronizaciones de ID se ejecuten en momentos diferentes. Cuando está habilitada, esta configuración le permite especificar qué contenedor de sincronizaciones de ID se ejecuta para este conjunto de datos. |
 
-El resto de esta sección se centra en los pasos para asignar datos a un esquema de evento de Platform seleccionado. Si utiliza el SDK móvil o no está configurando el conjunto de datos para la plataforma, seleccione **[!UICONTROL Guardar]** antes de pasar a la siguiente sección de [agregar servicios al conjunto de datos](#add-services).
+El resto de esta sección se centra en los pasos para asignar datos a un esquema de evento de Platform seleccionado. Si utiliza el SDK de Mobile o no configura el conjunto de datos para Platform, seleccione **[!UICONTROL Guardar]** antes de pasar a la siguiente sección de [agregar servicios al conjunto de datos](#add-services).
 
 ### Preparación de datos para la recopilación de datos {#data-prep}
 
 >[!IMPORTANT]
 >
->Actualmente, la preparación de datos para la recopilación de datos no es compatible con las implementaciones de SDK para móviles.
+>Actualmente, la preparación de datos para la recopilación de datos no es compatible con las implementaciones de SDK para Mobile.
 
 La preparación de datos es un servicio de Experience Platform que permite asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM). Al configurar un conjunto de datos habilitado para la plataforma, puede utilizar las capacidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a la red perimetral de la plataforma.
 
