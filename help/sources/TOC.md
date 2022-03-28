@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
+source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '757'
 ht-degree: 14%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 14%
    - Automatización de marketing {#marketing-automation}
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
       - [Conector Mailchimp](connectors/marketing-automation/mailchimp.md)
+      - [Conector Eloqua del oracle](connectors/marketing-automation/oracle-eloqua.md)
       - [Marketing Cloud de Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagos {#payments}
       - [Conector PayPal](connectors/payments/paypal.md)
@@ -141,6 +142,7 @@ ht-degree: 14%
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [Campaña MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [Miembros de MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
+         - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Marketing Cloud de Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagos {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -236,6 +238,7 @@ ht-degree: 14%
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Campañas Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Miembros de Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+         - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Marketing Cloud de Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagos {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
