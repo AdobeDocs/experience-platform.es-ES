@@ -4,9 +4,9 @@ title: Reglas de alerta estándar
 description: Este documento cubre las reglas de alerta predefinidas proporcionadas por el Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: d8ada2de0ee0408e4e10f0dc45652af6eb6352cf
+source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '785'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,8 @@ Las siguientes reglas de alerta son específicas de [Ingesta de datos](../../ing
 | Información de ejecución del flujo de origen | Éxito en la ejecución del flujo de fuentes | Esta alerta déclencheur cuando los datos se introducen correctamente desde una conexión de origen. |
 | Retrasos, errores y errores de ejecución del flujo de origen | Error en la ejecución del flujo de fuentes | Esta alerta déclencheur cuando se produce un error al introducir datos desde una conexión de origen. |
 | Retrasos, errores y errores de ejecución del flujo de origen | Retraso de ingesta | Esta alerta déclencheur cuando la ejecución de un flujo de ingesta por lotes tarda más de 150 minutos en procesarse. |
+| Retrasos, errores y errores de ejecución del flujo de origen | Falta de ingesta | Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se introducen datos en Platform. |
+| Retrasos, errores y errores de ejecución del flujo de origen | Fallo de ingesta | Esta alerta se déclencheur cuando la proporción de registros con errores en todos los registros supera un umbral del 0,5 % |
 
 {style=&quot;table-layout:auto&quot;}
 
