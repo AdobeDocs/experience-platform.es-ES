@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;guía del usuario;ai del cliente;temas populares;configurar instancia;crear instancia;
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Configuración de una instancia de AI del cliente
 topic-legacy: Instance creation
 description: Los servicios inteligentes proporcionan Customer AI como un servicio de Adobe Sensei fácil de usar que se puede configurar para diferentes casos de uso. Las secciones siguientes proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '2608'
 ht-degree: 0%
@@ -62,7 +62,7 @@ A continuación se proporciona información importante sobre los valores con los
 
 Proporcione los valores necesarios y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-## Seleccionar datos {#select-data}
+## Selección de datos {#select-data}
 
 Por diseño, la Customer AI utiliza datos de Adobe Analytics, Adobe Audience Manager, Experience Event y Consumer Experience Event para calcular las puntuaciones de tendencia. Al seleccionar un conjunto de datos, solo se muestran los que son compatibles con la AI del cliente. Para seleccionar un conjunto de datos, seleccione el (**+**) junto al nombre del conjunto de datos o seleccione la casilla de verificación para agregar varios conjuntos de datos a la vez. Utilice la opción de búsqueda para encontrar rápidamente los conjuntos de datos que le interesen.
 

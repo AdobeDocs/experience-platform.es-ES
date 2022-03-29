@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform;introducción;ai de atribución;temas populares;entrada de ai de atribución;salida de ai de atribución;solución de problemas de ai de atribución;errores de ai de atribución
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Attribution AI
 title: solución de errores de Attribution AI
 description: Encuentre respuestas a errores comunes en Attribution AI.
 type: Documentation
-source-git-commit: 896dda631cd4182f278de0607bea442d8366fe8c
+exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%

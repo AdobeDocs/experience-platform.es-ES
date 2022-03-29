@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;introducción;ai de contenido;ai de comercio;ai de contenido y comercio;extracción de color;extracción de color
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 title: Extracción de color en la API de IA de contenido y comercio
 topic-legacy: Developer guide
 description: El servicio de extracción de color, cuando se proporciona una imagen, puede calcular el histograma de colores de píxeles y ordenarlos mediante colores dominantes en bloques.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
@@ -47,7 +46,7 @@ La siguiente solicitud extrae colores de una imagen en función de los parámetr
 
 >[!CAUTION]
 >
->`analyzer_id` determina qué  [!DNL Sensei Content Framework] se utiliza. Compruebe que dispone del `analyzer_id` adecuado antes de realizar su solicitud. Para el servicio de extracción de color, el `analyzer_id` ID es:
+>`analyzer_id` determina qué [!DNL Sensei Content Framework] se utiliza. Compruebe que dispone del `analyzer_id` antes de realizar la solicitud. Para el servicio de extracción de color, la variable `analyzer_id` El ID es:
 >`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
@@ -87,27 +86,27 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propiedad | Descripción | Obligatorio |
 | --- | --- | --- |
-| `analyzer_id` | El ID de servicio [!DNL Sensei] en el que se implementa su solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utiliza. Para obtener servicios personalizados, póngase en contacto con el equipo de AI de contenido y comercio para configurar un ID personalizado. | Sí |
+| `analyzer_id` | La variable [!DNL Sensei] ID de servicio en el que se implementa su solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utilizan. Para obtener servicios personalizados, póngase en contacto con el equipo de AI de contenido y comercio para configurar un ID personalizado. | Sí |
 | `application-id` | El ID de la aplicación creada. | Sí |
-| `data` | Matriz que contiene objetos JSON. Cada objeto de la matriz representa una imagen. Cualquier parámetro pasado como parte de esta matriz anula los parámetros globales especificados fuera de la matriz `data`. Las propiedades restantes que se describen a continuación en esta tabla se pueden sobrescribir desde `data`. | Sí |
+| `data` | Matriz que contiene objetos JSON. Cada objeto de la matriz representa una imagen. Cualquier parámetro pasado como parte de esta matriz anula los parámetros globales especificados fuera de la matriz `data` matriz. Las propiedades restantes que se describen a continuación en esta tabla se pueden sobrescribir desde `data`. | Sí |
 | `content-id` | ID exclusivo del elemento de datos que se devuelve en la respuesta. Si no se pasa esto, se asigna un ID generado automáticamente. | No |
 | `content` | El contenido que debe analizar el servicio de extracción de color. En caso de que la imagen forme parte del cuerpo de la solicitud, utilice `-F file=@<filename>` en el comando curl para pasar la imagen, dejando este parámetro como una cadena vacía. <br> Si la imagen es un archivo en S3, pase la url firmada. Cuando el contenido forma parte del cuerpo de la solicitud, la lista de elementos de datos solo debe tener un objeto. Si se pasa más de un objeto, solo se procesa el primer objeto. | Sí |
 | `content-type` | Se utiliza para indicar si la entrada forma parte del cuerpo de la solicitud o si es una url firmada para un compartimento S3. El valor predeterminado de esta propiedad es `inline`. | No |
-| `encoding` | El formato de archivo de la imagen de entrada. Actualmente solo se pueden procesar imágenes JPEG y PNG. El valor predeterminado de esta propiedad es `jpeg`. | No |
-| `threshold` | El umbral de puntuación (0 a 1) por encima del cual deben devolverse los resultados. Utilice el valor `0` para devolver todos los resultados. El valor predeterminado de esta propiedad es `0`. | No |
-| `top-N` | Número de resultados que se van a devolver (no puede ser un número entero negativo). Utilice el valor `0` para devolver todos los resultados. Cuando se utiliza junto con `threshold`, el número de resultados devueltos es el menor de ambos conjuntos de límites. El valor predeterminado de esta propiedad es `0`. | No |
+| `encoding` | El formato de archivo de la imagen de entrada. Actualmente solo se pueden procesar imágenes de JPEG y PNG. El valor predeterminado de esta propiedad es `jpeg`. | No |
+| `threshold` | El umbral de puntuación (0 a 1) por encima del cual deben devolverse los resultados. Utilizar el valor `0` para devolver todos los resultados. El valor predeterminado de esta propiedad es `0`. | No |
+| `top-N` | Número de resultados que se van a devolver (no puede ser un número entero negativo). Utilizar el valor `0` para devolver todos los resultados. Cuando se usa junto con `threshold`, el número de resultados devueltos es el menor de ambos conjuntos de límites. El valor predeterminado de esta propiedad es `0`. | No |
 | `custom` | Cualquier parámetro personalizado que se vaya a pasar. | No |
 | `historic-metadata` | Matriz que puede pasarse metadatos. | No |
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de los colores extraídos. Cada color se representa mediante una clave `feature_value`, que contiene la siguiente información:
+Una respuesta correcta devuelve los detalles de los colores extraídos. Cada color se representa mediante un `feature_value` , que contiene la siguiente información:
 
 - Un nombre de color
 - Porcentaje que aparece este color en relación con la imagen
-- El valor RGB del color
+- El valor de RGB del color
 
-En el primer objeto de ejemplo siguiente, `feature_value` de `White,0.59,251,251,243` significa que el color encontrado es blanco, el blanco se encuentra en el 59% de la imagen y tiene un valor RGB de 251.251.243.
+En el primer objeto de ejemplo siguiente, la variable `feature_value` de `White,0.59,251,251,243` significa que el color encontrado es blanco, el blanco se encuentra en el 59% de la imagen, y tiene un valor RGB de 251,251,243.
 
 ```json
 {
@@ -153,4 +152,4 @@ En el primer objeto de ejemplo siguiente, `feature_value` de `White,0.59,251,251
 | Propiedad | Descripción |
 | --- | --- |
 | `content_id` | El nombre de la imagen que se cargó en la solicitud del POST. |
-| `feature_value` | Matriz cuyos objetos contienen claves con el mismo nombre de propiedad. Estas claves contienen una cadena que representa el nombre del color, un porcentaje en el que aparece este color en relación con la imagen enviada en `content_id` y el valor RGB del color. |
+| `feature_value` | Matriz cuyos objetos contienen claves con el mismo nombre de propiedad. Estas claves contienen una cadena que representa el nombre del color, un porcentaje en el que aparece este color en relación con la imagen enviada en la variable `content_id`y el valor RGB del color. |

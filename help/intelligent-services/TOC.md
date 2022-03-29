@@ -1,10 +1,10 @@
 ---
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 audience: user
 user-guide-title: Ayuda de Servicios inteligentes
 breadcrumb-title: Guía de servicios inteligentes
 user-guide-description: Utilice los servicios inteligentes de IA para generar puntuaciones, descubrir perspectivas y crear segmentos a partir de los datos de eventos de marketing.
-source-git-commit: 43405e50d0c418a8ee988f4d10b187cc4941c5ea
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 22%
