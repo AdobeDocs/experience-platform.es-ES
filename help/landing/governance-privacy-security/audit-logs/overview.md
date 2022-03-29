@@ -2,18 +2,14 @@
 title: Información general sobre registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
+source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 5%
+source-wordcount: '757'
+ht-degree: 7%
 
 ---
 
-# Registros de auditoría (Beta)
-
->[!IMPORTANT]
->
->La función de registros de auditoría de Adobe Experience Platform se encuentra actualmente en fase beta y es posible que su organización no tenga acceso a ella aún. La funcionalidad descrita en esta documentación está sujeta a cambios.
+# Registros de auditoría
 
 Para aumentar la transparencia y visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform permite auditar la actividad de los usuarios para diversos servicios y capacidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de manera eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
 
@@ -27,13 +23,18 @@ En la tabla siguiente se describen las acciones en las que los registros de audi
 
 | Recurso | Acciones |
 | --- | --- |
-| [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li></ul> |
-| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li><li>Deshabilitar para perfil</li></ul> |
+| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para perfil</li></ul> |
 | [Clase](../../../xdm/schema/composition.md#class) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Tipo de datos](../../../xdm/schema/composition.md#data-type) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Entorno de pruebas](../../../sandboxes/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Restablecer</li><li>Eliminar</li></ul> |
-| [Destino](../../../destinations/home.md) | <ul><li>Activar</li></ul> |
+| [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Deshabilitar</li><li>Activar conjunto de datos</li><li>Eliminación de conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
+| [Segmento](../../../segmentation/home.md) | <ul><li>Crear</li><li>Eliminar</li><li>Activar segmento</li><li>Eliminación de segmentos</li></ul> |
+| [Combinar directiva](../../../profile/merge-policies/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Atributo calculado](../../../profile/computed-attributes/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Perfil del producto](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Cuenta (Adobe)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 
 ## Acceso a registros de auditoría
 
@@ -47,7 +48,7 @@ Puede ver los registros de auditoría de las distintas funciones del Experience 
 
 ![Panel de registros de auditoría](../../images/audit-logs/audits.png)
 
-El sistema solo muestra los registros de auditoría del último año. Todos los registros que superen este límite se eliminarán automáticamente del sistema.
+Los registros de auditoría se conservan durante 365 días después de los cuales se eliminarán del sistema. Por lo tanto, solo puede volver por un periodo máximo de 365 días.
 
 Seleccione un evento de la lista para ver sus detalles en el carril derecho.
 
@@ -55,7 +56,12 @@ Seleccione un evento de la lista para ver sus detalles en el carril derecho.
 
 ### Filtrar registros de auditoría
 
-Seleccione el icono de canal (![Icono de filtro](../../images/audit-logs/icon.png)) para mostrar una lista de controles de filtro para ayudar a reducir los resultados.
+>[!NOTE]
+>
+>Dado que se trata de una función nueva, los datos mostrados solo se remontan a marzo de 2022. Según el recurso seleccionado, es posible que los datos anteriores estén disponibles a partir de enero de 2022.
+
+
+Seleccione el icono de canal (![Icono de filtro](../../images/audit-logs/icon.png)) para mostrar una lista de controles de filtro para ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros independientemente de los distintos filtros seleccionados.
 
 ![Filtros](../../images/audit-logs/filters.png)
 
@@ -65,8 +71,9 @@ Los siguientes filtros están disponibles para eventos de auditoría en la inter
 | --- | --- |
 | [!UICONTROL Categoría] | Utilice el menú desplegable para filtrar los resultados mostrados por [categoría](#category). |
 | [!UICONTROL Acción] | Filtrar por acción. Actualmente solo [!UICONTROL Crear] y [!UICONTROL Eliminar] las acciones se pueden filtrar. |
+| [!UICONTROL Usuario] | Introduzca el ID de usuario completo (por ejemplo, `johndoe@acme.com`) para filtrar por usuario. |
 | [!UICONTROL Estado] | Filtrar por si la acción fue permitida (completada) o denegada debido a la falta de [control de acceso](../../../access-control/home.md) permisos. |
-| [!UICONTROL Fecha] | Seleccione una fecha de inicio o una fecha de finalización para definir un intervalo de fechas por el que filtrar los resultados. |
+| [!UICONTROL Fecha] | Seleccione una fecha de inicio o una fecha de finalización para definir un intervalo de fechas por el que filtrar los resultados. Los datos se pueden exportar con un periodo retrospectivo de 90 días (por ejemplo, 2021-12-15 a 2022-03-15). Esto puede variar según el tipo de evento. |
 
 Para quitar un filtro, seleccione la &quot;X&quot; en el icono de la píldora para el filtro en cuestión o seleccione **[!UICONTROL Borrar todo]** para eliminar todos los filtros.
 
@@ -90,6 +97,10 @@ Todas las acciones que puede realizar en la interfaz de usuario también se pued
 
 Para obtener información sobre cómo administrar los registros de auditoría de actividades en Adobe Admin Console, consulte lo siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## Pasos siguientes
+## Pasos siguientes y recursos adicionales
 
 Esta guía abarcaba cómo administrar los registros de auditoría en Experience Platform. Para obtener más información sobre cómo monitorizar las actividades de Platform, consulte la documentación de [Perspectivas de la capacidad de observación](../../../observability/home.md) y [monitorización de la ingesta de datos](../../../ingestion/quality/monitor-data-ingestion.md).
+
+Para comprender mejor los registros de auditoría en Experience Platform, vea el siguiente vídeo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
