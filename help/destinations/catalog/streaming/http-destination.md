@@ -3,9 +3,9 @@ keywords: flujo continuo;
 title: Conexión de API HTTP
 description: El destino de la API HTTP en Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1384'
 ht-degree: 1%
 
 ---
@@ -61,8 +61,11 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-
 También puede utilizar [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) para configurar una integración y enviar datos de perfil de Experience Platform a un extremo HTTP.
+
+## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allowlist}
+
+Para cumplir los requisitos de seguridad y cumplimiento de los clientes, Experience Platform proporciona una lista de IP estáticas que puede lista de permitidos para el destino de la API HTTP. Consulte [LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obtener la lista completa de las direcciones IP a lista de permitidos.
 
 ## Conectarse al destino {#connect-destination}
 
@@ -97,10 +100,6 @@ Consulte [Activar datos de audiencia en destinos de exportación de perfil de fl
 ### Atributos de destino {#attributes}
 
 En el [[!UICONTROL Seleccionar atributos]](../../ui/activate-streaming-profile-destinations.md#select-attributes) paso, Adobe recomienda seleccionar un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino.
-
-## Consideraciones del producto {#product-considerations}
-
-El Experience Platform no transmite datos a extremos HTTP a través de un conjunto fijo de IP estáticas. Por lo tanto, Adobe no puede proporcionar una lista de IP estáticas que se pueden lista de permitidos para el destino de API HTTP.
 
 ## Comportamiento de exportación del perfil {#profile-export-behavior}
 

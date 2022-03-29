@@ -4,10 +4,9 @@ title: 'LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en
 type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar de forma segura los datos de Experience Platform a su servidor SFTP, Amazon S3 o al almacenamiento del blob de Azure.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-translation-type: tm+mt
-source-git-commit: 4cc7fb2714f6df8065a0531f7e507983940d662c
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -17,12 +16,12 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * Adobe recomienda marcar esta página y volver a visitarla cada tres meses para buscar las últimas direcciones IP. Adobe no proporciona notificaciones de nuevos rangos de IP.
-> * Aunque el Adobe admite las exportaciones de datos a servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar datos son [!DNL Amazon S3] y [!DNL Azure Blob].
+> * Aunque el Adobe admite la exportación de datos a servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar los datos son [!DNL Amazon S3] y [!DNL Azure Blob].
 
 
 ## Información general {#overview}
 
-Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar de forma segura los datos del Experience Platform a su [servidor SFTP](./sftp.md).
+Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar de forma segura los datos de su Experience Platform a su [Servidor SFTP](./sftp.md).
 
 Puede definir los controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el servicio de transferencia de datos.
 
