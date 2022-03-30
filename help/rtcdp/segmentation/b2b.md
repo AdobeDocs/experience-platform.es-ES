@@ -2,9 +2,9 @@
 title: Casos de uso de segmentación para CDP B2B Edition en tiempo real
 description: Una visión general de los diversos casos de uso disponibles de CDP B2B Edition en tiempo real.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
+source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1247'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Este documento proporciona ejemplos de definiciones de segmentos en tiempo real 
 >
 >Los atributos necesarios para estos casos de uso de segmentación solo están disponibles para los clientes de Real-time Customer Data Platform B2B Edition. Si no utiliza Real-time Customer Data Platform B2B Edition, consulte la [información general sobre segmentación](./segmentation-overview.md) en su lugar.
 
-## Requisitos previos
+## Requisitos previos {#prerequisites}
 
 Antes de poder usar los atributos de segmentación para las clases B2B, debe completar los siguientes pasos:
 
@@ -28,7 +28,7 @@ Antes de poder usar los atributos de segmentación para las clases B2B, debe com
 
 Una vez cumplidos estos requisitos, puede combinar estos atributos para casos de uso comunes de B2B.
 
-## Primeros pasos
+## Primeros pasos {#getting-started}
 
 Una vez que los esquemas de unión de las clases B2B tienen relaciones establecidas y se han utilizado para introducir datos, sus atributos están disponibles en el carril izquierdo del Generador de segmentos.
 
@@ -54,52 +54,58 @@ Consulte la [esquemas en la documentación de Real-time Customer Data Platform B
 
 Los casos de uso siguientes proporcionan información sobre qué clases se utilizan para establecer relaciones entre los distintos esquemas para lograr estos resultados. Estos ejemplos se pueden utilizar para ayudarle a crear sus propios segmentos.
 
-## Ejemplos de diferentes casos de uso
+## Ejemplos de casos de uso de segmentación diferentes {#use-cases}
 
 Los siguientes casos de uso están disponibles para la segmentación con B2B Edition. Cada ejemplo proporciona una descripción de lo que hace el segmento y una descripción de las clases utilizadas para crearlos. Las imágenes proporcionadas resaltan la ruta del archivo en la variable [!UICONTROL Atributos] carril lateral que refleja la estructura del esquema. La variable [!UICONTROL Propiedades del segmento] a la derecha de la pantalla contiene un desglose por escrito de los atributos del segmento.
 
-### Ejemplo 1
+### Ejemplo 1: Buscar &quot;responsables de la toma de decisiones&quot; para oportunidades B2B {#find-decision-maker}
 
 Encuentre a todas las personas que son el &quot;Responsable de Decisión&quot; de cualquier oportunidad. Este segmento requiere un vínculo entre las variables [!UICONTROL Perfil individual XDM] y [!UICONTROL Relación de persona de oportunidad comercial XDM] Clase .
 
 ![Interfaz de usuario que muestra la configuración de ejemplo 1](../assets/segmentation/example-1.png)
 
-### Ejemplo 2
+### Ejemplo 2: Buscar perfiles B2B asignados a oportunidades en una determinada cantidad de dólares {#find-opportunities-amount}
 
 Encuentre todas las personas directamente asignadas a cualquier oportunidad de la cual la cantidad de oportunidad sea superior a la cantidad dada (1 millón de dólares). Este segmento requiere un vínculo entre las variables [!UICONTROL Perfil individual XDM] class, [!UICONTROL Relación de persona de oportunidad comercial XDM] y [!UICONTROL Oportunidad comercial XDM] Clase .
 
 ![Interfaz de usuario que muestra la configuración de ejemplo 2](../assets/segmentation/example-2.png)
 
-### Ejemplo 3
+### Ejemplo 3: Buscar perfiles B2B asignados a oportunidades por ubicación {#find-opportunities-location}
 
 Encuentre todas las personas que están directamente asignadas a cualquier oportunidad donde la cuenta esté ubicada en una ubicación determinada (Canadá). Este segmento requiere un vínculo entre las variables [!UICONTROL Perfil individual XDM] class, [!UICONTROL Relación de persona de oportunidad comercial XDM] class, [!UICONTROL Oportunidad comercial XDM] y [!UICONTROL Cuenta comercial XDM] Clase .
 
 ![Interfaz de usuario que muestra la configuración de ejemplo 3](../assets/segmentation/example-3.png)
 
-### Ejemplo 4
+### Ejemplo 4: Buscar &quot;responsables de la toma de decisiones&quot; para oportunidades por sector y comportamiento de navegación {#find-industry-browsing-behavior}
 
 Encuentre a todas las personas que son &quot;responsables de tomar decisiones&quot; de cualquier oportunidad donde la cuenta esté en el sector &quot;financiero&quot;, y visiten la página de precios en los últimos tres días. Este segmento requiere un vínculo entre las variables [!UICONTROL Perfil individual XDM] class, [!UICONTROL Relación de persona de oportunidad comercial XDM] class, [!UICONTROL Oportunidad comercial XDM] y [!UICONTROL Cuenta comercial XDM] y [!UICONTROL XDM ExperienceEvent] Clase .
 
 ![Interfaz de usuario que muestra la configuración de ejemplo 4](../assets/segmentation/example-4.png)
 
-### Ejemplo 5
+### Ejemplo 5: Encuentre perfiles B2B para oportunidades por nombre de departamento e cantidad de oportunidad {#find-department-opportunity-amount}
 
 Encuentre a todas las personas que trabajan en un departamento de Recursos Humanos (HR) y están relacionadas con cualquier cuenta que tenga al menos una oportunidad abierta que valga la cantidad dada (1 millón de dólares) o más. Este segmento requiere un vínculo entre las variables [!UICONTROL Perfil individual XDM] class, [!UICONTROL Cuenta comercial XDM] y [!UICONTROL Oportunidad comercial XDM] Clase .
 
 ![Interfaz de usuario que muestra la configuración de ejemplo 5](../assets/segmentation/example-5.png)
 
-### Ejemplo 6
+### Ejemplo 6: Buscar perfiles B2B por puesto de trabajo e ingresos anuales por cuenta {#find-by-job-title-and-revenue}
 
 Encuentre todas las personas cuyo puesto de trabajo es vicepresidente y están relacionadas con cualquier cuenta con ingresos anuales de la cantidad dada (100 millones de dólares) o más, y hayan visitado la página de precios al menos 3 veces en el último mes. Este segmento requiere un vínculo entre las variables [!UICONTROL Perfil individual XDM] class, [!UICONTROL Cuenta comercial XDM] y [!UICONTROL XDM ExperienceEvent] Clase .
 
 ![Interfaz de usuario que muestra la configuración de ejemplo 6](../assets/segmentation/example-6.png)
 
-### Ejemplo 7
+### Ejemplo 7: Buscar &quot;responsables de la toma de decisiones&quot; por estado de oportunidad y comportamiento de navegación {#find-by-opportunity-status-and-browsing-behavior}
 
 Encuentre a todas las personas que son &quot;responsables de la toma de decisiones&quot; de cualquier oportunidad perdida cerrada, y visiten la página de precios en la última semana. Este segmento requiere un vínculo entre las variables [!UICONTROL Perfil individual XDM] class, [!UICONTROL Relación de persona de oportunidad comercial XDM] class, [!UICONTROL Oportunidad comercial XDM] y [!UICONTROL XDM ExperienceEvent] Clase .
 
 ![Interfaz de usuario que muestra la configuración de ejemplo 7](../assets/segmentation/example-7.png)
 
-## Pasos siguientes
+### Ejemplo 8: Usar cuentas relacionadas para expandir el alcance de la segmentación {#related-accounts}
+
+Encuentre todas las personas que trabajan en un departamento de Recursos Humanos (HR) y que están relacionadas con cualquier cuenta *o cualquiera de las cuentas relacionadas de la cuenta* que tenga al menos una oportunidad abierta que valga la cantidad dada (1 millón de dólares) o más. Este segmento requiere un vínculo entre las variables [!UICONTROL Perfil individual XDM] class, [!UICONTROL Cuenta comercial XDM] y [!UICONTROL Oportunidad comercial XDM] Clase .
+
+![Interfaz de usuario que muestra la segmentación de cuentas relacionadas](../assets/segmentation/segmentation-related-accounts.png)
+
+## Pasos siguientes {#next-steps}
 
 Después de leer esta descripción general, ahora conoce las posibilidades de segmentación disponibles mediante CDP en tiempo real, B2B Edition. Para obtener más información sobre el servicio de segmentación, lea la [Documentación de segmentación](../../segmentation/home.md).

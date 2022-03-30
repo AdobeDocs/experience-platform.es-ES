@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Guía de Real-time Customer Data Platform
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
-source-git-commit: c0ea64691ad5f901bca9729ff6d742ffd423f1e5
+source-git-commit: a3b0c8b8acfac2f80fa630938ec9aa4a04d76175
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 32%
+source-wordcount: '184'
+ht-degree: 30%
 
 ---
 
@@ -45,6 +45,8 @@ ht-degree: 32%
 * Perfiles {#profile}
    * [Información general del perfil](profile/profile-overview.md)
    * [Exploración de perfiles](profile/profile-browse.md)
+* Servicios de CDP B2B Edition AI/ML en tiempo real {#b2b-cdp-ai-ml}
+   * [Cuentas relacionadas](b2b-ai-ml-services/related-accounts.md)
 * Esquemas {#schemas}
    * [Información general sobre esquemas](schemas/overview.md)
    * [Esquemas en tiempo real CDP B2B Edition](schemas/b2b.md)

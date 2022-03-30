@@ -3,9 +3,9 @@ keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinaci�
 title: Guía de la interfaz de usuario del perfil de cuenta
 description: Mediante el uso de perfiles de cuenta, Real-time Customer Data Platform B2B Edition le permite unificar la información de la cuenta de múltiples fuentes. Esta guía proporciona detalles para interactuar con perfiles de cuenta en la interfaz de usuario de Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
+source-git-commit: 55af435c4819193fa3f18a85543bc1fad423bb4d
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -20,21 +20,21 @@ Los perfiles de cuenta permiten unificar la información de la cuenta de varias 
 
 Para obtener más información sobre cómo se crean los perfiles de cuenta como parte del flujo de trabajo B2B, consulte la [tutorial completo](../b2b-tutorial.md).
 
-## Explorar perfiles de cuenta
+## Explorar perfiles de cuenta {#browse-account-profiles}
 
 Para examinar los perfiles de cuenta, comience por seleccionar **[!UICONTROL Perfiles]** under [!UICONTROL Cuentas] en el panel de navegación izquierdo.
 
-![](images/b2b-account-browse.png)
+![Seleccione Perfiles en la navegación izquierda](images/b2b-account-browse.png)
 
 En el **[!UICONTROL Examinar]** , puede explorar perfiles de cuenta mediante un ID de cuenta de un origen empresarial conectado o introduciendo directamente los detalles del origen.
 
-![](images/b2b-account-browse-by.png)
+![Uso del ID de cuenta para explorar perfiles](images/b2b-account-browse-by.png)
 
-### Examinar por [!UICONTROL Origen empresarial conectado]
+### Examinar por [!UICONTROL Origen empresarial conectado] {#browse-by-connected-enterprise-source}
 
 Para examinar los perfiles de cuenta por un origen de empresa conectado, seleccione **[!UICONTROL Origen empresarial conectado]** de la variable **[!UICONTROL Examinar por]** lista desplegable y, a continuación, elija un origen conectado con el botón de selección situado junto al **[!UICONTROL Fuente]** campo .
 
-![](images/b2b-account-browse.png)
+![Explorar perfiles de cuenta por origen de empresa conectado](images/b2b-account-browse.png)
 
 Esto abre el **[!UICONTROL Seleccionar origen]** , donde puede seleccionar un origen basado en las conexiones que ha establecido su organización.
 
@@ -44,7 +44,7 @@ Esto abre el **[!UICONTROL Seleccionar origen]** , donde puede seleccionar un or
 
 Para obtener más información sobre la conexión de orígenes empresariales, consulte la [información general sobre fuentes](../sources/sources-overview.md).
 
-![](images/b2b-account-select-source.png)
+![Seleccionar flujo de trabajo de origen](images/b2b-account-select-source.png)
 
 Para elegir una fuente, seleccione el botón de opción situado junto al nombre de la conexión y, a continuación, utilice **[!UICONTROL Select]** para volver a la [!UICONTROL Examinar] pestaña .
 
@@ -54,11 +54,11 @@ Con un origen seleccionado, ahora debe introducir un **[!UICONTROL ID de cuenta]
 >
 >Para los ID de cuenta de Marketo, hay dos tablas de cuenta posibles a las que se puede hacer referencia, por lo que debe utilizar una sintaxis específica para asegurarse de que está viendo la cuenta correcta.
 >
->La sintaxis estándar más común es el ID de cuenta de Marketo anexado por `.mkto_org` (por ejemplo, `1234567.mkto_org`). Los clientes de Marketing basado en cuentas de Marketo pueden tener valores adicionales que se pueden encontrar usando el ID de cuenta de Marketo anexado por `.mkto_account`. Si no está seguro de qué sintaxis utilizar, consulte con su administrador de Marketo.
+>La sintaxis estándar más común es el ID de cuenta de Marketo anexado por `.mkto_org` (por ejemplo, `1234567.mkto_org`). Los clientes de Marketo Account-Based Marketing pueden tener valores adicionales que se pueden encontrar utilizando el ID de cuenta de Marketo anexado por `.mkto_account`. Si no está seguro de qué sintaxis utilizar, consulte con su administrador de Marketo.
 
-![](images/b2b-account-browse-id.png)
+![Selección de ID de cuenta](images/b2b-account-browse-id.png)
 
-### Examinar por [!UICONTROL Otros]
+### Examinar por [!UICONTROL Otros] {#browse-by-others}
 
 CDP en tiempo real, B2B Edition admite la capacidad de realizar una búsqueda directa permitiéndole introducir una **[!UICONTROL Nombre de origen]**, **[!UICONTROL Instancia de origen]** y **[!UICONTROL ID de cuenta]** para una cuenta que desee ver. Al introducir el nombre de origen y la instancia directamente, se proporciona el contexto necesario para que el Experience Platform busque y muestre los datos de perfil de cuenta correctos.
 
@@ -68,9 +68,9 @@ Otro ejemplo podría ser que está realizando una transformación en los datos e
 
 Para comenzar una búsqueda directa, seleccione **[!UICONTROL Otros]** de la variable **[!UICONTROL Examinar por]** lista desplegable y, a continuación, introduzca un **[!UICONTROL Nombre de origen]**, **[!UICONTROL Instancia de origen]** y **[!UICONTROL ID de cuenta]** para la cuenta que desee ver.
 
-![](images/b2b-account-browse-adhoc.png)
+![Examinar por otros](images/b2b-account-browse-adhoc.png)
 
-## Ver detalles del perfil de la cuenta
+## Ver detalles del perfil de la cuenta {#view-account-profile-details}
 
 Después de usar la variable **[!UICONTROL Examinar]** para localizar un perfil de cuenta, seleccione la **[!UICONTROL ID de perfil]** abre el **[!UICONTROL Detalle]** para el perfil de cuenta. La información de perfil mostrada en la variable **[!UICONTROL Detalle]** se ha combinado desde varios fragmentos de perfil para formar una sola vista de la cuenta individual. Esto incluye detalles de la cuenta, como atributos básicos y datos de medios sociales.
 
@@ -80,19 +80,19 @@ Los campos predeterminados mostrados también se pueden cambiar en el nivel de o
 >
 >Hay funciones similares disponibles para perfiles de clientes y se ha creado una guía paso a paso con instrucciones para añadir y eliminar atributos, cambiar el tamaño de los paneles, etc. Lea el [guía de personalización de detalles de perfil](../../profile/ui/profile-customization.md) para obtener más información.
 
-![](images/b2b-account-details.png)
+![Ver detalles del perfil de la cuenta](images/b2b-account-details.png)
 
 Puede ver detalles adicionales relacionados con la cuenta seleccionando otra de las pestañas disponibles. Estas pestañas incluyen atributos, personas y la pestaña de oportunidades que muestra las oportunidades abiertas y cerradas relacionadas con la cuenta en los sistemas empresariales. Consulte las secciones siguientes para obtener más información sobre cada pestaña.
 
-## Ficha Atributos
+## Ficha Atributos {#attributes-tab}
 
 La variable **[!UICONTROL Atributos]** enumera toda la información de registro relacionada con la cuenta. Esto incluye los datos de atributos procedentes de varios orígenes que se han combinado para formar una sola vista de la cuenta.
 
 Además de poder ver los datos en una lista, puede utilizar la barra de búsqueda para buscar atributos específicos o ver los datos de registro como JSON.
 
-![](images/b2b-account-attributes.png)
+![Ficha Atributos](images/b2b-account-attributes.png)
 
-## Pestaña Personas
+## Pestaña Personas {#people-tab}
 
 La variable **[!UICONTROL People]** proporciona una lista de personas individuales asociadas a la cuenta. Estas personas pueden ser contactos y posibles clientes de diferentes sistemas empresariales gestionados por diferentes equipos de su organización, pero en tiempo real CDP, B2B Edition se presentan juntos como una lista única que le permite ver una vista más holística de los contactos de su cuenta.
 
@@ -102,9 +102,9 @@ La variable **[!UICONTROL People]** proporciona una lista de personas individual
 
 Además de mostrarle una instantánea de la información del contacto, cada persona incluida también incluye un **[!UICONTROL ID de perfil]**, que es un vínculo en el que se puede hacer clic y que le permite explorar el perfil del cliente en tiempo real para ese individuo. Para obtener más información sobre la visualización de perfiles de cliente individuales relacionados con sus cuentas, visite la guía para [exploración de perfiles en tiempo real CDP, B2B Edition](../profile/profile-browse.md).
 
-![](images/b2b-account-people.png)
+![Pestaña Personas](images/b2b-account-people.png)
 
-## Ficha Oportunidades
+## Ficha Oportunidades {#opportunities-tab}
 
 La variable **[!UICONTROL Oportunidades]** proporciona información sobre las oportunidades abiertas y cerradas relacionadas con la cuenta. Estas oportunidades se pueden incorporar en Experience Platform de múltiples fuentes, sin embargo, CDP en tiempo real, B2B Edition facilita a los especialistas en marketing ver todas estas oportunidades juntas en un solo lugar.
 
@@ -114,4 +114,20 @@ La variable **[!UICONTROL Oportunidades]** proporciona información sobre las op
 
 Cada oportunidad incluye información como el nombre de la oportunidad, su cantidad, etapa y si la oportunidad está abierta, cerrada, ganada o perdida.
 
-![](images/b2b-account-opportunities.png)
+![Pestaña de oportunidades de cuenta](images/b2b-account-opportunities.png)
+
+## Ficha Cuentas relacionadas {#related-accounts-tab}
+
+La variable **[!UICONTROL Cuentas relacionadas]** proporciona información sobre otras cuentas que pueden estar relacionadas con la cuenta que está explorando. Para obtener información detallada sobre la funcionalidad, lea la [información general sobre cuentas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+
+>[!NOTE]
+>
+>* Un grupo de cuentas relacionadas puede tener un máximo de 30 perfiles de cuenta. Si se encontraron relacionados más de 30 perfiles de cuenta, se dividen arbitrariamente en varios grupos, cada uno de los cuales tiene no más de 30 miembros. El grupo Cuentas relacionadas de un perfil de cuenta siempre se incluye a sí mismo.
+>* La variable [!UICONTROL Cuentas relacionadas] actualmente muestra una lista de hasta 25 cuentas relacionadas con la cuenta que está explorando. Se trata de una limitación que se solucionará en una actualización futura. A pesar de esta limitación de la IU, cuando utiliza cuentas relacionadas en definiciones de segmentos, para grupos de 30 perfiles de cuenta relacionados, todos los perfiles se utilizan para la segmentación.
+
+
+Cada cuenta relacionada incluye información como el ID y el nombre del perfil de la cuenta, su clave de fuente de la cuenta e información adicional relacionada con la página principal, la dirección, la cuenta principal, el teléfono, el sector y los ingresos anuales.
+
+![Ficha Cuentas relacionadas](images/b2b-account-related-accounts.png)
+
+Puede utilizar las cuentas relacionadas en esta lista con fines de segmentación. Consulte una [ejemplo de segmentación](/help/rtcdp/segmentation/b2b.md#related-account) para comprender cómo usar cuentas relacionadas para expandir el alcance en definiciones de segmentos.
