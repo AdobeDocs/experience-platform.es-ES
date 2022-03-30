@@ -4,9 +4,9 @@ description: Aprenda a añadir individualmente campos de grupos de campos existe
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c1b1a3b18a9950d71fb84e463adc973ab45ba563
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Los flujos de trabajo descritos en este documento beta ahora están disponibles de forma general en Adobe Experience Platform. Para obtener las últimas directrices sobre los flujos de trabajo basados en el campo en el Editor de esquemas, consulte la [guía de la interfaz de usuario de schemas](./resources/schemas.md) en su lugar. Esta guía se eliminará próximamente.
+>Los flujos de trabajo descritos en este documento están actualmente en fase beta y es posible que su organización no tenga acceso a ellos aún. La funcionalidad descrita en esta documentación está sujeta a cambios.
 
 Adobe Experience Platform ofrece un conjunto sólido de [grupos de campos](../schema/composition.md#field-group) para su uso en esquemas del Modelo de datos de experiencia (XDM). La estructura y la semántica detrás de estos grupos de campo están cuidadosamente diseñadas para satisfacer una amplia variedad de casos de uso de segmentación y otras aplicaciones posteriores en Platform. También puede definir sus propios grupos de campos personalizados para satisfacer necesidades comerciales únicas.
 
@@ -67,7 +67,7 @@ Seleccione el icono de vista previa (![Icono de vista previa](../images/ui/field
 
 ![Añadir campo estándar](../images/ui/field-based-workflows/add-standard-field.png)
 
-The canvas updates to show the standard field added to the schema, including any parent fields that it is nested under within the field group structure. El nombre del grupo de campos también se enumera en **[!UICONTROL Grupos de campo]** en el carril izquierdo. If you want to add more fields from the same field group, select **[!UICONTROL Manage related fields]** in the right rail.
+El lienzo se actualiza para mostrar el campo estándar añadido al esquema, incluidos los campos principales anidados dentro de la estructura del grupo de campos. El nombre del grupo de campos también se enumera en **[!UICONTROL Grupos de campo]** en el carril izquierdo. Si desea agregar más campos del mismo grupo de campos, seleccione **[!UICONTROL Administrar campos relacionados]** en el carril derecho.
 
 ![Campo estándar añadido](../images/ui/field-based-workflows/standard-field-added.png)
 

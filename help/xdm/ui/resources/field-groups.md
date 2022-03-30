@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field group;field groups;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;grupo de campos;grupos de campos;
 solution: Experience Platform
 title: Crear y editar grupos de campos de esquema en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar grupos de campos de esquema en la interfaz de usuario del Experience Platform.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 716250b8bcfa1b2d9c868aa80b3122da401553b9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ Adobe Experience Platform proporciona muchos grupos de campos estándar que abar
 
 Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [Información general de XDM](../../home.md) para una introducción al papel de XDM dentro del ecosistema del Experience Platform, y [conceptos básicos de la composición del esquema](../../schema/composition.md) para saber cómo contribuyen los grupos de campos a los esquemas XDM.
 
-While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
+Aunque no es necesario para esta guía, se recomienda seguir también el tutorial de [composición de un esquema en la interfaz de usuario](../../tutorials/create-schema-ui.md) para familiarizarse con las diversas capacidades de la [!DNL Schema Editor].
 
 ## Crear un nuevo grupo de campos {#create}
 
-To create a new field group, you must first select a schema that the field group will be added to. Puede elegir [crear un nuevo esquema](./schemas.md#create) o [seleccionar un esquema existente para editar](./schemas.md#edit).
+Para crear un nuevo grupo de campos, primero debe seleccionar un esquema al que se agregará el grupo de campos. Puede elegir [crear un nuevo esquema](./schemas.md#create) o [seleccionar un esquema existente para editar](./schemas.md#edit).
 
 Una vez que haya abierto el esquema en la variable [!DNL Schema Editor], seleccione **[!UICONTROL Agregar]** junto a la variable [!UICONTROL Grupos de campo] en el carril izquierdo.
 
@@ -46,7 +46,7 @@ La variable [!DNL Schema Editor] vuelve a aparecer, con el nuevo grupo de campos
 >
 >Solo los grupos de campos personalizados definidos por su organización pueden editarse y personalizarse completamente. Para los grupos de campos principales definidos por el Adobe, solo se pueden editar los nombres para mostrar de sus campos en el contexto de esquemas individuales. Consulte la sección sobre [edición de nombres para mostrar en campos de esquema](./schemas.md#display-names) para obtener más información.
 >
->Once a custom field group has been saved and used in a schema for data ingestion, only additive changes can be made to the field group thereafter. Consulte la [reglas de evolución de esquema](../../schema/composition.md#evolution) para obtener más información.
+>Una vez guardado y utilizado un grupo de campos personalizados en un esquema para la ingesta de datos, solo se pueden realizar cambios adicionales en el grupo de campos a partir de entonces. Consulte la [reglas de evolución de esquema](../../schema/composition.md#evolution) para obtener más información.
 
 Para editar un grupo de campos existente, primero debe abrir un esquema que emplee el grupo de campos dentro del [!DNL Schema Editor]. Puede [seleccionar un esquema existente para editar](./schemas.md#edit)o puede [crear un nuevo esquema](./schemas.md#create) y añada el grupo de campos en cuestión.
 
@@ -54,11 +54,7 @@ Una vez que haya abierto el esquema en el editor, puede empezar [adición de cam
 
 ## Adición de campos a un grupo de campos {#add-fields}
 
->[!NOTE]
->
->Esta sección se centra en añadir campos a grupos de campos personalizados. Para obtener información sobre cómo agregar campos personalizados a grupos de campos estándar, consulte la [guía de la interfaz de usuario de schemas](./schemas.md#custom-fields-for-standard-groups).
-
-Adición de campos a un grupo de campos personalizados en la variable [!DNL Schema Editor], comience por seleccionar el nombre del grupo de campos en el carril izquierdo y, a continuación, seleccione la opción **plus (+)** junto al nombre del esquema en el lienzo.
+Adición de campos a un grupo de campos en la variable [!DNL Schema Editor], comience por seleccionar el nombre del grupo de campos en el carril izquierdo y, a continuación, seleccione la opción **plus (+)** junto al nombre del esquema en el lienzo.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
@@ -72,6 +68,6 @@ Si el mismo grupo de campos ya está empleado en otros esquemas, los campos reci
 
 ## Pasos siguientes
 
-This guide covered how to create and edit field groups using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
+Esta guía explica cómo crear y editar grupos de campos mediante la interfaz de usuario de Platform. Para obtener más información sobre las capacidades de la variable [!UICONTROL Esquemas] espacio de trabajo, consulte [[!UICONTROL Esquemas] información general del espacio de trabajo](../overview.md).
 
 Para obtener información sobre cómo administrar grupos de campos mediante la variable [!DNL Schema Registry] API, consulte la [guía de extremo de grupos de campos](../../api/field-groups.md).
