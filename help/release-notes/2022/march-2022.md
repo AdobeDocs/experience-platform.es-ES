@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 9117fffc58786f05e8741d9695ddb551344b6cc7
+source-git-commit: 04d35137a301492794ab8c0c67183cf5c76f2105
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 8%
+source-wordcount: '1063'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,9 @@ Nuevas funciones de Adobe Experience Platform:
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [Alertas](#alerts)
+- [[!DNL Dashboards]](#dashboards)
 - [Modelo de datos de experiencia (XDM)](#xdm)
+- [[!DNL Query Service]](#query-service)
 - [Fuentes](#sources)
 
 ## Registros de auditoría {#audit-logs}
@@ -51,11 +53,40 @@ Experience Platform le permite suscribirse a alertas basadas en eventos para div
 
 Para obtener más información sobre las alertas en Platform, consulte la [información general sobre alertas](../../observability/alerts/overview.md).
 
+## Tableros {#dashboards}
+
+Adobe Experience Platform proporciona varios [!DNL dashboards] a través de la cual puede ver información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias.
+
+### Tableros de perfil
+
+El panel Perfiles muestra una instantánea de los datos de atributo (registro) que su organización tiene en el Experience Platform Almacenamiento de perfiles .
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Widget Perfiles sin segmentar | La utilidad proporciona el número total de perfiles que no están adjuntos a ningún segmento. El número generado es preciso a partir de la última instantánea y representa la oportunidad de activar perfiles en toda la organización. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
+| Widget de tendencias de perfiles sin segmentar | Esta utilidad proporciona una ilustración gráfica de líneas del número de perfiles que no están adjuntos a ningún segmento durante un período de tiempo determinado. La tendencia se puede visualizar en periodos de 30 días, 90 días y 12 meses. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
+| Perfiles sin segmentar por utilidad de identidad | Esta utilidad categoriza el número total de perfiles sin segmentar por su identificador único. Los datos se visualizan en un gráfico de barras. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
+| utilidad de perfiles de identidad única | Esta utilidad proporciona un recuento de los perfiles de su organización que solo tienen un tipo de ID que crea su identidad, ya sea un correo electrónico o un ECID. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
+
+Para obtener más información sobre los paneles Perfiles, consulte la [Información general sobre los paneles de perfiles](../../dashboards/guides/profiles.md).
+
+### Tableros de destinos
+
+El panel Destinos muestra una instantánea de los destinos que su organización ha habilitado en el Experience Platform.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Widget de recuento de destinos | La utilidad proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos. Consulte la [documentación de utilidades estándar de destinos](../../dashboards/guides/destinations.md#standard-widgets) para obtener más información. |
+
+Para obtener más información sobre los paneles Destinos en Platform, consulte la [Información general sobre los paneles Destinos](../../dashboards/guides/destinations.md).
+
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
 Experience Data Model (XDM) es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se introducen en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
-
-**Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
@@ -65,11 +96,23 @@ Experience Data Model (XDM) es una especificación de código abierto que propor
 
 Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
 
+## Servicio de consultas {#query-service}
+
+[!DNL Query Service] permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL Data Lake]. Puede unirse a cualquier conjunto de datos desde la [!DNL Data Lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para su uso en informes, Data Science Workspace o para su incorporación al perfil del cliente en tiempo real.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| `table_exists` | El nuevo comando de funciones se utiliza para confirmar si existe o no una tabla en el sistema. El comando devuelve un valor booleano: `true` si la tabla **does** existe, y `false` si la tabla lo hace **not** existe. Consulte la [Documentación de sintaxis SQL](../../query-service/sql/syntax.md) para obtener más información. |
+
+Para obtener más información sobre las funciones disponibles, consulte la [Información general del servicio de consultas](../../query-service/home.md).
+
 ## Fuentes {#sources}
 
 Adobe Experience Platform puede ingerir datos de fuentes externas, al mismo tiempo que le permite estructurarlos, etiquetarlos y mejorarlos mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
+Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar la ingesta de datos en todo.
 
 **Funciones actualizadas**
 
