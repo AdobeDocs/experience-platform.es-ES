@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 04d35137a301492794ab8c0c67183cf5c76f2105
+source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 6%
+source-wordcount: '882'
+ht-degree: 7%
 
 ---
 
@@ -20,9 +20,9 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [Alertas](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [Modelo de datos de experiencia (XDM)](#xdm)
 - [[!DNL Query Service]](#query-service)
 - [Fuentes](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## Registros de auditoría {#audit-logs}
 
@@ -70,6 +70,8 @@ El panel Perfiles muestra una instantánea de los datos de atributo (registro) q
 | Perfiles sin segmentar por utilidad de identidad | Esta utilidad categoriza el número total de perfiles sin segmentar por su identificador único. Los datos se visualizan en un gráfico de barras. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
 | utilidad de perfiles de identidad única | Esta utilidad proporciona un recuento de los perfiles de su organización que solo tienen un tipo de ID que crea su identidad, ya sea un correo electrónico o un ECID. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Para obtener más información sobre los paneles Perfiles, consulte la [Información general sobre los paneles de perfiles](../../dashboards/guides/profiles.md).
 
 ### Tableros de destinos
@@ -82,19 +84,21 @@ El panel Destinos muestra una instantánea de los destinos que su organización 
 | --- | --- |
 | Widget de recuento de destinos | La utilidad proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos. Consulte la [documentación de utilidades estándar de destinos](../../dashboards/guides/destinations.md#standard-widgets) para obtener más información. |
 
-Para obtener más información sobre los paneles Destinos en Platform, consulte la [Información general sobre los paneles Destinos](../../dashboards/guides/destinations.md).
-
-## Modelo de datos de experiencia (XDM) {#xdm}
-
-Experience Data Model (XDM) es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se introducen en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
-
-| Función | Descripción |
-| --- | --- |
-| Adición o eliminación de campos estándar individuales para un esquema | La interfaz de usuario del Editor de esquemas ahora le permite añadir partes de grupos de campos estándar a sus esquemas, lo que proporciona más flexibilidad para los campos que elija incluir sin necesidad de crear recursos personalizados desde cero.<br><br>Ahora también puede definir campos personalizados específicos directamente dentro de la estructura de esquema y asignarlos a un grupo de campos personalizados nuevo o existente sin necesidad de crear o editar el grupo de campos de antemano.<br><br>Consulte la guía de [creación y edición de esquemas en la interfaz de usuario](../../xdm/ui/resources/schemas.md) para obtener más información sobre estos nuevos flujos de trabajo. |
-
 {style=&quot;table-layout:auto&quot;}
 
-Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre los paneles Destinos en Platform, consulte la [Información general sobre los paneles Destinos](../../dashboards/guides/destinations.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## Servicio de consultas {#query-service}
 
@@ -105,6 +109,8 @@ Para obtener más información sobre XDM en Platform, consulte la [Información 
 | Función | Descripción |
 | --- | --- |
 | `table_exists` | El nuevo comando de funciones se utiliza para confirmar si existe o no una tabla en el sistema. El comando devuelve un valor booleano: `true` si la tabla **does** existe, y `false` si la tabla lo hace **not** existe. Consulte la [Documentación de sintaxis SQL](../../query-service/sql/syntax.md) para obtener más información. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre las funciones disponibles, consulte la [Información general del servicio de consultas](../../query-service/home.md).
 
