@@ -4,10 +4,10 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
+source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 1%
+source-wordcount: '2572'
+ht-degree: 0%
 
 ---
 
@@ -102,6 +102,10 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Tendencia del recuento de perfiles]](#profiles-count-trend)
 * [[!UICONTROL Perfiles por identidad]](#profiles-by-identity)
 * [[!UICONTROL Superposición de identidad]](#identity-overlap)
+* [[!UICONTROL Perfiles de identidad únicos]](#single-identity-profiles)
+* [[!UICONTROL Perfiles sin segmentar]](#unsegmented-profiles)
+* [[!UICONTROL Perfiles sin segmentar] Tendencia](#unsegmented-profiles-trend)
+* [[!UICONTROL Perfiles sin segmentar por identidad]](#unsegmented-profiles-by-identity)
 
 ### [!UICONTROL Recuento de perfiles] {#profile-count}
 
@@ -162,6 +166,30 @@ Para obtener más información sobre los fragmentos de perfil, comience por leer
 Para obtener más información sobre las identidades, visite [Documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+### [!UICONTROL Perfiles de identidad únicos] {#single-identity-profiles}
+
+La variable [!UICONTROL Perfiles de identidad únicos] proporciona un recuento de los perfiles de su organización que solo tienen un tipo de ID que crea su identidad. Este tipo de ID puede ser un correo electrónico o un ECID. El recuento de perfiles se genera a partir de los datos contenidos en la instantánea más reciente.
+
+![utilidad Perfiles de identidad únicos .](../images/profiles/single-identity-profiles.png)
+
+### [!UICONTROL Perfiles sin segmentar] {#unsegmented-profiles}
+
+La variable [!UICONTROL Perfiles sin segmentar] proporciona el número total de perfiles que no están adjuntos a ningún segmento. El número generado es preciso a partir de la última instantánea y representa la oportunidad de activar perfiles en toda la organización. También indica la oportunidad de eliminar perfiles que no proporcionan un ROI adecuado.
+
+![El widget Perfiles sin segmentar.](../images/profiles/unsegmented-profiles.png)
+
+### [!UICONTROL Tendencia de perfiles sin segmentar] {#unsegmented-profiles-trend}
+
+La variable [!UICONTROL Tendencia de perfiles sin segmentar] proporciona una ilustración de gráfico de líneas del número de perfiles que no están adjuntos a ningún segmento durante un período de tiempo determinado. La tendencia de perfiles no adjuntos a ningún segmento se puede visualizar en periodos de 30 días, 90 días y 12 meses. El periodo de tiempo se elige en un menú desplegable del widget. El recuento de perfiles se refleja en el eje y y en el tiempo en el eje x.
+
+![El widget Tendencia de perfiles sin segmentar .](../images/profiles/unsegmented-profiles-trend.png)
+
+### [!UICONTROL Perfiles sin segmentar por identidad] (#unsegmented-profiles-by-identity)
+
+La variable [!UICONTROL Perfiles sin segmentar por identidad] categoriza el número total de perfiles sin segmentar por su identificador único. Los datos se visualizan en un gráfico de barras para facilitar la comparación.
+
+![El widget Perfiles sin segmentar por identidad .](../images/profiles/unsegmented-profiles-by-identity.png)
 
 ## (Beta) Widgets de eficacia del perfil {#profile-efficacy-widgets}
 
