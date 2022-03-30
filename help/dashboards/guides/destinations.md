@@ -4,9 +4,9 @@ title: Panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Segmentos no asignados por identidad]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmentos asignados por identidad]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiencias comunes]](#common-audiences)
+* [[!UICONTROL Recuento de destinos]](#destinations-count)
 
 ### [!UICONTROL Destinos más utilizados] {#most-used-destinations}
 
@@ -151,6 +152,14 @@ Si el recuento de perfiles asignado a un segmento no es una desviación estánda
 Si un segmento dentro de la variable [!UICONTROL Estado de la audiencia asignada] se está desviando por un amplio margen, debe consultar el gráfico de tendencias del tamaño de audiencia y localizar el segmento anómalo. La tendencia puede proporcionar más información sobre el estado de su segmento.
 
 ![El widget de estado de la audiencia asignado.](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL Recuento de destinos] (#destination-count)
+
+La variable [!UICONTROL Recuento de destinos] proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos.
+
+Debajo del recuento total, seleccione **[!UICONTROL Destinos]** para desplazarse a la pestaña de exploración destinos . Esta página enumera todos los destinos con los que ha establecido una conexión hasta la fecha.
+
+![La utilidad Recuento de destinos .](../images/destinations/destinations-count.png)
 
 ## Pasos siguientes
 
