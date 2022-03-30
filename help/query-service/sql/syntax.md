@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 575352d8ee6da092fd0fc3a3033e481ee59bd7d3
+source-git-commit: 9493909d606ba858deab5a15f1ffcc8ec9257972
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2448'
 ht-degree: 2%
 
 ---
@@ -381,6 +381,38 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
 Consulte la guía de [organización lógica de los recursos de datos](../best-practices/organize-data-assets.md) para obtener más información detallada sobre las prácticas recomendadas del servicio de consulta.
+
+## La tabla existe
+
+La variable `table_exists` El comando SQL se utiliza para confirmar si existe o no una tabla en el sistema. El comando devuelve un valor booleano: `true` si la tabla **does** existe, y `false` si la tabla lo hace **not** existe.
+
+Al validar si existe una tabla antes de ejecutar las instrucciones, la variable `table_exists` simplifica el proceso de escritura de un bloque anónimo para cubrir ambas `CREATE` y `INSERT INTO` casos de uso.
+
+La siguiente sintaxis define la variable `table_exists` comando:
+
+```SQL
+$$
+BEGIN
+
+#Set mytableexist to true if the table already exists.
+SET @mytableexist = SELECT table_exists('target_table_name');
+
+#Create the table if it does not already exist (this is a one time operation).
+CREATE TABLE IF NOT EXISTS target_table_name AS
+  SELECT *
+  FROM   profile_dim_date limit 10;
+
+#Insert data only if the table already exists. Check if @mytableexist = 'true'
+ INSERT INTO target_table_name           (
+                     select *
+                     from   profile_dim_date
+                     WHERE  @mytableexist = 'true' limit 20
+              ) ;
+EXCEPTION
+WHEN other THEN SELECT 'ERROR';
+
+END $$; 
+```
 
 ## [!DNL Spark] Comandos SQL
 
