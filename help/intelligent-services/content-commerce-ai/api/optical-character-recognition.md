@@ -1,11 +1,11 @@
 ---
 keywords: OCR;presencia de texto;reconocimiento óptico de caracteres
-solution: Intelligent Services
+solution: Experience Platform
 title: Presencia de texto y reconocimiento óptico de caracteres
 topic-legacy: Developer guide
 description: En la API de AI de contenido y comercio, el servicio de presencia de texto / reconocimiento óptico de caracteres (OCR) puede indicar si hay texto en una imagen determinada. Si hay texto, OCR puede devolver el texto.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 4%

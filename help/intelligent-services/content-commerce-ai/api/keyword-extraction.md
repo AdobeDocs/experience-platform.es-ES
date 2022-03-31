@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;introducción;ai de contenido;ai de comercio;ai de contenido y comercio;extracción de palabras clave;extracción de palabras clave
-solution: Intelligent Services
+solution: Experience Platform
 title: Extracción de palabras clave en la API de AI de contenido y comercio
 topic-legacy: Developer guide
 description: El servicio de extracción de palabras clave, cuando se le da un documento de texto, extrae automáticamente palabras clave o jerarquías que describan mejor el asunto del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de extracción de palabras clave sin supervisión y reconocimiento de entidad con nombre (NER).
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 4%
