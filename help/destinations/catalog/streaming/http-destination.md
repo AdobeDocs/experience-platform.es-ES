@@ -1,11 +1,11 @@
 ---
+title: Conexión de API HTTP (Beta)
 keywords: flujo continuo;
-title: Conexión de API HTTP
 description: El destino de la API HTTP en Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
+source-git-commit: 0d58445557490a5539279f55c34183994429c632
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1382'
 ht-degree: 1%
 
 ---

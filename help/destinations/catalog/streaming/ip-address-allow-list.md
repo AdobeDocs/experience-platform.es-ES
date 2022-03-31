@@ -1,11 +1,12 @@
 ---
 keywords: Dirección IP, rango de IP, destinos de lista de permitidos, lista de permitidos, destinos de flujo de lista de permitidos
-title: 'LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo '
+title: LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo
 type: Documentation
-description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar de forma segura los datos del Experience Platform al extremo de la API HTTP REST.
-source-git-commit: 508435ebe7ba762d204408118703fa6469616118
+description: Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar de forma segura los datos del Experience Platform a su extremo de API HTTP REST, Amazon Kinesis o Azure Event Hubs.
+exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
+source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
