@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9493909d606ba858deab5a15f1ffcc8ec9257972
+source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
 workflow-type: tm+mt
-source-wordcount: '2448'
+source-wordcount: '2596'
 ht-degree: 2%
 
 ---
@@ -261,9 +261,17 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 | ------ | ------ |
 | `IF EXISTS` | Si se especifica esto, no se genera ninguna excepción si la tabla **not** existe. |
 
+## CREAR BASE DE DATOS
+
+La variable `CREATE DATABASE` crea una base de datos ADLS.
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] db_name
+```
+
 ## SOLTAR BASE DE DATOS
 
-La variable `DROP DATABASE` suelta una base de datos existente.
+La variable `DROP DATABASE` elimina la base de datos de una instancia.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -666,6 +674,7 @@ COPY query
 
 La variable `ALTER TABLE` permite añadir o soltar restricciones de claves principales o externas, así como agregar columnas a la tabla.
 
+
 #### AÑADIR o SOLTAR RESTRICCIÓN
 
 Las siguientes consultas SQL muestran ejemplos de adición o colocación de restricciones en una tabla.
@@ -704,6 +713,34 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
+#### AGREGAR ESQUEMA
+
+La siguiente consulta SQL muestra un ejemplo de adición de una tabla a una base de datos/esquema.
+
+```sql
+ALTER TABLE table_name ADD SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> Las tablas y vistas de ADLS no se pueden agregar a bases de datos/esquemas de DWH.
+
+
+#### QUITAR ESQUEMA
+
+La siguiente consulta SQL muestra un ejemplo de eliminación de una tabla de una base de datos/esquema.
+
+```sql
+ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> Las tablas y vistas de DWH no se pueden eliminar de las bases de datos/esquemas de DWH vinculados físicamente.
+
+
+**Parámetros**
+
 | Parámetros | Descripción |
 | ------ | ------ |
 | `table_name` | El nombre de la tabla que está editando. |
@@ -738,4 +775,43 @@ SHOW FOREIGN KEYS
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
+
+
+### MOSTRAR GRUPOS DE DATOS
+
+La variable `SHOW DATAGROUPS` devuelve una tabla de todas las bases de datos asociadas. Para cada base de datos, la tabla incluye esquema, tipo de grupo, tipo secundario, nombre secundario e ID secundario.
+
+```sql
+SHOW DATAGROUPS
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
+   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
+```
+
+
+### MOSTRAR GRUPOS DE DATOS PARA LA tabla
+
+La variable `SHOW DATAGROUPS FOR` El comando &#39;table_name&#39; devuelve una tabla de todas las bases de datos asociadas que contienen el parámetro como secundario. Para cada base de datos, la tabla incluye esquema, tipo de grupo, tipo secundario, nombre secundario e ID secundario.
+
+```sql
+SHOW DATAGROUPS FOR 'table_name'
+```
+
+**Parámetros**
+
+- `table_name`: Nombre de la tabla para la que desea buscar bases de datos asociadas.
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```
