@@ -2,7 +2,8 @@
 title: Cuentas relacionadas en Real-Time CDP B2B Edition
 type: Documentation
 description: Información general y más información sobre la función de cuentas relacionadas en Experience Platform CDP B2B en tiempo real.
-source-git-commit: 09fd6c30461a4229411ce67426fdcb247661f7cb
+exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 6%
@@ -53,4 +54,4 @@ Consulte la documentación para obtener más información sobre la variable [có
 
 Puede utilizar cuentas y cuentas relacionadas en la segmentación. La decisión de utilizar cuentas relacionadas en las definiciones de segmentos depende del caso de uso de marketing. Por ejemplo, puede utilizar cuentas relacionadas para campañas de publicidad o marketing por correo electrónico en las que acepte una precisión menor a cambio de un alcance más amplio.
 
-Consulte una [ejemplo de segmentación](/help/rtcdp/segmentation/b2b.md#related-account) que utiliza cuentas relacionadas.
+Consulte una [ejemplo de segmentación](/help/rtcdp/segmentation/b2b.md#related-accounts) que utiliza cuentas relacionadas.

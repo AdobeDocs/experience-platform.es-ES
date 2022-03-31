@@ -1,7 +1,8 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 95c0aa2861952c1468d5ef43aa370d31d2c8a2ef
+exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 6%
@@ -52,7 +53,7 @@ Obtenga más información sobre la función en las siguientes páginas de docume
 
 - [Resumen de cuentas relacionadas en Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [Ficha Cuentas relacionadas en la guía de la interfaz de usuario del perfil de la cuenta](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Cómo utilizar cuentas relacionadas en definiciones de segmentos](../../rtcdp/segmentation/b2b.md#related-account)
+- [Cómo utilizar cuentas relacionadas en definiciones de segmentos](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Para obtener más información sobre CDP B2B Edition en tiempo real, consulte la [información general](../../rtcdp/overview.md).
 
