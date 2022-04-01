@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b378a920380030d51956a0910271f1b1f9f4c371
+source-git-commit: 63c25b1d99e55fae92c3c5e89025ac2bbcff5b03
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 6%
@@ -94,18 +94,6 @@ El panel Perfiles muestra una instantánea de los datos de atributo (registro) q
 
 Para obtener más información sobre los paneles Perfiles, consulte la [Información general sobre los paneles de perfiles](../../dashboards/guides/profiles.md).
 
-## Recopilación de datos {#data-collection}
-
-Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
-
-**Nuevas funciones**
-
-| Función | Descripción |
-| --- | --- |
-| Configuración del conjunto de datos global | Ahora puede configurar varias nuevas configuraciones globales al configurar un conjunto de datos: ubicación geográfica, cookie de ID de origen y sincronización de ID de terceros. Consulte la sección sobre [configuración de un conjunto de datos](../../edge/fundamentals/datastreams.md#configure) en la guía de interfaz de usuario de Datastreams para obtener más información. |
-
-Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
-
 ### Tableros de destinos
 
 El panel Destinos muestra una instantánea de los destinos que su organización ha habilitado en el Experience Platform.
@@ -119,6 +107,18 @@ El panel Destinos muestra una instantánea de los destinos que su organización 
 {style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre los paneles Destinos en Platform, consulte la [Información general sobre los paneles Destinos](../../dashboards/guides/destinations.md).
+
+## Recopilación de datos {#data-collection}
+
+Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Configuración del conjunto de datos global | Ahora puede configurar varias nuevas configuraciones globales al configurar un conjunto de datos: ubicación geográfica, cookie de ID de origen y sincronización de ID de terceros. Consulte la sección sobre [configuración de un conjunto de datos](../../edge/fundamentals/datastreams.md#configure) en la guía de interfaz de usuario de Datastreams para obtener más información. |
+
+Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
