@@ -5,9 +5,9 @@ title: Información general sobre las políticas de uso de datos
 topic-legacy: policies
 description: Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,11 @@ ht-degree: 0%
 
 Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de [!DNL Experience Platform].
 
+Hay dos tipos de políticas disponibles:
+
+* **[!UICONTROL Política de control de datos]**: Restringir la activación de datos en función de la acción de marketing que se realice y las etiquetas de uso de datos que lleven los datos en cuestión.
+* **[!UICONTROL Política de consentimiento] (Beta)**: Filtre los perfiles que se pueden activar en [destinos](../../destinations/home.md) en función del consentimiento o las preferencias de sus clientes
+
 Este documento proporciona información general de alto nivel sobre las políticas de uso de datos y proporciona vínculos a documentación adicional para trabajar con políticas en la interfaz de usuario o la API.
 
 ## Acciones de marketing {#marketing-actions}
@@ -23,7 +28,7 @@ Este documento proporciona información general de alto nivel sobre las polític
 Las acciones de marketing (también denominadas casos de uso de marketing) en el contexto del marco de control de datos, son acciones que [!DNL Experience Platform] Los consumidores de datos pueden tomarlos, para lo cual su organización desea restringir el uso de datos. Como tal, una política de uso de datos se define de la siguiente manera:
 
 1. Una acción de marketing específica
-2. Etiquetas de uso de datos con las que se restringe la acción
+2. Condiciones en las que se restringe la realización de esa acción
 
 Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si hay una directiva que indica que no se pueden exportar tipos de datos específicos (como Información de identificación personal (PII)) y que intenta exportar un conjunto de datos que contiene una etiqueta &quot;I&quot; (datos de identidad), recibirá una respuesta de la [!DNL Policy Service] que indica que se ha infringido una directiva de uso de datos.
 
@@ -35,9 +40,9 @@ Cuando el uso de los datos se produce en el servicio de su organización, se deb
 
 >[!NOTE]
 >
->Si está utilizando [!DNL Real-time Customer Data Platform], puede configurar casos de uso de marketing en destinos para automatizar la aplicación de políticas. Consulte el documento en [Control de datos en tiempo real CDP](../../rtcdp/privacy/data-governance-overview.md) para obtener más información.
+>Puede configurar casos de uso de marketing en destinos para automatizar la aplicación de políticas. Consulte la [documentación de destinos](../../destinations/home.md) para obtener más información sobre las opciones de configuración de su destino específico.
 
-Para obtener una lista de [acciones de marketing definidas por el Adobe disponibles](#core-actions). También puede definir sus propias acciones de marketing personalizadas mediante la variable [!DNL Policy Service] API o [!DNL Experience Platform ]interfaz de usuario. En la siguiente sección se proporciona más información sobre cómo trabajar con acciones y políticas de marketing.
+Para obtener una lista de [acciones de marketing definidas por el Adobe disponibles](#core-actions). También puede definir sus propias acciones de marketing personalizadas mediante la variable [!DNL Policy Service] API o [!DNL Experience Platform] interfaz de usuario. En la siguiente sección se proporciona más información sobre cómo trabajar con acciones y políticas de marketing.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -84,6 +89,6 @@ En la tabla siguiente se describen las principales acciones de marketing que el 
 | Targeting de correo electrónico | Acción que utiliza datos en campañas de segmentación de correo electrónico. |
 | Exportar a terceros | Acción que exporta datos a procesadores y entidades que no tienen relaciones directas con clientes. Muchos proveedores de datos tienen cláusulas en los contratos que prohíben la exportación de datos desde donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales a menudo restringen la transferencia de datos que recibe de ellos. |
 | Publicidad en el sitio | Acción que usa datos para anuncios en el sitio, incluida la selección y entrega de anuncios en los sitios web o aplicaciones de su organización, o para medir la entrega y efectividad de dichos anuncios. |
-| Personalización en el sitio | Acción que utiliza datos para la personalización de contenido en el sitio. La personalización del sitio es cualquier dato que se utiliza para hacer inferencias sobre los intereses de los usuarios y se utiliza para seleccionar qué contenido o anuncios se proporcionan en función de esas inferencias. |
+| Personalization en el sitio | Acción que utiliza datos para la personalización de contenido en el sitio. La personalización del sitio es cualquier dato que se utiliza para hacer inferencias sobre los intereses de los usuarios y se utiliza para seleccionar qué contenido o anuncios se proporcionan en función de esas inferencias. |
 | Coincidencia de segmentos | Acción que utiliza datos para la coincidencia de segmentos de Adobe Experience Platform, lo que permite que dos o más usuarios de Platform intercambien datos de segmentos. Al habilitar las políticas que hacen referencia a esta acción, puede restringir los datos que se usan para la coincidencia de segmentos. Por ejemplo, si la política principal &quot;Restringir el uso compartido de datos&quot; está activada, cualquier dato con un [Etiqueta C11](../labels/reference.md#c11) no se puede usar para la coincidencia de segmentos. |
-| Personalización de identidad única | Acción que requiere que una sola identidad se utilice con fines de personalización en lugar de vincular identidades de varias fuentes. |
+| Personalization de identidad única | Acción que requiere que una sola identidad se utilice con fines de personalización en lugar de vincular identidades de varias fuentes. |

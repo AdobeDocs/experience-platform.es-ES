@@ -3,18 +3,18 @@ keywords: Experience Platform;inicio;temas populares;control de datos;guía del 
 solution: Experience Platform
 title: Administrar políticas de uso de datos en la interfaz de usuario
 topic-legacy: policies
-description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que puede realizar en el espacio de trabajo Directivas de la interfaz de usuario del Experience Platform.
+description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el espacio de trabajo Directivas de la interfaz de usuario del Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # Administrar políticas de uso de datos en la interfaz de usuario
 
-Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que puede realizar en la **Políticas** espacio de trabajo [!DNL Experience Platform] interfaz de usuario.
+Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en la **Políticas** espacio de trabajo [!DNL Experience Platform] interfaz de usuario.
 
 >[!IMPORTANT]
 >
@@ -24,8 +24,8 @@ Administración de datos de Adobe Experience Platform proporciona una interfaz d
 
 Esta guía requiere una comprensión práctica de lo siguiente [!DNL Experience Platform] conceptos:
 
-- [Gobierno de datos](../home.md)
-- [Políticas de uso de datos](./overview.md)
+* [Gobierno de datos](../home.md)
+* [Políticas de uso de datos](./overview.md)
 
 ## Ver directivas existentes {#view-policies}
 
@@ -33,7 +33,11 @@ En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Políticas]** para
 
 ![](../images/policies/browse-policies.png)
 
-Seleccione una directiva de la lista para ver su descripción y tipo. Si se selecciona una directiva personalizada, se muestran controles adicionales para editarlos, eliminarlos o [habilitar/deshabilitar la directiva](#enable).
+Si tiene acceso a directivas de consentimiento (actualmente en versión beta), seleccione la opción **[!UICONTROL Políticas de consentimiento]** alterne para visualizarlas en la [!UICONTROL Examinar] pestaña .
+
+![](../images/policies/consent-policy-toggle.png)
+
+Seleccione una directiva de la lista para ver su descripción y tipo. Si se selecciona una directiva personalizada, se muestran controles adicionales para editarla, eliminarla o [habilitar/deshabilitar la directiva](#enable).
 
 ![](../images/policies/policy-details.png)
 
@@ -42,6 +46,14 @@ Seleccione una directiva de la lista para ver su descripción y tipo. Si se sele
 Para crear una nueva directiva de uso de datos personalizada, seleccione **[!UICONTROL Crear directiva]** en la esquina superior derecha del **[!UICONTROL Examinar]** en la ficha **[!UICONTROL Políticas]** espacio de trabajo.
 
 ![](../images/policies/create-policy-button.png)
+
+Dependiendo de si forma parte de la beta para políticas de consentimiento, se produce una de las siguientes situaciones:
+
+* Si no forma parte de la versión beta, se le dirigirá inmediatamente al flujo de trabajo de [creación de una política de control de datos](#create-governance-policy).
+* Si forma parte de la versión beta, un cuadro de diálogo proporciona una opción adicional para [crear una directiva de consentimiento](#consent-policy).
+   ![](../images/policies/choose-policy-type.png)
+
+### Crear una directiva de control de datos {#create-governance-policy}
 
 La variable **[!UICONTROL Crear directiva]** flujo de trabajo. Comience por proporcionar un nombre y una descripción para la nueva directiva.
 
@@ -67,11 +79,64 @@ La variable **[!UICONTROL Examinar]** vuelve a aparecer la pestaña , que ahora 
 
 ![](../images/policies/created-policy.png)
 
+### Crear una directiva de consentimiento (Beta) {#consent-policy}
+
+>[!IMPORTANT]
+>
+>Las políticas de consentimiento están actualmente en fase beta y es posible que su organización no tenga acceso a ellas todavía.
+
+Si elige crear una directiva de consentimiento, aparece una nueva pantalla que le permite configurar la nueva directiva.
+
+![](../images/policies/consent-policy-dialog.png)
+
+Para poder utilizar las políticas de consentimiento, debe tener atributos de consentimiento presentes en los datos de perfil. Consulte la guía de [procesamiento de consentimiento en el Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) para ver los pasos detallados sobre cómo incluir los atributos necesarios en el esquema de unión.
+
+Las políticas de consentimiento constan de dos componentes lógicos:
+
+* **[!UICONTROL If]**: Condición que déclencheur la comprobación de directivas. Esto se puede basar en una determinada acción de marketing que se está realizando, en la presencia de ciertas etiquetas de uso de datos o en una combinación de ambas.
+* **[!UICONTROL Entonces]**: Atributos de consentimiento que deben estar presentes para que un perfil se incluya en la acción que activó la directiva.
+
+#### Configuración de condiciones
+
+En el **[!UICONTROL If]** , seleccione las acciones de marketing o las etiquetas de uso de datos que deben almacenar en déclencheur esta directiva. Select **[!UICONTROL Ver todo]** y **[!UICONTROL Seleccionar etiquetas]** para ver las listas completas de las etiquetas y acciones de marketing disponibles, respectivamente.
+
+Una vez que haya añadido al menos una condición, puede seleccionar **[!UICONTROL Añadir condición]** para seguir añadiendo más condiciones según sea necesario, elija el tipo de condición apropiado en la lista desplegable.
+
+![](../images/policies/add-condition.png)
+
+Si selecciona varias condiciones, puede utilizar el icono que aparece entre ellas para cambiar la relación condicional entre &quot;Y&quot; y &quot;O&quot;.
+
+![](../images/policies/and-or-selection.png)
+
+#### Seleccionar atributos de consentimiento
+
+En el **[!UICONTROL Entonces]** , seleccione al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regulada por esta directiva. Puede elegir una de las opciones proporcionadas en la lista o seleccionar **[!UICONTROL Ver todo]** para elegir el atributo directamente desde el esquema de unión.
+
+Al seleccionar el atributo de consentimiento, elija los valores del atributo que desea que compruebe esta directiva.
+
+![](../images/policies/select-schema-field.png)
+
+Después de seleccionar al menos un atributo de consentimiento, la variable **[!UICONTROL Propiedades de directiva]** actualizaciones del panel para mostrar el número estimado de perfiles que se permitirían con esta directiva, incluido el porcentaje del almacén de perfiles total. Esta estimación se actualiza automáticamente al ajustar la configuración de la directiva.
+
+![](../images/policies/audience-preview.png)
+
+Para agregar más atributos de consentimiento a la directiva, seleccione **[!UICONTROL Agregar resultado]**.
+
+![](../images/policies/add-result.png)
+
+Puede seguir agregando y ajustando condiciones y atributos de consentimiento a la directiva según sea necesario. Cuando esté satisfecho con la configuración, proporcione un nombre y una descripción opcional para la política antes de seleccionar **[!UICONTROL Guardar]**.
+
+![](../images/policies/name-and-save.png)
+
+Ahora se crea la directiva de consentimiento y su estado se establece en [!UICONTROL Desactivado] de forma predeterminada. Para activar la directiva de inmediato, seleccione la opción **[!UICONTROL Estado]** alterne en el carril derecho.
+
+![](../images/policies/enable-consent-policy.png)
+
 ## Habilitar o deshabilitar una directiva {#enable}
 
 De forma predeterminada, todas las políticas de uso de datos (incluidas las políticas principales proporcionadas por Adobe) están desactivadas. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
 
-Puede habilitar o deshabilitar las directivas desde la **[!UICONTROL Examinar]** en la ficha **[!UICONTROL Políticas]** espacio de trabajo. Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En **[!UICONTROL Estado]**, seleccione el botón de alternancia para habilitar o deshabilitar la directiva.
+Puede habilitar o deshabilitar las directivas desde la **[!UICONTROL Examinar]** en la ficha **[!UICONTROL Políticas]** espacio de trabajo. Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En **[!UICONTROL Estado]**, seleccione el botón de alternancia para activar o desactivar la directiva.
 
 ![](../images/policies/enable-policy.png)
 
@@ -109,7 +174,7 @@ Si la acción de marketing no está siendo utilizada por ninguna directiva de us
 
 >[!NOTE]
 >
->Si se intenta eliminar una acción de marketing que esté utilizando una directiva existente, aparecerá un mensaje de error indicando que el intento de eliminación ha fallado.
+>Si se intenta eliminar una acción de marketing que está utilizando una política existente, aparece un mensaje de error que indica que el intento de eliminación ha fallado.
 
 ![](../images/policies/delete-marketing-action.png)
 
