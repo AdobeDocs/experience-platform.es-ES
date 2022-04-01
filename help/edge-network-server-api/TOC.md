@@ -5,7 +5,7 @@ user-guide-title: Ayuda de la API de Adobe Experience Platform Edge Network Serv
 breadcrumb-title: Guía de API de Adobe Experience Platform Edge Network Server
 user-guide-description: 'Interactúe con los servicios de Experience Cloud a través de la API de servidor de red perimetral '
 feature: Data Collection
-source-git-commit: a8a6681e878932c03ed9a2e59527e2adc565a28e
+source-git-commit: 8ea9877fd7dc00b4f5e7b1c974bb3743ce4e1356
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 10%
@@ -13,9 +13,9 @@ ht-degree: 10%
 ---
 
 
-# API de servidor de red perimetral {#server-api}
+# API de servidor de red perimetral {#edge-network-server-api}
 
-* API de servidor de red perimetral {#server-api}
+* API de servidor de red perimetral {#edge-network-server-api}
    * [Información general](overview.md)
    * [Autenticación](authentication.md)
    * Recopilación de datos {#server-api-data-collection}
