@@ -3,9 +3,9 @@ title: API de servidor de red perimetral
 description: Descubra qué es la API de Adobe Experience Platform Edge Network Server y cómo puede utilizarla.
 seo-description: Learn what the Adobe Experience Platform Edge Network Server API is and how you can use it.
 keywords: recopilación de datos;recopilación;Adobe Experience Platform Edge Network;api de servidor;
-source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
+source-git-commit: 4145e22519c1df2d5c010e563b81642a6f647cdc
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ La variable [!DNL Server API] admite la recopilación de datos interactiva y por
 1. El punto final interactivo admite la comunicación con los servicios de Adobe Experience Platform y Adobe Experience Cloud que admiten segmentación avanzada, personalización y otros casos de uso de marketing.
 2. El extremo de lote permitirá que las solicitudes se envíen en lote cuando los datos deban ser incorporados sin recibir una respuesta de las aplicaciones a las que se llama.
 
-La variable [!DNL Server API] admite el siguiente tipo de solicitudes: La variable [!DNL Server API] admite solicitudes autenticadas mediante [Adobe I/O](https://developer.adobe.com/), utilizando el nuevo `server.adobedc.net` punto final.
+La variable [!DNL Server API] admite el siguiente tipo de solicitudes:
 
 * Solicitudes autenticadas mediante [Adobe I/O](https://developer.adobe.com/), utilizando el nuevo `server.adobedc.net` punto final.
 * Solicitudes no autenticadas a través de la variable `edge.adobedc.net` punto final.
