@@ -1,18 +1,18 @@
 ---
-title: Configurar el almacén de datos para el SDK web del Experience Platform
-description: 'Obtenga información sobre cómo configurar Datastreams. '
-keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;id;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;
+title: Configurar un conjunto de datos
+description: Conecte la integración del SDK del Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
+keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;identidad;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;preparación de datos para recopilación de datos;Mp;prep de datos apper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
+source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '2090'
 ht-degree: 2%
 
 ---
 
 # Configurar un conjunto de datos
 
-Un conjunto de datos representa la configuración del lado del servidor al implementar los SDK web y móviles de Adobe Experience Platform. Mientras que la variable [configurar, comando](configuring-the-sdk.md) en el SDK controla los elementos que se deben gestionar en el cliente (como el `edgeDomain`), los conjuntos de datos administran todas las demás configuraciones para el SDK. Cuando se envía una solicitud a la red perimetral de Adobe Experience Platform, la variable `edgeConfigId` se utiliza para hacer referencia al conjunto de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios de código en el sitio web.
+Un conjunto de datos representa la configuración del lado del servidor al implementar los SDK web y Mobile de Adobe Experience Platform. Mientras que la variable [configurar, comando](configuring-the-sdk.md) en el SDK controla los elementos que se deben gestionar en el cliente (como el `edgeDomain`), los conjuntos de datos administran todas las demás configuraciones para el SDK. Cuando se envía una solicitud a la red perimetral de Adobe Experience Platform, la variable `edgeConfigId` se utiliza para hacer referencia al conjunto de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios de código en el sitio web.
 
 Este documento trata los pasos para configurar un conjunto de datos en la interfaz de usuario de la recopilación de datos.
 
@@ -60,7 +60,7 @@ Select **[!UICONTROL Opciones avanzadas]** para mostrar controles adicionales pa
 | [!UICONTROL Cookie de ID de origen] | Cuando está habilitada, esta configuración indica a la red perimetral que haga referencia a una cookie especificada al buscar una [ID de dispositivo de origen](../identity/first-party-device-ids.md), en lugar de buscar este valor en el mapa de identidad.<br><br>Al habilitar esta configuración, debe proporcionar el nombre de la cookie en la que se espera que se almacene el ID. |
 | [!UICONTROL Sincronización de ID de terceros] | Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que diferentes sincronizaciones de ID se ejecuten en momentos diferentes. Cuando está habilitada, esta configuración le permite especificar qué contenedor de sincronizaciones de ID se ejecuta para este conjunto de datos. |
 
-El resto de esta sección se centra en los pasos para asignar datos a un esquema de evento de Platform seleccionado. Si utiliza el SDK de Mobile o no configura el conjunto de datos para Platform, seleccione **[!UICONTROL Guardar]** antes de pasar a la siguiente sección de [agregar servicios al conjunto de datos](#add-services).
+El resto de esta sección se centra en los pasos para asignar datos a un esquema de evento de Platform seleccionado. Si utiliza el SDK móvil o no está configurando el conjunto de datos para la plataforma, seleccione **[!UICONTROL Guardar]** antes de pasar a la siguiente sección de [agregar servicios al conjunto de datos](#add-services).
 
 ### Preparación de datos para la recopilación de datos {#data-prep}
 
@@ -78,13 +78,78 @@ Las subsecciones siguientes tratan los pasos básicos para asignar los datos den
 
 #### [!UICONTROL Selección de datos]
 
-Select **[!UICONTROL Guardar y agregar asignaciones]** después de completar la [paso básico de configuración](#configure)y **[!UICONTROL Seleccionar datos]** aparece. A partir de aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que planea enviar a Platform. Puede seleccionar la opción para cargar el objeto como archivo o pegar el objeto sin procesar en el cuadro de texto proporcionado.
+Select **[!UICONTROL Guardar y agregar asignaciones]** después de completar la [paso básico de configuración](#configure)y **[!UICONTROL Seleccionar datos]** aparece. A partir de aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que planea enviar a Platform.
+
+Debe construir este objeto JSON para poder asignarlo a las propiedades de la capa de datos que desee capturar. Seleccione la sección siguiente para ver un ejemplo de un objeto JSON con formato correcto.
+
++++Archivo JSON de muestra
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >El objeto JSON debe tener un solo nodo raíz `data` para pasar la validación.
 
-Si el JSON es válido, se muestra un esquema de vista previa en el panel derecho. Haga clic en **[!UICONTROL Siguiente]** para continuar.
+Puede seleccionar la opción para cargar el objeto como archivo o pegar el objeto sin procesar en el cuadro de texto proporcionado. Si el JSON es válido, se muestra un esquema de vista previa en el panel derecho. Haga clic en **[!UICONTROL Siguiente]** para continuar.
 
 ![Ejemplo de JSON de datos entrantes esperados](../images/datastreams/select-data.png)
 
@@ -105,6 +170,12 @@ A continuación, seleccione el icono de esquema (![Icono de esquema](../images/d
 La página de asignación vuelve a aparecer con la asignación de campo completada que se muestra. La variable **[!UICONTROL Asignación del progreso]** actualizaciones de sección para reflejar el número total de campos que se han asignado correctamente.
 
 ![Campo asignado correctamente con progreso reflejado](../images/datastreams/field-mapped.png)
+
+>[!TIP]
+>
+>Si desea asignar una matriz de objetos (en el campo de origen) a una matriz de diferentes objetos (en el campo de destino), agregue `[*]` después del nombre de la matriz en las rutas de los campos de origen y destino, como se muestra a continuación.
+>
+>![Asignación de objetos de matriz](../images/datastreams/array-object-mapping.png)
 
 Siga los pasos anteriores para asignar el resto de los campos al esquema de destino. Aunque no es necesario asignar todos los campos de origen disponibles, cualquier campo del esquema de destino que esté configurado como necesario debe asignarse para completar este paso. La variable **[!UICONTROL Campos requeridos]** counter indica cuántos campos obligatorios aún no están asignados en la configuración actual.
 
