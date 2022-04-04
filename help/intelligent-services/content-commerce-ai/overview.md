@@ -1,12 +1,11 @@
 ---
 keywords: Experience Cloud;introducción;ayuda de contenido y comercio;temas populares;Servicios inteligentes;ccai
-solution: Experience Cloud, Intelligent Services, Experience Platform
+solution: Experience Platform
 title: Información general sobre contenido y comercio de IA
 topic-legacy: Content and Commerce AI
 description: Content and Commerce AI es un conjunto de servicios de IA que le permiten extraer funciones inteligentes de su contenido, organizar, optimizar el flujo de contenido y ofrecer experiencias personalizadas más impactantes a sus clientes.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
@@ -29,7 +28,7 @@ El contenido es un componente esencial de estas experiencias. Para responder mej
 
 | Tipo de contenido | Funcionalidades | Información general sobre la funcionalidad |
 | --- | --- | --- |
-| Texto | - Extracción de palabras clave y entidades <br>: clasificadores personalizados | : Extraiga automáticamente palabras clave y etiquetas de documentos empresariales y páginas web mediante un servicio de IA incorporado. <br> : etiquete automáticamente los documentos o las páginas web de una empresa según una taxonomía corporativa mediante un servicio basado en modelos de IA personalizados. |
+| Texto | - Extracción de palabras clave y entidades <br>- Clasificadores personalizados | : Extraiga automáticamente palabras clave y etiquetas de documentos empresariales y páginas web mediante un servicio de IA incorporado. <br> : etiquete automáticamente los documentos o las páginas web de una empresa según una taxonomía corporativa mediante un servicio basado en modelos de IA personalizados. |
 | Imágenes | - Recomendaciones visuales <br> - Extracción de color | : ofrezca recomendaciones de productos visualmente similares a los consumidores, con tecnología de un modelo de IA desarrollado sobre características de productos intuitivas (diseño, color, forma). <br> - Extraer con precisión los colores dominantes (etiquetas y valores hexadecimales) y su peso de una imagen de producto. |
 
 ## Explicación del contenido y la IA de comercio

@@ -1,11 +1,11 @@
 ---
 audience: user
-solution: Data Collection, Experience Platform
+solution: Data Collection
 user-guide-title: Documentación de la API del servidor de red perimetral
 breadcrumb-title: Documentación de la API del servidor de red perimetral
 user-guide-description: Descubra qué es la API de servidor de red perimetral y cómo puede utilizarla.
 feature: Data Collection
-source-git-commit: 283de3a7dcebae0b5efee11e3ca736f0abe32e1f
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 11%
