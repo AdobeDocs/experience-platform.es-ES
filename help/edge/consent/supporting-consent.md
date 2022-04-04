@@ -3,9 +3,9 @@ title: Compatibilidad con las preferencias de consentimiento del cliente mediant
 description: Obtenga información sobre cómo admitir las preferencias de consentimiento con el SDK web de Adobe Experience Platform.
 keywords: consentimiento;defaultConsent;consentimiento predeterminado;setConsent;grupo de campos Privacidad del perfil;grupo de campos Privacidad del evento de experiencia;grupo de campos Privacidad;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 16c8972333fa67fa2e308445f4ad6282510370d1
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '950'
 ht-degree: 0%
 
 ---
@@ -33,17 +33,17 @@ alloy("configure", {
 });
 ```
 
-Cuando el consentimiento predeterminado para el propósito general se establece en pendiente, al intentar ejecutar cualquier comando que dependa de las preferencias de inclusión del usuario (por ejemplo, el comando `sendEvent`), se pone en cola el comando dentro del SDK. Estos comandos no se procesan hasta que no haya comunicado las preferencias de inclusión del usuario al SDK.
+Cuando el consentimiento predeterminado para el propósito general está establecido en pendiente, se intenta ejecutar cualquier comando que dependa de las preferencias de inclusión del usuario (por ejemplo, la variable `sendEvent` ) da como resultado que el comando se ponga en cola dentro del SDK. Estos comandos no se procesan hasta que no haya comunicado las preferencias de inclusión del usuario al SDK.
 
 >[!NOTE]
 >
 >Los comandos solo se ponen en cola en la memoria. No se guardan entre cargas de página.
 
-Si no desea recopilar eventos que se produjeron antes de que se establezcan las preferencias de inclusión del usuario, puede pasar `"defaultConsent": "out"` durante la configuración del SDK. El intento de ejecutar cualquier comando que dependa de las preferencias de inclusión del usuario no tendrá ningún efecto hasta que haya comunicado las preferencias de inclusión del usuario al SDK.
+Si no desea recopilar eventos que se produjeron antes de que se establecieran las preferencias de inclusión del usuario, puede pasar `"defaultConsent": "out"` durante la configuración del SDK. El intento de ejecutar cualquier comando que dependa de las preferencias de inclusión del usuario no tendrá ningún efecto hasta que haya comunicado las preferencias de inclusión del usuario al SDK.
 
 >[!NOTE]
 >
->Actualmente, el SDK solo admite un único propósito, o ninguno. Aunque planificamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades de Adobe y ofertas de productos, la implementación actual es un enfoque de inclusión de todo o nada.  Esto solo se aplica a Adobe Experience Platform [!DNL Web SDK] y NO a otras bibliotecas JavaScript de Adobe.
+>Actualmente, el SDK solo admite un único propósito, o ninguno. Aunque planificamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades de Adobe y ofertas de productos, la implementación actual es un enfoque de inclusión de todo o nada.  Esto solo se aplica a Adobe Experience Platform [!DNL Web SDK] y NO otras bibliotecas JavaScript de Adobe.
 
 En este punto, es posible que prefiera pedir al usuario que se una en alguna parte de la interfaz de usuario. Una vez recopiladas las preferencias del usuario, comunique estas preferencias al SDK.
 
@@ -53,9 +53,9 @@ El SDK admite las versiones 1.0 y 2.0 del estándar de consentimiento de Adobe E
 
 ### Uso de la versión 2.0 estándar de Adobe
 
-Si utiliza Adobe Experience Platform, debe incluir un grupo de campos de esquema de privacidad en el esquema de perfil. Consulte [Control, privacidad y seguridad en Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) para obtener más información sobre la versión 2.0 estándar de Adobe. Puede agregar datos dentro del objeto de valor que se encuentra debajo y que corresponde al esquema del campo `consents` del grupo de campos de perfil [!UICONTROL Consentimientos y preferencias].
+Si utiliza Adobe Experience Platform, debe incluir un grupo de campos de esquema de privacidad en el esquema de perfil. Consulte [Gobernanza, privacidad y seguridad en Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) para obtener más información sobre la versión 2.0 del estándar de Adobe. Puede agregar datos dentro del objeto value debajo correspondiente al esquema del `consents` del campo [!UICONTROL Consentimientos y preferencias] grupo de campos de perfil.
 
-Si el usuario decide participar, ejecute el comando `setConsent` con la preferencia recopilada establecida en `y` de la siguiente manera:
+Si el usuario decide participar, ejecute el `setConsent` con la preferencia de recopilación establecida en `y` de la siguiente manera:
 
 ```javascript
 alloy("setConsent", {
@@ -74,7 +74,7 @@ alloy("setConsent", {
 });
 ```
 
-El campo de hora debe especificar cuándo el usuario actualizó por última vez sus preferencias de consentimiento. Si el usuario decide excluirse, ejecute el comando `setConsent` con la preferencia recopilada establecida en `n` de la siguiente manera:
+El campo de hora debe especificar cuándo el usuario actualizó por última vez sus preferencias de consentimiento. Si el usuario decide excluirse, ejecute el `setConsent` con la preferencia de recopilación establecida en `n` de la siguiente manera:
 
 ```javascript
 alloy("setConsent", {
@@ -93,13 +93,9 @@ alloy("setConsent", {
 });
 ```
 
->[!NOTE]
->
->Una vez que un usuario ha optado por no participar, el SDK no le permitirá establecer el consentimiento de los usuarios que recopilan el consentimiento en `y`.
-
 ### Uso de la versión 1.0 estándar de Adobe
 
-Si el usuario decide participar, ejecute el comando `setConsent` con la opción `general` establecida en `in` de la siguiente manera:
+Si el usuario decide participar, ejecute el `setConsent` con la variable `general` opción definida en `in` de la siguiente manera:
 
 ```javascript
 alloy("setConsent", {
@@ -113,7 +109,7 @@ alloy("setConsent", {
 });
 ```
 
-Si el usuario decide excluirse, ejecute el comando `setConsent` con la opción `general` establecida en `out` de la siguiente manera:
+Si el usuario decide excluirse, ejecute el `setConsent` con la variable `general` opción definida en `out` de la siguiente manera:
 
 ```javascript
 alloy("setConsent", {
@@ -127,13 +123,9 @@ alloy("setConsent", {
 });
 ```
 
->[!NOTE]
->
->Una vez que un usuario ha optado por no participar, el SDK no le permitirá establecer el consentimiento del usuario en `in`.
-
 ## Comunicación de las preferencias de consentimiento a través del estándar IAB TCF
 
-El SDK admite la grabación de las preferencias de consentimiento de un usuario proporcionadas mediante el marco de transparencia y consentimiento (TCF) de Interactive Advertising Bureau Europe (IAB). La cadena de consentimiento se puede configurar mediante el mismo comando `setConsent` que se muestra arriba de esta manera:
+El SDK admite la grabación de las preferencias de consentimiento de un usuario proporcionadas mediante el marco de transparencia y consentimiento (TCF) de Interactive Advertising Bureau Europe (IAB). La cadena de consentimiento se puede establecer mediante el mismo `setConsent` como se muestra arriba:
 
 ```javascript
 alloy("setConsent", {
@@ -146,7 +138,7 @@ alloy("setConsent", {
 });
 ```
 
-Cuando el consentimiento se establece de esta manera, el perfil del cliente en tiempo real se actualiza con la información de consentimiento. Para que esto funcione, el esquema XDM de perfil debe contener el grupo de campos [Profile Privacy schema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Al enviar eventos, la información de consentimiento IAB debe agregarse manualmente al objeto XDM de evento. El SDK no incluye automáticamente la información de consentimiento en los eventos. Para enviar la información de consentimiento en eventos, el grupo de campos [Experience Event Privacy](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) debe agregarse al esquema de Experience Event.
+Cuando el consentimiento se establece de esta manera, el perfil del cliente en tiempo real se actualiza con la información de consentimiento. Para que esto funcione, el esquema XDM de perfil debe contener la variable [Grupo de campos del esquema de privacidad de perfil](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Al enviar eventos, la información de consentimiento IAB debe agregarse manualmente al objeto XDM de evento. El SDK no incluye automáticamente la información de consentimiento en los eventos. Para enviar la información de consentimiento en eventos, la variable [Grupo de campos de privacidad de eventos de experiencia](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) debe agregarse al esquema de Experience Event .
 
 ## Envío de varios estándares en una solicitud
 
@@ -176,10 +168,10 @@ alloy("setConsent", {
 
 ## Persistencia de las preferencias de consentimiento
 
-Después de haber comunicado las preferencias de usuario al SDK mediante el comando `setConsent`, el SDK mantiene las preferencias del usuario en una cookie. La próxima vez que el usuario cargue el sitio web en el explorador, el SDK recuperará y utilizará estas preferencias persistentes para determinar si los eventos se pueden enviar o no a Adobe.
+Una vez que haya comunicado las preferencias de usuario al SDK mediante la función `setConsent` , el SDK mantiene las preferencias del usuario en una cookie. La próxima vez que el usuario cargue el sitio web en el explorador, el SDK recuperará y utilizará estas preferencias persistentes para determinar si los eventos se pueden enviar o no a Adobe.
 
-Deberá almacenar las preferencias de usuario de forma independiente para poder mostrar el cuadro de diálogo de consentimiento con las preferencias actuales. No hay forma de recuperar las preferencias de usuario del SDK. Para asegurarse de que las preferencias de usuario permanecen sincronizadas con el SDK, puede llamar al comando `setConsent` en cada carga de página. El SDK solo realizará una llamada al servidor si las preferencias han cambiado.
+Deberá almacenar las preferencias de usuario de forma independiente para poder mostrar el cuadro de diálogo de consentimiento con las preferencias actuales. No hay forma de recuperar las preferencias de usuario del SDK. Para asegurarse de que las preferencias de usuario permanecen sincronizadas con el SDK, puede llamar a la función `setConsent` en cada carga de página. El SDK solo realizará una llamada al servidor si las preferencias han cambiado.
 
 ## Sincronización de identidades al configurar el consentimiento
 
-Cuando el consentimiento predeterminado está pendiente o agotado, `setConsent` puede ser la primera solicitud que se emite y establece la identidad. Debido a esto, puede ser importante sincronizar identidades en la primera solicitud. El mapa de identidad se puede agregar al comando `setConsent` como en el comando `sendEvent`. Consulte [Recuperación del ID de Experience Cloud](../identity/overview.md)
+Cuando el consentimiento predeterminado está pendiente o agotado, la variable `setConsent` puede ser la primera solicitud que sale y establece identidad. Debido a esto, puede ser importante sincronizar identidades en la primera solicitud. El mapa de identidad se puede agregar a `setConsent` igual que en el `sendEvent` comando. Consulte [Recuperación del ID de Experience Cloud](../identity/overview.md)
