@@ -6,37 +6,51 @@ topic-legacy: queries
 type: Tutorial
 description: El servicio de consulta de Adobe Experience Platform permite crear conjuntos de datos desde la interfaz de usuario. Una vez creado un conjunto de datos, se puede acceder a él como a cualquier otro conjunto de datos en el lago de datos y se puede utilizar para una variedad de casos de uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 0c2cfe9b0bd839bdf662622283a7563c0417c9a9
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 1%
+source-wordcount: '476'
+ht-degree: 0%
 
 ---
 
-# Generar conjuntos de datos a partir de resultados en el servicio de consulta
+# Generar conjuntos de datos a partir de resultados en [!DNL Query Service]
 
-El verdadero poder de [!DNL Query Service] se muestra cuando se utilizan consultas para generar conjuntos de datos en la variable [!DNL Data Lake] para su uso como entrada en más consultas o en otros servicios como [!DNL Data Science Workspace], [!DNL Real-time Customer Profile]o [!DNL Analysis Workspace].
+[!DNL Query Service] permite utilizar consultas para generar conjuntos de datos en la variable [!DNL Data Lake]. Estos conjuntos de datos se pueden usar luego como entrada para más consultas o en otros servicios como [!DNL Data Science Workspace], Perfil del cliente en tiempo real, o [!DNL Analysis Workspace].
 
-[!DNL Query Service] permite la creación de conjuntos de datos desde la interfaz de usuario. Siga estos pasos:
+## Generar conjuntos de datos desde la interfaz de usuario de Adobe Experience Platform
 
-1. Escriba la consulta utilizando un cliente conectado y valide el resultado.
-2. Inicie sesión en la [!DNL Platform] Interfaz de usuario y vaya a Consultas.
-3. Busque la consulta en la lista y pase el ratón por encima de la fila .
-4. Select **[!UICONTROL Crear conjunto de datos]**. ![Imagen](../images/ui/create-datasets/output-dataset.png)
-5. Introduzca un nombre de conjunto de datos, precedido de su ID LDAP (no tiene que ser único ni seguro para SQL; el sistema genera un &quot;nombre de tabla&quot; basado en el nombre dado aquí).
-6. Introduzca una descripción del conjunto de datos y seleccione **[!UICONTROL Ejecutar consulta]**.![Imagen](../images/ui/create-datasets/run-query.png)
-7. Observe la consulta completada y, a continuación, vaya a la página de lista de conjuntos de datos para ver el conjunto de datos que acaba de crear.
+Para crear conjuntos de datos desde la interfaz de usuario (IU) de Adobe Experience Platform, siga estos pasos:
+
+1. Cree una consulta con un cliente conectado y valide el resultado. Para aprender a escribir consultas mediante [!DNL Query Editor], lea la [!DNL Query Editor] Guía de la interfaz de usuario [sobre la escritura de consultas](./user-guide.md#writing-queries).
+
+2. En la interfaz de usuario de Platform, vaya a **[!UICONTROL Consultas]** seguido de **[!UICONTROL Examinar]** y seleccione la consulta que ha creado. Para obtener más información sobre cómo ver las consultas creadas y guardadas para su organización en la interfaz de usuario de Platform, lea la [[!DNL Query Service] información general](./overview.md#browse).
+
+3. En el panel Detalles de la consulta , seleccione **[!UICONTROL Conjunto de datos de salida]**.
+
+   ![Seleccionar conjunto de datos de salida](../images/ui/create-datasets/output-dataset.png)
+
+4. En el cuadro de diálogo que aparece, introduzca un nombre de conjunto de datos precedido de su ID LDAP. El nombre del conjunto de datos no tiene que ser único ni seguro para SQL. Tenga en cuenta que el nombre de tabla de su conjunto de datos se generará en función del nombre del conjunto de datos que cree aquí.
+
+5. A continuación, introduzca una descripción para su conjunto de datos en la [!UICONTROL Descripción] y seleccione **[!UICONTROL Ejecutar consulta]**.
+
+   ![Ejecutar consulta](../images/ui/create-datasets/run-query.png)
+
+6. Una vez finalizada la ejecución de la consulta, vaya a **[!UICONTROL Conjuntos de datos]** para ver el conjunto de datos que ha creado. Para obtener más información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Platform, consulte la [Guía de la interfaz de usuario de conjuntos de datos](../../catalog/datasets/user-guide.md).
 
 Una vez creado un conjunto de datos, se puede acceder a él como a cualquier otro conjunto de datos en la [!DNL Data Lake] y se utiliza para una variedad de casos de uso.
 
 >[!NOTE]
 >
->En una implementación activa, debe aplicar etiquetas de control de datos después de crear el conjunto de datos.
+>En una implementación activa, debe aplicar etiquetas de control de datos después de crear el conjunto de datos. Para obtener más información sobre cómo aplicar etiquetas de uso de datos a conjuntos de datos, consulte la [Información general sobre las etiquetas de uso de datos](../../data-governance/labels/overview.md).
 
 ## Generar conjuntos de datos con una [!DNL Experience Data Model] esquema
 
-Para generar un conjunto de datos con una [!DNL Experience Data Model] (XDM), debe utilizar la sintaxis SQL. Para obtener más información sobre la sintaxis que debe utilizar, lea la [Guía de sintaxis SQL](../sql/syntax.md#create-table-as-select).
+Utilice la sintaxis SQL para generar un conjunto de datos con un [!DNL Experience Data Model] (XDM). Para obtener más información sobre la sintaxis admitida por [!DNL Query Service], lea la [Guía de sintaxis SQL](../sql/syntax.md#create-table-as-select).
 
 ## Conjuntos de datos de salida
 
-Los conjuntos de datos creados mediante esta funcionalidad se generan con un esquema ad hoc que coincide con la estructura de los datos de salida definida en la instrucción SQL. Algunos servicios descendentes requieren conjuntos de datos con [!DNL Experience Data Model] esquemas (XDM). Compruebe los requisitos de formato de datos para los servicios descendentes antes de escribir las consultas.
+Los conjuntos de datos creados mediante esta funcionalidad se generan con un esquema ad hoc que coincide con la estructura de los datos de salida definida en la instrucción SQL. Algunos servicios descendentes requieren conjuntos de datos con esquemas XDM particulares. Compruebe los requisitos de formato de datos para los servicios descendentes antes de escribir las consultas.
+
+## Pasos siguientes
+
+Después de leer este documento, ahora debe comprender cómo usar [!DNL Query Service] para generar conjuntos de datos desde la interfaz de usuario de Platform. Para obtener más información sobre cómo acceder, escribir y ejecutar consultas dentro de la interfaz de usuario de Platform, consulte la [[!DNL Query Service] Información general sobre la IU](./overview.md).
