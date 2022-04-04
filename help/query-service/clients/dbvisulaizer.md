@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Conexión de DbVisualizer al servicio de consulta
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar DbVisualizer con el servicio de consulta de Adobe Experience Platform.
-source-git-commit: e9653341756a2067e27ca0d0658c54fc93db7505
+source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 1%
+source-wordcount: '701'
+ht-degree: 0%
 
 ---
 
 # Connect [!DNL DbVisualizer] a [!DNL Query Service] {#connect-dbvisualizer}
 
-Este documento cubre los pasos para la conexión [!DNL DbVisualizer] Escritorio con Adobe Experience Platform [!DNL Query Service].
+Este documento cubre los pasos para conectar el [!DNL DbVisualizer] herramienta de base de datos con Adobe Experience Platform [!DNL Query Service].
 
 ## Primeros pasos
 
-Esta guía requiere que ya tenga acceso al [!DNL DbVisualizer] aplicación de escritorio y están familiarizados con cómo navegar por su interfaz. Para descargar el [!DNL DbVisualizer] Aplicación de escritorio o para obtener más información, consulte la [oficial [!DNL DbVisualizer] documentación](https://www.dbvis.com/download/).
+Esta guía requiere que ya tenga acceso al [!DNL DbVisualizer] aplicación de escritorio y están familiarizados con cómo navegar por su interfaz. Para descargar el [!DNL DbVisualizer] aplicación de escritorio o para obtener más información, consulte la [oficial [!DNL DbVisualizer] documentación](https://www.dbvis.com/download/).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Introduzca su Userid y su Contraseña y seleccione **[!DNL Connect]**. Aparece u
 
 ## Pasos siguientes
 
-Ahora que se ha conectado [!DNL DbVisualizer] con [!DNL Query Service], puede usar [!DNL DbVisualizer] para escribir consultas. Para obtener más información sobre cómo escribir y ejecutar consultas, lea la guía sobre la ejecución de consultas.
+Ahora que se ha conectado [!DNL DbVisualizer] con [!DNL Query Service], puede usar [!DNL DbVisualizer] para escribir consultas. Para obtener más información sobre cómo escribir y ejecutar consultas, lea la [guía sobre la ejecución de consultas](../best-practices/writing-queries.md).
