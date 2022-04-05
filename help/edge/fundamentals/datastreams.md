@@ -3,9 +3,9 @@ title: Configurar un conjunto de datos
 description: Conecte la integración del SDK del Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;identidad;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;preparación de datos para recopilación de datos;Mp;prep de datos apper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
+source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2102'
 ht-degree: 2%
 
 ---
@@ -60,7 +60,7 @@ Select **[!UICONTROL Opciones avanzadas]** para mostrar controles adicionales pa
 | [!UICONTROL Cookie de ID de origen] | Cuando está habilitada, esta configuración indica a la red perimetral que haga referencia a una cookie especificada al buscar una [ID de dispositivo de origen](../identity/first-party-device-ids.md), en lugar de buscar este valor en el mapa de identidad.<br><br>Al habilitar esta configuración, debe proporcionar el nombre de la cookie en la que se espera que se almacene el ID. |
 | [!UICONTROL Sincronización de ID de terceros] | Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que diferentes sincronizaciones de ID se ejecuten en momentos diferentes. Cuando está habilitada, esta configuración le permite especificar qué contenedor de sincronizaciones de ID se ejecuta para este conjunto de datos. |
 
-El resto de esta sección se centra en los pasos para asignar datos a un esquema de evento de Platform seleccionado. Si utiliza el SDK móvil o no está configurando el conjunto de datos para la plataforma, seleccione **[!UICONTROL Guardar]** antes de pasar a la siguiente sección de [agregar servicios al conjunto de datos](#add-services).
+El resto de esta sección se centra en los pasos para asignar datos a un esquema de evento de Platform seleccionado. Si utiliza el SDK de Mobile o no configura el conjunto de datos para Platform, seleccione **[!UICONTROL Guardar]** antes de pasar a la siguiente sección de [agregar servicios al conjunto de datos](#add-services).
 
 ### Preparación de datos para la recopilación de datos {#data-prep}
 
@@ -70,11 +70,18 @@ El resto de esta sección se centra en los pasos para asignar datos a un esquema
 
 La preparación de datos es un servicio de Experience Platform que permite asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM). Al configurar un conjunto de datos habilitado para la plataforma, puede utilizar las capacidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a la red perimetral de la plataforma.
 
-Las subsecciones siguientes tratan los pasos básicos para asignar los datos dentro de la interfaz de usuario de recopilación de datos. Para obtener una guía completa sobre todas las funciones de preparación de datos, incluidas las funciones de transformación para campos calculados, consulte la siguiente documentación:
+>[!NOTE]
+>
+>Para obtener una guía completa sobre todas las funciones de preparación de datos, incluidas las funciones de transformación para campos calculados, consulte la siguiente documentación:
+>
+>* [Resumen de la preparación de datos](../../data-prep/home.md)
+>* [Funciones de asignación de preparación de datos](../../data-prep/functions.md)
+>* [Gestión de formatos de datos con la preparación de datos](../../data-prep/data-handling.md)
 
-* [Resumen de la preparación de datos](../../data-prep/home.md)
-* [Funciones de asignación de preparación de datos](../../data-prep/functions.md)
-* [Gestión de formatos de datos con la preparación de datos](../../data-prep/data-handling.md)
+
+Las subsecciones siguientes tratan los pasos básicos para asignar los datos dentro de la interfaz de usuario de recopilación de datos. Para ver una rápida demostración de estos pasos, consulte el siguiente vídeo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL Selección de datos]
 
