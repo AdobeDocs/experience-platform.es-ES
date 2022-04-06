@@ -2,9 +2,9 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para el destino en el catálogo de Adobe Experience Platform. // Reemplazar por el párrafo de la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: a45fe9185e0ae74cfba7905a4bb6d18df7efed9e
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1201'
 ht-degree: 2%
 
 ---
@@ -17,11 +17,27 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-*Proporcione una breve descripción general para su empresa, incluido el valor que proporciona a los clientes. Incluya un vínculo a la página de inicio de la documentación del producto para obtener más información.*
+*Proporcione una breve descripción general de su empresa, incluido el valor que proporciona a los clientes. Incluya un vínculo a la página de inicio de la documentación del producto para obtener más información.*
 
 >[!IMPORTANT]
 >
->Esta página de documentación la creó el *YOURDESTINATION* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en *Inserte un vínculo o una dirección de correo electrónico donde pueda acceder a las actualizaciones*
+>Esta página de documentación la creó el *YOURDESTINATION* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en *Inserte un vínculo o una dirección de correo electrónico donde se pueda acceder a las actualizaciones, por ejemplo `support@yourdestination.com`.*
+
+## Casos de uso {#use-cases}
+
+Para ayudarle a comprender mejor cómo y cuándo debe usar la variable *YOURDESTINATION* destino, aquí hay ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver utilizando este destino.
+
+### Caso de uso número 1
+
+*Para plataformas de mensajería móvil:*
+
+*Una plataforma de ventas y alquiler de casas quiere enviar notificaciones móviles a los dispositivos Android y iOS de los clientes para informarles de que hay 100 anuncios actualizados en el área donde previamente buscaron un alquiler.*
+
+### Caso de uso n.º 2
+
+*Para plataformas de redes sociales:*
+
+*Una marca de ropa deportiva quiere llegar a los clientes existentes a través de sus cuentas de medios sociales. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM a Adobe Experience Platform, generar segmentos a partir de sus propios datos sin conexión y enviarlos a YOURDESTINATION para que muestren anuncios en las fuentes de medios sociales de sus clientes.*
 
 ## Requisitos previos {#prerequisites}
 
@@ -38,13 +54,13 @@ ht-degree: 2%
 
 *Agregue información en esta sección sobre las identidades admitidas por el destino. Hemos rellenado previamente la tabla con algunos valores estándar. Elimine los valores que no se apliquen al destino y los que no estén precompletados.*
 
-*YOURDESTINATION* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+*YOURDESTINATION* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
 | Identidad de Target | Descripción | Consideraciones |
 |---|---|---|
 | GAID | Google Advertising ID | Seleccione la identidad objetivo GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
-| ECID | Experience Cloud ID | Un espacio de nombres que representa ECID. Este espacio de nombres también puede ser referenciado por los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) para obtener más información. |
+| ECID | Experience Cloud ID | Un espacio de nombres que representa ECID. Este espacio de nombres también puede ser referenciado por los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/ecid.md) para obtener más información. |
 | phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Adobe Experience Platform admite los números de teléfono con texto sin formato y con hash SHA256. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos. |
 | email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
@@ -66,31 +82,27 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style=&quot;table-layout:auto&quot;}
 
-## Casos de uso {#use-cases}
-
-Para ayudarle a comprender mejor cómo y cuándo debe usar la variable *YOURDESTINATION* destino, aquí hay ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver utilizando este destino.
-
-### Caso de uso número 1
-
-*Para plataformas de mensajería móvil:*
-
-*Una plataforma de ventas y alquiler de casas quiere enviar notificaciones móviles a los dispositivos Android y iOS de los clientes para informarles de que hay 100 anuncios actualizados en el área donde previamente buscaron un alquiler.*
-
-### Caso de uso n.º 2
-
-*Para plataformas de redes sociales:*
-
-*Una marca de ropa deportiva quiere llegar a los clientes existentes a través de sus cuentas de medios sociales. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM a Adobe Experience Platform, generar segmentos a partir de sus propios datos sin conexión y enviarlos a YOURDESTINATION para que muestren anuncios en las fuentes de medios sociales de sus clientes.*
-
 ## Conectarse al destino {#connect}
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html).
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). En el flujo de trabajo de configuración de destino, rellene los campos que aparecen en las dos secciones siguientes.
 
-### Parámetros de conexión {#parameters}
+### Autenticar en destino {#authenticate}
 
-While [configuración](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) Para este destino, debe proporcionar la siguiente información:
+*Agregue los campos que los clientes deben rellenar al autenticarse en el destino. Estos campos son específicos de destino y dependen de la configuración en Destination SDK. Es posible que los campos del destino no sean los mismos que los que se enumeran a continuación. Por favor, incluya también una captura de pantalla similar a la captura de pantalla de muestra que se muestra a continuación.*
 
-*Agregue los campos que los clientes deben rellenar al configurar un nuevo destino. Estos campos son específicos de destino y dependen de la configuración en Destination SDK. Es posible que los campos del destino no sean los mismos que los que se enumeran a continuación.*
+Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectarse al destino]**.
+
+![Captura de pantalla de ejemplo que muestra cómo autenticarse en el destino](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+
+* **[!UICONTROL Token portador]**: Rellene el token al portador para autenticarse en el destino.
+
+### Rellenar detalles de destino {#destination-details}
+
+*Agregue los campos que los clientes deben rellenar al configurar un nuevo destino. Estos campos son específicos de destino y dependen de la configuración en Destination SDK. Es posible que los campos del destino no sean los mismos que los que se enumeran a continuación. Por favor, incluya también una captura de pantalla similar a la captura de pantalla de muestra que se muestra a continuación.*
+
+Para configurar los detalles del destino, rellene los campos obligatorios y seleccione **[!UICONTROL Siguiente]**.
+
+![Captura de pantalla de ejemplo que muestra cómo rellenar los detalles para el destino](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
@@ -161,9 +173,9 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 -->
 
-## Datos exportados {#exported-data}
+## Datos exportados / Validar exportación de datos {#exported-data}
 
-*Agregue una nota sobre cómo se exportan los datos al destino. Esto ayudaría al cliente a asegurarse de que se ha integrado correctamente con su destino. Por ejemplo, puede proporcionar un JSON de muestra como el que se muestra a continuación.*
+*Agregue un párrafo sobre cómo se exportan los datos al destino. Esto ayudaría al cliente a asegurarse de que se ha integrado correctamente con su destino. Por ejemplo, puede proporcionar un JSON de muestra como el que se muestra a continuación. O bien, podría proporcionar capturas de pantalla e información de la interfaz de su destino que muestre cómo los clientes deberían esperar que los segmentos se rellenen en la plataforma de destino.*
 
 ```
 {
@@ -205,7 +217,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Uso y gobernanza de los datos {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] exige la administración de datos, lea la [Información general sobre la administración de datos](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] exige la administración de datos, lea la [Información general sobre la administración de datos](/help/data-governance/home.md).
 
 ## Recursos adicionales {#additional-resources}
 
