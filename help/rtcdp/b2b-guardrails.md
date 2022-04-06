@@ -1,15 +1,15 @@
 ---
-keywords: perfil;perfil de cliente en tiempo real;resolución de problemas;protecciones;directrices;límite;entidad;entidad principal;entidad de dimensión;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;plataforma de datos de clientes en tiempo real;cdp en tiempo real;b2b;cdp;
+keywords: perfil;perfil de cliente en tiempo real;solución de problemas;protecciones;directrices;límite;entidad;entidad principal;entidad de dimensión;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;plataforma de datos de clientes en tiempo real;cdp en tiempo real;b2b;cdp;
 title: Protecciones predeterminadas para Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: 'Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar sus datos para lograr un rendimiento óptimo del sistema mediante Real-time Customer Data Platform B2B Edition. '
-source-git-commit: 7b9b01657ab2a682b900a8c55a201f9864e4428b
+description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar sus datos para lograr un rendimiento óptimo del sistema mediante Real-time Customer Data Platform B2B Edition.
+exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
+source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
 source-wordcount: '1601'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Protecciones predeterminadas para Real-time Customer Data Platform B2B Edition
 

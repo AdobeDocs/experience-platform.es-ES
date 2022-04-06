@@ -4,9 +4,9 @@ title: Habilitar un conjunto de datos para actualizaciones de perfil mediante AP
 type: Tutorial
 description: Este tutorial le muestra cómo utilizar las API de Adobe Experience Platform para habilitar un conjunto de datos con capacidades de "actualización" para realizar actualizaciones en los datos del perfil del cliente en tiempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
+source-git-commit: e7bd2c699b30276dca1a2e29c19f0a885b246f48
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '991'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 2%
 
 Este tutorial trata el proceso de activación de un conjunto de datos con capacidades de &quot;actualización&quot; para realizar actualizaciones en los datos del perfil del cliente en tiempo real. Esto incluye pasos para crear un nuevo conjunto de datos y configurar un conjunto de datos existente.
 
+>[!NOTE]
+>
+>El flujo de trabajo de actualización solo funciona para la ingesta por lotes. La ingesta de transmisión es **not** compatible.
+
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de varios servicios de Adobe Experience Platform involucrados en la administración de conjuntos de datos con perfil habilitado. Antes de comenzar este tutorial, revise la documentación de estas [!DNL Platform] servicios:
@@ -22,7 +26,7 @@ Este tutorial requiere una comprensión práctica de varios servicios de Adobe E
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 - [[!DNL Catalog Service]](../../catalog/home.md): Una API de RESTful que le permite crear conjuntos de datos y configurarlos para [!DNL Real-time Customer Profile] y [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
-- [Ingesta por lotes](../../ingestion/batch-ingestion/overview.md)
+- [Ingesta por lotes](../../ingestion/batch-ingestion/overview.md): La API de ingesta de lotes permite introducir datos en el Experience Platform como archivos por lotes.
 
 Las secciones siguientes proporcionan información adicional que debe conocer para realizar llamadas correctamente a las API de Platform.
 
@@ -102,11 +106,11 @@ Una respuesta correcta muestra una matriz que contiene el ID del conjunto de dat
 
 ## Configurar un conjunto de datos existente {#configure-an-existing-dataset}
 
-Los siguientes pasos tratan sobre cómo configurar un conjunto de datos habilitado para Perfil existente para la funcionalidad de actualización (&quot;actualización&quot;).
+Los siguientes pasos tratan sobre cómo configurar un conjunto de datos habilitado para Perfil existente para la funcionalidad de actualización (actualización).
 
 >[!NOTE]
 >
->Para configurar un conjunto de datos habilitado para Perfil existente para &quot;upsert&quot;, primero debe deshabilitar el conjunto de datos para Perfil y luego volver a habilitarlo junto con el `isUpsert` etiqueta. Si el conjunto de datos existente no está habilitado para Perfil, puede continuar directamente con los pasos de [activación del conjunto de datos para Perfil y actualizar](#enable-the-dataset). Si no está seguro, los siguientes pasos le muestran cómo comprobar si el conjunto de datos ya está habilitado.
+>Para configurar un conjunto de datos habilitado para el perfil existente para la actualización, primero debe deshabilitar el conjunto de datos para el perfil y luego volver a habilitarlo junto con la variable `isUpsert` etiqueta. Si el conjunto de datos existente no está habilitado para Perfil, puede continuar directamente con los pasos de [activación del conjunto de datos para Perfil y actualizar](#enable-the-dataset). Si no está seguro, los siguientes pasos le muestran cómo comprobar si el conjunto de datos ya está habilitado.
 
 ### Comprobar si el conjunto de datos está habilitado para Perfil
 
@@ -220,6 +224,7 @@ curl -X PATCH \
 ```
 
 **Respuesta**
+
 Una solicitud de PATCH correcta devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La variable `unifiedProfile` La etiqueta de ahora se ha deshabilitado.
 
 ```json
@@ -270,4 +275,4 @@ Una solicitud de PATCH correcta devuelve el estado HTTP 200 (OK) y una matriz qu
 
 ## Pasos siguientes
 
-Ahora, los flujos de trabajo de ingesta por lotes y de transmisión pueden utilizar el conjunto de datos habilitado para perfiles y para servidor para realizar actualizaciones en los datos del perfil. Para obtener más información sobre la ingesta de datos en Adobe Experience Platform, comience por leer la [información general sobre la ingesta de datos](../../ingestion/home.md).
+Los flujos de trabajo de ingesta por lotes ahora pueden usar su conjunto de datos habilitado para perfiles y servidores para realizar actualizaciones en los datos de perfil. Para obtener más información sobre la ingesta de datos en Adobe Experience Platform, comience por leer la [información general sobre la ingesta de datos](../../ingestion/home.md).
