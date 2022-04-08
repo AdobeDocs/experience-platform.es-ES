@@ -2,10 +2,10 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino de flujo continuo para el Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 5%
+source-wordcount: '1787'
+ht-degree: 4%
 
 ---
 
@@ -98,8 +98,8 @@ Este es un ejemplo de configuración de un destino ficticio de transmisión, Mov
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -276,6 +276,10 @@ Esta opción le permite:
    * ID de segmento;
    * Estado del segmento;
    * Identidad o grupos de identidades.
+
+>[!NOTE]
+>
+>Al utilizar la opción de agregación configurable para el destino, tenga en cuenta los valores mínimo y máximo que puede utilizar para los dos parámetros `maxBatchAgeInSecs` (mínimo 1 800 y máximo 3 600) y `maxNumEventsInBatch` (mínimo 1 000, máximo 10 000).
 
 Para obtener explicaciones detalladas de los parámetros de agregación, consulte la [Operaciones de extremo de la API de destinos](./destination-configuration-api.md) página de referencia, donde se describe cada parámetro.
 
