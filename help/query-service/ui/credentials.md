@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: b4388106caf1c6ee48c44051fe484cd595278483
+source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1168'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ El servicio de consulta de Adobe Experience Platform le permite conectarse con c
 
 Puede utilizar las credenciales caducadas para configurar rápidamente una conexión con un cliente externo.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![La ficha Credenciales del panel Consultas con la sección Credenciales de caducidad resaltada.](../images/ui/credentials/expiring-credentials.png)
 
 La variable **[!UICONTROL Credenciales de caducidad]** proporciona la siguiente información:
 
@@ -55,7 +55,7 @@ Todos los permisos necesarios ahora están configurados en Adobe Developer Conso
 
 Para crear un conjunto de credenciales que no caduquen, vuelva a la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** desde el panel de navegación izquierdo para acceder a la [!UICONTROL Consultas] espacio de trabajo. A continuación, seleccione la **[!UICONTROL Credenciales]** pestaña seguida de **[!UICONTROL Generar credenciales]**.
 
-![](../images/ui/credentials/generate-credentials.png)
+![El panel Consultas con la pestaña Credenciales y las credenciales de Generación resaltadas.](../images/ui/credentials/generate-credentials.png)
 
 Aparece un cuadro de diálogo que le permite generar credenciales. Para crear credenciales que no caduquen, debe proporcionar los siguientes detalles:
 
@@ -66,11 +66,11 @@ Aparece un cuadro de diálogo que le permite generar credenciales. Para crear cr
 
 Una vez que haya proporcionado todos los detalles requeridos, seleccione **[!UICONTROL Generar credenciales]** para generar sus credenciales.
 
-![](../images/ui/credentials/create-account.png)
+![Se resalta el cuadro de diálogo Generar credenciales.](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->Una vez que la variable **[!UICONTROL Generar credenciales]** está seleccionado, se descarga un archivo JSON de configuración en el equipo local. Dado que el Adobe sí **not** registre las credenciales generadas, debe almacenar de forma segura el archivo descargado y guardar un registro de las credenciales.
+>When **[!UICONTROL Generar credenciales]** está seleccionado, se descarga un archivo JSON de configuración en el equipo local. Dado que el Adobe sí **not** registre las credenciales generadas, debe almacenar de forma segura el archivo descargado y guardar un registro de las credenciales.
 >
 >Además, si las credenciales no se utilizan durante 90 días, se eliminarán.
 
@@ -82,7 +82,7 @@ El archivo JSON de configuración contiene información como el nombre de cuenta
 
 Después de guardar las credenciales generadas, seleccione **[!UICONTROL Cerrar]**. Ahora puede ver una lista de todas sus credenciales que no caducan.
 
-![](../images/ui/credentials/list-credentials.png)
+![La ficha Credenciales del panel Consultas con la sección Credenciales que no caducan se expande.](../images/ui/credentials/list-credentials.png)
 
 Puede editar o eliminar las credenciales que no caducan. Para editar una credencial que no caduque, seleccione el icono de lápiz (![](../images/ui/credentials/edit-icon.png)). Para eliminar una credencial que no caduque, seleccione el icono Eliminar (![](../images/ui/credentials/delete-icon.png)).
 
@@ -92,7 +92,7 @@ Al editar una credencial que no caduca, aparece un modal. Puede proporcionar los
 - **[!UICONTROL Descripción]**: (Opcional) Descripción de las credenciales que está generando.
 - **[!UICONTROL Asignado a]**: Usuario al que se asignarán las credenciales. Este valor debe ser la dirección de correo electrónico del usuario que está creando las credenciales.
 
-![](../images/ui/credentials/update-credentials.png)
+![El cuadro de diálogo Actualizar cuenta .](../images/ui/credentials/update-credentials.png)
 
 Una vez que haya proporcionado todos los detalles requeridos, seleccione **[!UICONTROL Actualizar cuenta]** para completar la actualización de sus credenciales.
 
@@ -112,11 +112,11 @@ En la tabla siguiente se describen los parámetros que suelen ser necesarios par
 
 | Parámetro | Descripción |
 |---|---|
-| Servidor/Host | Nombre del servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y adopta la forma de `server.adobe.io`. El valor se encuentra en **[!UICONTROL Host]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información.</ul></li> |
-| Puerto  | Puerto para el servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Puerto]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información. Un valor de ejemplo para el puerto sería `80`.</ul></li> |
-| Database | La base de datos a la que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Base de datos]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información. Un valor de ejemplo para la base de datos sería `prod:all`.</ul></li> |
-| Nombre de usuario | El nombre de usuario del usuario que se está conectando al cliente externo. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan. Toma la forma de una cadena alfanumérica antes de `@AdobeOrg`. Este valor se encuentra en **[!UICONTROL Nombre de usuario]**.</li></ul> |
-| Contraseña | La contraseña del usuario que se está conectando al cliente externo. <ul><li>Si está utilizando credenciales que caducan, esto se encuentra en **[!UICONTROL Contraseña]** dentro de la variable [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información.</li><li>Si utiliza credenciales que no caducan, este valor son los argumentos concatenados de technicalAccountID y las credenciales tomadas del archivo JSON de configuración. El valor de la contraseña adopta la forma: `{technicalAccountId}:{credential}`.</li></ul> |
+| **Servidor/Host** | Nombre del servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y adopta la forma de `server.adobe.io`. El valor se encuentra en **[!UICONTROL Host]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información.</ul></li> |
+| **Puerto** | Puerto para el servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Puerto]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información. Un valor de ejemplo para el puerto sería `80`.</ul></li> |
+| **Database** | La base de datos a la que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Base de datos]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información. Un valor de ejemplo para la base de datos sería `prod:all`.</ul></li> |
+| **Nombre de usuario** | El nombre de usuario del usuario que se está conectando al cliente externo. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan. Toma la forma de una cadena alfanumérica antes de `@AdobeOrg`. Este valor se encuentra en **[!UICONTROL Nombre de usuario]**.</li></ul> |
+| **Contraseña** | La contraseña del usuario que se está conectando al cliente externo. <ul><li>Si está utilizando credenciales que caducan, esto se encuentra en **[!UICONTROL Contraseña]** dentro de la variable [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información.</li><li>Si utiliza credenciales que no caducan, este valor son los argumentos concatenados de technicalAccountID y las credenciales tomadas del archivo JSON de configuración. El valor de la contraseña adopta la forma: `{technicalAccountId}:{credential}`.</li></ul> |
 
 ## Pasos siguientes
 

@@ -5,10 +5,10 @@ title: Conexión de PSQL al servicio de consulta
 topic-legacy: connect
 description: PSQL es una interfaz de línea de comandos que viene cuando instala PostgreSQL en su equipo. Puede instalarlo siguiendo estas instrucciones.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 06d3a8aa6f2f73c2d5392a76fb5b36b18691cf0d
+source-git-commit: 4d9e6ce81809c6e6ee1188177a937ac8fc609996
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 1%
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -22,9 +22,11 @@ PSQL es una interfaz de línea de comandos que se instala al instalar [!DNL Post
 
 Después de instalar PSQL en el equipo, está listo para conectar PSQL con el servicio de consulta. Vuelva a la [!DNL Platform] IU y, a continuación, seleccione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciales]**.
 
-![Imagen](../images/clients/psql/connect-bi.png)
+En el **[!UICONTROL Comando PSQL]** seleccione **[!UICONTROL Copiar al portapapeles]** icono (![Icono Copiar](../images/clients/psql/copy-icon.png)) para copiar la cadena de comandos.
 
-Seleccione el icono para copiar la sección etiquetada **[!UICONTROL Comando PSQL]**, pegue la cadena de comandos en un terminal o en una ventana de línea de comandos antes de pulsar Intro.
+![La pestaña Credenciales del panel Consultas con el icono de copia resaltado.](../images/clients/psql/connect-bi.png)
+
+Pegue la cadena de comandos en una ventana de terminal o de línea de comandos y presione **Entrar** en el teclado.
 
 >[!IMPORTANT]
 >
