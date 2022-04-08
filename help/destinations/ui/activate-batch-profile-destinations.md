@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 6c64e8400c85865aab4e8cfb9e86850562ba97aa
+source-git-commit: 98e2076832bee8e11df8834063cc0b11c1ae3164
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -73,6 +73,16 @@ Seleccione el **[!UICONTROL Crear programación]** correspondiente al segmento q
 >title="Opciones de exportación de archivos"
 >abstract="Select **Exportar archivos completos** para exportar una instantánea completa de todos los perfiles que cumplen los requisitos para el segmento. Select **Exportar archivos incrementales** para exportar solo los perfiles que cumplen los requisitos para el segmento desde la última exportación. <br> La primera exportación incremental de archivos incluye todos los perfiles que cumplen los requisitos para el segmento, actuando como relleno. Los futuros archivos incrementales incluyen solo los perfiles que cumplen los requisitos para el segmento desde la primera exportación de archivos incrementales."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Exportar archivos incrementales"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_aftersegmentevaluation"
+>title="Activar después de la evaluación de segmentos"
+>abstract="La activación se ejecuta inmediatamente después de que se complete el trabajo de segmentación diaria. Esto garantiza que se exporten los perfiles más actualizados. Debe mover esta ventana emergente a la nueva sección de encadenamiento de activación para una vinculación correcta."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_scheduled"
+>title="Activación programada"
+>abstract="La activación se ejecuta a una hora fija del día. Debe mover esta ventana emergente a la nueva sección de encadenamiento de activación para una vinculación correcta."
 
 Select **[!UICONTROL Exportar archivos completos]** para almacenar en déclencheur la exportación de un archivo que contenga una instantánea completa de todas las cualificaciones de perfil del segmento seleccionado.
 
