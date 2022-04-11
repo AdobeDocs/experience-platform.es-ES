@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
+source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
 workflow-type: tm+mt
-source-wordcount: '2596'
+source-wordcount: '2668'
 ht-degree: 2%
 
 ---
@@ -420,6 +420,27 @@ EXCEPTION
 WHEN other THEN SELECT 'ERROR';
 
 END $$; 
+```
+
+## En línea {#inline}
+
+La función en línea separa los elementos de una matriz de estructuras y genera los valores en una tabla. Solo se puede colocar en la variable `SELECT` lista o `LATERAL VIEW`.
+
+La función en línea **cannot** se colocarán en una lista de selección donde haya otras funciones generadoras.
+
+De forma predeterminada, las columnas producidas se denominan &quot;col1&quot;, &quot;col2&quot;, etc. Si la expresión es `NULL` a continuación, no se genera ninguna fila.
+
+**Ejemplo**
+
+```sql
+> SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
+```
+
+El ejemplo devuelve lo siguiente:
+
+```text
+1  a Spark SQL
+2  b Spark SQL
 ```
 
 ## [!DNL Spark] Comandos SQL
