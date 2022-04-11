@@ -4,9 +4,9 @@ title: Panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
+source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1708'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ Si un segmento dentro de la variable [!UICONTROL Estado de la audiencia asignada
 
 ![El widget de estado de la audiencia asignado.](../images/destinations/mapped-audience-health.png)
 
-### [!UICONTROL Recuento de destinos] (#destination-count)
+### [!UICONTROL Recuento de destinos] {#destinations-count}
 
 La variable [!UICONTROL Recuento de destinos] proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos.
 
