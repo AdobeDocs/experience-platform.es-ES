@@ -6,9 +6,9 @@ seo-title: Activate audience data to streaming segment export destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de flujo continuo de segmento.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Algunos destinos de flujo continuo de segmentos requieren que seleccione atribut
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformación"
 >abstract="Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform los hash automáticamente en la activación."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="Más información en la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="Más información en la documentación"
 
 Cuando asigna atributos de origen sin hash a atributos de destino que el destino espera que tengan un hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la casilla **Aplicar transformación** para que Adobe Experience Platform hash automáticamente los atributos de origen al activarlos.
 
