@@ -1,62 +1,76 @@
 ---
 solution: Experience Platform
-title: Explorar y procesar conjuntos de datos sin procesar que alimenten los tableros de la plataforma
+title: Explorar, verificar y procesar conjuntos de datos de panel mediante el servicio de consulta
 type: Documentation
 description: Aprenda a utilizar el servicio de consulta para explorar y procesar conjuntos de datos sin procesar que alimentan los paneles de perfil, segmento y destino en Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
+source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 1%
+source-wordcount: '848'
+ht-degree: 0%
 
 ---
 
-# Explorar, verificar y procesar conjuntos de datos de tablero mediante el servicio de consulta
+# Explorar, verificar y procesar conjuntos de datos de tableros mediante [!DNL Query Service]
 
-Adobe Experience Platform proporciona información importante sobre los datos de perfil, segmento y destino de su organización a través de los paneles disponibles en la interfaz de usuario del Experience Platform. A continuación, puede utilizar el servicio de consulta de Adobe Experience Platform para explorar, verificar y procesar los conjuntos de datos sin procesar que alimentan estos paneles en el lago de datos.
+Adobe Experience Platform proporciona información importante sobre los datos de perfil, segmento y destino de su organización a través de los paneles disponibles en la interfaz de usuario del Experience Platform. A continuación, puede usar Adobe Experience Platform [!DNL Query Service] para explorar, verificar y procesar los conjuntos de datos sin procesar que alimentan estos tableros en el lago de datos.
 
-## Introducción a Query Service
+## Introducción a [!DNL Query Service]
 
-El servicio de consulta de Adobe Experience Platform permite a los especialistas en marketing obtener perspectivas de sus datos mediante el uso de SQL estándar para consultar datos en el lago de datos. El servicio de consulta ofrece una interfaz de usuario y una API que se pueden usar para unirse a cualquier conjunto de datos en el lago de datos y capturar los resultados de la consulta como nuevos conjuntos de datos para su uso en sistemas de informes, aprendizaje automático o para su incorporación al Perfil del cliente en tiempo real.
+Adobe Experience Platform [!DNL Query Service] permite a los especialistas en marketing obtener perspectivas de sus datos al permitir el uso de SQL estándar para consultar datos en el lago de datos. [!DNL Query Service] ofrece una interfaz de usuario y una API que se pueden usar para unirse a cualquier conjunto de datos en el lago de datos y capturar los resultados de la consulta como nuevos conjuntos de datos para su uso en informes, aprendizaje automático o para su incorporación al Perfil del cliente en tiempo real.
 
-Para obtener más información sobre el servicio de consulta y su función dentro de Experience Platform, comience leyendo la [información general del servicio de consulta](../query-service/home.md).
+Para obtener más información sobre [!DNL Query Service] y su papel en el Experience Platform, por favor comience leyendo el [[!DNL Query Service] información general](../query-service/home.md).
 
-## Conjuntos de datos disponibles
+## Acceso a conjuntos de datos disponibles
 
-Puede utilizar el servicio de consulta para consultar conjuntos de datos sin procesar en tableros de perfil, segmentos y destinos. Las secciones siguientes describen los conjuntos de datos sin procesar que se pueden encontrar en el lago de datos.
+Puede usar [!DNL Query Service] para consultar conjuntos de datos sin procesar en tableros de perfiles, segmentos y destinos. Para ver los conjuntos de datos disponibles, en la interfaz de usuario del Experience Platform, seleccione **Conjuntos de datos** en el panel de navegación izquierdo para abrir el tablero Conjuntos de datos . El tablero enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere el conjunto de datos y el estado de la ejecución de ingesta más reciente.
+
+![El tablero Examinar conjunto de datos con la ficha Conjuntos de datos resaltada en el panel de navegación izquierdo.](./images/query/browse-datasets.png)
+
+### Conjuntos de datos generados por el sistema
+
+>[!IMPORTANT]
+>
+>Los conjuntos de datos generados por el sistema están ocultos de forma predeterminada. De forma predeterminada, la variable [!UICONTROL Examinar] solo muestra los conjuntos de datos en los que ha introducido datos.
+
+Para ver los conjuntos de datos generados por el sistema, seleccione el icono de filtro (![Un icono de filtro.](./images/query/filter.png)) situado a la izquierda de la barra de búsqueda.
+
+![La ficha Examinar conjuntos de datos con el icono de filtro resaltado.](./images/query/filter-datasets.png)
+
+Aparece una barra lateral que contiene dos toggins, [!UICONTROL Incluido en el perfil] y [!UICONTROL Mostrar conjuntos de datos del sistema]. Seleccione la opción [!UICONTROL Mostrar conjuntos de datos del sistema] para incluir conjuntos de datos generados por el sistema en la lista de conjuntos de datos que se pueden explorar.
+
+![La ficha Examinar conjuntos de datos con la opción Mostrar conjuntos de datos del sistema resaltada.](./images/query/show-system-datasets.png)
 
 ### Conjuntos de datos de atributos de perfil
 
 Las perspectivas del panel de perfiles están vinculadas a las políticas de combinación que su organización ha definido. Para cada directiva de combinación activa, hay un conjunto de datos de atributo de perfil disponible en el lago de datos.
 
-La convención de nomenclatura de estos conjuntos de datos es **Profile-Snapshot-Export** seguida de un valor alfanumérico aleatorio generado por el sistema. Por ejemplo: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+La convención de nomenclatura de estos conjuntos de datos es **Profile-Snapshot-Export** seguido de un valor alfanumérico aleatorio generado por el sistema. Por ejemplo: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Para comprender el esquema completo de cada conjunto de datos de exportación de instantánea de perfil, puede obtener una vista previa y explorar los conjuntos de datos [utilizando el visor de conjuntos de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
+Para comprender el esquema completo de cada conjunto de datos de exportación de instantánea de perfil, puede obtener una vista previa y explorar los conjuntos de datos [uso del visor del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
 
 ![](images/query/profile-attribute.png)
 
 #### Asignación de conjuntos de datos de atributos de perfil para combinar ID de directivas
 
-Cada conjunto de datos de atributo de perfil se titula **Profile Snapshot Export** seguido de un valor numérico alfanumérico aleatorio generado por el sistema. Por ejemplo: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+El valor alfanumérico asignado a cada conjunto de datos de atributos de perfil generados por el sistema es una cadena aleatoria que se asigna a un ID de política de combinación de una de las políticas de combinación creadas por su organización. La asignación de cada ID de directiva de combinación a la cadena de conjunto de datos de atributo de perfil relacionada se mantiene en la variable `adwh_dim_merge_policies` conjunto de datos.
 
-Este valor numérico alfa es una cadena aleatoria generada por el sistema que se asigna a un ID de política de combinación de una de las políticas de combinación creadas por su organización. La asignación de cada ID de directiva de combinación a su cadena de conjunto de datos de atributo de perfil relacionado se mantiene en el conjunto de datos `adwh_dim_merge_policies`.
-
-El conjunto de datos `adwh_dim_merge_policies` contiene los siguientes campos:
+La variable `adwh_dim_merge_policies` el conjunto de datos contiene los siguientes campos:
 
 * `merge_policy_name`
 * `merge_policy_id`
 * `merge_policy`
 * `dataset_id`
 
-Este conjunto de datos se puede explorar mediante la interfaz de usuario del Editor de consultas en Experience Platform. Para obtener más información sobre el uso del Editor de consultas, consulte la [guía de IU del Editor de consultas](../query-service/ui/user-guide.md).
+Este conjunto de datos se puede explorar mediante la interfaz de usuario del Editor de consultas en Experience Platform. Para obtener más información sobre el uso del Editor de consultas, consulte la [Guía de la interfaz de usuario del Editor de consultas](../query-service/ui/user-guide.md).
 
 ### Conjunto de datos de metadatos de segmentos
 
 Hay un conjunto de datos de metadatos de segmento disponible en el lago de datos que contiene metadatos para cada uno de los segmentos de su organización.
 
-La convención de nomenclatura de este conjunto de datos es **Segmentdefinition-Snapshot-Export** seguida de un valor numérico alfa. Por ejemplo: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
+La convención de nomenclatura de este conjunto de datos es **Segmentdefinition-Instantánea-Exportar** seguido de un valor numérico alfa. Por ejemplo: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Para comprender el esquema completo de cada conjunto de datos de exportación de instantánea de definición de segmento, puede obtener una vista previa y explorar los conjuntos de datos [utilizando el visor de conjuntos de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
+Para comprender el esquema completo de cada conjunto de datos de exportación de instantánea de definición de segmento, puede obtener una vista previa y explorar los conjuntos de datos [uso del visor del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
@@ -66,13 +80,13 @@ Los metadatos de todos los destinos activados de su organización están disponi
 
 La convención de nomenclatura de este conjunto de datos es **DIM_Destination**.
 
-Para comprender el esquema completo del conjunto de datos de destino DIM, puede obtener una vista previa y explorar el conjunto de datos [mediante el visor de conjuntos de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
+Para comprender el esquema completo del conjunto de datos de destino DIM, puede obtener una vista previa y explorar el conjunto de datos [uso del visor del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
 ## Consultas de ejemplo
 
-Las siguientes consultas de ejemplo incluyen SQL de muestra que se puede utilizar en el servicio de consulta para explorar, verificar y procesar los conjuntos de datos sin procesar que alimentan los paneles.
+Las siguientes consultas de ejemplo incluyen SQL de muestra que se puede utilizar en [!DNL Query Service] para explorar, verificar y procesar los conjuntos de datos sin procesar que alimentan los tableros.
 
 ### Recuento de perfiles por identidad
 
@@ -126,6 +140,6 @@ Select
 
 ## Pasos siguientes
 
-Al leer esta guía, ahora puede utilizar el servicio de consulta para realizar varias consultas con el fin de explorar y procesar los conjuntos de datos sin procesar que alimentan los paneles de perfil, segmento y destinos.
+Al leer esta guía, ahora puede usar [!DNL Query Service] realizar varias consultas para explorar y procesar los conjuntos de datos sin procesar que alimentan los paneles de perfil, segmento y destinos.
 
 Para obtener más información sobre cada tablero y sus métricas, seleccione un tablero de la lista de tableros disponibles en la navegación de documentación.
