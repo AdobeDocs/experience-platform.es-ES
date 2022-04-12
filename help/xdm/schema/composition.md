@@ -5,9 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 3397e0ef79b585b828e794ca5f5d9e4c8ae470aa
+source-git-commit: 997a3cdd6301adc2c52b6b397307c1dd1d194d7c
 workflow-type: tm+mt
-source-wordcount: '3850'
+source-wordcount: '3838'
 ht-degree: 0%
 
 ---
@@ -224,13 +224,13 @@ Los intervalos válidos de estos tipos escalares pueden restringirse aún más a
 * Largo
 * Corto
 * Byte
-* Fecha 
+* Fecha
 * Fecha y hora
 * Mapa
 
 >[!NOTE]
 >
->El tipo de campo &quot;map&quot; permite obtener datos de pares de clave-valor, incluidos varios valores para una sola clave. Los mapas solo se pueden definir en el nivel del sistema, lo que significa que puede encontrar un mapa en un esquema del sector o definido por el proveedor, pero no está disponible para su uso en los campos definidos. La variable [Guía del desarrollador de API del Registro del Esquema](../api/getting-started.md) contiene más información sobre la definición de tipos de campo.
+>El tipo de campo &quot;map&quot; permite obtener datos de pares de clave-valor, incluidos varios valores para una sola clave. Los mapas se pueden encontrar en clases XDM estándar y grupos de campos, pero también se pueden definir mapas personalizados mediante la API del Registro de esquemas. Consulte el tutorial en [definición de campos personalizados](../tutorials/custom-fields-api.md#maps) para obtener más información.
 
 ## Ejemplo de composición
 
