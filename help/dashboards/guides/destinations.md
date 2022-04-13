@@ -4,7 +4,7 @@ title: Panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Destinos creados recientemente]](#recently-created-destinations)
 * [[!UICONTROL Segmentos activados recientemente]](#recently-activated-segments)
 * [[!UICONTROL Segmentos activados recientemente por destino]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Tendencia del tamaño de la audiencia]](#audience-size-trends)
+* [[!UICONTROL Tendencia del tamaño de la audiencia]](#audience-size-trend)
 * [[!UICONTROL Segmentos no asignados por identidad]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmentos asignados por identidad]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiencias comunes]](#common-audiences)
