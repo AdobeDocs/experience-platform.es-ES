@@ -4,9 +4,9 @@ title: Panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
+source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1764'
 ht-degree: 0%
 
 ---
@@ -112,6 +112,10 @@ Se puede ajustar un período de tiempo para la tendencia de audiencia en los úl
 El segundo menú desplegable enumera todos los segmentos disponibles que se pueden enviar a la cuenta de destino elegida en la parte superior del panel.
 
 ![El widget de tendencia de tamaño de audiencia.](../images/destinations/audience-size-trend.png)
+
+La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** La utilidad proporciona un [!UICONTROL Subtítulos] en la parte superior derecha del widget. Select **[!UICONTROL Subtítulos]** para abrir el cuadro de diálogo rótulos automáticos. Un modelo de aprendizaje automático genera automáticamente subtítulos para describir las tendencias clave y los eventos importantes analizando los datos de gráficos y segmentos.
+
+![Cuadro de diálogo de rótulos automáticos para el widget de tendencia de tamaño de audiencia.](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL Segmentos no asignados por identidad] {#unmapped-segments-by-identity}
 
