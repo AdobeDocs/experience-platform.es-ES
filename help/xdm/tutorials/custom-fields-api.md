@@ -2,7 +2,7 @@
 title: Definición de campos XDM en la API del Registro de Esquema
 description: Obtenga información sobre cómo definir distintos campos al crear recursos del Modelo de datos de experiencia (XDM) personalizados en la API del Registro de esquemas.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Para empezar, busque el tipo de campo deseado y utilice el código de ejemplo pr
     <td>Los valores de enumeración restringidos se proporcionan en la sección <code>enum</code> , mientras que las etiquetas opcionales de cara al cliente para cada valor se pueden proporcionar en <code>meta:enum</code>:
       <pre class="JSON language-JSON hljs">
 "sampleField": { "type": "string", "enum": [ "value1", "value2", "value3" ], "meta:enum": { "value1": "Value 1", "value2": "Value 2", "value3": "Valor 3" }, "predeterminado": "value1" }</pre>
-    <br>Tenga en cuenta que <code>meta:enum</code> value does <strong>not</strong> declare una enumeración o conduzca cualquier validación de datos por su cuenta. En la mayoría de los casos, las cadenas proporcionadas en <code>meta:enum</code> también se proporcionan en <code>enum</code> para garantizar que los datos estén restringidos. Sin embargo, hay algunos casos de uso en los que <code>meta:enum</code> se proporciona sin <code>enum</code> matriz. Consulte el tutorial en <a href="../tutorials/extend-soft-enum.md">ampliar enumeraciones blandas</a> para obtener más información.
+    <br>Tenga en cuenta que <code>meta:enum</code> value does <strong>not</strong> declare una enumeración o conduzca cualquier validación de datos por su cuenta. En la mayoría de los casos, las cadenas proporcionadas en <code>meta:enum</code> también se proporcionan en <code>enum</code> para garantizar que los datos estén restringidos. Sin embargo, hay algunos casos de uso en los que <code>meta:enum</code> se proporciona sin <code>enum</code> matriz. Consulte el tutorial en <a href="../tutorials/suggested-values.md">definición de valores sugeridos</a> para obtener más información.
     </td>
   </tr>
   <tr>
