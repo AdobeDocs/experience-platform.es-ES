@@ -2,9 +2,10 @@
 keywords: Experience Platform;identidad;servicio de identidad;solución de problemas;protecciones;directrices;límite;
 title: Seguridad para el servicio de identidad
 description: Este documento proporciona información sobre el uso y los límites de velocidad de los datos del servicio de identidad para ayudarle a optimizar el uso del gráfico de identidad.
-source-git-commit: b36ace84acdb13b89deb6f77a02c298acade8d8e
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '385'
 ht-degree: 3%
 
 ---
@@ -30,7 +31,7 @@ La siguiente tabla describe los límites estáticos aplicados a los datos de ide
 
 | Seguridad | Límite | Notas |
 | --- | --- | --- |
-| Número de identidades en un gráfico | 150 | El gráfico de identidad no se actualiza una vez que se alcance el límite. |
+| Número de identidades en un gráfico | 150 | El límite se aplica en el nivel de entorno limitado. El gráfico de identidad no se actualiza una vez que se alcance el límite. |
 | Número de identidades en un registro XDM | 20 | El número mínimo de registros XDM necesarios es de dos. |
 | Número de áreas de nombres personalizadas | Ninguna | No hay límites en el número de áreas de nombres personalizadas que puede crear. |
 | Número de gráficos | Ninguna | No hay límites en el número de gráficos de identidad que puede crear. |
