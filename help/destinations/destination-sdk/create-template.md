@@ -1,10 +1,10 @@
 ---
-description: Como parte de Destination SDK, Adobe proporciona herramientas para desarrolladores que le ayudarán a configurar y probar el destino. En esta página se describe cómo crear y probar una plantilla de transformación de mensaje.
+description: Como parte del Destination SDK, Adobe proporciona herramientas para desarrolladores que le ayudarán a configurar y probar el destino. En esta página se describe cómo crear y probar una plantilla de transformación de mensaje.
 title: Creación y prueba de una plantilla de transformación de mensaje
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Como parte de Destination SDK, Adobe proporciona herramientas para desarrolladores que le ayudarán a configurar y probar el destino. En esta página se describe cómo crear y probar una plantilla de transformación de mensaje. Para obtener información sobre cómo probar el destino, lea [Probar la configuración de destino](./test-destination.md).
+Como parte del Destination SDK, Adobe proporciona herramientas para desarrolladores que le ayudarán a configurar y probar el destino. En esta página se describe cómo crear y probar una plantilla de transformación de mensaje. Para obtener información sobre cómo probar el destino, lea [Probar la configuración de destino](./test-destination.md).
 
 Hasta **crear y probar una plantilla de transformación de mensaje** entre el esquema de destino en Adobe Experience Platform y el formato de mensaje admitido por el destino, use el *Herramienta de creación de plantillas* a continuación.  Obtenga más información sobre la transformación de datos entre el esquema de origen y destino en la variable [documento de formato de mensaje](./message-format.md#using-templating).
 
@@ -23,7 +23,7 @@ A continuación se ilustra cómo la creación y prueba de una plantilla de trans
 
 ## Por qué debe crear y probar una plantilla de transformación de mensaje {#why-create-message-transformation-template}
 
-Uno de los primeros pasos para crear su destino en Destination SDK es pensar en cómo se transforma el formato de datos para la pertenencia a un segmento, las identidades y los atributos de perfil al exportarlo de Adobe Experience Platform a su destino. Busque información sobre la transformación entre el esquema XDM de Adobe y el esquema de destino en la [documento de formato de mensaje](./message-format.md#using-templating).
+Uno de los primeros pasos para crear el destino en Destination SDK es pensar en cómo se transforma el formato de datos para la pertenencia a un segmento, las identidades y los atributos de perfil al exportarlo de Adobe Experience Platform a su destino. Busque información sobre la transformación entre el esquema XDM de Adobe y el esquema de destino en la [documento de formato de mensaje](./message-format.md#using-templating).
 
 Para que la transformación tenga éxito, debe proporcionar una plantilla de transformación, similar a esta: [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](./message-format.md#segments-identities-attributes).
 
@@ -40,6 +40,7 @@ Antes de crear la plantilla, asegúrese de completar los pasos siguientes:
    * Uso `maxUsersPerRequest` con un valor bueno a uno si desea que una llamada de API a su destino incluya varios perfiles, junto con sus cualificaciones de segmento, identidades y atributos de perfil.
 2. [Crear una configuración de destino](./destination-configuration-api.md#create) y añada el ID de la configuración del servidor de destino en `destinationDelivery.destinationServerId`.
 3. [Obtención del ID de la configuración de destino](./destination-configuration-api.md#retrieve-list) que acaba de crear, de modo que pueda utilizarlo en la herramienta de creación de plantillas.
+4. Comprender [qué funciones y filtros se pueden utilizar](./supported-functions.md) en la plantilla de transformación del mensaje.
 
 ## Cómo utilizar la API de plantilla de muestra y la API de plantilla de renderización para crear una plantilla para el destino {#iterative-process}
 
