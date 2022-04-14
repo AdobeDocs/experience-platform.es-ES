@@ -4,9 +4,9 @@ title: Información general sobre los destinos de marketing por correo electrón
 type: Tutorial
 description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como por ejemplo el envío de campañas de correo electrónico promocionales.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
+source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '388'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform admite los siguientes destinos de marketing por correo
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Responsys de oracle](oracle-responsys.md)
 * [Marketing Cloud de Salesforce](salesforce-marketing-cloud.md)
+* [SendGrid](sendgrid.md)
 
 ## Conectarse a un nuevo destino de marketing por correo electrónico {#connect-destination}
 
