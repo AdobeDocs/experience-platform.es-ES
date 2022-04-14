@@ -2,12 +2,12 @@
 keywords: destinos de publicidad;destinos;destinos de plataforma
 title: Información general sobre los destinos publicitarios
 seo-title: Advertising destinations overview
-description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas con estas plataformas.
+description: Conecte Adobe Experience Platform a una plataforma publicitaria de terceros (por ejemplo, DSP, red publicitaria, SSP) y comparta audiencias seudónimas con estas plataformas.
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 0911a0a08c5571161acdafa6857095e275a50600
+source-git-commit: 275c3fae8b001154a702edbf4356d6a374f9a16f
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
@@ -24,14 +24,15 @@ Al conectarse a un destino publicitario, las audiencias se envían como ID a la 
 
 Actualmente, Experience Platform es compatible con los destinos publicitarios que se enumeran a continuación.
 
-Para comprender la diferencia entre conexiones y extensiones, consulte [Conexiones](../../destination-types.md#connections) en la página Tipos de destino y categorías.
+Para comprender la diferencia entre conexiones y extensiones, consulte [Conexiones](../../destination-types.md#connections) en la página Tipos y categorías de destino .
 
 ### Conexiones
 
-* [Conexión de Google Display y Video 360](google-dv360.md)
+* [(Beta) Conexión con Criteo](criteo.md)
+* [Conexión de pantalla y vídeo de Google 360](google-dv360.md)
 * [Conexión de Google Ads](google-ads-destination.md)
 * [Conexión de Google Ad Manager](google-ad-manager.md)
-* [Conexión de Google Customer Match](google-customer-match.md)
+* [Conexión Google Customer Match](google-customer-match.md)
 * [Conexión de Microsoft Bing](bing.md)
 * [Conexión de lista de clientes de pinterest](pinterest.md)
 * [La conexión con el mostrador de comercio](tradedesk.md)
@@ -48,11 +49,11 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 * [Extensión de facebook Pixel](facebook-pixel.md)
 * [Extensión Flashtalk OneTag](flashtalking.md)
 * [Extensión de Google Ads](google-ads-extension.md)
-* [Extensión de Google Gtag](gtag-advertising.md)
+* [Extensión de etiqueta de Google](gtag-advertising.md)
 * [Extensión de la etiqueta linkedIn Insight](linkedin.md)
 * [Extensión de seguimiento de conversión de pinterest](pinterest-extension.md)
 * [Extensión de la etiqueta del sitio web universal de twitter](twitter-uwt.md)
 
 ## Conectarse a un nuevo destino publicitario {#connect-destination}
 
-Para enviar segmentos a destinos de publicidad para sus campañas, Platform debe conectarse primero al destino. Consulte el [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
+Para enviar segmentos a destinos de publicidad para sus campañas, Platform debe conectarse primero al destino. Consulte la [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
