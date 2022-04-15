@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de Attribution AI
 topic-legacy: User guide
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
+source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2331'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ A continuación, aparece la página de configuración de Attribution AI, donde p
 
 ![asignación de nombres a instancias](./images/user-guide/naming_instance.png)
 
-## Seleccionar datos {#select-data}
+## Selección de datos {#select-data}
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
@@ -84,7 +84,7 @@ En la vista previa del conjunto de datos es un valor de porcentaje de integridad
 
 ### Seleccionar una identidad {#identity}
 
-Para que varios conjuntos de datos se unan entre sí, debe seleccionar un tipo de identidad (también conocido como &quot;área de nombres de identidad&quot;) y un valor de identidad dentro de ese área de nombres. Si ha asignado más de un campo como identidad dentro del esquema en el mismo espacio de nombres, todos los valores de identidad asignados aparecerán en la lista desplegable de identidad precedida por el área de nombres, como `EMAIL (personalEmail.address)` o `EMAIL (workEmail.address)`.
+Ahora puede unir varios conjuntos de datos entre sí según el mapa de identidad (campo). Debe seleccionar un tipo de identidad (también conocido como &quot;área de nombres de identidad&quot;) y un valor de identidad dentro de ese área de nombres. Si ha asignado más de un campo como identidad dentro del esquema en el mismo espacio de nombres, todos los valores de identidad asignados aparecerán en la lista desplegable de identidad precedida por el área de nombres, como `EMAIL (personalEmail.address)` o `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
@@ -92,11 +92,11 @@ Para que varios conjuntos de datos se unan entre sí, debe seleccionar un tipo d
 
 Para seleccionar una identidad, seleccione el valor subrayado ubicado en la columna de identidad. Aparecerá la ventana Seleccionar una identidad.
 
-![seleccionar el mismo espacio de nombres](./images/user-guide/identity-type.png)
+![seleccionar el mismo espacio de nombres](./images/user-guide/aai-identity-map.png)
 
 En el caso de que haya más de una identidad disponible en un área de nombres, asegúrese de seleccionar el campo de identidad correcto para el caso de uso. Por ejemplo, hay dos identidades de correo electrónico disponibles en el área de nombres del correo electrónico, un trabajo y un correo electrónico personal. Según el caso de uso, es más probable que se rellene un correo electrónico personal, que sea más útil en predicciones individuales. Esto significa que debería seleccionar `EMAIL (personalEmail.address)` como su identidad.
 
-![Clave de conjunto de datos no seleccionada](./images/user-guide/select-identity.png)
+![Clave de conjunto de datos no seleccionada](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ Existen tres tipos diferentes de datos de entrada que se utilizan para definir e
 
 ### Definir eventos de conversión {#define-conversion-events}
 
-Para definir un evento de conversión, debe asignar un nombre al evento y seleccionar el tipo de evento seleccionando la variable **Introducir nombre de campo** menú desplegable.
+Para definir un evento de conversión, debe asignar un nombre al evento y seleccionar el tipo de evento seleccionando el conjunto de datos y el campo en el **Seleccionar un conjunto de datos y un campo** menú desplegable.
 
-![lista desplegable yes](./images/user-guide/conversion_event_2.png)
+![lista desplegable yes](./images/user-guide/define-conversion-events.png)
 
 Una vez seleccionado un evento, aparece un nuevo menú desplegable a la derecha. La segunda lista desplegable se utiliza para proporcionar un contexto adicional al evento mediante el uso de operaciones. Para este evento de conversión, la operación predeterminada *existe* se utiliza.
 
@@ -133,6 +133,8 @@ Una vez seleccionado un evento, aparece un nuevo menú desplegable a la derecha.
 >Una cadena debajo de su *nombre de conversión* se actualiza a medida que define el evento.
 
 ![sin lista desplegable](./images/user-guide/conversion_event_1.png)
+
+A continuación, puede seleccionar un conjunto de datos combinado que se genere combinando todos los conjuntos de datos de entrada en el paso anterior. Como alternativa, puede seleccionar una columna basada en conjuntos de datos individuales desde el **Seleccionar un conjunto de datos y un campo** menú desplegable.
 
 La variable **[!UICONTROL Agregar evento]** y **[!UICONTROL Agregar grupo]** para definir aún más la conversión. Según la conversión que esté definiendo, es posible que tenga que usar la variable **[!UICONTROL Agregar evento]** y **[!UICONTROL Agregar grupo]** para proporcionar más contexto.
 
