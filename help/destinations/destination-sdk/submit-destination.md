@@ -2,10 +2,10 @@
 description: Esta página proporciona toda la información que debe enviar para su revisión a un destino creado mediante Destination SDK.
 title: Enviar para revisión un destino creado en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 1%
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,14 @@ Esta página enumera toda la información que debe proporcionar al enviar o actu
 * (Solo para integraciones de productos) una PR de documentación (solicitud de extracción), siguiendo las instrucciones descritas en la sección [proceso de documentación de autoservicio](./docs-framework/documentation-instructions.md).
 * Archivo de imagen que se mostrará como logotipo para la tarjeta de destino en el catálogo de destinos del Experience Platform.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->El tiempo de respuesta estándar del Adobe para revisar las solicitudes de publicación de destino es de 5 días hábiles.
+>* El tiempo de respuesta estándar del Adobe para revisar las solicitudes de publicación de destino es de cinco días laborables.
+>
+>* Si el equipo de Adobe le pide que actualice las configuraciones después del envío inicial, debe enviar otra solicitud de publicación de destino después de realizar las actualizaciones.
+>
+>* Incluso después de que el destino esté activo en el catálogo de Experience Platform, si necesita realizar actualizaciones en las configuraciones, debe enviar una nueva solicitud de publicación de destino para que las actualizaciones se reflejen en las configuraciones.
+
 
 Puede encontrar información detallada sobre cada elemento en las secciones siguientes:
 

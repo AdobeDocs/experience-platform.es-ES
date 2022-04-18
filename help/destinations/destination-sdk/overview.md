@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK es un conjunto de API de configuración que le permiten configurar patrones de integración de destino para que el Experience Platform entregue datos de audiencia y perfil a su extremo, en función de los formatos de autenticación y datos que elija. Las configuraciones se almacenan en Experience Platform y se pueden recuperar mediante API para obtener actualizaciones adicionales.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '703'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ A continuación se describe el proceso para configurar el destino en Experience 
 2. [Solicitud de aprovisionamiento de un simulador para pruebas de Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) y habilite el permiso de creación de destino.
 3. [Cree su integración](./configure-destination-instructions.md) siguiendo la documentación del producto.
 4. [Probar la integración](./test-destination.md) siguiendo la documentación del producto.
-5. [Enviar la integración](./submit-destination.md) para la revisión de Adobe (el tiempo de respuesta estándar es de 5 días hábiles).
+5. [Enviar la integración](./submit-destination.md) para la revisión de Adobe (el tiempo de respuesta estándar es de cinco días hábiles).
 6. Si es un ISV o SI crea un [integración de productos](./overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](./docs-framework/documentation-instructions.md) para crear una página de documentación del producto en el Experience League de destino.
 7. Una vez aprobada por Adobe, la integración se mostrará en la [catálogo de Experience Platform](/help/destinations/catalog/overview.md).
 8. Si desea actualizar la integración, siga el mismo proceso.

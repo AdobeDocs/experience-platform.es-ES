@@ -2,9 +2,9 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/Destinations/publish`.
 title: Operaciones de extremo de la API de Publish Destinations
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 702a5b7154724faa9f5e6847b462e0ae90475571
+source-git-commit: a73a4ea93a432f60d62da5e234d8e357009b2d88
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '748'
 ht-degree: 5%
 
 ---
@@ -23,6 +23,7 @@ Utilice el extremo de la API de destinos de publicación para enviar una solicit
 
 * Como socio Destination SDK, desea que el destino productivo esté disponible en todas las organizaciones de Experience Platform para que lo utilicen todos los clientes Experience Platform;
 * Desea que el destino personalizado esté disponible en su propia organización de Experience Platform, en todos los entornos limitados.
+* Usted hace *cualquier actualización* a sus configuraciones. Las actualizaciones de configuración se reflejan en el destino solo después de enviar una nueva solicitud de publicación, que el equipo del Experience Platform aprueba.
 
 ## Introducción a las operaciones de API de publicación de destino {#get-started}
 
