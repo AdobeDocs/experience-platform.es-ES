@@ -5,9 +5,9 @@ title: Conexión de Aqua Data Studio al servicio de consulta
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar Aqua Data Studio con el servicio de consulta de Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ Para encontrar sus credenciales, inicie sesión en la [!DNL Platform] IU y selec
 ### Configuración del modo SSL
 
 A continuación, seleccione la **[!DNL Driver]** pestaña . En **[!DNL Parameters]**, establezca el valor como `?sslmode=require`
+
+>[!IMPORTANT]
+>
+>Consulte la [[!DNL Query Service] Documentación SSL](./ssl-modes.md) para obtener más información sobre la compatibilidad con SSL para conexiones de terceros con el servicio de consulta de Adobe Experience Platform y cómo conectarse mediante `verify-full` Modo SSL.
 
 ![La ficha Controlador de Aqua Data Studio con el campo Parámetros resaltado.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
