@@ -1,14 +1,14 @@
 ---
-keywords: 'publicidad; criteo; '
+keywords: publicidad; criteo;
 title: Conexión con Criteo
 description: Criteo impulsa la publicidad confiable e impactante para traer experiencias más ricas a todos los consumidores a través del internet abierto. Con el mayor conjunto de datos comerciales del mundo y la mejor IA de su clase, Criteo garantiza que cada punto de contacto a través del recorrido de compras esté personalizado para llegar a los clientes con el anuncio correcto, en el momento adecuado.
-source-git-commit: a3263a322012a48f37cee6137054c7fcf3cdb8a2
+exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
+source-git-commit: 36da42b184450cfaf12b097f982234d628681430
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '763'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) Conexión con Criteo
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por Criteo. Actualmente es un producto beta. Para cualquier consulta o actualización de solicitudes, contacte directamente con Criteo [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>Esta página de documentación fue creada por Criteo. Actualmente es un producto beta y la funcionalidad está sujeta a cambios. Para cualquier consulta o actualización de solicitudes, contacte directamente con Criteo [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo impulsa la publicidad confiable e impactante para traer experiencias más ricas a todos los consumidores a través del internet abierto. Con el mayor conjunto de datos comerciales del mundo y la mejor IA de su clase, Criteo garantiza que cada punto de contacto a través del recorrido de compras esté personalizado para llegar a los clientes con el anuncio correcto, en el momento adecuado.
 
@@ -24,7 +24,11 @@ Criteo impulsa la publicidad confiable e impactante para traer experiencias más
 
 * Debe tener una cuenta de usuario administrador en [Centro de gestión de Criteo](https://marketing.criteo.com).
 * Necesitarás tu ID de Anunciante de Criteo (pregunta a tu contacto de Criteo si no tienes este ID).
-* Criteo solo acepta correos SHA-256 y de texto sin formato (para ser transformados en SHA-256 antes de enviarlos). No envíe ningún PII (información personal de identificación, como los nombres o números de teléfono de las personas).
+
+## Limitaciones {#limitations}
+
+* Actualmente, Criteo no es partidario de eliminar usuarios de las audiencias.
+* Criteo solo acepta [!DNL SHA-256]Correos electrónicos con hash y texto sin formato (para transformarlos en [!DNL SHA-256] antes de enviar). No envíe ningún PII (información personal de identificación, como los nombres o números de teléfono de las personas).
 
 ![Requisitos previos](../../assets/catalog/advertising/criteo/prerequisites.png)
 
