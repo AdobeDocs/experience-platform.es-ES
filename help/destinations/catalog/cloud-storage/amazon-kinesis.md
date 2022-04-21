@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino de kinesis;kinesis
 title: (Beta) Conexión de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real al almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1422'
 ht-degree: 1%
 
 ---
@@ -93,6 +93,16 @@ Para obtener más información sobre cómo controlar el acceso a [!DNL Kinesis] 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 ### Parámetros de conexión {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmentnames"
+>title="Incluir nombres de segmentos"
+>abstract="Alterne si desea que la exportación de datos incluya los nombres de los segmentos que está exportando. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmenttimestamps"
+>title="Incluir marcas de hora de segmentos"
+>abstract="Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
 
 While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 

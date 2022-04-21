@@ -3,9 +3,9 @@ title: Conexión de API HTTP (Beta)
 keywords: flujo continuo;
 description: El destino de la API HTTP en Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 0d58445557490a5539279f55c34183994429c632
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -72,6 +72,36 @@ Para cumplir los requisitos de seguridad y cumplimiento de los clientes, Experie
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 ### Parámetros de conexión {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Tipo de credenciales del cliente"
+>abstract="Select **Formulario de cuerpo codificado** para incluir el ID de cliente y el secreto de cliente en el cuerpo de la solicitud o **Autorización básica** para incluir el ID de cliente y el secreto de cliente en un encabezado de autorización. Vea ejemplos en la documentación."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_headers"
+>title="Encabezados"
+>abstract="Introduzca los encabezados personalizados que desea incluir en las llamadas de destino, siguiendo este formato: `header1:value1,header2:value2,...headerN:valueN`"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_endpoint"
+>title="Extremo HTTP"
+>abstract="Dirección URL del extremo HTTP al que desea enviar los datos de perfil."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmentnames"
+>title="Incluir nombres de segmentos"
+>abstract="Alterne si desea que la exportación de datos incluya los nombres de los segmentos que está exportando. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmenttimestamps"
+>title="Incluir marcas de hora de segmentos"
+>abstract="Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="Parámetros de consulta"
+>abstract="De forma opcional, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Dé este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`."
 
 While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 
