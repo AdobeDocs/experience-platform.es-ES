@@ -3,14 +3,19 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3d8e21f76b23bac3ee88702c19cf6d6a6e25a3ae
+source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1001'
 ht-degree: 3%
 
 ---
 
 # Notas de la versión
+
+## Versión 2.10.0: 22 de abril de 2022
+
+* Utilice un iframe persistente para todas las sincronizaciones de ID y los destinos de segmento.
+* Se ha corregido un problema por el cual las propuestas de métricas combinadas se duplicaban en la variable `sendEvent` resultado.
 
 ## Versión 2.9.0: 10 de marzo de 2022
 
