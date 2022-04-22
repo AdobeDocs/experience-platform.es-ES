@@ -2,18 +2,24 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para el destino en el catálogo de Adobe Experience Platform. // Reemplazar por el párrafo de la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: a45fe9185e0ae74cfba7905a4bb6d18df7efed9e
+source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1250'
 ht-degree: 2%
 
 ---
 
-# YOURDESTINATION {#your-destination}
+# Conexión YourDestination {#your-destination}
 
 *A medida que recorre esta plantilla, reemplace o elimine todos los párrafos en cursiva (a partir de este).*
 
 *Comience por actualizar los metadatos (título y descripción) en la parte superior de la página. Ignore todas las instancias de UICONTROL en esta página. Esta es una etiqueta que ayuda a nuestros procesos de traducción automática a traducir correctamente la página a los múltiples idiomas compatibles. Añadiremos etiquetas a su documentación después de enviarla.*
+
+>[!IMPORTANT]
+>
+>* Rellene todas las secciones de esta plantilla, en el orden en que aparecen delineadas en la plantilla.
+>* Esta plantilla se actualiza con poca frecuencia, en función de los comentarios de los socios. Antes de empezar a crear documentación para su destino, asegúrese de haber descargado la variable [versión más reciente de la plantilla](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+
 
 ## Información general {#overview}
 
@@ -21,23 +27,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Esta página de documentación la creó el *YOURDESTINATION* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en *Inserte un vínculo o una dirección de correo electrónico donde se pueda acceder a las actualizaciones, por ejemplo `support@yourdestination.com`.*
+>Esta página de documentación la creó el *YourDestination* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en *Inserte un vínculo o una dirección de correo electrónico donde se pueda acceder a las actualizaciones, por ejemplo `support@YourDestination.com`.*
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe usar la variable *YOURDESTINATION* destino, aquí hay ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver utilizando este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe usar la variable *YourDestination* destino, aquí hay ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver utilizando este destino.
 
-### Caso de uso número 1
+### Caso de uso número 1 {#use-case-1}
 
 *Para plataformas de mensajería móvil:*
 
 *Una plataforma de ventas y alquiler de casas quiere enviar notificaciones móviles a los dispositivos Android y iOS de los clientes para informarles de que hay 100 anuncios actualizados en el área donde previamente buscaron un alquiler.*
 
-### Caso de uso n.º 2
+### Caso de uso n.º 2 {#use-case-2}
 
 *Para plataformas de redes sociales:*
 
-*Una marca de ropa deportiva quiere llegar a los clientes existentes a través de sus cuentas de medios sociales. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM a Adobe Experience Platform, generar segmentos a partir de sus propios datos sin conexión y enviarlos a YOURDESTINATION para que muestren anuncios en las fuentes de medios sociales de sus clientes.*
+*Una marca de ropa deportiva quiere llegar a los clientes existentes a través de sus cuentas de medios sociales. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM a Adobe Experience Platform, generar segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a YourDestination para mostrar anuncios en las fuentes de medios sociales de sus clientes.*
 
 ## Requisitos previos {#prerequisites}
 
@@ -54,7 +60,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe usar la variable *YOURDEST
 
 *Agregue información en esta sección sobre las identidades admitidas por el destino. Hemos rellenado previamente la tabla con algunos valores estándar. Elimine los valores que no se apliquen al destino y los que no estén precompletados.*
 
-*YOURDESTINATION* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+*YourDestination* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
 | Identidad de Target | Descripción | Consideraciones |
 |---|---|---|
@@ -75,7 +81,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en la variable *YOURDESTINATION* destino. |
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en la variable *YourDestination* destino. |
 | Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
 | Frecuencia de exportación | **[!UICONTROL Lote]** | Los destinos de lote exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
@@ -106,72 +112,11 @@ Para configurar los detalles del destino, rellene los campos obligatorios y sele
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: Su *YOURDESTINATION* ID de cuenta.
-
-
-<!--
-
-*Replace YOURDESTINATION with your destination name and TOBEFILLEDIN with the category that your destination belongs to.*
-
-1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the ***TOBEFILLEDIN*** category. Select ***YOURDESTINATION***, then select **[!UICONTROL Configure]**.
-
-
-    >[!NOTE]
-    >
-    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destinations-workspace.html#catalog) section of the destination workspace documentation.  
-
-    ![Connect to YOURDESTINATION](./assets/yourdestination1.png)
-
-2. In the **Account** step, if you had previously set up a connection to your *YOURDESTINATION* destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to *YOURDESTINATION*. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your *YOURDESTINATION* account.
-
-    >[!NOTE]
-    >
-    >Adobe Experience Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your ***YOURDESTINATION*** account. This ensures that you don't complete the workflow with incorrect credentials.
-
-3. Once your credentials are confirmed and Adobe Experience Cloud is connected to your ***YOURDESTINATION*** account, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
-
-4. In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow and fill your account ID. <br> Also in this step, you can select any marketing action that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html).
-
-    ![Connect to YOURDESTINATION](./assets/yourdestination2.png)
-
-5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow.
-
--->
+* **[!UICONTROL ID de cuenta]**: Su *YourDestination* ID de cuenta.
 
 ## Activar segmentos en este destino {#activate}
 
 Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
-
-<!--
-
-To activate segments to *YOURDESTINATION*, follow the steps below: 
-
-1. In **[!UICONTROL Destinations > Browse]**, select the *YOURDESTINATION* destination where you want to activate your segments.
-
-2. Click the name of the destination. This takes you to the Activate flow.
-    ![activate-flow](./assets/yourdestination3.png)
-    Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
-3. Select **[!UICONTROL Activate]**;
-4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to *YOURDESTINATION*.
-    ![segments-to-destination](./assets/activate-segments-google-customer-match.png)
-5.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the source XDM schema to map to the target schema. Select **[!UICONTROL Add new mapping]** and browse your schema, select identity namespaces and map them to the corresponding target identity.  
-![identity mapping initial screen](./assets/gcm-identity-mapping.png) <br>&nbsp;
-   *Plain text email address as primary identity*: If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Email field in the right column under **[!UICONTROL Target Identities]**, as shown below. Set up a mapping between any other attributes you plan to use.
-   ![identity mapping step](./assets/ssd-template-identity.png) <br>&nbsp;
-6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
-7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
->[!IMPORTANT]
->
->In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/auto-enforcement.html#enforcement) in the data governance documentation section.
- 
-![confirm-selection](./assets/data-policy-violation.png)
-
-If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
-![confirm-selection](./assets/gcm-review.png)
-
--->
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
