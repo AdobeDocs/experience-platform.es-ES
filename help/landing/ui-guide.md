@@ -5,7 +5,7 @@ title: Información general sobre la IU de Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 8236806efae6a4f570c3dd2ef78e80184e189b84
+source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 2%
@@ -164,7 +164,7 @@ Offer Decisioning es un servicio de aplicaciones integrado en Adobe Experience P
 
 ### [!UICONTROL Administración]
 
-La interfaz de usuario (IU) de Platform proporciona un tablero a través del cual puede ver información importante sobre el uso de licencias de su organización, tal como se captura durante una instantánea diaria. Acceda a este tablero seleccionando **[!UICONTROL Uso de licencias]** en la navegación. Para obtener más información sobre el panel de uso de licencias, visite [guía del panel de uso de licencias](license-usage-dashboard.md).
+La interfaz de usuario (IU) de Platform proporciona un tablero a través del cual puede ver información importante sobre el uso de licencias de su organización, tal como se captura durante una instantánea diaria. Acceda a este tablero seleccionando **[!UICONTROL Uso de licencias]** en la navegación. Para obtener más información sobre el panel de uso de licencias, visite [guía del panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >

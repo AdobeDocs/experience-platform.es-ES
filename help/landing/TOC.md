@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
-source-git-commit: 520405601dccc649b983da2b8f999f3862dd140b
+source-git-commit: ba2df1ca905bfe2d0f8868ef658b369b28eb9af3
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 25%
+source-wordcount: '245'
+ht-degree: 24%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 25%
    * [Compatibilidad con exploradores e idiomas](browser-language-support.md)
 * API de Experience Platform {#platform-apis}
    * [Introducción a las API de Platform](api-guide.md)
-   * [Autenticar y acceder a las API de Platform](api-authentication.md)
+   * [Autenticación y acceso a las API de Platform](api-authentication.md)
    * [Aspectos básicos de la API](api-fundamentals.md)
    * [Uso de Postman con API de plataforma](postman.md)
    * [Documentos de referencia de API](https://www.adobe.com/go/platform-api-reference-en)
@@ -58,7 +58,9 @@ ht-degree: 25%
       * [Integración del SDK web de Platform para procesar datos de consentimiento y preferencias](./governance-privacy-security/consent/sdk.md)
    * Registros de auditoría {#audit-logs}
       * [Información general](./governance-privacy-security/audit-logs/overview.md)
-* [Panel de uso de licencias](license-usage-dashboard.md)
+* Uso de licencias y barreras {#license}
+   * [Prácticas recomendadas para las licencias de gestión de datos](./license-usage-and-guardrails/data-management-best-practices.md)
+   * [Panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Migración de lago de datos Gen2](adls2-gen2-migration.md)
 * [Glosario](glossary.md)
