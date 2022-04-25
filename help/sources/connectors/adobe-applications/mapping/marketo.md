@@ -5,16 +5,20 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 9%
+source-wordcount: '608'
+ht-degree: 8%
 
 ---
 
 # [!DNL Marketo Engage] asignaciones de campos
 
 Las tablas siguientes contienen las asignaciones entre los campos de los nueve [!DNL Marketo] conjuntos de datos de y sus campos correspondientes del Modelo de datos de experiencia (XDM).
+
+>[!TIP]
+>
+>Todo [!DNL Marketo] conjuntos de datos excepto `Activities` ahora compatibilidad con `isDeleted`. Sus flujos de datos existentes incluirán automáticamente `isDeleted`, pero solo ingerirá el indicador para los datos recién introducidos. Si desea aplicar el indicador a todos los datos históricos, debe detener los flujos de datos existentes y volver a crearlos con la nueva asignación. Tenga en cuenta que si elimina `isDeleted`, ya no tendrá acceso a la funcionalidad . Es fundamental que la asignación se mantenga después de que se rellene automáticamente.
 
 ## Actividades {#activities}
 
@@ -118,6 +122,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -148,6 +153,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,6 +183,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -192,6 +199,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -206,6 +214,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relación |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relación |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -235,6 +244,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `name` | `accountName` |
 | `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,6 +278,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -286,6 +297,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -338,6 +350,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
 | `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Se trata de un campo calculado. |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
