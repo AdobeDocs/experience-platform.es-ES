@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite eliminar un conjunto de datos o lote del almacén de perfiles para eliminar los datos del perfil del cliente en tiempo real que ya no sean necesarios o que se hayan agregado por error. Esto requiere el uso de la API de perfil para crear un trabajo del sistema de perfil o eliminar una solicitud.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: ba8b62c67cdd6fa011166cc851ffc1c970108835
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 3%
@@ -14,19 +14,19 @@ ht-degree: 3%
 
 # Extremo de trabajos del sistema de perfiles (solicitudes de eliminación)
 
-Adobe Experience Platform le permite introducir datos de varias fuentes y crear perfiles sólidos para clientes individuales. Los datos introducidos en [!DNL Platform] se almacenan en [!DNL Data Lake] y, si los conjuntos de datos se han habilitado para Perfil, también se almacenan en el almacén de datos [!DNL Real-time Customer Profile]. En ocasiones puede ser necesario eliminar un conjunto de datos o lote del almacén de perfiles para eliminar datos que ya no son necesarios o que se agregaron por error. Esto requiere el uso de la API [!DNL Real-time Customer Profile] para crear un trabajo del sistema [!DNL Profile], o `delete request`, que también se puede modificar, supervisar o eliminar si es necesario.
+Adobe Experience Platform le permite introducir datos de varias fuentes y crear perfiles sólidos para clientes individuales. Datos introducidos en [!DNL Platform] se almacena en la variable [!DNL Data Lake], y si los conjuntos de datos se han habilitado para Perfil, esos datos se almacenan en la variable [!DNL Real-time Customer Profile] almacén de datos también. En ocasiones puede ser necesario eliminar un conjunto de datos o lote del almacén de perfiles para eliminar datos que ya no son necesarios o que se agregaron por error. Para ello, es necesario usar la variable [!DNL Real-time Customer Profile] API para crear un [!DNL Profile] trabajo del sistema, o `delete request`, que también se pueden modificar, supervisar o eliminar si es necesario.
 
 >[!NOTE]
 >
->Si está intentando eliminar conjuntos de datos o lotes del [!DNL Data Lake], visite la [información general del Servicio de catálogo](../../catalog/home.md) para obtener más información.
+>Si está intentando eliminar conjuntos de datos o lotes del [!DNL Data Lake], visite el [Información general del servicio de catálogo](../../catalog/home.md) para obtener más información.
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Ver solicitudes de eliminación
 
-Una solicitud de eliminación es un proceso asincrónico de larga duración, lo que significa que su organización puede estar ejecutando varias solicitudes de eliminación a la vez. Para ver todas las solicitudes de eliminación que su organización está ejecutando actualmente, puede realizar una solicitud de GET al extremo `/system/jobs` .
+Una solicitud de eliminación es un proceso asincrónico de larga duración, lo que significa que su organización puede estar ejecutando varias solicitudes de eliminación a la vez. Para ver todas las solicitudes de eliminación que su organización está ejecutando actualmente, puede realizar una solicitud de GET al `/system/jobs` punto final.
 
 También puede utilizar parámetros de consulta opcionales para filtrar la lista de solicitudes de eliminación devueltas en la respuesta. Para utilizar varios parámetros, separe cada parámetro con un símbolo &amp; (`&`).
 
@@ -42,7 +42,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 | `start` | Desplazar la página de resultados devueltos, según la hora de creación de la solicitud. Ejemplo: `start=4` |
 | `limit` | Limite el número de resultados devueltos. Ejemplo: `limit=10` |
 | `page` | Devolver una página específica de resultados, según la hora de creación de la solicitud. Ejemplo: `page=2` |
-| `sort` | Ordene los resultados por un campo específico en orden ascendente (`asc`) o descendente (`desc`). El parámetro de ordenación no funciona cuando se devuelven varias páginas de resultados. Ejemplo: `sort=batchId:asc` |
+| `sort` | Ordenar los resultados por un campo específico en orden ascendente (`asc`) o descendente (`desc`). El parámetro de ordenación no funciona cuando se devuelven varias páginas de resultados. Ejemplo: `sort=batchId:asc` |
 
 **Solicitud**
 
@@ -93,14 +93,14 @@ La respuesta incluye una matriz &quot;secundario&quot; con un objeto para cada s
 | Propiedad | Descripción |
 |---|---|
 | `_page.count` | Número total de solicitudes. Esta respuesta se ha truncado para el espacio. |
-| `_page.next` | Si existe una página adicional de resultados, vea la siguiente página de resultados reemplazando el valor ID en una [solicitud de consulta](#view-a-specific-delete-request) por el valor `"next"` proporcionado. |
+| `_page.next` | Si existe una página adicional de resultados, vea la siguiente página de resultados reemplazando el valor de ID en un [solicitud de consulta](#view-a-specific-delete-request) con la variable `"next"` valor proporcionado. |
 | `jobType` | Tipo de trabajo que se está creando. En este caso, siempre devolverá `"DELETE"`. |
 | `status` | Estado de la solicitud de eliminación. Los valores posibles son `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | Un objeto que incluye el número de registros que se han procesado (`"recordsProcessed"`) y el tiempo en segundos que se ha procesado la solicitud o el tiempo que tardó en completarse (`"timeTakenInSec"`). |
+| `metrics` | Un objeto que incluye el número de registros que se han procesado (`"recordsProcessed"`) y el tiempo en segundos que la solicitud se ha estado procesando o el tiempo que tardó en completarse (`"timeTakenInSec"`). |
 
 ## Crear una solicitud de eliminación {#create-a-delete-request}
 
-El inicio de una nueva solicitud de eliminación se realiza mediante una solicitud de POST al extremo `/systems/jobs` , donde el ID del conjunto de datos o lote que se va a eliminar se proporciona en el cuerpo de la solicitud.
+El inicio de una nueva solicitud de eliminación se realiza mediante una solicitud de POST al `/systems/jobs` , donde el ID del conjunto de datos o lote que se va a eliminar se proporciona en el cuerpo de la solicitud.
 
 ### Eliminación de un conjunto de datos
 
@@ -133,7 +133,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la solicitud de eliminación recién creada, incluido un ID único, generado por el sistema y de solo lectura para la solicitud. Se puede utilizar para buscar la solicitud y comprobar su estado. El `status` de la solicitud en el momento de la creación es `"NEW"` hasta que comienza el procesamiento. El `dataSetId` en la respuesta debe coincidir con el `dataSetId` enviado en la solicitud.
+Una respuesta correcta devuelve los detalles de la solicitud de eliminación recién creada, incluido un ID único, generado por el sistema y de solo lectura para la solicitud. Se puede utilizar para buscar la solicitud y comprobar su estado. La variable `status` para la solicitud en el momento de la creación es `"NEW"` hasta que empiece a procesarse. La variable `dataSetId` en la respuesta debe coincidir con la variable `dataSetId` enviado en la solicitud.
 
 ```json
 {
@@ -160,7 +160,7 @@ Para eliminar un lote, el ID de lote debe incluirse en el cuerpo de la solicitud
 >
 > El motivo por el que no se pueden eliminar lotes de conjuntos de datos basados en esquemas de registros es porque los lotes de conjuntos de datos de tipo registro sobrescriben los registros anteriores y, por lo tanto, no se pueden &quot;deshacer&quot; ni eliminar. La única manera de eliminar el impacto de los lotes erróneos para conjuntos de datos basados en esquemas de registros es volver a introducir el lote con los datos correctos para sobrescribir los registros incorrectos.
 
-Para obtener más información sobre el comportamiento de registros y series temporales, consulte la sección [sobre los comportamientos de datos XDM](../../xdm/home.md#data-behaviors) en la [!DNL XDM System] información general.
+Para obtener más información sobre el comportamiento de registros y series temporales, consulte la [sección sobre los comportamientos de datos XDM](../../xdm/home.md#data-behaviors) en el [!DNL XDM System] información general.
 
 **Formato de API**
 
@@ -189,7 +189,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la solicitud de eliminación recién creada, incluido un ID único, generado por el sistema y de solo lectura para la solicitud. Se puede utilizar para buscar la solicitud y comprobar su estado. El `"status"` de la solicitud en el momento de la creación es `"NEW"` hasta que comienza el procesamiento. El valor `"batchId"` de la respuesta debe coincidir con el valor `"batchId"` enviado en la solicitud.
+Una respuesta correcta devuelve los detalles de la solicitud de eliminación recién creada, incluido un ID único, generado por el sistema y de solo lectura para la solicitud. Se puede utilizar para buscar la solicitud y comprobar su estado. La variable `"status"` para la solicitud en el momento de la creación es `"NEW"` hasta que empiece a procesarse. La variable `"batchId"` en la respuesta debe coincidir con la variable `"batchId"` valor enviado en la solicitud.
 
 ```json
 {
@@ -226,7 +226,7 @@ Si intenta iniciar una solicitud de eliminación para un lote de conjuntos de da
 
 ## Ver una solicitud de eliminación específica {#view-a-specific-delete-request}
 
-Para ver una solicitud de eliminación específica, incluidos detalles como su estado, puede realizar una solicitud de búsqueda (GET) al extremo `/system/jobs` e incluir el ID de la solicitud de eliminación en la ruta.
+Para ver una solicitud de eliminación específica, incluidos detalles como su estado, puede realizar una solicitud de búsqueda (GET) al `/system/jobs` e incluya el ID de la solicitud de eliminación en la ruta.
 
 **Formato de API**
 
@@ -241,7 +241,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 **Solicitud**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -251,7 +251,7 @@ curl -X POST \
 
 **Respuesta**
 
-La respuesta proporciona los detalles de la solicitud de eliminación, incluido su estado actualizado. El ID de la solicitud de eliminación en la respuesta (el valor `"id"`) debe coincidir con el ID enviado en la ruta de solicitud.
+La respuesta proporciona los detalles de la solicitud de eliminación, incluido su estado actualizado. El ID de la solicitud de eliminación en la respuesta (la variable `"id"` ) debe coincidir con el ID enviado en la ruta de solicitud.
 
 ```json
 {
@@ -268,15 +268,15 @@ La respuesta proporciona los detalles de la solicitud de eliminación, incluido 
 
 | Propiedades | Descripción |
 |---|---|
-| `jobType` | El tipo de trabajo que se está creando, en este caso siempre devolverá `"DELETE"`. |
+| `jobType` | El tipo de trabajo que se está creando, en este caso siempre se devuelve `"DELETE"`. |
 | `status` | Estado de la solicitud de eliminación. Valores posibles: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | Matriz que incluye el número de registros que se han procesado (`"recordsProcessed"`) y el tiempo en segundos que se ha procesado la solicitud o el tiempo que tardó en completarse (`"timeTakenInSec"`). |
+| `metrics` | Una matriz que incluye el número de registros que se han procesado (`"recordsProcessed"`) y el tiempo en segundos que la solicitud se ha estado procesando o el tiempo que tardó en completarse (`"timeTakenInSec"`). |
 
-Una vez que el estado de la solicitud de eliminación es `"COMPLETED"`, puede confirmar que los datos se han eliminado al intentar acceder a los datos eliminados mediante la API de acceso a datos. Para obtener instrucciones sobre cómo utilizar la API de acceso a datos para acceder a conjuntos de datos y lotes, consulte la [Documentación de acceso a datos](../../data-access/home.md).
+Una vez que el estado de la solicitud de eliminación sea `"COMPLETED"` puede confirmar que los datos se han eliminado al intentar acceder a los datos eliminados mediante la API de acceso a datos. Para obtener instrucciones sobre cómo utilizar la API de acceso a datos para acceder a conjuntos de datos y lotes, consulte la [Documentación de acceso a datos](../../data-access/home.md).
 
 ## Eliminar una solicitud de eliminación
 
-[!DNL Experience Platform] permite eliminar una solicitud anterior, lo que puede resultar útil por varios motivos, incluido si el trabajo de eliminación no se completó o se quedó atascado en la fase de procesamiento. Para eliminar una solicitud de eliminación, puede realizar una solicitud de DELETE al extremo `/system/jobs` e incluir el ID de la solicitud de eliminación que desea eliminar en la ruta de solicitud.
+[!DNL Experience Platform] permite eliminar una solicitud anterior, lo que puede resultar útil por varios motivos, incluido si el trabajo de eliminación no se completó o se quedó atascado en la fase de procesamiento. Para eliminar una solicitud de eliminación, puede realizar una solicitud de DELETE al `/system/jobs` e incluya el ID de la solicitud de eliminación que desea eliminar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -305,4 +305,4 @@ Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cue
 
 ## Pasos siguientes
 
-Ahora que conoce los pasos involucrados en la eliminación de conjuntos de datos y lotes del [!DNL Profile Store] dentro de [!DNL Experience Platform], puede eliminar de forma segura los datos que se han agregado erróneamente o que su organización ya no necesita. Tenga en cuenta que una solicitud de eliminación no se puede deshacer, por lo que solo debe eliminar los datos que esté seguro de que no necesita ahora y que no los necesitará en el futuro.
+Ahora que conoce los pasos involucrados en la eliminación de conjuntos de datos y lotes del [!DNL Profile Store] en [!DNL Experience Platform], puede eliminar de forma segura los datos que se hayan añadido por error o que su organización ya no necesite. Tenga en cuenta que una solicitud de eliminación no se puede deshacer, por lo que solo debe eliminar los datos que esté seguro de que no necesita ahora y que no los necesitará en el futuro.
