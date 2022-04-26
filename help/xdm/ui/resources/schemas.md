@@ -5,9 +5,9 @@ title: Crear y editar esquemas en la interfaz de usuario
 description: Obtenga información sobre los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario del Experience Platform.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: e0148480ce8d4179771f1c10fb6b921baf6a24d1
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '2844'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Para editar un esquema existente, seleccione la opción **[!UICONTROL Examinar]*
 >
 >Puede utilizar las capacidades de búsqueda y filtrado del espacio de trabajo para ayudar a encontrar el esquema más fácil. Consulte la guía de [exploración de recursos XDM](../explore.md) para obtener más información.
 
-Una vez que seleccione un esquema, la variable [!DNL Schema Editor] aparece con la estructura del esquema en el lienzo. Ahora puede [agregar grupos de campos](#add-field-groups) al esquema, [editar nombres para mostrar de campos](#display-names)o [editar grupos de campos personalizados existentes](./field-groups.md#edit) si el esquema emplea alguno.
+Una vez que seleccione un esquema, la variable [!DNL Schema Editor] aparece con la estructura del esquema en el lienzo. Ahora puede [agregar grupos de campos](#add-field-groups) al esquema (o [añadir campos individuales](#add-individual-fields) de esos grupos), [editar nombres para mostrar de campos](#display-names)o [editar grupos de campos personalizados existentes](./field-groups.md#edit) si el esquema emplea alguno.
 
 ## Añadir grupos de campos a un esquema {#add-field-groups}
 
@@ -68,7 +68,7 @@ Aparece un cuadro de diálogo que muestra una lista de los grupos de campos que 
 
 ![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-Si conoce la actividad general o el área comercial de los campos que desea agregar, seleccione una o varias categorías verticales del sector en el carril izquierdo para filtrar la lista mostrada de grupos de campos.
+Si conoce la actividad general o el área comercial de los campos que desea añadir, seleccione una o varias categorías del sector en el carril izquierdo para filtrar la lista mostrada de grupos de campos.
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
@@ -95,6 +95,130 @@ Una vez que haya elegido los grupos de campos, seleccione **[!UICONTROL Agregar 
 La variable [!DNL Schema Editor] vuelve a aparecer con los campos proporcionados por el grupo de campos representados en el lienzo.
 
 ![](../../images/ui/resources/schemas/field-groups-added.png)
+
+Después de agregar un grupo de campos a un esquema, se puede [quitar campos existentes](#remove-fields) o [agregar nuevos campos personalizados](#add-fields) a esos grupos, según sus necesidades.
+
+### Eliminación de campos agregados de grupos de campos {#remove-fields}
+
+Después de agregar un grupo de campos a un esquema, puede quitar los campos que no necesite.
+
+>[!NOTE]
+>
+>La eliminación de campos de un grupo de campos solo afecta al esquema en el que se está trabajando y no afecta al propio grupo de campos. Si elimina los campos de un esquema, dichos campos seguirán estando disponibles en todos los demás esquemas que empleen el mismo grupo de campos.
+
+En el ejemplo siguiente, el grupo de campos estándar **[!UICONTROL Detalles demográficos]** se ha agregado a un esquema. Quitar un único campo como `taxId`, seleccione el campo en el lienzo y, a continuación, seleccione **[!UICONTROL Eliminar]** en el carril derecho.
+
+![Quitar un solo campo](../../images/ui/resources/schemas/remove-single-field.png)
+
+Si desea quitar varios campos, puede administrar el grupo de campos como un todo. Seleccione un campo que pertenezca al grupo en el lienzo y, a continuación, seleccione **[!UICONTROL Administrar campos relacionados]** en el carril derecho.
+
+![Administrar campos relacionados](../../images/ui/resources/schemas/manage-related-fields.png)
+
+Aparece un cuadro de diálogo que muestra la estructura del grupo de campos en cuestión. Desde aquí puede utilizar las casillas de verificación proporcionadas para seleccionar o anular la selección de los campos que necesite. Cuando esté satisfecho, seleccione **[!UICONTROL Confirmar]**.
+
+![Seleccionar campos del grupo de campos](../../images/ui/resources/schemas/select-fields.png)
+
+El lienzo vuelve a aparecer con solo los campos seleccionados presentes en la estructura del esquema.
+
+![Campos añadidos](../../images/ui/resources/schemas/fields-added.png)
+
+### Añadir campos personalizados a grupos de campos {#add-fields}
+
+Después de agregar un grupo de campos a un esquema, puede definir campos adicionales para ese grupo. Sin embargo, cualquier campo añadido a un grupo de campos en un esquema también aparecerá en todos los demás esquemas que empleen ese mismo grupo de campos.
+
+Además, si se agrega un campo personalizado a un grupo de campos estándar, ese grupo de campos se convierte en un grupo de campos personalizado y el grupo de campos estándar original ya no estará disponible.
+
+Si desea agregar un campo personalizado a un grupo de campos estándar, consulte la [sección inferior](#custom-fields-for-standard-groups) para instrucciones específicas. Si va a añadir campos a un grupo de campos personalizado, consulte la sección de [editar grupos de campos personalizados](./field-groups.md) en la guía de interfaz de usuario de grupos de campos.
+
+Si no desea modificar ningún grupo de campos existente, puede [crear un nuevo grupo de campos personalizados](./field-groups.md#create) para definir campos adicionales en su lugar.
+
+## Añadir campos individuales a un esquema {#add-individual-fields}
+
+El Editor de esquemas le permite añadir campos individuales directamente a un esquema si desea evitar agregar un grupo de campos completo para un caso de uso específico. Puede [añadir campos individuales de grupos de campos estándar](#add-standard-fields) o [añadir sus propios campos personalizados](#add-custom-fields) en su lugar.
+
+>[!IMPORTANT]
+>
+>Aunque funcionalmente el Editor de esquemas permite añadir campos individuales directamente a un esquema, esto no cambia el hecho de que todos los campos de un esquema XDM deben proporcionarlos su clase o un grupo de campos compatible con esa clase. Como se explica en las secciones siguientes, todos los campos individuales siguen asociados a un grupo de campos como paso clave cuando se añaden a un esquema.
+
+### Añadir campos estándar {#add-standard-fields}
+
+Puede agregar campos de grupos de campos estándar directamente a un esquema sin necesidad de conocer previamente su grupo de campos correspondiente. Para añadir un campo estándar a un esquema, seleccione el signo más (**+**) junto al nombre del esquema en el lienzo. Un **[!UICONTROL Campo sin título]** el marcador de posición aparece en la estructura del esquema y el carril correcto se actualiza para mostrar los controles que deben configurarse.
+
+![Marcador de posición de campo](../../images/ui/resources/schemas/root-custom-field.png)
+
+En **[!UICONTROL Nombre del campo]**, empiece a escribir el nombre del campo que desee añadir. El sistema busca automáticamente campos estándar que coincidan con la consulta y los enumera en **[!UICONTROL Campos estándar recomendados]**, incluidos los grupos de campos a los que pertenecen.
+
+![Campos estándar recomendados](../../images/ui/resources/schemas/standard-field-search.png)
+
+Aunque algunos campos estándar comparten el mismo nombre, su estructura puede variar según el grupo de campos del que provengan. Si un campo estándar está anidado dentro de un objeto principal en la estructura del grupo de campos, el campo principal también se incluye en el esquema si se agrega el campo secundario.
+
+Seleccione el icono de vista previa (![Icono de vista previa](../../images/ui/resources/schemas/preview-icon.png)) junto a un campo estándar para ver la estructura de su grupo de campos y comprender mejor cómo se puede anidar. Para añadir el campo estándar al esquema, seleccione el icono de signo más (![Icono Más](../../images/ui/resources/schemas/add-icon.png)).
+
+![Añadir campo estándar](../../images/ui/resources/schemas/add-standard-field.png)
+
+El lienzo se actualiza para mostrar el campo estándar añadido al esquema, incluidos los campos principales anidados dentro de la estructura del grupo de campos. El nombre del grupo de campos también se enumera en **[!UICONTROL Grupos de campo]** en el carril izquierdo. Si desea agregar más campos del mismo grupo de campos, seleccione **[!UICONTROL Administrar campos relacionados]** en el carril derecho.
+
+![Campo estándar añadido](../../images/ui/resources/schemas/standard-field-added.png)
+
+### Añadir campos personalizados {#add-custom-fields}
+
+Al igual que el flujo de trabajo para los campos estándar, también puede añadir sus propios campos personalizados directamente a un esquema.
+
+Para añadir campos al nivel raíz de un esquema, seleccione el signo más (**+**) junto al nombre del esquema en el lienzo. Un **[!UICONTROL Campo sin título]** el marcador de posición aparece en la estructura del esquema y el carril correcto se actualiza para mostrar los controles que deben configurarse.
+
+![Campo personalizado raíz](../../images/ui/resources/schemas/root-custom-field.png)
+
+Comience a escribir el nombre del campo que desee añadir y el sistema empezará automáticamente a buscar campos estándar coincidentes. Para crear un nuevo campo personalizado, seleccione la opción superior anexada con **([!UICONTROL Campo nuevo])**.
+
+![Campo nuevo](../../images/ui/resources/schemas/custom-field-search.png)
+
+A partir de aquí, proporcione un nombre para mostrar y un tipo de datos para el campo. En **[!UICONTROL Asignar grupo de campos]**, debe seleccionar un grupo de campos para el nuevo campo al que desea asociar. Comience a escribir el nombre del grupo de campos y si ya lo ha hecho [grupos de campos personalizados creados](./field-groups.md#create) aparecerán en la lista desplegable. También puede escribir un nombre único en el campo para crear un nuevo grupo de campos.
+
+![Seleccionar grupo de campos](../../images/ui/resources/schemas/select-field-group.png)
+
+>[!WARNING]
+>
+>Si selecciona un grupo de campos personalizado existente, cualquier otro esquema que emplee ese grupo de campos también heredará el campo recién agregado después de guardar los cambios. Por este motivo, seleccione únicamente un grupo de campos existente si desea este tipo de propagación. De lo contrario, debe optar por crear un nuevo grupo de campos personalizados.
+
+Cuando termine, seleccione **[!UICONTROL Aplicar]**.
+
+![Aplicar campo](../../images/ui/resources/schemas/apply-field.png)
+
+El nuevo campo se agrega al lienzo y tiene un área de nombres debajo de su [ID de inquilino](../../api/getting-started.md#know-your-tenant_id) para evitar conflictos con campos XDM estándar. El grupo de campos al que ha asociado el nuevo campo también aparece en **[!UICONTROL Grupos de campo]** en el carril izquierdo.
+
+![ID del inquilino](../../images/ui/resources/schemas/tenantId.png)
+
+>[!NOTE]
+>
+>El resto de los campos proporcionados por el grupo de campos personalizados seleccionado se eliminan del esquema de forma predeterminada. Si desea añadir algunos de estos campos al esquema, seleccione un campo perteneciente al grupo y, a continuación, seleccione **[!UICONTROL Administrar campos relacionados]** en el carril derecho.
+
+#### Añadir campos personalizados a la estructura de los grupos de campos estándar {#custom-fields-for-standard-groups}
+
+Si el esquema en el que está trabajando tiene un campo de tipo objeto proporcionado por un grupo de campos estándar, puede agregar sus propios campos personalizados a ese objeto estándar.
+
+>[!WARNING]
+>
+>Los campos añadidos a un grupo de campos de un esquema también aparecerán en todos los demás esquemas que empleen ese mismo grupo de campos. Además, si se agrega un campo personalizado a un grupo de campos estándar, ese grupo de campos se convierte en un grupo de campos personalizado y el grupo de campos estándar original ya no estará disponible.
+>
+>Si ha participado en la versión beta de esta función, recibirá un cuadro de diálogo en el que se le informarán de los grupos de campos estándar que haya personalizado previamente. Una vez seleccionada **[!UICONTROL Conocimiento]**, los recursos enumerados se convierten en grupos de campos personalizados.
+>
+>![Cuadro de diálogo de confirmación para convertir grupos de campos estándar](../../images/ui/resources/schemas/beta-extension-confirmation.png)
+
+Para empezar, seleccione el signo más (**+**) junto a la raíz del objeto proporcionado por el grupo de campos estándar.
+
+![Añadir campo al objeto estándar](../../images/ui/resources/schemas/add-field-to-standard-object.png)
+
+Aparece un mensaje de advertencia que le solicita que confirme si desea convertir el grupo de campos estándar. Select **[!UICONTROL Continuar creando un grupo de campos]** para continuar.
+
+![Confirmar conversión de grupo de campos](../../images/ui/resources/schemas/confirm-field-group-conversion.png)
+
+El lienzo vuelve a aparecer con un marcador de posición sin título para el nuevo campo. Tenga en cuenta que el nombre del grupo de campos estándar se ha añadido con &quot;([!UICONTROL Extendido])&quot; para indicar que se ha modificado de la versión original. Desde aquí, utilice los controles del carril derecho para definir las propiedades del campo.
+
+![Campo añadido al objeto estándar](../../images/ui/resources/schemas/standard-field-group-converted.png)
+
+Después de aplicar los cambios, el nuevo campo aparece debajo del espacio de nombres del ID del inquilino dentro del objeto estándar. Esta área de nombres anidada evita conflictos de nombre de campo dentro del propio grupo de campos para evitar que se rompan los cambios en otros esquemas que utilizan el mismo grupo de campos.
+
+![Campo añadido al objeto estándar](../../images/ui/resources/schemas/added-to-standard-object.png)
 
 ## Activación de un esquema para el perfil de cliente en tiempo real {#profile}
 
