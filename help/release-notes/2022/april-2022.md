@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, abril de 2022
 description: Notas de la versión de abril de 2022 para Adobe Experience Platform.
-source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
+source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 5%
+source-wordcount: '1999'
+ht-degree: 4%
 
 ---
 
@@ -14,11 +14,37 @@ ht-degree: 5%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Flujos de datos](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Real-time Customer Data Platform edición B2B](#B2B)
 - [Fuentes](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Platform proporciona varios tableros a través de los cuales puede ver información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias.
+
+Los tableros proporcionan opciones de informes preconfiguradas para los datos de su organización y están integrados directamente en el flujo de trabajo de los especialistas en marketing dentro de Platform. Estos tableros están disponibles sin necesidad de soporte de TI adicional o sin el tiempo y esfuerzo que de otro modo se necesitarían para exportar y procesar datos con diseño e implementación adicionales de almacenamiento de datos.
+
+Las siguientes utilidades están disponibles a través de la biblioteca Widget en sus respectivos paneles. Consulte la documentación para obtener más información sobre [cómo añadir utilidades a través de la biblioteca de utilidades](../../dashboards/customize/widget-library.md).
+
+| Función | Panel | Descripción |
+| --------------------------------------------------------- | ------------- | ----------- |
+| [!UICONTROL Tendencia añadida de perfiles] | Perfiles | Esta utilidad utiliza un gráfico de líneas para ilustrar el número total de perfiles combinados que se han agregado diariamente al Almacenamiento de perfiles durante los últimos 30 días, 90 días o 12 meses. |
+| [!UICONTROL Audiencias asignadas al estado de destino] | Perfiles | Esta utilidad muestra el número total de audiencias asignadas y no asignadas en una única métrica y utiliza un gráfico de anillos para ilustrar la diferencia proporcional entre sus totales. |
+| [!UICONTROL Tamaño de las audiencias] | Perfiles | Esta utilidad proporciona una tabla de dos columnas que enumera hasta 20 segmentos y el número total de audiencias contenidas en cada segmento. La lista depende de la política de combinación aplicada y ordenada de mayor a menor según el número total de audiencias. |
+| [!UICONTROL Tendencia del recuento de perfiles] | Perfiles | Esta utilidad utiliza un gráfico de líneas para ilustrar la tendencia del número total de perfiles contenidos en el sistema a lo largo del tiempo. Los datos se pueden visualizar en períodos de 30 días, 90 días y 12 meses. |
+| [!UICONTROL Perfiles de identidad únicos por identidad] | Perfiles | Esta utilidad utiliza un gráfico de barras para ilustrar el número total de perfiles identificados con un único identificador. La utilidad admite hasta cinco de las identidades más comunes. |
+| [!UICONTROL Estado del destino] | Destinos | Este widget muestra el número total de destinos habilitados como una única métrica y utiliza un gráfico de anillos para ilustrar la diferencia proporcional entre los destinos habilitados y deshabilitados. |
+| [!UICONTROL Destinos activos por plataforma de destino] | Destinos | Esta utilidad utiliza una tabla de dos columnas para mostrar una lista de plataformas de destino activas y el número total de destinos activos para cada plataforma de destino. |
+| [!UICONTROL Audiencias activadas en todos los destinos] | Destinos | Esta utilidad proporciona el número total de audiencias activadas en todos los destinos en una única métrica. |
+| [!UICONTROL Orden de activación de la audiencia] | Segmentos | Este widget proporciona una tabla de tres columnas que indica el nombre de destino, la plataforma y la fecha de activación de la audiencia. |
+| [!UICONTROL Tendencia del tamaño de la audiencia] | Segmentos | Esta utilidad proporciona una ilustración de gráfico de líneas para el número total de perfiles que cumplen los criterios de cualquier definición de segmento durante 30 días, 90 días y 12 meses. |
+| [!UICONTROL Tendencia del cambio de tamaño de la audiencia] | Segmentos | Esta utilidad proporciona un gráfico de líneas con la diferencia en la cantidad total de perfiles que cumplen los requisitos para un segmento determinado entre las instantáneas diarias más recientes. El período de análisis de tendencias se puede visualizar a lo largo de 30 días, 90 días y 12 meses. |
+| [!UICONTROL Tendencia del tamaño de la audiencia por identidad] | Segmentos | Esta utilidad ilustra la tendencia del tamaño de la audiencia de un segmento concreto en función de un tipo de identidad seleccionado. El período de análisis de tendencias se puede visualizar a lo largo de 30 días, 90 días y 12 meses. |
+
+Consulte la documentación para obtener más información sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)y [[!DNL Segments]](../../dashboards/guides/segments.md) tableros.
 
 ## Flujos de datos {#dataflows}
 
