@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
+source-git-commit: 73bb1d21e70644ffef50b08f22048d0937a6a729
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '753'
 ht-degree: 8%
 
 ---
@@ -188,6 +188,7 @@ ht-degree: 8%
       * [(Beta) Usar el Destination SDK para configurar un destino basado en archivos](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Enviar para revisión un destino creado en Destination SDK](./destination-sdk/submit-destination.md)
    * Referencia {#reference}
+      * [Política de limitación de velocidad y reintentos para destinos de flujo continuo](./destination-sdk/rate-limiting-retry-policy.md)
       * [Funciones de transformación admitidas](./destination-sdk/supported-functions.md)
    * Documentar el destino {#document-destination}
       * [Documentar el destino en Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
