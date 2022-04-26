@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, abril de 2022
 description: Notas de la versión de abril de 2022 para Adobe Experience Platform.
-source-git-commit: 4bbf7642a456f36ea0fe7fc1c8d68ad37351ff4c
+source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '1045'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,22 @@ ht-degree: 4%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [Flujos de datos](#dataflows)
 - [Modelo de datos de experiencia (XDM)](#xdm)
+
+## Flujos de datos {#dataflows}
+
+En Platform, los datos se incorporan de muchas fuentes diferentes, se analizan dentro del sistema y se activan en una amplia variedad de destinos. Platform facilita el proceso de seguimiento de este flujo de datos potencialmente no lineal al proporcionar transparencia con flujos de datos.
+
+Los flujos de datos son una representación de trabajos que mueven datos a través de Platform. Estos flujos de datos se configuran en distintos servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, donde el servicio de identidad y el perfil del cliente en tiempo real los utilizan antes de activarse finalmente en los destinos.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Panel de segmentos | Ahora puede utilizar el panel de monitorización para monitorizar los flujos de datos de los segmentos. Para obtener más información, consulte la guía de [monitorización de segmentos en la interfaz de usuario](../../dataflows/ui/monitor-segments.md) |
+
+Para obtener información más general sobre flujos de datos, consulte la [información general sobre flujos de datos](../../dataflows/home.md). Para obtener más información sobre la segmentación, consulte [información general sobre segmentación](../../segmentation/home.md).
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
@@ -70,3 +85,4 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 {style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
+
