@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;asignación de csv;asignaci
 title: Guía de la interfaz de usuario de preparación de datos
 description: Este documento proporciona instrucciones sobre cómo utilizar las funciones de preparación de datos en la interfaz de usuario de Platform para asignar archivos CSV a un esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
+source-git-commit: edef8843c03282774991f30220504ece97af52cf
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1837'
 ht-degree: 1%
 
 ---
@@ -168,6 +168,34 @@ La variable **[!UICONTROL Crear campo calculado]** aparece. El cuadro de diálog
 Puede añadir manualmente campos, funciones y operadores con el editor de expresiones del centro. Seleccione el editor para comenzar a crear una expresión. Una vez finalizado, seleccione **[!UICONTROL Guardar]** para continuar.
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
+
+### Importar asignación {#import}
+
+Puede reutilizar la asignación de un flujo de datos existente para reducir el tiempo de configuración manual del consumo de datos y limitar los errores. Select **[!UICONTROL Importar asignación]** para reutilizar una asignación existente.
+
+![asignación de importación](../images/ui/mapping/import-mapping.png)
+
+La variable [!UICONTROL Importar asignación] , que le proporciona una lista de flujos de datos entre los que elegir.
+
+Seleccione el icono de vista previa para previsualizar la asignación del flujo de datos seleccionado.
+
+![asignación de lista](../images/ui/mapping/list-mapping.png)
+
+La ventana de vista previa permite inspeccionar la asignación existente antes de importarla al flujo de datos. Una vez verificada la asignación, puede seleccionar **[!UICONTROL Atrás]** para volver a la lista de flujos de datos e inspeccionar otro conjunto de asignaciones, o puede seleccionar **[!UICONTROL Select]** para continuar.
+
+![previsualización-asignación](../images/ui/mapping/preview-mapping.png)
+
+También puede seleccionar la asignación que desea importar de la ventana de lista de flujos de datos. Seleccione el flujo de datos que contiene la asignación que desea importar y, a continuación, seleccione **[!UICONTROL Select]** para continuar.
+
+![asignación de selección](../images/ui/mapping/select-mapping.png)
+
+La interfaz se actualiza con la asignación que ha importado.
+
+>[!NOTE]
+>
+>Los conjuntos de asignaciones existentes que establezca o las recomendaciones de asignación de ML se sustituyen por la asignación importada desde un flujo de datos existente.
+
+![asignación importada](../images/ui/mapping/mapping-imported.png)
 
 Select **[!UICONTROL Vista previa de datos]** para ver los resultados de asignación de hasta 100 filas de datos de ejemplo del conjunto de datos seleccionado.
 
