@@ -5,7 +5,7 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
+source-git-commit: 765a56919afa3325db2e7881664e37d16eaeaac5
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 8%
@@ -18,7 +18,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 
 >[!TIP]
 >
->Todo [!DNL Marketo] conjuntos de datos excepto `Activities` ahora compatibilidad con `isDeleted`. Sus flujos de datos existentes incluirán automáticamente `isDeleted`, pero solo ingerirá el indicador para los datos recién introducidos. Si desea aplicar el indicador a todos los datos históricos, debe detener los flujos de datos existentes y volver a crearlos con la nueva asignación. Tenga en cuenta que si elimina `isDeleted`, ya no tendrá acceso a la funcionalidad . Es fundamental que la asignación se mantenga después de que se rellene automáticamente.
+>Todo [!DNL Marketo] conjuntos de datos excepto `Activities` ahora compatibilidad con `isDeleted`. Sus flujos de datos existentes incluirán automáticamente `isDeleted`, pero solo introducirá el indicador para los datos recién introducidos. Si desea aplicar el indicador a todos los datos históricos, debe detener los flujos de datos existentes y volver a crearlos con la nueva asignación. Tenga en cuenta que si elimina `isDeleted`, ya no tendrá acceso a la funcionalidad . Es fundamental que la asignación se mantenga después de que se rellene automáticamente.
 
 ## Actividades {#activities}
 
