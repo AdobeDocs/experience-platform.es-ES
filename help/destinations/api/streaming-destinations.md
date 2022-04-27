@@ -6,18 +6,14 @@ description: Este documento cubre la creación de destinos de flujo continuo med
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 1b9b2476047b78c67a8c9950e28b0812642c7941
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2049'
 ht-degree: 2%
 
 ---
 
 # Conectarse a destinos de flujo continuo y activar datos mediante la API de servicio de flujo
-
->[!NOTE]
->
->La variable [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] los destinos en Platform están actualmente en versión beta. La documentación y las funciones están sujetas a cambios.
 
 >[!IMPORTANT]
 > 

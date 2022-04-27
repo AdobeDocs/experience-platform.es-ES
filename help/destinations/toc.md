@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '755'
 ht-degree: 8%
 
 ---
@@ -93,10 +93,10 @@ ht-degree: 8%
       * [Extensión de seguimiento de conversión de contexto](./catalog/analytics/yext.md)
    * Destinos de almacenamiento en la nube {#cloud-storage}
       * [Resumen de destinos de Cloud Storage](./catalog/cloud-storage/overview.md)
-      * [(Beta) Conexión de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Conexión de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexión Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexión de Azure Blob](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Conexión de los centros de eventos de Azure](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Conexión de los centros de eventos de Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Conexión SFTP](./catalog/cloud-storage/sftp.md)
       * [LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos de la plataforma de gestión de datos {#data-management}
@@ -116,7 +116,7 @@ ht-degree: 8%
       * [Conexión SendGrid](./catalog/email-marketing/sendgrid.md)
    * Extensiones de etiquetas {#launch-extensions}
       * [Información general de la extensión de etiquetas](./catalog/launch-extensions/overview.md)
-   * Destinos de participación de Mobile {#mobile-engagement}
+   * Destinos de participación móvil {#mobile-engagement}
       * [Información general sobre los destinos de participación del dispositivo móvil](./catalog/mobile-engagement/overview.md)
       * [Conexión de atributos de aeronave](./catalog/mobile-engagement/airship-attributes.md)
       * [Conexión de etiquetas de la aeronave](./catalog/mobile-engagement/airship-tags.md)
@@ -140,7 +140,7 @@ ht-degree: 8%
       * [Conexión de Audiencias coincidentes de linkedIn](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
    * Destinos de transmisión {#streaming}
-      * [ Conexión de API HTTP (Beta)](./catalog/streaming/http-destination.md)
+      * [Conexión de API HTTP](./catalog/streaming/http-destination.md)
       * [LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo](./catalog/streaming/ip-address-allow-list.md)
    * Destinos de Survey {#survey}
       * [Información general sobre los destinos de encuesta](./catalog/survey/overview.md)

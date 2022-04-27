@@ -4,9 +4,9 @@ title: Tipos y categorías de destino
 seo-title: Destination types and categories
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
+source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lea esta página para comprender los distintos tipos y categorías de destinos de Adobe Experience Platform.
 
-## Tipos de destino
+## Tipos de destino {#destination-types}
 
 En Adobe Experience Platform, distinguimos entre dos tipos de destino: conexiones y extensiones. Existen dos tipos de destinos de conexión: destinos de exportación de perfil y destinos de exportación de segmento.
 
@@ -25,16 +25,28 @@ En Adobe Experience Platform, distinguimos entre dos tipos de destino: conexione
 
 **[!UICONTROL Exportación de perfiles]** y **[!UICONTROL Exportación de segmentos de transmisión]** los destinos en Adobe Experience Platform capturan datos de evento y los combinan con otras fuentes de datos para formar la variable [Perfil del cliente en tiempo real](../profile/home.md), aplique la segmentación y exporte segmentos y perfiles cualificados a los destinos.
 
-## Destinos de exportación de perfil
+## Destinos de exportación de perfil {#profile-export}
 
 Los destinos de exportación de perfil reciben datos sin procesar, a menudo con direcciones de correo electrónico como clave principal. Actualmente, el Experience Platform admite dos tipos de destinos de exportación de perfil:
 
-* [Destinos de exportación de perfiles de transmisión](#streaming-profile-export)
+* [Destinos de exportación de perfiles de transmisión (destinos empresariales)](#streaming-profile-export)
 * [Destinos por lotes (basados en archivos)](#file-based)
 
-### Destinos de exportación de perfiles de transmisión {#streaming-profile-export}
+### Destinos de exportación de perfiles de transmisión (destinos empresariales) {#streaming-profile-export}
 
-Los destinos de exportación de perfiles de flujo continuo reciben datos de segmentos y perfiles como flujos de datos de Experience Platform. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) y [Centros de eventos de Azure](catalog/cloud-storage/azure-event-hubs.md) son ejemplos de estos destinos.
+>[!IMPORTANT]
+>
+>Los destinos de empresa o los destinos de exportación de perfil de flujo continuo están disponibles para [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) solo clientes.
+
+Utilice los conectores de datos de destino empresarial para ofrecer perfiles de Real-time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros a fin de sincronizar, analizar y ampliar los casos de uso de enriquecimiento de perfiles.
+
+Estos destinos reciben datos de segmentos y perfiles como flujos de datos de Experience Platform.
+
+Los destinos empresariales incluyen:
+
+* [Destino de la API HTTP](catalog/streaming/http-destination.md)
+* [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
+* [Centros de eventos de Azure](catalog/cloud-storage/azure-event-hubs.md)
 
 ### Destinos por lotes (basados en archivos) {#file-based}
 
@@ -42,7 +54,7 @@ Los destinos basados en archivos reciben `.csv` archivos que contienen perfiles 
 
 ## Destinos de exportación de segmentos de transmisión {#streaming-destinations}
 
-Los destinos de exportación de segmentos reciben datos de segmentos del Experience Platform. Estos destinos utilizan ID de segmento o ID de usuario. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), y son ejemplos de estos destinos.
+Los destinos de exportación de segmentos reciben datos de segmentos del Experience Platform. Estos destinos utilizan ID de segmento o ID de usuario. Publicidad y destinos sociales como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)o [Facebook](catalog/social/facebook.md) son ejemplos de estos destinos.
 
 ## Exportación de perfiles y destinos de exportación de segmentos: información general sobre vídeo {#video}
 
