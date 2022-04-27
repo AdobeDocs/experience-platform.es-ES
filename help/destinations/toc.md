@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 73bb1d21e70644ffef50b08f22048d0937a6a729
+source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 8%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 8%
    * [Editar flujos de datos de activación](./ui/edit-activation.md)
    * [Eliminar destinos](./ui/delete-destinations.md)
    * [Monitorizar flujos de datos](./ui/monitor-dataflows.md)
+   * [Suscripción a alertas de destino en contexto](ui/alerts.md)
 * Catálogo de destinos {#catalog}
    * [Descripción general del catálogo de destinos](./catalog/overview.md)
    * Destinos de Adobe{#adobe}
@@ -115,7 +116,7 @@ ht-degree: 8%
       * [Conexión SendGrid](./catalog/email-marketing/sendgrid.md)
    * Extensiones de etiquetas {#launch-extensions}
       * [Información general de la extensión de etiquetas](./catalog/launch-extensions/overview.md)
-   * Destinos de participación móvil {#mobile-engagement}
+   * Destinos de participación de Mobile {#mobile-engagement}
       * [Información general sobre los destinos de participación del dispositivo móvil](./catalog/mobile-engagement/overview.md)
       * [Conexión de atributos de aeronave](./catalog/mobile-engagement/airship-attributes.md)
       * [Conexión de etiquetas de la aeronave](./catalog/mobile-engagement/airship-tags.md)

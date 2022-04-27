@@ -4,9 +4,9 @@ title: Espacio de trabajo de destinos
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema. Se describen en las secciones siguientes.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1156'
 ht-degree: 2%
 
 ---
@@ -94,6 +94,7 @@ La variable **[!UICONTROL Examinar]** muestra los destinos con los que ha establ
 > * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Botón Activar segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activar segmentos ]**para enviar segmentos a ese destino.
 > * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Botón Eliminar](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Eliminar ]**botón para [remove](delete-destinations.md) una conexión existente a un destino.
 > * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Ver en el botón de monitorización](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Ver en monitorización ]**para ver la información de activación de este destino en el [panel de monitorización](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Seleccione los tres puntos del [!UICONTROL Nombre] y utilice la variable ![Suscripción a alertas ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Suscripción a alertas ]**para suscribirse a las alertas de flujo de datos de destino. Puede suscribirse a alertas para recibir mensajes sobre el estado, el éxito o el error de la ejecución del flujo. Consulte [Suscripción a alertas de destino en contexto](alerts.md) para obtener información detallada sobre las alertas de flujo de datos de destino.
 
 
 ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
