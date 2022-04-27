@@ -6,9 +6,9 @@ title: Descubra perspectivas con Customer AI
 topic-legacy: Discovering insights
 description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '2079'
 ht-degree: 1%
 
 ---
@@ -169,7 +169,7 @@ Para ver el nuevo segmento en la interfaz de usuario de Platform, seleccione **[
 
 ![Todos sus segmentos](../images/insights/Segments-dashboard.png)
 
-## Métricas de resumen de rendimiento {#performance-metrics}
+## Rendimiento histórico {#historical-performance}
 
 La variable **[!UICONTROL Resumen de rendimiento]** La pestaña muestra las tasas reales de pérdida o conversión, separadas en cada uno de los bloques de inclinación marcados por Customer AI.
 
@@ -192,6 +192,37 @@ La mitad inferior de **[!UICONTROL Resumen de rendimiento]** muestra los resulta
 Dependiendo de si está pronosticando la pérdida o conversión, la variable [!UICONTROL Distribución de puntuaciones] graph muestra la distribución de perfiles reproducidos/convertidos y no reproducidos/no convertidos en cada incremento.
 
 ![puntuación individual](../images/insights/scoring_tab.png)
+
+## Evaluación del modelo {#model-evaluation}
+
+Además de realizar un seguimiento de los resultados predichos y reales a lo largo del tiempo en la pestaña Rendimiento histórico, los especialistas en marketing tienen aún más transparencia sobre la calidad del modelo con la pestaña Evaluación de modelo . Puede utilizar los gráficos Alza y Ganancias para determinar las diferencias en el uso de un modelo predictivo frente a la segmentación aleatoria. Además, puede determinar cuántos resultados positivos se obtendrán en cada recorte de puntuación. Esto resulta útil para la segmentación y para alinear el retorno de la inversión con las acciones de marketing.
+
+### Gráfico de alza
+
+![gráfico de alza](../images/user-guide/lift-chart.png)
+
+El gráfico de alza mide la mejora del uso de un modelo predictivo en lugar de una segmentación aleatoria.
+
+Los indicadores de modelo de alta calidad incluyen:
+
+- Valores de alza altos en los primeros deciles. Esto significa que el modelo es bueno para identificar a los usuarios con la mayor propensión a realizar la acción de interés.
+- Valores de alza descendentes. Esto significa que es más probable que los clientes con puntuaciones más altas realicen la acción de interés que las personas con puntuaciones más bajas.
+
+### Gráfico de ganancias
+
+![gráfico de ganancias](../images/user-guide/gains-chart.png)
+
+El gráfico de ganancias acumulativas mide el porcentaje de resultados positivos capturados mediante puntuaciones de objetivo por encima de un determinado umbral. Después de ordenar los clientes por puntuación de tendencia de alto a bajo, la población se divide en decimales: 10 grupos de tamaño igual. Un modelo perfecto capturaría todos los resultados positivos en los deciles de mayor puntuación. Un método de determinación de objetivos aleatoria de línea base captura los resultados positivos proporcionalmente al tamaño del grupo - apuntar al 30% de los usuarios capturaría el 30% de los resultados.
+
+Los indicadores de modelo de alta calidad incluyen:
+
+- Las ganancias acumulativas se acercan al 100% rápidamente.
+- La curva de ganancias acumulativas para el modelo está más cerca de la esquina superior izquierda del gráfico.
+- El gráfico de ganancias acumulativas se puede usar para determinar los recortes de puntuación para la segmentación y el targeting. Por ejemplo, si el modelo captura el 70% de los resultados positivos en los dos primeros deciles de puntuación, se espera que los usuarios con PercentileScore > 80 capturen aproximadamente el 70% de los resultados positivos.
+
+### AUC (Área bajo la curva)
+
+El AUC refleja la fuerza de la relación entre la clasificación por puntuación y la aparición del objetivo previsto. Un **AUC** de 0,5 significa que el modelo no es mejor que una suposición aleatoria. Un **AUC** de 1 significa que el modelo puede predecir perfectamente quién tomará la acción relevante.
 
 ## Pasos siguientes
 

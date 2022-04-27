@@ -6,9 +6,9 @@ title: Configuración de una instancia de AI del cliente
 topic-legacy: Instance creation
 description: Los servicios inteligentes proporcionan Customer AI como un servicio de Adobe Sensei fácil de usar que se puede configurar para diferentes casos de uso. Las secciones siguientes proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
 workflow-type: tm+mt
-source-wordcount: '2608'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Proporcione los valores necesarios y, a continuación, seleccione **[!UICONTROL 
 
 ## Selección de datos {#select-data}
 
-Por diseño, la Customer AI utiliza datos de Adobe Analytics, Adobe Audience Manager, Experience Event y Consumer Experience Event para calcular las puntuaciones de tendencia. Al seleccionar un conjunto de datos, solo se muestran los que son compatibles con la AI del cliente. Para seleccionar un conjunto de datos, seleccione el (**+**) junto al nombre del conjunto de datos o seleccione la casilla de verificación para agregar varios conjuntos de datos a la vez. Utilice la opción de búsqueda para encontrar rápidamente los conjuntos de datos que le interesen.
+Por diseño, la Customer AI utiliza los datos de Adobe Analytics, Adobe Audience Manager, Experience Events en general y Consumer Experience Event para calcular las puntuaciones de tendencia. Al seleccionar un conjunto de datos, solo se muestran los que son compatibles con la AI del cliente. Para seleccionar un conjunto de datos, seleccione el (**+**) junto al nombre del conjunto de datos o seleccione la casilla de verificación para agregar varios conjuntos de datos a la vez. Utilice la opción de búsqueda para encontrar rápidamente los conjuntos de datos que le interesen.
 
 ![Seleccionar y buscar un conjunto de datos](../images/user-guide/configure-dataset-page.png)
 
@@ -90,7 +90,9 @@ Hay un valor de porcentaje de integridad del conjunto de datos en la vista previ
 
 ### Seleccionar una identidad {#identity}
 
-Para que varios conjuntos de datos se unan entre sí, debe seleccionar un tipo de identidad (también conocido como &quot;área de nombres de identidad&quot;) y un valor de identidad dentro de ese área de nombres. Si ha asignado más de un campo como identidad dentro del esquema en el mismo espacio de nombres, todos los valores de identidad asignados aparecerán en la lista desplegable de identidad precedida por el área de nombres, como `EMAIL (personalEmail.address)` o `EMAIL (workEmail.address)`.
+Ahora puede unir varios conjuntos de datos entre sí según el mapa de identidad (campo). Debe seleccionar un tipo de identidad (también conocido como &quot;área de nombres de identidad&quot;) y un valor de identidad dentro de ese área de nombres. Si ha asignado más de un campo como identidad dentro del esquema en el mismo espacio de nombres, todos los valores de identidad asignados aparecerán en la lista desplegable de identidad precedida por el área de nombres, como `EMAIL (personalEmail.address)` o `EMAIL (workEmail.address)`.
+
+[seleccionar el mismo espacio de nombres](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -98,7 +100,8 @@ Para que varios conjuntos de datos se unan entre sí, debe seleccionar un tipo d
 
 Para seleccionar una identidad, seleccione el valor subrayado ubicado en la columna de identidad. Aparecerá la ventana Seleccionar una identidad.
 
-![seleccionar el mismo espacio de nombres](../images/user-guide/identity-type.png)
+<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
+[seleccionar el mismo espacio de nombres](../images/user-guide/cai-identity-namespace.png)
 
 En el caso de que haya más de una identidad disponible en un área de nombres, asegúrese de seleccionar el campo de identidad correcto para el caso de uso. Por ejemplo, hay dos identidades de correo electrónico disponibles en el área de nombres del correo electrónico, un trabajo y un correo electrónico personal. Según el caso de uso, es más probable que se rellene un correo electrónico personal, que sea más útil en predicciones individuales. Esto significa que `EMAIL (personalEmail.address)` se seleccionaría como identidad.
 
@@ -116,7 +119,8 @@ La variable **[!UICONTROL Definir objetivo]** y proporciona un entorno interacti
 
 Para crear un objetivo, seleccione **[!UICONTROL Introducir nombre de campo]** y seguido de un campo de la lista desplegable. Seleccione la segunda entrada, una cláusula para la condición del evento y, a continuación, proporcione de forma opcional el valor objetivo para completar el evento. Para configurar eventos adicionales, seleccione **[!UICONTROL Agregar evento]**. Por último, complete el objetivo aplicando un intervalo de tiempo de predicción en cantidad de días y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
-![](../images/user-guide/define-a-goal.png)
+<!-- ![](../images/user-guide/define-a-goal.png) -->
+![](../images/user-guide/cai-define-a-goal.png)
 
 ### Ocurrirá y no ocurrirá
 
@@ -124,7 +128,8 @@ Al definir el objetivo, tiene la opción de seleccionar **[!UICONTROL Ocurrirá]
 
 Por ejemplo, si desea configurar una aplicación para predecir si un cliente realizará una compra, puede seleccionar **[!UICONTROL Ocurrirá]** seguido de **[!UICONTROL Todo]** y, a continuación, introduzca **commerce.purchases.id** (o un campo similar) y **[!UICONTROL existe]** como operador.
 
-![ocurrirá](../images/user-guide/occur.png)
+<!-- ![will occur](../images/user-guide/occur.png) -->
+![ocurrirá](../images/user-guide/cai-will-occur.png)
 
 Sin embargo, puede haber casos en los que le interese predecir si algún evento no se producirá en un intervalo de tiempo determinado. Para configurar un objetivo con esta opción, seleccione **[!UICONTROL No ocurrirá]** en la lista desplegable de nivel superior.
 
