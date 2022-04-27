@@ -2,10 +2,10 @@
 title: Conexión de Audiencias personalizadas de twitter
 description: Dirija la campaña a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '669'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,6 @@ Antes de configurar el [!DNL Twitter Custom Audiences] , asegúrese de revisar l
 
 1. Su [!DNL Twitter Ads] La cuenta debe ser elegible para publicidad. Nuevo [!DNL Twitter Ads] las cuentas no pueden anunciarse en las dos primeras semanas después de crearse.
 2. Su cuenta de usuario de Twitter para la que autorizó el acceso en [!DNL Twitter Audience Manager] debe tener la variable *[!DNL Partner Audience Manager]* permiso habilitado.
-
 
 ## Identidades compatibles {#supported-identities}
 
@@ -55,6 +54,10 @@ Dirija la campaña a sus seguidores y clientes existentes en Twitter y cree camp
 
 ## Conectarse al destino {#connect}
 
+>[!IMPORTANT]
+> 
+>Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 ### Parámetros de conexión {#parameters}
@@ -66,6 +69,10 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 * **[!UICONTROL ID de cuenta]**: Su [!DNL Twitter Ads] ID de cuenta. Esto se puede encontrar en su [!DNL Twitter Ads] configuración.
 
 ## Activar segmentos en este destino {#activate}
+
+>[!IMPORTANT]
+> 
+>Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 

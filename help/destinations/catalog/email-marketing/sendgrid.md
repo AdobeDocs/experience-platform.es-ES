@@ -2,13 +2,13 @@
 keywords: correo electrónico;correo electrónico;destinos de correo electrónico;cuadrícula de envío;destino de cuadrícula de envío
 title: Conexión SendGrid
 description: El destino SendGrid le permite exportar los datos de origen y activarlos en SendGrid según sus necesidades comerciales.
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 3%
+source-wordcount: '1475'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL SendGrid] connection
 
@@ -74,6 +74,11 @@ Los equipos de marketing que utilizan SendGrid pueden crear una lista de correo 
 
 ## Conectarse al destino {#connect}
 
+>[!IMPORTANT]
+> 
+>Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+
+
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). Los pasos específicos de este destino se ilustran en detalle a continuación.
 
 1. Dentro de [!DNL Adobe Experience Platform] consola, vaya a **Destinos**.
@@ -101,6 +106,10 @@ While [configuración](https://experienceleague.adobe.com/docs/experience-platfo
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ## Activar segmentos en este destino {#activate}
+
+>[!IMPORTANT]
+> 
+>Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
