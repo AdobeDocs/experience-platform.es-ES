@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un sistema de éxito de clientes e introducirlos en Platform mediante conectores de origen y API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1305'
 ht-degree: 2%
@@ -586,7 +586,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "7c3547d3cfc14f568a51c32b4c0ed739",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

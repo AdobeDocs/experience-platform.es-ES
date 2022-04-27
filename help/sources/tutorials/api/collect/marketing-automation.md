@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un sistema de automatización de marketing y llevarlos a Adobe Experience Platform mediante conectores de origen y API.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 2%
@@ -553,7 +553,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "500a9b747fcf4908a21917d49bd61780",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

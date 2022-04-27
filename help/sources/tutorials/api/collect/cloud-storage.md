@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un almacenamiento en la nube de terceros y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1575'
 ht-degree: 2%
@@ -528,7 +528,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],
