@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
-title: Configuración de especificaciones de autenticación para el SDK de fuentes
+title: Configuración de especificaciones de origen para el SDK de fuentes
 topic-legacy: overview
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar el SDK de fuentes.
 hide: true
 hidefromtoc: true
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 4c4c89ab7db7d3546163d707ac80210561c2fa02
+source-git-commit: 9727f7b0e8eaae92c85f102e5e7bea018a2ee6de
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 1%
