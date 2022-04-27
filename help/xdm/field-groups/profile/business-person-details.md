@@ -2,10 +2,10 @@
 title: Detalles de persona comercial XDM Grupo de campos de esquema
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de persona empresarial XDM.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 6%
+source-wordcount: '601'
+ht-degree: 5%
 
 ---
 
@@ -53,6 +53,7 @@ ht-degree: 6%
 | `workEmail` | [Dirección de correo electrónico](../../data-types/email-address.md) | La dirección de correo electrónico del trabajo de la persona. |
 | `workPhone` | [Número de teléfono](../../data-types/phone-number.md) | El número de teléfono de trabajo de la persona. |
 | `identityMap` | Mapa | Campo de mapa que contiene un conjunto de identidades con espacio de nombres para la persona. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en la [conceptos básicos de la composición del esquema](../../schema/composition.md#identityMap) para obtener más información sobre su caso de uso. |
+| `isDeleted` | Booleano | Indica si esta persona se ha eliminado en el Marketo Engage.<br><br>Al usar la variable [Conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Si configura `isDeleted` a `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
 | `organizations` | Matriz de cadenas | Lista de nombres de organización donde trabaja la persona. |
 
 {style=&quot;table-layout:auto&quot;}

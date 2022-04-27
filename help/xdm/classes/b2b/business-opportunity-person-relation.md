@@ -2,9 +2,9 @@
 title: Clase de relación de persona de oportunidad empresarial XDM
 description: Este documento proporciona una descripción general de la clase de relación de persona de oportunidad empresarial XDM en el Modelo de datos de experiencia (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '367'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL Relación de persona de oportunidad comercial XDM] es una clase de modelo de datos de experiencia (XDM) estándar que captura las propiedades mínimas requeridas de una persona asociada con una oportunidad comercial.
 
-![](../../images/classes/b2b/business-opportunity-person-relation.png)
+![La estructura de la clase de persona de oportunidad empresarial XDM tal como aparece en la interfaz de usuario](../../images/classes/b2b/business-opportunity-person-relation.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
@@ -26,9 +26,10 @@ ht-degree: 3%
 | `opportunityPersonKey` | [[!UICONTROL Fuente B2B]](../../data-types/b2b-source.md) | Identificador compuesto de la entidad de relación entre oportunidad y persona. |
 | `personKey` | [[!UICONTROL Fuente B2B]](../../data-types/b2b-source.md) | Identificador compuesto de la persona en la relación oportunidad-persona. |
 | `_id` | Cadena | Identificador único del registro. Se trata de un valor generado por el sistema que es independiente de los demás campos de ID capturados por la clase . |
+| `isDeleted` | Booleano | Indica si esta entidad de la lista de marketing se ha eliminado en el Marketo Engage.<br><br>Al usar la variable [Conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Si configura `isDeleted` a `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
+| `isPrimary` | Booleano | Indica si la persona es el contacto principal de esta oportunidad. |
 | `opportunityID` | Cadena | Identificador único de la oportunidad en la relación oportunidad-persona. |
 | `opportunityPersonID` | Cadena | Un identificador único para la entidad de relación entre oportunidad y persona |
-| `isPrimary` | Booleano | Indica si la persona es el contacto principal de esta oportunidad. |
 | `personID` | Cadena | Identificador único de la persona en la relación oportunidad-persona. |
 | `personRole` | Cadena | El papel de la persona en la relación oportunidad-persona. |
 

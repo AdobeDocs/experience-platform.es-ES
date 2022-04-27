@@ -2,10 +2,10 @@
 title: Clase de oportunidad empresarial XDM
 description: Este documento proporciona información general sobre la clase de oportunidad empresarial XDM en el Modelo de datos de experiencia (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 5%
+source-wordcount: '321'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!UICONTROL Oportunidad comercial XDM] es una clase estándar de Experience Data Model (XDM) que captura las propiedades mínimas requeridas de una oportunidad comercial.
 
-![](../../images/classes/b2b/business-opportunity.png)
+![La estructura de la clase de oportunidad empresarial XDM tal como aparece en la interfaz de usuario](../../images/classes/b2b/business-opportunity.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
@@ -26,6 +26,7 @@ ht-degree: 5%
 | `opportunityKey` | [[!UICONTROL Fuente B2B]](../../data-types/b2b-source.md) | Identificador compuesto de la entidad de oportunidad. |
 | `_id` | Cadena | Identificador único del registro. Se trata de un valor generado por el sistema que es independiente del valor `opportunityID`. |
 | `accountID` | Cadena | Un ID único para la cuenta a la que se asocia esta oportunidad. |
+| `isDeleted` | Booleano | Indica si esta entidad de la lista de marketing se ha eliminado en el Marketo Engage.<br><br>Al usar la variable [Conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Si configura `isDeleted` a `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
 | `opportunityDescription` | Cadena | Una descripción de la oportunidad. |
 | `opportunityID` | Cadena | Un ID único para la entidad de oportunidad. |
 | `opportunityName` | Cadena | El nombre de la oportunidad. |

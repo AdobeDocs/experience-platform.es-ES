@@ -2,10 +2,10 @@
 title: Clase de relación de persona de cuenta comercial XDM
 description: Este documento proporciona información general sobre la clase de relación de persona de cuenta empresarial XDM en el Modelo de datos de experiencia (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 4%
+source-wordcount: '444'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 [!UICONTROL Relación de persona de cuenta comercial XDM] es una clase estándar de Experience Data Model (XDM) que captura las propiedades mínimas requeridas de una persona asociada a una cuenta comercial.
 
-![](../../images/classes/b2b/business-account-person-relation.png)
+![La estructura de la clase de relación de persona de cuenta empresarial XDM tal como aparece en la interfaz de usuario](../../images/classes/b2b/business-account-person-relation.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
@@ -30,12 +30,14 @@ ht-degree: 4%
 | `accountPersonID` | Cadena | Identificador único de la entidad de relación entre cuenta y persona. |
 | `currencyCode` | Cadena | Código de moneda ISO 4217 utilizado para la relación entre la cuenta y la persona. |
 | `isActive` | Booleano | Indica si la relación entre la cuenta y la persona está activa. |
+| `isDeleted` | Booleano | Indica si esta relación cuenta-persona se ha eliminado en el Marketo Engage.<br><br>Al usar la variable [Conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Si configura `isDeleted` a `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
 | `isDirect` | Booleano | Indica si se trata de una relación directa entre la cuenta y la persona. |
 | `isPrimary` | Booleano | Indica si la persona es el contacto principal de esta cuenta. |
 | `personID` | Cadena | Identificador único de la persona en la relación entre cuenta y persona. |
-| `personRole` | Cadena | Función de la persona en la relación entre cuenta y persona. |
+| `personRoles` | Matriz de cadenas | Enumera las funciones de la persona en la relación entre cuenta y persona. |
 | `relationEndDate` | DateTime | La fecha en la que finalizó la relación entre la cuenta y la persona. |
 | `relationStartDate` | DateTime | La fecha en la que se inició la relación entre la cuenta y la persona. |
+| `relationshipSource` | Cadena | Origen de la relación entre la cuenta y la persona. |
 
 {style=&quot;table-layout:auto&quot;}
 

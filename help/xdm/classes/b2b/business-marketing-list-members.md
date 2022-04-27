@@ -2,10 +2,10 @@
 title: Clase de miembros de la lista de marketing empresarial XDM
 description: Este documento proporciona información general sobre la clase de miembros de la lista de marketing empresarial XDM en el modelo de datos de experiencia (XDM).
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 3%
+source-wordcount: '338'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL Miembros de la lista de marketing empresarial XDM] es una clase estándar de Experience Data Model (XDM) que describe miembros, personas o contactos asociados a una lista de marketing.
 
-![](../../images/classes/b2b/business-marketing-list-members.png)
+![La estructura de la clase Miembros de la lista de marketing empresarial XDM tal como aparece en la interfaz de usuario](../../images/classes/b2b/business-marketing-list-members.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
@@ -26,6 +26,7 @@ ht-degree: 3%
 | `marketingListMemberKey` | [[!UICONTROL Fuente B2B]](../../data-types/b2b-source.md) | Un identificador compuesto para la entidad de pertenencia a la lista de marketing. |
 | `personKey` | [[!UICONTROL Fuente B2B]](../../data-types/b2b-source.md) | Identificador compuesto de la persona que es miembro de la lista de marketing. |
 | `_id` | Cadena | Identificador único del registro. Se trata de un valor generado por el sistema que es independiente del valor `marketingListMemberID`. |
+| `isDeleted` | Booleano | Indica si esta entidad miembro de la lista de marketing se ha eliminado en el Marketo Engage.<br><br>Al usar la variable [Conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Si configura `isDeleted` a `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
 | `marketingListID` | Cadena | Un ID único para la lista de marketing. |
 | `marketingListMemberID` | Cadena | Un ID único para la entidad de pertenencia a la lista de marketing. |
 | `personId` | Cadena | Un ID único para la persona. |
