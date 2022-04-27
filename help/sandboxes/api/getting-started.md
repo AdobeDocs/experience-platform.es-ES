@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;inicio;temas populares;guía para desarrolladores de entornos limitados
 solution: Experience Platform
-title: Guía de la API de Sandbox
+title: Introducción a la API de Sandbox
 topic-legacy: developer guide
 description: La API de espacio aislado permite a los desarrolladores administrar mediante programación entornos limitados en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: d38df5ede84c1306a76fd1ec83d9d0a540b0d01c
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 0%
+source-wordcount: '376'
+ht-degree: 5%
 
 ---
 
-# Guía de la API de Sandbox
+# Introducción a la API de Sandbox
 
 Los entornos limitados de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a su entorno de producción.
 
 Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la API de espacio aislado para administrar entornos limitados en Experience Platform, e incluye llamadas de API de muestra para realizar diversas operaciones.
 
-## Introducción a la API de Sandbox
+## Requisitos previos
 
-Para administrar entornos limitados para su organización de IMS, debe tener permisos de administración de entornos limitados. Los usuarios sin permisos de acceso solo pueden utilizar el [extremo de entornos limitados disponibles](./available.md) para enumerar los entornos limitados activos para el usuario actual. Consulte la [información general del control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar permisos de simulación de pruebas para el Experience Platform.
+Para administrar entornos limitados para su organización de IMS, debe tener permisos de administración de entornos limitados. Los usuarios sin permisos de acceso solo pueden usar la variable [punto final de entornos limitados disponibles](./available.md) para mostrar los entornos limitados activos para el usuario actual. Consulte la [información general sobre el control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar permisos de simulación de pruebas para Experience Platform.
 
 ### Leer llamadas de API de ejemplo
 
