@@ -1,9 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, abril de 2022
 description: Notas de la versión de abril de 2022 para Adobe Experience Platform.
-source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
+exl-id: 39233787-3089-4469-8363-b006ae41ae21
+source-git-commit: b3655b70a44f878a29c6a401e5957660edebeba6
 workflow-type: tm+mt
-source-wordcount: '2260'
+source-wordcount: '2379'
 ht-degree: 4%
 
 ---
@@ -18,6 +19,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Flujos de datos](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
+- [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Real-time Customer Data Platform edición B2B](#B2B)
 - [Fuentes](#sources)
@@ -88,6 +90,23 @@ Para obtener información más general sobre flujos de datos, consulte la [infor
 | Compatibilidad con la importación de reglas de asignación existentes | Ahora puede importar reglas de asignación de un flujo de datos existente para acelerar las configuraciones del flujo de datos y limitar los errores. Consulte el tutorial en [importación de reglas de asignación existentes](../../data-prep/ui/mapping.md) para obtener más información. |
 
 Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| ----------- | ----------- |
+| [Alertas en contexto para flujos de datos de destino](../../destinations/ui/alerts.md) | Ahora puede suscribirse a alertas al crear un flujo de datos de destino, para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo de datos. Puede optar por recibir alertas en la interfaz de usuario del Experience Platform o por correo electrónico. |
+
+**Nuevos destinos**
+
+| Destino | Descripción |
+| ----------- | ----------- |
+| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Conecte y active los datos a la plataforma publicitaria de Criteo. |
+| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Conecte y active los datos en la plataforma Sendgrid para correos electrónicos de marketing y transaccionales. |
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
