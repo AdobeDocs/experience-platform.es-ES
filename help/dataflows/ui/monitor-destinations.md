@@ -6,9 +6,9 @@ title: Monitorización de flujos de datos para destinos en la interfaz de usuari
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
+source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
 workflow-type: tm+mt
-source-wordcount: '3183'
+source-wordcount: '3200'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,9 @@ Para acceder a la [!UICONTROL Monitorización] tablero, seleccione **[!UICONTROL
 
 >[!NOTE]
 >
->La funcionalidad de monitorización de destinos está actualmente admitida para todos los destinos en el Experience Platform *except* el [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos.
+>- La funcionalidad de monitorización de destinos está actualmente admitida para todos los destinos en el Experience Platform *except* el [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos.
+>- Para la variable [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centros de eventos de Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)y [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, las identidades excluidas no se muestran actualmente.
+
 
 Utilice la variable [!UICONTROL Destinos] tablero para obtener una idea general del estado de los flujos de activación. Comience obteniendo perspectivas a nivel agregado para todos los destinos de flujo continuo y por lotes y, a continuación, explore en profundidad las vistas para flujos de datos, ejecuciones de flujos de datos y segmentos activados para obtener una visión detallada de los datos de activación. Las pantallas de [!UICONTROL Monitorización] tablero proporciona información procesable mediante métricas y descripciones de errores para ayudarle a solucionar cualquier problema que pueda surgir en los escenarios de activación.
 

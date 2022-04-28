@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6c2271e4c5be924dcd8c137cb40bef72e104c7e2
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2707'
 ht-degree: 4%
 
 ---
@@ -87,19 +87,15 @@ Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Da
 | Conectores de destino empresarial avanzados | Ahora hay tres conectores de destino empresariales disponibles: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)y [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> La disponibilidad general de los conectores de destino empresarial incluye todas las funciones ofrecidas anteriormente en la fase beta y más: <ul><li>Nuevas funciones de autenticación, incluidas [Firma de acceso compartido en centros de eventos de Azure](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) y más [tipos de autenticación](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens de portador, OAuth 2) en el destino de la API HTTP;</li><li>[Rellenar datos de perfil históricos](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (envío de perfiles históricos cualificados para el segmento cuando se activa por primera vez);</li><li>Ahora se admiten métricas de ejecución de flujo de datos para estos destinos;</li><li>[Metadatos de segmentos adicionales](../../destinations/catalog/streaming/http-destination.md#destination-details) incluido en la carga útil de datos, incluidos los nombres de segmentos y las marcas de tiempo de los segmentos;</li><li>Compatibilidad con [direcciones IP estáticas](/help/destinations/catalog/streaming/ip-address-allow-list.md) para clientes que necesitan lista de permitidos de Experience Platform.</li></ul> |
 | Alertas en contexto para flujos de datos de destino | Ahora puede [suscripción a alertas](../../destinations/ui/alerts.md) al crear un flujo de datos de destino, para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo de datos. Puede optar por recibir alertas en la interfaz de usuario del Experience Platform o por correo electrónico. |
 
-<!--
+### Proceso de versiones para conectores de destino empresarial avanzados {#release-process-enterprise-destinations}
 
-### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+Para los destinos de Amazon Kinesis, Azure Event Hubs y HTTP API durante el proceso de lanzamiento (a partir del 27 de abril), verá la tarjeta de destino Beta anterior, así como la nueva tarjeta de destino disponible de forma general (GA) en el catálogo de destinos. Los flujos de datos configurados por los clientes que utilicen los destinos beta se migrarán en los próximos días a la versión GA del mismo destino. Esta migración debería completarse finalmente antes del final del viernes 29 de abril. Los destinos Beta seguirán estando visibles durante este breve periodo de tiempo y etiquetados como **Obsoleto**.
 
-For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+Si ha estado utilizando estos destinos en la fase beta, tenga en cuenta lo siguiente:
 
-If you have been utilizing these destinations in the Beta phase, please note the following:
-
-- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
-- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
-- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
-
--->
+- Si anteriormente ha estado en versión beta con cualquiera de los 3 destinos, no es necesario realizar ninguna acción. Todos los flujos de datos configurados como parte de Beta seguirán funcionando y se migrarán a la versión GA.
+- Si desea configurar estos destinos a partir del 27 de abril, hágalo con la nueva versión GA de los destinos.
+- Las tarjetas beta marcadas como obsoletas se eliminarán una vez finalizada la operación de lanzamiento, estimada para finales del viernes 29 de abril. El equipo de ingeniería del Experience Platform realiza un seguimiento atento para comprobar si la operación de lanzamiento se ha realizado correctamente.
 
 **Nuevos destinos**
 

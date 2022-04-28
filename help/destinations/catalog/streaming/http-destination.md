@@ -3,7 +3,7 @@ title: Conexión de API HTTP
 keywords: flujo continuo;
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que necesite en datos de perfil exportados fuera del Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 0%
@@ -92,6 +92,11 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 ### Información de autenticación {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Tipo de credenciales del cliente"
+>abstract="Select **Formulario de cuerpo codificado** para incluir el ID de cliente y el secreto de cliente en el cuerpo de la solicitud o **Autorización básica** para incluir el ID de cliente y el secreto de cliente en un encabezado de autorización. Vea ejemplos en la documentación."
+
 #### Autenticación de token del portador {#bearer-token-authentication}
 
 Si selecciona la opción **[!UICONTROL Token portador]** tipo de autenticación para conectarse al extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Conectarse al destino]**:
@@ -121,11 +126,6 @@ Si selecciona la opción **[!UICONTROL Contraseña de OAuth 2]** tipo de autenti
 * **[!UICONTROL Contraseña]**: La contraseña para acceder al extremo HTTP.
 
 #### Autenticación de credenciales de cliente de OAuth 2 {#oauth-2-client-credentials-authentication}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="Tipo de credenciales del cliente"
->abstract="Select **Formulario de cuerpo codificado** para incluir el ID de cliente y el secreto de cliente en el cuerpo de la solicitud o **Autorización básica** para incluir el ID de cliente y el secreto de cliente en un encabezado de autorización. Vea ejemplos en la documentación."
 
 Si selecciona la opción **[!UICONTROL Credenciales de cliente de OAuth 2]** tipo de autenticación para conectarse al extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Conectarse al destino]**:
 
