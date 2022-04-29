@@ -2,7 +2,7 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino de flujo continuo para el Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 4%
@@ -220,7 +220,7 @@ Obtenga más información en la [Información general sobre el área de nombres 
 |---------|----------|------|
 | `acceptsAttributes` | Booleano | Indica si el destino acepta atributos de perfil estándar. Normalmente, estos atributos se resaltan en la documentación de los socios. |
 | `acceptsCustomNamespaces` | Booleano | Indica si los clientes pueden configurar áreas de nombres personalizadas en el destino. |
-| `allowedAttributesTransformation` | Cadena | *No se muestra en la configuración de ejemplo*. Se utiliza, por ejemplo, cuando la variable [!DNL Platform] El cliente tiene direcciones de correo electrónico simples como atributo y la plataforma solo acepta correos electrónicos con hash. En este objeto, puede aplicar la transformación que debe aplicarse (por ejemplo, transformar el correo electrónico en minúsculas y, a continuación, en hash). Para ver un ejemplo, consulte `requiredTransformation` en el [referencia de la API de configuración de destino](./destination-configuration-api.md#update). |
+| `transformation` | Cadena | *No se muestra en la configuración de ejemplo*. Se utiliza, por ejemplo, cuando la variable [!DNL Platform] El cliente tiene direcciones de correo electrónico simples como atributo y la plataforma solo acepta correos electrónicos con hash. En este objeto, puede aplicar la transformación que debe aplicarse (por ejemplo, transformar el correo electrónico en minúsculas y, a continuación, en hash). Para ver un ejemplo, consulte `requiredTransformation` en el [referencia de la API de configuración de destino](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | - | Se utiliza para casos en los que la plataforma acepta [áreas de nombres de identidad estándar](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por ejemplo, IDFA), para que pueda restringir a los usuarios de Platform a que solo seleccionen estas áreas de nombres de identidad. |
 
 {style=&quot;table-layout:auto&quot;}
