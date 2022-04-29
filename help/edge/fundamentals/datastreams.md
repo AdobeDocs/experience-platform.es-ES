@@ -1,34 +1,30 @@
 ---
 title: Configurar un conjunto de datos
-description: Conecte la integración del SDK del Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
+description: Conecte la integración del SDK de Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;identidad;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;preparación de datos para recopilación de datos;Mp;prep de datos apper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
+source-git-commit: 2275a32cfa9419d2ca407dd48a15f8d06354cd49
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2081'
 ht-degree: 2%
 
 ---
 
 # Configurar un conjunto de datos
 
-Un conjunto de datos representa la configuración del lado del servidor al implementar los SDK web y Mobile de Adobe Experience Platform. Mientras que la variable [configurar, comando](configuring-the-sdk.md) en el SDK controla los elementos que se deben gestionar en el cliente (como el `edgeDomain`), los conjuntos de datos administran todas las demás configuraciones para el SDK. Cuando se envía una solicitud a la red perimetral de Adobe Experience Platform, la variable `edgeConfigId` se utiliza para hacer referencia al conjunto de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios de código en el sitio web.
+Un conjunto de datos representa la configuración del lado del servidor al implementar los SDK web y móviles de Adobe Experience Platform. Mientras que la variable [configurar, comando](configuring-the-sdk.md) en el SDK controla los elementos que se deben gestionar en el cliente (como el `edgeDomain`), los conjuntos de datos administran todas las demás configuraciones para el SDK. Cuando se envía una solicitud a la red perimetral de Adobe Experience Platform, la variable `edgeConfigId` se utiliza para hacer referencia al conjunto de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios de código en el sitio web.
 
 Este documento trata los pasos para configurar un conjunto de datos en la interfaz de usuario de la recopilación de datos.
 
 >[!NOTE]
 >
->Su organización debe estar aprovisionada para esta función a fin de acceder a ella en la interfaz de usuario de . Por favor, rellene lo siguiente: [formulario](https://adobe.ly/websdkaccess) para solicitar el acceso necesario.
+>Su organización debe estar aprovisionada para esta función a fin de acceder a ella en la interfaz de usuario de . Por favor, rellene lo siguiente: [formulario](https://adobe.ly/websdkaccess) para solicitar el acceso necesario. Para administrar conjuntos de datos, su cuenta de usuario debe agregarse a un perfil de producto para que incluya etiquetas en [!DNL Adobe Experience Platform].
 
 ## Acceda a la [!UICONTROL Datastreams] workspace
 
 Puede crear y administrar conjuntos de datos en la interfaz de usuario de recopilación de datos seleccionando **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
 
 ![Ficha Datastreams en la interfaz de usuario de la recopilación de datos](../images/datastreams/datastreams-tab.png)
-
->[!NOTE]
->
->Mientras que puede acceder a la [!UICONTROL Datastreams] independientemente de si utiliza las funcionalidades de administración de etiquetas de Platform, debe tener permisos de desarrollador para administrar los propios conjuntos de datos. Consulte la [permisos de usuario](../../tags/ui/administration/user-permissions.md) en la documentación de etiquetas para obtener más información.
 
 La variable [!UICONTROL Datastreams] muestra una lista de conjuntos de datos existentes, que incluye su nombre descriptivo, ID y fecha de la última modificación. Seleccione el nombre de un conjunto de datos a [ver sus detalles y configurar servicios](#view-details).
 
