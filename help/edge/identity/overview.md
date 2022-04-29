@@ -3,9 +3,9 @@ title: Datos de identidad en el SDK web de Platform
 description: Obtenga información sobre cómo recuperar y administrar Adobe Experience Cloud ID (ECID) mediante el SDK web de Adobe Experience Platform.
 keywords: Identidad;Identidad de origen;Servicio de identidad;Identidad de terceros;Migración de ID;ID de visitante;identidad de terceros;Cookies de tercerosEnabled;idMigrationEnabled;getIdentity;Sincronización de identidades;syncIdentity;sendEvent;identityMap;principal;ecid;espacio de nombres;id de área de nombres;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1334'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ Este documento proporciona información general sobre cómo administrar los ECID
 
 El SDK web de Platform asigna y rastrea los ECID mediante el uso de cookies, con varios métodos disponibles para configurar cómo se generan estas cookies.
 
-Cuando un nuevo usuario llega a su sitio web, el servicio de identidad de Adobe Experience Cloud intenta establecer una cookie de identificación de dispositivo para ese usuario. Para los visitantes nuevos, se genera un ECID que se devuelve en la primera respuesta de Adobe Experience Platform Edge Network. Para los visitantes repetidos, el ECID se recupera del `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` y se añade a la carga útil.
+Cuando un nuevo usuario llega a su sitio web, el servicio de identidad de Adobe Experience Cloud intenta establecer una cookie de identificación de dispositivo para ese usuario. Para los visitantes nuevos, se genera un ECID que se devuelve en la primera respuesta de Adobe Experience Platform Edge Network. Para los visitantes repetidos, el ECID se recupera del `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` y la red perimetral la agrega a la carga útil.
 
-Una vez configurada la cookie que contiene el ECID, cada solicitud posterior generada por el SDK web de la plataforma incluirá el ECID.
+Una vez configurada la cookie que contiene el ECID, cada solicitud posterior generada por el SDK web incluirá un ECID codificado en la variable `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie.
 
 Al utilizar cookies para la identificación de dispositivos, tiene dos opciones para interactuar con la red perimetral:
 
