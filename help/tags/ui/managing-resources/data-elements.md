@@ -1,10 +1,11 @@
 ---
 title: Elementos de datos
 description: Los Data Elements son los componentes básicos del diccionario de datos (o mapa de datos). Utilice Data Elements para recopilar, organizar y entregar datos a través de la tecnología de marketing y publicidad.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
+source-git-commit: af9a5118f3633c132dd88ab659f570c9136b12e1
 workflow-type: tm+mt
 source-wordcount: '1631'
-ht-degree: 78%
+ht-degree: 98%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 78%
 
 Los Data Elements son los componentes básicos del diccionario de datos (o mapa de datos). Utilice Data Elements para recopilar, organizar y entregar datos a través de la tecnología de marketing y publicidad.
 
-Un solo elemento de datos es una variable cuyo valor puede asignarse a cadenas de consulta, URL, valores de cookies, variables JavaScript, etc. Puede hacer referencia a este valor por su nombre de variable en todo Adobe Experience Platform. Esta colección de Data Elements se convierte en el diccionario de los datos definidos que puede utilizar para crear reglas (eventos, condiciones y acciones). Este diccionario de datos se comparte entre etiquetas para utilizarlo con cualquier extensión agregada a su propiedad.
+Un solo elemento de datos es una variable cuyo valor puede asignarse a cadenas de consulta, URL, valores de cookies, variables JavaScript, etc. Puede hacer referencia a este valor por su nombre de variable en Adobe Experience Platform. Esta colección de Data Elements se convierte en el diccionario de los datos definidos que puede utilizar para crear reglas (eventos, condiciones y acciones). Este diccionario de datos se comparte entre etiquetas para utilizarlo con cualquier extensión agregada a su propiedad.
 
 >[!IMPORTANT]
 >
@@ -26,7 +27,7 @@ Utilice los Data Elements tan ampliamente como pueda mediante la creación de re
 
 El concepto de Data Elements reutilizables es muy eficiente y debe usarse como práctica recomendada.
 
-Por ejemplo, si tiene alguna forma particular de referirse a nombres de páginas o ID de productos o de obtener información de parámetros de cadena de consulta de un vínculo de marketing de un afiliado o de [!DNL AdWords], entre otras cosas, puede crear un diccionario de datos (elementos de datos) recopilando información de su fuente y utilizando estos datos en diversas reglas de etiquetas.
+Por ejemplo, si tiene alguna forma particular de referirse a nombres de páginas o ID de productos o de obtener información de parámetros de cadenas de consulta de un vínculo de marketing de afiliados o de [!DNL AdWords], entre otras cosas, puede crear un diccionario de datos (elementos de datos) recopilando información de su fuente y utilizando estos datos en diversas reglas de etiquetado.
 
 Si utilizamos los nombres de páginas como ejemplo, supongamos que utiliza un esquema de nombre de página específico haciendo referencia a una capa de datos, al elemento `document.title` o a una etiqueta de título del sitio web. Las etiquetas de Adobe Experience Platform permiten crear un elemento de datos como único punto de referencia para ese punto de datos en particular. A continuación, puede utilizar este elemento de datos en cualquier regla que deba hacer referencia al nombre de página. Si, por algún motivo, en el futuro decide cambiar la forma de hacer referencia a ese nombre de página (por ejemplo, hasta ahora ha hecho referencia a `document.title`, pero ahora quiere hacer referencia a una capa de datos específica), no es necesario que edite las distintas reglas para cambiar la referencia. Simplemente debe cambiar la referencia una vez en el elemento de datos y todas las reglas que hagan referencia a ese elemento de datos se actualizarán automáticamente.
 
@@ -59,7 +60,7 @@ Los Data Elements constituyen los bloques generadores de las reglas. Los Data El
 1. Asigne un nombre al elemento de datos.
 1. Seleccione una extensión y un tipo.
 
-   Los tipos de Data Elements disponibles están determinados por la extensión. Para obtener información sobre los tipos disponibles con la extensión de etiqueta principal, consulte [Tipos de elementos de datos](data-elements.md#types-of-data-elements).
+   Los tipos de Data Elements disponibles están determinados por la extensión. Para obtener información sobre los tipos disponibles con la extensión principal de etiqueta, consulte [Tipos de elementos de datos](data-elements.md#types-of-data-elements).
 
 1. Proporcione toda la información solicitada sobre el tipo elegido en los campos proporcionados.
 1. (Opcional) Introduzca un valor predeterminado.
@@ -82,11 +83,11 @@ Los Data Elements constituyen los bloques generadores de las reglas. Los Data El
       * Los valores persisten en el almacenamiento de sesiones del explorador hasta que se cierra la pestaña.
       * Disponible durante toda la visita al sitio.
    * Visitor
-      * El valor se almacena indefinidamente en el almacenamiento local del explorador.
+      * El valor se guarda de forma indefinida en el almacenamiento local del explorador.
 
 1. Seleccione **[!UICONTROL Guardar]**.
 
-Al crear o editar elementos, puede guardar y desarrollar en su [biblioteca activa](../publishing/libraries.md#active-library). Esto guarda inmediatamente el cambio en la biblioteca y ejecuta una compilación. Se muestra el estado de la compilación. También puede crear una nueva biblioteca desde la lista desplegable [!UICONTROL Active Library].
+Al crear o editar elementos, puede guardar y desarrollar en su [biblioteca activa](../publishing/libraries.md#active-library). Esto guarda inmediatamente el cambio en la biblioteca y ejecuta una compilación. Se muestra el estado de la compilación. También puede crear una nueva biblioteca desde la lista desplegable [!UICONTROL Biblioteca activa].
 
 ## Tipos de Data Elements {#types-of-data-elements}
 
@@ -119,7 +120,7 @@ if (window.location.pathname == '/') {
 }
 ```
 
-El código personalizado puede aceptar el objeto `event` de la regla de llamada como argumento. Esto permite que el código lea su valor allí.
+El código personalizado puede aceptar el objeto `event` de la regla de llamada como argumento. Permite que el código lea el valor allí.
 
 **Ejemplo:**
 
@@ -131,11 +132,16 @@ return eventType; // if this data element is called from a "DOM Ready" event, th
 
 Puede utilizar esto en los scripts personalizados con la sintaxis del objeto `_satellite`:
 
-`_satellite.getVar('data element name', event);`
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
-Al utilizar la notación `%..%`, solo es necesario especificar el nombre del elemento de datos. No necesita especificar `event`.
+Cuando se usa un porcentaje (`%`), solo es necesario especificar el nombre del elemento de datos. No necesita especificar `event`.
 
-`%data element name%`
+```text
+%data element name%
+```
 
 ### Atributo DOM
 
@@ -155,7 +161,7 @@ Obtener el valor de:
 
 Es posible hacer referencia a cualquier objeto JavaScript o variable mediante el campo de ruta.
 
-Si desea recopilar variables de JavaScript o propiedades de objeto en el marcado y utilizarlas con cualquiera de las extensiones o reglas, se pueden utilizar elementos de datos para capturar estos valores. De este modo, puede hacer referencia al elemento de datos mediante las reglas y, en caso de que la fuente de datos cambie en algún momento, solo deberá cambiar la referencia a la fuente (el elemento de datos) en la interfaz de usuario de la recopilación de datos.
+Si desea recopilar variables de JavaScript o propiedades de objeto en el marcado y utilizarlas con cualquiera de las extensiones o reglas, se pueden utilizar elementos de datos para capturar estos valores. De esta forma, puede hacer referencia al elemento de datos mediante las reglas y, en caso de que la fuente de datos cambie en algún momento, solo deberá cambiar la referencia a la fuente (el elemento de datos) en un lugar de la recopilación de datos de la IU.
 
 Por ejemplo, supongamos que el marcado contiene una variable de JavaScript llamada “`Page_Name`” similar a la que se muestra a continuación:
 
@@ -230,7 +236,7 @@ El almacenamiento de sesión es similar al almacenamiento local, excepto que los
 
 ### Comportamiento de los visitantes
 
-De forma similar a Información de página , este elemento de datos utiliza tipos de comportamiento comunes para enriquecer la lógica dentro de las reglas u otras soluciones de Platform.
+De manera similar a Información de página, este elemento de datos utiliza tipos de comportamiento comunes para enriquecer la lógica dentro de las reglas u otras soluciones de la plataforma.
 
 Seleccione uno de los siguientes atributos de comportamiento del visitante:
 
@@ -247,7 +253,7 @@ Algunos casos de uso común son:
 * Mostrar una encuesta después de que un visitante haya estado en el sitio durante cinco minutos
 * Si ésta es la página de aterrizaje de la visita, rellene una métrica de [!DNL Analytics]
 * Mostrar una oferta nueva al visitante después de un determinado número de sesiones
-* Mostrar un registro al boletín si se trata de un visitante nuevo
+* Mostrar una sugerencia de suscripción a la newsletter a los nuevos visitantes
 
 ## Elementos de datos integrados
 
