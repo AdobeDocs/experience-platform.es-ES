@@ -2,10 +2,10 @@
 title: Referencia de objeto satelital
 description: Obtenga información sobre el objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 47391de09bcad1dc99340caa84cdfff13e9f5237
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 83%
+source-wordcount: '1291'
+ht-degree: 79%
 
 ---
 
@@ -49,7 +49,16 @@ var product = _satellite.getVar('product');
 
 En el ejemplo proporcionado, si existe un elemento de datos con un nombre que coincida, se devuelve el valor del elemento de datos. Si no existe ningún elemento de datos que coincida, se verifica si se ha establecido previamente una variable personalizada con un nombre que coincida usando `_satellite.setVar()`. Si se encuentra una variable personalizada que coincida, se devuelve su valor.
 
-Tenga en cuenta que puede utilizar la sintaxis `%%` para hacer referencia a las variables en muchos campos de formulario de la interfaz de usuario de recopilación de datos, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, al usar %product% se accede al valor del elemento de datos del producto o de la variable personalizada.
+>[!NOTE]
+>
+>Puede utilizar el porcentaje (`%`) para hacer referencia a variables para muchos campos de formulario en la interfaz de usuario de la recopilación de datos, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, al usar `%product%` accederá al valor del elemento de datos del producto o de la variable personalizada.
+
+Cuando un evento déclencheur una regla, puede pasar la regla correspondiente `event` a `_satellite.getVar()` así:
+
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
 ## `setVar`
 
@@ -133,11 +142,11 @@ Registra una advertencia en la consola del explorador. El mensaje aparece indepe
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contiene funciones para leer y escribir cookies. Es una copia expuesta de la biblioteca de terceros js-cookie. Para obtener más información sobre el uso más avanzado de esta biblioteca, consulte la [documentación de js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contiene funciones para leer y escribir cookies. Es una copia expuesta de la biblioteca de terceros js-cookie. Para obtener más información sobre el uso avanzado de esta biblioteca, consulte la [documentación de js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Configurar una cookie {#cookie-set}
 
-Para configurar una cookie, utilice `_satellite.cookie.set()`.
+Para configurar una cookie, use `_satellite.cookie.set()`.
 
 **Código**
 
@@ -147,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->En el antiguo método [`setCookie`](#setCookie) de configuración de cookies, el tercer argumento (opcional) de esta llamada a la función era un entero que indicaba el tiempo de vida (TTL) de la cookie en días. En este nuevo método, se acepta un objeto &quot;attributes&quot; como tercer argumento. Para establecer un TTL para una cookie mediante el nuevo método, debe proporcionar una propiedad `expires` en el objeto attributes y establecerla en el valor deseado. Esto se muestra en el siguiente ejemplo.
+>En el [`setCookie`](#setCookie) para configurar cookies, el tercer argumento (opcional) de esta llamada a la función era un entero que indicaba el tiempo de vida (TTL) de la cookie en días. En este nuevo método, se acepta un objeto &quot;attributes&quot; como tercer argumento. Para configurar un TTL para una cookie mediante el nuevo método, debe proporcionar una variable `expires` en el objeto attributes y establézcalo en el valor deseado. Esto se muestra en el siguiente ejemplo.
 
 **Ejemplo**
 
@@ -247,7 +256,7 @@ El objeto contiene las siguientes propiedades:
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | ID del entorno. |
-| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging` y `production`. |
+| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging`y `production`. |
 
 ## `notify`
 
