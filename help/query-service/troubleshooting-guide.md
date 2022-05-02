@@ -5,9 +5,9 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene información sobre los códigos de error comunes que encuentra y las posibles causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '3413'
+source-wordcount: '3516'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Esta sección incluye información sobre rendimiento, límites y procesos.
 
 ### ¿Puedo usar Postman para la API del servicio de consulta?
 
-+++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante Postman (una aplicación gratuita de terceros). Observe el [Guía de configuración de Postman](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para su uso con Postman. Consulte la documentación oficial para [instrucciones sobre cómo iniciar, ejecutar y compartir colecciones de Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante Postman (una aplicación gratuita de terceros). Observe el [Guía de configuración de Postman](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en la consola de Adobe Developer y adquirir todas las credenciales necesarias para su uso con Postman. Consulte la documentación oficial para [instrucciones sobre cómo iniciar, ejecutar y compartir colecciones de Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### ¿Hay un límite en el número máximo de filas devueltas desde una consulta a través de la interfaz de usuario?
@@ -257,6 +257,8 @@ SELECT count(1) FROM myTableName
 +++Respuesta Primero, compruebe los registros para averiguar los detalles del error. La sección Preguntas frecuentes de [búsqueda de errores dentro de los registros](#error-logs) proporciona más información sobre cómo hacerlo.
 
 También debe consultar la documentación para obtener instrucciones sobre cómo realizar [consultas programadas en la interfaz de usuario](./ui/user-guide.md#scheduled-queries) y [la API](./api/scheduled-queries.md).
+
+A continuación se muestra una lista de consideraciones para las consultas programadas al usar la variable [!DNL Query Editor]. No se aplican al [!DNL Query Service] API:<br/>Solo puede añadir una programación a una consulta que ya se haya creado, guardado y ejecutado.<br/>You **cannot** agregue una programación a una consulta parametrizada.<br/>Consultas programadas **cannot** contiene un bloque anónimo.<br/>Solo se puede programar **one** plantilla de consulta mediante la interfaz de usuario. Si desea agregar programaciones adicionales a una plantilla de consulta, deberá utilizar la API . Si ya se ha agregado una programación mediante la API , no podrá agregar más programaciones mediante la interfaz de usuario de .
 +++
 
 ### ¿Qué significa el error &quot;Límite de sesión alcanzado&quot;?

@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Editor de consultas
 topic-legacy: query editor
 description: El Editor de consultas es una herramienta interactiva que proporciona el servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente en la interfaz de usuario del Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5e0db96b833cabd0330b1073a2ab14d4528c68b4
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1599'
 ht-degree: 1%
 
 ---
@@ -18,25 +18,25 @@ ht-degree: 1%
 
 Para obtener más información sobre los conceptos y las características de [!DNL Query Service], consulte la [Información general del servicio de consultas](../home.md). Para obtener más información sobre cómo navegar por la interfaz de usuario del servicio de consulta en [!DNL Platform], consulte la [Información general sobre la interfaz de usuario del servicio de consulta](./overview.md).
 
-## Primeros pasos
+## Primeros pasos {#getting-started}
 
 [!DNL Query Editor] proporciona una ejecución flexible de consultas conectándose a [!DNL Query Service], y las consultas solo se ejecutarán mientras esta conexión esté activa.
 
-### Conexión a [!DNL Query Service]
+### Conexión a [!DNL Query Service] {#connecting-to-query-service}
 
 [!DNL Query Editor] tarda unos segundos en inicializarse y conectarse a [!DNL Query Service] cuando se abra. La consola le indica cuándo está conectada, como se muestra a continuación. Si intenta ejecutar una consulta antes de que el editor se haya conectado, se retrasa la ejecución hasta que se complete la conexión.
 
 ![Imagen](../images/ui/query-editor/connect.png)
 
-### Cómo se ejecutan las consultas desde [!DNL Query Editor]
+### Cómo se ejecutan las consultas desde [!DNL Query Editor] {#run-a-query}
 
 Consultas ejecutadas desde [!DNL Query Editor] se ejecuta de forma interactiva. Esto significa que si cierra el explorador o se va, la consulta se cancela. Esto también se aplica a las consultas realizadas para generar conjuntos de datos a partir de resultados de consultas.
 
-## Creación de consultas mediante [!DNL Query Editor]
+## Creación de consultas mediante [!DNL Query Editor] {#query-authoring}
 
-Uso [!DNL Query Editor], puede escribir, ejecutar y guardar consultas para datos de experiencias del cliente. Todas las consultas ejecutadas en [!DNL Query Editor], o guardadas, están disponibles para todos los usuarios de la organización con acceso a [!DNL Query Service].
+Uso [!DNL Query Editor], puede escribir, ejecutar y guardar consultas para datos de experiencias del cliente. Todas las consultas ejecutadas o guardadas en [!DNL Query Editor] están disponibles para todos los usuarios de su organización con acceso a [!DNL Query Service].
 
-### Acceso [!DNL Query Editor]
+### Acceso [!DNL Query Editor] {#accessing-query-editor}
 
 En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Consultas]** en el menú de navegación de la izquierda para abrir [!DNL Query Service] espacio de trabajo. A continuación, seleccione **[!UICONTROL Crear consulta]** en la parte superior derecha de la pantalla para comenzar a escribir consultas. Este vínculo está disponible desde cualquiera de las páginas de la sección [!DNL Query Service] espacio de trabajo.
 
@@ -50,13 +50,13 @@ En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Consultas]** en el
 
 Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas con límites en las filas devueltas. Por ejemplo, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Después de comprobar que la consulta produce el resultado esperado, elimine los límites y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con la salida .
 
-### Herramientas de escritura en [!DNL Query Editor]
+### Herramientas de escritura en [!DNL Query Editor] {#writing-tools}
 
 - **Resaltado de sintaxis automático:** Facilita la lectura y organización de SQL.
 
 ![Imagen](../images/ui/query-editor/syntax-highlight.png)
 
-- **Autocompletar palabra clave SQL:** Comience a escribir la consulta, utilice las teclas de flecha para ir al término deseado y pulse **Entrar**.
+- **Palabra clave SQL autocompletada:** Comience a escribir la consulta, utilice las teclas de flecha para ir al término deseado y pulse **Entrar**.
 
 ![Imagen](../images/ui/query-editor/syntax-auto.png)
 
@@ -64,7 +64,7 @@ Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas 
 
 ![Imagen](../images/ui/query-editor/tables-auto.png)
 
-### Detección de errores
+### Detección de errores {#error-detection}
 
 [!DNL Query Editor] valida automáticamente una consulta a medida que la escribe, proporcionando validación SQL genérica y validación de ejecución específica. Si aparece un subrayado rojo debajo de la consulta (como se muestra en la imagen siguiente), representa un error dentro de la consulta.
 
@@ -74,7 +74,7 @@ Cuando se detectan errores, se pueden ver los mensajes de error específicos pas
 
 ![Imagen](../images/ui/query-editor/linting-error.png)
 
-### Detalles de la consulta
+### Detalles de la consulta {#query-details}
 
 Mientras está viendo una consulta en [!DNL Query Editor], el **[!UICONTROL Detalles de la consulta]** proporciona herramientas para administrar la consulta seleccionada.
 
@@ -86,9 +86,9 @@ Este panel también muestra metadatos útiles, como la última vez que se modifi
 
 ### Consultas programadas {#scheduled-queries}
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> Solo puede añadir una programación a una consulta que ya se haya creado, guardado y ejecutado. Además, **not** poder añadir una programación a una consulta parametrizada.
+>A continuación se muestra una lista de limitaciones para las consultas programadas al utilizar el Editor de consultas. No se aplican al [!DNL Query Service] API:<br/>Solo puede añadir una programación a una consulta que ya se haya creado, guardado y ejecutado.<br/>You **cannot** agregue una programación a una consulta parametrizada.<br/>Consultas programadas **cannot** contiene un bloque anónimo.
 
 Para añadir una programación a una consulta, seleccione **[!UICONTROL Agregar programación]**.
 
@@ -118,11 +118,11 @@ La página de detalles de la consulta vuelve a aparecer y ahora muestra los deta
 
 >[!NOTE]
 >
-> Solo se puede programar **one** plantilla de consulta mediante la interfaz de usuario. Si desea agregar programaciones adicionales a una plantilla de consulta, deberá utilizar la API . Si ya se ha agregado una programación mediante la API de , **not** agregar programaciones adicionales mediante la interfaz de usuario de . Si ya hay varias programaciones adjuntas a una plantilla de consulta, solo se mostrará la programación más antigua. Para aprender a añadir programaciones mediante la API, lea la [guía de extremo de consultas programadas](../api/scheduled-queries.md).
+> Solo se puede programar **one** plantilla de consulta mediante la interfaz de usuario. Si desea agregar programaciones adicionales a una plantilla de consulta, deberá utilizar la API . Si ya se ha agregado una programación mediante la API de , **not** poder agregar programaciones adicionales mediante la interfaz de usuario de . Si ya hay varias programaciones adjuntas a una plantilla de consulta, solo se mostrará la programación más antigua. Para aprender a añadir programaciones mediante la API, lea la [guía de extremo de consultas programadas](../api/scheduled-queries.md).
 >
 > Además, debe actualizar la página si desea asegurarse de que tiene el estado más reciente de la programación que está viendo.
 
-#### Eliminar una programación
+#### Eliminar una programación {#delete-schedule}
 
 Para eliminar una programación, seleccione **[!UICONTROL Eliminar una programación]**.
 
@@ -132,11 +132,11 @@ Para eliminar una programación, seleccione **[!UICONTROL Eliminar una programac
 >
 > Si desea eliminar una programación para una consulta, primero debe deshabilitarla.
 
-### Almacenamiento de consultas
+### Almacenamiento de consultas {#saving-queries}
 
 [!DNL Query Editor] proporciona una función de guardado que le permite guardar una consulta y trabajar en ella más adelante. Para guardar una consulta, seleccione **[!UICONTROL Guardar]** en la esquina superior derecha de [!DNL Query Editor]. Para poder guardar una consulta, debe proporcionarse un nombre para la consulta mediante la variable **[!UICONTROL Detalles de la consulta]** panel.
 
-### Búsqueda de consultas anteriores
+### Búsqueda de consultas anteriores {#previous-queries}
 
 Todas las consultas ejecutadas desde [!DNL Query Editor] se capturan en la tabla Registro . Puede utilizar la funcionalidad de búsqueda en la variable **[!UICONTROL Registro]** para buscar ejecuciones de consulta. Las consultas guardadas se enumeran en el **[!UICONTROL Examinar]** pestaña .
 
@@ -146,11 +146,11 @@ Consulte la [Información general sobre la interfaz de usuario del servicio de c
 >
 >El registro no guarda las consultas que no se ejecutan. Para que la consulta esté disponible en [!DNL Query Service], debe ejecutarse o guardarse en [!DNL Query Editor].
 
-## Ejecución de consultas mediante el Editor de consultas
+## Ejecución de consultas mediante el Editor de consultas {#executing-queries}
 
 Para ejecutar una consulta en [!DNL Query Editor], puede introducir SQL en el editor o cargar una consulta anterior desde el **[!UICONTROL Registro]** o **[!UICONTROL Examinar]** y seleccione **Play**. El estado de la ejecución de la consulta se muestra en la variable **[!UICONTROL Consola]** y los datos de salida se muestran en la pestaña **[!UICONTROL Resultados]** pestaña .
 
-### Consola
+### Consola {#console}
 
 La consola proporciona información sobre el estado y el funcionamiento de [!DNL Query Service]. La consola muestra el estado de conexión a [!DNL Query Service], las operaciones de consulta que se están ejecutando y los mensajes de error que resulten de esas consultas.
 
@@ -160,13 +160,13 @@ La consola proporciona información sobre el estado y el funcionamiento de [!DNL
 >
 >La consola solo muestra los errores resultantes de la ejecución de una consulta. No muestra errores de validación de consultas antes de ejecutar una consulta.
 
-### Resultados de la consulta
+### Resultados de la consulta {#query-results}
 
 Una vez finalizada la consulta, los resultados se muestran en la variable **[!UICONTROL Resultados]** junto a la pestaña **[!UICONTROL Consola]** pestaña . Esta vista muestra el resultado tabular de la consulta, mostrando hasta 100 filas. Esta vista le permite verificar que la consulta produce el resultado esperado. Para generar un conjunto de datos con la consulta, elimine los límites de las filas devueltas y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con la salida . Consulte la [tutorial generación de conjuntos de datos](./create-datasets.md) para obtener instrucciones sobre cómo generar un conjunto de datos a partir de resultados de consulta en [!DNL Query Editor].
 
 ![Imagen](../images/ui/query-editor/query-results.png)
 
-## Ejecutar consultas con [!DNL Query Service] videotutorial
+## Ejecutar consultas con [!DNL Query Service] videotutorial {#query-tutorial-video}
 
 El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente PSQL. Además, se muestran el uso de propiedades individuales en un objeto XDM, el uso de funciones definidas por Adobe y el uso de CREATE TABLE AS SELECT (CTAS).
 
