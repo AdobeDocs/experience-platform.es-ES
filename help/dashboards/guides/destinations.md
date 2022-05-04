@@ -4,9 +4,9 @@ title: Panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
@@ -39,23 +39,26 @@ Para ir al panel de destinos dentro de la interfaz de usuario de Platform, selec
 
 Puede modificar el aspecto del panel de destinos seleccionando **[!UICONTROL Modificar tablero]**. Esto le permite mover, agregar y quitar widgets del tablero, así como acceder al **[!UICONTROL Biblioteca de utilidades]** para explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
 
-Consulte la [modificación de tableros](../customize/modify.md) y [información general de la biblioteca de utilidades](../customize/widget-library.md) documentación para obtener más información.
+Consulte la [modificación de tableros](../customize/modify.md) y [Información general de la biblioteca de utilidades](../customize/widget-library.md) documentación para obtener más información.
 
 ## Widgets estándar
 
-Adobe proporciona varios widgets estándar que puede utilizar para visualizar distintas métricas relacionadas con los destinos y evaluar la integridad de los segmentos disponibles para el análisis de datos. También puede crear utilidades personalizadas para compartirlas con su organización mediante la [!UICONTROL Biblioteca de utilidades]. Para obtener más información sobre la creación de widgets personalizados, lea la [información general de la biblioteca de utilidades](../customize/widget-library.md).
+Adobe proporciona varios widgets estándar que puede utilizar para visualizar distintas métricas relacionadas con los destinos y evaluar la integridad de los segmentos disponibles para el análisis de datos. También puede crear utilidades personalizadas para compartirlas con su organización mediante la [!UICONTROL Biblioteca de utilidades]. Para obtener más información sobre la creación de widgets personalizados, lea la [Información general de la biblioteca de utilidades](../customize/widget-library.md).
 
 Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
-* [[!UICONTROL Destinos más utilizados]](#most-used-destinations)
-* [[!UICONTROL Destinos creados recientemente]](#recently-created-destinations)
+* [[!UICONTROL Most used destinations]](#most-used-destinations)
+* [[!UICONTROL Recently created destinations]](#recently-created-destinations)
 * [[!UICONTROL Segmentos activados recientemente]](#recently-activated-segments)
 * [[!UICONTROL Segmentos activados recientemente por destino]](#recently-activated-segments-by-destination)
 * [[!UICONTROL Tendencia del tamaño de la audiencia]](#audience-size-trend)
-* [[!UICONTROL Segmentos no asignados por identidad]](#unmapped-segments-by-identity)
-* [[!UICONTROL Segmentos asignados por identidad]](#mapped-segments-by-identity)
+* [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
+* [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiencias comunes]](#common-audiences)
 * [[!UICONTROL Recuento de destinos]](#destinations-count)
+* [[!UICONTROL Destination status]](#destination-status)
+* [[!UICONTROL Destinos activos por plataforma de destino]](#active-destinations-by-destination-platform)
+* [[!UICONTROL Audiencias activadas en todos los destinos]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Destinos más utilizados] {#most-used-destinations}
 
@@ -137,7 +140,7 @@ La variable **[!UICONTROL Segmentos asignados por identidad]** La utilidad resal
 
 ### Audiencias comunes
 
-La variable **[!UICONTROL Audiencias comunes]** proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable de la utilidad. La lista de segmentos se ordena según la fecha de activación. El segmento activado más recientemente se muestra en la parte superior.
+La variable **[!UICONTROL Audiencias comunes]** proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable de la utilidad. La lista de segmentos se ordena según la fecha de activación. The most recently activated segment is displayed at the top.
 
 La variable [!UICONTROL TAMAÑO DE LA AUDIENCIA] proporciona el recuento total de perfiles de cada segmento enumerado.
 
@@ -153,9 +156,9 @@ Todos los tamaños de audiencia del sistema se ordenan de un tamaño de audienci
 
 Si el recuento de perfiles asignado a un segmento no es una desviación estándar del tamaño de perfil asignado promedio durante los últimos 30 días, esto indica una anomalía en el sistema y debe investigarse.
 
-Si un segmento dentro de la variable [!UICONTROL Estado de la audiencia asignada] se está desviando por un amplio margen, debe consultar el gráfico de tendencias del tamaño de audiencia y localizar el segmento anómalo. La tendencia puede proporcionar más información sobre el estado de su segmento.
+Si un segmento dentro de la variable [!UICONTROL Estado de la audiencia asignada] se está desviando por un amplio margen, debe consultar el gráfico de tendencias del tamaño de audiencia y localizar el segmento anómalo. The trend can provide further insight into your segment&#39;s health.
 
-![El widget de estado de la audiencia asignado.](../images/destinations/mapped-audience-health.png)
+![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL Recuento de destinos] {#destinations-count}
 
@@ -164,6 +167,28 @@ La variable [!UICONTROL Recuento de destinos] proporciona el número total de ex
 Debajo del recuento total, seleccione **[!UICONTROL Destinos]** para desplazarse a la pestaña de exploración destinos . Esta página enumera todos los destinos con los que ha establecido una conexión hasta la fecha.
 
 ![La utilidad Recuento de destinos .](../images/destinations/destinations-count.png)
+
+### [!UICONTROL Estado del destino] {#destination-status}
+
+La variable [!UICONTROL Estado del destino] muestra el número total de destinos habilitados como una única métrica y utiliza un gráfico circular para ilustrar la diferencia proporcional entre los destinos habilitados y deshabilitados.
+
+Individual counts for either enabled or disabled destinations are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+
+![El widget de estado de destino.](../images/destinations/destination-status.png)
+
+### [!UICONTROL Destinos activos por plataforma de destino] {#active-destinations-by-destination-platform}
+
+El widget proporciona una tabla de dos columnas para mostrar una lista de plataformas de destino activas y el número total de destinos activos para cada plataforma de destino. La lista de plataformas de destino está ordenada de mayor a menor.
+
+![The Active destinations by destination platform widget.](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
+
+The [!UICONTROL Activated audiences across all destinations] widget provides the total number of audiences activated across all destinations in a single metric. This number is accurate to the most recent snapshot.
+
+![The Activated audiences across all destinations widget.](../images/destinations/activated-audiences-across-all-destinations.png)
+
+Select **[!UICONTROL Audiences]** to navigate to the destinations [!UICONTROL Browse] tab. Esta página proporciona una lista de todos los destinos habilitados y una variedad de métricas relevantes. Consulte la documentación para [más información sobre [!UICONTROL Examinar] ficha](../../destinations/ui/destinations-workspace.md#browse).
 
 ## Pasos siguientes
 
