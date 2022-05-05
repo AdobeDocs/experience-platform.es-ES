@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación de protocolos e ingerirlos en Platform mediante conectores de origen y API.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1293'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial trata los pasos para recuperar datos de un origen de protocolos y 
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener un ID de conexión base válido con cualquiera de los siguientes orígenes de protocolos en Platform:<ul><li>[OData genérico](../create/protocols/odata.md)</li><li>[REST genérico](../create/protocols/generic-rest.md)</li></ul>
+>Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de protocolos. Si no tiene este ID, consulte la [información general sobre fuentes](../../../home.md#protocols) para obtener una lista de orígenes de protocolos con los que puede crear una conexión base.
 
 ## Primeros pasos
 

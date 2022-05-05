@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un sistema de comercio electrónico de terceros e introducirlos en Platform mediante conectores de origen y API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1260'
+source-wordcount: '1266'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial trata los pasos para recuperar datos de una fuente de comercio ele
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener una [!DNL Shopify] ID de conexión base. Si no tiene este ID, consulte los pasos sobre cómo [cree un [!DNL Shopify] conexión base](../create/ecommerce/shopify.md) antes de intentar realizar este tutorial.
+>Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de comercio electrónico. Si no tiene este ID, consulte la [información general sobre fuentes](../../../home.md#ecommerce) para obtener una lista de los orígenes de comercio electrónico con los que puede crear una conexión base.
 
 ## Primeros pasos
 

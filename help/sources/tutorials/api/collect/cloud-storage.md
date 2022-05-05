@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un almacenamiento en la nube de terceros y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1597'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial trata los pasos para recuperar datos de un origen de almacenamient
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener un ID de conexión base válido con cualquiera de las siguientes fuentes de almacenamiento en la nube en Platform:<ul><li>[[!DNL Amazon S3]](../create/cloud-storage/s3.md)</li><li>[[!DNL Apache HDFS]](../create/cloud-storage/hdfs.md)</li><li>[[!DNL Azure Blob]](../create/cloud-storage/blob.md)</li><li>[[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)</li><li>[[!DNL FTP]](../create/cloud-storage/ftp.md)</li><li>[[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)</li><li>[[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)</li><li>[[!DNL SFTP]](../create/cloud-storage/sftp.md)</li></ul>
+>Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de almacenamiento en la nube. Si no tiene este ID, consulte la [información general sobre fuentes](../../../home.md#cloud-storage) para obtener una lista de los orígenes de almacenamiento en la nube con los que puede crear una conexión base.
 
 ## Primeros pasos
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación publicitaria de terceros e ingerirlos en Platform mediante conectores de origen y la API de servicio de flujo.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1302'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial trata los pasos para recuperar datos de una aplicación publicitar
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener una [!DNL Google AdWords] ID de conexión base. Si no tiene este ID, consulte los pasos sobre cómo [cree un [!DNL Google AdWords] conexión base](../create/advertising/ads.md) antes de intentar realizar este tutorial.
+>Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen publicitario. Si no tiene este ID, consulte la [información general sobre fuentes](../../../home.md#advertising) para obtener una lista de las fuentes publicitarias con las que puede crear una conexión base.
 
 ## Primeros pasos
 

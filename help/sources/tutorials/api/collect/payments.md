@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación de pagos e introducirlos en Platform mediante conectores de origen y API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1325'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial trata los pasos para recuperar datos de una fuente de pagos y llev
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener un ID de conexión base válido con cualquiera de las siguientes fuentes de pagos en Platform:<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
+>Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de pagos. Si no tiene este ID, consulte la [información general sobre fuentes](../../../home.md#payments) para obtener una lista de las fuentes de pagos con las que puede crear una conexión base.
 
 ## Primeros pasos
 
