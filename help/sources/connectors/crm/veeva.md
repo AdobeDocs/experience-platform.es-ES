@@ -5,9 +5,9 @@ title: Información general del conector de origen de Veeva CRM
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Veeva CRM a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ La siguiente documentación proporciona información sobre cómo conectar [!DNL 
 ## Connect [!DNL Veeva CRM] a [!DNL Platform] uso de API
 
 - [Creación de una conexión base de Veeva CRM mediante la API de servicio de flujo](../../tutorials/api/create/crm/veeva.md)
-- [Explorar la estructura de datos y el contenido de un origen de CRM mediante la API de servicio de flujo](../../tutorials/api/explore/crm.md)
+- [Exploración de tablas de datos mediante la API de servicio de flujo](../../tutorials/api/explore/tabular.md)
 - [Crear un flujo de datos para un origen CRM mediante la API de servicio de flujo](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Veeva CRM] a [!DNL Platform] uso de la interfaz de usuario

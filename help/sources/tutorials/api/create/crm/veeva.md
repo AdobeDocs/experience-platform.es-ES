@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Veeva CRM mediante la API de servicio de flujo.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -113,4 +113,9 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL Veeva CRM] conexión base utilizando [!DNL Flow Service] y han obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial mientras aprende a [explorar sistemas CRM mediante la API de servicio de flujo](../../explore/crm.md).
+## Pasos siguientes
+
+Al seguir este tutorial, ha creado un [!DNL Veeva CRM] conexión base utilizando [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
+
+* [Explorar la estructura y el contenido de las tablas de datos mediante el [!DNL Flow Service] API](../../explore/tabular.md)
+* [Cree un flujo de datos para llevar datos CRM a Platform mediante el [!DNL Flow Service] API](../../collect/crm.md)

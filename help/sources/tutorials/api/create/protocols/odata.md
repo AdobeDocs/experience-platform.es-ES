@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar OData genérico a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '449'
 ht-degree: 2%
 
 ---
@@ -105,4 +105,7 @@ Una respuesta correcta devuelve la conexión recién creada, incluido su identif
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL OData] conexión mediante la función [!DNL Flow Service] y han obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial mientras aprende a [explorar aplicaciones de protocolos mediante la API de servicio de flujo](../../explore/protocols.md).
+Al seguir este tutorial, ha creado un [!DNL Generic REST OData] conexión base utilizando [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
+
+* [Explorar la estructura y el contenido de las tablas de datos mediante el [!DNL Flow Service] API](../../explore/tabular.md)
+* [Cree un flujo de datos para traer los datos de protocolos a Platform usando la variable [!DNL Flow Service] API](../../collect/protocols.md)

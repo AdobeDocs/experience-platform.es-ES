@@ -5,9 +5,9 @@ title: Información general de origen de Marketing Cloud de Salesforce
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar el Marketing Cloud de Salesforce a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 6876ad592e4924dc884568899662dfa9c8eecc62
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Se debe agregar una lista de direcciones IP a una lista de permitidos antes de t
 La siguiente documentación proporciona información sobre cómo conectar [!DNL Salesforce Marketing Cloud] a Platform mediante API:
 
 * [Creación de una conexión base de Marketing Cloud de Salesforce mediante la API de servicio de flujo](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [Explorar la estructura de datos y el contenido de una fuente de automatización de marketing mediante la API de servicio de flujo](../../tutorials/api/explore/marketing-automation.md)
+* [Exploración de tablas de datos mediante la API de servicio de flujo](../../tutorials/api/explore/tabular.md)
 * [Creación de un flujo de datos para una fuente de automatización de marketing mediante la API de servicio de flujo](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connect [!DNL Salesforce Marketing Cloud] a Platform mediante la interfaz de usuario

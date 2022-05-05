@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a conectar GreenPlum a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: bdc9b78666c3f67cd8794d132515fda5698c81ac
+source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '434'
 ht-degree: 2%
 
 ---
@@ -97,4 +97,7 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL GreenPlum] conexión mediante la función [!DNL Flow Service] y han obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial mientras aprende a [explorar bases de datos mediante la API de servicio de flujo](../../explore/database-nosql.md).
+Al seguir este tutorial, ha creado un [!DNL GreenPlum] conexión base utilizando [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
+
+* [Explorar la estructura y el contenido de las tablas de datos mediante el [!DNL Flow Service] API](../../explore/tabular.md)
+* [Cree un flujo de datos para llevar los datos de la base de datos a Platform mediante el [!DNL Flow Service] API](../../collect/database-nosql.md)
