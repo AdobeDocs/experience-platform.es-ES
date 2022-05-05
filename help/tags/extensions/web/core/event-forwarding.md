@@ -3,7 +3,7 @@ title: Información general sobre la extensión del reenvío de eventos principa
 description: Obtenga información acerca de la extensión de reenvío de eventos principal en Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: d41779c5897b748130b88d3886472c7908347389
+source-git-commit: 15e7245acef1fe13a09ed0e083033b3963c444f2
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 98%
@@ -43,16 +43,16 @@ getDataElementValue('productName')
 En el código personalizado, también puede utilizar el objeto `ruleStash`.
 
 ```javascript
-arc.ruleStash: Object<string, *>`
-```
-
-```javascript
 utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` es un objeto que recopila todos los resultados de los módulos de acción.
 
 Cada extensión tiene su propia área de nombres. Por ejemplo, si la extensión tiene el nombre `send-beacon`, todos los resultados de las acciones `send-beacon` se almacenan en el área de nombres `ruleStash['send-beacon']`.
+
+```javascript
+utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
+```
 
 El área de nombres es única para cada extensión y tiene el valor `undefined` al principio.
 
