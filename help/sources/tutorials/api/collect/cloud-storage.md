@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un almacenamiento en la nube de terceros y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1549'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,9 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 
 ## Crear una conexión de origen {#source}
 
-Puede crear una conexión de origen realizando una solicitud de POST al [!DNL Flow Service] API. Una conexión de origen consiste en un ID de conexión, una ruta al archivo de datos de origen y un ID de especificación de conexión.
+Puede crear una conexión de origen realizando una solicitud de POST al `sourceConnections` punto final de [!DNL Flow Service] al proporcionar su ID de conexión base, la ruta al archivo de origen que desea introducir y el ID de especificación de conexión correspondiente de la fuente.
 
-Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
+Al crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
 
 Utilice los siguientes valores de enumeración para orígenes basados en archivos:
 
@@ -52,22 +52,13 @@ Utilice los siguientes valores de enumeración para orígenes basados en archivo
 
 Para todos los orígenes basados en tablas, establezca el valor en `tabular`.
 
-- [Crear una conexión de origen utilizando archivos delimitados personalizados](#using-custom-delimited-files)
-- [Crear una conexión de origen con archivos comprimidos](#using-compressed-files)
-
 **Formato de API**
 
 ```http
 POST /sourceConnections
 ```
 
-### Crear una conexión de origen utilizando archivos delimitados personalizados {#using-custom-delimited-files}
-
 **Solicitud**
-
-Puede introducir un archivo delimitado con un delimitador personalizado especificando un `columnDelimiter` como propiedad. Cualquier valor de carácter único es un delimitador de columna permitido. Si no se proporciona, una coma `(,)` se utiliza como valor predeterminado.
-
-La siguiente solicitud de ejemplo crea una conexión de origen para un tipo de archivo delimitado mediante valores separados por tabuladores.
 
 ```shell
 curl -X POST \
@@ -78,16 +69,20 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connection for delimited files",
-        "description": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud Storage source connection",
+        "description: "Source connection for a cloud storage source",
+        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
         "data": {
             "format": "delimited",
-            "columnDelimiter": "\t"
+            "properties": {
+                "columnDelimiter": "{COLUMN_DELIMITER}",
+                "encoding": "{ENCODING}"
+                "compressionType": "{COMPRESSION_TYPE}"
+            }
         },
         "params": {
-            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
-            "recursive": "true"
+            "path": "/acme/summerCampaign/account.csv",
+            "type": "file"
         },
         "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -98,69 +93,14 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `baseConnectionId` | ID de conexión único del sistema de almacenamiento en la nube de terceros al que está accediendo. |
-| `data.format` | Un valor de enumeración que define el atributo de formato de datos. |
-| `data.columnDelimiter` | Puede utilizar cualquier delimitador de columna de carácter único para recopilar archivos planos. Esta propiedad solo es necesaria al introducir archivos CSV o TSV. |
+| `baseConnectionId` | El ID de conexión base del origen de almacenamiento en la nube. |
+| `data.format` | El formato de los datos que desea traer a Platform. Los valores admitidos son: `delimited`, `JSON`y `parquet`. |
+| `data.properties` | (Opcional) Conjunto de propiedades que puede aplicar a los datos al crear una conexión de origen. |
+| `data.properties.columnDelimiter` | (Opcional) Un delimitador de columna de un solo carácter que puede especificar al recopilar archivos planos. Cualquier valor de carácter único es un delimitador de columna permitido. Si no se proporciona, una coma (`,`) se utiliza como valor predeterminado. **Nota**: La variable `columnDelimiter` solo se puede utilizar al ingerir archivos delimitados. |
+| `data.properties.encoding` | (Opcional) Una propiedad que define el tipo de codificación que se utilizará al ingerir los datos en Platform. Los tipos de codificación admitidos son: `UTF-8` y `ISO-8859-1`. **Nota**: La variable `encoding` solo está disponible al introducir archivos CSV delimitados. Otros tipos de archivo se incorporarán con la codificación predeterminada, `UTF-8`. |
+| `data.properties.compressionType` | (Opcional) Una propiedad que define el tipo de archivo comprimido que se va a introducir. Los tipos de archivo comprimido admitidos son: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`y `tar`. **Nota**: La variable `compressionType` solo se puede utilizar al introducir archivos delimitados o JSON. |
 | `params.path` | Ruta del archivo de origen al que está accediendo. |
-| `connectionSpec.id` | El ID de especificación de conexión asociado al sistema de almacenamiento en la nube de terceros específico. Consulte la [apéndice](#appendix) para obtener una lista de ID de especificaciones de conexión. |
-
-**Respuesta**
-
-Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada. Este ID es necesario en un paso posterior para crear un flujo de datos.
-
-```json
-{
-    "id": "26b53912-1005-49f0-b539-12100559f0e2",
-    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
-}
-```
-
-### Crear una conexión de origen con archivos comprimidos {#using-compressed-files}
-
-**Solicitud**
-
-También puede introducir archivos JSON comprimidos o delimitados especificando su `compressionType` como propiedad. La lista de tipos de archivos comprimidos admitidos es:
-
-- `bzip2`
-- `gzip`
-- `deflate`
-- `zipDeflate`
-- `tarGzip`
-- `tar`
-
-La siguiente solicitud de ejemplo crea una conexión de origen para un archivo delimitado comprimido usando una `gzip` tipo de archivo.
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud storage source connection for compressed files",
-        "description": "Cloud storage source connection for compressed files",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "compressionType": "gzip"
-            }
-        },
-        "params": {
-            "path": "/compressed/files.gzip"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-     }'
-```
-
-| Propiedad | Descripción |
-| --- | --- |
-| `data.properties.compressionType` | Determina el tipo de archivo comprimido para la ingesta. Esta propiedad solo es necesaria al introducir archivos JSON comprimidos o delimitados. |
+| `connectionSpec.id` | El ID de especificación de conexión asociado al origen de almacenamiento en la nube específico. Consulte la [apéndice](#appendix) para obtener una lista de ID de especificaciones de conexión. |
 
 **Respuesta**
 
