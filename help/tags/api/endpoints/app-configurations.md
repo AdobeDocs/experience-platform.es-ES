@@ -1,7 +1,8 @@
 ---
 title: Extremo de las configuraciones de aplicación
 description: Aprenda a realizar llamadas al extremo /app_configurations en la API de Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 99%
@@ -45,7 +46,7 @@ curl -X GET \
   https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d/app_configurations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -121,7 +122,7 @@ curl -X GET \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -186,7 +187,7 @@ curl -X POST \
   https://reactor.adobe.io/companies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -279,7 +280,7 @@ curl -X PUT \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -360,7 +361,7 @@ curl -X DELETE \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Respuesta**

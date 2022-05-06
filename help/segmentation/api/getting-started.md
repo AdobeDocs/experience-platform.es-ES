@@ -5,7 +5,7 @@ title: Introducción a la API del servicio de segmentación
 topic-legacy: developer guide
 description: La siguiente documentación proporciona información adicional que debe conocer para trabajar correctamente con la API de segmentación.
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 1%
@@ -35,7 +35,7 @@ La documentación de la API también requiere que haya completado la [tutorial d
 
 - Autorización: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 

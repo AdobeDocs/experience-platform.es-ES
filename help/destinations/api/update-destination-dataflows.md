@@ -5,7 +5,8 @@ title: Actualización de flujos de datos de destino mediante la API de servicio 
 topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y eliminar segmentos y atributos mediante la API de servicio de flujo.
-source-git-commit: 829c3516ff5e823d96281bf6d3c773f598218750
+exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2136'
 ht-degree: 2%
@@ -41,7 +42,7 @@ Para realizar llamadas a las API de Platform, primero debe completar la variable
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Todos los recursos del Experience Platform, incluidos los que pertenecen a [!DNL Flow Service], están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
@@ -78,7 +79,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -99,7 +100,7 @@ Una respuesta correcta devuelve los detalles actuales del flujo de datos, inclui
          "updatedClient":"{UPDATED_CLIENT}",
          "sandboxId":"{SANDBOX_ID}",
          "sandboxName":"prod",
-         "imsOrgId":"{IMS_ORG}",
+         "imsOrgId":"{ORG_ID}",
          "name":"2021 winter campaign",
          "description":"ACME company holiday campaign for high fidelity customers",
          "flowSpec":{
@@ -366,7 +367,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -421,7 +422,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=enable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -432,7 +433,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=disable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -466,7 +467,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -536,7 +537,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -597,7 +598,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -658,7 +659,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -712,7 +713,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[

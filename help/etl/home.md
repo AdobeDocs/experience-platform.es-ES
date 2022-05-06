@@ -5,7 +5,7 @@ title: Desarrollo de integraciones de ETL para Adobe Experience Platform
 topic-legacy: overview
 description: La guía de integración de ETL describe los pasos generales para crear conectores seguros y de alto rendimiento para el Experience Platform y la ingesta de datos en Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '4075'
 ht-degree: 1%
@@ -25,11 +25,11 @@ La guía de integración de ETL describe los pasos generales para crear conector
 
 Esta guía también incluye ejemplos de llamadas a la API para utilizar al diseñar un conector de ETL, con vínculos a documentación que describe cada [!DNL Experience Platform] y uso de su API, en más detalle.
 
-Una integración de muestra está disponible en [!DNL GitHub] a través de la variable [Código de referencia de la integración del ecosistema ETL](https://github.com/adobe/acp-data-services-etl-reference) en el [!DNL Apache] Versión de licencia 2.0.
+A sample integration is available on [!DNL GitHub] via the [ETL Ecosystem Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) under the [!DNL Apache] License Version 2.0.
 
 ## Flujo de trabajo
 
-El siguiente diagrama de flujo de trabajo proporciona una descripción general de alto nivel para la integración de componentes de Adobe Experience Platform con una aplicación y un conector de ETL.
+The following workflow diagram provides a high-level overview for the integration of Adobe Experience Platform components with an ETL application and connector.
 
 ![](images/etl.png)
 
@@ -40,11 +40,11 @@ Hay varios componentes de Experience Platform involucrados en las integraciones 
 - **Sistema Identity Management de Adobe (IMS)** : proporciona un marco para la autenticación en los servicios de Adobe.
 - **Organización IMS** - Una entidad corporativa que puede poseer o licenciar productos y servicios y permitir el acceso a sus miembros.
 - **Usuario IMS** - Miembros de una organización IMS. La relación entre Organización y Usuario es de varios a muchos.
-- **[!DNL Sandbox]** - Una partición virtual [!DNL Platform] por ejemplo, para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
-- **Detección de datos** - Registra los metadatos de datos introducidos y transformados en [!DNL Experience Platform].
+- **[!DNL Sandbox]** - A virtual partition a single [!DNL Platform] instance, to help develop and evolve digital experience applications.
+- **Data Discovery** - Records the metadata of ingested and transformed data in [!DNL Experience Platform].
 - **[!DNL Data Access]** : proporciona a los usuarios una interfaz para acceder a sus datos en [!DNL Experience Platform].
-- **[!DNL Data Ingestion]** - Inserta datos en [!DNL Experience Platform] con [!DNL Data Ingestion] API.
-- **[!DNL Schema Registry]** - Define y almacena un esquema que describe la estructura de datos a utilizar en [!DNL Experience Platform].
+- **[!DNL Data Ingestion]** – Pushes data to [!DNL Experience Platform] with [!DNL Data Ingestion] APIs.
+- **[!DNL Schema Registry]** - Defines and stores schema that describe the structure of data to be used in [!DNL Experience Platform].
 
 ## Introducción a [!DNL Experience Platform] API
 
@@ -60,7 +60,7 @@ Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
@@ -123,7 +123,7 @@ GET /catalog/dataSets?{filter1}={value1},{value2}&{filter2}={value3}
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&properties=name,description,schemaRef" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
@@ -164,15 +164,15 @@ La respuesta incluye tres (`limit=3`) conjuntos de datos que muestran &quot;name
 
 ### Ver esquema del conjunto de datos
 
-La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene una URI que hace referencia al esquema XDM en el que se basa el conjunto de datos. El esquema XDM (&quot;schemaRef&quot;) representa todos los campos potenciales que podría utilizar el conjunto de datos, no necesariamente los campos que se están utilizando (consulte &quot;observableSchema&quot; más adelante).
+La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene una URI que hace referencia al esquema XDM en el que se basa el conjunto de datos. The XDM schema (&quot;schemaRef&quot;) represents all potential fields that could be used by the dataset, not necessarily the fields that are being used (see &quot;observableSchema&quot; below).
 
 El esquema XDM es el esquema que se utiliza cuando se necesita presentar al usuario una lista de todos los campos disponibles en los que se puede escribir.
 
-El primer valor &quot;schemaRef.id&quot; en el objeto de respuesta anterior (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) es un URI que señala a un esquema XDM específico en la variable [!DNL Schema Registry]. El esquema se puede recuperar realizando una solicitud de búsqueda (GET) al [!DNL Schema Registry] API.
+The first &quot;schemaRef.id&quot; value in the previous response object (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) is a URI that points to a specific XDM schema in the [!DNL Schema Registry]. The schema can be retrieved by making a lookup (GET) request to the [!DNL Schema Registry] API.
 
 >[!NOTE]
 >
->La propiedad &quot;schemaRef&quot; reemplaza la propiedad ahora obsoleta &quot;schema&quot; . Si &quot;schemaRef&quot; está ausente del conjunto de datos o no contiene un valor, deberá comprobar la presencia de una propiedad &quot;schema&quot;. Esto se puede hacer reemplazando &quot;schemaRef&quot; por &quot;schema&quot; en la variable `properties` parámetro de consulta en la llamada anterior. Encontrará más información sobre la propiedad &quot;schema&quot; en la [Propiedad &quot;schema&quot; del conjunto de datos](#dataset-schema-property-deprecated---eol-2019-05-30) que sigue.
+>La propiedad &quot;schemaRef&quot; reemplaza la propiedad ahora obsoleta &quot;schema&quot; . If &quot;schemaRef&quot; is absent from the dataset or does not contain a value, you will need to check for the presence of a &quot;schema&quot; property. This could be done by replacing &quot;schemaRef&quot; with &quot;schema&quot; in the `properties` query parameter in the previous call. More details on the &quot;schema&quot; property are available in the [Dataset &quot;schema&quot; Property](#dataset-schema-property-deprecated---eol-2019-05-30) section that follows.
 
 **Formato de API**
 
@@ -189,12 +189,12 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F274f17bc5807ff307a046bab1489fb18 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
 ```
 
-El formato de respuesta depende del tipo de encabezado Accept enviado en la solicitud. Las solicitudes de búsqueda también requieren un `version` se incluya en el encabezado Accept . La siguiente tabla describe los encabezados Accept disponibles para las búsquedas:
+The response format depends on the type of Accept header sent in the request. Las solicitudes de búsqueda también requieren un `version` se incluya en el encabezado Accept . La siguiente tabla describe los encabezados Accept disponibles para las búsquedas:
 
 | Accept | Descripción |
 | ------ | ----------- |
@@ -241,7 +241,7 @@ GET /catalog/{"schema" property without the "@"}
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/person?expansion=xdm" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -308,7 +308,7 @@ GET /catalog/dataSets?limit={value}&properties={value}
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=1&properties=files" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
@@ -339,7 +339,7 @@ GET /catalog/dataSets/{DATASET_ID}/views/{VIEW_ID}/files
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files" \
   -H "Accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -354,7 +354,7 @@ La respuesta incluye el ID del archivo del conjunto de datos como propiedad de n
     "194e89b976494c9c8113b968c27c1472-1": {
         "batchId": "194e89b976494c9c8113b968c27c1472",
         "dataSetViewId": "5bf479a654f52014cfffe7f1",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "availableDates": {},
         "createdUser": "{USER_ID}",
         "createdClient": "{API_KEY}",
@@ -366,7 +366,7 @@ La respuesta incluye el ID del archivo del conjunto de datos como propiedad de n
     "14d5758c107443e1a83c714e56ca79d0-1": {
         "batchId": "14d5758c107443e1a83c714e56ca79d0",
         "dataSetViewId": "5bf479a654f52014cfffe7f1",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "availableDates": {},
         "createdUser": "{USER_ID}",
         "createdClient": "{API_KEY}",
@@ -378,7 +378,7 @@ La respuesta incluye el ID del archivo del conjunto de datos como propiedad de n
     "ea40946ac03140ec8ac4f25da360620a-1": {
         "batchId": "ea40946ac03140ec8ac4f25da360620a",
         "dataSetViewId": "5bf479a654f52014cfffe7f1",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "availableDates": {},
         "createdUser": "{USER_ID}",
         "createdClient": "{API_KEY}",
@@ -406,7 +406,7 @@ GET /export/files/{DATASET_FILE_ID}
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac03140ec8ac4f25da360620a-1" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -442,7 +442,7 @@ GET /export/files/{FILE_ID}?path={FILE_NAME}.{FILE_FORMAT}
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac03140ec8ac4f25da360620a-1?path=samplefile.parquet" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -471,7 +471,7 @@ GET /catalog/dataSets/{DATASET_ID}
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3da7d0c00000798f68" \
 -H "accept: application/json" \
--H "x-gw-ims-org-id: {IMS_ORG}" \
+-H "x-gw-ims-org-id: {ORG_ID}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
 -H "x-api-key: {API_KEY}"
@@ -514,7 +514,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
   -H "Accept: application/json" \
   -H "Authorization:Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
@@ -528,7 +528,7 @@ Una vez que tenga el ID del lote que está buscando (`{BATCH_ID}`), es posible r
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/files" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -543,7 +543,7 @@ Uso del ID exclusivo de un archivo (`{FILE_ID`), el [[!DNL Data Access API]](htt
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "x-api-key: {API_KEY}"
 ```
@@ -559,7 +559,7 @@ La variable [[!DNL Data Access API]](https://www.adobe.io/experience-platform-ap
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FILE_ID}?path=filename1.csv" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "x-api-key: {API_KEY}"
 ```
@@ -587,7 +587,7 @@ Una vez procesados los datos, la herramienta ETL vuelve a escribir los datos en 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
@@ -609,7 +609,7 @@ Entrada de datos [!DNL Experience Platform] debe escribirse en forma de archivos
 ```shell
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/dataSets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id:{IMS_ORG}" \
+  -H "x-gw-ims-org-id:{ORG_ID}" \
   -H "Authorization:Bearer ACCESS_TOKEN" \
   -H "x-api-key: API_KEY" \
   -H "content-type: application/octet-stream" \
@@ -626,7 +626,7 @@ Los datos se dirigen primero a la ubicación de ensayo de Adobe Experience Platf
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization:Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -647,7 +647,7 @@ Antes de ejecutar nuevas tareas en la herramienta ETL, debe asegurarse de que el
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&sort=desc:created" \
   -H "Accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -659,7 +659,7 @@ Se pueden programar nuevas tareas si el valor anterior de &quot;estado&quot; del
 
 ```json
 "{BATCH_ID}": {
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1494349962314,
     "createdClient": "{API_KEY}",
     "createdUser": "CLIENT_USER_ID@AdobeID",
@@ -681,7 +681,7 @@ Se puede recuperar un estado de lote individual mediante la variable [[!DNL Cata
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
   -H "Accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -693,7 +693,7 @@ La siguiente respuesta muestra un &quot;éxito&quot;:
 
 ```json
 "{BATCH_ID}": {
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1494349962314,
     "createdClient": "{API_KEY}",
     "createdUser": "{CREATED_USER}",
@@ -712,7 +712,7 @@ En caso de error, los &quot;errores&quot; se pueden extraer de la respuesta y mo
 
 ```json
 "{BATCH_ID}": {
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1494349962314,
     "createdClient": "{API_KEY}",
     "createdUser": "{CREATED_USER}",
@@ -761,13 +761,13 @@ Es posible que se requiera la reproducción por lotes y el reprocesamiento de da
 
 Para ello, los administradores de datos del cliente utilizarán la variable [!DNL Platform] IU para eliminar los lotes que contienen datos dañados. Entonces, es probable que se deba volver a ejecutar el ETL, lo que se rerellenará con los datos correctos. Si la fuente en sí tenía datos dañados, el ingeniero/administrador de datos deberá corregir los lotes de origen y volver a introducir los datos (ya sea en Adobe Experience Platform o a través de conectores ETL).
 
-En función del tipo de datos que se generen, la elección del ingeniero de datos será eliminar un único lote o todos los lotes de ciertos conjuntos de datos. Los datos se eliminarán o archivarán según [!DNL Experience Platform] directrices.
+Based upon the type of data being generated, it will be the data engineer&#39;s choice to remove a single batch or all batches from certain datasets. Los datos se eliminarán o archivarán según [!DNL Experience Platform] directrices.
 
-Es probable que la funcionalidad de ETL para depurar datos sea importante.
+It is a likely scenario that the ETL functionality to purge data will be important.
 
 Una vez finalizada la depuración, los administradores del cliente deberán reconfigurar Adobe Experience Platform para reiniciar el procesamiento de los servicios principales desde el momento en que se eliminen los lotes.
 
-## Procesamiento por lotes simultáneo
+## Concurrent batch processing
 
 A criterio del cliente, los administradores/ingenieros de datos pueden decidir extraer, transformar y cargar datos de manera secuencial o concurrente según las características de un conjunto de datos en particular. Esto también se basará en el caso de uso al que se dirige el cliente con los datos transformados.
 
@@ -785,7 +785,7 @@ Adobe Experience Platform no identifica actualmente los datos diferidos, por lo 
 
 ## Cambio
 
-| Fecha  | Acción | Descripción |
+| Fecha | Acción | Descripción |
 | ---- | ------ | ----------- |
 | 19-01-2019 | Se ha eliminado la propiedad &quot;fields&quot; de los conjuntos de datos | Anteriormente, los conjuntos de datos incluían una propiedad &quot;fields&quot; que contenía una copia del esquema. Esta capacidad ya no debe usarse. Si se encuentra la propiedad &quot;fields&quot;, se debe ignorar y usar en su lugar el &quot;observationSchema&quot; o &quot;schemaRef&quot;. |
 | 2019-03-15 | Propiedad &quot;schemaRef&quot; agregada a conjuntos de datos | La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene una URI que hace referencia al esquema XDM en el que se basa el conjunto de datos y representa todos los campos potenciales que podría utilizar el conjunto de datos. |

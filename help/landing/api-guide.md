@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;Adobe Experience Platform;g
 solution: Experience Platform
 title: Introducción a las API de Adobe Experience Platform
 topic-legacy: api guide
-description: Adobe Experience Platform proporciona servicios de API estrechamente vinculados entre sí. Esta guía contiene información sobre los servicios disponibles, los encabezados necesarios para las operaciones de CRUD, los mensajes de error, las colecciones Postman y las llamadas de API de ejemplo.
+description: Adobe Experience Platform proporciona servicios de API estrechamente vinculados entre sí. Esta guía contiene información sobre los servicios disponibles, los encabezados necesarios para las operaciones de CRUD, los mensajes de error, las colecciones de Postman y las llamadas de API de ejemplo.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: e62e4e3a12ad2a85de5b10c60fde3618cde84c4b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Para realizar correctamente llamadas a extremos de Platform, debe completar la v
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ### Encabezado de espacio aislado
 
@@ -44,11 +44,11 @@ Las API de Adobe Experience Platform emplean varias tecnologías subyacentes y s
 
 Para obtener más información sobre las tecnologías de API subyacentes que utiliza Platform, como objetos de esquema JSON de ejemplo, visite [Aspectos básicos de la API del Experience Platform](api-fundamentals.md) guía.
 
-## Colecciones Postman para API de Experience Platform
+## Colecciones de Postman para API de Experience Platform
 
-Postman es una plataforma de colaboración para el desarrollo de API que le permite configurar entornos con variables preestablecidas, compartir colecciones de API, optimizar solicitudes CRUD y mucho más. La mayoría de los servicios de API de plataforma tienen colecciones Postman que se pueden utilizar para ayudar a realizar llamadas de API.
+Postman es una plataforma de colaboración para el desarrollo de API que le permite configurar entornos con variables preestablecidas, compartir colecciones de API, optimizar solicitudes CRUD y mucho más. La mayoría de los servicios de API de plataforma tienen colecciones de Postman que se pueden utilizar para ayudar a realizar llamadas de API.
 
-Para obtener más información sobre Postman, incluida la configuración de un entorno, una lista de colecciones disponibles y cómo importar colecciones, visite [Documentación de Platform Postman](postman.md).
+Para obtener más información sobre Postman, incluido cómo configurar un entorno, una lista de colecciones disponibles y cómo importar colecciones, visite [Documentación de Platform Postman](postman.md).
 
 ## Leer llamadas de API de ejemplo {#sample-api}
 
@@ -80,7 +80,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -144,4 +144,4 @@ Este documento introdujo los encabezados requeridos, las guías disponibles y pr
 
 Para obtener respuestas a las preguntas más frecuentes, consulte la [Guía de solución de problemas de plataforma](troubleshooting.md).
 
-Para configurar un entorno Postman y explorar las colecciones Postman disponibles, consulte la [Guía de Platform Postman](postman.md).
+Para configurar un entorno de Postman y explorar las colecciones de Postman disponibles, consulte la [Guía de Platform Postman](postman.md).

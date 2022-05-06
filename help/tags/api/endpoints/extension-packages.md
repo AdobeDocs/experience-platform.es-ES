@@ -1,7 +1,8 @@
 ---
 title: Extremo de paquetes de extensiones
 description: Aprenda a realizar llamadas al extremo /extension_packages en la API de Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 73%
@@ -24,31 +25,31 @@ Un paquete de extensiones pertenece a la [empresa](./companies.md) del desarroll
 
 El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-Además de comprender cómo se realizan llamadas a la API de Reactor, también es importante comprender cómo afectan los atributos `status` y `availability` de un paquete de extensión a las acciones que se pueden realizar en él. Estas se explican en las secciones siguientes.
+Además de comprender cómo realizar llamadas a la API de Reactor, también es importante comprender cómo funciona el paquete de extensión `status` y `availability` los atributos afectan a las acciones que se pueden realizar en él. Estas se explican en las secciones siguientes.
 
 ### Estado
 
-Los paquetes de extensión tienen tres estados posibles: `pending`, `succeeded` y `failed`.
+Los paquetes de extensión tienen tres estados posibles: `pending`, `succeeded`y `failed`.
 
 | Estado | Descripción |
 | --- | --- |
-| `pending` | Cuando se crea un paquete de extensión, su `status` se establece en `pending`. Esto indica que el sistema recibió la información del paquete de extensión y que empezará a procesarse. Los paquetes de extensión con el estado `pending` no están disponibles para su uso. |
+| `pending` | Cuando se crea un paquete de extensión, su `status` está configurado como `pending`. Esto indica que el sistema recibió la información del paquete de extensión y que empezará a procesarse. Paquetes de extensión con estado de `pending` no están disponibles para su uso. |
 | `succeeded` | El estado de un paquete de extensión se actualiza a `succeeded` si completa correctamente el procesamiento. |
-| `failed` | El estado de un paquete de extensión se actualiza a `failed` si no se completa correctamente el procesamiento. Se puede actualizar un paquete de extensión con el estado `failed` hasta que el procesamiento se realice correctamente. Los paquetes de extensión con el estado `failed` no están disponibles para su uso. |
+| `failed` | El estado de un paquete de extensión se actualiza a `failed` si el procesamiento finaliza correctamente. Un paquete de extensión con el estado de `failed` se puede actualizar hasta que el procesamiento se realice correctamente. Paquetes de extensión con estado de `failed` no están disponibles para su uso. |
 
 ### Disponibilidad
 
-Hay niveles de disponibilidad para un paquete de extensión: `development`, `private` y `public`.
+Hay niveles de disponibilidad para un paquete de extensión: `development`, `private`y `public`.
 
 | Disponibilidad | Descripción |
 | --- | --- |
-| `development` | Un paquete de extensión en `development` solo es visible para la empresa que lo posee y está disponible dentro de ella. Además, solo se puede utilizar en propiedades configuradas para el desarrollo de extensiones. |
-| `private` | Un paquete de extensión `private` solo es visible para la empresa que lo posee y solo puede instalarse en las propiedades que posee la empresa. |
-| `public` | Un paquete de extensión `public` es visible y está disponible para todas las empresas y propiedades. |
+| `development` | Un paquete de extensión en `development` solo es visible para la empresa que la posee y está disponible dentro de ella. Además, solo se puede utilizar en propiedades configuradas para el desarrollo de extensiones. |
+| `private` | A `private` el paquete de extensión solo es visible para la empresa que lo posee y solo puede instalarse en las propiedades que posee la empresa. |
+| `public` | A `public` el paquete de extensión es visible y está disponible para todas las empresas y propiedades. |
 
 >[!NOTE]
 >
->Cuando se crea un paquete de extensión, `availability` se establece en `development`. Una vez finalizada la prueba, puede realizar la transición del paquete de extensión a `private` o `public`.
+>Cuando se crea un paquete de extensión, `availability` está configurado como `development`. Una vez finalizada la prueba, puede realizar la transición del paquete de extensión a `private` o `public`.
 
 ## Recuperación de una lista de paquetes de extensión {#list}
 
@@ -71,7 +72,7 @@ curl -X GET \
   https://reactor.adobe.io/extension_packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -257,7 +258,7 @@ curl -X GET \
   https://reactor.adobe.io/extension_packages/EP75db2452065b44e2b8a38ca883ce369a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -490,7 +491,7 @@ curl -X POST \
   https://reactor.adobe.io/extension_packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: multipart/form-data' \
   -F 'package=@"/Users/temp/extension-package.zip"'
 ```
@@ -727,7 +728,7 @@ curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: multipart/form-data' \
   -F 'package=@"/Users/temp/extension-package.zip"'
 ```
@@ -966,7 +967,7 @@ curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -1211,7 +1212,7 @@ curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -1302,7 +1303,7 @@ curl -X GET \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172/versions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

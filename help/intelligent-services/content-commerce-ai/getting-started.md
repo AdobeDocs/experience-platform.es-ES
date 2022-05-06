@@ -5,7 +5,7 @@ title: Introducción a Content and Commerce AI
 topic-legacy: Getting started
 description: La API de contenido y comercio utiliza API de Adobe I/O. Para realizar llamadas a las API de Adobe I/O y a la integración de la consola de E/S, primero debe completar el tutorial de autenticación.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Al completar el tutorial de autenticación, se proporcionan los valores para cad
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ## Crear un entorno de Postman (opcional)
 

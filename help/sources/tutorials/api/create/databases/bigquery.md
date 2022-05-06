@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Google BigQuery mediante la API de servicio de flujo.
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 2%
@@ -71,7 +71,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

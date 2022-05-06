@@ -1,7 +1,8 @@
 ---
 title: Extremo de perfiles
 description: Aprenda a realizar llamadas al extremo /profiles en la API de Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 97%
@@ -35,7 +36,7 @@ curl -X GET \
   https://reactor.adobe.io/profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -99,4 +100,3 @@ Una respuesta correcta devuelve los detalles del perfil.
   }
 }
 ```
-

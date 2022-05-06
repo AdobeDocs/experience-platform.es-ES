@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 9%
@@ -14,13 +14,13 @@ ht-degree: 9%
 ---
 
 
-# Autenticar y acceder a las API de Experience Platform
+# Autenticación y acceso a las API de Experience Platform
 
 Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform. Al final de este tutorial, habrá generado las siguientes credenciales que son necesarias para todas las llamadas a la API de plataforma:
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
-* `{IMS_ORG}`
+* `{ORG_ID}`
 
 Para mantener la seguridad de sus aplicaciones y usuarios, todas las solicitudes a las API de Adobe I/O deben autenticarse y autorizarse mediante estándares como OAuth y Tokens web JSON (JWT). Se utiliza un JWT junto con información específica del cliente para generar su token de acceso personal.
 
@@ -61,7 +61,7 @@ Su [!DNL Admin Console] El administrador también debe agregarle como usuario al
 >
 >Si está siguiendo este documento desde el [Guía de API del Privacy Service](../privacy-service/api/getting-started.md), ahora puede volver a esa guía para generar las credenciales de acceso exclusivas de [!DNL Privacy Service].
 
-Una vez que haya obtenido acceso de desarrollador y usuario a Platform a través de [!DNL Admin Console], el siguiente paso es generar el `{IMS_ORG}` y `{API_KEY}` credenciales en Adobe Developer Console. Estas credenciales solo deben generarse una vez y pueden reutilizarse en futuras llamadas a la API de Platform.
+Una vez que haya obtenido acceso de desarrollador y usuario a Platform a través de [!DNL Admin Console], el siguiente paso es generar el `{ORG_ID}` y `{API_KEY}` credenciales en la consola de Adobe Developer. Estas credenciales solo deben generarse una vez y pueden reutilizarse en futuras llamadas a la API de Platform.
 
 ### Agregar un Experience Platform a un proyecto
 
@@ -86,7 +86,7 @@ A partir de aquí, siga los pasos descritos en el tutorial de [adición de una A
 Una vez añadida la API al proyecto, la variable **[!UICONTROL API de Experience Platform]** para el proyecto muestra las siguientes credenciales que son necesarias en todas las llamadas a las API de Experience Platform:
 
 * `{API_KEY}` ([!UICONTROL ID del cliente])
-* `{IMS_ORG}` ([!UICONTROL ID de organización])
+* `{ORG_ID}` ([!UICONTROL ID de organización])
 
 ![](././images/api-authentication/api-key-ims-org.png)
 
@@ -118,7 +118,7 @@ La página se actualiza para mostrar el JWT generado, junto con un comando cURL 
 
 ## Generar un token de acceso
 
-Una vez que haya generado un JWT, puede utilizarlo en una llamada de API para generar su `{ACCESS_TOKEN}`. A diferencia de los valores de `{API_KEY}` y `{IMS_ORG}`, se debe generar un nuevo token cada 24 horas para continuar usando las API de Platform.
+Una vez que haya generado un JWT, puede utilizarlo en una llamada de API para generar su `{ACCESS_TOKEN}`. A diferencia de los valores de `{API_KEY}` y `{ORG_ID}`, se debe generar un nuevo token cada 24 horas para continuar usando las API de Platform.
 
 **Solicitud**
 
@@ -169,7 +169,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Respuesta**

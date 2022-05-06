@@ -3,18 +3,18 @@ keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conect
 solution: Experience Platform
 title: Crear un flujo de datos para los miembros de Mailchimp mediante la API de servicio de flujo
 topic-legacy: tutorial
-description: Obtenga información sobre cómo conectar Adobe Experience Platform a miembros de MailChimp mediante la API de servicio de flujo.
+description: Learn how to connect Adobe Experience Platform to MailChimp Members using the Flow Service API.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2500'
 ht-degree: 3%
 
 ---
 
-# Crear un flujo de datos para [!DNL Mailchimp Members] uso de la API de servicio de flujo
+# Create a dataflow for [!DNL Mailchimp Members] using the Flow Service API
 
-El siguiente tutorial le guía por los pasos para crear una conexión de origen y un flujo de datos para [!DNL Mailchimp Members] datos a Platform mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Mailchimp Members] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Requisitos previos
 
@@ -26,7 +26,7 @@ Una vez que haya recuperado su [!DNL Mailchimp] credenciales de autenticación, 
 
 Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-[!DNL Mailchimp] admite autenticación básica y código de actualización de OAuth 2. Consulte los siguientes ejemplos para obtener instrucciones sobre cómo autenticarse con cualquiera de los tipos de autenticación.
+[!DNL Mailchimp] supports both basic authentication and OAuth 2 refresh code. Consulte los siguientes ejemplos para obtener instrucciones sobre cómo autenticarse con cualquiera de los tipos de autenticación.
 
 ### Cree un [!DNL Mailchimp] conexión base con autenticación básica
 
@@ -48,7 +48,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "Mailchimp base connection with basic authentication",
@@ -77,12 +77,12 @@ curl -X POST \
 | `auth.specName` | El tipo de autenticación que utiliza para conectar el origen a Platform. |
 | `auth.params.host` | La URL raíz utilizada para conectarse a [!DNL Mailchimp] API. El formato de la dirección URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
 | `auth.params.authorizationTestUrl` | (Opcional) La URL de prueba de autorización se utiliza para validar las credenciales al crear una conexión base. Si no se proporciona, las credenciales se comprueban automáticamente durante el paso de creación de la conexión de origen. |
-| `auth.params.username` | El nombre de usuario que corresponde a su [!DNL Mailchimp] cuenta. Esto es necesario para la autenticación básica. |
+| `auth.params.username` | The username that corresponds with your [!DNL Mailchimp] account. Esto es necesario para la autenticación básica. |
 | `auth.params.password` | La contraseña que corresponde a su [!DNL Mailchimp] cuenta. Esto es necesario para la autenticación básica. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve la conexión base recién creada, incluido su identificador de conexión único (`id`). Este ID es necesario para explorar la estructura de archivos y el contenido de la fuente en el siguiente paso.
+A successful response returns the newly created base connection, including its unique connection identifier (`id`). Este ID es necesario para explorar la estructura de archivos y el contenido de la fuente en el siguiente paso.
 
 ```json
 {
@@ -111,7 +111,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp base connection with OAuth 2 refresh code",
@@ -158,7 +158,7 @@ Con el ID de conexión base que generó en el paso anterior, puede explorar arch
 
 >[!TIP]
 >
->Para recuperar el tipo de formato aceptado para `{SOURCE_PARAMS}`, debe codificar todo el `list_id` en base64. Por ejemplo, `"list_id": "10c097ca71"` codificado en base64 equivale a `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`.
+>Para recuperar el tipo de formato aceptado para `{SOURCE_PARAMS}`, debe codificar todo el `list_id` en base64. For example, `"list_id": "10c097ca71"` encoded in base64 equates to `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`.
 
 **Formato de API**
 
@@ -171,8 +171,8 @@ Al realizar solicitudes de GET para explorar la estructura de archivos y el cont
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | El ID de conexión base generado en el paso anterior. |
-| `{OBJECT_TYPE}` | Tipo de objeto que desea explorar. Para los orígenes REST, el valor predeterminado es `rest`. |
-| `{OBJECT}` | El objeto que desea explorar. |
+| `{OBJECT_TYPE}` | Tipo de objeto que desea explorar. For REST sources, this value defaults to `rest`. |
+| `{OBJECT}` | The object that you wish to explore. |
 | `{FILE_TYPE}` | Este parámetro solo es necesario cuando se visualiza un directorio específico. Su valor representa la ruta del directorio que desea explorar. |
 | `{PREVIEW}` | Valor booleano que define si el contenido de la conexión admite la vista previa. |
 | `{SOURCE_PARAMS}` | Una cadena con codificación base64 de su `list_id`. |
@@ -184,7 +184,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/connections/05c595e5-edc3-45c8-90bb-fcf556b57c4b/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -357,7 +357,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp source connection to ingest listId",
@@ -380,8 +380,8 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre de la conexión de origen. Asegúrese de que el nombre de la conexión de origen sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de origen. |
 | `description` | (Opcional) Una propiedad que puede incluir para proporcionar más información sobre la conexión de origen. |
-| `baseConnectionId` | El ID de conexión base de [!DNL Mailchimp]. Este ID se generó en un paso anterior. |
-| `connectionSpec.id` | El ID de especificación de conexión que corresponde a su origen. |
+| `baseConnectionId` | The base connection ID of [!DNL Mailchimp]. Este ID se generó en un paso anterior. |
+| `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | El formato de la variable [!DNL Mailchimp] datos que desea ingerir. |
 | `params.listId` | También conocido como ID de audiencia, la variable [!DNL Mailchimp] El ID de lista permite la transferencia de datos de audiencia a otras integraciones. |
 
@@ -432,7 +432,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp target connection",
@@ -476,7 +476,7 @@ Una respuesta correcta devuelve el identificador único de la nueva conexión de
 
 ## Creación de una asignación {#mapping}
 
-Para que los datos de origen se introduzcan en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiera el conjunto de datos de destino. Esto se consigue realizando una solicitud de POST al [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con asignaciones de datos definidas dentro de la carga útil de la solicitud.
+Para que los datos de origen se introduzcan en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiera el conjunto de datos de destino. This is achieved by performing a POST request to the [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
 
 **Formato de API**
 
@@ -492,7 +492,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "version": 0,
@@ -524,7 +524,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles de la asignación recién creada, incluido su identificador único (`id`). Este valor es necesario en un paso posterior para crear un flujo de datos.
+Una respuesta correcta devuelve detalles de la asignación recién creada, incluido su identificador único (`id`). This value is required in a later step to create a dataflow.
 
 ```json
 {
@@ -564,7 +564,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp Members dataflow",
@@ -642,7 +642,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -663,7 +663,7 @@ Una respuesta correcta devuelve detalles sobre la ejecución del flujo, incluida
             "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "MailChimp Members dataflow",
             "description": "MailChimp Members dataflow",
             "flowSpec": {
@@ -738,16 +738,16 @@ Una respuesta correcta devuelve detalles sobre la ejecución del flujo, incluida
 | `state` | Muestra el estado actual del flujo de datos. |
 | `inheritedAttributes` | Contiene los atributos que definen el flujo, como los ID para su conexión base, origen y destino correspondiente. |
 | `scheduleParams` | Contiene información sobre el programa de ingesta de su flujo de datos, como su hora de inicio (en tiempo de época), frecuencia e intervalo. |
-| `transformations` | Contiene información sobre las propiedades de transformación aplicadas al flujo de datos. |
+| `transformations` | Contains information on the transformation properties applied to your dataflow. |
 | `runs` | Muestra el ID de ejecución correspondiente del flujo. Puede utilizar este ID para supervisar ejecuciones de flujo específicas. |
 
 ## Actualizar el flujo de datos
 
-Para actualizar la programación, el nombre y la descripción de ejecución del flujo de datos, realice una solicitud de PATCH al [!DNL Flow Service] mientras proporciona su ID de flujo, versión y la nueva programación que desea utilizar.
+To update your dataflow&#39;s run schedule, name, and description, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the new schedule you want to use.
 
 >[!IMPORTANT]
 >
->La variable `If-Match` es obligatorio cuando se realiza una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar.
+>La variable `If-Match` es obligatorio cuando se realiza una solicitud de PATCH. The value for this header is the unique version of the connection you want to update.
 
 **Formato de API**
 
@@ -764,7 +764,7 @@ curl -X PATCH \
   'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
   -d '[
@@ -789,7 +789,7 @@ curl -X PATCH \
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. |
-| `path` | Ruta del parámetro que se va a actualizar. |
+| `path` | The path of the parameter to be updated. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 
 **Respuesta**
@@ -824,7 +824,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -859,7 +859,7 @@ curl -X PATCH \
   'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
   -d '[
@@ -922,7 +922,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

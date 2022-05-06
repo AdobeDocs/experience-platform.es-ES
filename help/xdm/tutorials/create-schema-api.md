@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial utiliza la API del Registro de esquemas para guiarle por los pasos necesarios para componer un esquema con una clase estándar.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2422'
 ht-degree: 2%
@@ -59,7 +59,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -99,7 +99,7 @@ Una solicitud correcta devuelve el Estado de respuesta HTTP 201 (Creado) con un 
         "https://ns.adobe.com/xdm/common/auditable"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.533ca5da28087c44344810891b0f03d9",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
@@ -131,7 +131,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F533ca5da28087c44344810891b0f03d9\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
@@ -161,7 +161,7 @@ El formato de respuesta depende del encabezado Accept enviado con la solicitud. 
         "https://ns.adobe.com/xdm/common/auditable"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.533ca5da28087c44344810891b0f03d9",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
@@ -202,7 +202,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/xdm/context/profile-person-details"}}
@@ -238,7 +238,7 @@ La respuesta muestra el grupo de campos recién agregado en la variable `meta:ex
         "https://ns.adobe.com/xdm/context/profile-person-details"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.533ca5da28087c44344810891b0f03d9",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
@@ -282,7 +282,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"}}
@@ -324,7 +324,7 @@ El esquema de miembros de fidelidad ahora debe contener tres `$ref` en la variab
         "https://ns.adobe.com/xdm/context/profile-personal-details"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.533ca5da28087c44344810891b0f03d9",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
@@ -364,7 +364,7 @@ curl -X POST\
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -480,7 +480,7 @@ Una solicitud correcta devuelve el Estado de respuesta HTTP 201 (Creado) con un 
     "meta:abstract": true,
     "meta:extensible": true,
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
@@ -515,7 +515,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
@@ -559,7 +559,7 @@ Puede ver que el grupo de campos se ha agregado correctamente porque la respuest
         "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.533ca5da28087c44344810891b0f03d9",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
@@ -591,7 +591,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.533ca5da28087c44344810891b0f03d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1'
 ```
@@ -621,7 +621,7 @@ En `"properties"`, puede ver el `_{TENANT_ID}` espacio de nombres que se creó a
         "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.533ca5da28087c44344810891b0f03d9",
     "meta:xdmType": "object",
     "properties": {
@@ -712,7 +712,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title": "Loyalty Details",
@@ -802,7 +802,7 @@ Una solicitud correcta devuelve el Estado de respuesta HTTP 201 (Creado) con un 
     "meta:abstract": true,
     "meta:extensible": true,
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.datatypes.49b594dabe6bec545c8a6d1a0991a4dd",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/datatypes/49b594dabe6bec545c8a6d1a0991a4dd",
@@ -837,7 +837,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
       [
@@ -894,7 +894,7 @@ La respuesta ahora incluye una referencia a (`$ref`) al tipo de datos en el obje
     "meta:abstract": true,
     "meta:extensible": true,
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
@@ -981,7 +981,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "@type": "xdm:descriptorIdentity",
@@ -1040,7 +1040,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         { "op": "add", "path": "/meta:immutableTags", "value": ["union"]}
@@ -1084,7 +1084,7 @@ La respuesta muestra que la operación se realizó correctamente y que el esquem
         "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:immutableTags": [
         "union"
     ],
@@ -1124,7 +1124,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -1207,7 +1207,7 @@ A continuación, se muestra el esquema de miembros de lealtad completado en form
         "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:immutableTags": [
         "union"
     ],

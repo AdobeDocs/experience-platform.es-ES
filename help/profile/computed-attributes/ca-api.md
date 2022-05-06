@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Esta guía muestra cómo crear, ver, actualizar y eliminar atributos calculados mediante la API de perfil del cliente en tiempo real.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 2%
@@ -58,7 +58,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}'\
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "birthdayCurrentMonth",
@@ -93,7 +93,7 @@ Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "prod",
@@ -171,7 +171,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}'\
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "averageSpend",
@@ -206,7 +206,7 @@ Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",
@@ -300,7 +300,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -319,7 +319,7 @@ La respuesta también incluye un `children` matriz compuesta por uno o más obje
     "children": [
         {
             "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -361,7 +361,7 @@ La respuesta también incluye un `children` matriz compuesta por uno o más obje
         },
         {
             "id": "ae0c6552-cf49-4725-8979-116366e8e8d3",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -442,7 +442,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/2afcf410-450e-4a39-984d-2de99ab58877 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -451,7 +451,7 @@ curl -X GET \
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
         "sandboxName": "prod",
@@ -516,7 +516,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'\
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \  
   -d '[
         {
@@ -565,7 +565,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/ae0c6552-cf49-4725-8979-116366e8e8d3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
   -H 'x-sandbox-name: {SANDBOX_NAME}' \ 
 ```
 
@@ -593,7 +593,7 @@ POST /segment/definitions
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -639,7 +639,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
     },
     "ttlInDays": 60,
     "id": "119835c3-5fab-4c18-ae01-4ccab328fc5c",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",

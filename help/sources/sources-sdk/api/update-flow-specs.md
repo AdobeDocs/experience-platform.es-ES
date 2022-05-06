@@ -5,7 +5,8 @@ topic-legacy: developer guide
 description: El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante la API de servicio de flujo para el SDK de fuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
@@ -48,7 +49,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -69,7 +70,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo cons
           "updatedClient": "{UPDATED_CLIENT}",
           "sandboxId": "{SANDBOX_ID}",
           "sandboxName": "{SANDBOX_NAME}",
-          "imsOrgId": "{IMS_ORG}",
+          "imsOrgId": "{ORG_ID}",
           "name": "RestStorageToAEP",
           "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
           "version": "1.0",
@@ -261,7 +262,7 @@ PUT -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
 `     "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
@@ -445,7 +446,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo cons
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "RestStorageToAEP",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",

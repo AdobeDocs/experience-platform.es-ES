@@ -5,21 +5,20 @@ title: Punto final de API de Esquemas
 topic-legacy: schemas
 description: Puede utilizar el extremo `/functions` en la API de Adobe Experience Platform para validar las expresiones de asignación y las funciones del conjunto de asignaciones de lista disponibles.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '210'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
 # Puntos finales de funciones
 
-Las funciones de conjunto de asignaciones permiten transformar los datos entre esquemas de origen y destino. Puede utilizar el extremo `/languages/el` para validar sus expresiones, así como obtener una lista de todas las funciones de conjuntos de asignaciones disponibles.
+Las funciones de conjunto de asignaciones permiten transformar los datos entre esquemas de origen y destino. Puede usar la variable `/languages/el` para validar las expresiones y obtener una lista de todas las funciones de conjunto de asignaciones disponibles.
 
 ## Validar expresiones
 
-Puede validar si la expresión actual es válida realizando una solicitud de POST al extremo `/languages/el/validate` .
+Puede validar si la expresión actual es válida realizando una solicitud de POST al `/languages/el/validate` punto final.
 
 **Formato de API**
 
@@ -34,7 +33,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -55,7 +54,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con el estado de validación 
 
 ## Funciones del conjunto de asignaciones de lista
 
-Puede recuperar una lista de todas las funciones de conjunto de asignaciones disponibles realizando una solicitud de GET al extremo `/languages/el/functions` .
+Puede recuperar una lista de todas las funciones de conjuntos de asignaciones disponibles realizando una solicitud de GET al `/languages/el/functions` punto final.
 
 **Formato de API**
 
@@ -69,7 +68,7 @@ GET /languages/el/functions
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/functions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -120,7 +119,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las fu
 
 ## Enumerar operadores de conjuntos de asignaciones
 
-Puede recuperar una lista de todos los operadores de conjuntos de asignaciones disponibles realizando una solicitud de GET al extremo `/languages/el/operators` .
+Puede recuperar una lista de todos los operadores de conjuntos de asignaciones disponibles realizando una solicitud de GET al `/languages/el/operators` punto final.
 
 **Formato de API**
 
@@ -134,7 +133,7 @@ GET /languages/el/operators
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/operators \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

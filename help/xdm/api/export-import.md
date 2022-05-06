@@ -5,7 +5,7 @@ title: Exportación/importación de extremos de API
 description: Los extremos /export y /import de la API del Registro de esquemas permiten compartir recursos XDM entre organizaciones IMS y entornos limitados.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 2%
@@ -14,17 +14,17 @@ ht-degree: 2%
 
 # Exportación/importación de extremos
 
-Todos los recursos dentro de [!DNL Schema Library] están contenidos en un entorno limitado específico de una organización de IMS. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones IMS. La API [!DNL Schema Registry] proporciona dos extremos que permiten generar una carga útil de exportación para cualquier esquema, grupo de campos de esquema o tipo de datos en el [!DNL  Schema Library] y, a continuación, utilizar esa carga útil para importar ese recurso (y todos los recursos dependientes) en un entorno limitado de destino y en una organización IMS.
+Todos los recursos de [!DNL Schema Library] se encuentran en un entorno limitado específico de una organización de IMS. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones IMS. La variable [!DNL Schema Registry] La API proporciona dos extremos que permiten generar una carga útil de exportación para cualquier esquema, grupo de campos de esquema o tipo de datos en la variable[!DNL  Schema Library]y, a continuación, utilice esa carga útil para importar ese recurso (y todos los recursos dependientes) en un entorno limitado de destino y en una organización de IMS.
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte de la [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
+Los extremos utilizados en esta guía forman parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
-Los extremos de exportación e importación forman parte de las llamadas a procedimientos remotos (RPC) compatibles con [!DNL Schema Registry]. A diferencia de otros extremos de la API [!DNL Schema Registry], los extremos RPC no requieren encabezados adicionales como `Accept` o `Content-Type` y no utilizan `CONTAINER_ID`. En su lugar, deben utilizar el espacio de nombres `/rpc` , como se muestra en las llamadas de API que aparecen a continuación.
+Los extremos de exportación e importación forman parte de las llamadas a procedimientos remotos (RPC) compatibles con el [!DNL Schema Registry]. A diferencia de otros extremos en la variable [!DNL Schema Registry] Los extremos de API y RPC no requieren encabezados adicionales como `Accept` o `Content-Type`y no use un `CONTAINER_ID`. En su lugar, deben usar la variable `/rpc` como se muestra en las llamadas de API a continuación.
 
 ## Recuperar una carga útil de exportación para un recurso {#export}
 
-Para cualquier esquema, grupo de campos o tipo de datos existente en [!DNL Schema Library], puede generar una carga útil de exportación realizando una solicitud de GET al extremo `/export` , proporcionando el ID del recurso en la ruta de acceso.
+Para cualquier esquema, grupo de campos o tipo de datos existente en la variable [!DNL Schema Library], puede generar una carga útil de exportación realizando una solicitud de GET al `/export` , proporcionando el ID del recurso en la ruta.
 
 **Formato de API**
 
@@ -34,27 +34,27 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{RESOURCE_ID}` | El `meta:altId` o el `$id` con codificación de URL del recurso XDM que desea exportar. |
+| `{RESOURCE_ID}` | La variable `meta:altId` o con codificación de URL `$id` del recurso XDM que desea exportar. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
-La siguiente solicitud recupera una carga útil de exportación para un grupo de campos `Restaurant`.
+La siguiente solicitud recupera una carga útil de exportación para un `Restaurant` grupo de campos.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de objetos, que representan el recurso XDM de destino y todos sus recursos dependientes. En este ejemplo, el primer objeto de la matriz es un tipo de datos `Property` creado por el inquilino que emplea el grupo de campos `Restaurant`, mientras que el segundo objeto es el propio grupo de campos `Restaurant`. Esta carga útil se puede utilizar para [importar el recurso](#import) en un entorno limitado diferente o en una organización de IMS.
+Una respuesta correcta devuelve una matriz de objetos, que representan el recurso XDM de destino y todos sus recursos dependientes. En este ejemplo, el primer objeto de la matriz es un `Property` tipo de datos que el `Restaurant` el grupo de campos emplea, mientras que el segundo objeto es el `Restaurant` grupo de campos. Esta carga útil se puede utilizar para [importar el recurso](#import) en un entorno limitado diferente o en una organización de IMS.
 
 Tenga en cuenta que todas las instancias del ID de inquilino del recurso se sustituyen por `<XDM_TENANTID_PLACEHOLDER>`. Esto permite que el Registro de esquemas aplique automáticamente el ID de inquilino correcto a los recursos en función de dónde se envíen en la llamada de importación posterior.
 
@@ -198,7 +198,7 @@ Tenga en cuenta que todas las instancias del ID de inquilino del recurso se sust
 
 ## Importar un recurso {#import}
 
-Una vez que [ha generado una carga útil de exportación](#export) para un recurso XDM, puede utilizar esa carga en una solicitud de POST al extremo `/import` para importar ese recurso en una organización y simulador de pruebas IMS de destino.
+Una vez que haya [se ha generado una carga útil de exportación](#export) para un recurso XDM, puede utilizar esa carga útil en una solicitud de POST al `/import` extremo para importar ese recurso en una organización IMS y un simulador de pruebas de destino.
 
 **Formato de API**
 
@@ -208,14 +208,14 @@ POST /rpc/import
 
 **Solicitud**
 
-La siguiente solicitud toma la carga útil devuelta en el ejemplo de exportación anterior [](#export) para importar el grupo de campos `Restaurant` en una nueva organización y simulador de pruebas de IMS, tal como determinan los encabezados `x-gw-ims-org-id` y `x-sandbox-name`, respectivamente.
+La siguiente solicitud toma la carga útil devuelta en la anterior [ejemplo de exportación](#export) para importar el `Restaurant` grupo de campos en una nueva organización y simulador de pruebas de IMS, tal como determina la `x-gw-ims-org-id` y `x-sandbox-name` encabezados, respectivamente.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/import \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -427,7 +427,7 @@ Una respuesta correcta devuelve una lista de los recursos importados, con el ID 
             }
         ],
         "refs": [],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:xdmType": "object",
@@ -506,7 +506,7 @@ Una respuesta correcta devuelve una lista de los recursos importados, con el ID 
         "refs": [
             "https://ns.adobe.com/{TENANT_ID}/datatypes/fc07162ee7ca8d18e074a3bb50c3938c76160bf6040e8495"
         ],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [],

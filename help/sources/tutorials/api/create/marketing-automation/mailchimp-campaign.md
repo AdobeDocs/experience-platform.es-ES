@@ -5,7 +5,7 @@ title: Creación de un flujo de datos para Mailchimp Campaign mediante la API de
 topic-legacy: tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a MailChimp Campaign mediante la API de servicio de flujo.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2319'
 ht-degree: 3%
@@ -48,7 +48,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "Mailchimp base connection with basic authentication",
@@ -93,7 +93,7 @@ Una respuesta correcta devuelve la conexión base recién creada, incluido su id
 
 ### Cree un [!DNL Mailchimp] conexión base con código de actualización de OAuth 2
 
-Para crear un [!DNL Mailchimp] conexión base utilizando el código de actualización de OAuth 2, realice una solicitud de POST al `/connections` punto final al proporcionar credenciales para su `host`, `authorizationTestUrl`y `accessToken`.
+To create a [!DNL Mailchimp] base connection using OAuth 2 refresh code, make a POST request to the `/connections` endpoint while providing credentials for your `host`, `authorizationTestUrl`, and `accessToken`.
 
 **Formato de API**
 
@@ -111,7 +111,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "Mailchimp base connection with OAuth 2 refresh code",
@@ -152,9 +152,9 @@ Una respuesta correcta devuelve la conexión base recién creada, incluido su id
 }
 ```
 
-## Explorar la fuente {#explore}
+## Explore your source {#explore}
 
-Con el ID de conexión base que generó en el paso anterior, puede explorar archivos y directorios realizando solicitudes de GET. Al realizar solicitudes de GET para explorar la estructura de archivos y el contenido del origen, debe incluir los parámetros de consulta que se enumeran en la siguiente tabla:
+Con el ID de conexión base que generó en el paso anterior, puede explorar archivos y directorios realizando solicitudes de GET. When performing GET requests to explore your source&#39;s file structure and contents, you must include the query parameters that are listed in the table below:
 
 | Parámetro | Descripción |
 | --------- | ----------- |
@@ -182,7 +182,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/connections/05c595e5-edc3-45c8-90bb-fcf556b57c4b/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -287,7 +287,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp source connection to ingest campaign ID",
@@ -326,7 +326,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 }
 ```
 
-## Creación de un esquema XDM de destino {#target-schema}
+## Create a target XDM schema {#target-schema}
 
 Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se contienen los datos de origen.
 
@@ -362,7 +362,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp target connection",
@@ -386,7 +386,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `name` | Nombre de la conexión de destino. Asegúrese de que el nombre de la conexión de destino sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de destino. |
+| `name` | Nombre de la conexión de destino. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de destino. |
 | `connectionSpec.id` | El ID de especificación de conexión correspondiente a [!DNL Data Lake]. Este ID fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | El formato de la variable [!DNL Mailchimp] datos que desea traer a Platform. |
@@ -426,7 +426,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -500,7 +500,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp Campaign dataflow",
@@ -565,7 +565,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -586,7 +586,7 @@ Una respuesta correcta devuelve detalles sobre la ejecución del flujo, incluida
             "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "MailChimp Campaign dataflow",
             "description": "MailChimp Campaign dataflow",
             "flowSpec": {
@@ -684,7 +684,7 @@ curl -X PATCH \
   'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
   -d '[
@@ -744,7 +744,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -779,7 +779,7 @@ curl -X PATCH \
   'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
   -d '[
@@ -842,7 +842,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

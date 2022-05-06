@@ -2,7 +2,7 @@
 description: En esta página se describe cómo autenticarse y empezar a utilizar Adobe Experience Platform Destination SDK. Incluye instrucciones sobre cómo obtener las credenciales de autenticación de Adobe I/O, un nombre de simulador de pruebas y el permiso de control de acceso de creación de destino.
 title: Introducción a Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: d5ce6c8ccdd29b9bcf90a1c2d08085f3be4cf33f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 2%
@@ -26,7 +26,7 @@ El Destination SDK utiliza la variable [Adobe I/O](https://www.adobe.io/) puerta
 Para realizar llamadas correctamente a puntos finales de API de Destination SDK, siga la [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Inicie el tutorial desde el &quot;[Generar una clave de API, el ID de organización de IMS y el secreto del cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. El equipo de Adobe Exchange se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en las llamadas a la API de Destination SDK, como se muestra a continuación:
 
 * `x-api-key: {API_KEY}`, también denominado ID de cliente
-* `x-gw-ims-org-id: {IMS_ORG}`, también denominado ID de organización
+* `x-gw-ims-org-id: {ORG_ID}`, también denominado ID de organización
 * `Authorization: Bearer {ACCESS_TOKEN}`. El token de acceso tiene una caducidad de 24 horas, expresada en milisegundos, por lo que tendrá que actualizarlo. Para actualizar el token de acceso, repita los pasos descritos en el tutorial de autenticación.
 
 <!--
@@ -38,7 +38,7 @@ To obtain the `{ACCESS_TOKEN}`, you must generate a JWT token and exchange it fo
 1. Follow the instructions in the [Generate JWT section](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) in the credentials guide.
 2. Follow the instructions in [Step 3: try it](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md) in the Service account connection guide.
 
-You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {IMS_ORG}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
+You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {ORG_ID}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
 
 >[!NOTE]
 >
@@ -81,4 +81,4 @@ Al seguir los pasos de este artículo, obtuvo las credenciales de autenticación
    * [(Beta) Usar el Destination SDK para configurar un destino basado en archivos](./configure-file-based-destination-instructions.md)
 
 * Para todas las operaciones, consulte la [Documentación de la API de creación de destino](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
-* Utilice la variable [API de creación de destino colección Postman](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) para configurar el destino mediante los extremos de la API de Destination SDK. Para empezar a usar Postman, consulte la [pasos para importar entornos y colecciones](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) y [guía de vídeo para crear el entorno Postman](https://video.tv.adobe.com/v/28832).
+* Utilice la variable [Recopilación de Postman de la API de creación de destino](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) para configurar el destino mediante los extremos de la API de Destination SDK. Para empezar a usar Postman, consulte la [pasos para importar entornos y colecciones](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) y [guía de vídeo para crear el entorno de Postman](https://video.tv.adobe.com/v/28832).

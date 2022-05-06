@@ -5,19 +5,18 @@ title: Creación de un área de nombres personalizada en la API del servicio de 
 topic-legacy: API guide
 description: Con la API de área de nombres de identidad, puede crear un área de nombres de identidad personalizada que solo estará disponible para su organización.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '120'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 # Creación de un área de nombres personalizada en la API del servicio de identidad
 
-Con la API [!DNL Identity Namespace], puede crear un área de nombres de identidad personalizada que solo estará disponible para su organización.
+Al usar la variable [!DNL Identity Namespace] , puede crear un área de nombres de identidad personalizada que solo esté disponible para su organización.
 
-Para obtener recomendaciones sobre la creación de áreas de nombres personalizadas, consulte [la documentación de preguntas frecuentes del servicio de identidad](../troubleshooting-guide.md).
+Para obtener recomendaciones sobre la creación de áreas de nombres personalizadas, consulte [la documentación de preguntas frecuentes del servicio de ID](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -38,7 +37,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
         "name": "Loyalty Member",
         "code": "Loyalty",
@@ -65,4 +64,4 @@ curl -X POST \
 
 ## Pasos siguientes
 
-Continúe con el siguiente tutorial para [enumerar el ID nativo de una identidad](./list-native-id.md)
+Continúe con el siguiente tutorial a [listar el ID nativo de una identidad](./list-native-id.md)

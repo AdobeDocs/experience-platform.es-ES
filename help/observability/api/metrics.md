@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Punto final de la API de métricas
+title: Metrics API Endpoint
 topic-legacy: developer guide
 description: Obtenga información sobre cómo recuperar métricas de observabilidad en Experience Platform mediante la API de Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 6%
@@ -14,11 +14,11 @@ ht-degree: 6%
 
 # Punto final de las métricas
 
-Las métricas de capacidad de observación proporcionan información sobre las estadísticas de uso, las tendencias históricas y los indicadores de rendimiento de diversas funciones de Adobe Experience Platform. La variable `/metrics` en la variable [!DNL Observability Insights API] le permite recuperar mediante programación datos de métricas para la actividad de su organización en [!DNL Platform].
+Las métricas de capacidad de observación proporcionan información sobre las estadísticas de uso, las tendencias históricas y los indicadores de rendimiento de diversas funciones de Adobe Experience Platform. The `/metrics` endpoint in the [!DNL Observability Insights API] allows you to programmatically retrieve metric data for your organization&#39;s activity in [!DNL Platform].
 
 >[!NOTE]
 >
->La versión anterior del punto final de métricas (V1) ha quedado obsoleta. Este documento se centra exclusivamente en la versión actual (V2). Para obtener más información sobre el extremo V1 para implementaciones heredadas, consulte la [Referencia de API](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>The previous version of the metrics endpoint (V1) has been deprecated. Este documento se centra exclusivamente en la versión actual (V2). Para obtener más información sobre el extremo V1 para implementaciones heredadas, consulte la [Referencia de API](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## Primeros pasos
 
@@ -41,7 +41,7 @@ curl -X POST \
   https://platform.adobe.io/data/infrastructure/observability/insights/metrics \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "start": "2020-07-14T00:00:00.000Z",
@@ -80,12 +80,12 @@ curl -X POST \
 | --- | --- |
 | `start` | La primera fecha y hora desde la cual recuperar datos de métricas. |
 | `end` | La última fecha y hora desde la cual recuperar datos de métricas. |
-| `granularity` | Campo opcional que indica el intervalo de tiempo por el que se deben dividir los datos de métricas. Por ejemplo, un valor de `DAY` devuelve métricas para cada día entre `start` y `end` date, mientras que un valor de `MONTH` agruparía los resultados de métricas por mes en su lugar. Al utilizar este campo, una `downsample` también debe proporcionarse la propiedad para indicar la función de agregación mediante la cual agrupar los datos. |
-| `metrics` | Matriz de objetos, uno para cada métrica que desee recuperar. |
+| `granularity` | Campo opcional que indica el intervalo de tiempo por el que se deben dividir los datos de métricas. For example, a value of `DAY` returns metrics for each day between the `start` and `end` date, whereas a value of `MONTH` would group metric results by month instead. Al utilizar este campo, una `downsample` también debe proporcionarse la propiedad para indicar la función de agregación mediante la cual agrupar los datos. |
+| `metrics` | An array of objects, one for each metric you want to retrieve. |
 | `name` | El nombre de una métrica reconocida por Observability Insights. Consulte la [apéndice](#available-metrics) para obtener una lista completa de los nombres de métricas aceptados. |
-| `filters` | Campo opcional que permite filtrar métricas por conjuntos de datos específicos. El campo es una matriz de objetos (uno para cada filtro), con cada objeto que contiene las siguientes propiedades: <ul><li>`name`: Tipo de entidad con la que filtrar las métricas. Actualmente, solo `dataSets` es compatible.</li><li>`value`: El ID de uno o más conjuntos de datos. Se pueden proporcionar varios ID de conjuntos de datos como una sola cadena, con cada ID separado por caracteres de barra vertical (`\|`).</li><li>`groupBy`: Cuando se establece en true, indica que la variable `value` representa varios conjuntos de datos cuyos resultados de métricas deberían devolverse por separado. Si se establece en false, los resultados de métricas para esos conjuntos de datos se agrupan.</li></ul> |
+| `filters` | Campo opcional que permite filtrar métricas por conjuntos de datos específicos. The field is an array of objects (one for each filter), with each object containing the following properties: <ul><li>`name`: Tipo de entidad con la que filtrar las métricas. Actualmente, solo `dataSets` es compatible.</li><li>`value`: El ID de uno o más conjuntos de datos. Se pueden proporcionar varios ID de conjuntos de datos como una sola cadena, con cada ID separado por caracteres de barra vertical (`\|`).</li><li>`groupBy`: Cuando se establece en true, indica que la variable `value` representa varios conjuntos de datos cuyos resultados de métricas deberían devolverse por separado. If set to false, metric results for those datasets are grouped together.</li></ul> |
 | `aggregator` | Especifica la función de agregación que debe utilizarse para agrupar varios registros de series temporales en resultados únicos. Para obtener información detallada sobre los acumuladores disponibles, consulte la [Documentación de OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
-| `downsample` | Campo opcional que permite especificar una función de agregación para reducir la tasa de muestreo de los datos de métricas ordenando los campos en intervalos (o &quot;bloques&quot;). El intervalo para la disminución de resolución se determina mediante la variable `granularity` propiedad. Para obtener información detallada sobre la disminución de muestras, consulte la [Documentación de OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `downsample` | An optional field that allows you to specify an aggregation function to reduce the sampling rate of metric data by sorting fields into intervals (or &quot;buckets&quot;). El intervalo para la disminución de resolución se determina mediante la variable `granularity` propiedad. Para obtener información detallada sobre la disminución de muestras, consulte la [Documentación de OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -174,7 +174,7 @@ Una respuesta correcta devuelve los puntos de datos resultantes para las métric
 
 | Propiedad | Descripción |
 | --- | --- |
-| `metricResponses` | Matriz cuyos objetos representan cada una de las métricas especificadas en la solicitud. Cada objeto contiene información sobre la configuración del filtro y los datos de métricas devueltos. |
+| `metricResponses` | Matriz cuyos objetos representan cada una de las métricas especificadas en la solicitud. Each object contains information about the filter configuration and returned metric data. |
 | `metric` | Nombre de una de las métricas proporcionadas en la solicitud. |
 | `filters` | La configuración del filtro para la métrica especificada. |
 | `datapoints` | Matriz cuyos objetos representan los resultados de la métrica y los filtros especificados. El número de objetos de la matriz depende de las opciones de filtro proporcionadas en la solicitud. Si no se proporcionaron filtros, la matriz solo contendrá un único objeto que represente todos los conjuntos de datos. |
@@ -209,8 +209,8 @@ La tabla siguiente resume las métricas de Adobe Experience Platform [!DNL Data 
 | timeseries.ingestion.dataset.recordsuccess.count | Número de registros introducidos para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
 | **timeseries.data.collection.validation.total.messages.rate** | Número total de mensajes para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
 | **timeseries.data.collection.validation.valid.messages.rate** | Número total de mensajes válidos para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
-| **timeseries.data.collection.validation.invalid.messages.rate** | Número total de mensajes no válidos para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
-| **timeseries.data.collection.validation.category.type.count** | Número total de mensajes &quot;type&quot; no válidos para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
+| **timeseries.data.collection.validation.invalid.messages.rate** | Total number of invalid messages for one dataset or for all datasets. | ID de conjunto de datos |
+| **timeseries.data.collection.validation.category.type.count** | Total number of invalid &quot;type&quot; messages for one dataset or for all datasets. | ID de conjunto de datos |
 | **timeseries.data.collection.validation.category.range.count** | Número total de mensajes de &quot;intervalo&quot; no válidos para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
 | **timeseries.data.collection.validation.category.format.count** | Número total de mensajes de &quot;formato&quot; no válidos para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
 | **timeseries.data.collection.validation.category.pattern.count** | Número total de mensajes de &quot;patrón&quot; no válidos para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
@@ -229,14 +229,14 @@ La tabla siguiente resume las métricas de Adobe Experience Platform [!DNL Data 
 
 La tabla siguiente resume las métricas de Adobe Experience Platform [!DNL Identity Service].
 
-| Métrica de perspectivas | Descripción | Parámetro de consulta de ID |
+| Métrica de perspectivas | Descripción | ID query parameter |
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Número de registros escritos en su fuente de datos por [!DNL Identity Service], para un conjunto de datos o todos los conjuntos de datos. | ID de conjunto de datos |
 | timeseries.identity.dataset.recordfailed.count | Número de registros en los que se ha producido un error [!DNL Identity Service], para un conjunto de datos o para todos los conjuntos de datos. | ID de conjunto de datos |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Número de registros de identidad introducidos correctamente para un área de nombres. | ID de área de nombres (**Requerido**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | El número de registros de identidad falló por un área de nombres. | ID de área de nombres (**Requerido**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | Número de registros de identidad omitidos por un área de nombres. | ID de área de nombres (**Requerido**) |
-| timeseries.identity.graph.imsorg.uniqueidentities.count | Número de identidades únicas almacenadas en el gráfico de identidad de su organización de IMS. | N/D |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | Número de registros de identidad omitidos por un área de nombres. | Namespace ID (**Required**) |
+| timeseries.identity.graph.imsorg.uniqueidentities.count | Número de identidades únicas almacenadas en el gráfico de identidad de su organización de IMS. | N/A |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Número de identidades únicas almacenadas en el gráfico de identidad para un área de nombres. | ID de área de nombres (**Requerido**) |
 | timeseries.identity.graph.imsorg.numidgraphs.count | Número de identidades de gráfico únicas almacenadas en el gráfico de identidad para su organización de IMS. | N/D |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Número de identidades únicas almacenadas en el gráfico de identidad de su organización IMS para una intensidad de gráfico determinada (&quot;desconocida&quot;, &quot;débil&quot; o &quot;fuerte&quot;). | Intensidad del gráfico (**Requerido**) |
@@ -264,8 +264,8 @@ La tabla siguiente resume las métricas de Adobe Experience Platform [!DNL Query
 | timeseries.queryservice.query.scheduleonce.count | Número total de consultas programadas no recurrentes. | N/D |
 | timeseries.queryservice.query.scheduledrecurring.count | Número total de consultas programadas recurrentes. | N/D |
 | timeseries.queryservice.query.batchquery.count | Número total de consultas por lotes ejecutadas. | N/D |
-| timeseries.queryservice.query.scheduledquery.count | Número total de consultas programadas ejecutadas. | N/D |
-| timeseries.queryservice.query.interactivequery.count | Número total de consultas interactivas ejecutadas. | N/D |
+| timeseries.queryservice.query.scheduledquery.count | Número total de consultas programadas ejecutadas. | N/A |
+| timeseries.queryservice.query.interactivequery.count | Número total de consultas interactivas ejecutadas. | N/A |
 | timeseries.queryservice.query.batchfrompsqlquery.count | Número total de consultas por lotes ejecutadas desde PSQL. | N/D |
 
 {style=&quot;table-layout:auto&quot;}
@@ -306,7 +306,7 @@ Respuestas de `/metrics` El extremo puede devolver mensajes de error bajo cierta
         "tenantInfo": {
             "sandboxName": "prod",
             "sandboxId": "49f58060-5d47-34rd-aawf-a5384333ff12",
-            "imsOrgId": "{IMS_ORG}"
+            "imsOrgId": "{ORG_ID}"
         },
         "additionalContext": null
     },
@@ -332,7 +332,7 @@ La siguiente tabla enumera los diferentes códigos de error que la API puede dev
 
 | Código de error | Título | Descripción |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Carga útil de solicitud incorrecta | Se ha producido un error en la carga útil de la solicitud. Asegúrese de que coincide exactamente con el formato de la carga útil tal como se muestra [above](#v2). Cualquiera de las posibles razones puede provocar este error:<ul><li>Faltan campos obligatorios como `aggregator`</li><li>Métricas no válidas</li><li>La solicitud contiene un agregador no válido</li><li>Una fecha de inicio se produce después de una fecha de finalización</li></ul> |
+| `INSGHT-1000-400` | Carga útil de solicitud incorrecta | Se ha producido un error en la carga útil de la solicitud. Asegúrese de que coincide exactamente con el formato de la carga útil tal como se muestra [above](#v2). Cualquiera de las posibles razones puede provocar este error:<ul><li>Missing required fields such as `aggregator`</li><li>Métricas no válidas</li><li>La solicitud contiene un agregador no válido</li><li>Una fecha de inicio se produce después de una fecha de finalización</li></ul> |
 | `INSGHT-1001-400` | Error en la consulta de métricas | Se produjo un error al intentar consultar la base de datos de métricas, debido a una solicitud incorrecta o a que la consulta en sí misma era incomparable. Asegúrese de que la solicitud tiene el formato correcto antes de volver a intentarlo. |
 | `INSGHT-1001-500` | Error en la consulta de métricas | Error al intentar consultar la base de datos de métricas, debido a un error del servidor. Vuelva a intentar la solicitud y, si el problema persiste, póngase en contacto con el servicio de asistencia técnica de Adobe. |
 | `INSGHT-1002-500` | Error del servicio | La solicitud no se pudo procesar debido a un error interno. Vuelva a intentar la solicitud y, si el problema persiste, póngase en contacto con el servicio de asistencia técnica de Adobe. |

@@ -5,7 +5,7 @@ title: Importación y uso de audiencias externas
 description: Siga este tutorial para aprender a utilizar audiencias externas con Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 077622e891f4c42ce283e2553d6a2983569d3584
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -36,21 +36,21 @@ Los metadatos del segmento son información sobre el propio segmento, que incluy
 
 | Datos de segmentos | Metadatos del segmento |
 | ------------ | ---------------- |
-| Perfiles que cumplen la calificación de segmentos | Información sobre el propio segmento |
+| Perfiles que cumplen la calificación de segmentos | Information about the segment itself |
 
-## Creación de un área de nombres de identidad para la audiencia externa
+## Create an identity namespace for the external audience
 
-El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Las áreas de nombres de identidad permiten a Platform asociar desde dónde se origina un segmento.
+El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Identity namespaces allow Platform to associate where a segment originates from.
 
-Para crear un área de nombres de identidad, siga las instrucciones de la sección [guía del área de nombres de identidad](../../identity-service/namespaces.md#manage-namespaces). Al crear el área de nombres de identidad, agregue los detalles de origen al área de nombres de identidad y marque su [!UICONTROL Tipo] como **[!UICONTROL Identificador de no personas]**.
+Para crear un área de nombres de identidad, siga las instrucciones de la sección [guía del área de nombres de identidad](../../identity-service/namespaces.md#manage-namespaces). When creating your identity namespace, add the source details to the identity namespace, and mark its [!UICONTROL Type] as a **[!UICONTROL Non-people identifier]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 >[!NOTE]
 >
->Para empezar a utilizar espacios de nombres personalizados con audiencias externas, debe crear un ticket de asistencia. Póngase en contacto con su representante del Adobe para obtener más información.
+>Para empezar a utilizar espacios de nombres personalizados con audiencias externas, debe crear un ticket de asistencia. Please contact your Adobe representative for more details.
 
-## Creación de un esquema para los metadatos del segmento
+## Create a schema for the segment metadata
 
 Después de crear un área de nombres de identidad, debe crear un nuevo esquema para el segmento que va a crear.
 
@@ -58,7 +58,7 @@ Para empezar a componer un esquema, seleccione primero **[!UICONTROL Esquemas]**
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Como está creando una definición de segmento, que es una clase predefinida, seleccione **[!UICONTROL Usar clase existente]**. Ahora, seleccione la opción **[!UICONTROL Definición del segmento]** clase, seguido de **[!UICONTROL Asignar clase]**.
+Since you are creating a segment definition, which is a pre-defined class, select **[!UICONTROL Use existing class]**. Ahora, seleccione la opción **[!UICONTROL Definición del segmento]** clase, seguido de **[!UICONTROL Asignar clase]**.
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
@@ -113,7 +113,7 @@ A continuación se puede ver una muestra de los metadatos de la carga útil de a
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample External Audience"
@@ -220,7 +220,7 @@ A continuación se puede ver una muestra de la carga útil de pertenencia a audi
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample External Audience Membership"

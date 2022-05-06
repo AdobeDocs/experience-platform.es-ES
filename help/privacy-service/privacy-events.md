@@ -5,9 +5,9 @@ title: Suscripción a eventos de Privacy Service
 topic-legacy: privacy events
 description: Obtenga información sobre cómo suscribirse a eventos de Privacy Service mediante un enlace web preconfigurado.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -36,13 +36,13 @@ Consulte la siguiente documentación del Privacy Service antes de iniciar este t
 
 ## Registre un vínculo web para [!DNL Privacy Service Events]
 
-Para recibir [!DNL Privacy Service Events], debe utilizar Adobe Developer Console para registrar un vínculo web en su [!DNL Privacy Service] integración.
+Para recibir [!DNL Privacy Service Events], debe utilizar la consola de Adobe Developer para registrar un vínculo web en su [!DNL Privacy Service] integración.
 
-Siga el tutorial en [suscribirse a [!DNL I/O Event] notificaciones](../observability/alerts/subscribe.md) para ver los pasos detallados sobre cómo hacerlo. Asegúrese de que elige **[!UICONTROL Eventos de Privacy Service]** como proveedor de eventos para acceder a los eventos enumerados anteriormente.
+Siga el tutorial en [suscripción a notificaciones de [!DNL I/O Event]](../observability/alerts/subscribe.md) para ver los pasos detallados sobre cómo hacerlo. Asegúrese de que elige **[!UICONTROL Eventos de Privacy Service]** como proveedor de eventos para acceder a los eventos enumerados anteriormente.
 
 ## Recibir [!DNL Privacy Service Event] notificaciones
 
-Una vez que haya registrado correctamente sus trabajos de weblock y privacy, puede empezar a recibir notificaciones de eventos. Estos eventos se pueden ver mediante el propio vínculo web o seleccionando la variable **[!UICONTROL Seguimiento de depuración]** en la descripción general del registro de eventos de su proyecto en Adobe Developer Console.
+Una vez que haya registrado correctamente sus trabajos de weblock y privacy, puede empezar a recibir notificaciones de eventos. Estos eventos se pueden ver mediante el propio vínculo web o seleccionando la variable **[!UICONTROL Seguimiento de depuración]** en la descripción general del registro de eventos de su proyecto en la consola de Adobe Developer.
 
 ![](images/privacy-events/debug-tracing.png)
 
@@ -57,7 +57,7 @@ El siguiente JSON es un ejemplo de [!DNL Privacy Service Event] carga útil de n
   "source":"https://ns.adobe.com/platform/gdpr",
   "time":"Wed Oct 23 18:52:32 GMT 2019",
   "data":{
-    "imsOrg":"{IMS_ORG}",
+    "imsOrg":"{ORG_ID}",
     "value":{
       "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
       "message":"analytics.access.complete"

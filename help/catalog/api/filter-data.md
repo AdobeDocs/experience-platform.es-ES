@@ -5,28 +5,27 @@ title: Filtrar datos del catálogo mediante parámetros de consulta
 topic-legacy: developer guide
 description: La API del servicio de catálogo permite filtrar los datos de respuesta mediante el uso de parámetros de consulta de solicitud. Una de las prácticas recomendadas para Catálogo es utilizar filtros en todas las llamadas a la API, ya que reducen la carga en la API y ayudan a mejorar el rendimiento general.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2121'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Filtrado de datos [!DNL Catalog] mediante parámetros de consulta
+# Filtro [!DNL Catalog] datos mediante parámetros de consulta
 
-La API [!DNL Catalog Service] permite filtrar los datos de respuesta mediante el uso de parámetros de consulta de solicitud. Parte de las prácticas recomendadas para [!DNL Catalog] es utilizar filtros en todas las llamadas a la API, ya que reducen la carga en la API y ayudan a mejorar el rendimiento general.
+La variable [!DNL Catalog Service] La API permite filtrar los datos de respuesta mediante el uso de parámetros de consulta de solicitud. Parte de las prácticas recomendadas para [!DNL Catalog] es utilizar filtros en todas las llamadas a la API, ya que reducen la carga en la API y ayudan a mejorar el rendimiento general.
 
-Este documento describe los métodos más comunes para filtrar los objetos [!DNL Catalog] en la API. Se recomienda hacer referencia a este documento mientras lee la [Guía para desarrolladores del catálogo](getting-started.md) para obtener más información sobre cómo interactuar con la API [!DNL Catalog]. Para obtener información más general sobre [!DNL Catalog Service], consulte [[!DNL Catalog] overview](../home.md).
+Este documento describe los métodos más comunes de filtrado [!DNL Catalog] en la API. Se recomienda hacer referencia a este documento mientras se lee el [Guía para desarrolladores del catálogo](getting-started.md) para obtener más información sobre cómo interactuar con [!DNL Catalog] API. Para obtener información más general, consulte [!DNL Catalog Service], consulte la [[!DNL Catalog] información general](../home.md).
 
 ## Limitar objetos devueltos
 
-El parámetro de consulta `limit` restringe el número de objetos devueltos en una respuesta. [!DNL Catalog] las respuestas se miden automáticamente según los límites configurados:
+La variable `limit` El parámetro query limita el número de objetos devueltos en una respuesta. [!DNL Catalog] las respuestas se miden automáticamente según los límites configurados:
 
-* Si no se especifica un parámetro `limit`, el número máximo de objetos por carga útil de respuesta es de 20.
-* Para consultas de conjuntos de datos, si se solicita `observableSchema` utilizando el parámetro de consulta `properties` , el número máximo de conjuntos de datos devueltos es 20.
+* Si `limit` no se ha especificado, el número máximo de objetos por carga útil de respuesta es 20.
+* Para consultas de conjuntos de datos, si `observableSchema` se solicita utilizando la variable `properties` parámetro de consulta, el número máximo de conjuntos de datos devueltos es 20.
 * El límite global para todas las demás consultas de Catálogo es de 100 objetos.
-* Los parámetros `limit` no válidos (incluido `limit=0`) dan como resultado respuestas de error de 400 niveles que describen los intervalos adecuados.
+* No válido `limit` parámetros (incluidos `limit=0`) dan como resultado respuestas de error de 400 niveles que describen los intervalos adecuados.
 * Los límites o desplazamientos que se pasan como parámetros de consulta tienen prioridad sobre los que se pasan como encabezados.
 
 **Formato de API**
@@ -37,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | Un entero que indica el número de objetos que se van a devolver, que va del 1 al 100. |
 
 **Solicitud**
@@ -49,13 +48,13 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de conjuntos de datos, limitada al número indicado por el parámetro de consulta `limit`.
+Una respuesta correcta devuelve una lista de conjuntos de datos, limitada al número indicado por la variable `limit` parámetro de consulta.
 
 ```json
 {
@@ -77,11 +76,11 @@ Una respuesta correcta devuelve una lista de conjuntos de datos, limitada al nú
 
 ## Limitar las propiedades mostradas
 
-Incluso cuando se filtra el número de objetos devueltos mediante el parámetro `limit`, los propios objetos devueltos suelen contener más información de la que realmente necesita. Para reducir aún más la carga en el sistema, se recomienda filtrar las respuestas para incluir solo las propiedades que necesite.
+Incluso cuando se filtra el número de objetos devueltos mediante la variable `limit` , los propios objetos devueltos suelen contener más información de la que necesita. Para reducir aún más la carga en el sistema, se recomienda filtrar las respuestas para incluir solo las propiedades que necesite.
 
-El parámetro `properties` filtra los objetos de respuesta para devolver solo un conjunto de propiedades especificadas. El parámetro se puede configurar para que devuelva una o varias propiedades.
+La variable `properties` filtros de parámetros de respuesta para devolver solo un conjunto de propiedades especificadas. El parámetro se puede configurar para que devuelva una o varias propiedades.
 
-El parámetro `properties` solo acepta propiedades de objeto de nivel superior, lo que significa que para el siguiente objeto de ejemplo, puede aplicar filtros para `name`, `description` y `subItem`, pero NO para `sampleKey`.
+La variable `properties` solo acepta propiedades de objeto de nivel superior, lo que significa que para el siguiente objeto de ejemplo, puede aplicar filtros para `name`, `description`y `subItem`, pero NO para `sampleKey`.
 
 ```json
 {
@@ -105,26 +104,26 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | Nombre de un atributo que se va a incluir en el cuerpo de la respuesta. |
-| `{OBJECT_ID}` | Identificador único de un objeto [!DNL Catalog] específico que se está recuperando. |
+| `{OBJECT_ID}` | El identificador único de un [!DNL Catalog] objeto que se está recuperando. |
 
 **Solicitud**
 
-La siguiente solicitud recupera una lista de conjuntos de datos. La lista de nombres de propiedad separados por comas que se proporciona en el parámetro `properties` indica las propiedades que se van a devolver en la respuesta. También se incluye un parámetro `limit` , que limita el número de conjuntos de datos devueltos. Si la solicitud no incluía un parámetro `limit`, la respuesta contendría un máximo de 20 objetos.
+La siguiente solicitud recupera una lista de conjuntos de datos. Lista de nombres de propiedades separados por comas que se proporciona en la sección `properties` indica las propiedades que se van a devolver en la respuesta. A `limit` también se incluye, lo que limita el número de conjuntos de datos devueltos. Si la solicitud no incluía un `limit` , la respuesta contendría un máximo de 20 objetos.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?limit=4&properties=name,schemaRef' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de objetos [!DNL Catalog] con solo las propiedades solicitadas mostradas.
+Una respuesta correcta devuelve una lista de [!DNL Catalog] objetos con solo las propiedades solicitadas mostradas.
 
 ```json
 {
@@ -158,13 +157,13 @@ En función de la respuesta anterior, se puede inferir lo siguiente:
 
 >[!NOTE]
 >
->En la propiedad `schemaRef` de cada conjunto de datos, el número de versión indica la última versión secundaria del esquema. Consulte la sección sobre [versión del esquema](../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información.
+>En el `schemaRef` para cada conjunto de datos, el número de versión indica la última versión secundaria del esquema. Consulte la sección sobre [versiones de esquema](../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información.
 
 ## Índice inicial de desplazamiento de la lista de respuestas
 
-El parámetro de consulta `start` desplaza hacia delante la lista de respuestas en un número especificado mediante la numeración basada en cero. Por ejemplo, `start=2` desvía la respuesta para comenzar en el tercer objeto de la lista.
+La variable `start` El parámetro query desplaza la lista de respuestas hacia delante por un número especificado, utilizando la numeración basada en cero. Por ejemplo, `start=2` desplazaría la respuesta para que comience en el tercer objeto de la lista.
 
-Si el parámetro `start` no está emparejado con un parámetro `limit`, el número máximo de objetos devueltos es 20.
+Si la variable `start` no está emparejado con un `limit` , el número máximo de objetos devueltos es 20.
 
 **Formato de API**
 
@@ -179,14 +178,14 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 **Solicitud**
 
-La siguiente solicitud recupera una lista de conjuntos de datos, compensando con el quinto objeto (`start=4`) y limitando la respuesta a dos conjuntos de datos devueltos (`limit=2`).
+La siguiente solicitud recupera una lista de conjuntos de datos, lo que se contrasta con el quinto objeto (`start=4`) y limitando la respuesta a dos conjuntos de datos devueltos (`limit=2`).
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?start=4&limit=2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -203,23 +202,23 @@ La respuesta incluye un objeto JSON que contiene dos elementos de nivel superior
 
 ## Filtrar por etiqueta
 
-Algunos objetos Catalog admiten el uso de un atributo `tags`. Las etiquetas pueden adjuntar información a un objeto y luego utilizarse más adelante para recuperarlo. La elección de las etiquetas que se deben utilizar y cómo aplicarlas depende de los procesos de organización.
+Algunos objetos Catálogo admiten el uso de un `tags` atributo. Las etiquetas pueden adjuntar información a un objeto y luego utilizarse más adelante para recuperarlo. La elección de las etiquetas que se deben utilizar y cómo aplicarlas depende de los procesos de organización.
 
 Hay algunas limitaciones que hay que tener en cuenta al utilizar etiquetas:
 
 * Los únicos objetos de catálogo que admiten etiquetas actualmente son conjuntos de datos, lotes y conexiones.
 * Los nombres de las etiquetas son exclusivos de su organización de IMS.
 * Los procesos de Adobe pueden aprovechar las etiquetas para ciertos comportamientos. A los nombres de estas etiquetas se les agregará el prefijo &quot;adobe&quot; como estándar. Por lo tanto, debe evitar esta convención al declarar nombres de etiquetas.
-* Los siguientes nombres de etiquetas están reservados para su uso en [!DNL Experience Platform] y, por lo tanto, no se pueden declarar como nombre de etiqueta para su organización:
-   * `unifiedProfile`: Este nombre de etiqueta está reservado para que  [[!DNL Real-time Customer Profile]](../../profile/home.md) ingrese conjuntos de datos.
-   * `unifiedIdentity`: Este nombre de etiqueta está reservado para que  [[!DNL Identity Service]](../../identity-service/home.md) ingrese conjuntos de datos.
+* Los siguientes nombres de etiquetas están reservados para su uso en [!DNL Experience Platform]y, por lo tanto, no se pueden declarar como nombre de etiqueta para su organización:
+   * `unifiedProfile`: Este nombre de etiqueta está reservado para los conjuntos de datos que ingerirá [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity`: Este nombre de etiqueta está reservado para los conjuntos de datos que ingerirá [[!DNL Identity Service]](../../identity-service/home.md).
 
-A continuación se muestra un ejemplo de un conjunto de datos que contiene una propiedad `tags` . Las etiquetas de esa propiedad toman la forma de pares clave-valor, y cada valor de etiqueta aparece como una matriz que contiene una sola cadena:
+A continuación se muestra un ejemplo de un conjunto de datos que contiene un `tags` propiedad. Las etiquetas de esa propiedad toman la forma de pares clave-valor, y cada valor de etiqueta aparece como una matriz que contiene una sola cadena:
 
 ```json
 {
     "5be1f2ecc73c1714ceba66e2": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "tags": {
             "sampleTag": [
                 "123456"
@@ -253,9 +252,9 @@ A continuación se muestra un ejemplo de un conjunto de datos que contiene una p
 
 **Formato de API**
 
-Los valores del parámetro `tags` toman la forma de pares clave-valor, utilizando el formato `{TAG_NAME}:{TAG_VALUE}`. Se pueden proporcionar varios pares de clave-valor en forma de lista separada por comas. Cuando se proporcionan varias etiquetas, se asume una relación AND.
+Valores de la variable `tags` toma la forma de pares clave-valor, utilizando el formato `{TAG_NAME}:{TAG_VALUE}`. Se pueden proporcionar varios pares de clave-valor en forma de lista separada por comas. Cuando se proporcionan varias etiquetas, se asume una relación AND.
 
-El parámetro admite caracteres comodín (`*`) para valores de etiqueta. Por ejemplo, una cadena de búsqueda `test*` devuelve cualquier objeto donde el valor de la etiqueta comience por &quot;test&quot;. Una cadena de búsqueda que consiste únicamente en un comodín puede utilizarse para filtrar objetos en función de si contienen o no una etiqueta específica, independientemente de su valor.
+El parámetro admite caracteres comodín (`*`) para valores de etiqueta. Por ejemplo, una cadena de búsqueda de `test*` devuelve cualquier objeto donde el valor de la etiqueta comience por &quot;test&quot;. Una cadena de búsqueda que consiste únicamente en un comodín puede utilizarse para filtrar objetos en función de si contienen o no una etiqueta específica, independientemente de su valor.
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -266,7 +265,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | Nombre de la etiqueta por la que se va a filtrar. |
 | `{TAG_VALUE}` | El valor de la etiqueta por la que filtrar. Admite caracteres comodín (`*`). |
 
@@ -279,7 +278,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?tags=sampleTag:123456,secondTag:* \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -291,7 +290,7 @@ Una respuesta correcta devuelve una lista de conjuntos de datos que contienen `s
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 1",
             "created": 1533539550237,
             "updated": 1533539552416,
@@ -311,7 +310,7 @@ Una respuesta correcta devuelve una lista de conjuntos de datos que contienen `s
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 2",
             "created": 1533539550237,
             "updated": 1533539552416,
@@ -337,7 +336,7 @@ Una respuesta correcta devuelve una lista de conjuntos de datos que contienen `s
 
 ## Filtrar por intervalo de fechas
 
-Algunos extremos de la API [!DNL Catalog] tienen parámetros de consulta que permiten consultas de rango, la mayoría de las veces en el caso de fechas.
+Algunos extremos de la variable [!DNL Catalog] La API tiene parámetros de consulta que permiten consultas de rango, generalmente en el caso de fechas.
 
 **Formato de API**
 
@@ -358,19 +357,19 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/batches?createdAfter=1554076800000&createdBefore=1556668799000' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta contiene una lista de objetos [!DNL Catalog] que se encuentran dentro del intervalo de fechas especificado. A menos que también se especifique un límite, la respuesta contiene un máximo de 20 objetos.
+Una respuesta correcta contiene una lista de [!DNL Catalog] objetos que se encuentran dentro del intervalo de fechas especificado. A menos que también se especifique un límite, la respuesta contiene un máximo de 20 objetos.
 
 ```json
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 1",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -382,7 +381,7 @@ Una respuesta correcta contiene una lista de objetos [!DNL Catalog] que se encue
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 2",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -397,11 +396,11 @@ Una respuesta correcta contiene una lista de objetos [!DNL Catalog] que se encue
 
 ## Ordenar por propiedad
 
-El parámetro de consulta `orderBy` permite ordenar los datos de respuesta en función de un valor de propiedad especificado. Este parámetro requiere una &quot;dirección&quot; (`asc` para ascendente o `desc` para descendente), seguida de dos puntos (`:`) y luego una propiedad para ordenar los resultados. Si no se especifica una dirección, la dirección predeterminada es ascendente.
+La variable `orderBy` el parámetro de consulta le permite ordenar los datos de respuesta en función de un valor de propiedad especificado. Este parámetro requiere una &quot;dirección&quot; (`asc` para ascendente o `desc` para descender), seguido de dos puntos (`:`) y, a continuación, una propiedad para ordenar los resultados por. Si no se especifica una dirección, la dirección predeterminada es ascendente.
 
 Se pueden proporcionar varias propiedades de ordenación en una lista separada por comas. Si la primera propiedad de ordenación produce varios objetos que contienen el mismo valor para esa propiedad, se utilizará la segunda propiedad de ordenación para ordenar aún más los objetos coincidentes.
 
-Por ejemplo, considere la siguiente consulta: `orderBy=name,desc:created`. Los resultados se ordenan en orden ascendente según la primera propiedad de clasificación, `name`. En los casos en los que varios registros comparten la misma propiedad `name` , los registros coincidentes se ordenan por la segunda propiedad de clasificación, `created`. Si ningún registro devuelto comparte el mismo `name`, la propiedad `created` no tiene en cuenta el orden.
+Por ejemplo, considere la siguiente consulta: `orderBy=name,desc:created`. Los resultados se ordenan en orden ascendente según la primera propiedad de clasificación, `name`. En casos en los que varios registros comparten lo mismo `name` , los registros coincidentes se ordenan por la segunda propiedad de clasificación, `created`. Si ningún registro devuelto comparte lo mismo `name`, el `created` no tiene en cuenta el orden.
 
 
 **Formato de API**
@@ -419,26 +418,26 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 **Solicitud**
 
-La siguiente solicitud recupera una lista de conjuntos de datos ordenados por su propiedad `name` . Si algún conjunto de datos comparte el mismo `name`, esos conjuntos de datos, a su vez, se ordenarán por su propiedad `updated` en orden descendente.
+La siguiente solicitud recupera una lista de conjuntos de datos ordenados por sus `name` propiedad. Si algún conjunto de datos comparte lo mismo `name`, estos conjuntos de datos, a su vez, se ordenarán por sus `updated` en orden descendente.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?orderBy=name,desc:updated' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta contiene una lista de objetos [!DNL Catalog] que se ordenan según el parámetro `orderBy`. A menos que también se especifique un límite, la respuesta contiene un máximo de 20 objetos.
+Una respuesta correcta contiene una lista de [!DNL Catalog] objetos que están ordenados según la variable `orderBy` parámetro. A menos que también se especifique un límite, la respuesta contiene un máximo de 20 objetos.
 
 ```json
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "0405",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -450,7 +449,7 @@ Una respuesta correcta contiene una lista de objetos [!DNL Catalog] que se orden
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "AAM Dataset",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -462,7 +461,7 @@ Una respuesta correcta contiene una lista de objetos [!DNL Catalog] que se orden
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "AAM Dataset",
             "created": 1554028394852,
             "updated": 1554130582960,
@@ -479,16 +478,16 @@ Una respuesta correcta contiene una lista de objetos [!DNL Catalog] que se orden
 
 [!DNL Catalog] proporciona dos métodos de filtrado por propiedad, que se describen en las secciones siguientes:
 
-* [Uso de filtros](#using-simple-filters) simples: Filtre por si una propiedad específica coincide con un valor específico.
-* [Uso del parámetro](#using-the-property-parameter) de propiedad: Utilice expresiones condicionales para filtrar en función de si existe una propiedad o si el valor de una propiedad coincide, se aproxima o compara con otro valor especificado o expresión regular.
+* [Uso de filtros simples](#using-simple-filters): Filtre por si una propiedad específica coincide con un valor específico.
+* [Uso del parámetro de propiedad](#using-the-property-parameter): Utilice expresiones condicionales para filtrar en función de si existe una propiedad o si el valor de una propiedad coincide, se aproxima o compara con otro valor especificado o expresión regular.
 
 ### Uso de filtros simples {#using-simple-filters}
 
 Los filtros simples le permiten filtrar respuestas en función de valores de propiedad específicos. Un filtro simple adopta la forma de `{PROPERTY_NAME}={VALUE}`.
 
-Por ejemplo, la consulta `name=exampleName` solo devuelve objetos cuya propiedad `name` contiene el valor &quot;exampleName&quot;. Por el contrario, la consulta `name=!exampleName` solo devuelve objetos cuya propiedad `name` es **no** &quot;exampleName&quot;.
+Por ejemplo, la consulta `name=exampleName` solo devuelve objetos cuyos `name` contiene un valor de &quot;exampleName&quot;. Por el contrario, la consulta `name=!exampleName` solo devuelve objetos cuyos `name` la propiedad es **not** &quot;exampleName&quot;.
 
-Además, los filtros simples admiten la capacidad de realizar consultas de varios valores para una sola propiedad. Cuando se proporcionan varios valores, la respuesta devuelve objetos cuya propiedad coincide con **any** de los valores de la lista proporcionada. Puede invertir una consulta de varios valores prefiriendo un carácter `!` a la lista, devolviendo solo los objetos cuyo valor de propiedad sea **no** en la lista proporcionada (por ejemplo, `name=!exampleName,anotherName`).
+Además, los filtros simples admiten la capacidad de realizar consultas de varios valores para una sola propiedad. Cuando se proporcionan varios valores, la respuesta devuelve objetos cuya propiedad coincide con **any** de los valores de la lista proporcionada. Puede invertir una consulta de varios valores marcando como prefijo una `!` carácter a la lista, devolviendo solo objetos cuyo valor de propiedad sea **not** en la lista proporcionada (por ejemplo, `name=!exampleName,anotherName`).
 
 **Formato de API**
 
@@ -501,32 +500,32 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | Nombre de la propiedad cuyo valor desea filtrar. |
 | `{VALUE}` | Un valor de propiedad que determina qué resultados se incluirán (o excluirán, según la consulta). |
 
 **Solicitud**
 
-La siguiente solicitud recupera una lista de conjuntos de datos, filtrados para incluir solo conjuntos de datos cuya propiedad `name` tiene el valor &quot;exampleName&quot; u &quot;otherName&quot;.
+La siguiente solicitud recupera una lista de conjuntos de datos, filtrados para incluir solo conjuntos de datos cuya `name` tiene el valor &quot;exampleName&quot; u &quot;otherName&quot;.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?name=exampleName,anotherName' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta contiene una lista de conjuntos de datos, excluyendo cualquier conjunto de datos cuyo `name` sea &quot;exampleName&quot; u &quot;otherName&quot;. A menos que también se especifique un límite, la respuesta contiene un máximo de 20 objetos.
+Una respuesta correcta contiene una lista de conjuntos de datos, excluyendo cualquier conjunto de datos cuyo `name` es &quot;exampleName&quot; u &quot;otherName&quot;. A menos que también se especifique un límite, la respuesta contiene un máximo de 20 objetos.
 
 ```json
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "exampleName",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -538,7 +537,7 @@ Una respuesta correcta contiene una lista de conjuntos de datos, excluyendo cual
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "anotherName",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -551,11 +550,11 @@ Una respuesta correcta contiene una lista de conjuntos de datos, excluyendo cual
 }
 ```
 
-### Uso del parámetro `property` {#using-the-property-parameter}
+### Al usar la variable `property` parameter {#using-the-property-parameter}
 
-El parámetro de consulta `property` proporciona más flexibilidad para el filtrado basado en propiedades que los filtros simples. Además de filtrar en función de si una propiedad tiene un valor específico, el parámetro `property` puede utilizar otros operadores de comparación (como &quot;more-than&quot; (`>`) y &quot;less-than&quot; (`<`), así como expresiones regulares para filtrar por valores de propiedad. También puede filtrar por si existe o no una propiedad, independientemente de su valor.
+La variable `property` El parámetro query proporciona más flexibilidad para el filtrado basado en propiedades que los filtros simples. Además de filtrar en función de si una propiedad tiene un valor específico, la variable `property` puede utilizar otros operadores de comparación (como &quot;more-than&quot; (`>`) y &quot;menor que&quot; (`<`)), así como expresiones regulares para filtrar por valores de propiedad. También puede filtrar por si existe o no una propiedad, independientemente de su valor.
 
-El parámetro `property` solo acepta propiedades de objeto de nivel superior, lo que significa que para el siguiente objeto de ejemplo, puede filtrar por propiedad para `name`, `description` y `subItem`, pero NO para `sampleKey`.
+La variable `property` solo acepta propiedades de objeto de nivel superior, lo que significa que para el siguiente objeto de ejemplo, puede filtrar por propiedad para `name`, `description`y `subItem`, pero NO para `sampleKey`.
 
 ```json
 {
@@ -577,26 +576,26 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | Expresión condicional que indica qué propiedad se va a consultar y cómo se va a evaluar su valor. A continuación se proporcionan ejemplos. |
 
-El valor del parámetro `property` admite varios tipos diferentes de expresiones condicionales. La siguiente tabla describe la sintaxis básica de las expresiones admitidas:
+El valor de la variable `property` admite varios tipos diferentes de expresiones condicionales. La siguiente tabla describe la sintaxis básica de las expresiones admitidas:
 
 | Símbolo(s) | Descripción | Ejemplo |
 | --- | --- | --- |
 | (Ninguna) | Al establecer el nombre de la propiedad sin operador, solo se devuelven objetos donde exista la propiedad, independientemente de su valor. | `property=name` |
-| ! | Al prefijar un &quot;`!`&quot; en el valor de un parámetro `property` solo se devuelven objetos en los que la propiedad **no** existe. | `property=!name` |
-| ~ | Devuelve solo los objetos cuyos valores de propiedad (cadena) coincidan con una expresión regular proporcionada después del símbolo de tilde (`~`). | `property=name~^example` |
-| == | Devuelve solo los objetos cuyos valores de propiedad coincidan exactamente con la cadena proporcionada después del símbolo de igual doble (`==`). | `property=name==exampleName` |
-| != | Devuelve solo los objetos cuyos valores de propiedad **not** coinciden con la cadena proporcionada después del símbolo not-equals (`!=`). | `property=name!=exampleName` |
-| &lt;> | Devuelve solo los objetos cuyos valores de propiedad sean inferiores (pero no iguales) a una cantidad declarada. | `property=version<1.0.0` |
-| &lt;> | Devuelve solo los objetos cuyos valores de propiedad sean inferiores (o iguales) a una cantidad declarada. | `property=version<=1.0.0` |
+| ! | Prefijando un &quot;`!`&quot; al valor de un `property` El parámetro solo devuelve objetos en los que la propiedad **not** existe. | `property=!name` |
+| ~ | Devuelve solo los objetos cuyos valores de propiedad (cadena) coinciden con una expresión regular proporcionada después de la tilde (`~`). | `property=name~^example` |
+| == | Devuelve solo los objetos cuyos valores de propiedad coincidan exactamente con la cadena proporcionada después del símbolo doble igual (`==`). | `property=name==exampleName` |
+| != | Devuelve solo objetos cuyos valores de propiedad **not** cadena de coincidencia proporcionada después del símbolo not-equals (`!=`). | `property=name!=exampleName` |
+| &lt; | Devuelve solo los objetos cuyos valores de propiedad sean inferiores (pero no iguales) a una cantidad declarada. | `property=version<1.0.0` |
+| &lt;= | Devuelve solo los objetos cuyos valores de propiedad sean inferiores (o iguales) a una cantidad declarada. | `property=version<=1.0.0` |
 | > | Devuelve solo los objetos cuyos valores de propiedad sean buenos (pero no iguales a) una cantidad declarada. | `property=version>1.0.0` |
 | >= | Devuelve solo los objetos cuyos valores de propiedad sean buenos (o iguales a) una cantidad declarada. | `property=version>=1.0.0` |
 
 >[!NOTE]
 >
->La propiedad `name` admite el uso de un comodín `*`, ya sea como la cadena de búsqueda completa o como parte de ella. Los caracteres comodín coinciden con caracteres vacíos, de modo que la cadena de búsqueda `te*st` coincidirá con el valor &quot;test&quot;. Los asteriscos se evitan duplicándolos (`**`). Un asterisco doble en una cadena de búsqueda representa un solo asterisco como una cadena literal.
+>La variable `name` admite el uso de un comodín `*`, ya sea como cadena de búsqueda completa o como parte de ella. Los caracteres comodín coinciden con caracteres vacíos, por lo que la cadena de búsqueda `te*st` coincidirá con el valor &quot;test&quot;. Los Asteriscos se escapan duplicándolos (`**`). Un asterisco doble en una cadena de búsqueda representa un solo asterisco como una cadena literal.
 
 **Solicitud**
 
@@ -607,7 +606,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?property=version>1.0.3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -619,7 +618,7 @@ Una respuesta correcta contiene una lista de conjuntos de datos cuyos números d
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.1.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "sampleDataset",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -631,7 +630,7 @@ Una respuesta correcta contiene una lista de conjuntos de datos cuyos números d
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "exampleDataset",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -643,7 +642,7 @@ Una respuesta correcta contiene una lista de conjuntos de datos cuyos números d
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "anotherDataset",
             "created": 1554028394852,
             "updated": 1554130582960,
@@ -658,7 +657,7 @@ Una respuesta correcta contiene una lista de conjuntos de datos cuyos números d
 
 ## Combinación de varios filtros
 
-Con un símbolo &amp; (`&`), se pueden combinar varios filtros en una única solicitud. Cuando se agregan condiciones adicionales a una solicitud, se asume una relación AND.
+Uso de un símbolo &amp; (`&`), puede combinar varios filtros en una sola solicitud. Cuando se agregan condiciones adicionales a una solicitud, se asume una relación AND.
 
 **Formato de API**
 

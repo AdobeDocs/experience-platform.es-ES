@@ -5,7 +5,7 @@ title: Creación de modelos mediante el SDK de la plataforma Adobe Experience Pl
 topic-legacy: SDK authoring
 description: Este tutorial le proporciona información sobre la conversión de data_access_sdk_python al nuevo Python platform_sdk en Python y R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
@@ -37,7 +37,7 @@ Si no utiliza Jupyter Notebook o necesita cambiar la organización de IMS, utili
 ```python
 from platform_sdk.client_context import ClientContext
 client_context = ClientContext(api_key={API_KEY},
-              org_id={IMS_ORG},
+              org_id={ORG_ID},
               user_token={USER_TOKEN},
               service_token={SERVICE_TOKEN})
 ```
@@ -62,7 +62,7 @@ library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
 client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
-              org_id={IMS_ORG},
+              org_id={ORG_ID},
               user_token={USER_TOKEN},
               service_token={SERVICE_TOKEN})
 ```

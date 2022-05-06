@@ -5,7 +5,7 @@ title: Introducción a la API de Sandbox
 topic-legacy: developer guide
 description: La API de espacio aislado permite a los desarrolladores administrar mediante programación entornos limitados en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: d38df5ede84c1306a76fd1ec83d9d0a540b0d01c
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 5%
@@ -32,7 +32,7 @@ Esta guía requiere que haya completado el [tutorial de autenticación](https://
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Además de los encabezados de autenticación, todas las solicitudes requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 

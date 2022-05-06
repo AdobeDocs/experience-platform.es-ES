@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: La API del servicio de directivas le permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos. Este documento proporciona un tutorial paso a paso para crear una política mediante la API del servicio de directivas.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1217'
 ht-degree: 2%
@@ -61,7 +61,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -85,7 +85,7 @@ Una respuesta correcta devuelve el número total de acciones de marketing encont
         {
             "name": "sampleMarketingAction",
             "description": "Marketing Action description.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550714012088,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -101,7 +101,7 @@ Una respuesta correcta devuelve el número total de acciones de marketing encont
         {
             "name": "newMarketingAction",
             "description": "Another marketing action.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550793833224,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -147,7 +147,7 @@ curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -169,7 +169,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles de la
 {
     "name": "exportToThirdParty",
     "description": "Export data to a third party",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550713341915,
     "createdClient": "{CREATED_CLIENT}",
     "createdUser": "{CREATED_USER",
@@ -240,7 +240,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name": "Export Data to Third Party",
@@ -301,7 +301,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles de la
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1565651746693,
     "createdClient": "{CREATED_CLIENT}",
     "createdUser": "{CREATED_USER",
@@ -351,7 +351,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
     {
@@ -399,7 +399,7 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y los detalles de la dir
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1565651746693,
     "createdClient": "{CREATED_CLIENT}",
     "createdUser": "{CREATED_USER}",

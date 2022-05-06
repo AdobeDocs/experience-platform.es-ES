@@ -4,7 +4,7 @@ title: Habilitar un conjunto de datos para actualizaciones de perfil mediante AP
 type: Tutorial
 description: Este tutorial le muestra cómo utilizar las API de Adobe Experience Platform para habilitar un conjunto de datos con capacidades de "actualización" para realizar actualizaciones en los datos del perfil del cliente en tiempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e7bd2c699b30276dca1a2e29c19f0a885b246f48
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 2%
@@ -40,7 +40,7 @@ Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un `Content-Type` encabezado. El valor correcto de este encabezado se muestra en las solicitudes de muestra donde es necesario.
 
@@ -72,7 +72,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "fields":[],
@@ -133,7 +133,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -143,7 +143,7 @@ curl -X GET \
 {
     "5b020a27e7040801dedbf46e": {
         "name": "{DATASET_NAME}",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
@@ -216,7 +216,7 @@ curl -X PATCH \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
@@ -257,7 +257,7 @@ curl -X PATCH \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },

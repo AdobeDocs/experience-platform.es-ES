@@ -5,11 +5,10 @@ title: Enumerar espacios de nombres de identidad disponibles
 topic-legacy: API guide
 description: Enumere todos los espacios de nombres disponibles.
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '79'
-ht-degree: 5%
+source-wordcount: '83'
+ht-degree: 7%
 
 ---
 
@@ -28,13 +27,13 @@ curl -X GET \
   'https://platform-va7.adobe.io/data/core/idnamespace/identities' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-La respuesta incluye una matriz de objetos, cada uno de los cuales representa un espacio de nombres disponible. Los espacios de nombres con un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; son espacios de nombres estándar, mientras que los que tienen un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL true]&quot; son espacios de nombres creados por su organización.
+La respuesta incluye una matriz de objetos, cada uno de los cuales representa un espacio de nombres disponible. Espacios de nombres con un &quot;[!UICONTROL custom]&quot; valor de &quot;[!UICONTROL false]&quot; son espacios de nombres estándar, mientras que aquellos con un &quot;[!UICONTROL custom]&quot; valor de &quot;[!UICONTROL true]&quot; son áreas de nombres que su organización ha creado.
 
 >[!NOTE]
 >
@@ -80,4 +79,4 @@ La respuesta incluye una matriz de objetos, cada uno de los cuales representa un
 
 ## Pasos siguientes
 
-Continúe con el siguiente tutorial para [crear un espacio de nombres personalizado](./create-custom-namespace.md)
+Continúe con el siguiente tutorial a [crear un espacio de nombres personalizado](./create-custom-namespace.md)

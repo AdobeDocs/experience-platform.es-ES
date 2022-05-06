@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Salesforce mediante la API de servicio de flujo.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 2%
@@ -68,7 +68,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

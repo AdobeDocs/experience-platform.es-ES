@@ -5,8 +5,7 @@ title: Punto final de API de instancias MLI
 topic-legacy: Developer guide
 description: Una instancia MLI es un emparejamiento de un motor existente con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetro de puntuación o configuración de recursos de hardware.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%
@@ -15,13 +14,13 @@ ht-degree: 4%
 
 # Extremo MLInstances
 
-Una instancia MLI es un emparejamiento de un [Motor](./engines.md) existente con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetro de puntuación o configuración de recursos de hardware.
+Una instancia MLI es un emparejamiento de una instancia existente [Motor](./engines.md) con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetro de puntuación o configuración de recursos de hardware.
 
 ## Crear una instancia MLI {#create-an-mlinstance}
 
 Puede crear una instancia MLI realizando una solicitud de POST mientras proporciona una carga útil de solicitud que consiste en un ID de motor válido (`{ENGINE_ID}`) y un conjunto apropiado de configuraciones predeterminadas.
 
-Si el ID del motor hace referencia a un motor PySpark o Spark, puede configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre utilizar una CPU o una GPU con fines de formación y puntuación. Consulte las secciones del apéndice sobre las [configuraciones de recursos PySpark y Spark](./appendix.md#resource-config) y [configuraciones de CPU y GPU Python](./appendix.md#cpu-gpu-config) para obtener más información.
+Si el ID del motor hace referencia a un motor PySpark o Spark, puede configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre utilizar una CPU o una GPU con fines de formación y puntuación. Consulte las secciones del apéndice sobre [Configuraciones de recursos PySpark y Spark](./appendix.md#resource-config) y [Configuraciones de CPU y GPU de Python](./appendix.md#cpu-gpu-config) para obtener más información.
 
 **Formato de API**
 
@@ -36,7 +35,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/mlInstances \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -d '{
@@ -131,7 +130,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 
 ## Recuperar una lista de instancias MLI
 
-Puede recuperar una lista de instancias MLI realizando una única solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de instancias MLI realizando una única solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice de [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -143,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) utilizados para filtrar los resultados. |
+| `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) se utiliza para filtrar los resultados. |
 | `{VALUE}` | El valor del parámetro de consulta anterior. |
 
 **Solicitud**
@@ -153,7 +152,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlInstances \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -218,7 +217,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -276,7 +275,7 @@ Puede actualizar una instancia MLI existente sobrescribiendo sus propiedades med
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud de PUT, se sugiere que primero realice una solicitud de GET para [recuperar la instancia MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique todo el objeto JSON modificado como carga útil para la solicitud del PUT.
+>Para garantizar el éxito de esta solicitud del PUT, se sugiere que primero realice una solicitud de GET a [recuperar la instancia MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique todo el objeto JSON modificado como carga útil para la solicitud del PUT.
 
 La siguiente llamada de API de ejemplo actualizará los parámetros de capacitación y puntuación de una instancia MLI al tener inicialmente estas propiedades:
 
@@ -330,7 +329,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -d '{
@@ -425,7 +424,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlInstances?engineId=22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -460,7 +459,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

@@ -1,8 +1,8 @@
 ---
-description: Como parte de Destination SDK, Adobe proporciona herramientas para desarrolladores que le ayudarán a configurar y probar el destino. Esta página describe cómo probar la configuración de destino.
+description: Como parte del Destination SDK, Adobe proporciona herramientas para desarrolladores que le ayudarán a configurar y probar el destino. This page describes how to test your destination configuration.
 title: Probar la configuración de destino
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 1%
@@ -13,15 +13,15 @@ ht-degree: 1%
 
 ## Información general {#overview}
 
-Como parte de Destination SDK, Adobe proporciona herramientas para desarrolladores que le ayudarán a configurar y probar el destino. Esta página describe cómo probar la configuración de destino. Para obtener información sobre cómo crear una plantilla de transformación de mensaje, lea [Creación y prueba de una plantilla de transformación de mensaje](./create-template.md).
+As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. Esta página describe cómo probar la configuración de destino. For information on how to create a message transformation template, read [Create and test a message transformation template](./create-template.md).
 
 Hasta **compruebe si el destino está configurado correctamente y para verificar la integridad de los flujos de datos en el destino configurado**, use el *Herramienta de prueba de destino*. Con esta herramienta, puede probar la configuración de destino enviando mensajes al extremo de la API de REST.
 
 A continuación se ilustra cómo la prueba de destino se ajusta al [flujo de trabajo de configuración de destino](./configure-destination-instructions.md) en Destination SDK:
 
-![Gráfico de dónde encaja el paso de prueba de destino en el flujo de trabajo de configuración de destino](./assets/test-destination-step.png)
+![Graphic of where the destination testing step fits into the destination configuration workflow](./assets/test-destination-step.png)
 
-## Herramienta de prueba de destino: propósito y requisitos previos {#destination-testing-tool}
+## Destination testing tool - Purpose and prerequisites {#destination-testing-tool}
 
 Utilice la herramienta de prueba de destino para probar la configuración de destino enviando mensajes al extremo del socio que ha proporcionado en la variable [configuración del servidor](./server-and-template-configuration.md).
 
@@ -37,15 +37,15 @@ Con esta herramienta, después de haber configurado el destino, puede:
 
 >[!NOTE]
 >
->Para obtener toda la documentación de referencia de la API, lea [Operaciones de API de prueba de destino](./destination-testing-api.md).
+>For complete API reference documentation, read [Destination testing API operations](./destination-testing-api.md).
 
 Puede realizar llamadas al extremo de la API de prueba de destino con o sin añadir perfiles en la solicitud.
 
-Si no agrega ningún perfil en la solicitud, Adobe los generará internamente y los agregará a la solicitud. Si desea generar perfiles para utilizarlos en esta solicitud, consulte la [Referencia de API de generación de perfiles de muestra](./sample-profile-generation-api.md). Debe generar perfiles basados en el esquema XDM de origen, como se muestra en la [Referencia de API](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Tenga en cuenta que el esquema de origen es el [esquema de unión](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) del entorno limitado que está utilizando.
+If you don&#39;t add any profiles on the request, Adobe will generate those internally for you and add them to the request. Si desea generar perfiles para utilizarlos en esta solicitud, consulte la [Referencia de API de generación de perfiles de muestra](./sample-profile-generation-api.md). Debe generar perfiles basados en el esquema XDM de origen, como se muestra en la [Referencia de API](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Note that the source schema is the [union schema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) of the sandbox that you are using.
 
 La respuesta contiene el resultado del procesamiento de la solicitud de destino. La solicitud incluye tres secciones principales:
 * La solicitud generada por el Adobe para el destino.
-* La respuesta recibida de su destino.
+* The response received from your destination.
 * La lista de perfiles enviados en la solicitud, independientemente de si los perfiles eran [añadido por usted en la solicitud](./destination-testing-api.md/#test-with-added-profiles), o generado por el Adobe si [el cuerpo de la solicitud de prueba de destino estaba vacío](./destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
@@ -60,7 +60,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[
@@ -118,7 +118,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw ''
 ```

@@ -5,7 +5,7 @@ title: Introducción a la API del Registro de esquemas
 description: Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas a la API del Registro de esquemas.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 1%
@@ -37,7 +37,7 @@ Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Todos los recursos de [!DNL Experience Platform], incluidas las pertenecientes al [!DNL Schema Registry], están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
@@ -70,7 +70,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/stats \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -80,7 +80,7 @@ Una respuesta correcta devuelve información sobre el uso de la variable [!DNL S
 
 ```JSON
 {
-  "imsOrg":"{IMS_ORG}",
+  "imsOrg":"{ORG_ID}",
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,

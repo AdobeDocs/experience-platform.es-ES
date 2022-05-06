@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;privacidad del lago de dato
 solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en el lago de datos
 topic-legacy: overview
-description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluir la venta o eliminar sus datos personales según lo establecido en las normas legales y de privacidad de la organización. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en el lago de datos.
+description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes de acceso, exclusión de la venta o eliminación de sus datos personales según lo establecido en las normas legales y de privacidad de la organización. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en el lago de datos.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1380'
 ht-degree: 0%
@@ -91,7 +91,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '
@@ -113,7 +113,7 @@ curl -X POST \
 | `xdm:sourceVersion` | La versión del esquema XDM especificado en `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | Ruta al campo de esquema al que se está aplicando el descriptor. |
 | `xdm:namespace` | Uno de los [áreas de nombres de identidad estándar](../privacy-service/api/appendix.md#standard-namespaces) reconocido por [!DNL Privacy Service]o un espacio de nombres personalizado definido por su organización. |
-| `xdm:property` | &quot;xdm:id&quot; o &quot;xdm:code&quot;, según el espacio de nombres que se esté utilizando en `xdm:namespace`. |
+| `xdm:property` | &quot;xdm:id&quot; o &quot;xdm:code&quot;, según el espacio de nombres que se utilice en `xdm:namespace`. |
 | `xdm:isPrimary` | Un valor booleano opcional. Cuando es true, esto indica que el campo es una identidad principal. Los esquemas solo pueden contener una identidad principal. Si no se incluye, el valor predeterminado es false . |
 
 **Respuesta**
@@ -165,13 +165,13 @@ curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
         "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
+        "value": "{ORG_ID}"
       }
     ],
     "users": [

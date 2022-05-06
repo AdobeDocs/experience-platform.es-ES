@@ -5,8 +5,7 @@ title: Punto final de la API de perspectivas
 topic-legacy: Developer guide
 description: Las perspectivas contienen métricas que se utilizan para facultar a un científico de datos para evaluar y elegir modelos ML óptimos mediante la visualización de métricas de evaluación relevantes.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
@@ -19,7 +18,7 @@ Las perspectivas contienen métricas que se utilizan para facultar a un científ
 
 ## Recuperar una lista de perspectivas
 
-Puede recuperar una lista de perspectivas realizando una única solicitud de GET al extremo de perspectivas.  Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de perspectivas realizando una única solicitud de GET al extremo de perspectivas.  Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice de [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -34,13 +33,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que incluye una lista de perspectivas y cada perspectiva tiene un identificador único ( `id` ). Además, recibirá `context` , que contiene los identificadores únicos asociados a esa perspectiva en particular, tras los eventos de Insights y los datos de métricas.
+Una respuesta correcta devuelve una carga útil que incluye una lista de perspectivas y cada perspectiva tiene un identificador único ( `id` ). Además, recibirá `context` que contiene los identificadores únicos asociados a esa perspectiva en particular, seguidos de los datos de métricas y eventos de Insights.
 
 ```json
 {
@@ -109,7 +108,7 @@ Una respuesta correcta devuelve una carga útil que incluye una lista de perspec
 
 ## Recuperar una perspectiva específica
 
-Para buscar una perspectiva en particular, realice una solicitud de GET y proporcione un `{INSIGHT_ID}` válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+Para buscar una perspectiva en particular, realice una solicitud de GET y proporcione una `{INSIGHT_ID}` en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice de [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -128,13 +127,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights/08b8d174-6b0d-4d7e-acd8-1c4c908e14b2 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que incluye el identificador único de perspectivas (`id`). Además, recibirá `context` , que contiene los identificadores únicos asociados con la perspectiva particular que sigue a los eventos y datos de métricas de Insights.
+Una respuesta correcta devuelve una carga útil que incluye el identificador único de perspectivas (`id`). Además, recibirá `context` que contiene los identificadores únicos asociados a la perspectiva en particular que siguen a los eventos de Insights y a los datos de métricas.
 
 ```json
 {
@@ -200,7 +199,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H `Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json`
     -d {
@@ -230,7 +229,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devolverá una carga útil que tiene un `{INSIGHT_ID}` y cualquier parámetro que haya proporcionado en la solicitud inicial.
+Una respuesta correcta devolverá una carga útil que tiene una `{INSIGHT_ID}` y cualquier parámetro que haya proporcionado en la solicitud inicial.
 
 ```json
 {
@@ -265,7 +264,7 @@ Una respuesta correcta devolverá una carga útil que tiene un `{INSIGHT_ID}` y 
 
 ## Recuperar una lista de métricas predeterminadas para algoritmos
 
-Puede recuperar una lista de todas las métricas predeterminadas y del algoritmo realizando una sola solicitud de GET al extremo de la métrica. Para consultar una métrica en particular, realice una solicitud de GET y proporcione un `{ALGORITHM}` válido en la ruta de solicitud.
+Puede recuperar una lista de todas las métricas predeterminadas y del algoritmo realizando una sola solicitud de GET al extremo de la métrica. Para consultar una métrica en particular, realice una solicitud de GET y proporcione una `{ALGORITHM}` en la ruta de solicitud.
 
 **Formato de API**
 
@@ -280,20 +279,20 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **Solicitud**
 
-La siguiente solicitud contiene una consulta y recupera una métrica específica mediante el identificador de algoritmo `{ALGORITHM}`
+La siguiente solicitud contiene una consulta y recupera una métrica específica mediante el identificador del algoritmo `{ALGORITHM}`
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/sensei/insights/metrics?algorithm={ALGORITHM}' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que incluye el identificador único `algorithm` y una matriz de métricas predeterminadas.
+Una respuesta correcta devuelve una carga útil que incluye la variable `algorithm` identificador único y matriz de métricas predeterminadas.
 
 ```json
 {

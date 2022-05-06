@@ -5,10 +5,10 @@ title: Punto final de API de consultas
 topic-legacy: queries
 description: Las secciones siguientes recorren las llamadas que puede realizar utilizando el extremo /queries en la API del servicio de consulta.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '676'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 3%
 
 ## Llamadas de API de muestra
 
-Las siguientes secciones explican las llamadas que puede realizar mediante el extremo `/queries` de la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+Las secciones siguientes recorren las llamadas que puede realizar mediante el `/queries` en la variable [!DNL Query Service] API. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Recuperar una lista de consultas
 
-Puede recuperar una lista de todas las consultas para su organización IMS realizando una solicitud de GET al extremo `/queries` .
+Puede recuperar una lista de todas las consultas de su organización IMS realizando una solicitud de GET al `/queries` punto final.
 
 **Formato de API**
 
@@ -29,7 +29,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Opcional*) Se han agregado parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por el símbolo &quot;`&`&quot;. A continuación se enumeran los parámetros disponibles.
+- `{QUERY_PARAMETERS}`: (*Opcional*) Parámetros agregados a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros separados por el símbolo &quot;et&quot; (`&`). A continuación se enumeran los parámetros disponibles.
 
 **Parámetros de consulta**
 
@@ -37,12 +37,12 @@ A continuación se muestra una lista de parámetros de consulta disponibles para
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo mediante el cual se deben solicitar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados creando en orden ascendente. Al agregar un `-` antes de crear (`orderby=-created`), los elementos se ordenarán de forma descendente. |
+| `orderby` | Especifica el campo mediante el cual se deben solicitar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` clasificará los resultados por creación en orden ascendente. Adición de un `-` antes de crear (`orderby=-created`) ordenará los elementos creando en orden descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
 | `start` | Desplaza la lista de respuestas utilizando la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta de la lista. (*Valor predeterminado: 0*) |
-| `property` | Filtre los resultados según los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `updated`, `state` y `id`. La lista de operadores admitidos es `>` (buena que), `<` (menor que), `>=` (buena o igual que), `<=` (menor o igual que), `==` (igual a), `!=` (no igual a) y `~` (contiene). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas con el ID especificado. |
-| `excludeSoftDeleted` | Indica si se debe incluir una consulta que se ha eliminado de forma suave. Por ejemplo, `excludeSoftDeleted=false` incluirá **consultas** suavizadas eliminadas. (*Boolean, valor predeterminado: true*) |
-| `excludeHidden` | Indica si se deben mostrar consultas no dirigidas por el usuario. Si este valor se establece en false, **incluirá** consultas no dirigidas por el usuario, como definiciones de CURSOR, consultas FETCH o consultas de metadatos. (*Boolean, valor predeterminado: true*) |
+| `property` | Filtre los resultados según los campos. Los filtros **must** se escapó el HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `updated`, `state`y `id`. La lista de operadores admitidos es `>` (bueno que) `<` (menor que), `>=` (bueno o igual que), `<=` (menor o igual que), `==` (igual a), `!=` (no es igual a) y `~` (contiene). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas con el ID especificado. |
+| `excludeSoftDeleted` | Indica si se debe incluir una consulta que se ha eliminado de forma suave. Por ejemplo, `excludeSoftDeleted=false` will **include** consultas eliminadas de software. (*Booleano, valor predeterminado: true*) |
+| `excludeHidden` | Indica si se deben mostrar consultas no dirigidas por el usuario. Si este valor se establece en &quot;false&quot;, se obtendrá **include** consultas no dirigidas por el usuario, como definiciones de CURSOR, FETCH o consultas de metadatos. (*Booleano, valor predeterminado: true*) |
 
 **Solicitud**
 
@@ -51,7 +51,7 @@ La siguiente solicitud recupera la consulta más reciente creada para su organiz
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -117,9 +117,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas pa
 }
 ```
 
-### Cree una consulta
+### Creación de una consulta
 
-Puede crear una nueva consulta realizando una solicitud de POST al extremo `/queries` .
+Puede crear una nueva consulta realizando una solicitud de POST al `/queries` punto final.
 
 **Formato de API**
 
@@ -135,7 +135,7 @@ La siguiente solicitud crea una nueva consulta, configurada por los valores prop
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -155,7 +155,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la consulta recién creada. Una vez que la consulta haya terminado de activarse y se haya ejecutado correctamente, el `state` cambiará de `SUBMITTED` a `SUCCESS`.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la consulta recién creada. Una vez que la consulta ha terminado de activarse y se ha ejecutado correctamente, la variable `state` cambiará de `SUBMITTED` a `SUCCESS`.
 
 ```json
 {
@@ -198,11 +198,11 @@ Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la
 
 >[!NOTE]
 >
->Puede utilizar el valor de `_links.cancel` para [cancelar la consulta creada](#cancel-a-query).
+>Puede utilizar el valor de `_links.cancel` a [cancelar la consulta creada](#cancel-a-query).
 
 ### Recuperar una consulta por ID
 
-Puede recuperar información detallada sobre una consulta específica realizando una solicitud de GET al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de solicitud.
+Puede recuperar información detallada sobre una consulta específica realizando una solicitud de GET al `/queries` y proporcionando el `id` en la ruta de solicitud.
 
 **Formato de API**
 
@@ -212,14 +212,14 @@ GET /queries/{QUERY_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{QUERY_ID}` | El valor `id` de la consulta que desea recuperar. |
+| `{QUERY_ID}` | La variable `id` de la consulta que desea recuperar. |
 
 **Solicitud**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -269,11 +269,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 >[!NOTE]
 >
->Puede utilizar el valor de `_links.cancel` para [cancelar la consulta creada](#cancel-a-query).
+>Puede utilizar el valor de `_links.cancel` a [cancelar la consulta creada](#cancel-a-query).
 
 ### Cancelar una consulta
 
-Puede solicitar la eliminación de una consulta especificada realizando una solicitud de PATCH al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de solicitud.
+Puede solicitar la eliminación de una consulta especificada realizando una solicitud de PATCH al `/queries` y proporcionando el `id` en la ruta de solicitud.
 
 **Formato de API**
 
@@ -283,7 +283,7 @@ PATCH /queries/{QUERY_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{QUERY_ID}` | El valor `id` de la consulta que desea cancelar. |
+| `{QUERY_ID}` | La variable `id` de la consulta que desea cancelar. |
 
 
 **Solicitud**
@@ -294,7 +294,7 @@ Esta solicitud de API utiliza la sintaxis JSON Patch para su carga útil. Para o
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json',
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -304,7 +304,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `op` | Para cancelar la consulta, debe configurar el parámetro op con el valor `cancel `. |
+| `op` | Para cancelar la consulta, debe establecer el parámetro op con el valor `cancel `. |
 
 **Respuesta**
 

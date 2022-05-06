@@ -5,7 +5,7 @@ title: Punto final de la API de trabajos de privacidad
 topic-legacy: developer guide
 description: Obtenga información sobre cómo administrar los trabajos de privacidad para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 4%
@@ -52,7 +52,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Respuesta**
@@ -100,12 +100,12 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
     "companyContexts": [
       {
         "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
+        "value": "{ORG_ID}"
       }
     ],
     "users": [
@@ -246,7 +246,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs/6fc09b53-c24f-4a6c-9ca2-c6076b0842b6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Respuesta**

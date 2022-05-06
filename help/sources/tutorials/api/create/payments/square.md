@@ -2,7 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;cuadrado;cuadrado
 title: Creación de una conexión base cuadrada mediante la API de servicio de flujo
 description: Obtenga información sobre cómo conectar Square a Adobe Experience Platform mediante la API de servicio de flujo.
-source-git-commit: f2f602fd618dc6b59ba13c275ca0c2964e3ea1f4
+exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 2%
@@ -64,7 +65,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

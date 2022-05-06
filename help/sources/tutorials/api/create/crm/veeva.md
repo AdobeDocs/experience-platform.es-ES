@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Veeva CRM mediante la API de servicio de flujo.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 2%
@@ -67,7 +67,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json'
     -d '{

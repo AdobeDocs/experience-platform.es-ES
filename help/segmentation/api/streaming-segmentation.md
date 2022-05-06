@@ -5,7 +5,7 @@ title: 'Evaluar eventos en tiempo casi real con segmentación por transmisión '
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1896'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
@@ -119,7 +119,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -136,7 +136,7 @@ Una respuesta correcta devuelve una matriz de segmentos en su organización de I
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -170,7 +170,7 @@ Una respuesta correcta devuelve una matriz de segmentos en su organización de I
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -230,7 +230,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'  \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "schema": {
@@ -262,7 +262,7 @@ Una respuesta correcta devuelve los detalles de la definición de segmento de fl
         "name": "_xdm.context.profile"
     },
     "ttlInDays": 30,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",
@@ -321,7 +321,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "{SCHEDULE_NAME}",
@@ -350,7 +350,7 @@ Una respuesta correcta devuelve los detalles de la programación recién creada.
 ```json
 {
     "id": "cd585edf-962d-420d-94ad-3be03e619ac2",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "e7e17720-c5bb-11e9-aafb-87c71c35cac8",
         "sandboxName": "prod",
@@ -391,7 +391,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         {

@@ -5,17 +5,16 @@ title: Eliminar un objeto en la API
 topic-legacy: developer guide
 description: Puede eliminar un objeto Catalog proporcionando su ID en la ruta de una solicitud del DELETE.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '207'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # Eliminación de un objeto en la API
 
-Puede eliminar un objeto [!DNL Catalog] si proporciona su ID en la ruta de una solicitud del DELETE.
+Puede eliminar un [!DNL Catalog] al proporcionar su ID en la ruta de una solicitud de DELETE.
 
 >[!WARNING]
 >
@@ -29,11 +28,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->El extremo `DELETE /batches/{ID}` ha quedado obsoleto. Para eliminar un lote, debe utilizar la [API de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>La variable `DELETE /batches/{ID}` se ha desaprobado. Para eliminar un lote, debe utilizar la variable [API de ingesta de lotes](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a eliminar. Los objetos válidos son: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a eliminar. Los objetos válidos son: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificador del objeto específico que desea actualizar. |
 
 **Solicitud**
@@ -45,7 +44,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -61,4 +60,4 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y una matriz que contien
 
 >[!NOTE]
 >
->Si ningún objeto [!DNL Catalog] coincide con el ID proporcionado en la solicitud, puede recibir un Código de estado HTTP 200, pero la matriz de respuesta estará vacía.
+>Si no [!DNL Catalog] Los objetos coinciden con el ID proporcionado en la solicitud, puede seguir recibiendo un Código de estado HTTP 200, pero la matriz de respuesta estará vacía.

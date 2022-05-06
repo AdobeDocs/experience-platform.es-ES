@@ -6,55 +6,55 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 
 # Transmisión de datos de registro mediante las API de ingesta de transmisión
 
-Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API de Adobe Experience Platform [!DNL Data Ingestion Service].
+Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de Adobe Experience Platform [!DNL Data Ingestion Service] API.
 
 ## Primeros pasos
 
 Este tutorial requiere conocimientos prácticos de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia.
-   - [Guía](../../xdm/api/getting-started.md) para desarrolladores de Schema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la  [!DNL Schema Registry] API y cómo realizar llamadas a ellos. Esto incluye conocer su `{TENANT_ID}`, que aparece en las llamadas a lo largo de este tutorial, así como saber cómo crear esquemas, que se utilizan para crear un conjunto de datos para la ingesta.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia.
+   - [Guía para desarrolladores de Schema Registry](../../xdm/api/getting-started.md): Una guía completa que cubre cada uno de los extremos disponibles del [!DNL Schema Registry] y cómo realizar llamadas a ellos. Esto incluye conocer su `{TENANT_ID}`, que aparece en las llamadas a lo largo de este tutorial, así como saber cómo crear esquemas, que se utiliza para crear un conjunto de datos para la ingesta.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil unificado y de cliente en tiempo real basado en datos agregados de varias fuentes.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas correctamente a las API de ingesta de transmisión.
 
 ### Leer llamadas de API de ejemplo
 
-Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+>Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
 - Content-Type: application/json
 
-## Componer un esquema basado en la clase [!DNL XDM Individual Profile]
+## Componer un esquema basado en [!DNL XDM Individual Profile] class
 
-Para crear un conjunto de datos, primero debe crear un nuevo esquema que implemente la clase [!DNL XDM Individual Profile]. Para obtener más información sobre cómo crear esquemas, lea la [guía para desarrolladores de la API del Registro de Esquemas](../../xdm/api/getting-started.md).
+Para crear un conjunto de datos, primero debe crear un nuevo esquema que implemente la variable [!DNL XDM Individual Profile] Clase . Para obtener más información sobre cómo crear esquemas, lea la [Guía del desarrollador de API del Registro del Esquema](../../xdm/api/getting-started.md).
 
 **Formato de API**
 
@@ -69,7 +69,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "type": "object",
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | El nombre que desea utilizar para el esquema. Este nombre debe ser único. |
 | `description` | Una descripción significativa del esquema que está creando. |
-| `meta:immutableTags` | En este ejemplo, la etiqueta `union` se utiliza para mantener los datos en [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | En este ejemplo, la variable `union` se usa para mantener los datos en [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Respuesta**
 
@@ -138,7 +138,7 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles del esquema reci
         "union"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:registryMetadata": {
         "repo:createDate": 1551376506996,
@@ -151,9 +151,9 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles del esquema reci
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{TENANT_ID}` | Este ID se utiliza para garantizar que los recursos que crea tengan un espacio de nombres adecuado y estén contenidos dentro de su organización de IMS. Para obtener más información sobre el ID del inquilino, lea la [guía del registro de esquema](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | Este ID se utiliza para garantizar que los recursos que crea tengan un espacio de nombres adecuado y estén contenidos dentro de su organización de IMS. Para obtener más información sobre el ID del inquilino, lea la [guía de registro de esquema](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
-Tenga en cuenta los atributos `$id`, así como los `version`, ya que ambos se utilizarán al crear su conjunto de datos.
+Tome nota de la `$id` , así como el `version` , ya que ambos se utilizarán al crear su conjunto de datos.
 
 ## Definir un descriptor de identidad principal para el esquema
 
@@ -170,7 +170,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "@type":"xdm:descriptorIdentity",
@@ -185,15 +185,15 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEMA_REF_ID}` | El `$id` que recibió anteriormente al componer el esquema. Debería tener un aspecto similar al siguiente: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
+| `{SCHEMA_REF_ID}` | La variable `$id` que recibió anteriormente al componer el esquema. Debería tener un aspecto similar al siguiente: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
 >[!NOTE]
 >
 >&#x200B; &#x200B;**Códigos de área de nombres de identidad**
 >
-> Asegúrese de que los códigos sean válidos: el ejemplo anterior utiliza &quot;correo electrónico&quot;, que es un área de nombres de identidad estándar. En las [preguntas frecuentes sobre el servicio de identidad](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform) se pueden encontrar otros espacios de nombres de identidad estándar utilizados con más frecuencia.
+> Asegúrese de que los códigos sean válidos: el ejemplo anterior utiliza &quot;correo electrónico&quot;, que es un área de nombres de identidad estándar. Otras áreas de nombres de identidad estándar usadas con frecuencia se pueden encontrar dentro de la variable [Preguntas frecuentes sobre el servicio de identidad](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
-> Si desea crear un área de nombres personalizada, siga los pasos descritos en la [descripción general del área de nombres de identidad](../../identity-service/home.md).
+> Si desea crear un área de nombres personalizada, siga los pasos descritos en la sección [información general del área de nombres de identidad](../../identity-service/home.md).
 
 **Respuesta**
 
@@ -211,7 +211,7 @@ Una respuesta correcta devuelve el estado HTTP 201 con información sobre el des
     "@id": "17aaebfa382ce8fc0a40d3e43870b6470aab894e1c368d16",
     "meta:containerId": "tenant",
     "version": "1",
-    "imsOrg": "{IMS_ORG}"
+    "imsOrg": "{ORG_ID}"
 }
 ```
 
@@ -236,7 +236,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d ' {
     "name": "Dataset name",
@@ -266,7 +266,7 @@ Una respuesta correcta devuelve el estado HTTP 201 y una matriz que contiene el 
 
 Después de crear el esquema y el conjunto de datos, puede crear una conexión de flujo continuo
 
-Para obtener más información sobre la creación de una conexión de flujo continuo, lea el [tutorial de creación de una conexión de flujo continuo](./create-streaming-connection.md).
+Para obtener más información sobre la creación de una conexión de flujo continuo, lea la [crear un tutorial de conexión de flujo continuo](./create-streaming-connection.md).
 
 ## Ingesta de datos de registro en la conexión de flujo continuo {#ingest-data}
 
@@ -280,8 +280,8 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | El valor `inletId` de la conexión de flujo continuo creada anteriormente. |
-| `syncValidation` | Un parámetro de consulta opcional diseñado para fines de desarrollo. Si se establece en `true`, se puede utilizar para comentarios inmediatos a fin de determinar si la solicitud se ha enviado correctamente. De forma predeterminada, este valor se establece en `false`. Tenga en cuenta que si establece este parámetro de consulta en `true`, la tasa de la solicitud estará limitada a 60 veces por minuto por `CONNECTION_ID`. |
+| `{CONNECTION_ID}` | La variable `inletId` de la conexión de flujo continuo creada anteriormente. |
+| `syncValidation` | Un parámetro de consulta opcional diseñado para fines de desarrollo. Si está configurado como `true`, se puede utilizar para comentarios inmediatos a fin de determinar si la solicitud se ha enviado correctamente. De forma predeterminada, este valor se establece en `false`. Tenga en cuenta que si establece este parámetro de consulta en `true` que la tarifa de la solicitud estará limitada a 60 veces por minuto `CONNECTION_ID`. |
 
 **Solicitud**
 
@@ -291,7 +291,7 @@ La solicitud de ejemplo siguiente ingesta un registro con un nombre de origen qu
 
 >[!NOTE]
 >
->La siguiente llamada de API **not** requiere encabezados de autenticación.
+>La siguiente llamada de API hace lo siguiente **not** requieren encabezados de autenticación.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -303,7 +303,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -342,7 +342,7 @@ Si desea incluir un nombre de origen, el siguiente ejemplo muestra cómo lo incl
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample source name"
@@ -352,7 +352,7 @@ Si desea incluir un nombre de origen, el siguiente ejemplo muestra cómo lo incl
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profile] recién transmitido.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profile].
 
 ```json
 {
@@ -370,15 +370,15 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profil
 | `{CONNECTION_ID}` | El ID de la conexión de flujo continuo creada anteriormente. |
 | `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a los Adobes a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
 | `receivedTimeMs` | Marca de tiempo (época en milisegundos) que muestra la hora a la que se recibió la solicitud. |
-| `syncValidation.status` | Dado que se ha agregado el parámetro de consulta `syncValidation=true`, este valor aparecerá. Si la validación se ha realizado correctamente, el estado será `pass`. |
+| `syncValidation.status` | Desde el parámetro de consulta `syncValidation=true` se ha añadido, este valor aparecerá. Si la validación se ha realizado correctamente, el estado será `pass`. |
 
 ## Recuperar los datos de registro recién introducidos
 
-Para validar los registros ingestados anteriormente, puede utilizar [[!DNL Profile Access API]](../../profile/api/entities.md) para recuperar los datos del registro.
+Para validar los registros ingestados anteriormente, puede utilizar la variable [[!DNL Profile Access API]](../../profile/api/entities.md) para recuperar los datos del registro.
 
 >[!NOTE]
 >
->Si el ID de la directiva de combinación no está definido y `schema.name` o `relatedSchema.name` es `_xdm.context.profile`, [!DNL Profile Access] recuperará **todas** las identidades relacionadas.
+>Si el ID de la directiva de combinación no está definido y la variable `schema.name` o `relatedSchema.name` es `_xdm.context.profile`, [!DNL Profile Access] recuperará **all** identidades relacionadas.
 
 **Formato de API**
 
@@ -402,7 +402,7 @@ Puede revisar los datos de registro ingestados anteriormente con la siguiente so
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -457,6 +457,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de las entidades
 
 ## Pasos siguientes
 
-Al leer este documento, ahora puede comprender cómo introducir datos de registro en [!DNL Platform] mediante conexiones de flujo continuo. Puede intentar realizar más llamadas con valores diferentes y recuperar los valores actualizados. Además, puede empezar a monitorizar los datos introducidos a través de la interfaz de usuario [!DNL Platform]. Para obtener más información, consulte la guía [monitorización de la ingesta de datos](../quality/monitor-data-ingestion.md).
+Al leer este documento, ahora puede comprender cómo introducir datos de registro en [!DNL Platform] uso de conexiones de flujo continuo. Puede intentar realizar más llamadas con valores diferentes y recuperar los valores actualizados. Además, puede empezar a supervisar los datos introducidos mediante [!DNL Platform] IU. Para obtener más información, lea la [monitorización de la ingesta de datos](../quality/monitor-data-ingestion.md) guía.
 
-Para obtener más información sobre la ingesta de transmisión en general, lea la [descripción general de la ingesta de transmisión](../streaming-ingestion/overview.md).
+Para obtener más información sobre la transmisión por secuencias en general, lea la [información general sobre la ingesta de transmisión](../streaming-ingestion/overview.md).

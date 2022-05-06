@@ -5,17 +5,16 @@ title: Punto final de API de directivas efectivas
 topic-legacy: developer guide
 description: El control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funcionalidades de Platform mediante Adobe Admin Console. Este documento sirve como guía para ver políticas efectivas usando la API de control de acceso para Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 1%
+source-wordcount: '320'
+ht-degree: 2%
 
 ---
 
 # Punto final de directivas efectivas
 
-Para ver las directivas efectivas para el usuario actual, realice una solicitud de POST al extremo `/acl/effective-policies` en la API [!DNL Access Control]. Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que aparece a continuación.
+Para ver las directivas efectivas para el usuario actual, realice una solicitud de POST al `/acl/effective-policies` en la variable [!DNL Access Control] API. Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que aparece a continuación.
 
 **Formato de API**
 
@@ -25,14 +24,14 @@ POST /acl/effective-policies
 
 **Solicitud**
 
-Las siguientes solicitudes recuperan información sobre el permiso &quot;[!UICONTROL Manage Datasets]&quot; y el acceso al tipo de recurso &quot;[!UICONTROL schemas]&quot; para el usuario actual.
+Las siguientes solicitudes recuperan información sobre el[!UICONTROL Administrar conjuntos de datos]&quot; permiso y acceso a &quot;[!UICONTROL esquemas]&quot; tipo de recurso para el usuario actual.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/access-control/acl/effective-policies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -43,7 +42,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Para obtener una lista completa de los permisos y tipos de recursos que se pueden proporcionar en la matriz de carga útil, consulte la sección del apéndice sobre [permisos aceptados y tipos de recursos](#accepted-permissions-and-resource-types).
+>Para obtener una lista completa de los permisos y tipos de recursos que se pueden proporcionar en la matriz de carga útil, consulte la sección del apéndice en [permisos aceptados y tipos de recursos](#accepted-permissions-and-resource-types).
 
 **Respuesta**
 
@@ -66,15 +65,15 @@ Una respuesta correcta devuelve información sobre los permisos y tipos de recur
 
 ## Pasos siguientes
 
-Este documento abarcaba cómo realizar llamadas a la API [!DNL Access Control] para devolver información sobre permisos activos y políticas relacionadas para tipos de recursos. Para obtener más información acerca del control de acceso para [!DNL Experience Platform], consulte la [información general del control de acceso](../home.md).
+Este documento abarcaba cómo realizar llamadas al [!DNL Access Control] para devolver información sobre permisos activos y directivas relacionadas para tipos de recursos. Para obtener más información sobre el control de acceso para [!DNL Experience Platform], consulte la [información general sobre el control de acceso](../home.md).
 
 ## Apéndice
 
-Esta sección proporciona información complementaria para utilizar la API [!DNL Access Control].
+Esta sección proporciona información complementaria para usar la variable [!DNL Access Control] API.
 
 ### Permisos aceptados y tipos de recursos
 
-La siguiente es una lista de permisos y tipos de recursos que puede incluir en la carga útil de una solicitud de POST al extremo `/acl/active-permissions` .
+A continuación se muestra una lista de permisos y tipos de recursos que puede incluir en la carga útil de una solicitud de POST para `/acl/active-permissions` punto final.
 
 **Permisos**
 

@@ -6,7 +6,8 @@ topic-legacy: developer guide
 description: Este documento proporciona una introducción a la información de requisitos previos que debe conocer antes de intentar crear una fuente nueva mediante el SDK de fuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: ba131442-ff20-4854-87fe-918aa313382d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -40,7 +41,7 @@ Para realizar llamadas a las API de Platform, primero debe completar la variable
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Todos los recursos de Platform, incluidos los que pertenecen a [!DNL Flow Service], están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 

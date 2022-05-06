@@ -5,7 +5,7 @@ title: 'Segmentaci처n de Edge con la API '
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre c처mo utilizar la segmentaci처n perimetral con la API del servicio de segmentaci처n de Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 0173fbd36791f837e0d0336f9fa7bcc84e64909f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 1%
@@ -77,7 +77,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/segment/definitions?evaluationInfo.synchronous.enabled=true' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -94,7 +94,7 @@ Una respuesta correcta devuelve una matriz de segmentos en su organizaci처n de I
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -128,7 +128,7 @@ Una respuesta correcta devuelve una matriz de segmentos en su organizaci처n de I
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -192,7 +192,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'  \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "schema": {
@@ -220,7 +220,7 @@ Una respuesta correcta devuelve los detalles de la definici처n de segmento reci�
         "name": "_xdm.context.profile"
     },
     "ttlInDays": 30,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",

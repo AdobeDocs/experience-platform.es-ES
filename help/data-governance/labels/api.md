@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Administrar etiquetas de uso de datos mediante API '
 topic-legacy: developer guide
 description: La API del servicio de conjunto de datos le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funcionalidades del catálogo de datos de Adobe Experience Platform, pero está separado de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 3%
@@ -14,21 +14,21 @@ ht-degree: 3%
 
 # Administrar etiquetas de uso de datos mediante API
 
-Este documento proporciona pasos sobre cómo administrar las etiquetas de uso de datos mediante la API [!DNL Policy Service] y la API [!DNL Dataset Service].
+Este documento proporciona los pasos sobre cómo administrar las etiquetas de uso de datos mediante el [!DNL Policy Service] API y [!DNL Dataset Service] API.
 
-El [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
+La variable [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
 
-La API [!DNL Dataset Service] le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las capacidades del catálogo de datos de Adobe Experience Platform, pero está separado de la API [!DNL Catalog Service] que administra los metadatos del conjunto de datos.
+La variable [!DNL Dataset Service] La API le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la función [!DNL Catalog Service] API que administra metadatos de conjuntos de datos.
 
 ## Primeros pasos
 
-Antes de leer esta guía, siga los pasos descritos en la [sección de introducción](../../catalog/api/getting-started.md) en la guía para desarrolladores del catálogo para recopilar las credenciales necesarias para realizar llamadas a las API [!DNL Platform] .
+Antes de leer esta guía, siga los pasos descritos en la sección [sección introducción](../../catalog/api/getting-started.md) en la guía para desarrolladores de Catálogo para recopilar las credenciales necesarias para realizar llamadas a [!DNL Platform] API.
 
-Para realizar llamadas a los [!DNL Dataset Service] extremos descritos en este documento, debe tener el valor único `id` para un conjunto de datos específico. Si no tiene este valor, consulte la guía de [listar objetos de catálogo](../../catalog/api/list-objects.md) para encontrar los ID de sus conjuntos de datos existentes.
+Para realizar llamadas al [!DNL Dataset Service] extremos descritos en este documento, debe tener la variable `id` para un conjunto de datos específico. Si no tiene este valor, consulte la guía de [listado de objetos del catálogo](../../catalog/api/list-objects.md) para buscar los ID de sus conjuntos de datos existentes.
 
 ## Enumerar todas las etiquetas {#list-labels}
 
-Con la API [!DNL Policy Service], puede enumerar todas las etiquetas `core` o `custom` realizando una solicitud de GET a `/labels/core` o `/labels/custom`, respectivamente.
+Al usar la variable [!DNL Policy Service] API, puede enumerar todo `core` o `custom` etiquetas realizando una solicitud de GET a `/labels/core` o `/labels/custom`, respectivamente.
 
 **Formato de API**
 
@@ -46,13 +46,13 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de etiquetas personalizadas recuperadas del sistema. Dado que la solicitud de ejemplo anterior se realizó en `/labels/custom`, la siguiente respuesta solo muestra etiquetas personalizadas.
+Una respuesta correcta devuelve una lista de etiquetas personalizadas recuperadas del sistema. Dado que la solicitud de ejemplo anterior se realizó en `/labels/custom`, la respuesta a continuación solo muestra etiquetas personalizadas.
 
 ```json
 {
@@ -71,7 +71,7 @@ Una respuesta correcta devuelve una lista de etiquetas personalizadas recuperada
             "category": "Custom",
             "friendlyName": "Banking Information",
             "description": "Data containing banking information for a customer.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "created": 1594396718731,
             "createdClient": "{CLIENT_ID}",
@@ -90,7 +90,7 @@ Una respuesta correcta devuelve una lista de etiquetas personalizadas recuperada
             "category": "Custom",
             "friendlyName": "Purchase History Data",
             "description": "Data containing information on past transactions",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "created": 1594397415663,
             "createdClient": "{CLIENT_ID}",
@@ -110,7 +110,7 @@ Una respuesta correcta devuelve una lista de etiquetas personalizadas recuperada
 
 ## Buscar una etiqueta {#look-up-label}
 
-Puede buscar una etiqueta específica incluyendo la propiedad `name` de esa etiqueta en la ruta de una solicitud de GET a la API [!DNL Policy Service].
+Puede buscar una etiqueta específica incluyendo la etiqueta `name` en la ruta de una solicitud de GET al [!DNL Policy Service] API.
 
 **Formato de API**
 
@@ -121,18 +121,18 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{LABEL_NAME}` | La propiedad `name` de la etiqueta personalizada que desea buscar. |
+| `{LABEL_NAME}` | La variable `name` de la etiqueta personalizada que desea buscar. |
 
 **Solicitud**
 
-La siguiente solicitud recupera la etiqueta personalizada `L2`, como se indica en la ruta.
+La siguiente solicitud recupera la etiqueta personalizada `L2`, tal como se indica en la ruta.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L2' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -146,7 +146,7 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada.
     "category": "Custom",
     "friendlyName": "Purchase History Data",
     "description": "Data containing information on past transactions",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "sandboxName": "{SANDBOX_NAME}",
     "created": 1594397415663,
     "createdClient": "{CLIENT_ID}",
@@ -164,7 +164,7 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada.
 
 ## Crear o actualizar una etiqueta personalizada {#create-update-label}
 
-Para crear o actualizar una etiqueta personalizada, debe realizar una solicitud de PUT a la API [!DNL Policy Service].
+Para crear o actualizar una etiqueta personalizada, debe realizar una solicitud de PUT al [!DNL Policy Service] API.
 
 **Formato de API**
 
@@ -174,18 +174,18 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{LABEL_NAME}` | La propiedad `name` de una etiqueta personalizada. Si no existe una etiqueta personalizada con este nombre, se creará una etiqueta nueva. Si existe una, se actualizará esa etiqueta. |
+| `{LABEL_NAME}` | La variable `name` propiedad de una etiqueta personalizada. Si no existe una etiqueta personalizada con este nombre, se creará una etiqueta nueva. Si existe una, se actualizará esa etiqueta. |
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva etiqueta, `L3`, que tiene como objetivo describir los datos que contienen información relacionada con los planes de pago seleccionados por los clientes.
+La siguiente solicitud crea una etiqueta nueva, `L3`, que tiene por objeto describir los datos que contienen información relacionada con los planes de pago seleccionados por los clientes.
 
 ```shell
 curl -X PUT \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "L3",
@@ -198,7 +198,7 @@ curl -X PUT \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | Identificador de cadena único para la etiqueta. Este valor se utiliza con fines de búsqueda y de aplicación de la etiqueta a conjuntos de datos y campos, por lo que se recomienda que sea corto y conciso. |
-| `category` | La categoría de la etiqueta. Aunque puede crear sus propias categorías para etiquetas personalizadas, es muy recomendable utilizar `Custom` si desea que la etiqueta aparezca en la interfaz de usuario. |
+| `category` | La categoría de la etiqueta. Aunque puede crear sus propias categorías para etiquetas personalizadas, es muy recomendable que utilice `Custom` si desea que la etiqueta aparezca en la interfaz de usuario. |
 | `friendlyName` | Un nombre descriptivo para la etiqueta, que se utiliza para la visualización. |
 | `description` | (Opcional) Descripción de la etiqueta para proporcionar más contexto. |
 
@@ -212,7 +212,7 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada, con e
   "category": "Custom",
   "friendlyName": "Payment Plan",
   "description": "Data containing information on selected payment plans.",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "sandboxName": "{SANDBOX_NAME}",
   "created": 1529696681413,
   "createdClient": "{CLIENT_ID}",
@@ -230,7 +230,7 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada, con e
 
 ## Buscar etiquetas para un conjunto de datos {#look-up-dataset-labels}
 
-Puede buscar las etiquetas de uso de datos que se han aplicado a un conjunto de datos existente realizando una solicitud de GET a la API [!DNL Dataset Service].
+Puede consultar las etiquetas de uso de datos que se han aplicado a un conjunto de datos existente realizando una solicitud de GET al [!DNL Dataset Service] API.
 
 **Formato de API**
 
@@ -240,7 +240,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{DATASET_ID}` | El valor único `id` del conjunto de datos cuyas etiquetas desea buscar. |
+| `{DATASET_ID}` | El único `id` del conjunto de datos cuyas etiquetas desea buscar. |
 
 **Solicitud**
 
@@ -249,7 +249,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -260,7 +260,7 @@ Una respuesta correcta devuelve las etiquetas de uso de datos que se han aplicad
 ```json
 {
   "AEP:dataset:5abd49645591445e1ba04f87": {
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "labels": [ "C1", "C2", "C3", "I1", "I2" ],
     "optionalLabels": [
       {
@@ -279,15 +279,15 @@ Una respuesta correcta devuelve las etiquetas de uso de datos que se han aplicad
 | Propiedad | Descripción |
 | --- | --- |
 | `labels` | Una lista de etiquetas de uso de datos que se han aplicado al conjunto de datos. |
-| `optionalLabels` | Una lista de campos individuales dentro del conjunto de datos que tienen etiquetas de uso de datos aplicadas a ellos. Se requieren las siguientes subpropiedades:<br/><br/>`option`: Un objeto que contiene los atributos [!DNL Experience Data Model] (XDM) del campo. Se requieren las tres propiedades siguientes:<ul><li>`id`: El  `$id` valor URI del esquema asociado al campo .</li><li>`contentType`: Indica el formato y la versión del esquema. Consulte la sección sobre [versión del esquema](../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información.</li><li>`schemaPath`: La ruta a la propiedad de esquema en cuestión, escrita en  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersintaxis.</li></ul>`labels`: Una lista de etiquetas de uso de datos que desea agregar al campo. |
+| `optionalLabels` | Una lista de campos individuales dentro del conjunto de datos que tienen etiquetas de uso de datos aplicadas a ellos. Se requieren las siguientes subpropiedades:<br/><br/>`option`: Un objeto que contiene la variable [!DNL Experience Data Model] (XDM) atributos del campo. Se requieren las tres propiedades siguientes:<ul><li>`id`: El URI `$id` del esquema asociado al campo.</li><li>`contentType`: Indica el formato y la versión del esquema. Consulte la sección sobre [versiones de esquema](../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información.</li><li>`schemaPath`: La ruta a la propiedad de esquema en cuestión, escrita en [Puntero JSON](../../landing/api-fundamentals.md#json-pointer) sintaxis.</li></ul>`labels`: Una lista de etiquetas de uso de datos que desea agregar al campo. |
 
 - id: El valor URI $id del esquema XDM en el que se basa el conjunto de datos.
-- contentType: Indica el formato y la versión del esquema. Consulte la sección sobre [versión del esquema](../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información.
-- schemaPath: La ruta a la propiedad de esquema en cuestión, escrita en sintaxis [JSON Pointer](../../landing/api-fundamentals.md#json-pointer).
+- contentType: Indica el formato y la versión del esquema. Consulte la sección sobre [versiones de esquema](../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información.
+- schemaPath: La ruta a la propiedad de esquema en cuestión, escrita en [Puntero JSON](../../landing/api-fundamentals.md#json-pointer) sintaxis.
 
 ## Aplicar etiquetas a un conjunto de datos {#apply-dataset-labels}
 
-Puede crear un conjunto de etiquetas para un conjunto de datos proporcionándolas en la carga útil de una solicitud de POST o PUT a la API [!DNL Dataset Service]. El uso de cualquiera de estos métodos sobrescribe cualquier etiqueta existente y la sustituye por las que se proporcionan en la carga útil.
+Puede crear un conjunto de etiquetas para un conjunto de datos proporcionándolas en la carga útil de una solicitud de POST o PUT al [!DNL Dataset Service] API. El uso de cualquiera de estos métodos sobrescribe cualquier etiqueta existente y la sustituye por las que se proporcionan en la carga útil.
 
 **Formato de API**
 
@@ -298,7 +298,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{DATASET_ID}` | El valor único `id` del conjunto de datos para el que está creando etiquetas. |
+| `{DATASET_ID}` | El único `id` del conjunto de datos para el que está creando etiquetas. |
 
 **Solicitud**
 
@@ -309,7 +309,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -330,7 +330,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `labels` | Una lista de etiquetas de uso de datos que desea agregar al conjunto de datos. |
-| `optionalLabels` | Una lista de los campos individuales dentro del conjunto de datos a los que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades:<br/><br/>`option`: Un objeto que contiene los atributos [!DNL Experience Data Model] (XDM) del campo. Se requieren las tres propiedades siguientes:<ul><li>`id`: El  `$id` valor URI del esquema asociado al campo .</li><li>`contentType`: Indica el formato y la versión del esquema. Consulte la sección sobre [versión del esquema](../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información.</li><li>`schemaPath`: La ruta a la propiedad de esquema en cuestión, escrita en  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersintaxis.</li></ul>`labels`: Una lista de etiquetas de uso de datos que desea agregar al campo. |
+| `optionalLabels` | Una lista de los campos individuales dentro del conjunto de datos a los que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades:<br/><br/>`option`: Un objeto que contiene la variable [!DNL Experience Data Model] (XDM) atributos del campo. Se requieren las tres propiedades siguientes:<ul><li>`id`: El URI `$id` del esquema asociado al campo.</li><li>`contentType`: Indica el formato y la versión del esquema. Consulte la sección sobre [versiones de esquema](../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información.</li><li>`schemaPath`: La ruta a la propiedad de esquema en cuestión, escrita en [Puntero JSON](../../landing/api-fundamentals.md#json-pointer) sintaxis.</li></ul>`labels`: Una lista de etiquetas de uso de datos que desea agregar al campo. |
 
 **Respuesta**
 
@@ -354,7 +354,7 @@ Una respuesta correcta devuelve las etiquetas que se han agregado al conjunto de
 
 ## Eliminación de etiquetas de un conjunto de datos {#remove-dataset-labels}
 
-Puede eliminar las etiquetas aplicadas a un conjunto de datos realizando una solicitud de DELETE a la API [!DNL Dataset Service].
+Puede eliminar las etiquetas aplicadas a un conjunto de datos realizando una solicitud de DELETE al [!DNL Dataset Service] API.
 
 **Formato de API**
 
@@ -364,7 +364,7 @@ DELETE /datasets/{DATASET_ID}/labels
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{DATASET_ID}` | El valor único `id` del conjunto de datos cuyas etiquetas desea eliminar. |
+| `{DATASET_ID}` | El único `id` del conjunto de datos cuyas etiquetas desea eliminar. |
 
 **Solicitud**
 
@@ -373,7 +373,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -385,8 +385,8 @@ Respuesta correcta Estado HTTP 200 (OK), que indica que se han eliminado las eti
 
 Al leer este documento, ha aprendido a administrar las etiquetas de uso de datos mediante API.
 
-Una vez que haya agregado etiquetas de uso de datos en los niveles de conjunto de datos y campo, puede empezar a introducir datos en [!DNL Experience Platform]. Para obtener más información, comience leyendo la [documentación sobre ingesta de datos](../../ingestion/home.md).
+Una vez que haya agregado etiquetas de uso de datos en los niveles de conjunto de datos y campo, puede empezar a introducir datos en [!DNL Experience Platform]. Para obtener más información, comience leyendo el [documentación de ingesta de datos](../../ingestion/home.md).
 
-Ahora también puede definir políticas de uso de datos basadas en las etiquetas aplicadas. Para obtener más información, consulte la [descripción general de las políticas de uso de datos](../policies/overview.md).
+Ahora también puede definir políticas de uso de datos basadas en las etiquetas aplicadas. Para obtener más información, consulte la [información general sobre las políticas de uso de datos](../policies/overview.md).
 
-Para obtener más información sobre la administración de conjuntos de datos en [!DNL Experience Platform], consulte la [información general de conjuntos de datos](../../catalog/datasets/overview.md).
+Para obtener más información sobre la administración de conjuntos de datos en [!DNL Experience Platform], consulte la [información general sobre conjuntos de datos](../../catalog/datasets/overview.md).

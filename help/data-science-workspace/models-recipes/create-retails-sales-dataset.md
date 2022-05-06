@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales de Adobe Experience Platform Data Science Workspace. Una vez finalizado, el esquema de ventas minoristas y los conjuntos de datos estarán disponibles para usted y los miembros de su organización de IMS en Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 - Autorización para realizar [!DNL Experience Platform] Llamadas de API. Complete el [Autenticar y acceder a las API de Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para obtener los siguientes valores y completar correctamente este tutorial:
    - Autorización: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
-   - x-gw-ims-org-id: `{IMS_ORG}`
+   - x-gw-ims-org-id: `{ORG_ID}`
    - Secreto de cliente: `{CLIENT_SECRET}`
    - Certificado de cliente: `{PRIVATE_KEY}`
 - Datos de ejemplo y archivos de origen para la variable [Fórmula de ventas minoristas](../pre-built-recipes/retail-sales.md). Descargar los recursos necesarios para esta y otras [!DNL Data Science Workspace] tutoriales de [Repositorio público de Git de Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
@@ -50,7 +50,7 @@ El esquema de ventas minoristas y los conjuntos de datos se crean automáticamen
    ```yaml
    Enterprise:
        api_key: {API_KEY}
-       org_id: {IMS_ORG}
+       org_id: {ORG_ID}
        tech_acct: {technical_account_id}
        client_secret: {CLIENT_SECRET}
        priv_key_filename: {PRIVATE_KEY}

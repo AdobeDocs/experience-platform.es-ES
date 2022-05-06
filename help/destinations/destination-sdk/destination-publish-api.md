@@ -2,7 +2,7 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/Destinations/publish`.
 title: Operaciones de extremo de la API de Publish Destinations
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: a73a4ea93a432f60d62da5e234d8e357009b2d88
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 5%
@@ -47,7 +47,7 @@ La siguiente solicitud envía un destino para su publicación en todas las organ
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -85,7 +85,7 @@ La siguiente solicitud recupera la lista de destinos enviados para la publicaci�
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -141,7 +141,7 @@ GET /authoring/destinations/publish/{DESTINATION_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/1230e5e4-4ab8-4655-ae1e-a6296b30f2ec \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

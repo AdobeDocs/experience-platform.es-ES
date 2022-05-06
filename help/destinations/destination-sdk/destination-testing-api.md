@@ -2,7 +2,7 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/testing/destinationInstance/`, para comprobar si el destino está configurado correctamente y para verificar la integridad de los flujos de datos en el destino configurado.
 title: Operaciones de API de prueba de destino
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 2%
@@ -58,7 +58,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -187,7 +187,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[

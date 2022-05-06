@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Punto final de API de Esquemas
 topic-legacy: schemas
 description: 'Puede utilizar el extremo `/schemas` en la API de Adobe Experience Platform para recuperar, crear y actualizar esquemas mediante programación para utilizarlo con Mapper en Platform. '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -16,19 +15,19 @@ ht-degree: 3%
 
 # Punto final de esquemas
 
-Se pueden usar esquemas con Mapper para garantizar que los datos que ha introducido en Adobe Experience Platform coincidan con los que desea ingerir. Puede utilizar el extremo `/schemas` para crear, enumerar y obtener esquemas personalizados mediante programación para usarlos con Mapper en Platform.
+Se pueden usar esquemas con Mapper para garantizar que los datos que ha introducido en Adobe Experience Platform coincidan con los que desea ingerir. Puede usar la variable `/schemas` para crear, listar y obtener esquemas personalizados mediante programación para usarlos con Mapper en Platform.
 
 >[!NOTE]
 >
->Los esquemas creados con este extremo se utilizan exclusivamente con Mapper y conjuntos de asignación. Para crear esquemas accesibles para otros servicios de Platform, lea la [guía para desarrolladores del Registro de esquemas](../../xdm/api/schemas.md).
+>Los esquemas creados con este extremo se utilizan exclusivamente con Mapper y conjuntos de asignación. Para crear esquemas accesibles para otros servicios de Platform, lea la [Guía para desarrolladores de Schema Registry](../../xdm/api/schemas.md).
 
 ## Obtener todos los esquemas
 
-Puede recuperar una lista de todos los esquemas de Mapper disponibles para su organización IMS realizando una solicitud de GET al extremo `/schemas` .
+Puede recuperar una lista de todos los esquemas de Mapper disponibles para su organización IMS realizando una solicitud de GET al `/schemas` punto final.
 
 **Formato de API**
 
-El extremo `/schemas` admite varios parámetros de consulta para ayudarle a filtrar los resultados. Aunque la mayoría de estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Sin embargo, debe incluir los parámetros `start` y `limit` como parte de la solicitud. Se pueden incluir varios parámetros, separados por el símbolo &quot;`&`&quot;.
+La variable `/schemas` el extremo admite varios parámetros de consulta para ayudarle a filtrar los resultados. Aunque la mayoría de estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Sin embargo, debe incluir ambas variables `start` y `limit` como parte de la solicitud. Se pueden incluir varios parámetros separados por el símbolo &quot;et&quot; (`&`).
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -50,7 +49,7 @@ La siguiente solicitud recupera los dos últimos esquemas creados para su organi
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -132,9 +131,9 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de los esquemas
 }
 ```
 
-## Crear un esquema
+## Creación de un esquema
 
-Puede crear un esquema para validar realizando una solicitud de POST al extremo `/schemas` . Existen tres formas de crear un esquema: enviar un [JSON Schema](https://json-schema.org/), usar datos de ejemplo o hacer referencia a un esquema XDM existente.
+Puede crear un esquema para validar realizando una solicitud de POST al `/schemas` punto final. Existen tres formas de crear un esquema: envío de un [Esquema JSON](https://json-schema.org/), utilizando datos de ejemplo o haciendo referencia a un esquema XDM existente.
 
 ```http
 POST /schemas
@@ -144,13 +143,13 @@ POST /schemas
 
 **Solicitud**
 
-La siguiente solicitud le permite crear un esquema enviando un [Esquema JSON](https://json-schema.org/).
+La siguiente solicitud permite crear un esquema enviando un [Esquema JSON](https://json-schema.org/).
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -189,7 +188,7 @@ La siguiente solicitud permite crear un esquema utilizando datos de ejemplo que 
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -254,7 +253,7 @@ La siguiente solicitud permite crear un esquema haciendo referencia a un esquema
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -271,7 +270,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `name` | El nombre del esquema que desea crear. |
 | `schemaRef.id` | El ID del esquema al que hace referencia. |
-| `schemaRef.contentType` | Determina el formato de respuesta del esquema de referencia. Encontrará más información sobre este campo en la [guía para desarrolladores del registro de esquema](../../xdm/api/schemas.md#lookup) |
+| `schemaRef.contentType` | Determina el formato de respuesta del esquema de referencia. Más información sobre este campo en la [guía para desarrolladores del registro de esquemas](../../xdm/api/schemas.md#lookup) |
 
 **Respuesta**
 
@@ -286,7 +285,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el esq
     "id": "4b64daa51b774cb2ac21b61d80125ed0",
     "version": 0,
     "name": "schemaName",
-    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"SimpleUser\",...,\"imsOrg\":\"{IMS_ORG}\",\"$id\":\"https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96\"}",
+    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"SimpleUser\",...,\"imsOrg\":\"{ORG_ID}\",\"$id\":\"https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96\"}",
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96",
         "contentType": "application/vnd.adobe.xed+json;version=1.0"
@@ -312,7 +311,7 @@ La siguiente solicitud le permite crear un esquema a partir de un archivo JSON c
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: multipart/form-data' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -F 'file=@{PATH_TO_FILE}.json'
@@ -336,7 +335,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el esq
 
 ## Recuperar un esquema específico
 
-Puede recuperar información sobre un esquema específico realizando una solicitud de GET al extremo `/schemas` y proporcionando el ID del esquema que desea recuperar en la ruta de solicitud.
+Puede recuperar información sobre un esquema específico realizando una solicitud de GET al `/schemas` y proporcionando el ID del esquema que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -355,7 +354,7 @@ La siguiente solicitud recupera información sobre el esquema especificado.
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3a1b804fb0abf738306290ae79 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

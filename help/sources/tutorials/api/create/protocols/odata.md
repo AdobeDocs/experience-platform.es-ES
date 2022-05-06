@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar OData genérico a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 2%
@@ -68,7 +68,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

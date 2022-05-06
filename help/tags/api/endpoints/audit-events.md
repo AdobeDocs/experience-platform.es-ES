@@ -1,7 +1,8 @@
 ---
 title: Extremo de eventos de auditoría
 description: Aprenda a realizar llamadas al extremo /audit_events en la API de Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 98%
@@ -57,7 +58,7 @@ curl -X GET \
   https://reactor.adobe.io/audit_events \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -180,7 +181,7 @@ curl -X GET \
   https://reactor.adobe.io/audit_events/AEa98742de8ef044d8b86767aa6a15a674 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

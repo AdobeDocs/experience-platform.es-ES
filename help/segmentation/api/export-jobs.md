@@ -5,7 +5,7 @@ title: Exportar extremo de API de trabajos
 topic-legacy: developer guide
 description: Los trabajos de exportación son procesos asincrónicos que se utilizan para mantener a los miembros del segmento de audiencia en conjuntos de datos. Puede utilizar el extremo /export/jobs en la API del servicio de segmentación de Adobe Experience Platform, que le permite recuperar, crear y cancelar trabajos de exportación mediante programación.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1680'
 ht-degree: 2%
@@ -52,7 +52,7 @@ La siguiente solicitud recuperará los dos últimos trabajos de exportación den
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -226,7 +226,7 @@ La siguiente solicitud crea un nuevo trabajo de exportación, configurado por lo
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -308,7 +308,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de e
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "status": "NEW",
     "filter": {
         "segments": [
@@ -400,7 +400,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -422,7 +422,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "status": "SUCCEEDED",
     "filter": {
         "segments": [
@@ -496,7 +496,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

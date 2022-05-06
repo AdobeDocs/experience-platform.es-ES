@@ -5,10 +5,10 @@ title: Punto final de API de Simuladores de pruebas disponibles
 topic-legacy: developer guide
 description: Puede enumerar los entornos limitados disponibles para el usuario actual realizando una solicitud de GET al extremo de los entornos limitados disponibles.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados por. Consulte el [apéndice document](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
+| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados por. Consulte la [documento apéndice](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
 **Solicitud**
 
@@ -37,12 +37,12 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de entornos limitados disponibles para el usuario actual, incluidos detalles como `name`, `title`, `state` y `type`.
+Una respuesta correcta devuelve una lista de entornos limitados disponibles para el usuario actual, incluidos detalles como `name`, `title`, `state`y `type`.
 
 ```json
 {

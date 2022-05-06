@@ -5,16 +5,16 @@ title: Recuperación de diagnósticos de error de ingesta de datos
 topic-legacy: overview
 description: Este documento proporciona información sobre la monitorización de la ingesta de lotes, la administración de errores de ingesta parcial de lotes, así como una referencia para tipos de ingesta parcial de lotes.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: 104e6eb258136caa2192b61c793697baf95b55eb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '979'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 # Recuperación de diagnósticos de error de ingesta de datos
 
-Adobe Experience Platform proporciona dos métodos para cargar e introducir datos. Puede utilizar la ingesta por lotes, que le permite insertar datos mediante varios tipos de archivo (como CSV), o la ingesta de flujo, que le permite insertar sus datos en [!DNL Platform] mediante el uso de extremos de flujo en tiempo real.
+Adobe Experience Platform proporciona dos métodos para cargar e introducir datos. Puede utilizar la ingesta por lotes, que le permite insertar datos mediante varios tipos de archivo (como CSV), o la ingesta de flujo, que le permite insertar sus datos en [!DNL Platform] uso de extremos de flujo continuo en tiempo real.
 
 Este documento proporciona información sobre la monitorización de la ingesta de lotes, la administración de errores de ingesta parcial de lotes, así como una referencia para tipos de ingesta parcial de lotes.
 
@@ -22,32 +22,32 @@ Este documento proporciona información sobre la monitorización de la ingesta d
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
-- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Métodos por los cuales se pueden enviar datos a  [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Métodos por los cuales se pueden enviar datos [!DNL Experience Platform].
 
 ### Leer llamadas de API de ejemplo
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidas las pertenecientes al [!DNL Schema Registry], están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+>Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../sandboxes/home.md).
 
 ## Descarga de diagnósticos de error {#download-diagnostics}
 
-Adobe Experience Platform permite a los usuarios descargar los diagnósticos de error de los archivos de entrada. Los diagnósticos se mantendrán dentro de [!DNL Platform] durante un máximo de 30 días.
+Adobe Experience Platform permite a los usuarios descargar los diagnósticos de error de los archivos de entrada. Los diagnósticos se conservarán dentro de [!DNL Platform] durante un máximo de 30 días.
 
 ### Archivos de entrada de lista {#list-files}
 
@@ -69,7 +69,7 @@ GET /batches/{BATCH_ID}/meta?path=input_files
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-2233-11ea-acf0-f3edfcded2d2/meta?path=input_files \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -127,13 +127,13 @@ GET /batches/{BATCH_ID}/meta?path=input_files/{FILE}
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-2233-11ea-acf0-f3edfcded2d2/meta?path=input_files/fileMetaData1.json \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devolverá objetos JSON que contienen `path` objetos que detallan dónde se guardaron los diagnósticos. La respuesta devolverá los objetos `path` en formato [JSON Lines](https://jsonlines.org/).
+Una respuesta correcta devolverá objetos JSON que contengan `path` objetos que detallan dónde se guardaron los diagnósticos. La respuesta devolverá el valor `path` objetos [Líneas JSON](https://jsonlines.org/) formato.
 
 ```json
 {"path": "F1.json"}
@@ -157,8 +157,8 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{BATCH_ID}` | El valor `id` del lote del que desea comprobar el estado. |
-| `{FILTER}` | Un parámetro de consulta utilizado para filtrar los resultados devueltos en la respuesta. Los parámetros múltiples se separan con ampersands (`&`). Para obtener más información, lea la guía sobre el [filtrado de datos del catálogo](../../catalog/api/filter-data.md). |
+| `{BATCH_ID}` | La variable `id` del lote del que desea comprobar el estado. |
+| `{FILTER}` | Un parámetro de consulta utilizado para filtrar los resultados devueltos en la respuesta. Los parámetros múltiples se separan con el símbolo &amp; (`&`). Para obtener más información, consulte la guía de [filtrado de datos del catálogo](../../catalog/api/filter-data.md). |
 
 **Solicitud**
 
@@ -166,7 +166,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2233-11ea-acf0-f3edfcded2d2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -193,7 +193,7 @@ Se devuelve una respuesta correcta con información detallada sobre el estado de
         "inputFormat": {
             "format": "parquet"
         },
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "started": 1576741718543,
         "metrics": {
             "inputByteSize": 568,
@@ -215,7 +215,7 @@ Se devuelve una respuesta correcta con información detallada sobre el estado de
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Número de filas que no se pudieron procesar debido al análisis, la conversión o la validación. Este valor se puede obtener restando el `inputRecordCount` del `outputRecordCount`. Este valor se genera en todos los lotes independientemente de si `errorDiagnostics` está habilitado. |
+| `metrics.failedRecordCount` | Número de filas que no se pudieron procesar debido al análisis, la conversión o la validación. Este valor se puede derivar restando la variable `inputRecordCount` de la variable `outputRecordCount`. Este valor se genera en todos los lotes, independientemente de si `errorDiagnostics` está activada. |
 
 **Respuesta con errores**
 
@@ -240,7 +240,7 @@ Si el lote tiene uno o más errores y tiene habilitados los diagnósticos de err
         "inputFormat": {
             "format": "parquet"
         },
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "started": 1576741718543,
         "metrics": {
             "inputByteSize": 568,
@@ -278,8 +278,8 @@ Si el lote tiene uno o más errores y tiene habilitados los diagnósticos de err
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Número de filas que no se pudieron procesar debido al análisis, la conversión o la validación. Este valor se puede obtener restando el `inputRecordCount` del `outputRecordCount`. Este valor se genera en todos los lotes independientemente de si `errorDiagnostics` está habilitado. |
-| `errors.recordCount` | Número de filas en las que se produjo un error en el código de error especificado. Este valor **solo** se genera si `errorDiagnostics` está habilitado. |
+| `metrics.failedRecordCount` | Número de filas que no se pudieron procesar debido al análisis, la conversión o la validación. Este valor se puede derivar restando la variable `inputRecordCount` de la variable `outputRecordCount`. Este valor se genera en todos los lotes, independientemente de si `errorDiagnostics` está activada. |
+| `errors.recordCount` | Número de filas en las que se produjo un error en el código de error especificado. Este valor es **only** generado si `errorDiagnostics` está activada. |
 
 >[!NOTE]
 >
@@ -312,11 +312,11 @@ La ingesta parcial de lotes tiene tres tipos de error diferentes al ingerir dato
 
 ### Archivos ilegibles {#unreadable}
 
-Si el lote ingestado tiene archivos ilegibles, los errores del lote se adjuntarán al lote en sí. Puede encontrar más información sobre la recuperación del lote fallido en la [guía de recuperación de lotes fallidos](../quality/retrieve-failed-batches.md).
+Si el lote ingestado tiene archivos ilegibles, los errores del lote se adjuntarán al lote en sí. Puede encontrar más información sobre la recuperación del lote fallido en la sección [guía de recuperación de lotes con errores](../quality/retrieve-failed-batches.md).
 
 ### Esquemas o encabezados no válidos {#schemas-headers}
 
-Si el lote introducido tiene un esquema no válido o encabezados no válidos, los errores del lote se adjuntarán al lote en sí. Puede encontrar más información sobre la recuperación del lote fallido en la [guía de recuperación de lotes fallidos](../quality/retrieve-failed-batches.md).
+Si el lote introducido tiene un esquema no válido o encabezados no válidos, los errores del lote se adjuntarán al lote en sí. Puede encontrar más información sobre la recuperación del lote fallido en la sección [guía de recuperación de lotes con errores](../quality/retrieve-failed-batches.md).
 
 ### Filas no analizables {#unparsable}
 
@@ -330,7 +330,7 @@ GET /export/batches/{BATCH_ID}/meta?path=row_errors
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{BATCH_ID}` | El valor `id` del lote desde el que está recuperando la información de error. |
+| `{BATCH_ID}` | La variable `id` del lote desde el que está recuperando la información de error. |
 
 **Solicitud**
 
@@ -338,7 +338,7 @@ GET /export/batches/{BATCH_ID}/meta?path=row_errors
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -375,7 +375,7 @@ Una respuesta correcta devuelve una lista de los archivos que tienen errores.
 }
 ```
 
-A continuación, puede recuperar información detallada sobre los errores utilizando el [extremo de recuperación de diagnósticos](#retrieve-diagnostics).
+A continuación, puede recuperar información detallada sobre los errores utilizando la variable [punto final de recuperación de diagnósticos](#retrieve-diagnostics).
 
 A continuación se muestra una respuesta de ejemplo de recuperación del archivo de error:
 

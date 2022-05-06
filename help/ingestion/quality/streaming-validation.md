@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: 'La introducción por transmisión le permite cargar sus datos en Adobe Experience Platform mediante la transmisión de puntos de conexión en tiempo real. Las API de ingesta de transmisión admiten dos modos de validación: sincrónica y asincrónica.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '898'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -21,28 +21,28 @@ La introducción por transmisión le permite cargar sus datos en Adobe Experienc
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Uno de los métodos por los que se pueden enviar datos a  [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Uno de los métodos mediante los cuales se pueden enviar datos a [!DNL Experience Platform].
 
 ### Leer llamadas de API de ejemplo
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidas las pertenecientes al [!DNL Schema Registry], están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+>Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -78,7 +78,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | El valor `id` de la conexión de flujo continuo creada anteriormente. |
+| `{CONNECTION_ID}` | La variable `id` de la conexión de flujo continuo creada anteriormente. |
 
 **Solicitud**
 
@@ -141,7 +141,7 @@ Con la validación sincrónica activada, una respuesta correcta incluye los erro
 }
 ```
 
-La respuesta anterior enumera cuántas violaciones de esquema se encontraron y cuáles fueron las violaciones. Por ejemplo, esta respuesta indica que las claves `workEmail` y `person` no se definieron en el esquema y, por lo tanto, no se permiten. También marca el valor para `_id` como incorrecto, ya que el esquema esperaba un `string`, pero se insertó un `long` en su lugar. Tenga en cuenta que una vez que se encuentren cinco errores, el servicio de validación **detendrá** el procesamiento de ese mensaje. Sin embargo, se seguirán analizando otros mensajes.
+La respuesta anterior enumera cuántas violaciones de esquema se encontraron y cuáles fueron las violaciones. Por ejemplo, esta respuesta indica que las claves `workEmail` y `person` no se han definido en el esquema y, por lo tanto, no se permiten. También marca el valor de `_id` como incorrecto, ya que el esquema esperaba un `string`, pero un `long` en su lugar. Tenga en cuenta que una vez que se encuentren cinco errores, el servicio de validación **stop** procesar ese mensaje. Sin embargo, se seguirán analizando otros mensajes.
 
 ## Validación asincrónica
 
@@ -155,7 +155,7 @@ POST /collection/{CONNECTION_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | El valor `id` de la conexión de flujo continuo creada anteriormente. |
+| `{CONNECTION_ID}` | La variable `id` de la conexión de flujo continuo creada anteriormente. |
 
 **Solicitud**
 
@@ -202,7 +202,7 @@ Esta sección contiene información sobre qué significan los distintos códigos
 | ----------- | ------------- |
 | 200 | Correcto. Para la validación sincrónica, significa que ha pasado las comprobaciones de validación. Para la validación asincrónica, significa que solo ha recibido el mensaje correctamente. Los usuarios pueden averiguar el estado final del mensaje observando el conjunto de datos. |
 | 400 | Error. Hay algo mal en tu solicitud. Se recibe un mensaje de error con más detalles de los servicios de validación de flujo continuo. |
-| 401 | Error. Su solicitud no está autorizada: deberá solicitarla con un token al portador. Para obtener más información sobre cómo solicitar acceso, consulte este [tutorial](https://www.adobe.com/go/platform-api-authentication-en) o esta [publicación de blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Error. Su solicitud no está autorizada: deberá solicitarla con un token al portador. Para obtener más información sobre cómo solicitar acceso, consulte esta [tutorial](https://www.adobe.com/go/platform-api-authentication-en) o [publicación de blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Error. Hay un error interno del sistema. |
-| 501 | Error. Esto significa que la validación sincrónica es **no** compatible con esta ubicación. |
+| 501 | Error. Esto significa que la validación sincrónica es **not** compatible con esta ubicación. |
 | 503 | Error. El servicio no está disponible actualmente. Los clientes deben volver a intentarlo al menos tres veces usando una estrategia exponencial de back-off. |

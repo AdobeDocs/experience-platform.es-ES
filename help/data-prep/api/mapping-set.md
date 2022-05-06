@@ -5,25 +5,24 @@ title: Punto final de API de conjuntos de asignaciones
 topic-legacy: mapping sets
 description: Puede utilizar el extremo `/mappingSets` en la API de Adobe Experience Platform para recuperar, crear, actualizar y validar conjuntos de asignaciones mediante programación.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '807'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 # Punto de conexión de conjuntos de asignaciones
 
-Los conjuntos de asignaciones se pueden utilizar para definir cómo se asignan los datos de un esquema de origen al de un esquema de destino. Puede utilizar el extremo `/mappingSets` de la API de preparación de datos para recuperar, crear, actualizar y validar conjuntos de asignación mediante programación.
+Los conjuntos de asignaciones se pueden utilizar para definir cómo se asignan los datos de un esquema de origen al de un esquema de destino. Puede usar la variable `/mappingSets` en la API de preparación de datos para recuperar, crear, actualizar y validar conjuntos de asignación mediante programación.
 
 ## Conjuntos de asignación de lista
 
-Puede recuperar una lista de todos los conjuntos de asignaciones para su organización IMS realizando una solicitud de GET al extremo `/mappingSets` .
+Puede recuperar una lista de todos los conjuntos de asignaciones para su organización IMS realizando una solicitud de GET al `/mappingSets` punto final.
 
 **Formato de API**
 
-El extremo `/mappingSets` admite varios parámetros de consulta para ayudar a filtrar los resultados. Aunque la mayoría de estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Sin embargo, debe incluir los parámetros `start` y `limit` como parte de la solicitud. Se pueden incluir varios parámetros, separados por el símbolo &quot;`&`&quot;.
+La variable `/mappingSets` el extremo admite varios parámetros de consulta para ayudar a filtrar los resultados. Aunque la mayoría de estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Sin embargo, debe incluir ambas variables `start` y `limit` como parte de la solicitud. Se pueden incluir varios parámetros separados por el símbolo &quot;et&quot; (`&`).
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -35,7 +34,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{LIMIT}` | (**Requerido**) Especifica el número de conjuntos de asignaciones devueltos. |
-| `{START}` | (**Requerido**) Especifica el desplazamiento de las páginas de resultados. Para obtener la primera página de resultados, establezca el valor en `start=0`. |
+| `{START}` | (**Requerido**) Especifica el desplazamiento de las páginas de los resultados. Para obtener la primera página de resultados, establezca el valor en `start=0`. |
 | `{NAME}` | Filtra los conjuntos de asignaciones por nombre. |
 | `{ORDER_BY}` | Ordena el orden de los resultados. Los únicos campos admitidos son `createdDate` y `updatedDate`. Puede anteponer la propiedad con `+` o `-` para ordenarla en orden ascendente o descendente, respectivamente. |
 | `{EXPAND_SCHEMA}` | Un booleano que determina si se devuelve el esquema de salida completo como parte de la respuesta. |
@@ -48,7 +47,7 @@ La siguiente solicitud recuperará los dos últimos conjuntos de asignación den
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -167,7 +166,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## Creación de un conjunto de asignaciones
 
-Puede crear un nuevo conjunto de asignaciones realizando una solicitud de POST al extremo `/mappingSets` .
+Puede crear un nuevo conjunto de asignaciones realizando una solicitud de POST al `/mappingSets` punto final.
 
 **Formato de API**
 
@@ -177,14 +176,14 @@ POST /mappingSets
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo conjunto de asignación, configurado por los parámetros proporcionados en la carga útil.
+La siguiente solicitud crea un nuevo conjunto de asignaciones, configurado por los parámetros proporcionados en la carga útil.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -219,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | El ID del esquema XDM al que hace referencia. |
-| `outputSchema.schemaRef.contentType` | Determina el formato de respuesta del esquema de referencia. Puede encontrar más información sobre este campo en la [Guía para desarrolladores del Registro de Esquemas](../../xdm/api/schemas.md#lookup). |
+| `outputSchema.schemaRef.contentType` | Determina el formato de respuesta del esquema de referencia. Puede encontrar más información sobre este campo en la sección [Guía para desarrolladores de Schema Registry](../../xdm/api/schemas.md#lookup). |
 | `mappings.sourceType` | El tipo de origen describe cómo se extraerá el valor del origen al destino. |
 | `mappings.source` | Ubicación desde la que desea asignar los datos. |
 | `mappings.destination` | Ubicación a la que desea asignar los datos. |
@@ -241,7 +240,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el con
 
 ## Validar asignaciones
 
-Puede validar que las asignaciones funcionen correctamente realizando una solicitud de POST al extremo `/mappingSets/validate` .
+Puede validar que las asignaciones funcionen correctamente realizando una solicitud de POST al `/mappingSets/validate` punto final.
 
 **Formato de API**
 
@@ -258,7 +257,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -315,7 +314,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información de validaci�
 
 ## Vista previa de datos para asignaciones
 
-Puede obtener una vista previa de a qué datos se asignarán realizando una solicitud de POST al extremo `/mappingSets/preview` .
+Puede obtener una vista previa de a qué datos se asignarán realizando una solicitud de POST al `/mappingSets/preview` punto final.
 
 **Formato de API**
 
@@ -330,7 +329,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
 {
@@ -394,7 +393,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una vista previa de los d
 
 ## Buscar un conjunto de asignaciones
 
-Puede recuperar un conjunto de asignaciones específico proporcionando su ID en la ruta de una solicitud de GET al extremo `/mappingSets` . Este extremo también admite varios parámetros de consulta para ayudarle a recuperar detalles sobre la versión del conjunto de asignaciones especificado.
+Puede recuperar un conjunto de asignaciones específico proporcionando su ID en la ruta de una solicitud de GET al `/mappingSets` punto final. Este extremo también admite varios parámetros de consulta para ayudarle a recuperar detalles sobre la versión del conjunto de asignaciones especificado.
 
 **Formato de API**
 
@@ -418,7 +417,7 @@ La siguiente solicitud recupera información detallada sobre un conjunto de asig
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -538,7 +537,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
                 }
             },
             "version": "1.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/89abc189258b1cb1a816d8f2b2341a6d98000ed8f4008305"
         },
         "schemaRef": {
@@ -585,7 +584,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Actualizar un conjunto de asignaciones
 
-Puede actualizar un conjunto de asignaciones proporcionando su ID en la ruta de una solicitud `PUT` al extremo `mappingSets`.
+Puede actualizar un conjunto de asignaciones proporcionando su ID en la ruta de un `PUT` solicitud al `mappingSets` punto final.
 
 **Formato de API**
 
@@ -604,7 +603,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -832,7 +831,7 @@ La siguiente solicitud devuelve todas las asignaciones del conjunto de asignacio
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -936,7 +935,7 @@ La siguiente solicitud recupera información sobre una asignación específica e
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings/394bec970d54410b98e1d4c55a3843ca \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

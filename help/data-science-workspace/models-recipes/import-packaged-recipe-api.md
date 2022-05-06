@@ -6,8 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial utiliza la API de aprendizaje automático de Sensei para crear un motor, también conocido como fórmula en la interfaz de usuario.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 2%
@@ -16,7 +15,7 @@ ht-degree: 2%
 
 # Importar una fórmula empaquetada mediante la API de aprendizaje automático de Sensei
 
-Este tutorial utiliza [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para crear un [Motor](../api/engines.md), también conocido como una fórmula en la interfaz de usuario.
+Este tutorial utiliza la variable [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para crear un [Motor](../api/engines.md), también conocido como fórmula en la interfaz de usuario.
 
 Antes de comenzar, es importante tener en cuenta que Adobe Experience Platform [!DNL Data Science Workspace] utiliza términos diferentes para hacer referencia a elementos similares dentro de la API y la IU. Los términos de la API se utilizan en este tutorial y la siguiente tabla describe los términos correlacionados:
 
@@ -27,33 +26,33 @@ Antes de comenzar, es importante tener en cuenta que Adobe Experience Platform [
 | Capacitación y evaluación | [Experimento](../api/experiments.md) |
 | Service | [MLService](../api/mlservices.md) |
 
-Un motor contiene algoritmos y lógica de aprendizaje automático para resolver problemas específicos. El diagrama siguiente proporciona una visualización que muestra el flujo de trabajo de API en [!DNL Data Science Workspace]. Este tutorial se centra en la creación de un motor, el cerebro de un modelo de aprendizaje automático.
+Un motor contiene algoritmos y lógica de aprendizaje automático para resolver problemas específicos. El diagrama siguiente proporciona una visualización del flujo de trabajo de la API en [!DNL Data Science Workspace]. Este tutorial se centra en la creación de un motor, el cerebro de un modelo de aprendizaje automático.
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
 ## Primeros pasos
 
-Este tutorial requiere un archivo de fórmula empaquetado en forma de URL de Docker. Siga el tutorial [Package source files into a Recipe](./package-source-files-recipe.md) para crear un archivo de fórmula empaquetado o proporcione el suyo propio.
+Este tutorial requiere un archivo de fórmula empaquetado en forma de URL de Docker. Siga las [Empaquetar archivos de origen en una fórmula](./package-source-files-recipe.md) tutorial para crear un archivo de fórmula empaquetado o proporcionar el suyo propio.
 
 - `{DOCKER_URL}`: Dirección URL de una imagen Docker de un servicio inteligente.
 
-Este tutorial requiere que haya completado el tutorial [Autenticación a Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para realizar correctamente llamadas a las API [!DNL Platform]. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+Este tutorial requiere que haya completado el [Tutorial sobre autenticación en Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para realizar correctamente llamadas a [!DNL Platform] API. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
 
 - `{ACCESS_TOKEN}`: Su valor de token al portador específico proporcionado después de la autenticación.
-- `{IMS_ORG}`: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.
+- `{ORG_ID}`: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.
 - `{API_KEY}`: El valor clave de API específico que se encuentra en su integración única de Adobe Experience Platform.
 
 ## Crear un motor
 
 Los motores se pueden crear realizando una solicitud de POST al extremo /engines. El motor creado se configura en función del formulario del archivo de fórmula empaquetado que debe incluirse como parte de la solicitud de API.
 
-### Crear un motor con una URL de Docker {#create-an-engine-with-a-docker-url}
+### Creación de un motor con una dirección URL de acoplamiento {#create-an-engine-with-a-docker-url}
 
 Para crear un motor con un archivo de fórmula empaquetado almacenado en un contenedor de Docker, debe proporcionar la URL de Docker al archivo de fórmula empaquetado.
 
 >[!CAUTION]
 >
-> Si está utilizando [!DNL Python] o R, utilice la siguiente solicitud. Si está utilizando PySpark o Scala, utilice el ejemplo de solicitud PySpark/Scala situado debajo del ejemplo de Python/R.
+> Si está utilizando [!DNL Python] o R use la siguiente solicitud. Si está utilizando PySpark o Scala, utilice el ejemplo de solicitud PySpark/Scala situado debajo del ejemplo de Python/R.
 
 **Formato de API**
 
@@ -69,7 +68,7 @@ curl -X POST \
     -H 'Authorization: {ACCESS_TOKEN}' \
     -H 'X-API-KEY: {API_KEY}' \
     -H 'content-type: multipart/form-data' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H `x-sandbox-name: {SANDBOX_NAME}` \
     -F 'engine={
         "name": "Retail Sales Engine Python",
@@ -89,8 +88,8 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------  | ----------- |
-| `engine.name` | El nombre deseado para el motor. La fórmula correspondiente a este motor heredará este valor que se mostrará en la interfaz de usuario [!DNL Data Science Workspace] como nombre de la fórmula. |
-| `engine.description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor que se mostrará en la interfaz de usuario [!DNL Data Science Workspace] como descripción de la fórmula. No quite esta propiedad, deje que este valor sea una cadena vacía si decide no proporcionar una descripción. |
+| `engine.name` | El nombre deseado para el motor. La fórmula correspondiente a este motor heredará este valor que se mostrará en [!DNL Data Science Workspace] interfaz de usuario como nombre de la fórmula. |
+| `engine.description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor que se mostrará en [!DNL Data Science Workspace] interfaz de usuario como descripción de la fórmula. No quite esta propiedad, deje que este valor sea una cadena vacía si decide no proporcionar una descripción. |
 | `engine.type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se desarrolla la imagen Docker. Cuando se proporciona una URL de Docker para crear un motor, `type` es `Python`, `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
 | `artifacts.default.image.location` | Su `{DOCKER_URL}` va aquí. Una URL de Docker completa tiene la siguiente estructura: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Un nombre adicional para el archivo de imagen Docker. No quite esta propiedad, deje que este valor sea una cadena vacía si decide no proporcionar un nombre de archivo de imagen Docker adicional. |
@@ -103,7 +102,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -140,7 +139,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -172,7 +171,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del motor recién creado, incluido su identificador único (`id`). El siguiente ejemplo de respuesta es para un motor [!DNL Python]. Las claves `executionType` y `type` cambian según el POST proporcionado.
+Una respuesta correcta devuelve una carga útil que contiene los detalles del motor recién creado, incluido su identificador único (`id`). El siguiente ejemplo de respuesta es para un [!DNL Python] Motor. La variable `executionType` y `type` las claves cambian según el POST proporcionado.
 
 ```json
 {
@@ -199,8 +198,8 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 }
 ```
 
-Una respuesta correcta muestra una carga útil JSON con información sobre el motor recién creado. La clave `id` representa el identificador único del motor y es necesaria en el siguiente tutorial para crear una instancia MLI. Asegúrese de que el identificador del motor se guarde antes de continuar con los pasos siguientes.
+Una respuesta correcta muestra una carga útil JSON con información sobre el motor recién creado. La variable `id` representa el identificador único del motor y es necesario en el siguiente tutorial para crear una instancia MLI. Asegúrese de que el identificador del motor se guarde antes de continuar con los pasos siguientes.
 
 ## Pasos siguientes {#next-steps}
 
-Ha creado un motor con la API y se ha obtenido un identificador de motor único como parte del cuerpo de respuesta. Puede utilizar este identificador de motor en el siguiente tutorial para aprender a [crear, entrenar y evaluar un modelo con la API](./train-evaluate-model-api.md).
+Ha creado un motor con la API y se ha obtenido un identificador de motor único como parte del cuerpo de respuesta. Puede utilizar este identificador de motor en el siguiente tutorial mientras aprende a [crear, entrenar y evaluar un modelo mediante la API](./train-evaluate-model-api.md).

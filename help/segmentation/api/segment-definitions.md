@@ -5,30 +5,30 @@ title: Punto final de la API de definiciones de segmentos
 topic-legacy: developer guide
 description: El extremo de definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación definiciones de segmentos para su organización.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1188'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 # Punto final de definiciones de segmentos
 
-Adobe Experience Platform le permite crear segmentos que definen un grupo de atributos o comportamientos específicos de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas de PQL.
+Adobe Experience Platform le permite crear segmentos que definen un grupo de atributos o comportamientos específicos de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados de PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas PQL.
 
 Esta guía proporciona información que le ayudará a comprender mejor las definiciones de segmentos e incluye ejemplos de llamadas API para realizar acciones básicas mediante la API.
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar correctamente llamadas a la API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
 ## Recuperar una lista de definiciones de segmentos {#list}
 
-Puede recuperar una lista de todas las definiciones de segmentos para su organización IMS realizando una solicitud de GET al extremo `/segment/definitions` .
+Puede recuperar una lista de todas las definiciones de segmentos para su organización IMS realizando una solicitud de GET al `/segment/definitions` punto final.
 
 **Formato de API**
 
-El extremo `/segment/definitions` admite varios parámetros de consulta para ayudar a filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las definiciones de segmento disponibles para su organización. Se pueden incluir varios parámetros, separados por el símbolo &quot;`&`&quot;.
+La variable `/segment/definitions` el extremo admite varios parámetros de consulta para ayudar a filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las definiciones de segmento disponibles para su organización. Se pueden incluir varios parámetros separados por el símbolo &quot;et&quot; (`&`).
 
 ```http
 GET /segment/definitions
@@ -52,7 +52,7 @@ La siguiente solicitud recuperará las dos últimas definiciones de segmento pub
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -70,7 +70,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de definiciones
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -110,7 +110,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de definiciones
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "test segment",
             "description": "",
             "expression": {
@@ -153,7 +153,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de definiciones
 
 ## Crear una nueva definición de segmento {#create}
 
-Puede crear una nueva definición de segmento realizando una solicitud de POST al extremo `/segment/definitions` .
+Puede crear una nueva definición de segmento realizando una solicitud de POST al `/segment/definitions` punto final.
 
 **Formato de API**
 
@@ -167,7 +167,7 @@ POST /segment/definitions
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -190,7 +190,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `name` | **Requerido.** Un nombre único por el cual hacer referencia al segmento. |
-| `schema` | **Requerido.** El esquema asociado a las entidades del segmento. Consiste en un campo `id` o `name`. |
+| `schema` | **Requerido.** El esquema asociado a las entidades del segmento. Consiste en una `id` o `name` campo . |
 | `expression` | **Requerido.** Una entidad que contiene información de campos sobre la definición del segmento. |
 | `expression.type` | Especifica el tipo de expresión. Actualmente, solo se admite &quot;PQL&quot;. |
 | `expression.format` | Indica la estructura de la expresión en valor. Actualmente, se admite el siguiente formato: <ul><li>`pql/text`: Representación textual de una definición de segmento, según la gramática PQL publicada.  Por ejemplo, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -199,7 +199,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 >[!NOTE]
 >
->Una expresión de definición de segmento también puede hacer referencia a un atributo calculado. Para obtener más información, consulte la [guía de extremo de API de atributos calculados](../../profile/computed-attributes/ca-api.md)
+>Una expresión de definición de segmento también puede hacer referencia a un atributo calculado. Para obtener más información, consulte la [guía de extremo de API de atributo calculado](../../profile/computed-attributes/ca-api.md)
 >
 >La funcionalidad de atributo calculada está en alfa y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
 
@@ -215,7 +215,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -256,7 +256,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
 
 ## Recuperar una definición de segmento específica {#get}
 
-Puede recuperar información detallada sobre una definición de segmento específica realizando una solicitud de GET al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea recuperar en la ruta de solicitud.
+Puede recuperar información detallada sobre una definición de segmento específica realizando una solicitud de GET al `/segment/definitions` y proporcionando el ID de la definición de segmento que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -266,14 +266,14 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | El valor `id` de la definición del segmento que desea recuperar. |
+| `{SEGMENT_ID}` | La variable `id` de la definición del segmento que desea recuperar. |
 
 **Solicitud**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -290,7 +290,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -328,7 +328,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | -------- | ----------- |
 | `id` | Un ID de solo lectura generado por el sistema de la definición del segmento. |
 | `name` | Un nombre único por el cual hacer referencia al segmento. |
-| `schema` | El esquema asociado a las entidades del segmento. Consiste en un campo `id` o `name`. |
+| `schema` | El esquema asociado a las entidades del segmento. Consiste en una `id` o `name` campo . |
 | `expression` | Una entidad que contiene información de campos sobre la definición del segmento. |
 | `expression.type` | Especifica el tipo de expresión. Actualmente, solo se admite &quot;PQL&quot;. |
 | `expression.format` | Indica la estructura de la expresión en valor. Actualmente, se admite el siguiente formato: <ul><li>`pql/text`: Representación textual de una definición de segmento, según la gramática PQL publicada.  Por ejemplo, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -338,7 +338,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Definiciones de segmentos de recuperación masiva {#bulk-get}
 
-Puede recuperar información detallada sobre varias definiciones de segmento especificadas realizando una solicitud de POST al extremo `/segment/definitions/bulk-get` y proporcionando los valores `id` de las definiciones de segmento en el cuerpo de la solicitud.
+Puede recuperar información detallada sobre varias definiciones de segmento especificadas realizando una solicitud de POST al `/segment/definitions/bulk-get` y proporcionando la variable `id` valores de las definiciones de segmentos en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -352,7 +352,7 @@ POST /segment/definitions/bulk-get
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
@@ -381,7 +381,7 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -420,7 +420,7 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -461,7 +461,7 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
 | -------- | ----------- |
 | `id` | Un ID de solo lectura generado por el sistema de la definición del segmento. |
 | `name` | Un nombre único por el cual hacer referencia al segmento. |
-| `schema` | El esquema asociado a las entidades del segmento. Consiste en un campo `id` o `name`. |
+| `schema` | El esquema asociado a las entidades del segmento. Consiste en una `id` o `name` campo . |
 | `expression` | Una entidad que contiene información de campos sobre la definición del segmento. |
 | `expression.type` | Especifica el tipo de expresión. Actualmente, solo se admite &quot;PQL&quot;. |
 | `expression.format` | Indica la estructura de la expresión en valor. Actualmente, se admite el siguiente formato: <ul><li>`pql/text`: Representación textual de una definición de segmento, según la gramática PQL publicada.  Por ejemplo, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -471,11 +471,11 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
 
 ## Eliminar una definición de segmento específica {#delete}
 
-Puede solicitar la eliminación de una definición de segmento específica realizando una solicitud de DELETE al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea eliminar en la ruta de solicitud.
+Puede solicitar la eliminación de una definición de segmento específica realizando una solicitud de DELETE al `/segment/definitions` y proporcione el ID de la definición de segmento que desea eliminar en la ruta de solicitud.
 
 >[!NOTE]
 >
-> **no** podrá eliminar un segmento que se utilice en una activación de destino.
+> Usted **not** puede eliminar un segmento que se utilice en una activación de destino.
 
 **Formato de API**
 
@@ -485,14 +485,14 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | El valor `id` de la definición del segmento que desea eliminar. |
+| `{SEGMENT_ID}` | La variable `id` de la definición del segmento que desea eliminar. |
 
 **Solicitud**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -503,7 +503,7 @@ Una respuesta correcta devuelve el estado HTTP 200 sin mensaje.
 
 ## Actualizar una definición de segmento específica
 
-Puede actualizar una definición de segmento específica realizando una solicitud de PATCH al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea actualizar en la ruta de solicitud.
+Puede actualizar una definición de segmento específica realizando una solicitud de PATCH al `/segment/definitions` y proporcione el ID de la definición del segmento que desea actualizar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -513,7 +513,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | El valor `id` de la definición del segmento que desea actualizar. |
+| `{SEGMENT_ID}` | La variable `id` de la definición del segmento que desea actualizar. |
 
 **Solicitud**
 
@@ -523,7 +523,7 @@ La siguiente solicitud actualizará el país de dirección de trabajo de los Est
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -560,7 +560,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -596,7 +596,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
 
 ## Convertir definición de segmento
 
-Puede convertir una definición de segmento entre `pql/text` y `pql/json` o `pql/json` a `pql/text` realizando una solicitud de POST al extremo `/segment/conversion` .
+Puede convertir una definición de segmento entre `pql/text` y `pql/json` o `pql/json` a `pql/text` realizando una solicitud de POST al `/segment/conversion` punto final.
 
 **Formato de API**
 
@@ -612,7 +612,7 @@ La siguiente solicitud cambiará el formato de la definición del segmento de `p
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -657,4 +657,4 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
 
 ## Pasos siguientes
 
-Después de leer esta guía, ahora puede comprender mejor cómo funcionan las definiciones de segmentos. Para obtener más información sobre la creación de segmentos, lea el tutorial [Creación de segmentos](../tutorials/create-a-segment.md).
+Después de leer esta guía, ahora puede comprender mejor cómo funcionan las definiciones de segmentos. Para obtener más información sobre la creación de segmentos, lea la [creación de segmentos](../tutorials/create-a-segment.md) tutorial.

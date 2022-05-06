@@ -5,7 +5,7 @@ title: Introducción a la API del servicio de directivas
 topic-legacy: developer guide
 description: La API del servicio de directivas le permite crear y administrar varios recursos relacionados con el control de datos de Adobe Experience Platform. Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas a la API del servicio de directivas.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%
@@ -35,7 +35,7 @@ La documentación de la API también requiere que haya completado la [tutorial d
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a Administración de datos, están aislados de entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
