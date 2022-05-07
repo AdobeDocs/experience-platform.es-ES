@@ -3,7 +3,7 @@ keywords: Experience Platform;servicio de consulta;servicio de consulta;consulta
 title: Introducción al servicio de consulta de Adobe Experience Platform
 topic-legacy: tutorial
 description: Un desglose de los pasos necesarios para utilizar completamente el servicio de consulta de Adobe Experience Platform
-source-git-commit: a071f14dd92b22ae4f1f0e62c3d374069b684b79
+source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 7%
@@ -20,7 +20,7 @@ Una vez introducidos los datos en Adobe Experience Platform, puede empezar a tra
 
 ## Pasos siguientes
 
-Este documento abarcaba los requisitos previos necesarios para utilizar [!DNL Query Service] en Experience Platform. Para obtener más información sobre cómo [!DNL Query Service] mejora el procesamiento de datos en Platform, consulte la [ejemplo de presentación de casos de uso](./use-case.md).
+Este documento abarcaba los requisitos previos necesarios para utilizar [!DNL Query Service] en Experience Platform. Para obtener más información sobre cómo [!DNL Query Service] mejora el procesamiento de datos en Platform, consulte la [ejemplo de presentación de casos de uso](../use-cases/abandoned-cart.md).
 
 Los siguientes recursos son útiles para comprender mejor [!DNL Query Service]:
 

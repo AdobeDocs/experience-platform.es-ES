@@ -5,7 +5,7 @@ title: Información general del servicio de consultas
 topic-legacy: overview
 description: Este documento proporciona una descripción general de la función del servicio de consultas dentro del Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 36710ced69cc951c27869e5491344a5f38935324
+source-git-commit: 796460be52b465216cdc69d45aa38ac80aa3516d
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Segmentation Service] permite a los usuarios div
 
 ### Abandono de exploración de Adobe Analytics
 
-Esta [el ejemplo de abandono de exploración se centra en el uso del Adobe [!DNL Analytics]](./get-started/use-case.md) datos para crear una audiencia procesable concreta. [!DNL Query Service] incorpora lógica compleja para la segmentación con el fin de calcular varios atributos personalizados para utilizarlos de forma descendente o para simplificar en gran medida la forma en que genera sus segmentos.
+Esta [el ejemplo de abandono de exploración se centra en el uso del Adobe [!DNL Analytics]](./use-cases/abandoned-cart.md) datos para crear una audiencia procesable concreta. [!DNL Query Service] incorpora lógica compleja para la segmentación con el fin de calcular varios atributos personalizados para utilizarlos de forma descendente o para simplificar en gran medida la forma en que genera sus segmentos.
 
 ### Tableros BI de consulta
 

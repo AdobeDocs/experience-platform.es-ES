@@ -5,7 +5,7 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene información sobre los códigos de error comunes que encuentra y las posibles causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
 workflow-type: tm+mt
 source-wordcount: '3516'
 ht-degree: 1%
@@ -442,7 +442,7 @@ WHERE T2.ID IS NULL
 
 Esta sección proporciona información sobre la exportación de datos y límites.
 
-### ¿Existe alguna forma de extraer datos del servicio de consulta después del procesamiento de la consulta y guardar los resultados en un archivo CSV?
+### ¿Existe alguna forma de extraer datos del servicio de consulta después del procesamiento de la consulta y guardar los resultados en un archivo CSV? {#export-csv}
 
 + ++Respuesta Sí. Los datos se pueden extraer del servicio de consulta y también existe la opción de almacenar los resultados en formato CSV mediante un comando SQL.
 
