@@ -4,9 +4,9 @@ title: Reglas de alerta estándar
 description: Este documento cubre las reglas de alerta predefinidas proporcionadas por el Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
+source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '811'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,8 @@ Las siguientes reglas de alerta son específicas de [Ingesta de datos](../../ing
 | Retrasos, errores y errores de ejecución del flujo de origen | Error en la ejecución del flujo de fuentes | Esta alerta déclencheur cuando se produce un error al introducir datos desde una conexión de origen. |
 | Retrasos, errores y errores de ejecución del flujo de origen | Retraso de ingesta | Esta alerta déclencheur cuando la ejecución de un flujo de ingesta por lotes tarda más de 150 minutos en procesarse. |
 | Retrasos, errores y errores de ejecución del flujo de origen | Falta de ingesta | Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se introducen datos en Platform. |
-| Retrasos, errores y errores de ejecución del flujo de origen | Fallo de ingesta | Esta alerta se déclencheur cuando la proporción de registros con errores en todos los registros supera un umbral del 0,5 % |
+| Retrasos, errores y errores de ejecución del flujo de origen | Fallo de ingesta | Esta alerta déclencheur cuando la proporción de registros con errores en todos los registros supera un umbral del 0,5 %. |
+| Retrasos, errores y errores de ejecución del flujo de origen | La tasa de omisión de página supera el umbral | Esta alerta se déclencheur cuando la proporción de id omitidos con respecto a los id totales supera un umbral. |
 
 {style=&quot;table-layout:auto&quot;}
 
