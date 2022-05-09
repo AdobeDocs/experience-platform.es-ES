@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Introducción a los paneles Experience Platform
+title: Información general sobre los paneles
 type: Documentation
 description: Explore varios tableros en Adobe Experience Platform para ver información importante sobre los datos de su organización, tal como se capturan en las instantáneas diarias.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---

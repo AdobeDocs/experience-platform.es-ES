@@ -3,11 +3,11 @@ keywords: Experience Platform;inicio;temas populares;servicio de consulta;servic
 solution: Experience Platform
 title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
-description: Este documento contiene información sobre los códigos de error comunes que encuentra y las posibles causas.
+description: Este documento contiene preguntas y respuestas comunes relacionadas con el servicio de consulta. Los temas incluyen, exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '3516'
+source-wordcount: '3522'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ Esta sección incluye información sobre rendimiento, límites y procesos.
 +++Respuesta Una posible causa es la función de autocompletar. La función procesa ciertos comandos de metadatos que ocasionalmente pueden ralentizar el editor durante la edición de consultas.
 +++
 
-### ¿Puedo usar Postman para la API del servicio de consulta?
+### ¿Puedo utilizar Postman para la API del servicio de consulta?
 
 +++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante Postman (una aplicación gratuita de terceros). Observe el [Guía de configuración de Postman](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en la consola de Adobe Developer y adquirir todas las credenciales necesarias para su uso con Postman. Consulte la documentación oficial para [instrucciones sobre cómo iniciar, ejecutar y compartir colecciones de Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
