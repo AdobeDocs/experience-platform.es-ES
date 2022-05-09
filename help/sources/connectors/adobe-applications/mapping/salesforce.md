@@ -2,7 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;Salesforce;salesforce;asignación de campos;asignación de campos;asignación;marketing;B2B;b2b
 title: Campos de asignación de Salesforce
 description: Las tablas siguientes contienen las asignaciones entre los campos de origen de Salesforce y sus correspondientes campos XDM.
-source-git-commit: d0efc8ffab33029c9c3ff69456b634b4ef737b1a
+exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
+source-git-commit: d96c1db480957e8b0cbff01171ae11d8eaa801be
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 10%
@@ -180,7 +181,7 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | `Amount` | `opportunityAmount.amount` |
 | `CampaignId` | `campaignKey.sourceID` |
 | `iif(CampaignId != null && CampaignId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")), null)` | `campaignKey` |
-| `CloseDate` | `actualCloseDate` / `expectedCloseDate` |
+| `CloseDate` | `expectedCloseDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Description` | `opportunityDescription` |
 | `ExpectedRevenue` | `expectedRevenue.amount` |
