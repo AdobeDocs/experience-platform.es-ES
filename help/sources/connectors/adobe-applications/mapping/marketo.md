@@ -5,9 +5,9 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 0db94891f9ba49e451d78843d08b7201ac6de8fa
+source-git-commit: 52162fa1bbb3ab4c8ccb81b95e90c515f931c6fa
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '609'
 ht-degree: 8%
 
 ---
@@ -257,7 +257,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 | `id` | `opportunityKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Identidad primaria. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazará automáticamente. |
-| `iif(mktoCdpAccountOrgld != null && mktoCdpAccountOrgld != "",to_object("sourceTyPe","Marketo","sourcelnstancelD","631-STS-900","sourcelD",concat(mktoCdpAccountOrgld,".mkto_org"),"sourceKey",concat(mktoCdpAccountOrgId,".mkto_org@631-STS-900.Marketo")), null)` | `accountKey` |
+| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Relación |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
