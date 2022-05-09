@@ -2,10 +2,10 @@
 title: Información general sobre registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
+source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 7%
+source-wordcount: '767'
+ht-degree: 10%
 
 ---
 
@@ -35,6 +35,8 @@ En la tabla siguiente se describen las acciones en las que los registros de audi
 | [Atributo calculado](../../../profile/computed-attributes/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Perfil del producto](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Cuenta (Adobe)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Plantilla de consulta](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Consulta programada](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 
 ## Acceso a registros de auditoría
 
