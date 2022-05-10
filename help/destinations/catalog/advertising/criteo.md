@@ -3,9 +3,9 @@ keywords: publicidad; criteo;
 title: Conexión con Criteo
 description: Criteo impulsa la publicidad confiable e impactante para traer experiencias más ricas a todos los consumidores a través del internet abierto. Con el mayor conjunto de datos comerciales del mundo y la mejor IA de su clase, Criteo garantiza que cada punto de contacto a través del recorrido de compras esté personalizado para llegar a los clientes con el anuncio correcto, en el momento adecuado.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '820'
 ht-degree: 3%
 
 ---
@@ -138,4 +138,4 @@ Todos los destinos de Adobe Experience Platform cumplen las políticas de uso de
 ## Recursos adicionales
 
 * [Centro de ayuda de Criteo](https://help.criteo.com/kb/en)
-* [Portal para desarrolladores de Criteo](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
+* [Portal para desarrolladores de Criteo](https://developers.criteo.com)
