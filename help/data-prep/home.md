@@ -5,9 +5,9 @@ title: Información general sobre la preparación de datos
 topic-legacy: overview
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
+source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ La preparación de datos también aplica varias validaciones de datos intrínsec
 
 >[!NOTE]
 >
->A menos que el mensaje resultante sea XDM no válido, cualquier error de transformación en la preparación de datos dará como resultado que esos atributos se establezcan en `null`, mientras que el resto de la fila se ingerirá. Si la fila no se resuelve en un XDM no válido, la fila **no** se ingerirá. En ambos casos, el error se documenta.
+>A menos que el mensaje resultante sea XDM no válido, cualquier error de transformación en la preparación de datos dará como resultado que esos atributos se establezcan en `null`, mientras que el resto de la fila se incorporará. Si la fila no se resuelve en un XDM no válido, la fila **not** ingeridos. En ambos casos, el error se documenta.
 
 ## Asignación
 
@@ -39,18 +39,22 @@ Para obtener más información sobre las diferentes funciones de asignación, le
 
 Los campos calculados permiten que se creen valores en función de los atributos del esquema de entrada. Estos valores se pueden asignar a atributos en el esquema de destino y se les puede proporcionar un nombre y una descripción para facilitar la referencia.
 
-Para obtener más información sobre los campos calculados, consulte la [guía de campos calculados](./functions.md#calculated-fields).
+Para obtener más información sobre los campos calculados, lea la [guía de campos calculados](./functions.md#calculated-fields).
 
 ## Conjunto de asignaciones
 
 Un conjunto de asignaciones que transforman un esquema en otro se conocen colectivamente como conjunto de asignaciones. Se crea un conjunto de asignaciones único como parte de cada flujo de datos. Un conjunto de asignaciones es una parte integral de los flujos de datos y se crea, edita y monitoriza como parte de los flujos de datos.
 
-Para obtener más información sobre los conjuntos de asignaciones, incluido cómo utilizar los campos dentro de un conjunto de asignaciones, lea la [guía del conjunto de asignaciones](./mapping-set.md). Para aprender a crear un conjunto de asignaciones y utilizar otras llamadas de API relacionadas con conjuntos de asignaciones, lea la sección del conjunto de asignaciones en la [guía para desarrolladores](./api/mapping-set.md).
+Para obtener más información sobre los conjuntos de asignaciones, incluido cómo utilizar los campos dentro de un conjunto de asignaciones, lea la [guía de conjunto de asignaciones](./mapping-set.md). Para aprender a crear un conjunto de asignaciones y utilizar otras llamadas de API relacionadas con conjuntos de asignaciones, lea la sección del conjunto de asignaciones en la [guía para desarrolladores](./api/mapping-set.md).
 
 ## Gestión del formato de datos
 
-La preparación de datos puede gestionar de forma sólida diferentes formatos de datos introducidos en Platform. Para obtener más información sobre cómo gestiona la preparación de datos los distintos tipos de datos, lea la [información general sobre la administración del formato de datos](./data-handling.md).
+La preparación de datos puede gestionar de forma sólida diferentes formatos de datos introducidos en Platform. Para obtener más información sobre cómo gestiona la preparación de datos los distintos tipos de datos, lea la [información general sobre la gestión del formato de datos](./data-handling.md).
+
+## Enviar actualizaciones de filas parciales mediante [!DNL Data Prep]
+
+Transmisión de fuentes en [!DNL Data Prep] permite enviar actualizaciones de fila parciales a [!DNL Profile Service] al mismo tiempo que crea y establece nuevos vínculos de identidad con una única solicitud de API. Para obtener más información sobre cómo retransmitir subidas en [!DNL Data Prep], consulte el documento en [envío de actualizaciones de fila parciales](./upserts.md).
 
 ## Pasos siguientes
 
-Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información sobre las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md). Para obtener más información sobre cómo gestiona la preparación de datos los distintos tipos de datos, consulte la [guía de administración del formato de datos](./data-handling.md#dates). Para aprender a utilizar la API de preparación de datos, lea la [Guía para desarrolladores de preparación de datos](api/overview.md).
+Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información sobre las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md). Para obtener más información sobre cómo gestiona la preparación de datos los distintos tipos de datos, lea la [guía de gestión del formato de datos](./data-handling.md#dates). Para aprender a utilizar la API de preparación de datos, lea la [Guía para desarrolladores de preparación de datos](api/overview.md).
