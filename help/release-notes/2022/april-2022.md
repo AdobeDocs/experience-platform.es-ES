@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform, abril de 2022
 description: Notas de la versión de abril de 2022 para Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: 1f5c21e09e471ac0d6f1d98e219e06e571ede89f
 workflow-type: tm+mt
-source-wordcount: '2708'
+source-wordcount: '2802'
 ht-degree: 3%
 
 ---
@@ -32,8 +32,10 @@ Los tableros proporcionan opciones de informes preconfiguradas para los datos de
 
 Las siguientes utilidades están disponibles a través de la biblioteca Widget en sus respectivos paneles. Consulte la documentación para obtener más información sobre [cómo añadir utilidades a través de la biblioteca de utilidades](../../dashboards/customize/widget-library.md).
 
-| Función | Panel | Descripción |
-| --------------------------------------------------------- | ------------- | ----------- |
+**Nuevas utilidades**
+
+| Widget | Panel | Descripción |
+| ------ | --------- | ----------- |
 | [!UICONTROL Tendencia añadida de perfiles] | Perfiles | Esta utilidad utiliza un gráfico de líneas para ilustrar el número total de perfiles combinados que se han agregado diariamente al Almacenamiento de perfiles durante los últimos 30 días, 90 días o 12 meses. |
 | [!UICONTROL Audiencias asignadas al estado de destino] | Perfiles | Esta utilidad muestra el número total de audiencias asignadas y no asignadas en una única métrica y utiliza un gráfico de anillos para ilustrar la diferencia proporcional entre sus totales. |
 | [!UICONTROL Tamaño de las audiencias] | Perfiles | Esta utilidad proporciona una tabla de dos columnas que enumera hasta 20 segmentos y el número total de audiencias contenidas en cada segmento. La lista depende de la política de combinación aplicada y ordenada de mayor a menor según el número total de audiencias. |
@@ -46,6 +48,12 @@ Las siguientes utilidades están disponibles a través de la biblioteca Widget e
 | [!UICONTROL Tendencia del tamaño de la audiencia] | Segmentos | Esta utilidad proporciona una ilustración de gráfico de líneas para el número total de perfiles que cumplen los criterios de cualquier definición de segmento durante 30 días, 90 días y 12 meses. |
 | [!UICONTROL Tendencia del cambio de tamaño de la audiencia] | Segmentos | Esta utilidad proporciona un gráfico de líneas con la diferencia en la cantidad total de perfiles que cumplen los requisitos para un segmento determinado entre las instantáneas diarias más recientes. El período de análisis de tendencias se puede visualizar a lo largo de 30 días, 90 días y 12 meses. |
 | [!UICONTROL Tendencia del tamaño de la audiencia por identidad] | Segmentos | Esta utilidad ilustra la tendencia del tamaño de la audiencia de un segmento concreto en función de un tipo de identidad seleccionado. El período de análisis de tendencias se puede visualizar a lo largo de 30 días, 90 días y 12 meses. |
+
+**Nuevas funciones**
+
+| Función | Panel | Descripción |
+| ------- | --------- | ----------- |
+| Limpieza de pertenencia a segmentos de perfil huérfano | Perfiles y uso de licencias | El servicio de perfil ahora elimina a los miembros del segmento que quedan diariamente para proporcionar una representación más precisa de sus perfiles en su sistema. Esta limpieza se produce después de que se eliminan todos los fragmentos de perfil de un perfil determinado. Esto puede mostrar una caída en la métrica &quot;Audiencia direccionable&quot; en el panel de uso de licencias y puede mostrar una caída en la métrica &quot;Recuento de perfiles&quot; en el panel de perfiles, ya que estas métricas incluían fragmentos de segmento sobrantes de esta versión. |
 
 Consulte la documentación para obtener más información sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)y [[!DNL Segments]](../../dashboards/guides/segments.md) tableros.
 
