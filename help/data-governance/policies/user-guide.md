@@ -5,9 +5,9 @@ title: Administrar políticas de uso de datos en la interfaz de usuario
 topic-legacy: policies
 description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el espacio de trabajo Directivas de la interfaz de usuario del Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
+source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,10 @@ Puede seguir agregando y ajustando condiciones y atributos de consentimiento a l
 Ahora se crea la directiva de consentimiento y su estado se establece en [!UICONTROL Desactivado] de forma predeterminada. Para activar la directiva de inmediato, seleccione la opción **[!UICONTROL Estado]** alterne en el carril derecho.
 
 ![](../images/policies/enable-consent-policy.png)
+
+#### Verificar aplicación de directiva
+
+Después de crear y habilitar una directiva de consentimiento, puede obtener una vista previa de cómo afecta a las audiencias consentidas al activar segmentos en destinos. Consulte la sección sobre [evaluación de la política de consentimiento](../enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
 
 ## Habilitar o deshabilitar una directiva {#enable}
 

@@ -5,9 +5,9 @@ title: Aplicación automática de directivas
 topic-legacy: guide
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar segmentos en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ca35b1780db00ad98c2a364d45f28772c27a4bc3
+source-git-commit: 679b9eb621baff99342fb55c0a13a60f5ef256bd
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Cuando se activa por primera vez un segmento, [!DNL Policy Service] comprobacion
 
 * Las etiquetas de uso de datos aplicadas a campos y conjuntos de datos dentro del segmento que se va a activar.
 * El propósito de marketing del destino.
-<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
+* (Beta) Los perfiles que han aceptado ser incluidos en la activación de segmentos, según las políticas de consentimiento configuradas.
 
 >[!NOTE]
 >
@@ -58,16 +58,14 @@ En Experience Platform, a la aplicación de políticas le preocupa el siguiente 
 1. Los grupos de perfiles se dividen en **segmentos** en función de atributos comunes.
 1. Los segmentos se activan para el flujo descendente **destinos**.
 
-Cada etapa del cronograma anterior representa una entidad que puede contribuir a que se infrinja una política, como se indica en el cuadro siguiente:
+Cada etapa del calendario anterior representa una entidad que puede contribuir a la aplicación de las políticas, como se indica en el cuadro siguiente:
 
 | Etapa del linaje de datos | Función en la aplicación de políticas |
 | --- | --- |
-| Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de conjunto de datos o campo) que definen los casos de uso para los que se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directiva si se utiliza un conjunto de datos o campo que contenga determinadas etiquetas con un fin restringido por una directiva. |
+| Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de conjunto de datos o campo) que definen los casos de uso para los que se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directiva si se utiliza un conjunto de datos o campo que contenga determinadas etiquetas con un fin restringido por una directiva.<br><br>Los atributos de consentimiento recopilados de sus clientes también se almacenan en conjuntos de datos. Si tiene acceso a directivas de consentimiento (actualmente en versión beta), cualquier perfil que no cumpla los requisitos de atributos de consentimiento de sus políticas se excluirá de los segmentos activados en un destino. |
 | Combinar directiva | Las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directiva si las políticas de combinación están configuradas de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Consulte la [información general sobre políticas de combinación](../../profile/merge-policies/overview.md) para obtener más información. |
 | Segmento | Las reglas de segmentos definen qué atributos deben incluirse en los perfiles de cliente. Dependiendo de los campos que incluya una definición de segmento, el segmento heredará cualquier etiqueta de uso aplicada para esos campos. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas heredadas están restringidas por las políticas aplicables del destino de destino según su caso de uso de marketing. |
-| Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una política. En otras palabras, el caso de uso de marketing que defina para un destino determina qué políticas de uso de datos y políticas de consentimiento son aplicables a ese destino. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas de uso están restringidas por las políticas aplicables del destino de destino. |
-<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
-<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una política. En otras palabras, la acción de marketing que defina para un destino determina qué políticas de uso de datos y políticas de consentimiento son aplicables a ese destino.<br><br>Las infracciones de la política de uso de datos se producen si activa un segmento cuyas etiquetas de uso están restringidas para la acción de marketing del destino objetivo.<br><br>(Beta) Cuando se activa un segmento, cualquier perfil que no contenga los atributos de consentimiento necesarios para la acción de marketing (según se definen en las políticas de consentimiento) se excluye de la audiencia activada. |
 
 >[!IMPORTANT]
 >
@@ -77,15 +75,14 @@ Cada etapa del cronograma anterior representa una entidad que puede contribuir a
 
 Cuando se producen infracciones de directiva, los mensajes resultantes que aparecen en la interfaz de usuario proporcionan herramientas útiles para explorar el linaje de datos de contribución de la infracción para ayudar a resolver el problema. Más información en la siguiente sección.
 
-## Mensajes de infracción de directiva {#enforcement}
+## Mensajes de aplicación de políticas {#enforcement}
 
-<!-- (TO INCLUDE FOR PHASE 2)
-The sections below outline the different policy enforcement messages that appear in the Platform UI:
+Las secciones siguientes describen los diferentes mensajes de aplicación de políticas que aparecen en la interfaz de usuario de Platform:
 
-* [Data usage policy violation](#data-usage-violation)
-* [Consent policy evaluation](#consent-policy-evaluation)
+* [Infracción de la directiva de uso de datos](#data-usage-violation)
+* [Evaluación de la directiva de consentimiento](#consent-policy-evaluation)
 
-### Data usage policy violation {#data-usage-violation} -->
+### Infracción de la directiva de uso de datos {#data-usage-violation}
 
 Si se produce una infracción de política al intentar activar un segmento (o [realizar modificaciones en un segmento ya activado](#policy-enforcement-for-activated-segments)) la acción se impide y aparece una ventana emergente que indica que se han violado una o más políticas. Una vez que se ha activado una infracción, la variable **[!UICONTROL Guardar]** se desactiva para la entidad que modifique hasta que se actualicen los componentes adecuados para cumplir las políticas de uso de datos.
 
@@ -109,19 +106,55 @@ Select **[!UICONTROL Vista de lista]** para mostrar el linaje de datos como una 
 
 ![](../images/enforcement/list-view.png)
 
-<!-- (TO INCLUDE FOR PHASE 2)
-### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+### Evaluación de la directiva de consentimiento (Beta) {#consent-policy-evaluation}
 
 >[!IMPORTANT]
 >
->Consent policies are currently in beta and your organization may not have access to them yet.
+>Las políticas de consentimiento están actualmente en fase beta y es posible que su organización no tenga acceso a ellas todavía.
 
-If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+Si tiene [crear políticas de consentimiento](../policies/user-guide.md#consent-policy) y están activando un segmento en un destino, puede ver cómo las políticas de consentimiento afectan al porcentaje de perfiles que se incluyen en la activación.
 
-Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+#### Evaluación previa a la activación
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
- -->
+Una vez que llegue al **[!UICONTROL Consulte]** step when [activación de un destino](../../destinations/ui/activation-overview.md), seleccione **[!UICONTROL Ver políticas aplicadas]**.
+
+![Botón Ver políticas aplicadas en el flujo de trabajo de activación de destino](../images/enforcement/view-applied-policies.png)
+
+Aparece un cuadro de diálogo de comprobación de políticas que muestra una vista previa de cómo las políticas de consentimiento afectan a la audiencia consentida de los segmentos activados.
+
+![Cuadro de diálogo de comprobación de la política de consentimiento en la interfaz de usuario de Platform](../images/enforcement/consent-policy-check.png)
+
+El cuadro de diálogo muestra la audiencia consentida para un segmento a la vez. Para ver la evaluación de directivas de un segmento diferente, utilice el menú desplegable situado encima del diagrama para seleccionar uno de la lista.
+
+![Conmutador de segmentos en el cuadro de diálogo de comprobación de políticas](../images/enforcement/segment-switcher.png)
+
+Utilice el carril izquierdo para cambiar entre las políticas de consentimiento aplicables para el segmento seleccionado. Las políticas que no están seleccionadas se representan en la sección &quot;[!UICONTROL Otras políticas]&quot; del diagrama.
+
+![Conmutador de directivas en el cuadro de diálogo de comprobación de directivas](../images/enforcement/policy-switcher.png)
+
+El diagrama muestra la superposición entre tres grupos de perfiles:
+
+1. Perfiles que cumplen los requisitos para el segmento seleccionado
+1. Perfiles que cumplen los requisitos para la directiva de consentimiento seleccionada
+1. Perfiles que cumplen los requisitos para las otras políticas de consentimiento aplicables para el segmento (denominados &quot;[!UICONTROL Otras políticas]&quot; en el diagrama)
+
+Los perfiles que cumplen los tres grupos anteriores representan la audiencia consentida para el segmento seleccionado, resumida en el carril derecho.
+
+![Sección Resumen del cuadro de diálogo de comprobación de políticas](../images/enforcement/summary.png)
+
+Pase el ratón sobre una de las audiencias del diagrama para mostrar el número de perfiles que contiene.
+
+![Resaltado de una sección de diagrama en el cuadro de diálogo de comprobación de políticas](../images/enforcement/highlight-segment.png)
+
+La audiencia consentida se representa mediante la superposición central del diagrama y se puede resaltar como las demás secciones.
+
+![Resaltado de la audiencia consentida en el diagrama](../images/enforcement/consented-audience.png)
+
+#### Aplicación de ejecución de flujo
+
+Cuando se activan los datos en un destino, los detalles de ejecución del flujo muestran el número de identidades que se excluyeron debido a políticas de consentimiento activas.
+
+![Métricas de identidades excluidas para una ejecución de flujo de datos](../images/enforcement/dataflow-run-enforcement.png)
 
 ## Aplicación de políticas para segmentos activados {#policy-enforcement-for-activated-segments}
 
