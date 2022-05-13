@@ -6,9 +6,9 @@ title: Monitorizar flujos de datos para orígenes en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: ed88ebe7822f60ace2babd7d5a04d2d92d83cf49
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -130,102 +130,9 @@ Puede utilizar el sistema de rutas de exploración del encabezado superior para 
 
 ![rutas de exploración](../assets/ui/monitor-sources/breadcrumbs.png)
 
-## Supervisión entre servicios {#cross-service-monitoring}
-
-La parte superior del panel contiene una representación del flujo de ingesta desde el nivel de origen hasta [!DNL Identity Service]y [!DNL Profile]. Cada celda incluye un marcador de punto que indica la presencia de errores que se produjeron en esa fase de ingesta. Un punto verde significa una ingesta sin errores, mientras que un punto rojo significa que se ha producido un error en esa etapa concreta de ingesta.
-
-![monitorización entre servicios](../assets/ui/monitor-sources/cross-service-monitoring.png)
-
-En la página flujos de datos, busque un flujo de datos correcto y seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) junto a él, para ver su información de ejecución del flujo de datos.
-
-![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
-
-La variable [!UICONTROL Ingesta de origen] contiene información que confirma la ingesta correcta de su flujo de datos. Desde aquí, puede empezar a monitorizar el recorrido del flujo de datos desde el nivel de origen hasta [!DNL Identity Service]y luego [!DNL Profile].
-
-Select **[!UICONTROL Identidades]** para ver la ingesta en el [!UICONTROL Identidades] etapa.
-
-![sources](../assets/ui/monitor-sources/sources.png)
-
-### [!DNL Identity] métricas {#identity-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_identity_processing"
->title="Procesamiento de identidad"
->abstract="La vista de procesamiento de identidad contiene información sobre los registros ingestados al servicio de identidad, incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_identity"
->title="Detalles de ejecución de flujo de datos"
->abstract="La página de detalles de ejecución del flujo de datos muestra más información sobre la ejecución del flujo de datos de identidad, incluido su ID de organización de IMS y el ID de ejecución del flujo de datos."
-
-La variable [!UICONTROL Procesamiento de identidad] La página contiene información sobre los registros ingestados en [!DNL Identity Service], incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados.
-
-Seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) al lado del tiempo de inicio de ejecución del flujo de datos para ver más información sobre su [!DNL Identity] ejecute dataflow.
-
-![identidades](../assets/ui/monitor-sources/identities.png)
-
-| Métricas de identidad | Descripción |
-| ---------------- | ----------- |
-| [!UICONTROL Registros recibidos] | Número de registros recibidos de [!DNL Data Lake]. |
-| [!UICONTROL Error de registros] | Número de registros que no se incorporaron en Platform debido a errores en los datos. |
-| [!UICONTROL Registros omitidos] | El número de registros introducidos, pero no en [!DNL Identity Service] porque solo había un identificador en la fila de registros. |
-| [!UICONTROL Registros ingestados] | El número de registros ingestados en [!DNL Identity Service]. |
-| [!UICONTROL Registros totales] | El recuento total de todos los registros, incluidos los registros con errores, los registros omitidos, [!DNL Identities] se han añadido registros duplicados. |
-| [!UICONTROL Identidades agregadas] | El número de identificadores nuevos netos agregados a [!DNL Identity Service]. |
-| [!UICONTROL Gráficos creados] | El número de nuevos gráficos de identidad netos creados en [!DNL Identity Service]. |
-| [!UICONTROL Gráficos actualizados] | Número de gráficos de identidad existentes actualizados con bordes nuevos. |
-| [!UICONTROL Se ejecutaron errores en el flujo de datos] | Número de ejecuciones de flujo de datos que han fallado. |
-| [!UICONTROL Tiempo de procesamiento] | Marca de tiempo desde el inicio de la ingesta hasta la finalización. |
-| [!UICONTROL Estado] | Define el estado general de un flujo de datos. Los valores de estado posibles son: <ul><li>`Success`: Indica que un flujo de datos está activo y que está incorporando datos según la programación proporcionada.</li><li>`Failed`: Indica que el proceso de activación de un flujo de datos se ha interrumpido debido a errores. </li><li>`Processing`: Indica que el flujo de datos aún no está activo. Este estado se encuentra a menudo inmediatamente después de crear un nuevo flujo de datos.</li></ul> |
-
-La variable [!UICONTROL Detalles de ejecución de flujo de datos] la página muestra más información sobre [!DNL Identity] ejecución del flujo de datos, incluido su ID de organización de IMS y su ID de ejecución del flujo de datos. Esta página también muestra el código de error y el mensaje de error correspondientes proporcionados por [!DNL Identity Service], si se produce algún error en el proceso de ingesta.
-
-Select **[!UICONTROL Ejecutar inicio: 14/2/2021, 9:47 PM]** para volver a la página anterior.
-
-![identities-dataflow run](../assets/ui/monitor-sources/identities-dataflow-run.png)
-
-En el [!UICONTROL Procesamiento de identidad] página, seleccione **[!UICONTROL Perfiles]** para ver el estado de la ingesta de registros en la variable [!UICONTROL Perfiles] etapa.
-
-![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
-
-### [!DNL Profile] métricas {#profile-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profile_processing"
->title="Procesamiento de perfiles"
->abstract="La vista de procesamiento de perfil contiene información sobre los registros ingestados al servicio de perfil, incluido el número de fragmentos de perfil creados, los fragmentos de perfil actualizados y el número total de fragmentos de perfil."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_profile"
->title="Detalles de ejecución de flujo de datos"
->abstract="La página de detalles de ejecución de flujo de datos muestra más información sobre la ejecución de flujo de datos de perfil, incluido su ID de organización de IMS y el ID de ejecución de flujo de datos."
-
-La variable [!UICONTROL Procesamiento de perfiles] La página contiene información sobre los registros ingestados en [!DNL Profile], incluido el número de fragmentos de perfil creados, los fragmentos de perfil actualizados y el número total de fragmentos de perfil.
-
-Seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) al lado del tiempo de inicio de ejecución del flujo de datos para ver más información sobre su [!DNL Profile] ejecute dataflow.
-
-![perfiles](../assets/ui/monitor-sources/profiles.png)
-
-| Métricas de perfil | Descripción |
-| --------------- | ----------- |
-| [!UICONTROL Registros recibidos] | Número de registros recibidos de [!DNL Data Lake]. |
-| [!UICONTROL Error de registros ] | El número de registros introducidos, pero no en [!DNL Profile] debido a errores. |
-| [!UICONTROL Se han añadido fragmentos de perfil] | El número de nuevas cifras netas [!DNL Profile] fragmentos añadidos. |
-| [!UICONTROL Fragmentos de perfil actualizados] | El número de [!DNL Profile] fragmentos actualizados |
-| [!UICONTROL Fragmentos totales de perfil] | El número total de registros escritos en [!DNL Profile], incluyendo todos los [!DNL Profile] fragmentos actualizados y nuevos [!DNL Profile] fragmentos creados. |
-| [!UICONTROL Se ejecutaron errores en el flujo de datos] | Número de ejecuciones de flujo de datos que han fallado. |
-| [!UICONTROL Tiempo de procesamiento] | Marca de tiempo desde el inicio de la ingesta hasta la finalización. |
-| [!UICONTROL Estado] | Define el estado general de un flujo de datos. Los valores de estado posibles son: <ul><li>`Success`: Indica que un flujo de datos está activo y que está incorporando datos según la programación proporcionada.</li><li>`Failed`: Indica que el proceso de activación de un flujo de datos se ha interrumpido debido a errores. </li><li>`Processing`: Indica que el flujo de datos aún no está activo. Este estado se encuentra a menudo inmediatamente después de crear un nuevo flujo de datos.</li></ul> |
-
-La variable [!UICONTROL Detalles de ejecución de flujo de datos] la página muestra más información sobre [!DNL Profile] ejecución del flujo de datos, incluido su ID de organización de IMS y su ID de ejecución del flujo de datos. Esta página también muestra el código de error y el mensaje de error correspondientes proporcionados por [!DNL Profile], si se produce algún error en el proceso de ingesta.
-
-![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
-
 ## Pasos siguientes {#next-steps}
 
-Siguiendo este tutorial, ha monitorizado correctamente el flujo de datos de ingesta desde el nivel de origen hasta [!DNL Identity Service]y [!DNL Profile], usando la variable **[!UICONTROL Monitorización]** tablero. También ha identificado correctamente los errores que han contribuido al error de los flujos de datos durante el proceso de ingesta. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha monitorizado correctamente el flujo de datos de ingesta desde el nivel de origen utilizando la variable **[!UICONTROL Monitorización]** tablero. También ha identificado correctamente los errores que han contribuido al error de los flujos de datos durante el proceso de ingesta. Consulte los siguientes documentos para obtener más información:
 
-* [Resumen del perfil del cliente en tiempo real](../../profile/home.md)
-* [Información general de Data Science Workspace](../../data-science-workspace/home.md)
+* [Supervisión de identidades en flujos de datos](./monitor-identities.md)
+* [Supervisión de perfiles en flujos de datos](./monitor-profiles.md)

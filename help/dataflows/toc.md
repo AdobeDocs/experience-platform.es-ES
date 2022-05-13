@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guía de flujos de datos
 user-guide-description: Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform.
 feature: Dataflows
-source-git-commit: 054ef0833f83a737df5ee05a3af68bc78c16f4eb
+source-git-commit: 2e5d5a574f4c8bec99ef05ea751908c81c358050
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 27%
+source-wordcount: '63'
+ht-degree: 23%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 27%
    - [Ordenar y filtrar respuestas de API](./api/sort-and-filter.md)
 - Guías de la interfaz de usuario {#ui}
    - [Monitorización de flujos de datos en orígenes](./ui/monitor-sources.md)
+   - [Monitorizar flujos de datos en identidades](./ui/monitor-identities.md)
+   - [Monitorización de flujos de datos en perfiles](./ui/monitor-profiles.md)
    - [Monitorización de flujos de datos en segmentos](./ui/monitor-segments.md)
    - [Monitorización de flujos de datos en destinos](./ui/monitor-destinations.md)
    - Supervisión B2B {#b2b}
