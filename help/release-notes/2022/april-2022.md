@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform, abril de 2022
 description: Notas de la versión de abril de 2022 para Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 1f5c21e09e471ac0d6f1d98e219e06e571ede89f
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2805'
 ht-degree: 3%
 
 ---
@@ -49,11 +49,13 @@ Las siguientes utilidades están disponibles a través de la biblioteca Widget e
 | [!UICONTROL Tendencia del cambio de tamaño de la audiencia] | Segmentos | Esta utilidad proporciona un gráfico de líneas con la diferencia en la cantidad total de perfiles que cumplen los requisitos para un segmento determinado entre las instantáneas diarias más recientes. El período de análisis de tendencias se puede visualizar a lo largo de 30 días, 90 días y 12 meses. |
 | [!UICONTROL Tendencia del tamaño de la audiencia por identidad] | Segmentos | Esta utilidad ilustra la tendencia del tamaño de la audiencia de un segmento concreto en función de un tipo de identidad seleccionado. El período de análisis de tendencias se puede visualizar a lo largo de 30 días, 90 días y 12 meses. |
 
-**Nuevas funciones**
+**Nuevas funciones** {#new-features}
 
 | Función | Panel | Descripción |
 | ------- | --------- | ----------- |
 | Limpieza de pertenencia a segmentos de perfil huérfano | Perfiles y uso de licencias | El servicio de perfil ahora elimina a los miembros del segmento que quedan diariamente para proporcionar una representación más precisa de sus perfiles en su sistema. Esta limpieza se produce después de que se eliminan todos los fragmentos de perfil de un perfil determinado. Esto puede mostrar una caída en la métrica &quot;Audiencia direccionable&quot; en el panel de uso de licencias y puede mostrar una caída en la métrica &quot;Recuento de perfiles&quot; en el panel de perfiles, ya que estas métricas incluían fragmentos de segmento sobrantes de esta versión. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte la documentación para obtener más información sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)y [[!DNL Segments]](../../dashboards/guides/segments.md) tableros.
 
