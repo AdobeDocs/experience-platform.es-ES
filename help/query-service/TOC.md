@@ -4,10 +4,10 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar datos en el lago de datos de Platform.
 feature: Queries
-source-git-commit: 796460be52b465216cdc69d45aa38ac80aa3516d
+source-git-commit: 942181ae4c454e1148b1f05022d2c1975e881f05
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 22%
+source-wordcount: '165'
+ht-degree: 23%
 
 ---
 
@@ -43,6 +43,8 @@ ht-degree: 22%
    - [Ejemplos de consultas de eventos de experiencia](sample-queries/experience-event.md)
    - [Ejemplos de consultas de Adobe Analytics](sample-queries/adobe-analytics.md)
    - [Ejemplos de consultas de Adobe Target](sample-queries/adobe-target.md)
+- Gobierno de datos {#data-governance}
+   - [Guía de registro de auditoría](data-governance/audit-log-guide.md)
 - Referencia SQL {#sql}
    - [Información general de SQL](sql/overview.md)
    - [Sintaxis SQL](sql/syntax.md)
@@ -61,7 +63,6 @@ ht-degree: 22%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
-- [Guía de registro de auditoría](audit-log-guide.md)
 - [Guía de resolución de problemas](troubleshooting-guide.md)
 - [Referencia de API](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
