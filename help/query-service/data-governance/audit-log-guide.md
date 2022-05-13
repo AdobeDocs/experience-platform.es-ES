@@ -2,9 +2,9 @@
 title: Integración del registro de auditoría del servicio de consultas
 description: Los registros de auditoría del servicio de consulta mantienen registros de diversas acciones del usuario para formar una pista de auditoría para solucionar problemas o cumplir con las políticas y los requisitos regulatorios de administración de datos corporativos. Este tutorial proporciona información general sobre las funciones del registro de auditoría específicas del servicio de consulta.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 861283cb8ea99b91480bf776ff0c53de52f464ad
+source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Las categorías del registro de auditoría proporcionadas por [!DNL Query Servic
 |---|---|
 | [!UICONTROL Consulta programada] | Esta categoría le permite auditar las programaciones que se han creado, actualizado o eliminado en [!DNL Query Service]. |
 | [!UICONTROL Plantilla de consulta] | Esta categoría permite auditar las distintas acciones (crear, actualizar y eliminar) realizadas en una plantilla de consulta. |
-| [!UICONTROL Consulta] | Esta categoría permite auditar las ejecuciones de consultas. |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## Realizar una [!DNL Query Service] registro de auditoría {#perform-an-audit-log}
 

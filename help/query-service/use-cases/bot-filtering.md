@@ -1,9 +1,10 @@
 ---
 title: Filtrado de bots en Query Service con aprendizaje automático
 description: Este documento proporciona información general sobre cómo utilizar Query Service y el aprendizaje automático para determinar la actividad de bots y filtrar sus acciones a partir del tráfico de visitantes de sitios web en línea.
-source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
+exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
+source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 5%
 
 ---
@@ -164,6 +165,6 @@ El modelo de ejemplo determinó con un alto grado de precisión que cualquier vi
 
 ## Pasos siguientes
 
-Al leer este documento, tiene una mejor comprensión de cómo utilizar Query Service y el aprendizaje automático para determinar y filtrar la actividad de bots.
+Al leer este documento, tiene una mejor comprensión de cómo usar [!DNL Query Service] y aprendizaje automático para determinar y filtrar la actividad de bots.
 
-Otros documentos que demuestren los beneficios de [!DNL Query Service] a las perspectivas empresariales estratégicas de su organización, se encuentran el ejemplo de uso de Examinar abandonado.
+Otros documentos que demuestren los beneficios de [!DNL Query Service] a la información estratégica comercial de su organización, se incluye la variable [caso de uso de exploración abandonado](./abandoned-browse.md) ejemplo.
