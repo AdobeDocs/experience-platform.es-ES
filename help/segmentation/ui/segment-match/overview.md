@@ -5,9 +5,9 @@ title: Información general sobre la coincidencia de segmentos
 topic-legacy: overview
 description: Coincidencia de segmentos es un servicio para compartir segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, regulada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1994'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,13 @@ Para conectar un socio con su [!UICONTROL id de conexión], introduzca su valor 
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Crear fuente
+### Crear fuente {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="Casos de uso de marketing restringidos"
+>abstract="Los casos de uso de marketing restringidos ayudan a proporcionar orientación a sus socios para garantizar que los segmentos compartidos se utilizan correctamente según las restricciones de control de datos."
+>text="Learn more in documentation"
 
 A **fuente** es una agrupación de datos (segmentos), las reglas para exponer o utilizar esos datos y las configuraciones que determinan cómo se comparan los datos con los datos de sus socios. Una fuente se puede administrar de forma independiente e intercambiar con otros usuarios de Platform a través de [!DNL Segment Match].
 
