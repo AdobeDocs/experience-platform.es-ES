@@ -1,10 +1,11 @@
 ---
-title: Notas de la versión de Adobe Experience Platform
-description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 7cd4a776ab07fcd123e798497b23edd41266f409
+title: Notas de la versión de Adobe Experience Platform, noviembre de 2021
+description: Notas de la versión de noviembre de 2021 para Adobe Experience Platform.
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 13%
+source-wordcount: '799'
+ht-degree: 12%
 
 ---
 
@@ -90,4 +91,3 @@ La AI del cliente disponible en Real-time Customer Data Platform se utiliza para
 | Atributos de perfil personalizados | La AI del cliente ahora admite la definición de campos de conjuntos de datos de perfil personalizados (con marcas de hora) en los datos, además de los campos de evento estándar. El uso de esta opción le permite agregar atributos de perfil adicionales que considere influyentes, lo que puede mejorar la calidad del modelo y proporcionar resultados más precisos. |
 
 Para obtener más información sobre Customer AI, consulte la [Documentación de Customer AI](../../intelligent-services/customer-ai/overview.md).
-

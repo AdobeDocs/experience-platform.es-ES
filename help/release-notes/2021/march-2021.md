@@ -1,17 +1,16 @@
 ---
-title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión del Experience Platform para el 31 de marzo de 2021.
+title: Notas de la versión de Adobe Experience Platform, marzo de 2021
+description: Notas de la versión de marzo de 2021 para Adobe Experience Platform.
 doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
-translation-type: tm+mt
-source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
+exl-id: 027cd7b1-1651-4939-bc97-968a41824117
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 7%
+source-wordcount: '425'
+ht-degree: 6%
 
 ---
-
 
 # Notas de la versión de Adobe Experience Platform
 
@@ -32,11 +31,11 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 | Función  de `add_to_array` | Se ha actualizado la funcionalidad para admitir matrices como parámetro. |
 | Función  de `to_array` | Se ha actualizado la funcionalidad para admitir objetos como parámetro. |
 
-Para obtener más información, consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
+Para obtener más información, consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
-El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permiten crear segmentos y generar audiencias a partir de sus datos [!DNL Real-time Customer Profile]. Estos segmentos están configurados y mantenidos de forma centralizada en [!DNL Platform], lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
+El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permiten crear segmentos y generar audiencias a partir de su [!DNL Real-time Customer Profile] datos. Estos segmentos están configurados de forma centralizada y se mantienen en [!DNL Platform], lo que permite que cualquier aplicación de Adobe pueda acceder a ellas fácilmente.
 
 [!DNL Segmentation Service] define un subconjunto de perfiles determinado describiendo los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
 
@@ -44,10 +43,10 @@ El servicio de segmentación de Adobe Experience Platform proporciona una interf
 
 | Función | Descripción |
 | ------- | ----------- |
-| (Beta) Segmentación de Edge | La segmentación de Edge evalúa los segmentos en tiempo real, lo que permite casos de uso de personalización de la misma página y de la siguiente página. Puede encontrar más información sobre la segmentación de Edge en la [Descripción general de la interfaz de segmentación](../../segmentation/ui/overview.md). |
+| (Beta) Segmentación de Edge | La segmentación de Edge evalúa los segmentos en tiempo real, lo que permite casos de uso de personalización de la misma página y de la siguiente página. Puede encontrar más información sobre la segmentación de aristas en la sección [Información general sobre la interfaz de usuario de segmentación](../../segmentation/ui/overview.md). |
 | (Beta) Segmentación incremental | Aumenta la frescura de las definiciones de segmentos existentes evaluadas en la segmentación por lotes hasta una hora. |
 
-Para obtener más información sobre [!DNL Segmentation Service], consulte la [información general de segmentación](../../segmentation/home.md).
+Para obtener más información, consulte [!DNL Segmentation Service], consulte la [Información general sobre la segmentación](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -61,4 +60,4 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 | Compatibilidad de API para la ingesta de archivos comprimidos | Ahora puede obtener una vista previa e introducir archivos JSON comprimidos o delimitados mediante fuentes de almacenamiento en la nube. Para obtener más información, consulte el tutorial sobre [recopilación de datos de almacenamiento en la nube mediante API](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Compatibilidad de la interfaz de usuario con la carga de archivos recursivos | Ahora puede ingerir carpetas enteras recursivamente al usar un origen de almacenamiento en la nube. Al ingerir una carpeta completa, debe asegurarse de que su contenido comparte el mismo esquema. Para obtener más información, consulte el tutorial sobre [configuración de un flujo de datos para conectores de almacenamiento en la nube en la interfaz de usuario](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
-Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
+Para obtener más información sobre las fuentes, consulte la [información general sobre fuentes](../../sources/home.md).

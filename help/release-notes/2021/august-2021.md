@@ -1,14 +1,14 @@
 ---
-title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión del Experience Platform para el 25 de agosto de 2021.
+title: Notas de la versión de Adobe Experience Platform, agosto de 2021
+description: Notas de la versión de agosto de 2021 para Adobe Experience Platform.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 7%
+source-wordcount: '712'
+ht-degree: 8%
 
 ---
 
@@ -42,10 +42,10 @@ Los destinos son integraciones prediseñadas con plataformas de destino que perm
 
 | Función | Descripción |
 | --- | --- |
-| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | El SDK de destino de Adobe Experience Platform es un conjunto de API de configuración que le permiten configurar patrones de integración de destino para que el Experience Platform entregue datos de audiencia y perfil a su extremo, en función de los formatos de autenticación y datos que elija. Las configuraciones se almacenan en Experience Platform y se pueden recuperar mediante API para obtener actualizaciones adicionales. |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform Destination SDK es un conjunto de API de configuración que le permiten configurar patrones de integración de destino para que el Experience Platform entregue datos de audiencia y perfil a su extremo, en función de los formatos de autenticación y datos que elija. Las configuraciones se almacenan en Experience Platform y se pueden recuperar mediante API para obtener actualizaciones adicionales. |
 | [Mejoras en el uso de los destinos](../../destinations/ui/activation-overview.md) | Las mejoras en el uso de los destinos permiten a los especialistas en marketing activar segmentos sin problemas en destinos existentes. |
 
-Para obtener información más general sobre los destinos, consulte [información general sobre destinos](../../destinations/home.md).
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Perspectivas de la capacidad de observación {#observability}
 
@@ -55,9 +55,9 @@ Observability Insights permite supervisar las actividades de Platform mediante e
 
 | Función | Descripción |
 | --- | --- |
-| Alertas | Ahora puede suscribirse a alertas importantes relacionadas con flujos de trabajo que se ejecutan en Platform. Después de suscribirse a reglas de alerta específicas, recibirá notificaciones en la interfaz de usuario y correos electrónicos cuando se produzca un evento de ciclo de vida importante (como la incorporación de datos correcta) o si hay problemas que requieran su atención (como un error en el flujo de ingesta o un trabajo de segmento que tarde más de lo esperado). Para obtener más información, consulte la [descripción general de las alertas](../../observability/alerts/overview.md). |
+| Alertas | ahora puede suscribirse a alertas importantes relacionadas con los flujos de trabajo que se ejecutan en Platform. Después de suscribirse a reglas de alerta específicas, recibirá notificaciones en la interfaz de usuario y correos electrónicos cuando se produzca un evento de ciclo de vida importante (como la incorporación de datos correcta) o si hay problemas que requieran su atención (como un error en el flujo de ingesta o un trabajo de segmento que tarde más de lo esperado). Para obtener más información, consulte la [información general sobre alertas](../../observability/alerts/overview.md). |
 
-Consulte [Observability Insights overview](../../observability/home.md) para obtener más información sobre el servicio.
+Consulte la [Información general sobre Observability Insights](../../observability/home.md) para obtener más información sobre el servicio.
 
 ## Perfil del cliente en tiempo real {#profile}
 
@@ -67,7 +67,7 @@ Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherente
 | ------- | ----------- |
 | Examinar perfiles por política de combinación o identidad | Al examinar perfiles en Experience Platform, ahora puede examinar por política de combinación para obtener una vista previa de 20 perfiles de muestra basados en la política de combinación seleccionada. También puede examinar por identidad para buscar un perfil específico mediante un área de nombres de identidad y un valor de identidad relacionado. Para obtener más información, consulte la [Guía de la interfaz de usuario del perfil del cliente en tiempo real](../../profile/ui/user-guide.md). |
 
-Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de perfil, lea en primer lugar la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
+Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de perfil, lea la [Resumen del perfil del cliente en tiempo real](../../profile/home.md).
 
 ## Fuentes {#sources}
 
@@ -77,6 +77,6 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 
 | Función | Descripción |
 | ------- | ----------- |
-| Conector de origen de carga de archivos locales | Se ha cambiado el nombre de la categoría de ingesta de archivos a sistema local, lo que permite llevar los archivos locales directamente a Platform mediante el conector de carga de archivos local. Los datos introducidos a través de este conector se pueden supervisar mediante el panel de control. Consulte la [descripción general del origen de carga de archivos locales](../../sources/connectors/local-system/local-file-upload.md) para obtener más información. |
+| Conector de origen de carga de archivos locales | Se ha cambiado el nombre de la categoría de ingesta de archivos a sistema local, lo que permite llevar los archivos locales directamente a Platform mediante el conector de carga de archivos local. Los datos introducidos a través de este conector se pueden supervisar mediante el panel de control. Consulte la [información general del origen de carga de archivos locales](../../sources/connectors/local-system/local-file-upload.md) para obtener más información. |
 
-Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
+Para obtener más información sobre las fuentes, consulte la [información general sobre fuentes](../../sources/home.md).

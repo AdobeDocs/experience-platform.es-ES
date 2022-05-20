@@ -1,11 +1,11 @@
 ---
-title: Notas de la versión de Adobe Experience Platform
-description: Las notas de la versión más recientes de Adobe Experience Platform.
+title: Notas de la versión de Adobe Experience Platform, septiembre de 2021
+description: Notas de la versión de septiembre de 2021 para Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 11%
+source-wordcount: '377'
+ht-degree: 8%
 
 ---
 
@@ -27,9 +27,9 @@ La ingesta de datos de Adobe Experience Platform representa los múltiples méto
 
 | Función | Descripción |
 |------- | -----------|
-| Actualizar o aplicar parches registros de perfil utilizando la ingesta por lotes | El perfil del cliente en tiempo real ahora permite actualizar los atributos de perfil en datos de registro de perfil individuales mediante la ingesta por lotes. Para obtener más información, consulte la [guía para desarrolladores de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md). |
+| Actualizar o aplicar parches registros de perfil utilizando la ingesta por lotes | El perfil del cliente en tiempo real ahora permite actualizar los atributos de perfil en datos de registro de perfil individuales mediante la ingesta por lotes. Para obtener más información, consulte [guía para desarrolladores sobre ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md). |
 
-Para obtener más información sobre la ingesta de datos en Platform, visite la [Documentación sobre la ingesta de datos](../../ingestion/home.md).
+Para obtener más información sobre la ingesta de datos en Platform, visite [Documentación de ingesta de datos](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -39,9 +39,9 @@ Para obtener más información sobre la ingesta de datos en Platform, visite la 
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con flujos de datos de flujo continuo | Ahora puede utilizar funciones de preparación de datos al crear un flujo de datos de flujo continuo para [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] y [!DNL Google PubSub]. Consulte el tutorial sobre [creación de un flujo de datos de flujo continuo para fuentes de almacenamiento en la nube](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md) para obtener más información. |
+| Compatibilidad con flujos de datos de flujo continuo | Ahora puede utilizar funciones de preparación de datos al crear un flujo de datos de flujo continuo para [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]y [!DNL Google PubSub]. Consulte el tutorial en [creación de un flujo de datos de flujo continuo para las fuentes de almacenamiento en la nube](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md) para obtener más información. |
 
-Para obtener más información sobre [!DNL Data Prep], consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
+Para obtener más información sobre [!DNL Data Prep] consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
 
 ## Fuentes {#sources}
 
@@ -51,8 +51,8 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 
 | Función | Descripción |
 | --- | --- |
-| [!DNL Data Landing Zone] | Ahora puede crear una conexión de origen [!DNL Data Landing Zone] utilizando la [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] es una interfaz de  [!DNL Azure Blob] almacenamiento de información aprovisionada por Platform, que le permite acceder a un servicio de almacenamiento de archivos seguro y basado en la nube para introducir archivos en Platform. Consulte [[!DNL Data Landing Zone] overview](../../sources/connectors/cloud-storage/data-landing-zone.md) para obtener más información. |
-| [!DNL Snowflake] | Ahora puede crear una conexión de origen [!DNL Snowflake] utilizando la [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/databases/snowflake.md) para llevar los datos de la base de datos [!DNL Snowflake] a Platform. Consulte [[!DNL Snowflake] overview](../../sources/connectors/databases/snowflake.md) para obtener más información. |
-| [!DNL SFTP] mejoras de la fuente | Puede establecer manualmente un número de puerto personalizado al crear una conexión de origen [!DNL SFTP]. Consulte [[!DNL SFTP] overview](../../sources/connectors/cloud-storage/sftp.md) para obtener más información. |
+| [!DNL Data Landing Zone] | Ahora puede crear un [!DNL Data Landing Zone] conexión de origen utilizando la variable [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) o [interfaz de usuario](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] es un [!DNL Azure Blob] interfaz de almacenamiento de información aprovisionada por Platform, lo que le permite acceder a un servicio de almacenamiento de archivos seguro y basado en la nube para introducir archivos en Platform. Consulte la [[!DNL Data Landing Zone] información general](../../sources/connectors/cloud-storage/data-landing-zone.md) para obtener más información. |
+| [!DNL Snowflake] | Ahora puede crear un [!DNL Snowflake] conexión de origen utilizando la variable [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) o [interfaz de usuario](../../sources/tutorials/ui/create/databases/snowflake.md) para obtener datos de su [!DNL Snowflake] a Platform. Consulte la [[!DNL Snowflake] información general](../../sources/connectors/databases/snowflake.md) para obtener más información. |
+| [!DNL SFTP] mejoras de la fuente | Puede definir manualmente un número de puerto personalizado al crear un [!DNL SFTP] conexión de origen. Consulte la [[!DNL SFTP] información general](../../sources/connectors/cloud-storage/sftp.md) para obtener más información. |
 
-Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
+Para obtener más información sobre las fuentes, consulte la [información general sobre fuentes](../../sources/home.md).

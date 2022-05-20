@@ -1,11 +1,11 @@
 ---
-title: Notas de la versión de Adobe Experience Platform
-description: Las notas de la versión más recientes de Adobe Experience Platform.
+title: Notas de la versión de Adobe Experience Platform, marzo de 2022
+description: Notas de la versión de marzo de 2022 para Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
+source-git-commit: 9a506fcecc94ba20906133e60e4ff54fbe0403a3
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 6%
+source-wordcount: '1194'
+ht-degree: 5%
 
 ---
 
@@ -25,8 +25,6 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [Recopilación de datos](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [Fuentes](#sources)
-
-<!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## Registros de auditoría {#audit-logs}
 
@@ -117,21 +115,9 @@ Platform proporciona un conjunto de tecnologías que le permiten recopilar datos
 | Función | Descripción |
 | --- | --- |
 | Configuración del conjunto de datos global | Ahora puede configurar varias nuevas configuraciones globales al configurar un conjunto de datos: ubicación geográfica, cookie de ID de origen y sincronización de ID de terceros. Consulte la sección sobre [configuración de un conjunto de datos](../../edge/fundamentals/datastreams.md#configure) en la guía de interfaz de usuario de Datastreams para obtener más información. |
-| [API de servidor de red perimetral](../../server-api/overview.md) | La API de servidor permite a los clientes interactuar con la red perimetral del Experience Platform mediante un nuevo punto final autenticado para potenciar una variedad de casos de uso de recopilación, personalización, publicidad y marketing. |
+| [API del servidor de red perimetral](../../server-api/overview.md) | La API de servidor permite a los clientes interactuar con la red perimetral del Experience Platform mediante un nuevo punto final autenticado para potenciar una variedad de casos de uso de recopilación, personalización, publicidad y marketing. |
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
-
-<!-- ## Experience Data Model (XDM) {#xdm}
-
-Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
-
-| Feature | Description |
-| --- | --- |
-| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
-
-{style="table-layout:auto"}
-
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## Servicio de consultas {#query-service}
 

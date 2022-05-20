@@ -1,14 +1,14 @@
 ---
-title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión del Experience Platform 27 de enero de 2021
+title: Notas de la versión de Adobe Experience Platform, enero de 2021
+description: Notas de la versión de enero de 2021 para Adobe Experience Platform.
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 6%
+source-wordcount: '717'
+ht-degree: 5%
 
 ---
 
@@ -33,7 +33,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 | ------- | ----------- |
 | Funciones de expresión regular | [!DNL Data Prep] Mapper ahora admite la coincidencia y extracción de parte del campo de entrada basada en expresiones regulares. |
 
-Para obtener más información, consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
+Para obtener más información, consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
 
 ## Destinos {#destinations}
 
@@ -49,9 +49,9 @@ Para obtener más información, consulte [[!DNL Data Prep] overview](../../data-
 
 | Función | Descripción |
 | ------- | ----------- |
-| Coincidencia de ID avanzada | Mejoras en las capacidades de la tasa de coincidencia de audiencia en [!DNL Facebook Custom Audiences] y [!DNL Google Customer Match], al agregar compatibilidad con coincidencias de identidad adicionales, como ID externos, números de teléfono e ID de dispositivos móviles. Consulte la siguiente documentación para obtener más información: <ul><li>[Destino de facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destino de Coincidencia de clientes de Google](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
+| Coincidencia de ID avanzada | Mejoras en las capacidades de la tasa de coincidencia de audiencia en [!DNL Facebook Custom Audiences] y [!DNL Google Customer Match], al agregar compatibilidad con coincidencias de identidad adicionales, como ID externos, números de teléfono e ID de dispositivos móviles. Consulte la siguiente documentación para obtener más información: <ul><li>[Destino de facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destino de coincidencia del cliente de Google](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
-Para obtener más información, visite [destinos overview](../../destinations/home.md).
+Para obtener más información, visite [información general sobre destinos](../../destinations/home.md).
 
 ## Perfil del cliente en tiempo real {#profile}
 
@@ -62,9 +62,9 @@ Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherente
 | Función | Descripción |
 | ------- | ----------- |
 | Eliminar conjunto de datos del almacén de perfiles | Cuando elimine un conjunto de datos del lago de datos del Experience Platform, también se eliminará automáticamente del almacén de perfiles. Ya no es necesario usar el extremo de la API de trabajos del sistema de perfiles para realizar una solicitud de eliminación para eliminar el conjunto de datos del almacén de perfiles explícitamente. Para obtener más información, consulte la [guía de extremo de la API de trabajos del sistema de perfiles](../../profile/api/profile-system-jobs.md). |
-| Recuento estimado del espacio de nombres de ID para un segmento determinado | Para recuentos de perfil estimados, la API de vista previa ahora informa:<ul><li>Recuento total de perfiles estimados en un segmento para un área de nombres determinada.</li><li>Recuento total de perfiles estimados en el esquema de unión de perfiles para un área de nombres determinada.</li></ul>Para obtener más información, consulte la [guía de extremo de la API de vista previa del perfil](../../profile/api/preview-sample-status.md). |
+| Recuento estimado del espacio de nombres de ID para un segmento determinado | Para recuentos de perfiles estimados, la API de vista previa ahora informa:<ul><li>Recuento total de perfiles estimados en un segmento para un área de nombres determinada.</li><li>Recuento total de perfiles estimados en el esquema de unión de perfiles para un área de nombres determinada.</li></ul>Para obtener más información, consulte [guía de extremo de API de vista previa de perfil](../../profile/api/preview-sample-status.md). |
 
-Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos [!DNL Profile], lea en primer lugar la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
+Para obtener más información sobre el perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con [!DNL Profile] datos, comience leyendo el [Resumen del perfil del cliente en tiempo real](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -76,10 +76,10 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 
 | Función | Descripción |
 | ------- | ----------- |
-| Mejoras en el conector de origen de Adobe Audience Manager | Ahora puede filtrar y seleccionar segmentos individuales de origen de Audience Manager a ingesta en Platform, así como filtrar los rasgos de origen. Consulte el tutorial sobre [creación de un conector de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
-| [!DNL Google BigQuery] mejoras en el conector de origen | Ahora puede ingerir archivos de más de 10 GB en una ejecución de flujo mediante el conector de origen [!DNL BigQuery]. Consulte la [[!DNL BigQuery] descripción general del conector de origen](../../sources/connectors/databases/bigquery.md) para obtener más información. |
-| Compatibilidad con tipos de datos complejos para almacenamiento en la nube | Ahora puede introducir tipos de datos complejos, como matrices en archivos JSON, al utilizar un conector de origen de almacenamiento en la nube. Consulte los tutoriales sobre la creación de un flujo de datos de almacenamiento en la nube [en la interfaz de usuario](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) o [utilizando la [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) para obtener más información. |
-| Compatibilidad con la autenticación basada en claves principales del servicio para el origen [!DNL Microsoft Dynamics] | Ahora puede autenticarse en su cuenta [!DNL Dynamics] utilizando una clave de entidad de seguridad de servicio como alternativa a la autenticación basada en contraseña. Consulte la [[!DNL Dynamics] descripción general del conector de origen](../../sources/connectors/crm/ms-dynamics.md) para obtener más información. |
-| Compatibilidad de la interfaz de usuario con separadores personalizados en fuentes de almacenamiento en la nube | Ahora puede establecer un delimitador de columna personalizado, como una coma (`,`), una pestaña (`\t`) o una barra vertical (`|`), para recopilar archivos delimitados en la interfaz de usuario. Consulte el tutorial sobre [creación de un flujo de datos con un conector de origen de almacenamiento en la nube](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obtener más información |
+| Mejoras en el conector de origen de Adobe Audience Manager | Ahora puede filtrar y seleccionar segmentos individuales de origen de Audience Manager a ingesta en Platform, así como filtrar los rasgos de origen. Consulte el tutorial en [creación de un conector de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
+| [!DNL Google BigQuery] mejoras en el conector de origen | Ahora puede ingerir archivos de más de 10 GB en una ejecución de flujo mediante la función [!DNL BigQuery] conector de origen. Consulte la [[!DNL BigQuery] información general del conector de origen](../../sources/connectors/databases/bigquery.md) para obtener más información. |
+| Compatibilidad con tipos de datos complejos para almacenamiento en la nube | Ahora puede introducir tipos de datos complejos, como matrices en archivos JSON, al utilizar un conector de origen de almacenamiento en la nube. Consulte los tutoriales sobre la creación de un flujo de datos de almacenamiento en la nube [en la interfaz de usuario](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) o [usando la variable [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) para obtener más información. |
+| Compatibilidad con la autenticación basada en claves principales del servicio para [!DNL Microsoft Dynamics] source | Ahora puede autenticarse en su [!DNL Dynamics] cuenta que utiliza una clave principal de servicio como alternativa a la autenticación basada en contraseña. Consulte la [[!DNL Dynamics] información general del conector de origen](../../sources/connectors/crm/ms-dynamics.md) para obtener más información. |
+| Compatibilidad de la interfaz de usuario con separadores personalizados en fuentes de almacenamiento en la nube | Ahora puede establecer un delimitador de columna personalizado, como una coma (`,`), pestaña (`\t`) o una barra vertical (`|`), para recopilar archivos delimitados en la interfaz de usuario. Consulte el tutorial en [creación de un flujo de datos con un conector de origen de almacenamiento en la nube](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obtener más información |
 
-Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
+Para obtener más información sobre las fuentes, consulte la [información general sobre fuentes](../../sources/home.md).
