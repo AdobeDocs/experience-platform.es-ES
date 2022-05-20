@@ -5,9 +5,9 @@ title: Guía de solución de problemas del servicio de identidad
 topic-legacy: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de identidad de Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
+source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2180'
 ht-degree: 0%
 
 ---
@@ -90,13 +90,7 @@ Se hace referencia a las identidades en las llamadas API por su identidad compue
 
 ## ¿Cómo gestiona Identity Service la información de identificación personal (PII)?
 
-El servicio de identidad crea un hash criptográfico unidireccional fuerte de PII antes de mantener los valores. Los datos de identidad en las áreas de nombres &quot;Phone&quot; y &quot;Email&quot; se colocan automáticamente en hash mediante SHA-256, con valores de &quot;Email&quot; convertidos automáticamente a minúsculas antes del hash.
-
-## ¿Debería cifrar toda la PII antes de enviar a Platform?
-
-No es necesario cifrar manualmente los datos PII antes de ingerirlos en Platform. Aplicando la variable `I1` etiqueta de uso de datos a todos los campos de datos aplicables, Platform convierte automáticamente estos campos en valores de ID con hash tras la ingesta.
-
-Para ver los pasos sobre cómo aplicar y administrar etiquetas de uso de datos, consulte la [tutorial de etiquetas de uso de datos](../data-governance/labels/user-guide.md).
+El servicio de identidad tiene áreas de nombres estándar para admitir la ingesta de valores de identidad con hash para números de teléfono y correos electrónicos. Sin embargo, usted es responsable del hash de los valores. Para obtener más información sobre los datos hash incorporados a Platform, consulte la [[!DNL Data Prep] guía de funciones de asignación](../data-prep/functions.md#hashing).
 
 ## ¿Hay alguna consideración al hash de las identidades basadas en PII?
 

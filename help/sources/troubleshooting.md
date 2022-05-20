@@ -5,16 +5,16 @@ title: Solución de problemas de fuentes
 topic-legacy: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre las fuentes en Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 5f42c6ade63244c5c0bca2d6f879e43014474a83
+source-git-commit: b55097b6e7cd49166f68d0c86b788cd36ebdebab
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
 
-# Guía de solución de problemas de fuentes (Beta)
+# Guía de solución de problemas de fuentes
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre las fuentes en Adobe Experience Platform. Para preguntas y solución de problemas relacionados con otros [!DNL Platform] servicios, incluidos los que se encuentran en todas las API [!DNL Platform], consulte la [guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes sobre las fuentes en Adobe Experience Platform. Para preguntas y solución de problemas relacionados con otras [!DNL Platform] servicios, incluidos los que se encuentran en todos los [!DNL Platform] API, consulte la [Guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
 
 ## Preguntas frecuentes
 
@@ -44,7 +44,7 @@ La siguiente es una lista de restricciones que debe tener en cuenta para los arc
 - Los nombres de directorio y archivo no pueden terminar con una barra diagonal (`/`). Si se proporciona, se elimina automáticamente.
 - Los siguientes caracteres de URL reservados deben tener un escape correcto: `! ' ( ) ; @ & = + $ , % # [ ]`
 - No se permiten los siguientes caracteres: `" \ / : | < > * ?`.
-- No se permiten caracteres de ruta de URL no permitidos. Los puntos de código como `\uE000`, aunque válidos en los nombres de archivo NTFS, no son caracteres Unicode válidos. Además, algunos caracteres ASCII o Unicode, como los caracteres de control (0x00 a 0x1F, \u0081, etc.), tampoco están permitidos. Para las reglas que rigen las cadenas Unicode en HTTP/1.1, consulte [RFC 2616, Sección 2.2: Reglas básicas](https://www.ietf.org/rfc/rfc2616.txt) y [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- No se permiten caracteres de ruta de URL no permitidos. Puntos de código como `\uE000`, aunque válido en nombres de archivo NTFS, no son caracteres Unicode válidos. Además, algunos caracteres ASCII o Unicode, como los caracteres de control (0x00 a 0x1F, \u0081, etc.), tampoco están permitidos. Para las reglas que rigen las cadenas Unicode en HTTP/1.1, consulte [RFC 2616, sección 2.2: Reglas básicas](https://www.ietf.org/rfc/rfc2616.txt) y [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - No se permiten los siguientes nombres de archivo: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caracteres de punto (.) y dos caracteres de punto (.).
 - El número máximo de archivos por lote es de 1500, con un tamaño máximo de lote de 100 GB.
 - El número máximo de propiedades o campos por fila es de 10 000.
@@ -56,7 +56,7 @@ Los tipos de datos admitidos son números enteros, cadenas, booleanos, objetos d
 
 ### ¿Qué formatos de fecha y hora se admiten?
 
-Las fuentes admiten una amplia variedad de formatos de fecha y hora al introducir datos. Puede encontrar más información sobre los formatos de fecha y hora admitidos en la sección de fechas de la [guía de administración del formato de datos](../data-prep/data-handling.md#dates) en la documentación de preparación de datos.
+Las fuentes admiten una amplia variedad de formatos de fecha y hora al introducir datos. Puede encontrar más información sobre los formatos de fecha y hora admitidos en la sección de fechas del [guía de gestión del formato de datos](../data-prep/data-handling.md#dates) en la documentación de preparación de datos.
 
 ### ¿Cómo aplico formato a las matrices en archivos CSV, JSON y Parquet?
 
@@ -68,7 +68,7 @@ Todas las fuentes de ingesta por lotes admiten la ingesta parcial. Sin embargo, 
 
 ### ¿Cuándo debo usar la ingesta parcial?
 
-Se debe utilizar la ingesta parcial si **no** tiene restricciones, como que todo el archivo se incorpore a Platform. Como alternativa, se debe utilizar la ingesta parcial si no le importa la ingesta de datos que puedan contener errores dentro de él.
+Debe utilizar la ingestión parcial si **not** tienen restricciones, como que todo el archivo se incorpore a Platform. Alternativamente, se debe utilizar la ingesta parcial si no le importa la ingesta de datos que puedan contener errores dentro de él.
 
 ### ¿Cuál es el umbral de error típico de ingesta parcial?
 
@@ -76,4 +76,4 @@ No hay ningún &quot;umbral de error típico&quot; para la ingesta parcial. En s
 
 ### ¿Cuánto tarda un estado de ejecución de flujo en actualizarse después de la creación de un nuevo flujo de datos?
 
-Las ejecuciones de flujo no se generan instantáneamente y pueden tardar entre dos y tres minutos en actualizarse después de la `startTime` designada. La comprobación del estado de una ejecución de flujo, inmediatamente después de la creación de un nuevo flujo de datos, no devuelve información sobre el `lastRunDetails` de la ejecución del flujo, ya que no ha sucedido aún. Se recomienda permitir que el flujo de datos se genere unos minutos antes de comprobar el estado de la ejecución del flujo.
+Las ejecuciones de flujo no se generan instantáneamente y pueden tardar entre dos y tres minutos en actualizarse después de la `startTime`. La comprobación del estado de una ejecución de flujo, inmediatamente después de la creación de un nuevo flujo de datos, no devuelve información sobre el `lastRunDetails` como todavía no ha sucedido. Se recomienda permitir que el flujo de datos se genere unos minutos antes de comprobar el estado de la ejecución del flujo.
