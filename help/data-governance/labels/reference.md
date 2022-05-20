@@ -5,9 +5,9 @@ title: Glosario de etiquetas de uso de datos
 topic-legacy: labels
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform actualmente.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
 workflow-type: tm+mt
-source-wordcount: '1985'
+source-wordcount: '2053'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,8 @@ Un tipo de datos que puede considerar confidencial puede ser de diferentes tipos
 | --- | --- |
 | **S1** | Datos que especifican la latitud y la longitud que se pueden usar para determinar la ubicación precisa de un dispositivo. |
 | **S2** | Datos que se pueden utilizar para determinar un área de geovalla definida a grandes rasgos. |
+| **PSPD** | Los datos personales confidenciales permitidos (PSPD) se refieren a datos que el Adobe permite contractualmente cargar que se consideran &quot;confidenciales&quot;, &quot;categoría especial de datos&quot; o un término similar utilizado por las leyes aplicables. Esto excluye específicamente la Información de Salud Protegida (PHI) y otros datos de salud regulados. |
+| **RHD** | Datos que se refieren a Información de Salud Protegida (PHI) o información acerca de un paciente al que el Adobe le permite cargar de manera contractual. |
 
 ## Apéndice
 
@@ -112,7 +114,7 @@ El contenido en el sitio es texto e imágenes que están diseñados para informa
 
 En última instancia, la interpretación de la etiqueta y cómo se aplica el uso de los datos con esa etiqueta depende de usted. Como referencia, a continuación se proporcionan los marcos de la IAB y el DAA:
 
-IAB: 4. Selección de contenido, envío, creación de informes: La recopilación de información, y en combinación con la información recopilada anteriormente, para seleccionar y entregar contenido para usted, y para medir la entrega y efectividad de dicho contenido. Esto incluye el uso de información recopilada anteriormente sobre sus intereses para seleccionar contenido, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró y si realizó alguna acción relacionada con el contenido, como seleccionar contenido. Esto no incluye la personalización, que es la recopilación y el procesamiento de información sobre su uso de este servicio para posteriormente personalizar el contenido o la publicidad para usted en otros contextos, como sitios web o aplicaciones, a lo largo del tiempo.
+IAB: 4. Selección de contenido, envío, creación de informes: La recopilación de información, y en combinación con la información recopilada anteriormente, para seleccionar y entregar contenido para usted, y para medir la entrega y efectividad de dicho contenido. Esto incluye el uso de información recopilada anteriormente sobre sus intereses para seleccionar contenido, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró y si realizó alguna acción relacionada con el contenido, como seleccionar contenido. Esto no incluye la personalización, que es la recopilación y el procesamiento de información sobre su uso de este servicio para posteriormente personalizar contenido o publicidad para usted en otros contextos, como sitios web o aplicaciones, a lo largo del tiempo.
 
 DAA: La publicidad en línea basada en el comportamiento no incluye las actividades de las Primeras Partes, la entrega de publicidad o los informes de publicidad, ni la publicidad contextual (es decir, la publicidad basada en el contenido de la página web que está visitando, la visita actual de un consumidor a una página web o una consulta de búsqueda).
 
