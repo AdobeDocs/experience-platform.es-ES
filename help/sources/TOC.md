@@ -4,23 +4,24 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: be3967e7045e159736952e369a55df322afd9fec
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '777'
 ht-degree: 14%
 
 ---
 
 
-# Conectores de origen {#sources}
+# Fuentes {#sources}
 
-- [Información general sobre conectores de origen](home.md)
+- [Resumen de fuentes](home.md)
 - Conectores de origen disponibles {#connectors}
    - aplicaciones de Adobe {#adobe-applications}
-      - [Conector de origen de las clasificaciones de Analytics](connectors/adobe-applications/classifications.md)
-      - [Conector de origen de Analytics](connectors/adobe-applications/analytics.md)
-      - [Conector de origen del Audience Manager](connectors/adobe-applications/audience-manager.md)
-      - [Conector de origen de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
+      - [Fuente de clasificaciones de Analytics](connectors/adobe-applications/classifications.md)
+      - [Fuente de Analytics](connectors/adobe-applications/analytics.md)
+      - [origen del Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Fuente de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
+      - [Fuente de la recopilación de datos](connectors/adobe-applications/data-collection.md)
       - Asignaciones de campos {#mapping}
          - [Asignaciones de campos de Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [asignaciones de campos de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
