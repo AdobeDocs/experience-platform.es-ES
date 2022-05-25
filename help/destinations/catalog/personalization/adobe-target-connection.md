@@ -3,10 +3,10 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión Adobe Target
 description: Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,11 +20,13 @@ Adobe Target es una conexión personalizada en Adobe Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 
-Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platform](../../../edge/home.md). Debe utilizar este SDK para utilizar este destino.
+Al configurar la conexión de Adobe Target a [usar un ID de conjunto de datos](#parameters), debe tener la variable [SDK web de Adobe Experience Platform](../../../edge/home.md) implementado.
+
+La configuración de la conexión de Adobe Target sin utilizar un ID de conjunto de datos no requiere que implemente el SDK web.
 
 >[!IMPORTANT]
 >
->Antes de crear una [!DNL Adobe Target] conexión, lea la guía sobre cómo [configurar destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para casos de uso de personalización de la misma página y de la siguiente página, en varios componentes de Experience Platform.
+>Antes de crear una [!DNL Adobe Target] conexión, lea la guía sobre cómo [configurar destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para casos de uso de personalización de la misma página y de la siguiente página, en varios componentes de Experience Platform. La personalización de la misma página y de la página siguiente requiere que utilice un ID de conjunto de datos al configurar la conexión de Adobe Target.
 
 ## Tipo de exportación y frecuencia {#export-type-frequency}
 
@@ -48,8 +50,8 @@ Una empresa de ventas y alquiler de casa quiere personalizar su página principa
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="Acerca de los ID de conjunto de datos"
->abstract="Esta opción determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Debe configurar un conjunto de datos para poder configurar el destino."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Obtenga información sobre cómo configurar un conjunto de datos"
+>abstract="Esta opción determina en qué almacén de datos de recopilación de datos se incluirán los segmentos. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de Target. Para utilizar la segmentación perimetral, debe seleccionar un ID de conjunto de datos. Al seleccionar Ninguno se desactivan todos los casos de uso que utilizan segmentación perimetral."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Obtenga más información sobre la selección de conjuntos de datos."
 
 >[!IMPORTANT]
 > 
@@ -65,7 +67,12 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 * **Nombre**: Rellene el nombre preferido para este destino.
 * **Descripción**: Escriba una descripción para el destino. Por ejemplo, puede mencionar para qué campaña utiliza este destino. Este campo es opcional.
-* **ID de almacén de datos**: Esto determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Consulte [Configuración de un conjunto de datos](../../../edge/datastreams/overview.md) para obtener más información.
+* **ID de almacén de datos**: Esto determina en qué almacén de datos de recopilación de datos se incluyen los segmentos. El menú desplegable muestra solo los conjuntos de datos que tienen habilitado el destino de Target. Consulte [configuración de un conjunto de datos](../../../edge/datastreams/overview.md#target) para obtener información detallada sobre cómo configurar un conjunto de datos para Adobe Target.
+   * **[!UICONTROL Ninguna]**: Seleccione esta opción si necesita configurar la personalización de Adobe Target pero no puede implementar la variable [SDK web de Experience Platform](../../../edge/home.md). Al utilizar esta opción, los segmentos exportados de Experience Platform a Target solo admiten la personalización de la siguiente sesión, y la segmentación perimetral está deshabilitada. Consulte la siguiente tabla para obtener más información.
+
+| No se ha seleccionado ningún conjunto de datos | Almacén de datos seleccionado |
+|---|---|
+| <ul><li>[Segmentación de Edge](../../../segmentation/ui/edge-segmentation.md) no es compatible.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md) no son compatibles.</li><li>Puede compartir segmentos con la conexión de Adobe Target solo para el simulador para pruebas de producción.</li><li>Para configurar la personalización de la siguiente sesión sin utilizar un ID de flujo de datos, utilice [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentación de Edge funciona según lo esperado.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md) son compatibles.</li><li>El uso compartido de segmentos es compatible con otros entornos limitados.</li></ul> |
 
 ## Activar segmentos en este destino {#activate}
 

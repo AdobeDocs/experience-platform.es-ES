@@ -5,10 +5,10 @@ description: Este documento proporciona información sobre el control de acceso 
 hide: true
 hidefromtoc: true
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 4ac69f614d878cd3c3b9f47e41dedbc6f09288ac
+source-git-commit: 70c0ba81c682fd512c24265f12d1fef6ca14b34e
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->El control de acceso basado en atributos está disponible actualmente en una versión limitada. Esta capacidad estará disponible para todos los clientes de Real-time Customer Data Platform una vez que se haya lanzado completamente.
+>El control de acceso basado en atributos actualmente está disponible en una versión limitada para clientes de asistencia médica basados en EE. UU. Esta capacidad estará disponible para todos los clientes de Real-time Customer Data Platform una vez que se haya lanzado completamente.
 
-El control de acceso basado en atributos permite a los administradores controlar el acceso a objetos o capacidades específicos en función de atributos. Los atributos pueden ser un valor existente, como la geolocalización o el departamento de una persona. Los atributos también pueden ser metadatos que se agregan a un objeto, como una etiqueta agregada a un campo o segmento de esquema.
+El control de acceso basado en atributos es una función de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funciones basadas en atributos. Los atributos pueden ser metadatos agregados a un objeto, como una etiqueta agregada a un campo o segmento de esquema. Un administrador define políticas de acceso que incluyen atributos para administrar los permisos de acceso de los usuarios.
 
 Esta funcionalidad le permite etiquetar campos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir las políticas de acceso que rodean los campos de esquema XDM y administrar mejor el acceso dado a los usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Además, el control de acceso basado en atributos permite a los administradores administrar el acceso a segmentos específicos.
 
-Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD) y a la información de identificación personal (PII) en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario específicas que solo tienen acceso a campos específicos, así como a datos específicos que se correspondan con esos campos.
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD) y a la información de identificación personal (PII) en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.
 
 ## Terminología de control de acceso basado en atributos
 
@@ -30,7 +30,7 @@ El control de acceso basado en atributos implica los siguientes componentes:
 
 | Terminología | Definición |
 | --- | --- |
-| Atributos | Los atributos son identificadores que indican la correlación entre un usuario y los recursos de Platform a los que tiene acceso. Los atributos pueden ser un valor existente, como la geolocalización o el departamento de una persona. Los atributos también pueden ser metadatos que se agregan a un objeto, como una etiqueta agregada a un campo o segmento de esquema. |
+| Atributos | Los atributos son identificadores que indican la correlación entre un usuario y los recursos de Platform a los que tiene acceso. Los atributos pueden ser metadatos agregados a un objeto, como una etiqueta agregada a un campo o segmento de esquema. Un administrador define políticas de acceso que incluyen atributos para administrar los permisos de acceso de los usuarios. |
 | Etiquetas | Las etiquetas permiten categorizar los conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que elige administrar los datos. Las prácticas recomendadas recomiendan el etiquetado de datos tan pronto como se incorporen a Platform o tan pronto como los datos estén disponibles para su uso en Platform. |
 | Permisos | Los permisos incluyen la capacidad de ver o usar funciones de Platform, como la creación de entornos limitados, la definición de esquemas y la administración de conjuntos de datos. |
 | Conjuntos de permisos | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contenga un grupo de permisos. |
@@ -46,11 +46,13 @@ El control de acceso basado en atributos implica los siguientes componentes:
 >
 >Una vez que su organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Perfiles de producto en Adobe Admin Console, para administrar permisos para usuarios, funcionalidad, etiquetas y otros recursos de su organización.
 
-Los permisos son el área del Experience Cloud en la que los administradores pueden definir funciones de usuario y políticas de acceso para administrar los permisos de acceso a funciones, capacidades y objetos dentro de una aplicación de producto. A través de Permisos, puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas funciones. Los permisos también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica. Para obtener más información, consulte la guía Permisos .
+Los permisos son el área del Experience Cloud en la que los administradores pueden definir funciones de usuario y políticas de acceso para administrar los permisos de acceso a funciones y objetos dentro de una aplicación de producto.
+
+Mediante Permisos, puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas funciones. Los permisos también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de permisos](ui/browse.md).
 
 ## API de control de acceso basado en atributos
 
-La API de control de acceso basada en atributos le permite administrar mediante programación funciones, políticas y productos en Platform mediante API.
+La API de control de acceso basada en atributos le permite administrar mediante programación funciones, políticas y productos en Platform mediante API. Para obtener más información, consulte la guía de [uso de la API para administrar configuraciones de control de acceso basadas en atributos](api/overview.md).
 
 ## Control de acceso basado en atributos en Adobe Experience Platform
 
