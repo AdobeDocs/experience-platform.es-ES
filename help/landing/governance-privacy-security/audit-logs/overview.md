@@ -2,10 +2,10 @@
 title: Información general sobre registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
+source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 10%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,20 +23,28 @@ En la tabla siguiente se describen las acciones en las que los registros de audi
 
 | Recurso | Acciones |
 | --- | --- |
-| [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li><li>Deshabilitar para perfil</li></ul> |
-| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para perfil</li></ul> |
+| [Política de control de acceso (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Cuenta (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Registros de auditoría](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportar</li></ul> |
 | [Clase](../../../xdm/schema/composition.md#class) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Tipo de datos](../../../xdm/schema/composition.md#data-type) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Entorno de pruebas](../../../sandboxes/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Restablecer</li><li>Eliminar</li></ul> |
-| [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Deshabilitar</li><li>Activar conjunto de datos</li><li>Eliminación de conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
-| [Segmento](../../../segmentation/home.md) | <ul><li>Crear</li><li>Eliminar</li><li>Activar segmento</li><li>Eliminación de segmentos</li></ul> |
-| [Combinar directiva](../../../profile/merge-policies/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Atributo calculado](../../../profile/computed-attributes/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li><li>Deshabilitar para perfil</li><li>Adición de datos</li><li>Eliminar lote</li></ul> |
+| [Tipos de datos](../../../xdm/schema/composition.md#data-type) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Deshabilitar</li><li>Activar conjunto de datos</li><li>Eliminación de conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
+| [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Gráfico de identidad](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Ver</li></ul> |
+| [Área de nombres de identidad](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Crear</li><li>Actualización</li></ul> |
+| [Combinar directiva](../../../profile/merge-policies/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Perfil del producto](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Cuenta (Adobe)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Plantilla de consulta](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Consulta programada](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Consulta](../../../query-service/ui/overview.md) | <ul><li>Ejecutar</li></ul> |
+| [Plantilla de consulta](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Función (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Agregar usuario</li><li>Eliminar usuario</li></ul> |
+| [Entorno de pruebas](../../../sandboxes/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Restablecer</li><li>Eliminar</li></ul> |
+| [Consulta programada](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para perfil</li></ul> |
+| [Segmento](../../../segmentation/home.md) | <ul><li>Crear</li><li>Eliminar</li><li>Activar segmento</li><li>Eliminación de segmentos</li></ul> |
+| [Flujo de datos de origen](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Deshabilitar</li><li>Activación de conjunto de datos</li><li>Eliminación de conjunto de datos</li><li>Activate de perfil</li><li>Eliminación de perfil</li></ul> |
+| [Orden de trabajo](../../../hygiene/home.md) | <ul><li>Crear</li></ul> |
 
 ## Acceso a registros de auditoría
 
@@ -50,7 +58,7 @@ Puede ver los registros de auditoría de las distintas funciones del Experience 
 
 ![Panel de registros de auditoría](../../images/audit-logs/audits.png)
 
-Los registros de auditoría se conservan durante 365 días después de los cuales se eliminarán del sistema. Por lo tanto, solo puede volver por un periodo máximo de 365 días.
+Los registros de auditoría se conservan durante 365 días después de los cuales se eliminarán del sistema. Por lo tanto, solo puede volver durante un periodo máximo de 365 días. Si necesita datos de más de 365 días, debe exportar los registros en una cadencia normal para satisfacer los requisitos de políticas internas.
 
 Seleccione un evento de la lista para ver sus detalles en el carril derecho.
 
