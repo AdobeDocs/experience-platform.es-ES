@@ -4,10 +4,10 @@ user-guide-title: Ayuda del control de acceso en Adobe Experience Platform
 breadcrumb-title: Guía de control de acceso
 user-guide-description: Use los perfiles del producto en Adobe Admin Console para vincular a los usuarios con permisos y entornos limitados.
 feature: Access Control
-source-git-commit: f8d728a6ce7a5748bcceee3201f6ddf7c307128c
+source-git-commit: aa4dda26a55963ea26b0e050c8f2a39966da67d7
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 35%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,6 +17,20 @@ ht-degree: 35%
 * [Información general sobre el control de acceso](home.md)
 * Control de acceso basado en atributos {#abac}
    * [Información general](abac/overview.md)
+   * [Permisos] {#permissions-ui}
+      * [Examinar](abac/ui/browse.md)
+      * [Etiquetas](abac/ui/labels.md)
+      * [Permisos](abac/ui/permissions.md)
+      * [Políticas](abac/ui/policies.md)
+      * [Funciones](abac/ui/roles.md)
+      * [Entornos aislados](abac/ui/sandboxes.md)
+      * [Usuarios](abac/ui/users.md)
+   * API de control de acceso basado en atributos {#abac-api}
+      * [Información general](abac/api/overview.md)
+      * [Primeros pasos](abac/api/getting-started.md)
+      * [Funciones](abac/api/roles.md)
+      * [Políticas](abac/api/policies.md)
+      * [Productos](abac/api/products.md)
 * Interfaz de usuario de control de acceso {#ui}
    * [Información general](ui/overview.md)
    * [Seleccionar un perfil de producto](ui/browse.md)
