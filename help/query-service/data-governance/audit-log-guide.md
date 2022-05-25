@@ -2,9 +2,9 @@
 title: Integración del registro de auditoría del servicio de consultas
 description: Los registros de auditoría del servicio de consulta mantienen registros de diversas acciones del usuario para formar una pista de auditoría para solucionar problemas o cumplir con las políticas y los requisitos regulatorios de administración de datos corporativos. Este tutorial proporciona información general sobre las funciones del registro de auditoría específicas del servicio de consulta.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
+source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '935'
 ht-degree: 2%
 
 ---
@@ -25,9 +25,9 @@ Las categorías del registro de auditoría proporcionadas por [!DNL Query Servic
 
 | Categoría | Descripción |
 |---|---|
-| [!UICONTROL Consulta programada] | Esta categoría le permite auditar las programaciones que se han creado, actualizado o eliminado en [!DNL Query Service]. |
+| [!UICONTROL Consulta] | Esta categoría permite auditar las ejecuciones de consultas. |
 | [!UICONTROL Plantilla de consulta] | Esta categoría permite auditar las distintas acciones (crear, actualizar y eliminar) realizadas en una plantilla de consulta. |
-<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
+| [!UICONTROL Consulta programada] | Esta categoría le permite auditar las programaciones que se han creado, actualizado o eliminado en [!DNL Query Service]. |
 
 ## Realizar una [!DNL Query Service] registro de auditoría {#perform-an-audit-log}
 
@@ -42,7 +42,7 @@ Los datos de registro de auditoría devueltos contienen la siguiente informació
 | Nombre de columna | Descripción |
 |---|---|
 | [!UICONTROL Marca de tiempo] | La fecha y hora exactas de la acción realizada en un `month/day/year hour:minute AM/PM` formato. |
-| [!UICONTROL Nombre del recurso] | El valor de la variable [!UICONTROL Nombre del recurso] depende de la categoría elegida como filtro. Al usar la variable [!UICONTROL Consulta programada] categoría que es la **nombre de la programación**. Al usar la variable [!UICONTROL Plantilla de consulta] , esta es la categoría **nombre de plantilla**. |
+| [!UICONTROL Nombre del recurso] | El valor de la variable [!UICONTROL Nombre del recurso] depende de la categoría elegida como filtro. Al usar la variable [!UICONTROL Consulta programada] categoría que es la **nombre de la programación**. Al usar la variable [!UICONTROL Plantilla de consulta] , esta es la categoría **nombre de plantilla**. Al usar la variable [!UICONTROL Consulta] , esta es la categoría **session ID** |
 | [!UICONTROL Categoría] | Este campo coincide con la categoría seleccionada en la lista desplegable de filtros. |
 | [!UICONTROL Acción] | Puede crear, eliminar, actualizar o ejecutar. Las acciones disponibles dependen de la categoría elegida como filtro. |
 | [!UICONTROL Usuario] | Este campo proporciona el ID de usuario que ejecutó la consulta. |
@@ -53,13 +53,25 @@ Los datos de registro de auditoría devueltos contienen la siguiente informació
 >
 >Para obtener más detalles de la consulta, descargue los resultados de registro en los formatos de archivo CSV o JSON, de los que se muestran de forma predeterminada en el panel de registro de auditoría.
 
+## Panel Detalles
+
 Seleccione cualquier fila de resultados del registro de auditoría para abrir un panel de detalles a la derecha de la pantalla.
 
 ![Audita la pestaña Registro de actividades del tablero con el panel de detalles resaltado.](../images/audit-log/details-panel.png)
 
->[!NOTE]
->
->El panel de detalles se puede usar para encontrar la variable [!UICONTROL ID del recurso]. El valor de la variable [!UICONTROL ID del recurso] cambia según la categoría utilizada en la auditoría. Al usar la variable [!UICONTROL Plantilla de consulta] categoría, [!UICONTROL ID del recurso] es la variable **ID de plantilla**. Al usar la variable [!UICONTROL Consulta programada] categoría, [!UICONTROL ID del recurso] es la variable  **ID de programación**.
+El panel de detalles se puede usar para encontrar la variable [!UICONTROL ID del recurso] y [!UICONTROL Estado del evento].
+
+El valor de la variable [!UICONTROL ID del recurso] cambia según la categoría utilizada en la auditoría.
+
+* Al usar la variable [!UICONTROL Consulta] categoría, [!UICONTROL ID del recurso] es la variable  **session ID**.
+* Al usar la variable [!UICONTROL Plantilla de consulta] categoría, [!UICONTROL ID del recurso] es la variable **ID de plantilla** con el prefijo `[!UICONTROL templateID:]`.
+* Al usar la variable [!UICONTROL Consulta programada] categoría, [!UICONTROL ID del recurso] es la variable  **ID de programación** con el prefijo `[!UICONTROL scheduleID:]`.
+
+El valor de la variable [!UICONTROL Estado del evento] cambia según la categoría utilizada en la auditoría.
+
+* Al usar la variable [!UICONTROL Consulta] categoría, [!UICONTROL Estado del evento] proporciona una lista de todos los **ID de consulta** ejecutado por el usuario en esa sesión.
+* Al usar la variable [!UICONTROL Plantilla de consulta] categoría, [!UICONTROL Estado del evento] proporciona la variable **nombre de plantilla** como prefijo del estado del evento.
+* Al usar la variable [!UICONTROL Programación de consultas] categoría, [!UICONTROL Estado del evento] proporciona la variable **nombre de la programación** como prefijo del estado del evento.
 
 ## Filtros disponibles para [!DNL Query Service] categorías del registro de auditoría {#available-filters}
 
@@ -68,9 +80,9 @@ Los filtros disponibles varían en función de la categoría seleccionada en la 
 | Filtro | Descripción |
 |---|---|
 | Categoría | Consulte la [[!DNL Query Service] categorías del registro de auditoría](#audit-log-categories) para obtener una lista completa de las categorías disponibles. |
-| Acción | Al hacer referencia a [!DNL Query Service] categorías de auditoría, actualización es un **modificación del formulario existente**, la eliminación es la **eliminación de la programación o plantilla**, crear es **creación de una nueva programación o plantilla** y ejecutar es ejecutar una consulta. |
+| Acción | Al hacer referencia a [!DNL Query Service] categorías de auditoría, actualización es un **modificación del formulario existente**, la eliminación es la **eliminación de la programación o plantilla**, crear es **creación de una nueva programación o plantilla** y ejecutar es **ejecución de una consulta**. |
 | Usuario | Introduzca el ID de usuario completo (por ejemplo, johndoe@acme.com) para filtrar por usuario. |
-| Estado | Este filtro no se aplica al [!DNL Query Service] registros de auditoría. La variable [!UICONTROL Permitir], [!UICONTROL Correcto]y [!UICONTROL Fallo] no filtrará los resultados, mientras que la variable [!UICONTROL Denegar] se filtrará **all** registros. |
+| Estado | La variable [!UICONTROL Permitir], [!UICONTROL Correcto]y [!UICONTROL Fallo] las opciones filtran los registros en función del &quot;estado&quot; o el &quot;estado del evento&quot;, mientras que la variable [!UICONTROL Denegar] se filtrará **all** registros. |
 | Fecha | Seleccione una fecha de inicio o una fecha de finalización para definir un intervalo de fechas por el que filtrar los resultados. |
 
 ## Pasos siguientes
