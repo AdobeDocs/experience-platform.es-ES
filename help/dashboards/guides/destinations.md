@@ -4,9 +4,9 @@ title: Panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2671'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Estado del destino]](#destination-status)
 * [[!UICONTROL Destinos activos por plataforma de destino]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Audiencias activadas en todos los destinos]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Audiencias activadas]](#activated-audiences)
 
 ### [!UICONTROL Destinos más utilizados] {#most-used-destinations}
 
@@ -250,6 +251,18 @@ La variable [!UICONTROL Audiencias activadas en todos los destinos] proporciona 
 ![La utilidad Audiencias activadas en todos los destinos .](../images/destinations/activated-audiences-across-all-destinations.png)
 
 Select **[!UICONTROL Audiencias]** para navegar a los destinos [!UICONTROL Examinar] pestaña . Esta página proporciona una lista de todos los destinos habilitados y una variedad de métricas relevantes. Consulte la documentación para [más información sobre [!UICONTROL Examinar] ficha](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL Audiencias activadas] {#activated-audiences}
+
+Esta utilidad proporciona una única métrica para el número total de audiencias activadas en un destino.
+
+![El widget de audiencias activadas.](../images/destinations/activated-audiences.png)
+
+Select **[!UICONTROL Audiencias]** para navegar a la página de detalles del panel de destinos. La variable [!UICONTROL Datos de activación] muestra una lista de segmentos que se han asignado al destino, incluida la fecha de inicio y la fecha de finalización (si corresponde), así como otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de un segmento en particular, seleccione su nombre en la lista.
+
+![La página de detalles del panel de destinos con la pestaña de datos de activación resaltada.](../images/destinations/activation-data-tab.png)
+
+Esta utilidad le ayuda a comprender el valor de los destinos en función del número de audiencias activadas de un vistazo. También facilita el acceso a información más detallada para su análisis posterior.
 
 ## Pasos siguientes
 

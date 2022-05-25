@@ -4,9 +4,9 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '3535'
+source-wordcount: '3761'
 ht-degree: 0%
 
 ---
@@ -110,6 +110,8 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Tamaño de las audiencias]](#audiences-size)
 * [[!UICONTROL Tendencia del recuento de perfiles]](#profile-count-trend)
 * [[!UICONTROL Perfiles de identidad únicos por identidad]](#single-identity-profiles-by-identity)
+* [[!UICONTROL Superposición de audiencias por directiva de combinación]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL El recuento de perfiles cambia la tendencia por identidad]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Recuento de perfiles] {#profile-count}
 
@@ -290,6 +292,25 @@ Esta utilidad utiliza un gráfico de barras para ilustrar el número total de pe
 Pase el ratón sobre las barras individuales para ver un cuadro de diálogo que detalle el recuento total de perfiles de una identidad.
 
 ![Los perfiles de identidad únicos por widget de identidad.](../images/profiles/single-identity-profiles-by-identity.png)
+
+### [!UICONTROL Superposición de audiencias por directiva de combinación] {#audience-overlap-by-merge-policy}
+
+Esta utilidad utiliza un diagrama de Venn para mostrar la superposición de dos segmentos seleccionados. La política de combinación se elige en la lista desplegable de información general situada en la parte superior de la página y los segmentos para análisis se seleccionan en dos menús desplegables dentro de la utilidad. El número total de perfiles contenidos dentro de la definición de segmento correspondiente se puede ver pasando el cursor sobre un círculo o la intersección.
+
+A medida que la utilidad muestra la transición visual de las definiciones de segmentos, puede optimizar su estrategia de segmentación estudiando las similitudes entre las definiciones de segmentos.
+
+![El tablero Perfiles de la interfaz de usuario de la plataforma con la lista desplegable de directivas de combinación y los desplegables de segmentos de widget resaltados.](../images/profiles/audience-overlap-by-merge-policy.png)
+
+### [!UICONTROL El recuento de perfiles cambia la tendencia por identidad] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+Este widget filtra el recuento de perfiles en función de una identidad de origen seleccionada y de una política de combinación, y a continuación ilustra el cambio de número de una variedad de períodos utilizando un gráfico de líneas. La política de combinación se selecciona en el menú desplegable de información general de la parte superior de la página; la identidad de origen y el periodo de tiempo se seleccionan en los menús desplegables de la utilidad. La tendencia se puede visualizar en periodos de 30 días, 90 días y 12 meses.
+
+Esta utilidad le ayuda a administrar sus necesidades de activación de destino demostrando el patrón de crecimiento de perfiles filtrados por una identidad requerida.
+
+![El recuento de perfiles cambia la tendencia por el widget de identidad.](../images/profiles/profiles-count-change-trend-by-identity.png)
+
 
 ## (Beta) Widgets de eficacia del perfil {#profile-efficacy-widgets}
 

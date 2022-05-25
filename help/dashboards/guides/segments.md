@@ -4,9 +4,9 @@ title: Tablero de segmentos
 description: 'Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Tendencia del tamaño de la audiencia]](#audience-size-trend)
 * [[!UICONTROL Tendencia del cambio de tamaño de la audiencia]](#audience-size-change-trend)
 * [[!UICONTROL Tendencia del tamaño de la audiencia por identidad]](#audience-size-trend-by-identity)
+* [[!UICONTROL Superposición de audiencia]](#audience-overlap)
 
 ### [!UICONTROL Tamaño de la audiencia] {#audience-size}
 
@@ -162,6 +163,14 @@ Esta utilidad proporciona un gráfico de líneas con la diferencia en la cantida
 Esta utilidad ilustra la tendencia del tamaño de la audiencia de un segmento concreto en función del tipo de identidad elegido en el menú desplegable de la utilidad. El segmento utilizado para el análisis se selecciona en la lista desplegable Información general . El período de análisis de tendencias se puede visualizar a lo largo de 30 días, 90 días y 12 meses. El periodo de tiempo se elige en un menú desplegable del widget.
 
 ![La tendencia del tamaño de la audiencia por widget de identidad.](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL Superposición de audiencia] {#audience-overlap}
+
+Esta utilidad representa el número de perfiles de dos segmentos que cumplen los criterios de ambas definiciones de segmentos. Los segmentos utilizados para la comparación se seleccionan en los menús desplegables de las utilidades. El número total de perfiles contenidos dentro de la definición del segmento correspondiente se puede ver pasando el puntero sobre un círculo o la intersección del diagrama de Venn.
+
+Esta utilidad le permite optimizar su estrategia de segmentación mediante la visualización de las similitudes en los resultados de sus definiciones de segmento.
+
+![El widget de superposición de audiencias.](../images/segments/audience-overlap.png)
 
 ## Pasos siguientes
 
