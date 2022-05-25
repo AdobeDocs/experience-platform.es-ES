@@ -7,10 +7,10 @@ topic-legacy: Customer AI Overview
 description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
 landing-page-description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: fccb5e6193d9c456d0035ef5c7d2adf5ffe883a4
+source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 18%
+source-wordcount: '553'
+ht-degree: 19%
 
 ---
 
@@ -46,7 +46,7 @@ El siguiente vídeo está diseñado para ayudarle a comprender la AI del cliente
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
-## ¿Cómo funciona?
+## Funcionamiento
 
 La AI del cliente funciona analizando los datos existentes de Evento de la experiencia del consumidor para predecir las puntuaciones de tendencia de pérdida o conversión. El Adobe es consciente de que la definición de pérdida y conversión no es uniforme en todos los casos de uso y, por este motivo, tiene la capacidad de definir objetivos personalizados como un conjunto de condiciones. Puede configurar el objetivo previsto siempre que el evento de interés esté presente en los datos de entrada de Evento de experiencia del consumidor.
 

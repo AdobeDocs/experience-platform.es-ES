@@ -6,7 +6,7 @@ title: Entrada y salida en Customer AI
 topic-legacy: Getting started
 description: Obtenga más información sobre los eventos, entradas y salidas necesarios que utiliza Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 0f408f217dd168b9c94b8dbbd7dc3c6edb06488c
+source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 1%
@@ -265,7 +265,7 @@ Al configurar una nueva instancia de IA del cliente, `audienceName` y `audienceI
 
 La AI del cliente genera varios atributos para perfiles individuales que se consideran aptos. Existen dos formas de utilizar la puntuación (salida) en función de lo que haya aprovisionado. Si tiene un conjunto de datos habilitado para Perfil del cliente en tiempo real, puede consumir perspectivas de Perfil del cliente en tiempo real en la variable [Generador de segmentos](../../segmentation/ui/segment-builder.md). Si no tiene un conjunto de datos habilitado para Perfil, puede [descargar la salida Customer AI](./user-guide/download-scores.md) conjunto de datos disponible en el lago de datos.
 
-Puede encontrar el conjunto de datos de salida en **Conjuntos de datos** en Platform. Todos los conjuntos de datos de salida de Customer AI comienzan con el nombre **Puntuaciones de Customer AI: Nombre de la aplicación** mientras que todos los esquemas de salida de Customer AI empiezan por el nombre **Esquema AI del cliente: Nombre de la aplicación**.
+Puede encontrar el conjunto de datos de salida en **Conjuntos de datos** en Platform. Todos los conjuntos de datos de salida de Customer AI comienzan con el nombre **Puntuaciones de Customer AI: Nombre de la aplicación**. Del mismo modo, todos los esquemas de salida de Customer AI comienzan con el nombre **Esquema AI del cliente: Nombre de la aplicación**.
 
 ![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
