@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 73aaf93e4d11c9e6dd20dfaaf64501eda9220ef8
+source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
 workflow-type: tm+mt
-source-wordcount: '2613'
+source-wordcount: '1553'
 ht-degree: 6%
 
 ---
@@ -13,65 +13,143 @@ ht-degree: 6%
 
 **Fecha de versión: 25 de mayo de 2022**
 
+<!-- New features in Adobe Experience Platform: -->
+
+<!-- - [Attribute-based access control](#abac) -->
+<!-- - [Data hygiene](#hygiene) -->
+
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
-- [[!DNL Dashboards]](#dashboards)
-- [Flujos de datos](#dataflows)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [Registros de auditoría](#audit-logs)
+- [Tableros](#dashbaords)
+- [Recopilación de datos](#data-collection)
+
+<!-- - [Data Governance](#data-governance) -->
+- [Preparación de datos](#data-prep)
+- [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
-- [Real-time Customer Data Platform edición B2B](#B2B)
+- [Servicio de consultas](#query-service)
 - [Fuentes](#sources)
 
-## [!DNL Dashboards] {#dashboards}
+<!-- ## Attribute-based access control {#abac}
 
-Platform proporciona varios tableros a través de los cuales puede ver información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias.
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
-Los tableros proporcionan opciones de informes preconfiguradas para los datos de su organización y están integrados directamente en el flujo de trabajo de los especialistas en marketing dentro de Platform. Estos tableros están disponibles sin necesidad de soporte de TI adicional o sin el tiempo y esfuerzo que de otro modo se necesitarían para exportar y procesar datos con diseño e implementación adicionales de almacenamiento de datos.
+Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
 
-Las siguientes utilidades están disponibles a través de la biblioteca Widget en sus respectivos paneles. Consulte la documentación para obtener más información sobre [cómo añadir utilidades a través de la biblioteca de utilidades](../../dashboards/customize/widget-library.md).
+Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
-**Nuevas utilidades**
+| Feature | Description |
+| --- | --- |
+| Attribute-based access control | Attribute-based access control allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies covering XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments. |
+| Permissions | Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the [Permissions UI guide](../../access-control/abac/ui/browse.md). |
 
-| Widget | Panel | Descripción |
-| ------ | --------- | ----------- |
-| [!UICONTROL Tendencia añadida de perfiles] | Perfiles | Esta utilidad utiliza un gráfico de líneas para ilustrar el número total de perfiles combinados que se han agregado diariamente al Almacenamiento de perfiles durante los últimos 30 días, 90 días o 12 meses. |
-| [!UICONTROL Audiencias asignadas al estado de destino] | Perfiles | Esta utilidad muestra el número total de audiencias asignadas y no asignadas en una única métrica y utiliza un gráfico de anillos para ilustrar la diferencia proporcional entre sus totales. |
-| [!UICONTROL Tamaño de las audiencias] | Perfiles | Esta utilidad proporciona una tabla de dos columnas que enumera hasta 20 segmentos y el número total de audiencias contenidas en cada segmento. La lista depende de la política de combinación aplicada y ordenada de mayor a menor según el número total de audiencias. |
-| [!UICONTROL Tendencia del recuento de perfiles] | Perfiles | Esta utilidad utiliza un gráfico de líneas para ilustrar la tendencia del número total de perfiles contenidos en el sistema a lo largo del tiempo. Los datos se pueden visualizar en períodos de 30 días, 90 días y 12 meses. |
-| [!UICONTROL Perfiles de identidad únicos por identidad] | Perfiles | Esta utilidad utiliza un gráfico de barras para ilustrar el número total de perfiles identificados con un único identificador. La utilidad admite hasta cinco de las identidades más comunes. |
-| [!UICONTROL Estado del destino] | Destinos | Este widget muestra el número total de destinos habilitados como una única métrica y utiliza un gráfico de anillos para ilustrar la diferencia proporcional entre los destinos habilitados y deshabilitados. |
-| [!UICONTROL Destinos activos por plataforma de destino] | Destinos | Esta utilidad utiliza una tabla de dos columnas para mostrar una lista de plataformas de destino activas y el número total de destinos activos para cada plataforma de destino. |
-| [!UICONTROL Audiencias activadas en todos los destinos] | Destinos | Esta utilidad proporciona el número total de audiencias activadas en todos los destinos en una única métrica. |
-| [!UICONTROL Orden de activación de la audiencia] | Segmentos | Este widget proporciona una tabla de tres columnas que indica el nombre de destino, la plataforma y la fecha de activación de la audiencia. |
-| [!UICONTROL Tendencia del tamaño de la audiencia] | Segmentos | Esta utilidad proporciona una ilustración de gráfico de líneas para el número total de perfiles que cumplen los criterios de cualquier definición de segmento durante 30 días, 90 días y 12 meses. |
-| [!UICONTROL Tendencia del cambio de tamaño de la audiencia] | Segmentos | Esta utilidad proporciona un gráfico de líneas con la diferencia en la cantidad total de perfiles que cumplen los requisitos para un segmento determinado entre las instantáneas diarias más recientes. El período de análisis de tendencias se puede visualizar a lo largo de 30 días, 90 días y 12 meses. |
-| [!UICONTROL Tendencia del tamaño de la audiencia por identidad] | Segmentos | Esta utilidad ilustra la tendencia del tamaño de la audiencia de un segmento concreto en función de un tipo de identidad seleccionado. El período de análisis de tendencias se puede visualizar a lo largo de 30 días, 90 días y 12 meses. |
+For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). -->
 
-**Nuevas funciones**
+<!-- ## Data hygiene {#hygiene}
 
-| Función | Panel | Descripción |
-| ------- | --------- | ----------- |
-| Limpieza de pertenencia a segmentos de perfil huérfano | Perfiles y uso de licencias | El servicio de perfil ahora elimina a los miembros del segmento que quedan diariamente para proporcionar una representación más precisa de sus perfiles en su sistema. Esta limpieza se produce después de que se eliminan todos los fragmentos de perfil de un perfil determinado. Esto puede mostrar una caída en la métrica &quot;Audiencia direccionable&quot; en el panel de uso de licencias y puede mostrar una caída en la métrica &quot;Recuento de perfiles&quot; en el panel de perfiles, ya que estas métricas incluían fragmentos de segmento sobrantes de esta versión. |
+Experience Platform provides a suite of data hygiene capabilities that allow you manage your stored data through programmatic deletions of consumer records and datasets. Using either the [!UICONTROL Data Hygiene] workspace in the UI or through calls to the Data Hygiene API, you can manage your data stores to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
+
+>[!IMPORTANT]
+>
+>Data hygiene capabilities are currently only available for organizations that have purchased the Adobe Shield for Healthcare add-on offering.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Consumer deletion | [Delete consumer records](../../hygiene/ui/delete-consumer.md) from the data lake and Profile store based on primary identity data. |
+| Time to live (TTL) for datasets | [Schedule TTLs](../../hygiene/ui/ttl.md) for Platform datasets.  |
+
+For more information on audit logs in Platform, refer to the [data hygiene overview](../../hygiene/home.md). -->
+
+## Registros de auditoría {#audit-logs}
+
+Experience Platform le permite auditar la actividad de los usuarios en relación con diversos servicios y funcionalidades. Los registros de auditoría proporcionan información sobre quién hizo qué y cuándo.
+
+**Funciones actualizadas**
+
+| Función | Nombre | Descripción | | — | — | — | | Recursos añadidos | <ul><li> Política de control de acceso </li><li> Función </li><li> Registros de auditoría </li><li> Orden de trabajo </li><li> Área de nombres de identidad </li><li> Gráfico de identidad </li><li> Consulta </li><li> Conjunto de datos </li><li> Flujo de datos de origen </li></ul> | Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad. Si la función está habilitada, no es necesario habilitar manualmente la recopilación de registros. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Consulte la documentación para obtener más información sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)y [[!DNL Segments]](../../dashboards/guides/segments.md) tableros.
+Para obtener más información sobre los registros de auditoría en Platform, consulte la [información general sobre registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Flujos de datos {#dataflows}
+## Tableros {#dashboards}
 
-En Platform, los datos se incorporan de muchas fuentes diferentes, se analizan dentro del sistema y se activan en una amplia variedad de destinos. Platform facilita el proceso de seguimiento de este flujo de datos potencialmente no lineal al proporcionar transparencia con flujos de datos.
+Adobe Experience Platform proporciona varios tableros a través de los cuales puede ver información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias.
 
-Los flujos de datos son una representación de trabajos que mueven datos a través de Platform. Estos flujos de datos se configuran en distintos servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, donde el servicio de identidad y el perfil del cliente en tiempo real los utilizan antes de activarse finalmente en los destinos.
+### Tableros de perfiles
+
+El panel de perfiles muestra una instantánea de los datos de atributo (registro) que su organización tiene en el Almacenamiento de perfiles en el Experience Platform.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Superposición de audiencias por el widget de directiva de combinación | Esta utilidad muestra la transición visual de las definiciones de segmentos y le permite optimizar la estrategia de segmentación mediante el estudio de las similitudes entre las definiciones de segmentos. |
+| El recuento de perfiles cambia la tendencia por el widget de identidad | Esta utilidad le ayuda a administrar sus necesidades de activación de destino demostrando el patrón de crecimiento de perfiles filtrados por la identidad requerida. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre los perfiles, consulte la [documentación del panel de perfiles](../../dashboards/guides/profiles.md).
+
+### Tableros de destinos
+
+El panel de destinos muestra una instantánea de los destinos que su organización ha habilitado en Experience Platform.
+
+| Función | Descripción |
+| --- | --- |
+| Audiencias activadas por widget de destino | Esta utilidad le ayuda a comprender de un vistazo el valor de sus destinos en función del número de audiencias activadas. También proporciona acceso fácil a información más detallada sobre los segmentos que se han asignado al destino. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre los destinos, consulte la [documentación del panel de destinos](../../dashboards/guides/destinations.md).
+
+### Tableros de segmentos
+
+El tablero de segmentos proporciona una interfaz de usuario a través de la cual puede ver información importante sobre sus segmentos, tal como se captura durante una instantánea diaria.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Widget de superposición de audiencia | Esta utilidad le permite optimizar su estrategia de segmentación mediante la visualización de las similitudes en los resultados de sus definiciones de segmento. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre los segmentos, consulte la [documentación del tablero de segmentos](../../dashboards/guides/segments.md).
+
+## Recopilación de datos {#data-collection}
+
+Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
 **Nuevas funciones**
 
 | Función | Descripción |
-| ------- | ----------- |
-| Panel de segmentos | Ahora puede utilizar el panel de monitorización para monitorizar los flujos de datos de los segmentos. Para obtener más información, consulte la guía de [monitorización de segmentos en la interfaz de usuario](../../dataflows/ui/monitor-segments.md) |
+| --- | --- |
+| Copiar conjuntos de datos | [Crear una copia de un conjunto de datos existente](../../edge/datastreams/overview.md#copy) y ajuste su configuración según sea necesario, evitando la necesidad de comenzar desde cero. |
+| Importar reglas de asignación de conjuntos de datos | Al configurar la preparación de datos para la recopilación de datos, puede [importar las reglas de asignación de un conjunto de datos existente](../../edge/datastreams/data-prep.md#import-mapping) en lugar de configurar cada asignación de campo manualmente. |
+| Compatibilidad con la asignación de conjuntos de datos para SDK móvil | Ahora puede configurar la preparación de datos para la recopilación de datos en conjuntos de datos que se van a usar con el SDK móvil de Experience Platform. |
+| Compatibilidad con la asignación de conjuntos de datos para objetos XDM | Asignar objetos XDM además de objetos de capa de datos al [configuración de la preparación de datos para la recopilación de datos](../../edge/datastreams/data-prep.md#select-data). |
 
-Para obtener información más general sobre flujos de datos, consulte la [información general sobre flujos de datos](../../dataflows/home.md). Para obtener más información sobre la segmentación, consulte [información general sobre segmentación](../../segmentation/home.md).
+Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
+
+<!-- ## Data Governance {#governance}
+
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+
+**New features**
+
+| Feature | Description | 
+| ------- | ----------- |
+| Consent policy enforcement (limited availability) | If your organization has purchased the Adobe Shield for Healthcare add-on offering, you can now [create consent policies](../../data-governance/policies/user-guide.md#consent-policy) to automatically [enforce customer consents and preferences in segment participation](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation). |
+
+{style="table-layout:auto"}
+
+See the [Data Governance overview](../../data-governance/home.md) for more information on the service. -->
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -80,9 +158,13 @@ Para obtener información más general sobre flujos de datos, consulte la [infor
 **Funciones actualizadas**
 
 | Función | Descripción |
-| --- | --- |
-| Compatibilidad con orígenes Adobe Analytics | El origen de Adobe Analytics ahora admite las funciones de preparación de datos, que le permiten asignar los datos del grupo de informes de Analytics a un esquema XDM de destino al crear un flujo de datos. Consulte el tutorial en [creación de una conexión de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
-| Compatibilidad con la importación de reglas de asignación existentes | Ahora puede importar reglas de asignación de un flujo de datos existente para acelerar las configuraciones del flujo de datos y limitar los errores. Consulte el tutorial en [importación de reglas de asignación existentes](../../data-prep/ui/mapping.md) para obtener más información. |
+| ------- | ----------- |
+| Errores de datos localizados | [!DNL Data Prep] ahora localiza todos los errores de transformación al nivel de atributo (anteriormente al nivel de fila). Los flujos de datos ahora incorporarán filas parciales rellenas de columnas que no tengan errores de transformación, en lugar de ignorar las filas completas. |
+| Transmitir de subida a [!DNL Profile Service] | Transfiera las fuentes con [!DNL Data Prep] para enviar actualizaciones de fila parciales al servicio de perfil mediante la función [[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md)o [[!DNL HTTP API]](../../sources/connectors/streaming/http.md) fuente. Consulte la guía de [streaming upserts](../../data-prep/upserts.md) para obtener más información. |
+
+{style=&quot;table-layout:auto&quot;}
+
+<!-- | Attribute-based access control in [!DNL Data Prep] | You will now only be able to map attributes that you have access to. Attributes that you do not have access to can not be used in pass-through mappings and calculated fields. For more information, see [attribute-based access control in [!DNL Data Prep]](../../data-prep/home.md). **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released. | -->
 
 Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
 
@@ -97,41 +179,18 @@ Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Da
 | Exportar las últimas cualificaciones de perfil [después de la evaluación diaria de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Ahora puede programar una exportación completa de archivos, una vez o a diario, con las últimas cualificaciones de perfil, una vez completada la evaluación diaria de segmentos. |
 | ID de almacén de datos opcional para [Destinos de Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | Para habilitar la personalización de Adobe Target para los usuarios que no puedan implementar el SDK web del Experience Platform, la selección del ID del conjunto de datos es ahora opcional al configurar destinos de Adobe Target. Cuando no utilice un conjunto de datos, los segmentos exportados de Experience Platform a Target solo admitirán la personalización de la siguiente sesión, mientras que la segmentación perimetral estará deshabilitada, junto con todas las [casos de uso](../../destinations/ui/configure-personalization-destinations.md) que dependen de la segmentación de Edge. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
 XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se introducen en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
 
-**Nuevas funciones**
-
-| Función | Descripción |
-| --- | --- |
-| Adición o eliminación de campos estándar individuales para un esquema | La interfaz de usuario del Editor de esquemas ahora le permite añadir partes de grupos de campos estándar a sus esquemas, lo que proporciona más flexibilidad para los campos que elija incluir sin necesidad de crear recursos personalizados desde cero.<br><br>Ahora también puede definir campos personalizados específicos directamente dentro de la estructura de esquema y asignarlos a un grupo de campos personalizados nuevo o existente sin necesidad de crear o editar el grupo de campos de antemano.<br><br>Consulte la guía de [creación y edición de esquemas en la interfaz de usuario](../../xdm/ui/resources/schemas.md) para obtener más información sobre estos nuevos flujos de trabajo. |
-
-{style=&quot;table-layout:auto&quot;}
-
 **Nuevos componentes XDM**
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Esquema global | [[!UICONTROL Solicitud de operación de higiene de datos]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Captura los detalles de una solicitud de limpieza de datos para eliminar o modificar registros en un conjunto de datos o simulador de pruebas especificado. |
-| Descriptor | [[!UICONTROL Descriptor de granularidad de series temporales]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Indica la granularidad de los datos de resumen y series temporales. Cuando se aplica a un esquema, el esquema `timestamp` es la primera marca de tiempo de un periodo de esta granularidad. |
-| Clase | [[!UICONTROL Métricas de resumen de XDM]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Proporciona métricas resumidas previamente con dimensiones de agrupación, como los resultados de un SQL SELECT con un GROUP BY. |
-| Grupo de campos | [[!UICONTROL Mapa de resultados de evaluación de políticas de consentimiento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Captura el resultado de la evaluación de la directiva de consentimiento para un individuo. |
-| Grupo de campos | [[!UICONTROL Búsqueda del sitio]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Captura la información relacionada con la búsqueda del sitio, como la consulta de búsqueda, el filtrado y el pedido. |
-| Grupo de campos | [[!UICONTROL Combinar posibles clientes]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Captura los detalles de un evento en el que se combinan dos o más posibles clientes. |
-| Grupo de campos | [[!UICONTROL Correo electrónico enviado]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Captura los detalles de un evento en el que se envía un correo electrónico a un destinatario. |
-| Grupo de campos | [[!UICONTROL Definición de campos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | Captura valores calculados mediante el proceso de vinculación de identidad para un evento. |
-| Grupo de campos | [[!UICONTROL Detalle del destinatario secundario para auditoría]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Grupo de campos de Adobe Journey Optimizer que captura un detalle de destinatario secundario para una auditoría. |
-| Grupo de campos | [[!UICONTROL Detalles de relación de persona de cuenta comercial XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Captura detalles relacionados con una relación entre cuenta y persona. |
-| Grupo de campos | [[!UICONTROL Detalles de la persona de la cuenta]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Captura detalles relacionados con una relación entre cuenta y persona. |
-| Tipo de datos | [[!UICONTROL Carro de compras]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | Captura información sobre un carro de compras de comercio electrónico. |
-| Tipo de datos | [[!UICONTROL Envío]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Captura la información de envío de uno o más productos. |
-| Tipo de datos | [[!UICONTROL Búsqueda del sitio]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Captura información sobre la actividad de búsqueda de sitios. |
-| Extensión (Workfront) | [[!UICONTROL Atributos de tarea operativa]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | Captura detalles relacionados con una tarea operativa. |
-| Extensión (Workfront) | [[!UICONTROL Atributos del Portfolio de trabajo]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Captura detalles relacionados con un portafolio de trabajo. |
-| Extensión (Workfront) | [[!UICONTROL Atributos del programa de trabajo]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Captura detalles relacionados con un programa de trabajo. |
-| Extensión (Workfront) | [[!UICONTROL Atributos del proyecto de trabajo]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Captura detalles relacionados con un proyecto de trabajo. |
+| Grupo de campos | [[!UICONTROL Conjunto de cambios]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/changeset.schema.json) | Captura los cambios en el nivel de fila de los conjuntos de datos. Este grupo de campos se puede utilizar en cualquier clase. |
+| Grupo de campos | [[!UICONTROL Claves de referencia]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-reference-keys.schema.json) | Captura claves de referencia para esquemas de ExperienceEvent, lo que permite crear relaciones con esquemas basados en otras clases. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -139,60 +198,34 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Actualizar descripción |
 | --- | --- | --- |
-| Esquema global | [[!UICONTROL Destinos ]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Nuevos valores de enumeración para `destinationCategory`. |
-| Descriptor | [[!UICONTROL Descriptor de nombres descriptivos]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | Se agregó compatibilidad para eliminar los valores sugeridos (`meta:enum`) que no son necesarios en los campos estándar. |
-| Grupo de campos | [[!UICONTROL Proceso de inicio de sesión del usuario]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` se ha añadido. |
-| Tipo de datos | [[!UICONTROL Comercio]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Se han agregado varios campos relacionados con el carro de compras. |
-| Tipo de datos | [[!UICONTROL Elemento de lista de productos]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Se han añadido nuevos campos para las opciones seleccionadas y la cantidad de descuento. |
-| Extensión (servicios inteligentes) | [[!UICONTROL Optimización del tiempo de envío de JourneyAI de servicios inteligentes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Optimizar el formato de almacenamiento para puntuaciones de tiempo de envío. |
-| Extensión (Workfront) | [[!UICONTROL Evento de cambio de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Varios campos se han sustituido por un `workfront:customData` para campos de formulario personalizados. |
-| Extensión (Workfront) | [[!UICONTROL Atributos de tarea de trabajo]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Se han añadido varios campos. |
-| Extensión (Workfront) | [[!UICONTROL Objeto Work]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Nuevos campos para el tipo de objeto principal y campos de formulario personalizados. |
+| Comportamiento | [[!UICONTROL Esquema de series temporales]](https://github.com/surbhi114/xdm/blob/master/components/behaviors/time-series.schema.json) | Actualizado `eventType` para incluir varios tipos de eventos nuevos relacionados con los medios y un caso de uso entrante de canal web para Adobe Journey Optimizer. |
+| Esquema global | [[!UICONTROL Destino]](https://github.com/tumulurik/xdm/blob/master/schemas/destinations/destination.schema.json) | Se han eliminado los valores de enumeración de `xdm:destinationCategory`. |
+| Grupo de campos | [[!UICONTROL Estado de registro]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/record-status.schema.json) | Se ha actualizado el estado del grupo de campos de `experimental` a `stable`. |
+| Grupo de campos | (Varios) | Se han actualizado varios grupos de campos B2B para que ciertos campos de ID queden obsoletos en favor de los campos de tipo clave que utilizan la variable [[!UICONTROL Fuente B2B]](../../xdm/data-types/b2b-source.md) tipo de datos. Los campos de ID anteriores quedarán obsoletos en una actualización futura. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1533/files#diff-720c0bb1d1cbaf622f5656c2a4b62d35830c75f6563794da72a280a6a520fbc1) para obtener una lista completa de los cambios realizados en los grupos de campos afectados. |
+| Tipo de datos | [[!UICONTROL Detalles del explorador]](https://github.com/liljenback/xdm/blob/master/components/datatypes/browserdetails.schema.json) | Se ha añadido un nuevo campo `xdm:userAgentClientHints` que captura información contextual sobre el agente de usuario que interactúa con el explorador. |
+| Tipo de datos | [[!UICONTROL Información multimedia]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/media.schema.json) | Se ha añadido un `xdm:playhead` para capturar el tiempo del cabezal de reproducción de un fragmento de contenido multimedia. Se ha corregido la validación de patrones para `xdm:videoSegment`. |
+| Tipo de datos | [[!UICONTROL Clasificación]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/external/iptc/rating.schema.json) | `iptc4xmpExt:RatingSourceLink` ya no es un campo obligatorio. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
 
-## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
+## Servicio de consultas {#query-service}
 
-Los servicios AI/ML permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos de uso de experiencias del cliente. Esto permite que los analistas de marketing configuren predicciones específicas de las necesidades de una empresa mediante configuraciones de nivel empresarial sin necesidad de experiencia en ciencia de datos.
-
-### Attribution AI
-
-Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
-
-**Funciones actualizadas**
-
-| Función | Descripción |
-| ------- | ----------- |
-| Compatibilidad con varios conjuntos de datos | La función Conjunto de datos múltiples ahora es compatible con todos los conjuntos de datos de Evento de experiencia, así como con la selección de Mapa de identidad como identidad. Los clientes pueden seleccionar el mapa de identidad y cualquier ID asociado siempre que haya un área de nombres de identidad común entre conjuntos de datos. Attribution AI admite los siguientes esquemas: Adobe Analytics, Evento De Experiencia, Evento De Experiencia Del Consumidor. Para obtener más información sobre la compatibilidad con Multi Dataset en Attribution AI, consulte la [Guía del usuario del Attribution AI](../../intelligent-services/attribution-ai/user-guide.md). |
-
-Para obtener más información, consulte [!DNL Intelligent Services], consulte la [[!DNL Intelligent Services] información general](../../intelligent-services/home.md).
-
-### Customer AI
-
-La AI del cliente disponible en Real-time Customer Data Platform se utiliza para generar puntuaciones de tendencia personalizadas, como la pérdida y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
-
-**Funciones actualizadas**
-
-| Función | Descripción |
-| ------- | ----------- |
-| Compatibilidad con varios conjuntos de datos | La función Conjunto de datos múltiples ahora es compatible con todos los conjuntos de datos de Evento de experiencia, así como con la selección de Mapa de identidad como identidad. Los clientes pueden seleccionar el mapa de identidad y cualquier ID asociado siempre que haya un área de nombres de identidad común entre conjuntos de datos. Customer AI admite los siguientes esquemas: Adobe Analytics, Experience Event, Consumer Experience Event y el esquema de Adobe Audience Manager. Para obtener más información sobre la compatibilidad con Multi Dataset en Customer AI, consulte la [Guía del usuario de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
-| Nuevas métricas de evaluación de modelos en Customer AI | Los nuevos gráficos de ganancia en Customer AI permiten a los especialistas en marketing determinar el tamaño del grupo objetivo en función de sus objetivos de presupuesto y ROI. Los nuevos gráficos de alza miden la calidad del modelo, lo que proporciona una mejor visibilidad del alza que obtendrían sobre la orientación aleatoria. Para obtener más información, consulte la [descubra perspectivas con Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) documento. |
-
-Para obtener más información, consulte [!DNL Intelligent Services], consulte la [[!DNL Intelligent Services] información general](../../intelligent-services/home.md).
-
-## Real-time Customer Data Platform edición B2B {#B2B}
-
-El CDP B2B Edition en tiempo real, que se basa en Real-time Customer Data Platform (CDP en tiempo real), está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
+El servicio de consultas permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL data lake]. Puede unirse a cualquier conjunto de datos desde la [!DNL data lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para su uso en informes, Data Science Workspace o para su incorporación al perfil del cliente en tiempo real.
 
 **Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con `isDeleted` funcionalidad | Todo [!DNL Marketo] conjuntos de datos excepto `Activities` ahora admita el `isDeleted` asignación. La nueva asignación se agrega automáticamente a los flujos de datos B2B existentes. Puede usar la variable `isDeleted` asignación para filtrar los registros que se han eliminado para que sus datos en la [!DNL Data Lake] es coherente con los datos de origen. Consulte la [[!DNL Marketo] guía de campos de asignación](../../sources/connectors/adobe-applications/mapping/marketo.md) para obtener más información sobre `isDeleted`. |
+| Integración del registro de auditoría del servicio de consultas | La integración del registro de auditoría del servicio de consulta proporciona registros de las acciones de usuario relacionadas con la consulta con el fin de solucionar problemas o cumplir con las políticas y los requisitos regulatorios de administración de datos corporativos. Consulte la [documentación de integración del registro de auditoría](../../query-service/data-governance/audit-log-guide.md) para información completa |
+| CONSTRUCCIÓN SQL ALTER TABLE | Utilice SQL para establecer identidades principales en un conjunto de datos ad hoc. El servicio de consulta le permite marcar las columnas del conjunto de datos como identidades principales o secundarias directamente a través de SQL mediante el uso de `ALTER TABLE` comando. |
 
-Para obtener más información sobre Real-time Customer Data Platform B2B Edition, consulte la [Información general de B2B](../../rtcdp/b2b-overview.md).
+{style=&quot;table-layout:auto&quot;}
+
+<!-- For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md). -->
+
+Para obtener más información sobre las capacidades del servicio de consulta, consulte la [Información general del servicio de consultas](../../query-service/home.md)
 
 ## Fuentes {#sources}
 
@@ -200,12 +233,14 @@ Adobe Experience Platform puede ingerir datos de fuentes externas, al mismo tiem
 
 Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
 
-**Funciones actualizadas**
-
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con [!DNL OneTrust Integration] | Ahora puede usar la variable [!DNL OneTrust Integration] fuente para introducir datos de consentimiento y preferencias de su [!DNL OneTrust] a Platform. Consulte la documentación sobre [crear un [!DNL OneTrust Integration] conexión de origen](../../sources/connectors/consent-and-preferences/onetrust.md) para obtener más información. |
-| Compatibilidad con [!DNL Square] | Ahora puede usar la variable [!DNL Square] fuente para introducir datos de pagos de su [!DNL Square] a Platform. |
-| Compatibilidad con la eliminación de flujos de datos de Atributos del cliente | Ahora puede eliminar flujos de datos creados con el conector de origen de Atributos del cliente. |
+| Lanzamiento beta de [!DNL Zendesk] source | Utilice la variable [!DNL Zendesk] fuente para introducir datos de usuario, agente y organización de su [!DNL Zendesk] instancia para [!DNL Profile] enriquecimiento. Consulte la [[!DNL Zendesk] información general de la fuente](../../sources/connectors/customer-success/zendesk.md) para obtener más información. |
+| Compatibilidad con la recopilación de datos de Adobe | Utilice el catálogo de fuentes para acceder a los datos de la recopilación de datos de Experience Edge, incluida la preparación de datos para la recopilación de datos y la compatibilidad mejorada con las advertencias de datos de la preparación de datos. Consulte la [Resumen de la fuente de recopilación de datos de Adobe](../../sources/connectors/adobe-applications/data-collection.md) para obtener más información. |
+| Compatibilidad con la ingesta de archivos con `ISO-8859-1` encoding | Utilice la variable `encoding` parámetro a ingesta `ISO-8859-1` archivos codificados con una fuente de almacenamiento en la nube para Platform con el [!DNL Flow Service] API. Consulte la guía de [creación de una conexión de origen de almacenamiento en la nube](../../sources/tutorials/api/collect/cloud-storage.md) para obtener más información. |
+
+{style=&quot;table-layout:auto&quot;}
+
+<!-- | Attribute-based access control in sources | You can now manage and control access to individual source fields and attributes during ingestion. **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.  | -->
 
 Para obtener más información sobre las fuentes, consulte la [información general sobre fuentes](../../sources/home.md).
