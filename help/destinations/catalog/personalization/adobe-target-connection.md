@@ -5,8 +5,8 @@ description: Adobe Target es una aplicación que proporciona funciones de person
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '752'
+ht-degree: 1%
 
 ---
 
