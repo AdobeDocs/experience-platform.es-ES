@@ -5,9 +5,9 @@ title: Aplicación automática de directivas
 topic-legacy: guide
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar segmentos en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 679b9eb621baff99342fb55c0a13a60f5ef256bd
+source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
@@ -106,11 +106,11 @@ Select **[!UICONTROL Vista de lista]** para mostrar el linaje de datos como una 
 
 ![](../images/enforcement/list-view.png)
 
-### Evaluación de la directiva de consentimiento (Beta) {#consent-policy-evaluation}
+### Evaluación de la directiva de consentimiento {#consent-policy-evaluation}
 
 >[!IMPORTANT]
 >
->Las políticas de consentimiento están actualmente en fase beta y es posible que su organización no tenga acceso a ellas todavía.
+>Actualmente, las políticas de consentimiento solo están disponibles para las organizaciones que han adquirido Adobe Shield para el sector sanitario.
 
 Si tiene [crear políticas de consentimiento](../policies/user-guide.md#consent-policy) y están activando un segmento en un destino, puede ver cómo las políticas de consentimiento afectan al porcentaje de perfiles que se incluyen en la activación.
 

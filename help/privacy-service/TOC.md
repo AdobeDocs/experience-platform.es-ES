@@ -4,10 +4,10 @@ user-guide-title: Ayuda de Adobe Experience Platform Privacy Service
 breadcrumb-title: Guía de Privacy Service
 user-guide-description: Administre las solicitudes de datos de los clientes para cumplir con las regulaciones legales de privacidad, como el RGPD y la CCPA.
 feature: Privacy
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: e74d0658d5c389a22497301d289e0310d28731f0
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 48%
+source-wordcount: '83'
+ht-degree: 51%
 
 ---
 
@@ -32,7 +32,6 @@ ht-degree: 48%
    * [Información general](./regulations/overview.md)
    * [Preguntas frecuentes](./regulations/faq.md)
    * [Terminología](./regulations/terminology.md)
-* [API de higiene de datos (Alpha)](./data-hygiene-api.md)
 * [Guía de resolución de problemas](./troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [Notas de la versión](./release-notes.md)

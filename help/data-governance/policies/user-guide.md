@@ -5,9 +5,9 @@ title: Administrar políticas de uso de datos en la interfaz de usuario
 topic-legacy: policies
 description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el espacio de trabajo Directivas de la interfaz de usuario del Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
+source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1329'
 ht-degree: 0%
 
 ---
@@ -79,11 +79,11 @@ La variable **[!UICONTROL Examinar]** vuelve a aparecer la pestaña , que ahora 
 
 ![](../images/policies/created-policy.png)
 
-### Crear una directiva de consentimiento (Beta) {#consent-policy}
+### Crear una directiva de consentimiento {#consent-policy}
 
 >[!IMPORTANT]
 >
->Las políticas de consentimiento están actualmente en fase beta y es posible que su organización no tenga acceso a ellas todavía.
+>Actualmente, las políticas de consentimiento solo están disponibles para las organizaciones que han adquirido Adobe Shield para el sector sanitario.
 
 Si elige crear una directiva de consentimiento, aparece una nueva pantalla que le permite configurar la nueva directiva.
 
@@ -140,7 +140,7 @@ Después de crear y habilitar una directiva de consentimiento, puede obtener una
 
 De forma predeterminada, todas las políticas de uso de datos (incluidas las políticas principales proporcionadas por Adobe) están desactivadas. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
 
-Puede habilitar o deshabilitar las directivas desde la **[!UICONTROL Examinar]** en la ficha **[!UICONTROL Políticas]** espacio de trabajo. Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En **[!UICONTROL Estado]**, seleccione el botón de alternancia para activar o desactivar la directiva.
+Puede habilitar o deshabilitar las directivas desde la **[!UICONTROL Examinar]** en la ficha **[!UICONTROL Políticas]** espacio de trabajo. Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En **[!UICONTROL Estado]**, seleccione el botón de alternancia para habilitar o deshabilitar la directiva.
 
 ![](../images/policies/enable-policy.png)
 
