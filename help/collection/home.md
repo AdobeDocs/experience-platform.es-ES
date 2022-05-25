@@ -5,7 +5,7 @@ title: Información general sobre la recopilación de datos
 topic-legacy: overview
 description: Obtenga información sobre las distintas tecnologías que intervienen en la recopilación de datos sobre las experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 6%
@@ -26,7 +26,7 @@ Las tecnologías de recopilación de datos proporcionadas por el Experience Plat
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Etiquetas](../tags/home.md)
-* [Corrientes de datos](../edge/fundamentals/datastreams.md)
+* [Corrientes de datos](../edge/datastreams/overview.md)
 * [Reenvío de eventos](../tags/ui/event-forwarding/overview.md)
 * [SDK web de Adobe Experience Platform](../edge/home.md)
 * [SDK móvil de Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
@@ -46,7 +46,7 @@ La compresión de estas bibliotecas acelera la recopilación de datos y consolid
 
 ## Red perimetral de plataforma y conjuntos de datos {#edge}
 
-Platform Edge Network es una red global de servidores distribuidos, rápidos y confiables que pueden recibir y procesar datos a una escala tremenda. Con las etiquetas, puede configurar [datastreams](../edge/fundamentals/datastreams.md) para productos como Adobe Target, Adobe Audience Manager y Adobe Analytics, que permiten activar estos productos en el servidor sin cambiar el código del lado del cliente.
+Platform Edge Network es una red global de servidores distribuidos, rápidos y confiables que pueden recibir y procesar datos a una escala tremenda. Con las etiquetas, puede configurar [datastreams](../edge/datastreams/overview.md) para productos como Adobe Target, Adobe Audience Manager y Adobe Analytics, que permiten activar estos productos en el servidor sin cambiar el código del lado del cliente.
 
 ![Datastreams y soluciones de Adobe](./images/home/adobe-solutions.png)
 

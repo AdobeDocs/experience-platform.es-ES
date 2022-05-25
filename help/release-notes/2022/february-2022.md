@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, febrero de 2022
 description: Notas de la versión de febrero de 2022 para Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 3%
@@ -45,8 +45,8 @@ Platform proporciona un conjunto de tecnologías que le permiten recopilar datos
 
 | Función | Descripción |
 | --- | --- |
-| Flujo de trabajo de IU mejorado para la configuración del conjunto de datos | Se ha actualizado el flujo de trabajo para crear un nuevo conjunto de datos en la interfaz de usuario de la recopilación de datos. Al añadir servicios a un conjunto de datos, solo los servicios a los que tiene acceso se incluirán en la lista de opciones. Consulte la guía de [configuración de un conjunto de datos](../../edge/fundamentals/datastreams.md) para obtener más información. |
-| Preparación de datos para la recopilación de datos | Si utiliza el SDK web de Adobe Experience Platform, ahora puede aprovechar las funciones de preparación de datos para asignar los datos al Modelo de datos de experiencia (XDM) en el servidor. Consulte la sección sobre [Preparación de datos para la recopilación de datos](../../edge/fundamentals/datastreams.md#data-prep) en la guía de conjuntos de datos para obtener más información. |
+| Flujo de trabajo de IU mejorado para la configuración del conjunto de datos | Se ha actualizado el flujo de trabajo para crear un nuevo conjunto de datos en la interfaz de usuario de la recopilación de datos. Al añadir servicios a un conjunto de datos, solo los servicios a los que tiene acceso se incluirán en la lista de opciones. Consulte la guía de [configuración de un conjunto de datos](../../edge/datastreams/overview.md) para obtener más información. |
+| Preparación de datos para la recopilación de datos | Si utiliza el SDK web de Adobe Experience Platform, ahora puede aprovechar las funciones de preparación de datos para asignar los datos al Modelo de datos de experiencia (XDM) en el servidor. Consulte la sección sobre [Preparación de datos para la recopilación de datos](../../edge/datastreams/data-prep.md) en la guía de conjuntos de datos para obtener más información. |
 | ID de dispositivos de origen | Ahora puede enviar sus propios ID de dispositivo a la red perimetral de Adobe Experience Platform al recopilar datos de clientes mediante el SDK web de Platform, lo que proporciona una solución alternativa a las recientes restricciones del explorador en los planes de vida de cookies de terceros. Consulte la guía de [ID de dispositivos de origen](../../edge/identity/first-party-device-ids.md) para obtener más información. |
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).

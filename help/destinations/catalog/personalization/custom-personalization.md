@@ -3,7 +3,7 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión personalizada personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a segmentos de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platfor
 
 ## Tipo de exportación y frecuencia {#export-type-frequency}
 
-**Solicitud de perfil** : está solicitando todos los segmentos asignados en el destino de personalización personalizado para un solo perfil. Se pueden configurar diferentes destinos de personalización personalizados para diferentes [Almacenes de datos de recopilación de datos de Adobe](../../../edge/fundamentals/datastreams.md).
+**Solicitud de perfil** : está solicitando todos los segmentos asignados en el destino de personalización personalizado para un solo perfil. Se pueden configurar diferentes destinos de personalización personalizados para diferentes [Almacenes de datos de recopilación de datos de Adobe](../../../edge/datastreams/overview.md).
 
 ## Casos de uso {#use-cases}
 
@@ -73,7 +73,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 * **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
 * **[!UICONTROL Descripción]**: Escriba una descripción para el destino. Por ejemplo, puede mencionar para qué campaña utiliza este destino. Este campo es opcional.
 * **[!UICONTROL Alias de integración]**: Este valor se envía al SDK web del Experience Platform como nombre de objeto JSON.
-* **[!UICONTROL ID de almacén de datos]**: Esto determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Consulte [Configuración de un conjunto de datos](../../../edge/fundamentals/datastreams.md) para obtener más información.
+* **[!UICONTROL ID de almacén de datos]**: Esto determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Consulte [Configuración de un conjunto de datos](../../../edge/datastreams/overview.md) para obtener más información.
 
 ## Activar segmentos en este destino {#activate}
 

@@ -5,10 +5,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: 7eb89d44bdb6e3c6e6aede0a1ce20c02b19284fd
+source-git-commit: 1a53d98d8a0b47b96d54e79d93f2ece2d4b587a6
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 31%
+source-wordcount: '178'
+ht-degree: 34%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 31%
 * [Información general del SDK web de plataforma](home.md)
 * Aspectos básicos {#fundamentals}
    * [Requisitos previos](fundamentals/prerequisite.md)
-   * [Configuración de un conjunto de datos](fundamentals/datastreams.md)
    * [Instalación del SDK](fundamentals/installing-the-sdk.md)
    * [Configuración del SDK](fundamentals/configuring-the-sdk.md)
    * [Ejecutar, comandos](fundamentals/executing-commands.md)
@@ -27,6 +26,9 @@ ht-degree: 31%
    * [Configuración de un CSP](fundamentals/configuring-a-csp.md)
    * [Interaccione con varias propiedades](fundamentals/interacting-with-multiple-properties.md)
    * [Casos de uso admitidos](fundamentals/supported-use-cases.md)
+* Corrientes de datos {#datastreams}
+   * [Información general](./datastreams/overview.md)
+   * [Preparación de datos para la recopilación de datos](./datastreams/data-prep.md)
 * Identidad {#identity}
    * [Información general](identity/overview.md)
    * [ID de dispositivos de origen](identity/first-party-device-ids.md)

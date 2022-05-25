@@ -2,7 +2,7 @@
 title: Configurar la extensión del SDK web de Adobe Experience Platform
 description: Configurar la extensión de la etiqueta SDK web de Adobe Experience Platform en la interfaz de usuario de la recopilación de datos.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 6%
@@ -51,7 +51,7 @@ La variable [!UICONTROL Dominio de Edge] es el dominio desde el cual la extensi�
 
 Cuando se envía una solicitud a la red perimetral de Adobe Experience Platform, se utiliza un ID de conjunto de datos para hacer referencia a la configuración del lado del servidor. Puede actualizar la configuración sin tener que realizar cambios de código en el sitio web.
 
-Consulte la guía de [datastreams](../fundamentals/datastreams.md) para obtener más información.
+Consulte la guía de [datastreams](../datastreams/overview.md) para obtener más información.
 
 
 ## [!UICONTROL Privacidad]

@@ -4,7 +4,7 @@ description: Aprenda a utilizar la API de servidor de red perimetral para intera
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: recopilación de datos; salida; analytics; API de Adobe Experience Platform Edge Network;Analytics
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 08b1924c518a76873051b4038d8a1fe38dc7ddac
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 2%
@@ -19,7 +19,7 @@ La recopilación de datos de Adobe Analytics funciona traduciendo los datos XDM 
 
 También puede [asignación manual de valores XDM](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) a variables de Analytics heredadas.
 
-Para permitir que Adobe Analytics reciba datos de la API del servidor, debe [configurar el conjunto de datos](../edge/fundamentals/datastreams.md#adobe-analytics-settings) para reenviar eventos a Adobe Analytics, introduzca la ID del grupo de informes en la página de configuración del conjunto de datos.
+Para permitir que Adobe Analytics reciba datos de la API del servidor, debe [configurar el conjunto de datos](../edge/datastreams/overview.md#adobe-analytics-settings) para reenviar eventos a Adobe Analytics, introduzca la ID del grupo de informes en la página de configuración del conjunto de datos.
 
 ![Configuración del almacén de datos de Adobe Analytics](assets/analytics-datastream.png)
 
@@ -33,7 +33,7 @@ POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Solicitud {#request}
 
-El ejemplo siguiente incluye varios valores asignados automáticamente desde la variable `_experience.analytics` grupo de campos. También incluye capas de datos basadas en JSON. Aunque estas capas de datos no se pueden asignar automáticamente, es posible utilizar [Preparación de datos para la recopilación de datos](../edge/fundamentals/datastreams.md#data-prep) para asignar estos valores a un esquema que contenga grupos de campos a los que se hace referencia anteriormente.
+El ejemplo siguiente incluye varios valores asignados automáticamente desde la variable `_experience.analytics` grupo de campos. También incluye capas de datos basadas en JSON. Aunque estas capas de datos no se pueden asignar automáticamente, es posible utilizar [Preparación de datos para la recopilación de datos](../edge/datastreams/data-prep.md) para asignar estos valores a un esquema que contenga grupos de campos a los que se hace referencia anteriormente.
 
 Todos los valores que los usuarios asignen a esos campos se asignarán automáticamente a los valores correspondientes de Analytics, como si se incluyeran en la solicitud de API.
 

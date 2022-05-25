@@ -6,7 +6,7 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Obtenga información sobre cómo configurar destinos de personalización para la personalización de la misma página y de la página siguiente.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Al configurar el conjunto de datos, en **[!UICONTROL Adobe Experience Platform]*
 
 ![Configuración del almacén de datos](../assets/ui/configure-personalization-destinations/datastream-config.png)
 
-Para obtener más información sobre cómo configurar un conjunto de datos, siga las instrucciones descritas en la sección [Documentación del SDK web de plataforma](../../edge/fundamentals/datastreams.md).
+Para obtener más información sobre cómo configurar un conjunto de datos, siga las instrucciones descritas en la sección [Documentación del SDK web de plataforma](../../edge/datastreams/overview.md).
 
 ## Paso 2: Configurar el destino personalizado {#configure-destination}
 

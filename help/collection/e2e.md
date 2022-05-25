@@ -2,7 +2,7 @@
 title: Información general de extremo a extremo de la recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las tecnologías de recopilación de datos proporcionadas por Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: a1369c0d7af5808d7ff830ce017e686f7697181e
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 0%
@@ -101,7 +101,7 @@ En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL
 
 ![Corrientes de datos](./images/e2e/datastreams.png)
 
-Los requisitos de configuración de un conjunto de datos dependen de los productos y capacidades a los que envía los datos. Para obtener información detallada sobre las opciones de configuración de cada producto, consulte la [información general sobre datastreams](../edge/fundamentals/datastreams.md).
+Los requisitos de configuración de un conjunto de datos dependen de los productos y capacidades a los que envía los datos. Para obtener información detallada sobre las opciones de configuración de cada producto, consulte la [información general sobre datastreams](../edge/datastreams/overview.md).
 
 ## Instalación y configuración del SDK web {#install}
 

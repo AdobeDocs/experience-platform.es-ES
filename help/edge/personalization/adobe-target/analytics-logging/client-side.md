@@ -4,7 +4,8 @@ description: Obtenga información sobre cómo habilitar el registro en el lado d
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;registro;sdk web;experience;platform;
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 4%
@@ -39,7 +40,7 @@ Las siguientes subsecciones describen cómo habilitar el registro del lado del c
 
 ### Habilitar el registro en el lado del cliente de Analytics {#enable-analytics-client-side-logging}
 
-Para tener en cuenta que el registro del lado del cliente de Analytics está habilitado para la implementación, debe deshabilitar la configuración de Adobe Analytics en su [datastream](../../../fundamentals/datastreams.md).
+Para tener en cuenta que el registro del lado del cliente de Analytics está habilitado para la implementación, debe deshabilitar la configuración de Adobe Analytics en su [datastream](../../../datastreams/overview.md).
 
 ![Configuración del almacén de datos de Analytics deshabilitada](../assets/disable-analytics-datastream.png)
 
