@@ -2,16 +2,16 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 73aaf93e4d11c9e6dd20dfaaf64501eda9220ef8
 workflow-type: tm+mt
-source-wordcount: '2916'
-ht-degree: 5%
+source-wordcount: '2613'
+ht-degree: 6%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de publicación: 27 de abril de 2022**
+**Fecha de versión: 25 de mayo de 2022**
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
@@ -19,7 +19,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Flujos de datos](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
-- [Destinos](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Real-time Customer Data Platform edición B2B](#B2B)
 - [Fuentes](#sources)
@@ -94,27 +94,9 @@ Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Da
 
 | Función | Descripción |
 | ----------- | ----------- |
-| Conectores de destino empresarial avanzados | Ahora hay tres conectores de destino empresariales disponibles: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)y [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> La disponibilidad general de los conectores de destino empresarial incluye todas las funciones ofrecidas anteriormente en la fase beta y más: <ul><li>Nuevas funciones de autenticación, incluidas [Firma de acceso compartido en centros de eventos de Azure](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) y más [tipos de autenticación](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens de portador, OAuth 2) en el destino de la API HTTP;</li><li>[Rellenar datos de perfil históricos](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (envío de perfiles históricos cualificados para el segmento cuando se activa por primera vez);</li><li>Ahora se admiten métricas de ejecución de flujo de datos para estos destinos;</li><li>[Metadatos de segmentos adicionales](../../destinations/catalog/streaming/http-destination.md#destination-details) incluido en la carga útil de datos, incluidos los nombres de segmentos y las marcas de tiempo de los segmentos;</li><li>Compatibilidad con [direcciones IP estáticas](/help/destinations/catalog/streaming/ip-address-allow-list.md) para clientes que necesitan lista de permitidos de Experience Platform.</li></ul> |
-| Alertas en contexto para flujos de datos de destino | Ahora puede [suscripción a alertas](../../destinations/ui/alerts.md) al crear un flujo de datos de destino, para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo de datos. Puede optar por recibir alertas en la interfaz de usuario del Experience Platform o por correo electrónico. |
+| Exportar las últimas cualificaciones de perfil [después de la evaluación diaria de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Ahora puede programar una exportación completa de archivos, una vez o a diario, con las últimas cualificaciones de perfil, una vez completada la evaluación diaria de segmentos. |
+| ID de almacén de datos opcional para [Destinos de Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | Para habilitar la personalización de Adobe Target para los usuarios que no puedan implementar el SDK web del Experience Platform, la selección del ID del conjunto de datos es ahora opcional al configurar destinos de Adobe Target. Cuando no utilice un conjunto de datos, los segmentos exportados de Experience Platform a Target solo admitirán la personalización de la siguiente sesión, mientras que la segmentación perimetral estará deshabilitada, junto con todas las [casos de uso](../../destinations/ui/configure-personalization-destinations.md) que dependen de la segmentación de Edge. |
 
-### Proceso de versiones para conectores de destino empresarial avanzados {#release-process-enterprise-destinations}
-
-Para los destinos de Amazon Kinesis, Azure Event Hubs y HTTP API durante el proceso de lanzamiento (a partir del 27 de abril), verá la tarjeta de destino Beta anterior, así como la nueva tarjeta de destino disponible de forma general (GA) en el catálogo de destinos. Los flujos de datos configurados por los clientes que utilicen los destinos beta se migrarán en los próximos días a la versión GA del mismo destino. Esta migración debería completarse finalmente antes del final del viernes 29 de abril. Los destinos Beta seguirán estando visibles durante este breve periodo de tiempo y etiquetados como **Obsoleto**.
-
-Si ha estado utilizando estos destinos en la fase beta, tenga en cuenta lo siguiente:
-
-- Si anteriormente ha estado en versión beta con cualquiera de los 3 destinos, no es necesario realizar ninguna acción. Todos los flujos de datos configurados como parte de Beta seguirán funcionando y se migrarán a la versión GA.
-- Si desea configurar estos destinos a partir del 27 de abril, hágalo con la nueva versión GA de los destinos.
-- Las tarjetas beta marcadas como obsoletas se eliminarán una vez finalizada la operación de lanzamiento, estimada para finales del viernes 29 de abril. El equipo de ingeniería del Experience Platform realiza un seguimiento atento para comprobar si la operación de lanzamiento se ha realizado correctamente.
-
-**Nuevos destinos**
-
-| Destino | Descripción |
-| ----------- | ----------- |
-| [!DNL Criteo] | Conecte y active los datos en la [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) plataforma publicitaria. |
-| [!DNL Sendgrid] | Conecte y active los datos en la [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) para correos electrónicos de marketing y transaccionales. |
-
-Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
