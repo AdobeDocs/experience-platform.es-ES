@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
+source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
 workflow-type: tm+mt
 source-wordcount: '1553'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -71,9 +71,11 @@ Experience Platform le permite auditar la actividad de los usuarios en relación
 
 **Funciones actualizadas**
 
-| Función | Nombre | Descripción | | — | — | — | | Recursos añadidos | <ul><li> Política de control de acceso </li><li> Función </li><li> Registros de auditoría </li><li> Orden de trabajo </li><li> Área de nombres de identidad </li><li> Gráfico de identidad </li><li> Consulta </li><li> Conjunto de datos </li><li> Flujo de datos de origen </li></ul> | Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad. Si la función está habilitada, no es necesario habilitar manualmente la recopilación de registros. |
+| Función | Nombre | Descripción |
+| --- | --- | --- |
+| Recursos añadidos | <ul><li> Política de control de acceso </li><li> Función </li><li> Registros de auditoría </li><li> Orden de trabajo </li><li> Área de nombres de identidad </li><li> Gráfico de identidad </li><li> Consulta </li><li> Conjunto de datos </li><li> Flujo de datos de origen </li></ul> | Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad. Si la función está habilitada, no es necesario habilitar manualmente la recopilación de registros. |
 
-
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre los registros de auditoría en Platform, consulte la [información general sobre registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md).
 
