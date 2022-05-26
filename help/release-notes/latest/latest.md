@@ -73,7 +73,7 @@ Experience Platform le permite auditar la actividad de los usuarios en relación
 
 | Función | Nombre | Descripción | | — | — | — | | Recursos añadidos | <ul><li> Política de control de acceso </li><li> Función </li><li> Registros de auditoría </li><li> Orden de trabajo </li><li> Área de nombres de identidad </li><li> Gráfico de identidad </li><li> Consulta </li><li> Conjunto de datos </li><li> Flujo de datos de origen </li></ul> | Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad. Si la función está habilitada, no es necesario habilitar manualmente la recopilación de registros. |
 
-{style=&quot;table-layout:auto&quot;}
+
 
 Para obtener más información sobre los registros de auditoría en Platform, consulte la [información general sobre registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md).
 
