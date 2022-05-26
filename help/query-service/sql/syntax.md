@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
 workflow-type: tm+mt
-source-wordcount: '2747'
+source-wordcount: '3050'
 ht-degree: 2%
 
 ---
@@ -714,7 +714,7 @@ COPY query
 >
 >La ruta de salida completa será `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### MODIFICAR TABLA
+### MODIFICAR TABLA {#alter-table}
 
 La variable `ALTER TABLE` permite añadir o soltar restricciones de claves principales o externas, así como agregar columnas a la tabla.
 
@@ -747,6 +747,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >
 >El esquema de tabla debe ser único y no compartido entre varias tablas. Además, el área de nombres es obligatoria para las restricciones de clave principal.
 
+#### Agregar o eliminar identidades primarias y secundarias
+
+La variable `ALTER TABLE` permite agregar o eliminar restricciones para columnas de tabla de identidad primarias y secundarias directamente a través de SQL.
+
+En los ejemplos siguientes se añade una identidad principal y una identidad secundaria mediante la adición de restricciones.
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+Las identidades también se pueden eliminar eliminando restricciones, como se ve en el siguiente ejemplo.
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+Consulte el documento sobre la configuración de identidades en conjuntos de datos ad hoc para obtener información más detallada.
+
 #### AGREGAR COLUMNA
 
 Las siguientes consultas SQL muestran ejemplos de adición de columnas a una tabla.
@@ -756,6 +776,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### Tipos de datos compatibles
+
+La tabla siguiente muestra los tipos de datos aceptados para agregar columnas a una tabla con [!DNL Postgres SQL], XDM y [!DNL Accelerated Database Recovery] (ADR) en Azure SQL.
+
+| — | Cliente PSQL | XDM | ADR | Descripción |
+|---|---|---|---|---|
+| 1 | `bigint` | `int8` | `bigint` | Tipo de datos numéricos que se utiliza para almacenar enteros grandes que van desde -9.223.372.036.854.775.807 a 9.223.372.036.854.775.807 en 8 bytes. |
+| 2 | `integer` | `int4` | `integer` | Un tipo de datos numérico utilizado para almacenar números enteros que van de -2.147.483.648 a 2.147.483.647 en 4 bytes. |
+| 3 | `smallint` | `int2` | `smallint` | Tipo de datos numéricos que se utiliza para almacenar números enteros que van de -32.768 a 215-1 32.767 en 2 bytes. |
+| 4 | `tinyint` | `int1` | `tinyint` | Tipo de datos numéricos que se utiliza para almacenar números enteros que van de 0 a 255 en 1 byte. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | Tipo de datos de caracteres de tamaño variable. `varchar` es mejor utilizarlo cuando los tamaños de las entradas de datos de la columna varían considerablemente. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` y `FLOAT` son sinónimos válidos para `DOUBLE PRECISION`. `double precision` es un tipo de datos de coma flotante. Los valores de punto flotante se almacenan en 8 bytes. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` es un sinónimo válido para `double precision`.`double precision` es un tipo de datos de coma flotante. Los valores de punto flotante se almacenan en 8 bytes. |
+| 8 | `date` | `date` | `date` | La variable `date` los tipos de datos son valores de fecha del calendario almacenados de 4 bytes sin información de marca de tiempo. El rango de fechas válidas va del 01-01-0001 al 12-31-9999. |
+| 9 | `datetime` | `datetime` | `datetime` | Tipo de datos que se utiliza para almacenar un instante en tiempo expresado como fecha y hora del día del calendario. `datetime` incluye los calificadores de: año, mes, día, hora, segundo y fracción. A `datetime` puede incluir cualquier subconjunto de estas unidades de tiempo unidas en esa secuencia, o incluso incluir una sola unidad de tiempo. |
+| 10 | `char(len)` | `string` | `char(len)` | La variable `char(len)` palabra clave se usa para indicar que el elemento es de longitud fija. |
 
 #### AGREGAR ESQUEMA
 
