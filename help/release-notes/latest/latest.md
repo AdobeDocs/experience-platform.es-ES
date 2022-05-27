@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
+source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 6%
+source-wordcount: '1685'
+ht-degree: 7%
 
 ---
 
@@ -20,16 +20,29 @@ ht-degree: 6%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [Alertas](#alerts)
 - [Registros de auditoría](#audit-logs)
 - [Tableros](#dashbaords)
 - [Recopilación de datos](#data-collection)
-
 <!-- - [Data Governance](#data-governance) -->
 - [Preparación de datos](#data-prep)
 - [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de consultas](#query-service)
 - [Fuentes](#sources)
+
+## Alertas {#alerts}
+
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Platform. Puede suscribirse a distintas reglas de alerta a través de la [!UICONTROL Alertas] en la interfaz de usuario de Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
+
+**Funciones actualizadas**
+
+| Función | Regla de alerta | Descripción |
+| --- | --- | --- |
+| Nueva regla de alerta | La tasa de omisión de página supera el umbral | Ahora puede utilizar la alerta para recibir notificaciones cuando el flujo de datos de las fuentes supere los umbrales de identidades. Consulte la descripción general sobre [reglas de alerta](../../observability/alerts/rules.md) para la lista actualizada de tipos de alertas. |
+
+{style=&quot;table-layout:auto&quot;}
+
 
 <!-- ## Attribute-based access control {#abac}
 
