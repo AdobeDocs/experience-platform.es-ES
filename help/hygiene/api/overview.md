@@ -2,11 +2,9 @@
 title: Guía de API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '309'
 ht-degree: 1%
 
 ---
@@ -41,9 +39,9 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Este documento proporciona una llamada API de ejemplo para demostrar cómo dar formato a las solicitudes. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción para las API de Experience Platform.
 
-## Órdenes de trabajo
+<!-- ## Work orders
 
-Una orden de trabajo es una representación de una tarea de higiene de datos que elimina las identidades de los consumidores de un conjunto de datos específico o de todos los conjuntos de datos. Consulte la [guía de extremo del orden de trabajo](./workorder.md) para obtener más información sobre cómo trabajar con órdenes de trabajo en la API.
+A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
 ## Tiempo de vida (TTL) para conjuntos de datos
 

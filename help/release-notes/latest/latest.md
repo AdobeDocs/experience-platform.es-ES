@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b557946252cd2afc07159caad939ec3a11d35e28
+source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2375'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 Nuevas funciones de Adobe Experience Platform:
 
-- [Control de acceso basado en atributos](#abac) —>
+- [Control de acceso basado en atributos](#abac)
 - [Higiene de los datos](#hygiene)
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
@@ -60,8 +60,9 @@ Experience Platform proporciona un conjunto de funciones de higiene de datos que
 
 | Función | Descripción |
 | --- | --- |
-| Eliminación de consumidores | [Eliminar registros de consumidores](../../hygiene/ui/delete-consumer.md) del lago de datos y del almacén de perfiles en función de los datos de identidad principales. |
 | Tiempo de vida (TTL) para conjuntos de datos | [Programar TTL](../../hygiene/ui/ttl.md) para conjuntos de datos de Platform. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre los registros de auditoría en Platform, consulte la [información general sobre higiene de datos](../../hygiene/home.md).
 

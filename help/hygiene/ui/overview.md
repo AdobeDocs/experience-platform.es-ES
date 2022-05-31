@@ -2,11 +2,9 @@
 title: Guía de la interfaz de usuario sobre higiene de datos
 description: Aprenda a administrar las tareas de higiene de los datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -25,8 +23,7 @@ Para acceder al espacio de trabajo, seleccione **[!UICONTROL Higiene de los dato
 
 ![Imagen que muestra la variable [!UICONTROL Higiene de los datos] espacio de trabajo en la interfaz de usuario de Platform](../images/ui/overview/home.png)
 
-Desde aquí puede examinar las solicitudes de trabajo existentes y crear nuevas solicitudes de higiene de datos. Consulte las secciones siguientes de esta guía para obtener más información:
+Desde aquí puede examinar las solicitudes de trabajo existentes y configurar nuevas operaciones de higiene de datos. Consulte las secciones siguientes de esta guía para obtener más información:
 
 * [Examinar órdenes de trabajo existentes](./browse.md)
-* [Eliminar datos de consumidores](./delete-consumer.md)
 * [Administración del tiempo de vida (TTL) para conjuntos de datos](./ttl.md)
