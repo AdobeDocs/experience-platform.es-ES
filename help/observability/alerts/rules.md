@@ -4,7 +4,7 @@ title: Reglas de alerta estándar
 description: Este documento cubre las reglas de alerta predefinidas proporcionadas por el Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
+source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 3%
@@ -29,7 +29,6 @@ Las siguientes reglas de alerta son específicas de [Ingesta de datos](../../ing
 | Retrasos, errores y errores de ejecución del flujo de origen | Retraso de ingesta | Esta alerta déclencheur cuando la ejecución de un flujo de ingesta por lotes tarda más de 150 minutos en procesarse. |
 | Retrasos, errores y errores de ejecución del flujo de origen | Falta de ingesta | Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se introducen datos en Platform. |
 | Retrasos, errores y errores de ejecución del flujo de origen | Fallo de ingesta | Esta alerta déclencheur cuando la proporción de registros con errores en todos los registros supera un umbral del 0,5 %. |
-| Retrasos, errores y errores de ejecución del flujo de origen | La tasa de omisión de página supera el umbral | Esta alerta se déclencheur cuando la proporción de id omitidos con respecto a los id totales supera un umbral. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,6 +82,7 @@ Las siguientes reglas de alerta son específicas de [destinos](../../destination
 | Información de ejecución del flujo de destino | Éxito de ejecución del flujo de destino | Esta alerta déclencheur cuando un segmento se activa correctamente en un destino. |
 | Retrasos, errores y errores de ejecución del flujo de destino | Retraso de ejecución del flujo de destino | Este déclencheur se produce cuando la ejecución de un flujo de destino tarda más de 150 minutos en activarse un segmento. |
 | Retrasos, errores y errores de ejecución del flujo de destino | Error de ejecución del flujo de destino | Este déclencheur se produce cuando se produce un error al activar un segmento en un destino. |
+| Retrasos, errores y errores de ejecución del flujo de destino | La tasa de omisión de página supera el umbral | Este déclencheur se genera cuando la proporción de ID omitidos con respecto a los ID totales supera un umbral. |
 
 {style=&quot;table-layout:auto&quot;}
 
