@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
+source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '785'
 ht-degree: 14%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 14%
          - [asignaciones de campos de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Asignaciones de campos de destino](connectors/adobe-applications/mapping/target.md)
          - [asignaciones de campos de Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+         - [Asignaciones de campos de Microsoft Dynamics](connectors/adobe-applications/mapping/dynamics.md)
          - [Asignaciones de campos de Salesforce](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [Conector del Marketo Engage](connectors/adobe-applications/marketo/marketo.md)

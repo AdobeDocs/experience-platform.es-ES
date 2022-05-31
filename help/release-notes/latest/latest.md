@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
+source-git-commit: 1b417935d557f7d58039c508544ed768f6ad1cc4
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 7%
+source-wordcount: '1719'
+ht-degree: 6%
 
 ---
 
@@ -252,7 +252,8 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 | Función | Descripción |
 | --- | --- |
 | Lanzamiento beta de [!DNL Zendesk] source | Utilice la variable [!DNL Zendesk] fuente para introducir datos de usuario, agente y organización de su [!DNL Zendesk] instancia para [!DNL Profile] enriquecimiento. Consulte la [[!DNL Zendesk] información general de la fuente](../../sources/connectors/customer-success/zendesk.md) para obtener más información. |
-| Compatibilidad con la recopilación de datos de Adobe | Utilice el catálogo de fuentes de Platform para acceder a los datos de Platform Edge Network, incluida la preparación de datos para la recopilación de datos y la compatibilidad mejorada con las advertencias de Data Prep. Consulte la [Resumen de la fuente de recopilación de datos de Adobe](../../sources/connectors/adobe-applications/data-collection.md) para obtener más información. |
+| Disponibilidad general de B2B [!DNL Microsoft Dynamics] source | Ahora puede usar la variable [!DNL Microsoft Dynamics] fuente para la ingesta de objetos B2B como cuentas, oportunidades, campañas, listas de marketing y miembros de listas de marketing. Consulte la [[!DNL Microsoft Dynamics] información general de la fuente](../../sources/connectors/crm/ms-dynamics.md) para obtener más información. |
+| Compatibilidad con la recopilación de datos de Adobe | Utilice el catálogo de fuentes para acceder a los datos de la recopilación de datos de Experience Edge, incluida la preparación de datos para la recopilación de datos y la compatibilidad mejorada con las advertencias de datos de la preparación de datos. Consulte la [Resumen de la fuente de recopilación de datos de Adobe](../../sources/connectors/adobe-applications/data-collection.md) para obtener más información. |
 | Compatibilidad con la ingesta de archivos con `ISO-8859-1` encoding | Utilice la variable `encoding` parámetro a ingesta `ISO-8859-1` archivos codificados con una fuente de almacenamiento en la nube para Platform con el [!DNL Flow Service] API. Consulte la guía de [creación de una conexión de origen de almacenamiento en la nube](../../sources/tutorials/api/collect/cloud-storage.md) para obtener más información. |
 
 {style=&quot;table-layout:auto&quot;}
