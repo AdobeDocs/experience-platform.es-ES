@@ -3,10 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;Control de acceso basad
 solution: Experience Platform
 title: Punto final de API de directivas
 description: El extremo /policy de la API de control de acceso basado en atributos permite administrar mediante programación las políticas en Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 3%

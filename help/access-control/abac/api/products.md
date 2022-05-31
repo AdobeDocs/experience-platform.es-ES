@@ -3,10 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;Control de acceso basad
 solution: Experience Platform
 title: Punto final de la API de productos
 description: El extremo /products de la API de control de acceso basado en atributos le permite administrar productos mediante programación en Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 4%

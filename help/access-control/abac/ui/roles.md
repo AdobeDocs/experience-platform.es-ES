@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de acceso;control de acceso basado en atributos;ABAC
 title: Control de acceso basado en atributos Crear una función
-description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Este documento proporciona información sobre la administración de roles a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---

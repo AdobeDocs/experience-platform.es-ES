@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de acceso;control de acceso basado en atributos;ABAC
 title: Usuarios de control de acceso basado en atributos
-description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Este documento proporciona información sobre la administración de usuarios y grupos de usuarios a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '191'
 ht-degree: 2%
 
 ---
