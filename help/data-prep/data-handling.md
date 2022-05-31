@@ -5,9 +5,9 @@ title: Gestión de formatos de datos con la preparación de datos
 topic-legacy: overview
 description: Este documento ofrece información general sobre cómo se gestionan los distintos tipos de datos en la preparación de datos.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
+source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '575'
 ht-degree: 13%
 
 ---
@@ -106,3 +106,7 @@ En la tabla siguiente se muestran las letras de patrón definidas para las caden
 | V | ID de zona horaria | Texto | América/Los Ángeles |
 | O | Desplazamiento de zona horaria | Texto | GMT+8 |
 | Q/q | Trimestre del año | Número/Texto | 3; 03; T3; Trimestre 3 |
+
+## Mapas {#maps}
+
+Actualmente, los mapas no son compatibles con [!DNL Data Prep].

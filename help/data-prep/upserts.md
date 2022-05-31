@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Enviar Actualizaciones Parciales De Fila Al Servicio De Perfil Mediante La Preparación De Datos
 description: Este documento proporciona información sobre cómo enviar actualizaciones de fila parciales al servicio de perfil mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 67049cf220379bfa5b64f530f26045ea21077be0
+source-git-commit: 93c95fce45dc034c0b9c53d9893a8e38e752ec0f
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 A continuación se describe una lista de limitaciones conocidas que se deben tener en cuenta a la hora de transmitir mensajes push con [!DNL Data Prep]:
 
 * El método de actualización de flujo continuo solo debe usarse al enviar actualizaciones de fila parciales a [!DNL Profile Service]. Las actualizaciones de fila parciales son **not** consumido por el lago de datos.
-* El método de actualización de flujo continuo no admite la actualización, sustitución y eliminación de identidades. Las identidades solo se pueden agregar utilizando la variable `identity: create` operación.
+* El método de actualización de flujo continuo no admite la actualización, sustitución y eliminación de identidades. Las identidades nuevas se crean si no existen. Por lo tanto, `identity` siempre debe estar configurado para crear. Si ya existe una identidad, la operación es una no-op.
 * Actualmente, el método de actualización de flujo continuo solo admite atributos primitivos de un solo valor (como enteros, fechas, marcas de tiempo y cadenas) y objetos. El método de actualización de flujo continuo no admite la sustitución, adición o sobrescritura de atributos de matriz e índices de matriz específicos.
 
 ## Pasos siguientes
