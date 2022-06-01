@@ -5,9 +5,9 @@ title: Información general sobre la preparación de datos
 topic-legacy: overview
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
+source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,14 @@ La preparación de datos puede gestionar de forma sólida diferentes formatos de
 ## Enviar actualizaciones de filas parciales mediante [!DNL Data Prep]
 
 Transmisión de fuentes en [!DNL Data Prep] permite enviar actualizaciones de fila parciales a [!DNL Profile Service] al mismo tiempo que crea y establece nuevos vínculos de identidad con una única solicitud de API. Para obtener más información sobre cómo retransmitir subidas en [!DNL Data Prep], consulte el documento en [envío de actualizaciones de fila parciales](./upserts.md).
+
+## Control de acceso basado en atributos en [!DNL Data Prep]
+
+El control de acceso basado en atributos en Adobe Experience Platform permite a los administradores controlar el acceso a objetos y/o funciones específicos según los atributos.
+
+El control de acceso basado en atributos garantiza que solo puede asignar los atributos a los que tiene acceso. Los atributos a los que no tiene acceso no se pueden usar en asignaciones de paso y campos calculados. Por lo tanto, si no tiene acceso a un campo obligatorio, no puede guardar correctamente una asignación. Además, no puede asignar objetos ni matrices de objetos si no tiene acceso a ninguno de los atributos secundarios. Sin embargo, puede asignar otros elementos dentro de la matriz de objetos u objetos individualmente.
+
+Consulte la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md) para obtener más información.
 
 ## Pasos siguientes
 
