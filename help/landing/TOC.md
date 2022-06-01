@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
-source-git-commit: ba2df1ca905bfe2d0f8868ef658b369b28eb9af3
+source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 24%
+source-wordcount: '247'
+ht-degree: 27%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 24%
 
 * [Información general de plataforma](home.md)
 * [Información general de la plataforma (vídeo)](video/platform-overview.md)
-* [Tutoriales de Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [Tutoriales de Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=es)
 * [Una experiencia de cliente ofrecida por Platform (vídeo)](video/customer-experience.md)
 * [Entre bastidores de una experiencia de cliente ofrecida por Platform (vídeo)](video/customer-experience-bts.md)
 * Primeros pasos {#getting-started}
@@ -58,6 +58,7 @@ ht-degree: 24%
       * [Integración del SDK web de Platform para procesar datos de consentimiento y preferencias](./governance-privacy-security/consent/sdk.md)
    * Registros de auditoría {#audit-logs}
       * [Información general](./governance-privacy-security/audit-logs/overview.md)
+   * [Cifrado de datos](./governance-privacy-security/encryption.md)
 * Uso de licencias y barreras {#license}
    * [Prácticas recomendadas para las licencias de gestión de datos](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)

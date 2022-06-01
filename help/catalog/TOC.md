@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guía de catálogos y conjuntos de datos
 user-guide-description: Explore el linaje de datos, los metadatos, las descripciones de los archivos, los directorios y los conjuntos de datos dentro del lago de datos.
 feature: Catalog
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 19%
+source-wordcount: '111'
+ht-degree: 20%
 
 ---
 
@@ -34,6 +34,5 @@ ht-degree: 19%
    * [Habilitar un conjunto de datos para perfil e identidad](datasets/enable-for-profile.md)
    * [Habilitar un conjunto de datos para actualizaciones de perfil (actualización)](datasets/enable-upsert.md)
 * [Procesamiento de solicitudes de privacidad en Data Lake](privacy.md)
-* [Protección de datos en el Experience Platform](data-protection.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)

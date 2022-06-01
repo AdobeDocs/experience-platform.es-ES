@@ -5,10 +5,9 @@ title: Información general sobre administración, privacidad y seguridad
 topic-legacy: overview
 description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados para cumplir con sus prácticas comerciales, obligaciones legales y procesos de desarrollo.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -33,7 +32,7 @@ La gobernanza de los datos es un concepto esencial que está vinculado a todas l
 
 Como servicio de plataforma, la Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro del Experience Platform en varios niveles, incluido el etiquetado del uso de los datos, las políticas de uso de los datos, la aplicación de políticas y el linaje de datos.
 
-Consulte la [Información general sobre el control de datos](../../data-governance/home.md) para obtener más información.
+Consulte la [Información general sobre la administración de datos](../../data-governance/home.md) para obtener más información.
 
 ### Catálogo y conjuntos de datos {#catalog}
 
@@ -41,7 +40,7 @@ El servicio de catálogo es el sistema de registro para la ubicación y linaje d
 
 El catálogo organiza los datos ingestados en conjuntos de datos, cada uno de los cuales contiene metadatos que se pueden usar para etiquetar y categorizar los datos que contiene.
 
-Consulte la [Descripción general del servicio de catálogo](../../catalog/home.md) para obtener más información sobre el servicio. Para obtener información sobre cómo administrar conjuntos de datos en Experience Platform, consulte la [descripción general de conjuntos de datos](../../catalog/datasets/overview.md).
+Consulte la [Información general del servicio de catálogo](../../catalog/home.md) para obtener más información sobre el servicio. Para obtener información sobre cómo administrar conjuntos de datos en Experience Platform, consulte la [información general sobre conjuntos de datos](../../catalog/datasets/overview.md).
 
 ## Privacidad {#privacy}
 
@@ -53,25 +52,29 @@ Las regulaciones legales de privacidad, como el Reglamento General de Protecció
 
 Adobe Experience Platform Privacy Service proporciona una API de RESTful y una interfaz de usuario para ayudar a administrar estas solicitudes. Con Privacy Service, puede enviar solicitudes para acceder a datos de clientes personales o privados desde aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las normas de privacidad legales y organizativas.
 
-Consulte la [información general del Privacy Service](../../privacy-service/home.md) para obtener más información.
+Consulte la [Información general del Privacy Service](../../privacy-service/home.md) para obtener más información.
 
 ### Procesamiento de consentimiento {#consent}
 
 Muchas regulaciones legales de privacidad han introducido requisitos para el consentimiento activo y específico cuando se trata de recopilación de datos, personalización y otros casos de uso de marketing. Para satisfacer estos requisitos, el Experience Platform le permite capturar información de consentimiento en perfiles de clientes individuales y utilizar esas preferencias como factor determinante en el modo en que los datos de cada cliente se utilizan en flujos de trabajo de Platform descendentes.
 
-Para aprender a procesar el consentimiento del cliente y los datos de preferencias mediante el estándar de Adobe, consulte la descripción general del [procesamiento del consentimiento en Experience Platform](./consent/adobe/overview.md).
+Para aprender a procesar el consentimiento del cliente y los datos de preferencias mediante el estándar de Adobe, consulte la descripción general de [procesamiento de consentimiento en el Experience Platform](./consent/adobe/overview.md).
 
-Para obtener información sobre cómo procesar los datos de consentimiento del cliente de acuerdo con el marco de transparencia y consentimiento IAB (TCF) 2.0, consulte la descripción general sobre la compatibilidad con [IAB TCF 2.0 en Platform](./consent/iab/overview.md).
+Para obtener información sobre cómo procesar los datos de consentimiento del cliente de acuerdo con el marco de transparencia y consentimiento IAB (TCF) 2.0, consulte la descripción general de [Compatibilidad con IAB TCF 2.0 en Platform](./consent/iab/overview.md).
 
 ## Seguridad {#security}
 
 La integridad y la seguridad de sus datos son indispensables para su negocio, y este riesgo requiere capacidades de seguridad líderes en la industria. Para enfrentar este desafío, Platform proporciona varias herramientas que ayudan a salvaguardar sus operaciones de datos.
 
+### Cifrado de datos
+
+Todos los datos de la plataforma se cifran en tránsito y en reposo. Consulte el documento en [cifrado de datos en Platform](./encryption.md) para obtener más información.
+
 ### Control de acceso {#access-control}
 
 Experience Platform utiliza Adobe Admin Console para proporcionar control de acceso basado en funciones a diversas funcionalidades de Platform. Esta funcionalidad aprovecha los perfiles de producto del Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 
-Consulte la [descripción general del control de acceso](../../access-control/home.md) para obtener más información.
+Consulte la [información general sobre el control de acceso](../../access-control/home.md) para obtener más información.
 
 ### Entornos aislados {#sandboxes}
 
@@ -79,7 +82,7 @@ Experience Platform está diseñado para enriquecer las aplicaciones de experien
 
 Para satisfacer la necesidad de flexibilidad de desarrollo, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudarle a desarrollar sus aplicaciones de experiencia digital en función de su propio ciclo de vida de desarrollo.
 
-Consulte la [información general de los entornos limitados](../../sandboxes/home.md) para obtener más información.
+Consulte la [información general sobre los entornos limitados](../../sandboxes/home.md) para obtener más información.
 
 ## Pasos siguientes
 
