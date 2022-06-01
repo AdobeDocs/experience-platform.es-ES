@@ -3,7 +3,7 @@ keywords: Destino del centro de eventos de Azure;centro de eventos de azure;azur
 title: Conexión de los centros de eventos de Azure
 description: Cree una conexión saliente en tiempo real con su [!DNL Azure Event Hubs] almacenamiento para transmitir datos desde el Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 0%
@@ -71,16 +71,6 @@ Si selecciona la opción **[!UICONTROL Autenticación estándar]** escriba para 
 
 #### Autenticación de firmas de acceso compartido (SAS) {#sas-authentication}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmentnames"
->title="Incluir nombres de segmentos"
->abstract="Alterne si desea que la exportación de datos incluya los nombres de los segmentos que está exportando. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
->title="Incluir marcas de hora de segmentos"
->abstract="Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
-
 ![Imagen de la pantalla de la interfaz de usuario que muestra los campos completados para los detalles de autenticación estándar de los centros de eventos de Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
 Si selecciona la opción **[!UICONTROL Autenticación estándar]** escriba para conectarse al extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Conectarse al destino]**:
@@ -91,6 +81,16 @@ Si selecciona la opción **[!UICONTROL Autenticación estándar]** escriba para 
 * **[!UICONTROL Área de nombres]**: Rellene su [!DNL Azure Event Hubs] espacio de nombres. Obtenga información sobre [!DNL Azure Event Hubs] áreas de nombres en la variable [Documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ### Detalles de destino {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmentnames"
+>title="Incluir nombres de segmentos"
+>abstract="Alterne si desea que la exportación de datos incluya los nombres de los segmentos que está exportando. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
+>title="Incluir marcas de hora de segmentos"
+>abstract="Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
 
 Después de establecer la conexión de autenticación con el destino de los centros de eventos de Azure, proporcione la siguiente información para el destino:
 
