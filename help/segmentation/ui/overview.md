@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1746'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,16 @@ Para obtener más información, visite [guía del tablero de segmentos](../../da
 
 ## Examinar {#browse}
 
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_churncolumnname"
+>title="Pérdida"
+>abstract="La pérdida representa el porcentaje de perfiles que cambian dentro de una definición de segmento en comparación con la última vez que se ejecutó el trabajo de segmento."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_evaluationmethodcolumnname"
+>title="Método de evaluación"
+>abstract="Los métodos de evaluación para segmentos incluyen el lote, la transmisión y el borde."
+
 Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las definiciones de segmentos para su organización de IMS.
 
 ![](../images/ui/overview/segment-browse-all.png)
@@ -65,7 +75,7 @@ El desglose muestra un gráfico de barras que resume el porcentaje de perfiles q
 
 La pérdida representa el porcentaje de perfiles que cambian dentro de una definición de segmento en comparación con la última vez que se ejecutó el trabajo del segmento, mientras que el recuento de perfiles representa el número total de perfiles que califican para el segmento.
 
-El método de evaluación puede ser flujo continuo o por lotes. Los segmentos de transmisión se evalúan constantemente a medida que los datos entran en el sistema. Los segmentos por lotes se evalúan según una programación establecida.
+El método de evaluación puede ser flujo continuo, por lotes o edge. Los segmentos de transmisión se evalúan constantemente a medida que los datos entran en el sistema. Los segmentos por lotes se evalúan según una programación establecida. Los segmentos de Edge se evalúan en tiempo real, lo que permite casos de uso de personalización de la misma página y de la siguiente página.
 
 ![](../images/ui/overview/segment-browse-segments.png)
 

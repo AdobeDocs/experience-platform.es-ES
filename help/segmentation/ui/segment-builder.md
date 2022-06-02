@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Generador de segmentos
 topic-legacy: ui guide
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2612'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,14 @@ ht-degree: 1%
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## Componentes básicos de definición de segmentos
+## Componentes básicos de definición de segmentos {#building-blocks}
 
-Los componentes básicos de las definiciones de segmentos son atributos y eventos. Además, los atributos y eventos contenidos en audiencias existentes también pueden utilizarse como componentes para nuevas definiciones.
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="Campos"
+>abstract="Los tres tipos de campo que componen un segmento son atributos, eventos y audiencias. Los atributos permiten utilizar atributos de perfil que pertenecen a la clase de perfil individual XDM, los eventos permiten crear una audiencia basada en acciones o eventos que se producen mediante elementos de datos XDM ExperienceEvent y las audiencias permiten utilizar audiencias importadas de fuentes externas."
+
+Los componentes básicos de las definiciones de segmentos son atributos y eventos. Además, los atributos y eventos contenidos en audiencias existentes pueden utilizarse como componentes para nuevas definiciones.
 
 Puede ver estos componentes básicos en el **[!UICONTROL Campos]** a la izquierda del [!DNL Segment Builder] espacio de trabajo. **[!UICONTROL Campos]** contiene una pestaña para cada uno de los componentes principales: &quot;[!UICONTROL Atributos]&quot;, &quot;[!UICONTROL Eventos]&quot;, y &quot;[!UICONTROL Audiencias]&quot;.
 
@@ -85,7 +90,7 @@ En este caso, puede asignar los dos grupos de informes con el esquema siguiente:
 
 Una vez asignados los grupos de informes, puede utilizar estos campos recién asignados dentro de los flujos de trabajo y la segmentación relacionados con el perfil.
 
-| Situación | Experiencia del esquema de unión | Variable genérica de segmentación | Variable asignada de segmentación |
+| Escenario | Experiencia del esquema de unión | Variable genérica de segmentación | Variable asignada de segmentación |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
 | Grupo de informes único | El descriptor de nombre descriptivo se incluye con variables genéricas. <br><br>**Ejemplo:** Nombre de página (eVar2) | <ul><li>Descriptor de nombres descriptivos incluido con variables genéricas</li><li>Las consultas utilizan datos del conjunto de datos específico, ya que es la única</li></ul> | Las consultas pueden utilizar datos de Adobe Analytics y otras fuentes potenciales. |
 | Múltiples grupos de informes | No se incluyen descriptores de nombres descriptivos con las variables genéricas. <br><br>**Ejemplo:** eVar2 | <ul><li>Cualquier campo con varios descriptores aparece como genérico. Esto significa que no aparecen nombres descriptivos en la interfaz de usuario.</li><li>Las consultas pueden utilizar datos de cualquier conjunto de datos que contenga el eVar, lo que puede dar como resultado resultados mixtos o incorrectos.</li></ul> | Las consultas utilizan resultados combinados correctamente de varios conjuntos de datos. |
@@ -210,7 +215,19 @@ Para seleccionar una política de combinación para su definición de segmento, 
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Propiedades del segmento
+## Propiedades del segmento {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="Propiedades del segmento"
+>abstract="La sección de propiedades del segmento muestra una estimación del tamaño del segmento resultante, mostrando el número de perfiles cualificados en comparación con el número total de perfiles. Esto le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="Actualizar estimaciones"
+>abstract="Puede actualizar las estimaciones de su segmento para ver inmediatamente una vista previa de cuántos perfiles calificarían para el segmento propuesto. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Más información sobre la documentación"
+
 
 Al crear una definición de segmento, la variable **[!UICONTROL Propiedades del segmento]** a la derecha del espacio de trabajo muestra una estimación del tamaño del segmento resultante, lo que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
