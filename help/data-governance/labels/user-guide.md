@@ -5,9 +5,9 @@ title: Administrar etiquetas de uso de datos en la interfaz de usuario
 topic-legacy: labels
 description: Esta guía trata los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1186'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,13 @@ La variable **[!UICONTROL Administración de datos]** workspace vuelve a aparece
 
 ![Etiquetas de conjuntos de datos heredadas por campos](../images/labels/dataset-labels-applied.png)
 
-Observe que aparece una &quot;x&quot; junto a las etiquetas en el nivel de conjunto de datos, lo que le permite eliminar las etiquetas. Las etiquetas heredadas junto a cada campo no tienen una &quot;x&quot; junto a ellas y aparecen &quot;atenuadas&quot; sin posibilidad de eliminarlas o editarlas. Esto se debe a que **los campos heredados son de solo lectura**, lo que significa que no se pueden eliminar en el nivel de campo.
+Observe que aparece una &quot;x&quot; junto a las etiquetas en el nivel de conjunto de datos, lo que le permite eliminar las etiquetas. Las etiquetas heredadas junto a cada campo no tienen una &quot;x&quot; junto a ellas y aparecen &quot;atenuadas&quot; sin capacidad para eliminarlas o editarlas. Esto se debe a que **los campos heredados son de solo lectura**, lo que significa que no se pueden eliminar en el nivel de campo.
 
 La variable **[!UICONTROL Mostrar etiquetas heredadas]** está activada de forma predeterminada, lo que le permite ver las etiquetas heredadas del conjunto de datos a sus campos. Si desactiva la opción , se ocultarán todas las etiquetas heredadas del conjunto de datos.
 
 ![Ocultar etiquetas heredadas](../images/labels/inherited-labels.png)
 
-## Administrar etiquetas en el nivel de campo
+## Administrar etiquetas en el nivel de campo del conjunto de datos
 
 Continuación del flujo de trabajo para [agregar y editar etiquetas de uso de datos en el nivel de conjunto de datos](#add-labels), también puede administrar etiquetas de nivel de campo dentro del **[!UICONTROL Administración de datos]** espacio de trabajo para ese conjunto de datos.
 
@@ -99,6 +99,12 @@ Puede repetir estos pasos para seguir añadiendo y editando etiquetas de campo p
 ![Seleccione varios campos para aplicar etiquetas de nivel de campo simultáneamente.](../images/labels/multiple-fields.png)
 
 Es importante recordar que la herencia se desplaza solo del nivel superior hacia abajo (conjunto de datos → campos), lo que significa que las etiquetas aplicadas en el nivel de campo no se propagan a otros campos o conjuntos de datos.
+
+## Administrar etiquetas en el nivel de esquema
+
+Puede añadir etiquetas directamente a un esquema o campos dentro de él. Cualquier campo aplicado en el nivel de esquema se propagará a todos los conjuntos de datos basados en ese esquema.
+
+Consulte el tutorial en [administración de etiquetas de nivel de esquema](../../xdm/tutorials/labels.md) para obtener más información.
 
 ## Administrar etiquetas personalizadas
 

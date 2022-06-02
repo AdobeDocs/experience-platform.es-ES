@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Información general sobre el control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -113,7 +113,7 @@ Experience Data Model (XDM) es una especificación de código abierto diseñada 
 
 Con el control de acceso basado en atributos, puede:
 
-* Aplicar atributos a grupos de campos y o clases. Esto permite que varios esquemas con los mismos grupos de campos o clases tengan campos etiquetados con los mismos atributos, dependiendo de las configuraciones en el grupo de campos o nivel de clase;
+* [Aplicación de etiquetas de uso de datos a grupos de campos y clases](../../xdm/tutorials/labels.md). Esto permite que varios esquemas con los mismos grupos de campos o clases tengan campos etiquetados con los mismos atributos, dependiendo de las configuraciones en el grupo de campos o nivel de clase;
 * Configure el acceso del usuario a campos de esquema XDM específicos en función de los conjuntos de permisos aplicados a las funciones asignadas a los usuarios.
 
 Para obtener más información sobre XDM, consulte la [Información general de XDM](../../xdm/home.md).
