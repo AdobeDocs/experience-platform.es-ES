@@ -5,10 +5,10 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 87%
+source-wordcount: '392'
+ht-degree: 86%
 
 ---
 
@@ -119,6 +119,9 @@ ht-degree: 87%
       * [!DNL BrightCove] seguimiento de vídeo {#brightcove}
          * [Información general](./extensions/web/brightcove/overview.md)
          * [Notas de la versión](./extensions/web/brightcove/release-notes.md)
+      * Capa de datos de Google {#google-data-layer}
+         * [Información general](./extensions/web/google-data-layer/overview.md)
+         * [Notas de la versión](./extensions/web/google-data-layer/release-notes.md)
       * Extensión de seguimiento de vídeos de [!DNL YouTube] {#youtube}
          * [Información general](./extensions/web/youtube/overview.md)
          * [Notas de la versión](./extensions/web/youtube/release-notes.md)
