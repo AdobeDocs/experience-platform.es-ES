@@ -6,9 +6,9 @@ description: Este artículo ilustra el flujo de trabajo completo para activar se
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 049b9c3ef2b96001a23ee54ac3e86a4df7b4ecea
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1102'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ Antes de realizar llamadas a las API de Adobe Experience Platform, asegúrese de
 
 * Tiene una cuenta de organización de IMS con acceso a Adobe Experience Platform.
 * Su cuenta de Experience Platform tiene la variable `developer` y `user` funciones habilitadas para el perfil de producto de la API de Adobe Experience Platform. Póngase en contacto con su [Admin Console](../../access-control/home.md) para habilitar estas funciones en su cuenta.
-* Tiene un Adobe ID. Si no tiene un Adobe ID, vaya a la sección [Adobe Developer Console](https://developer.adobe.com/console) y cree una cuenta nueva.
+* Tiene un Adobe ID. Si no tiene un Adobe ID, vaya a la sección [Consola de Adobe Developer](https://developer.adobe.com/console) y cree una cuenta nueva.
 
 ## Paso 2: Recopilar credenciales {#credentials}
 
@@ -91,9 +91,10 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Para poder activar segmentos a través de la API de activación ad hoc, primero debe tener configurado un flujo de activación en la interfaz de usuario de Platform para el destino elegido.
 
-Esto incluye entrar en el flujo de trabajo de activación, seleccionar los segmentos, configurar una programación y activarlos.
+Esto incluye entrar en el flujo de trabajo de activación, seleccionar los segmentos, configurar una programación y activarlos. Puede utilizar la interfaz de usuario o la API para crear un flujo de activación:
 
-Consulte el siguiente tutorial para obtener instrucciones detalladas sobre cómo configurar un flujo de activación para los destinos de lote: [Activar datos de audiencia en destinos de exportación de perfiles en lote](../ui/activate-batch-profile-destinations.md).
+* [Utilice la interfaz de usuario de Platform para crear un flujo de activación para los destinos de exportación de perfiles en lote](../ui/activate-batch-profile-destinations.md)
+* [Utilice la API de servicio de flujo para conectarse a destinos de exportación de perfiles en lote y activar datos](../api/connect-activate-batch-destinations.md)
 
 ## Paso 4: Obtenga el último ID de trabajo de exportación de segmentos {#segment-export-id}
 
@@ -156,7 +157,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | ID de las instancias de destino en las que desea activar segmentos. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | ID de las instancias de destino en las que desea activar segmentos. Puede obtener estos ID desde la interfaz de usuario de Platform, navegando hasta **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y haciendo clic en la fila de destino que desee para que aparezca el ID de destino en el carril derecho. Para obtener más información, lea la [documentación del espacio de trabajo de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | ID de los segmentos que desea activar en el destino seleccionado. |
 | <ul><li>`exportId1`</li></ul> | El ID devuelto en la respuesta del [exportación de segmentos](../../segmentation/api/export-jobs.md#retrieve-list) trabajo. Consulte [Paso 4: Obtenga el último ID de trabajo de exportación de segmentos](#segment-export-id) para obtener instrucciones sobre cómo encontrar este ID. |
 
