@@ -3,9 +3,9 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión Adobe Target
 description: Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
+source-git-commit: 12e2c1a32f08b6942d6e4aefc35a53bae8387d7e
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '846'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,11 @@ ht-degree: 1%
 
 Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 
-Adobe Target es una conexión personalizada en Adobe Experience Platform.
+Adobe Target es una conexión personalizada en el catálogo de destinos de Adobe Experience Platform.
 
 ## Requisitos previos {#prerequisites}
+
+### ID de almacén de datos {#datastream-id}
 
 Al configurar la conexión de Adobe Target a [usar un ID de conjunto de datos](#parameters), debe tener la variable [SDK web de Adobe Experience Platform](../../../edge/home.md) implementado.
 
@@ -27,6 +29,15 @@ La configuración de la conexión de Adobe Target sin utilizar un ID de conjunto
 >[!IMPORTANT]
 >
 >Antes de crear una [!DNL Adobe Target] conexión, lea la guía sobre cómo [configurar destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para casos de uso de personalización de la misma página y de la siguiente página, en varios componentes de Experience Platform. La personalización de la misma página y de la página siguiente requiere que utilice un ID de conjunto de datos al configurar la conexión de Adobe Target.
+
+### Requisitos previos en Adobe Target {#prerequisites-in-adobe-target}
+
+En Adobe Target, asegúrese de que su usuario tenga:
+
+* Acceso a [espacio de trabajo predeterminado](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
+* La variable **Aprobador** [función](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+
+Obtenga más información sobre la concesión de permisos para [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) y para [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
 
 ## Tipo de exportación y frecuencia {#export-type-frequency}
 
