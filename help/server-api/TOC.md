@@ -5,10 +5,10 @@ user-guide-title: Documentación de la API del servidor de red perimetral
 breadcrumb-title: Documentación de la API del servidor de red perimetral
 user-guide-description: Descubra qué es la API del servidor de red perimetral y cómo puede utilizarla.
 feature: Data Collection
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+source-git-commit: 6fb2b4ab47e9964e64fd94c49623f4c60689094c
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 56%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 56%
    * [Interactuar con Adobe Analytics](interacting-adobe-analytics.md)
 * Personalización {#personalization}
    * [Información general sobre personalización](personalization-overview.md)
-   * [Personalización mediante Offer decisioning](personalization-offer-decisioning.md)
    * [Personalización a través de Adobe Target](personalization-target.md)
+   * [Personalización mediante Offer decisioning](personalization-offer-decisioning.md)
 * [Control de errores](error-handling.md)
 * [Resolución de problemas](troubleshooting.md)
