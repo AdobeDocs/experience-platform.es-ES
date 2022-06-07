@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre el conector de origen de Zendesk
 description: Obtenga información sobre cómo conectar Zendesk a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Se debe agregar una lista de direcciones IP a una lista de permitidos antes de t
 
 Esta sección describe los pasos previos que se deben completar para autenticar su [!DNL Zendesk] cuenta.
 
-* El primer paso para autenticar su [!DNL Zendesk] es para asegurarse de que tiene [!DNL Zendesk] cuenta de asistencia técnica. Si todavía no tiene uno, consulte la [[!DNL Zendesk]página de registro](https://www.zendesk.com/register/) para registrar y crear su cuenta de Zendesk.
+* El primer paso para autenticar su [!DNL Zendesk] es para asegurarse de que tiene [!DNL Zendesk] cuenta de asistencia técnica. Si todavía no tiene uno, consulte la [[!DNL Zendesk] página de registro](https://www.zendesk.com/register/) para registrar y crear su cuenta de Zendesk.
 * Una vez que se haya registrado correctamente, vaya a la [[!DNL Zendesk] sitio web](https://www.zendesk.com/login/) y proporcione **subdominio**.
 * A continuación, seleccione **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * Finalmente, recupere el token de API desde la variable **[!DNL API token]** para obtener más información.
