@@ -4,7 +4,7 @@ description: Obtenga información sobre cómo eliminar registros de consumidores
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Si desea eliminar los datos de consumo de todos los conjuntos de datos, seleccio
 >
 >Al seleccionar la variable **[!UICONTROL Todos los conjuntos de datos]** puede provocar que la operación de eliminación tarde más tiempo y que no dé como resultado una eliminación precisa del registro.
 
-## Proporcionar identidades de consumidores {#identities}
+## Proporcionar identidades de consumidores {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
