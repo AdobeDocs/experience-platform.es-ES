@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
 workflow-type: tm+mt
-source-wordcount: '3050'
+source-wordcount: '3042'
 ht-degree: 2%
 
 ---
@@ -724,28 +724,34 @@ La variable `ALTER TABLE` permite añadir o soltar restricciones de claves princ
 Las siguientes consultas SQL muestran ejemplos de adición o colocación de restricciones en una tabla.
 
 ```sql
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
 | Parámetros | Descripción |
 | ------ | ------ |
 | `table_name` | El nombre de la tabla que está editando. |
-| `constraint_name` | Nombre de la restricción que desea agregar o eliminar. |
 | `column_name` | Nombre de la columna a la que está agregando una restricción. |
 | `referenced_table_name` | El nombre de la tabla a la que hace referencia la clave externa. |
 | `primary_column_name` | Nombre de la columna a la que se hace referencia mediante la clave externa. |
 
+
 >[!NOTE]
 >
->El esquema de tabla debe ser único y no compartido entre varias tablas. Además, el área de nombres es obligatoria para las restricciones de clave principal.
+>El esquema de tabla debe ser único y no compartido entre varias tablas. Además, el área de nombres es obligatoria para las restricciones de clave principal, identidad principal e identidad.
 
 #### Agregar o eliminar identidades primarias y secundarias
 
