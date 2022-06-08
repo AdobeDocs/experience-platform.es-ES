@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo eliminar registros de consumidores
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
+source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -62,12 +62,12 @@ Si desea eliminar los datos de consumo de todos los conjuntos de datos, seleccio
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identidad primaria"
->abstract="Una identidad principal es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo de identidad principal de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o área de nombres) para la identidad principal del consumidor, como &quot;correo electrónico&quot; para las direcciones de correo electrónico y &quot;ecid&quot; para los ID de Experience Cloud. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
+>abstract="Una identidad principal es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo de identidad principal de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o área de nombres) para la identidad principal del consumidor, como `email` para direcciones de correo electrónico y `ecid` para ID de Experience Cloud. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valor de identidad"
->abstract="En esta columna, debe proporcionar el valor de la identidad principal del consumidor, que debe corresponder al tipo de identidad proporcionado en la columna izquierda. Si el tipo de identidad principal es &quot;correo electrónico&quot;, el valor debe ser la dirección de correo electrónico del consumidor. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
+>abstract="En esta columna, debe proporcionar el valor de la identidad principal del consumidor, que debe corresponder al tipo de identidad proporcionado en la columna izquierda. Si el tipo de identidad principal es `email`, el valor debe ser la dirección de correo electrónico del consumidor. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
 
 Al eliminar datos de consumidores, debe proporcionar información de identidad para que el sistema pueda determinar qué registros deben eliminarse. Para cualquier conjunto de datos en Platform, los registros se eliminan en función de la variable **identidad principal** campo definido por el esquema del conjunto de datos.
 
