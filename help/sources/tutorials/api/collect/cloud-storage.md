@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un almacenamiento en la nube de terceros y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: e059ff1066ef0197207667b40fb2f31c296464cb
+source-git-commit: 313d80603f54b7e79316b01790fb4f258851858e
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1613'
 ht-degree: 2%
 
 ---
@@ -99,7 +99,7 @@ curl -X POST \
 | `data.properties.columnDelimiter` | (Opcional) Un delimitador de columna de un solo carácter que puede especificar al recopilar archivos planos. Cualquier valor de carácter único es un delimitador de columna permitido. Si no se proporciona, una coma (`,`) se utiliza como valor predeterminado. **Nota**: La variable `columnDelimiter` solo se puede utilizar al ingerir archivos delimitados. |
 | `data.properties.encoding` | (Opcional) Una propiedad que define el tipo de codificación que se utilizará al ingerir los datos en Platform. Los tipos de codificación admitidos son: `UTF-8` y `ISO-8859-1`. **Nota**: La variable `encoding` solo está disponible al introducir archivos CSV delimitados. Otros tipos de archivo se incorporarán con la codificación predeterminada, `UTF-8`. |
 | `data.properties.compressionType` | (Opcional) Una propiedad que define el tipo de archivo comprimido que se va a introducir. Los tipos de archivo comprimido admitidos son: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`y `tar`. **Nota**: La variable `compressionType` solo se puede utilizar al introducir archivos delimitados o JSON. |
-| `params.path` | Ruta del archivo de origen al que está accediendo. Este parámetro apunta a un archivo individual o a una carpeta entera. |
+| `params.path` | Ruta del archivo de origen al que está accediendo. Este parámetro apunta a un archivo individual o a una carpeta entera.  **Nota**: Puede utilizar un asterisco en lugar del nombre del archivo para especificar la ingesta de una carpeta entera. Por ejemplo: `/acme/summerCampaign/*.csv` ingerirá todo `/acme/summerCampaign/` carpeta. |
 | `params.type` | Tipo de archivo del archivo de datos de origen que está incorporando. Tipo de uso `file` para ingerir un archivo individual y utilizar el tipo `folder` para introducir una carpeta completa. |
 | `connectionSpec.id` | El ID de especificación de conexión asociado al origen de almacenamiento en la nube específico. Consulte la [apéndice](#appendix) para obtener una lista de ID de especificaciones de conexión. |
 
