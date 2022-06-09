@@ -2,13 +2,13 @@
 title: Protecciones de rendimiento
 description: Aprenda a utilizar la API del servidor dentro de protecciones de rendimiento óptimas
 keywords: recopilación de datos;recopilación;red perimetral;api;sla;slt;niveles de servicio
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
+source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---
-
 
 # Protecciones de rendimiento
 
@@ -20,12 +20,12 @@ El Adobe no es responsable de la degradación del rendimiento causada por los l�
 
 ## Definiciones
 
-* **Disponibilidad** se calcula para cada intervalo de cinco minutos como el porcentaje de solicitudes procesadas por la red perimetral de Experience Adobe Experience Platform que no fallan con errores y están relacionadas únicamente con las API de red perimetral de Adobe Experience Platform aprovisionadas. Si un inquilino no realizó ninguna solicitud en un intervalo de cinco minutos determinado, se considera que ese intervalo está disponible al 100%.
+* **Disponibilidad** se calcula para cada intervalo de cinco minutos como el porcentaje de solicitudes procesadas por la red perimetral del Experience Platform que no fallan con errores y están relacionadas únicamente con las API de red perimetral aprovisionadas. Si un inquilino no realizó ninguna solicitud en un intervalo de cinco minutos determinado, se considera que ese intervalo está disponible al 100%.
 * **Porcentaje de tiempo activo mensual** para una región determinada se calcula como el promedio de disponibilidad para los intervalos de cinco minutos en un mes.
-* Un **Upstream** es un servicio detrás de Adobe Edge Network, habilitado para un conjunto de datos específico, como Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
+* Un **Upstream** es un servicio detrás de la red perimetral, habilitado para un conjunto de datos específico, como el reenvío del lado del servidor de Adobe, la segmentación de Adobe Edge o Adobe Target.
 * A **unidad de solicitud** corresponde a un fragmento de 8 KB de una solicitud y a un fragmento ascendente configurado para un conjunto de datos.
 * A **solicitud** es un único mensaje que envía una aplicación propiedad del cliente a la variable [!DNL Server API]. Una solicitud puede contener una o más unidades de solicitud.
-* Un **error** es cualquier solicitud que falle debido a una red perimetral de Adobe Experience Platform [error de servicio interno](error-handling.md).
+* Un **error** es cualquier solicitud que falla debido a una red perimetral [error de servicio interno](error-handling.md).
 
 ## Límites de servicio
 
