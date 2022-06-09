@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo configurar la autenticación para 
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: recopilación de datos; autenticación; api de Adobe Experience Platform Edge Network; autorización
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '648'
 ht-degree: 2%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 ## Información general
 
-La variable [!DNL Adobe Experience Platform Edge Network Server API] gestiona la recopilación de datos autenticados y no autenticados, según la fuente de los eventos y el dominio de recopilación de API.
+La variable [!DNL Edge Network Server API] gestiona la recopilación de datos autenticados y no autenticados, según la fuente de los eventos y el dominio de recopilación de API.
 
-Para cada solicitud, la variable [!DNL Server API] verifica el conjunto de datos `access_type` configuración.
+Para cada solicitud, la variable [!DNL Server API] verifica el conjunto de datos [!DNL access type] configuración. Con esta configuración, los clientes pueden configurar un conjunto de datos para aceptar datos autenticados o tanto autenticados como no autenticados. De forma predeterminada, se aceptan ambos tipos de datos.
 
-Con esta configuración, los clientes pueden configurar un conjunto de datos para aceptar datos autenticados o tanto autenticados como no autenticados. De forma predeterminada, se aceptan ambos tipos de datos.
+Para obtener más información sobre la configuración del tipo de acceso del conjunto de datos, consulte la documentación sobre cómo [crear y configurar un conjunto de datos](../edge/datastreams/overview.md#create).
 
-A continuación se muestra un resumen del comportamiento, basado en la variable `access_type` y el punto final en el que se recibe la solicitud.
+A continuación se muestra un resumen del comportamiento, basado en el conjunto de datos [!DNL Access Type] y el punto final en el que se recibe la solicitud.
 
-| `access_type` | edge.adobedc.net | server.adobedc.net |
+| [!DNL Access Type] | edge.adobedc.net | server.adobedc.net |
 |-----------------|-------------------------------|-----------------------|
 | mixto (predeterminado) | No autentica la solicitud | Autenticar solicitud |
 | autenticado | Autenticar solicitud | Autenticar solicitud |
@@ -36,7 +36,7 @@ Antes de poder realizar llamadas a la variable [!DNL Server API], asegúrese de 
 
 * Tiene una cuenta de organización de IMS con acceso a Adobe Experience Platform.
 * Su cuenta de Experience Platform tiene la variable `developer` y `user` funciones habilitadas para el perfil de producto de la API de Adobe Experience Platform. Póngase en contacto con su [Admin Console](../access-control/home.md) para habilitar estas funciones en su cuenta.
-* Tiene un Adobe ID. Si no tiene un Adobe ID, vaya a la sección [Adobe Developer Console](https://developer.adobe.com/console) y cree una cuenta nueva.
+* Tiene un Adobe ID. Si no tiene un Adobe ID, vaya a la sección [Consola de Adobe Developer](https://developer.adobe.com/console) y cree una cuenta nueva.
 
 ## Recopilar credenciales {#credentials}
 
