@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guía de preparación de datos
 user-guide-description: Prepare sus datos para la ingesta en Adobe Experience Platform.
 feature: Data Prep
-source-git-commit: 752c662876df012dbcb44db6168705be2a5375ce
+source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 39%
+source-wordcount: '50'
+ht-degree: 38%
 
 ---
 
@@ -25,4 +25,5 @@ ht-degree: 39%
 - [Gestión de formatos de datos](./data-handling.md)
 - [Conjuntos de asignación](mapping-set.md)
 - [Transmitir posters](upserts.md)
+- [Guía de resolución de problemas](troubleshooting-guide.md)
 - [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
