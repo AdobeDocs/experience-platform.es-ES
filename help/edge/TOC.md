@@ -5,10 +5,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: 1a53d98d8a0b47b96d54e79d93f2ece2d4b587a6
+source-git-commit: 2b9edb258e647dc04faadbbaeab429cf8ac3e0ec
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 34%
+source-wordcount: '183'
+ht-degree: 33%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 34%
 * Identidad {#identity}
    * [Información general](identity/overview.md)
    * [ID de dispositivos de origen](identity/first-party-device-ids.md)
+   * [Uso compartido de ID de dominio cruzado y de móvil a web](identity/id-sharing.md)
 * Recopilación de datos {#data-collection}
    * [Información recopilada automáticamente](data-collection/automatic-information.md)
    * [Seguimiento de vínculos](data-collection/track-links.md)
