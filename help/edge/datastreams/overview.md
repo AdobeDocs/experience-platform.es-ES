@@ -3,9 +3,9 @@ title: Información general sobre Datastreams
 description: Conecte la integración del SDK de Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;identidad;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;preparación de datos para recopilación de datos;Mp;prep de datos apper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
+source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1774'
 ht-degree: 2%
 
 ---
@@ -53,6 +53,7 @@ Select **[!UICONTROL Opciones avanzadas]** para mostrar controles adicionales pa
 | [!UICONTROL Ubicación geográfica] | Determina si se producen búsquedas de GPS en función de la dirección IP del usuario. La configuración predeterminada **[!UICONTROL Ninguna]** deshabilita las búsquedas de GPS, mientras que la función **[!UICONTROL Ciudad]** proporciona coordenadas GPS a dos decimales. |
 | [!UICONTROL Cookie de ID de origen] | Cuando está habilitada, esta configuración indica a la red perimetral que haga referencia a una cookie especificada al buscar una [ID de dispositivo de origen](../identity/first-party-device-ids.md), en lugar de buscar este valor en el mapa de identidad.<br><br>Al habilitar esta configuración, debe proporcionar el nombre de la cookie en la que se espera que se almacene el ID. |
 | [!UICONTROL Sincronización de ID de terceros] | Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que diferentes sincronizaciones de ID se ejecuten en momentos diferentes. Cuando está habilitada, esta configuración le permite especificar qué contenedor de sincronizaciones de ID se ejecuta para este conjunto de datos. |
+| [!UICONTROL Tipo de acceso] | Define el tipo de autenticación que la variable [!DNL Edge Network] acepta para el conjunto de datos. <ul><li>**[!UICONTROL Autenticación mixta]**: Cuando se selecciona esta opción, la red perimetral acepta solicitudes autenticadas y no autenticadas. Seleccione esta opción cuando desee utilizar el SDK web o [SDK móvil](https://aep-sdks.gitbook.io/docs/), junto con la variable [API de servidor](../../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticado]**: Cuando se selecciona esta opción, la red perimetral solo acepta solicitudes autenticadas. Seleccione esta opción cuando vaya a utilizar solo la API de servidor y desee evitar que el [!DNL Edge Network]. </li></ul> |
 
 A partir de aquí, si va a configurar el conjunto de datos para el Experience Platform, siga el tutorial en [Preparación de datos para la recopilación de datos](./data-prep.md) para asignar los datos a un esquema de eventos de Platform antes de volver a esta guía. De lo contrario, seleccione **[!UICONTROL Guardar]** y continúe con la siguiente sección.
 
