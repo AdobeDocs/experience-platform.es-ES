@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: Conexión SFTP
 description: Cree una conexión saliente en directo al servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 715533352e84573f60f012504988595af6146e2f
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '671'
 ht-degree: 1%
 
 ---
@@ -50,8 +50,8 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
->title="Clave SSH"
->abstract="La clave SSH requiere una cadena Base64."
+>title="Clave SSH privada"
+>abstract="La clave SSH privada debe tener el formato de cadena codificada Base64 y no debe estar protegida por contraseña. "
 
 When [conexión](../../ui/connect-destination.md) para este destino, debe proporcionar la siguiente información:
 
@@ -59,7 +59,7 @@ When [conexión](../../ui/connect-destination.md) para este destino, debe propor
 
 Si selecciona la opción **[!UICONTROL Autenticación básica]** escriba para conectarse a su ubicación SFTP:
 
-![Autenticación básica de destino SFTP](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![Autenticación básica de destino SFTP](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Host]**: La dirección de la ubicación de almacenamiento SFTP;
 * **[!UICONTROL Nombre de usuario]**: El nombre de usuario para iniciar sesión en su ubicación de almacenamiento SFTP;
@@ -77,11 +77,11 @@ Si selecciona la opción **[!UICONTROL SFTP con clave SSH]** tipo de autenticaci
 * **[!UICONTROL Dominio]**: Rellene la dirección IP o el nombre de dominio de su cuenta SFTP.
 * **[!UICONTROL Puerto]**: El puerto que utiliza su ubicación de almacenamiento SFTP;
 * **[!UICONTROL Nombre de usuario]**: El nombre de usuario para iniciar sesión en su ubicación de almacenamiento SFTP;
-* **[!UICONTROL Clave SSH]**: La clave SSH para iniciar sesión en la ubicación de almacenamiento SFTP.
+* **[!UICONTROL Clave SSH]**: La clave SSH privada que se utiliza para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe tener el formato de cadena codificada Base64 y no debe estar protegida con contraseña.
 * **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como un [!DNL Base64] cadena codificada.
    * Ejemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Vea a continuación un ejemplo de una clave PGP con formato correcto, con la parte central acortada para su brevedad.
 
-      ![Clave PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![Clave PGP](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### Detalles de destino {#destination-details}
 
