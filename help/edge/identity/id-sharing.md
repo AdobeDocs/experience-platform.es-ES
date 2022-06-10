@@ -2,13 +2,13 @@
 title: Uso compartido de ID de dominio cruzado y de móvil a web
 description: Obtenga información sobre cómo mantener los ID de visitante de las propiedades móviles a las web y entre dominios
 keywords: Identidad;móvil;id;uso compartido;dominio;dominio cruzado;sdk;plataforma;
-source-git-commit: 55e28f749741c653a230b42fabf5a047ba8c7d01
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
+source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
-
 
 # Uso compartido de ID de dominio cruzado y de móvil a web
 
@@ -32,9 +32,11 @@ Un comerciante de tecnología desea mejorar los informes de actividad de los vis
 
 ## Requisitos previos {#prerequisites}
 
-Para usar el uso compartido de ID de móviles a la web y entre dominios, debe actualizar a [!DNL Web SDK] versión 2.11.0 o posterior.
+Para usar el uso compartido de ID de móviles a la web y entre dominios, debe usar [!DNL Web SDK] versión 2.11.0 o posterior.
 
 Para implementaciones móviles de red perimetral, esta función se admite en la variable [Identidad para la red perimetral](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) a partir de la versión 1.1.0 (iOS y Android).
+
+Esta función también es compatible con [!DNL VisitorAPI.js] versión 1.7.0 o posterior.
 
 ## Uso compartido de ID de Mobile a Web {#mobile-to-web}
 
