@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: Este documento describe detalles importantes que deben conocerse al escribir consultas en el servicio de consulta de Adobe Experience Platform.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 3%
@@ -318,4 +318,8 @@ El servicio de consulta estandariza los datos persistentes en Adobe Experience P
 
 Al leer este documento, se le han introducido algunas consideraciones importantes al escribir consultas mediante [!DNL Query Service]. Para obtener más información sobre cómo utilizar la sintaxis SQL para escribir sus propias consultas, lea la [Documentación de sintaxis SQL](../sql/syntax.md).
 
-Para obtener más ejemplos de consultas que se pueden utilizar dentro del servicio de consulta, consulte las guías de [Consultas de ejemplo de Adobe Analytics](../sample-queries/adobe-analytics.md), [Consultas de ejemplo de Adobe Target](../sample-queries/adobe-target.md)o [Consultas de ejemplo de ExperienceEvent](../sample-queries/experience-event.md).
+Para obtener más ejemplos de consultas que se pueden utilizar dentro del servicio de consulta, lea la siguiente documentación de casos de uso:
+
+- [Perspectivas de Analytics](../use-cases/analytics-insights.md)
+- [Análisis de actividades con Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
+- [Consultas de ejemplo de ExperienceEvent](../sample-queries/experience-event.md).
