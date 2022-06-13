@@ -3,14 +3,32 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 29852bc8f17de6db04805f4738f383f2dc7c1406
+source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1169'
 ht-degree: 3%
 
 ---
 
+
 # Notas de la versión
+
+Este documento cubre las notas de la versión del SDK web de Adobe Experience Platform.
+Para ver las últimas notas de la versión de la extensión de etiqueta del SDK web, consulte la [Notas de la versión de la extensión de etiqueta del SDK web](extension/web-sdk-ext-release-notes.md).
+
+## Versión 2.11.0: 13 de junio de 2022
+
+**Nuevas funciones**
+
+* Ahora puede ofrecer experiencias personalizadas de forma más precisa, compartiendo los ID de visitante entre aplicaciones móviles y contenido web móvil, así como entre dominios. Consulte la [documentación dedicada](identity/id-sharing.md) para obtener más información.
+* Ahora puede procesar o ejecutar una matriz de propuestas desde [!DNL Adobe Target] en aplicaciones de una sola página, sin incrementar las métricas de análisis. Esto reduce los errores en los informes y aumenta la precisión de los análisis. Consulte la [documentación dedicada](personalization/rendering-personalization-content.md#applypropositions) para obtener más información.
+* Se ha añadido información adicional al `getLibraryInfo` incluido los comandos disponibles y la configuración final de la instancia.
+
+**Correcciones y mejoras**
+
+* Se ha actualizado la configuración de cookies para usar `sameSite="none"` y `secure` marcar en [!DNL HTTPS] páginas.
+* Se ha corregido un problema por el cual el contenido personalizado no se aplicaba correctamente al usar la variable `eq` pseudo selector.
+* Se ha corregido un problema en el cual `localTimezoneOffset` podría fallar la validación del Experience Platform.
 
 ## Versión 2.10.1: 3 de mayo de 2022
 
