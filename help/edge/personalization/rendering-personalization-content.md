@@ -3,9 +3,9 @@ title: Representar contenido personalizado mediante el SDK web de Adobe Experien
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Adobe Experience Platform.
 keywords: personalización;renderdecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
+source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '924'
 ht-degree: 1%
 
 ---
@@ -296,3 +296,94 @@ alloy("sendEvent", {
 ### Administrar parpadeo
 
 El SDK proporciona instalaciones para [administrar parpadeo](../personalization/manage-flicker.md) durante el proceso de personalización.
+
+## Procesar propuestas en aplicaciones de una sola página sin incrementar las métricas {#applypropositions}
+
+La variable `applyPropositions` permite procesar o ejecutar una matriz de propuestas de [!DNL Target] en aplicaciones de una sola página, sin incrementar el [!DNL Analytics] y [!DNL Target] métricas. Esto aumenta la precisión de los informes.
+
+>[!IMPORTANT]
+>
+>Si las propuestas para la variable `__view__` el ámbito se procesó al cargar la página, sus `renderAttempted` el indicador se establecerá en `true`. La variable `applyPropositions` no vuelve a procesar el `__view__` propuestas de ámbito que tengan la variable `renderAttempted: true` indicador.
+
+### Caso de uso 1: Volver a procesar propuestas de vista de aplicación de una sola página
+
+El caso de uso descrito en el ejemplo siguiente vuelve a procesar las propuestas de vista del carro recuperadas anteriormente y procesadas sin enviar notificaciones de visualización.
+
+En el ejemplo siguiente, la variable `sendEvent` se activa tras un cambio de vista y guarda el objeto resultante en una constante.
+
+A continuación, cuando se actualiza la vista o un componente, la variable `applyPropositions` se llama al comando , con las propuestas del anterior `sendEvent` para volver a procesar las propuestas de vista.
+
+```js
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
+    }
+}).then(function(result) {
+    var propositions = result.propositions;
+
+    // Collect response tokens, etc.
+    return propositions;
+});
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### Caso de uso 2: Representar propuestas que no tengan un selector
+
+Este caso de uso se aplica a las ofertas de actividad creadas con el [!DNL Target Form-based Experience Composer].
+
+Debe proporcionar el selector, la acción y el ámbito en la variable `applyPropositions` llamada a .
+
+Admitido `actionTypes` son:
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
+
+```js
+// Retrieve propositions for salutation and discount scopes
+alloy("sendEvent", {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
+    // Render propositions on the page by providing additional metadata
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
+        metadata: {
+            salutation: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            discount: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
+    });
+});
+```
+
+Si no proporciona metadatos para un ámbito de decisión, no se procesarán las propuestas asociadas.
