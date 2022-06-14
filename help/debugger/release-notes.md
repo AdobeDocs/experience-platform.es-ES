@@ -1,17 +1,29 @@
 ---
 title: Notas de la versión de Adobe Experience Platform Debugger
-description: Últimas notas de la versión de Adobe Experience Platform Debugger.
+description: Las notas de la versión más recientes de Adobe Experience Platform Debugger.
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 0%
+source-wordcount: '351'
+ht-degree: 2%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
+
+## Versión 1.3.2: 9 de junio de 2022
+
+* Se ha agregado un avatar predeterminado cuando el usuario ha iniciado sesión.
+* Se ha añadido resaltado de sintaxis a los objetos JSON en los registros.
+
+## Versión 1.3.1: 24 de mayo de 2022
+
+* Se han actualizado las dependencias.
+* Se ha corregido un problema de Analytics en el cual las visitas posteriores al proceso no podían habilitarse.
+* Se ha corregido un problema que hacía que Debugger se adjuntara a la ventana de inicio de sesión del Adobe.
+* Se ha corregido un problema de AT.js por el cual los mensajes de registro no aparecían en Debugger.
 
 ## Versión 1.3.0: 28 de enero de 2022
 
