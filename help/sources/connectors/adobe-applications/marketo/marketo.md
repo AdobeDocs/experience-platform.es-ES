@@ -5,9 +5,9 @@ title: Conector del Marketo Engage
 topic-legacy: overview
 description: Este documento proporciona información general sobre el conector de origen del Marketo Engage, incluida información sobre su autenticación, asignación y latencia de datos.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
+source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,10 @@ Consulte los pasos descritos en la sección [Autenticar el conector de origen de
 ## Configuración de la asignación de organización de Adobe
 
 Antes de establecer conjuntos de asignaciones para [!DNL Marketo], primero debe configurar la asignación de organización de Adobe. Para ver los pasos detallados sobre cómo completarlo, consulte la guía de [configuración de la asignación de organización de Adobe para [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## Configuración de espacios de nombres B2B y utilidad de generación automática de esquemas
+
+A continuación, utilice el espacio de nombres B2B y la utilidad de generación automática de esquemas para configurar la consola del desarrollador de Platform y el entorno de Postman. Esto le permite rellenar automáticamente los esquemas y áreas de nombres B2B. Para obtener instrucciones detalladas, consulte la guía de [configuración de los espacios de nombres B2B y la utilidad de generación automática de esquemas](./marketo-namespaces.md)
 
 ## Modelo de datos de experiencia (XDM)
 
