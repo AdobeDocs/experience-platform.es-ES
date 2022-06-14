@@ -5,9 +5,9 @@ title: Aplicación automática de directivas
 topic-legacy: guide
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar segmentos en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1696'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Cuando se activa por primera vez un segmento, [!DNL Policy Service] comprobacion
 
 * Las etiquetas de uso de datos aplicadas a campos y conjuntos de datos dentro del segmento que se va a activar.
 * El propósito de marketing del destino.
-* (Beta) Los perfiles que han aceptado ser incluidos en la activación de segmentos, según las políticas de consentimiento configuradas.
+* Los perfiles que han consentido en incluirse en la activación de segmentos, según las políticas de consentimiento configuradas.
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Cada etapa del calendario anterior representa una entidad que puede contribuir a
 
 | Etapa del linaje de datos | Función en la aplicación de políticas |
 | --- | --- |
-| Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de conjunto de datos o campo) que definen los casos de uso para los que se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directiva si se utiliza un conjunto de datos o campo que contenga determinadas etiquetas con un fin restringido por una directiva.<br><br>Los atributos de consentimiento recopilados de sus clientes también se almacenan en conjuntos de datos. Si tiene acceso a directivas de consentimiento (actualmente en versión beta), cualquier perfil que no cumpla los requisitos de atributos de consentimiento de sus políticas se excluirá de los segmentos activados en un destino. |
+| Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de conjunto de datos o campo) que definen los casos de uso para los que se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directiva si se utiliza un conjunto de datos o campo que contenga determinadas etiquetas con un fin restringido por una directiva.<br><br>Los atributos de consentimiento recopilados de sus clientes también se almacenan en conjuntos de datos. Si tiene acceso a políticas de consentimiento, cualquier perfil que no cumpla los requisitos de atributos de consentimiento de sus políticas se excluirá de los segmentos que se activan en un destino. |
 | Combinar directiva | Las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directiva si las políticas de combinación están configuradas de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Consulte la [información general sobre políticas de combinación](../../profile/merge-policies/overview.md) para obtener más información. |
 | Segmento | Las reglas de segmentos definen qué atributos deben incluirse en los perfiles de cliente. Dependiendo de los campos que incluya una definición de segmento, el segmento heredará cualquier etiqueta de uso aplicada para esos campos. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas heredadas están restringidas por las políticas aplicables del destino de destino según su caso de uso de marketing. |
 | Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una política. En otras palabras, la acción de marketing que defina para un destino determina qué políticas de uso de datos y políticas de consentimiento son aplicables a ese destino.<br><br>Las infracciones de la política de uso de datos se producen si activa un segmento cuyas etiquetas de uso están restringidas para la acción de marketing del destino objetivo.<br><br>(Beta) Cuando se activa un segmento, cualquier perfil que no contenga los atributos de consentimiento necesarios para la acción de marketing (según se definen en las políticas de consentimiento) se excluye de la audiencia activada. |
