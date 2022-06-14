@@ -5,9 +5,9 @@ title: Información general del sistema XDM
 topic-legacy: overview
 description: La estandarización y la interoperabilidad son conceptos clave detrás de Adobe Experience Platform. Experience Data Model (XDM), impulsado por el Adobe, es un esfuerzo por estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2015'
+source-wordcount: '2076'
 ht-degree: 2%
 
 ---
@@ -51,6 +51,12 @@ Para obtener más información sobre cómo administrar e interactuar con esquema
 
 ## Comportamientos de datos en el sistema XDM {#data-behaviors}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_behavior"
+>title="Comportamientos de datos"
+>abstract="Los datos que se van a usar en el Experience Platform se agrupan en tres tipos de comportamiento: registro, serie temporal y ad hoc. Los esquemas de registro proporcionan información sobre los atributos de un asunto, mientras que los esquemas de series temporales capturan una instantánea del sistema en el momento en que se realizó una acción. Los esquemas específicos capturan campos que son áreas de nombres para su uso por un único conjunto de datos."
+>text="See the documentation for more information on data behaviors in Platform."
+
 Los datos que se van a usar en el Experience Platform se agrupan en tres tipos de comportamiento:
 
 * **Registro**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
@@ -85,7 +91,7 @@ Aunque no todos los eventos se clasifican fácilmente en todas las fuentes de da
 
 ![Recorrido del cliente de ExperienceEvent](images/overview/experience-event-journey.png)
 
-Consulte la [[!UICONTROL XDM ExperienceEvent] guía de referencia](./classes/experienceevent.md) para obtener más información sobre la estructura y el caso de uso de los campos proporcionados por la clase.
+Consulte la [[!UICONTROL XDM ExperienceEvent] guía de referencia](./classes/experienceevent.md) para obtener más información sobre la estructura y el caso de uso de los campos proporcionados por la clase .
 
 ## Esquemas XDM y servicios de Experience Platform
 
