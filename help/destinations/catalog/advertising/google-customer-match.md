@@ -3,9 +3,9 @@ keywords: coincidencia de clientes de google;coincidencia de clientes de Google;
 title: Conexión Google Customer Match
 description: Google Customer Match le permite utilizar sus datos en línea y sin conexión para llegar a sus clientes y volver a interactuar con ellos en todas las propiedades que Google posee y gestiona, como Search, Shopping, Gmail y YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 23828fcbb1257fa093c1e114ee4c2fcb2162d9d6
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1715'
 ht-degree: 1%
 
 ---
@@ -135,7 +135,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 * **[!UICONTROL Nombre]**: proporcionar un nombre para esta conexión de destino
 * **[!UICONTROL Descripción]**: proporcionar una descripción para esta conexión de destino
-* **[!UICONTROL ID de cuenta]**: su ID de cliente de Google. El formato del ID es xxx-xxx-xxxx.
+* **[!UICONTROL ID de cuenta]**: your [ID de cliente de Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). El formato del ID es xxx-xxx-xxxx. Si está utilizando la variable [!DNL Google Ads Manager Account (My Client Center)], no use su ID de cuenta de administrador. Utilice la variable [ID de cliente de Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en) en su lugar.
 
 >[!IMPORTANT]
 >
