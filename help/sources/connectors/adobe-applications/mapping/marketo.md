@@ -5,9 +5,9 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
+source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '713'
 ht-degree: 7%
 
 ---
@@ -21,6 +21,8 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve [
 >Todo [!DNL Marketo] conjuntos de datos excepto `Activities` ahora compatibilidad con `isDeleted`. Sus flujos de datos existentes incluirán automáticamente `isDeleted`, pero solo introducirá el indicador para los datos recién introducidos. Si desea aplicar el indicador a todos los datos históricos, debe detener los flujos de datos existentes y volver a crearlos con la nueva asignación. Tenga en cuenta que si elimina `isDeleted`, ya no tendrá acceso a la funcionalidad . Es fundamental que la asignación se mantenga después de que se rellene automáticamente.
 
 ## Actividades {#activities}
+
+La variable [!DNL Marketo] source ahora admite actividades estándar adicionales. Para utilizar actividades estándar, debe actualizar el esquema con la variable [utilidad de generación automática de esquemas](../marketo/marketo-namespaces.md) porque si crea un nuevo `activities` flujo de datos sin actualizar el esquema, las plantillas de asignación fallarán, ya que los nuevos campos de destino no estarán presentes en el esquema. Si decide no actualizar el esquema, puede crear un nuevo flujo de datos y descartar cualquier error. Sin embargo, los campos nuevos o actualizados no se incorporarán en Platform.
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
