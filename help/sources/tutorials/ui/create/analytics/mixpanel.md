@@ -4,9 +4,9 @@ title: (Beta) Crear una conexión de origen de panel mixto en la interfaz de usu
 description: Aprenda a crear una conexión de origen de Mixpanel mediante la interfaz de usuario de Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 2ad3737c7099319e0b14f4e843dda87a6a554d97
+source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '897'
 ht-degree: 2%
 
 ---
@@ -72,7 +72,7 @@ Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a
 >id="platform_sources_mixpanel_timezone"
 >title="Establecer una zona horaria para la ingesta de Mixpanel"
 >abstract="La zona horaria debe ser la misma que la configuración de la zona horaria del perfil de Mixpanel, ya que Platform utiliza la zona horaria del proyecto designada para introducir datos relevantes de Mixpanel. Mixpanel ajustará su zona horaria para coordinarse con la zona horaria del proyecto antes de registrar el evento en un almacén de datos de Mixpanel."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/tutorials/ui/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Más información en la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Más información en la documentación"
 
 Una vez autenticado el origen, proporcione el ID del proyecto y la zona horaria y, a continuación, seleccione **[!UICONTROL Select]**.
 
