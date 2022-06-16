@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;Salesforce;salesforce;asign
 title: Campos de asignación de Salesforce
 description: Las tablas siguientes contienen las asignaciones entre los campos de origen de Salesforce y sus correspondientes campos XDM.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 7921eded0a63b8667e693aefab87013c12cd4061
+source-git-commit: 5a8c5c4f6d569ea1c587b12e5d72cd471b111921
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 10%
@@ -34,6 +34,7 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `HomePhone` | `homePhone.number` |
+| `isDeleted` | `isDeleted` |
 | `Id` | `b2b.personKey.sourceID` |
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
@@ -83,6 +84,7 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `IsConverted` | `b2b.isConverted` |
+| `isDeleted` | `isDeleted` |
 | `"Salesforce"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
 | `Id` | `b2b.personKey.sourceID` |
@@ -144,6 +146,7 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | `Description` | `accountDescription` |
 | `DunsNumber` | `accountOrganization.DUNSNumber` | característica data.com |
 | `Fax` | `accountFax.number` |
+| `isDeleted` | `isDeleted` |
 | `Id` | `accountKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | Identidad primaria. El valor de `"${CRM_ORG_ID}"` se reemplazará automáticamente. |
 | `Industry` | `accountOrganization.industry` |
@@ -199,6 +202,7 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | `ForecastCategoryName` | `forecastCategoryName` |
 | `Id` | `opportunityKey.sourceID` |
 | `IsClosed` | `isClosed` |
+| `isDeleted` | `isDeleted` |
 | `IsWon` | `isWon` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -228,6 +232,7 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Id` | `opportunityPersonKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | Identidad primaria. El valor de `"${CRM_ORG_ID}"` se reemplazará automáticamente. |
+| `isDeleted` | `isDeleted` |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -244,6 +249,7 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | El valor de `"${CRM_ORG_ID}"` se reemplazará automáticamente. |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | Identidad primaria. El valor de `"${CRM_ORG_ID}"` se reemplazará automáticamente. |
 | `Name` | `campaignName` |
@@ -272,6 +278,7 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | El valor de `"${CRM_ORG_ID}"` se reemplazará automáticamente. |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignMemberKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Identidad primaria. El valor de `"${CRM_ORG_ID}"` se reemplazará automáticamente. |
 | `"Salesforce"` | `campaignKey.sourceType` |
