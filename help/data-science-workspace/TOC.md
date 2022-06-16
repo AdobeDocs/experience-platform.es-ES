@@ -5,9 +5,9 @@ breadcrumb-title: Guía de Data Science Workspace
 user-guide-description: Utilice el aprendizaje automático para desarrollar, preparar y valorar modelos y fórmulas con Adobe Sensei y JupyterLab Notebooks.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: ec69c859a7b40f3d527c73405b358862ebdb92e7
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '236'
 ht-degree: 16%
 
 ---
@@ -35,11 +35,6 @@ ht-degree: 16%
    * [MLServices](api/mlservices.md)
    * [Perspectivas](api/insights.md)
    * [Apéndice](api/appendix.md)
-* Aprendizaje automático en tiempo real (Alpha) {#real-time-machine-learning}
-   * [Información general](real-time-machine-learning/home.md)
-   * [Primeros pasos](real-time-machine-learning/getting-started.md)
-   * [Administrar portátiles](real-time-machine-learning/rtml-authoring-notebook.md)
-   * [Guía de referencia de nodos](real-time-machine-learning/node-reference.md)
 * Fórmulas creadas previamente {#pre-built-recipes}
    * [Fórmula de recomendación de producto](pre-built-recipes/product-recommendations.md)
    * [Predicción de compra de productos](pre-built-recipes/product-purchase-prediction.md)
