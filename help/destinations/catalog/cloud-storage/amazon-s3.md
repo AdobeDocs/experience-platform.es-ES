@@ -3,9 +3,9 @@ keywords: Amazon S3;destino S3;s3;amazon s3
 title: Conexión Amazon S3
 description: Cree una conexión saliente en directo al almacenamiento de Amazon Web Service (AWS) S3 para exportar periódicamente archivos de datos CSV de Adobe Experience Platform a sus propios bloques S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: f3f713848c7796c95d5326eba8a2e75f36704fd0
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '682'
 ht-degree: 1%
 
 ---
@@ -31,9 +31,30 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ## Conectarse al destino {#connect}
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-### Parámetros de conexión {#parameters}
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). En el flujo de trabajo de configuración de destino, rellene los campos que aparecen en las dos secciones siguientes.
+
+### Autenticar en destino {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_rsa"
+>title="Clave pública RSA"
+>abstract="Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como un [!DNL Base64-encoded] cadena. Vea un ejemplo de una clave con formato correcto en el vínculo de documentación siguiente."
+
+Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectarse al destino]**.
+
+* **[!DNL Amazon S3]clave de acceso** y **[!DNL Amazon S3]clave secreta**: En [!DNL Amazon S3], genere un `access key - secret access key` par para conceder acceso a Platform a su [!DNL Amazon S3] cuenta. Obtenga más información en la [Documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como un [!DNL Base64-encoded] cadena.
+   * Ejemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Vea a continuación un ejemplo de una clave PGP con formato correcto, con la parte central acortada para su brevedad.
+
+      ![Clave PGP](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+### Rellenar detalles de destino {#destination-details}
+
+Para configurar los detalles del destino, rellene los campos obligatorios y seleccione **[!UICONTROL Siguiente]**.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
@@ -43,27 +64,13 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="Ruta de carpeta"
->abstract="Debe contener únicamente los caracteres A-Z, a-z, 0-9 y puede incluir los siguientes caracteres especiales: `/!-_.'()"^[]+$%.*"`. Para crear una carpeta por archivo de segmento, inserte la macro /%SEGMENT_NAME% o /%SEGMENT_ID% o /%SEGMENT_NAME%/%SEGMENT_ID% en el campo de texto. Las macros solo se pueden insertar al final de la ruta de la carpeta. Vea ejemplos de macros en la documentación."
+>abstract="Debe contener únicamente los caracteres A-Z, a-z, 0-9 y puede incluir los siguientes caracteres especiales: `/!-_.'()"^[]+$%.*"`. Para crear una carpeta por archivo de segmento, inserte la macro `/%SEGMENT_NAME%` o `/%SEGMENT_ID%` o `/%SEGMENT_NAME%/%SEGMENT_ID%` en el campo de texto. Las macros solo se pueden insertar al final de la ruta de la carpeta. Vea ejemplos de macros en la documentación."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Utilice macros para crear una carpeta en su ubicación de almacenamiento"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_s3_rsa"
->title="Clave pública RSA"
->abstract="Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como una cadena codificada Base64."
-
->[!IMPORTANT]
-> 
->Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
-
-While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
-
-* **[!DNL Amazon S3]clave de acceso** y **[!DNL Amazon S3]clave secreta**: En [!DNL Amazon S3], genere un `access key - secret access key` par para conceder acceso a Platform a su [!DNL Amazon S3] cuenta. Obtenga más información en la [Documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Nombre]**: introduzca un nombre que le ayudará a identificar este destino.
 * **[!UICONTROL Descripción]**: introduzca una descripción de este destino.
 * **[!UICONTROL Nombre del depósito]**: introduzca el nombre del [!DNL Amazon S3] contenedor que utilizará este destino.
 * **[!UICONTROL Ruta de carpeta]**: introduzca la ruta a la carpeta de destino que alojará los archivos exportados.
-
-Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como un [!DNL Base64] cadena codificada.
 
 >[!TIP]
 >
