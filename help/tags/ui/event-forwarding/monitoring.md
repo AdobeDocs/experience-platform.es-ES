@@ -2,10 +2,11 @@
 title: Monitorizar actividades en el reenvío de eventos
 description: Obtenga información sobre cómo monitorizar el uso, los errores y el tiempo de cálculo en las propiedades de reenvío de eventos.
 feature: Event Forwarding
-source-git-commit: 4de448fb5e8ed94d23ebfbcc1bfe19bcfd36fbca
+exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
+source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 0%
+source-wordcount: '548'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +23,12 @@ La variable **[!UICONTROL Monitorización]** en la interfaz de usuario de la rec
 ## Requisitos previos
 
 En esta guía se da por hecho que ha comprado el reenvío de eventos y que tiene una comprensión práctica del funcionamiento del reenvío de eventos. Consulte la [información general sobre el reenvío de eventos](./overview.md) para obtener más información.
+
+## Información general del vídeo
+
+Vea el siguiente vídeo para obtener una descripción general de alto nivel de la función de monitorización:
+
+>[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
 
 ## Selección de propiedades y entornos
 
