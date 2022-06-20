@@ -4,14 +4,19 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
+source-git-commit: b4e3b40942390ef183ccb01f65702ae400a5e22f
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
+
+## Versión 1.3.3: 20 de junio de 2022
+
+* Se ha corregido un problema que impedía abrir ventanas emergentes de tablas de eventos de red.
+* Se ha corregido un problema que impedía cargar la información de Asignación en la página.
 
 ## Versión 1.3.2: 9 de junio de 2022
 
