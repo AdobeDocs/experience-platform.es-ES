@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;Salesforce;salesforce;asign
 title: Campos de asignación de Salesforce
 description: Las tablas siguientes contienen las asignaciones entre los campos de origen de Salesforce y sus correspondientes campos XDM.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 5a8c5c4f6d569ea1c587b12e5d72cd471b111921
+source-git-commit: d77bee173791843997985cfdae15959350fd9ab2
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 10%
+source-wordcount: '291'
+ht-degree: 9%
 
 ---
 
@@ -295,6 +295,29 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `FirstRespondedDate` | `firstRespondedDate` |
 | `Type` | `b2b.personType` |
+
+## Relación de contacto de la cuenta {#account-contact-relation}
+
+| Campo de origen | Ruta de campo XDM de Target | Notas |
+| --- | --- | --- |
+| `AccountId` | `accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |
+| `ContactId` | `personKey.sourceID` |
+| `iif(ContactId != null && ContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personKey` |
+| `CreatedById` | `extSourceSystemAudit.createdBy` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `EndDate` | `relationEndDate` |
+| `IsDeleted` | `isDeleted` |
+| `Id` | `accountPersonKey.sourceID` |
+| `"Salesforce"` | `accountPersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `accountPersonKey.sourceInstanceID` |
+| `concat(Id, "@${CRM_ORG_ID}.Salesforce")` | `accountPersonKey.sourceKey` | Identidad primaria. |
+| `IsActive` | `IsActive` |
+| `IsDirect` | `IsDirect` |
+| `LastModifiedById` | `extSourceSystemAudit.lastUpdatedBy` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `explode(Roles,";")` | `personRoles[]` |
+| `StartDate` | `relationStartDate` |
 
 ## Pasos siguientes
 
