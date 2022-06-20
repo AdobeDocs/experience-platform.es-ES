@@ -5,9 +5,9 @@ title: Punto final de API de descriptores
 description: El extremo /descriptors de la API del Registro de esquemas permite administrar mediante programación los descriptores XDM dentro de la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1836'
 ht-degree: 4%
 
 ---
@@ -311,7 +311,7 @@ Un descriptor de identidad indica que la variable[!UICONTROL sourceProperty]&quo
 
 | Propiedad | Descripción |
 | --- | --- |
-| `@type` | Tipo de descriptor que se está definiendo. |
+| `@type` | Tipo de descriptor que se está definiendo. Para un descriptor de identidad, este valor debe establecerse en `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | La variable `$id` URI del esquema en el que se está definiendo el descriptor. |
 | `xdm:sourceVersion` | Versión principal del esquema de origen. |
 | `xdm:sourceProperty` | La ruta a la propiedad específica que será la identidad. La ruta debe comenzar con &quot;/&quot; y no terminar con una. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, use &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;) |
@@ -347,7 +347,7 @@ Los descriptores de nombres descriptivos permiten al usuario modificar el `title
 
 | Propiedad | Descripción |
 | --- | --- |
-| `@type` | Tipo de descriptor que se está definiendo. |
+| `@type` | Tipo de descriptor que se está definiendo. Para un descriptor de nombre descriptivo, este valor debe establecerse en `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | La variable `$id` URI del esquema en el que se está definiendo el descriptor. |
 | `xdm:sourceVersion` | Versión principal del esquema de origen. |
 | `xdm:sourceProperty` | La ruta a la propiedad específica que será la identidad. La ruta debe comenzar con &quot;/&quot; y no terminar con una. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, use &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;) |
@@ -377,7 +377,7 @@ Los descriptores de relación describen una relación entre dos esquemas diferen
 
 | Propiedad | Descripción |
 | --- | --- |
-| `@type` | Tipo de descriptor que se está definiendo. |
+| `@type` | Tipo de descriptor que se está definiendo. Para un descriptor de relación, este valor debe establecerse en `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | La variable `$id` URI del esquema en el que se está definiendo el descriptor. |
 | `xdm:sourceVersion` | Versión principal del esquema de origen. |
 | `xdm:sourceProperty` | Ruta al campo en el esquema de origen donde se está definiendo la relación. Debe comenzar con &quot;/&quot; y no terminar con uno. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;). |
@@ -386,7 +386,6 @@ Los descriptores de relación describen una relación entre dos esquemas diferen
 | `xdm:destinationProperty` | Ruta opcional a un campo de destino dentro del esquema de destino. Si se omite esta propiedad, el campo de destino se deduce por cualquier campo que contenga un descriptor de identidad de referencia coincidente (consulte a continuación). |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 #### Descriptor de identidad de referencia
 
@@ -404,8 +403,32 @@ Los descriptores de identidad de referencia proporcionan un contexto de referenc
 
 | Propiedad | Descripción |
 | --- | --- |
-| `@type` | Tipo de descriptor que se está definiendo. |
+| `@type` | Tipo de descriptor que se está definiendo. Para un descriptor de identidad de referencia, este valor debe establecerse en `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | La variable `$id` URI del esquema en el que se está definiendo el descriptor. |
 | `xdm:sourceVersion` | Versión principal del esquema de origen. |
 | `xdm:sourceProperty` | Ruta al campo en el esquema de origen donde se está definiendo el descriptor. Debe comenzar con &quot;/&quot; y no terminar con uno. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;). |
 | `xdm:identityNamespace` | El código de área de nombres de identidad para la propiedad de origen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+#### Descriptor de campo obsoleto
+
+Puede [Poner en desuso un campo dentro de un recurso XDM personalizado](../tutorials/field-deprecation.md#custom) añadiendo un `meta:status` establecido en `deprecated` al campo en cuestión. Sin embargo, si desea eliminar de los esquemas los campos proporcionados por recursos XDM estándar, puede asignar un descriptor de campo obsoleto al esquema en cuestión para lograr el mismo efecto. Al usar la variable [correcto `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), puede ver qué campos estándar están en desuso para un esquema al buscarlos en la API.
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `@type` | Tipo de descriptor. Para un descriptor de desaprobación de campos, este valor debe establecerse en `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | El URI `$id` del esquema al que está aplicando el descriptor. |
+| `xdm:sourceVersion` | Versión del esquema al que está aplicando el descriptor. Debe configurarse como `1`. |
+| `xdm:sourceProperty` | Ruta a la propiedad dentro del esquema al que está aplicando el descriptor. Si desea aplicar el descriptor a varias propiedades, puede proporcionar una lista de rutas en forma de matriz (por ejemplo, `["/firstName", "/lastName"]`). |
+
+{style=&quot;table-layout:auto&quot;}

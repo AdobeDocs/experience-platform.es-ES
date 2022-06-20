@@ -5,9 +5,9 @@ title: Punto final de API de Esquemas
 description: El extremo /schemas de la API del Registro de esquemas le permite administrar mediante programación esquemas XDM dentro de la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1468'
 ht-degree: 5%
 
 ---
@@ -138,6 +138,7 @@ El formato de respuesta depende de la variable `Accept` encabezado enviado en la
 | `application/vnd.adobe.xed-notext+json; version=1` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` y `allOf` resuelto, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y `allOf` resuelto, incluidos los descriptores. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` y `allOf` resuelto, tiene títulos y descripciones. Los campos obsoletos se indican con un `meta:status` atributo de `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 
