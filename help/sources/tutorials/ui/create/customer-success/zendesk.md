@@ -3,9 +3,9 @@ keywords: Experience Platform;Zendesk;orígenes;conectores;conectores de origen;
 title: Crear una conexión de origen de Zendesk en la interfaz de usuario
 description: Aprenda a crear una conexión de origen de Zendesk utilizando la interfaz de usuario de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 017f074a325b5ca1921128f6d3d9759612a8a398
+source-git-commit: f0348abd41e7d594109a04fd11ed06857cedfa53
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '797'
 ht-degree: 6%
 
 ---
@@ -97,10 +97,6 @@ En la interfaz de usuario de Platform, seleccione **[!UICONTROL Conjuntos de dat
 A continuación, seleccione el ID de ejecución de flujo de datos del flujo de datos que desea ver para ver detalles específicos sobre ese flujo de datos ejecutado.
 
 ![Página de flujo de datos](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
-
-Para ver los detalles sobre el esquema, seleccione **[!UICONTROL Administración de datos]**.
-
-![Esquema de Zendesk](../../../../images/tutorials/create/zendesk/dataset-governance.png)
 
 Finalmente, seleccione **[!UICONTROL Vista previa del conjunto de datos]** para mostrar los datos introducidos.
 

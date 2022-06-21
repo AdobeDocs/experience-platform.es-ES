@@ -2,9 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 title: (Beta) Crear una conexión de origen de panel mixto en la interfaz de usuario
 description: Aprenda a crear una conexión de origen de Mixpanel mediante la interfaz de usuario de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
+exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 2%
