@@ -5,36 +5,36 @@ title: Guía de API del Registro de Esquemas
 description: La API del Registro de esquemas permite a los desarrolladores administrar mediante programación todos los esquemas y recursos relacionados del Modelo de datos de experiencia (XDM) dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 6ba8da07a4fb36c6e8bd2ede8ac415edaabe0ef6
+source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1084'
 ht-degree: 5%
 
 ---
 
 # Guía de la API de [!DNL Schema Registry]
 
-El [!DNL Schema Registry] se utiliza para acceder a la biblioteca de esquemas en Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la cual se puede acceder a todos los recursos de biblioteca disponibles.
+La variable [!DNL Schema Registry] se utiliza para acceder a la biblioteca de esquemas en Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
-La API del Registro de esquemas proporciona varios extremos que le permiten administrar mediante programación todos los esquemas y recursos relacionados del Modelo de datos de experiencias (XDM) disponibles para usted en Platform. Esto incluye los definidos por Adobe, [!DNL Experience Platform] socios y proveedores cuyas aplicaciones utiliza.
+La API del Registro de esquemas proporciona varios extremos que le permiten administrar mediante programación todos los esquemas y recursos relacionados del Modelo de datos de experiencias (XDM) disponibles para usted en Platform. Esto incluye los definidos por el Adobe, [!DNL Experience Platform] socios y proveedores cuyas aplicaciones utilice.
 
-Estos extremos se describen a continuación. Visite las guías de puntos finales individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, leer llamadas de API de ejemplo y más.
+Estos extremos se describen a continuación. Visite las guías de puntos de conexión individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, leer llamadas de API de ejemplo y más.
 
 >[!IMPORTANT]
 >
->XDM utiliza el formato de esquema JSON para describir y validar la estructura de los datos de experiencia del cliente incorporados. Antes de trabajar con la API del Registro de esquemas, se recomienda que revise la [documentación oficial del Esquema JSON](https://json-schema.org/) para comprender mejor esta tecnología subyacente.
+>XDM utiliza el formato de esquema JSON para describir y validar la estructura de los datos de experiencia del cliente incorporados. Antes de trabajar con la API del Registro de esquemas, se recomienda que revise la [documentación oficial del esquema JSON](https://json-schema.org/) para comprender mejor esta tecnología subyacente.
 
-Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [referencia de la API del Registro de Esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [Referencia de la API del Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Esquemas
 
-Los esquemas XDM representan y validan la estructura y el formato de los datos introducidos en Platform. Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Puede crear, ver, editar y eliminar esquemas con el extremo `/schemas` . Para aprender a utilizar este punto final, consulte la [guía de extremo de esquemas](./schemas.md).
+Los esquemas XDM representan y validan la estructura y el formato de los datos introducidos en Platform. Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Puede crear, ver, editar y eliminar esquemas utilizando la variable `/schemas` punto final. Para aprender a utilizar este extremo, consulte la [guía de extremo de esquemas](./schemas.md).
 
-Para obtener una guía paso a paso sobre cómo crear un esquema completo en la API del Registro de esquemas, incluida la creación y adición de grupos de campos y tipos de datos, consulte el [tutorial de creación de esquemas de API](../tutorials/create-schema-api.md).
+Para obtener una guía paso a paso sobre cómo crear un esquema completo en la API del Registro de esquemas, incluida la creación y adición de grupos de campos y tipos de datos, consulte la [Tutorial de creación de esquemas de API](../tutorials/create-schema-api.md).
 
 ## Comportamientos
 
-Los comportamientos definen la naturaleza de los datos que describe un esquema. Cada clase XDM debe hacer referencia a un comportamiento específico, que heredarán todos los esquemas que emplean esa clase. Consulte la [guía de extremo de comportamientos](./behaviors.md) para obtener información sobre cómo ver los comportamientos disponibles en la API.
+Los comportamientos definen la naturaleza de los datos que describe un esquema. Cada clase XDM debe hacer referencia a un comportamiento específico, que heredarán todos los esquemas que emplean esa clase. Consulte la [guía del extremo de comportamientos](./behaviors.md) para aprender a ver los comportamientos disponibles en la API.
 
 ## Clases
 
@@ -50,31 +50,43 @@ Los tipos de datos se utilizan como campos de tipo de referencia en clases o gru
 
 ## Descriptores
 
-Los descriptores son conjuntos de metadatos que se asignan a campos específicos dentro de un esquema y proporcionan varios detalles contextuales, incluido cómo esos campos (y el propio esquema) están relacionados con otros esquemas. Cada esquema puede tener una o más entidades descriptivas aplicadas a él, y hay varios tipos de descriptor diferentes para servir a diferentes propósitos. Consulte la [guía de extremo de descriptores](./descriptors.md) para obtener más información sobre cómo trabajar con descriptores en la API y una descripción general de los distintos tipos de descriptor y sus casos de uso.
+Los descriptores son conjuntos de metadatos que se asignan a campos específicos dentro de un esquema y proporcionan varios detalles contextuales, incluido cómo esos campos (y el propio esquema) están relacionados con otros esquemas. Cada esquema puede tener una o más entidades descriptivas aplicadas a él, y hay varios tipos de descriptor diferentes para servir a diferentes propósitos. Consulte la [guía de extremo de descriptores](./descriptors.md) para obtener más información sobre cómo trabajar con descriptores en la API, así como información general sobre los distintos tipos de descriptor y sus casos de uso.
 
 ## Uniones
 
-Aunque Platform le permite componer esquemas para casos de uso particulares, también le permite componer una &quot;unión&quot; de esquemas pertenecientes a una clase específica. Un esquema de unión agrega los campos de todos los esquemas que comparten la misma clase en una sola representación. Al habilitar un esquema para su uso con [Perfil del cliente en tiempo real](../../profile/home.md), ese esquema se incluye en la unión para su clase particular. De este modo, los esquemas de unión no se pueden editar directamente y solo se pueden ver afectados si se incluyen o excluyen los esquemas para su uso en Perfil.
+Aunque Platform le permite componer esquemas para casos de uso particulares, también le permite componer una &quot;unión&quot; de esquemas pertenecientes a una clase específica. Un esquema de unión agrega los campos de todos los esquemas que comparten la misma clase en una sola representación. Al habilitar un esquema para utilizarlo con [Perfil del cliente en tiempo real](../../profile/home.md), ese esquema se incluye en la unión para su clase particular. De este modo, los esquemas de unión no se pueden editar directamente y solo se pueden ver afectados si se incluyen o excluyen los esquemas para su uso en Perfil.
 
-Para obtener información sobre cómo ver uniones en la API del Registro de esquemas, consulte la [guía de extremo de uniones](./unions.md).
+Para obtener información sobre cómo ver uniones en la API del Registro de esquemas, consulte la [guía de extremo de unión](./unions.md).
 
-## Exportar/Importar
+## Conversión de CSV a esquema {#csv-to-schema}
+
+Puede generar automáticamente un esquema XDM usando un archivo CSV como plantilla, lo que le permite crear plantillas para importar campos de esquema de forma masiva y reducir el trabajo manual de la API o la interfaz de usuario.
+
+Consulte la [Guía de extremo de conversión de CSV a esquema](./export.md) para obtener más información.
+
+## Exportar {#export}
 
 La API del Registro de esquemas permite transferir y compartir recursos XDM entre entornos limitados y organizaciones de IMS. Para cualquier esquema, grupo de campos o tipo de datos, puede generar una carga útil de exportación que contenga la estructura del recurso y cualquier recurso dependiente. Esta carga útil se puede utilizar para importar el recurso en un entorno limitado de destino y en una organización de IMS.
 
-Consulte la [guía de puntos finales de exportación/importación](./export-import.md) para obtener más información sobre cómo utilizar estos puntos finales.
+Consulte la [exportar guía de extremo](./export.md) para obtener más información sobre cómo crear una carga útil de exportación para un recurso XDM existente.
+
+## Importar
+
+Si usa la variable [exportar](#export) o [Conversión de CSV a esquema](./import.md) extremos para crear una carga útil de exportación, puede enviar esa carga útil a una organización de destino y a un entorno limitado para importar los recursos especificados.
+
+Consulte la [guía de extremo de importación](./export.md) para obtener más información sobre cómo generar recursos XDM a partir de cargas de exportación.
 
 ## Datos de muestra
 
 Puede generar datos de ejemplo para cualquier esquema especificado en la Biblioteca de esquemas. El objeto Response devuelto se puede utilizar como fuente de consumo de datos.
 
-Consulte la [guía de extremo de datos de ejemplo](./sample-data.md) para obtener más información sobre el uso de este extremo.
+Consulte la [guía de extremo de datos de ejemplo](./sample-data.md) para más información sobre el uso de este punto final.
 
 ## Registro de auditoría
 
 El Registro de esquemas mantiene un registro de todos los cambios que se han producido en un recurso (clase, grupo de campos, tipo de datos o esquema) entre diferentes actualizaciones. Puede recuperar el registro de un recurso en particular proporcionando su `$id` o `meta:altId` en la ruta de una solicitud de GET a este extremo.
 
-Consulte la [guía de extremo del registro de auditoría](./audit-log.md) para obtener más información sobre el uso de este extremo.
+Consulte la [guía de extremo del registro de auditoría](./audit-log.md) para más información sobre el uso de este punto final.
 
 ## Pasos siguientes
 
