@@ -1,9 +1,10 @@
 ---
 title: Administración de etiquetas de uso de datos para un esquema
 description: Aprenda a añadir etiquetas de uso de datos a los campos de esquema del Modelo de datos de experiencia (XDM) en la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
+source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,8 @@ Una etiqueta aplicada a un campo de esquema indica las políticas de uso que se 
 
 Aunque las etiquetas se pueden aplicar a conjuntos de datos individuales (y campos dentro de esos conjuntos de datos), también se pueden aplicar etiquetas a nivel de esquema. Cuando las etiquetas se aplican directamente a un esquema, esas etiquetas se propagan a todos los conjuntos de datos existentes y futuros que se basan en ese esquema.
 
+Además, cualquier etiqueta de campo que agregue en un esquema se propaga a todos los demás esquemas que empleen el mismo campo de una clase o grupo de campos compartidos. Esto ayuda a garantizar que las reglas de uso para campos similares sean coherentes en todo el modelo de datos.
+
 Este tutorial trata los pasos para agregar etiquetas a un esquema mediante el Editor de esquemas en la interfaz de usuario de Platform.
 
 ## Primeros pasos
@@ -32,7 +35,7 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
 
 ## Seleccionar un esquema o campo al que añadir etiquetas
 
-Las etiquetas solo se pueden aplicar a esquemas y no se pueden agregar a los componentes que conforman esos esquemas (clases, grupos de campos y tipos de datos). Para empezar a añadir etiquetas, primero debe [seleccionar un esquema existente para editar](../ui/resources/schemas.md#edit) o [crear un nuevo esquema](../ui/resources/schemas.md#create) para ver su estructura en el Editor de esquemas.
+Para empezar a añadir etiquetas, primero debe [seleccionar un esquema existente para editar](../ui/resources/schemas.md#edit) o [crear un nuevo esquema](../ui/resources/schemas.md#create) para ver su estructura en el Editor de esquemas.
 
 Para editar las etiquetas de un campo individual, puede seleccionar el campo en el lienzo y luego seleccionar **[!UICONTROL Administrar acceso]** en el carril derecho.
 
