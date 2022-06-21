@@ -5,9 +5,9 @@ title: Procesamiento de solicitudes de privacidad en perfil del cliente en tiemp
 type: Documentation
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes de acceso, exclusión de la venta o eliminación de sus datos personales, según lo establecido en numerosas normas de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el Perfil del cliente en tiempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ When [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Pr
 
 >[!IMPORTANT]
 >
->Aunque una solicitud de eliminación correcta elimina los datos de atributo recopilados para un cliente (o conjunto de clientes), la solicitud no elimina las asociaciones establecidas en el gráfico de identidad.
+>Si se realiza una solicitud de eliminación para el perfil (`ProfileService`) pero no el servicio de identidad (`identity`), el trabajo resultante elimina los datos de atributo recopilados para un cliente (o conjunto de clientes), pero no elimina las asociaciones establecidas en el gráfico de identidad.
 >
 >Por ejemplo, una solicitud de eliminación que utiliza el `email_id` y `customer_id` elimina todos los datos de atributos almacenados bajo esos ID. Sin embargo, cualquier dato que posteriormente se incorpore en el mismo `customer_id` seguirá estando asociado con el `email_id`, ya que la asociación sigue existiendo.
 >
