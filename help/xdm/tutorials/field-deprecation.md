@@ -1,16 +1,18 @@
 ---
 title: Poner en desuso un campo XDM
 description: Obtenga información sobre cómo eliminar los campos del Modelo de datos de experiencia (XDM) en la API del Registro de esquemas.
-source-git-commit: dc400dce8a77f27347e767230faf7301afc7c1fb
+source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '554'
 ht-degree: 6%
 
 ---
 
 # Poner en desuso un campo XDM
 
-En el Modelo de datos de Experience (XDM), puede eliminar de la memoria intermedia un campo dentro de un esquema o recurso personalizado utilizando la variable [API del Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Este documento explica cómo desactivar campos para distintos recursos XDM.
+En el Modelo de datos de Experience (XDM), puede eliminar de la memoria intermedia un campo dentro de un esquema o recurso personalizado utilizando la variable [API del Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). El hecho de que un campo quede obsoleto hace que se oculte de las IU posteriores, como la [!UICONTROL Perfiles] espacio de trabajo y Customer Journey Analytics, pero por lo demás es un cambio no irruptivo y no afecta negativamente a los flujos de datos existentes.
+
+Este documento explica cómo desactivar campos para distintos recursos XDM.
 
 ## Primeros pasos
 
