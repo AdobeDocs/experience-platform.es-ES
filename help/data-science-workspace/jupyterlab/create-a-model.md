@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le guía por los pasos necesarios para crear una fórmula con la plantilla de generador de fórmulas de blocs de notas de JupyterLab .
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
+source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%
@@ -38,7 +38,7 @@ La variable [!UICONTROL Generador de fórmulas] El bloc de notas le permite ejec
 >
 >La variable [!UICONTROL Generador de fórmulas] el bloc de notas admite trabajar con todos los formatos de archivo, pero actualmente la funcionalidad crear fórmula solo admite [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe_builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
 Al seleccionar la variable [!UICONTROL Generador de fórmulas] bloc de notas desde el lanzador, el bloc de notas se abre en una nueva ficha.
 
