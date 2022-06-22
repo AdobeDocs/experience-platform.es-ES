@@ -4,10 +4,10 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar datos en el lago de datos de Platform.
 feature: Queries
-source-git-commit: f501a93786a726c5aa74e19903ac3b2564e72a91
+source-git-commit: 401d6f9e7ff4e30ff5b0efb35254e8863476425c
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 20%
+source-wordcount: '187'
+ht-degree: 19%
 
 ---
 
@@ -48,6 +48,7 @@ ht-degree: 20%
 - Gobierno de datos {#data-governance}
    - [Guía de registro de auditoría](data-governance/audit-log-guide.md)
    - [Identidades en conjuntos de datos de esquema específicos](data-governance/ad-hoc-schema-identities.md)
+   - [Compatibilidad con el control de acceso basado en atributos para esquemas ad hoc](./data-governance/ad-hoc-schema-labels.md)
 - Referencia SQL {#sql}
    - [Información general de SQL](sql/overview.md)
    - [Sintaxis SQL](sql/syntax.md)
