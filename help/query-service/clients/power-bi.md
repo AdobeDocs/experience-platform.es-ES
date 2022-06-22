@@ -5,9 +5,9 @@ title: Conectar Power BI al servicio de consulta
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar la Power BI con el servicio de consulta de Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 69f57a0e2293e438a0e5c986d888027892cc6359
+source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '1014'
 ht-degree: 1%
 
 ---
@@ -53,6 +53,10 @@ Aparecerá el cuadro de diálogo Base de datos PostgreSQl, solicitando valores p
 Para la variable **[!DNL Server]** en Power BI, introduzca el valor del host que se encuentra en la sección Credenciales del servicio de consulta . Para la producción, agregue el puerto `:80` al final de la cadena host. Por ejemplo, `made-up.platform-query.adobe.io:80`.
 
 La variable **[!DNL Database]** puede ser &quot;all&quot; o un nombre de tabla de conjunto de datos. Por ejemplo, `prod:all`.
+
+>[!IMPORTANT]
+>
+>Las estructuras de datos anidadas en herramientas de BI de terceros se pueden aplanar para mejorar su capacidad de uso y reducir la carga de trabajo necesaria para recuperar, analizar, transformar y crear informes de datos. Consulte la documentación de[`FLATTEN` función](../best-practices/flatten-nested-data.md) para obtener instrucciones sobre cómo activar esta configuración al conectarse a una base de datos.
 
 ![Panel de Power BI con los campos de entrada del servidor y la base de datos resaltados.](../images/clients/power-bi/postgresql-database-dialog.png)
 

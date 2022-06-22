@@ -1,9 +1,11 @@
 ---
+keywords: Experience Platform;servicio de consulta;servicio de consulta;estructuras de datos anidadas;datos anidados;
 title: Trabajo con estructuras de datos anidadas en el servicio de consulta
 description: Este documento proporciona un ejemplo práctico para procesar y transformar campos de datos anidados utilizando instrucciones CTAS e INSERT INTO.
-source-git-commit: 838ee939a8438c2f09ff64044c129e20c37ea01a
+exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
+source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '796'
 ht-degree: 1%
 
 ---

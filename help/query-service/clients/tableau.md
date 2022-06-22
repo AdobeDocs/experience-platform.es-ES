@@ -5,10 +5,10 @@ title: Conexión de Tableau con el servicio de consultas
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar Tableau con el servicio de consulta de Adobe Experience Platform.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 3%
+source-wordcount: '278'
+ht-degree: 2%
 
 ---
 
@@ -32,9 +32,13 @@ Asegúrese de haber marcado la variable **[!UICONTROL SSL requerido]** antes de 
 >
 >Consulte la [[!DNL Query Service] Documentación SSL](./ssl-modes.md) para obtener más información sobre la compatibilidad con SSL para conexiones de terceros con el servicio de consulta de Adobe Experience Platform y cómo conectarse mediante `verify-full` Modo SSL.
 
-Después de rellenar todas las credenciales, seleccione **[!DNL Sign In]** para continuar.
-
 ![](../images/clients/tableau/sign-in.png)
+
+>[!IMPORTANT]
+>
+>Las estructuras de datos anidadas en herramientas de BI de terceros se pueden aplanar para mejorar su capacidad de uso y reducir la carga de trabajo necesaria para recuperar, analizar, transformar y crear informes de datos. Consulte la documentación de[`FLATTEN` función](../best-practices/flatten-nested-data.md) para obtener instrucciones sobre cómo activar esta configuración al conectarse a una base de datos.
+
+Después de rellenar todas las credenciales, seleccione **[!DNL Sign In]** para continuar.
 
 Ahora se ha conectado con Adobe Experience Platform, con una lista de las tablas mostradas en el lateral.
 
