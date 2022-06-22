@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de conjuntos de datos
 topic-legacy: datasets
 description: Aprenda a realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 09db4aab17b933c63968d997f33279ab9a96bdef
+source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,13 @@ Esta guía del usuario requiere conocer los siguientes componentes de Adobe Expe
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Garantizar el cumplimiento de las regulaciones, restricciones y políticas relativas al uso de los datos de los clientes.
 
-## Ver conjuntos de datos
+## Ver conjuntos de datos {#view-datasets}
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_negative_numbers"
+>title="Números negativos en la actividad del conjunto de datos"
+>abstract="Los números negativos de los registros ingestados significan que un usuario ha eliminado determinados lotes en un intervalo de tiempo seleccionado."
+>text="Learn more in documentation"
 
 En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir el **[!UICONTROL Conjuntos de datos]** tablero. El tablero enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere el conjunto de datos y el estado de la ejecución de ingesta más reciente.
 
