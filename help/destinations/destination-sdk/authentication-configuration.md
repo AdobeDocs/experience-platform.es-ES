@@ -2,9 +2,9 @@
 description: Utilice las configuraciones de autenticación admitidas en Adobe Experience Platform Destination SDK para autenticar usuarios y activar datos en el punto final de destino.
 title: Configuración de autenticación
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 631c0ac02cb7f4f95500897ca224aa532393c109
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,16 @@ La configuración de autenticación que seleccione determina cómo se autentica 
 
 Adobe Experience Platform Destination SDK admite varios tipos de autenticación:
 
-* Autenticación del portador
-* (Beta) Autenticación de Amazon S3
-* (Beta) Cadena de conexión de Azure
-* (Beta) Principal del servicio de Azure
-* (Beta) SFTP con clave SSH
-* (Beta) SFTP con contraseña
-* OAuth 2 con código de autorización
-* OUAth 2 con concesión de contraseña
-* OAuth 2 con concesión de credenciales de cliente
+* [Autenticación del portador](#bearer)
+* [(Beta) Autenticación de Amazon S3](#s3)
+* [(Beta) Almacenamiento de Azure Blob](#blob)
+* [(Beta) Almacenamiento de Azure Data Lake](#adls)
+* [(Beta) Almacenamiento en la nube de Google](#gcs)
+* [(Beta) SFTP con clave SSH](#sftp-ssh)
+* [(Beta) SFTP con contraseña](#sftp-password)
+* [OAuth 2 con código de autorización](#oauth2)
+* [OUAth 2 con concesión de contraseña](#oauth2)
+* [OAuth 2 con concesión de credenciales de cliente](#oauth2)
 
 Puede configurar la información de autenticación de su destino mediante el `customerAuthenticationConfigurations` parámetros de la variable `/destinations` punto final.
 
@@ -41,11 +42,11 @@ La autenticación del portador es compatible con los destinos de flujo continuo 
 Para configurar la autenticación de tipo al portador para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"BEARER"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BEARER"
+   }
+]
 ```
 
 ## (Beta) [!DNL Amazon S3] autenticación {#s3}
@@ -59,11 +60,11 @@ Para configurar la autenticación de tipo al portador para el destino, configure
 Para configurar la autenticación de Amazon S3 para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"S3"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"S3"
+   }
+]
 ```
 
 ## (Beta) [!DNL Azure Blob Storage] {#blob}
@@ -77,11 +78,11 @@ Para configurar la autenticación de Amazon S3 para el destino, configure la var
 Para configurar [!DNL Azure Blob] autenticación para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
 
 ```json
-   "customerAuthenticationConfigurations":[
-     {
-        "authType":"AZURE_CONNECTION_STRING"
-     }
-  ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"AZURE_CONNECTION_STRING"
+   }
+]
 ```
 
 ## (Beta) [!DNL Azure Data Lake Storage] {#adls}
@@ -95,12 +96,29 @@ Para configurar [!DNL Azure Blob] autenticación para el destino, configure la v
 Para configurar [!DNL Azure Data Lake Storage] (ADLS) autenticación para su destino, configure el `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
 
 ```json
-   "customerAuthenticationConfigurations":[
-     {
-        "authType":"AZURE_SERVICE_PRINCIPAL"
-     }
-  ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"AZURE_SERVICE_PRINCIPAL"
+   }
+]
 ```
+
+## (Beta) [!DNL Google Cloud Storage] {#gcs}
+
+[!DNL Google Cloud Storage] la autenticación es compatible con destinos basados en archivos en Experience Platform.
+
+>[!IMPORTANT]
+>
+>La compatibilidad con destinos basados en archivos en Adobe Experience Platform Destination SDK actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"GOOGLE_CLOUD_STORAGE"
+   }
+]
+```
+
 
 ## (Beta) [!DNL SFTP] autenticación con [!DNL SSH] key {#sftp-ssh}
 
@@ -113,11 +131,11 @@ Para configurar [!DNL Azure Data Lake Storage] (ADLS) autenticación para su des
 Para configurar la autenticación SFTP con la clave SSH para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"SFTP_WITH_SSH_KEY"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"SFTP_WITH_SSH_KEY"
+   }
+]
 ```
 
 ## (Beta) [!DNL SFTP] autenticación con contraseña {#sftp-password}
@@ -131,11 +149,11 @@ Para configurar la autenticación SFTP con la clave SSH para el destino, configu
 Para configurar la autenticación SFTP con contraseña para el destino, configure la variable `customerAuthenticationConfigurations` en el `/destinations` como se muestra a continuación:
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"SFTP_WITH_PASSWORD"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"SFTP_WITH_PASSWORD"
+   }
+]
 ```
 
 ## [!DNL OAuth 2] autenticación {#oauth2}

@@ -2,7 +2,7 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino de flujo continuo para el Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 4%
@@ -271,6 +271,7 @@ Utilice la variable `maxUsersPerRequest` para especificar el número máximo de 
 Esta opción funciona mejor si prefiere tomar lotes grandes, con miles de perfiles en la misma llamada. Esta opción también le permite agregar los perfiles exportados en función de reglas de agregación complejas.
 
 Esta opción le permite:
+
 * Establezca el tiempo máximo y el número máximo de perfiles que se agregarán antes de que se realice una llamada de API al destino.
 * Agregue los perfiles exportados asignados al destino en función de:
    * ID de segmento;
