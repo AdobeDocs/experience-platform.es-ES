@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, junio de 2022
 description: Notas de la versión de junio de 2022 para Adobe Experience Platform.
-source-git-commit: 71f781fafa6124237955e7979fab29e7c03f984e
+source-git-commit: bff266fca5762d6da123af712364ee1fc30a6784
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '802'
 ht-degree: 6%
 
 ---
@@ -52,6 +52,15 @@ Para obtener información más general sobre Data Science Workspace, consulte la
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| ----------- | ----------- |
+| [(Beta) Conexión con Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | La variable [!DNL Google Ad Manager 360] la conexión habilita la carga por lotes para [!DNL publisher provided identifiers] (PPID) en [!DNL Google Ad Manager 360], a través de [!DNL Google Cloud Storage] <br><br>Este destino está actualmente en versión beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a la [!DNL Google Ad Manager 360] conexión, póngase en contacto con su representante de Adobe y proporcione su [!DNL IMS Organization ID]. |
+| (Beta) compatibilidad con Destination SDK para [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) destinos basados en archivos y [nombres de archivo configurables](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Ahora puede utilizar el Destination SDK para crear destinos de Google Cloud Storage y definir nombres de archivo personalizados para archivos exportados mediante macros de nombre de archivo. <br><br> La compatibilidad con destinos basados en archivos en Adobe Experience Platform Destination SDK actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Nuevos destinos**
 
