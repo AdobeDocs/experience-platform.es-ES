@@ -6,10 +6,10 @@ description: Instrucciones paso a paso para utilizar la API de servicio de flujo
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 67f1ba46a9d570d3d494b126a83e6ca3ace1c727
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3420'
+ht-degree: 2%
 
 ---
 
@@ -1026,7 +1026,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | Propiedad | Descripción |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | En la URL, utilice el ID del flujo de datos que creó en el paso anterior. |
-| `{ETAG}` | Utilice la etiqueta que obtuvo en el paso anterior. |
+| `{ETAG}` | Obtenga la variable `{ETAG}` de la respuesta del paso anterior, [Crear un flujo de datos](#create-dataflow). El formato de respuesta del paso anterior tiene comillas de escape. Debe utilizar los valores sin escape en el encabezado de la solicitud. Consulte el ejemplo siguiente: <br> <ul><li>Ejemplo de respuesta: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valor que se debe usar en la solicitud: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> El valor de etiqueta se actualiza con cada actualización correcta de un flujo de datos. |
 | `{SEGMENT_ID}` | Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, consulte [recuperar una definición de segmento](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) en la referencia de la API de Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Por ejemplo, `"person.lastName"` |
 | `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. Para agregar un segmento a un flujo de datos, utilice la variable `add` operación. |
@@ -1236,7 +1236,11 @@ La respuesta devuelta debe incluirse en la variable `transformations` parámetro
 ]
 ```
 
-## Pasos siguientes
+## Gestión de errores de API {#api-error-handling}
+
+Los extremos de API de este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform para obtener más información sobre la interpretación de las respuestas de error.
+
+## Pasos siguientes {#next-steps}
 
 Al seguir este tutorial, ha conectado correctamente Platform a uno de sus destinos de almacenamiento en la nube por lotes o de marketing por correo electrónico preferidos y ha configurado un flujo de datos en el destino correspondiente para exportar archivos de datos. Los datos salientes ahora se pueden utilizar en el destino para campañas de correo electrónico, publicidad segmentada y muchos otros casos de uso. Consulte las páginas siguientes para obtener más información, como cómo editar los flujos de datos existentes mediante la API de servicio de flujo:
 

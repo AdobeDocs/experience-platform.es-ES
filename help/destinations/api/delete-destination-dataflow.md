@@ -5,9 +5,9 @@ title: Eliminar un flujo de datos de destino mediante la API de servicio de fluj
 type: Tutorial
 description: Obtenga información sobre cómo eliminar flujos de datos en destinos de flujo y por lotes mediante la API de servicio de flujo.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '572'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (sin contenido) y un cuerpo e
 
 ## Gestión de errores de API {#api-error-handling}
 
-Los extremos de API de este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de API de este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform para obtener más información sobre la interpretación de las respuestas de error.
 
 ## Pasos siguientes {#next-steps}
 
