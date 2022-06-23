@@ -3,9 +3,9 @@ title: Comparación de at.js con el SDK web de Experience Platform
 description: Descubra cómo se comparan las funciones de at.js con el SDK web de Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
+source-git-commit: 7bdf4c01ad3b361b3bc53574d4da1096757c815c
 workflow-type: tm+mt
-source-wordcount: '2269'
+source-wordcount: '2286'
 ht-degree: 6%
 
 ---
@@ -462,11 +462,22 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-[Más información](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en)
+Obtenga más información sobre `applyOffers` desde el [documentación dedicada](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+
 
 ### Uso del SDK web
 
-Actualmente, esta función no es compatible con el SDK web.
+Puede aplicar las actividades de Target utilizando la variable `applyPropositions` comando.
+
+Ejemplo:
+
+```javascript
+alloy("applyPropositions", {
+    propositions: [...]
+});
+```
+
+Obtenga más información sobre `applyPropositions` desde el [documentación dedicada](../../personalization/rendering-personalization-content.md#applypropositions).
 
 ## Cómo rastrear eventos
 
