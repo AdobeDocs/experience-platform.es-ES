@@ -2,7 +2,7 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: (Beta) Opciones de configuración de destino basadas en archivos para Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 89e05ed522aed697ba3a2f06137546fd5673920d
+source-git-commit: 39fbdcdb704f096e1fcee680221c529758a00555
 workflow-type: tm+mt
 source-wordcount: '2304'
 ht-degree: 5%
@@ -308,7 +308,6 @@ Puede configurar la funcionalidad descrita en este documento utilizando la varia
             "CUSTOM_TEXT"
          ],
          "defaultFilenameAppendOptions":[
-            "SEGMENT_ID",
             "DATETIME"
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
@@ -759,22 +758,21 @@ Esta sección se refiere a la configuración de exportación de archivos en la c
    "defaultFrequency":"DAILY",
    "defaultStartTime":"00:00",
    "filenameConfig":{
-      "allowedFilenameAppendOptions":[
-         "SEGMENT_NAME",
-         "DESTINATION_INSTANCE_ID",
-         "DESTINATION_INSTANCE_NAME",
-         "ORGANIZATION_NAME",
-         "SANDBOX_NAME",
-         "DATETIME",
-         "CUSTOM_TEXT"
-      ],
-      "defaultFilenameAppendOptions":[
-         "SEGMENT_ID",
-         "DATETIME"
-      ],
-      "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      },
    }
-}
 ```
 
 | Parámetro | Tipo | Descripción |
