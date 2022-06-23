@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, junio de 2022
 description: Notas de la versión de junio de 2022 para Adobe Experience Platform.
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '824'
 ht-degree: 6%
 
 ---
@@ -67,6 +67,7 @@ Para obtener información más general sobre Data Science Workspace, consulte la
 | ----------- | ----------- |
 | [(Beta) Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | La variable [!DNL Google Ad Manager 360] la conexión habilita la carga por lotes para [!DNL publisher provided identifiers] (PPID) en [!DNL Google Ad Manager 360], a través de [!DNL Google Cloud Storage] <br><br>Este destino está actualmente en versión beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a la [!DNL Google Ad Manager 360] conexión, póngase en contacto con su representante de Adobe y proporcione su [!DNL IMS Organization ID]. |
 | [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Active perfiles para encuestas de Medallia dirigidas y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes. |
+| [[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) el destino le permite compartir segmentos de origen autenticados con anunciantes y usuarios aprobados para la activación de campañas con DSP. |
 
 {style=&quot;table-layout:auto&quot;}
 
