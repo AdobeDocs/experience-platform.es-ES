@@ -6,9 +6,9 @@ title: Monitorización de flujos de datos para destinos en la interfaz de usuari
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
+source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
 workflow-type: tm+mt
-source-wordcount: '3200'
+source-wordcount: '3211'
 ht-degree: 0%
 
 ---
@@ -141,6 +141,7 @@ Para los destinos de lote, la variable [!UICONTROL Ejecuciones de flujo de datos
 Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 
 - **[!UICONTROL Inicio de la ejecución del flujo de datos]**: Hora a la que comenzó la ejecución del flujo de datos.
+- **[!UICONTROL Segmento]**: Nombre del segmento asociado a cada flujo de datos ejecutado.
 - **[!UICONTROL Tiempo de procesamiento]**: Cantidad de tiempo que tardó la ejecución del flujo de datos en procesarse.
 - **[!UICONTROL Perfiles recibidos]**: Número total de perfiles recibidos en el flujo de datos. Este valor se actualiza cada 60 minutos.
 - **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil que se activaron correctamente en el destino seleccionado como parte de la ejecución de flujo de datos. Esta métrica incluye identidades creadas, actualizadas y eliminadas de segmentos exportados.
