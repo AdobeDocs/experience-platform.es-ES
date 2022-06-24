@@ -3,11 +3,11 @@ keywords: Experience Platform;inicio;temas populares;servicio de consulta;planti
 solution: Experience Platform
 title: Extremo de API de plantillas de consulta
 topic-legacy: query templates
-description: La siguiente documentación explica las distintas llamadas de API que puede realizar mediante plantillas de consulta para la API del servicio de consulta.
+description: Esta guía detalla las distintas llamadas a la API de plantilla de consulta que puede realizar mediante la API del servicio de consulta.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '668'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 5%
 
 ## Ejemplo de llamadas a API
 
-Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas al [!DNL Query Service] API. Las siguientes secciones explican las distintas llamadas a la API que puede realizar mediante el [!DNL Query Service] API. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+Las secciones siguientes describen las distintas llamadas a la API que puede realizar mediante el [!DNL Query Service] API. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+
+Consulte la [Documentación de plantillas de consulta de interfaz de usuario](../ui/query-templates.md) para obtener información sobre la creación de plantillas a través de la interfaz de usuario del Experience Platform.
 
 ### Recuperar una lista de plantillas de consulta
 
