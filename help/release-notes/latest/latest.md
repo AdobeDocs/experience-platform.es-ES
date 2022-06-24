@@ -1,10 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, junio de 2022
 description: Notas de la versión de junio de 2022 para Adobe Experience Platform.
-source-git-commit: 314cd79185748e848bcb06fb21bfe4fea37a8853
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 6eadd71984814548522da32ae6d88a49c3ba704f
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 6%
+source-wordcount: '806'
+ht-degree: 5%
 
 ---
 
@@ -14,25 +15,10 @@ ht-degree: 6%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [Servicio de consultas](#query-service)
 - [Fuentes](#sources)
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
-
-**Funciones actualizadas**
-
-| Función | Descripción |
-| --- | --- |
-| Mejoras en [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations es ahora más inteligente y rápido. Las nuevas comprobaciones de validación reducen considerablemente los errores de asignación más comunes, lo que reduce el tiempo de respuesta al valor. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Para obtener más información, consulte [!DNL Data Prep], consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
