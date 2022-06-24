@@ -1,9 +1,10 @@
 ---
 title: Plantilla CSV a extremo de la API de conversión de esquema
 description: El extremo /rpc/csv2schema de la API del Registro de esquemas permite utilizar plantillas CSV para crear automáticamente esquemas del Modelo de datos de experiencias (XDM).
-source-git-commit: 3860724b97987e555e12807c47f65fe040912d69
+exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
+source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '857'
 ht-degree: 6%
 
 ---
@@ -14,7 +15,7 @@ La variable `/rpc/csv2schema` en la variable [!DNL Schema Registry] La API le pe
 
 ## Primeros pasos
 
-La variable `/rpc/csv2schema` es parte de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+La variable `/rpc/csv2schema` es parte de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Adobe Experience Platform.
 
 La variable `/rpc/csv2schema` el extremo es parte de las llamadas a procedimientos remotos (RPC) que son compatibles con la variable [!DNL Schema Registry]. A diferencia de otros extremos en la variable [!DNL Schema Registry] Los extremos de API y RPC no requieren encabezados adicionales como `Accept` o `Content-Type`y no use un `CONTAINER_ID`. En su lugar, deben usar la variable `/rpc` como se muestra en las llamadas de API a continuación.
 
