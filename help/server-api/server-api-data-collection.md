@@ -1,11 +1,9 @@
 ---
 title: Recopilación de datos
-description: Descubra cómo la API de Adobe Experience Platform Edge Network Server estructura los datos recopilados
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
-keywords: recopilación de datos;recopilación;Adobe Experience Platform Edge Network;api;estructura
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+description: Descubra cómo la API de Adobe Experience Platform Edge Network Server estructura los datos recopilados.
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '131'
 ht-degree: 3%
 
 ---

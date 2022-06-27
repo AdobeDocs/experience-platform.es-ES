@@ -1,15 +1,13 @@
 ---
 title: Información general sobre personalización
-description: Aprenda a utilizar la API de Adobe Experience Platform Edge Network Server para recuperar contenido personalizado de soluciones de personalización de Adobe
-seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
-keywords: personalización; api de servidor; Adobe Experience Platform Edge Network; recuperar personalización
-source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
+description: Aprenda a utilizar la API de Adobe Experience Platform Edge Network Server para recuperar contenido personalizado de soluciones de personalización de Adobe.
+exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '741'
 ht-degree: 9%
 
 ---
-
 
 # Información general sobre personalización
 

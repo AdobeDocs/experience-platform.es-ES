@@ -1,14 +1,13 @@
 ---
 title: Personalización mediante Offer decisioning
-description: Aprenda a utilizar la API del servidor para ofrecer y procesar experiencias personalizadas mediante Offer decisioning
-keywords: personalización; api de servidor; Adobe Experience Platform Edge Network; recuperar personalización;target;offer decisioning;
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+description: Aprenda a utilizar la API del servidor para ofrecer y procesar experiencias personalizadas mediante Offer decisioning.
+exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '555'
 ht-degree: 2%
 
 ---
-
 
 # Personalización mediante Offer decisioning
 
@@ -260,4 +259,3 @@ En la tabla siguiente se explican los elementos clave de esa parte de la respues
 | `content` | Contenido asociado con la oferta propuesta en formato de cadena. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | Contenido de imagen asociado con la oferta propuesta en formato de URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | El objeto JSON que contiene las características asociadas con la oferta propuesta. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
-

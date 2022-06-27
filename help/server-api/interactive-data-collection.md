@@ -1,12 +1,10 @@
 ---
 title: Recopilación de datos interactiva
-description: Descubra cómo la API de servidor de red perimetral de Adobe Experience Platform realiza la recopilación de datos interactiva
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection
-keywords: recopilación de datos;recopilación;red perimetral de experience platform;api;recopilación de datos interactiva
+description: Descubra cómo la API de servidor de red perimetral de Adobe Experience Platform realiza la recopilación de datos interactiva.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 0dce36d690cbe0b666bf30acfa69f52a8c6cac57
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '138'
 ht-degree: 7%
 
 ---

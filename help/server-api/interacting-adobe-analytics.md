@@ -1,12 +1,10 @@
 ---
 title: Interactuar con Adobe Analytics
-description: Aprenda a utilizar la API de servidor de red perimetral para interactuar con Adobe Analytics
-seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
-keywords: recopilación de datos; salida; analytics; API de Adobe Experience Platform Edge Network;Analytics
+description: Aprenda a utilizar la API de servidor de red perimetral para interactuar con Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '179'
 ht-degree: 2%
 
 ---

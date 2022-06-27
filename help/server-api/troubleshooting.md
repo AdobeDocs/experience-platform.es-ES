@@ -1,13 +1,11 @@
 ---
 title: Resolución de problemas
-description: Obtenga información sobre cómo solucionar errores al utilizar la API de Adobe Experience Platform Edge Network Server
-seo-description: Learn how to troubleshoot errors when using the Adobe Experience Platform Edge Network Server API
-keywords: red perimetral;puerta de enlace;api;solución de problemas;errores;griffon
+description: Obtenga información sobre cómo solucionar errores al utilizar la API de servidor de red perimetral.
 exl-id: f0223fca-30ec-4229-93a5-3faa6cef5482
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 1%
+source-wordcount: '96'
+ht-degree: 2%
 
 ---
 
