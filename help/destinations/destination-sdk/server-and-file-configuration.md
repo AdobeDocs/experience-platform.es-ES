@@ -2,10 +2,10 @@
 description: Las especificaciones de configuración de servidor y archivo para destinos basados en archivos se pueden configurar en Adobe Experience Platform Destination SDK a través del extremo /destination-servers .
 title: (Beta) Opciones de configuración para especificaciones de servidor de destino basadas en archivos
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
+source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 10%
+source-wordcount: '916'
+ht-degree: 12%
 
 ---
 
@@ -53,6 +53,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 | `fileBasedS3Destination.path.value` | Cadena | Ruta a la carpeta de destino que alojará los archivos exportados. |
 | `fileConfigurations` | Objeto | Consulte [configuración de formato de archivo](#file-configuration) para obtener explicaciones detalladas sobre esta sección. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Especificación de servidor de destino SFTP basado en archivos {#sftp-example}
 
 ```json
@@ -89,6 +91,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 | `encryptionMode` | Cadena | Indica si se utiliza el cifrado de archivos. Valores compatibles: <ul><li>PGP</li><li>Ninguna</li></ul> |
 | `fileConfigurations` | Objeto | Consulte [configuración de formato de archivo](#file-configuration) para obtener explicaciones detalladas sobre esta sección. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Basado en archivos [!DNL Azure Data Lake Storage] ([!DNL ADLS]) especificación del servidor de destino {#adls-example}
 
 ```json
@@ -114,6 +118,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | Cadena | *Requerido.* En su lugar, utilice `PEBBLE_V1`. |
 | `fileBasedAdlsGen2Destination.path.value` | Cadena | Ruta a la carpeta de destino que alojará los archivos exportados. |
 | `fileConfigurations` | Objeto | Consulte [configuración de formato de archivo](#file-configuration) para obtener explicaciones detalladas sobre esta sección. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Basado en archivos [!DNL Azure Blob Storage] especificación del servidor de destino {#blob-example}
 
@@ -147,6 +153,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 | `fileBasedAzureBlobDestination.container.value` | Cadena | El nombre del [!DNL Azure Blob Storage] contenedor que utilizará este destino. |
 | `fileConfigurations` | Objeto | Consulte [configuración de formato de archivo](#file-configuration) para obtener explicaciones detalladas sobre esta sección. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Basado en archivos [!DNL Data Landing Zone] ([!DNL DLZ]) especificación del servidor de destino {#dlz-example}
 
 ```json
@@ -173,6 +181,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 | `fileBasedDlzDestination.path.templatingStrategy` | Cadena | *Requerido.*  En su lugar, utilice `PEBBLE_V1`. |
 | `fileBasedDlzDestination.path.value` | Cadena | Ruta a la carpeta de destino que alojará los archivos exportados. |
 | `fileConfigurations` | Objeto | Consulte [configuración de formato de archivo](#file-configuration) para obtener explicaciones detalladas sobre esta sección. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Basado en archivos [!DNL Google Cloud Storage] especificación del servidor de destino {#gcs-example}
 
@@ -205,6 +215,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 | `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Cadena | *Requerido.* En su lugar, utilice `PEBBLE_V1`. |
 | `fileBasedGoogleCloudStorageDestination.path.value` | Cadena | Ruta a la carpeta de destino que alojará los archivos exportados. |
 | `fileConfigurations` | Objeto | Consulte [configuración de formato de archivo](#file-configuration) para obtener explicaciones detalladas sobre esta sección. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Configuración de formato de archivo {#file-configuration}
 
@@ -299,4 +311,6 @@ En esta sección se describe la configuración de formato de archivo para la exp
 | `csvOptions.charToEscapeQuoteEscaping.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un carácter único que se utilizará para escapar el escape del carácter de comillas. | `\` cuando los caracteres escape y comillas son diferentes. `\0` cuando el carácter escape y comillas son iguales. |
 | `csvOptions.emptyValue.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define la representación de cadena de un valor vacío. | `""` |
 | `csvOptions.lineSep.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define el separador de líneas que debe utilizarse para escribir. La longitud máxima es 1 carácter. | `\n` |
-| `maxFileRowCount` | Opcional | Número máximo de filas que puede contener el archivo exportado. Configúrelo según los requisitos de tamaño de archivo de la plataforma de destino. | N/A |
+| `maxFileRowCount` | Opcional | Número máximo de filas que puede contener el archivo exportado. Configúrelo según los requisitos de tamaño de archivo de la plataforma de destino. | N/D |
+
+{style=&quot;table-layout:auto&quot;}
