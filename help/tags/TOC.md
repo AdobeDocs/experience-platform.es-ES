@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 881d9602ff3462afb5df30f8446113a372650c8d
+source-git-commit: 2cabd8d8fa44f942f9bfce914fd2910a4ddbb973
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '396'
 ht-degree: 86%
 
 ---
@@ -107,6 +107,9 @@ ht-degree: 86%
       * Adobe Target v2 {#target-v2}
          * [Información general](./extensions/web/target-v2/overview.md)
          * [Notas de la versión](./extensions/web/target-v2/release-notes.md)
+      * [!DNL BrightCove] seguimiento de vídeo {#brightcove}
+         * [Información general](./extensions/web/brightcove/overview.md)
+         * [Notas de la versión](./extensions/web/brightcove/release-notes.md)
       * Complementos comunes de Analytics {#plugins}
          * [Información general](./extensions/web/plugins/overview.md)
          * [Notas de la versión](./extensions/web/plugins/release-notes.md)
@@ -114,12 +117,11 @@ ht-degree: 86%
          * [Información general](./extensions/web/core/overview.md)
          * [Reenvío de eventos](./extensions/web/core/event-forwarding.md)
          * [Notas de la versión](./extensions/web/core/release-notes.md)
+      * [!DNL Mailchimp] Edge {#mailchimp-edge}
+         * [Información general](./extensions/web/mailchimp/overview.md)
       * [!DNL Marketo Munchkin] {#marketo}
          * [Información general](./extensions/web/marketo/overview.md)
          * [Notas de la versión](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] seguimiento de vídeo {#brightcove}
-         * [Información general](./extensions/web/brightcove/overview.md)
-         * [Notas de la versión](./extensions/web/brightcove/release-notes.md)
       * Capa de datos de Google {#google-data-layer}
          * [Información general](./extensions/web/google-data-layer/overview.md)
          * [Notas de la versión](./extensions/web/google-data-layer/release-notes.md)

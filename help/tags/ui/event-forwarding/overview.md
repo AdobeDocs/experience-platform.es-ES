@@ -3,7 +3,7 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 9%
@@ -67,7 +67,7 @@ Los tipos de elementos de datos disponibles en el reenvío de eventos se limitan
 
 Aunque los propios elementos de datos se crean y configuran del mismo modo en el reenvío de eventos que para las etiquetas, hay algunas diferencias importantes en la sintaxis en lo que se refiere a cómo hacen referencia a los datos de Platform Edge Network.
 
-#### Referencia a datos de Platform Edge Network {#edge}
+#### Referencia a datos de Platform Edge Network {#data-element-path}
 
 Para hacer referencia a los datos de Platform Edge Network, debe crear un elemento de datos que proporcione una ruta válida a esos datos. Al crear el elemento de datos en la interfaz de usuario, seleccione **[!UICONTROL Principal]** para la extensión y **[!UICONTROL Ruta]** para el tipo .
 
