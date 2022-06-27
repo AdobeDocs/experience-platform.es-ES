@@ -1,20 +1,17 @@
 ---
-keywords: destinos rtcdp;destinos rtcdp;destinos de la plataforma de datos del cliente en tiempo real
-title: Destinos en la plataforma de datos del cliente en tiempo real
-seo-title: Destinos en Adobe Experience Platform
+keywords: destinos rtcdp;destinos rtcdp;destinos de plataforma de datos de clientes en tiempo real
+title: Destinos en Real-time Customer Data Platform
 description: Este documento proporciona información general sobre los destinos en Adobe Experience Platform
-seo-description: Este documento proporciona información general sobre los destinos en Adobe Experience Platform
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+exl-id: 82f4bad2-a0e7-4f49-ac2f-412b5c5c35f3
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
+# Destinos en Real-time Customer Data Platform
 
-# Destinos en la plataforma de datos del cliente en tiempo real
+Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos desde Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 
-Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing en varios canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
-
-Para obtener una descripción más detallada de los destinos, incluida una lista de los destinos disponibles y vínculos a tutoriales, lea la [documentación de destinos](../../destinations/home.md).
+Para obtener una descripción general más detallada de los destinos, incluida una lista de destinos disponibles y vínculos a tutoriales, lea la [documentación de destinos](../../destinations/home.md).

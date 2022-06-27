@@ -1,14 +1,12 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;plataforma de datos de clientes en tiempo real;cdp en tiempo real;cdp;Customer AI
 title: Información general de Real-time Customer Data Platform
-seo-title: Real-time Customer Data Platform Overview
 description: Información general sobre Real-time Customer Data Platform
-seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '420'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -27,7 +25,7 @@ Con Real-time Customer Data Platform, puede:
 * Genere perspectivas procesables y escale audiencias con IA y aprendizaje automático equipado con Adobe Sensei y creado para especialistas en marketing.
 * Ofrezca experiencias personalizadas en tiempo real en todos los canales y destinos.
 
-## Real-time Customer Data Platform B2B Edition
+## Real-time Customer Data Platform edición B2B
 
 También existe una edición diferente de CDP en tiempo real disponible para satisfacer las necesidades organizativas de empresa a empresa. CDP B2B Edition en tiempo real está diseñada específicamente para expandir la funcionalidad de CDP en tiempo real para los especialistas en marketing. Tiene diferentes capacidades habilitadas dentro del ecosistema de Adobe Experience Platform para adaptarse mejor al funcionamiento dentro de un modelo de servicio de empresa a empresa.
 

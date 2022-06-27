@@ -2,11 +2,9 @@
 keywords: activar destinos de solicitud de perfil;activar datos;destinos de solicitud de perfil
 title: Activar datos de audiencia en destinos de solicitud de perfil
 type: Tutorial
-seo-title: Activate audience data to profile request destinations
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de solicitud de perfil.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%

@@ -1,11 +1,9 @@
 ---
 keywords: información general sobre administración de rtcdp;información general sobre administración
 title: Información general sobre la administración de Real-time Customer Data Platform
-seo-title: Real-Time CDP administration overview
 description: 'Este documento proporciona información general sobre las funciones de administración de Real-time Customer Data Platform, con tecnología de Adobe Experience Platform. '
-seo-description: seo description
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 1%

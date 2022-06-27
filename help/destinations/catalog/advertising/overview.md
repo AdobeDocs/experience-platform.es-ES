@@ -1,11 +1,9 @@
 ---
 keywords: destinos de publicidad;destinos;destinos de plataforma
 title: Información general sobre los destinos publicitarios
-seo-title: Advertising destinations overview
 description: Conecte Adobe Experience Platform a una plataforma publicitaria de terceros (por ejemplo, DSP, red publicitaria, SSP) y comparta audiencias seudónimas con estas plataformas.
-seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 74b3c6f24486d8b18750932f1268f0da7f5fa034
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 1%

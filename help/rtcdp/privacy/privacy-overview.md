@@ -1,11 +1,9 @@
 ---
 keywords: control de datos rtcdp;control de datos rtcdp;control de datos del perfil de datos del cliente en tiempo real;privacidad rtcdp;rtcdp privacidad
 title: Privacidad en Real-time Customer Data Platform
-seo-title: Privacy in Real-time Customer Data Platform
 description: Real-time Customer Data Platform le permite optimizar el proceso de cumplimiento de las normas de privacidad de sus operaciones de datos.
-seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: e3519817559dca372e228ed19bba4f9adf279768
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
@@ -16,7 +14,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) ayuda a los especialistas en marketing a unir los datos de varios sistemas empresariales, lo que les permite identificar, comprender y captar mejor a sus clientes. Adobe mantiene la privacidad de datos de los consumidores como un principio de diseño fundamental y proporciona varios controles para ayudar a los especialistas en marketing a administrar la privacidad de datos de sus clientes.
 
-La mayoría de [!DNL Real-time CDP] son compatibles con Adobe Experience Platform. Este documento proporciona información sobre las distintas tecnologías de mejora de la privacidad admitidas por [!DNL Real-time CDP], con vínculos a [!DNL Experience Platform] documentación para obtener más información.
+La mayoría de [!DNL Real-time CDP] son compatibles con Adobe Experience Platform. Este documento proporciona información sobre las diversas tecnologías de mejora de la privacidad compatibles con [!DNL Real-time CDP], con vínculos a [!DNL Experience Platform] documentación para obtener más información.
 
 ## Respeto de las solicitudes de acceso y eliminación de los clientes
 
@@ -24,7 +22,7 @@ Las regulaciones legales de privacidad, como la [!DNL General Data Protection Re
 
 >[!IMPORTANT]
 >
-> Las solicitudes de privacidad enviadas a través de Adobe Experience Platform Privacy Service para el Marketo Engage de Adobe se aplican solo a clientes CDP B2B en tiempo real.
+> Las solicitudes de privacidad enviadas a través de Adobe Experience Platform Privacy Service para Adobe Marketo Engage solo se aplican a clientes CDP B2B en tiempo real.
 
 ## Funciones de exclusión
 
