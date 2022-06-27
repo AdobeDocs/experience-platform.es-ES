@@ -5,7 +5,7 @@ title: Descripción general del conector de origen de los centros de eventos de 
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar los centros de eventos de Azure a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: b64054859cbd88687dd05b0c65e51d0b2ef2a7b3
+source-git-commit: 9415b4add3784cc6f81794060464b7ff63497a96
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -87,8 +87,8 @@ Consulte la lista siguiente para ver las distintas regiones de las subredes de P
     "virtualNetworkRules": [
       {
         "subnet": {
-          "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
-        },
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+        }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
     ],
