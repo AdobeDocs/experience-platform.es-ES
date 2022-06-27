@@ -2,9 +2,9 @@
 description: En esta página se enumeran y describen los pasos para configurar un destino de flujo continuo mediante el Destination SDK .
 title: Usar Destination SDK para configurar un destino de flujo continuo
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -174,8 +174,16 @@ Como parte del proceso para probar el destino, debe utilizar la interfaz de usua
 
 ## Paso 7: Publicar su destino {#publish-destination}
 
+>[!NOTE]
+>
+>Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
+
 Después de configurar y probar el destino, use la variable [API de publicación de destino](./destination-publish-api.md) para enviar la configuración a Adobe para su revisión.
 
 ## Paso 8: Documentar el destino {#document-destination}
+
+>[!NOTE]
+>
+>Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
 Si es un proveedor de software independiente (ISV) o un integrador de sistemas (SI) que crea un [integración de productos](./overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](./docs-framework/documentation-instructions.md) para crear una página de documentación de producto para su destino en el [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md).

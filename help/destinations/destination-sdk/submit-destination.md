@@ -1,17 +1,21 @@
 ---
-description: Esta página proporciona toda la información que debe enviar para su revisión a un destino creado mediante Destination SDK.
-title: Enviar para revisión un destino creado en Destination SDK
+description: Esta página proporciona toda la información que debe enviar para su revisión a un destino de producto creado mediante Destination SDK.
+title: Enviar para revisión un destino productivo creado en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
 
-# Enviar para revisión un destino creado en Destination SDK
+# Enviar para revisión un destino productivo creado en Destination SDK
 
 ## Información general {#overview}
+
+>[!IMPORTANT]
+>
+>El proceso documentado aquí solo es necesario para socios que envían destinos productizados (públicos). Si está creando un destino privado para su propio uso, no necesita producir y compartir estos materiales con Adobe.
 
 Antes de que el destino se pueda publicar en la variable [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md), debe proporcionar al Adobe cierta información sobre el destino y las pruebas que ha realizado para garantizar que los usuarios disfruten de la mejor experiencia posible al activar datos en su plataforma.
 
@@ -22,7 +26,7 @@ Esta página enumera toda la información que debe proporcionar al enviar o actu
    * Se ha realizado una llamada API al extremo de destino.
    * La respuesta de API recibida del extremo de destino.
 * Prueba de que ha enviado una solicitud de publicación de destino para su destino utilizando la variable [API de publicación de destino](./destination-publish-api.md).
-* (Solo para integraciones de productos) una PR de documentación (solicitud de extracción), siguiendo las instrucciones descritas en la sección [proceso de documentación de autoservicio](./docs-framework/documentation-instructions.md).
+* Una PR de documentación (solicitud de extracción), siguiendo las instrucciones descritas en la variable [proceso de documentación de autoservicio](./docs-framework/documentation-instructions.md).
 * Archivo de imagen que se mostrará como logotipo para la tarjeta de destino en el catálogo de destinos del Experience Platform.
 
 >[!IMPORTANT]
