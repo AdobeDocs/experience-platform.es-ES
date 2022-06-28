@@ -3,18 +3,23 @@ title: Eliminar registros de consumidores mediante la API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
+exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
+source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 3%
+source-wordcount: '505'
+ht-degree: 2%
 
 ---
 
 # Eliminar registros de consumidores mediante la API de higiene de datos
 
+>[!IMPORTANT]
+>
+>La API de higiene de datos se encuentra en una versión beta. La funcionalidad descrita en este documento está sujeta a cambios.
+
 La API de higiene de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 
-Puede acceder a la API a través de la siguiente ruta raíz: `https://platform.adobe.io/data/core/hygiene/`
+Puede acceder a la API a través de la misma ruta raíz que la [API de Privacy Service](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## Primeros pasos
 
@@ -52,7 +57,7 @@ La carga útil de la solicitud está estructurada de forma similar a la de un [e
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/jobs \
+  https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
