@@ -5,9 +5,9 @@ title: 'Evaluar eventos en tiempo casi real con segmentación por transmisión '
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81659da18d4fa8b733200998c27c25ec356ca264
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1915'
 ht-degree: 1%
 
 ---
@@ -424,7 +424,7 @@ En la mayoría de los casos, la descalificación de la segmentación de flujo co
 
 ### ¿En qué datos funciona la segmentación por secuencias?
 
-La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los segmentos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo.
+La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los segmentos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo. Los eventos transmitidos al sistema con una marca de tiempo de más de 24 horas se procesarán en el siguiente trabajo por lotes.
 
 ### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
 

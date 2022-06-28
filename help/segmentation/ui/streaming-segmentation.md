@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 0e08b034eb9193dda72693cf842e3cd78cf44694
+source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Segmentación por transmisión en [!DNL Adobe Experience Platform] permite a los
 
 >[!NOTE]
 >
->La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los segmentos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo.
+>La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los datos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo.
 >
 >Además, los segmentos evaluados con la segmentación de flujo continuo pueden variar entre la pertenencia ideal y real si el segmento se basa en otro segmento que se evalúa mediante la segmentación por lotes. Por ejemplo, si el segmento A se basa en el segmento B y el segmento B se evalúa mediante la segmentación por lotes, ya que el segmento B solo se actualiza cada 24 horas, el segmento A se alejará más de los datos reales hasta que se vuelva a sincronizar con la actualización del segmento B.
 
@@ -101,7 +101,7 @@ En la mayoría de los casos, la descalificación de la segmentación de flujo co
 
 ### ¿En qué datos funciona la segmentación por secuencias?
 
-La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los segmentos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo.
+La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los segmentos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo. Los eventos transmitidos al sistema con una marca de tiempo de más de 24 horas se procesarán en el siguiente trabajo por lotes.
 
 ### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
 
