@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Permisos de la función Administración de controles de acceso basados en atributos
 description: Este documento proporciona información sobre la configuración de permisos para una función a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >El control de acceso basado en atributos actualmente está disponible en una versión limitada para clientes de asistencia médica basados en EE. UU. Esta capacidad estará disponible para todos los clientes de Real-time Customer Data Platform una vez que se haya lanzado completamente.
+
+>[!IMPORTANT]
+>
+>El control de acceso utiliza el ID de usuario (un identificador único interno asignado a un usuario) para conceder permisos. Cuando se migra una organización de Adobe ID a un ID empresarial, todos los permisos establecidos para sus usuarios se pierden porque el ID de usuario cambia y el control de acceso utilizará el ID de usuario recién generado. Si su organización se migra a Business ID, póngase en contacto con su representante de Adobe para migrar su ID de usuario de Adobe ID a Business ID.
 
 Los permisos son el área del Experience Cloud en la que los administradores pueden definir funciones de usuario y políticas de acceso para administrar los permisos de acceso a funciones y objetos dentro de una aplicación de producto.
 
