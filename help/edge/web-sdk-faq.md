@@ -2,9 +2,9 @@
 title: Preguntas frecuentes sobre el SDK web de Adobe Experience Platform
 description: Obtenga respuestas a las preguntas más frecuentes sobre el SDK web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 219f0f66026e8eb6729370916be3490309937f2a
+source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1955'
 ht-degree: 2%
 
 ---
@@ -157,9 +157,7 @@ Sí, actualmente el SDK web utiliza entre 1 y 4 cookies, dependiendo de la imple
 
 **kndctr_orgid_permission:** Esta cookie almacena la preferencia de consentimiento del usuario para el sitio web.
 
-**kndctr_orgid_personalization:** Esta cookie incluye información de sesión que Adobe Target utiliza para personalizar las páginas web.
-
-**kndctr_orgid_consentcheck:** Esta cookie basada en sesión indica al servidor que busque las preferencias de consentimiento del lado del servidor.
+**kndctr_orgid_cluster:** Esta cookie almacena la región de Experience Edge que sirve las solicitudes del usuario actual. La región se utiliza en la ruta URL para que Experience Edge pueda enrutar la solicitud a la región correcta. Esta cookie dura 30 minutos, de modo que si un usuario se conecta con una dirección IP diferente, la solicitud se puede enrutar a la región más cercana.
 
 Al utilizar el SDK web, la red perimetral establece una o más de las cookies anteriores. La red perimetral establece todas las cookies con la variable `secure` y `sameSite="none"` atributos.
 
