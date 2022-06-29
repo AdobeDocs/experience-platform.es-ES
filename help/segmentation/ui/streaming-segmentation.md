@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
+source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ Después de crear un segmento con la transmisión habilitada, puede ver los deta
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Específicamente, detalles sobre la variable **[!UICONTROL tamaño total de audiencia cualificada]** se muestran. La variable **[!UICONTROL Tamaño total de audiencia cualificada]** muestra el número total de audiencias cualificadas de la última ejecución de trabajo de segmento completada. Si un trabajo de segmento no se completó en las últimas 24 horas, el número de audiencias se tomará de una estimación en su lugar.
+Específicamente, la variable **[!UICONTROL Total cualificado]** se muestra, que muestra el número total de audiencias cualificadas, según las evaluaciones por lotes y de flujo continuo de este segmento.
 
-Debajo hay un gráfico de líneas que muestra el número de segmentos calificados y descalificados en las últimas 24 horas. La lista desplegable se puede ajustar para mostrar las últimas 24 horas, la semana pasada o los últimos 30 días.
+Debajo hay un gráfico de líneas que muestra el número de audiencias nuevas que se actualizaron en las últimas 24 horas mediante el método de evaluación de flujo continuo. La lista desplegable se puede ajustar para mostrar las últimas 24 horas, la semana pasada o los últimos 30 días. La variable **[!UICONTROL Se ha actualizado la audiencia nueva]** se basa en el cambio en el tamaño de la audiencia durante el intervalo de tiempo seleccionado, según se evalúa mediante la segmentación de flujo continuo. Esta métrica no incluye el total de audiencias cualificadas de la evaluación diaria de lotes de segmentos.
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Debajo hay un gráfico de líneas que muestra el número de segmentos calificado
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-Para obtener información adicional sobre la última evaluación de segmentos, seleccione la burbuja de información.
+Para obtener información adicional sobre la última evaluación de segmentos, seleccione la burbuja de información junto a **[!UICONTROL Total cualificado]**.
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
