@@ -3,10 +3,10 @@ keywords: 'publicidad; bing; '
 title: Conexión de Microsoft Bing
 description: Con el destino de la conexión de Microsoft Bing, puede ejecutar campañas digitales de redireccionamiento y segmentación de audiencia en toda la publicidad de presentación de Microsoft.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: cffd689363e71f27a554df31beaf763f9bad37f4
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 3%
+source-wordcount: '570'
+ht-degree: 2%
 
 ---
 
@@ -73,15 +73,22 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 ## Activar segmentos en este destino {#activate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_bing_mapping_id"
+>title="ID de asignación"
+>abstract="Introduzca el ID de segmento numérico de Bing al que desea asignar el segmento seleccionado. Si se proporciona [!UICONTROL ID de asignación] no corresponde a un ID de segmento en el destino de Bing, no verá los datos de audiencia esperados en su cuenta de Bing."
+
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
-En el [Programación de segmentos](../../ui/activate-segment-streaming-destinations.md#scheduling) , debe asignar manualmente los segmentos a su ID correspondiente o a su nombre descriptivo en el destino.
+En el [Programación de segmentos](../../ui/activate-segment-streaming-destinations.md#scheduling) debe asignar manualmente los segmentos a su ID de segmento numérico correspondiente en la variable [!DNL Bing] destino. Rellene el ID de segmento numérico de [!DNL Bing] en el [!UICONTROL ID de asignación] campo .
 
-Al asignar segmentos, le recomendamos que utilice el [!DNL Platform] nombre del segmento o una forma más corta de él, para facilitar su uso. Sin embargo, el ID de segmento o el nombre de su destino no necesitan coincidir con el de su [!DNL Platform] cuenta. El destino reflejará cualquier valor que inserte en el campo de asignación.
+![Imagen de la interfaz de usuario que muestra la pantalla de asignación de segmentos con un ejemplo de ID de asignación de Bing](../../assets/catalog/advertising/bing/mapping-id.png)
+
+Si se proporciona [!UICONTROL ID de asignación] no corresponde a un ID de segmento en el destino de Bing, no verá los datos de audiencia esperados en su cuenta de Bing.
 
 ## Datos exportados {#exported-data}
 
