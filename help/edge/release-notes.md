@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
+source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1227'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 3%
 
 Este documento cubre las notas de la versión del SDK web de Adobe Experience Platform.
 Para ver las últimas notas de la versión de la extensión de etiqueta del SDK web, consulte la [Notas de la versión de la extensión de etiqueta del SDK web](extension/web-sdk-ext-release-notes.md).
+
+## Versión 2.12.0: 29 de junio de 2022
+
+* Cambie las solicitudes a la red perimetral para usar la variable `cluster` indicio de ubicación de la cookie como parte de la dirección URL. Esto garantiza que los usuarios que cambian de ubicación (por ejemplo, a través de una VPN o conduciendo con dispositivos móviles, etc.) durante la sesión tengan el mismo perfil de personalización y tengan el mismo perfil.
+* Consolide las funciones configuradas en la respuesta del comando getLibraryInfo.
 
 ## Versión 2.11.0: 13 de junio de 2022
 

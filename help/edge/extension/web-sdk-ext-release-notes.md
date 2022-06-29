@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión del SDK web de Adobe Experience Platform
 description: Extensión de etiquetas de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 83f7fca5d8a3fd2a57d39c155153caa70d89d353
+source-git-commit: 4e80588777e1c5f334e15533c7c44623a0cd2b64
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 44%
+source-wordcount: '1426'
+ht-degree: 43%
 
 ---
 
@@ -13,6 +13,12 @@ ht-degree: 44%
 # Notas de la versión de Adobe Experience Platform Web SDK
 
 Este documento cubre las notas de la versión de la extensión de etiqueta del SDK web de Adobe Experience Platform. Para ver las últimas notas de la versión del propio SDK, consulte la [Notas de la versión del SDK web de plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versión 2.13.0: 29 de junio de 2022
+
+* Se ha corregido el orden de las propiedades numéricas del elemento de datos Objeto XDM, como las eVars.
+
+Contiene la versión 2.12.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
 ## Versión 2.12.0: 13 de junio de 2022
 
