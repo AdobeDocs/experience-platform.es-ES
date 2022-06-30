@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: def32d9667c4630de760d228c88676eb9d5a6de4
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1794'
 ht-degree: 4%
 
 ---
@@ -15,26 +15,12 @@ ht-degree: 4%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [[!DNL Data Collection]](#data-collection)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de consultas](#query-service)
+- [Conexiones de Real-time Customer Data Platform](#data-collection)
 - [Fuentes](#sources)
-
-## Recopilación de datos {#data-collection}
-
-Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
-
-**Nuevas funciones**
-
-| Función | Descripción |
-| --- | --- |
-| [Configuración del tipo de acceso para conjuntos de datos](../../edge/datastreams/overview.md#create) | Al crear un nuevo conjunto de datos, ahora puede seleccionar qué tipo de solicitudes desea que acepte la red perimetral: <ul><li>**[!UICONTROL Autenticación mixta]**: Cuando se selecciona esta opción, la red perimetral acepta solicitudes autenticadas y no autenticadas. Seleccione esta opción cuando desee utilizar el SDK web o [SDK móvil](https://aep-sdks.gitbook.io/docs/), junto con la variable [API de servidor](../../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticado]**: Cuando se selecciona esta opción, la red perimetral solo acepta solicitudes autenticadas. Seleccione esta opción cuando vaya a utilizar solo la API de servidor y desee evitar que el [!DNL Edge Network]. </li></ul> |
-| [Procesar propuestas](../../edge/personalization/rendering-personalization-content.md#applypropositions) en aplicaciones de una sola página sin incrementar las métricas. | El `applyPropositions` permite procesar o ejecutar una matriz de propuestas de [!DNL Target] en aplicaciones de una sola página, sin incrementar el [!DNL Analytics] y [!DNL Target] métricas. Esto aumenta la precisión de los informes. |
-| [Uso compartido de ID de dominio cruzado y de móvil a web](../../edge/identity/id-sharing.md) | El SDK web de Adobe Experience Platform ahora es compatible con las funciones de uso compartido de ID de visitante que le permiten ofrecer experiencias personalizadas de forma más precisa, entre aplicaciones móviles y contenido web móvil, y entre dominios. |
-
-Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -130,6 +116,20 @@ El servicio de consultas permite utilizar SQL estándar para consultar datos en 
 {style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre los servicios de consulta, consulte la [Información general del servicio de consultas](../../query-service/home.md).
+
+## Conexiones de Real-time Customer Data Platform {#data-collection}
+
+Real-time Customer Data Platform Connections proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a la red perimetral lado del cliente, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| [Configuración del tipo de acceso para conjuntos de datos](../../edge/datastreams/overview.md#create) | Al crear un nuevo conjunto de datos, ahora puede seleccionar qué tipo de solicitudes desea que acepte la red perimetral: <ul><li>**[!UICONTROL Autenticación mixta]**: Cuando se selecciona esta opción, la red perimetral acepta solicitudes autenticadas y no autenticadas. Seleccione esta opción cuando desee utilizar el SDK web o [SDK móvil](https://aep-sdks.gitbook.io/docs/), junto con la variable [API de servidor](../../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticado]**: Cuando se selecciona esta opción, la red perimetral solo acepta solicitudes autenticadas. Seleccione esta opción cuando vaya a utilizar solo la API de servidor y desee evitar que el [!DNL Edge Network]. </li></ul> |
+| [Procesar propuestas](../../edge/personalization/rendering-personalization-content.md#applypropositions) en aplicaciones de una sola página sin incrementar las métricas. | El `applyPropositions` permite procesar o ejecutar una matriz de propuestas de [!DNL Target] en aplicaciones de una sola página, sin incrementar el [!DNL Analytics] y [!DNL Target] métricas. Esto aumenta la precisión de los informes. |
+| [Uso compartido de ID de dominio cruzado y de móvil a web](../../edge/identity/id-sharing.md) | El SDK web de Adobe Experience Platform ahora es compatible con las funciones de uso compartido de ID de visitante que le permiten ofrecer experiencias personalizadas de forma más precisa, entre aplicaciones móviles y contenido web móvil, y entre dominios. |
+
+Para obtener más información, consulte la [Información general sobre conexiones de Real-Time CDP](../../rtcdp-connections/home.md).
 
 ## Fuentes {#sources}
 

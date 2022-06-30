@@ -2,7 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;fuentes;fuente;recopilación de datos
 title: Recopilación de datos de Adobe
 description: Este documento proporciona información general sobre la fuente de recopilación de datos de Adobe.
-source-git-commit: be3967e7045e159736952e369a55df322afd9fec
+exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -31,8 +32,8 @@ Un conjunto de datos es una configuración que indica a la red perimetral dónde
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Para ver los pasos completos sobre cómo utilizar la interfaz de usuario de recopilación de datos, consulte la [información general completa sobre la recopilación de datos](../../../collection/e2e.md).
+Para ver los pasos completos sobre cómo utilizar la interfaz de usuario de recopilación de datos, consulte la [información general completa sobre la recopilación de datos](../../../rtcdp-connections/e2e.md).
 
 ## Pasos siguientes
 
-Al leer este documento, ha aprendido a acceder a la IU de recopilación de datos mediante el espacio de trabajo de fuentes. Para obtener más información sobre la recopilación de datos, consulte la [Información general sobre la recopilación de datos](../../../collection/e2e.md).
+Al leer este documento, ha aprendido a acceder a la IU de recopilación de datos mediante el espacio de trabajo de fuentes. Para obtener más información sobre la recopilación de datos, consulte la [Información general sobre la recopilación de datos](../../../rtcdp-connections/e2e.md).
