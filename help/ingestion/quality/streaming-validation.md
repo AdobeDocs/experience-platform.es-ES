@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 'La introducción por transmisión le permite cargar sus datos en Adobe Experience Platform mediante la transmisión de puntos de conexión en tiempo real. Las API de ingesta de transmisión admiten dos modos de validación: sincrónica y asincrónica.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: 958bd461be0eb3ed59b44759407bed40a3edc00a
+source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 4%
@@ -60,13 +60,13 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Validación sincrónica
 
->[!WARNING]
->
->La variable `syncValidation` El parámetro de consulta solo está disponible para el extremo de mensaje único y no se puede usar para el extremo de lote.
-
 La validación sincrónica es un método de validación que proporciona información inmediata sobre el motivo del error de ingesta. Sin embargo, al producirse un error, los registros en los que se ha producido un error en la validación se pierden e impiden que se envíen de forma descendente. Como resultado, la validación sincrónica solo debe utilizarse durante el proceso de desarrollo. Al realizar la validación sincrónica, se informa a los autores de llamadas del resultado de la validación XDM y, si ha fallado, del motivo del error.
 
 De forma predeterminada, la validación sincrónica no está activada. Para habilitarlo, debe pasar el parámetro de consulta opcional `syncValidation=true` al realizar llamadas de API. Además, la validación sincrónica actualmente solo está disponible si el punto final del flujo está en el centro de datos de VA7.
+
+>[!NOTE]
+>
+>La variable `syncValidation` El parámetro de consulta solo está disponible para el extremo de mensaje único y no se puede usar para el extremo de lote.
 
 Si un mensaje falla durante la validación sincrónica, el mensaje no se escribirá en la cola de salida, lo que proporciona comentarios inmediatos a los usuarios.
 
