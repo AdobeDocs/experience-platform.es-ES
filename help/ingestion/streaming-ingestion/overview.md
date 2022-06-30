@@ -5,10 +5,10 @@ title: Información general sobre la ingesta de flujos
 topic-legacy: overview
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos de cliente y del lado del servidor al Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 968f2635330fb0fa8a55b17b30bd8557f7d70335
+source-git-commit: 3ec4bfcb185459ec644ce1826e2a970cb6294538
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 2%
+source-wordcount: '348'
+ht-degree: 3%
 
 ---
 
@@ -40,7 +40,7 @@ Para obtener más información sobre cómo habilitar un conjunto de datos para [
 
 | Destino | Latencia esperada |
 | --------- | ---------------- |
-| Perfil del cliente en tiempo real | &lt; 15 minutos, con el percentil 95 |
+| Perfil del cliente en tiempo real | &lt; 1 minuto |
 | Lago de datos | &lt; 60 minutos |
 
 ## Guía de solicitud por segundos (RPS) sobre la ingesta de transmisión
