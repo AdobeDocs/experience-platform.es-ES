@@ -4,16 +4,14 @@ description: Aprenda a identificar de forma consistente a los visitantes a trav�
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: red perimetral;puerta de enlace;api;visitante;identificación;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 # Identificación de visitantes mediante FPID
-
-## Información general
 
 [!DNL First-party IDs] (`FPIDs`) son ID de dispositivo generados, administrados y almacenados por los clientes. Esto proporciona a los clientes control sobre la identificación de dispositivos de usuario. Enviando `FPIDs`, la red perimetral no genera una red completamente nueva `ECID` para una solicitud que no contenga una.
 
@@ -35,7 +33,7 @@ La variable `ECID` obtenido de esta forma se puede recuperar mediante un `identi
 }
 ```
 
-Para solicitudes que contienen a la vez un `FPID` y `ECID`, el `ECID` ya presente en la solicitud tendrá prioridad sobre el que se podría generar a partir de la variable `FPID`. Por lo tanto, la red perimetral utilizará la variable `ECID` ya se ha proporcionado y no calculará uno a partir del `FPID`.
+Para solicitudes que contienen un `FPID` y `ECID`, el `ECID` ya presente en la solicitud tendrá prioridad sobre el que se podría generar a partir de la variable `FPID`. En otras palabras, la red perimetral utiliza la variable `ECID` ya se han proporcionado y `FPID` se ignora. Un nuevo `ECID` solo se genera cuando `FPID` se proporciona por su cuenta.
 
 En términos de ID de dispositivo, la variable `server` los conjuntos de datos deben utilizar `FPID` como ID de dispositivo. Otras identidades (p. ej. `EMAIL`) también se puede proporcionar dentro del cuerpo de la solicitud, pero la red perimetral requiere que se proporcione explícitamente una identidad principal. La identidad principal es la identidad base en la que se almacenan los datos de perfil.
 

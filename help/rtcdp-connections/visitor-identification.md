@@ -4,18 +4,16 @@ description: Descubra cómo la API de Adobe Experience Platform Edge Network Ser
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: red perimetral;puerta de enlace;api;visitante;identificación
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '151'
 ht-degree: 5%
 
 ---
 
 # Identificación de visitantes
 
-## Información general {#overview}
-
-La API de servidor de red perimetral es compatible [identificación de visitantes mediante ID de origen ([!DNL FPID])](visitor-identification-fpid.md)
+La API de servidor de red perimetral es compatible [identificación de visitantes mediante ID de origen ([!DNL FPID])](visitor-identification-fpid.md).
 
 Todas las identidades de usuario deben proporcionarse en la variable `identityMap` grupo de campos. Este grupo de campos se incluye en el SDK web de AEP `ExperienceEvent` mixin.
 
