@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de Experience;modelo de datos;modelo de datos;registro de esquema;registro de esquema;esquema;esquema;esquemas;esquemas;relación;descriptor de relación;descriptor de relación;identidad de referencia;identidad de referencia;
-solution: Experience Platform
 title: Definir una relación entre dos esquemas con la API del Registro de esquemas
 description: Este documento proporciona un tutorial para definir una relación "uno a uno" entre dos esquemas definidos por su organización mediante la API del Registro de esquemas.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1367'
 ht-degree: 3%
 
 ---
@@ -110,13 +109,13 @@ Registre el `$id` los valores de los dos esquemas que desea definir una relació
 
 ## Definición de un campo de referencia para el esquema de origen
 
-Dentro de [!DNL Schema Registry], los descriptores de relaciones funcionan de manera similar a las claves externas en las tablas de bases de datos relacionales: un campo del esquema de origen actúa como referencia del campo de identidad principal de un esquema de destino. Si el esquema de origen no tiene un campo para este fin, es posible que tenga que crear un grupo de campos de esquema con el nuevo campo y añadirlo al esquema. Este nuevo campo debe tener un `type` valor de &quot;[!DNL string]&quot;.
+Dentro de [!DNL Schema Registry], los descriptores de relaciones funcionan de manera similar a las claves externas en las tablas de bases de datos relacionales: un campo del esquema de origen actúa como referencia del campo de identidad principal de un esquema de destino. Si el esquema de origen no tiene un campo para este fin, es posible que tenga que crear un grupo de campos de esquema con el nuevo campo y añadirlo al esquema. Este nuevo campo debe tener un `type` valor de `string`.
 
 >[!IMPORTANT]
 >
->A diferencia del esquema de destino, el esquema de origen no puede utilizar su identidad principal como campo de referencia.
+>El esquema de origen no puede utilizar su identidad principal como campo de referencia.
 
-En este tutorial, el esquema de destino &quot;[!DNL Hotels]&quot; contiene un `hotelId` que sirve como identidad principal del esquema y, por lo tanto, también actúa como campo de referencia. Sin embargo, el esquema de origen &quot;[!DNL Loyalty Members]&quot; no tiene un campo específico para utilizarlo como referencia y debe recibir un nuevo grupo de campos que añada un nuevo campo al esquema: `favoriteHotel`.
+En este tutorial, el esquema de destino &quot;[!DNL Hotels]&quot; contiene un `hotelId` que sirve como identidad principal del esquema. Sin embargo, el esquema de origen &quot;[!DNL Loyalty Members]&quot; no tiene un campo específico para usar como referencia a `hotelId`y, por lo tanto, se debe crear un grupo de campos personalizado para añadir un nuevo campo al esquema: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -344,9 +343,9 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
 
 ## Crear un descriptor de identidad de referencia {#reference-identity}
 
-Los campos de esquema deben tener un descriptor de identidad de referencia aplicado si se utilizan como referencia de otros esquemas de una relación. Dado que la variable `favoriteHotel` en &quot;[!DNL Loyalty Members]&quot; se referirá a la `hotelId` en &quot;[!DNL Hotels]&quot;, `hotelId` debe tener un descriptor de identidad de referencia.
+Los campos de esquema deben tener un descriptor de identidad de referencia aplicado si se utilizan como referencia a otro esquema en una relación. Dado que la variable `favoriteHotel` en &quot;[!DNL Loyalty Members]&quot; se referirá a la `hotelId` en &quot;[!DNL Hotels]&quot;, `favoriteHotel` debe tener un descriptor de identidad de referencia.
 
-Cree un descriptor de referencia para el esquema de destino realizando una solicitud de POST al `/tenant/descriptors` punto final.
+Cree un descriptor de referencia para el esquema de origen realizando una solicitud de POST al `/tenant/descriptors` punto final.
 
 **Formato de API**
 
@@ -356,7 +355,7 @@ POST /tenant/descriptors
 
 **Solicitud**
 
-La siguiente solicitud crea un descriptor de referencia para la variable `hotelId` en el esquema de destino &quot;[!DNL Hotels]&quot;.
+La siguiente solicitud crea un descriptor de referencia para la variable `favoriteHotel` en el esquema de origen &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X POST \
@@ -368,33 +367,33 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
-| `@type` | Tipo de descriptor que se está definiendo. Para los descriptores de referencia, el valor debe ser &quot;xdm:descriptorReferenceIdentity&quot;. |
-| `xdm:sourceSchema` | La variable `$id` URL del esquema de destino. |
-| `xdm:sourceVersion` | Número de versión del esquema de destino. |
-| `sourceProperty` | Ruta al campo de identidad principal del esquema de destino. |
-| `xdm:identityNamespace` | El área de nombres de identidad del campo de referencia. Debe ser el mismo espacio de nombres que se utiliza al definir el campo que la identidad principal del esquema. Consulte la [información general del área de nombres de identidad](../../identity-service/home.md) para obtener más información. |
+| `@type` | Tipo de descriptor que se está definiendo. Para los descriptores de referencia, el valor debe ser `xdm:descriptorReferenceIdentity`. |
+| `xdm:sourceSchema` | La variable `$id` URL del esquema de origen. |
+| `xdm:sourceVersion` | Número de versión del esquema de origen. |
+| `sourceProperty` | Ruta al campo en el esquema de origen que se utilizará para hacer referencia a la identidad principal del esquema de destino. |
+| `xdm:identityNamespace` | El área de nombres de identidad del campo de referencia. Debe ser el mismo área de nombres que la identidad principal del esquema de destino. Consulte la [información general del área de nombres de identidad](../../identity-service/home.md) para obtener más información. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del descriptor de referencia recién creado para el esquema de destino.
+Una respuesta correcta devuelve los detalles del descriptor de referencia recién creado para el campo de origen.
 
 ```json
 {
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
@@ -403,7 +402,7 @@ Una respuesta correcta devuelve los detalles del descriptor de referencia recié
 
 ## Crear un descriptor de relación {#create-descriptor}
 
-Los descriptores de relación establecen una relación uno a uno entre un esquema de origen y un esquema de destino. Una vez definido un descriptor de referencia para el esquema de destino, puede crear un nuevo descriptor de relación realizando una solicitud de POST al `/tenant/descriptors` punto final.
+Los descriptores de relación establecen una relación uno a uno entre un esquema de origen y un esquema de destino. Una vez definido un descriptor de identidad de referencia para el campo correspondiente en el esquema de origen, puede crear un nuevo descriptor de relación realizando una solicitud de POST al `/tenant/descriptors` punto final.
 
 **Formato de API**
 
@@ -413,7 +412,7 @@ POST /tenant/descriptors
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo descriptor de relación, con &quot;[!DNL Loyalty Members]&quot; como esquema de origen y &quot;[!DNL Legacy Loyalty Members]&quot; como esquema de destino.
+La siguiente solicitud crea un nuevo descriptor de relación, con &quot;[!DNL Loyalty Members]&quot; como esquema de origen y &quot;[!DNL Hotels]&quot; como esquema de destino.
 
 ```shell
 curl -X POST \
@@ -436,13 +435,13 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --- | --- |
-| `@type` | Tipo de descriptor que se va a crear. La variable `@type` para los descriptores de relación es &quot;xdm:descriptorOneToOne&quot;. |
+| `@type` | Tipo de descriptor que se va a crear. La variable `@type` el valor para los descriptores de relaciones es `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | La variable `$id` URL del esquema de origen. |
 | `xdm:sourceVersion` | Número de versión del esquema de origen. |
 | `xdm:sourceProperty` | Ruta al campo de referencia en el esquema de origen. |
 | `xdm:destinationSchema` | La variable `$id` URL del esquema de destino. |
 | `xdm:destinationVersion` | Número de versión del esquema de destino. |
-| `xdm:destinationProperty` | Ruta al campo de referencia en el esquema de destino. |
+| `xdm:destinationProperty` | La ruta al campo de identidad principal en el esquema de destino. |
 
 {style=&quot;table-layout:auto&quot;}
 
