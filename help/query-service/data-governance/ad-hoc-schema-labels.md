@@ -1,10 +1,11 @@
 ---
 title: Compatibilidad con el control de acceso basado en atributos para esquemas específicos
 description: Una guía para restringir el acceso a los campos de datos en esquemas específicos generados a través del servicio de consulta de Adobe Experience Platform.
-source-git-commit: 3d908face315c7aa2ad8f6350fb1fe0d3446d428
+exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
+source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -41,7 +42,7 @@ Para añadir una etiqueta de datos, vaya a [!UICONTROL Esquemas] ficha examinar 
 
 ## Descubra esquemas ad hoc en el inventario de esquemas de la interfaz de usuario de Platform
 
-Para habilitar la visualización de esquemas ad hoc en la interfaz de usuario de Platform, seleccione el icono de filtro (../images/data-governance/filter.png) a la izquierda del campo de búsqueda y, a continuación, seleccione **[!UICONTROL Mostrar esquemas específicos] en el carril izquierdo que aparece.
+Para habilitar la visualización de esquemas ad hoc en la interfaz de usuario de Platform, seleccione el icono de filtro (![Un icono de filtro.](../images/data-governance/filter.png)) a la izquierda del campo de búsqueda y, a continuación, seleccione **[!UICONTROL Mostrar esquemas específicos] en el carril izquierdo que aparece.
 
 ![Las opciones del filtro del panel Esquema están en el carril izquierdo con la opción &quot;Mostrar esquema ad hoc&quot; activada.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -93,4 +94,4 @@ Si se establece una identidad o identidad principal en un esquema ad hoc, el sis
 Después de leer este documento, tendrá una mejor comprensión de cómo agregar etiquetas de uso de datos a esquemas ad hoc creados a través de consultas CTAS del servicio de consulta. Si aún no lo ha hecho, los siguientes documentos son útiles para mejorar su comprensión del control de datos en el servicio de consulta:
 
 * [Identidades de esquema ad hoc](./ad-hoc-schema-identities.md)
-* [Administración de datos](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)
+* [Administración de datos](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=es)
