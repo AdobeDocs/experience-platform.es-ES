@@ -5,9 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
 workflow-type: tm+mt
-source-wordcount: '3881'
+source-wordcount: '3992'
 ht-degree: 0%
 
 ---
@@ -133,13 +133,21 @@ En la tabla siguiente se desglosan los cambios compatibles al editar esquemas, g
 | --- | --- |
 | <ul><li>Adición de nuevos campos al recurso</li><li>Hacer opcional un campo obligatorio</li><li>Introducción de nuevos campos obligatorios*</li><li>Cambio del nombre para mostrar y la descripción del recurso</li><li>Activación del esquema para participar en el perfil</li></ul> | <ul><li>Eliminación de campos definidos previamente</li><li>Cambio del nombre o redefinición de campos existentes</li><li>Eliminación o restricción de los valores de campo admitidos anteriormente</li><li>Mover los campos existentes a una ubicación diferente del árbol</li><li>Eliminación del esquema</li><li>Desactivación de la participación del esquema en el perfil</li></ul> |
 
-\**Consulte la [subsección abajo](#post-ingestion-required-fields) para consideraciones importantes sobre la configuración de nuevos campos obligatorios.*
+\**Consulte la sección siguiente para conocer las consideraciones importantes sobre [configuración de nuevos campos obligatorios](#post-ingestion-required-fields).*
 
-#### Definición de campos como obligatorios después de la ingesta {#post-ingestion-required-fields}
+### Campos requeridos
+
+Los campos de esquema individuales pueden [marcado como obligatorio](../ui/fields/required.md), lo que significa que los registros ingestados deben contener datos en esos campos para pasar la validación. Por ejemplo, si se establece el campo de identidad principal de un esquema como sea necesario, puede ayudar a garantizar que todos los registros ingestados participen en el Perfil del cliente en tiempo real, mientras que al establecer un campo de marca de tiempo como sea necesario, se garantiza que todos los eventos de series temporales se conserven cronológicamente.
+
+>[!IMPORTANT]
+>
+>Independientemente de si un campo de esquema es obligatorio o no, Platform no acepta `null` o valores vacíos para cualquier campo introducido. Si no hay ningún valor para un campo concreto de un registro o evento, la clave de ese campo debe excluirse de la carga útil de ingesta.
+
+#### Configuración de los campos como sea necesario después de la ingesta {#post-ingestion-required-fields}
 
 Si se ha utilizado un campo para introducir datos y no se ha establecido originalmente como requerido, ese campo puede tener un valor nulo para algunos registros. Si establece este campo como obligatorio después de la ingesta, todos los registros futuros deben contener un valor para este campo aunque los registros históricos puedan ser nulos.
 
-Cuando establezca un campo anteriormente opcional como obligatorio, tenga en cuenta lo siguiente:
+Cuando configure un campo opcional anteriormente como sea necesario, tenga en cuenta lo siguiente:
 
 1. Si consulta datos históricos y escribe los resultados en un nuevo conjunto de datos, algunas filas producirán errores porque contienen valores nulos para el campo requerido.
 1. Si el campo participa en [Perfil del cliente en tiempo real](../../profile/home.md) y los datos se exportan antes de configurarlos como sea necesario, puede que sean nulos para algunos perfiles.
