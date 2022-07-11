@@ -5,25 +5,25 @@ title: Detalles de pertenencia a segmentos Grupo de campos de esquema
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de pertenencia a segmentos .
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 5f28c9eceb42ee19f7a8b22604ff36f8ffbd89b1
 workflow-type: tm+mt
-source-wordcount: '426'
-ht-degree: 2%
+source-wordcount: '430'
+ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL Segment Membership ] Detailsgrupo de campos de esquema
+# [!UICONTROL Detalles de pertenencia a segmentos] grupo de campos de esquema
 
 >[!NOTE]
 >
->Los nombres de varios grupos de campos de esquema han cambiado. Para obtener más información, consulte el documento [field group name updates](../name-updates.md) .
+>Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento en [actualizaciones del nombre del grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL Pertenencia a segmentos ] Detalla un grupo de campos de esquema estándar para la  [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). El grupo de campos proporciona un único campo de mapa que captura información relacionada con la pertenencia a un segmento, incluidos los segmentos a los que pertenece el individuo, la última hora de calificación y el momento en que la pertenencia es válida hasta entonces.
+[!UICONTROL Detalles de pertenencia a segmentos] es un grupo de campos de esquema estándar para la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). El grupo de campos proporciona un único campo de mapa que captura información relacionada con la pertenencia a un segmento, incluidos los segmentos a los que pertenece el individuo, la última hora de calificación y el momento en que la pertenencia es válida hasta entonces.
 
 >[!WARNING]
 >
->Aunque el campo `segmentMembership` debe agregarse manualmente al esquema de perfil mediante este grupo de campos, no debe intentar rellenar o actualizar este campo manualmente. El sistema actualiza automáticamente el mapa de `segmentMembership` para cada perfil a medida que se realizan trabajos de segmentación.
+>Mientras que la variable `segmentMembership` debe agregarse manualmente al esquema de perfil mediante este grupo de campos, no debe intentar rellenar o actualizar este campo manualmente. El sistema actualiza automáticamente la variable `segmentMembership` para cada perfil a medida que se realizan trabajos de segmentación.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-El siguiente es un ejemplo de asignación `segmentMembership` que el sistema ha rellenado para un perfil en particular. Las pertenencias a segmentos se ordenan por área de nombres, tal como indican las claves de nivel raíz del objeto. A su vez, las claves individuales de cada área de nombres representan los ID de los segmentos a los que pertenece el perfil. Cada objeto de segmento contiene varios subcampos que proporcionan más detalles sobre la pertenencia:
+El siguiente es un ejemplo `segmentMembership` mapa que el sistema ha rellenado para un perfil en particular. Las pertenencias a segmentos se ordenan por área de nombres, tal como indican las claves de nivel raíz del objeto. A su vez, las claves individuales de cada área de nombres representan los ID de los segmentos a los que pertenece el perfil. Cada objeto de segmento contiene varios subcampos que proporcionan más detalles sobre la pertenencia:
 
 ```json
 {
@@ -77,8 +77,8 @@ El siguiente es un ejemplo de asignación `segmentMembership` que el sistema ha 
 | `xdm:version` | La versión del segmento para el que se calificó este perfil. |
 | `xdm:lastQualificationTime` | Marca de fecha y hora de la última vez que este perfil cumplía los requisitos para el segmento. |
 | `xdm:validUntil` | Marca de fecha y hora en la que se debe suponer que la pertenencia al segmento ya no es válida. |
-| `xdm:status` | Indica si la pertenencia al segmento se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`existing`: El perfil ya formaba parte del segmento antes de la solicitud y continúa manteniendo su pertenencia.</li><li>`realized`: El perfil está introduciendo el segmento como parte de la solicitud actual.</li><li>`exited`: El perfil sale del segmento como parte de la solicitud actual.</li></ul> |
-| `xdm:payload` | Algunas suscripciones a segmentos incluyen una carga útil que describe valores adicionales directamente relacionados con la pertenencia. Solo se puede proporcionar una carga útil de un tipo determinado para cada pertenencia. `xdm:payloadType` indica el tipo de carga útil (`boolean`,  `number`,  `propensity` o  `string`), mientras que su propiedad del mismo nivel proporciona el valor para el tipo de carga útil. |
+| `xdm:status` | Campo de cadena que indica si la pertenencia al segmento se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`existing`: El perfil ya formaba parte del segmento antes de la solicitud y continúa manteniendo su pertenencia.</li><li>`realized`: El perfil está introduciendo el segmento como parte de la solicitud actual.</li><li>`exited`: El perfil sale del segmento como parte de la solicitud actual.</li></ul> |
+| `xdm:payload` | Algunas suscripciones a segmentos incluyen una carga útil que describe valores adicionales directamente relacionados con la pertenencia. Solo se puede proporcionar una carga útil de un tipo determinado para cada pertenencia. `xdm:payloadType` indica el tipo de carga útil (`boolean`, `number`, `propensity`o `string`), mientras que su propiedad del mismo nivel proporciona el valor para el tipo de carga útil. |
 
 {style=&quot;table-layout:auto&quot;}
 

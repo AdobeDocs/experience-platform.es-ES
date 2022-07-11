@@ -2,9 +2,9 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/sample-profiles`, para generar perfiles de muestra y utilizarlos en pruebas de destino.
 title: Ejemplos de operaciones de API de generación de perfiles
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 789a3928379d200af292c722806f7ca72441d9f3
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '975'
 ht-degree: 3%
 
 ---
@@ -183,7 +183,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con el número especificado d
 | -------- | ----------- |
 | `segmentMembership` | Un objeto map que describe las suscripciones a segmentos del individuo. Para obtener más información, consulte `segmentMembership`, leer [Detalles de pertenencia a segmentos](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Marca de fecha y hora de la última vez que este perfil cumplía los requisitos para el segmento. |
-| `xdm:status` | Indica si la pertenencia al segmento se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`existing`: El perfil ya formaba parte del segmento antes de la solicitud y continúa manteniendo su pertenencia.</li><li>`realized`: El perfil está introduciendo el segmento como parte de la solicitud actual.</li><li>`exited`: El perfil sale del segmento como parte de la solicitud actual.</li></ul> |
+| `xdm:status` | Campo de cadena que indica si la pertenencia al segmento se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`existing`: El perfil ya formaba parte del segmento antes de la solicitud y continúa manteniendo su pertenencia.</li><li>`realized`: El perfil está introduciendo el segmento como parte de la solicitud actual.</li><li>`exited`: El perfil sale del segmento como parte de la solicitud actual.</li></ul> |
 | `identityMap` | Campo de tipo asignación que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Para obtener más información, consulte `identityMap`, leer [Base de la composición del esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}
