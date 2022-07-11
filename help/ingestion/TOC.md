@@ -4,9 +4,9 @@ user-guide-title: Ayuda de ingesta de datos de Adobe Experience Platform
 breadcrumb-title: Guía de ingesta de datos
 user-guide-description: Incluya sus datos en Platform mediante la ingestión por lotes o de flujo continuo.
 feature: Data Ingestion
-source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
+source-git-commit: 2c0791af8bb4f40c5ab4e0504af154b757af5e84
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '128'
 ht-degree: 25%
 
 ---
@@ -34,13 +34,14 @@ ht-degree: 25%
    - [Transmisión de datos de registro](tutorials/streaming-record-data.md)
    - [Transmisión de datos de series temporales](tutorials/streaming-time-series-data.md)
    - [Transmisión de varios mensajes](tutorials/streaming-multiple-messages.md)
-- Calidad de los datos y monitorización{#quality}
+- Calidad de los datos y supervisión{#quality}
    - [Información general](quality/overview.md)
    - [Monitorización de la ingesta de datos](quality/monitor-data-ingestion.md)
    - [Recuperar diagnósticos de error](quality/error-diagnostics.md)
    - [Recuperar lotes con errores](quality/retrieve-failed-batches.md)
    - [Validación de ingesta de transmisión](quality/streaming-validation.md)
    - [Notificaciones de ingesta de datos](quality/subscribe-events.md)
+- [Protecciones para la ingesta de datos](guardrails.md)
 - [Conectores de origen](source-connectors.md)
 - [Referencia de API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)

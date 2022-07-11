@@ -5,10 +5,10 @@ title: Glosario de Adobe Experience Platform
 topic-legacy: getting started
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
 workflow-type: tm+mt
-source-wordcount: '7385'
-ht-degree: 1%
+source-wordcount: '7428'
+ht-degree: 0%
 
 ---
 
@@ -136,7 +136,7 @@ ht-degree: 1%
 
 **Acción de marketing de objetivos entre sitios**: Acción de marketing que utiliza datos para la segmentación de anuncios entre sitios. La combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio, se denomina datos entre sitios. Los datos entre sitios suelen recopilarse y procesarse para hacer inferencias sobre los intereses de los clientes.
 
-**Área de nombres de identidad personalizada**: Su organización puede crear áreas de nombres de identidad personalizadas para representar identidades de una organización o un caso empresarial específicos.
+**Área de nombres de identidad personalizada**: Su organización puede crear áreas de nombres de identidad personalizadas para representar las identidades de una organización o un caso empresarial específicos.
 
 **Etiquetas personalizadas**: Las etiquetas de uso de datos personalizadas le permiten crear y aplicar etiquetas específicas a campos de datos que satisfagan necesidades comerciales específicas.
 
@@ -257,6 +257,8 @@ ht-degree: 1%
 **Geofence**: Una geovalla es un límite geográfico virtual, definido por la tecnología GPS o RFID, que permite al software almacenar en déclencheur una respuesta cuando un dispositivo móvil entra o sale de un área en particular.
 
 **RGPD (Reglamento general de protección de datos)**: El Reglamento General de Protección de Datos (RGPD) es un marco jurídico que establece directrices para la recopilación y el tratamiento de información personal de personas que se encuentren en la Unión Europea (UE). El RGPD establece los principios para la gestión de datos y los derechos de las personas y abarca todas las empresas que se ocupan de los datos de los ciudadanos de la UE.
+
+**Seguridad**: Las protecciones son umbrales que proporcionan directrices para el uso de los datos y del sistema, la optimización del rendimiento y la prevención de errores o resultados inesperados en Adobe Experience Platform. Las protecciones pueden referirse a su uso o consumo de datos y procesamiento en relación con sus derechos de licencia.
 
 ## H
 
