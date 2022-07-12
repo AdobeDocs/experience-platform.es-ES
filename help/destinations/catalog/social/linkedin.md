@@ -3,10 +3,10 @@ keywords: conexión linkedin;conexión linkedin;destinos linkedin;linkedin;
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para segmentación, personalización y supresión de audiencias, en función de correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 2%
+source-wordcount: '1041'
+ht-degree: 1%
 
 ---
 
@@ -91,7 +91,7 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 > 
 >Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos que aparecen en las dos secciones siguientes.
 
 El siguiente vídeo muestra también los pasos para configurar un [!DNL LinkedIn Matched Audiences] dirigir y activar segmentos.
 
@@ -101,13 +101,31 @@ El siguiente vídeo muestra también los pasos para configurar un [!DNL LinkedIn
 >
 >La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte la [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-### Parámetros de conexión {#parameters}
+### Autenticar en destino {#authenticate}
 
-While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
+1. Busque la [!DNL LinkedIn Matched Audiences] destino en el catálogo de destino y seleccione **[!UICONTROL Configurar]**.
+2. Select **[!UICONTROL Conectarse al destino]**.
+   ![Autenticar en LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+3. Introduzca sus credenciales de LinkedIn y seleccione **Iniciar sesión**.
 
-* **[!UICONTROL Nombre]**: un nombre por el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Descripción]**: una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: your [!DNL LinkedIn Campaign Manager Account ID]. Puede encontrar este ID en su [!DNL LinkedIn Campaign Manager] cuenta.
+### Rellenar detalles de destino {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_linkedin_accountid"
+>title="ID de cuenta"
+>abstract="El ID de cuenta de LinkedIn Campaign Manager. Puede encontrar este ID en su cuenta de LinkedIn Campaign Manager."
+
+Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
+
+* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
+* **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL ID de cuenta]**: Su [!DNL LinkedIn Campaign Manager Account ID]. Puede encontrar este ID en su [!DNL LinkedIn Campaign Manager] cuenta.
+
+### Habilitar alertas {#enable-alerts}
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+
+Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar segmentos en este destino {#activate}
 

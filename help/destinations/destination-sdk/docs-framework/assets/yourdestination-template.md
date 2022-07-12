@@ -1,25 +1,19 @@
 ---
-title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
+title: Plantilla de autoservicio // Reemplazar por el nombre del destino
 description: Utilice esta plantilla para crear documentación pública para el destino en el catálogo de Adobe Experience Platform. // Reemplazar por el párrafo de la sección Información general
-exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1341'
 ht-degree: 1%
 
 ---
+
 
 # Conexión YourDestination {#your-destination}
 
 *A medida que recorre esta plantilla, reemplace o elimine todos los párrafos en cursiva (a partir de este).*
 
 *Comience por actualizar los metadatos (título y descripción) en la parte superior de la página. Ignore todas las instancias de UICONTROL en esta página. Esta es una etiqueta que ayuda a nuestros procesos de traducción automática a traducir correctamente la página a los múltiples idiomas compatibles. Añadiremos etiquetas a su documentación después de enviarla.*
-
->[!IMPORTANT]
->
->* Rellene todas las secciones de esta plantilla, en el orden en que aparecen delineadas en la plantilla.
->* Esta plantilla se actualiza con poca frecuencia, en función de los comentarios de los socios. Antes de empezar a crear documentación para su destino, asegúrese de haber descargado la variable [versión más reciente de la plantilla](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
-
 
 ## Información general {#overview}
 
@@ -33,13 +27,13 @@ ht-degree: 1%
 
 Para ayudarle a comprender mejor cómo y cuándo debe usar la variable *YourDestination* destino, aquí hay ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver utilizando este destino.
 
-### Caso de uso número 1 {#use-case-1}
+### Caso de uso número 1
 
 *Para plataformas de mensajería móvil:*
 
 *Una plataforma de ventas y alquiler de casas quiere enviar notificaciones móviles a los dispositivos Android y iOS de los clientes para informarles de que hay 100 anuncios actualizados en el área donde previamente buscaron un alquiler.*
 
-### Caso de uso n.º 2 {#use-case-2}
+### Caso de uso n.º 2
 
 *Para plataformas de redes sociales:*
 
@@ -102,7 +96,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectarse al destino]**.
 
-![Captura de pantalla de ejemplo que muestra cómo autenticarse en el destino](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Añada un vínculo aquí a una o más capturas de pantalla de muestra que muestran a los usuarios cómo autenticarse en el destino](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
 * **[!UICONTROL Token portador]**: Rellene el token al portador para autenticarse en el destino.
 
@@ -112,7 +106,7 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-![Captura de pantalla de ejemplo que muestra cómo rellenar los detalles para el destino](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Añada un vínculo aquí a una o más capturas de pantalla de muestra que muestran a los usuarios cómo rellenar los detalles para su destino](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
@@ -130,7 +124,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 > 
 >Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](../../ui/activate/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
@@ -176,7 +170,7 @@ Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos d
 
 ## Uso y gobernanza de los datos {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] exige la administración de datos, lea la [Información general sobre la administración de datos](/help/data-governance/home.md).
+Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] exige el control de datos; consulte [Información general sobre la administración de datos](/help/data-governance/home.md).
 
 ## Recursos adicionales {#additional-resources}
 

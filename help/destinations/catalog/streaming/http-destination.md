@@ -3,9 +3,9 @@ title: Conexión de API HTTP
 keywords: flujo continuo;
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que necesite en datos de perfil exportados fuera del Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2374'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ Si selecciona la opción **[!UICONTROL Credenciales de cliente de OAuth 2]** tip
    * **[!UICONTROL Formulario de cuerpo codificado]**: En este caso, la variable [!DNL client ID] y [!DNL client secret] se incluyen *en el cuerpo de la solicitud* enviado a su destino. Para ver un ejemplo, consulte la [Tipos de autenticación compatibles](#supported-authentication-types) para obtener más información.
    * **[!UICONTROL Autorización básica]**: En este caso, la variable [!DNL client ID] y [!DNL client secret] se incluyen *en un `Authorization` header* después de ser codificado base64 y enviado a su destino. Para ver un ejemplo, consulte la [Tipos de autenticación compatibles](#supported-authentication-types) para obtener más información.
 
-### Detalles de destino {#destination-details}
+### Rellenar detalles de destino {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -165,7 +165,7 @@ Si selecciona la opción **[!UICONTROL Credenciales de cliente de OAuth 2]** tip
 >title="Parámetros de consulta"
 >abstract="De forma opcional, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Dé este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`."
 
-Después de establecer la conexión de autenticación en el extremo HTTP, proporcione la siguiente información para el destino:
+Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
 ![Imagen de la pantalla de la interfaz de usuario que muestra los campos completados para los detalles de destino HTTP](../../assets/catalog/http/http-api-destination-details.png)
 
@@ -176,6 +176,12 @@ Después de establecer la conexión de autenticación en el extremo HTTP, propor
 * **[!UICONTROL Parámetros de consulta]**: De forma opcional, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Dé este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Incluir nombres de segmentos]**: Alterne si desea que la exportación de datos incluya los nombres de los segmentos que está exportando. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la [Datos exportados](#exported-data) más abajo.
 * **[!UICONTROL Incluir marcas de hora de segmentos]**: Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la [Datos exportados](#exported-data) más abajo.
+
+### Habilitar alertas {#enable-alerts}
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+
+Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar segmentos en este destino {#activate}
 

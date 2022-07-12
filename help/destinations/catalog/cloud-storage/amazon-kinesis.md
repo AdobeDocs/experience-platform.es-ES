@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino de kinesis;kinesis
 title: Conexión de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real al almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
+source-git-commit: abe2e7ba363b82a696136aa46aa1adbbe25ee461
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -86,6 +86,8 @@ El ejemplo siguiente muestra los derechos de acceso mínimos necesarios para exp
 | `kinesis:PutRecord` | Acción que escribe un registro de datos único en un flujo de datos de Kinesis. |
 | `kinesis:PutRecords` | Acción que escribe varios registros de datos en un flujo de datos de Kinesis en una sola llamada. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Para obtener más información sobre cómo controlar el acceso a [!DNL Kinesis] flujos de datos, lea lo siguiente [[!DNL Kinesis] documento](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ## Conectarse al destino {#connect}
@@ -105,7 +107,7 @@ Introduzca los campos siguientes y seleccione **[!UICONTROL Conectarse al destin
 * **[!DNL Amazon Web Services]clave de acceso y clave secreta**: En [!DNL Amazon Web Services], genere un `access key - secret access key` par para conceder acceso a Platform a su [!DNL Amazon Kinesis] cuenta. Obtenga más información en la [Documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Región]**: Indicar qué [!DNL Amazon Web Services] región a la que transmitir los datos.
 
-### Detalles de destino {#destination-details}
+### Rellenar detalles de destino {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
@@ -117,7 +119,7 @@ Introduzca los campos siguientes y seleccione **[!UICONTROL Conectarse al destin
 >title="Incluir marcas de hora de segmentos"
 >abstract="Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
 
-Después de establecer la conexión de autenticación en el destino de Kinesis de Amazon, proporcione la siguiente información para el destino:
+Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
 ![Imagen de la pantalla de la interfaz de usuario que muestra los campos completados para los detalles de destino de Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
@@ -134,6 +136,12 @@ Después de establecer la conexión de autenticación en el destino de Kinesis d
 >Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
+
+### Habilitar alertas {#enable-alerts}
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+
+Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar segmentos en este destino {#activate}
 

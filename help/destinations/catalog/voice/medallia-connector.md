@@ -1,13 +1,13 @@
 ---
 title: Conexión con Medallia
 description: Active perfiles para encuestas de Medallia dirigidas y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes.
-source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
+exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 2%
+source-wordcount: '1102'
+ht-degree: 1%
 
 ---
-
 
 # Conexión con Medallia
 
@@ -70,7 +70,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 > 
 >Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). En el flujo de trabajo de configuración de destino, rellene los campos que aparecen en las dos secciones siguientes.
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos que aparecen en las dos secciones siguientes.
 
 ### Autenticar en destino {#authenticate}
 
@@ -84,7 +84,7 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 ### Rellenar detalles de destino {#destination-details}
 
-Para configurar los detalles del destino, rellene los campos obligatorios y seleccione **[!UICONTROL Siguiente]**.
+Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
@@ -92,6 +92,12 @@ Para configurar los detalles del destino, rellene los campos obligatorios y sele
 * **[!UICONTROL Importar nombre de API]**: Obtenga información de su equipo de envío de Medallia. Nombre de la API de importación de Medallia (también conocida como Fuente web) que se utilizará en esta conexión. Puede activar diferentes segmentos en diferentes API de importación para almacenar en déclencheur diferentes programas de encuestas.
 
 ![Imagen que muestra la pantalla de detalles de destino para este destino.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+
+### Habilitar alertas {#enable-alerts}
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+
+Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar segmentos en este destino {#activate}
 

@@ -3,9 +3,9 @@ keywords: publicidad; criteo;
 title: Conexión con Criteo
 description: Criteo impulsa la publicidad confiable e impactante para traer experiencias más ricas a todos los consumidores a través del internet abierto. Con el mayor conjunto de datos comerciales del mundo y la mejor IA de su clase, Criteo garantiza que cada punto de contacto a través del recorrido de compras esté personalizado para llegar a los clientes con el anuncio correcto, en el momento adecuado.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 07974f92c741d74e6d0289120538655379d3ca35
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '1005'
 ht-degree: 2%
 
 ---
@@ -102,6 +102,12 @@ Después de autenticarse en el destino, rellene los siguientes parámetros de co
 | Versión de API | Versión de la API de Criteo. Seleccione Vista previa. | Sí |
 | ID del anunciante | Criteo Advertiser ID de su organización. Póngase en contacto con su gestor de cuentas de Criteo para obtener esta información. | Sí |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] de su organización. Póngase en contacto con el equipo de su cuenta de Criteo para obtener información apropiada [!DNL GUM Caller ID] o para obtener más información sobre esto [!DNL GUM] sincronizar, si es necesario. | Sí, siempre [!DNL GUM ID] se proporciona como identificador |
+
+### Habilitar alertas {#enable-alerts}
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+
+Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar segmentos en este destino {#activate-segments}
 

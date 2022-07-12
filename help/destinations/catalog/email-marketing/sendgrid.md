@@ -3,9 +3,9 @@ keywords: correo electrónico;correo electrónico;destinos de correo electrónic
 title: Conexión SendGrid
 description: El destino SendGrid le permite exportar los datos de origen y activarlos en SendGrid según sus necesidades comerciales.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1548'
 ht-degree: 2%
 
 ---
@@ -78,8 +78,9 @@ Los equipos de marketing que utilizan SendGrid pueden crear una lista de correo 
 > 
 >Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos que aparecen en las dos secciones siguientes.
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). Los pasos específicos de este destino se ilustran en detalle a continuación.
+### Autenticar en destino {#authenticate}
 
 1. Dentro de [!DNL Adobe Experience Platform] consola, vaya a **Destinos**.
 
@@ -96,7 +97,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### Parámetros de conexión {#parameters}
+### Rellenar detalles de destino {#destination-details}
 
 While [configuración](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) Para este destino, debe proporcionar la siguiente información:
 
@@ -104,6 +105,12 @@ While [configuración](https://experienceleague.adobe.com/docs/experience-platfo
 * **[!UICONTROL Descripción]**: Una descripción opcional que le ayudará a identificar este destino en el futuro.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+
+### Habilitar alertas {#enable-alerts}
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+
+Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar segmentos en este destino {#activate}
 

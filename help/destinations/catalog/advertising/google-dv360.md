@@ -3,9 +3,9 @@ keywords: DoubleClick Gestor de ofertas;DoubleClick Gestor de ofertas;DoubleClic
 title: Conexión de pantalla y vídeo de Google 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de redireccionamiento y segmentación de audiencia en todas las fuentes de inventario de dispositivos de visualización, vídeo y móviles.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 898bd0d5d986bf26e62b0843de7cbb71b859aee3
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '893'
 ht-degree: 2%
 
 ---
@@ -86,6 +86,12 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 >[!NOTE]
 >
 >Al configurar un [!DNL Google Display & Video 360] destino, trabaje con su [!DNL Google Account Manager] o representante de Adobes para comprender qué tipo de cuenta tiene.
+
+### Habilitar alertas {#enable-alerts}
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+
+Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar segmentos en este destino {#activate}
 
