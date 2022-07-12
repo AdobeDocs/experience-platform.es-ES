@@ -2,18 +2,24 @@
 title: Definir una relación entre dos esquemas en Real-time Customer Data Platform B2B Edition
 description: Aprenda a definir una relación "varios a uno" entre dos esquemas en Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
 
-# Definir una relación entre dos esquemas en Real-time Customer Data Platform B2B Edition
+# Definir una relación &quot;varios a uno&quot; entre dos esquemas en Real-time Customer Data Platform B2B Edition
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_reference_schema"
+>title="Esquema de referencia"
+>abstract="Seleccione el esquema con el que desea establecer una relación. Según la clase del esquema, también puede tener relaciones existentes con otras entidades en el contexto B2B."
+>text="See the documentation to learn how B2B schema classes relate to each other."
 
 >[!NOTE]
 >
->Si no utiliza Real-time Customer Data Platform B2B Edition, consulte la guía de [creación de una relación que no sea B2B](./relationship-ui.md) en su lugar.
+>Si no utiliza Real-time Customer Data Platform B2B Edition o desea crear una relación uno a uno, consulte la guía de [creación de una relación uno a uno](./relationship-ui.md) en su lugar.
 
 Real-time Customer Data Platform B2B Edition proporciona varias clases de Experience Data Model (XDM) que capturan entidades de datos B2B fundamentales, incluidas [cuentas](../classes/b2b/business-account.md), [oportunidades](../classes/b2b/business-opportunity.md), [campañas](../classes/b2b/business-campaign.md), y más. Crear esquemas basados en estas clases y permitirles usarlos en [Perfil del cliente en tiempo real](../../profile/home.md), puede combinar datos de orígenes diferentes en una representación unificada denominada esquema de unión.
 
@@ -45,7 +51,13 @@ Las relaciones de esquema se representan mediante un campo dedicado dentro de un
 
 ### Explicación de las identidades en las relaciones B2B
 
-Para establecer una relación, ambos esquemas deben tener definidas identidades principales y estar habilitados para [!DNL Real-time Customer Profile]. Al configurar una identidad principal para una entidad B2B, tenga en cuenta que los ID de entidad basados en cadenas pueden superponerse si los recopila en diferentes sistemas o ubicaciones, lo que podría provocar conflictos de datos en Platform.
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_identity_namespace"
+>title="Área de nombres de identidad de referencia"
+>abstract="El espacio de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación."
+>text="See the documentation to learn more about identities in B2B relationships."
+
+Para establecer una relación, el esquema de destino debe tener una identidad principal definida. Al configurar una identidad principal para una entidad B2B, tenga en cuenta que los ID de entidad basados en cadenas pueden superponerse si los recopila en diferentes sistemas o ubicaciones, lo que podría provocar conflictos de datos en Platform.
 
 Para tener en cuenta esto, todas las clases B2B estándar contienen campos &quot;clave&quot; que se ajustan al [[!UICONTROL Fuente B2B] tipo de datos](../data-types/b2b-source.md). Este tipo de datos proporciona campos para un identificador de cadena para la entidad B2B junto con otra información contextual sobre el origen del identificador. Uno de estos campos, `sourceKey`, concatena los valores de los demás campos del tipo de datos para producir un identificador único total para la entidad. Este campo siempre debe utilizarse como identidad principal para esquemas de entidad B2B.
 
@@ -60,6 +72,7 @@ Con fines de referencia, las secciones siguientes describen la estructura de cad
 ### [!DNL Opportunities] esquema
 
 El esquema de origen &quot;[!DNL Opportunities]&quot; se basa en la variable [!UICONTROL Oportunidad comercial XDM] Clase . Uno de los campos proporcionados por la clase , `opportunityKey`, sirve como identificador del esquema . Específicamente, la variable `sourceKey` en el campo `opportunityKey` se establece como la identidad principal del esquema en un espacio de nombres personalizado denominado [!DNL B2B Opportunity].
+
 Como se ve en **[!UICONTROL Propiedades del esquema]**, este esquema se ha habilitado para utilizarse en [!DNL Real-time Customer Profile].
 
 ![Esquema de oportunidades](../images/tutorials/relationship-b2b/opportunities.png)
@@ -72,11 +85,23 @@ El esquema de destino &quot;[!DNL Accounts]&quot; se basa en la variable [!UICON
 
 ## Definir un campo de relación para el esquema de origen {#relationship-field}
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_current"
+>title="Nombre de relación del esquema actual"
+>abstract="Etiqueta que describe la relación entre el esquema actual y el esquema de referencia (por ejemplo, &quot;Cuenta relacionada&quot;). Esta etiqueta se utiliza en Perfil y Segmentación para dar contexto a los datos de entidades B2B relacionadas."
+>text="See the documentation to learn more about building B2B schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_reference"
+>title="Nombre de relación del esquema de referencia"
+>abstract="Etiqueta que describe la relación entre el esquema de referencia y el esquema actual (por ejemplo, &quot;Oportunidades relacionadas&quot;). Esta etiqueta se utiliza en Perfil y Segmentación para dar contexto a los datos de entidades B2B relacionadas."
+>text="See the documentation to learn more about building B2B schema relationships."
+
 Para definir una relación entre dos esquemas, el esquema de origen debe tener un campo dedicado que haga referencia a la identidad principal del esquema de destino. Las clases B2B estándar incluyen campos clave de origen específicos para entidades comerciales relacionadas de forma habitual. Por ejemplo, la variable [!UICONTROL Oportunidad comercial XDM] la clase contiene campos de clave de origen para una cuenta relacionada (`accountKey`) y una campaña relacionada (`campaignKey`). Sin embargo, también puede agregar otras [!UICONTROL Fuente B2B] campos al esquema utilizando grupos de campos personalizados si necesita más de los componentes predeterminados.
 
 >[!NOTE]
 >
->Actualmente, solo se pueden definir relaciones de varios a uno desde un esquema de origen a un esquema de destino. Para las relaciones uno a varios, debe definir el campo de relación en el esquema que representa el &quot;varios&quot;.
+>Actualmente, solo se pueden definir relaciones &quot;varios a uno&quot; y &quot;uno a uno&quot; de un esquema de origen a un esquema de destino. Para las relaciones uno a varios, debe definir el campo de relación en el esquema que representa el &quot;varios&quot;.
 
 Para establecer un campo de relación, seleccione el icono de flecha (![Icono de flecha](../images/tutorials/relationship-b2b/arrow.png)) junto al campo en cuestión dentro del lienzo. En el caso del [!DNL Opportunities] esquema, este es el `accountKey.sourceKey` , ya que el objetivo es establecer una relación &quot;varios a uno&quot; con una cuenta.
 
