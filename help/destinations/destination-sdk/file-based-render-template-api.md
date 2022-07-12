@@ -1,9 +1,9 @@
 ---
 description: En esta página se explica cómo utilizar el extremo /authoring/testing/template/render para visualizar el aspecto que tendrían los campos de datos del cliente con plantilla definidos en la configuración de destino.
 title: Validación de campos de cliente con plantilla
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 3%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 Una respuesta correcta devuelve un valor `HTTP 200 OK` y el cuerpo incluye valores generados aleatoriamente para los campos con plantilla.
 
-Esta respuesta está pensada para ayudarle a validar la estructura correcta de los campos de datos del cliente, como los nombres de bloque o las rutas de acceso a las carpetas.
+Esta respuesta puede ayudarle a validar la estructura correcta de los campos de datos del cliente, como los nombres de bloque o las rutas de carpeta.
 
 
 ```json

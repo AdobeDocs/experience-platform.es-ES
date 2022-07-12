@@ -1,9 +1,9 @@
 ---
 title: (Beta) Conexión Snap Inc
 description: Obtenga información sobre cómo conectarse a la plataforma de anuncios de Snapchat y exportar los segmentos de audiencia desde el Experience Platform.
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '1012'
 ht-degree: 2%
 
 ---
@@ -103,6 +103,12 @@ Para configurar los detalles del destino, rellene los campos obligatorios y sele
 >[!IMPORTANT]
 > 
 >Si se introduce un ID de cuenta de anuncio de Snapchat incorrecto o no válido, se producirá un error en la activación del segmento. Compruebe que ha introducido el ID de cuenta de anuncio adecuado.
+
+### Habilitar alertas {#enable-alerts}
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+
+Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar segmentos en este destino {#activate}
 

@@ -1,9 +1,9 @@
 ---
 description: En esta página se explica cómo utilizar el extremo de la API /sample-profiles del Destination SDK para generar perfiles de muestra basados en un esquema de origen. Puede utilizar estos perfiles de ejemplo para probar la configuración de destino basada en archivos.
 title: Generación de perfiles de muestra basados en un esquema de origen
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '674'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 El primer paso para probar el destino basado en archivos es usar la variable `/sample-profiles` para generar un perfil de muestra basado en el esquema de origen existente.
 
-Los perfiles de muestra están pensados para ayudarle a comprender la estructura JSON de un perfil. Además, le proporcionan una estructura básica que puede personalizar con sus propios datos de perfil para realizar más pruebas de destino.
+Los perfiles de muestra pueden ayudarle a comprender la estructura JSON de un perfil. Además, le proporcionan un valor predeterminado que puede personalizar con sus propios datos de perfil para realizar más pruebas de destino.
 
 ## Primeros pasos {#getting-started}
 
@@ -51,7 +51,7 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 La siguiente solicitud genera un perfil de muestra basado en el esquema de origen definido en la instancia de destino con el correspondiente `destinationInstanceId`.
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' \
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \

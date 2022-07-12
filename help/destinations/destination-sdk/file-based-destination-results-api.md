@@ -1,7 +1,7 @@
 ---
 description: En esta página se explica cómo utilizar el extremo de la API /testing/destinationInstance para ver los detalles completos de los resultados de las pruebas. Este extremo de API devuelve el mismo resultado que obtendría al utilizar la API de servicio de flujo para monitorizar los flujos de datos.
 title: Ver resultados de activación detallados
-source-git-commit: 5b62203113dd55dad8adeb96cbcc2d46b3420c3a
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 2%
@@ -42,7 +42,7 @@ Antes de usar la variable `/testing/destinationInstance` , asegúrese de cumplir
 
 Una vez que haya [validó la configuración de destino](file-based-destination-testing-api.md), puede ver los resultados de activación detallados realizando una solicitud de GET al `authoring/testing/destinationInstance/` y proporcionando el ID de instancia de destino del destino que está probando y los ID de ejecución de flujo de los segmentos activados.
 
-Puede encontrar la URL completa de la API que necesita usar en la `results` propiedad devuelta en la variable [respuesta de la llamada de prueba de destino](file-based-destination-testing-api.md).
+Puede encontrar la dirección URL completa de la API que necesita usar en la `results` propiedad devuelta en la variable [respuesta de la llamada de prueba de destino](file-based-destination-testing-api.md).
 
 **Formato de API**
 
