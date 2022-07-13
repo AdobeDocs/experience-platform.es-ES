@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Conexión de Google Ad Manager
 description: Google Ad Manager, anteriormente conocido como DoubleClick for Publishers o DoubleClick AdX, es una plataforma de servicio de publicidad de Google que proporciona a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 0c5d3ae2f43b0eeb6c86f535e37a906b7c414600
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 3%
+source-wordcount: '873'
+ht-degree: 2%
 
 ---
 
@@ -64,8 +64,8 @@ Antes de crear la variable [!DNL Google Ad Manager] destino en Platform, debe po
 
 * **ID de cuenta**: ID de cuenta de Adobe con Google. ID de cuenta: 87933855.
 * **ID de cliente**: ID de cuenta de cliente de Adobe con Google. ID de cliente: 89690775.
-* **ID de red**: esta es su cuenta con [!DNL Google Ad Manager]
-* **ID del vínculo de audiencia**: esta es su cuenta con [!DNL Google Ad Manager]
+* **Código de red**: Esta es su [!DNL Google Ad Manager] identificador de red, encontrado en **[!UICONTROL Administración > Configuración global]** en la interfaz de Google, así como en la URL.
+* **ID del vínculo de audiencia**: Este es un identificador específico asociado con su [!DNL Google Ad Manager] red (no su [!DNL Network code]), también se encuentra en **[!UICONTROL Administración > Configuración global]** en la interfaz de Google.
 * El tipo de cuenta. DFP de Google o del comprador de AdX.
 
 ## Conectarse al destino {#connect}
