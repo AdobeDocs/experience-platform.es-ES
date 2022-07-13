@@ -3,11 +3,11 @@ keywords: Experience Platform;inicio;temas populares;identidad;identidad;gráfic
 solution: Experience Platform
 title: Información general del servicio de identidad
 topic-legacy: overview
-description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales y impactantes en tiempo real.
+description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor visión de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales y impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -63,10 +63,21 @@ Ejemplos de [!DNL Identity Service] las implementaciones incluyen:
 - Un banco puede preferir el &quot;número de cuenta&quot; en conjuntos de datos sin conexión, como las transacciones de sucursales. Pueden depender del &quot;ID de inicio de sesión&quot; en los conjuntos de datos en línea, ya que la mayoría de los visitantes se autenticarían durante su visita.
 - Los clientes también pueden tener ID propietarios únicos, como GUID u otros identificadores únicos universales.
 
-## Espacios de nombres de identidad
+## Área de nombres de identidad {#identity-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Espacios de nombres de identidad"
+>abstract="Un área de nombres de identidad sirve para distinguir el contexto o el tipo de una identidad. Por ejemplo, una identidad distingue &quot;name&quot;<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID de CRM numérico."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Valores de identidad"
+>abstract="Un valor de identidad es un identificador que representa a un individuo, organización o recurso únicos. El contexto o tipo de identidad que representa el valor se define mediante un área de nombres de identidad correspondiente. Al hacer coincidir los datos de registro en los fragmentos de perfil, el área de nombres y el valor de identidad deben coincidir. Al hacer coincidir los datos de registro en los fragmentos de perfil, el área de nombres y el valor de identidad deben coincidir."
+>text="Learn more in documentation"
 
 Si le preguntaste a una persona &quot;¿Cuál es tu ID?&quot; sin más contexto, les resultaría difícil dar una respuesta útil. Con la misma lógica, un valor de cadena que representa un valor de identidad, ya sea un ID generado por el sistema o una dirección de correo electrónico, solo se completa cuando se proporciona con un calificador que proporciona el contexto del valor de cadena: el área de nombres de identidad.
-
 
 Los clientes pueden interactuar con su marca mediante una combinación de canales en línea y sin conexión, lo que resulta en el desafío de cómo reconciliar esas interacciones fragmentadas en una sola identidad de cliente.
 

@@ -5,10 +5,10 @@ title: Información general sobre el área de nombres de identidad
 topic-legacy: overview
 description: Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3a9e97b472482d6a7f6df5f2a59f2f75635be181
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1598'
-ht-degree: 2%
+source-wordcount: '1627'
+ht-degree: 3%
 
 ---
 
@@ -32,7 +32,13 @@ Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes,
 
 ![](images/identity-service-stitching.png)
 
-### Tipos de identidad
+### Tipos de identidad {#identity-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_create_namespace"
+>title="Especificar el tipo de identidad"
+>abstract="El tipo de identidad controla si los datos se almacenan o no en el gráfico de identidad. Los identificadores que no sean personas no se almacenarán y todos los demás tipos de identidad."
+>text="Learn more in documentation"
 
 Los datos se pueden identificar mediante varios tipos de identidad diferentes. El tipo de identidad se especifica en el momento en que se crea el área de nombres de identidad y controla si los datos se mantienen en el gráfico de identidad y cualquier instrucción especial para cómo se deben administrar esos datos. Todos los tipos de identidad excepto **Identificador de no personas** siga el mismo comportamiento de vincular un área de nombres y su valor de ID correspondiente a un clúster de gráficos de identidad. Los datos no se unen al usar **Identificador de no personas**.
 
@@ -70,14 +76,14 @@ Las siguientes áreas de nombres estándar se proporcionan para su uso por todas
 | Teléfono (E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un hash en formato E.164. El formato E.164 incluye un signo más (`+`), un código de llamada internacional de país, un código de área local y un número de teléfono. Por ejemplo: `(+)(country code)(area code)(phone number)`. |
 | Teléfono (SHA256) | Área de nombres que representa los números de teléfono que deben tener un hash con SHA256. Debe eliminar símbolos, letras y cualquier cero inicial. También debe añadir el código de llamada al país como prefijo. |
 | Teléfono (SHA256_E.164) | Área de nombres que representa los números de teléfono sin procesar que deben tener un hash con los formatos SHA256 y E.164. |
-| TNTID | Área de nombres que representa Adobe Target. Consulte el siguiente documento sobre [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) para obtener más información. |
+| TNTID | Área de nombres que representa Adobe Target. Consulte el siguiente documento sobre [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=es) para obtener más información. |
 | AID de Windows | Área de nombres que representa un ID de publicidad de Windows. Consulte el siguiente documento sobre [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obtener más información. |
 
 ### Ver áreas de nombres de identidad
 
 Para ver los áreas de nombres de identidad en la interfaz de usuario, seleccione **[!UICONTROL Identidades]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Examinar]**.
 
-![navegar](./images/browse.png)
+![examinar](./images/browse.png)
 
 En la interfaz principal de la página aparece una lista de áreas de nombres de identidad que muestra información sobre sus nombres, símbolos de identidad, fecha de la última actualización y si son un espacio de nombres estándar o personalizado. El carril correcto contiene información sobre [!UICONTROL Intensidad del gráfico de identidad].
 
