@@ -6,9 +6,9 @@ description: Este documento proporciona un tutorial para definir una relación e
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -18,30 +18,27 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="Relaciones de esquema"
->abstract="Los esquemas pertenecientes a diferentes clases se pueden vincular contextualmente a través de campos de relación, lo que permite crear reglas de segmentación más complejas."
->text="See the documentation for more information on schema relationships."
+>abstract="Los esquemas pertenecientes a diferentes clases se pueden vincular contextualmente a través de campos de relación, lo que permite crear reglas de segmentación más complejas. Consulte la documentación para obtener más información sobre las relaciones de esquema."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
 >title="Esquema de referencia"
->abstract="Seleccione el esquema con el que desea establecer una relación. Este esquema puede ser una clase diferente del esquema actual."
->text="See the documentation for more information on schema relationships."
+>abstract="Seleccione el esquema con el que desea establecer una relación. Este esquema puede ser una clase diferente del esquema actual. Consulte la documentación para obtener más información sobre las relaciones de esquema."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="Área de nombres de identidad de referencia"
->abstract="El espacio de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación."
->text="See the documentation for more information on schema relationships."
-
->[!NOTE]
->
->Para ver los pasos sobre cómo crear una relación &quot;varios a uno&quot; en Real-time Customer Data Platform B2B Edition, consulte la guía de [creación de relaciones B2B](./relationship-b2b.md).
+>abstract="El espacio de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación. Consulte la documentación para obtener más información sobre las relaciones de esquema."
 
 La capacidad de comprender las relaciones entre los clientes y sus interacciones con la marca a través de varios canales es una parte importante de Adobe Experience Platform. Definición de estas relaciones dentro de la estructura del [!DNL Experience Data Model] Los esquemas (XDM) le permiten obtener perspectivas complejas sobre los datos de sus clientes.
 
 Mientras que las relaciones de esquema se pueden inferir mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto solo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas pertenecientes a diferentes clases, se debe agregar un campo de relación dedicado a un esquema de origen que haga referencia a la identidad de un esquema de destino.
 
 Este documento proporciona un tutorial para definir una relación entre dos esquemas con el Editor de esquemas en la [!DNL Experience Platform] interfaz de usuario. Para ver los pasos sobre la definición de relaciones de esquema mediante la API, consulte el tutorial sobre [definición de una relación mediante la API del Registro de Esquemas](relationship-api.md).
+
+>[!NOTE]
+>
+>Para ver los pasos sobre cómo crear una relación &quot;varios a uno&quot; en Real-time Customer Data Platform B2B Edition, consulte la guía de [creación de relaciones B2B](./relationship-b2b.md).
 
 ## Primeros pasos
 
