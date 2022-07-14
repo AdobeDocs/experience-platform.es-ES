@@ -4,7 +4,7 @@ title: Caso de uso de ejemplo para el servicio de consulta de Adobe Experience P
 topic-legacy: tutorial
 description: Un ejemplo completo para demostrar la versatilidad y las ventajas del servicio de consulta de Adobe Experience Platform.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 06655e930e447b48089891ca930da89854b8320b
+source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Este documento y la presentación de vídeo adjunta proporcionan un flujo de trabajo completo que muestra cómo Adobe Experience Platform [!DNL Query Service] beneficia las perspectivas empresariales estratégicas de su organización. Con un caso de uso de abandono de exploración como ejemplo, esta guía ilustra los siguientes conceptos clave:
 
-* La importancia clave del procesamiento de datos para maximizar el potencial de Adobe Experience Platform
+* La importancia clave del procesamiento de datos para maximizar el potencial de Adobe Experience Platform.
 * Formas de crear la consulta en función de la arquitectura de datos existente.
 * Garantizar la calidad de los datos que satisfaga sus necesidades y métodos para mitigar cualquier déficit.
 * Proceso para programar una consulta para que se ejecute con una frecuencia establecida para su uso descendente en segmentación y destinos para personalización.
