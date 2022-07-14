@@ -1,10 +1,8 @@
 ---
 title: Atributos derivados
 description: Los atributos derivados proporcionan un medio conveniente para generar atributos de su elección que se pueden actualizar en cualquier cadencia normal y, opcionalmente, publicar en los datos del perfil del cliente en tiempo real. Este documento proporciona información general sobre cómo utilizar el servicio de consulta para crear atributos derivados para usarlos con los datos de perfil.
-hide: true
-hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: ae11d6f622c42d08373b7454ef920a80abaf2425
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
