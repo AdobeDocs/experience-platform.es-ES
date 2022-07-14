@@ -3,19 +3,18 @@ keywords: Experience Platform;inicio;temas populares;campos de asignación de An
 solution: Experience Platform
 title: Asignación de campos para el conector de origen de Adobe Analytics
 topic-legacy: overview
-description: Adobe Experience Platform le permite introducir datos de Adobe Analytics mediante el conector de datos de Analytics (ADC). Algunos de los datos introducidos a través de ADC pueden asignarse directamente de los campos de Analytics a los campos del Modelo de datos de experiencia (XDM), mientras que otros datos requieren transformaciones y funciones específicas para poder asignarse correctamente.
+description: Adobe Experience Platform le permite introducir datos de Adobe Analytics a través de la fuente de Analytics. Algunos de los datos introducidos a través de ADC pueden asignarse directamente de los campos de Analytics a los campos del Modelo de datos de experiencia (XDM), mientras que otros datos requieren transformaciones y funciones específicas para poder asignarse correctamente.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
 workflow-type: tm+mt
-source-wordcount: '3405'
+source-wordcount: '3401'
 ht-degree: 13%
 
 ---
 
 # Asignaciones de campos de Analytics
 
-Adobe Experience Platform le permite introducir datos de Adobe Analytics mediante el conector de datos de Analytics (ADC). Algunos de los datos introducidos a través de ADC pueden asignarse directamente de los campos de Analytics a los campos del Modelo de datos de experiencia (XDM), mientras que otros datos requieren transformaciones y funciones específicas para poder asignarse correctamente.
+Adobe Experience Platform le permite introducir datos de Adobe Analytics a través de la fuente de Analytics. Algunos de los datos introducidos a través de ADC pueden asignarse directamente de los campos de Analytics a los campos del Modelo de datos de experiencia (XDM), mientras que otros datos requieren transformaciones y funciones específicas para poder asignarse correctamente.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -23,7 +22,7 @@ Adobe Experience Platform le permite introducir datos de Adobe Analytics mediant
 
 Los campos seleccionados se asignan directamente de Adobe Analytics al modelo de datos de Experience (XDM).
 
-La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (*Analytics field*), el campo XDM correspondiente (*XDM field*) y su tipo (*XDM type*), así como una descripción del campo (*Description*).
+La tabla siguiente incluye columnas que muestran el nombre del campo Analytics (*Campo de Analytics*), el campo XDM correspondiente (*Campo XDM*) y su tipo (*Tipo XDM*), así como una descripción del campo (*Descripción*).
 
 >[!NOTE]
 >
@@ -57,8 +56,8 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | ipv6 | environment.ipV6 | string |
 | j_jscript | environment.browserDetails.javaScriptVersion | string | Versión de JavaScript admitida por el explorador. |
 | user_agent | environment.browserDetails.userAgent | string | La cadena del agente de usuario enviada en el encabezado HTTP. |
-| mobileappid | aplicación.</span>nombre | string | El ID de la aplicación móvil, almacenado en el siguiente formato: `[AppName][BundleVersion]`. |
-| mobiledevice | device.model | string | Nombre del dispositivo móvil. En iOS, se almacena como una cadena de dos dígitos separados por coma. El primer número representa la generación del dispositivo y el segundo representa la familia del dispositivo. |
+| mobileappid | aplicación.</span>name | string | El ID de la aplicación móvil, almacenado en el siguiente formato: `[AppName][BundleVersion]`. |
+| mobiledevice | device.model | string | Nombre del dispositivo móvil. En iOS, se almacena como una cadena de dos dígitos separados por comas. El primer número representa la generación del dispositivo y el segundo representa la familia del dispositivo. |
 | pointofinterest | placeContext.POIinteraction.POIDetail.</span>name | string | Utilizado por los servicios móviles. Representa el punto de interés. |
 | pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | entero | Utilizado por los servicios móviles. Representa la distancia del punto de interés. |
 | mobileplaceaccuracy | placeContext.POIinteraction.POIDetail.geoInteractionDetails.deviceGeoAccuracy | entero | Recopilado desde la variable de datos de contexto a.loc.acc. Indica la precisión del GPS en metros en el momento de la recogida. |
@@ -128,7 +127,7 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 
 ## Dividir campos de asignación
 
-Estos campos tienen un único origen, pero se asignan a **varias** ubicaciones XDM.
+Estos campos tienen un único origen, pero se asignan a **múltiple** Ubicaciones XDM.
 
 | Campo de Analytics | Campo XDM | Tipo XDM | Descripción |
 | --------------- | --------- | -------- | ---------- |
@@ -142,7 +141,7 @@ Estos campos tienen un único origen, pero se asignan a **varias** ubicaciones X
 
 Los campos seleccionados procedentes de ADC deben transformarse, lo que requiere lógica más allá de una copia directa de Adobe Analytics para que se genere en XDM.
 
-La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (*Analytics field*), el campo XDM correspondiente (*XDM field*) y su tipo (*XDM type*), así como una descripción del campo (*Description*).
+La tabla siguiente incluye columnas que muestran el nombre del campo Analytics (*Campo de Analytics*), el campo XDM correspondiente (*Campo XDM*) y su tipo (*Tipo XDM*), así como una descripción del campo (*Descripción*).
 
 >[!NOTE]
 >
@@ -181,7 +180,7 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | post_visid_high | endUserIDs._experience.aaid.primary | Booleano | Se utiliza junto con visid_low para identificar una visita de forma exclusiva. |
 | post_visid_high | endUserIDs._experience.aaid.namespace.code | string | Se utiliza junto con visid_low para identificar una visita de forma exclusiva. |
 | post_visid_low | identityMap | object | Se utiliza junto con visid_high para identificar una visita de forma exclusiva. |
-| hit_time_gmt | receivedTimestamp | string | Marca de tiempo de la visita, basada en el tiempo Unix. |
+| hit_time_gmt | receivedTimestamp | string | La marca de tiempo de la visita, basada en el tiempo Unix. |
 | hitid_high + hitid_low | _id | string | Identificador único para identificar una visita. |
 | hitid_low | _id | string | Se utiliza junto con hitid_high para identificar una visita de forma exclusiva. |
 | ip | environment.ipV4 | string | La dirección IP, basada en el encabezado HTTP de la solicitud de imagen. |
@@ -202,9 +201,9 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 
 Los campos seleccionados (conocidos como &quot;postvalues&quot;) requieren transformaciones más avanzadas para poder asignarlos correctamente de los campos de Adobe Analytics al Modelo de datos de experiencia (XDM). Para realizar estas transformaciones avanzadas es necesario utilizar el servicio de consulta de Adobe Experience Platform y las funciones prediseñadas (denominadas funciones definidas por Adobe) para la sesionización, atribución y deduplicación.
 
-Para obtener más información sobre cómo realizar estas transformaciones mediante el servicio de consulta, visite la [documentación de funciones definidas por Adobe](../../../../query-service/sql/adobe-defined-functions.md).
+Para obtener más información sobre cómo realizar estas transformaciones mediante el servicio de consulta, visite la [Funciones definidas por Adobe](../../../../query-service/sql/adobe-defined-functions.md) documentación.
 
-La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (*Analytics field*), el campo XDM correspondiente (*XDM field*) y su tipo (*XDM type*), así como una descripción del campo (*Description*).
+La tabla siguiente incluye columnas que muestran el nombre del campo Analytics (*Campo de Analytics*), el campo XDM correspondiente (*Campo XDM*) y su tipo (*Tipo XDM*), así como una descripción del campo (*Descripción*).
 
 >[!NOTE]
 >
