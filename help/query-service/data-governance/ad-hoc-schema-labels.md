@@ -2,7 +2,7 @@
 title: Compatibilidad con el control de acceso basado en atributos para esquemas específicos
 description: Una guía para restringir el acceso a los campos de datos en esquemas específicos generados a través del servicio de consulta de Adobe Experience Platform.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -40,7 +40,7 @@ Para añadir una etiqueta de datos, vaya a [!UICONTROL Esquemas] ficha examinar 
 >
 >Los esquemas específicos no se muestran de forma predeterminada en el inventario de esquemas.
 
-## Descubra esquemas ad hoc en el inventario de esquemas de la interfaz de usuario de Platform
+## Descubra esquemas ad hoc en el inventario de esquemas de la interfaz de usuario de Platform {#discover-ad-hoc-schemas}
 
 Para habilitar la visualización de esquemas ad hoc en la interfaz de usuario de Platform, seleccione el icono de filtro (![Un icono de filtro.](../images/data-governance/filter.png)) a la izquierda del campo de búsqueda y, a continuación, seleccione **[!UICONTROL Mostrar esquemas específicos] en el carril izquierdo que aparece.
 
