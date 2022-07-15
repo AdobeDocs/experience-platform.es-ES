@@ -6,7 +6,7 @@ title: Monitorización de flujos de datos para destinos en la interfaz de usuari
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
+source-git-commit: 4a9511f055854ab574aca46f44acf155b0c16af6
 workflow-type: tm+mt
 source-wordcount: '3211'
 ht-degree: 0%
@@ -173,13 +173,13 @@ La página de detalles también muestra una lista de identidades que han fallado
 >title="Activation"
 >abstract="La vista de activación de destino contiene información sobre el estado de activación del segmento y métricas tomadas del Perfil del cliente en tiempo real para generar identidades únicas."
 
-Para acceder a la [!UICONTROL Monitorización] tablero, seleccione **[!UICONTROL Monitorización]** (![icono de monitorización](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en el [!UICONTROL Monitorización] página, seleccione [!UICONTROL Destinos]. La variable [!UICONTROL Monitorización] tablero contiene métricas e información sobre los trabajos de ejecución de destino.
-
 >[!NOTE]
 >
 >- La funcionalidad de monitorización de destinos está actualmente admitida para todos los destinos en el Experience Platform *except* el [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos.
 >- Para la variable [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centros de eventos de Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)y [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, las identidades excluidas no se muestran actualmente.
 
+
+Para acceder a la [!UICONTROL Monitorización] tablero, seleccione **[!UICONTROL Monitorización]** (![icono de monitorización](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en el [!UICONTROL Monitorización] página, seleccione [!UICONTROL Destinos]. La variable [!UICONTROL Monitorización] tablero contiene métricas e información sobre los trabajos de ejecución de destino.
 
 Utilice la variable [!UICONTROL Destinos] tablero para obtener una idea general del estado de los flujos de activación. Comience obteniendo perspectivas a nivel agregado para todos los destinos de flujo continuo y por lotes y, a continuación, explore en profundidad las vistas para flujos de datos, ejecuciones de flujos de datos y segmentos activados para obtener una visión detallada de los datos de activación. Las pantallas de [!UICONTROL Monitorización] tablero proporciona información procesable mediante métricas y descripciones de errores para ayudarle a solucionar cualquier problema que pueda surgir en los escenarios de activación.
 
