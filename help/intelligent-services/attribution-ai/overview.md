@@ -9,7 +9,7 @@ exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 32%
+ht-degree: 36%
 
 ---
 
@@ -25,7 +25,7 @@ Los productos de Attribution AI se pueden separar en varias dimensiones y se pue
 
 Los datos de Attribution AI pueden provenir del Adobe (p. ej. [!DNL Analytics]) o fuentes de datos que no sean de Adobe.
 
-Attribution AI admite dos categorías de puntuaciones, algorítmica y basada en reglas. Las puntuaciones algorítmicas incluyen puntuaciones incrementales e influenciadas. Las puntuaciones basadas en reglas incluyen Primer toque, Último toque, Lineal, Forma de U y Deterioro de tiempo.
+Attribution AI admite dos categorías de puntuaciones, algorítmica y basada en reglas. Las puntuaciones algorítmicas incluyen puntuaciones incrementales e influenciadas. Las puntuaciones basadas en reglas incluyen Primer contacto, Último contacto, Lineal, Forma de U y Deterioro de tiempo.
 
 El siguiente vídeo está diseñado para admitir su comprensión de la Attribution AI.
 
@@ -35,10 +35,10 @@ El siguiente vídeo está diseñado para admitir su comprensión de la Attributi
 
 Se puede utilizar Attribution AI para ayudar con los siguientes casos de uso de ejemplo:
 
-- **Informe ejecutivo**: Permita a los ejecutivos comprender el verdadero impacto incremental del marketing, tanto en su conjunto como por canal, región, SKU, etc.
-- **Asignación** del presupuesto: Informe de las decisiones de asignación presupuestaria en los canales de marketing.
-- **Optimización** de campañas: En cada canal, comprenda qué campañas, creativos y palabras clave funcionan mejor para qué SKU o almacén. Esto le permite ver cada canal para que el equipo de marketing pueda optimizar sus tácticas.
-- **Atribución** de canal completo: Comprender el impacto del marketing en todo el recorrido del cliente. Por ejemplo, el inicio de sesión gratuito en la conversión de pago y más allá.
+- **Informes ejecutivos**: Permita a los ejecutivos comprender el verdadero impacto incremental del marketing, tanto en su conjunto como por canal, región, SKU, etc.
+- **Asignación de presupuesto**: Informe de las decisiones de asignación presupuestaria en los canales de marketing.
+- **Optimización de la campaña**: En cada canal, comprenda qué campañas, creativos y palabras clave funcionan mejor para qué SKU o almacén. Esto le permite ver cada canal para que el equipo de marketing pueda optimizar sus tácticas.
+- **Atribución de canales completos**: Comprender el impacto del marketing en todo el recorrido del cliente. Por ejemplo, el inicio de sesión gratuito en la conversión de pago y más allá.
 - **Evaluaciones de socios**: Evaluar la eficacia de los organismos y asociados sobre la base de los resultados de la atribución.
 
 ### Funciones adicionales
@@ -47,4 +47,4 @@ Attribution AI también ofrece integración con otras soluciones de Adobe como [
 
 ## Pasos siguientes
 
-Puede empezar por seguir la guía [introducción](./getting-started.md). Esta guía lo acompaña durante la configuración de todas las solicitudes previas necesarias para la Attribution AI. Si ya tiene las credenciales y los datos preparados, visite la [guía del usuario de Attribution AI](./user-guide.md). Esta guía lo acompaña durante la creación de una instancia y la envía para formación y puntuación.
+Puede empezar por seguir la [introducción](./getting-started.md) guía. Esta guía lo acompaña durante la configuración de todas las solicitudes previas necesarias para la Attribution AI. Si ya tiene preparadas sus credenciales y sus datos, visite la [Guía del usuario del Attribution AI](./user-guide.md). Esta guía lo acompaña durante la creación de una instancia y la envía para formación y puntuación.

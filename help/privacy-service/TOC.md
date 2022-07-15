@@ -7,14 +7,14 @@ feature: Privacy
 source-git-commit: e74d0658d5c389a22497301d289e0310d28731f0
 workflow-type: tm+mt
 source-wordcount: '83'
-ht-degree: 51%
+ht-degree: 55%
 
 ---
 
 
 # Adobe Experience Platform Privacy Service {#privacy}
 
-* [Información general del Privacy Service](./home.md)
+* [Información general de Privacy Service](./home.md)
 * [aplicaciones de Privacy Service y Experience Cloud](./experience-cloud-apps.md)
 * [Datos de identidad para solicitudes de privacidad](./identity-data.md)
 * [Resumen de la biblioteca de Privacy JS](./js-library.md)

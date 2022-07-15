@@ -14,7 +14,7 @@ ht-degree: 46%
 # Perspectivas de la capacidad de observación {#observability}
 
 * [Información general sobre Observability Insights](./home.md)
-* API de Perspectivas de Observabilidad {#api}
+* API de Observability Insights {#api}
    * [Información general](./api/overview.md)
    * [Primeros pasos](./api/getting-started.md)
    * [Métricas](./api/metrics.md)

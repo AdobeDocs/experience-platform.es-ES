@@ -15,7 +15,7 @@ ht-degree: 46%
 # Entornos aislados {#sandbox}
 
 * [Información general sobre Sandboxes](home.md)
-* Interfaz de usuario de Sandbox {#ui}
+* IU de Sandbox {#ui}
    * [Información general sobre la interfaz de usuario del Simulador para pruebas](ui/overview.md)
    * [Guía del usuario de Sandbox](ui/user-guide.md)
 * API de Sandbox {#api}

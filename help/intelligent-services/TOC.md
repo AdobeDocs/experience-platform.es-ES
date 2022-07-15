@@ -7,7 +7,7 @@ user-guide-description: Utilice los servicios inteligentes de IA para generar pu
 source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 - [Resumen de servicios inteligentes](home.md)
 - [Preparación de datos para su uso en Servicios inteligentes](data-preparation.md)
-- Attribution AI {#attribution-ai}
+- Inteligencia artificial aplicada a la atribución {#attribution-ai}
    - [Información general](attribution-ai/overview.md)
    - [Introducción a Attribution AI](attribution-ai/getting-started.md)
    - [Entrada y salida](attribution-ai/input-output.md)

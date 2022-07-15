@@ -7,7 +7,7 @@ feature: Segments
 source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
 source-wordcount: '163'
-ht-degree: 27%
+ht-degree: 29%
 
 ---
 

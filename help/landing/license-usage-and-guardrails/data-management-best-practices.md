@@ -6,7 +6,7 @@ exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
 source-wordcount: '2531'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -80,7 +80,7 @@ Hay dos escenarios centrales a tener en cuenta al garantizar que el uso de los d
 
 ### ¿Qué datos se van a incluir en Platform?
 
-Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL Data Lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir los datos históricos en la variable [!DNL Data Lake], pero no en el Almacenamiento de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
+Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL Data Lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir datos históricos en la variable [!DNL Data Lake], pero no en el Almacenamiento de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
 
 >[!NOTE]
 >

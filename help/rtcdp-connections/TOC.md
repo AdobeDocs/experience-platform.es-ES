@@ -8,7 +8,7 @@ feature: Data Collection
 source-git-commit: 08541ed2d179040a1faef0dace477f268687fd54
 workflow-type: tm+mt
 source-wordcount: '40'
-ht-degree: 32%
+ht-degree: 70%
 
 ---
 

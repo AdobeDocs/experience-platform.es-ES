@@ -4,8 +4,8 @@ description: Descubra cómo los registros de auditoría le permiten ver quién r
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '847'
+ht-degree: 14%
 
 ---
 
@@ -19,7 +19,7 @@ Este documento cubre los registros de auditoría en Platform, incluido cómo ver
 
 ## Tipos de eventos capturados por los registros de auditoría {#category}
 
-En la tabla siguiente se describen las acciones en las que los registros de auditoría registran los recursos:
+La siguiente tabla indica qué acciones sobre qué recursos de se registran en los registros de auditoría:
 
 | Recurso | Acciones |
 | --- | --- |
@@ -38,7 +38,7 @@ En la tabla siguiente se describen las acciones en las que los registros de audi
 | [Perfil del producto](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Consulta](../../../query-service/ui/overview.md) | <ul><li>Ejecutar</li></ul> |
 | [Plantilla de consulta](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Función (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Agregar usuario</li><li>Eliminar usuario</li></ul> |
+| [Función (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Adición del usuario</li><li>Eliminar usuario</li></ul> |
 | [Entorno de pruebas](../../../sandboxes/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Restablecer</li><li>Eliminar</li></ul> |
 | [Consulta programada](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para perfil</li></ul> |

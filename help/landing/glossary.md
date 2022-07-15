@@ -136,7 +136,7 @@ ht-degree: 0%
 
 **Acción de marketing de objetivos entre sitios**: Acción de marketing que utiliza datos para la segmentación de anuncios entre sitios. La combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio, se denomina datos entre sitios. Los datos entre sitios suelen recopilarse y procesarse para hacer inferencias sobre los intereses de los clientes.
 
-**Área de nombres de identidad personalizada**: Su organización puede crear áreas de nombres de identidad personalizadas para representar las identidades de una organización o un caso empresarial específicos.
+**Área de nombres de identidad personalizada**: Su organización puede crear áreas de nombres de identidad personalizadas para representar identidades de una organización o un caso empresarial específicos.
 
 **Etiquetas personalizadas**: Las etiquetas de uso de datos personalizadas le permiten crear y aplicar etiquetas específicas a campos de datos que satisfagan necesidades comerciales específicas.
 

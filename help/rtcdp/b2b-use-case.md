@@ -6,7 +6,7 @@ exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
 source-wordcount: '1134'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -78,7 +78,7 @@ Por el bien de la simplicidad y el propósito de este ejemplo, las personas est�
 - Cree segmentos únicos usando estos datos agregados para diversas iniciativas de marketing. En este ejemplo, el segmento encuentra todas las personas que:
 
    - Tener oportunidades asociadas (en todas las cuentas de ALL) superiores a 1 millón de dólares en valor
-   - Y
+   - AND
    - Han visitado la página del producto en el último mes
 
 - Cree una audiencia que sean los destinatarios más eficientes de la nueva campaña de marketing de Bodea. En este ejemplo, RT-CDP, B2B Edition ayudarán al especialista en marketing a identificar `p2@townsend.com` como el objetivo correcto para esta campaña de marketing.
