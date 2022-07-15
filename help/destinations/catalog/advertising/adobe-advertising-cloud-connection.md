@@ -2,9 +2,9 @@
 title: Conexión Adobe Advertising Cloud DSP
 description: Adobe Advertising Cloud DSP es un destino integrado para [!DNL Adobe Real-time Customer Data Profile], lo que le permite compartir segmentos de origen autenticados con anunciantes y usuarios aprobados para la activación de campañas.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1044'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Una agencia de medios con una cuenta DSP está ejecutando una campaña de redire
 
 ## Requisitos previos {#prerequisites}
 
-* DSP la configuración de nivel de cuenta y nivel de campaña para permitir el uso compartido de segmentos con [!DNL LiveRamp RampID], que traducirá los datos de los clientes a [!DNL RampIDs] para crear segmentos con objetivo. El equipo de su cuenta de DSP realizará esta configuración.
+* DSP la configuración de nivel de cuenta y nivel de campaña para permitir el uso compartido de segmentos con [!DNL LiveRamp RampID], que traducirá los datos de los clientes a [!DNL RampIDs] para crear segmentos con objetivo. El equipo de su cuenta de DSP realizará esta configuración. [!DNL RampID] está disponible mediante una asociación entre DSP y [!DNL LiveRamp], y no necesita el suyo propio [!DNL LiveRamp] membresía para utilizarla.
 * El ID de organización del Experience Cloud para la cuenta del Experience Platform. Puede encontrar su ID en su [!DNL Real-Time CDP] página de perfil de usuario.
 * A [[!DNL Real-Time CDP] fuente en DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) para recibir segmentos para la activación de campañas. El equipo de su cuenta de DSP creará la fuente con su ID de organización de Experience Cloud.
 * La clave de origen de la cuenta de DSP o del anunciante, que se genera cuando se [[!DNL Real-Time CDP] el origen se crea en DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). El equipo de su cuenta de DSP compartirá esta clave con usted. Lo utilizará en Experience Platform para crear una conexión de destino con el destino de Advertising Cloud DSP, como [se explica a continuación](#authenticate).
