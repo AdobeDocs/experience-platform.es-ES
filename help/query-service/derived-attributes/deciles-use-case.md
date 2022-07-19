@@ -1,7 +1,8 @@
 ---
-title: 'Caso de uso de atributos derivados basados en decimales '
+title: Caso de uso de atributos derivados basados en decimales
 description: En esta guía se muestran los pasos necesarios para utilizar el servicio de consulta para crear atributos derivados basados en decimales y utilizarlos con los datos de perfil.
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -59,7 +60,7 @@ La tabla siguiente muestra los datos de ejemplo contenidos en la variable `_prof
 
 >[!NOTE]
 >
->Para la brevedad, el ID de principio `_profilefoundationreportingstg` se ha omitido al principio del espacio de nombres en los títulos de columna y menciones posteriores en todo el documento.
+>Para la brevedad, el ID de inquilino `_profilefoundationreportingstg` se ha omitido al principio del espacio de nombres en los títulos de columna y menciones posteriores en todo el documento.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -299,4 +300,3 @@ Ejecute la consulta para rellenar el conjunto de datos decimal. También puede g
 ## Pasos siguientes
 
 El caso de uso de ejemplo que se proporciona más arriba resalta los pasos para que los atributos decimales estén disponibles en el Perfil del cliente en tiempo real. Esto permite que el servicio de segmentación, ya sea a través de una interfaz de usuario o de la API RESTful, pueda generar audiencias basadas en estos bloques decimales. Consulte la [Información general del servicio de segmentación](../../segmentation/home.md) para obtener información sobre cómo crear, evaluar y acceder a segmentos.
-
