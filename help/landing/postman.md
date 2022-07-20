@@ -5,9 +5,9 @@ title: Postman en Adobe Experience Platform
 topic-legacy: api guide
 description: Este documento contiene pasos que describen cómo configurar un entorno de Postman, importar colecciones de Postman y una lista de colecciones disponibles para cada servicio de Platform.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d06c3bc51909b464b9eed2a2f0df04ca531010b3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ La siguiente guía de vídeo describe la creación y configuración de su entorn
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## Colecciones Postman {#collections}
+## Colecciones de Postman {#collections}
 
 Puede encontrar una carpeta que contenga todas las colecciones de Postman disponibles en , visitando la página [Experience Platform Postman muestra el repositorio de GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Como alternativa, se puede encontrar un vínculo de recopilación de Postman en cada archivo de intercambio individual en la variable [Documentación de referencia de API](https://www.adobe.com/go/platform-api-reference-en) en el Adobe I/O.
 
@@ -52,9 +52,9 @@ Para obtener más información sobre la interfaz de usuario de Postman y sus fun
 
 >[!WARNING]
 >
->Como se indica en la colección Postman de generación de tokens de acceso al Adobe I/O, los métodos de generación indicados son adecuados para **uso que no sea de producción**. La firma local carga una biblioteca JavaScript desde un host de terceros y la firma remota envía la clave privada a un servicio web que es propiedad de y está gestionado por el Adobe. Aunque Adobe no almacena esta clave privada, las claves de producción nunca deben compartirse con nadie.
+>Como se indica en la colección Postman de Identity Management Service (IMS), los métodos de generación indicados son adecuados para **uso que no sea de producción**. La firma local carga una biblioteca JavaScript desde un host de terceros y la firma remota envía la clave privada a un servicio web que es propiedad de y está gestionado por el Adobe. Aunque Adobe no almacena esta clave privada, las claves de producción nunca deben compartirse con nadie.
 
-El siguiente vídeo utiliza la variable [colección de generación de tokens de acceso al Adobe I/O](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) que se puede descargar del repositorio público de GitHub.
+El siguiente vídeo utiliza la variable [Recopilación de Postman del servicio Identity Management (IMS)](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) que se puede descargar del repositorio público de GitHub.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
