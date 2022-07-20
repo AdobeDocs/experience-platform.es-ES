@@ -3,10 +3,10 @@ title: Uso de Adobe Analytics con el SDK web de Platform
 description: Obtenga información sobre cómo enviar datos a Adobe Analytics con el SDK web de Adobe Experience Platform.
 keywords: adobe analytics;analytics;datos asignados;vars asignados;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
+source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Edge Network] asigna automáticamente muchas var
 
 ## Datos asignados manualmente
 
-Se puede acceder a todos los datos recopilados por la red perimetral mediante reglas de procesamiento. Los datos se acoplan con notación de puntos y están disponibles como contextData.
+Se puede acceder a los datos que no estén asignados automáticamente por la red perimetral mediante reglas de procesamiento. Los datos se acoplan con notación de puntos y están disponibles como contextData.
 
 Si tenía un esquema similar a este.
 
