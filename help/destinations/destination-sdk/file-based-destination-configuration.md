@@ -2,10 +2,10 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: (Beta) Opciones de configuración de destino basadas en archivos para Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '2330'
-ht-degree: 6%
+source-wordcount: '2389'
+ht-degree: 5%
 
 ---
 
@@ -369,6 +369,8 @@ Al configurar el SFTP con el tipo de autenticación de clave SSH, los usuarios d
 Utilice esta sección para solicitar a los usuarios que rellenen campos personalizados, específicos de su destino, al conectarse al destino en la interfaz de usuario del Experience Platform.
 
 En el ejemplo siguiente, `customerDataFields` requiere que los usuarios introduzcan un nombre para su destino y que proporcionen un [!DNL Amazon S3] nombre del contenedor y ruta de carpeta, así como un tipo de compresión, formato de archivo y otras opciones de exportación de archivos.
+
+Puede acceder y utilizar las entradas de cliente de los campos de datos del cliente en la plantilla. Utilice la macro `{{customerData.name}}`. Por ejemplo, si pide a los usuarios que introduzcan un campo de compartimento de Amazon S3, con el nombre `bucket`, puede acceder a ella en la plantilla mediante la macro `{{customerData.bucket}}`. Ver un ejemplo de cómo se utiliza un campo de datos de cliente en la variable [configuración del servidor de destino](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[

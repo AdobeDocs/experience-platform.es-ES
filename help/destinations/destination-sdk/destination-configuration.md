@@ -2,10 +2,10 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino de flujo continuo para el Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '1807'
-ht-degree: 5%
+source-wordcount: '1888'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +35,7 @@ Este es un ejemplo de configuración de un destino ficticio de transmisión, Mov
    ],
    "customerDataFields":[
       {
-         "name":"endpointsInstance",
+         "name":"endpointRegion",
          "type":"string",
          "title":"Select Endpoint",
          "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
@@ -158,9 +158,13 @@ Usuarios seleccionar **[!UICONTROL Conectarse al destino]** para almacenar en d�
 
 ## Campos de datos del cliente {#customer-data-fields}
 
-Utilice esta sección para solicitar a los usuarios que rellenen campos personalizados, específicos de su destino, al conectarse al destino en la interfaz de usuario del Experience Platform. La configuración se refleja en el flujo de autenticación como se muestra a continuación:
+Utilice esta sección para solicitar a los usuarios que rellenen campos personalizados, específicos de su destino, al conectarse al destino en la interfaz de usuario del Experience Platform. La configuración se refleja en el flujo de autenticación como se muestra a continuación.
 
 ![Flujo de autenticación de campo personalizado](./assets/custom-field-authentication-flow.png)
+
+>[!TIP]
+>
+>Puede acceder y utilizar las entradas de cliente de los campos de datos del cliente en la plantilla. Utilice la macro `{{customerData.name}}`. Por ejemplo, si pide a los usuarios que introduzcan un campo de ID de cliente con el nombre `userId`, puede acceder a ella en la plantilla mediante la macro `{{customerData.userId}}`. Vea un ejemplo de cómo se utiliza un campo de datos de cliente en la dirección URL del extremo de la API, en la [configuración del servidor de destino](/help/destinations/destination-sdk/server-and-template-configuration.md#server-specs).
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
@@ -178,10 +182,12 @@ Utilice esta sección para solicitar a los usuarios que rellenen campos personal
 
 Esta sección se refiere a los elementos de IU de la configuración anterior que el Adobe debe utilizar para el destino en la interfaz de usuario de Adobe Experience Platform. Vea lo siguiente:
 
+![Imagen de la configuración de atributos de interfaz de usuario.](/help/destinations/destination-sdk/assets/ui-attributes-configuration.png)
+
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
 | `documentationLink` | Cadena | Se refiere a la página de documentación de la [Catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para su destino. Uso `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, donde `YOURDESTINATION` es el nombre de su destino. Para un destino llamado Moviestar, debe usar `http://www.adobe.com/go/destinations-moviestar-en`. Tenga en cuenta que este vínculo solo funciona después de que el Adobe establezca el destino en vivo y la documentación se publique. |
-| `category` | Cadena | Se refiere a la categoría asignada a su destino en Adobe Experience Platform. Para obtener más información, lea [Categorías de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Utilice uno de los siguientes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `category` | Cadena | Se refiere a la categoría asignada a su destino en Adobe Experience Platform. Para obtener más información, lea [Categorías de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Utilice uno de los siguientes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br> Tenga en cuenta que actualmente solo puede seleccionar una categoría por destino. |
 | `connectionType` | Cadena | `Server-to-server` actualmente es la única opción disponible. |
 | `frequency` | Cadena | Se refiere al tipo de exportación de datos compatible con el destino. Valores compatibles: <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
@@ -201,7 +207,6 @@ Utilice los parámetros de `schemaConfig` para habilitar el paso de asignación 
 | `identityRequired` | Booleano | Uso `true` si los usuarios deben poder asignar áreas de nombres de identidad desde el Experience Platform al esquema deseado. |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 ## Identidades y atributos {#identities-and-attributes}
 
