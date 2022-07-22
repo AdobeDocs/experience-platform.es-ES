@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1025'
 ht-degree: 3%
 
 ---
@@ -26,31 +26,9 @@ Este tutorial requiere conocimientos prácticos de varios servicios de Adobe Exp
    - [Guía para desarrolladores de Schema Registry](../../xdm/api/getting-started.md): Una guía completa que cubre cada uno de los extremos disponibles del [!DNL Schema Registry] y cómo realizar llamadas a ellos. Esto incluye conocer su `{TENANT_ID}`, que aparece en las llamadas a lo largo de este tutorial, así como saber cómo crear esquemas, que se utiliza para crear un conjunto de datos para la ingesta.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil unificado y de cliente en tiempo real basado en datos agregados de varias fuentes.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas correctamente a las API de ingesta de transmisión.
+### Uso de las API de plataforma
 
-### Leer llamadas de API de ejemplo
-
-Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
-
-### Recopilar valores para encabezados necesarios
-
-Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
-
-- Autorización: Portador `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
-
-Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../sandboxes/home.md).
-
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
-
-- Content-Type: application/json
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../landing/api-guide.md).
 
 ## Componer un esquema basado en [!DNL XDM Individual Profile] class
 
@@ -304,7 +282,8 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{ORG_ID}",
-        "datasetId": "{DATASET_ID}"
+        "datasetId": "{DATASET_ID}",
+        "flowId": "{FLOW_ID}",
     },
     "body": {
         "xdmMeta": {
