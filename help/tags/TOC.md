@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 0103f1af37dc202087d3c81d495de88d3de7c377
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 84%
 
 ---
@@ -62,7 +62,6 @@ ht-degree: 84%
    * [Información general](./ui/administration/overview.md)
    * [Compañías y propiedades](./ui/administration/companies-and-properties.md)
    * [Permisos de usuario](./ui/administration/user-permissions.md)
-   * [Administración de permisos](./ui/administration/manage-permissions.md)
 * Extensiones {#extensions}
    * [Información general](./extensions/overview.md)
    * Extensiones de Adobe {#adobe}

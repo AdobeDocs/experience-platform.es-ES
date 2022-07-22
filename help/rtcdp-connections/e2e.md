@@ -2,9 +2,9 @@
 title: Información general sobre conexiones de Real-time Customer Data Platform de extremo a extremo
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante conexiones de Real-time Customer Data Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '2612'
+source-wordcount: '2613'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Este tutorial utiliza la interfaz de usuario de recopilación de datos para crea
 * Desarrollo
 * Administrar extensiones
 
-Consulte la guía de [administración de permisos para etiquetas](../tags/ui/administration/manage-permissions.md) para aprender a conceder acceso a las propiedades y los derechos de propiedad.
+Consulte la guía de [administración de permisos para la recopilación de datos](./permissions.md) para aprender a conceder acceso a las propiedades y los derechos de propiedad.
 
 Para utilizar los distintos productos de recopilación de datos mencionados en esta guía, también debe tener acceso a los conjuntos de datos y a la capacidad de crear y administrar esquemas. Si necesita acceder a cualquiera de estas funciones, póngase en contacto con su CSM para ayudarle a obtener el acceso necesario. Tenga en cuenta que si no ha comprado Adobe Experience Platform, el Adobe le proporcionará el acceso necesario para utilizar el SDK sin coste adicional.
 
