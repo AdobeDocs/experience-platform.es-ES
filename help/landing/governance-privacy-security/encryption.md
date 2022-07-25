@@ -3,7 +3,7 @@ title: Cifrado de datos en Adobe Experience Platform
 topic-legacy: data protection
 description: Descubra cómo se cifran los datos en tránsito y en reposo en Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 5%
@@ -24,7 +24,7 @@ Todos los datos en tránsito entre Platform y cualquier componente externo se re
 
 En general, los datos se introducen en Platform de tres maneras:
 
-* [Recopilación de datos](../../rtcdp-connections/home.md) las funcionalidades permiten que los sitios web y las aplicaciones móviles envíen datos a Platform Edge Network para su ensayo y preparación para la ingesta.
+* [Recopilación de datos](../../collection/home.md) las funcionalidades permiten que los sitios web y las aplicaciones móviles envíen datos a Platform Edge Network para su ensayo y preparación para la ingesta.
 * [Conectores de origen](../../sources/home.md) transmitir datos directamente a Platform desde aplicaciones de Adobe Experience Cloud y otras fuentes de datos empresariales.
 * Las herramientas de ETL (extracción, transformación, carga) que no son de Adobe envían datos al [API de ingesta por lotes](../../ingestion/batch-ingestion/overview.md) para consumo.
 

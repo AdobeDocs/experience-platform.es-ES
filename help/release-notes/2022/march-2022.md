@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, marzo de 2022
 description: Notas de la versión de marzo de 2022 para Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 5%
@@ -117,7 +117,7 @@ Platform proporciona un conjunto de tecnologías que le permiten recopilar datos
 | Configuración del conjunto de datos global | Ahora puede configurar varias nuevas configuraciones globales al configurar un conjunto de datos: ubicación geográfica, cookie de ID de origen y sincronización de ID de terceros. Consulte la sección sobre [configuración de un conjunto de datos](../../edge/datastreams/overview.md#create) en la guía de interfaz de usuario de Datastreams para obtener más información. |
 | [API del servidor de red perimetral](../../server-api/overview.md) | La API de servidor permite a los clientes interactuar con la red perimetral del Experience Platform mediante un nuevo punto final autenticado para potenciar una variedad de casos de uso de recopilación, personalización, publicidad y marketing. |
 
-Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../rtcdp-connections/home.md).
+Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
 
 ## Servicio de consultas {#query-service}
 

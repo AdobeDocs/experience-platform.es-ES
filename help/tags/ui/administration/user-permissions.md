@@ -2,7 +2,7 @@
 title: Permisos de usuario para etiquetas
 description: Obtenga información sobre los distintos tipos de permisos disponibles para etiquetas y algunas estrategias de implementación básicas para diferentes casos de uso empresarial.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 23%
@@ -21,7 +21,7 @@ Esta guía proporciona información general sobre los diferentes tipos de permis
 
 >[!NOTE]
 >
->Para ver los pasos sobre cómo configurar los permisos para los usuarios que utilizan Admin Console, consulte el tutorial en [administración de permisos para la recopilación de datos](../../../rtcdp-connections/permissions.md).
+>Para ver los pasos sobre cómo configurar los permisos para los usuarios que utilizan Admin Console, consulte el tutorial en [administración de permisos para la recopilación de datos](../../../collection/permissions.md).
 
 ## Tipos de permiso
 
@@ -121,4 +121,4 @@ La siguiente tabla proporciona algunos ejemplos de los tipos de funciones que po
 
 ## Pasos siguientes
 
-Este documento proporciona una descripción general de los permisos disponibles para las etiquetas en Experience Platform. Para ver los pasos sobre cómo configurar perfiles de producto para etiquetas en Adobe Admin Console, consulte la guía de [administración de permisos de usuario para la recopilación de datos](../../../rtcdp-connections/permissions.md).
+Este documento proporciona una descripción general de los permisos disponibles para las etiquetas en Experience Platform. Para ver los pasos sobre cómo configurar perfiles de producto para etiquetas en Adobe Admin Console, consulte la guía de [administración de permisos de usuario para la recopilación de datos](../../../collection/permissions.md).

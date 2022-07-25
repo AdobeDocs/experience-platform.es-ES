@@ -2,7 +2,7 @@
 title: Guía de solución de problemas de etiquetas
 description: Obtenga respuestas a las preguntas frecuentes sobre Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 80%
@@ -96,13 +96,13 @@ La mayoría de clientes de Adobe ahora aprovecha las funciones más modernas de 
 
 ## ¿Por qué la interfaz de usuario indica que hubo un error al cargar mi cuenta?
 
-Si recibe un mensaje que indica que se ha producido un error al cargar su cuenta, significa que su cuenta no pertenece a ningún perfil de producto para etiquetas. Consulte la guía de [administración de permisos](../rtcdp-connections/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para conceder acceso a la interfaz de usuario de recopilación de datos.
+Si recibe un mensaje que indica que se ha producido un error al cargar su cuenta, significa que su cuenta no pertenece a ningún perfil de producto para etiquetas. Consulte la guía de [administración de permisos](../collection/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para conceder acceso a la interfaz de usuario de recopilación de datos.
 
 ## ¿Por qué no puedo añadir ninguna propiedad en la interfaz de usuario?
 
 Si no puede crear ninguna propiedad nueva al iniciar sesión en la interfaz de usuario de la recopilación de datos, significa que su cuenta no pertenece a un perfil de producto que tenga derecho de gestión de propiedades.
 
-Consulte la guía de [administración de permisos](../rtcdp-connections/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para otorgar derechos de gestión de propiedades. Para obtener más información sobre los distintos derechos de las etiquetas, consulte la descripción general de [permisos de usuario para etiquetas](./ui/administration/user-permissions.md).
+Consulte la guía de [administración de permisos](../collection/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para otorgar derechos de gestión de propiedades. Para obtener más información sobre los distintos derechos de las etiquetas, consulte la descripción general de [permisos de usuario para etiquetas](./ui/administration/user-permissions.md).
 
 ## ¿Y si tengo más preguntas?
 
