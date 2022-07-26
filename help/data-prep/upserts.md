@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Enviar Actualizaciones Parciales De Fila Al Servicio De Perfil Mediante La Preparación De Datos
 description: Este documento proporciona información sobre cómo enviar actualizaciones de fila parciales al servicio de perfil mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 0f1b9cdde3452afdf8cf045cf0a6660ee0ce56cf
+source-git-commit: cc3ecbd8544839246d54f72b894ad27e850c0c90
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1188'
 ht-degree: 1%
 
 ---
@@ -249,7 +249,7 @@ A continuación se describe una lista de limitaciones conocidas que se deben ten
 
 * El método de actualización de flujo continuo solo debe usarse al enviar actualizaciones de fila parciales a [!DNL Profile Service]. Las actualizaciones de fila parciales son **not** consumido por el lago de datos.
 * El método de actualización de flujo continuo no admite la actualización, sustitución y eliminación de identidades. Las identidades nuevas se crean si no existen. Por lo tanto, `identity` siempre debe estar configurado para crear. Si ya existe una identidad, la operación es una no-op.
-* Actualmente, el método de actualización de flujo continuo solo admite atributos primitivos de un solo valor (como enteros, fechas, marcas de tiempo y cadenas) y objetos. El método de actualización de flujo continuo no admite la sustitución, adición o sobrescritura de atributos de matriz e índices de matriz específicos.
+* Actualmente, el método de actualización de flujo continuo solo admite atributos primitivos de un solo valor (como enteros, fechas, marcas de tiempo y cadenas) y objetos.
 * El método de actualización de flujo continuo actualmente no es compatible [SDK web de Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=es) y [SDK de Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/).
 
 ## Pasos siguientes

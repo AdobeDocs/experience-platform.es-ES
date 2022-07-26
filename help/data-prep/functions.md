@@ -5,10 +5,10 @@ title: Funciones de asignación de preparación de datos
 topic-legacy: overview
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
+source-git-commit: 666286970d0cbbcd28f07c34e3f08ec9f4333b0c
 workflow-type: tm+mt
-source-wordcount: '4175'
-ht-degree: 4%
+source-wordcount: '4298'
+ht-degree: 3%
 
 ---
 
@@ -164,13 +164,11 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 | join_array | Combina las matrices entre sí. | <ul><li>MATRIZ: **Requerido** Matriz a la que se agregan elementos.</li><li>VALORES: Las matrices que desee anexar a la matriz principal.</li></ul> | join_array &#x200B;(ARRAY, VALUES) | join_array &#x200B;([&quot;a&quot;, &quot;b&quot;], [&#39;c&#39;], [&quot;d&quot;, &quot;e&quot;]) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] |
 | to_array | Toma una lista de entradas y la convierte en una matriz. | <ul><li>INCLUDE_NULLS: **Requerido** Un valor booleano que indica si se deben incluir o no números en la matriz de respuestas.</li><li>VALORES: **Requerido** Los elementos que se van a convertir en una matriz.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Devuelve el tamaño de la entrada. | <ul><li>ENTRADA: **Requerido** El objeto del que intenta encontrar el tamaño.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
+| upsert_array_append | Esta función se utiliza para anexar todos los elementos de toda la matriz de entrada al final de la matriz en Perfil. Esta función es **only** aplicable durante las actualizaciones. Si se utiliza en el contexto de inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** La matriz para anexar la matriz en el Perfil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
+| upsert_array_replace | Esta función se utiliza para reemplazar elementos en una matriz. Esta función es **only** aplicable durante las actualizaciones. Si se utiliza en el contexto de inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** La matriz para reemplazar la matriz en el Perfil.</li><li>ÍNDICE: **Opcional** La posición desde la que debe producirse el reemplazo.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
 {style=&quot;table-layout:auto&quot;}
 
-<!--
-| upsert_array_append | This function is used to append all elements in the entire input array to the end of the array in Profile. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to append the array in the Profile.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | This function is used to replace elements in an array. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to replace the array in the Profile.</li><li>INDEX: **Optional** The position from where the replacement needs to happen.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
--->
 
 ### Operadores lógicos {#logical-operators}
 
