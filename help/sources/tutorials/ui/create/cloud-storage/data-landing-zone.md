@@ -1,21 +1,18 @@
 ---
 keywords: Experience Platform;inicio;temas populares;zona de aterrizaje de datos;zona de aterrizaje de datos
-solution: Experience Platform
 title: Conexión de la zona de aterrizaje de datos a la plataforma mediante la interfaz de usuario
-topic-legacy: overview
-type: Tutorial
 description: Obtenga información sobre cómo crear un conector de origen de zona de aterrizaje de datos mediante la interfaz de usuario de Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: b007cdf92811b453df5b5d005456a05cd845b769
+source-git-commit: fb16ea940ef394a15dd24fe703239b4487fafb18
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
 
 # Connect [!DNL Data Landing Zone] a Platform mediante la interfaz de usuario
 
-[!DNL Data Landing Zone] es una funcionalidad de almacenamiento de datos basada en la nube para el almacenamiento temporal de archivos aprovisionado con Adobe Experience Platform. Los datos se eliminan automáticamente del [!DNL Data Landing Zone] después de siete días.
+[!DNL Data Landing Zone] es un servicio de almacenamiento de archivos seguro y basado en la nube para incorporar archivos a Adobe Experience Platform. Los datos se eliminan automáticamente del [!DNL Data Landing Zone] después de siete días.
 
 Este tutorial proporciona los pasos para crear un [!DNL Data Landing Zone] conexión de origen mediante la interfaz de usuario de Platform.
 
@@ -38,7 +35,24 @@ En el [!UICONTROL almacenamiento en la nube] categoría, seleccione [!DNL Data L
 
 La variable [!UICONTROL Añadir datos] aparece, proporcionando una interfaz para seleccionar y previsualizar los datos que desea traer a Platform.
 
+* La parte izquierda de la interfaz es un explorador de carpetas, que le proporciona una lista de archivos del contenedor que puede traer a Platform.
+* La parte derecha de la interfaz permite previsualizar hasta 100 filas de datos de un archivo compatible.
+
+Seleccione el archivo que desea traer a Platform y permita que la interfaz correcta se actualice en una pantalla de vista previa durante unos momentos.
+
 ![add-data](../../../../images/tutorials/create/dlz/add-data.png)
+
+>[!TIP]
+>
+>Platform detecta automáticamente la información de propiedad del archivo seleccionado, incluida la información sobre el formato de datos del archivo, el delimitador de columnas designado y el tipo de compresión.
+
+La interfaz de vista previa permite inspeccionar el contenido y la estructura de un archivo. De forma predeterminada, la interfaz de vista previa muestra el primer archivo de la carpeta seleccionada.
+
+Para obtener una vista previa de un archivo diferente, seleccione el icono de vista previa junto al nombre del archivo que desea inspeccionar.
+
+Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+
+![detección de archivos](../../../../images/tutorials/create/dlz/file-detection.png)
 
 Para obtener una guía detallada y paso a paso sobre cómo crear un flujo de datos para un origen de almacenamiento en la nube, consulte el tutorial sobre [crear un flujo de datos de almacenamiento en la nube para traer datos a Platform](../../dataflow/batch/cloud-storage.md).
 
