@@ -4,9 +4,9 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
 workflow-type: tm+mt
-source-wordcount: '3814'
+source-wordcount: '3875'
 ht-degree: 1%
 
 ---
@@ -98,8 +98,10 @@ Adobe proporciona varios widgets estándar que puede utilizar para visualizar di
 Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
 * [[!UICONTROL Recuento de perfiles]](#profile-count)
-* [[!UICONTROL Perfiles añadidos]](#profiles-added)
-* [[!UICONTROL Tendencia añadida de perfiles]](#profiles-added-trend)
+* [[!UICONTROL Tendencia del recuento de perfiles]](#profile-count-trend)
+* [[!UICONTROL Cambio de recuento de perfiles]](#profile-count-change)
+* [[!UICONTROL Tendencia del cambio en el recuento de perfiles]](#profiles-count-change-trend)
+* [[!UICONTROL El recuento de perfiles cambia la tendencia por identidad]](#profiles-count-change-trend-by-identity)
 * [[!UICONTROL Perfiles por identidad]](#profiles-by-identity)
 * [[!UICONTROL Superposición de identidad]](#identity-overlap)
 * [[!UICONTROL Perfiles de identidad únicos]](#single-identity-profiles)
@@ -109,10 +111,8 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Audiencias]](#audiences)
 * [[!UICONTROL Audiencias asignadas al estado de destino]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Tamaño de las audiencias]](#audiences-size)
-* [[!UICONTROL Tendencia del recuento de perfiles]](#profile-count-trend)
 * [[!UICONTROL Perfiles de identidad únicos por identidad]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Superposición de audiencias por directiva de combinación]](#audience-overlap-by-merge-policy)
-* [[!UICONTROL El recuento de perfiles cambia la tendencia por identidad]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Recuento de perfiles] {#profile-count}
 
@@ -120,7 +120,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 >id="platform_dashboards_profiles_profilecount"
 >title="Recuento de perfiles"
 >abstract="Esta utilidad muestra el número total de perfiles combinados dentro del Almacenamiento de perfiles en el momento en que se tomó la instantánea. El número depende de la política de combinación seleccionada que se aplique a los datos de perfil."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Recuento de perfiles]** muestra el número total de perfiles combinados dentro del Almacenamiento de perfiles en el momento en que se tomó la instantánea. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
 
@@ -134,43 +134,57 @@ Consulte la [sección sobre directivas de combinación anterior en este document
 
 ![](../images/profiles/profile-count.png)
 
-### [!UICONTROL Perfiles añadidos] {#profiles-added}
+### [!UICONTROL Tendencia del recuento de perfiles] {#profile-count-trend}
 
-<!-- This CONTEXTUALHELP was commented out because this widget name will change. Details in https://jira.corp.adobe.com/browse/PLAT-120313  -->
+La variable [!UICONTROL Tendencia del recuento de perfiles] La utilidad utiliza un gráfico de líneas para ilustrar la tendencia del número total de perfiles contenidos en el sistema a lo largo del tiempo. Este número total incluye todos los perfiles importados en el sistema desde la última instantánea diaria. Los datos se pueden visualizar en períodos de 30 días, 90 días y 12 meses. El periodo de tiempo se elige en un menú desplegable del widget.
 
-<!-- >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profilesadded"
->title="Profiles added"
->abstract="This widget displays the total number of merged profiles **added** to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-added" text="Learn more from documentation" -->
+![El widget de tendencia de recuento de perfiles .](../images/profiles/profile-count-trend.png)
 
-La variable **[!UICONTROL Perfiles añadidos]** muestra el número total de perfiles combinados agregados al Almacenamiento de perfiles en el momento de la última instantánea. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo. Puede utilizar el selector desplegable para ver los perfiles agregados en los últimos 30 días, 90 días o 12 meses.
+### [!UICONTROL Cambio de recuento de perfiles] {#profile-count-change}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilescountchange"
+>title="Cambio de recuento de perfiles"
+>abstract="Esta utilidad muestra el número total de perfiles combinados **added** al Almacenamiento de perfiles en el momento de la última instantánea. El número depende de la política de combinación seleccionada que se aplique a los datos de perfil."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
+
+La variable **[!UICONTROL Cambio de recuento de perfiles]** muestra el número de perfiles combinados agregados al Almacenamiento de perfiles desde la instantánea anterior. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo. Puede utilizar el selector desplegable para ver el número de perfiles agregados en los últimos 30 días, 90 días o 12 meses.
 
 >[!NOTE]
 >
->La variable [!UICONTROL Perfiles añadidos] refleja el número de perfiles agregados **after** la ingesta inicial de perfiles y la configuración del Almacenamiento de perfiles. En otras palabras, si su organización configuró el Almacenamiento de perfiles e ingerió 4 000 000 en el Día 1, en un plazo de 24 horas el panel estaría disponible, sin embargo, el [!UICONTROL Perfiles añadidos] se establecería en 0. Esto se hace para evitar un pico asociado con la ingesta inicial de perfiles en el sistema. En los próximos 30 días, su organización ingesta 1 000 000 perfiles adicionales en el Almacenamiento de perfiles. Una vez tomada la siguiente instantánea, la variable [!UICONTROL Perfiles añadidos] La utilidad mostraría un total de 1000 000 perfiles agregados, mientras que la variable [!UICONTROL Recuento de perfiles] La utilidad mostraría 5000 000 perfiles totales.
+>La variable [!UICONTROL Cambio de recuento de perfiles] refleja el número de perfiles agregados **after** la ingesta inicial de perfiles y la configuración del Almacenamiento de perfiles. En otras palabras, si su organización configuró el Almacenamiento de perfiles e ingerió 4 000 000 en el Día 1, en un plazo de 24 horas el panel estaría disponible, sin embargo, el [!UICONTROL Cambio de recuento de perfiles] se establecería en 0. Esto se hace para evitar un pico asociado con la ingesta inicial de perfiles en el sistema. En los próximos 30 días, su organización ingesta 1 000 000 perfiles adicionales en el Almacenamiento de perfiles. Una vez tomada la siguiente instantánea, la variable [!UICONTROL Cambio de recuento de perfiles] La utilidad mostraría un total de 1000 000 perfiles agregados, mientras que la variable [!UICONTROL Recuento de perfiles] La utilidad mostraría 5000 000 perfiles totales.
 
-![](../images/profiles/profiles-added.png)
+![El tablero Perfiles de la IU de plataforma con el widget de cambio de recuento de perfiles resaltado.](../images/profiles/profile-count-change.png)
 
-### [!UICONTROL Tendencia añadida de perfiles] {#profiles-added-trend}
+### [!UICONTROL Tendencia del cambio en el recuento de perfiles] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="Tendencia añadida de perfiles"
->abstract="Este widget muestra el número total de perfiles combinados que se han agregado al Almacenamiento de perfiles diariamente durante los últimos 30 días, 90 días o 12 meses. El número también depende de la política de combinación seleccionada que se aplique a los datos de perfil."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="Más información sobre la documentación"
+>title="Tendencia del cambio en el recuento de perfiles"
+>abstract="Este widget muestra el número de perfiles combinados que se han agregado a la Tienda de perfiles diariamente durante los últimos 30 días, 90 días o 12 meses. El número también depende de la política de combinación seleccionada que se aplique a los datos de perfil."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
-La variable **[!UICONTROL Tendencia añadida de perfiles]** muestra el número total de perfiles combinados que se han agregado al Almacenamiento de perfiles diariamente durante los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si ingeryera perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil para formar un único perfil para cada individuo.
+La variable **[!UICONTROL Tendencia del cambio en el recuento de perfiles]** muestra el número total de perfiles combinados que se han agregado al Almacenamiento de perfiles diariamente durante los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si ingeryera perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil para formar un único perfil para cada individuo.
 
 Consulte la [sección sobre directivas de combinación anterior en este documento](#merge-policies) para obtener más información.
 
-La variable **[!UICONTROL Tendencia añadida de perfiles]** muestra un botón &quot;subtítulos&quot; en la parte superior derecha del widget. Select **[!UICONTROL Subtítulos]** para abrir el cuadro de diálogo rótulos automáticos.
+La variable **[!UICONTROL Tendencia del cambio en el recuento de perfiles]** muestra un botón &quot;subtítulos&quot; en la parte superior derecha del widget. Select **[!UICONTROL Subtítulos]** para abrir el cuadro de diálogo rótulos automáticos.
 
-![La ficha Información general del perfil muestra el widget de tendencia Perfiles añadidos con el botón rótulos resaltado.](../images/profiles/profiles-added-trend-captions.png)
+![La ficha Información general del perfil muestra el widget de tendencia del cambio del recuento de perfiles con el botón rótulos resaltado.](../images/profiles/profiles-count-change-trend-captions.png)
 
 Un modelo de aprendizaje automático genera automáticamente subtítulos para describir las tendencias clave y los eventos importantes analizando el gráfico y los datos.
 
-![Cuadro de diálogo de rótulos automáticos para el widget de tendencia de perfiles agregados.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![El cuadro de diálogo rótulos automáticos del widget de tendencia de cambio de recuento de perfiles.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+
+### [!UICONTROL El recuento de perfiles cambia la tendencia por identidad] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+Este widget filtra el recuento de perfiles en función de una identidad de origen seleccionada y de una política de combinación, y a continuación ilustra el cambio de número de una variedad de períodos utilizando un gráfico de líneas. La política de combinación se selecciona en el menú desplegable de información general de la parte superior de la página; la identidad de origen y el periodo de tiempo se seleccionan en los menús desplegables de la utilidad. La tendencia se puede visualizar en periodos de 30 días, 90 días y 12 meses.
+
+Esta utilidad le ayuda a administrar sus necesidades de activación de destino demostrando el patrón de crecimiento de perfiles filtrados por una identidad requerida.
+
+![El recuento de perfiles cambia la tendencia por el widget de identidad.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 ### [!UICONTROL Perfiles por identidad] {#profiles-by-identity}
 
@@ -178,7 +192,7 @@ Un modelo de aprendizaje automático genera automáticamente subtítulos para de
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Perfiles por identidad"
 >abstract="Esta utilidad muestra el desglose de todos los perfiles combinados en su Almacenamiento de perfiles por identidades."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-by-identity" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Perfiles por identidad]** muestra el desglose de identidades en todos los perfiles combinados del Almacenamiento de perfiles. El número total de perfiles por identidad (es decir, sumando los valores mostrados para cada área de nombres) puede ser mayor que el número total de perfiles combinados, ya que un perfil podría tener varias áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con la marca en más de un canal, se asociarán varias áreas de nombres con ese cliente individual.
 
@@ -200,7 +214,7 @@ Para obtener más información sobre las identidades, visite [Documentación del
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Superposición de identidad"
 >abstract="Esta utilidad utiliza un diagrama de Venn para mostrar la superposición de perfiles en su Almacenamiento de perfiles que contienen las dos identidades seleccionadas."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#identity-overlap" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Superposición de identidad]** La utilidad utiliza un diagrama de Venn, o un diagrama de conjunto, para mostrar la superposición de perfiles en el Almacenamiento de perfiles que contienen las dos identidades seleccionadas.
 
@@ -218,7 +232,7 @@ Para obtener más información sobre las identidades, visite [Documentación del
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="Perfiles de identidad únicos"
 >abstract="Esta utilidad proporciona un recuento de los perfiles de su organización que solo tienen un tipo de ID que crea su identidad. Este tipo de ID puede ser un correo electrónico o un ECID."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#single-identity-profiles" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
 La variable [!UICONTROL Perfiles de identidad únicos] proporciona un recuento de los perfiles de su organización que solo tienen un tipo de ID que crea su identidad. Este tipo de ID puede ser un correo electrónico o un ECID. El recuento de perfiles se genera a partir de los datos contenidos en la instantánea más reciente.
 
@@ -230,7 +244,7 @@ La variable [!UICONTROL Perfiles de identidad únicos] proporciona un recuento d
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfiles sin segmentar"
 >abstract="Esta utilidad proporciona el número total de perfiles que no están adjuntos a ningún segmento y representa la oportunidad de activar perfiles en toda la organización."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
 La variable [!UICONTROL Perfiles sin segmentar] proporciona el número total de perfiles que no están adjuntos a ningún segmento. El número generado es preciso a partir de la última instantánea y representa la oportunidad de activar perfiles en toda la organización. También indica la oportunidad de eliminar perfiles que no proporcionan un ROI adecuado.
 
@@ -254,7 +268,7 @@ La variable [!UICONTROL Tendencia de perfiles sin segmentar] proporciona una ilu
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="Perfiles sin segmentar por identidad"
 >abstract="Esta utilidad categoriza el número total de perfiles sin segmentar por su identificador único."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-by-identity" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
 La variable [!UICONTROL Perfiles sin segmentar por identidad] categoriza el número total de perfiles sin segmentar por su identificador único. Los datos se visualizan en un gráfico de barras para facilitar la comparación.
 
@@ -306,12 +320,6 @@ Para ver información completa sobre un segmento, seleccione un nombre de segmen
 
 Consulte la documentación para obtener más información sobre la [[!UICONTROL Segmentos] [!UICONTROL  Examinar] ficha](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
-### [!UICONTROL Tendencia del recuento de perfiles] {#profile-count-trend}
-
-La variable [!UICONTROL Tendencia del recuento de perfiles] La utilidad utiliza un gráfico de líneas para ilustrar la tendencia del número total de perfiles contenidos en el sistema a lo largo del tiempo. Este número total incluye todos los perfiles importados en el sistema desde la última instantánea diaria. Los datos se pueden visualizar en períodos de 30 días, 90 días y 12 meses. El periodo de tiempo se elige en un menú desplegable del widget.
-
-![El widget de tendencia de recuento de perfiles .](../images/profiles/profile-count-trend.png)
-
 ### [!UICONTROL Perfiles de identidad únicos por identidad] {#single-identity-profiles-by-identity}
 
 Esta utilidad utiliza un gráfico de barras para ilustrar el número total de perfiles identificados con un único identificador. La utilidad admite hasta cinco de las identidades más comunes.
@@ -327,16 +335,6 @@ Esta utilidad utiliza un diagrama de Venn para mostrar la superposición de dos 
 A medida que la utilidad muestra la transición visual de las definiciones de segmentos, puede optimizar su estrategia de segmentación estudiando las similitudes entre las definiciones de segmentos.
 
 ![El tablero Perfiles de la interfaz de usuario de la plataforma con la lista desplegable de directivas de combinación y los desplegables de segmentos de widget resaltados.](../images/profiles/audience-overlap-by-merge-policy.png)
-
-### [!UICONTROL El recuento de perfiles cambia la tendencia por identidad] {#profiles-count-change-trend-by-identity}
-
-<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
-
-Este widget filtra el recuento de perfiles en función de una identidad de origen seleccionada y de una política de combinación, y a continuación ilustra el cambio de número de una variedad de períodos utilizando un gráfico de líneas. La política de combinación se selecciona en el menú desplegable de información general de la parte superior de la página; la identidad de origen y el periodo de tiempo se seleccionan en los menús desplegables de la utilidad. La tendencia se puede visualizar en periodos de 30 días, 90 días y 12 meses.
-
-Esta utilidad le ayuda a administrar sus necesidades de activación de destino demostrando el patrón de crecimiento de perfiles filtrados por una identidad requerida.
-
-![El recuento de perfiles cambia la tendencia por el widget de identidad.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 
 ## (Beta) Widgets de eficacia del perfil {#profile-efficacy-widgets}
@@ -359,7 +357,7 @@ Para obtener más información sobre cada una de las utilidades de eficacia de p
 >id="platform_dashboards_profiles_attributesqualityassessment"
 >title="Evaluación de la calidad de los atributos"
 >abstract="Este widget muestra la integridad y cardinalidad de todos los perfiles según sus atributos. Cada fila describe un atributo. La variable **Perfiles** proporciona el número de perfiles que tienen este atributo y que se rellenan con valores que no son nulos. La variable **Complejidad** El porcentaje se determina por el número total de perfiles que tienen este atributo y se rellenan con valores no nulos divididos por el número total de valores no vacíos en los perfiles para ese atributo. **Cardinalidad** proporciona el número total de valores únicos no nulos de este atributo en todos los atributos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#attributes-quality-assessment" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
 La variable [!UICONTROL Evaluación de la calidad de los atributos] La utilidad muestra la integridad y cardinalidad de todos los perfiles según sus atributos. Los datos tienen precisión hasta la última fecha de procesamiento. Esta información se presenta como una tabla con cuatro columnas donde cada fila de la tabla representa un único atributo.
 
@@ -378,7 +376,7 @@ La variable [!UICONTROL Evaluación de la calidad de los atributos] La utilidad 
 >id="platform_dashboards_profiles_profilesbycompleteness"
 >title="Perfiles completos"
 >abstract="El gráfico circular muestra el porcentaje de atributos de perfil que se rellenan con valores no nulos entre todos los atributos observados. Ilustra la proporción de perfiles con una integridad alta, media o baja. Los perfiles de alta integridad tienen más del 70% de sus atributos rellenados. Los perfiles de integridad media tienen entre 30% y 70% de sus atributos rellenados. Los perfiles de baja integridad tienen menos del 30% de sus atributos rellenados."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
 La variable [!UICONTROL Perfiles completos] crea un gráfico circular de la integridad del perfil desde la última fecha de procesamiento. La integridad de un perfil se mide por el porcentaje de atributos que se rellenan con valores no nulos entre todos los atributos observados.
 
@@ -396,7 +394,7 @@ Este widget muestra la proporción de perfiles con una integridad alta, media o 
 >id="platform_dashboards_profiles_profilescompletenesstrend"
 >title="Tendencia de integridad de perfiles"
 >abstract="Este widget crea un gráfico de áreas apiladas para mostrar la tendencia de la integridad del perfil a lo largo del tiempo. La integridad se mide por el porcentaje de atributos que se rellenan con valores no nulos entre todos los atributos observados."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Más información sobre la documentación"
 
 Este widget crea un gráfico de áreas apiladas para mostrar la tendencia de la integridad del perfil a lo largo del tiempo. La integridad se mide mediante el porcentaje de atributos rellenados con valores no nulos entre todos los atributos observados. Clasifica la integridad del perfil como alta, media o baja desde la última fecha de procesamiento.
 
