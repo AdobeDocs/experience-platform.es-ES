@@ -2,67 +2,75 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4addf64a819cd302b514334ce9cd949e96d0e698
+source-git-commit: fc910ec906e2d59f3a35b81377f7c97b7cafbabe
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 5%
+source-wordcount: '1706'
+ht-degree: 6%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de publicación: 22 de junio de 2022**
+**Fecha de la versión: 27 de julio de 2022**
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [[!DNL Data Science Workspace]](#dsw)
-- [[!DNL Destinations]](#destinations)
-- [Recopilación de datos](#data-collection)
+- [Tableros](#dashboards)
+- [Recopilación de datos](#collection)
+- [[!DNL Data Prep]](#data-prep)
 - [Modelo de datos de experiencia (XDM)](#xdm)
-- [Servicio de consultas](#query-service)
+<!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
+- [Perfil del cliente en tiempo real](#profile)
 - [Fuentes](#sources)
 
-## [!DNL Data Science Workspace] {#dsw}
+## Tableros {#dashboards}
 
-Data Science Workspace utiliza el aprendizaje automático y la inteligencia artificial para liberar perspectivas de sus datos. Integrado en Adobe Experience Platform, Data Science Workspace le ayuda a hacer predicciones utilizando sus recursos de contenido y datos en las soluciones de Adobe. Una de las formas en que Data Science Workspace lo consigue es mediante el uso de JupyterLab. JupyterLab es una interfaz de usuario basada en web para <a href="https://jupyter.org/" target="_blank">Júpiter del proyecto</a> y está estrechamente integrado en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles, código y datos de Jupyter.
+Adobe Experience Platform proporciona varios [!DNL dashboards] a través de la cual puede ver información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias.
+
+### Tableros de perfiles de cuenta
+
+El tablero Perfiles de la cuenta muestra una instantánea de la información de cuenta unificada de las múltiples fuentes en los canales de marketing y los diversos sistemas que su organización utiliza actualmente para almacenar información de cuentas de clientes.
+
+**Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| JupyterLab Launcher | El JupyterLab Launcher ahora incluye el inicio de las laptops Spark 3.2. Los inicios de los portátiles Spark 2.4 ahora se sustituyen por portátiles Spark 3.2 y formarán parte de esta versión. |
-| Spark 3.2 | Las nuevas recetas Scala (Spark) y PySpark ahora utilizan Spark 3.2 |
-| Kernels | Los portátiles Scala (Spark) ahora se crean a través del núcleo Scala. Los portátiles PySpark ahora se crean a través del núcleo Python. El núcleo Spark y PySpark están en desuso y configurados para ser eliminados en una versión posterior. |
-| Fórmulas | Las nuevas fórmulas PySpark y Spark ahora siguen el flujo de trabajo Docker de forma similar a las recetas Python y R. |
+| Total de cuentas por widget de sector | Este widget muestra el número total de cuentas en una única métrica y utiliza un gráfico circular para ilustrar los tamaños proporcionales de los recuentos para las industrias que conforman el número total. |
+| Widget de perfiles de cuenta agregados | Esta utilidad utiliza un gráfico de barras con códigos de color para ilustrar el recuento de perfiles agregados a una cuenta durante un período de tiempo determinado y la proporción de diferentes industrias que constituyen estos perfiles añadidos. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Para obtener información más general sobre Data Science Workspace, consulte la [documentación general](../../data-science-workspace/home.md).
+Consulte la [Resumen de CDP en tiempo real, B2B Edition](../../rtcdp/b2b-overview.md) para obtener más información sobre las funciones B2B disponibles, o [tutorial completo](../../rtcdp/b2b-tutorial.md) Para obtener más información sobre cómo se crean los perfiles de cuenta como parte del flujo de trabajo B2B.
 
-## [!DNL Destinations] {#destinations}
+Para obtener más información sobre los widgets disponibles para visualizar las métricas relacionadas con el perfil de la cuenta, consulte la [documentación de los widgets de perfiles de cuenta](../../dashboards/guides/account-profiles.md#standard-widgets).
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
+### Tableros de perfil
 
-**Funciones nuevas o actualizadas**
+El panel Perfiles muestra una instantánea de los datos de atributo (registro) que su organización tiene en el Experience Platform Almacenamiento de perfiles .
+
+**Funciones actualizadas**
 
 | Función | Descripción |
-| ----------- | ----------- |
-| (Beta) compatibilidad con Destination SDK para [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) destinos basados en archivos y [nombres de archivo configurables](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Ahora puede utilizar el Destination SDK para crear destinos de Google Cloud Storage y definir nombres de archivo personalizados para archivos exportados mediante macros de nombre de archivo. <br><br> La compatibilidad con destinos basados en archivos en Adobe Experience Platform Destination SDK actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios. |
-| La columna Segmento en el flujo de datos se ejecuta en destinos por lotes | Para que el flujo de datos se ejecute en destinos por lotes, la interfaz de usuario ahora muestra el nombre del segmento asociado a cada ejecución de flujo de datos. Más información sobre [El flujo de datos se ejecuta en destinos por lotes](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations). |
+| --- | --- |
+| Widget de audiencias asignadas | Esta utilidad muestra el número total de audiencias asignadas que se pueden activar en el destino seleccionado en la lista desplegable del panel Perfiles . |
+
+Para obtener más información sobre el panel Perfiles, consulte la [Información general sobre los paneles de perfiles](../../dashboards/guides/profiles.md).
+
+### Tableros de destinos
+
+El panel Destinos muestra una instantánea de los destinos que su organización ha habilitado en el Experience Platform.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| utilidad Audiencias | Esta utilidad proporciona el número total de segmentos que están listos para activarse, según la política de combinación elegida aplicada a los datos de perfil. |
 
 {style=&quot;table-layout:auto&quot;}
 
-**Nuevos destinos**
+Para obtener más información sobre el panel Destinos, consulte la [información general del panel Destinations](../../dashboards/guides/destinations.md).
 
-| Destino | Descripción |
-| ----------- | ----------- |
-| [(Beta) Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | La variable [!DNL Google Ad Manager 360] la conexión habilita la carga por lotes para [!DNL publisher provided identifiers] (PPID) en [!DNL Google Ad Manager 360], a través de [!DNL Google Cloud Storage] <br><br>Este destino está actualmente en versión beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a la [!DNL Google Ad Manager 360] conexión, póngase en contacto con su representante de Adobe y proporcione su [!DNL IMS Organization ID]. |
-| [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Active perfiles para encuestas de Medallia dirigidas y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes. |
-| [[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) el destino le permite compartir segmentos de origen autenticados con anunciantes y usuarios aprobados para la activación de campañas con DSP. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
-
-## Recopilación de datos {#data-collection}
+## Recopilación de datos {#collection}
 
 Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
@@ -70,69 +78,91 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Función | Descripción |
 | --- | --- |
-| [Configuración del tipo de acceso para conjuntos de datos](../../edge/datastreams/overview.md#create) | Al crear un nuevo conjunto de datos, ahora puede seleccionar qué tipo de solicitudes desea que acepte la red perimetral: <ul><li>**[!UICONTROL Autenticación mixta]**: Cuando se selecciona esta opción, la red perimetral acepta solicitudes autenticadas y no autenticadas. Seleccione esta opción cuando desee utilizar el SDK web o [SDK móvil](https://aep-sdks.gitbook.io/docs/), junto con la variable [API de servidor](../../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticado]**: Cuando se selecciona esta opción, la red perimetral solo acepta solicitudes autenticadas. Seleccione esta opción cuando vaya a utilizar solo la API de servidor y desee evitar que el [!DNL Edge Network]. </li></ul> |
-| [Procesar propuestas](../../edge/personalization/rendering-personalization-content.md#applypropositions) en aplicaciones de una sola página sin incrementar las métricas. | El `applyPropositions` permite procesar o ejecutar una matriz de propuestas de [!DNL Target] en aplicaciones de una sola página, sin incrementar el [!DNL Analytics] y [!DNL Target] métricas. Esto aumenta la precisión de los informes. |
-| [Uso compartido de ID de dominio cruzado y de móvil a web](../../edge/identity/id-sharing.md) | El SDK web de Adobe Experience Platform ahora es compatible con las funciones de uso compartido de ID de visitante que le permiten ofrecer experiencias personalizadas de forma más precisa, entre aplicaciones móviles y contenido web móvil, y entre dominios. |
-| [Extensión de etiqueta de la capa de datos de Google](../../tags/extensions/web/google-data-layer/overview.md) | La extensión de capa de datos de Google le permite utilizar una capa de datos de Google en la implementación de etiquetas. |
-| [Extensión de reenvío de eventos de conversiones mejoradas de Google Ads](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | La extensión Conversiones mejoradas de Google Ads permite mejorar las conversiones de Google Ads en tiempo real. |
-| [Extensión de reenvío de eventos Mailchimp](../../tags/extensions/web/mailchimp/overview.md) | La extensión de reenvío de eventos Mailchimp envía eventos a la API de marketing Mailchimp que pueden enviar correos electrónicos de déclencheur para campañas de marketing Mailchimp, recorridos o transacciones. |
+| Administración de permisos mediante Adobe Admin Console | El acceso a las funciones de recopilación de datos ahora se administra mediante Adobe Admin Console en la tarjeta de recopilación de datos de Adobe Experience Platform. Consulte la guía de [permisos de recopilación de datos](../../collection/permissions.md) para obtener más información.<br><br>Los permisos para los conjuntos de datos ahora se administran a través del Admin Console en la tarjeta de Adobe Experience Platform, lo que mejora la seguridad con respecto al método anterior de configurar estos permisos manualmente para cada usuario. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información, consulte la [información general sobre recopilación de datos](../../collection/home.md).
 
-## Modelo de datos de experiencia (XDM) {#xdm}
+## [!DNL Data Prep] {#data-prep}
 
-XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se introducen en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
-
-**Nuevos componentes XDM**
-
-| Tipo de componente | Nombre | Descripción |
-| --- | --- | --- |
-| Clase | [[!UICONTROL Medicación]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | Una clase de la industria de la salud que captura detalles sobre una sustancia usada para tratamiento médico, especialmente un medicamento o medicamento. |
-| Clase | [[!UICONTROL Plan]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | Una clase de la industria de la salud que captura detalles sobre un plan médico, como un plan de salud o de seguro. |
-| Clase | [[!UICONTROL Proveedor]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | Una clase del sector sanitario que captura detalles sobre un proveedor de atención médica. |
-| Clase | [[!UICONTROL Pagador]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | Una clase de la industria de la salud que captura detalles sobre una compañía de seguros. |
-| Clase | [[!UICONTROL Programación de eventos en directo]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | Una clase de la industria del deporte y el entretenimiento que captura detalles sobre un programa de eventos en vivo, como un programa de conciertos itinerante o un programa de un equipo deportivo. |
-| Clase | [[!UICONTROL Ubicación ]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | Una clase de la industria del deporte y el entretenimiento que captura la ubicación de un evento en vivo, como una sala de conciertos o un campo deportivo. |
-| Grupo de campos | [[!UICONTROL Medicación médica]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | Un grupo de campos para la variable [!UICONTROL Medicación] que captura detalles sobre el medicamento, como el nombre de la marca, el número de lote y la cantidad. |
-| Grupo de campos | [[!UICONTROL Detalles del plan de atención médica]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | Un grupo de campos para la variable [!UICONTROL Plan] que captura detalles como red, tipo y estado activo. |
-| Grupo de campos | [[!UICONTROL Proveedor de atención médica]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Un grupo de campos para la variable [!UICONTROL Proveedor] que recoge detalles de un profesional de la salud o de una organización de centros de salud con licencia para proporcionar servicios de diagnóstico y tratamiento de la salud. |
-| Grupo de campos | [[!UICONTROL Detalles de los miembros del sector sanitario]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Un grupo de campos para la variable [!UICONTROL Perfil individual XDM] clase que captura detalles de una persona que tiene o va a recibir un servicio o atención médica, como información de contacto, médico de atención primaria e información del plan. |
-| Grupo de campos | [[!UICONTROL Detalles del sitio]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] clase que captura información recopilada por herramientas de sitio como chats, survey, etc. |
-| Grupo de campos | [[!UICONTROL Compra de entradas para eventos en directo]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] clase que captura el historial de compras para entradas para un evento en vivo, como un concierto o un juego deportivo. |
-| Grupo de campos | [[!UICONTROL Programación de eventos de deportes y entretenimiento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | Un grupo de campos para la variable [!UICONTROL Programación de eventos en directo] que captura detalles adicionales sobre la programación, como el nombre de la atracción, los tiempos de apertura de las puertas, etc. |
-| Grupo de campos | [[!UICONTROL Centro de eventos deportivos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | Un grupo de campos para la variable [!UICONTROL Ubicación] que captura más detalles sobre el lugar del evento, como la capacidad de asiento y las áreas de mercado designadas (DMA). |
-| Esquema global | (Varios) | Hay nuevos esquemas globales disponibles para métricas de destinos para perspectivas de RTCDP. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1560) para obtener más información. |
-
-{style=&quot;table-layout:auto&quot;}
-
-**Componentes XDM actualizados**
-
-| Tipo de componente | Nombre | Actualizar descripción |
-| --- | --- | --- |
-| Comportamiento | [[!UICONTROL Esquema de series temporales]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | Se ha añadido un tipo de evento de actualización de estados de medios. |
-| Grupo de campos | [[!UICONTROL Reserva de alojamiento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | Se ha añadido una propiedad de cierre de compra. |
-| Tipo de datos | [[!UICONTROL Información multimedia]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Se han añadido campos de inicio y fin de estado. |
-| Extensión de  | [[!UICONTROL Evento de cambio de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Se agregaron dos campos utilizados para almacenar atributos para ayudar a identificar al usuario y la hora de un evento de creación. |
-| Extensión de  | [[!UICONTROL Adobe CJM ExperienceEvent: Detalles de la interacción de mensajes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Se ha añadido suscripción, consentimiento, correo electrónico personalizado e información de datos adicional en el objeto de página de aterrizaje. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
-
-## Servicio de consultas {#query-service}
-
-El servicio de consultas permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL Data Lake]. Puede unirse a cualquier conjunto de datos desde la [!DNL Data Lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para su uso en informes, Data Science Workspace o para su incorporación al perfil del cliente en tiempo real.
+[!DNL Data Prep] permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
 
 **Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Etiquetado de esquemas ad hoc | Administre el acceso a los datos confidenciales aplicando etiquetas a los campos de datos de esquemas ad hoc que se generan automáticamente a través de las cuotas de servicio de consulta. Puede restringir el uso de ciertos campos o conjuntos de datos de esquemas específicos para controlar el acceso a datos personales confidenciales e información personal identificable. Mediante la capacidad de control de acceso basado en atributos puede etiquetar campos de esquema específicos a través de la interfaz de usuario de Platform. |
-| `FLATTEN` configuración | Al conectarse a una base de datos mediante herramientas de BI de terceros, la variable `FLATTEN` esta configuración aplana las estructuras de datos anidadas en columnas independientes, donde el nombre del atributo se convierte en el nombre de columna que contiene los valores de fila. Esto mejora la facilidad de uso de los esquemas específicos y reduce la carga de trabajo necesaria para recuperar, analizar, transformar y crear informes de datos en herramientas de BI que no admiten estructuras de datos anidadas. |
+| Mejoras en [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations es ahora más inteligente y rápido. Las nuevas comprobaciones de validación reducen considerablemente los errores de asignación más comunes, lo que reduce aún más el tiempo de respuesta al valor. |
+| Compatibilidad jerárquica con problemas de transmisión | Ahora puede utilizar funciones `upsert_array_append` y `upsert_array_replace` para actualizar matrices y objetos al transmitir actualizaciones a Perfil. Consulte la [[!DNL Data Prep] guía de funciones de asignación](../../data-prep/functions.md) para obtener más información. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Para obtener más información sobre los servicios de consulta, consulte la [Información general del servicio de consultas](../../query-service/home.md).
+Para obtener más información sobre [!DNL Data Prep], consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
+
+## Modelo de datos de experiencia (XDM) {#xdm}
+
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se introducen en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Modelo de datos del sector sanitario | Se ha introducido un modelo de datos de atención médica estándar para apoyar cinco casos de uso comunes de la industria relacionados con el aumento de la adquisición digital, la mejora de la inscripción en los programas y la promoción de la información sobre medicamentos. Consulte la descripción general de la [modelo de datos de asistencia sanitaria](../../xdm/schema/industries/healthcare.md) para obtener más información sobre estos casos de uso y los componentes XDM estándar que los admiten.<br><br>Se ha añadido un nuevo filtro de sector a la variable [!UICONTROL Esquemas] IU para ayudarle a examinar los componentes relacionados con el cuidado de la salud al crear esquemas personalizados. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Nuevos componentes XDM**
+
+>[!WARNING]
+>
+>Los nuevos componentes XDM enumerados en la siguiente tabla son experimentales y están actualmente en prueba. Se espera que estos componentes se actualicen con cambios de ruptura (si es necesario) antes de que se estabilicen. Planifique sus esfuerzos de desarrollo en consecuencia.
+
+| Tipo de componente | Nombre | Descripción |
+| --- | --- | --- |
+| Clase | [[!UICONTROL Tiempo]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | Una clase basada en registros que se utiliza para capturar datos meteorológicos. |
+| Grupo de campos | [[!UICONTROL Tiempo actual]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] y [!UICONTROL Tiempo] clases, utilizadas para capturar las condiciones climáticas actuales de un código postal. |
+| Grupo de campos | [[!UICONTROL Tiempo previsto]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] y [!UICONTROL Tiempo] , que se utiliza para capturar las condiciones meteorológicas previstas para un código postal. |
+| Grupo de campos | [[!UICONTROL Déclencheur del producto]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] y [!UICONTROL Tiempo] , que se utiliza para capturar déclencheur específicos de productos que aprovechan las condiciones meteorológicas conocidas para impulsar el comportamiento de los consumidores. |
+| Grupo de campos | [[!UICONTROL Déclencheur relativos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] y [!UICONTROL Tiempo] , que se utiliza para capturar déclencheur relativos que aprovechan las condiciones meteorológicas conocidas para impulsar el comportamiento de los consumidores. |
+| Grupo de campos | [[!UICONTROL Déclencheur graves]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] y [!UICONTROL Tiempo] , que se utiliza para capturar déclencheur que aprovechan las condiciones climáticas severas conocidas por impulsar el comportamiento de los consumidores. |
+| Grupo de campos | [[!UICONTROL Déclencheur meteorológicos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/weather-triggers.schema.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] y [!UICONTROL Tiempo] , que se utiliza para capturar déclencheur generales que aprovechan las condiciones meteorológicas conocidas para impulsar el comportamiento de los consumidores. |
+| Grupo de campos | [[!UICONTROL Detalles de interacción de MediaCollection]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-collection.schema.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] que captura detalles sobre una interacción multimedia. |
+| Grupo de campos | [[!UICONTROL Detalles de interacción de informes de medios]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-reporting.schema.json) | Un grupo de campos para la variable [!UICONTROL XDM ExperienceEvent] que captura detalles sobre una interacción con los informes de contenidos. |
+| Tipo de datos | [[!UICONTROL Información sobre los detalles publicitarios]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | Captura detalles sobre un recurso publicitario. |
+| Tipo de datos | [[!UICONTROL Información sobre los detalles de la Pod de publicidad]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) | Captura detalles sobre un pod publicitario, que es una secuencia de varios anuncios reproducidos uno tras otro dentro de una sola pausa publicitaria. |
+| Tipo de datos | [[!UICONTROL Información detallada del capítulo]](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) | Captura detalles sobre un capítulo o segmento de un fragmento de contenido de vídeo. |
+| Tipo de datos | [[!UICONTROL Información de detalles de error]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | Captura detalles sobre un error de reproducción de vídeo. |
+| Tipo de datos | [[!UICONTROL Información detallada del evento del reproductor]](https://github.com/adobe/xdm/blob/master/components/datatypes/playereventdetails.schema.json) | Captura detalles relacionados con eventos sobre un reproductor de vídeo, incluida la posición del cursor de reproducción y el ID de sesión. |
+| Tipo de datos | [[!UICONTROL Información de datos del estado del reproductor]](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) | Captura detalles relacionados con el estado sobre un reproductor de vídeo. |
+| Tipo de datos | [[!UICONTROL Información de detalles de la solicitud]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Captura los detalles de calidad de experiencia (QoE) sobre un evento de reproducción de vídeo. |
+| Tipo de datos | [[!UICONTROL Información detallada de la sesión]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Captura los detalles de la sesión sobre un evento de reproducción de vídeo. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
+
+<!-- ## Real-time Customer Data Platform B2B Edition {#b2b}
+
+Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+
+| Feature | Description |
+| Lead to account matching | Lead to account matching allows you to use Real-time CDP B2B edition to match known person profiles to account profiles so that these profiles can be segmented and targeted with B2B context data like account, opportunity (and add something else like don't use etc. to the description). For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md). For instructions on how to use related accounts in segment definitions, see the guide on [Segmentation use cases for Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts)."|
+
+{style="table-layout:auto"}
+
+To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md). -->
+
+## Perfil del cliente en tiempo real {#profile}
+
+Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de los clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
+
+| Función | Descripción |
+| ------- | ----------- |
+| Limpieza de atributos perimetrales de perfil huérfanos (versión limitada) | Si su organización tiene acceso a esta función, el servicio de perfil ahora elimina diariamente los atributos perimetrales sobrantes de la región de actividad del usuario para proporcionar una representación más precisa de sus perfiles en su sistema. Esta limpieza se produce después de que se eliminan todos los fragmentos de perfil de un perfil determinado y debe afectar a los perfiles que se combinan desde conjuntos de datos en los que `com_adobe_aep_profile_region_dataset` se marca como verdadero. Esto puede mostrar una caída en la métrica &quot;Audiencia direccionable&quot; en el panel de uso de licencias y mostrar una caída en la métrica &quot;Recuento de perfiles&quot; en el panel de perfiles, ya que estas métricas incluían fragmentos de atributos perimetrales restantes antes de esta versión. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de perfil, lea la [Resumen del perfil del cliente en tiempo real](../../profile/home.md).
 
 ## Fuentes {#sources}
 
@@ -140,9 +170,13 @@ Adobe Experience Platform puede ingerir datos de fuentes externas, al mismo tiem
 
 Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
 
+**Nuevas funciones**
+
 | Función | Descripción |
 | --- | --- |
-| Lanzamiento beta de [!DNL Mixpanel] source | Ahora puede usar la variable [!DNL Mixpanel] fuente para introducir datos de análisis de su [!DNL Mixpanel] cuenta al Experience Platform. Consulte la [[!DNL Mixpanel] documentación de origen](../../sources/connectors/analytics/mixpanel.md) para obtener más información. |
+| Disponibilidad general del [!DNL Azure Data Explorer] source | Utilice el origen de la Data Explorer de Azure para obtener datos de su [!DNL Azure] instancia a Experience Platform. Consulte la [[!DNL Azure Data Explorer] información general de la fuente](../../sources/connectors/databases/data-explorer.md) para obtener más información. |
+| Disponibilidad general [!DNL Generic OData] source | Utilice la variable [!DNL Generic OData] fuente para traer recursos de sistemas compatibles con el protocolo de datos abiertos al Experience Platform. Consulte la [[!DNL Generic OData] información general de la fuente](../../sources/connectors/protocols/odata.md) para obtener más información. |
+| Compatibilidad con la detección automática de propiedades de archivos de origen para [!DNL Data Landing Zone] en la interfaz de usuario de Experience Platform | La variable [!DNL Data Landing Zone] el origen ahora admite la detección automática de propiedades de archivo al utilizar la interfaz de usuario del Experience Platform. Consulte la documentación sobre [crear un [!DNL Data Landing Zone] conexión de origen](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) para obtener más información. |
 
 {style=&quot;table-layout:auto&quot;}
 
