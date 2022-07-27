@@ -4,9 +4,9 @@ title: Panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2726'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Segmentos no asignados por identidad]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmentos asignados por identidad]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiencias comunes]](#common-audiences)
+* [[!UICONTROL Audiencias asignadas]](#mapped-audiences)
 * [[!UICONTROL Estado de la audiencia asignada]](#mapped-audience-health)
 * [[!UICONTROL Recuento de destinos]](#destinations-count)
 * [[!UICONTROL Estado del destino]](#destination-status)
@@ -195,6 +196,14 @@ La variable **[!UICONTROL Audiencias comunes]** proporciona una lista de los cin
 La variable [!UICONTROL TAMAÑO DE LA AUDIENCIA] proporciona el recuento total de perfiles de cada segmento enumerado.
 
 ![El widget de audiencias comunes.](../images/destinations/common-audiences.png)
+
+### Audiencias asignadas {#mapped-audiences}
+
+La variable [!UICONTROL Audiencias asignadas] muestra el número total de audiencias asignadas que se pueden activar en el destino seleccionado en la parte superior de la página.
+
+Select **[!UICONTROL Segmentos]** para navegar al panel Segmentos [!UICONTROL Examinar] pestaña . Este espacio de trabajo muestra una lista de todas las definiciones de segmentos para su organización.
+
+![El widget Audiencias asignadas .](../images/destinations/mapped-audiences.png)
 
 ### Estado de la audiencia asignada {#mapped-audience-health}
 
