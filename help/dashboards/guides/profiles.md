@@ -4,9 +4,9 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3814'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ El diseño de este tablero también se puede personalizar seleccionando [**[!UIC
 
 ## Explorar perfiles {#browse-profiles}
 
-La variable [!UICONTROL Examinar] le permite buscar y ver los perfiles de solo lectura introducidos en su organización de IMS. Desde aquí puede ver información importante perteneciente al perfil sobre sus preferencias, eventos anteriores, interacciones y segmentos
+La variable [!UICONTROL Examinar] le permite buscar y ver los perfiles de solo lectura introducidos en su organización. Desde aquí puede ver información importante perteneciente al perfil sobre sus preferencias, eventos anteriores, interacciones y segmentos
 
 Para obtener más información sobre las capacidades de visualización de perfiles proporcionadas en la interfaz de usuario de Platform, consulte la documentación de [exploración de perfiles en Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
@@ -89,9 +89,9 @@ Consulte la guía de la interfaz de usuario del esquema de unión para obtener m
 
 El tablero está compuesto por widgets, que son métricas de solo lectura que proporcionan información importante sobre los datos de perfil.
 
-La fecha y hora de &quot;última actualización&quot; de un widget muestra cuándo se tomó la última instantánea de los datos. La fecha y la hora de la instantánea se proporcionan en UTC; no se encuentra en la zona horaria del usuario individual o de la organización de IMS.
+La fecha y hora de &quot;última actualización&quot; de un widget muestra cuándo se tomó la última instantánea de los datos. La fecha y la hora de la instantánea se proporcionan en UTC; no está en la zona horaria del usuario u organización individual.
 
-## Widgets estándar
+## Widgets estándar {#standard-widgets}
 
 Adobe proporciona varios widgets estándar que puede utilizar para visualizar distintas métricas relacionadas con los datos del perfil. También puede crear utilidades personalizadas para compartirlas con su organización mediante la [!UICONTROL Biblioteca de utilidades]. Para obtener más información sobre la creación de widgets personalizados, lea la [Información general de la biblioteca de utilidades](../customize/widget-library.md).
 

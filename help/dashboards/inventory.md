@@ -1,17 +1,17 @@
 ---
 title: Ver tableros configurados
 description: Vea una lista de los paneles configurados de su organización en la interfaz de usuario del Experience Platform.
-source-git-commit: 2c8c98467d1a8e11ee1e32ae9ada4e3f87c7b27e
+exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
+source-git-commit: edad0352ffcbc8d5e520e6cccb7062af7a138629
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-
 # Ver tableros configurados
 
-Si su organización tiene varios tableros disponibles en Adobe Experience Platform, puede revisarlos dentro de la interfaz de usuario (IU).
+Si su organización tiene varios paneles disponibles en Adobe Experience Platform, puede revisar el inventario de tableros dentro de la interfaz de usuario (IU).
 
 Para ver los tableros que ha configurado su organización, seleccione **[!UICONTROL Tableros]** en el panel de navegación izquierdo y, a continuación, seleccione la **[!UICONTROL Examinar]** pestaña .
 
@@ -24,3 +24,11 @@ Para ver un tablero individual, seleccione el nombre del tablero en la lista.
 ![Ficha Examinar con el nombre de un tablero resaltado.](./images/inventory/dashboard-name.png)
 
 Cuando está seleccionado, el tablero se abre en la interfaz de usuario de Platform o en un espacio de trabajo de la aplicación completamente integrado que requiere que inicie sesión con las credenciales necesarias.
+
+## Creación de tableros personalizados (Beta)
+
+>[!IMPORTANT]
+>
+>La función de tableros definida por el usuario está en versión beta. Sus características y documentación están sujetas a cambios.
+
+Tableros de Adobe Experience Platform le permite crear y administrar tableros personalizados, en los que podrá crear, agregar y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Consulte la [guía de paneles definidos por el usuario](./user-defined-dashboards.md) para obtener instrucciones completas sobre la creación y configuración de paneles personalizados.
