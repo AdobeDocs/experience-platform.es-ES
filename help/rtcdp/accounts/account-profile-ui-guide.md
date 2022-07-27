@@ -3,9 +3,9 @@ keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinaci�
 title: Guía de la interfaz de usuario del perfil de cuenta
 description: Mediante el uso de perfiles de cuenta, Real-time Customer Data Platform B2B Edition le permite unificar la información de la cuenta de múltiples fuentes. Esta guía proporciona detalles para interactuar con perfiles de cuenta en la interfaz de usuario de Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 55af435c4819193fa3f18a85543bc1fad423bb4d
+source-git-commit: 5a13059c7ddd3f78ef2147533c95d9bd59c5c449
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,14 @@ ht-degree: 0%
 Los perfiles de cuenta permiten unificar la información de la cuenta de varias fuentes. Esta vista unificada de una cuenta aúna datos de sus muchos canales de marketing y los diversos sistemas que está utilizando su organización para almacenar información de cuentas de clientes. Este documento proporciona una guía para interactuar con perfiles de cuenta mediante las funciones de CDP en tiempo real, B2B Edition disponibles en la interfaz de usuario (IU) de Adobe Experience Platform.
 
 Para obtener más información sobre cómo se crean los perfiles de cuenta como parte del flujo de trabajo B2B, consulte la [tutorial completo](../b2b-tutorial.md).
+
+## Información general sobre los perfiles de cuenta (#account-profiles-overview)
+
+Para obtener una descripción general del perfil de la cuenta, comience por seleccionar **[!UICONTROL Perfiles]** under [!UICONTROL Cuentas] en el panel de navegación izquierdo. En el [!UICONTROL Información general] , el tablero muestra un gráfico o un gráfico con las utilidades en un solo punto de entrada.
+
+![Pestaña Información general](images/b2b-account-profile-overview.png)
+
+Para obtener más información sobre el panel de perfiles de cuenta, consulte [Panel de perfiles de cuenta](../../dashboards/guides/account-profiles.md) documentación.
 
 ## Explorar perfiles de cuenta {#browse-account-profiles}
 
