@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: a8faa3a146669e206b9aa129f5541a7511c1854a
+source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '843'
 ht-degree: 7%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 7%
       * [Conexión de lista de clientes de pinterest](./catalog/advertising/pinterest.md)
       * [(Beta) Conexión de Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [La conexión con el mostrador de comercio](./catalog/advertising/tradedesk.md)
-      * [La conexión con el servicio de asistencia al cliente](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) La conexión con el servicio de asistencia al cliente](./catalog/advertising/tradedesk-emails.md)
       * [Extensión de la etiqueta del sitio web universal de twitter](./catalog/advertising/twitter-uwt.md)
       * [Conexión de Yahoo/Verizon DataX](./catalog/advertising/datax.md)
    * Destinos de Analytics {#analytics}
@@ -104,7 +104,7 @@ ht-degree: 7%
       * [Conexión de los centros de eventos de Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Conexión SFTP](./catalog/cloud-storage/sftp.md)
       * [LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube](./catalog/cloud-storage/ip-address-allow-list.md)
-   * Destinos de administración de la relación con los clientes (CRM) {#crm-destinations}
+   * Destinos de administración de la relación con los clientes (CRM) {#crm}
       * [Conexión de Salesforce CRM](./catalog/crm/salesforce.md)
    * Destinos de la plataforma de gestión de datos {#data-management}
       * [Información general sobre los destinos de la plataforma de gestión de datos (DMP)](./catalog/data-management/overview.md)
