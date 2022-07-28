@@ -4,10 +4,10 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 97f68a0d11b1b1fb51f230eee5f1f1e6b6ca2307
+source-git-commit: a8faa3a146669e206b9aa129f5541a7511c1854a
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 8%
+source-wordcount: '842'
+ht-degree: 7%
 
 ---
 
@@ -104,6 +104,8 @@ ht-degree: 8%
       * [Conexión de los centros de eventos de Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Conexión SFTP](./catalog/cloud-storage/sftp.md)
       * [LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube](./catalog/cloud-storage/ip-address-allow-list.md)
+   * Destinos de administración de la relación con los clientes (CRM) {#crm-destinations}
+      * [Conexión de Salesforce CRM](./catalog/crm/salesforce.md)
    * Destinos de la plataforma de gestión de datos {#data-management}
       * [Información general sobre los destinos de la plataforma de gestión de datos (DMP)](./catalog/data-management/overview.md)
       * [extensión del DIL del Audience Manager](./catalog/data-management/aam-dil-extension.md)
