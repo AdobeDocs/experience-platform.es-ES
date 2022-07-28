@@ -2,9 +2,9 @@
 title: Punto final de API de DataSet Time-to-Live (TTL)
 description: El extremo /ttl de la API de higiene de datos le permite programar mediante programación TTL de conjuntos de datos en Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1313'
 ht-degree: 7%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido Escudo de Adobe para la atención médica.
+>Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido el Escudo de la salud.
 
 La variable `/ttl` en la API de higiene de datos le permite programar protocolos de tiempo de vida (TTL) para conjuntos de datos en Adobe Experience Platform.
 

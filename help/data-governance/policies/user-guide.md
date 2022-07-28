@@ -5,9 +5,9 @@ title: Administrar políticas de uso de datos en la interfaz de usuario
 topic-legacy: policies
 description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el espacio de trabajo Directivas de la interfaz de usuario del Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1324'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ La variable **[!UICONTROL Examinar]** vuelve a aparecer la pestaña , que ahora 
 
 >[!IMPORTANT]
 >
->Actualmente, las políticas de consentimiento solo están disponibles para las organizaciones que han adquirido Adobe Shield para el sector sanitario.
+>Actualmente, las políticas de consentimiento solo están disponibles para las organizaciones que han adquirido Healthcare Shield.
 
 Si elige crear una directiva de consentimiento, aparece una nueva pantalla que le permite configurar la nueva directiva.
 

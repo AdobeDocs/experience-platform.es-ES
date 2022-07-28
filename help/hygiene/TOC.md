@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Ayuda sobre higiene de datos
 breadcrumb-title: Guía de higiene de datos
 user-guide-description: Administre las solicitudes de datos de los consumidores para cumplir con las regulaciones legales de privacidad, como el RGPD y la CCPA.
-feature: Privacy
-source-git-commit: 6b665648e547eee65deb90465e85aeadbba135b4
+feature: Data Hygiene
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 3%

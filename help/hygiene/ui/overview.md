@@ -2,9 +2,9 @@
 title: Guía de la interfaz de usuario sobre higiene de datos
 description: Aprenda a administrar las tareas de higiene de los datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido Escudo de Adobe para la atención médica.
+>Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido el Escudo de la salud.
 
 La variable **[!UICONTROL Higiene de los datos]** El espacio de trabajo de la interfaz de usuario de Adobe Experience Platform le permite crear y supervisar varias tareas de higiene de datos, como la eliminación de identidades de consumidores y la programación de protocolos de tiempo de vida (TTL) para conjuntos de datos.
 
