@@ -3,9 +3,9 @@ keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinaci�
 title: Guía de la interfaz de usuario del perfil de cuenta
 description: Mediante el uso de perfiles de cuenta, Real-time Customer Data Platform B2B Edition le permite unificar la información de la cuenta de múltiples fuentes. Esta guía proporciona detalles para interactuar con perfiles de cuenta en la interfaz de usuario de Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9963c78bff8d48816982bc79af9239f1a7b5e90a
+source-git-commit: e94753236623343dcd739ff65c18248c1112f361
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Para obtener más información sobre cómo se crean los perfiles de cuenta como 
 
 ## Información general sobre perfiles de cuenta {#account-profiles-overview}
 
-Para obtener una descripción general del perfil de la cuenta, comience por seleccionar **[!UICONTROL Perfiles]** under [!UICONTROL Cuentas] en el panel de navegación izquierdo. En el [!UICONTROL Información general] , el tablero muestra un gráfico o un gráfico con las utilidades en un solo punto de entrada.
+Select **[!UICONTROL Perfiles]** under [!UICONTROL Cuentas] en el panel de navegación izquierdo para ver la descripción general de los perfiles de cuenta. En el [!UICONTROL Información general] , el tablero muestra un gráfico o un gráfico con las utilidades en un solo punto de entrada.
 
-![Pestaña Información general](images/b2b-account-profile-overview.png)
+![Ficha Información general que muestra las utilidades](images/b2b-account-profile-overview.png)
 
-Para obtener más información sobre el panel de perfiles de cuenta, consulte [Panel de perfiles de cuenta](../../dashboards/guides/account-profiles.md) documentación.
+Consulte la documentación sobre [[!UICONTROL Perfiles de la cuenta]] (../../dashboards/guides/account-profiles.md) tablero para obtener más información.
 
 ## Explorar perfiles de cuenta {#browse-account-profiles}
 
