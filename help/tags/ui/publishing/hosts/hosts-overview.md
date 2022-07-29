@@ -1,10 +1,11 @@
 ---
 title: Información general sobre alojamientos
 description: Obtenga información acerca de las distintas opciones de alojamiento disponibles en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
+source-git-commit: 02af02644968346dbcf41d13c2c6e52d3a3ec7ed
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 81%
+ht-degree: 75%
 
 ---
 
@@ -25,4 +26,4 @@ Para obtener información detallada sobre cada tipo de host, utilice los víncul
 
 El mismo host se puede utilizar para varios entornos dentro de una propiedad.
 
-Para obtener más información que le ayude a decidir entre el alojamiento propio y el administrado por Adobe, consulte la [Guía de alojamiento propio](./self-hosting-libraries.md).
+Para obtener más información que le ayude a decidir entre el alojamiento propio y el administrado por Adobe, lea la [guía de alojamiento propio](./self-hosting-libraries.md).

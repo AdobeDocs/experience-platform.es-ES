@@ -1,10 +1,11 @@
 ---
 title: Alojamientos de SFTP
-description: Aprenda a configurar etiquetas en Adobe Experience Platform para enviar compilaciones de biblioteca a un servidor SFTP autoalojado y protegido.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información sobre cómo configurar Adobe Experience Platform para que entregue compilaciones de biblioteca a un servidor SFTP seguro y autoalojado.
+exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
+source-git-commit: a0f22bad4a18936ba7c59d3747f8dd34f3de5ca4
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 44%
+source-wordcount: '821'
+ht-degree: 38%
 
 ---
 
@@ -14,47 +15,71 @@ ht-degree: 44%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Si no quiere que Adobe administre sus bibliotecas alojadas, la otra opción que tiene es que Adobe Experience Platform envíe compilaciones a un servidor SFTP protegido que usted aloje.
-
-Platform se conecta al sitio SFTP mediante una clave cifrada. Debe seguir algunos pasos para configurar esto correctamente:
-
-1. Debe tener un par de clave pública o privada instalado en el servidor SFTP. Puede generar estas claves en el servidor o generarlas en otro lugar e instalarlas en el servidor. Consulte la documentación de GitHub sobre [cómo generar claves SSH](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key) para obtener más información.
-1. La clave privada se utiliza para cifrar la clave GPG pública. Debe proporcionar la clave privada durante el proceso de creación del host SFTP. Consulte la sección [Cifrar valores](https://developer.adobelaunch.com/api/guides/encrypting_values/) en la documentación de la API de Reactor para obtener instrucciones sobre el cifrado de claves GPG públicas. Utilice la clave GPG del entorno de producción a menos que sepa que necesita una específica. Por último, puede cifrar la clave privada desde cualquier equipo, y no es necesario instalar GPG en el servidor para completar este paso.
-1. Es posible que deba aprobar las direcciones IP utilizadas con el cortafuegos de su empresa para permitir que Platform acceda al servidor SFTP y se conecte a él. Estas direcciones IP son:
-   * `184.72.239.68`
-   * `23.20.85.113`
-   * `54.226.193.184`
+Adobe Experience Platform le permite enviar compilaciones de biblioteca de etiquetas a un servidor SFTP protegido que usted aloje, lo que le ofrece un bueno control sobre cómo se almacenan y administran las compilaciones. Esta guía explica cómo configurar un host SFTP para una propiedad de etiqueta en la interfaz de usuario de recopilación de datos.
 
 >[!NOTE]
 >
->La estructura de las compilaciones de etiquetas ha cambiado con el paso del tiempo. Utilizan vínculos simbólicos (enlaces simbólicos) internamente para mantener la compatibilidad con versiones anteriores, de modo que los códigos incrustados anteriores seguirán funcionando con la estructura de versión más reciente. El servidor SFTP debe admitir el uso de enlaces simbólicos para que sirva como destino válido para las compilaciones de etiquetas.
+>También puede optar por utilizar un host administrado por Adobe en su lugar. Consulte la guía de [Hosts administrados por Adobe](./managed-by-adobe-host.md) para obtener más información.
+>
+>Para obtener información sobre las ventajas y limitaciones de las bibliotecas de alojamiento propio, consulte la [guía de alojamiento propio](./self-hosting-libraries.md).
 
-Para obtener información más detallada, consulte el siguiente artículo Medio sobre [cómo configurar los servidores SFTP para enviar una compilación](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6).
+## Configuración de una clave de acceso para el servidor {#access-key}
 
-## Creación de un host SFTP
+Platform se conecta al sitio SFTP mediante una clave cifrada. Debe seguir algunos pasos para configurar esto correctamente:
 
-1. Abra la pestaña [!UICONTROL Hosts].
-1. Cree el nuevo host.
-1. Asigne un nombre al host.
-1. Seleccione **[!UICONTROL SFTP]** como tipo de host.
-1. Introduzca el host, la ruta, el puerto, el nombre de usuario y la clave privada cifrada.
+### Crear un par de claves pública y privada
 
-   El puerto debe ser uno de los siguientes:
+Debe tener un par de clave pública o privada instalado en el servidor SFTP. Puede generar estas claves en su servidor o generarlas en otro lugar e instalarlas en su servidor. Consulte la documentación de GitHub sobre [cómo generar claves SSH](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key) para obtener más información.
 
-   * 21
-   * 22
-   * 80
-   * 200-299
-   * 443
-   * 2000-2999
-   * 4343
-   * 8080
-   * 8888
+### Cifrar las claves
 
-   >[!NOTE]
-   >
-   >Como práctica recomendada de seguridad, Adobe limita la cantidad de puertos que se pueden utilizar para el tráfico saliente. Los puertos seleccionados suelen permitirse a través de servidores de seguridad corporativos, además de incluir algunos rangos de flexibilidad.
+La clave privada se utiliza para cifrar la clave pública. Debe proporcionar la clave privada durante el proceso de creación del host SFTP. Consulte la sección sobre [codificación de valores](../../../api/guides/encrypting-values.md) en la guía de la API de Reactor para obtener instrucciones sobre cómo cifrar claves públicas. Utilice la clave GPG del entorno de producción a menos que sepa que necesita una específica. Por último, puede cifrar la clave privada desde cualquier equipo, y no es necesario instalar GPG en el servidor para completar este paso.
 
-1. Seleccione **[!UICONTROL Guardar]**.
+### Direcciones IP de la plataforma de lista de permitidos
+
+Es posible que necesite aprobar un conjunto de direcciones IP para utilizarlas en el cortafuegos de su empresa a fin de permitir que Platform acceda al servidor SFTP y se conecte a él. Estas direcciones IP son:
+
+* `184.72.239.68`
+* `23.20.85.113`
+* `54.226.193.184`
+
+>[!NOTE]
+>
+>La estructura de las compilaciones de etiqueta ha cambiado con el paso del tiempo. Utilizan vínculos simbólicos (enlaces simbólicos) internamente para mantener la compatibilidad con versiones anteriores, de modo que los códigos incrustados anteriores seguirán funcionando con la estructura de versión más reciente. El servidor SFTP debe admitir el uso de enlaces simbólicos para que sirva como destino válido para las compilaciones de etiqueta.
+
+Para obtener información más detallada, consulte el siguiente artículo de Medium sobre [cómo configurar los servidores SFTP para enviar una compilación](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6).
+
+## Creación de un host SFTP {#create}
+
+En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Hosts]** en la navegación izquierda, seguido de **[!UICONTROL Agregar host]**.
+
+![Imagen que muestra el botón Agregar host seleccionado en la interfaz de usuario](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
+
+Aparecerá el cuadro de diálogo de creación de host. Proporcione un nombre para el host y debajo de **[!UICONTROL Tipo]**, seleccione **[!UICONTROL SFTP]**.
+
+![Imagen que muestra la opción de alojamiento SFTP seleccionada.](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
+
+### Configuración del host SFTP {#configure}
+
+El cuadro de diálogo se expande para incluir opciones de configuración adicionales para el host SFTP. Estos se explican a continuación.
+
+![Imagen que muestra los detalles necesarios para una conexión de host SFTP](../../../images/ui/publishing/sftp-hosts/host-details.png)
+
+| Campo de configuración | Descripción |
+| --- | --- |
+| [!UICONTROL No usar enlaces simbólicos] | De forma predeterminada, todos los hosts SFTP utilizan vínculos simbólicos (enlaces simbólicos) para hacer referencia a la biblioteca [compilaciones](../builds.md) que se guardan en el servidor. Sin embargo, no todos los servidores admiten el uso de enlaces simbólicos. Cuando se selecciona esta opción, el host utiliza una operación de copia para actualizar los recursos de compilación directamente en lugar de utilizar enlaces simbólicos. |
+| [!UICONTROL URL del servidor SFTP] | Ruta de acceso base de la URL para su servidor. |
+| [!UICONTROL Ruta] | Ruta de acceso que se anexará a la URL del servidor base para este host. |
+| [!UICONTROL Puerto ] | El puerto debe ser uno de los siguientes:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Como práctica recomendada de seguridad, Adobe limita la cantidad de puertos que se pueden utilizar para el tráfico saliente. Los puertos seleccionados suelen permitirse a través de servidores de seguridad corporativos e incluyen algunos rangos de flexibilidad. |
+| [!UICONTROL Nombre de usuario] | El nombre de usuario que se utilizará al acceder al servidor. |
+| [!UICONTROL Clave privada cifrada] | La clave privada cifrada que ha creado en un [paso anterior](#access-key). |
+
+Select **[!UICONTROL Guardar]** para crear el host con la configuración seleccionada.
+
+![Imagen que muestra el host SFTP que se está guardando](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
 Al seleccionar **[!UICONTROL Guardar]**, se comprueba la conexión y la capacidad de enviar los archivos al servidor SFTP. Platform crea una carpeta, escribe un archivo dentro de esa carpeta, comprueba si el archivo está allí y limpia después. Si la cuenta de usuario del servidor SFTP (la que se adjunta al certificado seguro que ha proporcionado a Platform) no tiene los permisos necesarios para realizar esta acción, el host pasa a estar en estado &quot;failed&quot;.
+
+## Pasos siguientes
+
+Esta guía explica cómo configurar un servidor SFTP autoalojado para utilizarlo en etiquetas. Una vez establecido el host, puede asociarlo a uno o varios de sus [entornos](../environments.md) para publicar bibliotecas de etiquetas. Para obtener más información sobre el proceso de alto nivel de activación de funcionalidades de etiquetas en las propiedades web o móviles, consulte la [información general de publicación](../overview.md).
