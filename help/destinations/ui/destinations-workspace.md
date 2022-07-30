@@ -3,9 +3,9 @@ keywords: plataforma;destinos;espacio de trabajo de destinos;espacio de trabajo;
 title: Espacio de trabajo de destinos
 description: El espacio de trabajo Destinos consta de cinco secciones, Información general, Catálogo, Examinar, Cuentas y Vista del sistema. Se describen en las secciones siguientes.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1162'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ La variable **[!UICONTROL Información general]** muestra la [!UICONTROL Destino
 >
 >Si su organización es nueva en Experience Platform y aún no tiene destinos activos, la variable [!UICONTROL Destinos] tablero y [!UICONTROL Información general] no están visibles. En su lugar, seleccione [!UICONTROL Destinos] en la navegación izquierda, se muestra la variable [[!UICONTROL Catálogo] ficha](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![La pestaña Información general del panel Destinos .](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catálogo] {#catalog}
 

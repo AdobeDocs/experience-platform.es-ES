@@ -4,7 +4,7 @@ title: Cómo obtener y conceder permisos de acceso para tableros de Experience P
 type: Documentation
 description: Conceder a los usuarios la capacidad de ver, editar y actualizar tableros de Experience Platform mediante Adobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: 052e365c6127961363b7b5333cb0f4f82ab5479a
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 7%

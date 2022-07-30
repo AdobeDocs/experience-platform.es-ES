@@ -1,7 +1,8 @@
 ---
 title: Tableros definidos por el usuario
 description: Aprenda a crear y administrar tableros personalizados donde puede crear, agregar y editar widgets personalizados para visualizar métricas clave.
-source-git-commit: 47e74a0cabbf40df3a45e835ca3a1e9a36fb4532
+exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '883'
 ht-degree: 0%
@@ -56,7 +57,7 @@ La variable [!UICONTROL Seleccionar datos] se abre. Seleccione un modelo de dato
 >
 >Actualmente, los tableros definidos por el usuario solo admiten el modelo de datos de perfil. Se admitirán más opciones.
 
-![El cuadro de diálogo de selección de datos.](./images/user-defined-dashboards/select-data-dialog.png)
+![El cuadro de diálogo Seleccionar datos .](./images/user-defined-dashboards/select-data-dialog.png)
 
 La lista de vista previa proporciona detalles sobre las tablas contenidas en el modelo de datos. La tabla siguiente proporciona descripciones de los campos de columna y sus valores potenciales.
 
@@ -68,9 +69,9 @@ La lista de vista previa proporciona detalles sobre las tablas contenidas en el 
 
 Select **[!UICONTROL Siguiente]** para confirmar la elección del modelo de datos. La siguiente vista muestra una lista de las tablas disponibles en el carril izquierdo. Seleccione una tabla para ver un desglose completo de los datos contenidos en la tabla seleccionada.
 
-La variable [!UICONTROL Vista previa] El panel contiene fichas para [!UICONTROL Registros de muestra] y [!UICONTROL Atributos].El [!UICONTROL Registros de muestra] proporciona un subconjunto de los registros de la tabla seleccionada en una vista tabulada. La variable [!UICONTROL Atributos] proporciona el nombre del atributo, el tipo de datos y la tabla de origen para cada atributo asociado a la tabla seleccionada.
+La variable [!UICONTROL Vista previa] El panel contiene fichas para [!UICONTROL Registros de muestra] y [!UICONTROL Atributos]. La variable [!UICONTROL Registros de muestra] proporciona un subconjunto de los registros de la tabla seleccionada en una vista tabulada. La variable [!UICONTROL Atributos] proporciona el nombre del atributo, el tipo de datos y la tabla de origen para cada atributo asociado a la tabla seleccionada.
 
-Seleccione una tabla de la lista disponible en el carril izquierdo para proporcionar datos para el widget y seleccione [!UICONTROL Select] para volver al compositor de utilidades.
+Seleccione una tabla de la lista disponible en el carril izquierdo para proporcionar datos para el widget y seleccione **[!UICONTROL Select]** para volver al compositor de utilidades.
 
 ![El cuadro de diálogo seleccionar datos con la selección resaltada.](./images/user-defined-dashboards/select-a-table.png)
 
@@ -117,7 +118,3 @@ Los widgets se pueden volver a organizar y cambiar de tamaño mientras se encuen
 Al leer este documento, tendrá una mejor comprensión de cómo crear un tablero personalizado y cómo crear, editar y actualizar widgets personalizados para ese tablero.
 
 Para descubrir las métricas y visualizaciones preconfiguradas disponibles para la variable [perfiles](./guides/profiles.md#standard-widgets), [segmentos](./guides/segments.md#standard-widgets)y [destinos](./guides/destinations.md#standard-widgets) tableros, consulte la lista de utilidades estándar en su documentación respectiva.
-
-
-
-
