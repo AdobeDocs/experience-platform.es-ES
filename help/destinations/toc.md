@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '925'
 ht-degree: 7%
 
 ---
@@ -205,6 +205,12 @@ ht-degree: 7%
       * [Usar Destination SDK para configurar un destino de flujo continuo](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Usar el Destination SDK para configurar un destino basado en archivos](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Enviar para revisión un destino creado en Destination SDK](./destination-sdk/submit-destination.md)
+      * Configuración de destinos basados en archivos {#configure-file-based-destinations}
+         * [(Beta) Configurar un destino de Amazon S3 con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [(Beta) Configurar un destino de Amazon S3 con opciones de formato y nombre de archivo personalizados](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [(Beta) Configurar un destino de almacenamiento de Azure Blob con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [(Beta) Configurar un destino de almacenamiento de Azure Data Lake con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [(Beta) Configurar un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Referencia {#reference}
       * [Política de limitación de velocidad y reintentos para destinos de flujo continuo](./destination-sdk/rate-limiting-retry-policy.md)
       * [Funciones de transformación admitidas](./destination-sdk/supported-functions.md)
