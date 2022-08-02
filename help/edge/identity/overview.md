@@ -3,9 +3,9 @@ title: Datos de identidad en el SDK web de Platform
 description: Obtenga información sobre cómo recuperar y administrar Adobe Experience Cloud ID (ECID) mediante el SDK web de Adobe Experience Platform.
 keywords: Identidad;Identidad de origen;Servicio de identidad;Identidad de terceros;Migración de ID;ID de visitante;identidad de terceros;Cookies de tercerosEnabled;idMigrationEnabled;getIdentity;Sincronización de identidades;syncIdentity;sendEvent;identityMap;principal;ecid;espacio de nombres;id de área de nombres;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
+source-git-commit: d6aed404828d06bf223f348dd97960652b05933a
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1356'
 ht-degree: 1%
 
 ---
@@ -101,6 +101,10 @@ alloy("sendEvent", {
 ```
 
 Cada propiedad de `identityMap` representa identidades pertenecientes a una [área de nombres de identidad](../../identity-service/namespaces.md). El nombre de la propiedad debe ser el símbolo del área de nombres de identidad, que puede encontrar en la interfaz de usuario de Adobe Experience Platform en &quot;[!UICONTROL Identidades]&quot;. El valor de la propiedad debe ser una matriz de identidades pertenecientes a ese área de nombres de identidad.
+
+>[!IMPORTANT]
+>
+>El ID de área de nombres pasado en la variable `identityMap` distingue entre mayúsculas y minúsculas. Asegúrese de utilizar el ID de área de nombres correcto para evitar una recopilación de datos incompleta.
 
 Cada objeto de identidad de la matriz de identidades contiene las siguientes propiedades:
 
