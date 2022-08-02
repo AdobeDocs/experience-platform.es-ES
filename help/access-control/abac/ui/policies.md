@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Crear una directiva
 description: Este documento proporciona información sobre la administración de directivas a través de la interfaz Permisos de Adobe Experience Cloud
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Seleccione el icono de signo más para **Añadir expresión de coincidencias** o
 
 En el menú desplegable, seleccione la opción **Recurso**.
 
-![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
+![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
 A continuación, en la lista desplegable , seleccione la opción **Coincide**.
 
