@@ -3,9 +3,9 @@ keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinaci�
 title: Guía de la interfaz de usuario del perfil de cuenta
 description: Mediante el uso de perfiles de cuenta, Real-time Customer Data Platform B2B Edition le permite unificar la información de la cuenta de múltiples fuentes. Esta guía proporciona detalles para interactuar con perfiles de cuenta en la interfaz de usuario de Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
+source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,26 @@ Select **[!UICONTROL Perfiles]** under [!UICONTROL Cuentas] en el panel de naveg
 ![Ficha Información general que muestra las utilidades](images/b2b-account-profile-overview.png)
 
 Consulte la documentación de [[!UICONTROL Perfiles de la cuenta]](../../dashboards/guides/account-profiles.md) tablero para obtener más información.
+
+## Configurar la coincidencia de posibles clientes con cuentas {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> Solo los administradores de B2B AI pueden habilitar, deshabilitar y configurar el servicio de coincidencia de cuentas de posibles clientes. Al desactivar el servicio, los resultados coincidentes se eliminarán en un plazo de 24 horas.
+
+Para configurar la coincidencia de posibles clientes con cuentas, seleccione **[!UICONTROL Perfiles]** under [!UICONTROL Cuentas] en el panel de navegación izquierdo. En el **[!UICONTROL Información general]** , seleccione **[!UICONTROL Configuración]** en la parte superior derecha.
+
+![Seleccionar configuración](images/b2b-configuring-accounts-profile.png)
+
+La variable **[!UICONTROL Configuración de la cuenta]** se abre. Seleccione la **[!UICONTROL Habilitar la coincidencia de cliente potencial a cuenta]** para habilitar la función. Utilice el menú desplegable para seleccionar **[!UICONTROL Diario]** para el **[!UICONTROL Coincidencia de cadencia]** configuración. Finalmente, seleccione el **[!UICONTROL Criterios de coincidencia]** opciones seguidas de **[!UICONTROL Guardar]** para confirmar la configuración y volver a la **[!UICONTROL Perfiles de la cuenta]** en el Navegador.
+
+>[!NOTE]
+>
+> La dirección no se puede usar como los únicos criterios coincidentes. Se debe seleccionar uno o más de los demás criterios coincidentes.
+
+![Configuración de la cuenta](images/b2b-configuring-account-settings.png)
+
+Para obtener más información sobre la coincidencia de cuentas de posibles clientes, consulte la [Concordancia de posibles clientes con cuentas en tiempo real Resumen de CDP B2B](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Explorar perfiles de cuenta {#browse-account-profiles}
 
