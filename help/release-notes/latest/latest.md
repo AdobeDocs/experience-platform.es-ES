@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 72ca4f0c22d5e37ffa079940ed20e219445a0bf1
+source-git-commit: 4ba6ef979945ccd7decf4816c3410f2468b596ed
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2330'
 ht-degree: 5%
 
 ---
@@ -16,17 +16,14 @@ ht-degree: 5%
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [Notas de la versión de Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Tableros {#dashboards}](#dashboards-dashboards)
-      - [Tableros de perfiles de cuenta](#account-profiles-dashboards)
-      - [Tableros de perfil](#profile-dashboards)
-      - [Tableros de destinos](#destinations-dashboards)
-   - [Recopilación de datos {#collection}](#data-collection-collection)
-   - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
-   - [[!DNL Destinations] {#destinations}](#dnl-destinations-destinations)
-   - [Modelo de datos de experiencia (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Real-time Customer Data Platform edición B2B {#b2b}](#real-time-customer-data-platform-b2b-edition-b2b)
-   - [Perfil del cliente en tiempo real {#profile}](#real-time-customer-profile-profile)
-   - [Fuentes {#sources}](#sources-sources)
+   - [Tableros](#dashboards)
+   - [Recopilación de datos](#data-collection)
+   - [[!DNL Data Prep]](#data-prep)
+   - [[!DNL Destinations]](#destinations)
+   - [Modelo de datos de experiencia (XDM)](#xdm)
+   - [Real-time Customer Data Platform edición B2B](#b2b)
+   - [Perfil del cliente en tiempo real](#profile)
+   - [Fuentes](#sources)
 
 ## Tableros {#dashboards}
 
@@ -187,7 +184,7 @@ Para obtener más información, consulte el documento sobre [conllevar concordan
 
 Para obtener una guía sobre cómo monitorizar el enriquecimiento de perfiles, consulte el documento sobre [supervisión del enriquecimiento de perfiles en la interfaz de usuario](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
 
-Para obtener instrucciones sobre el uso de cuentas relacionadas en definiciones de segmentos, consulte la guía sobre [Casos de uso de segmentación para Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts).
+Para obtener instrucciones sobre cómo configurar la coincidencia de posibles clientes con cuentas, consulte la [Guía de la interfaz de usuario del perfil de la cuenta](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
 
 Para obtener más información sobre CDP B2B Edition en tiempo real, consulte la [Resumen de CDP B2B en tiempo real](../../rtcdp/overview.md).
 
