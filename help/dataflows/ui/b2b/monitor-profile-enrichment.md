@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorización de trabajos de enriquecimiento de perfiles
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
+source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Utilice la variable [!UICONTROL Enriquecimiento de perfiles] tablero para compre
 
 En el [Interfaz de usuario de Platform](https://platform.adobe.com), seleccione **[!UICONTROL Monitorización]** desde el panel de navegación izquierdo para acceder a la [!UICONTROL Monitorización] tablero. En el selector de vista, seleccione **Flujo B2B** para ver los elementos de tablero específicos de [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  La variable [!UICONTROL Monitorización] tablero incluye las métricas básicas de la última ejecución correcta y el estado diario del trabajo de hasta 90 días en el pasado.
 
-## Enriquecimiento de perfiles de cuentas relacionadas (#related-accounts)
+## Enriquecimiento de perfiles de cuentas relacionadas {#related-accounts}
 
 La variable [!UICONTROL Cuentas relacionadas] tablero muestra las métricas básicas y el estado del trabajo diario específico del [Cuentas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) enriquecimiento de perfiles.
 
