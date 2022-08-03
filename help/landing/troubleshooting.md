@@ -219,4 +219,4 @@ A continuación se muestra una lista de guías de solución de problemas y docum
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] Guía de preguntas frecuentes y solución de problemas](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] y [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] guía de solución de problemas](../profile/troubleshooting.md) |
-| Entornos aislados | [API de Sandbox](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Guía de solución de problemas de los Simuladores para pruebas](../sandboxes/troubleshooting-guide.md) |
+| Zonas protegidas | [API de Sandbox](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Guía de solución de problemas de los Simuladores para pruebas](../sandboxes/troubleshooting-guide.md) |

@@ -6,8 +6,8 @@ description: Este documento enumera la tabla de contenido de los destinos de Ado
 feature: Destinations
 source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

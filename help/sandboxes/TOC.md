@@ -1,6 +1,6 @@
 ---
 audience: user
-user-guide-title: Ayuda sobre Sandboxes en Adobe Experience Platform
+user-guide-title: Ayuda sobre las zonas protegidas en Adobe Experience Platform
 breadcrumb-title: Guía de Sandboxes
 user-guide-description: Dividir una instancia de Platform en entornos virtuales para desarrollo, pruebas e implementación de aplicaciones.
 feature: Sandboxes
@@ -12,7 +12,7 @@ ht-degree: 46%
 ---
 
 
-# Entornos aislados {#sandbox}
+# Zonas protegidas {#sandbox}
 
 * [Información general sobre Sandboxes](home.md)
 * IU de Sandbox {#ui}

@@ -6,8 +6,8 @@ user-guide-description: Utilice SQL estándar para consultar datos en el lago de
 feature: Queries
 source-git-commit: 1fe657ac698dd4fcce84902d85b582a9ed7fd4ac
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 18%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

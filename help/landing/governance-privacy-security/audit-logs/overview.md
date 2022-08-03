@@ -39,7 +39,7 @@ La siguiente tabla indica qué acciones sobre qué recursos de se registran en l
 | [Consulta](../../../query-service/ui/overview.md) | <ul><li>Ejecutar</li></ul> |
 | [Plantilla de consulta](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Función (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Adición del usuario</li><li>Eliminar usuario</li></ul> |
-| [Entorno de pruebas](../../../sandboxes/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Restablecer</li><li>Eliminar</li></ul> |
+| [Zona protegida](../../../sandboxes/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Restablecer</li><li>Eliminar</li></ul> |
 | [Consulta programada](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para perfil</li></ul> |
 | [Segmento](../../../segmentation/home.md) | <ul><li>Crear</li><li>Eliminar</li><li>Activar segmento</li><li>Eliminación de segmentos</li></ul> |

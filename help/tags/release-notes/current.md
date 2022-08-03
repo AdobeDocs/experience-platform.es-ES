@@ -4,8 +4,8 @@ description: Las notas de la versión más recientes para etiquetas de Adobe Exp
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 58%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
