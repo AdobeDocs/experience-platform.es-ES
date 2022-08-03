@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Monitorización de trabajos de enriquecimiento de perfiles
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
+source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '634'
+ht-degree: 1%
 
 ---
 
-# Supervisar los trabajos de enriquecimiento de perfiles en la interfaz de usuario (#monitor-profile-enrich)
+# Supervisar los trabajos de enriquecimiento de perfiles en la interfaz de usuario {#monitor-profile-enrichment}
 
 Utilice la variable [!UICONTROL Enriquecimiento de perfiles] tablero para comprender si los trabajos de enriquecimiento de perfiles se ejecutaron y completaron correctamente, y para ver las métricas básicas para medir la eficacia de los enriquecimientos.
 
@@ -38,7 +38,7 @@ Las siguientes métricas están disponibles para trabajos de enriquecimiento de 
 | **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o procesado) del trabajo de cuentas relacionado. |
 | **[!UICONTROL Mensaje]** | Indica un mensaje de error o advertencia para un trabajo en particular ejecutado. |
 
-## Enriquecimiento de perfil coincidente de cuentas (#lead-to-account-match)
+## Enriquecimiento de perfil coincidente entre cuentas {#lead-to-account-matching}
 
 La variable [!UICONTROL Confrontación de posibles clientes con cuentas] tablero muestra las métricas básicas y el estado diario de ejecución del trabajo específico del [Confrontación de posibles clientes con cuentas](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) enriquecimiento de perfiles.
 
