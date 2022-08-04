@@ -5,18 +5,18 @@ title: Procesamiento de solicitudes de privacidad en el lago de datos
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes de acceso, exclusión de la venta o eliminación de sus datos personales según lo establecido en las normas legales y de privacidad de la organización. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en el lago de datos.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1428'
 ht-degree: 0%
 
 ---
 
-# Procesamiento de solicitudes de privacidad en [!DNL Data Lake]
+# Procesamiento de solicitudes de privacidad en el lago de datos
 
 Adobe Experience Platform [!DNL Privacy Service] procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según lo establecido en las normas legales y de privacidad de la organización.
 
-Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para los datos de clientes almacenados en la variable [!DNL Data Lake].
+Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en el lago de datos.
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Para obtener más información sobre áreas de nombres de identidad en [!DNL Exp
 
 ## Adición de datos de identidad a conjuntos de datos
 
-Al crear solicitudes de privacidad para la variable [!DNL Data Lake], se deben proporcionar valores de identidad válidos (y sus áreas de nombres asociadas) para cada cliente individual a fin de localizar sus datos y procesarlos en consecuencia. Por lo tanto, todos los conjuntos de datos sujetos a solicitudes de privacidad deben contener un descriptor de identidad en su esquema XDM asociado.
+Al crear solicitudes de privacidad para el lago de datos, se deben proporcionar valores de identidad válidos (y sus áreas de nombres asociadas) para cada cliente individual a fin de localizar sus datos y procesarlos en consecuencia. Por lo tanto, todos los conjuntos de datos sujetos a solicitudes de privacidad deben contener un descriptor de identidad en su esquema XDM asociado.
 
 >[!NOTE]
 >
@@ -138,9 +138,9 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del d
 
 >[!NOTE]
 >
->Esta sección explica cómo dar formato a las solicitudes de privacidad para la variable [!DNL Data Lake]. Se recomienda que revise la [[!DNL Privacy Service] IU](../privacy-service/ui/overview.md) o [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentación para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluido cómo dar formato correcto a los datos de identidad de usuario enviados en las cargas de solicitud.
+>Esta sección explica cómo dar formato a las solicitudes de privacidad del lago de datos. Se recomienda que revise la [[!DNL Privacy Service] IU](../privacy-service/ui/overview.md) o [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentación para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluido cómo dar formato correcto a los datos de identidad de usuario enviados en las cargas de solicitud.
 
-La siguiente sección describe cómo realizar solicitudes de privacidad para la variable [!DNL Data Lake] usando la variable [!DNL Privacy Service] IU o API.
+La siguiente sección describe cómo realizar solicitudes de privacidad para el lago de datos mediante el complemento [!DNL Privacy Service] IU o API.
 
 >[!IMPORTANT]
 >
@@ -148,17 +148,17 @@ La siguiente sección describe cómo realizar solicitudes de privacidad para la 
 
 ### Uso de la interfaz de usuario
 
-Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Lago de datos AEP]** under **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en la variable [!DNL Data Lake].
+Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Lago de datos AEP]** under **[!UICONTROL Productos]** para procesar trabajos para datos almacenados en el lago de datos.
 
 ![Imagen que muestra el producto del lago de datos seleccionado en el cuadro de diálogo de creación de solicitud de privacidad](./images/privacy/product-value.png)
 
 ### Uso de la API
 
-Al crear solicitudes de trabajo en la API, cualquier `userIDs` que se proporcionan deben utilizar un `namespace` y `type` según el almacén de datos al que se apliquen. ID para [!DNL Data Lake] debe usarse `unregistered` para su `type` y un `namespace` que coincida con uno de los valores [etiquetas de privacidad](#privacy-labels) que se han agregado a conjuntos de datos aplicables.
+Al crear solicitudes de trabajo en la API, cualquier `userIDs` que se proporcionan deben utilizar un `namespace` y `type` según el almacén de datos al que se apliquen. Los ID del lago de datos deben utilizar `unregistered` para su `type` y un `namespace` que coincida con uno de los valores [etiquetas de privacidad](#privacy-labels) que se han agregado a conjuntos de datos aplicables.
 
-Además, la variable `include` matriz de la carga útil de solicitud debe incluir los valores de producto para los diferentes almacenes de datos a los que se realiza la solicitud. Al realizar solicitudes para [!DNL Data Lake], la matriz debe incluir el valor `aepDataLake`.
+Además, la variable `include` matriz de la carga útil de solicitud debe incluir los valores de producto para los diferentes almacenes de datos a los que se realiza la solicitud. Al realizar solicitudes al lago de datos, la matriz debe incluir el valor `aepDataLake`.
 
-La siguiente solicitud crea un nuevo trabajo de privacidad para el [!DNL Data Lake], utilizando el `email_label` espacio de nombres. También incluye el valor del producto para la variable [!DNL Data Lake] en el `include` matriz:
+La siguiente solicitud crea un nuevo trabajo de privacidad para el lago de datos, utilizando el `email_label` espacio de nombres. También incluye el valor del producto para el lago de datos en el `include` matriz:
 
 ```shell
 curl -X POST \
@@ -205,19 +205,19 @@ curl -X POST \
 
 ## Eliminación del procesamiento de solicitudes
 
-When [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Privacy Service], [!DNL Platform] envía confirmación a [!DNL Privacy Service] que la solicitud se ha recibido y los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del [!DNL Data Lake] en un plazo de siete días. Durante esa ventana de siete días, los datos se eliminan de forma suave y, por lo tanto, ningún usuario puede acceder a ellos. [!DNL Platform] servicio.
+When [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Privacy Service], [!DNL Platform] envía confirmación a [!DNL Privacy Service] que la solicitud se ha recibido y los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del lago de datos en un plazo de siete días. Durante esa ventana de siete días, los datos se eliminan de forma suave y, por lo tanto, ningún usuario puede acceder a ellos. [!DNL Platform] servicio.
 
-En futuras versiones, [!DNL Platform] enviará confirmación a [!DNL Privacy Service] después de eliminar físicamente los datos.
+Si también se incluye `ProfileService` o `identity` en la solicitud de privacidad, sus datos asociados se gestionan por separado. Consulte la sección sobre [eliminación del procesamiento de solicitudes para el perfil](../profile/privacy.md#delete) para obtener más información.
 
 ## Pasos siguientes
 
-Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad para la variable [!DNL Data Lake]. Se recomienda seguir leyendo la documentación proporcionada en esta guía para comprender mejor cómo administrar los datos de identidad y crear trabajos de privacidad.
+Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad para el lago de datos. Se recomienda seguir leyendo la documentación proporcionada en esta guía para comprender mejor cómo administrar los datos de identidad y crear trabajos de privacidad.
 
 Consulte el documento en [procesamiento de solicitudes de privacidad para Perfil del cliente en tiempo real](../profile/privacy.md) para ver los pasos sobre el procesamiento de solicitudes de privacidad para la variable [!DNL Profile] tienda.
 
 ## Apéndice
 
-La siguiente sección contiene información adicional para procesar solicitudes de privacidad en la variable [!DNL Data Lake].
+La siguiente sección contiene información adicional para procesar solicitudes de privacidad en el lago de datos.
 
 ### Etiquetado de campos anidados de tipo mapa {#nested-maps}
 

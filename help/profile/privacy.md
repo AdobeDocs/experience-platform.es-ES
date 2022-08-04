@@ -5,9 +5,9 @@ title: Procesamiento de solicitudes de privacidad en perfil del cliente en tiemp
 type: Documentation
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes de acceso, exclusión de la venta o eliminación de sus datos personales, según lo establecido en numerosas normas de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el Perfil del cliente en tiempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 
 >[!NOTE]
 >
->Esta guía solo explica cómo realizar solicitudes de privacidad para el almacén de datos de perfil en Experience Platform. Si también planea realizar solicitudes de privacidad para el lago de datos de Platform, consulte la guía de [procesamiento de solicitudes de privacidad en Data Lake](../catalog/privacy.md) además de este tutorial.
+>Esta guía solo explica cómo realizar solicitudes de privacidad para el almacén de datos de perfil en Experience Platform. Si también planea realizar solicitudes de privacidad para el lago de datos de Platform, consulte la guía de [procesamiento de solicitudes de privacidad en el lago de datos](../catalog/privacy.md) además de este tutorial.
 >
 >Para ver los pasos sobre cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -111,7 +111,7 @@ curl -X POST \
 
 ### Uso de la interfaz de usuario
 
-Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Lago de datos AEP]** y/o **[!UICONTROL Perfil]** under **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en la variable [!DNL Data Lake] o [!DNL Real-time Customer Profile], respectivamente.
+Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Lago de datos AEP]** y/o **[!UICONTROL Perfil]** under **[!UICONTROL Productos]** para procesar trabajos de datos almacenados en el lago de datos o [!DNL Real-time Customer Profile], respectivamente.
 
 ![Se está creando una solicitud de trabajo de acceso en la interfaz de usuario, con la opción Perfil seleccionada en Productos](./images/privacy/product-value.png)
 
@@ -133,9 +133,18 @@ Para garantizar que sus solicitudes de privacidad procesen todos los atributos d
 
 ## Eliminación del procesamiento de solicitudes {#delete}
 
-When [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Privacy Service], [!DNL Platform] envía confirmación a [!DNL Privacy Service] que la solicitud se ha recibido y los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del [!DNL Data Lake] o [!DNL Profile] almacene una vez finalizado el trabajo de privacidad. Mientras el trabajo de eliminación sigue procesándose, los datos se eliminan de forma suave y, por lo tanto, ningún usuario puede acceder a ellos [!DNL Platform] servicio. Consulte la [[!DNL Privacy Service] documentación](../privacy-service/home.md#monitor) para obtener más información sobre el seguimiento del estado de los trabajos.
+When [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Privacy Service], [!DNL Platform] envía confirmación a [!DNL Privacy Service] que la solicitud se ha recibido y los datos afectados se han marcado para su eliminación. Los registros se eliminan una vez que se haya completado el trabajo de privacidad.
 
-En futuras versiones, [!DNL Platform] enviará confirmación a [!DNL Privacy Service] después de eliminar físicamente los datos.
+Dependiendo de si también ha incluido el servicio de identidad (`identity`) y el lago de datos (`aepDataLake`) como productos en su solicitud de privacidad para Perfil (`ProfileService`), diferentes conjuntos de datos relacionados con el perfil se eliminan del sistema en momentos potencialmente diferentes:
+
+| Productos incluidos | Efectos |
+| --- | --- |
+| `ProfileService` only | El perfil se elimina inmediatamente en cuanto Platform envía la confirmación de que se recibió la solicitud de eliminación. Sin embargo, el gráfico de identidad del perfil sigue conservándose y el perfil puede reconstruirse potencialmente a medida que se incorporen nuevos datos con las mismas identidades. Los datos asociados con el perfil también permanecen en el lago de datos. |
+| `ProfileService` y `identity` | El perfil y su gráfico de identidad asociado se eliminan inmediatamente en cuanto Platform envía la confirmación de que se recibió la solicitud de eliminación. Los datos asociados con el perfil permanecen en el lago de datos. |
+| `ProfileService` y `aepDataLake` | El perfil se elimina inmediatamente en cuanto Platform envía la confirmación de que se recibió la solicitud de eliminación. Sin embargo, el gráfico de identidad del perfil sigue conservándose y el perfil puede reconstruirse potencialmente a medida que se incorporen nuevos datos con las mismas identidades.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando, los datos asociados con el perfil se eliminan de forma suave y, por lo tanto, no es accesible para ninguno [!DNL Platform] servicio. Una vez completado el trabajo, los datos se eliminan completamente del lago de datos. |
+| `ProfileService`, `identity`, y `aepDataLake` | El perfil y su gráfico de identidad asociado se eliminan inmediatamente en cuanto Platform envía la confirmación de que se recibió la solicitud de eliminación.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando, los datos asociados con el perfil se eliminan de forma suave y, por lo tanto, no es accesible para ninguno [!DNL Platform] servicio. Una vez completado el trabajo, los datos se eliminan completamente del lago de datos. |
+
+Consulte la [[!DNL Privacy Service] documentación](../privacy-service/home.md#monitor) para obtener más información sobre el seguimiento del estado de los trabajos.
 
 ### Solicitudes de perfil frente a solicitudes de identidad {#profile-v-identity}
 
@@ -154,4 +163,4 @@ El Privacy Service solo puede procesar [!DNL Profile] datos que utilizan una dir
 
 Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad en [!DNL Experience Platform]. Se recomienda seguir leyendo la documentación proporcionada en esta guía para comprender mejor cómo administrar los datos de identidad y crear trabajos de privacidad.
 
-Para obtener información sobre el procesamiento de solicitudes de privacidad de [!DNL Platform] recursos no utilizados por [!DNL Profile], consulte el documento en [procesamiento de solicitudes de privacidad en Data Lake](../catalog/privacy.md).
+Para obtener información sobre el procesamiento de solicitudes de privacidad de [!DNL Platform] recursos no utilizados por [!DNL Profile], consulte el documento en [procesamiento de solicitudes de privacidad en el lago de datos](../catalog/privacy.md).
