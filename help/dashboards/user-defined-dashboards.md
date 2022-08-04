@@ -2,9 +2,9 @@
 title: Tableros definidos por el usuario
 description: Aprenda a crear y administrar tableros personalizados donde puede crear, agregar y editar widgets personalizados para visualizar métricas clave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ ht-degree: 0%
 
 Los paneles de Adobe Experience Platform le ayudan a acelerar la información y a personalizar la visualización mediante la función de paneles definida por el usuario. Esta función le permite crear y administrar tableros personalizados en los que puede crear, agregar y editar widgets personalizados para visualizar métricas clave relevantes para su organización.
 
-## Primeros pasos
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
-Para ver los tableros en Adobe Experience Platform debe tener habilitados los permisos adecuados. Lea el [documentación de permisos de tableros](./permissions.md#available-permissions) para aprender a otorgar a los usuarios la capacidad de ver, editar y actualizar tableros de Experience Platform mediante Adobe Admin Console. Si su organización no tiene privilegios de administrador, póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+## Getting started
+
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## Crear tableros personalizados
 
 Para crear un tablero personalizado, primero, vaya al inventario del tablero. Select **[!UICONTROL Tableros]** desde la navegación izquierda de la interfaz de usuario de Platform seguida de **[!UICONTROL Crear tablero]**.
 
-Para obtener más información sobre los paneles preconfigurados disponibles, consulte la [información general del inventario del panel](./inventory.md).
+![El inventario de tableros con Tableros en el panel de navegación izquierdo y &quot;Crear tablero&quot; resaltado.](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->Al agregar un tablero personalizado, la lista de tableros preconfigurados se elimina del inventario de tableros. En su lugar, el inventario de tableros consta únicamente de tableros definidos por el usuario.
-
-![El inventario del tablero con &quot;Crear tablero&quot; resaltado.](./images/user-defined-dashboards/create-dashboard.png)
+Antes de agregar un tablero personalizado, el inventario de tableros está vacío y muestra &quot;No se encontraron tableros&quot;. mensaje. Una vez creados, todos los tableros definidos por el usuario se enumeran en el inventario de tableros.
 
 La variable [!UICONTROL Crear tablero] se abre. Escriba un nombre descriptivo y reconocible para la colección de widgets que desee crear y seleccione **[!UICONTROL Guardar]**.
 
@@ -85,9 +83,9 @@ El modelo de datos y la tabla seleccionada actualmente se muestran en la parte s
 >
 >Puede cambiar el modelo de datos seleccionado seleccionando el icono de lápiz (![Icono de lápiz.](./images/user-defined-dashboards/edit-icon.png)) en el carril izquierdo.
 
-Seleccione los puntos suspensivos (`...`) junto al nombre de un atributo para agregar un atributo al eje X o al eje Y.
+Seleccione el icono añadir (./images/user-defined-dashboards/add-icon.png) al lado de un nombre de atributo para agregar un atributo al eje X o al eje Y.
 
-![El compositor de utilidades con la lista desplegable de elipses resaltada para agregar atributos a un eje de utilidades.](./images/user-defined-dashboards/attributes-dropdown.png)
+![El compositor de utilidades con la lista desplegable de iconos de adición resaltada para agregar atributos a un eje de utilidades.](./images/user-defined-dashboards/attributes-dropdown.png)
 
 A continuación, seleccione el tipo de gráfico o de gráfico en el [!UICONTROL Marcas] para generar una visualización de vista previa de la configuración actual del widget. En el [!UICONTROL Propiedades] en el lado derecho de la pantalla, escriba un nombre para el widget en la [!UICONTROL Título de la utilidad] campo de texto.
 
