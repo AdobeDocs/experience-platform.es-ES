@@ -3,9 +3,10 @@ keywords: Experience Platform;inicio;temas populares;
 title: Guía de solución de problemas de preparación de datos
 topic-legacy: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre la preparación de datos de Adobe Experience Platform.
-source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
+exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
+source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -25,3 +26,7 @@ A continuación se muestra una lista de las preguntas más frecuentes sobre [!DN
 Si las columnas están marcadas como **Requerido** se anulan debido a problemas de transformación, por lo que no se ingerirá la fila. Cuando la incorporación parcial de datos está habilitada, puede establecer el umbral de dichos rechazos antes de que falle todo el flujo. Si el atributo anulado no afectó a ninguna validación de nivel de esquema, la fila se seguirá incorporando.
 
 También se rechazará cualquier fila que no sea válida aunque no tenga errores de transformación. Por ejemplo, un flujo de ingesta de datos puede tener una asignación de paso a través (sin lógica de transformación) a un campo requerido y no hay ningún valor entrante para ese atributo. Esta fila se rechazará.
+
+### ¿Cómo puedo escapar de caracteres especiales en un campo?
+
+Puede omitir los caracteres especiales de un campo utilizando `${...}`. Sin embargo, los archivos JSON que contienen campos con un punto (`.`) no son compatibles con este mecanismo. Cuando interactúa con jerarquías, si un atributo secundario tiene un punto (`.`), debe utilizar una barra invertida (`\`) para omitir caracteres especiales. Por ejemplo, `address` es un objeto que contiene el atributo `street.name`, esto puede denominarse `address.street\.name` en lugar de `address.street.name`.
