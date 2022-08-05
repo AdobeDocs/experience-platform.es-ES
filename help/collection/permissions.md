@@ -2,10 +2,10 @@
 title: Administración de permisos para la recopilación de datos en el Experience Platform
 description: Información general de alto nivel sobre cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 58b8446d6a20ac797ac004b19bdbfdb10f692647
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 7%
+source-wordcount: '1311'
+ht-degree: 6%
 
 ---
 
@@ -70,19 +70,36 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 >
 >Para obtener más información sobre cómo afectan estos permisos a las capacidades de las etiquetas, incluidas las estrategias de administración de escenarios comunes, consulte la documentación sobre etiquetas en [permisos de usuario](../tags/ui/administration/user-permissions.md).
 
-## Administrar permisos para la recopilación de datos de Adobe Experience Platform {#manage}
+## Administración de permisos {#manage}
 
->[!IMPORTANT]
->
->Esta sección solo trata sobre cómo administrar permisos para el producto de recopilación de datos de Adobe Experience Platform en Admin Console. Sin embargo, los pasos para administrar permisos en el producto Adobe Experience Platform son similares.
->
->Consulte la [guía de interfaz de usuario de control de acceso](../access-control/ui/overview.md) para obtener instrucciones detalladas sobre la administración de permisos de Platform. Según los SKU de producto a los que tenga acceso su organización, es posible que no tenga todos los permisos disponibles.
+Como se describe en la sección anterior, los permisos para la recopilación de datos se administran mediante dos designaciones de productos en Admin Console: **Adobe Experience Platform** y **Recopilación de datos de Adobe Experience Platform**.
 
-Para administrar los permisos de la recopilación de datos, inicie sesión en [Admin Console](https://adminconsole.adobe.com/) y seleccione **[!UICONTROL Productos]** desde la barra de navegación superior. Desde aquí, seleccione la tarjeta para **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**.
+Para administrar estos permisos, inicie sesión en [Admin Console](https://adminconsole.adobe.com/) y seleccione **[!UICONTROL Productos]** desde la barra de navegación superior. Desde aquí, seleccione la tarjeta de producto para los permisos que desea configurar. Consulte las subsecciones siguientes para ver los pasos sobre cómo administrar los permisos relevantes en cada producto en el Admin Console:
+
+* [Permisos de Adobe Experience Platform](#manage-platform)
+* [Permisos de recopilación de datos de Adobe Experience Platform](#manage-collection)
+
+### Administrar permisos en Adobe Experience Platform {#manage-platform}
+
+En el **[!UICONTROL Productos]** ver en Admin Console, seleccione **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**. Seleccione el perfil de producto para el que desea editar los permisos y, a continuación, vaya a la **[!UICONTROL Permisos]** pestaña .
+
+Para acceder a las funciones de recopilación de datos, debe habilitar todos los permisos en la variable **[!UICONTROL Sandboxes]**, **[!UICONTROL Modelado de datos]**, **[!UICONTROL Identity Management]** y **[!UICONTROL Recopilación de datos]** categorías.
+
+![Imagen que muestra la tarjeta de producto de la recopilación de datos en el Admin Console](./images/permissions/platform-permission-card.png)
+
+Consulte la [guía de interfaz de usuario de control de acceso](../access-control/ui/overview.md) para obtener instrucciones detalladas sobre la administración de permisos de Platform.
+
+>[!NOTE]
+>
+>Según los SKU de producto a los que tenga acceso su organización, es posible que no tenga a su disposición todos los permisos de la plataforma.
+
+### Administrar permisos en la recopilación de datos de Adobe Experience Platform {#manage-collection}
+
+En el **[!UICONTROL Productos]** ver en Admin Console, seleccione **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**.
 
 ![Imagen que muestra la tarjeta de producto de la recopilación de datos en el Admin Console](./images/permissions/data-collection-card.png)
 
-### Seleccionar o crear un perfil de producto
+#### Seleccionar o crear un perfil de producto
 
 La siguiente pantalla muestra una lista de perfiles de producto disponibles para la recopilación de datos en su organización. El perfil predeterminado es **[!DNL Default Data Collection All Access]**. Si lo desea, puede editar el perfil de producto predeterminado o seleccionar **[!UICONTROL Nuevo perfil]** para crear uno. Si tiene varias funciones o grupos de usuarios en su organización que requieren diferentes niveles de acceso, debe crear un perfil de producto independiente para cada uno de ellos.
 
@@ -92,7 +109,7 @@ Después de seleccionar o crear un perfil de producto, puede usar la variable **
 
 ![Imagen que muestra la ficha permisos de un Admin Console de perfiles de producto](./images/permissions/edit-permission-categories.png)
 
-### Editar permisos para el perfil del producto {#edit-permissions}
+#### Editar permisos para el perfil del producto {#edit-permissions}
 
 Al editar permisos para un perfil, los permisos disponibles se enumeran en la columna izquierda, mientras que los que se incluyen en el perfil se enumeran en la columna derecha. Seleccione los permisos enumerados para moverlos entre cualquiera de las columnas.
 
@@ -110,7 +127,7 @@ La vista de perfil del producto vuelve a aparecer con los permisos añadidos ref
 
 ![Imagen que muestra los permisos añadidos para el perfil del producto](./images/permissions/permissions-added.png)
 
-### Asignación de usuarios al perfil de producto {#assign-users}
+#### Asignación de usuarios al perfil de producto {#assign-users}
 
 Para asignar usuarios al perfil de producto (y otorgarles los permisos configurados del perfil), seleccione la opción **[!UICONTROL Usuarios]** , seguido de **[!UICONTROL Agregar usuario]**.
 
