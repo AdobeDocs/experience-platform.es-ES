@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;asignación de csv;asignaci
 title: Guía de la interfaz de usuario de preparación de datos
 description: Este documento proporciona instrucciones sobre cómo utilizar las funciones de preparación de datos en la interfaz de usuario de Platform para asignar archivos CSV a un esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: edef8843c03282774991f30220504ece97af52cf
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1845'
 ht-degree: 1%
 
 ---
@@ -149,7 +149,7 @@ Cuando termine, seleccione el icono de esquema para cerrar la interfaz de esquem
 
 #### Campos calculados {#calculated-fields}
 
-Los campos calculados permiten que se creen valores en función de los atributos del esquema de entrada. Estos valores se pueden asignar a atributos en el esquema de destino y se les puede proporcionar un nombre y una descripción para facilitar la referencia.
+Los campos calculados permiten que se creen valores en función de los atributos del esquema de entrada. Estos valores se pueden asignar a atributos en el esquema de destino y se les puede proporcionar un nombre y una descripción para facilitar la referencia. Los campos calculados tienen una longitud máxima de 4096 caracteres.
 
 Para crear un campo calculado, seleccione **[!UICONTROL Nuevo tipo de campo]** y, a continuación, seleccione **[!UICONTROL Añadir campo calculado]**
 
