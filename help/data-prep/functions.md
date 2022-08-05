@@ -5,7 +5,7 @@ title: Funciones de asignación de preparación de datos
 topic-legacy: overview
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 3%
@@ -25,7 +25,7 @@ Si un nombre de campo no sigue esta convención, el nombre de campo debe ajustar
 Además, si el nombre de un campo es **any** de las siguientes palabras clave reservadas, debe envolverse con `${}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
 ```
 
 Se puede acceder a los datos de los subcampos mediante la notación de puntos. Por ejemplo, si había un `name` para acceder al `firstName` campo, utilice `name.firstName`.
