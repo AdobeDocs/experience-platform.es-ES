@@ -1,9 +1,10 @@
 ---
 title: Prácticas recomendadas sobre la creación
 description: Conozca qué reglas y sugerencias debe seguir al crear su página de documentación de destino, para asegurarse de que cumple los estándares de calidad de la documentación de Adobe Experience Platform.
-source-git-commit: 35e5c388e9572a3b27ec4bce55e766725936eda4
+exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,15 @@ Esta página describe las reglas que debe seguir cuando [creación de la documen
 * No incluya observaciones y estimaciones en la documentación del producto.
 * En la documentación de Experience Platform, los autores de Adobes utilizan **formato negrita** para hacer referencia a los controles de la interfaz de usuario, haga lo siguiente:
    * Vaya a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione **[!UICONTROL Catálogo]** pestaña . Ver un ejemplo de cómo se documentan los controles de la interfaz de usuario en un [tutorial de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+
+## Estilo de escritura
+
+>[!IMPORTANT]
+>
+>Lectura [Guía de escritura para la documentación de Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) antes de comenzar a crear la página de documentación de destino.
+
+* Mantenga sus frases cortas y llegue al punto rápidamente. Si la oración tiene más de 20 palabras o usa varias comas, considere separarla en oraciones separadas. Las frases de más de 20 palabras pueden ser especialmente desafiantes para los lectores.
+* No seas demasiado educado. Evite utilizar &quot;please&quot; (por favor) o &quot;do...&quot; (por favor). en la documentación técnica.
 
 ## Vinculación {#linking}
 
