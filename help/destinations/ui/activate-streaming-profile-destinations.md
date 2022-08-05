@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de exportación de perfil de flujo
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles de flujo continuo.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -29,15 +29,15 @@ Para activar datos en destinos, debe haber [conectado a un destino](./connect-de
 
 1. Vaya a **[!UICONTROL Conexiones > Destinos]** y seleccione **[!UICONTROL Catálogo]** pestaña .
 
-   ![Ficha Catálogo de destino](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![Imagen que muestra la pestaña del catálogo de destino.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
 1. Select **[!UICONTROL Activar segmentos]** en la tarjeta correspondiente al destino en el que desea activar los segmentos, como se muestra en la imagen siguiente.
 
-   ![Botón Activar segmentos](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![Imagen que resalta el control de activación de segmentos en la pestaña del catálogo de destinos.](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
 1. Seleccione la conexión de destino que desee utilizar para activar los segmentos y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
-   ![Seleccionar destino](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![Imagen que muestra una selección de dos destinos a los que puede conectarse.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. Mover a la siguiente sección a [seleccione sus segmentos](#select-segments).
 
@@ -45,11 +45,11 @@ Para activar datos en destinos, debe haber [conectado a un destino](./connect-de
 
 Utilice las casillas de verificación a la izquierda de los nombres de los segmentos para seleccionar los segmentos que desea activar en el destino y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
-![Seleccionar segmentos](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+![Imagen que resalta la selección de las casillas de verificación en el paso Seleccionar segmentos del flujo de trabajo de activación.](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
 ## Seleccionar atributos de perfil {#select-attributes}
 
-Seleccione los atributos de perfil que desea enviar al destino de destino.
+En el **[!UICONTROL Asignación]** , seleccione los atributos de perfil que desea enviar al destino de destino.
 
 >[!NOTE]
 >
@@ -59,19 +59,19 @@ Las exportaciones de archivos variarán de las siguientes maneras, en función d
 * Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales posteriores.
 * Si la variable `segmentMembership.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
 
-![atributos recomendados](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
+![Imagen que muestra los atributos recomendados y precargados en el paso de asignación.](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. En el **[!UICONTROL Seleccionar atributos]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
 
-   ![Añadir nueva asignación](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![Imagen que resalta el nuevo control de campo en el paso de asignación.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. Seleccione la flecha a la derecha del **[!UICONTROL Campo Esquema]** entrada.
 
-   ![Seleccionar campo de origen](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![Imagen que resalta el modo de seleccionar un campo de origen en el paso de asignación.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
 1. En el **[!UICONTROL Seleccionar campo]** , seleccione los atributos XDM que desea enviar al destino y, a continuación, elija **[!UICONTROL Select]**.
 
-   ![Seleccionar página de campo de origen](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Imagen que muestra una selección de campos XDM que puede seleccionar como campos de origen.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
 1. Para agregar más asignaciones, repita los pasos del 1 al 3 y, a continuación, seleccione **[!UICONTROL Siguiente]**.
@@ -84,11 +84,11 @@ En el **[!UICONTROL Consulte]** , puede ver un resumen de su selección. Select 
 >
 >En este paso, Adobe Experience Platform comprueba las infracciones de la directiva de uso de datos. A continuación se muestra un ejemplo en el que se infringe una política. No puede completar el flujo de trabajo de activación de segmentos hasta que no haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de políticas, consulte [Aplicación de políticas](../../rtcdp/privacy/data-governance-overview.md#enforcement) en la sección documentación de control de datos .
 
-![violación de la política de datos](../assets/common/data-policy-violation.png)
+![Imagen que muestra una infracción de política de datos en el paso de revisión.](../assets/common/data-policy-violation.png)
 
 Si no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
 
-![Consulte](../assets/ui/activate-streaming-profile-destinations/review.png)
+![Imagen que muestra el paso de revisión del flujo de trabajo de activación.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ## Verificación de la activación de segmentos {#verify}
 
