@@ -2,10 +2,10 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/Destinations`.
 title: Operaciones de extremo de la API de destinos
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2571'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

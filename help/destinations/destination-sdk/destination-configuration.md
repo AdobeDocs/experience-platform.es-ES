@@ -2,10 +2,10 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino de flujo continuo para el Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '1888'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -285,7 +285,7 @@ Esta opción le permite:
 
 >[!NOTE]
 >
->Al utilizar la opción de agregación configurable para el destino, tenga en cuenta los valores mínimo y máximo que puede utilizar para los dos parámetros `maxBatchAgeInSecs` (mínimo 1 800 y máximo 3 600) y `maxNumEventsInBatch` (mínimo 1 000, máximo 10 000).
+>Al utilizar la opción de agregación configurable para el destino, tenga en cuenta los valores mínimo y máximo que puede utilizar para los dos parámetros `maxBatchAgeInSecs` (mínimo 1.800 y máximo 3.600) y `maxNumEventsInBatch` (mínimo 1.000, máximo 10.000).
 
 Para obtener explicaciones detalladas de los parámetros de agregación, consulte la [Operaciones de extremo de la API de destinos](./destination-configuration-api.md) página de referencia, donde se describe cada parámetro.
 

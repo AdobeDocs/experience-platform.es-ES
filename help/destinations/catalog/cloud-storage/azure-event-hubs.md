@@ -3,9 +3,9 @@ keywords: Destino del centro de eventos de Azure;centro de eventos de azure;azur
 title: Conexión de los centros de eventos de Azure
 description: Cree una conexión saliente en tiempo real con su [!DNL Azure Event Hubs] almacenamiento para transmitir datos desde el Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2002'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
