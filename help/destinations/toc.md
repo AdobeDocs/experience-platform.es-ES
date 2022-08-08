@@ -4,10 +4,10 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
+source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '943'
+ht-degree: 7%
 
 ---
 
@@ -210,6 +210,7 @@ ht-degree: 0%
          * [(Beta) Configurar un destino de Amazon S3 con opciones de formato y nombre de archivo personalizados](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [(Beta) Configurar un destino de almacenamiento de Azure Blob con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
          * [(Beta) Configurar un destino de almacenamiento de Azure Data Lake con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [(Beta) Configurar un destino de zona de aterrizaje de datos (DLZ) con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [(Beta) Configurar un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Referencia {#reference}
       * [Política de limitación de velocidad y reintentos para destinos de flujo continuo](./destination-sdk/rate-limiting-retry-policy.md)
