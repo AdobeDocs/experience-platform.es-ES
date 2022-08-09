@@ -3,9 +3,9 @@ keywords: Conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión facebook
 description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1859'
 ht-degree: 1%
 
 ---
@@ -165,7 +165,6 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origen de la audiencia"
 >abstract="Elija cómo se recopilaron originalmente los datos del cliente en el segmento. Los datos se mostrarán en Facebook cuando un usuario sea el objetivo del segmento"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Más información en la documentación"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

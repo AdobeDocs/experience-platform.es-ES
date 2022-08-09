@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de exportación de perfiles en lot
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '2544'
+source-wordcount: '2520'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,6 @@ Utilice las casillas de verificación a la izquierda de los nombres de los segme
 >id="platform_destinations_activate_schedule"
 >title="Programación"
 >abstract="Utilice el icono de lápiz para establecer el tipo de exportación del archivo (archivos completos o archivos incrementales) y la frecuencia de exportación."
->additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Más información en la documentación"
 
 [!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube en forma de [!DNL CSV] archivos. En el **[!UICONTROL Programación]** , puede configurar la programación y los nombres de archivo para cada segmento que exporte. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
 
@@ -221,7 +220,6 @@ Las exportaciones de archivos variarán de las siguientes maneras, en función d
 >id="platform_destinations_activate_mandatorykey"
 >title="Acerca de los atributos obligatorios"
 >abstract="Seleccione los atributos de esquema XDM que deben incluir todos los perfiles exportados. Los perfiles sin la clave obligatoria no se exportan al destino. Al no seleccionar una clave obligatoria, se exportan todos los perfiles cualificados independientemente de sus atributos."
->additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Más información en la documentación"
 
 Un atributo obligatorio es una casilla de verificación habilitada por el usuario que garantiza que todos los registros de perfil contengan el atributo seleccionado. Por ejemplo: todos los perfiles exportados contienen una dirección de correo electrónico. &#x200B;
 
@@ -237,7 +235,6 @@ Se recomienda que uno de los atributos sea un [identificador único](../../desti
 >id="platform_destinations_activate_deduplicationkey"
 >title="Acerca de las claves de deduplicación"
 >abstract="Elimine varios registros del mismo perfil en los archivos de exportación seleccionando una clave de deduplicación. Seleccione un solo espacio de nombres o hasta dos atributos de esquema XDM como clave de deduplicación. Si no se selecciona una clave de deduplicación, es posible que se dupliquen entradas de perfil en los archivos de exportación."
->additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Más información en la documentación"
 
 Una clave de deduplicación es una clave principal definida por el usuario que determina la identidad por la cual los usuarios desean que sus perfiles se dedupliquen. &#x200B;
 

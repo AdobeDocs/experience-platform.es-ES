@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de exportación de segmentos de fl
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de flujo continuo de segmento.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,6 @@ Algunos destinos de flujo continuo de segmentos requieren que seleccione atribut
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformación"
 >abstract="Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform los hash automáticamente en la activación."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="Más información en la documentación"
 
 Cuando asigna atributos de origen sin hash a atributos de destino que el destino espera que tengan un hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la casilla **Aplicar transformación** para que Adobe Experience Platform hash automáticamente los atributos de origen al activarlos.
 
@@ -95,7 +94,6 @@ Cuando asigna atributos de origen sin hash a atributos de destino que el destino
 >id="platform_destinations_activate_enddate"
 >title="Fecha final"
 >abstract="No está disponible la adición de una fecha de finalización para la programación de segmentos."
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="Más información en la documentación"
 
 De forma predeterminada, la variable [!UICONTROL Programación de segmentos] muestra solo los segmentos recién seleccionados que eligió en el flujo de activación actual.
 
