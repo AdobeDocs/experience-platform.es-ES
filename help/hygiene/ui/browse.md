@@ -2,9 +2,9 @@
 title: Examinar órdenes de trabajo de higiene de los datos
 description: Aprenda a ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: e57b5ec6c6234d4d1fe22f8d03c70d6bd9c02f0f
+source-git-commit: 525e2520bb6140b00cfb7e68579eb2d0288ad9b1
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '485'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Seleccione el icono de canal (![Imagen del icono del canal](../images/ui/browse/
 
 | Filtro | Descripción |
 | --- | --- |
-| [!UICONTROL Estado] | Filtre en función del estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completado]**: El trabajo se ha completado.</li><li>**[!UICONTROL Pendiente]**: El trabajo se ha creado, pero aún no se ha ejecutado. A [solicitud de tiempo de vida (TTL) del conjunto de datos](./ttl.md) asume este estado antes de la fecha de eliminación programada. Una vez que llega la fecha de eliminación, el estado se actualiza a [!UICONTROL En ejecución] a menos que el trabajo se cancele de antemano.</li><li>**[!UICONTROL En ejecución]**: El trabajo se ha iniciado y se está procesando.</li><li>**[!UICONTROL Cancelado]**: El trabajo se ha cancelado como parte de una solicitud de usuario manual.</li></ul> |
+| [!UICONTROL Estado] | Filtre en función del estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completado]**: El trabajo se ha completado.</li><li>**[!UICONTROL Pendiente]**: El trabajo se ha creado, pero aún no se ha ejecutado. A [solicitud de tiempo de vida (TTL) del conjunto de datos](./ttl.md) asume este estado antes de la fecha de eliminación programada. Una vez que llega la fecha de eliminación, el estado se actualiza a [!UICONTROL En ejecución] a menos que el trabajo se cancele de antemano.</li><li>**[!UICONTROL En ejecución]**: La solicitud TTL se ha iniciado y se está procesando.</li><li>**[!UICONTROL Cancelado]**: El trabajo se ha cancelado como parte de una solicitud de usuario manual.</li></ul> |
 | [!UICONTROL Fecha de creación] | Filtre según el momento en que se realizó la orden de trabajo. |
 | [!UICONTROL Fecha de caducidad] | Filtre las solicitudes TTL en función de la fecha de eliminación programada para el conjunto de datos en cuestión. |
 | [!UICONTROL Fecha de actualización] | Filtre las solicitudes TTL en función del momento en el que se actualizó por última vez la orden de trabajo. Las creaciones y caducidades de TTL se cuentan como actualizaciones. |
