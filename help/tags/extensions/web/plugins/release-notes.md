@@ -1,14 +1,23 @@
 ---
 title: Notas de la versión de la extensión Common Analytics Plugins
-description: Últimas notas de la versión de la extensión de etiqueta de complementos de Analytics comunes en Adobe Experience Platform.
-source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
+description: Últimas notas de la versión de la extensión de etiquetas Common Analytics Plugins en Adobe Experience Platform.
+exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
+source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 92%
+source-wordcount: '329'
+ht-degree: 93%
 
 ---
 
 # Notas de la versión de Common Analytics Plugins
+
+## 03 de junio de 2022
+
+### Extensión de complementos de Analytics comunes 3.0.7
+
+#### Funcionalidades
+
+Los complementos que establecen cookies ahora utilizan el indicador seguro
 
 ## 23 de junio de 2021
 
