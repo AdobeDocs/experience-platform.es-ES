@@ -5,9 +5,9 @@ title: Información general del servicio de segmentación
 topic-legacy: overview
 description: Obtenga información sobre el servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
+source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1630'
 ht-degree: 0%
 
 ---
@@ -46,25 +46,47 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >
 >Además, si el tiempo de vida (TTL) está habilitado en el conjunto de datos, esto podría afectar a la pertenencia del segmento creado. Para obtener más información sobre TTL y cómo puede afectar a la segmentación, lea la [Guía de TTL del servicio de perfil](../profile/apply-ttl.md).
 
-## Evaluar segmentos
+## Evaluar segmentos {#evaluate-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation"
+>title="Métodos de evaluación"
+>abstract="Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de flujo continuo, segmentación por lotes y segmentación perimetral."
 
 Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de flujo continuo, segmentación por lotes y segmentación perimetral.
 
-### Segmentación por transmisión
+### Segmentación por transmisión {#streaming}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_streaming"
+>title="Evaluación de flujos"
+>abstract="Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de flujo continuo, segmentación por lotes y segmentación perimetral."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evaluar eventos en tiempo casi real con segmentación de flujo continuo"
 
 La segmentación por transmisión es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario. Una vez que se ha creado y guardado un segmento, la definición del segmento se aplica a los datos entrantes a [!DNL Real-time Customer Profile]. Las adiciones y eliminaciones de segmentos se procesan con regularidad, lo que garantiza que la audiencia de destino siga siendo relevante.
 
 Para obtener más información sobre la segmentación de flujo continuo, lea la [documentación de segmentación por secuencias](./api/streaming-segmentation.md).
 
-### Segmentación por lotes
+### Segmentación por lotes {#batch}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_batch"
+>title="Evaluación por lotes"
+>abstract="Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, el segmento se guarda y se almacena para que pueda exportarlo para utilizarlo."
 
 Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, este segmento se guarda y se almacena para que pueda exportarlo para utilizarlo.
 
 Los segmentos por lotes se evalúan automáticamente cada 24 horas. Si desea evaluar un segmento de lote bajo demanda, puede utilizar un trabajo de segmento. Para obtener más información sobre los trabajos de segmentos, lea la [documentación de trabajos de segmentos](./api/segment-jobs.md).
 
-### Segmentación de Edge
+### Segmentación de Edge {#edge}
 
-La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en Experience Edge, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_edge"
+>title="Evaluación de Edge"
+>abstract="La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en Experience Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente página."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Guía de la interfaz de usuario de segmentación de Edge"
+
+La segmentación de Edge es la capacidad de evaluar segmentos en Platform de forma instantánea [en Experience Edge](../edge/home.md), habilitando casos de uso de personalización de la misma página y de la siguiente página.
 
 Para obtener más información sobre la segmentación de Edge, lea cualquiera de las [Documentación de API](./api/edge-segmentation.md) o [Documentación de la interfaz de usuario](./ui/edge-segmentation.md).
 
