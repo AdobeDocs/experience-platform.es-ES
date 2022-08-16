@@ -2,10 +2,10 @@
 description: Las especificaciones de configuración de servidor y archivo para destinos basados en archivos se pueden configurar en Adobe Experience Platform Destination SDK a través del extremo /destination-servers .
 title: (Beta) Opciones de configuración para especificaciones de servidor de destino basadas en archivos
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 12%
+source-wordcount: '899'
+ht-degree: 13%
 
 ---
 
@@ -284,10 +284,6 @@ En esta sección se describe la configuración de formato de archivo para la exp
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         },
         "maxFileRowCount":5000000
@@ -310,7 +306,6 @@ En esta sección se describe la configuración de formato de archivo para la exp
 | `csvOptions.timestampFormat.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece la cadena que indica un formato de marca de tiempo. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un carácter único que se utilizará para escapar el escape del carácter de comillas. | `\` cuando los caracteres escape y comillas son diferentes. `\0` cuando el carácter escape y comillas son iguales. |
 | `csvOptions.emptyValue.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define la representación de cadena de un valor vacío. | `""` |
-| `csvOptions.lineSep.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define el separador de líneas que debe utilizarse para escribir. La longitud máxima es 1 carácter. | `\n` |
 | `maxFileRowCount` | Opcional | Número máximo de filas que puede contener el archivo exportado. Configúrelo según los requisitos de tamaño de archivo de la plataforma de destino. | N/D |
 
 {style=&quot;table-layout:auto&quot;}
