@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Generador de segmentos
 topic-legacy: ui guide
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
 workflow-type: tm+mt
-source-wordcount: '2612'
+source-wordcount: '3081'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Segment Builder] proporciona un espacio de trabajo enriquecido que le permite interactuar con [!DNL Profile] elementos de datos. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 
-![](../images/ui/segment-builder/segment-builder.png)
+![Se muestra la interfaz de usuario del generador de segmentos.](../images/ui/segment-builder/segment-builder.png)
 
 ## Componentes básicos de definición de segmentos {#building-blocks}
 
@@ -29,13 +29,13 @@ Los componentes básicos de las definiciones de segmentos son atributos y evento
 
 Puede ver estos componentes básicos en el **[!UICONTROL Campos]** a la izquierda del [!DNL Segment Builder] espacio de trabajo. **[!UICONTROL Campos]** contiene una pestaña para cada uno de los componentes principales: &quot;[!UICONTROL Atributos]&quot;, &quot;[!UICONTROL Eventos]&quot;, y &quot;[!UICONTROL Audiencias]&quot;.
 
-![](../images/ui/segment-builder/segment-fields.png)
+![Se resalta la sección de campos del Generador de segmentos.](../images/ui/segment-builder/segment-fields.png)
 
 ### Atributos
 
 La variable **[!UICONTROL Atributos]** le permite explorar [!DNL Profile] atributos que pertenecen a la variable [!DNL XDM Individual Profile] Clase . Cada carpeta se puede expandir para mostrar atributos adicionales, donde cada atributo es un mosaico que se puede arrastrar al lienzo del generador de reglas en el centro del espacio de trabajo. La variable [lienzo del generador de reglas](#rule-builder-canvas) más adelante en esta guía.
 
-![](../images/ui/segment-builder/attributes.png)
+![Se resalta la sección Atributos de los campos del Generador de segmentos.](../images/ui/segment-builder/attributes.png)
 
 ### Eventos
 
@@ -51,7 +51,7 @@ Se puede buscar cualquier tipo de componente escribiendo su nombre en la barra d
 
 A continuación, puede arrastrar y soltar fácilmente [!DNL ExperienceEvents] y &quot;[!UICONTROL Tipos de eventos]&quot; en su definición de segmento.
 
-![](../images/ui/segment-builder/events-eventTypes.png)
+![Se resalta la sección de eventos de la interfaz de usuario del Generador de segmentos.](../images/ui/segment-builder/events.png)
 
 De forma predeterminada, solo se muestran los campos de esquema rellenados del almacén de datos. Esto incluye &quot;[!UICONTROL Tipos de eventos]&quot;. Si la variable[!UICONTROL Tipos de eventos]&quot; no está visible, o solo puede seleccionar &quot;[!UICONTROL Cualquiera]&quot; como &quot;[!UICONTROL Tipo de evento]&quot;, seleccione **icono de engranaje** junto a **[!UICONTROL Campos]** y, a continuación, seleccione **[!UICONTROL Mostrar esquema XDM completo]** under **[!UICONTROL Campos disponibles]**. Seleccione el **icono de engranaje** para volver a la **[!UICONTROL Campos]** y ahora debería poder ver varias[!UICONTROL Tipos de eventos]&quot; y campos de esquema, independientemente de si contienen datos o no.
 
@@ -103,7 +103,7 @@ En el **[!UICONTROL Audiencias]** , puede ver todos los orígenes disponibles co
 
 Puede pasar el ratón sobre la ⓘ junto a una audiencia para ver información sobre la audiencia, como su ID, descripción y la jerarquía de carpetas, para localizar la audiencia.
 
-![](../images/ui/segment-builder/audience-folder-structure.png)
+![Imagen que muestra cómo funciona la jerarquía de carpetas para las audiencias.](../images/ui/segment-builder/audience-folder-structure.png)
 
 También puede buscar audiencias usando la barra de búsqueda, que utiliza [Sintaxis de búsqueda de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). En el **[!UICONTROL Audiencias]** , seleccionar una carpeta de nivel superior hace que aparezca la barra de búsqueda, lo que le permite buscar dentro de esa carpeta. Los resultados de búsqueda solo comienzan a rellenarse una vez que se introducen palabras completas. Por ejemplo, para buscar una audiencia denominada `Online Shoppers`, empiece a escribir &quot;En línea&quot; en la barra de búsqueda. Una vez que la palabra &quot;Online&quot; se ha escrito en su totalidad, aparecen los resultados de búsqueda que contienen la palabra &quot;Online&quot;.
 
@@ -113,7 +113,7 @@ Una definición de segmento es un conjunto de reglas que se utilizan para descri
 
 Para agregar una regla nueva a la definición del segmento, arrastre un mosaico desde el **[!UICONTROL Campos]** y suéltela en el lienzo del generador de reglas. A continuación, se le presentarán opciones específicas del contexto según el tipo de datos que se agreguen. Los tipos de datos disponibles incluyen: cadenas, fechas, [!DNL ExperienceEvents], &quot;[!UICONTROL Tipos de eventos]&quot; y audiencias.
 
-![](../images/ui/segment-builder/rule-builder-canvas.png)
+![El lienzo vacío del generador de reglas.](../images/ui/segment-builder/rule-builder-canvas.png)
 
 >[!IMPORTANT]
 >
@@ -121,11 +121,11 @@ Para agregar una regla nueva a la definición del segmento, arrastre un mosaico 
 
 Al seleccionar un valor para el atributo, verá una lista de valores de enumeración que puede ser el atributo.
 
-![](../images/ui/segment-builder/enum-list.png)
+![Imagen que muestra la lista de valores de enumeración que puede ser un atributo.](../images/ui/segment-builder/enum-list.png)
 
 Si selecciona un valor de esta lista de enumeraciones, el valor se delineará con un borde sólido. Sin embargo, para los campos que utilizan `meta:enum` (suave) enumeraciones, también puede seleccionar un valor que sea **not** de la lista de enumeraciones. Si crea su propio valor, se delineará con un borde de puntos, junto con una advertencia de que este valor no está en la lista de enumeración.
 
-![](../images/ui/segment-builder/enum-warning.png)
+![Advertencia que se muestra si se inserta un valor que no forma parte de la lista de enumeración.](../images/ui/segment-builder/enum-warning.png)
 
 ### Adición de audiencias
 
@@ -137,7 +137,7 @@ Para [!DNL Platform] audiencias creadas con [!DNL Segment Builder], tiene la opc
 >
 >Al añadir una audiencia desde una fuente externa, solo se hace referencia a la pertenencia a la audiencia. No puede convertir la audiencia en reglas y, por lo tanto, las reglas utilizadas para crear la audiencia original no se pueden modificar en la nueva definición del segmento.
 
-![](../images/ui/segment-builder/add-audience-to-segment.png)
+![Esta imagen muestra cómo convertir un atributo de audiencia en reglas.](../images/ui/segment-builder/add-audience-to-segment.png)
 
 Si surgen conflictos al convertir audiencias en reglas, [!DNL Segment Builder] intentará conservar las opciones existentes en la medida de sus posibilidades.
 
@@ -145,11 +145,11 @@ Si surgen conflictos al convertir audiencias en reglas, [!DNL Segment Builder] i
 
 También puede ver una versión basada en código de una regla creada en la variable [!DNL Segment Builder]. Una vez creada la regla dentro del lienzo del generador de reglas, puede seleccionar **[!UICONTROL Vista de código]** para ver su segmento como PQL.
 
-![](../images/ui/segment-builder/code-view.png)
+![El botón de vista de código está resaltado, lo que le permite ver el segmento como PQL.](../images/ui/segment-builder/code-view.png)
 
 La vista de código proporciona un botón que le permite copiar el valor del segmento para utilizarlo en llamadas API. Para obtener la última versión del segmento, asegúrese de haber guardado los cambios más recientes en el segmento.
 
-![](../images/ui/segment-builder/copy-code.png)
+![Se resalta el botón Copiar código, que le permite ](../images/ui/segment-builder/copy-code.png)
 
 ### Funciones de agregación
 
@@ -157,15 +157,15 @@ Una agregación en [!DNL Segment Builder] es un cálculo de un grupo de atributo
 
 Para crear una función de agregación, seleccione un evento del carril izquierdo e insértelo en el [!UICONTROL Eventos] contenedor.
 
-![](../images/ui/segment-builder/select-event.png)
+![Se resalta la sección de eventos.](../images/ui/segment-builder/events.png)
 
 Después de colocar el evento dentro del contenedor de eventos, seleccione el icono de puntos suspensivos (...), seguido de **[!UICONTROL Agregar]**.
 
-![](../images/ui/segment-builder/add-aggregation.png)
+![El texto agregado se resalta. Si selecciona esta opción, puede seleccionar funciones de agregación.](../images/ui/segment-builder/add-aggregation.png)
 
 Ahora se agrega la agregación. Ahora puede seleccionar la función de agregación, elegir qué atributo agregar, la función de igualdad y el valor. Por el ejemplo siguiente, este segmento calificaría cualquier perfil que tenga una suma de valores comprados buena a 100 $, aunque cada compra individual sea inferior a 100 $.
 
-![](../images/ui/segment-builder/filled-aggregation.png)
+![Las reglas de evento, que muestran una función de agregación.](../images/ui/segment-builder/filled-aggregation.png)
 
 ### Contar funciones {#count-functions}
 
@@ -173,15 +173,15 @@ Las funciones de recuento del Generador de segmentos se utilizan para buscar eve
 
 Para crear una función de recuento, seleccione un evento en el carril izquierdo e insértelo en el [!UICONTROL Eventos] contenedor.
 
-![](../images/ui/segment-builder/add-event.png)
+![Los campos de eventos se resaltan.](../images/ui/segment-builder/events.png)
 
 Después de colocar el evento dentro del contenedor de eventos, seleccione la opción [!UICONTROL Al menos 1] botón.
 
-![](../images/ui/segment-builder/add-count.png)
+![Al menos está resaltado, mostrando el área que desea seleccionar para ver una lista completa de funciones de recuento.](../images/ui/segment-builder/add-count.png)
 
 Ahora se agrega la función de recuento. Ahora puede seleccionar la función de recuento y el valor de la función . El ejemplo siguiente sería incluir cualquier evento que tenga al menos un clic.
 
-![](../images/ui/segment-builder/select-count.png)
+![Se muestra y se resalta una lista de las funciones de recuento.](../images/ui/segment-builder/select-count.png)
 
 ## Contenedores
 
@@ -189,13 +189,13 @@ Las reglas de segmentos se evalúan en el orden en que aparecen en la lista. Los
 
 Una vez que haya agregado al menos un mosaico al lienzo del generador de reglas, puede empezar a agregar contenedores. Para crear un contenedor nuevo, seleccione los puntos suspensivos (...) en la esquina superior derecha del mosaico y, a continuación, seleccione **[!UICONTROL Agregar contenedor]**.
 
-![](../images/ui/segment-builder/add-container.png)
+![El botón Agregar contenedor se resalta, lo que permite agregar un contenedor como secundario del primer contenedor.](../images/ui/segment-builder/add-container.png)
 
 Un nuevo contenedor aparece como secundario del primer contenedor, pero puede ajustar la jerarquía arrastrando y moviendo los contenedores. El comportamiento predeterminado de un contenedor es &quot;[!UICONTROL Incluir]&quot; el atributo, evento o audiencia proporcionados. Puede establecer la regla en &quot;[!UICONTROL Excluir]&quot; perfiles que coinciden con los criterios del contenedor seleccionando **[!UICONTROL Incluir]** en la esquina superior izquierda del mosaico y seleccione &quot;[!UICONTROL Excluir]&quot;.
 
 Un contenedor secundario también se puede extraer y agregar en línea al contenedor principal seleccionando &quot;desajustar contenedor&quot; en el contenedor secundario. Seleccione los puntos suspensivos (...) en la esquina superior derecha del contenedor secundario para acceder a esta opción.
 
-![](../images/ui/segment-builder/include-exclude.png)
+![Las opciones que permiten desajustar o eliminar el contenedor se resaltan.](../images/ui/segment-builder/include-exclude.png)
 
 Una vez seleccionada **[!UICONTROL Desajustar contenedor]** el contenedor secundario se elimina y los criterios aparecen en línea.
 
@@ -203,7 +203,7 @@ Una vez seleccionada **[!UICONTROL Desajustar contenedor]** el contenedor secund
 >
 >Al desajustar contenedores, tenga cuidado de que la lógica siga cumpliendo con la definición de segmento deseada.
 
-![](../images/ui/segment-builder/unwrapped-container-inline.png)
+![El contenedor se muestra después de estar sin ajustar.](../images/ui/segment-builder/unwrapped-container.png)
 
 ## Combinar directivas
 
@@ -213,7 +213,7 @@ Puede seleccionar una directiva de combinación que coincida con su propósito d
 
 Para seleccionar una política de combinación para su definición de segmento, seleccione el icono de engranaje en el **[!UICONTROL Campos]** y, a continuación, utilice la pestaña **[!UICONTROL Política de combinación]** menú desplegable para seleccionar la política de combinación que desee utilizar.
 
-![](../images/ui/segment-builder/merge-policy-selector.png)
+![Se resalta el selector de políticas de combinación. Esto le permite elegir qué política de combinación seleccionar para su definición de segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Propiedades del segmento {#segment-properties}
 
@@ -228,18 +228,29 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >abstract="Puede actualizar las estimaciones de su segmento para ver inmediatamente una vista previa de cuántos perfiles calificarían para el segmento propuesto. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Más información sobre la documentación"
 
-
 Al crear una definición de segmento, la variable **[!UICONTROL Propiedades del segmento]** a la derecha del espacio de trabajo muestra una estimación del tamaño del segmento resultante, lo que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
-La variable **[!UICONTROL Propiedades del segmento]** también es donde puede especificar información importante sobre la definición del segmento, incluido su nombre y descripción. Los nombres de definiciones de segmentos se utilizan para identificar el segmento entre los definidos por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
+La variable **[!UICONTROL Propiedades del segmento]** también es donde puede especificar información importante sobre la definición del segmento, como su nombre, descripción y tipo de evaluación. Los nombres de definiciones de segmentos se utilizan para identificar el segmento entre los definidos por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
 
 A medida que siga creando su definición de segmento, puede ver una vista previa paginada de la audiencia seleccionando **[!UICONTROL Ver perfiles]**.
 
-![](../images/ui/segment-builder/segment-properties.png)
+![Se resalta la sección de propiedades de la definición del segmento. Las propiedades del segmento incluyen, entre otras, el nombre del segmento, la descripción y el método de evaluación.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
 >Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de 1 millón de entidades en el almacén de perfiles, se utiliza el conjunto completo de datos; para entre 1 y 20 millones de entidades, se utilizan 1 millón de entidades; y para más de 20 millones de entidades, se utiliza el 5% del total de entidades. Encontrará más información sobre la generación de estimaciones de segmentos en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de segmentos.
+
+También puede seleccionar el método de evaluación. Si sabe qué método de evaluación desea utilizar, puede seleccionar el método de evaluación deseado mediante la lista desplegable. Si desea saber para qué tipos de evaluación se califica este segmento, puede seleccionar el icono Examinar ![icono de carpeta con una lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver una lista de los métodos de evaluación de segmentos disponibles.
+
+La variable [!UICONTROL Requisitos del método de evaluación] se abre. Esta ventana emergente muestra los métodos de evaluación disponibles, que son por lotes, flujo continuo y borde. La ventana emergente muestra qué métodos de evaluación son elegibles e inelegibles. Según los parámetros que haya utilizado en la definición del segmento, es posible que no cumpla los requisitos para ciertos métodos de evaluación. Para obtener más información sobre los requisitos para cada método de evaluación, lea la [segmentación de flujo continuo](./streaming-segmentation.md#query-types) o [segmentación de arista](./edge-segmentation.md#query-types) información general.
+
+![Aparecerá la ventana emergente de idoneidad para el método de evaluación. Esto muestra qué métodos de evaluación de segmentos son elegibles e inelegibles para el segmento.](../images/ui/segment-builder/select-evaluation-method.png)
+
+Si selecciona un método de evaluación no válido, se le pedirá que cambie las reglas de definición del segmento o el método de evaluación.
+
+![Elemento emergente del método de evaluación. Si se selecciona un método de evaluación de segmentos no apto, la ventana emergente explica por qué no es apto.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+
+Encontrará más información sobre los distintos métodos de evaluación de definiciones de segmentos en la [información general sobre segmentación](../home.md#evaluate-segments).
 
 ## Pasos siguientes {#next-steps}
 

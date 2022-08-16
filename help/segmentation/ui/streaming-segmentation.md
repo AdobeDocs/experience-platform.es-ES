@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -106,10 +106,6 @@ La segmentación por transmisión funciona en todos los datos que se introdujero
 ### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
 
 Un segmento se define como segmentación por lotes o de flujo continuo basada en una combinación de tipo de consulta y duración del historial de eventos. Puede encontrar una lista de los segmentos que se evaluarán como un segmento de flujo continuo en la [sección tipos de consulta de segmentación de flujo continuo](#query-types).
-
-### ¿Puede un usuario definir un segmento como segmentación por lotes o de flujo continuo?
-
-En este momento, el usuario no puede definir si un segmento se evalúa mediante ingesta por lotes o de flujo continuo, ya que el sistema determinará automáticamente con qué método se evaluará el segmento.
 
 ### ¿Por qué el número de segmentos &quot;cualificados totales&quot; sigue aumentando mientras que el número de &quot;Últimos X días&quot; permanece en cero en la sección de detalles del segmento?
 
