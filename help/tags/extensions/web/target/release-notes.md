@@ -1,10 +1,11 @@
 ---
 title: Notas de la versión de la extensión de Adobe Target
-description: Últimas notas de la versión de la extensión de etiqueta Adobe Target en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Últimas notas de la versión de la extensión de etiqueta de Adobe Target en Adobe Experience Platform.
+exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
+source-git-commit: 130db749ef84840532588a8a27e40cb277c13066
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 74%
+source-wordcount: '520'
+ht-degree: 94%
 
 ---
 
@@ -13,6 +14,13 @@ ht-degree: 74%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 16 de septiembre de 2021
+
+### Extensión de Adobe Target 0.11.4
+
+* Actualizado a at.js v1.8.3
+* Se ha añadido `SameSite=None` y `Secure` atributos al configurar cookies
 
 ## 24 de julio de 2020
 
@@ -42,7 +50,7 @@ ht-degree: 74%
 * Anteriormente, la biblioteca de ECID realizaba dos llamadas de bloqueo antes de que at.js pudiera recuperar experiencias. Esto se ha reducido a una sola llamada, lo que mejora significativamente el rendimiento.
 
 >[!NOTE]
->Actualice la extensión de la etiqueta ECID para Adobe Experience Platform a la versión 4.4.1 para aprovechar esta mejora de rendimiento.
+>Actualice la extensión de etiqueta ECID para Adobe Experience Platform a la versión 4.4.1 para aprovechar esta mejora de rendimiento.
 
 ## 31 de julio de 2019
 
@@ -74,7 +82,7 @@ ht-degree: 74%
 
 #### **Funcionalidades**
 
-* Se ha actualizado la extensión para que utilice at.js 1.7.0 con funcionalidad de privacidad de inclusión admitida mediante etiquetas para controlar cómo y cuándo se activa la etiqueta de Target. Compruebe la documentación de las etiquetas sobre cómo configurar la implementación de Opt-in. Se ha agregado la posibilidad de personalizar si un parámetro de mbox que tenga un valor vacío debe enviarse a Target o no.
+* Extensión actualizada para utilizar at.js 1.7.0 con la funcionalidad de privacidad de inclusión admitida mediante etiquetas para controlar cómo y cuándo se activa la etiqueta de Target. Consulte la documentación de etiquetas sobre cómo configurar la implementación de inclusión. Se ha agregado la posibilidad de personalizar si un parámetro de mbox que tenga un valor vacío debe enviarse a Target o no.
 
 ## 23 de enero de 2019
 
