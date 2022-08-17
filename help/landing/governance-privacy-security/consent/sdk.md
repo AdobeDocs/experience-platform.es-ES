@@ -3,9 +3,9 @@ title: Procesamiento de datos de consentimiento del cliente mediante el SDK web 
 topic-legacy: getting started
 description: Obtenga información sobre cómo integrar el SDK web de Adobe Experience Platform para procesar datos de consentimiento del cliente en Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 79bc41c713425e14bb3c12646b9b71b2c630618b
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1375'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Después de crear un nuevo conjunto de datos o de seleccionar uno existente para
 
 | Campo Datastream | Valor |
 | --- | --- |
-| [!UICONTROL Entorno de pruebas] | El nombre de la plataforma [entorno limitado](../../../sandboxes/home.md) que contiene la conexión de flujo continuo y los conjuntos de datos necesarios para configurar el conjunto de datos. |
+| [!UICONTROL Zona protegida] | El nombre de la plataforma [entorno limitado](../../../sandboxes/home.md) que contiene la conexión de flujo continuo y los conjuntos de datos necesarios para configurar el conjunto de datos. |
 | [!UICONTROL Entrada de flujo continuo] | Conexión de flujo continuo válida para el Experience Platform. Consulte el tutorial en [creación de una conexión de flujo continuo](../../../ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
 | [!UICONTROL Conjunto de datos del evento] | Un [!DNL XDM ExperienceEvent] conjunto de datos que planea enviar datos de evento a mediante el SDK. Aunque es necesario que proporcione un conjunto de datos de evento para crear un conjunto de datos de Platform, tenga en cuenta que los datos de consentimiento enviados mediante eventos no se respetan en los flujos de trabajo de aplicación descendentes. |
 | [!UICONTROL Conjunto de datos de perfil] | La variable [!DNL Profile]Conjunto de datos habilitado con los campos de consentimiento del cliente que ha creado [previous](#prerequisites). |
@@ -98,14 +98,19 @@ Una vez que haya terminado de configurar la extensión, esta se puede integrar e
 
 Una vez que haya integrado la extensión de SDK en su sitio web, puede empezar a utilizar el SDK web de plataforma `setConsent` para enviar datos de consentimiento a Platform.
 
->[!IMPORTANT]
->
->La variable `setConsent` solo actualiza los datos directamente en el almacén de perfiles y no envía ningún dato al lago de datos.
+La variable `setConsent` realiza dos acciones:
+
+1. Actualiza los atributos de perfil del usuario directamente en el Almacenamiento de perfiles. Esto no envía ningún dato al lago de datos.
+1. Crea un [Evento de experiencia](../../../xdm/classes/experienceevent.md) que registra una cuenta con fecha y hora del evento de cambio de consentimiento. Estos datos se envían directamente al lago de datos y se pueden utilizar para realizar un seguimiento de los cambios de preferencias de consentimiento a lo largo del tiempo.
+
+### Cuándo llamar a `setConsent`
 
 Hay dos escenarios en los que `setConsent` debe llamar a su sitio:
 
 1. Cuando se carga el consentimiento en la página (es decir, en cada carga de página)
 1. Como parte de un enlace CMP o un detector de eventos que detecta cambios en la configuración del consentimiento
+
+### `setConsent` sintaxis
 
 >[!NOTE]
 >
