@@ -4,10 +4,10 @@ user-guide-title: Ayuda sobre higiene de datos
 breadcrumb-title: Guía de higiene de datos
 user-guide-description: Administre las solicitudes de datos de los consumidores para cumplir con las regulaciones legales de privacidad, como el RGPD y la CCPA.
 feature: Data Hygiene
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 3%
+source-wordcount: '48'
+ht-degree: 4%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 3%
 * Interfaz de usuario de higiene de datos {#ui}
    * [Información general](./ui/overview.md)
    * [Examinar órdenes de trabajo existentes](./ui/browse.md)
-   * [Administración del tiempo de vida (TTL) para conjuntos de datos](./ui/ttl.md)
+   * [Administrar caducidades del conjunto de datos](./ui/dataset-expiration.md)
    * [Eliminar registros de consumidores](./ui/delete-consumer.md)
 * API de higiene de datos {#api}
    * [Información general](./api/overview.md)
-   * [Tiempo de vida del conjunto de datos (TTL)](./api/ttl.md)
+   * [Caducidad de conjuntos de datos](./api/dataset-expiration.md)
    * [Trabajos de eliminación de consumidores](./api/jobs.md)

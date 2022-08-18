@@ -2,9 +2,9 @@
 title: Examinar órdenes de trabajo de higiene de los datos
 description: Aprenda a ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 525e2520bb6140b00cfb7e68579eb2d0288ad9b1
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '481'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 >
 >Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido el Escudo de la salud.
 
-Cuando se envía una solicitud de higiene de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. Una orden de trabajo representa un proceso de higiene de datos específico, como un tiempo de vida programado (TTL) para un conjunto de datos, que incluye su estado actual y otros detalles relacionados.
+Cuando se envía una solicitud de higiene de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. Una orden de trabajo representa un proceso específico de higiene de datos, como una caducidad programada del conjunto de datos, que incluye su estado actual y otros detalles relacionados.
 
 Esta guía explica cómo ver y administrar las solicitudes de trabajo existentes en la interfaz de usuario de Adobe Experience Platform.
 
@@ -31,7 +31,7 @@ Al acceder por primera vez a la variable **[!UICONTROL Higiene de los datos]** e
 
 ![Imagen que muestra la variable [!UICONTROL Higiene de los datos] espacio de trabajo en la interfaz de usuario de Platform](../images/ui/browse/work-order-list.png)
 
-<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
+<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
 
 ![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png) -->
 
@@ -41,10 +41,10 @@ Seleccione el icono de canal (![Imagen del icono del canal](../images/ui/browse/
 
 | Filtro | Descripción |
 | --- | --- |
-| [!UICONTROL Estado] | Filtre en función del estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completado]**: El trabajo se ha completado.</li><li>**[!UICONTROL Pendiente]**: El trabajo se ha creado, pero aún no se ha ejecutado. A [solicitud de tiempo de vida (TTL) del conjunto de datos](./ttl.md) asume este estado antes de la fecha de eliminación programada. Una vez que llega la fecha de eliminación, el estado se actualiza a [!UICONTROL En ejecución] a menos que el trabajo se cancele de antemano.</li><li>**[!UICONTROL En ejecución]**: La solicitud TTL se ha iniciado y se está procesando.</li><li>**[!UICONTROL Cancelado]**: El trabajo se ha cancelado como parte de una solicitud de usuario manual.</li></ul> |
+| [!UICONTROL Estado] | Filtre en función del estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completado]**: El trabajo se ha completado.</li><li>**[!UICONTROL Pendiente]**: El trabajo se ha creado, pero aún no se ha ejecutado. A [solicitud de caducidad del conjunto de datos](./dataset-expiration.md) asume este estado antes de la fecha de eliminación programada. Una vez que llega la fecha de eliminación, el estado se actualiza a [!UICONTROL En ejecución] a menos que el trabajo se cancele de antemano.</li><li>**[!UICONTROL En ejecución]**: La solicitud de caducidad del conjunto de datos se ha iniciado y se está procesando.</li><li>**[!UICONTROL Cancelado]**: El trabajo se ha cancelado como parte de una solicitud de usuario manual.</li></ul> |
 | [!UICONTROL Fecha de creación] | Filtre según el momento en que se realizó la orden de trabajo. |
-| [!UICONTROL Fecha de caducidad] | Filtre las solicitudes TTL en función de la fecha de eliminación programada para el conjunto de datos en cuestión. |
-| [!UICONTROL Fecha de actualización] | Filtre las solicitudes TTL en función del momento en el que se actualizó por última vez la orden de trabajo. Las creaciones y caducidades de TTL se cuentan como actualizaciones. |
+| [!UICONTROL Fecha de caducidad] | Filtre las solicitudes de caducidad del conjunto de datos en función de la fecha de eliminación programada para el conjunto de datos en cuestión. |
+| [!UICONTROL Fecha de actualización] | Filtre las solicitudes de caducidad del conjunto de datos en función del momento en que se actualizó la última vez la orden de trabajo. Las creaciones y caducidades se cuentan como actualizaciones. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -68,12 +68,12 @@ The details of a consumer delete request are read-only, displaying its basic att
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset TTL details -->
+### Dataset expiration details -->
 
-La página de detalles de un TTL de conjunto de datos proporciona información sobre sus atributos básicos, incluida la fecha de caducidad programada en los días restantes antes de que se produzca la eliminación. En el carril derecho, puede utilizar controles para editar o cancelar el TTL.
+La página de detalles de una caducidad del conjunto de datos proporciona información sobre sus atributos básicos, incluida la fecha de caducidad programada en los días restantes antes de que se produzca la eliminación. En el carril derecho, puede utilizar controles para editar o cancelar la caducidad.
 
-![Imagen que muestra la página de detalles de una orden de trabajo TTL de conjunto de datos](../images/ui/browse/ttl-details.png)
+![Imagen que muestra la página de detalles de una orden de trabajo de caducidad del conjunto de datos](../images/ui/browse/ttl-details.png)
 
 ## Pasos siguientes
 
-En esta guía se explica cómo ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Platform. Para obtener información sobre cómo crear sus propias órdenes de trabajo, consulte la guía de [programación de un TTL de conjunto de datos](./ttl.md).
+En esta guía se explica cómo ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Platform. Para obtener información sobre cómo crear sus propias órdenes de trabajo, consulte la guía de [programación de una caducidad del conjunto de datos](./dataset-expiration.md).

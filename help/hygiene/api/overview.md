@@ -2,9 +2,9 @@
 title: Guía de API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido el Escudo de la salud.
 
-La API de higiene de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform, así como programar protocolos de tiempo de vida (TTL) para conjuntos de datos. Esta guía trata los pasos previos para utilizar la API y proporciona vínculos a documentación más específica del extremo.
+La API de higiene de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform, así como programar fechas de caducidad para conjuntos de datos. Esta guía trata los pasos previos para utilizar la API y proporciona vínculos a documentación más específica del extremo.
 
 ## Primeros pasos
 
@@ -43,9 +43,9 @@ Este documento proporciona una llamada API de ejemplo para demostrar cómo dar f
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## Tiempo de vida (TTL) para conjuntos de datos
+## Caducidad de conjuntos de datos
 
-Un TTL de conjunto de datos es una acción retrasada de &quot;eliminar un conjunto de datos&quot;. Al crear un TTL, está especificando un momento futuro en el que se debe eliminar ese conjunto de datos. Consulte la [guía de extremo de TTL del conjunto de datos](./ttl.md) para obtener más información sobre la programación de TTL de conjuntos de datos en la API.
+Una caducidad del conjunto de datos es una acción &quot;eliminar un conjunto de datos&quot; con retraso temporal. Al crear una caducidad del conjunto de datos, se especifica un momento futuro en el que ese conjunto de datos debe eliminarse. Consulte la [guía de extremo de caducidad del conjunto de datos](./dataset-expiration.md) para obtener más información sobre la programación de caducidades de conjuntos de datos en la API.
 
 ## Pasos siguientes
 
