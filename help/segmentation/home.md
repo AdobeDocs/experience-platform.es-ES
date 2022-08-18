@@ -5,9 +5,9 @@ title: Información general del servicio de segmentación
 topic-legacy: overview
 description: Obtenga información sobre el servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1632'
 ht-degree: 0%
 
 ---
@@ -53,15 +53,15 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >title="Métodos de evaluación"
 >abstract="Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de flujo continuo, segmentación por lotes y segmentación perimetral."
 
-Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de flujo continuo, segmentación por lotes y segmentación perimetral.
-
-### Segmentación por transmisión {#streaming}
-
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Evaluación de flujos"
->abstract="Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de flujo continuo, segmentación por lotes y segmentación perimetral."
+>abstract="La segmentación por transmisión es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evaluar eventos en tiempo casi real con segmentación de flujo continuo"
+
+Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de flujo continuo, segmentación por lotes y segmentación perimetral.
+
+### Segmentación por transmisión {#streaming}
 
 La segmentación por transmisión es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario. Una vez que se ha creado y guardado un segmento, la definición del segmento se aplica a los datos entrantes a [!DNL Real-time Customer Profile]. Las adiciones y eliminaciones de segmentos se procesan con regularidad, lo que garantiza que la audiencia de destino siga siendo relevante.
 
