@@ -3,9 +3,9 @@ keywords: DoubleClick Gestor de ofertas;DoubleClick Gestor de ofertas;DoubleClic
 title: Conexión de pantalla y vídeo de Google 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de redireccionamiento y segmentación de audiencia en todas las fuentes de inventario de dispositivos de visualización, vídeo y móviles.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '942'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!NOTE]
 >
->La inclusión en la lista de permitidos es obligatoria antes de configurar la primera [!DNL Google Display & Video 360] destino en Platform. Asegúrese de que Google haya completado el proceso de inclusión en la lista de permitidos que se describe a continuación antes de crear un destino.
+>La inclusión en la lista de permitidos es obligatoria antes de configurar la primera [!DNL Google Display & Video 360] destino en Platform. Asegúrese de que el proceso de inclusión en la lista de permitidos descrito a continuación se haya completado antes de [!DNL Google] antes de crear un destino.
+>La excepción a esta regla es para [Audience Manager](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) clientes. Si ya ha creado una conexión con este destino de Google en Audience Manager, no es necesario volver a pasar por el proceso de inclusión en la lista de permitidos y puede continuar con los pasos siguientes.
 
 Antes de crear la variable [!DNL Google Display & Video 360] en Platform, debe ponerse en contacto con Google para solicitar que se incluya el Adobe en la lista de proveedores de datos permitidos y que su cuenta se añada a la lista de permitidos. Póngase en contacto con Google y proporcione la siguiente información:
 
