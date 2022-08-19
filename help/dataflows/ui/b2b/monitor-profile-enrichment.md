@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorización de trabajos de enriquecimiento de perfiles
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '768'
+ht-degree: 2%
 
 ---
 
@@ -56,6 +56,23 @@ Las siguientes métricas están disponibles para trabajos de enriquecimiento de 
 | **[!UICONTROL Última ejecución correcta]** | Indica la fecha y la hora del último posible cliente correcto en la ejecución del trabajo coincidente de la cuenta. |
 | **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o procesado) del trabajo de coincidencia de cuentas del posible cliente. |
 
+## Enriquecimiento del perfil de puntuación de cuentas y posibles clientes predictivos {#predictive-lead-to-account-scoring}
+
+La variable [!UICONTROL Puntuación de posible cliente y cuenta predictiva] tablero muestra las métricas básicas y el estado diario de ejecución del trabajo específico del [Puntuación de posible cliente y cuenta predictiva](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) enriquecimiento de perfiles.
+
+![Enriquecimiento del perfil de puntuación de cuentas y posibles clientes predictivos](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+Las siguientes métricas están disponibles para trabajos predictivos de enriquecimiento de perfiles de puntuación de cuentas y posibles clientes:
+
+| Métrica | Descripción |
+| --------- | ---------- |
+| **[!UICONTROL Inicio del trabajo]** | Indica la fecha y hora de inicio de la ejecución del trabajo de puntuación de cuenta y posible cliente predictivo. |
+| **[!UICONTROL Tiempo de procesamiento]** | Tiempo total que tarda el trabajo en completarse. |
+| **[!UICONTROL Nombre de la puntuación]** | El nombre de puntuación del trabajo. |
+| **[!UICONTROL Tipo de perfil]** | Tipo de puntuación: <ul><li>Persona</li><li>Cuenta</li></ul>. |
+| **[!UICONTROL Tipo de trabajo]** | Tipo de trabajo:<ul><li>Puntuación</li><li>Formación</li>. |
+| **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o procesado) del trabajo de puntuación de cliente potencial y cuenta predictivo. |
+
 ## Controles de IU {#ui-controls}
 
 En esta sección se describen varias opciones de la interfaz de usuario (IU) de la interfaz de monitorización, que permiten filtrar las métricas que se muestran en la página.
@@ -79,3 +96,4 @@ Al seguir este tutorial, ahora puede supervisar y comprender correctamente las m
 * [Cuentas relacionadas en tiempo real CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Ficha Cuentas relacionadas en la guía de la interfaz de usuario del perfil de la cuenta](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [Concordancia de posibles clientes con cuentas en tiempo real CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Puntuación predictiva de posibles clientes y cuentas en tiempo real CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
