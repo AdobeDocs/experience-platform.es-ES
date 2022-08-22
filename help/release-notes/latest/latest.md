@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
+source-git-commit: a82381d6133fe793fc0f4be38b6e064684581afb
 workflow-type: tm+mt
-source-wordcount: '2327'
+source-wordcount: '2436'
 ht-degree: 5%
 
 ---
@@ -177,15 +177,10 @@ El CDP B2B Edition en tiempo real, que se basa en Real-time Customer Data Platfo
 
 | Función | Descripción |
 | --- | --- |
-| Confrontación de posibles clientes con cuentas | La coincidencia de posibles clientes con cuentas le permite unir perfiles de personas conocidas con perfiles de cuenta. A continuación, puede segmentar y segmentar los datos en un contexto B2B, como cuentas u oportunidades. Los trabajos de ejecución diaria utilizan factores determinísticos y probabilísticos para hacer coincidir los perfiles de persona que no están asociados a ninguna cuenta con una cuenta que coincida mejor. A continuación, puede decidir si desea incluir estas coincidencias en sus definiciones de segmento |
+| Confrontación de posibles clientes con cuentas | La coincidencia de posibles clientes con cuentas le permite unir perfiles de personas conocidas con perfiles de cuenta. A continuación, puede segmentar y segmentar los datos en un contexto B2B, como cuentas u oportunidades. Los trabajos de ejecución diaria utilizan factores determinísticos y probabilísticos para hacer coincidir los perfiles de persona que no están asociados a ninguna cuenta con una cuenta que coincida mejor. A continuación, puede decidir si desea incluir dichas coincidencias en las definiciones de segmentos. <br><br>Para obtener más información, consulte el documento sobre [conllevar concordancia de cuentas](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). Para obtener instrucciones sobre cómo configurar la coincidencia de posibles clientes con cuentas, consulte la [Guía de la interfaz de usuario del perfil de la cuenta](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).</li> |
+| Puntuación de posible cliente y cuenta predictiva | La Puntuación de cuentas y posibles clientes predictivos utiliza un método de aprendizaje automático basado en árboles (bosque aleatorio/aumento de degradado) que implica aprender de los eventos de conversión de fase de oportunidad y predecir estos, así como agregar actividades de persona al nivel de cuenta para producir las puntuaciones de cuenta. Los principales factores influyentes también están disponibles a nivel agregado y de unidad para ayudar a los especialistas en marketing B2B a comprender mejor qué elementos condujeron a las puntuaciones. <br><br>Para obtener más información, consulte el documento sobre [puntuación de cliente potencial y cuenta predictiva](../../rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md). Para obtener información sobre cómo administrar las puntuaciones, consulte la guía de [administración de la puntuación predictiva de posibles clientes y cuentas en Real-time Customer Data Platform, B2B Edition.](../../rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) |
 
-Para obtener más información, consulte el documento sobre [conllevar concordancia de cuentas](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
-
-Para obtener una guía sobre cómo monitorizar el enriquecimiento de perfiles, consulte el documento sobre [supervisión del enriquecimiento de perfiles en la interfaz de usuario](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
-
-Para obtener instrucciones sobre cómo configurar la coincidencia de posibles clientes con cuentas, consulte la [Guía de la interfaz de usuario del perfil de la cuenta](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
-
-Para obtener más información sobre CDP B2B Edition en tiempo real, consulte la [Resumen de CDP B2B en tiempo real](../../rtcdp/overview.md).
+Para obtener una guía sobre cómo monitorizar el enriquecimiento de perfiles, consulte el documento sobre [supervisión del enriquecimiento de perfiles en la interfaz de usuario](../../dataflows/ui/b2b/monitor-profile-enrichment.md). Para obtener más información sobre CDP B2B Edition en tiempo real, consulte la [Resumen de CDP B2B en tiempo real](../../rtcdp/overview.md).
 
 ## Perfil del cliente en tiempo real {#profile}
 
