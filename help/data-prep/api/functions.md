@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;preparación de datos;guía de api;esquemas;
-solution: Experience Platform
-title: Punto final de API de Esquemas
-topic-legacy: schemas
-description: Puede utilizar el extremo `/functions` en la API de Adobe Experience Platform para validar las expresiones de asignación y las funciones del conjunto de asignaciones de lista disponibles.
+title: Punto final de API de funciones
+description: Puede utilizar el extremo `/functions` en la API de preparación de datos para validar las expresiones de asignación y las funciones de conjunto de asignaciones de lista disponibles.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '209'
 ht-degree: 5%
 
 ---

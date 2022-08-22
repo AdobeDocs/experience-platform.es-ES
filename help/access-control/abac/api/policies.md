@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;Control de acceso basado en atributos;control de acceso basado en atributos
 solution: Experience Platform
-title: Punto final de API de directivas
+title: Punto final de API de directivas de control de acceso
 description: El extremo /policy de la API de control de acceso basado en atributos permite administrar mediante programación las políticas en Adobe Experience Platform.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1443'
 ht-degree: 3%
 
 ---
 
-# Extremo de directivas
+# Punto final de las directivas de control de acceso
 
 >[!IMPORTANT]
 >
 >El control de acceso basado en atributos actualmente está disponible en una versión limitada para clientes de asistencia médica basados en EE. UU. Esta capacidad estará disponible para todos los clientes de Real-time Customer Data Platform una vez que se haya lanzado completamente.
 
-Las políticas son declaraciones que reúnen atributos para establecer acciones permisibles e inadmisibles. Las políticas pueden ser locales o globales y pueden anular otras directivas. La variable `/policies` en la API de control de acceso basada en atributos le permite administrar políticas mediante programación, incluida información sobre las reglas que las rigen, así como sus respectivas condiciones de asunto.
+Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Estas políticas pueden ser locales o globales y pueden anular otras políticas. La variable `/policies` en la API de control de acceso basada en atributos le permite administrar políticas mediante programación, incluida información sobre las reglas que las rigen, así como sus respectivas condiciones de asunto.
+
+>[!IMPORTANT]
+>
+>Este punto final no debe confundirse con la variable `/policies` en la variable [API de administración de datos](../../../data-governance/api/policies.md), que se utiliza para administrar las políticas de uso de datos.
 
 ## Primeros pasos
 

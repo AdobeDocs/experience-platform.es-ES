@@ -1,10 +1,10 @@
 ---
-title: Panel de perfiles de cuenta
+title: Guía del tablero Perfiles de la cuenta
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los perfiles de cuenta B2B de su organización.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---

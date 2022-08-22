@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;segmento;segmentos;segmentación;interfaz de usuario;IU;personalización;panel de segmentos;tablero
-title: Tablero de segmentos
+title: Guía del panel de segmentos
 description: 'Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1598'
 ht-degree: 0%
 
 ---

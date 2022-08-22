@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;aplicación basada en API;control de datos
 solution: Experience Platform
-title: Punto final de API de directivas
+title: Punto final de la API de directivas de uso de datos
 topic-legacy: developer guide
 description: Las políticas de uso de datos son reglas que adopta su organización que describen los tipos de acciones de marketing que puede realizar o de las que está restringido el uso de los datos en el Experience Platform. El extremo /policy se utiliza para todas las llamadas de API relacionadas con la visualización, la creación, la actualización o la eliminación de directivas de uso de datos.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1813'
-ht-degree: 3%
+source-wordcount: '1840'
+ht-degree: 4%
 
 ---
 
-# Extremo de directivas
+# Punto final de las políticas de uso de datos
 
 Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de [!DNL Experience Platform]. La variable `/policies` en la variable [!DNL Policy Service API] le permite administrar mediante programación políticas de uso de datos para su organización.
+
+>[!IMPORTANT]
+>
+>Este punto final no debe confundirse con la variable `/policies` en la variable [API de control de acceso](../../access-control/abac/api/policies.md), que se utiliza para administrar las políticas de control de acceso.
 
 ## Primeros pasos
 
@@ -141,12 +145,12 @@ Una respuesta correcta incluye una `children` matriz que enumera los detalles de
 | --- | --- |
 | `_page.count` | Número total de directivas recuperadas. |
 | `name` | Nombre para mostrar de una directiva. |
-| `status` | Estado actual de una directiva. There are three possible statuses: `DRAFT`, `ENABLED`, or `DISABLED`. De forma predeterminada, solo `ENABLED` las políticas participan en la evaluación. Consulte la descripción general sobre [evaluación de políticas](../enforcement/overview.md) para obtener más información. |
+| `status` | Estado actual de una directiva. Hay tres estados posibles: `DRAFT`, `ENABLED`o `DISABLED`. De forma predeterminada, solo `ENABLED` las políticas participan en la evaluación. Consulte la descripción general sobre [evaluación de políticas](../enforcement/overview.md) para obtener más información. |
 | `marketingActionRefs` | Matriz que enumera los URI de todas las acciones de marketing aplicables a una directiva. |
 | `description` | Una descripción opcional que proporciona un contexto adicional al caso de uso de la directiva. |
 | `deny` | Un objeto que describe las etiquetas de uso de datos específicas en las que la acción de marketing asociada a una directiva está restringida de realizarse. Consulte la sección sobre [creación de una directiva](#create-policy) para obtener más información sobre esta propiedad. |
 
-## Look up a policy {#look-up}
+## Buscar una directiva {#look-up}
 
 Puede consultar una directiva específica incluyendo la `id` en la ruta de una solicitud de GET.
 
@@ -378,7 +382,7 @@ Puede actualizar una directiva personalizada existente proporcionando su ID en l
 
 >[!NOTE]
 >
->See the section on [updating a portion of a custom policy](#patch) if you only want to update one or more fields for a policy, rather than overwrite it.
+>Consulte la sección sobre [actualizar una parte de una directiva personalizada](#patch) si solo desea actualizar uno o más campos de una directiva, en lugar de sobrescribirlos.
 
 **Formato de API**
 
@@ -388,7 +392,7 @@ PUT /policies/custom/{POLICY_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{POLICY_ID}` | The `id` of the policy you want to update. |
+| `{POLICY_ID}` | La variable `id` de la directiva que desea actualizar. |
 
 **Solicitud**
 
@@ -427,7 +431,7 @@ curl -X PUT \
 | `status` | Estado actual de la política. Hay tres estados posibles: `DRAFT`, `ENABLED`o `DISABLED`. De forma predeterminada, solo `ENABLED` las políticas participan en la evaluación. Consulte la descripción general sobre [evaluación de políticas](../enforcement/overview.md) para obtener más información. |
 | `marketingActionRefs` | Matriz que enumera los URI de todas las acciones de marketing aplicables a la directiva. El URI de una acción de marketing se proporciona en `_links.self.href` en la respuesta de [búsqueda de una acción de marketing](./marketing-actions.md#look-up). |
 | `description` | Una descripción opcional que proporciona un contexto adicional al caso de uso de la directiva. |
-| `deny` | La expresión de directiva que describe las etiquetas de uso de datos específicas en las que la acción de marketing asociada a la directiva está restringida de realizarse. See the section on [creating a policy](#create-policy) for more information on this property. |
+| `deny` | La expresión de directiva que describe las etiquetas de uso de datos específicas en las que la acción de marketing asociada a la directiva está restringida de realizarse. Consulte la sección sobre [creación de una directiva](#create-policy) para obtener más información sobre esta propiedad. |
 
 **Respuesta**
 
@@ -474,11 +478,11 @@ Una respuesta correcta devuelve los detalles de la directiva actualizada.
 >
 >Solo puede actualizar las directivas personalizadas. Si desea habilitar o deshabilitar las directivas principales, consulte la sección de [actualización de la lista de directivas principales habilitadas](#update-enabled-core).
 
-A specific portion of a policy may be updated using a PATCH request. Unlike PUT requests that rewrite the policy, PATCH requests update only the properties specified in the request body. Esto resulta especialmente útil cuando desea habilitar o deshabilitar una directiva, ya que solo necesita proporcionar la ruta a la propiedad adecuada (`/status`) y su valor (`ENABLED` o `DISABLED`).
+Se puede actualizar una parte específica de una directiva mediante una solicitud del PATCH. A diferencia de las solicitudes del PUT que reescriben la directiva, el PATCH solicita actualizar solo las propiedades especificadas en el cuerpo de la solicitud. Esto resulta especialmente útil cuando desea habilitar o deshabilitar una directiva, ya que solo necesita proporcionar la ruta a la propiedad adecuada (`/status`) y su valor (`ENABLED` o `DISABLED`).
 
 >[!NOTE]
 >
->Las cargas útiles para solicitudes de PATCH siguen el formato JSON Patch . See the [API fundamentals guide](../../landing/api-fundamentals.md) for more information on the accepted syntax.
+>Las cargas útiles para solicitudes de PATCH siguen el formato JSON Patch . Consulte la [Guía de fundamentos de API](../../landing/api-fundamentals.md) para obtener más información sobre la sintaxis aceptada.
 
 La variable [!DNL Policy Service] La API admite las operaciones de parches de JSON `add`, `remove`y `replace`, y le permite combinar varias actualizaciones en una sola llamada, como se muestra en el ejemplo siguiente.
 

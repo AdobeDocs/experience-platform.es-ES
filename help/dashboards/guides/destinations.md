@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;interfaz de usuario;IU;personalización;panel de perfiles;panel
-title: Panel de destinos
+title: Guía del panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '2791'
+source-wordcount: '2792'
 ht-degree: 0%
 
 ---

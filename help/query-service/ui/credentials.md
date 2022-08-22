@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;consulta;editor de consultas;editor de consultas;editor de consultas;
 solution: Experience Platform
-title: Guía de la interfaz de usuario del servicio de consulta
+title: Guía de credenciales del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 1%
@@ -45,11 +45,11 @@ Para poder generar credenciales que no caduquen, debe completar los siguientes p
 3. [Configure ambas variables **Sandboxes** y **Administrar integración del servicio de consultas** permissions](../../access-control/ui/permissions.md) para el perfil de producto.
 4. [Agregar un nuevo usuario a un perfil de producto](../../access-control/ui/users.md) por lo tanto, se les conceden los permisos configurados.
 5. [Agregar el usuario como administrador de perfil de producto](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) para permitir la creación de cuentas para cualquier perfil de producto activo.
-6. [Agregar el usuario como desarrollador de perfiles de producto](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) para crear una integración.
+6. [Agregar el usuario como desarrollador de perfiles de producto](https://helpx.adobe.com/enterprise/using/manage-developers.html) para crear una integración.
 
 Para obtener más información sobre cómo asignar permisos, lea la documentación de [control de acceso](../../access-control/home.md).
 
-Todos los permisos necesarios ahora están configurados en Adobe Developer Console para que el usuario utilice la función de credenciales caducadas.
+Todos los permisos necesarios ahora están configurados en la consola de Adobe Developer para que el usuario utilice la función de credenciales caducadas.
 
 ### Generar credenciales
 
