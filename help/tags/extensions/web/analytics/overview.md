@@ -2,7 +2,7 @@
 title: Información general sobre la extensión Adobe Analytics
 description: Obtenga información acerca de la extensión de etiqueta de Adobe Analytics en Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
+source-git-commit: 9fe94af349e1d9c979c78dce69c5180086df3adb
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 95%
@@ -222,7 +222,7 @@ Configure las descripciones de los campos de la configuración global de Cookies
 
 Valor único que representa a un cliente en ambos sistemas (en línea y sin conexión).
 
-Consulte [visitorID](https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=es).
+Consulte [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=es).
 
 ### Área de nombres del visitante
 
