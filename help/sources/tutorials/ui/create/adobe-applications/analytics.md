@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
+source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 1%
+source-wordcount: '2182'
+ht-degree: 2%
 
 ---
 
@@ -151,6 +151,82 @@ La siguiente documentación proporciona más recursos para comprender la prepara
 * [Resumen de la preparación de datos](../../../../../data-prep/home.md)
 * [Funciones de asignación de preparación de datos](../../../../../data-prep/functions.md)
 * [Añadir campos calculados](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+### Filtrado para [!DNL Profile Service] (Beta)
+
+>[!IMPORTANT]
+>
+>Compatibilidad con el filtrado [!DNL Analytics] actualmente los datos están en versión beta y no están disponibles para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+
+Una vez que haya completado las asignaciones para su [!DNL Analytics] datos del grupo de informes, puede aplicar reglas y condiciones de filtrado para incluir o excluir selectivamente los datos de la ingesta a la variable [!DNL Profile Service]. La compatibilidad con el filtrado solo está disponible para [!DNL Analytics] los datos y datos solo se filtran antes de introducirse [!DNL Profile.] Todos los datos se incorporan en el lago de datos.
+
+#### Filtro de nivel de fila
+
+Puede filtrar los datos para [!DNL Profile] ingesta en el nivel de fila y columna. El filtrado a nivel de fila permite definir criterios como contiene, es igual a, comienza o termina con. También puede utilizar el filtrado a nivel de fila para unir condiciones mediante `AND` así como `OR`y negar condiciones usando `NOT`.
+
+Para filtrar su [!DNL Analytics] datos en el nivel de fila, seleccione **[!UICONTROL Filtro de fila]**.
+
+![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
+
+Utilice el carril izquierdo para navegar por la jerarquía de esquemas y seleccione el atributo de esquema que desee para explorar más en profundidad un esquema concreto.
+
+![carril izquierdo](../../../../images/tutorials/create/analytics/left-rail.png)
+
+Una vez identificado el atributo que desea configurar, selecciónelo y arrástrelo del carril izquierdo al panel de filtrado.
+
+![filtering-panel](../../../../images/tutorials/create/analytics/filtering-panel.png)
+
+Para configurar diferentes condiciones, seleccione **[!UICONTROL es igual que]** y, a continuación, seleccione una condición en la ventana desplegable que aparece.
+
+La lista de condiciones configurables incluye:
+
+* [!UICONTROL es igual que]
+* [!UICONTROL no es igual]
+* [!UICONTROL comienza con]
+* [!UICONTROL finaliza con]
+* [!UICONTROL no termina con]
+* [!UICONTROL contiene]
+* [!UICONTROL no contiene]
+* [!UICONTROL existe]
+* [!UICONTROL no existe]
+
+![condiciones](../../../../images/tutorials/create/analytics/conditions.png)
+
+A continuación, introduzca los valores que desea incluir en función del atributo seleccionado. En el ejemplo siguiente, [!DNL Apple] y [!DNL Google] se seleccionan para su ingesta como parte del **[!UICONTROL Fabricante]** atributo.
+
+![incluir-fabricante](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+
+Para especificar aún más las condiciones de filtrado, añada otro atributo del esquema y, a continuación, añada valores basados en ese atributo. En el ejemplo siguiente, la variable **[!UICONTROL Modelo]** y modelos como el [!DNL iPhone 13] y [!DNL Google Pixel 6] se filtran para su ingesta.
+
+![include-model](../../../../images/tutorials/create/analytics/include-model.png)
+
+Para agregar un contenedor nuevo, seleccione los puntos suspensivos (`...`) en la parte superior derecha de la interfaz de filtrado y, a continuación, seleccione **[!UICONTROL Agregar contenedor]**.
+
+![add-container](../../../../images/tutorials/create/analytics/add-container.png)
+
+Una vez agregado un contenedor nuevo, seleccione **[!UICONTROL Incluir]** y, a continuación, seleccione **[!UICONTROL Excluir]** en la ventana desplegable que aparece.
+
+![excluir](../../../../images/tutorials/create/analytics/exclude.png)
+
+A continuación, complete el mismo proceso arrastrando atributos de esquema y agregando los valores correspondientes que desee excluir del filtrado. En el ejemplo siguiente, la variable [!DNL iPhone 12], [!DNL iPhone 12 mini]y [!DNL Google Pixel 5] se filtran de la exclusión de la **[!UICONTROL Modelo]** , el horizontal se excluye de la función **[!UICONTROL Orientación de la pantalla]** y número de modelo [!DNL A1633] se excluye de **[!UICONTROL Número de modelo]**.
+
+Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+
+![exclude-example](../../../../images/tutorials/create/analytics/exclude-examples.png)
+
+#### Filtro de nivel de columna
+
+Select **[!UICONTROL Filtro de columna]** del encabezado para aplicar el filtrado a nivel de columna.
+
+![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
+
+La página se actualiza en un árbol de esquema interactivo y muestra los atributos de esquema en el nivel de columna. Desde aquí puede seleccionar las columnas de datos que desea excluir [!DNL Profile] ingesta. Como alternativa, puede expandir una columna y seleccionar atributos específicos para la exclusión.
+
+De forma predeterminada, todas las [!DNL Analytics] vaya a [!DNL Profile] y este proceso permite excluir ramas de datos XDM [!DNL Profile] ingesta.
+
+Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+
+![columnas seleccionadas](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### Proporcionar detalles de flujo de datos
 
