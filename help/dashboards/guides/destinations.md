@@ -4,9 +4,9 @@ title: Guía del panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '2792'
+source-wordcount: '2670'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,6 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="Destinos más utilizados"
 >abstract="Esta utilidad muestra los destinos más activos de su organización según el número de segmentos asignados. Estos números son precisos en el momento de la última instantánea. Esta clasificación proporciona una perspectiva sobre los destinos que se utilizan más actualmente, al tiempo que resalta los que pueden estar infrautilizados."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Destinos más utilizados]** muestra los principales destinos de su organización según el número de segmentos asignados, a partir de la última instantánea. Esta clasificación proporciona una perspectiva sobre los destinos que se utilizan, al tiempo que muestra los que pueden estar infrautilizados.
 
@@ -89,7 +88,6 @@ Al seleccionar el nombre de un destino en la lista que se muestra en el widget, 
 >id="platform_dashboards_destinations_recentlycreateddestinations"
 >title="Destinos creados recientemente"
 >abstract="Este widget muestra una lista de los destinos configurados más recientemente dentro de su organización."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-created-destinations" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Destinos creados recientemente]** permite ver una lista de los destinos configurados más recientemente en su organización.
 
@@ -107,7 +105,6 @@ Para obtener más información sobre cómo configurar tipos de destinos específ
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
 >title="Segmentos activados recientemente"
 >abstract="Esta utilidad proporciona una lista de los segmentos que se han asignado más recientemente a un destino. Esta lista proporciona una instantánea de los segmentos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Segmentos activados recientemente]** proporciona una lista de los segmentos que se han asignado más recientemente a un destino. Esta lista proporciona una instantánea de los segmentos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea.
 
@@ -125,7 +122,6 @@ Para obtener más información sobre cómo trabajar con segmentos en el Experien
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
 >title="Segmentos activados recientemente por destino"
 >abstract="Esta utilidad muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido en la lista desplegable Información general ."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Segmentos activados recientemente por destino]** muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido en la lista desplegable Información general . Es similar a la variable [!UICONTROL Segmentos activados recientemente] , pero los datos mostrados **only** se aplica al destino seleccionado.
 
@@ -141,7 +137,6 @@ Puede ver los detalles de un segmento seleccionando el nombre de un segmento en 
 >id="platform_dashboards_destinations_audiencesizetrend"
 >title="Tendencia del tamaño de la audiencia"
 >abstract="Esta utilidad ilustra el número de perfiles contenidos en el segmento que se envían diariamente a la cuenta de destino. El primer menú desplegable ajusta el período de tiempo de la tendencia de audiencia. El segundo menú desplegable de utilidades selecciona el segmento para su análisis. El destino se elige en la lista desplegable Información general ."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** La utilidad representa la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino. La utilidad utiliza un gráfico de líneas para ilustrar el número de perfiles contenidos en el segmento que se envían diariamente a la cuenta de destino.
 
@@ -161,7 +156,6 @@ La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** La utilidad p
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
 >title="Segmentos no asignados por identidad"
 >abstract="Esta utilidad enumera las cinco principales **sin asignar** los segmentos clasificados por identidad descendente cuentan para un destino e identidad determinados. Los ID de filtro enumerados en la lista desplegable de utilidades cambian según la cuenta de destino seleccionada en la parte superior de la página de información general."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#unmapped-segments-by-identity" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Segmentos no asignados por identidad]** La utilidad enumera las cinco principales **sin asignar** los segmentos clasificados por identidad descendente cuentan para un destino e identidad determinados. Destaca los segmentos que son los más beneficiosos de asignar a la cuenta de destino elegida en función del ID elegido.
 
@@ -177,7 +171,6 @@ La columna identidades cuenta el número de ID de origen dentro del segmento que
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="Segmentos asignados por identidad"
 >abstract="Esta utilidad proporciona una lista de los cinco principales **asignado** segmentos. La lista se ordena de mayor a menor según el número de ID de origen contenidos en los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable de la utilidad dependen del destino elegido en la parte superior del panel de información general."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="Más información sobre la documentación"
 
 Esta utilidad proporciona una lista de los cinco principales **asignado** segmentos. La lista se ordena de mayor a menor según el número de ID de origen contenidos en los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable del widget cambiarán según el filtro de cuenta de destino elegido en la parte superior del panel de información general.
 
@@ -191,7 +184,6 @@ La variable **[!UICONTROL Segmentos asignados por identidad]** La utilidad resal
 >id="platform_dashboards_destinations_commonaudiences"
 >title="Audiencias comunes"
 >abstract="Esta utilidad proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable de la utilidad. La lista de segmentos se ordena según la fecha de activación. El segmento activado más recientemente se muestra en la parte superior."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Audiencias comunes]** proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable de la utilidad. La lista de segmentos se ordena según la fecha de activación. El segmento activado más recientemente se muestra en la parte superior.
 
@@ -213,7 +205,6 @@ Select **[!UICONTROL Segmentos]** para navegar al panel Segmentos [!UICONTROL Ex
 >id="platform_dashboards_destinations_mappedaudiencehealth"
 >title="Estado de la audiencia asignada"
 >abstract="Esta utilidad proporciona una lista de hasta 20 segmentos asignados cuyos recuentos totales de perfiles se desvían por un factor de al menos una desviación estándar del tamaño de audiencia medio de 30 días asignado a ese destino. Proporciona una métrica calculada para la dispersión de los tamaños de audiencia de la media a lo largo de los últimos 30 días. Los tamaños de audiencia se ordenan de mayor a menor."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-audience-health" text="Más información sobre la documentación"
 
 El widget proporciona una lista de hasta 20 segmentos asignados cuyos recuentos totales de perfiles, desde la última instantánea diaria, se desvían por un factor de al menos una desviación estándar del tamaño de audiencia medio asignado a ese destino de 30 días.
 
@@ -233,7 +224,6 @@ Si un segmento dentro de la variable [!UICONTROL Estado de la audiencia asignada
 >id="platform_dashboards_destinations_destinationscount"
 >title="Recuento de destinos"
 >abstract="Esta utilidad proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#destinations-count" text="Más información sobre la documentación"
 
 La variable [!UICONTROL Recuento de destinos] proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos.
 

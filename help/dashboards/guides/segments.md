@@ -4,9 +4,9 @@ title: Guía del panel de segmentos
 description: 'Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1550'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,6 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 >id="platform_dashboards_segments_audiencesize"
 >title="Tamaño de la audiencia"
 >abstract="Esta utilidad muestra el número total de perfiles combinados dentro del segmento seleccionado. Este número depende de la política de combinación aplicada a los datos y es correcto en el momento de la instantánea más reciente."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Tamaño de la audiencia]** muestra el número total de perfiles combinados dentro del segmento seleccionado en el momento en que se tomó la instantánea. Este número es el resultado de aplicar la política de combinación de segmentos a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo en el segmento.
 
@@ -96,7 +95,6 @@ Para obtener más información sobre fragmentos y perfiles combinados, comience 
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="Tendencia del tamaño de la audiencia"
 >abstract="Esta utilidad proporciona información sobre el número total de perfiles que cumplen los criterios de **any** definición de segmento, según se captura durante la instantánea diaria, para los últimos 30 días, 90 días o 12 meses."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** proporciona una ilustración de gráfico de líneas para el número total de perfiles que cumplen los criterios de **any** definición de segmento durante un período de tiempo determinado. La tendencia del tamaño de la audiencia se puede visualizar en periodos de 30 días, 90 días y 12 meses. El periodo de tiempo se elige en un menú desplegable del widget. El tamaño de la audiencia se refleja en el eje y y en el tiempo en el eje x.
 
@@ -151,7 +149,6 @@ Esta utilidad le permite optimizar su estrategia de segmentación mediante la vi
 >id="platform_dashboards_segments_identityoverlap"
 >title="Superposición de identidad"
 >abstract="Esta utilidad muestra la superposición de perfiles en el segmento que contienen ambas identidades seleccionadas. Los círculos muestran el tamaño relativo de cada identidad. El número de perfiles que contienen ambos espacios de nombres se representa mediante la superposición entre los círculos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Superposición de identidad]** La utilidad muestra un diagrama de Venn o un diagrama de conjunto que muestra la superposición de perfiles en el segmento que contiene varias identidades.
 
@@ -169,7 +166,6 @@ Para obtener más información sobre las identidades, visite [Documentación del
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Perfiles por identidad"
 >abstract="Esta utilidad muestra el desglose de identidades en cada perfil combinado del segmento seleccionado."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="Más información sobre la documentación"
 
 La variable **[!UICONTROL Perfiles por identidad]** muestra el desglose de identidades en cada perfil combinado del segmento seleccionado. El número total de perfiles por identidad puede ser mayor que el número total de perfiles en el segmento porque un perfil podría tener varias identidades asociadas a él. En otras palabras, sumar los valores mostrados para cada identidad puede totalizar más que el tamaño total de audiencia en el segmento porque si un cliente interactúa con su marca en más de un canal, se pueden asociar varias identidades con ese cliente individual.
 
