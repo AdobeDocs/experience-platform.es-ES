@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2022
 description: Notas de la versión de agosto de 2022 para Adobe Experience Platform.
-source-git-commit: 5e7ceda9ed126a2c003fb51302393631e0425cd2
+source-git-commit: 2a507b4fe5b7c9dc523ceb5b2f39becf9e574ed9
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 12%
+source-wordcount: '317'
+ht-degree: 10%
 
 ---
 
@@ -14,7 +14,22 @@ ht-degree: 12%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [Preparación de datos](#data-prep)
 - [Fuentes](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Compatibilidad con la ingesta de registros con advertencias | La preparación de datos ahora localizará las advertencias (errores no críticos) en los campos y permitirá que se ingrese el resto de la fila. Todos los errores de transformación del asignador ahora se notifican como advertencias y las filas parcialmente ingeridas se consideran correctas, con una advertencia.  La supervisión también se admite en registros con advertencias y detalles de diagnóstico. Actualmente, la ingesta parcial de registros con advertencias solo está disponible para la transmisión de datos. Consulte la documentación de [ingesta de registros con advertencias](../../sources/tutorials/ui/monitor-streaming.md) para obtener más información. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre [!DNL Data Prep], consulte la [[!DNL Data Prep] información general](../../data-prep/home.md).
 
 ## Fuentes {#sources}
 
