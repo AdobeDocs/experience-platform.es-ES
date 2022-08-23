@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2022
 description: Notas de la versión de agosto de 2022 para Adobe Experience Platform.
-source-git-commit: 2a507b4fe5b7c9dc523ceb5b2f39becf9e574ed9
+source-git-commit: b8513fa214ea74eec6809796cc194466e05cbb21
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 10%
+source-wordcount: '497'
+ht-degree: 6%
 
 ---
 
@@ -41,7 +41,11 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 
 | Función | Descripción |
 | --- | --- |
+| Disponibilidad general de fuentes de autoservicio (SDK por lotes) | Desarrolle, pruebe e integre su fuente de datos basada en la API de REST para introducir datos por lotes en el Experience Platform mediante la fácil configuración de las especificaciones de origen. Con el SDK de fuentes, puede: <ul><li>Configure un nuevo origen en el catálogo de Experience Platform.</li><li>Defina especificaciones para su fuente, incluida información relacionada con tipos de autenticación admitidos, programación y cómo se recuperan los datos de los recursos.</li><li>Cree documentación de cara al usuario para la nueva fuente.</li></ul> Para obtener más información, consulte la documentación de [Fuentes de autoservicio (SDK por lotes)](../../sources/sources-sdk/overview.md). |
+| Disponibilidad general [!DNL Google BigQuery] source | Utilice la variable [!DNL Google BigQuery] fuente para introducir datos de su [!DNL Google BigQuery] almacén de datos al Experience Platform. Para obtener más información, consulte la documentación de [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
+| [!DNL Teradata Vantage] source (Beta) | Utilice la variable [!DNL Teradata Vantage] fuente para introducir datos de entornos híbridos de nube múltiple a Experience Platform. Para obtener más información, consulte la documentación de [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
 | Compatibilidad entre regiones para el origen de Adobe Analytics | Ahora puede ingerir grupos de informes de cualquier región (Estados Unidos, Reino Unido o Singapur). Los grupos de informes deben asignarse a la misma organización que la instancia de espacio aislado del Experience Platform en la que se está creando la conexión de origen. Para obtener más información, consulte la guía de [creación de una conexión de origen de Adobe Analytics en la interfaz de usuario](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Compatibilidad de API para la ingesta bajo demanda | Utilice la ingesta bajo demanda para crear ejecuciones de flujo ad hoc para un flujo de datos determinado con la variable [!DNL Flow Service] API. Las ejecuciones de flujo creadas deben establecerse en ingesta única. Para obtener más información, consulte la guía de [creación de una ejecución de flujo para la ingesta bajo demanda mediante la API](../../sources/tutorials/api/on-demand-ingestion.md) para obtener más información. |
 
 {style=&quot;table-layout:auto&quot;}
 
