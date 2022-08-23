@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
+source-git-commit: 9d615d70ce37c6dad683e9082db02697b9882ab3
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '804'
 ht-degree: 14%
 
 ---
@@ -189,6 +189,7 @@ ht-degree: 14%
       - [Recopilar datos de pago](tutorials/api/collect/payments.md)
       - [Recopilación de datos de protocolo](tutorials/api/collect/protocols.md)
       - [Recopilación de datos de flujo continuo](tutorials/api/collect/streaming.md)
+   - [Ingesta bajo demanda](tutorials/api/on-demand-ingestion.md)
    - [Monitorizar flujos de datos](tutorials/api/monitor.md)
    - [Actualizar cuentas](tutorials/api/update.md)
    - [Actualizar flujos de datos](tutorials/api/update-dataflows.md)
