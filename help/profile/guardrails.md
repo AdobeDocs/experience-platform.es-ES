@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 'Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
+source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 6%
@@ -109,9 +109,9 @@ Las protecciones descritas en esta sección hacen referencia al número y la nat
 
 | Seguridad | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Segmentos por simulador de pruebas | 10 000 | Leve | Una organización puede tener más de 10 000 segmentos en total, siempre que haya menos de 10 000 segmentos en cada entorno limitado individual. El intento de crear segmentos adicionales puede afectar al rendimiento del sistema. |
+| Segmentos por simulador de pruebas | 4000 | Leve | Una organización puede tener más de 4000 segmentos en total, siempre que haya menos de 4000 segmentos en cada entorno limitado individual. El intento de crear segmentos adicionales puede afectar al rendimiento del sistema. |
 | Segmentos de flujo continuo por entorno limitado | 500 | Leve | Una organización puede tener más de 500 segmentos de flujo continuo en total, siempre que haya menos de 500 segmentos de flujo continuo en cada simulador de pruebas individual. El intento de crear segmentos de flujo continuo adicionales puede afectar al rendimiento del sistema. |
-| Segmentos por lotes por simulador de pruebas | 10 000 | Leve | Una organización puede tener más de 10 000 segmentos de lote en total, siempre que haya menos de 10 000 segmentos de lote en cada entorno limitado individual. El intento de crear segmentos de lote adicionales puede afectar al rendimiento del sistema. |
+| Segmentos por lotes por simulador de pruebas | 4000 | Leve | Una organización puede tener más de 4000 segmentos de lote en total, siempre que haya menos de 4000 segmentos de lote en cada entorno limitado individual. El intento de crear segmentos de lote adicionales puede afectar al rendimiento del sistema. |
 
 {style=&quot;table-layout:auto&quot;}
 
