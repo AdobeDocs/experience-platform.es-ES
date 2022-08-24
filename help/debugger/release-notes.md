@@ -4,14 +4,20 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: b4e3b40942390ef183ccb01f65702ae400a5e22f
+source-git-commit: f2733cca00f98e85cd1b3944c5127f5c1c89594e
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '392'
 ht-degree: 2%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
+
+## Versión 1.4.0: 24 de agosto de 2022
+
+* Se ha añadido compatibilidad con la implementación híbrida del SDK web.
+* Se ha añadido un mensaje de error al habilitar el seguimiento de destino falla.
+* Se han actualizado las dependencias.
 
 ## Versión 1.3.3: 20 de junio de 2022
 
