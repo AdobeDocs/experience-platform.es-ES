@@ -6,20 +6,20 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
+source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2211'
 ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen de Adobe Analytics en la interfaz de usuario
 
-Este tutorial proporciona los pasos para crear una conexión de origen de Adobe Analytics en la interfaz de usuario para que [!DNL Analytics] Datos del grupo de informes en Adobe Experience Platform.
+Este tutorial proporciona los pasos para crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos del grupo de informes de Adobe Analytics en Adobe Experience Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
 * [Sistema del Modelo de datos de experiencia (XDM)](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
 * [Perfil del cliente en tiempo real](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
@@ -30,7 +30,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 Es importante comprender los siguientes términos clave utilizados en este documento:
 
 * **Atributo estándar**: Los atributos estándar son cualquier atributo predefinido por Adobe. Contienen el mismo significado para todos los clientes y están disponibles en la variable [!DNL Analytics] datos de origen y [!DNL Analytics] grupos de campos de esquema.
-* **Atributo personalizado**: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizadas en [!DNL Analytics]. Los atributos personalizados se utilizan en una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden variar en su uso de Grupo de informes a Grupo de informes. Los atributos personalizados incluyen eVars, props y listas. Consulte lo siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obtener más información sobre las eVars.
+* **Atributo personalizado**: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizadas en [!DNL Analytics]. Los atributos personalizados se utilizan en una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden variar en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte lo siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obtener más información sobre las eVars.
 * **Cualquier atributo de los grupos de campos personalizados**: Los atributos que se originan a partir de grupos de campos creados por clientes se definen como usuarios y no se consideran atributos estándar ni personalizados.
 * **Nombres descriptivos**: Los nombres descriptivos son etiquetas proporcionadas por el ser humano para variables personalizadas en un [!DNL Analytics] implementación. Consulte lo siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obtener más información sobre nombres descriptivos.
 
@@ -48,13 +48,17 @@ En el **[!UICONTROL aplicaciones de Adobe]** categoría, seleccione **[!UICONTRO
 
 La variable **[!UICONTROL Agregar datos de origen de Analytics]** le proporciona una lista de [!DNL Analytics] datos del grupo de informes para crear una conexión de origen.
 
-Un grupo de informes se puede ingerir utilizando un único flujo de datos activo. No se puede usar en varios flujos de datos. Además, un grupo de informes debe pertenecer a la misma región que la instancia de Platform sandbox en la que se está creando la conexión de origen. Ya se ha introducido un grupo de informes que no se puede seleccionar, ya sea en este simulador para pruebas o en otro simulador para pruebas.
+Un grupo de informes es un contenedor de datos que forma la base de [!DNL Analytics] informes. Una organización puede tener muchos grupos de informes, cada uno con diferentes conjuntos de datos.
+
+Puede ingerir grupos de informes de cualquier región (Estados Unidos, Reino Unido o Singapur) siempre que estén asignados a la misma organización que la instancia de entorno limitado del Experience Platform en la que se está creando la conexión de origen. Un grupo de informes se puede ingerir utilizando un único flujo de datos activo. Ya se ha introducido un grupo de informes que no se puede seleccionar, ya sea en el simulador de pruebas que está utilizando o en otro simulador de pruebas.
 
 Se pueden realizar varias conexiones entrantes para incluir varios grupos de informes en el mismo simulador de pruebas. Si los grupos de informes tienen esquemas diferentes para variables (como eVars o eventos), deben asignarse a campos específicos de los grupos de campos personalizados y evitar conflictos de datos mediante [Preparación de datos](../../../../../data-prep/ui/mapping.md). Los grupos de informes solo se pueden agregar a un solo simulador de pruebas.
 
+![](../../../../images/tutorials/create/analytics/report-suite.png)
+
 >[!NOTE]
 >
->Los datos de varios grupos de informes solo se pueden habilitar para el perfil de datos del cliente en tiempo real si no hay conflictos de datos, como dos propiedades personalizadas (eVars, listas y props) que tengan un significado diferente, no se pueden asignar al mismo atributo en el XDM.
+>Los datos de varios grupos de informes solo se pueden habilitar para el perfil de datos del cliente en tiempo real si no hay conflictos de datos, como dos propiedades personalizadas (eVars, listas y props) que tengan un significado diferente.
 
 Para crear un [!DNL Analytics] conexión de origen, seleccione un grupo de informes y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 

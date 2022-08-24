@@ -5,18 +5,14 @@ title: Descripción general del conector de origen BigQuery de Google
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Google BigQuery a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Google BigQuery] connector
-
->[!NOTE]
->
->La variable [!DNL Google BigQuery] está en versión beta. Consulte la [Resumen de fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+# [!DNL Google BigQuery]
 
 Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
@@ -40,6 +36,7 @@ Para conectar [!DNL Google BigQuery] para Platform, debe generar valores para la
 | `clientID` | El ID de cliente es la mitad de su [!DNL Google BigQuery] Credenciales de OAuth 2.0. |
 | `clientSecret` | El secreto del cliente es la otra mitad de su [!DNL Google BigQuery] Credenciales de OAuth 2.0. |
 | `refreshToken` | El token de actualización le permite obtener nuevos tokens de acceso para su API. Los tokens de acceso tienen una duración limitada y pueden caducar durante el curso del proyecto. Puede utilizar el token de actualización para autenticarse y solicitar los tokens de acceso subsiguientes para su proyecto cuando sea necesario. |
+| `largeResultsDataSetId` | El  [!DNL Google BigQuery] ID del conjunto de datos necesario para habilitar la compatibilidad con grandes conjuntos de resultados. |
 
 Para obtener instrucciones detalladas sobre cómo generar credenciales de OAuth 2.0 para [!DNL Google] API, consulte lo siguiente [[!DNL Google] Guía de autenticación de OAuth 2.0](https://developers.google.com/identity/protocols/oauth2).
 
