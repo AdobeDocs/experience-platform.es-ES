@@ -2,13 +2,13 @@
 keywords: correo electrónico;correo electrónico;destinos de correo electrónico;salesforce;api salesforce marketing cloud destination
 title: (API) Conexión de Marketing Cloud de Salesforce
 description: El destino de Marketing Cloud de Salesforce (anteriormente conocido como ExactTarget) le permite exportar los datos de su cuenta y activarlos dentro de Salesforce Marketing Cloud para sus necesidades comerciales.
-source-git-commit: ce7b28ce31c652965a6eaad81348e330bd38e9ac
+exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
+source-git-commit: 2dda77c3d9a02b53a02128e835abf77ab97ad033
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1906'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL (API) Salesforce Marketing Cloud] connection
 
@@ -48,7 +48,7 @@ Vaya a Salesforce [prueba](https://www.salesforce.com/in/form/signup/freetrial-s
 
 #### Crear campo personalizado en Salesforce {#prerequisites-custom-field}
 
-Cree el atributo personalizado de tipo `Text Area Long` qué Experience Platform utilizará para actualizar el estado del segmento dentro del Marketing Cloud de Salesforce.
+Debe crear un atributo personalizado del tipo `Text Area Long`, que el Experience Platform utilizará para actualizar el estado del segmento dentro del Marketing Cloud de Salesforce. En el flujo de trabajo para activar segmentos en el destino, en la variable **[Programación de segmentos](#schedule-segment-export-example)** , utilizará el atributo personalizado como ID de asignación para cada segmento que active.
 
 Consulte la documentación del Marketing Cloud de Salesforce para [crear campos personalizados](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) si necesita más instrucciones.
 
@@ -72,6 +72,8 @@ Anote los elementos siguientes antes de autenticarse en el destino de Marketing 
 | --- | --- | --- |
 | <ul><li>Prefijo de Marketing Cloud de Salesforce</li></ul> | Consulte [Prefijo de dominio de Marketing Cloud de Salesforce](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) para obtener más información. | <ul><li>Si su dominio es el siguiente, necesita el valor resaltado.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul> |
 | <ul><li>ID del cliente</li><li>Secreto del cliente</li></ul> | Consulte la [Documentación de Salesforce](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) si necesita más instrucciones. | <ul><li>r23kxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxx</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Identidades compatibles {#supported-identities}
 
@@ -140,7 +142,7 @@ Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos d
 
 ### Consideraciones de asignación y ejemplo {#mapping-considerations-example}
 
-Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino de Marketing Cloud de Salesforce, debe pasar por el paso de asignación de campos. La asignación consiste en la creación de un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino de Marketing Cloud de Salesforce, siga estos pasos:
+Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino de Marketing Cloud de Salesforce, debe pasar por el paso de asignación de campos. La asignación consiste en la creación de un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino de Marketing Cloud de Salesforce, siga los pasos a continuación.
 
 La lista de asignaciones de atributos que se pueden configurar para la variable [API de REST de Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) a continuación. El destino utiliza la variable [API de REST de definiciones de conjunto de atributos de búsqueda de Salesforce](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) para recuperar los atributos definidos en Salesforce para sus contactos y específicos de su cuenta.
 
@@ -148,7 +150,7 @@ La lista de asignaciones de atributos que se pueden configurar para la variable 
 > 
 > Aunque los nombres de atributos serían según su cuenta de Salesforce, las asignaciones para `contactKey` y `personalEmail.address` son obligatorios.
 
-1. En el paso Asignación , haga clic en **[!UICONTROL Añadir nueva asignación]**, verá una nueva fila de asignación en la pantalla .
+1. En el paso Asignación , haga clic en **[!UICONTROL Añadir nueva asignación]**. Ahora puede ver una nueva fila de asignación en la pantalla .
    ![Añadir nueva asignación](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
 1. En la ventana seleccionar campo de origen, al seleccionar el campo de origen, elija la opción **[!UICONTROL Seleccionar atributos]** y añada las asignaciones que desee.
@@ -172,7 +174,7 @@ La lista de asignaciones de atributos que se pueden configurar para la variable 
 
 ### Programar exportación de segmentos y ejemplo {#schedule-segment-export-example}
 
-Al realizar el [Programar exportación de segmentos](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) debe asignar manualmente los segmentos de Platform al atributo personalizado en Salesforce.
+Al realizar el [Programar exportación de segmentos](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) paso, debe asignar manualmente los segmentos de Platform al atributo personalizado en Salesforce.
 
 Para ello, seleccione cada segmento e introduzca el atributo personalizado correspondiente de Salesforce en la **[!UICONTROL ID de asignación]** campo .
 
@@ -233,4 +235,3 @@ Cuando compruebe que se ejecute un flujo de datos, si ve el siguiente mensaje de
 * Consulte la [Precio de participación de Marketing Cloud de Salesforce](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) a *Descargar el gráfico comparativo de la edición completa* como pdf que detalla los límites impuestos por su plan.
 * La variable [Información general de API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) detalles de la página límites adicionales.
 * Hay disponible un elemento KB que recopila estos detalles [here](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&amp;text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&amp;text=As%20has%20been%20added%20in,interactuando%20with%20the%20REST%2DAPI).
-
