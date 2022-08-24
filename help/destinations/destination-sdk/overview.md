@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK es un conjunto de API de configuración que le permiten configurar patrones de integración de destino para que el Experience Platform entregue datos de audiencia y perfil a su extremo, en función de los formatos de autenticación y datos que elija. Las configuraciones se almacenan en Experience Platform y se pueden recuperar mediante API para obtener actualizaciones adicionales.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 179d5697e1b8d14f613a512f51bcea3575b7a832
+source-git-commit: c207b6700a31c59b00af6d55264c7a345219d999
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -53,18 +53,17 @@ A través de Destination SDK, Adobe Experience Platform admite integraciones en 
 
 Obtenga información sobre los requisitos técnicos del lado de los destinos en la [requisitos previos de integración](./integration-prerequisites.md) artículo.
 
-
 ## Obtener acceso al Destination SDK {#get-access}
 
-El acceso de los Destination SDK varía en función de su estado como cliente socio o Experience Platform. Para obtener más información, consulte la siguiente tabla.
+El acceso de los Destination SDK varía en función de su estado como socio o Experience Platform, cliente de Real-Time CDP. Para obtener más información, consulte la siguiente tabla.
 
 
 | Tipo de socio o cliente | Cómo acceder al Destination SDK |
 ---------|----------|
 | Proveedor de software independiente (ISV) | Únase a [Programa de intercambio de Adobes](https://partners.adobe.com/exchangeprogram/experiencecloud.html) y solicitar obtener un simulador para pruebas de Experience Platform aprovisionado para acceder al Destination SDK. |
 | Integrador de sistemas (SI) | Debe encontrarse en el nivel oro o platino en la variable [Programa para Socios de Soluciones de Adobe](https://solutionpartners.adobe.com/home.html), y obtendrá un simulador para pruebas de Experience Platform aprovisionado y acceso al Destination SDK. |
-| cliente Experience Platform en la variable [Paquete de activación](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | De forma predeterminada, se obtiene acceso a los entornos limitados y al Destination SDK del Experience Platform. |
-| cliente Experience Platform en la variable [Paquete CDP Ultimate en tiempo real](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | No tiene acceso a Destination SDK, pero tiene acceso a todos los destinos de productos configurados por otras empresas mediante Destination SDK y publicados en todas las organizaciones de Experience Platform. |
+| cliente Experience Platform en la variable [Paquete de activación](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | De forma predeterminada, se obtiene acceso a los entornos limitados y al Destination SDK del Experience Platform. <br> También puede acceder a todos los destinos de productos configurados por otras empresas mediante Destination SDK y publicados en organizaciones de Experience Platform. |
+| cliente Experience Platform en la variable [Paquete Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | De forma predeterminada, se obtiene acceso a los entornos limitados y al Destination SDK del Experience Platform. <br> También puede acceder a todos los destinos de productos configurados por otras empresas mediante Destination SDK y publicados en organizaciones de Experience Platform. |
 
 {style=&quot;table-layout:auto&quot;}
 
