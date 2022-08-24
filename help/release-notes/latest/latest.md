@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 70bc3d8743dfa6c14e8a5c467775faa0c3c5a767
+source-git-commit: f458b3f204e961f849782f26a1563a67d6ea4b60
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1966'
 ht-degree: 8%
 
 ---
@@ -36,11 +36,11 @@ Attribution AI se utiliza para atribuir créditos a puntos de contacto que lleva
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con la privacidad | <li>Attribution AI ahora admite la definición de funciones de usuario y políticas de acceso para administrar [permissions](../../../help/access-control/abac/ui/permissions.md) para características y objetos de una aplicación de producto.</li><li>Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad.</li><li>Hasta [control de acceso basado en atributos](../../../help/access-control/abac/overview.md), los administradores pueden controlar el acceso a objetos específicos o a funciones basadas en determinados atributos, que pueden ser metadatos agregados a un objeto, como etiquetas. Los administradores también pueden definir funciones de usuario que solo tengan acceso a campos específicos y datos que correspondan a esos campos.</li><li>[Higiene de los datos](../../../help/hygiene/home.md) las funciones de Attribution AI solo permiten utilizar datos actualizados para obtener más información y puntuación. Del mismo modo, cuando se solicita la eliminación de datos, la Attribution AI se abstiene de utilizarlos.</li><li>Attribution AI aprovecha los conjuntos de datos de Platform. Para facilitar el cumplimiento del RGPD, puede utilizar Adobe Experience Platform Privacy Service para configurar protocolos que satisfagan las solicitudes de los clientes de acceso y eliminación de sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real. Todos los datos se cifran en tránsito y en reposo.</li> |
+| Compatibilidad con la privacidad | <ul><li>Attribution AI ahora admite la definición de funciones de usuario y políticas de acceso para administrar [permissions](../../../help/access-control/abac/ui/permissions.md) para características y objetos de una aplicación de producto.</li><li>Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad.</li><li>Hasta [control de acceso basado en atributos](../../../help/access-control/abac/overview.md), los administradores pueden controlar el acceso a objetos específicos o a funciones basadas en determinados atributos, que pueden ser metadatos agregados a un objeto, como etiquetas. Los administradores también pueden definir funciones de usuario que solo tengan acceso a campos específicos y datos que correspondan a esos campos.</li><li>[Higiene de los datos](../../../help/hygiene/home.md) las funciones de Attribution AI solo permiten utilizar datos actualizados para obtener más información y puntuación. Del mismo modo, cuando se solicita la eliminación de datos, la Attribution AI se abstiene de utilizarlos.</li><li>Attribution AI aprovecha los conjuntos de datos de Platform. Para facilitar el cumplimiento del RGPD, puede utilizar Adobe Experience Platform Privacy Service para configurar protocolos que satisfagan las solicitudes de los clientes de acceso y eliminación de sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real. Todos los datos se cifran en tránsito y en reposo.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**Nota**: No estarán disponibles para los clientes de Healthcare Shield hasta finales del cuarto trimestre de 2022.
+**Nota**: Attribution AI no estará disponible con los clientes existentes de Escudo de la salud o Escudo de la privacidad hasta nuevo aviso.
 
 Para obtener más información sobre la Attribution AI, consulte la [Attribution AI](../../intelligent-services/attribution-ai/overview.md) información general.
 
@@ -52,11 +52,11 @@ La AI del cliente disponible en Real-time Customer Data Platform se utiliza para
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con la privacidad | <li>La Customer AI ahora admite la definición de funciones de usuario y políticas de acceso para administrar [permissions](../../../help/access-control/abac/ui/permissions.md) para características y objetos de una aplicación de producto.</li><li>Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad.</li><li> Hasta [control de acceso basado en atributos](../../access-control/abac/overview.md), los administradores pueden controlar el acceso a objetos o capacidades específicos en función de determinados atributos. Estos atributos pueden ser metadatos agregados a un objeto, como etiquetas. Los administradores también pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.</li><li>[Higiene de los datos](../../../help/hygiene/home.md) las funciones de Customer AI solo permiten utilizar datos actualizados para obtener más información y puntuación. Del mismo modo, cuando se solicita la eliminación de datos, la AI del cliente se abstiene de utilizarlos.</li><li>Customer AI aprovecha los conjuntos de datos de Platform. Para facilitar el cumplimiento del RGPD, puede utilizar Adobe Experience Platform Privacy Service para configurar protocolos que satisfagan las solicitudes de los clientes de acceso y eliminación de sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real. Todos los datos se cifran en tránsito y en reposo.</li> |
+| Compatibilidad con la privacidad | <ul><li>La Customer AI ahora admite la definición de funciones de usuario y políticas de acceso para administrar [permissions](../../../help/access-control/abac/ui/permissions.md) para características y objetos de una aplicación de producto.</li><li>Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad.</li><li> Hasta [control de acceso basado en atributos](../../access-control/abac/overview.md), los administradores pueden controlar el acceso a objetos o capacidades específicos en función de determinados atributos. Estos atributos pueden ser metadatos agregados a un objeto, como etiquetas. Los administradores también pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.</li><li>[Higiene de los datos](../../../help/hygiene/home.md) las funciones de Customer AI solo permiten utilizar datos actualizados para obtener más información y puntuación. Del mismo modo, cuando se solicita la eliminación de datos, la AI del cliente se abstiene de utilizarlos.</li><li>Customer AI aprovecha los conjuntos de datos de Platform. Para facilitar el cumplimiento del RGPD, puede utilizar Adobe Experience Platform Privacy Service para configurar protocolos que satisfagan las solicitudes de los clientes de acceso y eliminación de sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real. Todos los datos se cifran en tránsito y en reposo.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**Nota**: Customer AI no estará disponible para los clientes de Healthcare Shield hasta finales del cuarto trimestre de 2022.
+**Nota**: Customer AI no estará disponible con los clientes existentes de Healthcare Shield o Privacy Shield hasta nuevo aviso.
 
 Para obtener más información sobre Customer AI, consulte la [Customer AI](../../intelligent-services/customer-ai/overview.md) información general.
 
