@@ -5,10 +5,10 @@ title: Guía de la interfaz de usuario de Attribution AI
 topic-legacy: User guide
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -261,6 +261,36 @@ Para garantizar que obtiene el modelo más preciso posible, es importante formar
 Una vez seleccionada la ventana de formación, seleccione **[!UICONTROL Finalizar]** en la esquina superior derecha. Espere un tiempo para que los datos se procesen. Una vez finalizada, aparece un cuadro de diálogo de apertura que confirma que la configuración de la instancia ha finalizado. Select **[!UICONTROL Ok]** para ser redirigido a la función **[!UICONTROL Instancias de servicio]** página en la que puede ver la instancia de servicio.
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
+
+### Control de acceso basado en atributos
+
+>[!IMPORTANT]
+>
+>El control de acceso basado en atributos está disponible actualmente solo en una versión limitada.
+
+[Control de acceso basado en atributos](../../../help/access-control/abac/overview.md) es una función de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funciones basadas en atributos. Los atributos pueden ser metadatos agregados a un objeto, como una etiqueta agregada a un campo o segmento de esquema. Un administrador define políticas de acceso que incluyen atributos para administrar los permisos de acceso de los usuarios.
+
+Esta funcionalidad le permite etiquetar campos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir las políticas de acceso que rodean los campos de esquema XDM y administrar mejor el acceso dado a los usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Además, el control de acceso basado en atributos permite a los administradores administrar el acceso a segmentos específicos.
+
+Mediante el control de acceso basado en atributos, los administradores pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD) y a la información de identificación personal (PII) en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.
+
+Debido al control de acceso basado en atributos, es posible que algunos campos y funcionalidades tengan acceso restringido y no estén disponibles para determinadas instancias del servicio de Attribution AI. Algunos ejemplos son &quot;Identidad&quot;, &quot;Definición de puntuación&quot; y &quot;Clonar&quot;.
+
+En la parte superior del espacio de trabajo de Attribution AI **página perspectivas**, los detalles que aparecen en la barra lateral tienen acceso restringido.
+
+![Espacio de trabajo de Attribution AI con los campos restringidos del esquema resaltados.](./images/user-guide/access-restricted.png)
+
+Si selecciona conjuntos de datos con esquemas restringidos en la variable **[!UICONTROL Flujo de trabajo de creación de instancias]** , aparece un signo de advertencia junto al nombre del conjunto de datos con el mensaje : [!UICONTROL Se excluye la información restringida].
+
+![El espacio de trabajo de Attribution AI con los campos restringidos de los conjuntos de datos seleccionados con los resultados de esquemas restringidos resaltados.](./images/user-guide/restricted-info-excluded.png)
+
+Cuando se obtienen vistas previas de conjuntos de datos con esquema restringido en la variable **[!UICONTROL Flujo de trabajo de creación de instancias]** , aparece una advertencia que indica que [!UICONTROL Debido a las restricciones de acceso, cierta información no se muestra en la vista previa del conjunto de datos.]
+
+![El espacio de trabajo de Attribution AI con los campos restringidos de los resultados de esquema mostrados previamente resaltados.](./images/user-guide/restricted-dataset-preview.png)
+
+Después de crear una instancia con información restringida y continuar con el **[!UICONTROL Definir objetivo]** , aparece una advertencia en la parte superior: [!UICONTROL Debido a restricciones de acceso, cierta información no se muestra en la configuración.]
+
+![El espacio de trabajo de Attribution AI con los campos restringidos de la instancia resulta resaltado.](./images/user-guide/information-not-displayed.png)
 
 ## Pasos siguientes
 

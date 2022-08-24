@@ -6,9 +6,9 @@ title: Entrada y salida en Customer AI
 topic-legacy: Getting started
 description: Obtenga más información sobre los eventos, entradas y salidas necesarios que utiliza Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '3096'
+source-wordcount: '3180'
 ht-degree: 1%
 
 ---
@@ -283,6 +283,13 @@ La tabla siguiente describe los distintos atributos que se encuentran en la sali
 | Tipo de propensión | El tipo de tendencia seleccionado. |
 | Fecha de puntuación | Fecha en la que se produjo la puntuación. |
 | Factores influyentes | Motivos predichos sobre por qué es probable que un perfil se convierta o produzca. Los factores se componen de los siguientes atributos:<ul><li>Código: El perfil o atributo de comportamiento que influye positivamente en la puntuación predicha de un perfil. </li><li>Valor: El valor del perfil o atributo de comportamiento.</li><li>Importancia: Indica el peso del perfil o atributo de comportamiento que tiene en la puntuación predicha (baja, media, alta)</li></ul> |
+
+>[!NOTE]
+>
+> - Customer AI solo utiliza datos actualizados para obtener más información y puntuación. Del mismo modo, cuando se solicita la eliminación de datos, la AI del cliente se abstiene de utilizarlos.
+> - Para facilitar el cumplimiento del RGPD en Customer AI, puede utilizar Adobe Experience Platform Privacy Service para configurar protocolos que acepten solicitudes de clientes para acceder a datos del lago de datos, el servicio de identidad y el perfil del cliente en tiempo real y eliminarlos.
+> - Todos los datos se cifran en tránsito y en reposo. Consulte la documentación para obtener más información [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md)
+
 
 ## Pasos siguientes {#next-steps}
 
