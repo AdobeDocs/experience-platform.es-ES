@@ -4,10 +4,8 @@ solution: Experience Platform
 title: Uso de la interfaz web de GitHub para crear una página de documentación de fuentes
 topic-legacy: tutorial
 description: Este documento proporciona pasos sobre cómo utilizar la interfaz web de GitHub para crear documentación y enviar una solicitud de extracción (PR).
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
@@ -36,19 +34,19 @@ Una vez finalizada la ramificación, seleccione **maestro** e introduzca un nomb
 
 ![create-branch](../assets/create-branch.png)
 
-En la estructura de carpetas de GitHub del repositorio ramificado, vaya a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) y, a continuación, seleccione la categoría adecuada para el origen en la lista. Por ejemplo, si está creando documentación para una nueva fuente de almacenamiento en la nube, seleccione **almacenamiento en la nube**.
+En la estructura de carpetas de GitHub del repositorio ramificado, vaya a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) y, a continuación, seleccione la categoría adecuada para el origen en la lista. Por ejemplo, si está creando documentación para un nuevo origen CRM, seleccione **crm**.
 
 >[!TIP]
 >
 >Si está creando documentación para la interfaz de usuario de , vaya a [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) y seleccione la categoría adecuada para el origen. Para añadir las imágenes, vaya a [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) a continuación, agregue las capturas de pantalla a la `sdk` carpeta.
 
-![almacenamiento en la nube](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-Aparece una carpeta de orígenes de almacenamiento en la nube existentes. Para agregar documentación para una fuente nueva, seleccione **Agregar archivo** y, a continuación, seleccione **Crear nuevo archivo** del menú desplegable que aparece.
+Aparece una carpeta de orígenes CRM existentes. Para agregar documentación para una fuente nueva, seleccione **Agregar archivo** y, a continuación, seleccione **Crear nuevo archivo** del menú desplegable que aparece.
 
 ![create-new-file](../assets/create-new-file.png)
 
-Asigne un nombre al archivo de origen `YOURSOURCE.md` donde YOURSOURCE es el nombre de su fuente en Platform. Por ejemplo, si su empresa es [!DNL Mailchimp], el nombre del archivo debe ser `mailchimp.md`.
+Asigne un nombre al archivo de origen `YOURSOURCE.md` donde YOURSOURCE es el nombre de su fuente en Platform. Por ejemplo, si su empresa es ACME CRM, su nombre de archivo debería ser `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 

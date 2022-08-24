@@ -4,10 +4,8 @@ solution: Experience Platform
 title: Plantilla de autoservicio de documentación
 topic-legacy: tutorial
 description: Aprenda a conectar Adobe Experience Platform a su fuente de datos mediante la API de servicio de flujo.
-hide: true
-hidefromtoc: true
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 3%

@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
-title: Configuración de especificaciones de exploración para el SDK de fuentes
+title: Configuración de especificaciones de exploración para fuentes de autoservicio (SDK por lotes)
 topic-legacy: overview
-description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar el SDK de fuentes.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '258'
 ht-degree: 2%
 
 ---
 
-
-# Configuración de especificaciones de exploración para el SDK de fuentes
+# Configuración de especificaciones de exploración para fuentes de autoservicio (SDK por lotes)
 
 Las especificaciones de exploración definen los parámetros necesarios para explorar e inspeccionar los objetos contenidos en el origen. Explorar especificaciones también define el formato de respuesta devuelto cuando se exploran e inspeccionan los objetos.
 
@@ -87,4 +85,4 @@ Las especificaciones de exploración definen los parámetros necesarios para exp
 
 ## Pasos siguientes
 
-Con las especificaciones de exploración rellenadas, puede continuar creando una especificación de conexión completa utilizando la variable [!DNL Flow Service] API. Consulte la [[!DNL Sources SDK] Guía de API](../api/api-overview.md) para obtener más información.
+Con las especificaciones de exploración rellenadas, puede continuar creando una especificación de conexión completa utilizando la variable [!DNL Flow Service] API. Consulte la [Guía de API de fuentes de autoservicio (SDK por lotes)](../api/api-overview.md) para obtener más información.

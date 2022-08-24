@@ -1,30 +1,24 @@
 ---
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 solution: Experience Platform
-title: Introducción al SDK de fuentes (Beta)
+title: Introducción a las fuentes de autoservicio (SDK por lotes)
 topic-legacy: developer guide
-description: Este documento proporciona una introducción a la información de requisitos previos que debe conocer antes de intentar crear una fuente nueva mediante el SDK de fuentes.
-hide: true
-hidefromtoc: true
+description: Este documento proporciona una introducción a la información necesaria antes de intentar crear un nuevo origen con fuentes de autoservicio (SDK por lotes).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-# Introducción al SDK de fuentes (Beta)
+# Introducción a las fuentes de autoservicio (SDK por lotes)
 
->[!IMPORTANT]
->
->El SDK de fuentes se encuentra en la versión beta y es posible que su organización no tenga acceso a él todavía. La funcionalidad descrita en esta documentación está sujeta a cambios.
-
-El SDK de fuentes le permite integrar su propio origen basado en REST para introducir datos en Adobe Experience Platform. Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas al [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Las fuentes de autoservicio (Batch SDK) le permiten integrar su propio origen basado en REST para llevar datos por lotes a Adobe Experience Platform. Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas al [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Requisitos previos
 
-Para utilizar el SDK de Fuentes, debe asegurarse de que tiene acceso a un Simulador para pruebas de la organización IMS proporcionado con fuentes de Adobe Experience Platform.
+Para utilizar fuentes de autoservicio (SDK por lotes), debe asegurarse de tener acceso a un Simulador para pruebas de organización de IMS proporcionado con fuentes de Adobe Experience Platform.
 
 Esta guía también requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -33,7 +27,7 @@ Esta guía también requiere una comprensión práctica de los siguientes compon
 
 ## Leer llamadas de API de ejemplo
 
-El SDK de fuentes y [!DNL Flow Service] La documentación de API proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Las fuentes de autoservicio (SDK por lotes) y [!DNL Flow Service] La documentación de API proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
 ## Recopilar valores para encabezados necesarios
 
@@ -57,4 +51,4 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Pasos siguientes
 
-Para empezar a crear una fuente nueva con el SDK de fuentes, consulte el tutorial en [crear un nuevo origen](./create.md).
+Para empezar a crear un nuevo origen con orígenes de autoservicio (SDK por lotes), consulte el tutorial en [crear un nuevo origen](./create.md).

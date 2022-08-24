@@ -1,29 +1,23 @@
 ---
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
-title: Actualización de especificaciones de flujo mediante la API de servicio de flujo (Beta)
+title: Actualización de especificaciones de flujo mediante la API de servicio de flujo
 topic-legacy: developer guide
-description: El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante la API de servicio de flujo para el SDK de fuentes.
-hide: true
-hidefromtoc: true
+description: En el siguiente documento se proporcionan pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante la API de servicio de flujo para fuentes de autoservicio (SDK por lotes).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '408'
 ht-degree: 2%
 
 ---
 
-# Actualización de las especificaciones de flujo mediante [!DNL Flow Service] API (Beta)
-
->[!IMPORTANT]
->
->El SDK de fuentes se encuentra en la versión beta y es posible que su organización no tenga acceso a él todavía. La funcionalidad descrita en esta documentación está sujeta a cambios.
+# Actualización de las especificaciones de flujo mediante [!DNL Flow Service] API
 
 Una vez que haya generado un nuevo ID de especificación de conexión, debe añadir este ID a una especificación de flujo para crear un flujo de datos.
 
 Las especificaciones de flujo contienen información que define un flujo, incluidos los ID de conexión de origen y destino que admite, las especificaciones de transformación que deben aplicarse a los datos y los parámetros de programación necesarios para generar un flujo. Puede editar las especificaciones de flujo mediante el uso de `/flowSpecs` punto final.
 
-El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante el [!DNL Flow Service] API para el SDK de fuentes.
+El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante el [!DNL Flow Service] API para fuentes de autoservicio (SDK por lotes).
 
 ## Primeros pasos
 

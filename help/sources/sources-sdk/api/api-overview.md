@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
-title: Guía de API del SDK de fuentes (Beta)
+title: Guía de API de fuentes de autoservicio (SDK por lotes)
 topic-legacy: overview
 description: Este documento proporciona información general sobre el proceso de creación de una nueva fuente, incluidos los pasos para recuperar, escribir y enviar una nueva especificación de conexión mediante la API de servicio de flujo.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
-# Guía de API del SDK de fuentes (Beta)
-
->[!IMPORTANT]
->
->El SDK de fuentes se encuentra en la versión beta y es posible que su organización no tenga acceso a él todavía. La funcionalidad descrita en esta documentación está sujeta a cambios.
+# Guía de API de fuentes de autoservicio (SDK por lotes)
 
 Este documento proporciona una descripción general del proceso de creación de una nueva fuente, incluidos los pasos para escribir y enviar una nueva especificación de conexión mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen con varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
-La variable [!DNL Flow Service] La API proporciona varios extremos que le permiten administrar mediante programación las especificaciones de conexión y flujo para una nueva fuente que está integrando mediante el SDK de fuentes.
+La variable [!DNL Flow Service] La API proporciona varios puntos de conexión que le permiten administrar mediante programación las especificaciones de conexión y flujo para una nueva fuente que está integrando mediante fuentes de autoservicio (SDK por lotes).
 
 ## Crear una nueva especificación de conexión
 
@@ -50,4 +45,4 @@ Para enviar la fuente para su integración a Experience Platform, primero debe c
 
 ## Pasos siguientes
 
-Para empezar a usar la variable [!DNL Flow Service] API y crear una fuente nueva a través del SDK de fuentes, lea la [guía de introducción](./getting-started.md) a continuación, seleccione una de las guías de punto final para aprender a utilizar puntos finales específicos.
+Para empezar a usar la variable [!DNL Flow Service] y cree una nueva fuente a través de fuentes de autoservicio (SDK por lotes), lea la [guía de introducción](./getting-started.md) a continuación, seleccione una de las guías de punto final para aprender a utilizar puntos finales específicos.
