@@ -5,9 +5,9 @@ title: Punto final de API de programa
 topic-legacy: developer guide
 description: Los programas son una herramienta que se puede utilizar para ejecutar automáticamente los trabajos de segmentación por lotes una vez al día.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
+source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2011'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Pl
 
 ## Recuperar una lista de programaciones {#retrieve-list}
 
-Puede recuperar una lista de todas las programaciones de su organización IMS realizando una solicitud de GET a la `/config/schedules` punto final.
+Puede recuperar una lista de todas las programaciones de su organización realizando una solicitud de GET al `/config/schedules` punto final.
 
 **Formato de API**
 
@@ -41,7 +41,7 @@ GET /config/schedules?limit={LIMIT}
 
 **Solicitud**
 
-La siguiente solicitud recuperará las diez últimas programaciones publicadas en su organización de IMS.
+La siguiente solicitud recuperará las últimas diez programaciones publicadas en su organización.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \

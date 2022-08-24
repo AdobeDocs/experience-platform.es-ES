@@ -4,9 +4,9 @@ user-guide-title: Servicio de segmentación de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree segmentos y genere audiencias a partir de los datos del perfil del cliente en tiempo real.
 feature: Segments
-source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
+source-git-commit: b70b4302c95cbf4301b036feea799537fa633490
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '164'
 ht-degree: 29%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 29%
 - API de segmentación {#api}
    - [Información general](api/overview.md)
    - [Primeros pasos](api/getting-started.md)
+   - [Audiencias](api/audiences.md)
    - [Segmentación de Edge](api/edge-segmentation.md)
    - [Exportar trabajos](api/export-jobs.md)
    - [Previsión y estimaciones](api/previews-and-estimates.md)
