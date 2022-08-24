@@ -4,9 +4,9 @@ title: Guía del panel de segmentos
 description: 'Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Superposición de audiencia]](#audience-overlap)
 * [[!UICONTROL Superposición de identidad]](#identity-overlap)
 * [[!UICONTROL Perfiles por identidad]](#profiles-by-identity)
+* [[!UICONTROL Activaciones programadas]](#scheduled-activations)
 
 ### [!UICONTROL Tamaño de la audiencia] {#audience-size}
 
@@ -176,6 +177,14 @@ Select **[!UICONTROL Subtítulos]** para abrir el cuadro de diálogo rótulos au
 Un modelo de aprendizaje automático genera automáticamente perspectivas de datos analizando la distribución general y las dimensiones clave de los datos.
 
 Para obtener más información sobre las identidades, visite [Documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
+
+### Activaciones programadas {#scheduled-activations}
+
+La variable [!UICONTROL Activaciones programadas] proporciona una vista tabularizada de los destinos activados más recientemente. La tabla incluye la plataforma de destino, el nombre del flujo de activación a este destino y la fecha de inicio y finalización de la activación para el segmento seleccionado. Si no se ha proporcionado una fecha de finalización para la activación, se muestra como [!UICONTROL En curso]. El segmento para análisis se selecciona en la lista desplegable de la parte superior de la página.
+
+La utilidad le permite descubrir de un vistazo dónde y cuándo se está activando la audiencia y hace que las activaciones duplicadas o innecesarias sean más transparentes. Esta información acumulada también resalta dónde se han dejado de lado las activaciones.
+
+![El widget Activaciones programadas .](../images/segments/scheduled-activations.png)
 
 ## Pasos siguientes
 
