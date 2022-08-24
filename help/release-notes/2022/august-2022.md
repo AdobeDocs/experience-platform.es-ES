@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2022
 description: Notas de la versión de agosto de 2022 para Adobe Experience Platform.
-source-git-commit: 5967dee9c8b1c05ebd103998021e02a47ac3982c
+source-git-commit: c3452dda554b3c7750ad1166cef598d51d739e02
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1348'
 ht-degree: 6%
 
 ---
@@ -14,11 +14,24 @@ ht-degree: 6%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Preparación de datos](#data-prep)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Perfil del cliente en tiempo real](#profile)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform proporciona varios [!DNL dashboards] a través de la cual puede ver perspectivas importantes sobre los datos de su organización, tal como se capturan durante las instantáneas diarias.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Widget de activaciones programadas | La variable [!UICONTROL Activaciones programadas] proporciona una vista tabularizada de los destinos activados más recientemente. Para cada segmento, incluye el nombre, la plataforma de destino y la fecha de inicio y finalización de la activación. Esta utilidad le permite descubrir de un vistazo dónde y cuándo se está activando la audiencia y hace que las activaciones duplicadas o innecesarias sean más transparentes. Esta información acumulada también resalta dónde se han dejado de lado las activaciones. |
+
+Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL Dashboards] información general](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
