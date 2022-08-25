@@ -5,9 +5,9 @@ title: Punto final de la API de trabajos de privacidad
 topic-legacy: developer guide
 description: Obtenga información sobre cómo administrar los trabajos de privacidad para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1429'
 ht-degree: 4%
 
 ---
@@ -143,10 +143,11 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["Analytics", "AudienceManager"],
+    "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
+    "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
 ```
@@ -159,6 +160,7 @@ curl -X POST \
 | `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para el procesamiento de los ID en las aplicaciones (actualmente solo compatible con [!DNL Analytics]). Si se omite, el valor predeterminado es `false`. |
 | `priority` | Una propiedad opcional utilizada por Adobe Analytics que establece la prioridad para el procesamiento de solicitudes. Los valores aceptados son `normal` y `low`. If `priority` se omite, el comportamiento predeterminado es `normal`. |
 | `analyticsDeleteMethod` | Una propiedad opcional que especifica cómo debe gestionar Adobe Analytics los datos personales. Se aceptan dos valores posibles para este atributo: <ul><li>`anonymize`: Todos los datos a los que hace referencia la recopilación determinada de ID de usuario se vuelven anónimos. If `analyticsDeleteMethod` se omite, este es el comportamiento predeterminado.</li><li>`purge`: Todos los datos se eliminan por completo.</li></ul> |
+| `mergePolicyId` | Al realizar solicitudes de privacidad para el Perfil del cliente en tiempo real (`profileService`), si lo desea, puede proporcionar el ID del [combinar directiva](../../profile/merge-policies/overview.md) que desea utilizar para la vinculación de ID. Al especificar una directiva de combinación, las solicitudes de privacidad pueden incluir información de segmentos al devolver datos a un cliente. Solo se puede especificar una directiva de combinación por solicitud. Si no se proporciona ninguna directiva de combinación, la información de segmentación no se incluye en la respuesta. |
 | `regulation` **(Obligatorio)** | La regulación del trabajo de privacidad. Se aceptan los siguientes valores: <ul><li>`gdpr` (Unión Europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nueva Zelanda)</li><li>`pdpa_tha` (Tailandia)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
