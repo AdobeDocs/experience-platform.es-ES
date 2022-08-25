@@ -5,10 +5,10 @@ title: Guía de la interfaz de usuario de Attribution AI
 topic-legacy: User guide
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2705'
+ht-degree: 1%
 
 ---
 
@@ -262,7 +262,7 @@ Una vez seleccionada la ventana de formación, seleccione **[!UICONTROL Finaliza
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
 
-### Control de acceso basado en atributos
+## Control de acceso basado en atributos
 
 >[!IMPORTANT]
 >
@@ -278,15 +278,15 @@ Debido al control de acceso basado en atributos, es posible que algunos campos y
 
 En la parte superior del espacio de trabajo de Attribution AI **página perspectivas**, los detalles que aparecen en la barra lateral tienen acceso restringido.
 
-![Espacio de trabajo de Attribution AI con los campos restringidos del esquema resaltados.](./images/user-guide/access-restricted.png)
+![Espacio de trabajo de Attribution AI con los campos de esquema restringidos resaltados.](./images/user-guide/access-restricted.png)
 
 Si selecciona conjuntos de datos con esquemas restringidos en la variable **[!UICONTROL Flujo de trabajo de creación de instancias]** , aparece un signo de advertencia junto al nombre del conjunto de datos con el mensaje : [!UICONTROL Se excluye la información restringida].
 
-![El espacio de trabajo de Attribution AI con los campos restringidos de los conjuntos de datos seleccionados con los resultados de esquemas restringidos resaltados.](./images/user-guide/restricted-info-excluded.png)
+![Espacio de trabajo de Attribution AI con los campos restringidos del conjunto de datos resaltados.](./images/user-guide/restricted-info-excluded.png)
 
 Cuando se obtienen vistas previas de conjuntos de datos con esquema restringido en la variable **[!UICONTROL Flujo de trabajo de creación de instancias]** , aparece una advertencia que indica que [!UICONTROL Debido a las restricciones de acceso, cierta información no se muestra en la vista previa del conjunto de datos.]
 
-![El espacio de trabajo de Attribution AI con los campos restringidos de los resultados de esquema mostrados previamente resaltados.](./images/user-guide/restricted-dataset-preview.png)
+![El espacio de trabajo de Attribution AI con los campos de esquema de vista previa restringidos aparece resaltado.](./images/user-guide/restricted-dataset-preview.png)
 
 Después de crear una instancia con información restringida y continuar con el **[!UICONTROL Definir objetivo]** , aparece una advertencia en la parte superior: [!UICONTROL Debido a restricciones de acceso, cierta información no se muestra en la configuración.]
 

@@ -6,9 +6,9 @@ title: Configuración de una instancia de AI del cliente
 topic-legacy: Instance creation
 description: Los servicios AI/ML proporcionan Customer AI como un servicio de Adobe Sensei simple de usar que se puede configurar para diferentes casos de uso. Las secciones siguientes proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 4f74be4ed8d84a58779b9e7d9f1de6d9bf19cc5e
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3088'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ Si la instancia se crea correctamente, se activa inmediatamente una ejecución d
 
 Al seguir esta sección, ha configurado una instancia de Customer AI y ejecutado una ejecución de predicciones. Una vez finalizada correctamente la ejecución, las perspectivas puntuadas rellenan automáticamente los perfiles con puntuaciones predichas si está habilitada la opción de alternancia de perfiles. Espere hasta 24 horas antes de continuar con la siguiente sección de este tutorial.
 
-### Control de acceso basado en atributos
+## Control de acceso basado en atributos
 
 >[!IMPORTANT]
 >

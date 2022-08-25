@@ -5,10 +5,10 @@ title: Entrada y salida en Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: En el siguiente documento se describen las diferentes entradas y productos utilizados en la Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2450'
+ht-degree: 3%
 
 ---
 
@@ -237,7 +237,6 @@ La tabla siguiente asigna las puntuaciones agregadas a las puntuaciones sin proc
 
 >[!IMPORTANT]
 >
-> - Attribution AI solo utiliza datos actualizados para obtener más información y puntuación. Del mismo modo, cuando se solicita la eliminación de datos, la Attribution AI se abstiene de utilizarlos.
 > - Para facilitar el cumplimiento del RGPD en Attribution AI, puede utilizar Adobe Experience Platform Privacy Service para configurar protocolos que satisfagan las solicitudes de los clientes de acceso y eliminación de sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real.
 > - Todos los datos se cifran en tránsito y en reposo. Consulte la documentación para obtener más información [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md)
 
