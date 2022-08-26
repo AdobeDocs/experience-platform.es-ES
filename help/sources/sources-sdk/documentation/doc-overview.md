@@ -5,7 +5,7 @@ title: Documentar el origen
 topic-legacy: overview
 description: El paso final antes de que la nueva fuente se pueda publicar en Adobe Experience Platform es documentar la nueva fuente.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Puede utilizar un [plantilla de documentación](./template.md) para ayudarle a c
 
 También puede descargar las plantillas de documentación siguientes:
 
-* [Plantilla de documentación de API](../assets/template.zip)
+* [Plantilla de documentación de API](../assets/api-template.zip)
 * [Plantilla de documentación de la interfaz de usuario](../assets/ui-template.zip)
 
 ## Crear la nueva página de origen

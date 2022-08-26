@@ -5,7 +5,7 @@ title: Utilizar un editor de texto en el entorno local para crear una página de
 topic-legacy: tutorial
 description: Este documento proporciona pasos sobre cómo utilizar el entorno local para crear documentación para el origen y enviar una solicitud de extracción (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 3%
@@ -70,7 +70,7 @@ A continuación, introduzca `Adobe Markdown Authoring` en la barra de búsqueda 
 
 ![instalar](../assets/install.png)
 
-Con el equipo local listo, descargue el [plantilla de documentación de fuentes](../assets/template.zip) y extraer el archivo a `experience-platform.en/help/sources/tutorials/api/create/...` con [`...`] que representan la categoría que elija. Por ejemplo, si está creando un origen de base de datos, seleccione la carpeta de la base de datos.
+Con el equipo local listo, descargue el [plantilla de documentación de fuentes](../assets/api-template.zip) y extraer el archivo a `experience-platform.en/help/sources/tutorials/api/create/...` con [`...`] que representan la categoría que elija. Por ejemplo, si está creando un origen de base de datos, seleccione la carpeta de la base de datos.
 
 Finalmente, siga las instrucciones descritas en la plantilla y edite la plantilla con la información relevante relacionada con su fuente.
 

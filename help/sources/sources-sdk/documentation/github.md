@@ -5,7 +5,7 @@ title: Uso de la interfaz web de GitHub para crear una página de documentación
 topic-legacy: tutorial
 description: Este documento proporciona pasos sobre cómo utilizar la interfaz web de GitHub para crear documentación y enviar una solicitud de extracción (PR).
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
@@ -52,7 +52,7 @@ Asigne un nombre al archivo de origen `YOURSOURCE.md` donde YOURSOURCE es el nom
 
 ## Cree la página de documentación para el origen
 
-Para empezar a documentar el nuevo origen, pegue el contenido del [plantilla de documentación de fuentes](./template.md) en el editor web de GitHub. También puede descargar la plantilla [here](../assets/template.zip).
+Para empezar a documentar el nuevo origen, pegue el contenido del [plantilla de documentación de fuentes](./template.md) en el editor web de GitHub. También puede descargar la plantilla [here](../assets/api-template.zip).
 
 Con la plantilla copiada en la interfaz del editor web de GitHub, siga las instrucciones descritas en la plantilla y edite los valores que contengan información relevante para la fuente.
 
