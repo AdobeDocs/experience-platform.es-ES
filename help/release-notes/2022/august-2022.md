@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2022
 description: Notas de la versión de agosto de 2022 para Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 3e3389c3e77597ace4177e683aaf7494364a5be7
+source-git-commit: f2d2499147b40a15a413773068b65139278bd4ff
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '2095'
 ht-degree: 7%
 
 ---
@@ -90,17 +90,13 @@ Para obtener más información sobre [!DNL Data Prep], consulte la [[!DNL Data P
 
 [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 
-<!--
+**Funciones nuevas o actualizadas**
 
-**New or updated features**
-
-| Feature | Description |
+| Función | Descripción |
 | ----------- | ----------- |
-|  ||
+| (Beta) Compatibilidad con la personalización basada en atributos para destinos de personalización | Con la versión beta de la personalización basada en atributos, verá dos nuevas tarjetas en la variable [catálogo de destino](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: Actualmente, este conector está en fase beta y solo está disponible para un número determinado de clientes. Además de la funcionalidad proporcionada por la tarjeta Adobe Target V1, el conector Target V2 agrega una [paso de asignación](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a Adobe Target, habilitando la personalización de la misma página y de la página siguiente basada en atributos.</li><li>**[!UICONTROL Personalización Personalizada Con Atributos]**: Actualmente, este conector está en fase beta y solo está disponible para un número determinado de clientes. Además de la funcionalidad proporcionada por el **[!UICONTROL Personalización personalizada]**, el **[!UICONTROL Personalización Personalizada Con Atributos]** El conector agrega un [paso de asignación](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a su destino de personalización personalizado, habilitando la personalización de la misma página y de la página siguiente basada en atributos.</li></ul> <br> Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, la variable **[!UICONTROL Personalización Personalizada Con Atributos]** El destino requiere que use el [API de servidor de red perimetral](../../server-api/overview.md) para la recopilación de datos. Además, todas las llamadas de API de servidor deben realizarse en un [contexto autenticado](../../server-api/authentication.md). |
 
-{style="table-layout:auto"}
-
--->
+{style=&quot;table-layout:auto&quot;}
 
 **Nuevos destinos**
 
