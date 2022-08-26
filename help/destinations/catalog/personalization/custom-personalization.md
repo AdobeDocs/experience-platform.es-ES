@@ -3,14 +3,33 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión personalizada personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a segmentos de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 1%
+source-wordcount: '1305'
+ht-degree: 0%
 
 ---
 
 # Conexión personalizada personalizada {#custom-personalization-connection}
+
+## Registro de cambios del destino {#changelog}
+
+Con la versión beta de la **[!UICONTROL Personalización personalizada]** conector de destino, es posible que vea dos **[!UICONTROL Personalización personalizada]** en el catálogo de destinos.
+
+La variable **[!UICONTROL Personalización Personalizada Con Atributos]** actualmente, connector está en versión beta y solo está disponible para un número determinado de clientes. Además de la funcionalidad proporcionada por el **[!UICONTROL Personalización personalizada]**, el **[!UICONTROL Personalización Personalizada Con Atributos]** El conector agrega un [paso de asignación](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a su destino de personalización personalizado, habilitando la personalización de la misma página y de la página siguiente basada en atributos.
+
+>[!IMPORTANT]
+>
+>Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, la variable **[!UICONTROL Personalización Personalizada Con Atributos]** El destino requiere que use el [API de servidor de red perimetral](/help/server-api/overview.md) para la recopilación de datos. Además, todas las llamadas de API de servidor deben realizarse en un [contexto autenticado](../../../server-api/authentication.md).
+>
+>Si ya utiliza el SDK web o el SDK móvil para la integración, puede recuperar atributos a través de la API del servidor de dos formas:
+>
+> * Añada una integración del lado del servidor que recupere atributos a través de la API del servidor.
+> * Actualice la configuración del lado del cliente con un código Javascript personalizado para recuperar atributos mediante la API del servidor.
+>
+> Si no sigue los requisitos anteriores, la personalización se basará únicamente en la pertenencia a los segmentos, idéntica a la experiencia ofrecida por la variable **[!UICONTROL Personalización personalizada]** conector.
+
+![Imagen de las dos tarjetas de destino de personalización personalizada en una vista en paralelo.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## Información general {#overview}
 
@@ -30,7 +49,7 @@ Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platfor
 
 ## Casos de uso {#use-cases}
 
-La variable [!DNL Custom personalization connection] permite utilizar sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), mientras que también aprovecha las capacidades de recopilación y segmentación de datos de Experience Platform Edge Network para ofrecer una experiencia de personalización más profunda para los clientes.
+La variable [!DNL Custom Personalization Connection] permite utilizar sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno), y también aprovechar las capacidades de recopilación y segmentación de datos de Experience Platform Edge Network para ofrecer una experiencia de personalización más profunda para los clientes.
 
 Los casos de uso que se describen a continuación incluyen tanto la personalización del sitio como la publicidad dirigida en el sitio.
 
@@ -134,11 +153,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -149,6 +168,37 @@ alloy("sendEvent", {
   });
 ```
 
+### Respuesta de ejemplo para [!UICONTROL Personalización Personalizada Con Atributos]
+
+Al usar **[!UICONTROL Personalización Personalizada Con Atributos]**, la respuesta de API será similar al ejemplo siguiente.
+
+La diferencia entre **[!UICONTROL Personalización Personalizada Con Atributos]** y **[!UICONTROL Personalización personalizada]** es la inclusión de la variable `attributes` en la respuesta de API.
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## Uso y gobernanza de los datos {#data-usage-governance}
 

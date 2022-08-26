@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de solicitud de perfil
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de solicitud de perfil.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,13 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-En este artículo se explica el flujo de trabajo necesario para activar los datos de audiencia en los destinos de solicitud de perfil de Adobe Experience Platform. Algunos ejemplos de destinos de solicitud de perfil son los [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md) conexiones.
+En este artículo se explica el flujo de trabajo necesario para activar los datos de audiencia en los destinos de solicitud de perfil de Adobe Experience Platform. Cuando se usa junto con [segmentación de arista](../../segmentation/ui/edge-segmentation.md), estos destinos habilitan casos de uso de personalización de la misma página y de la página siguiente en sus propiedades web. Más información sobre [activación de casos de uso de personalización de la misma página y de la siguiente página](/help/destinations/ui/configure-personalization-destinations.md).
+
+Algunos ejemplos de destinos de solicitud de perfil son los [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md) conexiones.
 
 ## Requisitos previos {#prerequisites}
 
-Para activar datos en destinos, debe haber [conectado a un destino](./connect-destination.md). Si aún no lo ha hecho, vaya a la [catálogo de destinos](../catalog/overview.md), busque los destinos compatibles y configure el destino que desea utilizar.
+Para activar datos en destinos, debe haber [conectado a un destino](./connect-destination.md). Si aún no lo ha hecho, vaya a la [catálogo de destinos](../catalog/overview.md), busque los destinos de personalización admitidos y configure el destino que desea utilizar.
 
 ### Política de combinación de segmentos {#merge-policy}
 
@@ -35,7 +37,7 @@ Actualmente, los destinos de solicitud de perfil solo admiten la activación de 
 
    ![Ficha Catálogo de destino](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Select **[!UICONTROL Activar segmentos]** en la tarjeta correspondiente al destino en el que desea activar los segmentos, como se muestra en la imagen siguiente.
+1. Select **[!UICONTROL Activar segmentos]** en la tarjeta correspondiente al destino de personalización donde desee activar los segmentos, como se muestra en la imagen siguiente.
 
    ![Activar botones](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
@@ -50,6 +52,22 @@ Actualmente, los destinos de solicitud de perfil solo admiten la activación de 
 Utilice las casillas de verificación a la izquierda de los nombres de los segmentos para seleccionar los segmentos que desea activar en el destino y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
 ![Seleccionar segmentos](../assets/ui/activate-profile-request-destinations/select-segments.png)
+
+## (Beta) Asignación de atributos {#map-attributes}
+
+>[!IMPORTANT]
+>
+>El paso de asignación, que permite la personalización basada en atributos para [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y [destinos de personalización genéricos](/help/destinations/catalog/personalization/custom-personalization.md), se encuentra en la versión beta y es posible que su organización aún no tenga acceso a él. Esta documentación está sujeta a cambios.
+
+Seleccione los atributos en función de los cuales desea habilitar los casos de uso de personalización para los usuarios. Esto significa que si el valor de un atributo cambia o si se agrega un atributo a un perfil, ese perfil se convertirá en miembro del segmento y se activará en el destino de personalización.
+
+La adición de atributos es opcional y aún puede continuar con el paso siguiente y habilitar la personalización de la misma página y de la página siguiente sin seleccionar atributos. Si no añade ningún atributo en este paso, la personalización se seguirá realizando en función de la pertenencia al segmento y las cualificaciones de asignación de identidad para los perfiles.
+
+![Imagen que muestra el paso de asignación con un atributo seleccionado](../assets/ui/activate-profile-request-destinations/mapping-step.png)
+
+Para añadir atributos, seleccione la opción **[!UICONTROL Añadir nuevo campo]** controle y busque o vaya al campo de atributo XDM deseado, como se muestra a continuación.
+
+![Registro de pantalla que muestra cómo seleccionar un atributo XDM en el paso de asignación](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
 
 ## Programar exportación de segmentos {#scheduling}
 
