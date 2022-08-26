@@ -3,9 +3,9 @@ title: Uso de Adobe Analytics con el SDK web de Platform
 description: Obtenga información sobre cómo enviar datos a Adobe Analytics con el SDK web de Adobe Experience Platform.
 keywords: adobe analytics;analytics;datos asignados;vars asignados;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
+source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Edge Network] asigna automáticamente muchas var
 
 ## Datos asignados manualmente
 
-Se puede acceder a los datos que no estén asignados automáticamente por la red perimetral mediante reglas de procesamiento. Los datos se acoplan con notación de puntos y están disponibles como contextData.
+Cualquier dato que no asigne automáticamente el [!DNL Edge Network] se puede acceder a través de reglas de procesamiento. Los datos se acoplan con notación de puntos y están disponibles como contextData.
 
 Si tenía un esquema similar a este.
 
@@ -71,3 +71,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 A continuación, se muestra un ejemplo de una regla de procesamiento que utilizaría estos datos.
 
 ![Interfaz de reglas de procesamiento](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>Con la recopilación de Experience Edge, todos los eventos se envían a Analytics, así como a cualquier otro servicio que haya configurado para su conjunto de datos. Por ejemplo, si tiene Analytics y Target configurados como servicios y realiza llamadas independientes para la personalización y para Analytics, ambos eventos se enviarán a Analytics y a Target. Estos eventos se registrarán en los informes de Analytics y pueden afectar a métricas como la tasa de devoluciones.
