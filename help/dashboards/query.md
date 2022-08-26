@@ -4,9 +4,9 @@ title: Explorar, verificar y procesar conjuntos de datos de panel mediante el se
 type: Documentation
 description: Aprenda a utilizar el servicio de consulta para explorar y procesar conjuntos de datos sin procesar que alimentan los paneles de perfil, segmento y destino en Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
+source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,16 @@ La convención de nomenclatura de este conjunto de datos es **DIM_Destination**.
 Para comprender el esquema completo del conjunto de datos de destino DIM, puede obtener una vista previa y explorar el conjunto de datos [uso del visor del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
 
 ![](images/query/destinations-metadata.png)
+
+## (Beta) Informes de perspectivas de la Plataforma de datos del cliente (CDP)
+
+>[!IMPORTANT]
+>
+>La función de modelos de datos de CDP Insights está en versión beta. Sus características y documentación están sujetas a cambios.
+
+La función de modelos de datos de CDP Insights expone el SQL que alimenta la información de varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQLl para crear informes CDP para sus casos de uso de marketing y KPI.
+
+El sistema de informes CDP proporciona perspectivas sobre sus datos de perfil y su relación con segmentos y destinos. Consulte la documentación del Modelo de datos de CDP Insights para obtener información detallada sobre cómo [aplique los modelos de datos de CDP Insights a sus casos de uso de KPI particulares](./cdp-insights-data-model.md).
 
 ## Consultas de ejemplo
 
