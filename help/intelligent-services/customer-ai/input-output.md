@@ -6,9 +6,9 @@ title: Entrada y salida en Customer AI
 topic-legacy: Getting started
 description: Obtenga más información sobre los eventos, entradas y salidas necesarios que utiliza Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
-source-wordcount: '3154'
+source-wordcount: '3195'
 ht-degree: 1%
 
 ---
@@ -286,10 +286,15 @@ La tabla siguiente describe los distintos atributos que se encuentran en la sali
 
 >[!NOTE]
 >
-> - Para facilitar el cumplimiento del RGPD en Customer AI, puede utilizar Adobe Experience Platform Privacy Service para configurar protocolos que acepten solicitudes de clientes para acceder a datos del lago de datos, el servicio de identidad y el perfil del cliente en tiempo real y eliminarlos.
-> - Todos los datos se cifran en tránsito y en reposo. Consulte la documentación para obtener más información [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md)
+> - Customer AI solo utiliza datos actualizados para obtener más información y puntuación. Del mismo modo, cuando se solicita la eliminación de datos, la AI del cliente se abstiene de utilizarlos.
+> - Customer AI aprovecha los conjuntos de datos de Platform. Para admitir solicitudes de derechos de los consumidores que una marca puede recibir, las marcas deben utilizar Platform Privacy Service para enviar solicitudes de acceso y eliminación de los consumidores con el fin de eliminar sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real.
+> - Todos los conjuntos de datos que utilizamos para la entrada/salida de modelos seguirán las directrices de Platform. El cifrado de datos de plataforma se aplica a los datos en reposo y en tránsito. Consulte la documentación para obtener más información [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Pasos siguientes {#next-steps}
 
 Una vez que haya preparado los datos y haya establecido todas sus credenciales y esquemas, comience por seguir la [Configuración de una instancia de AI del cliente](./user-guide/configure.md) guía. Esta guía lo acompaña durante la creación de una instancia para Customer AI.
+
+
+
+

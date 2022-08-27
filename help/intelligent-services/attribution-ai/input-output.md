@@ -5,9 +5,9 @@ title: Entrada y salida en Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: En el siguiente documento se describen las diferentes entradas y productos utilizados en la Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2491'
 ht-degree: 3%
 
 ---
@@ -237,8 +237,9 @@ La tabla siguiente asigna las puntuaciones agregadas a las puntuaciones sin proc
 
 >[!IMPORTANT]
 >
-> - Para facilitar el cumplimiento del RGPD en Attribution AI, puede utilizar Adobe Experience Platform Privacy Service para configurar protocolos que satisfagan las solicitudes de los clientes de acceso y eliminación de sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real.
-> - Todos los datos se cifran en tránsito y en reposo. Consulte la documentación para obtener más información [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md)
+> - Attribution AI solo utiliza datos actualizados para obtener más información y puntuación. Del mismo modo, cuando se solicita la eliminación de datos, la AI del cliente se abstiene de utilizarlos.
+> - Attribution AI aprovecha los conjuntos de datos de Platform. Para admitir solicitudes de derechos de los consumidores que una marca puede recibir, las marcas deben utilizar Platform Privacy Service para enviar solicitudes de acceso y eliminación de los consumidores con el fin de eliminar sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real.
+> - Todos los conjuntos de datos que utilizamos para la entrada/salida de modelos seguirán las directrices de Platform. El cifrado de datos de plataforma se aplica a los datos en reposo y en tránsito. Consulte la documentación para obtener más información [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Pasos siguientes {#next-steps}
