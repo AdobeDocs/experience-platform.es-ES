@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;vista previa;ejemplo
 title: Vista previa del punto final de la API de estado de muestra (vista previa del perfil)
-description: Mediante el extremo de estado de muestra de vista previa, que forma parte de la API de perfil de cliente en tiempo real, puede obtener una vista previa del último ejemplo correcto de datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar informes que muestren la superposición de conjuntos de datos, la superposición de identidades y los perfiles desconocidos.
+description: El extremo de estado de muestra de vista previa de la API del perfil del cliente en tiempo real le permite obtener una vista previa del último ejemplo correcto de sus datos de perfil, mostrar la distribución del perfil por conjunto de datos y por identidad, y generar informes que muestren la superposición del conjunto de datos, la superposición de identidad y los perfiles no vinculados.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2875'
 ht-degree: 1%
 
 ---
@@ -465,25 +465,25 @@ Este informe proporciona la siguiente información:
 * Hay 24 perfiles compuestos por `AAID` y `ECID` áreas de nombres de identidad.
 * Hay 6.565 perfiles que solo incluyen un `ECID` identidad.
 
-## Generar el informe de perfiles desconocidos
+## Generación del informe de perfiles no vinculados
 
-Puede obtener más visibilidad sobre la composición del Almacenamiento de perfiles de su organización a través del informe de perfiles desconocidos. Un &quot;perfil desconocido&quot; se refiere a cualquier perfil que no esté vinculado ni inactivo durante un período de tiempo determinado. Un perfil &quot;no vinculado&quot; es un perfil que contiene solo un fragmento de perfil, mientras que un perfil &quot;inactivo&quot; es cualquier perfil que no haya agregado nuevos eventos para el período de tiempo especificado. El informe perfiles desconocidos proporciona un desglose de perfiles durante un período de 7, 30, 60, 90 y 120 días.
+Puede obtener más visibilidad sobre la composición del Almacenamiento de perfiles de su organización a través del informe de perfiles no vinculados. Un perfil &quot;no vinculado&quot; es un perfil que contiene solo un fragmento de perfil. Un perfil &quot;desconocido&quot; es un perfil que está asociado con áreas de nombres de identidad seudónimos como `ECID` y `AAID`. Los perfiles desconocidos están inactivos, lo que significa que no han agregado nuevos eventos para el período de tiempo especificado. El informe de perfiles no vinculados proporciona un desglose de perfiles para un período de 7, 30, 60, 90 y 120 días.
 
-Puede generar el informe de perfiles desconocidos realizando una solicitud de GET al `/previewsamplestatus/report/unknownProfiles` punto final.
+Puede generar el informe de perfiles no vinculados realizando una solicitud de GET al `/previewsamplestatus/report/unstitchedProfiles` punto final.
 
 **Formato de API**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **Solicitud**
 
-La siguiente solicitud devuelve el informe de perfiles desconocidos.
+La siguiente solicitud devuelve el informe de perfiles no vinculados.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -491,18 +491,18 @@ curl -X GET \
 
 **Respuesta**
 
-Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de perfiles desconocidos.
+Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de perfiles no vinculados.
 
 >[!NOTE]
 >
->A los efectos de esta guía, el informe se ha truncado para que incluya solamente `"120days"` y &quot;`7days`&quot; periodos de tiempo. El informe completo de perfiles desconocidos proporciona un desglose de perfiles durante un período de 7, 30, 60, 90 y 120 días.
+>A los efectos de esta guía, el informe se ha truncado para que incluya solamente `"120days"` y &quot;`7days`&quot; periodos de tiempo. El informe de perfiles no vinculados completos proporciona un desglose de perfiles durante un período de 7, 30, 60, 90 y 120 días.
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -547,16 +547,16 @@ Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de perfiles
 
 | Propiedad | Descripción |
 |---|---|
-| `data` | La variable `data` contiene la información devuelta para el informe perfiles desconocidos. |
-| `totalNumberOfProfiles` | Recuento total de perfiles únicos en el Almacenamiento de perfiles. Esto equivale al recuento de audiencias a las que se puede dirigir. Incluye perfiles conocidos y desconocidos. |
+| `data` | La variable `data` contiene la información devuelta para el informe perfiles no enlazados. |
+| `totalNumberOfProfiles` | Recuento total de perfiles únicos en el Almacenamiento de perfiles. Esto equivale al recuento de audiencias a las que se puede dirigir. Incluye perfiles conocidos y no vinculados. |
 | `totalNumberOfEvents` | El número total de eventos de experiencias en el Almacenamiento de perfiles. |
-| `unknownProfiles` | Un objeto que contiene un desglose de perfiles desconocidos (no vinculados e inactivos) por periodo de tiempo. El informe perfiles desconocidos proporciona un desglose de perfiles para períodos de tiempo de 7, 30, 60, 90 y 120 días. |
-| `countOfProfiles` | Recuento de perfiles desconocidos para el periodo de tiempo o el recuento de perfiles desconocidos para el área de nombres. |
+| `unstitchedProfiles` | Un objeto que contiene un desglose de perfiles no vinculados por periodo de tiempo. El informe de perfiles no vinculados proporciona un desglose de perfiles para periodos de tiempo de 7, 30, 60, 90 y 120 días. |
+| `countOfProfiles` | Recuento de perfiles no vinculados para el periodo de tiempo o recuento de perfiles no vinculados para el espacio de nombres. |
 | `eventsAssociated` | El número de eventos de Experience para el intervalo de tiempo o el número de eventos para el espacio de nombres. |
-| `nsDistribution` | Un objeto que contiene áreas de nombres de identidad individuales con la distribución de perfiles y eventos desconocidos para cada área de nombres. Nota: Adición del total `countOfProfiles` para cada área de nombres de identidad en la variable `nsDistribution` el objeto es igual a la variable `countOfProfiles` para el período de tiempo. Lo mismo ocurre con `eventsAssociated` por área de nombres y el total `eventsAssociated` por periodo de tiempo. |
+| `nsDistribution` | Un objeto que contiene áreas de nombres de identidad individuales con la distribución de perfiles y eventos no vinculados para cada área de nombres. Nota: Adición del total `countOfProfiles` para cada área de nombres de identidad en la variable `nsDistribution` el objeto es igual a la variable `countOfProfiles` para el período de tiempo. Lo mismo ocurre con `eventsAssociated` por área de nombres y el total `eventsAssociated` por periodo de tiempo. |
 | `reportTimestamp` | Marca de tiempo del informe. |
 
-### Interpretación del informe de perfiles desconocidos
+### Interpretación del informe de perfiles no vinculados
 
 Los resultados del informe pueden proporcionar información sobre cuántos perfiles inactivos e inactivos tiene la organización en su Almacenamiento de perfiles.
 
@@ -586,9 +586,9 @@ Consideremos el siguiente extracto de la `data` objeto:
 Este informe proporciona la siguiente información:
 
 * Hay 1782 perfiles que contienen solo un fragmento de perfil y no tienen eventos nuevos durante los últimos siete días.
-* Hay 29.151 ExperienceEvents asociadas con los 1.782 perfiles desconocidos.
-* Hay 1734 perfiles desconocidos que contienen un solo fragmento de perfil del área de nombres de identidad de ECID.
-* Hay 28.591 eventos asociados con los 1.734 perfiles desconocidos que contienen un solo fragmento de perfil del área de nombres de identidad de ECID.
+* Hay 29.151 ExperienceEvents asociados a los 1.782 perfiles no vinculados.
+* Hay 1734 perfiles no vinculados que contienen un solo fragmento de perfil del área de nombres de identidad de ECID.
+* Hay 28.591 eventos asociados con los 1.734 perfiles no vinculados que contienen un solo fragmento de perfil del área de nombres de identidad de ECID.
 
 ## Pasos siguientes
 
