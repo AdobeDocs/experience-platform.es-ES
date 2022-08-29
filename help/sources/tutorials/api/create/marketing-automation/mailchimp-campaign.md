@@ -5,10 +5,10 @@ title: Creación de un flujo de datos para Mailchimp Campaign mediante la API de
 topic-legacy: tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a MailChimp Campaign mediante la API de servicio de flujo.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
-source-wordcount: '2319'
-ht-degree: 3%
+source-wordcount: '1942'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ Una conexión base retiene información entre la fuente y la plataforma, incluid
 
 ### Cree un [!DNL Mailchimp] conexión base con autenticación básica
 
-Para crear un [!DNL Mailchimp] conexión base usando autenticación básica, realice una solicitud de POST al `/connections` punto final de [!DNL Flow Service] API mientras proporciona credenciales para su `host`, `authorizationTestUrl`, `username`y `password`.
+Para crear un [!DNL Mailchimp] conexión base usando autenticación básica, realice una solicitud de POST al `/connections` punto final de [!DNL Flow Service] API mientras proporciona credenciales para su `authorizationTestUrl`, `username`y `password`.
 
 **Formato de API**
 
@@ -60,7 +60,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
@@ -75,7 +74,6 @@ curl -X POST \
 | `description` | (Opcional) Una propiedad que puede incluir para proporcionar más información sobre la conexión base. |
 | `connectionSpec.id` | El ID de especificación de conexión de su origen. Esta ID se puede recuperar después de registrar y aprobar el origen mediante la variable [!DNL Flow Service] API. |
 | `auth.specName` | El tipo de autenticación que utiliza para conectar el origen a Platform. |
-| `auth.params.host` | La URL raíz utilizada para conectarse a [!DNL Mailchimp] API. El formato de la dirección URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
 | `auth.params.authorizationTestUrl` | (Opcional) La URL de prueba de autorización se utiliza para validar las credenciales al crear una conexión base. Si no se proporciona, las credenciales se comprueban automáticamente durante el paso de creación de la conexión de origen. |
 | `auth.params.username` | El nombre de usuario que corresponde a su [!DNL Mailchimp] cuenta. Esto es necesario para la autenticación básica. |
 | `auth.params.password` | La contraseña que corresponde a su [!DNL Mailchimp] cuenta. Esto es necesario para la autenticación básica. |
@@ -93,7 +91,7 @@ Una respuesta correcta devuelve la conexión base recién creada, incluido su id
 
 ### Cree un [!DNL Mailchimp] conexión base con código de actualización de OAuth 2
 
-To create a [!DNL Mailchimp] base connection using OAuth 2 refresh code, make a POST request to the `/connections` endpoint while providing credentials for your `host`, `authorizationTestUrl`, and `accessToken`.
+Para crear un [!DNL Mailchimp] conexión base utilizando el código de actualización de OAuth 2, realice una solicitud de POST al `/connections` punto final al proporcionar credenciales para su `authorizationTestUrl`y `accessToken`.
 
 **Formato de API**
 
@@ -123,7 +121,6 @@ curl -X POST \
       "auth": {
           "specName": "oAuth2RefreshCode",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "accessToken": "{ACCESS_TOKEN}"
           }
@@ -137,7 +134,6 @@ curl -X POST \
 | `description` | (Opcional) Una propiedad que puede incluir para proporcionar más información sobre la conexión base. |
 | `connectionSpec.id` | El ID de especificación de conexión de su origen. Este ID se puede recuperar después de registrar el origen mediante el [!DNL Flow Service] API. |
 | `auth.specName` | El tipo de autenticación que utiliza para autenticar el origen en Platform. |
-| `auth.params.host` | La URL raíz utilizada para conectarse a [!DNL Mailchimp] API. El formato de la dirección URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
 | `auth.params.authorizationTestUrl` | (Opcional) La URL de prueba de autorización se utiliza para validar las credenciales al crear una conexión base. Si no se proporciona, las credenciales se comprueban automáticamente durante el paso de creación de la conexión de origen. |
 | `auth.params.accessToken` | Token de acceso correspondiente utilizado para autenticar el origen. Esto es necesario para la autenticación basada en OAuth. |
 
@@ -152,9 +148,9 @@ Una respuesta correcta devuelve la conexión base recién creada, incluido su id
 }
 ```
 
-## Explore your source {#explore}
+## Explorar la fuente {#explore}
 
-Con el ID de conexión base que generó en el paso anterior, puede explorar archivos y directorios realizando solicitudes de GET. When performing GET requests to explore your source&#39;s file structure and contents, you must include the query parameters that are listed in the table below:
+Con el ID de conexión base que generó en el paso anterior, puede explorar archivos y directorios realizando solicitudes de GET. Al realizar solicitudes de GET para explorar la estructura de archivos y el contenido del origen, debe incluir los parámetros de consulta que se enumeran en la siguiente tabla:
 
 | Parámetro | Descripción |
 | --------- | ----------- |
@@ -326,7 +322,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 }
 ```
 
-## Create a target XDM schema {#target-schema}
+## Creación de un esquema XDM de destino {#target-schema}
 
 Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se contienen los datos de origen.
 
@@ -386,7 +382,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `name` | Nombre de la conexión de destino. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
+| `name` | Nombre de la conexión de destino. Asegúrese de que el nombre de la conexión de destino sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de destino. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de destino. |
 | `connectionSpec.id` | El ID de especificación de conexión correspondiente a [!DNL Data Lake]. Este ID fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | El formato de la variable [!DNL Mailchimp] datos que desea traer a Platform. |
@@ -546,308 +542,26 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado. 
 }
 ```
 
-## Monitorizar el flujo de datos
+## Apéndice
 
-Una vez creado el flujo de datos, puede supervisar los datos que se están incorporando a través de él para ver información sobre ejecuciones de flujo, estado de finalización y errores.
+La siguiente sección proporciona información sobre los pasos que puede seguir para supervisar, actualizar y eliminar el flujo de datos.
 
-**Formato de API**
+### Monitorizar el flujo de datos
 
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
+Una vez creado el flujo de datos, puede supervisar los datos que se están incorporando a través de él para ver información sobre ejecuciones de flujo, estado de finalización y errores. Para ver ejemplos completos de API, consulte la guía de [monitorización de los flujos de datos de fuentes mediante la API](../../monitor.md).
 
-**Solicitud**
+### Actualizar el flujo de datos
 
-La siguiente solicitud recupera las especificaciones de un flujo de datos existente.
+Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados realizando una solicitud del PATCH al `/flows` punto final de [!DNL Flow Service] al proporcionar el ID de su flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar la variable única de su flujo de datos `etag` en el `If-Match` encabezado. Para ver ejemplos completos de API, consulte la guía de [actualización de flujos de datos de fuentes mediante la API](../../update-dataflows.md).
 
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
+### Actualizar la cuenta
 
-**Respuesta**
+Actualice el nombre, la descripción y las credenciales de la cuenta de origen realizando una solicitud de PATCH al [!DNL Flow Service] al proporcionar su ID de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar la variable única de la cuenta de origen `etag` en el `If-Match` encabezado. Para ver ejemplos completos de API, consulte la guía de [actualizar la cuenta de origen mediante la API](../../update.md).
 
-Una respuesta correcta devuelve detalles sobre la ejecución del flujo, incluida información sobre la fecha de creación, las conexiones de origen y destino, así como el identificador único de la ejecución del flujo (`id`).
+### Eliminar el flujo de datos
 
-```json
-{
-    "items": [
-        {
-            "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-            "createdAt": 1633044829955,
-            "updatedAt": 1633044838006,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{ORG_ID}",
-            "name": "MailChimp Campaign dataflow",
-            "description": "MailChimp Campaign dataflow",
-            "flowSpec": {
-                "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "version": "\"7e01322c-0000-0200-0000-615b5d520000\"",
-            "etag": "\"7e01322c-0000-0200-0000-615b5d520000\"",
-            "sourceConnectionIds": [
-                "d6557bf1-7347-415f-964c-9316bd4cbf56"
-            ],
-            "targetConnectionIds": [
-                "9463fe9c-027d-4347-a423-894fcd105647"
-            ],
-            "inheritedAttributes": {
-                "sourceConnections": [
-                    {
-                        "id": "d6557bf1-7347-415f-964c-9316bd4cbf56",
-                        "connectionSpec": {
-                            "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
-                            "version": "1.0"
-                        },
-                        "baseConnection": {
-                            "id": "9601747c-6874-4c02-bb00-5732a8c43086",
-                            "connectionSpec": {
-                                "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
-                                "version": "1.0"
-                            }
-                        }
-                    }
-                ],
-                "targetConnections": [
-                    {
-                        "id": "9463fe9c-027d-4347-a423-894fcd105647",
-                        "connectionSpec": {
-                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-                            "version": "1.0"
-                        }
-                    }
-                ]
-            },
-            "scheduleParams": {
-                "startTime": "1633377385",
-                "frequency": "minute",
-                "interval": 15
-            },
-            "runs": "/flows/be2d5249-eeaf-4a74-bdbd-b7bf62f7b2da/runs",
-            "lastOperation": {
-                "started": 1633377421476,
-                "updated": 0,
-                "operation": "create"
-            },
-            "lastRunDetails": {
-                "id": "84f95788-3e83-4ce0-8e45-c0a89117c6f1",
-                "state": "failed",
-                "startedAtUTC": 1633377445979,
-                "completedAtUTC": 1633377487082
-            }
-        }
-    ]
-}
-```
+Elimine el flujo de datos realizando una solicitud de DELETE al [!DNL Flow Service] mientras proporciona el ID del flujo de datos que desea eliminar como parte del parámetro de consulta. Para ver ejemplos completos de API, consulte la guía de [eliminación de los flujos de datos mediante la API](../../delete-dataflows.md).
 
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `items` | Contiene una única carga útil de metadatos asociados a su ejecución de flujo específica. |
-| `id` | Muestra el ID correspondiente al flujo de datos. |
-| `state` | Muestra el estado actual del flujo de datos. |
-| `inheritedAttributes` | Contiene los atributos que definen el flujo, como los ID para su conexión base, origen y destino correspondiente. |
-| `scheduleParams` | Contiene información sobre el programa de ingesta de su flujo de datos, como su hora de inicio (en tiempo de época), frecuencia e intervalo. |
-| `transformations` | Contiene información sobre las propiedades de transformación aplicadas al flujo de datos. |
-| `runs` | Muestra el ID de ejecución correspondiente del flujo. Puede utilizar este ID para supervisar ejecuciones de flujo específicas. |
+### Eliminar su cuenta
 
-## Actualizar el flujo de datos
-
-Para actualizar la programación, el nombre y la descripción de ejecución del flujo de datos, realice una solicitud de PATCH al [!DNL Flow Service] mientras proporciona su ID de flujo, versión y la nueva programación que desea utilizar.
-
->[!IMPORTANT]
->
->La variable `If-Match` es obligatorio cuando se realiza una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar.
-
-**Formato de API**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**Solicitud**
-
-La siguiente solicitud actualiza la programación de la ejecución del flujo, así como el nombre y la descripción del flujo de datos.
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
-  -d '[
-          {
-              "op": "replace",
-              "path": "/scheduleParams/frequency",
-              "value": "day"
-          },
-          {
-              "op": "replace",
-              "path": "/name",
-              "value": "MailChimp Campaign Dataflow 2.0"
-          },
-          {
-              "op": "replace",
-              "path": "/description",
-              "value": "MailChimp Campaign Dataflow Updated"
-          }
-      ]'
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. |
-| `path` | Ruta del parámetro que se va a actualizar. |
-| `value` | El nuevo valor con el que desea actualizar el parámetro. |
-
-**Respuesta**
-
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
-
-```json
-{
-    "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## Eliminar el flujo de datos
-
-Con un ID de flujo existente, puede eliminar un flujo de datos realizando una solicitud de DELETE al [!DNL Flow Service] API.
-
-**Formato de API**
-
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{FLOW_ID}` | El único `id` para el flujo de datos que desea eliminar. |
-
-**Solicitud**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco. Puede confirmar la eliminación intentando realizar una solicitud de búsqueda (GET) al flujo de datos. La API devolverá un error HTTP 404 (no encontrado), que indica que se ha eliminado el flujo de datos.
-
-## Actualizar la conexión
-
-Para actualizar el nombre, la descripción y las credenciales de la conexión, realice una solicitud de PATCH al [!DNL Flow Service] al proporcionar el ID de conexión base, la versión y la nueva información que desea utilizar.
-
->[!IMPORTANT]
->
->La variable `If-Match` es obligatorio cuando se realiza una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar.
-
-**Formato de API**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | El único `id` para la conexión que desea actualizar. |
-
-**Solicitud**
-
-La siguiente solicitud proporciona un nuevo nombre y descripción, así como un nuevo conjunto de credenciales, para actualizar la conexión con.
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
-  -d '[
-      {
-          "op": "replace",
-          "path": "/auth/params",
-          "value": {
-              "username": "mailchimp-member-activity-user",
-              "password": "{NEW_PASSWORD}"
-          }
-      },
-      {
-          "op": "replace",
-          "path": "/name",
-          "value": "MailChimp Campaign Connection 2.0"
-      },
-      {
-          "op": "add",
-          "path": "/description",
-          "value": "Updated MailChimp Campaign Connection"
-      }
-  ]'
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la conexión. Las operaciones incluyen: `add`, `replace`y `remove`. |
-| `path` | Ruta del parámetro que se va a actualizar. |
-| `value` | El nuevo valor con el que desea actualizar el parámetro. |
-
-**Respuesta**
-
-Una respuesta correcta devuelve su ID de conexión base y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de conexión.
-
-```json
-{
-    "id": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## Eliminar la conexión
-
-Una vez que tenga un ID de conexión base existente, realice una solicitud de DELETE al [!DNL Flow Service] API.
-
-**Formato de API**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | El único `id` para la conexión base que desea eliminar. |
-
-**Solicitud**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
-
-Puede confirmar la eliminación intentando realizar una solicitud de búsqueda (GET) a la conexión.
+Elimine la cuenta realizando una solicitud de DELETE al [!DNL Flow Service] mientras proporciona el ID de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de API, consulte la guía de [eliminación de la cuenta de origen mediante la API](../../delete.md).

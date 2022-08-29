@@ -4,9 +4,9 @@ title: Configuración de especificaciones de autenticación para fuentes de auto
 topic-legacy: overview
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 25e0061cc47ec4179f3f02958eb8bda1714ea139
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '525'
 ht-degree: 2%
 
 ---
@@ -105,7 +105,6 @@ El código de actualización de OAuth 2 permite el acceso seguro a una aplicaci�
       }
     },
     "required": [
-      "host",
       "accessToken"
     ]
   }
@@ -137,7 +136,7 @@ El código de actualización de OAuth 2 permite el acceso seguro a una aplicaci�
 
 ### Autenticación básica
 
-La autenticación básica es un tipo de autenticación que le permite acceder a su aplicación mediante una combinación de la URL del host de la aplicación, el nombre de usuario de la cuenta y la contraseña de la cuenta.
+La autenticación básica es un tipo de autenticación que le permite acceder a su aplicación mediante una combinación del nombre de usuario de su cuenta y la contraseña de su cuenta.
 
 ```json
 {
@@ -148,10 +147,6 @@ La autenticación básica es un tipo de autenticación que le permite acceder a 
     "type": "object",
     "description": "defines auth params required for connecting to rest service.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path"
-      },
       "username": {
         "description": "Username to connect rest endpoint.",
         "type": "string"
@@ -163,7 +158,6 @@ La autenticación básica es un tipo de autenticación que le permite acceder a 
       }
     },
     "required": [
-      "host",
       "username",
       "password"
     ]
@@ -180,10 +174,9 @@ La autenticación básica es un tipo de autenticación que le permite acceder a 
 | `authSpec.spec.type` | Define el tipo de datos del esquema. | `object` |
 | `authSpec.spec.description` | Muestra información adicional específica para su tipo de autenticación. |
 | `authSpec.spec.properties` | Contiene información sobre las credenciales utilizadas para la autenticación. |
-| `authSpec.spec.properties.host` | La URL de host de la aplicación. |
 | `authSpec.spec.properties.username` | El nombre de usuario de la cuenta asociado a su aplicación. |
 | `authSpec.spec.properties.password` | La contraseña de la cuenta asociada a su aplicación. |
-| `authSpec.spec.required` | Especifica los campos requeridos como valores obligatorios que se van a introducir en Platform. | `host` |
+| `authSpec.spec.required` | Especifica los campos requeridos como valores obligatorios que se van a introducir en Platform. | `username` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,10 +194,6 @@ A continuación se muestra un ejemplo de una especificación de autenticación c
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path"
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -216,7 +205,6 @@ A continuación se muestra un ejemplo de una especificación de autenticación c
           }
         },
         "required": [
-          "host",
           "accessToken"
         ]
       }
@@ -229,10 +217,6 @@ A continuación se muestra un ejemplo de una especificación de autenticación c
         "type": "object",
         "description": "defines auth params required for connecting to rest service.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "username": {
             "description": "Username to connect mailChimp endpoint.",
             "type": "string"
@@ -244,7 +228,6 @@ A continuación se muestra un ejemplo de una especificación de autenticación c
           }
         },
         "required": [
-          "host",
           "username",
           "password"
         ]
