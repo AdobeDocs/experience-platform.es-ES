@@ -5,9 +5,9 @@ title: Conexión de DbVisualizer al servicio de consulta
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar DbVisualizer con el servicio de consulta de Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 9c272cc5b879e38f6b6113542ec7bdfd4f11fa8a
+source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -40,12 +40,13 @@ En el espacio de trabajo de Conexión a la base de datos, seleccione la opción 
 
 ![El espacio de trabajo Conexión a la base de datos con la ficha Propiedades resaltada.](../images/clients/dbvisualizer/driver-properties.png)
 
-Las tres propiedades de controlador requeridas se muestran en la siguiente tabla.
+Se recomiendan las propiedades de controlador que se ven en la tabla siguiente para habilitar el uso de SSL con DBVisualizer.
 
 | Propiedad | Descripción |
 | ------ | ------ |
 | `PGHOST` | El nombre de host de la variable [!DNL PostgreSQL] servidor. Este valor es su Experience Platform [!UICONTROL Host] credencial. |
-| `SSL` | Esto controla el uso de los requisitos SSL. You **must** utilice el valor `require` para habilitar este requisito. |
+| `ssl` | Definir el valor SSL `1` para habilitar el uso de SSL. |
+| `sslmode` | Esto controla el uso de los requisitos SSL. You **must** utilice el valor `require` para habilitar este requisito. |
 | `user` | El nombre de usuario conectado a la base de datos es su ID de organización. Es una cadena alfanumérica que termina en `@adobe.org` |
 
 >[!IMPORTANT]
