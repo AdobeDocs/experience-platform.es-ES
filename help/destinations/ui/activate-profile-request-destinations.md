@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de solicitud de perfil
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de solicitud de perfil.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
+source-git-commit: cda4591021c5b0a0bd6f43765d72b5867ec59aea
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,23 @@ La adición de atributos es opcional y aún puede continuar con el paso siguient
 
 ![Imagen que muestra el paso de asignación con un atributo seleccionado](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-Para añadir atributos, seleccione la opción **[!UICONTROL Añadir nuevo campo]** controle y busque o vaya al campo de atributo XDM deseado, como se muestra a continuación.
+### Seleccionar atributos de origen {#select-source-attributes}
 
-![Registro de pantalla que muestra cómo seleccionar un atributo XDM en el paso de asignación](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+Para añadir atributos de origen, seleccione la opción **[!UICONTROL Añadir nuevo campo]** control en el **[!UICONTROL Campo de origen]** y busque o vaya al campo de atributo XDM deseado, como se muestra a continuación.
+
+![Registro de pantalla que muestra cómo seleccionar un atributo de destino en el paso de asignación](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### Seleccionar atributos de destino {#select-target-attributes}
+
+>[!NOTE]
+>
+>Algunos destinos requieren que seleccione únicamente atributos de origen, mientras que otros requieren atributos de origen y de destino.
+>
+>Actualmente, la variable [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) el destino solo requiere atributos de origen, mientras que [Personalización personalizada con atributos](../catalog/personalization/custom-personalization.md) requiere atributos de origen y de destino.
+
+Para añadir atributos de destino, seleccione la opción **[!UICONTROL Añadir nuevo campo]** control en el **[!UICONTROL Campo de destino]** y escriba el nombre de atributo personalizado al que desea asignar el atributo de origen.
+
+![Registro de pantalla que muestra cómo seleccionar un atributo XDM en el paso de asignación](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## Programar exportación de segmentos {#scheduling}
 
