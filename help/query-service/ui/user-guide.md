@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Editor de consultas
 topic-legacy: query editor
 description: El Editor de consultas es una herramienta interactiva que proporciona el servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente en la interfaz de usuario del Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1882'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,37 @@ Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas 
 
 - **Tabla y campo autocompletados:** Comience a escribir el nombre de tabla que desee `SELECT` en , utilice las teclas de flecha para desplazarse hasta la tabla que está buscando y pulse **Entrar**. Una vez seleccionada una tabla, el llenado automático reconocerá los campos de dicha tabla.
 
-![Imagen](../images/ui/query-editor/tables-auto.png)
+![La interfaz de la línea de comandos del Editor de consultas muestra las sugerencias desplegables.](../images/ui/query-editor/tables-auto.png)
+
+### (Beta) Alternación de configuración de la interfaz de usuario de autocompletar {#auto-complete}
+
+>[!IMPORTANT]
+>
+>La opción de configuración de la interfaz de usuario de autocompletar está en versión beta. Sus características y documentación están sujetas a cambios.
+
+La variable [!DNL Query Editor] sugiere automáticamente posibles palabras clave SQL junto con detalles de tabla o columna para la consulta mientras la escribe. La función de autocompletar está activada de forma predeterminada y se puede deshabilitar o habilitar en cualquier momento seleccionando la opción [!UICONTROL Autocompletar sintaxis] alternar a la parte superior derecha del Editor de consultas.
+
+La configuración de autocompletar es por usuario y se recuerda para los inicios de sesión consecutivos de ese usuario.
+
+![Editor de consultas con la opción de completado automático de sintaxis resaltada.](../images/ui/query-editor/auto-complete-toggle.png)
+
+Al desactivar esta función, se evitan que se procesen varios comandos de metadatos y se ofrecen recomendaciones que normalmente mejoran la velocidad del autor al editar consultas.
+
+Al utilizar el botón de alternancia para habilitar la función de autocompletar, las sugerencias recomendadas para nombres de columnas y tablas, así como palabras clave SQL, estarán disponibles después de una breve pausa. Un mensaje de éxito en la consola, debajo del Editor de consultas, indica que la función está activa.
+
+Si desactiva la función de autocompletar, es necesario actualizar la página para que la función surta efecto. Aparece un cuadro de diálogo de confirmación con tres opciones al desactivar el [!UICONTROL Autocompletar sintaxis] alternar :
+
+- [!UICONTROL Cancelar]
+- [!UICONTROL Guardar cambios y actualizar]
+- [!UICONTROL Actualizar sin guardar cambios]
+
+>[!IMPORTANT]
+>
+>Si está escribiendo o editando una consulta al deshabilitar esta función, debe guardar los cambios en la consulta antes de actualizar la página o se perderá todo el progreso.
+
+![El cuadro de diálogo de confirmación para desactivar la función de autocompletar.](../images/ui/query-editor/confirmation-dialog.png)
+
+Seleccione la opción adecuada para desactivar la función de autocompletar.
 
 ### Detección de errores {#error-detection}
 
