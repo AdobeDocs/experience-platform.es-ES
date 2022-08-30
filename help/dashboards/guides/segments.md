@@ -4,9 +4,9 @@ title: Guía del panel de segmentos
 description: 'Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
+source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1681'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,10 @@ Consulte la [modificación de tableros](../customize/modify.md) y [Información 
 El tablero selecciona automáticamente un segmento para mostrar, aunque puede cambiarlo con el menú desplegable o el selector de segmentos.
 
 Para elegir un segmento diferente, seleccione la lista desplegable junto al nombre del segmento o utilice el selector de segmentos para abrir el cuadro de diálogo de selección de segmentos.
+
+>[!IMPORTANT]
+>
+>En la lista de segmentos seleccionables solo se muestran los segmentos con un recuento de perfiles superior a cero.
 
 ![](../images/segments/change-segment.png)
 
