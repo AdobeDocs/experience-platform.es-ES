@@ -4,9 +4,9 @@ title: Guía del panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2716'
 ht-degree: 0%
 
 ---
@@ -215,6 +215,10 @@ Todos los tamaños de audiencia del sistema se ordenan de un tamaño de audienci
 Si el recuento de perfiles asignado a un segmento no es una desviación estándar del tamaño de perfil asignado promedio durante los últimos 30 días, esto indica una anomalía en el sistema y debe investigarse.
 
 Si un segmento dentro de la variable [!UICONTROL Estado de la audiencia asignada] se está desviando por un amplio margen, debe consultar el gráfico de tendencias del tamaño de audiencia y localizar el segmento anómalo. La tendencia puede proporcionar más información sobre el estado de su segmento.
+
+>[!NOTE]
+>
+>El tamaño predeterminado del widget de salud de la audiencia asignada puede obstruir la información de la tabla. Modifique el tamaño de la utilidad para mejorar la legibilidad de los nombres de segmentos asignados y los títulos de columnas. Consulte la documentación de modificación de paneles para obtener instrucciones sobre [cambiar el tamaño de un widget](../customize/modify.md).
 
 ![El widget de estado de la audiencia asignado.](../images/destinations/mapped-audience-health.png)
 
