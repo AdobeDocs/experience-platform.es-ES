@@ -2,9 +2,9 @@
 title: Administración de etiquetas de uso de datos para un esquema
 description: Aprenda a añadir etiquetas de uso de datos a los campos de esquema del Modelo de datos de experiencia (XDM) en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,12 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
    * [Editor de esquemas](../ui/overview.md): Obtenga información sobre cómo crear y administrar esquemas y otros recursos en la interfaz de usuario de Platform.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Proporciona la infraestructura para aplicar restricciones de uso de datos en operaciones de Platform, mediante políticas que definen qué acciones de marketing se pueden (o no) realizar en datos etiquetados.
 
-## Seleccionar un esquema o campo al que añadir etiquetas
+## Seleccionar un esquema o campo al que añadir etiquetas {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="Editar etiquetas de control"
+>abstract="Aplique una etiqueta a un campo de esquema para indicar las políticas de uso que se aplican a los datos contenidos en ese campo específico."
 
 Para empezar a añadir etiquetas, primero debe [seleccionar un esquema existente para editar](../ui/resources/schemas.md#edit) o [crear un nuevo esquema](../ui/resources/schemas.md#create) para ver su estructura en el Editor de esquemas.
 

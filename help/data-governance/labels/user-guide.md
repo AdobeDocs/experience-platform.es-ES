@@ -5,9 +5,9 @@ title: Administrar etiquetas de uso de datos en la interfaz de usuario
 topic-legacy: labels
 description: Esta guía trata los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,12 @@ Puede añadir etiquetas directamente a un esquema o campos dentro de él. Cualqu
 
 Consulte el tutorial en [administración de etiquetas de nivel de esquema](../../xdm/tutorials/labels.md) para obtener más información.
 
-## Administrar etiquetas personalizadas
+## Administrar etiquetas personalizadas {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="Creación de etiquetas"
+>abstract="Las etiquetas permiten categorizar los conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Platform proporciona un conjunto estándar de etiquetas para usar, pero también puede crear etiquetas personalizadas específicas de su organización."
 
 Puede crear sus propias etiquetas de uso personalizadas en la **[!UICONTROL Políticas]** espacio de trabajo [!DNL Experience Platform] IU. Select **[!UICONTROL Políticas]** en el panel de navegación izquierdo, seleccione **[!UICONTROL Etiquetas]** para ver una lista de etiquetas existentes. Desde aquí, seleccione **[!UICONTROL Crear etiqueta]**.
 
