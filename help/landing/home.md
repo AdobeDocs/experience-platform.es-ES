@@ -5,10 +5,10 @@ title: Descripción general de Adobe Experience Platform
 topic-legacy: getting started
 description: Adobe Experience Platform permite a las organizaciones centralizar y estandarizar los datos de los clientes antes de aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 0e58db465b9e978d66325c4600ed78e81c03ae44
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
 source-wordcount: '437'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -28,11 +28,11 @@ Para empezar a aprender más sobre un [!DNL Platform] , vuelva a la [página de 
 
 Adobe ha creado varios servicios de aplicación sobre el Experience Platform. Puede encontrar documentación para estos servicios en sus propias guías, vinculadas a continuación:
 
-* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 
 ## [!DNL Experience Platform] tutoriales
 
@@ -51,7 +51,7 @@ Visite la [tutoriales del Experience Platform](https://www.adobe.com/go/platform
 * [**Glosario**](glossary.md)\
    Revise la terminología de Adobe Experience Platform.
 
-* [**Notas de la versión**](https://www.adobe.com/go/platform-release-notes-en)\
+* [**Notas de la versión de**](https://www.adobe.com/go/platform-release-notes-en)\
    Buscar información sobre los más recientes [!DNL Experience Platform] lanzamiento y revisión de versiones anteriores.
 
 * [**Guía de resolución de problemas**](troubleshooting.md)\

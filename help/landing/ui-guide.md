@@ -5,10 +5,10 @@ title: Información general sobre la IU de Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
-source-wordcount: '1809'
-ht-degree: 2%
+source-wordcount: '1812'
+ht-degree: 1%
 
 ---
 
@@ -96,7 +96,7 @@ Puede alternar entre el tema claro y el oscuro de la interfaz de Platform con el
 
 ![](images/theme.png)
 
-### Entornos aislados
+### Zonas protegidas
 
 Inmediatamente debajo de la barra de navegación superior se encuentra la barra de entorno limitado. Esta barra muestra qué simulador de pruebas está utilizando para Platform. Encontrará más información sobre los entornos limitados en [información general sobre los entornos limitados](../sandboxes/home.md).
 
@@ -160,7 +160,7 @@ La variable **[!UICONTROL Monitorización]** permite monitorizar la ingesta por 
 
 ### [!UICONTROL Decisioning]
 
-Offer Decisioning es un servicio de aplicaciones integrado en Adobe Experience Platform. Le permite utilizar Experience Platform para ofrecer la mejor oferta y experiencia a sus clientes en todos los puntos de contacto y en el momento adecuado. Para obtener más información sobre el Offer decisioning, incluido el trabajo con [!UICONTROL Ofertas] y [!UICONTROL Actividades] visite el [documentación de offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+Adobe Journey Optimizer es un servicio de aplicaciones creado sobre el Experience Platform. Le permite utilizar potentes tecnologías de toma de decisiones para ofrecer la mejor oferta y experiencia a sus clientes en todos los puntos de contacto y en el momento adecuado. Para obtener más información sobre Journey Optimizer, incluido el uso de [!UICONTROL Ofertas] y [!UICONTROL Actividades] visite el [Documentación de Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=es).
 
 ### [!UICONTROL Administración]
 
