@@ -4,9 +4,9 @@ title: Guía del panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
 workflow-type: tm+mt
-source-wordcount: '3769'
+source-wordcount: '3788'
 ht-degree: 1%
 
 ---
@@ -171,9 +171,9 @@ La variable **[!UICONTROL Tendencia del cambio en el recuento de perfiles]** mue
 
 ![La ficha Información general del perfil muestra el widget de tendencia del cambio del recuento de perfiles con el botón rótulos resaltado.](../images/profiles/profiles-count-change-trend-captions.png)
 
-Un modelo de aprendizaje automático genera automáticamente subtítulos para describir las tendencias clave y los eventos importantes analizando el gráfico y los datos.
+Un modelo de aprendizaje automático genera automáticamente subtítulos para describir las tendencias clave y los eventos importantes analizando el gráfico y los datos. Las anotaciones se añaden al gráfico en función de los rótulos. Seleccione un rótulo para centrarse en su anotación correspondiente.
 
-![El cuadro de diálogo rótulos automáticos del widget de tendencia de cambio de recuento de perfiles.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![El cuadro de diálogo rótulos automáticos del widget de tendencia de cambio de recuento de perfiles.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL El recuento de perfiles cambia la tendencia por identidad] {#profiles-count-change-trend-by-identity}
 
