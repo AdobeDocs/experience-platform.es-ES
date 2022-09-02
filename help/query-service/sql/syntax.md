@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
+source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3033'
 ht-degree: 2%
 
 ---
@@ -554,25 +554,23 @@ EXECUTE name [ ( parameter ) ]
 La variable `EXPLAIN` muestra el plan de ejecución de la instrucción suministrada. El plan de ejecución muestra cómo se analizan las tablas a las que hace referencia la instrucción.  Si se hace referencia a varias tablas, se mostrará qué algoritmos de unión se utilizan para unir las filas necesarias de cada tabla de entrada.
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-Donde `option` puede ser uno de los siguientes:
+Utilice la variable `FORMAT` palabra clave con la variable `EXPLAIN` para definir el formato de la respuesta.
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | Parámetros | Descripción |
 | ------ | ------ |
-| `ANALYZE` | Si la variable `option` contains `ANALYZE`, se muestran los tiempos de ejecución y otras estadísticas. |
-| `FORMAT` | Si la variable `option` contains `FORMAT`, especifica el formato de salida, que puede ser `TEXT` o `JSON`. La salida no textual contiene la misma información que el formato de salida de texto, pero es más fácil de analizar para los programas. El valor predeterminado de este parámetro es `TEXT`. |
+| `FORMAT` | Utilice la variable `FORMAT` para especificar el formato de salida. Las opciones disponibles son `TEXT` o `JSON`. La salida no textual contiene la misma información que el formato de salida de texto, pero es más fácil de analizar para los programas. El valor predeterminado de este parámetro es `TEXT`. |
 | `statement` | Cualquiera `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`o `CREATE MATERIALIZED VIEW AS` cuyo plan de ejecución desea ver. |
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que la instrucción se ejecuta realmente cuando la variable `ANALYZE` se utiliza. Aunque `EXPLAIN` descarta cualquier salida que `SELECT` otros efectos secundarios de la declaración ocurren como de costumbre.
+>Cualquier salida que `SELECT` puede que se descarte el valor devuelto cuando se ejecuta con la variable `EXPLAIN` palabra clave. Otros efectos secundarios de la declaración ocurren como de costumbre.
 
 **Ejemplo**
 
@@ -585,7 +583,7 @@ EXPLAIN SELECT * FROM foo;
 ```console
                        QUERY PLAN
 ---------------------------------------------------------
- Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
+ Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
 
