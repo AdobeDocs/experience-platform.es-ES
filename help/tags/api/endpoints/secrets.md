@@ -2,10 +2,10 @@
 title: Extremo secreto
 description: Aprenda a realizar llamadas al extremo /secret en la API de Reactor.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
 workflow-type: tm+mt
-source-wordcount: '1187'
-ht-degree: 16%
+source-wordcount: '1286'
+ht-degree: 15%
 
 ---
 
@@ -483,7 +483,7 @@ Una respuesta correcta devuelve los detalles del secreto, con la respuesta del s
       "activated_at": null, 
       "created_at": "2021-07-14T19:33:25.628Z", 
       "credentials": { 
-        "authorization_url": "https://athorization_url.test/token/authorize?required_param=value",
+        "token_url": "https://token_url.test/token/authorize?required_param=value",
         "client_id": "test_client_id", 
         "client_secret": "test_client_secret", 
         "refresh_offset": 14400, 
@@ -641,6 +641,113 @@ Una respuesta correcta devuelve los detalles del secreto, con su estado restable
       "property": "https://reactor.adobe.io/secrets/SEa3756b962e964fadb61e31df1f7dd5a3/property"
     }
   }
+}
+```
+
+## Volver a autorizar una `oauth2-google` secreto {#reauthorize}
+
+Cada `oauth2-google` el secreto contiene un `meta.token_url_expires_at` que indica cuándo caducará la dirección URL de autorización. Después de este tiempo, el secreto debe volver a autorizarse para que renueve el proceso de autenticación.
+
+Para volver a autorizar una `oauth2-google` secreto, hacer una solicitud PATCH del secreto en cuestión.
+
+**Formato de API**
+
+```http
+PATCH /secrets/{SECRET_ID}
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{SECRET_ID}` | La variable `id` del secreto que desea volver a autorizar. |
+
+**Solicitud**
+
+La variable `data` El objeto de la carga útil de la solicitud debe contener un `meta.action` propiedad establecida en `reauthorize`.
+
+```shell
+curl -X PATCH \
+  https://reactor.adobe.io/secrets/SEa3756b962e964fadb61e31df1f7dd5a3 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
+  -H 'Content-Type: application/vnd.api+json' \
+  -d '{
+        "data": {
+          "attributes": {
+            "type_of": "oauth2-google"
+          },
+          "meta": {
+            "action": "reauthorize"
+          },
+          "id": "SEa3756b962e964fadb61e31df1f7dd5a3",
+          "type": "secrets"
+        }
+      }'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve los detalles del secreto actualizado. Desde aquí debe copiar y pegar el `meta.token_url` en un explorador para completar el proceso de autorización.
+
+```json
+{
+  "data": {
+    "id": "SE5fdfa4c0a2d8404e8b1bc38827cc41c9",
+    "type": "secrets",
+    "attributes": {
+      "created_at": "2021-07-15T19:00:25.628Z", 
+      "updated_at": "2021-07-15T19:00:25.628Z", 
+      "name": "Example Secret", 
+      "type_of": "oauth2-google", 
+      "activated_at": null, 
+      "expires_at": null, 
+      "refresh_at": null, 
+      "status": "pending", 
+      "credentials": { 
+        "scopes": [
+          "https://www.googleapis.com/auth/adwords",
+          "https://www.googleapis.com/auth/pubsub"
+        ], 
+      } 
+    }, 
+    "relationships": { 
+      "property": { 
+        "links": { 
+          "related": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/property" 
+        }, 
+        "data": { 
+          "id": "PR9eff664dc6014217b76939bb78b83976", 
+          "type": "properties" 
+        } 
+      }, 
+      "environment": { 
+        "links": { 
+          "related": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/environment" 
+        }, 
+        "data": { 
+          "id": "EN04cdddbdb6574170bcac9f470f3b8087", 
+          "type": "environments" 
+        }, 
+        "meta": { 
+          "stage": "development" 
+        } 
+      }, 
+      "notes": { 
+        "links": { 
+          "related": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/notes" 
+        } 
+      } 
+    }, 
+    "links": { 
+      "self": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9", 
+      "property": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/property" 
+    }, 
+    "meta": { 
+      "token_url": "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=434635668552-0qvlu519fdjtnkvk8hu8c8dj8rg3723r.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Freactor.adobe.io%2Foauth2%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadwords&state=state", 
+      "token_url_expires_at": "2021-07-15T20:00:25.628Z" 
+    } 
+  } 
 }
 ```
 

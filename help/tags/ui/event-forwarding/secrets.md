@@ -2,9 +2,9 @@
 title: Configuración de secretos en el reenvío de eventos
 description: Aprenda a configurar secretos en la interfaz de usuario de recopilación de datos para autenticarse en los puntos finales utilizados en las propiedades de reenvío de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1637'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,8 @@ Actualmente hay tres tipos de secreto compatibles:
 | --- | --- |
 | [!UICONTROL Token] | Una cadena única de caracteres que representa un valor de token de autenticación conocido y entendido por ambos sistemas. |
 | [!UICONTROL HTTP] | Contiene dos atributos de cadena para un nombre de usuario y una contraseña, respectivamente. |
-| [!UICONTROL OAuth2] | Contiene varios atributos para admitir la variable [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) especificación de autenticación. El sistema le pide la información necesaria y, a continuación, se encarga de la renovación de estos tokens en un intervalo especificado. Actualmente solo el [Credenciales del cliente](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) se admite la versión de OAuth2. |
+| [!UICONTROL OAuth 2] | Contiene varios atributos para admitir la variable [tipo de concesión de credenciales de cliente](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) para el [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) especificación de autenticación. El sistema le pide la información necesaria y, a continuación, se encarga de la renovación de estos tokens en un intervalo especificado. |
+| [!UICONTROL Google OAuth 2] | Contiene varios atributos para admitir la variable [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) especificación de autenticación para usar en la variable [API de Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) y [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). El sistema le pide la información necesaria y, a continuación, se encarga de la renovación de estos tokens en un intervalo especificado. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -65,7 +66,8 @@ Desde aquí, los pasos para crear el secreto difieren según el tipo de secreto 
 
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
-* [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -83,11 +85,11 @@ Para crear un secreto HTTP, seleccione **[!UICONTROL HTTP simple]** de la variab
 
 ![Secreto HTTP](../../images/ui/event-forwarding/secrets/http-secret.png)
 
-### [!UICONTROL OAuth2] {#oauth2}
+### [!UICONTROL OAuth 2] {#oauth2}
 
-Para crear un secreto de OAuth2, seleccione **[!UICONTROL OAuth2]** de la variable **[!UICONTROL Tipo]** lista desplegable. En los campos que aparecen a continuación, proporcione la [[!UICONTROL ID de cliente] y [!UICONTROL Secreto del cliente]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), así como su [URL de autorización](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para su integración de OAuth. La variable [!UICONTROL URL de autorización] en la interfaz de usuario de recopilación de datos es una concatenación entre el host del servidor de autorización y la ruta del token.
+Para crear un secreto de OAuth 2, seleccione **[!UICONTROL OAuth 2]** de la variable **[!UICONTROL Tipo]** lista desplegable. En los campos que aparecen a continuación, proporcione la [[!UICONTROL ID de cliente] y [!UICONTROL Secreto del cliente]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), así como su [[!UICONTROL URL del token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para su integración de OAuth. La variable [!UICONTROL URL del token] en la interfaz de usuario de recopilación de datos es una concatenación entre el host del servidor de autorización y la ruta del token.
 
-![Secreto OAuth2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
+![Secreto de OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
 En **[!UICONTROL Opciones de Credencial]**, puede proporcionar otras opciones de credenciales como `scope` y `audience` en forma de pares clave-valor. Para agregar más pares de clave-valor, seleccione **[!UICONTROL Agregue otro]**.
 
@@ -107,7 +109,24 @@ Por ejemplo, si el desplazamiento de la actualización está establecido en el v
 
 Cuando termine, seleccione **[!UICONTROL Crear secreto]** para guardar el secreto.
 
-![Guardar desplazamiento de OAuth2](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+![Guardar desplazamiento de OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL Google OAuth 2] {#google-oauth2}
+
+Para crear un secreto de Google OAuth 2, seleccione **[!UICONTROL Google OAuth 2]** de la variable **[!UICONTROL Tipo]** lista desplegable. En **[!UICONTROL Ámbitos]**, seleccione las API de Google a las que desee utilizar este secreto para conceder acceso. Actualmente se admiten los siguientes productos:
+
+* [API de Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview)
+* [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
+
+Cuando termine, seleccione **[!UICONTROL Crear secreto]**.
+
+![Secreto de Google OAuth 2](../../images/ui/event-forwarding/secrets/google-oauth.png)
+
+Aparece una ventana emergente que le informa de que el secreto debe autorizarse manualmente a través de Google. Select **[!UICONTROL Crear y autorizar]** para continuar.
+
+![Administrador de autorización de Google](../../images/ui/event-forwarding/secrets/google-authorization.png)
+
+Aparece un cuadro de diálogo que le permite introducir las credenciales de su cuenta de Google. Siga las indicaciones para conceder acceso al reenvío de eventos a sus datos en el ámbito seleccionado. Una vez completado el proceso de autorización, se crea el secreto.
 
 ## Editar un secreto
 
@@ -131,7 +150,7 @@ Puede reintentar o actualizar un intercambio secreto desde la pantalla de edici�
 | --- | --- |
 | [!UICONTROL Token] | Select **[!UICONTROL Secreto de Exchange]** para volver a intentar el intercambio secreto. Este control solo está disponible cuando hay un entorno adjunto al secreto. |
 | [!UICONTROL HTTP] | Si no hay ningún entorno adjunto al secreto, seleccione **[!UICONTROL Secreto de Exchange]** para cambiar la credencial a base64. Si hay un entorno adjunto, seleccione **[!UICONTROL Secreto de Exchange e Deploy]** para intercambiar a base64 e implementar el secreto. |
-| [!UICONTROL OAuth2] | Select **[!UICONTROL Generar token]** para intercambiar las credenciales y devolver un token de acceso del proveedor de autenticación. |
+| [!UICONTROL OAuth 2] | Select **[!UICONTROL Generar token]** para intercambiar las credenciales y devolver un token de acceso del proveedor de autenticación. |
 
 ## Eliminar un secreto
 
