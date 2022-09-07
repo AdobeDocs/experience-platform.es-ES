@@ -5,9 +5,9 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene preguntas y respuestas comunes relacionadas con el servicio de consulta. Los temas incluyen, exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
 workflow-type: tm+mt
-source-wordcount: '3522'
+source-wordcount: '3755'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ Esta sección incluye información sobre rendimiento, límites y procesos.
 +++Respuesta Una posible causa es la función de autocompletar. La función procesa ciertos comandos de metadatos que ocasionalmente pueden ralentizar el editor durante la edición de consultas.
 +++
 
-### ¿Puedo utilizar Postman para la API del servicio de consulta?
+### ¿Puedo usar Postman para la API del servicio de consulta?
 
 +++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante Postman (una aplicación gratuita de terceros). Observe el [Guía de configuración de Postman](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en la consola de Adobe Developer y adquirir todas las credenciales necesarias para su uso con Postman. Consulte la documentación oficial para [instrucciones sobre cómo iniciar, ejecutar y compartir colecciones de Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
@@ -252,6 +252,16 @@ SELECT count(1) FROM myTableName
 +++Answer Query Service proporciona varias funciones de ayuda SQL integradas para ampliar la funcionalidad SQL. Consulte el documento para obtener una lista completa de [Funciones SQL admitidas por el servicio de consultas](./sql/spark-sql-functions.md).
 +++
 
+### Son nativos [!DNL Spark SQL] funciones compatibles o son usuarios restringidos únicamente al envolvente [!DNL Spark SQL] funciones proporcionadas por Adobe?
+
++++Respuesta Hasta ahora, no todas las fuentes abiertas [!DNL Spark SQL] se han probado las funciones en los datos del lago de datos. Una vez probados y confirmados, se añadirán a la lista de admitidos. Consulte la [lista de admitidos [!DNL Spark SQL] funciones](./sql/spark-sql-functions.md) para comprobar la existencia de una función específica.
++++
+
+### ¿Pueden los usuarios definir sus propias funciones definidas por el usuario (UDF) que se pueden usar en otras consultas?
+
++++Respuesta Debido a consideraciones de seguridad de los datos, no se permite la definición personalizada de campos definidos por el usuario.
++++
+
 ### ¿Qué debo hacer si falla mi consulta programada?
 
 +++Respuesta Primero, compruebe los registros para averiguar los detalles del error. La sección Preguntas frecuentes de [búsqueda de errores dentro de los registros](#error-logs) proporciona más información sobre cómo hacerlo.
@@ -438,6 +448,11 @@ WHERE T2.ID IS NULL
 
 +++
 
+### ¿Puedo crear un conjunto de datos utilizando una consulta CTAS con un nombre de guión bajo doble como los que se muestran en la interfaz de usuario? Por ejemplo: `test_table_001`.
+
++++Respuesta No, se trata de una limitación intencional en todo el Experience Platform que se aplica a todos los servicios de Adobe, incluido el servicio de consulta. Un nombre con dos guiones bajos es aceptable como esquema y como nombre de conjunto de datos, pero el nombre de tabla para el conjunto de datos solo puede contener un solo guión bajo.
++++
+
 ## Exportación de datos {#exporting-data}
 
 Esta sección proporciona información sobre la exportación de datos y límites.
@@ -462,6 +477,25 @@ FROM <table_name>
 +++Nº respuesta Actualmente no hay ninguna función disponible para la extracción de datos ingestados.
 +++
 
+### ¿Por qué el conector de datos de Analytics no devuelve datos?
+
++++Respuesta Una causa común de este problema es consultar datos de series temporales sin un filtro de tiempo. Por ejemplo:
+
+```sql
+SELECT * FROM prod_table LIMIT 1;
+```
+
+Debe escribirse como:
+
+```sql
+SELECT * FROM prod_table
+WHERE
+timestamp >= to_timestamp('2022-07-22')
+and timestamp < to_timestamp('2022-07-23');
+```
+
++++
+
 ## Herramientas de terceros {#third-party-tools}
 
 Esta sección incluye información sobre el uso de herramientas de terceros como PSQL y Power BI.
@@ -473,7 +507,13 @@ Esta sección incluye información sobre el uso de herramientas de terceros como
 
 ### ¿Existe alguna forma de conectar el servicio de consulta una vez para utilizarlo de forma continua con una herramienta de terceros?
 
-+++Respuesta Sí, los clientes de escritorio de terceros pueden conectarse al servicio de consulta mediante una configuración única de credenciales que no caducan. Un usuario autorizado puede generar credenciales que no caduquen y las recibirá en un archivo JSON descargado a su equipo local. Completa [instrucciones sobre cómo crear y descargar credenciales que no caduquen](./ui/credentials.md#non-expiring-credentials) en la documentación.
++++Respuesta Sí, los clientes de escritorio de terceros pueden conectarse al servicio de consulta mediante una configuración única de credenciales que no caducan. Un usuario autorizado puede generar credenciales que no caduquen y recibirlas en un archivo JSON que se descarga automáticamente a su equipo local. Completa [instrucciones sobre cómo crear y descargar credenciales que no caduquen](./ui/credentials.md#non-expiring-credentials) en la documentación.
++++
+
+### ¿Por qué no funcionan mis credenciales que no caducan?
+
++++Respuesta El valor de las credenciales que no caducan son los argumentos concatenados del `technicalAccountID` y `credential` tomado del archivo JSON de configuración. El valor de la contraseña adopta la forma: `{{technicalAccountId}:{credential}}`.
+Consulte la documentación para obtener más información sobre cómo [conectarse a clientes externos con credenciales](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### ¿Qué tipo de editores SQL de terceros puedo conectar con el Editor de servicios de consulta?
