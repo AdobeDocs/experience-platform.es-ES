@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: Este documento describe detalles importantes que deben conocerse al escribir consultas en el servicio de consulta de Adobe Experience Platform.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1048'
 ht-degree: 3%
 
 ---
@@ -48,6 +48,10 @@ Consultas enviadas a través de [!DNL Query Service] Las API se ejecutan de form
 ## Acceso a un campo específico dentro de un objeto
 
 Para acceder a un campo dentro de un objeto de la consulta, puede utilizar la notación de puntos (`.`) o notación de corchetes (`[]`). La siguiente instrucción SQL utiliza la notación de puntos para recorrer el `endUserIds` hasta `mcid` objeto.
+
+>[!NOTE]
+>
+>El ID de Experience Cloud (ECID) también se conoce como MCID y se sigue utilizando en áreas de nombres.
 
 ```sql
 SELECT endUserIds._experience.mcid

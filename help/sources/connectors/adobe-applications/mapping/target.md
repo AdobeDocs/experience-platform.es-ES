@@ -5,19 +5,18 @@ title: Asignación de datos de evento de Adobe Target a XDM
 topic-legacy: overview
 description: Obtenga información sobre cómo asignar campos de evento de Adobe Target a un esquema de Experience Data Model (XDM) para utilizarlo en Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 0%
+source-wordcount: '482'
+ht-degree: 1%
 
 ---
 
 # Asignaciones de campos de asignación de destino
 
-Adobe Experience Platform le permite introducir datos de Adobe Target a través del conector de origen de Target. Al utilizar el conector, todos los datos de los campos de Target deben asignarse a los campos [Experience Data Model (XDM)](../../../../xdm/home.md) asociados con la clase XDM ExperienceEvent.
+Adobe Experience Platform le permite introducir datos de Adobe Target a través del conector de origen de Target. Al utilizar el conector, todos los datos de los campos de Target deben asignarse al [Modelo de datos de experiencia (XDM)](../../../../xdm/home.md) campos asociados a la clase XDM ExperienceEvent.
 
-La siguiente tabla describe los campos de un esquema de Experience Event (*XDM ExperienceEvent field*) y los campos de Target a los que deben asignarse (*Campo de solicitud de Target*). También se proporcionan notas adicionales para algunas asignaciones.
+La siguiente tabla describe los campos de un esquema de Experience Event (*Campo XDM ExperienceEvent*) y los campos de Target correspondientes a los que deben asignarse (*Campo Solicitud de destino*). También se proporcionan notas adicionales para algunas asignaciones.
 
 >[!NOTE]
 >
@@ -34,7 +33,7 @@ La siguiente tabla describe los campos de un esquema de Experience Event (*XDM E
 | **`channel`** | `context.channel` | Solo funciona con la entrega de vista. Las opciones son &quot;web&quot; y &quot;móvil&quot;, siendo &quot;web&quot; el valor predeterminado. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
-| `endUserIds.experience.mcId` | `marketingCloudVisitorId` |
+| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | El ID de Experience Cloud (ECID) también se conoce como MCID y se sigue utilizando en áreas de nombres. |
 | **`environment`** |
 | `environment.browserDetails.userAgent` | `mboxRequest.userAgent` |
 | `environment.browserDetails.viewPortHeight` | `mboxRequest.browserHeight` |
@@ -52,7 +51,7 @@ La siguiente tabla describe los campos de un esquema de Experience Event (*XDM E
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
-| `experience.target.environmentID` | Asignación interna de Target para entornos definidos por el cliente (como dev, qa o prod). |
+| `experience.target.environmentID` | La asignación interna de Target para entornos definidos por el cliente (como dev, qa o prod). |
 | `experience.target.supplementalDataID` | Identificador utilizado para vincular eventos de Target con eventos de Analytics |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |

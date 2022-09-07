@@ -5,9 +5,9 @@ title: Preparación de datos para su uso en servicios inteligentes
 topic-legacy: Intelligent Services
 description: Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse semánticamente y mantenerse en una estructura estándar. Los servicios inteligentes utilizan esquemas del Modelo de datos de experiencia (XDM) para conseguirlo.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2919'
+source-wordcount: '2936'
 ht-degree: 1%
 
 ---
@@ -117,6 +117,10 @@ Uno de los campos del esquema debe definirse como campo de identidad principal, 
 
 Debe determinar el mejor campo para utilizarlo como identidad principal en función de la fuente y la naturaleza de los datos. Un campo de identidad debe incluir un **área de nombres de identidad** que indica el tipo de datos de identidad que el campo espera como valor. Algunos valores de espacio de nombres válidos son:
 
+>[!NOTE]
+>
+>El ID de Experience Cloud (ECID) también se conoce como MCID y se sigue utilizando en áreas de nombres.
+
 * &quot;email&quot;
 * &quot;phone&quot;
 * &quot;mcid&quot; (para Adobe Audience Manager ID)
@@ -124,7 +128,7 @@ Debe determinar el mejor campo para utilizarlo como identidad principal en funci
 
 Si no está seguro de qué campo debe utilizar como identidad principal, póngase en contacto con los servicios de consultoría de Adobe para determinar la mejor solución. Si no se establece una identidad principal, la aplicación de servicio inteligente utiliza el siguiente comportamiento predeterminado:
 
-| Predeterminado | Attribution AI | Customer AI |
+| Predeterminado | Inteligencia artificial aplicada a la atribución | Customer AI |
 | --- | --- | --- |
 | Columna de identidad | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
 | Área de nombres | AAID | ECID |

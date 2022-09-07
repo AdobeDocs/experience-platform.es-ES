@@ -2,9 +2,9 @@
 title: Filtrado de bots en Query Service con aprendizaje automático
 description: Este documento proporciona información general sobre cómo utilizar Query Service y el aprendizaje automático para determinar la actividad de bots y filtrar sus acciones a partir del tráfico de visitantes de sitios web en línea.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
+source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '899'
 ht-degree: 5%
 
 ---
@@ -29,8 +29,12 @@ Este ejemplo utiliza [!DNL Jupyter Notebook] como entorno de desarrollo. Aunque 
 
 Los dos atributos utilizados para extraer datos para la detección de bots son:
 
-* ID de Marketing Cloud (MCID): Proporciona un identificador universal y persistente que identifica a los visitantes en todas las soluciones de Adobe.
+* ID de visitante de Experience Cloud (ECID, también conocido como MCID): Proporciona un identificador universal y persistente que identifica a los visitantes en todas las soluciones de Adobe.
 * Marca de tiempo: Esto proporciona la hora y la fecha en formato UTC cuando se produjo una actividad en el sitio web.
+
+>[!NOTE]
+>
+>El uso de `mcid` sigue encontrándose en referencias de espacio de nombres al ID de visitante de Experience Cloud como se ve en el ejemplo siguiente.
 
 La siguiente instrucción SQL proporciona un ejemplo inicial para identificar la actividad de bots. La instrucción supone que si un visitante hace 50 clics en un minuto, entonces el usuario es un bot.
 
@@ -45,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-La expresión filtra los MCID de todos los visitantes que alcanzan el umbral pero no aborda los picos de tráfico de otros intervalos.
+La expresión filtra los ECID (`mcid`) de todos los visitantes que alcanzan el umbral pero no abordan los picos de tráfico de otros intervalos.
 
 ## Mejore la detección de bots con el aprendizaje automático
 
@@ -53,7 +57,7 @@ La instrucción SQL inicial se puede refinar para que se convierta en una consul
 
 La sentencia de ejemplo se expande de un minuto con hasta 60 clics, para incluir períodos de cinco minutos y 30 minutos con recuentos de clics de 300 y 1800 respectivamente.
 
-La sentencia de ejemplo recopila el número máximo de clics para cada MCID durante las distintas duraciones. La sentencia inicial se ha ampliado para incluir periodos de un minuto (60 segundos), 5 minutos (300 segundos) y una hora (1800 segundos).
+La sentencia de ejemplo recopila el número máximo de clics para cada ECID (`mcid`) durante las distintas duraciones. La sentencia inicial se ha ampliado para incluir periodos de un minuto (60 segundos), 5 minutos (300 segundos) y una hora (1800 segundos).
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -167,4 +171,4 @@ El modelo de ejemplo determinó con un alto grado de precisión que cualquier vi
 
 Al leer este documento, tiene una mejor comprensión de cómo usar [!DNL Query Service] y aprendizaje automático para determinar y filtrar la actividad de bots.
 
-Otros documentos que demuestren los beneficios de [!DNL Query Service] a la información estratégica comercial de su organización, se incluye la variable [caso de uso de exploración abandonado](./abandoned-browse.md) ejemplo.
+Otros documentos que demuestren los beneficios de [!DNL Query Service] para la información estratégica comercial de su organización, se usa la variable [caso de uso de exploración abandonado](./abandoned-browse.md) ejemplo.

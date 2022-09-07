@@ -5,21 +5,21 @@ title: Grupo de campos de esquema de detalles de ID de usuario final
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles del ID de usuario final .
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 2%
+source-wordcount: '226'
+ht-degree: 5%
 
 ---
 
 
-# [!UICONTROL Grupo de campos ] Detalle de ID de usuario final
+# [!UICONTROL Detalles del ID de usuario final] grupo de campos de esquema
 
 >[!NOTE]
 >
->Los nombres de varios grupos de campos de esquema han cambiado. Para obtener más información, consulte el documento [field group name updates](../name-updates.md) .
+>Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento en [actualizaciones del nombre del grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL ID de usuario final ] Detalla un grupo de campos de esquema estándar para la  [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md), que se utiliza para describir la información de identidad de una persona en varias aplicaciones de Adobe. El grupo de campos proporciona un objeto `endUserIDs` de nivel raíz, que contiene un campo `_experience` de solo lectura cuyos valores se actualizan automáticamente a medida que se introducen datos.
+[!UICONTROL Detalles del ID de usuario final] es un grupo de campos de esquema estándar para la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), se utiliza para describir la información de identidad de un individuo en varias aplicaciones de Adobe. El grupo de campos proporciona un nivel raíz `endUserIDs` que contiene un objeto de solo lectura `_experience` campo cuyos valores se actualizan automáticamente como datos incorporados.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
@@ -30,7 +30,7 @@ ht-degree: 2%
 | `acid` | [Identidad](../../data-types/identity.md) | ID de usuario final para Adobe Campaign. |
 | `adcloud` | [Identidad](../../data-types/identity.md) | ID de usuario final para Adobe Advertising Cloud. |
 | `emailid` | [Identidad](../../data-types/identity.md) | ID de direcciones de correo electrónico. |
-| `mcid` | [Identidad](../../data-types/identity.md) | Adobe Marketing Cloud ID. |
+| `mcid` | [Identidad](../../data-types/identity.md) | Adobe Marketing Cloud ID (MCID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
 | `phonenumberid` | [Identidad](../../data-types/identity.md) | ID de número de teléfono. |
 | `tntid` | [Identidad](../../data-types/identity.md) | ID de usuario final para Adobe Target. |
 

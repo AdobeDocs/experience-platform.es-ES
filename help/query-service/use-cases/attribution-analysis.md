@@ -1,9 +1,10 @@
 ---
 title: Análisis de atribución
 description: En este documento se explica cómo utilizar el servicio de consulta para crear una técnica de medición de la eficacia de marketing basada en el modelo de atribución de marketing de primer y último contacto.
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1419'
 ht-degree: 1%
 
 ---
@@ -27,7 +28,7 @@ Para cada uno de los siguientes casos de uso, se proporciona un ejemplo de consu
 
 ## Objetivos
 
-Un caso de uso de atribución utiliza datos de Adobe Analytics para ayudar a asociar acciones de clientes a un resultado exitoso. Esta asociación es una parte fundamental para comprender los factores que influyen en las experiencias de los clientes. Los datos de análisis de atribución se pueden utilizar para comprender la importancia del punto de contacto de un cliente durante el recorrido del cliente.
+Un caso de uso de atribución utiliza datos de Adobe Analytics para ayudar a asociar acciones de clientes a un resultado exitoso. Esta asociación es una parte fundamental para comprender los factores que influyen en las experiencias de los clientes. Los datos de análisis de atribución se pueden utilizar para comprender la importancia del punto de contacto de un cliente durante el recorrido con él.
 
 Los ejemplos de consultas contenidos en este documento admiten varios casos de uso para la atribución de primer toque y de último toque con diferentes configuraciones de caducidad. Esta guía ilustra los siguientes conceptos clave:
 
@@ -68,6 +69,10 @@ Los resultados de las consultas de atribución se proporcionan en la variable `f
 La atribución de primer contacto acredita el 100% de la responsabilidad por un resultado exitoso en el canal inicial que encontró el consumidor. Este ejemplo SQL se utiliza para resaltar la interacción que condujo a una serie posterior de acciones del cliente.
 
 La siguiente consulta devuelve el valor de atribución de primer contacto y los detalles del canal en el destino [!DNL Experience Event] conjunto de datos. También devuelve un valor `struct` para el canal seleccionado con el valor de primer contacto, la marca de tiempo y la atribución para cada fila.
+
+>[!NOTE]
+>
+>El ID de Experience Cloud (ECID) también se conoce como MCID y se sigue utilizando en áreas de nombres.
 
 **Sintaxis de la consulta**
 

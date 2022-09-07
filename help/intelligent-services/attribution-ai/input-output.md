@@ -5,9 +5,9 @@ title: Entrada y salida en Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: En el siguiente documento se describen las diferentes entradas y productos utilizados en la Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2491'
+source-wordcount: '2504'
 ht-degree: 3%
 
 ---
@@ -138,7 +138,7 @@ La siguiente tabla describe los campos de esquema de la salida de ejemplo de las
 | commerce_order_purchaseCity (cadena) | True | Columna del conjunto de datos de puntuación adicional. <br> **Ejemplo:** ciudad: San José |
 | customerProfile (objeto) | False | Detalles de identidad del usuario utilizado para crear el modelo. |
 | identity (objeto) | False | Contiene los detalles del usuario utilizado para crear el modelo, como `id` y `namespace`. |
-| id (cadena) | True | ID de identidad del usuario, como ID de cookie, AAID o MCID, etc. <br> **Ejemplo:** 17348762725408656344688320891369597404 |
+| id (cadena) | True | ID de identidad del usuario, como ID de cookie, ID de Adobe Analytics (AAID) o ID de Experience Cloud (ECID, también conocido como MCID o como ID de visitante), etc. <br> **Ejemplo:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Área de nombres de identidad utilizada para crear las rutas y, por lo tanto, el modelo. <br> **Ejemplo:** aaid |
 | touchpointsDetail (matriz de objetos) | True | La lista de detalles de puntos de contacto que llevan a la conversión solicitada por | incidencia de touchpoint o marca de tiempo. |
 | touchpointName (cadena) | True | Nombre del punto de contacto que se configuró durante la configuración. <br> **Ejemplo:** PAID_SEARCH_CLICK |
