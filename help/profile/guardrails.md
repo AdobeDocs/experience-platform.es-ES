@@ -4,11 +4,11 @@ title: Protecciones predeterminadas para los datos de perfil del cliente en tiem
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema. '
+description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
+source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1950'
 ht-degree: 6%
 
 ---
@@ -139,7 +139,7 @@ En este documento, existen varias protecciones que hacen referencia a &quot;frag
 
 ### Combinar directivas {#merge-policies}
 
-Al reunir datos de varias fuentes, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Por ejemplo, si un cliente interactúa con la marca a través de varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan a Platform, se combinan para crear un perfil único para ese cliente. Cuando los datos de varias fuentes entran en conflicto, la política de combinación determina qué información se incluirá en el perfil para el individuo. Para obtener más información sobre las políticas de combinación, comience por leer la [información general sobre políticas de combinación](merge-policies/overview.md).
+Al reunir datos de varias fuentes, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Por ejemplo, si un cliente interactúa con la marca a través de varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan a Platform, se combinan para crear un perfil único para ese cliente. Cuando los datos de varias fuentes entran en conflicto, la política de combinación determina qué información se incluirá en el perfil para el individuo. Se permite un máximo de cinco (5) políticas de combinación por organización. Para obtener más información sobre las políticas de combinación, lea la [información general sobre políticas de combinación](merge-policies/overview.md).
 
 ### Conjuntos de datos de grupos de informes de Adobe Analytics en Platform {#aa-datasets}
 
