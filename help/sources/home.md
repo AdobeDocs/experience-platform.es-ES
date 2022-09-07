@@ -5,9 +5,9 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 Experience Platform permite la ingesta de datos desde un sistema de publicidad de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md)
+- [Publicidades de Google](connectors/advertising/ads.md)
 
 ### Analytics {#analytics}
 

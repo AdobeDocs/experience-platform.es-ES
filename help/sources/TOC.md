@@ -4,10 +4,10 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 14%
+ht-degree: 13%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 14%
          - [Guía de autenticación del Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Esquemas y áreas de nombres B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
-      - [Conector de Google AdWords](connectors/advertising/ads.md)
+      - [Conector de Google Ads](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Conector de panel mixto](connectors/analytics/mixpanel.md)
    - Almacenamiento en la nube {#cloud-storage}
@@ -103,7 +103,7 @@ ht-degree: 14%
 - Tutoriales de API {#api-tutorials}
    - Creación de una conexión base {#create}
       - Publicidad {#advertising}
-         - [Google AdWords](tutorials/api/create/advertising/ads.md)
+         - [Publicidades de Google](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Panel de mezcla](tutorials/api/create/analytics/mixpanel.md)
       - Almacenamiento en la nube {#cloud-storage}
@@ -205,7 +205,7 @@ ht-degree: 14%
          - [Atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicidad {#advertising}
-         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+         - [Publicidades de Google](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Panel de mezcla](tutorials/ui/create/analytics/mixpanel.md)
       - Almacenamiento en la nube {#cloud-storage}

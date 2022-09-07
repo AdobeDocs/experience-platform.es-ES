@@ -1,51 +1,48 @@
 ---
-keywords: Experience Platform;inicio;temas populares;google adwords;Google AdWords;adwords
-solution: Experience Platform
-title: Creación de una conexión base de Google AdWords mediante la API de servicio de flujo
-topic-legacy: overview
-type: Tutorial
-description: Obtenga información sobre cómo conectar Adobe Experience Platform a Google AdWords mediante la API de servicio de flujo.
+keywords: Experience Platform;inicio;temas populares;anuncios de google;anuncios de Google;anuncios de google
+title: Creación de una conexión base de Google Ads mediante la API de servicio de flujo
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a Google Ads mediante la API de servicio de flujo.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 56419f41188c9bfdbeda7dde680f269b980a37f0
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 2%
+source-wordcount: '698'
+ht-degree: 1%
 
 ---
 
-# Cree un [!DNL Google AdWords] conexión base utilizando [!DNL Flow Service] API
+# Cree una conexión base de Google Ads usando la variable [!DNL Flow Service] API
 
 >[!NOTE]
 >
->La variable [!DNL Google AdWords] El conector está en versión beta. Consulte la [Resumen de fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+>La fuente de Google Ads está en versión beta. Consulte la [Resumen de fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes con etiquetas beta.
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial le guía por los pasos para crear una conexión base para [!DNL Google AdWords] (en lo sucesivo, &quot;el[!DNL AdWords]&quot;) usando la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial le guía por los pasos para crear una conexión base para Google Ads con el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL AdWords] usando la variable [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a Google Ads mediante el [!DNL Flow Service] API.
 
 ### Recopilar las credenciales necesarias
 
-Para [!DNL Flow Service] para conectarse con [!DNL AdWords], debe proporcionar valores para las siguientes propiedades de conexión:
+Para [!DNL Flow Service] para conectarse con Google Ads, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `clientCustomerId` | El ID de cliente de la variable [!DNL AdWords] cuenta. |
-| `developerToken` | El token de desarrollador asociado a la cuenta de administrador. |
-| `refreshToken` | El token de actualización obtenido de [!DNL Google] para autorizar el acceso a [!DNL AdWords]. |
-| `clientId` | El ID de cliente de la variable [!DNL Google] aplicación utilizada para adquirir el token de actualización. |
-| `clientSecret` | El secreto de cliente del [!DNL Google] aplicación utilizada para adquirir el token de actualización. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL AdWords] es: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `clientCustomerId` | El ID de cliente es el número de cuenta que corresponde a la cuenta de cliente de Google Ads que desea administrar con la API de Google Ads. Este ID sigue la plantilla de `123-456-7890`. |
+| `developerToken` | El token de desarrollador le permite acceder a la API de Google Ads. Puede utilizar el mismo token de desarrollador para realizar solicitudes en todas sus cuentas de Google Ads. Recupere el token del desarrollador mediante [iniciar sesión en la cuenta de administrador](https://ads.google.com/home/tools/manager-accounts/) y, a continuación, vaya a la [!DNL API Center] página. |
+| `refreshToken` | El token de actualización forma parte de [!DNL OAuth2] autenticación. Este token le permite volver a generar los tokens de acceso una vez caducados. |
+| `clientId` | El ID de cliente se utiliza junto con el secreto de cliente como parte de [!DNL OAuth2] autenticación. En conjunto, el ID de cliente y el secreto de cliente permiten que la aplicación funcione en nombre de la cuenta al identificar la aplicación en Google. |
+| `clientSecret` | El secreto de cliente se utiliza en combinación con el ID de cliente como parte de [!DNL OAuth2] autenticación. En conjunto, el ID de cliente y el secreto de cliente permiten que la aplicación funcione en nombre de la cuenta al identificar la aplicación en Google. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para Google Ads es: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
-Para obtener más información sobre estos valores, consulte esta [Documento de Google AdWords](https://developers.google.com/adwords/api/docs/guides/authentication).
+Lea el documento de información general de API para [más información sobre cómo empezar a usar Google Ads](https://developers.google.com/google-ads/api/docs/first-call/overview).
 
 ### Uso de las API de plataforma
 
@@ -55,7 +52,7 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 
 Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar su [!DNL AdWords] credenciales de autenticación como parte de los parámetros de solicitud.
+Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar las credenciales de autenticación de Google Ads como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -65,45 +62,45 @@ POST /connections
 
 **Solicitud**
 
-La siguiente solicitud crea una conexión base para [!DNL AdWords]:
+La siguiente solicitud crea una conexión base para Google Ads:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json'
-    -d '{
-        "name": "google-AdWords connection",
-        "description": "Connection for google-AdWords",
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
-                "developerToken": "{DEVELOPER_TOKEN}",
-                "authenticationType": "{AUTHENTICATION_TYPE}"
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}",
-                "refreshToken": "{REFRESH_TOKEN}"
-            }
-        },
-        "connectionSpec": {
-            "id": "d771e9c1-4f26-40dc-8617-ce58c4b53702",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json'
+  -d '{
+      "name": "Google Ads base connection",
+      "description": "Google Ads base connection",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
+              "developerToken": "{DEVELOPER_TOKEN}",
+              "authenticationType": "{AUTHENTICATION_TYPE}"
+              "clientId": "{CLIENT_ID}",
+              "clientSecret": "{CLIENT_SECRET}",
+              "refreshToken": "{REFRESH_TOKEN}"
+          }
+      },
+      "connectionSpec": {
+          "id": "d771e9c1-4f26-40dc-8617-ce58c4b53702",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | El ID de cliente de su [!DNL AdWords] cuenta. |
-| `auth.params.developerToken` | El token de desarrollador de su [!DNL AdWords] cuenta. |
-| `auth.params.refreshToken` | El token de actualización de su [!DNL AdWords] cuenta. |
-| `auth.params.clientID` | El ID de cliente de su [!DNL AdWords] cuenta. |
-| `auth.params.clientSecret` | El secreto de cliente de su [!DNL AdWords] cuenta. |
-| `connectionSpec.id` | La variable [!DNL Google AdWords] id. de especificación de conexión: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | El ID de cliente de su cuenta de Google Ads. |
+| `auth.params.developerToken` | El token de desarrollador de la cuenta de Google Ads. |
+| `auth.params.refreshToken` | El token de actualización de la cuenta de Google Ads. |
+| `auth.params.clientID` | El ID de cliente de su cuenta de Google Ads. |
+| `auth.params.clientSecret` | El secreto de cliente de su cuenta de Google Ads. |
+| `connectionSpec.id` | El ID de la especificación de conexión de Google Ads: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Respuesta**
 
@@ -118,7 +115,7 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL Google AdWords] conexión base utilizando [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
+Siguiendo este tutorial, ha creado una conexión base de Google Ads utilizando la variable [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explorar la estructura y el contenido de las tablas de datos mediante el [!DNL Flow Service] API](../../explore/tabular.md)
 * [Cree un flujo de datos para incluir datos publicitarios en Platform mediante la variable [!DNL Flow Service] API](../../collect/advertising.md)
