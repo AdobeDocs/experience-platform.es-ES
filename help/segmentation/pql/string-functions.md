@@ -5,23 +5,22 @@ title: Funciones de cadena de PQL
 topic-legacy: developer guide
 description: El lenguaje de consulta de perfil (PQL) ofrece funciones para simplificar la interacción con cadenas.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '840'
 ht-degree: 7%
 
 ---
 
 # Funciones de cadena
 
-[!DNL Profile Query Language] (PQL) ofrece funciones para simplificar la interacción con cadenas. Puede encontrar más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) ofrece funciones para simplificar la interacción con cadenas. Puede encontrar más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] información general](./overview.md).
 
 ## Like
 
-La función `like` se utiliza para determinar si una cadena coincide con un patrón especificado.
+La variable `like` para determinar si una cadena coincide con un patrón especificado.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1} like {STRING_2}
@@ -42,7 +41,7 @@ city like "%es%"
 
 ## Comienza con
 
-La función `startsWith` se utiliza para determinar si una cadena comienza con una subcadena especificada.
+La variable `startsWith` se utiliza para determinar si una cadena comienza con una subcadena especificada.
 
 **Formato**
 
@@ -66,7 +65,7 @@ person.name.startsWith("Joe")
 
 ## Does not start with
 
-La función `doesNotStartWith` se utiliza para determinar si una cadena no comienza con una subcadena especificada.
+La variable `doesNotStartWith` para determinar si una cadena no comienza con una subcadena especificada.
 
 **Formato**
 
@@ -90,7 +89,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Finaliza con
 
-La función `endsWith` se utiliza para determinar si una cadena termina con una subcadena especificada.
+La variable `endsWith` para determinar si una cadena termina con una subcadena especificada.
 
 **Formato**
 
@@ -114,7 +113,7 @@ person.emailAddress.endsWith(".com")
 
 ## No termina con
 
-La función `doesNotEndWith` se utiliza para determinar si una cadena no termina con una subcadena especificada.
+La variable `doesNotEndWith` se utiliza para determinar si una cadena no termina con una subcadena especificada.
 
 **Formato**
 
@@ -138,7 +137,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-La función `contains` se utiliza para determinar si una cadena contiene una subcadena especificada.
+La variable `contains` para determinar si una cadena contiene una subcadena especificada.
 
 **Formato**
 
@@ -162,7 +161,7 @@ person.emailAddress.contains("2010@gm")
 
 ## No contiene
 
-La función `doesNotContain` se utiliza para determinar si una cadena no contiene una subcadena especificada.
+La variable `doesNotContain` para determinar si una cadena no contiene una subcadena especificada.
 
 **Formato**
 
@@ -186,7 +185,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Es igual a
 
-La función `equals` se utiliza para determinar si una cadena es igual a la cadena especificada.
+La variable `equals` para determinar si una cadena es igual a la cadena especificada.
 
 **Formato**
 
@@ -209,7 +208,7 @@ person.name.equals("John")
 
 ## Not equal to
 
-La función `notEqualTo` se utiliza para determinar si una cadena no es igual a la cadena especificada.
+La variable `notEqualTo` para determinar si una cadena no es igual a la cadena especificada.
 
 **Formato**
 
@@ -232,7 +231,7 @@ person.name.notEqualTo("John")
 
 ## Coincide
 
-La función `matches` se utiliza para determinar si una cadena coincide con una expresión regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obtener más información sobre los patrones coincidentes en las expresiones regulares.
+La variable `matches` para determinar si una cadena coincide con una expresión regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obtener más información sobre patrones coincidentes en expresiones regulares.
 
 **Formato**
 
@@ -248,9 +247,13 @@ La siguiente consulta PQL determina, sin distinguir entre mayúsculas y minúscu
 person.name.matches("(?i)^John")
 ```
 
+>[!NOTE]
+>
+>Si utiliza funciones de expresión regular como `\w`, usted **must** escape el carácter de barra invertida. Así que, en lugar de escribir solo `\w`, debe incluir una barra invertida adicional y escribir `\\w`.
+
 ## Grupo de expresiones regulares
 
-La función `regexGroup` se utiliza para extraer información específica, según la expresión regular proporcionada.
+La variable `regexGroup` se utiliza para extraer información específica, según la expresión regular proporcionada.
 
 **Formato**
 
@@ -263,9 +266,13 @@ La función `regexGroup` se utiliza para extraer información específica, segú
 La siguiente consulta PQL se utiliza para extraer el nombre de dominio de una dirección de correo electrónico.
 
 ```sql
-emailAddress.regexGroup("@(\w+)", 1)
+emailAddress.regexGroup("@(\\w+)", 1)
 ```
+
+>[!NOTE]
+>
+>Si utiliza funciones de expresión regular como `\w`, usted **must** escape el carácter de barra invertida. Así que, en lugar de escribir solo `\w`, debe incluir una barra invertida adicional y escribir `\\w`.
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de cadena, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de consulta de perfil](./overview.md).
+Ahora que ha aprendido sobre las funciones de cadena, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [Información general sobre el lenguaje de consulta de perfil](./overview.md).
