@@ -4,9 +4,9 @@ title: Guía del panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ La variable [!UICONTROL Destinos] tablero muestra una instantánea de los destin
 >
 >Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el panel hasta que se tome la siguiente instantánea.
 
-## Exploración del panel de destinos
+## Explorar el [!UICONTROL Destinos] tablero {#explore}
 
 Para ir al panel de destinos dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Destinos]** en el carril izquierdo, seleccione la opción **[!UICONTROL Información general]** para mostrar el tablero.
 
@@ -37,11 +37,19 @@ La fecha y la hora de la instantánea más reciente se muestran en la parte supe
 
 ![Información general sobre los destinos de la interfaz de usuario de Platform, con la instantánea más reciente resaltada.](../images/destinations/snapshot-timestamp.png)
 
-### Modificación del panel de destinos
+### Modifique el [!UICONTROL Destinos] tablero {#modify}
 
-Puede modificar el aspecto del panel de destinos seleccionando **[!UICONTROL Modificar tablero]**. Esto le permite mover, agregar y quitar widgets del tablero, así como acceder al **[!UICONTROL Biblioteca de utilidades]** para explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
+Select **[!UICONTROL Modificar tablero]** para cambiar el aspecto del panel de destinos. Esto permite mover, agregar y quitar widgets del tablero, así como acceder a la biblioteca de widgets. Desde la biblioteca de utilidades, puede explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
 
-Consulte la [modificación de tableros](../customize/modify.md) y [Información general de la biblioteca de utilidades](../customize/widget-library.md) documentación para obtener más información.
+Consulte la [modificación de tableros](../customize/modify.md) y [información general de la biblioteca de utilidades](../customize/widget-library.md) documentación para obtener más información.
+
+### Agregar widgets {#add-widget}
+
+Select **[!UICONTROL Agregar utilidad]** para ir a la biblioteca de widgets y ver una lista de las utilidades disponibles para agregarlas al tablero.
+
+![Información general del panel Destinos con la utilidad Agregar resaltada.](../images/destinations/destinations-overview-add-widget.png)
+
+Desde la biblioteca de utilidades, puede examinar la selección de utilidades de segmento estándar y personalizadas. Para obtener información sobre cómo añadir utilidades, consulte la documentación de la biblioteca de utilidades sobre cómo [agregar una utilidad](../customize/widget-library.md#add-widgets).
 
 ## Widgets estándar {#standard-widgets}
 
@@ -80,7 +88,7 @@ El número de segmentos asignados que se muestra en la columna de recuento de se
 
 Al seleccionar el nombre de un destino en la lista que se muestra en el widget, se accederá a los detalles de destino vinculados desde el **[!UICONTROL Examinar]** pestaña . También puede seleccionar **[!UICONTROL Ver todo]** para navegar hasta el **[!UICONTROL Examinar]** y, a continuación, seleccione el nombre de un destino para ver sus detalles.
 
-![](../images/destinations/most-used-destinations.png)
+![La pestaña Información general del panel Destinos con el widget Destinos más utilizados resaltado.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL Destinos creados recientemente] {#recently-created-destinations}
 
@@ -97,7 +105,7 @@ Al seleccionar el nombre de un destino en la lista que se muestra en el widget, 
 
 Para obtener más información sobre cómo configurar tipos de destinos específicos, visite [documentación de destinos](../../destinations/home.md).
 
-![](../images/destinations/recently-created-destinations.png)
+![La pestaña Información general del panel Destinos con el widget Destinos creados recientemente resaltado.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Segmentos activados recientemente] {#recently-activated-segments}
 
@@ -114,7 +122,7 @@ Si selecciona el nombre de un segmento en la lista que se muestra en la utilidad
 
 Para obtener más información sobre cómo trabajar con segmentos en el Experience Platform, comience por leer la [Información general del servicio de segmentación](../../segmentation/home.md).
 
-![](../images/destinations/recently-activated-segments.png)
+![La pestaña Información general del panel Destinos con el widget Segmentos activados recientemente resaltado.](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL Segmentos activados recientemente por destino] {#recently-activated-segments-by-destination}
 
@@ -129,7 +137,7 @@ Esta utilidad contiene dos métricas: el nombre del segmento y la fecha en la qu
 
 Puede ver los detalles de un segmento seleccionando el nombre de un segmento en la lista mostrada.
 
-![Segmentos activados recientemente por widget de destino.](../images/destinations/recently-activated-segments-by-destination.png)
+![Los segmentos activados recientemente por el widget de destino.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Tendencia del tamaño de la audiencia] {#audience-size-trend}
 
@@ -144,7 +152,7 @@ Se puede ajustar un período de tiempo para la tendencia de audiencia en los úl
 
 El segundo menú desplegable enumera todos los segmentos disponibles que se pueden enviar a la cuenta de destino elegida en la parte superior del panel.
 
-![El widget de tendencia de tamaño de audiencia.](../images/destinations/audience-size-trend.png)
+![El widget de tendencia del tamaño de la audiencia.](../images/destinations/audience-size-trend.png)
 
 La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** La utilidad proporciona un [!UICONTROL Subtítulos] en la parte superior derecha del widget. Select **[!UICONTROL Subtítulos]** para abrir el cuadro de diálogo rótulos automáticos. Un modelo de aprendizaje automático genera automáticamente subtítulos para describir las tendencias clave y los eventos importantes analizando los datos de gráficos y segmentos.
 

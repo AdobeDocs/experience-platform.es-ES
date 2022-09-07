@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;perfil;segmento;segmentos;segmentación;interfaz de usuario;IU;personalización;panel de segmentos;tablero
 title: Guía del panel de segmentos
-description: 'Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado. '
+description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1791'
 ht-degree: 0%
 
 ---
 
-# Panel de segmentos {#segment-dashboard}
+# [!UICONTROL Segmentos] tablero {#segment-dashboard}
 
 La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre sus segmentos, tal como se captura durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel de segmentos en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el panel.
 
 Para obtener una descripción general de todas las funciones del servicio de segmentación de Adobe Experience Platform dentro de la interfaz de usuario de Platform, visite [Guía de la interfaz de usuario del servicio de segmentación](../../segmentation/ui/overview.md).
 
-## Datos del tablero de segmentos
+## [!UICONTROL Segmentos] datos de tablero
 
 El panel de segmentos muestra una instantánea de los datos de atributo (registro) que su organización tiene dentro del Almacenamiento de perfiles en Experience Platform. La instantánea no incluye datos de ningún evento (serie temporal).
 
@@ -27,7 +27,7 @@ Los datos de atributo de la instantánea muestran los datos exactamente como apa
 >
 >Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el panel hasta que se tome la siguiente instantánea.
 
-## Exploración del panel de segmentos
+## Explorar el [!UICONTROL Segmentos] tablero {#explore}
 
 Para ir a la [!UICONTROL Segmentos] tablero en la interfaz de usuario de Platform, seleccione **[!UICONTROL Segmentos]** en el carril izquierdo, seleccione la opción **[!UICONTROL Información general]** para mostrar el tablero.
 
@@ -35,13 +35,21 @@ Para ir a la [!UICONTROL Segmentos] tablero en la interfaz de usuario de Platfor
 >
 >Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos o políticas de combinación creadas, se crea la variable [!UICONTROL Segmentos] tablero no está visible. En su lugar, la variable [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con la segmentación.
 
-![](../images/segments/dashboard-overview.png)
+![La pestaña Información general del tablero Segmentos .](../images/segments/dashboard-overview.png)
 
-### Modificación de la variable [!UICONTROL Segmentos] tablero
+### Modifique el [!UICONTROL Segmentos] tablero {#modify}
 
 Puede modificar el aspecto del [!UICONTROL Segmentos] tablero seleccionando **[!UICONTROL Modificar tablero]**. Esto le permite mover, agregar y quitar widgets del tablero, así como acceder al **[!UICONTROL Biblioteca de utilidades]** para explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
 
 Consulte la [modificación de tableros](../customize/modify.md) y [Información general de la biblioteca de utilidades](../customize/widget-library.md) documentación para obtener más información.
+
+### Agregar widgets {#add-widget}
+
+Select **[!UICONTROL Agregar utilidad]** para ir a la biblioteca de widgets y ver una lista de las utilidades disponibles para agregarlas al tablero.
+
+![Información general del tablero Segmentos con la utilidad Agregar resaltada.](../images/segments/segments-overview-add-widget.png)
+
+Desde la biblioteca de utilidades, puede examinar la selección de utilidades de segmento estándar y personalizadas. Para obtener información sobre cómo agregar utilidades, consulte la documentación de la biblioteca de utilidades sobre cómo [agregar una utilidad](../customize/widget-library.md#add-widgets).
 
 ## Seleccionar un segmento
 
@@ -53,9 +61,9 @@ Para elegir un segmento diferente, seleccione la lista desplegable junto al nomb
 >
 >En la lista de segmentos seleccionables solo se muestran los segmentos con un recuento de perfiles superior a cero.
 
-![](../images/segments/change-segment.png)
+![Información general del tablero Segmentos con el menú desplegable de segmentos globales resaltado.](../images/segments/change-segment.png)
 
-![](../images/segments/select-segment-dialog.png)
+![El cuadro de diálogo Seleccionar segmento que muestra todos los segmentos disponibles.](../images/segments/select-segment-dialog.png)
 
 ## Widgets y métricas
 
@@ -92,7 +100,7 @@ La variable **[!UICONTROL Tamaño de la audiencia]** muestra el número total de
 
 Para obtener más información sobre fragmentos y perfiles combinados, comience por leer la [Resumen del perfil del cliente en tiempo real](../../profile/home.md).
 
-![](../images/segments/audience-size.png)
+![Información general del tablero Segmentos con el widget Tamaño de audiencia resaltado.](../images/segments/audience-size.png)
 
 ### [!UICONTROL Tendencia del tamaño de la audiencia] {#audience-size-trend}
 
@@ -105,7 +113,7 @@ La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** proporciona u
 
 Esta utilidad también incluye la [!UICONTROL Subtítulos] función en la que un modelo de aprendizaje automático analiza los datos de gráficos y segmentos y genera automáticamente subtítulos para describir las tendencias clave y los eventos importantes. Select **[!UICONTROL Subtítulos]** para abrir el cuadro de diálogo rótulos automáticos.
 
-![La descripción general de segmentos muestra el widget de tendencia de tamaño de audiencia.](../images/segments/audience-size-trend-captions.png)
+![La información general Segmentos muestra el widget de tendencia del tamaño de la audiencia.](../images/segments/audience-size-trend-captions.png)
 
 Se abre el cuadro de diálogo Subtítulos automáticos, que proporciona información sobre los datos.
 
@@ -163,7 +171,7 @@ Si un cliente interactúa con su marca en más de un canal, se asociarán varias
 
 Para obtener más información sobre las identidades, visite [Documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
 
-![](../images/segments/identity-overlap.png)
+![Información general del panel Segmentos con el widget de superposición de identidad resaltado.](../images/segments/identity-overlap.png)
 
 ### [!UICONTROL Perfiles por identidad] {#profiles-by-identity}
 
@@ -176,7 +184,7 @@ La variable **[!UICONTROL Perfiles por identidad]** muestra el desglose de ident
 
 Select **[!UICONTROL Subtítulos]** para abrir el cuadro de diálogo rótulos automáticos.
 
-![Cuadro de diálogo perfiles por rótulos de identidad.](../images/segments/profiles-by-identity.png)
+![El cuadro de diálogo Perfiles por rótulos de identidad .](../images/segments/profiles-by-identity.png)
 
 Un modelo de aprendizaje automático genera automáticamente perspectivas de datos analizando la distribución general y las dimensiones clave de los datos.
 

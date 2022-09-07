@@ -4,9 +4,9 @@ title: Guía del panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
+source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3859'
 ht-degree: 1%
 
 ---
@@ -43,6 +43,14 @@ Puede modificar el aspecto del [!UICONTROL Perfiles] tablero seleccionando **[!U
 
 Consulte la [modificación de tableros](../customize/modify.md) y [Información general de la biblioteca de utilidades](../customize/widget-library.md) documentación para obtener más información.
 
+### Agregar widgets {#add-widget}
+
+Select **[!UICONTROL Agregar utilidad]** para ir a la biblioteca de widgets y ver una lista de las utilidades disponibles para agregarlas al tablero.
+
+![Información general del tablero Perfiles con la utilidad de adición resaltada.](../images/profiles/profiles-overview-add-widget.png)
+
+Desde la biblioteca de utilidades puede examinar la selección de utilidades de segmento estándar y personalizadas. Para obtener información sobre cómo agregar utilidades, consulte la documentación de la biblioteca de utilidades sobre cómo [agregar una utilidad](../customize/widget-library.md#add-widgets).
+
 ## (Beta) Perspectivas de eficacia del perfil {#profile-efficacy-insights}
 
 >[!IMPORTANT]
@@ -73,9 +81,9 @@ El tablero seleccionará automáticamente una directiva de combinación para usa
 
 >[!NOTE]
 >
->El menú desplegable muestra solamente las políticas de combinación relacionadas con la clase de perfil individual XDM. Sin embargo, si la organización ha creado varias políticas de combinación, puede significar que tendrá que desplazarse para ver la lista completa de las políticas de combinación disponibles.
+>El menú desplegable solo muestra las políticas de combinación que usan la variable `_xdm.context.profile` esquema. Sin embargo, si la organización ha creado varias políticas de combinación, puede significar que debe desplazarse para ver la lista completa de las políticas de combinación disponibles.
 
-![](../images/profiles/select-merge-policy.png)
+![La ficha Información general de perfiles con la lista desplegable de política de combinación resaltada.](../images/profiles/select-merge-policy.png)
 
 ## Esquemas de unión
 
