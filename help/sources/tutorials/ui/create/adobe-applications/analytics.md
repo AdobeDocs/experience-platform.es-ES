@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
+source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2243'
 ht-degree: 2%
 
 ---
@@ -165,6 +165,10 @@ La siguiente documentación proporciona más recursos para comprender la prepara
 Una vez que haya completado las asignaciones para su [!DNL Analytics] datos del grupo de informes, puede aplicar reglas y condiciones de filtrado para incluir o excluir selectivamente los datos de la ingesta a la variable [!DNL Profile Service]. La compatibilidad con el filtrado solo está disponible para [!DNL Analytics] los datos y datos solo se filtran antes de introducirse [!DNL Profile.] Todos los datos se incorporan en el lago de datos.
 
 #### Filtro de nivel de fila
+
+>[!IMPORTANT]
+>
+>Utilice el filtrado de nivel de fila para aplicar condiciones y dictar a qué datos **incluir para la ingesta de perfiles**. Utilice el filtrado de nivel de columna para seleccionar las columnas de datos que desea **excluir para la ingesta de perfiles**.
 
 Puede filtrar los datos para [!DNL Profile] ingesta en el nivel de fila y columna. El filtrado a nivel de fila permite definir criterios como contiene, es igual a, comienza o termina con. También puede utilizar el filtrado a nivel de fila para unir condiciones mediante `AND` así como `OR`y negar condiciones usando `NOT`.
 
