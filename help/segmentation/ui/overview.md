@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1775'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,11 @@ Para obtener más información, visite [guía del tablero de segmentos](../../da
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Método de evaluación"
 >abstract="Los métodos de evaluación para segmentos incluyen el lote, la transmisión y el borde."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Añadir todos los segmentos a la programación"
+>abstract="Habilite para incluir todos los segmentos de evaluación por lotes en la actualización diaria programada a las 3:30 PM UTC. Deshabilite para eliminar todos los segmentos de la actualización programada."
 
 Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las definiciones de segmentos para su organización de IMS.
 
@@ -155,7 +160,7 @@ Información más detallada sobre cada [!DNL Profile] se puede ver seleccionando
 
 ![](../images/ui/overview/segment-details-profiles.png)
 
-## Creación de un segmento {#create-segment}
+## Creación de segmentos {#create-segment}
 
 Selección **[!UICONTROL Crear segmento]** en la esquina superior derecha, se abre la variable [!DNL Segment Builder] espacio de trabajo, donde puede empezar a crear una definición de segmento.
 

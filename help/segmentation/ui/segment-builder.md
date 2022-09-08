@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Generador de segmentos
 topic-legacy: ui guide
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
+source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
 workflow-type: tm+mt
-source-wordcount: '3081'
+source-wordcount: '3082'
 ht-degree: 1%
 
 ---
@@ -226,7 +226,7 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualizar estimaciones"
 >abstract="Puede actualizar las estimaciones de su segmento para ver inmediatamente una vista previa de cuántos perfiles calificarían para el segmento propuesto. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Más información sobre la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
 
 Al crear una definición de segmento, la variable **[!UICONTROL Propiedades del segmento]** a la derecha del espacio de trabajo muestra una estimación del tamaño del segmento resultante, lo que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
