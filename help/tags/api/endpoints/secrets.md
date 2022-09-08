@@ -2,7 +2,7 @@
 title: Extremo secreto
 description: Aprenda a realizar llamadas al extremo /secret en la API de Reactor.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 15%
@@ -646,7 +646,7 @@ Una respuesta correcta devuelve los detalles del secreto, con su estado restable
 
 ## Volver a autorizar una `oauth2-google` secreto {#reauthorize}
 
-Cada `oauth2-google` el secreto contiene un `meta.token_url_expires_at` que indica cuándo caducará la dirección URL de autorización. Después de este tiempo, el secreto debe volver a autorizarse para que renueve el proceso de autenticación.
+Cada `oauth2-google` el secreto contiene un `meta.authorization_url_expires_at` que indica cuándo caducará la dirección URL de autorización. Después de este tiempo, el secreto debe volver a autorizarse para que renueve el proceso de autenticación.
 
 Para volver a autorizar una `oauth2-google` secreto, hacer una solicitud PATCH del secreto en cuestión.
 
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del secreto actualizado. Desde aquí debe copiar y pegar el `meta.token_url` en un explorador para completar el proceso de autorización.
+Una respuesta correcta devuelve los detalles del secreto actualizado. Desde aquí debe copiar y pegar el `meta.authorization_url` en un explorador para completar el proceso de autorización.
 
 ```json
 {
@@ -744,8 +744,8 @@ Una respuesta correcta devuelve los detalles del secreto actualizado. Desde aqu�
       "property": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/property" 
     }, 
     "meta": { 
-      "token_url": "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=434635668552-0qvlu519fdjtnkvk8hu8c8dj8rg3723r.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Freactor.adobe.io%2Foauth2%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadwords&state=state", 
-      "token_url_expires_at": "2021-07-15T20:00:25.628Z" 
+      "authorization_url": "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=434635668552-0qvlu519fdjtnkvk8hu8c8dj8rg3723r.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Freactor.adobe.io%2Foauth2%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadwords&state=state", 
+      "authorization_url_expires_at": "2021-07-15T20:00:25.628Z" 
     } 
   } 
 }
