@@ -5,10 +5,10 @@ title: Introducción a Attribution AI
 topic-legacy: Getting started
 description: Las siguientes guías requieren comprender los distintos servicios de Adobe Experience Platform implicados en el uso de Attribution AI. Antes de comenzar los tutoriales, revise los siguientes documentos.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: a14f857f87482e1468211152976530c718d56e38
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
@@ -52,7 +52,7 @@ Todos los recursos del Experience Platform están aislados en entornos limitados
 
 Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md) en la guía de solución de problemas del Experience Platform.
 
-## ## RGPD y cifrado {#gdpr-and-encryption}
+## Control de acceso {#access-control}
 
 Cuando se utiliza el control de acceso basado en funciones, la variable **Ver Attribution AI** y **Administrar Attribution AI** conceden acceso a diferentes funcionalidades de Attribution AI. La variable **Administrar Attribution AI** permite **crear**, **clone**, **editar**, **delete**, **enable** o **disable** una instancia mientras **Ver Attribution AI** permite **read** o **ver** es así. La variable **crear**, **editar** y **delete** las acciones se registran mediante registros de auditoría.
 

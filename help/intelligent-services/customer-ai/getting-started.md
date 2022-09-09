@@ -6,10 +6,10 @@ title: Introducción a Customer AI
 topic-legacy: Getting started
 description: Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: a14f857f87482e1468211152976530c718d56e38
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 0%
+source-wordcount: '651'
+ht-degree: 1%
 
 ---
 
@@ -48,7 +48,7 @@ Todos los recursos del Experience Platform están aislados en entornos limitados
 
 Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md) en la guía de solución de problemas del Experience Platform.
 
-## RGPD y cifrado {#gdpr-and-encryption}
+## Control de acceso {#access-control}
 
 Cuando se utiliza el control de acceso, la variable **Ver Customer AI** y **Administrar la IA del cliente** los privilegios otorgan acceso a diferentes funcionalidades de Customer AI. La variable **Administrar la IA del cliente** permiso le permite **crear**,**actualizar**, **delete**, **enable** o **disable** una instancia mientras **Ver Customer AI** permite leerlo o verlo. La variable **crear**, **actualizar** y **delete** las acciones se registran mediante registros de auditoría.
 
