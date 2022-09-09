@@ -2,9 +2,9 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para el destino en el catálogo de Adobe Experience Platform. // Reemplazar por el párrafo de la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1452'
 ht-degree: 1%
 
 ---
@@ -131,6 +131,13 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 >Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+
+### Asignación de atributos e identidades {#map}
+
+*Agregue información sobre las asignaciones admitidas entre los campos de origen y destino en el paso Asignación del flujo de trabajo de activación. Su destino puede admitir la exportación de atributos de perfil, áreas de nombres de identidad o ambos. Algunos campos pueden ser obligatorios. Los atributos de destino pueden estar predefinidos o personalizados. Llame a las advertencias importantes y utilice ejemplos, preferiblemente con capturas de pantalla. Dos ejemplos de páginas de destino que puede utilizar como referencia son:*
+
+* *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
+* *[Medallia](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
