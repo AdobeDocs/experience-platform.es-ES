@@ -2,10 +2,10 @@
 title: Punto final de API de caducidad del conjunto de datos
 description: El extremo /ttl de la API de higiene de datos permite programar programáticamente las caducidades de conjuntos de datos en Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -26,6 +26,10 @@ Una caducidad del conjunto de datos es solo una operación de eliminación con r
 En cualquier momento antes de que se inicie realmente la eliminación del conjunto de datos, puede cancelar la caducidad o modificar su tiempo de déclencheur. Después de cancelar una caducidad del conjunto de datos, puede volver a abrirlo estableciendo una nueva caducidad.
 
 Una vez iniciada la eliminación del conjunto de datos, su trabajo de caducidad se marcará como `executing`y no puede modificarse. El conjunto de datos en sí puede recuperarse durante un máximo de siete días, pero solo a través de un proceso manual iniciado mediante una solicitud de servicio de Adobe. A medida que se ejecuta la solicitud, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos separados para eliminar el contenido del conjunto de datos de sus respectivos servicios. Una vez eliminados los datos de los tres servicios, la caducidad se marca como `executed`.
+
+>[!WARNING]
+>
+>Si un conjunto de datos está configurado para caducar, debe cambiar manualmente cualquier flujo de datos que pueda estar introduciendo datos en ese conjunto de datos para que sus flujos de trabajo descendentes no se vean afectados negativamente.
 
 ## Primeros pasos
 
