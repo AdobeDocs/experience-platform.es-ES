@@ -4,9 +4,9 @@ title: Habilitar un conjunto de datos para actualizaciones de perfil mediante AP
 type: Tutorial
 description: Este tutorial le muestra cómo utilizar las API de Adobe Experience Platform para habilitar un conjunto de datos con capacidades de "actualización" para realizar actualizaciones en los datos del perfil del cliente en tiempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
+source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1015'
 ht-degree: 2%
 
 ---
@@ -126,14 +126,13 @@ GET /dataSets/{DATASET_ID}
 ```
 
 | Parámetro | Descripción |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | El ID de un conjunto de datos que desea inspeccionar. |
 
 **Solicitud**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -196,11 +195,11 @@ En el `tags` puede ver que `unifiedProfile` está presente con el valor `enabled
 
 ### Deshabilitar el conjunto de datos para el perfil
 
-Para configurar un conjunto de datos habilitado para perfiles para actualizaciones, primero debe deshabilitar la variable `unifiedProfile` y vuelva a activarla junto a la etiqueta `isUpsert` etiqueta. Esto se realiza mediante dos solicitudes de PATCH, una para deshabilitar y otra para volver a habilitar.
+Para configurar un conjunto de datos habilitado para perfiles para actualizaciones, primero debe deshabilitar la variable `unifiedProfile` y `unifiedIdentity` y vuelva a activarlas junto con la variable `isUpsert` etiqueta. Esto se realiza mediante dos solicitudes de PATCH, una para deshabilitar y otra para volver a habilitar.
 
 >[!WARNING]
 >
->Los datos introducidos en el conjunto de datos mientras está deshabilitado no se incorporarán en el Almacenamiento de perfiles. Se recomienda evitar la ingesta de datos en el conjunto de datos hasta que se vuelva a habilitar para Perfil.
+>Los datos introducidos en el conjunto de datos mientras está deshabilitado no se incorporarán en el Almacenamiento de perfiles. Debe evitar la ingesta de datos en el conjunto de datos hasta que se vuelva a habilitar para Perfil.
 
 **Formato de API**
 
@@ -209,29 +208,37 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | Parámetro | Descripción |
-|---|---|
-| `{DATASET_ID}` | El ID de un conjunto de datos que desea actualizar. |
+| --------- | ----------- |
+| `{DATASET_ID}` | El ID del conjunto de datos que desea actualizar. |
 
 **Solicitud**
 
-El primer cuerpo de solicitud del PATCH incluye un `path` a `unifiedProfile` configurar la variable `value` a `enabled:false` para deshabilitar la etiqueta .
+El primer cuerpo de solicitud del PATCH incluye un `path` a `unifiedProfile` y `path` a `unifiedIdentity`, configurando la variable `value` a `enabled:false` para ambas rutas con el fin de deshabilitar las etiquetas.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
+        { 
+            "op": "replace", 
+            "path": "/tags/unifiedProfile", 
+            "value": ["enabled:false"] 
+        },
+        {
+            "op": "replace",
+            "path": "/tags/unifiedIdentity",
+            "value": ["enabled:false"]
+        }
       ]'
 ```
 
 **Respuesta**
 
-Una solicitud de PATCH correcta devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La variable `unifiedProfile` La etiqueta de ahora se ha deshabilitado.
+Una solicitud de PATCH correcta devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La variable `unifiedProfile` y `unifiedIdentity` las etiquetas de ahora se han desactivado.
 
 ```json
 [
@@ -250,28 +257,42 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | Parámetro | Descripción |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | El ID de un conjunto de datos que desea actualizar. |
 
 **Solicitud**
 
-El cuerpo de la solicitud incluye un `path` a `unifiedProfile` configurar la variable `value` para incluir el `enabled` y `isUpsert` etiquetas, ambas configuradas como `true`.
+El cuerpo de la solicitud incluye un `path` a `unifiedProfile` configurar la variable `value` para incluir el `enabled` y `isUpsert` etiquetas, ambas configuradas como `true`y `path` a `unifiedIdentity` configurar la variable `value` para incluir el `enabled` etiqueta establecida en `true`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+        { 
+            "op": "add", 
+            "path": "/tags/unifiedProfile", 
+            "value": [
+                "enabled:true",
+                "isUpsert:true"
+            ] 
+        },
+        {
+            "op": "add",
+            "path": "/tags/unifiedIdentity",
+            "value": [
+                "enabled:true"
+            ]
+        }
       ]'
 ```
 
 **Respuesta**
-Una solicitud de PATCH correcta devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La variable `unifiedProfile` ahora se ha habilitado y configurado para las actualizaciones de atributos.
+
+Una solicitud de PATCH correcta devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La variable `unifiedProfile` y `unifiedIdentity` ahora se han habilitado y configurado para las actualizaciones de atributos.
 
 ```json
 [
