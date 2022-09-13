@@ -4,10 +4,10 @@ user-guide-title: Ayuda de Administración de datos de Adobe Experience Platform
 breadcrumb-title: Guía de administración de datos
 user-guide-description: Aplique restricciones al uso de datos utilizando etiquetas, acciones de marketing y políticas.
 feature: Data Governance
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: c84926fe88ab02503220ca377170521077dc517e
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 38%
+source-wordcount: '96'
+ht-degree: 37%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 38%
 # Administración de datos de Adobe Experience Platform {#data-governance}
 
 * [Información general sobre la administración de datos](home.md)
+* [Guía completa](./e2e.md)
 * Etiquetas de uso de datos {#labels}
    * [Información general](labels/overview.md)
    * [Glosario de etiquetas](labels/reference.md)
