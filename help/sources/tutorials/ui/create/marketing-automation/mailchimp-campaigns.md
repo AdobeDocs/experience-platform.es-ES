@@ -5,7 +5,7 @@ title: Creación de una conexión de origen de MailChimp Campaigns utilizando la
 topic-legacy: tutorial
 description: Aprenda a conectar Adobe Experience Platform a campañas de MailChimp mediante la interfaz de usuario de Platform.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
+source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
@@ -33,7 +33,7 @@ La variable [!DNL Mailchimp Campaigns] source es compatible tanto con el código
 
 | Credenciales | Descripción |
 | --- | --- |
-| Host | La URL raíz utilizada para conectarse a la API de MailChimp. El formato de la dirección URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
+| Domain | La URL raíz utilizada para conectarse a la API de MailChimp. El formato de la dirección URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
 | URL de prueba de autorización | La URL de prueba de autorización se utiliza para validar las credenciales al conectar [!DNL Mailchimp] a Platform. Si no se proporciona, las credenciales se comprueban automáticamente durante el paso de creación de la conexión de origen. |
 | Token de acceso | Token de acceso correspondiente utilizado para autenticar el origen. Esto es necesario para la autenticación basada en OAuth. |
 
@@ -43,7 +43,7 @@ Para obtener más información sobre el uso de OAuth 2 para autenticar su [!DNL 
 
 | Credenciales | Descripción |
 | --- | --- |
-| Host | La URL raíz utilizada para conectarse a la API de MailChimp. El formato de la dirección URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
+| Dominio | La URL raíz utilizada para conectarse a la API de MailChimp. El formato de la dirección URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
 | Nombre de usuario | El nombre de usuario que corresponde a su cuenta de MailChimp. Esto es necesario para la autenticación básica. |
 | Contraseña | La contraseña que corresponde a su cuenta de MailChimp. Esto es necesario para la autenticación básica. |
 
@@ -73,13 +73,13 @@ Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a
 
 #### Autenticar con OAuth 2
 
-Para utilizar OAuth 2, seleccione [!UICONTROL Código de actualización de OAuth 2], proporcione valores para el host, la URL de prueba de autorización, el token de acceso y, a continuación, seleccione **[!UICONTROL Conectar a origen]**. Espere unos momentos para que sus credenciales se validen y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+Para utilizar OAuth 2, seleccione [!UICONTROL Código de actualización de OAuth 2], proporcione valores para su dominio, la URL de prueba de autorización, el token de acceso y, a continuación, seleccione **[!UICONTROL Conectar a origen]**. Espere unos momentos para que sus credenciales se validen y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-campaigns/oauth.png)
 
 #### Autenticar mediante autenticación básica
 
-Para utilizar la autenticación básica, seleccione [!UICONTROL Autenticación básica], proporcione valores para el host, el nombre de usuario y la contraseña, y luego seleccione **[!UICONTROL Conectar a origen]**. Espere unos momentos para que sus credenciales se validen y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+Para utilizar la autenticación básica, seleccione [!UICONTROL Autenticación básica], proporcione valores para su dominio, nombre de usuario y contraseña, y luego seleccione **[!UICONTROL Conectar a origen]**. Espere unos momentos para que sus credenciales se validen y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![basic](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
 
