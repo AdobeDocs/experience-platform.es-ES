@@ -1,9 +1,9 @@
 ---
 title: Guía completa de control de datos
 description: Siga el proceso completo para aplicar restricciones de uso de datos para campos y conjuntos de datos en Adobe Experience Platform.
-source-git-commit: 415300f6338eb485b8dead307f3e6a5b2d5d8b22
+source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ En la siguiente pantalla, seleccione las acciones de marketing para las que esta
 
 ![Imagen que muestra una acción de marketing asignada a una política en la interfaz de usuario](./images/e2e/select-marketing-action.png)
 
-La pantalla final muestra un resumen de los detalles de la directiva y las acciones que restringirá para qué etiquetas. Select **[!UICONTROL Finalizar]** para crear y habilitar la directiva.
+La pantalla final muestra un resumen de los detalles de la directiva y las acciones que restringirá para qué etiquetas. Select **[!UICONTROL Finalizar]** para crear la directiva.
 
 ![Imagen que muestra la configuración de la directiva confirmada en la interfaz de usuario](./images/e2e/confirm-policy.png)
 
