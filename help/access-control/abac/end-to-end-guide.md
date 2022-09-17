@@ -4,9 +4,9 @@ title: Guía de extremo a extremo del control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '2218'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,35 @@ Una vez que tenga privilegios de administrador, vaya a [Adobe Experience Cloud](
 Aparece el espacio de trabajo Permisos para la interfaz de usuario de Platform , que se abre en la variable **[!UICONTROL Funciones]** página.
 
 ## Aplicar etiquetas a una función {#label-roles}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="¿Qué son las etiquetas?"
+>abstract="Las etiquetas permiten categorizar los conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Platform proporciona varias etiquetas de uso de datos &quot;principales&quot; definidas por Adobe, que abarcan una amplia variedad de restricciones comunes aplicables al control de datos. Por ejemplo, las etiquetas &quot;S&quot; confidenciales, como RHD (Datos de salud regulados), permiten clasificar los datos que hacen referencia a Información de salud protegida (PHI). También puede definir sus propias etiquetas personalizadas que se adapten a las necesidades de su organización."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Información general sobre las etiquetas de uso de datos"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Crear nueva etiqueta"
+>abstract="Puede crear sus propias etiquetas personalizadas para adaptarlas a las necesidades de su organización. Las etiquetas personalizadas se pueden usar para aplicar a los datos configuraciones de control de datos y control de acceso."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Administrar etiquetas personalizadas"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="¿Qué son los roles?"
+>abstract="Las funciones son formas de categorizar los tipos de usuarios que interactúan con la instancia de Platform y que son componentes básicos de las políticas de control de acceso. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el ámbito de vista o acceso de escritura que necesiten."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="Administrar funciones"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Crear nueva función"
+>abstract="Puede crear una nueva función para categorizar mejor a los usuarios que acceden a su instancia de Platform. Por ejemplo, puede crear una función para un equipo de marketing interno y aplicar la etiqueta RHD a esa función, lo que permitirá que su equipo de marketing interno acceda a la información de salud protegida (PHI). Alternativamente, también puede crear una función para una Agencia Externa y negar el acceso a los datos de PHI al no aplicar la etiqueta RHD a esa función."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Crear una función nueva"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Información general sobre la función"
+>abstract="El cuadro de diálogo de descripción general de funciones muestra los recursos y entornos limitados a los que se permite acceder una función determinada."
 
 Las funciones son formas de categorizar los tipos de usuarios que interactúan con la instancia de Platform y son componentes básicos de las políticas de control de acceso. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el alcance de acceso que necesiten.
 
@@ -117,6 +146,34 @@ La variable **[!UICONTROL Editar etiquetas]** , que le permite elegir las etique
 Repita los pasos anteriores con **[!UICONTROL Insulina &lt;50]**.
 
 ## Crear una directiva de control de acceso {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="¿Qué son las políticas?"
+>abstract="Las políticas son declaraciones que reúnen atributos para establecer acciones permisibles e inadmisibles. Cada organización incluye una política predeterminada que debe activar para definir reglas para recursos como segmentos y campos de esquema. Las políticas predeterminadas no se pueden editar ni eliminar. Sin embargo, las directivas predeterminadas se pueden activar o desactivar."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Administrar políticas"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="Crear una directiva"
+>abstract="Cree una directiva para definir las acciones que los usuarios pueden y no pueden realizar con los segmentos y los campos de esquema."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Crear una directiva"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="Configurar acciones permisibles e inadmisibles para una directiva"
+>abstract="Seleccione Permitir acceso a para configurar las acciones permisibles que los usuarios pueden realizar con los recursos. Seleccione denegar el acceso a para configurar las acciones no permisibles que los usuarios no pueden realizar con los recursos."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Editar una directiva"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="Configuración de permisos para un recurso"
+>abstract="Un recurso es el recurso o el objeto al que un usuario puede acceder o no. Los recursos pueden ser segmentos o esquemas. Puede configurar permisos de escritura, lectura o eliminación para segmentos y campos de esquema."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="Editar condiciones"
+>abstract="Aplique afirmaciones condicionales a la directiva para configurar el acceso del usuario a ciertos recursos. Seleccione hacer coincidir todo para requerir que los usuarios tengan funciones con las mismas etiquetas que un recurso para que se les permita el acceso. Seleccione hacer coincidir cualquier para requerir que solo los usuarios tengan una función con una única etiqueta que coincida con un recurso. Las etiquetas se pueden definir como etiquetas principales o personalizadas, y las etiquetas principales representan las etiquetas creadas y proporcionadas por el Adobe y las etiquetas personalizadas que representan las etiquetas creadas para su organización."
 
 Las políticas de control de acceso aprovechan las etiquetas para definir qué funciones de usuario tienen acceso a los recursos específicos de la plataforma. Las políticas pueden ser locales o globales y pueden anular otras directivas. En este ejemplo, se denegará el acceso a los campos y segmentos de esquema en todos los entornos limitados para los usuarios que no tengan las etiquetas correspondientes en el campo de esquema.
 
