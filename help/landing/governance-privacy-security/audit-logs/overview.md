@@ -2,14 +2,24 @@
 title: Información general sobre registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
+source-git-commit: 90481d2cff0f133ee10310da02e4b9ace9d8309f
 workflow-type: tm+mt
-source-wordcount: '847'
-ht-degree: 14%
+source-wordcount: '920'
+ht-degree: 13%
 
 ---
 
-# Registros de auditoría
+# Registros de auditoría {#audit-logs}
+
+>[!CONTEXTUALHELP]
+>id="platform_audits_privacyconsole_actions"
+>title="Acciones principales"
+>abstract="Este widget muestra los principales tipos de acciones que se han realizado en el Experience Platform dentro del intervalo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
+
+>[!CONTEXTUALHELP]
+>id="platform_audits_privacyconsole_users"
+>title="Usuarios principales"
+>abstract="Esta utilidad muestra los usuarios que ejecutaron la mayoría de las acciones en el Experience Platform dentro del intervalo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
 
 Para aumentar la transparencia y visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform permite auditar la actividad de los usuarios para diversos servicios y capacidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de manera eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
 
