@@ -2,14 +2,24 @@
 title: Guía de la interfaz de usuario sobre higiene de datos
 description: Aprenda a administrar las tareas de higiene de los datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
-# Guía de la interfaz de usuario sobre higiene de datos
+# Guía de la interfaz de usuario sobre higiene de datos {#hygiene-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_privacyconsole_consumer"
+>title="Rueda de higiene de datos"
+>abstract="Este widget muestra el estado de los trabajos de eliminación de consumidores de higiene de datos para el intervalo de tiempo seleccionado. Para obtener más información sobre los procesos de higiene de datos, seleccione **Higiene de los datos** en el panel de navegación izquierdo."
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_privacyconsole_recents"
+>title="Órdenes de trabajo recientes sobre higiene de datos"
+>abstract="Esta utilidad muestra las cinco órdenes de trabajo de Higiene de los datos creadas o actualizadas más recientemente, según la opción seleccionada en la parte superior derecha. Para obtener más información sobre los procesos de higiene de datos, seleccione **Higiene de los datos** en el panel de navegación izquierdo."
 
 >[!IMPORTANT]
 >
