@@ -2,9 +2,9 @@
 title: Tableros definidos por el usuario
 description: Aprenda a crear y administrar tableros personalizados donde puede crear, agregar y editar widgets personalizados para visualizar métricas clave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
+source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,18 @@ La variable [!UICONTROL Crear tablero] se abre. Escriba un nombre descriptivo y 
 
 El panel en blanco recién creado aparece con el nombre elegido en la esquina superior izquierda de la vista.
 
-## Creación de una utilidad
+## Creación de una utilidad {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="Número máximo de widgets"
+>abstract="Los tableros definidos por el usuario admiten hasta diez widgets. Después de agregar diez widgets al tablero, la variable [!UICONTROL Agregar nueva utilidad] está desactivada y aparece en gris."
 
 En la nueva vista de tablero, seleccione **[!UICONTROL Agregar nueva utilidad]** para iniciar el proceso de creación de la utilidad.
+
+>[!IMPORTANT]
+>
+>Los tableros definidos por el usuario admiten hasta diez widgets. Después de agregar diez widgets al tablero, la variable [!UICONTROL Agregar nueva utilidad] está desactivada y aparece en gris.
 
 ![El nuevo tablero vacío con Añadir nuevo widget resaltado.](./images/user-defined-dashboards/add-new-widget.png)
 
