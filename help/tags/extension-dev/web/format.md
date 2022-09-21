@@ -2,7 +2,7 @@
 title: Módulos de biblioteca de extensiones web
 description: Obtenga información sobre el formato de los módulos de biblioteca para extensiones web en Adobe Experience Platform.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 93%
@@ -23,7 +23,7 @@ Un módulo de biblioteca es un fragmento de código reutilizable proporcionado p
 
 El módulo de biblioteca está estructurado como [módulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules). Dentro de un módulo CommonJS, encontrará las siguientes variables disponibles para el uso:
 
-## [!DNL require]
+## `require`
 
 Podrá acceder a la función `require`:
 
@@ -37,7 +37,7 @@ var cookie = require('@adobe/reactor-cookie');
 cookie.set('foo', 'bar');
 ```
 
-## [!DNL module]
+## `module`
 
 Hay disponible una variable gratuita denominada `module` que permite exportar la API del módulo.
 
@@ -47,7 +47,7 @@ Ejemplo de uso:
 module.exports = function(…) { … }
 ```
 
-## [!DNL exports]
+## `exports`
 
 Hay disponible una variable gratuita denominada `exports` que permite exportar la API del módulo.
 
