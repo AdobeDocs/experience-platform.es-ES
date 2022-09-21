@@ -2,10 +2,10 @@
 title: Permisos de usuario para etiquetas
 description: Obtenga información sobre los distintos tipos de permisos disponibles para etiquetas y algunas estrategias de implementación básicas para diferentes casos de uso empresarial.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 23%
+source-wordcount: '1308'
+ht-degree: 22%
 
 ---
 
@@ -42,7 +42,7 @@ De forma predeterminada, los perfiles de producto otorgan acceso a todas las pro
 
 ### Derechos de propiedad {#property-rights}
 
-Cualquier propiedad que cree en la interfaz de usuario de la recopilación de datos estará disponible en Admin Console, lo que le permitirá agrupar la propiedad con derechos de propiedad específicos en el mismo perfil de producto.
+Cualquier propiedad de etiqueta que cree en la interfaz de usuario estará disponible en Admin Console, lo que le permitirá agrupar la propiedad con derechos de propiedad específicos en el mismo perfil de producto.
 
 Por ejemplo, si un perfil de producto determinado no tiene acceso a la Propiedad A1, los usuarios que pertenezcan a ese perfil no podrán ver ni modificar ninguna configuración de la Propiedad A1.
 
@@ -52,7 +52,7 @@ La siguiente tabla describe los derechos de propiedad disponibles y las funciona
 
 | Propiedad | Descripción |
 | --- | --- |
-| **Desarrollo** | Esto le permite realizar las siguientes acciones:<ul><li>Creación de reglas y elementos de datos</li><li>Cree bibliotecas y créelas en entornos de desarrollo existentes</li><li>Enviar una biblioteca para su aprobación</li></ul>La mayoría de las tareas diarias en la IU de recopilación de datos requieren este derecho. |
+| **Desarrollo** | Esto le permite realizar las siguientes acciones:<ul><li>Creación de reglas y elementos de datos</li><li>Cree bibliotecas y créelas en entornos de desarrollo existentes</li><li>Enviar una biblioteca para su aprobación</li></ul>La mayoría de las tareas diarias de la interfaz de usuario requieren este derecho. |
 | **Aprobar** | Esto le permite tomar una biblioteca enviada y crearla en el entorno de ensayo. También puede aprobar una biblioteca para publicarla una vez completada la prueba. |
 | **Publicar** | Esto le permite publicar bibliotecas aprobadas en el entorno de producción. |
 | **Administrar extensiones** | Esto le permite realizar las siguientes acciones: <ul><li>Instalar nuevas extensiones en una propiedad</li><li>Modificación de la configuración de una extensión ya instalada</li><li>Eliminación de una extensión</li></ul>Consulte la documentación de descripción general de las extensiones para obtener [más información sobre las extensiones](../managing-resources/extensions/overview.md). Esta función suele pertenecer a TI o Marketing, según su organización. |

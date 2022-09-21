@@ -1,10 +1,11 @@
 ---
 title: Configuración de la organización de Experience Cloud
 description: Obtenga información sobre cómo registrar una organización de Adobe Experience Cloud para empezar a desarrollar extensiones para Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ee36319d-5de8-462e-879b-311445cf334c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 51%
+source-wordcount: '595'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +23,7 @@ A los clientes de Experience Cloud se les asigna una organización cuando se fir
 
 Este programa es para socios que cuentan con tecnología que es gratuita para Adobe y que se puede integrar con tecnologías de Adobe para añadir valor a nuestros clientes mutuos. Este programa tiene un [mercado](https://www.adobeexchange.com/experiencecloud.html) donde los socios pueden crear listas que promuevan sus integraciones. Puede ver la guía de registro [aquí](https://partners.adobe.com/exchangeprogram/experiencecloud/reg-guide.html) y puede comenzar el registro [aquí](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html).
 
-Debe ser miembro de este programa para poder crear extensiones de etiquetas de listas públicas para Adobe Experience Platform que se mostrarán en el mercado.
+Debe ser miembro de este programa para poder crear extensiones de etiquetas de listas públicas para Adobe Experience Platform que se mostrarán en el marketplace.
 
 >[!WARNING]
 >
@@ -30,18 +31,20 @@ Debe ser miembro de este programa para poder crear extensiones de etiquetas de l
 
 ## Programa de partners de soluciones (SPP)
 
-Este programa está destinado a las empresas de consultoría que ayudan a los clientes de Adobe a aprovechar al máximo sus inversiones y socios que revenden soluciones de Adobe. Para obtener una guía paso a paso sobre cómo unirse al Programa de socios de soluciones, vaya a [el sitio web de Adobe Spark](https://spark.adobe.com/page/7PKZzIJJjkcDd/) o, para obtener más información, visite [el sitio del Programa de socios de soluciones](https://solutionpartners.adobe.com/home.html).
+Este programa es para empresas de consultoría que ayudan a los clientes en Adobe a aprovechar al máximo sus inversiones y socios que revenden soluciones de Adobe. Para obtener una guía paso a paso sobre cómo unirse al Programa de socios de soluciones, vaya a [el sitio web de Adobe Spark](https://spark.adobe.com/page/7PKZzIJJjkcDd/) o, para obtener más información, visite [el sitio del Programa de socios de soluciones](https://solutionpartners.adobe.com/home.html).
 
 >[!NOTE]
 >
->Los socios de soluciones también deben [registrarse](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) para el Programa de socios de Exchange, ya que el acuerdo de Exchange contiene los términos y condiciones para el desarrollo de extensiones de Adobe Experience Platform.
+>Los socios de soluciones también deben [regristrarse](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) en el Programa de socios de Exchange, ya que el acuerdo de Exchange contiene los términos y condiciones para el desarrollo de la extensión de Adobe Experience Platform.
 >
 >Antes de completar el registro de Exchange, envíe un correo electrónico al administrador de Exchange a <ExchangeHelpEC@adobe.com> y explique que se está registrando para promocionar la extensión de Si no lo hace, es probable que su aplicación se niegue y, en su lugar, le remita al SPP.
 >
 >En la actualidad, el correo electrónico corporativo solo se puede usar en un programa de socio únicamente, por lo que tendrá que usar otro correo electrónico corporativo como contacto registrado para cada uno de los programas.
 
-Una vez que su compañía esté en el programa de socios de Exchange, puede solicitar acceso a las soluciones de Adobe iniciando sesión en el [Sitio de socios de Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) y siguiendo los pasos a continuación. Si ya tiene una cuenta de Experience Cloud y acceso a las soluciones, pero no tiene acceso a la interfaz de usuario de recopilación de datos en Adobe Experience Platform, consulte las [instrucciones para configurar grupos y usuarios](../../ui/administration/user-permissions.md).
+Una vez que su compañía esté en el programa de socios de Exchange, puede solicitar acceso a las soluciones de Adobe iniciando sesión en el [Sitio de socios de Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) y siguiendo los pasos a continuación.
+
+Si tiene una cuenta de Experience Cloud que requiere acceso a la IU de recopilación de datos y a la IU de Experience Platform, consulte la [guía de permisos de recopilación de datos](../../../collection/permissions.md).
 
 ## Para desarrolladores independientes
 
-Si es un desarrollador independiente o no puede unirse a uno de los programas asociados enumerados y desea crear extensiones de etiquetas para Adobe Experience Platform, envíe un correo electrónico a launch-ext-dev@adobe.com para solicitar acceso. Proporcione información general sobre su experiencia con las etiquetas de Adobe Experience Platform y la hoja de ruta del proyecto de extensión prevista.
+Si es un desarrollador independiente o no puede unirse a uno de los programas de socios enumerados y desea crear extensiones de etiquetas para Adobe Experience Platform, envíe un mensaje de correo electrónico a launch-ext-dev@adobe.com para solicitar acceso. Proporcione información general sobre su experiencia con las etiquetas de Adobe Experience Platform y la hoja de ruta del proyecto de extensión prevista.

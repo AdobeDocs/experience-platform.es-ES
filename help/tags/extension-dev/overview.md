@@ -2,9 +2,9 @@
 title: Información general sobre el desarrollo de extensiones
 description: Obtenga información acerca de los componentes principales de los distintos tipos de extensión de etiquetas y el proceso de desarrollo de extensión en Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '950'
 ht-degree: 25%
 
 ---
@@ -37,11 +37,11 @@ Puede colocar archivos de módulo de biblioteca en cualquier lugar que desee den
 
 ### Vistas
 
-Una vista es un archivo HTML que puede cargarse en un [`iframe` element](https://developer.mozilla.org/es-ES/docs/Web/HTML/Element/iframe) en la aplicación de etiquetas, específicamente a través de la interfaz de usuario de recopilación de datos. La vista debe incluir una secuencia de comandos proporcionada por la extensión y ajustarse a una pequeña API para comunicarse con la aplicación.
+Una vista es un archivo HTML que puede cargarse en un [`iframe` element](https://developer.mozilla.org/es-ES/docs/Web/HTML/Element/iframe) en la aplicación de etiquetas, específicamente a través de la interfaz de usuario de Platform y la interfaz de usuario de recopilación de datos. La vista debe incluir una secuencia de comandos proporcionada por la extensión y ajustarse a una pequeña API para comunicarse con la aplicación.
 
 El archivo de vista más importante para cualquier extensión es su configuración. Consulte la sección sobre [configuraciones de extensión](#configuration) para obtener más información.
 
-No hay restricciones en cuanto a las bibliotecas que se utilizan en sus vistas. En otras palabras, puede utilizar jQuery, Guión bajo, Reacción, Angular, Bootstrap u otros. Sin embargo, se recomienda que la extensión tenga un aspecto similar al de la interfaz de usuario de recopilación de datos.
+No hay restricciones en cuanto a las bibliotecas que se utilizan en sus vistas. En otras palabras, puede utilizar jQuery, Guión bajo, Reacción, Angular, Bootstrap u otros. Sin embargo, se recomienda que la extensión tenga un aspecto similar al de la interfaz de usuario.
 
 Se recomienda colocar todos los archivos relacionados con la vista (HTML, CSS, JavaScript) en un único subdirectorio aislado de los archivos del módulo de biblioteca. En `extension.json`, puede describir dónde se encuentra este subdirectorio de vista. Entonces, Platform servirá dicho subdirectorio (y solo ese subdirectorio) desde sus servidores web.
 

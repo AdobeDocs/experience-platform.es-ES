@@ -3,10 +3,10 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '959'
+ht-degree: 9%
 
 ---
 
@@ -49,7 +49,7 @@ Mientras que las etiquetas recopilan datos de evento directamente desde su sitio
 
 ### Propiedades {#properties}
 
-El reenvío de eventos mantiene su propia tienda de propiedades separadas de las etiquetas, que puede ver en la interfaz de usuario de la recopilación de datos seleccionando **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo.
+El reenvío de eventos mantiene su propia tienda de propiedades separadas de las etiquetas, que puede ver en la interfaz de usuario del Experience Platform o en la de recopilación de datos seleccionando **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo.
 
 ![Propiedades de reenvío de eventos en la interfaz de usuario de la recopilación de datos](../../images/ui/event-forwarding/overview/properties.png)
 

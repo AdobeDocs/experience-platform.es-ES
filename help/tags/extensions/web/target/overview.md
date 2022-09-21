@@ -1,10 +1,11 @@
 ---
 title: Información general sobre la extensión de Adobe Target
 description: Obtenga información sobre la extensión de etiquetas para Adobe Target en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 79%
+source-wordcount: '1192'
+ht-degree: 93%
 
 ---
 
@@ -30,7 +31,7 @@ Para configurar la extensión, abra la pestaña [!UICONTROL Extensiones], pase e
 
 ### Configuración de at.js
 
-Todos los ajustes de at.js, a excepción del tiempo de espera, se recuperan automáticamente de la configuración de at.js en la interfaz de usuario de Target. La extensión solo recupera la configuración de la interfaz de usuario de Target cuando se agrega por primera vez, por lo que todos los ajustes se deben administrar en la interfaz de usuario de recopilación de datos si se necesitan actualizaciones adicionales.
+Todos los ajustes de at.js, excepto el Tiempo de espera, se recuperan automáticamente de la configuración de at.js en la interfaz de usuario de Target. La extensión solo recupera la configuración de la interfaz de usuario de Target cuando se agrega por primera vez, por lo que todos los ajustes se deben administrar en la interfaz de usuario si se necesitan actualizaciones adicionales.
 
 Las opciones de configuración disponibles son las siguientes:
 
@@ -71,7 +72,7 @@ Para obtener más información sobre cómo funciona la configuración de Timeout
 
 #### Otra configuración de at.js disponible en la interfaz de usuario de Target
 
-Varias configuraciones disponibles en la página [!UICONTROL Edit at.js settings] de la interfaz de usuario de Target no forman parte de la extensión de Target. Aquí se sugieren soluciones alternativas:
+Varias configuraciones disponibles en la página [!UICONTROL Editar configuración de at.js] de la interfaz de usuario de Target no forman parte de su extensión. Aquí se sugieren soluciones alternativas:
 
 * Crear automáticamente el mbox global: esta configuración se sustituye por la acción Fire Global Mbox de la extensión de Target.
 * Encabezado de la biblioteca: Esta configuración no forma parte de la extensión de Target. Coloque el código que se debe cargar antes de at.js en una acción Core Extension > Custom Code antes de utilizar la acción Load Target.
@@ -85,7 +86,7 @@ La extensión de Target proporciona las siguientes acciones en la porción Then 
 
 ### Enviar baliza
 
-Agregue esta acción a la regla de etiquetas donde tenga sentido cargar Target en el contexto de la regla. Esto carga la biblioteca at.js en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio.
+Añada esta acción a la regla de etiqueta donde tiene sentido cargar Target en el contexto de la regla. Esto carga la biblioteca at.js en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio.
 
 No es necesaria ninguna configuración.
 
@@ -128,19 +129,19 @@ Una vez guardada esta regla, debe añadirla a una biblioteca y crearla o impleme
 
 ## Extensión de Adobe Target con implementación asíncrona
 
-Las etiquetas se pueden implementar de forma asíncrona. Si carga la biblioteca de etiquetas de forma asíncrona con Target dentro de ella, Target también se cargará de forma asíncrona. Se trata de una situación totalmente compatible, pero hay una consideración adicional que se debe gestionar.
+Las etiquetas se pueden implementar de forma asíncrona. Si carga la biblioteca de etiqueta de forma asíncrona con Target dentro de ella, Target también se cargará de forma asíncrona. Se trata de una situación totalmente compatible, pero hay una consideración adicional que se debe gestionar.
 
-En implementaciones asíncronas, la página puede terminar de procesar el contenido predeterminado antes de que la biblioteca de Target se cargue completamente y haya realizado el intercambio de contenido. Esto puede llevar a lo que se conoce como &quot;parpadeo&quot; en el que el contenido predeterminado se muestra brevemente antes de ser reemplazado por el contenido personalizado especificado por Target. Si desea evitar este parpadeo, le sugerimos utilizar un fragmento de ocultación previa y cargar el paquete de etiquetas asincrónicamente para evitar cualquier parpadeo en el contenido.
+En implementaciones asíncronas, es posible que la página termine de procesar el contenido predeterminado antes de que la biblioteca de Target se cargue completamente y haya realizado el intercambio de contenido. Esto puede llevar a lo que se conoce como &quot;parpadeo&quot; en el que el contenido predeterminado se muestra brevemente antes de ser reemplazado por el contenido personalizado especificado por Target. Si desea evitar este parpadeo, le sugerimos utilizar un fragmento preocultado y cargar el paquete de etiqueta de forma asíncrona para evitar cualquier parpadeo del contenido.
 
 A continuación se indican algunos aspectos que se deben tener en cuenta al utilizar el fragmento de preocultamiento:
 
-* El fragmento debe añadirse antes de cargar el código incrustado del encabezado de la etiqueta.
-* Este código no se puede administrar con etiquetas, por lo que debe agregarse directamente a la página.
+* Se debe agregar el fragmento antes de cargar el código incrustado del encabezado de etiqueta.
+* Las etiquetas no pueden gestionar este código, por lo que debe añadirse directamente a la página.
 * La página se muestra cuando ocurren los siguientes eventos:
    * Cuando se recibe la respuesta del mbox global
    * Cuando se agota el tiempo de espera de la solicitud del mbox global
    * Cuando se agota el tiempo de espera del propio fragmento
-* La acción “Fire Global Mbox” debe usarse en todas las páginas utilizando el fragmento de preocultamiento para minimizar la duración del preocultamiento.
+* La acción &quot;Fire Global Mbox&quot; debe usarse en todas las páginas utilizando el fragmento de ocultamiento previo para minimizar su duración.
 
 El fragmento de código de preocultamiento es el siguiente y se puede minimizar. Las opciones configurables se encuentran al final:
 

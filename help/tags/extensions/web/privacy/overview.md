@@ -2,9 +2,9 @@
 title: Información general sobre la extensión Adobe Privacy
 description: Obtenga información acerca de la extensión de etiquetas Adobe Privacy en Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '901'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 La extensión de la etiqueta de privacidad de Adobe le permite recopilar y eliminar ID de usuario asignados a usuarios finales por soluciones de Adobe en dispositivos del lado del cliente. Los ID recopilados se pueden enviar a [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) para acceder a los datos personales del individuo relacionado o eliminarlos en aplicaciones de Adobe Experience Cloud compatibles.
 
-Esta guía explica cómo instalar y configurar la extensión de privacidad de Adobe en la interfaz de usuario de recopilación de datos.
+Esta guía explica cómo instalar y configurar la extensión de privacidad de Adobe en la interfaz de usuario del Experience Platform o la interfaz de usuario de recopilación de datos.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Esta guía explica cómo instalar y configurar la extensión de privacidad de Ad
 
 ## Instale y configure la extensión de 
 
-En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seguido del **[!UICONTROL Catálogo]** pestaña . Utilice la barra de búsqueda para reducir la lista de extensiones disponibles hasta que encuentre la privacidad de Adobe. Select **[!UICONTROL Instalar]** para continuar.
+Select **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seguido del **[!UICONTROL Catálogo]** pestaña . Utilice la barra de búsqueda para reducir la lista de extensiones disponibles hasta que encuentre la privacidad de Adobe. Select **[!UICONTROL Instalar]** para continuar.
 
 ![Instalación de la extensión](../../../images/extensions/privacy/install.png)
 
@@ -71,7 +71,7 @@ Al utilizar la extensión de etiqueta de privacidad de Adobe, debe proporcionar 
 
 ### Definir un elemento de datos para gestionar identidades
 
-En la interfaz de usuario de la recopilación de datos, inicie el proceso de creación de un nuevo elemento de datos seleccionando **[!UICONTROL Elementos de datos]** en la navegación izquierda, seguido de **[!UICONTROL Añadir elemento de datos]**. Una vez que esté en la pantalla de configuración, seleccione **[!UICONTROL Principal]** para la extensión y **[!UICONTROL Código personalizado]** para el tipo de elemento de datos. Desde aquí, seleccione **[!UICONTROL Abrir editor]** en el panel derecho.
+Inicie el proceso de creación de un nuevo elemento de datos seleccionando **[!UICONTROL Elementos de datos]** en la navegación izquierda, seguido de **[!UICONTROL Añadir elemento de datos]**. Una vez que esté en la pantalla de configuración, seleccione **[!UICONTROL Principal]** para la extensión y **[!UICONTROL Código personalizado]** para el tipo de elemento de datos. Desde aquí, seleccione **[!UICONTROL Abrir editor]** en el panel derecho.
 
 ![Seleccionar tipo de elemento de datos](../../../images/extensions/privacy/data-element-type.png)
 
@@ -111,4 +111,4 @@ Después de instalar la extensión, puede desactivarla o eliminarla. Seleccione 
 
 ## Pasos siguientes
 
-Esta guía abarcaba el uso de la extensión de etiqueta de privacidad de Adobe en la interfaz de usuario de recopilación de datos. Para obtener más información sobre las funcionalidades proporcionadas por la extensión, incluidos ejemplos de cómo emplearla con código sin procesar, consulte la [Resumen de la biblioteca JavaScript de privacidad](../../../../privacy-service/js-library.md) en la documentación del Privacy Service.
+Esta guía abarcaba el uso de la extensión de etiqueta de privacidad de Adobe en la interfaz de usuario. Para obtener más información sobre las funcionalidades proporcionadas por la extensión, incluidos ejemplos de cómo emplearla con código sin procesar, consulte la [Resumen de la biblioteca JavaScript de privacidad](../../../../privacy-service/js-library.md) en la documentación del Privacy Service.

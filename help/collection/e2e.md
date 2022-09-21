@@ -2,9 +2,9 @@
 title: Información general de extremo a extremo de la recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las funciones de recopilación de datos de Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: da17b273d5464ecd8b00aa37de51425ce3a9a576
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2619'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,8 @@ Esta guía proporciona un tutorial de alto nivel sobre cómo enviar un evento a 
 >[!NOTE]
 >
 >También puede optar por instalar y configurar el SDK manualmente si no desea utilizar etiquetas, pero los pasos que lo rodean deben completarse como se describe a continuación.
+>
+>Todos los pasos que implican la interfaz de usuario de la recopilación de datos también se pueden realizar en la interfaz de usuario del Experience Platform.
 
 ## Requisitos previos
 
@@ -57,7 +59,7 @@ El primer paso para configurar las operaciones de recopilación de datos es crea
 >
 >Los esquemas XDM son muy personalizables. En lugar de ser demasiado prescriptivos, los pasos descritos a continuación se centran específicamente en los requisitos de esquema para el SDK web. Fuera de estos parámetros, puede definir la estructura restante de sus datos como desee.
 
-En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. Desde aquí puede ver una lista de esquemas creados anteriormente que pertenecen a su organización. Para continuar, seleccione **[!UICONTROL Crear esquema]** y, a continuación, seleccione **[!UICONTROL XDM ExperienceEvent]** en el menú desplegable.
+En la interfaz de usuario, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. Desde aquí puede ver una lista de esquemas creados anteriormente que pertenecen a su organización. Para continuar, seleccione **[!UICONTROL Crear esquema]** y, a continuación, seleccione **[!UICONTROL XDM ExperienceEvent]** en el menú desplegable.
 
 ![Espacio de trabajo de Esquemas](./images/e2e/schemas.png)
 
@@ -97,7 +99,7 @@ Un conjunto de datos es una configuración que indica a la red perimetral dónde
 >
 >Si desea utilizar [reenvío de eventos](../tags/ui/event-forwarding/overview.md) (suponiendo que su organización tenga licencia para la funcionalidad), debe habilitarla para un conjunto de datos de la misma manera que habilita los productos de Adobe. Los detalles de este proceso se tratan en una [sección posterior](#event-forwarding).
 
-En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Datastreams]**. Desde aquí puede seleccionar un conjunto de datos existente de la lista para editarlo o puede crear una nueva configuración seleccionando **[!UICONTROL Nuevo conjunto de datos]**.
+Select **[!UICONTROL Datastreams]** en el panel de navegación izquierdo. Desde aquí puede seleccionar un conjunto de datos existente de la lista para editarlo o puede crear una nueva configuración seleccionando **[!UICONTROL Nuevo conjunto de datos]**.
 
 ![Corrientes de datos](./images/e2e/datastreams.png)
 

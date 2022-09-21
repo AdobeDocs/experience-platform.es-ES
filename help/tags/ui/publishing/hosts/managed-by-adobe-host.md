@@ -1,10 +1,11 @@
 ---
 title: Información general sobre alojamientos administrados por Adobe
-description: Obtenga información sobre la opción de alojamiento predeterminada para implementar compilaciones de biblioteca de etiquetas en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información acerca de la opción de alojamiento predeterminada para implementar compilaciones de biblioteca de etiquetas en Adobe Experience Platform.
+exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 65%
+source-wordcount: '1173'
+ht-degree: 96%
 
 ---
 
@@ -14,19 +15,19 @@ ht-degree: 65%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Los hosts administrados por Adobe son la configuración de host predeterminada para implementar las compilaciones de su biblioteca de etiquetas en Adobe Experience Platform. Al crear una nueva propiedad a través de la interfaz de usuario de recopilación de datos, se crea un host predeterminado administrado por Adobe.
+Los hosts administrados por Adobe son la configuración de host predeterminada para implementar las compilaciones de biblioteca de etiquetas en Adobe Experience Platform. Al crear una nueva propiedad a través de la interfaz de usuario de recopilación de datos, se crea un host predeterminado administrado por Adobe.
 
 Con los hosts administrados por Adobe, las versiones de biblioteca se entregan a una red de distribución de contenido (CDN) de terceros con la que Adobe ha firmado un contrato. Estas CDN funcionan de forma independiente del Adobe, por lo que, incluso cuando Platform se esté manteniendo o no funcione, el código implementado seguirá funcionando normalmente en sus sitios y aplicaciones. El código incrustado de un host administrado por Adobe hace referencia al archivo de biblioteca principal en la CDN para que un dispositivo cliente pueda recuperar los archivos en tiempo de ejecución.
 
-Este documento proporciona información general sobre los hosts administrados por Adobe en Platform y proporciona los pasos para crear un nuevo host administrado por Adobe en la interfaz de usuario.
+Este documento proporciona información general sobre los hosts administrados por Adobe en Platform y proporciona los pasos para crear un nuevo host administrado por Adobe en la IU.
 
 ## Akamai
 
 Actualmente, el proveedor de CDN principal de Adobe es [Akamai](https://www.akamai.com/es). La CDN robusta de Akamai está diseñada para ofrecer contenido a una audiencia global y de gran volumen de visitantes en línea. La CDN ejecuta redes redundantes de nodos de carga equilibrada y optimizados para ofrecer contenido lo más rápido posible a visitantes ubicados en todo el mundo.
 
-En particular, Akamai ejecuta más de 137 000 servidores en más de 1150 redes de 87 países. En términos de redundancia, la CDN no solo enruta de un servidor a otro, sino que también puede enrutar de un nodo de servidores a otro según sea necesario. En otras palabras, cada nodo consta de varios servidores, de modo que un servidor que se está apagando nunca se convierte en un problema, ya que los demás servidores del mismo nodo pueden asumir el control.
+En particular, Akamai ejecuta más de 137 000 servidores en más de 1150 redes de 87 países. En cuanto a la redundancia, la red de distribución de contenido (CDN) no solo enruta de un servidor a otro, sino que también puede enrutar de un nodo de servidores a otro según sea necesario. En otras palabras, cada nodo consta de varios servidores, de modo que un servidor que se está apagando nunca se convierte en un problema, ya que los demás servidores del mismo nodo pueden asumir el control.
 
-Si se desactiva un nodo completo, Akamai se sirve del siguiente nodo más cercano con el mismo contenido almacenado en caché. Los nodos se seleccionan de forma dinámica en función de la ubicación del visitante, la carga de tráfico y otros factores, de forma que el contenido se proporciona de forma fiable desde el nodo local más adecuado para cada visitante.
+Si se desactiva un nodo completo, Akamai se proporciona desde el nodo más cercano con el mismo contenido almacenado en la caché. Los nodos se seleccionan de forma dinámica en función de la ubicación del visitante, la carga de tráfico y otros factores, de forma que el contenido se proporciona de forma fiable desde el nodo local más adecuado para cada visitante.
 
 Los archivos alojados en Akamai tienen un dominio de `assets.adobedtm.com`. Se puede hacer referencia a esto de forma segura o no (`http://` o `https://`) según su nombre en el `<script>` código incrustado.
 
@@ -43,7 +44,7 @@ Al utilizar hosts administrados por Adobe, las versiones de la biblioteca se alm
 
 ### Almacenamiento en caché de Edge {#edge}
 
-El propósito principal de una CDN es distribuir de forma inteligente el contenido a servidores geográficamente más cercanos a los usuarios finales, de modo que los dispositivos cliente puedan recuperar el contenido con mayor rapidez. Las CDN logran esto haciendo que las copias del contenido estén disponibles en servidores distribuidos geográficamente en todo el mundo (&quot;nodos Edge&quot;).
+El propósito principal de una CDN es distribuir de forma inteligente el contenido a servidores geográficamente más cercanos a los usuarios finales, de modo que los dispositivos cliente puedan recuperarlo con mayor rapidez. Las CDN logran esto haciendo que las copias del contenido estén disponibles en servidores distribuidos geográficamente en todo el mundo (&quot;nodos Edge&quot;).
 
 Una vez que la versión se ha implementado en el host administrado por Adobe, la CDN distribuye la compilación en varios servidores centralizados (&quot;orígenes&quot;), que luego envía copias de la versión a varios nodos Edge del mundo para el almacenamiento en caché. Las versiones en caché de la versión almacenadas en estos nodos Edge se proporcionan finalmente a los dispositivos cliente.
 
@@ -53,7 +54,7 @@ Una vez que la versión se ha implementado en el host administrado por Adobe, la
 >
 >Para los hosts administrados por Adobe, la primera biblioteca publicada en cualquier entorno nuevo puede tardar hasta cinco minutos en propagarse a toda la CDN.
 
-Cuando un nodo perimetral recibe una solicitud para un archivo específico (como la compilación de su biblioteca), el nodo comprueba primero el valor de tiempo de vida (TTL) del archivo. Si el TTL no ha caducado, los nodos perimetrales sirven a la versión en caché. Si el TTL ha caducado, el nodo perimetral solicita una copia nueva desde el origen más cercano, proporciona esa copia actualizada y, a continuación, la almacena en caché con el TTL definido.
+Cuando un nodo perimetral recibe una solicitud para un archivo específico (como la compilación de su biblioteca), comprueba primero el valor de tiempo de vida (TTL) del archivo. Si el TTL no ha caducado, los nodos perimetrales sirven a la versión en caché. Si el TTL ha caducado, el nodo perimetral solicita una copia nueva desde el origen más cercano, proporciona esa copia actualizada y, a continuación, la almacena en caché con el TTL definido.
 
 >[!NOTE]
 >
@@ -63,7 +64,7 @@ Cuando un nodo perimetral recibe una solicitud para un archivo específico (como
 
 Al cargar una nueva compilación de biblioteca, las cachés de todos los nodos perimetrales aplicables se invalidan. Esto significa que cada nodo considera que su versión en caché no es válida, independientemente de la fecha en que haya recuperado una copia nueva. La próxima vez que un nodo perimetral reciba una solicitud para ese archivo, el nodo recuperará una copia nueva desde el origen.
 
-Debido a que Akamai tiene varios servidores de origen que replican archivos entre sí y que no hay forma de saber qué origen recibió el archivo primero, estas solicitudes de nodo pueden llegar a un origen que no tiene la versión más reciente. Luego almacenaría en caché la versión anterior de nuevo. Para evitar que esto ocurra, se realizan varias invalidaciones de caché para cada nueva compilación en los siguientes intervalos:
+Debido a que Akamai tiene varios servidores de origen que replican archivos entre ellos y que no hay forma de saber qué origen obtuvo el archivo primero, es posible que estas solicitudes de nodo produzcan un origen que no tenga la versión más reciente. Luego almacenaría en caché la versión anterior de nuevo. Para evitar que esto ocurra, se hacen varias anulaciones de caché para cada nueva compilación en los siguientes intervalos:
 
 * Inmediatamente después de la carga
 * 5 minutos después de la carga
@@ -87,9 +88,9 @@ Como se indica en la tabla anterior, el almacenamiento en caché del navegador n
 
 Los encabezados de control de caché solo se aplican a la compilación de la biblioteca principal. Los recursos secundarios debajo de la biblioteca principal siempre se consideran nuevos y, por lo tanto, no es necesario almacenarlos en caché en el explorador.
 
-## Uso del alojamiento administrado por Adobe en la interfaz de usuario de la recopilación de datos
+## Uso del hosting gestionado por Adobe en la interfaz de usuario de 
 
-La primera vez que se crea una propiedad en la [interfaz de usuario de recopilación de datos](https://experience.adobe.com/#/data-collection/), se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
+La primera vez que se crea una propiedad en la interfaz de usuario de Platform o de la recopilación de datos, se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
 
 >[!NOTE]
 >
@@ -99,8 +100,7 @@ La primera vez que se crea una propiedad en la [interfaz de usuario de recopilac
 >1. Proporcione un nombre para el host, seleccione **[!UICONTROL Gestionado por Adobe]** como tipo de host y, a continuación, seleccione **[!UICONTROL Guardar]**.
 
 >
->
-A continuación, puede volver a asignar sus entornos al host administrado por Adobe según sus preferencias.
+>A continuación, puede volver a asignar sus entornos al host administrado por Adobe según sus preferencias.
 
 ## Pasos siguientes
 

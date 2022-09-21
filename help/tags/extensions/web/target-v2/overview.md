@@ -1,10 +1,11 @@
 ---
 title: Información general sobre la extensión Adobe Target v2
-description: Obtenga información sobre la extensión de la etiqueta Adobe Target v2 en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información sobre la extensión de etiqueta Adobe Target v2 en Adobe Experience Platform.
+exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 71%
+source-wordcount: '1356'
+ht-degree: 92%
 
 ---
 
@@ -30,17 +31,17 @@ Para configurar la extensión, abra la pestaña Extensiones, pase el puntero sob
 
 ### Configuración de at.js
 
-Todos los ajustes de at.js, a excepción del tiempo de espera, se recuperan automáticamente de la configuración de at.js en la interfaz de usuario de Target. La extensión solo recupera la configuración de la interfaz de usuario de Target cuando se agrega por primera vez, por lo que todos los ajustes se deben administrar en la interfaz de usuario de recopilación de datos si se necesitan actualizaciones adicionales.
+Todos los ajustes de at.js, excepto el Tiempo de espera, se recuperan automáticamente de la configuración de at.js en la interfaz de usuario de Target. La extensión solo recupera la configuración de la interfaz de usuario de Target cuando se agrega por primera vez, por lo que todos los ajustes se deben administrar en la interfaz de usuario si se necesitan actualizaciones adicionales.
 
 Las opciones de configuración disponibles son las siguientes:
 
 #### Código de cliente
 
-El código de cliente es el identificador de cuenta de Target. Esto debe mantenerse casi siempre con el valor predeterminado. Se puede cambiar mediante elementos de datos.
+El código de cliente es el identificador de cuenta de Target. Esto debe mantenerse casi siempre con el valor predeterminado. Se puede cambiar utilizando elementos de datos.
 
 #### ID de organización
 
-Este ID vincula la implementación con su cuenta de Adobe Experience Cloud. Esto debe mantenerse casi siempre con el valor predeterminado. Se puede cambiar mediante elementos de datos.
+Este ID vincula la implementación con su cuenta de Adobe Experience Cloud. Esto debe mantenerse casi siempre con el valor predeterminado. Se puede cambiar utilizando elementos de datos.
 
 #### Dominio del servidor
 
@@ -64,13 +65,13 @@ La extensión de Target proporciona las siguientes acciones en la porción Then 
 
 ### Enviar baliza
 
-Agregue esta acción a la regla de etiquetas donde tenga sentido cargar Target en el contexto de la regla. Esto carga la biblioteca at.js en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio. Adobe recomienda usar la acción Load Target solo si va precedida de una llamada de Target. De lo contrario, podría tener problemas como la demora de la llamada de Analytics.
+Añada esta acción a la regla de etiqueta donde tiene sentido cargar Target en el contexto de la regla. Esto carga la biblioteca at.js en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio. Adobe recomienda usar la acción Load Target solo si va precedida de una llamada de Target. De lo contrario, podría tener problemas como la demora de la llamada de Analytics.
 
 No es necesaria ninguna configuración.
 
 ### Carga de Target con la toma de decisiones en el dispositivo
 
-Agregue esta acción a la regla de etiquetas donde tenga sentido cargar Target con [decisiones en el dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=es) habilitadas en el contexto de la regla. Esto carga la biblioteca at.js con la toma de decisiones en el dispositivo habilitada en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio. Adobe recomienda usar la acción Cargar destinatario con toma de decisiones en el dispositivo solo si va precedida de una llamada de Target. De lo contrario, podría tener problemas como la demora de la llamada de Analytics.
+Añada esta acción a la regla de etiqueta donde tiene sentido cargar Target con la [toma de decisiones en el dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=es) activada en el contexto de la regla. Esto carga la biblioteca at.js con la toma de decisiones en el dispositivo habilitada en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio. Adobe recomienda usar la acción Cargar destinatario con toma de decisiones en el dispositivo solo si va precedida de una llamada de Target. De lo contrario, podría tener problemas como la demora de la llamada de Analytics.
 
 No es necesaria ninguna configuración.
 
@@ -92,7 +93,7 @@ Este tipo de acción permite agregar parámetros específicamente a las solicitu
 
 Este tipo de acción permite a Target activar una solicitud cuando se carga la página. La acción Load Target debe usarse anteriormente.
 
-Debe especificar si desea habilitar la ocultación del cuerpo para evitar parpadeos y el estilo utilizado al ocultar el elemento de cuerpo. Las opciones disponibles son las siguientes:
+Especifique si desea habilitar la ocultación del cuerpo para evitar parpadeos y el estilo utilizado al ocultar el elemento de cuerpo. Las opciones disponibles son las siguientes:
 
 * **Ocultación del cuerpo:** puede habilitar o deshabilitar esta configuración. El valor predeterminado es Enabled, lo cual significa que BODY de HTML está oculto.
 * **Estilo oculto del cuerpo:** el valor predeterminado es body {opacity: 0}. Este valor se puede cambiar por otro, por ejemplo, body{display:none}.
@@ -101,7 +102,7 @@ Para obtener más información, consulte la [documentación de ayuda en línea d
 
 ### Activar vista
 
-Se puede llamar a la acción Vista de Déclencheur cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página. La vista déclencheur debe implementarse para las aplicaciones de una sola página.
+Se puede llamar a la acción de vista de activación cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página. La vista de activación debe implementarse para las aplicaciones de una sola página.
 
 1. Especifique el nombre de vista que se debe activar.
 1. Especifique si el activador de la vista debe atribuirse a una impresión para los informes marcando la casilla de verificación Page. Si la vista se correlaciona con un componente que se vuelve a procesar y no atribuye a una impresión para informes, deje la casilla de verificación Page desmarcada.
@@ -116,24 +117,24 @@ Una regla de Target con esta implementación básica tiene este aspecto:
 
 ![](../../../images/targetv2deploy.png)
 
-Después de guardar esta regla, deberá agregarla a una biblioteca y crearla o implementarla para poder probar su comportamiento.
+Una vez guardada esta regla, debe añadirla a una biblioteca y crearla o implementarla para poder probar su comportamiento.
 
 ## Extensión de Adobe Target con implementación asíncrona
 
-Las etiquetas se pueden implementar de forma asíncrona. Si carga la biblioteca de etiquetas de forma asíncrona con Target dentro de ella, Target también se cargará de forma asíncrona. Se trata de una situación totalmente compatible, pero hay una consideración adicional que se debe gestionar.
+Las etiquetas se pueden implementar de forma asíncrona. Si carga la biblioteca de etiqueta de forma asíncrona con Target dentro de ella, Target también se cargará de forma asíncrona. Se trata de una situación totalmente compatible, pero hay una consideración adicional que se debe gestionar.
 
-En implementaciones asincrónicas, es posible que la página termine de procesar el contenido predeterminado antes de que la biblioteca de Target se cargue completamente y haya realizado el intercambio de contenido. Esto puede llevar a lo que se conoce como &quot;parpadeo&quot; en el que el contenido predeterminado se muestra brevemente antes de ser reemplazado por el contenido personalizado especificado por Target. Si desea evitar este parpadeo, le sugerimos utilizar un fragmento de ocultación previa y cargar el paquete de etiquetas asincrónicamente para evitar cualquier parpadeo en el contenido.
+En implementaciones asincrónicas, es posible que la página termine de procesar el contenido predeterminado antes de que la biblioteca de Target se cargue completamente y haya realizado el intercambio de contenido. Esto puede llevar a lo que se conoce como &quot;parpadeo&quot; en el que el contenido predeterminado se muestra brevemente antes de ser reemplazado por el contenido personalizado especificado por Target. Si desea evitar este parpadeo, le sugerimos utilizar un fragmento preocultado y cargar el paquete de etiqueta de forma asíncrona para evitar cualquier parpadeo del contenido.
 
 A continuación se indican algunos aspectos que se deben tener en cuenta al utilizar el fragmento de preocultamiento:
 
-* El fragmento debe añadirse antes de cargar el código incrustado del encabezado de la etiqueta.
-* Este código no se puede administrar con etiquetas, por lo que debe agregarse directamente a la página.
+* Se debe agregar el fragmento antes de cargar el código incrustado del encabezado de etiqueta.
+* Las etiquetas no pueden gestionar este código, por lo que debe añadirse directamente a la página.
 * La página se muestra cuando se produce el primero de los siguientes eventos:
    * Cuando se recibe la respuesta de carga de página
    * Cuando se agota el tiempo de espera de la solicitud de página
    * Cuando se agota el tiempo de espera del propio fragmento
-* La acción “Fire Page Load Request” debe usarse en todas las páginas utilizando el fragmento de ocultación previo para minimizar su duración.
-* La ocultación del cuerpo también debe estar habilitada en la acción de solicitud de carga de página de la regla de carga de página que use para Target en la interfaz de usuario de recopilación de datos; de lo contrario, todas las cargas de página permanecerán ocultas durante el periodo de espera.
+* La acción &quot;Fire Page Load Request&quot; debe usarse en todas las páginas utilizando el fragmento de ocultamiento previo para minimizar su duración.
+* La ocultación del cuerpo también debe estar habilitada en la acción de solicitud de carga de página de la regla de carga de página que use para Target; de lo contrario, todas las cargas de página permanecerán ocultas durante el periodo de espera.
 
 El fragmento de código de preocultamiento es el siguiente y se puede minimizar. Las opciones configurables se encuentran al final:
 

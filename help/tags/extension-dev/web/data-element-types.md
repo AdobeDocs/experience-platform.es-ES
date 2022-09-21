@@ -1,10 +1,11 @@
 ---
 title: Tipos de elementos de datos para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de elemento de datos para una extensión de etiqueta en una propiedad web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 60%
+source-wordcount: '600'
+ht-degree: 70%
 
 ---
 
@@ -22,13 +23,13 @@ Este documento explica cómo definir los tipos de elementos de datos para una ex
 
 >[!IMPORTANT]
 >
->Si está desarrollando una extensión edge, consulte la guía sobre [tipos de elementos de datos para extensiones edge](../edge/data-element-types.md) en su lugar.
+>Si está desarrollando una extensión edge, consulte la guía de [tipos de elementos de datos para extensiones perimetrales](../edge/data-element-types.md) en su lugar.
 >
 >Este documento también supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones web. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
 
 Los tipos de elementos de datos suelen consistir en lo siguiente:
 
-1. Se muestra una [vista](./views.md) en la interfaz de usuario de la recopilación de datos que permite a los usuarios modificar la configuración del elemento de datos.
+1. A [ver](./views.md) se muestra en la interfaz de usuario del Experience Platform y en la de recopilación de datos, lo que permite a los usuarios modificar la configuración del elemento de datos.
 2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y recuperar fragmentos de datos.
 
 Considere una situación en la que desee permitir que los usuarios recuperen un fragmento de datos de un elemento de almacenamiento local denominado `productName`. Es posible que el módulo tenga este aspecto:
@@ -39,7 +40,7 @@ module.exports = function(settings) {
 }
 ```
 
-Si desea que el usuario de Adobe Experience Platform pueda configurar el nombre del elemento de almacenamiento local, puede permitir que el usuario introduzca un nombre y guardarlo en el objeto `settings` . El objeto podría tener este aspecto:
+Si desea que el usuario de Adobe Experience Platform pueda configurar el nombre del elemento de almacenamiento local, puede permitir que el usuario introduzca un nombre y luego lo guarde en el objeto `settings`. El objeto podría tener este aspecto:
 
 ```js
 {

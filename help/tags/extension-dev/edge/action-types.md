@@ -1,10 +1,11 @@
 ---
 title: Tipos de acción para extensiones de Edge
-description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de acción para una extensión de etiqueta en una propiedad edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de acción para una extensión de etiqueta en una propiedad Edge.
+exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 41%
+source-wordcount: '386'
+ht-degree: 66%
 
 ---
 
@@ -28,7 +29,7 @@ Este documento explica cómo definir tipos de acción para una extensión edge e
 
 Los tipos de acción suelen consistir en lo siguiente:
 
-1. Vista que se muestra en la interfaz de usuario de la recopilación de datos y que permite a los usuarios modificar la configuración de la acción.
+1. Vista que se muestra en la interfaz de usuario del Experience Platform y en la de la recopilación de datos y que permite a los usuarios modificar la configuración de la acción.
 2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y realizar una acción.
 
 Por ejemplo, un módulo para reenviar algunos datos a un extremo de terceros puede tener este aspecto.
@@ -48,7 +49,7 @@ module.exports = (context) {
 };
 ```
 
-Si desea que el punto final sea configurable por el usuario y permitir la entrada y persistencia de un punto final al objeto de configuración dentro del módulo, el objeto tendría un aspecto similar a este.
+Si desea que el extremo sea configurable por el usuario y permitir la entrada y persistencia de un extremo al objeto de configuración dentro del módulo, el objeto tendría un aspecto similar a este.
 
 ```json
 {
@@ -56,7 +57,7 @@ Si desea que el punto final sea configurable por el usuario y permitir la entrad
 }
 ```
 
-Para operar en el extremo definido por el usuario, el módulo tendría que cambiar al siguiente ejemplo.
+Para poder operar en el extremo definido por el usuario, el módulo deberá cambiar a lo siguiente.
 
 ```js
 module.exports = (context) {

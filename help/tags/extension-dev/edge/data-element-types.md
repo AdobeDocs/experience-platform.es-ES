@@ -1,10 +1,11 @@
 ---
 title: Tipos de elementos de datos para extensiones de Edge
-description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de elemento de datos para una extensión de etiqueta en una propiedad edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de elemento de datos para una extensión de etiqueta en una propiedad Edge.
+exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 31%
+source-wordcount: '439'
+ht-degree: 51%
 
 ---
 
@@ -22,16 +23,16 @@ Este documento explica cómo definir tipos de elementos de datos para una extens
 
 >[!IMPORTANT]
 >
->Si está desarrollando una extensión web, consulte la guía sobre [tipos de elementos de datos para extensiones web](../web/data-element-types.md) en su lugar.
+>Si está desarrollando una extensión web, consulte la guía de [tipos de elementos de datos para extensiones web](../web/data-element-types.md) en su lugar.
 >
 >Este documento también supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones Edge. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
 
 Los tipos de elementos de datos suelen consistir en lo siguiente:
 
-1. Vista que se muestra en la interfaz de usuario de la recopilación de datos y que permite a los usuarios modificar la configuración del elemento de datos.
+1. Vista que se muestra en la interfaz de usuario del Experience Platform y en la de recopilación de datos y que permite a los usuarios modificar la configuración del elemento de datos.
 2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y recuperar fragmentos de datos.
 
-Si desea permitir que los usuarios recuperen un fragmento de datos de la capa de datos personalizada, su módulo puede tener el aspecto siguiente en este ejemplo.
+Si desea permitir que los usuarios recuperen un fragmento de datos de la capa de datos personalizada, su módulo puede tener el aspecto de este ejemplo.
 
 ```js
 module.exports = (context) => {
@@ -40,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-Si desea que el usuario de Adobe Experience Platform pueda configurar los datos devueltos para la capa de datos, puede permitir que el usuario introduzca un nombre clave y, a continuación, guardar el nombre en el objeto `settings` . El objeto podría tener este aspecto.
+Si desea que los usuarios de Adobe Experience Platform puedan configurar los datos devueltos para la capa de datos, puede permitirles introducir un nombre de clave y después que lo guarden en el objeto `settings`. El objeto podría tener este aspecto.
 
 ```js
 {

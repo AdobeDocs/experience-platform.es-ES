@@ -2,9 +2,9 @@
 title: Manifiesto de extensión
 description: Obtenga información sobre cómo configurar un archivo de manifiesto JSON que informe a Adobe Experience Platform sobre cómo utilizar correctamente su extensión.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2645'
 ht-degree: 99%
 
 ---
@@ -120,7 +120,7 @@ Una definición de tipo es un objeto que se utiliza para describir un evento, un
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Opcional)</em></td>
-      <td>Cuando se proporcione, <code>displayName</code> se enumerará en <code>categoryName</code> en la interfaz de usuario de recopilación de datos. Todos los tipos que tengan el mismo <code>categoryName</code> se enumerarán en la misma categoría. Por ejemplo, si la extensión proporcionaba un tipo de evento <code>keyUp</code> y un tipo de evento <code>keyDown</code> y ambos tenían un <code>categoryName</code> de <code>Keyboard</code>, ambos tipos de evento se enumerarían en la categoría de teclado mientras el usuario seleccionaba entre la lista de tipos de evento disponibles al crear una regla. El valor de <code>categoryName</code> debe ser legible en lenguaje natural.</td>
+      <td>Cuando se proporcione, <code>displayName</code> se enumerará en <code>categoryName</code> en la interfaz de usuario de inicio de Todos los tipos que tengan el mismo <code>categoryName</code> se enumerarán en la misma categoría. Por ejemplo, si la extensión proporcionaba un tipo de evento <code>keyUp</code> y un tipo de evento <code>keyDown</code> y ambos tenían un <code>categoryName</code> de <code>Keyboard</code>, ambos tipos de evento se enumerarían en la categoría de teclado mientras el usuario seleccionaba entre la lista de tipos de evento disponibles al crear una regla. El valor de <code>categoryName</code> debe ser legible en lenguaje natural.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

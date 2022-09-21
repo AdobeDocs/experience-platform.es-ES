@@ -1,10 +1,11 @@
 ---
 title: Tipos de condición para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de condición para una extensión de etiqueta en una propiedad web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 64%
+source-wordcount: '502'
+ht-degree: 69%
 
 ---
 
@@ -28,7 +29,7 @@ Este documento explica cómo definir tipos de condiciones para una extensión we
 
 Los tipos de condición suelen consistir en lo siguiente:
 
-1. Se muestra una [vista](./views.md) en la interfaz de usuario de la recopilación de datos que permite a los usuarios modificar la configuración de la condición.
+1. A [ver](./views.md) se muestra en la interfaz de usuario del Experience Platform y en la de la recopilación de datos, lo que permite a los usuarios modificar la configuración de la condición.
 2. Módulo de biblioteca emitido en la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y evaluar una condición.
 
 Un módulo de biblioteca de tipo de condición tiene un objetivo: evalúe si algo es verdadero o falso. Lo que evalúan depende de usted.

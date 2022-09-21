@@ -1,10 +1,11 @@
 ---
 title: Tipos de acción para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de acción para una extensión de etiqueta en una propiedad web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 49%
+source-wordcount: '412'
+ht-degree: 70%
 
 ---
 
@@ -28,7 +29,7 @@ Este documento explica cómo definir tipos de acción para una extensión web en
 
 Los tipos de acción suelen consistir en lo siguiente:
 
-1. Se muestra una [vista](./views.md) en la interfaz de usuario de la recopilación de datos que permite a los usuarios modificar la configuración de la acción.
+1. A [ver](./views.md) se muestra en la interfaz de usuario del Experience Platform y en la de la recopilación de datos, lo que permite a los usuarios modificar la configuración de la acción.
 2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y realizar una acción.
 
 ```js
@@ -37,7 +38,7 @@ module.exports = function(settings) {
 };
 ```
 
-Por ejemplo, para que el mensaje sea configurable por el usuario de Adobe Experience Platform, puede permitir que el usuario introduzca y guarde un mensaje en el objeto de configuración. El objeto tiene un aspecto similar al siguiente:
+Por ejemplo, para que el mensaje sea configurable por el usuario de Adobe Experience Platform, puede permitir que este introduzca y guarde un mensaje en el objeto de configuración. El objeto tiene un aspecto similar al siguiente:
 
 ```json
 {
@@ -55,7 +56,7 @@ module.exports = function(settings) {
 
 ## Datos de evento contextual
 
-Luego se tendría que pasar un segundo argumento al módulo que contiene la información contextual sobre el evento que activa la regla. Esto puede ser beneficioso en algunos casos y se puede acceder a estos datos de la siguiente manera:
+Luego se tendría que pasar un segundo argumento al módulo que contiene la información contextual acerca del evento que activa la regla. Esto puede ser beneficioso en algunos casos y se puede acceder a estos datos de la siguiente manera:
 
 ```js
 module.exports = function(settings, event) {

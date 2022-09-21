@@ -2,10 +2,10 @@
 title: Extremo de componentes de regla
 description: Aprenda a realizar llamadas al extremo /rule_components en la API de Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 99%
+source-wordcount: '1205'
+ht-degree: 97%
 
 ---
 
@@ -15,7 +15,7 @@ En las etiquetas de recopilación de datos, [las reglas](./rules.md) controlan e
 
 >[!NOTE]
 >
->Este documento explica cómo administrar los componentes de regla en la API de Reactor. Para obtener más información sobre cómo interactuar con reglas y componentes de reglas en la interfaz de usuario de recopilación de datos, consulte la [guía de la interfaz de usuario](../../ui/managing-resources/rules.md).
+>Este documento explica cómo administrar los componentes de regla en la API de Reactor. Para obtener más información sobre cómo interactuar con reglas y componentes de reglas en la interfaz de usuario, consulte la [Guía de la interfaz de usuario](../../ui/managing-resources/rules.md).
 
 Los componentes de regla tienen tres tipos básicos:
 
