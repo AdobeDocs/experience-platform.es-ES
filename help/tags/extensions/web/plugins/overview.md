@@ -2,10 +2,10 @@
 title: Información general de la extensión Common Analytics
 description: Obtenga información sobre la extensión de etiqueta Common Analytics en Adobe Experience Platform.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 86%
+source-wordcount: '549'
+ht-degree: 96%
 
 ---
 
@@ -50,7 +50,7 @@ La extensión de complementos de Analytics comunes proporciona las siguientes ac
 >
 >Aunque esta acción es más fácil de implementar, Adobe Consulting no recomienda que utilice esta acción ya que aumenta el peso del complemento.
 
-En esta acción, puede seleccionar cada complemento que desee incluir en la implementación y guardar los cambios. Seleccione tantos complementos como desee utilizar durante la implementación.
+En esta acción, puede seleccionar cada complemento que desee incluir en la implementación y guardar los cambios. Seleccione tantos complementos como desee utilizar durante la implementación. En la [descripción general de los complementos](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=es) de Analytics encontrará vínculos a documentación sobre cómo utilizar cada complemento y una breve descripción.
 
 ### Inicializar complemento
 
@@ -58,17 +58,36 @@ Estas acciones inicializan el complemento específico que se va a utilizar indiv
 
 ## Elementos de datos de la extensión Common Analytics Plugins
 
-Los siguientes elementos de datos están disponibles en la extensión de complementos de Analytics comunes, que aprovechan las capacidades de etiquetas para configurar y configurar los complementos correspondientes en Analytics:
+En esta sección se describen los tipos de elementos de datos disponibles en la extensión Common Analytics Plugins.
 
-* `getGeoCoordinates`
-* `getNewRepeat`
-* `getPageName`
-* `getResponsiveLayout`
-* `getTimeParting`
-* `getTimeSinceLastVisit`
-* `getVisitDuration`
-* `getVisitNum`
+### getGeoCoordinates
 
->[!NOTE]
->
->Para obtener más información sobre los complementos anteriores, consulte la [Documentación de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=es).
+Permite a los usuarios aprovechar la IU nativa de recopilación de datos en Adobe Experience Platform para configurar el complemento getGeoCoordinates.
+
+### getNewRepeat
+
+Permite a los usuarios aprovechar la IU nativa de recopilación de datos para configurar el complemento getNewRepeat.
+
+### getPageName
+
+Permite a los usuarios aprovechar la IU nativa de recopilación de datos para configurar el complemento getPageName.
+
+### getResponsiveLayout
+
+Permite a los usuarios aprovechar la IU nativa de recopilación de datos para configurar el complemento getResponsiveLayout.
+
+### getTimeParting
+
+Permite a los usuarios aprovechar la IU nativa de recopilación de datos para configurar el complemento getTimeParting.
+
+### getTimeSinceLastVisit
+
+Permite a los usuarios aprovechar la IU nativa de recopilación de datos para configurar el complemento getTimeSinceLastVisit.
+
+### getVisitDuration
+
+Permite a los usuarios aprovechar la IU nativa de recopilación de datos para configurar el complemento getVisitDuration.
+
+### getVisitNum
+
+Permite a los usuarios aprovechar la IU nativa de recopilación de datos para configurar el complemento getVisitNum.

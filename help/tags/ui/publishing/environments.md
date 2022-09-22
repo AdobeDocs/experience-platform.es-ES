@@ -2,10 +2,10 @@
 title: Entornos
 description: Conozca el concepto de entornos de etiqueta y cómo funcionan dentro de Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 97%
+source-wordcount: '1468'
+ht-degree: 98%
 
 ---
 
@@ -91,7 +91,7 @@ Seleccione **[!UICONTROL Host]** para elegir un host preconfigurado para el ento
 
 ![](./images/environments/select-host.png)
 
-Cuando se crea una compilación, esta se envía a la ubicación especificada para el host asignado. Para obtener información sobre cómo crear y configurar hosts de etiquetas, consulte la [información general sobre hosts](./hosts/hosts-overview.md).
+Cuando se crea una compilación, esta se envía a la ubicación especificada para el host asignado. Para obtener información sobre cómo crear y configurar hosts en la interfaz de usuario de recopilación de datos, consulte la [información general sobre los hosts](./hosts/hosts-overview.md).
 
 ### Configuración de archivo {#archive}
 

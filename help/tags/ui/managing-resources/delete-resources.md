@@ -2,10 +2,10 @@
 title: Eliminación de recursos
 description: Obtenga información sobre cómo eliminar recursos en Adobe Experience Platform.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 90%
+source-wordcount: '550'
+ht-degree: 96%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 90%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-La eliminación de un recurso es la eliminación permanente de ese recurso de Adobe Experience Platform. Si desea eliminar un recurso de una biblioteca de etiquetas específica, pero desea que dicho recurso esté disponible para su uso en otras bibliotecas, consulte la guía de [eliminación de recursos de una biblioteca](remove-resources-from-library.md).
+La eliminación de un recurso es la eliminación permanente de ese recurso de Adobe Experience Platform. Si desea que el recurso aparezca en la interfaz de usuario de recopilación de datos, pero no en su biblioteca de etiqueta, consulte [Eliminar recursos de la biblioteca](remove-resources-from-library.md).
 
 Puede eliminar elementos, reglas, extensiones, hosts, entornos y propiedades de datos. Una vez eliminados, estos recursos no se pueden recuperar.
 

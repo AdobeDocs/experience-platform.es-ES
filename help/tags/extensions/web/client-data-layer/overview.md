@@ -2,10 +2,10 @@
 title: Extensión de la capa de datos del cliente de Adobe
 description: Obtenga información acerca de la extensión de la etiqueta de capa de datos del cliente de Adobe en Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 95%
+source-wordcount: '643'
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Instalación
 
-Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario del Experience Platform o la interfaz de usuario de recopilación de datos y seleccione Capa de datos del cliente de Adobe.
+Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario de recopilación de datos y seleccione Capa de datos del cliente de Adobe.
 
 ![Vista de extensión ACDL en el catálogo](./images/catalog.png)
 

@@ -3,9 +3,9 @@ title: Uso del Offer decisioning con el SDK web de Platform
 description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer decisioning.
 keywords: offer decisioning;toma de decisiones;SDK web;SDK web de plataforma;ofertas personalizadas;entrega de ofertas;entrega de ofertas;personalización de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '870'
 ht-degree: 5%
 
 ---
@@ -65,7 +65,7 @@ Para habilitar el Offer decisioning, realice los pasos siguientes:
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Siga las instrucciones para [instalación del SDK](../../fundamentals/installing-the-sdk.md) (El SDK se puede instalar de forma independiente o a través de la interfaz de usuario. Consulte la [guía de inicio rápido de etiquetas](../../../tags/quick-start/quick-start.md)) para obtener más información.
+1. Siga las instrucciones para [instalación del SDK](../../fundamentals/installing-the-sdk.md) (El SDK se puede instalar de forma independiente o a través del [Interfaz de usuario de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la [guía de inicio rápido de etiquetas](../../../tags/quick-start/quick-start.md)) para obtener más información.
 1. [Configuración del SDK](../../fundamentals/configuring-the-sdk.md) para el Offer decisioning. A continuación se proporcionan pasos adicionales específicos del Offer decisioning.
 
    * Instalación del SDK independiente

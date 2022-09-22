@@ -2,10 +2,10 @@
 title: Flujo de publicación
 description: Conozca el proceso de creación de bibliotecas, realización de pruebas de compilaciones y aprobación para su producción en Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 96%
+source-wordcount: '1499'
+ht-degree: 98%
 
 ---
 
@@ -42,7 +42,7 @@ En cuanto al flujo de publicación, hay cuatro estados básicos en los que puede
 * [[!UICONTROL Aprobado]](#approved)
 * [[!UICONTROL Publicado]](#published)
 
-Estos cuatro estados se representan como columnas dentro de la variable **[!UICONTROL Flujo de publicación]** pestaña .
+Estos cuatro estados se representan en columnas dentro de la pestaña **[!UICONTROL Flujo de publicación]** en la IU de recopilación de datos.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Lo que se incluye en el flujo ascendente depende de la fase actual en que se enc
 
 ![](./images/approval-workflow/upstream.png)
 
-Al editar una biblioteca en la interfaz de usuario, todos los recursos heredados del flujo ascendente se representan en la variable **[!UICONTROL Recursos Upstream]** para obtener más información. Para ver estos recursos, seleccione la pestaña Expandir debajo del encabezado de la sección.
+Cuando se edita una biblioteca en la IU de recopilación de datos, todos los recursos heredados del flujo ascendente se representan en la sección **[!UICONTROL Recursos ascendentes]**. Para ver estos recursos, seleccione la pestaña Expandir debajo del encabezado de la sección.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

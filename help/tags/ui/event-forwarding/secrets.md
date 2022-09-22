@@ -1,10 +1,10 @@
 ---
 title: Configuración de secretos en el reenvío de eventos
-description: Aprenda a configurar secretos en la interfaz de usuario para autenticarse en los puntos finales utilizados en las propiedades de reenvío de eventos.
+description: Aprenda a configurar secretos en la interfaz de usuario de recopilación de datos para autenticarse en los puntos finales utilizados en las propiedades de reenvío de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1637'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Actualmente hay tres tipos de secreto compatibles:
 
 {style=&quot;table-layout:auto&quot;}
 
-Esta guía proporciona información general de alto nivel sobre cómo configurar los secretos para el reenvío de eventos ([!UICONTROL Edge]) en la interfaz de usuario del Experience Platform o la interfaz de usuario de la recopilación de datos.
+Esta guía proporciona información general de alto nivel sobre cómo configurar los secretos para el reenvío de eventos ([!UICONTROL Edge]) en la interfaz de usuario de la recopilación de datos.
 
 >[!NOTE]
 >
@@ -32,13 +32,13 @@ Esta guía proporciona información general de alto nivel sobre cómo configurar
 
 ## Requisitos previos
 
-En esta guía se da por hecho que ya está familiarizado con la administración de recursos para etiquetas y reenvío de eventos en la interfaz de usuario, incluida la creación de un elemento de datos y una regla de reenvío de eventos. Consulte la guía de [administración de recursos](../managing-resources/overview.md) si necesita una introducción.
+En esta guía se da por hecho que ya está familiarizado con la administración de recursos para etiquetas y reenvío de eventos en la interfaz de usuario de recopilación de datos, incluida la creación de un elemento de datos y una regla de reenvío de eventos. Consulte la guía de [administración de recursos](../managing-resources/overview.md) si necesita una introducción.
 
 También debe comprender bien el flujo de publicación de las etiquetas y el reenvío de eventos, incluido cómo agregar recursos a una biblioteca e instalar una compilación en el sitio web para realizar pruebas. Consulte la [información general de publicación](../publishing/overview.md) para obtener más información.
 
 ## Crear un secreto {#create}
 
-Para crear un secreto, seleccione **[!UICONTROL Reenvío de eventos]** en la navegación de la izquierda, abra la propiedad de reenvío de eventos en la que desea agregar el secreto. A continuación, seleccione **[!UICONTROL Secretos]** en la navegación izquierda, seguido de **[!UICONTROL Crear nuevo secreto]**.
+Para crear un secreto, inicie sesión en la interfaz de usuario de la recopilación de datos y abra la propiedad de reenvío de eventos en la que desea agregar el secreto. A continuación, seleccione **[!UICONTROL Secretos]** en la navegación izquierda, seguido de **[!UICONTROL Crear nuevo secreto]**.
 
 ![Crear nuevo secreto](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -87,7 +87,7 @@ Para crear un secreto HTTP, seleccione **[!UICONTROL HTTP simple]** de la variab
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-Para crear un secreto de OAuth 2, seleccione **[!UICONTROL OAuth 2]** de la variable **[!UICONTROL Tipo]** lista desplegable. En los campos que aparecen a continuación, proporcione la [[!UICONTROL ID de cliente] y [!UICONTROL Secreto del cliente]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), así como su [[!UICONTROL URL del token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para su integración de OAuth. La variable [!UICONTROL URL del token] en la interfaz de usuario es una concatenación entre el host del servidor de autorización y la ruta del token.
+Para crear un secreto de OAuth 2, seleccione **[!UICONTROL OAuth 2]** de la variable **[!UICONTROL Tipo]** lista desplegable. En los campos que aparecen a continuación, proporcione la [[!UICONTROL ID de cliente] y [!UICONTROL Secreto del cliente]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), así como su [[!UICONTROL URL del token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para su integración de OAuth. La variable [!UICONTROL URL del token] en la interfaz de usuario de recopilación de datos es una concatenación entre el host del servidor de autorización y la ruta del token.
 
 ![Secreto de OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -180,4 +180,4 @@ Al asignar varios secretos a un solo elemento de datos e incluirlo en una regla,
 
 ## Pasos siguientes
 
-En esta guía se explica cómo administrar secretos en la interfaz de usuario. Para obtener información sobre cómo interactuar con secretos mediante la API de Reactor, consulte la [guía de extremo secret](../../api/endpoints/secrets.md).
+En esta guía se explica cómo administrar secretos en la interfaz de usuario de la recopilación de datos. Para obtener información sobre cómo interactuar con secretos mediante la API de Reactor, consulte la [guía de extremo secret](../../api/endpoints/secrets.md).

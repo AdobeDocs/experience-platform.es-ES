@@ -2,10 +2,10 @@
 title: Configuración de la organización de Experience Cloud
 description: Obtenga información sobre cómo registrar una organización de Adobe Experience Cloud para empezar a desarrollar extensiones para Adobe Experience Platform.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 92%
+source-wordcount: '608'
+ht-degree: 97%
 
 ---
 
@@ -41,9 +41,7 @@ Este programa es para empresas de consultoría que ayudan a los clientes en Adob
 >
 >En la actualidad, el correo electrónico corporativo solo se puede usar en un programa de socio únicamente, por lo que tendrá que usar otro correo electrónico corporativo como contacto registrado para cada uno de los programas.
 
-Una vez que su compañía esté en el programa de socios de Exchange, puede solicitar acceso a las soluciones de Adobe iniciando sesión en el [Sitio de socios de Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) y siguiendo los pasos a continuación.
-
-Si tiene una cuenta de Experience Cloud que requiere acceso a la IU de recopilación de datos y a la IU de Experience Platform, consulte la [guía de permisos de recopilación de datos](../../../collection/permissions.md).
+Una vez que su compañía esté en el programa de socios de Exchange, puede solicitar acceso a las soluciones de Adobe iniciando sesión en el [Sitio de socios de Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) y siguiendo los pasos a continuación. Si ya tiene una cuenta de Experience Cloud y acceso a las soluciones, pero no tiene acceso a la interfaz de usuario de recopilación de datos en Adobe Experience Platform, consulte las [instrucciones para configurar grupos y usuarios](../../ui/administration/user-permissions.md).
 
 ## Para desarrolladores independientes
 

@@ -3,7 +3,7 @@ title: Procesamiento de datos de consentimiento del cliente mediante el SDK web 
 topic-legacy: getting started
 description: Obtenga información sobre cómo integrar el SDK web de Adobe Experience Platform para procesar datos de consentimiento del cliente en Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Este tutorial supone que ya ha determinado cómo generar datos de consentimiento
 * [Creación de un conjunto de datos mediante el estándar de Adobe](./adobe/dataset.md)
 * [Crear un conjunto de datos con el estándar TCF 2.0](./iab/dataset.md)
 
-Esta guía sigue el flujo de trabajo para configurar el SDK mediante la extensión de etiqueta en la interfaz de usuario. Si no desea utilizar la extensión y prefiere incrustar directamente la versión independiente del SDK en su sitio, consulte los siguientes documentos en lugar de esta guía:
+Esta guía sigue el flujo de trabajo para configurar el SDK mediante la extensión de etiqueta en la interfaz de usuario de la recopilación de datos. Si no desea utilizar la extensión y prefiere incrustar directamente la versión independiente del SDK en su sitio, consulte los siguientes documentos en lugar de esta guía:
 
 * [Configurar un conjunto de datos](../../../edge/datastreams/overview.md)
 * [Instalación del SDK](../../../edge/fundamentals/installing-the-sdk.md)
@@ -37,7 +37,7 @@ Los pasos de instalación de esta guía requieren comprender bien las extensione
 
 ## Configurar un conjunto de datos
 
-Para que el SDK envíe datos al Experience Platform, primero debe configurar un conjunto de datos. En la interfaz de usuario de la recopilación de datos o de la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
+Para que el SDK envíe datos al Experience Platform, primero debe configurar un conjunto de datos. En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
 
 Después de crear un nuevo conjunto de datos o de seleccionar uno existente para editarlo, seleccione el botón de alternancia situado junto a **[!UICONTROL Adobe Experience Platform]**. A continuación, utilice los valores que se indican a continuación para completar el formulario.
 
@@ -80,7 +80,7 @@ Si la región del usuario está determinada por una CMP, puede realizar los sigu
 1. En el controlador de eventos, establezca un `adobeDefaultConsent` en función de la región del usuario y, a continuación, cargue el script de la biblioteca de etiquetas con JavaScript.
 1. Configure un elemento de datos que utilice la variable `adobeDefaultConsent` JavaScript y utilice este elemento de datos como valor de consentimiento predeterminado para el usuario.
 
-Para crear un elemento de datos en la interfaz de usuario, seleccione **[!UICONTROL Elementos de datos]** en el panel de navegación izquierdo, seleccione **[!UICONTROL Añadir elemento de datos]** para navegar al cuadro de diálogo de creación de elementos de datos.
+Para crear un elemento de datos en la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Elementos de datos]** en el panel de navegación izquierdo, seleccione **[!UICONTROL Añadir elemento de datos]** para navegar al cuadro de diálogo de creación de elementos de datos.
 
 A partir de aquí, debe crear un [!UICONTROL Variable JavaScript] elemento de datos basado en `adobeDefaultConsent`. Seleccione **[!UICONTROL Guardar]** cuando haya terminado.
 

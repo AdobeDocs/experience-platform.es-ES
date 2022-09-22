@@ -2,10 +2,10 @@
 title: Información general sobre la extensión de Adobe Target
 description: Obtenga información sobre la extensión de etiquetas para Adobe Target en Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 93%
+source-wordcount: '1194'
+ht-degree: 98%
 
 ---
 
@@ -31,7 +31,7 @@ Para configurar la extensión, abra la pestaña [!UICONTROL Extensiones], pase e
 
 ### Configuración de at.js
 
-Todos los ajustes de at.js, excepto el Tiempo de espera, se recuperan automáticamente de la configuración de at.js en la interfaz de usuario de Target. La extensión solo recupera la configuración de la interfaz de usuario de Target cuando se agrega por primera vez, por lo que todos los ajustes se deben administrar en la interfaz de usuario si se necesitan actualizaciones adicionales.
+Todos los ajustes de at.js, excepto el Tiempo de espera, se recuperan automáticamente de la configuración de at.js en la interfaz de usuario de Target. La extensión solo recupera la configuración de la interfaz de usuario de Target cuando se agrega por primera vez, por lo que todos los ajustes se deben administrar en la interfaz de usuario de recopilación de datos si se necesitan actualizaciones adicionales.
 
 Las opciones de configuración disponibles son las siguientes:
 
@@ -141,7 +141,7 @@ A continuación se indican algunos aspectos que se deben tener en cuenta al util
    * Cuando se recibe la respuesta del mbox global
    * Cuando se agota el tiempo de espera de la solicitud del mbox global
    * Cuando se agota el tiempo de espera del propio fragmento
-* La acción &quot;Fire Global Mbox&quot; debe usarse en todas las páginas utilizando el fragmento de ocultamiento previo para minimizar su duración.
+* La acción “Fire Global Mbox” debe usarse en todas las páginas utilizando el fragmento de preocultamiento para minimizar la duración del preocultamiento.
 
 El fragmento de código de preocultamiento es el siguiente y se puede minimizar. Las opciones configurables se encuentran al final:
 

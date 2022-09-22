@@ -2,10 +2,10 @@
 title: Cargar e implementar pruebas de extremo a extremo para una extensión
 description: Obtenga información sobre cómo validar, cargar y probar la extensión en Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2394'
-ht-degree: 94%
+source-wordcount: '2392'
+ht-degree: 98%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 94%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Para probar las extensiones de etiquetas en Adobe Experience Platform, utilice la API de etiquetas o las herramientas de línea de comandos para cargar los paquetes de extensiones. A continuación, utilice la interfaz de usuario de Platform o la interfaz de usuario de recopilación de datos para instalar el paquete de extensión en una propiedad y ejercer sus capacidades dentro de una biblioteca de etiquetas y crear.
+Para probar las extensiones de etiquetas en Adobe Experience Platform, utilice la API de etiquetas o las herramientas de línea de comandos para cargar los paquetes de extensiones. A continuación, utilice la IU de recopilación de datos para instalar el paquete de extensión en una propiedad y usar sus funcionalidades dentro de una biblioteca de etiquetas y compilarlo.
 
 Este documento explica cómo implementar pruebas de extremo a extremo para la extensión.
 
@@ -74,7 +74,7 @@ El paquete de extensión se cargará y el cargador le proporcionará el ID del e
 
 >[!NOTE]
 >
->Al cargar o aplicar parches, los paquetes de extensión se colocan en un estado pendiente mientras el sistema extrae el paquete y lo implementa de forma asíncrona. Mientras este proceso está teniendo lugar, puede sondear el `extension_package` ID de su estado mediante la API y en la interfaz de usuario de . Verá una tarjeta de extensión en el catálogo marcado como Pendiente.
+>Al cargar o aplicar parches, los paquetes de extensión se colocan en un estado pendiente mientras el sistema extrae el paquete y lo implementa de forma asíncrona. Mientras se lleva a cabo este proceso, puede sondear el ID del `extension_package` para su estado mediante la API y dentro de la IU de recopilación de datos. Verá una tarjeta de extensión en el catálogo marcado como Pendiente.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ El paquete de extensión se cargará y el cargador le proporcionará el ID del e
 
 ## Creación de una propiedad de desarrollo {#property}
 
-Después de iniciar sesión en la interfaz de usuario y seleccionar **[!UICONTROL Etiquetas]** en el panel de navegación izquierdo, la variable [!UICONTROL Propiedades] se muestra. Una propiedad es un contenedor para las etiquetas que desea implementar y se puede utilizar en uno o varios sitios.
+Después de iniciar sesión en la IU de recopilación de datos, se muestra la pantalla Propiedades. Una propiedad es un contenedor para las etiquetas que desea implementar y se puede utilizar en uno o varios sitios.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -142,7 +142,7 @@ Las extensiones pueden definir tipos de elementos de datos si es necesario para 
 
 Cuando un usuario selecciona la extensión desde el menú desplegable **Extensión**, la lista desplegable **Tipo de elemento de datos** se rellena con cualquier tipo de elemento de datos que proporciona la extensión. A continuación, el usuario puede asignar cada elemento de datos a su valor de origen. Los elementos de datos se pueden utilizar cuando se generan reglas en el Evento de cambio de elemento de datos o en el Evento de código personalizado para activar una regla que se va a ejecutar. También se puede utilizar un elemento de datos en la condición de elemento de datos u otras condiciones, excepciones o acciones de una regla.
 
-Una vez creado el elemento de datos (con la asignación configurada), los usuarios pueden hacer referencia a los datos de origen simplemente haciendo referencia al elemento de datos. Si el origen del valor cambia alguna vez (rediseños del sitio, etc.) los usuarios solo deben actualizar la asignación una vez en la interfaz de usuario y todos los elementos de datos recibirán automáticamente el nuevo valor de origen.
+Una vez creado el elemento de datos (con la asignación configurada), los usuarios pueden hacer referencia a los datos de origen simplemente haciendo referencia al elemento de datos. Si el origen del valor cambia alguna vez (rediseños del sitio, etc.) los usuarios solo deberán actualizar la asignación una vez en la IU de recopilación de datos y todos los elementos de datos recibirán automáticamente el nuevo valor de origen.
 
 ### Reglas
 
@@ -226,6 +226,6 @@ Cuando descubre cambios que deben realizarse en el paquete de extensión, el pro
    >
    >Los argumentos se pueden pasar en la línea de comandos para ahorrar tiempo, al evitarse la introducción repetida de credenciales. Para obtener más información al respecto, lea la [documentación del cargador de Reactor](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. El paso de instalación se puede omitir al actualizar un paquete existente.
-1. Modificar recursos : si se ha cambiado la configuración de cualquiera de los componentes de la extensión, deberá actualizar esos recursos en la interfaz de usuario.
+1. Modificar recursos: recursos si se ha cambiado la configuración de cualquiera de los componentes de la extensión, deberá actualizar esos recursos en la IU de recopilación de datos.
 1. Añada los cambios más recientes en la biblioteca y vuelva a compilar.
 1. Complete otra ronda de pruebas.

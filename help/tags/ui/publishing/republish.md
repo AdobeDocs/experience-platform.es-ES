@@ -2,10 +2,10 @@
 title: Volver a publicar una biblioteca
 description: Obtenga información sobre cómo volver a publicar una biblioteca de etiquetas anterior en Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 93%
+source-wordcount: '650'
+ht-degree: 97%
 
 ---
 
@@ -45,7 +45,7 @@ Esto significa que, cuando vuelve a publicar una biblioteca anterior:
 
 * La forma en que los entornos de ensayo y desarrollo calculan qué se encuentra en fase de desarrollo no varía
 
-Tenga en cuenta la situación específica cuando se restaure una versión anterior debido a un problema con una regla específica. La revisión de regla que está en proceso de producción podría, por ejemplo, tener tres revisiones anteriores. Cuando ve esa regla en la interfaz de usuario para corregirla, sigue mostrando los cambios guardados más recientes en lugar de los que están actualmente en producción.
+Tenga en cuenta la situación específica cuando se restaure una versión anterior debido a un problema con una regla específica. La revisión de regla que está en proceso de producción podría, por ejemplo, tener tres revisiones anteriores. Cuando ve esa regla en la IU de recopilación de datos para corregirla, sigue mostrando los cambios guardados más recientes en lugar de los que están actualmente en producción.
 
 Por este motivo, Platform le notifica que una propiedad está en estado de republicación como recordatorio de que lo que está viendo en la interfaz de usuario de recopilación de datos está más alejado de la fase de producción de lo habitual. Esta notificación se puede omitir y aparece una vez por cada sesión de explorador la primera vez que se ve la propiedad.
 

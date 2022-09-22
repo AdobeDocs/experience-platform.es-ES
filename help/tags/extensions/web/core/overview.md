@@ -2,10 +2,10 @@
 title: Información general de la extensión Core
 description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '5482'
-ht-degree: 83%
+source-wordcount: '5492'
+ht-degree: 87%
 
 ---
 
@@ -88,7 +88,7 @@ Se activa el evento si el volumen aumenta o se reduce. Consulte la sección [Opc
 
 #### Orientation Change
 
-El evento se déclencheur si cambia la orientación del dispositivo. Debe especificar la duración durante la cual debe cambiar la orientación para activar del evento. No hay configuraciones para este tipo de evento.
+Se activa el evento si cambia la orientación del dispositivo. Debe especificar la duración durante la cual debe cambiar la orientación para activar del evento. No hay configuraciones para este tipo de evento.
 
 #### Zoom Change
 
@@ -108,7 +108,7 @@ Se activa el evento si se selecciona el elemento especificado (al hacer clic). T
 
 Cuando se retrasa el vínculo, Platform impide que el explorador salga de la página. A continuación, realiza una redirección de JavaScript al destino original después del tiempo de espera especificado. Esto es especialmente peligroso cuando el marcado de la página tiene etiquetas `<a>` donde la funcionalidad deseada no aleja al usuario de la página. Si no puede resolver el problema de ninguna otra manera, debe ser extremadamente preciso en la definición del selector para que este evento se active exactamente donde lo necesita y no en otro lugar.
 
-El valor de retraso del vínculo predeterminado es 100 milisegundos. Tenga en cuenta que las etiquetas siempre esperarán el tiempo especificado y no están conectadas a la ejecución de las acciones de la regla de ninguna manera. Es posible que el retraso obligue al usuario a esperar más tiempo del necesario y también que el retraso no sea lo suficientemente largo como para que todas las acciones de la regla se completen correctamente. Los retrasos más largos proporcionan más tiempo para la ejecución de reglas, pero también empeoran la experiencia del usuario.
+El valor de retraso del vínculo predeterminado es 100 milisegundos. Tenga en cuenta que las etiquetas siempre esperarán la cantidad de tiempo especificada y no está conectado a la ejecución de las acciones de la regla de ninguna manera. Es posible que el retraso obligue al usuario a esperar más tiempo del necesario, y también que el retraso no sea lo suficientemente largo como para que todas las acciones de la regla se completen correctamente. Los retrasos más largos proporcionan más tiempo para la ejecución de reglas, pero también empeoran la experiencia del usuario.
 
 Para corregir el retraso, es necesario proporcionar el elemento seleccionado que activa el evento y la cantidad de tiempo específica antes de activarlo.
 
@@ -235,7 +235,7 @@ Utilice el editor de código integrado para introducir el código personalizado:
 1. Escriba el Custom Code.
 1. Seleccione **[!UICONTROL Guardar]**.
 
-Una variable denominada `event` estará disponible automáticamente y podrá hacer referencia a ella desde su Custom Code. El objeto `event` contendrá información útil sobre el evento que activó la regla. La forma más sencilla de determinar qué datos de eventos están disponibles es registrar `event` en la consola desde el código personalizado:
+Una variable denominada `event` estará disponible automáticamente y podrá hacer referencia a ella desde su Custom Code. El objeto `event` contendrá información útil sobre el evento que activó la regla. La forma más sencilla de determinar qué datos de eventos están disponibles es registrar `event` en la consola desde el Custom Code:
 
 ```javascript
 console.log(event);
@@ -307,11 +307,11 @@ Están disponibles los siguientes operadores de comparación de valores:
 
 **Is True:** La condición devuelve el valor “True” si se trata de una condición booleana con el valor “True”. El valor que proporcione no se convierte en booleano si es de cualquier otro tipo. Cualquier valor que no sea booleano con el valor “True” provoca que se devuelva el valor “False”.
 
-**Is Truthy:** La condición devuelve el valor “True” si el valor es “True” después de convertirse en un valor booleano. Consulte la documentación [MDN&#39;s Truthy](https://developer.mozilla.org/es-ES/docs/Glossary/Truthy) de MDN para ver ejemplos de valores “Truthy”.
+**Is Truthy:** La condición devuelve el valor “True” si el valor es “True” después de convertirse en un valor booleano. Consulte la [documentación sobre Truthy de MDN](https://developer.mozilla.org/es-ES/docs/Glossary/Truthy) para ver ejemplos de valores “Truthy”.
 
 **Is False:** La condición devuelve el valor “True” si se trata de una condición booleana con el valor “False”. El valor que proporcione no se convierte en booleano si es de cualquier otro tipo. Cualquier valor que no sea booleano con el valor “False” provoca que se devuelva el valor “False”.
 
-**Is Falsy:** La condición devuelve el valor “True” si el valor es “False” después de convertirse en un valor booleano. Consulte la documentación [MDN&#39;s Falsy](https://developer.mozilla.org/es-ES/docs/Glossary/Falsy) para ver ejemplos de valores “Falsy”.
+**Is Falsy:** La condición devuelve el valor “True” si el valor es “False” después de convertirse en un valor booleano. Consulte la [documentación sobre Falsy de MDN](https://developer.mozilla.org/es-ES/docs/Glossary/Falsy) para ver ejemplos de valores “falsy”.
 
 #### Variable
 
@@ -351,14 +351,14 @@ Configure la cantidad de veces que el visitante debe ver la página antes de act
 
 #### Sessions
 
-Se activa la acción si el número de sesiones del usuario cumple los criterios especificados.
+Se activa la acción si la cantidad de sesiones del usuario cumple los criterios especificados.
 
 1. Seleccione si el número de sesiones debe ser mayor, igual o menor que el valor especificado.
 1. Especifique el número de sesiones que determinan si se cumple la condición.
 
 #### Time On Site
 
-Se activa la acción si el número de sesiones del usuario cumple los criterios especificados.
+Se activa la acción si la cantidad de sesiones del usuario cumple los criterios especificados.
 
 Configure cuánto tiempo debe estar el visitante en el sitio antes de activar la acción.
 
@@ -367,9 +367,9 @@ Configure cuánto tiempo debe estar el visitante en el sitio antes de activar la
 
 #### Traffic Source
 
-Se activa la acción si el número de sesiones del usuario cumple los criterios especificados.
+Se activa la acción si la cantidad de sesiones del usuario cumple los criterios especificados.
 
-Especifique la fuente del tráfico del visitante que debe tener el valor “True” para que se active la acción.
+Especifique la fuente del tráfico del visitante que debe tener el valor “true” para que se active la acción.
 
 1. Especifique la fuente de tráfico.
 1. (Opcional) Habilite Regex si es una expresión regular.
@@ -560,13 +560,13 @@ Proporcione el código que se ejecuta después de activar el evento y de evaluar
 1. Seleccione **[!UICONTROL Abrir editor]**.
 1. Edite el código y, a continuación, haga clic en **[!UICONTROL Guardar]**.
 
-Cuando se selecciona JavaScript como idioma, estará disponible automáticamente una variable denominada `event` y podrá hacer referencia a ella desde su Custom Code. El objeto `event` contendrá información útil sobre el evento que activó la regla. La forma más sencilla de determinar qué datos de eventos están disponibles es registrar `event` en la consola desde el código personalizado:
+Cuando se selecciona JavaScript como idioma, estará disponible automáticamente una variable denominada `event` y podrá hacer referencia a ella desde su Custom Code. El objeto `event` contendrá información útil sobre el evento que activó la regla. La forma más sencilla de determinar qué datos de eventos están disponibles es registrar `event` en la consola desde el Custom Code:
 
 ```javascript
 console.log(event);
 ```
 
-Ejecute la regla en un explorador e inspeccione el objeto de evento registrado en la consola del explorador. Después de saber qué información está disponible, puede utilizarla para la toma de decisiones mediante programación dentro del código personalizado, el envío de una parte del objeto `event` a un servidor, etc.
+Ejecute la regla en un explorador e inspeccione el objeto de evento registrado en la consola del explorador. Después de saber qué información está disponible, puede utilizarla para la toma de decisiones mediante programación dentro del Custom Code, el envío de una parte del objeto `event` a un servidor, etc.
 
 ### Procesamiento de acciones de Custom Code
 
@@ -588,7 +588,7 @@ El validador utilizado en el editor de código de etiquetas se ha diseñado para
 
 #### Secuencia de acciones
 
-Cuando la opción &quot;Run rule components in sequence&quot; de la configuración de propiedades está activada, puede hacer que los componentes de regla subsiguientes esperen mientras la acción realiza una tarea asincrónica.  Esto funciona de forma diferente para un Custom Code JavaScript y HTML.
+Cuando la opción &quot;Run rule components in sequence&quot; de la configuración de propiedades está activada, puede hacer que los componentes de regla subsiguientes esperen mientras la acción realiza una tarea asincrónica. Esto funciona de forma diferente para un Custom Code JavaScript y HTML.
 
 *JavaScript*
 
@@ -668,7 +668,7 @@ Cualquier valor de cadena constante al que se pueda hacer referencia en acciones
 
 Puede introducir código JavaScript personalizado en la IU si selecciona la opción Abrir editor e inserta código en la ventana del editor.
 
-Se debe incluir una sentencia de retorno en la ventana del editor para indicar qué valor se tiene que usar como valor del elemento de datos. Si no se incluye una sentencia de retorno o se devuelve el valor `null` o `undefined`, el valor predeterminado del elemento de datos se utilizará como valor del elemento de datos.
+Se debe incluir una sentencia de retorno en la ventana del editor para indicar qué valor se tiene que usar como valor del elemento de datos. Si no se incluye una sentencia de retorno o se arroja el valor `null` o `undefined`, el valor predeterminado del elemento de datos se utilizará como valor del elemento de datos.
 
 **Ejemplo:**
 
@@ -681,14 +681,14 @@ if (window.location.pathname == '/') {
 }
 ```
 
-Si se recupera el elemento de datos de Custom Code como parte de una ejecución de regla, estará disponible automáticamente una variable denominada `event` a la que podrá hacer referencia desde el Custom Code. El objeto `event` contendrá información útil sobre el evento que activó la regla. La forma más sencilla de determinar qué datos de eventos están disponibles es registrar `event` en la consola desde el código personalizado:
+Si se recupera el elemento de datos de Custom Code como parte de una ejecución de regla, estará disponible automáticamente una variable denominada `event` a la que podrá hacer referencia desde el Custom Code. El objeto `event` contendrá información útil sobre el evento que activó la regla. La forma más sencilla de determinar qué datos de eventos están disponibles es registrar `event` en la consola desde el Custom Code:
 
 ```javascript
 console.log(event);
 return true;
 ```
 
-Ejecute la regla en un explorador e inspeccione el objeto de evento registrado en la consola del explorador. Una vez que sepa qué información está disponible bajo las distintas reglas que pueden utilizar el elemento de datos, puede utilizarla para la toma de decisiones mediante programación dentro del código personalizado o devolver una parte del objeto `event` como valor del elemento de datos.
+Ejecute la regla en un explorador e inspeccione el objeto de evento registrado en la consola del explorador. Una vez que sepa qué información está disponible bajo las distintas reglas que pueden utilizar el elemento de datos, puede utilizarla para la toma de decisiones mediante programación dentro del Custom Code o devolver una parte del objeto `event` como valor del elemento de datos.
 
 ### Atributo DOM
 
@@ -708,7 +708,7 @@ Obtener el valor de:
 
 Es posible hacer referencia a cualquier objeto JavaScript o variable mediante el campo de ruta.
 
-Los elementos de datos de etiquetas se pueden utilizar para capturar las variables de JavaScript de marcado o las propiedades de objeto. Estos valores se pueden usar dentro de las extensiones o reglas personalizadas haciendo referencia a los elementos de datos de etiquetas. Si la fuente de los datos cambia, solo es necesario actualizar la referencia a la fuente.
+Los elementos de datos de etiquetas se pueden utilizar para capturar las variables de JavaScript de marcado o las propiedades de objeto. Estos valores se pueden usar dentro de las extensiones o reglas personalizadas haciendo referencia a los elementos de datos de etiquetas. Si la fuente de los datos cambia, solo es necesario actualizar la referencia a la fuente dentro de la interfaz de usuario de la recopilación de datos.
 
 En el ejemplo siguiente, el marcado contiene una variable de JavaScript llamada `Page_Name`.
 
@@ -719,9 +719,9 @@ En el ejemplo siguiente, el marcado contiene una variable de JavaScript llamada 
 </script>
 ```
 
-Cuando cree el elemento de datos, simplemente proporcione la ruta a esa variable.
+Cuando cree el elemento de datos en la interfaz de usuario de la recopilación de datos, simplemente proporcione la ruta a esa variable.
 
-Si utiliza un objeto de recopilación de datos como parte de la capa de datos, utilice la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos, como `_myData.pageName`o `digitalData.pageName`, etc.
+Si utiliza un objeto de recopilación de datos como parte de la capa de datos, solo tiene que utilizar la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos como, por ejemplo, `_myData.pageName` o `digitalData.pageName`, etc.
 
 #### Ejemplo:
 
@@ -807,7 +807,7 @@ Puede seleccionar uno de los siguientes atributos de página para usarlos en el 
 
 Especifique un único parámetro de URL en el campo URL Parameter.
 
-Solo es necesaria la sección de nombres y cualquier indicador especial como “?” o &quot;=&quot; debe omitirse.
+Solo es necesaria la sección de nombres y cualquier indicador especial como &quot;?&quot; o &quot;=&quot; debe omitirse
 
 #### Ejemplo:
 

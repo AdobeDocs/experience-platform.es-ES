@@ -2,10 +2,10 @@
 title: Tipos de elementos de datos para extensiones de Edge
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de elemento de datos para una extensión de etiqueta en una propiedad Edge.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 51%
+source-wordcount: '435'
+ht-degree: 52%
 
 ---
 
@@ -29,7 +29,7 @@ Este documento explica cómo definir tipos de elementos de datos para una extens
 
 Los tipos de elementos de datos suelen consistir en lo siguiente:
 
-1. Vista que se muestra en la interfaz de usuario del Experience Platform y en la de recopilación de datos y que permite a los usuarios modificar la configuración del elemento de datos.
+1. Vista que se muestra en la interfaz de usuario de la recopilación de datos y que permite a los usuarios modificar la configuración del elemento de datos.
 2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y recuperar fragmentos de datos.
 
 Si desea permitir que los usuarios recuperen un fragmento de datos de la capa de datos personalizada, su módulo puede tener el aspecto de este ejemplo.

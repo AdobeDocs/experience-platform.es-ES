@@ -2,10 +2,10 @@
 title: Información general sobre la extensión Adobe Target v2
 description: Obtenga información sobre la extensión de etiqueta Adobe Target v2 en Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 92%
+source-wordcount: '1363'
+ht-degree: 98%
 
 ---
 
@@ -31,7 +31,7 @@ Para configurar la extensión, abra la pestaña Extensiones, pase el puntero sob
 
 ### Configuración de at.js
 
-Todos los ajustes de at.js, excepto el Tiempo de espera, se recuperan automáticamente de la configuración de at.js en la interfaz de usuario de Target. La extensión solo recupera la configuración de la interfaz de usuario de Target cuando se agrega por primera vez, por lo que todos los ajustes se deben administrar en la interfaz de usuario si se necesitan actualizaciones adicionales.
+Todos los ajustes de at.js, excepto el Tiempo de espera, se recuperan automáticamente de la configuración de at.js en la interfaz de usuario de Target. La extensión solo recupera la configuración de la interfaz de usuario de Target cuando se agrega por primera vez, por lo que todos los ajustes se deben administrar en la interfaz de usuario de recopilación de datos si se necesitan actualizaciones adicionales.
 
 Las opciones de configuración disponibles son las siguientes:
 
@@ -133,8 +133,8 @@ A continuación se indican algunos aspectos que se deben tener en cuenta al util
    * Cuando se recibe la respuesta de carga de página
    * Cuando se agota el tiempo de espera de la solicitud de página
    * Cuando se agota el tiempo de espera del propio fragmento
-* La acción &quot;Fire Page Load Request&quot; debe usarse en todas las páginas utilizando el fragmento de ocultamiento previo para minimizar su duración.
-* La ocultación del cuerpo también debe estar habilitada en la acción de solicitud de carga de página de la regla de carga de página que use para Target; de lo contrario, todas las cargas de página permanecerán ocultas durante el periodo de espera.
+* La acción “Fire Page Load Request” debe usarse en todas las páginas utilizando el fragmento de ocultación previo para minimizar su duración.
+* También debe habilitarse la opción de ocultar el cuerpo en la acción de solicitud de carga de página de la regla de carga de página que use para Target en la interfaz de usuario de recopilación de datos; de lo contrario, todas las cargas de página permanecerán ocultas durante el periodo de espera.
 
 El fragmento de código de preocultamiento es el siguiente y se puede minimizar. Las opciones configurables se encuentran al final:
 

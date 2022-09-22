@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión AEM Asset Insights
 description: Últimas notas de la versión de la extensión de etiquetas AEM Asset Insights en Adobe Experience Platform.
 exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 64%
+source-wordcount: '137'
+ht-degree: 86%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 64%
 
 - Esta extensión está pensada para utilizarse con AEM Asset Insights.
 - Más específicamente, reemplaza el proceso ***pageTracker*** y el código de página.
-- Cuando se configura y activa, esta extensión envía AEM métricas de impresión y clics de recursos a Adobe Analytics, que se importará automáticamente de nuevo en los informes de Asset Insights en AEM.
+- Cuando se configura en la IU de recopilación de datos, esta extensión envía métricas de impresión y clics de AEM Asset a Adobe Analytics, que se importarán automáticamente de nuevo en los informes de Asset Insights en AEM.
 
 **Correcciones de errores**
 

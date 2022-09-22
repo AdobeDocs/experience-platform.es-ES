@@ -2,10 +2,10 @@
 title: Copiar recursos
 description: Aprenda a crear un nuevo recurso de etiquetas con la configuración de un recurso de etiquetas existente en Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 94%
+source-wordcount: '785'
+ht-degree: 97%
 
 ---
 
@@ -35,7 +35,7 @@ Si está copiando una regla o un elemento de datos, en el cuadro de diálogo Cop
 
 >[!NOTE]
 >
->No es posible copiar recursos en otra propiedad si una propiedad está configurada para el desarrollo de extensiones y la otra propiedad no.
+>En la interfaz de usuario de recopilación de datos, no se pueden copiar recursos a otra propiedad si una propiedad está configurada para el desarrollo de extensiones y la otra propiedad no.
 
 Una vez que haya configurado el comportamiento deseado, seleccione **[!UICONTROL Copiar]**.
 

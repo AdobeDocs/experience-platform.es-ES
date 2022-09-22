@@ -2,10 +2,10 @@
 title: Información general sobre la extensión BrightCove Video Tracking
 description: Obtenga información acerca de la extensión de etiquetas BrightCove Video Tracking en Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 95%
+source-wordcount: '915'
+ht-degree: 98%
 
 ---
 
@@ -100,7 +100,7 @@ Se deben incluir los siguientes objetos de extensión de vídeo:
 
 >[!TIP]
 >
->Para aquellos que no deseen aprovisionar varias eVars o propiedades para cada elemento de vídeo, los valores de los elementos de datos se concatenan como método alternativo. A continuación, se dividen en informes de clasificación mediante la herramienta de clasificación del generador de reglas. Consulte la documentación de la [Herramienta de clasificación del generador de reglas](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es) para obtener más información. Finalmente, se aplican como un segmento en Analysis Workspace.
+>Para aquellos que no deseen aprovisionar varias eVars o propiedades para cada elemento de vídeo, existe un método alternativo. Los valores de los elementos de datos se pueden concatenar dentro de la IU de recopilación de datos. A continuación, se dividen en informes de clasificación mediante la herramienta de clasificación del generador de reglas. Consulte la documentación de la [Herramienta de clasificación del generador de reglas](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es) para obtener más información. Finalmente, se aplican como un segmento en Analysis Workspace.
 >
 >Para ello, cree un nuevo elemento de datos denominado, por ejemplo, Metadatos de vídeo, y prográmelo para extraer todos los elementos de datos de vídeo (antes mencionados) y concatenarlos juntos.
 

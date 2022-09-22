@@ -2,9 +2,9 @@
 title: Preguntas frecuentes sobre el SDK web de Adobe Experience Platform
 description: Obtenga respuestas a las preguntas más frecuentes sobre el SDK web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1935'
 ht-degree: 2%
 
 ---
@@ -82,7 +82,7 @@ Alloy es el nombre del código para el SDK web de Adobe Experience Platform. Se 
 
 ## ¿Los clientes necesitan comprar Adobe Experience Platform para usar la variable [!DNL Web SDK]?
 
-No. Cualquier cliente de Adobe Digital Experience puede utilizar el SDK web de Adobe Experience Platform de forma gratuita. Los clientes que deseen utilizar la variable [!DNL Web SDK] tendrá que configurar los permisos adecuados para crear esquemas, conjuntos de datos, áreas de nombres de identidad y conjuntos de datos en la interfaz de usuario de la recopilación de datos o del Experience Platform.
+No. Cualquier cliente de Adobe Digital Experience puede utilizar el SDK web de Adobe Experience Platform de forma gratuita. Los clientes que deseen utilizar la variable [!DNL Web SDK] tendrá que configurar los permisos adecuados para crear esquemas, conjuntos de datos, áreas de nombres de identidad y conjuntos de datos en la interfaz de usuario de la recopilación de datos de Adobe Experience Platform.
 
 Para obtener más información sobre la configuración de estos permisos, consulte nuestra documentación sobre [administración de permisos de recopilación de datos](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
@@ -135,7 +135,7 @@ No. Puede descargar el `alloy.js` presente usted mismo.
 
 Sin embargo:
 
-* El SDK web de Adobe Experience Platform requiere un ID de almacén de datos para que la red perimetral pueda identificar el flujo y determinar qué hacer con los datos. Este ID se crea dentro de Experience Platform. Esto no significa que tenga que usar la interfaz de usuario para crear propiedades o implementar el código JavaScript, pero sí que debe utilizar etiquetas para crear un ID de configuración.
+* El SDK web de Adobe Experience Platform requiere un ID de almacén de datos para que la red perimetral pueda identificar el flujo y determinar qué hacer con los datos. Este ID se crea dentro de Experience Platform. Esto no significa que tenga que usar la interfaz de usuario de recopilación de datos para crear propiedades o implementar el código JavaScript, pero sí que debe utilizar etiquetas para crear un ID de configuración.
 
 * Las etiquetas no son solo la mejor etiqueta disponible y el administrador de SDK, sino que también facilita la implementación `alloy.js` y asignar datos a esquemas XDM. Si decide no utilizar etiquetas, deberá administrar la implementación `alloy.js`, eventos y asignación de los datos en XDM antes de enviarlos. Esto es un _many_ proceso más difícil que el uso de etiquetas.
 
