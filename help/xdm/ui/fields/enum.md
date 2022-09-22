@@ -5,7 +5,7 @@ title: Definir campos de enumeración en la interfaz de usuario
 description: Obtenga información sobre cómo definir un campo de enumeración en la interfaz de usuario del Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f6fefda974d2ae6fd4b035ef3b5fe633311c9772
+source-git-commit: 878d99d9eb45f40ff76e5e90116abf032be1c93f
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 # Definir campos de enumeración en la interfaz de usuario {#enum}
 
 >[!CONTEXTUALHELP]
->id="platform_xdm_enumsuggestedvalue"
+>id="platform_xdm_enum_suggestedvalue"
 >title="enumeraciones y valores sugeridos"
 >abstract="Una enumeración restringe un campo de cadena para permitir solo la ingesta de datos que coincidan con un conjunto predefinido de valores. También puede definir un conjunto de valores sugeridos para el campo que no restrinjan la ingesta, sino que definan los atributos que puede elegir en la segmentación. Consulte la Documentación para obtener más información."
 
