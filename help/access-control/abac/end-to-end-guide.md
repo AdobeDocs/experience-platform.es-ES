@@ -4,9 +4,9 @@ title: Guía de extremo a extremo del control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
+source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Para ello, debe configurar funciones, recursos y políticas.
 
 Usted:
 
-* [Etiquetado de funciones para los usuarios]{#label-roles}: Utilice el ejemplo de un proveedor de atención médica (ACME Business Group) cuyo grupo de marketing trabaja con agencias externas.
-* [Etiquetado de recursos (campos de esquema y segmentos)]{#label-resources}: Asigne la variable **[!UICONTROL Datos de Salud Regulados/ PHI]** a recursos y segmentos de esquema.
-* [Cree la directiva que los vinculará]{#policy}: Cree una directiva para vincular las etiquetas de los recursos a las etiquetas de la función que deniegan el acceso a los campos y segmentos de esquema. Esto denegará el acceso al campo de esquema y al segmento en todos los entornos limitados para los usuarios que no tengan etiquetas coincidentes.
+* [Etiquetado de funciones para los usuarios](#label-roles): Utilice el ejemplo de un proveedor de atención médica (ACME Business Group) cuyo grupo de marketing trabaja con agencias externas.
+* [Etiquetado de recursos (campos de esquema y segmentos)](#label-resources): Asigne la variable **[!UICONTROL Datos de Salud Regulados/ PHI]** a recursos y segmentos de esquema.
+* [Cree la directiva que los vinculará](#policy): Cree una directiva para vincular las etiquetas de los recursos a las etiquetas de la función que deniegan el acceso a los campos y segmentos de esquema. Esto denegará el acceso al campo de esquema y al segmento en todos los entornos limitados para los usuarios que no tengan etiquetas coincidentes.
 
 ## Permisos
 
@@ -162,7 +162,7 @@ Repita los pasos anteriores con **[!UICONTROL Insulina &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configurar acciones permisibles e inadmisibles para una directiva"
->abstract="Seleccione Permitir acceso a para configurar las acciones permisibles que los usuarios pueden realizar con los recursos. Seleccione denegar el acceso a para configurar las acciones no permisibles que los usuarios no pueden realizar con los recursos."
+>abstract="A <b>denegar el acceso a</b> la directiva denegará el acceso a los usuarios cuando se cumplan los criterios. Cuando se combina con <b>siendo false lo siguiente</b> : se denegará el acceso a todos los usuarios a menos que cumplan los criterios coincidentes establecidos. Este tipo de directiva le permite proteger un recurso confidencial y solo permitir el acceso a los usuarios que tengan etiquetas coincidentes. <br>A <b>permitir acceso a</b> esta directiva permitirá a los usuarios acceder cuando se cumplan los criterios. Cuando se combina con <b>Lo siguiente es verdadero</b> : los usuarios tendrán acceso si cumplen los criterios coincidentes establecidos. Esto no deniega explícitamente el acceso a los usuarios, pero añade un acceso de permiso. Este tipo de directiva le permite dar acceso adicional a los recursos y además de a los usuarios que ya tienen acceso a través de permisos de funciones&quot;.</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Editar una directiva"
 
 >[!CONTEXTUALHELP]
