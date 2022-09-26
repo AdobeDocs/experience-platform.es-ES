@@ -2,43 +2,32 @@
 title: Conexión de datos de Verizon MediaYahoo
 description: DataX es una infraestructura agregada de Verizon Media/Yahoo que aloja varios componentes que permiten a Verizon Media/Yahoo intercambiar datos con sus socios externos de forma segura, automatizada y escalable.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: f61771ec11b8bd2d19e303b39e57e82da8f11ead
 workflow-type: tm+mt
-source-wordcount: '775'
-ht-degree: 4%
+source-wordcount: '789'
+ht-degree: 3%
 
 ---
 
-# Conexión de datos de Verizon Media/Yahoo DataX
+# [!DNL Verizon Media/Yahoo DataX] connection
 
 ## Información general {#overview}
 
-DataX es una infraestructura agregada de Verizon Media/Yahoo que aloja varios componentes que permiten a Verizon Media/Yahoo intercambiar datos con sus socios externos de forma segura, automatizada y escalable.
+[!DNL DataX] es un agregado [!DNL Verizon Media/Yahoo] infraestructura que aloja varios componentes que permiten [!DNL Verizon Media/Yahoo] intercambiar datos con sus socios externos de forma segura, automatizada y escalable.
 
 >[!IMPORTANT]
 >
->Esta página de documentación la creó el equipo DataX de Verizon Media/Yahoo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>Esta página de documentación fue creada por [!DNL Verizon Media/Yahoo]&#39;s [!DNL DataX] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## Requisitos previos {#prerequisites}
 
 **ID de MDM**
 
-Se trata de un identificador único en Yahoo DataX y es un campo obligatorio para configurar exportaciones de datos a este destino. Si no conoce este ID, póngase en contacto con su administrador de cuentas de Yahoo Data X.
-
-**Límite de tasa**
-
-DataX tiene una tasa limitada según los límites de cuota para las publicaciones de taxonomía y audiencia que se describen en la [Documentación de DataX](https://developer.verizonmedia.com/datax/guide/rate-limits/).
-
-
-| Código de error | Mensaje de error | Descripción |
-|---------|----------|---------|
-| 429 Demasiadas solicitudes | Límite de tasa excedido por hora **(Límite: 100)** | Número de solicitudes permitidas en una hora por proveedor. |
-
-{style=&quot;table-layout:auto&quot;}
+Este es un identificador único en [!DNL Yahoo DataX] y es un campo obligatorio para configurar exportaciones de datos a este destino. Si no conoce este ID, póngase en contacto con su [!DNL Yahoo DataX] administrador de cuentas.
 
 **Metadatos de taxonomía**
 
-El recurso taxonomía define una extensión sobre la estructura de metadatos DataX base
+El recurso taxonomía define una extensión sobre la base [!DNL DataX] Estructura de metadatos
 
 ```
 {
@@ -59,11 +48,26 @@ El recurso taxonomía define una extensión sobre la estructura de metadatos Dat
 }
 ```
 
-Más información sobre [Metadatos de taxonomía](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) en la documentación para desarrolladores de DataX.
+Más información sobre [Metadatos de taxonomía](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) en el [!DNL DataX] documentación para desarrolladores.
+
+## Límites de tarifas y barreras {#rate-limits-guardrails}
+
+>[!IMPORTANT]
+>
+>Al activar más de 100 segmentos en [!DNL Verizon Media/Yahoo DataX], es posible que reciba errores de limitación de velocidad del destino. Al activar segmentos en la variable [!DNL Yahoo/DataX] destino, se recomienda activar menos de 100 segmentos en un flujo de datos de activación. Si necesita activar más segmentos, cree un nuevo destino en la misma cuenta.
+
+[!DNL DataX] está limitada por la tasa según los límites de cuota para publicaciones de taxonomía y audiencia que se describen en la [Documentación de DataX](https://developer.verizonmedia.com/datax/guide/rate-limits/).
+
+
+| Código de error | Mensaje de error | Descripción |
+|---------|----------|---------|
+| 429 Demasiadas solicitudes | Límite de tasa excedido por hora **(Límite: 100)** | Número de solicitudes permitidas en una hora por proveedor. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Identidades compatibles {#supported-identities}
 
-Verizon Media admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+[!DNL Verizon Media] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 | Identidad de Target | Descripción | Consideraciones |
 |---|---|---|
@@ -86,7 +90,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ## Casos de uso {#use-cases}
 
-Las API de DataX están disponibles para los anunciantes que deseen dirigirse a un grupo de audiencia específico con direcciones de correo electrónico marcadas por Verizon Media (VMG) pueden crear rápidamente un nuevo segmento y insertar el grupo de audiencia deseado con la API casi en tiempo real de VMG.
+[!DNL DataX] Las API están disponibles para los anunciantes que desean dirigirse a un grupo de audiencia específico marcado por direcciones de correo electrónico en [!DNL Verizon Media] (VMG) puede crear rápidamente un nuevo segmento e insertar el grupo de audiencia deseado mediante la API casi en tiempo real de VMG.
 
 ## Conectarse al destino {#connect}
 
@@ -104,7 +108,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de MDM]**: Se trata de un identificador único en Yahoo DataX y es un campo obligatorio para configurar exportaciones de datos a este destino. Si no conoce este ID, póngase en contacto con su administrador de cuentas de Yahoo Data X.  Con los ID de MDM, los datos pueden restringirse para su uso únicamente con un determinado conjunto de usuarios exclusivos (como los datos de origen de los anunciantes).
+* **[!UICONTROL ID de MDM]**: Este es un identificador único en [!DNL Yahoo DataX] y es un campo obligatorio para configurar exportaciones de datos a este destino. Si no conoce este ID, póngase en contacto con su [!DNL Yahoo DataX] administrador de cuentas.  Con los ID de MDM, los datos pueden restringirse para su uso únicamente con un determinado conjunto de usuarios exclusivos (como los datos de origen de los anunciantes).
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -126,4 +130,4 @@ Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de 
 
 ## Recursos adicionales {#additional-resources}
 
-Para obtener más información, consulte Yahoo/Verizon Media [documentación sobre DataX](https://developer.verizonmedia.com/datax/guide/).
+Para obtener más información, lea la [!DNL Yahoo/Verizon Media] [documentación sobre [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).
