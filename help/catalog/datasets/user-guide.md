@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de conjuntos de datos
 topic-legacy: datasets
 description: Aprenda a realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
+source-git-commit: 3e25bd111d7a5cb482fa8e872452b352676b29ad
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ Aparece un cuadro de confirmación. Select **[!UICONTROL Eliminar]** para confir
 
 ## Eliminar un conjunto de datos habilitado para perfil
 
-Si un conjunto de datos está habilitado para [!DNL Profile], al eliminar ese conjunto de datos a través de la interfaz de usuario, se eliminará del lago de datos y del almacén de perfiles en Platform.
+Si un conjunto de datos está habilitado para Perfil, al eliminar ese conjunto de datos a través de la interfaz de usuario, se eliminará del lago de datos, del servicio de identidad y del almacén de perfiles en Platform.
 
 Puede eliminar un conjunto de datos del [!DNL Profile] solo almacene (dejando los datos en el lago de datos) mediante la API de perfil del cliente en tiempo real. Para obtener más información, consulte la [guía de extremo de la API de trabajos del sistema de perfiles](../../profile/api/profile-system-jobs.md).
 
