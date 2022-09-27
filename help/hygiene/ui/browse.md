@@ -2,9 +2,9 @@
 title: Examinar órdenes de trabajo de higiene de los datos
 description: Aprenda a ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: f246a014de7869b627a677ac82e98d4556065010
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '857'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,6 @@ ht-degree: 1%
 >abstract="Cuando se envía una solicitud de higiene de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. En otras palabras, una orden de trabajo representa un proceso específico de higiene de datos, que incluye su estado actual y otros detalles relacionados. A cada orden de trabajo se le asigna automáticamente su propio ID exclusivo tras la creación."
 >text="See the data hygiene UI guide to learn more."
 
->[!IMPORTANT]
->
->Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido el Escudo de la salud.
-
 Cuando se envía una solicitud de higiene de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. Una orden de trabajo representa un proceso específico de higiene de datos, como una caducidad programada del conjunto de datos, que incluye su estado actual y otros detalles relacionados.
 
 Esta guía explica cómo ver y administrar las solicitudes de trabajo existentes en la interfaz de usuario de Adobe Experience Platform.
@@ -31,20 +27,40 @@ Al acceder por primera vez a la variable **[!UICONTROL Higiene de los datos]** e
 
 ![Imagen que muestra la variable [!UICONTROL Higiene de los datos] espacio de trabajo en la interfaz de usuario de Platform](../images/ui/browse/work-order-list.png)
 
-<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
+La lista solo muestra los pedidos de trabajo de una categoría a la vez. Select **[!UICONTROL Consumidor]** para ver una lista de tareas de eliminación de consumidores, y **[!UICONTROL Conjunto de datos]** para ver una lista de caducidades programadas del conjunto de datos.
 
-![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png) -->
+![Imagen que muestra la variable [!UICONTROL Conjunto de datos] ficha](../images/ui/browse/dataset-tab.png)
+
+>[!IMPORTANT]
+>
+>Las eliminaciones de los consumidores solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
 
 Seleccione el icono de canal (![Imagen del icono del canal](../images/ui/browse/funnel-icon.png)) para ver una lista de filtros para las órdenes de trabajo mostradas.
 
 ![Imagen de los filtros de orden de trabajo mostrados](../images/ui/browse/filters.png)
+
+Según el tipo de orden de trabajo que visualice, hay diferentes opciones de filtro disponibles.
+
+### Filtros para eliminaciones de consumidores
+
+Los filtros siguientes se aplican a las solicitudes de eliminación de consumidores:
+
+| Filtro | Descripción |
+| --- | --- |
+| [!UICONTROL Estado] | Filtre en función del estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completado]**: El trabajo se ha completado.</li><li>**[!UICONTROL Error]**: El trabajo encontró un error y no se pudo completar.</li><li>**[!UICONTROL Procesamiento]**: La solicitud se ha iniciado y se está procesando.</li></ul> |
+| [!UICONTROL Fecha de creación] | Filtre según el momento en que se realizó la orden de trabajo. |
+| [!UICONTROL Fecha de actualización] | Filtre según el momento en que se actualizó por última vez la orden de trabajo. Las creaciones se cuentan como actualizaciones. |
+
+### Filtros para las caducidades del conjunto de datos
+
+Los filtros siguientes se aplican a las solicitudes de caducidad del conjunto de datos:
 
 | Filtro | Descripción |
 | --- | --- |
 | [!UICONTROL Estado] | Filtre en función del estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completado]**: El trabajo se ha completado.</li><li>**[!UICONTROL Pendiente]**: El trabajo se ha creado, pero aún no se ha ejecutado. A [solicitud de caducidad del conjunto de datos](./dataset-expiration.md) asume este estado antes de la fecha de eliminación programada. Una vez que llega la fecha de eliminación, el estado se actualiza a [!UICONTROL En ejecución] a menos que el trabajo se cancele de antemano.</li><li>**[!UICONTROL En ejecución]**: La solicitud de caducidad del conjunto de datos se ha iniciado y se está procesando.</li><li>**[!UICONTROL Cancelado]**: El trabajo se ha cancelado como parte de una solicitud de usuario manual.</li></ul> |
 | [!UICONTROL Fecha de creación] | Filtre según el momento en que se realizó la orden de trabajo. |
 | [!UICONTROL Fecha de caducidad] | Filtre las solicitudes de caducidad del conjunto de datos en función de la fecha de eliminación programada para el conjunto de datos en cuestión. |
-| [!UICONTROL Fecha de actualización] | Filtre las solicitudes de caducidad del conjunto de datos en función del momento en que se actualizó la última vez la orden de trabajo. Las creaciones y caducidades se cuentan como actualizaciones. |
+| [!UICONTROL Fecha de actualización] | Filtre según el momento en que se actualizó por última vez la orden de trabajo. Las creaciones y caducidades se cuentan como actualizaciones. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -69,15 +85,15 @@ Seleccione el ID de una orden de trabajo enumerada para ver sus detalles.
 
 ![Imagen que muestra un ID de orden de trabajo seleccionado](../images/ui/browse/select-work-order.png)
 
-<!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
+Según el tipo de orden de trabajo seleccionado, se proporciona información y controles diferentes. Se tratan en las secciones siguientes.
 
-### Consumer delete details {#consumer-delete}
+### Detalles de eliminación de clientes {#consumer-delete}
 
-The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
+Los detalles de una solicitud de eliminación de consumidor incluyen su estado actual y el tiempo transcurrido desde que se realizó la solicitud. Cada solicitud también incluye un **[!UICONTROL Estado por servicio]** que proporciona detalles de estado individuales sobre cada servicio de flujo descendente involucrado en la eliminación. En el carril derecho, puede utilizar controles para actualizar el nombre y la descripción de la orden de trabajo.
 
-![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
+![Imagen que muestra la página de detalles de una orden de trabajo de eliminación de consumidor](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset expiration details {#dataset-expiration} -->
+### Detalles de caducidad del conjunto de datos {#dataset-expiration}
 
 La página de detalles de una caducidad del conjunto de datos proporciona información sobre sus atributos básicos, incluida la fecha de caducidad programada en los días restantes antes de que se produzca la eliminación. En el carril derecho, puede utilizar controles para editar o cancelar la caducidad.
 
@@ -85,4 +101,7 @@ La página de detalles de una caducidad del conjunto de datos proporciona inform
 
 ## Pasos siguientes
 
-En esta guía se explica cómo ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Platform. Para obtener información sobre cómo crear sus propias órdenes de trabajo, consulte la guía de [programación de una caducidad del conjunto de datos](./dataset-expiration.md).
+En esta guía se explica cómo ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Platform. Para obtener información sobre la creación de sus propias órdenes de trabajo, consulte la siguiente documentación:
+
+* [Administrar caducidades del conjunto de datos](./dataset-expiration.md)
+* [Administrar eliminaciones de clientes](./delete-consumer.md)

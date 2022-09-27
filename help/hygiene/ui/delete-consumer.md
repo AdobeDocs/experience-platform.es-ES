@@ -2,11 +2,9 @@
 title: Eliminar registros de consumidores
 description: Obtenga información sobre cómo eliminar registros de consumidores en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1131'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido el Escudo de la salud.
+>Las solicitudes de eliminación de clientes solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
 
 La variable [[!UICONTROL Higiene de los datos] workspace](./overview.md) en la interfaz de usuario de Adobe Experience Platform, puede eliminar los registros de consumidores que participan en el servicio de identidad y en el perfil del cliente en tiempo real.
 
@@ -37,7 +35,7 @@ Para iniciar el proceso, seleccione **[!UICONTROL Crear solicitud]** desde la p�
 
 ![Imagen que muestra la variable [!UICONTROL Crear solicitud] botón seleccionado](../images/ui/delete-consumer/create-request-button.png)
 
-Aparecerá el cuadro de diálogo de creación de solicitudes. De forma predeterminada, la variable **[!UICONTROL Consumidor]** está seleccionada en la **[!UICONTROL Acción]** para obtener más información. Deje esta opción seleccionada.
+Aparecerá el cuadro de diálogo de creación de solicitudes. De forma predeterminada, la variable **[!UICONTROL Consumidor]** está seleccionada en la **[!UICONTROL Acción solicitada]** para obtener más información. Deje esta opción seleccionada.
 
 ![Imagen que muestra la opción de consumidor seleccionada en el cuadro de diálogo de creación](../images/ui/delete-consumer/consumer-action.png)
 
@@ -130,7 +128,7 @@ Para añadir más identidades, seleccione el icono del signo más (![Imagen del 
 
 ## Enviar la solicitud (#submit)
 
-Una vez que haya terminado de añadir identidades a la solicitud, seleccione **[!UICONTROL Submit]**.
+Una vez que haya terminado de agregar identidades a la solicitud, en **[!UICONTROL Configuración de solicitud]**, proporcione un nombre y una descripción opcional para la solicitud antes de seleccionar **[!UICONTROL Submit]**.
 
 ![Imagen que muestra la variable [!UICONTROL Submit] botón seleccionado](../images/ui/delete-consumer/submit.png)
 
@@ -138,16 +136,14 @@ Se le pedirá que confirme la lista de identidades cuyos datos desea eliminar. S
 
 ![Imagen que muestra el cuadro de diálogo de confirmación](../images/ui/delete-consumer/confirm-request.png)
 
-Una vez enviada la solicitud, se crea una orden de trabajo que aparece en la [!UICONTROL Consumidor] de la pestaña [!UICONTROL Higiene de los datos] espacio de trabajo. Desde aquí, puede controlar el estado de la orden de trabajo a medida que procesa la solicitud. La mayoría de las solicitudes de eliminación de consumidores tardan varios días en completarse.
+Una vez enviada la solicitud, se crea una orden de trabajo que aparece en la [!UICONTROL Consumidor] de la pestaña [!UICONTROL Higiene de los datos] espacio de trabajo. Desde aquí, puede controlar el estado de la orden de trabajo a medida que procesa la solicitud.
+
+>[!NOTE]
+>
+>Consulte la sección Información general de [plazos y transparencia](../home.md#consumer-delete-transparency) para obtener más información sobre cómo se procesan las eliminaciones de consumidores una vez que se ejecutan.
 
 ## Pasos siguientes
 
 Este documento trata sobre cómo eliminar registros de consumo en la interfaz de usuario del Experience Platform. Para obtener información sobre cómo realizar otras tareas de higiene de datos en la interfaz de usuario, consulte [información general sobre la interfaz de usuario de higiene de datos](./overview.md).
 
-<!--
-
-Paragraph below should be commented out until workorder.md will be added to the TOC.
-
-To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
-
--->
+Para aprender a eliminar registros de consumidores mediante la API de higiene de datos, consulte la [guía de extremo del orden de trabajo](../api/workorder.md).
