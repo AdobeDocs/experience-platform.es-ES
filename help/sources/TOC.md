@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Sources
-source-git-commit: dfb95f457d7ddb730950159165ed85b2f532f9ab
+source-git-commit: 47a9ce5211d3dabe427ad1e545dc12181a84b644
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '831'
 ht-degree: 13%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 13%
       - [Fuente de clasificaciones de Analytics](connectors/adobe-applications/classifications.md)
       - [Fuente de Analytics](connectors/adobe-applications/analytics.md)
       - [origen del Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Fuente de Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
       - [Fuente de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fuente de la recopilación de datos](connectors/adobe-applications/data-collection.md)
       - Asignaciones de campos {#mapping}
@@ -202,7 +203,7 @@ ht-degree: 13%
          - [Adobe Analytics (datos de grupos de informes)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (datos de clasificaciones)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
-         - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
+         - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicidad {#advertising}

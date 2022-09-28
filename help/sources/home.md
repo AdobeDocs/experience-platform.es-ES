@@ -5,9 +5,9 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
+source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1111'
 ht-degree: 0%
 
 ---
@@ -30,10 +30,12 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 - [Información general de la fuente de Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Crear una conexión de origen de Adobe Audience Manager en la interfaz de usuario](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Resumen de la conexión de fuentes de datos de las clasificaciones de Adobe Analytics](connectors/adobe-applications/classifications.md)
+- [Resumen de la fuente de datos de las clasificaciones de Adobe Analytics](connectors/adobe-applications/classifications.md)
 - [Crear una conexión de fuente de datos de clasificaciones de Adobe Analytics en la interfaz de usuario](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Descripción general de la conexión de origen de datos del grupo de informes de Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Resumen de la fuente de datos del grupo de informes de Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Crear una conexión de origen de Adobe Analytics en la interfaz de usuario](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Información general de la fuente de Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
+- [Crear una conexión de origen de Adobe Campaign Managed Cloud Services en la interfaz de usuario](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Resumen de la fuente de recopilación de datos de Adobe](connectors/adobe-applications/data-collection.md)
 - [Creación de una conexión de origen de Atributos del cliente en la interfaz de usuario](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] información general de la fuente](connectors/adobe-applications/marketo/marketo.md)
