@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
+source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3160'
 ht-degree: 2%
 
 ---
@@ -488,6 +488,30 @@ Para devolver el valor de cualquier configuración, utilice `SET [property key]`
 ## Comandos PostgreSQL
 
 Las subsecciones siguientes abarcan los comandos PostgreSQL admitidos por el servicio de consultas.
+
+### ANALIZAR TABLA
+
+La variable `ANALYZE TABLE` calcula las estadísticas de una tabla en el almacén acelerado. Las estadísticas se calculan en consultas CTAS o ITAS ejecutadas para una tabla determinada en almacén acelerado.
+
+**Ejemplo**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+A continuación se muestra una lista de cálculos estadísticos disponibles después de usar la variable `ANALYZE TABLE` comando:-
+
+| Valores calculados | Descripción |
+|---|---|
+| `field` | Nombre de la columna de una tabla. |
+| `data-type` | Tipo aceptable de datos para cada columna. |
+| `count` | Número de filas que contienen un valor no nulo para este campo. |
+| `distinct-count` | Número de valores únicos o distintos para este campo. |
+| `missing` | Número de filas que tienen un valor nulo para este campo. |
+| `max` | El valor máximo de la tabla analizada. |
+| `min` | El valor mínimo de la tabla analizada. |
+| `mean` | El valor promedio de la tabla analizada. |
+| `stdev` | La desviación estándar de la tabla analizada. |
 
 ### INICIO
 
