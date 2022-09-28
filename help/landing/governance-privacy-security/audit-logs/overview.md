@@ -2,10 +2,10 @@
 title: Información general sobre registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: fdc61c920ee9ae2c66344e781334844d38b44806
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 14%
+source-wordcount: '944'
+ht-degree: 15%
 
 ---
 
@@ -41,6 +41,7 @@ La siguiente tabla indica qué acciones sobre qué recursos de se registran en l
 | [Atributo calculado](../../../profile/computed-attributes/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Instancia de Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Deshabilitar</li></ul> |
 | [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li><li>Deshabilitar para perfil</li><li>Adición de datos</li><li>Eliminar lote</li></ul> |
+| [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Deshabilitar</li><li>[Editar asignación](../../../edge/datastreams/data-prep.md)</li></ul> |
 | [Tipos de datos](../../../xdm/schema/composition.md#data-type) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Deshabilitar</li><li>Activar conjunto de datos</li><li>Eliminación de conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
 | [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
