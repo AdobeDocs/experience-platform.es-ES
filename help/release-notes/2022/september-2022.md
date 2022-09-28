@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
-source-git-commit: a3f12b9524d393441923cd11e09ed3e406814691
+source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
 workflow-type: tm+mt
-source-wordcount: '1377'
-ht-degree: 7%
+source-wordcount: '1827'
+ht-degree: 6%
 
 ---
 
@@ -12,12 +12,95 @@ ht-degree: 7%
 
 **Fecha de versión: 28 de septiembre de 2022**
 
+Nuevas funciones de Adobe Experience Platform:
+
+- [Higiene de los datos](#data-hygiene)
+- [[!UICONTROL Consola de privacidad]](#privacy-console)
+
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [Registros de auditoría](#audit-logs)
+- [Recopilación de datos](#data-collection)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de identidad](#identity-service)
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Fuentes](#sources)
+
+## Higiene de los datos {#data-hygiene}
+
+Adobe Experience Platform proporciona un robusto conjunto de herramientas para administrar operaciones de datos grandes y complicadas con el fin de orquestar las experiencias de los consumidores. A medida que los datos se incorporan al sistema a lo largo del tiempo, cada vez es más importante administrar los almacenes de datos para que se utilicen como se espera, se actualicen cuando sea necesario corregir los datos incorrectos y se eliminen cuando las políticas organizativas lo consideren necesario.
+
+Las funciones de higiene de datos de Adobe Experience Platform le permiten limpiar sus datos mediante la programación de caducidades automatizadas de conjuntos de datos y la eliminación programada de datos de consumidores por identidad.
+
+>[!NOTE]
+>
+>Las funciones de borrado del consumidor sólo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
+
+Consulte la siguiente documentación para empezar a trabajar con la higiene de los datos:
+
+- [Resumen de higiene de datos](../../hygiene/home.md): Conozca los conceptos básicos sobre las capacidades de higiene de datos de Platform.
+- [[!UICONTROL Higiene de los datos] Guía de la interfaz de usuario](../../hygiene/ui/overview.md): Obtenga información sobre cómo programar caducidades de conjuntos de datos y solicitudes de eliminación de consumidores dentro de la interfaz de usuario de Platform.
+- [Guía de API de higiene de datos](../../hygiene/api/overview.md): Todas las actividades de higiene de datos que se pueden realizar en la interfaz de usuario también se pueden programar
+
+## [!UICONTROL Consola de privacidad] {#privacy-console}
+
+La variable [!UICONTROL Consola de privacidad] en la interfaz de usuario del Experience Platform, se proporciona una vista de panel de información clave sobre funciones relacionadas con la privacidad, como [solicitudes del interesado del Privacy Service], [órdenes de trabajo de higiene de datos]y [registros de auditoría]. La consola también proporciona varias guías de casos de uso dentro del producto para ayudarle a guía a través de flujos de trabajo de privacidad comunes.
+
+Consulte la [Información general de la Consola de privacidad](../../landing/governance-privacy-security/privacy-console.md) para obtener más información sobre la función.
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+Los servicios AI/ML permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos de uso de experiencias del cliente. Esto permite que los analistas de marketing configuren modelos específicos de las necesidades de una empresa mediante configuraciones de nivel empresarial sin necesidad de experiencia en ciencia de datos.
+
+### Inteligencia artificial aplicada a la atribución
+
+Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
+
+| Función | Descripción |
+| --- | --- |
+| Guardar instancia de borrador | Esta nueva función permite a los analistas de marketing guardar la configuración del modelo como una instancia de borrador durante las configuraciones y seguir editando el borrador hasta su finalización antes de la formación y la puntuación. Los escenarios en los que esta función es útil incluyen, entre otros, cuando los usuarios tienen varios campos para definir en el flujo de trabajo de configuración que no pueden completar de una sola vez o cuando una o más estadísticas del conjunto de datos (como la integridad de la columna) tardan un tiempo en procesarse antes de que estén disponibles. Lea el [Guía del usuario del Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) para obtener más información. |
+| Políticas de gobernanza | Una vez que los usuarios se envían para crear una instancia a través del flujo de trabajo de configuración, el nuevo servicio de aplicación de políticas comprueba si hay alguna infracción de directiva en el uso de datos y muestra los detalles en una ventana emergente. Garantiza que las operaciones de datos y las acciones de marketing cumplan las políticas de uso de datos configuradas en Adobe Experience Platform. |
+
+Para obtener más información sobre la Attribution AI, la variable [Información general sobre la Attribution AI](../../intelligent-services/attribution-ai/overview.md). Para obtener información sobre las políticas de control de datos, lea la [información general sobre políticas](../../data-governance/policies/overview.md).
+
+### Customer AI
+
+La AI del cliente disponible en Real-time Customer Data Platform se utiliza para generar puntuaciones de tendencia personalizadas, como la pérdida y la conversión de perfiles individuales a escala.
+
+| Función | Descripción |
+| --- | --- |
+| Guardar instancia de borrador | Esta nueva función permite a los analistas de marketing guardar la configuración del modelo como una instancia de borrador durante las configuraciones y seguir editando el borrador hasta su finalización antes de la formación y la puntuación. Los escenarios en los que esta función es útil incluyen, entre otros, cuando los usuarios tienen varios campos para definir en el flujo de trabajo de configuración que no pueden completar de una sola vez o cuando una o más estadísticas del conjunto de datos (como la integridad de la columna) tardan un tiempo en procesarse antes de que estén disponibles. Lea el [Guía del usuario de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) para obtener más información. |
+| Políticas de gobernanza | Una vez que los usuarios se envían para crear una instancia a través del flujo de trabajo de configuración, el nuevo servicio de aplicación de políticas comprueba si hay alguna infracción de directiva en el uso de datos y muestra los detalles en una ventana emergente. Garantiza que las operaciones de datos y las acciones de marketing cumplan las políticas de uso de datos configuradas en Adobe Experience Platform. |
+
+Para obtener más información sobre Customer AI, lea la [Información general sobre Customer AI](../../intelligent-services/customer-ai/overview.md). Para obtener información sobre las políticas de control de datos, lea la [información general sobre políticas](../../data-governance/policies/overview.md).
+
+## Registros de auditoría {#audit-logs}
+
+Experience Platform le permite auditar la actividad de los usuarios en relación con diversos servicios y funcionalidades. Los registros de auditoría proporcionan información sobre quién hizo qué y cuándo.
+
+**Funciones actualizadas**
+
+| Función | Nombre | Descripción |
+| --- | --- | --- |
+| Recursos añadidos | <ul><li>instancia de Attribution AI</li><li>Instancia de Customer AI</li><li>Datastream</li></ul> | Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad. Si la función está habilitada, no es necesario habilitar manualmente la recopilación de registros. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre los distintos tipos de eventos específicos de recursos rastreados por los registros de auditoría en Platform, consulte la [información general sobre registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## Recopilación de datos
+
+Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Integración de navegación izquierda en la interfaz de usuario de Platform | Todas las funciones que anteriormente eran exclusivas de la interfaz de usuario de recopilación de datos (incluidas las etiquetas, el reenvío de eventos y los conjuntos de datos) ahora están disponibles en la navegación izquierda del Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre las IU al trabajar con capacidades de recopilación de datos en Platform. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
@@ -77,32 +160,6 @@ El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mej
 | Compatibilidad con la eliminación de conjuntos de datos | El servicio de identidad ahora admite la eliminación de conjuntos de datos al solicitar a través de la variable [API del servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), la interfaz de usuario o la higiene de los datos. Lea la guía de [eliminación de conjuntos de datos en la interfaz de usuario](../../catalog/datasets/user-guide.md#delete-a-dataset) para obtener más información. |
 
 Para obtener más información sobre el servicio de identidad, lea la [Información general del servicio de identidad](../../identity-service/home.md).
-
-## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
-
-Los servicios AI/ML permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos de uso de experiencias del cliente. Esto permite que los analistas de marketing configuren modelos específicos de las necesidades de una empresa mediante configuraciones de nivel empresarial sin necesidad de experiencia en ciencia de datos.
-
-### Inteligencia artificial aplicada a la atribución
-
-Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
-
-| Función | Descripción |
-| --- | --- |
-| Guardar instancia de borrador | Esta nueva función permite a los analistas de marketing guardar la configuración del modelo como una instancia de borrador durante las configuraciones y seguir editando el borrador hasta su finalización antes de la formación y la puntuación. Los escenarios en los que esta función es útil incluyen, entre otros, cuando los usuarios tienen varios campos para definir en el flujo de trabajo de configuración que no pueden completar de una sola vez o cuando una o más estadísticas del conjunto de datos (como la integridad de la columna) tardan un tiempo en procesarse antes de que estén disponibles. Lea el [Guía del usuario del Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) para obtener más información. |
-| Políticas de gobernanza | Una vez que los usuarios se envían para crear una instancia a través del flujo de trabajo de configuración, el nuevo servicio de aplicación de políticas comprueba si hay alguna infracción de directiva en el uso de datos y muestra los detalles en una ventana emergente. Garantiza que las operaciones de datos y las acciones de marketing cumplan las políticas de uso de datos configuradas en Adobe Experience Platform. |
-
-Para obtener más información sobre la Attribution AI, la variable [Información general sobre la Attribution AI](../../intelligent-services/attribution-ai/overview.md). Para obtener información sobre las políticas de control de datos, lea la [información general sobre políticas](../../data-governance/policies/overview.md).
-
-### Customer AI
-
-La AI del cliente disponible en Real-time Customer Data Platform se utiliza para generar puntuaciones de tendencia personalizadas, como la pérdida y la conversión de perfiles individuales a escala.
-
-| Función | Descripción |
-| --- | --- |
-| Guardar instancia de borrador | Esta nueva función permite a los analistas de marketing guardar la configuración del modelo como una instancia de borrador durante las configuraciones y seguir editando el borrador hasta su finalización antes de la formación y la puntuación. Los escenarios en los que esta función es útil incluyen, entre otros, cuando los usuarios tienen varios campos para definir en el flujo de trabajo de configuración que no pueden completar de una sola vez o cuando una o más estadísticas del conjunto de datos (como la integridad de la columna) tardan un tiempo en procesarse antes de que estén disponibles. Lea el [Guía del usuario de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) para obtener más información. |
-| Políticas de gobernanza | Una vez que los usuarios se envían para crear una instancia a través del flujo de trabajo de configuración, el nuevo servicio de aplicación de políticas comprueba si hay alguna infracción de directiva en el uso de datos y muestra los detalles en una ventana emergente. Garantiza que las operaciones de datos y las acciones de marketing cumplan las políticas de uso de datos configuradas en Adobe Experience Platform. |
-
-Para obtener más información sobre Customer AI, lea la [Información general sobre Customer AI](../../intelligent-services/customer-ai/overview.md). Para obtener información sobre las políticas de control de datos, lea la [información general sobre políticas](../../data-governance/policies/overview.md).
 
 ## Fuentes {#sources}
 
