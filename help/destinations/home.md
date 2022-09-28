@@ -3,10 +3,10 @@ keywords: destinos;adobe experience platform;platform;información general sobre
 title: Información general sobre los destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos desde Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 0%
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +44,24 @@ Para obtener información detallada, consulte la [información general sobre tip
 
 La funcionalidad de destinos de Platform funciona con los permisos de control de acceso de Adobe Experience Platform. Según el nivel de permiso del usuario, puede ver, administrar y activar destinos. Para obtener información sobre los permisos individuales, consulte [Control de acceso en Adobe Experience Platform](../access-control/home.md) y desplácese hacia abajo hasta la parte inferior de la página.
 
+La siguiente tabla describe los permisos y combinaciones de permisos necesarios para realizar determinadas acciones en los destinos:
+
+| Nivel de permiso | Descripción |
+| ---- | ----|
+| **[!UICONTROL Administrar destinos]** | Para conectarse a destinos de , necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** | Para activar segmentos en destinos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
+
+{style=&quot;table-layout:auto&quot;}
+
 Para obtener más información sobre los controles de acceso, consulte la [Guía del usuario de control de acceso](../access-control/ui/overview.md).
+
+### Control de acceso basado en atributos para destinos {#attribute-based-access}
+
+El control de acceso basado en atributos en Adobe Experience Platform permite a los administradores controlar el acceso a objetos y/o funciones específicos según los atributos.
+
+Con el control de acceso basado en atributos, puede aplicar configuraciones de asignación a campos a los que tenga permisos. Además, no puede exportar datos a un destino si no tiene acceso a todos los campos del conjunto de datos.
+
+Para obtener más información sobre cómo funcionan los destinos con controles de acceso basados en atributos, lea la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md#destinations).
 
 ## Restricciones de control de datos sobre la activación de datos en destinos {#data-governance}
 
@@ -64,7 +81,7 @@ Para obtener más información sobre la selección de acciones de marketing en e
 * [Destinos de marketing por correo electrónico](./catalog/email-marketing/overview.md)
 * [Destinos sociales](./catalog/social/overview.md)
 
-Para obtener más información sobre las violaciones de políticas de datos en el flujo de trabajo de activación de segmentos, consulte el paso Revisar en las siguientes guías:
+Para obtener más información sobre las infracciones de la política de datos en el flujo de trabajo de activación de segmentos, consulte la **[!UICONTROL Consulte]** paso en las siguientes guías:
 
 * [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](./ui/activate-segment-streaming-destinations.md#review)
 * [Activar datos de audiencia en destinos de exportación de perfil de flujo continuo](./ui/activate-streaming-profile-destinations.md#review)

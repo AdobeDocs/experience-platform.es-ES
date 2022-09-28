@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Información general sobre el control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
+source-git-commit: b095461b0c2510e84ca9a3a368f4907f8b3d5370
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1684'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ Aprovechamientos de la plataforma [Adobe Admin Console](https://adminconsole.ado
 
 Para obtener más información sobre el control de acceso, consulte la [información general sobre el control de acceso](../home.md).
 
-### Destinos
+### Destinos {#destinations}
 
 [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos desde Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 
@@ -72,6 +72,15 @@ Como administrador, puede utilizar funcionalidades de control de acceso basadas 
    * En el proceso de activación, es posible que los usuarios tengan que seleccionar los segmentos que desean activar en un destino. Como administrador, puede aprovisionar usuarios de su organización para que solo vean segmentos etiquetados con etiquetas a las que los usuarios tienen acceso y segmentos que no contienen etiquetas.
 * Configure el acceso del usuario para ver campos específicos en el proceso de activación, según la función, los permisos y las etiquetas;
    * En el proceso de activación, es posible que los usuarios tengan que seleccionar los campos que desean activar en un destino. Como administrador, puede aprovisionar usuarios de su organización para que solo vean campos etiquetados con etiquetas a las que los usuarios tienen acceso y campos que no contienen etiquetas.
+
+>[!IMPORTANT]
+>
+>En resumen, tenga en cuenta las siguientes implicaciones al trabajar con destinos y control de acceso basado en atributos:
+>
+>* Solo puede activar segmentos a los que tenga permiso para acceder y ver en el [vista de exploración de segmentos](/help/segmentation/ui/overview.md#browse) y [seleccionar paso de segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del flujo de trabajo de activación.
+>* En el [paso de asignación del flujo de trabajo de activación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), solo puede ver y seleccionar para la activación los campos a los que tiene permiso de acceso.
+>* Cuando busque activar segmentos adicionales en un destino existente donde no tenga acceso a todos los campos asignados para la exportación, el flujo de trabajo de activación se bloqueará por usted.
+
 
 Para obtener más información, consulte [!DNL Destinations], consulte [[!DNL Destinations] información general](../../destinations/home.md).
 
