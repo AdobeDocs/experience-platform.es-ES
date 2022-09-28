@@ -1,19 +1,38 @@
 ---
-title: Agregar valores sugeridos a un campo
+title: Administrar los valores sugeridos en la API
 description: Aprenda a añadir valores sugeridos a un campo de cadena en la API del Registro de esquemas.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 19bd5d9c307ac6e1b852e25438ff42bf52a1231e
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 0%
+source-wordcount: '883'
+ht-degree: 1%
 
 ---
 
-# Añadir valores sugeridos a un campo
+# Administrar valores sugeridos en la API
 
-En el Modelo de datos de experiencia (XDM), un campo de enumeración representa un campo de cadena limitado a un subconjunto de valores predefinido. Los campos de enumeración pueden proporcionar una validación para garantizar que los datos introducidos se ajustan a un conjunto de valores aceptados. Sin embargo, también puede definir un conjunto de valores sugeridos para un campo de cadena sin aplicarlos como restricciones.
+Para cualquier campo de cadena del Modelo de datos de experiencia (XDM), puede definir una **enum** que restringe los valores que el campo puede introducir a un conjunto predefinido. Si intenta introducir datos en un campo de enumeración y el valor no coincide con ninguno de los definidos en su configuración, se denegará la ingesta.
 
-En el [API del Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/), los valores restringidos para un campo de enumeración se representan mediante un `enum` matriz, mientras que un `meta:enum` proporciona nombres descriptivos para mostrar para esos valores:
+A diferencia de las enumeraciones, agregue **valores sugeridos** a un campo de cadena no restringe los valores que puede introducir. En su lugar, los valores sugeridos afectan a los valores predefinidos disponibles en la variable [Interfaz de usuario de segmentación](../../segmentation/ui/overview.md) al incluir el campo de cadena como atributo.
+
+>[!NOTE]
+>
+>Se produce un retraso aproximado de cinco minutos para que los valores sugeridos actualizados de un campo se reflejen en la interfaz de usuario de segmentación.
+
+Esta guía explica cómo administrar los valores sugeridos mediante el [API del Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Para ver los pasos sobre cómo hacerlo en la interfaz de usuario de Adobe Experience Platform, consulte la [Guía de la interfaz de usuario sobre enumeraciones y valores sugeridos](../ui/fields/enum.md).
+
+## Requisitos previos
+
+En esta guía se asume que está familiarizado con los elementos de la composición de esquema en XDM y cómo utilizar la API de registro de esquema para crear y editar recursos XDM. Consulte la siguiente documentación si necesita una introducción:
+
+* [Aspectos básicos de la composición del esquema](../schema/composition.md)
+* [Guía de API del Registro de Esquemas](../api/overview.md)
+
+También es muy recomendable que revise la [reglas de evolución para enumeraciones y valores sugeridos](../ui/fields/enum.md#evolution) si va a actualizar campos existentes. Si está administrando valores sugeridos para esquemas que participan en una unión, consulte la [reglas para combinar enumeraciones y valores sugeridos](../ui/fields/enum.md#merging).
+
+## Composición
+
+En la API, los valores restringidos para un **enum** los campos se representan mediante un `enum` matriz, mientras que un `meta:enum` proporciona nombres descriptivos para mostrar para esos valores:
 
 ```json
 "exampleStringField": {
@@ -34,7 +53,7 @@ En el [API del Registro de esquemas](https://developer.adobe.com/experience-plat
 
 Para los campos enum, el Registro de esquemas no permite `meta:enum` se extenderán más allá de los valores previstos en el `enum`, ya que intentar introducir valores de cadena fuera de esas restricciones no pasaría la validación.
 
-También puede definir un campo de cadena que no contenga `enum` y solo usa el `meta:enum` para denotar valores sugeridos:
+También puede definir un campo de cadena que no contenga `enum` y solo usa el `meta:enum` objeto que se va a denotar **valores sugeridos**:
 
 ```json
 "exampleStringField": {
@@ -48,16 +67,13 @@ También puede definir un campo de cadena que no contenga `enum` y solo usa el `
 }
 ```
 
-Dado que la cadena no tiene un valor `enum` matriz para definir restricciones, su `meta:enum` se puede ampliar para incluir nuevos valores. Este tutorial explica cómo agregar valores sugeridos a campos de cadena estándar y personalizados en la API del Registro de esquemas.
+Dado que la cadena no tiene un valor `enum` matriz para definir restricciones, su `meta:enum` se puede ampliar para incluir nuevos valores.
 
-## Requisitos previos
+## Administrar valores sugeridos para campos estándar
 
-En esta guía se asume que está familiarizado con los elementos de la composición de esquema en XDM y cómo utilizar la API de registro de esquema para crear y editar recursos XDM. Consulte la siguiente documentación si necesita una introducción:
+Para los campos estándar existentes, puede [agregar valores sugeridos](#add-suggested-standard) o [eliminar valores sugeridos](#remove-suggested-standard).
 
-* [Aspectos básicos de la composición del esquema](../schema/composition.md)
-* [Guía de API del Registro de Esquemas](../api/overview.md)
-
-## Añadir valores sugeridos a un campo estándar
+### Añadir valores sugeridos {#add-suggested-standard}
 
 Para ampliar el `meta:enum` de un campo de cadena estándar, puede crear un [descriptor de nombre descriptivo](../api/descriptors.md#friendly-name) para el campo en cuestión en un esquema determinado.
 
@@ -135,9 +151,71 @@ Después de aplicar el descriptor, el Registro de esquemas responde con lo sigui
 >}
 >```
 
-## Añadir valores sugeridos a un campo personalizado
+### Eliminar valores sugeridos {#remove-suggested-standard}
 
-Para ampliar el `meta:enum` de un campo personalizado, se puede actualizar la clase principal, el grupo de campos o el tipo de datos del campo mediante una solicitud del PATCH.
+Si un campo de cadena estándar tiene valores sugeridos predefinidos, puede eliminar los valores que no desee ver en la segmentación. Esto se hace creando un [descriptor de nombre descriptivo](../api/descriptors.md#friendly-name) para el esquema que incluye un `xdm:excludeMetaEnum` propiedad.
+
+**Formato de API**
+
+```http
+POST /tenant/descriptors
+```
+
+**Solicitud**
+
+La siguiente solicitud elimina los valores sugeridos &quot;[!DNL Web Form Filled Out]&quot; y &quot;[!DNL Media ping]&quot; para `eventType` en un esquema basado en la variable [Clase XDM ExperienceEvent](../classes/experienceevent.md).
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "@type": "xdm:alternateDisplayInfo",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/xdm:eventType",
+        "xdm:excludeMetaEnum": {
+          "web.formFilledOut": "Web Form Filled Out",
+          "media.ping": "Media ping"
+        }
+      }'
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `@type` | Tipo de descriptor que se está definiendo. Para un descriptor de nombre descriptivo, este valor debe establecerse en `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | La variable `$id` URI del esquema en el que se está definiendo el descriptor. |
+| `xdm:sourceVersion` | Versión principal del esquema de origen. |
+| `xdm:sourceProperty` | La ruta a la propiedad específica cuyos valores sugeridos desea administrar. La ruta debe comenzar con una barra diagonal (`/`) y no finalizar con uno. No incluir `properties` en la ruta (por ejemplo, use `/personalEmail/address` en lugar de `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | Un objeto que describe los valores sugeridos que deben excluirse para el campo en segmentación. La clave y el valor de cada entrada deben coincidir con los incluidos en el original `meta:enum` del campo para que se excluya la entrada. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del descriptor recién creado. Los valores sugeridos incluidos en `xdm:excludeMetaEnum` ahora se ocultará en la interfaz de usuario de segmentación.
+
+```json
+{
+  "@type": "xdm:alternateDisplayInfo",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out"
+  },
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
+```
+
+## Administrar valores sugeridos para un campo personalizado {#suggested-custom}
+
+Para administrar el `meta:enum` de un campo personalizado, se puede actualizar la clase principal, el grupo de campos o el tipo de datos del campo mediante una solicitud del PATCH.
 
 >[!WARNING]
 >
@@ -198,4 +276,4 @@ Después de aplicar el cambio, el Registro de esquemas responde con lo siguiente
 
 ## Pasos siguientes
 
-Esta guía explica cómo añadir valores sugeridos a campos de cadena en la API del Registro de esquemas. Consulte la guía de [definición de campos personalizados en la API](./custom-fields-api.md) para obtener más información sobre cómo crear distintos tipos de campos.
+Esta guía explica cómo administrar los valores sugeridos para los campos de cadena en la API del Registro de esquemas. Consulte la guía de [definición de campos personalizados en la API](./custom-fields-api.md) para obtener más información sobre cómo crear distintos tipos de campos.
