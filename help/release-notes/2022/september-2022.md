@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2539'
 ht-degree: 5%
 
 ---
@@ -22,9 +22,11 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Registros de auditoría](#audit-logs)
+- [[!DNL Dashboards]](#dashboards)
 - [Recopilación de datos](#data-collection)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de identidad](#identity-service)
+- [Servicio de consultas](#query-service)
 - [Fuentes](#sources)
 
 ## Control de acceso basado en atributos {#abac}
@@ -106,7 +108,17 @@ Experience Platform le permite auditar la actividad de los usuarios en relación
 
 Para obtener más información sobre los distintos tipos de eventos específicos de recursos rastreados por los registros de auditoría en Platform, consulte la [información general sobre registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Recopilación de datos
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform proporciona varios tableros a través de los cuales puede ver perspectivas importantes sobre los datos de su organización, tal como se capturan durante las instantáneas diarias.
+
+| Función | Descripción |
+| --- | --- |
+| Etiqueta en uso | Cuando se ve en la biblioteca de utilidades, la etiqueta en uso identifica fácilmente la presencia de utilidades existentes en el panel. Esto facilita evitar la duplicación, aunque aún puede añadir el mismo widget más de una vez si lo desea. |
+
+Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL Dashboards] información general](../../dashboards/home.md).
+
+## Recopilación de datos {#data-collection}
 
 Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
@@ -178,6 +190,19 @@ El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mej
 | Compatibilidad con la eliminación de conjuntos de datos | El servicio de identidad ahora admite la eliminación de conjuntos de datos al solicitar a través de la variable [API del servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), la interfaz de usuario o la higiene de los datos. Lea la guía de [eliminación de conjuntos de datos en la interfaz de usuario](../../catalog/datasets/user-guide.md#delete-a-dataset) para obtener más información. |
 
 Para obtener más información sobre el servicio de identidad, lea la [Información general del servicio de identidad](../../identity-service/home.md).
+
+## Servicio de consultas {#query-service}
+
+El servicio de consultas permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL Data Lake]. Puede unirse a cualquier conjunto de datos desde la [!DNL Data Lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para su uso en informes, Data Science Workspace o para su incorporación al perfil del cliente en tiempo real.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| API de suscripción de alerta | El servicio de consulta de Adobe Experience Platform le permite suscribirse a las alertas para consultas ad hoc y programadas. Las alertas se pueden recibir por correo electrónico, en la interfaz de usuario de Platform o en ambos. Actualmente, las alertas de consulta solo se pueden suscribir a mediante el uso de [API del servicio de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| Ejemplos de conjuntos de datos | Los ejemplos de conjuntos de datos del servicio de consulta le permiten realizar consultas exploratorias sobre grandes datos con un tiempo de procesamiento considerablemente reducido al coste de la precisión de la consulta. |
+
+Para obtener más información, consulte [!DNL Query Service], consulte la [[!DNL Query Service] información general](../../query-service/home.md).
 
 ## Fuentes {#sources}
 
