@@ -6,9 +6,9 @@ title: Configuración de una instancia de AI del cliente
 topic-legacy: Instance creation
 description: Los servicios AI/ML proporcionan Customer AI como un servicio de Adobe Sensei simple de usar que se puede configurar para diferentes casos de uso. Las secciones siguientes proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 4f74be4ed8d84a58779b9e7d9f1de6d9bf19cc5e
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '3088'
+source-wordcount: '3342'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Las instancias de servicio se pueden editar, clonar y eliminar utilizando los co
 
 - **[!UICONTROL Editar]**: Selección **[!UICONTROL Editar]** permite modificar una instancia de servicio existente. Puede editar el nombre, la descripción y la frecuencia de puntuación de la instancia.
 - **[!UICONTROL Clonar]**: Selección **[!UICONTROL Clonar]** copia la configuración de instancia de servicio seleccionada actualmente. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
-- **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
+- **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas. El conjunto de datos de salida correspondiente se eliminará de Platform. Sin embargo, las puntuaciones sincronizadas con Perfil del cliente en tiempo real no se eliminan.
 - **[!UICONTROL Fuente de datos]**: Un vínculo al conjunto de datos utilizado por esta instancia. Si se utilizan varios conjuntos de datos, al seleccionar el texto del hipervínculo se abre la ventana emergente de vista previa del conjunto de datos.
 - **[!UICONTROL Detalles de la última ejecución]**: Esto solo se muestra cuando falla una ejecución. Aquí se muestra información sobre por qué se ha producido un error en la ejecución, como códigos de error.
 - **[!UICONTROL Definición de la puntuación]**: Información general rápida sobre el objetivo que configuró para esta instancia.
@@ -67,7 +67,7 @@ Proporcione los valores necesarios y, a continuación, seleccione **[!UICONTROL 
 
 Por diseño, la Customer AI utiliza los datos de Adobe Analytics, Adobe Audience Manager, Experience Events en general y Consumer Experience Event para calcular las puntuaciones de tendencia. Al seleccionar un conjunto de datos, solo se muestran los que son compatibles con la AI del cliente. Para seleccionar un conjunto de datos, seleccione el (**+**) junto al nombre del conjunto de datos o seleccione la casilla de verificación para agregar varios conjuntos de datos a la vez. Utilice la opción de búsqueda para encontrar rápidamente los conjuntos de datos que le interesen.
 
-![Seleccionar y buscar un conjunto de datos](../images/user-guide/configure-dataset-page.png)
+![Seleccionar y buscar un conjunto de datos](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 Después de seleccionar los conjuntos de datos que desea utilizar, seleccione la **[!UICONTROL Agregar]** para agregar los conjuntos de datos al panel de vista previa del conjunto de datos.
 
@@ -78,6 +78,10 @@ Selección del icono de información ![icono de información](../images/user-gui
 ![Seleccionar y buscar un conjunto de datos](../images/user-guide/dataset-info.png)
 
 La vista previa del conjunto de datos contiene datos como la hora de la última actualización, el esquema de origen y una vista previa de las diez primeras columnas.
+
+Select **[!UICONTROL Guardar]** para guardar los borradores a medida que avanza por el flujo de trabajo. También puede guardar configuraciones de modelo de borrador y pasar al siguiente paso del flujo de trabajo. Uso **[!UICONTROL Guardar y continuar]** para crear y guardar borradores durante las configuraciones del modelo. La función permite crear y guardar borradores de la configuración del modelo y es especialmente útil cuando tiene que definir muchos campos en el flujo de trabajo de configuración.
+
+![El flujo de trabajo Crear de la pestaña AI del cliente de Data Science Services con Guardar y guardar y continuar resaltado.](../images/user-guide/cai-save-and-exit.png)
 
 ### Complejidad del conjunto de datos {#dataset-completeness}
 
@@ -236,7 +240,7 @@ La opción Perfil permite que la AI del cliente exporte los resultados de puntua
 
 Al utilizar Customer AI por primera vez, puede desactivar esta función hasta que esté satisfecho con los resultados de salida del modelo. Esto evita que cargue varios conjuntos de datos de puntuación en los perfiles del cliente mientras ajusta el modelo. Una vez que haya terminado de calibrar el modelo, puede clonar el modelo utilizando la variable [opción clone](#set-up-your-instance) de la variable **Instancias de servicio** página. Esto le permite crear una copia del modelo y activar el perfil.
 
-![Alternar perfil](../images/user-guide/advanced-workflow.png)
+![Alternar perfil](../images/user-guide/advanced-workflow-save.png)
 
 Una vez que haya configurado el programa de puntuación, incluidas las exclusiones de predicción y el botón de alternancia de perfil en el que desea que esté, seleccione **[!UICONTROL Finalizar]** en la parte superior derecha para crear la instancia de Customer AI.
 
@@ -247,6 +251,14 @@ Si la instancia se crea correctamente, se activa inmediatamente una ejecución d
 >Según el tamaño de los datos de entrada, las ejecuciones de predicciones pueden tardar hasta 24 horas en completarse.
 
 Al seguir esta sección, ha configurado una instancia de Customer AI y ejecutado una ejecución de predicciones. Una vez finalizada correctamente la ejecución, las perspectivas puntuadas rellenan automáticamente los perfiles con puntuaciones predichas si está habilitada la opción de alternancia de perfiles. Espere hasta 24 horas antes de continuar con la siguiente sección de este tutorial.
+
+## Políticas de gobernanza
+
+Una vez que revise el flujo de trabajo para crear una instancia y enviar la configuración del modelo, la variable [aplicación de políticas](/help/data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de política, aparece una ventana emergente que indica que se han violado una o más políticas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing dentro de Platform sean compatibles con las políticas de uso de datos.
+
+![popover que muestra una infracción de directiva](../images/user-guide/policy-violation-popover-cai.png)
+
+La ventana emergente proporciona información específica sobre la infracción. Puede resolver estas infracciones mediante la configuración de directivas y otras medidas que no están directamente relacionadas con el flujo de trabajo de configuración. Por ejemplo, puede cambiar las etiquetas para que se puedan usar ciertos campos con fines científicos de datos. Como alternativa, también puede modificar la configuración del modelo en sí para que no use nada con una etiqueta en ella. Consulte la documentación para obtener más información sobre cómo configurar [políticas](/help/data-governance/policies/overview.md).
 
 ## Control de acceso basado en atributos
 
@@ -274,11 +286,11 @@ En la parte superior del espacio de trabajo de Customer AI **página perspectiva
 
 Cuando se obtienen vistas previas de conjuntos de datos con esquema restringido en la variable **[!UICONTROL Flujo de trabajo de creación de instancias]** , aparece una advertencia que indica que [!UICONTROL Debido a las restricciones de acceso, cierta información no se muestra en la vista previa del conjunto de datos.]
 
-![Espacio de trabajo de Customer AI con los campos restringidos de los conjuntos de datos de vista previa con resultados de esquema restringidos resaltados.](../images/user-guide/restricted-dataset-preview.png)
+![Espacio de trabajo de Customer AI con los campos restringidos de los conjuntos de datos de vista previa con resultados de esquema restringidos resaltados.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
 Después de crear una instancia con información restringida y continuar con el **[!UICONTROL Definir objetivo]** , aparece una advertencia en la parte superior: [!UICONTROL Debido a restricciones de acceso, cierta información no se muestra en la configuración.]
 
-![El espacio de trabajo de Customer AI con los campos restringidos de la instancia de servicio resultados resaltados.](../images/user-guide/information-not-displayed.png)
+![El espacio de trabajo de Customer AI con los campos restringidos de la instancia de servicio resultados resaltados.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Pasos siguientes {#next-steps}
 

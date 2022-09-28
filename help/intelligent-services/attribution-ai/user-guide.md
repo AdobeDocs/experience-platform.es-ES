@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de Attribution AI
 topic-legacy: User guide
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2960'
 ht-degree: 1%
 
 ---
@@ -70,6 +70,10 @@ Selección del icono de información ![icono de información](./images/user-guid
 
 La vista previa del conjunto de datos contiene datos como la hora de la última actualización, el esquema de origen y una vista previa de las diez primeras columnas.
 
+Select **[!UICONTROL Guardar]** para guardar los borradores a medida que avanza por el flujo de trabajo. También puede guardar configuraciones de modelo de borrador y pasar al siguiente paso del flujo de trabajo. Uso **[!UICONTROL Guardar y continuar]** para crear y guardar borradores durante las configuraciones del modelo. La función permite crear y guardar borradores de la configuración del modelo y es especialmente útil cuando tiene que definir muchos campos en el flujo de trabajo de configuración.
+
+![El flujo de trabajo Crear de la pestaña Attribution AI de servicios de ciencia de datos con Guardar y Guardar y continuar resaltado.](./images/user-guide/aai-save-save-&-exit.png)
+
 ### Complejidad del conjunto de datos {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -92,7 +96,7 @@ Ahora puede unir varios conjuntos de datos entre sí según el mapa de identidad
 
 Para seleccionar una identidad, seleccione el valor subrayado ubicado en la columna de identidad. Aparecerá la ventana Seleccionar una identidad.
 
-![seleccionar el mismo espacio de nombres](./images/user-guide/aai-identity-map.png)
+![seleccionar el mismo espacio de nombres](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 En el caso de que haya más de una identidad disponible en un área de nombres, asegúrese de seleccionar el campo de identidad correcto para el caso de uso. Por ejemplo, hay dos identidades de correo electrónico disponibles en el área de nombres del correo electrónico, un trabajo y un correo electrónico personal. Según el caso de uso, es más probable que se rellene un correo electrónico personal, que sea más útil en predicciones individuales. Esto significa que debería seleccionar `EMAIL (personalEmail.address)` como su identidad.
 
@@ -108,7 +112,7 @@ En el caso de que haya más de una identidad disponible en un área de nombres, 
 
 Cuando haya terminado de seleccionar y agregar conjuntos de datos, la variable **Mapa** aparece el paso de configuración. Attribution AI requiere que asigne el campo Canal de medios para cada conjunto de datos seleccionado en el paso anterior. Esto se debe a que, sin la asignación de canales de medios entre conjuntos de datos, es posible que las perspectivas derivadas de la Attribution AI no se muestren correctamente, lo que dificulta la interpretación de la página de perspectivas. Aunque solo se requiere el canal de medios, se recomienda encarecidamente asignar algunos de los campos opcionales, como Acción de medios, Nombre de campaña, Grupo de campaña y Etiqueta de campaña. Al hacerlo, el Attribution AI puede proporcionar perspectivas más claras y resultados óptimos.
 
-![asignación](./images/user-guide/mapping.png)
+![asignación](./images/user-guide/mapping-save-&-exit.png)
 
 ## Definición de eventos {#define-events}
 
@@ -198,13 +202,13 @@ Para añadir puntos de contacto adicionales, seleccione **Añadir punto de conta
 
 Cuando haya terminado de definir todos los puntos de contacto necesarios, desplácese hacia arriba y seleccione **Siguiente** en la esquina superior derecha para continuar con el paso final.
 
-![define](./images/user-guide/define_event_next.png)
+![define](./images/user-guide/define_event_save_and_exit.png)
 
 ## Configuración avanzada de capacitación y puntuación
 
 La página final en Attribution AI es la **[!UICONTROL Avanzadas]** página utilizada para configurar la formación y la puntuación.
 
-![página nueva avanzada](./images/user-guide/advanced_settings.png)
+![nuevas opciones de conjuntos de páginas](./images/user-guide/advanced_settings_set_options.png)
 
 ### Programar capacitación
 
@@ -298,7 +302,7 @@ Cuando se obtienen vistas previas de conjuntos de datos con esquema restringido 
 
 Después de crear una instancia con información restringida y continuar con el **[!UICONTROL Definir objetivo]** , aparece una advertencia en la parte superior: [!UICONTROL Debido a restricciones de acceso, cierta información no se muestra en la configuración.]
 
-![El espacio de trabajo de Attribution AI con los campos restringidos de la instancia resulta resaltado.](./images/user-guide/information-not-displayed.png)
+![El espacio de trabajo de Attribution AI con los campos restringidos de la instancia resulta resaltado.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Pasos siguientes
 
