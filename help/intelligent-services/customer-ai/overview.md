@@ -2,12 +2,12 @@
 keywords: Experience Platform;información general;ayuda al cliente;temas populares;información general sobre el cliente
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
-title: 'Información general sobre Customer AI '
+title: Información general sobre Customer AI
 topic-legacy: Customer AI Overview
 description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
 landing-page-description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 26%
@@ -17,7 +17,7 @@ ht-degree: 26%
 
 # Información general sobre Customer AI 
 
-Customer AI , como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de generar predicciones de clientes a nivel individual con explicaciones.
+Customer AI, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de generar predicciones de clientes a nivel individual con explicaciones.
 
 Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cliente puede indicarle qué es lo más probable que haga un cliente y por qué. Además, los expertos en marketing pueden beneficiarse de las predicciones y perspectivas de la inteligencia artificial aplicada al cliente para personalizar las experiencias de los clientes y ofrecerles las ofertas y los mensajes más adecuados.
 
@@ -40,7 +40,7 @@ El cliente no está creado para:
 - La AI del cliente no puede determinar si al ofrecer una oferta es más probable que el cliente compre un artículo. Aunque decida enviar ofertas de descuento basadas en puntuaciones de inclinación, no es necesariamente la mejor manera de convertir a estos clientes.
 - Customer AI no es una herramienta de recomendaciones de productos. Si tiene miles de SKU, no use Customer AI como proxy para una solución de recomendaciones de producto real como [!DNL Adobe Target].
 - La AI del cliente no puede predecir en qué fase del Recorrido de compra se encuentra el cliente, por ejemplo, si se encuentra en etapas de &quot;conocimiento&quot;, &quot;consideración&quot;, &quot;compra&quot; o &quot;retención&quot;.
-- No utilice la Customer AI para determinar los clientes que probablemente compren un lanzamiento de producto en el futuro. Esto requiere que algunos eventos de éxito estén presentes en el pasado para que la AI del cliente pueda entrenar correctamente el algoritmo de aprendizaje automático en sus datos.
+- No utilice Customer AI para determinar los clientes que probablemente compren un lanzamiento de producto en el futuro. Esto requiere que algunos eventos de éxito estén presentes en el pasado para que la AI del cliente pueda entrenar correctamente el algoritmo de aprendizaje automático en sus datos.
 
 El siguiente vídeo está diseñado para ayudarle a comprender la AI del cliente.
 

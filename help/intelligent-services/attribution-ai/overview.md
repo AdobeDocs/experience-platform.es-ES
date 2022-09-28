@@ -6,16 +6,16 @@ topic-legacy: Attribution AI
 description: Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente. Algunos ejemplos de puntos de contacto son las impresiones de anuncios en pantalla, los envíos de correo electrónico, las aperturas de correo electrónico y los clics de búsqueda paga.
 landing-page-description: Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 30%
 
 ---
 
 # Descripción general de Attribution AI
 
-Attribution AI, como parte de Servicios inteligentes es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con Attribution AI, los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de cada interacción individual con los clientes en cada fase de los recorridos de los clientes.
+Attribution AI, como parte de Servicios inteligentes, es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con Attribution AI, los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de cada interacción individual con los clientes en cada fase de los recorridos de los clientes.
 
 ## Explicación de la Attribution AI
 
@@ -38,7 +38,7 @@ Se puede utilizar Attribution AI para ayudar con los siguientes casos de uso de 
 - **Informes ejecutivos**: Permita a los ejecutivos comprender el verdadero impacto incremental del marketing, tanto en su conjunto como por canal, región, SKU, etc.
 - **Asignación de presupuesto**: Informe de las decisiones de asignación presupuestaria en los canales de marketing.
 - **Optimización de la campaña**: En cada canal, comprenda qué campañas, creativos y palabras clave funcionan mejor para qué SKU o almacén. Esto le permite ver cada canal para que el equipo de marketing pueda optimizar sus tácticas.
-- **Atribución de canales completos**: Comprender el impacto del marketing en todo el recorrido del cliente. Por ejemplo, el inicio de sesión gratuito en la conversión de pago y más allá.
+- **Atribución de canales completos**: Comprenda el impacto del marketing en todo el recorrido de clientes. Por ejemplo, el inicio de sesión gratuito en la conversión de pago y más allá.
 - **Evaluaciones de socios**: Evaluar la eficacia de los organismos y asociados sobre la base de los resultados de la atribución.
 
 ### Funciones adicionales
