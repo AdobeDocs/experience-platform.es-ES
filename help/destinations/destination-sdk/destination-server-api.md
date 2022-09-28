@@ -2,9 +2,9 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/destination-servers`. Las especificaciones de servidor y plantilla para su destino se pueden configurar en Adobe Experience Platform Destination SDK a través del punto final común "/authoring/destination-servers".
 title: Operaciones de API de extremo del servidor de destino
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1361'
 ht-degree: 5%
 
 ---
@@ -81,10 +81,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configuración del servidor de destino recién creada.
 
 ## Crear configuración para un servidor de destino basado en archivos {#create-file-based}
-
->[!IMPORTANT]
->
->La compatibilidad con destinos basados en archivos en Adobe Experience Platform Destination SDK actualmente está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 ### Configuración de ejemplo del servidor de destino SFTP {#sftp-server-sample}
 

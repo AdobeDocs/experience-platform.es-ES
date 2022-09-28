@@ -2,9 +2,9 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para el destino en el catálogo de Adobe Experience Platform. // Reemplazar por el párrafo de la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
+source-git-commit: 46e8f6cf3e135b31dc508274598f9d76df857c8f
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1488'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe usar la variable *YourDest
 |---|---|---|
 | GAID | Google Advertising ID | Seleccione la identidad objetivo GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
-| ECID | Experience Cloud ID | Un espacio de nombres que representa ECID. Este espacio de nombres también puede ser referenciado por los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/ecid.md) para obtener más información. |
+| ECID | Experience Cloud ID | Un espacio de nombres que representa ECID. Este espacio de nombres también puede ser referenciado por los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Lea el siguiente documento en [ECID](/help/identity-service/ecid.md) para obtener más información. |
 | phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Adobe Experience Platform admite los números de teléfono con texto sin formato y con hash SHA256. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos. |
 | email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
@@ -130,7 +130,11 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 > 
 >Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+*Eliminar según corresponda : si está documentando un nuevo destino de flujo continuo, mantenga el primer párrafo a continuación. Si está documentando un nuevo destino basado en archivos, mantenga el segundo párrafo.*
+
+Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+
+Lectura [Activar datos de audiencia en destinos de exportación de perfiles en lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
 ### Asignación de atributos e identidades {#map}
 

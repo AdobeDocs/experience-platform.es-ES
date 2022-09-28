@@ -1,15 +1,15 @@
 ---
 description: Las especificaciones de configuración de servidor y archivo para destinos basados en archivos se pueden configurar en Adobe Experience Platform Destination SDK a través del extremo /destination-servers .
-title: (Beta) Opciones de configuración para especificaciones de servidor de destino basadas en archivos
+title: Opciones de configuración para especificaciones de servidor de destino basadas en archivos
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 13%
+source-wordcount: '1274'
+ht-degree: 9%
 
 ---
 
-# (Beta) Configuración de servidor y archivo para especificaciones de servidor de destino basadas en archivos
+# Configuración de servidor y archivo para especificaciones de servidor de destino basadas en archivos
 
 ## Información general {#overview}
 
@@ -17,11 +17,15 @@ ht-degree: 13%
 >
 >La funcionalidad para configurar y enviar destinos basados en archivos mediante Adobe Experience Platform Destination SDK está actualmente en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
-Esta página detalla todas las opciones de configuración del servidor para los servidores de destino basados en archivos y le indica cómo configurar varias opciones de configuración de archivos para los usuarios que exportan archivos desde el Experience Platform al destino.
+Esta página detalla todas las opciones de configuración del servidor para los servidores de destino basados en archivos y muestra cómo configurar varias opciones de configuración de archivos para los usuarios que exportan archivos desde el Experience Platform al destino.
 
 Las especificaciones de configuración del servidor y del archivo para los destinos basados en archivos se pueden configurar en Adobe Experience Platform Destination SDK mediante la variable `/destination-servers` punto final. Lectura [Operaciones de extremo de API del servidor de destino](./destination-server-api.md) para obtener una lista completa de las operaciones que puede realizar en el punto final.
 
+Las secciones siguientes incluyen especificaciones de servidor de destino específicas para cada tipo de destino de lote admitido en el Destination SDK.
+
 ## Especificación de servidor de destino Amazon S3 basado en archivos {#s3-example}
+
+El ejemplo siguiente muestra una configuración de servidor de destino correcta para un destino de Amazon S3.
 
 ```json
 {
@@ -56,6 +60,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 {style=&quot;table-layout:auto&quot;}
 
 ## Especificación de servidor de destino SFTP basado en archivos {#sftp-example}
+
+El ejemplo siguiente muestra una configuración correcta del servidor de destino para un destino SFTP.
 
 ```json
 {
@@ -95,6 +101,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 
 ## Basado en archivos [!DNL Azure Data Lake Storage] ([!DNL ADLS]) especificación del servidor de destino {#adls-example}
 
+El ejemplo siguiente muestra una configuración correcta del servidor de destino para un [!DNL Azure Data Lake Storage] destino.
+
 ```json
 {
    "name":"ADLS destination server",
@@ -122,6 +130,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 {style=&quot;table-layout:auto&quot;}
 
 ## Basado en archivos [!DNL Azure Blob Storage] especificación del servidor de destino {#blob-example}
+
+El ejemplo siguiente muestra una configuración correcta del servidor de destino para un [!DNL Azure Blob Storage] destino.
 
 ```json
 {
@@ -157,6 +167,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 
 ## Basado en archivos [!DNL Data Landing Zone] ([!DNL DLZ]) especificación del servidor de destino {#dlz-example}
 
+El ejemplo siguiente muestra una configuración correcta del servidor de destino para un [!DNL Data Landing Zone] ([!DNL DLZ]).
+
 ```json
 {
    "name":"DLZ destination server",
@@ -185,6 +197,8 @@ Las especificaciones de configuración del servidor y del archivo para los desti
 {style=&quot;table-layout:auto&quot;}
 
 ## Basado en archivos [!DNL Google Cloud Storage] especificación del servidor de destino {#gcs-example}
+
+El ejemplo siguiente muestra una configuración correcta del servidor de destino para un [!DNL Google Cloud Storage] destino.
 
 ```json
 {
@@ -224,7 +238,11 @@ En esta sección se describe la configuración de formato de archivo para la exp
 
 >[!NOTE]
 >
->Las opciones de CSV solo se admiten al exportar archivos CSV. La variable `fileConfigurations` no es obligatoria al configurar un nuevo servidor de destino. Si no pasa ningún valor en la llamada de API para las opciones de CSV, se utilizarán los predeterminados de la siguiente tabla.
+>Las opciones de CSV solo se admiten al exportar archivos CSV. La variable `fileConfigurations` no es obligatoria al configurar un nuevo servidor de destino. Si no transmite ningún valor en la llamada de API para las opciones de CSV, los predeterminados de la función [tabla de referencia más abajo](#file-formatting-reference-and-example) se utilizará.
+
+### Configuraciones de archivos con opciones de CSV y la variable `templatingStrategy` configure como `NONE` {#file-configuration-templating-none}
+
+En el ejemplo de configuración siguiente, todas las opciones de CSV son fijas. La configuración de exportación definida en cada uno de los `csvOptions` Los parámetros son finales y los usuarios no pueden modificarlos.
 
 ```json
 "fileConfigurations": {
@@ -290,22 +308,70 @@ En esta sección se describe la configuración de formato de archivo para la exp
     }
 ```
 
-| Campo | Obligatorio/Opcional | Descripción | Valor predeterminado |
-|---|---|---|---|
-| `compression.value` | Opcional | Códec de compresión que se utilizará al guardar datos en un archivo. Valores compatibles: `none`, `bzip2`, `gzip`, `lz4`y `snappy`. | `none` |
-| `fileType.value` | Opcional | Especifica el formato del archivo de salida. Valores compatibles: `csv`, `parquet`y `json`. | `csv` |
-| `csvOptions.quote.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un carácter único que se utiliza para escapar los valores entre comillas, donde el separador puede formar parte del valor. | `null` |
-| `csvOptions.quoteAll.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si todos los valores deben estar siempre entre comillas. De forma predeterminada, solo se escapan los valores que contienen un carácter de comillas. | `false` |
-| `csvOptions.escape.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un carácter único que se utiliza para las comillas de escape dentro de un valor ya citado. | `\` |
-| `csvOptions.escapeQuotes.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si los valores que contienen comillas siempre se deben incluir entre comillas. El valor predeterminado es omitir todos los valores que contengan un carácter de comillas. | `true` |
-| `csvOptions.header.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si se deben escribir los nombres de las columnas como primera línea. | `true` |
-| `csvOptions.ignoreLeadingWhiteSpace.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si se recortan los espacios en blanco iniciales de los valores. | `true` |
-| `csvOptions.ignoreTrailingWhiteSpace.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si se recortarán los espacios en blanco al final de los valores. | `true` |
-| `csvOptions.nullValue.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece la representación de cadena de un valor nulo. | `""` |
-| `csvOptions.dateFormat.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica el formato de fecha. | `yyyy-MM-dd` |
-| `csvOptions.timestampFormat.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece la cadena que indica un formato de marca de tiempo. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
-| `csvOptions.charToEscapeQuoteEscaping.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un carácter único que se utilizará para escapar el escape del carácter de comillas. | `\` cuando los caracteres escape y comillas son diferentes. `\0` cuando el carácter escape y comillas son iguales. |
-| `csvOptions.emptyValue.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define la representación de cadena de un valor vacío. | `""` |
-| `maxFileRowCount` | Opcional | Número máximo de filas que puede contener el archivo exportado. Configúrelo según los requisitos de tamaño de archivo de la plataforma de destino. | N/D |
+### Configuraciones de archivos con opciones de CSV y la variable `templatingStrategy` configure como `PEBBLE_V1` {#file-configuration-templating-pebble}
+
+En el ejemplo de configuración siguiente, ninguna de las opciones de CSV está corregida. La variable `value` en cada una de las `csvOptions` se configura en un campo de datos de cliente correspondiente mediante la variable `/destinations` extremo (por ejemplo `customerData.quote` para el `quote` formato de archivo ) y los usuarios pueden utilizar la interfaz de usuario del Experience Platform para seleccionar entre las distintas opciones que configure en el campo de datos del cliente correspondiente.
+
+```json
+  "fileConfigurations": {
+    "compression": {
+      "templatingStrategy": "PEBBLE_V1",
+      "value": "{% if customerData contains 'compression' and customerData.compression is not empty %}{{customerData.compression}}{% else %}NONE{% endif %}"
+    },
+    "fileType": {
+      "templatingStrategy": "PEBBLE_V1",
+      "value": "{{customerData.fileType}}"
+    },
+    "csvOptions": {
+      "sep": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'delimiter' %}{{customerData.csvOptions.delimiter}}{% else %},{% endif %}"
+      },
+      "quote": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'quote' %}{{customerData.csvOptions.quote}}{% else %}\"{% endif %}"
+      },
+      "escape": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'escape' %}{{customerData.csvOptions.escape}}{% else %}\\{% endif %}"
+      },
+      "nullValue": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'nullValue' %}{{customerData.csvOptions.nullValue}}{% else %}null{% endif %}"
+      },
+      "emptyValue": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
+      }
+    }
+  }
+```
+
+### Referencia completa y ejemplos de opciones de formato de archivo compatibles {#file-formatting-reference-and-example}
+
+>[!TIP]
+>
+>Las opciones de formato de archivo CSV que se describen a continuación también se documentan en la sección [Guía de Apache Spark para archivos CSV](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). Las descripciones utilizadas a continuación se toman de la guía Apache Spark.
+
+A continuación se muestra una referencia completa de todas las opciones de formato de archivo disponibles en Destination SDK, junto con ejemplos de salida para cada opción.
+
+| Campo | Obligatorio/Opcional | Descripción | Valor predeterminado | Ejemplo de salida 1 | Ejemplo de salida 2 |
+|---|---|---|---|---|---|
+| `templatingStrategy` | Requerido | Para cada opción de formato de archivo que configure, debe agregar el parámetro `templatingStrategy`, que puede tener dos valores: <br><ul><li>`NONE`: utilice este valor si no planea permitir que los usuarios seleccionen entre diferentes valores para una configuración. Consulte [esta configuración](#file-configuration-templating-none) por ejemplo, donde las opciones de formato de archivo son fijas.</li><li>`PEBBLE_V1`: utilice este valor si desea permitir que los usuarios seleccionen entre diferentes valores para una configuración. En este caso, también debe configurar un campo de datos de cliente correspondiente en la variable `/destination` configuración del extremo, para que aparezcan las distintas opciones para los usuarios en la interfaz de usuario. Consulte [esta configuración](#file-configuration-templating-pebble) para un ejemplo en el que los usuarios pueden seleccionar entre diferentes valores para las opciones de formato de archivo.</li></ul> | - | - | - |
+| `compression.value` | Opcional | Códec de compresión que se utilizará al guardar datos en un archivo. Valores compatibles: `none`, `bzip2`, `gzip`, `lz4`y `snappy`. | `none` | - | - |
+| `fileType.value` | Opcional | Especifica el formato del archivo de salida. Valores compatibles: `csv`, `parquet`y `json`. | `csv` | - | - |
+| `csvOptions.quote.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un carácter único que se utiliza para escapar los valores entre comillas, donde el separador puede formar parte del valor. | `null` | - | - |
+| `csvOptions.quoteAll.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si todos los valores deben estar siempre entre comillas. De forma predeterminada, solo se escapan los valores que contienen un carácter de comillas. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
+| `csvOptions.delimiter.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un separador para cada campo y valor. Este separador puede ser uno o más caracteres. | `,` | `delimiter`:`,` —> `comma-separated values"` | `delimiter`:`\t` —> `tab-separated values` |
+| `csvOptions.escape.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un carácter único que se utiliza para las comillas de escape dentro de un valor ya citado. | `\` | `"escape"`:`"\\"` —> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` —> `male,John,"Test,'''"LastName5"` |
+| `csvOptions.escapeQuotes.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si los valores que contienen comillas siempre se deben incluir entre comillas. El valor predeterminado es omitir todos los valores que contengan un carácter de comillas. | `true` | - | - |
+| `csvOptions.header.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si se deben escribir los nombres de las columnas como primera línea en el archivo exportado. | `true` | - | - |
+| `csvOptions.ignoreLeadingWhiteSpace.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si se recortan los espacios en blanco iniciales de los valores. | `true` | `ignoreLeadingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`--> `"    male","John","TestLastName"` |
+| `csvOptions.ignoreTrailingWhiteSpace.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si se recortarán los espacios en blanco al final de los valores. | `true` | `ignoreTrailingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`—> `"male    ","John","TestLastName"` |
+| `csvOptions.nullValue.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece la representación de cadena de un valor nulo. | `""` | `nullvalue`:`""` —> `male,"",TestLastName` | `nullvalue`:`"NULL"` —> `male,NULL,TestLastName` |
+| `csvOptions.dateFormat.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica el formato de fecha. | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` —> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` —> `male,TestLastName,John,02/24/2022` |
+| `csvOptions.timestampFormat.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece la cadena que indica un formato de marca de tiempo. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
+| `csvOptions.charToEscapeQuoteEscaping.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un carácter único que se utilizará para escapar el escape del carácter de comillas. | `\` cuando los caracteres escape y comillas son diferentes. `\0` cuando el carácter escape y comillas son iguales. | - | - |
+| `csvOptions.emptyValue.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define la representación de cadena de un valor vacío. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` —> `male,empty,John` |
 
 {style=&quot;table-layout:auto&quot;}

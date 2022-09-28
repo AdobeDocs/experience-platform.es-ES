@@ -2,7 +2,7 @@
 description: Esta página proporciona toda la información que debe enviar para su revisión a un destino de producto creado mediante Destination SDK.
 title: Enviar para revisión un destino productivo creado en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
+source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -42,8 +42,8 @@ Puede encontrar información detallada sobre cada elemento en las secciones sigu
 
 Proporcione una descripción de los casos de uso que resuelva su destino para los clientes Experience Platform. Las descripciones pueden ser similares a los casos de uso de socios existentes:
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Cree audiencias a partir de las listas de clientes, las personas que hayan visitado el sitio o las personas que ya hayan interactuado con el contenido en Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Las API de DataX están disponibles para los anunciantes que deseen dirigirse a un grupo de audiencia específico con claves de direcciones de correo electrónico en Verizon Media (VMG) pueden crear rápidamente un nuevo segmento e insertar el grupo de audiencia deseado con la API casi en tiempo real de VMG.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Las API de DataX están disponibles para los anunciantes que deseen dirigirse a un grupo de audiencia específico con direcciones de correo electrónico marcadas por Verizon Media (VMG) pueden crear rápidamente un nuevo segmento y insertar el grupo de audiencia deseado con la API casi en tiempo real de VMG.
 
 ## Resultados de la prueba después de usar la API de destino de la prueba
 
@@ -225,7 +225,7 @@ Proporcione el ID de la solicitud de publicación para su destino. Para obtener 
 
 Si es un proveedor de software independiente (ISV) o un integrador de sistemas (SI) que crea un [integración de productos](./overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](./docs-framework/documentation-instructions.md) para crear una página de documentación del producto para el destino. Como parte del proceso de envío, proporcione la solicitud de extracción (PR) para la documentación de destino.
 
-## Logotipo de destino
+## Logotipo de destino {#logo}
 
 El catálogo de destinos incluye un logotipo para cada tarjeta de destino. En el correo electrónico de envío, incluya una imagen con el logotipo de para el destino.
 

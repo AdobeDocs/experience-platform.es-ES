@@ -1,14 +1,15 @@
 ---
 description: Obtenga información sobre cómo utilizar Destination SDK para configurar un destino de almacenamiento de Azure Blob con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada.
-title: (Beta) Configure un destino de almacenamiento de Azure Blob con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada.
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+title: Configure un destino de almacenamiento de Azure Blob con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada.
+exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '766'
 ht-degree: 1%
 
 ---
 
-# (Beta) Configure un [!DNL Azure Blob Storage] destino con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada
+# Configure un [!DNL Azure Blob Storage] destino con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada
 
 ## Información general {#overview}
 

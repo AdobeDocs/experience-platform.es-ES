@@ -1,15 +1,15 @@
 ---
 description: Aprenda a utilizar Destination SDK para configurar un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada.
-title: (Beta) Configure un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada.
+title: Configure un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
 
-# (Beta) Configurar un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada
+# Configurar un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada
 
 ## Información general {#overview}
 

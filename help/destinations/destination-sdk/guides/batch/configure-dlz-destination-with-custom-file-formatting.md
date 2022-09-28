@@ -1,14 +1,15 @@
 ---
 description: Aprenda a utilizar Destination SDK para configurar un destino de zona de aterrizaje de datos (DLZ) con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada.
-title: (Beta) Configure un destino de zona de aterrizaje de datos (DLZ) con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada.
-source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
+title: Configure un destino de zona de aterrizaje de datos (DLZ) con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada.
+exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '763'
 ht-degree: 1%
 
 ---
 
-# (Beta) Configure un [!DNL Data Landing Zone (DLZ)] destino con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada
+# Configure un [!DNL Data Landing Zone (DLZ)] destino con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada
 
 ## Información general {#overview}
 
