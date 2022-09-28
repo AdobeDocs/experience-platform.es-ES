@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
-source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 6%
+source-wordcount: '2326'
+ht-degree: 5%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 6%
 
 Nuevas funciones de Adobe Experience Platform:
 
+- [Control de acceso basado en atributos](#abac)
 - [Higiene de los datos](#data-hygiene)
 - [[!UICONTROL Consola de privacidad]](#privacy-console)
 
@@ -25,6 +26,23 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de identidad](#identity-service)
 - [Fuentes](#sources)
+
+## Control de acceso basado en atributos {#abac}
+
+>[!IMPORTANT]
+>
+>El control de acceso basado en atributos se habilitará a partir de octubre de 2022. Si desea ser uno de los primeros en adoptarlo, póngase en contacto con su representante del Adobe.
+
+El control de acceso basado en atributos es una capacidad de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad buena flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a las funciones de usuario. Esta función le permite conceder o revocar acceso a objetos individuales para usuarios específicos de Platform de su organización.
+
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a datos personales confidenciales (SPD), información de identificación personal (PII) y otro tipo personalizado de datos en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.
+
+| Función | Descripción |
+| --- | --- |
+| Control de acceso basado en atributos | El control de acceso basado en atributos le permite etiquetar campos de esquema y segmentos del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos de uso de datos o de organización. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir políticas de acceso que cubran los campos y segmentos del esquema XDM para administrar mejor el acceso dado a los usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Para obtener más información, consulte la [información general sobre el control de acceso basado en atributos](../../access-control/abac/overview.md). |
+| Permisos | Los permisos son el área del Experience Cloud en la que los administradores pueden definir funciones de usuario y políticas de acceso para administrar los permisos de acceso a funciones y objetos dentro de una aplicación de producto. Mediante Permisos, puede crear y administrar funciones, asignar los permisos de recursos deseados para estas funciones y crear políticas para aprovechar las etiquetas y definir qué funciones de usuario tienen acceso a recursos de Platform específicos. Los permisos también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de la interfaz de usuario de permisos](../../access-control/abac/ui/browse.md). |
+
+Para obtener más información sobre el control de acceso basado en atributos, consulte la [información general sobre el control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo del control de acceso basado en atributos, lea la [guía de extremo a extremo de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
 
 ## Higiene de los datos {#data-hygiene}
 
@@ -172,5 +190,9 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 | Función | Descripción |
 | --- | --- |
 | Impacto de la población del segmento del Audience Manager en el perfil del cliente en tiempo real | La ingesta de grandes poblaciones de segmentos de Audience Manager tiene un impacto directo en el recuento total de perfiles cuando envía por primera vez un segmento de Audience Manager a Platform mediante la fuente de Audience Manager. Esto significa que si selecciona todos los segmentos, es posible que se produzca un recuento de perfiles superior a su derecho de uso de licencia. Para obtener más información, lea la [Información general de la fuente del Audience Manager](../../sources/connectors/adobe-applications/audience-manager.md). Para obtener información sobre el uso de las licencias, consulte la documentación de [uso del panel de uso de licencias](../../dashboards/guides/license-usage.md). |
+| Compatibilidad con el Cloud Service administrado de Adobe Campaign | Utilice la fuente del Cloud Service administrado de Adobe Campaign para llevar los datos de envío y registro de seguimiento de Adobe Campaign v8.4 al Experience Platform. Lea la guía de [creación de una conexión de origen de Adobe Campaign Managed Cloud Service en la interfaz de usuario](../../sources/tutorials/ui/create/adobe-applications/campaign.md) para obtener más información. |
+| Compatibilidad de API para la ingesta bajo demanda de orígenes por lotes | Utilice la ingesta bajo demanda para crear ejecuciones de flujo ad hoc para un flujo de datos determinado con la variable [!DNL Flow Service] API. Las ejecuciones de flujo creadas deben establecerse en ingesta única. Para obtener más información, consulte la guía de [creación de una ejecución de flujo para la ingesta bajo demanda mediante la API](../../sources/tutorials/api/on-demand-ingestion.md) para obtener más información. |
+| Compatibilidad de API para reintentar ejecuciones de flujo de datos fallidas para orígenes por lotes | Utilice la variable `re-trigger` para reintentar el flujo de datos fallido mediante la API. Lea la guía de [volver a intentar ejecutar el flujo de datos fallido mediante la API](../../sources/tutorials/api/retry-flows.md) para obtener más información. |
+| Compatibilidad API para filtrar datos de nivel de fila para la variable [!DNL Google BigQuery] y [!DNL Snowflake] sources | Utilice operadores lógicos y de comparación para filtrar los datos de nivel de fila para la variable [!DNL Google BigQuery] y [!DNL Snowflake] fuentes. Para obtener más información, consulte la guía sobre el filtrado de datos para una fuente mediante la API . |
 
 Para obtener más información sobre las fuentes, lea la [información general sobre fuentes](../../sources/home.md).
