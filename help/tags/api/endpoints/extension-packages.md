@@ -2,10 +2,10 @@
 title: Extremo de paquetes de extensiones
 description: Aprenda a realizar llamadas al extremo /extension_packages en la API de Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 73%
+source-wordcount: '956'
+ht-degree: 71%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 73%
 
 Un paquete de extensiones representa una [extensión](./extensions.md) creada por un desarrollador de extensiones. Un paquete de extensiones define capacidades adicionales que se pueden poner a disposición de los usuarios de etiquetas. Normalmente, estas capacidades se presentan en forma de [componentes de regla](./rule-components.md) (eventos, condiciones y acciones) y [elementos de datos](./data-elements.md), pero también pueden incluir módulos principales y módulos compartidos.
 
-Los paquetes de extensiones se muestran en el catálogo de extensiones dentro de la interfaz de usuario de recopilación de datos para que los usuarios los instalen. Para añadir un paquete de extensiones a una propiedad, se crea una extensión con un vínculo al paquete de extensiones.
+Los paquetes de extensión se muestran en el catálogo de extensiones dentro de la interfaz de usuario de recopilación de datos y la interfaz de usuario de Adobe Experience Platform para que los usuarios los instalen. Para añadir un paquete de extensiones a una propiedad, se crea una extensión con un vínculo al paquete de extensiones.
 
 Un paquete de extensiones pertenece a la [empresa](./companies.md) del desarrollador que lo creó.
 

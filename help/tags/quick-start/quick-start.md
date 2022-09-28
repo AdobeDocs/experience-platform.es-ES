@@ -2,10 +2,10 @@
 title: Guía de inicio rápido
 description: Aprenda a empezar rápidamente a usar etiquetas con Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 96%
+source-wordcount: '1527'
+ht-degree: 90%
 
 ---
 
@@ -31,13 +31,13 @@ Flujo de trabajo de etiquetas básico:
 
 Las etiquetas están totalmente integradas con su Adobe ID. Los permisos de usuario se administran mediante la Admin Console con otros productos y soluciones de Adobe desde [!DNL Creative Cloud], [!DNL Document Cloud] y Experience Cloud.
 
-Las etiquetas tienen un sistema de administración de usuarios basado en los derechos. Esto significa que los derechos individuales deben concederse explícitamente. Estos derechos se asignan a grupos, y los usuarios se añaden a los grupos correspondientes para obtener acceso. Incluso si su empresa tiene acceso a la interfaz de usuario de recopilación de datos, los usuarios individuales no pueden hacer nada hasta que un administrador de organización les conceda explícitamente algún derecho.
+Las etiquetas tienen un sistema de administración de usuarios basado en los derechos. Esto significa que los derechos individuales deben concederse explícitamente. Estos derechos se asignan a grupos, y los usuarios se añaden a los grupos correspondientes para obtener acceso. Aunque su organización tenga acceso a la recopilación de datos, los usuarios individuales no pueden hacer nada hasta que un administrador les conceda explícitamente algunos derechos.
 
-Para obtener instrucciones detalladas sobre cómo crear grupos y agregar usuarios para etiquetas, consulte el documento [permisos de usuario](../ui/administration/user-permissions.md).
+Para obtener instrucciones detalladas sobre cómo crear grupos y agregar usuarios a las etiquetas, consulte [guía de permisos de recopilación de datos](../../collection/permissions.md).
 
 ## 2. Iniciar sesión
 
-Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario de recopilación de datos. Para ello, navegue directamente a la [pantalla de inicio de sesión del Experience Cloud](https://experiencecloud.adobe.com)y seleccionando la IU de recopilación de datos en la pestaña Acceso rápido .
+Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario del Experience Platform o en la de recopilación de datos. Para ello, navegue directamente a la [pantalla de inicio de sesión del Experience Cloud](https://experience.adobe.com/)y seleccionando **[!UICONTROL Recopilación de datos]** o **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión e
 
 ## 3. Crear una propiedad
 
-Una vez que haya iniciado sesión en la interfaz de usuario de recopilación de datos, lo primero que debe hacer es crear una propiedad. Una propiedad es básicamente un contenedor que se rellena con extensiones, reglas, elementos de datos y bibliotecas al implementar etiquetas en el sitio. Mucha gente crea una propiedad para cada sitio web (o grupo de sitios relacionados) donde desean implementar el mismo conjunto de etiquetas.
+Una vez que haya iniciado sesión en la interfaz de usuario, lo primero que debe hacer es crear una propiedad. Una propiedad es básicamente un contenedor que se rellena con extensiones, reglas, elementos de datos y bibliotecas al implementar etiquetas en el sitio. Mucha gente crea una propiedad para cada sitio web (o grupo de sitios relacionados) donde desean implementar el mismo conjunto de etiquetas.
 
 Para obtener más información acerca de la creación de propiedades, consulte [Crear una propiedad](../ui/administration/companies-and-properties.md).
 
@@ -67,7 +67,7 @@ Lo que hace que las etiquetas de Platform sean verdaderamente únicas es que cua
 * Almacenamiento local y de sesión
 * Prácticamente todo lo demás
 
-Una vez definido el elemento de datos, puede utilizarlo en cualquier lugar de la interfaz de usuario de recopilación de datos para cualquier extensión. Consulte la documentación sobre [Elementos de datos](../ui/managing-resources/data-elements.md) para obtener información más detallada.
+Una vez definido el elemento de datos, puede utilizarlo en cualquier lugar de la interfaz de usuario para cualquier extensión. Consulte la documentación sobre [Elementos de datos](../ui/managing-resources/data-elements.md) para obtener información más detallada.
 
 **Las reglas** son el núcleo lógico de la implementación y controlan el qué, el cuándo, el dónde y el cómo de todas las etiquetas del sitio. Defina un evento, establezca condiciones y excepciones y defina las acciones y el orden. Por último, publique los cambios para ver los resultados. Para obtener más información, consulte [Rules](../ui/managing-resources/rules.md).
 

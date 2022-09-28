@@ -2,9 +2,9 @@
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de Experience (XDM) al configurar un conjunto de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '914'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Preparación de datos es un servicio de Adobe Experience Platform que le permite
 >* [Gestión de formatos de datos con la preparación de datos](../../data-prep/data-handling.md)
 
 
-Esta guía explica cómo asignar los datos dentro de la interfaz de usuario de la recopilación de datos. Para seguir los pasos, inicie el proceso de creación de un conjunto de datos hasta (e incluido) el [paso básico de configuración](./overview.md#create).
+Esta guía explica cómo asignar los datos dentro de la interfaz de usuario de . Para seguir los pasos, inicie el proceso de creación de un conjunto de datos hasta (e incluido) el [paso básico de configuración](./overview.md#create).
 
 Para ver una demostración rápida del proceso de preparación de datos para la recopilación de datos, consulte el siguiente vídeo:
 
@@ -203,4 +203,4 @@ Una vez que el recuento de campos requerido alcance cero y esté satisfecho con 
 
 ## Pasos siguientes
 
-En esta guía se explica cómo asignar los datos a XDM al configurar un conjunto de datos en la interfaz de usuario de recopilación de datos. Si estaba siguiendo el tutorial de conjuntos de datos generales, ahora puede volver al paso [ver detalles del almacén de datos](./overview.md).
+En esta guía se explica cómo asignar los datos a XDM al configurar un conjunto de datos en la interfaz de usuario. Si estaba siguiendo el tutorial de conjuntos de datos generales, ahora puede volver al paso [ver detalles del almacén de datos](./overview.md).

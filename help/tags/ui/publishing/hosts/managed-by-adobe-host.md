@@ -2,10 +2,10 @@
 title: Información general sobre alojamientos administrados por Adobe
 description: Obtenga información acerca de la opción de alojamiento predeterminada para implementar compilaciones de biblioteca de etiquetas en Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 98%
+source-wordcount: '1173'
+ht-degree: 96%
 
 ---
 
@@ -88,9 +88,9 @@ Como se indica en la tabla anterior, el almacenamiento en caché del navegador n
 
 Los encabezados de control de caché solo se aplican a la compilación de la biblioteca principal. Los recursos secundarios debajo de la biblioteca principal siempre se consideran nuevos y, por lo tanto, no es necesario almacenarlos en caché en el explorador.
 
-## Uso del hosting gestionado por Adobe en la IU de recopilación de datos
+## Uso del hosting gestionado por Adobe en la interfaz de usuario de 
 
-La primera vez que crea una propiedad en la [IU de recopilación de datos](https://experience.adobe.com/#/data-collection/), se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
+La primera vez que se crea una propiedad en la interfaz de usuario de Platform o de la recopilación de datos, se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
 
 >[!NOTE]
 >

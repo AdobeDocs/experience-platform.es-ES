@@ -2,9 +2,9 @@
 title: Administración de permisos para la recopilación de datos en el Experience Platform
 description: Información general de alto nivel sobre cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1309'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ Esta guía le muestra cómo administrar los permisos para las funciones de recop
 
 ## Primeros pasos
 
-Para configurar el control de acceso para la recopilación de datos, debe tener privilegios de administrador para una organización que tenga una integración de producto con la recopilación de datos de Adobe Experience Platform. La función mínima que puede conceder o retirar permisos es un administrador de perfiles de producto. Otras funciones de administrador que pueden administrar permisos son los administradores de productos (pueden administrar todos los perfiles de un producto) y los administradores de sistemas (sin restricciones). Consulte el artículo sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) en la guía de administración de Adobe Enterprise para obtener más información.
+Para configurar el control de acceso para la recopilación de datos, debe tener privilegios de administrador para una organización que tenga una integración de producto con la recopilación de datos de Adobe Experience Platform. La función mínima que puede conceder o retirar permisos es una **administrador de perfiles de producto**. Otras funciones de administrador que pueden administrar permisos son **administradores de productos** (puede administrar todos los perfiles de un producto) y **administradores del sistema** (sin restricciones). Consulte el artículo sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) en la guía de administración de Adobe Enterprise para obtener más información.
 
 En esta guía se da por hecho que está familiarizado con conceptos básicos de Admin Console como perfiles de producto y cómo conceden permisos de producto a usuarios y grupos individuales. Para obtener más información, consulte la [Guía del usuario del Admin Console](https://helpx.adobe.com/es/enterprise/using/admin-console.html).
 
@@ -137,4 +137,4 @@ Para obtener más información sobre la administración de usuarios para un perf
 
 ## Pasos siguientes
 
-Esta guía abarcaba los permisos disponibles para la interfaz de usuario de recopilación de datos y cómo administrarlos a través de Admin Console. Para obtener más información sobre la administración de permisos para otras funciones de Adobe Experience Platform, consulte la [documentación de control de acceso](../access-control/home.md).
+Esta guía abarcaba los permisos disponibles para la recopilación de datos y cómo administrarlos a través de Admin Console. Para obtener más información sobre la administración de permisos para otras funciones de Adobe Experience Platform, consulte la [documentación de control de acceso](../access-control/home.md).

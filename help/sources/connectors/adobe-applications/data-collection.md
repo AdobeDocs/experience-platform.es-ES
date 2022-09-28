@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;fuentes;fuente;recopilació
 title: Recopilación de datos de Adobe
 description: Este documento proporciona información general sobre la fuente de recopilación de datos de Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente de fuentes del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe en segundos.
 
-La integración de fuentes de la recopilación de datos de Adobe le permite acceder a sus datos de recopilación de datos de Experience Edge, incluida la preparación de datos para la recopilación de datos, así como mejorar la compatibilidad con las advertencias, a través del catálogo de fuentes.
+La integración de fuentes de la recopilación de datos de Adobe Experience Platform le permite acceder a sus datos en la red perimetral, incluida la preparación de datos para la recopilación de datos, así como mejorar la compatibilidad con las advertencias, a través del catálogo de fuentes.
 
-## Uso del espacio de trabajo de fuentes para acceder a la recopilación de datos de Adobe
+## Uso del espacio de trabajo de fuentes para acceder a la recopilación de datos
 
 En la interfaz de usuario de Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder a la [!UICONTROL Fuentes] espacio de trabajo. La variable [!UICONTROL Catálogo] muestra una variedad de fuentes con las que puede crear una cuenta.
 
@@ -32,7 +32,7 @@ Un conjunto de datos es una configuración que indica a la red perimetral dónde
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Para ver los pasos completos sobre cómo utilizar la interfaz de usuario de recopilación de datos, consulte la [información general completa sobre la recopilación de datos](../../../collection/e2e.md).
+Para ver los pasos completos sobre cómo configurar la recopilación de datos en la interfaz de usuario, consulte la [información general completa sobre la recopilación de datos](../../../collection/e2e.md).
 
 ## Pasos siguientes
 

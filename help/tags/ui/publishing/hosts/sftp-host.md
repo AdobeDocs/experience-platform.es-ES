@@ -2,9 +2,9 @@
 title: Alojamientos de SFTP
 description: Obtenga información sobre cómo configurar Adobe Experience Platform para que entregue compilaciones de biblioteca a un servidor SFTP seguro y autoalojado.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 38%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 38%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Adobe Experience Platform le permite enviar compilaciones de biblioteca de etiquetas a un servidor SFTP protegido que usted aloje, lo que le ofrece un bueno control sobre cómo se almacenan y administran las compilaciones. Esta guía explica cómo configurar un host SFTP para una propiedad de etiqueta en la interfaz de usuario de recopilación de datos.
+Adobe Experience Platform le permite enviar compilaciones de biblioteca de etiquetas a un servidor SFTP protegido que usted aloje, lo que le ofrece un bueno control sobre cómo se almacenan y administran las compilaciones. Esta guía explica cómo configurar un host SFTP para una propiedad de etiqueta en la interfaz de usuario del Experience Platform o la interfaz de usuario de recopilación de datos.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Para obtener información más detallada, consulte el siguiente artículo de Med
 
 ## Creación de un host SFTP {#create}
 
-En la interfaz de usuario de la recopilación de datos, seleccione **[!UICONTROL Hosts]** en la navegación izquierda, seguido de **[!UICONTROL Agregar host]**.
+Select **[!UICONTROL Hosts]** en la navegación izquierda, seguido de **[!UICONTROL Agregar host]**.
 
 ![Imagen que muestra el botón Agregar host seleccionado en la interfaz de usuario](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 

@@ -3,9 +3,9 @@ title: Información general sobre Datastreams
 description: Conecte la integración del SDK de Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;identidad;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;preparación de datos para recopilación de datos;Mp;prep de datos apper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1725'
 ht-degree: 3%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 3%
 
 Un conjunto de datos representa la configuración del lado del servidor al implementar los SDK web y móviles de Adobe Experience Platform. Mientras que la variable [configurar, comando](../fundamentals/configuring-the-sdk.md) en el SDK controla los elementos que se deben gestionar en el cliente (como el `edgeDomain`), los conjuntos de datos administran todas las demás configuraciones para el SDK. Cuando se envía una solicitud a la red perimetral de Adobe Experience Platform, la variable `edgeConfigId` se utiliza para hacer referencia al conjunto de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios de código en el sitio web.
 
-Este documento trata los pasos para configurar un conjunto de datos en la interfaz de usuario de la recopilación de datos.
+Este documento cubre los pasos para configurar un conjunto de datos en la interfaz de usuario.
 
 ## Acceda a la [!UICONTROL Datastreams] workspace
 
-Puede crear y administrar conjuntos de datos en la interfaz de usuario de recopilación de datos seleccionando **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
+Puede crear y administrar conjuntos de datos en la interfaz de usuario o la interfaz de usuario del Experience Platform de la recopilación de datos seleccionando **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
 
-![Ficha Datastreams en la interfaz de usuario de la recopilación de datos](../images/datastreams/overview/datastreams-tab.png)
+![Ficha Datastreams en la interfaz de usuario](../images/datastreams/overview/datastreams-tab.png)
 
 La variable [!UICONTROL Datastreams] muestra una lista de conjuntos de datos existentes, que incluye su nombre descriptivo, ID y fecha de la última modificación. Seleccione el nombre de un conjunto de datos a [ver sus detalles y configurar servicios](#view-details).
 
@@ -106,7 +106,7 @@ Este servicio controla si los datos se envían a Adobe Audience Manager y cómo 
 
 >[!IMPORTANT]
 >
->Al habilitar un conjunto de datos para Platform, tome nota del simulador de pruebas de Platform que está utilizando actualmente, tal y como se muestra en la cinta superior de la interfaz de usuario de la recopilación de datos.
+>Al habilitar un conjunto de datos para Platform, tome nota del simulador de pruebas de Platform que está utilizando actualmente, tal y como se muestra en la cinta superior de la interfaz de usuario.
 >
 >![Espacio aislado seleccionado](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -175,4 +175,4 @@ La página principal del [!UICONTROL Datastreams] El espacio de trabajo vuelve a
 
 ## Pasos siguientes
 
-Esta guía describe cómo administrar conjuntos de datos en la interfaz de usuario de recopilación de datos. Para obtener más información sobre cómo instalar y configurar el SDK web después de configurar un conjunto de datos, consulte la [Guía de recopilación de datos E2E](../../collection/e2e.md#install).
+Esta guía describe cómo administrar conjuntos de datos en la interfaz de usuario. Para obtener más información sobre cómo instalar y configurar el SDK web después de configurar un conjunto de datos, consulte la [Guía de recopilación de datos E2E](../../collection/e2e.md#install).

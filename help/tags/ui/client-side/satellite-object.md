@@ -2,9 +2,9 @@
 title: Referencia de objeto satelital
 description: Obtenga información sobre el objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1290'
 ht-degree: 79%
 
 ---
@@ -51,7 +51,7 @@ En el ejemplo proporcionado, si existe un elemento de datos con un nombre que co
 
 >[!NOTE]
 >
->Puede utilizar el porcentaje (`%`) para hacer referencia a variables para muchos campos de formulario en la interfaz de usuario de la recopilación de datos, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, al usar `%product%` accederá al valor del elemento de datos del producto o de la variable personalizada.
+>Puede utilizar el porcentaje (`%`) para hacer referencia a variables para muchos campos de formulario en la implementación de etiquetas, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, al usar `%product%` accederá al valor del elemento de datos del producto o de la variable personalizada.
 
 Cuando un evento déclencheur una regla, puede pasar la regla correspondiente `event` a `_satellite.getVar()` así:
 

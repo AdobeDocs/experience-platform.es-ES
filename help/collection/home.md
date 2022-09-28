@@ -5,9 +5,9 @@ title: Información general sobre la recopilación de datos
 topic-legacy: overview
 description: Obtenga información sobre las distintas tecnologías que intervienen en la recopilación de datos sobre las experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '469'
 ht-degree: 7%
 
 ---
@@ -38,7 +38,7 @@ Esta guía proporciona una introducción de alto nivel a la recopilación de dat
 
 ## Etiquetas, SDK web y SDK móvil
 
-El SDK web de Platform y el SDK de Platform Mobile contraen y comprimen todas las bibliotecas de productos de Adobe en un único kit de desarrollo para plataformas web y móviles, respectivamente. Se pueden implementar utilizando código sin procesar o utilizando [etiquetas](../tags/home.md) a través de la interfaz de usuario de la recopilación de datos.
+El SDK web de Platform y el SDK de Platform Mobile contraen y comprimen todas las bibliotecas de productos de Adobe en un único kit de desarrollo para plataformas web y móviles, respectivamente. Se pueden implementar utilizando código sin procesar o utilizando [etiquetas](../tags/home.md) a través de la interfaz de usuario de recopilación de datos o la interfaz de usuario de Adobe Experience Platform.
 
 La compresión de estas bibliotecas acelera la recopilación de datos y consolida las operaciones en un único flujo desde dispositivos del lado del cliente a Platform Edge Network.
 

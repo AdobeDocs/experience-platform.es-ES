@@ -2,9 +2,9 @@
 title: Tipos de acción para extensiones de Edge
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de acción para una extensión de etiqueta en una propiedad Edge.
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '386'
 ht-degree: 66%
 
 ---
@@ -29,7 +29,7 @@ Este documento explica cómo definir tipos de acción para una extensión edge e
 
 Los tipos de acción suelen consistir en lo siguiente:
 
-1. Vista que se muestra en la interfaz de usuario de la recopilación de datos y que permite a los usuarios modificar la configuración de la acción.
+1. Vista que se muestra en la interfaz de usuario del Experience Platform y en la de la recopilación de datos y que permite a los usuarios modificar la configuración de la acción.
 2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y realizar una acción.
 
 Por ejemplo, un módulo para reenviar algunos datos a un extremo de terceros puede tener este aspecto.

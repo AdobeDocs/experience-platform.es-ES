@@ -2,9 +2,9 @@
 title: Tipos de acción para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de acción para una extensión de etiqueta en una propiedad web.
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '412'
 ht-degree: 70%
 
 ---
@@ -29,7 +29,7 @@ Este documento explica cómo definir tipos de acción para una extensión web en
 
 Los tipos de acción suelen consistir en lo siguiente:
 
-1. A [ver](./views.md) se muestra en la interfaz de usuario de recopilación de datos que permite a los usuarios modificar la configuración de la acción.
+1. A [ver](./views.md) se muestra en la interfaz de usuario del Experience Platform y en la de la recopilación de datos, lo que permite a los usuarios modificar la configuración de la acción.
 2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y realizar una acción.
 
 ```js

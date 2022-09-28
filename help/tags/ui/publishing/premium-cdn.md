@@ -2,9 +2,9 @@
 title: Compatibilidad de CDN Premium con etiquetas
 description: Obtenga información sobre la función de CDN premium para etiquetas y cómo se puede utilizar para entregar el contenido en varias regiones geográficas.
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Cuando utilice un [host administrado por Adobe](./hosts/managed-by-adobe-host.md
 
 Para tener en cuenta esto, las etiquetas en Experience Platform proporcionan una función de CDN premium que le permite entregar contenido a estas regiones especiales.
 
-La compatibilidad con CDN Premium es una función de pago que su organización debe adquirir para habilitarla y utilizarla. Esta guía explica cómo configurar y utilizar esta función en la interfaz de usuario de recopilación de datos después de comprarla.
+La compatibilidad con CDN Premium es una función de pago que su organización debe adquirir para habilitarla y utilizarla. Esta guía explica cómo configurar y utilizar esta función en la interfaz de usuario del Experience Platform o la interfaz de usuario de recopilación de datos una vez comprada.
 
 ## Habilitar la CDN premium para su organización
 
-La CDN Premium está habilitada a nivel de empresa. Una vez que su organización haya adquirido la función de CDN premium, un administrador de Adobe habilitará para su empresa en la interfaz de usuario de recopilación de datos.
+La CDN Premium está habilitada a nivel de empresa. Una vez que su organización haya adquirido la función de CDN premium, un administrador de Adobes habilitará la función en la interfaz de usuario de para su empresa.
 
 ## Reconstruya e instale bibliotecas de etiquetas con códigos incrustados actualizados
 

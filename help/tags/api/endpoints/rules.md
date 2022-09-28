@@ -2,10 +2,10 @@
 title: Extremo de reglas
 description: Aprenda a realizar llamadas al extremo /rules en la API de Reactor.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 99%
+source-wordcount: '931'
+ht-degree: 97%
 
 ---
 
@@ -15,7 +15,7 @@ En el contexto de las etiquetas de recopilación de datos, las reglas controlan 
 
 >[!NOTE]
 >
->Este documento explica cómo administrar las reglas en la API de Reactor. Para obtener información sobre cómo interactuar con reglas en la IU de recopilación de datos, consulte la [guía de la IU](../../ui/managing-resources/rules.md).
+>Este documento explica cómo administrar las reglas en la API de Reactor. Para obtener información sobre cómo interactuar con reglas en la interfaz de usuario, consulte la [Guía de la interfaz de usuario](../../ui/managing-resources/rules.md).
 
 Una regla pertenece a exactamente una [propiedad](./properties.md). Una propiedad puede tener muchas reglas.
 

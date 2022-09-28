@@ -2,9 +2,9 @@
 title: Extensión de la capa de datos de Google
 description: Obtenga información sobre la extensión de la etiqueta de capa de datos del cliente de Google en Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '823'
 ht-degree: 6%
 
 ---
@@ -25,7 +25,7 @@ La versión 1.0.x de la extensión es una versión beta. Esta extensión no se h
 
 ## Instalación
 
-Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario de la recopilación de datos y seleccione **Capa de datos de Google**.
+Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario del Experience Platform o en la de la recopilación de datos y seleccione **Capa de datos de Google**.
 
 Una vez instalada, la extensión crea o accede a una capa de datos cada vez que la biblioteca de etiquetas se carga en el sitio web.
 

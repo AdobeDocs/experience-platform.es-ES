@@ -2,10 +2,10 @@
 title: Elementos de datos
 description: Los Data Elements son los componentes básicos del diccionario de datos (o mapa de datos). Utilice Data Elements para recopilar, organizar y entregar datos a través de la tecnología de marketing y publicidad.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1631'
-ht-degree: 98%
+source-wordcount: '1622'
+ht-degree: 93%
 
 ---
 
@@ -161,7 +161,7 @@ Obtener el valor de:
 
 Es posible hacer referencia a cualquier objeto JavaScript o variable mediante el campo de ruta.
 
-Si desea recopilar variables de JavaScript o propiedades de objeto en el marcado y utilizarlas con cualquiera de las extensiones o reglas, se pueden utilizar elementos de datos para capturar estos valores. De esta forma, puede hacer referencia al elemento de datos mediante las reglas y, en caso de que la fuente de datos cambie en algún momento, solo deberá cambiar la referencia a la fuente (el elemento de datos) en un lugar de la recopilación de datos de la IU.
+Si desea recopilar variables de JavaScript o propiedades de objeto en el marcado y utilizarlas con cualquiera de las extensiones o reglas, se pueden utilizar elementos de datos para capturar estos valores. De este modo, puede hacer referencia al elemento de datos mediante las reglas y, en caso de que la fuente de datos cambie en algún momento, solo deberá cambiar la referencia a la fuente (el elemento de datos) en el mismo lugar.
 
 Por ejemplo, supongamos que el marcado contiene una variable de JavaScript llamada “`Page_Name`” similar a la que se muestra a continuación:
 
@@ -257,7 +257,7 @@ Algunos casos de uso común son:
 
 ## Elementos de datos integrados
 
-Debe crear un elemento de datos personalizado en la interfaz de usuario de recopilación de datos si anteriormente ha utilizado cualquiera de los siguientes elementos de datos:
+Debe crear elementos de datos personalizados adicionales si anteriormente ha utilizado cualquiera de los siguientes elementos de datos:
 
 * URI
 * Protocolo

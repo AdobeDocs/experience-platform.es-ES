@@ -1,10 +1,10 @@
 ---
 title: Configurar la extensión del SDK web de Adobe Experience Platform
-description: Configurar la extensión de la etiqueta SDK web de Adobe Experience Platform en la interfaz de usuario de la recopilación de datos.
+description: Configurar la extensión de la etiqueta SDK web de Adobe Experience Platform en la interfaz de usuario.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1041'
 ht-degree: 6%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 La extensión de etiqueta del SDK web de Adobe Experience Platform envía datos a Adobe Experience Cloud desde las propiedades web a través de Adobe Experience Platform Edge Network. La extensión le permite transmitir datos a Platform, sincronizar identidades, procesar señales de consentimiento del cliente y recopilar automáticamente datos de contexto.
 
-Este documento explica cómo configurar la extensión en la interfaz de usuario de la recopilación de datos.
+Este documento explica cómo configurar la extensión en la interfaz de usuario de .
 
 ## Primeros pasos
 
-Si la extensión del SDK web de Platform ya se ha instalado para una propiedad, abra la propiedad en la interfaz de usuario de la recopilación de datos y seleccione la **[!UICONTROL Extensiones]** pestaña . En el SDK web de Platform, seleccione **[!UICONTROL Configurar]**.
+Si la extensión del SDK web de Platform ya se ha instalado para una propiedad, abra la propiedad en la interfaz de usuario y seleccione la **[!UICONTROL Extensiones]** pestaña . En el SDK web de Platform, seleccione **[!UICONTROL Configurar]**.
 
 ![](../images/extension/overview/configure.png)
 
