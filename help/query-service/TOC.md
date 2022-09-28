@@ -4,9 +4,9 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar datos en el lago de datos de Platform.
 feature: Queries
-source-git-commit: 490a24df5ef127ba4ff6727d0d1cd5e0b381f447
+source-git-commit: f1f7bef6bcac5abfaa01f10849f41a55fef797e5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '208'
 ht-degree: 18%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 18%
    - [Spark SQL functions](sql/spark-sql-functions.md)
    - [Comandos de metadatos](sql/metadata.md)
    - [Declaraciones preparadas](sql/prepared-statements.md)
+   - [Ejemplos de conjuntos de datos](sql/dataset-samples.md)
 - Conectar clientes con el servicio de consulta {#clients}
    - [Información general sobre conexiones de cliente](clients/overview.md)
    - [Modos SSL](./clients/ssl-modes.md)
