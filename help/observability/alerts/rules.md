@@ -4,10 +4,10 @@ title: Reglas de alerta estándar
 description: Este documento cubre las reglas de alerta predefinidas proporcionadas por el Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
+source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,8 +27,15 @@ Las siguientes reglas de alerta son específicas de [Ingesta de datos](../../ing
 | Información de ejecución del flujo de origen | Éxito en la ejecución del flujo de fuentes | Esta alerta déclencheur cuando los datos se introducen correctamente desde una conexión de origen. |
 | Retrasos, errores y errores de ejecución del flujo de origen | Error en la ejecución del flujo de fuentes | Esta alerta déclencheur cuando se produce un error al introducir datos desde una conexión de origen. |
 | Retrasos, errores y errores de ejecución del flujo de origen | Retraso de ingesta | Esta alerta déclencheur cuando la ejecución de un flujo de ingesta por lotes tarda más de 150 minutos en procesarse. |
-| Retrasos, errores y errores de ejecución del flujo de origen | Falta de ingesta | Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se introducen datos en Platform. |
 | Retrasos, errores y errores de ejecución del flujo de origen | Fallo de ingesta | Esta alerta déclencheur cuando la proporción de registros con errores en todos los registros supera un umbral del 0,5 %. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Si se ha suscrito previamente al siguiente tipo de alerta, ya no recibirá alertas, ya que esta alerta ha quedado obsoleta:
+
+| Suscripción a un evento de E/S | Regla de alerta | Descripción |
+| --- | --- | --- |
+| Retrasos, errores y errores de ejecución del flujo de origen | Falta de ingesta | Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se introducen datos en Platform. |
 
 {style=&quot;table-layout:auto&quot;}
 

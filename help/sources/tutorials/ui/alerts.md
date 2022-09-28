@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares; alertas
 description: Al crear un flujo de datos, puede suscribirse a las alertas para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo.
 title: Suscripción a alertas en contexto en la interfaz de usuario
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
+source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +49,7 @@ Las alertas disponibles para los flujos de datos de origen son:
 | Inicio de ejecución del flujo de datos de fuentes | Esta alerta le envía un mensaje cuando se ha iniciado el flujo de datos de origen. |
 | Éxito de ejecución del flujo de datos de fuentes | Esta alerta le envía un mensaje cuando los datos de su origen se incorporan correctamente en Platform. |
 | Error de ejecución del flujo de datos de origen | Esta alerta le envía un mensaje si se produce un error en el flujo de datos. |
-| Fuentes: flujo de datos: falta de ingesta | Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se introducen datos en Platform. |
+| ~~Fuentes: flujo de datos: falta de ingesta~~ | ~~Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se introducen datos en Platform.~~ <br>**Nota:** Ya no recibirá alertas, ya que esta alerta está en desuso. |
 
 Seleccione las alertas a las que desee suscribirse y, a continuación, seleccione **[!UICONTROL Siguiente]** para revisar y finalizar su flujo de datos.
 
