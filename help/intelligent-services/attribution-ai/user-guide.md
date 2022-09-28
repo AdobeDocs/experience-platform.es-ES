@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de Attribution AI
 topic-legacy: User guide
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
+source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2873'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Las instancias de servicio se pueden editar, clonar y eliminar utilizando los co
 
 - **[!UICONTROL Editar]**: Selección **[!UICONTROL Editar]** permite modificar una instancia de servicio existente. Puede editar el nombre, la descripción, el estado y la frecuencia de puntuación de la instancia.
 - **[!UICONTROL Clonar]**: Selección **[!UICONTROL Clonar]** copia la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
-- **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
+- **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas. El conjunto de datos de salida correspondiente se eliminará de Platform. Sin embargo, las puntuaciones sincronizadas con Perfil del cliente en tiempo real no se eliminan.
 - **[!UICONTROL Fuente de datos]**: Un vínculo al conjunto de datos que se está utilizando. Si Attribution AI está usando más de un conjunto de datos, se muestra &quot;Múltiple&quot; seguido del número de conjuntos de datos. Al seleccionar el hipervínculo, se muestra la ventana emergente de vista previa de conjuntos de datos.
 - **[!UICONTROL Detalles de la última ejecución]**: Esto solo se muestra cuando falla una ejecución. Aquí se muestra información sobre por qué la ejecución falló, como códigos de error.
 
@@ -261,6 +261,14 @@ Para garantizar que obtiene el modelo más preciso posible, es importante formar
 Una vez seleccionada la ventana de formación, seleccione **[!UICONTROL Finalizar]** en la esquina superior derecha. Espere un tiempo para que los datos se procesen. Una vez finalizada, aparece un cuadro de diálogo de apertura que confirma que la configuración de la instancia ha finalizado. Select **[!UICONTROL Ok]** para ser redirigido a la función **[!UICONTROL Instancias de servicio]** página en la que puede ver la instancia de servicio.
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
+
+## Políticas de gobernanza
+
+Una vez que revise el flujo de trabajo para crear una instancia y enviar la configuración del modelo, la variable [aplicación de políticas](/help/data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de política, aparece una ventana emergente que indica que se han violado una o más políticas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing dentro de Platform sean compatibles con las políticas de uso de datos.
+
+![popover que muestra una infracción de directiva](./images/user-guide/policy-violation-popover-aai.png)
+
+La ventana emergente proporciona información específica sobre la infracción. Puede resolver estas infracciones mediante la configuración de directivas y otras medidas que no están directamente relacionadas con el flujo de trabajo de configuración. Por ejemplo, puede cambiar las etiquetas para que se puedan usar ciertos campos con fines científicos de datos. Como alternativa, también puede modificar la configuración del modelo en sí para que no use nada con una etiqueta en ella. Consulte la documentación para obtener más información sobre cómo configurar [políticas](/help/data-governance/policies/overview.md).
 
 ## Control de acceso basado en atributos
 

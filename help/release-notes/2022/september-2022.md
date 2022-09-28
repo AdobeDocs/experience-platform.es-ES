@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
-source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
+source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2754'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [Registros de auditoría](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Recopilación de datos](#data-collection)
+- [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de identidad](#identity-service)
 - [Servicio de consultas](#query-service)
@@ -52,9 +53,9 @@ Adobe Experience Platform proporciona un robusto conjunto de herramientas para a
 
 Las funciones de higiene de datos de Adobe Experience Platform le permiten limpiar sus datos mediante la programación de caducidades automatizadas de conjuntos de datos y la eliminación programada de datos de consumidores por identidad.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Las funciones de borrado del consumidor sólo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
+>Las funciones de higiene de los datos solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
 
 Consulte la siguiente documentación para empezar a trabajar con la higiene de los datos:
 
@@ -64,7 +65,7 @@ Consulte la siguiente documentación para empezar a trabajar con la higiene de l
 
 ## [!UICONTROL Consola de privacidad] {#privacy-console}
 
-La variable [!UICONTROL Consola de privacidad] en la interfaz de usuario del Experience Platform, se proporciona una vista de panel de información clave sobre funciones relacionadas con la privacidad, como [solicitudes del interesado del Privacy Service], [órdenes de trabajo de higiene de datos]y [registros de auditoría]. La consola también proporciona varias guías de casos de uso dentro del producto para ayudarle a guía a través de flujos de trabajo de privacidad comunes.
+La variable [!UICONTROL Consola de privacidad] en la interfaz de usuario del Experience Platform, se proporciona una vista de panel de información clave sobre funciones relacionadas con la privacidad, como [solicitudes del interesado del Privacy Service](../../privacy-service/home.md), [órdenes de trabajo de higiene de datos](../../hygiene/home.md)y [registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md). La consola también proporciona varias guías de casos de uso dentro del producto para ayudarle a guía a través de flujos de trabajo de privacidad comunes.
 
 Consulte la [Información general de la Consola de privacidad](../../landing/governance-privacy-security/privacy-console.md) para obtener más información sobre la función.
 
@@ -127,10 +128,39 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Función | Descripción |
 | --- | --- |
 | Integración de navegación izquierda en la interfaz de usuario de Platform | Todas las funciones que anteriormente eran exclusivas de la interfaz de usuario de recopilación de datos (incluidas las etiquetas, el reenvío de eventos y los conjuntos de datos) ahora están disponibles en la navegación izquierda del Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre las IU al trabajar con capacidades de recopilación de datos en Platform. |
+| Atribución de usuario en etiquetas y reenvío de eventos | Cuando la lista esté disponible [!UICONTROL Propiedades] en las etiquetas y el reenvío de eventos, cada propiedad enumerada ahora muestra cuándo se actualizó por última vez y qué usuario realizó la actualización. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| ----------- | ----------- |
+| SDK de destino | Ahora, Destination SDK ofrece compatibilidad total con socios y clientes que crean destinos productivos o privados por lotes (o basados en archivos). Lea las siguientes páginas de documentación para obtener más información: <ul><li>[Información general del Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Configuración de un destino basado en archivos](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configurar las opciones de formato de archivo para destinos basados en archivos](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Probar los destinos basados en archivos](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Destinos nuevos o actualizados**
+
+| Destino | Descripción |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | La variable [!DNL Salesforce CRM] el destino se ha actualizado para admitir actualizaciones de contactos y posibles clientes, así como mejoras de rendimiento para actualizaciones más rápidas. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentación nueva o actualizada**
+
+| Documentación | Descripción |
+| ----------- | ----------- |
+| Documentación de la API del servicio de flujo de destinos | La variable [Documentación de referencia de la API de destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/) se ha actualizado para incluir instrucciones sobre cómo realizar operaciones en destinos basados en archivos. Las operaciones para los destinos de flujo continuo se agregarán más adelante. |
+
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
@@ -218,6 +248,6 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 | Compatibilidad con el Cloud Service administrado de Adobe Campaign | Utilice la fuente del Cloud Service administrado de Adobe Campaign para llevar los datos de envío y registro de seguimiento de Adobe Campaign v8.4 al Experience Platform. Lea la guía de [creación de una conexión de origen de Adobe Campaign Managed Cloud Service en la interfaz de usuario](../../sources/tutorials/ui/create/adobe-applications/campaign.md) para obtener más información. |
 | Compatibilidad de API para la ingesta bajo demanda de orígenes por lotes | Utilice la ingesta bajo demanda para crear ejecuciones de flujo ad hoc para un flujo de datos determinado con la variable [!DNL Flow Service] API. Las ejecuciones de flujo creadas deben establecerse en ingesta única. Para obtener más información, consulte la guía de [creación de una ejecución de flujo para la ingesta bajo demanda mediante la API](../../sources/tutorials/api/on-demand-ingestion.md) para obtener más información. |
 | Compatibilidad de API para reintentar ejecuciones de flujo de datos fallidas para orígenes por lotes | Utilice la variable `re-trigger` para reintentar el flujo de datos fallido mediante la API. Lea la guía de [volver a intentar ejecutar el flujo de datos fallido mediante la API](../../sources/tutorials/api/retry-flows.md) para obtener más información. |
-| Compatibilidad API para filtrar datos de nivel de fila para la variable [!DNL Google BigQuery] y [!DNL Snowflake] sources | Utilice operadores lógicos y de comparación para filtrar los datos de nivel de fila para la variable [!DNL Google BigQuery] y [!DNL Snowflake] fuentes. Para obtener más información, consulte la guía sobre el filtrado de datos para una fuente mediante la API . |
+| Compatibilidad API para filtrar datos de nivel de fila para la variable [!DNL Google BigQuery] y [!DNL Snowflake] sources | Utilice operadores lógicos y de comparación para filtrar los datos de nivel de fila para la variable [!DNL Google BigQuery] y [!DNL Snowflake] fuentes. Lea la guía de [filtrado de datos para una fuente mediante la API](../../sources/tutorials/api/filter.md) para obtener más información. |
 
 Para obtener más información sobre las fuentes, lea la [información general sobre fuentes](../../sources/home.md).
