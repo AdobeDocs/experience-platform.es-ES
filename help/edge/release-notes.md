@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
+source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1349'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,23 @@ ht-degree: 3%
 
 Este documento cubre las notas de la versión del SDK web de Adobe Experience Platform.
 Para ver las últimas notas de la versión de la extensión de etiqueta del SDK web, consulte la [Notas de la versión de la extensión de etiqueta del SDK web](extension/web-sdk-ext-release-notes.md).
+
+## Versión 2.13.0: 28 de septiembre de 2022
+
+**Nuevas funciones**
+
+* Se ha agregado compatibilidad con la migración de página por página completa. El perfil de Adobe Target ahora se conservará cuando un visitante se desplace entre at.js y las páginas del SDK web.
+* Se ha agregado compatibilidad configurable para [sugerencias de cliente de agente de usuario de alta entropía](fundamentals/user-agent-client-hints.md#high-entropy).
+* Se ha agregado compatibilidad con el nuevo `applyResponse` comando. Esto permite la personalización híbrida mediante la variable [API de servidor de red perimetral](../server-api/overview.md).
+* Los vínculos de modo de control de calidad ahora funcionan en varias páginas.
+
+**Correcciones y mejoras**
+
+* Se ha corregido un problema por el cual las métricas de rastreo de clics de personalización no se actualizaban cuando el seguimiento de vínculos estaba desactivado.
+* Se han actualizado los comandos para generar un error de validación cuando se especifican opciones desconocidas.
+* La variable `_experience.decisioning.propositionEventType` ahora se rellena al enviar automáticamente eventos de personalización de visualización e interacción.
+* Se ha agregado la validación de espacio de nombres duplicada para la variable `getIdentity` comando.
+* Se ha agregado la validación duplicada del ámbito de decisión para la variable `sendEvent` comando.
 
 ## Versión 2.12.0: 29 de junio de 2022
 
