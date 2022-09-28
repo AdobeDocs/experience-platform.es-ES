@@ -1,20 +1,17 @@
 ---
 title: Modelo de datos de Perspectivas de la Plataforma de datos del cliente (CDP)
 description: Aprenda a utilizar consultas SQL de los modelos de datos de CDP Insights para personalizar sus propios informes CDP para sus casos de uso de marketing y KPI.
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
 
-# (Beta) Modelo de datos de Customer Data Platform (CDP) Insights
+# Modelo de datos de Perspectivas de la Plataforma de datos del cliente (CDP)
 
->[!IMPORTANT]
->
->La función de modelos de datos de CDP Insights está en versión beta. Sus características y documentación están sujetas a cambios.
-
-La función Modelo de datos de perspectivas de la plataforma de datos del cliente (CDP) expone los modelos de datos y SQL que alimentan la información de varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para sus casos de uso de indicadores de rendimiento clave (KPI) y marketing. Estas perspectivas se pueden utilizar como utilidades personalizadas para los tableros definidos previamente.
+La función Modelo de datos de perspectivas de la plataforma de datos del cliente (CDP) expone los modelos de datos y SQL que alimentan la información de varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para sus casos de uso de indicadores de rendimiento clave (KPI) y marketing. Estas perspectivas se pueden utilizar como utilidades personalizadas para los tableros definidos por el usuario.
 
 ## Requisitos previos
 

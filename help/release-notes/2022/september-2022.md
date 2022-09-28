@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
-source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
+source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
 workflow-type: tm+mt
-source-wordcount: '2754'
+source-wordcount: '2979'
 ht-degree: 5%
 
 ---
@@ -116,6 +116,9 @@ Adobe Experience Platform proporciona varios tableros a través de los cuales pu
 | Función | Descripción |
 | --- | --- |
 | Etiqueta en uso | Cuando se ve en la biblioteca de utilidades, la etiqueta en uso identifica fácilmente la presencia de utilidades existentes en el panel. Esto facilita evitar la duplicación, aunque aún puede añadir el mismo widget más de una vez si lo desea. |
+| Tableros definidos por el usuario | Los tableros definidos por el usuario ayudan a acelerar las perspectivas y a personalizar las visualizaciones, ya que le permiten crear y administrar tableros personalizados. Con los tableros definidos por el usuario, puede crear, agregar y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Lea el [guía de funciones](../../dashboards/user-defined-dashboards.md) para obtener más información. |
+| Modelo de datos de Customer Data Platform Insights | La función Modelo de datos de perspectivas de la plataforma de datos del cliente (CDP) expone los modelos de datos y SQL que alimentan la información de varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para sus casos de uso de indicadores de rendimiento clave y de marketing. Estas perspectivas se pueden utilizar como utilidades personalizadas para los tableros definidos por el usuario. Lea el [Guía de funciones del Modelo de datos de CDP Insights](../../dashboards/cdp-insights-data-model.md) para obtener más información. |
+| Widget de informes de superposición de audiencia | Esta utilidad está disponible para ambas [!UICONTROL Perfiles] y [!UICONTROL Segmentos] tableros. El informe proporciona una lista ordenada de audiencias clasificadas según los porcentajes de superposición más altos o más bajos del segmento elegido. En el [!UICONTROL Perfiles] tablero puede filtrar y ver la superposición de audiencias combinando la política de todos los segmentos disponibles. La variable [!UICONTROL Segmentos] los tableros le permiten filtrar la superposición de audiencias por un segmento específico.<br>Utilice este análisis para generar nuevos segmentos de alto rendimiento y evitar enviar la misma audiencia a diferentes destinos. El informe también ayuda a identificar perspectivas ocultas para mejorar la segmentación o localizar perfiles únicos para perseguir. |
 
 Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL Dashboards] información general](../../dashboards/home.md).
 
