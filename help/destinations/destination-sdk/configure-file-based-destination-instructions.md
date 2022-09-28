@@ -1,15 +1,15 @@
 ---
 description: En esta página se enumeran y describen los pasos para configurar un destino basado en archivos mediante Destination SDK.
-title: (Beta) Usar el Destination SDK para configurar un destino basado en archivos
+title: Usar Destination SDK para configurar un destino basado en archivos
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '542'
 ht-degree: 1%
 
 ---
 
-# (Beta) Usar el Destination SDK para configurar un destino basado en archivos
+# Usar Destination SDK para configurar un destino basado en archivos
 
 ## Información general {#overview}
 
