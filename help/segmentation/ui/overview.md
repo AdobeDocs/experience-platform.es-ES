@@ -5,10 +5,10 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
+source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 0%
+source-wordcount: '2375'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ Para trabajar con definiciones de segmentos es necesario comprender las distinta
 
 También es importante conocer dos términos clave que se utilizan en este documento y comprender la diferencia entre ellos:
 - **Definición del segmento**: Conjunto de reglas utilizado para describir características o comportamientos clave de una audiencia objetivo.
-- **Audiencia**: Conjunto resultante de perfiles que cumplen los criterios de una definición de segmento.
+- **Audiencia**: Conjunto resultante de perfiles que cumplen los criterios de una definición de segmento. Esto se puede crear mediante Adobe Experience Platform (audiencia generada por la plataforma) o desde una fuente externa (audiencia generada externamente).
 
 ## Información general
 
@@ -62,7 +62,7 @@ Para obtener más información, visite [guía del tablero de segmentos](../../da
 >title="Añadir todos los segmentos a la programación"
 >abstract="Habilite para incluir todos los segmentos de evaluación por lotes en la actualización diaria programada a las 3:30 PM UTC. Deshabilite para eliminar todos los segmentos de la actualización programada."
 
-Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las definiciones de segmentos para su organización de IMS.
+Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las definiciones de segmentos de su organización.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
@@ -92,7 +92,7 @@ Selección **[!UICONTROL Crear segmento]** le llevará al Generador de segmentos
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-La barra lateral derecha contiene información sobre todos los segmentos dentro de la organización IMS, que enumera el número total de segmentos, la última fecha de evaluación, la siguiente fecha de evaluación, así como un desglose de los segmentos por método de evaluación.
+La barra lateral derecha contiene información sobre todos los segmentos dentro de la organización, con el número total de segmentos, la última fecha de evaluación, la siguiente fecha de evaluación, así como un desglose de los segmentos por método de evaluación.
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
@@ -112,7 +112,7 @@ Aparecerá la página de detalles del segmento. En la parte superior, hay un res
 
 ![](../images/ui/overview/segment-details-summary.png)
 
-### Resumen de segmentos
+### Resumen de segmentos {#segment-summary}
 
 La variable **[!UICONTROL Resumen de segmentos]** proporciona información como el ID, el nombre, la descripción y los detalles de los atributos.
 
@@ -191,6 +191,80 @@ La activación de las definiciones de segmentos para la evaluación programada s
 Actualmente, las programaciones solo se pueden crear mediante la API . Para ver los pasos detallados sobre la creación, edición y trabajo con programaciones mediante la API, siga el tutorial para evaluar y acceder a los resultados del segmento, específicamente la sección sobre [evaluación programada mediante la API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
+
+## Audiencias {#audiences}
+
+>[!IMPORTANT]
+>
+>La funcionalidad de audiencias está actualmente en fase beta limitada y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+
+Seleccione el **[!UICONTROL Audiencias]** para ver una lista de todas las audiencias de su organización.
+
+![Una lista de audiencias para su organización.](../images/ui/overview/list-audiences.png)
+
+De forma predeterminada, esta vista muestra información sobre las audiencias, incluido el nombre, el recuento de perfiles, el origen, la fecha de creación y la fecha de la última modificación.
+
+Puede seleccionar el ![Personalizar tabla](../images/ui/overview/customize-table.png) para cambiar qué campos se muestran.
+
+![Se resalta el botón Personalizar tabla. Al seleccionar este botón, puede personalizar los campos que se muestran en la página de exploración Audiencias .](../images/ui/overview/select-customize-table.png)
+
+Aparece una ventana emergente que enumera todos los campos que se pueden mostrar dentro de la tabla.
+
+![Atributos que se pueden mostrar para la sección Examinar audiencias .](../images/ui/overview/customize-table-attributes.png)
+
+| Campo | Descripción |
+| ----- | ----------- | 
+| [!UICONTROL Nombre] | El nombre de la audiencia. |
+| [!UICONTROL Recuento de perfiles] | El número total de perfiles que cumplen los requisitos para la audiencia. |
+| [!UICONTROL Origen] | Origen de la audiencia. Si esta audiencia fue generada por Platform, tendrá un origen de Segmentation Service. |
+| [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles de este campo incluyen `Draft`, `Published`y `Archived`. |
+| [!UICONTROL Frecuencia de actualización] | Valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles de este campo incluyen `On Demand`, `Scheduled`y `Continuous`. |
+| [!UICONTROL Última actualización por] | El nombre de la persona que actualizó la audiencia por última vez. |
+| [!UICONTROL Creado] | Hora y fecha de creación de la audiencia. |
+| [!UICONTROL Última actualización] | Hora y fecha de la última creación de la audiencia. |
+| [!UICONTROL Acceso a las etiquetas] | Las etiquetas de acceso para la audiencia. Las etiquetas de acceso le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Estas etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que elige administrar los datos. Para obtener más información sobre las etiquetas de acceso, lea la documentación de [administración de etiquetas](../../access-control/abac/ui/labels.md). |
+
+Puede seleccionar **[!UICONTROL Crear audiencia]** para crear una audiencia.
+
+![El botón crear audiencia se resalta y muestra dónde seleccionar para crear una audiencia.](../images/ui/overview/create-audience.png)
+
+Aparece una ventana emergente que le permite elegir entre componer una audiencia o crear reglas.
+
+![Una ventana emergente que muestra los dos tipos de audiencias que puede crear.](../images/ui/overview/create-audience-type.png)
+
+Selección **[!UICONTROL Componer audiencias]** le lleva al Generador de audiencias. Para obtener más información sobre la creación de audiencias, lea la [Guía de Audience Builder](./audience-builder.md).
+
+Selección **[!UICONTROL Generar regla]** le lleva al Generador de segmentos. Para obtener más información sobre la creación de segmentos, lea la [Guía del Generador de segmentos](./segment-builder.md)
+
+## Detalles de la audiencia {#audience-details}
+
+Para ver más detalles sobre una audiencia específica, seleccione el nombre de una audiencia dentro del [!UICONTROL Audiencias] pestaña .
+
+Aparecerá la página de detalles de audiencia. Esta página difiere en los detalles en función de si la audiencia se generó con Adobe Experience Platform o desde una fuente externa como Audience Orchestration.
+
+### Audiencia generada por la plataforma
+
+Para obtener más información sobre las audiencias generadas por la plataforma, lea la [sección resumen del segmento](#segment-summary).
+
+### Audiencia generada externamente
+
+En la parte superior de la página de detalles de audiencia, hay un resumen de la audiencia y detalles sobre el conjunto de datos en el que se guarda la audiencia.
+
+![El proporciona detalles para una audiencia generada externamente.](../images/ui/overview/externally-generated-audience.png)
+
+La variable **[!UICONTROL Resumen de audiencia]** proporciona información como el ID, el nombre, la descripción y los detalles de los atributos.
+
+La variable **[!UICONTROL Detalles del conjunto de datos]** proporciona información como nombre, descripción, nombre de tabla, origen y esquema. Puede seleccionar **[!UICONTROL Ver conjunto de datos]** para ver más información sobre el conjunto de datos.
+
+| Campo | Descripción |
+| ----- | ----------- |
+| [!UICONTROL Nombre] | El nombre del conjunto de datos. |
+| [!UICONTROL Descripción] | Descripción del conjunto de datos. |
+| [!UICONTROL Nombre de tabla] | El nombre de tabla del conjunto de datos. |
+| [!UICONTROL Fuente] | Origen del conjunto de datos. Para audiencias generadas externamente, este valor es **Esquema**. |
+| [!UICONTROL Esquema] | Tipo de esquema XDM al que corresponde el conjunto de datos. |
+
+Para obtener más información sobre los conjuntos de datos, lea la [información general del conjunto de datos](../../catalog/datasets/overview.md).
 
 ## Segmentación por transmisión {#streaming-segmentation}
 
