@@ -2,10 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;
 title: (Beta) Crear un flujo de ejecución para la ingesta a petición mediante la API de servicio de flujo
 description: Este tutorial trata los pasos para crear una ejecución de flujo para la ingesta bajo demanda mediante la API de servicio de flujo
-hide: true
-hidefromtoc: true
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+source-git-commit: 659f99a47b533bba2a6084bc8e235df2a29a6386
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 1%
