@@ -4,10 +4,10 @@ title: Reglas de alerta estándar
 description: Este documento cubre las reglas de alerta predefinidas proporcionadas por el Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
+source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '966'
+ht-degree: 3%
 
 ---
 
@@ -92,6 +92,18 @@ Las siguientes reglas de alerta son específicas de [destinos](../../destination
 | Retrasos, errores y errores de ejecución del flujo de destino | La tasa de omisión de página supera el umbral | Este déclencheur se genera cuando la proporción de ID omitidos con respecto a los ID totales supera un umbral. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Servicio de consultas
+
+Las siguientes reglas de alerta son específicas de [Servicio de consultas](../../query-service/home.md):
+
+| Suscripción a un evento de E/S | Regla de alerta | Descripción |
+| --- | --- | --- |
+| Información ad hoc del servicio de consultas | Éxito ad hoc del servicio de consultas | Esta alerta déclencheur cuando un trabajo de esquema ad hoc se completa correctamente. |
+| Retrasos, errores y errores específicos del servicio de consultas | Fallo ad hoc del servicio de consulta | Esta alerta déclencheur cuando falla un trabajo de esquema ad hoc. |
+| Información de consulta programada del servicio de consulta | Inicio de consulta programada del servicio de consulta | Esta alerta déclencheur cuando se empieza a ejecutar una consulta programada. |
+| Información de consulta programada del servicio de consulta | Éxito de consulta programada del servicio de consulta | Esta alerta déclencheur cuando un trabajo de consulta programado se completa correctamente. |
+| Retrasos, errores y errores de consultas programadas del servicio de consultas | error de consulta programada del servicio de consulta | Esta alerta déclencheur cuando falla un trabajo de consulta programado. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
