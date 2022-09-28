@@ -2,20 +2,19 @@
 keywords: Experience Platform;inicio;temas populares;control de acceso;control de acceso basado en atributos;
 title: Guía de extremo a extremo del control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
-hide: true
-hidefromtoc: true
-source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
+source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
 workflow-type: tm+mt
-source-wordcount: '2315'
+source-wordcount: '2382'
 ht-degree: 0%
 
 ---
 
 # Guía de extremo a extremo del control de acceso basado en atributos
 
-El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad buena flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a las funciones de usuario. Esta función le permite conceder o revocar acceso a objetos individuales para usuarios específicos de Platform de su organización.
+El control de acceso basado en atributos es una capacidad de Adobe Experience Platform que proporciona a los clientes con múltiples marcas y con conciencia de la privacidad buena flexibilidad para administrar el acceso de los usuarios. El acceso a objetos individuales, como campos de esquema y segmentos, se puede conceder o denegar con políticas basadas en los atributos y la función del objeto. Esta función le permite conceder o revocar acceso a objetos individuales para usuarios específicos de Platform de su organización.
 
-Esta funcionalidad le permite categorizar campos de esquema, segmentos, etc. con etiquetas que definen ámbitos organizativos o de uso de datos. En Adobe Journey Optimizer, puede aplicar las mismas etiquetas a recorridos y ofertas. En paralelo, los administradores pueden definir las políticas de acceso que rodean los campos de esquema XDM y administrar mejor qué usuarios o grupos (usuarios internos, externos o de terceros) pueden acceder a dichos campos.
+Esta funcionalidad le permite categorizar campos de esquema, segmentos, etc. con etiquetas que definen ámbitos organizativos o de uso de datos. Puede aplicar las mismas etiquetas a recorridos, ofertas y otros objetos en Adobe Journey Optimizer. En paralelo, los administradores pueden definir las políticas de acceso que rodean los campos de esquema XDM y administrar mejor qué usuarios o grupos (usuarios internos, externos o de terceros) pueden acceder a dichos campos.
+
 
 ## Primeros pasos
 
@@ -28,7 +27,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ### Información general del caso de uso
 
-Esta guía utiliza un ejemplo de uso de restringir el acceso a datos confidenciales para demostrar el flujo de trabajo. Realizará un flujo de trabajo de control de acceso basado en atributos de ejemplo en el que creará y asignará funciones, etiquetas y políticas para configurar si los usuarios pueden o no acceder a ciertos recursos de su organización. Este caso de uso se describe a continuación:
+Realizará un flujo de trabajo de control de acceso basado en atributos de ejemplo en el que creará y asignará funciones, etiquetas y políticas para configurar si los usuarios pueden o no acceder a recursos específicos de su organización. Esta guía utiliza un ejemplo de restricción del acceso a los datos confidenciales para mostrar el flujo de trabajo. Este caso de uso se describe a continuación:
 
 Es un proveedor de atención médica y desea configurar el acceso a los recursos de su organización.
 
@@ -41,17 +40,17 @@ Usted:
 
 * [Etiquetado de funciones para los usuarios](#label-roles): Utilice el ejemplo de un proveedor de atención médica (ACME Business Group) cuyo grupo de marketing trabaja con agencias externas.
 * [Etiquetado de recursos (campos de esquema y segmentos)](#label-resources): Asigne la variable **[!UICONTROL Datos de Salud Regulados/ PHI]** a recursos y segmentos de esquema.
-* [Cree la directiva que los vinculará](#policy): Cree una directiva para vincular las etiquetas de los recursos a las etiquetas de la función que deniegan el acceso a los campos y segmentos de esquema. Esto denegará el acceso al campo de esquema y al segmento en todos los entornos limitados para los usuarios que no tengan etiquetas coincidentes.
+* [Cree la directiva que los vinculará](#policy): Cree una directiva para vincular las etiquetas de los recursos a las etiquetas de la función, denegando el acceso a los campos y segmentos de esquema. Esto denegará el acceso al campo de esquema y al segmento en todos los entornos limitados para los usuarios que no tengan etiquetas coincidentes.
 
 ## Permisos
 
-[!UICONTROL Permisos] es el área de Experience Cloud en la que los administradores pueden definir funciones de usuario y políticas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
+[!UICONTROL Permisos] es el área de Experience Cloud en la que los administradores pueden definir funciones de usuario y políticas para administrar permisos para funciones y objetos dentro de una aplicación de producto.
 
-Hasta [!UICONTROL Permisos], puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas funciones. [!UICONTROL Permisos] también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica.
+Hasta [!UICONTROL Permisos], puede crear y administrar funciones y asignar los permisos de recursos deseados para estas funciones. [!UICONTROL Permisos] también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica.
 
-Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema para obtener acceso.
+Póngase en contacto con el administrador del sistema para obtener acceso si no tiene privilegios de administrador.
 
-Una vez que tenga privilegios de administrador, vaya a [Adobe Experience Cloud](https://experience.adobe.com/) e inicie sesión con sus credenciales de Adobe. Una vez que haya iniciado sesión, la variable **[!UICONTROL Información general]** para su organización tiene privilegios de administrador para . Esta página muestra los productos a los que está suscrita su organización, junto con otros controles para agregar usuarios y administradores a la organización en su conjunto. Select **[!UICONTROL Permisos]** para abrir el espacio de trabajo para la integración de Platform.
+Una vez que tenga privilegios de administrador, vaya a [Adobe Experience Cloud](https://experience.adobe.com/) e inicie sesión con sus credenciales de Adobe. Una vez que haya iniciado sesión, la variable **[!UICONTROL Información general]** para su organización tiene privilegios de administrador para . Esta página muestra los productos a los que está suscrita su organización, junto con otros controles para agregar usuarios y administradores a la organización. Select **[!UICONTROL Permisos]** para abrir el espacio de trabajo para la integración de Platform.
 
 ![Imagen que muestra el producto Permisos seleccionado en Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -80,7 +79,7 @@ Aparece el espacio de trabajo Permisos para la interfaz de usuario de Platform ,
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Crear nueva función"
->abstract="Puede crear una nueva función para categorizar mejor a los usuarios que acceden a su instancia de Platform. Por ejemplo, puede crear una función para un equipo de marketing interno y aplicar la etiqueta RHD a esa función, lo que permitirá que su equipo de marketing interno acceda a la información de salud protegida (PHI). Alternativamente, también puede crear una función para una Agencia Externa y negar el acceso a los datos de PHI al no aplicar la etiqueta RHD a esa función."
+>abstract="Puede crear una nueva función para categorizar mejor a los usuarios que acceden a su instancia de Platform. Por ejemplo, puede crear una función para un equipo de marketing interno y aplicar la etiqueta RHD a esa función, lo que permite que su equipo de marketing interno acceda a la información de salud protegida (PHI). Alternativamente, también puede crear una función para una Agencia Externa y negar el acceso a los datos de PHI al no aplicar la etiqueta RHD a esa función."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Crear una función nueva"
 
 >[!CONTEXTUALHELP]
@@ -102,6 +101,10 @@ Aparecerá una lista de todas las etiquetas de su organización. Select **[!UICO
 
 ![Imagen que muestra la etiqueta RHD seleccionada y guardada](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
+>[!NOTE]
+>
+>Al agregar un grupo de organización a una función, todos los usuarios de ese grupo se agregarán a la función. Cualquier cambio en el grupo de organización (usuarios eliminados o agregados) se actualizará automáticamente dentro de la función.
+
 ## Aplicar etiquetas a campos de esquema {#label-resources}
 
 Ahora que ha configurado una función de usuario con el [!UICONTROL RHD] , el siguiente paso es agregar la misma etiqueta a los recursos que desea controlar para esa función.
@@ -110,9 +113,9 @@ Select **[!UICONTROL Esquemas]** en el panel de navegación izquierdo y, a conti
 
 ![Imagen que muestra el esquema de ACME Healthcare seleccionado en la pestaña Esquemas](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-A continuación, seleccione **[!UICONTROL Etiquetas]** para ver una lista que muestra los campos asociados al esquema. Desde aquí puede asignar etiquetas a uno o varios campos a la vez. Seleccione el **[!UICONTROL Glucosa sanguínea]** y **[!UICONTROL InsulinaLevel]** y, a continuación, seleccione **[!UICONTROL Editar etiquetas de control]**.
+A continuación, seleccione **[!UICONTROL Etiquetas]** para ver una lista que muestra los campos asociados al esquema. Desde aquí puede asignar etiquetas a uno o varios campos a la vez. Seleccione el **[!UICONTROL Glucosa sanguínea]** y **[!UICONTROL InsulinaLevel]** y, a continuación, seleccione **[!UICONTROL Aplicar etiquetas de acceso y control de datos]**.
 
-![Imagen que muestra la selección de BloodGlucosa e InsulinaLevel y la edición de las etiquetas de gobierno seleccionadas.](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Imagen que muestra la selección de BloodGlucose e InsulinaLevel y la selección de las etiquetas de acceso y control de datos.](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
 La variable **[!UICONTROL Editar etiquetas]** , que le permite elegir las etiquetas que desea aplicar a los campos de esquema. Para este caso de uso, seleccione la opción **[!UICONTROL Datos de Salud Regulados/ PHI]** etiqueta y, a continuación, seleccione **[!UICONTROL Guardar]**.
 
@@ -162,20 +165,24 @@ Repita los pasos anteriores con **[!UICONTROL Insulina &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configurar acciones permisibles e inadmisibles para una directiva"
->abstract="A <b>denegar el acceso a</b> la directiva denegará el acceso a los usuarios cuando se cumplan los criterios. Cuando se combina con <b>siendo false lo siguiente</b> : se denegará el acceso a todos los usuarios a menos que cumplan los criterios coincidentes establecidos. Este tipo de directiva le permite proteger un recurso confidencial y solo permitir el acceso a los usuarios que tengan etiquetas coincidentes. <br>A <b>permitir acceso a</b> esta directiva permitirá a los usuarios acceder cuando se cumplan los criterios. Cuando se combina con <b>Lo siguiente es verdadero</b> : los usuarios tendrán acceso si cumplen los criterios coincidentes establecidos. Esto no deniega explícitamente el acceso a los usuarios, pero añade un acceso de permiso. Este tipo de directiva le permite dar acceso adicional a los recursos y además de a los usuarios que ya tienen acceso a través de permisos de funciones&quot;.</br>
+>abstract="A <b>denegar el acceso a</b> la directiva denegará el acceso a los usuarios cuando se cumplan los criterios. Combinado con <b>siendo false lo siguiente</b> : se denegará el acceso a todos los usuarios a menos que cumplan los criterios coincidentes establecidos. Este tipo de directiva le permite proteger un recurso confidencial y solo permitir el acceso a usuarios con etiquetas coincidentes. <br>A <b>permitir acceso a</b> esta directiva permitirá a los usuarios acceder cuando se cumplan los criterios. Cuando se combina con <b>Lo siguiente es verdadero</b> : los usuarios tendrán acceso si cumplen los criterios coincidentes establecidos. Esto no deniega explícitamente el acceso a los usuarios, pero añade un acceso de permiso. Este tipo de directiva le permite dar acceso adicional a los recursos y además de a los usuarios que ya tienen acceso a través de permisos de funciones&quot;.</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Editar una directiva"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
 >title="Configuración de permisos para un recurso"
->abstract="Un recurso es el recurso o el objeto al que un usuario puede acceder o no. Los recursos pueden ser segmentos o esquemas. Puede configurar permisos de escritura, lectura o eliminación para segmentos y campos de esquema."
+>abstract="Un recurso es el recurso o el objeto al que un usuario puede acceder o no. Los recursos pueden ser segmentos o campos de esquemas. Puede configurar permisos de escritura, lectura o eliminación para segmentos y campos de esquema."
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
 >title="Editar condiciones"
->abstract="Aplique afirmaciones condicionales a la directiva para configurar el acceso del usuario a ciertos recursos. Seleccione hacer coincidir todo para requerir que los usuarios tengan funciones con las mismas etiquetas que un recurso para que se les permita el acceso. Seleccione hacer coincidir cualquier para requerir que solo los usuarios tengan una función con una única etiqueta que coincida con un recurso. Las etiquetas se pueden definir como etiquetas principales o personalizadas, y las etiquetas principales representan las etiquetas creadas y proporcionadas por el Adobe y las etiquetas personalizadas que representan las etiquetas creadas para su organización."
+>abstract="Aplique afirmaciones condicionales a la directiva para configurar el acceso del usuario a ciertos recursos. Seleccione hacer coincidir todo para requerir que los usuarios tengan roles con las mismas etiquetas que un recurso para que se permita el acceso. Seleccione hacer coincidir cualquier para requerir que los usuarios tengan una función con una sola etiqueta que coincida con una etiqueta de un recurso. Las etiquetas se pueden definir como etiquetas principales o personalizadas, y las etiquetas principales representan las etiquetas creadas y proporcionadas por el Adobe y las etiquetas personalizadas que representan las etiquetas creadas para su organización."
 
 Las políticas de control de acceso aprovechan las etiquetas para definir qué funciones de usuario tienen acceso a los recursos específicos de la plataforma. Las políticas pueden ser locales o globales y pueden anular otras directivas. En este ejemplo, se denegará el acceso a los campos y segmentos de esquema en todos los entornos limitados para los usuarios que no tengan las etiquetas correspondientes en el campo de esquema.
+
+>[!NOTE]
+>
+>Se crea una &quot;política de denegación&quot; para conceder acceso a recursos confidenciales porque la función concede permiso a los interesados. La política escrita en este ejemplo **niega** puede acceder si no tiene las etiquetas necesarias.
 
 Para crear una directiva de control de acceso, seleccione **[!UICONTROL Permisos]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Políticas]**. A continuación, seleccione **[!UICONTROL Crear directiva]**.
 
@@ -194,7 +201,7 @@ La tabla siguiente muestra las condiciones disponibles al crear una política:
 | Condiciones | Descripción |
 | --- | --- |
 | siendo false lo siguiente | Cuando se establece &quot;Denegar acceso a&quot;, el acceso se restringirá si el usuario no cumple los criterios seleccionados. |
-| Lo siguiente es verdadero | Cuando se configura &#39;Permitir acceso a&#39;, se restringirá el acceso si el usuario cumple los criterios seleccionados. |
+| Lo siguiente es verdadero | Cuando se establece &#39;Permitir acceso a&#39;, se permite el acceso si el usuario cumple los criterios seleccionados. |
 | Coincide con cualquier | El usuario tiene una etiqueta que coincide con cualquier etiqueta aplicada a un recurso. |
 | Coincide con todo | El usuario tiene todas las etiquetas que coinciden con todas las etiquetas aplicadas a un recurso. |
 | Etiqueta principal | Una etiqueta principal es una etiqueta definida por Adobe que está disponible en todas las instancias de Platform. |
