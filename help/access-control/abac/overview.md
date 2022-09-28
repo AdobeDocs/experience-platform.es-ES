@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Información general sobre el control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ El control de acceso basado en atributos es una función de Adobe Experience Pla
 
 Esta funcionalidad le permite etiquetar campos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir las políticas de acceso que rodean los campos de esquema XDM y administrar mejor el acceso dado a los usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Además, el control de acceso basado en atributos permite a los administradores administrar el acceso a segmentos específicos.
 
-Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD) y a la información de identificación personal (PII) en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a datos personales confidenciales (SPD), información de identificación personal (PII) y tipo personalizado de datos en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.
 
 ## Terminología de control de acceso basado en atributos
 
@@ -33,8 +33,8 @@ El control de acceso basado en atributos implica los siguientes componentes:
 | Permisos | Los permisos incluyen la capacidad de ver o usar funciones de Platform, como la creación de entornos limitados, la definición de esquemas y la administración de conjuntos de datos. |
 | Conjuntos de permisos | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contenga un grupo de permisos. |
 | Políticas | Las políticas son declaraciones que reúnen atributos para establecer acciones permisibles e inadmisibles. Las políticas pueden ser locales o globales y pueden anular otras directivas. |
-| Recurso | Un recurso es el recurso o objeto al que un sujeto puede acceder o no. Los recursos pueden ser archivos, aplicaciones, servidores o incluso API. |
-| Funciones | Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en roles, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el ámbito de vista o acceso de escritura que necesiten. |
+| Recurso | Un recurso es el recurso o objeto al que un sujeto puede acceder o no. Los recursos pueden ser segmentos o campos de esquema. |
+| Funciones | Las funciones son formas de categorizar los tipos de usuarios que interactúan con la instancia de Platform y que son componentes básicos de las políticas de control de acceso. En un entorno de control de acceso basado en roles, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el ámbito de vista o acceso de escritura que necesiten. |
 | Asunto | Un asunto es el usuario que solicita acceso a un recurso para realizar una acción. |
 | Grupos de usuarios | Los grupos de usuarios son varios usuarios que se han agrupado y tienen acceso para ejecutar las mismas funciones. |
 

@@ -5,9 +5,9 @@ title: Información general sobre conectores de origen
 topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,15 @@ La siguiente tabla describe cómo se comporta la interfaz de usuario en función
 | **[!UICONTROL Administrar fuentes]** Activado | Además de las funciones incluidas en **[!UICONTROL Ver fuentes]**, otorga acceso a **[!UICONTROL Conectar origen]** en **[!UICONTROL Catálogo]** y **[!UICONTROL Seleccionar datos]** en **[!UICONTROL Examinar]**. **[!UICONTROL Administrar fuentes]** también le permite habilitar o deshabilitar **[!UICONTROL Flujos de datos]** y editar sus programaciones. |
 | **[!UICONTROL Ver fuentes]** Off y **[!UICONTROL Administrar fuentes]** Off | Revocar todo el acceso a las fuentes. |
 
-Para obtener más información sobre los permisos disponibles otorgados a través del Admin Console, incluidas las cuatro fuentes, consulte [información general sobre el control de acceso](../access-control/home.md).
+Para obtener más información sobre los permisos disponibles otorgados mediante Permisos de Adobe, lea la [información general sobre el control de acceso](../access-control/home.md).
+
+### Control de acceso basado en atributos para orígenes
+
+El control de acceso basado en atributos en Adobe Experience Platform permite a los administradores controlar el acceso a objetos y/o funciones específicos según los atributos.
+
+Con el control de acceso basado en atributos, puede aplicar configuraciones de asignación a campos a los que tenga permisos. Además, no puede introducir datos en un conjunto de datos si no tiene acceso a todos los campos del conjunto de datos.
+
+Para obtener más información sobre el control de acceso basado en atributos, lea la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md).
 
 ## Términos y condiciones {#terms-and-conditions}
 
