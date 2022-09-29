@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
-source-git-commit: c9abf2d0ef2b8a9a9727224fdbb4c784dd041158
+source-git-commit: 5c6bb56b4b3fa63c285aa62b0a7b68ed269654b2
 workflow-type: tm+mt
-source-wordcount: '2959'
+source-wordcount: '3042'
 ht-degree: 5%
 
 ---
@@ -126,14 +126,19 @@ Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL D
 
 Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
-**Funciones actualizadas**
+**Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | --- | --- |
 | Integración de navegación izquierda en la interfaz de usuario de Platform | Todas las funciones que anteriormente eran exclusivas de la interfaz de usuario de recopilación de datos (incluidas las etiquetas, el reenvío de eventos y los conjuntos de datos) ahora están disponibles en la navegación izquierda del Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre las IU al trabajar con capacidades de recopilación de datos en Platform. |
 | Atribución de usuario en etiquetas y reenvío de eventos | Cuando la lista esté disponible [!UICONTROL Propiedades] en las etiquetas y el reenvío de eventos, cada propiedad enumerada ahora muestra cuándo se actualizó por última vez y qué usuario realizó la actualización. |
+| [[!DNL User-Agent Client Hints] en el SDK web](../../edge/fundamentals/user-agent-client-hints.md) | El SDK web ahora es compatible [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la [!DNL User-Agent] cadena, pero de una forma más preservada de la privacidad. |
+| [Migración de SDK web página por página](../../edge/home.md#migrating-to-web-sdk) | Ahora puede migrar las propiedades web existentes de otras bibliotecas de Experience Cloud, como [!DNL at.js], al SDK web, de una página a la vez. Esto permite un enfoque por fases de la migración del SDK web, sin necesidad de migrar todas las páginas a la vez. |
 
 {style=&quot;table-layout:auto&quot;}
+
+<!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
+-->
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
 
