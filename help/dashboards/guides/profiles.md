@@ -4,9 +4,9 @@ title: Guía del panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4154'
 ht-degree: 1%
 
 ---
@@ -123,6 +123,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Audiencias asignadas al estado de destino]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Tamaño de las audiencias]](#audiences-size)
 * [[!UICONTROL Superposición de audiencias por directiva de combinación]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Informe de superposición de audiencia]](#audience-overlap-report)
 
 ### [!UICONTROL Recuento de perfiles] {#profile-count}
 
@@ -302,12 +303,33 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Informe de superposición de audiencia] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
-<!-- ![The Audiences overlap report widget.]() -->
-<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
+Esta utilidad tabulariza los datos de superposición de audiencia de todos los segmentos disponibles filtrados por la política de combinación. Se proporciona una lista de cinco audiencias clasificadas entre los porcentajes de superposición más altos y los más bajos para la política de combinación elegida en el menú desplegable de la parte superior de la pantalla. Los dos segmentos analizados se enumeran en la [!UICONTROL SEGMENTAR UN NOMBRE] y [!UICONTROL NOMBRE DEL SEGMENTO B] columnas. La superposición porcentual se proporciona en la tercera columna con una precisión de doce decimales.
+
+El informe de superposición de audiencia le ayuda a crear nuevos segmentos de alto rendimiento. La observación de superposiciones de porcentaje elevado permite suprimir audiencias e impedir que se envíe la misma audiencia a diferentes destinos. También le ayudan a identificar perspectivas ocultas que podrían ayudar a mejorar la segmentación. La superposición de porcentaje bajo ayuda a localizar perfiles únicos que se van a buscar.
+
+Select **[!UICONTROL Ver más]** para abrir un cuadro de diálogo de pantalla completa que contenga más datos de superposición de audiencia.
+
+![El widget de informe Audiencia se superpone con Ver más resaltado .](../images/profiles/profiles-audience-overlap-report.png)
+
+La variable [!UICONTROL Informe de superposición de audiencia] se abre. Este cuadro de diálogo puede contener hasta 50 filas de análisis de superposición de audiencia divididos en seis columnas. Seleccione el icono de configuración (![El icono de configuración.](../images/profiles/settings-icon.png)) para quitar o agregar columnas de la tabla.
+
+![El cuadro de diálogo Informe de superposición de audiencia .](../images/profiles/profiles-audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Seleccione el **[!UICONTROL Superposición]** para cambiar la clasificación de los resultados entre mayor a menor o de menor a mayor.
+
+Para descargar todo el informe en formato de PDF, seleccione el menú de opciones (**`...`**) seguido de **[!UICONTROL Descargar]**.
+
+![El cuadro de diálogo Informe de superposición de audiencia con la opción de elipses y descarga resaltada.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+
+Seleccione una fila del informe para abrir un diagrama de Venn del análisis de superposición. Pase el ratón sobre una sección del diagrama de Venn para ver el recuento de perfiles en un cuadro de diálogo.
+
+![El cuadro de diálogo Informe de superposición de audiencia incluye un diagrama de Venn y una fila resaltada.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+
+Select **[!UICONTROL Cerrar]** para volver a la [!UICONTROL Perfiles] tablero.
 
 ### [!UICONTROL Audiencias asignadas al estado de destino] {#audiences-mapped-to-destination-status}
 
