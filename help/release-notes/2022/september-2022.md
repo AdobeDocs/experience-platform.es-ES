@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
-source-git-commit: dd17e0903f69a6d639582d83bcd22b269aedb5d0
+source-git-commit: ea4d17459dcd7abd981260fe6733320b08af15e8
 workflow-type: tm+mt
-source-wordcount: '3107'
+source-wordcount: '3125'
 ht-degree: 4%
 
 ---
@@ -158,7 +158,7 @@ Para obtener más información sobre la recopilación de datos en Platform, cons
 
 | Destino | Descripción |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services proporciona una plataforma para diseñar experiencias de clientes en canales múltiples y un entorno para la organización de campañas visuales, la administración de interacciones en tiempo real y la ejecución en canales cruzados. [Introducción a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services proporciona una plataforma para diseñar experiencias de clientes en canales múltiples y un entorno para la organización de campañas visuales, la administración de interacciones en tiempo real y la ejecución en canales cruzados. [Introducción a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Tenga en cuenta que esta integración funciona con Adobe Campaign versión 8.4 o superior. La versión 8.4 está programada para el 30 de septiembre de 2022. |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | La variable [!DNL Salesforce CRM] el destino se ha actualizado para admitir actualizaciones de contactos y posibles clientes, así como mejoras de rendimiento para actualizaciones más rápidas. |
 
 {style=&quot;table-layout:auto&quot;}
