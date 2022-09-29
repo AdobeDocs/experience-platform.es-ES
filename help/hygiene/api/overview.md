@@ -2,9 +2,9 @@
 title: Guía de API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido el Escudo de la salud.
+>Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
 
 La API de higiene de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform, así como programar fechas de caducidad para conjuntos de datos. Esta guía trata los pasos previos para utilizar la API y proporciona vínculos a documentación más específica del extremo.
 
@@ -44,10 +44,6 @@ Este documento proporciona una llamada API de ejemplo para demostrar cómo dar f
 Una caducidad del conjunto de datos es una acción &quot;eliminar un conjunto de datos&quot; con retraso temporal. Al crear una caducidad del conjunto de datos, se especifica un momento futuro en el que ese conjunto de datos debe eliminarse. Consulte la [guía de extremo de caducidad del conjunto de datos](./dataset-expiration.md) para obtener más información sobre la programación de caducidades de conjuntos de datos en la API.
 
 ## Eliminaciones de consumidores
-
->[!NOTE]
->
->Las eliminaciones de consumidores solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Sheild.
 
 La API de higiene de datos permite eliminar todos los registros asociados con una identidad de consumidor en uno o todos los conjuntos de datos. Todas las tareas de higiene de datos que eliminan identidades de consumidores se representan mediante una construcción denominada orden de trabajo. Consulte la [guía de extremo del orden de trabajo](./workorder.md) para obtener más información sobre cómo trabajar con eliminaciones de consumidores en la API.
 

@@ -2,9 +2,9 @@
 title: Examinar órdenes de trabajo de higiene de los datos
 description: Aprenda a ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '863'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 1%
 >title="ID de orden de trabajo"
 >abstract="Cuando se envía una solicitud de higiene de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. En otras palabras, una orden de trabajo representa un proceso específico de higiene de datos, que incluye su estado actual y otros detalles relacionados. A cada orden de trabajo se le asigna automáticamente su propio ID exclusivo tras la creación."
 >text="See the data hygiene UI guide to learn more."
+
+>[!IMPORTANT]
+>
+>Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
 
 Cuando se envía una solicitud de higiene de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. Una orden de trabajo representa un proceso específico de higiene de datos, como una caducidad programada del conjunto de datos, que incluye su estado actual y otros detalles relacionados.
 
@@ -30,10 +34,6 @@ Al acceder por primera vez a la variable **[!UICONTROL Higiene de los datos]** e
 La lista solo muestra los pedidos de trabajo de una categoría a la vez. Select **[!UICONTROL Consumidor]** para ver una lista de tareas de eliminación de consumidores, y **[!UICONTROL Conjunto de datos]** para ver una lista de caducidades programadas del conjunto de datos.
 
 ![Imagen que muestra la variable [!UICONTROL Conjunto de datos] ficha](../images/ui/browse/dataset-tab.png)
-
->[!IMPORTANT]
->
->Las eliminaciones de los consumidores solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
 
 Seleccione el icono de canal (![Imagen del icono del canal](../images/ui/browse/funnel-icon.png)) para ver una lista de filtros para las órdenes de trabajo mostradas.
 

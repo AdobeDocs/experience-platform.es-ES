@@ -2,7 +2,7 @@
 title: Información general sobre la higiene de los datos
 description: La higiene de los datos de Adobe Experience Platform le permite administrar el ciclo de vida de sus datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 51181dccbd37df60e438f34090ebaeb9e327c4ce
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 3%
@@ -11,16 +11,16 @@ ht-degree: 3%
 
 # Higiene de datos en Adobe Experience Platform
 
+>[!IMPORTANT]
+>
+>Actualmente, la higiene de los datos solo está disponible para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
+
 Adobe Experience Platform proporciona un robusto conjunto de herramientas para administrar operaciones de datos grandes y complicadas con el fin de orquestar las experiencias de los consumidores. A medida que los datos se incorporan al sistema a lo largo del tiempo, cada vez es más importante administrar los almacenes de datos para que se utilicen como se espera, se actualicen cuando sea necesario corregir los datos incorrectos y se eliminen cuando las políticas organizativas lo consideren necesario.
 
 Las funciones de higiene de datos de Platform le permiten administrar los datos de consumo almacenados mediante lo siguiente:
 
 * Programación de caducidades automatizadas del conjunto de datos
 * Eliminación de datos de consumidores basados en identidades ingeridas
-
->[!NOTE]
->
->Las solicitudes de eliminación de clientes solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Privacy Shield.
 
 Estas actividades se pueden realizar utilizando la variable [[!UICONTROL Higiene de los datos] Espacio de trabajo de la interfaz de usuario](#ui) o [API de higiene de datos](#api). Cuando se ejecuta un trabajo de higiene de datos, el sistema proporciona actualizaciones de transparencia en cada paso del proceso. Consulte la sección sobre [plazos y transparencia](#timelines-and-transparency) para obtener más información sobre cómo se representa cada tipo de trabajo en el sistema.
 
