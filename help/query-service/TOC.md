@@ -4,9 +4,9 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar datos en el lago de datos de Platform.
 feature: Queries
-source-git-commit: a0931e890f54fa0e9e15a69ca46ba25f26ed6b85
+source-git-commit: 9b0b0798f7e1d829e7d6434341c8c2d29efb2bad
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '217'
 ht-degree: 17%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 17%
 - [Protecciones para el servicio de consulta](guardrails.md)
 - Distiller de datos {#data-distiller}
    - [Paquete de servicio de consulta](data-distiller/packages.md)
+   - [Uso de licencias](data-distiller/licence-usage.md)
 - Introducción {#get-started}
    - [Requisitos previos](get-started/prerequisites.md)
 - Casos de uso {#use-cases}
