@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: bbc9df59f91b6de12e902a71f7b9d054735cad7b
+source-git-commit: ac60e664d7708d9ac6772c61d13b7c1c44e92321
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3106'
 ht-degree: 5%
 
 ---
@@ -118,7 +118,7 @@ Adobe Experience Platform proporciona varios tableros a través de los cuales pu
 | Etiqueta en uso | Cuando se ve en la biblioteca de utilidades, la etiqueta en uso identifica fácilmente la presencia de utilidades existentes en el panel. Esto facilita evitar la duplicación, aunque aún puede añadir el mismo widget más de una vez si lo desea. |
 | Tableros definidos por el usuario | Los tableros definidos por el usuario ayudan a acelerar las perspectivas y a personalizar las visualizaciones, ya que le permiten crear y administrar tableros personalizados. Con los tableros definidos por el usuario, puede crear, agregar y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Lea el [guía de funciones](../../dashboards/user-defined-dashboards.md) para obtener más información. |
 | Modelo de datos de Customer Data Platform Insights | La función Modelo de datos de perspectivas de la plataforma de datos del cliente (CDP) expone los modelos de datos y SQL que alimentan la información de varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para sus casos de uso de indicadores de rendimiento clave y de marketing. Estas perspectivas se pueden utilizar como utilidades personalizadas para los tableros definidos por el usuario. Lea el [Guía de funciones del Modelo de datos de CDP Insights](../../dashboards/cdp-insights-data-model.md) para obtener más información. |
-| Widget de informes de superposición de audiencia | Esta utilidad está disponible para ambas [!UICONTROL Perfiles] y [!UICONTROL Segmentos] tableros. El informe proporciona una lista ordenada de audiencias clasificadas según los porcentajes de superposición más altos o más bajos del segmento elegido. En el [!UICONTROL Perfiles] tablero puede filtrar y ver la superposición de audiencias combinando la política de todos los segmentos disponibles. La variable [!UICONTROL Segmentos] los tableros le permiten filtrar la superposición de audiencias por un segmento específico.<br>Utilice este análisis para generar nuevos segmentos de alto rendimiento y evitar enviar la misma audiencia a diferentes destinos. El informe también ayuda a identificar perspectivas ocultas para mejorar la segmentación o localizar perfiles únicos para perseguir. |
+| Widget de informes de superposición de audiencia | Esta utilidad está disponible para ambas [!UICONTROL Perfiles] y [!UICONTROL Segmentos] tableros. El informe proporciona una lista ordenada de audiencias clasificadas según los porcentajes de superposición más altos o más bajos del segmento elegido. En el [!UICONTROL Perfiles] tablero puede filtrar y ver la superposición de audiencias combinando la política de todos los segmentos disponibles. La variable [!UICONTROL Segmentos] los tableros le permiten filtrar la superposición de audiencias por un segmento específico.<br>Utilice este análisis para generar nuevos segmentos de alto rendimiento y evitar enviar la misma audiencia a diferentes destinos. El informe también ayuda a identificar perspectivas ocultas para mejorar la segmentación o localizar perfiles únicos para perseguir. Lea las [perfiles](../../dashboards/guides/profiles.md#audience-overlap-report) y [segmentos](../../dashboards/guides/segments.md#audience-overlap-report) guías del widget para obtener más información. |
 
 Para obtener más información, consulte [!DNL Dashboards], consulte la [[!DNL Dashboards] información general](../../dashboards/home.md).
 
@@ -238,8 +238,8 @@ El servicio de consultas permite utilizar SQL estándar para consultar datos en 
 
 | Función | Descripción |
 | --- | --- |
-| API de suscripción de alerta | El servicio de consulta de Adobe Experience Platform le permite suscribirse a las alertas para consultas ad hoc y programadas. Las alertas se pueden recibir por correo electrónico, en la interfaz de usuario de Platform o en ambos. Actualmente, las alertas de consulta solo se pueden suscribir a mediante el uso de [API del servicio de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Ejemplos de conjuntos de datos | Los ejemplos de conjuntos de datos del servicio de consulta le permiten realizar consultas exploratorias sobre grandes datos con un tiempo de procesamiento considerablemente reducido al coste de la precisión de la consulta. |
+| API de suscripción de alerta | El servicio de consulta de Adobe Experience Platform le permite suscribirse a las alertas para consultas ad hoc y programadas. Las alertas se pueden recibir por correo electrónico, en la interfaz de usuario de Platform o en ambos. Actualmente, las alertas de consulta solo se pueden suscribir a mediante el uso de [API del servicio de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). Consulte la [documentación de alertas de consulta](../../query-service/api/alert-subscriptions.md) para obtener más información. |
+| Ejemplos de conjuntos de datos | Los ejemplos de conjuntos de datos del servicio de consulta le permiten realizar consultas exploratorias sobre grandes datos con un tiempo de procesamiento considerablemente reducido al coste de la precisión de la consulta. Consulte la [guía de muestras de conjuntos de datos](../../query-service/sql/dataset-samples.md) para obtener más información. |
 
 Para obtener más información, consulte [!DNL Query Service], consulte la [[!DNL Query Service] información general](../../query-service/home.md).
 
