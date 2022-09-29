@@ -3,9 +3,9 @@ title: Información general sobre Datastreams
 description: Conecte la integración del SDK de Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
 keywords: configuración;datastreams;datastreamId;edge;id de datastream;Configuración de entorno;edgeConfigId;identidad;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;preparación de datos para recopilación de datos;Mp;prep de datos apper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1789'
 ht-degree: 3%
 
 ---
@@ -20,29 +20,29 @@ Este documento cubre los pasos para configurar un conjunto de datos en la interf
 
 Puede crear y administrar conjuntos de datos en la interfaz de usuario o la interfaz de usuario del Experience Platform de la recopilación de datos seleccionando **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
 
-![Ficha Datastreams en la interfaz de usuario](../images/datastreams/overview/datastreams-tab.png)
+![Ficha Datastreams en la interfaz de usuario](../assets/datastreams/overview/datastreams-tab.png)
 
 La variable [!UICONTROL Datastreams] muestra una lista de conjuntos de datos existentes, que incluye su nombre descriptivo, ID y fecha de la última modificación. Seleccione el nombre de un conjunto de datos a [ver sus detalles y configurar servicios](#view-details).
 
 Seleccione el icono &quot;more&quot; (**...**) para un conjunto de datos específico para mostrar más opciones. Select **[!UICONTROL Editar]** para actualizar el [configuración básica](#configure) para el conjunto de datos, o seleccione **[!UICONTROL Eliminar]** para eliminar el conjunto de datos.
 
-![Opciones para editar o eliminar un conjunto de datos existente](../images/datastreams/overview/edit-datastream.png)
+![Opciones para editar o eliminar un conjunto de datos existente](../assets/datastreams/overview/edit-datastream.png)
 
 ## Crear un nuevo conjunto de datos {#create}
 
 Para crear un conjunto de datos, comience seleccionando **[!UICONTROL Nuevo conjunto de datos]**.
 
-![Seleccionar nuevo almacén de datos](../images/datastreams/overview/new-datastream-button.png)
+![Seleccionar nuevo almacén de datos](../assets/datastreams/overview/new-datastream-button.png)
 
 Aparecerá el flujo de trabajo de creación del conjunto de datos, empezando por el paso de configuración. A partir de aquí, debe proporcionar un nombre y una descripción opcional para el conjunto de datos.
 
 Si está configurando este conjunto de datos para utilizarlo en Experience Platform y utiliza el SDK web de plataforma, también debe seleccionar una [esquema del Modelo de datos de experiencias (XDM) basado en eventos](../../xdm/classes/experienceevent.md) para representar los datos que planea introducir.
 
-![Configuración básica de un conjunto de datos](../images/datastreams/overview/configure.png)
+![Configuración básica de un conjunto de datos](../assets/datastreams/overview/configure.png)
 
 Select **[!UICONTROL Opciones avanzadas]** para mostrar controles adicionales para configurar el conjunto de datos.
 
-![Opciones de configuración avanzadas](../images/datastreams/overview/advanced-options.png)
+![Opciones de configuración avanzadas](../assets/datastreams/overview/advanced-options.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -57,7 +57,7 @@ A partir de aquí, si va a configurar el conjunto de datos para el Experience Pl
 
 Después de configurar un nuevo conjunto de datos o de seleccionar uno existente para verlo, aparecerá la página de detalles de ese conjunto de datos. Aquí puede encontrar más información sobre el conjunto de datos, incluido su ID.
 
-![Página de detalles de un conjunto de datos creado](../images/datastreams/overview/view-details.png)
+![Página de detalles de un conjunto de datos creado](../assets/datastreams/overview/view-details.png)
 
 Desde la pantalla de detalles del almacén de datos, puede [agregar servicios](#add-services) para habilitar las funcionalidades de los productos de Adobe Experience Cloud a los que tiene acceso. También puede editar el [configuración básica](#create), actualice su [reglas de asignación](./data-prep.md), [copiar el conjunto de datos](#copy)o elimínelo por completo.
 
@@ -65,15 +65,15 @@ Desde la pantalla de detalles del almacén de datos, puede [agregar servicios](#
 
 En la página de detalles de un conjunto de datos, seleccione **[!UICONTROL Añadir servicio]** para empezar a añadir servicios disponibles para ese conjunto de datos.
 
-![Seleccione Añadir servicio para continuar](../images/datastreams/overview/add-service.png)
+![Seleccione Añadir servicio para continuar](../assets/datastreams/overview/add-service.png)
 
 En la siguiente pantalla, utilice el menú desplegable para seleccionar un servicio de configuración para este conjunto de datos. En esta lista solo aparecen los servicios a los que tiene acceso.
 
-![Seleccionar un servicio de la lista](../images/datastreams/overview/service-selection.png)
+![Seleccionar un servicio de la lista](../assets/datastreams/overview/service-selection.png)
 
 Seleccione el servicio deseado, rellene las opciones de configuración que aparecen y, a continuación, seleccione **[!UICONTROL Guardar]** para agregar el servicio al conjunto de datos. Todos los servicios añadidos aparecen en la vista de detalles del conjunto de datos.
 
-![Servicios agregados a un conjunto de datos](../images/datastreams/overview/services-added.png)
+![Servicios agregados a un conjunto de datos](../assets/datastreams/overview/services-added.png)
 
 Las subsecciones siguientes describen las opciones de configuración de cada servicio.
 
@@ -85,7 +85,7 @@ Las subsecciones siguientes describen las opciones de configuración de cada ser
 
 Este servicio controla si los datos se envían a Adobe Analytics y cómo se hacen. Encontrará más detalles en la guía de [envío de datos a Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Bloque de configuración de Adobe Analytics](../images/datastreams/overview/analytics-config.png)
+![Bloque de configuración de Adobe Analytics](../assets/datastreams/overview/analytics-config.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -95,7 +95,7 @@ Este servicio controla si los datos se envían a Adobe Analytics y cómo se hace
 
 Este servicio controla si los datos se envían a Adobe Audience Manager y cómo se hacen. Todo lo que se necesita para enviar datos al Audience Manager es habilitar esta sección. Los demás ajustes son opcionales, pero se recomienda.
 
-![Bloque de configuración de Audience Manager de Adobe](../images/datastreams/overview/audience-manager-config.png)
+![Bloque de configuración de Audience Manager de Adobe](../assets/datastreams/overview/audience-manager-config.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -108,27 +108,28 @@ Este servicio controla si los datos se envían a Adobe Audience Manager y cómo 
 >
 >Al habilitar un conjunto de datos para Platform, tome nota del simulador de pruebas de Platform que está utilizando actualmente, tal y como se muestra en la cinta superior de la interfaz de usuario.
 >
->![Espacio aislado seleccionado](../images/datastreams/overview/platform-sandbox.png)
+>![Espacio aislado seleccionado](../assets/datastreams/overview/platform-sandbox.png)
 >
 >Los entornos limitados son particiones virtuales en Adobe Experience Platform que le permiten aislar los datos y las implementaciones de otras personas de su organización. Una vez creado un conjunto de datos, su simulador de pruebas no se puede cambiar. Para obtener más información sobre la función de los entornos limitados en el Experience Platform, consulte la [documentación de entornos limitados](../../sandboxes/home.md).
 
 Este servicio controla si los datos se envían a Adobe Experience Platform y cómo se hacen.
 
-![Bloque de configuración de Adobe Experience Platform](../images/datastreams/overview/platform-config.png)
+![Bloque de configuración de Adobe Experience Platform](../assets/datastreams/overview/platform-config.png)
 
 | Configuración | Descripción |
 |---| --- |
 | [!UICONTROL Conjunto de datos del evento] | **(Obligatorio)** Seleccione el conjunto de datos de Platform al que se transmitirán los datos de eventos del cliente. Este esquema debe utilizar la variable [Clase XDM ExperienceEvent](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Conjunto de datos de perfil] | Seleccione el conjunto de datos de Platform al que se enviarán los datos de atributos del cliente. Este esquema debe utilizar la variable [Clase de perfil individual XDM](../../xdm/classes/individual-profile.md). |
-| [!UICONTROL Offer Decisioning] | Seleccione esta casilla de verificación para habilitar el Offer decisioning para una implementación del SDK web de Platform. Consulte la guía de [uso del Offer decisioning con el SDK web de Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) para obtener más información sobre la implementación. Para obtener más información sobre las funciones de Offer decisioning, consulte la [Documentación de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=es). |
-| [!UICONTROL Segmentación de Edge] | Active esta casilla de verificación para habilitar [segmentación de arista](../../segmentation/ui/edge-segmentation.md) para este conjunto de datos. Cuando el SDK envía datos a través de un conjunto de datos habilitado para la segmentación perimetral, cualquier pertenencia de segmento actualizada para el perfil en cuestión se devuelve en la respuesta.<br><br>Esta opción se puede utilizar en combinación con [!UICONTROL Destinos de personalización] para [casos de uso de personalización de páginas siguientes](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Destinos de personalización] | Al habilitar esto después de habilitar la variable [!UICONTROL Segmentación de Edge] , esta opción permite que el conjunto de datos se conecte a destinos de personalización, como [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md). Consulte la documentación de destinos para ver los pasos específicos sobre [configuración de destinos de personalización](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Offer Decisioning] | Seleccione esta casilla de verificación para habilitar el Offer decisioning para una implementación del SDK web de Platform. Consulte la guía de [uso del Offer decisioning con el SDK web de Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) para obtener más información sobre la implementación. <br><br> Para obtener más información sobre las funciones de Offer decisioning, consulte la [Documentación de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=es). |
+| [!UICONTROL Segmentación de Edge] | Active esta casilla de verificación para habilitar [segmentación de arista](../../segmentation/ui/edge-segmentation.md) para este conjunto de datos. Cuando el SDK envía datos a través de un conjunto de datos habilitado para la segmentación perimetral, cualquier pertenencia de segmento actualizada para el perfil en cuestión se devuelve en la respuesta.<br><br>Esta opción se puede utilizar en combinación con [!UICONTROL Destinos de personalización] para [casos de uso de personalización de páginas siguientes](../../destinations/ui/configure-personalization-destinations.md), o en combinación con [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL Destinos de personalización] | Al habilitar esto después de habilitar la variable [!UICONTROL Segmentación de Edge] , esta opción permite que el conjunto de datos se conecte a destinos de personalización, como [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md). <br><br>Consulte la documentación de destinos para ver los pasos específicos sobre [configuración de destinos de personalización](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Adobe Journey Optimizer] | Active esta casilla de verificación para habilitar [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=es) para este conjunto de datos. <br><br> Al habilitar esta opción, el conjunto de datos puede devolver contenido personalizado de las campañas de entrada web y basadas en aplicaciones en [!DNL Adobe Journey Optimizer]. Esta opción requiere [!UICONTROL Segmentación de Edge] para estar activo. If [!UICONTROL Segmentación de Edge] está desactivada, esta opción está atenuada. |
 
 ### Configuración de Adobe Target {#target}
 
 Este servicio controla si los datos se envían a Adobe Target y cómo se hacen.
 
-![Bloque de configuración de Adobe Target](../images/datastreams/overview/target-config.png)
+![Bloque de configuración de Adobe Target](../assets/datastreams/overview/target-config.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -140,7 +141,7 @@ Este servicio controla si los datos se envían a Adobe Target y cómo se hacen.
 
 Este servicio controla si los datos se envían a [reenvío de eventos](../../tags/ui/event-forwarding/overview.md).
 
-![Sección Reenvío de eventos de la interfaz de usuario de configuración](../images/datastreams/overview/event-forwarding-config.png)
+![Sección Reenvío de eventos de la interfaz de usuario de configuración](../assets/datastreams/overview/event-forwarding-config.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -161,15 +162,15 @@ Puede crear una copia de un conjunto de datos existente y modificar sus detalles
 
 Desde la página principal en la [!UICONTROL Datastreams] espacio de trabajo, seleccione los puntos suspensivos (**....**) para el conjunto de datos en cuestión, seleccione **[!UICONTROL Copiar]**.
 
-![Imagen que muestra la variable [!UICONTROL Copiar] opción seleccionada en la vista de lista del conjunto de datos](../images/datastreams/overview/copy-datastream-list.png)
+![Imagen que muestra la variable [!UICONTROL Copiar] opción seleccionada en la vista de lista del conjunto de datos](../assets/datastreams/overview/copy-datastream-list.png)
 
 También puede seleccionar **[!UICONTROL Copiar conjunto de datos]** de la vista de detalles de un conjunto de datos determinado.
 
-![Imagen que muestra la variable [!UICONTROL Copiar] opción seleccionada en la vista de detalles del conjunto de datos](../images/datastreams/overview/copy-datastream-details.png)
+![Imagen que muestra la variable [!UICONTROL Copiar] opción seleccionada en la vista de detalles del conjunto de datos](../assets/datastreams/overview/copy-datastream-details.png)
 
 Aparecerá un cuadro de diálogo de confirmación en el que se le pedirá que proporcione un nombre único para el nuevo conjunto de datos que se creará, junto con detalles sobre las opciones de configuración que se copiarán. Cuando esté listo, seleccione **[!UICONTROL Copiar]**.
 
-![Imagen del cuadro de diálogo de confirmación para copiar un conjunto de datos](../images/datastreams/overview/copy-datastream-confirm.png)
+![Imagen del cuadro de diálogo de confirmación para copiar un conjunto de datos](../assets/datastreams/overview/copy-datastream-confirm.png)
 
 La página principal del [!UICONTROL Datastreams] El espacio de trabajo vuelve a aparecer con el nuevo conjunto de datos enumerado.
 

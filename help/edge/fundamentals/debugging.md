@@ -3,7 +3,7 @@ title: Depuración en el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo alternar las funciones de depuración en el SDK web de Experience Platform.
 keywords: depurar sdk web;depuración;configurar;configurar comando;depurar comando;edgeConfigId;setDebug;debugEnabled;depurar;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: c1e6b1519bc40e7d36bd83dc49e442d3d5583fed
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 2%
@@ -21,7 +21,7 @@ La depuración está deshabilitada de forma predeterminada, pero se puede activa
 * parámetro de cadena de consulta
 * Alternar en Habilitar depuración en Adobe Experience Platform Debugger. Adobe Experience Platform es una potente herramienta que examina sus páginas web y le ayuda a depurar problemas de implementación con sus productos de Experience Cloud. Adobe Experience Platform Debugger está disponible como un [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) y [Firefox](https://addons.mozilla.org/es/firefox/addon/adobe-experience-platform-dbg/) extensión. La depuración se puede habilitar desde la pestaña de configuración de la sección SDK web de AEP.
 
-![](../images/enable-debugging.png)
+![](../assets/enable-debugging.png)
 
 ## Alternar depuración con el comando Configurar
 

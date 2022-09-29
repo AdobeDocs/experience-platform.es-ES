@@ -2,7 +2,7 @@
 title: Configurar la extensión del SDK web de Adobe Experience Platform
 description: Configurar la extensión de la etiqueta SDK web de Adobe Experience Platform en la interfaz de usuario.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 6%
@@ -19,15 +19,15 @@ Este documento explica cómo configurar la extensión en la interfaz de usuario 
 
 Si la extensión del SDK web de Platform ya se ha instalado para una propiedad, abra la propiedad en la interfaz de usuario y seleccione la **[!UICONTROL Extensiones]** pestaña . En el SDK web de Platform, seleccione **[!UICONTROL Configurar]**.
 
-![](../images/extension/overview/configure.png)
+![](../assets/extension/overview/configure.png)
 
 Si aún no ha instalado la extensión, seleccione la opción **[!UICONTROL Catálogo]** pestaña . En la lista de extensiones disponibles, busque la extensión web SDK de Platform y seleccione **[!UICONTROL Instalar]**.
 
-![](../images/extension/overview/install.png)
+![](../assets/extension/overview/install.png)
 
 En ambos casos, llega a la página de configuración del SDK web de Platform. Las secciones siguientes explican las opciones de configuración de la extensión.
 
-![](../images/extension/overview/config-screen.png)
+![](../assets/extension/overview/config-screen.png)
 
 ## Opciones de configuración generales
 
@@ -56,7 +56,7 @@ Consulte la guía de [datastreams](../datastreams/overview.md) para obtener más
 
 ## [!UICONTROL Privacidad]
 
-![](../images/extension/overview/privacy.png)
+![](../assets/extension/overview/privacy.png)
 
 La variable [!UICONTROL Privacidad] le permite configurar el modo en que el SDK gestiona las señales de consentimiento del usuario desde el sitio web. Específicamente, le permite seleccionar el nivel predeterminado de consentimiento que se asume de un usuario si no se ha proporcionado ninguna otra preferencia de consentimiento explícito. El nivel de consentimiento predeterminado no se guarda en el perfil del usuario. La tabla siguiente desglosa lo que implica cada opción:
 
@@ -71,7 +71,7 @@ Utilice Out o Pending si necesita consentimiento explícito del usuario para sus
 
 ## [!UICONTROL Identidad]
 
-![](../images/extension/overview/identity.png)
+![](../assets/extension/overview/identity.png)
 
 ### [!UICONTROL Migración de ECID desde VisitorAPI]
 
@@ -83,13 +83,13 @@ Esta opción permite al SDK intentar almacenar un identificador de usuario en un
 
 ## [!UICONTROL Personalización]
 
-![](../images/extension/overview/personalization.png)
+![](../assets/extension/overview/personalization.png)
 
 Si desea ocultar ciertas partes si el sitio mientras se carga contenido personalizado, puede especificar los elementos que desea ocultar en el editor de estilos de preocultación. A continuación, puede copiar el fragmento de preocultación predeterminado que se le ha proporcionado y pegarlo en el `<head>`del sitio del HTML.
 
 ## [!UICONTROL Recopilación de datos]
 
-![](../images/extension/overview/data-collection.png)
+![](../assets/extension/overview/data-collection.png)
 
 ### [!UICONTROL Función Callback]
 
@@ -105,7 +105,7 @@ De forma predeterminada, el SDK recopila ciertos datos de contexto relacionados 
 
 ## [!UICONTROL Configuración avanzada]
 
-![](../images/extension/overview/advanced-settings.png)
+![](../assets/extension/overview/advanced-settings.png)
 
 ### [!UICONTROL Ruta base del borde]
 

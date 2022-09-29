@@ -2,7 +2,7 @@
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de Experience (XDM) al configurar un conjunto de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 2%
@@ -132,7 +132,7 @@ Para capturar propiedades de un elemento de datos de objeto XDM, se aplican las 
 
 Puede seleccionar la opción para cargar el objeto como archivo o pegar el objeto sin procesar en el cuadro de texto proporcionado. Si el JSON es válido, se muestra un esquema de vista previa en el panel derecho. Haga clic en **[!UICONTROL Siguiente]** para continuar.
 
-![Ejemplo de JSON de datos entrantes esperados](../images/datastreams/data-prep/select-data.png)
+![Ejemplo de JSON de datos entrantes esperados](../assets/datastreams/data-prep/select-data.png)
 
 ## [!UICONTROL Asignación]
 
@@ -145,25 +145,25 @@ La variable **[!UICONTROL Asignación]** , lo que le permite asignar los campos 
 
 Para empezar, seleccione **[!UICONTROL Añadir nueva asignación]** para crear una nueva fila de asignación.
 
-![Adición de una nueva asignación](../images/datastreams/data-prep/add-new-mapping.png)
+![Adición de una nueva asignación](../assets/datastreams/data-prep/add-new-mapping.png)
 
-Seleccione el icono de origen (![Icono de origen](../images/datastreams/data-prep/source-icon.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice la variable **[!UICONTROL Select]** para continuar.
+Seleccione el icono de origen (![Icono de origen](../assets/datastreams/data-prep/source-icon.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice la variable **[!UICONTROL Select]** para continuar.
 
-![Selección del campo a asignar en el esquema de origen](../images/datastreams/data-prep/source-mapping.png)
+![Selección del campo a asignar en el esquema de origen](../assets/datastreams/data-prep/source-mapping.png)
 
-A continuación, seleccione el icono de esquema (![Icono de esquema](../images/datastreams/data-prep/schema-icon.png)) para abrir un cuadro de diálogo similar para el esquema de eventos de destino. Elija el campo al que desea asignar los datos antes de confirmar con **[!UICONTROL Select]**.
+A continuación, seleccione el icono de esquema (![Icono de esquema](../assets/datastreams/data-prep/schema-icon.png)) para abrir un cuadro de diálogo similar para el esquema de eventos de destino. Elija el campo al que desea asignar los datos antes de confirmar con **[!UICONTROL Select]**.
 
-![Selección del campo a asignar en el esquema de destino](../images/datastreams/data-prep/target-mapping.png)
+![Selección del campo a asignar en el esquema de destino](../assets/datastreams/data-prep/target-mapping.png)
 
 La página de asignación vuelve a aparecer con la asignación de campo completada que se muestra. La variable **[!UICONTROL Asignación del progreso]** actualizaciones de sección para reflejar el número total de campos que se han asignado correctamente.
 
-![Campo asignado correctamente con progreso reflejado](../images/datastreams/data-prep/field-mapped.png)
+![Campo asignado correctamente con progreso reflejado](../assets/datastreams/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Si desea asignar una matriz de objetos (en el campo de origen) a una matriz de diferentes objetos (en el campo de destino), agregue `[*]` después del nombre de la matriz en las rutas de los campos de origen y destino, como se muestra a continuación.
 >
->![Asignación de objetos de matriz](../images/datastreams/data-prep/array-object-mapping.png)
+>![Asignación de objetos de matriz](../assets/datastreams/data-prep/array-object-mapping.png)
 
 ### Importar reglas de asignación existentes {#import-mapping}
 
@@ -175,11 +175,11 @@ Si ya ha creado un conjunto de datos, puede reutilizar las reglas de asignación
 
 Para empezar, seleccione **[!UICONTROL Importar asignación]**.
 
-![Imagen que muestra la variable [!UICONTROL Importar asignación] botón seleccionado](../images/datastreams/data-prep/import-mapping-button.png)
+![Imagen que muestra la variable [!UICONTROL Importar asignación] botón seleccionado](../assets/datastreams/data-prep/import-mapping-button.png)
 
 En el cuadro de diálogo que aparece, seleccione el conjunto de datos cuyas reglas de asignación desea importar. Una vez elegido el conjunto de datos, seleccione **[!UICONTROL Vista previa]**.
 
-![Imagen que muestra un conjunto de datos existente seleccionado](../images/datastreams/data-prep/select-mapping-rules.png)
+![Imagen que muestra un conjunto de datos existente seleccionado](../assets/datastreams/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ En el cuadro de diálogo que aparece, seleccione el conjunto de datos cuyas regl
 
 La siguiente pantalla muestra una vista previa de las reglas de asignación guardadas para el conjunto de datos seleccionado. Asegúrese de que las asignaciones mostradas sean las que espera y, a continuación, seleccione **[!UICONTROL Importar]** para confirmar y agregar las asignaciones al nuevo conjunto de datos.
 
-![Imagen que muestra las reglas de asignación que se van a importar](../images/datastreams/data-prep/import-mapping-rules.png)
+![Imagen que muestra las reglas de asignación que se van a importar](../assets/datastreams/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -199,7 +199,7 @@ Siga los pasos anteriores para asignar el resto de los campos al esquema de dest
 
 Una vez que el recuento de campos requerido alcance cero y esté satisfecho con la asignación, seleccione **[!UICONTROL Guardar]** para finalizar los cambios.
 
-![Asignación finalizada](../images/datastreams/data-prep/mapping-complete.png)
+![Asignación finalizada](../assets/datastreams/data-prep/mapping-complete.png)
 
 ## Pasos siguientes
 
