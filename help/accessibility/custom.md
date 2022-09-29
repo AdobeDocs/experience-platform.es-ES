@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Obtenga más información sobre las soluciones de accesibilidad personalizadas en la interfaz de usuario de Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: e30e04453bd814de103cceb14e3580992436923d
+source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,10 @@ Al utilizar la interfaz de usuario del Generador de segmentos para crear, editar
 * Se puede acceder a la interfaz de usuario del Generador de segmentos mediante la navegación mediante el teclado.
 * Los lectores de pantalla deben reconocer las etiquetas de marcado de los encabezados y pueden anunciar el encabezado junto con su nivel.
 * Otras tecnologías de asistencia pueden cambiar la visualización de una página mediante el uso de encabezados codificados correctamente para mostrar un esquema o una vista alternativa.
+
+Ahora puede contraer o expandir los carriles izquierdo y derecho del lienzo del generador de segmentos para ganar más espacio en la pantalla. Esta función es especialmente útil, ya que ofrece funciones completas con un zoom del 200%.
+
+![El lienzo del generador de segmentos con las utilidades de publicación de carril izquierdo y derecho resaltadas.](images/left-right-rail-expandables.png)
 
 ## Editor del servicio de consultas
 
