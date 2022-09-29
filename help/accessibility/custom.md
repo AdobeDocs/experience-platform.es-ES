@@ -4,13 +4,13 @@ title: Soluciones de accesibilidad personalizadas para Experience Platform
 topic-legacy: guide
 type: Documentation
 description: Obtenga más información sobre las soluciones de accesibilidad personalizadas en la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
+source-git-commit: e30e04453bd814de103cceb14e3580992436923d
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
-
 
 # Soluciones de accesibilidad personalizadas para Experience Platform
 
@@ -30,19 +30,19 @@ El Experience Platform se esfuerza por cumplir los estándares de accesibilidad 
 
 La navegación izquierda en la interfaz de usuario del Experience Platform es accesible mediante el teclado y proporciona contraste de color en los estados normal, de desplazamiento y de selección que cumplen los estándares de accesibilidad.
 
-Desde la pantalla de inicio, los usuarios pueden desplazarse por la pestaña en el panel de navegación izquierdo. Si selecciona **Mayús + Tab**, el usuario vuelve a la pantalla principal.
+Desde la pantalla de inicio, los usuarios pueden desplazarse por la pestaña en el panel de navegación izquierdo. Selección **Mayús + Tab** devuelve al usuario a la pantalla de inicio.
 
 ![Navegación izquierda del Experience Platform.](images/left-navigation-select.png)
 
-Con la navegación izquierda enfocada, **Tab** lleva a los usuarios a la interacción de expandir y contraer. La capacidad de expandir o contraer la navegación izquierda se activa con **Intro (retorno)**.
+Con la navegación izquierda enfocada, **Tabulación** lleva a los usuarios a la interacción expandir y contraer. La capacidad de expandir o contraer la navegación izquierda se activa con **Intro (devolución)**.
 
 ![La navegación izquierda del Experience Platform se ha contraído.](images/left-navigation-collapse.png)
 
-Con la navegación izquierda enfocada, las teclas de flecha hacia arriba y hacia abajo navegan hasta cada elemento de la navegación y realizan un ciclo continuo (es decir, el enfoque no se aleja hasta que el usuario se aleja de la navegación izquierda). El enfoque se muestra para los elementos de navegación cuando se seleccionan. La selección actual se muestra con un texto resaltado y en negrita. Al seleccionar un elemento de navegación izquierdo, **Entrar (Retorno)** abre el elemento de interfaz de usuario seleccionado en el panel derecho; sin embargo, el enfoque permanece en la navegación izquierda hasta que el usuario se aleje.
+Con la navegación izquierda enfocada, las teclas de flecha hacia arriba y hacia abajo navegan hasta cada elemento de la navegación y realizan un ciclo continuo (es decir, el enfoque no se aleja hasta que el usuario se aleja de la navegación izquierda). El enfoque se muestra para los elementos de navegación cuando se seleccionan. La selección actual se muestra con un texto resaltado y en negrita. Al seleccionar un elemento de navegación izquierdo, **Intro (devolución)** abre el elemento de la interfaz de usuario seleccionado en el panel derecho; sin embargo, el enfoque permanece en la navegación izquierda hasta que el usuario se desplace.
 
 ![El Experience Platform de navegación izquierdo con Fuentes seleccionadas.](images/left-navigation-sources.png)
 
-Algunas funciones de Platform no están habilitadas para todos los usuarios. Estos elementos aparecen en la navegación, pero no se pueden seleccionar. Al navegar con un teclado, estos elementos se omiten durante la navegación por la flecha y no se pueden seleccionar utilizando **Enter (Return)**.
+Algunas funciones de Platform no están habilitadas para todos los usuarios. Estos elementos aparecen en la navegación, pero no se pueden seleccionar. Al navegar con un teclado, estos elementos se omiten durante la navegación por la flecha y no se pueden seleccionar mediante **Intro (devolución)**.
 
 ![Las secciones de la navegación izquierda del Experience Platform que no están habilitadas para el usuario no se pueden seleccionar.](images/left-navigation-sections-disabled.png)
 
@@ -58,14 +58,14 @@ El cuadro de diálogo de vídeo incrustado también se puede navegar mediante el
 
 | Elemento Diálogo | Accesibilidad del teclado | Descripción |
 |---|---|---|
-| Reproducir y pausar | Tabulación<br/>Barra espaciadora | Utilice **Tab** para definir el enfoque en el botón de reproducción. **** La barra espaciadora inicia la reproducción del vídeo y la detiene. |
-| Depurador | Tab<br/>Flecha izquierda<br/>Flecha derecha | Cuando se esté reproduciendo el vídeo, utilice **Tab** para enfocar la selección. Con la barra de desplazamiento enfocada, **teclas de flecha izquierda y derecha** omiten la reproducción de vídeo hacia delante y hacia atrás 5 segundos, respectivamente. |
-| Silenciar | Tabulación<br/>Barra espaciadora | Utilice **Tab** para enfocar el elemento de volumen silencioso. Utilice la **barra espaciadora** para silenciar o anular el silencio de la reproducción de vídeo. |
-| Volumen | Tab<br/>Flecha izquierda<br/>Flecha derecha | Utilice **Tab** para centrarse en el elemento de volumen. **Las** teclas de flecha izquierda y derecha mueven el volumen hacia arriba y hacia abajo, respectivamente. |
-| [!UICONTROL Subtítulos] (&quot;cc&quot;) | Tabulación<br/>Entrar<br/>Flecha arriba<br/>Flecha abajo | **** Elemento Subtítulos  [!UICONTROL tabulados]  (&quot;cc&quot;). Utilice **Enter** para abrir el menú y **teclas de flecha arriba y abajo** para seleccionar un idioma para los rótulos. **** confirma la selección. |
-| [!UICONTROL Calidad] | Tabulación<br/>Entrar<br/>Flecha arriba<br/>Flecha abajo | Utilice la pestaña **Tab** para enfocar el elemento [!UICONTROL Quality]. Utilice **Enter** para abrir el menú y las **teclas de flecha arriba y abajo** para seleccionar la calidad del vídeo. **** confirma la selección. |
-| Pantalla completa | Tabulación<br/>Barra espaciadora o Entrar<br/>Escape | Utilice **Tab** para enfocar el elemento de pantalla completa. Utilice **barra espaciadora o Entrar** para activar la vista de pantalla completa. **Escape** (&quot;esc&quot;) sale del modo de pantalla completa. |
-| Cerrar | Tabulación<br/>Barra espaciadora o Entrar | Utilice **Tab** para enfocar el botón de cierre. Utilice la tecla **barra espaciadora o la tecla Intro** para salir del cuadro de diálogo del vídeo. |
+| Reproducir y pausar | Tabulación<br/>Barra espaciadora | Uso **Tabulación** para definir el enfoque en el botón de reproducción. **Barra espaciadora** inicia la reproducción de vídeo y detiene la reproducción de vídeo. |
+| Depurador | Tabulación<br/>Flecha izquierda<br/>Flecha derecha | Cuando se esté reproduciendo el vídeo, utilice **Tabulación** para enfocar la selección. Con el depurador en enfoque, **teclas de flecha izquierda y derecha** omita la reproducción de vídeo hacia delante y hacia atrás 5 segundos, respectivamente. |
+| Silenciar | Tabulación<br/>Barra espaciadora | Uso **Tabulación** para enfocar el elemento de volumen silencioso. Uso **barra espaciadora** para silenciar o anular el silencio de la reproducción de vídeo. |
+| Volumen | Tabulación<br/>Flecha izquierda<br/>Flecha derecha | Uso **Tabulación** para centrarse en el elemento de volumen. **Teclas de flecha izquierda y derecha** mueva el volumen hacia arriba y hacia abajo, respectivamente. |
+| [!UICONTROL Subtítulos] (&quot;cc&quot;) | Tabulación<br/>Entrar<br/>Flecha arriba<br/>Flecha abajo | **Tabulación** a [!UICONTROL Subtítulos] (&quot;cc&quot;). Uso **Entrar** para abrir el menú y **teclas de flecha arriba y abajo** para seleccionar un idioma para los rótulos. **Entrar** confirma la selección. |
+| [!UICONTROL Calidad] | Tabulación<br/>Entrar<br/>Flecha arriba<br/>Flecha abajo | Uso **Tabulación** para enfocar el [!UICONTROL Calidad] elemento. Uso **Entrar** para abrir el menú y el **teclas de flecha arriba y abajo** para seleccionar la calidad de vídeo. **Entrar** confirma la selección. |
+| Pantalla completa | Tabulación<br/>Barra espaciadora o Entrar<br/>Escape | Uso **Tabulación** para enfocar el elemento de pantalla completa. Uso **barra espaciadora o Intro** para activar la vista de pantalla completa. **Escape** (&quot;esc&quot;) sale del modo de pantalla completa. |
+| Cerrar | Tabulación<br/>Barra espaciadora o Entrar | Uso **Tabulación** para enfocar el botón de cierre. Uso **barra espaciadora o Intro** para salir del cuadro de diálogo de vídeo. |
 
 >[!NOTE]
 >
@@ -75,11 +75,11 @@ El cuadro de diálogo de vídeo incrustado también se puede navegar mediante el
 
 ## Arrastrar y soltar archivos
 
-En el Experience Platform, todas las zonas de arrastrar y soltar para la selección de archivos son accesibles mediante el teclado. El uso de **Tab** para resaltar **[!UICONTROL Choose files]** y el uso de **Enter or spacebar** para seleccionarlo invoca la IU de selección de archivos del sistema operativo.
+En el Experience Platform, todas las zonas de arrastrar y soltar para la selección de archivos son accesibles mediante el teclado. Uso **Tabulación** para resaltar **[!UICONTROL Elegir archivos]** y **Entrar o barra espaciadora** para seleccionarlo, se invoca la IU de selección de archivos del sistema operativo.
 
-Una vez cargado un archivo, se puede navegar mediante el teclado para eliminar el archivo seleccionado y cargar uno nuevo. Los usuarios pueden utilizar **Tab** para centrarse en el icono de eliminación y **Entrar o barra espaciadora** para seleccionarlo. Una vez eliminado el archivo, **[!UICONTROL Choose files]** está automáticamente en foco y se puede seleccionar.
+Una vez cargado un archivo, se puede navegar mediante el teclado para eliminar el archivo seleccionado y cargar uno nuevo. Los usuarios pueden utilizar **Tabulación** para centrarse en el icono de eliminación y **Entrar o barra espaciadora** para seleccionarlo. Una vez eliminado el archivo, **[!UICONTROL Elegir archivos]** está enfocado automáticamente y se puede seleccionar.
 
-Alternativamente, si el archivo que se carga no tiene el formato correcto, se muestra un icono de error junto con un mensaje de error y el botón **[!UICONTROL Choose files]** está enfocado y se puede seleccionar.
+Alternativamente, si el archivo que se carga no tiene el formato correcto, se muestra un icono de error junto con un mensaje de error y la variable **[!UICONTROL Elegir archivos]** está enfocado y se puede seleccionar.
 
 ![Zona de arrastrar y soltar un archivo con un mensaje de error y el botón de selección de archivos seleccionado.](images/drag-and-drop.png)
 
@@ -91,11 +91,14 @@ Si se utiliza el ratón para seleccionar la zona de arrastrar y soltar, también
 
 Todas las tablas de la interfaz de usuario del Experience Platform son accesibles mediante el teclado. La navegación y la interacción con filas y columnas de tablas es posible mediante una serie de métodos abreviados del teclado:
 
-* Desde el encabezado de tabla, utilice la **flecha hacia abajo** para examinar la tabla. Los encabezados de tabla se pueden seleccionar al navegar mediante **Tab** y puede cambiar el orden de clasificación mediante **barra espaciadora**.
-* **Las** teclas de flecha arriba y abajo se filtran hacia arriba y hacia abajo por las filas de la tabla.
-* Cuando se selecciona una fila o está centrada, el uso de **Enter** en la fila proporciona detalles en el carril derecho.
-* Cuando se selecciona una fila o está enfocada, use **teclas de flecha** para moverse por cada elemento de la fila.
-* Utilice **Enter** para seleccionar un elemento en la fila. Se avisa a los usuarios con lectores de pantalla si es necesario abrir una nueva ventana.
+* Desde el encabezado de tabla, utilice el **flecha abajo** para examinar la tabla. Los encabezados de tabla se pueden seleccionar al navegar mediante **Tabulación**, y puede cambiar el orden de clasificación mediante **barra espaciadora**.
+* **Teclas de flecha arriba y abajo** se desplaza hacia arriba o hacia abajo por las filas de la tabla.
+* Cuando se selecciona una fila o está enfocada, se utiliza **Entrar** en la fila proporciona detalles en el carril derecho.
+* Cuando una fila está seleccionada o en foco, utilice **teclas de flecha** para moverse por cada elemento de la fila.
+* Uso **Entrar** para seleccionar un elemento en la fila. Se avisa a los usuarios con lectores de pantalla si es necesario abrir una nueva ventana.
+* Si amplía el zoom al 200 % o más, puede ver la variable **inspector de raíl** a medida que el carril derecho se contrae para proporcionar más espacio de visualización para la tabla.
+
+![Icono del inspector de raíl enfocado cuando un usuario aumenta al 200%.](images/rail-inspector.png)
 
 ### Accesibilidad del teclado de la tabla
 
@@ -112,14 +115,14 @@ Todas las tablas de la interfaz de usuario del Experience Platform son accesible
 
 La interfaz de usuario del Editor de esquemas es accesible a través de la siguiente funcionalidad:
 
-* El Editor de esquemas admite la navegación mediante el teclado, incluido el uso de **Tab** para la navegación a través de los elementos de la interfaz de usuario.
-* **** La pestaña introduce el campo de búsqueda y, a continuación, en el árbol de esquema.
+* El Editor de esquemas admite la navegación mediante el teclado, incluido el uso de **Tabulación** para navegar por los elementos de la interfaz de usuario.
+* **Tabulación** introduce el campo de búsqueda y, a continuación, en el árbol de esquema.
 * El árbol de esquemas admite el uso de teclas de flecha para navegar por la interfaz de usuario del árbol de esquemas
-   * **Las** flechas arriba y abajo se pueden utilizar para atravesar el árbol.
-   * **Las** flechas izquierda y derecha pueden utilizarse para expandir y contraer nodos o moverse entre acciones en línea en el árbol de esquemas.
-* **Enter (Return)** activa los detalles de nodos individuales en el panel de detalles de la derecha.
-* La clave **Home** vuelve a la parte superior del árbol.
-* La tecla **End** se desplaza a la parte inferior del árbol.
+   * **Flechas arriba y abajo** para recorrer el árbol.
+   * **Flechas izquierda y derecha** se puede utilizar para expandir y contraer nodos o para moverse entre acciones en línea en el árbol de esquemas.
+* **Intro (devolución)** activa los detalles de nodos individuales en el panel de detalles de la derecha.
+* La variable **Página principal** vuelve a la parte superior del árbol.
+* La variable **Fin** se desplaza hasta la parte inferior del árbol.
 * El árbol de esquema también incluye etiquetas ARIA para lectores de pantalla.
 
 ## Interfaz de usuario del Generador de segmentos
@@ -139,13 +142,13 @@ Las siguientes funciones de accesibilidad están disponibles en el editor del se
 
 ## Ficha Vista del sistema en Fuentes y destinos
 
-Al examinar la **[!UICONTROL Vista del sistema]** en Fuentes y destinos, la siguiente funcionalidad mejora la accesibilidad:
+Al examinar el **[!UICONTROL Vista del sistema]** en Orígenes y destinos, la siguiente funcionalidad mejora la accesibilidad:
 
-* **** Los conjuntos de fichas se centran en la primera tarjeta de conexión de origen
-   * **** Vuelva a tabular para centrarse en el botón dentro de la tarjeta
-   * Seleccione **Enter** para activar el botón de llamada a la acción dentro de la tarjeta
-* Al seleccionar **Enter** en la tarjeta de conexión también se activan más detalles en el carril derecho
-   * Cuando se activa el carril derecho, el enfoque se establece en esa área. **** Las pestañas se centran en  **** Cerrar para el panel de raíl derecho. Al seleccionar **Tab** de nuevo, el foco se mueve por el panel del carril derecho
-   * Si hay más de una tarjeta de conexión de origen, **Tab** se mueve a través de las conexiones
-   * Utilice **teclas de flecha (arriba, abajo, izquierda y derecha)** para desplazarse por la lista de fuentes
-   * Seleccione **Tab** para definir el enfoque en el panel del carril derecho
+* **Tabulación** establece el enfoque en la primera tarjeta de conexión de origen
+   * **Tabulación** para centrarse en el botón dentro de la tarjeta
+   * Select **Entrar** para activar el botón de llamada a la acción dentro de la tarjeta
+* Selección **Entrar** en la tarjeta de conexión también activa más detalles en el carril derecho
+   * Cuando se activa el carril derecho, el enfoque se establece en esa área. **Tabulación** se centra en **Cerrar** para el panel carril derecho. Selección **Tabulación** de nuevo mueve el enfoque a través del panel del carril derecho
+   * Si hay más de una tarjeta de conexión de origen, **Tabulación** se desplaza a través de las conexiones
+   * Uso **teclas de flecha (arriba, abajo, izquierda y derecha)** para desplazarse por la lista de fuentes
+   * Select **Tabulación** para definir el enfoque en el panel del carril derecho
