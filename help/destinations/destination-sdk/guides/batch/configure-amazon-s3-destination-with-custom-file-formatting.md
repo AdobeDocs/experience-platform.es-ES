@@ -2,9 +2,9 @@
 description: Aprenda a utilizar Destination SDK para configurar un destino de Amazon S3 con opciones de formato y nombre de archivo personalizados.
 title: Configure un destino de Amazon S3 con opciones de formato y nombre de archivo personalizados.
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '734'
 ht-degree: 1%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 1%
 # Configuración de un destino de Amazon S3 con opciones de formato y nombre de archivo personalizados
 
 ## Información general {#overview}
-
->[!IMPORTANT]
->
->Actualmente, la funcionalidad para configurar destinos basados en archivos mediante Adobe Experience Platform Destination SDK está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 En esta página se describe cómo utilizar Destination SDK para configurar un destino de Amazon S3 con [opciones de formato de archivo](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) y un [configuración de nombre de archivo](/help/destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration).
 

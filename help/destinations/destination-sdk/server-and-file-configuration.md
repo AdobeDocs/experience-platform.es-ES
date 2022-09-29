@@ -2,9 +2,9 @@
 description: Las especificaciones de configuración de servidor y archivo para destinos basados en archivos se pueden configurar en Adobe Experience Platform Destination SDK a través del extremo /destination-servers .
 title: Opciones de configuración para especificaciones de servidor de destino basadas en archivos
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1248'
 ht-degree: 9%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 9%
 # Configuración de servidor y archivo para especificaciones de servidor de destino basadas en archivos
 
 ## Información general {#overview}
-
->[!IMPORTANT]
->
->La funcionalidad para configurar y enviar destinos basados en archivos mediante Adobe Experience Platform Destination SDK está actualmente en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 Esta página detalla todas las opciones de configuración del servidor para los servidores de destino basados en archivos y muestra cómo configurar varias opciones de configuración de archivos para los usuarios que exportan archivos desde el Experience Platform al destino.
 

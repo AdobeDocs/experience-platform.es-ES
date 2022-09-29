@@ -2,9 +2,9 @@
 description: Aprenda a utilizar Destination SDK para configurar un destino de zona de aterrizaje de datos (DLZ) con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada.
 title: Configure un destino de zona de aterrizaje de datos (DLZ) con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada.
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '739'
 ht-degree: 1%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 1%
 # Configure un [!DNL Data Landing Zone (DLZ)] destino con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada
 
 ## Información general {#overview}
-
->[!IMPORTANT]
->
->Actualmente, la funcionalidad para configurar destinos basados en archivos mediante Adobe Experience Platform Destination SDK está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 En esta página se describe cómo utilizar Destination SDK para configurar un [!DNL Data Landing Zone] destino con personalizado [opciones de formato de archivo](../../server-and-file-configuration.md#file-configuration) y un [configuración de nombre de archivo](../../file-based-destination-configuration.md#file-name-configuration).
 
