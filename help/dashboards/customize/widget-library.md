@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;paneles;tablero;perfiles;se
 title: Información general de la biblioteca de utilidades del panel
 description: Esta guía proporciona instrucciones paso a paso para acceder a la biblioteca de utilidades en Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,12 @@ Select **[!UICONTROL Biblioteca de utilidades]** para abrir la biblioteca de uti
 En el [!UICONTROL Biblioteca de utilidades], seleccione cualquier utilidad de la lista de widgets estándar o personalizados disponibles. Una marca de verificación en la esquina del widget indica su selección.
 
 ![Biblioteca de widgets con un widget seleccionado y marca de verificación resaltada.](../images/customization/confirm-selected-widget-to-add.png)
+
+### Etiqueta en uso {#in-use-label}
+
+Las utilidades ya agregadas a un tablero tienen un [!UICONTROL En uso] se adjuntan a ellos cuando se visualizan en la biblioteca de utilidades. Esta etiqueta resalta los widgets que ya se han agregado al tablero para evitar la duplicación. Aunque, aún puede agregar la misma utilidad más de una vez si lo desea.
+
+![La biblioteca de utilidades con la etiqueta en uso resaltada.](../images/customization/in-use-label.png)
 
 Una vez seleccionados todos los widgets necesarios, seleccione **[!UICONTROL Agregar widgets]** para confirmar la elección y añadir las utilidades al tablero.
 
