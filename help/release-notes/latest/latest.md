@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
-source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
+source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
 workflow-type: tm+mt
-source-wordcount: '2796'
-ht-degree: 4%
+source-wordcount: '2776'
+ht-degree: 5%
 
 ---
 
@@ -78,7 +78,7 @@ Attribution AI se utiliza para atribuir créditos a puntos de contacto que lleva
 
 | Función | Descripción |
 | --- | --- |
-| Guardar instancia de borrador | Esta nueva función permite a los analistas de marketing guardar la configuración del modelo como una instancia de borrador durante las configuraciones y seguir editando el borrador hasta su finalización antes de la formación y la puntuación. Los escenarios en los que esta función es útil incluyen, entre otros, cuando los usuarios tienen varios campos para definir en el flujo de trabajo de configuración que no pueden completar de una sola vez o cuando una o más estadísticas del conjunto de datos (como la integridad de la columna) tardan un tiempo en procesarse antes de que estén disponibles. Lea el [Guía del usuario del Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) para obtener más información. |
+| Guardar instancia de borrador | Esta nueva función permite a los analistas de marketing guardar una configuración de modelo como una instancia de borrador y seguir editándola hasta que se complete antes de la formación y la puntuación. Los escenarios en los que esta función es útil incluyen, cuando un usuario tiene varios campos para definir en el flujo de trabajo, pero no puede completarlo debido a limitaciones de tiempo. Otro escenario es cuando se procesan una o más estadísticas del conjunto de datos y aún no están disponibles. Lea el [Guía del usuario del Attribution AI](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) para obtener más información. |
 | Políticas de gobernanza | Una vez que los usuarios se envían para crear una instancia a través del flujo de trabajo de configuración, el nuevo servicio de aplicación de políticas comprueba si hay alguna infracción de directiva en el uso de datos y muestra los detalles en una ventana emergente. Garantiza que las operaciones de datos y las acciones de marketing cumplan las políticas de uso de datos configuradas en Adobe Experience Platform. |
 
 Para obtener más información sobre la Attribution AI, la variable [Información general sobre la Attribution AI](../../intelligent-services/attribution-ai/overview.md). Para obtener información sobre las políticas de control de datos, lea la [información general sobre políticas](../../data-governance/policies/overview.md).
@@ -89,7 +89,7 @@ La AI del cliente disponible en Real-time Customer Data Platform se utiliza para
 
 | Función | Descripción |
 | --- | --- |
-| Guardar instancia de borrador | Esta nueva función permite a los analistas de marketing guardar la configuración del modelo como una instancia de borrador durante las configuraciones y seguir editando el borrador hasta su finalización antes de la formación y la puntuación. Los escenarios en los que esta función es útil incluyen, entre otros, cuando los usuarios tienen varios campos para definir en el flujo de trabajo de configuración que no pueden completar de una sola vez o cuando una o más estadísticas del conjunto de datos (como la integridad de la columna) tardan un tiempo en procesarse antes de que estén disponibles. Lea el [Guía del usuario de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) para obtener más información. |
+| Guardar instancia de borrador | Esta nueva función permite a los analistas de marketing guardar una configuración de modelo como una instancia de borrador y seguir editándola hasta que se complete antes de la formación y la puntuación. Los escenarios en los que esta función es útil incluyen, cuando un usuario tiene varios campos para definir en el flujo de trabajo, pero no puede completarlo debido a limitaciones de tiempo. Otro escenario es cuando se procesan una o más estadísticas del conjunto de datos y aún no están disponibles. Lea el [Guía del usuario de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) para obtener más información. |
 | Políticas de gobernanza | Una vez que los usuarios se envían para crear una instancia a través del flujo de trabajo de configuración, el nuevo servicio de aplicación de políticas comprueba si hay alguna infracción de directiva en el uso de datos y muestra los detalles en una ventana emergente. Garantiza que las operaciones de datos y las acciones de marketing cumplan las políticas de uso de datos configuradas en Adobe Experience Platform. |
 
 Para obtener más información sobre Customer AI, lea la [Información general sobre Customer AI](../../intelligent-services/customer-ai/overview.md). Para obtener información sobre las políticas de control de datos, lea la [información general sobre políticas](../../data-governance/policies/overview.md).
