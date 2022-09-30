@@ -3,18 +3,14 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Examinar el control de acceso basado en atributos
 description: Este documento proporciona información sobre el uso de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '346'
 ht-degree: 5%
 
 ---
 
 # Guía de permisos
-
->[!IMPORTANT]
->
->El control de acceso basado en atributos actualmente está disponible en una versión limitada para clientes de asistencia médica basados en EE. UU. Esta capacidad estará disponible para todos los clientes de Real-time Customer Data Platform una vez que se haya lanzado completamente.
 
 Permisos es el área de Adobe Experience Cloud donde los administradores pueden definir funciones de usuario y políticas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
 
@@ -24,7 +20,7 @@ Con los permisos, puede configurar:
 * [Permisos](./permissions.md)
 * [Políticas](./permissions.md)
 * [Funciones](./roles.md)
-* [Entornos aislados](./sandboxes.md)
+* [Zonas protegidas](./sandboxes.md)
 * [Usuarios](./users.md)
 
 Para acceder a los permisos de control de acceso basados en atributos para [!DNL Experience Cloud], debe ser administrador de la organización que tenga una suscripción a [!DNL Experience Cloud]. Aunque Adobe admite jerarquías de administrador flexibles para sus organizaciones, debe ser administrador de productos de Adobe Experience Platform para configurar los permisos. Consulte el artículo de Adobe Help Center sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) para obtener más información.

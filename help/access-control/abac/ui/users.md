@@ -3,18 +3,14 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Usuarios de control de acceso basado en atributos
 description: Este documento proporciona información sobre la administración de usuarios y grupos de usuarios a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '160'
 ht-degree: 2%
 
 ---
 
 # Administración de usuarios
-
->[!IMPORTANT]
->
->El control de acceso basado en atributos actualmente está disponible en una versión limitada para clientes de asistencia médica basados en EE. UU. Esta capacidad estará disponible para todos los clientes de Real-time Customer Data Platform una vez que se haya lanzado completamente.
 
 Si desea ver los detalles del usuario y las funciones a las que están asignados, seleccione la opción **[!UICONTROL Usuarios]** pestaña .
 

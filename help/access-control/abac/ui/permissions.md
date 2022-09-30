@@ -3,18 +3,14 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Permisos de la función Administración de controles de acceso basados en atributos
 description: Este documento proporciona información sobre la configuración de permisos para una función a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
 
 # Administrar permisos para una función
-
->[!IMPORTANT]
->
->El control de acceso basado en atributos actualmente está disponible en una versión limitada para clientes de asistencia médica basados en EE. UU. Esta capacidad estará disponible para todos los clientes de Real-time Customer Data Platform una vez que se haya lanzado completamente.
 
 >[!IMPORTANT]
 >

@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Punto final de la API de productos
 description: El extremo /products de la API de control de acceso basado en atributos le permite administrar productos mediante programación en Adobe Experience Platform.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '492'
 ht-degree: 4%
 
 ---
 
 # Punto final del producto
-
->[!IMPORTANT]
->
->El control de acceso basado en atributos actualmente está disponible en una versión limitada para clientes de asistencia médica basados en EE. UU. Esta capacidad estará disponible para todos los clientes de Real-time Customer Data Platform una vez que se haya lanzado completamente.
 
 La variable `/products` en la API de control de acceso basada en atributos le permite administrar mediante programación productos, así como categorías de permisos y conjuntos de permisos asociados con productos de su organización.
 
