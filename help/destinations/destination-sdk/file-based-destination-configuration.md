@@ -2,9 +2,9 @@
 description: Esta configuración le permite indicar información esencial para su destino basado en archivos, como el nombre de destino, la categoría, la descripción y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino basadas en archivos para Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
+source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '3021'
 ht-degree: 5%
 
 ---
@@ -722,6 +722,54 @@ Utilice los parámetros de  `dynamicSchemaConfig` para recuperar dinámicamente 
 | `authenticationRule` | Cadena | Indica cómo [!DNL Platform] los clientes se conectan a su destino. Los valores aceptados son `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Uso `CUSTOMER_AUTHENTICATION` si los clientes de Platform inician sesión en el sistema mediante cualquiera de los métodos siguientes: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Uso `PLATFORM_AUTHENTICATION` si hay un sistema de autenticación global entre el Adobe y el destino y la variable [!DNL Platform] El cliente no necesita proporcionar credenciales de autenticación para conectarse al destino. En este caso, debe crear un objeto credentials utilizando la variable [Credenciales](./credentials-configuration-api.md) configuración. </li><li>Uso `NONE` si no se requiere autenticación para enviar datos a la plataforma de destino. </li></ul> |
 | `value` | Cadena | Nombre del esquema que se va a mostrar en la interfaz de usuario del Experience Platform, en el paso de asignación. |
 | `responseFormat` | Cadena | Siempre se configura como `SCHEMA` al definir un esquema personalizado. |
+
+{style=&quot;table-layout:auto&quot;}
+
+### Asignaciones necesarias {#required-mappings}
+
+Dentro de la configuración de esquema, tiene la opción de añadir asignaciones necesarias (o predefinidas). Son asignaciones que los usuarios pueden ver pero no modificar cuando configuran una conexión con su destino. Por ejemplo, puede aplicar el campo de dirección de correo electrónico para que siempre se envíe al destino en los archivos exportados. Consulte a continuación un ejemplo de una configuración de esquema con asignaciones requeridas y cómo se ve en el paso de asignación de la variable [flujo de trabajo de activación de datos en destinos por lotes](/help/destinations/ui/activate-batch-profile-destinations.md).
+
+```json
+    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      },
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      },
+      {
+        "sourceType": "text/x.aep-xl",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
+        "destination": "delete"
+      }
+    ] 
+```
+
+![Imagen de las asignaciones necesarias en el flujo de activación de la interfaz de usuario.](/help/destinations/destination-sdk/assets/required-mappings.png)
+
+>[!NOTE]
+>
+>Actualmente, las combinaciones admitidas de las asignaciones requeridas son:
+>* Puede configurar un campo de origen requerido y un campo de destino requerido. En este caso, los usuarios no pueden editar ni seleccionar ninguno de los dos campos y solo pueden ver la selección.
+>* Solo puede configurar un campo de destino requerido. En este caso, los usuarios podrán seleccionar un campo de origen para asignarlo al destino.
+>
+> Actualmente, la configuración de un campo de origen requerido solo está *not* compatible.
+
+Utilice los parámetros descritos en la tabla siguiente si desea añadir las asignaciones necesarias en el flujo de trabajo de activación para el destino.
+
+| Parámetro | Tipo | Descripción |
+|---------|----------|------|
+| `requiredMappingsOnly` | Booleano | Indica si los usuarios pueden asignar otros atributos e identidades en el flujo de activación, *apart* las asignaciones necesarias que defina. |
+| `requiredMappings.mandatoryRequired` | Booleano | Se establece en true si este campo debe ser un atributo obligatorio que siempre esté presente en las exportaciones de archivos al destino. Más información sobre [atributos obligatorios](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `requiredMappings.primaryKeyRequired` | Booleano | Se establece en true si este campo debe utilizarse como clave de deduplicación en las exportaciones de archivos al destino. Más información sobre [claves de deduplicación](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `requiredMappings.sourceType` | Cadena | Se utiliza cuando se configura un campo de origen como necesario. Indica qué tipo de campo es el campo de origen. Entre las opciones disponibles se encuentran: <ul><li>`"text/x.schema-path"` cuando el campo de origen es un atributo XDM predefinido</li><li>`"text/x.aep-xl"` cuando el campo de origen es una función, por ejemplo, si necesita que se cumpla una condición en el campo de origen. Para obtener más información sobre las funciones compatibles, lea la [Preparación de datos](/help/data-prep/api/functions.md) documentación.</li></ul> |
+| `requiredMappings.source` | Cadena | Indica cuál debe ser el campo de origen requerido. |
+| `requiredMappings.destination` | Cadena | Indica cuál debe ser el campo de destino requerido. |
 
 {style=&quot;table-layout:auto&quot;}
 
