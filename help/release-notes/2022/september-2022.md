@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
-source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '3060'
+source-wordcount: '2895'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,6 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [Registros de auditoría](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Recopilación de datos](#data-collection)
-- [Higiene de los datos](#data-hygiene)
 - [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de identidad](#identity-service)
@@ -118,27 +117,6 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 -->
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
-
-## Higiene de los datos {#data-hygiene}
-
-Adobe Experience Platform proporciona un robusto conjunto de herramientas para administrar operaciones de datos grandes y complicadas con el fin de orquestar las experiencias de los consumidores. A medida que los datos se incorporan al sistema a lo largo del tiempo, cada vez es más importante administrar los almacenes de datos para que se utilicen como se espera, se actualicen cuando sea necesario corregir los datos incorrectos y se eliminen cuando las políticas organizativas lo consideren necesario.
-
-Las funciones de higiene de datos de Adobe Experience Platform le permiten limpiar sus datos mediante la programación de caducidades automatizadas de conjuntos de datos y la eliminación programada de datos de consumidores por identidad.
-
->[!IMPORTANT]
->
->Las funciones de higiene de datos solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield.
-
-**Funciones nuevas o actualizadas**
-
-| Función | Descripción |
-| --- | --- |
-| Flujos de trabajo de la interfaz de usuario actualizados | Los flujos de trabajo para [programación de caducidades del conjunto de datos](../../hygiene/ui/dataset-expiration.md) y [eliminación de datos de consumidores](../../hygiene/ui/delete-consumer.md) se han optimizado en la interfaz de usuario. |
-| Punto final de la API de cuota | Ahora puede recuperar la información de cuota para los procesos de higiene de datos de su organización llamando a la función [`/quota` extremo](../../hygiene/api/quota.md). |
-
-{style=&quot;table-layout:auto&quot;}
-
-Para obtener más información sobre las funcionalidades de higiene de datos de Platform, consulte la [información general sobre higiene de datos](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
