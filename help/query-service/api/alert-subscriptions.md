@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;alerta;
 title: Punto final de la API de suscripciones de alertas
 description: Esta guía proporciona ejemplos de solicitudes HTTP y respuestas para las distintas llamadas de API que puede realizar al extremo de suscripciones de alerta con la API del servicio de consulta.
-source-git-commit: bd841244fcb7d63af9c3383335307647b93499ce
+source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%
@@ -301,7 +301,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Respuesta**
 
-Una respuesta correcta devuelve un estado de HTML de 200 y todas las alertas suscritas. Esto incluye el ID de alerta, el tipo de alerta, los ID de correo electrónico registrados por el Adobe del suscriptor y su canal de notificación preferido.
+Una respuesta correcta devuelve un estado HTTP de 200 y todas las alertas suscritas. Esto incluye el ID de alerta, el tipo de alerta, los ID de correo electrónico registrados por el Adobe del suscriptor y su canal de notificación preferido.
 
 ```json
 {

@@ -5,9 +5,9 @@ title: Guía de credenciales del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1186'
 ht-degree: 1%
 
 ---
@@ -109,6 +109,7 @@ En la tabla siguiente se describen los parámetros que suelen ser necesarios par
 >[!NOTE]
 >
 >Cuando se conecta a un host con credenciales que no caducan, sigue siendo necesario utilizar todos los parámetros enumerados en la variable [!UICONTROL CREDENCIALES DE CADUCIDAD] excepto la contraseña y el nombre de usuario.
+>El formato para introducir el nombre de usuario y la contraseña utiliza valores separados por dos puntos, como se muestra en este ejemplo `username:{your_username}` y `password:{password_string}`.
 
 | Parámetro | Descripción |
 |---|---|
