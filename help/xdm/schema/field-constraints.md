@@ -5,9 +5,9 @@ title: Restricciones de tipo de campo XDM
 topic-legacy: overview
 description: Una referencia para restricciones de tipo de campo en Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '663'
 ht-degree: 6%
 
 ---
@@ -126,11 +126,11 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 * [Scala, .NET y CosmosDB](#scala)
 * [MongoDB, Aerospike y Protobuf 2](#mongo)
 
->[!IMPORTANT]
+>[!NOTE]
 >
 >Entre los tipos XDM estándar que se enumeran en las tablas siguientes, la variable [!UICONTROL Mapa] también se incluye. Los mapas se utilizan en esquemas estándar cuando los datos se representan como claves que se asignan a determinados valores o cuando las claves no se pueden incluir razonablemente en un esquema estático y deben tratarse como valores de datos.
 >
->Los campos de tipo Mapa están reservados para el uso del esquema del sector y del proveedor y, por lo tanto, no se pueden utilizar en los recursos personalizados que defina. La inclusión del tipo de mapa en las tablas siguientes solo pretende ayudarle a determinar cómo asignar los datos existentes a XDM si actualmente se almacenan en cualquiera de los formatos que se enumeran a continuación.
+>Muchos componentes XDM estándar utilizan tipos de asignación y también puede [definir campos de asignación personalizados](../tutorials/custom-fields-api.md#maps) si lo desea. La inclusión del tipo de mapa en las tablas siguientes pretende ayudarle a determinar cómo asignar los datos existentes a XDM si actualmente se almacenan en cualquiera de los formatos que se enumeran a continuación.
 
 ### Parquet, Spark SQL y Java {#parquet}
 
@@ -144,7 +144,7 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 | [!UICONTROL Byte] | Tipo: `INT32`<br>Anotación: `INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL Fecha] | Tipo: `INT32`<br>Anotación: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Tipo: `INT64`<br>Anotación: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL Boolean] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Booleana] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL Mapa] | `MAP`-grupo anotado<br><br>(`<key-type>` debe `STRING`) | `MapType`<br><br>(`keyType` debe `StringType`) | `java.util.Map` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -161,7 +161,7 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
 | [!UICONTROL Fecha] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL Booleano] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Booleana] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Mapa] | `Map` | (N/A) | `object` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -178,7 +178,7 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
 | [!UICONTROL Fecha] | `date` | `Integer`<br>(milisegundos de Unix) | `int64`<br>(milisegundos de Unix) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(milisegundos de Unix) | `int64`<br>(milisegundos de Unix) |
-| [!UICONTROL Booleano] | `bool` | `Integer`<br>(0/1 binario) | `bool` |
+| [!UICONTROL Booleana] | `bool` | `Integer`<br>(0/1 binario) | `bool` |
 | [!UICONTROL Mapa] | `object` | `map` | `map<key_type, value_type>` |
 
 {style=&quot;table-layout:auto&quot;}
