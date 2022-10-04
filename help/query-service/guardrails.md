@@ -3,14 +3,14 @@ keywords: Experience Platform;consulta;servicio de consulta;solución de problem
 title: Protecciones para el servicio de consulta
 description: Este documento proporciona información sobre los límites de uso de los datos del servicio de consulta para ayudarle a optimizar el uso de la consulta.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: d874fed681449c6f5114196cface157c8c406d69
+source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '764'
 ht-degree: 4%
 
 ---
 
-# Protecciones para los datos del servicio de consulta
+# Protecciones para el servicio de consulta
 
 Las protecciones son umbrales que proporcionan directrices para el uso de los datos y del sistema, la optimización del rendimiento y la prevención de errores o resultados inesperados en Adobe Experience Platform.
 
@@ -23,10 +23,6 @@ Antes de continuar con este documento, debe tener una buena comprensión de las 
 * **Consultas ad hoc**: Para ejecutar `SELECT` consultas para explorar, experimentar y validar datos donde los resultados de las consultas **no se almacenan** en el lago de datos.
 
 * **Consultas por lotes**: Para ejecutar `INSERT TABLE AS SELECT` y `CREATE TABLE AS SELECT` consultas para limpiar, dar forma, manipular y enriquecer datos. Los resultados de estas consultas **se almacenan** en el lago de datos. La métrica para medir el consumo de esta funcionalidad es horas de cálculo.
-
->[!IMPORTANT]
->
->Para garantizar que cada consulta de un panel de perspectivas de Real-time Customer Data Platform tenga recursos suficientes para ejecutarse de forma eficaz, la API rastrea el uso de los recursos asignando espacios de concurrencia a cada consulta. El sistema puede procesar hasta cuatro consultas simultáneas y, por lo tanto, hay cuatro ranuras de consulta simultáneas disponibles en un momento determinado. Las consultas se ponen en cola en función de las ranuras de concurrencia y después esperan en la cola hasta que haya suficientes ranuras de concurrencia disponibles.
 
 La siguiente ilustración resume cómo las capacidades del servicio de consulta están actualmente empaquetadas y autorizadas:
 
@@ -71,6 +67,8 @@ Las tablas siguientes proporcionan los límites de protección recomendados y la
 | Resultados devueltos mediante | Conjunto de datos | N/D | Esto define cómo se ponen los resultados a disposición de los usuarios. |
 
 {style=&quot;table-layout:auto&quot;}
+
+Para garantizar que cada consulta de un panel de perspectivas de Real-time Customer Data Platform tenga recursos suficientes para ejecutarse de forma eficaz, la API rastrea el uso de los recursos asignando espacios de concurrencia a cada consulta. El sistema puede procesar hasta cuatro consultas simultáneas y, por lo tanto, hay cuatro ranuras de consulta simultáneas disponibles en un momento determinado. Las consultas se ponen en cola en función de las ranuras de concurrencia y después esperan en la cola hasta que haya suficientes ranuras de concurrencia disponibles.
 
 ## Pasos siguientes
 
