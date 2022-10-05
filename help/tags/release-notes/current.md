@@ -2,10 +2,10 @@
 title: Notas de la versión de etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
+source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 9%
+source-wordcount: '263'
+ht-degree: 8%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 9%
 
 * **Integración de la navegación izquierda de Adobe Experience Platform**: Todas las funciones que anteriormente eran exclusivas de la interfaz de usuario de recopilación de datos (incluidas las etiquetas y el reenvío de eventos) ahora están disponibles en la sección de navegación izquierda de la interfaz de usuario del Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre las IU al trabajar con capacidades de recopilación de datos en Platform.
 * **Atribución de usuario en etiquetas y reenvío de eventos**: Al enumerar las propiedades disponibles en las etiquetas y el reenvío de eventos, cada propiedad incluida ahora muestra cuándo se actualizó por última vez y quién lo hizo.
+* **[[!DNL Snap Conversions API] Extensión](https://exchange.adobe.com/apps/ec/108550) para el reenvío de eventos**: Ahora puede enviar datos a [!DNL Snapchat Conversions API] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Para obtener más información sobre cómo autenticar y utilizar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 27 de julio de 2022
 
