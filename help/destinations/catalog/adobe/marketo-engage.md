@@ -2,9 +2,9 @@
 title: Destino del Marketo Engage
 description: Marketo Engage es la única solución integral de administración de experiencias del cliente (CXM) para marketing, publicidad, análisis y comercio. Permite automatizar y administrar actividades desde la administración de posibles clientes de CRM y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
+source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -75,9 +75,15 @@ Para obtener instrucciones detalladas sobre cómo configurar el destino y activa
 
 El siguiente vídeo también muestra los pasos para configurar un destino de Marketo y activar segmentos.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte la guía que aparece más arriba.
+>El vídeo no refleja completamente la capacidad actual. Para obtener la información más actualizada, consulte la guía que aparece más arriba. Las siguientes partes del vídeo están obsoletas:
+> 
+>* La tarjeta de destino que debe usar en la interfaz de usuario del Experience Platform es **[!UICONTROL Marketo V2]**.
+>* El vídeo no muestra el nuevo **[!UICONTROL Creación de personas]** en el flujo de trabajo connect to destination .
+>* Las dos limitaciones indicadas en el vídeo ya no se aplican. Ahora puede asignar muchos otros campos de atributos de perfil además de la información de pertenencia a segmentos que se admitía en el momento en que se grabó el vídeo. También puede exportar miembros del segmento a Marketo que aún no existan en sus listas estáticas de Marketo y que se añadirán a las listas.
+>* En el **[!UICONTROL Programar paso del segmento]** del flujo de trabajo de activación, en Marketo V1, era necesario añadir manualmente un **[!UICONTROL ID de asignación]** para exportar datos correctamente a Marketo. Este paso manual ya no es necesario en Marketo V2.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
