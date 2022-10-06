@@ -5,7 +5,7 @@ title: Definir campos de enumeración y valores sugeridos en la interfaz de usua
 description: Obtenga información sobre cómo definir enumeraciones y valores sugeridos para campos de cadena en la interfaz de usuario del Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
+source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
 >title="enumeraciones y valores sugeridos"
->abstract="Un **Enum** restringe un campo de cadena para que solo permita la ingesta de datos que coincidan con un conjunto predefinido de valores. A cada restricción se le puede asignar una **Nombre para mostrar** que rellena listas desplegables de atributos en la interfaz de usuario de segmentación. **Valores sugeridos** para un campo no restrinja la ingesta y solo determine los nombres para mostrar que se muestran en Segmentación. Si tiene varios esquemas que comparten un campo que pertenece a una clase o grupo de campos común y define diferentes enumeraciones o valores sugeridos para ese campo entre cada esquema, esos valores se combinan y se añaden al esquema de unión."
+>abstract="Un **Enum** restringe un campo de cadena para que solo permita la ingesta de datos que coincidan con un conjunto predefinido de valores. A cada restricción de enumeración se le puede asignar una **Nombre para mostrar** que rellena listas desplegables de atributos en la interfaz de usuario de segmentación. **Valores sugeridos** para un campo no restrinja la ingesta y solo determine los nombres para mostrar que se muestran en Segmentación. Si tiene varios esquemas que comparten un campo que pertenece a una clase o grupo de campos común y define diferentes enumeraciones o valores sugeridos para ese campo entre cada esquema, esos valores se combinan y se añaden al esquema de unión."
 
 En Experience Data Model (XDM), se puede dar a un campo de cadena un conjunto predefinido de valores aceptados o sugeridos para controlar mejor qué valores se introducen en ese campo o cómo se comportarán en la segmentación.
 
