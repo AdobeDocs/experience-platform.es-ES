@@ -1,56 +1,61 @@
 ---
 keywords: Experience Platform;inicio;temas populares;flujo de datos;flujo de datos
-solution: Experience Platform
-title: Configurar un flujo de datos para un conector por lotes de almacenamiento en la nube en la interfaz de usuario
-topic-legacy: overview
-type: Tutorial
-description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
+title: Configurar un flujo de datos para introducir datos por lotes desde una fuente de almacenamiento en la nube en la interfaz de usuario
+description: Este tutorial proporciona pasos sobre cómo configurar un nuevo flujo de datos para la ingesta de datos por lotes desde un origen de almacenamiento en la nube en la interfaz de usuario
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
+source-git-commit: 0910de76d817eea7c7c3cb2b988d81268b3e5812
 workflow-type: tm+mt
-source-wordcount: '2083'
-ht-degree: 0%
+source-wordcount: '1795'
+ht-degree: 1%
 
 ---
 
-# Configurar un flujo de datos para una conexión por lotes de almacenamiento en la nube en la interfaz de usuario
+# Configure un flujo de datos para introducir datos por lotes desde un origen de almacenamiento en la nube en la interfaz de usuario
 
-Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un [!DNL Platform] conjunto de datos. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
+Este tutorial proporciona pasos sobre cómo configurar un flujo de datos para traer datos por lotes desde el origen de almacenamiento en la nube a Adobe Experience Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+>[!NOTE]
+>
+>Para crear un flujo de datos con el fin de obtener datos por lotes de un almacenamiento en la nube, ya debe tener acceso a un origen de almacenamiento en la nube autenticado. Si no tiene acceso, vaya a la [información general sobre fuentes](../../../../home.md#cloud-storage) para obtener una lista de los orígenes de almacenamiento en la nube con los que puede crear una cuenta.
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
+
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición del esquema](../../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Además, este tutorial requiere que tenga una cuenta de almacenamiento en la nube establecida. Puede encontrar una lista de tutoriales para crear distintas cuentas de almacenamiento en la nube en la interfaz de usuario de [información general sobre conectores de origen](../../../../home.md).
-
 ### Formatos de archivo compatibles
 
-[!DNL Experience Platform] admite los siguientes formatos de archivo que se van a introducir desde almacenes externos:
+Los orígenes de almacenamiento en la nube para datos por lotes admiten los siguientes formatos de archivo para la ingesta:
 
 * Valores separados por delimitadores (DSV): Cualquier valor de un solo carácter puede utilizarse como delimitador para archivos de datos con formato DSV.
 * [!DNL JavaScript Object Notation] (JSON): Los archivos de datos con formato JSON deben ser compatibles con XDM.
 * [!DNL Apache Parquet]: Los archivos de datos con formato de parqué deben ser compatibles con XDM.
 * Archivos comprimidos: Los archivos JSON y delimitados se pueden comprimir como: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`y `tar`.
 
-## Seleccionar datos
+## Adición de datos
 
-Después de crear su cuenta de almacenamiento en la nube, la variable **[!UICONTROL Seleccionar datos]** aparece, proporcionando una interfaz para explorar la jerarquía de archivos de almacenamiento en la nube.
+Después de crear su cuenta de almacenamiento en la nube, la variable **[!UICONTROL Añadir datos]** aparece, proporcionando una interfaz para explorar la jerarquía de archivos de almacenamiento en la nube y seleccionar la carpeta o el archivo específico que desea traer a Platform.
 
-* La parte izquierda de la interfaz es un explorador de directorios, que muestra sus archivos y directorios de almacenamiento en la nube.
-* La parte derecha de la interfaz permite previsualizar hasta 100 filas de datos de un archivo compatible.
+* La parte izquierda de la interfaz es un explorador de directorios, que muestra la jerarquía de archivos de almacenamiento en la nube.
+* La parte derecha de la interfaz permite previsualizar hasta 100 filas de datos de una carpeta o archivo compatible.
 
-![interfaz](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
+![](../../../../images/tutorials/dataflow/cloud-batch/select-data.png)
 
-La selección de una carpeta de la lista permite recorrer la jerarquía de carpetas en carpetas más profundas. Puede seleccionar una sola carpeta para introducir todos los archivos de la carpeta de forma recursiva. Al ingerir una carpeta completa, debe asegurarse de que todos los archivos de la carpeta compartan el mismo esquema.
+Seleccione la carpeta raíz para acceder a la jerarquía de carpetas. Desde aquí, puede seleccionar una sola carpeta para introducir todos los archivos de la carpeta de forma recursiva. Al ingerir una carpeta completa, debe asegurarse de que todos los archivos de esa carpeta compartan el mismo formato de datos y esquema.
 
-Una vez que haya seleccionado un archivo o carpeta compatible, seleccione el formato de datos correspondiente en la [!UICONTROL Seleccionar formato de datos] menú desplegable.
+![](../../../../images/tutorials/dataflow/cloud-batch/folder-directory.png)
 
-La tabla siguiente muestra el formato de datos adecuado para los tipos de archivo admitidos:
+Una vez seleccionada una carpeta, la interfaz correcta se actualiza a una previsualización del contenido y la estructura del primer archivo de la carpeta seleccionada.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/select-folder.png)
+
+Durante este paso, puede realizar varias configuraciones en los datos antes de continuar. Primero, seleccione **[!UICONTROL Formato de datos]** y, a continuación, seleccione el formato de datos adecuado para el archivo en el panel desplegable que aparece.
+
+La tabla siguiente muestra los formatos de datos adecuados para los tipos de archivo admitidos:
 
 | Tipo de archivo | Formato de datos |
 | --- | --- |
@@ -58,144 +63,110 @@ La tabla siguiente muestra el formato de datos adecuado para los tipos de archiv
 | JSON | [!UICONTROL JSON] |
 | Parqué | [!UICONTROL Parqué XDM] |
 
-Select **[!UICONTROL JSON]** y espere unos segundos para que se complete la interfaz de vista previa.
+![](../../../../images/tutorials/dataflow/cloud-batch/data-format.png)
 
-![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+### Seleccionar un delimitador de columna
 
->[!NOTE]
->
->A diferencia de los tipos de archivo delimitados y JSON, los archivos con formato de parquet no están disponibles para la vista previa.
+Después de configurar el formato de datos, puede establecer un delimitador de columna al introducir archivos delimitados. Seleccione el **[!UICONTROL Delimitador]** y, a continuación, seleccione un delimitador en el menú desplegable. El menú muestra las opciones más utilizadas para los delimitadores, incluida una coma (`,`), una pestaña (`\t`) y una barra vertical (`|`).
 
-La interfaz de vista previa permite inspeccionar el contenido y la estructura de un archivo. De forma predeterminada, la interfaz de vista previa muestra el primer archivo de la carpeta seleccionada.
+![](../../../../images/tutorials/dataflow/cloud-batch/delimiter.png)
 
-Para obtener una vista previa de un archivo diferente, seleccione el icono de vista previa junto al nombre del archivo que desea inspeccionar.
+Si prefiere usar un delimitador personalizado, seleccione **[!UICONTROL Personalizado]** e introduzca un delimitador de un solo carácter de su elección en la barra de entrada emergente.
 
-![default-preview](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
-
-Una vez que haya inspeccionado el contenido y la estructura de los archivos de la carpeta, seleccione **[!UICONTROL Siguiente]** para introducir todos los archivos de la carpeta de forma recursiva.
-
-![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
-
-Si prefiere seleccionar un archivo específico, seleccione el archivo que desea ingerir y, a continuación, seleccione **[!UICONTROL Siguiente]**.
-
-![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
-
-### Definir un delimitador personalizado para archivos delimitados
-
-Puede establecer un delimitador personalizado al introducir archivos delimitados. Seleccione el **[!UICONTROL Delimitador]** y, a continuación, seleccione un delimitador en el menú desplegable. El menú muestra las opciones más utilizadas para los delimitadores, incluida una coma (`,`), una pestaña (`\t`) y una barra vertical (`|`). Si prefiere usar un delimitador personalizado, seleccione **[!UICONTROL Personalizado]** e introduzca un delimitador de un solo carácter de su elección en la barra de entrada emergente.
-
-Una vez que haya seleccionado el formato de datos y haya definido el delimitador, seleccione **[!UICONTROL Siguiente]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
+![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
 ### Ingesta de archivos comprimidos
 
-Puede introducir archivos JSON comprimidos o delimitados especificando su tipo de compresión.
+También puede introducir archivos JSON comprimidos o delimitados especificando su tipo de compresión.
 
 En el [!UICONTROL Seleccionar datos] , seleccione un archivo comprimido para la ingesta y, a continuación, seleccione su tipo de archivo adecuado y si es compatible con XDM o no. A continuación, seleccione **[!UICONTROL Tipo de compresión]** y, a continuación, seleccione el tipo de archivo comprimido apropiado para los datos de origen.
 
-Con un tipo de archivo comprimido identificado, seleccione **[!UICONTROL Siguiente]** para continuar.
+![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/compressed-files.png)
+Para traer un archivo específico a Platform, seleccione una carpeta y, a continuación, seleccione el archivo que desea ingerir. Durante este paso, también puede obtener una vista previa del contenido de otros archivos de una carpeta determinada mediante el icono de vista previa situado junto al nombre de un archivo.
+
+Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/select-file.png)
+
+## Proporcionar detalles de flujo de datos
+
+La variable [!UICONTROL Detalles de flujo de datos] le permite seleccionar si desea utilizar un conjunto de datos existente o un nuevo conjunto de datos. Durante este proceso, también puede configurar los datos para que se introduzcan en Perfil y habilitar opciones como [!UICONTROL Diagnóstico de errores], [!UICONTROL Ingesta parcial]y [!UICONTROL Alertas].
+
+![](../../../../images/tutorials/dataflow/cloud-batch/dataflow-detail.png)
+
+### Usar un conjunto de datos existente
+
+Para introducir datos en un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]**. Puede recuperar un conjunto de datos existente mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable. Una vez que haya seleccionado un conjunto de datos, proporcione un nombre y una descripción para el flujo de datos.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/existing.png)
+
+### Usar un nuevo conjunto de datos
+
+Para introducir en un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** y, a continuación, proporcione un nombre de conjunto de datos de salida y una descripción opcional. A continuación, seleccione un esquema para asignarlo mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de esquemas existentes en el menú desplegable. Una vez que haya seleccionado un esquema, proporcione un nombre y una descripción para el flujo de datos.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/new.png)
+
+### Habilitar el diagnóstico de perfiles y errores
+
+A continuación, seleccione la **[!UICONTROL Conjunto de datos del perfil]** para habilitar el conjunto de datos para Perfil. Esto le permite crear una vista holística de los atributos y comportamientos de una entidad. Los datos de todos los conjuntos de datos habilitados para perfil se incluirán en Perfil y se aplicarán cambios cuando guarde el flujo de datos.
+
+[!UICONTROL Diagnóstico de errores] permite generar mensajes de error detallados para cualquier registro erróneo que se produzca en el flujo de datos, mientras que [!UICONTROL Ingesta parcial] le permite introducir datos que contengan errores, hasta un umbral determinado que defina manualmente. Consulte la [información general sobre la ingesta parcial de lotes](../../../../../ingestion/batch-ingestion/partial.md) para obtener más información.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/ingestion-configs.png)
+
+### Habilitar alertas
+
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de fuentes mediante la interfaz de usuario](../../alerts.md).
+
+Cuando haya terminado de proporcionar detalles al flujo de datos, seleccione **[!UICONTROL Siguiente]**.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/alerts.png)
 
 ## Asignación de campos de datos a un esquema XDM
 
-La variable **[!UICONTROL Asignación]** aparece, proporcionando una interfaz interactiva para asignar los datos de origen a un [!DNL Platform] conjunto de datos. Los archivos de origen formateados en Parquet deben ser compatibles con XDM y no requieren que configure manualmente la asignación, mientras que los archivos CSV requieren que configure explícitamente la asignación, pero permiten seleccionar qué campos de datos de origen asignar. Los archivos JSON, si se marcan como quejas de XDM, no requieren configuración manual. Sin embargo, si no está marcado como compatible con XDM, necesitará que configure explícitamente la asignación.
+La variable [!UICONTROL Asignación] aparece, proporcionando una interfaz para asignar los campos de origen del esquema de origen a los campos XDM de destino adecuados en el esquema de destino.
 
-Elija un conjunto de datos para los datos entrantes en los que se van a introducir. Puede utilizar un conjunto de datos existente o crear uno nuevo.
+Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para ver los pasos completos sobre el uso de la interfaz del asignador y los campos calculados, consulte la [Guía de la interfaz de usuario de preparación de datos](../../../../../data-prep/ui/mapping.md).
 
-**Usar un conjunto de datos existente**
+Una vez asignados correctamente los datos de origen, seleccione **[!UICONTROL Siguiente]**.
 
-Para introducir datos en un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]** y, a continuación, seleccione el icono del conjunto de datos.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
-
-La variable **[!UICONTROL Seleccionar conjunto de datos]** se abre. Busque el conjunto de datos que desea utilizar, selecciónelo y haga clic en **[!UICONTROL Continuar]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
-
-**Usar un nuevo conjunto de datos**
-
-Para introducir datos en un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** e introduzca un nombre y una descripción para el conjunto de datos en los campos proporcionados. Para añadir un esquema, puede introducir un nombre de esquema existente en la **[!UICONTROL Seleccionar esquema]** para abrir el Navegador. También puede seleccionar el **[!UICONTROL Búsqueda avanzada de esquema]** para buscar un esquema adecuado.
-
-Durante este paso, puede habilitar su conjunto de datos para [!DNL Real-time Customer Profile] y crear una vista holística de los atributos y comportamientos de una entidad. Los datos de todos los conjuntos de datos habilitados se incluirán en [!DNL Profile] Los cambios y se aplican cuando guarda el flujo de datos.
-
-Alternar el **[!UICONTROL Conjunto de datos del perfil]** para habilitar el conjunto de datos de target [!DNL Profile].
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
-
-La variable **[!UICONTROL Seleccionar esquema]** se abre. Seleccione el esquema que desee aplicar al nuevo conjunto de datos y, a continuación, seleccione **[!UICONTROL Listo]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
-
-En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para ver los pasos completos sobre el uso de la interfaz del asignador y los campos calculados, consulte la [Guía de la interfaz de usuario de preparación de datos](../../../../../data-prep/ui/mapping.md).
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
-
-En el caso de los archivos JSON, además de asignar directamente los campos a otros campos, puede asignar directamente objetos a otros objetos y matrices a otras matrices. También puede obtener una vista previa y asignar tipos de datos complejos, como matrices en archivos JSON, mediante un conector de origen de almacenamiento en la nube.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
-
-Tenga en cuenta que no puede asignar entre distintos tipos. Por ejemplo, no se puede asignar un objeto a una matriz ni a un campo a un objeto.
-
->[!TIP]
->
->Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
-
-Select **[!UICONTROL Vista previa de datos]** para ver los resultados de asignación de hasta 100 filas de datos de ejemplo del conjunto de datos seleccionado.
-
-Durante la vista previa, la columna de identidad se prioriza como el primer campo, ya que es la información clave necesaria al validar los resultados de la asignación.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
-
-Una vez asignados los datos de origen, seleccione **[!UICONTROL Cerrar]**.
+![](../../../../images/tutorials/dataflow/cloud-batch/mapping.png)
 
 ## Programar ejecuciones de ingesta
 
-La variable **[!UICONTROL Programación]** , lo que le permite configurar una programación de ingesta para que ingrese automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. La siguiente tabla describe los diferentes campos configurables para la programación:
+>[!IMPORTANT]
+>
+>Se recomienda programar el flujo de datos para una ingesta única al usar la variable [Fuente de FTP](../../../../connectors/cloud-storage/ftp.md).
+
+La variable [!UICONTROL Programación] , lo que le permite configurar una programación de ingesta para que ingrese automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. De forma predeterminada, la programación está configurada en `Once`. Para ajustar la frecuencia de ingesta, seleccione **[!UICONTROL Frecuencia]** y, a continuación, seleccione una opción en el menú desplegable.
+
+>[!TIP]
+>
+>El intervalo y el relleno no son visibles durante una ingesta única.
+
+![programación](../../../../images/tutorials/dataflow/cloud-batch/scheduling.png)
+
+Si establece la frecuencia de ingesta en `Minute`, `Hour`, `Day`o `Week`, debe configurar un intervalo para establecer un intervalo de tiempo definido entre cada ingesta. Por ejemplo, una frecuencia de ingesta establecida en `Day` y un intervalo establecido en `15` significa que el flujo de datos está programado para la ingesta de datos cada 15 días.
+
+Durante este paso, también puede activar **relleno** y defina una columna para la ingesta incremental de datos. El relleno se utiliza para introducir datos históricos, mientras que la columna que defina para la ingesta incremental permite diferenciar nuevos datos de los datos existentes.
+
+Consulte la siguiente tabla para obtener más información sobre las configuraciones de programación.
 
 | Campo | Descripción |
 | --- | --- |
-| Frecuencia | Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`y `Week`. |
-| Intervalo | Un entero que define el intervalo para la frecuencia seleccionada. |
-| Hora de inicio | Marca de tiempo UTC que indica cuándo se configura la primera ingesta. |
-| Relleno | Un valor booleano que determina qué datos se introducen inicialmente. If **[!UICONTROL Relleno]** está activada, todos los archivos actuales de la ruta especificada se incorporarán durante la primera ingesta programada. If **[!UICONTROL Relleno]** está desactivado, solo se introducen los archivos que se cargan entre la primera ejecución de la ingesta y la hora de inicio. Los archivos cargados antes de la hora de inicio no se incorporarán. |
-
-Los flujos de datos están diseñados para introducir datos automáticamente y de forma programada. Comience por seleccionar la frecuencia de ingesta. A continuación, configure el intervalo para designar el periodo entre dos ejecuciones de flujo. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15.
-
-Para definir la hora de inicio de la ingesta, ajuste la fecha y la hora que se muestran en el cuadro de hora de inicio. También puede seleccionar el icono de calendario para editar el valor de la hora de inicio. La hora de inicio debe ser buena o igual a la hora actual en UTC.
-
-Proporcione valores para la programación y seleccione **[!UICONTROL Siguiente]**.
+| Frecuencia | Frecuencia con la que se produce una ingesta. Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`y `Week`. |
+| Intervalo | Un entero que define el intervalo para la frecuencia seleccionada. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15. |
+| Hora de inicio | Marca de tiempo UTC que indica cuándo se configura la primera ingesta. La hora de inicio debe ser buena o igual a la hora UTC actual. |
+| Relleno | Un valor booleano que determina qué datos se introducen inicialmente. Si el relleno está habilitado, todos los archivos actuales de la ruta especificada se incorporarán durante la primera ingesta programada. Si el relleno está desactivado, solo se incorporarán los archivos que se cargan entre la primera ejecución de la ingesta y la hora de inicio. Los archivos cargados antes de la hora de inicio no se incorporarán. |
 
 >[!NOTE]
 >
 >Para la ingesta por lotes, cada flujo de datos resultante selecciona los archivos que se van a ingerir de su origen en función de sus **última modificación** marca de tiempo. Esto significa que los flujos de datos por lotes seleccionan los archivos del origen que son nuevos o que se han modificado desde la última ejecución del flujo. Además, debe asegurarse de que haya un lapso de tiempo suficiente entre la carga de archivos y la ejecución de un flujo programado, ya que es posible que los archivos que no se carguen completamente en la cuenta de almacenamiento en la nube antes del tiempo de ejecución del flujo programado no se recojan para su incorporación.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
+Cuando termine de configurar la programación de ingesta, seleccione **[!UICONTROL Siguiente]**.
 
-### Configurar un flujo de datos de ingesta único
-
-Para configurar la ingesta única, seleccione la flecha desplegable de frecuencia y seleccione **[!UICONTROL Una vez]**. Puede seguir realizando modificaciones en un conjunto de flujos de datos para una ingesta de frecuencia única, siempre y cuando la hora de inicio permanezca en el futuro. Una vez que ha pasado la hora de inicio, ya no se puede editar el valor de frecuencia de una sola vez. **[!UICONTROL Intervalo]** y **[!UICONTROL Relleno]** no están visibles al configurar un flujo de datos de ingesta único.
-
->[!IMPORTANT]
->
->Se recomienda programar el flujo de datos para una ingesta única al usar la variable [Conector FTP](../../../../connectors/cloud-storage/ftp.md).
-
-Una vez que haya proporcionado los valores adecuados a la programación, seleccione **[!UICONTROL Siguiente]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
-
-## Proporcionar detalles de flujo de datos
-
-La variable **[!UICONTROL Detalles de flujo de datos]** aparece, lo que le permite asignar un nombre y describir brevemente el nuevo flujo de datos.
-
-Durante este proceso, también puede habilitar **[!UICONTROL Ingesta parcial]** y **[!UICONTROL Diagnóstico de errores]**. Habilitación **[!UICONTROL Ingesta parcial]** proporciona la capacidad de ingerir datos que contengan errores, hasta un umbral determinado que se pueda definir. Habilitación **[!UICONTROL Diagnóstico de errores]** proporcionará detalles sobre cualquier dato incorrecto que se haya enviado por lotes por separado. Para obtener más información, consulte la [información general sobre la ingesta parcial de lotes](../../../../../ingestion/batch-ingestion/partial.md).
-
-Proporcione valores para el flujo de datos y seleccione **[!UICONTROL Siguiente]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
+![](../../../../images/tutorials/dataflow/cloud-batch/scheduling-configs.png)
 
 ## Revise el flujo de datos
 
@@ -207,15 +178,8 @@ La variable **[!UICONTROL Consulte]** , lo que le permite revisar el nuevo flujo
 
 Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finalizar]** y permitir que se cree un flujo de datos.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
+![](../../../../images/tutorials/dataflow/cloud-batch/review.png)
 
-## Monitorizar el flujo de datos
-
-Una vez creado el flujo de datos, puede monitorizar los datos que se incorporan a través de él para ver información sobre las tasas de ingesta, el éxito y los errores. Para obtener más información sobre cómo monitorizar el flujo de datos, consulte el tutorial en [supervisión de cuentas y flujos de datos en la interfaz de usuario](../../monitor.md).
-
-## Eliminar el flujo de datos
-
-Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente empleando la función **[!UICONTROL Eliminar]** en la función **[!UICONTROL Flujos de datos]** espacio de trabajo. Para obtener más información sobre cómo eliminar flujos de datos, consulte el tutorial sobre [eliminación de flujos de datos en la interfaz de usuario](../../delete.md).
 
 ## Pasos siguientes
 
@@ -234,18 +198,14 @@ Al seguir este tutorial, ha creado correctamente un flujo de datos para incorpor
 
 Las secciones siguientes proporcionan información adicional para trabajar con conectores de origen.
 
-### Desactivación de un flujo de datos
+## Monitorizar el flujo de datos
 
-Cuando se crea un flujo de datos, este se activa inmediatamente e ingresa los datos según la programación que se le haya dado. Puede deshabilitar un flujo de datos activo en cualquier momento siguiendo las instrucciones que se indican a continuación.
+Una vez creado el flujo de datos, puede monitorizar los datos que se incorporan a través de él para ver información sobre las tasas de ingesta, el éxito y los errores. Para obtener más información sobre cómo monitorizar el flujo de datos, visite el tutorial en [supervisión de cuentas y flujos de datos en la interfaz de usuario](../../monitor.md).
 
-Dentro de **[!UICONTROL Fuentes]** espacio de trabajo, haga clic en **[!UICONTROL Examinar]** pestaña . A continuación, haga clic en el nombre de la cuenta asociada al flujo de datos activo que desea desactivar.
+## Actualizar el flujo de datos
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
+Para actualizar las configuraciones de los flujos de datos, programar, asignar e información general, visite el tutorial en [actualización de flujos de datos de fuentes en la interfaz de usuario](../../update-dataflows.md)
 
-La variable **[!UICONTROL Actividad de origen]** se abre. Seleccione el flujo de datos activo de la lista para abrir su **[!UICONTROL Propiedades]** a la derecha de la pantalla, que contiene un **[!UICONTROL Habilitado]** botón de alternancia. Haga clic en el botón de alternancia para deshabilitar el flujo de datos. Se puede utilizar la misma opción para volver a habilitar un flujo de datos una vez desactivado.
+## Eliminar el flujo de datos
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/disable-source.png)
-
-### Activar datos de entrada para [!DNL Profile] población
-
-Los datos de entrada del conector de origen se pueden utilizar para enriquecer y rellenar el [!DNL Real-time Customer Profile] datos. Para obtener más información sobre cómo rellenar la variable [!DNL Real-time Customer Profile] datos, consulte el tutorial en [Población del perfil](../../profile.md).
+Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente empleando la función **[!UICONTROL Eliminar]** en la función **[!UICONTROL Flujos de datos]** espacio de trabajo. Para obtener más información sobre cómo eliminar flujos de datos, visite el tutorial en [eliminación de flujos de datos en la interfaz de usuario](../../delete.md).
