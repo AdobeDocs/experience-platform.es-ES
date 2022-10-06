@@ -2,9 +2,9 @@
 keywords: móvil;destinos de participación móvil;LINE;destino de participación móvil LINE
 title: Conexión LINE
 description: El destino LINE le permite añadir perfiles al segmento de plataforma y ofrecer experiencias personalizadas a los usuarios conectados.
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: b15ad6339cb342d754e3a78e0d68b232a94a835e
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,10 @@ Tenga en cuenta los siguientes requisitos previos en [!DNL LINE], para exportar 
 
 #### Debe tener un [!DNL LINE] account {#prerequisites-account}
 
-Vaya a la [!DNL LINE] [signup](https://account.line.biz/signup) para registrar y crear una cuenta, si todavía no la tiene.
+Debe registrarse y crear un [!DNL LINE] cuenta, si todavía no tiene una. Para crear una cuenta:
+
+1. Vaya a la [!DNL LINE] [inicio de sesión en la cuenta](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) página
+2. Select **[!UICONTROL Crear una cuenta]**.
 
 #### Recopile el [!DNL LINE channel access token (long-lived)] de la variable [!DNL LINE] consola de desarrollador {#gather-credentials}
 
