@@ -3,9 +3,9 @@ keywords: Experience Platform;solución de problemas;protecciones;directrices;
 title: Protecciones para la ingesta de datos
 description: Este documento proporciona instrucciones sobre protecciones para la ingesta de datos en Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 4fd26078017ae13e22ebb02f98335094c8e0581b
+source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '546'
 ht-degree: 1%
 
 ---
@@ -25,6 +25,7 @@ La tabla siguiente describe las barreras que se deben tener en cuenta al usar la
 | Ingesta de lago de datos mediante la API de ingesta de lotes | <ul><li>Puede ingerir hasta 20 GB de datos por hora en el lago de datos mediante la API de ingesta por lotes.</li><li>El número máximo de archivos por lote es de 1500.</li><li>El tamaño máximo del lote es de 100 GB.</li><li>El número máximo de propiedades o campos por fila es 10 000.</li><li>El número máximo de lotes por minuto, por usuario, es de 138.</li></ul> |
 | Ingesta de lago de datos mediante fuentes por lotes | <ul><li>Puede ingerir hasta 200 GB de datos por hora en el lago de datos mediante fuentes de ingesta por lotes como [!DNL Azure Blob], [!DNL Amazon S3]y [!DNL SFTP].</li><li>Un tamaño de lote debe estar entre 256 MB y 100 GB.</li><li>El número máximo de archivos por lote es de 1500.</li></ul> | Consulte la [información general sobre fuentes](../sources/home.md) para un catálogo de fuentes, puede utilizar para la ingesta de datos. |
 | Ingesta por lotes al perfil | <ul><li>Puede ingerir hasta 120 GB de datos por hora.</li><li>El tamaño máximo de una clase de registro es de 100 KB (suave).</li><li>El tamaño máximo de una clase ExperienceEvent es de 10 KB (suave).</li><li>El tamaño máximo de un registro único es de 1 MB.</li></ul> |
+| Número de lotes de Perfil o ExperienceEvent ingestados por día | **El número máximo de lotes de Perfil o ExperienceEvent ingestados por día es de 90.** Esto significa que el total combinado de lotes de Perfil y ExperienceEvent ingestados cada día no puede superar los 90. La ingesta de lotes adicionales afectará el rendimiento del sistema. | Este es un límite suave. Es posible ir más allá de un límite suave, sin embargo, los límites blandos proporcionan una guía recomendada para el rendimiento del sistema. |
 
 ## Protecciones para la transmisión por secuencias
 
