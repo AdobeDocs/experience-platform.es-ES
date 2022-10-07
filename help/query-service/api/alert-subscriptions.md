@@ -2,7 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;alerta;
 title: Punto final de la API de suscripciones de alertas
 description: Esta guía proporciona ejemplos de solicitudes HTTP y respuestas para las distintas llamadas de API que puede realizar al extremo de suscripciones de alerta con la API del servicio de consulta.
-source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
+hide: true
+hidefromtoc: true
+source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%

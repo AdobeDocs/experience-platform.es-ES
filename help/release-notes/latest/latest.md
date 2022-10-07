@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
-source-wordcount: '2933'
-ht-degree: 5%
+source-wordcount: '2925'
+ht-degree: 6%
 
 ---
 
@@ -41,7 +41,7 @@ Mediante el control de acceso basado en atributos, los administradores de su org
 | Función | Descripción |
 | --- | --- |
 | Control de acceso basado en atributos | El control de acceso basado en atributos le permite etiquetar campos de esquema y segmentos del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos de uso de datos o de organización. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir políticas de acceso que cubran los campos y segmentos del esquema XDM para administrar mejor el acceso dado a los usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Para obtener más información, consulte la [información general sobre el control de acceso basado en atributos](../../access-control/abac/overview.md). |
-| Permisos | Los permisos son el área del Experience Cloud en la que los administradores pueden definir funciones de usuario y políticas de acceso para administrar los permisos de acceso a funciones y objetos dentro de una aplicación de producto. Mediante Permisos, puede crear y administrar funciones, asignar los permisos de recursos deseados para estas funciones y crear políticas para aprovechar las etiquetas y definir qué funciones de usuario tienen acceso a recursos de Platform específicos. Los permisos también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de la interfaz de usuario de permisos](../../access-control/abac/ui/browse.md). |
+| Permisos | Los permisos son el área del Experience Cloud en la que los administradores pueden definir funciones de usuario y políticas de acceso para administrar los permisos de acceso a funciones y objetos dentro de una aplicación de producto. Mediante Permisos, puede crear y administrar funciones, asignar los permisos de recursos deseados para estas funciones y crear políticas para aprovechar las etiquetas y definir qué funciones de usuario tienen acceso a recursos de Platform específicos. Los permisos también le permiten administrar las etiquetas, las zonas protegidas y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de la interfaz de usuario de permisos](../../access-control/abac/ui/browse.md). |
 
 Para obtener más información sobre el control de acceso basado en atributos, consulte la [información general sobre el control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo del control de acceso basado en atributos, lea la [guía de extremo a extremo de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
 
@@ -215,10 +215,12 @@ El servicio de consultas permite utilizar SQL estándar para consultar datos en 
 
 | Función | Descripción |
 | --- | --- |
-| API de suscripción de alerta | El servicio de consulta de Adobe Experience Platform le permite suscribirse a las alertas para consultas ad hoc y programadas. Las alertas se pueden recibir por correo electrónico, en la interfaz de usuario de Platform o en ambos. Actualmente, las alertas de consulta solo se pueden suscribir a mediante el uso de [API del servicio de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). Consulte la [documentación de alertas de consulta](../../query-service/api/alert-subscriptions.md) para obtener más información. |
+| API de suscripción de alerta | El servicio de consulta de Adobe Experience Platform le permite suscribirse a las alertas para consultas ad hoc y programadas. Las alertas se pueden recibir por correo electrónico, en la interfaz de usuario de Platform o en ambos. Actualmente, las alertas de consulta solo se pueden suscribir a mediante el uso de [API del servicio de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
 | Ejemplos de conjuntos de datos | Los ejemplos de conjuntos de datos del servicio de consulta le permiten realizar consultas exploratorias sobre grandes datos con un tiempo de procesamiento considerablemente reducido al coste de la precisión de la consulta. Consulte la [guía de muestras de conjuntos de datos](../../query-service/sql/dataset-samples.md) para obtener más información. |
 
 Para obtener más información, consulte [!DNL Query Service], consulte la [[!DNL Query Service] información general](../../query-service/home.md).
+
+<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
 
 ## Fuentes {#sources}
 
