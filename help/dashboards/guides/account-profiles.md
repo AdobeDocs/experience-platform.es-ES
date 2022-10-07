@@ -2,9 +2,9 @@
 title: Guía del tablero Perfiles de la cuenta
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los perfiles de cuenta B2B de su organización.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,8 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 
 * [Total de cuentas por sector](#total-accounts-by-industry)
 * [Perfiles de cuenta agregados](#account-profiles-added)
+* [Distribución de puntuación predictiva](#predictive-scoring-distribution)
+* [Puntuación predictiva factores de mayor influencia](#predictive-scoring-top-influential-factors)
 
 ### Total de cuentas por sector {#total-accounts-by-industry}
 
@@ -82,6 +84,28 @@ Esta utilidad utiliza un gráfico de barras con códigos de color para ilustrar 
 
 ![Se ha agregado la utilidad Perfiles de cuenta .](../images/account-profiles/accounts-profiles-added-widget.png)
 
+### Distribución de puntuación predictiva {#predictive-scoring-distribution}
+
+La variable [!UICONTROL Distribución de puntuación predictiva] La utilidad muestra la distribución de puntuación de todos los perfiles de cuenta para ayudarle a comprender el estado de la canalización de ventas de un vistazo. Los datos de puntuación se transmiten a través de un gráfico circular y un gráfico de columnas.
+
+El gráfico circular ilustra la proporción del total de perfiles de cuenta en cada uno de los grupos de mayor, medio y baja tendencia a comprar bloques. La clave proporciona más detalles sobre las secciones con códigos de color, incluidos los rangos de bloque de puntuación y el número de perfiles de cuenta en ese rango.
+
+El gráfico de columnas proporciona un desglose de puntuación más granular. Cada columna muestra el número de perfiles de cuenta en cada uno de los 20 bloques de incremento de cinco puntos.
+
+El menú desplegable del widget permite seleccionar el modelo de puntuación de cuenta.
+
+![El widget de distribución de puntuación predictiva.](../images/account-profiles/predictive-scoring-distribution.png)
+
+### Puntuación predictiva factores de mayor influencia {#predictive-scoring-top-influential-factors}
+
+La variable [!UICONTROL Puntuación predictiva factores de mayor influencia] ayuda a comprender los factores más significativos que dirigen las puntuaciones para cada grupo de propensión.
+
+Este widget muestra los factores de mayor influencia para cada uno de los bloques de alta, media y baja propensión. Una barra para cada factor influyente indica el porcentaje de perfiles de cuenta en ese bloque de inclinación que contiene el factor influyente específico.
+
+El menú desplegable del widget permite seleccionar el modelo de puntuación de cuenta.
+
+![La utilidad Puntuación predictiva de factores de mayor influencia.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
 ## Pasos siguientes
 
-Al seguir este documento, debería poder localizar la variable [!UICONTROL Perfiles de la cuenta] tablero. También debe comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con perfiles de cuenta como parte de los datos B2B en la interfaz de usuario del Experience Platform, consulte la [información general sobre perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) para Adobe Real-Time CDP, B2B Edition.
+Al seguir este documento, ahora debe saber cómo localizar la variable [!UICONTROL Perfiles de la cuenta] tablero. También debe comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con perfiles de cuenta como parte de los datos B2B en la interfaz de usuario del Experience Platform, consulte la [información general sobre perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) para Adobe Real-Time CDP, B2B Edition.
