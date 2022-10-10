@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;servicio de flujo;
 title: (Beta) Crear un flujo de ejecución para la ingesta a petición mediante la API de servicio de flujo
 description: Este tutorial trata los pasos para crear una ejecución de flujo para la ingesta bajo demanda mediante la API de servicio de flujo
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 795b1af6421c713f580829588f954856e0a88277
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 1%
+source-wordcount: '856'
+ht-degree: 2%
 
 ---
 
@@ -70,6 +70,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567",
           "deltaColumn": {
@@ -82,9 +83,10 @@ curl -X POST \
 | Parámetro | Descripción |
 | --- | --- |
 | `flowId` | ID del flujo con el que se creará la ejecución de flujo. |
+| `params.startTime` | Un entero que define la hora de inicio de la ejecución. El valor se representa en el tiempo de época Unix. |
 | `params.windowStartTime` | Un entero que define la hora de inicio de la ventana durante la cual se deben extraer los datos. El valor se representa en tiempo unix. |
 | `params.windowEndTime` | Un entero que define la hora de finalización de la ventana durante la cual se deben extraer los datos. El valor se representa en tiempo unix. |
-| `params.deltaColumn` | La columna delta es necesaria para dividir los datos y separar los nuevos datos introducidos de los datos históricos. |
+| `params.deltaColumn` | La columna delta es necesaria para dividir los datos y separar los nuevos datos introducidos de los datos históricos. **Nota**: La variable `deltaColumn` solo es necesario al crear la primera ejecución de flujo. |
 | `params.deltaColumn.name` | Nombre de la columna delta. |
 
 **Respuesta**
@@ -93,53 +95,36 @@ Una respuesta correcta devuelve los detalles de la ejecución de flujo recién c
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567",
-        "deltaColumn": {
-            "name": "DOB"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
-        }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID de la ejecución del flujo recién creado. Consulte la guía de [recuperación de especificaciones de flujo](../api/collect/database-nosql.md#specs) para obtener más información sobre las especificaciones de ejecución basadas en tablas. |
-| `createdAt` | Marca de tiempo Unix que designa cuándo se creó la ejecución del flujo. |
-| `updatedAt` | La marca de tiempo unix que designa cuándo se actualizó por última vez la ejecución del flujo. |
-| `createdBy` | ID de organización del usuario que creó la ejecución de flujo. |
-| `updatedBy` | ID de organización del usuario que actualizó por última vez la ejecución del flujo. |
-| `createdClient` | El cliente de aplicación que creó el flujo se ejecuta. |
-| `updatedClient` | El cliente de aplicación que actualizó por última vez la ejecución del flujo. |
-| `sandboxId` | ID del simulador de pruebas que contiene la ejecución del flujo. |
-| `sandboxName` | Nombre del simulador de pruebas que contiene la ejecución del flujo. |
-| `imsOrgId` | El ID de organización. |
-| `flowId` | ID del flujo con el que se crea la ejecución del flujo. |
-| `params.windowStartTime` | Un entero que define la hora de inicio de la ventana durante la cual se deben extraer los datos. El valor se representa en tiempo unix. |
-| `params.windowEndTime` | Un entero que define la hora de finalización de la ventana durante la cual se deben extraer los datos. El valor se representa en tiempo unix. |
-| `params.deltaColumn` | La columna delta es necesaria para dividir los datos y separar los nuevos datos introducidos de los datos históricos. **Nota**: La variable `deltaColumn` solo es necesario al crear la primera ejecución de flujo. |
-| `params.deltaColumn.name` | Nombre de la columna delta. |
 | `etag` | La versión de recurso de la ejecución del flujo. |
-| `metrics` | Esta propiedad muestra un resumen de estado para la ejecución del flujo. |
+<!-- 
+| `createdAt` | The unix timestamp that designates when the flow run was created. |
+| `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
+| `createdBy` | The organization ID of the user who created the flow run. |
+| `updatedBy` | The organization ID of the user who last updated the flow run. |
+| `createdClient` | The application client that created the flow run. |
+| `updatedClient` | The application client that last updated the flow run. |
+| `sandboxId` | The ID of the sandbox that contains the flow run. |
+| `sandboxName` | The name of the sandbox that contains the flow run. |
+| `imsOrgId` | The organization ID. |
+| `flowId` | The ID of the flow in which the flow run is created against. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
+| `params.deltaColumn.name` | The name of the delta column. |
+| `etag` | The resource version of the flow run. |
+| `metrics` | This property displays a status summary for the flow run. | -->
 
 ## Creación de una ejecución de flujo para un origen basado en archivos
 
@@ -170,6 +155,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567"
       }
@@ -179,6 +165,7 @@ curl -X POST \
 | Parámetro | Descripción |
 | --- | --- |
 | `flowId` | ID del flujo con el que se creará la ejecución de flujo. |
+| `params.startTime` | Un entero que define la hora de inicio de la ejecución. El valor se representa en el tiempo de época Unix. |
 | `params.windowStartTime` | Un entero que define la hora de inicio de la ventana durante la cual se deben extraer los datos. El valor se representa en tiempo unix. |
 | `params.windowEndTime` | Un entero que define la hora de finalización de la ventana durante la cual se deben extraer los datos. El valor se representa en tiempo unix. |
 
@@ -189,49 +176,19 @@ Una respuesta correcta devuelve los detalles de la ejecución de flujo recién c
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567"
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `id` | El ID de la ejecución del flujo recién creado. Consulte la guía de [recuperación de especificaciones de flujo](../api/collect/cloud-storage.md#specs) para obtener más información sobre las especificaciones de ejecución basadas en archivos. |
-| `createdAt` | Marca de tiempo Unix que designa cuándo se creó la ejecución del flujo. |
-| `updatedAt` | La marca de tiempo unix que designa cuándo se actualizó por última vez la ejecución del flujo. |
-| `createdBy` | ID de organización del usuario que creó la ejecución de flujo. |
-| `updatedBy` | ID de organización del usuario que actualizó por última vez la ejecución del flujo. |
-| `createdClient` | El cliente de aplicación que creó el flujo se ejecuta. |
-| `updatedClient` | El cliente de aplicación que actualizó por última vez la ejecución del flujo. |
-| `sandboxId` | ID del simulador de pruebas que contiene la ejecución del flujo. |
-| `sandboxName` | Nombre del simulador de pruebas que contiene la ejecución del flujo. |
-| `imsOrgId` | El ID de organización. |
-| `flowId` | ID del flujo con el que se crea la ejecución del flujo. |
-| `params.windowStartTime` | Un entero que define la hora de inicio de la ventana durante la cual se deben extraer los datos. El valor se representa en tiempo unix. |
-| `params.windowEndTime` | Un entero que define la hora de finalización de la ventana durante la cual se deben extraer los datos. El valor se representa en tiempo unix. |
+| `id` | El ID de la ejecución del flujo recién creado. Consulte la guía de [recuperación de especificaciones de flujo](../api/collect/database-nosql.md#specs) para obtener más información sobre las especificaciones de ejecución basadas en tablas. |
 | `etag` | La versión de recurso de la ejecución del flujo. |
-| `metrics` | Esta propiedad muestra un resumen de estado para la ejecución del flujo. |
-
 
 ## Monitorización de las ejecuciones de flujo
 
