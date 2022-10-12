@@ -4,8 +4,8 @@ title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
 workflow-type: tm+mt
-source-wordcount: '838'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
