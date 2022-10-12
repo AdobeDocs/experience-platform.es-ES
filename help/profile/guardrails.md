@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
+source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1989'
 ht-degree: 6%
 
 ---
@@ -110,6 +110,7 @@ Las protecciones descritas en esta sección hacen referencia al número y la nat
 | Seguridad | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
 | Segmentos por simulador de pruebas | 4000 | Leve | Una organización puede tener más de 4000 segmentos en total, siempre que haya menos de 4000 segmentos en cada entorno limitado individual. El intento de crear segmentos adicionales puede afectar al rendimiento del sistema. |
+| Segmentos de Edge por simulador de pruebas | 150 | Leve | Una organización puede tener más de 150 segmentos Edge en total, siempre que haya menos de 150 segmentos Edge en cada entorno limitado individual. El intento de crear segmentos Edge adicionales puede afectar al rendimiento del sistema. |
 | Segmentos de flujo continuo por entorno limitado | 500 | Leve | Una organización puede tener más de 500 segmentos de flujo continuo en total, siempre que haya menos de 500 segmentos de flujo continuo en cada simulador de pruebas individual. El intento de crear segmentos de flujo continuo adicionales puede afectar al rendimiento del sistema. |
 | Segmentos por lotes por simulador de pruebas | 4000 | Leve | Una organización puede tener más de 4000 segmentos de lote en total, siempre que haya menos de 4000 segmentos de lote en cada entorno limitado individual. El intento de crear segmentos de lote adicionales puede afectar al rendimiento del sistema. |
 

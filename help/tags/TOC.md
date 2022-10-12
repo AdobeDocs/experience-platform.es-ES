@@ -5,10 +5,10 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 84%
+source-wordcount: '408'
+ht-degree: 83%
 
 ---
 
@@ -112,6 +112,9 @@ ht-degree: 84%
       * Complementos comunes de Analytics {#plugins}
          * [Información general](./extensions/web/plugins/overview.md)
          * [Notas de la versión](./extensions/web/plugins/release-notes.md)
+      * Complementos comunes del SDK web {#web-sdk-plugins}
+         * [Información general](./extensions/web/web-sdk-plugins/overview.md)
+         * [Notas de la versión](./extensions/web/web-sdk-plugins/release-notes.md)
       * Núcleo {#core}
          * [Información general](./extensions/web/core/overview.md)
          * [Reenvío de eventos](./extensions/web/core/event-forwarding.md)

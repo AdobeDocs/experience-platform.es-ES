@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
+source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
 workflow-type: tm+mt
-source-wordcount: '2243'
+source-wordcount: '2302'
 ht-degree: 2%
 
 ---
@@ -156,7 +156,12 @@ La siguiente documentación proporciona más recursos para comprender la prepara
 * [Funciones de asignación de preparación de datos](../../../../../data-prep/functions.md)
 * [Añadir campos calculados](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtrado para [!DNL Profile Service] (Beta)
+### Filtrado para [!DNL Profile Service] (Beta) {#filtering-for-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_analytics_filtering"
+>title="Crear reglas de filtro"
+>abstract="Defina las reglas de filtrado de nivel de fila y columna al enviar datos al Perfil del cliente en tiempo real. Utilice el filtrado de nivel de fila para aplicar condiciones y dictar a qué datos **incluir para la ingesta de perfiles**. Utilice el filtrado de nivel de columna para seleccionar las columnas de datos que desea **excluir para la ingesta de perfiles**. Las reglas de filtrado no se aplican a los datos enviados al lago de datos."
 
 >[!IMPORTANT]
 >
@@ -242,7 +247,7 @@ La variable **[!UICONTROL Detalles de flujo de datos]** , donde debe proporciona
 
 ![dataflow-detail](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### Consulte
+### Revisión
 
 La variable [!UICONTROL Consulte] aparece, lo que le permite revisar el nuevo flujo de datos de Analytics antes de crearlo. Los detalles de la conexión se agrupan por categorías, entre ellas:
 

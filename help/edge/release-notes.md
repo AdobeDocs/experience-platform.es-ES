@@ -3,7 +3,7 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
+source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Para ver las últimas notas de la versión de la extensión de etiqueta del SDK 
 
 **Nuevas funciones**
 
-* Se ha agregado compatibilidad con la migración de página por página completa. El perfil de Adobe Target ahora se conservará cuando un visitante se desplace entre at.js y las páginas del SDK web.
+* Se ha agregado compatibilidad con [Migración de página por página completa](home.md#migrating-to-web-sdk). El perfil de Adobe Target ahora se conservará cuando un visitante se desplace entre at.js y las páginas del SDK web.
 * Se ha agregado compatibilidad configurable para [sugerencias de cliente de agente de usuario de alta entropía](fundamentals/user-agent-client-hints.md#high-entropy).
 * Se ha agregado compatibilidad con el nuevo `applyResponse` comando. Esto permite la personalización híbrida mediante la variable [API de servidor de red perimetral](../server-api/overview.md).
 * Los vínculos de modo de control de calidad ahora funcionan en varias páginas.

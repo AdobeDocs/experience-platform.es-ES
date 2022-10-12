@@ -3,10 +3,10 @@ keywords: Experience Platform;identidad;servicio de identidad;solución de probl
 title: Seguridad para el servicio de identidad
 description: Este documento proporciona información sobre el uso y los límites de velocidad de los datos del servicio de identidad para ayudarle a optimizar el uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
+source-git-commit: e6d0f0d0bc3de2f6da4e4269811d254db4fa3303
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 3%
+source-wordcount: '445'
+ht-degree: 2%
 
 ---
 
@@ -45,6 +45,10 @@ La siguiente tabla describe las reglas existentes que debe seguir para garantiza
 | --- | --- | --- |
 | ECID | <ul><li>El valor de identidad de un ECID debe tener exactamente 38 caracteres.</li><li>El valor de identidad de un ECID debe constar únicamente de números.</li></ul> | <ul><li>Si el valor de identidad de ECID no es exactamente de 38 caracteres, se omite el registro.</li><li>Si el valor de identidad de ECID contiene caracteres no numéricos, se omite el registro.</li></ul> |
 | No ECID | El valor de identidad no puede superar los 1024 caracteres. | Si el valor de identidad supera los 1024 caracteres, se omitirá el registro. |
+
+### Incorporación del área de nombres de identidad
+
+A partir del 31 de enero de 2023, el servicio de identidad bloqueará la ingesta de Adobe Analytics ID (AAID) para nuevos clientes. Esta identidad suele ingerirse a través de la variable [Fuente de Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) y [Fuente de Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) y es redundante porque ECID representa el mismo explorador web. Si desea cambiar esta configuración predeterminada, póngase en contacto con su administrador de cuentas.
 
 ## Pasos siguientes
 
