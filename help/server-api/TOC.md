@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Documentación de la API del servidor de red perimetral
 breadcrumb-title: Documentación de la API del servidor de red perimetral
-user-guide-description: La API de servidor de red perimetral de Adobe Experience Platform ofrece una forma optimizada para que los clientes interactúen con cualquier servicio Adobe Experience Cloud o Adobe Experience Platform Edge. Aprenda a utilizar la API de servidor para una variedad de casos de uso de recopilación de datos, personalización, publicidad y marketing.
+user-guide-description: Utilice la API de servidor de red perimetral para la recopilación de datos, la personalización, la publicidad y los casos de uso de marketing con los servicios perimetrales del Experience Cloud o del Experience Platform.
 feature: Data Collection
-source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 62%
+source-wordcount: '85'
+ht-degree: 25%
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guía de flujos de datos
-user-guide-description: Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform.
+user-guide-description: Obtenga información sobre los flujos de datos y cómo configurarlos en distintos servicios.
 feature: Dataflows
-source-git-commit: 2e5d5a574f4c8bec99ef05ea751908c81c358050
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 23%
+source-wordcount: '62'
+ht-degree: 4%
 
 ---
 

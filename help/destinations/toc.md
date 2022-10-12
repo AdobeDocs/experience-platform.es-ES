@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Guía de destinos
-user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing multicanal, campañas de correo electrónico, publicidad de destino y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 7%
+source-wordcount: '945'
+ht-degree: 5%
 
 ---
 
