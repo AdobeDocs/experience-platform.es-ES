@@ -2,9 +2,9 @@
 title: Preguntas frecuentes sobre el SDK web de Adobe Experience Platform
 description: Obtenga respuestas a las preguntas más frecuentes sobre el SDK web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '2101'
 ht-degree: 2%
 
 ---
@@ -151,13 +151,17 @@ Más información sobre un CNAME está disponible en la sección [documentación
 
 ## ¿El SDK web de Adobe Experience Platform utiliza cookies? En caso afirmativo, ¿qué cookies utiliza?
 
-Sí, actualmente el SDK web utiliza entre 1 y 4 cookies, dependiendo de la implementación. A continuación se muestra una lista de las 4 cookies que podría ver con el SDK web y la forma en que se utilizan:
+Sí, actualmente el SDK web utiliza entre una y siete cookies, dependiendo de la implementación. A continuación se muestra una lista de las cookies que podría ver con el SDK web y la forma en que se utilizan:
 
-**kndct_orgid_identity:** La cookie de identidad se utiliza para almacenar el ECID, así como alguna otra información relacionada con el ECID.
-
-**kndctr_orgid_permission:** Esta cookie almacena la preferencia de consentimiento del usuario para el sitio web.
-
-**kndctr_orgid_cluster:** Esta cookie almacena la región de Experience Edge que sirve las solicitudes del usuario actual. La región se utiliza en la ruta URL para que Experience Edge pueda enrutar la solicitud a la región correcta. Esta cookie dura 30 minutos, de modo que si un usuario se conecta con una dirección IP diferente, la solicitud se puede enrutar a la región más cercana.
+| **Nombre** | **maxAge** | **Edad amistosa** | **Descripción** |
+|---|---|---|---|
+| **kndct_orgid_identity** | 34128000 | 395 días | La cookie de identidad almacena el ECID, así como otra información relacionada con el ECID. |
+| **kndctr_orgid_permission_check** | 7200 | 2 horas | Esta cookie almacena la preferencia de consentimiento del usuario para el sitio web. |
+| **kndctr_orgid_permission** | 15552000 | 180 días | Esta cookie basada en sesión indica al servidor que busque las preferencias de consentimiento del lado del servidor. |
+| **kndctr_orgid_cluster** | 1800 | 30 minutos | Esta cookie almacena la región de Experience Edge que sirve las solicitudes del usuario actual. La región se utiliza en la ruta URL para que Experience Edge pueda enrutar la solicitud a la región correcta. Esta cookie dura 30 minutos, de modo que si un usuario se conecta con una dirección IP diferente, la solicitud se puede enrutar a la región más cercana. |
+| **mbox** | 63072000 | 2 años | Esta cookie aparece cuando la configuración de migración de Target está establecida en true. Esto permitirá que Target [Cookie mbox](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) que establecerá el SDK web. |
+| **mboxEdgeCluster** | 1800 | 30 minutos | Esta cookie aparece cuando la configuración de migración de Target está establecida en true. Esta cookie permite que el SDK web comunique el clúster perimetral correcto a at.js para que los perfiles de Target puedan permanecer sincronizados mientras los usuarios navegan por un sitio. |
+| **AMCV_###@AdobeOrg** | 34128000 | 395 días | Esta cookie solo aparece cuando la migración de ID en el SDK web de Adobe Experience Platform está habilitada. Esta cookie es útil cuando se realiza la transición al SDK web, mientras que algunas partes del sitio siguen utilizando visitor.js. Consulte la [documentación de idMigrationEnabled](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) para obtener más información sobre esta configuración. |
 
 Al utilizar el SDK web, la red perimetral establece una o más de las cookies anteriores. La red perimetral establece todas las cookies con la variable `secure` y `sameSite="none"` atributos.
 
