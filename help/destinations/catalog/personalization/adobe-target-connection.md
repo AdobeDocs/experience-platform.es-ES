@@ -3,9 +3,9 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión Adobe Target
 description: Adobe Target es una aplicación que proporciona funciones de personalización y experimentación en tiempo real y con tecnología de IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
+source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1006'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 | No se ha seleccionado ningún conjunto de datos | Almacén de datos seleccionado |
 |---|---|
-| <ul><li>[Segmentación de Edge](../../../segmentation/ui/edge-segmentation.md) no es compatible.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md) no son compatibles.</li><li>Puede compartir segmentos con la conexión de Adobe Target solo para el simulador para pruebas de producción.</li><li>Para configurar la personalización de la siguiente sesión sin utilizar un ID de flujo de datos, utilice [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentación de Edge funciona según lo esperado.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md) son compatibles.</li><li>El uso compartido de segmentos es compatible con otros entornos limitados.</li></ul> |
+| <ul><li>[Segmentación de Edge](../../../segmentation/ui/edge-segmentation.md) no es compatible.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md) no son compatibles.</li><li>Puede compartir segmentos con la conexión de Adobe Target solo para el *entorno limitado de producción predeterminado*.</li><li>Para configurar la personalización de la siguiente sesión sin utilizar un ID de flujo de datos, utilice [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentación de Edge funciona según lo esperado.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md) son compatibles.</li><li>El uso compartido de segmentos es compatible con otros entornos limitados.</li></ul> |
 
 ### Habilitar alertas {#enable-alerts}
 
