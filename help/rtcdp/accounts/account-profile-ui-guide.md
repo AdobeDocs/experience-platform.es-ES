@@ -3,9 +3,9 @@ keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinaci�
 title: Guía de la interfaz de usuario del perfil de cuenta
 description: Mediante el uso de perfiles de cuenta, Real-time Customer Data Platform B2B Edition le permite unificar la información de la cuenta de múltiples fuentes. Esta guía proporciona detalles para interactuar con perfiles de cuenta en la interfaz de usuario de Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
+source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,6 @@ Para obtener más información sobre la coincidencia de cuentas de posibles clie
 
 Para examinar los perfiles de cuenta, comience por seleccionar **[!UICONTROL Perfiles]** under [!UICONTROL Cuentas] en el panel de navegación izquierdo.
 
-![Seleccione Perfiles en la navegación izquierda](images/b2b-account-browse.png)
-
 En el **[!UICONTROL Examinar]** , puede explorar perfiles de cuenta mediante un ID de cuenta de un origen empresarial conectado o introduciendo directamente los detalles del origen.
 
 ![Uso del ID de cuenta para explorar perfiles](images/b2b-account-browse-by.png)
@@ -72,9 +70,9 @@ Esto abre el **[!UICONTROL Seleccionar origen]** , donde puede seleccionar un or
 
 Para obtener más información sobre la conexión de orígenes empresariales, consulte la [información general sobre fuentes](../sources/sources-overview.md).
 
-![Seleccionar flujo de trabajo de origen](images/b2b-account-select-source.png)
-
 Para elegir una fuente, seleccione el botón de opción situado junto al nombre de la conexión y, a continuación, utilice **[!UICONTROL Select]** para volver a la [!UICONTROL Examinar] pestaña .
+
+![Seleccionar flujo de trabajo de origen](images/b2b-account-select-source.png)
 
 Con un origen seleccionado, ahora debe introducir un **[!UICONTROL ID de cuenta]** relacionado con el origen. Por ejemplo, si selecciona un origen de Salesforce, tendrá que introducir un ID de cuenta de la instancia de Salesforce para poder ver el perfil de cuenta vinculado a dicho ID.
 
