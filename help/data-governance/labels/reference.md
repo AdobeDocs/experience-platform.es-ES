@@ -5,7 +5,7 @@ title: Glosario de etiquetas de uso de datos
 topic-legacy: labels
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform actualmente.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1a10216c01a049539b5e1d21d0c42942496b2e3e
+source-git-commit: 1ab97c63bc169965ca759f2dd8b411c175559fb8
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 2%
@@ -51,7 +51,7 @@ Las etiquetas &quot;I&quot; de identidad se utilizan para categorizar los datos 
 | **I1** | Datos directamente identificables que pueden identificar a una persona específica o ponerse en contacto con ella, en lugar de con un dispositivo. |
 | **I2** | Datos de identificación indirecta que se pueden utilizar en combinación con otros datos para identificar a una persona concreta o ponerse en contacto con ella. |
 
-## Etiquetas confidenciales
+## Etiquetas confidenciales {#sensitive}
 
 Las etiquetas &quot;S&quot; confidenciales se utilizan para categorizar los datos que usted y su organización consideran confidenciales.
 
@@ -90,7 +90,7 @@ C4 es la etiqueta más restrictiva: incluye etiquetas [C5](#c5), [C6](#c6)y [C7]
 
 #### C5 {#c5}
 
-La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes: Los datos recopilados en el sitio se utilizan (1) para hacer inferencias sobre los intereses de los usuarios, (2) se utilizan en otro contexto, como en otro sitio o aplicación (fuera del sitio) Y (3) para seleccionar qué contenido o anuncios se sirven en función de esas inferencias.
+La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes: Los datos recopilados en el sitio se utilizan (1) para hacer inferencias sobre los intereses de un usuario, (2) se utilizan en otro contexto, como en otro sitio o aplicación (fuera del sitio) Y (3) para seleccionar qué contenido o anuncios se sirven en función de esas inferencias.
 
 La combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio, se denomina datos entre sitios. Los distintos sitios representan contextos diferentes, por lo que el uso de datos entre sitios en cualquier contexto es diferente del original. Los datos entre sitios suelen recopilarse y procesarse para hacer inferencias sobre los intereses de los usuarios. Como resultado, el uso de datos entre sitios para anuncios de objetivo o contenido suele calificarse como objetivo basado en intereses, independientemente de si el anuncio o el contenido aparece en el sitio o fuera de él. Por ejemplo, si se usaran datos en el sitio en combinación con datos fuera del sitio para seleccionar qué publicidad mostrar a un usuario en el propio sitio de una organización, ese uso se calificaría como objetivo basado en intereses. Otro ejemplo: la reorientación de anuncios para usuarios fuera del sitio también podría calificarse como objetivo basado en intereses.
 
@@ -106,7 +106,7 @@ DAA: Anuncio de comportamiento en línea. Recopilación de datos de un equipo o 
 
 #### C6 {#c6}
 
-Los anuncios son mensajes o notificaciones, incluidos textos e imágenes, que aparecen en un sitio web o aplicación y que están destinados principalmente a promover la venta de bienes o servicios. Depende de usted determinar el propósito de dichos mensajes o notificaciones. Los anuncios son independientes del contenido en el sitio, cubierto por una etiqueta [C7](#c7). Los datos con una etiqueta C6 no se pueden usar para la segmentación de anuncios en el sitio, incluida la selección y entrega de anuncios en los sitios web o aplicaciones de su organización, ni para medir la entrega y la eficacia de dichos anuncios. Esto incluye el uso de datos en el sitio recopilados anteriormente sobre los intereses de los usuarios para seleccionar anuncios, procesar datos sobre qué anuncios se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con el anuncio, como seleccionar un anuncio o realizar una compra. Normalmente, hacer inferencias sobre las preferencias de un usuario en función de las actividades en el sitio de ese usuario y luego usar esas preferencias en la segmentación de anuncios en el sitio no calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Para estos requisitos, véase la etiqueta C5.](#c5)*
+Los anuncios son mensajes o notificaciones, incluidos textos e imágenes, que aparecen en un sitio web o aplicación y que están destinados principalmente a promover la venta de bienes o servicios. Depende de usted determinar el propósito de dichos mensajes o notificaciones. Los anuncios son independientes del contenido en el sitio, cubierto por una etiqueta [C7](#c7). Los datos con una etiqueta C6 no se pueden usar para la segmentación de anuncios en el sitio, incluida la selección y entrega de anuncios en los sitios web o aplicaciones de su organización, ni para medir la entrega y la eficacia de dichos anuncios. Esto incluye el uso de datos en el sitio recopilados anteriormente sobre los intereses de los usuarios para seleccionar anuncios, procesar datos sobre qué anuncios se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con el anuncio, como seleccionar un anuncio o realizar una compra. Normalmente, hacer inferencias sobre las preferencias de un usuario en función de las actividades en el sitio de ese usuario y luego usar esas preferencias en la segmentación de anuncios en el sitio no se calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Para estos requisitos, véase la etiqueta C5.](#c5)*
 
 En última instancia, la interpretación de la etiqueta y cómo se aplica el uso de los datos con esa etiqueta depende de usted. Como referencia, a continuación se proporcionan los marcos de la IAB y el DAA:
 
@@ -116,7 +116,7 @@ DAA: La publicidad en línea basada en el comportamiento no incluye las activida
 
 #### C7 {#c7}
 
-El contenido en el sitio es texto e imágenes que están diseñados para informar, educar o entretener, y no se crean para promover la venta de bienes o servicios. Depende de usted determinar el propósito del contenido, incluido si este se calificaría como publicidad nativa. La etiqueta C7 no cubre los anuncios en el sitio, que están cubiertos por etiquetas [C6](#c6). Los datos con una etiqueta C7 no se pueden usar para la segmentación de contenido en el sitio, incluida la selección y entrega de contenido en los sitios web o aplicaciones de su organización, ni para medir la entrega y la eficacia de dicho contenido. Esto incluye información recopilada anteriormente sobre los intereses de los usuarios en contenido seleccionado, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró y si los usuarios realizaron alguna acción relacionada con el contenido, incluida la selección de contenido. Normalmente, hacer inferencias sobre las preferencias de un usuario en función de las actividades en el sitio de ese usuario y luego usar esas preferencias en la segmentación de contenido en el sitio no calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Para estos requisitos, véase la etiqueta C5.](#c5)*
+El contenido en el sitio es texto e imágenes que están diseñados para informar, educar o entretener, y no se crean para promover la venta de bienes o servicios. Depende de usted determinar el propósito del contenido, incluido si este se calificaría como publicidad nativa. La etiqueta C7 no cubre los anuncios en el sitio, que están cubiertos por etiquetas [C6](#c6). Los datos con una etiqueta C7 no se pueden usar para la segmentación de contenido en el sitio, incluida la selección y entrega de contenido en los sitios web o aplicaciones de su organización, ni para medir la entrega y la eficacia de dicho contenido. Esto incluye información recopilada anteriormente sobre los intereses de los usuarios en contenido seleccionado, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró y si los usuarios realizaron alguna acción relacionada con el contenido, como seleccionar contenido. Normalmente, hacer inferencias sobre las preferencias de un usuario en función de las actividades en el sitio de ese usuario y luego usar esas preferencias en la segmentación de contenido en el sitio no se calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Para estos requisitos, véase la etiqueta C5.](#c5)*
 
 En última instancia, la interpretación de la etiqueta y cómo se aplica el uso de los datos con esa etiqueta depende de usted. Como referencia, a continuación se proporcionan los marcos de la IAB y el DAA:
 
@@ -126,7 +126,7 @@ DAA: La publicidad en línea basada en el comportamiento no incluye las activida
 
 #### C8 {#c8}
 
-Los datos no se pueden usar para medir, comprender ni notificar el uso que hacen los usuarios de los sitios o aplicaciones de su organización. Esto no incluye la segmentación basada en intereses (segmentación entre sitios), que es la recopilación de información sobre el uso de este servicio para personalizar posteriormente el contenido o la publicidad para usted en otros contextos, es decir, en otros servicios, como sitios web o aplicaciones, a lo largo del tiempo.
+No se pueden usar los datos para medir, comprender y crear informes sobre el uso que hacen los usuarios de los sitios o aplicaciones de su organización. Esto no incluye la segmentación basada en intereses (segmentación entre sitios), que es la recopilación de información sobre el uso de este servicio para personalizar posteriormente el contenido o la publicidad para usted en otros contextos, es decir, en otros servicios, como sitios web o aplicaciones, a lo largo del tiempo.
 
 #### C9 {#c9}
 

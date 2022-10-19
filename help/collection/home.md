@@ -5,10 +5,10 @@ title: Información general sobre la recopilación de datos
 topic-legacy: overview
 description: Obtenga información sobre las distintas tecnologías que intervienen en la recopilación de datos sobre las experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 7%
+source-wordcount: '513'
+ht-degree: 6%
 
 ---
 
@@ -47,6 +47,8 @@ La compresión de estas bibliotecas acelera la recopilación de datos y consolid
 ## Red perimetral de plataforma y conjuntos de datos {#edge}
 
 Platform Edge Network es una red global de servidores distribuidos, rápidos y confiables que pueden recibir y procesar datos a una escala tremenda. Con las etiquetas, puede configurar [datastreams](../edge/datastreams/overview.md) para productos como Adobe Target, Adobe Audience Manager y Adobe Analytics, que permiten activar estos productos en el servidor sin cambiar el código del lado del cliente.
+
+Además, los conjuntos de datos de se integran con varias funciones de Platform que ayudan a garantizar que cualquier dato confidencial que envía se gestione adecuadamente con respecto a las políticas organizativas y las normativas legales. Consulte la sección sobre [gestión de datos confidenciales](../edge/datastreams/overview.md#sensitive) en la documentación de datastreams para obtener más información.
 
 ![Datastreams y soluciones de Adobe](./images/home/adobe-solutions.png)
 
