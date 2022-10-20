@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
+source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '1902'
 ht-degree: 6%
 
 ---
@@ -144,6 +144,4 @@ Al reunir datos de varias fuentes, las políticas de combinación son las reglas
 
 ### Conjuntos de datos de grupos de informes de Adobe Analytics en Platform {#aa-datasets}
 
-Se debe habilitar un máximo de un (1) conjunto de datos del grupo de informes de Adobe Analytics para Perfil. Se trata de un límite leve, lo que significa que puede habilitar más de un conjunto de datos de Analytics para Perfil, pero no se recomienda, ya que puede tener consecuencias no deseadas para sus datos. Esto se debe a las diferencias entre los esquemas del Modelo de datos de experiencia (XDM), que proporcionan la estructura semántica para los datos en Experience Platform y permiten la coherencia en la interpretación de los datos, y la naturaleza personalizable de las eVars y las variables de conversión en Adobe Analytics.
-
-Por ejemplo, en Adobe Analytics, una sola organización puede tener varios grupos de informes. Si el grupo de informes A designa el eVar 4 como &quot;término de búsqueda interna&quot; y el grupo de informes B designa el eVar 4 como &quot;dominio de referencia&quot;, estos valores se incorporarán en el mismo campo del perfil, lo que provocará confusión y degradará la calidad de los datos.
+Se pueden habilitar varios grupos de informes para Perfil siempre y cuando se resuelvan todos los conflictos de datos. Puede utilizar la funcionalidad Preparación de datos para resolver conflictos de datos entre eVars, Listas y Props. Para obtener más información sobre cómo utilizar la funcionalidad de preparación de datos, lea la [Guía de la interfaz de usuario del conector de Adobe Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
