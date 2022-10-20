@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Documentación de la API del servidor de red perimetral
 breadcrumb-title: Documentación de la API del servidor de red perimetral
-user-guide-description: Utilice la API de servidor de red perimetral para la recopilación de datos, la personalización, la publicidad y los casos de uso de marketing con los servicios perimetrales del Experience Cloud o del Experience Platform.
+user-guide-description: Utilice la API del servidor de red perimetral para la recopilación de datos, personalización, publicidad y casos de uso de marketing de datos con los servicios perimetrales de Experience Cloud o de Experience Platform.
 feature: Data Collection
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '85'
-ht-degree: 25%
+ht-degree: 52%
 
 ---
 
