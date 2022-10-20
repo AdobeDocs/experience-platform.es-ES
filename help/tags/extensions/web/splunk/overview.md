@@ -3,8 +3,8 @@ title: Información general sobre la extensión del fragmento
 description: Obtenga información sobre la extensión Splunk para el reenvío de eventos en Adobe Experience Platform.
 source-git-commit: cad6d78868ac89be325faa58f567b89869bfff02
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
