@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9bab22684005609111538037e95bad1f806ff7c4
+source-git-commit: 40d751570ee82f39c6e66af98666775ac00ce3db
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '952'
 ht-degree: 6%
 
 ---
@@ -135,6 +135,7 @@ ht-degree: 6%
       * [Conexión de línea](./catalog/mobile-engagement/line.md)
    * Destinos personalizados {#personalization}
       * [Información general sobre los destinos de personalización](./catalog/personalization/overview.md)
+      * [(Beta) Conexión de Adobe Commerce](./catalog/personalization/adobe-commerce.md)
       * [Conexión Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Extensión de Adobe Target](./catalog/personalization/adobe-target.md)
       * [Extensión de Adobe Target 2.0](./catalog/personalization/adobe-target-v2.md)

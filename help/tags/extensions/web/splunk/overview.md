@@ -1,7 +1,7 @@
 ---
 title: Información general sobre la extensión del fragmento
 description: Obtenga información sobre la extensión Splunk para el reenvío de eventos en Adobe Experience Platform.
-source-git-commit: e6f0bdcdb11630730834e353064abb960d3d0ea1
+source-git-commit: cad6d78868ac89be325faa58f567b89869bfff02
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 1%
@@ -79,7 +79,7 @@ El siguiente paso es asignar las propiedades del evento Splunk a los elementos d
 | [!UICONTROL Fuente] | El valor de origen que se asigna a los datos de evento. Por ejemplo, si está enviando datos desde una aplicación que está desarrollando, establezca esta clave en el nombre de la aplicación. |
 | [!UICONTROL Índice] | Nombre del índice de los datos del evento. El índice que especifique aquí debe estar dentro de la lista de índices permitidos si el token tiene el parámetro de índices establecido. |
 | [!UICONTROL Fecha] | La hora del evento. El formato de hora predeterminado es la hora UNIX (en formato `<sec>.<ms>`) y depende de la zona horaria local. Por ejemplo, `1433188255.500` indica 1433188255 segundos y 500 milisegundos después de epoch o lunes, 1 de junio de 2015, a las 7:50:55 PM GMT. |
-| [!UICONTROL Campos] | Especifique un objeto JSON sin procesar o un conjunto de pares de clave-valor que contengan campos personalizados explícitos que se definirán en el momento del índice.  La variable `fields` key no se aplica a los datos sin procesar.<br><br>Solicitudes que contienen `fields` debe enviarse a `/collector/event` o no se indexarán. Para obtener más información, consulte la documentación de Splunk en [extracciones de campos indexados](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Campos] | Especifique un objeto JSON sin procesar o un conjunto de pares de clave-valor que contengan campos personalizados explícitos que se definirán en el momento del índice.  La variable `fields` key no se aplica a los datos sin procesar.<br><br>Solicitudes que contienen `fields` debe enviarse a `/collector/event` o no se indexarán. Para obtener más información, consulte la documentación de Splunk en [extracciones de campos indexados](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Validación de datos dentro de Splunk {#validate}
 
