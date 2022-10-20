@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;segmentación por secuencias;Segmentación por secuencias;Evaluación continua;
 solution: Experience Platform
-title: 'Evaluar eventos en tiempo casi real con segmentación por transmisión '
+title: Evaluar eventos en tiempo casi real con segmentación por transmisión
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
+source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1915'
 ht-degree: 1%
 
 ---
@@ -429,6 +429,8 @@ La segmentación por transmisión funciona en todos los datos que se introdujero
 ### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
 
 Un segmento se define como segmentación por lotes o de flujo continuo basada en una combinación de tipo de consulta y duración del historial de eventos. Puede encontrar una lista de los segmentos que se evaluarán como un segmento de flujo continuo en la [sección tipos de consulta de segmentación de flujo continuo](#query-types).
+
+Tenga en cuenta que si un segmento contiene **both** an `inSegment` y una cadena directa de un solo evento, no se pueden calificar para la segmentación de flujo continuo. Si desea que este segmento cumpla los requisitos para la segmentación de flujo continuo, debe hacer que la cadena directa de un solo evento sea su propio segmento.
 
 ### ¿Por qué el número de segmentos &quot;cualificados totales&quot; sigue aumentando mientras que el número de &quot;Últimos X días&quot; permanece en cero en la sección de detalles del segmento?
 

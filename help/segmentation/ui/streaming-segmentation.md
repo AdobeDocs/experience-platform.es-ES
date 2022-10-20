@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
+source-git-commit: e6b5ea1878631fa88f907fd4aec64cf040e76e95
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -106,6 +106,8 @@ La segmentación por transmisión funciona en todos los datos que se introdujero
 ### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
 
 Un segmento se define como segmentación por lotes o de flujo continuo basada en una combinación de tipo de consulta y duración del historial de eventos. Puede encontrar una lista de los segmentos que se evaluarán como un segmento de flujo continuo en la [sección tipos de consulta de segmentación de flujo continuo](#query-types).
+
+Tenga en cuenta que si un segmento contiene **both** an `inSegment` y una cadena directa de un solo evento, no se pueden calificar para la segmentación de flujo continuo. Si desea que este segmento cumpla los requisitos para la segmentación de flujo continuo, debe hacer que la cadena directa de un solo evento sea su propio segmento.
 
 ### ¿Por qué el número de segmentos &quot;cualificados totales&quot; sigue aumentando mientras que el número de &quot;Últimos X días&quot; permanece en cero en la sección de detalles del segmento?
 
