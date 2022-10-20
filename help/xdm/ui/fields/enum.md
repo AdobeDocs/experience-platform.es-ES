@@ -5,9 +5,9 @@ title: Definir campos de enumeración y valores sugeridos en la interfaz de usua
 description: Obtenga información sobre cómo definir enumeraciones y valores sugeridos para campos de cadena en la interfaz de usuario del Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
+source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1217'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 En Experience Data Model (XDM), se puede dar a un campo de cadena un conjunto predefinido de valores aceptados o sugeridos para controlar mejor qué valores se introducen en ese campo o cómo se comportarán en la segmentación.
 
-Un **enum** restringe los valores que se pueden introducir para un campo de cadena a un conjunto predefinido. Si intenta introducir datos en un campo de enumeración y el valor no coincide con ninguno de los definidos en su configuración, se denegará la ingesta.
+**[!UICONTROL Números]** restringir los valores que se pueden introducir para un campo de cadena a un conjunto predefinido. Si intenta introducir datos en un campo de enumeración y el valor no coincide con ninguno de los definidos en su configuración, se denegará la ingesta.
 
-A diferencia de las enumeraciones, agregue **valores sugeridos** a un campo de cadena no restringe los valores que puede introducir. En su lugar, los valores sugeridos afectan a los valores predefinidos disponibles en la variable [Interfaz de usuario de segmentación](../../../segmentation/ui/overview.md) al incluir el campo de cadena como atributo.
+A diferencia de las enumeraciones, la variable **[!UICONTROL Valores sugeridos]** permite denotar un conjunto de valores recomendados para un campo de cadena que no restringen los valores que puede introducir. En su lugar, los valores sugeridos afectan a los valores predefinidos disponibles en la variable [Interfaz de usuario de segmentación](../../../segmentation/ui/overview.md) al incluir el campo de cadena como atributo.
 
 When [definición de un nuevo campo](./overview.md#define) en la interfaz de usuario de Adobe Experience Platform y estableciendo el tipo en [!UICONTROL Cadena], se le da la opción de definir un [enum](#enum) o [valores sugeridos](#suggested-values) para ese campo.
 
