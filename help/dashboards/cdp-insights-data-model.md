@@ -1,29 +1,29 @@
 ---
-title: Modelo de datos de Perspectivas de la Plataforma de datos del cliente (CDP)
-description: Aprenda a utilizar consultas SQL de los modelos de datos de CDP Insights para personalizar sus propios informes CDP para sus casos de uso de marketing y KPI.
+title: Modelo de datos de Real-time Customer Data Platform Insights
+description: Aprenda a utilizar consultas SQL con los modelos de datos de Real-time Customer Data Platform Insights para personalizar sus propios informes de Real-Time CDP para sus casos de uso de marketing y KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
 
-# Modelo de datos de Perspectivas de la Plataforma de datos del cliente (CDP)
+# Modelo de datos de Real-time Customer Data Platform Insights
 
-La función Modelo de datos de perspectivas de la plataforma de datos del cliente (CDP) expone los modelos de datos y SQL que alimentan la información de varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para sus casos de uso de indicadores de rendimiento clave (KPI) y marketing. Estas perspectivas se pueden utilizar como utilidades personalizadas para los tableros definidos por el usuario.
+La función Modelo de datos de Real-time Customer Data Platform Insights expone los modelos de datos y SQL que alimentan la información de varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para sus casos de uso de indicadores de rendimiento clave (KPI) y marketing. Estas perspectivas se pueden utilizar como utilidades personalizadas para los tableros definidos por el usuario. Consulte la documentación de perspectivas de informes del almacén acelerado de consultas para obtener más información [cómo crear un modelo de datos de perspectivas de informes mediante Query Service para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Requisitos previos
 
 Esta guía requiere una comprensión práctica de la variable [función de paneles definidos por el usuario](./user-defined-dashboards.md). Lea la documentación antes de continuar con esta guía.
 
-## Informes de perspectiva CDP y casos de uso
+## Informes de perspectiva de Real-Time CDP y casos de uso
 
-El sistema de informes CDP proporciona perspectivas sobre sus datos de perfil y su relación con segmentos y destinos. Se han desarrollado varios modelos de esquema de estrella para responder a una variedad de casos de uso de marketing comunes y cada modelo de datos puede admitir varios casos de uso.
+Los informes de Real-Time CDP ofrecen perspectivas sobre los datos de perfil y su relación con los segmentos y los destinos. Se han desarrollado varios modelos de esquema de estrella para responder a una variedad de casos de uso de marketing comunes y cada modelo de datos puede admitir varios casos de uso.
 
 >[!IMPORTANT]
 >
->Los datos utilizados para los informes CDP son precisos para una política de combinación elegida y a partir de la instantánea diaria más reciente.
+>Los datos utilizados para los informes de Real-Time CDP son precisos para una política de combinación elegida y para la instantánea diaria más reciente.
 
 ### Modelo de perfil {#profile-model}
 

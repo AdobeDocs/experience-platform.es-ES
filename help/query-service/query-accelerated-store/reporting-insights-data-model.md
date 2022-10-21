@@ -1,9 +1,9 @@
 ---
 title: Consulta de Perspectivas de Informes de Almacenamiento Acelerado
 description: Obtenga información sobre cómo crear un modelo de datos de perspectivas de informes mediante el servicio de consulta para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario.
-source-git-commit: 9c18432bbd9322aee1924c34cb10aadac440e726
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,9 @@ ht-degree: 0%
 
 El almacén acelerado de consultas le permite reducir el tiempo y la potencia de procesamiento necesarios para obtener perspectivas críticas de sus datos. Normalmente, los datos se procesan a intervalos regulares (por ejemplo, cada hora o cada día) en los que se crean y generan informes sobre vistas agregadas. El análisis de estos informes generado a partir de los datos agregados deriva perspectivas que pretenden mejorar el rendimiento del negocio. El almacén acelerado de consultas proporciona un servicio de caché, concurrencia, una experiencia interactiva y una API sin estado. Sin embargo, supone que los datos se preprocesan y optimizan para consultas agregadas y no para consultas de datos sin procesar.
 
-El almacén acelerado de consultas le permite crear un modelo de datos personalizado o ampliar modelos de datos de Real-time Customer Data Platform existentes. A continuación, puede interactuar con o incrustar sus perspectivas de informes en un marco de informes/visualización de su elección. El modelo de datos CDP en tiempo real de Adobe Experience Platform proporciona perspectivas sobre perfiles, segmentos y destinos y permite los paneles de perspectiva de CDP en tiempo real. Este documento le guía a través del proceso de creación de su modelo de datos de perspectivas de informes y también cómo extender los modelos de datos CDP en tiempo real según sea necesario.
+El almacén acelerado de consultas le permite crear un modelo de datos personalizado o ampliar modelos de datos de Real-time Customer Data Platform existentes. A continuación, puede interactuar con o incrustar sus perspectivas de informes en un marco de informes/visualización de su elección. Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalice las plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../dashboards/cdp-insights-data-model.md).
+
+El modelo de datos de Real-Time CDP de Adobe Experience Platform proporciona perspectivas sobre perfiles, segmentos y destinos, y permite los paneles de perspectiva de Real-Time CDP. Este documento le guía a través del proceso de creación del modelo de datos de perspectivas de informes y también sobre cómo ampliar los modelos de datos de Real-Time CDP según sea necesario.
 
 ## Requisitos previos
 
@@ -20,7 +22,7 @@ Este tutorial utiliza tableros definidos por el usuario para visualizar datos de
 
 ## Primeros pasos
 
-El SKU de Distiller de datos es necesario para crear un modelo de datos personalizado para sus perspectivas de informes y para ampliar los modelos de datos CDP en tiempo real que contienen datos de Platform enriquecidos. Consulte la [embalaje](../packages.md), [guardrails](../guardrails.md#query-accelerated-store)y [licencias](../data-distiller/licence-usage.md) documentación relacionada con el SKU de Distiller de datos. Si no tiene el SKU de Distiller de datos, póngase en contacto con su representante del servicio al cliente de Adobe para obtener más información.
+El SKU de Distiller de datos es necesario para crear un modelo de datos personalizado para la información de informes y para ampliar los modelos de datos de Real-Time CDP que contienen datos de Platform enriquecidos. Consulte la [embalaje](../packages.md), [guardrails](../guardrails.md#query-accelerated-store)y [licencias](../data-distiller/licence-usage.md) documentación relacionada con el SKU de Distiller de datos. Si no tiene el SKU de Distiller de datos, póngase en contacto con su representante del servicio al cliente de Adobe para obtener más información.
 
 ## Creación de un modelo de datos de perspectivas de informes
 
@@ -124,15 +126,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## Amplíe su modelo de datos con el modelo de datos de perspectivas CDP en tiempo real
+## Ampliación del modelo de datos con el modelo de datos de perspectivas de Real-Time CDP
 
 Puede ampliar el modelo de audiencia con detalles adicionales para crear una tabla de dimensiones más rica. Por ejemplo, puede asignar el nombre del segmento y el nombre de destino al identificador de audiencia externo. Para ello, utilice el servicio de consulta para crear o actualizar un nuevo conjunto de datos y añadirlo al modelo de audiencia que combina segmentos y destinos con una identidad externa. El diagrama siguiente ilustra el concepto de esta extensión del modelo de datos.
 
-![Diagrama ERD que vincula el modelo de datos de perspectiva CDP en tiempo real con el modelo de almacén acelerado de consultas.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![Diagrama ERD que vincula el modelo de datos de Real-Time CDP Insight y el modelo de almacén acelerado Query.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## Crear tablas de dimensión para ampliar el modelo de perspectivas de informes
 
-Utilice el servicio de consulta para agregar atributos descriptivos clave desde los conjuntos de datos de dimensiones de CDP en tiempo real enriquecidos a la variable `audienceinsight` modelo de datos y establezca una relación entre la tabla de hechos y la nueva tabla de dimensiones. El SQL siguiente muestra cómo integrar las tablas de dimensión existentes en el modelo de datos de perspectivas de informes.
+Utilice el servicio de consulta para agregar atributos descriptivos clave de los conjuntos de datos de dimensiones enriquecidos de Real-Time CDP al `audienceinsight` modelo de datos y establezca una relación entre la tabla de hechos y la nueva tabla de dimensiones. El SQL siguiente muestra cómo integrar las tablas de dimensión existentes en el modelo de datos de perspectivas de informes.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
