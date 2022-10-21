@@ -5,10 +5,10 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: d5e8e49e50d0c5792828140626b933a4f232dd00
+source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 83%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -129,10 +129,10 @@ ht-degree: 83%
          * [Notas de la versión](./extensions/web/google-data-layer/release-notes.md)
       * [!DNL Splunk] {#splunk}
          * [Información general](./extensions/web/splunk/overview.md)
-      * Extensión de seguimiento de vídeos de [!DNL YouTube] {#youtube}
+      * [!DNL YouTube] seguimiento de vídeo {#youtube}
          * [Información general](./extensions/web/youtube/overview.md)
          * [Notas de la versión](./extensions/web/youtube/release-notes.md)
-      * [!DNL Zendesk] Extensión de la API de eventos {#zendesk}
+      * [!DNL Zendesk] API de eventos {#zendesk}
          * [Información general](./extensions/web/zendesk/overview.md)
    * [Extensiones de terceros](./extensions/3rd-party-extensions.md)
 * Desarrollo de extensiones {#extension-dev}
