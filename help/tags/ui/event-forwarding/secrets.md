@@ -2,9 +2,9 @@
 title: Configuración de secretos en el reenvío de eventos
 description: Aprenda a configurar secretos en la interfaz de usuario para autenticarse en los puntos finales utilizados en las propiedades de reenvío de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1715'
 ht-degree: 1%
 
 ---
@@ -127,6 +127,12 @@ Aparece una ventana emergente que le informa de que el secreto debe autorizarse 
 ![Administrador de autorización de Google](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 Aparece un cuadro de diálogo que le permite introducir las credenciales de su cuenta de Google. Siga las indicaciones para conceder acceso al reenvío de eventos a sus datos en el ámbito seleccionado. Una vez completado el proceso de autorización, se crea el secreto.
+
+>[!IMPORTANT]
+>
+>Si su organización tiene una directiva de reautenticación establecida para aplicaciones de Google Cloud, los secretos creados no se actualizarán correctamente después de que caduque la autenticación (entre 1 y 24 horas, dependiendo de la configuración de la directiva).
+>
+>Para resolver este problema, inicie sesión en la consola de administración de Google y vaya a la **[!DNL App access control]** para que pueda marcar la aplicación de reenvío de eventos (reenvío de eventos de Adobe Real-Time CDP) como [!DNL Trusted]. Consulte la documentación de Google en [definición de la duración de la sesión para Google Cloud services](https://support.google.com/a/answer/9368756) para obtener más información.
 
 ## Editar un secreto
 
