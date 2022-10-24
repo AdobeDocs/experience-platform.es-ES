@@ -2,9 +2,9 @@
 title: Personalización a través de Adobe Target
 description: Aprenda a utilizar la API del servidor para ofrecer y procesar experiencias personalizadas creadas en Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: d6573f8f4d779fb7ed11b44561a0ad9667748b27
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '735'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ La API de servidor de red perimetral puede ofrecer y procesar experiencias perso
 
 >[!IMPORTANT]
 >
->Experiencias de personalización creadas a través de la variable [Compositor de experiencias visuales (VEC) de Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) no son compatibles con la API del servidor.
+>Experiencias de personalización creadas a través de la variable [Compositor de experiencias visuales (VEC) de Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) no son totalmente compatibles con la API del servidor. La API del servidor puede **retrieve** actividades creadas por VEC, pero la API del servidor no puede **render** actividades creadas por VEC. Si desea procesar las actividades creadas por VEC, utilice la variable [SDK web](../edge/home.md).
 
 ## Configurar el conjunto de datos {#configure-your-datastream}
 
