@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: fe8d5f3a73c7db311cd0d82c2a7f3ac63fb1edac
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '841'
 ht-degree: 13%
 
 ---
@@ -287,6 +287,7 @@ ht-degree: 13%
       - [Flujo de datos de conexión de automatización de marketing](tutorials/ui/dataflow/marketing-automation.md)
       - [Flujo de datos de conexión de pago](tutorials/ui/dataflow/payments.md)
       - [Flujo de datos de conexión de protocolo](tutorials/ui/dataflow/protocols.md)
+   - [Crear un flujo de datos de fuentes mediante plantillas en la interfaz de usuario](tutorials/ui/templates.md)
    - [Monitorizar flujos de datos por lotes](tutorials/ui/monitor.md)
    - [Monitorización de flujos de datos de flujo de transmisión](tutorials/ui/monitor-streaming.md)
    - [Actualizar cuentas](tutorials/ui/update.md)

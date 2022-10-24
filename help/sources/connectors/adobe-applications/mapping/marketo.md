@@ -5,14 +5,19 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
+source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 7%
+source-wordcount: '746'
+ht-degree: 6%
 
 ---
 
-# [!DNL Marketo Engage] asignaciones de campos
+# [!DNL Marketo Engage] asignaciones de campos {#marketo-engage-field-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Asignaciones de campos de origen de Marketo"
+>abstract="Para establecer una conexión de origen entre Marketo y Platform, los campos de datos de origen de Marketo deben asignarse a los campos XDM de destino adecuados antes de ingerirse en Platform."
 
 Las tablas siguientes contienen las asignaciones entre los campos de los nueve [!DNL Marketo] conjuntos de datos de y sus campos correspondientes del Modelo de datos de experiencia (XDM).
 
