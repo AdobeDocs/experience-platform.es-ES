@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2345'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,10 @@ En el **[!UICONTROL aplicaciones de Adobe]** categoría, seleccione **[!UICONTRO
 ![catálogo](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Selección de datos
+
+>[!IMPORTANT]
+>
+>Los grupos de informes enumerados en la pantalla pueden proceder de varias regiones. Usted es el responsable de comprender las limitaciones y obligaciones de sus datos y cómo utiliza esos datos en Adobe Experience Platform entre regiones. Asegúrese de que su empresa lo permita.
 
 La variable **[!UICONTROL Agregar datos de origen de Analytics]** le proporciona una lista de [!DNL Analytics] datos del grupo de informes para crear una conexión de origen.
 
