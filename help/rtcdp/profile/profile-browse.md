@@ -1,11 +1,11 @@
 ---
 keywords: ver perfiles rtcdp;vista de perfil rtcdp;perfiles rtcdp
 title: Exploración de perfiles en Real-time Customer Data Platform
-description: Real-time Customer Data Platform le permite examinar los datos del perfil del cliente en tiempo real mediante la interfaz de usuario de Adobe Experience Platform.
+description: Adobe Real-time Customer Data Platform le permite examinar los datos del perfil del cliente en tiempo real mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '535'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ El perfil del cliente en tiempo real crea una vista holística de cada uno de su
 
 En la interfaz de usuario de Adobe Experience Platform, puede ver estos perfiles de solo lectura y ver información importante sobre cada uno de sus clientes, incluidas sus preferencias, eventos pasados, interacciones y los segmentos a los que pertenece el individuo.
 
-Real-time Customer Data Platform se basa en Adobe Experience Platform y, por lo tanto, puede utilizar las funciones de visualización de perfiles de la interfaz de usuario del Experience Platform. Para obtener una guía detallada sobre la visualización de perfiles de clientes dentro de la interfaz de usuario de Platform, consulte la [Guía del usuario del perfil del cliente en tiempo real](../../profile/ui/user-guide.md).
+Adobe Real-time Customer Data Platform se basa en Adobe Experience Platform y, por lo tanto, puede utilizar las funciones de visualización de perfiles de la interfaz de usuario del Experience Platform. Para obtener una guía detallada sobre la visualización de perfiles de clientes dentro de la interfaz de usuario de Platform, consulte la [Guía del usuario del perfil del cliente en tiempo real](../../profile/ui/user-guide.md).
 
-## Mejoras de perfil para CDP en tiempo real, B2B Edition
+## Mejoras de perfil para Real-Time CDP, B2B Edition
 
-Además de las funciones de exploración de perfiles compatibles con Adobe Experience Platform, los usuarios de CDP en tiempo real y B2B Edition pueden acceder a los atributos y eventos B2B dentro del perfil del cliente en el [!UICONTROL Atributos] y [!UICONTROL Eventos] , respectivamente. Los datos B2B también se pueden utilizar para realizar segmentaciones, en las que los segmentos aparecen bajo el [!UICONTROL Pertenencia a segmentos] junto a los segmentos que no sean B2B.
+Además de las funciones de exploración de perfiles compatibles con Adobe Experience Platform, los usuarios de Real-Time CDP y B2B Edition pueden acceder a los atributos y eventos B2B dentro del perfil del cliente en la [!UICONTROL Atributos] y [!UICONTROL Eventos] , respectivamente. Los datos B2B también se pueden utilizar para realizar segmentaciones, en las que los segmentos aparecen bajo el [!UICONTROL Pertenencia a segmentos] junto a los segmentos que no sean B2B.
 
-CDP en tiempo real, B2B Edition también le permite examinar [!UICONTROL Cuentas], [!UICONTROL Oportunidades]y [!UICONTROL Registros de origen] desde las fuentes empresariales asociadas a un cliente individual.
+Real-Time CDP, B2B Edition también le permite explorar [!UICONTROL Cuentas], [!UICONTROL Oportunidades]y [!UICONTROL Registros de origen] desde las fuentes empresariales asociadas a un cliente individual.
 
 Para explorar estas mejoras, comience por seguir los pasos descritos en la sección [Guía del usuario del perfil del cliente en tiempo real](../../profile/ui/user-guide.md) para examinar un perfil combinando directiva o área de nombres de identidad.
 
@@ -43,7 +43,7 @@ Para obtener más información sobre la visualización y exploración de perfile
 
 ### Ficha Oportunidades
 
-La variable **[!UICONTROL Oportunidades]** proporciona detalles relacionados con las oportunidades abiertas y cerradas relacionadas con la cuenta. Estas oportunidades se pueden incorporar en Experience Platform de múltiples fuentes, sin embargo, CDP en tiempo real, B2B Edition facilita a los especialistas en marketing ver todas estas oportunidades juntas en un solo lugar.
+La variable **[!UICONTROL Oportunidades]** proporciona detalles relacionados con las oportunidades abiertas y cerradas relacionadas con la cuenta. Estas oportunidades pueden ser incorporadas en Experience Platform de múltiples fuentes, sin embargo, Real-Time CDP, B2B Edition facilita a los especialistas en marketing ver todas estas oportunidades juntas en un solo lugar.
 
 Cada oportunidad incluye información como el nombre de la oportunidad, su cantidad, etapa y si la oportunidad está abierta, cerrada, ganada o perdida.
 

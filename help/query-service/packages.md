@@ -1,9 +1,9 @@
 ---
 title: Paquetes de servicio de consulta
 description: El siguiente documento describe los paquetes de funcionalidades y productos disponibles para el servicio de consulta y destaca las diferencias entre las consultas ad hoc y las consultas por lotes.
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ El servicio de consulta de Adobe Experience Platform se puede dividir en dos fun
 
 Las funcionalidades del servicio de consulta están empaquetadas con los siguientes productos y complementos:
 
-- **Aplicaciones basadas en plataformas** (Real-time Customer Data Platform, Customer Journey Analytics y Adobe Journey Optimizer): El acceso al servicio de consulta para ejecutar consultas ad hoc se proporciona desde el principio con cada variación y nivel de aplicaciones basadas en Platform.
+- **Aplicaciones basadas en plataformas** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics y Adobe Journey Optimizer): El acceso al servicio de consulta para ejecutar consultas ad hoc se proporciona desde el principio con cada variación y nivel de aplicaciones basadas en Platform.
 - **[!DNL Data Distiller]** (paquete de complementos que se puede adquirir con Adobe Real-Time CDP, Customer Journey Analytics y Adobe Journey Optimizer): El acceso al servicio de consultas para ejecutar consultas por lotes se proporciona con [!DNL Data Distiller].
 
 La siguiente tabla describe las autorizaciones clave del servicio de consulta en función de cómo están empaquetadas:
@@ -30,7 +30,7 @@ La siguiente tabla describe las autorizaciones clave del servicio de consulta en
 | Caso de uso admitido | <ul><li>&#x200B; de exploración</li><li>&#x200B; de detección de datos</li><li>Validación de datos</li><li>Experimento</li></ul> | <ul><li>Limpieza</li><li>Forma</li><li>Manipulación</li><li>Enriquecimiento</li></ul> |
 | Semántica compatible | <ul><li>Consultas SELECT</li></ul> | <ul><li>Consultas de CTAS e ITAS</li></ul> |
 | Tiempo máximo de ejecución | 10 minutos | 24 horas |
-| Métrica de licencias | **Consulta de la concurrencia del usuario**: <ul><li>1 usuario simultáneo (CDP en tiempo real, Adobe Journey Optimizer) &#x200B;</li><li>5 usuarios simultáneos (Customer Journey Analytics) &#x200B;</li></ul> **Conversión de consulta**: <ul><li>1 consulta en ejecución simultánea (todas las aplicaciones) &#x200B;</li></ul> **Otros usuarios de consultas ad hoc incluyen complementos** se puede adquirir para aumentar los derechos de consulta ad hoc autorizados de los clientes. <ul><li>+5 usuarios simultáneos adicionales por paquete</li><li>+1 consulta de ejecución concurrente adicional por paquete</li></ul> | **Horario de cómputo**: <ul><li>Variable (según los derechos de aplicación del cliente)</li></ul> **Horario de cómputo** es una medida del tiempo que tarda el motor de Query Service en leer, procesar y escribir datos de nuevo en el lago de datos cuando se ejecuta una consulta por lotes. |
+| Métrica de licencias | **Consulta de la concurrencia del usuario**: <ul><li>1 usuario simultáneo (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 usuarios simultáneos (Customer Journey Analytics) &#x200B;</li></ul> **Conversión de consulta**: <ul><li>1 consulta en ejecución simultánea (todas las aplicaciones) &#x200B;</li></ul> **Otros usuarios de consultas ad hoc incluyen complementos** se puede adquirir para aumentar los derechos de consulta ad hoc autorizados de los clientes. <ul><li>+5 usuarios simultáneos adicionales por paquete</li><li>+1 consulta de ejecución concurrente adicional por paquete</li></ul> | **Horario de cómputo**: <ul><li>Variable (según los derechos de aplicación del cliente)</li></ul> **Horario de cómputo** es una medida del tiempo que tarda el motor de Query Service en leer, procesar y escribir datos de nuevo en el lago de datos cuando se ejecuta una consulta por lotes. |
 | Interfaz de ejecución de consultas | <ul><li>Interfaz de usuario del servicio de consulta</li><li>Interfaz de usuario de cliente de terceros</li><li>[!DNL PostgresSQL] interfaz de usuario del cliente</li></ul> | <ul><li>Interfaz de usuario de consulta </li><li>Interfaz de usuario de cliente de terceros</li><li>[!DNL PostgresSQL] interfaz de usuario del cliente</li><li>API de REST</li></ul> |
 | Resultados De Consulta Devueltos Mediante | Interfaz de usuario del cliente | Conjunto de datos derivado almacenado en el lago de datos |
 | Límite de resultados | <ul><li>Interfaz de usuario de consulta: 100 filas</li><li>Cliente de terceros: 50.000</li><li>[!DNL PostgresSQL] cliente - 50.000</li></ul> | <ul><li>Interfaz de usuario de consulta (sin límite superior de filas)</li><li>Clientes de terceros (sin límite superior de filas)</li><li>[!DNL PostgresSQL] cliente (sin límite superior de filas)</li><li>API de REST (sin límite superior de filas)</li></ul> |

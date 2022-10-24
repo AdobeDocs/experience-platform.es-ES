@@ -5,9 +5,9 @@ title: Glosario de Adobe Experience Platform
 topic-legacy: getting started
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '7428'
+source-wordcount: '7436'
 ht-degree: 0%
 
 ---
@@ -118,9 +118,9 @@ ht-degree: 0%
 
 **Etiqueta de contrato C5**: A `C5` la etiqueta de uso de datos del contrato especifica que los datos no se pueden usar para la segmentación entre sitios de contenido o anuncios basados en intereses. La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes: Los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés del usuario; se utiliza en otro contexto, como en otro sitio o aplicación; y se usa para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias.
 
-**Etiqueta de contrato C6**: A `C6` la etiqueta de uso de datos de contrato especifica que los datos no se pueden usar para la segmentación de anuncios en el sitio. La segmentación de anuncios en el sitio incluye la selección y el envío de anuncios en los sitios web de la organización, o aplicaciones, o para medir el envío y la eficacia de dichos anuncios. Esto incluye el uso de datos en el sitio recopilados anteriormente sobre el interés de los usuarios por seleccionar publicidades, procesar datos sobre qué publicidades se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con el anuncio, como seleccionar un anuncio o realizar una compra.
+**Etiqueta de contrato C6**: A `C6` la etiqueta de uso de datos de contrato especifica que los datos no se pueden usar para la segmentación de anuncios en el sitio. La segmentación de anuncios en el sitio incluye la selección y entrega de anuncios en los sitios web de la organización, o aplicaciones, o para medir la entrega y efectividad de dichos anuncios. Esto incluye el uso de datos en el sitio recopilados anteriormente sobre el interés de los usuarios por seleccionar publicidades, procesar datos sobre qué publicidades se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con el anuncio, como seleccionar un anuncio o realizar una compra.
 
-**Etiqueta de contrato C7**: A `C7` la etiqueta de uso de datos de contrato especifica que los datos no se pueden usar para segmentar el contenido en el sitio. La segmentación de contenido en el sitio incluye la selección y entrega de contenido en los sitios web de la organización, o en las aplicaciones, o para medir la entrega y la eficacia de dicho contenido. Esto incluye información recopilada anteriormente sobre el interés de los usuarios por seleccionar contenido, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró y si los usuarios realizaron alguna acción relacionada con el contenido, como seleccionar contenido.
+**Etiqueta de contrato C7**: A `C7` la etiqueta de uso de datos de contrato especifica que los datos no se pueden usar para segmentar el contenido en el sitio. La segmentación de contenido en el sitio incluye la selección y entrega de contenido en los sitios web de la organización, o en las aplicaciones, o para medir la entrega y efectividad de dicho contenido. Esto incluye información recopilada anteriormente sobre el interés de los usuarios por seleccionar contenido, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró y si los usuarios realizaron alguna acción relacionada con el contenido, como seleccionar contenido.
 
 **Etiqueta de contrato C8**: A `C8` la etiqueta de uso de datos del contrato especifica que los datos no se pueden usar para medir los sitios web o las aplicaciones de su organización. Esto no incluye la segmentación basada en intereses, que es la recopilación de información sobre el uso de este servicio para personalizar posteriormente el contenido o la publicidad en otros contextos.
 
@@ -298,7 +298,7 @@ ht-degree: 0%
 
 **Función de entrada**: Se especifica una función de entrada en la asignación de funciones y la utiliza un modelo de aprendizaje automático para hacer predicciones.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] como [!DNL Attribution AI] y [!DNL Customer AI] son modelos de aprendizaje automático basados en inteligencia artificial que requieren que el Experience Platform (o las aplicaciones creadas sobre Platform como Real-time Customer Data Platform) se ejecute y funcione.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] como [!DNL Attribution AI] y [!DNL Customer AI] son modelos de aprendizaje automático basados en inteligencia artificial que requieren que el Experience Platform (o las aplicaciones creadas sobre Platform como Adobe Real-time Customer Data Platform) se ejecute y funcione.
 
 **Segmentación o personalización basada en intereses**: La segmentación basada en intereses, también conocida como personalización, se produce si se cumplen las tres condiciones siguientes:
 
@@ -414,7 +414,7 @@ ht-degree: 0%
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] aúna datos conocidos y desconocidos de clientes para crear perfiles de clientes fiables con integración simplificada, segmentación inteligente y activación en tiempo real en todo el recorrido digital de clientes.
+**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) aúna datos conocidos y desconocidos de los clientes para crear perfiles de clientes fiables con una integración simplificada, segmentación inteligente y activación en tiempo real en todo el recorrido digital de clientes.
 
 **Perfil del cliente en tiempo real**: El perfil del cliente en tiempo real (a veces denominado perfil) proporciona una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Profile le permite consolidar sus datos de clientes en perfiles individuales que ofrecen cuentas procesables con marca de hora de cada interacción con clientes.
 

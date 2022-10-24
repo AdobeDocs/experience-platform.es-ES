@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2301'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ Se pueden realizar varias conexiones entrantes para incluir varios grupos de inf
 
 >[!NOTE]
 >
->Los datos de varios grupos de informes solo se pueden habilitar para el perfil de datos del cliente en tiempo real si no hay conflictos de datos, como dos propiedades personalizadas (eVars, listas y props) que tengan un significado diferente.
+>Los datos de varios grupos de informes solo se pueden habilitar para el perfil del cliente en tiempo real si no hay conflictos de datos, como dos propiedades personalizadas (eVars, listas y props) que tengan un significado diferente.
 
 Para crear un [!DNL Analytics] conexión de origen, seleccione un grupo de informes y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 

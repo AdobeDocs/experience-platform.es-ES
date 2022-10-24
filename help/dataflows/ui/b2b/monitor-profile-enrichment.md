@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitorización de trabajos de enriquecimiento de perfiles
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 2%
@@ -93,7 +93,7 @@ Utilice la variable **[!UICONTROL Mostrar solo errores]** alterne para mostrar s
 
 Al seguir este tutorial, ahora puede supervisar y comprender correctamente las métricas de trabajos de enriquecimiento de perfiles. Consulte los siguientes documentos para obtener más información:
 
-* [Cuentas relacionadas en tiempo real CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+* [Cuentas relacionadas en Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Ficha Cuentas relacionadas en la guía de la interfaz de usuario del perfil de la cuenta](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [Concordancia de posibles clientes con cuentas en tiempo real CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [Puntuación predictiva de posibles clientes y cuentas en tiempo real CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Confrontación de posibles clientes con cuentas en Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Puntuación predictiva de posibles clientes y cuentas en Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

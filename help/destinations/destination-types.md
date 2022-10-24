@@ -3,9 +3,9 @@ keywords: destinos;destino;tipos de destino
 title: Tipos y categorías de destino
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ Los destinos de exportación de perfil reciben datos sin procesar, a menudo con 
 
 >[!IMPORTANT]
 >
->Los destinos de empresa o los destinos de exportación de perfil de flujo continuo están disponibles para [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) solo clientes.
+>Los destinos de empresa o los destinos de exportación de perfil de flujo continuo están disponibles para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) solo clientes.
 
-Utilice los conectores de datos de destino empresarial para ofrecer perfiles de Real-time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros a fin de sincronizar, analizar y ampliar los casos de uso de enriquecimiento de perfiles.
+Utilice los conectores de datos de destino empresarial para ofrecer perfiles de Adobe Real-time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros a fin de sincronizar, analizar y ampliar los casos de uso de enriquecimiento de perfiles.
 
 Estos destinos reciben datos de segmentos y perfiles como flujos de datos de Experience Platform.
 

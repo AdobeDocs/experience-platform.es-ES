@@ -5,10 +5,10 @@ title: Información general sobre la recopilación de datos
 topic-legacy: overview
 description: Obtenga información sobre las distintas tecnologías que intervienen en la recopilación de datos sobre las experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 6%
+source-wordcount: '514'
+ht-degree: 8%
 
 ---
 
@@ -30,7 +30,7 @@ La recopilación de datos se centra en la capacidad de detección y accesibilida
 * [Reenvío de eventos](../tags/ui/event-forwarding/overview.md)
 * [SDK web de Adobe Experience Platform](../edge/home.md)
 * [SDK móvil de Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
-* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=es)
 * [Modelo de datos de experiencia (XDM)](../xdm/home.md)
 * [Servicio de ID de Adobe Experience Platform](../identity-service/home.md)
 
@@ -64,7 +64,7 @@ Además, los conjuntos de datos de se integran con varias funciones de Platform 
 
 >[!NOTE]
 >
->El reenvío de eventos es una función de pago que solo se incluye como parte de la oferta Conexiones de Real-time Customer Data Platform.
+>El reenvío de eventos es una función de pago que solo se incluye como parte de la oferta Conexiones de Adobe Real-time Customer Data Platform.
 
 ## Pasos siguientes
 

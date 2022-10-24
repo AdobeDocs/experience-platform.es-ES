@@ -2,9 +2,9 @@
 title: Integración de la compatibilidad con IAB TCF 2.0 mediante etiquetas y la extensión del SDK web de la plataforma
 description: Obtenga información sobre cómo configurar el consentimiento IAB TCF 2.0 con etiquetas y la extensión Adobe Experience Platform Web SDK.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Cuando los eventos se activan después del evento de experiencia inicial, los do
 
 ## Pasos siguientes
 
-Ahora que ha aprendido a utilizar IAB TCF 2.0 con la extensión web SDK de Platform, también puede optar por integrar con otras soluciones de Adobe, como Adobe Analytics o la plataforma de datos del cliente en tiempo real. Consulte la [Resumen de Transparencia y Consentimiento de IAB Framework 2.0](./overview.md) para obtener más información.
+Ahora que ha aprendido a utilizar IAB TCF 2.0 con la extensión web SDK de Platform, también puede optar por integrar con otras soluciones de Adobe, como Adobe Analytics o Adobe Real-time Customer Data Platform. Consulte la [Resumen de Transparencia y Consentimiento de IAB Framework 2.0](./overview.md) para obtener más información.

@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, marzo de 2022
 description: Notas de la versión de marzo de 2022 para Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 5%
@@ -47,7 +47,7 @@ Para obtener más información sobre los registros de auditoría en Platform, co
 >
 >La función Cuentas relacionadas solo está disponible para clientes de Real-Time CDP B2B Edition.
 
-A menudo, las empresas B2B tienen la información de sus clientes almacenada en múltiples sistemas, cada uno de los cuales incluye solamente datos parciales o incluso contradictorios para la misma entidad comercial del mundo real. Esto crea un enorme desafío de llegar a una visión precisa de sus clientes, reduciendo así la eficiencia y eficacia de sus esfuerzos de ventas y marketing B2B. Con el lanzamiento de cuentas relacionadas, [!DNL Real-time CDP B2B] ahora muestra una lista de cuentas similares a la cuenta que está explorando. Puede incluir las cuentas relacionadas en las definiciones de segmentos para ampliar su alcance o aplicar criterios más amplios en sus segmentos.
+A menudo, las empresas B2B tienen la información de sus clientes almacenada en múltiples sistemas, cada uno de los cuales incluye solamente datos parciales o incluso contradictorios para la misma entidad comercial del mundo real. Esto crea un enorme desafío de llegar a una visión precisa de sus clientes, reduciendo así la eficiencia y eficacia de sus esfuerzos de ventas y marketing B2B. Con el lanzamiento de cuentas relacionadas, [!DNL Real-Time CDP B2B] ahora muestra una lista de cuentas similares a la cuenta que está explorando. Puede incluir las cuentas relacionadas en las definiciones de segmentos para ampliar su alcance o aplicar criterios más amplios en sus segmentos.
 
 Obtenga más información sobre la función en las siguientes páginas de documentación:
 
@@ -55,7 +55,7 @@ Obtenga más información sobre la función en las siguientes páginas de docume
 - [Ficha Cuentas relacionadas en la guía de la interfaz de usuario del perfil de la cuenta](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [Cómo utilizar cuentas relacionadas en definiciones de segmentos](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Para obtener más información sobre CDP B2B Edition en tiempo real, consulte la [información general](../../rtcdp/overview.md).
+Para obtener más información sobre Real-Time CDP B2B Edition, consulte la [información general](../../rtcdp/overview.md).
 
 ## Alertas {#alerts}
 

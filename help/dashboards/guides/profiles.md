@@ -4,9 +4,9 @@ title: Guía del panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '3387'
+source-wordcount: '3388'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 La variable [!UICONTROL Examinar] le permite buscar y ver los perfiles de solo lectura introducidos en su organización. Desde aquí puede ver información importante perteneciente al perfil sobre sus preferencias, eventos anteriores, interacciones y segmentos
 
-Para obtener más información sobre las capacidades de visualización de perfiles proporcionadas en la interfaz de usuario de Platform, consulte la documentación de [exploración de perfiles en Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+Para obtener más información sobre las capacidades de visualización de perfiles proporcionadas en la interfaz de usuario de Platform, consulte la documentación de [exploración de perfiles en Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Combinar directivas {#merge-policies}
 

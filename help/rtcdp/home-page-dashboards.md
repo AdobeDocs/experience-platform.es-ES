@@ -3,22 +3,22 @@ keywords: información general sobre las métricas; información general sobre l
 title: Página principal de Real-time Customer Data Platform y tableros
 description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '620'
 ht-degree: 2%
 
 ---
 
-# [!DNL Real-time Customer Data Platform] página de inicio y tableros
+# [!DNL Real-Time Customer Data Platform] página de inicio y tableros
 
-La página de inicio de Real-time Customer Data Platform (CDP en tiempo real), que incluye un panel de métricas, aparece cuando inicia sesión en CDP en tiempo real.
+La página de inicio de Adobe Real-time Customer Data Platform (Real-Time CDP), que incluye un tablero de métricas, aparece cuando inicia sesión en Real-Time CDP.
 
-La página de inicio es solo uno de los lugares en los que aparecen las tarjetas de métricas. CDP en tiempo real proporciona tarjetas de métricas a lo largo de su experiencia. Estas métricas le informan sobre los datos, el perfil y las audiencias de segmento del sistema.
+La página de inicio es solo uno de los lugares en los que aparecen las tarjetas de métricas. Real-Time CDP proporciona tarjetas de métricas a lo largo de toda la experiencia. Estas métricas le informan sobre los datos, el perfil y las audiencias de segmento del sistema.
 
 ![imagen](assets/home.png)
 
-Si no hay datos en el sistema cuando inicia sesión en CDP en tiempo real, no aparece el panel en la página principal. En este caso, la página principal proporciona material de aprendizaje para una primera experiencia de usuario. A medida que se recopilan los datos, es decir, como <!--sources-->se crean conjuntos de datos, perfiles, segmentos y destinos, y los flujos de datos se actualizan en el sistema; el tablero se actualiza automáticamente para mostrar información sobre esos datos<!-- in metric cards-->.
+Si no hay datos en el sistema cuando inicia sesión en Real-Time CDP, no aparece el tablero de la página principal. En este caso, la página principal proporciona material de aprendizaje para una primera experiencia de usuario. A medida que se recopilan los datos, es decir, como <!--sources-->se crean conjuntos de datos, perfiles, segmentos y destinos, y los flujos de datos se actualizan en el sistema; el tablero se actualiza automáticamente para mostrar información sobre esos datos<!-- in metric cards-->.
 
 ## Vista del tablero de la página de inicio
 
@@ -53,7 +53,7 @@ Este recuento utiliza el valor predeterminado [combinar directiva](profile/merge
 
 El número de perfiles se actualiza una vez cada 24 horas.
 
-Para obtener más información sobre los perfiles, consulte [Una visión unificada de su cliente en CDP en tiempo real](profile/profile-overview.md).
+Para obtener más información sobre los perfiles, consulte [Una vista unificada de su cliente en Real-Time CDP](profile/profile-overview.md).
 
 ### Segmentos
 
@@ -77,7 +77,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

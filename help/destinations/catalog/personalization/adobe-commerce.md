@@ -1,7 +1,7 @@
 ---
 title: (Beta) Conector de destino de Adobe Commerce
 description: Descubra cómo los comerciantes de Adobe Commerce y Real-Time CDP pueden personalizar la experiencia de compra al ofrecer contenido y promociones de sitio altamente relevantes, personalizados para los segmentos de clientes creados y administrados dentro de Real-Time CDP.
-source-git-commit: 51c5458f444220fb526eb9e82417ae6456857de6
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 2%
@@ -36,7 +36,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo de destinos para clientes beta seleccionados que hayan adquirido CDP Prime o Ultimate y Adobe Commerce en tiempo real.
+Esta extensión está disponible en el catálogo de destinos para clientes beta seleccionados que hayan comprado Real-Time CDP Prime o Ultimate y Adobe Commerce.
 
 Los clientes de la versión beta deben tener acceso a:
 
@@ -90,7 +90,7 @@ Lectura [Activar perfiles y segmentos en destinos de solicitud de perfil](../../
 
 ## Pasos siguientes en [!DNL Adobe Commerce]
 
-Ahora que ha configurado la variable [!DNL Commerce] destino dentro de Experience Platform, debe configurar la variable [!DNL Commerce Admin] para importar los segmentos de CDP en tiempo real que ha creado. Consulte la [[!DNL Commerce] documentación](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) para obtener más información.
+Ahora que ha configurado la variable [!DNL Commerce] destino dentro de Experience Platform, debe configurar la variable [!DNL Commerce Admin] para importar los segmentos de Real-Time CDP que ha creado. Consulte la [[!DNL Commerce] documentación](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) para obtener más información.
 
 ## Validación de la exportación de datos {#exported-data}
 

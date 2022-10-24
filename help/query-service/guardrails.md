@@ -3,7 +3,7 @@ keywords: Experience Platform;consulta;servicio de consulta;solución de problem
 title: Protecciones para el servicio de consulta
 description: Este documento proporciona información sobre los límites de uso de los datos del servicio de consulta para ayudarle a optimizar el uso de la consulta.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: e40a9fb0149e194de693a98e5d185860a255b5c4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 4%
@@ -84,7 +84,7 @@ La tabla siguiente proporciona los límites de protección recomendados y la des
 
 | Seguridad | Límite | Tipo de límite | Descripción |
 |---|---|---|---|
-| Concurrencia de consulta | 4 | Grave | Para garantizar que las consultas sobre datos acumulados a través de la API de informes (incluidas las consultas que mejoran los modelos de datos como los modelos de datos CDP en tiempo real) tengan los recursos para ejecutarse de forma eficaz, la API de informes rastrea la utilización de los recursos asignando ranuras de concurrencia a cada consulta. El sistema pone las consultas en cola y espera hasta que las ranuras de concurrencia estén disponibles o se puedan servir desde la caché. Un máximo de cuatro ranuras de consulta simultáneas están disponibles en un momento dado.<br>Si accede a la API de informes a través de una herramienta BI y necesita más concurrencia, se requiere un servidor BI. |
+| Concurrencia de consulta | 4 | Grave | Para garantizar que las consultas sobre datos agregados a través de la API de informes (incluidas las consultas que mejoran los modelos de datos como los modelos de datos de Real-Time CDP) tengan los recursos para ejecutarse de forma eficaz, la API de informes rastrea la utilización de los recursos asignando espacios de concurrencia a cada consulta. El sistema pone las consultas en cola y espera hasta que las ranuras de concurrencia estén disponibles o se puedan servir desde la caché. Un máximo de cuatro ranuras de consulta simultáneas están disponibles en un momento dado.<br>Si accede a la API de informes a través de una herramienta BI y necesita más concurrencia, se requiere un servidor BI. |
 
 {style=&quot;table-layout:auto&quot;}
 

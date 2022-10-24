@@ -5,9 +5,9 @@ title: Procesamiento de consentimiento en Adobe Experience Platform
 topic-legacy: getting started
 description: Aprenda a procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f9ccce8943e2aaf65cd3e0ffe2b974a668bba9b7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1567'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Este documento proporciona información general sobre cómo configurar las opera
 
 >[!NOTE]
 >
->Este documento se centra en el procesamiento de datos de consentimiento mediante el estándar de Adobe. Si está procesando datos de consentimiento de conformidad con el marco de transparencia y consentimiento IAB (TCF) 2.0, consulte la guía de [Compatibilidad con TCF 2.0 en Real-time Customer Data Platform](../iab/overview.md).
+>Este documento se centra en el procesamiento de datos de consentimiento mediante el estándar de Adobe. Si está procesando datos de consentimiento de conformidad con el marco de transparencia y consentimiento IAB (TCF) 2.0, consulte la guía de [Compatibilidad con TCF 2.0 en Adobe Real-time Customer Data Platform](../iab/overview.md).
 
 ## Requisitos previos
 

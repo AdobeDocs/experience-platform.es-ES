@@ -2,9 +2,9 @@
 title: Tableros definidos por el usuario
 description: Aprenda a crear y administrar tableros personalizados donde puede crear, agregar y editar widgets personalizados para visualizar métricas clave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Los widgets se pueden volver a organizar y cambiar de tamaño mientras se encuen
 
 ![El tablero definido por el usuario con un widget personalizado y el botón de guardar resaltado.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
-Para garantizar que cada consulta de un panel de perspectivas de Real-time Customer Data Platform tenga recursos suficientes para ejecutarse de forma eficaz, la API rastrea el uso de los recursos asignando espacios de concurrencia a cada consulta. El sistema puede procesar hasta cuatro consultas simultáneas y, por lo tanto, hay cuatro ranuras de consulta simultáneas disponibles en un momento determinado. Las consultas se ponen en cola en función de las ranuras de concurrencia y después esperan en la cola hasta que haya suficientes ranuras de concurrencia disponibles.
+Para garantizar que cada consulta de un panel de perspectivas de Adobe Real-time Customer Data Platform tenga recursos suficientes para ejecutarse de forma eficaz, la API rastrea el uso de los recursos asignando espacios de concurrencia a cada consulta. El sistema puede procesar hasta cuatro consultas simultáneas y, por lo tanto, hay cuatro ranuras de consulta simultáneas disponibles en un momento determinado. Las consultas se ponen en cola en función de las ranuras de concurrencia y después esperan en la cola hasta que haya suficientes ranuras de concurrencia disponibles.
 
 ## Pasos siguientes
 

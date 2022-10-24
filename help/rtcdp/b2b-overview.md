@@ -1,40 +1,40 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;plataforma de datos de clientes en tiempo real;cdp en tiempo real;b2b;cdp;Customer AI
-title: Información general de CDP B2B Edition en tiempo real
+title: Información general de Real-Time CDP B2B Edition
 description: Descripción general de la cuenta de Real-time Customer Data Platform B2B Edition
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 1%
+source-wordcount: '1084'
+ht-degree: 0%
 
 ---
 
 # Información general de Real-time Customer Data Platform B2B Edition
 
-El CDP B2B Edition en tiempo real, que se basa en Real-time Customer Data Platform (CDP en tiempo real), está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
+Basado en Adobe Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
 
-Hay mejoras en una variedad de funcionalidades de Adobe Experience Platform que distinguen CDP B2B Edition en tiempo real de su contraparte B2C. Incluyen mejoras en el Modelo de datos de experiencia (XDM) para casos de uso B2B, actualizaciones para la resolución de identidades y la segmentación de perfiles, así como un conector y destino personalizado para [!DNL Marketo Engage]. La variable [!DNL Marketo] connector permite a las marcas B2B conectar sus datos de participación B2B líderes en el sector con información de comportamiento para nutrir posibles clientes y mejorar las operaciones de marketing basadas en cuentas.
+Hay mejoras en una variedad de funcionalidades de Adobe Experience Platform que distinguen Real-Time CDP B2B Edition de su homólogo B2C. Incluyen mejoras en el Modelo de datos de experiencia (XDM) para casos de uso B2B, actualizaciones para la resolución de identidades y la segmentación de perfiles, así como un conector y destino personalizado para [!DNL Marketo Engage]. La variable [!DNL Marketo] connector permite a las marcas B2B conectar sus datos de participación B2B líderes en el sector con información de comportamiento para nutrir posibles clientes y mejorar las operaciones de marketing basadas en cuentas.
 
-Con CDP B2B Edition en tiempo real, puede:
+Con Real-Time CDP B2B Edition, puede:
 
 * Combine los datos recopilados de varias fuentes en una sola vista para crear personas y perfiles de cuenta holísticos.
 * Enriquezca, segmente y exporte todos sus datos de fuentes cruzadas desde un almacén centralizado de perfiles de cuenta unificados.
 * Administre sus datos con herramientas de control de datos disponibles en cada paso del proceso de centralización para garantizar que sus datos se ajusten a las normativas legales y a las políticas del negocio.
 
-Los detalles más completos sobre las mejoras realizadas para CDP B2B Edition en tiempo real se dividen en secciones a continuación.
+Los detalles más completos sobre las mejoras realizadas para Real-Time CDP B2B Edition se dividen en secciones a continuación.
 
 ## XDM
 
-CDP B2B Edition en tiempo real proporciona varias nuevas clases de esquema XDM, grupos de campos y tipos de relación para capturar y estructurar sus datos específicamente para propósitos B2B. Consulte la descripción general sobre [XDM en la edición B2B de CDP en tiempo real](./schemas/b2b.md) para obtener un desglose de cada una de estas mejoras.
+Real-Time CDP B2B Edition proporciona varias nuevas clases de esquema XDM, grupos de campos y tipos de relación para capturar y estructurar los datos específicamente para fines B2B. Consulte la descripción general sobre [XDM en la edición B2B de Real-Time CDP](./schemas/b2b.md) para obtener un desglose de cada una de estas mejoras.
 
-Mediante esquemas B2B preconfigurados, puede incorporar datos en una estructura estandarizada y procesable. Muchas de las nuevas clases de esquema se asignan casi directamente a las que se encuentran en los CRM principales, como [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo]y otras fuentes de datos B2B. Con CDP B2B Edition en tiempo real, puede incorporar datos de fuentes B2B a Platform de manera directa y con resultados que sean fáciles de auditar.
+Mediante esquemas B2B preconfigurados, puede incorporar datos en una estructura estandarizada y procesable. Muchas de las nuevas clases de esquema se asignan casi directamente a las que se encuentran en los CRM principales, como [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo]y otras fuentes de datos B2B. Con Real-Time CDP B2B Edition, puede incorporar datos de fuentes B2B a Platform de forma directa y con resultados que sean fáciles de auditar.
 
 Estas mejoras de XDM le permiten ingerir y activar mejor los datos a través de fuentes y destinos centrados en B2B, lo que mejora la unificación y presentación de datos para casos de uso más diversos y flexibles.
 
 ## Resolución de identidad
 
-Después de definir los esquemas y de incorporar los datos de acuerdo con esos esquemas, CDP B2B Edition en tiempo real identifica los registros de origen que representan a personas y empresas del mundo real a través de un poderoso sistema de resolución de identidades en tiempo real.
+Después de definir los esquemas y de incorporar los datos de acuerdo con esos esquemas, Real-Time CDP B2B Edition identifica los registros de origen que representan a personas y empresas del mundo real a través de un poderoso sistema de resolución de identidades en tiempo real.
 
 El sistema de resolución de identidades ofrece las siguientes características:
 
@@ -51,7 +51,7 @@ Los identificadores coincidentes se utilizan para vincular y combinar registros 
 
 ## Perfiles y segmentación
 
-Una vez que CDP B2B Edition en tiempo real ha introducido datos y resuelto identidades relacionadas con personas, empresas, atributos y comportamientos, esos datos se utilizan para construir perfiles. Estos perfiles se pueden segmentar en audiencias explorables que luego se pueden activar en varios destinos.
+Una vez que Real-Time CDP B2B Edition ha introducido datos y resuelto identidades relacionadas con personas, empresas, atributos y comportamientos, esos datos se utilizan para construir perfiles. Estos perfiles se pueden segmentar en audiencias explorables que luego se pueden activar en varios destinos.
 
 Cuando se implementa correctamente, el sistema realiza el seguimiento de las personas que utilizan identificadores principales únicos en lugar de atributos que pueden cambiar, como las direcciones de correo electrónico. Esto significa que cuando alguien cambia de trabajo, el sistema sigue su ejemplo. La persona sigue siendo la misma entidad, pero en su lugar están vinculadas a una nueva cuenta. Esta funcionalidad nativa ofrece un bueno vector para la expansión a nuevas cuentas, ya que el sistema sigue a estas personas como individuos, incluidos todos sus atributos y comportamientos.
 
@@ -61,25 +61,25 @@ Platform permite la ingesta de datos de fuentes externas, al tiempo que permite 
 
 >[!NOTE]
 >
->La variable [!DNL Marketo] el origen es **not** necesario para utilizar CDP B2B Edition en tiempo real.
+>La variable [!DNL Marketo] el origen es **not** necesario para utilizar Real-Time CDP B2B Edition.
 
-Consulte la [fuentes en tiempo real CDP B2B Edition](./sources/b2b.md) documentación para obtener más información sobre Marketo y la introducción de datos B2B en Platform.
+Consulte la [fuentes en Real-Time CDP B2B Edition](./sources/b2b.md) documentación para obtener más información sobre Marketo y la introducción de datos B2B en Platform.
 
 ## Destinos B2B
 
-Los destinos de Experience Platform como Customer Match de Google, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads y Google Ad Manager están disponibles y son totalmente compatibles con CDP B2B Edition en tiempo real. El destino del Marketo Engage también transmite los datos de pertenencia a segmentos desde Platform y lo pone a disposición como listas en Marketo.
+Los destinos de Experience Platform como Customer Match de Google, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads y Google Ad Manager están disponibles y son totalmente compatibles con Real-Time CDP B2B Edition. El destino del Marketo Engage también transmite los datos de pertenencia a segmentos desde Platform y lo pone a disposición como listas en Marketo.
 
 Consulte la descripción general de la [Destino del Marketo Engage](../destinations/catalog/adobe/marketo-engage.md) para obtener más información.
 
-Para empresas con más de un CRM, CDP B2B Edition en tiempo real proporciona la opción de configurar conectores de destino para separar instancias de Marketo o CRM. Si es necesario, puede configurar los conectores de destino para cada instancia y enviar audiencias a cada una de las instancias de CRM de forma independiente.
+Para empresas con más de un CRM, Real-Time CDP B2B Edition proporciona la opción de configurar conectores de destino para separar instancias de Marketo o CRM. Si es necesario, puede configurar los conectores de destino para cada instancia y enviar audiencias a cada una de las instancias de CRM de forma independiente.
 
 ## Pasos siguientes
 
-Ahora que comprende mejor los beneficios para los especialistas en marketing que ofrece CDP B2B Edition en tiempo real, y las diferencias entre ella y CDP en tiempo real, puede aprender a aplicar estas funciones a su propia organización IMS.
+Ahora que comprende mejor las ventajas para los especialistas en marketing que ofrece Real-Time CDP B2B Edition y las diferencias entre esta y Real-Time CDP, puede aprender a aplicar estas funciones a su propia organización de IMS.
 
-Para comprender cómo CDP B2B Edition en tiempo real puede beneficiar a su modelo de servicio de empresa a empresa, consulte la siguiente documentación para ayudarle a empezar:
+Para comprender cómo Real-Time CDP B2B Edition puede beneficiar a su modelo de servicio de empresa a empresa, consulte la siguiente documentación para ayudarle a empezar:
 
-* [Ejemplo de caso de uso para CDP B2B Edition en tiempo real](./b2b-use-case.md)
+* [Un ejemplo de caso de uso para Real-Time CDP B2B Edition](./b2b-use-case.md)
 * [Un tutorial completo para Real-time Customer Data Platform B2B Edition](./b2b-tutorial.md)
 * [Ingesta de datos](./sources/b2b.md)
 * [Acceso a perfiles](./profile/profile-overview.md)

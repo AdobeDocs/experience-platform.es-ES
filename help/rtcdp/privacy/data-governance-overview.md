@@ -1,22 +1,22 @@
 ---
 keywords: control de datos rtcdp;control de datos rtcdp;control de datos del perfil de datos del cliente en tiempo real
 title: Información general sobre la administración de datos
-description: 'La administración de datos permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
+description: La administración de datos permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos.
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 1%
 
 ---
 
-# Control de datos en tiempo real CDP
+# Control de datos en Real-Time CDP
 
-[!DNL Real-time Customer Data Platform] (CDP en tiempo real) aúna los datos de varios sistemas empresariales, lo que permite a los especialistas en marketing identificar, comprender y captar mejor a sus clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que CDP en tiempo real cumpla con las políticas de uso cuando gestione sus datos.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) reúne los datos de varios sistemas empresariales, lo que permite a los especialistas en marketing identificar, comprender y captar mejor a sus clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que Real-Time CDP cumpla con las políticas de uso al administrar los datos.
 
-La administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de CDP en tiempo real, permitiéndole definir políticas de uso, categorizar los datos en función de esas políticas y comprobar las infracciones de políticas al realizar ciertas acciones de marketing.
+La administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave en Real-Time CDP, ya que le permite definir políticas de uso, categorizar los datos en función de esas políticas y comprobar si hay infracciones de políticas al realizar determinadas acciones de marketing.
 
-CDP en tiempo real se basa en Adobe Experience Platform y, por lo tanto, la mayoría de las funcionalidades de control de datos se incluyen en la [!DNL Experience Platform] documentación. El objetivo de este documento es complementar el [Información general sobre la administración de datos](../../data-governance/home.md) para [!DNL Experience Platform], y describe las funciones de administración disponibles en CDP en tiempo real. Se tratan los siguientes temas:
+Real-Time CDP se basa en Adobe Experience Platform y, por lo tanto, la mayoría de las funcionalidades de control de datos se incluyen en la sección [!DNL Experience Platform] documentación. El objetivo de este documento es complementar el [Información general sobre la administración de datos](../../data-governance/home.md) para [!DNL Experience Platform], y describe las funciones de administración disponibles en Real-Time CDP. Se tratan los siguientes temas:
 
 * [Aplicar etiquetas de uso a los datos](#labels)
 * [Administrar políticas de uso de datos](#policies)
@@ -42,20 +42,20 @@ Las acciones de marketing solo se pueden seleccionar al configurar un destino po
 
 ## Administrar políticas de uso de datos {#policies}
 
-Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, deben definirse y habilitarse las políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que puede realizar, o que están restringidas, en los datos dentro de CDP en tiempo real. Consulte la sección &quot;Políticas de uso de datos&quot; en la sección [!DNL Experience Platform] [Información general sobre la administración de datos](../../data-governance/home.md) para obtener más información.
+Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, deben definirse y habilitarse las políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar o que se le restringe de, en los datos de Real-Time CDP. Consulte la sección &quot;Políticas de uso de datos&quot; en la sección [!DNL Experience Platform] [Información general sobre la administración de datos](../../data-governance/home.md) para obtener más información.
 
 Adobe Experience Platform proporciona varias políticas principales para casos de uso comunes de experiencias del cliente. Estas directivas se pueden ver en la interfaz de usuario navegando hasta el **[!UICONTROL Políticas]** espacio de trabajo y selección de la **[!UICONTROL Examinar]** pestaña . Consulte la [guía del usuario sobre directivas](../../data-governance/policies/user-guide.md) en el [!DNL Experience Platform] documentación para ver los pasos más detallados sobre cómo trabajar con políticas en la interfaz de usuario, incluido cómo crear sus propias políticas personalizadas.
 
 ## Cumplimiento del uso de datos {#enforce}
 
-Una vez etiquetados los datos y definidas las políticas de uso, puede hacer cumplir las políticas de uso de los datos. Al activar segmentos de audiencia en destinos en tiempo real CDP, el control de datos aplica automáticamente las políticas de uso en caso de que se produzcan infracciones.
+Una vez etiquetados los datos y definidas las políticas de uso, puede hacer cumplir las políticas de uso de los datos. Al activar segmentos de audiencia en destinos en Real-Time CDP, el control de datos aplica automáticamente las políticas de uso en caso de que se produzcan infracciones.
 
 Consulte el documento en [aplicación automática de directivas](../../data-governance/enforcement/auto-enforcement.md) para obtener más información.
 
 ## Pasos siguientes
 
-Ahora que ha sido introducido en las funciones clave de control de datos en CDP en tiempo real y en cómo [!DNL Experience Platform] los habilita, continúe con el [documentación de Control de datos en Adobe Experience Platform](../../data-governance/home.md). La documentación proporciona información general sobre conceptos esenciales de control de datos, así como flujos de trabajo paso a paso para administrar las etiquetas y políticas de uso de datos.
+Ahora que ha sido introducido en las funciones clave de control de datos de Real-Time CDP y cómo [!DNL Experience Platform] los habilita, continúe con el [documentación de Control de datos en Adobe Experience Platform](../../data-governance/home.md). La documentación proporciona información general sobre conceptos esenciales de control de datos, así como flujos de trabajo paso a paso para administrar las etiquetas y políticas de uso de datos.
 
-En el siguiente vídeo se ofrece una descripción general de la Gestión de datos en tiempo real de CDP, incluido el uso de casos de uso de marketing en destinos y flujos de trabajo de ejemplo para diferentes situaciones:
+En el siguiente vídeo se ofrece una descripción general de la Gestión de datos en Real-Time CDP, incluido el uso de casos de uso de marketing en destinos y flujos de trabajo de ejemplo para distintos escenarios:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)

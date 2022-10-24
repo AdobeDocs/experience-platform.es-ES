@@ -6,9 +6,9 @@ description: Este documento proporciona un tutorial para definir una relación e
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Este documento proporciona un tutorial para definir una relación entre dos esqu
 
 >[!NOTE]
 >
->Para ver los pasos sobre cómo crear una relación &quot;varios a uno&quot; en Real-time Customer Data Platform B2B Edition, consulte la guía de [creación de relaciones B2B](./relationship-b2b.md).
+>Para ver los pasos sobre cómo crear una relación &quot;varios a uno&quot; en Adobe Real-time Customer Data Platform B2B Edition, consulte la guía de [creación de relaciones B2B](./relationship-b2b.md).
 
 ## Primeros pasos
 

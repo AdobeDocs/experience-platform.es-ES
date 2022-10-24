@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, noviembre de 2021
 description: Notas de la versión de noviembre de 2021 para Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 12%
@@ -17,23 +17,23 @@ ht-degree: 12%
 
 Nuevas funciones de Adobe Experience Platform:
 
-- [Real-time Customer Data Platform edición B2B](#B2B)
+- [Real-Time Customer Data Platform edición B2B](#B2B)
 - [(Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc](#ad-hoc-activation)
 
 ## Actualizaciones de funciones existentes
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Attribution AI](#attribution-ai)
+- [Inteligencia artificial aplicada a la atribución](#attribution-ai)
 - [Customer AI](#customer-ai)
 
-### Real-time Customer Data Platform edición B2B {#B2B}
+### Real-Time Customer Data Platform edición B2B {#B2B}
 
 **Fecha de la versión: 12 de noviembre de 2021**
 
-El CDP B2B Edition en tiempo real, que se basa en Real-time Customer Data Platform (CDP en tiempo real), está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
+Basado en Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
 
-Hay mejoras en una variedad de funcionalidades de Adobe Experience Platform que distinguen CDP B2B Edition en tiempo real de su contraparte B2C. Incluyen mejoras en el Modelo de datos de experiencia (XDM) para casos de uso B2B, actualizaciones de la resolución de identidades y la segmentación de perfiles, así como un conector y un destino personalizados para el Marketo Engage. El conector Marketo permite a las marcas B2B conectar sus datos de participación B2B líderes en el sector con información de comportamiento para nutrir posibles clientes y mejorar las operaciones de marketing basadas en cuentas.
+Hay mejoras en una variedad de funcionalidades de Adobe Experience Platform que distinguen Real-Time CDP B2B Edition de su homólogo B2C. Incluyen mejoras en el Modelo de datos de experiencia (XDM) para casos de uso B2B, actualizaciones de la resolución de identidades y la segmentación de perfiles, así como un conector y un destino personalizados para el Marketo Engage. El conector Marketo permite a las marcas B2B conectar sus datos de participación B2B líderes en el sector con información de comportamiento para nutrir posibles clientes y mejorar las operaciones de marketing basadas en cuentas.
 
 -[Nuevas ediciones B2B y B2P](#editions)
 -[Nuevos conectores de origen y destino de datos de Marketo](#marketo)
@@ -41,9 +41,9 @@ Hay mejoras en una variedad de funcionalidades de Adobe Experience Platform que 
 
 ### Nuevas ediciones B2B y B2P {#editions}
 
-Las nuevas ediciones B2B y B2P que proporcionan datos y funcionalidades B2B tanto a los productos CDP en tiempo real como a los productos de Activación de plataforma están disponibles para su compra.
+Hay nuevas ediciones B2B y B2P que ofrecen datos y funcionalidades B2B tanto a los productos de Real-Time CDP como a los de Activación de plataforma disponibles para su compra.
 
-Para obtener más información sobre CDP B2B Edition en tiempo real, consulte la [información general](../../rtcdp/overview.md).
+Para obtener más información sobre Real-Time CDP B2B Edition, consulte la [información general](../../rtcdp/overview.md).
 
 ### Nuevos conectores de origen y destino de datos de Marketo {#marketo}
 
@@ -68,7 +68,7 @@ Consulte la [Esquemas en Real-time Customer Data Platform B2B Edition](../../rtc
 
 La API de activación ad hoc permite a los especialistas en marketing activar mediante programación segmentos de audiencia en destinos de forma rápida y eficaz en situaciones en las que se requiera una activación inmediata. La activación de audiencias ad-hoc solo es compatible con [destinos basados en archivos por lotes](../../destinations/destination-types.md#file-based) y está actualmente en versión beta. Para obtener más información, consulte la [documentación de la API de activación ad hoc](../../destinations/api/ad-hoc-activation-api.md).
 
-### Attribution AI {#attribution-ai}
+### Inteligencia artificial aplicada a la atribución {#attribution-ai}
 
 Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
 

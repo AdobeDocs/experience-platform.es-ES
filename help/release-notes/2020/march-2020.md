@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: notas de la versión;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 6%
@@ -39,8 +39,8 @@ Administración de datos de Adobe Experience Platform es una serie de estrategia
 
 | Función | Descripción |
 | ------- | ----------- |
-| Aplicación automatizada de políticas de uso de datos para [!DNL Real-time Customer Data Platform] | Las políticas de uso de datos ahora se refuerzan en el flujo de trabajo de activación de datos en los destinos. La administración de datos también se incrusta y se aplica cuando se realizan cambios que afectan a las activaciones existentes (como cambios en las etiquetas de conjuntos de datos, políticas de combinación, definiciones de segmentos, etc.). |
-| Línea de datos para la aplicación | Cuando se infringe una política de uso de datos en tiempo real de CDP, la interfaz de usuario muestra una notificación que contiene información sobre el linaje de datos para ayudar al usuario a comprender por qué se violaron las políticas y qué puede hacer para resolver la infracción. |
+| Aplicación automatizada de políticas de uso de datos para [!DNL Real-Time Customer Data Platform] | Las políticas de uso de datos ahora se refuerzan en el flujo de trabajo de activación de datos en los destinos. La administración de datos también se incrusta y se aplica cuando se realizan cambios que afectan a las activaciones existentes (como cambios en las etiquetas de conjuntos de datos, políticas de combinación, definiciones de segmentos, etc.). |
+| Línea de datos para la aplicación | Cuando se infringe una política de uso de datos en Real-Time CDP, la interfaz de usuario muestra una notificación que contiene información sobre el linaje de datos para ayudar al usuario a comprender por qué se violaron las políticas y qué puede hacer para resolver la infracción. |
 
 
 **Problemas conocidos**
@@ -76,8 +76,8 @@ Hay nuevos destinos disponibles donde puede activar los datos de Adobe Experienc
 
 | Destino | Descripción |
 |--- | ---|
-| Destinos de almacenamiento en la nube | CDP en tiempo real ahora puede entregar sus segmentos como archivos de datos a su [!DNL Amazon S3] o ubicaciones de almacenamiento en la nube SFTP. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores. |
-| Destinos publicitarios | La variable [!DNL Google] la tarjeta de destino ahora se divide en tres tarjetas de destino, para las tres [!DNL Google] plataformas compatibles actualmente con CDP en tiempo real: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Pantalla y vídeo 360. |
+| Destinos de almacenamiento en la nube | Real-Time CDP ahora puede entregar sus segmentos como archivos de datos a su [!DNL Amazon S3] o ubicaciones de almacenamiento en la nube SFTP. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores. |
+| Destinos publicitarios | La variable [!DNL Google] la tarjeta de destino ahora se divide en tres tarjetas de destino, para las tres [!DNL Google] plataformas compatibles actualmente con Real-Time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Pantalla y vídeo 360. |
 
 Para obtener más información, visite [información general sobre destinos](../../destinations/home.md)
 

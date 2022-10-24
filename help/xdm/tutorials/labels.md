@@ -2,9 +2,9 @@
 title: Administración de etiquetas de uso de datos para un esquema
 description: Aprenda a añadir etiquetas de uso de datos a los campos de esquema del Modelo de datos de experiencia (XDM) en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->El etiquetado basado en esquemas es parte de [control de acceso basado en atributos](../../access-control/abac/overview.md), que actualmente está disponible en una versión limitada para clientes de asistencia sanitaria de EE. UU. Esta capacidad estará disponible para todos los clientes de Real-time Customer Data Platform una vez que se haya lanzado completamente.
+>El etiquetado basado en esquemas es parte de [control de acceso basado en atributos](../../access-control/abac/overview.md), que actualmente está disponible en una versión limitada para clientes de asistencia sanitaria de EE. UU. Esta capacidad estará disponible para todos los clientes de Adobe Real-time Customer Data Platform una vez que se haya lanzado completamente.
 
 Todos los datos introducidos en Adobe Experience Platform están restringidos por esquemas del Modelo de datos de experiencia (XDM). Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Para tener en cuenta esto, la plataforma le permite restringir el uso de ciertos conjuntos de datos y campos mediante el uso de [etiquetas de uso de datos](../../data-governance/labels/overview.md).
 

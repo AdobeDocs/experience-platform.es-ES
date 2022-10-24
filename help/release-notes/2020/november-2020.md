@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2184'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -120,7 +120,7 @@ En [Real-time Customer Data Platform](../../rtcdp/overview.md), los destinos son
 
 | Función | Descripción |
 | ------- | ----------- |
-| Detalles de destino Actualizaciones de experiencia de usuario | El flujo de trabajo de destino de CDP en tiempo real ahora incluye supervisión en línea para que pueda ver qué activaciones por lotes tuvieron éxito. Esta función permite a los usuarios resolver problemas directamente en el flujo de trabajo para los destinos de lote mediante alertas y un panel de monitorización para rastrear errores en la canalización de procesamiento. |
+| Detalles de destino Actualizaciones de experiencia de usuario | El flujo de trabajo de destino de Real-Time CDP ahora incluye supervisión en línea para que pueda ver qué activaciones por lotes se realizaron correctamente. Esta función permite a los usuarios resolver problemas directamente en el flujo de trabajo para los destinos de lote mediante alertas y un panel de monitorización para rastrear errores en la canalización de procesamiento. |
 | Cifrado de archivos | Para los destinos basados en archivos, los usuarios ahora pueden agregar cifrado a sus archivos exportados. |
 | Programación de archivos | Para destinos de almacenamiento en la nube y basados en correo electrónico, los usuarios pueden crear una exportación única o crear instantáneas diarias. |
 | Campos obligatorios | Los usuarios pueden marcar los campos como obligatorios, lo que garantiza que solo se exporten los campos que contienen el campo obligatorio. |
@@ -139,7 +139,7 @@ Los servicios inteligentes potencian a los analistas de marketing y a los profes
 
 Para obtener más información, consulte la sección sobre [adición de campos de identidad a un conjunto de datos](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) en la guía de preparación de datos de servicios inteligentes.
 
-### Attribution AI
+### Inteligencia artificial aplicada a la atribución
 
 Attribution AI, como parte de Servicios inteligentes es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados.
 
@@ -163,7 +163,7 @@ Para obtener más información, lea la [Información general sobre la Attributio
 
 ### Customer AI
 
-Customer AI, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de generar predicciones de clientes a nivel individual con explicaciones. Con la ayuda de factores influyentes, la Customer AI puede indicarle qué es lo más probable que haga un cliente y por qué. Además, los especialistas en marketing pueden beneficiarse de las predicciones y perspectivas de Customer AI para personalizar las experiencias de los clientes al ofrecer las ofertas y los mensajes más adecuados.
+Customer AI, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de generar predicciones de clientes a nivel individual con explicaciones. Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cliente puede indicarle qué es lo más probable que haga un cliente y por qué. Además, los expertos en marketing pueden beneficiarse de las predicciones y perspectivas de la inteligencia artificial aplicada al cliente para personalizar las experiencias de los clientes y ofrecerles las ofertas y los mensajes más adecuados.
 
 **Funciones principales**
 

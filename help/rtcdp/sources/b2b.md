@@ -1,10 +1,10 @@
 ---
 title: Fuentes en Real-time Customer Data Platform B2B Edition
-description: Información general sobre la función de las fuentes en Real-time Customer Data Platform B2B Edition.
+description: Información general sobre la función de las fuentes en Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Si no utiliza Real-time Customer Data Platform B2B Edition, consulte la [información general sobre fuentes](./sources-overview.md) en su lugar.
+>Si no utiliza Adobe Real-time Customer Data Platform B2B Edition, consulte la [información general sobre fuentes](./sources-overview.md) en su lugar.
 
-Real-time Customer Data Platform B2B Edition le permite incorporar sus datos B2B a través de diversas fuentes, incluyendo el [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) conector de origen, Salesforce, Amazon S3 y ADLS, entre otros. Este rango de fuentes le permite estructurar, etiquetar y mejorar los datos entrantes mediante servicios.
+Adobe Real-time Customer Data Platform B2B Edition le permite incorporar sus datos B2B a través de diversas fuentes, incluyendo el [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) conector de origen, Salesforce, Amazon S3 y ADLS, entre otros. Este rango de fuentes le permite estructurar, etiquetar y mejorar los datos entrantes mediante servicios.
 
 Para comprender cómo se ajustan las fuentes a su flujo de trabajo B2B, consulte la [tutorial completo](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 

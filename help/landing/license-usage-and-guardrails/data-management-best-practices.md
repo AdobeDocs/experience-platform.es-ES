@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;administración de datos;derechos de licencia;licencia;prácticas recomendadas
 title: Prácticas recomendadas del derecho de licencia de gestión de datos
-description: Obtenga información sobre las prácticas recomendadas y las herramientas que puede utilizar para administrar mejor las autorizaciones de Adobe Experience Platform.
+description: Obtenga información acerca de las mejores prácticas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2528'
-ht-degree: 1%
+source-wordcount: '2529'
+ht-degree: 2%
 
 ---
 
@@ -47,7 +47,7 @@ Al Experience Platform de licencias, se le proporcionan derechos de uso de licen
 
 La variable [!DNL Profile Richness] varía en función de la licencia que haya adquirido. Hay dos cálculos para [!DNL Profile Richness] disponible:
 
-* La suma de todos los datos de producción almacenados en Real-time Customer Data Platform (es decir, el servicio de perfil y el servicio de identidad) en cualquier momento, dividida por la variable [!DNL Addressable Audience];
+* La suma de todos los datos de producción almacenados en Adobe Real-time Customer Data Platform (es decir, el servicio de perfil y el servicio de identidad) en cualquier momento, dividida por la variable [!DNL Addressable Audience];
 * La suma de todos los datos almacenados dentro de Platform (incluido, entre otros, el [!DNL Data Lake], servicio de perfil y servicio de identidad) en cualquier momento y cualquier dato que haya transmitido a través (en lugar de almacenarlo en) de Platform en los últimos 12 meses, dividido por el [!DNL Addressable Audience].
 
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían en función de las licencias que haya adquirido su organización.

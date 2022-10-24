@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;plataforma de datos de clientes en tiempo real;cdp en tiempo real;cdp;rtcdp
 title: Ejemplo de caso de uso para Real-time Customer Data Platform B2B Edition
-description: Este escenario de ejemplo proporciona un ejemplo para la configuración de la implementación de Real-time Customer Data Platform B2B Edition.
+description: Este escenario de ejemplo proporciona un ejemplo para la configuración de la implementación de Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 2%
+source-wordcount: '1135'
+ht-degree: 0%
 
 ---
 
 # Ejemplo de caso de uso para Real-time Customer Data Platform B2B Edition
 
-Real-time Customer Data Platform B2B Edition amplía las ofertas de CDP y Adobe Experience Platform en tiempo real existentes para admitir datos y flujos de trabajo B2B. Este documento proporciona un ejemplo de caso de uso que demuestra los beneficios adicionales proporcionados por B2B Edition. Entre ellos se incluyen:
+Real-time Customer Data Platform B2B Edition amplía las ofertas existentes de Real-Time CDP y Adobe Experience Platform para admitir datos y flujos de trabajo B2B. Este documento proporciona un ejemplo de caso de uso que demuestra los beneficios adicionales proporcionados por B2B Edition. Entre ellos se incluyen:
 
 - Combine datos de personas y cuentas de diferentes fuentes de datos aisladas para producir una vista completa que permita comprender mejor a los clientes y realizar una segmentación más precisa. Consulte la documentación sobre [creación de relaciones de esquema XDM](./schemas/b2b.md) para uso con fuentes B2B variadas para obtener más información.
 - Segmentar una audiencia según los atributos de entidades relacionadas. Esto incluye cuentas, oportunidades, campañas y listas de marketing. Los segmentos ya no están limitados únicamente a los atributos de persona y a los eventos de experiencia. Consulte la [Documentación de segmentación B2B](./segmentation/b2b.md) para obtener más ejemplos de creación de audiencias específicas de B2B.
@@ -52,11 +52,11 @@ Hasta la fecha, Townsend ha gastado más de un millón de dólares acumulativame
 
 Dado que el gasto de Townsend está dividido entre distintos sistemas de ventas y no llega a más de un millón de personas de forma individual, el segmento no encontraría a nadie cualificado ni en Marketo 1 ni en Marketo 2.
 
-### Cómo resuelve el problema CDP B2B Edition en tiempo real
+### Cómo resuelve el problema Real-Time CDP B2B Edition
 
-Con CDP B2B Edition en tiempo real, el equipo de marketing de Bodea puede:
+Con Real-Time CDP B2B Edition, el equipo de marketing de Bodea puede:
 
-- Combine los datos de todas las fuentes diferentes (varias instancias de Marketo y CRM y Master Data Management) en CDP B2B Edition en tiempo real.
+- Combine los datos de todas las fuentes diferentes (varias instancias de Marketo y CRM y la administración maestra de datos) en Real-Time CDP B2B Edition.
 
 Con RT-CDP B2B Edition, Bodea puede utilizar el conector de origen del Marketo Engage para llevar los datos B2B de Marketo 1 y Marketo 2 al Experience Platform y mantener estos datos actualizados mediante aplicaciones conectadas a la plataforma. Consulte la [Conector de origen de Marketo](../sources/connectors/adobe-applications/marketo/marketo.md) documentación para obtener más información.
 
@@ -87,7 +87,7 @@ Al utilizar los destinos de Marketo Engage y LinkedIn, Bodea cuenta con una solu
 
 ## Pasos siguientes
 
-Al leer este documento, ahora ha sido presentado a los tipos de objetivos y problemas que se pueden resolver usando CDP B2B Edition en tiempo real.
+Al leer este documento, ahora se ha introducido el tipo de objetivos y problemas que se pueden resolver con Real-Time CDP B2B Edition.
 
 Se recomienda la siguiente documentación para comprender mejor las funciones específicas de B2B:
 

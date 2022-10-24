@@ -1,20 +1,20 @@
 ---
 keywords: segmentación; segmentación rtcdp;segmentación de la plataforma de datos del cliente en tiempo real
 title: Servicio de segmentación en Real-time Customer Data Platform
-description: CDP en tiempo real se basa en Adobe Experience Platform y utiliza muchos de los servicios y funcionalidades del Experience Platform. Con el servicio de segmentación, puede proporcionar un marketing personalizado dividiendo a los clientes en grupos más pequeños con características similares.
+description: La plataforma de datos de clientes en tiempo real de Adobe está basada en Adobe Experience Platform y utiliza muchos de los servicios y funciones de Experience Platform. Con el servicio de segmentación, puede proporcionar un marketing personalizado dividiendo a los clientes en grupos más pequeños con características similares.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 0%
+source-wordcount: '540'
+ht-degree: 4%
 
 ---
 
-# [!DNL Segmentation Service] en [!DNL Real-time Customer Data Platform]
+# [!DNL Segmentation Service] en [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] (CDP en tiempo real) le permite obtener datos de múltiples fuentes para ofrecer a sus clientes una experiencia coordinada y coherente. Se pueden realizar campañas de marketing personalizadas relevantes mediante la variable [!DNL Segmentation Service], parte de Adobe Experience Platform.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) le permite obtener datos de varias fuentes para ofrecer a sus clientes una experiencia coordinada y coherente. Se pueden realizar campañas de marketing personalizadas relevantes mediante la variable [!DNL Segmentation Service], parte de Adobe Experience Platform.
 
-CDP en tiempo real se basa en Adobe Experience Platform y utiliza muchos de los [!DNL Experience Platform] servicios y funcionalidad. Al usar la variable [!DNL Segmentation Service], puede proporcionar marketing a medida dividiendo a los clientes en grupos más pequeños con características similares.
+Real-Time CDP se basa en Adobe Experience Platform y utiliza muchos de los [!DNL Experience Platform] servicios y funcionalidad. Al usar la variable [!DNL Segmentation Service], puede proporcionar marketing a medida dividiendo a los clientes en grupos más pequeños con características similares.
 
 ## Segmentación
 
@@ -28,7 +28,7 @@ La segmentación es el proceso de definir atributos o comportamientos específic
 
 Customer AI, incluido con Real-time Customer Data Platform, le ofrece la capacidad de generar predicciones de clientes a nivel individual con explicaciones.
 
-Con la ayuda de factores influyentes, la Customer AI puede indicarle qué es lo más probable que haga un cliente y por qué. Además, puede beneficiarse de las predicciones y perspectivas de Customer AI para personalizar las experiencias de los clientes al ofrecer las ofertas y los mensajes más adecuados. Customer AI puede ayudarle con:
+Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cliente puede indicarle qué es lo más probable que haga un cliente y por qué. Además, puede beneficiarse de las predicciones y perspectivas de Customer AI para personalizar las experiencias de los clientes al ofrecer las ofertas y los mensajes más adecuados. Customer AI puede ayudarle con:
 
 * Ofrecer modelos de propensión del cliente de alta precisión para lograr una segmentación y una segmentación más sólidas.
 * Comprender los factores influyentes y la probabilidad detrás de ciertos comportamientos del cliente.
@@ -52,4 +52,4 @@ Para obtener más información sobre Customer AI, comience por visitar la [Infor
 
 ## Pasos siguientes
 
-Después de leer esta descripción general, ahora debe comprender cómo utiliza CDP en tiempo real [!DNL Segmentation Service] para mejorar la personalización de las campañas de marketing. Para obtener más información sobre la variable [!DNL Segmentation Service], lea la [Documentación de segmentación](../../segmentation/home.md).
+Después de leer esta descripción general, debe comprender cómo utiliza Real-Time CDP [!DNL Segmentation Service] para mejorar la personalización de las campañas de marketing. Para obtener más información sobre la variable [!DNL Segmentation Service], lea la [Documentación de segmentación](../../segmentation/home.md).

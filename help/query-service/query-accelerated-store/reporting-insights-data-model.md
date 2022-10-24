@@ -1,9 +1,9 @@
 ---
 title: Consulta de Perspectivas de Informes de Almacenamiento Acelerado
 description: Obtenga información sobre cómo crear un modelo de datos de perspectivas de informes mediante el servicio de consulta para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario.
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 085c9f4e76de1aa3ea969eb0511ee1da43be59f0
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 El almacén acelerado de consultas le permite reducir el tiempo y la potencia de procesamiento necesarios para obtener perspectivas críticas de sus datos. Normalmente, los datos se procesan a intervalos regulares (por ejemplo, cada hora o cada día) en los que se crean y generan informes sobre vistas agregadas. El análisis de estos informes generado a partir de los datos agregados deriva perspectivas que pretenden mejorar el rendimiento del negocio. El almacén acelerado de consultas proporciona un servicio de caché, concurrencia, una experiencia interactiva y una API sin estado. Sin embargo, supone que los datos se preprocesan y optimizan para consultas agregadas y no para consultas de datos sin procesar.
 
-El almacén acelerado de consultas le permite crear un modelo de datos personalizado o ampliar modelos de datos de Real-time Customer Data Platform existentes. A continuación, puede interactuar con o incrustar sus perspectivas de informes en un marco de informes/visualización de su elección. Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalice las plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../dashboards/cdp-insights-data-model.md).
+El almacén acelerado de consultas le permite crear un modelo de datos personalizado o ampliar modelos de datos de Adobe Real-time Customer Data Platform existentes. A continuación, puede interactuar con o incrustar sus perspectivas de informes en un marco de informes/visualización de su elección. Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalice las plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../dashboards/cdp-insights-data-model.md).
 
 El modelo de datos de Real-Time CDP de Adobe Experience Platform proporciona perspectivas sobre perfiles, segmentos y destinos, y permite los paneles de perspectiva de Real-Time CDP. Este documento le guía a través del proceso de creación del modelo de datos de perspectivas de informes y también sobre cómo ampliar los modelos de datos de Real-Time CDP según sea necesario.
 

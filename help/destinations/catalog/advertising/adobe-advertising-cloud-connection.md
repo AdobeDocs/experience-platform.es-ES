@@ -1,10 +1,10 @@
 ---
 title: Conexión Adobe Advertising Cloud DSP
-description: Adobe Advertising Cloud DSP es un destino integrado para [!DNL Adobe Real-time Customer Data Profile], lo que le permite compartir segmentos de origen autenticados con anunciantes y usuarios aprobados para la activación de campañas.
+description: Adobe Advertising Cloud DSP es un destino integrado para Adobe Real-time Customer Data Platform, que le permite compartir segmentos de origen autenticados con anunciantes y usuarios aprobados para la activación de campañas.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Adv
 
 ### Caso de uso de publicidad de marca
 
-Un minorista en línea quiere redirigir a sus clientes de alto valor a través de una campaña de visualización sin usar cookies para el objetivo. El minorista comparte un segmento que consta de los ID de correo electrónico con hash de sus clientes de alto valor de su [!DNL Real-Time CDP] a su cuenta DSP. DSP convierte los ID de correo electrónico con hash en autenticados [!DNL RampIDs] mediante una asociación entre DSP y LiveRamp. El resultado [!DNL RampIDs] se puede usar en una campaña de visualización para dirigirse al público.
+Un minorista en línea quiere redirigir a sus clientes de alto valor a través de una campaña de visualización sin usar cookies para el objetivo. El minorista comparte un segmento que consta de los ID de correo electrónico con hash de sus clientes de alto valor desde su cuenta de Adobe Real-time Customer Data Platform (Real-Time CDP) a su cuenta de DSP. DSP convierte los ID de correo electrónico con hash en autenticados [!DNL RampIDs] mediante una asociación entre DSP y LiveRamp. El resultado [!DNL RampIDs] se puede usar en una campaña de visualización para dirigirse al público.
 
 ### Caso de uso de la agencia
 

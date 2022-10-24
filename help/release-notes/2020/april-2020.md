@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: notas de la versión;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 10%
@@ -93,12 +93,12 @@ En [Real-time Customer Data Platform](../../rtcdp/overview.md), los destinos son
 
 **Nuevos destinos**
 
-CDP en tiempo real ahora admite la activación de datos a más de cincuenta [!DNL Experience Cloud Launch] , habilitando analytics, personalización y otros casos de uso. Consulte a continuación los detalles:
+Real-Time CDP ahora admite la activación de datos a más de cincuenta [!DNL Experience Cloud Launch] , habilitando analytics, personalización y otros casos de uso. Consulte a continuación los detalles:
 
 | Documentación | Descripción |
 |--- | ---|
-| [Tipos y categorías de destino](../../destinations/destination-types.md) | Este artículo explica la diferencia entre las conexiones y las extensiones en la interfaz CDP en tiempo real y recomienda cuándo utilizar cada uno de estos destinos. |
-| [extensiones de Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Esta página explica qué [!DNL Launch] son las extensiones, listas casos de uso para utilizarlas y vínculos a documentación para cada [!DNL Launch] en CDP en tiempo real. |
+| [Tipos y categorías de destino](../../destinations/destination-types.md) | Este artículo explica la diferencia entre las conexiones y las extensiones en la interfaz de Real-Time CDP y recomienda cuándo utilizar cada uno de estos destinos. |
+| [extensiones de Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Esta página explica qué [!DNL Launch] son las extensiones, listas casos de uso para utilizarlas y vínculos a documentación para cada [!DNL Launch] en Real-Time CDP. |
 
 Para obtener más información, consulte la [Información general sobre destinos](../../destinations/home.md).
 

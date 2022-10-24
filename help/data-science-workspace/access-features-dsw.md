@@ -5,9 +5,9 @@ title: Acceso y funciones de Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: El siguiente documento describe los permisos de Data Science Workspace y el acceso a las funciones.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '688'
 ht-degree: 2%
 
 ---
@@ -18,15 +18,15 @@ El siguiente documento describe los permisos de Data Science Workspace y el acce
 
 ![Fichas DSW](./images/access/platform-tabs.png)
 
-- **Portátiles:** proporciona un entorno de desarrollo interactivo ([JupyterLab](./jupyterlab/overview.md)) para explorar, analizar y modelar los datos en el Experience Platform.
-- **Modelos:** proporciona las herramientas que se utilizan para crear, publicar y almacenar fórmulas y modelos de aprendizaje automático avanzados. Para obtener más información, visite el tutorial [crear y publicar un modelo de aprendizaje automático](./models-recipes/create-publish-model.md).
-- **Servicios:** contiene servicios proporcionados por el Adobe, como  [servicios AI/ML ](../intelligent-services/home.md) y cualquier servicio personalizado creado con Data Science Workspace.
+- **Portátiles:** Proporciona un entorno de desarrollo interactivo ([JupyterLab](./jupyterlab/overview.md)) para explorar, analizar y modelar sus datos en Experience Platform.
+- **Modelos:** Proporciona herramientas que se utilizan para crear, publicar y almacenar fórmulas y modelos de aprendizaje automático avanzados. Para obtener más información, consulte la [crear y publicar un modelo de aprendizaje automático](./models-recipes/create-publish-model.md) tutorial.
+- **Servicios:** Contiene ambos servicios proporcionados por el Adobe, como [Servicios AI/ML](../intelligent-services/home.md) y cualquier servicio personalizado que haya creado con Data Science Workspace.
 
 ¿Por qué solo veo la pestaña Servicios?
 
-- Es posible que su organización solo tenga derecho a la plataforma de datos del cliente en tiempo real (RTCDP), que incluye el servicio AI/ML del cliente.
+- Es posible que su organización solo tenga derecho a Adobe Real-time Customer Data Platform (Real-Time CDP), que incluye el servicio AI/ML del cliente.
 
-Si no puede ver ninguna de las pestañas **Data Science** y desea utilizar las funciones de Data Science Workspace, póngase en contacto con el administrador de su empresa para comprobar si dispone de una licencia de Adobe Experience Platform Intelligence.
+Si no puede ver ninguno de los **Ciencia de datos** y desee utilizar las funciones de Data Science Workspace, póngase en contacto con el administrador de su empresa para comprobar si dispone de una licencia de Adobe Experience Platform Intelligence.
 
 ## Empaquetado de Data Science Workspace
 
@@ -53,17 +53,17 @@ La siguiente tabla describe algunas de las diferencias clave entre las autorizac
 
 ## Control de acceso
 
-El control de acceso para el Experience Platform se administra a través de [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles de producto del Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la [descripción general del control de acceso](../access-control/home.md) para obtener más información.
+El control de acceso para el Experience Platform se administra a través de la variable [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles de producto del Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la [información general sobre el control de acceso](../access-control/home.md) para obtener más información.
 
 Para utilizar Data Science Workspace, el permiso &quot;Administrar Data Science Workspace&quot; debe estar habilitado. La siguiente tabla describe los efectos de habilitar o deshabilitar este permiso:
 
 | Permiso | Habilitado | Desactivado |
 |---|---|---|
-| Administrar Data Science Workspace | Proporciona acceso a todos los servicios de Data Science Workspace. | El acceso a la API y la interfaz de usuario de todos los servicios de Data Science Workspace está desactivado. Mientras está desactivado, no se puede seleccionar las páginas **Notebooks**, **Modelos** y **Servicios**. <li>Puede que el acceso a **Servicios** siga estando disponible a través de la Plataforma de datos del cliente en tiempo real (RTCDP).</li> |
+| Administrar Data Science Workspace | Proporciona acceso a todos los servicios de Data Science Workspace. | El acceso a la API y la interfaz de usuario de todos los servicios de Data Science Workspace está desactivado. Aunque está desactivado, al seleccionar la opción **Portátiles**, **Modelos** y **Servicios** no se puede usar. <li>Acceso a **Servicios** puede que siga estando disponible a través de Adobe Real-time Customer Data Platform (Real-Time CDP).</li> |
 
 ## Compatibilidad con Sandbox
 
-Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform. Cada instancia de Platform admite varios entornos limitados de producción y sin producción, cada uno de los cuales mantiene su propia biblioteca de recursos de Platform. Los entornos limitados que no son de producción permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a los entornos limitados de producción. Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../sandboxes/home.md).
+Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform. Cada instancia de Platform admite varios entornos limitados de producción y sin producción, cada uno de los cuales mantiene su propia biblioteca de recursos de Platform. Los entornos limitados que no son de producción permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a los entornos limitados de producción. Para obtener más información sobre los entornos limitados, consulte la [información general sobre los entornos limitados](../sandboxes/home.md).
 
 Actualmente, Data Science Workspace tiene la siguiente limitación de entornos limitados:
 
@@ -73,4 +73,4 @@ Actualmente, Data Science Workspace tiene la siguiente limitación de entornos l
 
 Este documento describe los diferentes tipos de acceso y características disponibles en Data Science Workspace.
 
-Para obtener más información sobre Data Science Workspace, como un flujo de trabajo diario completo, comience por leer la documentación [Data Science Workspace tutorial](./walkthrough.md) . Para obtener información más general, consulte [Información general de Data Science Workspace](./home.md).
+Para obtener más información sobre Data Science Workspace, como un flujo de trabajo diario completo, comience por leer la [Recorrido por Data Science Workspace](./walkthrough.md) documentación. Para obtener información más general, consulte la [Información general de Data Science Workspace](./home.md).

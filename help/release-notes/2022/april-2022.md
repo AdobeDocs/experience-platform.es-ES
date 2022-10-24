@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, abril de 2022
 description: Notas de la versión de abril de 2022 para Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2916'
 ht-degree: 6%
@@ -21,7 +21,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
-- [Real-time Customer Data Platform edición B2B](#B2B)
+- [Real-Time Customer Data Platform edición B2B](#B2B)
 - [Fuentes](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
@@ -200,9 +200,9 @@ La AI del cliente disponible en Real-time Customer Data Platform se utiliza para
 
 Para obtener más información, consulte [!DNL Intelligent Services], consulte la [[!DNL Intelligent Services] información general](../../intelligent-services/home.md).
 
-## Real-time Customer Data Platform edición B2B {#B2B}
+## Real-Time Customer Data Platform edición B2B {#B2B}
 
-El CDP B2B Edition en tiempo real, que se basa en Real-time Customer Data Platform (CDP en tiempo real), está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
+Basado en Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition está diseñado para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse con precisión a audiencias específicas e interactuar con ellas en todos los canales disponibles.
 
 **Funciones actualizadas**
 

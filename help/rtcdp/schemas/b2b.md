@@ -1,23 +1,23 @@
 ---
 title: Esquemas en Real-time Customer Data Platform B2B Edition
-description: Una descripción general de la función de los esquemas del Modelo de datos de experiencia (XDM) en Real-time Customer Data Platform B2B Edition.
+description: Una descripción general de la función de los esquemas del Modelo de datos de experiencia (XDM) en Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 # Esquemas en Real-time Customer Data Platform B2B Edition
 
-Real-time Customer Data Platform B2B Edition ofrece varias [Clases del Modelo de datos de experiencia (XDM)](../../xdm/schema/composition.md#class) que capturan detalles sobre entidades de datos B2B esenciales, como cuentas, oportunidades, campañas, etc. Además, CDP B2B Edition en tiempo real le permite definir relaciones &quot;varios a uno&quot; entre estos esquemas para que puedan participar en casos de uso de segmentación avanzada.
+Adobe Real-time Customer Data Platform B2B Edition ofrece varias [Clases del Modelo de datos de experiencia (XDM)](../../xdm/schema/composition.md#class) que capturan detalles sobre entidades de datos B2B esenciales, como cuentas, oportunidades, campañas, etc. Además, Real-Time CDP B2B Edition le permite definir relaciones &quot;varios a uno&quot; entre estos esquemas para que puedan participar en casos de uso de segmentación avanzada.
 
 >[!IMPORTANT]
 >
->Debe tener acceso a CDP B2B Edition en tiempo real para que los esquemas B2B participen en [Perfil del cliente en tiempo real](../../profile/home.md).
+>Debe tener acceso a Real-Time CDP B2B Edition para que los esquemas B2B participen en [Perfil del cliente en tiempo real](../../profile/home.md).
 
-En CDP B2B Edition en tiempo real se proporcionan las siguientes clases estándar:
+En Real-Time CDP B2B Edition se proporcionan las siguientes clases estándar:
 
 * [Cuenta comercial XDM](../../xdm/classes/b2b/business-account.md)
 * [Relación de persona de cuenta comercial XDM](../../xdm/classes/b2b/business-account-person-relation.md)

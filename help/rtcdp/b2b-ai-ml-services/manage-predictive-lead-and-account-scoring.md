@@ -1,15 +1,16 @@
 ---
-title: Administre la puntuación predictiva de posibles clientes y cuentas en tiempo real CDP B2B
+title: Administre la puntuación predictiva de posibles clientes y cuentas en Real-Time CDP B2B
 type: Documentation
 description: Este documento proporciona información sobre la administración de la característica de puntuación de cuentas y posibles clientes predictivos en CDP B2B del Experience Platform.
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1018'
 ht-degree: 2%
 
 ---
 
-# Administre la puntuación predictiva de posibles clientes y cuentas en Real-time Customer Data Platform, B2B Edition
+# Administre la puntuación predictiva de posibles clientes y cuentas en Adobe Real-time Customer Data Platform, B2B Edition
 
 >[!NOTE]
 >

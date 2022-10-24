@@ -5,7 +5,7 @@ title: Administrar detalles y servicios adicionales para un perfil de producto
 topic-legacy: user guide
 description: Este documento cubre los pasos necesarios para administrar los detalles y los servicios adicionales para un perfil de producto en Adobe Admin Console. Puede configurar los detalles de un perfil y el acceso a servicios adicionales desde el menú Configuración de perfil .
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
@@ -14,31 +14,31 @@ ht-degree: 0%
 
 # Administrar detalles y servicios adicionales para un perfil de producto
 
-Puede configurar los detalles de un perfil y el acceso a servicios adicionales desde el menú **[!UICONTROL Configuración de perfil]**. Para acceder al menú, seleccione **[!UICONTROL Settings]** en la página **[!UICONTROL Product Profile]**.
+Puede configurar los detalles de un perfil y el acceso a servicios adicionales desde el **[!UICONTROL Configuración de perfil]** para abrir el Navegador. Para acceder al menú , seleccione **[!UICONTROL Configuración]** de la variable **[!UICONTROL Perfil del producto]** página.
 
 ![configuración](../images/settings.png)
 
-Aparece el menú **[!UICONTROL Editar perfil de producto]**, empezando en la pestaña **[!UICONTROL Editar detalles de perfil]**. Esta pestaña le permite introducir y editar su nombre de perfil y descripción. También puede modificar el nombre para mostrar y la configuración de notificación por correo electrónico de la cuenta.
+La variable **[!UICONTROL Editar perfil de producto]** aparece, empezando en el **[!UICONTROL Editar detalles de perfil]** pestaña . Esta pestaña le permite introducir y editar su nombre de perfil y descripción. También puede modificar el nombre para mostrar y la configuración de notificación por correo electrónico de la cuenta.
 
 ![edit-product-profile](../images/edit-product-profile.png)
 
-Seleccione **[!UICONTROL Next]** para acceder a la página **[!UICONTROL Enable services]**.
+Select **[!UICONTROL Siguiente]** para acceder a la **[!UICONTROL Habilitar servicios]** página.
 
-El menú **[!UICONTROL Enable services]** permite modificar el acceso de un perfil a servicios [!DNL Platform] adicionales que se configuraron inicialmente cuando se creó el perfil. Según su suscripción [!DNL Platform], estos servicios pueden incluir:
+La variable **[!UICONTROL Habilitar servicios]** permite modificar el acceso de un perfil a [!DNL Platform] servicios que se configuraron inicialmente cuando se creó el perfil. Según el [!DNL Platform] suscripción, estos servicios pueden incluir:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
-- [!DNL Real-Time Customer Data Platform] IU (solo para CDP en tiempo real)
+- [!DNL Adobe Real-Time Customer Data Platform] IU (solo para Real-Time CDP)
 - IU B2B
 
-Haga clic en el botón de alternancia de la derecha de un servicio concreto para habilitarlo o deshabilitarlo. También puede seleccionar la casilla **[!UICONTROL All on]** para habilitar o deshabilitar todos los servicios enumerados.
+Haga clic en el botón de alternancia de la derecha de un servicio concreto para habilitarlo o deshabilitarlo. También puede seleccionar el **[!UICONTROL Todo en]** para activar o desactivar todos los servicios enumerados.
 
 Cuando termine, seleccione **[!UICONTROL Guardar]**.
 
 ![enable-services](../images/enable-services.png)
 
-Los clientes con derecho a la edición B2B o B2P tienen acceso a la IU B2B. La interfaz de usuario B2B se puede aprovisionar para los usuarios mediante el [!UICONTROL menú Enable services]. Seleccione el botón situado junto a [!UICONTROL B2B UI] para habilitar el servicio para un perfil de producto determinado y, a continuación, seleccione **[!UICONTROL Guardar]**.
+Los clientes con derecho a la edición B2B o B2P tienen acceso a la IU B2B. La interfaz de usuario B2B se puede aprovisionar para los usuarios a través del [!UICONTROL Habilitar menú de servicios]. Seleccione la opción que aparece junto a [!UICONTROL IU B2B] para habilitar el servicio para un perfil de producto determinado y, a continuación, seleccione **[!UICONTROL Guardar]**.
 
-La opción de IU B2B permite a los usuarios ver los flujos de trabajo B2B en la administración de cuentas y oportunidades, así como crear segmentos relacionados con B2B. Para obtener más información, consulte la documentación de [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
+La opción B2B UI permite a los usuarios ver flujos de trabajo B2B sobre la administración de cuentas y oportunidades, así como crear segmentos relacionados con B2B. Para obtener más información, consulte la documentación de [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)

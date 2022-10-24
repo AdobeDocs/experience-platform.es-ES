@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para un origen CRM mediante la interfaz de usuario de Platform.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ Platform proporciona recomendaciones inteligentes para campos asignados automát
 
 >[!NOTE]
 >
->Si está utilizando [!DNL Salesforce] como parte de Real-time Customer Data Platform B2B Edition, consulte la [[!DNL Salesforce] documento de asignación de campos](../../../connectors/adobe-applications/mapping/salesforce.md) para obtener directrices sobre asignación [!DNL Salesforce] campos de origen a sus campos de destino XDM adecuados.
+>Si está utilizando [!DNL Salesforce] como parte de Adobe Real-time Customer Data Platform B2B Edition, consulte la [[!DNL Salesforce] documento de asignación de campos](../../../connectors/adobe-applications/mapping/salesforce.md) para obtener directrices sobre asignación [!DNL Salesforce] campos de origen a sus campos de destino XDM adecuados.
 
 Una vez asignados correctamente los datos de origen, seleccione **[!UICONTROL Siguiente]**.
 

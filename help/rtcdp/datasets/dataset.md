@@ -3,7 +3,7 @@ keywords: conjuntos de datos;conjuntos de datos rtcdp
 title: Conjuntos de datos en Real-time Customer Data Platform
 description: Información general sobre conjuntos de datos en Adobe Experience Platform
 exl-id: 86df38d4-820a-4767-a9ed-3b50b2ae709c
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%

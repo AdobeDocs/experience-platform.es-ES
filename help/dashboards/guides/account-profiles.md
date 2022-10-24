@@ -2,9 +2,9 @@
 title: Guía del tablero Perfiles de la cuenta
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los perfiles de cuenta B2B de su organización.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Para obtener una descripción general de todas las funciones de la interfaz de u
 
 ## Primeros pasos
 
-Debe tener derecho a [Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para acceder al B2B [!UICONTROL Perfiles de la cuenta] tablero.
+Debe tener derecho a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para acceder al B2B [!UICONTROL Perfiles de la cuenta] tablero.
 
 ## Datos de perfiles de cuenta
 
@@ -45,7 +45,7 @@ Seleccione el [!UICONTROL ID de perfil] de los resultados mostrados en la [!UICO
 
 ![La ficha Examinar Perfiles de cuenta muestra los resultados y el ID de perfil resaltado.](../images/account-profiles/account-profiles-browse-tab.png)
 
-La información de perfil de cuenta que se muestra en la variable [!UICONTROL Detalles] se ha combinado desde varios fragmentos de perfil para formar una sola vista de la cuenta individual. Consulte la documentación sobre [exploración de perfiles de cuenta en Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para obtener más información sobre las capacidades de visualización de perfiles de cuenta en la interfaz de usuario de Platform.
+La información de perfil de cuenta que se muestra en la variable [!UICONTROL Detalles] se ha combinado desde varios fragmentos de perfil para formar una sola vista de la cuenta individual. Consulte la documentación sobre [exploración de perfiles de cuenta en Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para obtener más información sobre las capacidades de visualización de perfiles de cuenta en la interfaz de usuario de Platform.
 
 ## La variable [!UICONTROL Perfiles de la cuenta] [!UICONTROL Información general] {#overview}
 

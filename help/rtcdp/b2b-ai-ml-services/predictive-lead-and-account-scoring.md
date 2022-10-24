@@ -1,15 +1,16 @@
 ---
-title: Puntuación predictiva de posibles clientes y cuentas en tiempo real CDP B2B
+title: Puntuación predictiva de posibles clientes y cuentas en Real-Time CDP B2B
 type: Documentation
 description: Información general y más información sobre la característica de puntuación de cuentas y posibles clientes predictiva en CDP B2B del Experience Platform.
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: d3afbabb-005d-4537-831a-857c88043759
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 2%
 
 ---
 
-# Puntuación predictiva de posibles clientes y cuentas en tiempo real CDP B2B
+# Puntuación predictiva de posibles clientes y cuentas en Real-Time CDP B2B
 
 Los especialistas en marketing B2B se enfrentan a múltiples desafíos en la parte superior del canal de marketing. Para ser eficaces, los especialistas en marketing B2B necesitan una manera automatizada de calificar a la gran cantidad de personas para que puedan centrarse en los objetivos de alto valor. La calificación debe alinearse con el resultado de ventas definitivo, no solo con la conversión de marketing.
 
