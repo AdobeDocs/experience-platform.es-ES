@@ -5,9 +5,9 @@ title: Importación y uso de audiencias externas
 description: Siga este tutorial para aprender a utilizar audiencias externas con Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1445'
 ht-degree: 0%
 
 ---
@@ -36,21 +36,17 @@ Los metadatos del segmento son información sobre el propio segmento, que incluy
 
 | Datos de segmentos | Metadatos del segmento |
 | ------------ | ---------------- |
-| Perfiles que cumplen la calificación de segmentos | Information about the segment itself |
+| Perfiles que cumplen la calificación de segmentos | Información sobre el propio segmento |
 
-## Create an identity namespace for the external audience
+## Creación de un área de nombres de identidad para la audiencia externa
 
-El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Identity namespaces allow Platform to associate where a segment originates from.
+El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Las áreas de nombres de identidad permiten a Platform asociar desde dónde se origina un segmento.
 
-Para crear un área de nombres de identidad, siga las instrucciones de la sección [guía del área de nombres de identidad](../../identity-service/namespaces.md#manage-namespaces). When creating your identity namespace, add the source details to the identity namespace, and mark its [!UICONTROL Type] as a **[!UICONTROL Non-people identifier]**.
+Para crear un área de nombres de identidad, siga las instrucciones de la sección [guía del área de nombres de identidad](../../identity-service/namespaces.md#manage-namespaces). Al crear el área de nombres de identidad, agregue los detalles de origen al área de nombres de identidad y marque su [!UICONTROL Tipo] como **[!UICONTROL Identificador de no personas]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
->[!NOTE]
->
->Para empezar a utilizar espacios de nombres personalizados con audiencias externas, debe crear un ticket de asistencia. Please contact your Adobe representative for more details.
-
-## Create a schema for the segment metadata
+## Creación de un esquema para los metadatos del segmento
 
 Después de crear un área de nombres de identidad, debe crear un nuevo esquema para el segmento que va a crear.
 
@@ -58,7 +54,7 @@ Para empezar a componer un esquema, seleccione primero **[!UICONTROL Esquemas]**
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Since you are creating a segment definition, which is a pre-defined class, select **[!UICONTROL Use existing class]**. Ahora, seleccione la opción **[!UICONTROL Definición del segmento]** clase, seguido de **[!UICONTROL Asignar clase]**.
+Como está creando una definición de segmento, que es una clase predefinida, seleccione **[!UICONTROL Usar clase existente]**. Ahora, seleccione la opción **[!UICONTROL Definición del segmento]** clase, seguido de **[!UICONTROL Asignar clase]**.
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
