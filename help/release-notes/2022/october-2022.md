@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, octubre de 2022
 description: Notas de la versión de octubre de 2022 para Adobe Experience Platform.
-source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
+source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '764'
 ht-degree: 5%
 
 ---
@@ -12,14 +12,13 @@ ht-degree: 5%
 
 **Fecha de la versión: 26 de octubre de 2022**
 
-Nuevas funciones de Adobe Experience Platform:
-
 - [Claves gestionadas por el cliente](#cmk)
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [Recopilación de datos](#data-collection)
 - [Modelo de datos de experiencia (XDM)](#xdm)
+- [Servicio de consultas](#query-service)
 - [Fuentes](#sources)
 
 ## Claves gestionadas por el cliente {#cmk}
@@ -57,6 +56,21 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 {style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
+
+## Servicio de consultas {#query-service}
+
+El servicio de consultas permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL Data Lake]. Puede unirse a cualquier conjunto de datos desde la [!DNL Data Lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para su uso en informes, Data Science Workspace o para su incorporación al perfil del cliente en tiempo real.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Modelo de datos de perspectivas de informes acelerados de consulta | Como parte del SKU de Distiller de datos, el almacén acelerado de consultas le permite reducir el tiempo y la potencia de procesamiento necesarios para obtener perspectivas críticas de sus datos. Con el almacén acelerado de consultas, puede crear un modelo de datos personalizado o ampliar los modelos de datos de Adobe Real-time Customer Data Platform existentes para mejorar sus perspectivas de informes y sus visualizaciones. Consulte la [documento de perspectivas de informes de almacén acelerado de consultas](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) para obtener más información sobre esta función. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre los servicios de consulta, consulte la [Información general del servicio de consultas](../../query-service/home.md).
+Nuevas funciones de Adobe Experience Platform:
 
 ## Fuentes {#sources}
 
