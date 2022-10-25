@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, octubre de 2022
 description: Notas de la versión de octubre de 2022 para Adobe Experience Platform.
-source-git-commit: e9a7c0561277be21aab1c699a1bc07b793684525
+source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 8%
+source-wordcount: '609'
+ht-degree: 5%
 
 ---
 
@@ -12,9 +12,51 @@ ht-degree: 8%
 
 **Fecha de la versión: 26 de octubre de 2022**
 
+Nuevas funciones de Adobe Experience Platform:
+
+- [Claves gestionadas por el cliente](#cmk)
+
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [Recopilación de datos](#data-collection)
+- [Modelo de datos de experiencia (XDM)](#xdm)
 - [Fuentes](#sources)
+
+## Claves gestionadas por el cliente {#cmk}
+
+Todos los datos almacenados en Adobe Experience Platform se cifran en reposo utilizando claves a nivel de sistema. Si utiliza una aplicación creada sobre Platform, ahora puede optar por utilizar sus propias claves de cifrado, lo que le otorga un bueno control sobre la seguridad de los datos.
+
+Consulte la descripción general sobre [claves administradas por el cliente](../../landing/governance-privacy-security/customer-managed-keys.md) para obtener más información sobre la función.
+
+## Recopilación de datos {#data-collection}
+
+Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Administración de datos confidenciales para conjuntos de datos | Los conjuntos de datos ahora aprovechan varias tecnologías de plataforma para manejar adecuadamente los datos confidenciales según se aplican en regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA, Health Insurance Porability and Accounability Act). Consulte la sección sobre [gestión de datos confidenciales en flujos de datos](../../edge/datastreams/overview.md#sensitive) para obtener más información. |
+| [!DNL Splunk] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Splunk] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Splunk] información general de la extensión](../../tags/extensions/web/splunk/overview.md) para obtener más información. |
+| [!DNL Zendesk] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Zendesk] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Zendesk] información general de la extensión](../../tags/extensions/web/zendesk/overview.md) para obtener más información. |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Modelo de datos de experiencia (XDM) {#xdm}
+
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se introducen en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
+
+**Componentes XDM actualizados**
+
+| Tipo de componente | Nombre | Descripción |
+| --- | --- | --- |
+| Tipo de datos | [[!UICONTROL Información detallada de la sesión]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Se ha actualizado el `authorized` de un tipo booleano a una cadena. `season` y `episode` se han cambiado de enteros a cadenas. |
+| Tipo de datos | [[!UICONTROL Información sobre los detalles publicitarios]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` se ha cambiado el nombre a `friendlyName`y `ID` se ha cambiado el nombre a `name`. |
+| Tipo de datos | [[!UICONTROL Información de detalles de error]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` se ha cambiado a `name`. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
 
 ## Fuentes {#sources}
 
