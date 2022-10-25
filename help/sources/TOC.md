@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: fe8d5f3a73c7db311cd0d82c2a7f3ac63fb1edac
+source-git-commit: 3518131261f2a2a811284f77bbb8784666e8df96
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '844'
 ht-degree: 13%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 13%
       - [Fuente de Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
       - [Fuente de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fuente de la recopilación de datos](connectors/adobe-applications/data-collection.md)
+      - [Fuente de Workfront](connectors/adobe-applications/workfront.md)
       - Asignaciones de campos {#mapping}
          - [Asignaciones de campos de Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [asignaciones de campos de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
@@ -207,6 +208,7 @@ ht-degree: 13%
          - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Publicidad {#advertising}
          - [Publicidades de Google](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
