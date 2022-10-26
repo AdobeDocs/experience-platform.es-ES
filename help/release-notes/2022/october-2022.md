@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, octubre de 2022
 description: Notas de la versión de octubre de 2022 para Adobe Experience Platform.
-source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
+source-git-commit: 021a0833941f250475786bb8629542c50229b238
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '916'
 ht-degree: 5%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 5%
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [Recopilación de datos](#data-collection)
+- [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de consultas](#query-service)
 - [Fuentes](#sources)
@@ -40,6 +41,27 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | [!DNL Zendesk] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Zendesk] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Zendesk] información general de la extensión](../../tags/extensions/web/zendesk/overview.md) para obtener más información. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
+
+**Destinos nuevos o actualizados**
+
+| Destino | Descripción |
+| ----------- | ----------- |
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line es una popular plataforma de comunicación que conecta personas, servicios e información y que ha pasado de ser una aplicación de chat a ser un centro de actividades de entretenimiento, sociales y diarias. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 es una plataforma de aplicaciones empresariales basada en la nube que combina Enterprise Resource Planning (ERP) y Customer Relationship Management (CRM) junto con aplicaciones de productividad y herramientas de IA para ofrecer operaciones integrales más fluidas y controladas, un mejor potencial de crecimiento y costos reducidos. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentación nueva o actualizada**
+
+| Documentación | Descripción |
+| ----------- | ----------- |
+| [Barreras de destino](../../destinations/guardrails.md) | Esta página proporciona uso predeterminado y límites de velocidad con respecto al comportamiento de activación. |
+
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
