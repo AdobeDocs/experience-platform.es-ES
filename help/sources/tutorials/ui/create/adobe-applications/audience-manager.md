@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;conector de origen de Audie
 title: Crear una conexión de origen de Adobe Audience Manager en la interfaz de usuario
 description: Este tutorial le guía por los pasos para crear una conexión de origen para que Adobe Audience Manager introduzca datos de Evento de experiencia del consumidor en Platform mediante la interfaz de usuario.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
+source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ Una vez identificados y seleccionados los segmentos que desea utilizar, aparece 
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
 También puede seleccionar el **[!UICONTROL Seleccionar todos los segmentos]** y **[!UICONTROL Seleccionar todas las características]** para abrir el Navegador. Al seleccionar todos los segmentos, los segmentos de Audience Manager se mostrarán en Platform, mientras que al seleccionar todos los rasgos se habilitarán todos los rasgos de origen del Audience Manager.
+
+>[!WARNING]
+>
+>La ingesta de grandes poblaciones de segmentos de Audience Manager tiene un impacto directo en el recuento total de perfiles cuando envía por primera vez un segmento de Audience Manager a Platform mediante la fuente de Audience Manager. Esto significa que si selecciona todos los segmentos, es posible que se produzca un recuento de perfiles superior a su derecho de uso de licencia. Revise su [asignación de uso de licencia](../../../../../dashboards/guides/license-usage.md) antes de continuar.
 
 Una vez finalizado, seleccione **[!UICONTROL Siguiente]**
 
