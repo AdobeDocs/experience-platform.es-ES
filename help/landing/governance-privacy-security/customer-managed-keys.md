@@ -1,9 +1,9 @@
 ---
 title: Claves gestionadas por el cliente en Adobe Experience Platform
 description: Aprenda a configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
-source-git-commit: f06f00f7581ccd7fe64f5292a53ebb0303c65069
+source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1416'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ Una vez que llegue al **[!DNL Review + create]** , puede revisar los detalles de
 
 ![Configuración básica del almacén de claves](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Otorgar a Microsoft una excepción de firewall
+## Configurar las opciones de red
 
 Si el almacén de claves está configurado para restringir el acceso público a ciertas redes virtuales o deshabilitar el acceso público por completo, debe conceder a Microsoft una excepción de firewall.
 
