@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;
-description: Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de consumo de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, reglas de asignación, áreas de nombres de identidad y flujos de datos, que se pueden utilizar al importar datos de un origen a un Experience Platform.
+description: Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de consumo de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, reglas de asignación, identidades, áreas de nombres de identidad y flujos de datos, que se pueden utilizar al importar datos de un origen a un Experience Platform.
 title: (Alpha) Crear un flujo de datos de fuentes utilizando plantillas en la interfaz de usuario
 hide: true
 hidefromtoc: true
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '1184'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 >
 >Las plantillas están en Alpha y actualmente solo las admite el [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). La documentación y las funcionalidades están sujetas a cambios.
 
-Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de consumo de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, reglas de asignación, áreas de nombres de identidad y flujos de datos, que se pueden utilizar al importar datos de un origen a un Experience Platform.
+Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de consumo de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos, que se pueden utilizar al importar datos de un origen a un Experience Platform.
 
 Con las plantillas, puede:
 
-* Reduzca el tiempo-valor de la ingesta mediante la aceleración de la creación de activos basada en ML.
+* Reduzca el tiempo de respuesta al valor de la ingesta mediante la aceleración de la creación de recursos con plantilla.
 * Minimice los errores que se pueden producir durante el proceso de ingesta manual de datos.
 * Actualice los recursos generados automáticamente en cualquier momento para adaptarlos a sus casos de uso.
 
@@ -51,7 +51,12 @@ En el [!UICONTROL aplicaciones de Adobe] categoría, seleccione **[!UICONTROL Ma
 
 ![Catálogo del espacio de trabajo de fuentes con el origen del Marketo Engage resaltado.](../../images/tutorials/templates/catalog.png)
 
-Aparece una ventana emergente que le presenta la opción de examinar plantillas o utilizar esquemas y conjuntos de datos existentes. Para utilizar recursos generados automáticamente, seleccione **[!UICONTROL Examinar plantillas]** y, a continuación, seleccione **[!UICONTROL Select]**.
+Aparece una ventana emergente que le presenta la opción de examinar plantillas o utilizar esquemas y conjuntos de datos existentes.
+
+* **Examinar plantillas**: Las plantillas de fuentes crean automáticamente esquemas, identidades, conjuntos de datos y flujos de datos con reglas de asignación. Puede personalizar estos recursos según sea necesario.
+* **Usar mis recursos existentes**: Ingeste los datos mediante conjuntos de datos y esquemas existentes que haya creado. También puede crear nuevos conjuntos de datos y esquemas si es necesario.
+
+Para utilizar recursos generados automáticamente, seleccione **[!UICONTROL Examinar plantillas]** y, a continuación, seleccione **[!UICONTROL Select]**.
 
 ![Ventana emergente con opciones para examinar plantillas o utilizar recursos existentes.](../../images/tutorials/templates/browse-templates.png)
 
@@ -83,6 +88,12 @@ Aparece la ventana de vista previa que le permite explorar e inspeccionar datos 
 
 A continuación, seleccione la plantilla que desee utilizar en la lista. Puede seleccionar varias plantillas y crear varios flujos de datos a la vez. Sin embargo, una plantilla solo se puede utilizar una vez por cuenta. Una vez seleccionadas las plantillas, seleccione **[!UICONTROL Finalizar]** y permitir que se generen unos momentos para los recursos.
 
+Si selecciona uno o varios elementos de la lista de plantillas disponibles, todos los esquemas B2B y áreas de nombres de identidad se generarán aún para garantizar que las relaciones B2B entre esquemas estén configuradas correctamente.
+
+>[!NOTE]
+>
+>Las plantillas que ya se hayan utilizado se desactivarán en la selección.
+
 ![La lista de plantillas con la plantilla Rol de contacto de oportunidad seleccionada.](../../images/tutorials/templates/select-template.png)
 
 ### Revisar recursos {#review-assets}
@@ -92,7 +103,7 @@ A continuación, seleccione la plantilla que desee utilizar en la lista. Puede s
 >title="Revise los recursos generados automáticamente"
 >abstract="La generación de todos los recursos puede tardar hasta cinco minutos. Si decide salir de la página, recibirá una notificación para que se devuelva una vez que se hayan completado los recursos. Puede revisar los recursos una vez que se hayan generado y realizar configuraciones adicionales en el flujo de datos en cualquier momento."
 
-La variable [!UICONTROL Revisar recursos de plantilla] muestra los recursos generados automáticamente como parte de la plantilla. En esta página, puede ver los esquemas, conjuntos de datos, áreas de nombres de identidad y flujos de datos generados automáticamente y asociados con la conexión de origen.
+La variable [!UICONTROL Revisar recursos de plantilla] muestra los recursos generados automáticamente como parte de la plantilla. En esta página, puede ver los esquemas, conjuntos de datos, áreas de nombres de identidad y flujos de datos generados automáticamente y asociados con la conexión de origen. La generación de todos los recursos puede tardar hasta cinco minutos. Si decide salir de la página, recibirá una notificación para que se devuelva una vez que se hayan completado los recursos. Puede revisar los recursos una vez que se hayan generado y realizar configuraciones adicionales en el flujo de datos en cualquier momento.
 
 Los flujos de datos generados automáticamente están habilitados de forma predeterminada. Seleccione los puntos suspensivos (`...`) junto al nombre del flujo de datos y, a continuación, seleccione **[!UICONTROL Previsualizar asignaciones]** para ver los conjuntos de asignación creados para su flujo de datos.
 
@@ -104,8 +115,22 @@ Aparece una página de vista previa que le permite inspeccionar la relación de 
 
 Puede actualizar los flujos de datos en cualquier momento después de la ejecución. Seleccione los puntos suspensivos (`...`) junto al nombre del flujo de datos y, a continuación, seleccione **[!UICONTROL Actualizar flujo de datos]**. Se le redirige a la página de flujo de trabajo de fuentes donde puede actualizar sus detalles del flujo de datos, incluida la configuración para la ingesta parcial, el diagnóstico de errores y las notificaciones de alerta, así como la asignación del flujo de datos.
 
+Puede utilizar la vista del editor de esquemas para realizar actualizaciones en el esquema generado automáticamente. Visite la guía de [uso del editor de esquemas](../../../xdm/tutorials/create-schema-ui.md) para obtener más información.
+
 ![Una ventana desplegable con la opción de actualización de flujos de datos seleccionada.](../../images/tutorials/templates/update.png)
 
 ## Pasos siguientes
 
 Al seguir este tutorial, ahora ha creado flujos de datos, así como recursos como esquemas, conjuntos de datos y áreas de nombres de identidad mediante plantillas. Para obtener información general sobre las fuentes, visite [información general sobre fuentes](../../home.md).
+
+## Apéndice
+
+La siguiente sección proporciona información adicional sobre las plantillas.
+
+### Utilice el panel de notificaciones para volver a la página de revisión
+
+Las plantillas son compatibles con las alertas de Adobe Experience Platform, y puede utilizar el panel de notificaciones para recibir actualizaciones sobre el estado de sus recursos y también para volver a la página de revisión.
+
+Seleccione el icono de notificación en el encabezado superior de la interfaz de usuario de Platform y, a continuación, seleccione la alerta de estado para ver los recursos que desea revisar.
+
+![El panel de notificaciones de la interfaz de usuario de Platform con una notificación que avisa de un flujo de datos fallido resaltado.](../../images/tutorials/templates/notifications.png)
