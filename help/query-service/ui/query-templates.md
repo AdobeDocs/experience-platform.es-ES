@@ -1,7 +1,8 @@
 ---
 title: Plantillas de consulta
 description: Las plantillas de consulta son consultas SQL guardadas reutilizables y que otros usuarios pueden reutilizar para ahorrar tiempo y esfuerzo. Se pueden crear mediante el Editor de consultas o la API del servicio de consultas y están disponibles para su uso en todos los conjuntos de datos del Experience Platform.
-source-git-commit: 5ed822ec16e8e8d38e93370440242ec4c1c01320
+exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 1%
@@ -26,9 +27,11 @@ Puede crear plantillas de consulta mediante dos métodos, ya sea realizando una 
 
 Consulte la documentación para obtener instrucciones sobre cómo utilizar el Editor de consultas para [write](./user-guide.md#query-authoring) y [guardar consultas](./user-guide.md#saving-queries). Una vez que haya asignado un nombre a la consulta y la haya guardado, podrá reutilizarla como plantilla de consulta desde el [!UICONTROL Examinar] pestaña .
 
-En el espacio de trabajo Consultas de la interfaz de usuario de Platform, seleccione **[!UICONTROL Examinar]** para mostrar la lista de consultas guardadas disponibles.
+En el espacio de trabajo Consultas de la interfaz de usuario de Platform, seleccione **[!UICONTROL Plantillas]** para mostrar la lista de consultas guardadas disponibles.
 
-![El espacio de trabajo de consultas con la pestaña Examinar resaltada.](../images/ui/query-templates/query-templates.png)
+<!-- This may need updating idf the Schedule are added to a separate Tab -->
+
+![El espacio de trabajo de consultas con la pestaña Plantillas resaltada.](../images/ui/query-templates/query-templates.png)
 
 Para encontrar información de plantilla relevante, seleccione cualquier plantilla de consulta de la lista disponible para abrir el panel de detalles.
 

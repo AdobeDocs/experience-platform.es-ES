@@ -5,9 +5,9 @@ title: Información general sobre la IU de Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -154,7 +154,7 @@ La variable **[!UICONTROL Esquemas]** permite crear y administrar esquemas del M
 
 La variable **[!UICONTROL Conjuntos de datos]** permite crear y administrar conjuntos de datos. Encontrará más información sobre los conjuntos de datos en la [guía del usuario de conjuntos de datos](../catalog/datasets/user-guide.md).
 
-La variable **[!UICONTROL Consultas]** permite crear y administrar consultas, registrar consultas SQL realizadas por Adobe Experience Platform Query Service y ver sus credenciales PostgreSQL. Encontrará más información sobre las consultas en la [Guía del usuario del servicio de consultas](../query-service/ui/overview.md).
+La variable **[!UICONTROL Consultas]** permite crear y administrar consultas, registrar consultas SQL realizadas por Adobe Experience Platform Query Service y ver su [!DNL PostgreSQL] credenciales. Encontrará más información sobre las consultas en la [Guía del usuario del servicio de consultas](../query-service/ui/overview.md).
 
 La variable **[!UICONTROL Monitorización]** permite monitorizar la ingesta por lotes y de flujo continuo. Encontrará más información sobre la monitorización en la [guía del usuario sobre la ingesta de datos de monitorización](../ingestion/quality/monitor-data-ingestion.md).
 

@@ -4,9 +4,9 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: cc855d46d594d8a55d26873b25060367cf726926
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '223'
 ht-degree: 18%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 18%
    - [Información general sobre conexiones de cliente](clients/overview.md)
    - [Modos SSL](./clients/ssl-modes.md)
    - [Estudio de datos de Aqua](clients/aqua-data-studio.md)
-   - [Visualizador De Db](./clients/dbvisulaizer.md)
+   - [DbVisualizer](./clients/dbvisulaizer.md)
    - [Portátil Jupyter](clients//jupyter-notebook.md)
    - [Buscador](clients/looker.md)
    - [Postico](clients/postico.md)
@@ -76,7 +76,7 @@ ht-degree: 18%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
-- Gobierno de datos {#data-governance}
+- Control de datos {#data-governance}
    - [Información general](data-governance/overview.md)
    - [Guía de registro de auditoría](data-governance/audit-log-guide.md)
    - [Identidades en conjuntos de datos de esquema específicos](data-governance/ad-hoc-schema-identities.md)

@@ -2,9 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;conexión;conexión al servicio de consulta;SSL;ssl;sslmode;
 title: Opciones SSL del servicio de consulta
 description: Obtenga información sobre la compatibilidad con SSL para conexiones de terceros con el servicio de consulta de Adobe Experience Platform y cómo conectar con el modo SSL verificado-completo.
-source-git-commit: 92dac8e75e1ddda860d255ce1b7d278041c89325
+exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
@@ -32,8 +33,8 @@ Los diferentes `sslmode` los valores de parámetro proporcionan diferentes nivel
 | `allow` | Parcial | No | La seguridad no es una prioridad, la velocidad y una sobrecarga de procesamiento baja son más importantes. Este modo solo opta por el cifrado si el servidor insiste en él. |
 | `prefer` | Parcial | No | No se requiere cifrado, pero la comunicación se cifrará si el servidor la admite. |
 | `require` | Sí | No | Se requiere cifrado en todas las comunicaciones. Se confía en que la red se conecte al servidor correcto. No es necesario validar el certificado SSL del servidor. |
-| `verify-ca` | Sí | Depende de la directiva CA | Se requiere cifrado en todas las comunicaciones. La validación del servidor es necesaria antes de que se compartan los datos. Esto requiere que configure un certificado raíz en el directorio raíz PostgreSQL. [A continuación se proporcionan detalles](#instructions) |
-| `verify-full` | Sí | Sí | Se requiere cifrado en todas las comunicaciones. La validación del servidor es necesaria antes de que se compartan los datos. Esto requiere que configure un certificado raíz en el directorio raíz PostgreSQL. [A continuación se proporcionan detalles](#instructions). |
+| `verify-ca` | Sí | Depende de la directiva CA | Se requiere cifrado en todas las comunicaciones. La validación del servidor es necesaria antes de que se compartan los datos. Esto requiere que configure un certificado raíz en su [!DNL PostgreSQL] directorio raíz. [A continuación se proporcionan detalles](#instructions) |
+| `verify-full` | Sí | Sí | Se requiere cifrado en todas las comunicaciones. La validación del servidor es necesaria antes de que se compartan los datos. Esto requiere que configure un certificado raíz en su [!DNL PostgreSQL] directorio raíz. [A continuación se proporcionan detalles](#instructions). |
 
 >[!NOTE]
 >

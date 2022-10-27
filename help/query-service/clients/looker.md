@@ -5,9 +5,9 @@ title: Conectar el buscador al servicio de consulta
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar Looker con el servicio de consulta de Adobe Experience Platform.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,15 @@ Este documento cubre los pasos para la conexión [!DNL Looker] con Adobe Experie
 
 Tras iniciar sesión [!DNL Looker], seleccione **[!DNL Admin]**, seguido de **[!DNL Connections]**.
 
-![](../images/clients/looker/click-admin-connections.png)
+![La variable [!DNL Looker] tablero con Conexiones resaltadas en el menú desplegable Administrador .](../images/clients/looker/click-admin-connections.png)
 
 En esta página, seleccione **[!DNL New Connection]**.
 
-![](../images/clients/looker/click-new-connection.png)
+![El espacio de trabajo Conexiones con Nueva conexión resaltado.](../images/clients/looker/click-new-connection.png)
 
 Desde aquí puede rellenar los detalles de la configuración de conexión.
 
-![](../images/clients/looker/new-connection.png)
+![La página Configuración de conexiones para una nueva conexión.](../images/clients/looker/new-connection.png)
 
 - **[!DNL Name]:** Nombre de la conexión.
 - **[!DNL Dialect]:** El dialecto utilizado para la base de datos SQL. [!DNL Query Service] uses **[!DNL PostgreSQL]**.
@@ -47,7 +47,7 @@ Para obtener más información sobre cómo encontrar el host y el puerto, el nom
 
 Después de introducir los detalles de conexión, seleccione **[!DNL Test These Settings]** para garantizar que sus credenciales funcionen correctamente. Si lo hacen, a continuación aparecerá un mensaje que indica que puede conectarse. Si la conexión se ha realizado correctamente, seleccione **[!DNL Add Connection]** para crear la conexión.
 
-![](../images/clients/looker/click-test-connection.png)
+![La página Configuración de conexiones para una nueva conexión con Probar esta configuración está resaltada.](../images/clients/looker/click-test-connection.png)
 
 ## Pasos siguientes
 

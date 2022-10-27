@@ -5,10 +5,10 @@ title: Guía de la interfaz de usuario del Editor de consultas
 topic-legacy: query editor
 description: El Editor de consultas es una herramienta interactiva que proporciona el servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente en la interfaz de usuario del Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: b4f4549e49eb8b37bd4209c5bcf01c5622e8fbd1
+source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
 workflow-type: tm+mt
-source-wordcount: '1865'
-ht-degree: 1%
+source-wordcount: '1993'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ Para obtener más información sobre los conceptos y las características de [!D
 
 [!DNL Query Editor] tarda unos segundos en inicializarse y conectarse a [!DNL Query Service] cuando se abra. La consola le indica cuándo está conectada, como se muestra a continuación. Si intenta ejecutar una consulta antes de que el editor se haya conectado, se retrasa la ejecución hasta que se complete la conexión.
 
-![Imagen](../images/ui/query-editor/connect.png)
+![La salida de la consola del Editor de consultas tras la conexión inicial.](../images/ui/query-editor/connect.png)
 
 ### Cómo se ejecutan las consultas desde [!DNL Query Editor] {#run-a-query}
 
@@ -36,17 +36,17 @@ Consultas ejecutadas desde [!DNL Query Editor] se ejecuta de forma interactiva. 
 
 Uso [!DNL Query Editor], puede escribir, ejecutar y guardar consultas para datos de experiencias del cliente. Todas las consultas ejecutadas o guardadas en [!DNL Query Editor] están disponibles para todos los usuarios de su organización con acceso a [!DNL Query Service].
 
-### Acceso [!DNL Query Editor] {#accessing-query-editor}
+### Acceso a [!DNL Query Editor] {#accessing-query-editor}
 
 En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Consultas]** en el menú de navegación de la izquierda para abrir [!DNL Query Service] espacio de trabajo. A continuación, seleccione **[!UICONTROL Crear consulta]** en la parte superior derecha de la pantalla para comenzar a escribir consultas. Este vínculo está disponible desde cualquiera de las páginas de la sección [!DNL Query Service] espacio de trabajo.
 
-![Imagen](../images/ui/query-editor/create-query.png)
+![La pestaña Información general del espacio de trabajo Consultas con la opción Crear consulta resaltada.](../images/ui/query-editor/create-query.png)
 
 ### Escritura de consultas {#writing-queries}
 
-[!UICONTROL Editor de consultas] está organizado para que la escritura de consultas sea lo más sencilla posible. La captura de pantalla siguiente muestra cómo aparece el editor en la interfaz de usuario, con la variable **Play** y campo de entrada SQL resaltado.
+[!UICONTROL Editor de consultas] está organizado para que la escritura de consultas sea lo más sencilla posible. La captura de pantalla siguiente muestra cómo aparece el editor en la interfaz de usuario, con el campo de entrada SQL y **Play** resaltado.
 
-![Imagen](../images/ui/query-editor/editor.png)
+![El Editor de consultas con el campo de entrada SQL y Play resaltado.](../images/ui/query-editor/editor.png)
 
 Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas con límites en las filas devueltas. Por ejemplo, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Después de comprobar que la consulta produce el resultado esperado, elimine los límites y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con la salida .
 
@@ -54,15 +54,15 @@ Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas 
 
 - **Resaltado de sintaxis automático:** Facilita la lectura y organización de SQL.
 
-![Imagen](../images/ui/query-editor/syntax-highlight.png)
+![Instrucción SQL en el Editor de consultas que muestra el resaltado del color de la sintaxis.](../images/ui/query-editor/syntax-highlight.png)
 
 - **Palabra clave SQL autocompletada:** Comience a escribir la consulta, utilice las teclas de flecha para ir al término deseado y pulse **Entrar**.
 
-![Imagen](../images/ui/query-editor/syntax-auto.png)
+![Algunos caracteres de SQL con el menú desplegable autocompletado que proporciona las opciones del Editor de consultas.](../images/ui/query-editor/syntax-auto.png)
 
 - **Tabla y campo autocompletados:** Comience a escribir el nombre de tabla que desee `SELECT` en , utilice las teclas de flecha para desplazarse hasta la tabla que está buscando y pulse **Entrar**. Una vez seleccionada una tabla, el llenado automático reconocerá los campos de dicha tabla.
 
-![La interfaz de la línea de comandos del Editor de consultas muestra las sugerencias desplegables.](../images/ui/query-editor/tables-auto.png)
+![La entrada del Editor de consultas muestra las sugerencias de nombre de tabla desplegable.](../images/ui/query-editor/tables-auto.png)
 
 ### Alternativa de configuración de la interfaz de usuario de autocompletar {#auto-complete}
 
@@ -94,17 +94,17 @@ Seleccione la opción adecuada para desactivar la función de autocompletar.
 
 [!DNL Query Editor] valida automáticamente una consulta a medida que la escribe, proporcionando validación SQL genérica y validación de ejecución específica. Si aparece un subrayado rojo debajo de la consulta (como se muestra en la imagen siguiente), representa un error dentro de la consulta.
 
-![Imagen](../images/ui/query-editor/syntax-error-highlight.png)
+![La entrada del Editor de consultas muestra SQL subrayado en rojo para indicar un error.](../images/ui/query-editor/syntax-error-highlight.png)
 
 Cuando se detectan errores, se pueden ver los mensajes de error específicos pasando el cursor sobre el código SQL.
 
-![Imagen](../images/ui/query-editor/linting-error.png)
+![Cuadro de diálogo con un mensaje de error.](../images/ui/query-editor/linting-error.png)
 
 ### Detalles de la consulta {#query-details}
 
-Mientras está viendo una consulta en [!DNL Query Editor], el **[!UICONTROL Detalles de la consulta]** proporciona herramientas para administrar la consulta seleccionada.
+Seleccione cualquier plantilla guardada de la variable [!UICONTROL Plantillas] para verlo en el Editor de consultas. El panel de detalles de la consulta proporciona más información y herramientas para administrar la consulta seleccionada.
 
-![Imagen](../images/ui/query-editor/query-details.png)
+![El Editor de consultas con el panel de detalles de la consulta resaltado.](../images/ui/query-editor/query-details.png)
 
 Este panel le permite generar un conjunto de datos de salida directamente desde la interfaz de usuario, eliminar o asignar un nombre a la consulta mostrada y agregar una programación a la consulta.
 
@@ -118,11 +118,13 @@ Este panel también muestra metadatos útiles, como la última vez que se modifi
 
 Para añadir una programación a una consulta, seleccione **[!UICONTROL Agregar programación]**.
 
-![Imagen](../images/ui/query-editor/add-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![El Editor de consultas con la programación Añadir resaltada.](../images/ui/query-editor/add-schedule.png)
 
 La variable **[!UICONTROL Detalles de la programación]** se abre. En esta página, puede elegir la frecuencia de la consulta programada, las fechas en las que se ejecutará la consulta programada y el conjunto de datos al que exportar la consulta.
 
-![Imagen](../images/ui/query-editor/schedule-details.png)
+![El panel Detalles del programa está resaltado.](../images/ui/query-editor/schedule-details.png)
 
 Puede elegir las siguientes opciones para **[!UICONTROL Frecuencia]**:
 
@@ -152,7 +154,9 @@ La página de detalles de la consulta vuelve a aparecer y ahora muestra los deta
 
 Para eliminar una programación, seleccione **[!UICONTROL Eliminar una programación]**.
 
-![Imagen](../images/ui/query-editor/delete-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![El Editor de consultas con la programación Deshabilitar y Eliminar resaltada.](../images/ui/query-editor/delete-schedule.png)
 
 >[!IMPORTANT]
 >
@@ -184,7 +188,7 @@ Para ejecutar una consulta en [!DNL Query Editor], puede introducir SQL en el ed
 
 La consola proporciona información sobre el estado y el funcionamiento de [!DNL Query Service]. La consola muestra el estado de conexión a [!DNL Query Service], las operaciones de consulta que se están ejecutando y los mensajes de error que resulten de esas consultas.
 
-![Imagen](../images/ui/query-editor/console.png)
+![La ficha Consola de la consola del Editor de consultas.](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -194,7 +198,7 @@ La consola proporciona información sobre el estado y el funcionamiento de [!DNL
 
 Una vez completada la consulta, los resultados se muestran en la variable **[!UICONTROL Resultados]** junto a la pestaña **[!UICONTROL Consola]** pestaña . Esta vista muestra el resultado tabular de la consulta, mostrando hasta 100 filas. Esta vista le permite verificar que la consulta produce el resultado esperado. Para generar un conjunto de datos con la consulta, elimine los límites de las filas devueltas y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con la salida . Consulte la [tutorial generación de conjuntos de datos](./create-datasets.md) para obtener instrucciones sobre cómo generar un conjunto de datos a partir de resultados de consulta en [!DNL Query Editor].
 
-![Imagen](../images/ui/query-editor/query-results.png)
+![La ficha Resultados de la consola del Editor de consultas muestra los resultados de una ejecución de consulta.](../images/ui/query-editor/query-results.png)
 
 ## Ejecutar consultas con [!DNL Query Service] videotutorial {#query-tutorial-video}
 

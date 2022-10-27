@@ -5,9 +5,9 @@ title: Conexión de RStudio al servicio de consulta
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar R Studio con Adobe Experience Platform Query Service.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 9ab3d69553dee9fdb97472edfa3f812133ee1bb1
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -20,29 +20,29 @@ Este documento recorre los pasos para la conexión [!DNL RStudio] con Adobe Expe
 >
 > Esta guía asume que ya tiene acceso a [!DNL RStudio] y están familiarizados con su uso. Más información sobre [!DNL RStudio] se encuentra en la variable [oficial [!DNL RStudio] documentación](https://rstudio.com/products/rstudio/).
 > 
-> Además, para utilizar RStudio con Query Service, debe instalar el controlador PostgreSQL JDBC 4.2. Puede descargar el controlador JDBC desde el [Sitio oficial de PostgreSQL](https://jdbc.postgresql.org/download/).
+> Además, para usar [!DNL RStudio] con el servicio de consulta, debe instalar el [!DNL PostgreSQL] Controlador JDBC 4.2. Puede descargar el controlador JDBC desde el [[!DNL PostgreSQL] sitio oficial](https://jdbc.postgresql.org/download/).
 
 ## Cree un [!DNL Query Service] en el [!DNL RStudio] interfaz
 
 Después de instalar [!DNL RStudio], debe instalar el paquete RJDBC. Vaya a la **[!DNL Packages]** y seleccione **[!DNL Install]**.
 
-![](../images/clients/rstudio/install-package.png)
+![La variable [!DNL RStudio] tablero con Paquetes e Instalar resaltados.](../images/clients/rstudio/install-package.png)
 
 Aparece una ventana emergente que muestra la variable **[!DNL Install Packages]** en el Navegador. Asegúrese de que **[!DNL Repository (CRAN)]** se selecciona para la variable **[!DNL Install from]** para obtener más información. El valor de **[!DNL Packages]** debe `RJDBC`. Asegúrese **[!DNL Install dependencies]** está seleccionado. Después de confirmar que todos los valores son correctos, seleccione **[!DNL Install]** para instalar los paquetes.
 
-![](../images/clients/rstudio/install-jrdbc.png)
+![El cuadro de diálogo Instalar paquetes con RJDBC entró en el campo Paquetes e Instalar resaltado.](../images/clients/rstudio/install-jrdbc.png)
 
-Ahora que el paquete RJDBC ha sido instalado, reinicie RStudio para completar el proceso de instalación.
+Ahora que el paquete RJDBC se ha instalado, reinicie [!DNL RStudio] para completar el proceso de instalación.
 
-Después de reiniciar RStudio, ahora puede conectarse al servicio de consulta. Seleccione el **[!DNL RJDBC]** en el **[!DNL Packages]** e introduzca el siguiente comando en la consola:
+Después [!DNL RStudio] se ha reiniciado, ahora puede conectarse al servicio de consulta. Seleccione el **[!DNL RJDBC]** en el **[!DNL Packages]** e introduzca el siguiente comando en la consola:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Donde {PATH TO THE POSTGRESQL JDBC JAR} representa la ruta al JAR JDBC PostgreSQL que se instaló en el equipo.
+Donde `{PATH TO THE POSTGRESQL JDBC JAR}` representa la ruta a la variable [!DNL PostgreSQL] JDBC JAR que se instaló en su ordenador.
 
-Ahora, puede crear la conexión con el servicio de consulta introduciendo el siguiente comando en la consola:
+Ahora, puede crear la conexión con el servicio de consulta. Introduzca el siguiente comando en la consola:
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -54,7 +54,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md). Para encontrar sus credenciales, inicie sesión en [!DNL Platform]y, a continuación, seleccione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciales]**.
 
-![](../images/clients/rstudio/connection-rjdbc.png)
+![La salida de la consola en [!DNL RStudio] desde la conexión al servicio de consultas.](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Escritura de consultas
 

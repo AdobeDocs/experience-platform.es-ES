@@ -5,9 +5,9 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene preguntas y respuestas comunes relacionadas con el servicio de consulta. Los temas incluyen, exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
+source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3781'
 ht-degree: 1%
 
 ---
@@ -86,15 +86,15 @@ SELECT * FROM customers LIMIT 0;
 - Después de iniciar sesión en el Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en la navegación izquierda de la interfaz de usuario a la que navegar [!UICONTROL Conjuntos de datos] tablero.
 - Los conjuntos de datos [!UICONTROL Examinar] se abre. Puede utilizar la barra de búsqueda para restringir las opciones disponibles. Seleccione un conjunto de datos de la lista mostrada.
 
-![Conjunto de datos resaltado en la interfaz de usuario de Platform.](./images/troubleshooting/dataset-selection.png)
+![El tablero Conjuntos de datos en la interfaz de usuario de Platform con la barra de búsqueda y un conjunto de datos resaltados.](./images/troubleshooting/dataset-selection.png)
 
-- La variable [!UICONTROL Actividad de conjuntos de datos] se abre. Select [!UICONTROL Vista previa del conjunto de datos] para abrir un cuadro de diálogo del esquema XDM y la vista tabular de los datos acoplados del conjunto de datos seleccionado. Encontrará más detalles en la [vista previa de la documentación de un conjunto de datos](../catalog/datasets/user-guide.md#preview-a-dataset)
+- La variable [!UICONTROL Actividad de conjuntos de datos] se abre. Select **[!UICONTROL Vista previa del conjunto de datos]** para abrir un cuadro de diálogo del esquema XDM y la vista tabular de los datos acoplados del conjunto de datos seleccionado. Encontrará más detalles en la [vista previa de la documentación de un conjunto de datos](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![Esquema XDM y vista tabular de los datos acoplados.](./images/troubleshooting/dataset-preview.png)
+![La pestaña Actividad del conjunto de datos del tablero Conjuntos de datos con la vista previa del conjunto de datos resaltada.](./images/troubleshooting/dataset-preview.png)
 
 - Seleccione cualquier campo del esquema para mostrar su contenido en una columna plana. El nombre de la columna se muestra encima de su contenido en el lado derecho de la página. Debe copiar este nombre para utilizarlo para consultar este conjunto de datos.
 
-![El nombre de columna de un conjunto de datos anidado resaltado en la interfaz de usuario.](./images/troubleshooting/column-name.png)
+![Esquema XDM y vista tabular de los datos acoplados. El nombre de columna de un conjunto de datos anidado se resalta en la interfaz de usuario.](./images/troubleshooting/column-name.png)
 
 Consulte la documentación para obtener una guía completa sobre [cómo trabajar con estructuras de datos anidadas](./best-practices/nested-data-structures.md) con el Editor de consultas o un cliente de terceros.
 +++
@@ -119,12 +119,12 @@ Puede haber varios motivos para que una consulta se bloquee durante el procesami
 - Vaya a [https://www.adobe.com/](https://www.adobe.com/) en el explorador web.
 - En el lado derecho de la barra de navegación superior, seleccione **[!UICONTROL Iniciar sesión]**.
 
-![El sitio web de Adobe con inicio de sesión resaltado.](./images/troubleshooting/adobe-sign-in.png)
+![El sitio web de Adobe con el inicio de sesión resaltado.](./images/troubleshooting/adobe-sign-in.png)
 
 - Utilice su Adobe ID y contraseña registrados con su licencia de Adobe.
 - Select **[!UICONTROL Ayuda y asistencia]** en la barra de navegación superior.
 
-![Menú desplegable de la barra de navegación superior con ayuda y asistencia resaltadas.](./images/troubleshooting/help-and-support.png)
+![Menú desplegable superior de la barra de navegación con Ayuda y asistencia, Soporte empresarial y Contacto resaltado.](./images/troubleshooting/help-and-support.png)
 
 Aparece un banner desplegable que contiene un [!UICONTROL Ayuda y asistencia] para obtener más información. Select **[!UICONTROL Contáctenos]** para abrir el asistente virtual del servicio de atención al cliente de Adobe, o seleccione **[!UICONTROL Asistencia para empresas]** para obtener ayuda dedicada para organizaciones grandes.
 +++

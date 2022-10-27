@@ -3,9 +3,9 @@ keywords: Experience Platform;servicio de consulta;servicio de consulta;estructu
 title: Trabajo con estructuras de datos anidadas en el servicio de consulta
 description: Este documento proporciona un ejemplo práctico para procesar y transformar campos de datos anidados utilizando instrucciones CTAS e INSERT INTO.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 El servicio de consulta de Adobe Experience Platform admite el uso de campos de datos anidados. La complejidad de las estructuras de datos empresariales puede complicar la transformación o el procesamiento de estos datos. Este documento proporciona ejemplos de cómo crear, procesar o transformar conjuntos de datos con tipos de datos complejos, incluidas estructuras de datos anidadas.
 
-El servicio de consultas proporciona una interfaz PostgreSQL para ejecutar consultas SQL en todos los conjuntos de datos administrados por el Experience Platform. Platform admite el uso de tipos de datos simples o complejos en columnas de tablas, como estructura, matrices, mapas y estructuras, matrices y mapas profundamente anidados. Los conjuntos de datos también pueden contener estructuras anidadas en las que el tipo de datos de columna puede ser tan complejo como una matriz de estructuras anidadas o un mapa de mapas en el que el valor de un par clave-valor puede ser una estructura con varios niveles de anidación.
+El servicio de consultas proporciona un [!DNL PostgreSQL] para ejecutar consultas SQL en todos los conjuntos de datos administrados por el Experience Platform. Platform admite el uso de tipos de datos simples o complejos en columnas de tablas, como estructura, matrices, mapas y estructuras, matrices y mapas profundamente anidados. Los conjuntos de datos también pueden contener estructuras anidadas en las que el tipo de datos de columna puede ser tan complejo como una matriz de estructuras anidadas o un mapa de mapas en el que el valor de un par clave-valor puede ser una estructura con varios niveles de anidación.
 
 ## Primeros pasos
 

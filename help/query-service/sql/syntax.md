@@ -5,9 +5,9 @@ title: Sintaxis SQL en Query Service
 topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3156'
 ht-degree: 2%
 
 ---
@@ -449,7 +449,7 @@ El ejemplo devuelve lo siguiente:
 
 Este segundo ejemplo demuestra aún más el concepto y la aplicación del `inline` función. El modelo de datos del ejemplo se ilustra en la siguiente imagen.
 
-![Un diagrama de esquema para productListItems](../images/sql/productListItems.png)
+![Diagrama de esquema de productListItems.](../images/sql/productListItems.png)
 
 **Ejemplo**
 
@@ -485,9 +485,9 @@ SET property_key = property_value
 
 Para devolver el valor de cualquier configuración, utilice `SET [property key]` sin `property_value`.
 
-## Comandos PostgreSQL
+## [!DNL PostgreSQL] comandos
 
-Las subsecciones siguientes abarcan los comandos PostgreSQL admitidos por el servicio de consultas.
+Las siguientes subsecciones tratan sobre la [!DNL PostgreSQL] comandos admitidos por el servicio de consultas.
 
 ### ANALIZAR TABLA
 
@@ -677,7 +677,7 @@ Puede encontrar más información sobre los parámetros de consulta SELECT está
 | Parámetros | Descripción |
 | ------ | ------ |
 | `TEMPORARY` o `TEMP` | Un parámetro opcional. Si se especifica, la tabla que se crea será una tabla temporal. |
-| `UNLOGGED` | Un parámetro opcional. Si se especifica, la tabla que se crea como será una tabla sin registrar. Puede encontrar más información sobre las tablas no registradas en la [Documentación PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | Un parámetro opcional. Si se especifica, la tabla que se crea como será una tabla sin registrar. Puede encontrar más información sobre las tablas no registradas en la [[!DNL PostgreSQL] documentación](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Nombre de la tabla que se va a crear. |
 
 **Ejemplo**

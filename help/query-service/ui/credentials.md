@@ -5,9 +5,9 @@ title: Guía de credenciales del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1204'
 ht-degree: 1%
 
 ---
@@ -82,9 +82,9 @@ El archivo JSON de configuración contiene información como el nombre de cuenta
 
 Después de guardar las credenciales generadas, seleccione **[!UICONTROL Cerrar]**. Ahora puede ver una lista de todas sus credenciales que no caducan.
 
-![La ficha Credenciales del panel Consultas con la sección Credenciales que no caducan se expande.](../images/ui/credentials/list-credentials.png)
+![La ficha Credenciales del panel Consultas con la sección Credenciales que no caducan resaltada.](../images/ui/credentials/list-credentials.png)
 
-Puede editar o eliminar las credenciales que no caducan. Para editar una credencial que no caduque, seleccione el icono de lápiz (![](../images/ui/credentials/edit-icon.png)). Para eliminar una credencial que no caduque, seleccione el icono Eliminar (![](../images/ui/credentials/delete-icon.png)).
+Puede editar o eliminar las credenciales que no caducan. Para editar una credencial que no caduque, seleccione el icono de lápiz (![Un icono de lápiz.](../images/ui/credentials/edit-icon.png)). Para eliminar una credencial que no caduque, seleccione el icono Eliminar (![Un icono de la papelera.](../images/ui/credentials/delete-icon.png)).
 
 Al editar una credencial que no caduca, aparece un modal. Puede proporcionar los siguientes detalles para actualizar:
 
@@ -102,7 +102,7 @@ Puede utilizar las credenciales que caducan o que no caducan para conectarse con
 
 La imagen indica la ubicación de cada parámetro que se encuentra en la interfaz de usuario, excepto la contraseña de las credenciales que no caducan. Aunque sus archivos de configuración JSON proporcionan credenciales que no caducan, puede ver sus credenciales que caducan en la sección **Credenciales** en la interfaz de usuario.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![La ficha Credenciales del espacio de trabajo Consultas con las credenciales caducadas resaltadas.](../images/ui/credentials/expiring-credentials.png)
 
 En la tabla siguiente se describen los parámetros que suelen ser necesarios para conectarse a clientes externos.
 

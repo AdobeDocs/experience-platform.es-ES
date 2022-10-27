@@ -5,9 +5,9 @@ title: Conexión de DbVisualizer al servicio de consulta
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar DbVisualizer con el servicio de consulta de Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Utilice la barra de búsqueda o seleccione [!DNL PostgreSQL] en la lista despleg
 
 En el espacio de trabajo de Conexión a la base de datos, seleccione la opción **[!DNL Properties]** , seguido de la pestaña **[!DNL Driver Properties]** desde la barra lateral de navegación.
 
-![El espacio de trabajo Conexión a la base de datos con la ficha Propiedades resaltada.](../images/clients/dbvisualizer/driver-properties.png)
+![El espacio de trabajo Conexión a la base de datos con Propiedades y Propiedades del controlador resaltadas.](../images/clients/dbvisualizer/driver-properties.png)
 
 Se recomiendan las propiedades de controlador que se ven en la tabla siguiente para habilitar el uso de SSL con DBVisualizer.
 
@@ -57,7 +57,7 @@ Se recomiendan las propiedades de controlador que se ven en la tabla siguiente p
 
 La variable `PGHOST` y `user` se toman de sus credenciales de Adobe Experience Platform. Para encontrar sus credenciales, inicie sesión en la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** desde la navegación izquierda, seguido de **[!UICONTROL Credenciales]**. Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md).
 
-![Tablero de credenciales de consultas de Experience Platform con credenciales resaltadas.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![La página Credenciales del espacio de trabajo Consultas de Experience Platform con Credenciales y las Credenciales de Vencimiento resaltadas.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 [!DNL Query Service] también ofrece credenciales que no caducan para permitir una configuración única con clientes de terceros. Consulte la documentación para [instrucciones completas sobre cómo generar y utilizar credenciales que no caduquen](../ui/credentials.md#non-expiring-credentials).
 
@@ -75,7 +75,7 @@ Para requerir un ID de usuario y autenticación basada en contraseña cada vez q
 
 En el panel Autenticación de conexión, marque las dos **[!DNL Require Userid]** y **[!DNL Require Password]** casillas de verificación y seleccione **[!DNL Apply]**.
 
-![El panel Autenticación de conexión con las casillas de verificación Userid y Password resaltadas.](../images/clients/dbvisualizer/connection-authentication.png)
+![El panel Autenticación para [!DNL PostgreSQL] Conexión de base de datos con las casillas de verificación Requerir Userid y Contraseña resaltadas.](../images/clients/dbvisualizer/connection-authentication.png)
 
 ## Conectarse a Platform
 
@@ -90,11 +90,11 @@ Para establecer una conexión, seleccione la opción **[!DNL Connection]** en el
 
 Después de haber introducido todas las credenciales relevantes, seleccione **[!DNL Connect]**.
 
-![El espacio de trabajo Conexión a la base de datos con la ficha Conexión y el botón de conexión resaltado.](../images/clients/dbvisualizer/connect.png)
+![La variable [!DNL PostgreSQL] Espacio de trabajo de conexión a base de datos con la ficha Conexión y el botón de conexión resaltado.](../images/clients/dbvisualizer/connect.png)
 
 La variable [!DNL Connect] aparece en la primera ocasión del período de sesiones.
 
-![Se resaltan el cuadro de diálogo Conectar con los campos de texto userid de base de datos y contraseña de base de datos.](../images/clients/dbvisualizer/connect-dialog.png)
+![La conexión: [!DNL PostgreSQL] con los campos de texto Userid de base de datos y Contraseña de base de datos resaltados.](../images/clients/dbvisualizer/connect-dialog.png)
 
 Introduzca su Userid y su Contraseña y seleccione **[!DNL Connect]**. Aparece un mensaje en el registro para confirmar que la conexión se ha realizado correctamente.
 

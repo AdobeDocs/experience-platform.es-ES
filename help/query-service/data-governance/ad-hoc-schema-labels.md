@@ -2,9 +2,9 @@
 title: Compatibilidad con el control de acceso basado en atributos para esquemas específicos
 description: Una guía para restringir el acceso a los campos de datos en esquemas específicos generados a través del servicio de consulta de Adobe Experience Platform.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
+source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
@@ -56,13 +56,13 @@ Para editar las etiquetas de datos del esquema ad hoc, seleccione la opción [!U
 
 ## Edición de etiquetas para el esquema o campo
 
-Para editar las etiquetas de todo el esquema, seleccione el icono de lápiz (![](../images/data-governance/edit-icon.png)) al lado del nombre del esquema bajo el [!UICONTROL Etiquetas] pestaña .
+Para editar las etiquetas de todo el esquema, seleccione el icono de lápiz (![Un icono de lápiz.](../images/data-governance/edit-icon.png)) al lado del nombre del esquema bajo el [!UICONTROL Etiquetas] pestaña .
 
 ![La vista de etiquetas en el espacio de trabajo de esquemas con el icono de lápiz resaltado.](../images/data-governance/edit-entire-schema-labels.png)
 
 Para aplicar una etiqueta a un campo existente, seleccione uno o varios campos de la lista seguidos de [!UICONTROL Editar etiquetas de control] en la barra lateral derecha.
 
-![La vista de etiquetas en el espacio de trabajo de esquemas con la opción Editar etiquetas de control resaltada en la barra lateral de la mano derecha.](../images/data-governance/edit-governance-labels.png)
+![La vista de etiquetas en el espacio de trabajo de esquemas con la opción Editar etiquetas de control resaltada en la barra lateral derecha.](../images/data-governance/edit-governance-labels.png)
 
 ## Editar la ventana emergente de etiquetas
 

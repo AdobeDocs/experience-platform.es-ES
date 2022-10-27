@@ -1,9 +1,9 @@
 ---
 title: Conectar el bloc de notas de Jupyter al servicio de consultas
 description: Aprenda a conectar Jupyter Notebook con el servicio de consulta de Adobe Experience Platform.
-source-git-commit: f910deca43ac49d3a3452b8dbafda20ffdf3bf48
+source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Para adquirir las credenciales necesarias para la conexión [!DNL Jupyter Notebo
 
 Una vez que haya abierto una nueva [!DNL Jupyter Notebook] aplicación web, seleccione **[!DNL New]** desplegable seguido de **[!DNL Python 3]** para crear un nuevo bloc de notas. La variable [!DNL Notebook] aparece como editor.
 
-![La variable [!DNL Jupiter Notebook] Ficha Archivo con el [!DNL New dropdown] y [!DNL Python] 3 resaltados.](../images/clients/jupyter-notebook/new-notebook.png)
+![La variable [!DNL Jupiter Notebook] Ficha Archivo con el [!DNL New] lista desplegable y [!DNL Python] 3 resaltados.](../images/clients/jupyter-notebook/new-notebook.png)
 
 En la primera línea del [!DNL Notebook] , introduzca el siguiente valor: `pip install psycopg2-binary` y seleccione **[!DNL Run]** en la barra de comandos. Aparece un mensaje de éxito debajo de la línea de entrada.
 

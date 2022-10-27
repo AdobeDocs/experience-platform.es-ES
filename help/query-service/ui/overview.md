@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '716'
 ht-degree: 2%
 
 ---
@@ -26,15 +26,15 @@ La variable [!DNL Query Editor] permite escribir y ejecutar consultas sin utiliz
 
 ![Un zoom en vista de la variable [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## Examinar {#browse}
+## Plantillas {#browse}
 
-La variable **[!UICONTROL Examinar]** muestra las consultas guardadas por los usuarios de su organización. Es útil considerar estos proyectos como proyectos de consulta, ya que las consultas guardadas aquí pueden estar aún en construcción. Consultas mostradas en la **[!UICONTROL Examinar]** también se muestra como consultas de ejecución en la pestaña **[!UICONTROL Registro]** si ha sido ejecutado anteriormente por [!DNL Query Service].
+La variable **[!UICONTROL Plantillas]** muestra las consultas guardadas por los usuarios de su organización. Es útil considerar estos proyectos como proyectos de consulta, ya que las consultas guardadas aquí pueden estar aún en construcción. Consultas mostradas en la **[!UICONTROL Plantillas]** también se muestra como consultas de ejecución en la pestaña **[!UICONTROL Registro]** si ha sido ejecutado anteriormente por [!DNL Query Service].
 
-![Se ha ampliado la vista de la pestaña Examinar del panel Consultas que muestra varias consultas guardadas.](../images/ui/overview/browse.png)
+![Se ha ampliado la vista de la ficha Plantillas del tablero Consultas que muestra varias consultas guardadas.](../images/ui/overview/templates.png)
 
 | Columna | Descripción |
 | --- | --- |
-| **[!UICONTROL Nombre]** | El nombre de consulta creado por el usuario. Puede seleccionar el nombre para abrir la consulta en el [!DNL Query Editor]. También puede utilizar la barra de búsqueda para buscar en el Nombre de una consulta. Las búsquedas distinguen entre mayúsculas y minúsculas. |
+| **[!UICONTROL Nombre]** | El campo name es el nombre de consulta creado por el usuario o los primeros caracteres de la consulta SQL. Cualquier consulta creada a través de la interfaz de usuario con el Editor de consultas recibe un nombre desde el principio. Si la consulta se creó mediante la API, el nombre de la consulta es un fragmento del SQL inicial utilizado para crear la consulta. Puede seleccionar el nombre de la consulta para abrirla en el [!DNL Query Editor]. También puede utilizar la barra de búsqueda para buscar la variable [!UICONTROL Nombre] de una consulta. Las búsquedas distinguen entre mayúsculas y minúsculas. |
 | **[!UICONTROL SQL]** | Los primeros caracteres de la consulta SQL. Al pasar el ratón por encima del código, se muestra la consulta completa. |
 | **[!UICONTROL Modificado por]** | El último usuario que modificó la consulta. Cualquier usuario de su organización con acceso a [!DNL Query Service] puede modificar consultas. |
 | **[!UICONTROL Última modificación]** | La fecha y hora de la última modificación de la consulta, en el huso horario del explorador. |

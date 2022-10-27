@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: Este documento describe detalles importantes que deben conocerse al escribir consultas en el servicio de consulta de Adobe Experience Platform.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 3%
 
 ---
@@ -206,7 +206,7 @@ Después de conectarse al servicio de consulta, puede ver todas las tablas dispo
 
 ### Vista de tabla estándar
 
-La variable `\d` muestra la vista estándar PostgreSQL para listar tablas. A continuación se puede ver un ejemplo de la salida de este comando:
+La variable `\d` muestra el [!DNL PostgreSQL] para ver las tablas de la lista. A continuación se puede ver un ejemplo de la salida de este comando:
 
 ```sql
              List of relations

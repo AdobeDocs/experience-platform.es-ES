@@ -5,9 +5,9 @@ title: Conexión de Aqua Data Studio al servicio de consulta
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar Aqua Data Studio con el servicio de consulta de Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ La variable **[!DNL Register Server]** se abre. En el **[!DNL General]** , selec
 - **[!DNL Host and Port]**: El punto final del host y su puerto para [!DNL Query Service]. Debe utilizar el puerto 80 para conectarse con [!DNL Query Service].
 - **[!DNL Database]:** La base de datos que se utilizará. Utilizar el valor de las credenciales de la interfaz de usuario de Platform `dbname`: `prod:all`.
 
-![La pestaña Aqua Data Studio General con los campos de entrada requeridos resaltados.](../images/clients/aqua-data-studio/register-server-general-tab.png)
+![La variable [!DNL Aqua Data Studio] Ficha General con los campos de entrada necesarios resaltados.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] credenciales
 
@@ -56,7 +56,7 @@ A continuación, seleccione la **[!DNL Driver]** pestaña . En **[!DNL Parameter
 >
 >Consulte la [[!DNL Query Service] Documentación SSL](./ssl-modes.md) para obtener más información sobre la compatibilidad con SSL para conexiones de terceros con el servicio de consulta de Adobe Experience Platform y cómo conectarse mediante `verify-full` Modo SSL.
 
-![La ficha Controlador de Aqua Data Studio con el campo Parámetros resaltado.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
+![La variable [!DNL Aqua Data Studio] Pestaña Controlador con el campo Parámetros resaltado.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 Después de introducir los detalles de conexión, seleccione **[!DNL Test Connection]** para garantizar que sus credenciales funcionen correctamente. Si la prueba de conexión se ha realizado correctamente, seleccione **[!DNL Save]** para registrar su servidor. Aparece un cuadro de diálogo de confirmación que confirma la conexión y esta aparece en el panel. Ahora puede conectarse al servidor y ver sus objetos de esquema.
 
