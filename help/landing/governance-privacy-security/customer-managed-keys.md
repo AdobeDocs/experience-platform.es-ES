@@ -1,26 +1,26 @@
 ---
 title: Claves gestionadas por el cliente en Adobe Experience Platform
 description: Aprenda a configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
-source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
+source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1501'
 ht-degree: 1%
 
 ---
 
 # Claves gestionadas por el cliente en Adobe Experience Platform
 
-Todos los datos almacenados en Adobe Experience Platform se cifran en reposo utilizando claves a nivel de sistema. Si utiliza una aplicación creada sobre Platform, puede optar por utilizar sus propias claves de cifrado, lo que le otorga un bueno control sobre la seguridad de los datos.
+Los datos almacenados en Adobe Experience Platform se cifran en reposo mediante claves a nivel de sistema. Si utiliza una aplicación creada sobre Platform, puede optar por utilizar sus propias claves de cifrado, lo que le otorga un bueno control sobre la seguridad de los datos.
 
 Este documento cubre el proceso para habilitar la función de claves gestionadas por el cliente (CMK) en Platform.
 
 ## Resumen del proceso
 
-CMK está incluido en el Escudo de la Salud y en las ofertas del Escudo de la privacidad y la seguridad del Adobe. Una vez que su organización haya adquirido una de estas ofertas, puede iniciar un proceso único para configurar la función.
+CMK está incluido en el Escudo de la Salud y en las ofertas del Escudo de la privacidad y la seguridad del Adobe. Una vez que su organización haya adquirido una licencia para una de estas ofertas, puede iniciar un proceso único para configurar la función.
 
 >[!WARNING]
 >
->Después de configurar CMK, no puede revertir a claves administradas por el sistema. Usted es responsable de administrar de forma segura sus claves y bóvedas de claves en [!DNL Azure] para evitar perder acceso a sus datos.
+>Después de configurar CMK, no puede revertir a claves administradas por el sistema. Usted es responsable de administrar sus claves de forma segura y de proporcionar acceso a su aplicación Key Vault, Key y CMK dentro de [!DNL Azure] para evitar perder acceso a sus datos.
 
 El proceso es el siguiente:
 
@@ -29,7 +29,7 @@ El proceso es el siguiente:
 1. [Asignación de la entidad de seguridad de servicio para la aplicación CMK](#assign-to-role) a una función adecuada para el almacén de claves.
 1. Uso de llamadas de API para [enviar su ID de clave de cifrado a Adobe](#send-to-adobe).
 
-Una vez completado el proceso de configuración, todos los datos introducidos en Platform en todos los entornos limitados se cifrarán con su [!DNL Azure] configuración de claves, específica de su [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) y [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) recursos. CMK aprovecha [!DNL Azure]&#39;s [programa de vista previa pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) para que esto sea posible.
+Una vez completado el proceso de configuración, todos los datos introducidos en Platform en todos los entornos limitados se cifrarán con su [!DNL Azure] configuración de claves, específica de su [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) y [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) recursos. Para utilizar CMK, aprovechará [!DNL Microsoft Azure] que pueden formar parte de sus [programa de vista previa pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Cree un [!DNL Azure] Key Vault {#create-key-vault}
 
@@ -165,6 +165,10 @@ La variable **[!UICONTROL Identificador de clave]** muestra el identificador de 
 
 Una vez obtenido el URI de almacén de claves, puede enviarlo mediante una solicitud de POST al extremo de configuración CMK.
 
+>[!NOTE]
+>
+>Solo el almacén de claves y el nombre de clave se almacenan con Adobe, no con la versión de clave.
+
 **Solicitud**
 
 ```shell
@@ -265,6 +269,10 @@ La variable `status` puede tener uno de estos cuatro valores con los siguientes 
 
 ## Pasos siguientes
 
-Al completar los pasos anteriores, habilitó correctamente CMK para su organización. Todos los datos que se incorporan a Platform ahora se cifrarán y descifrarán mediante las claves incluidas en su [!DNL Azure] Key Vault. Si desea revocar el acceso de Platform a sus datos, puede quitar la función de usuario asociada con la aplicación del almacén de claves dentro de [!DNL Azure].
+Al completar los pasos anteriores, habilitó correctamente CMK para su organización. Los datos introducidos en Platform ahora se cifrarán y descifrarán mediante las claves incluidas en su [!DNL Azure] Key Vault. Si desea revocar el acceso de Platform a sus datos, puede quitar la función de usuario asociada con la aplicación del almacén de claves dentro de [!DNL Azure].
 
-Después de deshabilitar el acceso a la aplicación, los datos tardan entre dos y 24 horas en no ser accesibles en Platform. El mismo intervalo de tiempo se aplica para que los datos vuelvan a estar disponibles cuando se vuelva a habilitar el acceso a la aplicación.
+Después de deshabilitar el acceso a la aplicación, puede tardar entre unos minutos y 24 horas en que los datos ya no estén accesibles en Platform. El mismo retraso se aplica para que los datos vuelvan a estar disponibles cuando se vuelva a habilitar el acceso a la aplicación.
+
+>[!WARNING]
+>
+>Una vez que la aplicación Key Vault, Key o CMK esté deshabilitada y ya no se pueda acceder a los datos en Platform, ya no será posible realizar ninguna operación descendente relacionada con esos datos. Asegúrese de comprender los impactos descendentes de la revocación del acceso de Platform a sus datos antes de realizar cambios en la configuración.
