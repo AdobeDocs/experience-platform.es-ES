@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Caducidad del evento de experiencia
 description: Este documento proporciona una guía general sobre cómo configurar los tiempos de caducidad para eventos de experiencia individuales dentro de un conjunto de datos de Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: faf9e72f77f04b20d2399749eaacdb9ebdf412dc
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
 
 # Caducidad de eventos de experiencia
 
-En Adobe Experience Platform, puede configurar los tiempos de caducidad de todos los eventos de experiencia que se incorporan en un conjunto de datos habilitado para [Perfil del cliente en tiempo real](./home.md). Esto le permite eliminar automáticamente los datos del lago de datos y del Almacenamiento de perfiles que ya no son válidos ni útiles para sus casos de uso.
+En Adobe Experience Platform, puede configurar los tiempos de caducidad de todos los eventos de experiencia que se incorporan en un conjunto de datos habilitado para [Perfil del cliente en tiempo real](./home.md). Esto le permite eliminar automáticamente los datos del Almacenamiento de perfiles que ya no son válidos ni útiles para sus casos de uso.
 
 Las caducidades de los eventos de experiencia no se pueden configurar mediante la interfaz de usuario de Platform ni las API. En su lugar, debe ponerse en contacto con el servicio de asistencia para habilitar las caducidades de los eventos de experiencia en los conjuntos de datos necesarios.
 
@@ -25,7 +25,7 @@ Las caducidades de los eventos de experiencia no se pueden configurar mediante l
 
 Una vez que las caducidades de los eventos de experiencia se han habilitado en un conjunto de datos habilitado para el perfil, Platform aplica automáticamente los valores de caducidad de cada evento capturado en un proceso de dos pasos:
 
-1. Todos los datos nuevos que se incorporan al conjunto de datos tienen el valor de caducidad aplicado en el momento de la ingesta.
+1. Todos los datos nuevos que se incorporan al conjunto de datos tienen el valor de caducidad aplicado en el momento de la ingesta en función de la marca de tiempo del evento.
 1. Todos los datos existentes en el conjunto de datos tienen el valor de caducidad aplicado retroactivamente como un trabajo único del sistema de relleno. Una vez que el valor de caducidad se haya colocado en el conjunto de datos, los eventos anteriores al valor de caducidad se perderán inmediatamente en cuanto se ejecute el trabajo del sistema. Todos los demás eventos se eliminarán en cuanto alcancen sus valores de caducidad desde la marca de tiempo del evento.
 
 >[!WARNING]
