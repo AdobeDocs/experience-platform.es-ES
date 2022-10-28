@@ -2,10 +2,10 @@
 title: Información general sobre alojamientos administrados por Adobe
 description: Obtenga información acerca de la opción de alojamiento predeterminada para implementar compilaciones de biblioteca de etiquetas en Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1173'
-ht-degree: 96%
+ht-degree: 88%
 
 ---
 
@@ -54,7 +54,7 @@ Una vez que la versión se ha implementado en el host administrado por Adobe, la
 >
 >Para los hosts administrados por Adobe, la primera biblioteca publicada en cualquier entorno nuevo puede tardar hasta cinco minutos en propagarse a toda la CDN.
 
-Cuando un nodo perimetral recibe una solicitud para un archivo específico (como la compilación de su biblioteca), comprueba primero el valor de tiempo de vida (TTL) del archivo. Si el TTL no ha caducado, los nodos perimetrales sirven a la versión en caché. Si el TTL ha caducado, el nodo perimetral solicita una copia nueva desde el origen más cercano, proporciona esa copia actualizada y, a continuación, la almacena en caché con el TTL definido.
+Cuando un nodo perimetral recibe una solicitud para un archivo específico (como la compilación de su biblioteca), el nodo comprueba primero la hora de caducidad del archivo. Si la hora no ha caducado, el nodo perimetral sirve a la versión en caché. Si la hora ha caducado, el nodo perimetral solicita una copia nueva desde el origen más cercano, proporciona esa copia actualizada y, a continuación, la almacena en caché con una nueva hora de caducidad.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Estas anulaciones de caché escalonadas dan tiempo a los grupos de servidores de
 
 Las compilaciones de biblioteca también se almacenan en caché en el explorador mediante el uso del encabezado `cache-control` HTTP. Al utilizar hosts administrados por Adobe, no controla los encabezados que aparecen en las respuestas de API, por lo que se utiliza el Adobe predeterminado para el almacenamiento en caché. En otras palabras, no puede utilizar encabezados personalizados para hosts administrados por Adobe. Si necesita un `cache-control` encabezado personalizado, puede considerar [el alojamiento propio](self-hosting-libraries.md).
 
-El tiempo de vida (TTL) de la compilación de la biblioteca en caché del explorador (determinado por el encabezado `cache-control`) variará según el entorno de etiquetas que utilice:
+El tiempo de caducidad de la versión de la biblioteca en caché del explorador (determinado por el valor de `cache-control` ) variarán según el entorno de etiquetas que utilice:
 
 | Entorno | `cache-control` valor |
 | --- | --- |

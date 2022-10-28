@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;administración de datos;de
 title: Prácticas recomendadas del derecho de licencia de gestión de datos
 description: Obtenga información acerca de las mejores prácticas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2134'
 ht-degree: 2%
 
 ---
@@ -80,7 +80,7 @@ Hay dos escenarios centrales a tener en cuenta al garantizar que el uso de los d
 
 ### ¿Qué datos se van a incluir en Platform?
 
-Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL Data Lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir datos históricos en la variable [!DNL Data Lake], pero no en el Almacenamiento de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
+Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL Data Lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir los datos históricos en la variable [!DNL Data Lake], pero no en el Almacenamiento de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
 
 >[!NOTE]
 >
@@ -88,12 +88,12 @@ Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente 
 
 ### ¿Qué datos se deben conservar?
 
-Puede aplicar tanto filtros de ingesta de datos como reglas de caducidad (también conocidas como &quot;TTL&quot; por el tiempo de vida) para eliminar datos que se hayan vuelto obsoletos en sus casos de uso. Por lo general, los datos de comportamiento (como los datos de Analytics) consumen mucho más almacenamiento que los datos de registro (como los datos CRM). Por ejemplo, muchos usuarios de Platform tienen más del 90 % de los perfiles rellenados solo con datos de comportamiento, en comparación con los datos de registro. Por lo tanto, la administración de los datos de comportamiento es fundamental para garantizar el cumplimiento de las normas en sus derechos de licencia.
+Puede aplicar tanto filtros de consumo de datos como reglas de caducidad para eliminar los datos que ya no estén disponibles en los casos de uso. Por lo general, los datos de comportamiento (como los datos de Analytics) consumen mucho más almacenamiento que los datos de registro (como los datos CRM). Por ejemplo, muchos usuarios de Platform tienen más del 90 % de los perfiles rellenados solo con datos de comportamiento, en comparación con los datos de registro. Por lo tanto, la administración de los datos de comportamiento es fundamental para garantizar el cumplimiento de las normas en sus derechos de licencia.
 
 Hay varias herramientas que puede aprovechar para mantenerse dentro de sus derechos de uso de licencias:
 
 * [Filtros de ingesta](#ingestion-filters)
-* [TTL de servicio de perfil](#profile-service)
+* [Almacenamiento de perfiles](#profile-service)
 
 ### Filtros de ingesta {#ingestion-filters}
 
@@ -109,9 +109,7 @@ Los filtros de ingesta permiten introducir únicamente los datos necesarios para
 
 {style=&quot;table-layout:auto&quot;}
 
-### Servicio de perfil {#profile-service}
-
-La capacidad TTL (tiempo de vida) del servicio de perfil le permite aplicar TTL en los datos del almacén de perfiles. De este modo, el sistema puede eliminar automáticamente los datos que hayan disminuido su valor con el paso del tiempo.
+### Almacenamiento de perfiles {#profile-service}
 
 El Almacenamiento de perfiles está compuesto por los siguientes componentes:
 
@@ -124,53 +122,20 @@ El Almacenamiento de perfiles está compuesto por los siguientes componentes:
 
 {style=&quot;table-layout:auto&quot;}
 
+
+
 #### Informes de composición del almacén de perfiles
 
-Hay varios informes disponibles para ayudarle a comprender la composición del Almacenamiento de perfiles. Estos informes le ayudan a tomar decisiones informadas sobre cómo y dónde configurar los TTL de perfil para optimizar mejor el uso de licencias:
+Hay varios informes disponibles para ayudarle a comprender la composición del Almacenamiento de perfiles. Estos informes le ayudan a tomar decisiones informadas sobre cómo y dónde configurar las caducidades de los eventos de experiencia para optimizar mejor el uso de las licencias:
 
-* **API de informe de superposición de conjunto de datos**: Expone los conjuntos de datos que contribuyen en mayor medida a la audiencia direccionable. Puede utilizar este informe para identificar qué [!DNL ExperienceEvent] conjuntos de datos para establecer un TTL. Consulte el tutorial en [generación del informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md) para obtener más información.
+* **API de informe de superposición de conjunto de datos**: Expone los conjuntos de datos que contribuyen en mayor medida a la audiencia direccionable. Puede utilizar este informe para identificar qué [!DNL ExperienceEvent] conjuntos de datos para establecer una caducidad para . Consulte el tutorial en [generación del informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md) para obtener más información.
 * **API de informe de superposición de identidad**: Expone los espacios de nombres de identidad que contribuyen en mayor medida a la audiencia direccionable. Consulte el tutorial en [generación del informe de superposición de identidad](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) para obtener más información.
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### [!DNL ExperienceEvent] TTL de conjunto de datos {#dataset-ttl}
+#### Caducidad de eventos de experiencia {#event-expirations}
 
-Puede aplicar TTL a conjuntos de datos habilitados para perfiles para eliminar datos de comportamiento del Almacenamiento de perfiles que ya no sean útiles para sus casos de uso. Una vez que el TTL se aplica a un conjunto de datos habilitado para el perfil, Platform elimina automáticamente los datos que ya no son necesarios mediante un proceso de dos partes:
-
-* Todos los datos nuevos que avancen tendrán el valor de caducidad del TTL aplicado en el momento de la ingesta;
-* Todos los datos existentes tendrán el valor de caducidad de TTL aplicado como parte de un trabajo de sistema de relleno de una sola vez.
-
-Puede esperar que el valor TTL de cada evento pertenezca a la marca de tiempo del evento. Todos los eventos anteriores al valor de caducidad del TTL se pierden inmediatamente cuando se ejecuta el trabajo del sistema. Todos los demás eventos se pierden a medida que se acercan al valor de caducidad del TTL designado en la marca de tiempo del evento.
-
-Consulte el siguiente ejemplo para comprender mejor [!DNL ExperienceEvent] TTL de conjunto de datos.
-
-Si aplica un valor TTL de 30 días el 15 de mayo, entonces:
-
-* Todos los eventos nuevos tendrán un TTL de 30 días aplicados a medida que entren;
-* Un trabajo del sistema elimina inmediatamente todos los eventos existentes que tengan una marca de tiempo anterior al 15 de abril.;
-* Los eventos que tengan una marca de tiempo después del 15 de abril obtendrán una marca de tiempo de su evento + días TTL. Por lo tanto, un evento con una marca de tiempo del 18 de abril, dejará de celebrarse tres días después del 15 de mayo.
-
->[!IMPORTANT]
->
->Una vez aplicado un TTL, cualquier dato anterior al número de días TTL seleccionado será **permanentemente** y no se pueden restaurar.
-
-Antes de aplicar TTL, debe asegurarse de mantener una ventana retrospectiva de cualquier segmento dentro del límite TTL. De lo contrario, los resultados del segmento pueden ser incorrectos después de aplicar TTL. Por ejemplo, si ha aplicado un TTL de 30 días para los datos de Adobe Analytics y un TTL de 365 días para los datos de Transacciones en el almacén, el siguiente segmento creará resultados incorrectos:
-
-* Página de producto visualizada en los últimos 60 días seguida de una compra en la tienda;
-* Agregue al carro seguido de no comprar en los últimos 60 días.
-
-Por el contrario, lo siguiente seguirá creando resultados correctos:
-
-* Página de producto vista en los últimos 14 días seguida de una compra en la tienda;
-* Visualizó una página de ayuda específica en línea en los últimos 30 días;
-* Compró un producto sin conexión en los últimos 120 días;
-* Se agrega al carro de compras seguido de una compra en los últimos 14 días.
-
->[!TIP]
->
->Para su comodidad, puede mantener el mismo TTL para todos los conjuntos de datos, de modo que no tenga que preocuparse por el impacto del TTL en todos los conjuntos de datos en la lógica de segmentación.
-
-Para obtener más información sobre la aplicación de TTL a los datos de perfil, consulte la documentación de [TTL de servicio de perfil](../../profile/apply-ttl.md).
+Esta capacidad le permite eliminar automáticamente los datos de comportamiento de un conjunto de datos habilitado para Perfil que ya no es útil para sus casos de uso. Consulte la descripción general sobre [Caducidad de eventos de experiencia](../../profile/event-expirations.md) para obtener detalles sobre cómo funciona este proceso una vez que se ha habilitado para un conjunto de datos.
 
 ## Resumen de las prácticas recomendadas para el cumplimiento de las normas de uso de licencias {#best-practices}
 
@@ -179,7 +144,7 @@ A continuación se ofrece una lista de algunas prácticas recomendadas que puede
 * Utilice la variable [panel de uso de licencias](../../dashboards/guides/license-usage.md) para realizar un seguimiento y monitorizar las tendencias de uso de los clientes. Esto le permite adelantarse a cualquier posible sobrecarga que pueda incurrir.
 * Configurar [filtros de ingesta](#ingestion-filters) identificando los eventos necesarios para sus casos de uso de segmentación y personalización. Esto le permite enviar solo los eventos importantes necesarios para sus casos de uso.
 * Asegúrese de que solo tiene [conjuntos de datos habilitados para perfil](#ingestion-filters) que son necesarios para los casos de uso de segmentación y personalización.
-* Configure un [[!DNL ExperienceEvent] TTL de conjunto de datos](#dataset-ttl) para datos de alta frecuencia como datos web.
+* Configure un [Caducidad del evento de experiencia](#event-expirations) para datos de alta frecuencia como datos web.
 * Compruebe periódicamente el [Informes de composición de perfil](#profile-store-composition-reports) para comprender la composición de la tienda de perfiles. Esto le permite comprender las fuentes de datos que más contribuyen al consumo de licencias.
 
 ## Resumen de características y disponibilidad {#feature-summary}
@@ -191,7 +156,7 @@ La siguiente tabla describe la lista de funciones disponibles actualmente a su d
 | Función | Descripción |
 | --- | --- |
 | [Habilitar/deshabilitar conjuntos de datos para perfil](../../catalog/datasets/user-guide.md) | Habilitar o deshabilitar la incorporación de conjuntos de datos en el servicio de perfil |
-| [!DNL ExperienceEvent] TTL de conjunto de datos | Aplique una caducidad de TTL para conjuntos de datos de comportamiento en el Almacenamiento de perfiles. Póngase en contacto con su representante de asistencia al Adobe. |
+| [Caducidad de eventos de experiencia](../../profile/event-expirations.md) | Aplique una hora de caducidad para todos los eventos incorporados en un conjunto de datos habilitado para el perfil. Póngase en contacto con el representante de asistencia de Adobe para habilitar esta función. |
 | [Filtros de preparación de datos de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Aplicar [!DNL Kafka] filtros para excluir los datos innecesarios de la ingesta |
 | [Filtros del conector de origen de Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplicar filtros de conexión de origen de Audience Manager para excluir de la ingesta datos innecesarios |
 | [Aplicar filtros de datos SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Aplicar filtros de aleación para excluir los datos innecesarios de la ingesta |

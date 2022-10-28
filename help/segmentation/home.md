@@ -5,9 +5,9 @@ title: Información general del servicio de segmentación
 topic-legacy: overview
 description: Obtenga información sobre el servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >
 >En caso de que se amplíe un esquema, todas las cargas futuras deben actualizar los campos recién añadidos en consecuencia. Para obtener más información sobre la personalización [!DNL Experience Data Model] (XDM), visite el [Tutorial del Editor de esquemas](../xdm/tutorials/create-schema-ui.md).
 >
->Además, si el tiempo de vida (TTL) está habilitado en el conjunto de datos, esto podría afectar a la pertenencia del segmento creado. Para obtener más información sobre TTL y cómo puede afectar a la segmentación, lea la [Guía de TTL del servicio de perfil](../profile/apply-ttl.md).
+>Además, si un valor de caducidad de Evento de experiencia está habilitado en el conjunto de datos, esto podría afectar a la pertenencia del segmento creado. Lea la guía de [Caducidad de eventos de experiencia](../profile/event-expirations.md) para obtener más información sobre cómo esta función puede afectar a la segmentación.
 
 ## Evaluar segmentos {#evaluate-segments}
 

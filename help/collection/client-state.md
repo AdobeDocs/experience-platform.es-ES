@@ -4,9 +4,9 @@ description: Descubra cómo Adobe Experience Platform Edge Network administra el
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: cliente;estado;administración;edge;red;puerta de enlace;api
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '850'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ El estado devuelto por la variable [!DNL Edge Network] en el cuerpo de respuesta
 | --- | --- | --- |
 | `key` | Cadena | **Requerido**. El nombre de la entrada. |
 | `value` | Cadena | *Opcional*. El valor de entrada. |
-| `maxAge` | Número entero | *Opcional* El tiempo de vida (TTL) de entrada, en segundos. Si faltan, las entradas solo deben almacenarse para la sesión actual. |
+| `maxAge` | Número entero | *Opcional* Tiempo (en segundos) hasta que caduca la entrada. Si faltan, las entradas solo deben almacenarse para la sesión actual. |
 | `attrs` | `Map<String, String>` | *Opcional*. Una lista opcional de atributos de entrada. Para todas las conexiones seguras con un encabezado HTTP de referencia seguro, la variable `SameSite` se configura como `None`. |
 
 

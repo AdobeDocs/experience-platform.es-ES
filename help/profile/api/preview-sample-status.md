@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Vista previa del punto final de la API de estado de muestra (vista previa del perfil)
 description: El extremo de estado de muestra de vista previa de la API del perfil del cliente en tiempo real le permite obtener una vista previa del último ejemplo correcto de sus datos de perfil, mostrar la distribución del perfil por conjunto de datos y por identidad, y generar informes que muestren la superposición del conjunto de datos, la superposición de identidad y los perfiles no vinculados.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2875'
+source-wordcount: '2874'
 ht-degree: 1%
 
 ---
@@ -303,7 +303,7 @@ La respuesta incluye un `data` matriz, con objetos individuales que contienen lo
 
 ## Generar el informe de superposición de conjuntos de datos
 
-El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del Almacenamiento de perfiles de su organización al exponer los conjuntos de datos que contribuyen más a la audiencia a la que se puede dirigir (perfiles combinados). Además de proporcionar perspectivas sobre los datos, este informe puede ayudarle a realizar acciones para optimizar el uso de licencias, como configurar un TTL para determinados conjuntos de datos.
+El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del Almacenamiento de perfiles de su organización al exponer los conjuntos de datos que contribuyen más a la audiencia a la que se puede dirigir (perfiles combinados). Además de proporcionar perspectivas sobre los datos, este informe puede ayudarle a realizar acciones para optimizar el uso de licencias, como configurar las caducidades para determinados conjuntos de datos.
 
 Puede generar el informe de superposición de conjuntos de datos realizando una solicitud de GET al `/previewsamplestatus/report/dataset/overlap` punto final.
 

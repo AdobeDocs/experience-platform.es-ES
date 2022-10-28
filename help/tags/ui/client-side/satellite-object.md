@@ -2,7 +2,7 @@
 title: Referencia de objeto satelital
 description: Obtenga información sobre el objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1290'
 ht-degree: 79%
@@ -156,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->En el [`setCookie`](#setCookie) para configurar cookies, el tercer argumento (opcional) de esta llamada a la función era un entero que indicaba el tiempo de vida (TTL) de la cookie en días. En este nuevo método, se acepta un objeto &quot;attributes&quot; como tercer argumento. Para configurar un TTL para una cookie mediante el nuevo método, debe proporcionar una variable `expires` en el objeto attributes y establézcalo en el valor deseado. Esto se muestra en el siguiente ejemplo.
+>En el [`setCookie`](#setCookie) para configurar cookies, el tercer argumento (opcional) de esta llamada a la función era un entero que indicaba el tiempo de caducidad de la cookie en días. En este nuevo método, se acepta un objeto &quot;attributes&quot; como tercer argumento. Para establecer una caducidad para una cookie mediante el nuevo método, debe proporcionar una variable `expires` en el objeto attributes y establézcalo en el valor deseado. Esto se muestra en el siguiente ejemplo.
 
 **Ejemplo**
 

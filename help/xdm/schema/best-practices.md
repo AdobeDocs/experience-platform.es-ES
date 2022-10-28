@@ -5,9 +5,9 @@ title: Prácticas Recomendadas Para El Modelado De Datos
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: c5ab8c12c4c5bd14d3504d60c654105ad36effe6
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2699'
 ht-degree: 2%
 
 ---
@@ -175,7 +175,7 @@ El segundo método sería utilizar esquemas de eventos para representar suscripc
 **Contras**
 
 * La segmentación se vuelve más compleja para el caso de uso previsto original (identificación del estado de las suscripciones más recientes de los clientes). El segmento ahora necesita lógica adicional para marcar el último evento de suscripción de un cliente para comprobar su estado.
-* Los eventos tienen un mayor riesgo de caducar automáticamente y de purgarse del almacén de perfiles. Consulte la guía de [TTL de perfil](../../profile/apply-ttl.md) para obtener más información.
+* Los eventos tienen un mayor riesgo de caducar automáticamente y de purgarse del almacén de perfiles. Consulte la guía de [Caducidad de eventos de experiencia](../../profile/event-expirations.md) para obtener más información.
 
 ## Crear esquemas basados en las entidades clasificadas
 
