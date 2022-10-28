@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, octubre de 2022
 description: Notas de la versión de octubre de 2022 para Adobe Experience Platform.
-source-git-commit: 021a0833941f250475786bb8629542c50229b238
+source-git-commit: d6858ab1389a0b5cfadc9f79b20b80c1c36a114e
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '983'
 ht-degree: 5%
 
 ---
@@ -52,6 +52,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | ----------- | ----------- |
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line es una popular plataforma de comunicación que conecta personas, servicios e información y que ha pasado de ser una aplicación de chat a ser un centro de actividades de entretenimiento, sociales y diarias. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 es una plataforma de aplicaciones empresariales basada en la nube que combina Enterprise Resource Planning (ERP) y Customer Relationship Management (CRM) junto con aplicaciones de productividad y herramientas de IA para ofrecer operaciones integrales más fluidas y controladas, un mejor potencial de crecimiento y costos reducidos. |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | La variable [!DNL (Beta) Adobe Commerce] el conector de destino le permite seleccionar uno o varios segmentos de Real-Time CDP para activarlos en su [!DNL Adobe Commerce] para ofrecer una experiencia personalizada dinámica para sus compradores. Within [!DNL Adobe Commerce], puede seleccionar los segmentos de Real-Time CDP para personalizar las ofertas únicas del carro de compras, como &quot;comprar 2 obtener 1 gratis&quot;. También puede mostrar banners a pantalla completa y modificar los precios de los productos mediante ofertas promocionales, todas ellas personalizadas para segmentos de Adobe Real-Time CDP. |
 
 {style=&quot;table-layout:auto&quot;}
 
