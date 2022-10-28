@@ -3,15 +3,21 @@ keywords: Experience Platform;inicio;temas populares;segmentación;segmentación
 title: Punto final de la API de audiencias
 topic-legacy: developer guide
 description: El punto final de audiencias en la API del servicio de segmentación de Adobe Experience Platform le permite administrar audiencias mediante programación para su organización.
-source-git-commit: 2a0c1f55115c541962f7bd3b7b11d367da50ff3b
+exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
+hide: true
+hidefromtoc: true
+source-git-commit: f4ec5b82a14579de5bf228011d14a849898be9f5
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 4%
+source-wordcount: '1515'
+ht-degree: 5%
 
 ---
 
-
 # Punto final de audiencia
+
+>[!IMPORTANT]
+>
+>El extremo de audiencia está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 Una audiencia es una colección de personas que comparten comportamientos y/o características similares. Estas colecciones de personas se pueden generar mediante Adobe Experience Platform o desde fuentes externas. Puede usar la variable `/audiences` en la API de segmentación, que le permite recuperar, crear, actualizar y eliminar audiencias mediante programación.
 

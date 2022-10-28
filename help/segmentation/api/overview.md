@@ -4,10 +4,10 @@ title: Guía de API del servicio de segmentación
 topic-legacy: guide
 description: La API del servicio de segmentación permite a los desarrolladores administrar mediante programación las operaciones de segmentación en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: b48ead4255d50585cd315436ccb9727d86142d4c
+source-git-commit: 6133c3127aaf10243d5472540c29125155c99d7b
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 2%
+source-wordcount: '497'
+ht-degree: 3%
 
 ---
 
@@ -19,11 +19,11 @@ La variable [!DNL Segmentation Service] La API proporciona varios puntos de cone
 
 Para ver todos los extremos disponibles y las operaciones de CRUD, consulte la [Referencia de la API del servicio de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-## Audiencias
+<!-- ## Audiences
 
-Las audiencias son una colección de personas que comparten comportamientos y/o características similares. Pueden generarse mediante Platform o desde fuentes externas. Puede usar la variable `/audiences` punto final para recuperar todas las audiencias, crear una audiencia nueva, recuperar detalles de una audiencia específica, actualizar una audiencia específica o eliminar una audiencia específica.
+Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
 
-Para obtener más información sobre el uso de este punto final, lea la [guía de extremo de audiencias](./audiences.md).
+For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
 
 ## Exportar trabajos
 
