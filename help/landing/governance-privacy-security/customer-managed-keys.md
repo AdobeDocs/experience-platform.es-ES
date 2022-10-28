@@ -1,9 +1,9 @@
 ---
 title: Claves gestionadas por el cliente en Adobe Experience Platform
 description: Aprenda a configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
-source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
+source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
@@ -24,14 +24,14 @@ CMK está incluido en el Escudo de la Salud y en las ofertas del Escudo de la pr
 
 El proceso es el siguiente:
 
-1. [Cree un [!DNL Microsoft Azure] Key Vault](#create-key-vault), luego [generar una clave de cifrado](#generate-a-key) (en función de las políticas de su organización) que en última instancia se compartirán con Adobe.
-1. Uso de llamadas de API para [registrar la aplicación CMK](#register-app) con su [!DNL Azure] inquilino.
-1. [Asignación de la entidad de seguridad de servicio para la aplicación CMK](#assign-to-role) a una función adecuada para el almacén de claves.
-1. Uso de llamadas de API para [enviar su ID de clave de cifrado a Adobe](#send-to-adobe).
+1. [Configure un [!DNL Microsoft Azure] Key Vault](#create-key-vault) en función de las políticas de su organización, [generar una clave de cifrado](#generate-a-key) que en última instancia se compartirá con Adobe.
+1. Uso de llamadas de API para [configuración de la aplicación CMK](#register-app) con su [!DNL Azure] inquilino.
+1. Uso de llamadas de API para [enviar su ID de clave de cifrado a Adobe](#send-to-adobe) e inicie el proceso de habilitación de la función.
+1. [Comprobar el estado de la configuración](#check-status) para verificar si se ha habilitado CMK.
 
-Una vez completado el proceso de configuración, todos los datos introducidos en Platform en todos los entornos limitados se cifrarán con su [!DNL Azure] configuración de claves, específica de su [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) y [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) recursos. Para utilizar CMK, aprovechará [!DNL Microsoft Azure] que pueden formar parte de sus [programa de vista previa pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Una vez completado el proceso de configuración, todos los datos introducidos en Platform en todos los entornos limitados se cifrarán con su [!DNL Azure] configuración de claves. Para utilizar CMK, aprovechará [!DNL Microsoft Azure] que pueden formar parte de sus [programa de vista previa pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## Cree un [!DNL Azure] Key Vault {#create-key-vault}
+## Configure un [!DNL Azure] Key Vault {#create-key-vault}
 
 CMK solo admite claves de un [!DNL Microsoft Azure] Key Vault. Para empezar, debe trabajar con [!DNL Azure] para crear una nueva cuenta de empresa, o utilice una cuenta de empresa existente y siga los pasos a continuación para crear Key Vault.
 
@@ -65,7 +65,7 @@ Una vez que llegue al **[!DNL Review + create]** , puede revisar los detalles de
 
 ![Configuración básica del almacén de claves](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Configurar las opciones de red
+### Configurar las opciones de red
 
 Si el almacén de claves está configurado para restringir el acceso público a ciertas redes virtuales o deshabilitar el acceso público por completo, debe conceder a Microsoft una excepción de firewall.
 
@@ -73,7 +73,7 @@ Select **[!DNL Networking]** en el panel de navegación izquierdo. En **[!DNL Fi
 
 ![Configuración básica del almacén de claves](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-## Generar una clave {#generate-a-key}
+### Generar una clave {#generate-a-key}
 
 Una vez creado un almacén de claves, puede generar una clave nueva. Vaya a la **[!DNL Keys]** y seleccione **[!DNL Generate/Import]**.
 
@@ -93,7 +93,7 @@ La clave configurada aparece en la lista de claves del almacén.
 
 ![Clave añadida](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
-## Registre la aplicación CMK {#register-app}
+## Configuración de la aplicación CMK {#register-app}
 
 Una vez que tenga configurado el almacén de claves, el siguiente paso es registrarse en la aplicación CMK que se vinculará a su [!DNL Azure] inquilino.
 
@@ -135,7 +135,7 @@ Copie y pegue el `applicationRedirectUrl` en un navegador para abrir un cuadro d
 
 ![Aceptar solicitud de permiso](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-## Asignar la aplicación CMK a una función {#assign-to-role}
+### Asignar la aplicación CMK a una función {#assign-to-role}
 
 Después de completar el proceso de autenticación, vuelva a su [!DNL Azure] Key Vault y seleccione **[!DNL Access control]** en el panel de navegación izquierdo. Desde aquí, seleccione **[!DNL Add]** seguido de **[!DNL Add role assignment]**.
 
@@ -151,7 +151,7 @@ En la siguiente pantalla, seleccione **[!DNL Select members]** para abrir un cua
 >
 >Si no encuentra la aplicación en la lista, la entidad de seguridad del servicio no se ha aceptado en el inquilino. Trabaje con su [!DNL Azure] administrador o representante para asegurarse de que dispone de los privilegios correctos.
 
-## Enviar el URI de clave a Adobe {#send-to-adobe}
+## Habilitar la configuración de clave de cifrado en el Experience Platform {#send-to-adobe}
 
 Después de instalar la aplicación CMK en [!DNL Azure], puede enviar el identificador de la clave de cifrado a Adobe. Select **[!DNL Keys]** en el panel de navegación izquierdo, seguido del nombre de la clave que desea enviar.
 
@@ -221,7 +221,7 @@ Una respuesta correcta devuelve los detalles del trabajo de configuración.
 
 El trabajo debe completar el procesamiento en unos minutos.
 
-### Comprobar el estado de la configuración {#check-status}
+## Compruebe el estado de la configuración {#check-status}
 
 Para comprobar el estado de la solicitud de configuración, puede realizar una solicitud de GET.
 
