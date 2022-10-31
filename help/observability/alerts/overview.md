@@ -4,9 +4,9 @@ title: Información general sobre alertas
 description: Obtenga información sobre las alertas en Adobe Experience Platform, incluida la estructura de cómo se definen las reglas de alerta.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
+source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '760'
 ht-degree: 5%
 
 ---
@@ -82,6 +82,10 @@ Para trabajar con alertas en la interfaz de usuario de Platform, debe tener acti
 Con el permiso Ver alertas , puede ver las alertas recibidas seleccionando el icono de campana (![Icono de celda](../images/alerts/overview/icon.png)) en la esquina superior derecha.
 
 ![](../images/alerts/overview/ui.png)
+
+>[!NOTE]
+>
+> Seleccione una alerta para ir a un tablero relacionado para obtener información más detallada sobre por qué se ha activado la alerta.
 
 Además, la variable [!UICONTROL Alertas] en la interfaz de usuario de permite a los usuarios individuales suscribirse a tipos de alerta específicos y permite a los administradores habilitar o deshabilitar reglas de alerta por completo. Consulte la [Guía de la interfaz de usuario](./ui.md) para obtener más información sobre la administración de alertas.
 
