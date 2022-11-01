@@ -5,9 +5,9 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: 2cec87d3f45b1b774925a9b669b53a958e65e57a
+source-git-commit: 15a1fd71bc5f00efdd475abd3385dc6bf4737a17
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '193'
 ht-degree: 32%
 
 ---
@@ -46,6 +46,7 @@ ht-degree: 32%
       * [Envío de datos a Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalización {#personalization}
    * [Representar contenido personalizado](personalization/rendering-personalization-content.md)
+   * [Personalización mediante implementación híbrida](personalization/hybrid-personalization.md)
    * [Administrar parpadeo](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Información general](personalization/adobe-target/target-overview.md)
