@@ -1,9 +1,9 @@
 ---
 title: Asignación de un archivo CSV a un esquema XDM mediante Recommendations generado por IA (Beta)
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante recomendaciones generadas por AI.
-source-git-commit: a8a7523c5b7f696ecc0ae89cb4e0474b44a222e7
+source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1043'
 ht-degree: 1%
 
 ---
@@ -35,13 +35,13 @@ En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Fuen
 
 La variable **[!UICONTROL Asignar esquema XDM CSV]** aparece el flujo de trabajo, empezando por el **[!UICONTROL Detalles de flujo de datos]** paso a paso.
 
-Select **[!UICONTROL Crear un nuevo esquema con recomendaciones ML]**, lo que hace que aparezcan nuevos controles. Elija la clase adecuada para los datos CSV que desea asignar ([!UICONTROL Perfil] o [!UICONTROL ExperienceEvent]) y utilice el menú desplegable para seleccionar el sector correspondiente para su empresa. Si su organización opera bajo un [de empresa a empresa (B2B)](../../../xdm/tutorials/relationship-b2b.md) modelo, seleccione el **[!UICONTROL Datos B2B]** casilla de verificación.
+Select **[!UICONTROL Crear un nuevo esquema con recomendaciones ML]**, lo que hace que aparezcan nuevos controles. Elija la clase adecuada para los datos CSV que desea asignar ([!UICONTROL Perfil] o [!UICONTROL ExperienceEvent]). Si lo desea, puede utilizar el menú desplegable para seleccionar el sector correspondiente para su empresa o dejarlo en blanco si las categorías proporcionadas no se aplican a usted. Si su organización opera bajo un [de empresa a empresa (B2B)](../../../xdm/tutorials/relationship-b2b.md) modelo, seleccione el **[!UICONTROL Datos B2B]** casilla de verificación.
 
 ![La variable [!UICONTROL Detalles de flujo de datos] paso con la opción de recomendación ML seleccionada. [!UICONTROL Perfil] está seleccionado para la clase y [!UICONTROL Telecomunicaciones] seleccionados para el sector](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 A partir de aquí, proporcione un nombre para el esquema que se creará a partir de los datos CSV y un nombre para el conjunto de datos de salida que contendrá los datos ingestados en ese esquema.
 
-Opcionalmente, puede configurar las siguientes funciones adicionales para el flujo de datos:
+Opcionalmente, puede configurar las siguientes funciones adicionales para el flujo de datos antes de continuar:
 
 | Nombre de entrada | Descripción |
 | --- | --- |
@@ -50,6 +50,8 @@ Opcionalmente, puede configurar las siguientes funciones adicionales para el flu
 | [!UICONTROL Ingesta parcial] | Cuando se habilita, los registros válidos para los nuevos datos de lote se incorporarán dentro de un umbral de error especificado. Este umbral le permite configurar el porcentaje de errores aceptables antes de que falle todo el lote. |
 | [!UICONTROL Detalles del flujo de datos] | Proporcione un nombre y una descripción opcional para el flujo de datos que llevará los datos CSV a Platform. Al iniciar este flujo de trabajo, se asigna automáticamente un nombre predeterminado al flujo de datos. Cambiar el nombre es opcional. |
 | [!UICONTROL Alertas] | Seleccione de una lista de [alertas en el producto](../../../observability/alerts/overview.md) que desea recibir con respecto al estado del flujo de datos una vez que se ha iniciado. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Cuando haya terminado de configurar el flujo de datos, seleccione **[!UICONTROL Siguiente]**.
 
@@ -81,7 +83,7 @@ Utilice la vista previa de asignación de campos para editar las asignaciones ex
 
 ### Editar grupos de campos {#edit-field-groups}
 
-Los campos CSV se asignan automáticamente a grupos de campos existentes mediante modelos ML. Si desea cambiar el grupo de campos de cualquier campo CSV en particular, seleccione **[!UICONTROL Editar]** junto al árbol de esquemas.
+Los campos CSV se asignan automáticamente a grupos de campos XDM existentes mediante modelos ML. Si desea cambiar el grupo de campos de cualquier campo CSV en particular, seleccione **[!UICONTROL Editar]** junto al árbol de esquemas.
 
 ![La variable [!UICONTROL Editar] botón seleccionado junto al árbol de esquemas](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
