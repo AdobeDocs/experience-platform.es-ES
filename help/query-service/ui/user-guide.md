@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Editor de consultas
 topic-legacy: query editor
 description: El Editor de consultas es una herramienta interactiva que proporciona el servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente en la interfaz de usuario del Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
+source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '2062'
 ht-degree: 0%
 
 ---
@@ -116,13 +116,19 @@ Este panel también muestra metadatos útiles, como la última vez que se modifi
 >
 >A continuación se muestra una lista de limitaciones para las consultas programadas al utilizar el Editor de consultas. No se aplican al [!DNL Query Service] API:<br/>Solo puede añadir una programación a una consulta que ya se haya creado, guardado y ejecutado.<br/>You **cannot** agregue una programación a una consulta parametrizada.<br/>Consultas programadas **cannot** contiene un bloque anónimo.
 
-Para añadir una programación a una consulta, seleccione **[!UICONTROL Agregar programación]**.
+Las programaciones se configuran desde el Editor de consultas. Sin embargo, solo se pueden programar las consultas que ya se han guardado como plantilla. Para agregar una programación a una consulta, seleccione una plantilla de consulta desde la [!UICONTROL Plantillas] o [!UICONTROL Consultas programadas] para ir al Editor de consultas.
 
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+Para aprender a añadir programaciones mediante la API, lea la [guía de extremo de consultas programadas](../api/scheduled-queries.md).
 
-![El Editor de consultas con la programación Añadir resaltada.](../images/ui/query-editor/add-schedule.png)
+Cuando se accede a una consulta guardada desde el Editor de consultas, la variable [!UICONTROL Programaciones] aparece debajo del nombre de la consulta. Select **[!UICONTROL Programaciones]**.
 
-La variable **[!UICONTROL Detalles de la programación]** se abre. En esta página, puede elegir la frecuencia de la consulta programada, las fechas en las que se ejecutará la consulta programada y el conjunto de datos al que exportar la consulta.
+![El Editor de consultas con la ficha Programas resaltada.](../images/ui/query-editor/schedules-tab.png)
+
+Aparecerá el espacio de trabajo de programaciones. Select **[!UICONTROL Agregar programación]** para crear una programación.
+
+![Espacio de trabajo Programar del Editor de consultas con la opción Agregar programación resaltada.](../images/ui/query-editor/add-schedule.png)
+
+Aparecerá la página de detalles de la programación. En esta página, puede elegir la frecuencia de la consulta programada, la fecha de inicio y finalización, el día de la semana en que se ejecutará la consulta programada, así como el conjunto de datos al que exportar la consulta.
 
 ![El panel Detalles del programa está resaltado.](../images/ui/query-editor/schedule-details.png)
 
@@ -140,39 +146,35 @@ Para el conjunto de datos, tiene la opción de usar un conjunto de datos existen
 >
 > Como está utilizando un conjunto de datos existente o creando uno nuevo, sí lo hace **not** debe incluir: `INSERT INTO` o `CREATE TABLE AS SELECT` como parte de la consulta, ya que los conjuntos de datos ya están establecidos. Incluyendo: `INSERT INTO` o `CREATE TABLE AS SELECT` como parte de las consultas programadas, se producirá un error.
 
-Después de confirmar todos estos detalles, seleccione **[!UICONTROL Guardar]** para crear una programación.
+Después de confirmar todos estos detalles, seleccione **[!UICONTROL Guardar]** para crear una programación. Volverá al espacio de trabajo de programaciones , que muestra detalles de la programación recién creada, incluido el ID de programación, la propia programación y el conjunto de datos de salida de la programación. Puede utilizar el ID de programación para buscar más información sobre las ejecuciones de la propia consulta programada. Para obtener más información, lea la [guía de extremos de ejecución de consultas programadas](../api/runs-scheduled-queries.md).
 
-La página de detalles de la consulta vuelve a aparecer y ahora muestra los detalles de la programación recién creada, incluido el ID de programación, la propia programación y el conjunto de datos de salida de la programación. Puede utilizar el ID de programación para buscar más información sobre las ejecuciones de la propia consulta programada. Para obtener más información, lea la [guía de extremos de ejecución de consultas programadas](../api/runs-scheduled-queries.md).
+![El espacio de trabajo de programaciones con la programación recién creada resaltada.](../images/ui/query-editor/schedules-workspace.png)
 
->[!NOTE]
->
-> Solo se puede programar **one** plantilla de consulta mediante la interfaz de usuario. Si desea agregar programaciones adicionales a una plantilla de consulta, deberá utilizar la API . Si ya se ha agregado una programación mediante la API de , **not** poder agregar programaciones adicionales mediante la interfaz de usuario de . Si ya hay varias programaciones adjuntas a una plantilla de consulta, solo se mostrará la programación más antigua. Para aprender a añadir programaciones mediante la API, lea la [guía de extremo de consultas programadas](../api/scheduled-queries.md).
->
-> Además, debe actualizar la página si desea asegurarse de que tiene el estado más reciente de la programación que está viendo.
+#### Eliminar o deshabilitar una programación {#delete-schedule}
 
-#### Eliminar una programación {#delete-schedule}
+Puede eliminar o desactivar una programación del espacio de trabajo de programaciones. Debe seleccionar una plantilla de consulta desde la [!UICONTROL Plantillas] o [!UICONTROL Consultas programadas] para ir al Editor de consultas y seleccionar **[!UICONTROL Programación]** para acceder al espacio de trabajo de programaciones.
 
-Para eliminar una programación, seleccione **[!UICONTROL Eliminar una programación]**.
-
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
-
-![El Editor de consultas con la programación Deshabilitar y Eliminar resaltada.](../images/ui/query-editor/delete-schedule.png)
+Seleccione una programación de las filas de programaciones disponibles. Puede utilizar el botón de alternancia para deshabilitar o habilitar la consulta programada.
 
 >[!IMPORTANT]
 >
-> Si desea eliminar una programación para una consulta, primero debe deshabilitarla.
+>Debe desactivar la programación para poder eliminar una programación de una consulta.
+
+Select **[!UICONTROL Eliminar una programación]** para eliminar la programación deshabilitada.
+
+![El espacio de trabajo de programaciones con Desactivar programación y Eliminar programación resaltado.](../images/ui/query-editor/delete-schedule.png)
 
 ### Almacenamiento de consultas {#saving-queries}
 
-[!DNL Query Editor] proporciona una función de guardado que le permite guardar una consulta y trabajar en ella más adelante. Para guardar una consulta, seleccione **[!UICONTROL Guardar]** en la esquina superior derecha de [!DNL Query Editor]. Para poder guardar una consulta, debe proporcionarse un nombre para la consulta mediante la variable **[!UICONTROL Detalles de la consulta]** panel.
+La variable [!DNL Query Editor] proporciona una función de guardado que le permite guardar una consulta y trabajar en ella más adelante. Para guardar una consulta, seleccione **[!UICONTROL Guardar]** en la esquina superior derecha de [!DNL Query Editor]. Para poder guardar una consulta, debe proporcionarse un nombre para la consulta mediante la variable **[!UICONTROL Detalles de la consulta]** panel.
 
 >[!NOTE]
 >
->Las consultas con nombre y guardadas con el Editor de consultas están disponibles como plantillas en el panel Consulta [!UICONTROL Examinar] pestaña . Consulte la [documentación de plantillas](./query-templates.md) para obtener más información.
+>Las consultas con nombre y guardadas con el Editor de consultas están disponibles como plantillas en el panel Consulta [!UICONTROL Plantillas] pestaña . Consulte la [documentación de plantillas](./query-templates.md) para obtener más información.
 
 ### Búsqueda de consultas anteriores {#previous-queries}
 
-Todas las consultas ejecutadas desde [!DNL Query Editor] se capturan en la tabla Registro . Puede utilizar la funcionalidad de búsqueda en la variable **[!UICONTROL Registro]** para buscar ejecuciones de consulta. Las consultas guardadas se enumeran en el **[!UICONTROL Examinar]** pestaña .
+Todas las consultas ejecutadas desde [!DNL Query Editor] se capturan en la tabla Registro . Puede utilizar la funcionalidad de búsqueda en la variable **[!UICONTROL Registro]** para buscar ejecuciones de consulta. Las consultas guardadas se enumeran en el **[!UICONTROL Plantillas]** pestaña .
 
 Consulte la [Información general sobre la interfaz de usuario del servicio de consulta](./overview.md) para obtener más información.
 
@@ -182,7 +184,7 @@ Consulte la [Información general sobre la interfaz de usuario del servicio de c
 
 ## Ejecución de consultas mediante el Editor de consultas {#executing-queries}
 
-Para ejecutar una consulta en [!DNL Query Editor], puede introducir SQL en el editor o cargar una consulta anterior desde el **[!UICONTROL Registro]** o **[!UICONTROL Examinar]** y seleccione **Play**. El estado de la ejecución de la consulta se muestra en la variable **[!UICONTROL Consola]** y los datos de salida se muestran en la pestaña **[!UICONTROL Resultados]** pestaña .
+Para ejecutar una consulta en [!DNL Query Editor], puede introducir SQL en el editor o cargar una consulta anterior desde el **[!UICONTROL Registro]** o **[!UICONTROL Plantillas]** y seleccione **Play**. El estado de la ejecución de la consulta se muestra en la variable **[!UICONTROL Consola]** y los datos de salida se muestran en la pestaña **[!UICONTROL Resultados]** pestaña .
 
 ### Consola {#console}
 

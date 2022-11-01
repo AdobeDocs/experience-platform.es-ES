@@ -5,7 +5,7 @@ title: Guía de la interfaz de usuario del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Query Service] proporciona una interfaz de usuar
 
 ## [!DNL Query Editor]
 
-La variable [!DNL Query Editor] permite escribir y ejecutar consultas sin utilizar un cliente externo. Select **[!UICONTROL Crear consulta]** para abrir el [!DNL Query Editor] y cree una nueva consulta. También puede acceder al [!DNL Query Editor] seleccionando una consulta en el **[!UICONTROL Registro]** o **[!UICONTROL Examinar]** pestañas. Si se selecciona una consulta guardada o ejecutada anteriormente, se abrirá la variable [!DNL Query Editor] y mostrar el SQL para la consulta seleccionada.
+La variable [!DNL Query Editor] permite escribir y ejecutar consultas sin utilizar un cliente externo. Select **[!UICONTROL Crear consulta]** para abrir el [!DNL Query Editor] y cree una nueva consulta. También puede acceder al [!DNL Query Editor] seleccionando una consulta en el **[!UICONTROL Registro]** o **[!UICONTROL Plantillas]** pestañas. Si se selecciona una consulta guardada o ejecutada anteriormente, se abrirá la variable [!DNL Query Editor] y mostrar el SQL para la consulta seleccionada.
 
 ![El panel Consultas con la opción Crear consulta resaltada.](../images/ui/overview/overview.png)
 
