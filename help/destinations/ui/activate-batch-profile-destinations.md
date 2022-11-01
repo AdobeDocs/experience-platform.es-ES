@@ -4,10 +4,10 @@ title: Activar datos de audiencia en destinos de exportación de perfiles en lot
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
+source-git-commit: 04ccf5c44e24f281171e5dd753a8431c24e0e0cf
 workflow-type: tm+mt
-source-wordcount: '2626'
-ht-degree: 0%
+source-wordcount: '3468'
+ht-degree: 1%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>Algunos clientes que participan en el programa beta de funcionalidad mejorada de exportación de archivos están viendo la nueva **[!UICONTROL Asignación]** como parte de su flujo de trabajo de activación para [nuevos destinos de almacenamiento en la nube beta](/help/release-notes/2022/october-2022.md#destinations). Tenga en cuenta también que [limitaciones conocidas](#known-limitations) como parte de la versión.
 
 ## Información general {#overview}
 
@@ -162,13 +164,13 @@ Select **[!UICONTROL Exportar archivos incrementales]** para almacenar en décle
 >title="Configurar nombre de archivo"
 >abstract="Para los destinos basados en archivos, se genera un nombre de archivo único por segmento. Utilice el editor de nombres de archivo para crear y editar un nombre de archivo único o mantener el nombre predeterminado."
 
-Los nombres de archivo predeterminados constan del nombre de destino, el ID de segmento y un indicador de fecha y hora. Por ejemplo, puede editar los nombres de archivo exportados para distinguir entre diferentes campañas o para que se añada el tiempo de exportación de datos a los archivos.
+Para la mayoría de los destinos, los nombres de archivo predeterminados consisten en el nombre de destino, el ID de segmento y un indicador de fecha y hora. Por ejemplo, puede editar los nombres de archivo exportados para distinguir entre diferentes campañas o para que se añada el tiempo de exportación de datos a los archivos. Tenga en cuenta que algunos desarrolladores de destino pueden seleccionar que se muestren diferentes opciones de adición de nombres de archivo predeterminadas para sus destinos.
 
 Seleccione el icono de lápiz para abrir una ventana modal y editar los nombres de archivo. Los nombres de archivo están limitados a 255 caracteres.
 
 >[!NOTE]
 >
->La siguiente imagen muestra cómo se pueden editar los nombres de archivo para los destinos de Amazon S3, pero el proceso es idéntico para todos los destinos de lote (por ejemplo, SFTP o Azure Blob Storage).
+>La siguiente imagen muestra cómo se pueden editar los nombres de archivo para [!DNL Amazon S3] los destinos, pero el proceso es idéntico para todos los destinos de lote (por ejemplo, SFTP, [!DNL Azure Blob Storage]o [!DNL Google Cloud Storage]).
 
 ![Imagen que resalta el icono de lápiz, que se utiliza para configurar los nombres de archivo.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
@@ -178,9 +180,17 @@ En el editor de nombres de archivo, puede seleccionar diferentes componentes par
 
 El nombre de destino y el ID de segmento no se pueden eliminar de los nombres de archivo. Además de esto, puede agregar lo siguiente:
 
-* **[!UICONTROL Nombre del segmento]**: Puede anexar el nombre del segmento al nombre del archivo.
-* **[!UICONTROL Fecha y hora]**: Seleccione entre añadir una `MMDDYYYY_HHMMSS` o una marca de tiempo de Unix de 10 dígitos del momento en que se generan los archivos. Elija una de estas opciones si desea que los archivos tengan un nombre de archivo dinámico generado con cada exportación incremental.
-* **[!UICONTROL Texto personalizado]**: Agregue texto personalizado a los nombres de archivo.
+| Opción Nombre de archivo | Descripción |
+|---------|----------|
+| **[!UICONTROL Nombre del segmento]** | Nombre del segmento exportado. |
+| **[!UICONTROL Fecha y hora]** | Seleccione entre añadir una `MMDDYYYY_HHMMSS` o una marca de tiempo de Unix de 10 dígitos del momento en que se generan los archivos. Elija una de estas opciones si desea que los archivos tengan un nombre de archivo dinámico generado con cada exportación incremental. |
+| **[!UICONTROL Texto personalizado]** | Cualquier texto personalizado que desee agregar a los nombres de archivo. |
+| **[!UICONTROL ID de destino]** | ID del flujo de datos de destino que se utiliza para exportar el segmento. <br> **Nota**: Esta opción de adición de nombre de archivo solo está disponible para los clientes beta que participan en el programa beta de la funcionalidad mejorada de exportación de archivos. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder al programa beta. |
+| **[!UICONTROL Nombre de destino]** | Nombre del flujo de datos de destino que se utiliza para exportar el segmento. <br> **Nota**: Esta opción de adición de nombre de archivo solo está disponible para los clientes beta que participan en el programa beta de la funcionalidad mejorada de exportación de archivos. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder al programa beta. |
+| **[!UICONTROL Nombre de la organización]** | El nombre de su organización en Experience Platform. <br> **Nota**: Esta opción de adición de nombre de archivo solo está disponible para los clientes beta que participan en el programa beta de la funcionalidad mejorada de exportación de archivos. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder al programa beta. |
+| **[!UICONTROL Nombre de la zona protegida]** | ID del simulador de pruebas que se utiliza para exportar el segmento. <br> **Nota**: Esta opción de adición de nombre de archivo solo está disponible para los clientes beta que participan en el programa beta de la funcionalidad mejorada de exportación de archivos. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder al programa beta. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Select **[!UICONTROL Aplicar cambios]** para confirmar la selección.
 
@@ -193,7 +203,6 @@ Una vez que haya terminado de configurar todos los segmentos, seleccione **[!UIC
 ## Seleccionar atributos de perfil {#select-attributes}
 
 Para los destinos basados en perfiles, debe seleccionar los atributos de perfil que desea enviar al destino de destino.
-
 
 1. En el **[!UICONTROL Seleccionar atributos]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
 
@@ -386,6 +395,75 @@ Adobe recomienda seleccionar un área de nombres de identidad como un [!DNL CRM 
 >
 > Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, se le mostraría una infracción de la política de uso de datos en el paso de revisión. Para obtener más información, consulte [Control de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
+## Asignación (Beta) {#mapping}
+
+>[!IMPORTANT]
+> 
+>Los clientes de Select beta pueden ver una **[!UICONTROL Asignación]** paso que reemplaza al [Seleccionar atributos de perfil](#select-attributes) paso descrito más arriba. Esta nueva **[!UICONTROL Asignación]** permite editar los encabezados de los archivos exportados con los nombres personalizados que desee.
+> 
+> La funcionalidad y la documentación están sujetas a cambios. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder a este programa beta.
+
+En este paso, debe seleccionar los atributos de perfil que desea añadir a los archivos exportados al destino de destino. Para seleccionar atributos de perfil e identidades para la exportación:
+
+1. En el **[!UICONTROL Asignación]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
+
+   ![Añada un nuevo control de campo resaltado en el flujo de trabajo de asignación.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
+
+1. Seleccione la flecha a la derecha del **[!UICONTROL Campo de origen]** entrada.
+
+   ![Seleccione control de campo de origen resaltado en el flujo de trabajo de asignación.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+
+1. En el **[!UICONTROL Seleccionar campo de origen]** , seleccione los atributos de perfil y las identidades que desea incluir en los archivos exportados al destino y, a continuación, elija **[!UICONTROL Select]**.
+
+   >[!TIP]
+   > 
+   >Puede utilizar el campo de búsqueda para reducir la selección, como se muestra en la imagen siguiente.
+
+   ![Ventana modal que muestra los atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
+
+
+1. El campo seleccionado para la exportación aparece ahora en la vista de asignación. Si lo desea, puede editar el nombre del encabezado en el archivo exportado. Para ello, seleccione el icono en el campo de destino.
+
+   ![Ventana modal que muestra los atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
+
+1. En el **[!UICONTROL Seleccionar campo de destino]** , escriba el nombre deseado del encabezado en el archivo exportado y, a continuación, elija **[!UICONTROL Select]**.
+
+   ![Ventana modal que muestra un nombre descriptivo escrito para un encabezado.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. El campo seleccionado para la exportación ahora aparece en la vista de asignación y muestra el encabezado editado en el archivo exportado.
+
+   ![Ventana modal que muestra los atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. (Opcional) Puede seleccionar el campo exportado para que sea un [clave obligatoria](#mandatory-keys) o [clave de deduplicación](#deduplication-keys).
+
+   ![Ventana modal que muestra los atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. Para añadir más campos para la exportación, repita los pasos anteriores.
+
+### Limitaciones conocidas {#known-limitations}
+
+El nuevo **[!UICONTROL Asignación]** tiene las siguientes limitaciones conocidas:
+
+#### El atributo de pertenencia a segmentos no se puede seleccionar a través del flujo de trabajo de asignación
+
+Debido a una limitación conocida, actualmente no puede usar la variable **[!UICONTROL Seleccionar campo]** ventana para agregar `segmentMembership.status` a las exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.status` en el campo schema , como se muestra a continuación.
+
+![Grabación de pantalla que muestra la solución de pertenencia a segmentos en el paso de asignación del flujo de trabajo de activación.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
+
+Las exportaciones de archivos variarán de las siguientes maneras, en función de si `segmentMembership.status` está seleccionada:
+* Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales posteriores.
+* Si la variable `segmentMembership.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
+
+#### Actualmente, los espacios de nombres de identidad no se pueden seleccionar para las exportaciones
+
+Actualmente no se puede seleccionar áreas de nombres de identidad para la exportación, como se muestra en la imagen siguiente. Si se selecciona cualquier área de nombres de identidad para la exportación, se producirá un error en la variable **[!UICONTROL Consulte]** paso a paso.
+
+![Asignación no admitida que muestra exportaciones de identidad](/help/destinations/assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+
+Como solución temporal si necesita añadir áreas de nombres de identidad a los archivos exportados durante la versión beta, puede:
+* Utilice los destinos de almacenamiento en la nube heredados para los flujos de datos donde desea incluir áreas de nombres de identidad en las exportaciones
+* Cargue identidades como atributos en Experience Platform para luego exportarlas a sus destinos de almacenamiento en la nube.
+
 ## Revisión {#review}
 
 En el **[!UICONTROL Consulte]** , puede ver un resumen de su selección. Select **[!UICONTROL Cancelar]** para desglosar el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
@@ -402,11 +480,10 @@ Si no se han detectado infracciones de directiva, seleccione **[!UICONTROL Final
 
 ## Verificación de la activación de segmentos {#verify}
 
-
-Para destinos de marketing por correo electrónico y destinos de almacenamiento en la nube, Adobe Experience Platform crea un `.csv` en la ubicación de almacenamiento proporcionada. Espere a que se cree un nuevo archivo en la ubicación de almacenamiento todos los días. El formato de archivo predeterminado es:
+Para destinos de marketing por correo electrónico y destinos de almacenamiento en la nube, Adobe Experience Platform crea un `.csv` en la ubicación de almacenamiento proporcionada. Espere a que se cree un nuevo archivo en la ubicación de almacenamiento según la programación configurada en el flujo de trabajo. El formato de archivo predeterminado es:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-Los archivos que recibiría en tres días consecutivos podrían tener este aspecto:
+Por ejemplo, si selecciona una frecuencia de exportación diaria, los archivos que recibirá en tres días consecutivos podrían tener este aspecto:
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv

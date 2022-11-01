@@ -3,9 +3,9 @@ keywords: destino de almacenamiento en la nube;almacenamiento en la nube
 title: Resumen de destinos de Cloud Storage
 description: Adobe Experience Platform puede enviar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
+source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Adobe Experience Platform puede entregar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV para [!DNL Amazon S3], [!DNL Azure Blob] y SFTP. Para [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] destinos, los datos se transmiten fuera del Experience Platform [!DNL JSON] formato.
+Adobe Experience Platform puede entregar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV para [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]y SFTP. Para [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] destinos, los datos se transmiten fuera del Experience Platform [!DNL JSON] formato.
 
 ![Destinos de almacenamiento en la nube de Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -25,7 +25,10 @@ Adobe Experience Platform admite los siguientes destinos de almacenamiento en la
 * [Conexión de Amazon Kinesis](amazon-kinesis.md)
 * [Conexión Amazon S3](amazon-s3.md)
 * [Conexión de Azure Blob](azure-blob.md)
+* [(Beta) Almacenamiento de Azure Data Lake Gen2](adls-gen2.md)
 * [Conexión de los centros de eventos de Azure](azure-event-hubs.md)
+* [(Beta) Zona de aterrizaje de datos](data-landing-zone.md)
+* [(Beta) Almacenamiento en la nube de Google](google-cloud-storage.md)
 * [Conexión SFTP](sftp.md)
 
 ## Conectarse a un nuevo destino de almacenamiento en la nube {#connect-destination}

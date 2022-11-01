@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
-source-git-commit: cf8f630360c2cdbba1082913b179e719156183f4
+source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 6%
+source-wordcount: '1394'
+ht-degree: 5%
 
 ---
 
@@ -48,6 +48,15 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Exportaciones de conjuntos de datos (Beta) | La variable [Exportación de conjuntos de datos: funcionalidad beta](/help/destinations/ui/export-datasets.md) permite exportar datos de primera generación (tal y como se define en la variable [Descripción del producto de Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) desde Adobe Experience Platform a sus propios sistemas de cliente externos, a través de la interfaz de usuario de destinos. Esto le permite sacar datos del Experience Platform con un flujo de trabajo sin código/de bajo código a seis destinos de almacenamiento en la nube (enumerados en la tabla siguiente) para casos de uso analíticos y de cumplimiento. |
+| (Beta) Funciones mejoradas de exportación de archivos | Ahora puede beneficiarse de la funcionalidad de personalización mejorada al exportar archivos fuera del Experience Platform: <br><ul><li>Adicional [opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados mediante la variable [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Posibilidad de personalizar el formato de los archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Esta funcionalidad es compatible con las seis nuevas tarjetas de almacenamiento de nube beta que se enumeran en la siguiente tabla. |
+
+{style=&quot;table-layout:auto&quot;}
+
 **Destinos nuevos o actualizados**
 
 | Destino | Descripción |
@@ -55,6 +64,12 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line es una popular plataforma de comunicación que conecta personas, servicios e información y que ha pasado de ser una aplicación de chat a ser un centro de actividades de entretenimiento, sociales y diarias. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 es una plataforma de aplicaciones empresariales basada en la nube que combina Enterprise Resource Planning (ERP) y Customer Relationship Management (CRM) junto con aplicaciones de productividad y herramientas de IA para ofrecer operaciones integrales más fluidas y controladas, un mejor potencial de crecimiento y costos reducidos. |
 | [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | La variable [!DNL (Beta) Adobe Commerce] el conector de destino le permite seleccionar uno o varios segmentos de Real-Time CDP para activarlos en su [!DNL Adobe Commerce] para ofrecer una experiencia personalizada dinámica para sus compradores. Within [!DNL Adobe Commerce], puede seleccionar los segmentos de Real-Time CDP para personalizar las ofertas únicas del carro de compras, como &quot;comprar 2 obtener 1 gratis&quot;. También puede mostrar banners a pantalla completa y modificar los precios de los productos mediante ofertas promocionales, todas ellas personalizadas para segmentos de Adobe Real-Time CDP. |
+| [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Cree una conexión de salida activa a [!DNL Azure Data Lake Storage Gen2] para exportar periódicamente archivos de datos de Adobe Experience Platform a su propia ubicación de almacenamiento. Este nuevo destino beta proporciona funcionalidad mejorada de exportación de archivos y admite exportaciones de conjuntos de datos. |
+| [[!DNL (Beta) Azure Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] es un [!DNL Azure Blob] interfaz de almacenamiento de información aprovisionada por Adobe Experience Platform, lo que le otorga acceso a una instalación de almacenamiento de archivos segura y basada en la nube para exportar archivos desde Platform. Este nuevo destino beta proporciona funcionalidad mejorada de exportación de archivos y admite exportaciones de conjuntos de datos. |
+| [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Cree una conexión de salida activa a [!DNL Google Cloud Storage] para exportar periódicamente archivos de datos de Adobe Experience Platform a sus propios bloques. Este nuevo destino beta proporciona funcionalidad mejorada de exportación de archivos y admite exportaciones de conjuntos de datos. |
+| [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | Los participantes de la beta ahora ven dos [!DNL Amazon S3] tarjetas de destino en paralelo en el catálogo de destinos. El nuevo destino beta proporciona funcionalidad mejorada de exportación de archivos y admite exportaciones de conjuntos de datos. |
+| [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | Los participantes de la beta ahora ven dos [!DNL Azure Blob] tarjetas de destino en paralelo en el catálogo de destinos. El nuevo destino beta proporciona funcionalidad mejorada de exportación de archivos y admite exportaciones de conjuntos de datos. |
+| [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | Los participantes de la beta ahora ven dos [!DNL SFTP] tarjetas de destino en paralelo en el catálogo de destinos. El nuevo destino beta proporciona funcionalidad mejorada de exportación de archivos y admite exportaciones de conjuntos de datos. |
 
 {style=&quot;table-layout:auto&quot;}
 

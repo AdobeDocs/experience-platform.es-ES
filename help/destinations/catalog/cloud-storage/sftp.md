@@ -3,14 +3,32 @@ keywords: SFTP;sftp
 title: Conexión SFTP
 description: Cree una conexión saliente en directo al servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 1%
+source-wordcount: '835'
+ht-degree: 0%
 
 ---
 
 # Conexión SFTP
+
+## Registro de cambios del destino {#changelog}
+
+>[!IMPORTANT]
+>
+>Con la versión beta de la funcionalidad de exportación de conjuntos de datos y la funcionalidad mejorada de exportación de archivos, es posible que ahora vea dos [!DNL SFTP] en el catálogo de destinos.
+>* Si ya está exportando archivos al **[!UICONTROL SFTP]** destino: Cree nuevos flujos de datos para el nuevo **[!UICONTROL SFTP beta]** destino.
+>* Si aún no ha creado ningún flujo de datos en la variable **[!UICONTROL SFTP]** destino, utilice el nuevo **[!UICONTROL SFTP beta]** tarjeta para exportar archivos a **[!UICONTROL SFTP]**.
+
+
+![Imagen de las dos tarjetas de destino SFTP en una vista en paralelo.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+
+Mejoras en el nuevo [!DNL SFTP] la tarjeta de destino incluye:
+
+* [Compatibilidad con la exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
+* Adicional [opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados mediante la variable [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Posibilidad de personalizar el formato de los archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## Información general {#overview}
 
@@ -18,7 +36,7 @@ Cree una conexión saliente en directo al servidor SFTP para exportar periódica
 
 >[!IMPORTANT]
 >
-> Aunque el Experience Platform admite las exportaciones de datos a los servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar los datos son [!DNL Amazon S3] y [!DNL Azure Blob].
+> Aunque el Experience Platform admite las exportaciones de datos a los servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar los datos son [!DNL Amazon S3] y [!DNL SFTP].
 
 ## Tipo de exportación y frecuencia {#export-type-frequency}
 
@@ -95,6 +113,10 @@ Después de establecer la conexión de autenticación en la ubicación SFTP, pro
 >Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles en lote](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+
+## (Beta) Exportar conjuntos de datos {#export-datasets}
+
+Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar las exportaciones de conjuntos de datos, lea la [tutorial de exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
 
 ## Datos exportados {#exported-data}
 
