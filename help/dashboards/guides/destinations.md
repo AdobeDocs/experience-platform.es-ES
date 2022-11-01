@@ -4,9 +4,9 @@ title: Guía del panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '2829'
+source-wordcount: '2828'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Para obtener una descripción general de los destinos, así como un catálogo de
 
 ## [!UICONTROL Destinos] datos de tablero {#destinations-dashboard-data}
 
-La variable [!UICONTROL Destinos] tablero muestra una instantánea de los destinos que su organización ha habilitado en Experience Platform. Los datos de la instantánea muestran los datos exactamente como aparecen en el momento concreto en que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos y el panel de destinos no se actualiza en tiempo real.
+El panel Destinos muestra una instantánea de los destinos que su organización ha habilitado en el Experience Platform. Los datos de la instantánea muestran los datos exactamente como aparecen en el momento concreto en que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos y el panel de destinos no se actualiza en tiempo real.
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ La fecha y la hora de la instantánea más reciente se muestran en la parte supe
 
 >[!NOTE]
 >
->Si su organización es nueva en Experience Platform y aún no tiene destinos activos, la variable [!UICONTROL Destinos] tablero y [!UICONTROL Información general] no están visibles. En su lugar, seleccione [!UICONTROL Destinos] en la navegación izquierda, se muestra la variable [!UICONTROL Catálogo] pestaña . Para obtener más información sobre [!UICONTROL Catálogo] , consulte [[!UICONTROL Destinos] guía del espacio de trabajo](../../destinations/ui/destinations-workspace.md).
+>Si su organización es nueva para Experience Platform y aún no tiene destinos activos, consulte el panel Destinos y [!UICONTROL Información general] no están visibles. En su lugar, seleccione [!UICONTROL Destinos] en la navegación izquierda, se muestra la variable [!UICONTROL Catálogo] pestaña . Para obtener más información sobre [!UICONTROL Catálogo] , consulte [[!UICONTROL Destinos] guía del espacio de trabajo](../../destinations/ui/destinations-workspace.md).
 
 ![Información general sobre los destinos de la interfaz de usuario de Platform, con la instantánea más reciente resaltada.](../images/destinations/snapshot-timestamp.png)
 
@@ -120,7 +120,7 @@ La fecha actualizada que se muestra muestra muestra la última vez que se activ�
 
 Si selecciona el nombre de un segmento en la lista que se muestra en la utilidad, obtendrá los detalles del segmento. También puede seleccionar **[!UICONTROL Ver todo]** para ir a la pestaña de exploración del segmento y, a continuación, seleccione el nombre de un segmento para ver sus detalles.
 
-Para obtener más información sobre cómo trabajar con segmentos en el Experience Platform, comience por leer la [Información general del servicio de segmentación](../../segmentation/home.md).
+Para obtener más información sobre el trabajo con segmentos en Experience Platform, consulte la [Información general del servicio de segmentación](../../segmentation/home.md).
 
 ![La pestaña Información general del panel Destinos con el widget Segmentos activados recientemente resaltado.](../images/destinations/recently-activated-segments.png)
 

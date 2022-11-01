@@ -4,9 +4,9 @@ title: Guía del panel de segmentos
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2092'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 
 La variable **[!UICONTROL Tamaño de la audiencia]** muestra el número total de perfiles combinados dentro del segmento seleccionado en el momento en que se tomó la instantánea. Este número es el resultado de aplicar la política de combinación de segmentos a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo en el segmento.
 
-Para obtener más información sobre fragmentos y perfiles combinados, comience por leer la [Resumen del perfil del cliente en tiempo real](../../profile/home.md).
+Para obtener más información sobre los fragmentos y los perfiles combinados, consulte la [Resumen del perfil del cliente en tiempo real](../../profile/home.md).
 
 ![Información general del tablero Segmentos con el widget Tamaño de audiencia resaltado.](../images/segments/audience-size.png)
 
