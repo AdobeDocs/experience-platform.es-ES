@@ -5,7 +5,7 @@ title: Procesamiento de consentimiento en Adobe Experience Platform
 topic-legacy: getting started
 description: Aprenda a procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Consulte la documentación del SDK móvil para [configuración de la extensión 
 
 Puede ingerir datos de consentimiento compatibles con XDM desde un archivo CSV mediante la ingesta por lotes. Esto puede resultar útil si tiene una acumulación de datos de consentimiento recopilados anteriormente que aún no se han integrado en sus perfiles de cliente.
 
-Siga el tutorial en [asignación de un archivo CSV a XDM](../../../../ingestion/tutorials/map-a-csv-file.md) para aprender a convertir los campos de datos a XDM e introducirlos en Platform. Al seleccionar la variable [!UICONTROL Destino] para la asignación, asegúrese de seleccionar la variable **[!UICONTROL Usar conjunto de datos existente]** y seleccione [!DNL Profile]conjunto de datos de consentimiento habilitado para .
+Siga el tutorial en [asignación de un archivo CSV a XDM](../../../../ingestion/tutorials/map-csv/overview.md) para aprender a convertir los campos de datos a XDM e introducirlos en Platform. Al seleccionar la variable [!UICONTROL Destino] para la asignación, asegúrese de seleccionar la variable **[!UICONTROL Usar conjunto de datos existente]** y seleccione [!DNL Profile]conjunto de datos de consentimiento habilitado para .
 
 ## Probar la implementación {#test-implementation}
 

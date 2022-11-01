@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;asignación de csv;asignaci
 title: Guía de la interfaz de usuario de preparación de datos
 description: Este documento proporciona instrucciones sobre cómo utilizar las funciones de preparación de datos en la interfaz de usuario de Platform para asignar archivos CSV a un esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1845'
 ht-degree: 1%
@@ -79,7 +79,7 @@ La variable **[!UICONTROL asignación]** La interfaz de le proporciona una herra
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### Explicación de la interfaz de asignación
+### Explicación de la interfaz de asignación {#mapping-interface}
 
 La interfaz de asignación incluye un panel que proporciona información sobre el estado de los campos de asignación en el contexto del flujo de trabajo de ingesta. El panel muestra los siguientes detalles sobre los campos de asignación:
 

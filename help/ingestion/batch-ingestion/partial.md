@@ -5,7 +5,7 @@ title: Información general sobre la ingesta parcial de lotes
 topic-legacy: overview
 description: Este documento proporciona un tutorial para administrar la ingesta parcial de lotes.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Ahora puede cargar datos mediante la variable **Añadir datos** y se incorporar�
 
 ### Utilice el[!UICONTROL Asignación de CSV al esquema XDM]&quot; flujo {#map-flow}
 
-Para usar el[!UICONTROL Asignación de CSV al esquema XDM]&quot;, siga los pasos enumerados en la [Asignación de un tutorial de archivo CSV](../tutorials/map-a-csv-file.md). Una vez que llegue al **[!UICONTROL Añadir datos]** , tome nota del **[!UICONTROL Ingesta parcial]** y **[!UICONTROL Diagnóstico de errores]** campos.
+Para usar el[!UICONTROL Asignación de CSV al esquema XDM]&quot;, siga los pasos enumerados en la [Asignación de un tutorial de archivo CSV](../tutorials/map-csv/overview.md). Una vez que llegue al **[!UICONTROL Añadir datos]** , tome nota del **[!UICONTROL Ingesta parcial]** y **[!UICONTROL Diagnóstico de errores]** campos.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 

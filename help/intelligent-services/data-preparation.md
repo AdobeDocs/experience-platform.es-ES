@@ -5,7 +5,7 @@ title: Preparación de datos para su uso en servicios inteligentes
 topic-legacy: Intelligent Services
 description: Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse semánticamente y mantenerse en una estructura estándar. Los servicios inteligentes utilizan esquemas del Modelo de datos de experiencia (XDM) para conseguirlo.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 1%
@@ -356,7 +356,7 @@ Si está asimilando datos de un archivo CSV local, puede pasar a la siguiente se
 
 #### Asignación e ingesta de datos {#ingest}
 
-Después de crear un esquema y un conjunto de datos de CEE, puede empezar a asignar las tablas de datos al esquema e ingerir esos datos en Platform. Consulte el tutorial en [asignación de un archivo CSV a un esquema XDM](../ingestion/tutorials/map-a-csv-file.md) para ver los pasos sobre cómo realizar esto en la interfaz de usuario. Puede utilizar lo siguiente [archivo JSON de muestra](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para probar el proceso de ingesta antes de utilizar sus propios datos.
+Después de crear un esquema y un conjunto de datos de CEE, puede empezar a asignar las tablas de datos al esquema e ingerir esos datos en Platform. Consulte el tutorial en [asignación de un archivo CSV a un esquema XDM](../ingestion/tutorials/map-csv/overview.md) para ver los pasos sobre cómo realizar esto en la interfaz de usuario. Puede utilizar lo siguiente [archivo JSON de muestra](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para probar el proceso de ingesta antes de utilizar sus propios datos.
 
 Una vez que se ha rellenado un conjunto de datos, se puede utilizar el mismo conjunto de datos para introducir archivos de datos adicionales.
 

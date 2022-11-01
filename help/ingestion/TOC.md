@@ -4,10 +4,10 @@ user-guide-title: Ayuda de ingesta de datos de Adobe Experience Platform
 breadcrumb-title: Guía de ingesta de datos
 user-guide-description: Incluya sus datos en Experience Platform mediante la ingestión por lotes o streaming.
 feature: Data Ingestion
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 27%
+source-wordcount: '145'
+ht-degree: 25%
 
 ---
 
@@ -26,7 +26,10 @@ ht-degree: 27%
    - [Ingesta parcial por lotes](batch-ingestion/partial.md)
    - [Resolución de problemas](batch-ingestion/troubleshooting.md)
 - Tutoriales {#tutorials}
-   - [Asignación de un archivo CSV a XDM](tutorials/map-a-csv-file.md)
+   - Asignación de un archivo CSV a XDM {#map-csv}
+      - [Información general](./tutorials/map-csv/overview.md)
+      - [Asignación de un archivo CSV a un esquema existente](./tutorials/map-csv/existing-schema.md)
+      - [Asignación de un archivo CSV mediante recomendaciones generadas por AI](./tutorials/map-csv/recommendations.md)
    - [Ingesta de datos de lote mediante la interfaz de usuario](tutorials/ingest-batch-data.md)
    - [Creación de una conexión de flujo continuo autenticada](tutorials/create-authenticated-streaming-connection.md)
    - [Creación de una conexión de flujo continuo (API)](tutorials/create-streaming-connection.md)
