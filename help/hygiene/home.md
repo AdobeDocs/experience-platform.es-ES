@@ -2,9 +2,9 @@
 title: Información general sobre la higiene de los datos
 description: La higiene de los datos de Adobe Experience Platform le permite administrar el ciclo de vida de sus datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Actualmente, la higiene de los datos solo está disponible para las organizaciones que han adquirido Adobe Healthcare Shield.
+>Actualmente, la higiene de los datos solo está disponible para las organizaciones que han adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**.
 
 Adobe Experience Platform proporciona un robusto conjunto de herramientas para administrar operaciones de datos grandes y complicadas con el fin de orquestar las experiencias de los consumidores. A medida que los datos se incorporan al sistema a lo largo del tiempo, cada vez es más importante administrar los almacenes de datos para que se utilicen como se espera, se actualicen cuando sea necesario corregir los datos incorrectos y se eliminen cuando las políticas organizativas lo consideren necesario.
 
@@ -42,7 +42,7 @@ Las solicitudes de eliminación de consumidores y caducidad de conjuntos de dato
 
 Lo siguiente ocurre cuando se produce una [solicitud de caducidad del conjunto de datos](./ui/dataset-expiration.md) se crea:
 
-| Prueba | Tiempo después de la caducidad programada | Descripción |
+| Escenario | Tiempo después de la caducidad programada | Descripción |
 | --- | --- | --- |
 | La solicitud se envía | 0 horas | Un administrador de datos o analista de privacidad envía una solicitud para que un conjunto de datos caduque en un momento determinado. La solicitud se puede ver en el [!UICONTROL Interfaz de usuario de higiene de datos] una vez enviado, y permanece en estado pendiente hasta la hora de caducidad programada, tras la cual se ejecutará la solicitud. |
 | El conjunto de datos se ha perdido | 1 hora | El conjunto de datos se abandona de la variable [página de inventario del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario de . Los datos dentro del lago de datos solo se eliminan de forma suave, y permanecerán así hasta el final del proceso, tras lo cual se eliminarán con dificultad. |
@@ -57,7 +57,7 @@ Lo siguiente ocurre cuando se produce una [solicitud de caducidad del conjunto d
 
 Lo siguiente ocurre cuando se produce una [solicitud de eliminación de consumidor](./ui/delete-consumer.md) se crea:
 
-| Prueba | Tiempo después del envío de la solicitud | Descripción |
+| Escenario | Tiempo después del envío de la solicitud | Descripción |
 | --- | --- | --- |
 | La solicitud se envía | 0 horas | Un gestor de datos o analista de privacidad envía una solicitud de eliminación de consumidor. La solicitud se puede ver en el [!UICONTROL Interfaz de usuario de higiene de datos] una vez presentada. |
 | Búsqueda de perfiles actualizada | 3 horas | El cambio en los recuentos de perfiles causado por la identidad eliminada se refleja en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |

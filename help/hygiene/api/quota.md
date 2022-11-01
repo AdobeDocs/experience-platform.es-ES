@@ -1,9 +1,9 @@
 ---
 title: Punto final de API de cuota
 description: El extremo /quotas de la API de higiene de datos le permite supervisar el uso de la higiene de los datos en relación con los límites de cuota mensual de la organización para cada tipo de trabajo.
-source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '352'
 ht-degree: 3%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Actualmente, las funciones de higiene de datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido el Escudo de la salud.
+>Actualmente, las funciones de higiene de datos en Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**.
 
 La variable `/quota` en la API de higiene de datos le permite supervisar el uso de higiene de datos en relación con los límites de cuota de su organización para cada tipo de trabajo.
 
