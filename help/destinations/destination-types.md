@@ -3,9 +3,9 @@ keywords: destinos;destino;tipos de destino
 title: Tipos y categorías de destino
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,12 @@ Más información sobre cómo [configurar destinos de personalización para la p
 El siguiente vídeo muestra las particularidades de los dos tipos de destinos:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## (Beta) Destinos de exportación de conjuntos de datos {#dataset-export-destinations}
+
+Algunos destinos de almacenamiento en la nube en el catálogo de destinos admiten las exportaciones de conjuntos de datos. Utilice estos destinos para exportar conjuntos de datos sin procesar a ubicaciones de almacenamiento en la nube.
+
+Más información sobre cómo [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md).
 
 ## Extensiones {#extensions}
 

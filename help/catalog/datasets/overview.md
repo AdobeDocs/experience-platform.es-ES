@@ -5,10 +5,10 @@ title: Información general sobre conjuntos de datos
 topic-legacy: datasets
 description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 9%
+source-wordcount: '736'
+ht-degree: 8%
 
 ---
 
@@ -61,6 +61,7 @@ A continuación se muestra una lista de servicios descendentes que utilizan conj
 * [Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md): Permite generar segmentos y generar audiencias a partir de [!DNL Real-time Customer Profile] datos. Estas audiencias se pueden exportar a sus propios conjuntos de datos dentro del [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Utiliza aprendizaje automático e inteligencia artificial para descubrir perspectivas en conjuntos de datos grandes.
 * [Servicio de consultas de Adobe Experience Platform](../../query-service/home.md): Permite utilizar SQL estándar para consultar datos en [!DNL Experience Platform], uniendo cualquier conjunto de datos dentro de la variable [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para su uso en los informes, [!DNL Data Science Workspace]o [!DNL Real-time Customer Profile].
+* [Servicio de destinos de Adobe Experience Platform](../../destinations/home.md): Permite [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) al almacenamiento en la nube o a los destinos de marketing por correo electrónico que desee, para actividades de creación de informes o de ciencia de datos.
 
 ## Pasos siguientes
 
