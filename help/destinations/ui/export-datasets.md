@@ -2,9 +2,9 @@
 title: (Beta) Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
-source-git-commit: 92e2d575d92b9d412f473610fc149663e815f5c3
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1309'
 ht-degree: 1%
 
 ---
@@ -68,6 +68,11 @@ Utilice las casillas de verificación a la izquierda de los nombres de los conju
 ![Flujo de trabajo de exportación de conjuntos de datos que muestra el paso Seleccionar conjuntos de datos donde puede seleccionar qué conjuntos de datos desea exportar.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## Programar exportación de conjuntos de datos {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="Opciones de exportación de archivos para conjuntos de datos"
+>abstract="Select **Exportar archivos incrementales** para exportar solo los datos que se agregaron al conjunto de datos desde la última exportación. <br> La primera exportación incremental de archivos incluye todos los datos del conjunto de datos, actuando como un relleno. Los futuros archivos incrementales incluyen solo los datos que se agregaron al conjunto de datos desde la primera exportación."
 
 En el **[!UICONTROL Programación]** , puede establecer una fecha de inicio y una cadencia de exportación para sus exportaciones de conjuntos de datos.
 
