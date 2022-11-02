@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;Salesforce;salesforce;asign
 title: Campos de asignación de Salesforce
 description: Las tablas siguientes contienen las asignaciones entre los campos de origen de Salesforce y sus correspondientes campos XDM.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 15%
+source-wordcount: '494'
+ht-degree: 9%
 
 ---
 
@@ -15,6 +15,8 @@ ht-degree: 15%
 Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los campos de origen y los campos correspondientes del Modelo de datos de experiencia (XDM).
 
 ## Contacto {#contact}
+
+Lea el [Información general de perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la [Grupo de campos de esquema Detalles de persona empresarial XDM](../../../../xdm/field-groups/profile/business-person-details.md) guía y [Grupo de campos de esquema de componentes de persona empresarial XDM](../../../../xdm/field-groups/profile/business-person-components.md) guía.
 
 | Campo de origen | Ruta de campo XDM de Target | Notas |
 | --- | --- | --- |
@@ -74,6 +76,8 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 
 ## Posible cliente {#lead}
 
+Lea el [Información general de perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la [Grupo de campos de esquema Detalles de persona empresarial XDM](../../../../xdm/field-groups/profile/business-person-details.md) guía y [Grupo de campos de esquema de componentes de persona empresarial XDM](../../../../xdm/field-groups/profile/business-person-components.md) guía.
+
 | Campo de origen | Ruta de campo XDM de Target | Notas |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
@@ -122,6 +126,8 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 {style=&quot;table-layout:auto&quot;}
 
 ## Cuenta {#account}
+
+Lea el [Información general sobre la cuenta comercial de XDM](../../../../xdm/classes/b2b/business-account.md) para obtener más información sobre la clase XDM.
 
 | Campo de origen | Ruta de campo XDM de Target | Notas |
 | --- | --- | --- |
@@ -177,6 +183,8 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 
 ## Oportunidad {#opportunity}
 
+Lea el [Información general sobre oportunidades comerciales XDM](../../../../xdm/classes/b2b/business-opportunity.md) para obtener más información sobre la clase XDM.
+
 | Campo de origen | Ruta de campo XDM de Target | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -216,6 +224,8 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 
 ## Función de contacto de oportunidad {#opportunity-contact-role}
 
+Lea el [Información general sobre la clase de relación de persona de oportunidad empresarial XDM](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) para obtener más información sobre la clase XDM.
+
 | Campo de origen | Ruta de campo XDM de Target | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -239,6 +249,8 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 {style=&quot;table-layout:auto&quot;}
 
 ## Campaign {#campaign}
+
+Lea el [Información general de la clase XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la [XDM Business Campaign detalles del esquema del grupo de campos](../../../../xdm/field-groups/b2b-campaign/details.md) guía.
 
 | Campo de origen | Ruta de campo XDM de Target | Notas |
 | --- | --- | --- |
@@ -269,6 +281,8 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 
 ## Miembro de la campaña {#campaign-member}
 
+Lea el [Información general sobre los miembros de XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign-members.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la [XDM Business Campaign Miembro detalles del grupo de campos de esquema](../../../../xdm/field-groups/b2b-campaign/details.md) documento.
+
 | Campo de origen | Ruta de campo XDM de Target | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -292,6 +306,8 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Salesforce] los cam
 | `Type` | `b2b.personType` |
 
 ## Relación de contacto de la cuenta {#account-contact-relation}
+
+Lea el [Clase de relación de persona de cuenta comercial XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) para obtener más información sobre la clase XDM.
 
 | Campo de origen | Ruta de campo XDM de Target | Notas |
 | --- | --- | --- |
