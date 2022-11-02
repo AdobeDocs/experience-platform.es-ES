@@ -4,7 +4,7 @@ title: Habilitar un conjunto de datos para perfil y servicio de identidad median
 type: Tutorial
 description: Este tutorial le muestra cómo habilitar un conjunto de datos para utilizarlo con el perfil del cliente en tiempo real y el servicio de identidad mediante las API de Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 1%
@@ -175,8 +175,7 @@ curl -X GET \
         "schemaMetadata": {
             "primaryKey": [],
             "delta": [],
-            "dule": [],
-            "gdpr": []
+            "dule": []
         },
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",
