@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;segmentación perimetral;segmentación perimetral;borde de flujo continuo;
 solution: Experience Platform
-title: 'Segmentación de Edge con la API '
+title: Segmentación de Edge con la API
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación perimetral con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: de63939c44b338bb9632a57c74c095135f023d50
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1140'
 ht-degree: 1%
 
 ---
@@ -259,3 +259,11 @@ Una respuesta correcta devuelve los detalles de la definición de segmento reci�
 Ahora que sabe cómo crear segmentos con segmentación perimetral habilitada, puede utilizarlos para habilitar casos de uso de personalización de la misma página y de la siguiente página.
 
 Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la [Guía del usuario del Generador de segmentos](../ui/segment-builder.md).
+
+## Apéndice
+
+En la siguiente sección se enumeran las preguntas más frecuentes sobre la segmentación de Edge:
+
+### ¿Cuánto tiempo tarda un segmento en estar disponible en la red perimetral?
+
+Un segmento tarda hasta una hora en estar disponible en la red perimetral.

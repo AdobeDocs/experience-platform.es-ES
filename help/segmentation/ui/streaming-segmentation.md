@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: e6b5ea1878631fa88f907fd4aec64cf040e76e95
+source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -116,3 +116,7 @@ El número total de segmentos cualificados se obtiene del trabajo diario de segm
 El número de &quot;Últimos X días&quot; **only** incluye audiencias cualificadas en segmentación de flujo continuo y **only** aumenta si ha transmitido datos al sistema y cuenta para esa definición de flujo continuo. Este valor es **only** para segmentos de flujo continuo. Como resultado, este valor **may** se muestra como 0 para los segmentos por lotes.
 
 Como resultado, si ve que el número en &quot;Últimos X días&quot; es cero y el gráfico de líneas también está reportando cero, tiene **not** transmite todos los perfiles al sistema que cumplen los requisitos para ese segmento.
+
+### ¿Cuánto tarda un segmento en estar disponible?
+
+Un segmento tarda hasta una hora en estar disponible.

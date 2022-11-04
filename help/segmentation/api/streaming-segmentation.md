@@ -5,9 +5,9 @@ title: Evaluar eventos en tiempo casi real con segmentación por transmisión
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
+source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1938'
 ht-degree: 1%
 
 ---
@@ -439,3 +439,7 @@ El número total de segmentos cualificados se obtiene del trabajo diario de segm
 El número de &quot;Últimos X días&quot; **only** incluye audiencias cualificadas en segmentación de flujo continuo y **only** aumenta si ha transmitido datos al sistema y cuenta para esa definición de flujo continuo. Este valor es **only** para segmentos de flujo continuo. Como resultado, este valor **may** se muestra como 0 para los segmentos por lotes.
 
 Como resultado, si ve que el número en &quot;Últimos X días&quot; es cero y el gráfico de líneas también está reportando cero, tiene **not** transmite todos los perfiles al sistema que cumplen los requisitos para ese segmento.
+
+### ¿Cuánto tarda un segmento en estar disponible?
+
+Un segmento tarda hasta una hora en estar disponible.

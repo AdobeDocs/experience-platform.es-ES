@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación de Edge
 topic-legacy: ui guide
 description: La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 75583d9688f0c5ee0fe4627ce64b5436ca621aa1
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -58,3 +58,11 @@ Una consulta se puede evaluar con segmentación de Edge si cumple cualquiera de 
 ## Pasos siguientes
 
 Esta guía explica cómo evaluar segmentos con segmentación de Edge en Adobe Experience Platform. Para obtener más información sobre el uso de la interfaz de usuario del Experience Platform, lea la [Guía del usuario de segmentación](./overview.md). Para aprender a realizar acciones similares y trabajar con segmentos mediante API de Experience Platform, visite [guía de API de segmentación de Edge](../api/edge-segmentation.md).
+
+## Apéndice
+
+En la siguiente sección se enumeran las preguntas más frecuentes sobre la segmentación de Edge:
+
+### ¿Cuánto tiempo tarda un segmento en estar disponible en la red perimetral?
+
+Un segmento tarda hasta una hora en estar disponible en la red perimetral.
