@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Información general sobre el control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 1%
+source-wordcount: '1777'
+ht-degree: 3%
 
 ---
 
@@ -42,7 +42,7 @@ El control de acceso basado en atributos implica los siguientes componentes:
 
 Los permisos son el área del Experience Cloud en la que los administradores pueden definir funciones de usuario y políticas de acceso para administrar los permisos de acceso a funciones y objetos dentro de una aplicación de producto.
 
-Mediante Permisos, puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas funciones. Los permisos también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de permisos](ui/browse.md).
+Mediante Permisos de , , puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas. Los permisos también le permiten administrar las etiquetas, las zonas protegidas y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de permisos](ui/browse.md).
 
 ## API de control de acceso basado en atributos
 
@@ -55,6 +55,18 @@ Las secciones siguientes proporcionan información sobre cómo se integra el con
 ### Control de acceso
 
 Aprovechamientos de la plataforma [Adobe Admin Console](https://adminconsole.adobe.com) perfiles de producto para vincular usuarios con permisos y entornos limitados. Los permisos controlan el acceso a una variedad de funcionalidades de Platform, que incluyen modelado de datos, administración de perfiles y administración de entornos limitados. Una vez que su organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Perfiles de producto en Adobe Admin Console, para administrar permisos para usuarios, funcionalidad, etiquetas y otros recursos de su organización.
+
+La disponibilidad del control de acceso basado en atributos es limitada para los clientes que compran escudos de privacidad o de salud. Las características de esta funcionalidad incluyen:
+
+* Interfaz de permisos: Proporciona una interfaz para definir funciones de usuario, permisos y directivas para el control de acceso basado en atributos.
+
+* Etiquetado: Agregue, edite y elimine etiquetas a funciones de usuario, campos de esquema, segmentos y otros objetos admitidos para aprovechar las políticas de control de acceso.
+
+Se están cambiando los flujos de trabajo de administración de todas las aplicaciones con tecnología de Experience Platform, desde el Admin Console a la nueva interfaz Permisos.
+
+>[!IMPORTANT]
+>
+>Los perfiles de producto se migran automáticamente a la interfaz Permisos cuando su organización está habilitada. Los perfiles de producto en el Admin Console se mantendrán tal cual por el momento. Por favor **no** modifique los perfiles de producto una vez habilitada su organización.
 
 Para obtener más información sobre el control de acceso, consulte la [información general sobre el control de acceso](../home.md).
 
