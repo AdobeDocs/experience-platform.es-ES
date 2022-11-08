@@ -1,18 +1,15 @@
 ---
 title: Supervisar consultas
 description: Obtenga información sobre cómo monitorizar consultas a través de la interfaz de usuario del servicio de consulta.
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1033'
 ht-degree: 1%
 
 ---
 
-# Monitorizar consultas (versión limitada)
-
->[!IMPORTANT]
->
->Actualmente, esta función es una versión limitada y solo está disponible para un pequeño número de clientes.
+# Supervisar consultas
 
 Adobe Experience Platform proporciona una visibilidad mejorada para el estado de todos los trabajos de consulta a través de la interfaz de usuario. De [!UICONTROL Consultas programadas] ahora puede encontrar información importante sobre las ejecuciones de consultas que incluye el estado, los detalles de la programación y los mensajes/códigos de error si fallan. También puede suscribirse a alertas para consultas en función de su estado a través de la interfaz de usuario para cualquiera de estas consultas mediante [!UICONTROL Consultas programadas] pestaña .
 
@@ -126,4 +123,3 @@ Puede copiar el SQL de consulta en el portapapeles desde esta vista. Seleccione 
 Select **[!UICONTROL Consulta]** para volver a la pantalla de detalles de la programación, o **[!UICONTROL Consultas programadas]** para volver a la [!UICONTROL Consultas programadas] pestaña .
 
 ![La pantalla de detalles de ejecución con Query resaltado.](./images/monitor-queries/return-navigation.png)
-

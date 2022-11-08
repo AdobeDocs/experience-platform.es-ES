@@ -1,7 +1,8 @@
 ---
 title: Extensión de reenvío de eventos de Zendesk
 description: Extensión de reenvío de eventos de Zendesk para Adobe Experience Platform.
-source-git-commit: ae585660bbf057f25e6f0dfc2520e6bb0af9d8d0
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 6%
@@ -53,7 +54,7 @@ En **[!UICONTROL Dominio de Zendesk]**, introduzca el valor del subdominio Zende
 
 ## Configuración de una regla de reenvío de eventos
 
-Comience a crear una nueva regla de reenvío de eventos [regla](../../../ui/managing-resources/rules.md) y configure sus condiciones como desee. Al seleccionar las acciones para la regla, seleccione la variable [!UICONTROL Fragmento] y, a continuación, seleccione [!UICONTROL Crear evento] tipo de acción.
+Comience a crear una nueva regla de reenvío de eventos [regla](../../../ui/managing-resources/rules.md) y configure sus condiciones como desee. Al seleccionar las acciones para la regla, seleccione la variable [!UICONTROL Zendesk] y, a continuación, seleccione [!UICONTROL Crear evento] tipo de acción.
 
 ![Definir regla](../../../images/extensions/zendesk/rule.png)
 
