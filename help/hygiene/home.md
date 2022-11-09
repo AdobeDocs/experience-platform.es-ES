@@ -2,10 +2,10 @@
 title: Información general sobre la higiene de los datos
 description: La higiene de los datos de Adobe Experience Platform le permite administrar el ciclo de vida de sus datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 850ab3c98fb27d1dcf98b02dfbef0c8ae3b2ad62
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 3%
+source-wordcount: '821'
+ht-degree: 2%
 
 ---
 
@@ -46,8 +46,8 @@ Lo siguiente ocurre cuando se produce una [solicitud de caducidad del conjunto d
 | --- | --- | --- |
 | La solicitud se envía | 0 horas | Un administrador de datos o analista de privacidad envía una solicitud para que un conjunto de datos caduque en un momento determinado. La solicitud se puede ver en el [!UICONTROL Interfaz de usuario de higiene de datos] una vez enviado, y permanece en estado pendiente hasta la hora de caducidad programada, tras la cual se ejecutará la solicitud. |
 | El conjunto de datos se ha perdido | 1 hora | El conjunto de datos se abandona de la variable [página de inventario del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario de . Los datos dentro del lago de datos solo se eliminan de forma suave, y permanecerán así hasta el final del proceso, tras lo cual se eliminarán con dificultad. |
-| Recuento de perfiles actualizado | 30 horas | El cambio en los recuentos de perfiles causado por la caducidad del conjunto de datos se refleja en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |
-| Segmentos actualizados | 48 horas | Una vez que se eliminan los perfiles, todos los relacionados [segmentos](../segmentation/home.md) se actualizan para reflejar su nuevo tamaño. |
+| Recuento de perfiles actualizado | 30 horas | Según el contenido del conjunto de datos que se elimine, algunos perfiles se pueden eliminar del sistema si todos sus atributos de componente están vinculados a ese conjunto de datos. 30 horas después de que se elimine el conjunto de datos, cualquier cambio resultante en los recuentos generales de perfil se reflejará en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |
+| Segmentos actualizados | 48 horas | Una vez actualizados todos los perfiles afectados, todos los relacionados [segmentos](../segmentation/home.md) se actualizan para reflejar su nuevo tamaño. En función del conjunto de datos que se haya eliminado y de los atributos en los que esté segmentando, el tamaño de cada segmento podría aumentar o disminuir como resultado de la eliminación. |
 | Recorridos y destinos actualizados | 50 horas | [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
 | Eliminación de disco completa | 14 días | Todos los datos relacionados con el conjunto de datos se eliminan de forma rígida del lago de datos. La variable [situación del trabajo de higiene](./ui/browse.md#view-details) que eliminó el conjunto de datos se actualiza para reflejarlo. |
 
