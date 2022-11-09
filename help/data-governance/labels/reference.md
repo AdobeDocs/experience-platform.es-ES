@@ -5,10 +5,10 @@ title: Glosario de etiquetas de uso de datos
 topic-legacy: labels
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform actualmente.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1ab97c63bc169965ca759f2dd8b411c175559fb8
+source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
 workflow-type: tm+mt
-source-wordcount: '2083'
-ht-degree: 2%
+source-wordcount: '2117'
+ht-degree: 1%
 
 ---
 
@@ -30,17 +30,18 @@ Las etiquetas del contrato &quot;C&quot; se utilizan para categorizar los datos 
 
 | Etiqueta | Definición |
 | --- | --- |
-| **C1** | Los datos solo se pueden exportar desde Adobe Experience Cloud en un formulario agregado sin incluir identificadores individuales o de dispositivo. [Más información...](#c1) |
-| **C2** | Los datos no se pueden exportar a un tercero. [Más información...](#c2) |
-| **C3** | Los datos no se pueden combinar ni utilizar de otro modo con información directamente identificable. [Más información...](#c3) |
-| **C4** | No se pueden usar datos para dirigir anuncios o contenido, ya sea en el sitio o entre sitios. [Más información...](#c4) |
-| **C5** | Los datos no se pueden usar para dirigir el contenido o los anuncios en varios sitios basándose en intereses. [Más información...](#c5) |
-| **C6** | Los datos no se pueden usar para la segmentación de anuncios en el sitio. [Más información...](#c6) |
-| **C7** | Los datos no se pueden usar para segmentar el contenido en el sitio. [Más información...](#c7) |
-| **C8** | Los datos no se pueden usar para medir los sitios web ni las aplicaciones de su organización. [Más información...](#c8) |
-| **C9** | Los datos no se pueden utilizar en flujos de trabajo de ciencia de datos. [Más información...](#c9) |
-| **C10** | Los datos no se pueden usar para la activación de identidad vinculada. [Más información...](#c10) |
-| **C11** | Los datos no se pueden compartir con los socios de coincidencia de segmentos. [Más información...](#c11) |
+| [C1](#c1) | Los datos solo se pueden exportar desde Adobe Experience Cloud en un formulario agregado sin incluir identificadores individuales o de dispositivo. |
+| [C2](#c2) | Los datos no se pueden exportar a un tercero. |
+| [C3](#c3) | Los datos no se pueden combinar ni utilizar de otro modo con información directamente identificable. |
+| [C4](#c4) | No se pueden usar datos para dirigir anuncios o contenido, ya sea en el sitio o entre sitios. |
+| [C5](#c5) | Los datos no se pueden usar para dirigir el contenido o los anuncios en varios sitios basándose en intereses. |
+| [C6](#c6) | Los datos no se pueden usar para la segmentación de anuncios en el sitio. |
+| [C7](#c7) | Los datos no se pueden usar para segmentar el contenido en el sitio. |
+| [C8](#c8) | Los datos no se pueden usar para medir los sitios web ni las aplicaciones de su organización. |
+| [C9](#c9) | Los datos no se pueden utilizar en flujos de trabajo de ciencia de datos. |
+| [C10](#c10) | Los datos no se pueden usar para la activación de identidad vinculada. |
+| [C11](#c11) | Los datos no se pueden compartir con los socios de coincidencia de segmentos. |
+| [C12](#c12) | Los datos no se pueden exportar de ninguna manera. |
 
 ## Etiquetas de identidad
 
@@ -78,7 +79,7 @@ Algunos datos solo se pueden exportar desde Adobe Experience Cloud en un formula
 
 #### C2 {#c2}
 
-Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la exportación de datos desde donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales a menudo restringen la transferencia de datos que recibe de ellos. La etiqueta C2 es más restrictiva que [C1](#c1), que solo requiere agregación y datos anónimos.
+Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la exportación de datos desde donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales a menudo restringen la transferencia de datos que recibe de ellos. La etiqueta C2 es más restrictiva que [C1](#c1), que solo requiere agregación y datos anónimos, pero es menos restrictivo que [C12](#c12), lo que evita totalmente las exportaciones de datos independientemente del destino.
 
 #### C3 {#c3}
 
@@ -86,7 +87,7 @@ Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la
 
 #### C4 {#c4}
 
-C4 es la etiqueta más restrictiva: incluye etiquetas [C5](#c5), [C6](#c6)y [C7](#c7).
+C4 incluye etiquetas [C5](#c5), [C6](#c6)y [C7](#c7). Es una de las etiquetas más restrictivas, solo va seguida de [C12](#c12).
 
 #### C5 {#c5}
 
@@ -139,3 +140,7 @@ Algunas políticas de uso de datos restringen el uso de datos de identidad vincu
 #### C11 {#c11}
 
 La coincidencia de segmentos de Adobe Experience Platform le permite hacer coincidir segmentos de origen con preferencias de privacidad y consentimiento, lo que facilita la generación de perfiles enriquecidos y perspectivas descendentes. La etiqueta C11 indica los datos que no deben utilizarse en [!DNL Segment Match] procesos. Después de determinar qué conjuntos de datos o campos desea excluir de la coincidencia de segmentos y de agregar la etiqueta C11 en consecuencia, el flujo de trabajo de la coincidencia de segmentos aplica automáticamente la etiqueta.
+
+#### C12 {#c12}
+
+Los datos con esta etiqueta no se pueden exportar desde Platform de ninguna manera. Los campos etiquetados con C12 se excluyen de las descargas de CSV, el consumo de API y los flujos de trabajo de activación.
