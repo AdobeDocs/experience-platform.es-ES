@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Conexión de Google Ad Manager
 description: Google Ad Manager, anteriormente conocido como DoubleClick for Publishers o DoubleClick AdX, es una plataforma de servicio de publicidad de Google que proporciona a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
+source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '955'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,8 @@ Tenga en cuenta los siguientes detalles que son específicos de [!DNL Google Ad 
 
 * Las audiencias activadas se crean mediante programación en la variable [!DNL Google] plataforma.
 * [!DNL Platform] no incluye actualmente una métrica de medición para validar la activación correcta. Consulte los recuentos de audiencias en Google para validar la integración y comprender el tamaño de la segmentación de audiencia.
+* Después de asignar un segmento a un [!DNL Google Ad Manager] destino, el nombre del segmento aparece inmediatamente en el [!DNL Google Ad Manager] interfaz de usuario.
+* La población del segmento necesita de 24 a 48 horas para aparecer en [!DNL Google Ad Manager]. Además, los segmentos deben tener un tamaño de audiencia de al menos 50 perfiles para que se muestren en [!DNL Google Ad Manager]. Los segmentos con tamaños de audiencia menores de 50 perfiles no se rellenarán en [!DNL Google Ad Manager].
 
 ## Identidades admitidas {#supported-identities}
 
