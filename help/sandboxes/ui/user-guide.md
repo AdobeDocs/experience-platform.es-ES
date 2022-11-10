@@ -5,10 +5,10 @@ title: Guía de la interfaz de usuario del Simulador para pruebas
 topic-legacy: user guide
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con entornos limitados en la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 1%
+source-wordcount: '816'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,17 @@ Una vez seleccionado un simulador para pruebas, la pantalla se actualiza y actua
 
 ![cambio de entorno limitado](../images/ui/sandbox-switched.png)
 
-## Crear un nuevo simulador de pruebas
+## Crear un nuevo simulador de pruebas {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="Nombre del Simulador para pruebas"
+>abstract="El nombre del simulador para pruebas es el texto que se utiliza en el back-end para crear un ID único para este simulador para pruebas."
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="Título de espacio aislado"
+>abstract="El título del simulador de pruebas es el nombre para mostrar que representa el simulador de pruebas en menús y desplegables en toda la interfaz de usuario del Experience Platform."
 
 >[!NOTE]
 >
@@ -68,7 +78,7 @@ Una vez que haya terminado de crear el simulador de pruebas, actualice la págin
 
 >[!WARNING]
 >
->A continuación se muestra una lista de excepciones que pueden impedir que restablezca el entorno limitado de producción predeterminado o un entorno limitado de producción creado por el usuario: <ul><li>No se puede restablecer el simulador para pruebas de producción predeterminado si Adobe Analytics también está utilizando el gráfico de identidad alojado en el simulador para pruebas [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) función.</li><li>No se puede restablecer el simulador para pruebas de producción predeterminado si Adobe Audience Manager también está utilizando el gráfico de identidad alojado en el simulador para pruebas [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).</li><li>No se puede restablecer el entorno limitado de producción predeterminado si contiene datos para las funciones CDA y PBD.</li><li>Un simulador para pruebas de producción creado por el usuario que se utiliza para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia se puede restablecer tras un mensaje de advertencia.</li></ul>
+>A continuación se muestra una lista de excepciones que pueden impedir que restablezca el entorno limitado de producción predeterminado o un entorno limitado de producción creado por el usuario: <ul><li>No se puede restablecer el simulador para pruebas de producción predeterminado si Adobe Analytics también está utilizando el gráfico de identidad alojado en el simulador para pruebas [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) función.</li><li>No se puede restablecer el simulador para pruebas de producción predeterminado si Adobe Audience Manager también está utilizando el gráfico de identidad alojado en el simulador para pruebas [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=es).</li><li>No se puede restablecer el entorno limitado de producción predeterminado si contiene datos para las funciones CDA y PBD.</li><li>Un simulador para pruebas de producción creado por el usuario que se utiliza para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia se puede restablecer tras un mensaje de advertencia.</li></ul>
 
 Al restablecer un entorno limitado de producción o desarrollo, se eliminan todos los recursos asociados a dicho entorno limitado (esquemas, conjuntos de datos, etc.), al tiempo que se mantienen el nombre del entorno limitado y los permisos asociados. Este simulador de pruebas &quot;limpio&quot; sigue estando disponible con el mismo nombre para los usuarios que tienen acceso a él.
 

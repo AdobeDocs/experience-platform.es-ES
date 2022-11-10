@@ -5,14 +5,19 @@ title: Información general sobre las políticas de uso de datos
 topic-legacy: policies
 description: Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 0%
+source-wordcount: '1180'
+ht-degree: 4%
 
 ---
 
-# Información general sobre las políticas de uso de datos
+# Información general sobre las políticas de uso de datos {#policies-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_restrictusage"
+>title="Restringir el uso de datos"
+>abstract="El tipo de directiva de uso de datos evalúa las acciones de marketing específicas aplicadas a las etiquetas de control de datos para restringir el uso de datos para actividades de marketing."
 
 Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de [!DNL Experience Platform].
 
@@ -20,6 +25,10 @@ Hay dos tipos de políticas disponibles:
 
 * **[!UICONTROL Política de control de datos]**: Restringir la activación de datos en función de la acción de marketing que se realice y las etiquetas de uso de datos que lleven los datos en cuestión.
 * **[!UICONTROL Política de consentimiento]**: Filtre los perfiles que se pueden activar en [destinos](../../destinations/home.md) en función del consentimiento o las preferencias de sus clientes
+
+>[!NOTE]
+>
+>Las políticas de uso de datos no deben confundirse con [directivas de control de acceso](../../access-control/abac/end-to-end-guide.md#policy), que determinan si determinados usuarios de Platform de su organización pueden acceder a ciertos campos de datos y se configuran mediante la variable [!UICONTROL Permisos] pestaña .
 
 Este documento proporciona información general de alto nivel sobre las políticas de uso de datos y proporciona vínculos a documentación adicional para trabajar con políticas en la interfaz de usuario o la API.
 

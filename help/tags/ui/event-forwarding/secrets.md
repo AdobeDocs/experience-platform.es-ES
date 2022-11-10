@@ -2,9 +2,9 @@
 title: Configuración de secretos en el reenvío de eventos
 description: Aprenda a configurar secretos en la interfaz de usuario para autenticarse en los puntos finales utilizados en las propiedades de reenvío de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1766'
 ht-degree: 1%
 
 ---
@@ -37,6 +37,12 @@ En esta guía se da por hecho que ya está familiarizado con la administración 
 También debe comprender bien el flujo de publicación de las etiquetas y el reenvío de eventos, incluido cómo agregar recursos a una biblioteca e instalar una compilación en el sitio web para realizar pruebas. Consulte la [información general de publicación](../publishing/overview.md) para obtener más información.
 
 ## Crear un secreto {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Entornos para secretos"
+>abstract="Para que el reenvío de eventos pueda utilizar un secreto, este debe asignarse a un entorno existente. Si no se ha creado ningún entorno para la propiedad de reenvío de eventos, debe configurarlo antes de continuar."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Resumen de los entornos"
 
 Para crear un secreto, seleccione **[!UICONTROL Reenvío de eventos]** en la navegación de la izquierda, abra la propiedad de reenvío de eventos en la que desea agregar el secreto. A continuación, seleccione **[!UICONTROL Secretos]** en la navegación izquierda, seguido de **[!UICONTROL Crear nuevo secreto]**.
 

@@ -5,10 +5,10 @@ title: Guía de solución de problemas de entornos limitados
 topic-legacy: troubleshooting guide
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre los entornos limitados de Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 0%
+source-wordcount: '857'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,13 @@ Los entornos limitados dividen una sola instancia de Platform en entornos virtua
 
 Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform. Cada simulador para pruebas mantiene su propia biblioteca independiente de recursos de Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.). Todo el contenido y las acciones realizadas dentro de un simulador de pruebas solo se limitan a ese simulador de pruebas y no afectan a ningún otro simulador de pruebas. Consulte la [información general sobre los entornos limitados](home.md) para obtener más información.
 
-## ¿Qué tipos de entornos limitados están disponibles y cuáles son sus diferencias?
+## ¿Qué tipos de entornos limitados están disponibles y cuáles son sus diferencias? {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="Tipo de Simulador para pruebas"
+>abstract="El tipo de entorno limitado indica si se trata de un entorno limitado de producción o desarrollo. Los entornos limitados de producción incluyen datos activos y los entornos limitados de desarrollo se utilizan para pruebas y desarrollo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Creación de un simulador para pruebas en la interfaz de usuario"
 
 Hay dos tipos de entornos limitados disponibles en el Experience Platform:
 
@@ -48,7 +54,7 @@ Una instancia de Experience Platform admite varios entornos limitados de producc
 
 Una licencia de Experience Platform predeterminada le otorga un total de cinco entornos limitados, que puede clasificar como de producción o desarrollo. Puede obtener una licencia de paquetes adicionales de 10 entornos limitados hasta un máximo de 75 entornos limitados en total.
 
-Los entornos limitados de producción se pueden restablecer o eliminar, excepto en los entornos limitados de producción que también esté utilizando Adobe Analytics para el [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) o si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Audience Manager para la función [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) función.
+Los entornos limitados de producción se pueden restablecer o eliminar, excepto en los entornos limitados de producción que también esté utilizando Adobe Analytics para el [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) o si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Audience Manager para la función [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=es) función.
 
 Puede actualizar el título de un simulador para pruebas de producción. Sin embargo, no se puede cambiar el nombre de un simulador para pruebas de producción.
 

@@ -5,9 +5,9 @@ title: Administrar políticas de uso de datos en la interfaz de usuario
 topic-legacy: policies
 description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el espacio de trabajo Directivas de la interfaz de usuario del Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1408'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,12 @@ Las políticas de consentimiento constan de dos componentes lógicos:
 * **[!UICONTROL If]**: Condición que déclencheur la comprobación de directivas. Esto se puede basar en una determinada acción de marketing que se está realizando, en la presencia de ciertas etiquetas de uso de datos o en una combinación de ambas.
 * **[!UICONTROL Entonces]**: Atributos de consentimiento que deben estar presentes para que un perfil se incluya en la acción que activó la directiva.
 
-#### Configuración de condiciones
+#### Configuración de condiciones {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="Condición If"
+>abstract="Comience definiendo las condiciones que déclencheur la comprobación de directivas. Las condiciones pueden incluir determinadas acciones de marketing que se están realizando, la presencia de ciertas etiquetas de control de datos o una combinación de ambas."
 
 En el **[!UICONTROL If]** , seleccione las acciones de marketing o las etiquetas de uso de datos que deben almacenar en déclencheur esta directiva. Select **[!UICONTROL Ver todo]** y **[!UICONTROL Seleccionar etiquetas]** para ver las listas completas de las etiquetas y acciones de marketing disponibles, respectivamente.
 
@@ -108,7 +113,12 @@ Si selecciona varias condiciones, puede utilizar el icono que aparece entre ella
 
 ![](../images/policies/and-or-selection.png)
 
-#### Seleccionar atributos de consentimiento
+#### Seleccionar atributos de consentimiento {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Entonces, condición"
+>abstract="Una vez definida la condición &quot;If&quot;, utilice la sección &quot;Then&quot; para seleccionar al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regulada por esta directiva."
 
 En el **[!UICONTROL Entonces]** , seleccione al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regulada por esta directiva. Puede elegir una de las opciones proporcionadas en la lista o seleccionar **[!UICONTROL Ver todo]** para elegir el atributo directamente desde el esquema de unión.
 
