@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Crear una directiva
 description: Este documento proporciona información sobre la administración de directivas a través de la interfaz Permisos de Adobe Experience Cloud
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ A continuación, en la lista desplegable , seleccione la opción **Coincide**.
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-A continuación, en la lista desplegable , seleccione la opción **Usuario**.
+A continuación, en el menú desplegable, seleccione el tipo de etiqueta (**[!UICONTROL Etiqueta principal]** o **[!UICONTROL Etiqueta personalizada]**) para que coincida con la etiqueta asignada al usuario en las funciones.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
