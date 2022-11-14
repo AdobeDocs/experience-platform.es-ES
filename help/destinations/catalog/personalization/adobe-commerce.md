@@ -1,7 +1,8 @@
 ---
 title: (Beta) Conector de destino de Adobe Commerce
 description: Descubra cómo los comerciantes de Adobe Commerce y Real-Time CDP pueden personalizar la experiencia de compra al ofrecer contenido y promociones de sitio altamente relevantes, personalizados para los segmentos de clientes creados y administrados dentro de Real-Time CDP.
-source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
+exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
+source-git-commit: 638a778d1d999ab6a1726333f9cde0a0b4fad57b
 workflow-type: tm+mt
 source-wordcount: '691'
 ht-degree: 2%
@@ -42,7 +43,7 @@ Los clientes de la versión beta deben tener acceso a:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Consola de desarrollador de Adobe](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
-- [Adobe Commerce Cloud versión 2.4.3 o superior](https://business.adobe.com/products/magento/magento-commerce.html)
+- [Adobe Commerce Cloud versión 2.4.4 o superior](https://business.adobe.com/products/magento/magento-commerce.html)
 
 En Experience Platform, cree lo siguiente:
 
