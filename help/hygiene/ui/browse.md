@@ -2,9 +2,9 @@
 title: Examinar órdenes de trabajo de higiene de los datos
 description: Aprenda a ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ Los filtros siguientes se aplican a las solicitudes de caducidad del conjunto de
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Número de identidades"
->abstract="Número de identidades que se solicitaron que se eliminaran como parte de esta orden de trabajo. Las identidades incluidas en el recuento pueden no existir necesariamente en los conjuntos de datos afectados. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
+>abstract="Número de identidades cuyos registros se solicitaron que se actualizaran o eliminaran como parte de esta orden de trabajo. Las identidades incluidas en el recuento pueden no existir necesariamente en los conjuntos de datos afectados. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
