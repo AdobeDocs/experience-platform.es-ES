@@ -5,10 +5,10 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
+source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '416'
+ht-degree: 81%
 
 ---
 
@@ -124,6 +124,8 @@ ht-degree: 0%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Información general](./extensions/web/marketo/overview.md)
          * [Notas de la versión](./extensions/web/marketo/release-notes.md)
+      * Conversiones mejoradas de Google Ads {#google-ads-enhanced-conversions}
+         * [Información general](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Capa de datos de Google {#google-data-layer}
          * [Información general](./extensions/web/google-data-layer/overview.md)
          * [Notas de la versión](./extensions/web/google-data-layer/release-notes.md)
