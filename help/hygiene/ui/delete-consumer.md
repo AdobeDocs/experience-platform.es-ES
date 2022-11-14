@@ -2,9 +2,9 @@
 title: Eliminar registros de consumidores
 description: Obtenga información sobre cómo eliminar registros de consumidores en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Actualmente, las funciones de higiene de datos en Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**.
+>Las solicitudes de eliminación de consumidores solo están disponibles para las organizaciones que han comprado **Adobe Escudo Sanitario**.
 
 La variable [[!UICONTROL Higiene de los datos] workspace](./overview.md) en la interfaz de usuario de Adobe Experience Platform, puede eliminar los registros de consumidores que participan en el servicio de identidad y en el perfil del cliente en tiempo real.
 

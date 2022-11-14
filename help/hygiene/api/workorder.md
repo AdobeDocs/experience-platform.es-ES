@@ -2,20 +2,20 @@
 title: Punto final de la API del pedido de trabajo
 description: El extremo /workorder de la API de higiene de datos permite administrar mediante programación las tareas de eliminación para las identidades de los consumidores.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '981'
 ht-degree: 5%
 
 ---
 
 # Punto final del pedido de trabajo
 
+La variable `/workorder` en la API de higiene de datos le permite administrar mediante programación las solicitudes de eliminación de consumidores en Adobe Experience Platform.
+
 >[!IMPORTANT]
 >
->Actualmente, las funciones de higiene de datos en Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**.
-
-La variable `/workorder` en la API de higiene de datos le permite administrar mediante programación las solicitudes de eliminación de consumidores en Adobe Experience Platform.
+>Las solicitudes de eliminación de consumidores solo están disponibles para las organizaciones que han comprado **Adobe Escudo Sanitario**.
 
 ## Primeros pasos
 
