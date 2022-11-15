@@ -1,9 +1,10 @@
 ---
 title: Extensión de conversiones mejoradas de Google Ads
 description: Obtenga información sobre la extensión de conversiones mejoradas de Google Ads para el reenvío de eventos en Adobe Experience Platform.
-source-git-commit: a279c44ef9df3aa9bfc7763b153b87bde0015d57
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
+source-git-commit: 670e59a6111b7e4b7febca197d7e462ce5c14596
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ Las conversiones mejoradas aprovechan el [!DNL Google Ads] para agregar datos de
 >Para asociar el evento de conversión del lado del cliente con los datos de origen enviados desde el reenvío de eventos, la variable `transaction_ID` debe ser el mismo en ambas llamadas. Para obtener más información sobre dónde se debe proporcionar este valor para cada servicio, consulte las secciones sobre la configuración de acciones de conversión para [etiquetas](#conversion-action-tags) y [reenvío de eventos](#conversion-action-event-forwarding), respectivamente.
 
 Dado que el envío de eventos de conversión implica una implementación del lado del cliente y del lado del servidor, este documento cubre los pasos previos para configurar el lado del cliente [[!DNL Google Global Site Tag] Extensión (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) además de [!DNL Enhanced Conversions] extensión para el reenvío de eventos.
+
+El siguiente vídeo proporciona una introducción al [!DNL Enhanced Conversions] y recorre los pasos de implementación en un nivel superior:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## Enviar una conversión mediante etiquetas
 
