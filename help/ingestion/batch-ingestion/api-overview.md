@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de API de ingesta de lotes
 description: Este documento proporciona una guía completa para los desarrolladores que trabajan con API de ingesta por lotes para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2413'
 ht-degree: 5%
 
 ---
@@ -109,7 +109,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | El ID del lote al que desea cargar. |
 | `{DATASET_ID}` | El ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de archivo es la ubicación donde se guardará el archivo en el lado del Adobe. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Asegúrese de utilizar un nombre de archivo único para que no entre en conflicto con otro archivo para el lote de archivos que se está enviando. |
 
 **Solicitud**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `acme/customers/campaigns/summer.json`. |
 
 **Respuesta**
 
@@ -244,7 +244,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | El ID del lote al que desea cargar. |
 | `{DATASET_ID}` | El ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de archivo es la ubicación donde se guardará el archivo en el lado del Adobe. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Asegúrese de utilizar un nombre de archivo único para que no entre en conflicto con otro archivo para el lote de archivos que se está enviando. |
 
 **Solicitud**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `acme/customers/campaigns/summer.parquet`. |
 
 **Respuesta**
 
@@ -417,7 +417,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | El ID del lote al que desea cargar. |
 | `{DATASET_ID}` | El ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de archivo es la ubicación donde se guardará el archivo en el lado del Adobe. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Asegúrese de utilizar un nombre de archivo único para que no entre en conflicto con otro archivo para el lote de archivos que se está enviando. |
 
 **Solicitud**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | En enteros, el principio y el final del rango solicitado. |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `acme/customers/campaigns/summer.json`. |
 
 
 **Respuesta**
@@ -633,7 +633,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | El ID del lote al que desea cargar. |
 | `{DATASET_ID}` | El ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de archivo es la ubicación donde se guardará el archivo en el lado del Adobe. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Asegúrese de utilizar un nombre de archivo único para que no entre en conflicto con otro archivo para el lote de archivos que se está enviando. |
 
 **Solicitud**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `acme/customers/campaigns/summer.csv`. |
 
 
 **Respuesta**
@@ -855,7 +855,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | El ID del lote al que desea cargar. |
 | `{DATASET_ID}` | El ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de archivo es la ubicación donde se guardará el archivo en el lado del Adobe. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Asegúrese de utilizar un nombre de archivo único para que no entre en conflicto con otro archivo para el lote de archivos que se está enviando. |
 
 **Solicitud**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que está intentando cargar. Esta ruta de archivo es la ruta de archivo local, como `acme/customers/campaigns/summer.json`. |
 
 **Respuesta**
 
