@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Editor de consultas
 topic-legacy: query editor
 description: El Editor de consultas es una herramienta interactiva que proporciona el servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente en la interfaz de usuario del Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+source-git-commit: d71bab9839289a8a1df849025b6db1b2b497087d
 workflow-type: tm+mt
-source-wordcount: '2081'
+source-wordcount: '2106'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,11 @@ Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas 
 
 ![La entrada del Editor de consultas muestra las sugerencias de nombre de tabla desplegable.](../images/ui/query-editor/tables-auto.png)
 
-### Alternativa de configuración de la interfaz de usuario de autocompletar {#auto-complete}
+### (Beta) Alternación de configuración de la interfaz de usuario de autocompletar {#auto-complete}
+
+>[!IMPORTANT]
+>
+>Esta función está actualmente en fase beta y es posible que su organización no tenga acceso a ella aún. La funcionalidad y la documentación están sujetas a cambios.
 
 La variable [!DNL Query Editor] sugiere automáticamente posibles palabras clave SQL junto con detalles de tabla o columna para la consulta mientras la escribe. La función de autocompletar está activada de forma predeterminada y se puede deshabilitar o habilitar en cualquier momento seleccionando la opción [!UICONTROL Autocompletar sintaxis] alternar a la parte superior derecha del Editor de consultas.
 
