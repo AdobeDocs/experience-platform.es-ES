@@ -2,9 +2,9 @@
 title: Guía de API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,10 @@ Una caducidad del conjunto de datos es una acción &quot;eliminar un conjunto de
 
 >[!IMPORTANT]
 >
->Las solicitudes de eliminación de clientes solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield.
+>Las solicitudes de eliminación de consumidores solo están disponibles para las organizaciones que han comprado **Adobe Escudo Sanitario**.
+>
+>
+>Las eliminaciones de consumidores están pensadas para utilizarse en la limpieza de datos, la eliminación de datos anónimos o la minimización de datos. Son **not** para su uso en solicitudes de derechos de interesados (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento de normas, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
 La API de higiene de datos permite eliminar todos los registros asociados con una identidad de consumidor en uno o todos los conjuntos de datos. Todas las tareas de higiene de datos que eliminan identidades de consumidores se representan mediante una construcción denominada orden de trabajo. Consulte la [guía de extremo del orden de trabajo](./workorder.md) para obtener más información sobre cómo trabajar con eliminaciones de consumidores en la API.
 

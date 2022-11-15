@@ -2,9 +2,9 @@
 title: Información general sobre la higiene de los datos
 description: La higiene de los datos de Adobe Experience Platform le permite administrar el ciclo de vida de sus datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '886'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,11 @@ Adobe Experience Platform proporciona un robusto conjunto de herramientas para a
 Las funciones de higiene de datos de Platform le permiten administrar los datos de consumo almacenados mediante lo siguiente:
 
 * Programación de caducidades automatizadas del conjunto de datos
-* Eliminación de datos de consumidores basados en identidades ingeridas
+* Eliminación de datos de consumidores individuales de sus registros
+
+>[!IMPORTANT]
+>
+>Las eliminaciones de consumidores están pensadas para utilizarse en la limpieza de datos, la eliminación de datos anónimos o la minimización de datos. Son **not** para su uso en solicitudes de derechos de interesados (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento de normas, utilice [Adobe Experience Platform Privacy Service](../privacy-service/home.md) en su lugar.
 
 Estas actividades se pueden realizar utilizando la variable [[!UICONTROL Higiene de los datos] Espacio de trabajo de la interfaz de usuario](#ui) o [API de higiene de datos](#api). Cuando se ejecuta un trabajo de higiene de datos, el sistema proporciona actualizaciones de transparencia en cada paso del proceso. Consulte la sección sobre [plazos y transparencia](#timelines-and-transparency) para obtener más información sobre cómo se representa cada tipo de trabajo en el sistema.
 
