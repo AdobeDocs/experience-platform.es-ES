@@ -3,9 +3,9 @@ title: Cifrado de datos en Adobe Experience Platform
 topic-legacy: data protection
 description: Descubra cómo se cifran los datos en tránsito y en reposo en Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: d99a9081edc483831d56af3d838b67d9aba25bea
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ Una vez introducidos los datos en el sistema y [cifrado en reposo](#at-rest), lu
 
 Los datos que Platform ingesta y utiliza se almacenan en el lago de datos, un almacén de datos muy granular que contiene todos los datos administrados por el sistema, independientemente del origen o el formato de archivo. Todos los datos almacenados en el lago de datos se cifran, almacenan y administran en un entorno aislado [[!DNL Microsoft Azure Data Lake] Almacenamiento](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) que es única para su organización.
 
-Para obtener más información sobre cómo se cifran los datos en reposo en Azure Data Lake Storage y Cosmos DB, consulte la [documentación oficial de Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+Para obtener más información sobre cómo se cifran los datos en reposo en el almacenamiento de Azure Data Lake, consulte [documentación oficial de Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Pasos siguientes
 
