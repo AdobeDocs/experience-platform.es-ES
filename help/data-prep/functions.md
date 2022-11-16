@@ -5,10 +5,10 @@ title: Funciones de asignación de preparación de datos
 topic-legacy: overview
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '4286'
-ht-degree: 3%
+source-wordcount: '4337'
+ht-degree: 4%
 
 ---
 
@@ -234,6 +234,11 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 {style=&quot;table-layout:auto&quot;}
 
 ### Funciones de agente de usuario {#user-agent}
+
+Cualquiera de las funciones de agente de usuario contenidas en la siguiente tabla puede devolver cualquiera de los siguientes valores:
+
+* Teléfono: un dispositivo móvil con una pantalla pequeña (normalmente &lt; 7&quot;)
+* Mobile : un dispositivo móvil que aún no se ha identificado. Este dispositivo móvil puede ser un eReader, una tableta, un teléfono, un reloj, etc.
 
 >[!NOTE]
 >

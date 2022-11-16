@@ -5,9 +5,9 @@ title: Punto final de API de conjuntos de asignaciones
 topic-legacy: mapping sets
 description: Puede utilizar el extremo `/mappingSets` en la API de Adobe Experience Platform para recuperar, crear, actualizar y validar conjuntos de asignaciones mediante programación.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '854'
 ht-degree: 5%
 
 ---
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | El ID del esquema XDM al que hace referencia. |
 | `outputSchema.schemaRef.contentType` | Determina el formato de respuesta del esquema de referencia. Puede encontrar más información sobre este campo en la sección [Guía para desarrolladores de Schema Registry](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | El tipo de origen describe cómo se extraerá el valor del origen al destino. |
+| `mappings.sourceType` | El tipo de origen describe cómo se extraerá el valor del origen al destino. El tipo de origen admite dos valores posibles: <ul><li>`ATTRIBUTE`: El tipo de origen `ATTRIBUTE` se utiliza cuando el atributo de entrada procede de un esquema de origen.</li><li>`EXPRESSION`: El tipo de origen `EXPRESSION` se utiliza cuando la asignación se completa con un campo calculado.</li></ul> **ADVERTENCIA**: Si se configuran incorrectamente los valores de tipo de origen, los conjuntos de asignaciones no se pueden editar. |
 | `mappings.source` | Ubicación desde la que desea asignar los datos. |
 | `mappings.destination` | Ubicación a la que desea asignar los datos. |
 
