@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: 3b6862dd3bb770df4a1549275f911dd81a178002
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '1095'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,29 @@ La variable [!DNL Query Editor] permite escribir y ejecutar consultas sin utiliz
 [!DNL Query Editor] proporciona espacio de edición donde puede empezar a escribir una consulta. A medida que escribe, el editor completa automáticamente las palabras, tablas y nombres de campo reservados SQL en las tablas. Cuando termine de escribir la consulta, seleccione la **Play** para ejecutar la consulta. La variable **[!UICONTROL Consola]** debajo del editor se muestra qué [!DNL Query Service] está haciendo, lo que indica cuándo se ha devuelto una consulta. La variable **[!UICONTROL Resultado]** , junto a la consola, muestra los resultados de la consulta. Consulte la [Guía del Editor de consultas](./user-guide.md) para obtener más información sobre el uso de la variable [!DNL Query Editor].
 
 ![Un zoom en vista de la variable [!DNL Query Editor].](../images/ui/overview/query-editor.png)
+
+## Consultas programadas {#scheduled-queries}
+
+Las consultas que ya se han guardado como plantilla se pueden programar para que se ejecuten en una cadencia normal. Al programar una consulta, puede elegir la frecuencia de ejecución, la fecha de inicio y finalización, el día de la semana en que se ejecuta la consulta programada, así como el conjunto de datos al que exportar la consulta. Las programaciones de consultas se configuran mediante el Editor de consultas.
+
+Para obtener información sobre cómo programar una consulta a través de la interfaz de usuario, consulte la [guía de consultas programadas](./user-guide.md#scheduled-queries). Para aprender a añadir programaciones mediante la API, lea la [guía de extremo de consultas programadas](../api/scheduled-queries.md).
+
+Una vez que se ha programado una consulta, esta aparece en la lista de consultas programadas de la [!UICONTROL Consultas programadas] pestaña . Para obtener todos los detalles sobre la consulta, las ejecuciones, el creador y los tiempos, seleccione una consulta programada en la lista.
+
+![El espacio de trabajo Consultas con la ficha Consultas programadas está resaltado y muestra filas de programaciones de consultas.](../images/ui/overview/scheduled-queries.png)
+
+| Columna | Descripción |
+| --- | --- |
+| **[!UICONTROL Nombre]** | El campo de nombre es el nombre de la plantilla o los primeros caracteres de la consulta SQL. Cualquier consulta creada a través de la interfaz de usuario con el Editor de consultas recibe un nombre desde el principio. Si la consulta se creó mediante la API, el nombre de la consulta es un fragmento del SQL inicial utilizado para crear la consulta. |
+| **[!UICONTROL Plantilla]** | El nombre de plantilla de la consulta. Seleccione un nombre de plantilla para ir al Editor de consultas. La plantilla de consulta se muestra en el Editor de consultas para mayor comodidad. Si no hay ningún nombre de plantilla, la fila se marca con un guión y no se puede redirigir al Editor de consultas para ver la consulta. |
+| **[!UICONTROL SQL]** | Un fragmento de la consulta SQL. |
+| **[!UICONTROL Frecuencia de ejecución]** | Esta es la cadencia en la que se configura la ejecución de la consulta. Los valores disponibles son `Run once` y `Scheduled`. Las consultas se pueden filtrar según su frecuencia de ejecución. |
+| **[!UICONTROL Creado por]** | Nombre del usuario que creó la consulta. |
+| **[!UICONTROL Creado]** | Marca de tiempo cuando se creó la consulta, en formato UTC. |
+| **[!UICONTROL Marca de tiempo de última ejecución]** | Marca de tiempo más reciente cuando se ejecutó la consulta. Esta columna resalta si una consulta se ha ejecutado según su programación actual. |
+| **[!UICONTROL Último estado de ejecución]** | Estado de la ejecución de consulta más reciente. Los tres valores de estado son: `successful` `failed` o `in progress`. |
+
+Consulte la documentación para obtener más información sobre cómo [monitorizar consultas a través de la interfaz de usuario del servicio de consulta](../monitor-queries.md).
 
 ## Plantillas {#browse}
 
