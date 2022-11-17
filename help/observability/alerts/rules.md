@@ -4,9 +4,9 @@ title: Reglas de alerta estándar
 description: Este documento cubre las reglas de alerta predefinidas proporcionadas por el Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
+source-git-commit: 44e337778bbfe901687383418981dbae83b356a7
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '922'
 ht-degree: 3%
 
 ---
@@ -99,8 +99,6 @@ Las siguientes reglas de alerta son específicas de [Servicio de consultas](../.
 
 | Suscripción a un evento de E/S | Regla de alerta | Descripción |
 | --- | --- | --- |
-| Información ad hoc del servicio de consultas | Éxito ad hoc del servicio de consultas | Esta alerta déclencheur cuando un trabajo de esquema ad hoc se completa correctamente. |
-| Retrasos, errores y errores específicos del servicio de consultas | Fallo ad hoc del servicio de consulta | Esta alerta déclencheur cuando falla un trabajo de esquema ad hoc. |
 | Información de consulta programada del servicio de consulta | Inicio de consulta programada del servicio de consulta | Esta alerta déclencheur cuando se empieza a ejecutar una consulta programada. |
 | Información de consulta programada del servicio de consulta | Éxito de consulta programada del servicio de consulta | Esta alerta déclencheur cuando un trabajo de consulta programado se completa correctamente. |
 | Retrasos, errores y errores de consultas programadas del servicio de consultas | error de consulta programada del servicio de consulta | Esta alerta déclencheur cuando falla un trabajo de consulta programado. |
