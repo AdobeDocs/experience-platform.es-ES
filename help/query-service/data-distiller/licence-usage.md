@@ -1,14 +1,19 @@
 ---
 title: Monitorización del uso de licencias de consulta por lotes
 description: La interfaz de usuario de Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre el uso de licencias Data Distiller de su organización.
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
-# Monitorización del uso de licencias de consulta por lotes {#monitor-license-usage}
+# (Beta) Monitorizar el uso de licencias de consulta por lotes {#monitor-license-usage}
+
+>[!IMPORTANT]
+>
+>La capacidad de monitorizar el uso de licencias de consulta por lotes a través de la interfaz de usuario está en fase beta. Sus características y documentación están sujetas a cambios.
 
 La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre el uso de licencias del servicio de consulta de su organización.
 

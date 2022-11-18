@@ -1,18 +1,19 @@
 ---
 title: Muestras de conjuntos de datos
 description: Los conjuntos de datos de ejemplo del servicio de consulta le permiten realizar consultas exploratorias sobre grandes datos con un tiempo de procesamiento considerablemente reducido al coste de la precisión de la consulta. Esta guía proporciona información sobre cómo administrar los ejemplos para el procesamiento aproximado de consultas
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
-# (Beta) Ejemplos de conjuntos de datos
+# Ejemplos de conjuntos de datos (versión limitada)
 
 >[!IMPORTANT]
 >
->La función de muestras de conjuntos de datos está en versión beta. Sus características y documentación están sujetas a cambios.
+>La función de muestras de conjuntos de datos se encuentra actualmente en una versión limitada y no está disponible para todos los clientes.
 
 El servicio de consulta de Adobe Experience Platform proporciona conjuntos de datos de ejemplo como parte de sus capacidades aproximadas de procesamiento de consultas. Los conjuntos de datos de ejemplo se crean con muestras aleatorias uniformes de [!DNL Azure Data Lake Storage] (ADLS) conjuntos de datos que utilizan solo un porcentaje de registros del original. Este porcentaje se conoce como tasa de muestreo. Ajustar la tasa de muestreo para controlar el equilibrio de precisión y tiempo de procesamiento le permite realizar consultas exploratorias sobre grandes datos con un tiempo de procesamiento considerablemente menor al coste de la precisión de la consulta.
 
