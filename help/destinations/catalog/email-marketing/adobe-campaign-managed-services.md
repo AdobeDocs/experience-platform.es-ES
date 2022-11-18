@@ -1,9 +1,10 @@
 ---
 title: Conexión Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services proporciona una plataforma para diseñar experiencias de clientes en canales múltiples y un entorno para la organización de campañas visuales, la administración de interacciones en tiempo real y la ejecución en canales cruzados.
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
+source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1368'
 ht-degree: 4%
 
 ---
@@ -46,29 +47,6 @@ Una vez enviados los mensajes, desean mejorar el perfil del cliente en Adobe Exp
 El resultado son campañas multicanal más coherentes en todo el ecosistema de Adobe Experience Cloud y un perfil de cliente enriquecido que se adapta y aprende rápidamente.
 
 [Obtenga más información sobre la integración de Adobe Campaign con Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
-
-
-## Requisitos previos {#prerequisites}
-
-Para que Campaign pueda recuperar datos de Adobe Experience Platform, debe crear un proyecto de API de campaña y solicitar al Servicio de atención al cliente que añada el ID de cliente asociado a una lista de permitidos.
-
->[!NOTE]
->
->La información global sobre cómo crear un proyecto de API se detalla en [esta documentación](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman.html)
-
-1. Iniciar sesión en [Consola de Adobe Developer](https://console.adobe.io/) y cree un nuevo proyecto.
-
-1. Select **[!UICONTROL Añadir API]** y elija **[!UICONTROL Adobe Campaign]**.
-
-   ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/create-api.png)
-
-1. Genere un par de claves.
-
-1. Seleccione el `<Instance Name> - admin` perfil de producto y seleccione **[!UICONTROL Guardar la API configurada]**.
-
-1. Se crea el proyecto de API. Tenga en cuenta que **[!UICONTROL ID de cliente]** se muestra en el proyecto. Póngase en contacto con el Servicio de atención al cliente de Adobe y pídale que añada su ID de cliente a una lista de permitidos.
-
-   ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/client-id.png)
 
 ## Identidades compatibles {#supported-identities}
 
