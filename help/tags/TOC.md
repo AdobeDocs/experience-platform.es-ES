@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
+source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '419'
 ht-degree: 81%
 
 ---
@@ -119,16 +119,18 @@ ht-degree: 81%
          * [Información general](./extensions/web/core/overview.md)
          * [Reenvío de eventos](./extensions/web/core/event-forwarding.md)
          * [Notas de la versión](./extensions/web/core/release-notes.md)
-      * [!DNL Mailchimp] Edge {#mailchimp-edge}
-         * [Información general](./extensions/web/mailchimp/overview.md)
-      * [!DNL Marketo Munchkin] {#marketo}
-         * [Información general](./extensions/web/marketo/overview.md)
-         * [Notas de la versión](./extensions/web/marketo/release-notes.md)
       * Conversiones mejoradas de Google Ads {#google-ads-enhanced-conversions}
          * [Información general](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Capa de datos de Google {#google-data-layer}
          * [Información general](./extensions/web/google-data-layer/overview.md)
          * [Notas de la versión](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Mailchimp] Edge {#mailchimp-edge}
+         * [Información general](./extensions/web/mailchimp/overview.md)
+      * [!DNL Marketo Munchkin] {#marketo}
+         * [Información general](./extensions/web/marketo/overview.md)
+         * [Notas de la versión](./extensions/web/marketo/release-notes.md)
+      * [!UICONTROL Microsoft Azure] {#azure}
+         * [Información general](./extensions/web/azure/overview.md)
       * [!DNL Splunk] {#splunk}
          * [Información general](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] seguimiento de vídeo {#youtube}
