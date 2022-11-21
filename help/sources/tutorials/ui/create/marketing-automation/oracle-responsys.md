@@ -2,7 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;oracle;
 title: (Beta) Creación de una conexión de origen de Responsys de Oracle mediante la interfaz de usuario de Platform
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Responsys de Oracle mediante la interfaz de usuario de Platform.
-source-git-commit: ff3cac5f18ea49b93b3d76e4cd8fb0d597d02be4
+hide: true
+hidefromtoc: true
+exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 1%
