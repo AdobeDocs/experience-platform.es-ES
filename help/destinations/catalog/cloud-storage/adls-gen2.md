@@ -1,9 +1,10 @@
 ---
 title: (Beta) Conexión de almacenamiento de Azure Data Lake Gen2
 description: Obtenga información sobre cómo conectarse a Azure Data Lake Storage Gen2 para activar segmentos y exportar conjuntos de datos.
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -47,9 +48,9 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 * **[!UICONTROL Inquilino]**: La información del inquilino que contiene su aplicación.
 * **[!UICONTROL ID de principal de servicio]**: El ID de cliente de la aplicación.
 * **[!UICONTROL Clave principal del servicio]**: La clave de la aplicación.
-* **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como un [!DNL Base64-encoded] cadena. Vea un ejemplo de una clave base64 con formato correcto en el vínculo de documentación siguiente. La parte media se acorta para que sea más concisa.
+* **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la imagen siguiente.
 
-   ![Imagen que muestra un ejemplo de una clave PGP con formato correcto y cifrada base64 en la interfaz de usuario](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![Imagen que muestra un ejemplo de una clave PGP con formato correcto en la interfaz de usuario](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Rellenar detalles de destino {#destination-details}
 

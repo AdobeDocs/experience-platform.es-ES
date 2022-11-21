@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: Conexión SFTP
 description: Cree una conexión saliente en directo al servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
 >title="Clave pública RSA"
->abstract="Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como una cadena codificada Base64."
+>abstract="Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave con formato correcto en el vínculo de documentación siguiente."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
@@ -78,9 +78,9 @@ Si selecciona la opción **[!UICONTROL Autenticación básica]** escriba para co
 * **[!UICONTROL Host]**: La dirección de la ubicación de almacenamiento SFTP;
 * **[!UICONTROL Nombre de usuario]**: El nombre de usuario para iniciar sesión en su ubicación de almacenamiento SFTP;
 * **[!UICONTROL Contraseña]**: La contraseña para iniciar sesión en la ubicación de almacenamiento SFTP.
-* **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como un [!DNL Base64-encoded] cadena. Vea un ejemplo de una clave base64 con formato correcto en el vínculo de documentación siguiente. La parte media se acorta para que sea más concisa.
+* **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la imagen siguiente.
 
-![Imagen que muestra un ejemplo de una clave PGP con formato correcto y cifrada base64 en la interfaz de usuario](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![Imagen que muestra un ejemplo de una clave PGP con formato correcto en la interfaz de usuario](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Si selecciona la opción **[!UICONTROL SFTP con clave SSH]** tipo de autenticación para conectarse a su ubicación SFTP:
@@ -91,10 +91,9 @@ Si selecciona la opción **[!UICONTROL SFTP con clave SSH]** tipo de autenticaci
 * **[!UICONTROL Puerto]**: El puerto que utiliza su ubicación de almacenamiento SFTP;
 * **[!UICONTROL Nombre de usuario]**: El nombre de usuario para iniciar sesión en su ubicación de almacenamiento SFTP;
 * **[!UICONTROL Clave SSH]**: La clave SSH privada que se utiliza para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe tener el formato de cadena codificada Base64 y no debe estar protegida con contraseña.
-* **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como un [!DNL Base64] cadena codificada.
-   * Ejemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Vea a continuación un ejemplo de una clave PGP con formato correcto, con la parte central acortada para su brevedad.
+* **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la imagen siguiente.
 
-      ![Clave PGP](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![Imagen que muestra un ejemplo de una clave PGP con formato correcto en la interfaz de usuario](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Detalles de destino {#destination-details}
 
