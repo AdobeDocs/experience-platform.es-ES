@@ -1,9 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, octubre de 2022
 description: Notas de la versión de octubre de 2022 para Adobe Experience Platform.
-source-git-commit: 38eadb3a03577fde9651842e3aecc0291b14f0a0
+exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
+source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1352'
 ht-degree: 4%
 
 ---
@@ -122,6 +123,5 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 | Función | Descripción |
 | --- | --- | 
 | Disponibilidad beta del origen de Adobe Workfront | Utilice la variable [Fuente de Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) para llevar los datos de Workfront al Experience Platform y realizar casos de uso, como combinar los registros de trabajo con datos de terceros, aplicar análisis históricos y de series temporales en registros de trabajo y consultar datos de trabajo mediante SQL estándar. Para obtener más información, consulte la guía de [creación de una conexión de origen de Workfront en la interfaz de usuario](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-| Disponibilidad beta del origen de Oracle Service Cloud | Utilice la fuente de nube de servicio de Oracle para ingerir los datos de su cuenta de Oracle Service Cloud en Experience Platform. Para obtener más información, consulte la documentación de [Origen de nube de servicio de oracle](../../sources/connectors/customer-success/oracle-service-cloud.md). |
 
 Para obtener más información sobre las fuentes, lea la [información general sobre fuentes](../../sources/home.md).
