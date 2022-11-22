@@ -2,7 +2,7 @@
 description: Esta configuración le permite indicar información básica como el nombre de destino, la categoría, la descripción, el logotipo y mucho más. Los ajustes de esta configuración también determinan cómo se autentican los usuarios Experience Platform en el destino, cómo aparece en la interfaz de usuario del Experience Platform y las identidades que se pueden exportar al destino.
 title: Opciones de configuración de destino de flujo continuo para el Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
 workflow-type: tm+mt
 source-wordcount: '1894'
 ht-degree: 4%
@@ -104,7 +104,7 @@ Este es un ejemplo de configuración de un destino ficticio de transmisión, Mov
             "includeSegmentId":true,
             "includeSegmentStatus":true,
             "includeIdentity":true,
-            "oneIdentityPerGroup":false,
+            "oneIdentityPerGroup":true,
             "groups":[
                {
                   "namespaces":[
