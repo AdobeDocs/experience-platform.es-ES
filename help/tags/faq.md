@@ -2,9 +2,9 @@
 title: Guía de solución de problemas de etiquetas
 description: Obtenga respuestas a las preguntas frecuentes sobre Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 6109e44ff4b20cadbd3a5016517e954c10c68931
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1044'
 ht-degree: 80%
 
 ---
@@ -106,4 +106,4 @@ Consulte la guía de [administración de permisos](../collection/permissions.md)
 
 ## ¿Y si tengo más preguntas?
 
-Si tiene otras preguntas, puede preguntar en la [Página de comunidad de recopilación de datos de Adobe Experience Platform](https://adobe.com/go/launchme) en el Experience League, o únase al [grupo de Slack oficiales para desarrolladores de etiquetas](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+Si tiene otras preguntas, puede preguntar en la [Página de comunidad de recopilación de datos de Adobe Experience Platform](https://adobe.com/go/launchme) en el Experience League, o únase al [espacio de trabajo del Slack de la comunidad](http://join.connectionsdevs.chat) para desarrolladores y temas de implementación técnica.
