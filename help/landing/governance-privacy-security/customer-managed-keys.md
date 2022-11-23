@@ -2,9 +2,9 @@
 title: Claves gestionadas por el cliente en Adobe Experience Platform
 description: Aprenda a configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1603'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ Este documento cubre el proceso para habilitar la función de claves gestionadas
 
 ## Requisitos previos
 
-Para habilitar CMK, debe tener acceso a **all** de las siguientes funciones de [!DNL Microsoft Azure]:
+Para habilitar CMK, su [!DNL Azure] Key Vault debe configurarse con la siguiente configuración:
 
-* [Políticas de control de acceso basadas en roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (no confundir con la misma función en el Experience Platform)
-* [Eliminación en blanco de Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Protección contra purgas](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Habilitar protección de depuración](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Habilitar eliminación suave](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Configuración del acceso mediante [!DNL Azure] control de acceso basado en roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ## Resumen del proceso
 
