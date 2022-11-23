@@ -1,16 +1,19 @@
 ---
 title: Determinar Una Puntuación De Propensión Mediante Un Modelo Predictivo Generado Por El Aprendizaje Automático
 description: Aprenda a utilizar el servicio de consulta para aplicar su modelo predictivo a los datos de Platform. Este documento muestra cómo utilizar los datos de Platform para predecir la propensión de un cliente a realizar compras en cada visita.
-source-git-commit: af1c8f94d1758b3a4e7ea00c46b0f9a71a01c6be
+exl-id: 29587541-50dd-405c-bc18-17947b8a5942
+source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # Determinar una puntuación de tendencia utilizando un modelo predictivo generado por el aprendizaje automático
 
-Con el servicio de consulta, puede aprovechar los datos de Experience Platform en las plataformas de aprendizaje automático para generar modelos predictivos, como puntuaciones de tendencia. En esta guía se explica cómo utilizar Query Service para enviar datos a su plataforma de aprendizaje automático con el fin de formar un modelo en un bloc de notas computacional. El modelo entrenado se puede aplicar a los datos mediante SQL para predecir la propensión de compra de un cliente en cada visita.
+Con el servicio de consulta puede aprovechar los modelos predictivos, como las puntuaciones de inclinación, creados en su plataforma de aprendizaje automático para analizar los datos del Experience Platform.
+
+En esta guía se explica cómo utilizar Query Service para enviar datos a su plataforma de aprendizaje automático con el fin de formar un modelo en un bloc de notas computacional. El modelo entrenado se puede aplicar a los datos mediante SQL para predecir la propensión de compra de un cliente en cada visita.
 
 ## Primeros pasos
 
@@ -322,5 +325,3 @@ A continuación, se ordenan las precisiones del modelo arrancado. Después de lo
 ![El comando print para mostrar el intervalo de confianza de la puntuación de tendencia.](../images/use-cases/confidence-interval.png)
 
 La figura anterior indica que si solo toma 1000 filas para entrenar sus modelos, puede esperar que las precisiones caigan entre aproximadamente el 84% y el 88%. Puede ajustar el `LIMIT` en las consultas del servicio de consulta basadas en sus necesidades para garantizar el rendimiento de los modelos.
-
-
