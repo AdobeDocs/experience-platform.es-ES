@@ -5,9 +5,9 @@ title: Crear y editar esquemas en la interfaz de usuario
 description: Obtenga información sobre los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario del Experience Platform.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 3fc498de60256006d27ada72a7b5f4fff71c4472
 workflow-type: tm+mt
-source-wordcount: '2901'
+source-wordcount: '3156'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ El Editor de esquemas le permite añadir campos individuales directamente a un e
 
 >[!IMPORTANT]
 >
->Aunque funcionalmente el Editor de esquemas permite añadir campos individuales directamente a un esquema, esto no cambia el hecho de que todos los campos de un esquema XDM deben proporcionarlos su clase o un grupo de campos compatible con esa clase. Como se explica en las secciones siguientes, todos los campos individuales siguen asociados a un grupo de campos como paso clave cuando se añaden a un esquema.
+>Aunque funcionalmente el Editor de esquemas permite añadir campos individuales directamente a un esquema, esto no cambia el hecho de que todos los campos de un esquema XDM deben proporcionarlos su clase o un grupo de campos compatible con esa clase. Como se explica en las secciones siguientes, todos los campos individuales siguen asociados a una clase o grupo de campos como paso clave cuando se añaden a un esquema.
 
 ### Añadir campos estándar {#add-standard-fields}
 
@@ -172,7 +172,17 @@ Comience a escribir el nombre del campo que desee añadir y el sistema empezará
 
 ![Campo nuevo](../../images/ui/resources/schemas/custom-field-search.png)
 
-A partir de aquí, proporcione un nombre para mostrar y un tipo de datos para el campo. En **[!UICONTROL Asignar grupo de campos]**, debe seleccionar un grupo de campos para el nuevo campo al que desea asociar. Comience a escribir el nombre del grupo de campos y si ya lo ha hecho [grupos de campos personalizados creados](./field-groups.md#create) aparecerán en la lista desplegable. También puede escribir un nombre único en el campo para crear un nuevo grupo de campos.
+Después de proporcionar un nombre para mostrar y un tipo de datos para el campo, el siguiente paso es asignar el campo a un recurso XDM principal. Si el esquema utiliza una clase personalizada, puede elegir [añadir el campo a la clase asignada](#add-to-class) o [grupo de campos](#add-to-field-group) en su lugar. Sin embargo, si el esquema utiliza una clase estándar, solo puede asignar el campo personalizado a un grupo de campos.
+
+#### Asignar el campo a un grupo de campos personalizado {#add-to-field-group}
+
+>[!NOTE]
+>
+>Esta sección solo trata cómo asignar el campo a un grupo de campos personalizado. Si desea ampliar un grupo de campos estándar con el nuevo campo personalizado, consulte la sección en [adición de campos personalizados a grupos de campos estándar](#custom-fields-for-standard-groups).
+
+En **[!UICONTROL Asignar a]**, seleccione **[!UICONTROL Grupo de campos]**. Si el esquema utiliza una clase estándar, esta es la única opción disponible y está seleccionada de forma predeterminada.
+
+A continuación, debe seleccionar un grupo de campos para el nuevo campo al que desea asociar. Empiece a escribir el nombre del grupo de campos en la entrada de texto proporcionada. Si tiene algún grupo de campos personalizados existente que coincida con la entrada, estos aparecerán en la lista desplegable. También puede escribir un nombre único para crear un nuevo grupo de campos.
 
 ![Seleccionar grupo de campos](../../images/ui/resources/schemas/select-field-group.png)
 
@@ -180,7 +190,7 @@ A partir de aquí, proporcione un nombre para mostrar y un tipo de datos para el
 >
 >Si selecciona un grupo de campos personalizado existente, cualquier otro esquema que emplee ese grupo de campos también heredará el campo recién agregado después de guardar los cambios. Por este motivo, seleccione únicamente un grupo de campos existente si desea este tipo de propagación. De lo contrario, debe optar por crear un nuevo grupo de campos personalizados.
 
-Cuando termine, seleccione **[!UICONTROL Aplicar]**.
+Después de seleccionar el grupo de campos de la lista, seleccione **[!UICONTROL Aplicar]**.
 
 ![Aplicar campo](../../images/ui/resources/schemas/apply-field.png)
 
@@ -192,7 +202,21 @@ El nuevo campo se agrega al lienzo y tiene un área de nombres debajo de su [ID 
 >
 >El resto de los campos proporcionados por el grupo de campos personalizados seleccionado se eliminan del esquema de forma predeterminada. Si desea añadir algunos de estos campos al esquema, seleccione un campo perteneciente al grupo y, a continuación, seleccione **[!UICONTROL Administrar campos relacionados]** en el carril derecho.
 
-#### Añadir campos personalizados a la estructura de los grupos de campos estándar {#custom-fields-for-standard-groups}
+#### Asignar el campo a una clase personalizada {#add-to-class}
+
+En **[!UICONTROL Asignar a]**, seleccione **[!UICONTROL Clase]**. El campo de entrada siguiente se sustituye por el nombre de la clase personalizada del esquema actual, lo que indica que el nuevo campo se asignará a esta clase.
+
+![La variable [!UICONTROL Clase] para la nueva asignación de campos.](../../images/ui/resources/schemas/assign-field-to-class.png)
+
+Continúe configurando el campo como desee y seleccione **[!UICONTROL Aplicar]** cuando termine.
+
+![[!UICONTROL Aplicar] seleccionado para el nuevo campo.](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
+
+El nuevo campo se agrega al lienzo y tiene un área de nombres debajo de su [ID de inquilino](../../api/getting-started.md#know-your-tenant_id) para evitar conflictos con campos XDM estándar. Al seleccionar el nombre de clase en el carril izquierdo, se muestra el nuevo campo como parte de la estructura de la clase.
+
+![El nuevo campo se aplica a la estructura de la clase personalizada, representada en el lienzo.](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
+
+### Añadir campos personalizados a la estructura de los grupos de campos estándar {#custom-fields-for-standard-groups}
 
 Si el esquema en el que está trabajando tiene un campo de tipo objeto proporcionado por un grupo de campos estándar, puede agregar sus propios campos personalizados a ese objeto estándar.
 
