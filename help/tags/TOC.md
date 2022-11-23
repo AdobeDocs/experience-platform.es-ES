@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
+source-git-commit: de09106f4446981176ca001f607d540b490de8d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 81%
 
 ---
@@ -106,6 +106,8 @@ ht-degree: 81%
       * Adobe Target v2 {#target-v2}
          * [Información general](./extensions/web/target-v2/overview.md)
          * [Notas de la versión](./extensions/web/target-v2/release-notes.md)
+      * [!DNL AWS] {#aws}
+         * [Información general](./extensions/web/aws/overview.md)
       * [!DNL BrightCove] seguimiento de vídeo {#brightcove}
          * [Información general](./extensions/web/brightcove/overview.md)
          * [Notas de la versión](./extensions/web/brightcove/release-notes.md)
