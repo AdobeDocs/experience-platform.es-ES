@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, noviembre de 2022
 description: Notas de la versión de noviembre de 2022 para Adobe Experience Platform.
-source-git-commit: 3c78fc1cbfcd00f0fd5facfdf07bbc2757f492fa
+source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 5%
@@ -40,7 +40,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Función | Descripción |
 | --- | --- |
-| Asignar campos a clases personalizadas al agregarlos directamente a un esquema | When [adición de un campo individual directamente a un esquema](../../xdm/ui/resources/schemas.md#add-individual-fields), anteriormente solo se podía asignar el campo a un grupo de campos como recurso principal. Ahora, además de los grupos de campos, puede [asignar el campo a una clase personalizada](../../xdm/ui/resources/schemas.md.md#add-to-class) como su recurso principal en su lugar. |
+| Asignar campos a clases personalizadas al agregarlos directamente a un esquema | When [adición de un campo individual directamente a un esquema](../../xdm/ui/resources/schemas.md#add-individual-fields), anteriormente solo se podía asignar el campo a un grupo de campos como recurso principal. Ahora, además de los grupos de campos, puede [asignar el campo a una clase personalizada](../../xdm/ui/resources/schemas.md#add-to-class) como su recurso principal en su lugar. |
 
 {style=&quot;table-layout:auto&quot;}
 
