@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
+source-git-commit: f8e8ec0fb13fc988d47bb3bbe85f953e66b33f13
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 8%
@@ -27,9 +27,9 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Función | Descripción |
 | --- | --- |
-| [!DNL AWS] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Amazon Web Services] ([!DNL AWS]) usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL AWS] información general de la extensión](../../tags/extensions/web/aws/overview.md) para obtener más información. |
-| [!DNL Google Ads Enhanced Conversions] extensión para el reenvío de eventos | Ahora puede enviar datos de conversión a [!DNL Google Ads] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Google Ads Enhanced Conversions] información general de la extensión](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) para obtener más información. |
-| [!DNL Microsoft Azure] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Microsoft Azure] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Microsoft Azure] información general de la extensión](../../tags/extensions/web/azure/overview.md) para obtener más información. |
+| [!DNL AWS] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Amazon Web Services] ([!DNL AWS]) usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL AWS] información general de la extensión](../../tags/extensions/server/aws/overview.md) para obtener más información. |
+| [!DNL Google Ads Enhanced Conversions] extensión para el reenvío de eventos | Ahora puede enviar datos de conversión a [!DNL Google Ads] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Google Ads Enhanced Conversions] información general de la extensión](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) para obtener más información. |
+| [!DNL Microsoft Azure] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Microsoft Azure] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Microsoft Azure] información general de la extensión](../../tags/extensions/server/azure/overview.md) para obtener más información. |
 
 Para obtener más información sobre las capacidades de recopilación de datos de Platform, consulte la [información general sobre recopilación de datos](../../collection/home.md).
 

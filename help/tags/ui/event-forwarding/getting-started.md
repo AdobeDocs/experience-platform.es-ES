@@ -3,7 +3,7 @@ title: Introducción al reenvío de eventos
 description: Siga este tutorial paso a paso para empezar a utilizar el reenvío de eventos en Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 80%
@@ -18,7 +18,7 @@ ht-degree: 80%
 
 Para utilizar el reenvío de eventos en Adobe Experience Platform, los datos deben enviarse a Adobe Experience Platform Edge Network mediante una o varias de las tres opciones siguientes:
 
-* [SDK web de Adobe Experience Platform](../../extensions/web/sdk/overview.md)
+* [SDK web de Adobe Experience Platform](../../extensions/client/sdk/overview.md)
 * [SDK móvil de Adobe Experience Platform](https://sdkdocs.com)
 * [API de servidor a servidor](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=es)
 
@@ -100,7 +100,7 @@ Después de realizar la configuración, anote los ID de entorno para la nueva pr
 
 Cree su propiedad en la variable **[!UICONTROL Etiquetas]** espacio de trabajo y, a continuación, vaya a **[!UICONTROL Extensiones]** y seleccione la extensión del SDK web de Experience Platform del catálogo para configurarlo e instalarlo.
 
-Consulte la [Documentación de la extensión del SDK web](../../extensions/web/sdk/overview.md) para obtener más información sobre las opciones de configuración.
+Consulte la [Documentación de la extensión del SDK web](../../extensions/client/sdk/overview.md) para obtener más información sobre las opciones de configuración.
 
 ## Creación de una regla de etiqueta para enviar datos al SDK web de Platform
 

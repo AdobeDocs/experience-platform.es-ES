@@ -3,7 +3,7 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 9%
@@ -57,7 +57,7 @@ Lista de propiedades de reenvío de eventos **[!UICONTROL Edge]** como su plataf
 
 ### Extensiones {#extensions}
 
-El reenvío de eventos tiene su propio catálogo de extensiones compatibles, como el [Principal](../../extensions/web/core/event-forwarding.md) extensión y [Conector de Adobe Cloud](../../extensions/web/cloud-connector/overview.md) extensión. Puede ver las extensiones disponibles para las propiedades de reenvío de eventos en la interfaz de usuario seleccionando **[!UICONTROL Extensiones]** en la navegación izquierda, seguido de **[!UICONTROL Catálogo]**.
+El reenvío de eventos tiene su propio catálogo de extensiones compatibles, como el [Principal](../../extensions/server/core/overview.md) extensión y [Conector de Adobe Cloud](../../extensions/server/cloud-connector/overview.md) extensión. Puede ver las extensiones disponibles para las propiedades de reenvío de eventos en la interfaz de usuario seleccionando **[!UICONTROL Extensiones]** en la navegación izquierda, seguido de **[!UICONTROL Catálogo]**.
 
 ![Extensiones de reenvío de eventos en la interfaz de usuario de la recopilación de datos](../../images/ui/event-forwarding/overview/extensions.png)
 

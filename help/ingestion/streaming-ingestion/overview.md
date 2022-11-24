@@ -5,7 +5,7 @@ title: Información general sobre la ingesta de flujos
 topic-legacy: overview
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos de cliente y del lado del servidor al Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 3ec4bfcb185459ec644ce1826e2a970cb6294538
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 3%
@@ -58,4 +58,4 @@ La siguiente tabla muestra instrucciones sobre los límites de solicitudes por s
 
 ## Extensión de Adobe Experience Platform
 
-Puede utilizar la extensión de Adobe Experience Platform para crear una nueva conexión de flujo continuo. La variable [!DNL Experience Platform] extensión proporciona acciones para enviar señalizaciones con formato [!DNL Experience Data Model] (XDM) para la ingesta en tiempo real a [!DNL Experience Platform]. Visite la [Extensión de Experience Platform](../../tags/extensions/web/sdk/overview.md) documentación para obtener más información.
+Puede utilizar la extensión de Adobe Experience Platform para crear una nueva conexión de flujo continuo. La variable [!DNL Experience Platform] extensión proporciona acciones para enviar señalizaciones con formato [!DNL Experience Data Model] (XDM) para la ingesta en tiempo real a [!DNL Experience Platform]. Visite la [Extensión de Experience Platform](../../tags/extensions/client/sdk/overview.md) documentación para obtener más información.

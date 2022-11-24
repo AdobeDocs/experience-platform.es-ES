@@ -2,7 +2,7 @@
 title: Notas de la versión de etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 6%
@@ -14,8 +14,8 @@ ht-degree: 6%
 ## 26 de octubre de 2022
 
 * **Administración de datos confidenciales para conjuntos de datos**: Los conjuntos de datos ahora aprovechan varias tecnologías de plataforma para manejar adecuadamente los datos confidenciales según se aplican en regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA, Health Insurance Porability and Accounability Act). Consulte la sección sobre [gestión de datos confidenciales en flujos de datos](../../edge/datastreams/overview.md#sensitive) para obtener más información.
-* **[!DNL Splunk]extensión para el reenvío de eventos**: Ahora puede enviar datos a [!DNL Splunk] usando un [reenvío de eventos](../ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Splunk] información general de la extensión](../extensions/web/splunk/overview.md) para obtener más información.
-* **[!DNL Zendesk]extensión para el reenvío de eventos**: Ahora puede enviar datos a [!DNL Zendesk] usando un [reenvío de eventos](../ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Zendesk] información general de la extensión](../extensions/web/zendesk/overview.md) para obtener más información.
+* **[!DNL Splunk]extensión para el reenvío de eventos**: Ahora puede enviar datos a [!DNL Splunk] usando un [reenvío de eventos](../ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Splunk] información general de la extensión](../extensions/server/splunk/overview.md) para obtener más información.
+* **[!DNL Zendesk]extensión para el reenvío de eventos**: Ahora puede enviar datos a [!DNL Zendesk] usando un [reenvío de eventos](../ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Zendesk] información general de la extensión](../extensions/server/zendesk/overview.md) para obtener más información.
 
 ## 28 de septiembre de 2022
 
@@ -32,6 +32,6 @@ ht-degree: 6%
 
 Se han lanzado nuevas extensiones:
 
-* [Extensión de etiqueta de la capa de datos de Google](../extensions/web/google-data-layer/overview.md): Permite utilizar una capa de datos de Google en la implementación de etiquetas.
+* [Extensión de etiqueta de la capa de datos de Google](../extensions/client/google-data-layer/overview.md): Permite utilizar una capa de datos de Google en la implementación de etiquetas.
 * [Extensión de reenvío de eventos de conversiones mejoradas de Google Ads](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Permite mejorar las conversiones de Google Ads en tiempo real.
-* [Extensión de reenvío de eventos Mailchimp](../extensions/web/mailchimp/overview.md): Envía eventos a la API de marketing de Mailchimp, que puede enviar correos electrónicos de déclencheur para campañas de marketing de Mailchimp, recorridos o transacciones.
+* [Extensión de reenvío de eventos Mailchimp](../extensions/server/mailchimp/overview.md): Envía eventos a la API de marketing de Mailchimp, que puede enviar correos electrónicos de déclencheur para campañas de marketing de Mailchimp, recorridos o transacciones.

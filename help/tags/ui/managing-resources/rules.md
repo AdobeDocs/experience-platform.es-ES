@@ -2,7 +2,7 @@
 title: Reglas
 description: Conozca cómo funcionan las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 81%
@@ -41,7 +41,7 @@ Si se produce un evento específico, se evalúan las condiciones y las acciones 
 
 * **Condiciones**: Limite el evento configurando cualquier condición que deba ser verdadera para que un evento active la regla. Una excepción se define como una condición NOT. Las condiciones múltiples se unen mediante un operador AND.
 
-Los eventos disponibles dependen de las extensiones instaladas. Para obtener más información sobre los eventos de la extensión principal, consulte [Tipos de eventos de la extensión principal](../../extensions/web/core/overview.md#core-extension-event-types).
+Los eventos disponibles dependen de las extensiones instaladas. Para obtener más información sobre los eventos de la extensión principal, consulte [Tipos de eventos de la extensión principal](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Acciones (Then)
 

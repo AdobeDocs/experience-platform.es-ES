@@ -2,7 +2,7 @@
 title: Información general de extremo a extremo de la recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las funciones de recopilación de datos de Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2619'
 ht-degree: 0%
@@ -212,7 +212,7 @@ Aparece la página de configuración de eventos. Para configurar un evento, prim
 
 >[!NOTE]
 >
->Para obtener más información sobre los distintos tipos de eventos proporcionados por las extensiones web de Adobe, incluido cómo configurarlos, consulte la [Referencia de extensiones de Adobe](../tags/extensions/web/overview.md) en la documentación de etiquetas.
+>Para obtener más información sobre los distintos tipos de eventos proporcionados por las extensiones web de Adobe, incluido cómo configurarlos, consulte la [Referencia de extensiones de Adobe](../tags/extensions/client/overview.md) en la documentación de etiquetas.
 
 El suceso de envío de formulario permite utilizar un [Selector de CSS](https://www.w3schools.com/css/css_selectors.asp) para hacer referencia a un elemento específico en el que la regla debe activarse. En el ejemplo siguiente, el ID de `add-to-cart-form` se utiliza para que esta regla solo se active para el formulario &quot;Agregar al carro de compras&quot;. Select **[!UICONTROL Conservar cambios]** para agregar el evento a la regla.
 

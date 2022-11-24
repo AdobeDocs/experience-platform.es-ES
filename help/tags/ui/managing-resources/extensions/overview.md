@@ -2,10 +2,10 @@
 title: Extensiones
 description: Conozca cómo funcionan las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '497'
+ht-degree: 93%
 
 ---
 
@@ -53,7 +53,7 @@ La página Extensions proporciona tres vistas:
 
 Seleccione **[!UICONTROL Extensiones]** para ver todas las extensiones instaladas. También puede utilizar el catálogo para ver una lista de todas las extensiones disponibles y qué extensiones tienen actualizaciones disponibles.
 
-Consulte [Referencia de extensiones](../../../extensions/web/overview.md) para obtener detalles sobre las extensiones de Adobe.
+Consulte [Referencia de extensiones](../../../extensions/client/overview.md) para obtener detalles sobre las extensiones de Adobe.
 
 ## Añadir una nueva extensión de {#add-a-new-extension}
 
@@ -86,4 +86,4 @@ Coloque el ratón sobre una extensión instalada y seleccione **[!UICONTROL Conf
 >
 >Algunas extensiones no necesitan configuración y no ofrecen opciones de configuración.
 
-Cada extensión configurable tiene opciones únicas. Consulte [Referencia de extensiones](../../../extensions/web/overview.md) para obtener información sobre las opciones disponibles para cada extensión de Adobe.
+Cada extensión configurable tiene opciones únicas. Consulte [Referencia de extensiones](../../../extensions/client/overview.md) para obtener información sobre las opciones disponibles para cada extensión de Adobe.

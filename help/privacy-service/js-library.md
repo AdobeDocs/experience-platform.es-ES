@@ -5,7 +5,7 @@ title: Información general de la biblioteca JavaScript de privacidad de Adobe
 topic-legacy: overview
 description: La biblioteca JavaScript de privacidad de Adobe permite recuperar identidades de interesados para usarlas en Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 6%
@@ -48,7 +48,7 @@ Para empezar a usar la variable [!DNL Privacy JS Library], debe instalarlo en el
 * Instale utilizando npm ejecutando el siguiente comando: `npm install @adobe/adobe-privacy`
 * Descargue desde [Repositorio de GitHub Experience Cloud](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-También puede instalar la biblioteca a través de una extensión de etiqueta . Consulte la descripción general de la [Extensión de la etiqueta de privacidad de Adobe](../tags/extensions/web/privacy/overview.md) para obtener más información.
+También puede instalar la biblioteca a través de una extensión de etiqueta . Consulte la descripción general de la [Extensión de la etiqueta de privacidad de Adobe](../tags/extensions/client/privacy/overview.md) para obtener más información.
 
 ## Cree una instancia de [!DNL Privacy JS Library]
 

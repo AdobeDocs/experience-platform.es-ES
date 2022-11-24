@@ -2,7 +2,7 @@
 title: Implementación asíncrona
 description: Obtenga información sobre cómo implementar de forma asíncrona las bibliotecas de Adobe Experience Platform Launch en su sitio web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 92%
@@ -56,7 +56,7 @@ Primero, debido a que la biblioteca de etiqueta puede terminar de cargarse antes
 
 Segundo, la biblioteca de etiqueta puede terminar de cargarse antes o después de que se produzca el evento [`DOMContentLoaded`](https://developer.mozilla.org/es-ES/docs/Web/Events/DOMContentLoaded) del explorador (DOM preparado).
 
-Debido a estos dos puntos, vale la pena mostrar cómo funcionan los tipos de evento [Library Loaded](../../extensions/web/core/overview.md#library-loaded-page-top), [Page Bottom](../../extensions/web/core/overview.md#page-bottom), [DOM Ready](../../extensions/web/core/overview.md#page-bottom), y [Window Loaded](../../extensions/web/core/overview.md#window-loaded) desde la extensión principal al cargar una biblioteca de etiqueta de forma asíncrona.
+Debido a estos dos puntos, vale la pena mostrar cómo funcionan los tipos de evento [Library Loaded](../../extensions/client/core/overview.md#library-loaded-page-top), [Page Bottom](../../extensions/client/core/overview.md#page-bottom), [DOM Ready](../../extensions/client/core/overview.md#page-bottom), y [Window Loaded](../../extensions/client/core/overview.md#window-loaded) desde la extensión principal al cargar una biblioteca de etiqueta de forma asíncrona.
 
 Si la propiedad de etiqueta contiene las cuatro reglas siguientes:
 

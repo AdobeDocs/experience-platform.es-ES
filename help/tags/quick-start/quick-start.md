@@ -2,7 +2,7 @@
 title: Guía de inicio rápido
 description: Aprenda a empezar rápidamente a usar etiquetas con Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 90%
@@ -53,7 +53,7 @@ Para obtener más información acerca de la creación de propiedades, consulte [
 
 Una extensión es una integración desarrollada por Adobe o un socio de Adobe que añade nuevas e ilimitadas opciones para las etiquetas que usted puede implementar en sus sitios. Si piensa en una etiqueta como un sistema operativo, las extensiones son las aplicaciones que instala para que pueda hacer lo que necesite.
 
-Todas las propiedades nuevas llevan instalada la [Extensión principal](../extensions/web/core/overview.md). Las propiedades móviles incluyen extensiones adicionales. El equipo de Adobe desarrolla la Extensión principal para ofrecer un conjunto de elementos de datos sólido y robusto para sus reglas de datos y tipos de eventos para sus reglas. La mayoría de las acciones que puede querer realizar (obtener un ECID, enviar señalizaciones [!DNL Adobe Analytics], cargar el mbox global de [!DNL Target], etc.) provienen de las extensiones que se instalan del catálogo.
+Todas las propiedades nuevas llevan instalada la [Extensión principal](../extensions/client/core/overview.md). Las propiedades móviles incluyen extensiones adicionales. El equipo de Adobe desarrolla la Extensión principal para ofrecer un conjunto de elementos de datos sólido y robusto para sus reglas de datos y tipos de eventos para sus reglas. La mayoría de las acciones que puede querer realizar (obtener un ECID, enviar señalizaciones [!DNL Adobe Analytics], cargar el mbox global de [!DNL Target], etc.) provienen de las extensiones que se instalan del catálogo.
 
 Lo que hace que las etiquetas de Platform sean verdaderamente únicas es que cualquier persona puede crear estas extensiones. ¿Necesita soltar un píxel de remarketing de Facebook en el sitio? Compruebe la extensión desarrollada por Facebook. ¿Desea lo mismo para Twitter o Linked In? Use esas extensiones. ¿Necesita llevar a cabo una encuesta? Consulte Question Pro o Foresee. ¿Necesita administrar la privacidad y el consentimiento de los usuarios finales para ayudarles con [!DNL GDPR]? Eche un vistazo a Evidon y Trust Arc. ¿Desea ver una perspectiva granular del comportamiento de los usuarios individuales en el sitio? Puede probar con Clicktale. Para obtener más información, consulte la sección sobre [adición de una nueva extensión](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

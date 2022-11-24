@@ -2,7 +2,7 @@
 title: Secretos en la API de Reactor
 description: Conozca los aspectos básicos de cómo configurar los secretos en la API de Reactor para usarlos en el reenvío de eventos.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 2%
@@ -131,7 +131,7 @@ Una vez guardado correctamente el artefacto de intercambio en el entorno, el sec
 
 ## Referencia a secretos {#referencing-secrets}
 
-Para hacer referencia a un secreto, debe crear un elemento de datos de tipo &quot;[!UICONTROL Secreto]&quot; (proporcionado por el [[!UICONTROL Principal] Extensión](../../extensions/web/core/overview.md)) en una propiedad de reenvío de eventos. Al configurar este elemento de datos, se le pedirá que indique qué secreto utilizar para cada entorno. A continuación, puede crear reglas que hagan referencia a un elemento de datos secreto, como en el encabezado de una llamada HTTP.
+Para hacer referencia a un secreto, debe crear un elemento de datos de tipo &quot;[!UICONTROL Secreto]&quot; (proporcionado por el [[!UICONTROL Principal] Extensión](../../extensions/client/core/overview.md)) en una propiedad de reenvío de eventos. Al configurar este elemento de datos, se le pedirá que indique qué secreto utilizar para cada entorno. A continuación, puede crear reglas que hagan referencia a un elemento de datos secreto, como en el encabezado de una llamada HTTP.
 
 ![Elemento de datos secreto](../../images/api/guides/secrets/data-element.png)
 

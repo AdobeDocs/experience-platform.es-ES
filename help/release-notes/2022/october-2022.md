@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, octubre de 2022
 description: Notas de la versión de octubre de 2022 para Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 4%
@@ -38,8 +38,8 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Función | Descripción |
 | --- | --- |
 | Administración de datos confidenciales para conjuntos de datos | Los conjuntos de datos ahora aprovechan varias tecnologías de plataforma para manejar adecuadamente los datos confidenciales según se aplican en regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA, Health Insurance Porability and Accounability Act). Consulte la sección sobre [gestión de datos confidenciales en flujos de datos](../../edge/datastreams/overview.md#sensitive) para obtener más información. |
-| [!DNL Splunk] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Splunk] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Splunk] información general de la extensión](../../tags/extensions/web/splunk/overview.md) para obtener más información. |
-| [!DNL Zendesk] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Zendesk] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Zendesk] información general de la extensión](../../tags/extensions/web/zendesk/overview.md) para obtener más información. |
+| [!DNL Splunk] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Splunk] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Splunk] información general de la extensión](../../tags/extensions/server/splunk/overview.md) para obtener más información. |
+| [!DNL Zendesk] extensión para el reenvío de eventos | Ahora puede enviar datos a [!DNL Zendesk] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Zendesk] información general de la extensión](../../tags/extensions/server/zendesk/overview.md) para obtener más información. |
 
 {style=&quot;table-layout:auto&quot;}
 
