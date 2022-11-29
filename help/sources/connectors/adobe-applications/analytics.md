@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;Conector de origen de Analy
 title: Conector de origen de Adobe Analytics para datos de grupos de informes
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
+source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1014'
 ht-degree: 6%
 
 ---
@@ -49,7 +49,9 @@ La latencia esperada para los datos de Analytics en la plataforma se describe en
 | Nuevos datos para [!DNL Real-time Customer Profile] (A4T **not** enabled) | &lt; 2 minutos |
 | Nuevos datos para [!DNL Real-time Customer Profile] (A4T **es** enabled) | &lt; 15 minutos |
 | Nuevos datos en Data Lake | &lt; 90 minutos |
-| Rellenar datos (13 meses de datos o 10 000 millones de eventos, lo que sea menor) | &lt; 4 semanas |
+| Relleno de menos de 10 mil millones de eventos | &lt; 4 semanas |
+
+Los rellenos de Analytics tienen un valor predeterminado de 13 meses. El límite de 10.000 millones de acontecimientos mencionado en el cuadro anterior es estrictamente con respecto a la latencia esperada.
 
 >[!NOTE]
 >
