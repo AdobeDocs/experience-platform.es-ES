@@ -4,9 +4,9 @@ title: Guía del panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '3031'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,16 @@ Desde la biblioteca de utilidades, puede examinar la selección de utilidades de
 ## Widgets estándar {#standard-widgets}
 
 Adobe proporciona varios widgets estándar que puede utilizar para visualizar distintas métricas relacionadas con los destinos y evaluar la integridad de los segmentos disponibles para el análisis de datos. También puede crear utilidades personalizadas para compartirlas con su organización mediante la [!UICONTROL Biblioteca de utilidades]. Para obtener más información sobre la creación de widgets personalizados, lea la [Información general de la biblioteca de utilidades](../customize/widget-library.md).
+
+### Requisitos previos {#prerequisites}
+
+Antes de continuar con las descripciones de las utilidades estándar, asegúrese de estar familiarizado con las definiciones de los siguientes términos clave utilizados en toda la documentación:
+
+* **Segmento:** Un segmento es **el conjunto de reglas** que incluyen atributos y datos de evento que califican una cantidad de perfiles como audiencia.
+* **Audiencia**: Una audiencia es **el conjunto de perfiles** que cumplen los criterios de una definición de segmento.
+* **Asignado/Asignación**: La asignación de datos es el proceso de asignación de campos de datos de origen a campos de destino relacionados en un destino.
+* **Identidad**: Una identidad es un identificador que representa de forma exclusiva a un cliente individual, como un ID de cookie, un ID de dispositivo o un ID de correo electrónico.
+* **Activar**: Activar es la acción que realiza un usuario para asignar un segmento o perfiles a un destino como, por ejemplo, Oracle Eloqua, Google o Marketing Cloud de Salesforce.
 
 Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
@@ -139,6 +149,8 @@ Puede ver los detalles de un segmento seleccionando el nombre de un segmento en 
 
 ![Los segmentos activados recientemente por el widget de destino.](../images/destinations/recently-activated-segments-by-destination.png)
 
+Consulte la sección de requisitos previos para [definiciones de los términos utilizados](#prerequisites) en esta descripción.
+
 ### [!UICONTROL Tendencia del tamaño de la audiencia] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -172,6 +184,8 @@ La lista desplegable ID de destino filtra los segmentos disponibles. Los ID de f
 La columna identidades cuenta el número de ID de origen dentro del segmento que podrían asignarse al ID elegido en la lista desplegable ID de la utilidad.
 
 ![Segmentos no asignados por el widget de identidad.](../images/destinations/unmapped-segments-by-identity.png)
+
+Consulte la sección de requisitos previos para [definiciones de los términos utilizados](#prerequisites) en esta descripción.
 
 ### [!UICONTROL Segmentos asignados por identidad] {#mapped-segments-by-identity}
 
@@ -259,11 +273,13 @@ El widget proporciona una tabla de dos columnas para mostrar una lista de plataf
 
 ### [!UICONTROL Audiencias activadas en todos los destinos] {#activated-audiences-across-all-destinations}
 
-La variable [!UICONTROL Audiencias activadas en todos los destinos] proporciona el número total de audiencias activadas en todos los destinos de una única métrica. Este número es preciso para la instantánea más reciente.
+La variable [!UICONTROL Audiencias activadas en todos los destinos] proporciona el número total de audiencias activadas en todos los destinos de una única métrica. Este widget muestra el recuento de audiencias y no el de segmentos. Este número es preciso para la instantánea más reciente.
 
 ![La utilidad Audiencias activadas en todos los destinos .](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Select **[!UICONTROL Audiencias]** para navegar a los destinos [!UICONTROL Examinar] pestaña . Esta página proporciona una lista de todos los destinos habilitados y una variedad de métricas relevantes. Consulte la documentación para [más información sobre [!UICONTROL Examinar] ficha](../../destinations/ui/destinations-workspace.md#browse).
+Select **[!UICONTROL Audiencias]** para navegar a los destinos [!UICONTROL Examinar] pestaña . Esta página proporciona una lista de todos los destinos habilitados y una variedad de métricas relevantes. Consulte la documentación para obtener más información sobre la [[!UICONTROL Examinar] ficha](../../destinations/ui/destinations-workspace.md#browse).
+
+Consulte la sección de requisitos previos para [definiciones de los términos utilizados](#prerequisites) en esta descripción.
 
 ### [!UICONTROL Audiencias activadas] {#activated-audiences}
 
@@ -276,6 +292,8 @@ Select **[!UICONTROL Audiencias]** para navegar a la página de detalles del pan
 ![La página de detalles del panel de destinos con la pestaña de datos de activación resaltada.](../images/destinations/activation-data-tab.png)
 
 Esta utilidad le ayuda a comprender el valor de los destinos en función del número de audiencias activadas de un vistazo. También facilita el acceso a información más detallada para su análisis posterior.
+
+Consulte la sección de requisitos previos para [definiciones de los términos utilizados](#prerequisites) en esta descripción.
 
 ## Pasos siguientes
 
