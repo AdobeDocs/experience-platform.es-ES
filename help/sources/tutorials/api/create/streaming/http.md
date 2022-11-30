@@ -1,59 +1,34 @@
 ---
 keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de api;tutorial;crear una conexión de flujo continuo;ingesta de flujo continuo;ingesta;
-solution: Experience Platform
 title: Creación de una conexión de flujo de API HTTP mediante la API
-topic-legacy: tutorial
-type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d4889a302edbcdbe3f4a969a616c2fbc52f6c556
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 3%
+source-wordcount: '1415'
+ht-degree: 4%
 
 ---
 
 
-# Creación de [!DNL HTTP API] conexión de flujo continuo mediante la API
+# Creación de una conexión de flujo continuo de API HTTP mediante el [!DNL Flow Service] API
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para ayudarle a crear una conexión de flujo continuo mediante la API de servicio de flujo.
+Este tutorial utiliza la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para guiarle por los pasos necesarios para crear una conexión de flujo continuo mediante el [!DNL Flow Service] API.
 
 ## Primeros pasos
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil unificado y de cliente en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil unificado y de cliente en tiempo real basado en datos agregados de varias fuentes.
 
 Además, la creación de una conexión de flujo continuo requiere que tenga un esquema XDM de destino y un conjunto de datos. Para aprender a crearlos, lea el tutorial sobre [datos de registro de flujo continuo](../../../../../ingestion/tutorials/streaming-record-data.md) o el tutorial en [transmisión de datos de series temporales](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas correctamente a las API de ingesta de transmisión.
+### Uso de las API de plataforma
 
-### Leer llamadas de API de ejemplo
-
-Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
-
-### Recopilar valores para encabezados necesarios
-
-Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
-
-- Autorización: Portador `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
-
-Todos los recursos de [!DNL Experience Platform], incluidas las pertenecientes a [!DNL Flow Service], están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../../../../sandboxes/home.md).
-
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
-
-- Content-Type: application/json
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
 ## Creación de una conexión base
 
@@ -63,6 +38,8 @@ Una conexión base especifica el origen y contiene la información necesaria par
 
 Las conexiones no autenticadas son la conexión de flujo estándar que puede crear cuando desee transmitir datos a Platform.
 
+Para crear una conexión base no autenticada, realice una solicitud de POST al `/connections` al proporcionar un nombre para la conexión, el tipo de datos y el ID de especificación de conexión de la API HTTP. Este ID es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+
 **Formato de API**
 
 ```http
@@ -71,7 +48,11 @@ POST /flowservice/connections
 
 **Solicitud**
 
-Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud del POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+La siguiente solicitud crea una conexión base para la API HTTP.
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -81,29 +62,55 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
-     "connectionSpec": {
-         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-         "version": "1.0"
-     },
-     "auth": {
-         "specName": "Streaming Connection",
-         "params": {
-             "sourceId": "Sample connection",
-             "dataType": "xdm",
-             "name": "Sample connection"
-         }
-     }
- }'
+    "name": "ACME Streaming Connection XDM Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "xdm"
+      }
+    }
+  }'
 ```
 
+>[!TAB Datos sin procesar]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "name": "ACME Streaming Connection Raw Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "raw"
+      }
+    }
+  }'
+```
+
+>[!ENDTABS]
+
 | Propiedad | Descripción |
-| -------- | ----------- |
-| `auth.params.sourceId` | El ID de la conexión de flujo continuo que desea crear. |
-| `auth.params.dataType` | Tipo de datos de la conexión de flujo continuo. Este valor debe ser `xdm`. |
+| --- | --- |
+| `name` | Nombre de la conexión base. Asegúrese de que el nombre sea descriptivo, ya que puede utilizarlo para buscar información en la conexión base. |
+| `description` | (Opcional) Una propiedad que puede incluir para proporcionar más información sobre la conexión base. |
+| `connectionSpec.id` | El ID de especificación de conexión que corresponde a la API HTTP. Este ID es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
+| `auth.params.dataType` | Tipo de datos de la conexión de flujo continuo. Los valores admitidos son: `xdm` y `raw`. |
 | `auth.params.name` | Nombre de la conexión de flujo continuo que desea crear. |
-| `connectionSpec.id` | Especificación de conexión `id` para conexiones de flujo continuo. |
 
 **Respuesta**
 
@@ -111,19 +118,22 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la conexión 
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `id` | La variable `id` de la conexión recién creada. Esto se denominará `{CONNECTION_ID}`. |
-| `etag` | Identificador asignado a la conexión, que especifica la revisión de la conexión. |
+| `id` | La variable `id` de la conexión base recién creada. |
+| `etag` | Identificador asignado a la conexión, que especifica la versión de la conexión base. |
 
 ### Conexión autenticada
 
 Las conexiones autenticadas deben usarse cuando necesite diferenciar entre registros procedentes de fuentes de confianza y de las que no es de confianza. Los usuarios que deseen enviar información con Información de identificación personal (PII) deben crear una conexión autenticada al transmitir información a Platform.
+
+Para crear una conexión base autenticada, debe especificar su ID de origen y si se requiere autenticación al realizar una solicitud de POST al `/connections` punto final.
+
 
 **Formato de API**
 
@@ -133,7 +143,11 @@ POST /flowservice/connections
 
 **Solicitud**
 
-Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud del POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+La siguiente solicitud crea una conexión base autenticada para la API HTTP.
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -143,8 +157,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
+     "name": "ACME Streaming Connection XDM Data Authenticated",
+     "description": "ACME streaming connection for customer data",
      "connectionSpec": {
          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
          "version": "1.0"
@@ -152,7 +166,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "{SOURCE_ID}",
              "dataType": "xdm",
              "name": "Sample connection",
              "authenticationRequired": true
@@ -161,14 +175,40 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  }
 ```
 
+>[!TAB Datos sin procesar]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+     "name": "ACME Streaming Connection Raw Data Authenticated",
+     "description": "ACME streaming connection for customer data",
+     "connectionSpec": {
+         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+         "version": "1.0"
+     },
+     "auth": {
+         "specName": "Streaming Connection",
+         "params": {
+             "sourceId": "Sample connection",
+             "dataType": "raw",
+             "name": "Sample connection",
+             "authenticationRequired": true
+         }
+     }
+ }
+```
+
+>[!ENDTABS]
 
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `auth.params.sourceId` | El ID de la conexión de flujo continuo que desea crear. |
-| `auth.params.dataType` | Tipo de datos de la conexión de flujo continuo. Este valor debe ser `xdm`. |
-| `auth.params.name` | Nombre de la conexión de flujo continuo que desea crear. |
 | `auth.params.authenticationRequired` | El parámetro que especifica que la conexión de flujo continuo creada |
-| `connectionSpec.id` | Especificación de conexión `id` para conexiones de flujo continuo. |
 
 **Respuesta**
 
@@ -176,15 +216,10 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la conexión 
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
-
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `id` | La variable `id` de la conexión recién creada. Esto se denominará `{CONNECTION_ID}`. |
-| `etag` | Identificador asignado a la conexión, que especifica la revisión de la conexión. |
 
 ## Obtener URL de extremo de flujo continuo
 
@@ -193,17 +228,17 @@ Con la conexión base creada, ahora puede recuperar la URL del extremo de flujo 
 **Formato de API**
 
 ```http
-GET /flowservice/connections/{CONNECTION_ID}
+GET /flowservice/connections/{BASE_CONNECTION_ID}
 ```
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | La variable `id` de la conexión que ha creado anteriormente. |
+| `{BASE_CONNECTION_ID}` | La variable `id` de la conexión que ha creado anteriormente. |
 
 **Solicitud**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID} \
+curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -216,42 +251,46 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ```json
 {
-    "items": [
-        {
-            "createdAt": 1583971856947,
-            "updatedAt": 1583971856947,
-            "createdBy": "{API_KEY}",
-            "updatedBy": "{API_KEY}",
-            "createdClient": "{USER_ID}",
-            "updatedClient": "{USER_ID}",
-            "id": "77a05521-91d6-451c-a055-2191d6851c34",
-            "name": "Another new sample connection (Experience Event)",
-            "description": "Sample description",
-            "connectionSpec": {
-                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "Streaming Connection",
-                "params": {
-                    "sourceId": "Sample connection (ExperienceEvent)",
-                    "inletUrl": "https://dcs.adobedc.net/collection/a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "inletId": "a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "dataType": "xdm",
-                    "name": "Sample connection (ExperienceEvent)"
-                }
-            },
-            "version": "\"56008aee-0000-0200-0000-5e697e150000\"",
-            "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
+  "items": [
+    {
+      "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+      "createdAt": 1669238699119,
+      "updatedAt": 1669238699119,
+      "createdBy": "acme@AdobeID",
+      "updatedBy": "acme@AdobeID",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATEDD_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_ID}}",
+      "name": "ACME Streaming Connection XDM Data",
+      "description": "ACME streaming connection for customer data",
+      "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+      },
+      "state": "enabled",
+      "auth": {
+        "specName": "Streaming Connection",
+        "params": {
+          "sourceId": "ACME Streaming Connection XDM Data",
+          "inletUrl": "https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "authenticationRequired": false,
+          "inletId": "667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "dataType": "xdm",
+          "name": "ACME Streaming Connection XDM Data"
         }
-    ]
+      },
+      "version": "\"f50185ed-0000-0200-0000-637e8fad0000\"",
+      "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
+    }
+  ]
 }
 ```
 
 ## Crear una conexión de origen {#source}
 
-Después de crear la conexión base, deberá crear una conexión de origen. Al crear una conexión de origen, necesitará la variable `id` de la conexión base creada.
+Para crear una conexión de origen, realice una solicitud de POST al `/sourceConnections` al proporcionar su ID de conexión base.
 
 **Formato de API**
 
@@ -270,14 +309,14 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample source connection",
-    "description": "Sample source connection description",
-    "baseConnectionId": "{BASE_CONNECTION_ID}",
-    "connectionSpec": {
-        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-        "version": "1.0"
-    }
-}'
+      "name": "ACME Streaming Source Connection for Customer Data",
+      "description": "A streaming source connection for ACME XDM Customer Data",
+      "baseConnectionId": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+      "connectionSpec": {
+          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+          "version": "1.0"
+      }
+    }'
 ```
 
 **Respuesta**
@@ -286,8 +325,8 @@ Una respuesta correcta devuelve el estado HTTP 201 con información detallada de
 
 ```json
 {
-    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
-    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+  "id": "34ece231-294d-416c-ad2a-5a5dfb2bc69f",
+  "etag": "\"d505125b-0000-0200-0000-637eb7790000\""
 }
 ```
 
@@ -307,9 +346,7 @@ Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinat
 
 ## Creación de una conexión de destino {#target}
 
-Una conexión de destino representa la conexión con el destino en el que llegan los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija asociado al lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
-
-Ahora tiene los identificadores únicos, un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino utilizando la variable [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Una conexión de destino representa la conexión con el destino en el que llegan los datos introducidos. Para crear una conexión de destino, realice una solicitud de POST a `/targetConnections` al proporcionar ID para el conjunto de datos de target y el esquema XDM de target. Durante este paso, también debe proporcionar el ID de especificación de conexión del lago de datos. Este ID es `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Formato de API**
 
@@ -328,19 +365,22 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample target connection",
-    "description": "Sample target connection description",
-    "connectionSpec": {
-        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-        "version": "1.0"
-    },
-    "data": {
-        "format": "parquet_xdm"
-    },
-    "params": {
-        "dataSetId": "{DATASET_ID}"
-    }
-}'
+      "name": "ACME Streaming Target Connection",
+      "description": "ACME Streaming Target Connection",
+      "data": {
+          "schema": {
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "version": "application/vnd.adobe.xed-full+json;version=1.0"
+          }
+      },
+      "params": {
+          "dataSetId": "637eb7fadc8a211b6312b65b"
+      },
+          "connectionSpec": {
+          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+          "version": "1.0"
+      }
+  }'
 ```
 
 **Respuesta**
@@ -349,8 +389,8 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la conexión 
 
 ```json
 {
-    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
-    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+  "id": "07f2f6ff-1da5-4704-916a-c615b873cba9",
+  "etag": "\"340680f7-0000-0200-0000-637eb8730000\""
 }
 ```
 
@@ -370,31 +410,31 @@ POST /mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "version": 0,
-        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-        "xdmVersion": "1.0",
-        "mappings": [
-            {
-                "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "firstName",
-                "identity": false,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "lastName",
-                "identity": false,
-                "version": 0
-            }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "version": 0,
+      "xdmSchema": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+      "xdmVersion": "1.0",
+      "mappings": [
+          {
+              "destinationXdmPath": "person.name.firstName",
+              "sourceAttribute": "firstName",
+              "identity": false,
+              "version": 0
+          },
+          {
+              "destinationXdmPath": "person.name.lastName",
+              "sourceAttribute": "lastName",
+              "identity": false,
+              "version": 0
+          }
+      ]
+  }'
 ```
 
 | Propiedad | Descripción |
@@ -407,14 +447,17 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ```json
 {
-    "id": "380b032b445a46008e77585e046efe5e",
-    "version": 0,
-    "createdDate": 1604960750613,
-    "modifiedDate": 1604960750613,
-    "createdBy": "{CREATED_BY}",
-    "modifiedBy": "{MODIFIED_BY}"
+  "id": "79a623960d3f4969835c9e00dc90c8df",
+  "version": 0,
+  "createdDate": 1669249214031,
+  "modifiedDate": 1669249214031,
+  "createdBy": "acme@AdobeID",
+  "modifiedBy": "acme@AdobeID"
 }
 ```
+
+| Propiedad | Descripción |
+| --- | --- |
 
 ## Crear un flujo de datos
 
@@ -428,6 +471,10 @@ POST /flows
 
 **Solicitud**
 
+>[!BEGINTABS]
+
+>[!TAB Sin transformaciones]
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -437,33 +484,63 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name": "HTTP API streaming dataflow",
-        "description": "HTTP API streaming dataflow",
-        "flowSpec": {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "63070871-ec3f-4cb5-af47-cf7abb25e8bb"
-        ],
-        "targetConnectionIds": [
-            "98a2a72e-a80f-49ae-aaa3-4783cc9404c2"
-        ],
-        "transformations": [
-            {
-            "name": "Mapping",
-            "params": {
-                "mappingId": "380b032b445a46008e77585e046efe5e",
-                "mappingVersion": 0
-            }
-            }
-        ]
+      "name": "ACME Streaming Dataflow",
+      "description": "ACME streaming dataflow for customer data",
+      "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
+      ],
+      "targetConnectionIds": [
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
+      ]
     }'
 ```
 
+>[!TAB Con transformaciones]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "<name>",
+      "description": "<description>",
+      "flowSpec": {
+        "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
+      ],
+      "targetConnectionIds": [
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
+      ],
+      "transformations": [
+        {
+          "name": "Mapping",
+          "params": {
+            "mappingId": "79a623960d3f4969835c9e00dc90c8df",
+            "mappingVersion": 0
+          }
+        }
+      ]
+    }'
+```
+
+>[!ENDTABS]
+
 | Propiedad | Descripción |
 | --- | --- |
-| `flowSpec.id` | El ID de especificación de flujo para [!DNL HTTP API]. Este ID es: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `name` | El nombre del flujo de datos. Asegúrese de que el nombre del flujo de datos sea descriptivo, ya que puede utilizarlo para buscar información en el flujo de datos. |
+| `description` | (Opcional) Una propiedad que puede incluir para proporcionar más información sobre el flujo de datos. |
+| `flowSpec.id` | El ID de especificación de flujo para [!DNL HTTP API]. Para crear un flujo de datos con transformaciones, debe utilizar  `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. Para crear un flujo de datos sin transformaciones, utilice `d8a6f005-7eaf-4153-983e-e8574508b877`. |
 | `sourceConnectionIds` | La variable [ID de conexión de origen](#source) recuperado en un paso anterior. |
 | `targetConnectionIds` | La variable [ID de conexión de target](#target) recuperado en un paso anterior. |
 | `transformations.params.mappingId` | La variable [ID de asignación](#mapping) recuperado en un paso anterior. |
@@ -474,10 +551,113 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles del flujo de dat
 
 ```json
 {
-    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
-    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
+  "id": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+  "etag": "\"dc0459ae-0000-0200-0000-637ebaec0000\""
 }
 ```
+
+
+## Anuncie datos para incorporarlos a Platform {#ingest-data}
+
+Ahora que ha creado su flujo, puede enviar su mensaje JSON al extremo de flujo que creó anteriormente.
+
+**Formato de API**
+
+```http
+POST /collection/{INLET_URL}
+```
+
+| Parámetro | Descripción |
+| --------- | ----------- |
+| `{INLET_URL}` | Su URL de extremo de flujo continuo. Puede recuperar esta dirección URL realizando una solicitud de GET al `/connections` al proporcionar su ID de conexión base. |
+
+**Solicitud**
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+        "header": {
+          "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+          },
+          "flowId": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+          "datasetId": "604a18a3bae67d18db6d258c"
+        },
+        "body": {
+          "xdmMeta": {
+            "schemaRef": {
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+            }
+          },
+          "xdmEntity": {
+            "_id": "http-source-connector-acme-01",
+            "person": {
+              "name": {
+                "firstName": "suman",
+                "lastName": "nolan"
+              }
+            },
+            "workEmail": {
+              "primary": true,
+              "address": "suman@acme.com",
+              "type": "work",
+              "status": "active"
+            }
+          }
+        }
+      }'
+```
+
+>[!TAB Datos sin procesar]
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!ENDTABS]
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de la información recién ingerida.
+
+```json
+{
+    "inletId": "{BASE_CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `{BASE_CONNECTION_ID}` | El ID de la conexión de flujo continuo creada anteriormente. |
+| `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a los Adobes a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
+| `receivedTimeMs` | Marca de tiempo (época en milisegundos) que muestra la hora a la que se recibió la solicitud. |
+
 
 ## Pasos siguientes
 
@@ -507,59 +687,3 @@ Si la variable `Authorization` no está presente o se envía un token de acceso 
     }
 }
 ```
-
-### Publicar datos sin procesar para ingerirlos en Platform {#ingest-data}
-
-Ahora que ha creado su flujo, puede enviar su mensaje JSON al extremo de flujo que creó anteriormente.
-
-**Formato de API**
-
-```http
-POST /collection/{CONNECTION_ID}
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | La variable `id` de la conexión de flujo continuo recién creada. |
-
-**Solicitud**
-
-La solicitud de ejemplo ingesta datos sin procesar en el extremo de flujo que se creó anteriormente.
-
-```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
-  -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
-  -d '{
-      "name": "Johnson Smith",
-      "location": {
-          "city": "Seattle",
-          "country": "United State of America",
-          "address": "3692 Main Street"
-      },
-      "gender": "Male",
-      "birthday": {
-          "year": 1984,
-          "month": 6,
-          "day": 9
-      }
-  }'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de la información recién ingerida.
-
-```json
-{
-    "inletId": "{CONNECTION_ID}",
-    "xactionId": "1584479347507:2153:240",
-    "receivedTimeMs": 1584479347507
-}
-```
-
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `{CONNECTION_ID}` | El ID de la conexión de flujo continuo creada anteriormente. |
-| `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a los Adobes a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
-| `receivedTimeMs` | Marca de tiempo (época en milisegundos) que muestra la hora a la que se recibió la solicitud. |
