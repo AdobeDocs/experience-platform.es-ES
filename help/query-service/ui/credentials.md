@@ -5,9 +5,9 @@ title: Guía de credenciales del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,12 @@ ht-degree: 1%
 
 El servicio de consulta de Adobe Experience Platform le permite conectarse con clientes externos. Puede conectarse a estos clientes externos utilizando credenciales que caducan o credenciales que no caducan.
 
-## Credenciales de caducidad
+## Credenciales de caducidad {#expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_expiringcredentials"
+>title="Modo SSL del cliente"
+>abstract="SSL debe estar habilitado en los clientes conectados al servicio de consulta. Asegúrese de que el modo SSL esté configurado en &quot;Requisito&quot;."
 
 Puede utilizar las credenciales caducadas para configurar rápidamente una conexión con un cliente externo.
 
@@ -45,7 +50,7 @@ Para poder generar credenciales que no caduquen, debe completar los siguientes p
 3. [Configure ambas variables **Sandboxes** y **Administrar integración del servicio de consultas** permissions](../../access-control/ui/permissions.md) para el perfil de producto.
 4. [Agregar un nuevo usuario a un perfil de producto](../../access-control/ui/users.md) por lo tanto, se les conceden los permisos configurados.
 5. [Agregar el usuario como administrador de perfil de producto](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) para permitir la creación de cuentas para cualquier perfil de producto activo.
-6. [Agregar el usuario como desarrollador de perfiles de producto](https://helpx.adobe.com/enterprise/using/manage-developers.html) para crear una integración.
+6. [Agregar el usuario como desarrollador de perfiles de producto](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) para crear una integración.
 
 Para obtener más información sobre cómo asignar permisos, lea la documentación de [control de acceso](../../access-control/home.md).
 
@@ -96,7 +101,7 @@ Al editar una credencial que no caduca, aparece un modal. Puede proporcionar los
 
 Una vez que haya proporcionado todos los detalles requeridos, seleccione **[!UICONTROL Actualizar cuenta]** para completar la actualización de sus credenciales.
 
-## Uso de credenciales para conectarse a clientes externos
+## Usar credenciales para conectarse a clientes externos {#use-credential-to-connect}
 
 Puede utilizar las credenciales que caducan o que no caducan para conectarse con clientes externos, como Aqua Data Studio, Looker o Power BI. El método de entrada para estas credenciales variará según el cliente externo. Consulte la documentación del cliente externo para obtener instrucciones específicas sobre el uso de estas credenciales.
 
