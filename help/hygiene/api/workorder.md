@@ -1,32 +1,32 @@
 ---
 title: Punto final de la API del pedido de trabajo
-description: El extremo /workorder de la API de higiene de datos permite administrar mediante programación las tareas de eliminación para las identidades de los consumidores.
+description: El extremo /workorder de la API de higiene de datos permite administrar mediante programación las tareas de eliminación de identidades.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1029'
 ht-degree: 5%
 
 ---
 
 # Punto final del pedido de trabajo
 
-La variable `/workorder` en la API de higiene de datos le permite administrar mediante programación las solicitudes de eliminación de consumidores en Adobe Experience Platform.
+La variable `/workorder` en la API de higiene de datos le permite administrar mediante programación solicitudes de eliminación de registros en Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Las solicitudes de eliminación de consumidores solo están disponibles para las organizaciones que han comprado **Adobe Escudo Sanitario**.
+>Las solicitudes de eliminación de registros solo están disponibles para las organizaciones que han comprado **Adobe Escudo Sanitario**.
 >
 >
->Las eliminaciones de consumidores están pensadas para utilizarse en la limpieza de datos, la eliminación de datos anónimos o la minimización de datos. Son **not** para su uso en solicitudes de derechos de interesados (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento de normas, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
+>Las eliminaciones de registros están pensadas para utilizarse en la limpieza de datos, la eliminación de datos anónimos o la minimización de datos. Son **not** para su uso en solicitudes de derechos de interesados (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento de normas, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
 ## Primeros pasos
 
 El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, revise la [información general](./overview.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
-## Crear una solicitud de eliminación de consumidor {#delete-consumers}
+## Crear una solicitud de eliminación de registro {#create}
 
-Puede eliminar una o más identidades de consumidores de un único conjunto de datos o de todos los conjuntos de datos realizando una solicitud de POST al `/workorder` punto final.
+Puede eliminar una o más identidades de un único conjunto de datos o de todos los conjuntos de datos realizando una solicitud de POST al `/workorder` punto final.
 
 **Formato de API**
 
@@ -36,7 +36,7 @@ POST /workorder
 
 **Solicitud**
 
-Según el valor de la variable `datasetId` proporcionado en la carga útil de la solicitud, la llamada de API eliminará las identidades de consumidor de todos los conjuntos de datos o de un único conjunto de datos que especifique. La siguiente solicitud elimina tres identidades de consumidor de un conjunto de datos específico.
+Según el valor de la variable `datasetId` proporcionado en la carga útil de la solicitud, la llamada de API eliminará identidades de todos los conjuntos de datos o de un único conjunto de datos que especifique. La siguiente solicitud elimina tres identidades de un conjunto de datos específico.
 
 ```shell
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
   -d '{
         "action": "delete_identity",
         "datasetId": "c48b51623ec641a2949d339bad69cb15",
-        "displayName": "Example Consumer Delete Request",
+        "displayName": "Example Record Delete Request",
         "description": "Cleanup identities required by Jira request 12345.",
         "identities": [
           {
@@ -76,17 +76,17 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `action` | La acción que se va a realizar. El valor debe establecerse en `delete_identity` para eliminaciones de consumidores. |
+| `action` | La acción que se va a realizar. El valor debe establecerse en `delete_identity` para eliminaciones de registros. |
 | `datasetId` | Si va a eliminar de un único conjunto de datos, este valor debe ser el ID del conjunto de datos en cuestión. Si va a eliminar de todos los conjuntos de datos, establezca el valor en `ALL`.<br><br>Si especifica un único conjunto de datos, el esquema del Modelo de datos de experiencia (XDM) asociado al conjunto de datos debe tener definida una identidad principal. |
-| `displayName` | Nombre para mostrar de la solicitud de eliminación de consumidor. |
-| `description` | Descripción de la solicitud de eliminación de consumidor. |
+| `displayName` | El nombre para mostrar de la solicitud de eliminación de registros. |
+| `description` | Descripción de la solicitud de eliminación de registros. |
 | `identities` | Matriz que contiene las identidades de al menos un usuario cuya información desea eliminar. Cada identidad consta de un [área de nombres de identidad](../../identity-service/namespaces.md) y un valor:<ul><li>`namespace`: Contiene una propiedad de cadena única, `code`, que representa el área de nombres de identidad. </li><li>`id`: El valor de identidad.</ul>If `datasetId` especifica un conjunto de datos único, cada entidad de `identities` debe utilizar el mismo área de nombres de identidad que la identidad principal del esquema.<br><br>If `datasetId` está configurado como `ALL`, el `identities` matriz no está restringida a un solo espacio de nombres, ya que cada conjunto de datos puede ser diferente. Sin embargo, las solicitudes siguen restringiendo los espacios de nombres disponibles para su organización, tal y como informa [Servicio de identidad](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la eliminación del consumidor.
+Una respuesta correcta devuelve los detalles de la eliminación del registro.
 
 ```json
 {
@@ -99,7 +99,7 @@ Una respuesta correcta devuelve los detalles de la eliminación del consumidor.
   "status": "received",
   "createdBy": "{USER_ID}",
   "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Consumer Delete Request",
+  "displayName": "Example Record Delete Request",
   "description": "Cleanup identities required by Jira request 12345."
 }
 ```
@@ -109,7 +109,7 @@ Una respuesta correcta devuelve los detalles de la eliminación del consumidor.
 | `workorderId` | El ID del orden de eliminación. Se puede utilizar para buscar el estado de la eliminación más adelante. |
 | `orgId` | Su ID de organización. |
 | `bundleId` | El ID del paquete al que está asociada esta orden de eliminación, utilizado para la depuración. Los servicios descendentes agrupan varios pedidos de eliminación para procesarlos. |
-| `action` | Acción que realiza la orden de trabajo. Para las eliminaciones de consumidores, el valor es `identity-delete`. |
+| `action` | Acción que realiza la orden de trabajo. Para eliminaciones de registros, el valor es `identity-delete`. |
 | `createdAt` | Marca de tiempo del momento en que se creó el pedido de eliminación. |
 | `updatedAt` | Marca de fecha y hora de la última actualización del pedido de eliminación. |
 | `status` | Estado actual del orden de eliminación. |
@@ -118,9 +118,9 @@ Una respuesta correcta devuelve los detalles de la eliminación del consumidor.
 
 {style=&quot;table-layout:auto&quot;}
 
-## Recuperar el estado de una eliminación de consumidor (#lookup)
+## Recuperar el estado de una eliminación de registro (#lookup)
 
-Después [creación de una solicitud de eliminación de consumidor](#delete-consumers), puede comprobar su estado mediante una solicitud de GET.
+Después [creación de una solicitud de eliminación de registro](#create), puede comprobar su estado mediante una solicitud de GET.
 
 **Formato de API**
 
@@ -130,7 +130,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{WORK_ORDER_ID}` | La variable `workorderId` del cliente elimine que está buscando. |
+| `{WORK_ORDER_ID}` | La variable `workorderId` de la eliminación de registro que está buscando. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -160,7 +160,7 @@ Una respuesta correcta devuelve los detalles de la operación de eliminación, i
   "status": "received",
   "createdBy": "{USER_ID}",
   "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Consumer Delete Request",
+  "displayName": "Example Record Delete Request",
   "description": "Cleanup identities required by Jira request 12345.",
   "productStatusDetails": [
     {
@@ -187,7 +187,7 @@ Una respuesta correcta devuelve los detalles de la operación de eliminación, i
 | `workorderId` | El ID del orden de eliminación. Se puede utilizar para buscar el estado de la eliminación más adelante. |
 | `orgId` | Su ID de organización. |
 | `bundleId` | El ID del paquete al que está asociada esta orden de eliminación, utilizado para la depuración. Los servicios descendentes agrupan varios pedidos de eliminación para procesarlos. |
-| `action` | Acción que realiza la orden de trabajo. Para las eliminaciones de consumidores, el valor es `identity-delete`. |
+| `action` | Acción que realiza la orden de trabajo. Para eliminaciones de registros, el valor es `identity-delete`. |
 | `createdAt` | Marca de tiempo del momento en que se creó el pedido de eliminación. |
 | `updatedAt` | Marca de fecha y hora de la última actualización del pedido de eliminación. |
 | `status` | Estado actual del orden de eliminación. |
@@ -195,9 +195,9 @@ Una respuesta correcta devuelve los detalles de la operación de eliminación, i
 | `datasetId` | El ID del conjunto de datos que está sujeto a la solicitud. Si la solicitud es para todos los conjuntos de datos, el valor se establecerá en `ALL`. |
 | `productStatusDetails` | Matriz que enumera el estado actual de los procesos descendentes relacionados con la solicitud. Cada objeto de matriz contiene las siguientes propiedades:<ul><li>`productName`: Nombre del servicio descendente.</li><li>`productStatus`: Estado de procesamiento actual de la solicitud desde el servicio descendente.</li><li>`createdAt`: Marca de fecha y hora en la que el servicio anunció el estado más reciente.</li></ul> |
 
-## Actualizar una solicitud de eliminación de consumidor
+## Actualizar una solicitud de eliminación de registro
 
-Puede actualizar el `displayName` y `description` para eliminar un cliente realizando una solicitud de PUT.
+Puede actualizar el `displayName` y `description` para eliminar un registro realizando una solicitud de PUT.
 
 **Formato de API**
 
@@ -207,7 +207,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{WORK_ORDER_ID}` | La variable `workorderId` del cliente elimine que está buscando. |
+| `{WORK_ORDER_ID}` | La variable `workorderId` de la eliminación de registro que está buscando. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -228,14 +228,14 @@ curl -X GET \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `displayName` | Un nombre para mostrar actualizado para la solicitud de eliminación de consumidor. |
-| `description` | Una descripción actualizada de la solicitud de eliminación de consumidor. |
+| `displayName` | Un nombre para mostrar actualizado para la solicitud de eliminación de registros. |
+| `description` | Descripción actualizada de la solicitud de eliminación de registros. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la eliminación del consumidor.
+Una respuesta correcta devuelve los detalles de la eliminación del registro.
 
 ```json
 {
@@ -275,7 +275,7 @@ Una respuesta correcta devuelve los detalles de la eliminación del consumidor.
 | `workorderId` | El ID del orden de eliminación. Se puede utilizar para buscar el estado de la eliminación más adelante. |
 | `orgId` | Su ID de organización. |
 | `bundleId` | El ID del paquete al que está asociada esta orden de eliminación, utilizado para la depuración. Los servicios descendentes agrupan varios pedidos de eliminación para procesarlos. |
-| `action` | Acción que realiza la orden de trabajo. Para las eliminaciones de consumidores, el valor es `identity-delete`. |
+| `action` | Acción que realiza la orden de trabajo. Para eliminaciones de registros, el valor es `identity-delete`. |
 | `createdAt` | Marca de tiempo del momento en que se creó el pedido de eliminación. |
 | `updatedAt` | Marca de fecha y hora de la última actualización del pedido de eliminación. |
 | `status` | Estado actual del orden de eliminación. |

@@ -1,10 +1,10 @@
 ---
 title: Información general de la Consola de privacidad
 description: Obtenga información sobre cómo monitorizar los flujos de trabajo relacionados con la privacidad en la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: 4fa1b826d033ace6536af920b070e8eebbbf401c
+source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ La función de cada utilidad se explica a continuación:
 
 | Nombre del widget | Descripción |
 | --- | --- |
-| Estado de la orden de trabajo de higiene de datos | Muestra los estados de los procesos de eliminación de consumidores en [Higiene de los datos](../../hygiene/home.md) para el lapso de tiempo seleccionado. Utilice el menú desplegable para cambiar el intervalo de tiempo entre los últimos 7 días, 14 días y 30 días. |
+| Estado de la orden de trabajo de higiene de datos | Muestra los estados de los procesos de eliminación de registros en [Higiene de los datos](../../hygiene/home.md) para el lapso de tiempo seleccionado. Utilice el menú desplegable para cambiar el intervalo de tiempo entre los últimos 7 días, 14 días y 30 días. |
 | Órdenes de trabajo recientes sobre higiene de datos | Muestra el más reciente [Higiene de los datos](../../hygiene/home.md) órdenes de trabajo que está procesando el sistema. Utilice la lista desplegable para cambiar entre las órdenes de trabajo creadas recientemente y las actualizadas recientemente. |
 | Acciones más frecuentes | Muestra las acciones más frecuentes en Platform según la captura de [registros de auditoría](./audit-logs/overview.md) para el lapso de tiempo seleccionado. Utilice el menú desplegable para cambiar el intervalo de tiempo entre los últimos 7 días, 14 días y 30 días. |
 | Usuarios más activos | Muestra los usuarios de Platform más activos de su organización según la captura de [registros de auditoría](./audit-logs/overview.md) para el lapso de tiempo seleccionado. Utilice el menú desplegable para cambiar el intervalo de tiempo entre los últimos 7 días, 14 días y 30 días. |
@@ -52,6 +52,6 @@ Para obtener más información sobre los distintos servicios de Platform que se 
 
 * [Control de acceso basado en atributos](../../access-control/abac/overview.md)
 * [Registros de auditoría](./audit-logs/overview.md)
-* [Gobierno de datos](../../data-governance/home.md)
+* [Control de datos](../../data-governance/home.md)
 * [Higiene de los datos](../../hygiene/home.md)
 * [Privacy Service](../../privacy-service/home.md)

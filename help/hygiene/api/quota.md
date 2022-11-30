@@ -1,9 +1,10 @@
 ---
 title: Punto final de API de cuota
 description: El extremo /quotas de la API de higiene de datos le permite supervisar el uso de la higiene de los datos en relación con los límites de cuota mensual de la organización para cada tipo de trabajo.
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
+source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '350'
 ht-degree: 3%
 
 ---
@@ -18,7 +19,7 @@ La variable `/quota` en la API de higiene de datos le permite supervisar el uso 
 
 Las cuotas se aplican para cada tipo de trabajo de higiene de datos de las siguientes maneras:
 
-* Las eliminaciones de consumidores y las actualizaciones de campo se limitan a un determinado número de solicitudes cada mes.
+* Las eliminaciones y actualizaciones de registros se limitan a un determinado número de solicitudes cada mes.
 * Las caducidades de los conjuntos de datos tienen un límite fijo para el número de trabajos activos simultáneamente, independientemente de cuándo se ejecutarán las caducidades.
 
 ## Primeros pasos
@@ -42,7 +43,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUOTA_TYPE}` | Un parámetro de consulta opcional que especifica el tipo de cuota que se recuperará. Si no `quotaType` se proporciona, todos los valores de cuota se devuelven en la respuesta de API. Los valores de tipo aceptados incluyen:<ul><li>`expirationDatasetQuota`: Caducidad de conjuntos de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: Eliminaciones de consumidores</li><li>`fieldUpdateWorkOrderDatasetQuota`: Actualizaciones de campo</li></ul> |
+| `{QUOTA_TYPE}` | Un parámetro de consulta opcional que especifica el tipo de cuota que se recuperará. Si no `quotaType` se proporciona, todos los valores de cuota se devuelven en la respuesta de API. Los valores de tipo aceptados incluyen:<ul><li>`expirationDatasetQuota`: Caducidad de conjuntos de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: Eliminar registros</li><li>`fieldUpdateWorkOrderDatasetQuota`: Registrar actualizaciones</li></ul> |
 
 **Solicitud**
 
@@ -70,7 +71,7 @@ Una respuesta correcta devuelve los detalles de sus cuotas de higiene de datos.
     },
     {
       "name": "deleteIdentityWorkOrderQuota",
-      "description": "The number of Consumer Delete Work Order requests for the organization for this month.",
+      "description": "The number of Record Delete Work Order requests for the organization for this month.",
       "consumed": 390,
       "quota": 10000
     }
@@ -80,6 +81,6 @@ Una respuesta correcta devuelve los detalles de sus cuotas de higiene de datos.
 
 | Propiedad | Descripción |
 | --- | --- |
-| `quotas` | Muestra la información de cuota de cada tipo de trabajo de higiene de datos. Cada objeto de cuota contiene las siguientes propiedades:<ul><li>`name`: Tipo de trabajo de higiene de datos:<ul><li>`expirationDatasetQuota`: Caducidad de conjuntos de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: Eliminaciones de consumidores</li></ul></li><li>`description`: Descripción del tipo de trabajo de higiene de datos.</li><li>`consumed`: Número de trabajos de este tipo ejecutados en el periodo mensual actual.</li><li>`quota`: Límite de cuota para este tipo de trabajo. Para las eliminaciones de consumidores y las actualizaciones de campo, esto representa el número de trabajos que se pueden ejecutar para cada período mensual. Para las caducidades de los conjuntos de datos, esto representa el número de trabajos que pueden estar activos simultáneamente en un momento determinado.</li></ul> |
+| `quotas` | Muestra la información de cuota de cada tipo de trabajo de higiene de datos. Cada objeto de cuota contiene las siguientes propiedades:<ul><li>`name`: Tipo de trabajo de higiene de datos:<ul><li>`expirationDatasetQuota`: Caducidad de conjuntos de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: Eliminar registros</li></ul></li><li>`description`: Descripción del tipo de trabajo de higiene de datos.</li><li>`consumed`: Número de trabajos de este tipo ejecutados en el periodo mensual actual.</li><li>`quota`: Límite de cuota para este tipo de trabajo. Para las eliminaciones y actualizaciones de registros, esto representa el número de trabajos que se pueden ejecutar para cada período mensual. Para las caducidades de los conjuntos de datos, esto representa el número de trabajos que pueden estar activos simultáneamente en un momento determinado.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}

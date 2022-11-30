@@ -2,7 +2,7 @@
 title: Examinar órdenes de trabajo de higiene de los datos
 description: Aprenda a ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Al acceder por primera vez a la variable **[!UICONTROL Higiene de los datos]** e
 
 ![Imagen que muestra la variable [!UICONTROL Higiene de los datos] espacio de trabajo en la interfaz de usuario de Platform](../images/ui/browse/work-order-list.png)
 
-La lista solo muestra los pedidos de trabajo de una categoría a la vez. Select **[!UICONTROL Consumidor]** para ver una lista de tareas de eliminación de consumidores, y **[!UICONTROL Conjunto de datos]** para ver una lista de caducidades programadas del conjunto de datos.
+La lista solo muestra los pedidos de trabajo de una categoría a la vez. Select **[!UICONTROL Consumidor]** para ver una lista de tareas de eliminación de registros, y **[!UICONTROL Conjunto de datos]** para ver una lista de caducidades programadas del conjunto de datos.
 
 ![Imagen que muestra la variable [!UICONTROL Conjunto de datos] ficha](../images/ui/browse/dataset-tab.png)
 
@@ -41,9 +41,9 @@ Seleccione el icono de canal (![Imagen del icono del canal](../images/ui/browse/
 
 Según el tipo de orden de trabajo que visualice, hay diferentes opciones de filtro disponibles.
 
-### Filtros para eliminaciones de consumidores
+### Filtros para las eliminaciones de registros
 
-Los filtros siguientes se aplican a las solicitudes de eliminación de consumidores:
+Los filtros siguientes se aplican para registrar solicitudes de eliminación:
 
 | Filtro | Descripción |
 | --- | --- |
@@ -78,8 +78,8 @@ Los filtros siguientes se aplican a las solicitudes de caducidad del conjunto de
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Respuesta de eliminación del consumidor"
->abstract="Cuando un proceso de eliminación de consumidores recibe una respuesta del sistema, estos mensajes se muestran en la sección **[!UICONTROL Resultado]** para obtener más información. Si se produce un problema mientras se procesa una orden de trabajo, en esta sección aparecerán mensajes de error relevantes para ayudarle a solucionar el problema. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
+>title="Respuesta de eliminación de registros"
+>abstract="Cuando un proceso de eliminación de registros recibe una respuesta del sistema, estos mensajes se muestran en la sección **[!UICONTROL Resultado]** para obtener más información. Si se produce un problema mientras se procesa una orden de trabajo, en esta sección aparecerán mensajes de error relevantes para ayudarle a solucionar el problema. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
 
 Seleccione el ID de una orden de trabajo enumerada para ver sus detalles.
 
@@ -87,11 +87,11 @@ Seleccione el ID de una orden de trabajo enumerada para ver sus detalles.
 
 Según el tipo de orden de trabajo seleccionado, se proporciona información y controles diferentes. Se tratan en las secciones siguientes.
 
-### Detalles de eliminación de clientes {#consumer-delete}
+### Registrar detalles de eliminación {#record-delete}
 
-Los detalles de una solicitud de eliminación de consumidor incluyen su estado actual y el tiempo transcurrido desde que se realizó la solicitud. Cada solicitud también incluye un **[!UICONTROL Estado por servicio]** que proporciona detalles de estado individuales sobre cada servicio de flujo descendente involucrado en la eliminación. En el carril derecho, puede utilizar controles para actualizar el nombre y la descripción de la orden de trabajo.
+Los detalles de una solicitud de eliminación de registros incluyen su estado actual y el tiempo transcurrido desde que se realizó la solicitud. Cada solicitud también incluye un **[!UICONTROL Estado por servicio]** que proporciona detalles de estado individuales sobre cada servicio de flujo descendente involucrado en la eliminación. En el carril derecho, puede utilizar controles para actualizar el nombre y la descripción de la orden de trabajo.
 
-![Imagen que muestra la página de detalles de una orden de trabajo de eliminación de consumidor](../images/ui/browse/consumer-delete-details.png)
+![Imagen que muestra la página de detalles de una orden de trabajo de eliminación de registros](../images/ui/browse/record-delete-details.png)
 
 ### Detalles de caducidad del conjunto de datos {#dataset-expiration}
 
@@ -104,4 +104,4 @@ La página de detalles de una caducidad del conjunto de datos proporciona inform
 En esta guía se explica cómo ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Platform. Para obtener información sobre la creación de sus propias órdenes de trabajo, consulte la siguiente documentación:
 
 * [Administrar caducidades del conjunto de datos](./dataset-expiration.md)
-* [Administrar eliminaciones de clientes](./delete-consumer.md)
+* [Administrar eliminaciones de registros](./record-delete.md)

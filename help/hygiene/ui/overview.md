@@ -2,9 +2,9 @@
 title: Guía de la interfaz de usuario sobre higiene de datos
 description: Aprenda a administrar las tareas de higiene de los datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 762cd5eb33706a942f5df91005e4ae9157bb6af8
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Rueda de higiene de datos"
->abstract="Este widget muestra el estado de los trabajos de eliminación de consumidores de higiene de datos para el intervalo de tiempo seleccionado. Para obtener más información sobre los procesos de higiene de datos, seleccione **Higiene de los datos** en el panel de navegación izquierdo."
+>abstract="Este widget muestra el estado de los trabajos de eliminación de registros de higiene de datos para el intervalo de tiempo seleccionado. Para obtener más información sobre los procesos de higiene de datos, seleccione **Higiene de los datos** en el panel de navegación izquierdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="Órdenes de trabajo recientes sobre higiene de datos"
 >abstract="Esta utilidad muestra las cinco órdenes de trabajo de Higiene de los datos creadas o actualizadas más recientemente, según la opción seleccionada en la parte superior derecha. Para obtener más información sobre los procesos de higiene de datos, seleccione **Higiene de los datos** en el panel de navegación izquierdo."
 
-La variable **[!UICONTROL Higiene de los datos]** El espacio de trabajo de la interfaz de usuario de Adobe Experience Platform le permite crear y supervisar varias tareas de higiene de datos, como la eliminación de identidades de consumidores y la programación de caducidades de conjuntos de datos.
+La variable **[!UICONTROL Higiene de los datos]** El espacio de trabajo de la interfaz de usuario de Adobe Experience Platform le permite crear y supervisar varias tareas de higiene de los datos, como la eliminación de registros y la programación de caducidades de conjuntos de datos.
 
 Esta guía explica cómo administrar las tareas de higiene de los datos en la interfaz de usuario de Platform. Para obtener información sobre cómo realizar estas tareas mediante llamadas a la API, consulte la [Guía de API de higiene de datos](../api/overview.md).
 
@@ -33,4 +33,4 @@ Desde aquí puede examinar las solicitudes de trabajo existentes y configurar nu
 
 * [Examinar órdenes de trabajo existentes](./browse.md)
 * [Creación de una solicitud de caducidad para un conjunto de datos](./dataset-expiration.md)
-* [Crear una solicitud de eliminación de consumidor](./delete-consumer.md)
+* [Crear una solicitud de eliminación de registro](./record-delete.md)

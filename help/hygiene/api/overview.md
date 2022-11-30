@@ -2,9 +2,9 @@
 title: Guía de API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
@@ -43,16 +43,16 @@ Este documento proporciona una llamada API de ejemplo para demostrar cómo dar f
 
 Una caducidad del conjunto de datos es una acción &quot;eliminar un conjunto de datos&quot; con retraso temporal. Al crear una caducidad del conjunto de datos, se especifica un momento futuro en el que ese conjunto de datos debe eliminarse. Consulte la [guía de extremo de caducidad del conjunto de datos](./dataset-expiration.md) para obtener más información sobre la programación de caducidades de conjuntos de datos en la API.
 
-## Eliminaciones de consumidores
+## Eliminar registros
 
 >[!IMPORTANT]
 >
->Las solicitudes de eliminación de consumidores solo están disponibles para las organizaciones que han comprado **Adobe Escudo Sanitario**.
+>Las solicitudes de eliminación de registros solo están disponibles para las organizaciones que han comprado **Adobe Escudo Sanitario**.
 >
 >
->Las eliminaciones de consumidores están pensadas para utilizarse en la limpieza de datos, la eliminación de datos anónimos o la minimización de datos. Son **not** para su uso en solicitudes de derechos de interesados (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento de normas, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
+>Las eliminaciones de registros están pensadas para utilizarse en la limpieza de datos, la eliminación de datos anónimos o la minimización de datos. Son **not** para su uso en solicitudes de derechos de interesados (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento de normas, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
-La API de higiene de datos permite eliminar todos los registros asociados con una identidad de consumidor en uno o todos los conjuntos de datos. Todas las tareas de higiene de datos que eliminan identidades de consumidores se representan mediante una construcción denominada orden de trabajo. Consulte la [guía de extremo del orden de trabajo](./workorder.md) para obtener más información sobre cómo trabajar con eliminaciones de consumidores en la API.
+La API de higiene de datos permite eliminar todos los registros asociados a una identidad en uno o todos los conjuntos de datos. Todas las tareas de higiene de datos que eliminan identidades se representan mediante una construcción denominada orden de trabajo. Consulte la [guía de extremo del orden de trabajo](./workorder.md) para obtener más información sobre cómo trabajar con eliminaciones de registros en la API.
 
 ## Cuota
 
