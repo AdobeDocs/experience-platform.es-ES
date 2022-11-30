@@ -4,9 +4,9 @@ title: Guía de la interfaz de usuario de políticas de combinación
 type: Documentation
 description: Al unir datos de varias fuentes en Experience Platform, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear la vista unificada. Esta guía proporciona instrucciones paso a paso para trabajar con políticas de combinación mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
 workflow-type: tm+mt
-source-wordcount: '2319'
+source-wordcount: '2321'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ El primer paso del flujo de trabajo le permite configurar la política de combin
    * **[!UICONTROL Gráfico privado]**: Realice la vinculación de identidad en función del gráfico de identidad privada.
 * **[!UICONTROL Política de combinación predeterminada]**: Botón de alternancia que le permite seleccionar si esta directiva de combinación será o no la predeterminada para su organización. Si el selector está activado, aparece una advertencia que le solicita que confirme que desea cambiar la directiva de combinación predeterminada de su organización. Consulte la [información general sobre políticas de combinación](overview.md) para obtener más información sobre las directivas de combinación predeterminadas.
    ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Política de combinación activa/perimetral]**: Botón de alternancia que permite seleccionar si esta directiva de combinación estará activa o no en Edge. Para garantizar que todos los consumidores de perfil trabajen con la misma vista en los bordes, las políticas de combinación se pueden marcar como activas en el borde. Para que un segmento se active en el perímetro (marcado como segmento perimetral), debe estar vinculado a una política de fusión que esté marcada como activo en el borde. Si un segmento es **not** vinculado a una política de combinación marcada como activa en Edge, el segmento no se marcará como activo en Edge y se marcará como segmento de flujo continuo. Además, cada organización de IMS solo puede tener **one** directiva de combinación activa en edge.
+* **[!UICONTROL Política de combinación activa/perimetral]**: Botón de alternancia que permite seleccionar si esta directiva de combinación estará activa o no en Edge. Para garantizar que todos los consumidores de perfil trabajen con la misma vista en los bordes, las políticas de combinación se pueden marcar como activas en el borde. Para que un segmento se active en el perímetro (marcado como segmento perimetral), debe estar vinculado a una política de fusión que esté marcada como activo en el borde. Si un segmento es **not** vinculado a una política de combinación marcada como activa en Edge, el segmento no se marcará como activo en Edge y se marcará como segmento de flujo continuo. Además, cada simulador de pruebas de una organización solo puede tener **one** directiva de combinación activa en edge.
 
 Una vez completados los campos obligatorios, puede seleccionar **[!UICONTROL Siguiente]** para continuar con el flujo de trabajo.
 
@@ -141,7 +141,7 @@ De forma similar a seleccionar conjuntos de datos de perfil, al seleccionar un c
 
 ![](../images/merge-policies/dataset-precedence-experienceevent.png)
 
-## [!UICONTROL Consulte] {#review}
+## [!UICONTROL Revisión] {#review}
 
 El último paso del flujo de trabajo es revisar la política de combinación. La variable **[!UICONTROL Consulte]** la pantalla muestra información sobre la directiva de combinación, incluido el método de vinculación de ID seleccionado, el método de combinación seleccionado y los conjuntos de datos incluidos. (Para ver todos los conjuntos de datos de Perfil o ExperienceEvent incluidos, seleccione el número de conjuntos de datos que desea expandir en la lista desplegable).
 
@@ -193,7 +193,7 @@ Una vez que haya realizado los cambios necesarios, revise la directiva de combin
 
 ## Infracción de la política de control de datos
 
-Al crear o actualizar una directiva de combinación, se realiza una comprobación para determinar si la directiva de combinación infringe alguna de las políticas de uso de datos definidas por su organización. Las políticas de uso de datos forman parte de la Administración de datos de Adobe Experience Platform y son reglas que describen los tipos de acciones de marketing que puede realizar, o de las que se le restringe, en función de determinadas [!DNL Platform] datos. Por ejemplo, si se utilizara una directiva de combinación para crear un segmento que se activara en un destino de terceros y su organización tuviera una directiva de uso de datos que impidiera la exportación de datos específicos a terceros, recibirá una **[!UICONTROL Se ha detectado una violación de la política de control de datos]** al intentar guardar la directiva de combinación.
+Al crear o actualizar una directiva de combinación, se realiza una comprobación para determinar si la directiva de combinación infringe alguna de las políticas de uso de datos definidas por su organización. Las políticas de uso de datos forman parte de la Administración de datos de Adobe Experience Platform y son reglas que describen los tipos de acciones de marketing que puede realizar, o de las que se le restringe, en relación con determinadas [!DNL Platform] datos. Por ejemplo, si se utilizara una directiva de combinación para crear un segmento que se activara en un destino de terceros y su organización tuviera una directiva de uso de datos que impidiera la exportación de datos específicos a terceros, recibirá una **[!UICONTROL Se ha detectado una violación de la política de control de datos]** al intentar guardar la directiva de combinación.
 
 Esta notificación incluye una lista de las políticas de uso de datos que se han infringido y le permite ver los detalles de la infracción seleccionando una directiva en la lista. Al seleccionar una directiva violada, la variable **[!UICONTROL Línea de datos]** proporciona el motivo de la infracción y las activaciones afectadas, cada una de las cuales proporciona más detalles sobre cómo se ha violado la política de uso de datos.
 
