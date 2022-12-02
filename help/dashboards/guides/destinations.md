@@ -4,7 +4,7 @@ title: Guía del panel de destinos
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
+source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 0%
@@ -273,7 +273,13 @@ El widget proporciona una tabla de dos columnas para mostrar una lista de plataf
 
 ### [!UICONTROL Audiencias activadas en todos los destinos] {#activated-audiences-across-all-destinations}
 
-La variable [!UICONTROL Audiencias activadas en todos los destinos] proporciona el número total de audiencias activadas en todos los destinos de una única métrica. Este widget muestra el recuento de audiencias y no el de segmentos. Este número es preciso para la instantánea más reciente.
+La variable [!UICONTROL Audiencias activadas en todos los destinos] proporciona el número total de audiencias activadas en todos los destinos de una sola métrica.
+
+>[!NOTE]
+>
+>Este widget muestra el recuento de audiencias y no el de segmentos.
+
+Este número es preciso para la instantánea más reciente.
 
 ![La utilidad Audiencias activadas en todos los destinos .](../images/destinations/activated-audiences-across-all-destinations.png)
 
