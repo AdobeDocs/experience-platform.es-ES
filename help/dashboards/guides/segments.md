@@ -4,9 +4,9 @@ title: Guía del panel de segmentos
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los segmentos que su organización ha creado.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
+source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2105'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Para ir a la [!UICONTROL Segmentos] tablero en la interfaz de usuario de Platfor
 >
 >Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos o políticas de combinación creadas, se crea la variable [!UICONTROL Segmentos] tablero no está visible. En su lugar, la variable [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con la segmentación.
 
-![La pestaña Información general del tablero Segmentos .](../images/segments/dashboard-overview.png)
+![La ficha Información general del tablero Segmentos con Segmentos e Información general resaltados.](../images/segments/dashboard-overview.png)
 
 ### Modifique el [!UICONTROL Segmentos] tablero {#modify}
 
@@ -204,7 +204,7 @@ La variable **[!UICONTROL Perfiles por identidad]** muestra el desglose de ident
 
 Select **[!UICONTROL Subtítulos]** para abrir el cuadro de diálogo rótulos automáticos.
 
-![El cuadro de diálogo Perfiles por rótulos de identidad .](../images/segments/profiles-by-identity.png)
+![Información general del panel Segmentos con la opción Perfiles por ID y la opción Subtítulos resaltados.](../images/segments/profiles-by-identity.png)
 
 Un modelo de aprendizaje automático genera automáticamente perspectivas de datos analizando la distribución general y las dimensiones clave de los datos.
 

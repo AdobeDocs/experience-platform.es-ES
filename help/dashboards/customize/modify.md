@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;paneles;tablero;perfiles;se
 title: Modificación de paneles de plataforma en la interfaz de usuario
 description: Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos de Adobe Experience Platform de su organización en los paneles.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: d5acc317a48aef94dd4d6e3ccea89d0d674c8b34
+source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ Esta guía proporciona instrucciones paso a paso para personalizar la forma en q
 
 Desde cualquier tablero (por ejemplo, el [!UICONTROL Perfiles] tablero), puede seleccionar **[!UICONTROL Modificar tablero]** para cambiar el tamaño y reordenar los widgets existentes.
 
-![](../images/customization/modify-dashboard.png)
+![El panel Perfiles con el panel Modificar resaltado.](../images/customization/modify-dashboard.png)
 
 ## Reordenar widgets
 
 Después de modificar el tablero, puede reordenar los widgets seleccionando el título del widget y arrastrando y soltando los widgets en el orden deseado. En este ejemplo, la variable **[!UICONTROL Tendencia del recuento de perfiles]** se mueve a la fila superior y a la **[!UICONTROL Recuento de perfiles]** ahora aparece en la segunda fila.
 
-![](../images/customization/move-widget.png)
+![El panel Perfiles con dos widgets reordenados resaltados.](../images/customization/move-widget.png)
 
 ## Cambiar el tamaño de los widgets
 
@@ -40,13 +40,13 @@ También puede cambiar el tamaño de un widget seleccionando el símbolo de áng
 >
 >A medida que los widgets se ajustan en su tamaño, los widgets circundantes se cambian de posición de forma dinámica. Esto podría hacer que algunos widgets se movieran a filas adicionales, lo que requería que se desplazara para ver todos los widgets.
 
-![](../images/customization/resize-widget.png)
+![El tablero Perfiles con un widget cambiado de tamaño resaltado.](../images/customization/resize-widget.png)
 
 ## Guardar actualizaciones del tablero
 
 Cuando haya terminado de mover y cambiar el tamaño de las utilidades, seleccione **[!UICONTROL Guardar y salir]** para guardar los cambios y volver a la vista del tablero principal. Si no desea conservar los cambios, seleccione **[!UICONTROL Cancelar]** para restablecer el tablero y volver a la vista del tablero principal.
 
-![](../images/customization/save-changes.png)
+![El panel Perfiles con las opciones Cancelar y Guardar y salir resaltadas.](../images/customization/save-changes.png)
 
 ## Biblioteca de utilidades
 
@@ -54,7 +54,7 @@ Además de cambiar el tamaño y reordenar los widgets, seleccione **[!UICONTROL 
 
 Para obtener instrucciones paso a paso sobre cómo acceder y trabajar con la variable [!UICONTROL Biblioteca de utilidades], consulte [guía de biblioteca de utilidades](widget-library.md).
 
-![](../images/customization/widget-library.png)
+![Espacio de trabajo de la biblioteca de utilidades con las opciones Estándar y Personalizado resaltadas.](../images/customization/widget-library.png)
 
 ## Pasos siguientes
 

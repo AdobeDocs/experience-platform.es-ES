@@ -4,9 +4,9 @@ title: Explorar, verificar y procesar conjuntos de datos de panel mediante el se
 type: Documentation
 description: Aprenda a utilizar el servicio de consulta para explorar y procesar conjuntos de datos sin procesar que alimentan los paneles de perfil, segmento y destino en Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ La convención de nomenclatura de estos conjuntos de datos es **Profile-Snapshot
 
 Para comprender el esquema completo de cada conjunto de datos de exportación de instantánea de perfil, puede obtener una vista previa y explorar los conjuntos de datos [uso del visor del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
 
-![](images/query/profile-attribute.png)
+![Vista previa del conjunto de datos Profile-Snapshot-Export.](images/query/profile-attribute.png)
 
 #### Asignación de conjuntos de datos de atributos de perfil para combinar ID de directivas
 
@@ -72,7 +72,7 @@ La convención de nomenclatura de este conjunto de datos es **Segmentdefinition-
 
 Para comprender el esquema completo de cada conjunto de datos de exportación de instantánea de definición de segmento, puede obtener una vista previa y explorar los conjuntos de datos [uso del visor del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
 
-![](images/query/segment-metadata.png)
+![Vista previa del conjunto de datos Segmentdefinition-Instantánea-Exportar.](images/query/segment-metadata.png)
 
 ### Conjunto de datos de metadatos de destino
 
@@ -82,7 +82,7 @@ La convención de nomenclatura de este conjunto de datos es **DIM_Destination**.
 
 Para comprender el esquema completo del conjunto de datos de destino DIM, puede obtener una vista previa y explorar el conjunto de datos [uso del visor del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario del Experience Platform.
 
-![](images/query/destinations-metadata.png)
+![Una previsualización del conjunto de datos DIM_Destination .](images/query/destinations-metadata.png)
 
 ## (Beta) Informes de perspectivas de la Plataforma de datos del cliente (CDP)
 

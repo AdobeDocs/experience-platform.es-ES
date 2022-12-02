@@ -2,9 +2,9 @@
 title: Tableros definidos por el usuario
 description: Aprenda a crear y administrar tableros personalizados donde puede crear, agregar y editar widgets personalizados para visualizar métricas clave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -118,8 +118,12 @@ Los widgets se pueden volver a organizar y cambiar de tamaño mientras se encuen
 
 Para garantizar que cada consulta de un panel de perspectivas de Adobe Real-time Customer Data Platform tenga recursos suficientes para ejecutarse de forma eficaz, la API rastrea el uso de los recursos asignando espacios de concurrencia a cada consulta. El sistema puede procesar hasta cuatro consultas simultáneas y, por lo tanto, hay cuatro ranuras de consulta simultáneas disponibles en un momento determinado. Las consultas se ponen en cola en función de las ranuras de concurrencia y después esperan en la cola hasta que haya suficientes ranuras de concurrencia disponibles.
 
-## Pasos siguientes
+## Pasos siguientes y recursos adicionales
 
 Al leer este documento, tendrá una mejor comprensión de cómo crear un tablero personalizado y cómo crear, editar y actualizar widgets personalizados para ese tablero.
 
 Para descubrir las métricas y visualizaciones preconfiguradas disponibles para la variable [perfiles](./guides/profiles.md#standard-widgets), [segmentos](./guides/segments.md#standard-widgets)y [destinos](./guides/destinations.md#standard-widgets) tableros, consulte la lista de utilidades estándar en su documentación respectiva.
+
+Para comprender mejor los paneles definidos por el usuario en Experience Platform, vea el siguiente vídeo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

@@ -4,9 +4,9 @@ title: Guía del panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
 workflow-type: tm+mt
-source-wordcount: '3385'
+source-wordcount: '3416'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Para ir al panel Perfiles en la interfaz de usuario de Platform, seleccione **[!
 >
 >Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos ni políticas de combinación creadas, el panel Perfiles no está visible. En su lugar, la variable [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con el Perfil del cliente en tiempo real.
 
-![](../images/profiles/dashboard-overview.png)
+![El tablero Perfiles del Experience Platform con Perfiles e Información general resaltados.](../images/profiles/dashboard-overview.png)
 
 ### Modificación del panel Perfiles
 
@@ -142,7 +142,7 @@ Consulte la [sección sobre directivas de combinación anterior en este document
 >
 >Otro motivo común se debe a las diferencias entre el momento en que se toma la instantánea del panel y el momento en que se ejecuta el trabajo de muestra para el [!UICONTROL Examinar] pestaña . Puede ver cuándo [!UICONTROL Recuento de perfiles] se actualizó por última vez mirando la marca de tiempo en el widget. Para obtener más información sobre cómo se activa el trabajo de muestra en la variable [!UICONTROL Examinar] consulte la [recuento de perfiles en la guía de la interfaz de usuario del perfil del cliente en tiempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![El tablero Perfiles del Experience Platform con el widget Recuento de perfiles resaltado.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Tendencia del recuento de perfiles] {#profile-count-trend}
 
@@ -230,7 +230,7 @@ Para obtener más información sobre los fragmentos de perfil, consulte la secci
 
 Para obtener más información sobre las identidades, visite [Documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![Información general del panel Perfiles con el widget de superposición de identidad resaltado.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Perfiles de identidad únicos] {#single-identity-profiles}
 

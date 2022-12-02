@@ -4,9 +4,9 @@ title: Guía del panel de uso de licencias
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre el uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Para ir al panel de uso de licencias dentro de la interfaz de usuario de Platfor
 >
 >El panel de uso de licencias no está habilitado de forma predeterminada. A los usuarios se les debe conceder permiso &quot;Ver panel de uso de licencias&quot; para poder ver el tablero. Para ver los pasos sobre la concesión de permisos de acceso para ver el panel de uso de licencias, consulte la [guía de permisos del panel](../permissions.md).
 
-![](../images/license-usage/dashboard-overview.png)
+![La pestaña Información general del tablero de uso de licencias .](../images/license-usage/dashboard-overview.png)
 
 ### Seleccionar un simulador de pruebas
 
@@ -41,7 +41,7 @@ Para elegir un simulador para pruebas para verlo en el tablero, seleccione [!UIC
 
 Los informes de consumo para entornos limitados son acumulativos para todos los entornos limitados del mismo tipo. En otras palabras, seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo] proporciona informes de consumo para todos los entornos limitados de producción o desarrollo, respectivamente.
 
-![](../images/license-usage/select-sandbox.png)
+![La pestaña Información general del tablero de uso de licencias con el selector de simulación de pruebas resaltado.](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -56,11 +56,11 @@ Los informes de consumo para entornos limitados son acumulativos para todos los 
 
 Después de seleccionar un simulador para pruebas, puede utilizar la lista desplegable de intervalos de fechas para seleccionar el período de tiempo que se mostrará en el tablero. Hay varias opciones disponibles, incluido el valor predeterminado de los últimos 30 días.
 
-![](../images/license-usage/select-date-range.png)
+![La pestaña Información general del tablero de uso de licencias con el menú desplegable de intervalo de fechas resaltado.](../images/license-usage/select-date-range.png)
 
 También puede seleccionar **[!UICONTROL Fecha personalizada]** para elegir el período de tiempo que se muestra.
 
-![](../images/license-usage/select-custom-date.png)
+![La pestaña Información general del tablero de uso de licencias con las opciones de intervalo de fechas personalizadas resaltadas.](../images/license-usage/select-custom-date.png)
 
 ## Widgets
 
@@ -68,7 +68,7 @@ El panel de uso de licencias está compuesto por utilidades, que muestran métri
 
 Cada utilidad muestra gráficos de líneas en los que se comparan los números reales de su organización con el total disponible con las licencias de su organización y se proporciona un porcentaje del uso total.
 
-![](../images/license-usage/widgets.png)
+![La pestaña Descripción general del tablero de uso de licencias con el gráfico de líneas del widget de métrica de uso de licencias de ejemplo resaltado.](../images/license-usage/widgets.png)
 
 ## Métricas disponibles
 
