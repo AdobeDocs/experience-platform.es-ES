@@ -5,9 +5,9 @@ title: Funciones de asignación de preparación de datos
 topic-legacy: overview
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4367'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,11 @@ Las funciones de preparación de datos se pueden utilizar para calcular y calcul
 
 Un nombre de campo puede ser cualquier identificador legal, una secuencia de longitud ilimitada de letras y dígitos Unicode, empezando por una letra, el signo de dólar (`$`) o el carácter de guión bajo (`_`). Los nombres de las variables también distinguen entre mayúsculas y minúsculas.
 
-Si un nombre de campo no sigue esta convención, el nombre de campo debe ajustarse con `${}`. Por lo tanto, si el nombre del campo es &quot;Nombre&quot; o &quot;Nombre&quot;, entonces el nombre debe ajustarse como `${First Name}` o `${First.Name}` respectivamente.
+Si un nombre de campo no sigue esta convención, el nombre de campo debe ajustarse con `${}`. Por lo tanto, si el nombre del campo es &quot;Nombre&quot; o &quot;Nombre&quot;, entonces el nombre debe ajustarse como `${First Name}` o `${First\.Name}` respectivamente.
+
+>[!TIP]
+>
+>Cuando interactúa con jerarquías, si un atributo secundario tiene un punto (`.`), debe utilizar una barra invertida (`\`) para omitir caracteres especiales. Para obtener más información, consulte la guía de [caracteres especiales de escape](home.md#escape-special-characters).
 
 Además, si el nombre de un campo es **any** de las siguientes palabras clave reservadas, debe envolverse con `${}`:
 

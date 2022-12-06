@@ -5,7 +5,7 @@ title: Información general sobre la preparación de datos
 topic-legacy: overview
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: 61603d7516dbd859b0cce6c167c75aab42ca7171
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Los campos calculados permiten que se creen valores en función de los atributos
 
 Para obtener más información sobre los campos calculados, lea la [guía de campos calculados](./functions.md#calculated-fields).
 
-### Omisión de caracteres especiales
+### Omisión de caracteres especiales {#escape-special-characters}
 
 Puede omitir los caracteres especiales de un campo utilizando `${...}`. Sin embargo, los archivos JSON que contienen campos con un punto (`.`) no son compatibles con este mecanismo. Cuando interactúa con jerarquías, si un atributo secundario tiene un punto (`.`), debe utilizar una barra invertida (`\`) para omitir caracteres especiales. Por ejemplo, `address` es un objeto que contiene el atributo `street.name`, esto puede denominarse `address.street\.name` en lugar de `address.street.name`.
 
