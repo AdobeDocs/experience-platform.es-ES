@@ -4,9 +4,9 @@ title: Crear una nueva conexión de destino
 type: Tutorial
 description: Obtenga información sobre cómo conectarse a un destino en Adobe Experience Platform, habilitar alertas y configurar acciones de marketing para el destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 434b9ed4f64320b5fd73b752716cb34a8e48aec9
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ En función del destino al que se conecte, se le puede pedir que introduzca dife
 
 ![Imagen que muestra los parámetros de entrada opcionales y requeridos al conectarse a un destino de centro de comercio.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### Configurar las opciones de formato de archivo para los archivos exportados {#file-formatting-and-compression-options}
+### (Beta) Configurar opciones de formato de archivo para archivos exportados {#file-formatting-and-compression-options}
 
 Para los destinos basados en archivos, puede configurar varias opciones relacionadas con el formato y la compresión de los archivos exportados. Para obtener más información sobre todas las opciones de formato y compresión disponibles, lea la [Tutorial sobre la configuración de opciones de formato de archivo para destinos basados en archivos](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 

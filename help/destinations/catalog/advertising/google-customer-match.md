@@ -3,7 +3,7 @@ keywords: coincidencia de clientes de google;coincidencia de clientes de Google;
 title: Conexión Google Customer Match
 description: Google Customer Match le permite utilizar sus datos en línea y sin conexión para llegar a sus clientes y volver a interactuar con ellos en todas las propiedades que Google posee y gestiona, como Search, Shopping, Gmail y YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: b189f1b0fe29ebefb3cba9c4f820022a772ce297
 workflow-type: tm+mt
 source-wordcount: '1778'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [Coincidencia de clientes de Google](https://support.google.com/google-ads/answer/6379332?hl=en) permite utilizar los datos en línea y sin conexión para llegar a sus clientes y volver a interactuar con ellos en todas las propiedades que posee y gestiona Google, como: [!DNL Search], [!DNL Shopping], [!DNL Gmail]y [!DNL YouTube].
 
-![Destino de coincidencia del cliente de Google en la interfaz de usuario de Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Destino de coincidencia del cliente de Google en la interfaz de usuario de Adobe Experience Platform.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Casos de uso {#use-cases}
 
