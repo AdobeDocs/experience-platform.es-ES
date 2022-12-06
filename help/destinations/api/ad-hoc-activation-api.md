@@ -6,10 +6,10 @@ description: Este artículo ilustra el flujo de trabajo completo para activar se
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
+source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 2%
+source-wordcount: '1563'
+ht-degree: 1%
 
 ---
 
@@ -25,13 +25,13 @@ ht-degree: 2%
 
 La API de activación ad hoc permite a los especialistas en marketing activar mediante programación segmentos de audiencia en destinos de forma rápida y eficaz en situaciones en las que se requiera una activación inmediata.
 
+Utilice la API de activación ad-hoc para exportar archivos completos al sistema de recepción de archivos deseado. La activación de audiencias ad-hoc solo es compatible con [destinos basados en archivos por lotes](../destination-types.md#file-based).
+
 El diagrama siguiente ilustra el flujo de trabajo completo para activar segmentos mediante la API de activación ad hoc, incluidos los trabajos de segmentación que se realizan en Platform cada 24 horas.
 
 ![activación ad hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
->[!NOTE]
->
->La activación de audiencias ad-hoc solo es compatible con [destinos basados en archivos por lotes](../destination-types.md#file-based).
+
 
 ## Casos de uso {#use-cases}
 
@@ -129,7 +129,7 @@ Adobe Experience Platform ejecuta trabajos de segmentación programados una vez 
 >
 >Tenga en cuenta la siguiente restricción de una sola vez: Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que hayan transcurrido al menos 20 minutos desde el momento en que se activó el segmento por primera vez según la programación que configuró [Paso 3: Creación del flujo de activación en la interfaz de usuario de Platform](#activation-flow).
 
-Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo de exportación de segmentos programado para sus segmentos haya finalizado. Consulte [control de flujo de datos de destino](../../dataflows/ui/monitor-destinations.md) para obtener información sobre cómo monitorizar el estado de los flujos de activación. Por ejemplo, si el flujo de datos de activación muestra un **[!UICONTROL Procesamiento]** espera a que finalice antes de ejecutar el trabajo de activación ad hoc.
+Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo de exportación de segmentos programado para sus segmentos haya finalizado. Consulte [control de flujo de datos de destino](../../dataflows/ui/monitor-destinations.md) para obtener información sobre cómo monitorizar el estado de los flujos de activación. Por ejemplo, si el flujo de datos de activación muestra un **[!UICONTROL Procesamiento]** espere a que finalice antes de ejecutar el trabajo de activación ad hoc para exportar un archivo completo.
 
 Una vez completado el trabajo de exportación de segmentos, puede almacenar en déclencheur la activación.
 
@@ -250,3 +250,4 @@ Al utilizar la API de activación ad-hoc, puede encontrar mensajes de error espe
 ## Información relacionada {#related-information}
 
 * [Conectarse a destinos por lotes y activar datos mediante la API de servicio de flujo](/help/destinations/api/connect-activate-batch-destinations.md)
+* [(Beta) Exportar archivos bajo demanda a destinos por lotes utilizando la interfaz de usuario del Experience Platform](/help/destinations/ui/export-file-now.md)
