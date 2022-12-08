@@ -3,9 +3,9 @@ keywords: Azure Blob;destino de Blob;s3;destino de azure blob
 title: Conexión de Azure Blob
 description: Cree una conexión saliente en directo al almacenamiento del blob de Azure para exportar periódicamente archivos de datos CSV de Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '923'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 >* Si aún no ha creado ningún flujo de datos en la variable **[!UICONTROL Azure Blob]** destino, utilice el nuevo **[!UICONTROL Azure Blob beta]** tarjeta para exportar archivos a **[!UICONTROL Azure Blob]**.
 
 
-![Imagen de las dos tarjetas de destino de Azure Blob en una vista en paralelo.](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+![Imagen de las dos tarjetas de destino de Azure Blob en una vista en paralelo.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
 Mejoras en el nuevo [!DNL Azure Blob] la tarjeta de destino incluye:
 
@@ -93,6 +93,8 @@ Para configurar los detalles del destino, rellene los campos opcionales y requer
 * **[!UICONTROL Descripción]**: introduzca una descripción de este destino.
 * **[!UICONTROL Ruta de carpeta]**: introduzca la ruta a la carpeta de destino que alojará los archivos exportados.
 * **[!UICONTROL Contenedor]**: introduzca el nombre del [!DNL Azure Blob Storage] contenedor que utilizará este destino.
+* **[!UICONTROL Tipo de archivo]**: seleccione el Experience Platform de formato que debe utilizar para los archivos exportados. Esta opción solo está disponible para el **[!UICONTROL Azure Blob beta]** destino. Al seleccionar la variable [!UICONTROL CSV] también puede [configuración de las opciones de formato del archivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que debe utilizar el Experience Platform para los archivos exportados. Esta opción solo está disponible para el **[!UICONTROL Azure Blob beta]** destino.
 
 ### Habilitar alertas {#enable-alerts}
 
