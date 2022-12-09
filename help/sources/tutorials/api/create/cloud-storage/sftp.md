@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos) mediante la API de servicio de flujo.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: bf665a0041db8a44c39c787bb1f0f1100f61e135
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 2%
+source-wordcount: '837'
+ht-degree: 1%
 
 ---
 
@@ -44,6 +44,7 @@ Para [!DNL Flow Service] para conectarse a [!DNL SFTP], debe proporcionar valore
 | `password` | La contraseña de su [!DNL SFTP] servidor. |
 | `privateKeyContent` | El contenido de clave privada SSH codificada Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
 | `passPhrase` | La frase de contraseña o contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si la variable `privateKeyContent` está protegido con contraseña, este parámetro debe utilizarse con la frase de contraseña del contenido de clave privada como valor. |
+| `maxConcurrentConnections` | Este parámetro le permite especificar un límite máximo para el número de conexiones simultáneas que Platform creará al conectarse al servidor SFTP. Debe configurar este valor para que sea menor que el límite establecido por SFTP. **Nota**: Cuando esta configuración está habilitada para una cuenta SFTP existente, solo afecta a flujos de datos futuros y no a flujos de datos existentes. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL SFTP] es: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
 ### Uso de las API de plataforma
@@ -54,69 +55,9 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 
 Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
+La variable [!DNL SFTP] source admite autenticación básica y autenticación mediante clave pública SSH.
+
 Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar su [!DNL SFTP] credenciales de autenticación como parte de los parámetros de solicitud.
-
-### Cree un [!DNL SFTP] conexión base con autenticación básica
-
-Para crear un [!DNL SFTP] conexión base usando autenticación básica, realice una solicitud de POST al [!DNL Flow Service] API mientras proporciona valores para la `host`, `userName`y `password`.
-
-**Formato de API**
-
-```http
-POST /connections
-```
-
-**Solicitud**
-
-La siguiente solicitud crea una conexión base para [!DNL SFTP] mediante autenticación básica:
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d  '{
-        "name": "SFTP connector with password",
-        "description": "SFTP connector password",
-        "auth": {
-            "specName": "Basic Authentication for sftp",
-            "params": {
-                "host": "{HOST}",
-                "userName": "{USERNAME}",
-                "password": "{PASSWORD}"
-            }
-        },
-        "connectionSpec": {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "version": "1.0"
-        }
-    }'
-```
-
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `auth.params.host` | El nombre de host del servidor SFTP. |
-| `auth.params.username` | El nombre de usuario asociado al servidor SFTP. |
-| `auth.params.password` | La contraseña asociada al servidor SFTP. |
-| `connectionSpec.id` | El ID de especificación de conexión del servidor SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
-
-**Respuesta**
-
-Una respuesta correcta devuelve el identificador único (`id`) de la conexión recién creada. Este ID es necesario para explorar el servidor SFTP en el siguiente tutorial.
-
-```json
-{
-    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
-    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
-}
-```
-
-### Cree un [!DNL SFTP] conexión base mediante autenticación de clave pública SSH
-
-Para crear un [!DNL SFTP] conexión base usando autenticación de clave pública SSH, realice una solicitud de POST al [!DNL Flow Service] API mientras proporciona valores para la `host`, `userName`, `privateKeyContent`y `passPhrase`.
 
 >[!IMPORTANT]
 >
@@ -130,46 +71,96 @@ POST /connections
 
 **Solicitud**
 
-La siguiente solicitud crea una conexión base para [!DNL SFTP] mediante autenticación de clave pública SSH:
+La siguiente solicitud crea una conexión base para [!DNL SFTP]:
+
+>[!BEGINTABS]
+
+>[!TAB Autenticación básica]
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SFTP connector with SSH authentication",
-        "description": "SFTP connector with SSH authentication",
-        "auth": {
-            "specName": "SSH PublicKey Authentication for sftp",
-            "params": {
-                "host": "{HOST}",
-                "userName": "{USERNAME}",
-                "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
-                "passPhrase": "{PASSPHRASE}"
-            }
-        },
-        "connectionSpec": {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d  '{
+      "name": "SFTP connector with password",
+      "description": "SFTP connector password",
+      "auth": {
+          "specName": "Basic Authentication for sftp",
+          "params": {
+              "host": "{HOST}",
+              "port": 22,
+              "userName": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "maxConcurrentConnections": 1
+          }
+      },
+      "connectionSpec": {
+          "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `auth.params.host` | El nombre de host del servidor SFTP. |
+| `auth.params.port` | Puerto del servidor SFTP. El valor predeterminado de este valor entero es 22. |
+| `auth.params.username` | El nombre de usuario asociado al servidor SFTP. |
+| `auth.params.password` | La contraseña asociada al servidor SFTP. |
+| `auth.params.maxConcurrentConnections` | Número máximo de conexiones simultáneas especificadas al conectar Platform a SFTP. Cuando está habilitado, este valor debe establecerse en al menos 1. |
+| `connectionSpec.id` | El ID de especificación de conexión del servidor SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+>[!TAB Autenticación de clave pública SSH]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SFTP connector with SSH authentication",
+      "description": "SFTP connector with SSH authentication",
+      "auth": {
+          "specName": "SSH PublicKey Authentication for sftp",
+          "params": {
+              "host": "{HOST}",
+              "port": 22,
+              "userName": "{USERNAME}",
+              "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+              "passPhrase": "{PASSPHRASE}",
+              "maxConcurrentConnections": 1
+
+          }
+      },
+      "connectionSpec": {
+          "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `auth.params.host` | El nombre de host de su [!DNL SFTP] servidor. |
+| `auth.params.port` | Puerto del servidor SFTP. El valor predeterminado de este valor entero es 22. |
 | `auth.params.username` | El nombre de usuario asociado con su [!DNL SFTP] servidor. |
 | `auth.params.privateKeyContent` | El contenido de clave privada SSH codificada Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
 | `auth.params.passPhrase` | La frase de contraseña o contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si PrivateKeyContent está protegido por contraseña, este parámetro debe utilizarse con la frase de contraseña de PrivateKeyContent como valor. |
+| `auth.params.maxConcurrentConnections` | Número máximo de conexiones simultáneas especificadas al conectar Platform a SFTP. Cuando está habilitado, este valor debe establecerse en al menos 1. |
 | `connectionSpec.id` | La variable [!DNL SFTP] ID de especificación de conexión del servidor: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+>[!ENDTABS]
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único (`id`) de la conexión recién creada. Este ID es necesario para explorar su [!DNL SFTP] en el siguiente tutorial.
+Una respuesta correcta devuelve el identificador único (`id`) de la conexión recién creada. Este ID es necesario para explorar el servidor SFTP en el siguiente tutorial.
 
 ```json
 {
