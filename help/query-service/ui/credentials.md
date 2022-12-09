@@ -5,9 +5,9 @@ title: Guía de credenciales del servicio de consulta
 topic-legacy: guide
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
+source-git-commit: f52e1d49fd090c398d34a3d9c2b5d1746c319eb4
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1317'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,15 @@ La variable **[!UICONTROL Credenciales de caducidad]** proporciona la siguiente 
 - **[!UICONTROL Nombre de usuario]**: El nombre de usuario que utilizará para conectarse al servicio de consulta.
 - **[!UICONTROL Contraseña]**: La contraseña que utilizará para conectarse al servicio de consulta.
 - **[!UICONTROL PSQL, comando]**: Un comando que ha insertado automáticamente toda la información relevante para que se conecte al servicio de consulta mediante PSQL en la línea de comandos.
-- **[!UICONTROL Caduca]**: La fecha de caducidad de las credenciales que caducan. Las credenciales caducan 24 horas después de generarse.
+- **[!UICONTROL Caduca]**: La fecha y hora de caducidad de las credenciales que caducan. La duración de validez predeterminada del token es de 24 horas, pero se puede cambiar en la configuración avanzada del Admin Console.
+
+>[!TIP]
+>
+>Para cambiar la duración de la sesión de la conexión de credenciales expiradas al servicio de consultas, vaya a la [Admin Console](https://adminconsole.adobe.com/) y seleccione las siguientes opciones en pantalla: **Configuración** > **Privacidad y seguridad** > **Configuración de autenticación** > **Configuración avanzada** > **Duración máxima de la sesión**.
+>
+>![La pestaña Configuración del Admin Console con Privacidad y seguridad, Configuración de autenticación y Duración máxima de la sesión resaltada.](../images/ui/credentials/max-session-life.png)
+>
+>Consulte la documentación de la Ayuda de Adobe para obtener más información sobre la [Configuración avanzada](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) ofrecido por Admin Console.
 
 ## Credenciales que no caducan {#non-expiring-credentials}
 
