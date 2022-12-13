@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: bf5346214fad66b3f470c74620b608d71639b85a
+source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '965'
 ht-degree: 37%
 
 ---
@@ -213,11 +213,12 @@ ht-degree: 37%
       * [Cloud Connector para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Núcleo {#core}
          * [Información general](./extensions/server/core/overview.md)
-      * [API de conversiones de facebook](https://exchange.adobe.com/apps/ec/105509)
       * Conversiones mejoradas de Google Ads {#google-ads-enhanced-conversions}
          * [Información general](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [Información general](./extensions/server/mailchimp/overview.md)
+      * [!DNL Meta Conversions API] {#meta}
+         * [Información general](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [Información general](./extensions/server/azure/overview.md)
       * [Centro de decisión de clientes Pega](https://exchange.adobe.com/apps/ec/107597)
