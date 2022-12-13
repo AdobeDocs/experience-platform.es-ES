@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Punto final de API de directivas de control de acceso
 description: El extremo /policy de la API de control de acceso basado en atributos permite administrar mediante programación las políticas en Adobe Experience Platform.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1412'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Las políticas de control de acceso son instrucciones que unen atributos para es
 
 >[!IMPORTANT]
 >
->Este punto final no debe confundirse con la variable `/policies` en la variable [API de administración de datos](../../../data-governance/api/policies.md), que se utiliza para administrar las políticas de uso de datos.
+>Este punto final no debe confundirse con la variable `/policies` en la variable [API del servicio de directivas](../../../data-governance/api/policies.md), que se utiliza para administrar las políticas de uso de datos.
 
 ## Primeros pasos
 

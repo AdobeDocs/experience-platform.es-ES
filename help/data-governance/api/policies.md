@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;aplicación basada en API;control de datos
 solution: Experience Platform
-title: Punto final de la API de directivas de uso de datos
+title: Punto final de la API de políticas de administración de datos
 topic-legacy: developer guide
-description: Las políticas de uso de datos son reglas que adopta su organización que describen los tipos de acciones de marketing que puede realizar o de las que está restringido el uso de los datos en el Experience Platform. El extremo /policy se utiliza para todas las llamadas de API relacionadas con la visualización, la creación, la actualización o la eliminación de directivas de uso de datos.
+description: Las políticas de control de datos son reglas que adopta su organización y que describen los tipos de acciones de marketing que puede realizar o de las que está restringido el cumplimiento de los datos dentro de un Experience Platform. El extremo /policy se utiliza para todas las llamadas de API relacionadas con la visualización, la creación, la actualización o la eliminación de directivas de control de datos.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1840'
-ht-degree: 4%
+source-wordcount: '1865'
+ht-degree: 3%
 
 ---
 
-# Punto final de las políticas de uso de datos
+# Punto final de las políticas de control de datos
 
-Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de [!DNL Experience Platform]. La variable `/policies` en la variable [!DNL Policy Service API] le permite administrar mediante programación políticas de uso de datos para su organización.
+Las políticas de control de datos son reglas que describen los tipos de acciones de marketing que puede realizar o de las que se le restringe el uso de datos dentro de [!DNL Experience Platform]. La variable `/policies` en la variable [!DNL Policy Service API] le permite administrar mediante programación las políticas de control de datos de su organización.
 
 >[!IMPORTANT]
 >
->Este punto final no debe confundirse con la variable `/policies` en la variable [API de control de acceso](../../access-control/abac/api/policies.md), que se utiliza para administrar las políticas de control de acceso.
+>Las políticas de administración no deben confundirse con las políticas de control de acceso, que determinan los atributos de datos específicos a los que pueden acceder ciertos usuarios de Platform de su organización. Consulte la `/policies` guía de extremo para la variable [API de control de acceso](../../access-control/abac/api/policies.md) para obtener más información sobre cómo administrar las políticas de control de acceso mediante programación.
 
 ## Primeros pasos
 
@@ -611,7 +611,7 @@ Puede confirmar la eliminación intentando buscar (GET) la directiva de nuevo. D
 
 ## Recuperar una lista de directivas principales habilitadas {#list-enabled-core}
 
-De forma predeterminada, solo participan en la evaluación las políticas de uso de datos activadas. Puede recuperar una lista de las directivas principales que su organización ha habilitado actualmente realizando una solicitud de GET a la `/enabledCorePolicies` punto final.
+De forma predeterminada, solo participan en la evaluación las políticas de control de datos habilitadas. Puede recuperar una lista de las directivas principales que su organización ha habilitado actualmente realizando una solicitud de GET a la `/enabledCorePolicies` punto final.
 
 **Formato de API**
 
@@ -663,7 +663,7 @@ Una respuesta correcta devuelve la lista de directivas principales activadas en 
 
 ## Actualizar la lista de directivas principales habilitadas {#update-enabled-core}
 
-De forma predeterminada, solo participan en la evaluación las políticas de uso de datos activadas. Haciendo una solicitud de PUT al `/enabledCorePolicies` , puede actualizar la lista de directivas principales habilitadas para su organización mediante una sola llamada.
+De forma predeterminada, solo participan en la evaluación las políticas de control de datos habilitadas. Haciendo una solicitud de PUT al `/enabledCorePolicies` , puede actualizar la lista de directivas principales habilitadas para su organización mediante una sola llamada.
 
 >[!NOTE]
 >

@@ -5,9 +5,9 @@ title: Glosario de Adobe Experience Platform
 topic-legacy: getting started
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '7435'
+source-wordcount: '7433'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 **Consola**: En [!DNL Query Service], la consola proporciona información sobre el estado y el funcionamiento de una consulta. La consola muestra el estado de conexión a [!DNL Query Service], las operaciones de consulta que se están ejecutando y los mensajes de error que resulten de esas consultas.
 
-**Etiquetas de contrato (&quot;C&quot;)**: Las etiquetas de uso de datos del contrato (&quot;C&quot;) se utilizan para categorizar los datos que tienen obligaciones contractuales o que están relacionados con las políticas de control de datos de un cliente.
+**Etiquetas de contrato (&quot;C&quot;)**: Las etiquetas de uso de datos del contrato (&quot;C&quot;) se utilizan para categorizar los datos que tienen obligaciones contractuales o que están relacionados con las políticas de control de datos de su organización.
 
 **Etiqueta de contrato C1**: A `C1` la etiqueta de uso de datos de contrato especifica que los datos solo se pueden exportar desde Adobe Experience Cloud en un formulario agregado sin incluir identificadores individuales o de dispositivo. Por ejemplo, datos que se originaron en redes sociales.
 
@@ -502,7 +502,7 @@ ht-degree: 0%
 
 **Conector de origen**: Los conectores de origen (también conocidos como fuentes) ayudan a los usuarios a ingerir fácilmente datos de múltiples fuentes, lo que permite estructurarlos, etiquetarlos y mejorarlos utilizando los servicios de Experience Platform. Los datos se pueden ingerir desde una variedad de fuentes, como almacenamiento basado en la nube, software de terceros y sistemas CRM.
 
-**Conexión de flujo continuo**: Una conexión de flujo continuo es un punto final único que proporciona Adobe y está vinculado a la organización IMS de un cliente para transmitir datos al Experience Platform.
+**Conexión de flujo continuo**: Una conexión de flujo continuo es un punto final único que proporciona el Adobe y que está vinculado a su organización para transmitir datos a Experience Platform.
 
 **Área de nombres de identidad estándar**: Las áreas de nombres de identidad estándar son áreas de nombres de identidad predefinidas proporcionadas por Adobe, que representan soluciones estándar del sector que normalmente se emplean para identificar clientes.
 

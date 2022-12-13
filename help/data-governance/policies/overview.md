@@ -3,12 +3,12 @@ keywords: Experience Platform;inicio;temas populares;programación;DULE
 solution: Experience Platform
 title: Información general sobre las políticas de uso de datos
 topic-legacy: policies
-description: Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Experience Platform.
+description: Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar o que se le restringe de, en los datos de Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 4%
+source-wordcount: '1164'
+ht-degree: 2%
 
 ---
 

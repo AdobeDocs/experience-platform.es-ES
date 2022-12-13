@@ -5,10 +5,10 @@ title: Información general sobre la administración de datos
 topic-legacy: overview
 description: La administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro del Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de uso de los datos y el control del uso de los datos para las acciones de marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1431'
-ht-degree: 0%
+source-wordcount: '1479'
+ht-degree: 2%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 0%
 Una de las funciones principales de Adobe Experience Platform es unir los datos de varios sistemas empresariales para permitir a los especialistas en marketing identificar, comprender y captar mejor a los clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante garantizar que los datos funcionen dentro de [!DNL Platform] cumplen las directivas de uso de datos.
 
 La administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave en [!DNL Experience Platform] en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para las acciones de marketing.
+
+>[!NOTE]
+>
+>En Experience Platform, el control de datos solo se refiere al modo en que se utilizan o activan los datos, independientemente de si el usuario realiza la acción. Para obtener información sobre cómo controlar el acceso a campos de datos específicos para determinados usuarios de Platform dentro de su organización, consulte la documentación de [control de acceso basado en atributos](../access-control/abac/overview.md) en su lugar.
 
 ## Funciones de administración de datos
 
@@ -112,9 +116,9 @@ En la tabla siguiente se describen términos clave relacionados con la administr
 | **Etiquetas de campos** | Las etiquetas de campo son etiquetas de control de datos que se heredan de un conjunto de datos o se aplican directamente a un campo.  Las etiquetas de control de datos aplicadas a un campo no se heredan de un conjunto de datos. |
 | **Geofence** | Una geovalla es un límite geográfico virtual, definido por la tecnología GPS o RFID, que permite al software almacenar en déclencheur una respuesta cuando un dispositivo móvil entra o sale de un área en particular. |
 | **Etiquetas de identidad** | Las etiquetas &quot;I&quot; de identidad se utilizan para categorizar los datos que pueden identificar a una persona específica o ponerse en contacto con ella. |
-| **Segmentación basada en intereses** | La segmentación basada en intereses, también conocida como personalización, se produce si se cumplen las tres condiciones siguientes: los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés de los usuarios, se utilizan en otro contexto, como en otro sitio o aplicación (fuera del sitio) y se utilizan para seleccionar qué contenido o anuncios se sirven en función de esas inferencias. |
+| **Segmentación basada en intereses** | La segmentación basada en intereses, también conocida como personalización, se produce si se cumplen las tres condiciones siguientes: los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés de un usuario, se utilizan en otro contexto, como en otro sitio o aplicación (fuera del sitio) y se utilizan para seleccionar qué contenido o anuncios se sirven en función de esas inferencias. |
 | **Acción de marketing** | Una acción de marketing, en el contexto del marco de control de datos, es una acción que [!DNL Experience Platform] toma del consumidor de datos, para lo cual es necesario comprobar si hay infracciones de las políticas de uso de datos |
-| **Política** | En el marco de control de datos, una política es una regla que describe qué tipo de acciones de marketing se permiten o no en datos específicos. |
+| **Directiva** | En el marco de control de datos, una política es una regla que describe qué tipo de acciones de marketing se permiten o no en datos específicos. |
 | **Etiquetas confidenciales** | Las etiquetas &quot;S&quot; confidenciales se utilizan para categorizar los datos que usted y su organización consideran confidenciales. |
 
 ## Recursos adicionales

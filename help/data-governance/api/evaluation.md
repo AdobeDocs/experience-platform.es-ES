@@ -5,16 +5,16 @@ title: Puntos finales de API de evaluación de políticas
 topic-legacy: developer guide
 description: Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API del servicio de directivas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1540'
+source-wordcount: '1542'
 ht-degree: 2%
 
 ---
 
 # Puntos finales de la evaluación de políticas
 
-Una vez creadas las acciones de marketing y definidas las políticas, puede usar la variable [!DNL Policy Service] API para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
+Una vez creadas las acciones de marketing y definidas las políticas de uso de datos, puede usar la variable [!DNL Policy Service] API para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 
 De forma predeterminada, solo las directivas cuyo estado está establecido en `ENABLED` participar en la evaluación. Sin embargo, puede utilizar el parámetro de consulta `?includeDraft=true` para incluir `DRAFT` políticas de evaluación.
 

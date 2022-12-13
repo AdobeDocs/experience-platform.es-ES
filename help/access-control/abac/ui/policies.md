@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de acceso;control de acceso basado en atributos;ABAC
-title: Control de acceso basado en atributos Crear una directiva
-description: Este documento proporciona información sobre la administración de directivas a través de la interfaz Permisos de Adobe Experience Cloud
+title: Administrar directivas de control de acceso
+description: Este documento proporciona información sobre la administración de políticas de control de acceso a través de la interfaz Permisos en Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# Administrar políticas
+# Administrar las políticas de control de acceso
 
-Las políticas son declaraciones que reúnen atributos para establecer acciones permisibles e inadmisibles. Las políticas pueden ser locales o globales y pueden anular otras directivas.
+Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Las políticas de acceso pueden ser locales o globales y pueden anular otras directivas.
+
+>[!IMPORTANT]
+>
+>Las políticas de acceso no deben confundirse con las políticas de uso de datos, que controlan cómo se utilizan los datos en Adobe Experience Platform en lugar de qué usuarios de la organización tienen acceso a ellos. Consulte la guía sobre la creación [políticas de uso de datos](../../../data-governance/policies/create.md) para obtener más información.
 
 ## Crear una directiva nueva
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Información general sobre el control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1826'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 3%
 El control de acceso basado en atributos es una función de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funciones basadas en atributos. Los atributos pueden ser metadatos agregados a un objeto, como una etiqueta agregada a un campo o segmento de esquema. Un administrador define políticas de acceso que incluyen atributos para administrar los permisos de acceso de los usuarios.
 
 Esta funcionalidad le permite etiquetar campos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir las políticas de acceso que rodean los campos de esquema XDM y administrar mejor el acceso dado a los usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Además, el control de acceso basado en atributos permite a los administradores administrar el acceso a segmentos específicos.
+
+>[!IMPORTANT]
+>
+>El control de acceso basado en atributos no debe confundirse con las capacidades de control de datos de Experience Platform, que le permiten utilizar etiquetas y políticas para controlar cómo se utilizan los datos en Platform, en lugar de qué usuarios de su organización tienen acceso a él. Consulte la [información general sobre la administración de datos](../../data-governance/home.md) para obtener más información.
 
 Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a datos personales confidenciales (SPD), información de identificación personal (PII) y tipo personalizado de datos en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.
 

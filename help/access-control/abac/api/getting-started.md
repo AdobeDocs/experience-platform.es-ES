@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Control de acceso basado en atributos;control de acceso basado en atributos
-title: Introducción al control de acceso basado en atributos
-description: El control de acceso basado en atributos le permite administrar mediante programación las funciones y políticas en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
+title: Introducción a la API de control de acceso basada en atributos
+description: La API de control de acceso basado en atributos permite administrar mediante programación las funciones y las políticas de acceso en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '330'
 ht-degree: 4%
 
 ---
 
-# Introducción al control de acceso basado en atributos
+# Introducción a la API de control de acceso basada en atributos
 
-Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar el control de acceso basado en atributos para administrar funciones, productos, categorías de permisos y conjuntos de permisos en Adobe Experience Platform, e incluye ejemplos de llamadas de API para realizar diversas operaciones.
+Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la API de control de acceso basada en atributos para administrar funciones, productos, categorías de permisos y conjuntos de permisos en Adobe Experience Platform, e incluye ejemplos de llamadas de API para realizar diversas operaciones.
 
 ## Leer llamadas de API de ejemplo
 

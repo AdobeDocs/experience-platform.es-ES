@@ -5,16 +5,20 @@ title: Administrar políticas de uso de datos en la interfaz de usuario
 topic-legacy: policies
 description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el espacio de trabajo Directivas de la interfaz de usuario del Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1411'
 ht-degree: 0%
 
 ---
 
 # Administrar políticas de uso de datos en la interfaz de usuario
 
-Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en la **Políticas** espacio de trabajo [!DNL Experience Platform] interfaz de usuario.
+Este documento explica cómo utilizar la variable **[!UICONTROL Políticas]** espacio de trabajo en la interfaz de usuario de Adobe Experience Platform para crear y administrar políticas de uso de datos.
+
+>[!NOTE]
+>
+>Para obtener información sobre cómo administrar las políticas de control de acceso en la interfaz de usuario, consulte la [guía de la interfaz de usuario de control de acceso basado en atributos](../../access-control/abac/ui/policies.md) en su lugar.
 
 >[!IMPORTANT]
 >
@@ -24,7 +28,7 @@ Administración de datos de Adobe Experience Platform proporciona una interfaz d
 
 Esta guía requiere una comprensión práctica de lo siguiente [!DNL Experience Platform] conceptos:
 
-* [Control de datos](../home.md)
+* [Administración de datos](../home.md)
 * [Políticas de uso de datos](./overview.md)
 
 ## Ver directivas existentes {#view-policies}

@@ -1,13 +1,13 @@
 ---
 title: (Beta) Conexión de asistencia al cliente - CRM
 description: Active perfiles en su cuenta de Trade Desk para la segmentación y supresión de audiencias en función de los datos CRM.
-source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
+exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) El [!DNL Trade Desk] - Conexión CRM
 

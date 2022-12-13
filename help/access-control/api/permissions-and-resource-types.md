@@ -3,18 +3,18 @@ keywords: Experience Platform;inicio;temas populares;permisos de control de acce
 solution: Experience Platform
 title: Punto final de API de referencia
 topic-legacy: developer guide
-description: El control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funcionalidades de Platform mediante Adobe Admin Console. Puede enumerar los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET al extremo /acl/reference en la API de control de acceso. Estos nombres se pueden utilizar en llamadas a API para ver las políticas efectivas para el usuario actual.
+description: El punto final de referencia en la API de control de acceso le permite ver los nombres de los permisos disponibles y los tipos de recursos, que se pueden utilizar para ver políticas de control de acceso efectivas para el usuario actual.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '165'
 ht-degree: 2%
 
 ---
 
 # Punto de referencia
 
-Puede enumerar los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET al `/acl/reference` punto final. Estos nombres se pueden utilizar en llamadas de API a [ver políticas eficaces](./effective-policies.md) para el usuario actual.
+Puede enumerar los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET al `/acl/reference` punto final. Estos nombres se pueden utilizar en llamadas de API a [ver directivas de control de acceso efectivas](./effective-policies.md) para el usuario actual.
 
 Un permiso es una directiva que se administra a través de Adobe Admin Console y que se asigna a cero o más directivas de tipo de recurso. Un tipo de recurso es una directiva que habilita las capacidades de lectura, escritura o eliminación para un tipo específico [!DNL Platform] recurso (como conjuntos de datos o esquemas).
 

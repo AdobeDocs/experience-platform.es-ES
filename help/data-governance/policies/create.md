@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de datos;política de uso de datos
 solution: Experience Platform
-title: Crear una directiva de uso de datos en la API
+title: Crear una directiva de administración de datos en la API
 topic-legacy: policies
 type: Tutorial
-description: La API del servicio de directivas le permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos. Este documento proporciona un tutorial paso a paso para crear una política mediante la API del servicio de directivas.
+description: Obtenga información sobre cómo crear una directiva de control de datos mediante la API del servicio de directivas.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1200'
+ht-degree: 3%
 
 ---
 
-# Crear una directiva de uso de datos en la API
+# Crear una directiva de control de datos en la API
 
-La variable [API del servicio de directivas](https://www.adobe.io/experience-platform-apis/references/policy-service/) le permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos.
+La variable [API del servicio de directivas](https://www.adobe.io/experience-platform-apis/references/policy-service/) le permite crear y administrar políticas de control de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos.
 
-Este documento proporciona un tutorial paso a paso para crear una política mediante el [!DNL Policy Service] API. Para obtener una guía más completa de las diferentes operaciones disponibles en la API, consulte la [Guía para desarrolladores de Policy Service](../api/getting-started.md).
+Este documento proporciona un tutorial paso a paso para crear una política de gobernanza mediante el [!DNL Policy Service] API.
+
+>[!NOTE]
+>
+>Para ver los pasos sobre cómo crear una directiva de control de acceso, consulte la `/policies` guía de extremo para la variable [API de control de acceso](../../access-control/abac/api/policies.md). Para obtener información sobre cómo crear una directiva de consentimiento, consulte la [guía de la interfaz de usuario de directivas](./user-guide.md#consent-policy).
 
 ## Primeros pasos
 

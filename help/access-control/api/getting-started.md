@@ -5,9 +5,9 @@ title: Guía de API de control de acceso
 topic-legacy: developer guide
 description: El control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funcionalidades de Platform mediante Adobe Admin Console. Las secciones siguientes proporcionan información adicional que los desarrolladores deberán conocer para realizar correctamente llamadas a la API del Registro de esquemas.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '386'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 Esta guía para desarrolladores proporciona información sobre cómo dar formato a las solicitudes al [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/)y abarca las siguientes operaciones:
 
 - [Nombres de lista de permisos y tipos de recursos](./permissions-and-resource-types.md)
-- [Ver directivas efectivas para el usuario actual](./effective-policies.md)
+- [Ver directivas de acceso efectivas para el usuario actual](./effective-policies.md)
 
 ## Primeros pasos
 

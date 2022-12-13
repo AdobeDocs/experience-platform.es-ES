@@ -5,9 +5,9 @@ title: Guía de API del servicio de directivas
 topic-legacy: developer guide
 description: La API del servicio de directivas permite a los desarrolladores administrar las etiquetas y políticas de uso de datos en Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '545'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,13 @@ Las acciones de marketing (también denominadas casos de uso de marketing), en e
 
 ## Políticas
 
-Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de [!DNL Experience Platform]. Una política se define de la siguiente manera:
+Las políticas de control de datos son reglas que describen los tipos de acciones de marketing que puede realizar o de las que se le restringe el uso de datos dentro de [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>Las políticas de control de datos no deben confundirse con las políticas de control de acceso, que determinan los atributos de datos específicos a los que pueden acceder ciertos usuarios de Platform de su organización. Consulte la guía de [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
+
+Una política de control de datos se define de la siguiente manera:
 
 1. Una acción de marketing específica
 1. Etiquetas de uso de datos con las que se restringe la acción
@@ -39,7 +45,7 @@ Para obtener información sobre cómo administrar directivas en la API, consulte
 
 ## Evaluación
 
-Una vez aplicadas las etiquetas de uso de datos [!DNL Platform] Los conjuntos de datos de y las políticas de uso de datos se han definido para acciones de marketing con esas etiquetas, las capacidades de control de datos permiten aplicar esas políticas y evitar operaciones de datos que constituyan infracciones de políticas.
+Una vez aplicadas las etiquetas de uso de datos [!DNL Platform] Los conjuntos de datos de y las políticas de uso de datos se han definido para acciones de marketing con esas etiquetas, las capacidades de control de datos permiten aplicar esas políticas y evitar operaciones de datos que constituyan violaciones de políticas.
 
 La variable [!DNL Policy Service] La API proporciona extremos que le permiten probar acciones de marketing con conjuntos de datos o combinaciones arbitrarias de etiquetas de uso de datos para comprobar si se produce alguna violación de la política. En función de la respuesta de API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente la política de uso de datos. Consulte la [guía de extremos de evaluación](./evaluation.md) para obtener más información.
 

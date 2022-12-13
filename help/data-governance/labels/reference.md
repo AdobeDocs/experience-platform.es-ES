@@ -5,9 +5,9 @@ title: Glosario de etiquetas de uso de datos
 topic-legacy: labels
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform actualmente.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2108'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 1%
 >abstract="Existen varias categorías de etiquetas de uso de datos. Las etiquetas definidas por el Adobe incluyen etiquetas de contrato, de identidad y confidenciales. Las etiquetas definidas por su organización se clasifican como etiquetas personalizadas."
 >text="See the data usage labels glossary for more information on these label types."
 
-Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. La Administración de datos de Adobe Experience Platform proporciona varias etiquetas de uso de datos principales listas para usar que puede usar para empezar a categorizar los datos.
+Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según [políticas de gobernanza](../policies/overview.md) y [directivas de control de acceso](../../access-control/abac/overview.md) que se aplican a esos datos. Adobe Experience Platform proporciona varias etiquetas de uso de datos principales listas para usar que puede usar para empezar a categorizar los datos.
 
-Este documento describe las etiquetas de uso de datos principales que proporciona actualmente [!DNL Experience Platform]. Puede encontrar más información sobre la administración de datos en la sección [Información general sobre la administración de datos](../home.md).
+Este documento describe las etiquetas de uso de datos principales que proporciona actualmente el Experience Platform.
 
 ## Etiquetas de contrato
 
@@ -135,7 +135,7 @@ Algunos contratos incluyen prohibiciones explícitas sobre el uso de datos para 
 
 #### C10 {#c10}
 
-Algunas políticas de uso de datos restringen el uso de datos de identidad vinculados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
+Algunas políticas de control de datos restringen el uso de datos de identidad vinculados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
 
 #### C11 {#c11}
 

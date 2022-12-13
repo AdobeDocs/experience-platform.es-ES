@@ -1,9 +1,10 @@
 ---
 title: Guía completa de control de datos
 description: Siga el proceso completo para aplicar restricciones de uso de datos para campos y conjuntos de datos en Adobe Experience Platform.
-source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
+exl-id: f18ae032-027a-4c97-868b-e04753237c81
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Para controlar qué acciones de marketing se pueden realizar en determinados con
 1. [Configuración y activación de políticas de control de datos](#policy) que determinan qué tipos de datos etiquetados se pueden utilizar para determinadas acciones de marketing.
 1. [Aplicar acciones de marketing a los destinos](#destinations) para indicar qué políticas se aplican a los datos enviados a esos destinos.
 
-Una vez que haya terminado de configurar las etiquetas, las políticas y las acciones de marketing, puede [probar la aplicación de directivas](#test) para asegurarse de que funciona según lo esperado.
+Una vez que haya terminado de configurar las etiquetas, las políticas de control y las acciones de marketing, puede [probar la aplicación de directivas](#test) para asegurarse de que funciona según lo esperado.
 
 Esta guía explica el proceso completo de configuración y aplicación de una política de control de datos en la interfaz de usuario de Platform. Para obtener información más detallada sobre las funciones utilizadas en esta guía, consulte la documentación de información general sobre los siguientes temas:
 
@@ -24,6 +25,10 @@ Esta guía explica el proceso completo de configuración y aplicación de una po
 * [Etiquetas de uso de datos](./labels/overview.md)
 * [Políticas de uso de datos](./policies/overview.md)
 * [Aplicación de políticas](./enforcement/overview.md)
+
+>[!NOTE]
+>
+>Esta guía se centra en cómo configurar y aplicar políticas sobre cómo se utilizan o activan los datos en el Experience Platform. Si está intentando restringir **access** para conocer los datos de ciertos usuarios de Platform de su organización, consulte la guía de extremo a extremo sobre [control de acceso basado en atributos](../access-control/abac/end-to-end-guide.md) en su lugar. El control de acceso basado en atributos también utiliza etiquetas y políticas, pero para un caso de uso diferente al control de datos.
 
 ## Aplicar etiquetas {#labels}
 

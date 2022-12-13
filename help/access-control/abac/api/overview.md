@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;api;control de acceso basado en atributos;Control de acceso basado en atributos
 solution: Experience Platform
 title: Guía de API de control de acceso basado en atributos
-description: La API de control de acceso basada en atributos permite administrar mediante programación las funciones y las políticas en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
+description: La API de control de acceso basada en atributos permite administrar mediante programación las funciones y las políticas de acceso en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '450'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 El control de acceso basado en atributos es una función de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funciones basadas en atributos. Los atributos pueden ser metadatos agregados a un objeto, como una etiqueta agregada a un campo o segmento de esquema. Un administrador define políticas de acceso que incluyen atributos para administrar los permisos de acceso de los usuarios.
 
 La API de control de acceso basada en atributos se utiliza para acceder a funciones, productos, categorías de permisos y conjuntos de permisos en Adobe Experience Platform, lo que proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
+
+>[!IMPORTANT]
+>
+>El control de acceso basado en atributos no debe confundirse con las capacidades de control de datos de Experience Platform, que le permiten utilizar etiquetas y políticas para controlar cómo se utilizan los datos en Platform, en lugar de qué usuarios de su organización tienen acceso a él. Consulte la [Guía de API del servicio de directivas](../../../data-governance/api/overview.md) para ver los pasos sobre cómo aprovechar estas capacidades mediante programación.
 
 Estos extremos se describen a continuación. Visite las guías de puntos de conexión individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, leer llamadas de API de ejemplo y más.
 

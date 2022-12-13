@@ -3,22 +3,22 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Examinar el control de acceso basado en atributos
 description: Este documento proporciona información sobre el uso de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '347'
 ht-degree: 5%
 
 ---
 
 # Guía de permisos
 
-Permisos es el área de Adobe Experience Cloud donde los administradores pueden definir funciones de usuario y políticas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
+[!UICONTROL Permisos] es el área de Adobe Experience Cloud donde los administradores pueden definir funciones de usuario y políticas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
 
-Con los permisos, puede configurar:
+con [!UICONTROL Permisos], puede configurar:
 
+* [Políticas de acceso](./policies.md)
 * [Etiquetas](./labels.md)
 * [Permisos](./permissions.md)
-* [Políticas](./permissions.md)
 * [Funciones](./roles.md)
 * [Zonas protegidas](./sandboxes.md)
 * [Usuarios](./users.md)

@@ -5,9 +5,9 @@ title: Aplicación automática de directivas
 topic-legacy: guide
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar segmentos en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->La aplicación automática de políticas solo está disponible para las organizaciones que han comprado **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**.
+>La aplicación automática de directivas solo está disponible para las organizaciones que han adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**.
 
-Una vez etiquetados los datos y definidas las políticas de uso, puede hacer cumplir las políticas de uso de los datos. Al activar segmentos de audiencia en destinos, Adobe Experience Platform aplica automáticamente las políticas de uso en caso de que se produzcan infracciones.
+Una vez etiquetados los datos y definidas las políticas de uso de los datos, puede hacer cumplir las políticas de uso de los datos. Al activar segmentos de audiencia en destinos, Adobe Experience Platform aplica automáticamente las políticas de uso en caso de que se produzcan infracciones.
+
+>[!NOTE]
+>
+>Este documento se centra en la aplicación de las políticas de control y consentimiento de los datos. Para obtener información sobre las políticas de control de acceso, consulte la documentación sobre [control de acceso basado en atributos](../../access-control/abac/overview.md).
 
 ## Requisitos previos
 

@@ -5,18 +5,22 @@ title: Administrar etiquetas de uso de datos en la interfaz de usuario
 topic-legacy: labels
 description: Esta guía trata los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
 
 # Administrar etiquetas de uso de datos en la interfaz de usuario
 
-Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos dentro de la variable [!DNL Experience Platform] interfaz de usuario. Antes de utilizar la guía, consulte la [Información general sobre la administración de datos](../home.md) para obtener una introducción más sólida al marco de control de datos.
+Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos dentro de la variable [!DNL Experience Platform] interfaz de usuario.
 
 ## Administrar etiquetas en el nivel de conjunto de datos
+
+>[!IMPORTANT]
+>
+>La aplicación de etiquetas en el nivel de conjunto de datos solo se admite para casos de uso de control de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la descripción general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
 
 Para administrar las etiquetas de uso de datos en el nivel de conjunto de datos, debe seleccionar un conjunto de datos existente o crear uno nuevo. Después de iniciar sesión en Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir el **[!UICONTROL Conjuntos de datos]** espacio de trabajo. Esta página enumera todos los conjuntos de datos creados que pertenecen a su organización, junto con detalles útiles relacionados con cada conjunto de datos.
 
@@ -75,6 +79,10 @@ La variable **[!UICONTROL Mostrar etiquetas heredadas]** está activada de forma
 ![Ocultar etiquetas heredadas](../images/labels/inherited-labels.png)
 
 ## Administrar etiquetas en el nivel de campo del conjunto de datos
+
+>[!IMPORTANT]
+>
+>La aplicación de etiquetas en el nivel de campo del conjunto de datos solo se admite para casos de uso de control de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la descripción general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
 
 Continuación del flujo de trabajo para [agregar y editar etiquetas de uso de datos en el nivel de conjunto de datos](#add-labels), también puede administrar etiquetas de nivel de campo dentro del **[!UICONTROL Administración de datos]** espacio de trabajo para ese conjunto de datos.
 

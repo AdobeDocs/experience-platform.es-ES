@@ -5,10 +5,10 @@ title: Información general sobre conjuntos de datos
 topic-legacy: datasets
 description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 8%
+source-wordcount: '784'
+ht-degree: 9%
 
 ---
 
@@ -41,6 +41,10 @@ Consulte la [Información general sobre la ingesta de datos](../../ingestion/hom
 ## Aplicación de etiquetas de uso a conjuntos de datos
 
 La administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes para garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. El marco de control de datos le permite aplicar etiquetas de uso para categorizar los datos según las políticas de uso que se apliquen a esos datos.
+
+>[!IMPORTANT]
+>
+>La aplicación de etiquetas en el nivel de conjunto de datos solo se admite para casos de uso de control de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la descripción general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
 
 Las etiquetas de uso de datos se pueden aplicar a conjuntos de datos completos o a campos de conjuntos de datos individuales. Las etiquetas agregadas en el nivel de conjunto de datos las heredan todos los campos dentro de ese conjunto de datos.
 
