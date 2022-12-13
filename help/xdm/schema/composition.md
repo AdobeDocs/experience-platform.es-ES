@@ -5,10 +5,10 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '4103'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ Este documento proporciona una introducción a [!DNL Experience Data Model] (XDM
 
 ## Explicación de los esquemas
 
-Un esquema es un conjunto de reglas que representan y validan la estructura y el formato de los datos. En un nivel superior, los esquemas proporcionan una definición abstracta de un objeto real (como una persona) y describen qué datos deben incluirse en cada instancia de ese objeto (como nombre, apellido, cumpleaños, etc.).
+Un esquema es un conjunto de reglas que representan y validan la estructura y el formato de los datos. En un nivel superior, los esquemas proporcionan una definición abstracta de un objeto del mundo real (como una persona) y describen qué datos deben incluirse en cada instancia de ese objeto (como nombre, apellido, cumpleaños, etc.).  
 
 Además de describir la estructura de los datos, los esquemas aplican restricciones y expectativas a los datos para que se puedan validar a medida que se desplaza de un sistema a otro. Estas definiciones estándar permiten interpretar los datos de forma coherente, independientemente del origen, y eliminan la necesidad de realizar traducciones entre aplicaciones.
 
@@ -253,7 +253,7 @@ Los intervalos válidos de estos tipos escalares pueden restringirse aún más a
 
 >[!NOTE]
 >
->El tipo de campo &quot;map&quot; permite obtener datos de pares de clave-valor, incluidos varios valores para una sola clave. Los mapas se pueden encontrar en clases XDM estándar y grupos de campos, pero también se pueden definir mapas personalizados mediante la API del Registro de esquemas. Consulte el tutorial en [definición de campos personalizados](../tutorials/custom-fields-api.md#maps) para obtener más información.
+>El tipo de campo &quot;map&quot; permite obtener datos de pares de clave-valor, incluidos varios valores para una sola clave. Los mapas se pueden encontrar en clases XDM estándar y grupos de campos, pero también se pueden definir mapas personalizados mediante la API del Registro de esquemas. Consulte el tutorial en [definición de campos personalizados](../tutorials/custom-fields-api.md#custom-maps) para obtener más información.
 
 ## Ejemplo de composición
 
