@@ -2,14 +2,20 @@
 title: Notas de la versión de etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 6%
+source-wordcount: '418'
+ht-degree: 5%
 
 ---
 
 # Notas de la versión para etiquetas y reenvío de eventos
+
+## 23 de noviembre de 2022
+
+* **[!DNL AWS]extensión para el reenvío de eventos**: Ahora puede enviar datos a [!DNL Amazon Web Services] ([!DNL AWS]) usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL AWS] información general de la extensión](../../tags/extensions/server/aws/overview.md) para obtener más información.
+* **[!DNL Google Ads Enhanced Conversions]extensión para el reenvío de eventos**: Ahora puede enviar datos de conversión a [!DNL Google Ads] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Google Ads Enhanced Conversions] información general de la extensión](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) para obtener más información.
+* **[!DNL Microsoft Azure]extensión para el reenvío de eventos**: Ahora puede enviar datos a [!DNL Microsoft Azure] usando un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Microsoft Azure] información general de la extensión](../../tags/extensions/server/azure/overview.md) para obtener más información.
 
 ## 26 de octubre de 2022
 
