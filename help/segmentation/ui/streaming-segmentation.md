@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,8 @@ Una definición de segmento **not** esté habilitado para la segmentación de fl
 
 - La definición del segmento incluye segmentos o rasgos de Adobe Audience Manager (AAM).
 - La definición del segmento incluye varias entidades (consultas de varias entidades).
+- La definición del segmento incluye una combinación de un solo evento y un `inSegment` evento.
+   - Sin embargo, si el segmento contiene la variable `inSegment` es solo de perfil, la definición del segmento **will** esté habilitado para la segmentación de flujo continuo.
 
 Tenga en cuenta las siguientes directrices cuando realice la segmentación de flujo continuo:
 

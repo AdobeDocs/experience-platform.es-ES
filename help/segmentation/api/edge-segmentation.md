@@ -5,9 +5,9 @@ title: Segmentación de Edge con la API
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación perimetral con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1187'
 ht-degree: 1%
 
 ---
@@ -60,6 +60,11 @@ Para que un segmento se evalúe mediante segmentación de Edge, la consulta debe
 | Consulta que hace referencia a un mapa | Cualquier definición de segmento que haga referencia a un mapa de propiedades. | Personas que han agregado al carro de compras en función de datos de segmentos externos. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 Además, el segmento **must** esté vinculado a una política de combinación activa en edge. Para obtener más información sobre las directivas de combinación, lea la [guía de políticas de combinación](../../profile/api/merge-policies.md).
+
+Una definición de segmento **not** estar habilitado para la segmentación de Edge en los siguientes escenarios:
+
+- La definición del segmento incluye una combinación de un solo evento y un `inSegment` evento.
+   - Sin embargo, si el segmento contiene la variable `inSegment` es solo de perfil, la definición del segmento **will** esté habilitado para la segmentación de Edge.
 
 ## Recuperar todos los segmentos habilitados para la segmentación de aristas
 

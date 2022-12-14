@@ -5,9 +5,9 @@ title: Evaluar eventos en tiempo casi real con segmentación por transmisión
 topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1938'
+source-wordcount: '1971'
 ht-degree: 1%
 
 ---
@@ -87,6 +87,8 @@ Una definición de segmento **not** esté habilitado para la segmentación de fl
 
 - La definición del segmento incluye segmentos o rasgos de Adobe Audience Manager (AAM).
 - La definición del segmento incluye varias entidades (consultas de varias entidades).
+- La definición del segmento incluye una combinación de un solo evento y un `inSegment` evento.
+   - Sin embargo, si el segmento contiene la variable `inSegment` es solo de perfil, la definición del segmento **will** esté habilitado para la segmentación de flujo continuo.
 
 Tenga en cuenta las siguientes directrices cuando realice la segmentación de flujo continuo:
 
