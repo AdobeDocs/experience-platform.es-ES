@@ -3,9 +3,9 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '996'
 ht-degree: 9%
 
 ---
@@ -89,7 +89,7 @@ En las reglas de etiquetas, los elementos de datos se tocan con una variable `%`
 
 #### Secuencia de acciones de regla {#action-sequencing}
 
-La variable [!UICONTROL Acciones] de una regla de reenvío de eventos siempre se ejecuta secuencialmente. Asegúrese de que el orden de las acciones es correcto al guardar una regla. Esta secuencia de ejecución no se puede ejecutar de forma asíncrona como con las etiquetas .
+La variable [!UICONTROL Acciones] de una regla de reenvío de eventos siempre se ejecuta secuencialmente. Por ejemplo, si una regla tiene dos acciones, la segunda acción no comenzará a ejecutarse hasta que se complete la acción anterior (y en los casos en que se espera una respuesta de un extremo, ese extremo ha respondido). Asegúrese de que el orden de las acciones es correcto al guardar una regla. Esta secuencia de ejecución no se puede ejecutar asincrónicamente como lo hace con las reglas de etiquetas.
 
 ## Secretos {#secrets}
 
