@@ -4,9 +4,9 @@ title: Guía del panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
+source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
 workflow-type: tm+mt
-source-wordcount: '3416'
+source-wordcount: '3381'
 ht-degree: 0%
 
 ---
@@ -275,14 +275,19 @@ La variable [!UICONTROL Tendencia de perfiles sin segmentar] proporciona una ilu
 
 ### [!UICONTROL Perfiles sin segmentar por identidad] {#unsegmented-profiles-by-identity}
 
+>!![NOTE]
+Los perfiles no segmentados por widget de identidad han quedado obsoletos a partir de octubre de 2022 y ya no están disponibles.
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
->title="Perfiles sin segmentar por identidad"
->abstract="Esta utilidad categoriza el número total de perfiles sin segmentar por su identificador único."
+>title="Unsegmented profiles by identity"
+>abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
 
-La variable [!UICONTROL Perfiles sin segmentar por identidad] categoriza el número total de perfiles sin segmentar por su identificador único. Los datos se visualizan en un gráfico de barras para facilitar la comparación.
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![El widget Perfiles sin segmentar por identidad .](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL Audiencias] {#audiences}
 
@@ -318,8 +323,7 @@ La variable [!UICONTROL Informe de superposición de audiencia] se abre. Este cu
 ![El cuadro de diálogo Informe de superposición de audiencia .](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
->
->Seleccione el **[!UICONTROL Superposición]** para cambiar la clasificación de los resultados entre mayor a menor o de menor a mayor.
+Seleccione el **[!UICONTROL Superposición]** para cambiar la clasificación de los resultados entre mayor a menor o de menor a mayor.
 
 Para descargar todo el informe en formato de PDF, seleccione el menú de opciones (**`...`**) seguido de **[!UICONTROL Descargar]**.
 
