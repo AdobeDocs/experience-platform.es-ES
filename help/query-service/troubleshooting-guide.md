@@ -5,9 +5,9 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene preguntas y respuestas comunes relacionadas con el servicio de consulta. Los temas incluyen, exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
+source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '4362'
 ht-degree: 1%
 
 ---
@@ -38,14 +38,19 @@ Esta sección incluye información sobre rendimiento, límites y procesos.
 +++Respuesta Una posible causa es la función de autocompletar. La función procesa ciertos comandos de metadatos que ocasionalmente pueden ralentizar el editor durante la edición de consultas.
 +++
 
-### ¿Puedo usar Postman para la API del servicio de consulta?
+### ¿Puedo usar [!DNL Postman] para la API del servicio de consulta?
 
-+++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante Postman (una aplicación gratuita de terceros). Observe el [Guía de configuración de Postman](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en la consola de Adobe Developer y adquirir todas las credenciales necesarias para su uso con Postman. Consulte la documentación oficial para [instrucciones sobre cómo iniciar, ejecutar y compartir colecciones de Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Observe el [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en la consola de Adobe Developer y adquirir todas las credenciales necesarias para su uso con [!DNL Postman]. Consulte la documentación oficial para [directrices sobre inicio, ejecución y uso compartido [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### ¿Hay un límite en el número máximo de filas devueltas desde una consulta a través de la interfaz de usuario?
 
 +++Respuesta Sí, el servicio de consulta aplica internamente un límite de 50 000 filas a menos que se especifique un límite explícito externamente. Consulte las directrices sobre [ejecución de consulta interactiva](./best-practices/writing-queries.md#interactive-query-execution) para obtener más información.
++++
+
+### ¿Puedo utilizar consultas para actualizar filas?
+
++++Respuesta En consultas por lotes, no se admite la actualización de una fila dentro del conjunto de datos.
 +++
 
 ### ¿Existe un límite de tamaño de datos para el resultado resultante de una consulta?
@@ -77,6 +82,11 @@ SELECT * FROM customers LIMIT 0;
 ### ¿Hay algún problema o impacto en el rendimiento del servicio de consulta si se ejecutan varias consultas simultáneamente?
 
 +++Nº respuesta El servicio de consulta tiene una capacidad de escalado automático que garantiza que las consultas simultáneas no tengan ningún impacto significativo en el rendimiento del servicio.
++++
+
+### ¿Puedo usar palabras clave reservadas como nombre de columna?
+
++++Respuesta Hay ciertas palabras clave reservadas que no se pueden usar como nombres de columna, como, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Si desea utilizar estas palabras clave, debe omitir estas columnas.
 +++
 
 ### ¿Cómo encuentro un nombre de columna de un conjunto de datos jerárquico?
@@ -451,6 +461,76 @@ WHERE T2.ID IS NULL
 ### ¿Puedo crear un conjunto de datos utilizando una consulta CTAS con un nombre de guión bajo doble como los que se muestran en la interfaz de usuario? Por ejemplo: `test_table_001`.
 
 +++Respuesta No, se trata de una limitación intencional en todo el Experience Platform que se aplica a todos los servicios de Adobe, incluido el servicio de consulta. Un nombre con dos guiones bajos es aceptable como esquema y como nombre de conjunto de datos, pero el nombre de tabla para el conjunto de datos solo puede contener un solo guión bajo.
++++
+
+### ¿Cuántas consultas simultáneas se pueden ejecutar a la vez?
+
++++Respuesta No hay límite de concurrencia de consultas, ya que las consultas por lotes se ejecutan como trabajos back-end. Sin embargo, hay un límite de tiempo de espera de consulta establecido en 24 horas.
++++
+
+### ¿Hay un panel de actividades en el que se puedan ver las actividades de consulta y el estado?
+
++++Respuesta Existen funciones de supervisión y alerta para comprobar las actividades y los estados de las consultas. Consulte la [Integración del registro de auditoría del servicio de consultas](./data-governance/audit-log-guide.md) y [registros de consultas](./ui/overview.md#log) documentos para obtener más información.
++++
+
+### ¿Hay alguna forma de revertir las actualizaciones? Por ejemplo, si hay un error o es necesario reconfigurar algunos cálculos al escribir datos en Platform, ¿cómo se debe gestionar ese escenario?
+
++++Respuesta Actualmente, no se admiten devoluciones o actualizaciones de esta manera.
++++
+
+### ¿Cómo se pueden optimizar las consultas en Adobe Experience Platform?
+
++++Respuesta El sistema no tiene índices, ya que no es una base de datos, pero sí tiene otras optimizaciones asociadas al almacén de datos. Las siguientes opciones están disponibles para ajustar las consultas:
+
+- Filtro basado en el tiempo en datos de temporización.
+- Optimización del push para el tipo de datos de estructura.
+- Optimización del coste y la memoria para matrices y tipos de datos de asignación.
+- Procesamiento incremental mediante instantáneas.
+- Formato de datos persistente.
++++
+
+### ¿Pueden restringirse los inicios de sesión a ciertos aspectos del servicio de consulta o es una solución &quot;todo o nada&quot;?
+
++++Answer Query Service es una solución &quot;todo o nada&quot;. No se puede proporcionar acceso parcial.
++++
+
+### ¿Puedo restringir qué datos puede utilizar el servicio de consulta o simplemente acceder a todo el lago de datos de Adobe Experience Platform?
+
++++Respuesta Sí, puede restringir la consulta a conjuntos de datos con acceso de solo lectura.
++++
+
+### ¿Qué otras opciones hay para restringir los datos a los que puede acceder el servicio de consulta?
+
++++Respuesta Existen tres métodos para restringir el acceso. Son los siguientes:
+
+- Utilice instrucciones SELECT only y conceda acceso de solo lectura a los conjuntos de datos. Además, asigne el permiso administrar consulta.
+- Utilice las instrucciones SELECT/INSERT/CREATE y conceda acceso de escritura a los conjuntos de datos. Además, asigne el permiso de gestión de consultas.
+- Utilice una cuenta de integración con las sugerencias anteriores y asigne el permiso de integración de consultas.
+
++++
+
+### Una vez que el servicio de consulta devuelve los datos, ¿Platform puede realizar alguna comprobación para asegurarse de que no ha devuelto ningún dato protegido?
+
+- El servicio de consultas admite el control de acceso basado en atributos. Puede restringir el acceso a los datos en el nivel de columna/hoja o en el nivel de estructura. Consulte la documentación para obtener más información sobre el control de acceso basado en atributos.
+
+### ¿Puedo especificar un modo SSL para la conexión a un cliente de terceros? Por ejemplo, ¿puedo usar &#39;verify-full&#39; con Power BI?
+
++++Respuesta Sí, se admiten los modos SSL. Consulte la [Documentación de modos SSL](./clients/ssl-modes.md) para obtener un desglose de los distintos modos SSL disponibles y el nivel de protección que proporcionan.
++++
+
+### ¿Utilizamos TLS 1.2 para todas las conexiones de clientes de Power BI al servicio de consulta?
+
++ ++Respuesta Sí. Los datos en tránsito siempre son compatibles con HTTPS. La versión admitida actualmente es TLS1.2.
++++
+
+### ¿Sigue usando https una conexión hecha en el puerto 80?
+
++++Respuesta Sí, una conexión realizada en el puerto 80 sigue utilizando SSL. También puede utilizar el puerto 5432.
++++
+
+### ¿Puedo controlar el acceso a conjuntos de datos y columnas específicos para una conexión determinada? ¿Cómo se configura esto?
+
++++Respuesta Sí, el control de acceso basado en atributos se aplica si está configurado. Consulte la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md) para obtener más información.
 +++
 
 ## Exportación de datos {#exporting-data}
