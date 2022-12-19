@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2397'
 ht-degree: 1%
 
 ---
@@ -66,11 +66,11 @@ Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las definici
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Esta vista muestra información sobre la definición del segmento, incluido el desglose, la pérdida, el recuento de perfiles, el método de evaluación, la fecha de creación y la fecha de la última modificación.
+Esta vista muestra información sobre la definición del segmento, incluido el recuento de perfiles, la fecha de creación y la fecha de la última modificación.
 
-El desglose muestra un gráfico de barras que resume el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados: [!UICONTROL Realizado], [!UICONTROL Existente]y [!UICONTROL Saliendo]. Además, el desglose mostrado en la variable [!UICONTROL Examinar] es el desglose más preciso del estado del segmento. Si este número difiere con el indicado en la variable [!UICONTROL Información general] , utilice los números de la pestaña [!UICONTROL Examinar] como la fuente de información correcta, ya que la variable [!UICONTROL Información general] los números de tabulación solo se actualizan una vez al día.
+Para agregar campos adicionales a esta pantalla, seleccione IMAGEN. Estos campos adicionales incluyen desglose, pérdida, método de evaluación e ID de trabajo.
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+Si se selecciona el desglose, la visualización muestra un gráfico de barras en el que se describe el porcentaje de perfiles que pertenecen a cada uno de los estados siguientes: [!UICONTROL Realizado], [!UICONTROL Existente]y [!UICONTROL Saliendo]. Además, el desglose mostrado en la variable [!UICONTROL Examinar] es el desglose más preciso del estado del segmento. Si este número difiere con el indicado en la variable [!UICONTROL Información general] , utilice los números de la pestaña [!UICONTROL Examinar] como la fuente de información correcta, ya que la variable [!UICONTROL Información general] los números de tabulación solo se actualizan una vez al día.
 
 | Estado | Descripción |
 | ------ | ----------- |

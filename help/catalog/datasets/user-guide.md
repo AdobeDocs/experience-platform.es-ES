@@ -5,7 +5,7 @@ title: Guía de la interfaz de usuario de conjuntos de datos
 topic-legacy: datasets
 description: Aprenda a realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 3e25bd111d7a5cb482fa8e872452b352676b29ad
+source-git-commit: 28b6944a14c07f14d8177e3f8ae1c1a83c4c9c86
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 0%
@@ -149,7 +149,7 @@ Puede eliminar un conjunto de datos del [!DNL Profile] solo almacene (dejando lo
 
 ## Monitorización de la ingesta de datos
 
-En el [!DNL Experience Platform] IU, seleccionar **[!UICONTROL Monitorización]** en el panel de navegación izquierdo. La variable **[!UICONTROL Monitorización]** tablero permite ver los estados de los datos entrantes desde la ingesta por lotes o de flujo continuo. Para ver los estados de los lotes individuales, seleccione: **[!UICONTROL Lote de extremo a extremo]** o **[!UICONTROL Transmisión de extremo a extremo]**. Los tableros enumeran todas las ejecuciones de ingesta por lotes o de flujo continuo, incluidas las que se hayan realizado correctamente, que hayan fallado o que estén aún en curso. Cada lista proporciona detalles del lote, incluido el ID del lote, el nombre del conjunto de datos de destino y el número de registros introducidos. Si el conjunto de datos de destino está habilitado para [!DNL Profile], también se muestra el número de registros de identidad y perfil ingestados.
+En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Monitorización]** en el panel de navegación izquierdo. La variable **[!UICONTROL Monitorización]** tablero permite ver los estados de los datos entrantes desde la ingesta por lotes o de flujo continuo. Para ver los estados de los lotes individuales, seleccione: **[!UICONTROL Lote de extremo a extremo]** o **[!UICONTROL Transmisión de extremo a extremo]**. Los tableros enumeran todas las ejecuciones de ingesta por lotes o de flujo continuo, incluidas las que se hayan realizado correctamente, que hayan fallado o que estén aún en curso. Cada lista proporciona detalles del lote, incluido el ID del lote, el nombre del conjunto de datos de destino y el número de registros introducidos. Si el conjunto de datos de destino está habilitado para [!DNL Profile], también se muestra el número de registros de identidad y perfil ingestados.
 
 ![](../images/datasets/user-guide/batch-listing.png)
 
