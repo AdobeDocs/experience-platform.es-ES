@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario de segmentación por transmisión
 topic-legacy: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
@@ -36,14 +36,14 @@ Una consulta se evaluará automáticamente con la segmentación de flujo continu
 
 | Tipo de consulta | Detalles | Ejemplo |
 | ---------- | ------- | ------- |
-| Un solo evento | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Un solo evento dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Un solo evento con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un solo evento entrante con un intervalo de tiempo. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
+| Un solo evento | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. | ![Se muestra un ejemplo de un solo evento.](../images/ui/streaming-segmentation/incoming-hit.png) |
+| Un solo evento dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante. | ![Se muestra un ejemplo de un solo evento dentro de una ventana de tiempo relativa.](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Un solo evento con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un solo evento entrante con un intervalo de tiempo. | ![Se muestra un ejemplo de un solo evento con una ventana de tiempo.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |  |
-| Un solo evento con un atributo de perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. **Nota:** La consulta se evalúa inmediatamente cuando se produce el evento. Sin embargo, en el caso de un evento de perfil, debe esperar 24 horas para incorporarse. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Un solo evento con un atributo de perfil dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o más atributos de perfil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se utiliza un segmento de segmentos, se producirá la descalificación del perfil **cada 24 horas**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
-| Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| Un solo evento con un atributo de perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. **Nota:** La consulta se evalúa inmediatamente cuando se produce el evento. Sin embargo, en el caso de un evento de perfil, debe esperar 24 horas para incorporarse. | ![Se muestra un ejemplo de un solo evento con un atributo de perfil.](../images/ui/streaming-segmentation/profile-hit.png) |
+| Un solo evento con un atributo de perfil dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o más atributos de perfil. | ![Se muestra un ejemplo de un solo evento con un atributo de perfil dentro de un periodo de tiempo relativo.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se utiliza un segmento de segmentos, se producirá la descalificación del perfil **cada 24 horas**. | ![Se muestra un ejemplo de un segmento de segmentos.](../images/ui/streaming-segmentation/two-batches.png) |
+| Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. | ![Se muestra un ejemplo de varios eventos con un atributo de perfil.](../images/ui/streaming-segmentation/event-history-success.png) |
 
 Una definición de segmento **not** esté habilitado para la segmentación de flujo continuo en los siguientes casos:
 
@@ -67,7 +67,7 @@ Además, la descalificación de segmentos, similar a la calificación de segment
 
 Después de crear un segmento con la transmisión habilitada, puede ver los detalles de ese segmento.
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![Se muestra la página de detalles del segmento.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 Específicamente, la variable **[!UICONTROL Total cualificado]** se muestra, que muestra el número total de audiencias cualificadas, según las evaluaciones por lotes y de flujo continuo de este segmento.
 
@@ -79,11 +79,11 @@ Debajo hay un gráfico de líneas que muestra el número de audiencias nuevas qu
 >
 >Encontrará más información sobre estos estados en la tabla de estado de la [información general sobre segmentación](./overview.md#browse).
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
+![Se resalta la tarjeta Perfiles a lo largo del tiempo, que muestra un gráfico de líneas de los perfiles a lo largo del tiempo.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
 Para obtener información adicional sobre la última evaluación de segmentos, seleccione la burbuja de información junto a **[!UICONTROL Total cualificado]**.
 
-![](../images/ui/streaming-segmentation/info-bubble.png)
+![Se ha seleccionado la burbuja de información para el total de perfiles cualificados. Muestra información sobre el tiempo de evaluación del último segmento.](../images/ui/streaming-segmentation/info-bubble.png)
 
 Para obtener más información sobre las definiciones de segmentos, lea la sección anterior sobre [detalles de definición de segmentos](#segment-details).
 

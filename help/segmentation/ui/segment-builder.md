@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Generador de segmentos
 topic-legacy: ui guide
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3101'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ A continuación, puede arrastrar y soltar fácilmente [!DNL ExperienceEvents] y 
 
 De forma predeterminada, solo se muestran los campos de esquema rellenados del almacén de datos. Esto incluye &quot;[!UICONTROL Tipos de eventos]&quot;. Si la variable[!UICONTROL Tipos de eventos]&quot; no está visible, o solo puede seleccionar &quot;[!UICONTROL Cualquiera]&quot; como &quot;[!UICONTROL Tipo de evento]&quot;, seleccione **icono de engranaje** junto a **[!UICONTROL Campos]** y, a continuación, seleccione **[!UICONTROL Mostrar esquema XDM completo]** under **[!UICONTROL Campos disponibles]**. Seleccione el **icono de engranaje** para volver a la **[!UICONTROL Campos]** y ahora debería poder ver varias[!UICONTROL Tipos de eventos]&quot; y campos de esquema, independientemente de si contienen datos o no.
 
-![](../images/ui/segment-builder/show-populated.png)
+![Los botones de opción que permiten elegir entre mostrar solo campos con datos o mostrar todos los campos XDM están resaltados.](../images/ui/segment-builder/show-populated.png)
 
 #### Conjuntos de datos de grupos de informes de Adobe Analytics
 
@@ -76,7 +76,7 @@ Por ejemplo, imaginemos una situación en la que tenía dos grupos de informes c
 | eVar3 | URL | Nombre de página |
 | eVar4 | Términos de búsqueda | Nombre del producto |
 | evento 1 | Clics | Page Views |
-| evento 2 | Vistas de páginas | Adiciones al carro de compras |
+| evento 2 | Page Views | Adiciones al carro de compras |
 | event3 | Adiciones al carro de compras | Cierres de compra |
 | event4 | Compras | Compras |
 

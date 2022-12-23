@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2647'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ La variable **[!UICONTROL Segmentos]** tablero describe las métricas clave rela
 
 Para obtener más información, visite [guía del tablero de segmentos](../../dashboards/guides/segments.md).
 
-![](../../dashboards/images/segments/dashboard-overview.png)
+![Se muestra el panel de segmentos. Muestra varias utilidades, incluido el tamaño de la audiencia, los perfiles por identidad, la superposición de identidad y la tendencia del cambio en el tamaño de la audiencia.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Examinar {#browse}
 
@@ -60,15 +60,15 @@ Para obtener más información, visite [guía del tablero de segmentos](../../da
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="Añadir todos los segmentos a la programación"
->abstract="Habilite para incluir todos los segmentos de evaluación por lotes en la actualización diaria programada a las 3:30 PM UTC. Deshabilite para eliminar todos los segmentos de la actualización programada."
+>abstract="Habilite para incluir todos los segmentos de evaluación por lotes en la actualización programada diaria. Deshabilite para eliminar todos los segmentos de la actualización programada."
 
 Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las definiciones de segmentos de su organización.
 
-![](../images/ui/overview/segment-browse-all.png)
+![Se muestra la pantalla de exploración de segmentos. Se muestra una lista de todos los segmentos pertenecientes a la organización.](../images/ui/overview/segment-browse-all.png)
 
 Esta vista muestra información sobre la definición del segmento, incluido el recuento de perfiles, la fecha de creación y la fecha de la última modificación.
 
-Para agregar campos adicionales a esta pantalla, seleccione IMAGEN. Estos campos adicionales incluyen desglose, pérdida, método de evaluación e ID de trabajo.
+Para añadir campos adicionales a esta pantalla, seleccione ![el icono de atributo filter](../images/ui/overview/filter-attribute.png). Estos campos adicionales incluyen desglose, pérdida, método de evaluación e ID de trabajo.
 
 Si se selecciona el desglose, la visualización muestra un gráfico de barras en el que se describe el porcentaje de perfiles que pertenecen a cada uno de los estados siguientes: [!UICONTROL Realizado], [!UICONTROL Existente]y [!UICONTROL Saliendo]. Además, el desglose mostrado en la variable [!UICONTROL Examinar] es el desglose más preciso del estado del segmento. Si este número difiere con el indicado en la variable [!UICONTROL Información general] , utilice los números de la pestaña [!UICONTROL Examinar] como la fuente de información correcta, ya que la variable [!UICONTROL Información general] los números de tabulación solo se actualizan una vez al día.
 
@@ -82,7 +82,7 @@ La pérdida representa el porcentaje de perfiles que cambian dentro de una defin
 
 El método de evaluación puede ser flujo continuo, por lotes o edge. Los segmentos de transmisión se evalúan constantemente a medida que los datos entran en el sistema. Los segmentos por lotes se evalúan según una programación establecida. Los segmentos de Edge se evalúan en tiempo real, lo que permite casos de uso de personalización de la misma página y de la siguiente página.
 
-![](../images/ui/overview/segment-browse-segments.png)
+![Se resaltan los segmentos dentro de la página de exploración del segmento.](../images/ui/overview/segment-browse-segments.png)
 
 En la parte superior de la página hay opciones para agregar todos los segmentos a una programación y para crear un nuevo segmento.
 
@@ -90,11 +90,11 @@ Alternar **[!UICONTROL Añadir todos los segmentos a la programación]** habilit
 
 Selección **[!UICONTROL Crear segmento]** le llevará al Generador de segmentos. Para obtener más información sobre la creación de segmentos, lea la sección sobre [creación de un segmento en la guía del usuario](#create-segment).
 
-![](../images/ui/overview/segment-browse-top.png)
+![Se resalta la barra de navegación superior de la página de exploración del segmento. Esta barra contiene un botón para agregar todos los segmentos a una programación y un botón para crear un segmento.](../images/ui/overview/segment-browse-top.png)
 
 La barra lateral derecha contiene información sobre todos los segmentos dentro de la organización, con el número total de segmentos, la última fecha de evaluación, la siguiente fecha de evaluación, así como un desglose de los segmentos por método de evaluación.
 
-![](../images/ui/overview/segment-browse-segment-info.png)
+![Se resalta la barra lateral derecha de la página de exploración del segmento. Se muestra información sobre los segmentos de la organización. Esto incluye información como el número total de segmentos, la última hora evaluada, la siguiente hora evaluada, así como un desglose de los diferentes tipos de segmentos.](../images/ui/overview/segment-browse-segment-info.png)
 
 Al seleccionar la fila de la definición del segmento, se proporciona un resumen de la definición del segmento, incluidas las opciones para editarlo o eliminarlo, activar el segmento en un destino, la audiencia cualificada para el segmento, el tamaño total de la audiencia, además del nombre, la descripción, el método de evaluación, la fecha de creación y la fecha de última modificación del segmento.
 
@@ -102,7 +102,7 @@ Al seleccionar la fila de la definición del segmento, se proporciona un resumen
 >
 > Usted **not** puede eliminar un segmento que se utilice en una activación de destino.
 
-![](../images/ui/overview/segment-browse-details.png)
+![Se muestran los detalles sobre el segmento seleccionado. Esto incluye detalles sobre el número de perfiles cualificados, el desglose porcentual de perfiles cualificados comparados con el total de perfiles, la fecha de la última evaluación.](../images/ui/overview/segment-browse-details.png)
 
 ## Detalles de la definición del segmento {#segment-details}
 
@@ -110,7 +110,7 @@ Para ver más detalles sobre una definición de segmento específica, seleccione
 
 Aparecerá la página de detalles del segmento. En la parte superior, hay un resumen de la definición del segmento, información sobre el tamaño de audiencia cualificado, así como los destinos para los que se activa el segmento.
 
-![](../images/ui/overview/segment-details-summary.png)
+![Se muestra la página de detalles de la definición del segmento. Se resaltan el resumen del segmento, la audiencia total en el segmento y las tarjetas de destino activadas.](../images/ui/overview/segment-details-summary.png)
 
 ### Resumen de segmentos {#segment-summary}
 
@@ -118,7 +118,7 @@ La variable **[!UICONTROL Resumen de segmentos]** proporciona información como 
 
 Además, se le da la opción de activar el segmento en un destino o editar el segmento. Selección **[!UICONTROL Activar en destino]** le permitirá activar el segmento en un destino. Para obtener información más detallada sobre la activación de un segmento en un destino, lea la [información general sobre activación](../../destinations/ui/activation-overview.md).
 
-![](../images/ui/overview/segment-details-activate.png)
+![Se resalta el botón Activate to destination .](../images/ui/overview/segment-details-activate.png)
 
 Selección **[!UICONTROL Editar segmento]** le llevará a [!DNL Segment Builder]. Para obtener información más detallada sobre el uso de la variable [!DNL Segment Builder] espacio de trabajo, lea la [[!DNL Segment Builder] guía del usuario](./segment-builder.md).
 
@@ -158,13 +158,13 @@ El tamaño de la muestra depende del número total de entidades en el almacén d
 
 Información más detallada sobre cada [!DNL Profile] se puede ver seleccionando la variable [!DNL Profile] ID. Para obtener más información sobre los detalles de un perfil, lea la [[!DNL Real-time Customer Profile] guía del usuario](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/ui/overview/segment-details-profiles.png)
+![Se resaltan los perfiles de muestra para la definición del segmento. La información de perfil de ejemplo incluye el ID de perfil, el nombre, los apellidos y el correo electrónico de la persona.](../images/ui/overview/segment-details-profiles.png)
 
 ## Creación de segmentos {#create-segment}
 
 Selección **[!UICONTROL Crear segmento]** en la esquina superior derecha, se abre la variable [!DNL Segment Builder] espacio de trabajo, donde puede empezar a crear una definición de segmento.
 
-![](../images/ui/overview/segment-browse-create.png)
+![En la página de exploración del segmento , se resalta el botón Crear segmento .](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] workspace
 
@@ -172,7 +172,7 @@ Selección **[!UICONTROL Crear segmento]** en la esquina superior derecha, se ab
 
 Para obtener información más detallada sobre el uso de la variable [!DNL Segment Builder] espacio de trabajo, lea la [[!DNL Segment Builder] guía del usuario](./segment-builder.md).
 
-![](../images/ui/overview/segment-builder.png)
+![Se muestra el espacio de trabajo del Generador de segmentos.](../images/ui/overview/segment-builder.png)
 
 ## Segmentación programada {#scheduled-segmentation}
 
@@ -190,7 +190,7 @@ La activación de las definiciones de segmentos para la evaluación programada s
 
 Actualmente, las programaciones solo se pueden crear mediante la API . Para ver los pasos detallados sobre la creación, edición y trabajo con programaciones mediante la API, siga el tutorial para evaluar y acceder a los resultados del segmento, específicamente la sección sobre [evaluación programada mediante la API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![](../images/ui/overview/segment-browse-scheduled.png)
+![La opción Agregar todos los segmentos a una programación se resalta en la página Examinar segmentos .](../images/ui/overview/segment-browse-scheduled.png)
 
 ## Audiencias {#audiences}
 
@@ -290,7 +290,7 @@ Puede encontrar más información sobre la segmentación de aristas en la secci�
 
 Una vez que haya terminado de crear su segmento, el control de datos de Adobe Experience Platform analizará el segmento para asegurarse de que no haya infracciones de directiva dentro del segmento. Consulte la [Información general sobre la administración de datos](../../data-governance/home.md) para obtener más información.
 
-![](../images/ui/overview/segment-dule-policy-violations.png)
+![Se muestran las infracciones de directiva del segmento.](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## Pasos siguientes y recursos adicionales {#next-steps}
 

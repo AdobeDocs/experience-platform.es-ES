@@ -5,10 +5,9 @@ title: Guía de la interfaz de usuario sobre restricciones de tiempo de segmenta
 topic-legacy: ui guide
 description: El Generador de segmentos proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -21,12 +20,12 @@ Antes de la versión de octubre de 2020, todas las restricciones de tiempo de ni
 
 Anteriormente, un evento individual podía tener varias reglas de restricción de tiempo adjuntas.
 
-![](../images/ui/segment-refactoring/former-time-constraint.png)
+![El estilo anterior de las restricciones de tiempo se resalta en el Generador de segmentos.](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Como puede ver, este segmento tiene dos restricciones en el nivel de regla: Uno para &quot;[!UICONTROL Today]&quot; y el otro para &quot;[!UICONTROL Yesterday]&quot;.
+Como puede ver, este segmento tiene dos restricciones en el nivel de regla: Uno para &quot;[!UICONTROL Hoy]&quot; y el otro para &quot;[!UICONTROL Ayer]&quot;.
 
 El segmento anterior es equivalente al siguiente segmento: ambas restricciones de tiempo de nivel de evento se han conectado mediante un operador AND. La primera restricción de tiempo a nivel de evento hace referencia a un evento de clic cuyo nombre es igual a &quot;Formación&quot; y está ocurriendo hoy, mientras que la segunda restricción de tiempo a nivel de evento hace referencia a un evento de clic cuyo nombre es igual a &quot;Mascotas&quot; y ocurrió ayer.
 
-![](../images/ui/segment-refactoring/time-constraint-1.png) ![](../images/ui/segment-refactoring/time-constraint-2.png)
+![El nuevo estilo de los límites de tiempo se resalta en el Generador de segmentos.](../images/ui/segment-refactoring/time-constraint-1.png) ![El nuevo estilo de los límites de tiempo se resalta en el Generador de segmentos.](../images/ui/segment-refactoring/time-constraint-2.png)
 
 Esta refactorización de las restricciones de tiempo también afecta a las restricciones de tiempo que están conectadas mediante un operador OR.

@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1929'
 ht-degree: 6%
 
 ---
@@ -87,8 +87,8 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 | --- | --- | --- | --- |
 | Tamaño máximo de ExperienceEvent | 10 KB | Grave | **El tamaño máximo de un evento es de 10 KB.** La ingesta continuará, pero se perderán todos los eventos de más de 10 KB. |
 | Tamaño máximo del registro de perfil | 100 KB | Grave | **El tamaño máximo de un registro de perfil es de 100 KB.** La ingesta continuará, pero se perderán los registros de perfil superiores a 100 KB. |
-| Tamaño máximo del fragmento de perfil | 50 MB | Grave | **El tamaño máximo de un fragmento de perfil único es de 50 MB.** La segmentación, las exportaciones y las búsquedas pueden fallar [fragmento de perfil](#profile-fragments) que es más de 50 MB. |
-| Tamaño máximo de almacenamiento de perfiles | 50 MB | Leve | **El tamaño máximo de un perfil almacenado es de 50 MB.** Adición de nuevas [fragmentos de perfil](#profile-fragments) en un perfil que tenga más de 50 MB, afectará el rendimiento del sistema. Por ejemplo, un perfil podría contener un solo fragmento de 50 MB o varios fragmentos en varios conjuntos de datos con un tamaño total combinado de 50 MB. Si se intenta almacenar un perfil con un solo fragmento de más de 50 MB, o con varios fragmentos que suman más de 50 MB en tamaño combinado, el rendimiento del sistema se verá afectado. |
+| Tamaño máximo del fragmento de perfil | 50MB | Grave | **El tamaño máximo de un fragmento de perfil único es de 50 MB.** La segmentación, las exportaciones y las búsquedas pueden fallar [fragmento de perfil](#profile-fragments) que es más de 50 MB. |
+| Tamaño máximo de almacenamiento de perfiles | 50MB | Leve | **El tamaño máximo de un perfil almacenado es de 50 MB.** Adición de nuevas [fragmentos de perfil](#profile-fragments) en un perfil que tenga más de 50 MB, afectará el rendimiento del sistema. Por ejemplo, un perfil podría contener un solo fragmento de 50 MB o varios fragmentos en varios conjuntos de datos con un tamaño total combinado de 50 MB. Si se intenta almacenar un perfil con un solo fragmento de más de 50 MB, o con varios fragmentos que suman más de 50 MB en tamaño combinado, el rendimiento del sistema se verá afectado. |
 | Número de lotes de Perfil o ExperienceEvent ingestados por día | 90 | Leve | **El número máximo de lotes de Perfil o ExperienceEvent ingestados por día es de 90.** Esto significa que el total combinado de lotes de Perfil y ExperienceEvent ingestados cada día no puede superar los 90. La ingesta de lotes adicionales afectará el rendimiento del sistema. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -128,11 +128,11 @@ La variable [!DNL Profile] el modelo de datos de almacenamiento consta de dos ti
 
    Los atributos independientes del tiempo, también conocidos como &quot;datos de registro&quot;, se modelan mediante [!DNL XDM Individual Profile], mientras que los datos de series temporales, también conocidos como &quot;datos de evento&quot;, se modelan mediante [!DNL XDM ExperienceEvent]. A medida que los datos de registros y series temporales se incorporan en Adobe Experience Platform, se déclencheur [!DNL Real-time Customer Profile] para empezar a introducir datos que se hayan habilitado para su uso. Cuantas más interacciones y detalles se incorporen, más robustos se vuelven los perfiles individuales.
 
-   ![](images/guardrails/profile-entity.png)
+   ![Una infografía que describe las diferencias entre los datos de registro y los datos de series temporales.](images/guardrails/profile-entity.png)
 
 * **entidad Dimension:** Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, Perfil permite la integración con entidades de dimensión pequeñas para crear segmentos de una forma simplificada e intuitiva. Esta integración se conoce como [segmentación multientidad](../segmentation/multi-entity-segmentation.md). Su organización también puede definir clases XDM para describir otras cosas que no sean individuos, como tiendas, productos o propiedades. Estos[!DNL XDM Individual Profile] los esquemas se conocen como &quot;entidades de dimensión&quot; y no contienen datos de series temporales. Las entidades de Dimension proporcionan datos de búsqueda que ayudan y simplifican las definiciones de segmentos de varias entidades y deben ser lo suficientemente pequeñas como para que el motor de segmentación pueda cargar todo el conjunto de datos en la memoria para un procesamiento óptimo (búsqueda de puntos rápidos).
 
-   ![](images/guardrails/profile-and-dimension-entities.png)
+   ![Una infografía que muestra que una entidad de perfil está compuesta por entidades de dimensión.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Fragmentos de perfil
 
