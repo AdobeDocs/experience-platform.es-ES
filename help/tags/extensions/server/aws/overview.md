@@ -2,10 +2,10 @@
 title: Información general sobre la extensión de AWS
 description: Obtenga información sobre la extensión de AWS para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 5%
+source-wordcount: '847'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 5%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) es una plataforma de computación en la nube que ofrece una amplia variedad de servicios, como computación distribuida, almacenamiento de bases de datos, entrega de contenido y administración de la relación con los clientes (CRM).
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) es una plataforma de computación en la nube que ofrece una amplia variedad de servicios, como computación distribuida, almacenamiento de bases de datos, entrega de contenido y servicios de integración de software como a-service (SaaS) para administración de la relación con los clientes (CRM) y planificación de recursos empresariales (ERP).
 
 La variable [!DNL AWS] [reenvío de eventos](../../../ui/event-forwarding/overview.md) aprovechamientos de extensión [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) para enviar eventos desde la red perimetral de Adobe Experience Platform a [!DNL AWS] para un procesamiento posterior. Esta guía explica cómo instalar la extensión y utilizar sus capacidades en una regla de reenvío de eventos.
 
