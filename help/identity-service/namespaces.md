@@ -5,9 +5,9 @@ title: Información general sobre el área de nombres de identidad
 topic-legacy: overview
 description: Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1627'
+source-wordcount: '1642'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ El trabajo con áreas de nombres de identidad requiere comprender los distintos 
 
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 - [[!DNL Identity Service]](./home.md): Obtenga una mejor visión de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Las áreas de nombres de identidad se utilizan para cumplir con el Reglamento General de Protección de Datos (RGPD), donde las solicitudes de RGPD se pueden realizar en relación con un área de nombres.
+- [[!DNL Privacy Service]](../privacy-service/home.md): Las áreas de nombres de identidad se utilizan en solicitudes de cumplimiento de normas de privacidad legales como el Reglamento General de Protección de Datos (RGPD). Cada solicitud de privacidad se realiza en relación con un área de nombres para identificar qué datos de los consumidores deben verse afectados.
 
 ## Explicación de las áreas de nombres de identidad
 

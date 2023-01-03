@@ -5,10 +5,10 @@ title: Punto final de la API de trabajos de privacidad
 topic-legacy: developer guide
 description: Obtenga información sobre cómo administrar los trabajos de privacidad para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1429'
-ht-degree: 4%
+source-wordcount: '1451'
+ht-degree: 3%
 
 ---
 
@@ -37,7 +37,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{REGULATION}` | El tipo de regulación que se va a consultar. Los valores aceptados incluyen: <ul><li>`gdpr` (Unión Europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nueva Zelanda)</li><li>`pdpa_tha` (Tailandia)</li></ul> |
+| `{REGULATION}` | El tipo de regulación que se va a consultar. Los valores aceptados incluyen: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulte la descripción general sobre [regulaciones compatibles](../regulations/overview.md) para obtener más información sobre las normas de privacidad que representan los valores anteriores. |
 | `{PAGE}` | La página de datos que se va a mostrar, utilizando una numeración basada en 0. El valor predeterminado es `0`. |
 | `{SIZE}` | Número de resultados que se mostrarán en cada página. El valor predeterminado es `1` y el máximo es `100`. Si se supera el máximo, la API devuelve un error de código 400. |
 
@@ -161,7 +161,7 @@ curl -X POST \
 | `priority` | Una propiedad opcional utilizada por Adobe Analytics que establece la prioridad para el procesamiento de solicitudes. Los valores aceptados son `normal` y `low`. If `priority` se omite, el comportamiento predeterminado es `normal`. |
 | `analyticsDeleteMethod` | Una propiedad opcional que especifica cómo debe gestionar Adobe Analytics los datos personales. Se aceptan dos valores posibles para este atributo: <ul><li>`anonymize`: Todos los datos a los que hace referencia la recopilación determinada de ID de usuario se vuelven anónimos. If `analyticsDeleteMethod` se omite, este es el comportamiento predeterminado.</li><li>`purge`: Todos los datos se eliminan por completo.</li></ul> |
 | `mergePolicyId` | Al realizar solicitudes de privacidad para el Perfil del cliente en tiempo real (`profileService`), si lo desea, puede proporcionar el ID del [combinar directiva](../../profile/merge-policies/overview.md) que desea utilizar para la vinculación de ID. Al especificar una directiva de combinación, las solicitudes de privacidad pueden incluir información de segmentos al devolver datos a un cliente. Solo se puede especificar una directiva de combinación por solicitud. Si no se proporciona ninguna directiva de combinación, la información de segmentación no se incluye en la respuesta. |
-| `regulation` **(Obligatorio)** | La regulación del trabajo de privacidad. Se aceptan los siguientes valores: <ul><li>`gdpr` (Unión Europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nueva Zelanda)</li><li>`pdpa_tha` (Tailandia)</li></ul> |
+| `regulation` **(Obligatorio)** | La regulación del trabajo de privacidad. Se aceptan los siguientes valores: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulte la descripción general sobre [regulaciones compatibles](../regulations/overview.md) para obtener más información sobre las normas de privacidad que representan los valores anteriores. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -5,10 +5,10 @@ title: Administrar trabajos de privacidad en la interfaz de usuario del Privacy 
 topic-legacy: UI guide
 description: Aprenda a utilizar la interfaz de usuario del Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones de Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 0%
+source-wordcount: '1151'
+ht-degree: 1%
 
 ---
 
@@ -24,13 +24,25 @@ El tablero para la variable [!DNL Privacy Service] La interfaz de usuario de pro
 
 ### Tipo de regulación
 
-[!DNL Privacy Service] admite solicitudes de trabajo para varias regulaciones de privacidad:
+[!DNL Privacy Service] admite solicitudes de empleo para varias regulaciones de privacidad. En la tabla siguiente se enumeran las regulaciones compatibles y su etiqueta correspondiente tal y como se representa en la IU:
 
-* La variable [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* La [!DNL General Data Protection Regulation] ([!UICONTROL RGPD])
-* El [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
-* El [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* Nueva Zelanda [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
+| Etiqueta de la interfaz de usuario | Reglamento |
+| --- | --- |
+| [!UICONTROL CCPA] | Las [!DNL California Consumer Privacy Act] |
+| [!UICONTROL RGPD] | La [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | El [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | El [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | Nueva Zelanda [!DNL Privacy Act] |
+| [!UICONTROL VCDPA_USA] | Las [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_USA] | Las [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL APA_AUS] | Las [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL HIPAA_AUS] | Las [!DNL Health Insurance Portability and Accountability Act] |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Consulte la descripción general sobre [regulaciones de privacidad compatibles](../regulations/overview.md) para más información sobre el contexto jurídico de cada reglamento.
 
 Los trabajos de cada tipo de regulación se rastrean por separado. Para cambiar entre tipos de regulación, seleccione la opción **[!UICONTROL Tipo de regulación]** menú desplegable y seleccione la regulación que desee en la lista.
 
