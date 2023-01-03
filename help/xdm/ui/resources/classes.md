@@ -5,9 +5,9 @@ title: Crear y editar clases en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar clases en la interfaz de usuario del Experience Platform.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c83b5616f46f6f7d752979fa66a66fad16f16102
+source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -50,10 +50,6 @@ Ahora puede empezar [adición de campos a la clase](#add-fields), que se compart
 
 ## Editar una clase existente {#edit}
 
->[!IMPORTANT]
->
->Las clases personalizadas creadas después del 30 de abril de 2022 no se pueden editar directamente y actualmente se está desarrollando una corrección. Como solución alternativa, puede [crear un grupo de campos personalizado](./field-groups.md) y vuelva a utilizarla para cada esquema que utilice la clase personalizada que desee ampliar. Esta limitación no afecta a las clases personalizadas creadas antes del 30 de abril de 2022.
-
 >[!NOTE]
 >
 >Solo las clases personalizadas definidas por su organización pueden editarse y personalizarse completamente. Para las clases principales definidas por Adobe, solo se pueden editar los nombres para mostrar de sus campos en el contexto de esquemas individuales. Consulte la sección sobre [edición de nombres para mostrar en campos de esquema](./schemas.md#display-names) para obtener más información.
@@ -73,10 +69,6 @@ La variable [!DNL Schema Editor] aparece con la estructura del esquema en el lie
 ![](../../images/ui/resources/classes/edit.png)
 
 ## Añadir campos a una clase {#add-fields}
-
->[!IMPORTANT]
->
->Las clases personalizadas creadas después del 30 de abril de 2022 no se pueden editar directamente y actualmente se está desarrollando una corrección. Como solución alternativa, puede [crear un grupo de campos personalizado](./field-groups.md) y vuelva a utilizarla para cada esquema que utilice la clase personalizada que desee ampliar. Esta limitación no afecta a las clases personalizadas creadas antes del 30 de abril de 2022.
 
 Una vez que tenga un esquema que emplee una clase personalizada abierta en la [!UICONTROL Editor de esquemas], puede empezar a añadir campos a la clase . Para añadir un nuevo campo, seleccione la opción **plus (+)** junto al nombre del esquema.
 
