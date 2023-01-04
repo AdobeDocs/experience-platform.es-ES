@@ -2,10 +2,10 @@
 title: Extremo de componentes de regla
 description: Aprenda a realizar llamadas al extremo /rule_components en la API de Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 97%
+source-wordcount: '1190'
+ht-degree: 94%
 
 ---
 
@@ -305,22 +305,22 @@ Puede crear un nuevo componente de regla realizando una petición POST.
 **Formato de API**
 
 ```http
-POST /rules/{RULE_ID}/rule_components
+POST /properties/{PROPERTY_ID}/rule_components
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
-| `RULE_ID` | El `id` de la regla para la que está definiendo un componente de regla. |
+| `PROPERTY_ID` | La variable `id` de la propiedad en la que está definiendo el componente de regla. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo componente de regla para la regla especificada. La llamada también asocia el componente de regla con una extensión existente a través de la propiedad `relationships`. Consulte la guía de [relaciones](../guides/relationships.md) para obtener más información.
+La siguiente solicitud crea un nuevo componente de regla. En la carga útil, la variable `relationships` asocia el componente con reglas específicas y una extensión existente. Consulte la guía de [relaciones](../guides/relationships.md) para obtener más información.
 
 ```shell
 curl -X POST \
-  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -366,7 +366,7 @@ curl -X POST \
 | `attributes.rule_order` | Un entero que indica la prioridad con que la regla asociada se debe activar. |
 | `attributes.settings` | Un objeto JSON de configuración representado como una cadena. |
 | `attributes.timeout` | Un entero que indica el tiempo de espera de la acción que se ejecuta en secuencia. |
-| `relationships` | Un objeto que establece las relaciones necesarias para el componente de regla. Deben establecerse dos relaciones: <ol><li>`extension`: Extensión que define este componente de regla. Debe ser la misma extensión cuyo paquete de extensión esté indicado por `delegate_descriptor_id`.</li><li>`rules`: Regla en la que se define este componente. Debe ser el mismo ID de regla que se proporcione en la ruta de solicitud.</li></ol>Para obtener información más general sobre las relaciones, consulte la [guía de relaciones](../guides/relationships.md). |
+| `relationships` | Un objeto que establece las relaciones necesarias para el componente de regla. Deben establecerse dos relaciones: <ol><li>`extension`: Extensión que define este componente de regla. Debe ser la misma extensión cuyo paquete de extensión esté indicado por `delegate_descriptor_id`.</li><li>`rules`: Regla en la que se define este componente.</li></ol>Para obtener información más general sobre las relaciones, consulte la [guía de relaciones](../guides/relationships.md). |
 | `type` | El tipo de recurso que se crea. Para este extremo, el valor debe ser `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
