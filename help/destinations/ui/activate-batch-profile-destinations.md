@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de exportación de perfiles en lot
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 79fc200f4e56699013b1ba3f91f5e383cea77e2a
+source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
 workflow-type: tm+mt
-source-wordcount: '3411'
+source-wordcount: '3414'
 ht-degree: 1%
 
 ---
@@ -207,7 +207,7 @@ Para los destinos basados en perfiles, debe seleccionar los atributos de perfil 
 
    ![Imagen que resalta cómo seleccionar un campo de origen.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. En el **[!UICONTROL Seleccionar campo]** , seleccione los atributos XDM que desea enviar al destino y, a continuación, elija **[!UICONTROL Select]**.
+1. En el **[!UICONTROL Seleccionar campo]** , seleccione los atributos XDM o los espacios de nombres de identidad que desea enviar al destino y, a continuación, elija **[!UICONTROL Select]**.
 
    ![Imagen que muestra los distintos campos disponibles como campos de origen.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
