@@ -4,7 +4,7 @@ title: Grupo de campos de esquema consentimientos y preferencias
 topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Consentimientos y Preferencias .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -182,7 +182,7 @@ Consulte el tutorial en [creación de un esquema en la interfaz de usuario](http
 
 >[!IMPORTANT]
 >
->Si desea enviar datos de consentimiento a [!DNL Real-time Customer Profile], es necesario que cree un [!DNL Profile]esquema habilitado según el [!DNL XDM Individual Profile] clase que contiene el [!UICONTROL Consentimientos y preferencias] grupo de campos. El conjunto de datos que cree en función de ese esquema también debe estar habilitado para [!DNL Profile]. Consulte los tutoriales vinculados anteriormente para ver los pasos específicos relacionados con [!DNL Real-time Customer Profile] requisitos para esquemas y conjuntos de datos.
+>Si desea enviar datos de consentimiento a [!DNL Real-Time Customer Profile], es necesario que cree un [!DNL Profile]esquema habilitado según el [!DNL XDM Individual Profile] clase que contiene el [!UICONTROL Consentimientos y preferencias] grupo de campos. El conjunto de datos que cree en función de ese esquema también debe estar habilitado para [!DNL Profile]. Consulte los tutoriales vinculados anteriormente para ver los pasos específicos relacionados con [!DNL Real-Time Customer Profile] requisitos para esquemas y conjuntos de datos.
 >
 >Además, también debe asegurarse de que las políticas de combinación estén configuradas para priorizar los conjuntos de datos que contienen los datos de consentimiento y preferencias más recientes, a fin de que los perfiles de clientes se actualicen correctamente. Consulte la descripción general sobre [combinar directivas](../../../rtcdp/profile/merge-policies.md) para obtener más información.
 

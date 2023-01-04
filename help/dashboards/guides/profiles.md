@@ -4,7 +4,7 @@ title: Guía del panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del Perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3381'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL Perfiles] tablero
 
-La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre su [!DNL Real-time Customer Profile] datos, tal como se capturan durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel Perfiles en la interfaz de usuario y proporciona información sobre las métricas que se muestran en el panel.
+La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre su [!DNL Real-Time Customer Profile] datos, tal como se capturan durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel Perfiles en la interfaz de usuario y proporciona información sobre las métricas que se muestran en el panel.
 
 Para obtener una descripción general de todas las funciones de perfil de la interfaz de usuario del Experience Platform, consulte la [Guía de la interfaz de usuario del perfil del cliente en tiempo real](../../profile/ui/user-guide.md).
 
@@ -33,7 +33,7 @@ Para ir al panel Perfiles en la interfaz de usuario de Platform, seleccione **[!
 
 >[!NOTE]
 >
->Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos ni políticas de combinación creadas, el panel Perfiles no está visible. En su lugar, la variable [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con el Perfil del cliente en tiempo real.
+>Si su organización es nueva en Platform y aún no tiene conjuntos de datos de perfil activos ni políticas de combinación creadas, el panel Perfiles no está visible. En su lugar, la variable [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con el perfil del cliente en tiempo real.
 
 ![El tablero Perfiles del Experience Platform con Perfiles e Información general resaltados.](../images/profiles/dashboard-overview.png)
 

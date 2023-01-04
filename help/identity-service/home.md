@@ -5,7 +5,7 @@ title: Información general del servicio de identidad
 topic-legacy: overview
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor visión de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales y impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Veamos un ejemplo cotidiano de la relación de un consumidor con su marca:
 
 ![Vinculación de identidad en la plataforma](./images/identity-service-stitching.png)
 
-Esencialmente, [!DNL Identity Service] le permite crear una imagen completa de su cliente, agregando datos relacionados que, de lo contrario, podrían estar dispersos en distintos sistemas. Las relaciones de identidad que [!DNL Identity Service] el perfil del cliente en tiempo real aprovecha las definiciones y los métodos de mantenimiento para crear una imagen completa de un cliente y sus interacciones con su marca. Para obtener más información, consulte la [Resumen del perfil del cliente en tiempo real](../profile/home.md).
+Esencialmente, [!DNL Identity Service] le permite crear una imagen completa de su cliente, agregando datos relacionados que, de lo contrario, podrían estar dispersos en distintos sistemas. Las relaciones de identidad que [!DNL Identity Service] el perfil del cliente en tiempo real aprovecha las definiciones y los mantiene para crear una imagen completa de un cliente y sus interacciones con su marca. Para obtener más información, consulte la [Resumen del perfil del cliente en tiempo real](../profile/home.md).
 
 ### Casos de uso
 

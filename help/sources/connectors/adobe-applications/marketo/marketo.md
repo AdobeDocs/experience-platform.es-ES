@@ -5,7 +5,7 @@ title: Conector del Marketo Engage
 topic-legacy: overview
 description: Este documento proporciona información general sobre el conector de origen del Marketo Engage, incluida información sobre su autenticación, asignación y latencia de datos.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 0%
@@ -71,7 +71,7 @@ La siguiente tabla describe la latencia esperada para traer [!DNL Marketo] en Pl
 
 | Destino | Latencia esperada |
 | ----------- | ---------------- |
-| [!DNL Real-time Customer Profile] | &lt; 1 minuto |
+| [!DNL Real-Time Customer Profile] | &lt; 1 minuto |
 | Lago de datos | &lt; 60 minutos |
 
 ## Pasos siguientes y recursos adicionales

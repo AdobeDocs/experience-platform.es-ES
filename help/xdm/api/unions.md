@@ -5,7 +5,7 @@ title: Punto final de la API de Unions
 description: El extremo /union de la API del Registro de esquemas permite administrar mediante programación esquemas de unión XDM en la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Punto final de unión
 
-Los sindicatos (o vistas de unión) son esquemas generados por el sistema, de solo lectura que acumulan los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) y están activados para [[!DNL Real-time Customer Profile]](../../profile/home.md).
+Los sindicatos (o vistas de unión) son esquemas generados por el sistema, de solo lectura que acumulan los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) y están activados para [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
 Este documento cubre conceptos esenciales para trabajar con sindicatos en la API del Registro de esquemas, incluidas llamadas de ejemplo para diversas operaciones. Para obtener información más general sobre los sindicatos en XDM, consulte la sección sobre los sindicatos en la [conceptos básicos de la composición del esquema](../schema/composition.md#union).
 

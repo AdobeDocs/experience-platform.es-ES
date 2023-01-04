@@ -5,7 +5,7 @@ title: Punto final de la API de definiciones de segmentos
 topic-legacy: developer guide
 description: El extremo de definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación definiciones de segmentos para su organización.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Punto final de definiciones de segmentos
 
-Adobe Experience Platform le permite crear segmentos que definen un grupo de atributos o comportamientos específicos de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados de PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas PQL.
+Adobe Experience Platform le permite crear segmentos que definen un grupo de atributos o comportamientos específicos de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados de PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas PQL.
 
 Esta guía proporciona información que le ayudará a comprender mejor las definiciones de segmentos e incluye ejemplos de llamadas API para realizar acciones básicas mediante la API.
 

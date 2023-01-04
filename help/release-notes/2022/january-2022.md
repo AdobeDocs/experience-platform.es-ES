@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, enero de 2022
 description: Notas de la versión de enero de 2022 para Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [Servicio de consultas](#query-service)
-- [Entornos aislados](#sandboxes)
+- [Zonas protegidas](#sandboxes)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
@@ -85,7 +85,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 ## Servicio de consultas {#query-service}
 
-[!DNL Query Service] permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL Data Lake]. Puede unirse a cualquier conjunto de datos desde la [!DNL Data Lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para su uso en informes, Data Science Workspace o para su incorporación al perfil del cliente en tiempo real.
+[!DNL Query Service] permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL Data Lake]. Puede unirse a cualquier conjunto de datos desde la [!DNL Data Lake] y captura los resultados de la consulta como un nuevo conjunto de datos para su uso en informes, Data Science Workspace o para su incorporación al perfil del cliente en tiempo real.
 
 **Funciones actualizadas**
 
@@ -96,7 +96,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 Para obtener más información, consulte [!DNL Query Service], consulte la [[!DNL Query Service] información general](../../query-service/home.md).
 
-## Entornos aislados {#sandboxes}
+## Zonas protegidas {#sandboxes}
 
 Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. A menudo, las empresas ejecutan varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, asegurando al mismo tiempo el cumplimiento de las normas operacionales. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 

@@ -5,7 +5,7 @@ title: Importación y uso de audiencias externas
 description: Siga este tutorial para aprender a utilizar audiencias externas con Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Ahora que se ha creado el esquema, debe especificar qué campo contendrá el ID 
 
 ![Las casillas de verificación para marcar el campo seleccionado como identidad principal se resaltan en el Editor de esquemas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Después de marcar la variable `_id` como identidad principal, seleccione el título del esquema seguido de la opción etiquetada **[!UICONTROL Perfil]**. Select **[!UICONTROL Habilitar]** para habilitar el esquema para [!DNL Real-time Customer Profile].
+Después de marcar la variable `_id` como identidad principal, seleccione el título del esquema seguido de la opción etiquetada **[!UICONTROL Perfil]**. Select **[!UICONTROL Habilitar]** para habilitar el esquema para [!DNL Real-Time Customer Profile].
 
 ![La opción para habilitar el esquema para Perfil se resalta en el Editor de esquemas.](../images/tutorials/external-audiences/schema-profile.png)
 

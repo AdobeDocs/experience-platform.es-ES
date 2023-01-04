@@ -4,7 +4,7 @@ title: Guía de API del servicio de segmentación
 topic-legacy: guide
 description: La API del servicio de segmentación permite a los desarrolladores administrar mediante programación las operaciones de segmentación en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 6133c3127aaf10243d5472540c29125155c99d7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # Guía de API del servicio de segmentación
 
-[!DNL Adobe Experience Platform Segmentation Service] le permite crear segmentos y generar audiencias en [!DNL Adobe Experience Platform] de su [!DNL Real-time Customer Profile] datos.
+[!DNL Adobe Experience Platform Segmentation Service] le permite crear segmentos y generar audiencias en [!DNL Adobe Experience Platform] de su [!DNL Real-Time Customer Profile] datos.
 
 La variable [!DNL Segmentation Service] La API proporciona varios puntos de conexión que le permiten administrar mediante programación sus operaciones de segmentación en [!DNL Experience Platform]. Este documento de información general proporciona introducciones de alto nivel a cada uno de estos puntos finales y vínculos a sus guías de puntos finales asociadas para obtener más información. Antes de leer las guías de puntos finales individuales, consulte la sección [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, leer llamadas de API de ejemplo y más.
 

@@ -5,7 +5,7 @@ title: Vistas previas y estimaciones de puntos de conexión de API
 topic-legacy: developer guide
 description: A medida que se desarrolla la definición del segmento, puede utilizar las herramientas de estimación y vista previa de Adobe Experience Platform para ver la información de resumen y garantizar que está aislando la audiencia esperada.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 2%
@@ -22,7 +22,7 @@ A medida que desarrolla una definición de segmento, puede utilizar las herramie
 
 >[!NOTE]
 >
->Para acceder a métricas similares relacionadas con los datos del perfil del cliente en tiempo real, como el número total de fragmentos de perfil y perfiles combinados dentro de áreas de nombres específicas o el almacén de datos de perfil en su conjunto, consulte la [guía de extremo de vista previa de perfil (vista previa del estado de muestra)](../../profile/api/preview-sample-status.md), parte de la guía para desarrolladores de API de perfil.
+>Para acceder a métricas similares relacionadas con los datos del perfil del cliente en tiempo real, como el número total de fragmentos de perfil y perfiles combinados dentro de áreas de nombres específicas o el almacén de datos del perfil en su conjunto, consulte la [guía de extremo de vista previa de perfil (vista previa del estado de muestra)](../../profile/api/preview-sample-status.md), parte de la guía para desarrolladores de API de perfil.
 
 ## Primeros pasos
 

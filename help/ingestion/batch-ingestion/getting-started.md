@@ -4,7 +4,7 @@ title: Introducción a la API de ingesta de datos
 type: Documentation
 description: La guía de introducción a la API de ingesta de datos describe los conceptos clave y la funcionalidad básica que debe conocer antes de empezar a introducir datos en Experience Platform mediante API.
 exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Con los extremos de la API de ingesta de datos, puede realizar operaciones bási
 El uso de las guías de API requiere comprender bien varios servicios de Adobe Experience Platform que participan en el trabajo con datos. Antes de utilizar la API de ingesta de datos, consulte la documentación de los siguientes servicios:
 
 * [Ingesta por lotes](./overview.md): Permite introducir datos en Adobe Experience Platform como archivos por lotes.
-* [[!DNL Real-time Customer Profile]](../home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Real-Time Customer Profile]](../home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 

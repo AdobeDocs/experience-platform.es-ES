@@ -5,7 +5,7 @@ title: Información general sobre la coincidencia de segmentos
 topic-legacy: overview
 description: Coincidencia de segmentos es un servicio para compartir segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, regulada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 2329065b938d97f48a23be5250fec535355db770
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 0%
@@ -37,7 +37,7 @@ El primer paso para comenzar con [!DNL Segment Match] es para asegurarse de que 
 
 Las áreas de nombres de identidad son un componente de [Servicio de identidad de Adobe Experience Platform](../../../identity-service/home.md). Cada identidad de cliente contiene un área de nombres asociada que indica el contexto de la identidad. Por ejemplo, un área de nombres puede distinguir un valor de &quot;name&quot;<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID de CRM numérico.
 
-Una identidad completa incluye un valor de ID y un área de nombres. Al hacer coincidir datos de registro entre fragmentos de perfil (por ejemplo, al [!DNL Real-time Customer Profile] combina datos de perfil), tanto el valor de identidad como el área de nombres deben coincidir.
+Una identidad completa incluye un valor de ID y un área de nombres. Al hacer coincidir datos de registro entre fragmentos de perfil (por ejemplo, al [!DNL Real-Time Customer Profile] combina datos de perfil), tanto el valor de identidad como el área de nombres deben coincidir.
 
 En el contexto de [!DNL Segment Match], las áreas de nombres se utilizan en el proceso de superposición al compartir datos.
 
@@ -204,4 +204,4 @@ Al leer este documento, ha adquirido una comprensión de [!DNL Segment Match], s
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [Información general del [!DNL Real-time Customer Profile]](../../../profile/home.md)
+* [Información general del [!DNL Real-Time Customer Profile]](../../../profile/home.md)

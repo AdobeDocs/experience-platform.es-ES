@@ -3,7 +3,7 @@ keywords: segmentos rtcdp;creador de segmentos rtcdp;segmento rtcdp;rtcdp de ai 
 title: Customer AI en Real-time Customer Data Platform
 description: Información general sobre la IA del cliente y cómo puede ayudarle a generar puntuaciones para resultados específicos, como conversiones o pérdida.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 6%

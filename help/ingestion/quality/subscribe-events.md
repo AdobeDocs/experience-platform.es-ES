@@ -5,7 +5,7 @@ title: Notificaciones de ingesta de datos
 topic-legacy: overview
 description: Para ayudar a monitorizar el proceso de ingesta, Adobe Experience Platform permite suscribirse a un conjunto de eventos que se publican en cada paso del proceso y le notifican el estado de los datos introducidos y los posibles errores.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%
@@ -16,13 +16,13 @@ ht-degree: 2%
 
 El proceso de ingesta de datos en Adobe Experience Platform consta de varios pasos. Una vez que identifique los archivos de datos que deben ingerirse en [!DNL Platform], el proceso de ingesta comienza y cada paso se produce de forma consecutiva hasta que los datos se introducen correctamente o no. El proceso de ingesta se puede iniciar utilizando la variable [API de ingesta de datos de Adobe Experience Platform](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) o utilizando [!DNL Experience Platform] interfaz de usuario.
 
-Datos cargados en [!DNL Platform] debe seguir varios pasos para llegar a su destino, [!DNL Data Lake] o [!DNL Real-time Customer Profile] almacén de datos. Cada paso implica procesar los datos, validarlos y, después, almacenarlos antes de pasarlos al siguiente paso. En función de la cantidad de datos introducidos, este proceso puede llevar mucho tiempo y siempre existe la posibilidad de que el proceso falle debido a errores de validación, semántica o procesamiento. En caso de error, es necesario corregir los problemas de datos y, a continuación, se debe reiniciar todo el proceso de ingesta utilizando los archivos de datos corregidos.
+Datos cargados en [!DNL Platform] debe seguir varios pasos para llegar a su destino, [!DNL Data Lake] o [!DNL Real-Time Customer Profile] almacén de datos. Cada paso implica procesar los datos, validarlos y, después, almacenarlos antes de pasarlos al siguiente paso. En función de la cantidad de datos introducidos, este proceso puede llevar mucho tiempo y siempre existe la posibilidad de que el proceso falle debido a errores de validación, semántica o procesamiento. En caso de error, es necesario corregir los problemas de datos y, a continuación, se debe reiniciar todo el proceso de ingesta utilizando los archivos de datos corregidos.
 
 Para ayudar a controlar el proceso de ingesta, [!DNL Experience Platform] permite suscribirse a un conjunto de eventos que se publican en cada paso del proceso y notificarle el estado de los datos introducidos y los posibles errores.
 
 ## Registro de un enlace web para notificaciones de ingesta de datos
 
-Para recibir notificaciones de ingesta de datos, debe utilizar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) para registrar un enlace web en la integración con su Experience Platform.
+Para recibir notificaciones de ingesta de datos, debe utilizar [Consola de Adobe Developer](https://www.adobe.com/go/devs_console_ui) para registrar un enlace web en la integración con su Experience Platform.
 
 Siga el tutorial en [suscribirse a [!DNL Adobe I/O Event] notificaciones](../../observability/alerts/subscribe.md) para ver los pasos detallados sobre cómo hacerlo.
 
@@ -86,8 +86,8 @@ En la tabla siguiente se enumeran las notificaciones de estado de ingesta de dat
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | success | Se ha introducido correctamente un lote en un conjunto de datos dentro de la variable [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | error | No se pudo ingerir un lote en un conjunto de datos dentro del [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | success | Se ha introducido correctamente un lote en la variable [!DNL Profile] almacén de datos. |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | error | No se pudo ingerir un lote en la variable [!DNL Profile] almacén de datos. |
+| `ps_load_success` | [!DNL Real-Time Customer Profile] | success | Se ha introducido correctamente un lote en la variable [!DNL Profile] almacén de datos. |
+| `ps_load_failure` | [!DNL Real-Time Customer Profile] | error | No se pudo ingerir un lote en la variable [!DNL Profile] almacén de datos. |
 | `ig_load_success` | [!DNL Identity Service] | success | Los datos se cargaron correctamente en el gráfico de identidad. |
 | `ig_load_failure` | [!DNL Identity Service] | error | No se pudieron cargar los datos en el gráfico de identidad. |
 

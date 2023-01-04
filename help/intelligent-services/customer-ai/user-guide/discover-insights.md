@@ -6,7 +6,7 @@ title: Descubra perspectivas con Customer AI
 topic-legacy: Discovering insights
 description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%
@@ -151,7 +151,7 @@ Al seleccionar la variable **[!UICONTROL Crear segmento]** en cualquiera de los 
 
 >[!NOTE]
 >
->La variable **[!UICONTROL Crear segmento]** solo está disponible si Perfil del cliente en tiempo real está habilitado para el conjunto de datos. Para obtener más información sobre cómo habilitar el perfil del cliente en tiempo real, visite la [Resumen del perfil del cliente en tiempo real](../../../rtcdp/overview.md).
+>La variable **[!UICONTROL Crear segmento]** solo está disponible si Perfil del cliente en tiempo real está habilitado para el conjunto de datos. Para obtener más información sobre cómo habilitar el perfil del cliente en tiempo real, visite [Resumen del perfil del cliente en tiempo real](../../../rtcdp/overview.md).
 
 ![Haga clic en crear segmento](../images/insights/influential-factors-create-segment.png)
 
@@ -222,7 +222,7 @@ Los indicadores de modelo de alta calidad incluyen:
 
 ### AUC (Área bajo la curva)
 
-El AUC refleja la fuerza de la relación entre la clasificación por puntuación y la aparición del objetivo previsto. Un **AUC** de 0,5 significa que el modelo no es mejor que una suposición aleatoria. Un **AUC** de 1 significa que el modelo puede predecir perfectamente quién tomará la acción relevante.
+El AUC refleja la fortaleza de la relación entre la clasificación por puntuación y la aparición del objetivo previsto. Un **AUC** de 0,5 significa que el modelo no es mejor que una suposición aleatoria. Un **AUC** de 1 significa que el modelo puede predecir perfectamente quién tomará la acción relevante.
 
 ## Pasos siguientes
 

@@ -1,7 +1,8 @@
 ---
 title: Grupo de campos de esquema de detalles de miembro de XDM Business Campaign
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles del miembro de XDM Business Campaign.
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 4%
@@ -19,10 +20,10 @@ ht-degree: 4%
 | `acquiredByCampaignKey` | [[!UICONTROL Fuente B2B]](../../data-types/b2b-source.md) | El ID compuesto de la campaña que adquirió este miembro de la campaña. |
 | `acquiredByCampaignID` | [!UICONTROL Cadena] | Un identificador de cadena para la campaña que adquirió este miembro de la campaña. |
 | `firstRespondedDate` | [!UICONTROL DateTime] | Marca de tiempo ISO 8601 del momento en que la persona respondió por primera vez a la campaña. |
-| `hasReachedSuccess` | [!UICONTROL Boolean] | Indica si este miembro de la campaña ha resultado en una conversión correcta. |
-| `hasResponded` | [!UICONTROL Booleano] | Indica si este miembro de la campaña ha respondido a la campaña. |
-| `isDeleted` | [!UICONTROL Booleano] | Indica si este miembro de la campaña se ha eliminado en el Marketo Engage.<br><br>Al usar la variable [Conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Si configura `isDeleted` a `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
-| `isExhausted` | [!UICONTROL Booleano] | Indica si este miembro de la campaña ha agotado todas las interacciones de la campaña. |
+| `hasReachedSuccess` | [!UICONTROL Booleana] | Indica si este miembro de la campaña ha resultado en una conversión correcta. |
+| `hasResponded` | [!UICONTROL Booleana] | Indica si este miembro de la campaña ha respondido a la campaña. |
+| `isDeleted` | [!UICONTROL Booleana] | Indica si este miembro de la campaña se ha eliminado en el Marketo Engage.<br><br>Al usar la variable [Conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Si configura `isDeleted` a `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
+| `isExhausted` | [!UICONTROL Booleana] | Indica si este miembro de la campaña ha agotado todas las interacciones de la campaña. |
 | `lastStatus` | [!UICONTROL Cadena] | El último estado del miembro de la campaña. |
 | `memberStatus` | [!UICONTROL Cadena] | Estado actual del miembro de la campaña. |
 | `memberStatusReason` | [!UICONTROL Cadena] | Motivo detrás del estado actual del miembro de la campaña. |

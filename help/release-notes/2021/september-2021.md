@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2021
 description: Notas de la versión de septiembre de 2021 para Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 8%
@@ -11,7 +11,7 @@ ht-degree: 8%
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de versión: 29 de septiembre de 2021**
+**Fecha de la versión: 29 de septiembre de 2021**
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
@@ -27,7 +27,7 @@ La ingesta de datos de Adobe Experience Platform representa los múltiples méto
 
 | Función | Descripción |
 |------- | -----------|
-| Actualizar o aplicar parches registros de perfil utilizando la ingesta por lotes | El perfil del cliente en tiempo real ahora permite actualizar los atributos de perfil en datos de registro de perfil individuales mediante la ingesta por lotes. Para obtener más información, consulte [guía para desarrolladores sobre ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md). |
+| Actualizar o aplicar parches registros de perfil utilizando la ingesta por lotes | El perfil del cliente en tiempo real ahora permite actualizar los atributos de perfil en datos de registro de perfil individuales mediante ingesta por lotes. Para obtener más información, consulte [guía para desarrolladores sobre ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md). |
 
 Para obtener más información sobre la ingesta de datos en Platform, visite [Documentación de ingesta de datos](../../ingestion/home.md).
 

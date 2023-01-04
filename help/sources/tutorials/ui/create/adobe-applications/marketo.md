@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial proporciona pasos para crear un conector de origen de Marketo Engage en la interfaz de usuario para introducir datos B2B en Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 72fb25a262d2ab76085f12e3ad0c6a8decba50ac
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Modelo de datos de experiencia (XDM)](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Crear y editar esquemas en la interfaz de usuario](../../../../../xdm/ui/resources/schemas.md): Aprenda a crear y editar esquemas en la interfaz de usuario.
 * [Espacios de nombres de identidad](../../../../../identity-service/namespaces.md): Las áreas de nombres de identidad son un componente de [!DNL Identity Service] que sirven de indicadores del contexto al que se refiere una identidad. Una identidad completa incluye un valor de ID y un área de nombres.
-* [[!DNL Real-time Customer Profile]](/help/profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ### Recopilar las credenciales necesarias
@@ -71,7 +71,7 @@ Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]**. En 
 
 ![new](../../../../images/tutorials/create/marketo/new.png)
 
-## Seleccionar un conjunto de datos
+## Selección de un conjunto de datos
 
 Después de crear el [!DNL Marketo] cuenta, el siguiente paso proporciona una interfaz que puede explorar [!DNL Marketo] conjuntos de datos.
 
@@ -171,7 +171,7 @@ Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado i
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente un flujo de datos para [!DNL Marketo] datos. Los datos entrantes ahora se pueden usar en servicios de Platform descendentes como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado correctamente un flujo de datos para [!DNL Marketo] datos. Los datos entrantes ahora se pueden usar en servicios de Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-time Customer Profile]](/help/profile/home.md)
+* [Información general del [!DNL Real-Time Customer Profile]](/help/profile/home.md)
 * [Información general del [!DNL Data Science Workspace]](/help/data-science-workspace/home.md)

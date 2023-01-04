@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: notas de la versión;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 6%
@@ -19,13 +19,13 @@ ht-degree: 6%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-* [Gobierno de datos](#governance)
+* [Control de datos](#governance)
 * [[!DNL Data Ingestion]](#ingestion)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Identity Service]](#identity)
 * [[!DNL Sources]](#sources)
 
-## Gobierno de datos {#governance}
+## Control de datos {#governance}
 
 [!DNL Experience Platform] permite a las empresas unir datos de varios sistemas empresariales para permitir a los especialistas en marketing identificar, comprender y captar mejor a los clientes. [!DNL Experience Platform] incluye una infraestructura de administración de datos end-to-end para garantizar el uso adecuado de los datos dentro de [!DNL Platform] y cuando se comparten entre sistemas.
 
@@ -111,7 +111,7 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 | ------- | ----------- |
 | Señales obsoletas para el conector Adobe Audience Manager | Ya no se enviarán datos de nivel de señal de Audience Manager. Tenga en cuenta que se seguirá incluyendo la pertenencia a segmentos para características y segmentos. Como resultado de este cambio, ya no se generarán conjuntos de datos entrantes. |
 | Conjuntos de datos con nombre cambiado | Los conjuntos de datos generados por el conector de Audience Manager tendrán nombres y descripciones actualizados. |
-| Habilitar [!DNL Profile] alternar en Audience Manager | [!DNL Profile] alternar puede habilitarse o deshabilitarse para promocionar el conjunto de datos a [!DNL Real-time Customer Profile]. La opción de alternancia está activada de forma predeterminada. |
+| Habilitar [!DNL Profile] alternar en Audience Manager | [!DNL Profile] alternar puede habilitarse o deshabilitarse para promocionar el conjunto de datos a [!DNL Real-Time Customer Profile]. La opción de alternancia está activada de forma predeterminada. |
 | Compatibilidad con la interfaz de usuario para sistemas de almacenamiento en la nube | Nuevo conector de origen para [!DNL Azure Data Lake Storage Gen2] en la interfaz de usuario de . |
 | Compatibilidad con la interfaz de usuario para sistemas CRM | Nuevo conector de origen para [!DNL HubSpot], [!DNL Salesforce Service Cloud]y [!DNL ServiceNow] en la interfaz de usuario de . |
 | Compatibilidad con la interfaz de usuario para sistemas de bases de datos | Nuevo conector de origen para [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server]y [!DNL MySQL] en la interfaz de usuario de . |

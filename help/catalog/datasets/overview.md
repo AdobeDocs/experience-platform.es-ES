@@ -5,7 +5,7 @@ title: Información general sobre conjuntos de datos
 topic-legacy: datasets
 description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 9%
@@ -61,10 +61,10 @@ A continuación se muestra una lista de servicios descendentes que utilizan conj
 
 * [[!DNL Data Access API]](../../data-access/home.md): Permite acceder y descargar el contenido de los archivos almacenados en conjuntos de datos.
 * [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md): Agrupa identidades entre dispositivos y sistemas, vinculando conjuntos de datos en función de los campos de identidad definidos por los esquemas XDM a los que se ajustan.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Aprovechamientos [!DNL Identity Service] para crear perfiles de cliente detallados a partir de sus conjuntos de datos en tiempo real. [!DNL Real-time Customer Profile] extrae datos de [!DNL Data Lake] y mantienen los perfiles de los clientes en su propio almacén de datos independiente.
-* [Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md): Permite generar segmentos y generar audiencias a partir de [!DNL Real-time Customer Profile] datos. Estas audiencias se pueden exportar a sus propios conjuntos de datos dentro del [!DNL Data Lake].
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Aprovechamientos [!DNL Identity Service] para crear perfiles de cliente detallados a partir de sus conjuntos de datos en tiempo real. [!DNL Real-Time Customer Profile] extrae datos de [!DNL Data Lake] y mantienen los perfiles de los clientes en su propio almacén de datos independiente.
+* [Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md): Permite generar segmentos y generar audiencias a partir de [!DNL Real-Time Customer Profile] datos. Estas audiencias se pueden exportar a sus propios conjuntos de datos dentro del [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Utiliza aprendizaje automático e inteligencia artificial para descubrir perspectivas en conjuntos de datos grandes.
-* [Servicio de consultas de Adobe Experience Platform](../../query-service/home.md): Permite utilizar SQL estándar para consultar datos en [!DNL Experience Platform], uniendo cualquier conjunto de datos dentro de la variable [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para su uso en los informes, [!DNL Data Science Workspace]o [!DNL Real-time Customer Profile].
+* [Servicio de consultas de Adobe Experience Platform](../../query-service/home.md): Permite utilizar SQL estándar para consultar datos en [!DNL Experience Platform], uniendo cualquier conjunto de datos dentro de la variable [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para su uso en los informes, [!DNL Data Science Workspace]o [!DNL Real-Time Customer Profile].
 * [Servicio de destinos de Adobe Experience Platform](../../destinations/home.md): Permite [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) al almacenamiento en la nube o a los destinos de marketing por correo electrónico que desee, para actividades de creación de informes o de ciencia de datos.
 
 ## Pasos siguientes

@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen en la interfaz de usuario para introducir los datos de perfil de atributos del cliente en Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 4%
@@ -76,7 +76,7 @@ La variable [!UICONTROL Consulte] , lo que le permite revisar el nuevo flujo de 
 
 ## Pasos siguientes
 
-Una vez creada la conexión, se crea automáticamente un esquema de destinatario y un conjunto de datos para contener los datos entrantes. Cuando termina la ingesta inicial, los atributos del cliente los datos de perfil pueden ser utilizados por servicios de Platform descendentes como [!DNL Real-time Customer Profile] y [!DNL Segmentation Service]. Consulte los siguientes documentos para obtener más información:
+Una vez creada la conexión, se crea automáticamente un esquema de destinatario y un conjunto de datos para contener los datos entrantes. Cuando termina la ingesta inicial, los atributos del cliente los datos de perfil pueden ser utilizados por servicios de Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Segmentation Service]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
+* [Información general del [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Información general del [!DNL Segmentation Service]](../../../../../segmentation/home.md)

@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Esta guía muestra cómo crear, ver, actualizar y eliminar atributos calculados mediante la API de perfil del cliente en tiempo real.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2275'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -142,7 +142,7 @@ Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un
 | `positionPath` | Matriz que contiene la matriz desconstruida `path` al campo enviado en la solicitud. |
 | `returnSchema.meta:xdmType` | Tipo del campo en el que se almacenará el atributo calculado. |
 | `definedOn` | Matriz que muestra los esquemas de unión en los que se ha definido el atributo calculado. Contiene un objeto por esquema de unión, lo que significa que puede haber varios objetos dentro de la matriz si el atributo calculado se ha añadido a varios esquemas basados en clases diferentes. |
-| `active` | Un valor booleano que muestra si el atributo calculado está activo o no. De forma predeterminada, el valor es `true`. |
+| `active` | Un valor booleano que muestra si el atributo calculado está activo o no. El valor predeterminado es `true`. |
 | `type` | El tipo de recurso creado, en este caso &quot;ComputedAttribute&quot; es el valor predeterminado. |
 | `createEpoch` y `updateEpoch` | Hora a la que se creó y actualizó por última vez el atributo calculado, respectivamente. |
 
@@ -270,7 +270,7 @@ Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un
 | `positionPath` | Matriz que contiene la matriz desconstruida `path` al campo enviado en la solicitud. |
 | `returnSchema.meta:xdmType` | Tipo del campo en el que se almacenará el atributo calculado. |
 | `definedOn` | Matriz que muestra los esquemas de unión en los que se ha definido el atributo calculado. Contiene un objeto por esquema de unión, lo que significa que puede haber varios objetos dentro de la matriz si el atributo calculado se ha añadido a varios esquemas basados en clases diferentes. |
-| `active` | Un valor booleano que muestra si el atributo calculado está activo o no. De forma predeterminada, el valor es `true`. |
+| `active` | Un valor booleano que muestra si el atributo calculado está activo o no. El valor predeterminado es `true`. |
 | `type` | El tipo de recurso creado, en este caso &quot;ComputedAttribute&quot; es el valor predeterminado. |
 | `createEpoch` y `updateEpoch` | Hora a la que se creó y actualizó por última vez el atributo calculado, respectivamente. |
 

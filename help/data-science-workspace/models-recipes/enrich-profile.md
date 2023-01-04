@@ -6,25 +6,25 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este documento proporciona una guía sobre cómo enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 89a9b64f2fb238c08a281f29a035ce0b24b34804
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
-# Enriquecimiento [!DNL Real-time Customer Profile] con perspectivas de aprendizaje automático
+# Enriquecimiento [!DNL Real-Time Customer Profile] con perspectivas de aprendizaje automático
 
 Adobe Experience Platform [!DNL Data Science Workspace] proporciona las herramientas y los recursos para crear, evaluar y utilizar modelos de aprendizaje automático para generar predicciones de datos y perspectivas. Cuando las perspectivas de aprendizaje automático se incorporan en un [!DNL Profile]conjunto de datos habilitado para , que los mismos datos también se introducen como [!DNL Profile] registros que luego se pueden segmentar mediante [!DNL Adobe Experience Platform Segmentation Service].
 
-Este documento proporciona vínculos a tutoriales que le permiten enriquecer [!DNL Real-time Customer Profile] con sus perspectivas de aprendizaje automático.
+Este documento proporciona vínculos a tutoriales que le permiten enriquecer [!DNL Real-Time Customer Profile] con sus perspectivas de aprendizaje automático.
 
 ## Primeros pasos
 
 Para completar los tutoriales siguientes, debe tener una comprensión práctica de la ingesta [!DNL Profile] datos y creación de segmentos. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona una representación unificada completa de cada cliente individual basada en datos agregados de varias fuentes.
-- [[!DNL Identity Service]](../../identity-service/home.md): Habilitación [!DNL Real-time Customer Profile] al unir identidades de fuentes de datos dispares que se están incorporando a Platform.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona una representación unificada completa de cada cliente individual basada en datos agregados de varias fuentes.
+- [[!DNL Identity Service]](../../identity-service/home.md): Habilitación [!DNL Real-Time Customer Profile] al unir identidades de fuentes de datos dispares que se están incorporando a Platform.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
 
 Además de los documentos mencionados anteriormente, se recomienda revisar también las siguientes guías sobre esquemas y el Editor de esquemas:
@@ -34,7 +34,7 @@ Además de los documentos mencionados anteriormente, se recomienda revisar tambi
 
 ## Crear y configurar un esquema de salida y un conjunto de datos {#create-an-output-schema-and-dataset}
 
-El primer paso hacia el enriquecimiento [!DNL Real-time Customer Profile] con perspectivas de puntuación es saber qué objeto real (como una persona) definen los datos. Conocer los datos le permite describir y diseñar una estructura que añada significado, como diseñar una base de datos relacional.
+El primer paso hacia el enriquecimiento [!DNL Real-Time Customer Profile] con perspectivas de puntuación es saber qué objeto real (como una persona) definen los datos. Conocer los datos le permite describir y diseñar una estructura que añada significado, como diseñar una base de datos relacional.
 
 La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). Para empezar a crear sus propios esquemas, siga los pasos del tutorial en [creación de un esquema con el Editor de esquemas](../../xdm/tutorials/create-schema-ui.md). Tenga en cuenta que, antes de habilitar un conjunto de datos para [!DNL Profile], debe configurar el esquema del conjunto de datos para que tenga un campo de identidad principal y, a continuación, habilitar el esquema para [!DNL Profile]. Cuando los datos se introducen en un [!DNL Profile]conjunto de datos habilitado para , que los mismos datos también se introducen como [!DNL Profile] registros.
 
@@ -58,4 +58,4 @@ La variable [!DNL Segment Builder] proporciona un espacio de trabajo enriquecido
 
 Para obtener más información sobre los segmentos y el [!DNL Segment Builder], lea la [Información general del servicio de segmentación](../../segmentation/home.md).
 
-Para obtener más información sobre [!DNL Real-time Customer Profile], lea la [Resumen del perfil del cliente en tiempo real](../../profile/home.md)
+Para obtener más información sobre [!DNL Real-Time Customer Profile], lea la [Resumen del perfil del cliente en tiempo real](../../profile/home.md)

@@ -2,7 +2,7 @@
 title: Atributos derivados
 description: Los atributos derivados proporcionan un medio conveniente para generar atributos de su elección que se pueden actualizar en cualquier cadencia normal y, opcionalmente, publicar en los datos del perfil del cliente en tiempo real. Este documento proporciona información general sobre cómo utilizar el servicio de consulta para crear atributos derivados para usarlos con los datos de perfil.
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Los cuartiles se utilizan para dividir la distribución por cuatro y los percent
 
 ## Atributos derivados analíticos
 
-El servicio de consultas proporciona funciones integradas como la sesionización y el último contacto, entre otras, que puede aplicar a cualquier dato de serie temporal para generar atributos derivados relacionados con el negocio. Tiene la opción de basar estos atributos derivados de análisis en una o más identidades y, opcionalmente, publicar los datos en Perfil del cliente en tiempo real si es necesario.
+El servicio de consultas proporciona funciones integradas como la sesionización y el último contacto, entre otras, que puede aplicar a cualquier dato de serie temporal para generar atributos derivados relacionados con el negocio. Tiene la opción de basar estos atributos derivados de análisis en una o más identidades y, opcionalmente, publicar los datos en el Perfil del cliente en tiempo real si es necesario.
 
 Algunos casos de uso potenciales para este tipo de atributo derivado pueden incluir:
 

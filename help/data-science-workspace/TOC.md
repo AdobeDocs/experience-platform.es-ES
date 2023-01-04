@@ -5,7 +5,7 @@ breadcrumb-title: Guía de Data Science Workspace
 user-guide-description: Utilice el aprendizaje automático para desarrollar, preparar y valorar modelos y fórmulas con Adobe Sensei y JupyterLab Notebooks.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: ec69c859a7b40f3d527c73405b358862ebdb92e7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 16%
@@ -58,7 +58,7 @@ ht-degree: 16%
    * [Puntuación de un modelo (IU)](models-recipes/score-model-ui.md)
    * [Puntuación de un modelo (API)](models-recipes/score-model-api.md)
    * [Optimización de un modelo](models-recipes/optimize-model.md)
-   * [Enriquecer el perfil del cliente en tiempo real con perspectivas de aprendizaje automático](models-recipes/enrich-profile.md)
+   * [Enriquecimiento del perfil del cliente en tiempo real con perspectivas de aprendizaje automático](models-recipes/enrich-profile.md)
    * [Publicación de un modelo como servicio (IU)](models-recipes/publish-model-service-ui.md)
    * [Publicación de un modelo como servicio (API)](models-recipes/publish-model-service-api.md)
    * [Programar la formación automatizada y la puntuación en un servicio (IU)](models-recipes/schedule-models-ui.md)

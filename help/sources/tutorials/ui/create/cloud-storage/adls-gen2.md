@@ -6,32 +6,31 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Azure Data Lake Storage Gen2 mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: d81b7593-08a3-43f8-a8bc-f5547a6cd55a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
 
-# Crear una conexión de origen [!DNL Azure Data Lake Storage Gen2] en la interfaz de usuario
+# Cree un [!DNL Azure Data Lake Storage Gen2] conexión de origen en la interfaz de usuario
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona pasos para autenticar un conector de origen [!DNL Azure Data Lake Storage Gen2] (en adelante denominado &quot;[!DNL ADLS Gen2]&quot;) mediante la interfaz de usuario [!DNL Platform].
+Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona los pasos para autenticar un [!DNL Azure Data Lake Storage Gen2] (en lo sucesivo, &quot;el[!DNL ADLS Gen2]&quot;) conector de origen que utiliza la variable [!DNL Platform] interfaz de usuario.
 
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
-   - [Aspectos básicos de la composición](../../../../../xdm/schema/composition.md) del esquema: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+   - [Aspectos básicos de la composición del esquema](../../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   - [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Si ya tiene una conexión ADLS Gen2 válida, puede omitir el resto de este documento y continuar con el tutorial sobre la [configuración de un flujo de datos](../../dataflow/batch/cloud-storage.md).
+Si ya tiene una conexión ADLS Gen2 válida, puede omitir el resto de este documento y continuar con el tutorial en [configuración de un flujo de datos](../../dataflow/batch/cloud-storage.md).
 
 ### Recopilar las credenciales necesarias
 
-Para autenticar el conector de origen [!DNL ADLS Gen2], debe proporcionar valores para las siguientes propiedades de conexión:
+Para autenticar su [!DNL ADLS Gen2] conector de origen, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -40,34 +39,34 @@ Para autenticar el conector de origen [!DNL ADLS Gen2], debe proporcionar valore
 | `servicePrincipalKey` | La clave de la aplicación. |
 | `tenant` | La información del inquilino que contiene su aplicación. |
 
-Para obtener más información sobre estos valores, consulte [this [!DNL ADLS Gen2] document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
+Para obtener más información sobre estos valores, consulte [this [!DNL ADLS Gen2] documento](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
-## Conecte su cuenta [!DNL ADLS Gen2]
+## Conecte su [!DNL ADLS Gen2] account
 
-Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta [!DNL ADLS Gen2] para conectarse a [!DNL Platform].
+Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular sus [!DNL ADLS Gen2] cuenta a la que conectarse [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Sources]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes para las que puede crear una cuenta.
+Iniciar sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder a la **[!UICONTROL Fuentes]** espacio de trabajo. La variable **[!UICONTROL Catálogo]** muestra una variedad de fuentes para las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
-En la categoría **[!UICONTROL Databases]**, seleccione **[!UICONTROL Azure Data Lake Gen2]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configure]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear un nuevo conector ADLS Gen2.
+En el **[!UICONTROL Bases de datos]** categoría, seleccione **[!UICONTROL Azure Data Lake Gen2]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo conector ADLS Gen2.
 
 ![](../../../../images/tutorials/create/adls-gen2/catalog.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Connect to Azure Data Lake Gen2]**. En esta página, puede usar credenciales nuevas o existentes.
+La variable **[!UICONTROL Conectarse a Azure Data Lake Gen2]** se abre. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
-Si está utilizando credenciales nuevas, seleccione **[!UICONTROL New Account]**. En el formulario de entrada que aparece, indique un nombre, una descripción opcional y sus credenciales [!DNL ADLS Gen2]. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, deje que se establezca la nueva conexión.
+Si está utilizando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, indique un nombre, una descripción opcional y su [!DNL ADLS Gen2] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, permita que la nueva conexión se establezca durante algún tiempo.
 
 ![](../../../../images/tutorials/create/adls-gen2/connect.png)
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la cuenta [!DNL ADLS Gen2] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
+Para conectar una cuenta existente, seleccione la opción [!DNL ADLS Gen2] cuenta con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![](../../../../images/tutorials/create/adls-gen2/existing.png)
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta [!DNL ADLS Gen2]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incorporar datos del almacenamiento en la nube a [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+Al seguir este tutorial, ha establecido una conexión con su [!DNL ADLS Gen2] cuenta. Ahora puede continuar con el siguiente tutorial y [configure un flujo de datos para incorporar datos del almacenamiento en la nube a [!DNL Platform]](../../dataflow/batch/cloud-storage.md).

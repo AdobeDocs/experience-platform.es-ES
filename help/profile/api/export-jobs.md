@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: El perfil del cliente en tiempo real le permite crear una sola vista de clientes individuales dentro de Adobe Experience Platform recopilando datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para su procesamiento posterior.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Extremo de trabajos de exportación de perfil
 
-[!DNL Real-time Customer Profile] le permite crear una sola vista de clientes individuales recopilando datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para su procesamiento posterior. Por ejemplo, segmentos de audiencia de [!DNL Profile] los datos se pueden exportar para su activación y los atributos de perfil se pueden exportar para la creación de informes.
+[!DNL Real-Time Customer Profile] le permite crear una sola vista de clientes individuales recopilando datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para su procesamiento posterior. Por ejemplo, segmentos de audiencia de [!DNL Profile] los datos se pueden exportar para su activación y los atributos de perfil se pueden exportar para la creación de informes.
 
 Este documento proporciona instrucciones paso a paso para la creación y administración de trabajos de exportación mediante la [API de perfil](https://www.adobe.com/go/profile-apis-en).
 
@@ -26,7 +26,7 @@ Además de crear un trabajo de exportación, también puede acceder a [!DNL Prof
 
 ## Primeros pasos
 
-Los extremos de API que se utilizan en esta guía forman parte del [!DNL Real-time Customer Profile] API. Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
+Los extremos de API que se utilizan en esta guía forman parte del [!DNL Real-Time Customer Profile] API. Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
 
 ## Creación de un trabajo de exportación
 

@@ -2,7 +2,7 @@
 title: Definir una relación entre dos esquemas en Real-time Customer Data Platform B2B Edition
 description: Aprenda a definir una relación "varios a uno" entre dos esquemas en Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1403'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Con fines de referencia, las secciones siguientes describen la estructura de cad
 
 El esquema de origen &quot;[!DNL Opportunities]&quot; se basa en la variable [!UICONTROL Oportunidad comercial XDM] Clase . Uno de los campos proporcionados por la clase , `opportunityKey`, sirve como identificador del esquema . Específicamente, la variable `sourceKey` en el campo `opportunityKey` se establece como la identidad principal del esquema en un espacio de nombres personalizado denominado [!DNL B2B Opportunity].
 
-Como se ve en **[!UICONTROL Propiedades del esquema]**, este esquema se ha habilitado para utilizarse en [!DNL Real-time Customer Profile].
+Como se ve en **[!UICONTROL Propiedades del esquema]**, este esquema se ha habilitado para utilizarse en [!DNL Real-Time Customer Profile].
 
 ![Esquema de oportunidades](../images/tutorials/relationship-b2b/opportunities.png)
 

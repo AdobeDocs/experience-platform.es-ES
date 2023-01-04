@@ -6,7 +6,7 @@ description: Este documento proporciona un tutorial para definir una relación e
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 La capacidad de comprender las relaciones entre los clientes y sus interacciones con la marca a través de varios canales es una parte importante de Adobe Experience Platform. Definición de estas relaciones dentro de la estructura del [!DNL Experience Data Model] Los esquemas (XDM) le permiten obtener perspectivas complejas sobre los datos de sus clientes.
 
-Mientras que las relaciones de esquema se pueden inferir mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto solo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas pertenecientes a diferentes clases, se debe agregar un campo de relación dedicado a un esquema de origen que haga referencia a la identidad de un esquema de destino.
+Mientras que las relaciones de esquema se pueden inferir mediante el uso del esquema de unión y [!DNL Real-Time Customer Profile], esto solo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas pertenecientes a diferentes clases, se debe agregar un campo de relación dedicado a un esquema de origen que haga referencia a la identidad de un esquema de destino.
 
 Este documento proporciona un tutorial para definir una relación entre dos esquemas con el Editor de esquemas en la [!DNL Experience Platform] interfaz de usuario. Para ver los pasos sobre la definición de relaciones de esquema mediante la API, consulte el tutorial sobre [definición de una relación mediante la API del Registro de Esquemas](relationship-api.md).
 
@@ -54,7 +54,7 @@ Se espera que ya haya creado los dos esquemas que se definirán en la relación.
 
 >[!IMPORTANT]
 >
->Para establecer una relación, ambos esquemas deben tener definidas identidades principales y estar habilitados para [!DNL Real-time Customer Profile]. Consulte la sección sobre [activación de un esquema para su uso en Perfil](./create-schema-ui.md#profile) en el tutorial de creación de esquemas si necesita instrucciones sobre cómo configurar los esquemas en consecuencia.
+>Para establecer una relación, ambos esquemas deben tener definidas identidades principales y estar habilitados para [!DNL Real-Time Customer Profile]. Consulte la sección sobre [activación de un esquema para su uso en Perfil](./create-schema-ui.md#profile) en el tutorial de creación de esquemas si necesita instrucciones sobre cómo configurar los esquemas en consecuencia.
 
 Las relaciones de esquema se representan mediante un campo dedicado dentro de un **esquema de origen** que hace referencia a otro campo dentro de un **esquema de destino**. En los pasos siguientes, &quot;[!DNL Loyalty Members]&quot; será el esquema de origen, mientras que &quot;[!DNL Hotels]&quot; actuará como esquema de destino.
 
@@ -62,7 +62,7 @@ Con fines de referencia, las secciones siguientes describen la estructura de cad
 
 ### [!DNL Loyalty Members] esquema
 
-El esquema de origen &quot;[!DNL Loyalty Members]&quot; se basa en la variable [!DNL XDM Individual Profile] y es el esquema que se construyó en el tutorial para [creación de un esquema en la interfaz de usuario](create-schema-ui.md). Incluye un `loyalty` objeto debajo de `_tenantId` área de nombres, que incluye varios campos específicos de lealtad. Uno de estos campos, `loyaltyId`, sirve como identidad principal para el esquema en la variable [!UICONTROL Correo electrónico] espacio de nombres. Como se ve en **[!UICONTROL Propiedades del esquema]**, este esquema se ha habilitado para utilizarse en [!DNL Real-time Customer Profile].
+El esquema de origen &quot;[!DNL Loyalty Members]&quot; se basa en la variable [!DNL XDM Individual Profile] y es el esquema que se construyó en el tutorial para [creación de un esquema en la interfaz de usuario](create-schema-ui.md). Incluye un `loyalty` objeto debajo de `_tenantId` área de nombres, que incluye varios campos específicos de lealtad. Uno de estos campos, `loyaltyId`, sirve como identidad principal para el esquema en la variable [!UICONTROL Correo electrónico] espacio de nombres. Como se ve en **[!UICONTROL Propiedades del esquema]**, este esquema se ha habilitado para utilizarse en [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -80,7 +80,7 @@ Para participar en una relación, el esquema de destino debe tener una identidad
 >
 >Para aprender a crear áreas de nombres de identidad personalizadas, consulte la [Documentación del servicio de identidad](../../identity-service/namespaces.md#manage-namespaces).
 
-Una vez configurada la identidad principal, el esquema de destino debe habilitarse para [!DNL Real-time Customer Profile].
+Una vez configurada la identidad principal, el esquema de destino debe habilitarse para [!DNL Real-Time Customer Profile].
 
 ![Habilitar para perfil](../images/tutorials/relationship/hotel-profile.png)
 

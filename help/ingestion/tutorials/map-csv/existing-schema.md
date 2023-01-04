@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM existente mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 160a75a1811afa002717e167887550715eee5471
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%
@@ -121,4 +121,4 @@ Una vez asignado y creado el archivo CSV, puede supervisar los datos que se est�
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha introducido en [!DNL Platform]. Ahora, estos datos los puede utilizar el flujo descendente [!DNL Platform] servicios como [!DNL Real-time Customer Profile]. Consulte la descripción general para [[!DNL Real-time Customer Profile]](../../../profile/home.md) para obtener más información.
+Siguiendo este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha introducido en [!DNL Platform]. Ahora, estos datos los puede utilizar el flujo descendente [!DNL Platform] servicios como [!DNL Real-Time Customer Profile]. Consulte la descripción general para [[!DNL Real-Time Customer Profile]](../../../profile/home.md) para obtener más información.

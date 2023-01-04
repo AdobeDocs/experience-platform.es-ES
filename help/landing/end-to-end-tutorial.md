@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;
 title: Flujo de trabajo de ejemplo completo de Adobe Experience Platform
 topic-legacy: getting started
 description: Conozca el flujo de trabajo básico de principio a fin para Adobe Experience Platform en un nivel superior.
-source-git-commit: 9ed521c4e2ebcd20da662e93b9591ef690f51c5e
+exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1836'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -26,7 +27,7 @@ Este flujo de trabajo completo utiliza varios servicios de Adobe Experience Plat
 - [[!DNL Identity Service]](../identity-service/home.md): Proporciona una vista completa de sus clientes y su comportamiento al unir identidades entre dispositivos y sistemas.
 - [Fuentes](../sources/home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] permite dividir los datos almacenados en [!DNL Experience Platform] que se relaciona con individuos (como clientes, posibles clientes, usuarios u organizaciones) en grupos más pequeños.
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 - [Conjuntos de datos](../catalog/datasets/overview.md): La construcción de almacenamiento y administración para la persistencia de datos en [!DNL Experience Platform].
 - [Destinos](../destinations/home.md): Los destinos son integraciones prediseñadas con aplicaciones de uso común que permiten la activación perfecta de datos de Platform para campañas de marketing multicanal, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 
@@ -36,13 +37,13 @@ Antes de ingerir datos en Platform, primero debe crear un esquema XDM para descr
 
 El tutorial anterior muestra cómo definir los campos de identidad para los esquemas. Un campo de identidad representa un campo que puede utilizarse para identificar a una persona individual relacionada con un registro o un evento de serie temporal. Los campos de identidad son un componente crucial de la forma en que se construyen los gráficos de identidad de los clientes en Platform, que en última instancia afecta a cómo el perfil del cliente en tiempo real combina distintos fragmentos de datos para obtener una vista completa del cliente. Para obtener más información sobre cómo ver los gráficos de identidad en Platform, consulte el tutorial sobre [cómo utilizar el visor de gráficos de identidad](../identity-service/ui/identity-graph-viewer.md).
 
-Debe habilitar el esquema para utilizarlo en el perfil del cliente en tiempo real, de modo que los perfiles del cliente se puedan crear a partir de los datos basados en el esquema. Consulte la sección sobre [activación de un esquema para Perfil](../xdm/ui/resources/schemas.md#profile) en la guía de la interfaz de usuario de esquemas para obtener más información.
+Debe habilitar el esquema para utilizarlo en el perfil del cliente en tiempo real de modo que los perfiles del cliente se puedan crear a partir de los datos basados en el esquema. Consulte la sección sobre [activación de un esquema para Perfil](../xdm/ui/resources/schemas.md#profile) en la guía de la interfaz de usuario de esquemas para obtener más información.
 
 ## Ingesta de datos en Platform
 
 Una vez creado un esquema XDM, puede empezar a introducir los datos en el sistema.
 
-Todos los datos introducidos en Platform se almacenan en conjuntos de datos individuales tras su incorporación. Un conjunto de datos es una colección de registros de datos que se asignan a un esquema XDM específico. Antes de que sus datos puedan ser utilizados por [!DNL Real-time Customer Profile], el conjunto de datos en cuestión debe configurarse específicamente. Para obtener instrucciones completas sobre cómo habilitar un conjunto de datos para Perfil, consulte la [Guía de la interfaz de usuario de conjuntos de datos](../catalog/datasets/user-guide.md#enable-profile) y [tutorial de API de configuración del conjunto de datos](../profile/tutorials/dataset-configuration.md). Una vez configurado el conjunto de datos, puede empezar a introducir datos en él.
+Todos los datos introducidos en Platform se almacenan en conjuntos de datos individuales tras su incorporación. Un conjunto de datos es una colección de registros de datos que se asignan a un esquema XDM específico. Antes de que sus datos puedan ser utilizados por [!DNL Real-Time Customer Profile], el conjunto de datos en cuestión debe configurarse específicamente. Para obtener instrucciones completas sobre cómo habilitar un conjunto de datos para Perfil, consulte la [Guía de la interfaz de usuario de conjuntos de datos](../catalog/datasets/user-guide.md#enable-profile) y [tutorial de API de configuración del conjunto de datos](../profile/tutorials/dataset-configuration.md). Una vez configurado el conjunto de datos, puede empezar a introducir datos en él.
 
 Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras. Por ejemplo, puede ingerir los datos utilizando [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). Puede encontrar una lista completa de las fuentes disponibles en la [información general sobre conectores de origen](../sources/home.md).
 
@@ -92,7 +93,7 @@ Para obtener instrucciones sobre cómo activar datos en destinos de marketing po
 
 ## Monitorización de las actividades de datos de Platform
 
-Platform le permite rastrear cómo se procesan los datos mediante flujos de datos, que son representaciones de trabajos que mueven datos a través de los distintos componentes de Platform. Estos flujos de datos se configuran en distintos servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, donde los utiliza [!DNL Identity Service] y [!DNL Real-time Customer Profile] antes de activarse finalmente en los destinos. El panel de monitorización proporciona una representación visual del recorrido de un flujo de datos. Para obtener información sobre cómo monitorizar los flujos de datos dentro de la interfaz de usuario de Platform, consulte los tutoriales sobre [monitorización de flujos de datos de fuentes](../dataflows/ui/monitor-sources.md) y [monitorización de flujos de datos en destinos](../dataflows/ui/monitor-destinations.md).
+Platform le permite rastrear cómo se procesan los datos mediante flujos de datos, que son representaciones de trabajos que mueven datos a través de los distintos componentes de Platform. Estos flujos de datos se configuran en distintos servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, donde los utiliza [!DNL Identity Service] y [!DNL Real-Time Customer Profile] antes de activarse finalmente en los destinos. El panel de monitorización proporciona una representación visual del recorrido de un flujo de datos. Para obtener información sobre cómo monitorizar los flujos de datos dentro de la interfaz de usuario de Platform, consulte los tutoriales sobre [monitorización de flujos de datos de fuentes](../dataflows/ui/monitor-sources.md) y [monitorización de flujos de datos en destinos](../dataflows/ui/monitor-destinations.md).
 
 También puede supervisar las actividades de Platform mediante el uso de métricas estadísticas y notificaciones de eventos mediante [!DNL Observability Insights]. Puede suscribirse a las notificaciones de alerta a través de la interfaz de usuario de Platform o enviarlas a un enlace web configurado. Para obtener más información sobre cómo ver, habilitar, deshabilitar y suscribirse a las alertas disponibles desde la interfaz de usuario del Experience Platform, consulte la [[!UICONTROL Alertas] Guía de la interfaz de usuario](../observability/alerts/ui.md). Para obtener más información sobre cómo recibir alertas a través de los enlaces web, consulte la guía de [suscripción a las notificaciones de eventos de Adobe I/O](../observability/alerts/subscribe.md).
 

@@ -5,7 +5,7 @@ title: Guía de solución de problemas del sistema XDM
 description: Encuentre respuestas a las preguntas más frecuentes sobre Experience Data Model (XDM), incluidos pasos para resolver errores comunes de API.
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 5ffc93c8715d1184b2a239c1d631b117a531e5c1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Para obtener más información, consulte la [identificación de recursos](api/ge
 
 ### ¿Cuándo comienza un esquema a impedir que se rompan los cambios?
 
-Los cambios de interrupción se pueden realizar en un esquema siempre y cuando nunca se haya utilizado en la creación de un conjunto de datos o esté habilitado para utilizarse en [[!DNL Real-time Customer Profile]](../profile/home.md). Una vez que un esquema se ha utilizado en la creación del conjunto de datos o se ha habilitado para usarse con [!DNL Real-time Customer Profile], las reglas de [Evolución del esquema](schema/composition.md#evolution) se hagan estrictamente cumplir por el sistema.
+Los cambios de interrupción se pueden realizar en un esquema siempre y cuando nunca se haya utilizado en la creación de un conjunto de datos o esté habilitado para utilizarse en [[!DNL Real-Time Customer Profile]](../profile/home.md). Una vez que un esquema se ha utilizado en la creación del conjunto de datos o se ha habilitado para usarse con [!DNL Real-Time Customer Profile], las reglas de [Evolución del esquema](schema/composition.md#evolution) se hagan estrictamente cumplir por el sistema.
 
 ### ¿Cuál es el tamaño máximo de un tipo de campo largo?
 
@@ -72,17 +72,17 @@ Para obtener más información sobre la administración de identidades en la int
 
 ### ¿Mi esquema necesita una identidad principal?
 
-Las identidades principales son opcionales, ya que los esquemas pueden tener cero o uno de ellos. Sin embargo, un esquema debe tener una identidad principal para que el esquema esté habilitado para utilizarse en [!DNL Real-time Customer Profile]. Consulte la [identidad](./tutorials/create-schema-ui.md#identity-field) del tutorial Editor de esquemas para obtener más información.
+Las identidades principales son opcionales, ya que los esquemas pueden tener cero o uno de ellos. Sin embargo, un esquema debe tener una identidad principal para que el esquema esté habilitado para utilizarse en [!DNL Real-Time Customer Profile]. Consulte la [identidad](./tutorials/create-schema-ui.md#identity-field) del tutorial Editor de esquemas para obtener más información.
 
-### ¿Cómo habilito un esquema para utilizarlo en [!DNL Real-time Customer Profile]?
+### ¿Cómo habilito un esquema para utilizarlo en [!DNL Real-Time Customer Profile]?
 
-Los esquemas están habilitados para su uso en [[!DNL Real-time Customer Profile]](../profile/home.md) mediante la adición de una etiqueta &quot;unión&quot; dentro de la variable `meta:immutableTags` del esquema. Activación de un esquema para su uso con [!DNL Profile] se puede realizar mediante la API o la interfaz de usuario.
+Los esquemas están habilitados para su uso en [[!DNL Real-Time Customer Profile]](../profile/home.md) mediante la adición de una etiqueta &quot;unión&quot; dentro de la variable `meta:immutableTags` del esquema. Activación de un esquema para su uso con [!DNL Profile] se puede realizar mediante la API o la interfaz de usuario.
 
 #### Activación de un esquema existente para [!DNL Profile] uso de la API
 
 Realice una solicitud de PATCH para actualizar el esquema y añadir el `meta:immutableTags` como matriz que contiene el valor &quot;union&quot;. Si la actualización se realiza correctamente, la respuesta mostrará el esquema actualizado que ahora contiene la etiqueta de unión.
 
-Para obtener más información sobre el uso de la API para habilitar un esquema para utilizarlo en [!DNL Real-time Customer Profile], consulte la [sindicatos](./api/unions.md) documento de [!DNL Schema Registry] guía para desarrolladores.
+Para obtener más información sobre el uso de la API para habilitar un esquema para utilizarlo en [!DNL Real-Time Customer Profile], consulte la [sindicatos](./api/unions.md) documento de [!DNL Schema Registry] guía para desarrolladores.
 
 #### Activación de un esquema existente para [!DNL Profile] uso de la interfaz de usuario
 
@@ -230,9 +230,9 @@ Según el punto final que esté usando, la variable `detailed-message` indica lo
 
 Para obtener listas de encabezados Accept compatibles para diferentes solicitudes de API, consulte las secciones correspondientes en la sección [Guía para desarrolladores de Schema Registry](./api/overview.md).
 
-### [!DNL Real-time Customer Profile] errors
+### [!DNL Real-Time Customer Profile] errors
 
-Los siguientes mensajes de error están asociados a operaciones que participan en la activación de esquemas para [!DNL Real-time Customer Profile]. Consulte la [sindicatos](./api/unions.md) en la sección [!DNL Schema Registry] Guía de API para obtener más información.
+Los siguientes mensajes de error están asociados a operaciones que participan en la activación de esquemas para [!DNL Real-Time Customer Profile]. Consulte la [sindicatos](./api/unions.md) en la sección [!DNL Schema Registry] Guía de API para obtener más información.
 
 #### Debe haber un descriptor de identidad de referencia
 

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial explica los pasos necesarios para crear un conjunto de datos que se pueda utilizar para exportar un segmento de audiencia mediante la interfaz de usuario del Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Select **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo 
 
 >[!NOTE]
 >
->Seleccione el icono de filtro situado junto a la barra de búsqueda para utilizar las funcionalidades de filtrado y ver solo aquellos conjuntos de datos habilitados para [!DNL Real-time Customer Profile].
+>Seleccione el icono de filtro situado junto a la barra de búsqueda para utilizar las funcionalidades de filtrado y ver solo aquellos conjuntos de datos habilitados para [!DNL Real-Time Customer Profile].
 
 ![Se muestra el espacio de trabajo de los conjuntos de datos.](../images/tutorials/segment-export-dataset/browse.png)
 
@@ -57,7 +57,7 @@ Para seleccionar la variable [!DNL XDM Individual Profile Union Schema] para usa
 
 >[!NOTE]
 >
->A pesar del hecho de que los esquemas de unión participan en el Perfil del cliente en tiempo real por definición, se enumeran como &quot;No habilitado&quot; debido al hecho de que no están habilitados para Perfil de la misma manera que los esquemas tradicionales.
+>A pesar de que los esquemas de unión participan en el perfil del cliente en tiempo real por definición, se enumeran como &quot;No habilitado&quot; debido al hecho de que no están habilitados para Perfil de la misma manera que los esquemas tradicionales.
 
 Seleccione el botón de opción situado junto a **[!UICONTROL Perfil individual XDM]** y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 

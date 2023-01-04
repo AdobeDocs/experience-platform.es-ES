@@ -5,7 +5,7 @@ title: Información general sobre la ingesta de flujos
 topic-legacy: overview
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos de cliente y del lado del servidor al Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 3%
@@ -18,7 +18,7 @@ La introducción por transmisión para Adobe Experience Platform proporciona a l
 
 ## ¿Qué se puede hacer con la transmisión por secuencias?
 
-Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes mediante la generación de un [!DNL Real-time Customer Profile] para cada uno de sus clientes individuales. La introducción por transmisión desempeña un papel clave en la creación de estos perfiles, ya que le permite entregar [!DNL Profile] en [!DNL Data Lake] con la menor latencia posible.
+Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes mediante la generación de un [!DNL Real-Time Customer Profile] para cada uno de sus clientes individuales. La introducción por transmisión desempeña un papel clave en la creación de estos perfiles, ya que le permite entregar [!DNL Profile] en [!DNL Data Lake] con la menor latencia posible.
 
 El siguiente vídeo está diseñado para ayudarle a comprender la ingesta de transmisión por secuencias y describe los conceptos anteriores.
 
@@ -32,7 +32,7 @@ Lea el [crear una guía de conexión de flujo continuo](../tutorials/create-stre
 
 ### Transmitir a conjuntos de datos
 
-Una vez que esté seguro de que sus datos están limpios, puede habilitar sus conjuntos de datos para [!DNL Real-time Customer Profile] y [!DNL Identity Service].
+Una vez que esté seguro de que sus datos están limpios, puede habilitar sus conjuntos de datos para [!DNL Real-Time Customer Profile] y [!DNL Identity Service].
 
 Para obtener más información sobre cómo habilitar un conjunto de datos para [!DNL Profile] y [!DNL Identity Service], lea la [configuración de una guía de conjuntos de datos](../../profile/tutorials/dataset-configuration.md).
 

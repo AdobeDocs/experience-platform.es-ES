@@ -3,7 +3,7 @@ keywords: control de datos rtcdp;control de datos rtcdp;control de datos del per
 title: Privacidad en Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform le permite optimizar el proceso de cumplimiento de las normas de privacidad de sus operaciones de datos.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Las regulaciones legales de privacidad, como la [!DNL General Data Protection Re
 
 ## Funciones de exclusión
 
-[!DNL Real-Time CDP] permite a los clientes excluir la inclusión de sus datos personales en los casos de uso de segmentación. Las preferencias de exclusión de los clientes las captura y almacena [!DNL Real-time Customer Profile], y se pueden aplicar excluyendo los usuarios que han optado por no participar en un segmento utilizando lógica booleana (&quot;Y NO&quot;) en el predicado de segmentos.
+[!DNL Real-Time CDP] permite a los clientes excluir la inclusión de sus datos personales en los casos de uso de segmentación. Las preferencias de exclusión de los clientes las captura y almacena [!DNL Real-Time Customer Profile], y se pueden aplicar excluyendo los usuarios que han optado por no participar en un segmento utilizando lógica booleana (&quot;Y NO&quot;) en el predicado de segmentos.
 
 Consulte el documento en [cumplimiento de las solicitudes de exclusión](../../segmentation/consents.md) en la documentación del servicio de segmentación de Adobe Experience Platform para obtener más información.
 

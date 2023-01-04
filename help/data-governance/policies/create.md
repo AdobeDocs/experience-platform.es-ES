@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: Obtenga información sobre cómo crear una directiva de control de datos mediante la API del servicio de directivas.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 3%
@@ -423,6 +423,6 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y los detalles de la dir
 
 Al seguir este tutorial, ha creado correctamente una directiva de uso de datos para una acción de marketing. Ahora puede continuar con el tutorial en [aplicación de políticas de uso de datos](../enforcement/api-enforcement.md) para obtener información sobre cómo comprobar infracciones de directivas y administrarlas en la aplicación de experiencia.
 
-Para obtener más información sobre las diferentes operaciones disponibles en la [!DNL Policy Service] API, consulte la [Guía para desarrolladores de Policy Service](../api/getting-started.md). Para obtener información sobre cómo aplicar políticas para [!DNL Real-time Customer Profile] datos, consulte el tutorial en [cumplimiento del uso de datos para segmentos de audiencia](../../segmentation/tutorials/governance.md).
+Para obtener más información sobre las diferentes operaciones disponibles en la [!DNL Policy Service] API, consulte la [Guía para desarrolladores de Policy Service](../api/getting-started.md). Para obtener información sobre cómo aplicar políticas para [!DNL Real-Time Customer Profile] datos, consulte el tutorial en [cumplimiento del uso de datos para segmentos de audiencia](../../segmentation/tutorials/governance.md).
 
 Para aprender a administrar las políticas de uso en la [!DNL Experience Platform] interfaz de usuario, consulte la [guía del usuario de directivas](user-guide.md).

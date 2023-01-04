@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo con Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 - [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    - [Aspectos básicos de la composición del esquema](../../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ## Creación de una conexión de flujo continuo
 
@@ -56,7 +56,7 @@ Cuando termine, seleccione **[!UICONTROL Conectar a origen]** y, a continuación
 
 ![new-account](../../../../images/tutorials/create/http/new.png)
 
-## Seleccionar datos
+## Selección de datos
 
 Después de crear la conexión de API HTTP, la variable **[!UICONTROL Seleccionar datos]** , que le proporciona una interfaz para cargar y previsualizar los datos.
 
@@ -125,7 +125,7 @@ Después de proporcionar detalles para el flujo de datos, seleccione **[!UICONTR
 
 ![dataflow-detail](../../../../images/tutorials/create/http/dataflow-detail.png)
 
-## Consulte
+## Revisión
 
 La variable **[!UICONTROL Consulte]** aparece, lo que le permite revisar los detalles del flujo de datos antes de crearlo. Los detalles se agrupan dentro de las siguientes categorías:
 

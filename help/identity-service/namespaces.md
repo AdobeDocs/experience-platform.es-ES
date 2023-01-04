@@ -5,7 +5,7 @@ title: Información general sobre el área de nombres de identidad
 topic-legacy: overview
 description: Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 3%
@@ -20,13 +20,13 @@ Las áreas de nombres de identidad son un componente de [[!DNL Identity Service]
 
 El trabajo con áreas de nombres de identidad requiere comprender los distintos servicios de Adobe Experience Platform involucrados. Antes de comenzar a trabajar con áreas de nombres, revise la documentación de los siguientes servicios:
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 - [[!DNL Identity Service]](./home.md): Obtenga una mejor visión de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
 - [[!DNL Privacy Service]](../privacy-service/home.md): Las áreas de nombres de identidad se utilizan en solicitudes de cumplimiento de normas de privacidad legales como el Reglamento General de Protección de Datos (RGPD). Cada solicitud de privacidad se realiza en relación con un área de nombres para identificar qué datos de los consumidores deben verse afectados.
 
 ## Explicación de las áreas de nombres de identidad
 
-Una identidad completa incluye un valor de ID y un área de nombres. Al hacer coincidir datos de registro en fragmentos de perfil, como cuando [!DNL Real-time Customer Profile] combina datos de perfil, tanto el valor de identidad como el área de nombres deben coincidir.
+Una identidad completa incluye un valor de ID y un área de nombres. Al hacer coincidir datos de registro en fragmentos de perfil, como cuando [!DNL Real-Time Customer Profile] combina datos de perfil, tanto el valor de identidad como el área de nombres deben coincidir.
 
 Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes, pero comparten el mismo valor para el espacio de nombres &quot;Correo electrónico&quot;, por lo tanto [!DNL Platform] puede ver que estos fragmentos son en realidad el mismo individuo y agrupa los datos en el gráfico de identidad para el individuo.
 

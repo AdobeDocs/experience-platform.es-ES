@@ -6,7 +6,7 @@ title: Configuración de una instancia de AI del cliente
 topic-legacy: Instance creation
 description: Los servicios AI/ML proporcionan Customer AI como un servicio de Adobe Sensei simple de usar que se puede configurar para diferentes casos de uso. Las secciones siguientes proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '3342'
 ht-degree: 0%
@@ -236,7 +236,7 @@ Para excluir un evento, seleccione **[!UICONTROL Añadir exclusión]** y defina 
 
 ### Alternar perfil
 
-La opción Perfil permite que la AI del cliente exporte los resultados de puntuación en Perfil del cliente en tiempo real. Al desactivar esta opción, se evita que los resultados de puntuación de los modelos se agreguen al perfil. Los resultados de puntuación de Customer AI siguen disponibles con esta función deshabilitada.
+La opción Perfil permite que la AI del cliente exporte los resultados de puntuación al Perfil del cliente en tiempo real. Al desactivar esta opción, se evita que los resultados de puntuación de los modelos se agreguen al perfil. Los resultados de puntuación de Customer AI siguen disponibles con esta función deshabilitada.
 
 Al utilizar Customer AI por primera vez, puede desactivar esta función hasta que esté satisfecho con los resultados de salida del modelo. Esto evita que cargue varios conjuntos de datos de puntuación en los perfiles del cliente mientras ajusta el modelo. Una vez que haya terminado de calibrar el modelo, puede clonar el modelo utilizando la variable [opción clone](#set-up-your-instance) de la variable **Instancias de servicio** página. Esto le permite crear una copia del modelo y activar el perfil.
 

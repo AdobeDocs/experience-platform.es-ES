@@ -4,7 +4,7 @@ title: Generar el informe de superposición de conjunto de datos
 type: Tutorial
 description: Este tutorial describe los pasos necesarios para generar el informe de superposición de conjuntos de datos mediante la API de perfil del cliente en tiempo real.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
@@ -17,7 +17,7 @@ El informe de superposición de conjuntos de datos proporciona visibilidad sobre
 
 Además de proporcionar perspectivas sobre los datos, este informe puede ayudarle a realizar acciones para optimizar el uso de las licencias, como establecer un límite para la vida útil de ciertos datos.
 
-Este tutorial describe los pasos necesarios para generar el informe de superposición de conjuntos de datos mediante la variable [!DNL Real-time Customer Profile] e interprete los resultados de su organización.
+Este tutorial describe los pasos necesarios para generar el informe de superposición de conjuntos de datos mediante la variable [!DNL Real-Time Customer Profile] e interprete los resultados de su organización.
 
 ## Primeros pasos
 
@@ -75,11 +75,11 @@ Postman es una plataforma colaborativa para el desarrollo de API y resulta útil
 Para solicitar el informe de superposición de conjuntos de datos mediante Postman, complete los siguientes pasos:
 
 * En el menú desplegable, seleccione GET como tipo de solicitud.
-* Enter the required headers in the `KEY` column:
+* Introduzca los encabezados necesarios en la `KEY` columna:
    * `Authorization`
    * `x-api-key`
    * `x-gw-ims-org-id`
-* Enter the values you generated during authentication into the `VALUE` column, replacing the braces (`{{ }}`) and any content within the braces.
+* Introduzca los valores que generó durante la autenticación en el `VALUE` , reemplazando las llaves (`{{ }}`) y cualquier contenido dentro de las llaves.
 * Introduzca la ruta de solicitud con o sin la opción `date` parámetro:
    `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap`\
    o
@@ -103,7 +103,7 @@ Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de superpos
 
 El informe de superposición de conjuntos de datos generado proporciona una marca de tiempo que muestra la fecha y la hora del informe y un objeto de datos que incluye combinaciones únicas de ID de conjuntos de datos como listas separadas por coma. En las secciones siguientes se proporciona información adicional sobre los componentes del informe.
 
-### Report timestamp
+### Marca de tiempo del informe
 
 La variable `reportTimestamp` coincide con la fecha proporcionada en la solicitud de API o, si no se proporcionó ninguna fecha, la marca de tiempo del informe más reciente.
 

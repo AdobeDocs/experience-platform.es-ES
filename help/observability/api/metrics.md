@@ -5,7 +5,7 @@ title: Punto final de la API de métricas
 topic-legacy: developer guide
 description: Obtenga información sobre cómo recuperar métricas de observabilidad en Experience Platform mediante la API de Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 4%
@@ -230,9 +230,9 @@ La tabla siguiente resume las métricas de Adobe Experience Platform [!DNL Ident
 
 {style=&quot;table-layout:auto&quot;}
 
-#### [!DNL Real-time Customer Profile] {#profile}
+#### [!DNL Real-Time Customer Profile] {#profile}
 
-La tabla siguiente resume las métricas de [!DNL Real-time Customer Profile].
+La tabla siguiente resume las métricas de [!DNL Real-Time Customer Profile].
 
 | Métrica de perspectivas | Descripción | Parámetro de consulta de ID |
 | ---- | ---- | ---- |

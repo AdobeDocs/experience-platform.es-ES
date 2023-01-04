@@ -5,7 +5,7 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 2%
@@ -58,7 +58,7 @@ Los esquemas de registros y series temporales contienen un mapa de identidades (
 
 Los esquemas se utilizan para introducir datos en [!DNL Experience Platform]. Estos datos se pueden utilizar en varios servicios para crear una única vista unificada de una entidad individual. Por lo tanto, es importante, al pensar en esquemas, pensar en las identidades de los clientes y en qué campos se pueden utilizar para identificar un sujeto independientemente de su origen.
 
-Para ayudar con este proceso, los campos clave dentro de los esquemas se pueden marcar como identidades. Al ingerir los datos, los datos de esos campos se insertan en el campo[!UICONTROL Gráfico de identidad]&quot; para ese individuo. A continuación, se puede acceder a los datos del gráfico mediante [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros [!DNL Experience Platform] para proporcionar una vista unida de cada cliente individual.
+Para ayudar con este proceso, los campos clave dentro de los esquemas se pueden marcar como identidades. Al ingerir los datos, los datos de esos campos se insertan en el campo[!UICONTROL Gráfico de identidad]&quot; para ese individuo. A continuación, se puede acceder a los datos del gráfico mediante [[!DNL Real-Time Customer Profile]](../../profile/home.md) y otros [!DNL Experience Platform] para proporcionar una vista unida de cada cliente individual.
 
 Campos que suelen marcarse como &quot;[!UICONTROL Identidad]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que puede ser bueno &quot;[!UICONTROL Identidad]&quot; también.
 
@@ -114,7 +114,7 @@ Como se muestra en el ejemplo anterior, cada clave de la variable `identityMap` 
 
 >[!NOTE]
 >
->Un valor booleano para si el valor es una identidad principal (`primary`) también se puede proporcionar para cada valor de identidad. Solo es necesario establecer identidades primarias para los esquemas que se van a utilizar en [!DNL Real-time Customer Profile]. Consulte la sección sobre [esquemas de unión](#union) para obtener más información.
+>Un valor booleano para si el valor es una identidad principal (`primary`) también se puede proporcionar para cada valor de identidad. Solo es necesario establecer identidades primarias para los esquemas que se van a utilizar en [!DNL Real-Time Customer Profile]. Consulte la sección sobre [esquemas de unión](#union) para obtener más información.
 
 ### Principios de evolución del esquema {#evolution}
 
@@ -124,7 +124,7 @@ Dado que mantener la compatibilidad con versiones anteriores es crucial para la 
 
 >[!NOTE]
 >
->Si aún no se ha utilizado un esquema para introducir datos en [!DNL Experience Platform] y no se ha habilitado para su uso en el perfil del cliente en tiempo real, puede introducir un cambio radical en ese esquema. Sin embargo, una vez que el esquema se ha utilizado en [!DNL Platform], debe adherirse a la directiva de versiones aditivas.
+>Si aún no se ha utilizado un esquema para introducir datos en [!DNL Experience Platform] y no se ha habilitado para su uso en el perfil del cliente en tiempo real, puede introducir un cambio de ruptura en ese esquema. Sin embargo, una vez que el esquema se ha utilizado en [!DNL Platform], debe adherirse a la directiva de versiones aditivas.
 
 En la tabla siguiente se desglosan los cambios compatibles al editar esquemas, grupos de campos y tipos de datos:
 
@@ -273,7 +273,7 @@ While [!DNL Experience Platform] le permite componer esquemas para casos de uso 
 
 ![](../images/schema-composition/union.png)
 
-Al habilitar un esquema para utilizarlo con [!DNL Real-time Customer Profile], se incluirá en la unión para ese tipo de clase. [!DNL Profile] ofrece perfiles sólidos y centralizados de atributos del cliente, así como una cuenta con marca de tiempo de cada evento que el cliente haya tenido en cualquier sistema integrado con [!DNL Platform]. [!DNL Profile] utiliza la vista de unión para representar estos datos y proporcionar una vista holística de cada cliente individual.
+Al habilitar un esquema para utilizarlo con [!DNL Real-Time Customer Profile], se incluirá en la unión para ese tipo de clase. [!DNL Profile] ofrece perfiles sólidos y centralizados de atributos del cliente, así como una cuenta con marca de tiempo de cada evento que el cliente haya tenido en cualquier sistema integrado con [!DNL Platform]. [!DNL Profile] utiliza la vista de unión para representar estos datos y proporcionar una vista holística de cada cliente individual.
 
 Para obtener más información sobre cómo trabajar con [!DNL Profile], consulte la [Resumen del perfil del cliente en tiempo real](../../profile/home.md).
 

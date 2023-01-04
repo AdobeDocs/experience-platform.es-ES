@@ -3,7 +3,7 @@ keywords: Experience Platform;identidad;servicio de identidad;solución de probl
 title: Seguridad para el servicio de identidad
 description: Este documento proporciona información sobre el uso y los límites de velocidad de los datos del servicio de identidad para ayudarle a optimizar el uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 672d98135492350ab6e12eec51649e6e5a7e4923
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 2%
@@ -19,7 +19,7 @@ Este documento proporciona información sobre el uso y los límites de velocidad
 Los siguientes servicios de Experience Platform participan en el modelado de datos de identidad:
 
 * [Identidades](home.md): Puente identidades de fuentes de datos dispares a medida que se incorporan en Platform.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Cree perfiles de cliente unificados con datos de varias fuentes.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Cree perfiles de cliente unificados con datos de varias fuentes.
 
 ## Límites del modelo de datos
 

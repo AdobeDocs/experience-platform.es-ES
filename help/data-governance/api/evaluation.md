@@ -5,7 +5,7 @@ title: Puntos finales de API de evaluación de políticas
 topic-legacy: developer guide
 description: Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API del servicio de directivas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 2%
@@ -682,6 +682,6 @@ Una respuesta satisfactoria devuelve una serie de resultados de evaluación; uno
 ]
 ```
 
-## Evaluación de políticas para [!DNL Real-time Customer Profile]
+## Evaluación de políticas para [!DNL Real-Time Customer Profile]
 
-La variable [!DNL Policy Service] La API también se puede utilizar para comprobar las infracciones de directiva que implican el uso de [!DNL Real-time Customer Profile] segmentos. Consulte el tutorial en [cumplimiento del uso de datos para segmentos de audiencia](../../segmentation/tutorials/governance.md) para obtener más información.
+La variable [!DNL Policy Service] La API también se puede utilizar para comprobar las infracciones de directiva que implican el uso de [!DNL Real-Time Customer Profile] segmentos. Consulte el tutorial en [cumplimiento del uso de datos para segmentos de audiencia](../../segmentation/tutorials/governance.md) para obtener más información.

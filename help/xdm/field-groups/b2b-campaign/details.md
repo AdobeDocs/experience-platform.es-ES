@@ -1,7 +1,8 @@
 ---
 title: Grupo de campos de esquema de detalles de campaña empresarial XDM
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de la campaña empresarial XDM.
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 5%
@@ -27,8 +28,8 @@ ht-degree: 5%
 | `channelName` | [!UICONTROL Cadena] | Nombre del canal asociado con esta campaña. |
 | `expectedResponse` | [!UICONTROL Cadena] | La respuesta esperada para la campaña. |
 | `integrationPartnerName` | [!UICONTROL Cadena] | Nombre del socio que se ha integrado con esta campaña. |
-| `isActive` | [!UICONTROL Boolean] | Indica si esta campaña está activa. |
-| `isDeleted` | [!UICONTROL Booleano] | Indica si esta campaña se ha eliminado en el Marketo Engage.<br><br>Al usar la variable [Conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Si configura `isDeleted` a `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
+| `isActive` | [!UICONTROL Booleana] | Indica si esta campaña está activa. |
+| `isDeleted` | [!UICONTROL Booleana] | Indica si esta campaña se ha eliminado en el Marketo Engage.<br><br>Al usar la variable [Conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Si configura `isDeleted` a `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
 | `lastActivityDate` | [!UICONTROL DateTime] | Marca de tiempo ISO 8601 de la última actividad asociada a la campaña. |
 | `timeZone` | [!UICONTROL Cadena] | Zona horaria en la que opera la campaña. |
 | `timeZoneDelivery` | [!UICONTROL Cadena] | Zona horaria de entrega en la que opera la campaña. |

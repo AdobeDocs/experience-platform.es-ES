@@ -5,7 +5,7 @@ title: Guía de solución de problemas de ingesta de transmisión
 topic-legacy: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre la transmisión por secuencias de comandos en Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
@@ -46,9 +46,9 @@ Cuando no se admite la validación sincrónica para la ubicación solicitada, se
 
 [!DNL Experience Platform] admite la recopilación de datos segura. Cuando la recopilación de datos autenticada está habilitada, los clientes deben enviar un token web JSON (JWT) y su ID de organización de IMS como encabezados de solicitud. Para obtener más información sobre cómo enviar datos autenticados a [!DNL Platform], consulte la guía de [recopilación de datos autenticada](../tutorials/create-authenticated-streaming-connection.md).
 
-### ¿Cuál es la latencia para la transmisión de datos a [!DNL Real-time Customer Profile]?
+### ¿Cuál es la latencia para la transmisión de datos a [!DNL Real-Time Customer Profile]?
 
-Los eventos de flujo continuo generalmente se reflejan en [!DNL Real-time Customer Profile] en menos de 60 segundos. Las latencias reales pueden variar debido al volumen de datos, el tamaño del mensaje y las limitaciones de ancho de banda.
+Los eventos de flujo continuo generalmente se reflejan en [!DNL Real-Time Customer Profile] en menos de 60 segundos. Las latencias reales pueden variar debido al volumen de datos, el tamaño del mensaje y las limitaciones de ancho de banda.
 
 ### ¿Puedo incluir varios mensajes en la misma solicitud de API?
 
@@ -94,9 +94,9 @@ El siguiente JSON es un objeto de respuesta de ejemplo para una solicitud de API
 }
 ```
 
-### ¿Por qué no reciben mis mensajes enviados? [!DNL Real-time Customer Profile]?
+### ¿Por qué no reciben mis mensajes enviados? [!DNL Real-Time Customer Profile]?
 
-If [!DNL Real-time Customer Profile] rechaza un mensaje, lo más probable es que se deba a información de identidad incorrecta. Esto puede ser el resultado de proporcionar un valor o área de nombres no válida para una identidad.
+If [!DNL Real-Time Customer Profile] rechaza un mensaje, lo más probable es que se deba a información de identidad incorrecta. Esto puede ser el resultado de proporcionar un valor o área de nombres no válida para una identidad.
 
 Existen dos tipos de áreas de nombres de identidad: predeterminado y personalizado. Cuando utilice espacios de nombres personalizados, asegúrese de que el área de nombres se haya registrado en [!DNL Identity Service]. Consulte la [información general del área de nombres de identidad](../../identity-service/namespaces.md) para obtener más información sobre el uso de áreas de nombres predeterminadas y personalizadas.
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Enviar Actualizaciones Parciales De Fila Al Servicio De Perfil Mediante La Preparación De Datos
 description: Este documento proporciona información sobre cómo enviar actualizaciones de fila parciales al servicio de perfil mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%

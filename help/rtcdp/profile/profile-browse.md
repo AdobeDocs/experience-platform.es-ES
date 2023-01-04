@@ -3,7 +3,7 @@ keywords: ver perfiles rtcdp;vista de perfil rtcdp;perfiles rtcdp
 title: Exploración de perfiles en Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform le permite examinar los datos del perfil del cliente en tiempo real mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 0%

@@ -6,28 +6,27 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear un conector de origen de Azure Blob mediante la interfaz de usuario de Platform.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '644'
 ht-degree: 1%
 
 ---
 
-# Crear una conexión de origen [!DNL Azure Blob] en la interfaz de usuario
+# Cree un [!DNL Azure Blob] conexión de origen en la interfaz de usuario
 
-Este tutorial proporciona los pasos para crear un [!DNL Azure Blob] (en adelante denominado &quot;[!DNL Blob]&quot;) mediante la interfaz de usuario de Platform.
+Este tutorial proporciona los pasos para crear un [!DNL Azure Blob] (en lo sucesivo, &quot;el[!DNL Blob]&quot;) utilizando la interfaz de usuario de Platform.
 
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
-   - [Aspectos básicos de la composición](../../../../../xdm/schema/composition.md) del esquema: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+   - [Aspectos básicos de la composición del esquema](../../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   - [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Si ya tiene una conexión [!DNL Blob] válida, puede omitir el resto de este documento y continuar con el tutorial sobre la [configuración de un flujo de datos](../../dataflow/batch/cloud-storage.md).
+Si ya tiene una [!DNL Blob] conexión, puede omitir el resto de este documento y continuar con el tutorial en [configuración de un flujo de datos](../../dataflow/batch/cloud-storage.md).
 
 ### Formatos de archivo compatibles
 
@@ -39,51 +38,51 @@ Si ya tiene una conexión [!DNL Blob] válida, puede omitir el resto de este doc
 
 ### Recopilar las credenciales necesarias
 
-Para acceder al almacenamiento [!DNL Blob] en Platform, debe proporcionar un valor válido para la siguiente credencial:
+Para acceder a su [!DNL Blob] en Platform, debe proporcionar un valor válido para las siguientes credenciales:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | Una cadena que contiene la información de autorización necesaria para autenticarse [!DNL Blob] en el Experience Platform. El patrón de cadena de conexión [!DNL Blob] es: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Para obtener más información sobre cadenas de conexión, consulte este [!DNL Blob] documento sobre [configuración de cadenas de conexión](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
-| `sasUri` | El URI de firma de acceso compartido que puede utilizar como tipo de autenticación alternativo para conectar su cuenta [!DNL Blob]. El patrón de URI SAS [!DNL Blob] es: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Para obtener más información, consulte este [!DNL Blob] documento sobre [URI de firma de acceso compartido](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
+| `connectionString` | Una cadena que contiene la información de autorización necesaria para autenticarse [!DNL Blob] al Experience Platform. La variable [!DNL Blob] el patrón de cadena de conexión es: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Para obtener más información sobre cadenas de conexión, consulte esta [!DNL Blob] documento en [configuración de cadenas de conexión](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| `sasUri` | El URI de firma de acceso compartido que puede usar como tipo de autenticación alternativo para conectar su [!DNL Blob] cuenta. La variable [!DNL Blob] El patrón de URI SAS es: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Para obtener más información, consulte [!DNL Blob] documento en [URI de firma de acceso compartido](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 
-## Conecte su cuenta [!DNL Blob]
+## Conecte su [!DNL Blob] account
 
-Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta [!DNL Blob] a Platform.
+Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular sus [!DNL Blob] a Platform.
 
-En la [Platform UI](https://platform.adobe.com), seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catalog] muestra una variedad de fuentes para las que puede crear una cuenta.
+En el [Interfaz de usuario de Platform](https://platform.adobe.com), seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder a la [!UICONTROL Fuentes] espacio de trabajo. La variable [!UICONTROL Catálogo] muestra una variedad de fuentes para las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la barra de búsqueda.
 
-En la categoría [!UICONTROL Cloud storage], seleccione **[!UICONTROL Azure Blob Storage]** y, a continuación, seleccione **[!UICONTROL Add data]**.
+En el [!UICONTROL Almacenamiento en la nube] categoría, seleccione **[!UICONTROL Almacenamiento de Azure Blob]** y, a continuación, seleccione **[!UICONTROL Añadir datos]**.
 
 ![catálogo](../../../../images/tutorials/create/blob/catalog.png)
 
-Aparece la página **[!UICONTROL Connect to Azure Blob Storage]**. En esta página, puede usar credenciales nuevas o existentes.
+La variable **[!UICONTROL Conectarse al almacenamiento de Azure Blob]** se abre. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Cuenta existente
 
-Para utilizar una cuenta existente, seleccione la cuenta [!DNL Blob] con la que desea crear un nuevo flujo de datos y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
+Para usar una cuenta existente, seleccione la opción [!DNL Blob] cuenta con la que desee crear un nuevo flujo de datos y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![existente](../../../../images/tutorials/create/blob/existing.png)
 
 ### Nueva cuenta
 
-Si está creando una cuenta nueva, seleccione **[!UICONTROL New account]** y, a continuación, proporcione un nombre y una descripción de la opción para la nueva cuenta [!DNL Blob].
+Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre y una descripción de la opción para la nueva [!DNL Blob] cuenta.
 
 **Autenticar mediante una cadena de conexión**
 
-El conector [!DNL Blob] le proporciona diferentes tipos de autenticación para el acceso. En [!UICONTROL Account authentication] seleccione **[!UICONTROL ConnectionString]** para utilizar credenciales basadas en cadenas de conexión.
+La variable [!DNL Blob] connector proporciona diferentes tipos de autenticación para el acceso. En [!UICONTROL Autenticación de la cuenta] select **[!UICONTROL ConnectionString]** para utilizar credenciales basadas en cadenas de conexión.
 
 ![cadena de conexión](../../../../images/tutorials/create/blob/connectionstring.png)
 
 **Autenticar mediante un URI de firma de acceso compartido**
 
-Un URI de firma de acceso compartido (SAS) permite una autorización delegada segura en su cuenta [!DNL Blob]. Puede utilizar SAS para crear credenciales de autenticación con distintos grados de acceso, ya que la autenticación basada en SAS permite establecer permisos, fechas de inicio y caducidad, así como disposiciones para recursos específicos.
+Un URI de firma de acceso compartido (SAS) permite una autorización delegada segura en su [!DNL Blob] cuenta. Puede utilizar SAS para crear credenciales de autenticación con distintos grados de acceso, ya que la autenticación basada en SAS permite establecer permisos, fechas de inicio y caducidad, así como disposiciones para recursos específicos.
 
-Seleccione **[!UICONTROL SasURIAuthentication]** y, a continuación, proporcione el URI SAS [!DNL Blob]. Seleccione **[!UICONTROL Connect to source]** para continuar.
+Select **[!UICONTROL SasURIAuthauthentication]** y, a continuación, proporcione la [!DNL Blob] URI SAS. Select **[!UICONTROL Conectar a origen]** para continuar.
 
 ![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta [!DNL Blob]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para importar los datos del almacenamiento en la nube a Platform](../../dataflow/batch/cloud-storage.md).
+Al seguir este tutorial, ha establecido una conexión con su [!DNL Blob] cuenta. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incorporar datos del almacenamiento en la nube a Platform](../../dataflow/batch/cloud-storage.md).

@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: En la interfaz de usuario (IU) de Adobe Experience Platform, puede ver fácilmente cualquier esquema de unión de su organización y previsualizar los campos, las identidades, las relaciones y los esquemas de contribución de una clase específica. Esta guía proporciona información detallada sobre cómo ver y explorar esquemas de unión mediante la interfaz de usuario de Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1199'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -20,8 +20,8 @@ En la interfaz de usuario (IU) de Adobe Experience Platform, puede ver fácilmen
 
 Esta guía de la interfaz de usuario requiere conocer las distintas [!DNL Experience Platform] servicios relacionados con la administración de datos del perfil del cliente en tiempo real. Antes de leer esta guía o de trabajar en la interfaz de usuario, revise la documentación de los siguientes servicios:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [[!DNL Identity Service]](../../identity-service/home.md): Habilitación [!DNL Real-time Customer Profile] al unir identidades de fuentes de datos dispares a medida que se incorporan [!DNL Platform].
+* [[!DNL Real-Time Customer Profile]](../home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Identity Service]](../../identity-service/home.md): Habilitación [!DNL Real-Time Customer Profile] al unir identidades de fuentes de datos dispares a medida que se incorporan [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 ## Explicación de los esquemas de unión

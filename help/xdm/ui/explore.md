@@ -6,35 +6,34 @@ description: Obtenga información sobre cómo explorar esquemas, clases, grupos 
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-translation-type: tm+mt
-source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
 
 # Explorar los recursos XDM en la interfaz de usuario
 
-En Adobe Experience Platform, todos los recursos del Modelo de datos de experiencia (XDM) se almacenan en [!DNL Schema Library], incluidos los recursos estándar proporcionados por el Adobe y los recursos personalizados definidos por su organización. En la interfaz de usuario del Experience Platform, puede ver la estructura y los campos de cualquier esquema, clase, grupo de campos de esquema o tipo de datos existente en [!DNL Schema Library]. Esto resulta especialmente útil a la hora de planificar y preparar el consumo de datos, ya que la interfaz de usuario proporciona información sobre los tipos de datos esperados y los casos de uso de cada campo proporcionados por estos recursos XDM.
+En Adobe Experience Platform, todos los recursos del Modelo de datos de experiencia (XDM) se almacenan en la variable [!DNL Schema Library], incluidos los recursos estándar proporcionados por el Adobe y los recursos personalizados definidos por su organización. En la interfaz de usuario del Experience Platform, puede ver la estructura y los campos de cualquier esquema, clase, grupo de campos de esquema o tipo de datos existente en la [!DNL Schema Library]. Esto resulta especialmente útil a la hora de planificar y preparar el consumo de datos, ya que la interfaz de usuario proporciona información sobre los tipos de datos esperados y los casos de uso de cada campo proporcionados por estos recursos XDM.
 
 Este tutorial trata los pasos para explorar los esquemas, clases, grupos de campos y tipos de datos existentes en la interfaz de usuario del Experience Platform.
 
 ## Buscar un recurso XDM {#lookup}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo. El espacio de trabajo [!UICONTROL Schemas] proporciona una pestaña **[!UICONTROL Browse]** para explorar todos los recursos XDM existentes en su organización, junto con pestañas dedicadas adicionales para explorar **[!UICONTROL Classes]**, **[!UICONTROL Field groups]** y **[!UICONTROL Data types]** específicamente.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. La variable [!UICONTROL Esquemas] workspace proporciona un **[!UICONTROL Examinar]** para explorar todos los recursos XDM existentes en su organización, junto con pestañas dedicadas adicionales para explorar **[!UICONTROL Clases]**, **[!UICONTROL Grupos de campo]** y **[!UICONTROL Tipos de datos]** específicamente.
 
 ![](../images/ui/explore/tabs.png)
 
-En la pestaña [!UICONTROL Browse], puede utilizar el icono de filtro (![Imagen de icono de filtro](../images/ui/explore/icon.png)) para mostrar los controles en el carril izquierdo y reducir los resultados de la lista.
+En el [!UICONTROL Examinar] , puede utilizar el icono de filtro (![Icono de filtro Imagen](../images/ui/explore/icon.png)) para mostrar los controles en el carril izquierdo y reducir los resultados de la lista.
 
-Por ejemplo, para filtrar la lista y mostrar solo los tipos de datos estándar proporcionados por el Adobe, seleccione **[!UICONTROL Datatype]** y **[!UICONTROL Adobe]** en las secciones **[!UICONTROL Type]** y **[!UICONTROL Owner]**, respectivamente.
+Por ejemplo, para filtrar la lista y mostrar solo los tipos de datos estándar proporcionados por el Adobe, seleccione **[!UICONTROL DataType]** y **[!UICONTROL Adobe]** en el **[!UICONTROL Tipo]** y **[!UICONTROL Propietario]** secciones, respectivamente.
 
-La opción **[!UICONTROL Included in Profile]** le permite filtrar los resultados para mostrar solo los recursos que se utilizan en esquemas que se han habilitado para su uso en [Perfil del cliente en tiempo real](../../profile/home.md).
+La variable **[!UICONTROL Incluido en el perfil]** alternar le permite filtrar los resultados para mostrar solo los recursos que se utilizan en esquemas que se han habilitado para usar en [Perfil del cliente en tiempo real](../../profile/home.md).
 
 ![](../images/ui/explore/filter.png)
 
-También puede utilizar la barra de búsqueda para reducir aún más los resultados. Al buscar un término, los elementos principales representan recursos cuyos nombres coinciden con la consulta de búsqueda. Debajo de estos elementos, en **[!UICONTROL Standard Fields]**, se enumerarán todos los recursos que contengan campos que coincidan con la consulta. Esto le permite buscar recursos XDM en función del tipo de datos que contienen, sin tener que saber previamente el nombre del recurso.
+También puede utilizar la barra de búsqueda para reducir aún más los resultados. Al buscar un término, los elementos principales representan recursos cuyos nombres coinciden con la consulta de búsqueda. Debajo de estos elementos, debajo de **[!UICONTROL Campos estándar]**, se enumerarán todos los recursos que contengan campos que coincidan con la consulta. Esto le permite buscar recursos XDM en función del tipo de datos que contienen, sin tener que saber previamente el nombre del recurso.
 
 ![](../images/ui/explore/search.png)
 
@@ -42,7 +41,7 @@ Los recursos mostrados en los resultados de búsqueda se ordenan primero por coi
 
 >[!NOTE]
 >
->Para los recursos XDM estándar, la función de búsqueda solo devuelve campos individuales que contienen un espacio de nombres `xdm`. Los campos que se encuentran en un área de nombres diferente (como su ID de inquilino) solo se devuelven si están contenidos en un recurso personalizado.
+>Para los recursos XDM estándar, la función de búsqueda solo devuelve campos individuales que contienen un `xdm` espacio de nombres. Los campos que se encuentran en un área de nombres diferente (como su ID de inquilino) solo se devuelven si están contenidos en un recurso personalizado.
 
 Cuando encuentre el recurso que desea explorar, seleccione su nombre en la lista para ver su estructura en el lienzo.
 
@@ -60,7 +59,7 @@ Todos los campos de tipo objeto que contienen subpropiedades se contraen de form
 
 Algunos nombres de campo van precedidos de un guión bajo, como `_repo` y `_id`. Representan marcadores de posición para campos que el sistema generará automáticamente y asignará a medida que se introduzcan datos.
 
-Como tal, la mayoría de estos campos deben excluirse de la estructura de los datos al ingerir en Platform. La excepción principal a esta regla es el campo [`_{TENANT_ID}`](../api/getting-started.md#know-your-tenant_id), en el que todos los campos XDM creados en su organización deben tener un espacio de nombres.
+Como tal, la mayoría de estos campos deben excluirse de la estructura de los datos al ingerir en Platform. La principal excepción a esta regla es la [`_{TENANT_ID}` field](../api/getting-started.md#know-your-tenant_id), en el que todos los campos XDM creados en su organización deben tener un espacio de nombres.
 
 ### Tipos de datos {#data-types}
 
@@ -68,15 +67,15 @@ Para cada campo mostrado en el lienzo, su tipo de datos correspondiente se muest
 
 ![](../images/ui/explore/data-types.png)
 
-Cualquier tipo de datos que se anexa con corchetes (`[]`) representa una matriz de ese tipo de datos concreto. Por ejemplo, un tipo de datos de **[!UICONTROL String]\[]** indica que el campo espera una matriz de valores de cadena. Un tipo de datos **[!UICONTROL Payment Item]\[]** indica una matriz de objetos que se ajustan al tipo de datos [!UICONTROL Payment Item].
+Cualquier tipo de datos que se añada con corchetes (`[]`) representa una matriz de ese tipo de datos concreto. Por ejemplo, un tipo de datos de **[!UICONTROL Cadena]\[]** indica que el campo espera una matriz de valores de cadena. Un tipo de datos de **[!UICONTROL Artículo de pago]\[]** indica una matriz de objetos que se ajustan a la variable [!UICONTROL Artículo de pago] tipo de datos.
 
 Si un campo de matriz se basa en un tipo de objeto, puede seleccionar su icono en el lienzo para mostrar los atributos esperados para cada elemento de matriz.
 
 ![](../images/ui/explore/array-type.png)
 
-### [!UICONTROL Field properties] {#field-properties}
+### [!UICONTROL Propiedades del campo] {#field-properties}
 
-Cuando selecciona el nombre de cualquier campo del lienzo, el carril derecho se actualiza para mostrar detalles sobre ese campo en **[!UICONTROL Field properties]**. Esto puede incluir una descripción del caso de uso previsto del campo, valores predeterminados, patrones, formatos, si el campo es obligatorio o no, y más.
+Cuando selecciona el nombre de cualquier campo del lienzo, el carril derecho se actualiza para mostrar detalles sobre ese campo en **[!UICONTROL Propiedades del campo]**. Esto puede incluir una descripción del caso de uso previsto del campo, valores predeterminados, patrones, formatos, si el campo es obligatorio o no, y más.
 
 ![](../images/ui/explore/field-properties.png)
 
@@ -88,17 +87,17 @@ Si el campo que está inspeccionando es un campo de enumeración, el carril dere
 
 Al inspeccionar esquemas que contienen campos de identidad, estos campos se enumeran en el carril izquierdo debajo del grupo de clases o campos que los proporciona al esquema. Seleccione el nombre del campo de identidad en el carril izquierdo para mostrar el campo en el lienzo, independientemente de la profundidad con la que esté anidado.
 
-Los campos de identidad se resaltan en el lienzo con un icono de huella (![Imagen de icono de huella digital](../images/ui/explore/identity-symbol.png)). Si selecciona el nombre del campo de identidad, puede ver información adicional como el [espacio de nombres de identidad](../../identity-service/namespaces.md) y si el campo es o no la identidad principal del esquema.
+Los campos de identidad se resaltan en el lienzo con un icono de huella (![Icono de huella digital Imagen](../images/ui/explore/identity-symbol.png)). Si selecciona el nombre del campo de identidad, puede ver información adicional como la variable [área de nombres de identidad](../../identity-service/namespaces.md) y si el campo es o no la identidad principal del esquema.
 
 ![](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->Consulte la guía sobre [definición de campos de identidad](./fields/identity.md) para obtener más información sobre los campos de identidad y su relación con los servicios de Platform descendentes.
+>Consulte la guía de [definición de campos de identidad](./fields/identity.md) para obtener más información sobre los campos de identidad y su relación con los servicios de Platform descendentes.
 
 ### Campos de relación {#relationship}
 
-Si está inspeccionando un esquema que contiene un campo de relación, el campo aparece en el carril izquierdo debajo de **[!UICONTROL Relationships]**. Seleccione el nombre del campo de relación en el carril izquierdo para mostrar el campo en el lienzo, independientemente de la profundidad con la que esté anidado.
+Si está inspeccionando un esquema que contiene un campo de relación, el campo aparece en el carril izquierdo debajo de **[!UICONTROL Relaciones]**. Seleccione el nombre del campo de relación en el carril izquierdo para mostrar el campo en el lienzo, independientemente de la profundidad con la que esté anidado.
 
 Los campos de relación también se resaltan de forma única en el lienzo, mostrando el nombre del esquema de destino al que hace referencia el campo. Si selecciona el nombre del campo de relación, puede ver el área de nombres de identidad de la identidad principal del esquema de destino en el carril derecho.
 
@@ -106,8 +105,8 @@ Los campos de relación también se resaltan de forma única en el lienzo, mostr
 
 >[!NOTE]
 >
->Consulte el tutorial sobre la [creación de una relación en la interfaz de usuario](../tutorials/relationship-ui.md) para obtener más información sobre el uso de relaciones en esquemas XDM.
+>Consulte el tutorial en [creación de una relación en la interfaz de usuario](../tutorials/relationship-ui.md) para obtener más información sobre el uso de relaciones en esquemas XDM.
 
 ## Pasos siguientes
 
-Este documento trata sobre cómo explorar los recursos XDM existentes en la interfaz de usuario del Experience Platform. Para obtener más información sobre las distintas funciones del espacio de trabajo [!UICONTROL Schemas] y [!DNL Schema Editor], consulte la [[!UICONTROL Schemas] descripción general del espacio de trabajo](./overview.md).
+Este documento trata sobre cómo explorar los recursos XDM existentes en la interfaz de usuario del Experience Platform. Para obtener más información sobre las distintas funciones de la variable [!UICONTROL Esquemas] espacio de trabajo y [!DNL Schema Editor], consulte la [[!UICONTROL Esquemas] información general del espacio de trabajo](./overview.md).

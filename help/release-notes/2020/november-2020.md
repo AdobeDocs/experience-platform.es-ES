@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 5%
@@ -29,7 +29,7 @@ Actualizaciones de funciones existentes:
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations] Service](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## Migración de Data Lake de Adobe Experience Platform {#migration}
@@ -60,7 +60,7 @@ Para obtener más información, consulte la [información general sobre el contr
 | Función | Descripción |
 | ------- | ----------- |
 | Biblioteca de ofertas centralizada | Interfaz donde se crean y administran los diferentes elementos que componen las ofertas y se definen sus reglas y restricciones. |
-| Motor de decisión de oferta | El motor de decisión de oferta aprovecha [!DNL Platform] datos y [!DNL Real-time Customer Profiles], junto con la Biblioteca de ofertas, para seleccionar la hora, los clientes y los canales adecuados a los que se enviarán las ofertas. |
+| Motor de decisión de oferta | El motor de decisión de oferta aprovecha [!DNL Platform] datos y [!DNL Real-Time Customer Profiles], junto con la Biblioteca de ofertas, para seleccionar la hora, los clientes y los canales adecuados a los que se enviarán las ofertas. |
 
 Para obtener más información, consulte la [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=es) documentación.
 
@@ -104,7 +104,7 @@ Data Science Workspace utiliza el aprendizaje automático y la inteligencia arti
 
 Para obtener más información, lea el documento sobre [crear una fórmula utilizando Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-model.md).
 
-## [!DNL Destinations] Servicio {#destinations}
+## [!DNL Destinations] Service {#destinations}
 
 En [Real-time Customer Data Platform](../../rtcdp/overview.md), los destinos son integraciones prediseñadas con plataformas de destino que activan los datos para esos socios de una manera sencilla.
 

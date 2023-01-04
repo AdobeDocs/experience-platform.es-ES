@@ -6,7 +6,7 @@ title: Descargar puntuaciones en Customer AI
 topic-legacy: Downloading scores
 description: Customer AI permite descargar puntuaciones en el formato de archivo Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 3%

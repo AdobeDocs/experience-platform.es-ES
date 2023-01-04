@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2472'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Para trabajar con políticas de combinación mediante la interfaz de usuario, co
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
 
 ## Componentes de políticas de combinación {#components-of-merge-policies}
 
@@ -194,7 +194,7 @@ Para obtener más información sobre XDM y trabajar con esquemas en Experience P
 
 ## Acceso a las directivas de combinación {#access-merge-policies}
 
-Al usar la variable [!DNL Real-time Customer Profile] API, la variable `/config/mergePolicies` permite realizar una solicitud de búsqueda para ver una directiva de combinación específica por su ID o acceder a todas las directivas de combinación de su organización de IMS, filtradas según criterios específicos. También puede usar la variable `/config/mergePolicies/bulk-get` para recuperar varias directivas de combinación por sus ID. Los pasos para realizar cada una de estas llamadas se describen en las siguientes secciones.
+Al usar la variable [!DNL Real-Time Customer Profile] API, la variable `/config/mergePolicies` permite realizar una solicitud de búsqueda para ver una directiva de combinación específica por su ID o acceder a todas las directivas de combinación de su organización de IMS, filtradas según criterios específicos. También puede usar la variable `/config/mergePolicies/bulk-get` para recuperar varias directivas de combinación por sus ID. Los pasos para realizar cada una de estas llamadas se describen en las siguientes secciones.
 
 ### Acceder a una directiva de combinación única por ID
 
@@ -762,6 +762,6 @@ Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cue
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de los perfiles de cliente dentro de Platform y para crear segmentos de audiencia a partir de su [!DNL Real-time Customer Profile] datos.
+Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de los perfiles de cliente dentro de Platform y para crear segmentos de audiencia a partir de su [!DNL Real-Time Customer Profile] datos.
 
 Consulte la [Documentación del servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md) para empezar a definir y trabajar con segmentos.

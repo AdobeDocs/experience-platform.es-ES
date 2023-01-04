@@ -5,7 +5,7 @@ title: Crear y editar esquemas en la interfaz de usuario
 description: Obtenga información sobre los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario del Experience Platform.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3fc498de60256006d27ada72a7b5f4fff71c4472
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 0%
@@ -275,7 +275,7 @@ Para finalizar el proceso, seleccione **[!UICONTROL Guardar]** para guardar el e
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-El esquema ahora está habilitado para utilizarse en el perfil del cliente en tiempo real. Cuando Platform incorpora datos en conjuntos de datos basados en este esquema, esos datos se incorporan a los datos de perfil amalgamados.
+El esquema ahora está habilitado para utilizarse en el perfil de cliente en tiempo real. Cuando Platform incorpora datos en conjuntos de datos basados en este esquema, esos datos se incorporan a los datos de perfil amalgamados.
 
 ## Edición de nombres para mostrar en campos de esquema {#display-names}
 

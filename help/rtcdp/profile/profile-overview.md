@@ -3,7 +3,7 @@ keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinaci�
 title: Explicación del perfil del cliente en tiempo real en Real-Time CDP
 description: Descubra cómo Adobe Real-time Customer Data Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes mediante el perfil del cliente en tiempo real.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Resumen del perfil del cliente en tiempo real
 
-El perfil del cliente en tiempo real le permite ver una vista holística de cada cliente al combinar datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Cada perfil de cliente individual le permite consolidar sus distintos datos de cliente en una vista unificada que ofrece una cuenta procesable y con marca de tiempo de cada interacción con los clientes.
+El perfil del cliente en tiempo real permite ver una vista holística de cada cliente al combinar datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Cada perfil de cliente individual le permite consolidar sus distintos datos de cliente en una vista unificada que ofrece una cuenta procesable y con marca de tiempo de cada interacción con los clientes.
 
 ## Perfiles en [!DNL Real-Time Customer Data Platform]
 

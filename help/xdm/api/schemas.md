@@ -5,7 +5,7 @@ title: Punto final de API de Esquemas
 description: El extremo /schemas de la API del Registro de esquemas le permite administrar mediante programación esquemas XDM dentro de la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 5%
@@ -454,7 +454,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. El grupo
 }
 ```
 
-## Activación de un esquema para su uso en Perfil del cliente en tiempo real {#union}
+## Activación de un esquema para su uso en el perfil de cliente en tiempo real {#union}
 
 Para que un esquema participe en [Perfil del cliente en tiempo real](../../profile/home.md), debe agregar una `union` a la etiqueta del esquema `meta:immutableTags` matriz. Puede hacerlo realizando una solicitud de PATCH para el esquema en cuestión.
 

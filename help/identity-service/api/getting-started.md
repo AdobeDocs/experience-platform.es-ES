@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;api de servicio de identida
 solution: Experience Platform
 title: Guía de API del servicio de identidad
 topic-legacy: API guide
-description: The Identity Service API allows developers to manage the cross-device, cross-channel, and near real-time identification of your customers using identity graphs in Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
+description: La API del servicio de identidad permite a los desarrolladores administrar la identificación de clientes entre dispositivos, canales cruzados y casi en tiempo real mediante gráficos de identidad en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 3%
@@ -14,21 +14,21 @@ ht-degree: 3%
 
 # Guía de la API de [!DNL Identity Service]
 
-Adobe Experience Platform [!DNL Identity Service] manages the cross-device, cross-channel, and near real-time identification of your customers in what is known as an identity graph within Adobe Experience Platform.
+Adobe Experience Platform [!DNL Identity Service] administra la identificación de sus clientes en varios dispositivos, canales cruzados y casi en tiempo real en lo que se conoce como gráfico de identidad dentro de Adobe Experience Platform.
 
 ## Primeros pasos
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
 - [[!DNL Identity Service]](../home.md): Resuelve el desafío fundamental que supone la fragmentación de los datos de perfil del cliente. Para ello, combina identidades entre dispositivos y sistemas en los que los clientes interactúan con su marca.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil unificado y de cliente en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil unificado y de cliente en tiempo real basado en datos agregados de varias fuentes.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Las secciones siguientes proporcionan información adicional que debe conocer o tener disponible para realizar llamadas correctamente al [!DNL Identity Service] API.
 
 ### Leer llamadas de API de ejemplo
 
-Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. Sample JSON returned in API responses is also provided. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilar valores para encabezados necesarios
 
@@ -38,7 +38,7 @@ Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -52,9 +52,9 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Enrutamiento basado en regiones
 
-La variable [!DNL Identity Service] La API emplea extremos específicos de la región que requieren la inclusión de un `{REGION}` como parte de la ruta de solicitud. Durante el aprovisionamiento de la organización IMS, se determina y almacena una región dentro del perfil de organización de IMS. Using the correct region with each endpoint ensures that all requests made using the [!DNL Identity Service] API are routed to the appropriate region.
+La variable [!DNL Identity Service] La API emplea extremos específicos de la región que requieren la inclusión de un `{REGION}` como parte de la ruta de solicitud. Durante el aprovisionamiento de la organización IMS, se determina y almacena una región dentro del perfil de organización de IMS. El uso de la región correcta con cada extremo garantiza que todas las solicitudes realizadas con la variable [!DNL Identity Service] Las API de se dirigen a la región adecuada.
 
-There are two regions currently supported by [!DNL Identity Service] APIs: VA7 and NLD2.
+Actualmente hay dos regiones que cuentan con el apoyo de [!DNL Identity Service] API: VA7 y NLD2.
 
 La tabla siguiente muestra rutas de ejemplo que utilizan regiones:
 
@@ -69,11 +69,11 @@ La tabla siguiente muestra rutas de ejemplo que utilizan regiones:
 
 Si no puede localizar la región dentro de su perfil de organización de IMS, póngase en contacto con el administrador del sistema para obtener asistencia.
 
-## Using the [!DNL Identity Service] API
+## Al usar la variable [!DNL Identity Service] API
 
-Identity parameters used in these services can be expressed in one of two ways; composite or XID.
+Los parámetros de identidad utilizados en estos servicios pueden expresarse de una de las dos maneras siguientes: compuesto o XID.
 
-Composite identities are constructs including both the ID value and namespace. Cuando se utilizan identidades compuestas, el área de nombres se puede proporcionar mediante cualquiera de los nombres (`namespace.code`) o ID (`namespace.id`).
+Las identidades compuestas son construcciones que incluyen tanto el valor de ID como el área de nombres. Cuando se utilizan identidades compuestas, el área de nombres se puede proporcionar mediante cualquiera de los nombres (`namespace.code`) o ID (`namespace.id`).
 
 Cuando persiste una identidad, [!DNL Identity Service] genera y asigna un ID a esa identidad, denominada ID nativo o XID. Todas las variaciones de las API de clúster y asignación admiten tanto identidades compuestas como XID en sus solicitudes y respuestas. Se requiere uno de los parámetros: `xid` o combinación de [`ns` o `nsid`] y `id` para usar estas API.
 

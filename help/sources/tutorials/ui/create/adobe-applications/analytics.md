@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2345'
 ht-degree: 2%
@@ -290,9 +290,9 @@ Para eliminar un flujo de datos, vaya a la [!UICONTROL Flujos de datos] y, a con
 
 ## Pasos siguientes y recursos adicionales
 
-Una vez creada la conexión, el flujo de datos se crea automáticamente para contener los datos entrantes y rellenar un conjunto de datos con el esquema seleccionado. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando termina la ingesta inicial, [!DNL Analytics] datos y ser utilizados por servicios de Platform descendentes como [!DNL Real-time Customer Profile] y el servicio de segmentación. Consulte los siguientes documentos para obtener más información:
+Una vez creada la conexión, el flujo de datos se crea automáticamente para contener los datos entrantes y rellenar un conjunto de datos con el esquema seleccionado. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando termina la ingesta inicial, [!DNL Analytics] datos y ser utilizados por servicios de Platform descendentes como [!DNL Real-Time Customer Profile] y el servicio de segmentación. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
+* [Información general del [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Información general del [!DNL Segmentation Service]](../../../../../segmentation/home.md)
 * [Información general del [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
 * [Información general del [!DNL Query Service]](../../../../../query-service/home.md)

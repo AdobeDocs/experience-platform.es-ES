@@ -5,7 +5,7 @@ title: Configuración de un conjunto de datos para capturar datos de consentimie
 topic-legacy: getting started
 description: Obtenga información sobre cómo configurar un esquema y conjunto de datos del Modelo de datos de experiencia (XDM) para capturar datos de consentimiento y preferencias en Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Configuración de un conjunto de datos para capturar datos de consentimiento y preferencias
 
-Para que Adobe Experience Platform pueda procesar sus datos de consentimiento/preferencias del cliente, esos datos deben enviarse a un conjunto de datos cuyo esquema contenga campos relacionados con consentimientos y otros permisos. Específicamente, este conjunto de datos debe basarse en la variable [!DNL XDM Individual Profile] y habilitada para su uso en [!DNL Real-time Customer Profile].
+Para que Adobe Experience Platform pueda procesar sus datos de consentimiento/preferencias del cliente, esos datos deben enviarse a un conjunto de datos cuyo esquema contenga campos relacionados con consentimientos y otros permisos. Específicamente, este conjunto de datos debe basarse en la variable [!DNL XDM Individual Profile] y habilitada para su uso en [!DNL Real-Time Customer Profile].
 
 Este documento proporciona los pasos para configurar un conjunto de datos para procesar los datos de consentimiento en el Experience Platform. Para obtener una descripción general del flujo de trabajo completo para procesar datos de consentimiento/preferencias en Platform, consulte la [información general sobre el procesamiento de consentimiento](./overview.md).
 
@@ -39,7 +39,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 >[!IMPORTANT]
 >
->Este tutorial supone que se conoce el [!DNL Profile] esquema en Platform que desea utilizar para capturar información de atributos del cliente. Independientemente del método que utilice para recopilar datos de consentimiento, este esquema debe ser [habilitado para Perfil del cliente en tiempo real](../../../../xdm/ui/resources/schemas.md#profile). Además, la identidad principal del esquema no puede ser un campo directamente identificable que esté prohibido utilizar en publicidad basada en intereses, como una dirección de correo electrónico. Consulte a su asesor legal si no está seguro de qué campos están restringidos.
+>Este tutorial supone que se conoce el [!DNL Profile] esquema en Platform que desea utilizar para capturar información de atributos del cliente. Independientemente del método que utilice para recopilar datos de consentimiento, este esquema debe ser [habilitado para Perfil de cliente en tiempo real](../../../../xdm/ui/resources/schemas.md#profile). Además, la identidad principal del esquema no puede ser un campo directamente identificable que esté prohibido utilizar en publicidad basada en intereses, como una dirección de correo electrónico. Consulte a su asesor legal si no está seguro de qué campos están restringidos.
 
 ## [!UICONTROL Detalles de consentimiento y preferencia] estructura de grupo de campos {#structure}
 
@@ -133,7 +133,7 @@ Si el esquema que ha editado lo utiliza el [!UICONTROL Conjunto de datos de perf
 
 ## Crear un conjunto de datos basado en el esquema de consentimiento {#dataset}
 
-Una vez que haya creado un esquema con campos de consentimiento, debe crear un conjunto de datos que, en última instancia, incorpore los datos de consentimiento de los clientes. Este conjunto de datos debe estar habilitado para [!DNL Real-time Customer Profile].
+Una vez que haya creado un esquema con campos de consentimiento, debe crear un conjunto de datos que, en última instancia, incorpore los datos de consentimiento de los clientes. Este conjunto de datos debe estar habilitado para [!DNL Real-Time Customer Profile].
 
 Para empezar, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo, seleccione **[!UICONTROL Crear conjunto de datos]** en la esquina superior derecha.
 
@@ -151,7 +151,7 @@ La variable **[!UICONTROL Configurar el conjunto de datos]** aparece. Proporcion
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/dataset-details.png)
 
-Aparecerá la página de detalles del conjunto de datos recién creado. Si el conjunto de datos se basa en el esquema de series temporales, el proceso finaliza. Si el conjunto de datos se basa en el esquema de registro, el paso final del proceso es habilitar el conjunto de datos para utilizarlo en [!DNL Real-time Customer Profile].
+Aparecerá la página de detalles del conjunto de datos recién creado. Si el conjunto de datos se basa en el esquema de series temporales, el proceso finaliza. Si el conjunto de datos se basa en el esquema de registro, el paso final del proceso es habilitar el conjunto de datos para utilizarlo en [!DNL Real-Time Customer Profile].
 
 En el carril derecho, seleccione la opción **[!UICONTROL Perfil]** alternar.
 

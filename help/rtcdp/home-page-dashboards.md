@@ -3,7 +3,7 @@ keywords: información general sobre las métricas; información general sobre l
 title: Página principal de Real-time Customer Data Platform y tableros
 description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 2%
@@ -47,7 +47,7 @@ Para obtener más información sobre los conjuntos de datos, consulte la [inform
 
 ### Perfiles
 
-La variable **[!UICONTROL Perfiles]** count muestra el número total de personas con perfiles en la variable [!DNL Real-time Customer Profile]. No incluye fragmentos de perfil. Esta es su audiencia total a la que puede dirigirse.
+La variable **[!UICONTROL Perfiles]** count muestra el número total de personas con perfiles en la variable [!DNL Real-Time Customer Profile]. No incluye fragmentos de perfil. Esta es su audiencia total a la que puede dirigirse.
 
 Este recuento utiliza el valor predeterminado [combinar directiva](profile/merge-policies.md) tal y como se establece en la configuración de directiva de combinación en Perfil unificado.
 

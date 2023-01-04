@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen para que el sistema local traiga archivos locales a Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 08805ed0d89d3d6908ddccdafda55d2f862e727e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '770'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición del esquema](../../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ## Cargar archivos locales a Platform
 
@@ -56,7 +56,7 @@ Con un esquema seleccionado, proporcione un nombre para el flujo de datos y una 
 
 ![conjunto de datos nuevo](../../../../images/tutorials/create/local/new-dataset.png)
 
-### Seleccionar datos
+### Selección de datos
 
 La variable [!UICONTROL Seleccionar datos] , lo que le proporciona una interfaz para cargar los archivos locales y previsualizar su estructura y contenido. Select **[!UICONTROL Elegir archivos]** para cargar un archivo CSV desde el sistema local. Como alternativa, puede arrastrar y soltar el archivo CSV que desea cargar en el [!UICONTROL Arrastrar y soltar archivos] panel.
 
@@ -92,4 +92,4 @@ Una vez asignado y creado el archivo CSV, puede monitorizar los datos que se est
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha introducido en Platform. Ahora, estos datos los puede utilizar el flujo descendente [!DNL Platform] servicios como [!DNL Real-time Customer Profile]. Consulte la descripción general para [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) para obtener más información.
+Al seguir este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha introducido en Platform. Ahora, estos datos los puede utilizar el flujo descendente [!DNL Platform] servicios como [!DNL Real-Time Customer Profile]. Consulte la descripción general para [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) para obtener más información.

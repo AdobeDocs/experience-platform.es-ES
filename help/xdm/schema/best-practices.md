@@ -5,7 +5,7 @@ title: Prácticas Recomendadas Para El Modelado De Datos
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2699'
 ht-degree: 2%
@@ -86,8 +86,8 @@ Si desea analizar cómo cambian con el tiempo ciertos atributos dentro de una en
 | --- | --- | --- | --- | --- |
 | 1234567 | Add | 275098 | 2 | 1 de octubre, 10:32 AM |
 | 1234567 | Eliminar | 275098 | 1 | 1 de octubre, 10:33 AM |
-| 1234567 | Agregar | 486502 | 1 | 1 de octubre, 10:41 AM |
-| 1234567 | Agregar | 910482 | 5 | 3 de octubre, 2:15 PM |
+| 1234567 | Add | 486502 | 1 | 1 de octubre, 10:41 AM |
+| 1234567 | Add | 910482 | 5 | 3 de octubre, 2:15 PM |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,7 +205,7 @@ Si no está seguro de si es necesario incluir un campo concreto en un esquema, l
 
 ### Campos de identidad
 
-En Experience Platform, los campos XDM marcados como identidades se utilizan para unir información sobre clientes individuales provenientes de varias fuentes de datos. Aunque un esquema puede tener varios campos marcados como identidades, se debe definir una sola identidad principal para que el esquema esté habilitado para utilizarse en [!DNL Real-time Customer Profile]. Consulte la sección sobre [campos de identidad](./composition.md#identity) en los conceptos básicos de la composición del esquema para obtener información más detallada sobre el caso de uso de estos campos.
+En Experience Platform, los campos XDM marcados como identidades se utilizan para unir información sobre clientes individuales provenientes de varias fuentes de datos. Aunque un esquema puede tener varios campos marcados como identidades, se debe definir una sola identidad principal para que el esquema esté habilitado para utilizarse en [!DNL Real-Time Customer Profile]. Consulte la sección sobre [campos de identidad](./composition.md#identity) en los conceptos básicos de la composición del esquema para obtener información más detallada sobre el caso de uso de estos campos.
 
 Al diseñar los esquemas, cualquier clave principal en las tablas de la base de datos relacional probablemente será el candidato para identidades principales. Otros ejemplos de campos de identidad aplicables son direcciones de correo electrónico del cliente, números de teléfono, ID de cuenta y [ECID](../../identity-service/ecid.md).
 

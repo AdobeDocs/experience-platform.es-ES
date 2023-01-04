@@ -6,14 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de publicidad mediante la interfaz de usuario de Platform.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 0%
 
 ---
 
-# Create a dataflow using an advertising source in the UI
+# Crear un flujo de datos con una fuente de publicidad en la interfaz de usuario
 
 Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos en Adobe Experience Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de publicidad mediante la interfaz de usuario de Platform.
 
@@ -28,13 +28,13 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Fuentes](../../../home.md): Platform permite la ingesta de datos de varias fuentes, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición del esquema](../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+   * [Tutorial del Editor de esquemas](../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
 
 ## Adición de datos
 
-After creating your advertising source account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your advertising source account&#39;s table hierarchy.
+Después de crear la cuenta de origen de publicidad, la variable **[!UICONTROL Añadir datos]** aparece, proporcionando una interfaz para explorar la jerarquía de tablas de la cuenta de origen de publicidad.
 
 * La mitad izquierda de la interfaz es un explorador que muestra una lista de tablas de datos incluidas en la cuenta. La interfaz también incluye una opción de búsqueda que permite identificar rápidamente los datos de origen que desea utilizar.
 * La mitad derecha de la interfaz es un panel de vista previa, que le permite obtener una vista previa de hasta 100 filas de datos.
@@ -83,9 +83,9 @@ Cuando haya terminado de proporcionar detalles al flujo de datos, seleccione **[
 
 ## Asignación de campos de datos a un esquema XDM
 
-The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
+La variable [!UICONTROL Asignación] aparece, proporcionando una interfaz para asignar los campos de origen del esquema de origen a los campos XDM de destino adecuados en el esquema de destino.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. Para ver los pasos completos sobre el uso de la interfaz del asignador y los campos calculados, consulte la [Guía de la interfaz de usuario de preparación de datos](../../../../data-prep/ui/mapping.md).
+Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen a fin de derivar valores calculados o calculados. Para ver los pasos completos sobre el uso de la interfaz del asignador y los campos calculados, consulte la [Guía de la interfaz de usuario de preparación de datos](../../../../data-prep/ui/mapping.md).
 
 Una vez asignados correctamente los datos de origen, seleccione **[!UICONTROL Siguiente]**.
 
@@ -112,17 +112,17 @@ Consulte la siguiente tabla para obtener más información sobre las configuraci
 | Frecuencia | Frecuencia con la que se produce una ingesta. Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`y `Week`. |
 | Intervalo | Un entero que define el intervalo para la frecuencia seleccionada. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15. |
 | Hora de inicio | Marca de tiempo UTC que indica cuándo se configura la primera ingesta. La hora de inicio debe ser buena o igual a la hora UTC actual. |
-| Relleno | A boolean value that determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Los archivos cargados antes de la hora de inicio no se incorporarán. |
-| Cargar datos incrementales por | An option with a filtered set of source schema fields of type, date, or time. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se incorporarán en función de la marca de tiempo de la columna seleccionada. |
+| Relleno | Un valor booleano que determina qué datos se introducen inicialmente. Si el relleno está habilitado, todos los archivos actuales de la ruta especificada se incorporarán durante la primera ingesta programada. Si el relleno está desactivado, solo se incorporarán los archivos que se cargan entre la primera ejecución de la ingesta y la hora de inicio. Los archivos cargados antes de la hora de inicio no se incorporarán. |
+| Cargar datos incrementales por | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se incorporarán en función de la marca de tiempo de la columna seleccionada. |
 
-![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
+![relleno](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Revise el flujo de datos
 
 La variable **[!UICONTROL Consulte]** , lo que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
 * **[!UICONTROL Conexión]**: Muestra el tipo de origen, la ruta correspondiente del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
-* **[!UICONTROL Assign dataset &amp; map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+* **[!UICONTROL Asignación de campos de conjunto de datos y asignación]**: Muestra en qué conjunto de datos se están incorporando los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
 * **[!UICONTROL Programación]**: Muestra el período, la frecuencia y el intervalo activos del programa de ingesta.
 
 Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]** y permitir que se cree un flujo de datos.
@@ -139,9 +139,9 @@ Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado i
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente un flujo de datos para traer los datos de su fuente de publicidad a Platform. Los datos entrantes ahora se pueden usar en el flujo descendente [!DNL Platform] servicios como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado correctamente un flujo de datos para traer los datos de su fuente de publicidad a Platform. Los datos entrantes ahora se pueden usar en el flujo descendente [!DNL Platform] servicios como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-time Customer Profile]](../../../../profile/home.md)
+* [Información general del [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
 * [Información general del [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
 
 

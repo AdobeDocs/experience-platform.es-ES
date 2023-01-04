@@ -3,7 +3,7 @@ keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinaci�
 title: Guía de la interfaz de usuario del perfil de cuenta
 description: Mediante el uso de perfiles de cuenta, Adobe Real-time Customer Data Platform B2B Edition le permite unificar la información de la cuenta de múltiples fuentes. Esta guía proporciona detalles para interactuar con perfiles de cuenta en la interfaz de usuario de Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1625'
 ht-degree: 0%
@@ -126,7 +126,7 @@ La variable **[!UICONTROL People]** proporciona una lista de personas individual
 >
 >La variable [!UICONTROL People] muestra una lista de hasta 25 personas asociadas a la cuenta. Para cuentas con más de 25 personas asociadas, el sistema muestra un muestreo aleatorio de 25 registros.
 
-Además de mostrarle una instantánea de la información del contacto, cada persona incluida también incluye un **[!UICONTROL ID de perfil]**, que es un vínculo en el que se puede hacer clic y que le permite explorar el perfil del cliente en tiempo real para ese individuo. Para obtener más información sobre la visualización de perfiles de cliente individuales relacionados con sus cuentas, visite la guía para [exploración de perfiles en Real-Time CDP, B2B Edition](../profile/profile-browse.md).
+Además de mostrarle una instantánea de la información del contacto, cada persona incluida también incluye un **[!UICONTROL ID de perfil]**, que es un vínculo en el que se puede hacer clic y que le permite explorar el perfil del cliente en tiempo real de ese individuo. Para obtener más información sobre la visualización de perfiles de cliente individuales relacionados con sus cuentas, visite la guía para [exploración de perfiles en Real-Time CDP, B2B Edition](../profile/profile-browse.md).
 
 ![Pestaña Personas](images/b2b-account-people.png)
 

@@ -2,7 +2,7 @@
 title: Migración del lago de datos a Gen2
 description: Obtenga información sobre las nuevas funciones que proporciona la migración de Data Lake a Gen2 en Adobe Experience Platform.
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%
@@ -15,13 +15,13 @@ Adobe Experience Platform está migrando al lago de datos Gen2. Se trata de una 
 
 ## Impacto del usuario
 
-Mientras que el Adobe está migrando el lago de datos de Gen1 a Gen 2, los usuarios podrán **leer** desde el lago de datos, pero todas las funcionalidades que **escribir** en el lago de datos se verán afectadas. A continuación se muestra una lista de las capacidades afectadas:
+Mientras el Adobe esté migrando el lago de datos de Gen1 a Gen 2, los usuarios podrán **read** del lago de datos, pero todas las capacidades que **write** en el lago de datos se verá afectado. A continuación se muestra una lista de las capacidades afectadas:
 
 - **Fuentes**: Se retrasarán los datos procedentes de los orígenes y de varios flujos de trabajo de consumo de datos. Los usuarios verán sus datos una vez completada la migración.
-- **Servicio** de consultas: Los usuarios pueden realizar consultas, pero no podrán escribir el resultado de la consulta en un conjunto de datos.
-- **Perfil** del cliente en tiempo real: Los datos introducidos en el Almacenamiento de perfiles mediante  **** lotes no estarán disponibles durante la migración. Sin embargo, los datos introducidos mediante la ingesta de **streaming** estarán disponibles durante la migración. Además, las exportaciones de perfil no estarán disponibles durante la migración.
+- **Servicio de consultas**: Los usuarios pueden realizar consultas, pero no podrán escribir el resultado de la consulta en un conjunto de datos.
+- **Perfil del cliente en tiempo real**: Datos introducidos en el almacén de perfiles mediante **batch** La ingesta no estará disponible durante la migración. Sin embargo, los datos introducidos mediante **streaming** La ingesta estará disponible durante la migración. Además, las exportaciones de perfil no estarán disponibles durante la migración.
 - **Data Science Workspace**: Las escrituras de Data Science Workspace fallarán.
-- **Servicio** de segmentación: Las audiencias derivadas de la segmentación por  **** lotes no se pueden activar durante la migración. Las audiencias derivadas de la segmentación **streaming** no se verán afectadas.
+- **Servicio de segmentación**: Audiencias derivadas de **batch** no se puede activar la segmentación durante la migración. Audiencias derivadas de **streaming** la segmentación no se verá afectada.
 - **Customer Journey Analytics**: Los datos de los informes de Customer Journey Analytics pueden estar desactualizados y no se actualizarán durante la migración, ya que los lotes no se incorporan en Data Lake.
 
 ## Comunicación con los usuarios de la plataforma

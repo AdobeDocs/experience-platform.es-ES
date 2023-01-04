@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, haciendo que los datos adecuados estén disponibles y se actualicen continuamente a medida que se produzcan cambios. Esto se hace mediante el uso de bordes, un servidor ubicado geográficamente que almacena datos y lo hace fácilmente accesible para las aplicaciones.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 2%
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Configuraciones de proyección de Edge y extremos de destinos
 
-Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante lo que se conoce como bordes. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan perímetros para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde. Esta guía proporciona instrucciones detalladas para usar la variable [!DNL Real-time Customer Profile] API para trabajar con proyecciones avanzadas, incluidos destinos y configuraciones.
+Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante lo que se conoce como bordes. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan perímetros para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde. Esta guía proporciona instrucciones detalladas para usar la variable [!DNL Real-Time Customer Profile] API para trabajar con proyecciones avanzadas, incluidos destinos y configuraciones.
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Real
 
 Una proyección se puede dirigir a uno o varios bordes especificando las ubicaciones a las que se enviarán los datos. Cada destino de proyección que se crea tiene un ID único que se utiliza para crear la configuración de la proyección.
 
-### List all destinations
+### Enumerar todos los destinos
 
 Puede enumerar los destinos perimetrales que ya se han creado para su organización realizando una solicitud de GET al `/config/destinations` punto final.
 
@@ -249,7 +249,7 @@ La siguiente solicitud actualiza el destino existente para incluir una segunda u
 
 >[!IMPORTANT]
 >
->La solicitud del PUT requiere un `Content-Type` como se muestra a continuación. Using an incorrect `Content-Type` header results in an HTTP Status 415 (Unsupported Media Type) error.
+>La solicitud del PUT requiere un `Content-Type` como se muestra a continuación. Uso de un error `Content-Type` genera un error de estado HTTP 415 (tipo de medio no compatible).
 
 ```shell
 curl -X PUT \
@@ -457,7 +457,7 @@ curl -X POST \
 | Propiedad | Descripción |
 |---|---|
 | `selector` | Cadena que contiene una lista de propiedades dentro del esquema que se van a replicar en los bordes. Las prácticas recomendadas para trabajar con selectores están disponibles en la sección [Selectores](#selectors) de este documento. |
-| `name` | A descriptive name for the new projection configuration. |
+| `name` | Un nombre descriptivo para la nueva configuración de proyección. |
 | `destinationId` | Identificador del destino de borde al que se proyectarán los datos. |
 
 **Respuesta**
@@ -509,9 +509,9 @@ Un selector es una lista de nombres de campo XDM separados por comas. En una con
 * Utilice comas para seleccionar varios campos. No utilice espacios.
 * Utilice la notación de puntos para seleccionar campos anidados.
    * Por ejemplo, para seleccionar un campo denominado `field` que está anidado dentro de un campo denominado `foo`, utilice el selector `foo.field`.
-* When including a field that contains sub-fields, all sub-fields are also projected by default. Sin embargo, puede filtrar los subcampos devueltos mediante paréntesis `"( )"`.
+* Al incluir un campo que contiene subcampos, todos los subcampos también se proyectan de forma predeterminada. Sin embargo, puede filtrar los subcampos devueltos mediante paréntesis `"( )"`.
    * Por ejemplo, `addresses(type,city.country)` solo devuelve el tipo de dirección y el país en el que se ubica la ciudad de dirección para cada `addresses` elemento de matriz.
-   * The above example is equivalent to `addresses.type,addresses.city.country`.
+   * El ejemplo anterior es equivalente a `addresses.type,addresses.city.country`.
 
 >[!NOTE]
 >
@@ -597,7 +597,7 @@ Devuelve la variable `person.lastName` y todos los elementos del `addresses` mat
 
 **addresses.city**
 
-Returns only the city field for all elements in the addresses array.
+Devuelve solo el campo de ciudad para todos los elementos de la matriz de direcciones.
 
 ```json
 {

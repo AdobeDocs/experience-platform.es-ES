@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk;orígenes;conectores;conectores de origen;
 title: Crear una conexión de origen de Zendesk en la interfaz de usuario
 description: Aprenda a crear una conexión de origen de Zendesk utilizando la interfaz de usuario de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 6%
@@ -25,7 +25,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición del esquema](../../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ### Recopilar las credenciales necesarias
 
@@ -108,7 +108,7 @@ También puede verificar los datos de Platform con los datos de su [!DNL Zendesk
 
 ### Esquema de Zendesk
 
-En la tabla siguiente se enumeran las asignaciones admitidas que deben configurarse para Zendesk.
+La tabla siguiente enumera las asignaciones admitidas que deben configurarse para Zendesk.
 
 >[!TIP]
 >

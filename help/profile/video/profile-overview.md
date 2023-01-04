@@ -9,7 +9,7 @@ audience: all
 doc-type: video
 activity: understand
 exl-id: cdc91194-771f-4026-808f-97d70db436d9
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Resumen del perfil del cliente en tiempo real
 
-Este vídeo proporciona información básica sobre el perfil del cliente en tiempo real en Adobe Experience Platform y describe cómo se agrupan los datos de varias fuentes para formar un perfil centralizado para cada uno de sus clientes. Para obtener más información sobre las funciones y la funcionalidad del perfil del cliente en tiempo real, comience por leer la [Resumen del perfil del cliente en tiempo real](../home.md).
+Este vídeo proporciona información básica sobre el perfil del cliente en tiempo real en Adobe Experience Platform y describe cómo se reúnen los datos de varias fuentes para formar un perfil centralizado para cada uno de sus clientes. Para obtener más información sobre las características y la funcionalidad del perfil del cliente en tiempo real, comience por leer la [Resumen del perfil del cliente en tiempo real](../home.md).
 
 >[!NOTE]
 >

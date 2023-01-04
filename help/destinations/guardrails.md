@@ -5,7 +5,8 @@ solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Obtenga más información sobre el uso predeterminado y los límites de velocidad de activación de datos.
-source-git-commit: 69496d2e00ce866413786160d4524cabd03ae350
+exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1198'
 ht-degree: 4%
@@ -121,5 +122,5 @@ Ver información de protecciones para otros servicios de Experience Platform:
 
 * Seguridad para [ingesta de datos](/help/ingestion/guardrails.md)
 * Seguridad para [[!DNL Identity Service] data](/help/identity-service/guardrails.md)
-* Seguridad para [[!DNL Real-time Customer Profile] data](/help/profile/guardrails.md)
+* Seguridad para [[!DNL Real-Time Customer Profile] data](/help/profile/guardrails.md)
 * Seguridad para [[!DNL Query Service] data](/help/query-service/guardrails.md)

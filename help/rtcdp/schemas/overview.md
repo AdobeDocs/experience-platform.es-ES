@@ -2,7 +2,7 @@
 title: Esquemas en Real-time Customer Data Platform
 description: Una descripción general de la función de los esquemas del Modelo de datos de experiencia (XDM) en Adobe Real-time Customer Data Platform.
 exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%

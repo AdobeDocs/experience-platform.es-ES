@@ -5,7 +5,7 @@ title: Filtrar datos del catálogo mediante parámetros de consulta
 topic-legacy: developer guide
 description: La API del servicio de catálogo permite filtrar los datos de respuesta mediante el uso de parámetros de consulta de solicitud. Una de las prácticas recomendadas para Catálogo es utilizar filtros en todas las llamadas a la API, ya que reducen la carga en la API y ayudan a mejorar el rendimiento general.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 2%
@@ -210,7 +210,7 @@ Hay algunas limitaciones que hay que tener en cuenta al utilizar etiquetas:
 * Los nombres de las etiquetas son exclusivos de su organización de IMS.
 * Los procesos de Adobe pueden aprovechar las etiquetas para ciertos comportamientos. A los nombres de estas etiquetas se les agregará el prefijo &quot;adobe&quot; como estándar. Por lo tanto, debe evitar esta convención al declarar nombres de etiquetas.
 * Los siguientes nombres de etiquetas están reservados para su uso en [!DNL Experience Platform]y, por lo tanto, no se pueden declarar como nombre de etiqueta para su organización:
-   * `unifiedProfile`: Este nombre de etiqueta está reservado para los conjuntos de datos que ingerirá [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedProfile`: Este nombre de etiqueta está reservado para los conjuntos de datos que ingerirá [[!DNL Real-Time Customer Profile]](../../profile/home.md).
    * `unifiedIdentity`: Este nombre de etiqueta está reservado para los conjuntos de datos que ingerirá [[!DNL Identity Service]](../../identity-service/home.md).
 
 A continuación se muestra un ejemplo de un conjunto de datos que contiene un `tags` propiedad. Las etiquetas de esa propiedad toman la forma de pares clave-valor, y cada valor de etiqueta aparece como una matriz que contiene una sola cadena:

@@ -1,13 +1,13 @@
 ---
 title: Plantillas de informe de Power BI para tableros de plataforma
 description: Utilice las plantillas de informe para explorar los datos de Experience Platform mediante el uso de Power BI.
-source-git-commit: 19b0ce2c8125fa5253cbba34adbd2884e27b5133
+exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
 
 ---
-
 
 # Power BI de plantillas de informes para tableros
 

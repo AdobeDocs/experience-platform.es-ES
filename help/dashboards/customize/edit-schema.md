@@ -3,7 +3,7 @@ keywords: Experience Platform;interfaz de usuario;IU;paneles;tablero;perfiles;se
 title: Editar esquema para crear widgets de tablero personalizados
 description: Esta guía proporciona instrucciones paso a paso para seleccionar atributos y configurar el esquema de su organización con el fin de crear utilidades personalizadas para los paneles de Adobe Experience Platform.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Editar esquema para crear widgets personalizados
 
-Para crear utilidades personalizadas para paneles de Adobe Experience Platform, primero debe identificar los atributos de perfil del cliente en tiempo real en los que se basarán las utilidades.
+Para crear utilidades personalizadas para tableros de Adobe Experience Platform, primero debe identificar los atributos del perfil del cliente en tiempo real en los que se basarán las utilidades.
 
 Esta guía proporciona instrucciones paso a paso para editar el esquema de su organización seleccionando atributos para crear widgets de tablero personalizados.
 
@@ -30,7 +30,7 @@ Esta guía requiere acceso al [!UICONTROL Biblioteca de utilidades] en Experienc
 
 Dentro de la biblioteca de utilidades, la variable **[!UICONTROL Personalizado]** le permite crear utilidades y compartirlas con otros usuarios de su organización para personalizar el aspecto de sus tableros.
 
-Para poder crear utilidades personalizadas, se deben seleccionar los atributos de Perfil del cliente en tiempo real para garantizar que los datos se incluyan como parte de la instantánea diaria.
+Para poder crear utilidades personalizadas, se deben seleccionar los atributos del perfil del cliente en tiempo real para garantizar que los datos se incluyan como parte de la instantánea diaria.
 
 >[!IMPORTANT]
 >

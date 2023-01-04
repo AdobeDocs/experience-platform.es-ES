@@ -6,7 +6,7 @@ description: Instrucciones paso a paso para utilizar la API de servicio de flujo
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3420'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Si prefiere usar la interfaz de usuario de Platform para conectarse a un destino
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite crear segmentos y generar audiencias en [!DNL Adobe Experience Platform] de su [!DNL Real-time Customer Profile] datos.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite crear segmentos y generar audiencias en [!DNL Adobe Experience Platform] de su [!DNL Real-Time Customer Profile] datos.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que debe conocer para activar datos en destinos por lotes en Platform.
@@ -78,7 +78,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 * Content-Type: `application/json`
 
-### Documentación de referencia de API {#api-reference-documentation}
+### Documentación de referencia del API {#api-reference-documentation}
 
 Puede encontrar la documentación de referencia adjunta para todas las operaciones de API en este tutorial. Consulte la [Documentación de la API del servicio de flujo en el Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Le recomendamos que utilice este tutorial y la documentación de referencia de la API en paralelo.
 

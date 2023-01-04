@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de comercio electrónico mediante la interfaz de usuario de Platform.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición del esquema](../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del Editor de esquemas](../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
 
 ## Adición de datos
@@ -49,19 +49,19 @@ Una vez que encuentre los datos de origen, seleccione la tabla y, a continuació
 
 ## Proporcionar detalles de flujo de datos
 
-The [!UICONTROL Dataflow detail] page allows you to select whether you want to use an existing dataset or a new dataset. Durante este proceso, también puede configurar las opciones de [!UICONTROL Conjunto de datos del perfil], [!UICONTROL Diagnóstico de errores], [!UICONTROL Ingesta parcial]y [!UICONTROL Alertas].
+La variable [!UICONTROL Detalles de flujo de datos] le permite seleccionar si desea utilizar un conjunto de datos existente o un nuevo conjunto de datos. Durante este proceso, también puede configurar las opciones de [!UICONTROL Conjunto de datos del perfil], [!UICONTROL Diagnóstico de errores], [!UICONTROL Ingesta parcial]y [!UICONTROL Alertas].
 
 ![dataflow-detail](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
-### Use an existing dataset
+### Usar un conjunto de datos existente
 
-To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. Puede recuperar un conjunto de datos existente mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable. Una vez que haya seleccionado un conjunto de datos, proporcione un nombre y una descripción para el flujo de datos.
+Para introducir datos en un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]**. Puede recuperar un conjunto de datos existente mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable. Una vez que haya seleccionado un conjunto de datos, proporcione un nombre y una descripción para el flujo de datos.
 
-![existing-dataset](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
+![conjunto de datos existente](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
 
 ### Usar un nuevo conjunto de datos
 
-To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. A continuación, seleccione un esquema para asignarlo mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de esquemas existentes en el menú desplegable. Una vez que haya seleccionado un esquema, proporcione un nombre y una descripción para el flujo de datos.
+Para introducir en un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** y, a continuación, proporcione un nombre de conjunto de datos de salida y una descripción opcional. A continuación, seleccione un esquema para asignarlo mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de esquemas existentes en el menú desplegable. Una vez que haya seleccionado un esquema, proporcione un nombre y una descripción para el flujo de datos.
 
 ![conjunto de datos nuevo](../../../images/tutorials/dataflow/table-based/new-dataset.png)
 
@@ -75,7 +75,7 @@ A continuación, seleccione la **[!UICONTROL Conjunto de datos del perfil]** alt
 
 ### Habilitar alertas
 
-You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../alerts.md).
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de fuentes mediante la interfaz de usuario](../alerts.md).
 
 Cuando haya terminado de proporcionar detalles al flujo de datos, seleccione **[!UICONTROL Siguiente]**.
 
@@ -89,15 +89,15 @@ Platform proporciona recomendaciones inteligentes para campos asignados automát
 
 Una vez asignados correctamente los datos de origen, seleccione **[!UICONTROL Siguiente]**.
 
-![mapping](../../../images/tutorials/dataflow/table-based/mapping.png)
+![asignación](../../../images/tutorials/dataflow/table-based/mapping.png)
 
-## Schedule ingestion runs
+## Programar ejecuciones de ingesta
 
-The [!UICONTROL Scheduling] step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. By default, scheduling is set to `Once`. To adjust your ingestion frequency, select **[!UICONTROL Frequency]** and then select an option from the dropdown menu.
+La variable [!UICONTROL Programación] , lo que le permite configurar una programación de ingesta para que ingrese automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. De forma predeterminada, la programación está configurada en `Once`. Para ajustar la frecuencia de ingesta, seleccione **[!UICONTROL Frecuencia]** y, a continuación, seleccione una opción en el menú desplegable.
 
 >[!TIP]
 >
->Interval and backfill are not visible during a one-time ingestion.
+>El intervalo y el relleno no son visibles durante una ingesta única.
 
 ![programación](../../../images/tutorials/dataflow/table-based/scheduling.png)
 
@@ -123,9 +123,9 @@ La variable **[!UICONTROL Consulte]** , lo que le permite revisar el nuevo flujo
 
 * **[!UICONTROL Conexión]**: Muestra el tipo de origen, la ruta correspondiente del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
 * **[!UICONTROL Asignación de campos de conjunto de datos y asignación]**: Muestra en qué conjunto de datos se están incorporando los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
-* **[!UICONTROL Scheduling]**: Shows the active period, frequency, and interval of the ingestion schedule.
+* **[!UICONTROL Programación]**: Muestra el período, la frecuencia y el intervalo activos del programa de ingesta.
 
-Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
+Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]** y permitir que se cree un flujo de datos.
 
 ![review](../../../images/tutorials/dataflow/table-based/review.png)
 
@@ -139,9 +139,9 @@ Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado i
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente un flujo de datos para traer los datos de su fuente de comercio electrónico a Platform. Los datos entrantes ahora se pueden usar en el flujo descendente [!DNL Platform] servicios como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado correctamente un flujo de datos para traer los datos de su fuente de comercio electrónico a Platform. Los datos entrantes ahora se pueden usar en el flujo descendente [!DNL Platform] servicios como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-time Customer Profile]](../../../../profile/home.md)
+* [Información general del [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
 * [Información general del [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
 
 

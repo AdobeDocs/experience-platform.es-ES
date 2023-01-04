@@ -5,7 +5,7 @@ title: Monitorización de la ingesta de datos
 topic-legacy: overview
 description: En esta guía del usuario se proporcionan pasos sobre cómo monitorizar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Esta guía del usuario proporciona pasos sobre cómo monitorizar los datos en la
 
 En el [IU de Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Monitorización]** en el menú de navegación de la izquierda, seguido de **[!UICONTROL Transmisión de extremo a extremo]**.
 
-La variable **[!UICONTROL Transmisión de extremo a extremo]** página de monitorización. Este espacio de trabajo proporciona un gráfico que muestra la tasa de eventos de flujo continuo que recibe [!DNL Platform], un gráfico que muestra la tasa de eventos de flujo continuo que procesaron correctamente [[!DNL Real-time Customer Profile]](../../profile/home.md), así como una lista detallada de los datos entrantes.
+La variable **[!UICONTROL Transmisión de extremo a extremo]** página de monitorización. Este espacio de trabajo proporciona un gráfico que muestra la tasa de eventos de flujo continuo que recibe [!DNL Platform], un gráfico que muestra la tasa de eventos de flujo continuo que procesaron correctamente [[!DNL Real-Time Customer Profile]](../../profile/home.md), así como una lista detallada de los datos entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

@@ -5,7 +5,7 @@ title: Información general sobre la segmentación de varias entidades
 topic-legacy: overview
 description: La segmentación de varias entidades es la capacidad de ampliar los datos del perfil con datos adicionales basados en productos, tiendas u otras clases que no sean de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del esquema de perfil.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: d036ca8c3a378494f776c2bbb05e9d687bd2e201
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Resumen de segmentación de varias entidades
 
-La segmentación de varias entidades es una función avanzada disponible como parte de Adobe Experience Platform [!DNL Segmentation Service]. Esta función le permite ampliar [!DNL Real-time Customer Profile] datos con datos &quot;no personas&quot; adicionales (también conocidos como &quot;entidades de dimensión&quot;) que su organización puede definir, como datos relacionados con productos o almacenes. La segmentación de varias entidades proporciona flexibilidad a la hora de definir segmentos de audiencia basados en datos relevantes para sus necesidades comerciales únicas y se puede realizar sin tener experiencia en consultas de bases de datos. Con la segmentación multientidad, puede añadir datos clave a sus segmentos sin tener que realizar cambios costosos en las secuencias de datos ni esperar a una combinación de datos back-end.
+La segmentación de varias entidades es una función avanzada disponible como parte de Adobe Experience Platform [!DNL Segmentation Service]. Esta función le permite ampliar [!DNL Real-Time Customer Profile] datos con datos &quot;no personas&quot; adicionales (también conocidos como &quot;entidades de dimensión&quot;) que su organización puede definir, como datos relacionados con productos o almacenes. La segmentación de varias entidades proporciona flexibilidad a la hora de definir segmentos de audiencia basados en datos relevantes para sus necesidades comerciales únicas y se puede realizar sin tener experiencia en consultas de bases de datos. Con la segmentación multientidad, puede añadir datos clave a sus segmentos sin tener que realizar cambios costosos en las secuencias de datos ni esperar a una combinación de datos back-end.
 
 ## Primeros pasos
 
 La segmentación de varias entidades requiere una comprensión práctica de los distintos servicios de Adobe Experience Platform implicados en la segmentación. Antes de continuar con esta guía, revise la siguiente documentación:
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
    * [Protecciones de perfil](../profile/guardrails.md): Prácticas recomendadas para crear modelos de datos compatibles con [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite generar segmentos a partir de [!DNL Real-time Customer Profile] datos.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite generar segmentos a partir de [!DNL Real-Time Customer Profile] datos.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición del esquema](../xdm/schema/composition.md#union): Conozca las prácticas recomendadas para componer esquemas para utilizarlos en Experience Platform. Para utilizar mejor la segmentación, asegúrese de que los datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../xdm/schema/best-practices.md).
 
@@ -44,7 +44,7 @@ Para crear un segmento de varias entidades, primero debe definir relaciones entr
 
 ### Definir relaciones
 
-La definición de relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) es una parte integral de la creación de segmentos de varias entidades. Para las relaciones, el campo del destino debe marcarse como la identidad principal de ese esquema. Una identidad solo se puede marcar en cadenas y no en matrices. Además, las relaciones no necesariamente tienen que ser una a una, ya que puede conectar perfiles y eventos de experiencia a varios destinos.
+La definición de relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) es una parte integral de la creación de segmentos de varias entidades. Para las relaciones, el campo del destino debe marcarse como la identidad principal de ese esquema. Una identidad solo se puede marcar en cadenas y no en matrices. Además, las relaciones no tienen que ser necesariamente una a una, ya que puede conectar perfiles y eventos de experiencia a varios destinos.
 
 La definición de relaciones se puede realizar mediante la API del Registro de esquemas o el Editor de esquemas. Para ver los pasos detallados que muestran cómo definir una relación entre dos esquemas, elija entre los siguientes tutoriales:
 

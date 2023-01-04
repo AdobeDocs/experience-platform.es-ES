@@ -2,7 +2,7 @@
 title: Caso de uso de atributos derivados basados en decimales
 description: En esta guía se muestran los pasos necesarios para utilizar el servicio de consulta para crear atributos derivados basados en decimales y utilizarlos con los datos de perfil.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # Caso de uso de atributos derivados basados en decimales
 
-Los atributos derivados facilitan casos de uso complicados para analizar datos del lago de datos que se pueden usar con otros servicios de Platform descendentes o publicar en los datos del perfil del cliente en tiempo real.
+Los atributos derivados facilitan casos de uso complicados para analizar datos del lago de datos que se pueden utilizar con otros servicios de Platform descendentes o publicar en sus datos del Perfil del cliente en tiempo real.
 
 Este ejemplo de uso muestra cómo crear atributos derivados basados en decimales para usarlos con los datos del perfil del cliente en tiempo real. Como ejemplo, en esta guía se explica cómo crear un conjunto de datos que utilice deciles categóricos para segmentar y crear audiencias basadas en atributos de clasificación.
 
@@ -64,7 +64,7 @@ La tabla siguiente muestra los datos de ejemplo contenidos en la variable `_prof
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 01-01-2022 | STATUS_MILES | Nuevo miembro | 5000 | FLYER |
+| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nuevo miembro | 5000 | FLYER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | PLATA |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | PLATA |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | PLATA |
@@ -82,7 +82,7 @@ Cree un &quot;Esquema de Decile de Lealtad de Aerolíneas&quot; para crear un co
 
 ### Habilitar el esquema para el perfil de cliente en tiempo real
 
-Los datos introducidos en el Experience Platform para su uso por el perfil del cliente en tiempo real deben cumplir con [un esquema del Modelo de datos de experiencia (XDM) habilitado para Perfil](../../xdm/ui/resources/schemas.md). Para que un esquema esté habilitado para Profile, debe implementar la clase XDM Individual Profile o XDM ExperienceEvent .
+Los datos introducidos en el Experience Platform para su uso por el perfil del cliente en tiempo real deben cumplir los requisitos de [un esquema del Modelo de datos de experiencia (XDM) habilitado para Perfil](../../xdm/ui/resources/schemas.md). Para que un esquema esté habilitado para Profile, debe implementar la clase XDM Individual Profile o XDM ExperienceEvent .
 
 [Habilite el esquema para utilizarlo en el perfil de cliente en tiempo real mediante la API del Registro de esquemas](../../xdm/tutorials/create-schema-api.md) o [Interfaz de usuario del Editor de esquemas](../../xdm/tutorials/create-schema-ui.md).  Encontrará instrucciones detalladas sobre cómo habilitar un esquema para Perfil en su documentación respectiva.
 

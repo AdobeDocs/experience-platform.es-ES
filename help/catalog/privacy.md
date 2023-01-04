@@ -5,10 +5,10 @@ title: Procesamiento de solicitudes de privacidad en el lago de datos
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes de acceso, exclusión de la venta o eliminación de sus datos personales según lo establecido en las normas legales y de privacidad de la organización. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en el lago de datos.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1428'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -213,7 +213,7 @@ Si también se incluye `ProfileService` o `identity` en la solicitud de privacid
 
 Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad para el lago de datos. Se recomienda seguir leyendo la documentación proporcionada en esta guía para comprender mejor cómo administrar los datos de identidad y crear trabajos de privacidad.
 
-Consulte el documento en [procesamiento de solicitudes de privacidad para Perfil del cliente en tiempo real](../profile/privacy.md) para ver los pasos sobre el procesamiento de solicitudes de privacidad para la variable [!DNL Profile] tienda.
+Consulte el documento en [procesamiento de solicitudes de privacidad para el perfil del cliente en tiempo real](../profile/privacy.md) para ver los pasos sobre el procesamiento de solicitudes de privacidad para la variable [!DNL Profile] tienda.
 
 ## Apéndice
 

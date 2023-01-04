@@ -5,7 +5,7 @@ title: Guía de la interfaz de usuario del Generador de segmentos
 topic-legacy: ui guide
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3101'
 ht-degree: 1%
@@ -254,7 +254,7 @@ Encontrará más información sobre los distintos métodos de evaluación de def
 
 ## Pasos siguientes {#next-steps}
 
-El Generador de segmentos proporciona un flujo de trabajo enriquecido que le permite aislar las audiencias comercializables de [!DNL Real-time Customer Profile] datos. Después de leer esta guía, debería poder:
+El Generador de segmentos proporciona un flujo de trabajo enriquecido que le permite aislar las audiencias comercializables de [!DNL Real-Time Customer Profile] datos. Después de leer esta guía, debería poder:
 
 - Cree definiciones de segmento mediante una combinación de atributos, eventos y audiencias existentes como componentes básicos.
 - Utilice el lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de segmentos.

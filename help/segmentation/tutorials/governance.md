@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial trata los pasos para aplicar el cumplimiento de los estándares de uso de datos para segmentos de audiencia del perfil del cliente en tiempo real que utilizan API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 # Aplique el cumplimiento de los estándares de uso de datos para un segmento de audiencia que utilice API
 
-Este tutorial trata los pasos para aplicar el cumplimiento de la normativa de uso de datos para [!DNL Real-time Customer Profile] segmentos de audiencia que utilizan API.
+Este tutorial trata los pasos para aplicar el cumplimiento de la normativa de uso de datos para [!DNL Real-Time Customer Profile] segmentos de audiencia que utilizan API.
 
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] es un almacén de entidades de búsqueda genérico y se utiliza para administrar [!DNL Experience Data Model (XDM)] datos dentro de [!DNL Platform]. El perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
-   - [Combinar directivas](../../profile/api/merge-policies.md): Reglas utilizadas por [!DNL Real-time Customer Profile] para determinar qué datos se pueden combinar en una vista unificada bajo ciertas condiciones. Las políticas de combinación se pueden configurar para fines de control de datos.
-- [[!DNL Segmentation]](../home.md): Cómo [!DNL Real-time Customer Profile] divide un grupo grande de personas incluidas en el almacén de perfiles en grupos más pequeños que comparten características similares y responden de manera similar a las estrategias de marketing.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] es un almacén de entidades de búsqueda genérico y se utiliza para administrar [!DNL Experience Data Model (XDM)] datos dentro de [!DNL Platform]. El perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
+   - [Combinar directivas](../../profile/api/merge-policies.md): Reglas utilizadas por [!DNL Real-Time Customer Profile] para determinar qué datos se pueden combinar en una vista unificada bajo ciertas condiciones. Las políticas de combinación se pueden configurar para fines de control de datos.
+- [[!DNL Segmentation]](../home.md): Cómo [!DNL Real-Time Customer Profile] divide un grupo grande de personas incluidas en el almacén de perfiles en grupos más pequeños que comparten características similares y responden de manera similar a las estrategias de marketing.
 - [Administración de datos](../../data-governance/home.md): La administración de datos proporciona la infraestructura para el etiquetado y la aplicación del uso de los datos, utilizando los siguientes componentes:
    - [Etiquetas de uso de datos](../../data-governance/labels/user-guide.md): Etiquetas utilizadas para describir conjuntos de datos y campos en términos del nivel de sensibilidad con el que gestionar sus datos respectivos.
    - [Políticas de uso de datos](../../data-governance/policies/overview.md): Configuraciones que indican qué acciones de marketing se permiten en datos categorizados por etiquetas de uso de datos concretas.
@@ -58,7 +58,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Buscar una directiva de combinación para una definición de segmento {#merge-policy}
 
-Este flujo de trabajo comienza accediendo a un segmento de audiencia conocido. Segmentos que están habilitados para su uso en [!DNL Real-time Customer Profile] contener un ID de directiva de combinación dentro de su definición de segmento. Esta directiva de combinación contiene información sobre qué conjuntos de datos se incluyen en el segmento, que a su vez contienen cualquier etiqueta de uso de datos aplicable.
+Este flujo de trabajo comienza accediendo a un segmento de audiencia conocido. Segmentos que están habilitados para su uso en [!DNL Real-Time Customer Profile] contener un ID de directiva de combinación dentro de su definición de segmento. Esta directiva de combinación contiene información sobre qué conjuntos de datos se incluyen en el segmento, que a su vez contienen cualquier etiqueta de uso de datos aplicable.
 
 Al usar la variable [!DNL Segmentation] API, puede buscar una definición de segmento por su ID para encontrar su política de combinación asociada.
 

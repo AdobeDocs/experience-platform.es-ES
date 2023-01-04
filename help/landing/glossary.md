@@ -5,7 +5,7 @@ title: Glosario de Adobe Experience Platform
 topic-legacy: getting started
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '7919'
 ht-degree: 0%
@@ -142,7 +142,7 @@ ht-degree: 0%
 
 **Acción de marketing de objetivos entre sitios**: Acción de marketing que utiliza datos para la segmentación de anuncios entre sitios. La combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio, se denomina datos entre sitios. Los datos entre sitios suelen recopilarse y procesarse para hacer inferencias sobre los intereses de los clientes.
 
-**Área de nombres de identidad personalizada**: Su organización puede crear áreas de nombres de identidad personalizadas para representar las identidades de una organización o un caso empresarial específicos.
+**Área de nombres de identidad personalizada**: Su organización puede crear áreas de nombres de identidad personalizadas para representar identidades de una organización o un caso empresarial específicos.
 
 **Etiquetas personalizadas**: Las etiquetas de uso de datos personalizadas le permiten crear y aplicar etiquetas específicas a campos de datos que satisfagan necesidades comerciales específicas.
 
@@ -408,7 +408,7 @@ ht-degree: 0%
 
 **Datos de perfil**: Los datos de perfil hacen referencia a cualquier dato ubicado dentro del almacén de datos de perfil.
 
-**Almacenamiento de datos de perfil**: El almacén de datos de perfil (a veces denominado Almacenamiento de perfiles) es un sistema de almacenamiento de datos independiente del lago de datos que utiliza el perfil del cliente en tiempo real para crear y almacenar perfiles.
+**Almacenamiento de datos de perfil**: El almacén de datos de perfil (a veces denominado almacén de perfiles) es un sistema de almacenamiento de datos independiente del lago de datos que utiliza el perfil del cliente en tiempo real para crear y almacenar perfiles.
 
 **Entidades de perfil**: Las entidades de perfil representan atributos relacionados con una persona individual, normalmente un cliente. Las entidades incluidas en esta categoría deben estar representadas por esquemas basados en la variable [!DNL XDM Individual Profile] Clase . Consulte también: Acceso a perfiles
 
@@ -430,7 +430,7 @@ ht-degree: 0%
 
 **Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) aúna datos conocidos y desconocidos de los clientes para crear perfiles de clientes fiables con una integración simplificada, segmentación inteligente y activación en tiempo real en todo el recorrido digital de clientes.
 
-**Perfil del cliente en tiempo real**: El perfil del cliente en tiempo real (a veces denominado perfil) proporciona una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Profile le permite consolidar sus datos de clientes en perfiles individuales que ofrecen cuentas procesables con marca de hora de cada interacción con clientes.
+**Perfil del cliente en tiempo real**: El perfil del cliente en tiempo real (a veces denominado Perfil) proporciona una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Profile le permite consolidar sus datos de clientes en perfiles individuales que ofrecen cuentas procesables con marca de hora de cada interacción con clientes.
 
 **Fórmula**: Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa los procesos de aprendizaje automático específicos, los algoritmos de IA, la lógica de procesamiento y los parámetros de configuración necesarios para crear y ejecutar un modelo entrenado y, por lo tanto, ayudan a resolver problemas empresariales específicos.
 
@@ -522,9 +522,9 @@ ht-degree: 0%
 
 **ingesta por transmisión**: La introducción por transmisión le permite enviar datos desde dispositivos del lado del cliente y del servidor al Experience Platform en tiempo real.
 
-**Segmentación por transmisión**: La segmentación por transmisión es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario. Una vez que se ha creado y guardado un segmento, la definición del segmento se aplica a los datos entrantes a [!DNL Real-time Customer Profile]. Las adiciones y eliminaciones de segmentos se procesan con regularidad, lo que garantiza que la audiencia de destino siga siendo relevante.
+**Segmentación por transmisión**: La segmentación por transmisión es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario. Una vez que se ha creado y guardado un segmento, la definición del segmento se aplica a los datos entrantes a [!DNL Real-Time Customer Profile]. Las adiciones y eliminaciones de segmentos se procesan con regularidad, lo que garantiza que la audiencia de destino siga siendo relevante.
 
-**Vista del sistema**: La vista del sistema es una representación visual de los conjuntos de datos de origen que fluyen a través de [!DNL Real-time Customer Profile] a destinos.
+**Vista del sistema**: La vista del sistema es una representación visual de los conjuntos de datos de origen que fluyen a través de [!DNL Real-Time Customer Profile] a destinos.
 
 ## T
 
@@ -540,7 +540,7 @@ ht-degree: 0%
 
 ## U
 
-**Esquema de unión**: Un esquema de unión es una consolidación de esquemas que comparten la misma clase y que se han habilitado para [!DNL Real-time Customer Profile]. Pueden existir varios esquemas de unión para una organización, pero solo puede haber un esquema de unión por clase.
+**Esquema de unión**: Un esquema de unión es una consolidación de esquemas que comparten la misma clase y que se han habilitado para [!DNL Real-Time Customer Profile]. Pueden existir varios esquemas de unión para una organización, pero solo puede haber un esquema de unión por clase.
 
 ## V
 

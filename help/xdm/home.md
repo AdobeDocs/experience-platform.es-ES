@@ -5,7 +5,7 @@ title: Información general del sistema XDM
 topic-legacy: overview
 description: La estandarización y la interoperabilidad son conceptos clave detrás de Adobe Experience Platform. Experience Data Model (XDM), impulsado por el Adobe, es un esfuerzo por estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 2%
@@ -78,7 +78,7 @@ Los perfiles menos identificados pueden consistir únicamente en señales de com
 
 A medida que un perfil sigue creciendo, se convierte en un sólido repositorio de la información personal, la información de identificación, los detalles de contacto y las preferencias de comunicación de un individuo.
 
-Consulte la [[!UICONTROL Perfil individual XDM] guía de referencia](./classes/individual-profile.md) para obtener más información sobre la estructura y el caso de uso de los campos proporcionados por la clase.
+Consulte la [[!UICONTROL Perfil individual XDM] guía de referencia](./classes/individual-profile.md) para obtener más información sobre la estructura y el caso de uso de los campos proporcionados por la clase .
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -90,7 +90,7 @@ Aunque no todos los eventos se clasifican fácilmente en todas las fuentes de da
 
 ![Recorrido del cliente de ExperienceEvent](images/overview/experience-event-journey.png)
 
-Consulte la [[!UICONTROL XDM ExperienceEvent] guía de referencia](./classes/experienceevent.md) para obtener más información sobre la estructura y el caso de uso de los campos proporcionados por la clase.
+Consulte la [[!UICONTROL XDM ExperienceEvent] guía de referencia](./classes/experienceevent.md) para obtener más información sobre la estructura y el caso de uso de los campos proporcionados por la clase .
 
 ## Esquemas XDM y servicios de Experience Platform
 

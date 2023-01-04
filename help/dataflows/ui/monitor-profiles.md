@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;perfiles de monitor;monitorizar flujos de datos;flujos de datos;perfil;perfil de cliente en tiempo real;
-description: El perfil del cliente en tiempo real le permite ver una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Este tutorial proporciona instrucciones sobre cómo monitorizar los flujos de datos con Perfiles mediante la interfaz de usuario del Experience Platform.
+description: El perfil del cliente en tiempo real le permite ver una vista holística de cada cliente combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Este tutorial proporciona instrucciones sobre cómo monitorizar los flujos de datos con Perfiles mediante la interfaz de usuario del Experience Platform.
 title: Monitorizar flujos de datos para perfiles en la interfaz de usuario
 topic-legacy: overview
 type: Tutorial
-source-git-commit: 3018ee005c96e3905ae8dab24cca901cf48847ea
+exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
-
 # Monitorización de flujos de datos para perfiles en la interfaz de usuario
 
-El perfil del cliente en tiempo real le permite ver una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
+El perfil del cliente en tiempo real le permite ver una vista holística de cada cliente combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción del cliente.
 
 El panel de monitorización proporciona una representación visual de la actividad de los datos dentro de Perfil, incluido el estado de los perfiles de los datos. Este tutorial proporciona instrucciones sobre cómo puede utilizar el panel de monitorización para monitorizar los perfiles de sus datos mediante la interfaz de usuario del Experience Platform, lo que le permite realizar un seguimiento del estado del procesamiento de perfiles.
 

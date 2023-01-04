@@ -3,7 +3,7 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Vista previa del punto final de la API de estado de muestra (vista previa del perfil)
 description: El extremo de estado de muestra de vista previa de la API del perfil del cliente en tiempo real le permite obtener una vista previa del último ejemplo correcto de sus datos de perfil, mostrar la distribución del perfil por conjunto de datos y por identidad, y generar informes que muestren la superposición del conjunto de datos, la superposición de identidad y los perfiles no vinculados.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2874'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Los resultados de este trabajo de muestra se pueden ver utilizando la variable `
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
 
 ## Fragmentos de perfil frente a perfiles combinados
 
@@ -36,7 +36,7 @@ Para obtener más información sobre los perfiles y su función en el Experience
 
 ## Activación del trabajo de muestra
 
-Como los datos habilitados para el perfil del cliente en tiempo real se incorporan en [!DNL Platform], se almacena dentro del almacén de datos de perfil. Cuando la ingesta de registros en el Almacenamiento de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
+Como los datos habilitados para el perfil de cliente en tiempo real se incorporan en [!DNL Platform], se almacena dentro del almacén de datos de perfil. Cuando la ingesta de registros en el Almacenamiento de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
 
 * Para **flujos de trabajo de datos de flujo de trabajo**, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si lo ha hecho, se activa automáticamente un trabajo de muestra para actualizar el recuento.
 * Para **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el Almacenamiento de perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del trabajo de muestra más reciente que se ha realizado correctamente, así como la distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.

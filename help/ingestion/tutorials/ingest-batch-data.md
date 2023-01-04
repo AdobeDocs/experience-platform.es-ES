@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform permite importar fácilmente datos como archivos por lotes en forma de archivos de parquet o datos que se ajustan a un esquema conocido del Modelo de datos de experiencia (XDM).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -75,27 +75,27 @@ Se ha creado un conjunto de datos vacío y se le ha devuelto a la variable **[!U
 
 A la derecha del espacio de trabajo de Conjuntos de datos puede ver el **[!UICONTROL Información]** que contiene información relacionada con su nuevo conjunto de datos, como ID del conjunto de datos, nombre, descripción, nombre de tabla, esquema, flujo continuo y origen. La pestaña Información también incluye información sobre cuándo se creó el conjunto de datos y su fecha de última modificación.
 
-También en la ficha Información hay una  **[!UICONTROL Perfil]** alternancia que se utiliza para habilitar su conjunto de datos para su uso con [!DNL Real-time Customer Profile]. Uso de este botón de alternancia y [!DNL Real-time Customer Profile], se explicarán con más detalle en la sección siguiente.
+También en la ficha Información hay una  **[!UICONTROL Perfil]** alternancia que se utiliza para habilitar su conjunto de datos para su uso con [!DNL Real-Time Customer Profile]. Uso de este botón de alternancia y [!DNL Real-Time Customer Profile], se explicarán con más detalle en la sección siguiente.
 
 ![Actividad del conjunto de datos](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Habilitar conjunto de datos para [!DNL Real-time Customer Profile]
+## Habilitar conjunto de datos para [!DNL Real-Time Customer Profile]
 
 Los conjuntos de datos se utilizan para introducir datos en [!DNL Experience Platform]y que, en última instancia, se utilizan para identificar individuos y unir información proveniente de múltiples fuentes. Esa información unida se denomina [!DNL Real-Time Customer Profile]. Para [!DNL Platform] para saber qué información debe incluirse en el [!DNL Real-Time Profile], los conjuntos de datos se pueden marcar para su inclusión mediante la variable **[!UICONTROL Perfil]** alternar.
 
 De forma predeterminada, esta opción está desactivada. Si elige activar [!DNL Profile], todos los datos incorporados en el conjunto de datos se utilizarán para ayudar a identificar a un individuo y unir sus [!DNL Real-Time Profile].
 
-Para obtener más información sobre [!DNL Real-time Customer Profile] y trabajando con identidades, revise la [Servicio de identidad](../../identity-service/home.md) documentación.
+Para obtener más información sobre [!DNL Real-Time Customer Profile] y trabajando con identidades, revise la [Servicio de identidad](../../identity-service/home.md) documentación.
 
-Para habilitar el conjunto de datos para [!DNL Real-time Customer Profile], haga clic en **[!UICONTROL Perfil]** alternar en la **[!UICONTROL Información]** pestaña .
+Para habilitar el conjunto de datos para [!DNL Real-Time Customer Profile], haga clic en **[!UICONTROL Perfil]** alternar en la **[!UICONTROL Información]** pestaña .
 
 ![Alternar perfil](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-Aparecerá un cuadro de diálogo que le pedirá que confirme que desea habilitar el conjunto de datos para [!DNL Real-time Customer Profile].
+Aparecerá un cuadro de diálogo que le pedirá que confirme que desea habilitar el conjunto de datos para [!DNL Real-Time Customer Profile].
 
 ![Cuadro de diálogo Activar perfil](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
-Haga clic en **[!UICONTROL Habilitar]** y la opción se pondrá de color azul, indicando que está activada.
+Haga clic en **[!UICONTROL Habilitar]** y la opción cambiará a azul, indicando que está activada.
 
 ![Habilitado para perfil](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)
 

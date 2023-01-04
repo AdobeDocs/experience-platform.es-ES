@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;conector de origen de Audie
 title: Crear una conexión de origen de Adobe Audience Manager en la interfaz de usuario
 description: Este tutorial le guía por los pasos para crear una conexión de origen para que Adobe Audience Manager introduzca datos de Evento de experiencia del consumidor en Platform mediante la interfaz de usuario.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]
 
 ## Pasos siguientes
 
-Mientras está activo un flujo de datos de Audience Manager, los datos entrantes se introducen automáticamente en Perfiles del cliente en tiempo real. Ahora puede utilizar estos datos entrantes y crear segmentos de audiencia mediante el servicio de segmentación de plataforma. Consulte los siguientes documentos para obtener más información:
+Mientras está activo un flujo de datos de Audience Manager, los datos entrantes se introducen automáticamente en Perfiles de cliente en tiempo real. Ahora puede utilizar estos datos entrantes y crear segmentos de audiencia mediante el servicio de segmentación de plataforma. Consulte los siguientes documentos para obtener más información:
 
 * [Resumen del perfil del cliente en tiempo real](../../../../../profile/home.md)
 * [Información general del servicio de segmentación](../../../../../segmentation/home.md)

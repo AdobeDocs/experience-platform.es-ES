@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su conector base de almacenamiento en la nube.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -32,9 +32,9 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 - [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    - [Aspectos básicos de la composición del esquema](../../../../../xdm/schema/composition.md): Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-## Añadir datos
+## Adición de datos
 
 Después de crear la autenticación de su cuenta de almacenamiento de la nube de flujo continuo, la variable **[!UICONTROL Seleccionar datos]** , proporcionando una interfaz para que seleccione el flujo de datos que desea traer a Platform.
 
@@ -119,7 +119,7 @@ Proporcione valores para el flujo de datos y seleccione **[!UICONTROL Siguiente]
 
 ![dataflow-detail](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
-### Consulte
+### Revisión
 
 La variable **[!UICONTROL Consulte]** , lo que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
@@ -136,7 +136,7 @@ Una vez creado el flujo de datos de almacenamiento de la nube de flujo continuo,
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente un flujo de datos para transmitir datos desde un origen de almacenamiento en la nube. Los datos entrantes ahora se pueden usar en servicios de Platform descendentes como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado correctamente un flujo de datos para transmitir datos desde un origen de almacenamiento en la nube. Los datos entrantes ahora se pueden usar en servicios de Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-- [Información general del [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
+- [Información general del [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 - [Información general del [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

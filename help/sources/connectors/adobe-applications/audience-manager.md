@@ -5,7 +5,7 @@ title: Información general de origen de Audience Manager
 topic-legacy: overview
 description: El origen de Adobe Audience Manager transmite datos de origen recopilados en Audience Manager a Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -83,5 +83,5 @@ También puede comprobar el uso del perfil que su cuenta tiene disponible a trav
 | Datos del Audience Manager | Tipo | Latencia | Notas |
 | --- | --- | --- | --- |
 | Datos en tiempo real | Eventos | &lt;25 minutos | Tiempo desde que se captura en el nodo Audience Manager Edge hasta que aparece en el lago de datos. |
-| Datos en tiempo real | Actualizaciones de perfil | &lt;10 minutos | Hora de aterrizar en el Perfil del cliente en tiempo real. |
+| Datos en tiempo real | Actualizaciones de perfil | &lt;10 minutos | Hora de aterrizar en el perfil del cliente en tiempo real. |
 | Datos en tiempo real e incorporados | Actualizaciones de perfil | de 24 a 36 horas | Tiempo que transcurre desde la captura a través de datos perimetrales DCS/PCS y datos incorporados, hasta su procesamiento en un perfil de usuario, hasta su aparición en Perfil del cliente en tiempo real. Actualmente, estos datos no aterrizan directamente en el lago de datos. La opción de alternancia de perfiles se puede habilitar para conjuntos de datos de perfil de Audience Manager para introducir estos datos directamente en Perfil del cliente en tiempo real. |
