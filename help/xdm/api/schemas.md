@@ -5,7 +5,7 @@ title: Punto final de API de Esquemas
 description: El extremo /schemas de la API del Registro de esquemas le permite administrar mediante programación esquemas XDM dentro de la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 666f424355fd1104971bb1566b72e207d00f4a56
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 5%
@@ -374,7 +374,7 @@ Una de las operaciones de PATCH más comunes implica agregar grupos de campos de
 **Formato de API**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parámetro | Descripción |
@@ -465,7 +465,7 @@ Para que un esquema participe en [Perfil del cliente en tiempo real](../../profi
 **Formato de API**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parámetro | Descripción |
