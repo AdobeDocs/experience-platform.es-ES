@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;DULE;programación
 solution: Experience Platform
 title: Introducción a la API del servicio de directivas
-topic-legacy: developer guide
 description: La API del servicio de directivas le permite crear y administrar varios recursos relacionados con el control de datos de Adobe Experience Platform. Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas a la API del servicio de directivas.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%

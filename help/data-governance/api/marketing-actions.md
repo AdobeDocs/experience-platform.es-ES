@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;api de acciones de marketing;aplicación basada en API;control de datos
 solution: Experience Platform
 title: Punto final de la API de acciones de marketing
-topic-legacy: developer guide
 description: Una acción de marketing, en el contexto de la Administración de datos de Adobe Experience Platform, es una acción que realiza un consumidor de datos de Experience Platform, para la cual es necesario comprobar si hay infracciones de las políticas de uso de datos.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 3%

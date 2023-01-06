@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;aplicación basada en API;control de datos
 solution: Experience Platform
 title: Punto final de la API de políticas de administración de datos
-topic-legacy: developer guide
 description: Las políticas de control de datos son reglas que adopta su organización y que describen los tipos de acciones de marketing que puede realizar o de las que está restringido el cumplimiento de los datos dentro de un Experience Platform. El extremo /policy se utiliza para todas las llamadas de API relacionadas con la visualización, la creación, la actualización o la eliminación de directivas de control de datos.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 3%

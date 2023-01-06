@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;control de datos;política de uso de datos
 solution: Experience Platform
 title: Crear una directiva de administración de datos en la API
-topic-legacy: policies
 type: Tutorial
 description: Obtenga información sobre cómo crear una directiva de control de datos mediante la API del servicio de directivas.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 3%
