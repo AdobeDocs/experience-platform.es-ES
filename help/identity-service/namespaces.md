@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;área de nombres;área de nombres;áreas de nombres;área de nombres;área de nombres de identidad;área de nombres de identidad;identidad;identidad;servicio de identidad;servicio de identidad
 solution: Experience Platform
 title: Información general sobre el área de nombres de identidad
-topic-legacy: overview
 description: Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 3%
@@ -63,7 +62,7 @@ Las siguientes áreas de nombres estándar se proporcionan para su uso por todas
 | ------------ | ----------- |
 | Adcloud | Área de nombres que representa Adobe AdCloud. |
 | Adobe Analytics (ID heredado) | Área de nombres que representa Adobe Analytics. Consulte el siguiente documento sobre [Espacios de nombres de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) para obtener más información. |
-| Apple IDFA (ID para anunciantes) | Área de nombres que representa Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
+| Apple IDFA (ID para anunciantes) | Área de nombres que representa Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/es-es/HT202074) para obtener más información. |
 | Servicio de notificaciones push de Apple | Un espacio de nombres que representa las identidades recopiladas mediante el servicio de notificaciones push de Apple. Consulte el siguiente documento sobre [Servicio de notificaciones push de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obtener más información. |
 | CORE | Área de nombres que representa Adobe Audience Manager. Este espacio de nombres también puede ser referenciado por su nombre heredado: &quot;Adobe AudienceManager&quot;. Consulte el siguiente documento sobre [ID de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) para obtener más información. |
 | ECID | Un espacio de nombres que representa ECID. Este espacio de nombres también puede ser referenciado por los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](./ecid.md) para obtener más información. |

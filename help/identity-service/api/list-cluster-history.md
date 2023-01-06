@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;identidades;historial de clústeres
 solution: Experience Platform
 title: Obtención del historial de clústeres de una identidad
-topic-legacy: API guide
 description: Las identidades pueden mover clústeres a lo largo de varias ejecuciones de gráficos de dispositivos. El servicio de identidad proporciona visibilidad sobre las asociaciones de clúster de una identidad determinada a lo largo del tiempo.
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 2%

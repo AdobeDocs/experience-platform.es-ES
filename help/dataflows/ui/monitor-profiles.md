@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;perfiles de monitor;monitorizar flujos de datos;flujos de datos;perfil;perfil de cliente en tiempo real;
 description: El perfil del cliente en tiempo real le permite ver una vista holística de cada cliente combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Este tutorial proporciona instrucciones sobre cómo monitorizar los flujos de datos con Perfiles mediante la interfaz de usuario del Experience Platform.
 title: Monitorizar flujos de datos para perfiles en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 3%

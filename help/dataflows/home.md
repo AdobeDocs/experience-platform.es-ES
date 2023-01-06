@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;flujos de datos;flujos de datos;datos;monitorización;monitorizar flujos de datos;monitorizar flujos de datos;monitorizar;monitorizar flujos de datos;monitorizar flujos de datos;monitorizar flujos de datos;flujo;servicio de flujo;
 solution: Experience Platform
 title: Información general de flujos de datos
-topic-legacy: overview
 description: Este documento presenta flujos de datos que expresan cómo se utilizan en Adobe Experience Platform.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 5%

@@ -2,11 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;etl;ETL;transformaciones de etl;transformaciones de ETL
 solution: Experience Platform
 title: Transformaciones de ETL de muestra
-topic-legacy: overview
 description: En este artículo se muestran las siguientes transformaciones de ejemplo que puede encontrar un desarrollador de extracción, transformación, carga (ETL).
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 2%
@@ -21,7 +19,7 @@ En este artículo se muestran las siguientes transformaciones de ejemplo que pue
 
 ### Archivos de muestra
 
-Los archivos CSV y JSON de muestra están disponibles en el repositorio público de referencia ETL [!DNL GitHub] que mantiene el Adobe:
+Los archivos CSV y JSON de muestra están disponibles en la referencia ETL pública [!DNL GitHub] cesiones temporales mantenidas por Adobe:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -34,7 +32,7 @@ Los siguientes datos CRM se han exportado como `CRM_profiles.csv`:
 TITLE   F_NAME  L_NAME  GENDER  DOB EMAIL   CRMID   ECID    LOYALTYID   ECID2   PHONE   STREET  CITY    STATE   COUNTRY ZIP LAT LONG
 Mr  Ewart   Bennedsen   M   2004-09-25  ebennedsenex@jiathis.com    71a16013-d805-7ece-9ac4-8f2cd66e8eaa    87098882279810196101440938110216748923  2e33192000007456-0365c00000000000   55019962992006103186215643814973128178  256-284-7231    72 Buhler Crossing  Anniston    Alabama US  36205   33.708276   -85.7922905
 Dr  Novelia Ansteys F   1987-10-31  nansteysdk@spotify.com  2eeb6532-82e1-0d58-8955-bf97de66a6f5    50829196174854544323574004005273946998  2e3319208000765b-3811c00000000001   65233136134594262632703695260919939885  704-181-6371    79 Northfield Hill  Charlotte   North Carolina  US  28299   35.2188655  -80.8108885
-Mr  Ulises  Mochan  M   1996-03-20  umochanco@gnu.org   6f393075-addb-bdd6-73f8-31c393b700f5    70086119428645095847094710218289660855  2e33192080003023-26b2000000000002   82011353387947708954389153068944017636  720-837-4159    00671 Mifflin Trail Lacolle Qu√©bec CA  E5A 45.08338    -73.36585
+Mr  Ulises  Mochan  M   1996-03-20  umochanco@gnu.org   6f393075-addb-bdd6-73f8-31c393b700f5    70086119428645095847094710218289660855  2e33192080003023-26b2000000000002   82011353387947708954389153068944017636  720-837-4159    00671 Mifflin Trail Lacolle Qu√&copy;bec CA  E5A 45.08338    -73.36585
 Mrs Friederike  Durrell F   1979-01-3   fdurrellbj@utexas.edu   33d018ec-5fed-f1a3-56aa-079370a9511b    50164729868919217963697788808932473456  2e33192080006dfc-0cdf400000000003   64452712468609735658703639722261004071  798-528-3458    47 Fremont Hill Independencia   Veracruz Llave  MX  91891   19.3803931  -99.1476905
 Rev Evita   Bingall F   1974-02-28  ebingallod@mac.com  8c93db88-f328-8efb-dc73-d5654d371cbe    74973364195185450328832136951985519627  2e331920800038db-0559e00000000004   58945501950285346322834356669253860483  397-178-5897    56 Crescent Oaks Court  Buenavista  Oaxaca  MX  71730   19.4458447  -99.1497665
 Mr  Eugenie Bechley F   1969-05-19  ebechley9r@telegraph.co.uk  b0c76a3f-6526-0ad0-e050-48143b687d18    67119779213799783658184754966135750376  2e331920800001a4-24b2800000000005   59715249079109455676103900762283358508  718-374-7456    5760 Southridge Junction    Staten Island   New York    US  10310   40.6307451  -74.1181235
@@ -44,7 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Asignación
 
 Los requisitos de asignación para los datos CRM se describen en la siguiente tabla e incluyen las siguientes transformaciones:
-- Columnas de identidad con propiedades `identityMap`
+- Columnas de identidad a `identityMap` propiedades
 - Fecha de nacimiento (DOB) al año y al mes
 - Cadenas a dobles o a integradores cortos.
 
@@ -54,7 +52,7 @@ Los requisitos de asignación para los datos CRM se describen en la siguiente ta
 | F_NAME | person.name.firstName | Copiar como cadena |
 | L_NAME | person.name.lastName | Copiar como cadena |
 | SEXO | person.gender | Transformar el género como valor de enumeración person.gender correspondiente |
-| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;AAAA-MM-DD&quot;<br/>person.birthYear: YYYY | Transforme birthDayAndMonth como cadena<br/>Transformar birthDate como cadena<br/>Transformar birthYear como short int |
+| Fecha de nacimiento | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;AAAA-MM-DD&quot;<br/>person.birthYear: YYYY | Transformar birthDayAndMonth como cadena<br/>Transformar birthDate como cadena<br/>Transformar birthYear como int corto |
 | CORREO ELECTRÓNICO | personalEmail.address | Copiar como cadena |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copie como cadena en la matriz CRMID en identityMap y establezca Primary como false |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, principal: false}] | Copie como cadena a la primera entrada en la matriz ECID en identityMap y establezca Primary como false |
@@ -178,7 +176,7 @@ La jerarquía de un dataframe (como un archivo Parquet) debe coincidir con la de
 
 ### Ejemplo de dataframe
 
-La estructura del siguiente ejemplo dataframe se ha asignado a un esquema que implementa la clase [!DNL XDM Individual Profile] y contiene los campos más comunes asociados a esquemas de ese tipo.
+La estructura del siguiente ejemplo dataframe se ha asignado a un esquema que implementa el [!DNL XDM Individual Profile] y contiene los campos más comunes asociados con esquemas de ese tipo.
 
 ```python
 [

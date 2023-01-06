@@ -3,10 +3,9 @@ keywords: Experience Platform;api de destino;activación ad hoc;activar segmento
 solution: Experience Platform
 title: Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc
 description: Este artículo ilustra el flujo de trabajo completo para activar segmentos de audiencia mediante la API de activación ad hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 1%

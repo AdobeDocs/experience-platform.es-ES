@@ -3,10 +3,9 @@ keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Conectarse a destinos por lotes y activar datos mediante la API de servicio de flujo
 description: Instrucciones paso a paso para utilizar la API de servicio de flujo para crear un almacenamiento en nube por lotes o un destino de marketing por correo electrónico en el Experience Platform y activar los datos
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '3420'
 ht-degree: 2%

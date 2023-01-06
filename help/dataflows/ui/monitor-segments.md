@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;monitorizar segmentos;monitorizar flujos de datos;flujos de datos;segmentación
 description: La segmentación le permite crear segmentos y audiencias a partir de los datos del perfil del cliente en tiempo real. Este tutorial proporciona instrucciones sobre cómo monitorizar los flujos de datos durante la segmentación mediante la interfaz de usuario del Experience Platform.
 title: Monitorizar flujos de datos para segmentos en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 1%

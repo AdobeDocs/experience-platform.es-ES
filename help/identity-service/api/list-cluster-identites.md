@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;identidades de lista;clúster de lista
 solution: Experience Platform
 title: Enumerar todas las identidades en un clúster
-topic-legacy: API guide
 description: Las identidades relacionadas en un gráfico de identidad, independientemente del área de nombres, se consideran parte del mismo "clúster" en ese gráfico de identidad. Las siguientes opciones proporcionan los medios para acceder a todos los miembros del clúster.
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;ETL;etl;integraciones de etl;integraciones de ETL
 solution: Experience Platform
 title: Desarrollo de integraciones de ETL para Adobe Experience Platform
-topic-legacy: overview
 description: La guía de integración de ETL describe los pasos generales para crear conectores seguros y de alto rendimiento para el Experience Platform y la ingesta de datos en Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '4075'
 ht-degree: 1%
@@ -25,11 +24,11 @@ La guía de integración de ETL describe los pasos generales para crear conector
 
 Esta guía también incluye ejemplos de llamadas a la API para utilizar al diseñar un conector de ETL, con vínculos a documentación que describe cada [!DNL Experience Platform] y uso de su API, en más detalle.
 
-A sample integration is available on [!DNL GitHub] via the [ETL Ecosystem Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) under the [!DNL Apache] License Version 2.0.
+Una integración de muestra está disponible en [!DNL GitHub] a través de la variable [Código de referencia de la integración del ecosistema ETL](https://github.com/adobe/acp-data-services-etl-reference) en el [!DNL Apache] Versión de licencia 2.0.
 
 ## Flujo de trabajo
 
-The following workflow diagram provides a high-level overview for the integration of Adobe Experience Platform components with an ETL application and connector.
+El siguiente diagrama de flujo de trabajo proporciona una descripción general de alto nivel para la integración de componentes de Adobe Experience Platform con una aplicación y un conector de ETL.
 
 ![](images/etl.png)
 
@@ -40,11 +39,11 @@ Hay varios componentes de Experience Platform involucrados en las integraciones 
 - **Sistema Identity Management de Adobe (IMS)** : proporciona un marco para la autenticación en los servicios de Adobe.
 - **Organización IMS** - Una entidad corporativa que puede poseer o licenciar productos y servicios y permitir el acceso a sus miembros.
 - **Usuario IMS** - Miembros de una organización IMS. La relación entre Organización y Usuario es de varios a muchos.
-- **[!DNL Sandbox]** - A virtual partition a single [!DNL Platform] instance, to help develop and evolve digital experience applications.
-- **Data Discovery** - Records the metadata of ingested and transformed data in [!DNL Experience Platform].
+- **[!DNL Sandbox]** - Una partición virtual [!DNL Platform] por ejemplo, para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- **Detección de datos** - Registra los metadatos de datos introducidos y transformados en [!DNL Experience Platform].
 - **[!DNL Data Access]** : proporciona a los usuarios una interfaz para acceder a sus datos en [!DNL Experience Platform].
-- **[!DNL Data Ingestion]** – Pushes data to [!DNL Experience Platform] with [!DNL Data Ingestion] APIs.
-- **[!DNL Schema Registry]** - Defines and stores schema that describe the structure of data to be used in [!DNL Experience Platform].
+- **[!DNL Data Ingestion]** - Inserta datos en [!DNL Experience Platform] con [!DNL Data Ingestion] API.
+- **[!DNL Schema Registry]** - Define y almacena un esquema que describe la estructura de datos a utilizar en [!DNL Experience Platform].
 
 ## Introducción a [!DNL Experience Platform] API
 
@@ -164,15 +163,15 @@ La respuesta incluye tres (`limit=3`) conjuntos de datos que muestran &quot;name
 
 ### Ver esquema del conjunto de datos
 
-La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene una URI que hace referencia al esquema XDM en el que se basa el conjunto de datos. The XDM schema (&quot;schemaRef&quot;) represents all potential fields that could be used by the dataset, not necessarily the fields that are being used (see &quot;observableSchema&quot; below).
+La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene una URI que hace referencia al esquema XDM en el que se basa el conjunto de datos. El esquema XDM (&quot;schemaRef&quot;) representa todos los campos potenciales que podría utilizar el conjunto de datos, no necesariamente los campos que se están utilizando (consulte &quot;observableSchema&quot; más adelante).
 
 El esquema XDM es el esquema que se utiliza cuando se necesita presentar al usuario una lista de todos los campos disponibles en los que se puede escribir.
 
-The first &quot;schemaRef.id&quot; value in the previous response object (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) is a URI that points to a specific XDM schema in the [!DNL Schema Registry]. The schema can be retrieved by making a lookup (GET) request to the [!DNL Schema Registry] API.
+El primer valor &quot;schemaRef.id&quot; en el objeto de respuesta anterior (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) es un URI que señala a un esquema XDM específico en la variable [!DNL Schema Registry]. El esquema se puede recuperar realizando una solicitud de búsqueda (GET) al [!DNL Schema Registry] API.
 
 >[!NOTE]
 >
->La propiedad &quot;schemaRef&quot; reemplaza la propiedad ahora obsoleta &quot;schema&quot; . If &quot;schemaRef&quot; is absent from the dataset or does not contain a value, you will need to check for the presence of a &quot;schema&quot; property. This could be done by replacing &quot;schemaRef&quot; with &quot;schema&quot; in the `properties` query parameter in the previous call. More details on the &quot;schema&quot; property are available in the [Dataset &quot;schema&quot; Property](#dataset-schema-property-deprecated---eol-2019-05-30) section that follows.
+>La propiedad &quot;schemaRef&quot; reemplaza la propiedad ahora obsoleta &quot;schema&quot; . Si &quot;schemaRef&quot; está ausente del conjunto de datos o no contiene un valor, deberá comprobar la presencia de una propiedad &quot;schema&quot;. Esto se puede hacer reemplazando &quot;schemaRef&quot; por &quot;schema&quot; en la variable `properties` parámetro de consulta en la llamada anterior. Encontrará más información sobre la propiedad &quot;schema&quot; en la [Propiedad &quot;schema&quot; del conjunto de datos](#dataset-schema-property-deprecated---eol-2019-05-30) que sigue.
 
 **Formato de API**
 
@@ -194,7 +193,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
 ```
 
-The response format depends on the type of Accept header sent in the request. Las solicitudes de búsqueda también requieren un `version` se incluya en el encabezado Accept . La siguiente tabla describe los encabezados Accept disponibles para las búsquedas:
+El formato de respuesta depende del tipo de encabezado Accept enviado en la solicitud. Las solicitudes de búsqueda también requieren un `version` se incluya en el encabezado Accept . La siguiente tabla describe los encabezados Accept disponibles para las búsquedas:
 
 | Accept | Descripción |
 | ------ | ----------- |
@@ -761,13 +760,13 @@ Es posible que se requiera la reproducción por lotes y el reprocesamiento de da
 
 Para ello, los administradores de datos del cliente utilizarán la variable [!DNL Platform] IU para eliminar los lotes que contienen datos dañados. Entonces, es probable que se deba volver a ejecutar el ETL, lo que se rerellenará con los datos correctos. Si la fuente en sí tenía datos dañados, el ingeniero/administrador de datos deberá corregir los lotes de origen y volver a introducir los datos (ya sea en Adobe Experience Platform o a través de conectores ETL).
 
-Based upon the type of data being generated, it will be the data engineer&#39;s choice to remove a single batch or all batches from certain datasets. Los datos se eliminarán o archivarán según [!DNL Experience Platform] directrices.
+En función del tipo de datos que se generen, la elección del ingeniero de datos será eliminar un único lote o todos los lotes de ciertos conjuntos de datos. Los datos se eliminarán o archivarán según [!DNL Experience Platform] directrices.
 
-It is a likely scenario that the ETL functionality to purge data will be important.
+Es probable que la funcionalidad de ETL para depurar datos sea importante.
 
 Una vez finalizada la depuración, los administradores del cliente deberán reconfigurar Adobe Experience Platform para reiniciar el procesamiento de los servicios principales desde el momento en que se eliminen los lotes.
 
-## Concurrent batch processing
+## Procesamiento por lotes simultáneo
 
 A criterio del cliente, los administradores/ingenieros de datos pueden decidir extraer, transformar y cargar datos de manera secuencial o concurrente según las características de un conjunto de datos en particular. Esto también se basará en el caso de uso al que se dirige el cliente con los datos transformados.
 
@@ -787,7 +786,7 @@ Adobe Experience Platform no identifica actualmente los datos diferidos, por lo 
 
 | Fecha | Acción | Descripción |
 | ---- | ------ | ----------- |
-| 19-01-2019 | Se ha eliminado la propiedad &quot;fields&quot; de los conjuntos de datos | Anteriormente, los conjuntos de datos incluían una propiedad &quot;fields&quot; que contenía una copia del esquema. Esta capacidad ya no debe usarse. Si se encuentra la propiedad &quot;fields&quot;, se debe ignorar y usar en su lugar el &quot;observationSchema&quot; o &quot;schemaRef&quot;. |
+| 2019-01-19 | Se ha eliminado la propiedad &quot;fields&quot; de los conjuntos de datos | Anteriormente, los conjuntos de datos incluían una propiedad &quot;fields&quot; que contenía una copia del esquema. Esta capacidad ya no debe usarse. Si se encuentra la propiedad &quot;fields&quot;, se debe ignorar y usar en su lugar el &quot;observationSchema&quot; o &quot;schemaRef&quot;. |
 | 2019-03-15 | Propiedad &quot;schemaRef&quot; agregada a conjuntos de datos | La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene una URI que hace referencia al esquema XDM en el que se basa el conjunto de datos y representa todos los campos potenciales que podría utilizar el conjunto de datos. |
 | 2019-03-15 | Todos los identificadores de usuario final se asignan a la propiedad &quot;identityMap&quot;. | &quot;identityMap&quot; es una encapsulación de todos los identificadores únicos de un asunto, como ID de CRM, ECID o ID de programa de fidelidad. Este mapa lo utiliza [[!DNL Identity Service]](../identity-service/home.md) para resolver todas las identidades conocidas y anónimas de un sujeto, formando un único gráfico de identidad para cada usuario final. |
-| 30-05-2019 | EOL y Eliminar la propiedad &quot;schema&quot; de los conjuntos de datos | La propiedad &quot;schema&quot; del conjunto de datos proporcionó un vínculo de referencia al esquema mediante el desaprobada `/xdms` en la variable [!DNL Catalog] API. Esto se ha reemplazado por un &quot;schemaRef&quot; que proporciona el &quot;id&quot;, &quot;version&quot; y &quot;contentType&quot; del esquema como se hace referencia en el nuevo [!DNL Schema Registry] API. |
+| 2019-05-30 | EOL y Eliminar la propiedad &quot;schema&quot; de los conjuntos de datos | La propiedad &quot;schema&quot; del conjunto de datos proporcionó un vínculo de referencia al esquema mediante el desaprobada `/xdms` en la variable [!DNL Catalog] API. Esto se ha reemplazado por un &quot;schemaRef&quot; que proporciona el &quot;id&quot;, &quot;version&quot; y &quot;contentType&quot; del esquema como se hace referencia en el nuevo [!DNL Schema Registry] API. |

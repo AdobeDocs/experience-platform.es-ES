@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;identidad;identidad;gráficos XDM;servicio de identidad;servicio de identidad
 solution: Experience Platform
 title: Información general del servicio de identidad
-topic-legacy: overview
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor visión de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales y impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%
@@ -44,11 +43,11 @@ Cada día, los clientes interactúan con su empresa y establecen una relación c
 Veamos un ejemplo cotidiano de la relación de un consumidor con su marca:
 
 - Mary tiene una cuenta en su sitio de comercio electrónico donde ha completado algunos pedidos en el pasado. Ella suele usar su laptop personal para comprar, donde inicia sesión cada vez. Sin embargo, durante una de sus visitas usa su tableta para comprar sandalias, pero no realiza un pedido y no inicia sesión.
-- En este punto, la actividad de Mary aparece como dos perfiles independientes:
+- En este punto, la actividad de Mary aparece como dos perfiles separados:
    - Su inicio de sesión en comercio electrónico
    - Su dispositivo tableta, tal vez identificado por el ID del dispositivo
 - Más tarde, Mary reanuda su sesión en la tableta y proporciona su dirección de correo electrónico cuando se suscribe a la newsletter. Al hacerlo, la transmisión por secuencias de ingesta agrega una nueva identidad como datos de registro dentro de su perfil. Como resultado, [!DNL Identity Service] ahora relaciona la actividad del dispositivo tableta de Mary con su historial de cuenta de comercio electrónico.
-- Al hacer clic en su tableta, el contenido de destino podría reflejar el perfil completo y la historia de Mary, en lugar de una tableta utilizada por un comprador desconocido.
+- Al hacer clic en su tableta, el contenido objetivo podría reflejar el perfil completo y la historia de Mary, en lugar de una tableta usada por un comprador desconocido.
 
 ![Vinculación de identidad en la plataforma](./images/identity-service-stitching.png)
 

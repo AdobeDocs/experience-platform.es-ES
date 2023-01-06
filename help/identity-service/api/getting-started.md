@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;api de servicio de identidad;guía para desarrolladores de servicios de identidad;región
 solution: Experience Platform
 title: Guía de API del servicio de identidad
-topic-legacy: API guide
 description: La API del servicio de identidad permite a los desarrolladores administrar la identificación de clientes entre dispositivos, canales cruzados y casi en tiempo real mediante gráficos de identidad en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 3%
