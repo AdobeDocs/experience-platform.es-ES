@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;acceso a datos;api de acceso a datos;acceso a datos de consulta
 solution: Experience Platform
 title: Ver datos de conjuntos de datos mediante la API de acceso a datos
-topic-legacy: tutorial
 type: Tutorial
 description: Obtenga información sobre cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos en Adobe Experience Platform. También se le presentarán algunas de las funciones únicas de la API de acceso a datos, como paginación y descargas parciales.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1390'
 ht-degree: 4%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;conjunto de datos;conjunto de datos;crear un conjunto de datos;crear conjunto de datos
 solution: Experience Platform
 title: Creación de un conjunto de datos mediante API
-topic-legacy: datasets
 description: Este documento proporciona pasos generales para crear un conjunto de datos mediante las API de Adobe Experience Platform y rellenar el conjunto de datos mediante un archivo.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 2%

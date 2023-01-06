@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;catálogo;api;reemplazar un objeto
 solution: Experience Platform
 title: Reemplazar un objeto de catálogo
-topic-legacy: developer guide
 description: Puede sobrescribir el contenido de un objeto Catalog mediante una solicitud de PUT, donde todo el recurso se reemplaza por la carga útil de la solicitud.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;filtrar;filtrar;filtrar datos;filtrar datos
 solution: Experience Platform
 title: Lista de objetos del catálogo
-topic-legacy: developer guide
 description: Puede recuperar una lista de todos los objetos disponibles de un tipo específico mediante una sola llamada a la API, siendo recomendable incluir filtros que limiten el tamaño de la respuesta.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 2%

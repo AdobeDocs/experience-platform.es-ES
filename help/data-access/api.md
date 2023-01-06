@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;acceso a datos;python sdk;spark sdk;api de acceso a datos;exportar;Exportar
 solution: Experience Platform
 title: Guía de API de acceso a datos
-topic-legacy: developer guide
 description: La API de acceso a datos admite Adobe Experience Platform al proporcionar a los desarrolladores una interfaz RESTful centrada en la capacidad de detección y accesibilidad de conjuntos de datos ingestados dentro de Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 6%
@@ -240,4 +239,4 @@ Para obtener más ejemplos, consulte la [tutorial de acceso a datos](tutorials/d
 
 ## Suscripción a eventos de ingesta de datos
 
-[!DNL Platform] permite la suscripción de eventos específicos de alto valor mediante la variable [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a los eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial en [suscripción a notificaciones de ingesta de datos](../ingestion/quality/subscribe-events.md) para obtener más información.
+[!DNL Platform] permite la suscripción de eventos específicos de alto valor mediante la variable [Consola de Adobe Developer](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a los eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial en [suscripción a notificaciones de ingesta de datos](../ingestion/quality/subscribe-events.md) para obtener más información.

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;privacidad del lago de datos;áreas de nombres de identidad;privacidad;lago de datos
 solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en el lago de datos
-topic-legacy: overview
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes de acceso, exclusión de la venta o eliminación de sus datos personales según lo establecido en las normas legales y de privacidad de la organización. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en el lago de datos.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 1%
