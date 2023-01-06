@@ -1,16 +1,15 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;perfil unificado;perfil unificado;unificado;perfil;rtcp;gráficos XDM
 title: Funciones generales de accesibilidad en Platform
-topic-legacy: guide
 type: Documentation
 description: Obtenga más información sobre las funciones generales de accesibilidad compatibles con Adobe Experience Platform, incluida la navegación mediante teclado, las paletas de color y el contraste, y la compatibilidad con la tecnología de asistencia.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '484'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Funciones de accesibilidad en el Experience Platform
 
@@ -36,7 +35,7 @@ Los siguientes elementos de navegación facilitan la accesibilidad:
 
 ## Paletas de color y contraste
 
-El Experience Platform se esfuerza por lograr la conformidad con [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/), incluidos los requisitos para el contraste de color. La interfaz de usuario del Experience Platform proporciona suficiente contraste en la aplicación para garantizar una experiencia de visualización accesible para los usuarios con deficiencias de visión o color bajas.
+El Experience Platform se esfuerza por [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) conformidad, incluidos los requisitos para el contraste de color. La interfaz de usuario del Experience Platform proporciona suficiente contraste en la aplicación para garantizar una experiencia de visualización accesible para los usuarios con deficiencias de visión o color bajas.
 
 ![La paleta de colores y el contraste presentes en la página principal de la interfaz de usuario del Experience Platform.](images/homepage.png)
 
@@ -44,4 +43,4 @@ El Experience Platform se esfuerza por lograr la conformidad con [WCAG 2.1 AA](h
 
 Al agregar datos, crear esquemas o definir segmentos, los campos obligatorios se indican visualmente, utilizando un asterisco junto a la etiqueta de texto de un campo y programáticamente. Estos campos déclencheur la validación cuando se introducen datos no válidos en los campos y al guardarlos. Si un campo requerido no supera la validación, aparece delineado en rojo con un icono de error y también aparece una descripción por escrito del problema que debe solucionarse.
 
-![Cierre de un campo obligatorio que no haya pasado la validación. El campo aparece en rojo y hay un icono de error.](images/field-validation.png)
+![Cierre de un campo obligatorio que no haya pasado la validación. El campo aparece en rojo y hay un icono de error presente.](images/field-validation.png)

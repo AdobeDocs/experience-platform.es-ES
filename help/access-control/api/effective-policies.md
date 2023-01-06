@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;políticas efectivas;api de control de acceso
 solution: Experience Platform
 title: Punto final de API de directivas efectivas
-topic-legacy: developer guide
 description: Obtenga información sobre cómo ver las políticas de acceso efectivas mediante la API de control de acceso para Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 2%

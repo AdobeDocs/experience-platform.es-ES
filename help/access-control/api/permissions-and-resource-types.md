@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;permisos de control de acceso;tipos de recursos de control de acceso;api de control de acceso
 solution: Experience Platform
 title: Punto final de API de referencia
-topic-legacy: developer guide
 description: El punto final de referencia en la API de control de acceso le permite ver los nombres de los permisos disponibles y los tipos de recursos, que se pueden utilizar para ver políticas de control de acceso efectivas para el usuario actual.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 2%

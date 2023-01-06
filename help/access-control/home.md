@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de acceso;adobe admin console
 solution: Experience Platform
-topic-legacy: overview
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto del Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: e2d3267715f693a321b2f4ce1bae0650f38c21d7
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '1419'
 ht-degree: 4%
