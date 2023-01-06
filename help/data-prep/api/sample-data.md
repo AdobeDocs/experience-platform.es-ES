@@ -2,9 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;preparación de datos;guía de api;datos de ejemplo;
 solution: Experience Platform
 title: Punto final de API de datos de muestra
-topic-legacy: sample data
-description: 'Puede utilizar el extremo `/samples` en la API de Adobe Experience Platform para recuperar, crear, actualizar y validar mediante programación datos de ejemplo de asignación. '
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+description: Puede utilizar el extremo `/samples` en la API de Adobe Experience Platform para recuperar, crear, actualizar y validar mediante programación datos de ejemplo de asignación.
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 6%

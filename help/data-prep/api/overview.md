@@ -1,11 +1,9 @@
 ---
 keywords: Experience Platform;preparación de datos;api de preparación de datos;solución de problemas;API
 title: Información general sobre la API de preparación de datos
-topic-legacy: guide
 description: La API de preparación de datos permite crear conjuntos y funciones de asignación mediante programación, lo que permite transformar los datos entre esquemas de origen y destino.
 exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 1%
@@ -16,20 +14,20 @@ ht-degree: 1%
 
 La preparación de datos permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el Modelo de datos de experiencia (XDM). La preparación de datos aparece como un paso de &quot;mapa&quot; en los procesos de ingesta de datos, incluido el flujo de trabajo de ingesta de CSV.
 
-La API del servicio de asignación, también conocida como API de preparación de datos, incluye varios extremos descritos a continuación. Visite las guías de puntos finales individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, leer llamadas de API de ejemplo y más.
+La API del servicio de asignación, también conocida como API de preparación de datos, incluye varios extremos descritos a continuación. Visite las guías de puntos de conexión individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, leer llamadas de API de ejemplo y más.
 
 ## Funciones
 
-Las funciones de conjunto de asignaciones permiten transformar los datos entre esquemas de origen y destino. Puede utilizar el extremo `/languages/el` para validar sus expresiones, así como obtener una lista de todas las funciones y operaciones disponibles del conjunto de asignaciones.
+Las funciones de conjunto de asignaciones permiten transformar los datos entre esquemas de origen y destino. Puede usar la variable `/languages/el` para validar las expresiones y obtener una lista de todas las funciones y operaciones disponibles del conjunto de asignaciones.
 
 Para obtener información detallada sobre cómo utilizar las funciones de conjunto de asignaciones, lea la [guía de extremo de funciones](./functions.md).
 
 ## Conjunto de asignaciones
 
-Los conjuntos de asignaciones se pueden utilizar para definir cómo se asignan los datos de un esquema de origen al de un esquema de destino. Puede utilizar el extremo `/mappingSets` de la API de preparación de datos para recuperar, crear, actualizar y validar conjuntos de asignación mediante programación.
+Los conjuntos de asignaciones se pueden utilizar para definir cómo se asignan los datos de un esquema de origen al de un esquema de destino. Puede usar la variable `/mappingSets` en la API de preparación de datos para recuperar, crear, actualizar y validar conjuntos de asignación mediante programación.
 
-Para obtener información detallada sobre cómo utilizar los conjuntos de asignaciones, lea la [guía de extremo del conjunto de asignaciones](./mapping-set.md).
+Para obtener información detallada sobre cómo utilizar los conjuntos de asignaciones, lea la [guía de extremo de conjunto de asignaciones](./mapping-set.md).
 
 ## Pasos siguientes
 
-Para empezar a realizar llamadas mediante la API del servicio de asignación, lea la [guía de introducción](./getting-started.md) y, a continuación, seleccione una de las guías de punto final para aprender a utilizar los puntos finales específicos.
+Para empezar a realizar llamadas mediante la API del servicio de asignación, lea la [guía de introducción](./getting-started.md) a continuación, seleccione una de las guías de punto final para aprender a utilizar los puntos finales específicos.

@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;
 title: Guía de solución de problemas de preparación de datos
-topic-legacy: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre la preparación de datos de Adobe Experience Platform.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 0%

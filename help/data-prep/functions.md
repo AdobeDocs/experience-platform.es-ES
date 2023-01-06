@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía de ui;mapper;asignación;campos de asignación;funciones de asignación
 solution: Experience Platform
 title: Funciones de asignación de preparación de datos
-topic-legacy: overview
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '4367'
 ht-degree: 4%
@@ -206,9 +205,9 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| to_bigint | Convierte una cadena en BigInteger. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un BigInteger.</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;1000000.34&quot;) | 100000,34 |
-| to_decimal | Convierte una cadena en Double. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un valor Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20,5 |
-| to_float | Convierte una cadena en flotante. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en Float.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
+| to_bigint | Convierte una cadena en BigInteger. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un BigInteger.</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;1000000.34&quot;) | 1000000.34 |
+| to_decimal | Convierte una cadena en Double. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un valor Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
+| to_float | Convierte una cadena en flotante. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en Float.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | Convierte una cadena en un entero. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un entero.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
 {style=&quot;table-layout:auto&quot;}
