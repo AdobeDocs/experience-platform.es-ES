@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;monitorización;monitorización;flujos de datos;monitorizar consumo;consumo de datos;ingesta de datos;ver registros;ver lotes;
 solution: Experience Platform
 title: Monitorización de la ingesta de datos
-topic-legacy: overview
 description: En esta guía del usuario se proporcionan pasos sobre cómo monitorizar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%

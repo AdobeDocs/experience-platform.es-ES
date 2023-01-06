@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;calidad de datos;calidad;calidad;validación admitida;validación;validación admitida;
 solution: Experience Platform
 title: Calidad de los datos
-topic-legacy: overview
 description: El siguiente documento proporciona un resumen de las comprobaciones y los comportamientos de validación admitidos para la ingesta por lotes y flujos en Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 7857b9a82dc1b5e12c9f8d757f6967b926124ec4
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 5%

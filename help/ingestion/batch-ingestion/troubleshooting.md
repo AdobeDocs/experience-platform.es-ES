@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;datos ingestados;solución de problemas;preguntas frecuentes;ingesta por lotes;ingesta por lotes;
 solution: Experience Platform
 title: Guía de solución de problemas de ingesta de lotes
-topic-legacy: troubleshooting
 description: Esta documentación ayudará a responder a las preguntas más frecuentes sobre las API de ingesta de datos por lotes de Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;notificaciones de ingesta de datos;notificaciones;eventos de suscripción;eventos de estado de ingesta de datos;eventos de estado;suscripción;notificaciones de estado;
 solution: Experience Platform
 title: Notificaciones de ingesta de datos
-topic-legacy: overview
 description: Para ayudar a monitorizar el proceso de ingesta, Adobe Experience Platform permite suscribirse a un conjunto de eventos que se publican en cada paso del proceso y le notifican el estado de los datos introducidos y los posibles errores.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%

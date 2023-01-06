@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;ingesta de transmisión;ingesta;transmisión de varios mensajes;varios mensajes;
 solution: Experience Platform
 title: Enviar varios mensajes en una sola solicitud HTTP
-topic-legacy: tutorial
 type: Tutorial
 description: Este documento proporciona un tutorial para enviar varios mensajes a Adobe Experience Platform dentro de una única solicitud HTTP mediante la ingesta de flujo continuo.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1493'
 ht-degree: 1%

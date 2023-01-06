@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía de ui;
 solution: Experience Platform
 title: Asignación de un archivo CSV a un esquema XDM existente
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM existente mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%

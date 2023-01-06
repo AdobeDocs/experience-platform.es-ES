@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;ingesta de datos;lote;habilitar conjunto de datos;información general sobre ingesta por lotes;información general;información general sobre ingesta por lotes
 solution: Experience Platform
 title: Información general sobre la API de ingesta de lotes
-topic-legacy: overview
 description: La API de ingesta de datos de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos introducidos pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1387'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -61,16 +60,16 @@ Por ejemplo, ni JSON ni CSV tienen un `date` o `date-time` tipo . Como resultado
 
 La tabla siguiente muestra las conversiones admitidas al introducir datos.
 
-| Entrante (fila) frente a Target (col.) | Cadena | Byte | Corto | Número entero | Largo | Duplicada | Fecha | Date-Time | Objeto | Mapa |
+| Entrante (fila) frente a Target (col.) | Cadena | Byte | corto | Número entero | Largo | Doble | Fecha | Fecha-hora | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Cadena | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
-| Corto | X | X | X | X | X | X |  |  |  |  |
+| corto | X | X | X | X | X | X |  |  |  |  |
 | Número entero | X | X | X | X | X | X |  |  |  |  |
 | Largo | X | X | X | X | X | X | X | X |  |  |
-| Duplicada | X | X | X | X | X | X |  |  |  |  |
+| Doble | X | X | X | X | X | X |  |  |  |  |
 | Fecha |  |  |  |  |  |  | X |  |  |  |
-| Date-Time |  |  |  |  |  |  |  | X |  |  |
+| Fecha-hora |  |  |  |  |  |  |  | X |  |  |
 | Objeto |  |  |  |  |  |  |  |  | X | X |
 | Mapa |  |  |  |  |  |  |  |  | X | X |
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;flujo continuo;ingesta de transmisión;validación de ingesta de transmisión;validación;validación;validación de ingesta de transmisión;validación;validación sincrónica;validación sincrónica;validación asincrónica;validación asincrónica;validación asincrónica;
 solution: Experience Platform
 title: Validación de ingesta de flujos
-topic-legacy: tutorial
 type: Tutorial
 description: 'La introducción por transmisión le permite cargar sus datos en Adobe Experience Platform mediante la transmisión de puntos de conexión en tiempo real. Las API de ingesta de transmisión admiten dos modos de validación: sincrónica y asincrónica.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 4%
@@ -72,7 +71,7 @@ Si un mensaje falla durante la validación sincrónica, el mensaje no se escribi
 
 >[!NOTE]
 >
->Es posible que los cambios en el esquema no estén disponibles inmediatamente, ya que los cambios se almacenan en la caché. Espere hasta quince minutos para que la caché se actualice.
+>Es posible que los cambios del esquema no estén disponibles inmediatamente, ya que los cambios se almacenan en la caché. Espere hasta quince minutos para que la caché se actualice.
 
 **Formato de API**
 

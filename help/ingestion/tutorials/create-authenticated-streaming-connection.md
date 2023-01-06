@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;conexión de flujo autenticada;conexión de flujo continuo;crear conexión de flujo continuo autenticada;creación de conexión de flujo continuo autenticada;ingesta de flujo;ingesta;
 solution: Experience Platform
 title: Crear una conexión de flujo autenticada
-topic-legacy: tutorial
 type: Tutorial
 description: La recopilación de datos autenticados permite que los servicios de Adobe Experience Platform, como el Perfil del cliente en tiempo real y la identidad, diferencien entre registros procedentes de fuentes de confianza y fuentes de confianza.
 exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%

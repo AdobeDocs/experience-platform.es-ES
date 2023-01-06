@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;ingesta por lotes;ingesta por lotes;ingesta parcial;ingesta parcial;error de recuperación;ingesta parcial por lotes;ingesta parcial por lotes;parcial;ingesta;ingesta parcial;ingesta;ingesta
 solution: Experience Platform
 title: Información general sobre la ingesta parcial de lotes
-topic-legacy: overview
 description: Este documento proporciona un tutorial para administrar la ingesta parcial de lotes.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%

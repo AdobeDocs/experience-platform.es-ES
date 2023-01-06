@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;ingesta por lotes;ingesta por lotes;ingesta parcial;ingesta parcial;recuperación de error;recuperación de error;ingesta parcial por lotes;ingesta parcial por lotes;parcial;ingesta;ingesta;ingesta;diagnósticos de error;recuperar diagnósticos de error;obtener diagnósticos de error;obtener error;obtener errores;recuperar errores;
 solution: Experience Platform
 title: Recuperación de diagnósticos de error de ingesta de datos
-topic-legacy: overview
 description: Este documento proporciona información sobre la monitorización de la ingesta de lotes, la administración de errores de ingesta parcial de lotes, así como una referencia para tipos de ingesta parcial de lotes.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 3%

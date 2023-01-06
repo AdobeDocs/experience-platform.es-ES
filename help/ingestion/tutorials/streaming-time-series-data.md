@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;ingesta de transmisión;ingesta;datos de series temporales;datos de series temporales de transmisión;
 solution: Experience Platform
 title: Transmisión de datos de series temporales mediante API de ingesta de transmisión
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 2%

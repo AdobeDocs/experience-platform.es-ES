@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;flujo continuo;ingesta de transmisión;solución de problemas;solución de problemas de ingesta de transmisión;preguntas frecuentes sobre ingesta de transmisión;preguntas frecuentes sobre transmisión;faq;
 solution: Experience Platform
 title: Guía de solución de problemas de ingesta de transmisión
-topic-legacy: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre la transmisión por secuencias de comandos en Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
