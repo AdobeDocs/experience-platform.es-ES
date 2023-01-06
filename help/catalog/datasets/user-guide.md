@@ -5,7 +5,7 @@ title: Guía de la interfaz de usuario de conjuntos de datos
 topic-legacy: datasets
 description: Aprenda a realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Para habilitar un conjunto de datos para Perfil, acceda a su **[!UICONTROL Activ
 
 Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la [Información general sobre la administración de datos](../../data-governance/home.md) para obtener más información sobre las etiquetas, o consulte la [guía del usuario de etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener instrucciones sobre cómo aplicar etiquetas a conjuntos de datos.
 
-## Eliminación de un conjunto de datos
+## Eliminación de un conjunto de datos {#delete}
 
 Puede eliminar un conjunto de datos accediendo primero a su **[!UICONTROL Actividad del conjunto de datos]** en el Navegador. A continuación, seleccione **[!UICONTROL Eliminar conjunto de datos]** para eliminarlo.
 
