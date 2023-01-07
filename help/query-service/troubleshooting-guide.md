@@ -5,9 +5,9 @@ title: Guía de solución de problemas del servicio de consultas
 topic-legacy: troubleshooting
 description: Este documento contiene preguntas y respuestas comunes relacionadas con el servicio de consulta. Los temas incluyen, exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
+source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4383'
 ht-degree: 1%
 
 ---
@@ -531,6 +531,11 @@ WHERE T2.ID IS NULL
 ### ¿Puedo controlar el acceso a conjuntos de datos y columnas específicos para una conexión determinada? ¿Cómo se configura esto?
 
 +++Respuesta Sí, el control de acceso basado en atributos se aplica si está configurado. Consulte la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md) para obtener más información.
++++
+
+### ¿Admite el servicio de consulta el comando &quot;INSERTAR SOBREESCRITURA EN&quot;?
+
++++Respuesta No, el servicio de consulta no admite el comando &quot;INSERTAR SOBREESCRITURA EN&quot;.
 +++
 
 ## Exportación de datos {#exporting-data}
