@@ -2,13 +2,12 @@
 keywords: Experience Platform;guía del usuario;ai de atribución;temas populares;región
 feature: Attribution AI
 title: Guía de la interfaz de usuario de Attribution AI
-topic-legacy: User guide
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2960'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 

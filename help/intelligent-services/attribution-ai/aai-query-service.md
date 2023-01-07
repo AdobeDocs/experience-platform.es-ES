@@ -2,10 +2,9 @@
 keywords: perspectivas;ai de atribución;perspectivas de ai de atribución;servicio de consulta AAI;consultas de atribución;puntuaciones de atribución
 feature: Attribution AI
 title: Análisis de puntuaciones de atribución mediante el servicio de consulta
-topic-legacy: Attribution AI queries
 description: Aprenda a utilizar el servicio de consulta de Adobe Experience Platform para analizar las puntuaciones de Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 # Análisis de puntuaciones de atribución mediante el servicio de Consulta
 
-Cada fila de los datos representa una conversión, en la que la información de los puntos de contacto relacionados se almacena como una matriz de estructuras en la columna `touchpointsDetail`.
+Cada fila de los datos representa una conversión, en la que la información de los puntos de contacto relacionados se almacena como una matriz de estructuras en la `touchpointsDetail` para abrir el Navegador.
 
 | Información de Touchpoint | Columna |
 | ---------------------- | ------ |
@@ -24,7 +23,7 @@ Cada fila de los datos representa una conversión, en la que la información de 
 
 ## Búsqueda de rutas de datos
 
-En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Datasets]** en el panel de navegación izquierdo. Aparece la página **[!UICONTROL Conjuntos de datos]**. A continuación, seleccione la pestaña **[!UICONTROL Browse]** y busque el conjunto de datos de salida para sus puntuaciones de Attribution AI.
+En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo. La variable **[!UICONTROL Conjuntos de datos]** se abre. A continuación, seleccione la **[!UICONTROL Examinar]** y busque el conjunto de datos de salida para sus puntuaciones de Attribution AI.
 
 ![Acceso a la instancia](./images/aai-query/datasets_browse.png)
 
@@ -32,7 +31,7 @@ Seleccione el conjunto de datos de salida. Aparece la página de actividad del c
 
 ![página de actividad del conjunto de datos](./images/aai-query/select_preview.png)
 
-En la página de actividad del conjunto de datos, seleccione **[!UICONTROL Vista previa del conjunto de datos]** en la esquina superior derecha para obtener una vista previa de los datos y asegurarse de que se introdujeron según lo esperado.
+En la página de actividad del conjunto de datos, seleccione **[!UICONTROL Vista previa del conjunto de datos]** en la esquina superior derecha para obtener una vista previa de los datos y asegurarse de que se han introducido según lo esperado.
 
 ![vista previa del conjunto de datos](./images/aai-query/preview_dataset.JPG)
 
@@ -40,29 +39,29 @@ Después de obtener una vista previa de los datos, seleccione el esquema en el c
 
 ![seleccione el esquema](./images/aai-query/select_schema.png)
 
-Con el esquema de puntuación, puede seleccionar o buscar un valor. Una vez seleccionado, se abre el carril lateral **[!UICONTROL Field properties]**, que permite copiar la ruta para utilizarla en la creación de consultas.
+Con el esquema de puntuación, puede seleccionar o buscar un valor. Una vez seleccionada, la variable **[!UICONTROL Propiedades del campo]** aperturas del carril lateral que permiten copiar la ruta para utilizarla en la creación de consultas.
 
 ![copiar la ruta](./images/aai-query/copy_path.png)
 
 ## Acceso al servicio de consultas
 
-Para acceder al servicio de consulta desde la interfaz de usuario de Platform, comience seleccionando **[!UICONTROL Consultas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]**. Se carga una lista de las consultas guardadas anteriormente.
+Para acceder al servicio de consulta desde la interfaz de usuario de Platform, comience por seleccionar **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seleccione **[!UICONTROL Examinar]** pestaña . Se carga una lista de las consultas guardadas anteriormente.
 
 ![examinar el servicio de consultas](./images/aai-query/query_tab.png)
 
-A continuación, seleccione **[!UICONTROL Create query]** en la esquina superior derecha. Se carga el Editor de consultas. Con el Editor de consultas puede empezar a crear consultas utilizando los datos de puntuación.
+A continuación, seleccione **[!UICONTROL Crear consulta]** en la esquina superior derecha. Se carga el Editor de consultas. Con el Editor de consultas puede empezar a crear consultas utilizando los datos de puntuación.
 
 ![editor de consultas](./images/aai-query/query_example.png)
 
-Para obtener más información sobre el Editor de consultas, visite la [guía del usuario del Editor de consultas](../../query-service/ui/user-guide.md).
+Para obtener más información sobre el Editor de consultas, visite [Guía del usuario del Editor de consultas](../../query-service/ui/user-guide.md).
 
 ## Plantillas de consulta para análisis de puntuación de atribución
 
-Las consultas siguientes pueden utilizarse como plantilla para distintos escenarios de análisis de puntuación. Debe reemplazar `_tenantId` y `your_score_output_dataset` con los valores adecuados que se encuentran en el esquema de salida de puntuación.
+Las consultas siguientes pueden utilizarse como plantilla para distintos escenarios de análisis de puntuación. Debe reemplazar la variable `_tenantId` y `your_score_output_dataset` con los valores adecuados que se encuentran en el esquema de salida de puntuación.
 
 >[!NOTE]
 >
-> Dependiendo de cómo se introduzcan los datos, los valores utilizados a continuación, como `timestamp`, podrían tener un formato diferente.
+> Según la ingesta de sus datos, los valores utilizados a continuación, como `timestamp` puede tener un formato diferente.
 
 ### Ejemplos de validación
 
@@ -306,7 +305,7 @@ Esta consulta aplana la columna de estructura en varias columnas singulares y ex
 
 >[!TIP]
 >
-> En este ejemplo, debe reemplazar `{COLUMN_NAME}` además de `_tenantId` y `your_score_output_dataset`. La variable `COLUMN_NAME` puede tomar los valores de los nombres de columna opcionales (columnas de informes) que se añadieron durante la configuración de la instancia de Attribution AI. Revise el esquema de salida de puntuación para encontrar los `{COLUMN_NAME}` valores necesarios para completar esta consulta.
+> En este ejemplo, debe reemplazar `{COLUMN_NAME}` además de `_tenantId` y `your_score_output_dataset`. La variable `COLUMN_NAME` puede utilizar los valores de los nombres de columna opcionales (columnas de informes) que se añadieron durante la configuración de la instancia de Attribution AI. Revise el esquema de salida de puntuación para encontrar la variable `{COLUMN_NAME}` valores necesarios para completar esta consulta.
 
 ```sql
 SELECT 

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;servicios inteligentes;temas populares;servicio inteligente;servicio inteligente
 solution: Experience Platform
 title: Información general sobre servicios inteligentes
-topic-legacy: Intelligent Services overview
 description: Los servicios inteligentes potencian a los analistas de marketing y a los profesionales para que aprovechen el poder de la inteligencia artificial y el aprendizaje automático en los casos de uso de experiencias del cliente. Esto permite que los analistas de marketing configuren predicciones específicas de las necesidades de una empresa mediante configuraciones de nivel empresarial sin necesidad de experiencia en ciencia de datos. Además, los profesionales de marketing pueden activar las predicciones en Adobe Experience Cloud, Adobe Experience Platform y aplicaciones de terceros.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%

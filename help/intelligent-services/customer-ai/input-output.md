@@ -3,10 +3,9 @@ keywords: Experience Platform;introducción;ai del cliente;temas populares;entra
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Entrada y salida en Customer AI
-topic-legacy: Getting started
 description: Obtenga más información sobre los eventos, entradas y salidas necesarios que utiliza Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '3195'
 ht-degree: 2%

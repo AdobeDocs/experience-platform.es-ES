@@ -2,10 +2,9 @@
 keywords: Experience Platform;introducción;ai de contenido;ai de comercio;ai de contenido y comercio;extracción de color;extracción de color
 solution: Experience Platform
 title: Extracción de color en la API de IA de contenido y comercio
-topic-legacy: Developer guide
 description: El servicio de extracción de color, cuando se proporciona una imagen, puede calcular el histograma de colores de píxeles y ordenarlos mediante colores dominantes en bloques.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%

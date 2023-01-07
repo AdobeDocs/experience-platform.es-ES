@@ -2,10 +2,9 @@
 keywords: Experience Platform;introducción;ai de atribución;temas populares
 feature: Attribution AI
 title: Introducción a Attribution AI
-topic-legacy: Getting started
 description: Las siguientes guías requieren comprender los distintos servicios de Adobe Experience Platform implicados en el uso de Attribution AI. Antes de comenzar los tutoriales, revise los siguientes documentos.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: a14f857f87482e1468211152976530c718d56e38
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 1%

@@ -3,10 +3,9 @@ keywords: Experience Platform;perspectivas;ai del cliente;temas populares;perspe
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Descubra perspectivas con Customer AI
-topic-legacy: Discovering insights
 description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%
@@ -222,7 +221,7 @@ Los indicadores de modelo de alta calidad incluyen:
 
 ### AUC (Área bajo la curva)
 
-El AUC refleja la fortaleza de la relación entre la clasificación por puntuación y la aparición del objetivo previsto. Un **AUC** de 0,5 significa que el modelo no es mejor que una suposición aleatoria. Un **AUC** de 1 significa que el modelo puede predecir perfectamente quién tomará la acción relevante.
+El AUC refleja la fuerza de la relación entre la clasificación por puntuación y la aparición del objetivo previsto. Un **AUC** de 0,5 significa que el modelo no es mejor que una suposición aleatoria. Un **AUC** de 1 significa que el modelo puede predecir perfectamente quién tomará la acción relevante.
 
 ## Pasos siguientes
 

@@ -3,10 +3,9 @@ keywords: Experience Platform;introducción;ayuda al cliente;temas populares
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Introducción a Customer AI
-topic-legacy: Getting started
 description: Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 1%
