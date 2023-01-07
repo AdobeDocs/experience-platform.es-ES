@@ -2,9 +2,9 @@
 title: Definir una relación entre dos esquemas en Real-time Customer Data Platform B2B Edition
 description: Aprenda a definir una relación "varios a uno" entre dos esquemas en Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Si ve la estructura del esquema de destino, el marcador de relación aparece jun
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, se ha creado correctamente una relación &quot;varios a uno&quot; entre dos esquemas con la variable [!DNL Schema Editor]. Una vez introducidos los datos mediante conjuntos de datos basados en estos esquemas y que se hayan activado los datos en el almacén de datos de perfil, puede utilizar atributos de ambos esquemas para casos de uso de segmentación de varias clases. Consulte la documentación de Real-Time CDP B2B Edition para obtener más información.
+Siguiendo este tutorial, se ha creado correctamente una relación &quot;varios a uno&quot; entre dos esquemas con la variable [!DNL Schema Editor]. Una vez introducidos los datos mediante conjuntos de datos basados en estos esquemas y que se hayan activado los datos en el almacén de datos de perfil, puede utilizar atributos de ambos esquemas para [casos de uso de segmentación de varias clases](../../rtcdp/segmentation/b2b.md).

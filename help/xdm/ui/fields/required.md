@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 title: Definición de campos requeridos en la interfaz de usuario
 description: Obtenga información sobre cómo definir un campo XDM requerido en la interfaz de usuario del Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Si el campo es un atributo de nivel raíz bajo el objeto de ID de inquilino, su 
 
 Sin embargo, si un campo obligatorio está anidado en un objeto que no está marcado como requerido, el campo anidado no aparece en **[!UICONTROL Campos requeridos]** en el carril izquierdo.
 
-En el ejemplo siguiente, la variable `loyaltyId` se establece como necesario, pero su objeto principal `loyalty` no. En este caso, no se producirían errores de validación si `loyalty` se ha excluido al introducir datos, aunque el campo secundario `loyaltyId` está marcado como necesario. En otras palabras, mientras `loyalty` es opcional, debe contener un `loyaltyId` en el caso de que se incluya.
+En el ejemplo siguiente, la variable `internalSKU` se establece como necesario, pero su objeto principal `SKUs` no. En este caso, no se producirían errores de validación si `SKUs` se excluye al introducir datos, aunque el campo secundario `internalSKU` está marcado como necesario. En otras palabras, mientras `SKUs` es opcional, debe contener un `internalSKU` en el caso de que se incluya.
 
 ![Campo obligatorio anidado](../../images/ui/fields/required/nested.png)
 

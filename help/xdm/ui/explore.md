@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;inicio;temas populares;interfaz de usuario;IU;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;explorar;clase;grupo de campos;tipo de datos;esquema;
 solution: Experience Platform
-title: Explorar recursos XDM en la interfaz de usuario
+title: Explorar recursos de esquema en la interfaz de usuario
 description: Obtenga información sobre cómo explorar esquemas, clases, grupos de campos de esquema y tipos de datos existentes en la interfaz de usuario del Experience Platform.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
 
-# Explorar los recursos XDM en la interfaz de usuario
+# Explorar los recursos de esquema en la interfaz de usuario
 
-En Adobe Experience Platform, todos los recursos del Modelo de datos de experiencia (XDM) se almacenan en la variable [!DNL Schema Library], incluidos los recursos estándar proporcionados por el Adobe y los recursos personalizados definidos por su organización. En la interfaz de usuario del Experience Platform, puede ver la estructura y los campos de cualquier esquema, clase, grupo de campos de esquema o tipo de datos existente en la [!DNL Schema Library]. Esto resulta especialmente útil a la hora de planificar y preparar el consumo de datos, ya que la interfaz de usuario proporciona información sobre los tipos de datos esperados y los casos de uso de cada campo proporcionados por estos recursos XDM.
+En Adobe Experience Platform, todos los recursos de esquema del Modelo de datos de experiencia (XDM) se almacenan en la variable [!DNL Schema Library], incluidos los recursos estándar proporcionados por el Adobe y los recursos personalizados definidos por su organización. En la interfaz de usuario del Experience Platform, puede ver la estructura y los campos de cualquier esquema, clase, grupo de campos o tipo de datos existente en la [!DNL Schema Library]. Esto resulta especialmente útil a la hora de planificar y preparar el consumo de datos, ya que la interfaz de usuario proporciona información sobre los tipos de datos esperados y los casos de uso de cada campo proporcionados por estos recursos XDM.
 
 Este tutorial trata los pasos para explorar los esquemas, clases, grupos de campos y tipos de datos existentes en la interfaz de usuario del Experience Platform.
 
-## Buscar un recurso XDM {#lookup}
+## Buscar un recurso de esquema {#lookup}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. La variable [!UICONTROL Esquemas] workspace proporciona un **[!UICONTROL Examinar]** para explorar todos los recursos XDM existentes en su organización, junto con pestañas dedicadas adicionales para explorar **[!UICONTROL Clases]**, **[!UICONTROL Grupos de campo]** y **[!UICONTROL Tipos de datos]** específicamente.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. La variable [!UICONTROL Esquemas] workspace proporciona un **[!UICONTROL Examinar]** para explorar todos los esquemas de su organización, junto con pestañas dedicadas adicionales para explorar **[!UICONTROL Clases]**, **[!UICONTROL Grupos de campo]** y **[!UICONTROL Tipos de datos]** respectivamente.
 
 ![](../images/ui/explore/tabs.png)
 
-En el [!UICONTROL Examinar] , puede utilizar el icono de filtro (![Icono de filtro Imagen](../images/ui/explore/icon.png)) para mostrar los controles en el carril izquierdo y reducir los resultados de la lista.
+El icono de filtro (![Icono de filtro Imagen](../images/ui/explore/icon.png)) muestra los controles del carril izquierdo para reducir los resultados de la lista. Los controles mostrados difieren según el tipo de recurso que se enumera.
 
 Por ejemplo, para filtrar la lista y mostrar solo los tipos de datos estándar proporcionados por el Adobe, seleccione **[!UICONTROL DataType]** y **[!UICONTROL Adobe]** en el **[!UICONTROL Tipo]** y **[!UICONTROL Propietario]** secciones, respectivamente.
 
@@ -33,15 +33,15 @@ La variable **[!UICONTROL Incluido en el perfil]** alternar le permite filtrar l
 
 ![](../images/ui/explore/filter.png)
 
-También puede utilizar la barra de búsqueda para reducir aún más los resultados. Al buscar un término, los elementos principales representan recursos cuyos nombres coinciden con la consulta de búsqueda. Debajo de estos elementos, debajo de **[!UICONTROL Campos estándar]**, se enumerarán todos los recursos que contengan campos que coincidan con la consulta. Esto le permite buscar recursos XDM en función del tipo de datos que contienen, sin tener que saber previamente el nombre del recurso.
+Al enumerar recursos en la **[!UICONTROL Clases]**, **[!UICONTROL Grupos de campo]** o **[!UICONTROL Tipos de datos]** fichas, puede seleccionar **[!UICONTROL Adobe]** para mostrar solo recursos estándar o **[!UICONTROL Cliente]** para mostrar solo los recursos creados por su organización.
+
+![](../images/ui/explore/filter-data-type.png)
+
+También puede utilizar la barra de búsqueda para reducir aún más los resultados.
 
 ![](../images/ui/explore/search.png)
 
 Los recursos mostrados en los resultados de búsqueda se ordenan primero por coincidencias de título y, a continuación, por coincidencias de descripción. A su vez, cuantas más coincidencias de palabras haya en cualquiera de estas categorías, más alto aparecerá el recurso en la lista.
-
->[!NOTE]
->
->Para los recursos XDM estándar, la función de búsqueda solo devuelve campos individuales que contienen un `xdm` espacio de nombres. Los campos que se encuentran en un área de nombres diferente (como su ID de inquilino) solo se devuelven si están contenidos en un recurso personalizado.
 
 Cuando encuentre el recurso que desea explorar, seleccione su nombre en la lista para ver su estructura en el lienzo.
 

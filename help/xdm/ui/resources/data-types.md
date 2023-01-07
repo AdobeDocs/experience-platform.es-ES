@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Obtenga información sobre cómo crear y editar tipos de datos en la interfaz de usuario del Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -88,11 +88,11 @@ Esto demuestra la flexibilidad de los tipos de datos en la descripción de los d
 
 Una vez que haya terminado de agregar campos al tipo de datos, seleccione **[!UICONTROL Guardar]** para guardar los cambios y agregar el tipo de datos al [!DNL Schema Library].
 
-## Añadir el tipo de datos a una clase o grupo de campos
+## Añadir el tipo de datos a un esquema
 
 Una vez creado un tipo de datos, puede empezar a utilizarlo en sus esquemas. Dado que los esquemas XDM están compuestos por una clase y cero o más grupos de campos, los campos proporcionados por un tipo de datos no se pueden agregar directamente a un esquema. En su lugar, deben incluirse en una clase o un grupo de campos.
 
-Comience por seguir los pasos involucrados con [adición de un campo a una clase](./classes.md#add-fields) o [adición de un campo a un grupo de campos](./field-groups.md#add-fields). Al elegir el **[!UICONTROL Tipo]** para el nuevo campo, seleccione el nombre del tipo de datos en el menú desplegable.
+Comience por seguir los pasos involucrados con [adición de un campo a una clase](./classes.md#add-fields) o [adición de un campo a un grupo de campos](./field-groups.md#add-fields). También puede empezar [adición de un campo directamente a un esquema](./schemas.md#add-individual-fields) y elija la clase principal o el grupo de campos desde allí. Al elegir el **[!UICONTROL Tipo]** para el nuevo campo, seleccione el nombre del tipo de datos en el menú desplegable.
 
 ## Conversión de un objeto de varios campos en un tipo de datos {#convert}
 
@@ -102,7 +102,7 @@ Para convertir un campo de tipo objeto en un tipo de datos, seleccione el campo 
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-El lienzo actualiza el tipo de datos del campo de &quot;[!UICONTROL Objeto]&quot; al nuevo tipo de datos. Los subcampos también tienen iconos de bloqueo pequeños junto a ellos, lo que indica que ya no son campos individuales sino parte de un tipo de datos de varios campos. Esta estructura ahora se puede reutilizar en otras clases y grupos de campos seleccionando este tipo de datos de la variable **[!UICONTROL Tipo]** al definir un nuevo campo.
+El lienzo actualiza el tipo de datos del campo de &quot;[!UICONTROL Objeto]&quot; al nuevo tipo de datos. Esta estructura ahora se puede reutilizar en otras clases y grupos de campos seleccionando este tipo de datos de la variable **[!UICONTROL Tipo]** al definir un nuevo campo.
 
 ![](../../images/ui/resources/data-types/converted.png)
 
