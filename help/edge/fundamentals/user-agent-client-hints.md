@@ -2,13 +2,13 @@
 title: Sugerencias del cliente de User-Agent
 description: Descubra cómo funcionan las sugerencias de cliente de agente de usuario en el SDK web
 keywords: user-agent;sugerencias del cliente; string; cadena user-agent; baja entropía; alta entropía
-source-git-commit: 6c974d1a646ff1f3a8f7ad9d67a6840391fc739e
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
+source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 6%
+source-wordcount: '1065'
+ht-degree: 5%
 
 ---
-
 
 # Sugerencias del cliente de User-Agent
 
@@ -116,13 +116,7 @@ Si no habilita las sugerencias de cliente de alta entropía en su entorno, los i
 
 ### Informes de Adobe Analytics basados en sugerencias de cliente de alta entropía {#analytics}
 
-Los siguientes informes de Adobe Analytics no funcionarán mientras se deshabiliten las sugerencias de cliente de alta entropía.
-
-* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [Tipo de explorador](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [Tipos de sistemas operativos](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [Dimensiones móviles](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+La variable [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) incluye la versión del sistema operativo que se almacena como una sugerencia de cliente de alta entropía. Si las sugerencias de clientes de alta entropía no están habilitadas, la versión del sistema operativo puede ser inexacta para las visitas recopiladas en los exploradores Chromium.
 
 ### Características del Audience Manager que dependen de sugerencias de cliente de alta entropía {#aam}
 
