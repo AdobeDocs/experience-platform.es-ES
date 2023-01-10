@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;sintaxis sql;sql;ctas;CTAS;Crear tabla como selección
 solution: Experience Platform
 title: Sintaxis SQL en Query Service
-topic-legacy: syntax
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 2%
@@ -461,7 +460,7 @@ Los valores tomados de la variable `source_dataset` se utilizan para rellenar la
 
 | SKU | _experiencia | cantidad | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
-| product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL&quot;)&quot;)&quot;)&quot;) | 5 | 10,5 |
+| product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL&quot;)&quot;)&quot;)&quot;) | 5 | 10.5 |
 | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL&quot;)&quot;)&quot;)) |  |  |
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL&quot;)&quot;)&quot;)) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
@@ -730,7 +729,7 @@ COPY query
 | Parámetros | Descripción |
 | ------ | ------ |
 | `query` | La consulta que desea copiar. |
-| `format_name` | El formato en el que desea copiar la consulta. La variable `format_name` puede ser uno de `parquet`, `csv`o `json`. De forma predeterminada, el valor es `parquet`. |
+| `format_name` | El formato en el que desea copiar la consulta. La variable `format_name` puede ser uno de `parquet`, `csv`o `json`. El valor predeterminado es `parquet`. |
 
 >[!NOTE]
 >

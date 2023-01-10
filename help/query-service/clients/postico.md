@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;postico;Postico;conectar con servicio de consulta;
 solution: Experience Platform
 title: Conexión de Postico al servicio de consulta
-topic-legacy: connect
 description: Este documento contiene el enlace para instalar el cliente de copia de seguridad Postico para el servicio de consulta de Adobe Experience Platform.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 0%

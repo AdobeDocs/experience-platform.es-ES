@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;tableau;Tableau;servicio de consulta;servicio de consulta;conectar con servicio de consulta;
 solution: Experience Platform
 title: Conexión de Tableau con el servicio de consultas
-topic-legacy: connect
 description: Este documento recorre los pasos para conectar Tableau con el servicio de consulta de Adobe Experience Platform.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 2%

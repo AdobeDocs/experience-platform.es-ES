@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;escritura de consultas;escritura de consultas;
 solution: Experience Platform
 title: Guía general para la ejecución de consultas en el servicio de consultas
-topic-legacy: queries
 type: Tutorial
 description: Este documento describe detalles importantes que deben conocerse al escribir consultas en el servicio de consulta de Adobe Experience Platform.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 3%
@@ -29,7 +28,7 @@ Las consultas se pueden ejecutar de forma interactiva enviándolas a través del
 
 La ejecución de consultas interactivas tiene las siguientes limitaciones:
 
-| Parámetro | Limitación |
+| Parámetro | Limitation |
 | --------- | ---------- |
 | Tiempo de espera de consulta | 10 minutos |
 | Máximo de filas devueltas | 50 000 |
@@ -293,22 +292,22 @@ LIMIT 50;
 
 | Sistema operativo | Vistas de página |
 | --------------- | --------- |
-| Windows 7 | 2781979,0 |
-| Windows XP | 1669824,0 |
-| Windows 8 | 420024,0 |
-| Adobe AIR | 315032,0 |
-| Windows Vista | 173566,0 |
-| Mobile iOS 6.1.3 | 119069,0 |
-| Linux | 56516,0 |
-| OSX 10.6.8 | 53652,0 |
-| Android 4.0.4 | 46167,0 |
-| Android 4.0.3 | 31852,0 |
-| Windows Server 2003 y XP x64 Edition | 28883,0 |
-| Android 4.1.1 | 24336,0 |
-| Android 2.3.6 | 15735,0 |
-| OSX 10.6 | 13357,0 |
-| Windows Phone 7.5 | 11054,0 |
-| Android 4.3 | 9221,0 |
+| Windows 7 | 2781979.0 |
+| Windows XP | 1669824.0 |
+| Windows 8 | 420024.0 |
+| Adobe AIR | 315032.0 |
+| Windows Vista | 173566.0 |
+| Mobile iOS 6.1.3 | 119069.0 |
+| Linux | 56516.0 |
+| OSX 10.6.8 | 53652.0 |
+| Android 4.0.4 | 46167.0 |
+| Android 4.0.3 | 31852.0 |
+| Windows Server 2003 y XP x64 Edition | 28883.0 |
+| Android 4.1.1 | 24336.0 |
+| Android 2.3.6 | 15735.0 |
+| OSX 10.6 | 13357.0 |
+| Windows Phone 7.5 | 11054.0 |
+| Android 4.3 | 9221.0 |
 
 ## Anulación de duplicación
 

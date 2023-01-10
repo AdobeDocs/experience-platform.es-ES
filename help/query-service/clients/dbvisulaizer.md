@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;Db Visualizer;DbVisualizer;visor de db;conectar con servicio de consulta;
 solution: Experience Platform
 title: Conexión de DbVisualizer al servicio de consulta
-topic-legacy: connect
 description: Este documento recorre los pasos para conectar DbVisualizer con el servicio de consulta de Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 1%
@@ -96,7 +95,7 @@ Puede realizar una conexión con credenciales que caduquen o no caduquen. Para e
 | **[!UICONTROL Nombre]** | Cree un nombre para la conexión. Se recomienda proporcionar un nombre descriptivo para reconocer la conexión. |
 | **[!UICONTROL Servidor de bases de datos]** | Este es su Experience Platform **[!UICONTROL Host]** credencial. |
 | **[!UICONTROL Puerto de base de datos]** | El puerto de [!DNL Query Service]. Debe utilizar el puerto **80** para conectarse con [!DNL Query Service]. |
-| **[!UICONTROL Database]** | Uso de su Experience Platform **[!UICONTROL Base de datos]** valor de credencial: `prod:all`. |
+| **[!UICONTROL Base de datos]** | Uso de su Experience Platform **[!UICONTROL Base de datos]** valor de credencial: `prod:all`. |
 | **[!UICONTROL Base de Datos Userid]** | Este es su ID de organización de Platform. Uso de su Experience Platform **[!UICONTROL Nombre de usuario]** valor de credencial. El ID tendrá el formato de `ORG_ID@AdobeOrg`. |
 | **[!UICONTROL Contraseña de base de datos]** | Esta cadena alfanumérica es su Experience Platform **[!UICONTROL Contraseña]** credencial.Si desea utilizar credenciales que no caduquen, este valor es el argumento concatenado del `technicalAccountID` y `credential` descargado en el archivo JSON de configuración. El valor de la contraseña adopta la forma: {technicalAccountId}:{credential}. El archivo JSON de configuración para credenciales que no caducan es una descarga única durante su inicialización de que el Adobe no conserva una copia de . |
 

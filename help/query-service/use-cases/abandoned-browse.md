@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;servicio de consulta;servicio de consulta;consulta
 title: Caso de uso de ejemplo para el servicio de consulta de Adobe Experience Platform
-topic-legacy: tutorial
 description: Un ejemplo completo para demostrar la versatilidad y las ventajas del servicio de consulta de Adobe Experience Platform.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
@@ -76,7 +75,7 @@ Adobe Experience Platform proporciona un repositorio de datos y las herramientas
 
 Al leer este documento, ahora debe comprender cómo [!DNL Query Service] afecta no solo a la calidad de sus datos y a la facilidad de segmentación, sino también a su importancia dentro de la arquitectura de datos para todo el flujo de trabajo de principio a fin. Para ejemplos SQL más aplicables, utilice Adobe Analytics con [!DNL Query Service], consulte la [Documentación de consultas de ejemplo de Adobe Analytics](../sample-queries/adobe-analytics.md).
 
-Otros documentos que demuestren los beneficios de [!DNL Query Service] a la información estratégica comercial de su organización, se incluye la variable [caso de uso de filtrado de bots](./bot-filtering.md) ejemplo.
+Otros documentos que demuestren los beneficios de [!DNL Query Service] para la información estratégica comercial de su organización, se usa la variable [caso de uso de filtrado de bots](./bot-filtering.md) ejemplo.
 
 Alternativamente, estos documentos le ayudarán a comprender [!DNL Query Service] características:
 

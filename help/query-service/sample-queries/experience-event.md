@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consultas de eventos de experiencias;consulta de eventos de experiencias;consulta de eventos de experiencias;consulta de eventos de experiencias;
 solution: Experience Platform
 title: Consultas de ejemplo para eventos de experiencias
-topic-legacy: queries
 type: Tutorial
 description: El siguiente documento proporciona ejemplos de consultas que involucran eventos de experiencia en el servicio de consulta de Adobe Experience Platform.
 exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
-source-git-commit: d79d466602d77f8a3eb1162ee67572973b3e08c7
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%

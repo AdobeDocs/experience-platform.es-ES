@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;ejecutar consultas programadas;ejecutar consulta programada;servicio de consulta;consultas programadas;consulta programada;
 solution: Experience Platform
 title: La consulta programada ejecuta el extremo de la API
-topic-legacy: runs for scheduled queries
 description: Las secciones siguientes recorren las distintas llamadas de API que puede realizar para ejecutar consultas programadas con la API del servicio de consulta.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 3%

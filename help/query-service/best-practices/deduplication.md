@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;deduplicación de datos;deduplicación;
 solution: Experience Platform
 title: Deduplicación de datos en el servicio de consulta
-topic-legacy: queries
 type: Tutorial
 description: 'Este documento describe ejemplos de consultas de muestra completa y subselección para deduplicar tres casos de uso comunes: eventos de experiencias, compras y métricas.'
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
-source-git-commit: b140037ed5f055a8e7c583540910cc6b18bbf0bd
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 0%

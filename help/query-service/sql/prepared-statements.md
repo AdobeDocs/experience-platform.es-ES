@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;instrucciones preparadas;preparado;sql;
 solution: Experience Platform
 title: Instrucciones preparadas en el servicio de consultas
-topic-legacy: prepared statements
 description: En SQL, las instrucciones preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. El servicio de consulta de Adobe Experience Platform admite instrucciones preparadas mediante una consulta parametrizada.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 11%
@@ -84,7 +83,7 @@ La consulta SQL anterior devolverá la siguiente respuesta:
 
 | id | firstname | lastname | cumpleaños | email | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
+| 10 000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
 | 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
 | 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
@@ -107,7 +106,7 @@ Cuando se llame a esto, verá exactamente los mismos resultados que antes:
 
 | id | firstname | lastname | cumpleaños | email | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
+| 10 000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
 | 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
 | 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |

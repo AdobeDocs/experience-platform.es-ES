@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;guía de api;parámetros de conexión;servicio de consulta;
 solution: Experience Platform
 title: Punto final de API de parámetros de conexión
-topic-legacy: connection parameters
 description: Puede recuperar los parámetros de conexión para utilizar el servicio interactivo realizando una solicitud de GET al extremo /connection_parameters.
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 3%
