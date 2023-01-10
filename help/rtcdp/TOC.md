@@ -7,7 +7,7 @@ user-guide-description: Reunir datos conocidos y anónimos de varias fuentes emp
 source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 27%
+ht-degree: 29%
 
 ---
 

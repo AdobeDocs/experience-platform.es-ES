@@ -43,7 +43,7 @@ ht-degree: 26%
    * [Adobe Real-time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Aplicaciones y servicios inteligentes (vídeo)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=es)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [Integraciones de plataforma con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
 * Gobernanza, privacidad y seguridad {#governance-privacy-security}

@@ -67,7 +67,7 @@ Agregue las propiedades de inicialización utilizadas por [DIL.create](https://e
 
 Seleccione **[!UICONTROL Elegir un elemento]** para añadir propiedades adicionales.
 
-Pase el ratón sobre los iconos “i” para conocer lo que hace cada propiedad. Puede encontrar más información para las propiedades en la documentación de [Audience Manager DIL](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html).
+Pase el ratón sobre los iconos “i” para conocer lo que hace cada propiedad. Puede encontrar más información para las propiedades en la documentación de [Audience Manager DIL](https://experiencecloud.adobe.com/resources/help/es_ES/aam/r_dil_create.html).
 
 Seleccione **[!UICONTROL Guardar]** cuando haya terminado de configurar la extensión.
 

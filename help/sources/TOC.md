@@ -7,7 +7,7 @@ feature: Sources
 source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
 workflow-type: tm+mt
 source-wordcount: '860'
-ht-degree: 13%
+ht-degree: 15%
 
 ---
 
@@ -106,7 +106,7 @@ ht-degree: 13%
       - [Conector de API HTTP](connectors/streaming/http.md)
 - Tutoriales de API {#api-tutorials}
    - Creación de una conexión base {#create}
-      - Publicidad {#advertising}
+      - Advertising {#advertising}
          - [Publicidades de Google](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Panel de mezcla](tutorials/api/create/analytics/mixpanel.md)
@@ -156,7 +156,7 @@ ht-degree: 13%
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - comercio electrónico {#ecommerce}
+      - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Automatización de marketing {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
@@ -213,7 +213,7 @@ ht-degree: 13%
          - [Atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
-      - Publicidad {#advertising}
+      - Advertising {#advertising}
          - [Publicidades de Google](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Panel de mezcla](tutorials/ui/create/analytics/mixpanel.md)
@@ -249,7 +249,7 @@ ht-degree: 13%
          - [Apache Hive en Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark en Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Data Explorer de Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Almacenamiento de tablas de Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -257,14 +257,14 @@ ht-degree: 13%
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
          - [MariaDB](tutorials/ui/create/databases/mariadb.md)
-         - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
+         - [Servidor Microsoft SQL](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - comercio electrónico {#ecommerce}
+      - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Sistema local {#local-system}
          - [Carga de archivo local](tutorials/ui/create/local-system/local-file-upload.md)

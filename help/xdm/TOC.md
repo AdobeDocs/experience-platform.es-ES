@@ -35,7 +35,7 @@ ht-degree: 16%
    * [Medicación](./classes/medication.md)
    * [Pagador](./classes/payer.md)
    * [Plan](./classes/plan.md)
-   * [Política](./classes/policy.md)
+   * [Directiva](./classes/policy.md)
    * [Producto](./classes/product.md)
    * [Proveedor](./classes/provider.md)
    * [Definición del segmento](./classes/segment-definition.md)

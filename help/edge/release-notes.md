@@ -139,7 +139,7 @@ Para ver las últimas notas de la versión de la extensión de etiqueta del SDK 
 
 ## Versión 2.2.0: octubre de 2020
 
-* Corrección de errores: El objeto Opt-in bloqueaba a Alloy de realizar llamadas cuando `idMigrationEnabled` es `true`.
+* Corrección de errores: El objeto Opt-in impedía que Alloy realizara llamadas cuando `idMigrationEnabled` es `true`.
 * Corrección de errores: Haga que Alloy tenga en cuenta las solicitudes que deben devolver ofertas de personalización para evitar un problema que parpadee.
 
 ## Versión 2.1.0: agosto de 2020
