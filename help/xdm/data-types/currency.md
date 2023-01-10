@@ -2,27 +2,26 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;campos;esquemas;esquemas;dispositivo;tipo de datos;tipo de datos;tipo de datos;moneda;
 solution: Experience Platform
 title: Tipo de datos de moneda
-topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de moneda.
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
-source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 5%
 
 ---
 
-#  Tipo de datos de moneda
+# [!UICONTROL Moneda] tipo de datos
 
- Moneda es un tipo de datos XDM estándar que describe una cantidad de moneda, incluido el tipo de moneda y la fecha de conversión.
+[!UICONTROL Moneda] es un tipo de datos XDM estándar que describe una cantidad de moneda, incluido el tipo de moneda y la fecha de conversión.
 
 ![](../images/data-types/currency.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `amount` | Duplicada | Cantidad de moneda definida por `currencyCode`. |
+| `amount` | Doble | La cantidad de moneda definida por la variable `currencyCode`. |
 | `conversionDate` | DateTime | Marca de fecha y hora en la que se realizó la conversión de moneda. |
-| `currencyCode` | Cadena | Código ISO 4217 que indica el tipo de moneda que representa `amount`. |
+| `currencyCode` | Cadena | Código ISO 4217 que indica el tipo de moneda que `amount` representa. |
 
 {style=&quot;table-layout:auto&quot;}
 

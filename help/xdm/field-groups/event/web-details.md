@@ -2,23 +2,22 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;ExperienceEvent;campos;esquemas;esquemas;diseño de esquema;grupo de campos;grupo de campos;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles web
-topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles web .
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 3%
 
 ---
 
-
-# [!UICONTROL Grupo de campos ] Web Detailsschema
+# [!UICONTROL Detalles web] grupo de campos de esquema
 
 >[!NOTE]
 >
->Los nombres de varios grupos de campos de esquema han cambiado. Para obtener más información, consulte el documento [field group name updates](../name-updates.md) .
+>Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento en [actualizaciones del nombre del grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL Web ] Detail es un grupo de campos de esquema estándar para la  [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md), que se utiliza para describir información relacionada con eventos de detalles web como interacción, detalles de página y referente.
+[!UICONTROL Detalles web] es un grupo de campos de esquema estándar para la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), se utiliza para describir información sobre eventos de detalles web como interacción, detalles de página y referente.
 
 ![](../../images/field-groups/web-details.png)
 

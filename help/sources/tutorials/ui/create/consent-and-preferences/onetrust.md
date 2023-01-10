@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;onetrust;OneTrust
 solution: Experience Platform
 title: (Beta) Crear una conexión de origen de OneTrust en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de OneTrust mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%

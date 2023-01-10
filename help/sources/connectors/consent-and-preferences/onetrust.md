@@ -2,9 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;OneTrust;onetrust;consentimiento;consentimiento y preferencias;conformidad
 solution: Experience Platform
 title: (Beta) Información general sobre el conector de origen de integración de OneTrust
-topic-legacy: overview
 description: Obtenga información sobre cómo conectar la integración de OneTrust con Adobe Experience Platform mediante API o la interfaz de usuario.
-source-git-commit: e566f4e2a4a337abe6f09d7d2e66530a5b9baa0c
+exl-id: f2229d4d-8aa6-483a-9156-403309f80007
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%

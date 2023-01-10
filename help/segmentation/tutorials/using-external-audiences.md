@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Importación y uso de audiencias externas
 description: Siga este tutorial para aprender a utilizar audiencias externas con Adobe Experience Platform.
-topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%

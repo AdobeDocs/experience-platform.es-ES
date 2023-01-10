@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;datos de almacenamiento en la nube
 solution: Experience Platform
 title: Crear un flujo de datos para fuentes de almacenamiento en la nube mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un almacenamiento en la nube de terceros y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 2%

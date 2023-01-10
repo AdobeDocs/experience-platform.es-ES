@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;configurar flujo de datos;conector de publicidad
 solution: Experience Platform
 title: Crear un flujo de datos con una fuente de publicidad en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de publicidad mediante la interfaz de usuario de Platform.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 0%

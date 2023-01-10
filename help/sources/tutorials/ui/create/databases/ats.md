@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Azure Table Storage;almacenamiento de tablas azure;ats;ATS
 solution: Experience Platform
 title: Crear una conexión de origen de almacenamiento de tablas de Azure en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Azure Table Storage mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 1%

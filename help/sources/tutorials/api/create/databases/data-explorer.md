@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Data Explorer de Azure;Data Explorer de Azure;Data Explorer de Azure
 solution: Experience Platform
 title: Creación de una conexión base de Data Explorer de Azure mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar la Data Explorer de Azure a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 2%

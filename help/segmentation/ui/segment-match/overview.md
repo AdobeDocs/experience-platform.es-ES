@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Coincidencia de segmentos;coincidencia de segmentos
 solution: Experience Platform
 title: Información general sobre la coincidencia de segmentos
-topic-legacy: overview
 description: Coincidencia de segmentos es un servicio para compartir segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, regulada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1998'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -48,7 +47,7 @@ La lista de áreas de nombres admitidas es la siguiente:
 | Correos electrónicos (SHA256, en minúsculas) | Un espacio de nombres para direcciones de correo electrónico premarcadas. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de utilizar el hash con SHA256. Los espacios al inicio y al final deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Platform ofrece dos métodos para admitir el hash en la recopilación de datos mediante [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) y [preparación de datos](../../../data-prep/functions.md#hashing). |
 | Teléfono (SHA256_E.164) | Área de nombres que representa los números de teléfono sin procesar que deben tener un hash con los formatos SHA256 y E.164. |
 | ECID | Área de nombres que representa un valor de ID de Experience Cloud (ECID). Este espacio de nombres también puede ser referenciado por los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte la [Información general de ECID](../../../identity-service/ecid.md) para obtener más información. |
-| Apple IDFA (ID para anunciantes) | Área de nombres que representa Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
+| Apple IDFA (ID para anunciantes) | Área de nombres que representa Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/es-es/HT202074) para obtener más información. |
 | Google Ad ID | Área de nombres que representa un ID de publicidad de Google. Consulte el siguiente documento sobre [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obtener más información. |
 
 ### Configuración del consentimiento

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;enumeración;mezcla;grupo de campos;grupos de campos;mezclas;tipo de datos;tipos de datos;tipos de datos;tipo de datos;identidad principal;perfil individual XDM;campos XDM;tipo de datos enum;evento de experiencia;evento de experiencia XDM;evento de experiencia XDM;evento de experiencias;evento de experiencias XDM;evento de experiencias XDM;clase;clases Clases;tipo de datos;tipo de datos;tipo de datos;esquemas;esquemas;mapa de identidad;mapa de identidad;mapa de identidad;diseño de esquema;mapa;mapa;esquema de unión;unión
 solution: Experience Platform
 title: Aspectos básicos de la composición del esquema
-topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 2%
@@ -232,7 +231,7 @@ Un campo es el bloque de creación más básico de un esquema. Los campos propor
 
 * Cadena
 * Número entero
-* Duplicada
+* Doble
 * Booleano
 * Matriz
 * Objeto
@@ -245,7 +244,7 @@ Los intervalos válidos de estos tipos escalares pueden restringirse aún más a
 
 * Enum
 * Largo
-* Corto
+* corto
 * Byte
 * Fecha
 * Fecha y hora

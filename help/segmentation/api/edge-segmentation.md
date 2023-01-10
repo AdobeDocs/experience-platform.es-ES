@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;segmentación perimetral;segmentación perimetral;borde de flujo continuo;
 solution: Experience Platform
 title: Segmentación de Edge con la API
-topic-legacy: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación perimetral con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 1%

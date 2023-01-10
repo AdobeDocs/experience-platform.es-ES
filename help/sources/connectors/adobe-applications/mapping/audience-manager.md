@@ -2,14 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;asignación de Audience Manager;asignación de audience manager
 solution: Experience Platform
 title: Asignación de campos para el conector de origen de Adobe Audience Manager
-topic-legacy: overview
 description: Obtenga información sobre cómo asignar datos de Adobe Audience Manager (datos en tiempo real, integrados y de perfil) a los campos correspondientes del Modelo de datos de experiencia (XDM) para el conector de origen del Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -17,7 +15,7 @@ ht-degree: 0%
 
 Las tablas siguientes contienen las asignaciones entre los campos de los datos de Adobe Audience Manager (en tiempo real, integrados y datos de perfil) y sus campos XDM correspondientes.
 
-Consulte el [diccionario de campo XDM](../../../../xdm/schema/field-dictionary.md) para obtener más información sobre cada campo XDM.
+Consulte la [Diccionario de campo XDM](../../../../xdm/schema/field-dictionary.md) para obtener más información sobre cada campo XDM.
 
 ## Datos en tiempo real
 
@@ -26,7 +24,7 @@ Tipo: Datos en tiempo real
 | Campo de datos en tiempo real | Campo XDM |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` -  *Solo para áreas de nombres presentes en endUserIds y solo el primer valor.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` - *Solo para áreas de nombres presentes en endUserIds y solo el primer valor.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
 | `primaryDeviceId` | ExperienceEvent.endUserIds - *Solo para áreas de nombres presentes en endUserIds y solo el primer valor.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |

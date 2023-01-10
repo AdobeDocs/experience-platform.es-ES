@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Idioma de consulta de perfil;funciones de cadena;cadena;
 solution: Experience Platform
 title: Funciones de cadena de PQL
-topic-legacy: developer guide
 description: El lenguaje de consulta de perfil (PQL) ofrece funciones para simplificar la interacción con cadenas.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 7%

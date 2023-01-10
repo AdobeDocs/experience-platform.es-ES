@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Salesforce;salesforce
 solution: Experience Platform
 title: Crear una conexión de origen de Salesforce en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Salesforce mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 1%

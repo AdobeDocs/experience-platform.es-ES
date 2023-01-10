@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;perfil individual;campos;esquemas;esquemas;telecomunicaciones;suscripción;telecomunicaciones;diseño de esquema;grupo de campos;grupo de campos;
 solution: Experience Platform
 title: Grupo de campos de esquema de suscripción de telecomunicaciones
-topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema de suscripción a telecomunicaciones.
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 7%

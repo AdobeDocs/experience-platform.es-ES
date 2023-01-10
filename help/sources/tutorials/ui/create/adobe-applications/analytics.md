@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Conector de origen de Analytics;Conector de Analytics;Fuente de Analytics;Analytics
 solution: Experience Platform
 title: Crear una conexión de origen de Adobe Analytics en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '2345'
 ht-degree: 2%
@@ -286,7 +285,7 @@ Puede ver las etiquetas heredadas de un flujo de datos desde el [!UICONTROL Admi
 
 Para eliminar un flujo de datos, vaya a la [!UICONTROL Flujos de datos] y, a continuación, seleccione los puntos suspensivos (`...`) junto al nombre del flujo de datos y, a continuación, seleccione [!UICONTROL Eliminar].
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![eliminar](../../../../images/tutorials/create/analytics/delete.png)
 
 ## Pasos siguientes y recursos adicionales
 

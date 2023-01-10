@@ -2,15 +2,14 @@
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;oracle;elocuencia de oracle;eloqua
 solution: Experience Platform
 title: Creación de una conexión de origen Eloqua de Oracle mediante la interfaz de usuario de Platform
-topic-legacy: tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Oracle Eloqua mediante la interfaz de usuario de Platform.
-source-git-commit: a40a1b8fae41c495afd9cdfc3c8d68148e90f2cd
+exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%
 
 ---
-
 
 # Cree un [!DNL Oracle Eloqua] conexión de origen mediante la interfaz de usuario de Platform
 
@@ -66,4 +65,3 @@ Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a
 ## Pasos siguientes
 
 Siguiendo este tutorial, se ha autenticado y creado una conexión de origen entre las [!DNL Oracle Eloqua] cuenta y plataforma. Ahora puede continuar con el siguiente tutorial y [crear un flujo de datos para traer datos de automatización de marketing a Platform](../../dataflow/marketing-automation.md).
-

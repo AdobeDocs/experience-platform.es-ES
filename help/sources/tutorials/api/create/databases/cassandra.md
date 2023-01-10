@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;Apache Cassandra;apache cassandra;Cassandra;cassandra
 solution: Experience Platform
 title: Creación de una conexión de origen de Apache Cassandra mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Apache Cassandra a Adobe Experience Platform mediante la API de servicio de flujo.
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 4%

@@ -2,19 +2,18 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;campos;esquemas;esquemas;explorador;detalles del explorador;tipo de datos;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de detalles del explorador
-topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM Detalles del explorador .
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 7%
+ht-degree: 12%
 
 ---
 
-# [!UICONTROL Tipo de datos de ] detalles del explorador
+# [!UICONTROL Detalles del explorador] tipo de datos
 
-[!UICONTROL Los ] detalles del explorador son un tipo de datos XDM estándar que describe detalles relacionados con un explorador o aplicación.
+[!UICONTROL Detalles del explorador] es un tipo de datos XDM estándar que describe detalles relacionados con un explorador o aplicación.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
@@ -27,7 +26,7 @@ ht-degree: 7%
 | `javaScriptVersion` | Cadena | Versión de JavaScript admitida durante la observación. |
 | `javaVersion` | Cadena | Versión de Java admitida durante la observación. |
 | `name` | Cadena | El nombre de la aplicación o del explorador. |
-| `quicktimeVersion` | Cadena | La versión de Apple Quicktime admitida durante la observación. |
+| `quicktimeVersion` | Cadena | Versión de Apple Quicktime admitida durante la observación. |
 | `thirdPartyCookiesEnabled` | Booleano | Indica si se habilitaron cookies de terceros en el dispositivo desde el que se realizó la observación. |
 | `userAgent` | Cadena | La cadena HTTP user-agent de la solicitud del cliente. |
 | `vendor` | Cadena | El proveedor de la aplicación o del explorador. |

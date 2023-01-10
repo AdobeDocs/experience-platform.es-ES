@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;FTP;ftp
 solution: Experience Platform
 title: Crear una conexión de origen de FTP en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen FTP mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 1%

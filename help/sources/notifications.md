@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares; notificaciones
 description: Al suscribirse a los eventos de Adobe I/O, puede utilizar webhooks para recibir notificaciones sobre los estados de ejecución de flujo de sus conexiones de origen. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que han contribuido al error de una ejecución.
 solution: Experience Platform
 title: Notificaciones de ejecución de flujo
-topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 1%

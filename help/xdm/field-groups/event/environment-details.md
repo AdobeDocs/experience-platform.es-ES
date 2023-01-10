@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;ExperienceEvent;campos;esquemas;esquemas;diseño de esquema;grupo de campos;grupo de campos;entorno;detalles de entorno;
 solution: Experience Platform
 title: Grupo de campos de esquema Detalles del entorno
-topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles del entorno de ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -13,13 +12,13 @@ ht-degree: 3%
 ---
 
 
-# [!UICONTROL Grupo de campos Environment ] Detailsschema
+# [!UICONTROL Detalles del entorno] grupo de campos de esquema
 
 >[!NOTE]
 >
->Los nombres de varios grupos de campos de esquema han cambiado. Para obtener más información, consulte el documento [field group name updates](../name-updates.md) .
+>Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento en [actualizaciones del nombre del grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL Environment ] Detail es un grupo de campos de esquema estándar para el  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) clasificado que captura información relacionada con los detalles de entorno relacionados con un Evento de experiencia, como detalles del dispositivo, información del explorador, hora local y otra información geográfica.
+[!UICONTROL Detalles del entorno] es un grupo de campos de esquema estándar para la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) se utiliza para capturar información sobre los detalles de entorno relacionados con un evento de experiencia, como detalles del dispositivo, información del explorador, hora local y otra información geográfica.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 

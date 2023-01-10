@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 title: Guía de API de fuentes de autoservicio (SDK por lotes)
-topic-legacy: overview
 description: Este documento proporciona información general sobre el proceso de creación de una nueva fuente, incluidos los pasos para recuperar, escribir y enviar una nueva especificación de conexión mediante la API de servicio de flujo.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 0%
@@ -45,4 +44,4 @@ Para enviar la fuente para su integración a Experience Platform, primero debe c
 
 ## Pasos siguientes
 
-Para empezar a usar la variable [!DNL Flow Service] y cree una nueva fuente a través de fuentes de autoservicio (SDK por lotes), lea la [guía de introducción](./getting-started.md) a continuación, seleccione una de las guías de punto final para aprender a utilizar puntos finales específicos.
+Para empezar a usar la variable [!DNL Flow Service] y cree una fuente nueva a través de fuentes de autoservicio (SDK por lotes), lea la [guía de introducción](./getting-started.md) a continuación, seleccione una de las guías de punto final para aprender a utilizar puntos finales específicos.

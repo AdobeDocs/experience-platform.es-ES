@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;campos;esquemas;esquemas;dirección;xdm:dirección;tipo de datos;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de elemento de lista de productos
-topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM del elemento de lista de productos.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 43157ed2b633561213e67f011835449d70ead4fc
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 4%
@@ -26,9 +25,9 @@ Los valores capturados en este tipo de datos pueden diferir del registro del pro
 | `SKU` | [!UICONTROL Cadena] | Unidad de mantenimiento de existencias (SKU), el identificador único de un producto definido por el proveedor. |
 | `_id` | [!UICONTROL Cadena] | Identificador de elemento de línea para esta entrada de producto. El producto en sí se identifica mediante `product`. |
 | `currencyCode` | [!UICONTROL Cadena] | La variable [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) código de moneda alfabético utilizado para fijar el precio del producto. |
-| `discountAmount` | [!UICONTROL Duplicada] | Si se descuenta el producto, esto representa la diferencia entre el precio normal y el precio especial del producto. |
+| `discountAmount` | [!UICONTROL Doble] | Si se descuenta el producto, esto representa la diferencia entre el precio normal y el precio especial del producto. |
 | `name` | [!UICONTROL Cadena] | Nombre para mostrar del producto tal como se presenta al usuario para esta vista de producto. |
-| `priceTotal` | [!UICONTROL Duplicada] | El precio total del artículo de línea de producto. |
+| `priceTotal` | [!UICONTROL Doble] | El precio total del artículo de línea de producto. |
 | `product` | [!UICONTROL Cadena] (URI) | El URI `$id` del esquema XDM que captura el propio producto. |
 | `productAddMethod` | [!UICONTROL Cadena] | Método que el visitante utilizó para agregar un elemento de producto a la lista. |
 | `productImageUrl` | [!UICONTROL Cadena] | Una URL para la imagen principal del producto. |

@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Introducción a la API del Registro de esquemas
 description: Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas a la API del Registro de esquemas.
-topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1356'
 ht-degree: 1%

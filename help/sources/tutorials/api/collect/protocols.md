@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Recopilar datos de protocolo;datos de protocolo
 solution: Experience Platform
 title: Crear un flujo de datos para orígenes de protocolos mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación de protocolos e ingerirlos en Platform mediante conectores de origen y API.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 2%

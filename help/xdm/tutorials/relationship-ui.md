@@ -3,10 +3,9 @@ keywords: Experience Platform;inicio;temas populares;interfaz de usuario;XDM;sis
 solution: Experience Platform
 title: Definir una relación entre dos esquemas con el Editor de esquemas
 description: Este documento proporciona un tutorial para definir una relación entre dos esquemas con el Editor de esquemas en la interfaz de usuario del Experience Platform.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 3b16c0766c7d54b18ceea4c9f40ccb370b9f9685
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%

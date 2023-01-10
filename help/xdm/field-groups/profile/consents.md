@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Grupo de campos de esquema consentimientos y preferencias
-topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Consentimientos y Preferencias .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%

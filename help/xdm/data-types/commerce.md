@@ -2,19 +2,18 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;campos;esquemas;esquemas;comercio;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de comercio
-topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos del Modelo de datos de experiencia comercial (XDM).
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 4%
 
 ---
 
-#  Tipo de datos del comercio
+# [!UICONTROL Comercio] tipo de datos
 
- El comercio es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe los registros relacionados con la actividad de compra y venta.
+[!UICONTROL Comercio] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe los registros relacionados con la actividad de compra y venta.
 
 <img src="../images/data-types/commerce.PNG" width="400" /><br />
 

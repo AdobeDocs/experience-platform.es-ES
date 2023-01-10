@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentos;segmentos;segmentos;varias entidades;segmentación multientidad;segmentos multientidad;
 solution: Experience Platform
 title: Información general sobre la segmentación de varias entidades
-topic-legacy: overview
 description: La segmentación de varias entidades es la capacidad de ampliar los datos del perfil con datos adicionales basados en productos, tiendas u otras clases que no sean de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del esquema de perfil.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%

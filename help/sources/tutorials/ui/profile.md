@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;activar datos entrantes;rellenar perfil;rellenar rtcp;perfil unificado rellenado
 solution: Experience Platform
 title: Activar datos de origen entrantes para rellenar perfiles de cliente en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Los datos de entrada del conector de origen se pueden utilizar para enriquecer y rellenar los datos del perfil del cliente en tiempo real.
 exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Apache hive;hive;Hive
 solution: Experience Platform
 title: Creación de una Apache Hive en la conexión base de Azure HDInsights mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Apache Hive en Azure HDInsights a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 2%

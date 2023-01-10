@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 solution: Experience Platform
 title: Crear un flujo de datos para Zendesk mediante la API de servicio de flujo
-topic-legacy: tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Zendesk mediante la API de servicio de flujo.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '1996'
 ht-degree: 2%

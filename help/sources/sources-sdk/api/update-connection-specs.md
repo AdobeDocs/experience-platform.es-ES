@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 title: Actualización de una especificación de conexión mediante la API de servicio de flujo
-topic-legacy: developer guide
 description: Puede actualizar las propiedades de una especificación de conexión mediante una operación de PUT.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 3%

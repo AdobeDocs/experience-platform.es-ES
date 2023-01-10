@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;servicenow;ServiceNow
 solution: Experience Platform
 title: Crear una conexión base de ServiceNow mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor de ServiceNow mediante la API de servicio de flujo.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 2%

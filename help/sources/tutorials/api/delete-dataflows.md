@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;API;api;eliminar;eliminar flujos de datos
 solution: Experience Platform
 title: Eliminación de un flujo de datos mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo eliminar flujos de datos de flujo y por lotes mediante la API de servicio de flujo.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 3%

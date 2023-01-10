@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Crear y editar grupos de campos de esquema en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar grupos de campos de esquema en la interfaz de usuario del Experience Platform.
-topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 57e7386ad631f2ce3d9b28d2532655a2668bdcaa
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 0%

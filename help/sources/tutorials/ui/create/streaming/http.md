@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de interfaz de usuario;tutorial;crear una conexión de flujo continuo;ingesta de flujo;ingesta;
 solution: Experience Platform
 title: Creación de una conexión de flujo de API HTTP mediante la interfaz de usuario
-topic-legacy: tutorial
 type: Tutorial
 description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo con Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 0%

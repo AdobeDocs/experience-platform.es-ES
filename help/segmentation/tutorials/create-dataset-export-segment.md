@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Servicio de segmentación;segmentación;Segmentación;crear un conjunto de datos;exportar segmento de audiencia;exportar segmento;
 solution: Experience Platform
 title: Crear un conjunto de datos para exportar un segmento de audiencia
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial explica los pasos necesarios para crear un conjunto de datos que se pueda utilizar para exportar un segmento de audiencia mediante la interfaz de usuario del Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;guía del usuario del entorno limitado;guía del entorno limitado
 solution: Experience Platform
 title: Guía de la interfaz de usuario del Simulador para pruebas
-topic-legacy: user guide
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con entornos limitados en la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 2%
@@ -104,7 +103,7 @@ Al eliminar un entorno limitado de producción o desarrollo, se eliminan permane
 
 Seleccione el simulador de pruebas que desee eliminar de la lista de entornos limitados. En el panel de navegación derecho que aparece, seleccione **[!UICONTROL Eliminar]**.
 
-![delete](../images/ui/delete.png)
+![eliminar](../images/ui/delete.png)
 
 Aparece un cuadro de diálogo que le solicita que confirme su elección. Select **[!UICONTROL Continuar]** para continuar.
 

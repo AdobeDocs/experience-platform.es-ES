@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 solution: Experience Platform
 title: Utilizar un editor de texto en el entorno local para crear una página de documentación de fuentes
-topic-legacy: tutorial
 description: Este documento proporciona pasos sobre cómo utilizar el entorno local para crear documentación para el origen y enviar una solicitud de extracción (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 3%

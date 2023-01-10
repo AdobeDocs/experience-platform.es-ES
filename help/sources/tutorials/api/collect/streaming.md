@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;datos de almacenamiento en la nube;datos de flujo continuo;flujo continuo
 solution: Experience Platform
 title: Crear un flujo de datos de flujo continuo para datos sin procesar mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de flujo continuo y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 3%

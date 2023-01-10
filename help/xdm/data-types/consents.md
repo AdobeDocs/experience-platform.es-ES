@@ -2,9 +2,8 @@
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;consentimiento;preferencias;preferencias;privacyOptOut;marketingPreferences;optOutType;baseOfProcessing;consentimiento;consentimiento
 title: Tipo de datos de consentimientos y preferencias
 description: El tipo de datos Consent for Privacy, Personalization and Marketing Preferences está diseñado para admitir la recopilación de permisos y preferencias de cliente generados por las plataformas de administración de consentimiento (CMP) y otras fuentes a partir de sus operaciones de datos.
-topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 2%

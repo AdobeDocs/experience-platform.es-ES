@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Microsoft Dynamics;microsoft dynamics;Dynamics
 solution: Experience Platform
 title: Creación de una conexión de Microsoft Dynamics Base mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Platform a una cuenta de Microsoft Dynamics mediante la API de servicio de flujo.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 2%

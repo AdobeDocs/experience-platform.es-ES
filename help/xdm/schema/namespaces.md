@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;xdm;modelo de datos de experiencia;espacio de nombres;espacios de nombres;modo de compatibilidad;fijo;
 solution: Experience Platform
 title: Espaciado de nombres en el modelo de datos de experiencia (XDM)
-topic-legacy: overviews
 description: Descubra cómo el espaciado de nombres en Experience Data Model (XDM) le permite ampliar sus esquemas y evitar conflictos de campos a medida que se unen diferentes componentes de esquema.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: bcffd3d38cecba38e1e57a44ce0febfd2cf0f8fb
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 1%

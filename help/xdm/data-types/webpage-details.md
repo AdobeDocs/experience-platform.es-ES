@@ -2,28 +2,27 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;campos;esquemas;esquemas;detalles de página web;tipo de datos;tipo de datos;tipo de datos;página web
 solution: Experience Platform
 title: Tipo de datos de detalles de página web
-topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos del Modelo de datos de experiencia (XDM) de la página web.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '411'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Tipo de datos de ] detalles de página web
+# [!UICONTROL Detalles de la página web] tipo de datos
 
-[!UICONTROL Los ] detalles de la página web son un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe los detalles sobre una página web que acaba de cargarse y visualizarse, tal como lo registró un ExperienceEvent.
+[!UICONTROL Detalles de la página web] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe detalles sobre una página web que acaba de cargarse y visualizarse, tal como lo registró un ExperienceEvent.
 
-El tipo de datos está pensado para detalles de página completos y cargas de página iniciales de aplicaciones web de una sola página (SPA). Para las interacciones que se producen en una página cargada que no déclencheur una nueva carga de página, consulte el tipo de datos [web interaction](./web-interaction.md) .
+El tipo de datos está pensado para detalles de página completos y cargas de página iniciales de aplicaciones web de una sola página (SPA). Para las interacciones que están ocurriendo en una página cargada que no déclencheur una nueva carga de página, consulte la [interacción web](./web-interaction.md) tipo de datos.
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `pageViews` | [[!UICONTROL Medida]](./measure.md) | Número de vistas en una página web. |
-| `URL` | Cadena | Dirección URL normal o habitual de la página web. Puede ser o no la dirección URL real que se usa para llegar a la página. Para registrar la URL utilizada para llegar a la página, utilice `webLink`. El formato URI debe seguir el estándar [RFC 3986](https://tools.ietf.org/html/rfc3986). |
+| `URL` | Cadena | Dirección URL normal o habitual de la página web. Puede ser o no la dirección URL real que se usa para llegar a la página. Para registrar la dirección URL utilizada para llegar a la página, use `webLink`. El formato URI debe seguir el [RFC 3986](https://tools.ietf.org/html/rfc3986) estándar. |
 | `isErrorPage` | Booleano | Esta propiedad utiliza un indicador para indicar si la página es una página de error o no. Este indicador se utiliza para categorizar de forma amplia las interacciones web. El error lo define la aplicación y se puede corresponder a una página servida con un código de error HTTP. |
 | `isHomePage` | Booleano | Esta propiedad utiliza un indicador para indicar si la página es una página de inicio o no. Este indicador se utiliza para categorizar de forma amplia las interacciones web. La definición de la página principal viene determinada por la aplicación. |
 | `name` | Cadena | Nombre normativo de la página web. Este nombre no es necesariamente el título de la página o se asocia directamente con el contenido de la página, pero se utiliza para organizar las páginas de un sitio con fines de clasificación. |

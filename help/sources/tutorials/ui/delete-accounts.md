@@ -3,13 +3,12 @@ keywords: Experience Platform;inicio;temas populares; eliminar cuentas
 description: Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona los pasos para eliminar cuentas del espacio de trabajo de fuentes.
 solution: Experience Platform
 title: Eliminar cuentas de conexión de origen en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -58,7 +57,7 @@ Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea
 
 Aparece un cuadro de diálogo de confirmación final, seleccione **[!UICONTROL Eliminar]** para completar el proceso.
 
-![delete](../../images/tutorials/delete-accounts/confirm.png)
+![eliminar](../../images/tutorials/delete-accounts/confirm.png)
 
 ## Pasos siguientes
 

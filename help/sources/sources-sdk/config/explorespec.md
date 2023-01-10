@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 title: Configuración de especificaciones de exploración para fuentes de autoservicio (SDK por lotes)
-topic-legacy: overview
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 2%

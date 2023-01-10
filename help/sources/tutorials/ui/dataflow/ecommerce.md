@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;conector de comercio electrónico;eCommerce
 solution: Experience Platform
 title: Crear un flujo de datos con un origen de comercio electrónico en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de comercio electrónico mediante la interfaz de usuario de Platform.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 0%

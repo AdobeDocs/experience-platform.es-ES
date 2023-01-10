@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentación;trabajos de segmento;trabajo de segmento;API;api;
 solution: Experience Platform
 title: Punto final de la API de trabajos de segmento
-topic-legacy: developer guide
 description: El extremo de trabajos de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación los trabajos de segmentos de su organización.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 3%

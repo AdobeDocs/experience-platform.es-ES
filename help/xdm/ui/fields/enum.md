@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Definir campos de enumeración y valores sugeridos en la interfaz de usuario
 description: Obtenga información sobre cómo definir enumeraciones y valores sugeridos para campos de cadena en la interfaz de usuario del Experience Platform.
-topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 0%

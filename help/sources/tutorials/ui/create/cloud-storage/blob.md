@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Azure Blob;azure blob;Conector Azure Blob
 solution: Experience Platform
 title: Crear una conexión de origen de Azure Blob en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear un conector de origen de Azure Blob mediante la interfaz de usuario de Platform.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 1%

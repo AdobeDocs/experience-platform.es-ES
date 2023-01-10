@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;asignación de destino;asignación de destino
 solution: Experience Platform
 title: Asignación de datos de evento de Adobe Target a XDM
-topic-legacy: overview
 description: Obtenga información sobre cómo asignar campos de evento de Adobe Target a un esquema de Experience Data Model (XDM) para utilizarlo en Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 1%

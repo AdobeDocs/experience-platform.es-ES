@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 solution: Experience Platform
 title: Crear una nueva especificación de conexión mediante la API de servicio de flujo
-topic-legacy: tutorial
 description: En el siguiente documento se proporcionan los pasos para crear una especificación de conexión mediante la API de servicio de flujo e integrar un nuevo origen a través de fuentes de autoservicio.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 2%
@@ -40,7 +39,7 @@ Una vez proporcionado, debe estructurar el repositorio privado de Git de esta ma
 | Artefactos (nombres de archivo) | Descripción | Ejemplo |
 | --- | --- | --- |
 | {your_source} | Nombre de la fuente. Esta carpeta debe contener todos los artefactos relacionados con su origen, dentro del repositorio Git privado. | `mailchimp-members` |
-| {your_source}-category.txt | Categoría a la que pertenece el origen, con el formato de archivo de texto. La lista de categorías de fuentes disponibles compatibles con las fuentes de autoservicio (SDK por lotes) incluye: <ul><li>Advertising</li><li>Analytics</li><li>Consentimiento y preferencias</li><li>CRM</li><li>Éxito del cliente</li><li>Database</li><li>comercio electrónico</li><li>Automatización de la mercadotecnia</li><li>Pagos</li><li>Protocolos</li></ul> **Nota**: Si cree que su fuente no se ajusta a ninguna de las categorías anteriores, póngase en contacto con el representante del Adobe para hablar al respecto. | `mailchimp-members-category.txt` Dentro del archivo, especifique la categoría de la fuente, como: `marketingAutomation`. |
+| {your_source}-category.txt | Categoría a la que pertenece el origen, con el formato de archivo de texto. La lista de categorías de fuentes disponibles compatibles con las fuentes de autoservicio (SDK por lotes) incluye: <ul><li>Advertising</li><li>Analytics</li><li>Consentimiento y preferencias</li><li>CRM</li><li>Éxito del cliente</li><li>Base de datos</li><li>comercio electrónico</li><li>Automatización de la mercadotecnia</li><li>Pagos</li><li>Protocolos</li></ul> **Nota**: Si cree que su fuente no se ajusta a ninguna de las categorías anteriores, póngase en contacto con el representante del Adobe para hablar al respecto. | `mailchimp-members-category.txt` Dentro del archivo, especifique la categoría de la fuente, como: `marketingAutomation`. |
 | {your_source}-description.txt | Breve descripción de la fuente. | [!DNL Mailchimp Members] es la fuente de automatización de marketing que puede usar para traer [!DNL Mailchimp Members] datos para el Experience Platform. |
 | {your_source}-icon.svg | La imagen que se utilizará para representar el origen en el catálogo de fuentes del Experience Platform. Este icono debe ser un archivo SVG. |
 | {your_source}-label.txt | El nombre del origen tal como debería aparecer en el catálogo de fuentes del Experience Platform. | Miembros de Mailchimp |

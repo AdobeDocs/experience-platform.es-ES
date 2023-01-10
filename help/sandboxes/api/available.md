@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;listar entornos limitados disponibles;listar entornos limitados
 solution: Experience Platform
 title: Punto final de API de Simuladores de pruebas disponibles
-topic-legacy: developer guide
 description: Puede enumerar los entornos limitados disponibles para el usuario actual realizando una solicitud de GET al extremo de los entornos limitados disponibles.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 3%

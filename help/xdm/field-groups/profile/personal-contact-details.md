@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;perfil individual;campos;esquemas;esquemas;detalles personales;diseño de esquema;grupo de campos;grupo de campos;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles de contacto personal
-topic-legacy: overview
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de contacto personales .
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 6%
@@ -13,13 +12,13 @@ ht-degree: 6%
 ---
 
 
-# [!UICONTROL Grupo de campos ] Detalle de contacto personal
+# [!UICONTROL Detalles de contacto personal] grupo de campos de esquema
 
 >[!NOTE]
 >
->Los nombres de varios grupos de campos de esquema han cambiado. Para obtener más información, consulte el documento [field group name updates](../name-updates.md) .
+>Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento en [actualizaciones del nombre del grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL Personal Contact ] Detailes un grupo de campos de esquema estándar para la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) clase que describe la información de contacto de una persona individual.
+[!UICONTROL Detalles de contacto personal] es un grupo de campos de esquema estándar para la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) que describe la información de contacto de una persona individual.
 
 ![](../../images/field-groups/personal-contact-details.png)
 

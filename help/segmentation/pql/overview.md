@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;PQL;pql;lenguaje de consulta de perfil
 solution: Experience Platform
 title: Información general sobre el lenguaje de consulta de perfil (PQL)
-topic-legacy: developer guide
 description: Esta guía proporciona una descripción general de PQL, que cubre las directrices de formato y proporciona ejemplos de expresiones PQL.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 3%
@@ -63,7 +62,7 @@ PQL proporciona compatibilidad con los siguientes tipos de literales:
 | Cadena | Tipo de datos compuesto por caracteres entre comillas dobles. | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"` |
 | Booleano | Tipo de datos verdadero o falso. | `true`, `false` |
 | Número entero | Un tipo de datos que representa un número entero. Puede ser positivo, negativo o cero. | `-201`, `0`, `412` |
-| Duplicada | Un tipo de datos que representa cualquier número real. Puede ser positivo, negativo o cero. | `-51.24`, `3.14`, `0.6942058` |
+| Doble | Un tipo de datos que representa cualquier número real. Puede ser positivo, negativo o cero. | `-51.24`, `3.14`, `0.6942058` |
 | Fecha | Tipo de datos que se puede usar para crear fechas basadas en el año, mes y día como parámetros de entero. Tiene el formato `date(year, month, day)` | `date(2020, 3, 14)` |
 | Matriz | Tipo de datos que se compone como grupo de otros valores literales. Utiliza corchetes para agrupar y comas para delimitar entre valores diferentes. <br> **Nota:** No se puede acceder directamente a las propiedades de los elementos de una matriz. Por lo tanto, si necesita acceder a una propiedad dentro de una matriz, el método admitido es `select X from array where X.item = ...`. <br> PQL reserva la palabra `xEvent` para hacer referencia a una matriz de eventos de experiencia vinculados a un perfil. | `[1, 4, 7]`, `["US", "CA"]` |
 | Referencias de tiempo relativas | Palabras reservadas que se pueden usar para crear referencias a intervalos de tiempo y marcas de tiempo. <ul><li>ahora, hoy, ayer, mañana</li><li>esto, último, siguiente</li><li>antes, después, de</li><li>milisegundos, segundos, minutos, horas, días, semanas, meses, años, décadas, siglos, milenios</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |

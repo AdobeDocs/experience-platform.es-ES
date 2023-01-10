@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;conector de origen de Marketo;áreas de nombres;esquemas;b2b;B2B
 solution: Experience Platform
 title: Esquemas y áreas de nombres B2B
-topic-legacy: overview
 description: Este documento proporciona información general sobre los espacios de nombres personalizados necesarios al crear un conector de origen B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1707'
 ht-degree: 5%

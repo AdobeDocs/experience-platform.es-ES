@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Veeva CRM;veeva
 solution: Experience Platform
 title: Crear una conexión de origen de Veeva CRM en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Veeva CRM mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 1%

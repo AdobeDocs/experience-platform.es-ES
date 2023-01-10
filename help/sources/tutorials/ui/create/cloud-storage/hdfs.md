@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;HDFS de Apache;HDFS;hdfs
 solution: Experience Platform
 title: Crear una conexión de origen de HDFS de Apache en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen del sistema de archivos distribuido de Hadoop Apache utilizando la interfaz de usuario de Adobe Experience Platform.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 1%

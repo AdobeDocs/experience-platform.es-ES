@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;Servicio de segmentación;segmentación;servicio de segmentación;guía del usuario;guía de la interfaz de usuario;guía de la interfaz de usuario de audiencias;generador de audiencias;audiencia;audiencias;guía de la interfaz de usuario de audiencias;
 solution: Experience Platform
 title: Guía de la interfaz de usuario de Audiences
-topic-legacy: ui guide
 description: El Generador de audiencias en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 hide: true
 hidefromtoc: true
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentación;previsualizaciones;estimaciones;previsualizaciones y estimaciones;estimaciones y previsualizaciones;api;API;
 solution: Experience Platform
 title: Vistas previas y estimaciones de puntos de conexión de API
-topic-legacy: developer guide
 description: A medida que se desarrolla la definición del segmento, puede utilizar las herramientas de estimación y vista previa de Adobe Experience Platform para ver la información de resumen y garantizar que está aislando la audiencia esperada.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 2%

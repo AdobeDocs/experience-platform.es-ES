@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Sistema de archivos distribuido de Apache Hadoop;hadoop Apache;hdfs;HDFS
 solution: Experience Platform
 title: Creación de una conexión básica de HDFS de Apache mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar un sistema de archivos distribuido de Hadoop Apache a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 2%

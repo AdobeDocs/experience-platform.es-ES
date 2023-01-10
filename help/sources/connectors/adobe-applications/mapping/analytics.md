@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;campos de asignación de Analytics;asignación de analytics
 solution: Experience Platform
 title: Asignación de campos para el conector de origen de Adobe Analytics
-topic-legacy: overview
 description: Adobe Experience Platform le permite introducir datos de Adobe Analytics a través de la fuente de Analytics. Algunos de los datos introducidos a través de ADC pueden asignarse directamente de los campos de Analytics a los campos del Modelo de datos de experiencia (XDM), mientras que otros datos requieren transformaciones y funciones específicas para poder asignarse correctamente.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '3431'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -172,24 +171,24 @@ La tabla siguiente incluye columnas que muestran el nombre del campo Analytics (
 | m_search_engine | search.searchEngine | string | ID numérica que representa el motor de búsqueda que ha llevado al visitante a su sitio. |
 | post_currency | commerce.order.currencyCode | string | El código de moneda que se ha utilizado durante la transición. |
 | post_cust_hit_time_gmt | timestamp | string | Esto solo se utiliza en conjuntos de datos con marca de tiempo habilitada. Esta es la marca de tiempo que se envía con ella, en función de la hora Unix. |
-| post_cust_visid | identityMap | object | El ID de visitante del cliente. |
+| post_cust_visid | identityMap | objeto | El ID de visitante del cliente. |
 | post_cust_visid | endUserIDs._experience.aacustomid.primary | Booleano | El ID de visitante del cliente. |
 | post_cust_visid | endUserIDs._experience.aacustomid.namespace.code | string | El ID de visitante del cliente. |
-| post_visid_high + visid_low | identityMap | object | Identificador único de una visita. |
+| post_visid_high + visid_low | identityMap | objeto | Identificador único de una visita. |
 | post_visid_high + visid_low | endUserIDs._experience.aaid.id | string | Identificador único de una visita. |
 | post_visid_high | endUserIDs._experience.aaid.primary | Booleano | Se utiliza junto con visid_low para identificar una visita de forma exclusiva. |
 | post_visid_high | endUserIDs._experience.aaid.namespace.code | string | Se utiliza junto con visid_low para identificar una visita de forma exclusiva. |
-| post_visid_low | identityMap | object | Se utiliza junto con visid_high para identificar una visita de forma exclusiva. |
+| post_visid_low | identityMap | objeto | Se utiliza junto con visid_high para identificar una visita de forma exclusiva. |
 | hit_time_gmt | receivedTimestamp | string | La marca de tiempo de la visita, basada en el tiempo Unix. |
 | hitid_high + hitid_low | _id | string | Identificador único para identificar una visita. |
 | hitid_low | _id | string | Se utiliza junto con hitid_high para identificar una visita de forma exclusiva. |
 | ip | environment.ipV4 | string | La dirección IP, basada en el encabezado HTTP de la solicitud de imagen. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | Booleano | Versión de JavaScript utilizada. |
-| mcvisid_high + mcvisid_low | identityMap | object | El ID de visitante del Experience Cloud. |
+| mcvisid_high + mcvisid_low | identityMap | objeto | El ID de visitante del Experience Cloud. |
 | mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | El ID de Experience Cloud (ECID) también se conoce como MCID y, a veces, se utiliza en áreas de nombres. |
 | mcvisid_high | endUserIDs._experience.mcid.primary | Booleano | El ID de Experience Cloud (ECID) también se conoce como MCID y, a veces, se utiliza en áreas de nombres. |
 | mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | El ID de Experience Cloud (ECID) también se conoce como MCID y, a veces, se utiliza en áreas de nombres. |
-| mcvisid_low | identityMap | object | El ID de visitante del Experience Cloud. |
+| mcvisid_low | identityMap | objeto | El ID de visitante del Experience Cloud. |
 | sdid_high + sdid_low | _experience.target.complementDataID | string | ID de vinculación de visitas. El campo de análisis sdid_high y sdid_low es el id de datos suplementario que se utiliza para unir dos o más visitas entrantes. |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | string | Proximidad de la señalización de Mobile Services. |
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | integer | Nombre del capítulo del vídeo. |

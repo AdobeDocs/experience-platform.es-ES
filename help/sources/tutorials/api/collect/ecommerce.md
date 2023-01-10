@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Recopilar datos de comercio electrónico;datos de comercio electrónico
 solution: Experience Platform
 title: Crear un flujo de datos para orígenes de comercio electrónico mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un sistema de comercio electrónico de terceros e introducirlos en Platform mediante conectores de origen y API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 2%

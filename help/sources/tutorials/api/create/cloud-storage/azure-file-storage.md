@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Azure;Azure File Storage;Azure file storage
 solution: Experience Platform
 title: Creación de una conexión de base de almacenamiento de archivos de Azure mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar el almacenamiento de archivos de Azure a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 2%

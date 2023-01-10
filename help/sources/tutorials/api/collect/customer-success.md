@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;recopilar éxito de los clientes;éxito de los clientes
 solution: Experience Platform
 title: Crear un flujo de datos para las fuentes de éxito del cliente mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un sistema de éxito de clientes e introducirlos en Platform mediante conectores de origen y API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 2%

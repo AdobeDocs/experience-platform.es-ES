@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;exclusión;segmentación;servicio de segmentación;servicio de segmentación;honores de exclusión;exclusión;exclusión;exclusión;exclusión;consentimiento;compartir;recopilar;
 solution: Experience Platform
 title: Respeto del consentimiento en los segmentos
-topic-legacy: overview
 description: Obtenga información sobre cómo cumplir las preferencias de consentimiento del cliente para la recopilación y el uso compartido de datos personales en operaciones de segmentos.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%

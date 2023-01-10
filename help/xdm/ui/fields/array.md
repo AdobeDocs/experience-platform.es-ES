@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Definir campos de matriz en la interfaz de usuario
 description: Obtenga información sobre cómo definir un campo de matriz en la interfaz de usuario del Experience Platform.
-topic-legacy: user guide
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 2%
@@ -16,9 +15,9 @@ ht-degree: 2%
 
 Al definir un campo Modelo de datos de experiencia (XDM) en la interfaz de usuario de Adobe Experience Platform, puede designar ese campo como una matriz.
 
-El contenido de la matriz depende del [!UICONTROL Type] seleccionado para ese campo. Por ejemplo, si el valor [!UICONTROL Type] de un campo se define como &quot;[!UICONTROL String]&quot;, si se configura ese campo como una matriz, se designará el campo como una matriz de cadenas. Si el [!UICONTROL Type] del campo se configura en un tipo de datos de varios campos como &quot;[!UICONTROL Postal address]&quot;, se convertirá en una matriz de objetos de dirección postal que se ajusten al tipo de datos.
+El contenido de la matriz depende del [!UICONTROL Tipo] seleccionado para ese campo. Por ejemplo, si un campo [!UICONTROL Tipo] se configura como &quot;[!UICONTROL Cadena]&quot;, si se establece ese campo como una matriz, el campo se designará como una matriz de cadenas. Si el campo [!UICONTROL Tipo] se establece en un tipo de datos de varios campos como &quot;[!UICONTROL Dirección postal]&quot;, entonces se convertiría en una matriz de objetos de dirección postal que se ajustan al tipo de datos.
 
-Una vez que haya [definido un nuevo campo en la interfaz de usuario](./overview.md#define), puede definirlo como un campo de matriz seleccionando la casilla **[!UICONTROL Array]** en el carril derecho.
+Después de [se ha definido un nuevo campo en la interfaz de usuario](./overview.md#define), puede definirlo como un campo de matriz seleccionando la variable **[!UICONTROL Matriz]** en el carril derecho.
 
 ![](../../images/ui/fields/special/array.png)
 
@@ -34,7 +33,7 @@ Los controles de configuración adicionales para matrices son los siguientes:
 
 {style=&quot;table-layout:auto&quot;}
 
-Una vez que haya terminado de configurar el campo, seleccione **[!UICONTROL Apply]** para aplicar el cambio al esquema.
+Una vez que haya terminado de configurar el campo, seleccione **[!UICONTROL Aplicar]** para aplicar el cambio al esquema.
 
 ![](../../images/ui/fields/special/array-config.png)
 
@@ -44,4 +43,4 @@ El lienzo se actualiza para reflejar los cambios realizados en el campo. Tenga e
 
 ## Pasos siguientes
 
-Esta guía explica cómo definir un campo de matriz en la interfaz de usuario. Consulte la descripción general sobre la [definición de campos en la interfaz de usuario](./overview.md#special) para aprender a definir otros tipos de campos XDM en [!DNL Schema Editor].
+Esta guía explica cómo definir un campo de matriz en la interfaz de usuario. Consulte la descripción general sobre [definición de campos en la interfaz de usuario](./overview.md#special) para aprender a definir otros tipos de campos XDM en la [!DNL Schema Editor].

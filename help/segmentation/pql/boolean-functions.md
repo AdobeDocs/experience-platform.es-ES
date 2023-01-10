@@ -2,11 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Idioma de consulta de perfil;funciones booleanas;booleano;
 solution: Experience Platform
 title: Funciones booleanas de PQL
-topic-legacy: developer guide
 description: Las funciones booleanas se utilizan para realizar lógica booleana en diferentes elementos del lenguaje de consulta de perfil (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 5%
@@ -15,13 +13,13 @@ ht-degree: 5%
 
 # Funciones booleanas
 
-Las funciones booleanas se utilizan para realizar lógica booleana en diferentes elementos en [!DNL Profile Query Language] (PQL).  Puede encontrar más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
+Las funciones booleanas se utilizan para realizar lógica booleana en distintos elementos de [!DNL Profile Query Language] (PQL).  Puede encontrar más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] información general](./overview.md).
 
 ## Y
 
-La función `and` se utiliza para crear una conjunción lógica.
+La variable `and` para crear una conjunción lógica.
 
-**Format**
+**Formato**
 
 ```sql
 {QUERY} and {QUERY}
@@ -37,7 +35,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## O
 
-La función `or` se utiliza para crear una disyunción lógica.
+La variable `or` para crear una disyunción lógica.
 
 **Formato**
 
@@ -55,7 +53,7 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 ## No
 
-La función `not` (o `!`) se utiliza para crear una negación lógica.
+La variable `not` (o `!`) se utiliza para crear una negación lógica.
 
 **Formato**
 
@@ -74,7 +72,7 @@ not (homeAddress.countryISO = "CA")
 
 ## Si
 
-La función `if` se utiliza para resolver una expresión en función de si una condición especificada es verdadera.
+La variable `if` se utiliza para resolver una expresión en función de si una condición especificada es verdadera.
 
 **Formato**
 
@@ -85,7 +83,7 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 | Argumento | Descripción |
 | --------- | ----------- |
 | `{TEST_EXPRESSION}` | La expresión booleana que se está probando. |
-| `{TRUE_EXPRESSION}` | La expresión cuyo valor se utilizará si `{TEST_EXPRESSION}` es verdadera. |
+| `{TRUE_EXPRESSION}` | La expresión cuyo valor se utilizará si `{TEST_EXPRESSION}` es verdadero. |
 | `{FALSE_EXPRESSION}` | La expresión cuyo valor se utilizará si `{TEST_EXPRESSION}` es false. |
 
 **Ejemplo**
@@ -98,4 +96,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones booleanas, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de consulta de perfil](./overview.md).
+Ahora que ha aprendido sobre las funciones booleanas, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [Información general sobre el lenguaje de consulta de perfil](./overview.md).

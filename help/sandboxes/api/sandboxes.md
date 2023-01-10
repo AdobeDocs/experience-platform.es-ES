@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;guía para desarrolladores de entornos limitados
 solution: Experience Platform
 title: Punto final de la API de administración de entornos aislados
-topic-legacy: developer guide
 description: El extremo /sandboxes de la API de Sandbox le permite administrar entornos limitados en Adobe Experience Platform mediante programación.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 4%
@@ -405,7 +404,7 @@ Una respuesta correcta devuelve los detalles del simulador de pruebas actualizad
 }
 ```
 
-El entorno limitado de producción predeterminado y los entornos limitados de producción creados por el usuario no se pueden restablecer si Adobe Analytics también está utilizando el gráfico de identidad alojado en él para el [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) o si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Audience Manager para la función [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) función.
+El entorno limitado de producción predeterminado y los entornos limitados de producción creados por el usuario no se pueden restablecer si Adobe Analytics también está utilizando el gráfico de identidad alojado en él para el [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) o si el gráfico de identidad alojado en él también está siendo utilizado por Adobe Audience Manager para la función [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=es) función.
 
 A continuación se muestra una lista de posibles excepciones que podrían impedir que se restablezca un simulador para pruebas:
 

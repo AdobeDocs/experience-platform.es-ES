@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;couchbase;Couchbase
 solution: Experience Platform
 title: Creación de una conexión base de Couchbase mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Couchbase a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 2%

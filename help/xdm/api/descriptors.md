@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API del Registro de esquemas permite administrar mediante programación los descriptores XDM dentro de la aplicación de experiencia.
-topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: e8ad829ac4ea89c0d0167e6b414db577c9ecf094
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 4%

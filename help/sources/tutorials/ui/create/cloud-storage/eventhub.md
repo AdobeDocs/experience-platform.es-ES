@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;centros de eventos de Azure;centros de eventos;centros de eventos de azure
 solution: Experience Platform
 title: Crear una conexión de origen de los centros de eventos de Azure en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de los centros de eventos de Azure mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 1%

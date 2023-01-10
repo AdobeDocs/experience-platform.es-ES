@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;conector de base de datos
 solution: Experience Platform
 title: Crear un flujo de datos utilizando un origen de base de datos en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para un origen de base de datos mediante la interfaz de usuario de Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 0%

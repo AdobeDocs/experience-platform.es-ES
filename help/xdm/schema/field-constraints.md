@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;grupo de campos;grupo de campos;grupos de campos;grupos de campos;tipo de datos;tipos de datos;tipo de datos;diseño de esquema;tipo de datos;tipo de datos;tipo de datos;esquemas;esquemas;diseño de esquema;mapa;mapa;
 solution: Experience Platform
 title: Restricciones de tipo de campo XDM
-topic-legacy: overview
 description: Una referencia para restricciones de tipo de campo en Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '663'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -137,10 +136,10 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 | Tipo XDM | Parqué | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL Cadena] | Tipo: `BYTE_ARRAY`<br>Anotación: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Duplicada] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Doble] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Largo] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL Número entero] | Tipo: `INT32`<br>Anotación: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Corto] | Tipo: `INT32`<br>Anotación: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL corto] | Tipo: `INT32`<br>Anotación: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Tipo: `INT32`<br>Anotación: `INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL Fecha] | Tipo: `INT32`<br>Anotación: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Tipo: `INT64`<br>Anotación: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
@@ -154,10 +153,10 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 | Tipo XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL Cadena] | `String` | `System.String` | `String` |
-| [!UICONTROL Duplicada] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Doble] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Largo] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Número entero] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Corto] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL corto] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
 | [!UICONTROL Fecha] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
@@ -171,10 +170,10 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 | Tipo XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL Cadena] | `string` | `String` | `string` |
-| [!UICONTROL Duplicada] | `double` | `Double` | `double` |
+| [!UICONTROL Doble] | `double` | `Double` | `double` |
 | [!UICONTROL Largo] | `long` | `Integer` | `int64` |
 | [!UICONTROL Número entero] | `int` | `Integer` | `int32` |
-| [!UICONTROL Corto] | `int` | `Integer` | `int32` |
+| [!UICONTROL corto] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
 | [!UICONTROL Fecha] | `date` | `Integer`<br>(milisegundos de Unix) | `int64`<br>(milisegundos de Unix) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(milisegundos de Unix) | `int64`<br>(milisegundos de Unix) |

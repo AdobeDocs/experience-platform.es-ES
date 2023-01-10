@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Fuente de la zona de aterrizaje de datos
-topic-legacy: overview
 description: Obtenga información sobre cómo conectar la zona de aterrizaje de datos a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 0%

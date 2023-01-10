@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
 solution: Experience Platform
 title: Creación de una conexión de origen de Amazon Kinesis mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un origen de Amazon Kinesis mediante la API de servicio de flujo.
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 2%

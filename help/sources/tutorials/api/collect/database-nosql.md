@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;base de datos;base de datos de terceros
 solution: Experience Platform
 title: Crear un flujo de datos para orígenes de base de datos mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una base de datos e introducirlos en Platform mediante conectores de origen y API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 2%

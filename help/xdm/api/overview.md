@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Guía de API del Registro de Esquemas
 description: La API del Registro de esquemas permite a los desarrolladores administrar mediante programación todos los esquemas y recursos relacionados del Modelo de datos de experiencia (XDM) dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
-topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 5%

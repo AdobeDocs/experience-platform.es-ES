@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Apéndice de la API del Registro de Esquemas
 description: Este documento proporciona información complementaria relacionada con el trabajo con la API del Registro de esquemas.
-topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 1%

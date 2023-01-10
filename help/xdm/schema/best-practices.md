@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;enumeración;identidad principal;identidad principal;perfil individual XDM;evento de experiencia;evento de experiencia XDM;evento de experiencia XDM;evento de experiencia;evento de experiencias;evento de experiencias XDM;evento de experiencias XDM;diseño de esquema;prácticas recomendadas
 solution: Experience Platform
 title: Prácticas Recomendadas Para El Modelado De Datos
-topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '2699'
 ht-degree: 2%
@@ -26,7 +25,7 @@ Además, esta guía se centra exclusivamente en consideraciones clave relacionad
 
 ## Resumen de prácticas recomendadas
 
-El método recomendado para diseñar el modelo de datos para su uso en Experience Platform se puede resumir de la siguiente manera:
+El método recomendado para diseñar el modelo de datos para su uso en Experience Platform puede resumirse de la siguiente manera:
 
 1. Comprender los casos de uso empresarial de sus datos.
 1. Identificar las fuentes de datos principales en las que se debe importar [!DNL Platform] para tratar estos casos de uso.

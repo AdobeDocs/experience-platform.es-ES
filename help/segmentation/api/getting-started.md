@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentación;api;
 solution: Experience Platform
 title: Introducción a la API del servicio de segmentación
-topic-legacy: developer guide
 description: La siguiente documentación proporciona información adicional que debe conocer para trabajar correctamente con la API de segmentación.
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 1%

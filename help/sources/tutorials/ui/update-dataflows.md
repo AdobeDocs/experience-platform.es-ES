@@ -3,10 +3,9 @@ keywords: Experience Platform;inicio;temas populares;actualizar flujos de datos;
 description: Este tutorial trata los pasos para actualizar una programación de flujo de datos, incluida la frecuencia de ingesta y la velocidad de intervalo, mediante el espacio de trabajo de fuentes.
 solution: Experience Platform
 title: Actualizar un flujo de datos de conexión de origen en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 6a9ad0ce5d664e3b32cab4183b54fabd5d9d19e3
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
@@ -96,7 +95,7 @@ La variable **[!UICONTROL Editar programación]** El cuadro de diálogo le ofrec
 
 ![elemento emergente de programación](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 
-### Consulte
+### Revisión
 
 La variable **[!UICONTROL Consulte]** aparece, lo que le permite revisar el flujo de datos antes de actualizarlo.
 

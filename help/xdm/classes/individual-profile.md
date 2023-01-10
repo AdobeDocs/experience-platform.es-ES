@@ -2,17 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;perfil individual;campos;esquemas;esquemas;mapa de identidad;mapa de identidad;mapa de identidad;diseño de esquema;mapa;mapa;esquema de unión;unión
 solution: Experience Platform
 title: Clase de perfil individual XDM
-topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 1%
 
 ---
 
-# [!DNL XDM Individual Profile] class
+# [!DNL XDM Individual Profile] clase
 
 [!DNL XDM Individual Profile] es una clase estándar de Experience Data Model (XDM) que forma una representación singular (o &quot;perfil&quot;) de una persona individual. Concretamente, la clase (y sus grupos de campos compatibles) captura los atributos y los intereses de las personas identificadas y parcialmente identificadas que interactúan con su marca.
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;pago
 solution: Experience Platform
 title: Explorar un sistema de pago mediante la API de servicio de flujo
-topic-legacy: overview
 description: Este tutorial utiliza la API de servicio de flujo para explorar las aplicaciones de pago.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 3%

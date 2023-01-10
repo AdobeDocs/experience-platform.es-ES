@@ -2,14 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;ExperienceEvent;campos;esquemas;esquemas;diseño de esquema;grupo de campos;grupo de campos;enduserids;usuario final;usuario final;id;actualizaciones;
 solution: Experience Platform
 title: Actualizaciones del nombre del grupo de campos de esquema
-topic-legacy: overview
 description: Una lista de cambios recientes en el nombre del grupo de campos de esquema XDM.
 exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 0%
+source-wordcount: '287'
+ht-degree: 2%
 
 ---
 
@@ -22,31 +20,31 @@ La siguiente tabla describe los grupos de campos existentes que se han actualiza
 
 | Nombre anterior | Nombre actualizado |
 | --- | --- |
-| [!UICONTROL Experience event privacy mixin] | [!UICONTROL Privacy Details] |
-| [!UICONTROL ExperienceEvent application details] | [!UICONTROL Application Details] |
-| [!UICONTROL ExperienceEvent channel details] | [!UICONTROL Channel Details] |
-| [!UICONTROL ExperienceEvent commerce details] | [!UICONTROL Commerce Details] |
-| [!UICONTROL ExperienceEvent details for advertising] | [!UICONTROL Advertising Details] |
-| [!UICONTROL ExperienceEvent details for marketing] | [!UICONTROL Campaign Marketing Details] |
-| [!UICONTROL ExperienceEvent details for media] | [!UICONTROL Media Interaction Details] |
-| [!UICONTROL ExperienceEvent details for search] | [!UICONTROL Search Details] |
-| [!UICONTROL ExperienceEvent direct marketing details] | [!UICONTROL Direct Marketing Details] |
-| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL End User ID Details] |
-| [!UICONTROL ExperienceEvent environment details] | [!UICONTROL Environment Details] |
-| [!UICONTROL ExperienceEvent implementation details] | [!UICONTROL Implementation Details] |
-| [!UICONTROL ExperienceEvent profile stitch details] | [!UICONTROL Profile Stitch] |
-| [!UICONTROL ExperienceEvent Segment Membership Details] | [!UICONTROL Segment Membership Details] |
-| [!UICONTROL ExperienceEvent technical details] | [!UICONTROL Technical Details] |
-| [!UICONTROL ExperienceEvent web details] | [!UICONTROL Web Details] |
-| [!UICONTROL Profile direct marketing] | [!UICONTROL Direct Marketing Contact Details] |
-| [!UICONTROL Profile person details] | [!UICONTROL Demographic Details] |
-| [!UICONTROL Profile personal details] | [!UICONTROL Personal Contact Details] |
-| [!UICONTROL Profile Phones] | [!UICONTROL Phone Number Details] |
-| [!UICONTROL Profile preferences details] | [!UICONTROL Preference Details] |
-| [!UICONTROL Profile privacy] | [!UICONTROL Privacy Details] |
-| [!UICONTROL Profile push details] | [!UICONTROL Push Notification Token Details] |
-| [!UICONTROL Profile segmentation] | [!UICONTROL Segment Membership Details] |
-| [!UICONTROL Profile subscriptions] | [!UICONTROL Subscription Details] |
-| [!UICONTROL Profile work details] | [!UICONTROL Work Contact Details] |
-| [!UICONTROL Push notification details] | [!UICONTROL Push Notification Details] |
-| [!UICONTROL Segment expression] | [!UICONTROL Segment Expression Details] |
+| [!UICONTROL Mezcla de privacidad del evento de experiencia] | [!UICONTROL Detalles de privacidad] |
+| [!UICONTROL Detalles de la aplicación ExperienceEvent] | [!UICONTROL Detalles de la aplicación] |
+| [!UICONTROL Detalles del canal ExperienceEvent] | [!UICONTROL Detalles del canal] |
+| [!UICONTROL Detalles comerciales de ExperienceEvent] | [!UICONTROL Detalles del comercio] |
+| [!UICONTROL Detalles de ExperienceEvent para publicidad] | [!UICONTROL Detalles publicitarios] |
+| [!UICONTROL Detalles de ExperienceEvent para marketing] | [!UICONTROL Detalles de marketing de campaña] |
+| [!UICONTROL Detalles de ExperienceEvent para medios] | [!UICONTROL Detalles de interacción de medios] |
+| [!UICONTROL Detalles de ExperienceEvent para la búsqueda] | [!UICONTROL Detalles de búsqueda] |
+| [!UICONTROL Detalles de marketing directo de ExperienceEvent] | [!UICONTROL Detalles de marketing directo] |
+| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL Detalles del ID de usuario final] |
+| [!UICONTROL Detalles del entorno de ExperienceEvent] | [!UICONTROL Detalles del entorno] |
+| [!UICONTROL Detalles de la implementación de ExperienceEvent] | [!UICONTROL Detalles de implementación] |
+| [!UICONTROL Detalles de la vinculación de perfiles de ExperienceEvent] | [!UICONTROL Coincidencia de perfil] |
+| [!UICONTROL Detalles de pertenencia a segmentos de ExperienceEvent] | [!UICONTROL Detalles de pertenencia a segmentos] |
+| [!UICONTROL Detalles técnicos de ExperienceEvent] | [!UICONTROL Detalles técnicos] |
+| [!UICONTROL Detalles web de ExperienceEvent] | [!UICONTROL Detalles web] |
+| [!UICONTROL Marketing directo de perfil] | [!UICONTROL Detalles de contacto de marketing directo] |
+| [!UICONTROL Detalles de la persona del perfil] | [!UICONTROL Detalles demográficos] |
+| [!UICONTROL Detalles personales del perfil] | [!UICONTROL Detalles de contacto personal] |
+| [!UICONTROL Teléfonos del perfil] | [!UICONTROL Detalles del número de teléfono] |
+| [!UICONTROL Detalles de las preferencias de perfil] | [!UICONTROL Detalles de preferencia] |
+| [!UICONTROL Privacidad del perfil] | [!UICONTROL Detalles de privacidad] |
+| [!UICONTROL Detalles de inserción de perfil] | [!UICONTROL Detalles del token de notificación push] |
+| [!UICONTROL Segmentación de perfiles] | [!UICONTROL Detalles de pertenencia a segmentos] |
+| [!UICONTROL Suscripciones de perfil] | [!UICONTROL Detalles de suscripción] |
+| [!UICONTROL Detalles del trabajo del perfil] | [!UICONTROL Detalles de contacto de trabajo] |
+| [!UICONTROL Detalles de las notificaciones push] | [!UICONTROL Detalles de las notificaciones push] |
+| [!UICONTROL Expresión de segmento] | [!UICONTROL Detalles de la expresión de segmentos] |

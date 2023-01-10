@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;segmentación;servicio de segmentación;solución de problemas;API;seg;segmento;búsqueda;búsqueda;búsqueda de segmentos;
 title: Punto final de la API de búsqueda de segmentos
-topic-legacy: guide
 description: En la API del servicio de segmentación de Adobe Experience Platform, la búsqueda de segmentos se utiliza para buscar campos contenidos en varias fuentes de datos y devolverlos en tiempo casi real. Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye ejemplos de llamadas API para realizar acciones básicas con la API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 2%

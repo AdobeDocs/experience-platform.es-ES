@@ -2,17 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;campos;esquemas;esquemas;mapa de identidad;mapa de identidad;mapa de identidad;diseño de esquema;mapa;mapa;modelado de eventos;modelado de eventos;prácticas recomendadas;evento;eventos;
 solution: Experience Platform
 title: Clase XDM ExperienceEvent
-topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM ExperienceEvent y prácticas recomendadas para el modelado de datos de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1830'
 ht-degree: 1%
 
 ---
 
-# [!DNL XDM ExperienceEvent] class
+# [!DNL XDM ExperienceEvent] clase
 
 [!DNL XDM ExperienceEvent] es una clase estándar del Modelo de datos de experiencia (XDM) que le permite crear una instantánea con marca de tiempo del sistema cuando se produce un evento específico o cuando se alcanza un conjunto determinado de condiciones.
 

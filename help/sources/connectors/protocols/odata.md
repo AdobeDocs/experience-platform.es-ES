@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;OData;datos;oData;OData genérico;datos genéricos
 solution: Experience Platform
 title: Información general de fuentes de OData genéricas
-topic-legacy: overview
 description: Obtenga información sobre cómo conectar OData genérico a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%

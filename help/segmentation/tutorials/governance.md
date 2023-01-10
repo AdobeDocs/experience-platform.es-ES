@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;conformidad con el uso de los datos;aplicación;cumplimiento de normas del uso de datos;servicio de segmentación;segmentación;segmentación;
 solution: Experience Platform
 title: Aplicar el cumplimiento de uso de datos a un segmento de audiencia mediante API
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial trata los pasos para aplicar el cumplimiento de los estándares de uso de datos para segmentos de audiencia del perfil del cliente en tiempo real que utilizan API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%

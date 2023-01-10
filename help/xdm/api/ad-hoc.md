@@ -3,10 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Esquemas específicos
 description: En circunstancias específicas, puede ser necesario crear un esquema XDM con campos a los que se les asigna un nombre para su uso solamente mediante un único conjunto de datos. Esto se denomina esquema ad hoc.
-topic-legacy: developer guide
 exl-id: 8ee43bdc-3f16-4ec9-b17a-9942e4599023
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
@@ -15,4 +13,4 @@ ht-degree: 0%
 
 # Esquemas específicos
 
-En circunstancias específicas, puede ser necesario crear un esquema [!DNL Experience Data Model] (XDM) con campos a los que solo se les asigna un nombre para su uso mediante un único conjunto de datos. Esto se denomina esquema ad hoc. Los esquemas específicos se utilizan en varios flujos de trabajo de ingesta de datos, incluida la ingesta de archivos CSV y la creación de determinados tipos de conectores de origen. Para obtener más información sobre los esquemas ad-hoc, incluidos los pasos para crear uno en la API [!DNL Schema Registry], consulte el [tutorial de esquema ad-hoc](../tutorials/ad-hoc.md).
+En circunstancias específicas, puede ser necesario crear un [!DNL Experience Data Model] (XDM) con campos a los que se asigna un nombre para su uso solamente mediante un único conjunto de datos. Esto se denomina esquema ad hoc. Los esquemas específicos se utilizan en varios flujos de trabajo de ingesta de datos, incluida la ingesta de archivos CSV y la creación de determinados tipos de conectores de origen. Para obtener más información sobre esquemas ad hoc, incluidos los pasos para crear uno en la variable [!DNL Schema Registry] API, consulte la [tutorial de esquema ad-hoc](../tutorials/ad-hoc.md).

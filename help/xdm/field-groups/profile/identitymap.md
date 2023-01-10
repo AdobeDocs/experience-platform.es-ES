@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;perfil individual;campos;esquemas;esquemas;mapa de identidad;mapa de identidad;mapa de identidad;diseño de esquema;mapa;mapa;esquema de unión;unión
 title: Grupo de campos de esquema de IdentityMap
-topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM Individual Profile.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: c59b4bd7ccc61ef4f9dc8a963903e3ec495558ed
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

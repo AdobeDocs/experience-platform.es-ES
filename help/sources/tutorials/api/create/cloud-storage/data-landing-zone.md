@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;
 solution: Experience Platform
 title: Conexión de la zona de aterrizaje de datos a Adobe Experience Platform mediante la API del servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a la zona de aterrizaje de datos mediante la API de servicio de flujo.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 5%
@@ -320,7 +319,7 @@ La siguiente tabla describe los distintos escenarios que puede encontrar al usar
 | `determineProperties` | `queryParams` | Respuesta |
 | --- | --- | --- |
 | True | N/A | If `determineProperties` se proporciona como parámetro de consulta, se produce la detección de las propiedades del archivo y la respuesta devuelve un nuevo valor `properties` clave que incluye información sobre el tipo de archivo, el tipo de compresión y el delimitador de columna. |
-| N/D | True | Si los valores para el tipo de archivo, el tipo de compresión y el delimitador de columna se proporcionan manualmente como parte de `queryParams`, se utilizan para generar el esquema y se devuelven las mismas propiedades como parte de la respuesta. |
+| N/A | True | Si los valores para el tipo de archivo, el tipo de compresión y el delimitador de columna se proporcionan manualmente como parte de `queryParams`, se utilizan para generar el esquema y se devuelven las mismas propiedades como parte de la respuesta. |
 | True | True | Si ambas opciones se realizan simultáneamente, se devuelve un error. |
 | N/D | N/D | Si no se proporciona ninguna de las dos opciones, se devuelve un error porque no hay forma de obtener propiedades para la respuesta. |
 

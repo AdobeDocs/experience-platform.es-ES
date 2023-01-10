@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares;dirección ip;direcciones i
 description: Las direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen.
 solution: Experience Platform
 title: LISTA DE PERMITIDOS de direcciones IP para conexiones de origen
-topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 40a6a6888fe075d653c565e5925874d737aa5c59
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%

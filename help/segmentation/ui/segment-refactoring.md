@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Generador de segmentos;Generador de segmentos
 solution: Experience Platform
 title: Guía de la interfaz de usuario sobre restricciones de tiempo de segmentación refactorizada
-topic-legacy: ui guide
 description: El Generador de segmentos proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%

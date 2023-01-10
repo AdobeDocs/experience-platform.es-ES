@@ -3,9 +3,8 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Crear y editar clases en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar clases en la interfaz de usuario del Experience Platform.
-topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: a854a40034666159fabca550227efe9f3a47fb53
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%

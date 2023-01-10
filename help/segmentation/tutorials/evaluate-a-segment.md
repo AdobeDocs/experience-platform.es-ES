@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;evaluación de segmentos;servicio de segmentación;segmentación;segmentación;evaluación de segmentos;acceso a resultados de segmentos;evaluación y acceso a segmentos;
 solution: Experience Platform
 title: Evaluar y acceder a resultados de segmentos
-topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para aprender a evaluar segmentos y acceder a resultados de segmentos mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%

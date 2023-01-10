@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;couchbase;Couchbase
 solution: Experience Platform
 title: Información general del conector de origen de Couchbase
-topic-legacy: overview
 description: Obtenga información sobre cómo conectar Couchbase a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%

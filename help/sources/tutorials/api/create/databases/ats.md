@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;[!DNL Azure Table Storage];[!DNL Azure Table Storage];almacenamiento de tablas de Azure
 solution: Experience Platform
 title: Creación de una conexión de base de almacenamiento de tablas de Azure mediante la API de servicio de flujo
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar el almacenamiento de tablas de Azure a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 2%

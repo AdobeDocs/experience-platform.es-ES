@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Zoho CRM;zoho crm;Zoho;zoho
 solution: Experience Platform
 title: Crear una conexión de origen de Zoho CRM en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen Zoho CRM mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -37,7 +36,7 @@ Para conectarse [!DNL Zoho CRM] en Platform, debe proporcionar valores para las 
 | Punto final | El punto final de la variable [!DNL Zoho CRM] servidor al que está realizando la solicitud. |
 | Dirección URL de cuentas | La dirección URL de la cuenta se usa para generar los tokens de acceso y actualización. La dirección URL debe ser específica del dominio. |
 | ID del cliente | El ID de cliente que corresponde a su [!DNL Zoho CRM] cuenta de usuario. |
-| Secreto del cliente | El secreto de cliente que corresponde a su [!DNL Zoho CRM] cuenta de usuario. |
+| Secreto de cliente | El secreto de cliente que corresponde a su [!DNL Zoho CRM] cuenta de usuario. |
 | Token de acceso | El token de acceso autoriza su acceso seguro y temporal a su [!DNL Zoho CRM] cuenta. |
 | Actualizar token | Un token de actualización es un token que se utiliza para generar un nuevo token de acceso, una vez que el token de acceso ha caducado. |
 

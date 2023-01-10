@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentación;exportar trabajos;api;
 solution: Experience Platform
 title: Punto final de la API de trabajos de exportación de segmentos
-topic-legacy: developer guide
 description: Los trabajos de exportación son procesos asincrónicos que se utilizan para mantener a los miembros del segmento de audiencia en conjuntos de datos. Puede utilizar el extremo /export/jobs en la API del servicio de segmentación de Adobe Experience Platform, que le permite recuperar, crear y cancelar trabajos de exportación mediante programación.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1682'
 ht-degree: 2%

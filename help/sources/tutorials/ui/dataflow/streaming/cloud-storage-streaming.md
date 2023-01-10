@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;flujo continuo;conector de almacenamiento en la nube;almacenamiento en la nube
 solution: Experience Platform
 title: Crear un flujo de datos de flujo continuo para un origen de almacenamiento en la nube en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su conector base de almacenamiento en la nube.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 1%

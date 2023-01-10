@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;consentimiento y preferencias;consentimiento;onetrust;OneTrust
 solution: Experience Platform
 title: Crear un flujo de datos con una fuente de consentimiento y preferencias en la interfaz de usuario
-topic-legacy: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de consentimiento y preferencias mediante la interfaz de usuario de Platform.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%

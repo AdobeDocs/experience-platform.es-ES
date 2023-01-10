@@ -2,26 +2,24 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentación;pql;PQL;lenguaje de consulta de perfil;funciones de agregación;agregación;
 solution: Experience Platform
 title: Funciones de agregación de PQL
-topic-legacy: developer guide
 description: Las funciones de agregación se utilizan para agrupar varios valores dentro de matrices de lenguajes de consulta de perfil (PQL) para formar un único valor de resumen.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
 # Funciones de agregación
 
-Las funciones de agregación se utilizan para agrupar varios valores dentro de matrices [!DNL Profile Query Language] (PQL) para formar un único valor de resumen. Puede encontrar más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
+Las funciones de agregación se utilizan para agrupar varios valores dentro de [!DNL Profile Query Language] matrices (PQL) para formar un único valor de resumen. Puede encontrar más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] información general](./overview.md).
 
-## Recuento
+## Count
 
-La función `count` devuelve el número de elementos dentro de la matriz dada.
+La variable `count` devuelve el número de elementos dentro de la matriz dada.
 
-**Format**
+**Formato**
 
 ```sql
 {ARRAY}.count()
@@ -37,7 +35,7 @@ orders.count()
 
 ## Sum
 
-La función `sum` devuelve la suma de todos los valores seleccionados dentro de la matriz.
+La variable `sum` devuelve la suma de todos los valores seleccionados dentro de la matriz.
 
 **Formato**
 
@@ -55,7 +53,7 @@ orders.sum(order.price)
 
 ## Promedio
 
-La función `average` devuelve la media aritmética de todos los valores seleccionados dentro de la matriz.
+La variable `average` devuelve la media aritmética de todos los valores seleccionados dentro de la matriz.
 
 **Formato**
 
@@ -73,7 +71,7 @@ orders.average(order.price)
 
 ## Mínimo
 
-La función `min` devuelve el menor de todos los valores seleccionados dentro de la matriz.
+La variable `min` devuelve el menor de todos los valores seleccionados dentro de la matriz.
 
 **Formato**
 
@@ -91,7 +89,7 @@ orders.min(order.price)
 
 ## Máximo
 
-La función `max` devuelve el mayor de todos los valores seleccionados dentro de la matriz.
+La variable `max` devuelve el mayor de todos los valores seleccionados dentro de la matriz.
 
 **Formato**
 
@@ -109,4 +107,4 @@ orders.max(order.price)
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de agregación, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de consulta de perfil](./overview.md).
+Ahora que ha aprendido sobre las funciones de agregación, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [Información general sobre el lenguaje de consulta de perfil](./overview.md).

@@ -2,19 +2,18 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;campos;esquemas;esquemas;poi;interacción;punto de interés;punto de interés;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de interacción del punto de interés
-topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de interacción de puntos de interés.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '188'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Tipo de datos de ] interacción de puntos de interés
+# [!UICONTROL Interacción con puntos de interés] tipo de datos
 
-[!UICONTROL La ] interacción del punto de interés es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica la información de identidad a las aplicaciones móviles a medida que los dispositivos móviles se encuentran dentro del intervalo.
+[!UICONTROL Interacción con puntos de interés] es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica la información de identidad a las aplicaciones móviles a medida que los dispositivos móviles se encuentran dentro del rango.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
