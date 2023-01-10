@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab;blocs de notas;Data Science Workspace;temas populares;analizar cuadernos de datos
 solution: Experience Platform
 title: Analizar los datos mediante portátiles
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial se centra en cómo utilizar los equipos portátiles Jupyter, creados dentro de Data Science Workspace, para acceder, explorar y visualizar sus datos.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: 1e240c710da3fa7ae863377d044308b0bca47c7f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 0%
@@ -71,7 +70,7 @@ Por último, podemos echar un vistazo a cómo se ven nuestros datos. Podemos usa
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### [!DNL Experience Platform] datos
+#### [!DNL Experience Platform] data
 
 Ahora vamos a seguir accediendo [!DNL Experience Platform] datos.
 

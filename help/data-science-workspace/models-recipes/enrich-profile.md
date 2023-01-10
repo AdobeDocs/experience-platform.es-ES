@@ -2,11 +2,10 @@
 keywords: Experience Platform;modelo de aprendizaje automático;Data Science Workspace;Perfil del cliente en tiempo real;temas populares;perspectivas de aprendizaje automático
 solution: Experience Platform
 title: Enriquecimiento del perfil del cliente en tiempo real con perspectivas de aprendizaje automático
-topic-legacy: tutorial
 type: Tutorial
 description: Este documento proporciona una guía sobre cómo enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%

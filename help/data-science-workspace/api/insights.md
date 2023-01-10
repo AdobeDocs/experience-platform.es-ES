@@ -2,10 +2,9 @@
 keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;perspectivas;api sensei de aprendizaje automático
 solution: Experience Platform
 title: Punto final de la API de perspectivas
-topic-legacy: Developer guide
 description: Las perspectivas contienen métricas que se utilizan para facultar a un científico de datos para evaluar y elegir modelos ML óptimos mediante la visualización de métricas de evaluación relevantes.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%

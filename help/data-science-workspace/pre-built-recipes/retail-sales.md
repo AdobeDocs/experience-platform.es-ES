@@ -2,10 +2,9 @@
 keywords: Experience Platform;fórmula de ventas minoristas;Data Science Workspace;temas populares;fórmulas;fórmula de generación previa
 solution: Experience Platform
 title: Fórmula de ventas minoristas
-topic-legacy: overview
 description: La fórmula Venta minorista permite predecir la previsión de ventas de todas las tiendas creadas durante un período determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre la demanda y las políticas de precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;entrenar y evaluar;Data Science Workspace;temas populares;API de aprendizaje automático de Sensei
 solution: Experience Platform
 title: Capacitar y evaluar un modelo mediante la API de aprendizaje automático de Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le muestra cómo crear, entrenar y evaluar un modelo mediante llamadas a la API de aprendizaje automático de Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;mlinstances;api sensei de aprendizaje automático
 solution: Experience Platform
 title: Punto final de API de instancias MLI
-topic-legacy: Developer guide
 description: Una instancia MLI es un emparejamiento de un motor existente con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetro de puntuación o configuración de recursos de hardware.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%

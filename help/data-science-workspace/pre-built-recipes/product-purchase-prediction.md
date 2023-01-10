@@ -2,14 +2,12 @@
 keywords: Experience Platform;fórmula de compra de producto;Data Science Workspace;temas populares;fórmulas;fórmula de precompilación
 solution: Experience Platform
 title: Fórmula de predicción de compra de producto
-topic-legacy: overview
 description: 'La fórmula de Predicción de compra de productos permite predecir la probabilidad de un determinado tipo de evento de compra de clientes: una compra de producto, por ejemplo.'
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '397'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -33,7 +31,7 @@ La fórmula de predicción de compra de productos utiliza aprendizaje automátic
 
 ## Esquema de datos
 
-Esta fórmula utiliza [XDM schemas](../../xdm/home.md) para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
+Esta fórmula utiliza [Esquemas XDM](../../xdm/home.md) para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
 
 | Nombre del campo | Tipo |
 | --- | --- |
@@ -48,16 +46,16 @@ Esta fórmula utiliza [XDM schemas](../../xdm/home.md) para modelar los datos. E
 | totalOrders | Número |
 | totalItems | Número |
 | orderDate1 | Número |
-| ShippingDate1 | Número |
+| shippingDate1 | Número |
 | totalPrice1 | Número |
 | tax1 | Número |
 | orderDate2 | Número |
-| ShippingDate2 | Número |
+| shippingDate2 | Número |
 | totalPrice2 | Número |
 
 
 ## Algoritmo
 
-En primer lugar, se carga el conjunto de datos de capacitación en el esquema *ProductPrediction*. A partir de aquí, el modelo se entrena utilizando un [clasificador de bosque aleatorio](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). El clasificador de bosque aleatorio es un tipo de algoritmo ensamblado que hace referencia a un algoritmo que combina varios algoritmos para obtener un rendimiento predictivo mejorado. La idea detrás del algoritmo es que el clasificador de bosques aleatorio crea varios árboles de decisión y los combina para crear una predicción más precisa y estable.
+En primer lugar, el conjunto de datos de formación en la variable *ProductPrediction* se ha cargado el esquema. Desde aquí, el modelo se entrena usando un [clasificador de bosque aleatorio](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). El clasificador de bosque aleatorio es un tipo de algoritmo ensamblado que hace referencia a un algoritmo que combina varios algoritmos para obtener un rendimiento predictivo mejorado. La idea detrás del algoritmo es que el clasificador de bosques aleatorio crea varios árboles de decisión y los combina para crear una predicción más precisa y estable.
 
 Este proceso comienza con la creación de un conjunto de árboles de decisión que seleccionan aleatoriamente subconjuntos de datos de capacitación. Después, se calcula el promedio de los resultados de cada árbol de decisiones.

@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab;blocs de notas;Data Science Workspace;temas populares;servicio de consultas
 solution: Experience Platform
 title: Servicio de consultas en el bloc de notas de Jupyter
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform le permite utilizar el lenguaje de consulta estructurado (SQL) en Data Science Workspace mediante la integración del servicio de consulta en JupyterLab como función estándar. Este tutorial muestra consultas SQL de ejemplo para casos de uso comunes para explorar, transformar y analizar datos de Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 1%

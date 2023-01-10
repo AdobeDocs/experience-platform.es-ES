@@ -2,11 +2,10 @@
 keywords: Experience Platform;modelo de aprendizaje automático;Data Science Workspace;temas populares;crear y publicar un modelo
 solution: Experience Platform
 title: Creación y publicación de un modelo de aprendizaje automático
-topic-legacy: tutorial
 type: Tutorial
 description: En la siguiente guía se describen los pasos necesarios para crear y publicar un modelo de aprendizaje automático.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%

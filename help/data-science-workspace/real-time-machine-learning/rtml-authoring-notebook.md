@@ -2,10 +2,9 @@
 keywords: Experience Platform;guía para desarrolladores;Data Science Workspace;temas populares;aprendizaje automático en tiempo real;referencia de nodo;
 solution: Experience Platform
 title: Administrar portátiles de aprendizaje automático en tiempo real
-topic-legacy: Training and scoring a ML model
 description: La siguiente guía describe los pasos necesarios para crear una aplicación de aprendizaje automático en tiempo real en Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%
@@ -409,7 +408,7 @@ Se le devuelve el DSL actualizado.
 
 ## Puntuación {#scoring}
 
-Después de publicar en [!DNL Edge], la puntuación se realiza mediante una solicitud del POST de un cliente. Normalmente, esto se puede hacer desde una aplicación cliente que necesita puntuaciones ML. También puedes hacerlo desde Postman. La variable **[!UICONTROL ML en tiempo real]** plantilla utiliza EdgeUtils para demostrar este proceso.
+Después de publicar en [!DNL Edge], la puntuación se realiza mediante una solicitud del POST de un cliente. Normalmente, esto se puede hacer desde una aplicación cliente que necesita puntuaciones ML. También puede hacerlo desde Postman. La variable **[!UICONTROL ML en tiempo real]** plantilla utiliza EdgeUtils para demostrar este proceso.
 
 >[!NOTE]
 >

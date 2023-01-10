@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab;fórmula;blocs de notas;Data Science Workspace;temas populares;crear fórmula
 solution: Experience Platform
 title: Crear un modelo con portátiles de JupyterLab
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le guía por los pasos necesarios para crear una fórmula con la plantilla de generador de fórmulas de blocs de notas de JupyterLab .
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%
@@ -127,7 +126,7 @@ Este paso utiliza la variable [dataframe pandas](https://pandas.pydata.org/panda
 >
 >En el bloc de notas del Creador de fórmulas, los datos se cargan mediante la variable `platform_sdk` cargador de datos.
 
-### [!DNL Platform] SDK {#platform-sdk}
+### SDK de [!DNL Platform] {#platform-sdk}
 
 Para ver un tutorial en profundidad sobre el uso de la variable `platform_sdk` cargador de datos, visite [Guía del SDK de plataforma](../authoring/platform-sdk.md). Este tutorial proporciona información sobre la autenticación de compilación, la lectura básica de datos y la escritura básica de datos.
 

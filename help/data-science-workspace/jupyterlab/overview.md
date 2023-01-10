@@ -2,10 +2,9 @@
 keywords: Experience Platform;JupyterLab;blocs de notas;Data Science Workspace;temas populares;jupyterlab
 solution: Experience Platform
 title: Información general sobre la interfaz de usuario de JupyterLab
-topic-legacy: Overview
 description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con Jupyter Notebooks, código y datos. Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 1d3981c67c86f93394acf49b61bd29154e9653e8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 3%
@@ -39,7 +38,7 @@ La siguiente lista describe algunas de las funciones exclusivas de JupyterLab en
 
 ## Integración con otros [!DNL Platform] servicios {#service-integration}
 
-La estandarización y la interoperabilidad son conceptos clave [!DNL Experience Platform]. La integración de [!DNL JupyterLab] en [!DNL Platform] como un IDE integrado le permite interactuar con otros [!DNL Platform] servicios, permitiéndole utilizar [!DNL Platform] a todo su potencial. Lo siguiente [!DNL Platform] los servicios están disponibles en [!DNL JupyterLab]:
+La normalización y la interoperabilidad son conceptos clave [!DNL Experience Platform]. La integración de [!DNL JupyterLab] en [!DNL Platform] como un IDE integrado le permite interactuar con otros [!DNL Platform] servicios, permitiéndole utilizar [!DNL Platform] a todo su potencial. Lo siguiente [!DNL Platform] los servicios están disponibles en [!DNL JupyterLab]:
 
 * **[!DNL Catalog Service]:** Acceda y explore conjuntos de datos con funcionalidades de lectura y escritura.
 * **[!DNL Query Service]:** Acceda y explore conjuntos de datos mediante SQL, lo que proporciona un menor número de sobrecargas de acceso a los datos cuando se trata de grandes cantidades de datos.

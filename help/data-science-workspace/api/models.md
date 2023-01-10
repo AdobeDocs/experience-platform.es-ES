@@ -2,10 +2,9 @@
 keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;modelos;api sensei de aprendizaje automático
 solution: Experience Platform
 title: Punto final de API de modelos
-topic-legacy: Developer guide
 description: Un modelo es una instancia de una fórmula de aprendizaje automático que se enseña mediante datos y configuraciones históricos para resolver un caso de uso empresarial.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%

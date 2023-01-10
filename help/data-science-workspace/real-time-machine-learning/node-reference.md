@@ -2,10 +2,9 @@
 keywords: Experience Platform;guía para desarrolladores;Data Science Workspace;temas populares;aprendizaje automático en tiempo real;referencia de nodo;
 solution: Experience Platform
 title: Referencia de nodo de aprendizaje automático en tiempo real
-topic-legacy: Nodes reference
 description: Un nodo es la unidad fundamental de la que se forman los gráficos. Cada nodo realiza una tarea específica y se puede encadenar utilizando vínculos para formar un gráfico que represente una canalización ML. La tarea realizada por un nodo representa una operación en los datos de entrada, como una transformación de datos o esquema, o una inferencia de aprendizaje automático. El nodo envía el valor transformado o inferido a los nodos siguientes.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -122,8 +121,8 @@ msg6 = model_train.process(msg5)
 
 | Valor | Descripción |
 | --- | --- |
-| características | Funciones de entrada al modelo (lista de cadenas). <br> Por ejemplo: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Nombre de la columna de destino (cadena). |
+| Funciones | Funciones de entrada al modelo (lista de cadenas). <br> Por ejemplo: `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| etiqueta | Nombre de la columna de destino (cadena). |
 | mode | Tren/prueba (cadena). |
 | model_path | Ruta al modelo guardado localmente en formato onx. |
 | params.model | Ruta de importación absoluta al modelo (cadena), por ejemplo: `sklearn.linear_model.LogisticRegression`. |
@@ -132,7 +131,7 @@ msg6 = model_train.process(msg5)
 
 ### Split
 
-Utilice el siguiente nodo para dividir su dataframe en tren y prueba pasando `train_size` o `test_size`. Esto devuelve un dataframe con un multi-índice. Puede acceder a los marcos de datos de prueba y tren utilizando el siguiente ejemplo, `msg5.data.xs(“train”)`.
+Utilice el siguiente nodo para dividir su dataframe en tren y prueba pasando `train_size` o `test_size`. Esto devuelve un dataframe con un multi-índice. Puede acceder a los marcos de datos de prueba y tren utilizando el siguiente ejemplo, `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

@@ -2,11 +2,10 @@
 keywords: Experience Platform;fórmula de ventas minoristas;Data Science Workspace;temas populares;fórmulas
 solution: Experience Platform
 title: Crear el esquema de ventas minoristas y el conjunto de datos
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales de Adobe Experience Platform Data Science Workspace. Una vez finalizado, el esquema de ventas minoristas y los conjuntos de datos estarán disponibles para usted y los miembros de su organización de IMS en Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%

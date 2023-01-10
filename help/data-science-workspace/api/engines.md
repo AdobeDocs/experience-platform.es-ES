@@ -2,10 +2,9 @@
 keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;motores;api de aprendizaje automático sensei
 solution: Experience Platform
 title: Punto final de API de Engines
-topic-legacy: Developer guide
 description: Los motores son la base de modelos de aprendizaje automático en Data Science Workspace. Contienen algoritmos de aprendizaje automático que resuelven problemas específicos, canalizaciones de funciones para realizar ingeniería de características o ambos.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 3%

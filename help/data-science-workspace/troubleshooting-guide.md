@@ -2,10 +2,9 @@
 keywords: Experience Platform;resolución de problemas;Data Science Workspace;temas populares
 solution: Experience Platform
 title: Guía de solución de problemas de Data Science Workspace
-topic-legacy: Troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform Data Science Workspace.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: ec42d80e695ccf57c10c539ae1b5104c7948c473
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -40,7 +39,7 @@ Con la variable [!DNL Google Chrome] versión 80.x del explorador, todas las coo
 
 Para solucionar este problema, siga estos pasos:
 
-En su [!DNL Chrome] , vaya a la parte superior derecha y seleccione **Configuración** (también puede copiar y pegar &quot;chrome://settings/&quot; en la barra de direcciones). A continuación, desplácese hasta la parte inferior de la página y haga clic en el botón **Avanzadas** lista desplegable.
+En [!DNL Chrome] , vaya a la parte superior derecha y seleccione **Configuración** (también puede copiar y pegar &quot;chrome://settings/&quot; en la barra de direcciones). A continuación, desplácese hasta la parte inferior de la página y haga clic en el botón **Avanzadas** lista desplegable.
 
 ![avanzado de chrome](./images/faq/chrome-advanced.png)
 

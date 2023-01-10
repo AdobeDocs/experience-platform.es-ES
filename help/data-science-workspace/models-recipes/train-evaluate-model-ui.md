@@ -2,14 +2,12 @@
 keywords: Experience Platform;entrenar y evaluar;Data Science Workspace;temas populares;crear un modelo;crear una ejecución de formación
 solution: Experience Platform
 title: Capacitar y evaluar un modelo en la interfaz de usuario de Data Science Workspace
-topic-legacy: tutorial
 type: Tutorial
 description: En Adobe Experience Platform Data Science Workspace, se crea un modelo de aprendizaje automático mediante la incorporación de una fórmula existente que es adecuada para la intención del modelo. A continuación, el Modelo es entrenado y evaluado para optimizar su eficacia y eficiencia operativa mediante el ajuste de sus hiperparámetros asociados. Las fórmulas son reutilizables, lo que significa que se pueden crear varios modelos y adaptarlos a propósitos específicos con una sola fórmula.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1092'
 ht-degree: 1%
 
 ---
@@ -24,58 +22,58 @@ Este tutorial recorre los pasos para crear, entrenar y evaluar un modelo.
 
 Para completar este tutorial, debe tener acceso a [!DNL Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], póngase en contacto con el administrador del sistema antes de continuar.
 
-Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga el tutorial [Import a packged Recipe in the UI](./import-packaged-recipe-ui.md) antes de continuar.
+Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga la [Importar una fórmula empaquetada en la interfaz de usuario](./import-packaged-recipe-ui.md) antes de continuar.
 
 ## Crear un modelo
 
-En el Experience Platform, seleccione la pestaña **[!UICONTROL Models]** situada en el panel de navegación izquierdo y, a continuación, seleccione la pestaña examinar para ver los modelos existentes. Seleccione **[!UICONTROL Create Model]** cerca de la parte superior derecha de la página para comenzar un proceso de creación del modelo.
+En el Experience Platform, seleccione la opción **[!UICONTROL Modelos]** situado en la parte izquierda de la navegación, seleccione la pestaña examinar para ver los modelos existentes. Select **[!UICONTROL Crear modelo]** cerca de la parte superior derecha de la página para iniciar un proceso de creación de Modelo.
 
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-Busque en la lista de Fórmulas existentes, busque y seleccione la Fórmula que desea utilizar para crear el Modelo y seleccione **[!UICONTROL Next]**.
+Busque la lista de fórmulas existentes, busque y seleccione la fórmula que desea utilizar para crear el modelo y seleccione **[!UICONTROL Siguiente]**.
 ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-Seleccione un conjunto de datos de entrada adecuado y seleccione **[!UICONTROL Next]**. Esto establecerá el conjunto de datos de capacitación de entrada predeterminado para el modelo.
+Seleccione un conjunto de datos de entrada adecuado y seleccione **[!UICONTROL Siguiente]**. Esto establecerá el conjunto de datos de capacitación de entrada predeterminado para el modelo.
 ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 Proporcione un nombre para el Modelo y revise las configuraciones predeterminadas del Modelo. Las configuraciones predeterminadas se aplicaron durante la creación de Recipe, revisan y modifican los valores de configuración haciendo doble clic en los valores.
 
-Para proporcionar un nuevo conjunto de configuraciones, seleccione **[!UICONTROL Upload New Config]** y arrastre un archivo JSON que contenga configuraciones de modelo a la ventana del explorador. Seleccione **[!UICONTROL Finish]** para crear el Modelo.
+Para proporcionar un nuevo conjunto de configuraciones, seleccione **[!UICONTROL Cargar nueva configuración]** y arrastre un archivo JSON que contenga configuraciones de modelo a la ventana del explorador. Select **[!UICONTROL Finalizar]** para crear el modelo.
 
 >[!NOTE]
 >
->Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations de producto. Consulte la sección [referencia](#reference) para obtener una lista de las configuraciones de fórmula de venta minorista.
+>Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations de producto. Consulte la [referencia](#reference) para obtener una lista de las configuraciones de fórmula de venta minorista.
 
 ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Creación de una ejecución de formación
 
-En el Experience Platform, seleccione la pestaña **[!UICONTROL Models]** situada en el panel de navegación izquierdo y, a continuación, seleccione la pestaña examinar para ver los modelos existentes. Busque y seleccione el hipervínculo adjunto al nombre del Modelo que desea entrenar.
+En el Experience Platform, seleccione la opción **[!UICONTROL Modelos]** situado en la parte izquierda de la navegación, seleccione la pestaña examinar para ver los modelos existentes. Busque y seleccione el hipervínculo adjunto al nombre del Modelo que desea entrenar.
 
 ![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-Se muestran todas las ejecuciones de formación existentes con sus estados de formación actuales. En Modelos creados con la interfaz de usuario [!DNL Data Science Workspace] , se genera y ejecuta automáticamente una ejecución de formación utilizando las configuraciones predeterminadas y el conjunto de datos de capacitación de entrada.
+Se muestran todas las ejecuciones de formación existentes con sus estados de formación actuales. Para modelos creados con el [!DNL Data Science Workspace] interfaz de usuario, se genera y ejecuta automáticamente una ejecución de formación utilizando las configuraciones predeterminadas y el conjunto de datos de capacitación de entrada.
 
-Cree una nueva ejecución de formación seleccionando **[!UICONTROL Train]** cerca de la parte superior derecha de la página de información general del modelo.
+Cree una nueva ejecución de formación seleccionando **[!UICONTROL Tren]** cerca de la parte superior derecha de la página de información general del modelo.
 
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-Seleccione el conjunto de datos de entrada de formación para la ejecución de formación y, a continuación, seleccione **[!UICONTROL Next]**.
+Seleccione el conjunto de datos de entrada de formación para la ejecución de formación y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
 ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-Las configuraciones predeterminadas proporcionadas durante la creación del Modelo se muestran, cambian y modifican en consecuencia haciendo doble clic en los valores. Seleccione **[!UICONTROL Finish]** para crear y ejecutar la ejecución de formación.
+Las configuraciones predeterminadas proporcionadas durante la creación del Modelo se muestran, cambian y modifican en consecuencia haciendo doble clic en los valores. Select **[!UICONTROL Finalizar]** para crear y ejecutar la ejecución de formación.
 
 >[!NOTE]
 >
->Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations de producto. Consulte la sección [referencia](#reference) para obtener una lista de las configuraciones de fórmula de venta minorista.
+>Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations de producto. Consulte la [referencia](#reference) para obtener una lista de las configuraciones de fórmula de venta minorista.
 
 ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 
 ## Evaluar el modelo
 
-En el Experience Platform, seleccione la pestaña **[!UICONTROL Models]** situada en el panel de navegación izquierdo y, a continuación, seleccione la pestaña examinar para ver los modelos existentes. Busque y seleccione el hipervínculo adjunto al nombre del Modelo que desea evaluar.
+En el Experience Platform, seleccione la opción **[!UICONTROL Modelos]** situado en la parte izquierda de la navegación, seleccione la pestaña examinar para ver los modelos existentes. Busque y seleccione el hipervínculo adjunto al nombre del Modelo que desea evaluar.
 
 ![modelo select](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
@@ -85,7 +83,7 @@ La métrica Error de porcentaje absoluto medio (MAPE, Mean Absolute Percent Erro
 
 ![descripción general de las ejecuciones de formación](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
-La métrica &quot;Precisión&quot; describe el porcentaje de instancias relevantes comparado con el total de *instancias recuperadas*. La precisión puede verse como la probabilidad de que un resultado seleccionado aleatoriamente sea correcto.
+La métrica &quot;Precisión&quot; describe el porcentaje de instancias relevantes comparado con el total *recuperado* Instancias. La precisión puede verse como la probabilidad de que un resultado seleccionado aleatoriamente sea correcto.
 
 ![ejecución de varias ejecuciones](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
 
@@ -101,7 +99,7 @@ Los hiperparámetros no se pueden entrenar y un modelo debe optimizarse probando
 
 ## Pasos siguientes
 
-Este tutorial lo acompañó en la creación, formación y evaluación de un modelo en [!DNL Data Science Workspace]. Una vez que haya llegado a un modelo optimizado, puede utilizar el modelo entrenado para generar perspectivas siguiendo la [Puntuación de un modelo en el tutorial de IU](./score-model-ui.md).
+Este tutorial le guió por la creación, formación y evaluación de un modelo en [!DNL Data Science Workspace]. Una vez que haya llegado a un Modelo optimizado, puede utilizar el Modelo entrenado para generar perspectivas siguiendo el [Puntuación de un modelo en la interfaz de usuario](./score-model-ui.md) tutorial.
 
 ## Referencia {#reference}
 
@@ -111,7 +109,7 @@ Los hiperparámetros determinan el comportamiento de formación del modelo, la m
 
 | Hiperparámetro | Descripción | Intervalo recomendado |
 | --- | --- | --- |
-| learning_rate | La tasa de aprendizaje reduce la contribución de cada árbol mediante learning_rate. Hay un equilibrio entre learning_rate y n_estimators. | 0,1 |
+| learning_rate | La tasa de aprendizaje reduce la contribución de cada árbol mediante learning_rate. Hay un equilibrio entre learning_rate y n_estimators. | 0.1 |
 | n_estimators | Número de etapas de ampliación que se van a realizar. El aumento de degradado es bastante robusto para sobreajustar, por lo que un gran número suele dar como resultado un mejor rendimiento. | 100 |
 | max_depth | Profundidad máxima de los estimadores de regresión individuales. La profundidad máxima limita el número de nodos en el árbol. Ajuste este parámetro para obtener el mejor rendimiento; el mejor valor depende de la interacción de las variables de entrada. | 3 |
 
@@ -122,7 +120,7 @@ Los parámetros adicionales determinan las propiedades técnicas del modelo:
 | `ACP_DSW_INPUT_FEATURES` | Cadena | Lista de los atributos de esquema de entrada separados por comas. |
 | `ACP_DSW_TARGET_FEATURES` | Cadena | Lista de los atributos de esquema de salida separados por comas. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Booleano | Determina si las funciones de entrada y salida se pueden modificar |
-| `tenantId` | Cadena | Este ID garantiza que los recursos que cree tengan un espacio de nombres adecuado y estén contenidos dentro de su organización de IMS. [Siga los pasos ](../../xdm/api/getting-started.md#know-your-tenant_id) aquí para encontrar su ID de inquilino. |
+| `tenantId` | Cadena | Este ID garantiza que los recursos que cree tengan un espacio de nombres adecuado y estén contenidos dentro de su organización de IMS. [Siga estos pasos aquí](../../xdm/api/getting-started.md#know-your-tenant_id) para encontrar su ID de inquilino. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | Cadena | El esquema de entrada utilizado para entrenar un modelo. |
 | `evaluation.labelColumn` | Cadena | Etiqueta de columna para visualizaciones de evaluación. |
 | `evaluation.metrics` | Cadena | Lista separada por comas de las métricas de evaluación que se utilizarán para evaluar un modelo. |

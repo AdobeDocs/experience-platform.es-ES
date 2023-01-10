@@ -2,11 +2,10 @@
 keywords: Experience Platform;Puntuación de un modelo;Data Science Workspace;temas populares;api sensei de aprendizaje automático
 solution: Experience Platform
 title: Puntuación de un modelo mediante la API de aprendizaje automático de Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le muestra cómo aprovechar las API de aprendizaje automático de Sensei para crear un experimento y una ejecución de experimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%

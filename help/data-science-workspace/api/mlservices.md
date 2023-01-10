@@ -2,10 +2,9 @@
 keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;mlservices;api sensei de aprendizaje automático
 solution: Experience Platform
 title: Punto final de API de MLServices
-topic-legacy: Developer guide
 description: Un MLService es un modelo publicado y entrenado que proporciona a su organización la capacidad de acceder y reutilizar modelos desarrollados anteriormente. Una característica clave de MLServices es la capacidad de automatizar la capacitación y la puntuación de forma programada. Las ejecuciones de formación programadas pueden ayudar a mantener la eficacia y la precisión de un modelo, mientras que las ejecuciones de puntuación programadas pueden garantizar que se generen nuevas perspectivas de forma coherente.
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 2%

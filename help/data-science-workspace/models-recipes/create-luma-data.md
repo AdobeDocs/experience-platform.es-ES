@@ -2,11 +2,10 @@
 keywords: Experience Platform;datos web de luma;Data Science Workspace;temas populares;fórmulas;datos de demostración;datos web de demostración;datos de luma
 solution: Experience Platform
 title: Creación de esquemas web y conjuntos de datos de Luma
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le proporciona los requisitos previos y los recursos necesarios para el modelo de propensión de demostración de Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f57ca64c34f569f4402cb998af72e1e9022510ca
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%

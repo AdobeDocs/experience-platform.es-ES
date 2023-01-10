@@ -2,10 +2,9 @@
 keywords: Experience Platform;fórmula de recomendación de producto;Data Science Workspace;temas populares;fórmulas;fórmula de precompilación
 solution: Experience Platform
 title: Fórmula de recomendación de producto
-topic-legacy: overview
 description: La fórmula de Product Recommendations le permite ofrecer recomendaciones de productos personalizadas que se adaptan a las necesidades y los intereses de sus clientes. Con un modelo de predicción preciso, el historial de compras de un cliente puede proporcionarle información sobre qué productos puede interesarle.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 3%

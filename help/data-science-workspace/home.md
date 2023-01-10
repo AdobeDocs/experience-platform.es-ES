@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;Data Science Workspace;temas populares;espacio de trabajo de ciencia de datos;ciencia de datos
 solution: Experience Platform
 title: Información general de Data Science Workspace
-topic-legacy: overview
 description: Esta guía proporciona información general sobre los conceptos clave relacionados con Data Science Workspace en Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%
