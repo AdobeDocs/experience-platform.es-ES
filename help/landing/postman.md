@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;Adobe Experience Platform;guía de la api;guía de la api de platform;introducción a platform;guía para desarrolladores
 solution: Experience Platform
 title: Postman en Adobe Experience Platform
-topic-legacy: api guide
 description: Este documento contiene pasos que describen cómo configurar un entorno de Postman, importar colecciones de Postman y una lista de colecciones disponibles para cada servicio de Platform.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: d06c3bc51909b464b9eed2a2f0df04ca531010b3
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%

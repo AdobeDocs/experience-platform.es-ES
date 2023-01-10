@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;organización de campañas;organización;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;región
 title: Flujo de trabajo de ejemplo completo de Adobe Experience Platform
-topic-legacy: getting started
 description: Conozca el flujo de trabajo básico de principio a fin para Adobe Experience Platform en un nivel superior.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 3%

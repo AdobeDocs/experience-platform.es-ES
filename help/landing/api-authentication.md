@@ -2,11 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;Autenticar;acceso
 solution: Experience Platform
 title: API de Experience Platform de autenticación y acceso
-topic-legacy: tutorial
 type: Tutorial
 description: Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 9%
@@ -37,7 +36,7 @@ Para realizar correctamente llamadas a las API de Experience Platform, debe tene
 
 También debe tener un Adobe ID para completar este tutorial. Si no tiene un Adobe ID, puede crearlo siguiendo estos pasos:
 
-1. Vaya a [Adobe Developer Console](https://console.adobe.io).
+1. Vaya a [Consola de Adobe Developer](https://console.adobe.io).
 2. Select **[!UICONTROL Crear una cuenta nueva]**.
 3. Complete el proceso de registro.
 
@@ -49,7 +48,7 @@ Antes de crear integraciones en Adobe Developer Console, la cuenta debe tener pe
 
 Póngase en contacto con un [!DNL Admin Console] administrador de su organización para agregarlo como desarrollador a un perfil de producto de Experience Platform mediante la función [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulte la [!DNL Admin Console] documentación para instrucciones específicas sobre cómo [administrar el acceso de los desarrolladores para perfiles de producto](https://helpx.adobe.com/es/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-Una vez que esté asignado como desarrollador, puede empezar a crear integraciones en [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Estas integraciones son una canalización de aplicaciones y servicios externos a API de Adobe.
+Una vez que esté asignado como desarrollador, puede empezar a crear integraciones en [Consola de Adobe Developer](https://www.adobe.com/go/devs_console_ui). Estas integraciones son una canalización de aplicaciones y servicios externos a API de Adobe.
 
 ### Obtener acceso de los usuarios
 

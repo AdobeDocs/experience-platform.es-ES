@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Configuración de un conjunto de datos para capturar datos de consentimiento y preferencia
-topic-legacy: getting started
 description: Obtenga información sobre cómo configurar un esquema y conjunto de datos del Modelo de datos de experiencia (XDM) para capturar datos de consentimiento y preferencias en Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%

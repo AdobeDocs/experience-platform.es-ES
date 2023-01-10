@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;Adobe Experience Platform;guía del usuario;guía de la interfaz de usuario;guía de la interfaz de usuario de flujos de trabajo;flujos de trabajo;guía del usuario sobre flujos de trabajo;
 solution: Experience Platform
 title: Guía de la interfaz de usuario de flujos de trabajo
-topic-legacy: ui guide
 description: Obtenga información sobre cómo seguir flujos de trabajo de varios pasos para realizar operaciones comunes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

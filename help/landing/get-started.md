@@ -2,10 +2,8 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Introducción a Adobe Experience Platform
-topic-legacy: getting started
 description: Este vídeo proporciona una introducción rápida al Experience Platform y describe los desafíos comerciales que resuelve.
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 12%

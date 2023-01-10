@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Información general sobre administración, privacidad y seguridad
-topic-legacy: overview
 description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados para cumplir con sus prácticas comerciales, obligaciones legales y procesos de desarrollo.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 1%
@@ -76,7 +75,7 @@ Experience Platform utiliza Adobe Admin Console para proporcionar control de acc
 
 Consulte la [información general sobre el control de acceso](../../access-control/home.md) para obtener más información.
 
-### Entornos aislados {#sandboxes}
+### Zonas protegidas {#sandboxes}
 
 Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. A menudo, las empresas ejecutan varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, asegurando al mismo tiempo el cumplimiento de las normas operacionales.
 

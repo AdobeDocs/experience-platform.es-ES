@@ -2,11 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;organización de campañas;organización;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;región
 solution: Experience Platform
 title: Compatibilidad con el lenguaje de documentación del Experience Platform
-topic-legacy: getting started
 description: Adobe Experience Platform permite a las organizaciones centralizar y estandarizar los datos de los clientes antes de aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 exl-id: 52acf8fb-8420-4fe3-8b8b-b7bfea465d25
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
