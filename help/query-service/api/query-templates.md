@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;plantillas de consulta;guía de api;plantillas;servicio de consulta;
 solution: Experience Platform
 title: Extremo de API de plantillas de consulta
-topic-legacy: query templates
 description: Esta guía detalla las distintas llamadas a la API de plantilla de consulta que puede realizar mediante la API del servicio de consulta.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 5%
+source-wordcount: '894'
+ht-degree: 4%
 
 ---
 
@@ -130,15 +129,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT * FROM accounts;",
-        "name": "Sample query template"
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "name": "Sample query template",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
     }'
 ```
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `sql` | La consulta SQL que desea crear. |
+| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetro. Para utilizar una sustitución de parámetros en SQL, debe anteponer la clave de parámetro a una `$`. Por ejemplo, `$key`y proporcione los parámetros utilizados en SQL como pares de valor clave JSON en la variable `queryParameters` campo . Los valores que se pasan aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe anularlos en la solicitud del POST. |
 | `name` | El nombre de la plantilla de consulta. |
+| `queryParameters` | Enlace de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es obligatorio **if** está utilizando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación del tipo de valor en estos pares de valor clave. |
 
 **Respuesta**
 
@@ -146,7 +149,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la
 
 ```json
 {
-    "sql": "SELECT * FROM accounts;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
@@ -266,8 +269,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `sql` | La consulta SQL que desea actualizar. |
-| `name` | Nombre de la consulta programada. |
+| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetro. Para utilizar una sustitución de parámetros en SQL, debe anteponer la clave de parámetro a una `$`. Por ejemplo, `$key`y proporcione los parámetros utilizados en SQL como pares de valor clave JSON en la variable `queryParameters` campo . Los valores que se pasan aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe anularlos en la solicitud del POST. |
+| `name` | El nombre de la plantilla de consulta. |
+| `queryParameters` | Enlace de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es obligatorio **if** está utilizando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación del tipo de valor en estos pares de valor clave. |
 
 **Respuesta**
 

@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;guía de api;consultas;consulta;servicio de consulta;
 solution: Experience Platform
 title: Punto final de API de consultas
-topic-legacy: queries
 description: Las secciones siguientes recorren las llamadas que puede realizar utilizando el extremo /queries en la API del servicio de consulta.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 4%
+source-wordcount: '825'
+ht-degree: 3%
 
 ---
 
@@ -43,6 +42,7 @@ A continuación se muestra una lista de parámetros de consulta disponibles para
 | `property` | Filtre los resultados según los campos. Los filtros **must** se escapó el HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `updated`, `state`y `id`. La lista de operadores admitidos es `>` (bueno que) `<` (menor que), `>=` (bueno o igual que), `<=` (menor o igual que), `==` (igual a), `!=` (no es igual a) y `~` (contiene). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas con el ID especificado. |
 | `excludeSoftDeleted` | Indica si se debe incluir una consulta que se ha eliminado de forma suave. Por ejemplo, `excludeSoftDeleted=false` will **include** consultas eliminadas de software. (*Booleano, valor predeterminado: true*) |
 | `excludeHidden` | Indica si se deben mostrar consultas no dirigidas por el usuario. Si este valor se establece en &quot;false&quot;, se obtendrá **include** consultas no dirigidas por el usuario, como definiciones de CURSOR, FETCH o consultas de metadatos. (*Booleano, valor predeterminado: true*) |
+| `isPrevLink` | La variable `isPrevLink` el parámetro de consulta se utiliza para la paginación. Los resultados de la llamada a la API se ordenan mediante sus `created` marca de tiempo y `orderby` propiedad. Al navegar por las páginas de resultados, `isPrevLink` se establece en true al volver a la página. Revierte el orden de la consulta. Consulte los vínculos &quot;next&quot; y &quot;prev&quot; como ejemplos. |
 
 **Solicitud**
 
@@ -129,7 +129,7 @@ POST /queries
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva consulta, configurada por los valores proporcionados en la carga útil:
+La siguiente solicitud crea una nueva consulta, con una instrucción SQL proporcionada en la carga útil:
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -140,7 +140,27 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT * FROM accounts;",
+        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "queryParameters": {
+            $user_id : {USER_ID}
+            }
+        "name": "Sample Query",
+        "description": "Sample Description"
+    }  
+```
+
+El ejemplo de solicitud siguiente crea una nueva consulta utilizando un ID de plantilla de consulta existente.
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/queries \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+        "dbName": "prod:all",
+        "templateID": "f7cb5155-29da-4b95-8131-8c5deadfbe7f",
         "name": "Sample Query",
         "description": "Sample Description"
     }  
@@ -152,6 +172,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | La consulta SQL que desea crear. |
 | `name` | El nombre de la consulta SQL. |
 | `description` | La descripción de la consulta SQL. |
+| `queryParameters` | Enlace de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es obligatorio **if** está utilizando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación del tipo de valor en estos pares de valor clave. |
+| `templateId` | Identificador único de una consulta preexistente. Puede proporcionarlo en lugar de una instrucción SQL. |
+| `insertIntoParameters` | (Opcional) Si esta propiedad está definida, esta consulta se convertirá en una consulta INSERT INTO . |
+| `ctasParameters` | (Opcional) Si esta propiedad está definida, esta consulta se convertirá en una consulta CTAS. |
 
 **Respuesta**
 
