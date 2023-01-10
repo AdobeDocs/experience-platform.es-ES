@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Punto final de API de atributos calculados
-topic-legacy: guide
 type: Documentation
 description: En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Esta guía muestra cómo crear, ver, actualizar y eliminar atributos calculados mediante la API de perfil del cliente en tiempo real.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 3%

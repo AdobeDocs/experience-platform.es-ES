@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Información general sobre la IU de Privacy Service
-topic-legacy: UI guide
 description: Empiece a utilizar la interfaz de usuario del Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones del Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 76e431301f961484436fe47d28079ee47dbcc8ed
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 1%

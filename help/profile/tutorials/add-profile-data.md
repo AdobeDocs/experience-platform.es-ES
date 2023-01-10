@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;habilitar perfil;Activar perfil
 title: Añadir datos al perfil del cliente en tiempo real
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial describe los pasos necesarios para agregar datos al perfil del cliente en tiempo real.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%

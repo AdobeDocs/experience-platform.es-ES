@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;RGPD;rgpd;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Información general del Privacy Service
-topic-legacy: overview
 description: Privacy Service le permite facilitar el cumplimiento automatizado de las normas legales de privacidad en sus operaciones de datos de Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1389'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -39,7 +38,7 @@ En las secciones que figuran a continuación se proporcionan orientaciones gener
 
 ### Determine los requisitos de privacidad de su organización {#requirements}
 
-Dependiendo de la naturaleza de su negocio y de las jurisdicciones bajo las que opera, sus operaciones de datos pueden estar sujetas a regulaciones legales de privacidad. Estas regulaciones a menudo otorgan a sus clientes el derecho de solicitar acceso a los datos que recopila de ellos, y el derecho de solicitar la eliminación de esos datos almacenados. Estas solicitudes de datos personales de los clientes se denominan &quot;solicitudes de privacidad&quot; en toda la documentación.
+Según la naturaleza de su negocio y las jurisdicciones bajo las que actúa, sus operaciones de datos pueden estar sujetas a regulaciones legales de privacidad. Estas regulaciones, a menudo, otorgan a sus clientes el derecho de solicitar acceso a los datos que se recopilan de ellos, así como de solicitar la eliminación de esos datos almacenados. Estas solicitudes de datos personales de los clientes se denominan &quot;solicitudes de privacidad&quot; en toda la documentación.
 
 Para obtener más información sobre las diferentes regulaciones legales de privacidad que [!DNL Privacy Service] gestiona las solicitudes de, incluidos los términos clave y las respuestas a las preguntas más frecuentes, consulte [documentación de las normas de privacidad](./regulations/overview.md).
 

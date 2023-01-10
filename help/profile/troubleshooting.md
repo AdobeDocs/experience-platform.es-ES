@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Guía de solución de problemas del perfil del cliente en tiempo real
-topic-legacy: guide
 type: Documentation
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes al trabajar con datos de perfil mediante Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%

@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Punto final de la API de políticas de combinación
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '2472'
 ht-degree: 2%
@@ -172,7 +171,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es una de las siguientes:
 
 El objeto schema especifica la clase de esquema Experience Data Model (XDM) para la que se crea esta política de combinación.
 
-**`schema`object**
+**`schema`objeto**
 
 ```json
     "schema": {

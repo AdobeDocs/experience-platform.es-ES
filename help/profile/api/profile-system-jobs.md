@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Punto final de la API de trabajos del sistema de perfil
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite eliminar un conjunto de datos o lote del almacén de perfiles para eliminar los datos del perfil del cliente en tiempo real que ya no sean necesarios o que se hayan agregado por error. Esto requiere el uso de la API de perfil para crear un trabajo del sistema de perfil o eliminar una solicitud.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 3%

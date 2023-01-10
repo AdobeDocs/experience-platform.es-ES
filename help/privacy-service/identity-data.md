@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;ECID;ecid
 solution: Experience Platform
 title: Datos de identidad para solicitudes de privacidad
-topic-legacy: overview
 description: Este documento proporciona instrucciones generales sobre cómo configurar las operaciones de datos y aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada para las solicitudes de privacidad del cliente.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 2%

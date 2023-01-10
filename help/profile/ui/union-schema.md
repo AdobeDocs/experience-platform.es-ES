@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;perfil unificado;perfil unificado;unificado;perfil;rtcp;habilitar perfil;Activar perfil;esquema de unión;PERFIL DE UNIÓN;perfil de unión
 title: Guía de IU de Union Schema
-topic-legacy: guide
 type: Documentation
 description: En la interfaz de usuario (IU) de Adobe Experience Platform, puede ver fácilmente cualquier esquema de unión de su organización y previsualizar los campos, las identidades, las relaciones y los esquemas de contribución de una clase específica. Esta guía proporciona información detallada sobre cómo ver y explorar esquemas de unión mediante la interfaz de usuario de Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 2%

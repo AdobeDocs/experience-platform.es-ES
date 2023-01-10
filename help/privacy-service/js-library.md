@@ -2,10 +2,9 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Información general de la biblioteca JavaScript de privacidad de Adobe
-topic-legacy: overview
 description: La biblioteca JavaScript de privacidad de Adobe permite recuperar identidades de interesados para usarlas en Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 6%
@@ -95,7 +94,7 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 | `validIds` | Un objeto JSON que contiene todos los ID que se recuperaron correctamente. |
 | `failedIDs` | Un objeto JSON que contiene todos los ID de los que no se recuperaron [!DNL Privacy Service], o no se encontraron. |
 
-#### Resultado 
+#### Resultado
 
 Si el código se ejecuta correctamente, `validIDs` se rellena con una lista de identidades recuperadas.
 
@@ -144,7 +143,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | `validIds` | Un objeto JSON que contiene todos los ID que se recuperaron correctamente. |
 | `failedIDs` | Un objeto JSON que contiene todos los ID de los que no se recuperaron [!DNL Privacy Service], o no se encontraron. |
 
-#### Resultado 
+#### Resultado
 
 Si el código se ejecuta correctamente, `validIDs` se rellena con una lista de identidades recuperadas.
 

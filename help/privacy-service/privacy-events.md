@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Suscripción a eventos de Privacy Service
-topic-legacy: privacy events
 description: Obtenga información sobre cómo suscribirse a eventos de Privacy Service mediante un enlace web preconfigurado.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -31,7 +30,7 @@ Este documento proporciona los pasos para configurar un registro de eventos para
 
 Consulte la siguiente documentación del Privacy Service antes de iniciar este tutorial:
 
-* [Información general del Privacy Service](./home.md)
+* [Información general de Privacy Service](./home.md)
 * [Guía de API del Privacy Service](./api/overview.md)
 
 ## Registre un vínculo web para [!DNL Privacy Service Events]

@@ -2,13 +2,12 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Guía de solución de problemas del Privacy Service
-topic-legacy: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el Privacy Service, así como información sobre los errores encontrados con frecuencia en la API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '884'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -98,7 +97,7 @@ En el [!DNL Privacy Service] En el tablero IU, busque el trabajo que desea desca
 
 ## Mensajes de error frecuentes
 
-La siguiente tabla describe algunos errores comunes en [!DNL Privacy Service], con descripciones para ayudar a resolver sus respectivos problemas.
+La siguiente tabla describe algunos errores comunes en [!DNL Privacy Service], con descripciones para ayudar a resolver sus problemas respectivos.
 
 | Mensaje de error | Descripción |
 | --- | --- |

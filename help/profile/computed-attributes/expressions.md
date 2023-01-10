@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Expresiones PQL de muestra para atributos calculados
-topic-legacy: guide
 type: Documentation
 description: Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones requieren el uso de expresiones válidas de lenguaje de consulta de perfil (PQL). Esta guía describe algunas de las expresiones PQL más utilizadas para los atributos calculados.
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 2%
@@ -32,7 +31,7 @@ La tabla siguiente proporciona detalles para las expresiones de consulta más ut
 |---|---|---|---|
 | Recuento de descargas de imágenes en los últimos 7 días. | xEvent[(la marca de tiempo se produce &lt; 7 días antes) y eventType=&quot;download&quot; y contentType = &quot;image&quot;].count() | Perfil y EE[] | Número entero |
 | Suma del gasto de los clientes en productos deportivos en los últimos 7 días. | xEvent[(la marca de tiempo se produce &lt; 7 días antes) y eventType=&quot;transaction&quot; y category = &quot;productos deportivos&quot;].sum(commerce.order.priceTotal) | Perfil y EE[] | Número entero o doble |
-| Gasto promedio de los clientes en productos deportivos en los últimos 7 días.<br/><br/>**Nota:** Requiere la creación de tres atributos calculados. | **ca1:** xEvent[(la marca de tiempo se produce &lt; 7 días antes) y eventType=&quot;transaction&quot; y category = &quot;productos deportivos&quot;].sum(commerce.order.priceTotal)<br/><br/>**ca2:** xEvent[(la marca de tiempo se produce &lt; 7 días antes) y eventType=&quot;transaction&quot; y category = &quot;productos deportivos&quot;].count()<br/><br/>**ca3:** ca1/ca2 | Perfil y EE[] | Duplicada |
+| Gasto promedio de los clientes en productos deportivos en los últimos 7 días.<br/><br/>**Nota:** Requiere la creación de tres atributos calculados. | **ca1:** xEvent[(la marca de tiempo se produce &lt; 7 días antes) y eventType=&quot;transaction&quot; y category = &quot;productos deportivos&quot;].sum(commerce.order.priceTotal)<br/><br/>**ca2:** xEvent[(la marca de tiempo se produce &lt; 7 días antes) y eventType=&quot;transaction&quot; y category = &quot;productos deportivos&quot;].count()<br/><br/>**ca3:** ca1/ca2 | Perfil y EE[] | Doble |
 | ¿El cliente ha gastado más de 100 dólares en artículos deportivos los últimos 7 días?<br/><br/>**Nota:** Requiere la creación de dos atributos calculados. | **ca1:** xEvent[(la marca de tiempo se produce &lt; 7 días antes) y eventType=&quot;transaction&quot; y category = &quot;productos deportivos&quot;].sum(commerce.order.priceTotal)<br/><br/>**ca2:** ca1 > 100 | Perfil y EE[] | Booleano |
 | ¿El cliente ha realizado una compra en los últimos 7 días? | chain(xEvent, timestamp, [A: QUÉ(eventType = &quot;transaction&quot;) CUANDO(&lt; 7 días antes)]) | Perfil y EE[] | Booleano |
 | El menor gasto del usuario en productos deportivos en los últimos 7 días. | xEvent[(la marca de tiempo se produce &lt; 7 días antes) y eventType=&quot;transaction&quot; y category = &quot;productos deportivos&quot;].min(commerce.order.priceTotal) | Perfil y EE[] | Número entero o doble |

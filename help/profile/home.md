@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;perfil unificado;perfil unificado;unificado;perfil;rtcp;gráficos XDM
 title: Información general del perfil del cliente en tiempo real
-topic-legacy: guide
 description: El perfil del cliente en tiempo real combina datos de varias fuentes y proporciona acceso a esos datos en forma de perfiles de cliente individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 0%

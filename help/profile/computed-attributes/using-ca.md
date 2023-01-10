@@ -1,11 +1,9 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Uso de atributos calculados en Platform
-topic-legacy: guide
 type: Documentation
-description: 'Los atributos calculados son funciones para agregar datos de nivel de evento a atributos de niveles de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+description: Los atributos calculados son funciones para agregar datos de nivel de evento a atributos de niveles de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización.
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 12%
