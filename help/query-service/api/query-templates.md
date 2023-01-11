@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Extremo de API de plantillas de consulta
 description: Esta guía detalla las distintas llamadas a la API de plantilla de consulta que puede realizar mediante la API del servicio de consulta.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
+source-git-commit: ee6a54aeba4ddfeb98ee5e11283c299f00969a53
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 4%
@@ -262,9 +262,12 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-    "sql": "SELECT * FROM accounts LIMIT 20;",
-    "name": "Sample query template"
- }'
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+    "name": "Sample query template",
+    "queryParameters": {
+            user_id : {USER_ID}
+        }
+    }'
 ```
 
 | Propiedad | Descripción |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de API de consultas programadas
 description: Las secciones siguientes recorren las distintas llamadas de API que puede realizar para consultas programadas con la API del servicio de consulta.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1139'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ La solicitud del PATCH admite dos rutas diferentes: `/state` y `/schedule/schedu
 
 ### Actualizar estado de consulta programada
 
-Puede usar `/state` para actualizar el estado de la consulta programada seleccionada - ENABLED o DESHABILITADA. Para actualizar el estado, deberá establecer el valor como `enable` o `disable`.
+Puede actualizar el estado de la consulta programada seleccionada configurando la variable `path` propiedad a `/state` y `value` como `enable` o `disable`.
 
 **Formato de API**
 
@@ -347,6 +347,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propiedad | Descripción |
 | -------- | ----------- |
+| `op` | La operación que se realizará en la programación de consultas. El valor aceptado es `replace`. |
 | `path` | La ruta del valor que desea parche. En este caso, dado que está actualizando el estado de la consulta programada, debe establecer el valor de `path` a `/state`. |
 | `value` | El valor actualizado de la variable `/state`. Este valor puede establecerse como `enable` o `disable` para activar o desactivar la consulta programada. |
 
@@ -363,7 +364,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con el siguiente m
 
 ### Actualizar la programación de consultas programadas
 
-Puede usar `/schedule/schedule` para actualizar la programación cron de la consulta programada. Para obtener más información sobre los programas de cron, lea la [formato de expresión cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentación.
+Puede actualizar la programación cron de la consulta programada configurando la variable `path` propiedad a `/schedule/schedule` en el cuerpo de la solicitud. Para obtener más información sobre los programas de cron, lea la [formato de expresión cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentación.
 
 **Formato de API**
 
@@ -398,6 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propiedad | Descripción |
 | -------- | ----------- |
+| `op` | La operación que se realizará en la programación de consultas. El valor aceptado es `replace`. |
 | `path` | La ruta del valor que desea parche. En este caso, dado que está actualizando la programación de la consulta programada, debe configurar el valor de `path` a `/schedule/schedule`. |
 | `value` | El valor actualizado de la variable `/schedule`. Este valor debe presentar la forma de una programación cron. Por lo tanto, en este ejemplo, la consulta programada se ejecutará cada hora con la marca de 45 minutos. |
 

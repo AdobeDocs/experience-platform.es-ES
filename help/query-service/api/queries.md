@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de API de consultas
 description: Las secciones siguientes recorren las llamadas que puede realizar utilizando el extremo /queries en la API del servicio de consulta.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
+source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '868'
 ht-degree: 3%
 
 ---
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
         "queryParameters": {
-            $user_id : {USER_ID}
+            user_id : {USER_ID}
             }
         "name": "Sample Query",
         "description": "Sample Description"
@@ -295,9 +295,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 >
 >Puede utilizar el valor de `_links.cancel` a [cancelar la consulta creada](#cancel-a-query).
 
-### Cancelar una consulta
+### Cancelar o eliminar en blanco una consulta
 
-Puede solicitar la eliminación de una consulta especificada realizando una solicitud de PATCH al `/queries` y proporcionando el `id` en la ruta de solicitud.
+Puede solicitar la cancelación o eliminación suave de una consulta especificada realizando una solicitud de PATCH al `/queries` y proporcionando el `id` en la ruta de solicitud.
 
 **Formato de API**
 
@@ -305,9 +305,9 @@ Puede solicitar la eliminación de una consulta especificada realizando una soli
 PATCH /queries/{QUERY_ID}
 ```
 
-| Propiedad | Descripción |
+| Parámetro | Descripción |
 | -------- | ----------- |
-| `{QUERY_ID}` | La variable `id` de la consulta que desea cancelar. |
+| `{QUERY_ID}` | La variable `id` de la consulta en la que desea realizar la operación. |
 
 
 **Solicitud**
@@ -328,7 +328,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `op` | Para cancelar la consulta, debe establecer el parámetro op con el valor `cancel `. |
+| `op` | Tipo de operación que se realizará en el recurso. Los valores aceptados son `cancel` y `soft_delete`. Para cancelar la consulta, debe establecer el parámetro op con el valor `cancel `. Tenga en cuenta que la operación de eliminación suave impide que la consulta se devuelva en las solicitudes de GET, pero no la elimina del sistema. |
 
 **Respuesta**
 

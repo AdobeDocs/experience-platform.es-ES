@@ -2,9 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;alerta;
 title: Punto final de la API de suscripciones de alertas
 description: Esta guía proporciona ejemplos de solicitudes HTTP y respuestas para las distintas llamadas de API que puede realizar al extremo de suscripciones de alerta con la API del servicio de consulta.
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
+exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
+source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2668'
 ht-degree: 2%
 
 ---
@@ -49,7 +50,23 @@ Recupere una lista de todas las alertas de un entorno limitado de una organizaci
 
 ```http
 GET /alert-subscriptions
+GET /alert-subscriptions?{QUERY_PARAMETERS}
 ```
+
+| Propiedad | Descripción |
+| --------- | ----------- |
+| `{QUERY_PARAMETERS}` | (Opcional) Parámetros agregados a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por el símbolo &amp;. A continuación se enumeran los parámetros disponibles. |
+
+**Parámetros de consulta**
+
+A continuación se muestra una lista de parámetros de consulta disponibles para enumerar consultas. Todos estos parámetros son opcionales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las consultas disponibles para su organización.
+
+| Parámetro | Descripción |
+| --------- | ----------- |
+| `orderby` | Campo que especifica el orden de los resultados. Los campos admitidos son `created` y `updated`. Anteponer el nombre de propiedad con `+` para ascenso y `-` en orden descendente. El valor predeterminado es `-created`. Tenga en cuenta que el signo más (`+`) se debe escapar con `%2B`. Por ejemplo `%2Bcreated` es el valor de un orden creado ascendente. |
+| `pagesize` | Utilice este parámetro para controlar el número de registros que desea recuperar de la llamada de API por página. El límite predeterminado se establece en la cantidad máxima de 50 registros por página. |
+| `page` | Indique el número de página de los resultados devueltos para los que desea ver los registros. |
+| `property` | Filtre los resultados en función de los campos seleccionados. Los filtros **must** se escapó el HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Las siguientes propiedades permiten el filtrado: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Los operadores admitidos son `==` (igual a). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá la alerta con un ID coincidente. |
 
 **Solicitud**
 
@@ -283,7 +300,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parámetros | Descripción |
 | -------- | ----------- |
-| `ALERT_TYPE` | Cada alerta puede tener tres tipos diferentes de alertas. Son: <ul><li>`start`: Notifica al usuario cuando se ha iniciado la ejecución de la consulta.</li><li>`success`: Notifica al usuario cuando la consulta se completa.</li><li>`failure`: Notifica al usuario si la consulta falla.</li></ul> |
+| `ALERT_TYPE` | Esta propiedad describe el estado de ejecución de la consulta que déclencheur una alerta. La respuesta solo incluye información de suscripción de alerta para alertas de este tipo. Cada alerta puede tener tres tipos diferentes de alertas. Son: <ul><li>`start`: Notifica al usuario cuando se ha iniciado la ejecución de la consulta.</li><li>`success`: Notifica al usuario cuando la consulta se completa.</li><li>`failure`: Notifica al usuario si la consulta falla.</li></ul> |
 | `QUERY_ID` | Identificador único de la consulta que se va a actualizar. |
 | `SCHEDULE_ID` | Identificador único de la consulta programada que se va a actualizar. |
 
@@ -370,6 +387,10 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Parámetros | Descripción |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Se utiliza una dirección de correo electrónico registrada en una cuenta de Adobe para identificar a los usuarios suscritos a las alertas. |
+| `orderby` | Campo que especifica el orden de los resultados. Los campos admitidos son `created` y `updated`. Anteponer el nombre de propiedad con `+` para ascenso y `-` en orden descendente. El valor predeterminado es `-created`. Tenga en cuenta que el signo más (`+`) se debe escapar con `%2B`. Por ejemplo `%2Bcreated` es el valor de un orden creado ascendente. |
+| `pagesize` | Utilice este parámetro para controlar el número de registros que desea recuperar de la llamada de API por página. El límite predeterminado se establece en la cantidad máxima de 50 registros por página. |
+| `page` | Indique el número de página de los resultados devueltos para los que desea ver los registros. |
+| `property` | Filtre los resultados en función de los campos seleccionados. Los filtros **must** se escapó el HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Las siguientes propiedades permiten el filtrado: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Los operadores admitidos son `==` (igual a). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá la alerta con un ID coincidente. |
 
 **Solicitud**
 
