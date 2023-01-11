@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Espaciado de nombres en el modelo de datos de experiencia (XDM)
 description: Descubra cómo el espaciado de nombres en Experience Data Model (XDM) le permite ampliar sus esquemas y evitar conflictos de campos a medida que se unen diferentes componentes de esquema.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Las siguientes secciones muestran cómo se asignan áreas de nombres en la sinta
 
 La sintaxis XDM estándar proporciona una perspectiva sobre cómo se representan los espacios de nombres en los esquemas (incluido [cómo se traducen en Adobe Experience Platform](#compatibility)).
 
-Uso de XDM estándar [JSON-LD](https://json-ld.org/) sintaxis para asignar áreas de nombres a campos. Este espacio de nombres se presenta en forma de URI (como `https://ns.adobe.com/xdm` para el `xdm` espacio de nombres) o como prefijo abreviado que está configurado en la variable `@context` de un esquema.
+Uso de XDM estándar [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) sintaxis para asignar áreas de nombres a campos. Este espacio de nombres se presenta en forma de URI (como `https://ns.adobe.com/xdm` para el `xdm` espacio de nombres) o como prefijo abreviado que está configurado en la variable `@context` de un esquema.
 
 El siguiente es un ejemplo de esquema para un producto con sintaxis XDM estándar. Con excepción de `@id` (el identificador único definido por la especificación JSON-LD), cada campo de `properties` comienza con un área de nombres y termina con el nombre del campo. Si utiliza un prefijo de forma abreviada definido en `@context`, el área de nombres y el nombre del campo están separados por dos puntos (`:`). Si no se utiliza un prefijo, el área de nombres y el nombre del campo se separan con una barra diagonal (`/`).
 
@@ -75,7 +75,7 @@ El siguiente es un ejemplo de esquema para un producto con sintaxis XDM estánda
 | Propiedad | Descripción |
 | --- | --- |
 | `@context` | Un objeto que define los prefijos de método abreviado que se pueden usar en lugar de un URI de área de nombres completo en `properties`. |
-| `@id` | Un identificador único para el registro tal como se define en la variable [Especificación JSON-LD](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | Un identificador único para el registro tal como se define en la variable [Especificación JSON-LD](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | Ejemplo de un campo que utiliza un prefijo shorthand para denotar un área de nombres. En este caso, `xdm` es el espacio de nombres (`https://ns.adobe.com/xdm`) y `sku` es el nombre del campo. |
 | `https://ns.adobe.com/xdm/channels/application` | Ejemplo de un campo que utiliza el URI completo del área de nombres. En este caso, `https://ns.adobe.com/xdm/channels` es el área de nombres y `application` es el nombre del campo. |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Los campos proporcionados por los recursos del proveedor utilizan sus propias áreas de nombres únicas. En este ejemplo, `https://ns.adobe.com/vendorA/product` es el área de nombres del proveedor y `stockNumber` es el nombre del campo. |

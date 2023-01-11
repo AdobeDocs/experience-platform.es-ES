@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2022
 description: Notas de la versión de agosto de 2022 para Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '2131'
+source-wordcount: '2109'
 ht-degree: 7%
 
 ---
@@ -116,8 +116,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Esquema global | [[!UICONTROL Esquema de entidad AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Describe las entidades no normalizadas para Adobe Journey Optimizer. |
-| Clase | [[!UICONTROL Entidades de ejecución de AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | Describe las entidades de ejecución de Adobe Journey Optimizer para utilizarlas en la segmentación. |
+| Clase | [[!UICONTROL Clase de entidad AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Una clase basada en registros para crear esquemas de búsqueda para Adobe Journey Optimizer. |
 | Grupo de campos | [[!UICONTROL Objetos de trabajo de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Grupo de campos de envoltura que hace referencia a todos los grupos de campos específicos de objetos de nivel inferior para Adobe Workfront. |
 
 {style=&quot;table-layout:auto&quot;}

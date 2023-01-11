@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recuperación de diagnósticos de error de ingesta de datos
 description: Este documento proporciona información sobre la monitorización de la ingesta de lotes, la administración de errores de ingesta parcial de lotes, así como una referencia para tipos de ingesta parcial de lotes.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '981'
 ht-degree: 3%
 
 ---
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Respuesta**
 
-Una respuesta correcta devolverá objetos JSON que contengan `path` objetos que detallan dónde se guardaron los diagnósticos. La respuesta devolverá el valor `path` objetos [Líneas JSON](https://jsonlines.org/) formato.
+Una respuesta correcta devolverá objetos JSON que contengan `path` objetos que detallan dónde se guardaron los diagnósticos. La respuesta devolverá el valor `path` objetos [Líneas JSON](https://jsonlines.readthedocs.io/en/latest/) formato.
 
 ```json
 {"path": "F1.json"}
