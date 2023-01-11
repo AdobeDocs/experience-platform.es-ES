@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de Adobe Experience Platform
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '7919'
+source-wordcount: '7929'
 ht-degree: 0%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 0%
 
 **Biblioteca**: En el contexto de las etiquetas, una biblioteca es un conjunto de lógica empresarial que contiene instrucciones sobre cómo debe comportarse la biblioteca de etiquetas en el dispositivo cliente.
 
-**Entidades de búsqueda**: En el contexto del modelado de datos, las entidades de búsqueda representan conceptos que pueden relacionarse con una persona individual, pero que no pueden utilizarse directamente para identificar a la persona. Las entidades incluidas en esta categoría deben representarse mediante esquemas basados en clases personalizadas del Modelo de datos de experiencia (XDM).
+**Entidades de búsqueda**: En el contexto del modelado de datos, las entidades de búsqueda representan conceptos que pueden relacionarse con una persona individual, pero que no pueden utilizarse directamente para identificar a la persona. Las entidades incluidas en esta categoría deben estar representadas por esquemas basados en clases personalizadas del Modelo de datos de experiencia (XDM) y vinculadas a una entidad de perfil a través de una [relación de esquema](../xdm/tutorials/relationship-ui.md).
 
 ## M
 

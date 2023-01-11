@@ -4,9 +4,9 @@ title: Protecciones predeterminadas para Real-time Customer Data Platform B2B Ed
 type: Documentation
 description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar sus datos para lograr un rendimiento óptimo del sistema mediante Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1651'
 ht-degree: 2%
 
 ---
@@ -117,14 +117,22 @@ Esta sección proporciona detalles adicionales para los límites de este documen
 
 ### Tipos de entidades
 
-La variable [!DNL Profile] el modelo de datos de almacenamiento consta de dos tipos de entidades principales:
+La variable [!DNL Profile] el modelo de datos de almacenamiento consta de dos tipos de entidades principales: [entidades principales](#primary-entity) y [entidades de dimensión](#dimension-entity).
 
-* **Entidad principal:** Una entidad principal, o entidad de perfil, combina los datos para formar una &quot;única fuente de verdad&quot; para un individuo. Estos datos unificados se representan con lo que se conoce como &quot;vista de unión&quot;. Una vista de unión agrega los campos de todos los esquemas que implementan la misma clase en un esquema de unión único. El esquema de unión para [!DNL Real-Time Customer Profile] es un modelo de datos híbrido no normalizado que actúa como contenedor de todos los atributos de perfil y eventos de comportamiento.
+#### Entidad principal
 
-   Los atributos independientes del tiempo, también conocidos como &quot;datos de registro&quot;, se modelan mediante [!DNL XDM Individual Profile], mientras que los datos de series temporales, también conocidos como &quot;datos de evento&quot;, se modelan mediante [!DNL XDM ExperienceEvent]. A medida que los datos de registros y series temporales se incorporan en Adobe Experience Platform, se déclencheur [!DNL Real-Time Customer Profile] para empezar a introducir datos que se hayan habilitado para su uso. Cuantas más interacciones y detalles se incorporen, más robustos se vuelven los perfiles individuales.
+Una entidad principal, o entidad de perfil, combina los datos para formar una &quot;única fuente de verdad&quot; para un individuo. Estos datos unificados se representan con lo que se conoce como &quot;vista de unión&quot;. Una vista de unión agrega los campos de todos los esquemas que implementan la misma clase en un esquema de unión único. El esquema de unión para [!DNL Real-Time Customer Profile] es un modelo de datos híbrido no normalizado que actúa como contenedor de todos los atributos de perfil y eventos de comportamiento.
 
-   ![](../profile/images/guardrails/profile-entity.png)
+Los atributos independientes del tiempo, también conocidos como &quot;datos de registro&quot;, se modelan mediante [!DNL XDM Individual Profile], mientras que los datos de series temporales, también conocidos como &quot;datos de evento&quot;, se modelan mediante [!DNL XDM ExperienceEvent]. A medida que los datos de registros y series temporales se incorporan en Adobe Experience Platform, se déclencheur [!DNL Real-Time Customer Profile] para empezar a introducir datos que se hayan habilitado para su uso. Cuantas más interacciones y detalles se incorporen, más robustos se vuelven los perfiles individuales.
 
-* **entidad Dimension:** Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, Perfil permite la integración con entidades de dimensión pequeñas para crear segmentos de una forma simplificada e intuitiva. Esta integración se conoce como [segmentación multientidad](../segmentation/multi-entity-segmentation.md). Su organización también puede definir clases XDM para describir otras cosas que no sean individuos, como tiendas, productos o propiedades. Estos[!DNL XDM Individual Profile] los esquemas se conocen como &quot;entidades de dimensión&quot; y no contienen datos de series temporales. Las entidades de Dimension proporcionan datos de búsqueda que ayudan y simplifican las definiciones de segmentos de varias entidades y deben ser lo suficientemente pequeñas como para que el motor de segmentación pueda cargar todo el conjunto de datos en la memoria para un procesamiento óptimo (búsqueda de puntos rápidos).
+![Una infografía que describe las diferencias entre los datos de registro y los datos de series temporales.](../profile/images/guardrails/profile-entity.png)
 
-   ![](../profile/images/guardrails/profile-and-dimension-entities.png)
+#### entidad Dimension
+
+Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, Perfil permite la integración con entidades de dimensión pequeñas para crear segmentos de una forma simplificada e intuitiva. Esta integración se conoce como [segmentación multientidad](../segmentation/multi-entity-segmentation.md).
+
+Su organización también puede definir clases XDM para describir otras cosas que no sean individuos, como tiendas, productos o propiedades. Estos[!DNL XDM Individual Profile] los esquemas se denominan &quot;entidades de dimensión&quot; (también conocidas como &quot;entidades de consulta&quot;) y no contienen datos de series temporales. Los esquemas que representan entidades de dimensión están vinculados a entidades de perfil mediante el uso de [relaciones de esquema](../xdm/tutorials/relationship-ui.md).
+
+Las entidades de Dimension proporcionan datos de búsqueda que ayudan y simplifican las definiciones de segmentos de varias entidades y deben ser lo suficientemente pequeñas como para que el motor de segmentación pueda cargar todo el conjunto de datos en la memoria para un procesamiento óptimo (búsqueda de puntos rápidos).
+
+![Una infografía que muestra que una entidad de perfil está compuesta por entidades de dimensión.](../profile/images/guardrails/profile-and-dimension-entities.png)

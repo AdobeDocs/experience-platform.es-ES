@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prácticas Recomendadas Para El Modelado De Datos
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '2699'
+source-wordcount: '2722'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Además, esta guía se centra exclusivamente en consideraciones clave relacionad
 
 ## Resumen de prácticas recomendadas
 
-El método recomendado para diseñar el modelo de datos para su uso en Experience Platform puede resumirse de la siguiente manera:
+El método recomendado para diseñar el modelo de datos para su uso en Experience Platform se puede resumir de la siguiente manera:
 
 1. Comprender los casos de uso empresarial de sus datos.
 1. Identificar las fuentes de datos principales en las que se debe importar [!DNL Platform] para tratar estos casos de uso.
@@ -50,7 +50,7 @@ Una vez que haya creado un ERD para identificar las entidades esenciales que des
 | Categoría | Descripción |
 | --- | --- |
 | Entidades de perfil | Las entidades de perfil representan atributos relacionados con una persona individual, normalmente un cliente. Las entidades incluidas en esta categoría deben estar representadas por esquemas basados en la variable **[!DNL XDM Individual Profile]class**. |
-| Entidades de búsqueda | Las entidades de búsqueda representan conceptos que pueden relacionarse con una persona individual, pero que no se pueden utilizar directamente para identificar a dicha persona. Las entidades incluidas en esta categoría deben estar representadas por esquemas basados en **clases personalizadas**. |
+| Entidades de búsqueda | Las entidades de búsqueda representan conceptos que pueden relacionarse con una persona individual, pero que no se pueden utilizar directamente para identificar a dicha persona. Las entidades incluidas en esta categoría deben estar representadas por esquemas basados en **clases personalizadas** y están vinculados a perfiles y eventos a través de [relaciones de esquema](../tutorials/relationship-ui.md). |
 | Entidades de eventos | Las entidades de eventos representan conceptos relacionados con acciones que un cliente puede realizar, eventos del sistema o cualquier otro concepto en el que desee rastrear cambios a lo largo del tiempo. Las entidades incluidas en esta categoría deben estar representadas por esquemas basados en la variable **[!DNL XDM ExperienceEvent]class**. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -186,7 +186,7 @@ La categoría en la que se ha ordenado una entidad debe determinar la clase XDM 
 
 * Las entidades de perfil deben usar la variable [!DNL XDM Individual Profile] Clase .
 * Las entidades de eventos deben utilizar la variable [!DNL XDM ExperienceEvent] Clase .
-* Las entidades de búsqueda deben utilizar clases XDM personalizadas definidas por su organización.
+* Las entidades de búsqueda deben utilizar clases XDM personalizadas definidas por su organización. Las entidades de perfil y evento pueden hacer referencia a estas entidades de búsqueda a través de relaciones de esquema.
 
 >[!NOTE]
 >
