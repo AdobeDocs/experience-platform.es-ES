@@ -5,9 +5,9 @@ title: Explorar recursos de esquema en la interfaz de usuario
 description: Obtenga información sobre cómo explorar esquemas, clases, grupos de campos de esquema y tipos de datos existentes en la interfaz de usuario del Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Los campos de identidad se resaltan en el lienzo con un icono de huella (![Icono
 
 Si está inspeccionando un esquema que contiene un campo de relación, el campo aparece en el carril izquierdo debajo de **[!UICONTROL Relaciones]**. Seleccione el nombre del campo de relación en el carril izquierdo para mostrar el campo en el lienzo, independientemente de la profundidad con la que esté anidado.
 
-Los campos de relación también se resaltan de forma única en el lienzo, mostrando el nombre del esquema de destino al que hace referencia el campo. Si selecciona el nombre del campo de relación, puede ver el área de nombres de identidad de la identidad principal del esquema de destino en el carril derecho.
+Los campos de relación también se resaltan de forma única en el lienzo, mostrando el nombre del esquema de referencia al que está vinculado el campo. Si selecciona el nombre del campo de relación, puede ver el área de nombres de identidad de la identidad principal del esquema de referencia en el carril derecho.
 
 ![](../images/ui/explore/relationship-field.png)
 

@@ -2,7 +2,7 @@
 title: Definir una relación entre dos esquemas en Real-time Customer Data Platform B2B Edition
 description: Aprenda a definir una relación "varios a uno" entre dos esquemas en Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 0%
@@ -40,11 +40,11 @@ Este tutorial requiere una comprensión práctica de [!DNL XDM System] y el Edit
 * [Aspectos básicos de la composición del esquema](../schema/composition.md): Introducción de los componentes básicos de los esquemas XDM.
 * [Cree un esquema utilizando la variable [!DNL Schema Editor]](create-schema-ui.md): Un tutorial que cubre los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario.
 
-## Definir un esquema de origen y destino
+## Definición de un esquema de origen y referencia
 
 Se espera que ya haya creado los dos esquemas que se definirán en la relación. Para fines de demostración, este tutorial crea una relación entre las oportunidades comerciales (definidas en un &quot;[!DNL Opportunities]&quot; esquema) y su cuenta comercial asociada (definida en un[!DNL Accounts]&quot; esquema).
 
-Las relaciones de esquema se representan mediante un campo dedicado dentro de un **esquema de origen** que hace referencia al campo de identidad principal de un **esquema de destino**. En los pasos siguientes, &quot;[!DNL Opportunities]&quot; sirve como esquema de origen, mientras que &quot;[!DNL Accounts]&quot; actúa como esquema de destino.
+Las relaciones de esquema se representan mediante un campo dedicado dentro de un **esquema de origen** que hace referencia al campo de identidad principal de un **esquema de referencia**. En los pasos siguientes, &quot;[!DNL Opportunities]&quot; sirve como esquema de origen, mientras que &quot;[!DNL Accounts]&quot; actúa como esquema de referencia.
 
 ### Explicación de las identidades en las relaciones B2B
 
@@ -53,7 +53,7 @@ Las relaciones de esquema se representan mediante un campo dedicado dentro de un
 >title="Área de nombres de identidad de referencia"
 >abstract="El espacio de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación. Consulte la documentación para obtener más información sobre las identidades en las relaciones B2B."
 
-Para establecer una relación, el esquema de destino debe tener una identidad principal definida. Al configurar una identidad principal para una entidad B2B, tenga en cuenta que los ID de entidad basados en cadenas pueden superponerse si los recopila en diferentes sistemas o ubicaciones, lo que podría provocar conflictos de datos en Platform.
+Para establecer una relación, el esquema de referencia debe tener una identidad principal definida. Al configurar una identidad principal para una entidad B2B, tenga en cuenta que los ID de entidad basados en cadenas pueden superponerse si los recopila en diferentes sistemas o ubicaciones, lo que podría provocar conflictos de datos en Platform.
 
 Para tener en cuenta esto, todas las clases B2B estándar contienen campos &quot;clave&quot; que se ajustan al [[!UICONTROL Fuente B2B] tipo de datos](../data-types/b2b-source.md). Este tipo de datos proporciona campos para un identificador de cadena para la entidad B2B junto con otra información contextual sobre el origen del identificador. Uno de estos campos, `sourceKey`, concatena los valores de los demás campos del tipo de datos para producir un identificador único total para la entidad. Este campo siempre debe utilizarse como identidad principal para esquemas de entidad B2B.
 
@@ -75,7 +75,7 @@ Como se ve en **[!UICONTROL Propiedades del esquema]**, este esquema se ha habil
 
 ### [!DNL Accounts] esquema
 
-El esquema de destino &quot;[!DNL Accounts]&quot; se basa en la variable [!UICONTROL Cuenta XDM] Clase . El nivel raíz `accountKey` El campo contiene la variable `sourceKey` que actúa como su identidad principal bajo un espacio de nombres personalizado llamado [!DNL B2B Account]. Este esquema también se ha habilitado para su uso en Perfil.
+El esquema de referencia &quot;[!DNL Accounts]&quot; se basa en la variable [!UICONTROL Cuenta XDM] Clase . El nivel raíz `accountKey` El campo contiene la variable `sourceKey` que actúa como su identidad principal bajo un espacio de nombres personalizado llamado [!DNL B2B Account]. Este esquema también se ha habilitado para su uso en Perfil.
 
 ![Esquema de cuentas](../images/tutorials/relationship-b2b/accounts.png)
 
@@ -91,11 +91,11 @@ El esquema de destino &quot;[!DNL Accounts]&quot; se basa en la variable [!UICON
 >title="Nombre de relación del esquema de referencia"
 >abstract="Etiqueta que describe la relación entre el esquema de referencia y el esquema actual (por ejemplo, &quot;Oportunidades relacionadas&quot;). Esta etiqueta se utiliza en Perfil y Segmentación para dar contexto a los datos de entidades B2B relacionadas. Consulte la documentación para obtener más información sobre la creación de relaciones de esquema B2B."
 
-Para definir una relación entre dos esquemas, el esquema de origen debe tener un campo dedicado que haga referencia a la identidad principal del esquema de destino. Las clases B2B estándar incluyen campos clave de origen específicos para entidades comerciales relacionadas de forma habitual. Por ejemplo, la variable [!UICONTROL Oportunidad comercial XDM] la clase contiene campos de clave de origen para una cuenta relacionada (`accountKey`) y una campaña relacionada (`campaignKey`). Sin embargo, también puede agregar otras [!UICONTROL Fuente B2B] campos al esquema utilizando grupos de campos personalizados si necesita más de los componentes predeterminados.
+Para definir una relación entre dos esquemas, el esquema de origen debe tener un campo dedicado que indique la identidad principal del esquema de referencia. Las clases B2B estándar incluyen campos clave de origen específicos para entidades comerciales relacionadas de forma habitual. Por ejemplo, la variable [!UICONTROL Oportunidad comercial XDM] la clase contiene campos de clave de origen para una cuenta relacionada (`accountKey`) y una campaña relacionada (`campaignKey`). Sin embargo, también puede agregar otras [!UICONTROL Fuente B2B] campos al esquema utilizando grupos de campos personalizados si necesita más de los componentes predeterminados.
 
 >[!NOTE]
 >
->Actualmente, solo se pueden definir relaciones &quot;varios a uno&quot; y &quot;uno a uno&quot; de un esquema de origen a un esquema de destino. Para las relaciones uno a varios, debe definir el campo de relación en el esquema que representa el &quot;varios&quot;.
+>Actualmente, solo se pueden definir relaciones &quot;varios a uno&quot; y &quot;uno a uno&quot; de un esquema de origen a un esquema de referencia. Para las relaciones uno a varios, debe definir el campo de relación en el esquema que representa el &quot;varios&quot;.
 
 Para establecer un campo de relación, seleccione el icono de flecha (![Icono de flecha](../images/tutorials/relationship-b2b/arrow.png)) junto al campo en cuestión dentro del lienzo. En el caso del [!DNL Opportunities] esquema, este es el `accountKey.sourceKey` , ya que el objetivo es establecer una relación &quot;varios a uno&quot; con una cuenta.
 
@@ -105,11 +105,11 @@ Aparece un cuadro de diálogo que le permite especificar los detalles de la rela
 
 ![Diálogo de relaciones](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-En **[!UICONTROL Esquema de referencia]**, utilice la barra de búsqueda para encontrar el nombre del esquema de destino. Cuando resalte el nombre del esquema de destino, la variable **[!UICONTROL Espacio de nombres de identidad de referencia]** se actualiza automáticamente al espacio de nombres de la identidad principal del esquema.
+En **[!UICONTROL Esquema de referencia]**, utilice la barra de búsqueda para encontrar el nombre del esquema de referencia. Cuando se resalta el nombre del esquema de referencia, la variable **[!UICONTROL Espacio de nombres de identidad de referencia]** se actualiza automáticamente al espacio de nombres de la identidad principal del esquema.
 
 ![Esquema de referencia](../images/tutorials/relationship-b2b/reference-schema.png)
 
-En **[!UICONTROL Nombre de relación del esquema actual]** y **[!UICONTROL Nombre de relación desde esquema de referencia]**, proporcione nombres descriptivos para la relación en el contexto de los esquemas de origen y destino, respectivamente. Cuando termine, seleccione **[!UICONTROL Guardar]** para aplicar los cambios y guardar el esquema.
+En **[!UICONTROL Nombre de relación del esquema actual]** y **[!UICONTROL Nombre de relación desde esquema de referencia]**, proporcione nombres descriptivos para la relación en el contexto de los esquemas de origen y referencia, respectivamente. Cuando termine, seleccione **[!UICONTROL Guardar]** para aplicar los cambios y guardar el esquema.
 
 ![Nombre de relación](../images/tutorials/relationship-b2b/relationship-name.png)
 
@@ -117,7 +117,7 @@ El lienzo vuelve a aparecer y el campo de relación ahora está marcado con el n
 
 ![Relación aplicada](../images/tutorials/relationship-b2b/relationship-applied.png)
 
-Si ve la estructura del esquema de destino, el marcador de relación aparece junto al campo de identidad principal del esquema y en el carril izquierdo.
+Si ve la estructura del esquema de referencia, el marcador de relación aparece junto al campo de identidad principal del esquema y en el carril izquierdo.
 
 ![Marcador de relación del esquema de destino](../images/tutorials/relationship-b2b/destination-relationship.png)
 

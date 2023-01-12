@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API del Registro de esquemas permite administrar mediante programación los descriptores XDM dentro de la aplicación de experiencia.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 4%
@@ -385,15 +385,15 @@ Los descriptores de relación describen una relación entre dos esquemas diferen
 | `xdm:sourceSchema` | La variable `$id` URI del esquema en el que se está definiendo el descriptor. |
 | `xdm:sourceVersion` | Versión principal del esquema de origen. |
 | `xdm:sourceProperty` | Ruta al campo en el esquema de origen donde se está definiendo la relación. Debe comenzar con &quot;/&quot; y no terminar con uno. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;). |
-| `xdm:destinationSchema` | La variable `$id` URI del esquema de destino con el que este descriptor define una relación. |
-| `xdm:destinationVersion` | La versión principal del esquema de destino. |
-| `xdm:destinationProperty` | Ruta opcional a un campo de destino dentro del esquema de destino. Si se omite esta propiedad, el campo de destino se deduce por cualquier campo que contenga un descriptor de identidad de referencia coincidente (consulte a continuación). |
+| `xdm:destinationSchema` | La variable `$id` URI del esquema de referencia con el que este descriptor define una relación. |
+| `xdm:destinationVersion` | Versión principal del esquema de referencia. |
+| `xdm:destinationProperty` | Ruta opcional a un campo de destino dentro del esquema de referencia. Si se omite esta propiedad, el campo de destino se deduce por cualquier campo que contenga un descriptor de identidad de referencia coincidente (consulte a continuación). |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### Descriptor de identidad de referencia
 
-Los descriptores de identidad de referencia proporcionan un contexto de referencia a la identidad principal de un campo de esquema, lo que permite que los campos de otros esquemas hagan referencia a él. El esquema de destino ya debe tener un campo de identidad principal definido para que otros esquemas puedan hacer referencia a él a través de este descriptor.
+Los descriptores de identidad de referencia proporcionan un contexto de referencia a la identidad principal de un campo de esquema, lo que permite que los campos de otros esquemas hagan referencia a él. El esquema de referencia ya debe tener un campo de identidad principal definido para que otros esquemas puedan hacer referencia a él a través de este descriptor.
 
 ```json
 {
@@ -410,7 +410,7 @@ Los descriptores de identidad de referencia proporcionan un contexto de referenc
 | `@type` | Tipo de descriptor que se está definiendo. Para un descriptor de identidad de referencia, este valor debe establecerse en `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | La variable `$id` URI del esquema en el que se está definiendo el descriptor. |
 | `xdm:sourceVersion` | Versión principal del esquema de origen. |
-| `xdm:sourceProperty` | Ruta al campo en el esquema de origen que se utilizará para hacer referencia al esquema de destino. Debe comenzar con &quot;/&quot; y no terminar con uno. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, `/personalEmail/address` en lugar de `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | Ruta al campo en el esquema de origen que se utilizará para hacer referencia al esquema de referencia. Debe comenzar con &quot;/&quot; y no terminar con uno. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, `/personalEmail/address` en lugar de `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | El código de área de nombres de identidad para la propiedad de origen. |
 
 {style=&quot;table-layout:auto&quot;}

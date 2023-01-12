@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de solución de problemas del sistema XDM
 description: Encuentre respuestas a las preguntas más frecuentes sobre Experience Data Model (XDM), incluidos pasos para resolver errores comunes de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,13 @@ Este mensaje de error se muestra cuando intenta habilitar un esquema para [!DNL 
 }
 ```
 
-Para habilitar esquemas que contengan descriptores de relaciones para su uso en [!DNL Profile], el área de nombres del campo de origen y el área de nombres principal del campo de destino deben ser iguales. Este mensaje de error se muestra cuando intenta habilitar un esquema que contiene un área de nombres no coincidente para su descriptor de identidad de referencia. Asegúrese de que la variable `xdm:namespace` El valor del campo de identidad del esquema de destino coincide con el del `xdm:identityNamespace` en el descriptor de identidad de referencia del campo de origen para resolver este problema.
+>[!NOTE]
+>
+>Para este error, el &quot;esquema de destino&quot; hace referencia al esquema de referencia en la relación.
+
+Para habilitar esquemas que contengan descriptores de relaciones para su uso en [!DNL Profile], el área de nombres del campo de origen y el área de nombres principal del campo de referencia deben ser iguales. Este mensaje de error se muestra cuando intenta habilitar un esquema que contiene un área de nombres no coincidente para su descriptor de identidad de referencia.
+
+Asegúrese de que la variable `xdm:namespace` El valor del campo de identidad del esquema de referencia coincide con el del `xdm:identityNamespace` en el descriptor de identidad de referencia del campo de origen para resolver este problema.
 
 Para obtener una lista de códigos de área de nombres de identidad estándar, consulte la sección en [espacios de nombres estándar](../identity-service/namespaces.md) en la descripción general del área de nombres de identidad.
 

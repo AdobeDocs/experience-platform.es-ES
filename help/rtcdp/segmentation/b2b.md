@@ -2,7 +2,7 @@
 title: Casos de uso de segmentación para Real-time Customer Data Platform B2B Edition
 description: Información general sobre los distintos casos de uso disponibles de Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1283'
 ht-degree: 0%
@@ -42,7 +42,7 @@ La siguiente imagen ilustra las relaciones entre las clases B2B disponibles en R
 
 Dado que el modelo de datos puede ser complicado, puede utilizar la interfaz de usuario de Platform para ver una representación visual más detallada del modelo de datos con el fin de encontrar los atributos relevantes para su caso de uso. Para empezar, vaya a la interfaz de usuario de Platform y seleccione Esquemas en el panel de navegación izquierdo.
 
-Seleccione el esquema adecuado de la lista de elementos disponibles y seleccione la relación adecuada en el [!UICONTROL Composición] carril lateral. En el siguiente ejemplo, si selecciona la relación &quot;Persona&quot;, se muestra qué atributo del esquema actual hace referencia al esquema &quot;Persona&quot; relacionado (si es el esquema de origen de la relación) o está referenciado por el esquema &quot;Persona&quot; (si es el esquema de destino en la relación).
+Seleccione el esquema adecuado de la lista de elementos disponibles y seleccione la relación adecuada en el [!UICONTROL Composición] carril lateral. En el siguiente ejemplo, si se selecciona la relación &quot;Persona&quot;, se revela qué atributo del esquema actual hace referencia al esquema &quot;Persona&quot; relacionado (si es el esquema de origen de la relación) o está referenciado por el esquema &quot;Persona&quot; (si es el esquema de referencia de la relación).
 
 ![ejemplo de clave de origen que utiliza la relación personas en el espacio de trabajo del esquema](../assets/segmentation/source-key-schema-relationship-example.png)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aspectos básicos de la composición del esquema
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '4108'
 ht-degree: 2%
@@ -76,7 +76,7 @@ El principal inconveniente de utilizar `identityMap` es que las identidades se i
 
 >[!NOTE]
 >
->Un esquema que utiliza `identityMap` puede utilizarse como esquema de origen en una relación, pero no como esquema de destino. Esto se debe a que todos los esquemas de destino deben tener una identidad visible que se pueda asignar en un campo de referencia dentro del esquema de origen. Consulte la guía de IU sobre [relaciones](../tutorials/relationship-ui.md) para obtener más información sobre los requisitos de los esquemas de origen y destino.
+>Un esquema que utiliza `identityMap` puede utilizarse como esquema de origen en una relación, pero no como esquema de referencia. Esto se debe a que todos los esquemas de referencia deben tener una identidad visible que se pueda asignar en un campo de referencia dentro del esquema de origen. Consulte la guía de IU sobre [relaciones](../tutorials/relationship-ui.md) para obtener más información sobre los requisitos de los esquemas de origen y referencia.
 
 Sin embargo, los mapas de identidad pueden resultar especialmente útiles si reúne datos de fuentes que almacenan identidades (como [!DNL Airship] o Adobe Audience Manager), o cuando hay un número variable de identidades para un esquema. Además, se requieren mapas de identidad si utiliza la variable [SDK de Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/).
 
