@@ -4,9 +4,9 @@ title: Reglas de alerta estándar
 description: Este documento cubre las reglas de alerta predefinidas proporcionadas por el Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '961'
 ht-degree: 3%
 
 ---
@@ -73,7 +73,7 @@ Las siguientes reglas de alerta son específicas de [Servicio de segmentación](
 | --- | --- | --- |
 | Información del trabajo de evaluación de segmentos | Inicio del trabajo del segmento | Esta alerta déclencheur cuando un trabajo de evaluación de segmentos comienza a procesar datos. |
 | Información del trabajo de evaluación de segmentos | Éxito en el trabajo de segmentos | Esta alerta déclencheur cuando un trabajo de evaluación de segmentos se completa correctamente. |
-| Retrasos, errores y errores del trabajo de evaluación de segmentos | Retraso de trabajo del segmento | Esta alerta déclencheur cuando los trabajos de evaluación de segmentos tardan más de 150 minutos en completarse. |
+| Retrasos, errores y errores del trabajo de evaluación de segmentos | Retraso de trabajo del segmento | Esta alerta déclencheur cuando los trabajos de evaluación de segmentos tardan más de 150 minutos en completarse. <br> Aparecerá uno de los siguientes estados: <br>- FIRING - Se ha cumplido la condición de fallo o retraso (Considérela en estado ACTIVO). <br>- INACTIVA - La condición no se ha cumplido o no se ha resuelto (Considérela en un estado RESUELTO). |
 | Retrasos, errores y errores del trabajo de evaluación de segmentos | Error en el trabajo del segmento | Esta alerta déclencheur cuando un trabajo de evaluación de segmentos resulta en un error. |
 | Retrasos, errores y errores del trabajo de evaluación de segmentos | Definición de segmento deshabilitada | Esta alerta déclencheur cuando una definición de segmento está deshabilitada debido a un error interno. Esto automáticamente déclencheur una sala de guerra para que un equipo de ingeniería de Adobe investigue el problema. Esta alerta solo pretende ser informativa y no requiere ninguna acción por su parte. |
 
