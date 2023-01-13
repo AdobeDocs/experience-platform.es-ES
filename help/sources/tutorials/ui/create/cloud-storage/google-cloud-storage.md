@@ -5,9 +5,9 @@ title: Crear una conexión de origen de almacenamiento en la nube de Google en l
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Google Cloud Storage mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Si ya tiene una conexión GCS válida, puede omitir el resto de este documento y
 
 [!DNL Experience Platform] admite los siguientes formatos de archivo que se van a introducir desde almacenes externos:
 
-* Valores separados por delimitadores (DSV): Actualmente, la compatibilidad con archivos de datos con formato DSV está limitada a valores separados por coma. El valor de los encabezados de campo de los archivos con formato DSV solo debe consistir en caracteres alfanuméricos y guiones bajos. En el futuro se admitirán los archivos DSV generales.
+* Valores separados por delimitadores (DSV): Cualquier valor de un solo carácter puede utilizarse como delimitador para archivos de datos con formato DSV.
 * Notación de objeto de JavaScript (JSON): Los archivos de datos con formato JSON deben ser compatibles con XDM.
 * Apache Parquet: Los archivos de datos con formato de parqué deben ser compatibles con XDM.
 
