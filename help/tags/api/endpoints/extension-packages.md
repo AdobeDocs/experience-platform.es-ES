@@ -2,10 +2,10 @@
 title: Extremo de paquetes de extensiones
 description: Aprenda a realizar llamadas al extremo /extension_packages en la API de Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 71%
+source-wordcount: '954'
+ht-degree: 70%
 
 ---
 
@@ -944,7 +944,7 @@ Una respuesta correcta devuelve los detalles del paquete de extensiones actualiz
 
 Una vez que haya completado la prueba del paquete de extensiones, puede publicarlo en privado. Esto lo hace disponible para cualquier propiedad de su empresa.
 
-Una vez que haya salido en privado, puede iniciar el proceso de publicación rellenando el [formulario de solicitud de versión pública](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
+Una vez que haya salido en privado, puede iniciar el proceso de publicación rellenando el [formulario de solicitud de versión pública](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
 
 **Formato de API**
 
