@@ -2,9 +2,9 @@
 title: Examinar órdenes de trabajo de higiene de los datos
 description: Aprenda a ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
@@ -104,4 +104,4 @@ La página de detalles de una caducidad del conjunto de datos proporciona inform
 En esta guía se explica cómo ver y administrar los pedidos de trabajo de higiene de datos existentes en la interfaz de usuario de Platform. Para obtener información sobre la creación de sus propias órdenes de trabajo, consulte la siguiente documentación:
 
 * [Administrar caducidades del conjunto de datos](./dataset-expiration.md)
-* [Administrar eliminaciones de registros](./record-delete.md)
+<!-- * [Manage record deletes](./record-delete.md) -->

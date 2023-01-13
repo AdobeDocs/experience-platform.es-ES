@@ -4,18 +4,18 @@ description: Aprenda a corregir o eliminar mediante programación los datos pers
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 2%
+source-wordcount: '484'
+ht-degree: 3%
 
 ---
 
 # Eliminar registros mediante la API de higiene de datos
 
->[!IMPORTANT]
+<!-- >[!IMPORTANT]
 >
->Este extremo representa la funcionalidad beta para eliminaciones de registros. Para obtener las últimas funciones, utilice el [`/workorder` extremo](./workorder.md) en su lugar.
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
 
 La API de higiene de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 

@@ -2,9 +2,9 @@
 title: Información general sobre la higiene de los datos
 description: La higiene de los datos de Adobe Experience Platform le permite administrar el ciclo de vida de sus datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '607'
 ht-degree: 2%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 2%
 
 Adobe Experience Platform proporciona un robusto conjunto de herramientas para administrar operaciones de datos grandes y complicadas con el fin de orquestar las experiencias de los consumidores. A medida que los datos se incorporan al sistema a lo largo del tiempo, cada vez es más importante administrar los almacenes de datos para que se utilicen como se espera, se actualicen cuando sea necesario corregir los datos incorrectos y se eliminen cuando las políticas organizativas lo consideren necesario.
 
-Las funciones de higiene de datos de Platform le permiten administrar los datos almacenados mediante lo siguiente:
+<!-- Platform's data hygiene capabilities allow you to manage your stored data through the following:
 
-* Programación de caducidades automatizadas del conjunto de datos
-* Eliminación de registros individuales de uno o todos los conjuntos de datos
+* Scheduling automated dataset expirations
+* Deleting individual records from one or all datasets
 
 >[!IMPORTANT]
 >
->Las eliminaciones de registros están pensadas para utilizarse en la limpieza de datos, la eliminación de datos anónimos o la minimización de datos. Son **not** para su uso en solicitudes de derechos de interesados (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento de normas, utilice [Adobe Experience Platform Privacy Service](../privacy-service/home.md) en su lugar.
+>Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
 Estas actividades se pueden realizar utilizando la variable [[!UICONTROL Higiene de los datos] Espacio de trabajo de la interfaz de usuario](#ui) o [API de higiene de datos](#api). Cuando se ejecuta un trabajo de higiene de datos, el sistema proporciona actualizaciones de transparencia en cada paso del proceso. Consulte la sección sobre [plazos y transparencia](#timelines-and-transparency) para obtener más información sobre cómo se representa cada tipo de trabajo en el sistema.
 
@@ -40,9 +40,9 @@ La variable [!UICONTROL Higiene de los datos] La interfaz de usuario de se basa 
 
 ## Plazos y transparencia
 
-Las solicitudes de eliminación de registros y caducidad de conjuntos de datos tienen sus propias líneas de tiempo de procesamiento y proporcionan actualizaciones de transparencia en puntos clave de sus flujos de trabajo respectivos. Consulte las secciones siguientes para obtener más detalles sobre cada tipo de trabajo.
+Las solicitudes de eliminación de registros y caducidad de conjuntos de datos tienen sus propias líneas de tiempo de procesamiento y proporcionan actualizaciones de transparencia en puntos clave de sus flujos de trabajo respectivos.
 
-### Caducidad de conjuntos de datos {#dataset-expiration-transparency}
+<!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
 Lo siguiente ocurre cuando se produce una [solicitud de caducidad del conjunto de datos](./ui/dataset-expiration.md) se crea:
 
@@ -57,24 +57,24 @@ Lo siguiente ocurre cuando se produce una [solicitud de caducidad del conjunto d
 
 {style=&quot;table-layout:auto&quot;}
 
-### Eliminar registros {#record-delete-transparency}
+<!-- ### Record deletes {#record-delete-transparency}
 
 >[!IMPORTANT]
 >
->Las eliminaciones de registros solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield.
+>Record deletes are only available for organizations that have purchased Adobe Healthcare Shield.
 
-Lo siguiente ocurre cuando se produce una [solicitud de eliminación de registros](./ui/record-delete.md) se crea:
+The following takes place when a [record delete request](./ui/record-delete.md) is created:
 
-| Escenario | Tiempo después del envío de la solicitud | Descripción |
+| Stage | Time after request submission | Description |
 | --- | --- | --- |
-| La solicitud se envía | 0 horas | Un administrador de datos o analista de privacidad envía una solicitud de eliminación de registros. La solicitud se puede ver en el [!UICONTROL Interfaz de usuario de higiene de datos] una vez presentada. |
-| Búsqueda de perfiles actualizada | 3 horas | El cambio en los recuentos de perfiles causado por la identidad eliminada se refleja en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |
-| Segmentos actualizados | 24 horas | Una vez que se eliminan los perfiles, todos los relacionados [segmentos](../segmentation/home.md) se actualizan para reflejar su nuevo tamaño. |
-| Recorridos y destinos actualizados | 26 horas | [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
-| Registros blandos eliminados en el lago de datos | 7 días | Los datos se eliminan fácilmente del lago de datos. |
-| Vacuado de datos completado | 14 días | La variable [situación del trabajo de higiene](./ui/browse.md#view-details) actualizaciones para indicar que el trabajo se ha completado, lo que significa que la depuración de datos se ha completado en el lago de datos y que los registros relevantes se han eliminado con dificultad. |
+| Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Hygiene UI] after it has been submitted. |
+| Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
+| Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
+| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
+| Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
+| Data vacuuming completed | 14 days | The [status of the hygiene job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"} -->
 
 ## Pasos siguientes
 
