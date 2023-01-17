@@ -3,14 +3,18 @@ keywords: Experience Platform;inicio;temas populares;zona de aterrizaje de datos
 title: Conexión de la zona de aterrizaje de datos a la plataforma mediante la interfaz de usuario
 description: Obtenga información sobre cómo crear un conector de origen de zona de aterrizaje de datos mediante la interfaz de usuario de Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: fb16ea940ef394a15dd24fe703239b4487fafb18
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
 
 # Connect [!DNL Data Landing Zone] a Platform mediante la interfaz de usuario
+
+>[!IMPORTANT]
+>
+>Esta página es específica para la variable [!DNL Data Landing Zone] *source* en el Experience Platform. Para obtener información sobre la conexión a la variable [!DNL Data Landing Zone] *destino* conector, consulte [[!DNL Data Landing Zone] página de documentación de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] es un servicio de almacenamiento de archivos seguro y basado en la nube para incorporar archivos a Adobe Experience Platform. Los datos se eliminan automáticamente del [!DNL Data Landing Zone] después de siete días.
 

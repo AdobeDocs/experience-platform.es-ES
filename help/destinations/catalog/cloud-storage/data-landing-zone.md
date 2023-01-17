@@ -2,10 +2,10 @@
 title: Destino de la zona de aterrizaje de datos
 description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar segmentos y exportar conjuntos de datos.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6fbf1b87becebee76f583c6e44b1c42956e561ab
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 0%
+source-wordcount: '1163'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Este destino está actualmente en versión beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a la [!DNL Data Landing Zone] conexión, póngase en contacto con su representante de Adobe y proporcione su [!DNL Organization ID].
+>* Este destino está actualmente en versión beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a la [!DNL Data Landing Zone] conexión, póngase en contacto con su representante de Adobe y proporcione su [!DNL Organization ID].
+>* Esta página de documentación hace referencia a [!DNL Data Landing Zone] *destino*. También hay un [!DNL Data Landing Zone] *source* en el catálogo de fuentes. Para obtener más información, lea la [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentación.
+
 
 
 ## Información general {#overview}
@@ -35,9 +37,13 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style=&quot;table-layout:auto&quot;}
 
-## Administre el contenido de su [!DNL Data Landing Zone]
+## Requisitos previos {#prerequisites}
 
-Puede usar [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) para administrar el contenido de su [!DNL Data Landing Zone] contenedor.
+Tenga en cuenta los siguientes requisitos previos que deben cumplirse para poder usar la variable [!DNL Data Landing Zone] destino.
+
+### Conecte su [!DNL Data Landing Zone] contenedor para [!DNL Azure Storage Explorer]
+
+Puede usar [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) para administrar el contenido de su [!DNL Data Landing Zone] contenedor. Para empezar a usar [!DNL Data Landing Zone], primero debe recuperar sus credenciales, introdúzcalas en [!DNL Azure Storage Explorer]y conecte el [!DNL Data Landing Zone] contenedor para [!DNL Azure Storage Explorer].
 
 En el [!DNL Azure Storage Explorer] En la interfaz de usuario, seleccione el icono de conexión en la barra de navegación izquierda. La variable **Seleccionar recurso** , proporcionando las opciones a las que conectarse. Select **[!DNL Blob container]** para conectarse a su [!DNL Data Landing Zone] almacenamiento.
 
@@ -49,13 +55,54 @@ A continuación, seleccione **URL de firma de acceso compartido (SAS)** como mé
 
 Después de seleccionar el método de conexión, debe proporcionar una **nombre para mostrar** y **[!DNL Blob]URL de contenedor SAS** que corresponde a su [!DNL Data Landing Zone] contenedor.
 
->[!IMPORTANT]
->
->Debe utilizar las API de plataforma para recuperar las credenciales de la zona de aterrizaje de datos. Para obtener información completa, consulte [Recuperar credenciales de zona de aterrizaje de datos](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en#retrieve-data-landing-zone-credentials).
->
-> Para recuperar las credenciales y acceder a los archivos exportados, debe reemplazar el parámetro de consulta `type=user_drop_zone` con `type=dlz_destination` en cualquier llamada HTTP descrita en la página anterior.
+>[!BEGINSHADEBOX]
 
-Proporcione su [!DNL Data Landing Zone] Dirección URL de SAS y, a continuación, seleccione **Siguiente**.
+### Recupere las credenciales de su [!DNL Data Landing Zone]
+
+Debe utilizar las API de Platform para recuperar su [!DNL Data Landing Zone] credenciales. A continuación se describe la llamada de API para recuperar sus credenciales. Para obtener información sobre cómo obtener los valores necesarios para los encabezados, consulte la [Introducción a las API de Adobe Experience Platform](/help/landing/api-guide.md) guía.
+
+**Formato de API**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
+```
+
+**Solicitud**
+
+El siguiente ejemplo de solicitud recupera las credenciales de una zona de aterrizaje existente.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Respuesta**
+
+La siguiente respuesta devuelve la información de credenciales de su zona de aterrizaje, incluida la `SASToken` y `SASUri`, así como el `storageAccountName` que corresponde al contenedor de su zona de aterrizaje.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "storageAccountName": "dlblobstore99hh25i3df123",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+}
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `containerName` | Nombre de la zona de aterrizaje. |
+| `SASToken` | Token de firma de acceso compartido para su zona de aterrizaje. Esta cadena contiene toda la información necesaria para autorizar una solicitud. |
+| `SASUri` | El URI de firma de acceso compartido para su zona de aterrizaje. Esta cadena es una combinación de la URI con la zona de aterrizaje a la que se está autenticando y su token SAS correspondiente, |
+
+>[!ENDSHADEBOX]
+
+Proporcione su nombre para mostrar (`containerName`) y [!DNL Data Landing Zone] URL de SAS, tal como se devuelve en la llamada de API descrita anteriormente, y luego seleccione **Siguiente**.
 
 ![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
@@ -79,7 +126,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 ### Autenticar en destino {#authenticate}
 
-Porque [!DNL Data Landing Zone] es un almacenamiento proporcionado por Adobes, no es necesario realizar ningún paso para autenticarse en el destino.
+Asegúrese de haber conectado su [!DNL Data Landing Zone] contenedor para [!DNL Azure Storage Explorer] tal como se describe en la sección [requisitos previos](#prerequisites) para obtener más información. Porque [!DNL Data Landing Zone] es un almacenamiento proporcionado por Adobes, no es necesario realizar más pasos en la interfaz de usuario del Experience Platform para autenticarse en el destino.
 
 ### Rellenar detalles de destino {#destination-details}
 

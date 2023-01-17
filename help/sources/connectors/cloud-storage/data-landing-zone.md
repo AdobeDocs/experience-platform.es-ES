@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Fuente de la zona de aterrizaje de datos
 description: Obtenga información sobre cómo conectar la zona de aterrizaje de datos a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Landing Zone]
+
+>[!IMPORTANT]
+>
+>Esta página es específica para la variable [!DNL Data Landing Zone] *source* en el Experience Platform. Para obtener información sobre la conexión a la variable [!DNL Data Landing Zone] *destino* conector, consulte [[!DNL Data Landing Zone] página de documentación de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] es un [!DNL Azure Blob] interfaz de almacenamiento de información aprovisionada por Adobe Experience Platform, lo que le permite acceder a un servicio de almacenamiento de archivos seguro y basado en la nube para introducir archivos en Platform. Tiene acceso a uno [!DNL Data Landing Zone] contenedores por entorno limitado, y el volumen total de datos en todos los contenedores se limita a los datos totales proporcionados con la licencia de productos y servicios de Platform. Todos los clientes de Platform y sus servicios de aplicación, como [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]y [!DNL Adobe Real-Time Customer Data Platform] se aprovisionan con uno [!DNL Data Landing Zone] contenedor por simulador de pruebas. Puede leer y escribir archivos en el contenedor a través de [!DNL Azure Storage Explorer] o su interfaz de línea de comandos.
 
