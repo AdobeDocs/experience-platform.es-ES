@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Guía de extremo a extremo del control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2425'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Usted:
 
 * [Etiquetado de funciones para los usuarios](#label-roles): Utilice el ejemplo de un proveedor de atención médica (ACME Business Group) cuyo grupo de marketing trabaja con agencias externas.
 * [Etiquetado de recursos (campos de esquema y segmentos)](#label-resources): Asigne la variable **[!UICONTROL Datos de Salud Regulados/ PHI]** a recursos y segmentos de esquema.
-* [Cree la directiva que los vinculará](#policy): Cree una directiva para vincular las etiquetas de los recursos a las etiquetas de la función, denegando el acceso a los campos y segmentos de esquema. Esto denegará el acceso al campo de esquema y al segmento en todos los entornos limitados para los usuarios que no tengan etiquetas coincidentes.
+* [Cree la directiva que los vinculará](#policy): Cree una directiva para vincular las etiquetas de los recursos a las etiquetas de la función, denegando el acceso a los campos y segmentos de esquema. Esto otorgará acceso al campo de esquema y al segmento en todos los entornos limitados para los usuarios que tengan etiquetas coincidentes.
 
 ## Permisos
 
