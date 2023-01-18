@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
+source-git-commit: c2312a65388e8aec7cdeb8daf20fe9de7d1fa4fc
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '967'
 ht-degree: 37%
 
 ---
@@ -208,6 +208,7 @@ ht-degree: 37%
       * [Información general](./extensions/server/overview.md)
       * Conector de Adobe Experience Platform Cloud {#cloud-connector}
          * [Información general](./extensions/server/cloud-connector/overview.md)
+         * [Notas de la versión](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL AWS] {#aws}
          * [Información general](./extensions/server/aws/overview.md)
       * [Cloud Connector para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
