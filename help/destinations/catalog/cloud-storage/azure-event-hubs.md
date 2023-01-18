@@ -3,9 +3,9 @@ keywords: Destino del centro de eventos de Azure;centro de eventos de azure;azur
 title: Conexión de los centros de eventos de Azure
 description: Cree una conexión saliente en tiempo real con su [!DNL Azure Event Hubs] almacenamiento para transmitir datos desde el Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fd6a9f082c830de5a46d484bccfeba3b4116d05d
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Si selecciona la opción **[!UICONTROL Autenticación estándar]** escriba para 
 * **[!UICONTROL Nombre de clave SAS]**: El nombre de la regla de autorización, que también se conoce como nombre de clave SAS.
 * **[!UICONTROL Clave de SAS]**: La clave principal del espacio de nombres de los centros de eventos. La variable `sasPolicy` que `sasKey` corresponde a debe tener **administrar** derechos configurados para que se rellene la lista de centros de eventos. Obtenga información sobre cómo autenticarse en [!DNL Azure Event Hubs] con claves SAS en la variable [Documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Área de nombres]**: Rellene su [!DNL Azure Event Hubs] espacio de nombres. Obtenga información sobre [!DNL Azure Event Hubs] áreas de nombres en la variable [Documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-* **[!UICONTROL Área de nombres]**: Rellene su [!DNL Azure Event Hubs] espacio de nombres. Obtenga información sobre [!DNL Azure Event Hubs] áreas de nombres en la variable [Documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Nombre del centro de eventos]**: Rellene su [!DNL Azure Event Hub] name . Obtenga información sobre [!DNL Azure Event Hubs] los nombres de [Documentación de Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
 ### Rellenar detalles de destino {#destination-details}
 
