@@ -5,9 +5,9 @@ title: Crear un esquema con el editor de esquemas
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3924'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 0%
 
 La interfaz de usuario de Adobe Experience Platform le permite crear y administrar [!DNL Experience Data Model] esquemas (XDM) en un lienzo visual interactivo denominado [!DNL Schema Editor]. Este tutorial explica cómo crear un esquema con el [!DNL Schema Editor].
 
+Para fines de demostración, los pasos de este tutorial implican la creación de un esquema de ejemplo que describa los miembros de un programa de fidelidad de cliente. Aunque puede utilizar estos pasos para crear un esquema diferente para sus propios fines, se recomienda que primero siga con la creación del esquema de ejemplo para conocer las capacidades de la variable [!DNL Schema Editor].
+
 >[!NOTE]
 >
->Para fines de demostración, los pasos de este tutorial implican la creación de un esquema de ejemplo que describa los miembros de un programa de fidelidad de cliente. Aunque puede utilizar estos pasos para crear un esquema diferente para sus propios fines, se recomienda que primero siga con la creación del esquema de ejemplo para conocer las capacidades de la variable [!DNL Schema Editor].
-
-Si prefiere componer un esquema utilizando la variable [!DNL Schema Registry] En su lugar, comience leyendo la [[!DNL Schema Registry] guía para desarrolladores](../api/getting-started.md) antes de intentar el tutorial en [creación de un esquema con la API](create-schema-api.md).
+>Si está introduciendo datos CSV en Platform, puede [asignar esos datos a un esquema XDM creado por recomendaciones generadas por AI](../../ingestion/tutorials/map-csv/recommendations.md) (actualmente en versión beta) sin tener que crear manualmente el esquema.
+>
+>Si prefiere componer un esquema utilizando la variable [!DNL Schema Registry] API, comience leyendo [[!DNL Schema Registry] guía para desarrolladores](../api/getting-started.md) antes de intentar el tutorial en [creación de un esquema con la API](create-schema-api.md).
 
 ## Primeros pasos
 

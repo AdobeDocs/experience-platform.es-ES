@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de API del Registro de Esquemas
 description: La API del Registro de esquemas permite a los desarrolladores administrar mediante programación todos los esquemas y recursos relacionados del Modelo de datos de experiencia (XDM) dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1118'
 ht-degree: 5%
 
 ---
@@ -29,7 +29,9 @@ Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [Re
 
 Los esquemas XDM representan y validan la estructura y el formato de los datos introducidos en Platform. Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Puede crear, ver, editar y eliminar esquemas utilizando la variable `/schemas` punto final. Para aprender a utilizar este extremo, consulte la [guía de extremo de esquemas](./schemas.md).
 
-Para obtener una guía paso a paso sobre cómo crear un esquema completo en la API del Registro de esquemas, incluida la creación y adición de grupos de campos y tipos de datos, consulte la [Tutorial de creación de esquemas de API](../tutorials/create-schema-api.md).
+Para obtener una guía paso a paso sobre cómo crear manualmente un esquema completo en la API del Registro de esquemas, incluida la creación y adición de grupos de campos y tipos de datos, consulte la [Tutorial de creación de esquemas de API](../tutorials/create-schema-api.md).
+
+Si va a introducir datos CSV, consulte la sección de [Conversión de CSV a esquema](#csv-to-schema).
 
 ## Comportamientos
 
@@ -62,6 +64,10 @@ Para obtener información sobre cómo ver uniones en la API del Registro de esqu
 Puede generar automáticamente un esquema XDM usando un archivo CSV como plantilla, lo que le permite crear plantillas para importar campos de esquema de forma masiva y reducir el trabajo manual de la API o la interfaz de usuario.
 
 Consulte la [Guía de extremo de conversión de CSV a esquema](./export.md) para obtener más información.
+
+>[!NOTE]
+>
+>También puede utilizar la interfaz de usuario para [asignar un CSV a un esquema mediante recomendaciones generadas por AI](../../ingestion/tutorials/map-csv/recommendations.md) (actualmente en versión beta).
 
 ## Exportar {#export}
 

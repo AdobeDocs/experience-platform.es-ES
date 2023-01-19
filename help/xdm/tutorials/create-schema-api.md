@@ -5,9 +5,9 @@ title: Creación de un esquema mediante la API del Registro de Esquemas
 type: Tutorial
 description: Este tutorial utiliza la API del Registro de esquemas para guiarle por los pasos necesarios para componer un esquema con una clase estándar.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 030874e91b88b18f7de0cc2d12200243b7ed1d31
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2588'
 ht-degree: 2%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 2%
 La variable [!DNL Schema Registry] se utiliza para acceder a la variable [!DNL Schema Library] en Adobe Experience Platform. La variable [!DNL Schema Library] contiene los recursos disponibles por Adobe, [!DNL Experience Platform] socios y proveedores cuyas aplicaciones utilice. El registro proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
 Este tutorial utiliza la variable [!DNL Schema Registry] API para guiarle por los pasos para componer un esquema con una clase estándar. Si prefiere usar la interfaz de usuario en [!DNL Experience Platform], el [Tutorial del Editor de esquemas](create-schema-ui.md) proporciona instrucciones paso a paso para realizar acciones similares en el editor de esquemas.
+
+>[!NOTE]
+>
+>Si está introduciendo datos CSV en Platform, puede [asignar esos datos a un esquema XDM creado por recomendaciones generadas por AI](../../ingestion/tutorials/map-csv/recommendations.md) (actualmente en versión beta) sin tener que crear manualmente el esquema.
 
 ## Primeros pasos
 

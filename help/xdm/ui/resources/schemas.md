@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear y editar esquemas en la interfaz de usuario
 description: Obtenga información sobre los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario del Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3203'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Esta guía proporciona información general sobre cómo crear, editar y administ
 Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [Información general de XDM](../../home.md) para una introducción al papel de XDM dentro del ecosistema del Experience Platform, y [conceptos básicos de la composición del esquema](../../schema/composition.md) para obtener una descripción general de cómo se construyen los esquemas.
 
 ## Crear un nuevo esquema {#create}
+
+>[!NOTE]
+>
+>En esta sección se explica cómo crear manualmente un nuevo esquema en la interfaz de usuario. Si está introduciendo datos CSV en Platform, puede optar por [asignar esos datos a un esquema XDM creado por recomendaciones generadas por AI](../../../ingestion/tutorials/map-csv/recommendations.md) (actualmente en versión beta) sin tener que crear manualmente el esquema.
 
 En el [!UICONTROL Esquemas] espacio de trabajo, seleccione **[!UICONTROL Crear esquema]** en la esquina superior derecha. En el menú desplegable que aparece, puede elegir entre **[!UICONTROL Perfil individual XDM]** y **[!UICONTROL XDM ExperienceEvent]** como clase base para el esquema. También puede seleccionar **[!UICONTROL Examinar]** para seleccionar entre la lista completa de clases disponibles, o [crear una nueva clase personalizada](./classes.md#create) en su lugar.
 
