@@ -3,7 +3,7 @@ keywords: Experience Platform;servicio de consulta;servicio de consulta;consulta
 title: Caso de uso de ejemplo para el servicio de consulta de Adobe Experience Platform
 description: Un ejemplo completo para demostrar la versatilidad y las ventajas del servicio de consulta de Adobe Experience Platform.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
@@ -73,11 +73,11 @@ Adobe Experience Platform proporciona un repositorio de datos y las herramientas
 
 ## Pasos siguientes
 
-Al leer este documento, ahora debe comprender cómo [!DNL Query Service] afecta no solo a la calidad de sus datos y a la facilidad de segmentación, sino también a su importancia dentro de la arquitectura de datos para todo el flujo de trabajo de principio a fin. Para ejemplos SQL más aplicables, utilice Adobe Analytics con [!DNL Query Service], consulte la [Documentación de consultas de ejemplo de Adobe Analytics](../sample-queries/adobe-analytics.md).
+Al leer este documento, ahora debe comprender cómo [!DNL Query Service] afecta no solo a la calidad de sus datos y a la facilidad de segmentación, sino también a su importancia dentro de la arquitectura de datos para todo el flujo de trabajo de principio a fin. Para ejemplos SQL más aplicables, utilice Adobe Analytics con [!DNL Query Service], consulte la [Caso de uso de variables de comercialización de Adobe Analytics](./merchandising-variables.md).
 
 Otros documentos que demuestren los beneficios de [!DNL Query Service] para la información estratégica comercial de su organización, se usa la variable [caso de uso de filtrado de bots](./bot-filtering.md) ejemplo.
 
-Alternativamente, estos documentos le ayudarán a comprender [!DNL Query Service] características:
+Alternativamente, estos documentos pueden beneficiar a su comprensión de [!DNL Query Service] características:
 
 * [Directrices para la ejecución de consultas](../best-practices/writing-queries.md)
 * [Directrices para la organización de recursos de datos](../best-practices/organize-data-assets.md).

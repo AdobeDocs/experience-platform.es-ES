@@ -1,7 +1,8 @@
 ---
 title: Prácticas recomendadas para la organización de recursos de datos en el servicio de consulta
 description: Este documento describe un medio lógico de organizar los datos para facilitar su uso con el servicio de consulta.
-source-git-commit: ed9fa7b83f9e1c974bc74e9dde018a87823954ee
+exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
+source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
@@ -169,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Pasos siguientes
 
-Al leer este documento, ahora puede comprender mejor las prácticas recomendadas relacionadas con la organización y estructura de los recursos de datos para su uso con el servicio de consulta de Adobe Experience Platform. Se recomienda seguir aprendiendo sobre las prácticas recomendadas del servicio de consulta leyendo sobre [documentación de deduplicación de datos](./deduplication.md).
+Al leer este documento, ahora puede comprender mejor las prácticas recomendadas relacionadas con la organización y estructura de los recursos de datos para su uso con el servicio de consulta de Adobe Experience Platform. Se recomienda seguir aprendiendo sobre las prácticas recomendadas del servicio de consulta leyendo sobre [documentación de deduplicación de datos](../essential-concepts/deduplication.md).

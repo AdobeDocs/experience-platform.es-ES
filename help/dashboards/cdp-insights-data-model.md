@@ -2,7 +2,7 @@
 title: Modelo de datos de Real-time Customer Data Platform Insights
 description: Aprenda a utilizar consultas SQL con los modelos de datos de Real-time Customer Data Platform Insights para personalizar sus propios informes de Real-Time CDP para sus casos de uso de marketing y KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Modelo de datos de Real-time Customer Data Platform Insights
 
-La función Modelo de datos de Real-time Customer Data Platform Insights expone los modelos de datos y SQL que alimentan la información de varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para sus casos de uso de indicadores de rendimiento clave (KPI) y marketing. Estas perspectivas se pueden utilizar como utilidades personalizadas para los tableros definidos por el usuario. Consulte la documentación de perspectivas de informes del almacén acelerado de consultas para obtener más información [cómo crear un modelo de datos de perspectivas de informes mediante Query Service para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario](../query-service/query-accelerated-store/reporting-insights-data-model.md).
+La función Modelo de datos de Real-time Customer Data Platform Insights expone los modelos de datos y SQL que alimentan la información de varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para sus casos de uso de indicadores de rendimiento clave (KPI) y marketing. Estas perspectivas se pueden utilizar como utilidades personalizadas para los tableros definidos por el usuario. Consulte la documentación de perspectivas de informes del almacén acelerado de consultas para obtener más información [cómo crear un modelo de datos de perspectivas de informes mediante Query Service para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Requisitos previos
 

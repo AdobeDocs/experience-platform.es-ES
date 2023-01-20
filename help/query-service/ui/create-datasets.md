@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;generar conjuntos de datos;generar conjunto de datos;crear conjunto de datos;
 solution: Experience Platform
-title: Generar conjuntos de datos a partir de resultados en el servicio de consulta
+title: Generar conjuntos de datos de salida a partir de resultados de consulta
 type: Tutorial
 description: El servicio de consulta de Adobe Experience Platform permite crear conjuntos de datos desde la interfaz de usuario. Una vez creado un conjunto de datos, se puede acceder a él como a cualquier otro conjunto de datos en el lago de datos y se puede utilizar para una variedad de casos de uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
 
 ---
 
-# Generar conjuntos de datos a partir de resultados en [!DNL Query Service]
+# Generar conjuntos de datos de salida a partir de resultados de consulta
 
 [!DNL Query Service] permite utilizar consultas para generar conjuntos de datos en la variable [!DNL Data Lake]. Estos conjuntos de datos se pueden usar luego como entrada para más consultas o en otros servicios como [!DNL Data Science Workspace], Perfil del cliente en tiempo real, o [!DNL Analysis Workspace].
 

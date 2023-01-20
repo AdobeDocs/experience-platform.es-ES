@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;alerta;
-title: Punto final de la API de suscripciones de alertas
+title: Extremo de suscripciones de alertas
 description: Esta guía proporciona ejemplos de solicitudes HTTP y respuestas para las distintas llamadas de API que puede realizar al extremo de suscripciones de alerta con la API del servicio de consulta.
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2667'
 ht-degree: 2%
 
 ---
 
-# Punto final de la API de suscripciones de alertas
+# Extremo de suscripciones de alertas
 
-El servicio de consulta de Adobe Experience Platform le permite suscribirse a las alertas para consultas ad hoc y programadas. Las alertas se pueden recibir por correo electrónico, en la interfaz de usuario de Platform o en ambos. El contenido de la notificación es el mismo para las alertas en la plataforma y las alertas por correo electrónico. Actualmente, las alertas de consulta solo se pueden suscribir a mediante el uso de [API del servicio de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+El servicio de consulta de Adobe Experience Platform le permite suscribirse a las alertas para consultas ad hoc y programadas. Las alertas se pueden recibir por correo electrónico, en la interfaz de usuario de Platform o en ambos. El contenido de la notificación es el mismo para las alertas en la plataforma y las alertas por correo electrónico. Actualmente, las alertas de consulta solo se pueden suscribir a mediante la [API del servicio de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 
 >[!IMPORTANT]
 >

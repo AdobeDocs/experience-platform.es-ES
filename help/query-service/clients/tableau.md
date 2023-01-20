@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conexión de Tableau con el servicio de consultas
 description: Este documento recorre los pasos para conectar Tableau con el servicio de consulta de Adobe Experience Platform.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 1d71cc4336747eb258ec2d8dcdc545cb2233692d
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Asegúrese de haber marcado la variable **[!UICONTROL Requerir SSL]** antes de i
 
 >[!IMPORTANT]
 >
->Las estructuras de datos anidadas en herramientas de BI de terceros se pueden aplanar para mejorar su capacidad de uso y reducir la carga de trabajo necesaria para recuperar, analizar, transformar y crear informes de datos. Consulte la documentación de[`FLATTEN` función](../best-practices/flatten-nested-data.md) para obtener instrucciones sobre cómo activar esta configuración al conectarse a una base de datos.
+>Las estructuras de datos anidadas en herramientas de BI de terceros se pueden aplanar para mejorar su capacidad de uso y reducir la carga de trabajo necesaria para recuperar, analizar, transformar y crear informes de datos. Consulte la documentación de[`FLATTEN` función](../essential-concepts/flatten-nested-data.md) para obtener instrucciones sobre cómo activar esta configuración al conectarse a una base de datos.
 
 Después de completar todas las credenciales, confirme la configuración para continuar. Ahora está conectado con Adobe Experience Platform.
 

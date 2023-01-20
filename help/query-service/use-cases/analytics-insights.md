@@ -1,16 +1,17 @@
 ---
-title: 'Perspectivas de Analytics para interacciones web y móviles '
+title: Perspectivas de Analytics para interacciones web y móviles
 description: En este documento se explica cómo utilizar el servicio de consulta para crear perspectivas procesables a partir de datos de Adobe Analytics ingestados.
-source-git-commit: cdceba9caf035831f4c376edf34356f666b79aa8
+exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
 
 # Perspectivas de Analytics para interacciones web y móviles
 
-Adobe Experience Platform le permite introducir datos de grupos de informes de Adobe Analytics mediante campos del Modelo de datos de experiencia (XDM) para rellenar conjuntos de datos. A continuación, el servicio de consulta puede utilizar estos datos de análisis ejecutando consultas SQL para generar perspectivas valiosas a partir del comportamiento de los usuarios en las plataformas digitales.
+Adobe Experience Platform le permite introducir datos de grupos de informes de Adobe Analytics mediante campos del Modelo de datos de experiencia (XDM) para rellenar conjuntos de datos. Estos datos de análisis se modifican para ajustarse al [!DNL XDM ExperienceEvent] Clase . A continuación, el servicio de consulta puede utilizar estos datos ejecutando consultas SQL para generar perspectivas valiosas a partir del comportamiento de un usuario en las plataformas digitales.
 
 Este documento proporciona una variedad de consultas SQL de ejemplo que muestran casos de uso comunes al crear perspectivas a partir de datos de Analytics web y móviles.
 

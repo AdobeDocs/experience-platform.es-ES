@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;consultas programadas;consulta programada;
 solution: Experience Platform
-title: Punto final de API de consultas programadas
+title: Punto final de programación
 description: Las secciones siguientes recorren las distintas llamadas de API que puede realizar para consultas programadas con la API del servicio de consulta.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1136'
 ht-degree: 3%
 
 ---
 
-# Punto final de consultas programadas
+# Punto final de programación
 
 ## Ejemplo de llamadas a API
 

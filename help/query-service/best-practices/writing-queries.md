@@ -5,9 +5,9 @@ title: Guía general para la ejecución de consultas en el servicio de consultas
 type: Tutorial
 description: Este documento describe detalles importantes que deben conocerse al escribir consultas en el servicio de consulta de Adobe Experience Platform.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1072'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Anulación de duplicación
 
-El servicio de consulta admite la deduplicación de datos o la eliminación de filas duplicadas de los datos. Para obtener más información sobre la deduplicación, lea la [Guía de deduplicación del servicio de consultas](./deduplication.md).
+El servicio de consulta admite la deduplicación de datos o la eliminación de filas duplicadas de los datos. Para obtener más información sobre la deduplicación, lea la [Guía de deduplicación del servicio de consultas](../essential-concepts/deduplication.md).
 
 ## Cálculos de husos horarios en el servicio de consultas
 
@@ -325,4 +325,7 @@ Para obtener más ejemplos de consultas que se pueden utilizar dentro del servic
 
 - [Perspectivas de Analytics](../use-cases/analytics-insights.md)
 - [Análisis de actividades con Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
-- [Consultas de ejemplo de ExperienceEvent](../sample-queries/experience-event.md).
+- [Crear un informe de tendencias de eventos](../use-cases/trended-report-of-events.md)
+- [Ver un informe de resumen de un visitante](../use-cases/roll-up-report-of-a-visitor.md)
+- [Enumerar las vistas de página de un usuario](../use-cases/list-visitor-sessions.md)
+- [Enumerar visitantes según el número de vistas de página](../use-cases/visitors-by-number-of-page-views.md)

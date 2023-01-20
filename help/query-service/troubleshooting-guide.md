@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;guía de solución de problemas;preguntas frecuentes;solución de problemas;
 solution: Experience Platform
-title: Guía de solución de problemas del servicio de consultas
+title: Preguntas frecuentes
 description: Este documento contiene preguntas y respuestas comunes relacionadas con el servicio de consulta. Los temas incluyen, exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 1%
 
 ---
 
-# [!DNL Query Service] guía de solución de problemas
+# Preguntas frecuentes
 
 Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de consultas y proporciona una lista de códigos de error que se ven con más frecuencia al utilizar el servicio de consultas. Para preguntas y solución de problemas relacionados con otros servicios de Adobe Experience Platform, consulte la [Guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
 
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![Esquema XDM y vista tabular de los datos acoplados. El nombre de columna de un conjunto de datos anidado se resalta en la interfaz de usuario.](./images/troubleshooting/column-name.png)
 
-Consulte la documentación para obtener una guía completa sobre [cómo trabajar con estructuras de datos anidadas](./best-practices/nested-data-structures.md) con el Editor de consultas o un cliente de terceros.
+Consulte la documentación para obtener una guía completa sobre [cómo trabajar con estructuras de datos anidadas](./essential-concepts/nested-data-structures.md) con el Editor de consultas o un cliente de terceros.
 +++
 
 ### ¿Cómo acelero una consulta en un conjunto de datos que contiene matrices?
@@ -142,7 +142,7 @@ Aparece un banner desplegable que contiene un [!UICONTROL Ayuda y asistencia] pa
 
 +++Answer La función de bloque anónimo permite encadenar una o más sentencias SQL que se ejecutan en secuencia. También permiten la opción de la gestión de excepciones.
 
-Consulte la [documentación de bloque anónimo](./best-practices/anonymous-block.md) para obtener más información.
+Consulte la [documentación de bloque anónimo](./essential-concepts/anonymous-block.md) para obtener más información.
 +++
 
 ### ¿Cómo implemento la atribución personalizada en el servicio de consulta?
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### ¿Cómo proceso rápidamente los nuevos datos que llegan al sistema todos los días?
 
-+++Responder A La [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) se puede utilizar para leer datos de forma incremental en una tabla basada en un ID de instantánea. Es ideal para usar con la variable [carga incremental](./best-practices/incremental-load.md) patrón de diseño que solo procesa la información en el conjunto de datos que se ha creado o modificado desde la última ejecución de carga. Como resultado, aumenta la eficacia del procesamiento y se puede utilizar tanto con el procesamiento de flujo continuo como por lotes.
++++Responder A La [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) se puede utilizar para leer datos de forma incremental en una tabla basada en un ID de instantánea. Es ideal para usar con la variable [carga incremental](./essential-concepts/incremental-load.md) patrón de diseño que solo procesa la información en el conjunto de datos que se ha creado o modificado desde la última ejecución de carga. Como resultado, aumenta la eficacia del procesamiento y se puede utilizar tanto con el procesamiento de flujo continuo como por lotes.
 +++
 
 ### ¿Por qué hay una diferencia entre los números mostrados en la interfaz de usuario del perfil y los números calculados a partir del conjunto de datos de exportación del perfil?

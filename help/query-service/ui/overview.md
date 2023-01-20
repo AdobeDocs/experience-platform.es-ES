@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del servicio de consulta
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 2%
@@ -46,7 +46,7 @@ Una vez que se ha programado una consulta, esta aparece en la lista de consultas
 | **[!UICONTROL Marca de tiempo de última ejecución]** | Marca de tiempo más reciente cuando se ejecutó la consulta. Esta columna resalta si una consulta se ha ejecutado según su programación actual. |
 | **[!UICONTROL Último estado de ejecución]** | Estado de la ejecución de consulta más reciente. Los tres valores de estado son: `successful` `failed` o `in progress`. |
 
-Consulte la documentación para obtener más información sobre cómo [monitorizar consultas a través de la interfaz de usuario del servicio de consulta](../monitor-queries.md).
+Consulte la documentación para obtener más información sobre cómo [monitorizar consultas a través de la interfaz de usuario del servicio de consulta](./monitor-queries.md).
 
 ## Plantillas {#browse}
 

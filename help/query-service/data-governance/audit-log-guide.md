@@ -2,7 +2,7 @@
 title: Integración del registro de auditoría del servicio de consultas
 description: Los registros de auditoría del servicio de consulta mantienen registros de diversas acciones del usuario para formar una pista de auditoría para solucionar problemas o cumplir con las políticas y los requisitos regulatorios de administración de datos corporativos. Este tutorial proporciona información general sobre las funciones del registro de auditoría específicas del servicio de consulta.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 2%
@@ -39,7 +39,7 @@ En el [!UICONTROL Auditorías] tablero [!UICONTROL Registro de actividades] , pu
 
 Los datos de registro de auditoría devueltos contienen la siguiente información sobre todas las consultas que cumplen los criterios de filtro seleccionados.
 
-| Nombre de columna | Descripción |
+| El nombre de la columna | Descripción |
 |---|---|
 | [!UICONTROL Marca de tiempo] | La fecha y hora exactas de la acción realizada en un `month/day/year hour:minute AM/PM` formato. |
 | [!UICONTROL Nombre del recurso] | El valor de la variable [!UICONTROL Nombre del recurso] depende de la categoría elegida como filtro. Al usar la variable [!UICONTROL Consulta programada] categoría que es la **nombre de la programación**. Al usar la variable [!UICONTROL Plantilla de consulta] , esta es la categoría **nombre de plantilla**. Al usar la variable [!UICONTROL Consulta] , esta es la categoría **session ID** |
@@ -87,6 +87,6 @@ Los filtros disponibles varían en función de la categoría seleccionada en la 
 
 ## Pasos siguientes
 
-Al leer este documento, tiene una mejor comprensión de la [!DNL Query Service] registro de auditoría y cómo se puede usar para filtrar su [!DNL Query Service] acciones del usuario.
+Al leer este documento, tiene una mejor comprensión del [!DNL Query Service] registro de auditoría y cómo se puede usar para filtrar su [!DNL Query Service] acciones del usuario.
 
 Si está utilizando la variable [!DNL Query Service] registro de auditoría para solucionar problemas, se recomienda leer el [guía de solución de problemas](../troubleshooting-guide.md).

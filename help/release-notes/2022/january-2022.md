@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, enero de 2022
 description: Notas de la versión de enero de 2022 para Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 3%
@@ -39,7 +39,7 @@ Para obtener más información sobre las alertas en Platform, consulte la [infor
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver perspectivas importantes sobre los datos de su organización, tal como se capturan durante las instantáneas diarias.
+Adobe Experience Platform proporciona varios tableros a través de los cuales puede ver perspectivas importantes sobre los datos de su organización, tal como se capturan durante las instantáneas diarias.
 
 | Función | Descripción |
 | --- | --- |
@@ -91,7 +91,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 | Función | Descripción |
 | --- | --- |
-| Bloque anónimo | La construcción SQL de bloque anónimo permite desglosar los trabajos de preparación de datos a gran escala en el servicio de consulta en tareas más pequeñas y, a continuación, reutilizarlos y ejecutarlos en secuencia para la carga de datos incremental. Para obtener más información, consulte la [consultas de ejemplo para documentación de bloques anónimos](../../query-service/best-practices/anonymous-block.md). |
+| Bloque anónimo | La construcción SQL de bloque anónimo permite desglosar los trabajos de preparación de datos a gran escala en el servicio de consulta en tareas más pequeñas y, a continuación, reutilizarlos y ejecutarlos en secuencia para la carga de datos incremental. Para obtener más información, consulte la [consultas de ejemplo para documentación de bloques anónimos](../../query-service/essential-concepts/anonymous-block.md). |
 | Organización de conjuntos de datos | Proporciona una estructura de datos lógica y coherente para organizar los recursos de datos y utilizarlos con el servicio de consulta a medida que crezca la cantidad de recursos de datos dentro del entorno limitado. Para obtener más información, consulte la [organizar la documentación de recursos de datos](../../query-service/best-practices/organize-data-assets.md). |
 
 Para obtener más información, consulte [!DNL Query Service], consulte la [[!DNL Query Service] información general](../../query-service/home.md).

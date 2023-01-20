@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;Real-time Customer Data Platform;plataforma de datos de clie
 title: Ejemplo de caso de uso para Real-time Customer Data Platform B2B Edition
 description: Este escenario de muestra proporciona un ejemplo para la configuración de la implementación de Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 2%
@@ -87,7 +87,7 @@ Al utilizar los destinos de Marketo Engage y LinkedIn, Bodea cuenta con una solu
 
 ## Pasos siguientes
 
-Al leer este documento, ahora se ha introducido el tipo de objetivos y problemas que se pueden resolver con Real-Time CDP B2B Edition.
+Al leer este documento, ahora se le ha presentado a los tipos de objetivos y problemas que se pueden resolver con Real-Time CDP B2B Edition.
 
 Se recomienda la siguiente documentación para comprender mejor las funciones específicas de B2B:
 

@@ -2,7 +2,7 @@
 title: Filtrado de bots en Query Service con aprendizaje automático
 description: Este documento proporciona información general sobre cómo utilizar Query Service y el aprendizaje automático para determinar la actividad de bots y filtrar sus acciones a partir del tráfico de visitantes de sitios web en línea.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '899'
 ht-degree: 5%
@@ -103,7 +103,7 @@ El resultado de esta expresión puede ser similar a la tabla proporcionada a con
 |---|---|---|---|
 | 4833075303848917832 | 1 | 1 | 1 |
 | 1469109497068938520 | 1 | 1 | 1 |
-| 504568251944554093 | 1 | 1 | 1 |
+| 5045682519445554093 | 1 | 1 | 1 |
 | 7148203816406620066 | 3 | 3 | 3 |
 | 1013065429311352386 | 1 | 1 | 1 |
 | 3077475871984695013 | 7 | 7 | 7 |
