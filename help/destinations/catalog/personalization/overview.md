@@ -3,9 +3,9 @@ keywords: personalización;personalización
 title: Información general sobre los destinos de personalización
 description: Las plataformas de personalización recopilan datos y perspectivas de comportamientos individuales. Estas plataformas pueden ayudar a los especialistas en marketing a navegar por datos anónimos, a ofrecer ofertas o anuncios a los clientes potenciales basados en actividades anteriores o como parte de segmentos de audiencia con hábitos similares.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: f3c58dd95730393f899378ffedec4a49363df204
+source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '154'
 ht-degree: 11%
 
 ---
@@ -26,6 +26,7 @@ Actualmente, Platform admite los destinos de personalización enumerados a conti
 * [(Beta) Adobe Commerce](adobe-commerce.md)
 * [Conexión personalizada personalizada](custom-personalization.md)
 * [Conexión de centro de decisión de clientes pega](pega.md)
+* [Pega Conexión de perfil](pega-profile.md)
 
 **Extensiones**
 
