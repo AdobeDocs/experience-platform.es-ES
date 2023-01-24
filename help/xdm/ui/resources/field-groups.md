@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear y editar grupos de campos de esquema en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar grupos de campos de esquema en la interfaz de usuario del Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,11 @@ Para agregar campos a un grupo de campos personalizados, comience por selecciona
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL Campo nuevo]** aparece en el lienzo, y el carril derecho se actualiza para mostrar los controles y configurar las propiedades del campo. Consulte la guía de [definición de campos en la interfaz de usuario](../fields/overview.md#define) para ver pasos específicos sobre cómo configurar diferentes tipos de campos.
+Un **[!UICONTROL Campo sin título]** el marcador de posición aparece en el lienzo y el carril derecho se actualiza para mostrar los controles que configuran las propiedades del campo. Consulte la guía de [definición de campos en la interfaz de usuario](../fields/overview.md#define) para ver pasos específicos sobre cómo configurar diferentes tipos de campos.
+
+En **[!UICONTROL Asignar a]**, seleccione **[!UICONTROL Grupo de campos]** , utilice la lista desplegable para seleccionar el grupo de campos deseado de la lista. Puede empezar a escribir en el nombre del grupo de campos para reducir los resultados.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 En **[!UICONTROL Asignar a]**, seleccione **[!UICONTROL Grupo de campos]** , utilice la lista desplegable para seleccionar el grupo de campos deseado de la lista. Puede empezar a escribir en el nombre del grupo de campos para reducir los resultados.
 
