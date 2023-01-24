@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1982'
 ht-degree: 6%
 
 ---
@@ -90,6 +90,7 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 | Tamaño máximo del fragmento de perfil | 50MB | Grave | **El tamaño máximo de un fragmento de perfil único es de 50 MB.** La segmentación, las exportaciones y las búsquedas pueden fallar [fragmento de perfil](#profile-fragments) que es más de 50 MB. |
 | Tamaño máximo de almacenamiento de perfiles | 50MB | Leve | **El tamaño máximo de un perfil almacenado es de 50 MB.** Adición de nuevas [fragmentos de perfil](#profile-fragments) en un perfil que tenga más de 50 MB, afectará el rendimiento del sistema. Por ejemplo, un perfil podría contener un solo fragmento de 50 MB o varios fragmentos en varios conjuntos de datos con un tamaño total combinado de 50 MB. Si se intenta almacenar un perfil con un solo fragmento de más de 50 MB, o con varios fragmentos que suman más de 50 MB en tamaño combinado, el rendimiento del sistema se verá afectado. |
 | Número de lotes de Perfil o ExperienceEvent ingestados por día | 90 | Leve | **El número máximo de lotes de Perfil o ExperienceEvent ingestados por día es de 90.** Esto significa que el total combinado de lotes de Perfil y ExperienceEvent ingestados cada día no puede superar los 90. La ingesta de lotes adicionales afectará el rendimiento del sistema. |
+| Número de eventos de experiencia por registro de perfil | 5000 | Leve | **El número máximo de ExperienceEvents por registro de perfil es 5000.** Los perfiles con más de 5000 ExperienceEvents **not** para la segmentación. |
 
 {style=&quot;table-layout:auto&quot;}
 
