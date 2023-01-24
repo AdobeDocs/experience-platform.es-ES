@@ -4,7 +4,7 @@ title: Cómo obtener y conceder permisos de acceso para tableros de Experience P
 type: Documentation
 description: Conceder a los usuarios la capacidad de ver, editar y actualizar tableros de Experience Platform mediante Adobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 7%
@@ -55,7 +55,7 @@ La siguiente matriz de control de acceso proporciona un desglose de qué permiso
 | [!DNL Dashboards] en el panel de navegación izquierdo. | HABILITADO | **Al menos una**. | N/D | N/D |
 | [!DNL Dashboards] [!DNL Inventory] <br/>(la pestaña examinar ) | HABILITADO | N/D | N/D | N/D |
 | [!DNL Dashboards] [!DNL Integrations] ficha <br/>(utilizado para instalar Power BI) | HABILITADO | **Al menos una** | N/D | N/D |
-| Botón de instalación de Power BI y flujo de trabajo | HABILITADO | N/D | **REQUERIDO** | N/D |
+| Botón de instalación de Power BI y flujo de trabajo | HABILITADO | N/A | **REQUERIDO** | N/A |
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] tableros.<br/>La capacidad de editar esquemas de utilidades y agregar nuevos atributos para la personalización de utilidades | **Se requiere la administración de tableros estándar** | **REQUERIDO (para cada tablero respectivo)** | N/D | N/D |
 | [!DNL License Usage Dashboard] | N/D | N/D | N/D | HABILITADO |
 

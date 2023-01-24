@@ -1,7 +1,8 @@
 ---
 title: Punto final de consultas aceleradas
 description: Obtenga información sobre cómo acceder al almacén acelerado de consultas sin estado para devolver rápidamente resultados según los datos agregados. Este documento proporciona un ejemplo de solicitud HTTP y respuesta para el extremo de consultas aceleradas del servicio de consulta.
-source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 1%
@@ -16,7 +17,7 @@ Antes de continuar con esta guía, asegúrese de haber leído y entendido el [Gu
 
 ## Primeros pasos
 
-El SKU de Distiller de datos es necesario para utilizar el almacén acelerado de consultas. Consulte la [embalaje](../packages.md), [guardrails](../guardrails.md#query-accelerated-store)y [licencias](../data-distiller/licence-usage.md) documentación relacionada con el SKU de Distiller de datos. Si no tiene el SKU de Distiller de datos, póngase en contacto con su representante del servicio al cliente de Adobe para obtener más información.
+El SKU de Distiller de datos es necesario para utilizar el almacén acelerado de consultas. Consulte la [embalaje](../packages.md), [guardrails](../guardrails.md#query-accelerated-store)y [licencias](../data-distiller/license-usage.md) documentación relacionada con el SKU de Distiller de datos. Si no tiene el SKU de Distiller de datos, póngase en contacto con su representante del servicio al cliente de Adobe para obtener más información.
 
 Las siguientes secciones detallan las llamadas de API necesarias para acceder al almacén acelerado de consultas de forma apátrida a través de la API del servicio de consultas. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
@@ -210,4 +211,3 @@ Una respuesta correcta devuelve el estado HTTP 200 con el esquema ad hoc creado 
 | `resultsMeta._adhoc.meta:xdmType` | Se trata de un valor generado por el sistema para el tipo de campo XDM. Para obtener más información sobre los tipos disponibles, consulte la documentación sobre [tipos XDM disponibles](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
 | `resultsMeta._adhoc.properties` | Son los nombres de columna del conjunto de datos consultado. |
 | `resultsMeta._adhoc.results` | Son los nombres de fila del conjunto de datos consultado. Reflejan cada una de las columnas devueltas. |
-

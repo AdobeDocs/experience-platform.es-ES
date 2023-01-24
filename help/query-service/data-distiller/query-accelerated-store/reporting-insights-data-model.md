@@ -2,7 +2,7 @@
 title: Guía de perspectivas de informes de almacenamiento acelerado de consultas
 description: Obtenga información sobre cómo crear un modelo de datos de perspectivas de informes mediante el servicio de consulta para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Este tutorial utiliza tableros definidos por el usuario para visualizar datos de
 
 ## Primeros pasos
 
-El SKU de Distiller de datos es necesario para crear un modelo de datos personalizado para la información de informes y para ampliar los modelos de datos de Real-Time CDP que contienen datos de Platform enriquecidos. Consulte la [embalaje](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store)y [licencias](../../data-distiller/licence-usage.md) documentación relacionada con el SKU de Distiller de datos. Si no tiene el SKU de Distiller de datos, póngase en contacto con su representante del servicio al cliente de Adobe para obtener más información.
+El SKU de Distiller de datos es necesario para crear un modelo de datos personalizado para la información de informes y para ampliar los modelos de datos de Real-Time CDP que contienen datos de Platform enriquecidos. Consulte la [embalaje](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store)y [licencias](../../data-distiller/license-usage.md) documentación relacionada con el SKU de Distiller de datos. Si no tiene el SKU de Distiller de datos, póngase en contacto con su representante del servicio al cliente de Adobe para obtener más información.
 
 ## Creación de un modelo de datos de perspectivas de informes
 

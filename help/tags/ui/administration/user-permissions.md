@@ -2,7 +2,7 @@
 title: Permisos de usuario para etiquetas
 description: Obtenga información sobre los distintos tipos de permisos disponibles para etiquetas y algunas estrategias de implementación básicas para diferentes casos de uso empresarial.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 22%
