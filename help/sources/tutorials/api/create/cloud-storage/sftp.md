@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;SFTP;sftp;Protocolo seguro de transferencia de archivos;protocolo seguro de transferencia de archivos
-solution: Experience Platform
 title: Creación de una conexión base SFTP mediante la API de servicio de flujo
-type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos) mediante la API de servicio de flujo.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '895'
 ht-degree: 1%
 
 ---
@@ -44,6 +41,7 @@ Para [!DNL Flow Service] para conectarse a [!DNL SFTP], debe proporcionar valore
 | `privateKeyContent` | El contenido de clave privada SSH codificada Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
 | `passPhrase` | La frase de contraseña o contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si la variable `privateKeyContent` está protegido con contraseña, este parámetro debe utilizarse con la frase de contraseña del contenido de clave privada como valor. |
 | `maxConcurrentConnections` | Este parámetro le permite especificar un límite máximo para el número de conexiones simultáneas que Platform creará al conectarse al servidor SFTP. Debe configurar este valor para que sea menor que el límite establecido por SFTP. **Nota**: Cuando esta configuración está habilitada para una cuenta SFTP existente, solo afecta a flujos de datos futuros y no a flujos de datos existentes. |
+| `folderPath` | Ruta a la carpeta a la que desea proporcionar acceso. [!DNL SFTP] , puede proporcionar la ruta de la carpeta para especificar el acceso del usuario a la subcarpeta que desee. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL SFTP] es: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
 ### Uso de las API de plataforma
@@ -54,7 +52,7 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 
 Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-La variable [!DNL SFTP] source admite autenticación básica y autenticación mediante clave pública SSH.
+La variable [!DNL SFTP] source admite autenticación básica y autenticación mediante clave pública SSH. Durante este paso, también puede designar la ruta a la subcarpeta a la que desea proporcionar acceso.
 
 Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar su [!DNL SFTP] credenciales de autenticación como parte de los parámetros de solicitud.
 
@@ -94,7 +92,8 @@ curl -X POST \
               "port": 22,
               "userName": "{USERNAME}",
               "password": "{PASSWORD}",
-              "maxConcurrentConnections": 1
+              "maxConcurrentConnections": 5,
+              "folderPath": "acme/business/customers/holidaySales"
           }
       },
       "connectionSpec": {
@@ -111,6 +110,7 @@ curl -X POST \
 | `auth.params.username` | El nombre de usuario asociado al servidor SFTP. |
 | `auth.params.password` | La contraseña asociada al servidor SFTP. |
 | `auth.params.maxConcurrentConnections` | Número máximo de conexiones simultáneas especificadas al conectar Platform a SFTP. Cuando está habilitado, este valor debe establecerse en al menos 1. |
+| `auth.params.folderPath` | Ruta a la carpeta a la que desea proporcionar acceso. |
 | `connectionSpec.id` | El ID de especificación de conexión del servidor SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!TAB Autenticación de clave pública SSH]
@@ -134,8 +134,8 @@ curl -X POST \
               "userName": "{USERNAME}",
               "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
               "passPhrase": "{PASSPHRASE}",
-              "maxConcurrentConnections": 1
-
+              "maxConcurrentConnections": 5,
+              "folderPath": "acme/business/customers/holidaySales"
           }
       },
       "connectionSpec": {
@@ -153,6 +153,7 @@ curl -X POST \
 | `auth.params.privateKeyContent` | El contenido de clave privada SSH codificada Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
 | `auth.params.passPhrase` | La frase de contraseña o contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si PrivateKeyContent está protegido por contraseña, este parámetro debe utilizarse con la frase de contraseña de PrivateKeyContent como valor. |
 | `auth.params.maxConcurrentConnections` | Número máximo de conexiones simultáneas especificadas al conectar Platform a SFTP. Cuando está habilitado, este valor debe establecerse en al menos 1. |
+| `auth.params.folderPath` | Ruta a la carpeta a la que desea proporcionar acceso. |
 | `connectionSpec.id` | La variable [!DNL SFTP] ID de especificación de conexión del servidor: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!ENDTABS]
