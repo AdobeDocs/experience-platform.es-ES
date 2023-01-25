@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descripción general del conector de origen de almacenamiento de Google Cloud
 description: Obtenga información sobre cómo conectar el almacenamiento en la nube de Google a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
+source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ La variable **[!UICONTROL Interoperabilidad]** contiene información sobre la au
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 Puede utilizar el ID de clave de acceso y la clave de acceso secreta que acaba de generar para conectar su [!DNL Google Cloud Storage] a Platform.
+
+Para obtener más información, consulte la guía de [creación y administración de claves de cuenta de servicio](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) de la variable [!DNL Google Cloud] documentación.
 
 ## Restricciones de nomenclatura para archivos y directorios
 

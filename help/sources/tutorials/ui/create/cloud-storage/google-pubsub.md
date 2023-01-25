@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Google PubSub;google pubsub
-solution: Experience Platform
 title: Crear una conexión de Google PubSub Source en la interfaz de usuario
-type: Tutorial
 description: Obtenga información sobre cómo crear un conector de origen Google PubSub mediante la interfaz de usuario de Platform.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '612'
 ht-degree: 1%
 
 ---
@@ -31,8 +28,9 @@ Para conectarse [!DNL PubSub] para Platform, debe proporcionar un valor válido 
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `projectId` | ID del proyecto necesario para la autenticación [!DNL PubSub]. |
-| `credentials` | El ID de credencial o clave privada necesario para la autenticación [!DNL PubSub]. |
+| Proyecto ID | ID del proyecto necesario para la autenticación [!DNL PubSub]. |
+| Credenciales | El ID de credencial o clave privada necesario para la autenticación [!DNL PubSub]. |
+| ID del tema | El ID de la variable [!DNL PubSub] recurso que representa una fuente de mensajes. Debe especificar un ID de tema si desea proporcionar acceso a un flujo de datos específico de su [!DNL Google PubSub] fuente. |
 
 Para obtener más información sobre estos valores, consulte [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) documento. Si utiliza la autenticación basada en cuentas de servicio, consulte lo siguiente [Guía de PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) para ver los pasos sobre cómo generar sus credenciales.
 
@@ -44,9 +42,9 @@ Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a c
 
 ## Conecte su [!DNL PubSub] account
 
-En el [Interfaz de usuario de Platform](https://platform.adobe.com), seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder a la [!UICONTROL Fuentes] espacio de trabajo. La variable [!UICONTROL Catálogo] muestra una variedad de fuentes para las que puede crear una cuenta.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder a la [!UICONTROL Fuentes] espacio de trabajo. La variable [!UICONTROL Catálogo] muestra una variedad de fuentes con las que puede crear una cuenta.
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la barra de búsqueda.
+Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
 En el [!UICONTROL Almacenamiento en la nube] categoría, seleccione **[!UICONTROL Google PubSub]** y, a continuación, seleccione **[!UICONTROL Añadir datos]**.
 
@@ -62,7 +60,13 @@ Para usar una cuenta existente, seleccione la opción [!DNL PubSub] cuenta con l
 
 ### Nueva cuenta
 
-Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre, una descripción opcional y su [!DNL PubSub] credenciales de autenticación en el formulario de entrada. Cuando termine, seleccione **[!UICONTROL Conectar a origen]** y, a continuación, permita que la nueva conexión se establezca durante algún tiempo.
+Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre, una descripción opcional y su [!DNL PubSub] credenciales de autenticación en el formulario de entrada. Durante este paso, puede definir los datos a los que tiene acceso su cuenta proporcionando un ID de tema. Solo se puede acceder a las suscripciones asociadas a ese ID de tema.
+
+>[!NOTE]
+>
+>El principal (funciones) asignado a un proyecto pubsub se hereda en todos los temas y suscripciones creados dentro de un [!DNL PubSub] proyecto. Si desea agregar una entidad de seguridad (función) para tener acceso a un tema específico, esa entidad de seguridad (función) también debe agregarse a la suscripción correspondiente del tema. Para obtener más información, lea la [[!DNL PubSub] documentación sobre control de acceso](https://cloud.google.com/pubsub/docs/access-control).
+
+Cuando termine, seleccione **[!UICONTROL Conectar a origen]** y, a continuación, permita que la nueva conexión se establezca durante algún tiempo.
 
 ![new](../../../../images/tutorials/create/google-pubsub/new.png)
 
