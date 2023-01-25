@@ -2,9 +2,9 @@
 title: Definición de campos XDM en la API del Registro de Esquema
 description: Obtenga información sobre cómo definir distintos campos al crear recursos del Modelo de datos de experiencia (XDM) personalizados en la API del Registro de esquemas.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1202'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ Opcionalmente, puede proporcionar etiquetas de cara al cliente para cada valor e
 
 >[!NOTE]
 >
->La variable `meta:enum` value does **not** declare una enumeración o conduzca cualquier validación de datos por su cuenta. En la mayoría de los casos, las cadenas proporcionadas en `meta:enum` también se proporcionan en `enum` para garantizar que los datos estén restringidos. Sin embargo, hay algunos casos de uso en los que `meta:enum` se proporciona sin `enum` matriz. Consulte el tutorial en [definición de valores sugeridos](../tutorials/suggested-values.md) para obtener más información.
+>La variable `meta:enum` value does **not** declare una enumeración o conduzca cualquier validación de datos por su cuenta. En la mayoría de los casos, las cadenas proporcionadas en `meta:enum` también se proporcionan en `enum` para garantizar que los datos estén restringidos. Sin embargo, hay algunos casos de uso en los que `meta:enum` se proporciona sin `enum` matriz. Consulte el tutorial en [definición de valores sugeridos en la API](../tutorials/suggested-values.md) para obtener más información.
 
 Si lo desea, puede proporcionar un `default` para indicar el valor predeterminado `enum` que utilizará el campo si no se proporciona ningún valor.
 
@@ -186,7 +186,7 @@ El equivalente de un [!UICONTROL Largo] el campo creado a través de la interfaz
 }
 ```
 
-## [!UICONTROL Corto] {#short}
+## [!UICONTROL corto] {#short}
 
 El equivalente de un [!UICONTROL Corto] el campo creado a través de la interfaz de usuario del Generador de esquemas es un [`integer` campo de tipo](#integer) con específico `minimum` y `maximum` valores (`-32768` y `32768`, respectivamente).
 

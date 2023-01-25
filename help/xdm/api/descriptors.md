@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API del Registro de esquemas permite administrar mediante programación los descriptores XDM dentro de la aplicación de experiencia.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1956'
 ht-degree: 4%
 
 ---
@@ -357,7 +357,7 @@ Los descriptores de nombres descriptivos permiten al usuario modificar el `title
 | `xdm:title` | El nuevo título que desea mostrar para este campo, escrito en el caso Título. |
 | `xdm:description` | Se puede añadir una descripción opcional junto con el título. |
 | `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` se puede utilizar para añadir valores sugeridos para el campo en la interfaz de usuario de segmentación. Es importante señalar que `meta:enum` no declara una enumeración ni proporciona ninguna validación de datos para el campo XDM.<br><br>Esto solo debe utilizarse para campos XDM principales definidos por el Adobe. Si la propiedad de origen es un campo personalizado definido por su organización, en su lugar debe editar el `meta:enum` directamente a través de una solicitud de PATCH al recurso principal del campo. |
-| `meta:excludeMetaEnum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena que tiene valores sugeridos existentes proporcionados en un `meta:enum` , puede incluir este objeto en un descriptor de nombre descriptivo para excluir algunos o todos estos valores de la segmentación. La clave y el valor de cada entrada deben coincidir con los incluidos en el original `meta:enum` del campo para que se excluya la entrada. |
+| `meta:excludeMetaEnum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena que tiene valores sugeridos existentes proporcionados en un `meta:enum` , puede incluir este objeto en un descriptor de nombre descriptivo para excluir algunos o todos estos valores de la segmentación. La clave y el valor de cada entrada deben coincidir con los incluidos en el original `meta:enum` del campo para que se excluya la entrada.<br><br>Es importante tener en cuenta que solo se pueden excluir valores para los campos de cadena que contienen **solo valores sugeridos**. Si el campo de cadena contiene real `enum` no se pueden deshabilitar los valores sugeridos asociados. `enum` los campos de recursos personalizados definidos por su organización se pueden editar mediante solicitudes de PATCH, pero `enum` no se pueden quitar los campos de los recursos definidos por el Adobe estándar. |
 
 {style=&quot;table-layout:auto&quot;}
 
