@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importación y uso de audiencias externas
 description: Siga este tutorial para aprender a utilizar audiencias externas con Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -257,3 +257,7 @@ A continuación se puede ver una muestra de la carga útil de pertenencia a audi
 | `xdmEntity._id` | Un ID adecuado que se utiliza para identificar de forma exclusiva el registro dentro del conjunto de datos. |
 | `{TENANT_NAME}.identities` | Esta sección se utiliza para conectar el grupo de campos de las identidades personalizadas con los usuarios que ha importado anteriormente. |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | Esta es la etiqueta del área de nombres de identidad personalizada creada anteriormente. Por lo tanto, si, por ejemplo, llamara a su área de nombres de identidad &quot;externalAudience&quot;, la utilizaría como clave de la matriz. |
+
+>[!NOTE]
+>
+>De forma predeterminada, las suscripciones a audiencias externas solo se conservan durante 30 días. Para conservarlos durante más de 30 días, utilice el `validUntil` al introducir los datos de audiencia. Para obtener más información sobre este campo, consulte la guía de [Grupos de campos de esquema de detalles de pertenencia a segmentos](../../xdm/field-groups/profile/segmentation.md).

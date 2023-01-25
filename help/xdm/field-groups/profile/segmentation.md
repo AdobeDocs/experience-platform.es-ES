@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Detalles de pertenencia a segmentos Grupo de campos de esquema
 description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de pertenencia a segmentos .
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '470'
 ht-degree: 3%
 
 ---
@@ -75,11 +75,15 @@ El siguiente es un ejemplo `segmentMembership` mapa que el sistema ha rellenado 
 | --- | --- |
 | `xdm:version` | La versión del segmento para el que se calificó este perfil. |
 | `xdm:lastQualificationTime` | Marca de fecha y hora de la última vez que este perfil cumplía los requisitos para el segmento. |
-| `xdm:validUntil` | Marca de fecha y hora en la que se debe suponer que la pertenencia al segmento ya no es válida. |
+| `xdm:validUntil` | Marca de fecha y hora en la que se debe suponer que la pertenencia al segmento ya no es válida. Para audiencias externas, si este campo no está establecido, la pertenencia al segmento solo se conservará durante 30 días desde el `lastQualificationTime`. |
 | `xdm:status` | Campo de cadena que indica si la pertenencia al segmento se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`existing`: El perfil ya formaba parte del segmento antes de la solicitud y continúa manteniendo su pertenencia.</li><li>`realized`: El perfil está introduciendo el segmento como parte de la solicitud actual.</li><li>`exited`: El perfil sale del segmento como parte de la solicitud actual.</li></ul> |
 | `xdm:payload` | Algunas suscripciones a segmentos incluyen una carga útil que describe valores adicionales directamente relacionados con la pertenencia. Solo se puede proporcionar una carga útil de un tipo determinado para cada pertenencia. `xdm:payloadType` indica el tipo de carga útil (`boolean`, `number`, `propensity`o `string`), mientras que su propiedad del mismo nivel proporciona el valor para el tipo de carga útil. |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Cualquier pertenencia a un segmento que se encuentre en la `exited` durante más de 30 días, según la variable `lastQualificationTime`, estará sujeto a eliminación.
 
 Para obtener más información sobre el grupo de campos, consulte el repositorio XDM público:
 
