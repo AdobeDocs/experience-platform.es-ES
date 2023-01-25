@@ -3,10 +3,10 @@ keywords: destinos;soluciones de experience cloud; target;destino; nube de anunc
 title: Información general sobre los destinos de Adobe
 description: Administre su experiencia de cliente conectando sus datos en Platform con otras soluciones de Adobe Experience Cloud para segmentación de anuncios, personalización, automatización de marketing y mucho más
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 13%
+source-wordcount: '230'
+ht-degree: 12%
 
 ---
 
@@ -20,11 +20,14 @@ Administre su experiencia de cliente conectando sus datos en Adobe Experience Pl
 
 Actualmente, Platform es compatible con los destinos de Adobe enumerados a continuación.
 
-Para comprender la diferencia entre conexiones y extensiones, consulte [Conexiones](../../destination-types.md#connections) en la página Tipos de destino y categorías.
+Para comprender la diferencia entre conexiones y extensiones, consulte [Conexiones](../../destination-types.md#connections) en la página Tipos y categorías de destino .
 
 ### Conexiones
 
+* [Conexión Adobe Advertising Cloud DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Conexión Adobe Campaign](../email-marketing/adobe-campaign.md)
+* [Conexión Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)
+* [(Beta) audiencias de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [conexión del Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ### Extensiones
