@@ -1,10 +1,11 @@
 ---
 description: Obtenga información sobre cómo configurar las opciones de formato de archivo al activar datos en destinos basados en archivos
 title: (Beta) Configurar opciones de formato de archivo para destinos basados en archivos
-source-git-commit: 23a7a1997e05d2bde26de5b73a23ea051bf2b3bb
+exl-id: f59b1952-e317-40ba-81d1-35535e132a72
+source-git-commit: 14ce4a11f53ef24b3008b3f775cc926d05ea8f8e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 0%
+source-wordcount: '601'
+ht-degree: 1%
 
 ---
 
@@ -28,17 +29,25 @@ Puede configurar varias opciones de formato de archivo para los archivos exporta
 
 ## Configuración de formato de archivo {#file-configuration}
 
+Para mostrar las opciones de formato del archivo, inicie el [conectar con destino](/help/destinations/ui/connect-destination.md) flujo de trabajo. Select **Tipo de datos: Segmentos** y **Tipo de archivo: CSV** para mostrar la configuración de formato de archivo disponible para la exportación `CSV` archivos.
+
 >[!IMPORTANT]
 >
 >Es posible que el destino al que se está conectando no tenga todas estas opciones disponibles. Depende del desarrollador de destino determinar qué opciones de formato de archivo desea admitir en su destino. El desarrollador de destino puede determinar qué opciones están disponibles al conectarse al destino. Las opciones necesarias se marcan con un asterisco en la IU del Experience Platform.
-
-Para mostrar las opciones de formato del archivo, inicie el [conectar con destino](/help/destinations/ui/connect-destination.md) flujo de trabajo y seleccione segmentos como **Tipo de archivo**. En esta sección se describe la configuración de formato de archivo disponible para la exportación `CSV` archivos.
+> 
+>Los nuevos destinos de almacenamiento en la nube: [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Almacenamiento de Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Zona de aterrizaje de datos](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Almacenamiento en la nube de Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) : actualmente solo admite las seis opciones de CSV que se indican a continuación.
 
 ![Imagen que muestra algunas de las opciones de formato de archivo disponibles.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
-### Delimitador
+### Delimitador {#delimiter}
 
-Define un separador para cada campo y valor. Por ejemplo, `,` para valores separados por comas o `/t` para valores separados por tabulaciones.
+Define un separador para cada campo y valor. Entre las opciones disponibles se encuentran:
+
+* Dos puntos `(:)`
+* Coma `(,)`
+* Barra vertical `(|)`
+* Punto y coma `(;)`
+* Tabulación `(\\t)`
 
 ### Carácter de comillas
 
