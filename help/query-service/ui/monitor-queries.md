@@ -2,10 +2,10 @@
 title: Monitorizar consultas programadas
 description: Obtenga información sobre cómo monitorizar consultas a través de la interfaz de usuario del servicio de consulta.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7b5a22d849f0f46a9ff14843c594b743bbd01c9d
+source-git-commit: d4966eea90884cea8fbb4b72be8d9625d5745d57
 workflow-type: tm+mt
-source-wordcount: '1044'
-ht-degree: 1%
+source-wordcount: '1204'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform proporciona una visibilidad mejorada para el estado de
 
 ## [!UICONTROL Consultas programadas]
 
-La variable [!UICONTROL Consultas programadas] proporciona una descripción general de las consultas ejecutadas y programadas. El espacio de trabajo contiene todas las consultas de CTAS e ITAS que están programadas para ejecutarse o que se han ejecutado al menos una vez. Se pueden encontrar detalles de ejecución para todas las consultas programadas, así como códigos de error y mensajes para consultas fallidas.
+La variable [!UICONTROL Consultas programadas] proporciona una descripción general de todas sus consultas de CTAS e ITAS programadas. Se pueden encontrar detalles de ejecución para todas las consultas programadas, así como códigos de error y mensajes para cualquier consulta fallida.
 
 Para ir a la [!UICONTROL Consultas programadas] , seleccione **[!UICONTROL Consultas]** desde la barra de navegación izquierda seguida de **[!UICONTROL Consultas programadas]**
 
@@ -29,14 +29,14 @@ La tabla siguiente describe cada columna disponible.
 
 | Columna | Descripción |
 |---|---|
-| Nombre | El campo de nombre es el nombre de la plantilla o los primeros caracteres de la consulta SQL. Cualquier consulta creada a través de la interfaz de usuario con el Editor de consultas recibe un nombre desde el principio. Si la consulta se creó mediante la API, el nombre de la consulta es un fragmento del SQL inicial utilizado para crear la consulta. |
-| Plantilla | El nombre de plantilla de la consulta. Seleccione un nombre de plantilla para ir al Editor de consultas. La plantilla de consulta se muestra en el Editor de consultas para mayor comodidad. Si no hay ningún nombre de plantilla, la fila se marca con un guión y no se puede redirigir al Editor de consultas para ver la consulta. |
-| SQL | Un fragmento de la consulta SQL. |
-| Frecuencia de ejecución | Esta es la cadencia en la que se configura la ejecución de la consulta. Los valores disponibles son `Run once` y `Scheduled`. Las consultas se pueden filtrar según su frecuencia de ejecución. |
-| Creado por | Nombre del usuario que creó la consulta. |
-| Creado | Marca de tiempo cuando se creó la consulta, en formato UTC. |
-| Marca de tiempo de última ejecución | Marca de tiempo más reciente cuando se ejecutó la consulta. Esta columna resalta si una consulta se ha ejecutado según su programación actual. |
-| Último estado de ejecución | Estado de la ejecución de consulta más reciente. Los tres valores de estado son: `successful` `failed` o `in progress`. |
+| **[!UICONTROL Nombre]** | El campo de nombre es el nombre de la plantilla o los primeros caracteres de la consulta SQL. Cualquier consulta creada a través de la interfaz de usuario con el Editor de consultas recibe un nombre desde el principio. Si la consulta se creó mediante la API, su nombre se convierte en un fragmento del SQL inicial utilizado para crear la consulta. Seleccione cualquier elemento del [!UICONTROL Nombre] para ver una lista de todas las ejecuciones asociadas con la consulta. Para obtener más información, consulte [ejecución de consultas detalles de programación](#query-runs) para obtener más información. |
+| **[!UICONTROL Plantilla]** | El nombre de plantilla de la consulta. Seleccione un nombre de plantilla para ir al Editor de consultas. La plantilla de consulta se muestra en el Editor de consultas para mayor comodidad. Si no hay ningún nombre de plantilla, la fila se marca con un guión y no se puede redirigir al Editor de consultas para ver la consulta. |
+| **[!UICONTROL SQL]** | Un fragmento de la consulta SQL. |
+| **[!UICONTROL Frecuencia de ejecución]** | Esta es la cadencia en la que se configura la ejecución de la consulta. Los valores disponibles son `Run once` y `Scheduled`. Las consultas se pueden filtrar según su frecuencia de ejecución. |
+| **[!UICONTROL Creado por]** | Nombre del usuario que creó la consulta. |
+| **[!UICONTROL Creado]** | Marca de tiempo cuando se creó la consulta, en formato UTC. |
+| **[!UICONTROL Marca de tiempo de última ejecución]** | Marca de tiempo más reciente cuando se ejecutó la consulta. Esta columna resalta si una consulta se ha ejecutado según su programación actual. |
+| **[!UICONTROL Último estado de ejecución]** | Estado de la ejecución de consulta más reciente. Los valores de estado son: `Success`, `Failed`, `In progress`y `No runs`. |
 
 >[!TIP]
 >
@@ -64,7 +64,7 @@ Puede suscribirse a las alertas desde el [!UICONTROL Consultas programadas] pest
 
 Consulte la [documentación de la API de suscripciones de alerta](../api/alert-subscriptions.md) para obtener más información.
 
-### Filtrar consultas
+### Filtrar consultas {#filter}
 
 Puede filtrar consultas en función de la frecuencia de ejecución. En el [!UICONTROL Consultas programadas] , seleccione el icono de filtro (![Un icono de filtro](../images/ui/monitor-queries/filter-icon.png)) para abrir la barra lateral de filtro.
 
@@ -80,7 +80,7 @@ Seleccione o bien **[!UICONTROL Programado]** o **[!UICONTROL Ejecutar una vez]*
 
 Una vez habilitados los criterios de filtro, seleccione **[!UICONTROL Ocultar filtros]** para cerrar el panel de filtro.
 
-## Consulta ejecuta Detalles del programa
+## Consulta ejecuta detalles de programación {#query-runs}
 
 Seleccione un nombre de consulta para ir a la página de detalles de la programación. Esta vista proporciona una lista de todas las ejecuciones ejecutadas como parte de esa consulta programada. La información proporcionada incluye la hora de inicio y finalización, el estado y el conjunto de datos utilizados.
 
@@ -90,23 +90,23 @@ Esta información se proporciona en una tabla de cinco columnas. Cada fila indic
 
 | El nombre de la columna | Descripción |
 |---|---|
-| ID de ejecución de consulta | ID de ejecución de la consulta para la ejecución diaria. |
-| Inicio de la ejecución de consultas | Marca de tiempo cuando se ejecutó la consulta. Esto está en formato UTC. |
-| Finalización de la ejecución de consultas | Marca de tiempo cuando se completó la consulta. Esto está en formato UTC. |
-| Estado | Estado de la ejecución de consulta más reciente. Los tres valores de estado son: `successful` `failed` o `in progress`. |
-| Conjunto de datos | Conjunto de datos implicado en la ejecución. |
+| **[!UICONTROL ID de ejecución de consulta]** | ID de ejecución de la consulta para la ejecución diaria. Seleccione el **[!UICONTROL ID de ejecución de consulta]** para navegar hasta el [!UICONTROL Información general de ejecución de consultas]. |
+| **[!UICONTROL Inicio de la ejecución de consultas]** | Marca de tiempo cuando se ejecutó la consulta. Esto está en formato UTC. |
+| **[!UICONTROL Finalización de la ejecución de consultas]** | Marca de tiempo cuando se completó la consulta. Esto está en formato UTC. |
+| **[!UICONTROL Estado]** | Estado de la ejecución de consulta más reciente. Los tres valores de estado son: `successful` `failed` o `in progress`. |
+| **[!UICONTROL Conjunto de datos]** | Conjunto de datos implicado en la ejecución. |
 
 Los detalles de la consulta que se está programando se pueden ver en la [!UICONTROL Propiedades] panel. Este panel incluye el ID de consulta inicial, el tipo de cliente, el nombre de la plantilla, el SQL de consulta y la cadencia de la programación.
 
 ![La página de detalles de la programación con el panel de propiedades resaltado.](../images/ui/monitor-queries/properties-panel.png)
 
-### Ejecutar detalles
-
 Seleccione un ID de ejecución de consulta para desplazarse a la página de detalles de ejecución y ver la información de consulta.
 
 ![La pantalla de detalles de la programación con un ID de ejecución resaltado.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
-Esta vista proporciona información sobre ejecuciones individuales para esta consulta programada y un desglose más detallado del estado de ejecución. Esta página también incluye la información del cliente y detalles de cualquier error que haya causado que la consulta falle.
+## Información general de ejecución de consultas {#query-run-overview}
+
+La variable [!UICONTROL Información general de ejecución de consultas] proporciona información sobre ejecuciones individuales para esta consulta programada y un desglose más detallado del estado de ejecución. Esta página también incluye la información del cliente y detalles de cualquier error que pueda haber causado que la consulta falle.
 
 ![La pantalla de detalles de ejecución con la sección de información general resaltada.](../images/ui/monitor-queries/query-run-details.png)
 
@@ -117,6 +117,20 @@ La sección de estado de la consulta proporciona el código de error y el mensaj
 Puede copiar el SQL de consulta en el portapapeles desde esta vista. Seleccione el icono de copia en la parte superior derecha del fragmento SQL para copiar la consulta. Un mensaje emergente confirma que el código se ha copiado.
 
 ![La pantalla de detalles de ejecución con el icono de copia SQL resaltado.](../images/ui/monitor-queries/copy-sql.png)
+
+### Ejecutar detalles para consultas con bloque anónimo {#anonymous-block-queries}
+
+Las consultas que utilizan bloques anónimos para conformar sus sentencias SQL se separan en sus consultas individuales. Esto le permite inspeccionar individualmente los detalles de ejecución de cada bloque de consulta.
+
+Los bloques anónimos se identifican mediante el uso de un `$$` antes de la consulta. Consulte la [documento de bloque anónimo](../essential-concepts/anonymous-block.md) para obtener más información sobre los bloques anónimos en el servicio de consulta.
+
+Las consultas de bloque anónimas tienen pestañas a la izquierda del estado de ejecución. Seleccione una pestaña para mostrar los detalles de ejecución.
+
+![La descripción general de la ejecución de consultas muestra una consulta de bloque anónima. Se resaltan las múltiples pestañas de consulta.](../images/ui/monitor-queries/anonymous-block-overview.png)
+
+En caso de que falle una consulta de bloque anónima, puede encontrar el código de error para ese bloque en particular a través de esta interfaz de usuario.
+
+![La descripción general de la ejecución de la consulta muestra una consulta de bloque anónima con el código de error de un solo bloque resaltado.](../images/ui/monitor-queries/anonymous-block-failed-query.png)
 
 Select **[!UICONTROL Consulta]** para volver a la pantalla de detalles de la programación, o **[!UICONTROL Consultas programadas]** para volver a la [!UICONTROL Consultas programadas] pestaña .
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de credenciales del servicio de consulta
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -28,11 +28,11 @@ Puede utilizar las credenciales caducadas para configurar rápidamente una conex
 
 La variable **[!UICONTROL Credenciales de caducidad]** proporciona la siguiente información:
 
-- **[!UICONTROL Host]**: Nombre del host al que se conectará. Para conectarse al servicio de consulta, esto incluirá el nombre de la organización de IMS que está utilizando actualmente.
-- **[!UICONTROL Puerto]**: Número de puerto del host al que se conectará.
-- **[!UICONTROL Base de datos]**: Nombre de la base de datos a la que se conectará.
-- **[!UICONTROL Nombre de usuario]**: El nombre de usuario que utilizará para conectarse al servicio de consulta.
-- **[!UICONTROL Contraseña]**: La contraseña que utilizará para conectarse al servicio de consulta.
+- **[!UICONTROL Host]**: Nombre del host al que conectar el cliente. Esto incorpora el nombre de su organización como se ve en la cinta superior de la interfaz de usuario de Platform.
+- **[!UICONTROL Puerto]**: Número de puerto del host al que se va a conectar.
+- **[!UICONTROL Base de datos]**: Nombre de la base de datos a la que conectar un cliente.
+- **[!UICONTROL Nombre de usuario]**: El nombre de usuario utilizado para conectarse al servicio de consulta.
+- **[!UICONTROL Contraseña]**: La contraseña utilizada para conectarse al servicio de consulta. Las contraseñas de la interfaz de usuario tienen un cifrado hash para la seguridad. Seleccione el icono de copia (![El icono de copia.](../images/ui/credentials/copy-icon.png)) para copiar sus credenciales completas y sin hash en el portapapeles.
 - **[!UICONTROL PSQL, comando]**: Un comando que ha insertado automáticamente toda la información relevante para que se conecte al servicio de consulta mediante PSQL en la línea de comandos.
 - **[!UICONTROL Caduca]**: La fecha y hora de caducidad de las credenciales que caducan. La duración de validez predeterminada del token es de 24 horas, pero se puede cambiar en la configuración avanzada del Admin Console.
 

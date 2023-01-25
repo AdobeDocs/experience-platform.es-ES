@@ -2,10 +2,10 @@
 title: Plantillas de consulta
 description: Las plantillas de consulta son consultas SQL guardadas reutilizables y que otros usuarios pueden reutilizar para ahorrar tiempo y esfuerzo. Se pueden crear mediante el Editor de consultas o la API del servicio de consultas y están disponibles para su uso en todos los conjuntos de datos del Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +27,8 @@ Puede crear plantillas de consulta mediante dos métodos, ya sea realizando una 
 
 Consulte la documentación para obtener instrucciones sobre cómo utilizar el Editor de consultas para [write](./user-guide.md#query-authoring) y [guardar consultas](./user-guide.md#saving-queries). Una vez que haya asignado un nombre a la consulta y la haya guardado, podrá reutilizarla como plantilla de consulta desde el [!UICONTROL Plantillas] pestaña .
 
+## Examinar plantillas de consulta {#browse}
+
 En el espacio de trabajo Consultas de la interfaz de usuario de Platform, seleccione **[!UICONTROL Plantillas]** para mostrar la lista de consultas guardadas disponibles.
 
 ![El espacio de trabajo de consultas con la pestaña Plantillas resaltada.](../images/ui/query-templates/query-templates.png)
@@ -34,6 +36,13 @@ En el espacio de trabajo Consultas de la interfaz de usuario de Platform, selecc
 Para encontrar información de plantilla relevante, seleccione cualquier plantilla de consulta de la lista disponible para abrir el panel de detalles.
 
 ![El panel de detalles del espacio de trabajo de consultas con el ID de consulta resaltado.](../images/ui/query-templates/details-panel.png)
+
+Desde el panel de detalles puede ejecutar cuatro acciones independientes:
+
+* Select **[!UICONTROL Conjunto de datos de salida]** para editar el conjunto de datos de salida de la plantilla seleccionada.
+* Select **[!UICONTROL Ver programación]** para navegar hasta el [!UICONTROL Programaciones] pestaña . Esta vista contiene toda la información de programación asociada a la consulta.
+* Select **[!UICONTROL Eliminar consulta]** para eliminar la plantilla.
+* Seleccione el nombre de la plantilla para desplazarse al Editor de consultas donde el SQL se rellena previamente para su edición.
 
 ### Utilizar la API del servicio de consulta para crear una plantilla
 

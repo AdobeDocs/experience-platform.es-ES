@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del servicio de consulta
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1117'
 ht-degree: 2%
 
 ---
@@ -61,6 +61,8 @@ La variable **[!UICONTROL Plantillas]** muestra las consultas guardadas por los 
 | **[!UICONTROL Modificado por]** | El último usuario que modificó la consulta. Cualquier usuario de su organización con acceso a [!DNL Query Service] puede modificar consultas. |
 | **[!UICONTROL Última modificación]** | La fecha y hora de la última modificación de la consulta, en el huso horario del explorador. |
 
+Consulte la [plantillas de consulta](./query-templates.md) documentación para obtener más información sobre las plantillas en la interfaz de usuario de Platform.
+
 ## Registro
 
 La variable **[!UICONTROL Registro]** proporciona una lista de consultas que se han ejecutado anteriormente. De forma predeterminada, el registro enumera las consultas en cronología inversa.
@@ -69,13 +71,16 @@ La variable **[!UICONTROL Registro]** proporciona una lista de consultas que se 
 
 | Columna | Descripción |
 | --- | --- |
-| **[!UICONTROL Nombre]** | El nombre de la consulta, que consta de los primeros varios caracteres de la consulta SQL. Si se selecciona el nombre, se abre la variable [!DNL Query Editor], lo que le permite editar la consulta. Puede utilizar la barra de búsqueda para buscar en el Nombre de una consulta. Las búsquedas distinguen entre mayúsculas y minúsculas. |
-| **[!UICONTROL Creado por]** | El nombre de la persona que creó la consulta. |
-| **[!UICONTROL Cliente]** | El cliente utilizado para la consulta. |
-| **[!UICONTROL Conjunto de datos]** | El conjunto de datos de entrada utilizado por la consulta. Seleccione el conjunto de datos para ir a la pantalla de detalles del conjunto de datos de entrada. |
+| **[!UICONTROL Nombre]** | El nombre de la consulta, que consta de los primeros varios caracteres de la consulta SQL. Seleccione el nombre de la plantilla para abrir el [!UICONTROL Detalles del registro de consultas] para esa ejecución. Puede utilizar la barra de búsqueda para buscar el nombre de una consulta. Las búsquedas distinguen entre mayúsculas y minúsculas. |
+| **[!UICONTROL Hora de inicio]** | Hora a la que se ejecutó la consulta. |
+| **[!UICONTROL Hora completa]** | La hora a la que se completó la ejecución de la consulta. |
 | **[!UICONTROL Estado]** | Estado actual de la consulta. |
-| **[!UICONTROL Última ejecución]** | La última vez que se ejecutó la consulta. Puede ordenar la lista en orden ascendente o descendente seleccionando la flecha sobre esta columna. |
-| **[!UICONTROL Tiempo de ejecución]** | Cantidad de tiempo que se tardó en ejecutar la consulta. |
+| **[!UICONTROL Conjunto de datos]** | El conjunto de datos de entrada utilizado por la consulta. Seleccione el conjunto de datos para ir a la pantalla de detalles del conjunto de datos de entrada. |
+| **[!UICONTROL Cliente]** | El cliente utilizado para la consulta. |
+| **[!UICONTROL Creado por]** | El nombre de la persona que creó la consulta. |
+
+>!![Note]
+Seleccione el icono de lápiz (![Un icono de lápiz.](../images/ui/overview/edit-icon.png)) de cualquier fila del registro de consultas para ir a la [!DNL Query Editor]. La consulta se rellena previamente para facilitar la edición.
 
 ## Credenciales
 
