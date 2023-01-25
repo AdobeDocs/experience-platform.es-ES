@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del servicio de consulta
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
+source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1135'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ La variable **[!UICONTROL Plantillas]** muestra las consultas guardadas por los 
 
 Consulte la [plantillas de consulta](./query-templates.md) documentación para obtener más información sobre las plantillas en la interfaz de usuario de Platform.
 
-## Registro
+## Registro {#log}
 
 La variable **[!UICONTROL Registro]** proporciona una lista de consultas que se han ejecutado anteriormente. De forma predeterminada, el registro enumera las consultas en cronología inversa.
 
@@ -81,6 +81,8 @@ La variable **[!UICONTROL Registro]** proporciona una lista de consultas que se 
 
 >!![Note]
 Seleccione el icono de lápiz (![Un icono de lápiz.](../images/ui/overview/edit-icon.png)) de cualquier fila del registro de consultas para ir a la [!DNL Query Editor]. La consulta se rellena previamente para facilitar la edición.
+
+Consulte la [documentación de registros de consulta](./query-logs.md) para obtener más información sobre los archivos de registro generados automáticamente por un evento de consulta.
 
 ## Credenciales
 
