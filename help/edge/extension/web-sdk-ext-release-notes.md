@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión del SDK web de Adobe Experience Platform
 description: Extensión de etiquetas de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 47e92e4e7475a23c5c65085db57dfc7a2822b8b6
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 41%
+source-wordcount: '1528'
+ht-degree: 40%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 41%
 # Notas de la versión de Adobe Experience Platform Web SDK
 
 Este documento cubre las notas de la versión de la extensión de etiqueta del SDK web de Adobe Experience Platform. Para ver las últimas notas de la versión del propio SDK, consulte la [Notas de la versión del SDK web de plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versión 2.15.0: 25 de enero de 2023
+
+* Se ha corregido un problema en el cual los usuarios sin acceso a conjuntos de datos no podían editar la configuración de la extensión.
+* Se ha agregado compatibilidad con superficies en la variable `sendEvent` acción.
+
+Contiene la versión 2.14.0 del SDK web de Adobe Experience Platform.
+
 
 ## Versión 2.14.1: 13 de octubre de 2022
 

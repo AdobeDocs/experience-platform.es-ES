@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1470'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 3%
 
 Este documento cubre las notas de la versión del SDK web de Adobe Experience Platform.
 Para ver las últimas notas de la versión de la extensión de etiqueta del SDK web, consulte la [Notas de la versión de la extensión de etiqueta del SDK web](extension/web-sdk-ext-release-notes.md).
+
+## Versión 2.14.0: 25 de enero de 2023
+
+**Nuevas funciones**
+
+* (Beta) Se ha agregado compatibilidad con superficies y propuestas AJO.
+
+**Correcciones y mejoras**
+
+* Se ha corregido un problema con las acciones de código personalizado del VEC de Adobe Target por el que el código se insertaba en una ubicación alternativa en lugar de con [!DNL at.js].
+* Se ha corregido un problema en el cual, en algunos casos extremos, el encabezado &quot;referente&quot; no se establecía correctamente en las solicitudes realizadas a la red perimetral.
+* Se ha corregido un problema en el cual [sugerencia del cliente del agente de usuario](fundamentals/user-agent-client-hints.md) las propiedades se pueden establecer en un tipo incorrecto.
+* Se ha corregido un problema en el cual `placeContext.localTime` no coincidía con el esquema .
 
 ## Versión 2.13.1: 13 de octubre de 2022
 
@@ -139,7 +152,7 @@ Para ver las últimas notas de la versión de la extensión de etiqueta del SDK 
 
 ## Versión 2.2.0: octubre de 2020
 
-* Corrección de errores: El objeto Opt-in impedía que Alloy realizara llamadas cuando `idMigrationEnabled` es `true`.
+* Corrección de errores: El objeto Opt-in bloqueaba a Alloy de realizar llamadas cuando `idMigrationEnabled` es `true`.
 * Corrección de errores: Haga que Alloy tenga en cuenta las solicitudes que deben devolver ofertas de personalización para evitar un problema que parpadee.
 
 ## Versión 2.1.0: agosto de 2020
