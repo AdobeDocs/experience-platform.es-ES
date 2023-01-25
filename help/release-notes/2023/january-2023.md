@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2023
 description: Notas de la versión de enero de 2023 para Adobe Experience Platform.
-source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
+source-git-commit: 68e5baac9012a33d179f8ebff23deda7a8efd26b
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1371'
 ht-degree: 6%
 
 ---
@@ -18,6 +18,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [Recopilación de datos](#data-collection)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Perfil del cliente en tiempo real](#profile)
+- [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
 ## Assurance {#assurance}
@@ -93,15 +94,6 @@ Para obtener más información sobre XDM en Platform, consulte la [Información 
 
 Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de los clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
 
-**Funciones nuevas o actualizadas**
-
-| Función | Descripción |
-| ------- | ----------- |
-| Caducidad de pertenencia a segmentos generada por la plataforma | Cualquier pertenencia a un segmento que se encuentre en la `Exited` durante más de 30 días, según la variable `lastQualificationTime` estará sujeto a eliminación. |
-| Caducidad de pertenencia a una audiencia externa | De forma predeterminada, las suscripciones a audiencias externas se conservan durante 30 días. Para conservarlos durante más tiempo, utilice el `validUntil` durante la ingesta de datos de audiencia. |
-
-{style=&quot;table-layout:auto&quot;}
-
 **Próxima desaprobación** {#deprecation}
 
 Para eliminar la redundancia en el ciclo vital de la pertenencia a los segmentos, la variable `Existing` se desaprobará del [mapa de pertenencia a segmentos](../../xdm/field-groups/profile/segmentation.md) a finales de marzo de 2023. Un anuncio de seguimiento incluirá la fecha exacta de desaprobación.
@@ -111,6 +103,21 @@ Tras el desuso, los perfiles cualificados en un segmento se representarán como 
 Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) y tienen en su lugar procesos descendentes automatizados basados en el `Existing` estado. Revise sus integraciones descendentes si este es el caso. Si le interesa identificar perfiles recién calificados más allá de un cierto tiempo, considere la posibilidad de usar una combinación de `Realized` y `lastQualificationTime` en el mapa de pertenencia a segmentos. Para obtener más información, póngase en contacto con su representante del Adobe.
 
 Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de perfil, lea la [Resumen del perfil del cliente en tiempo real](../../profile/home.md).
+
+## Servicio de segmentación {#segmentation}
+
+[!DNL Segmentation Service] define un subconjunto de perfiles determinado describiendo los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Caducidad de pertenencia a segmentos generada por la plataforma | Cualquier pertenencia a un segmento que se encuentre en la `Exited` durante más de 30 días, según la variable `lastQualificationTime` estará sujeto a eliminación. |
+| Caducidad de pertenencia a una audiencia externa | De forma predeterminada, las suscripciones a audiencias externas se conservan durante 30 días. Para conservarlos durante más tiempo, utilice el `validUntil` durante la ingesta de datos de audiencia. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información, consulte [!DNL Segmentation Service], consulte la [Información general sobre la segmentación](../../segmentation/home.md).
 
 ## Fuentes {#sources}
 
