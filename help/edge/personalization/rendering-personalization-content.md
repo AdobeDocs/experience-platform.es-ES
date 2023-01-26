@@ -3,20 +3,20 @@ title: Representar contenido personalizado mediante el SDK web de Adobe Experien
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Adobe Experience Platform.
 keywords: personalización;renderdecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
+source-git-commit: c75a8bdeaba67259b5f4b4ce025d5e128d763040
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 1%
+source-wordcount: '962'
+ht-degree: 2%
 
 ---
 
 # Representar contenido personalizado
 
-El SDK web de Adobe Experience Platform admite la recuperación de contenido personalizado desde soluciones de personalización de Adobe, incluidas [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) y [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=es).
+El SDK web de Adobe Experience Platform admite la recuperación de contenido personalizado desde soluciones de personalización de Adobe, incluidas [Adobe Target](https://business.adobe.com/es/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=es) y [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=es).
 
 Además, el SDK web potencia las capacidades de personalización de la misma página y de la página siguiente a través de destinos de personalización de Adobe Experience Platform, como [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y [conexión personalizada personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía dedicada](../../destinations/ui/configure-personalization-destinations.md).
 
-Contenido creado en Adobe Target [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) el SDK puede recuperarlo y procesarlo automáticamente. Contenido creado en Adobe Target [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) o Offer decisioning no se puede representar automáticamente por el SDK. En su lugar, debe solicitar este contenido mediante el SDK y, a continuación, renderizar el contenido manualmente.
+Contenido creado en Adobe Target [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) y Adobe Journey Optimizer [Interfaz de usuario de Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) el SDK puede recuperarlo y procesarlo automáticamente. Contenido creado en Adobe Target [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) o Offer decisioning no se puede representar automáticamente por el SDK. En su lugar, debe solicitar este contenido mediante el SDK y, a continuación, renderizar el contenido manualmente.
 
 ## Procesamiento automático de contenido
 
@@ -107,7 +107,7 @@ En el ejemplo, la variable `renderDecisions` no se ha definido como `true` cuand
 
 Si en su lugar hubiera configurado la variable `renderDecisions` a `true` al enviar el evento, el SDK habría intentado procesar cualquier propuesta que fuera apta para el procesamiento automático (como se describió anteriormente). Como consecuencia, cada uno de los objetos de propuesta tendría su `renderAttempted` propiedad establecida en `true`. En este caso, no sería necesario procesar manualmente estas propuestas.
 
-Hasta ahora, solo hemos hablado del contenido de personalización que se puede procesar automáticamente (es decir, cualquier contenido creado en el Compositor de experiencias visuales de Adobe Target). Para recuperar cualquier contenido personalizado _not_ apto para el procesamiento automático, debe solicitar el contenido rellenando la variable `decisionScopes` al enviar el evento. Un ámbito es una cadena que identifica una propuesta concreta que desea recuperar del servidor.
+Hasta ahora, solo hemos hablado del contenido de personalización que se puede procesar automáticamente (es decir, cualquier contenido creado en el Compositor de experiencias visuales de Adobe Target o en la interfaz de usuario de Adobe Journey Optimizer Web Campaign). Para recuperar cualquier contenido personalizado _not_ apto para el procesamiento automático, debe solicitar el contenido rellenando la variable `decisionScopes` al enviar el evento. Un ámbito es una cadena que identifica una propuesta concreta que desea recuperar del servidor.
 
 Vea el siguiente ejemplo:
 
@@ -303,7 +303,7 @@ La variable `applyPropositions` permite procesar o ejecutar una matriz de propue
 
 >[!IMPORTANT]
 >
->Si las propuestas para la variable `__view__` el ámbito se procesó al cargar la página, sus `renderAttempted` el indicador se establecerá en `true`. La variable `applyPropositions` no vuelve a procesar el `__view__` propuestas de ámbito que tengan la variable `renderAttempted: true` indicador.
+>Si las propuestas para la variable `__view__` el ámbito (o una superficie web) se representaba al cargar la página, sus `renderAttempted` el indicador se establecerá en `true`. La variable `applyPropositions` no vuelve a procesar el `__view__` propuestas de ámbito (o superficie web) que tengan la variable `renderAttempted: true` indicador.
 
 ### Caso de uso 1: Volver a procesar propuestas de vista de aplicación de una sola página
 
