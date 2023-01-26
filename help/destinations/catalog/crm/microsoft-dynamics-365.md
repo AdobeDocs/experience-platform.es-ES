@@ -2,13 +2,14 @@
 keywords: crm;CRM;destinos crm;Microsoft Dynamics 365;destino crm de Microsoft Dynamics 365
 title: Conexión de Microsoft Dynamics 365
 description: El destino de Microsoft Dynamics 365 le permite exportar los datos de su cuenta y activarlos en Microsoft Dynamics 365 según sus necesidades comerciales.
-source-git-commit: 12af2ee40d355119104d741630654d2847df6cc5
+last-substantial-update: 2022-11-08T00:00:00Z
+exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
 source-wordcount: '1790'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Microsoft Dynamics 365] connection
 
