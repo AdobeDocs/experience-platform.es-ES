@@ -1,14 +1,18 @@
 ---
 title: Registros de consultas
 description: Los registros de consulta se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudarle a solucionar el problema. Este documento describe cómo utilizar y desplazarse por la sección Registros del servicio de consulta de la interfaz de usuario.
-source-git-commit: 22deca5f9bcf6bcf97cca01b97fce9d22800b767
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
 # Registros de consultas
+
+>[!IMPORTANT]
+>
+>Algunas funciones de registros de consulta están actualmente en una versión limitada y no están disponibles para todos los clientes. La interfaz de usuario puede aparecer de forma ligeramente diferente sin un icono de edición. Además, el proceso de selección de un nombre de consulta puede ir al Editor de consultas en lugar de a la [!UICONTROL Detalles del registro de consultas] vista.
 
 Adobe Experience Platform mantiene un registro de todos los eventos de consulta que se producen a través de la API y la IU. Esta información está disponible en la interfaz de usuario del servicio de consultas desde el [!UICONTROL Registros] pestaña .
 
@@ -39,6 +43,10 @@ Cada fila representa los datos de registro de una ejecución de consulta asociad
 En el panel de detalles del registro, puede seleccionar un nuevo conjunto de datos de salida y ver o copiar la consulta SQL completa que se utilizó en la ejecución.
 
 ![El espacio de trabajo Registro de consultas con una fila seleccionada y el conjunto de datos de salida y la consulta SQL resaltados.](../images/ui/query-log/edit-output-dataset.png)
+
+>[!IMPORTANT]
+>
+>Algunas funciones de registros de consulta están actualmente en una versión limitada y no están disponibles para todos los clientes.
 
 También puede seleccionar un nombre de plantilla de consulta en la [!UICONTROL Nombre] para navegar directamente a la [!UICONTROL Detalles del registro de consultas] vista.
 

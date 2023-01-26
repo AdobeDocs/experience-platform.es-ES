@@ -2,9 +2,9 @@
 title: Monitorizar consultas programadas
 description: Obtenga información sobre cómo monitorizar consultas a través de la interfaz de usuario del servicio de consulta.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: d4966eea90884cea8fbb4b72be8d9625d5745d57
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1230'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,11 @@ Puede copiar el SQL de consulta en el portapapeles desde esta vista. Seleccione 
 
 ![La pantalla de detalles de ejecución con el icono de copia SQL resaltado.](../images/ui/monitor-queries/copy-sql.png)
 
-### Ejecutar detalles para consultas con bloque anónimo {#anonymous-block-queries}
+### (Versión limitada) Ejecute detalles para consultas con bloques anónimos {#anonymous-block-queries}
+
+>[!IMPORTANT]
+>
+>La función de supervisión de consultas que muestra detalles de ejecución para consultas de bloques anónimas, se encuentra actualmente en una versión limitada y no está disponible para todos los clientes.
 
 Las consultas que utilizan bloques anónimos para conformar sus sentencias SQL se separan en sus consultas individuales. Esto le permite inspeccionar individualmente los detalles de ejecución de cada bloque de consulta.
 
