@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
+source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '875'
 ht-degree: 14%
 
 ---
@@ -206,6 +206,7 @@ ht-degree: 14%
    - [Reintentar ejecuciones de flujo de datos fallidas](tutorials/api/retry-flows.md)
    - [Eliminar cuentas](tutorials/api/delete.md)
    - [Eliminar flujos de datos](tutorials/api/delete-dataflows.md)
+   - [Ingesta de datos cifrados](tutorials/api/encrypt-data.md)
 - Tutoriales de la interfaz de usuario {#ui-tutorials}
    - Crear una conexión de origen {#create}
       - aplicaciones de Adobe {#adobe-applications}
