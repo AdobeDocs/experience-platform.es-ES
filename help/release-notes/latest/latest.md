@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión más recientes de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
+source-git-commit: 08ad27303b88826fd7e0fcc0a8b3d498de58c260
 workflow-type: tm+mt
-source-wordcount: '1994'
-ht-degree: 5%
+source-wordcount: '1847'
+ht-degree: 6%
 
 ---
 
@@ -75,10 +75,6 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
     <tr>
         <td><b>Corrección o mejora</b></td>
         <td><b>Descripción</b></td>
-    </tr>
-    <tr>
-        <td>Validación de la interfaz de usuario y la API para asignaciones obligatorias y asignaciones duplicadas (PLAT-123316)</td>
-        <td>La validación ahora se aplica de la siguiente manera en la interfaz de usuario y la API al <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">campos de asignación</a> en el flujo de trabajo activar destinos :<ul><li><b>Asignaciones necesarias</b>: Si el desarrollador de destino ha configurado el destino con las asignaciones necesarias (por ejemplo, la variable <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> ), el usuario debe agregar estas asignaciones necesarias al activar los datos en el destino. </li><li><b>Duplicar asignaciones</b>: En el paso de asignación del flujo de trabajo de activación, puede añadir valores duplicados en los campos de origen, pero no en los campos de destino. Consulte la siguiente tabla para ver un ejemplo de combinaciones de asignación permitidas y prohibidas. <br><table><thead><tr><th>Permitido/prohibido</th><th>Campo de origen</th><th>Campo de destino</th></tr></thead><tbody><tr><td>Permitido</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias de correo electrónico 2</li></ul></td></tr><tr><td>Prohibido</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>
     <tr>
         <td>Se ha actualizado el comportamiento de exportación a destinos basados en archivos (PLAT-123316)</td>
