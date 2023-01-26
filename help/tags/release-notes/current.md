@@ -2,14 +2,23 @@
 title: Notas de la versión de etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
+source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '497'
 ht-degree: 5%
 
 ---
 
 # Notas de la versión para etiquetas y reenvío de eventos
+
+## 25 de enero de 2022
+
+* **Nueva pantalla de inicio**: La página de inicio de la interfaz de usuario de recopilación de datos se ha actualizado para incluir información de integración y vínculos útiles para optimizar la productividad. Esto incluye:
+   1. Documentación y flujos de trabajo recomendados para empezar
+   1. Propiedades, reglas y elementos de datos recientes
+   1. Extensiones populares
+   1. Nuevas actualizaciones de extensión con una función de instalación rápida
+* **Enviar datos a [!DNL Google Ads] uso del reenvío de eventos**: Ahora puede usar la variable [[!DNL Google Ads Enhanced Conversions] Extensión de API](../extensions/server/google-ads-enhanced-conversions/overview.md) para el reenvío de eventos, combinado con [Secretos de Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2), para enviar de forma segura datos del lado del servidor a [!DNL Google Ads] en tiempo real.
 
 ## 23 de noviembre de 2022
 
