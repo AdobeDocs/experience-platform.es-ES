@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2023
 description: Notas de la versión de enero de 2023 para Adobe Experience Platform.
-source-git-commit: 4d69d0dbb1dd72279a6999cf2cda94e9fb380572
+source-git-commit: 3ea2ac1b048adb14aa93b42e5b23ea70bb995414
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1905'
 ht-degree: 5%
 
 ---
@@ -65,6 +65,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
+| Mejora del consentimiento de medios de pago para integraciones con destinos de flujo continuo | Una mejora de [aplicación de la directiva de consentimiento](/help/data-governance/enforcement/auto-enforcement.md) en [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations) para casos de uso de activación de medios de pago. Los perfiles que han retirado el consentimiento de una experiencia en particular ahora se eliminan de forma proactiva de estos destinos. <br> <b>Nota</b>: Esta funcionalidad solo está disponible para los clientes de **[!UICONTROL Protección de seguridad y privacidad]** y los de **[!UICONTROL Escudo sanitario]**. |
 | Nuevas opciones de delimitador para conectores de destino de almacenamiento de nube beta | Tres nuevas opciones de delimitador (dos puntos) `:`, Tubería, Punto y coma `;`) ya están disponibles para los nuevos destinos de almacenamiento de la nube beta: [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Almacenamiento de Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Zona de aterrizaje de datos](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Almacenamiento en la nube de Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Obtenga más información sobre los [opciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) para destinos basados en archivos. |
 | Nuevo parámetro opcional disponible en [campos de datos del cliente](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configuraciones en [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Utilice este parámetro cuando necesite crear un campo de datos de cliente cuyo valor debe ser único en todos los flujos de datos de destino configurados por la organización de un usuario. <br> Por ejemplo, la variable **[!UICONTROL Alias de integración]** en el campo [[!UICONTROL Personalización personalizada]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) el destino debe ser único, lo que significa que dos flujos de datos independientes a este destino no pueden tener el mismo valor para este campo. |
 
