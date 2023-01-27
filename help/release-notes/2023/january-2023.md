@@ -1,9 +1,7 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2023
 description: Notas de la versión de enero de 2023 para Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: f419856a0b75b04463ff020163bc292833fd02fd
+source-git-commit: 4d69d0dbb1dd72279a6999cf2cda94e9fb380572
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 5%
