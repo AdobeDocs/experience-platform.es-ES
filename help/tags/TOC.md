@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: c2312a65388e8aec7cdeb8daf20fe9de7d1fa4fc
+source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '961'
 ht-degree: 37%
 
 ---
@@ -165,7 +165,7 @@ ht-degree: 37%
       * [Etiqueta del sitio global de Google (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
       * [InMoment](https://exchange.adobe.com/apps/ec/100847)
       * [Ayuda de JSON](https://exchange.adobe.com/apps/ec/106449)
-      * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523)
+      * [JW Player Analytics](https://exchange.adobe.com/apps/ec/101523)
       * [KickFire](https://exchange.adobe.com/apps/ec/101621)
       * [Tabla de asignación](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
