@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aspectos básicos de la composición del esquema
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4119'
 ht-degree: 2%
 
 ---
@@ -215,11 +215,11 @@ Para obtener la lista más actualizada de los grupos de campos XDM estándar dis
 
 ### Tipo de datos {#data-type}
 
-Los tipos de datos se utilizan como tipos de campos de referencia en clases o esquemas del mismo modo que los campos literales básicos. La diferencia clave es que los tipos de datos pueden definir varios subcampos. Al igual que un grupo de campos, un tipo de datos permite el uso coherente de una estructura de varios campos, pero tiene más flexibilidad que un grupo de campos, ya que un tipo de datos se puede incluir en cualquier parte de un esquema al agregarlo como el &quot;tipo de datos&quot; de un campo.
+Los tipos de datos se utilizan como tipos de campos de referencia en clases o esquemas del mismo modo que los campos literales básicos. La diferencia clave es que los tipos de datos pueden definir varios subcampos. Pueden definir varios subcampos del mismo modo que los grupos de campos, pero la diferencia clave es que los tipos de datos se pueden incluir en cualquier parte de un esquema al agregarlos como el &quot;tipo de datos&quot; de un campo. Aunque los grupos de campos solo son compatibles con ciertas clases, los tipos de datos se pueden incluir en cualquier clase principal o grupo de campos.
 
 [!DNL Experience Platform] proporciona varios tipos de datos comunes como parte del [!DNL Schema Registry] para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en la sección [!DNL Schema Registry] tutoriales, en los que resultará más claro a medida que siga los pasos para definir los tipos de datos.
 
-La siguiente captura de pantalla muestra cómo se representan los tipos de datos en la interfaz de usuario de Platform. Uno de los campos proporcionados por el [!UICONTROL Detalles demográficos] el grupo de campos usa el[!UICONTROL Nombre de la persona]&quot; tipo de datos, tal como indica el texto que sigue al carácter de barra vertical (`|`) junto al nombre del campo. Este tipo de datos concreto proporciona varios subcampos relacionados con el nombre de una persona individual, una construcción que puede reutilizarse para otros campos en los que es necesario capturar el nombre de una persona.
+La siguiente captura de pantalla muestra cómo se representan los tipos de datos en la interfaz de usuario de Platform. Uno de los campos proporcionados por el [!UICONTROL Detalles demográficos] el grupo de campos usa el[!UICONTROL Objeto]&quot; tipo de datos, tal como indica el texto que sigue al carácter de barra vertical (`|`) junto al nombre del campo. Este tipo de datos concreto proporciona varios subcampos relacionados con el nombre de una persona individual, una construcción que puede reutilizarse para otros campos en los que es necesario capturar el nombre de una persona.
 
 ![](../images/schema-composition/data-type.png)
 

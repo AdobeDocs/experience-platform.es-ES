@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definición de campos XDM en la interfaz de usuario
 description: Obtenga información sobre cómo definir campos XDM en la interfaz de usuario del Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1407'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ Dependiendo de si va a añadir un campo directamente a un esquema o a sus clases
 
 ## Definición de las propiedades de un campo {#define}
 
-Después de seleccionar la variable **plus (+)** icono, un **[!UICONTROL Campo nuevo]** aparece en el lienzo, ubicado dentro de un objeto con espacio de nombres para su ID de inquilino único (se muestra como `_tenantId` en el ejemplo siguiente). Todos los campos personalizados que se agregan a un esquema se colocan automáticamente dentro de este espacio de nombres para evitar conflictos con otros campos de clases y grupos de campos proporcionados por Adobe.
+Después de seleccionar la variable **plus (+)** icono, una **[!UICONTROL Campo sin título]** el marcador de posición aparece en el lienzo.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,8 +52,8 @@ En el carril derecho debajo de **[!UICONTROL Propiedades del campo]**, puede con
 
 | Propiedad Field | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre del campo] | Un nombre único y descriptivo para el campo. Tenga en cuenta que el nombre del campo no se puede cambiar una vez guardado el esquema.<br><br>El nombre debería escribirse idealmente en camelCase. Puede contener caracteres alfanuméricos, guiones o guiones bajos, pero **no podrá** empiece con un guion bajo.<ul><li>**Correcto**: `fieldName`</li><li>**Aceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrecto**: `_fieldName`</li></ul> |
-| [!UICONTROL Nombre para mostrar] | Nombre reconocible para el campo. |
+| [!UICONTROL Nombre del campo] | Un nombre único y descriptivo para el campo. Tenga en cuenta que el nombre del campo no se puede cambiar una vez guardado el esquema. Este valor se utiliza para identificar y hacer referencia al campo en el código y en otras aplicaciones posteriores<br><br>El nombre debería escribirse idealmente en camelCase. Puede contener caracteres alfanuméricos, guiones o guiones bajos, pero **no podrá** empiece con un guion bajo.<ul><li>**Correcto**: `fieldName`</li><li>**Aceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrecto**: `_fieldName`</li></ul> |
+| [!UICONTROL Nombre para mostrar] | Un nombre para mostrar para el campo. Este es el nombre que se utilizará para representar el campo dentro del lienzo del Editor de esquemas. |
 | [!UICONTROL Tipo] | Tipo de datos que contendrá el campo. En este menú desplegable, puede seleccionar una de las [tipos escalares estándar](../../schema/field-constraints.md) compatible con XDM, o con uno de los campos múltiples [tipos de datos](../resources/data-types.md) que se han definido previamente en la variable [!DNL Schema Registry].<br><br>También puede seleccionar **[!UICONTROL Búsqueda avanzada de tipo]** para buscar y filtrar tipos de datos existentes y localizar el tipo deseado con mayor facilidad. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -70,7 +70,7 @@ Una vez que haya terminado de configurar el campo, seleccione **[!UICONTROL Apli
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-El lienzo se actualiza para mostrar el nombre y el tipo del campo, y el carril derecho muestra ahora la ruta del campo, además de sus otras propiedades.
+El lienzo se actualiza para mostrar el campo recién agregado, ubicado dentro de un objeto que tiene un área de nombres con su ID de inquilino único (como se muestra `_tenantId` en el ejemplo siguiente). Todos los campos personalizados que se agregan a un esquema se colocan automáticamente dentro de este espacio de nombres para evitar conflictos con otros campos de clases y grupos de campos proporcionados por Adobe. El carril derecho ahora enumera la ruta del campo, además de sus otras propiedades.
 
 ![](../../images/ui/fields/overview/field-added.png)
 
