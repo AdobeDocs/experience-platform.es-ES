@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2023
 description: Notas de la versión de enero de 2023 para Adobe Experience Platform.
-source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
+source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1949'
 ht-degree: 5%
 
 ---
@@ -148,8 +148,9 @@ Para obtener más información sobre el Perfil del cliente en tiempo real, inclu
 
 | Función | Descripción |
 | ------- | ----------- |
-| Caducidad de pertenencia a segmentos generada por la plataforma | Cualquier pertenencia a un segmento que se encuentre en la `Exited` durante más de 30 días, según la variable `lastQualificationTime` estará sujeto a eliminación. |
+| Importación masiva de valores en el Generador de segmentos | El Generador de segmentos ahora admite la importación de varios valores, ya sea cargando un archivo CSV o TSV o insertando manualmente valores separados por comas. Encontrará más información dentro de la variable [Guía del Generador de segmentos](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Caducidad de pertenencia a una audiencia externa | De forma predeterminada, las suscripciones a audiencias externas se conservan durante 30 días. Para conservarlos durante más tiempo, utilice el `validUntil` durante la ingesta de datos de audiencia. |
+| Caducidad de pertenencia a segmentos generada por la plataforma | Cualquier pertenencia a un segmento que se encuentre en la `Exited` durante más de 30 días, según la variable `lastQualificationTime` estará sujeto a eliminación. |
 
 {style=&quot;table-layout:auto&quot;}
 

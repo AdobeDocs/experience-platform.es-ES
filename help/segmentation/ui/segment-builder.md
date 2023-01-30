@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
-source-wordcount: '3101'
+source-wordcount: '3258'
 ht-degree: 1%
 
 ---
@@ -116,7 +116,7 @@ Para agregar una regla nueva a la definición del segmento, arrastre un mosaico 
 
 >[!IMPORTANT]
 >
->Los últimos cambios realizados en Adobe Experience Platform han actualizado el uso de la variable `OR` y `AND` operadores lógicos entre eventos. Estas actualizaciones no afectarán a los segmentos existentes. Sin embargo, estos cambios afectarán a todas las actualizaciones posteriores de segmentos existentes y nuevas creaciones de segmentos. Lea el [actualización de constantes temporales](./segment-refactoring.md) para obtener más información.
+>Los últimos cambios realizados en Adobe Experience Platform han actualizado el uso de la variable `OR` y `AND` operadores lógicos entre eventos. Estas actualizaciones no afectarán a los segmentos existentes. Sin embargo, estos cambios afectarán a todas las actualizaciones subsiguientes de segmentos existentes y nuevas creaciones de segmentos. Lea el [actualización de constantes temporales](./segment-refactoring.md) para obtener más información.
 
 Al seleccionar un valor para el atributo, verá una lista de valores de enumeración que puede ser el atributo.
 
@@ -125,6 +125,22 @@ Al seleccionar un valor para el atributo, verá una lista de valores de enumerac
 Si selecciona un valor de esta lista de enumeraciones, el valor se delineará con un borde sólido. Sin embargo, para los campos que utilizan `meta:enum` (suave) enumeraciones, también puede seleccionar un valor que sea **not** de la lista de enumeraciones. Si crea su propio valor, se delineará con un borde de puntos, junto con una advertencia de que este valor no está en la lista de enumeración.
 
 ![Advertencia que se muestra si se inserta un valor que no forma parte de la lista de enumeración.](../images/ui/segment-builder/enum-warning.png)
+
+Si está creando varios valores, puede agregarlos todos a la vez mediante la carga masiva. Seleccione el ![icono plus](../images/ui/segment-builder/plus-icon.png) para mostrar la variable **[!UICONTROL Añadir valores de forma masiva]** popover.
+
+![El icono de signo más aparece resaltado y muestra el botón que puede seleccionar para acceder al pover de carga masiva.](../images/ui/segment-builder/add-bulk-values.png)
+
+En el **[!UICONTROL Añadir valores de forma masiva]** Cuando termine, puede cargar un archivo CSV o TSV.
+
+![Se muestra Add values in bulk pover . Se resalta el cuadro de diálogo que puede seleccionar para cargar un archivo CSV o TSV.](../images/ui/segment-builder/bulk-values-popover.png)
+
+Como alternativa, puede añadir manualmente valores separados por comas.
+
+![Se muestra Add values in bulk pover . Tanto el cuadro de diálogo que se puede utilizar para insertar valores como los valores añadidos se resaltan.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+Tenga en cuenta que hay un máximo de 250 valores permitidos. Si supera esta cantidad, deberá eliminar algunos valores antes de agregar más.
+
+![Se muestra una advertencia que indica que ha alcanzado el número máximo de valores.](../images/ui/segment-builder/maximum-values.png)
 
 ### Adición de audiencias
 
