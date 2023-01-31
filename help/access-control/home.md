@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto del Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
 workflow-type: tm+mt
-source-wordcount: '1419'
-ht-degree: 4%
+source-wordcount: '1473'
+ht-degree: 3%
 
 ---
 
@@ -79,6 +79,12 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 
 | Categoría | Permiso | Descripción |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL Ver historial de alertas] | Acceso de solo lectura para el historial de alertas. |
+| [!DNL Alerts] | [!UICONTROL Resolver alertas] | Acceso para leer, editar y eliminar alertas. |
+| [!DNL Alerts] | [!UICONTROL Ver alertas] | Acceso de solo lectura para alertas. |
+| [!DNL Alerts] | [!UICONTROL Administrar alertas] | Acceso para leer, crear, editar y eliminar el historial de alertas. |
+| [!DNL Data Hygiene] | [!UICONTROL Ver higiene de datos] | Acceso de solo lectura para la higiene de los datos. |
+| [!DNL Data Hygiene] | [!UICONTROL Administrar la higiene de los datos] | Acceso para leer, crear, editar y eliminar la higiene de los datos. |
 | [!DNL Data Modeling] | [!UICONTROL Administrar esquemas] | Acceso para leer, crear, editar y eliminar esquemas y recursos relacionados. |
 | [!DNL Data Modeling] | [!UICONTROL Esquemas de vistas] | Acceso de solo lectura a esquemas y recursos relacionados. |
 | [!DNL Data Modeling] | [!UICONTROL Administrar relaciones] | Acceso para leer, crear, editar y eliminar relaciones de esquema. |
@@ -94,9 +100,9 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 | [!DNL Profile Management] | [!UICONTROL Ver directivas de combinación] | Acceso de solo lectura a las directivas de combinación disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Exportar audiencia para segmentos] | Capacidad para exportar un segmento de audiencia evaluado a un conjunto de datos. |
 | [!DNL Profile Management] | [!UICONTROL Evaluar un segmento en una audiencia] | Capacidad para generar perfiles para una audiencia mediante la evaluación de una definición de segmento. |
-| [!DNL Identities] | [!UICONTROL Administrar áreas de nombres de identidad] | Acceso para leer, crear, editar y eliminar áreas de nombres de identidad. |
-| [!DNL Identities] | [!UICONTROL Ver espacios de nombres de identidad] | Acceso de solo lectura para áreas de nombres de identidad. |
-| [!DNL Identities] | [!UICONTROL Ver gráfico de identidad] | Acceso de solo lectura para gráficos de identidad. |
+| [!DNL Identity Management] | [!UICONTROL Administrar áreas de nombres de identidad] | Acceso para leer, crear, editar y eliminar áreas de nombres de identidad. |
+| [!DNL Identity Management] | [!UICONTROL Ver espacios de nombres de identidad] | Acceso de solo lectura para áreas de nombres de identidad. |
+| [!DNL Identity Management] | [!UICONTROL Ver gráfico de identidad] | Acceso de solo lectura para gráficos de identidad. |
 | [!DNL Sandbox Administration] | [!UICONTROL Administrar entornos limitados] | Acceso para leer, crear, editar y eliminar entornos limitados. |
 | [!DNL Sandbox Administration] | [!UICONTROL Entornos aislados de vistas] | Acceso de solo lectura para entornos limitados pertenecientes a su organización. |
 | [!DNL Sandbox Administration] | [!UICONTROL Restablecer un Simulador para pruebas] | Posibilidad de restablecer un simulador para pruebas. |
