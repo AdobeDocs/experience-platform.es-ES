@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de enero de 2023 para Adobe Experience Platform.
-source-git-commit: 39d00824a17fd0b72de84425e5753945ad454b20
+source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
 workflow-type: tm+mt
-source-wordcount: '1948'
-ht-degree: 5%
+source-wordcount: '2293'
+ht-degree: 7%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 5%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Assurance](#assurance)
 - [Recopilación de datos](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -21,6 +22,39 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [Perfil del cliente en tiempo real](#profile)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
+
+## Servicios de inteligencia artificial/aprendizaje automático {#ai-ml}
+
+Los servicios de inteligencia artificial y aprendizaje automático permiten a los analistas y profesionales de marketing aprovechar el poder de la IA/ML en casos de uso de experiencias del cliente. Esto permite que los analistas de marketing configuren predicciones, sin necesidad de experiencia en ciencia de datos, específicas de las necesidades de una empresa mediante configuraciones de nivel empresarial.
+
+### Inteligencia artificial aplicada a la atribución
+
+Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Preparación para la HIPAA | Los clientes del Escudo Sanitario ahora pueden recibir, utilizar, mantener o transmitir información sanitaria protegida en Attribution AI y otras aplicaciones basadas en Experience Platform. Healthcare Shield es para clientes sanitarios que son una entidad cubierta o un asociado comercial bajo HIPAA. Para obtener más información, consulte la documentación de [Servicios y productos de HIPAA y Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+| Editar columnas de conjuntos de datos de puntuación adicionales | Ahora puede agregar o eliminar columnas de conjuntos de datos de puntuación adicionales (columnas de informes) al editar modelos existentes. Esto amplía la flexibilidad de las puntuaciones de atribución para proporcionarle información sobre dimensiones adicionales después de crear un modelo. Consulte la [Guía de Attribution UI](../../intelligent-services/attribution-ai/user-guide.md) para obtener más información. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Consulte la [Servicios AI/ML](../../intelligent-services/attribution-ai/overview.md) información general para obtener más información.
+
+### Customer AI
+
+La Customer AI para Real-time Customer Data Platform se utiliza para generar puntuaciones de tendencia personalizadas, como la pérdida y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Preparación para la HIPAA | Los clientes de Healthcare Shield ahora pueden recibir, utilizar, mantener o transmitir información sanitaria protegida en Customer AI para Real-time Customer Data Platform y otras aplicaciones basadas en Experience Platform. Healthcare Shield es para clientes sanitarios que son una entidad cubierta o un asociado comercial bajo HIPAA. Para obtener más información, consulte la documentación de [Servicios y productos de HIPAA y Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+
+{style=&quot;table-layout:auto&quot;}
+
+Consulte la [Servicios AI/ML](../../intelligent-services/customer-ai/overview.md) información general para obtener más información.
 
 ## Assurance {#assurance}
 
