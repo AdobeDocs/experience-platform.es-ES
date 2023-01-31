@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Guía de la interfaz de usuario de Attribution AI
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2443'
 ht-degree: 0%
 
 ---
@@ -17,41 +17,41 @@ Attribution AI, como parte de Servicios inteligentes es un servicio de atribuci�
 
 Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 
-## Crear una instancia
+## Creación de un modelo
 
 En el [!DNL Adobe Experience Platform] IU, seleccione **[!UICONTROL Servicios]** en el panel de navegación izquierdo. La variable **[!UICONTROL Servicios]** el explorador aparece y muestra los servicios inteligentes de Adobe disponibles. En el contenedor para Attribution AI, seleccione **[!UICONTROL Apertura]**.
 
-![Acceso a la instancia](./images/user-guide/open_Attribution_ai.png)
+![Acceso al modelo](./images/user-guide/open_Attribution_ai.png)
 
-Aparecerá la página del servicio de Attribution AI. Esta página enumera las instancias de servicio de Attribution AI y muestra información sobre ellas, como el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización.
+Aparecerá la página del servicio de Attribution AI. Esta página enumera los modelos de servicio de Attribution AI y muestra información sobre ellos, incluido el nombre del modelo, los eventos de conversión, la frecuencia con la que se ejecuta el modelo y el estado de la última actualización.
 
-Puede encontrar la variable **[!UICONTROL Total de eventos de conversión marcados]** métrica ubicada en la parte inferior derecha del **[!UICONTROL Crear instancia]** contenedor. Esta métrica rastrea el número total de eventos de conversión marcados por Attribution AI para el año natural actual, incluidos todos los entornos de espacio aislado y las instancias de servicio eliminadas.
+Puede encontrar la variable **[!UICONTROL Total de eventos de conversión marcados]** métrica ubicada en la parte inferior derecha del **[!UICONTROL Crear modelo]** contenedor. Esta métrica rastrea el número total de eventos de conversión marcados por Attribution AI para el año natural actual, incluidos todos los entornos de espacio aislado y cualquier modelo de servicio eliminado.
 
 ![conversiones totales](./images/user-guide/total_conversions.png)
 
-Las instancias de servicio se pueden editar, clonar y eliminar utilizando los controles del lado derecho de la interfaz de usuario. Para mostrar estos controles, seleccione una instancia de la **[!UICONTROL Instancias de servicio]**. Los controles contienen la siguiente información:
+Los modelos de servicio se pueden editar, clonar y eliminar utilizando los controles del lado derecho de la interfaz de usuario. Para mostrar estos controles, seleccione un modelo de la **[!UICONTROL Modelos de servicio]**. Los controles contienen la siguiente información:
 
-- **[!UICONTROL Editar]**: Selección **[!UICONTROL Editar]** permite modificar una instancia de servicio existente. Puede editar el nombre, la descripción, el estado y la frecuencia de puntuación de la instancia.
-- **[!UICONTROL Clonar]**: Selección **[!UICONTROL Clonar]** copia la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
-- **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas. El conjunto de datos de salida correspondiente se eliminará de Platform. Sin embargo, las puntuaciones sincronizadas con Perfil del cliente en tiempo real no se eliminan.
+- **[!UICONTROL Editar]**: Selección **[!UICONTROL Editar]** permite modificar un modelo de servicio existente. Puede editar el nombre, la descripción, el estado, la frecuencia de puntuación del modelo y las columnas de conjuntos de datos de puntuación adicionales.
+- **[!UICONTROL Clonar]**: Selección **[!UICONTROL Clonar]** copia el modelo de servicio seleccionado. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como un nuevo modelo.
+- **[!UICONTROL Eliminar]**: Puede eliminar un modelo de servicio, incluidas las ejecuciones históricas. El conjunto de datos de salida correspondiente se eliminará de Platform. Sin embargo, las puntuaciones sincronizadas con Perfil del cliente en tiempo real no se eliminan.
 - **[!UICONTROL Fuente de datos]**: Un vínculo al conjunto de datos que se está utilizando. Si Attribution AI está usando más de un conjunto de datos, se muestra &quot;Múltiple&quot; seguido del número de conjuntos de datos. Al seleccionar el hipervínculo, se muestra la ventana emergente de vista previa de conjuntos de datos.
 - **[!UICONTROL Detalles de la última ejecución]**: Esto solo se muestra cuando falla una ejecución. Aquí se muestra información sobre por qué la ejecución falló, como códigos de error.
 
 ![Panel lateral](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Eventos de conversión]**: Información general rápida sobre los eventos de conversión configurados para esta instancia.
+- **[!UICONTROL Eventos de conversión]**: Información general rápida sobre los eventos de conversión configurados para este modelo.
 - **[!UICONTROL Ventana retroactiva]**: El lapso de tiempo definido que indica cuántos días antes de que se incluyan los puntos de contacto del evento de conversión.
-- **[!UICONTROL Touchpoints]**: Una lista de todos los puntos de contacto definidos al crear esta instancia.
+- **[!UICONTROL Touchpoints]**: Una lista de todos los puntos de contacto definidos al crear este modelo.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Select **[!UICONTROL Crear instancia]** para comenzar.
+Select **[!UICONTROL Crear modelo]** para comenzar.
 
-![Crear instancia](./images/user-guide/landing_page.png)
+![Crear modelo](./images/user-guide/landing_page.png)
 
-A continuación, aparece la página de configuración de Attribution AI, donde puede proporcionar un nombre y una descripción opcional para la instancia de servicio.
+A continuación, aparece la página de configuración de Attribution AI, donde puede proporcionar un nombre y una descripción opcional para el modelo de servicio.
 
-![asignación de nombres a instancias](./images/user-guide/naming_instance.png)
+![asignación de nombres a un modelo](./images/user-guide/naming_instance.png)
 
 ## Selección de datos {#select-data}
 
@@ -227,7 +227,7 @@ Para cambiar la hora del día que desea que se produzca la puntuación, seleccio
 
 ### Columnas adicionales del conjunto de datos de puntuación (opcional)
 
-De forma predeterminada, se crea un conjunto de datos de puntuación para cada instancia de servicio en un esquema estándar. Puede elegir agregar columnas adicionales basadas en las configuraciones de Evento de conversión y Punto de contacto a la salida del conjunto de datos de puntuación. Para empezar, seleccione columnas de su conjunto de datos de entrada, puede arrastrarlas y soltarlas para cambiar el orden manteniendo presionado el botón izquierdo del ratón sobre el icono de hamburguesa.
+De forma predeterminada, se crea un conjunto de datos de puntuación para cada modelo de servicio en un esquema estándar. Puede elegir agregar columnas adicionales basadas en las configuraciones de Evento de conversión y Punto de contacto a la salida del conjunto de datos de puntuación. Para empezar, seleccione columnas de su conjunto de datos de entrada, puede arrastrarlas y soltarlas para cambiar el orden manteniendo presionado el botón izquierdo del ratón sobre el icono de hamburguesa.
 
 ![adición de columna de conjunto de datos de puntuación](./images/user-guide/Add-score-dataset.png)
 
@@ -264,44 +264,6 @@ Para garantizar que obtiene el modelo más preciso posible, es importante formar
 Una vez seleccionada la ventana de formación, seleccione **[!UICONTROL Finalizar]** en la esquina superior derecha. Espere un tiempo para que los datos se procesen. Una vez finalizada, aparece un cuadro de diálogo de apertura que confirma que la configuración de la instancia ha finalizado. Select **[!UICONTROL Ok]** para ser redirigido a la función **[!UICONTROL Instancias de servicio]** página en la que puede ver la instancia de servicio.
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
-
-## Políticas de gobernanza
-
-Una vez que revise el flujo de trabajo para crear una instancia y enviar la configuración del modelo, la variable [aplicación de políticas](/help/data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de política, aparece una ventana emergente que indica que se han violado una o más políticas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing dentro de Platform sean compatibles con las políticas de uso de datos.
-
-![popover que muestra una infracción de directiva](./images/user-guide/policy-violation-popover-aai.png)
-
-La ventana emergente proporciona información específica sobre la infracción. Puede resolver estas infracciones mediante la configuración de directivas y otras medidas que no están directamente relacionadas con el flujo de trabajo de configuración. Por ejemplo, puede cambiar las etiquetas para que se puedan usar ciertos campos con fines científicos de datos. Como alternativa, también puede modificar la configuración del modelo en sí para que no use nada con una etiqueta en ella. Consulte la documentación para obtener más información sobre cómo configurar [políticas](/help/data-governance/policies/overview.md).
-
-## Control de acceso basado en atributos
-
->[!IMPORTANT]
->
->El control de acceso basado en atributos está disponible actualmente solo en una versión limitada.
-
-[Control de acceso basado en atributos](../../../help/access-control/abac/overview.md) es una función de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funciones basadas en atributos. Los atributos pueden ser metadatos agregados a un objeto, como una etiqueta agregada a un campo o segmento de esquema. Un administrador define políticas de acceso que incluyen atributos para administrar los permisos de acceso de los usuarios.
-
-Esta funcionalidad le permite etiquetar campos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir las políticas de acceso que rodean los campos de esquema XDM y administrar mejor el acceso dado a los usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Además, el control de acceso basado en atributos permite a los administradores administrar el acceso a segmentos específicos.
-
-Mediante el control de acceso basado en atributos, los administradores pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD) y a la información de identificación personal (PII) en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.
-
-Debido al control de acceso basado en atributos, es posible que algunos campos y funcionalidades tengan acceso restringido y no estén disponibles para determinadas instancias del servicio de Attribution AI. Algunos ejemplos son &quot;Identidad&quot;, &quot;Definición de puntuación&quot; y &quot;Clonar&quot;.
-
-En la parte superior del espacio de trabajo de Attribution AI **página perspectivas**, los detalles que aparecen en la barra lateral tienen acceso restringido.
-
-![Espacio de trabajo de Attribution AI con los campos de esquema restringidos resaltados.](./images/user-guide/access-restricted.png)
-
-Si selecciona conjuntos de datos con esquemas restringidos en la variable **[!UICONTROL Flujo de trabajo de creación de instancias]** , aparece un signo de advertencia junto al nombre del conjunto de datos con el mensaje : [!UICONTROL Se excluye la información restringida].
-
-![Espacio de trabajo de Attribution AI con los campos restringidos del conjunto de datos resaltados.](./images/user-guide/restricted-info-excluded.png)
-
-Cuando se obtienen vistas previas de conjuntos de datos con esquema restringido en la variable **[!UICONTROL Flujo de trabajo de creación de instancias]** , aparece una advertencia que indica que [!UICONTROL Debido a las restricciones de acceso, cierta información no se muestra en la vista previa del conjunto de datos.]
-
-![El espacio de trabajo de Attribution AI con los campos de esquema de vista previa restringidos aparece resaltado.](./images/user-guide/restricted-dataset-preview.png)
-
-Después de crear una instancia con información restringida y continuar con el **[!UICONTROL Definir objetivo]** , aparece una advertencia en la parte superior: [!UICONTROL Debido a restricciones de acceso, cierta información no se muestra en la configuración.]
-
-![El espacio de trabajo de Attribution AI con los campos restringidos de la instancia resulta resaltado.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Pasos siguientes
 

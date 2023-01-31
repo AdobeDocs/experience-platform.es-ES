@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configuración de una instancia de AI del cliente
 description: Los servicios AI/ML proporcionan Customer AI como un servicio de Adobe Sensei simple de usar que se puede configurar para diferentes casos de uso. Las secciones siguientes proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
 workflow-type: tm+mt
-source-wordcount: '3342'
+source-wordcount: '2828'
 ht-degree: 0%
 
 ---
@@ -250,46 +250,6 @@ Si la instancia se crea correctamente, se activa inmediatamente una ejecución d
 >Según el tamaño de los datos de entrada, las ejecuciones de predicciones pueden tardar hasta 24 horas en completarse.
 
 Al seguir esta sección, ha configurado una instancia de Customer AI y ejecutado una ejecución de predicciones. Una vez finalizada correctamente la ejecución, las perspectivas puntuadas rellenan automáticamente los perfiles con puntuaciones predichas si está habilitada la opción de alternancia de perfiles. Espere hasta 24 horas antes de continuar con la siguiente sección de este tutorial.
-
-## Políticas de gobernanza
-
-Una vez que revise el flujo de trabajo para crear una instancia y enviar la configuración del modelo, la variable [aplicación de políticas](/help/data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de política, aparece una ventana emergente que indica que se han violado una o más políticas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing dentro de Platform sean compatibles con las políticas de uso de datos.
-
-![popover que muestra una infracción de directiva](../images/user-guide/policy-violation-popover-cai.png)
-
-La ventana emergente proporciona información específica sobre la infracción. Puede resolver estas infracciones mediante la configuración de directivas y otras medidas que no están directamente relacionadas con el flujo de trabajo de configuración. Por ejemplo, puede cambiar las etiquetas para que se puedan usar ciertos campos con fines científicos de datos. Como alternativa, también puede modificar la configuración del modelo en sí para que no use nada con una etiqueta en ella. Consulte la documentación para obtener más información sobre cómo configurar [políticas](/help/data-governance/policies/overview.md).
-
-## Control de acceso basado en atributos
-
->[!IMPORTANT]
->
->El control de acceso basado en atributos está disponible actualmente solo en una versión limitada.
-
-[Control de acceso basado en atributos](../../../access-control/abac/overview.md) es una función de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funciones basadas en atributos. Los atributos pueden ser metadatos agregados a un objeto, como una etiqueta agregada a un campo o segmento de esquema. Un administrador define políticas de acceso que incluyen atributos para administrar los permisos de acceso de los usuarios.
-
-Esta funcionalidad le permite etiquetar campos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir las políticas de acceso que rodean los campos de esquema XDM y administrar mejor el acceso dado a los usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Además, el control de acceso basado en atributos permite a los administradores administrar el acceso a segmentos específicos.
-
-Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD) y a la información de identificación personal (PII) en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que se correspondan con esos campos.
-
-Debido al control de acceso basado en atributos, algunos campos y funcionalidades tendrían acceso restringido y no estarían disponibles para ciertas instancias de servicio de Customer AI. Algunos ejemplos son &quot;Identidad&quot;, &quot;Definición de puntuación&quot; y &quot;Clonar&quot;.
-
-![El espacio de trabajo de Customer AI con los campos restringidos de la instancia de servicio resultados resaltados.](../images/user-guide/unavailable-functionalities.png)
-
-En la parte superior del espacio de trabajo de Customer AI **página perspectivas**, observe que los detalles en la barra lateral, la definición de puntuación, la identidad y los atributos de perfil muestran &quot;Acceso restringido&quot;.
-
-![Espacio de trabajo de Customer AI con los campos restringidos del esquema resaltados.](../images/user-guide/access-restricted.png)
-
-<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
-
-![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
-
-Cuando se obtienen vistas previas de conjuntos de datos con esquema restringido en la variable **[!UICONTROL Flujo de trabajo de creación de instancias]** , aparece una advertencia que indica que [!UICONTROL Debido a las restricciones de acceso, cierta información no se muestra en la vista previa del conjunto de datos.]
-
-![Espacio de trabajo de Customer AI con los campos restringidos de los conjuntos de datos de vista previa con resultados de esquema restringidos resaltados.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
-
-Después de crear una instancia con información restringida y continuar con el **[!UICONTROL Definir objetivo]** , aparece una advertencia en la parte superior: [!UICONTROL Debido a restricciones de acceso, cierta información no se muestra en la configuración.]
-
-![El espacio de trabajo de Customer AI con los campos restringidos de la instancia de servicio resultados resaltados.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Pasos siguientes {#next-steps}
 

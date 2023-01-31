@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Análisis de puntuaciones de atribución mediante el servicio de consulta
 description: Aprenda a utilizar el servicio de consulta de Adobe Experience Platform para analizar las puntuaciones de Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Cada fila de los datos representa una conversión, en la que la información de 
 
 En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo. La variable **[!UICONTROL Conjuntos de datos]** se abre. A continuación, seleccione la **[!UICONTROL Examinar]** y busque el conjunto de datos de salida para sus puntuaciones de Attribution AI.
 
-![Acceso a la instancia](./images/aai-query/datasets_browse.png)
+![Acceso al modelo](./images/aai-query/datasets_browse.png)
 
 Seleccione el conjunto de datos de salida. Aparece la página de actividad del conjunto de datos.
 
@@ -305,7 +305,7 @@ Esta consulta aplana la columna de estructura en varias columnas singulares y ex
 
 >[!TIP]
 >
-> En este ejemplo, debe reemplazar `{COLUMN_NAME}` además de `_tenantId` y `your_score_output_dataset`. La variable `COLUMN_NAME` puede utilizar los valores de los nombres de columna opcionales (columnas de informes) que se añadieron durante la configuración de la instancia de Attribution AI. Revise el esquema de salida de puntuación para encontrar la variable `{COLUMN_NAME}` valores necesarios para completar esta consulta.
+> En este ejemplo, debe reemplazar `{COLUMN_NAME}` además de `_tenantId` y `your_score_output_dataset`. La variable `COLUMN_NAME` puede utilizar los valores de los nombres de columna opcionales (columnas de informes) que se añadieron durante la configuración del modelo de Attribution AI. Revise el esquema de salida de puntuación para encontrar la variable `{COLUMN_NAME}` valores necesarios para completar esta consulta.
 
 ```sql
 SELECT 
