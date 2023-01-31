@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de exportación de segmentos de fl
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de flujo continuo de segmento.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -121,19 +121,29 @@ Para ver todos los segmentos que se activan en el destino, utilice la opción de
 
 1. Select **[!UICONTROL Siguiente]** para ir a la [!UICONTROL Consulte] página.
 
-## Consulte {#review}
+## Revisión {#review}
 
 En el **[!UICONTROL Consulte]** , puede ver un resumen de su selección. Select **[!UICONTROL Cancelar]** para desglosar el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
 
->[!IMPORTANT]
->
->En este paso, Adobe Experience Platform comprueba las infracciones de la directiva de uso de datos. A continuación se muestra un ejemplo en el que se infringe una política. No puede completar el flujo de trabajo de activación de segmentos hasta que no haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de políticas, consulte [Aplicación de políticas](../../rtcdp/privacy/data-governance-overview.md#enforcement) en la sección documentación de control de datos .
+![Resumen de selección en la etapa de revisión.](/help/destinations/assets/ui/activate-segment-streaming-destinations/review.png)
+
+### Evaluación de la directiva de consentimiento {#consent-policy-evaluation}
+
+Si su organización ha adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Más información [evaluación de la política de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
+
+### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
+
+En el **[!UICONTROL Consulte]** , el Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo en el que se infringe una política. No puede completar el flujo de trabajo de activación de segmentos hasta que no haya resuelto la infracción. Para obtener información sobre cómo resolver violaciones de políticas, lea acerca de [infracciones de directiva de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección documentación de control de datos .
 
 ![violación de la política de datos](../assets/common/data-policy-violation.png)
 
-Si no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
+### Filtrar segmentos. {#filter-segments}
 
-![Consulte](../assets/ui/activate-segment-streaming-destinations/review.png)
+Además, en este paso puede utilizar los filtros disponibles en la página para mostrar solo los segmentos cuya programación o asignación se haya actualizado como parte de este flujo de trabajo. También puede alternar qué columnas de tabla desea ver.
+
+![Grabación de pantalla que muestra los filtros de segmento disponibles en el paso de revisión.](/help/destinations/assets/ui/activate-segment-streaming-destinations/filter-segments-review-step.gif)
+
+Si está satisfecho con la selección y no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
 
 ## Verificación de la activación de segmentos {#verify}
 

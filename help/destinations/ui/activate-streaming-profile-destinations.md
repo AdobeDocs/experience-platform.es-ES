@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de exportación de perfil de flujo
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles de flujo continuo.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -76,19 +76,29 @@ Las exportaciones de archivos variarán de las siguientes maneras, en función d
 
 1. Para agregar más asignaciones, repita los pasos del 1 al 3 y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
-## Consulte {#review}
+## Revisión {#review}
 
 En el **[!UICONTROL Consulte]** , puede ver un resumen de su selección. Select **[!UICONTROL Cancelar]** para desglosar el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
 
->[!IMPORTANT]
->
->En este paso, Adobe Experience Platform comprueba las infracciones de la directiva de uso de datos. A continuación se muestra un ejemplo en el que se infringe una política. No puede completar el flujo de trabajo de activación de segmentos hasta que no haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de políticas, consulte [Aplicación de políticas](../../rtcdp/privacy/data-governance-overview.md#enforcement) en la sección documentación de control de datos .
+![Resumen de selección en la etapa de revisión.](/help/destinations/assets/ui/activate-streaming-profile-destinations/review.png)
 
-![Imagen que muestra una infracción de política de datos en el paso de revisión.](../assets/common/data-policy-violation.png)
+### Evaluación de la directiva de consentimiento {#consent-policy-evaluation}
 
-Si no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
+Si su organización ha adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Más información [evaluación de la política de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
 
-![Imagen que muestra el paso de revisión del flujo de trabajo de activación.](../assets/ui/activate-streaming-profile-destinations/review.png)
+### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
+
+En el **[!UICONTROL Consulte]** , el Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo en el que se infringe una política. No puede completar el flujo de trabajo de activación de segmentos hasta que no haya resuelto la infracción. Para obtener información sobre cómo resolver violaciones de políticas, lea acerca de [infracciones de directiva de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección documentación de control de datos .
+
+![violación de la política de datos](../assets/common/data-policy-violation.png)
+
+### Filtrar segmentos. {#filter-segments}
+
+Además, en este paso puede utilizar los filtros disponibles en la página para mostrar solo los segmentos cuya programación o asignación se haya actualizado como parte de este flujo de trabajo.
+
+![Grabación de pantalla que muestra los filtros de segmento disponibles en el paso de revisión.](/help/destinations/assets/ui/activate-streaming-profile-destinations/filter-segments-review-step.gif)
+
+Si está satisfecho con la selección y no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
 
 ## Verificación de la activación de segmentos {#verify}
 
