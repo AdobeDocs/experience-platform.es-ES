@@ -1,12 +1,11 @@
 ---
 keywords: perspectivas;ai del cliente;perspectivas de ai del cliente;servicio de consulta AAI;consultas de ai del cliente;puntuaciones de ai del cliente; claves administradas por el cliente en CAI
-feature: Customer-Managed Keys in Customer AI
-title: Claves gestionadas por el cliente
+title: Claves gestionadas por el cliente en Customer AI.
 description: Obtenga información sobre cómo configurar claves gestionadas por el cliente para Customer AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 24%
+source-wordcount: '173'
+ht-degree: 21%
 
 ---
 

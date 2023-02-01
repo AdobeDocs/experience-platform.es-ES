@@ -1,11 +1,10 @@
 ---
 keywords: perspectivas;ai del cliente;perspectivas de ai del cliente;servicio de consulta CAI;consultas de ai del cliente;puntuaciones de ai del cliente
-feature: Customer AI audit logs
-title: Información general sobre registros de auditoría
+title: Información general sobre registros de auditoría en Customer AI
 description: Obtenga información sobre cómo ver y administrar los registros de auditoría en Customer AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '279'
 ht-degree: 36%
 
 ---
@@ -22,4 +21,4 @@ En un sentido estricto, un registro de auditoría informa de quién realizó qu�
 
 Cuando la función está habilitada para su organización, los registros de auditoría se recopilan automáticamente a medida que se produce la actividad. No es necesario habilitar manualmente la recopilación de registros.
 
-Para ver y exportar los registros de auditoría, se debe contar con el permiso de control Acceso a registros de auditoría en la consola de Adobe. Para obtener información sobre cómo administrar los permisos individuales para las funciones de Customer AI, consulte la [documentación de control de acceso](../../customer-ai/user-guide/access-controls.md).
+Para ver y exportar los registros de auditoría, se debe contar con el permiso de control Acceso a registros de auditoría en la consola de Adobe. Para obtener información sobre cómo administrar los permisos individuales para las funciones de Customer AI, consulte la [documentación de control de acceso](../cai-data-governance/access-controls.md).

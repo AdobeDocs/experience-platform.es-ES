@@ -4,7 +4,7 @@ solution: Experience Platform
 feature: Customer AI
 title: Control de acceso para Customer AI
 description: Este documento proporciona información sobre el control de acceso basado en atributos para Customer AI.
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%
@@ -42,8 +42,8 @@ Después de crear un modelo con información restringida y continuar con el **[!
 
 Cuando se utiliza el control de acceso, la variable **Ver Customer AI** y **Administrar la IA del cliente** los privilegios otorgan acceso a diferentes funcionalidades de Customer AI. La variable **Administrar la IA del cliente** permiso le permite **crear**,**actualizar**, **delete**, **enable** o **disable** un modelo while **Ver Customer AI** permite leerlo o verlo. La variable **crear**, **actualizar** y **delete** las acciones se registran mediante registros de auditoría.
 
-Consulte la documentación para aprender [asignación de permisos para control de acceso](../../../help/access-control/home.md) o cómo [usar registros de auditoría para supervisar el acceso y la actividad](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+Consulte la documentación para aprender [asignación de permisos para control de acceso](../../../access-control/home.md) o cómo [usar registros de auditoría para supervisar el acceso y la actividad](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Pasos siguientes
 
-Al leer esta guía, se le han introducido los principios principales del control de acceso en [!DNL Experience Platform]. Ahora puede continuar con el [guía del usuario de control de acceso](./ui/overview.md) para ver los pasos detallados sobre cómo usar la variable [!DNL Admin Console] para crear perfiles de producto y asignar permisos para [!DNL Platform].
+Al leer esta guía, se le han introducido los principios principales del control de acceso en [!DNL Experience Platform]. Ahora puede continuar con el [guía del usuario de control de acceso](../overview.md) para ver los pasos detallados sobre cómo usar la variable [!DNL Admin Console] para crear perfiles de producto y asignar permisos para [!DNL Platform].

@@ -1,9 +1,8 @@
 ---
 keywords: perspectivas;ai de atribución;perspectivas de ai de atribución;servicio de consulta AAI;consultas de atribución;puntuaciones de atribución; claves administradas por el cliente en AAI
-feature: Customer-Managed Keys in Attribution AI
 title: Claves gestionadas por el cliente
 description: Obtenga información sobre cómo configurar las claves gestionadas por el cliente para Attribution AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 24%

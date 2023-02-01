@@ -1,12 +1,11 @@
 ---
 keywords: perspectivas;ai de atribución;perspectivas de ai de atribución;servicio de consulta AAI;consultas de atribución;puntuaciones de atribución
-feature: Attribution AI audit logs
-title: Información general sobre registros de auditoría
+title: Información general sobre los registros de auditoría en Attribution AI
 description: Obtenga información sobre cómo ver y administrar los registros de auditoría en Attribution AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 37%
+source-wordcount: '268'
+ht-degree: 38%
 
 ---
 
@@ -16,11 +15,11 @@ Para aumentar la transparencia y visibilidad de las actividades realizadas en el
 
 En un sentido estricto, un registro de auditoría informa de quién realizó qué acción y cuándo lo hizo. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción. Rastrea las acciones de creación, actualización y eliminación realizadas por los usuarios en Attribution AI.
 
-[Los registros de auditoría seleccionados en el espacio de trabajo de Attribution AI](../../attribution-ai/images/data-governance/audit-logs-cai.png)
+<!-- [The audit logs selected in the Attribution AI workspace](../../../attribution-ai/aai-data-governance/images/data-governance/audit-logs-cai.png) -->
 
 ## Acceso a los registros de auditoría
 
 Cuando la función está habilitada para su organización, los registros de auditoría se recopilan automáticamente a medida que se produce la actividad. No es necesario habilitar manualmente la recopilación de registros.
 
-Para ver y exportar los registros de auditoría, se debe contar con el permiso de control Acceso a registros de auditoría en la consola de Adobe. Para obtener información sobre cómo administrar permisos individuales para funciones de Attribution AI, consulte la [documentación de control de acceso](../../attribution-ai/access-controls.md).
+Para ver y exportar los registros de auditoría, se debe contar con el permiso de control Acceso a registros de auditoría en la consola de Adobe. Para obtener información sobre cómo administrar permisos individuales para funciones de Attribution AI, consulte la [documentación de control de acceso](../aai-data-governance/access-controls.md).
 
