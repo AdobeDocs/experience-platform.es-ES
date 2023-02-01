@@ -1,11 +1,11 @@
 ---
 keywords: destinos;destino;página de detalles de destinos;página de detalles de destinos
 title: Ver detalles de destino
-description: 'La página de detalles de un destino individual proporciona una descripción general de los detalles de destino. Los detalles de destino incluyen el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
+description: La página de detalles de un destino individual proporciona una descripción general de los detalles de destino. Los detalles de destino incluyen el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165d8719cbf5d4b0555d5b9ef84252e3cbd82d42
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '799'
 ht-degree: 2%
 
 ---
@@ -78,11 +78,17 @@ La variable [!UICONTROL Ejecuciones de flujo de datos] proporciona datos de mét
 
 >[!NOTE]
 >
->* La funcionalidad de monitorización de destinos está actualmente admitida para todos los destinos en el Experience Platform *except* el [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos.
+>* La funcionalidad de monitorización de destinos está actualmente admitida para todos los destinos en el Experience Platform *except* el [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) y [Audiencias de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinos.
 >* Para la variable [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centros de eventos de Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)y [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, las identidades excluidas no se muestran actualmente.
 
 
 ![Vista de ejecución de flujo de datos](../assets/ui/details-page/dataflow-runs.png)
+
+### Duración de las ejecuciones de Dataflow {#dataflow-runs-duration}
+
+Hay un problema conocido en la duración mostrada de las ejecuciones de flujo de datos. Mientras que la variable **[!UICONTROL Duración del procesamiento]** para la mayoría de las ejecuciones de flujo de datos es de unas cuatro horas, como se muestra en la imagen siguiente, el tiempo de procesamiento real para cualquier ejecución de flujo de datos es mucho más corto. Las ventanas de ejecución de flujo de datos permanecen abiertas durante más tiempo en el caso de que el Experience Platform tenga que volver a intentar realizar llamadas al destino.
+
+![Imagen de la página Dataflow run con la columna Processing time resaltada.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
 
 ## [!UICONTROL Datos de activación] {#activation-data}
 
