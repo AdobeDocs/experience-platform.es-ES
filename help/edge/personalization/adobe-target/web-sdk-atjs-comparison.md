@@ -3,7 +3,7 @@ title: Comparación de at.js con el SDK web de Experience Platform
 description: Descubra cómo se comparan las funciones de at.js con el SDK web de Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 3c229dfced2ea404e8b333a25cd8148ac81a91c2
+source-git-commit: 519d77ca7bfb910b03fea3567e08824e6f852eb4
 workflow-type: tm+mt
 source-wordcount: '2286'
 ht-degree: 6%
@@ -30,8 +30,8 @@ Estructura de la URL: https://cdn1.adoberesources.net/alloy/[VERSIÓN]/alloy.min
 
 Por ejemplo:
 
-* Minificado: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
-* No minificado: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
+* Minificado: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
+* No minificado: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 [Más información](../../fundamentals/installing-the-sdk.md)
 
@@ -86,7 +86,7 @@ La configuración del SDK se realiza con la variable `configure` comando.
 >
 >`configure` es *always* el primer comando llamado.
 
-Ejemplo:
+Por ejemplo:
 
 ```javascript
 alloy("configure", {
@@ -112,7 +112,7 @@ Contenido creado en Adobe Target [Compositor de experiencias visuales](https://e
 
 Para solicitar y procesar automáticamente ofertas de Target, use el `sendEvent` y configure la variable `renderDecisions` a `true`. De este modo, el SDK debe procesar automáticamente cualquier contenido personalizado que sea apto para el procesamiento automático.
 
-Ejemplo:
+Por ejemplo:
 
 ```javascript
 alloy("sendEvent", {
@@ -248,7 +248,7 @@ Ejecutar un `sendEvent` con un ámbito especial en `decisionScopes`: `__view__`.
 
 Para acceder a cualquier contenido de personalización, puede proporcionar una función de llamada de retorno que se llamará después de que el SDK reciba una respuesta correcta del servidor. Se proporciona una llamada de retorno a un objeto de resultado, que puede contener una propiedad propositions que contiene cualquier contenido de personalización devuelto.
 
-Ejemplo:
+Por ejemplo:
 
 ```javascript
 alloy("sendEvent", {
@@ -401,7 +401,7 @@ Puede recuperar actividades basadas en el Compositor basado en formularios utili
 ]
 ```
 
-Ejemplo:
+Por ejemplo:
 
 ```javascript
 alloy("sendEvent", {
@@ -453,7 +453,7 @@ alloy("sendEvent", {
 
 Puede aplicar las actividades de Target utilizando la variable `applyOffers` función: `adobe.target.applyOffer(options)`
 
-Ejemplo:
+Por ejemplo:
 
 ```javascript
 adobe.target.getOffers({...})
@@ -469,7 +469,7 @@ Obtenga más información sobre `applyOffers` desde el [documentación dedicada]
 
 Puede aplicar las actividades de Target utilizando la variable `applyPropositions` comando.
 
-Ejemplo:
+Por ejemplo:
 
 ```javascript
 alloy("applyPropositions", {
@@ -932,7 +932,7 @@ En lugar de definir la configuración en la interfaz de usuario de Target Standa
 
 La anulación debe definirse antes de que se cargue at.js o en Administración > Implementación > Editar la configuración de at.js > Configuración del código > Encabezado de la biblioteca.
 
-Ejemplo:
+Por ejemplo:
 
 ```javascript
 window.targetGlobalSettings = {  
