@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
+source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '928'
 ht-degree: 14%
 
 ---
@@ -329,6 +329,15 @@ ht-degree: 14%
       - [Utilice un editor de texto en el entorno local para crear una página de documentación de fuentes](sources-sdk/documentation/text-editor.md)
       - [Plantilla de API de autoservicio de documentación](sources-sdk/documentation/template.md)
       - [Plantilla de interfaz de usuario de autoservicio de documentación](sources-sdk/documentation/ui-template.md)
+   - SDK de transmisión {#streaming-sdk}
+      - [Introducción a las fuentes de autoservicio (SDK de transmisión)](sources-sdk/streaming/getting-started.md)
+      - [Crear una especificación de conexión para un origen de flujo continuo](sources-sdk/streaming/create.md)
+      - [Actualizar una especificación de conexión para un origen de flujo continuo](sources-sdk/streaming/update-connection-specs.md)
+      - [Actualización de la especificación del flujo de transmisión](sources-sdk/streaming/update-flow-specs.md)
+      - [Pruebe y envíe la especificación de conexión para su verificación](sources-sdk/streaming/submit.md)
+      - [Documentar el origen (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
+      - [Plantilla de flujo de API de autoservicio de documentación](sources-sdk/streaming/streaming-template-api.md)
+      - [Plantilla de flujo de la interfaz de usuario de autoservicio de documentación](sources-sdk/streaming/streaming-template-ui.md)
 - [Notificaciones de ejecución de flujo](notifications.md)
 - [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md)
 - [Preguntas frecuentes](./troubleshooting.md)
