@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de enero de 2023 para Adobe Experience Platform.
-source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
+source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2443'
 ht-degree: 7%
 
 ---
@@ -83,7 +83,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 {style=&quot;table-layout:auto&quot;}
 
-## Destinos {#destinations}
+## Destinos (actualizado el 2 de febrero) {#destinations}
 
 [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 
@@ -114,6 +114,10 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
         <td>Se ha actualizado el comportamiento de exportación a destinos basados en archivos (PLAT-123316)</td>
         <td>Se ha corregido un problema en el comportamiento de <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">atributos obligatorios</a> al exportar archivos de datos a destinos por lotes. <br> Anteriormente, todos los registros de los archivos de salida se verificaban para contener ambos: <ol><li>Un valor no nulo de la variable <code>mandatoryField</code> y</li><li>Un valor no nulo en al menos uno de los demás campos no obligatorios.</li></ol> Se ha eliminado la segunda condición. Como resultado, es posible que vea más filas de salida en los archivos de datos exportados, como se muestra en el ejemplo siguiente:<br> <b> Comportamiento de muestra antes de la versión de enero de 2023 </b> <br> Campo obligatorio: <code>emailAddress</code> <br> <b>Entrada de datos para activar</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Salida de activación</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Comportamiento de muestra después de la versión de enero de 2023 </b> <br> <b>Salida de activación</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
+    <tr>
+        <td>Validación de la interfaz de usuario y la API para asignaciones obligatorias y asignaciones duplicadas (PLAT-123316)</td>
+        <td>La validación ahora se aplica de la siguiente manera en la interfaz de usuario y la API al <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">campos de asignación</a> en el flujo de trabajo activar destinos :<ul><li><b>Asignaciones necesarias</b>: Si el desarrollador de destino ha configurado el destino con las asignaciones necesarias (por ejemplo, la variable <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> ), el usuario debe agregar estas asignaciones necesarias al activar los datos en el destino. </li><li><b>Duplicar asignaciones</b>: En el paso de asignación del flujo de trabajo de activación, puede añadir valores duplicados en los campos de origen, pero no en los campos de destino. Consulte la siguiente tabla para ver un ejemplo de combinaciones de asignación permitidas y prohibidas. <br><table><thead><tr><th>Permitido/prohibido</th><th>Campo de origen</th><th>Campo de destino</th></tr></thead><tbody><tr><td>Permitido</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias de correo electrónico 2</li></ul></td></tr><tr><td>Prohibido</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>    
 </table>
 
 Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
