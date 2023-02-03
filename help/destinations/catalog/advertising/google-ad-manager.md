@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Conexión de Google Ad Manager
 description: Google Ad Manager, anteriormente conocido como DoubleClick for Publishers o DoubleClick AdX, es una plataforma de servicio de publicidad de Google que proporciona a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '890'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ Tenga en cuenta los siguientes detalles que son específicos de [!DNL Google Ad 
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres GAID. |
 | IDFA | [!DNL Apple ID for Advertisers] | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres IDFA. |
-| UUID de AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), también conocido como [!DNL Device ID]. ID de dispositivo numérico de 38 dígitos que el Audience Manager asocia a cada dispositivo con el que interactúa. | Uso de Google [UUID de AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) para dirigirse a usuarios de California y al ID de cookie de Google para el resto de usuarios. |
+| UUID de AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), también conocido como [!DNL Device ID]. ID de dispositivo numérico de 38 dígitos que el Audience Manager asocia a cada dispositivo con el que interactúa. | Uso de Google [UUID de AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=es) para dirigirse a usuarios de California y al ID de cookie de Google para el resto de usuarios. |
 | [!DNL Google] ID de cookie | [!DNL Google] ID de cookie | [!DNL Google] utiliza este ID para dirigirse a usuarios fuera de California. |
 | RIDA | ID de Roku para publicidad. Este ID identifica de forma exclusiva los dispositivos Roku. |  |
 | MAID | ID de publicidad de Microsoft. Este ID identifica de forma exclusiva los dispositivos que ejecutan Windows 10. |  |
@@ -58,18 +58,10 @@ Si desea crear su primer destino con [!DNL Google Ad Manager] y no han habilitad
 
 ### Permitir inclusión en la lista {#allow-listing}
 
->[!NOTE]
->
->La inclusión en la lista de permitidos es obligatoria antes de configurar la primera [!DNL Google Ad Manager] destino en Platform. Asegúrese de que el proceso de inclusión en la lista de permitidos descrito a continuación se haya completado antes de [!DNL Google] antes de crear un destino.
->La excepción a esta regla es para [Audience Manager](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) clientes. Si ya ha creado una conexión con este destino de Google en Audience Manager, no es necesario volver a pasar por el proceso de inclusión en la lista de permitidos y puede continuar con los pasos siguientes.
+La inclusión en la lista de permitidos es obligatoria antes de configurar la primera [!DNL Google Ad Manager] destino en Platform. Asegúrese de completar el proceso de inclusión en la lista de permitidos que se describe a continuación antes de crear su destino.
 
-Antes de crear la variable [!DNL Google Ad Manager] destino en Platform, debe ponerse en contacto con [!DNL Google] para que el Adobe se incluya en la lista de proveedores de datos permitidos y para que su cuenta se agregue a la lista de permitidos . Contacto [!DNL Google] y proporcione la siguiente información:
-
-* **ID de cuenta**: ID de cuenta de Adobe con Google. ID de cuenta: 87933855.
-* **ID de cliente**: ID de cuenta de cliente de Adobe con Google. ID de cliente: 89690775.
-* **Código de red**: Esta es su [!DNL Google Ad Manager] identificador de red, encontrado en **[!UICONTROL Administración > Configuración global]** en la interfaz de Google, así como en la URL.
-* **ID del vínculo de audiencia**: Este es un identificador específico asociado con su [!DNL Google Ad Manager] red (no su [!DNL Network code]), también se encuentra en **[!UICONTROL Administración > Configuración global]** en la interfaz de Google.
-* El tipo de cuenta. DFP de Google o del comprador de AdX.
+1. Siga los pasos descritos en la sección [Documentación de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para agregar Adobe como plataforma de administración de datos (DMP) vinculada.
+2. En el [!DNL Google Ad Manager] interfaz, vaya a **[!UICONTROL Administrador]** > **[!UICONTROL Configuración global]** > **[!UICONTROL Configuración de red]** y habilite **[!UICONTROL Acceso a la API]** control deslizante.
 
 ## Conectarse al destino {#connect}
 
@@ -85,10 +77,11 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 * **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
 * **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
+* **[!UICONTROL ID de cuenta]**: Escriba la [!DNL Audience Link ID] de su [!DNL Google] cuenta. Este es un identificador específico asociado con su [!DNL Google Ad Manager] red (no su [!DNL Network code]). Puede encontrar esto en **[!UICONTROL Administración > Configuración global]** en el [!DNL Google Ad Manager] interfaz.
 * **[!UICONTROL Tipo de cuenta]**: Seleccione una opción, en función de su cuenta con Google:
    * Uso `DFP by Google` para [!DNL DoubleClick] para editores
    * Uso `AdX buyer` para [!DNL Google AdX]
-* **[!UICONTROL ID de cuenta]**: Complete el ID del vínculo de audiencia con [!DNL Google].
+
 
 >[!NOTE]
 >
@@ -111,3 +104,12 @@ Consulte [Activar datos de audiencia en destinos de exportación de segmentos de
 ## Datos exportados {#exported-data}
 
 Para verificar si los datos se han exportado correctamente a la variable [!DNL Google Ad Manager] destino, compruebe su [!DNL Google Ad Manager] cuenta. Si la activación se ha realizado correctamente, las audiencias se rellenan en la cuenta.
+
+## Resolución de problemas {#troubleshooting}
+
+En caso de que encuentre algún error al utilizar este destino y necesite ponerse en contacto con Adobe o Google, mantenga los siguientes ID a mano.
+
+Estos son los ID de cuenta de Google de Adobe:
+
+* **[!UICONTROL ID de cuenta]**: 87933855
+* **[!UICONTROL ID de cliente]**: 89690775
