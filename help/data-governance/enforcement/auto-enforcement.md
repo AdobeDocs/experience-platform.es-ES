@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicación automática de directivas
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar segmentos en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c0f077d685c688f96d1778a02b24c0959a5dd822
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,16 @@ Select **[!UICONTROL Vista de lista]** para mostrar el linaje de datos como una 
 ### Evaluación de la directiva de consentimiento {#consent-policy-evaluation}
 
 Si tiene [crear políticas de consentimiento](../policies/user-guide.md#consent-policy) y están activando un segmento en un destino, puede ver cómo las políticas de consentimiento afectan al porcentaje de perfiles que se incluyen en la activación.
+
+#### Mejora de la política de consentimiento para medios de pago {#consent-policy-enhancement}
+
+Se ha mejorado la aplicación de la política de consentimiento en los destinos de transmisión, incluidas las activaciones de medios de pago. Esta mejora está disponible para los clientes de Privacy and Security Shield o Healthcare Shield, y elimina de forma proactiva los perfiles de los destinos de transmisión a medida que cambia el estado de consentimiento. También garantiza que los cambios de consentimiento se propaguen inmediatamente para que la audiencia correcta esté siempre segmentada.
+
+Estas mejoras permiten una buena confianza en su estrategia de marketing, ya que elimina la necesidad de que los especialistas en marketing agreguen atributos de consentimiento manualmente a su expresión de segmento. Esto garantiza que ningún perfil se dirija de forma involuntaria a ninguna experiencia de marketing una vez que se haya retirado el consentimiento o ya no esté cualificado para una política de consentimiento. Las políticas de consentimiento de marketing que establecen reglas para administrar los datos de consentimiento o preferencias en varios flujos de trabajo de marketing ahora se aplican automáticamente en los flujos de trabajo de activación en las soluciones descendentes.
+
+>[!NOTE]
+>
+>Como resultado de esta mejora, no se han realizado cambios en la interfaz de usuario.
 
 #### Evaluación previa a la activación
 
