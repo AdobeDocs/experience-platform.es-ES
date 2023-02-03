@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Clase XDM ExperienceEvent
 description: Este documento proporciona información general sobre la clase XDM ExperienceEvent y prácticas recomendadas para el modelado de datos de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: e4e87fdb5f6dfbca882f924d38397a904d8b0cff
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1865'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ La raíz `timestamp` campo de un esquema de eventos puede **only** representan l
 
 Por ejemplo, si un negocio de la industria de viajes y hospitalidad está modelando un evento de reserva de vuelos, el nivel de clase `timestamp` representa la hora en la que se observó el evento de reserva. Otras marcas de tiempo relacionadas con el evento, como la fecha de inicio de la reserva de viajes, deben capturarse en campos separados proporcionados por grupos de campos estándar o personalizados.
 
-![](../images/classes/experienceevent/timestamps.png)
+![Un esquema de evento de experiencia de ejemplo con Reserva de vuelo y Fecha de inicio resaltadas.](../images/classes/experienceevent/timestamps.png)
 
 Al mantener la marca de tiempo de nivel de clase separada de otros valores de fecha y hora relacionados en los esquemas de eventos, puede implementar casos de uso de segmentación flexible y, al mismo tiempo, preservar una cuenta con marca de tiempo de los recorridos del cliente en su aplicación de experiencia.
 
@@ -93,7 +93,7 @@ En la tabla siguiente se describen los valores sugeridos estándar para `eventTy
 | Valor | Definición |
 | --- | --- |
 | `advertising.clicks` | Haga clic en las acciones de un anuncio. |
-| `advertising.completes` | Se ha visto hasta el final un recurso de medios temporizados. Esto no significa necesariamente que el usuario haya visto todo el vídeo, ya que el usuario podría haber omitido. |
+| `advertising.completes` | Se ha visto hasta el final un recurso de medios temporizados. Esto no significa necesariamente que el usuario haya visto todo el vídeo, ya que el usuario podría haber omitido el vídeo. |
 | `advertising.conversions` | Acciones predefinidas realizadas por un cliente que déclencheur un evento para la evaluación del rendimiento. |
 | `advertising.federated` | Indica si un evento de experiencia se creó mediante una federación de datos (uso compartido de datos entre clientes). |
 | `advertising.firstQuartiles` | Un anuncio de vídeo digital se ha reproducido a una velocidad normal del 25% de su duración. |
