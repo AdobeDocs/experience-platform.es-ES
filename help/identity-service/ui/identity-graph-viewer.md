@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general del visualizador de gráficos de identidad
 description: Un gráfico de identidad es un mapa de relaciones entre distintas identidades para un cliente en particular, que proporciona una representación visual de cómo el cliente interactúa con la marca a través de diferentes canales.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Para trabajar con el visor de gráficos de identidad es necesario conocer los di
 - **Vínculo (borde):** Un vínculo o un borde representa la conexión entre identidades.
 - **Gráfico (clúster):** Un gráfico o un clúster es un grupo de identidades y vínculos que representan a una persona.
 
-## Acceso al visor del gráfico de identidad
+## Acceso al visor del gráfico de identidad {#access-identity-graph-viewer}
 
 Para utilizar el visor de gráficos de identidad en la interfaz de usuario, seleccione **[!UICONTROL Identidades]** en el panel de navegación izquierdo y, a continuación, seleccione la **[!UICONTROL Gráfico de identidad]** pestaña . En el **[!UICONTROL Área de nombres de identidad]** , haga clic en **[!UICONTROL Seleccionar área de nombres de identidad]** para buscar el espacio de nombres que desea utilizar.
 

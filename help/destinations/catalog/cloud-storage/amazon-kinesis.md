@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino de kinesis;kinesis
 title: Conexión de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real al almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
+source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1958'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ En cuanto a los datos exportados para un perfil determinado, es importante compr
 
 | Qué determina una exportación de destino | Qué se incluye en la exportación de destino |
 |---------|----------|
-| <ul><li>Los atributos y segmentos asignados sirven como señal para una exportación de destino. Esto significa que si cualquier segmento asignado cambia de estado (de nulo a realizado o de realizado/existente a existente) o si se actualiza cualquier atributo asignado, se inicia una exportación de destino.</li><li>Dado que actualmente las identidades no se pueden asignar a [!DNL Amazon Kinesis] destinos, los cambios en cualquier identidad en un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es o no el mismo valor. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>Todos los segmentos (con el estado de pertenencia más reciente), independientemente de si están asignados en el flujo de datos o no, se incluyen en la `segmentMembership` objeto.</li><li>Todas las identidades del `identityMap` también se incluyen (el Experience Platform no admite actualmente la asignación de identidades en la variable [!DNL Amazon Kinesis] destino).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
+| <ul><li>Los atributos y segmentos asignados sirven como señal para una exportación de destino. Esto significa que si cualquier segmento asignado cambia de estado (de nulo a realizado o de realizado/existente a existente) o si se actualiza cualquier atributo asignado, se inicia una exportación de destino.</li><li>Dado que actualmente las identidades no se pueden asignar a [!DNL Amazon Kinesis] destinos, los cambios en cualquier identidad en un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es o no el mismo valor. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>La variable `segmentMembership` incluye el segmento asignado en el flujo de datos de activación, para el cual el estado del perfil ha cambiado tras un evento de calificación o salida de segmento. Tenga en cuenta que otros segmentos sin asignar para los que el perfil cumpla los requisitos pueden formar parte de la exportación de destino, si pertenecen al mismo [combinar directiva](/help/profile/merge-policies/overview.md) como segmento asignado en el flujo de datos de activación. </li><li>Todas las identidades del `identityMap` también se incluyen (el Experience Platform no admite actualmente la asignación de identidades en la variable [!DNL Amazon Kinesis] destino).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -177,7 +177,7 @@ Por ejemplo, considere este flujo de datos como un [!DNL Amazon Kinesis] destino
 
 ![Flujo de datos de destino de Amazon Kinesis](../../assets/catalog/http/profile-export-example-dataflow.png)
 
-Una exportación de perfil al destino se puede determinar mediante un perfil que cumpla los requisitos de uno de los *tres segmentos asignados*. Sin embargo, en la exportación de datos, en la variable `segmentMembership` (consulte [Datos exportados](#exported-data) a continuación), podrían aparecer otros segmentos sin asignar, si ese perfil en particular es miembro de ellos. Si un perfil es apto para el segmento Cliente con Autos DeLorean pero también es miembro de los segmentos de fans de películas y ciencia ficción &quot;Volver al futuro&quot; vistos, entonces estos otros dos segmentos también estarán presentes en `segmentMembership` de la exportación de datos, aunque no estén asignados en el flujo de datos.
+Una exportación de perfil al destino se puede determinar mediante un perfil que cumpla los requisitos de uno de los *tres segmentos asignados*. Sin embargo, en la exportación de datos, en la variable `segmentMembership` (consulte [Datos exportados](#exported-data) a continuación), podrían aparecer otros segmentos sin asignar, si ese perfil en particular es miembro de ellos y si comparten la misma política de combinación que el segmento que activó la exportación. Si un perfil cumple los requisitos para la variable **Cliente con Autos DeLorean** pero también es miembro de **Visto &quot;De vuelta al futuro&quot;** película y **Seguidores de ciencia ficción** estos otros dos segmentos también estarán presentes en la variable `segmentMembership` de la exportación de datos, aunque no estén asignados en el flujo de datos, si comparten la misma política de combinación con la variable **Cliente con Autos DeLorean** segmento.
 
 Desde el punto de vista de los atributos de perfil, cualquier cambio en los cuatro atributos asignados arriba determinará una exportación de destino y cualquiera de los cuatro atributos asignados presentes en el perfil estará presente en la exportación de datos.
 
