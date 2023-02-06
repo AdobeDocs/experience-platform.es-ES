@@ -2,10 +2,10 @@
 title: Administrar los valores sugeridos en la API
 description: Aprenda a añadir valores sugeridos a un campo de cadena en la API del Registro de esquemas.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: b1ef2de1e6f9c6168a5ee2a62b55812123783a3a
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 1%
+source-wordcount: '658'
+ht-degree: 0%
 
 ---
 
@@ -69,11 +69,11 @@ También puede definir un campo de cadena que no contenga `enum` y solo usa el `
 
 Dado que la cadena no tiene un valor `enum` matriz para definir restricciones, su `meta:enum` se puede ampliar para incluir nuevos valores.
 
-## Administrar valores sugeridos para campos estándar
+<!-- ## Manage suggested values for standard fields
 
-Para los campos estándar existentes, puede [agregar valores sugeridos](#add-suggested-standard) o [desactivar valores sugeridos](#disable-suggested-standard).
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
 
-### Añadir valores sugeridos a un campo estándar {#add-suggested-standard}
+## Añadir valores sugeridos a un campo estándar {#add-suggested-standard}
 
 Para ampliar el `meta:enum` de un campo de cadena estándar, puede crear un [descriptor de nombre descriptivo](../api/descriptors.md#friendly-name) para el campo en cuestión en un esquema determinado.
 
@@ -151,25 +151,19 @@ Después de aplicar el descriptor, el Registro de esquemas responde con lo sigui
 >}
 >```
 
-### Desactivación de valores sugeridos para un campo estándar {#disable-suggested-standard}
+<!-- ### Remove suggested values {#remove-suggested-standard}
 
-Si un campo de cadena estándar tiene predefinidos valores sugeridos en `meta:enum`, puede desactivar cualquier valor que no desee ver en la segmentación. Esto se hace creando un [descriptor de nombre descriptivo](../api/descriptors.md#friendly-name) para el esquema que incluye un `xdm:excludeMetaEnum` propiedad.
+If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
->[!IMPORTANT]
->
->Solo puede desactivar los valores sugeridos para campos estándar que no tengan restricciones de enumeración correspondientes. En otras palabras, si el campo tiene un `enum` matriz, luego `meta:excludeMetaEnum` no tendrá ningún efecto.
->
->Consulte la sección sobre [reglas de evolución para enumeraciones y valores sugeridos](../ui/fields/enum.md#evolution) para obtener más información sobre las restricciones para editar campos existentes.
-
-**Formato de API**
+**API format**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**Solicitud**
+**Request**
 
-La siguiente solicitud deshabilita los valores sugeridos &quot;[!DNL Web Form Filled Out]&quot; y &quot;[!DNL Media ping]&quot; para `eventType` en un esquema basado en la variable [Clase XDM ExperienceEvent](../classes/experienceevent.md).
+The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -191,19 +185,19 @@ curl -X POST \
       }'
 ```
 
-| Propiedad | Descripción |
+| Property | Description |
 | --- | --- |
-| `@type` | Tipo de descriptor que se está definiendo. Para un descriptor de nombre descriptivo, este valor debe establecerse en `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | La variable `$id` URI del esquema en el que se está definiendo el descriptor. |
-| `xdm:sourceVersion` | Versión principal del esquema de origen. |
-| `xdm:sourceProperty` | La ruta a la propiedad específica cuyos valores sugeridos desea administrar. La ruta debe comenzar con una barra diagonal (`/`) y no finalizar con uno. No incluir `properties` en la ruta (por ejemplo, use `/personalEmail/address` en lugar de `/properties/personalEmail/properties/address`). |
-| `meta:excludeMetaEnum` | Un objeto que describe los valores sugeridos que deben excluirse para el campo en segmentación. La clave y el valor de cada entrada deben coincidir con los incluidos en el original `meta:enum` del campo para que se excluya la entrada. |
+| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema. |
+| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**Respuesta**
+**Response**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del descriptor recién creado. Los valores sugeridos incluidos en `xdm:excludeMetaEnum` ahora se ocultará en la interfaz de usuario de segmentación.
+A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
 
 ```json
 {
@@ -217,7 +211,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del d
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-```
+``` -->
 
 ## Administrar valores sugeridos para un campo personalizado {#suggested-custom}
 
