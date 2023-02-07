@@ -1,9 +1,9 @@
 ---
 title: Gestión de identidades en el flujo de trabajo de activación de destinos
 description: Descubra cómo se gestiona la exportación de identidad en el flujo de trabajo de activación, según el tipo de destino
-source-git-commit: 6ccf26cbdbbe675d0d731f59cee589d63ca6f8ad
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1186'
 ht-degree: 2%
 
 ---
@@ -107,3 +107,5 @@ Al configurar un conjunto de datos como se describe en la documentación vincula
 Después de leer este documento, ahora sabe cómo averiguar qué identidades son compatibles o requeridas para destinos individuales. Ahora también sabe cómo funciona la selección de identidad para cada tipo de destino.
 
 A continuación, puede leer sobre qué [exportar configuración](/help/destinations/how-destinations-work/destinations-configurations.md) Los destinos de son comunes en los tipos de destino, que los desarrolladores pueden configurar en un nivel de destino individual y qué configuración pueden editar los usuarios en el flujo de trabajo de activación.
+
+También puede consultar todos los destinos disponibles en la [catálogo](/help/destinations/catalog/overview.md).

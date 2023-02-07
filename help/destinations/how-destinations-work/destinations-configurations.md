@@ -1,9 +1,9 @@
 ---
 title: Configuración de exportación configurable y común en destinos
 description: Aprenda qué configuración de exportación en los destinos se puede configurar en un nivel de destino y cuáles son fijas y no se pueden editar.
-source-git-commit: 04322d10a88b27d5641ab9474c8387945aab9982
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
@@ -63,5 +63,7 @@ Obtenga más información sobre las distintas opciones y pasos disponibles en el
 ## Pasos siguientes {#next-steps}
 
 Después de leer este documento, ahora sabe qué configuración de exportación para destinos es común en los tipos de destino, qué pueden configurar los desarrolladores en un nivel de destino individual y qué configuración pueden editar los usuarios en el flujo de trabajo de activación.
+
+A continuación, puede leer información más detallada sobre el [patrones de comportamiento de exportación comunes por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
 Para los desarrolladores de destino, puede [introducción](/help/destinations/destination-sdk/getting-started.md) con Destination SDK. Para los usuarios que buscan activar datos, puede consultar todos los destinos disponibles en la [catálogo](/help/destinations/catalog/overview.md).

@@ -1,9 +1,9 @@
 ---
 title: Comportamiento de exportación del perfil
 description: Descubra cómo varía el comportamiento de exportación de perfiles entre los distintos patrones de integración admitidos en los destinos de Experience Platform.
-source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2944'
 ht-degree: 0%
 
 ---
@@ -87,9 +87,9 @@ Desde el punto de vista de los atributos de perfil, cualquier cambio en los cuat
 
 ## Destinos basados en API de transmisión {#streaming-api-based-destinations}
 
-El comportamiento de exportación del perfil para destinos de flujo continuo como Facebook, Trade Desk y otras integraciones basadas en API es idéntico al anterior.
+El comportamiento de exportación del perfil para destinos de flujo continuo como Facebook, Trade Desk y otras integraciones basadas en API es muy similar al comportamiento descrito anteriormente para destinos empresariales.
 
-Ejemplos de destino: publicidad, social, etc.
+Ejemplos de destinos de flujo continuo son los destinos pertenecientes a [categorías sociales y publicitarias](/help/destinations/destination-types.md#categories) en el catálogo.
 
 Experience Platform optimiza el comportamiento de exportación del perfil al destino de flujo continuo para exportar solo datos a destinos basados en API de flujo continuo cuando se hayan producido actualizaciones relevantes en un perfil tras la calificación del segmento u otros eventos significativos. Los perfiles se exportan al destino en las siguientes situaciones:
 
