@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Punto final de API de referencia
 description: El punto final de referencia en la API de control de acceso le permite ver los nombres de los permisos disponibles y los tipos de recursos, que se pueden utilizar para ver políticas de control de acceso efectivas para el usuario actual.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '188'
 ht-degree: 2%
 
 ---
 
 # Punto de referencia
+
+>[!NOTE]
+>
+>Si se pasa un token de usuario, el usuario del token debe tener una función &quot;administrador de organización&quot; para la organización solicitada.
 
 Puede enumerar los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET al `/acl/reference` punto final. Estos nombres se pueden utilizar en llamadas de API a [ver directivas de control de acceso efectivas](./effective-policies.md) para el usuario actual.
 

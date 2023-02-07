@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Punto final de la API de roles
 description: El extremo /roles de la API de control de acceso basado en atributos le permite administrar roles mediante programación en Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1606'
 ht-degree: 4%
 
 ---
 
 # Punto de conexión de roles
+
+>[!NOTE]
+>
+>Si se pasa un token de usuario, el usuario del token debe tener una función &quot;administrador de organización&quot; para la organización solicitada.
 
 Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en roles, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el ámbito de vista o acceso de escritura que necesiten.
 

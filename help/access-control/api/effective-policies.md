@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Punto final de API de directivas efectivas
 description: Obtenga información sobre cómo ver las políticas de acceso efectivas mediante la API de control de acceso para Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '318'
 ht-degree: 2%
 
 ---
 
 # Punto final de directivas efectivas
+
+>[!NOTE]
+>
+>Si se pasa un token de usuario, el usuario del token debe tener una función &quot;administrador de organización&quot; para la organización solicitada.
 
 Para ver las directivas de control de acceso efectivas para el usuario actual, realice una solicitud de POST al `/acl/effective-policies` en la variable [!DNL Access Control] API. Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que aparece a continuación.
 
