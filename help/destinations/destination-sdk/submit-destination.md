@@ -2,9 +2,9 @@
 description: Esta página proporciona toda la información que debe enviar para su revisión a un destino de producto creado mediante Destination SDK.
 title: Enviar para revisión un destino productivo creado en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
+source-git-commit: 73f1faaffd4a77c9c09eccf00d5a0ff98580b232
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,8 @@ Antes de que el destino se pueda publicar en la variable [catálogo de destinos 
 
 Esta página enumera toda la información que debe proporcionar al enviar o actualizar un destino que creó con Adobe Experience Platform Destination SDK. Para enviar correctamente un destino en Adobe Experience Platform, envíe un correo electrónico a <aepdestsdk@adobe.com> que incluye:
 
-* Descripción de los casos de uso que resuelve su destino. Esto no es necesario si está actualizando una configuración de destino existente.
+* Descripción de los casos de uso que resuelve su destino. Esto solo es necesario si envía una nueva configuración de destino.
+* Una descripción del motivo del envío de destino. Esto solo es necesario si está actualizando una configuración de destino existente.
 * Pruebe los resultados después de usar el extremo de la API de destino de prueba para realizar una llamada HTTP al destino. Comparta con el Adobe una llamada API realizada al punto final de destino y la respuesta de API recibida del punto final de destino.
 * Requisitos adicionales para destinos basados en archivos:
    * Comparta una solicitud y un ejemplo de respuesta después de usar la API de prueba para [pruebe el destino basado en archivos con perfiles de ejemplo](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
@@ -46,6 +47,14 @@ Proporcione una descripción de los casos de uso que resuelva su destino para lo
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Las API de DataX están disponibles para los anunciantes que deseen dirigirse a un grupo de audiencia específico con direcciones de correo electrónico marcadas por Verizon Media (VMG) pueden crear rápidamente un nuevo segmento y insertar el grupo de audiencia deseado con la API casi en tiempo real de VMG.
+
+## Motivo de la actualización {#reason-for-update}
+
+>[!NOTE]
+>
+>Esta sección solo es necesaria cuando actualiza una configuración existente.
+
+Proporcione una breve descripción del problema que resuelve su envío para el destino existente. Por ejemplo, su envío puede actualizar el nombre, la descripción y el logotipo de su destino a medida que pasa de la versión beta a la disponibilidad general. O bien, su envío podría corregir un error descubierto en la configuración de destino.
 
 ## Resultados de la prueba después de usar la API de destino de la prueba {#testing-api-response}
 
