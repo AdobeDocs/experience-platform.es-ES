@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de exportación de perfiles en lot
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3537'
+source-wordcount: '3595'
 ht-degree: 1%
 
 ---
@@ -459,13 +459,18 @@ Como solución temporal si necesita añadir áreas de nombres de identidad a los
 * Utilice los destinos de almacenamiento en la nube heredados para los flujos de datos donde desea incluir áreas de nombres de identidad en las exportaciones
 * Cargue identidades como atributos en Experience Platform para luego exportarlas a sus destinos de almacenamiento en la nube.
 
-## Revisión {#review}
+## Consulte {#review}
 
 En el **[!UICONTROL Consulte]** , puede ver un resumen de su selección. Select **[!UICONTROL Cancelar]** para desglosar el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
 
 ![Resumen de selección en la etapa de revisión.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Evaluación de la directiva de consentimiento {#consent-policy-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Ver directivas de consentimiento aplicables"
+>abstract="Si su organización ha adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Este control está deshabilitado si su empresa no tiene acceso a los SKU mencionados anteriormente."
 
 Si su organización ha adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Más información [evaluación de la política de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
 
