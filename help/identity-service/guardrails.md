@@ -3,7 +3,7 @@ keywords: Experience Platform;identidad;servicio de identidad;solución de probl
 title: Seguridad para el servicio de identidad
 description: Este documento proporciona información sobre el uso y los límites de velocidad de los datos del servicio de identidad para ayudarle a optimizar el uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b5368382b42f478f6019c5ee925e56ec91ea6930
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 2%
@@ -48,7 +48,7 @@ La siguiente tabla describe las reglas existentes que debe seguir para garantiza
 
 ### Incorporación del área de nombres de identidad
 
-A partir del 31 de enero de 2023, el servicio de identidad bloqueará la ingesta de Adobe Analytics ID (AAID) para nuevos clientes. Esta identidad suele ingerirse a través de la variable [Fuente de Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) y [Fuente de Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) y es redundante porque ECID representa el mismo explorador web. Si desea cambiar esta configuración predeterminada, póngase en contacto con su administrador de cuentas.
+A partir del 31 de marzo de 2023, el servicio de identidad bloqueará la ingesta de Adobe Analytics ID (AAID) para nuevos clientes. Esta identidad suele ingerirse a través de la variable [Fuente de Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) y [Fuente de Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) y es redundante porque ECID representa el mismo explorador web. Si desea cambiar esta configuración predeterminada, póngase en contacto con su administrador de cuentas.
 
 ## Pasos siguientes
 
