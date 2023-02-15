@@ -5,9 +5,9 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
+source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '209'
 ht-degree: 33%
 
 ---
@@ -31,6 +31,9 @@ ht-degree: 33%
    * [Información general](./datastreams/overview.md)
    * [Configurar un conjunto de datos](./datastreams/configure.md)
    * [Preparación de datos para la recopilación de datos](./datastreams/data-prep.md)
+   * Enriquecimiento de datos {#data-enrichment}
+      * [Datos meteorológicos por canal meteorológico](./datastreams/data-enrichment/weather.md)
+      * [Asignaciones de campos de datos meteorológicos](./datastreams/data-enrichment/weather-reference.md)
 * Identidad {#identity}
    * [Información general](identity/overview.md)
    * [ID de dispositivos de origen](identity/first-party-device-ids.md)
@@ -69,7 +72,7 @@ ht-degree: 33%
       * [Integración con etiquetas](consent/iab-tcf/with-launch.md)
       * [Integrar sin etiquetas](consent/iab-tcf/without-launch.md)
 * Extensión de etiqueta de SDK web {#extension}
-   * [Extensión de SDK web](extension/web-sdk-extension-configuration.md)
+   * [Extensión del SDK web](extension/web-sdk-extension-configuration.md)
    * [Tipos de eventos](extension/event-types.md)
    * [Tipos de acción](extension/action-types.md)
    * [Tipos de elementos de datos](extension/data-element-types.md)
