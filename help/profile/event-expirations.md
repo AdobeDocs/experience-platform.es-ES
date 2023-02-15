@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Caducidad del evento de experiencia
 description: Este documento proporciona una guía general sobre cómo configurar los tiempos de caducidad para eventos de experiencia individuales dentro de un conjunto de datos de Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Las caducidades de los eventos de experiencia no se pueden configurar mediante l
 Una vez que las caducidades de los eventos de experiencia se han habilitado en un conjunto de datos habilitado para el perfil, Platform aplica automáticamente los valores de caducidad de cada evento capturado en un proceso de dos pasos:
 
 1. Todos los datos nuevos que se incorporan al conjunto de datos tienen el valor de caducidad aplicado en el momento de la ingesta en función de la marca de tiempo del evento.
-1. Todos los datos existentes en el conjunto de datos tienen el valor de caducidad aplicado retroactivamente como un trabajo único del sistema de relleno. Una vez que el valor de caducidad se haya colocado en el conjunto de datos, los eventos anteriores al valor de caducidad se perderán inmediatamente en cuanto se ejecute el trabajo del sistema. Todos los demás eventos se eliminarán en cuanto alcancen sus valores de caducidad desde la marca de tiempo del evento.
+1. Todos los datos existentes en el conjunto de datos tienen el valor de caducidad aplicado retroactivamente como un trabajo único del sistema de relleno. Una vez que el valor de caducidad se haya colocado en el conjunto de datos, los eventos anteriores al valor de caducidad se perderán inmediatamente en cuanto se ejecute el trabajo del sistema. Todos los demás eventos se eliminarán en cuanto alcancen sus valores de caducidad desde la marca de tiempo del evento. Cuando se hayan eliminado todos los eventos de experiencia, si el perfil ya no tiene atributos de perfil, el perfil dejará de existir.
 
 >[!WARNING]
 >
