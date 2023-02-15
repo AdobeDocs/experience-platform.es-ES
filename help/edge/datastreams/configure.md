@@ -1,7 +1,8 @@
 ---
 title: Configurar un conjunto de datos
 description: Conecte la integración del SDK de Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
-source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
+exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 3%
@@ -28,7 +29,7 @@ Seleccione el icono &quot;more&quot; (**...**) para un conjunto de datos especí
 
 Para crear un conjunto de datos, comience seleccionando **[!UICONTROL Nuevo conjunto de datos]**.
 
-![Seleccionar nuevo almacén de datos](../assets/datastreams/configure/new-datastream-button.png)
+![Seleccione Nueva secuencia de datos](../assets/datastreams/configure/new-datastream-button.png)
 
 Aparecerá el flujo de trabajo de creación del conjunto de datos, empezando por el paso de configuración. A partir de aquí, debe proporcionar un nombre y una descripción opcional para el conjunto de datos.
 
@@ -38,11 +39,11 @@ Si está configurando este conjunto de datos para utilizarlo en Experience Platf
 
 Select **[!UICONTROL Opciones avanzadas]** para mostrar controles adicionales para configurar el conjunto de datos.
 
-![Opciones de configuración avanzadas](../assets/datastreams/configure/advanced-options.png)
+![Opciones de configuración avanzadas](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | Configuración | Descripción |
 | --- | --- |
-| [!UICONTROL Ubicación geográfica] | Determina si se producen búsquedas de GPS en función de la dirección IP del usuario. La configuración predeterminada **[!UICONTROL Ninguna]** deshabilita las búsquedas de GPS, mientras que la función **[!UICONTROL Ciudad]** proporciona coordenadas GPS a dos decimales. |
+| [!UICONTROL Ubicación geográfica] | Determina si se producen búsquedas geográficas en función de la dirección IP del usuario. La configuración predeterminada **[!UICONTROL Ninguna]** deshabilita las búsquedas de información geográfica, mientras que la variable **[!UICONTROL Ciudad]** proporciona coordenadas GPS a dos decimales. |
 | [!UICONTROL Cookie de ID de origen] | Cuando está habilitada, esta configuración indica a la red perimetral que haga referencia a una cookie especificada al buscar una [ID de dispositivo de origen](../identity/first-party-device-ids.md), en lugar de buscar este valor en el mapa de identidad.<br><br>Al habilitar esta configuración, debe proporcionar el nombre de la cookie en la que se espera que se almacene el ID. |
 | [!UICONTROL Sincronización de ID de terceros] | Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que diferentes sincronizaciones de ID se ejecuten en momentos diferentes. Cuando está habilitada, esta configuración le permite especificar qué contenedor de sincronizaciones de ID se ejecuta para este conjunto de datos. |
 | [!UICONTROL Tipo de acceso] | Define el tipo de autenticación que acepta la red perimetral para el conjunto de datos. <ul><li>**[!UICONTROL Autenticación mixta]**: Cuando se selecciona esta opción, la red perimetral acepta solicitudes autenticadas y no autenticadas. Seleccione esta opción cuando desee utilizar el SDK web o [SDK móvil](https://aep-sdks.gitbook.io/docs/), junto con la variable [API de servidor](../../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticado]**: Cuando se selecciona esta opción, la red perimetral solo acepta solicitudes autenticadas. Seleccione esta opción cuando vaya a utilizar solo la API de servidor y desee evitar que la red perimetral procese solicitudes no autenticadas.</li></ul> |
