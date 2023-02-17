@@ -3,9 +3,9 @@ title: Cuentas relacionadas en Real-Time CDP B2B Edition
 type: Documentation
 description: Información general y más información sobre la función de cuentas relacionadas en el Experience Platform Real-Time CDP B2B.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '433'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,7 @@ A menudo, las empresas B2B tienen la información de sus clientes almacenada en 
 | 1 | Acme | acme.com | Software | CA | (408)536-6000 |  |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
 | 3 | Acme Inc |  |  | CA | (408)5366000 |  |
-| 4 | Servicio de consultoría Acme | `http://www.acme.com/consulting` | Consultoría de tecnología | NY | (212) 471-0904 | x |
+| 4 | Servicio de consultoría Acme | `http://www.acme.com/consulting` | Consultoría de tecnología | NY | (212)471-0904 | x |
 | 5 | Acme IT |  |  | CA |  |  |
 
 {style=&quot;table-layout:auto&quot;}
@@ -31,6 +31,16 @@ Con cuentas relacionadas, [!DNL Real-Time CDP B2B] ahora muestra una lista de cu
 ![Pantalla que muestra cuentas relacionadas en la interfaz de usuario del Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Utilice esta función para ver perfiles de cuenta relacionados para un perfil de cuenta en la interfaz de usuario del Experience Platform y, a continuación, incluir las cuentas relacionadas en las definiciones de segmentos para ampliar su alcance o aplicar criterios más amplios en sus segmentos.
+
+## Habilitar el servicio de cuentas relacionado {#enable}
+
+Para activar el servicio, seleccione **[!UICONTROL Perfiles]** en la barra lateral seguida de **[!UICONTROL Configuración]**.
+
+![IU de Experience Platform que resalta perfiles y configuración.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+Seleccione la opción que aparece junto a [!UICONTROL Habilitar cuentas relacionadas] para activar el servicio y, a continuación, seleccione **[!UICONTROL Guardar]**.
+
+![La pantalla Configuración de la cuenta resalta la opción de alternar y guardar.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Funcionamiento {#how-it-works}
 
