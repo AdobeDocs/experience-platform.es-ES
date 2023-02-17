@@ -2,7 +2,7 @@
 description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/Destinations`.
 title: Operaciones de extremo de la API de destinos
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
 source-wordcount: '2545'
 ht-degree: 4%
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `description` | Cadena | Proporcione una descripción que el Adobe utilizará en el catálogo de destinos del Experience Platform para su tarjeta de destino. Apunte a no más de 4-5 frases. |
 | `status` | Cadena | Indica el estado del ciclo vital de la tarjeta de destino. Los valores aceptados son `TEST`, `PUBLISHED` y `DELETED`. Uso `TEST` la primera vez que configure el destino. |
 | `customerAuthenticationConfigurations` | Cadena | Indica la configuración utilizada para autenticar a los clientes Experience Platform en el servidor. Consulte `authType` abajo para los valores aceptados. |
-| `customerAuthenticationConfigurations.authType` | Cadena | Los valores admitidos para los destinos de flujo continuo son: <ul><li>`OAUTH2`</li><li>`BEARER`</li></ul> Los valores admitidos para destinos basados en archivos son: <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
+| `customerAuthenticationConfigurations.authType` | Cadena | Los valores admitidos para los destinos de flujo continuo son: <ul><li>`BASIC`</li><li>`BEARER`</li><li>`OAUTH2`</li></ul> Los valores admitidos para destinos basados en archivos son: <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
 | `customerDataFields.name` | Cadena | Proporcione un nombre para el campo personalizado que está introduciendo. |
 | `customerDataFields.type` | Cadena | Indica qué tipo de campo personalizado está introduciendo. Los valores aceptados son `string`, `object`, `integer` |
 | `customerDataFields.title` | Cadena | Indica el nombre del campo, tal como lo ven los clientes en la interfaz de usuario del Experience Platform |
