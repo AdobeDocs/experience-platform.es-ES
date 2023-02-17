@@ -1,9 +1,9 @@
 ---
 title: Comportamiento de exportación del perfil
 description: Descubra cómo varía el comportamiento de exportación de perfiles entre los distintos patrones de integración admitidos en los destinos de Experience Platform.
-source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
+source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
 workflow-type: tm+mt
-source-wordcount: '2944'
+source-wordcount: '2979'
 ht-degree: 0%
 
 ---
@@ -169,11 +169,11 @@ Según la información de la sección anterior, el comportamiento de exportació
 
 **Exportaciones de archivos completas**
 
-La población completa del segmento se exporta todos los días.
+La población activa completa del segmento se exporta todos los días.
 
 | Qué determina una exportación de destino | Qué se incluye en el archivo exportado |
 |---------|----------|
-| <ul><li>La programación de exportación establecida en la interfaz de usuario o la API y la acción del usuario (seleccionar [Exportar archivo ahora](/help/destinations/ui/export-file-now.md) en la interfaz de usuario o utilizando el [API de activación ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) determinan el inicio de una exportación de destino.</li><li>Cualquier cambio en la pertenencia a segmentos de un perfil, tanto si califica como si no califica del segmento, califica un perfil para ser incluido en las exportaciones incrementales.</li></ul> | En las exportaciones completas de archivos, la población de perfiles completa de un segmento, según la última evaluación de segmentos, se incluye en cada exportación de archivos. Los valores más recientes de cada atributo XDM seleccionado para la exportación también se incluyen como columnas en cada archivo. |
+| <ul><li>La programación de exportación establecida en la interfaz de usuario o la API y la acción del usuario (seleccionar [Exportar archivo ahora](/help/destinations/ui/export-file-now.md) en la interfaz de usuario o utilizando el [API de activación ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) determinan el inicio de una exportación de destino.</li><li>Cualquier cambio en la pertenencia a segmentos de un perfil, tanto si califica como si no califica del segmento, califica un perfil para ser incluido en las exportaciones incrementales.</li></ul> | En las exportaciones completas de archivos, la población de perfiles activa completa de un segmento, según la última evaluación de segmentos, se incluye en cada exportación de archivos. Los valores más recientes de cada atributo XDM seleccionado para la exportación también se incluyen como columnas en cada archivo. Tenga en cuenta que los perfiles en estado de salida no se incluyen en la exportación de archivos. |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -183,7 +183,7 @@ En la primera exportación de archivo después de configurar el flujo de trabajo
 
 | Qué determina una exportación de destino | Qué se incluye en el archivo exportado |
 |---------|----------|
-| <ul><li>La programación de exportación establecida en la interfaz de usuario o la API determina el inicio de una exportación de destino.</li><li>Cualquier cambio en la pertenencia a segmentos de un perfil, tanto si califica como si no califica del segmento, califica un perfil para ser incluido en las exportaciones incrementales. Cambios en los atributos o en los mapas de identidad de un perfil *no* califica un perfil para que se incluya en exportaciones incrementales.</li></ul> | Los perfiles para los que ha cambiado la pertenencia al segmento, junto con la información más reciente de cada atributo XDM seleccionado para la exportación. |
+| <ul><li>La programación de exportación establecida en la interfaz de usuario o la API determina el inicio de una exportación de destino.</li><li>Cualquier cambio en la pertenencia a segmentos de un perfil, tanto si califica como si no califica del segmento, califica un perfil para ser incluido en las exportaciones incrementales. Cambios en los atributos o en los mapas de identidad de un perfil *no* califica un perfil para que se incluya en exportaciones incrementales.</li></ul> | <p>Los perfiles para los que ha cambiado la pertenencia al segmento, junto con la información más reciente de cada atributo XDM seleccionado para la exportación.</p><p>Los perfiles con el estado de salida se incluyen en las exportaciones de destino, si la variable `segmentMembership.status` El campo XDM está seleccionado en el paso de asignación.</p> |
 
 {style=&quot;table-layout:fixed&quot;}
 
