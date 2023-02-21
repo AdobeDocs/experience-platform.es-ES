@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conector de origen de Marketo;áreas de nombres;esquemas;b2b;B2B
-solution: Experience Platform
 title: Esquemas y áreas de nombres B2B
 description: Este documento proporciona información general sobre los espacios de nombres personalizados necesarios al crear un conector de origen B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
 workflow-type: tm+mt
-source-wordcount: '1707'
-ht-degree: 5%
+source-wordcount: '1727'
+ht-degree: 4%
 
 ---
 
 # Esquemas y áreas de nombres B2B
+
+>[!NOTE]
+>
+>Puede utilizar plantillas en la interfaz de usuario de Adobe Experience Platform para acelerar la creación de recursos para datos B2B y B2C. Para obtener más información, consulte la guía de [uso de plantillas en la interfaz de usuario de Platform](../../../tutorials/ui/templates.md).
 
 Este documento proporciona información sobre la configuración subyacente para los espacios de nombres y esquemas que se van a utilizar con orígenes B2B. Este documento también proporciona detalles sobre la configuración de la utilidad de automatización de Postman necesaria para generar esquemas y áreas de nombres B2B.
 

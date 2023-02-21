@@ -1,21 +1,28 @@
 ---
-keywords: Experience Platform;inicio;temas populares;
 description: Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de consumo de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, reglas de asignación, identidades, áreas de nombres de identidad y flujos de datos, que se pueden utilizar al importar datos de un origen a un Experience Platform.
-title: (Alpha) Crear un flujo de datos de fuentes utilizando plantillas en la interfaz de usuario
+title: (Beta) Cree un flujo de datos de fuentes mediante plantillas en la interfaz de usuario
+badge1: "Beta"
 hide: true
 hidefromtoc: true
-source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
+exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
+source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
 workflow-type: tm+mt
-source-wordcount: '1184'
-ht-degree: 1%
+source-wordcount: '1337'
+ht-degree: 0%
 
 ---
 
-# (Alpha) Crear un flujo de datos de fuentes utilizando plantillas en la interfaz de usuario
+# (Beta) Cree un flujo de datos de fuentes mediante plantillas en la interfaz de usuario
 
 >[!IMPORTANT]
 >
->Las plantillas están en Alpha y actualmente solo las admite el [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). La documentación y las funcionalidades están sujetas a cambios.
+>Las plantillas están en versión beta y son compatibles con las siguientes fuentes:
+>
+>* [[!DNL Marketo Engage]](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>
+>La documentación y las funcionalidades están sujetas a cambios.
 
 Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de consumo de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos, que se pueden utilizar al importar datos de un origen a un Experience Platform.
 
@@ -25,7 +32,7 @@ Con las plantillas, puede:
 * Minimice los errores que se pueden producir durante el proceso de ingesta manual de datos.
 * Actualice los recursos generados automáticamente en cualquier momento para adaptarlos a sus casos de uso.
 
-El siguiente tutorial proporciona pasos sobre cómo utilizar plantillas en la interfaz de usuario de Platform mediante el [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md).
+El siguiente tutorial proporciona pasos sobre cómo utilizar plantillas en la interfaz de usuario de Platform.
 
 ## Primeros pasos
 
@@ -43,11 +50,11 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >abstract="Seleccione el tipo de negocio adecuado para su caso de uso. El acceso puede variar en función de la cuenta de suscripción a Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=es" text="Información general de Real-Time CDP"
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Fuentes]** desde el panel de navegación izquierdo para acceder a la [!UICONTROL Fuentes] espacio de trabajo. La variable [!UICONTROL Catálogo] muestra una variedad de fuentes que pueden utilizarse para crear una cuenta.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Fuentes]** desde el panel de navegación izquierdo para acceder a la [!UICONTROL Fuentes] espacio de trabajo y ver un catálogo de fuentes disponibles en Experience Platform.
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la barra de búsqueda.
+Utilice la variable *[!UICONTROL Categorías]* para filtrar los orígenes por categoría. Como alternativa, introduzca un nombre de origen en la barra de búsqueda para encontrar un origen específico del catálogo.
 
-En el [!UICONTROL aplicaciones de Adobe] categoría, seleccione **[!UICONTROL Marketo Engage]** y, a continuación, seleccione **[!UICONTROL Añadir datos]**.
+Vaya a la [!UICONTROL aplicaciones de Adobe] para ver la [!DNL Marketo Engage] tarjeta de origen y, a continuación, seleccione [!UICONTROL Añadir datos] para comenzar.
 
 ![Catálogo del espacio de trabajo de fuentes con el origen del Marketo Engage resaltado.](../../images/tutorials/templates/catalog.png)
 
@@ -64,21 +71,25 @@ Para utilizar recursos generados automáticamente, seleccione **[!UICONTROL Exam
 
 Aparece el paso de autenticación, que le solicita que cree una cuenta nueva o que utilice una existente.
 
-#### Cuenta existente
+>[!BEGINTABS]
+
+>[!TAB Usar una cuenta existente]
 
 Para usar una cuenta existente, seleccione [!UICONTROL Cuenta existente] y, a continuación, seleccione la cuenta que desee utilizar en la lista que aparece.
 
 ![La página de selección de una cuenta existente con una lista de cuentas existentes a las que puede acceder.](../../images/tutorials/templates/existing-account.png)
 
-#### Nueva cuenta
+>[!TAB Crear una cuenta nueva]
 
 Para crear una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione los detalles de conexión de origen y las credenciales de autenticación de la cuenta. Cuando termine, seleccione **[!UICONTROL Conectar a origen]** y permitir que la nueva conexión se establezca algún tiempo.
 
 ![La página de autenticación de una cuenta nueva con detalles de conexión de origen y credenciales de autenticación de cuenta.](../../images/tutorials/templates/new-account.png)
 
+>[!ENDTABS]
+
 ### Seleccionar plantillas
 
-Una vez que haya autenticado y seleccionado la cuenta, aparecerá una lista de plantillas. Seleccione el icono de vista previa junto al nombre de una plantilla para obtener una vista previa de los datos de ejemplo de la plantilla.
+Según el tipo de negocio que haya seleccionado, aparecerá una lista de plantillas. Seleccione el icono de vista previa ![icono de vista previa](../../images/tutorials/templates/preview-icon.png) junto al nombre de una plantilla para obtener una vista previa de los datos de ejemplo de la plantilla.
 
 ![Una lista de plantillas con el icono de vista previa resaltado.](../../images/tutorials/templates/templates.png)
 
@@ -95,6 +106,22 @@ Si selecciona uno o varios elementos de la lista de plantillas disponibles, todo
 >Las plantillas que ya se hayan utilizado se desactivarán en la selección.
 
 ![La lista de plantillas con la plantilla Rol de contacto de oportunidad seleccionada.](../../images/tutorials/templates/select-template.png)
+
+### Configuración de una programación
+
+La variable [!DNL Microsoft Dynamics] y [!DNL Salesforce] los orígenes de ambos son compatibles con la programación de flujos de datos.
+
+Utilice la interfaz de programación para configurar una programación de ingesta para sus flujos de datos. Configure la frecuencia de ingesta en **Una vez** para crear una ingesta única.
+
+![Interfaz de programación para plantillas de Dynamics y Salesforce.](../../images/tutorials/templates/schedule.png)
+
+Como alternativa, puede establecer la frecuencia de ingesta en **Minuto**, **Hora**, **Día** o **Semana**. Si programa el flujo de datos para varias ingestas, debe establecer un intervalo para establecer un intervalo de tiempo entre cada ingesta. Por ejemplo, una frecuencia de ingesta establecida en **Hora** y un intervalo establecido en **15** significa que el flujo de datos está programado para introducir datos cada **15 horas**.
+
+Durante este paso, también puede activar **relleno** y defina una columna para la ingesta incremental de datos. El relleno se utiliza para introducir datos históricos, mientras que la columna que defina para la ingesta incremental permite diferenciar nuevos datos de los datos existentes.
+
+Una vez que haya completado la configuración de la programación de ingesta, seleccione **[!UICONTROL Finalizar]**.
+
+![Interfaz de programación para plantillas de Dynamics y Salesforce con relleno habilitado.](../../images/tutorials/templates/backfill.png)
 
 ### Revisar recursos {#review-assets}
 
