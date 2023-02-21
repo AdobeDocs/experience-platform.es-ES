@@ -2,7 +2,7 @@
 title: Notas de la versión de etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
+source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 5%
@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # Notas de la versión para etiquetas y reenvío de eventos
 
-## 25 de enero de 2022
+## 25 de enero de 2023
 
 * **Nueva pantalla de inicio**: La página de inicio de la interfaz de usuario de recopilación de datos se ha actualizado para incluir información de integración y vínculos útiles para optimizar la productividad. Esto incluye:
    1. Documentación y flujos de trabajo recomendados para empezar
