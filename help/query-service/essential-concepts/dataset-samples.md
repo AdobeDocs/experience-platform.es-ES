@@ -2,18 +2,14 @@
 title: Muestras de conjuntos de datos
 description: Los conjuntos de datos de ejemplo del servicio de consulta le permiten realizar consultas exploratorias sobre grandes datos con un tiempo de procesamiento considerablemente reducido al coste de la precisión de la consulta. Esta guía proporciona información sobre cómo administrar los ejemplos para el procesamiento aproximado de consultas
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# Ejemplos de conjuntos de datos (versión limitada)
-
->[!IMPORTANT]
->
->La función de muestras de conjuntos de datos se encuentra actualmente en una versión limitada y no está disponible para todos los clientes.
+# Ejemplos de conjuntos de datos
 
 El servicio de consulta de Adobe Experience Platform proporciona conjuntos de datos de ejemplo como parte de sus capacidades aproximadas de procesamiento de consultas. Los conjuntos de datos de ejemplo se crean con muestras aleatorias uniformes de [!DNL Azure Data Lake Storage] (ADLS) conjuntos de datos que utilizan solo un porcentaje de registros del original. Este porcentaje se conoce como tasa de muestreo. Ajustar la tasa de muestreo para controlar el equilibrio de precisión y tiempo de procesamiento le permite realizar consultas exploratorias sobre grandes datos con un tiempo de procesamiento considerablemente menor al coste de la precisión de la consulta.
 
@@ -22,14 +18,15 @@ Como muchos usuarios no necesitan una respuesta exacta para una operación agreg
 Para ayudarle a administrar los ejemplos para el procesamiento aproximado de consultas, Query Service admite las siguientes operaciones para muestras de conjuntos de datos:
 
 - [Cree un ejemplo de conjunto de datos aleatorio uniforme.](#create-a-sample)
+- [Especificar de forma opcional un criterio de filtro](##optional-filter-criteria)
 - [Vea la lista de ejemplos para una tabla ADLS.](#view-list-of-samples)
 - [Consulte directamente los conjuntos de datos de ejemplo.](#query-sample-datasets)
 - [Elimine una muestra.](#delete-a-sample)
 - Elimine las muestras asociadas cuando se suelte la tabla ADLS original.
 
-## Primeros pasos
+## Primeros pasos {#get-started}
 
-Para utilizar las capacidades aproximadas de procesamiento de consultas detalladas arriba, debe establecer el indicador de sesión en `true`. Desde la línea de comandos del Editor de consultas o de su cliente PSQL, introduzca la variable `SET aqp=true;` comando.
+Para utilizar las funciones de creación y eliminación de procesamiento de consultas aproximadas detalladas en este documento, debe establecer el indicador de sesión en `true`. Desde la línea de comandos del Editor de consultas o de su cliente PSQL, introduzca la variable `SET aqp=true;` comando.
 
 >[!NOTE]
 >
@@ -39,7 +36,7 @@ Para utilizar las capacidades aproximadas de procesamiento de consultas detallad
 
 ## Crear un ejemplo de conjunto de datos aleatorio uniforme {#create-a-sample}
 
-Utilice la variable `ANALYZE TABLE` con un nombre de conjunto de datos para crear una muestra aleatoria uniforme a partir de ese conjunto de datos.
+Utilice la variable `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` con un nombre de conjunto de datos para crear una muestra aleatoria uniforme a partir de ese conjunto de datos.
 
 La tasa de muestra es el porcentaje de registros tomados del conjunto de datos original. Puede controlar la velocidad de muestreo utilizando la variable `TABLESAMPLE SAMPLERATE` palabras clave. En este ejemplo, el valor de 5,0 equivale a una frecuencia de muestra del 50 %. Un valor de 2,5 equivaldría al 25 % y así sucesivamente.
 
@@ -50,6 +47,28 @@ La tasa de muestra es el porcentaje de registros tomados del conjunto de datos o
 ```sql
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
 ```
+
+## Especificar de forma opcional un criterio de filtro {#optional-filter-criteria}
+
+Puede optar por especificar un criterio de filtro para las muestras aleatorias uniformes. Esto le permite crear una muestra basada en el subconjunto filtrado de la tabla analizada.
+
+Al crear una muestra, primero se aplica el filtro opcional y luego la muestra se crea a partir de la vista filtrada del conjunto de datos. Un ejemplo de conjunto de datos con un filtro aplicado sigue el siguiente formato de consulta:
+
+```sql
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND/OR <filter_condition_2>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
+```
+
+A continuación se muestran algunos ejemplos prácticos de este tipo de conjunto de datos de ejemplo filtrado:
+
+```sql
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+```
+
+En los ejemplos proporcionados, el nombre de la tabla es `large_table`, la condición de filtro de la tabla original es `month(to_timestamp(timestamp)) in ('8', '9')`y la tasa de muestreo es (X % de los datos filtrados), en este caso, `10`.
 
 ## Ver la lista de ejemplos {#view-list-of-samples}
 
