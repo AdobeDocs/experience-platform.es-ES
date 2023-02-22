@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, febrero de 2023
 description: Notas de la versión de febrero de 2023 para Adobe Experience Platform.
-source-git-commit: 1c2b7f291d0f8c0845a76ba4c863a9558da1bb4f
+source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '988'
 ht-degree: 3%
 
 ---
@@ -14,10 +14,31 @@ ht-degree: 3%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [[!DNL Destinations]](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de consultas](#query-service)
 - [Cuentas relacionadas en Real-Time CDP B2B Edition](#related-accounts)
 - [Fuentes](#sources)
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
+
+**Funciones nuevas o actualizadas** {#destinations-new-updated-features}
+
+| Función | Descripción |
+| ----------- | ----------- |
+| [Mejora de la política de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) para integraciones con [destinos basados en archivos (por lotes)](/help/destinations/destination-types.md#file-based) | <p> Cuando los perfiles ya no están cualificados para una directiva de consentimiento, el Experience Platform ahora comunica de forma proactiva su salida de directiva a destinos basados en archivos. Esto sigue a la [versión de febrero de 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) de la misma funcionalidad para los destinos de flujo continuo. </p> <p> <b>Nota</b>: Esta funcionalidad solo está disponible para los clientes de **[!UICONTROL Protección de seguridad y privacidad]** y los de **[!UICONTROL Escudo sanitario]**. </p> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentación nueva o actualizada** {#destinations-new-updated-documentation}
+
+| Documentación | Descripción |
+| ----------- | ----------- |
+| Cómo funcionan los destinos en la documentación | <p>Publicamos tres nuevos artículos explicativos sobre cómo funcionan los destinos, basados en preguntas comunes de los usuarios:</p> <p><ul><li>[Configuración de exportación configurable y común en destinos](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Comportamiento de exportación de perfil para diferentes tipos de destino](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Gestión de identidades en el flujo de trabajo de activación de destinos](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
