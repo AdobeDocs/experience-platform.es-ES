@@ -3,7 +3,7 @@ title: Utilice el último atributo XDM de tiempo de calificación en los nuevos 
 description: Aprenda a utilizar el último atributo XDM de tiempo de calificación en los nuevos destinos de almacenamiento de la nube beta
 hidefromtoc: y
 hide: y
-source-git-commit: 7dd525d8c71cdfb9fb2393181faa3270ad1dc4cc
+source-git-commit: 03031dcaad82932f92e76177adf3b55447c3c153
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Para usar la última hora de calificación (`lastQualificationTime`) Atributo XD
 
 ## Uso del último atributo XDM de tiempo de calificación {#how-to-use}
 
-Si utiliza uno de los seis nuevos conectores beta de almacenamiento en la nube, puede utilizar el último atributo XDM de tiempo de calificación en la variable [paso de asignación](//help/destinations/ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo de activación para crear una columna en el archivo exportado con la última marca de tiempo de cuando un perfil cumple los requisitos para un segmento. Esto puede ayudarle con determinados casos de uso de medición o análisis, así como con una mejor idea de cuándo activar determinadas audiencias.
+Si utiliza uno de los seis nuevos conectores beta de almacenamiento en la nube, puede utilizar el último atributo XDM de tiempo de calificación en la variable [paso de asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo de activación para crear una columna en el archivo exportado con la última marca de tiempo de cuando un perfil cumple los requisitos para un segmento. Esto puede ayudarle con determinados casos de uso de medición o análisis, así como con una mejor idea de cuándo activar determinadas audiencias.
 
 Tenga en cuenta que para agregar `lastQualificationTime` a las exportaciones de archivos, actualmente debe insertar manualmente el valor `xdm: segmentMembership.ups.seg_id.lastQualificationTime` en el campo de origen, como se muestra a continuación. También puede editar el campo de destino a `lastQualificationTime` o cualquier otro valor al que desee asignar un nombre a esta columna. Tenga en cuenta que, como se trata de una funcionalidad beta, la sintaxis de la variable `xdm: segmentMembership.ups.seg_id.lastQualificationTime` puede cambiar en el futuro.
 
