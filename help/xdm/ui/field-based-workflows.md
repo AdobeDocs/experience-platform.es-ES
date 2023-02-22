@@ -4,7 +4,7 @@ description: Aprenda a añadir individualmente campos de grupos de campos existe
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Esta guía trata los diferentes métodos para añadir campos individuales a un e
 
 Este tutorial supone que está familiarizado con el [composición de esquemas XDM](../schema/composition.md) y cómo usar el Editor de esquemas en la interfaz de usuario de Platform. Para continuar, debe iniciar el proceso de [creación de un nuevo esquema](./resources/schemas.md) y asignarlo a una clase estándar antes de continuar con esta guía.
 
-## Eliminación de campos agregados de grupos de campos estándar
+## Eliminación de campos agregados de grupos de campos estándar {#remove-field-group}
 
 Después de agregar un grupo de campos estándar a un esquema, puede quitar los campos estándar que no necesite.
 

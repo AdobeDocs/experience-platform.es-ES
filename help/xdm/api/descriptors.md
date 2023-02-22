@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API del Registro de esquemas permite administrar mediante programación los descriptores XDM dentro de la aplicación de experiencia.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 4%
@@ -417,7 +417,7 @@ Los descriptores de identidad de referencia proporcionan un contexto de referenc
 
 #### Descriptor de campo obsoleto
 
-Puede [Poner en desuso un campo dentro de un recurso XDM personalizado](../tutorials/field-deprecation.md#custom) añadiendo un `meta:status` establecido en `deprecated` al campo en cuestión. Sin embargo, si desea eliminar de los esquemas los campos proporcionados por recursos XDM estándar, puede asignar un descriptor de campo obsoleto al esquema en cuestión para lograr el mismo efecto. Al usar la variable [correcto `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), puede ver qué campos estándar están en desuso para un esquema al buscarlos en la API.
+Puede [Poner en desuso un campo dentro de un recurso XDM personalizado](../tutorials/field-deprecation-api.md#custom) añadiendo un `meta:status` establecido en `deprecated` al campo en cuestión. Sin embargo, si desea eliminar de los esquemas los campos proporcionados por recursos XDM estándar, puede asignar un descriptor de campo obsoleto al esquema en cuestión para lograr el mismo efecto. Al usar la variable [correcto `Accept` header](../tutorials/field-deprecation-api.md#verify-deprecation), puede ver qué campos estándar están en desuso para un esquema al buscarlos en la API.
 
 ```json
 {
