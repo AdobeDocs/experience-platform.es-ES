@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo
 title: Creación de una conexión de flujo continuo de API HTTP mediante la API del servicio de flujo
 description: Este tutorial proporciona pasos sobre cómo crear una conexión de flujo continuo utilizando la fuente de API HTTP para datos sin procesar y XDM mediante la API de servicio de flujo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 4%
+source-wordcount: '1496'
+ht-degree: 3%
 
 ---
 
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `auth.params.sourceId` | Identificador adicional que se puede utilizar al crear una conexión base autenticada. Este parámetro es opcional y utiliza el mismo valor que la variable `name` , si no se proporciona. |
-| `auth.params.authenticationRequired` | El parámetro que especifica que la conexión de flujo continuo creada |
+| `auth.params.authenticationRequired` | Este parámetro especifica si la conexión de flujo continuo requiere autenticación o no. If `authenticationRequired` está configurado como `true` a continuación, se debe proporcionar autenticación para la conexión de flujo continuo. If `authenticationRequired` está configurado como `false` entonces la autenticación no es obligatoria. |
 
 **Respuesta**
 
