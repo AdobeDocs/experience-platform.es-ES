@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sintaxis SQL en Query Service
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
+source-git-commit: c26a60f0d0fc9f5b7253851baf73e1a3edfffe0f
 workflow-type: tm+mt
 source-wordcount: '3355'
 ht-degree: 2%
@@ -342,10 +342,10 @@ Un bloque anónimo consta de dos secciones: secciones ejecutables y de control d
 El siguiente ejemplo muestra cómo crear un bloque con una o más instrucciones que se van a ejecutar juntas:
 
 ```sql
-BEGIN
+$$BEGIN
   statementList
 [EXCEPTION exceptionHandler]
-END
+$$END
 
 exceptionHandler:
       WHEN OTHER
@@ -358,7 +358,7 @@ statementList:
 A continuación, se muestra un ejemplo con bloque anónimo.
 
 ```sql
-BEGIN
+$$BEGIN
    SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_log_id = select now();
@@ -369,7 +369,7 @@ EXCEPTION
   WHEN OTHER THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
-END;
+$$END;
 ```
 
 ### Automático a JSON {#auto-to-json}
