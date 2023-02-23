@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de febrero de 2023 para Adobe Experience Platform.
-source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
+source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '1137'
 ht-degree: 6%
 
 ---
@@ -45,10 +45,31 @@ Para obtener información más general sobre los destinos, consulte la [informac
 XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se introducen en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
 
 **Funciones actualizadas**
-&#x200B; | Función | Descripción | | — | — | | Desaprobación de campos a través de la interfaz de usuario | Ahora puede eliminar los campos de los esquemas una vez introducidos los datos. La desaprobación de campos XDM le permite eliminar campos de la vista de IU al conservarlos para su uso. Puede volver a mostrar los campos obsoletos si es necesario, y cualquier segmento, consulta o solución descendente que haga referencia a los campos se ejecutará de la forma habitual. |
+&#x200B; | Función | Descripción | | — | — | | Desaprobación de campos a través de la interfaz de usuario | Ahora puede [eliminar campos de los esquemas después de ingerir datos](../../xdm/tutorials/field-deprecation-ui.md). La desaprobación de campos XDM le permite eliminar campos de la vista de IU al conservarlos para su uso. Puede volver a mostrar los campos obsoletos si es necesario, y cualquier segmento, consulta o solución descendente que haga referencia a los campos se ejecutará de la forma habitual. |
 
-{style=&quot;table-layout:auto&quot;} &#x200B; Para obtener más información sobre XDM en Platform, lea la [Información general del sistema XDM](../../xdm/home.md). &#x200B;
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+{style=&quot;table-layout:auto&quot;}
+
+**Nuevos componentes XDM**
+
+| Tipo de componente | Nombre | Descripción |
+| --- | --- | --- |
+| Clase | [[!UICONTROL Perfil de cliente potencial individual XDM]](https://github.com/adobe/xdm/pull/1669/files) | La clase XDM Individual Prospect Profile incorpora ID proporcionados por el socio. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Componentes XDM actualizados**
+
+| Tipo de componente | Nombre | Descripción |
+| --- | --- | --- |
+| Grupo de campos | [!UICONTROL Restricciones de restricción de frecuencia] | La variable [!UICONTROL Restricciones de restricción de frecuencia] el grupo de campos se ha [actualizado para admitir eventos repetidos y personalizados](https://github.com/adobe/xdm/pull/1641/files). |
+| Tipo de datos | [!UICONTROL Referente web] | Se han realizado las propiedades de referente web [actualizado para incluir `xdm:linkName` y `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectivamente, son el nombre y la región del elemento HTML que se seleccionó en la página anterior. |
+| Grupo de campos | [!UICONTROL Adobe CJM ExperienceEvent: Detalles de la interacción de mensajes] | [La variable [!UICONTROL URL de seguimiento] se agregó el campo](https://github.com/adobe/xdm/pull/1665/files) a [!UICONTROL Adobe CJM ExperienceEvent]. Este rastreador proporciona la URL seleccionada por el usuario. |
+| Grupo de campos | [!UICONTROL Adobe CJM ExperienceEvent: Detalles de interacción de mensajes] | [El vacío `meta:enum` se quitó la propiedad](https://github.com/adobe/xdm/pull/1668/files) desde la dirección URL [!UICONTROL Tipo de seguimiento] campo . |
+| Tipo de datos | [!UICONTROL Información multimedia] | [El patrón regex de la variable `videoSegment` propiedad en [!UICONTROL Información multimedia] el tipo de datos se ha eliminado](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obtener más información sobre XDM en Platform, lea la [Información general del sistema XDM](../../xdm/home.md).
 
 ## Servicio de consultas {#query-service}
 
