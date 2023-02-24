@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
+source-git-commit: 11fa9ca8d7044843c295126f8416e5a36600d244
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '934'
 ht-degree: 13%
 
 ---
@@ -92,6 +92,7 @@ ht-degree: 13%
    - Sistema local {#local-system}
       - [Conector de carga de archivos locales](connectors/local-system/local-file-upload.md)
    - Automatización de marketing {#marketing-automation}
+      - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
       - [Conector Mailchimp](connectors/marketing-automation/mailchimp.md)
       - [Conector Eloqua del oracle](connectors/marketing-automation/oracle-eloqua.md)
@@ -162,6 +163,7 @@ ht-degree: 13%
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Automatización de marketing {#marketing-automation}
+         - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [Campaña MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [Miembros de MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
@@ -276,6 +278,7 @@ ht-degree: 13%
       - Sistema local {#local-system}
          - [Carga de archivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Automatización de marketing {#marketing-automation}
+         - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Campañas Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Miembros de Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
