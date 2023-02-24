@@ -2,9 +2,9 @@
 title: Crear una conexión de origen de Customer.io y un flujo de datos en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen Customer.io mediante la interfaz de usuario de Adobe Experience Platform.
 badge: "Beta"
-source-git-commit: 7ec7900f8a2fe3d7ad63ac061f286657c4a6b4d8
+source-git-commit: f2f3279b5c68cd636ca7da0fe2221e1b0a94fbad
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -64,13 +64,13 @@ En la interfaz de usuario de Platform, seleccione **[!UICONTROL Fuentes]** desde
 
 Utilice la variable *[!UICONTROL Categorías]* para filtrar los orígenes por categoría. Como alternativa, introduzca un nombre de origen en la barra de búsqueda para encontrar un origen específico del catálogo.
 
-Vaya a la [!UICONTROL Automatización de marketing] para ver la [!DNL Customer.io] tarjeta de origen. Para empezar, seleccione [!UICONTROL Añadir datos].
+Vaya a la [!UICONTROL Automatización de marketing] para ver la [!DNL Customer.io] tarjeta de origen. Para empezar, seleccione **[!UICONTROL Añadir datos]**.
 
 ![Captura de pantalla de la interfaz de usuario de Platform para el catálogo con tarjeta Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Seleccionar datos {#select-data}
 
-La variable **[!UICONTROL Seleccionar datos]** , proporcionando una interfaz para que seleccione los datos que aporta a Platform.
+La variable **[!UICONTROL Seleccionar datos]** , proporcionando una interfaz para que seleccione los datos que desea traer a Platform.
 
 * La parte izquierda de la interfaz es un navegador que le permite ver los flujos de datos disponibles en su cuenta;
 * La parte derecha de la interfaz le permite previsualizar hasta 100 filas de datos de un archivo JSON.

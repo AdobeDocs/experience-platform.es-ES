@@ -2,7 +2,7 @@
 title: Información general sobre Customer.io Source
 description: Obtenga información sobre cómo conectar Customer.io a Adobe Experience Platform mediante API o la interfaz de usuario mediante vínculos web.
 badge: "Beta"
-source-git-commit: cb4b92f4d71d42d57363e16d4764217b6de7f8ee
+source-git-commit: 516ec2cbfb954764f1a6fb2007e20acac425607d
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -21,9 +21,9 @@ Experience Platform proporciona asistencia para la ingesta de datos desde aplica
 
 [[!DNL Customer.io]](https://customer.io/) es una plataforma de mensajería automatizada para especialistas en marketing que desean tener más control y flexibilidad para crear y enviar correos electrónicos impulsados por datos, notificaciones push, mensajes en la aplicación y SMS.
 
-La variable [!DNL Customer.io] source le permite ingerir esquemas de eventos de Weblock compatibles y sus datos de evento asociados desde [!DNL Customer.io] usando la variable [[!DNL Customer.io] Informes de vínculos web](https://customer.io/docs/api/webhooks/).
+La variable [!DNL Customer.io] source le permite ingerir esquemas de eventos de enlace web admitidos y sus datos de evento asociados desde [!DNL Customer.io] usando la variable [[!DNL Customer.io] Informes de vínculos web](https://customer.io/docs/api/webhooks/).
 
-Los esquemas de eventos de Weblock admitidos son:
+Los esquemas de eventos de enlace web admitidos son:
 
 * Eventos del cliente
 * Eventos de correo electrónico
