@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo
 title: Creación de una conexión de flujo continuo de API HTTP mediante la API del servicio de flujo
 description: Este tutorial proporciona pasos sobre cómo crear una conexión de flujo continuo utilizando la fuente de API HTTP para datos sin procesar y XDM mediante la API de servicio de flujo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1544'
 ht-degree: 3%
 
 ---
@@ -475,6 +475,8 @@ POST /flows
 
 >[!TAB Sin transformaciones]
 
+La siguiente solicitud crea un flujo de datos de flujo continuo para la API HTTP sin transformaciones de datos.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -500,6 +502,10 @@ curl -X POST \
 ```
 
 >[!TAB Con transformaciones]
+
+Las siguientes solicitudes crean un flujo de datos de flujo continuo para la API HTTP con transformaciones de asignación aplicadas a sus datos.
+
+Al crear un flujo de datos con transformaciones, la variable `name` no se puede cambiar. Este valor siempre debe establecerse como `Mapping`.
 
 ```shell
 curl -X POST \
