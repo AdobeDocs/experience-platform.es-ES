@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;segmentación por secuencias;Segmentación por secuencias;Evaluación continua;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;segmentación de streaming;Segmentación de streaming;Evaluación continua;
 solution: Experience Platform
-title: Evaluar eventos en tiempo casi real con segmentación por transmisión
+title: Evaluar eventos en tiempo casi real con segmentación de streaming
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 1%
@@ -15,94 +15,94 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->El siguiente documento indica cómo utilizar la segmentación de flujo continuo mediante la API de . Para obtener información sobre el uso de la segmentación de flujo continuo mediante la interfaz de usuario, lea la [guía de la interfaz de usuario de segmentación por secuencias](../ui/streaming-segmentation.md).
+>El siguiente documento indica cómo utilizar la segmentación de flujo continuo mediante la API. Para obtener información sobre el uso de la segmentación de flujo continuo mediante la interfaz de usuario, lea la [guía de IU de segmentación de streaming](../ui/streaming-segmentation.md).
 
-Segmentación por transmisión en [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real, mientras se centran en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos de flujo continuo llegan a [!DNL Platform], aliviando la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que se pasan los datos a [!DNL Platform], lo que significa que la pertenencia a un segmento se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
+Segmentación de streaming en [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real al tiempo que se centran en la riqueza de datos. Con la segmentación por streaming, la calificación de segmentos ahora se produce cuando los datos de streaming llegan a [!DNL Platform], aliviando la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a [!DNL Platform], lo que significa que el abono a segmentos se mantendrá actualizado sin ejecutar trabajos de segmentación programados.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 >[!NOTE]
 >
->La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los segmentos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo.
+>La segmentación por flujo funciona en todos los datos que se ingirieron con una fuente de flujo continuo. Los segmentos ingeridos mediante una fuente basada en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación por transmisión.
 >
 >Además, los segmentos evaluados con la segmentación de flujo continuo pueden variar entre la pertenencia ideal y real si el segmento se basa en otro segmento que se evalúa mediante la segmentación por lotes. Por ejemplo, si el segmento A se basa en el segmento B y el segmento B se evalúa mediante la segmentación por lotes, ya que el segmento B solo se actualiza cada 24 horas, el segmento A se alejará más de los datos reales hasta que se vuelva a sincronizar con la actualización del segmento B.
 
 ## Primeros pasos
 
-Esta guía para desarrolladores requiere una comprensión práctica de las distintas [!DNL Adobe Experience Platform] servicios relacionados con la segmentación de flujo continuo. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Esta guía para desarrolladores requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios relacionados con la segmentación de streaming. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
-- [[!DNL Segmentation]](../home.md): Proporciona la capacidad de crear segmentos y audiencias a partir de [!DNL Real-Time Customer Profile] datos.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real, basado en los datos agregados de varias fuentes.
+- [[!DNL Segmentation]](../home.md): permite crear segmentos y audiencias a partir de [!DNL Real-Time Customer Profile] datos.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
-Las secciones siguientes proporcionan información adicional que debe conocer para realizar llamadas a [!DNL Platform] API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para poder realizar llamadas correctamente a [!DNL Platform] API.
 
-### Leer llamadas de API de ejemplo
+### Leer llamadas de API de muestra
 
-Esta guía para desarrolladores proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+Esta guía para desarrolladores proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
-### Recopilar valores para encabezados necesarios
+### Recopilar valores para los encabezados obligatorios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todos los [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aisladas para zonas protegidas virtuales específicas. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general de entorno limitado](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación general de zona protegida](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
 - Content-Type: application/json
 
-Es posible que se requieran encabezados adicionales para completar solicitudes específicas. Los encabezados correctos se muestran en cada uno de los ejemplos de este documento. Preste especial atención a las solicitudes de muestra para asegurarse de que se incluyen todos los encabezados necesarios.
+Es posible que se requieran encabezados adicionales para completar solicitudes específicas. Los encabezados correctos se muestran en cada uno de los ejemplos de este documento. Preste especial atención a las solicitudes de ejemplo para asegurarse de que se incluyen todos los encabezados obligatorios.
 
-### Tipos de consultas habilitadas para la segmentación por transmisión {#query-types}
+### Tipos de consulta habilitados para segmentación de streaming {#query-types}
 
 >[!NOTE]
 >
->Deberá habilitar la segmentación programada para la organización para que funcione la segmentación de flujo continuo. La información sobre cómo habilitar la segmentación programada se encuentra en la [habilitar la sección de segmentación programada](#enable-scheduled-segmentation)
+>Deberá habilitar la segmentación programada para la organización a fin de que la segmentación de streaming funcione. Encontrará información sobre la activación de la segmentación programada en la [habilitar sección de segmentación programada](#enable-scheduled-segmentation)
 
-Para que un segmento se evalúe utilizando la segmentación de flujo continuo, la consulta debe cumplir las siguientes directrices.
+Para que un segmento se evalúe mediante la segmentación de flujo continuo, la consulta debe cumplir las siguientes directrices.
 
 | Tipo de consulta | Detalles |
 | ---------- | ------- |
-| Un solo evento | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. |
-| Un solo evento dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante. |
-| Un solo evento con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un solo evento entrante con un intervalo de tiempo. |
+| Evento único | Cualquier definición de segmento que haga referencia a un único evento entrante sin restricción horaria. |
+| Evento único dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un único evento entrante. |
+| Evento único con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante con un intervalo de tiempo. |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
-| Un solo evento con un atributo de perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. **Nota:** La consulta se evalúa inmediatamente cuando se produce el evento. Sin embargo, en el caso de un evento de perfil, debe esperar 24 horas para incorporarse. |
-| Un solo evento con un atributo de perfil dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o más atributos de perfil. |
+| Evento único con un atributo de perfil | Cualquier definición de segmento que haga referencia a un único evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. **Nota:** La consulta se evalúa inmediatamente cuando llega el evento. Sin embargo, en el caso de un evento de perfil, debe esperar 24 horas para incorporarse. |
+| Evento único con un atributo de perfil dentro de una ventana de tiempo relativa | Cualquier definición de segmento que haga referencia a un único evento entrante y a uno o más atributos de perfil. |
 | Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se utiliza un segmento de segmentos, se producirá la descalificación del perfil **cada 24 horas**. |
 | Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. |
 
-Una definición de segmento **not** esté habilitado para la segmentación de flujo continuo en los siguientes casos:
+Una definición de segmento **no** habilitarse para la segmentación de flujo continuo en los siguientes casos:
 
-- La definición del segmento incluye segmentos o rasgos de Adobe Audience Manager (AAM).
+- La definición del segmento incluye segmentos o rasgos de Adobe Audience Manager AAM ().
 - La definición del segmento incluye varias entidades (consultas de varias entidades).
-- La definición del segmento incluye una combinación de un solo evento y un `inSegment` evento.
-   - Sin embargo, si el segmento contiene la variable `inSegment` es solo de perfil, la definición del segmento **will** esté habilitado para la segmentación de flujo continuo.
+- La definición del segmento incluye una combinación de un solo evento y una `inSegment` evento.
+   - Sin embargo, si el segmento contenido en la variable `inSegment` El evento es solo de perfil, la definición del segmento **testamento** habilitarse para la segmentación de flujo continuo.
 
-Tenga en cuenta las siguientes directrices cuando realice la segmentación de flujo continuo:
+Tenga en cuenta las siguientes directrices a la hora de realizar la segmentación por streaming:
 
 | Tipo de consulta | Pauta |
 | ---------- | -------- |
 | Consulta de evento único | No hay límites en la ventana retrospectiva. |
-| Consulta con historial de eventos | <ul><li>La ventana retrospectiva se limita a **un día**.</li><li>Condición estricta de orden de tiempo **must** existen entre los eventos.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **cannot** ser una negación.</li></ul> |
+| Consulta con historial de eventos | <ul><li>La ventana retrospectiva se limita a **un día**.</li><li>Una condición de orden de tiempo estricta **debe** existen entre los eventos.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **no puede** ser una negación.</li></ul> |
 
-Si se modifica una definición de segmento para que ya no cumpla los criterios de segmentación de flujo continuo, la definición del segmento pasará automáticamente de &quot;Transmisión&quot; a &quot;Lote&quot;.
+Si se modifica una definición de segmento para que ya no cumpla los criterios de segmentación de flujo continuo, la definición de segmento cambiará automáticamente de &quot;Flujo&quot; a &quot;Lote&quot;.
 
-Además, la descalificación de segmentos, similar a la calificación de segmentos, se produce en tiempo real. Como resultado, si una audiencia ya no cumple los requisitos para un segmento, quedará inmediatamente sin clasificar. Por ejemplo, si la definición del segmento requiere &quot;Todos los usuarios que compraron zapatos rojos en las últimas tres horas&quot;, después de tres horas, todos los perfiles que inicialmente calificaron para la definición del segmento no se calificarán.
+Además, la descalificación de segmentos, de manera similar a la calificación de segmentos, se produce en tiempo real. Como resultado, si una audiencia ya no cumple los requisitos para un segmento, se elimina inmediatamente. Por ejemplo, si la definición del segmento solicita &quot;Todos los usuarios que compraron zapatos rojos en las últimas tres horas&quot;, después de tres horas, todos los perfiles que inicialmente se calificaron para la definición del segmento serán no calificados.
 
-## Recuperar todos los segmentos habilitados para la segmentación de flujo continuo
+## Recupere todos los segmentos habilitados para la segmentación de streaming
 
-Puede recuperar una lista de todos los segmentos que están habilitados para la segmentación de flujo continuo dentro de su organización IMS realizando una solicitud de GET al `/segment/definitions` punto final.
+Puede recuperar una lista de todos los segmentos habilitados para la segmentación de flujo continuo dentro de su organización IMS realizando una solicitud de GET a `/segment/definitions` punto final.
 
 **Formato de API**
 
@@ -213,9 +213,9 @@ Una respuesta correcta devuelve una matriz de segmentos en su organización de I
 }
 ```
 
-## Creación de segmentos con flujo continuo activado
+## Creación de un segmento habilitado para streaming
 
-Se habilitará automáticamente la transmisión de un segmento si coincide con uno de los [tipos de segmentación de flujo continuo enumerados arriba](#query-types).
+Un segmento se habilitará automáticamente para la transmisión si coincide con uno de los [tipos de segmentación de streaming enumerados arriba](#query-types).
 
 **Formato de API**
 
@@ -244,17 +244,28 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": true
+        },
+        "synchronous": {
+            "enabled": false
+        }
     }
 }'
 ```
 
 >[!NOTE]
 >
->Se trata de una solicitud estándar &quot;crear un segmento&quot;. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre [creación de segmentos](../tutorials/create-a-segment.md).
+>Esta es una solicitud estándar de &quot;creación de segmentos&quot;. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre [creación de segmentos](../tutorials/create-a-segment.md).
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la definición de segmento de flujo continuo recién creada.
+Una respuesta correcta devuelve los detalles de la definición del segmento habilitado para flujo continuo recién creada.
 
 ```json
 {
@@ -296,15 +307,15 @@ Una respuesta correcta devuelve los detalles de la definición de segmento de fl
 
 ## Habilitar evaluación programada {#enable-scheduled-segmentation}
 
-Una vez habilitada la evaluación de flujo continuo, se debe crear una línea de base (después de lo cual el segmento siempre estará actualizado). La evaluación programada (también conocida como segmentación programada) debe habilitarse primero para que el sistema realice automáticamente la asignación de basl. Con la segmentación programada, su organización de IMS puede adherirse a una programación recurrente para ejecutar automáticamente trabajos de exportación para evaluar segmentos.
+Una vez habilitada la evaluación de la transmisión, se debe crear una línea de base (después de la cual el segmento siempre estará actualizado). La evaluación programada (también conocida como segmentación programada) debe habilitarse primero para que el sistema realice la línea de base automáticamente. Con la segmentación programada, su organización de IMS puede adherirse a una programación recurrente para ejecutar automáticamente los trabajos de exportación y evaluar los segmentos.
 
 >[!NOTE]
 >
->La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para [!DNL XDM Individual Profile]. Si su organización tiene más de cinco directivas de combinación para [!DNL XDM Individual Profile] en un entorno limitado, no se puede utilizar la evaluación programada.
+>La evaluación programada se puede habilitar para zonas protegidas con un máximo de cinco (5) políticas de combinación para [!DNL XDM Individual Profile]. Si su organización tiene más de cinco políticas de combinación para [!DNL XDM Individual Profile] en un solo entorno de zona protegida, no podrá utilizar la evaluación programada.
 
-### Crear una programación
+### Creación de una programación
 
-Haciendo una solicitud de POST al `/config/schedules` , puede crear una programación e incluir la hora específica en la que se debe activar la programación.
+Realizando una solicitud de POST a `/config/schedules` punto final, puede crear una programación e incluir la hora específica en la que se debe activar.
 
 **Formato de API**
 
@@ -314,7 +325,7 @@ POST /config/schedules
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva programación basada en las especificaciones proporcionadas en la carga útil.
+La siguiente solicitud crea un nuevo programa basado en las especificaciones proporcionadas en la carga útil.
 
 ```shell
 curl -X POST \
@@ -338,10 +349,10 @@ curl -X POST \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `name` | **(Obligatorio)** Nombre de la programación. Debe ser una cadena. |
-| `type` | **(Obligatorio)** El tipo de trabajo en formato de cadena. Los tipos compatibles son `batch_segmentation` y `export`. |
-| `properties` | **(Obligatorio)** Un objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `properties.segments` | **(obligatorio cuando `type` es igual que `batch_segmentation`)** Uso `["*"]` garantiza que se incluyan todos los segmentos. |
-| `schedule` | **(Obligatorio)** Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar la ejecución de un trabajo más de una vez durante un período de 24 horas. El ejemplo mostrado (`0 0 1 * * ?`) significa que el trabajo se activa todos los días a las 1.:00:00 UTC. Para obtener más información, consulte el apéndice de la [formato de expresión cron](./schedules.md#appendix) en la documentación sobre programaciones dentro de la segmentación. |
+| `type` | **(Obligatorio)** El tipo de trabajo en formato de cadena. Los tipos admitidos son `batch_segmentation` y `export`. |
+| `properties` | **(Obligatorio)** Objeto que contiene propiedades adicionales relacionadas con la programación. |
+| `properties.segments` | **(Necesario cuando `type` igual a `batch_segmentation`)** Uso de `["*"]` garantiza que todos los segmentos estén incluidos. |
+| `schedule` | **(Obligatorio)** Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. El ejemplo mostrado (`0 0 1 * * ?`) significa que el trabajo se activa cada día a las 1:00:00 UTC. Para obtener más información, consulte el apéndice del [formato de expresión cron](./schedules.md#appendix) dentro de la documentación sobre programaciones dentro de la segmentación. |
 | `state` | *(Opcional)* Cadena que contiene el estado de programación. Valores disponibles: `active` y `inactive`. El valor predeterminado es `inactive`. Una organización de IMS solo puede crear una programación. Los pasos para actualizar la programación están disponibles más adelante en este tutorial. |
 
 **Respuesta**
@@ -372,9 +383,9 @@ Una respuesta correcta devuelve los detalles de la programación recién creada.
 }
 ```
 
-### Activación de una programación
+### Habilitar una programación
 
-De forma predeterminada, una programación está inactiva cuando se crea a menos que el `state` la propiedad se establece en `active` en el cuerpo de la solicitud create (POST). Puede activar una programación (establezca la variable `state` a `active`) realizando una solicitud de PATCH al `/config/schedules` y incluyendo el ID de la programación en la ruta.
+De forma predeterminada, una programación está inactiva cuando se crea a menos que `state` La propiedad se establece en `active` en el cuerpo de la solicitud crear (POST). Puede activar una programación (establezca el `state` hasta `active`) realizando una solicitud de PATCH a `/config/schedules` e incluir el ID de la programación en la ruta.
 
 **Formato de API**
 
@@ -384,7 +395,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Solicitud**
 
-La siguiente solicitud utiliza [Formato de parche JSON](https://datatracker.ietf.org/doc/html/rfc6902) para actualizar el `state` de la programación a `active`.
+La siguiente solicitud utiliza [Formato de parche de JSON](https://datatracker.ietf.org/doc/html/rfc6902) para actualizar el `state` de la programación a `active`.
 
 ```shell
 curl -X POST \
@@ -405,42 +416,42 @@ curl -X POST \
 
 **Respuesta**
 
-Una actualización correcta devuelve un cuerpo de respuesta vacío y el estado HTTP 204 (sin contenido).
+Una actualización correcta devuelve un cuerpo de respuesta vacío y un estado HTTP 204 (sin contenido).
 
-Se puede utilizar la misma operación para deshabilitar una programación reemplazando el &quot;valor&quot; de la solicitud anterior por &quot;inactivo&quot;.
+Se puede utilizar la misma operación para desactivar una programación sustituyendo el &quot;valor&quot; de la solicitud anterior por &quot;inactivo&quot;.
 
 ## Pasos siguientes
 
-Ahora que ha habilitado los segmentos nuevos y existentes para la segmentación de flujo continuo y la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear segmentos con transmisión habilitada para su organización.
+Ahora que ha habilitado tanto los segmentos nuevos como los existentes para la segmentación de flujo continuo, y ha habilitado la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear segmentos habilitados para flujo continuo para su organización.
 
-Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la [Guía del usuario del Generador de segmentos](../ui/segment-builder.md).
+Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite [Guía del usuario del Generador de segmentos](../ui/segment-builder.md).
 
 ## Apéndice
 
-La siguiente sección enumera las preguntas más frecuentes sobre la segmentación de flujo continuo:
+En la siguiente sección se enumeran las preguntas más frecuentes sobre la segmentación de streaming:
 
-### ¿La &quot;incalificación&quot; de la segmentación por transmisión también se produce en tiempo real?
+### ¿La &quot;descalificación&quot; de la segmentación de streaming también se produce en tiempo real?
 
-En la mayoría de los casos, la descalificación de la segmentación de flujo continuo se produce en tiempo real. Sin embargo, los segmentos de flujo continuo que utilizan segmentos de segmentos sí **not** no cumple los requisitos en tiempo real, en lugar de no cumplir los requisitos después de 24 horas.
+En la mayoría de los casos, la descalificación de la segmentación de streaming se produce en tiempo real. Sin embargo, los segmentos de flujo continuo que utilizan segmentos de segmentos sí lo hacen **no** descalificar en tiempo real, en lugar de descalificar después de 24 horas.
 
-### ¿En qué datos funciona la segmentación por secuencias?
+### ¿En qué datos funciona la segmentación por streaming?
 
-La segmentación por transmisión funciona en todos los datos que se introdujeron mediante una fuente de flujo continuo. Los segmentos introducidos mediante un origen basado en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación de flujo continuo. Los eventos transmitidos al sistema con una marca de tiempo de más de 24 horas se procesarán en el siguiente trabajo por lotes.
+La segmentación por flujo funciona en todos los datos que se ingirieron con una fuente de flujo continuo. Los segmentos ingeridos mediante una fuente basada en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación por transmisión. Los eventos transmitidos al sistema con una marca de tiempo de más de 24 horas se procesarán en el trabajo por lotes siguiente.
 
 ### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
 
-Un segmento se define como segmentación por lotes o de flujo continuo basada en una combinación de tipo de consulta y duración del historial de eventos. Puede encontrar una lista de los segmentos que se evaluarán como un segmento de flujo continuo en la [sección tipos de consulta de segmentación de flujo continuo](#query-types).
+Un segmento se define como segmentación por lotes o de flujo continuo basada en una combinación de tipo de consulta y duración del historial de eventos. Puede encontrar una lista de los segmentos que se evaluarán como segmento de flujo continuo en la [sección tipos de consulta de segmentación de streaming](#query-types).
 
-Tenga en cuenta que si un segmento contiene **both** an `inSegment` y una cadena directa de un solo evento, no se pueden calificar para la segmentación de flujo continuo. Si desea que este segmento cumpla los requisitos para la segmentación de flujo continuo, debe hacer que la cadena directa de un solo evento sea su propio segmento.
+Tenga en cuenta que si un segmento contiene **ambos** un `inSegment` y una cadena de evento único directa, no cumple los requisitos para la segmentación de flujo continuo. Si desea que este segmento cumpla los requisitos para la segmentación de flujo continuo, debe convertir la cadena de evento único directo en su propio segmento.
 
-### ¿Por qué el número de segmentos &quot;cualificados totales&quot; sigue aumentando mientras que el número de &quot;Últimos X días&quot; permanece en cero en la sección de detalles del segmento?
+### ¿Por qué sigue aumentando el número de segmentos &quot;cualificados totales&quot; mientras que el número de &quot;últimos X días&quot; permanece en cero dentro de la sección de detalles del segmento?
 
-El número total de segmentos cualificados se obtiene del trabajo diario de segmentación, que incluye audiencias que cumplen los requisitos para segmentos de flujo y por lotes. Este valor se muestra tanto para los segmentos de lote como de flujo continuo.
+El número total de segmentos cualificados se obtiene del trabajo de segmentación diario, que incluye audiencias que cumplen los requisitos para los segmentos por lotes y de flujo continuo. Este valor se muestra para los segmentos por lotes y de flujo continuo.
 
-El número de &quot;Últimos X días&quot; **only** incluye audiencias cualificadas en segmentación de flujo continuo y **only** aumenta si ha transmitido datos al sistema y cuenta para esa definición de flujo continuo. Este valor es **only** para segmentos de flujo continuo. Como resultado, este valor **may** se muestra como 0 para los segmentos por lotes.
+El número bajo los &quot;últimos X días&quot; **solamente** incluye audiencias que cumplen los requisitos de la segmentación de streaming y **solamente** aumenta si ha transmitido datos al sistema y estos se contabilizan en esa definición de transmisión. Este valor es **solamente** se muestra para segmentos de flujo continuo. Como resultado, este valor **mayo** mostrar como 0 para los segmentos por lotes.
 
-Como resultado, si ve que el número en &quot;Últimos X días&quot; es cero y el gráfico de líneas también está reportando cero, tiene **not** transmite todos los perfiles al sistema que cumplen los requisitos para ese segmento.
+Como resultado, si ve que el número bajo &quot;Últimos X días&quot; es cero y el gráfico de líneas también informa de cero, tiene **no** transmite al sistema todos los perfiles aptos para ese segmento.
 
-### ¿Cuánto tarda un segmento en estar disponible?
+### ¿Cuánto tiempo tarda un segmento en estar disponible?
 
-Un segmento tarda hasta una hora en estar disponible.
+Un segmento puede tardar hasta una hora en estar disponible.
