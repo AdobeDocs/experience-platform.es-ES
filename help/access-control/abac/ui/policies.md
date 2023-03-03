@@ -1,139 +1,140 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de acceso;control de acceso basado en atributos;ABAC
 title: Administrar directivas de control de acceso
-description: Este documento proporciona información sobre la administración de políticas de control de acceso a través de la interfaz Permisos en Adobe Experience Cloud.
+description: Este documento proporciona información sobre la administración de directivas de control de acceso a través de la interfaz Permisos en Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
-# Administrar las políticas de control de acceso
+# Administrar directivas de control de acceso
 
-Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Las políticas de acceso pueden ser locales o globales y pueden anular otras directivas.
+Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Las directivas de acceso pueden ser locales o globales, y pueden invalidar otras directivas. El Adobe proporciona una directiva predeterminada que se puede activar inmediatamente o siempre que su organización esté lista para empezar a controlar el acceso a objetos específicos en función de las etiquetas. La directiva predeterminada aprovecha las etiquetas aplicadas a los recursos para denegar el acceso a menos que los usuarios tengan una función con una etiqueta coincidente.
 
 >[!IMPORTANT]
 >
->Las políticas de acceso no deben confundirse con las políticas de uso de datos, que controlan cómo se utilizan los datos en Adobe Experience Platform en lugar de qué usuarios de la organización tienen acceso a ellos. Consulte la guía sobre la creación [políticas de uso de datos](../../../data-governance/policies/create.md) para obtener más información.
+>Las políticas de acceso no se deben confundir con las políticas de uso de datos, que controlan cómo se utilizan los datos en Adobe Experience Platform en lugar de los usuarios de su organización que tienen acceso a ellos. Consulte la guía sobre creación de [políticas de uso de datos](../../../data-governance/policies/create.md) para obtener más información.
 
-## Crear una directiva nueva
+<!-- ## Create a new policy
 
-Para crear una directiva nueva, seleccione la opción **[!UICONTROL Políticas]** en la barra lateral y seleccione **[!UICONTROL Crear directiva]**.
+To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
 
 ![flac-new-policy](../../images/flac-ui/flac-new-policy.png)
 
-La variable **[!UICONTROL Crear una directiva nueva]** , solicitándole que escriba un nombre y una descripción opcional. Cuando termine, seleccione **[!UICONTROL Confirmar]**.
+The **[!UICONTROL Create a new policy]** dialog appears, prompting you to enter a name, and an optional description. When finished, select **[!UICONTROL Confirm]**.
 
 ![flac-create-new-policy](../../images/flac-ui/flac-create-new-policy.png)
 
-Con la flecha desplegable, seleccione si desea **Permita el acceso a** (![flac-allow-access-to](../../images/flac-ui/flac-permit-access-to.png)) un recurso o **Denegar acceso a** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) un recurso.
+Using the dropdown arrow select if you would like to **Permit access to** (![flac-permit-access-to](../../images/flac-ui/flac-permit-access-to.png)) a resource or **Deny access to** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) a resource.
 
-A continuación, seleccione el recurso que desee incluir en la directiva mediante el menú desplegable y busque el tipo de acceso, lea o escriba.
+Next, select the resource that you would like to include in the policy using the dropdown menu and search access type, read or write.
 
 ![flac-flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
 
-A continuación, con la flecha desplegable, seleccione la condición que desee aplicar a esta directiva, **Lo siguiente es verdadero** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) o **siendo false lo siguiente** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
+Next, using the dropdown arrow select the condition you would like to apply to this policy, **The following being true** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) or **The following being false** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
 
-Seleccione el icono de signo más para **Añadir expresión de coincidencias** o **Agregar grupo de expresiones** para el recurso.
+Select the plus icon to **Add matches expression** or **Add expression group** for the resource. 
 
 ![flac-policy-expression](../../images/flac-ui/flac-policy-expression.png)
 
-En el menú desplegable, seleccione la opción **Recurso**.
+Using the dropdown, select the **Resource**.
 
 ![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
-A continuación, en la lista desplegable , seleccione la opción **Coincide**.
+Next, using the dropdown select the **Matches**.
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-A continuación, en el menú desplegable, seleccione el tipo de etiqueta (**[!UICONTROL Etiqueta principal]** o **[!UICONTROL Etiqueta personalizada]**) para que coincida con la etiqueta asignada al usuario en las funciones.
+Next, using the dropdown, select the type of label (**[!UICONTROL Core label]** or **[!UICONTROL Custom label]**) to match the label assigned to the User in roles.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
-Finalmente, seleccione la **Sandbox** que desea que se apliquen las condiciones de directiva mediante el menú desplegable.
+Finally, select the **Sandbox** that you would like the policy conditions to apply to, using the dropdown menu.
 
-![flac-policy-sandboxes-desplegable](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
+![flac-policy-sandboxes-dropdown](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
 
-Select **Agregar recurso** para agregar más recursos. Una vez finalizado, seleccione **[!UICONTROL Guardar y salir]**.
+Select **Add resource** to add more resources. Once finished, select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-La nueva directiva se ha creado correctamente y se le redirige al **[!UICONTROL Políticas]** , donde verá que la política recién creada aparece en la lista.
+The new policy is successfully created, and you are redirected to the **[!UICONTROL Policies]** tab, where you will see the newly created policy appear in the list. 
 
 ![flac-policy-saved](../../images/flac-ui/flac-policy-saved.png)
 
-## Editar una directiva
+## Edit a policy
 
-Para editar una política existente, seleccione la política en la **[!UICONTROL Políticas]** pestaña . Como alternativa, utilice la opción de filtro para filtrar los resultados y encontrar la directiva que desea editar.
+To edit an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-A continuación, seleccione los puntos suspensivos (`…`) junto al nombre de las directivas y un menú desplegable muestra los controles para editar, desactivar, eliminar o duplicar la función. Seleccione Editar en la lista desplegable.
+Next, select the ellipsis (`…`) next to the policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select edit from the dropdown.
 
 ![flac-policy-edit](../../images/flac-ui/flac-policy-edit.png)
 
-Aparecerá la pantalla de permisos de directivas. Realice las actualizaciones y seleccione **[!UICONTROL Guardar y salir]**.
+The policy permissions screen appears. Make the updates then select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-La directiva se actualiza correctamente y se le redirige al **[!UICONTROL Políticas]** pestaña .
+The policy is successfully updated, and you are redirected to the **[!UICONTROL Policies]** tab.
 
-## Duplicar una directiva
+## Duplicate a policy
 
-Para duplicar una directiva existente, seleccione la directiva en la **[!UICONTROL Políticas]** pestaña . Como alternativa, utilice la opción de filtro para filtrar los resultados y encontrar la directiva que desea editar.
+To duplicate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-A continuación, seleccione los puntos suspensivos (`…`) junto al nombre de una política y un menú desplegable muestra los controles para editar, desactivar, eliminar o duplicar la función. Seleccione duplicar en la lista desplegable.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select duplicate from the dropdown.
 
 ![flac-policy-duplicate](../../images/flac-ui/flac-policy-duplicate.png)
 
-La variable **[!UICONTROL Duplicar directiva]** , pidiéndole que confirme la duplicación.
+The **[!UICONTROL Duplicate policy]** dialog appears, prompting you to confirm the duplication. 
 
 ![flac-policy-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-La nueva directiva aparece en la lista como una copia del original en la **[!UICONTROL Políticas]** pestaña .
+The new policy appears in the list as a copy of the original on the **[!UICONTROL Policies]** tab.
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
-## Eliminar una directiva
+## Delete a policy
 
-Para eliminar una directiva existente, seleccione la directiva en la sección **[!UICONTROL Políticas]** pestaña . Como alternativa, utilice la opción de filtro para filtrar los resultados y encontrar la política que desea eliminar.
+To delete an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-A continuación, seleccione los puntos suspensivos (`…`) junto al nombre de una política y un menú desplegable muestra los controles para editar, desactivar, eliminar o duplicar la función. Seleccione eliminar en la lista desplegable.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select delete from the dropdown.
 
 ![flac-policy-delete](../../images/flac-ui/flac-policy-delete.png)
 
-La variable **[!UICONTROL Eliminar directiva de usuario]** , pidiéndole que confirme la eliminación.
+The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm the deletion. 
 
 ![flac-policy-delete-confirm](../../images/flac-ui/flac-policy-delete-confirm.png)
 
-Volverá a la **[!UICONTROL políticas]** y aparece una confirmación de eliminación emergente.
+You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
-![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png)
+![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
 ## Activar una directiva
 
-Para activar una directiva existente, selecciónela en el **[!UICONTROL Políticas]** pestaña . Como alternativa, utilice la opción de filtro para filtrar los resultados y encontrar la política que desea eliminar.
+Para activar una directiva existente, selecciónela en el **[!UICONTROL Políticas]** pestaña.
 
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
+![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-A continuación, seleccione los puntos suspensivos (`…`) junto al nombre de una política y un menú desplegable muestra los controles para editar, activar, eliminar o duplicar la función. Seleccione activar en la lista desplegable.
+A continuación, seleccione los puntos suspensivos (`…`) junto al nombre de una directiva y un menú desplegable muestra controles para editar, activar, eliminar o duplicar la función. Seleccione activar en el menú desplegable.
 
-![flac-policy-activate](../../images/flac-ui/flac-policy-delete.png)
+![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-La variable **[!UICONTROL Activar la directiva de usuario]** , pidiéndole que confirme la activación.
+El **[!UICONTROL Activar directiva]** aparece un cuadro de diálogo que le solicita que confirme la activación.
 
-![flac-policy-activate-confirm](../../images/flac-ui/flac-policy-activate-confirm.png)
+![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-Volverá a la **[!UICONTROL políticas]** y aparece una ventana emergente de confirmación de activación. El estado de la directiva se muestra como activo.
 
-![flac-policy-enabled](../../images/flac-ui/flac-policy-activated.png)
+Se le devolverá a la **[!UICONTROL directivas]** y aparece una ventana emergente de confirmación de activación. El estado de la política se muestra como activa.
+
+![flac-policy-activated](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## Pasos siguientes
 
-Con una nueva directiva creada, puede continuar con el paso siguiente a [administrar permisos para una función](permissions.md).
+Con una directiva activada, puede continuar con el siguiente paso para [administrar permisos para una función](permissions.md).
