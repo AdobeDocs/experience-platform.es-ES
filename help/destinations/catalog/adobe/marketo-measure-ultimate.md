@@ -2,9 +2,9 @@
 title: Destino de Marketo Measure Ultimate
 description: Obtenga información sobre cómo conectar y activar datos en el destino de Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: 60ea8a608b85661f3a5d23dc3ba52cb0952fe2d2
+source-git-commit: bd2869e48c2d831460fb817c6ddfb800f88b8600
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '654'
 ht-degree: 1%
 
 ---
@@ -60,21 +60,23 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
 
+![Flujo de trabajo Conectar con destino para el destino de Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+
 ### Habilitar alertas {#enable-alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Exportar conjuntos de datos a este destino {#export-datasets}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Administrar y activar destinos de conjuntos de datos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [(Beta) Exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) para obtener instrucciones detalladas sobre la exportación de conjuntos de datos a este destino.
+Lea el [(Beta) Exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) tutorial para obtener instrucciones detalladas sobre la exportación de conjuntos de datos a este destino.
 
-## Datos exportados / Validar exportación de datos {#exported-data}
+## Validar exportación de datos {#exported-data}
 
 Para validar una exportación correcta de conjuntos de datos, puede comprobar que el conjunto de datos ha llegado correctamente a su [data warehouse de Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
 
@@ -82,5 +84,6 @@ Para validar una exportación correcta de conjuntos de datos, puede comprobar qu
 
 Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos, lea la [Resumen de gobernanza de datos](/help/data-governance/home.md).
 
-## Recursos adicionales {#additional-resources}
+<!--## Additional resources {#additional-resources}-->
+
 
