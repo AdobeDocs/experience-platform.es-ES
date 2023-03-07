@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones de asignación de preparación de datos
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2584e804674cc54f9cdd0b3a28ee6fb1600b6216
+source-git-commit: da7eff7966679635efa71cbbd33768ef4f412241
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4557'
 ht-degree: 4%
 
 ---
@@ -64,7 +64,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | es igual que | Compara dos cadenas para confirmar si son iguales. Esta función distingue entre mayúsculas y minúsculas. | <ul><li>CADENA1: **Requerido** La primera cadena que desea comparar.</li><li>CADENA2: **Requerido** La segunda cadena que desea comparar.</li></ul> | CADENA1.&#x200B;es igual a( CADENA2) | &quot;cadena1&quot;.&#x200B;igual a&#x200B;(&quot;STRING1&quot;) | false |
 | igual a IgnoreCase | Compara dos cadenas para confirmar si son iguales. Esta función es **no** distingue mayúsculas de minúsculas. | <ul><li>CADENA1: **Requerido** La primera cadena que desea comparar.</li><li>CADENA2: **Requerido** La segunda cadena que desea comparar.</li></ul> | CADENA1.&#x200B;igual a IgnoreCase&#x200B;(STRING2) | &quot;cadena1&quot;.&#x200B;igual a IgnoreCase&#x200B;(&quot;STRING1) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funciones de expresión regular
 
@@ -73,7 +73,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | extract_regex | Extrae grupos de la cadena de entrada en función de una expresión regular. | <ul><li>CADENA: **Requerido** Cadena de la que se extraen los grupos.</li><li>REGEX: **Requerido** La expresión regular con la que desea que coincida el grupo.</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Comprueba si la cadena coincide con la expresión regular introducida. | <ul><li>CADENA: **Requerido** La cadena que está comprobando coincide con la expresión regular.</li><li>REGEX: **Requerido** La expresión regular con la que está comparando.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funciones hash {#hashing}
 
@@ -89,7 +89,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | md5 | Toma una entrada y produce un valor hash con MD5. | <ul><li>ENTRADA: **Requerido** Texto sin formato que se va a cifrar con hash.</li><li>CHARSET: *Opcional* Nombre del conjunto de caracteres. Los valores posibles incluyen UTF-8, UTF-16, ISO-8859-1 y US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;mi texto&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 e9bd0198d03ba6852c7 |
 | crc32 | Toma una entrada utiliza un algoritmo de comprobación de redundancia cíclica (CRC) para producir un código cíclico de 32 bits. | <ul><li>ENTRADA: **Requerido** Texto sin formato que se va a cifrar con hash.</li><li>CHARSET: *Opcional* Nombre del conjunto de caracteres. Los valores posibles incluyen UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;mi texto&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funciones de URL {#url}
 
@@ -104,8 +104,10 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | get_url_port | Devuelve el puerto de la dirección URL determinada. Si la entrada no es válida, devuelve nulo. | <ul><li>URL: **Requerido** Dirección URL de la que debe extraerse el puerto.</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/ joe/employee.csv&quot;) | 22 |
 | get_url_path | Devuelve la ruta de la dirección URL determinada. De forma predeterminada, se devuelve la ruta de acceso completa. | <ul><li>URL: **Requerido** Dirección URL de la que se debe extraer la ruta.</li><li>RUTA_COMPLETA: *Opcional* Un valor booleano que determina si se devuelve la ruta de acceso completa. Si se establece en false, solo se devuelve el final de la ruta.</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// home/joe/employee.csv&quot;) | &quot;//home/joe/ employee.csv&quot; |
 | get_url_query_str | Devuelve la cadena de consulta de una dirección URL determinada como un mapa del nombre y el valor de la cadena de consulta. | <ul><li>URL: **Requerido** Dirección URL desde la que intenta obtener la cadena de consulta.</li><li>ANCLAJE: **Requerido** Determina qué se hará con el anclaje en la cadena de consulta. Puede ser uno de los tres valores siguientes: &quot;keep&quot;, &quot;remove&quot; o &quot;append&quot;.<br><br>Si el valor es &quot;conservar&quot;, el anclaje se adjunta al valor devuelto.<br>Si el valor es &quot;remove&quot;, el anclaje se eliminará del valor devuelto.<br>Si el valor es &quot;anexar&quot;, el anclaje se devuelve como un valor independiente.</li></ul> | get_url_query_str&#x200B;(URL, ANCLAJE) | get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name= ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name= ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com&#x200B;:8042/over/there&#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | Esta función toma una URL como entrada y reemplaza o codifica los caracteres especiales con caracteres ASCII. Para obtener más información sobre los caracteres especiales, lea la [lista de caracteres especiales](#special-characters) en el apéndice del presente documento. | <ul><li>URL: **Requerido** La dirección URL de entrada con caracteres especiales que desea reemplazar o codificar con caracteres ASCII.</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacífico_2022 |
+| get_url_decoded | Esta función toma una URL como entrada y descodifica los caracteres ASCII en caracteres especiales.  Para obtener más información sobre los caracteres especiales, lea la [lista de caracteres especiales](#special-characters) en el apéndice del presente documento. | <ul><li>URL: **Requerido** La dirección URL de entrada con caracteres ASCII que desea descodificar en caracteres especiales.</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacífico_2022&quot;) | https</span>://example.com/partneralliance_asia-pacífico_2022 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funciones de fecha y hora {#date-and-time}
 
@@ -128,7 +130,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | zone_date_to_utc | Convierte una fecha de cualquier zona horaria en una fecha en UTC. | <ul><li>FECHA: **Requerido** La fecha que está intentando convertir.</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | Convierte una fecha de una zona horaria a otra. | <ul><li>FECHA: **Requerido** La fecha que está intentando convertir.</li><li>ZONA: **Requerido** Zona horaria a la que intenta convertir la fecha.</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Jerarquías: objetos {#objects}
 
@@ -147,7 +149,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | get_keys | Analiza los pares clave/valor y devuelve todas las claves. | <ul><li>OBJETO: **Requerido** El objeto del que se extraerán las claves.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Prejudice&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analiza los pares clave/valor y devuelve el valor de la cadena, en función de la clave dada. | <ul><li>CADENA: **Requerido** La cadena que desea analizar.</li><li>CLAVE: **Requerido** La clave para la que se debe extraer el valor.</li><li>VALUE_DELIMITER: **Requerido** El delimitador que separa el campo y el valor. Si una `null` Si se proporciona una cadena vacía, este valor es `:`.</li><li>FIELD_DELIMITER: *Opcional* El delimitador que separa los pares de campo y valor. Si una `null` Si se proporciona una cadena vacía, este valor es `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obtener información sobre la función de copia de objetos, consulte la sección [abajo](#object-copy).
 
@@ -169,7 +171,7 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 | upsert_array_append | Esta función se utiliza para anexar todos los elementos de toda la matriz de entrada al final de la matriz en Profile. Esta función es **solamente** aplicable durante las actualizaciones. Si se utiliza en el contexto de las inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** Matriz que se anexará a la matriz en el perfil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | Esta función se utiliza para reemplazar elementos en una matriz. Esta función es **solamente** aplicable durante las actualizaciones. Si se utiliza en el contexto de las inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** Matriz que reemplaza la matriz en el perfil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Operadores lógicos {#logical-operators}
 
@@ -182,7 +184,7 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 | decode | Dadas una clave y una lista de pares de valor clave acoplados como una matriz, la función devuelve el valor si se encuentra la clave o devuelve un valor predeterminado si está presente en la matriz. | <ul><li>CLAVE: **Requerido** La clave con la que se debe hacer coincidir.</li><li>OPTIONS: **Requerido** Matriz aplanada de pares de clave/valor. De forma opcional, se puede colocar un valor predeterminado al final.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Si el stateCode proporcionado es &quot;ca&quot;, &quot;California&quot;.<br>Si el stateCode proporcionado es &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si el código de estado no coincide con lo siguiente, &quot;N/A&quot;. |
 | iif | Evalúa una expresión booleana determinada y devuelve el valor especificado en función del resultado. | <ul><li>EXPRESIÓN: **Requerido** La expresión booleana que se está evaluando.</li><li>VALOR_VERDADERO: **Requerido** El valor que se devuelve si la expresión se evalúa como verdadera.</li><li>VALOR_FALSO: **Requerido** El valor que se devuelve si la expresión se evalúa como falsa.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Agregación {#aggregation}
 
@@ -195,7 +197,7 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 | min | Devuelve el mínimo de los argumentos dados. Utiliza el orden natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Devuelve el máximo de los argumentos dados. Utiliza el orden natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Escribir conversiones {#type-conversions}
 
@@ -210,7 +212,7 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 | to_float | Convierte una cadena en flotante. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en flotante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | Convierte una cadena en un número entero. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un número entero.</li></ul> | to_integer(CADENA) | to_integer(&quot;12&quot;) | 12 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funciones JSON {#json}
 
@@ -222,7 +224,7 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Deserialice el contenido JSON de la cadena determinada. | <ul><li>CADENA: **Requerido** Cadena JSON que se va a deserializar.</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}}) | Un objeto que representa el JSON. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Operaciones especiales {#special-operations}
 
@@ -234,7 +236,7 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Genera un ID pseudoaleatorio. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funciones del agente de usuario {#user-agent}
 
@@ -258,7 +260,7 @@ Cualquiera de las funciones de agente de usuario que se incluyen en la tabla sig
 | ua_agent_name | Extrae el nombre del agente de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extrae la clase de dispositivo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Phone |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Copia de objeto {#object-copy}
 
@@ -302,3 +304,43 @@ Para garantizar que la asignación automática funcione, se deben cumplir los si
 * Los nuevos atributos deben tener nombres coincidentes en el esquema de origen y en el esquema XDM.
 
 Si no se cumplen todos los requisitos previos, debe asignar manualmente el esquema de origen al esquema XDM mediante la preparación de datos.
+
+## Apéndice
+
+A continuación se proporciona información adicional sobre el uso de funciones de asignación de preparación de datos
+
+### Caracteres especiales {#special-characters}
+
+La siguiente tabla describe una lista de caracteres reservados y sus caracteres codificados correspondientes.
+
+| Carácter reservado | Carácter codificado |
+| --- | --- |
+| espacio | %20 |
+| ! | %21 |
+| &quot; | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| &amp; | %26 |
+| &#39; | %27 |
+| ( | %28 |
+| ) | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| : | %3A |
+| ; | %3B |
+| &lt; | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| [ | %5B |
+| | | %5C |
+| ] | %5D |
+| ^ | %5E |
+| ` | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
