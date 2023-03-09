@@ -2,7 +2,7 @@
 title: Lanzamiento de una extensión
 description: Obtenga información sobre cómo publicar de forma privada o pública una extensión de etiqueta en Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 92%
@@ -36,4 +36,4 @@ Si desea realizar el lanzamiento de su extensión de manera privada directamente
 
 Una vez completado el lanzamiento privado, puede solicitar a Adobe el lanzamiento público. Esto hará que su extensión esté disponible en el catálogo público. Cualquier usuario de recopilación de datos podrá instalar su extensión en cualquier propiedad.
 
-Complete el [formulario de solicitud de lanzamiento público](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) para comenzar el proceso de lanzamiento.
+Complete el [formulario de solicitud de lanzamiento público](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) para comenzar el proceso de lanzamiento.
