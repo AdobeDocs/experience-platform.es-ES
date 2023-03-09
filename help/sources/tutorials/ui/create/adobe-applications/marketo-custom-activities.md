@@ -1,154 +1,175 @@
 ---
-title: Crear una conexión de origen de Marketo Engage y un flujo de datos para datos de actividad personalizados en la interfaz de usuario
-description: Este tutorial proporciona pasos para crear una conexión de origen de Marketo Engage y un flujo de datos en la interfaz de usuario para introducir datos de actividades personalizadas en Adobe Experience Platform.
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+title: Crear una conexión de origen y un flujo de datos de Marketo Engage para los datos de actividad personalizados en la IU de
+description: Este tutorial proporciona los pasos para crear una conexión de origen de Marketo Engage y un flujo de datos en la IU para llevar los datos de las actividades personalizadas a Adobe Experience Platform.
+source-git-commit: e584fbdfa64516a0dad1e7b99eb347f18e59d6d5
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
 
-# Cree un [!DNL Marketo Engage] conexión de origen y flujo de datos para datos de actividad personalizados en la interfaz de usuario
+# Crear un [!DNL Marketo Engage] conexión de origen y flujo de datos para datos de actividad personalizados en la IU de
 
 >[!NOTE]
 >
->Este tutorial proporciona pasos específicos sobre cómo configurar y traer **actividad personalizada** datos de [!DNL Marketo] al Experience Platform. Para ver los pasos sobre cómo traer **actividad estándar** información, lea la [[!DNL Marketo] Guía de la interfaz de usuario](./marketo.md).
+>Este tutorial proporciona pasos específicos sobre cómo configurar y traer **actividad personalizada** datos de [!DNL Marketo] al Experience Platform. Para ver los pasos de cómo llevar **actividad estándar** datos, lea la [[!DNL Marketo] Guía de IU](./marketo.md).
 
-Además de [actividades estándar](../../../../connectors/adobe-applications/mapping/marketo.md#activities), también puede usar la variable [!DNL Marketo] fuente para traer datos de actividades personalizadas a Adobe Experience Platform. Este documento proporciona pasos sobre cómo crear una conexión de origen y un flujo de datos para datos de actividad personalizados mediante el [!DNL Marketo] fuente en la interfaz de usuario.
+Además de [actividades estándar](../../../../connectors/adobe-applications/mapping/marketo.md#activities), también puede utilizar la variable [!DNL Marketo] fuente para llevar los datos de las actividades personalizadas a Adobe Experience Platform. Este documento proporciona pasos sobre cómo crear una conexión de origen y un flujo de datos para los datos de actividad personalizados utilizando [!DNL Marketo] en la interfaz de usuario.
 
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Áreas de nombres B2B y utilidad de generación automática de esquemas](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): La utilidad de generación automática de esquemas y espacios de nombres B2B le permite utilizar [!DNL Postman] para generar automáticamente valores para los esquemas y espacios de nombres B2B. Debe completar primero los esquemas y áreas de nombres B2B antes de crear un [!DNL Marketo] conexión de origen y flujo de datos.
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes, al mismo tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Modelo de datos de experiencia (XDM)](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [Utilidad de generación automática de esquemas y áreas de nombres B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): la utilidad de generación automática de esquemas y áreas de nombres B2B le permite utilizar [!DNL Postman] para generar automáticamente valores para los esquemas y áreas de nombres B2B. Primero debe completar los espacios de nombres y esquemas B2B antes de crear un [!DNL Marketo] conexión de origen y flujo de datos.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Modelo de datos de experiencia (XDM)](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Crear y editar esquemas en la interfaz de usuario](../../../../../xdm/ui/resources/schemas.md): Aprenda a crear y editar esquemas en la interfaz de usuario.
-* [Espacios de nombres de identidad](../../../../../identity-service/namespaces.md): Las áreas de nombres de identidad son un componente de [!DNL Identity Service] que sirven de indicadores del contexto al que se refiere una identidad. Una identidad completa incluye un valor de ID y un área de nombres.
-* [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Áreas de nombres de identidad](../../../../../identity-service/namespaces.md): las áreas de nombres de identidad son un componente de [!DNL Identity Service] que sirven como indicadores del contexto al que se relaciona una identidad. Una identidad completa incluye un valor de ID y un área de nombres.
+* [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
+* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-## Recupere los detalles de la actividad personalizada
+## Recupere los detalles personalizados de la actividad
 
-El primer paso para obtener datos de actividad personalizados de [!DNL Marketo] para el Experience Platform es recuperar el nombre de la API y el nombre para mostrar de su actividad personalizada.
+El primer paso para importar datos de actividad personalizados de [!DNL Marketo] ir al Experience Platform es recuperar el nombre de la API y el nombre para mostrar de la actividad personalizada.
 
-Inicie sesión en su cuenta mediante el [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) interfaz. En el panel de navegación izquierdo, debajo de [!DNL Database Management], seleccione **Actividades personalizadas de Marketo**.
+Inicie sesión en su cuenta utilizando [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) interfaz. En el panel de navegación izquierdo, debajo de [!DNL Database Management], seleccione **Actividades personalizadas de Marketo**.
 
 La interfaz se actualiza para mostrar las actividades personalizadas, incluida la información sobre sus respectivos nombres para mostrar y nombres de API. También puede utilizar el carril derecho para seleccionar y ver otras actividades personalizadas de su cuenta.
 
 ![Interfaz de actividades personalizadas en la interfaz de usuario de Adobe Marketo Engage.](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity.png)
 
-Select **Campos** en el encabezado superior para ver los campos asociados con la actividad personalizada. En esta página, puede ver los nombres, nombres de API, descripciones y tipos de datos de los campos en su actividad personalizada. Los detalles sobre campos individuales se utilizarán en un paso posterior, al crear un esquema.
+Seleccionar **Campos** en el encabezado superior para ver los campos asociados con la actividad personalizada. En esta página, puede ver los nombres, nombres de API, descripciones y tipos de datos de los campos en su actividad personalizada. Los detalles sobre campos individuales se utilizan en un paso posterior, al crear un esquema.
 
-![La página Detalles de los campos de actividad personalizados de Marketo en la interfaz de usuario del Marketo Engage.](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
+![La página Campos de actividad personalizados de Marketo: Detalles en la interfaz de usuario del Marketo Engage.](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
 
 ## Configurar grupos de campos para actividades personalizadas en el esquema de actividades B2B
 
-En el *[!UICONTROL Esquemas]* tablero de la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Examinar]** y, a continuación, seleccione **[!UICONTROL Actividad B2B]** de la lista de esquemas.
+En el *[!UICONTROL Esquemas]* en el panel de la IU de Experience Platform, seleccione **[!UICONTROL Examinar]** y luego seleccione **[!UICONTROL Actividad B2B]** de la lista de esquemas.
 
 >[!TIP]
 >
 >Utilice la barra de búsqueda para acelerar la navegación por la lista de esquemas.
 
-![El espacio de trabajo de esquemas en la interfaz de usuario del Experience Platform con el esquema de actividad B2B seleccionado.](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
+![El espacio de trabajo de esquemas de la interfaz de usuario de Experience Platform con el esquema de actividad B2B seleccionado.](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
 
 ### Crear un nuevo grupo de campos para una actividad personalizada
 
-A continuación, agregue un nuevo grupo de campos a la variable [!DNL B2B Activity] esquema. Este grupo de campos debe corresponder a la actividad personalizada que desea introducir y debe utilizar el nombre para mostrar de la actividad personalizada que recuperó anteriormente.
+A continuación, agregue un nuevo grupo de campos al [!DNL B2B Activity] esquema. Este grupo de campos debe corresponder a la actividad personalizada que desea introducir y debe utilizar el nombre para mostrar de la actividad personalizada que recuperó anteriormente.
 
-Para agregar un nuevo grupo de campos, seleccione **[!UICONTROL + Agregar]** al lado del *[!UICONTROL Grupos de campo]* panel en *[!UICONTROL Composición]*.
+Para añadir un nuevo grupo de campos, seleccione **[!UICONTROL + Agregar]** al lado del *[!UICONTROL Grupos de campos]* panel debajo de *[!UICONTROL Composición]*.
 
 ![La estructura del esquema.](../../../../images/tutorials/create/marketo-custom-activities/add-new-field-group.png)
 
-La variable *[!UICONTROL Agregar grupos de campos]* se abre. Select **[!UICONTROL Crear nuevo grupo de campos]** y, a continuación, proporcione el mismo nombre para mostrar para la actividad personalizada que recuperó en un paso anterior y proporcione una descripción opcional para el nuevo grupo de campos. Cuando termine, seleccione **[!UICONTROL Agregar grupos de campos]**.
+El *[!UICONTROL Adición de grupos de campos]* aparece una ventana. Seleccionar **[!UICONTROL Crear nuevo grupo de campos]** y, a continuación, proporcione el mismo nombre para mostrar para la actividad personalizada que recuperó en un paso anterior y proporcione una descripción opcional para el nuevo grupo de campos. Cuando termine, seleccione **[!UICONTROL Adición de grupos de campos]**.
 
-![La ventana para etiquetar y crear un nuevo grupo de campos.](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
+![Ventana para etiquetar y crear un nuevo grupo de campos.](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
 
-Una vez creado, el nuevo grupo de campos para la actividad personalizada aparece en la variable [!UICONTROL Grupos de campo] catálogo.
+Una vez creado, el nuevo grupo de campos para la actividad personalizada aparece en la variable [!UICONTROL Grupos de campos] catálogo.
 
-![La estructura de esquema con un nuevo grupo de campos añadido en el panel de grupo de campos.](../../../../images/tutorials/create/marketo-custom-activities/new-field-group-created.png)
+![La estructura del esquema con un nuevo grupo de campos agregado en el panel grupo de campos.](../../../../images/tutorials/create/marketo-custom-activities/new-field-group-created.png)
 
-### Añadir un nuevo campo a la estructura del esquema
+### Añadir un nuevo campo a la estructura de esquema
 
-A continuación, añada un nuevo campo al esquema . Este nuevo campo debe configurarse como `type: object` y contendrán los campos individuales de la actividad personalizada.
+A continuación, añada un nuevo campo al esquema. Este nuevo campo debe configurarse como `type: object` y contendrán los campos individuales de la actividad personalizada.
 
-Para agregar un nuevo campo, seleccione el signo más (`+`) junto al nombre del esquema. Una entrada para *[!UICONTROL Campo sin título | Tipo]* aparece. A continuación, configure las propiedades del campo utilizando la variable *[!UICONTROL Propiedades del campo]* panel. Establezca el nombre del campo como el nombre de la API de su actividad personalizada y establezca el nombre para mostrar como el nombre para mostrar de su actividad personalizada. A continuación, defina el tipo como `object` y asigne el grupo de campos al grupo de campos de actividad personalizados que creó en el paso anterior. Cuando termine, seleccione **[!UICONTROL Aplicar]**.
+Para agregar un nuevo campo, seleccione el signo más (`+`) junto al nombre del esquema. Una entrada para *[!UICONTROL Campo sin título | Tipo]* aparece. A continuación, configure las propiedades del campo mediante la variable *[!UICONTROL Propiedades del campo]* panel. Establezca el nombre del campo como el nombre de la API de su actividad personalizada y establezca el nombre para mostrar como el nombre para mostrar de su actividad personalizada. A continuación, defina el tipo como `object` y asigne el grupo de campos al grupo de campos de actividad personalizada que creó en el paso anterior. Cuando termine, seleccione **[!UICONTROL Aplicar]**.
 
-![La estructura del esquema con el signo más (`+`) seleccionado para que se pueda agregar un nuevo campo.](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
+![La estructura de esquema con el signo más (`+`) signo seleccionado para que se pueda añadir un nuevo campo.](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
 
-El nuevo campo aparece en el esquema .
+El nuevo campo aparece en el esquema.
 
-![Se ha añadido un nuevo campo al esquema .](../../../../images/tutorials/create/marketo-custom-activities/new-object-field-added.png)
+![Un nuevo campo añadido al esquema.](../../../../images/tutorials/create/marketo-custom-activities/new-object-field-added.png)
 
 ### Añadir subcampos al campo de objeto {#add-sub-fields-to-the-object-field}
 
-El último paso para preparar el esquema es añadir campos individuales dentro del campo creado en el paso anterior.
+El último paso para preparar el esquema es añadir campos individuales dentro del campo que ha creado en el paso anterior.
 
-![Grupo de subcampos agregados a un campo dentro del esquema.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
+![Un grupo de subcampos agregados a un campo dentro del esquema.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
 
-## Crear un flujo de datos
+## Creación de un flujo de datos
 
-Una vez completada la configuración del esquema, puede continuar creando un flujo de datos para los datos de actividad personalizados.
+Una vez completada la configuración del esquema, ahora puede continuar con la creación de un flujo de datos para los datos de actividad personalizados.
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder a la [!UICONTROL Fuentes] espacio de trabajo. La variable [!UICONTROL Catálogo] muestra una variedad de fuentes con las que puede crear una cuenta.
+En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la barra de navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la barra de búsqueda.
+Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar en la barra de búsqueda.
 
-En el [!UICONTROL aplicaciones de Adobe] categoría, seleccione **[!UICONTROL Marketo Engage]**. A continuación, seleccione **[!UICONTROL Añadir datos]** para crear un [!DNL Marketo] flujo de datos.
+En el [!UICONTROL aplicaciones de Adobe] categoría, seleccionar **[!UICONTROL Marketo Engage]**. A continuación, seleccione **[!UICONTROL Añadir datos]** para crear una nueva [!DNL Marketo] flujo de datos.
 
-![El catálogo de fuentes en la interfaz de usuario del Experience Platform con el origen del Marketo Engage seleccionado.](../../../../images/tutorials/create/marketo/catalog.png)
+![El catálogo de fuentes en la interfaz de usuario del Experience Platform con la fuente del Marketo Engage seleccionada.](../../../../images/tutorials/create/marketo/catalog.png)
 
 ### Seleccionar datos
 
-Select **[!UICONTROL Actividades]** de la lista de [!DNL Marketo] conjuntos de datos y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+Seleccionar **[!UICONTROL Actividades]** de la lista de [!DNL Marketo] conjuntos de datos y seleccione **[!UICONTROL Siguiente]**.
 
-![El paso seleccionar datos en el flujo de trabajo de fuentes con el conjunto de datos de actividades seleccionado.](../../../../images/tutorials/create/marketo-custom-activities/select-data.png)
+![El paso Seleccionar datos del flujo de trabajo de fuentes con el conjunto de datos de actividades seleccionado.](../../../../images/tutorials/create/marketo-custom-activities/select-data.png)
 
 ### Detalles de flujo de datos
 
-Siguiente, [proporcione información para su flujo de datos](./marketo.md#provide-dataflow-details), incluidos nombres y descripciones para su conjunto de datos y flujo de datos, el esquema que utilizará y las configuraciones para [!DNL Profile] ingesta, diagnóstico de errores e ingesta parcial.
+Siguiente, [proporcione información para el flujo de datos](./marketo.md#provide-dataflow-details), incluidos nombres y descripciones para el conjunto de datos y flujo de datos, el esquema que utilizará y las configuraciones para [!DNL Profile] ingesta, diagnósticos de error e ingesta parcial.
 
-![El paso de detalle del flujo de datos.](../../../../images/tutorials/create/marketo-custom-activities/dataflow-detail.png)
+![El paso de detalles del flujo de datos.](../../../../images/tutorials/create/marketo-custom-activities/dataflow-detail.png)
 
 ### Asignación
 
-Las asignaciones para los campos de actividad estándar se rellenan automáticamente, pero los campos de actividad personalizados deben asignarse manualmente a los campos de destino correspondientes.
+Las asignaciones para campos de actividad estándar se rellenan automáticamente, pero los campos de actividad personalizados deben asignarse manualmente a sus campos de destino correspondientes.
 
-Para empezar a asignar los campos de actividad personalizados, seleccione **[!UICONTROL Nuevo tipo de campo]** y, a continuación, seleccione **[!UICONTROL Añadir nuevo campo]**.
+Para empezar a asignar los campos de actividad personalizados, seleccione **[!UICONTROL Nuevo tipo de campo]** y luego seleccione **[!UICONTROL Añadir nuevo campo]**.
 
 ![El paso de asignación con el menú desplegable para añadir un nuevo campo.](../../../../images/tutorials/create/marketo-custom-activities/add-new-mapping-field.png)
 
-Desplácese por la estructura de datos de origen y busque el campo de actividad personalizado que desea introducir. Cuando termine, seleccione **[!UICONTROL Select]**.
+Desplácese por la estructura de datos de origen y busque el campo de actividad personalizado que desee introducir. Cuando termine, seleccione **[!UICONTROL Seleccionar]**.
 
 >[!TIP]
 >
->Para evitar confusiones y gestionar nombres de campo duplicados, los campos de actividad personalizados llevan el prefijo API name.
+>Para evitar confusiones y gestionar nombres de campo duplicados, los campos de actividad personalizados llevan como prefijo el nombre de la API.
 
 ![La estructura de datos de origen.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-Para añadir un campo de destino, seleccione el icono de esquema ![icono de esquema](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) y, a continuación, seleccione los campos de actividad personalizados del esquema de objetivo.
+Para añadir un campo de destino, seleccione el icono de esquema ![icono de esquema](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) y, a continuación, seleccione los campos de actividad personalizados del esquema de target.
 
 ![La estructura del esquema de destino.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 
-Repita los pasos para agregar el resto de los campos de asignación de actividad personalizados. Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+Repita los pasos para agregar el resto de los campos personalizados de asignación de actividades. Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
-![Todas las asignaciones para datos de origen y destino.](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
+![Todas las asignaciones para los datos de origen y destino.](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
 
 ### Consulte
 
-La variable *[!UICONTROL Consulte]* , lo que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
+El *[!UICONTROL Revisar]* Este paso aparece, lo que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
-* **[!UICONTROL Conexión]**: Muestra el tipo de origen, la ruta de acceso relevante de la entidad de origen elegida y la cantidad de columnas dentro de esa entidad de origen.
-* **[!UICONTROL Asignación de campos de conjunto de datos y asignación]**: Muestra en qué conjunto de datos se están incorporando los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
+* **[!UICONTROL Conexión]**: Muestra el tipo de origen, la ruta relevante de la entidad de origen elegida y la cantidad de columnas dentro de esa entidad de origen.
+* **[!UICONTROL Asignar campos de conjunto de datos y asignación]**: Muestra en qué conjunto de datos se están ingiriendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
 
-Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Guardar e incorporar]** y permitir que se cree un flujo de datos.
+Una vez revisado el flujo de datos, seleccione **[!UICONTROL Guardar e introducir]** y deje pasar un tiempo para crear el flujo de datos.
 
 ![El paso de revisión final que resume la información sobre los campos de conexión, conjunto de datos y asignación.](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 
->[!NOTE]
->
->Una vez finalizada la ingesta, el conjunto de datos ingerido contendrá todas las actividades, incluidas las actividades estándar y personalizadas de su [!DNL Marketo] instancia. Para seleccionar los registros de actividad personalizados en Platform, debe utilizar [Servicio de consultas](../../../../../query-service/home.md) y proporcionar los predicados adecuados.
+### Añadir actividades personalizadas a un flujo de datos de actividades existente {#add-to-existing-dataflows}
+
+Para agregar datos de actividad personalizados a un flujo de datos existente, modifique las asignaciones de un flujo de datos de actividades existente con los datos de actividad personalizados que desee introducir. Esto le permite introducir actividad personalizada en el mismo conjunto de datos de actividades existentes. Para obtener más información sobre cómo actualizar las asignaciones de un flujo de datos existente, lea la guía sobre [actualización de flujos de datos en la IU](../../update-dataflows.md).
+
+### Uso [!DNL Query Service] para filtrar actividades para actividades personalizadas {#query-service-filter}
+
+Una vez completado el flujo de datos, puede utilizar [Servicio de consultas](../../../../../query-service/home.md) para filtrar actividades para los datos de actividad personalizados.
+
+Cuando se incorporan actividades personalizadas en Platform, el nombre de la API de la actividad personalizada se convierte automáticamente en su `eventType`. Uso `eventType={API_NAME}` para filtrar datos de actividad personalizados.
+
+```sql
+SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
+```
+
+Utilice el `IN` para filtrar varias actividades personalizadas:
+
+```sql
+SELECT * FROM $datasetName WHERE eventType='{API_NAME}'
+SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCustomActivityDemo2')
+```
+
+La siguiente imagen muestra un ejemplo de instrucción SQL en la variable [Editor de consultas](../../../../../query-service/ui/user-guide.md) que filtra los datos de actividad personalizados.
+
+![La interfaz de usuario de Platform muestra un ejemplo de consulta para actividades personalizadas.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha configurado un esquema de Platform para [!DNL Marketo] datos de actividad personalizados y creó un flujo de datos para llevar esos datos a Platform. Para obtener información general sobre [!DNL Marketo] fuente, lea la [[!DNL Marketo] información general de la fuente](../../../../connectors/adobe-applications/marketo/marketo.md).
+Al seguir este tutorial, ha configurado un esquema de Platform para [!DNL Marketo] datos de actividad personalizados y creó un flujo de datos para llevar esos datos a Platform. Para obtener información general sobre [!DNL Marketo] fuente, lea la [[!DNL Marketo] descripción general de origen](../../../../connectors/adobe-applications/marketo/marketo.md).
