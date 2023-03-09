@@ -3,9 +3,9 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
+source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '926'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ El [!UICONTROL Ejecuciones de flujo de datos] Esta pestaña proporciona datos de
 >[!NOTE]
 >
 >* Actualmente, la funcionalidad de monitorización de destinos es compatible con todos los destinos de Experience Platform *excepto* el [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) y [Audiencias de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinos.
->* Para el [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), y [API HTTP](/help/destinations/catalog/streaming/http-destination.md) actualmente no se muestran los destinos, las identidades excluidas, fallidas y activadas.
+>* Para el [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), y [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, se estiman las métricas relacionadas con identidades excluidas, fallidas y activadas. Los volúmenes más altos de datos de activación conducen a una mayor precisión de las métricas.
 
 
 ![Vista de ejecuciones de flujo de datos](../assets/ui/details-page/dataflow-runs.png)
