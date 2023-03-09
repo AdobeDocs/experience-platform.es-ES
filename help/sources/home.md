@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores de origen
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: fd82f109b8af665540e2ff30e92c6546ef9f3d2c
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1322'
 ht-degree: 2%
 
 ---
@@ -184,11 +184,21 @@ En la tabla siguiente se describe cómo se comporta la interfaz de usuario en fu
 
 Para obtener más información sobre los permisos disponibles otorgados mediante Permisos de Adobe, lea la [información general de control de acceso](../access-control/home.md).
 
-### Control de acceso basado en atributos para orígenes
+### Control de acceso basado en atributos
 
 El control de acceso basado en atributos en Adobe Experience Platform permite a los administradores controlar el acceso a objetos específicos o funcionalidades basadas en atributos.
 
 Con el control de acceso basado en atributos, puede aplicar configuraciones de asignación a campos para los que tiene permisos. Además, no puede introducir datos en un conjunto de datos si no tiene acceso a todos los campos del conjunto de datos.
+
+#### Compatibilidad con el control de acceso basado en atributos en orígenes [!BADGE Nueva función]
+
+>[!TIP]
+>
+>El control de acceso basado en atributos funciona de la siguiente manera: **funciones** se crean para categorizar los tipos de usuarios que interactúan con la instancia de Platform. **Etiquetas** se aplican a **funciones** para designar el acceso de esa función determinada. **Etiquetas** también se aplican a recursos como campos de esquema y segmentos. Para que un usuario tenga acceso a determinados campos y segmentos de esquema, debe añadirlos a *un rol con la misma etiqueta asignada al recurso consultado*. Para obtener más información, lea la [guía completa de control de acceso basado en atributos](../access-control/abac/end-to-end-guide.md).
+
+- Aplique etiquetas a los campos de esquema para definir el acceso a campos de esquema específicos de su organización. Una vez establecido el acceso a campos de esquema específicos, los usuarios solo podrán crear asignaciones para los campos a los que tengan acceso.
+- Los usuarios sin las funciones adecuadas no podrán crear ni actualizar flujos de datos con asignaciones que impliquen campos de esquema inaccesibles. Además, los usuarios no autorizados no pueden actualizar, eliminar, habilitar ni deshabilitar flujos de datos existentes con campos de esquema inaccesibles.
+- Además, un flujo de datos debe tener exactamente el mismo ID y versión de esquema en su asignación, conjunto de datos de destino y conexión de destino.
 
 Para obtener más información sobre el control de acceso basado en atributos, lea la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md).
 
