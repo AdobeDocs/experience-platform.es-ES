@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Ayuda de Servicios inteligentes
 breadcrumb-title: Guía de servicios inteligentes
 user-guide-description: Utilice los servicios inteligentes de IA para generar puntuaciones, descubrir perspectivas y crear segmentos a partir de los datos de eventos de marketing.
-source-git-commit: a98639851e7245b9cbd6fe42b35b4730dd19c3f8
+source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 31%
+source-wordcount: '140'
+ht-degree: 32%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 31%
       - [Políticas de gobernanza](attribution-ai/aai-data-governance/governance-policies.md)
    - [Analizar puntuaciones mediante el servicio de consultas](attribution-ai/aai-query-service.md)
    - [Error al solucionar problemas](attribution-ai/troubleshooting.md)
-- Etiquetado de contenido {#content-tagging-ai}
-   - [Información general](content-tagging/overview.md)
-   - [Primeros pasos](content-tagging/getting-started.md)
-   - API de IA de etiquetado de contenido{#api}
-      - [Etiquetado de color](content-tagging/api/color-tagging.md)
-      - [Etiquetado de palabras clave](content-tagging/api/keyword-tagging.md)
-      - [Presencia de texto y reconocimiento óptico de caracteres](content-tagging/api/optical-character-recognition.md)
+- Etiquetado de contenido {#content-commerce-ai}
+   - [Información general](content-commerce-ai/overview.md)
+   - [Primeros pasos](content-commerce-ai/getting-started.md)
+   - API de etiquetado de contenido{#api}
+      - [Etiquetado de color](content-commerce-ai/api/color-tagging.md)
+      - [Etiquetado de palabras clave](content-commerce-ai/api/keyword-tagging.md)
+      - [Presencia de texto y reconocimiento óptico de caracteres](content-commerce-ai/api/optical-character-recognition.md)
 - Inteligencia artificial aplicada al cliente {#customer-ai}
    - [Información general](customer-ai/overview.md)
    - [Introducción a Customer AI](customer-ai/getting-started.md)
