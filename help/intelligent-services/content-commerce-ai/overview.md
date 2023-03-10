@@ -1,12 +1,12 @@
 ---
-keywords: Experience Cloud;introducción;inteligencia artificial aplicada al contenido y al comercio;temas populares;Servicios inteligentes;ccai
+keywords: Experience Cloud;introducción;etiquetado de contenido;temas populares;Servicios inteligentes
 solution: Experience Platform
 title: Información general sobre etiquetado de contenido
-description: La IA de contenido y comercio es un conjunto de servicios de IA que le permiten extraer funciones inteligentes del contenido, organizar, optimizar el flujo de contenido y ofrecer experiencias personalizadas y más impactantes a sus clientes.
+description: El etiquetado de contenido es un conjunto de servicios de IA que le permiten extraer funciones inteligentes del contenido, organizar, optimizar el flujo de contenido y ofrecer experiencias personalizadas y más impactantes a sus clientes.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---

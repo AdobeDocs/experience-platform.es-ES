@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;introducción;inteligencia artificial aplicada al contenido;inteligencia artificial aplicada al comercio;etiquetado de contenido;etiquetado de color;extracción de color;
+keywords: Experience Platform;introducción;contenido;etiquetado de contenido;etiquetado de color;extracción de color;
 solution: Experience Platform
 title: Etiquetado de colores en la API de etiquetado de contenido
-description: El servicio de etiquetado de colores, cuando se proporciona una imagen, puede calcular el histograma de colores de píxeles y ordenarlos por colores dominantes en bloques.
+description: Cuando se proporciona una imagen, el servicio de etiquetado de color puede calcular el histograma de colores de píxeles y ordenarlos por colores dominantes en bloques.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '497'
 ht-degree: 5%
 
 ---

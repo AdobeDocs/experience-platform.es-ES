@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;introducción;IA de contenido;IA de comercio;IA de etiquetado de contenido;IA de etiquetado de palabras clave;Etiquetado de palabras clave
+keywords: Experience Platform;introducción;contenido;IA de etiquetado de contenido;etiquetado de palabras clave;Etiquetado de palabras clave
 solution: Experience Platform
 title: Etiquetado de palabras clave en la API de etiquetado de contenido
-description: El servicio de etiquetado de palabras clave, cuando se le proporciona un documento de texto, extrae automáticamente palabras clave o frases clave que describen mejor el asunto del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de etiquetado de palabras clave no supervisados y de reconocimiento de entidades con nombre (NER).
+description: Cuando se proporciona un documento de texto, el servicio de etiquetado de palabras clave extrae automáticamente palabras clave o frases clave que describen mejor el asunto del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de etiquetado de palabras clave no supervisados y de reconocimiento de entidades con nombre (NER).
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '450'
 ht-degree: 6%
 
 ---
