@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;tags categorías;tags;
 title: Categorías de etiquetas
-description: Este documento proporciona información sobre la administración de categorías de etiquetas administrativas en Adobe Experience Cloud
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+description: Este documento proporciona información sobre la administración de categorías de etiquetas unificadas en Adobe Experience Cloud
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 0%

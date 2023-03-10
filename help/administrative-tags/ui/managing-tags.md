@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;administrar etiquetas;tags;
-title: Administración de etiquetas administrativas
-description: Este documento proporciona información sobre la administración de etiquetas administrativas en Adobe Experience Cloud
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+title: Administración de etiquetas unificadas
+description: Este documento proporciona información sobre la administración de etiquetas unificadas en Adobe Experience Cloud
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%

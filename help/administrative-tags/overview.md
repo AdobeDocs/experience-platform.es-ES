@@ -1,15 +1,19 @@
 ---
-keywords: Experience Platform;inicio;temas populares;etiquetas administrativas;tags;
-title: Información general sobre etiquetas administrativas
-description: Este documento proporciona información sobre las etiquetas administrativas en Adobe Experience Platform
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+keywords: Experience Platform;inicio;temas populares;Unified tags;tags;
+title: (Beta) Información General Sobre Etiquetas Unificadas
+description: Este documento proporciona información sobre las etiquetas unificadas en Adobe Experience Platform
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
-# Información general sobre etiquetas
+# (Beta) Información general sobre etiquetas unificadas
+
+>[!IMPORTANT]
+>
+>Las etiquetas unificadas están en versión beta. Si desea dejar comentarios, haga clic en el botón en la parte superior de la página de administración de etiquetas.
 
 Las etiquetas son una función de Adobe Experience Platform que permite a los administradores administrar taxonomías de metadatos para clasificar objetos empresariales y facilitar así la detección y la categorización. Las etiquetas son metadatos que se pueden considerar como palabras clave que se pueden adjuntar a un segmento, conjunto de datos, recorrido u otros objetos para permitir búsquedas y encontrar ese objeto y los objetos relacionados. Las etiquetas se clasifican en dos tipos: por categorías y sin clasificar.
 
