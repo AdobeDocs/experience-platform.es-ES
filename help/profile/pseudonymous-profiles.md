@@ -5,9 +5,9 @@ title: Caducidad de datos de perfil seudónimo
 description: Este documento proporciona instrucciones generales para configurar la caducidad de los datos de los perfiles seudónimos en Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 3f776255ca858a86f501fd587c44fe176c45e103
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ La caducidad de los datos del perfil seudónimo no se puede configurar mediante 
 
 - Los tipos de identidad que se deben tener en cuenta para las eliminaciones de perfiles seudónimos.
    - Por ejemplo: `ECID` solo, `AAID` solo, o una combinación de `ECID` y `AAID`.
-- Cantidad de tiempo que se debe esperar antes de eliminar un perfil seudónimo. La recomendación predeterminada para los clientes de es de 30 días. Sin embargo, este valor puede diferir según el caso de uso.
+- Cantidad de tiempo que se debe esperar antes de eliminar un perfil seudónimo. La recomendación predeterminada para los clientes de es de 14 días. Sin embargo, este valor puede diferir según el caso de uso.
 - El recuento de perfiles actual comparado con el recuento de perfiles de licencia.
 
 ## Preguntas frecuentes {#faq}
@@ -37,10 +37,10 @@ La siguiente sección enumera las preguntas más frecuentes sobre la caducidad d
 
 ### ¿Qué usuarios deben utilizar la caducidad de datos de perfiles seudónimos?
 
-- Si utiliza un conector que envíe directamente datos de su origen a Platform.
+- Si utiliza una fuente de flujo continuo que envíe datos directamente a Platform.
 - Si tiene un sitio web que sirve a clientes no autenticados en masa.
 - Si tiene recuentos de perfiles excesivos en los conjuntos de datos y ha confirmado que este recuento excesivo de perfiles se debe a un tipo de identidad anónimo basado en cookies.
-   - Para determinarlo, debe utilizar el informe de superposición de tipo de identidad. Encontrará más información sobre este informe LINK
+   - Para determinarlo, debe utilizar el informe de superposición de tipo de identidad. Encontrará más información sobre este informe en la [sección de informe de superposición de identidad](./api/preview-sample-status.md#identity-overlap-report) de la guía de API de estado de muestra de previsualización.
 
 ### ¿Cuáles son algunas advertencias que debe tener en cuenta antes de utilizar la caducidad de datos de perfiles seudónimos?
 
