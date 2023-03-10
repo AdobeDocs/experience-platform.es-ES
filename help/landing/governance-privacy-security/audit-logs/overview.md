@@ -1,10 +1,10 @@
 ---
-title: Información general sobre registros de auditoría
+title: Resumen de registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: cf6ff8bcd3dfebe551ac3d7289fa8d5fb2a78079
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '946'
 ht-degree: 27%
 
 ---
@@ -14,14 +14,19 @@ ht-degree: 27%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Acciones principales"
->abstract="Este widget muestra los principales tipos de acciones que se han realizado en el Experience Platform dentro del intervalo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
+>abstract="Este widget muestra los principales tipos de acciones que se han realizado en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
->title="Usuarios principales"
->abstract="Esta utilidad muestra los usuarios que ejecutaron la mayoría de las acciones en el Experience Platform dentro del intervalo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
+>title="Principales usuarios"
+>abstract="Este widget muestra los usuarios que han ejecutado la mayoría de las acciones en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
 
-Para aumentar la transparencia y visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform permite auditar la actividad de los usuarios para diversos servicios y capacidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de manera eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_audits_description"
+>title="Descripción"
+>abstract=""
+
+Para aumentar la transparencia y la visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform le permite auditar la actividad del usuario para varios servicios y funcionalidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
 
 En un sentido estricto, un registro de auditoría informa de **quién** realizó **qué** acción y **cuándo** lo hizo. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción.
 
@@ -40,38 +45,43 @@ La siguiente tabla indica qué acciones sobre qué recursos de se registran en l
 | [Clase](../../../xdm/schema/composition.md#class) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Atributo calculado](../../../profile/computed-attributes/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Instancia de Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li></ul> |
-| [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li><li>Deshabilitar para perfil</li><li>Adición de datos</li><li>Eliminar lote</li></ul> |
+| [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li><li>Deshabilitar para el perfil</li><li>Adición de datos</li><li>Eliminar lote</li></ul> |
 | [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>[Editar asignación](../../../edge/datastreams/data-prep.md)</li></ul> |
 | [Tipos de datos](../../../xdm/schema/composition.md#data-type) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>Activar conjunto de datos</li><li>Eliminación de conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
+| [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>Activar conjunto de datos</li><li>Eliminar conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
 | [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Gráfico de identidad](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Ver</li></ul> |
 | [Área de nombres de identidad](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Crear</li><li>Actualización</li></ul> |
-| [Combinar directiva](../../../profile/merge-policies/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Política de combinación](../../../profile/merge-policies/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Perfil del producto](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Consulta](../../../query-service/ui/overview.md) | <ul><li>Ejecutar</li></ul> |
 | [Plantilla de consulta](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Función (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Adición del usuario</li><li>Eliminar usuario</li></ul> |
+| [Rol (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Adición del usuario</li><li>Quitar usuario</li></ul> |
 | [Zona protegida](../../../sandboxes/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Restablecer</li><li>Eliminar</li></ul> |
 | [Consulta programada](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para perfil</li></ul> |
-| [Segmento](../../../segmentation/home.md) | <ul><li>Crear</li><li>Eliminar</li><li>Activar segmento</li><li>Eliminación de segmentos</li></ul> |
-| [Flujo de datos de origen](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>Activación de conjunto de datos</li><li>Eliminación de conjunto de datos</li><li>Activate de perfil</li><li>Eliminación de perfil</li></ul> |
+| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para el perfil</li></ul> |
+| [Segmento](../../../segmentation/home.md) | <ul><li>Crear</li><li>Eliminar</li><li>Activar segmento</li><li>Eliminar segmento</li></ul> |
+| [Flujo de datos de origen](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>Activación de conjunto de datos</li><li>Eliminar conjunto de datos</li><li>Activar perfil</li><li>Eliminar perfil</li></ul> |
 | [Orden de trabajo](../../../hygiene/home.md) | <ul><li>Crear</li></ul> |
 
 ## Acceso a los registros de auditoría
 
 Cuando la función está habilitada para su organización, los registros de auditoría se recopilan automáticamente a medida que se produce la actividad. No es necesario habilitar manualmente la recopilación de registros.
 
-Para ver y exportar los registros de auditoría, debe tener la variable **[!UICONTROL Ver registro de actividades del usuario]** permiso de control de acceso concedido (encontrado en la sección [!UICONTROL Administración de datos] ). Para obtener información sobre cómo administrar permisos individuales para las funciones de Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
+Para ver y exportar los registros de auditoría, debe tener **[!UICONTROL Ver registro de actividades de usuario]** permiso de control de acceso concedido (se encuentra en la sección [!UICONTROL Gobernanza de datos] categoría). Para obtener información sobre cómo administrar permisos individuales para funciones de Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
 
-## Administración de registros de auditoría en la interfaz de usuario
+## Administración de registros de auditoría en la IU {#managing-audit-logs-in-the-ui}
 
-Puede ver los registros de auditoría de las distintas funciones del Experience Platform en el **[!UICONTROL Auditorías]** en la interfaz de usuario de Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de los más recientes a los menos recientes.
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_audits_instructions"
+>title="Instrucciones"
+>abstract=""
+
+Puede ver registros de auditoría para diferentes funciones de Experience Platform dentro de la **[!UICONTROL Auditorías]** Workspace en la IU de Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de más reciente a menos reciente.
 
 ![Panel de registros de auditoría](../../images/audit-logs/audits.png)
 
-Los registros de auditoría se conservan durante 365 días después de los cuales se eliminarán del sistema. Por lo tanto, solo puede volver durante un periodo máximo de 365 días. Si necesita datos de más de 365 días, debe exportar los registros en una cadencia normal para satisfacer los requisitos de políticas internas.
+Los registros de auditoría se conservan durante 365 días, después de los cuales se eliminan del sistema. Por lo tanto, solo puede volver durante un periodo máximo de 365 días. Si necesita datos de más de 365 días, debe exportar los registros a una cadencia regular para satisfacer los requisitos de directivas internas.
 
 Seleccione un evento de la lista para ver sus detalles en el carril derecho.
 
@@ -81,10 +91,10 @@ Seleccione un evento de la lista para ver sus detalles en el carril derecho.
 
 >[!NOTE]
 >
->Dado que se trata de una función nueva, los datos mostrados solo se remontan a marzo de 2022. Según el recurso seleccionado, es posible que los datos anteriores estén disponibles a partir de enero de 2022.
+>Como es una función nueva, los datos mostrados solo se remontan a marzo de 2022. Según el recurso seleccionado, los datos anteriores podrían estar disponibles a partir de enero de 2022.
 
 
-Seleccione el icono de canal (![Icono de filtro](../../images/audit-logs/icon.png)) para mostrar una lista de controles de filtro para ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros independientemente de los distintos filtros seleccionados.
+Seleccione el icono de canal (![Icono de filtro](../../images/audit-logs/icon.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los distintos filtros seleccionados.
 
 ![Filtros](../../images/audit-logs/filters.png)
 
@@ -93,12 +103,12 @@ Los siguientes filtros están disponibles para eventos de auditoría en la inter
 | Filtro | Descripción |
 | --- | --- |
 | [!UICONTROL Categoría] | Utilice el menú desplegable para filtrar los resultados mostrados por [categoría](#category). |
-| [!UICONTROL Acción] | Filtrar por acción. Actualmente solo [!UICONTROL Crear] y [!UICONTROL Eliminar] las acciones se pueden filtrar. |
+| [!UICONTROL Acción] | Filtrar por acción. Solo actualmente [!UICONTROL Crear] y [!UICONTROL Eliminar] Las acciones se pueden filtrar. |
 | [!UICONTROL Usuario] | Introduzca el ID de usuario completo (por ejemplo, `johndoe@acme.com`) para filtrar por usuario. |
-| [!UICONTROL Estado] | Filtrar por si la acción fue permitida (completada) o denegada debido a la falta de [control de acceso](../../../access-control/home.md) permisos. |
-| [!UICONTROL Fecha] | Seleccione una fecha de inicio o una fecha de finalización para definir un intervalo de fechas por el que filtrar los resultados. Los datos se pueden exportar con un periodo retrospectivo de 90 días (por ejemplo, 2021-12-15 a 2022-03-15). Esto puede variar según el tipo de evento. |
+| [!UICONTROL Estado] | Filtre por si la acción se permitió (completó) o se denegó debido a la falta de [control de acceso](../../../access-control/home.md) permisos. |
+| [!UICONTROL Fecha] | Seleccione una fecha de inicio o de finalización para definir un intervalo de fechas en el que filtrar los resultados. Los datos se pueden exportar con un periodo retrospectivo de 90 días (por ejemplo, del 15-12-2021 al 15-03-2022). Esto puede variar según el tipo de evento. |
 
-Para quitar un filtro, seleccione la &quot;X&quot; en el icono de la píldora para el filtro en cuestión o seleccione **[!UICONTROL Borrar todo]** para eliminar todos los filtros.
+Para eliminar un filtro, seleccione la &quot;X&quot; en el icono de la píldora para el filtro en cuestión o seleccione **[!UICONTROL Borrar todo]** para eliminar todos los filtros.
 
 ![Borrar filtros](../../images/audit-logs/clear-filters.png)
 
@@ -108,7 +118,7 @@ Para exportar la lista actual de registros de auditoría, seleccione **[!UICONTR
 
 ![Descargar registro](../../images/audit-logs/download.png)
 
-En el cuadro de diálogo que aparece, seleccione el formato que desee (ya sea **[!UICONTROL CSV]** o **[!UICONTROL JSON]**) y, a continuación, seleccione **[!UICONTROL Descargar]**. El explorador descarga el archivo generado y lo guarda en el equipo.
+En el cuadro de diálogo que aparece, seleccione el formato preferido (o bien **[!UICONTROL CSV]** o **[!UICONTROL JSON]**) y seleccione **[!UICONTROL Descargar]**. El explorador descarga el archivo generado y lo guarda en el equipo.
 
 ![Seleccionar formato de descarga](../../images/audit-logs/select-download-format.png)
 
@@ -118,11 +128,11 @@ Todas las acciones que puede realizar en la interfaz de usuario también se pued
 
 ## Administración de registros de auditoría para Adobe Admin Console
 
-Para obtener información sobre cómo administrar los registros de auditoría de actividades en Adobe Admin Console, consulte lo siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte lo siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Pasos siguientes y recursos adicionales
 
-Esta guía abarcaba cómo administrar los registros de auditoría en Experience Platform. Para obtener más información sobre cómo monitorizar las actividades de Platform, consulte la documentación de [Perspectivas de la capacidad de observación](../../../observability/home.md) y [monitorización de la ingesta de datos](../../../ingestion/quality/monitor-data-ingestion.md).
+En esta guía se explica cómo administrar los registros de auditoría en Experience Platform. Para obtener más información sobre cómo monitorizar las actividades de Platform, consulte la documentación sobre [Observability Insights](../../../observability/home.md) y [monitorización de la ingesta de datos](../../../ingestion/quality/monitor-data-ingestion.md).
 
 Para comprender mejor los registros de auditoría en Experience Platform, vea el siguiente vídeo:
 
