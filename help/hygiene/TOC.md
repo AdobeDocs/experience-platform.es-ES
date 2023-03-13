@@ -12,17 +12,17 @@ ht-degree: 50%
 ---
 
 
-# Higiene de los datos {#hygiene}
+# Higiene de datos {#hygiene}
 
 * [Resumen de higiene de datos](./home.md)
-* Interfaz de usuario de higiene de datos {#ui}
+* IU de higiene de datos {#ui}
    * [Información general](./ui/overview.md)
-   * [Examinar órdenes de trabajo existentes](./ui/browse.md)
+   * [Examinar pedidos de trabajo existentes](./ui/browse.md)
    * [Administrar caducidades del conjunto de datos](./ui/dataset-expiration.md)
-   * [Eliminar registros](./ui/record-delete.md)
+   * [Eliminación de registros](./ui/record-delete.md)
 * API de higiene de datos {#api}
    * [Información general](./api/overview.md)
    * [Caducidad de conjuntos de datos](./api/dataset-expiration.md)
-   * [Eliminar registros](./api/jobs.md)
-   * [Eliminar registros](./api/workorder.md)
+   * [Eliminaciones de registros](./api/jobs.md)
+   * [Eliminaciones de registros](./api/workorder.md)
    * [Cuota](./api/quota.md)

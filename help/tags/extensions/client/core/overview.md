@@ -88,7 +88,7 @@ Se activa el evento si el volumen aumenta o se reduce. Consulte la sección [Opc
 
 #### Orientation Change
 
-El evento se déclencheur si cambia la orientación del dispositivo. Debe especificar la duración durante la cual debe cambiar la orientación para activar del evento. No hay configuraciones para este tipo de evento.
+El evento déclencheur si cambia la orientación del dispositivo. Debe especificar la duración durante la cual debe cambiar la orientación para activar del evento. No hay configuraciones para este tipo de evento.
 
 #### Zoom Change
 
@@ -108,7 +108,7 @@ Se activa el evento si se selecciona el elemento especificado (al hacer clic). T
 
 Cuando se retrasa el vínculo, Platform impide que el explorador salga de la página. A continuación, realiza una redirección de JavaScript al destino original después del tiempo de espera especificado. Esto es especialmente peligroso cuando el marcado de la página tiene etiquetas `<a>` donde la funcionalidad deseada no aleja al usuario de la página. Si no puede resolver el problema de ninguna otra manera, debe ser extremadamente preciso en la definición del selector para que este evento se active exactamente donde lo necesita y no en otro lugar.
 
-El valor de retraso del vínculo predeterminado es 100 milisegundos. Tenga en cuenta que las etiquetas siempre esperarán el tiempo especificado y no están conectadas a la ejecución de las acciones de la regla de ninguna manera. Es posible que el retraso obligue al usuario a esperar más tiempo del necesario y también que el retraso no sea lo suficientemente largo como para que todas las acciones de la regla se completen correctamente. Los retrasos más largos proporcionan más tiempo para la ejecución de reglas, pero también empeoran la experiencia del usuario.
+El valor de retraso del vínculo predeterminado es 100 milisegundos. Tenga en cuenta que las etiquetas siempre esperarán la cantidad de tiempo especificada y no está conectado a la ejecución de las acciones de la regla de ninguna manera. Es posible que el retraso obligue al usuario a esperar más tiempo del necesario, y también que el retraso no sea lo suficientemente largo como para que todas las acciones de la regla se completen correctamente. Los retrasos más largos proporcionan más tiempo para la ejecución de reglas, pero también empeoran la experiencia del usuario.
 
 Para corregir el retraso, es necesario proporcionar el elemento seleccionado que activa el evento y la cantidad de tiempo específica antes de activarlo.
 
@@ -130,11 +130,11 @@ Se activa el evento si cambia un elemento de datos especificado. Debe proporcion
 
 #### Direct Call {#direct-call-event}
 
-Un evento de llamada directa evita los sistemas de detección de eventos y búsqueda. Las reglas de Direct Call son perfectas para situaciones en las que desea decirle al sistema exactamente lo que está ocurriendo. Además, son ideales cuando el sistema no puede detectar un evento en el DOM.
+Un evento de llamada directa evita la detección de eventos y los sistemas de búsqueda. Las reglas de Direct Call son perfectas para situaciones en las que desea decir al sistema exactamente lo que está ocurriendo. Además, son también perfectas para cuando el sistema no puede detectar un evento en el DOM.
 
-Al definir un evento de llamada directa, debe especificar una cadena que actuará como identificador de este evento. Si [acción de llamada directa de déclencheur](#direct-call-action) que contenga el mismo identificador se activa, todas las reglas de evento de llamada directa que escuchen ese identificador se ejecutarán.
+Al definir un evento de llamada directa, debe especificar una cadena que actúe como identificador de este evento. Si un [acción de llamada directa de déclencheur](#direct-call-action) que contenga el mismo identificador se active, entonces se ejecutarán todas las reglas de evento de llamada directa que escuchen ese identificador.
 
-![Captura de pantalla de un evento de llamada directa en la interfaz de usuario de la recopilación de datos](../../../images/extensions/client/core/direct-call-event.png)
+![Captura de pantalla de un evento de llamada directa en la IU de recopilación de datos](../../../images/extensions/client/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -227,7 +227,7 @@ Especifique cualquier Custom Code que deba darse como condición del evento.
 
 >[!NOTE]
 >
->JavaScript ES6+ ahora se admite en código personalizado. Tenga en cuenta que algunos exploradores más antiguos no admiten ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los exploradores web compatibles.
+>JavaScript de ES6+ ahora se admite en el código personalizado. Tenga en cuenta que algunos exploradores más antiguos no son compatibles con ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los navegadores web compatibles.
 
 Utilice el editor de código integrado para introducir el código personalizado:
 
@@ -524,7 +524,7 @@ Especifique un intervalo de fechas. Seleccione la fecha y la hora tras la que se
 Especifique el número máximo de veces que la condición devuelve el valor “True”. Puede seleccionar las siguientes opciones:
 
 * Page view
-* Sesiones
+* Sessions
 * Visitor
 * Seconds
 * Minutes
@@ -548,7 +548,7 @@ En esta sección se describen los tipos de acción disponibles en la Extensión 
 
 >[!NOTE]
 >
->JavaScript ES6+ ahora se admite en código personalizado. Tenga en cuenta que algunos exploradores más antiguos no admiten ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los exploradores web compatibles.
+>JavaScript de ES6+ ahora se admite en el código personalizado. Tenga en cuenta que algunos exploradores más antiguos no son compatibles con ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los navegadores web compatibles.
 
 Proporcione el código que se ejecuta después de activar el evento y de evaluar las condiciones.
 
@@ -630,13 +630,13 @@ setTimeout(function() {
 </script>
 ```
 
-### Llamada directa de déclencheur {#direct-call-action}
+### Déclencheur Direct Call {#direct-call-action}
 
-Esta acción déclencheur todas las reglas que utilizan una [evento de llamada directa](#direct-call-event). Al configurar la acción, debe proporcionar la cadena de identificador para el evento de llamada directa que desee almacenar en déclencheur. De forma opcional, también puede pasar datos al evento de llamada directa a través de un `detail` , que puede contener un conjunto personalizado de pares de clave-valor.
+Esta acción almacena en déclencheur todas las reglas que utilizan un específico [evento de llamada directa](#direct-call-event). Al configurar la acción, debe proporcionar la cadena de identificador para el evento de llamada directa que desee almacenar en déclencheur. De forma opcional, también puede pasar datos al evento de llamada directa a través de una `detail` objeto, que puede contener un conjunto personalizado de pares clave-valor.
 
-![Captura de pantalla de una acción de llamada directa de Déclencheur en la interfaz de usuario de recopilación de datos](../../../images/extensions/client/core/direct-call-action.png)
+![Captura de pantalla de una acción Llamada directa de Déclencheur en la IU de recopilación de datos](../../../images/extensions/client/core/direct-call-action.png)
 
-La acción se asigna directamente a la variable [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) en el `satellite` , a la que se puede acceder mediante código del lado del cliente.
+La acción se asigna directamente a [`track` método](../../../ui/client-side/satellite-object.md?lang=en#track) en el `satellite` , a la que se puede acceder mediante código del lado del cliente.
 
 ## Tipos de Data Elements de Extensión principal
 
@@ -664,7 +664,7 @@ Cualquier valor de cadena constante al que se pueda hacer referencia en acciones
 
 >[!NOTE]
 >
->JavaScript ES6+ ahora se admite en código personalizado. Tenga en cuenta que algunos exploradores más antiguos no admiten ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los exploradores web compatibles.
+>JavaScript de ES6+ ahora se admite en el código personalizado. Tenga en cuenta que algunos exploradores más antiguos no son compatibles con ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los navegadores web compatibles.
 
 Puede introducir código JavaScript personalizado en la IU si selecciona la opción Abrir editor e inserta código en la ventana del editor.
 
@@ -721,7 +721,7 @@ En el ejemplo siguiente, el marcado contiene una variable de JavaScript llamada 
 
 Cuando cree el elemento de datos, simplemente proporcione la ruta a esa variable.
 
-Si utiliza un objeto de recopilación de datos como parte de la capa de datos, utilice la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos, como `_myData.pageName`o `digitalData.pageName`, etc.
+Si utiliza un objeto de recopilación de datos como parte de la capa de datos, utilice la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos, como `_myData.pageName`, o `digitalData.pageName`, etc.
 
 #### Ejemplo:
 
@@ -737,9 +737,9 @@ Utilice el campo proporcionado para especificar el valor que ha creado para un e
 
 ### Objetos combinados
 
-Seleccione varios elementos de datos que proporcionen un objeto. Estos objetos se combinarán en profundidad (recursivamente) para producir un nuevo objeto. Los objetos de origen no se modificarán. Si se encuentra una propiedad en la misma ubicación de varios objetos de origen, se utilizará el valor del último objeto. Si el valor de la propiedad de origen es `undefined`, no invalidará un valor de un objeto de origen anterior. Si las matrices se encuentran en la misma ubicación en varios objetos de origen, las matrices se concatenarán.
+Seleccione varios elementos de datos, cada uno de los cuales proporcionará un objeto. Estos objetos se combinarán profunda (recursivamente) para producir un nuevo objeto. Los objetos de origen no se modificarán. Si se encuentra una propiedad en la misma ubicación en varios objetos de origen, se utilizará el valor del último objeto. Si un valor de propiedad de origen es `undefined`, no anulará un valor de un objeto de origen anterior. Si las matrices se encuentran en la misma ubicación en varios objetos de origen, las matrices se concatenarán.
 
-Por ejemplo, supongamos que selecciona un elemento de datos que proporciona el siguiente objeto:
+A modo de ejemplo, supongamos que selecciona un elemento de datos que proporciona el siguiente objeto:
 
 ```
 {
@@ -799,7 +799,7 @@ Puede seleccionar uno de los siguientes atributos de página para usarlos en el 
 * URL
 * Hostname
 * Pathname
-* Protocolo
+* Protocol
 * Referrer
 * Title
 
@@ -859,33 +859,33 @@ Algunos casos de uso común son:
 
 ### Valor condicional
 
-Un envoltorio para el [Value Comparison](#value-comparison-value-comparison) condición. En función del resultado de la comparación, devolverá uno de los dos valores disponibles en el formulario. De este modo, puede manejar &quot;If... Entonces... Si no...&quot; escenarios sin necesidad de reglas adicionales.
+Un envoltorio para [Value Comparison](#value-comparison-value-comparison) condición. En función del resultado de la comparación, devolverá uno de los dos valores disponibles en el formulario. Puede manejar &quot;Si... Entonces... Else...&quot; sin necesidad de reglas adicionales.
 
 ### Entorno de tiempo de ejecución
 
 Permite seleccionar una de las siguientes variables:
 
-* Entorno, etapa - Devuelve `_satellite.environment.stage` para diferenciar entre entornos de desarrollo/ensayo/producción.
-* Fecha de compilación de la biblioteca: Devuelve `turbine.buildInfo.buildDate` que contiene el mismo valor que `_satellite.buildInfo.buildDate`.
+* Fase del entorno: devoluciones `_satellite.environment.stage` para diferenciar entre entornos de desarrollo/ensayo/producción.
+* Fecha de compilación de la biblioteca: devoluciones `turbine.buildInfo.buildDate` que contiene el mismo valor como `_satellite.buildInfo.buildDate`.
 * Nombre de propiedad - Devuelve `_satellite.property.name` para obtener el nombre de la propiedad de Launch.
-* ID de propiedad - Devuelve `_satellite.property.id` para obtener el ID de la propiedad de Launch
-* Nombre de regla - Devuelve `event.$rule.name` que contiene el nombre de la regla ejecutada.
+* ID de propiedad - Devoluciones `_satellite.property.id` para obtener el ID de la propiedad de Launch
+* Nombre de regla: devuelve `event.$rule.name` que contiene el nombre de la regla ejecutada.
 * ID de regla - Devuelve `event.$rule.id` que contiene el ID de la regla ejecutada.
-* Tipo de evento: Devuelve `event.$type` que contiene el tipo de evento que activó la regla.
-* Carga útil de detalles de eventos - Devuelve `event.detail` que contiene la carga útil de un evento personalizado o una regla de llamada directa.
+* Tipo de evento: devoluciones `event.$type` que contiene el tipo de evento que activó la regla.
+* Carga útil de detalles del evento: devoluciones `event.detail` que contenga la carga útil de un evento personalizado o una regla de llamada directa.
 * Identificador de llamada directa: devuelve `event.identifier` que contiene el identificador de una regla de llamada directa.
 
-### Atributos de dispositivo
+### Atributos del dispositivo
 
-Devuelve uno de los siguientes atributos de dispositivo de visitante:
+Devuelve uno de los siguientes atributos de dispositivo del visitante:
 
-* Tamaño de la ventana del explorador
-* Tamaño de la pantalla
+* Tamaño de ventana del explorador
+* Tamaño de pantalla
 
 ### Herramientas de JavaScript
 
-Es un envoltorio para operaciones comunes de JavaScript. Recibe un elemento de datos como entrada. Devuelve el resultado de una de las siguientes transformaciones del valor del elemento de datos:
+Es un contenedor para operaciones comunes de JavaScript. Recibe un elemento de datos como entrada. Devuelve el resultado de una de las siguientes transformaciones del valor del elemento de datos:
 
-* Manipulación de cadenas básica (reemplazar, subcadena, coincidencia regex, primer y último índice, dividir, fracción)
-* Operaciones básicas de matriz (fracción, unión, pop, desplazamiento)
-* Operaciones universales básicas (fracción, longitud)
+* Manipulación básica de cadenas (reemplazar, subcadena, coincidencia regex, primer y último índice, división, fracción)
+* Operaciones de matriz básicas (división, unión, pop, mayús)
+* Operaciones universales básicas (rodaja, longitud)

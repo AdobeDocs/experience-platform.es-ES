@@ -15,22 +15,22 @@ ht-degree: 70%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-En las etiquetas de recopilación de datos, los elementos de datos son esencialmente alias a datos de una página. Estos datos se pueden encontrar en parámetros de cadena de consulta, cookies, elementos DOM u otras ubicaciones. Las reglas pueden hacer referencia a un elemento de datos y este puede actuar como una abstracción para acceder a estos fragmentos de datos.
+En las etiquetas de recopilación de datos, los elementos de datos son esencialmente alias de datos de una página. Estos datos se pueden encontrar en parámetros de cadena de consulta, cookies, elementos DOM u otras ubicaciones. Las reglas pueden hacer referencia a un elemento de datos y este puede actuar como una abstracción para acceder a estos fragmentos de datos.
 
-Las extensiones proporcionan los tipos de elementos de datos y permiten a los usuarios configurar elementos de datos para acceder a fragmentos de datos de una forma determinada. Por ejemplo, una extensión podría proporcionar un tipo de elemento de datos &quot;elemento de almacenamiento local&quot; en el que el usuario de podría especificar un nombre de elemento de almacenamiento local. Cuando una regla hace referencia al elemento de datos, la extensión puede buscar el valor del elemento de almacenamiento local utilizando el nombre del elemento de almacenamiento local que el usuario proporcionó al configurar el elemento de datos.
+Las extensiones proporcionan los tipos de elementos de datos y permiten a los usuarios configurar los elementos de datos para acceder a fragmentos de datos de una manera determinada. Por ejemplo, una extensión podría proporcionar un tipo de elemento de datos &quot;elemento de almacenamiento local&quot; en el que el usuario de podría especificar un nombre de elemento de almacenamiento local. Cuando una regla hace referencia al elemento de datos, la extensión puede buscar el valor del elemento de almacenamiento local utilizando el nombre del elemento de almacenamiento local que el usuario proporcionó al configurar el elemento de datos.
 
 Este documento explica cómo definir los tipos de elementos de datos para una extensión web en Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Si está desarrollando una extensión edge, consulte la guía de [tipos de elementos de datos para extensiones perimetrales](../edge/data-element-types.md) en su lugar.
+>Si va a desarrollar una extensión de Edge, consulte la guía sobre [tipos de elementos de datos para extensiones de edge](../edge/data-element-types.md) en su lugar.
 >
->Este documento también supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones web. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
+>Este documento supone que ya está familiarizado con los módulos de la biblioteca y con la forma en que se integran con las extensiones web. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
 
 Los tipos de elementos de datos suelen consistir en lo siguiente:
 
-1. A [ver](./views.md) se muestra en la interfaz de usuario del Experience Platform y en la de recopilación de datos, lo que permite a los usuarios modificar la configuración del elemento de datos.
-2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y recuperar fragmentos de datos.
+1. A [vista](./views.md) se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos que permite a los usuarios modificar la configuración del elemento de datos.
+2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y recuperar fragmentos de datos.
 
 Considere una situación en la que desee permitir que los usuarios recuperen un fragmento de datos de un elemento de almacenamiento local denominado `productName`. Es posible que el módulo tenga este aspecto:
 

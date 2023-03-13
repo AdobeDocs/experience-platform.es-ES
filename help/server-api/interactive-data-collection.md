@@ -1,6 +1,6 @@
 ---
 title: Recopilación de datos interactiva
-description: Descubra cómo la API de servidor de red perimetral de Adobe Experience Platform realiza la recopilación de datos interactiva.
+description: Descubra cómo la API del servidor de red perimetral de Adobe Experience Platform realiza la recopilación de datos interactiva.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 7%
 
 ## Información general {#overview}
 
-Los extremos de recopilación de datos interactivos reciben un solo evento y se utilizan cuando el cliente espera que el servidor Adobe Experience Platform Edge Network devuelva una respuesta. Estos extremos también pueden devolver contenido de otros servicios de Experience Edge al realizar la recopilación de datos.
+Los extremos de recopilación de datos interactivos reciben un único evento y se utilizan cuando el cliente espera que el servidor de Adobe Experience Platform Edge Network devuelva una respuesta. Estos extremos también pueden devolver contenido de otros servicios de Experience Edge, mientras realizan la recopilación de datos.
 
 La respuesta del servidor incluye una o más `Handle` como se muestra a continuación.
 
-## Ejemplo de llamada a la API
+## Ejemplo de llamada de API
 
 ### Formato de API {#format}
 
@@ -62,12 +62,12 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sí. | ID de almacén de datos. |
-| `requestId` | `String` | No | Proporcione un ID aleatorio de cliente para correlacionar solicitudes de servidor internas. Si no se proporciona ninguno, la red perimetral generará uno y lo devolverá en la respuesta. |
+| `dataStreamId` | `String` | Sí. | ID de flujo de datos. |
+| `requestId` | `String` | No | Proporcione un ID aleatorio de cliente para correlacionar las solicitudes internas del servidor. Si no se proporciona ninguno, la red perimetral generará uno y lo devolverá en la respuesta. |
 
 ### Respuesta {#response}
 
-Una respuesta correcta devuelve el estado HTTP `200 OK`, con uno o más `Handle` objetos, según los servicios Edge en tiempo real habilitados en la configuración del conjunto de datos.
+Una respuesta correcta devuelve el estado HTTP. `200 OK`, con uno o más `Handle` según los servicios perimetrales en tiempo real habilitados en la configuración del conjunto de datos.
 
 ```json
 {

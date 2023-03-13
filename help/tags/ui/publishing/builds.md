@@ -1,10 +1,11 @@
 ---
 title: Versiones
 description: Obtenga información acerca del concepto de las compilaciones y cómo funcionan en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 58%
+ht-degree: 97%
 
 ---
 
@@ -16,15 +17,15 @@ ht-degree: 58%
 
 Una compilación es el conjunto de archivos que contiene todo el código que se ejecuta en el dispositivo cliente.
 
-Es una combinación de los cambios especificados dentro de la biblioteca, así como todo lo que se haya enviado, aprobado o publicado antes.
+Es una combinación de los cambios que ha especificado en su biblioteca, así como todo lo que se ha enviado, aprobado o publicado antes.
 
 La compilación consiste en archivos de código del lado del cliente que se hacen referencia entre sí. Estos archivos se envían a su ubicación de alojamiento con el entorno y el host que ha elegido para la biblioteca. El código que implementa en el sitio señala a esta misma ubicación para que los archivos se puedan cargar cuando un usuario acceda al sitio o a la aplicación.
 
 ## Contenido del archivo
 
-Una biblioteca define un conjunto discreto de recursos de etiquetas (extensiones, reglas y elementos de datos) que deben incluirse en ella.
+Una biblioteca define un conjunto discreto de recursos de etiquetas (extensiones, reglas y elementos de datos) que se deben incluir en ella.
 
-Una compilación contiene todo el código del módulo (proporcionado por los desarrolladores de la extensión) y la configuración (introducida por usted) necesaria para alimentar los recursos contenidos en la biblioteca. Por ejemplo, si una extensión proporciona acciones que no se utilizan en las reglas, el código para realizar esas acciones no está contenido en la compilación.
+Una compilación contiene todo el código del módulo (proporcionado por los desarrolladores de la extensión) y la configuración (introducida por usted) necesarios para poder activar los recursos contenidos en la biblioteca. Por ejemplo, si una extensión proporciona acciones que no se utilizan en las reglas, el código para realizar esas acciones no se incluye dentro de la compilación.
 
 Las compilaciones se dividen en el archivo de biblioteca principal y en muchos archivos más pequeños. En el código incrustado se hace referencia al archivo de biblioteca principal, que se carga en la página en el tiempo de ejecución. Contiene:
 
@@ -35,13 +36,13 @@ Las compilaciones se dividen en el archivo de biblioteca principal y en muchos a
 * Todo el código y la configuración de las condiciones
 * El código y la configuración de los eventos para cualquier regla que tenga como evento Library Loaded o Page Bottom (ya que sabemos que se necesitan inmediatamente).
 
-Los archivos más pequeños contienen código y configuración para acciones individuales que se cargan en la página según sea necesario. Cuando se activa una regla y se evalúan sus condiciones de forma que sea necesario ejecutar las acciones, el código y la configuración necesarios para esa acción específica se recuperan de uno de los archivos más pequeños. Esto significa que solo se carga el código necesario para realizar las acciones necesarias en la página, lo que hace que la biblioteca principal sea lo más pequeña posible.
+Los archivos más pequeños contienen código y configuración para acciones individuales que se cargan en la página según sea necesario. Cuando se activa una regla y se evalúan sus condiciones de forma que sea necesario ejecutar las acciones, se recuperan el código y la configuración necesarios para esa acción específica de uno de los archivos más pequeños. Esto significa que solo se carga el código necesario para realizar las acciones necesarias en la página, lo que hace que la biblioteca principal sea lo más pequeña posible.
 
 ## Formato del archivo
 
 El formato de archivo predeterminado para las compilaciones es un paquete de archivos que contienen todo el código necesario para que las extensiones, los elementos de datos y las reglas se ejecuten de la manera que desee.
 
-Sin embargo, en determinados casos puede preferir un archivo .zip que incluya los archivos en lugar del archivo ejecutable con código del lado del cliente. Por ejemplo, puede crear un archivo si usted mismo aloja su propia compilación y desea utilizar la compilación en otra implementación. Si proporciona cualquier cosa en la ruta autoalojada al campo de biblioteca, puede guardar el entorno. Junto con su nuevo código, se crea un enlace a la descarga archivada. Una vez creada la biblioteca, tiene la opción de implementar un archivo zip en Akamai y descargarlo desde `assets.adobedtm.com/...`.
+Sin embargo, en determinados casos puede preferir un archivo .zip que incluya los archivos en lugar del archivo ejecutable con código del lado del cliente. Por ejemplo, puede crear un archivo si usted mismo aloja su propia compilación y desea utilizar la compilación en otra implementación. Si proporciona cualquier cosa en la ruta autoalojada al campo de biblioteca, puede guardar su entorno. Junto con su nuevo código, se crea un enlace a la descarga archivada. Una vez creada la biblioteca, tiene la opción de implementar un archivo zip en Akamai y descargarlo desde `assets.adobedtm.com/...`.
 
 >[!NOTE]
 >
@@ -57,7 +58,7 @@ La minificación reduce el consumo de ancho de banda y mejora la velocidad al el
 
 Para aumentar el rendimiento, Platform minifica todo, incluso:
 
-* La biblioteca de etiquetas principal
+* La biblioteca principal de etiquetas
 * El código de módulo proporcionado por los desarrolladores de extensiones como parte de una extensión
 * El código personalizado proporcionado por los usuarios de Platform 
 
@@ -69,12 +70,12 @@ Cualquier código del lado del cliente proporcionado señala a la versión minif
 
 `launch-%environment_id%.min.js`
 
-Si desea ver el código no minificado, elimine .min del nombre del archivo:
+Si desea ver el código no minificado, quite .min del nombre del archivo:
 
 `launch-%environment_id%.js`
 
-Si un desarrollador de extensiones proporciona código minificado con su extensión, Platform no proporciona código no minificado en la compilación no minificada. Del mismo modo, si un usuario de Platform coloca el código minificado en un cuadro de código personalizado, dicho código se sigue minificando en compilaciones no minificadas. Platform no desminifica nada.
+Si un desarrollador de extensiones proporciona código minificado con su extensión, Platform no proporciona código no minificado en la compilación no minificada. Del mismo modo, si un usuario de Platform coloca el código minificado en un cuadro de código personalizado, ese código también se minifica en compilaciones no minificadas. Platform no desminifica nada.
 
-Para obtener más información sobre la minificación, consulte [este artículo de la ruta de acceso a la bandeja](https://blog.stackpath.com/glossary/minification/).
+Para obtener más información acerca de la minificación, consulte [este artículo de Stackpath](https://blog.stackpath.com/glossary/minification/).
 
-Al realizar una compilación, construirá primero la biblioteca no minificada y, a continuación, reducirá el tamaño de toda la biblioteca de una vez.
+Al realizar una compilación, se construye primero la biblioteca no minificada y, a continuación, se minifica toda la biblioteca de una vez.

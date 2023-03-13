@@ -1,6 +1,6 @@
 ---
 title: Configuración de extensión
-description: Obtenga información sobre cómo configurar una extensión de etiqueta para recopilar la configuración global de un usuario en la interfaz de usuario de Adobe Experience Platform o la interfaz de usuario de recopilación de datos.
+description: Obtenga información sobre cómo configurar una extensión de etiqueta para recopilar la configuración global de un usuario en la IU de Adobe Experience Platform o la IU de recopilación de datos.
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt

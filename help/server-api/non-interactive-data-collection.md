@@ -1,6 +1,6 @@
 ---
 title: Recopilación de datos no interactiva
-description: Descubra cómo la API de servidor de red perimetral de Adobe Experience Platform realiza la recopilación de datos no interactiva.
+description: Descubra cómo la API del servidor de red perimetral de Adobe Experience Platform realiza la recopilación de datos no interactiva.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 5%
 
 ## Información general {#overview}
 
-Los extremos de recopilación de datos de eventos no interactivos se utilizan para enviar varios eventos a conjuntos de datos de Experience Platform u otras salidas.
+Los extremos de recopilación de datos de evento no interactivos se utilizan para enviar varios eventos a conjuntos de datos de Experience Platform u otros medios.
 
-Se recomienda enviar eventos en lote cuando los eventos del usuario final se ponen en cola localmente durante un breve periodo de tiempo (por ejemplo, cuando no hay conexión de red).
+Se recomienda enviar eventos por lotes cuando los eventos del usuario final se ponen en cola localmente durante un corto periodo de tiempo (por ejemplo, cuando no hay conexión de red).
 
-Los eventos de lote no deben pertenecer necesariamente al mismo usuario final, lo que significa que los eventos pueden contener identidades diferentes dentro de sus `identityMap` objeto.
+Los eventos por lotes no deben pertenecer necesariamente al mismo usuario final, lo que significa que los eventos pueden contener identidades diferentes dentro de su `identityMap` objeto.
 
 ## Ejemplo de llamada de API no interactiva {#example}
 
@@ -89,18 +89,18 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 
 | Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sí | ID del conjunto de datos utilizado por el extremo de recopilación de datos. |
-| `requestId` | `String` | No | Proporcione un ID de seguimiento de solicitud externo. Si no se proporciona ninguno, la red perimetral generará uno por usted y lo devolverá de nuevo en el cuerpo o los encabezados de respuesta. |
-| `silent` | `Boolean` | No | Parámetro booleano opcional que indica si la red perimetral debe devolver un `204 No Content` con una carga útil vacía o no. Los errores críticos se notifican utilizando el código de estado HTTP y la carga útil correspondientes. |
+| `dataStreamId` | `String` | Sí | ID de la secuencia de datos utilizada por el extremo de recopilación de datos. |
+| `requestId` | `String` | No | Proporcione un ID de seguimiento de solicitud externa. Si no se proporciona ninguno, la red perimetral generará uno para usted y lo devolverá de nuevo en el cuerpo de respuesta/encabezados. |
+| `silent` | `Boolean` | No | Parámetro booleano opcional que indica si la red perimetral debe devolver un `204 No Content` respuesta con una carga útil vacía o no. Los errores críticos se registran utilizando el código de estado HTTP y la carga útil correspondientes. |
 
 
 ### Respuesta {#response}
 
-Una respuesta correcta devuelve uno de los siguientes estados y una `requestID` si no se ha proporcionado ninguno en la solicitud.
+Una respuesta correcta devuelve uno de los siguientes estados y un `requestID` si no se proporcionó ninguno en la solicitud.
 
 * `202 Accepted` cuando la solicitud se haya procesado correctamente;
-* `204 No Content` cuando la solicitud se procesó correctamente y la variable `silent` se ha definido como `true`;
-* `400 Bad Request` cuando la solicitud no se formó correctamente (por ejemplo, no se encontró la identidad primaria obligatoria).
+* `204 No Content` cuando la solicitud se haya procesado correctamente y la variable `silent` el parámetro se ha establecido en `true`;
+* `400 Bad Request` cuando la solicitud no se formó correctamente (por ejemplo, no se encontró la identidad principal obligatoria).
 
 ```json
 {

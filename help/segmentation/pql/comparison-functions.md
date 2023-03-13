@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentación;pql;PQL;lenguaje de consulta de perfil;funciones de comparación;comparación;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de consulta de perfil;funciones de comparación;comparison;
 solution: Experience Platform
-title: Funciones de comparación de PQL
-description: Las funciones de comparación se utilizan para comparar diferentes expresiones y valores, devolviendo "true" o "false" en consecuencia.
+title: Funciones de comparación PQL
+description: Las funciones de comparación se utilizan para comparar entre diferentes expresiones y valores, devolviendo "true" o "false" en consecuencia.
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 9%
 
 # Funciones de comparación
 
-Las funciones de comparación se utilizan para comparar entre diferentes expresiones y valores y para devolver `true` o `false` en consecuencia. Puede encontrar más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] información general](./overview.md).
+Las funciones de comparación se utilizan para comparar entre diferentes expresiones y valores, lo que devuelve `true` o `false` en consecuencia. Puede encontrar más información sobre otras funciones PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
 
 ## Es igual a
 
-La variable `=` (es igual que) comprueba si un valor o expresión es igual a otro valor o expresión.
+El `=` La función (es igual que) comprueba si un valor o expresión es igual a otro valor o expresión.
 
 **Formato**
 
@@ -27,7 +27,7 @@ La variable `=` (es igual que) comprueba si un valor o expresión es igual a otr
 
 **Ejemplo**
 
-La siguiente consulta PQL comprueba si el país de la dirección principal está en Canadá.
+La siguiente consulta PQL comprueba si el país de la dirección postal está en Canadá.
 
 ```sql
 homeAddress.countryISO = "CA"
@@ -35,7 +35,7 @@ homeAddress.countryISO = "CA"
 
 ## Distinto a
 
-La variable `!=` función (no igual) comprueba si hay un valor o expresión **not** igual a otro valor o expresión.
+El `!=` La función (no es igual) comprueba si un valor o expresión es **no** es igual a otro valor o expresión.
 
 **Formato**
 
@@ -45,7 +45,7 @@ La variable `!=` función (no igual) comprueba si hay un valor o expresión **no
 
 **Ejemplo**
 
-La siguiente consulta PQL comprueba si el país de la dirección principal no está en Canadá.
+La siguiente consulta PQL comprueba si el país de la dirección postal no está en Canadá.
 
 ```sql
 homeAddress.countryISO != "CA"
@@ -53,7 +53,7 @@ homeAddress.countryISO != "CA"
 
 ## Greater than
 
-La variable `>` (bueno que) se utiliza para comprobar si el primer valor es bueno que el segundo valor.
+El `>` (bueno que) se utiliza para comprobar si el primer valor es bueno que el segundo valor.
 
 **Formato**
 
@@ -63,7 +63,7 @@ La variable `>` (bueno que) se utiliza para comprobar si el primer valor es buen
 
 **Ejemplo**
 
-La siguiente consulta PQL define las personas cuyo cumpleaños no cae en enero o febrero.
+La siguiente consulta PQL define las personas cuyo cumpleaños no se celebra en enero o febrero.
 
 ```sql
 person.birthMonth > 2
@@ -71,7 +71,7 @@ person.birthMonth > 2
 
 ## Mayor o igual que
 
-La variable `>=` (buena o igual que) se utiliza para comprobar si el primer valor es bueno o igual al segundo valor.
+El `>=` (bueno o igual que) se utiliza para comprobar si el primer valor es bueno o igual que el segundo valor.
 
 **Formato**
 
@@ -81,7 +81,7 @@ La variable `>=` (buena o igual que) se utiliza para comprobar si el primer valo
 
 **Ejemplo**
 
-La siguiente consulta PQL define las personas cuyo cumpleaños no cae en enero o febrero.
+La siguiente consulta PQL define las personas cuyo cumpleaños no se celebra en enero o febrero.
 
 ```sql
 person.birthMonth >= 3
@@ -89,7 +89,7 @@ person.birthMonth >= 3
 
 ## Menos de
 
-La variable `<` (menor que) para comprobar si el primer valor es menor que el segundo valor.
+El `<` (menor que) se utiliza la función de comparación para comprobar si el primer valor es menor que el segundo valor.
 
 **Formato**
 
@@ -107,7 +107,7 @@ person.birthMonth < 2
 
 ## Less than or equal to
 
-La variable `<=` (menor o igual que) se utiliza la función de comparación para comprobar si el primer valor es menor o igual que el segundo valor.
+El `<=` (menor o igual que) se utiliza para comprobar si el primer valor es menor o igual que el segundo valor.
 
 **Formato**
 
@@ -117,7 +117,7 @@ La variable `<=` (menor o igual que) se utiliza la función de comparación para
 
 **Ejemplo**
 
-La siguiente consulta PQL define las personas cuyo cumpleaños es enero o febrero.
+La siguiente consulta PQL define las personas cuyo cumpleaños es en enero o febrero.
 
 ```sql
 person.birthMonth <= 2
@@ -125,4 +125,4 @@ person.birthMonth <= 2
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de comparación, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [Información general sobre el lenguaje de consulta de perfil](./overview.md).
+Ahora que ha aprendido acerca de las funciones de comparación, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones PQL, lea la [Introducción al lenguaje de consulta de perfil](./overview.md).

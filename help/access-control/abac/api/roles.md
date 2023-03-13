@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;Control de acceso basado en atributos;control de acceso basado en atributos
 solution: Experience Platform
-title: Punto final de la API de roles
-description: El extremo /roles de la API de control de acceso basado en atributos le permite administrar roles mediante programación en Adobe Experience Platform.
+title: Extremo de API de roles
+description: El extremo /roles de la API de control de acceso basado en atributos le permite administrar los roles mediante programación en Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -11,23 +11,23 @@ ht-degree: 4%
 
 ---
 
-# Punto de conexión de roles
+# Extremo de roles
 
 >[!NOTE]
 >
->Si se pasa un token de usuario, el usuario del token debe tener una función &quot;administrador de organización&quot; para la organización solicitada.
+>Si se pasa un token de usuario, el usuario del token debe tener un rol de &quot;administrador de organización&quot; para la organización solicitada.
 
-Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en roles, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el ámbito de vista o acceso de escritura que necesiten.
+Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el ámbito de acceso de visualización o escritura que necesiten.
 
-La variable `/roles` en la API de control de acceso basada en atributos le permite administrar mediante programación las funciones de su organización.
+El `/roles` Este extremo de la API de control de acceso basado en atributos le permite administrar mediante programación las funciones de su organización.
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
-## Recuperar una lista de funciones {#list}
+## Recuperación de una lista de funciones {#list}
 
-Puede enumerar todas las funciones existentes que pertenezcan a su organización realizando una solicitud de GET al `/roles` punto final.
+Puede enumerar todas las funciones existentes que pertenecen a su organización realizando una solicitud de GET a `/roles` punto final.
 
 **Formato de API**
 
@@ -37,7 +37,7 @@ GET /roles/
 
 **Solicitud**
 
-La siguiente solicitud recupera una lista de funciones pertenecientes a su organización.
+La siguiente solicitud recupera una lista de funciones que pertenecen a su organización.
 
 ```shell
 curl -X GET \
@@ -102,17 +102,17 @@ Una respuesta correcta devuelve una lista de funciones de su organización, incl
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID que corresponde a la función. Este ID se genera automáticamente. |
-| `name` | Nombre de su función. |
-| `description` | La propiedad description proporciona información adicional sobre su función. |
-| `roleType` | Tipo designado de la función. Los valores posibles para el tipo de función son: `user-defined` y `system-defined`. |
-| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contenga un grupo de permisos. |
-| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que están aprovisionados para una función en particular. |
+| `name` | El nombre de su función. |
+| `description` | La propiedad description proporciona información adicional sobre la función. |
+| `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
+| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
+| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
 | `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
-## Buscar una función {#lookup}
+## Búsqueda de un rol {#lookup}
 
-Puede buscar una función individual realizando una solicitud de GET que incluya la `roleId` en la ruta de solicitud.
+Puede buscar una función individual realizando una solicitud de GET que incluya la función correspondiente `roleId` en la ruta de solicitud.
 
 **Formato de API**
 
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles para el ID de función consultado, incluida información sobre su tipo de función, conjuntos de permisos y atributos del asunto.
+Una respuesta correcta devuelve detalles del ID de rol consultado, incluida información sobre su tipo de rol, conjuntos de permisos y atributos de asunto.
 
 ```json
 {
@@ -169,17 +169,17 @@ Una respuesta correcta devuelve detalles para el ID de función consultado, incl
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID que corresponde a la función. Este ID se genera automáticamente. |
-| `name` | Nombre de su función. |
-| `description` | La propiedad description proporciona información adicional sobre su función. |
-| `roleType` | Tipo designado de la función. Los valores posibles para el tipo de función son: `user-defined` y `system-defined`. |
-| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contenga un grupo de permisos. |
-| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que están aprovisionados para una función en particular. |
+| `name` | El nombre de su función. |
+| `description` | La propiedad description proporciona información adicional sobre la función. |
+| `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
+| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
+| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
 | `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
-## Buscar temas por ID de rol
+## Búsqueda de asuntos por ID de función
 
-También puede recuperar los sujetos realizando una solicitud de GET a la variable `/roles` al proporcionar un {ROLE_ID}.
+También puede recuperar asuntos realizando una solicitud de GET al `/roles` extremo al proporcionar un {ROLE_ID}.
 
 **Formato de API**
 
@@ -189,11 +189,11 @@ GET /roles/{ROLE_ID}/subjects
 
 | Parámetro | Descripción |
 | --- | --- |
-| {ROLE_ID} | El ID de la función asociada a los temas que desea buscar. |
+| {ROLE_ID} | El ID de la función asociada a los asuntos que desea buscar. |
 
 **Solicitud**
 
-La siguiente solicitud recupera los sujetos asociados con `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+La siguiente solicitud recupera los asuntos asociados con `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X GET \
@@ -205,7 +205,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los asuntos asociados con el ID de función consultado, incluido el ID de asunto y el tipo de asunto correspondientes.
+Una respuesta correcta devuelve los asuntos asociados con el ID de rol consultado, incluidos el ID de asunto y el tipo de asunto correspondientes.
 
 ```json
 {
@@ -249,13 +249,13 @@ Una respuesta correcta devuelve los asuntos asociados con el ID de función cons
 
 | Propiedad | Descripción |
 | --- | --- |
-| `roleId` | El ID de función asociado al asunto consultado. |
-| `subjectType` | Tipo del asunto que se consulta. |
+| `roleId` | El ID de rol asociado con el asunto consultado. |
+| `subjectType` | El tipo del asunto consultado. |
 | `subjectId` | El ID que corresponde al asunto consultado. |
 
 ## Crear una función {#create}
 
-Para crear una función nueva, realice una solicitud de POST al `/roles` al proporcionar valores para el nombre, la descripción y el tipo de rol de su rol.
+Para crear una función nueva, realice una solicitud de POST a `/roles` proporciona valores para el nombre, la descripción y el tipo de función de la función.
 
 **Formato de API**
 
@@ -280,9 +280,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | Nombre de su función. Asegúrese de que el nombre de su función sea descriptivo, ya que puede utilizarlo para buscar información sobre su función. |
-| `description` | (Opcional) Un valor descriptivo que puede incluir para proporcionar más información sobre su función. |
-| `roleType` | Tipo designado de la función. Los valores posibles para el tipo de función son: `user-defined` y `system-defined`. |
+| `name` | El nombre de su función. Asegúrese de que el nombre de la función sea descriptivo, ya que puede utilizarlo para buscar información sobre la función. |
+| `description` | (Opcional) Un valor descriptivo que puede incluir para proporcionar más información sobre la función. |
+| `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
 
 **Respuesta**
 
@@ -317,17 +317,17 @@ Una respuesta correcta devuelve la función recién creada, con su ID de funció
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID que corresponde a la función. Este ID se genera automáticamente. |
-| `name` | Nombre de su función. |
-| `description` | La propiedad description proporciona información adicional sobre su función. |
-| `roleType` | Tipo designado de la función. Los valores posibles para el tipo de función son: `user-defined` y `system-defined`. |
-| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contenga un grupo de permisos. |
-| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que están aprovisionados para una función en particular. |
+| `name` | El nombre de su función. |
+| `description` | La propiedad description proporciona información adicional sobre la función. |
+| `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
+| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
+| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
 | `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
-## Actualizar una función {#patch}
+## Actualizar un rol {#patch}
 
-Puede actualizar las propiedades de una función realizando una solicitud de PATCH al `/roles` al proporcionar el ID de rol y los valores correspondientes para las operaciones que desea aplicar.
+Puede actualizar las propiedades de un rol realizando una solicitud de PATCH a `/roles` al mismo tiempo que proporciona el ID de rol y los valores correspondientes para las operaciones que desea aplicar.
 
 **Formato de API**
 
@@ -360,13 +360,13 @@ curl -X PATCH \
 
 | Operaciones | Descripción |
 | --- | --- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace`y `remove`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace`, y `remove`. |
 | `path` | Ruta del parámetro que se va a actualizar. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve la función actualizada, incluidos los nuevos valores para las propiedades que eligió actualizar.
+Una respuesta correcta devuelve la función actualizada, incluidos los nuevos valores de las propiedades que eligió actualizar.
 
 ```json
 {
@@ -397,17 +397,17 @@ Una respuesta correcta devuelve la función actualizada, incluidos los nuevos va
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID que corresponde a la función. Este ID se genera automáticamente. |
-| `name` | Nombre de su función. |
-| `description` | La propiedad description proporciona información adicional sobre su función. |
-| `roleType` | Tipo designado de la función. Los valores posibles para el tipo de función son: `user-defined` y `system-defined`. |
-| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contenga un grupo de permisos. |
-| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que están aprovisionados para una función en particular. |
+| `name` | El nombre de su función. |
+| `description` | La propiedad description proporciona información adicional sobre la función. |
+| `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
+| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
+| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
 | `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
-## Actualizar una función por ID de función {#put}
+## Actualizar un rol por identificador de rol {#put}
 
-Puede actualizar una función realizando una solicitud de PUT al `/roles` y especificar el ID de función que corresponde a la función que desea actualizar.
+Puede actualizar una función realizando una solicitud de PUT a `/roles` y especificando el ID de rol que corresponde al rol que desea actualizar.
 
 **Formato de API**
 
@@ -417,7 +417,7 @@ PUT /roles/{ROLE_ID}
 
 **Solicitud**
 
-La siguiente solicitud actualiza el nombre, la descripción y el tipo de función del ID de rol: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+La siguiente solicitud actualiza el nombre, la descripción y el tipo de función del ID de función: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X PUT \
@@ -435,12 +435,12 @@ curl -X PUT \
 | Parámetro | Descripción |
 | --- | --- |
 | `name` | Nombre actualizado de una función. |
-| `description` | La descripción actualizada de una función. |
-| `roleType` | Tipo designado de la función. Los valores posibles para el tipo de función son: `user-defined` y `system-defined`. |
+| `description` | La descripción actualizada de un rol. |
+| `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
 
 **Respuesta**
 
-Si la función se ejecuta correctamente, se incluirán nuevos valores para su nombre, descripción y tipo de función.
+Una función correcta devuelve la función actualizada, incluidos los nuevos valores para su nombre, descripción y tipo de función.
 
 ```json
 {
@@ -471,17 +471,17 @@ Si la función se ejecuta correctamente, se incluirán nuevos valores para su no
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID que corresponde a la función. Este ID se genera automáticamente. |
-| `name` | Nombre de su función. |
-| `description` | La propiedad description proporciona información adicional sobre su función. |
-| `roleType` | Tipo designado de la función. Los valores posibles para el tipo de función son: `user-defined` y `system-defined`. |
-| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contenga un grupo de permisos. |
-| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que están aprovisionados para una función en particular. |
+| `name` | El nombre de su función. |
+| `description` | La propiedad description proporciona información adicional sobre la función. |
+| `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
+| `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
+| `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
 | `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
-## Actualizar asunto por ID de función
+## Actualizar asunto por ID de rol
 
-Para actualizar los temas asociados a una función, realice una solicitud de PATCH a la variable `/roles` al proporcionar el ID de función de los sujetos que desea actualizar.
+Para actualizar los asuntos asociados a un rol, realice una solicitud de PATCH a `/roles` proporciona el ID de rol de los sujetos que desea actualizar.
 
 **Formato de API**
 
@@ -491,7 +491,7 @@ PATCH /roles/{ROLE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| {ROLE_ID} | El ID de la función asociada a los temas que desea actualizar. |
+| {ROLE_ID} | El ID de la función asociada con los asuntos que desea actualizar. |
 
 **Solicitud**
 
@@ -516,13 +516,13 @@ curl -X PATCH \
 
 | Operaciones | Descripción |
 | --- | --- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace`y `remove`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace`, y `remove`. |
 | `path` | Ruta del parámetro que se va a actualizar. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve los temas actualizados asociados con el ID de rol consultado.
+Una respuesta correcta devuelve los asuntos actualizados asociados con el ID de rol consultado.
 
 ```json
 {
@@ -552,11 +552,11 @@ Una respuesta correcta devuelve los temas actualizados asociados con el ID de ro
 | Propiedad | Descripción |
 | --- | --- |
 | `subjectId` | El ID de un asunto. |
-| `subjectType` | Tipo de asunto. |
+| `subjectType` | El tipo de asunto. |
 
-## Eliminar una función {#delete}
+## Eliminar un rol {#delete}
 
-Para eliminar una función, realice una solicitud de DELETE al `/roles` al especificar el ID de la función que desea eliminar.
+Para suprimir una función, realice una solicitud de DELETE al `/roles` punto final al especificar el ID de la función que desea eliminar.
 
 **Formato de API**
 
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| {ROLE_ID} | El ID de la función que desea eliminar. |
+| {ROLE_ID} | El identificador de la función que desea eliminar. |
 
 **Solicitud**
 
@@ -584,4 +584,4 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
 
-Puede confirmar la eliminación intentando realizar una solicitud de búsqueda (GET) al rol. Recibirá un estado HTTP 404 (no encontrado) porque la función se ha eliminado de la administración.
+Para confirmar la eliminación, intente realizar una solicitud de búsqueda (GET) al rol. Recibirá el estado HTTP 404 (no encontrado) porque la función se ha eliminado de la administración.

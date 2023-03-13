@@ -1,16 +1,17 @@
 ---
 title: Paginación de respuestas en la API de Reactor
 description: Obtenga información sobre cómo paginar los resultados al enumerar recursos en la API de Reactor.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '101'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Paginación de respuestas en la API de Reactor
 
-Las respuestas devueltas por la API de Reactor se paginan. El tamaño de página predeterminado es de 25 elementos. Los detalles sobre la paginación se incluyen en la sección `meta.pagination `del objeto de respuesta de API:
+Las respuestas devueltas por la API de Reactor se paginan. El tamaño de página predeterminado es de 25 elementos. Los detalles acerca de la paginación se incluyen en la sección `meta.pagination `del objeto de respuesta de API:
 
 ```json
 "meta": {
@@ -24,7 +25,7 @@ Las respuestas devueltas por la API de Reactor se paginan. El tamaño de página
 }
 ```
 
-Es posible obtener una página específica y modificar el tamaño de una página incluyendo un parámetro de consulta `page` en la ruta de solicitud.
+Es posible obtener una página específica y modificar su tamaño incluyendo un parámetro de consulta `page` en la ruta de solicitud.
 
 ## Recuperar una página específica
 

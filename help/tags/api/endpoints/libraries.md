@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo de las bibliotecas en la API
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1521'
 ht-degree: 99%
 
 ---
@@ -35,7 +35,7 @@ GET /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | El `id` de la propiedad que posee las bibliotecas. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -161,7 +161,7 @@ GET /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | El `id` de la biblioteca que desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -272,7 +272,7 @@ POST /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | El `id` de la [propiedad](./properties.md) en la que está definiendo la biblioteca. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -300,7 +300,7 @@ curl -X POST \
 | `attributes.name` | **(Obligatorio)** Un nombre legible en lenguaje natural para la biblioteca. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -423,7 +423,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | El ID de la biblioteca a la que desea añadir recursos. |
 | `{RESOURCE_TYPE}` | Tipo de recurso que está agregando a la biblioteca. Se aceptan los siguientes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -456,7 +456,7 @@ curl -X POST \
 | `id` | El ID del recurso que está agregando a la biblioteca. |
 | `type` | Tipo de recurso que está agregando a la biblioteca. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -496,7 +496,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | ID de la biblioteca cuyas relaciones desea reemplazar. |
 | `{RESOURCE_TYPE}` | Tipo de recurso que va a reemplazar. Se aceptan los siguientes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -525,7 +525,7 @@ curl -X PATCH \
 | `id` | El ID del recurso que está agregando a la biblioteca. |
 | `type` | Tipo de recurso que está agregando a la biblioteca. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -561,7 +561,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | El ID de la biblioteca cuyos recursos desea eliminar. |
 | `{RESOURCE_TYPE}` | Tipo de recurso que está eliminando. Se aceptan los siguientes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -590,7 +590,7 @@ curl -X DELETE \
 | `id` | El ID del recurso que está eliminando de la biblioteca. |
 | `type` | El tipo de recurso que está eliminando de la biblioteca. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -622,7 +622,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 | --- | --- |
 | `{LIBRARY_ID}` | El ID de la biblioteca que desea asignar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `id` | El ID del entorno al que asigna la biblioteca. |
 | `type` | Debe definirse en `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -680,7 +680,7 @@ PATCH /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | El `id` de la biblioteca de la que desea realizar la transición. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -710,7 +710,7 @@ curl -X PATCH \
 | `id` | El `id` de la biblioteca que desea actualizar. Debe coincidir con el valor `{LIBRARY_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -816,7 +816,7 @@ POST /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | El `id` de la biblioteca que desea publicar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -927,7 +927,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 | --- | --- |
 | `{LIBRARY_ID}` | El `id` de la biblioteca cuyos elementos de datos desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -1068,7 +1068,7 @@ GET  /libraries/{LIBRARY_ID}/extensions
 | --- | --- |
 | `{LIBRARY_ID}` | El `id` de la biblioteca cuyas extensiones desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -1199,7 +1199,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 | --- | --- |
 | `{LIBRARY_ID}` | El `id` de la biblioteca cuyas reglas desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -1312,7 +1312,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 | --- | --- |
 | `{LIBRARY_ID}` | El `id` de la biblioteca cuyo entorno desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -1424,7 +1424,7 @@ GET  /libraries/{LIBRARY_ID}/property
 | --- | --- |
 | `{LIBRARY_ID}` | El `id` de la biblioteca cuya propiedad desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -1547,7 +1547,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 | --- | --- |
 | `{LIBRARY_ID}` | El `id` de la biblioteca cuya biblioteca ascendente desee buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 

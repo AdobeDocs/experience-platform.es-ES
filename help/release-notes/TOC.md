@@ -13,7 +13,7 @@ ht-degree: 94%
 
 # Notas de la versión de Adobe Experience Platform {#release-notes}
 
-* [Notas de la versión actual de la plataforma](latest/latest.md)
+* [Notas de la versión de Platform actual](latest/latest.md)
 * 2023 {#2023}
    * [Febrero de 2023](2023/february-2023.md)
    * [Enero de 2023](2023/january-2023.md)

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Información general sobre los modelos de datos del sector
-description: Obtenga información sobre los modelos de datos estandarizados para varias verticales del sector que se pueden construir con componentes estándar del Modelo de datos de experiencia (XDM).
+title: Resumen de modelos de datos del sector
+description: Obtenga información acerca de los modelos de datos estandarizados para varias verticales del sector que se pueden construir con componentes estándar del Modelo de datos de experiencia (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
@@ -10,37 +10,37 @@ ht-degree: 1%
 
 ---
 
-# Resumen de los modelos de datos del sector
+# Resumen de modelos de datos del sector
 
-El Modelo de datos de experiencia (XDM) le permite crear esquemas altamente personalizables para capturar datos clave de experiencia del cliente relacionados con su negocio. Para ayudar a agilizar el proceso de modelado de los datos para ajustarlos a XDM, Adobe Experience Platform proporciona un versátil conjunto de componentes XDM estándar, que capturan conceptos que se utilizan comúnmente en varias industrias.
+El modelo de datos de experiencia (XDM) le permite crear esquemas altamente personalizables para capturar datos clave de experiencia del cliente relacionados con su negocio. Para ayudar a optimizar el proceso de modelado de los datos para que se ajusten a XDM, Adobe Experience Platform proporciona un versátil conjunto de componentes XDM estándar, que capturan conceptos que se utilizan comúnmente en varias industrias.
 
 >[!NOTE]
 >
->Los nuevos componentes XDM estándar se lanzan continuamente para adaptarse mejor a las necesidades del consumidor. Para obtener una lista de los componentes más actualizados, puede [explorar los recursos existentes en la interfaz de usuario](../../ui/explore.md) o consulte [repositorio oficial XDM](https://github.com/adobe/xdm/tree/master/components) en GitHub.
+>Los nuevos componentes XDM estándar se lanzan continuamente para adaptarse de la mejor manera a las necesidades de los consumidores. Para obtener una lista de los componentes más actualizados, puede [explorar los recursos existentes en la IU](../../ui/explore.md) o consulte la [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components) en GitHub.
 
-Según el sector en el que opere su empresa, algunos componentes XDM serán más relevantes para sus necesidades que otros. Además, las relaciones que establezca entre sus esquemas XDM variarán según su sector.
+Según el sector en el que opere su empresa, algunos componentes XDM serán más relevantes para sus necesidades que otros. Además, las relaciones que establezca entre los esquemas XDM variarán según el sector.
 
-A fin de ayudar a orientar su estrategia de modelado de datos en función de su sector particular, esta guía proporciona una referencia de diagramas de relaciones con las entidades (ERD) para varias verticales del sector compatibles.
+Con el fin de guiar su estrategia de modelado de datos en función de su sector, esta guía proporciona una referencia de los diagramas de relación de entidades (ERD) para varios segmentos verticales del sector admitidos.
 
 ## Requisitos previos
 
-Para leer los ERD a los que se hace referencia en esta guía, debe tener una comprensión práctica de cómo los componentes XDM interactúan con los esquemas de formularios y cómo funcionan los esquemas XDM en el Experience Platform en su conjunto. Asegúrese de haber leído la siguiente documentación general antes de continuar:
+Para leer los ERD a los que se hace referencia en esta guía, debe tener una comprensión práctica de cómo interactúan los componentes XDM con los esquemas de formulario y cómo funcionan los esquemas XDM en Experience Platform como un todo. Asegúrese de leer la siguiente documentación general antes de continuar:
 
-* [Información general del sistema XDM](../../home.md): Descubra cómo funciona XDM en el ecosistema de la plataforma.
-* [Aspectos básicos de la composición del esquema](../../schema/composition.md): Descubra cómo los componentes XDM (como grupos de campos de esquema, clases y tipos de datos) contribuyen a la estructura de un esquema, así como la función de los campos de identidad.
+* [Información general del sistema XDM](../../home.md): Descubra cómo funciona XDM en el ecosistema de Platform.
+* [Conceptos básicos de composición de esquemas](../../schema/composition.md): aprenda cómo los componentes XDM (como los grupos de campos de esquema, las clases y los tipos de datos) contribuyen a la estructura de un esquema, así como a la función de los campos de identidad.
 
-También se recomienda que revise el [guía de prácticas recomendadas para modelado de datos](../../schema/best-practices.md) para obtener directrices generales sobre cómo asignar los datos a XDM.
+También se recomienda que revise la [guía de prácticas recomendadas de modelado de datos](../../schema/best-practices.md) para obtener instrucciones generales sobre cómo asignar los datos a XDM.
 
-## Modelo de datos del sector ERD {#erds}
+## ERD del modelo de datos del sector {#erds}
 
-Los ERD se proporcionan para las siguientes verticales industriales:
+Los DRE se proporcionan para los siguientes mercados verticales de la industria:
 
 * [[!UICONTROL Comercial]](./retail.md)
 * [[!UICONTROL Servicios financieros]](./financial.md)
-* [[!UICONTROL Atención]](./healthcare.md)
+* [[!UICONTROL Sanidad]](./healthcare.md)
 * [[!UICONTROL Telecomunicaciones]](./telecom.md)
 * [[!UICONTROL Viajes y hospitalidad]](./travel-hospitality.md)
 
 ## Pasos siguientes
 
-Este documento ofrecía una visión general de los modelos de datos industriales ERD y de cómo interpretarlos. Para ver un ERD, seleccione uno de la lista anterior.
+Este documento proporciona una visión general del modelo de datos de la industria de los ERD y cómo interpretarlos. Para ver un ERD, seleccione uno de la lista anterior.

@@ -15,7 +15,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 >[!NOTE]
 >
->La extensión de etiqueta de Analytics si se actualiza con frecuencia como respuesta a las actualizaciones de la variable [Biblioteca JavaScript de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=es). Consulte la [Notas de la versión de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es) para obtener más información sobre las versiones específicas que se mencionan a continuación.
+>La extensión de etiquetas de Analytics si se actualiza con frecuencia en respuesta a las actualizaciones del [Biblioteca JavaScript de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=es). Consulte la [Notas de la versión de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es) para obtener más información sobre las versiones específicas que se mencionan a continuación.
 
 ## 23 de septiembre de 2022
 
@@ -23,8 +23,8 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Funcionalidades**:
 
-* Actualizado a AppMeasurement v2.23.0.
-* La extensión ahora puede recopilar alta entropía [sugerencias del cliente de user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) tal y como admite la versión más reciente de AppMeasurement.
+* Se ha actualizado a AppMeasurement 2.23.0.
+* La extensión ahora puede recopilar alta entropía [sugerencias del cliente user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) como se admite en la última versión de AppMeasurement.
 
 ## 28 de febrero de 2022
 
@@ -40,7 +40,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Corrección de errores**:
 
-* AppMeasurement actualizado a la versión 2.2.3.
+* AppMeasurement actualizado a la versión 2.22.3.
 
 ## 16 de septiembre de 2021
 
@@ -48,7 +48,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Corrección de errores**:
 
-* AppMeasurement actualizado a la versión 2.2.2.
+* AppMeasurement actualizado a la versión 2.22.2.
 * Se ha eliminado buildInfo.environment obsoleto
 
 ## 24 de agosto de 2021
@@ -57,8 +57,8 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Corrección de errores**:
 
-* Actualizado [AppMeasurement a v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
-* Se ha actualizado el nombre del vínculo de reserva a la lógica del Activity Map espejo en lugar de utilizar el HTML interior.
+* Actualizado [AppMeasurement a la versión 2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es).
+* Se ha actualizado linkName de reserva para reflejar la lógica del Activity Map en lugar de utilizar innerHTML.
 
 ## 6 de agosto de 2020
 
@@ -70,7 +70,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Funcionalidades**:
 
-* Se ha actualizado [AppMeasurement a la versión 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* Se ha actualizado [AppMeasurement a la versión 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es).
 * La IU pequeña cambia para que la configuración adicional aparezca contraída en un acordeón en lugar de una casilla de verificación.
 
 ## 2 de junio de 2020
@@ -98,7 +98,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Funcionalidades**:
 
-* Se ha actualizado [AppMeasurement a la versión 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* Se ha actualizado [AppMeasurement a la versión 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es)
 
 ## 2 de marzo de 2020
 
@@ -110,7 +110,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Funcionalidades**:
 
-* Se ha actualizado [AppMeasurement a la versión 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* Se ha actualizado [AppMeasurement a la versión 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es)
 * Se ha actualizado la biblioteca DIL del módulo de Audience Manager a 9.4
 * Se ha aumentado la longitud de los campos de entrada en la extensión
 * Las eVars y props de las configuraciones de extensión y acción ahora muestran el nombre reconocible de Analytics
@@ -171,7 +171,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 * Actualización de la extensión de Adobe Analytics para admitir DIL 9.2 en Audience Manager
 
-* Se ha actualizado la extensión para admitir [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
+* Se ha actualizado la extensión para admitir [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es#version-2.15.0)
 * Se ha eliminado la siguiente casilla de verificación porque ya no es compatible: &quot;No adjunte el IFRAME de publicación de destino al DOM o a los destinos de activación&quot;
 
 ## 4 de junio de 2019

@@ -9,28 +9,28 @@ ht-degree: 51%
 
 ---
 
-# Tipos de elementos de datos en extensiones perimetrales
+# Tipos de elementos de datos en extensiones de Edge
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-En las etiquetas, los elementos de datos son alias para fragmentos de datos de una página web o móvil, independientemente de dónde se encuentren esos datos dentro del evento recibido por el servidor. Las reglas pueden hacer referencia a un elemento de datos y este puede actuar como una abstracción para acceder a estos fragmentos de datos. Cuando la ubicación de los datos cambie en el futuro (como cambiar la clave de evento que contiene el valor), se puede reconfigurar un solo elemento de datos, mientras que todas las reglas que hacen referencia a ese elemento de datos pueden permanecer sin cambios.
+En las etiquetas, los elementos de datos son alias de datos de una página web o móvil, independientemente de dónde se encuentren dichos datos dentro del evento que recibe el servidor. Las reglas pueden hacer referencia a un elemento de datos y este puede actuar como una abstracción para acceder a estos fragmentos de datos. Cuando la ubicación de los datos cambie en el futuro (por ejemplo, cambiando la clave del evento que contiene el valor), se puede volver a configurar un único elemento de datos y mantener sin cambios a todas las reglas que hacen referencia a dicho elemento de datos.
 
-Las extensiones proporcionan los tipos de elementos de datos y el autor de la extensión determina cómo se recupera este fragmento de datos. Por ejemplo, ¿puede utilizar un tipo de elemento de datos para permitir a los usuarios de Adobe Experience Platform recuperar un fragmento de datos de la capa XDM o de su capa de datos personalizada.
+Las extensiones proporcionan los tipos de elementos de datos, y el autor de la extensión determina cómo se recupera este fragmento de datos. Por ejemplo, ¿puede utilizar un tipo de elemento de datos para permitir a los usuarios de Adobe Experience Platform recuperar un fragmento de datos de la capa XDM o de su capa de datos personalizada.
 
-Este documento explica cómo definir tipos de elementos de datos para una extensión edge en Adobe Experience Platform.
+Este documento explica cómo definir tipos de elementos de datos para una extensión de Edge en Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Si está desarrollando una extensión web, consulte la guía de [tipos de elementos de datos para extensiones web](../web/data-element-types.md) en su lugar.
+>Si va a desarrollar una extensión web, consulte la guía de [tipos de elementos de datos para extensiones web](../web/data-element-types.md) en su lugar.
 >
->Este documento también supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones Edge. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
+>Este documento supone que ya está familiarizado con los módulos de la biblioteca y con la forma en que se integran con las extensiones de Edge. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
 
 Los tipos de elementos de datos suelen consistir en lo siguiente:
 
-1. Vista que se muestra en la interfaz de usuario del Experience Platform y en la de recopilación de datos y que permite a los usuarios modificar la configuración del elemento de datos.
-2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y recuperar fragmentos de datos.
+1. Vista que se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos, y que permite a los usuarios modificar la configuración del elemento de datos.
+2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y recuperar fragmentos de datos.
 
 Si desea permitir que los usuarios recuperen un fragmento de datos de la capa de datos personalizada, su módulo puede tener el aspecto de este ejemplo.
 

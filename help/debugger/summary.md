@@ -1,7 +1,7 @@
 ---
-title: Ficha Resumen
+title: Pestaña Resumen
 description: Aprenda a utilizar la pestaña Resumen en Adobe Experience Platform Debugger.
-keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;resumen;borrar;solicitudes;pantalla de resumen;solución;información;analytics;target;dtm;audience manager;launch;servicio de id
+keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;resumen;borrar;solicitudes;pantalla de resumen;solución;información;analytics;target;dtm;audience manager;launch;servicio de ID
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
@@ -13,9 +13,9 @@ ht-degree: 73%
 
 ---
 
-# Ficha Resumen
+# Pestaña Resumen
 
-Para ejecutar Adobe Experience Platform Debugger, abra la página que desee examinar en el explorador y, a continuación, seleccione el icono (![](images/start-icon.jpg)) en la barra del explorador. La extensión se abre en la variable **Resumen** pestaña .
+Para ejecutar Adobe Experience Platform Debugger, abra la página que desee examinar en el explorador y, a continuación, seleccione el icono (![](images/start-icon.jpg)) en la barra del explorador. La extensión se abrirá en la **Resumen** pestaña.
 
 ![](images/summary.jpg)
 
@@ -77,7 +77,7 @@ Experience Platform Debugger muestra la siguiente información para cada soluci�
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Nombre </p> </td> 
-   <td colname="col2"> <p>Nombre de la etiqueta <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> property</a> </p> </td> 
+   <td colname="col2"> <p>Nombre de la etiqueta <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> propiedad</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versión </p> </td> 
@@ -89,7 +89,7 @@ Experience Platform Debugger muestra la siguiente información para cada soluci�
   </tr> 
   <tr> 
    <td colname="col1"> <p>Entorno </p> </td> 
-   <td colname="col2"> <p>La variable <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> entorno</a> utilizado por la biblioteca de etiquetas </p> </td> 
+   <td colname="col2"> <p>El <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> entorno</a> lo utiliza la biblioteca de etiquetas </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Extensiones </p> </td> 
@@ -112,7 +112,7 @@ Experience Platform Debugger muestra la siguiente información para cada soluci�
   </tr> 
   <tr> 
    <td colname="col1"> <p>ID de propiedad </p> </td> 
-   <td colname="col2"> <p>Nombre de la propiedad tag especificada en la extensión </p> </td> 
+   <td colname="col2"> <p>Nombre de la propiedad de etiqueta especificada en la extensión. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Dominio de Edge </p> </td> 
@@ -139,7 +139,7 @@ Experience Platform Debugger muestra la siguiente información para cada soluci�
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versión </p> </td> 
-   <td colname="col2"> <p>Versión de la biblioteca de <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external">ID de visitante</a>. </p> </td> 
+   <td colname="col2"> <p>Versión de la biblioteca de <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=es" format="html" scope="external">ID de visitante</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>

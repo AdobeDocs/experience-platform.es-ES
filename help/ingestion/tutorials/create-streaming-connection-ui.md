@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de interfaz de usuario;tutorial;crear una conexión de flujo continuo;ingesta de flujo;ingesta;
+keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de iu;tutorial;crear una conexión de flujo continuo;ingesta de flujo continuo;ingesta;
 solution: Experience Platform
-title: Creación de una conexión de flujo continuo mediante la interfaz de usuario
+title: Creación de una conexión de flujo continuo mediante la IU
 type: Tutorial
-description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo con Adobe Experience Platform.
+description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo mediante Adobe Experience Platform.
 exl-id: af485890-61b1-4c83-8af9-a55e8ed6d69a
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
@@ -12,10 +12,10 @@ ht-degree: 0%
 
 ---
 
-# Creación de una conexión de flujo continuo mediante la interfaz de usuario
+# Creación de una conexión de flujo continuo mediante la IU
 
-Para iniciar la transmisión de datos a [!DNL Experience Platform], primero debe crear una conexión HTTP de flujo continuo. Al crear una conexión de flujo continuo, debe proporcionar detalles clave, como la fuente de los datos de flujo continuo, y si desea o no enviar datos desde un origen de confianza (autenticado) o no fiable (no autenticado).
+Para iniciar la transmisión de datos a [!DNL Experience Platform], primero debe crear una conexión HTTP de flujo continuo. Al crear una conexión de flujo continuo, debe proporcionar detalles clave como la fuente de los datos de flujo continuo y si tiene intención de enviar datos desde una fuente de confianza (autenticada) o una fuente que no es de confianza (no autenticada).
 
-Después de registrar una conexión de flujo continuo, tendrá una dirección URL única que se puede utilizar para transmitir datos a [!DNL Platform].
+Después de registrar una conexión de flujo continuo, tendrá una URL única que puede utilizarse para transmitir datos a [!DNL Platform].
 
-Para aprender a crear una conexión de flujo continuo, lea la [Guía de la interfaz de usuario de origen de la API HTTP](../../sources/tutorials/ui/create/streaming/http.md).
+Para obtener información sobre cómo crear una conexión de flujo continuo, lea la [Guía de IU de origen de HTTP API](../../sources/tutorials/ui/create/streaming/http.md).

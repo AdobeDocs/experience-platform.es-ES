@@ -1,6 +1,6 @@
 ---
-title: Tipos de eventos en la extensión del SDK web de Adobe Experience Platform
-description: Obtenga información sobre cómo utilizar los tipos de eventos proporcionados por la extensión web SDK de Adobe Experience Platform en Adobe Experience Platform Launch.
+title: Tipos de eventos en la extensión SDK para web de Adobe Experience Platform
+description: Obtenga información acerca de cómo utilizar los tipos de eventos proporcionados por la extensión SDK para web de Adobe Experience Platform en Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
@@ -12,39 +12,39 @@ ht-degree: 1%
 
 # Tipos de eventos
 
-En esta página se describen los tipos de eventos de Adobe Experience Platform proporcionados por la extensión de etiqueta SDK web de Adobe Experience Platform. Se utilizan para [generar reglas](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) y no se deben confundir con el campo [`eventType` en XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=es).
+En esta página se describen los tipos de eventos de Adobe Experience Platform que proporciona la extensión de etiquetas de SDK web de Adobe Experience Platform. Están acostumbrados a [generar reglas](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) y no deben confundirse con el [`eventType` Campo en XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=es).
 
-## [!UICONTROL Enviar evento finalizado]
+## [!UICONTROL Enviar evento completado]
 
-Normalmente, su propiedad tendría una o más reglas usando la acción [[!UICONTROL Send event]](action-types.md#send-event) para enviar eventos a Adobe Experience Platform Edge Network. Cada vez que se envía un evento a la red perimetral, se devuelve una respuesta al explorador con datos útiles. Sin el tipo de evento [!UICONTROL Send event complete], no tendría acceso a los datos devueltos.
+Normalmente, la propiedad tendría una o más reglas que utilizan el [[!UICONTROL Enviar evento] acción](action-types.md#send-event) para enviar eventos a Adobe Experience Platform Edge Network. Cada vez que se envía un evento a Edge Network, se devuelve una respuesta al explorador con datos útiles. Sin el [!UICONTROL Enviar evento completado] tipo de evento, no tendría acceso a estos datos devueltos.
 
-Para acceder a los datos devueltos, cree una regla independiente y añada un evento [!UICONTROL Send event complete] a la regla. Esta regla se activa cada vez que se recibe una respuesta correcta del servidor como resultado de una acción [!UICONTROL Send event].
+Para acceder a los datos devueltos, cree una regla independiente y, a continuación, añada una [!UICONTROL Enviar evento completado] a la regla. Esta regla se activa cada vez que se recibe una respuesta correcta del servidor como resultado de un [!UICONTROL Enviar evento] acción.
 
-Cuando un evento [!UICONTROL Send event complete] déclencheur una regla, proporciona datos devueltos por el servidor que pueden resultar útiles para realizar ciertas tareas. Normalmente, se agrega una acción [!UICONTROL Custom code] (de la extensión [!UICONTROL Core]) a la misma regla que contiene el evento [!UICONTROL Send event complete]. En la acción [!UICONTROL Custom code] , el código personalizado tendrá acceso a una variable denominada `event`. Esta variable `event` contiene los datos devueltos por el servidor.
+Cuando un [!UICONTROL Enviar evento completado] déclencheur una regla, proporciona datos devueltos por el servidor que pueden ser útiles para realizar determinadas tareas. Normalmente, agregará un [!UICONTROL Custom Code] acción (desde el [!UICONTROL Núcleo] extensión) a la misma regla que contiene la variable [!UICONTROL Enviar evento completado] evento. En el [!UICONTROL Custom Code] acción, el código personalizado tendrá acceso a una variable denominada `event`. Esta `event` contendrá los datos devueltos por el servidor.
 
-La regla para administrar los datos devueltos por la red perimetral puede tener este aspecto:
+La regla para administrar los datos devueltos por Edge Network puede tener un aspecto similar al siguiente:
 
 ![](./assets/send-event-complete.png)
 
-A continuación se muestran algunos ejemplos de cómo realizar determinadas tareas utilizando la acción [!UICONTROL Custom code] en esta regla.
+A continuación se muestran algunos ejemplos de cómo realizar determinadas tareas utilizando [!UICONTROL Custom Code] acción en esta regla.
 
-### Representar contenido personalizado manualmente
+### Procesar manualmente contenido personalizado
 
-En la acción Código personalizado , que se encuentra en la regla para administrar los datos de respuesta, puede acceder a las propuestas de personalización que se devolvieron desde el servidor. Para ello, debe escribir el siguiente código personalizado:
+En la acción Custom Code, que se encuentra en la regla para administrar los datos de respuesta, puede acceder a las propuestas de personalización que se devolvieron desde el servidor. Para ello, debe escribir el siguiente código personalizado:
 
 ```javascript
 var propositions = event.propositions;
 ```
 
-Si existe `event.propositions`, es una matriz que contiene objetos de propuesta de personalización. Las propuestas incluidas en la matriz están determinadas, en gran parte, por la forma en que se envió el evento al servidor.
+If `event.propositions` existe, es una matriz que contiene objetos de propuesta de personalización. Las propuestas incluidas en la matriz están determinadas, en gran parte, por la forma en que se envió el evento al servidor.
 
-En este primer escenario, supongamos que no ha marcado la casilla [!UICONTROL Render decisions] y no ha proporcionado ningún [!UICONTROL ámbito de decisión] dentro de la acción [!UICONTROL Send event] responsable de enviar el evento.
+Para este primer escenario, supongamos que no ha marcado la variable [!UICONTROL Procesar decisiones] y no han proporcionado ninguna [!UICONTROL ámbitos de decisión] dentro de [!UICONTROL Enviar evento] acción responsable de enviar el evento.
 
 ![img.png](assets/send-event-render-unchecked-without-scopes.png)
 
-En este ejemplo, la matriz `propositions` solo contiene propuestas relacionadas con el evento que pueden procesarse automáticamente.
+En este ejemplo, la variable `propositions` La matriz solo contiene propuestas relacionadas con el evento que pueden procesarse automáticamente.
 
-La matriz `propositions` puede tener un aspecto similar al de este ejemplo:
+El `propositions` La matriz puede tener un aspecto similar al de este ejemplo:
 
 ```json
 [
@@ -85,17 +85,17 @@ La matriz `propositions` puede tener un aspecto similar al de este ejemplo:
 ]
 ```
 
-Al enviar el evento, la casilla de verificación [!UICONTROL Render decisions] no estaba marcada, por lo que el SDK no intentó procesar ningún contenido automáticamente. Sin embargo, el SDK aún recupera automáticamente el contenido apto para el procesamiento automático y se lo ha proporcionado para que lo procese manualmente si desea hacerlo. Observe que cada objeto de propuesta tiene su propiedad `renderAttempted` establecida en `false`.
+Al enviar el evento, la variable [!UICONTROL Procesar decisiones] La casilla de verificación de no estaba marcada, por lo que el SDK no intentó procesar automáticamente ningún contenido. Sin embargo, el SDK recuperó automáticamente el contenido apto para el procesamiento automático y le proporcionó el procesamiento manual si así lo desea. Observe que cada objeto de propuesta tiene su `renderAttempted` propiedad establecida en `false`.
 
-Si en su lugar hubiera marcado la casilla [!UICONTROL Render decisions] al enviar el evento, el SDK habría intentado procesar cualquier propuesta que fuera apta para el procesamiento automático. Como consecuencia, cada uno de los objetos de propuesta tendría su propiedad `renderAttempted` establecida en `true`. En este caso, no sería necesario procesar manualmente estas propuestas.
+Si, en su lugar, hubiera marcado la [!UICONTROL Procesar decisiones] casilla de verificación al enviar el evento, el SDK habría intentado procesar todas las propuestas elegibles para el procesamiento automático. Como consecuencia, cada uno de los objetos de la propuesta tendría su `renderAttempted` propiedad establecida en `true`. No sería necesario procesar manualmente estas propuestas en este caso.
 
-Hasta ahora, solo ha observado el contenido de personalización que se puede procesar automáticamente (por ejemplo, cualquier contenido creado en el Compositor de experiencias visuales de Adobe Target). Para recuperar cualquier contenido de personalización _no_ apto para procesamiento automático, solicite el contenido proporcionando ámbitos de decisión utilizando el campo [!UICONTROL Decissscopios] en la acción [!UICONTROL Send event]. Un ámbito es una cadena que identifica una propuesta concreta que desea recuperar del servidor.
+Hasta ahora, solo ha visto el contenido de personalización que puede procesarse automáticamente (por ejemplo, cualquier contenido creado en el Compositor de experiencias visuales de Adobe Target). Para recuperar cualquier contenido de personalización _no_ apto para el procesamiento automático, solicite el contenido proporcionando ámbitos de decisión utilizando [!UICONTROL Ámbitos de decisión] en el campo [!UICONTROL Enviar evento] acción. Un ámbito es una cadena que identifica una propuesta concreta que desea recuperar del servidor.
 
-La acción [!UICONTROL Send event] tendría el siguiente aspecto:
+El [!UICONTROL Enviar evento] La acción tendría el siguiente aspecto:
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-En este ejemplo, si las propuestas se encuentran en el servidor que coincide con el ámbito `salutation` o `discount`, se devuelven y se incluyen en la matriz `propositions`. Tenga en cuenta que las propuestas que cumplen los requisitos para el procesamiento automático se seguirán incluyendo en la matriz `propositions`, independientemente de cómo configure los campos [!UICONTROL Render decisions] o [!UICONTROL Decidir ámbitos] en la acción [!UICONTROL Enviar evento]. La matriz `propositions`, en este caso, tendría un aspecto similar a este ejemplo:
+En este ejemplo, si las propuestas se encuentran en el servidor que coinciden con la variable `salutation` o `discount` ámbito, se devuelven y se incluyen en la variable `propositions` matriz. Tenga en cuenta que las propuestas que cumplen los requisitos para el procesamiento automático seguirán incluyéndose en la `propositions` , independientemente de cómo configure la [!UICONTROL Procesar decisiones] o [!UICONTROL Ámbitos de decisión] campos en la [!UICONTROL Enviar evento] acción. El `propositions` , en este caso, tendría un aspecto similar al de este ejemplo:
 
 ```json
 [
@@ -169,14 +169,14 @@ En este ejemplo, si las propuestas se encuentran en el servidor que coincide con
 ]
 ```
 
-En este punto, puede procesar el contenido de la propuesta como desee. En este ejemplo, la propuesta que coincide con el ámbito `discount` es una propuesta de HTML creada con el Compositor de experiencias basadas en formularios de Adobe Target. Supongamos que tiene un elemento en la página con el ID de `daily-special` y desea procesar el contenido de la propuesta `discount` en el elemento `daily-special`. Haga lo siguiente:
+En este punto, puede procesar el contenido de la propuesta como crea conveniente. En este ejemplo, la propuesta que coincide con el `discount` El ámbito es una propuesta del HTML creada con el Compositor de experiencias basadas en formularios de Adobe Target. Supongamos que tiene un elemento en la página con el ID de `daily-special` y desea procesar el contenido del `discount` propuesta en la `daily-special` Elemento. Haga lo siguiente:
 
-1. Extraiga propuestas del objeto `event`.
-1. Bucle por cada propuesta, buscando la propuesta con un alcance de `discount`.
-1. Si encuentra una propuesta, realice un bucle por cada elemento de la propuesta, buscando el elemento que sea contenido HTML. (Es mejor comprobarlo que asumir).
-1. Si encuentra un elemento que contenga contenido de HTML, busque el elemento `daily-special` en la página y reemplace su HTML por el contenido personalizado.
+1. Extraer propuestas de `event` objeto.
+1. Recorra en bucle cada propuesta, buscando la propuesta con un ámbito de `discount`.
+1. Si encuentra una propuesta, revise cada elemento de la propuesta en busca del elemento que sea contenido del HTML. (Es mejor comprobar que suponer).
+1. Si encuentra un elemento con contenido de HTML, busque la variable `daily-special` en la página y reemplace su HTML por el contenido personalizado.
 
-El código personalizado dentro de la acción [!UICONTROL Custom Code] puede aparecer de la siguiente manera:
+Su código personalizado dentro de [!UICONTROL Custom Code] la acción puede aparecer de la siguiente manera:
 
 ```javascript
 var propositions = event.propositions;
@@ -215,27 +215,27 @@ if (discountHtml) {
 }
 ```
 
-### Acceso a los tokens de respuesta de Adobe Target
+### Acceso a tokens de respuesta de Adobe Target
 
-El contenido de personalización que Adobe Target devuelve incluye [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), que son detalles sobre la actividad, la oferta, la experiencia, el perfil de usuario, la información geográfica y mucho más. Estos detalles se pueden compartir con herramientas de terceros o utilizar para la depuración. Los tokens de respuesta se pueden configurar en la interfaz de usuario de Adobe Target.
+El contenido de personalización devuelto desde Adobe Target incluye [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), que son detalles sobre la actividad, oferta, experiencia, perfil de usuario, información geográfica y más. Estos detalles se pueden compartir con herramientas de terceros o utilizar para la depuración. Los tokens de respuesta se pueden configurar en la interfaz de usuario de Adobe Target.
 
-En la acción Código personalizado , que se encuentra en la regla para administrar los datos de respuesta, puede acceder a las propuestas de personalización que se devolvieron desde el servidor. Para ello, escriba el siguiente código personalizado:
+En la acción Custom Code, que se encuentra en la regla para administrar los datos de respuesta, puede acceder a las propuestas de personalización que se devolvieron desde el servidor. Para ello, escriba el siguiente código personalizado:
 
 ```javascript
 var propositions = event.propositions;
 ```
 
-Si existe `event.propositions`, es una matriz que contiene objetos de propuesta de personalización. Consulte [Renderización manual de contenido personalizado](#manually-render-personalized-content) para obtener más información sobre el contenido de `result.propositions`.
+If `event.propositions` existe, es una matriz que contiene objetos de propuesta de personalización. Consulte [Procesar manualmente contenido personalizado](#manually-render-personalized-content) para obtener más información sobre el contenido de `result.propositions`.
 
-Supongamos que desea recopilar todos los nombres de actividad de todas las propuestas que el SDK web ha procesado automáticamente y colocarlos en una única matriz. Luego puede enviar la matriz única a un tercero. En este caso, escriba el código personalizado dentro de la acción [!UICONTROL Custom Code] para:
+Supongamos que desea recopilar todos los nombres de las actividades de todas las propuestas que el SDK web procesó automáticamente e insertarlos en una sola matriz. A continuación, puede enviar la matriz única a un tercero. En este caso, escriba código personalizado dentro de la variable [!UICONTROL Custom Code] acción para:
 
-1. Extraiga propuestas del objeto `event`.
-1. Bucle por cada propuesta.
+1. Extraer propuestas de `event` objeto.
+1. Recorra en bucle cada propuesta.
 1. Determine si el SDK procesó la propuesta.
-1. Si es así, realice un bucle por cada elemento de la propuesta.
-1. Recupere el nombre de la actividad desde la propiedad `meta` , que es un objeto que contiene tokens de respuesta.
+1. Si es así, realice un bucle en cada elemento de la propuesta.
+1. Recupere el nombre de la actividad de la `meta` , que es un objeto que contiene tokens de respuesta.
 1. Inserte el nombre de la actividad en una matriz.
-1. Envíe los nombres de la actividad a un tercero.
+1. Envíe los nombres de las actividades a un tercero.
 
 ```javascript
 var propositions = event.propositions;

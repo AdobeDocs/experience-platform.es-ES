@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;PSQL;psql;servicio de consulta;servicio de consulta;metadatos;comandos;comandos de metadatos;
+keywords: Experience Platform;inicio;temas populares;PSQL;psql;servicio de consultas;servicio de consultas;metadatos;comandos;comandos de metadatos;
 solution: Experience Platform
-title: Comandos PostgreSQL de metadatos en el servicio de consulta
-description: Lista de comandos PostgreSQL que actualmente se admiten para consultar metadatos en el servicio de consulta de Adobe Experience Platform.
+title: Comandos PostgreSQL de metadatos en el servicio de consultas
+description: Una lista de comandos PostgreSQL que actualmente se admiten para consultar metadatos en el servicio de consultas de Adobe Experience Platform.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -11,18 +11,18 @@ ht-degree: 0%
 
 ---
 
-# Metadatos [!DNL PostgreSQL] comandos en Query Service
+# Metadatos [!DNL PostgreSQL] comandos en el servicio de consultas
 
-Para los metadatos de su conjunto de datos, haga lo siguiente: [!DNL PostgreSQL] actualmente se admiten comandos para consulta:
+Para los metadatos del conjunto de datos, haga lo siguiente [!DNL PostgreSQL] Los comandos de son compatibles actualmente con las consultas:
 
 >[!NOTE]
 >
->Los comandos que se indican a continuación distinguen entre mayúsculas y minúsculas.
+>Los comandos que se enumeran a continuación distinguen entre mayúsculas y minúsculas.
 
 | Comando | Descripción |
 |------- | ------------|
 | `\conninfo` | Genera información sobre la conexión de base de datos actual. |
-| `\d` | Muestra una lista de todas las tablas visibles, vistas, vistas materializadas, secuencias y tablas externas. |
+| `\d` | Muestra una lista de todas las tablas, vistas, vistas materializadas, secuencias y tablas externas visibles. |
 | `\dE` | Muestra una lista de tablas externas. |
 | `\df or \df+` | Muestra una lista de funciones. |
 | `\di` | Muestra una lista de índices. |
@@ -33,13 +33,13 @@ Para los metadatos de su conjunto de datos, haga lo siguiente: [!DNL PostgreSQL]
 | `\dt` | Muestra una lista de tablas. |
 | `\dT` | Muestra una lista de tipos de datos. |
 | `\dv` | Muestra una lista de vistas. |
-| `\encoding` | Muestra la codificación del conjunto de caracteres cliente actual. |
-| `\errverbose` | Repite el mensaje de error del servidor más reciente con la máxima amplitud. |
-| `\l or \list` | Muestra una lista de bases de datos en el servidor. |
+| `\encoding` | Muestra la codificación actual del conjunto de caracteres del cliente. |
+| `\errverbose` | Repite el mensaje de error del servidor más reciente con el máximo nivel de detalle. |
+| `\l or \list` | Muestra una lista de las bases de datos del servidor. |
 | `\set` | Muestra los nombres y valores de todas las variables psql actuales. |
-| `\showtables` | Muestra la siguiente información: <br>nombre: Nombre al que se hace referencia a la tabla.<br>datasetId: ID del conjunto de datos que se almacena.<br>conjunto de datos: El nombre del conjunto de datos que se almacena.<br>descripción: Descripción del conjunto de datos.<br>resuelto: Un valor booleano que indica si el conjunto de datos se resuelve o no en la sesión actual. |
-| `\timing` | Activa o desactiva la visualización. La pantalla se muestra en milisegundos. Los intervalos superiores a un segundo se muestran en formato de minutos:segundos, con los campos horas y días agregados cuando es necesario. |
+| `\showtables` | Muestra la siguiente información: <br>name: Nombre con el que se hará referencia a la tabla.<br>datasetId: ID del conjunto de datos que se almacena.<br>dataset: nombre del conjunto de datos que se almacena.<br>description: Una descripción del conjunto de datos.<br>resolved: Un valor booleano que indica si el conjunto de datos se resuelve o no en la sesión actual. |
+| `\timing` | Alterna la visualización entre encendido y apagado. La pantalla se muestra en milisegundos. Los intervalos superiores a un segundo se muestran en formato minutos: segundos, con campos de horas y días añadidos cuando es necesario. |
 
-Todos los comandos que comienzan con `\d` se puede combinar. Por ejemplo, puede causar problemas `\dtsn` para mostrar una lista de todas las tablas, secuencias y esquemas. `\d` por sí solo muestra todas las tablas, vistas, vistas materializadas y secuencias visibles.
+Todos los comandos que comienzan con `\d` se puede combinar. Por ejemplo, puede emitir `\dtsn` para mostrar una lista de todas las tablas, secuencias y esquemas. `\d` muestra por sí solo todas las tablas, vistas, vistas materializadas y secuencias visibles.
 
-Para obtener información adicional sobre los comandos enumerados anteriormente, consulte la documentación en [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Sin embargo, tenga en cuenta que no todas las opciones que se muestran en la [!DNL PostgreSQL] la documentación es compatible con [!DNL Experience Platform].
+Para obtener más información acerca de los comandos enumerados arriba, consulte la documentación en [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Sin embargo, tenga en cuenta que no todas las opciones que se muestran en la [!DNL PostgreSQL] La documentación de es compatible con [!DNL Experience Platform].

@@ -1,7 +1,7 @@
 ---
-keywords: control de datos rtcdp;control de datos rtcdp;control de datos del perfil de datos del cliente en tiempo real;privacidad rtcdp;rtcdp privacidad
+keywords: control de datos rtcdp;control de datos rtcdp;control de datos del perfil de datos del cliente en tiempo real;privacidad rtcdp;privacidad rtcdp
 title: Privacidad en Real-time Customer Data Platform
-description: Adobe Real-time Customer Data Platform le permite optimizar el proceso de cumplimiento de las normas de privacidad de sus operaciones de datos.
+description: Adobe Real-time Customer Data Platform le permite agilizar el proceso de cumplimiento de las normas de privacidad en sus operaciones de datos.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -12,30 +12,30 @@ ht-degree: 0%
 
 # Privacidad en Real-time Customer Data Platform
 
-[!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) ayuda a los especialistas en marketing a unir los datos de varios sistemas empresariales, lo que les permite identificar, comprender y captar mejor a sus clientes. Adobe mantiene la privacidad de datos de los consumidores como un principio de diseño fundamental y proporciona varios controles para ayudar a los especialistas en marketing a administrar la privacidad de datos de sus clientes.
+[!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) ayuda a los especialistas en marketing a reunir datos de varios sistemas empresariales, lo que les permite identificar, comprender y captar mejor a sus clientes. Adobe considera la privacidad de los datos del consumidor como un principio de diseño fundamental y proporciona varios controles para ayudar a los especialistas en marketing a administrar la privacidad de datos de sus clientes.
 
-La mayoría de [!DNL Real-Time CDP] son compatibles con Adobe Experience Platform. Este documento proporciona información sobre las diversas tecnologías de mejora de la privacidad compatibles con [!DNL Real-Time CDP], con vínculos a [!DNL Experience Platform] documentación para obtener más información.
+La mayoría de [!DNL Real-Time CDP] Las funciones de están impulsadas por Adobe Experience Platform. Este documento proporciona información sobre las distintas tecnologías de mejora de la privacidad admitidas por [!DNL Real-Time CDP], con vínculos a [!DNL Experience Platform] para obtener más información.
 
-## Respeto de las solicitudes de acceso y eliminación de los clientes
+## Respeto de las solicitudes de acceso y eliminación de clientes
 
-Las regulaciones legales de privacidad, como la [!DNL General Data Protection Regulation] (RGPD) y [!DNL California Consumer Privacy Act] (CCPA) otorga a los clientes el derecho de solicitar el acceso a los datos personales que recopile de ellos o su eliminación. Since [!DNL Real-Time CDP] aprovecha [!DNL Experience Platform] funciones para la recopilación y el almacenamiento de datos, las solicitudes de los clientes de acceso y eliminación de sus datos personales deben administrarse en [!DNL Platform]. Consulte la descripción general sobre [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) para obtener más información.
+Regulaciones legales de privacidad, como la [!DNL General Data Protection Regulation] (RGPD) y el [!DNL California Consumer Privacy Act] (CCPA) otorga a los clientes el derecho de solicitar acceso a los datos personales que recopila de ellos o su eliminación. Desde [!DNL Real-Time CDP] aprovecha [!DNL Experience Platform] para la recopilación y el almacenamiento de datos, las solicitudes de los clientes para acceder a sus datos personales y eliminarlos deben administrarse en [!DNL Platform]. Consulte la información general sobre [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) para obtener más información.
 
 >[!IMPORTANT]
 >
-> Las solicitudes de privacidad enviadas a través de Adobe Experience Platform Privacy Service para Adobe Marketo Engage solo se aplican a los clientes de Real-Time CDP B2B.
+> Las solicitudes de privacidad enviadas a través de Adobe Experience Platform Privacy Service para Adobe Marketo Engage se aplican solo a los clientes B2B de Real-Time CDP.
 
 ## Funciones de exclusión
 
-[!DNL Real-Time CDP] permite a los clientes excluir la inclusión de sus datos personales en los casos de uso de segmentación. Las preferencias de exclusión de los clientes las captura y almacena [!DNL Real-Time Customer Profile], y se pueden aplicar excluyendo los usuarios que han optado por no participar en un segmento utilizando lógica booleana (&quot;Y NO&quot;) en el predicado de segmentos.
+[!DNL Real-Time CDP] permite a los clientes optar por no incluir sus datos personales en los casos de uso de segmentación. Las preferencias de exclusión de los clientes las captura y almacena [!DNL Real-Time Customer Profile]y se pueden aplicar excluyendo a los usuarios que se han excluido de un segmento mediante la lógica booleana (&quot;Y NO&quot;) en el predicado de segmento.
 
-Consulte el documento en [cumplimiento de las solicitudes de exclusión](../../segmentation/consents.md) en la documentación del servicio de segmentación de Adobe Experience Platform para obtener más información.
+Consulte el documento sobre [cumplimiento de solicitudes de exclusión](../../segmentation/consents.md) en la documentación del Servicio de segmentación de Adobe Experience Platform para obtener más información.
 
 ## Compatibilidad con IAB TCF 2.0
 
-[!DNL Real-Time CDP] se crea en Adobe Experience Platform, que forma parte del [lista de proveedores](https://iabeurope.eu/vendor-list-tcf-v2-0/) para el [!DNL Transparency & Consent Framework (TCF)], tal y como describe el [!DNL Interactive Advertising Bureau (IAB)]. De conformidad con los requisitos de TCF 2.0, Platform le permite recopilar datos detallados de consentimiento del cliente e integrarlos en sus perfiles de cliente almacenados. Estos datos de consentimiento se pueden tener en cuenta si determinados perfiles se incluyen en segmentos de audiencia exportados, según su caso de uso.
+[!DNL Real-Time CDP] se basa en Adobe Experience Platform, que forma parte del [lista de proveedores](https://iabeurope.eu/vendor-list-tcf-v2-0/) para el [!DNL Transparency & Consent Framework (TCF)], tal como se indica en la [!DNL Interactive Advertising Bureau (IAB)]. En cumplimiento con los requisitos de TCF 2.0, Platform le permite recopilar datos detallados del consentimiento del cliente e integrarlos en sus perfiles de cliente almacenados. Estos datos de consentimiento se pueden tener en cuenta en si determinados perfiles se incluyen en segmentos de audiencia exportados, según su caso de uso.
 
-Consulte la descripción general sobre [Compatibilidad con IAB TCF 2.0 en Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información.
+Consulte la información general sobre [Compatibilidad con IAB TCF 2.0 en Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información.
 
 ## Pasos siguientes
 
-Este documento ofrece una breve introducción a las capacidades de privacidad de [!DNL Real-Time CDP]. Consulte la documentación vinculada a través de esta guía para obtener más información sobre cada función.
+Este documento proporciona una breve introducción a las capacidades de privacidad de [!DNL Real-Time CDP]. Consulte la documentación vinculada a través de esta guía para obtener más información sobre cada función.

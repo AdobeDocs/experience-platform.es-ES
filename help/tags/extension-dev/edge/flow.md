@@ -1,10 +1,11 @@
 ---
 title: Flujo de extensión de Edge
-description: Descubra cómo los componentes de una extensión edge en Adobe Experience Platform interactúan entre sí durante la ejecución.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Descubra cómo los componentes de una extensión de Edge en Adobe Experience Platform interactúan entre sí durante la ejecución.
+exl-id: 99058e22-3e14-4ec6-858e-bb1c1fafdb7c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 60%
+ht-degree: 93%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 60%
 
 En las extensiones de Edge, cada evento, condición, acción y tipo de elemento de datos tiene una vista que permite a los usuarios modificar la configuración y un módulo de biblioteca que se puede modificar en función de la configuración definida por el usuario.
 
-Como se muestra en el siguiente diagrama de alto nivel, la vista de tipo de evento de la extensión se mostrará dentro de un iframe en la aplicación integrada con Adobe Experience Platform. A continuación, la vista se utiliza para modificar la configuración que luego se guarda en Platform. Cuando se crea la biblioteca de tiempo de ejecución de etiquetas, tanto el módulo de biblioteca de tipo de acción de la extensión como la configuración definida por el usuario se incluyen en la biblioteca de tiempo de ejecución que se implementa en el nodo perimetral. La configuración definida por el usuario desde Platform se inserta en el módulo de biblioteca durante la ejecución.
+Como se muestra en el siguiente diagrama de alto nivel, la vista de tipo de evento de la extensión se mostrará dentro de un iframe en la aplicación integrada con Adobe Experience Platform. A continuación, la vista se utiliza para modificar la configuración que luego se guarda en Platform. Cuando se crea la biblioteca de tiempo de ejecución de etiquetas, tanto el módulo de biblioteca de tipo de evento de la extensión como la configuración definida por el usuario se incluirán en la biblioteca que se implementa en el nodo Edge. La configuración definida por el usuario desde Platform se inserta en el módulo de biblioteca durante el tiempo de ejecución.
 
 ![Diagrama de flujo de extensión](../images/flow/edge/event-processing-flow.png)
 

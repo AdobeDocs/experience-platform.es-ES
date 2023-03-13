@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentación;programaciones;programación;api;API;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;programaciones;programación;api;API;
 solution: Experience Platform
-title: Punto final de API de programa
-description: Los programas son una herramienta que se puede utilizar para ejecutar automáticamente los trabajos de segmentación por lotes una vez al día.
+title: Programa el extremo de API
+description: Los programas son una herramienta que se puede utilizar para ejecutar automáticamente trabajos de segmentación por lotes una vez al día.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
 source-git-commit: e24a2ba0321ebaa8e91f96477f58bfa4915f47ce
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 4%
 
 ---
 
-# Punto final de programación
+# Extremo de programaciones
 
-Los programas son una herramienta que se puede utilizar para ejecutar automáticamente los trabajos de segmentación por lotes una vez al día. Puede usar la variable `/config/schedules` para recuperar una lista de programaciones, crear una nueva programación, recuperar detalles de una programación específica, actualizar una programación específica o eliminar una programación específica.
+Los programas son una herramienta que se puede utilizar para ejecutar automáticamente trabajos de segmentación por lotes una vez al día. Puede usar el complemento `/config/schedules` punto final para recuperar una lista de programaciones, crear una nueva programación, recuperar detalles de una programación específica, actualizar una programación específica o eliminar una programación específica.
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar correctamente llamadas a la API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 
-## Recuperar una lista de programaciones {#retrieve-list}
+## Recuperación de una lista de programaciones {#retrieve-list}
 
-Puede recuperar una lista de todas las programaciones de su organización realizando una solicitud de GET al `/config/schedules` punto final.
+Puede recuperar una lista de todas las programaciones de su organización realizando una solicitud de GET a la `/config/schedules` punto final.
 
 **Formato de API**
 
-La variable `/config/schedules` el extremo admite varios parámetros de consulta para ayudar a filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las programaciones disponibles para su organización. Se pueden incluir varios parámetros separados por el símbolo &quot;et&quot; (`&`).
+El `/config/schedules` el punto de conexión admite varios parámetros de consulta para filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Si realiza una llamada a este extremo sin parámetros, se recuperarán todas las programaciones disponibles para su organización. Se pueden incluir varios parámetros separados por el símbolo et (`&`).
 
 ```http
 GET /config/schedules
@@ -35,12 +35,12 @@ GET /config/schedules?limit={LIMIT}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{START}` | Especifica de qué página comenzará el desplazamiento. De forma predeterminada, este valor es 0. |
+| `{START}` | Especifica desde qué página comenzará el desplazamiento. De forma predeterminada, este valor es 0. |
 | `{LIMIT}` | Especifica el número de programaciones devueltas. De forma predeterminada, este valor es 100. |
 
 **Solicitud**
 
-La siguiente solicitud recuperará las últimas diez programaciones publicadas en su organización.
+La siguiente solicitud recupera las diez últimas programaciones publicadas en su organización.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -52,11 +52,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de programaciones para la organización de IMS especificada como JSON.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de programaciones para la organización IMS especificada como JSON.
 
 >[!NOTE]
 >
->La siguiente respuesta se ha truncado para el espacio y solo muestra la primera programación devuelta.
+>La siguiente respuesta se ha truncado para el espacio y muestra solo la primera programación devuelta.
 
 ```json
 {
@@ -95,16 +95,16 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de programacion
 | -------- | ------------ |
 | `_page.totalCount` | Número total de programaciones devueltas. |
 | `_page.pageSize` | El tamaño de la página de programaciones. |
-| `children.name` | Nombre de la programación como una cadena. |
-| `children.type` | Tipo de trabajo como cadena. Los dos tipos admitidos son &quot;batch_segmentation&quot; y &quot;export&quot;. |
-| `children.properties` | Un objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `children.properties.segments` | Uso `["*"]` garantiza que se incluyan todos los segmentos. |
-| `children.schedule` | Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar la ejecución de un trabajo más de una vez durante un período de 24 horas. Para obtener más información sobre los programas cron, lea el apéndice de la [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
+| `children.name` | Nombre de la programación en forma de cadena. |
+| `children.type` | El tipo de trabajo como cadena. Los dos tipos admitidos son &quot;batch_segmentation&quot; y &quot;export&quot;. |
+| `children.properties` | Objeto que contiene propiedades adicionales relacionadas con la programación. |
+| `children.properties.segments` | Uso de `["*"]` garantiza que todos los segmentos estén incluidos. |
+| `children.schedule` | Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre los horarios de cron, lea el apéndice en la [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
 | `children.state` | Cadena que contiene el estado de programación. Los dos estados admitidos son &quot;activo&quot; e &quot;inactivo&quot;. De forma predeterminada, el estado se establece en &quot;inactivo&quot;. |
 
 ## Crear una nueva programación {#create}
 
-Puede crear una nueva programación realizando una solicitud de POST al `/config/schedules` punto final.
+Puede crear una nueva programación realizando una solicitud de POST a `/config/schedules` punto final.
 
 **Formato de API**
 
@@ -137,11 +137,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 
 | Propiedad | Descripción |
 | -------- | ------------ |
-| `name` | **Requerido.** Nombre de la programación como una cadena. |
-| `type` | **Requerido.** Tipo de trabajo como cadena. Los dos tipos admitidos son &quot;batch_segmentation&quot; y &quot;export&quot;. |
-| `properties` | **Requerido.** Un objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `properties.segments` | **Requerido cuando `type` es igual a &quot;batch_segmentation&quot;.** Uso `["*"]` garantiza que se incluyan todos los segmentos. |
-| `schedule` | *Opcional.* Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar la ejecución de un trabajo más de una vez durante un período de 24 horas. Para obtener más información sobre los programas cron, lea el apéndice de la [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. <br><br>Si no se proporciona esta cadena, se generará automáticamente una programación generada por el sistema. |
+| `name` | **Requerido.** Nombre de la programación en forma de cadena. |
+| `type` | **Requerido.** El tipo de trabajo como cadena. Los dos tipos admitidos son &quot;batch_segmentation&quot; y &quot;export&quot;. |
+| `properties` | **Requerido.** Objeto que contiene propiedades adicionales relacionadas con la programación. |
+| `properties.segments` | **Necesario cuando `type` es igual a &quot;batch_segmentation&quot;.** Uso de `["*"]` garantiza que todos los segmentos estén incluidos. |
+| `schedule` | *Opcional.* Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre los horarios de cron, lea el apéndice en la [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. <br><br>Si no se proporciona esta cadena, se generará automáticamente una programación generada por el sistema. |
 | `state` | *Opcional.* Cadena que contiene el estado de programación. Los dos estados admitidos son &quot;activo&quot; e &quot;inactivo&quot;. De forma predeterminada, el estado se establece en &quot;inactivo&quot;. |
 
 **Respuesta**
@@ -174,7 +174,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la programaci
 
 ## Recuperar una programación específica {#get}
 
-Puede recuperar información detallada sobre una programación específica realizando una solicitud de GET al `/config/schedules` y proporcionando el ID de la programación que desea recuperar en la ruta de solicitud.
+Puede recuperar información detallada sobre una programación específica realizando una solicitud de GET al `/config/schedules` y proporciona el ID de la programación que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -184,7 +184,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | La variable `id` del programa que desea recuperar. |
+| `{SCHEDULE_ID}` | El `id` valor de la programación que desea recuperar. |
 
 **Solicitud**
 
@@ -226,22 +226,22 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 | Propiedad | Descripción |
 | -------- | ------------ |
-| `name` | Nombre de la programación como una cadena. |
-| `type` | Tipo de trabajo como cadena. Los dos tipos compatibles son `batch_segmentation` y `export`. |
-| `properties` | Un objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `properties.segments` | Uso `["*"]` garantiza que se incluyan todos los segmentos. |
-| `schedule` | Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar la ejecución de un trabajo más de una vez durante un período de 24 horas. Para obtener más información sobre los programas cron, lea el apéndice de la [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
+| `name` | Nombre de la programación en forma de cadena. |
+| `type` | El tipo de trabajo como cadena. Los dos tipos admitidos son `batch_segmentation` y `export`. |
+| `properties` | Objeto que contiene propiedades adicionales relacionadas con la programación. |
+| `properties.segments` | Uso de `["*"]` garantiza que todos los segmentos estén incluidos. |
+| `schedule` | Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre los horarios de cron, lea el apéndice en la [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
 | `state` | Cadena que contiene el estado de programación. Los dos estados admitidos son `active` y `inactive`. De forma predeterminada, el estado se establece en `inactive`. |
 
-## Actualización de detalles de una programación específica {#update}
+## Actualizar los detalles de una programación específica {#update}
 
-Puede actualizar una programación específica realizando una solicitud de PATCH al `/config/schedules` y proporcionando el ID de la programación que está intentando actualizar en la ruta de solicitud.
+Puede actualizar una programación específica realizando una solicitud de PATCH a `/config/schedules` y proporciona el ID de la programación que intenta actualizar en la ruta de solicitud.
 
-La solicitud del PATCH le permite actualizar cualquiera de los [state](#update-state) o [programación de cron](#update-schedule) para una programación individual.
+La solicitud del PATCH le permite actualizar el [state](#update-state) o el [programación de cron](#update-schedule) para una programación individual.
 
-### Actualizar el estado de la programación {#update-state}
+### Actualizar estado de programación {#update-state}
 
-Puede utilizar una operación de parche JSON para actualizar el estado de la programación. Para actualizar el estado, se declara la variable `path` property as `/state` y establezca la variable `value` para `active` o `inactive`. Para obtener más información sobre el parche JSON, lea la [Parche JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentación.
+Puede utilizar una operación de parche JSON para actualizar el estado de la programación. Para actualizar el estado, declare el `path` propiedad como `/state` y configure el `value` a `active` o `inactive`. Para obtener más información sobre el parche JSON, lea la [Parche de JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentación.
 
 **Formato de API**
 
@@ -251,7 +251,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | La variable `id` del programa que desea actualizar. |
+| `{SCHEDULE_ID}` | El `id` del horario que desea actualizar. |
 
 **Solicitud**
 
@@ -273,8 +273,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `path` | La ruta del valor que desea parche. En este caso, dado que está actualizando el estado de la programación, debe establecer el valor de `path` a &quot;/state&quot;. |
-| `value` | El valor actualizado del estado de la programación. Este valor se puede configurar como &quot;activo&quot; o &quot;inactivo&quot; para activar o desactivar la programación. Tenga en cuenta que **cannot** deshabilite una programación si la organización IMS está habilitada para la transmisión. |
+| `path` | La ruta del valor al que desea aplicar el parche. En este caso, dado que está actualizando el estado de la programación, debe establecer el valor de `path` a &quot;/state&quot;. |
+| `value` | El valor actualizado del estado de la programación. Este valor puede establecerse como &quot;activo&quot; o &quot;inactivo&quot; para activar o desactivar la programación. Tenga en cuenta que **no puede** deshabilite una programación si la organización de IMS se ha habilitado para la transmisión por secuencias. |
 
 **Respuesta**
 
@@ -282,7 +282,7 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
 
 ### Actualizar programación de cron {#update-schedule}
 
-Puede utilizar una operación JSON Patch para actualizar la programación cron. Para actualizar la programación, declare la variable `path` property as `/schedule` y establezca la variable `value` a una programación de cron válida. Para obtener más información sobre el parche JSON, lea la [Parche JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentación. Para obtener más información sobre los programas cron, lea el apéndice de la [formato de expresión cron](#appendix).
+Puede utilizar una operación de parche de JSON para actualizar la programación de cron. Para actualizar la programación, declare el `path` propiedad como `/schedule` y configure el `value` a una programación cron válida. Para obtener más información sobre el parche JSON, lea la [Parche de JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentación. Para obtener más información sobre los horarios de cron, lea el apéndice en la [formato de expresión cron](#appendix).
 
 **Formato de API**
 
@@ -292,7 +292,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | La variable `id` del programa que desea actualizar. |
+| `{SCHEDULE_ID}` | El `id` del horario que desea actualizar. |
 
 **Solicitud**
 
@@ -314,8 +314,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `path` | Ruta del valor que desea actualizar. En este caso, dado que está actualizando la programación cron, debe establecer el valor de `path` a `/schedule`. |
-| `value` | El valor actualizado de la programación cron. Este valor debe presentar la forma de una programación cron. En este ejemplo, la programación se ejecutará el segundo de cada mes. |
+| `path` | La ruta del valor que desea actualizar. En este caso, dado que está actualizando la programación de cron, debe establecer el valor de `path` hasta `/schedule`. |
+| `value` | El valor actualizado de la programación de cron. Este valor debe estar en forma de programación cron. En este ejemplo, la programación se ejecutará el segundo de cada mes. |
 
 **Respuesta**
 
@@ -323,7 +323,7 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
 
 ## Eliminar una programación específica
 
-Puede solicitar la eliminación de una programación específica realizando una solicitud de DELETE al `/config/schedules` y proporcione el ID de la programación que desea eliminar en la ruta de solicitud.
+Puede solicitar que se elimine una programación específica realizando una solicitud de DELETE a `/config/schedules` y proporciona el ID de la programación que desea eliminar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -333,7 +333,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | La variable `id` del programa que desea eliminar. |
+| `{SCHEDULE_ID}` | El `id` valor de la programación que desea eliminar. |
 
 **Solicitud**
 
@@ -351,19 +351,19 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
 
 ## Pasos siguientes
 
-Después de leer esta guía, ahora tiene una mejor comprensión de cómo funcionan los programas.
+Después de leer esta guía, ahora tiene una mejor comprensión de cómo funcionan los horarios.
 
 ## Apéndice {#appendix}
 
-El siguiente apéndice explica el formato de las expresiones cron utilizadas en las programaciones.
+En el siguiente apéndice se explica el formato de las expresiones cron utilizadas en las programaciones.
 
 ### Formato
 
-Una expresión cron es una cadena formada por 6 o 7 campos. La expresión tendría un aspecto similar al siguiente:
+Una expresión cron es una cadena que consta de 6 o 7 campos. La expresión tendría un aspecto similar al siguiente:
 
 `0 0 12 * * ?`
 
-En una cadena de expresión cron, el primer campo representa los segundos, el segundo campo representa los minutos, el tercer campo representa las horas, el cuarto campo representa el día del mes, el quinto campo representa el mes y el sexto campo representa el día de la semana. También puede incluir un séptimo campo, que representa el año.
+En una cadena de expresión cron, el primer campo representa los segundos, el segundo campo representa los minutos, el tercer campo representa las horas, el cuarto campo representa el día del mes, el quinto campo representa el mes y el sexto campo representa el día de la semana. Si lo desea, también puede incluir un séptimo campo, que representa el año.
 
 | Nombre del campo | Requerido | Valores posibles | Caracteres especiales permitidos |
 | ---------- | -------- | --------------- | -------------------------- |
@@ -371,38 +371,38 @@ En una cadena de expresión cron, el primer campo representa los segundos, el se
 | Minutes | Sí | 0-59 | `, - * /` |
 | Horas | Sí | 0-23 | `, - * /` |
 | Día del mes | Sí | 1-31 | `, - * ? / L W` |
-| Mes | Sí | 1-12, ENERO-DEC | `, - * /` |
+| Mes | Sí | 1 A 12 DE ENERO A DICIEMBRE | `, - * /` |
 | Día de la semana | Sí | 1-7, SUN-SAT | `, - * ? / L #` |
 | Año | No | Vacío, 1970-2099 | `, - * /` |
 
 >[!NOTE]
 >
->Los nombres de los meses y los nombres de los días de la semana son **not** distingue entre mayúsculas y minúsculas. Por lo tanto, `SUN` equivale a usar `sun`.
+>Los nombres de los meses y los nombres de los días de la semana son **no** distingue mayúsculas de minúsculas. Por lo tanto, `SUN` es equivalente a usar `sun`.
 
 Los caracteres especiales permitidos representan los siguientes significados:
 
 | Carácter especial | Descripción |
 | ----------------- | ----------- |
-| `*` | Este valor se utiliza para seleccionar **all** valores de un campo. Por ejemplo, poner `*` en el campo horas significaría **every** hora. |
-| `?` | Este valor significa que no se requiere ningún valor específico. Generalmente se utiliza para especificar algo en un campo en el que se permite el carácter, pero no para especificarlo en el otro. Por ejemplo, si desea que se active un evento cada tres meses del mes, pero no le importa qué día de la semana es, pondría `3` en el campo día del mes y `?` en el campo día de la semana . |
-| `-` | Este valor se utiliza para especificar **inclusivo** rangos para el campo . Por ejemplo, si pone `9-15` en el campo horas, esto significaría que las horas incluirían 9, 10, 11, 12, 13, 14 y 15. |
-| `,` | Este valor se utiliza para especificar valores adicionales. Por ejemplo, si pone `MON, FRI, SAT` en el campo día de la semana, esto significaría que los días de la semana incluirían lunes, viernes y sábado. |
-| `/` | Este valor se utiliza para especificar incrementos. El valor colocado antes de la variable `/` determina desde dónde se incrementa, mientras que el valor se coloca después de la variable `/` determina en qué medida aumenta. Por ejemplo, si pone `1/7` en el campo de minutos, esto significaría que los minutos incluirían 1, 8, 15, 22, 29, 36, 43, 50 y 57. |
-| `L` | Este valor se utiliza para especificar `Last`y tiene un significado diferente según el campo por el que lo utilice. Si se utiliza con el campo día del mes, representa el último día del mes. Si se utiliza con el campo día de la semana por sí solo, representa el último día de la semana, que es sábado (`SAT`). Si se utiliza con el campo día de la semana, junto con otro valor, representa el último día de ese tipo para el mes. Por ejemplo, si pone `5L` en el campo día de la semana, se **only** incluir el último viernes del mes. |
-| `W` | Este valor se utiliza para especificar el día de la semana más cercano al día dado. Por ejemplo, si pone `18W` en el campo día del mes, y el día 18 de ese mes era sábado, se déclencheur el viernes 17, que es el día laboral más cercano. Si el 18 de ese mes fuera un domingo, sería un déclencheur el lunes 19, que es el día laboral más cercano. Tenga en cuenta que si pone `1W` en el campo día del mes y el día de la semana más cercano sería el mes anterior, el evento seguirá teniendo lugar en déclencheur el día de la semana más cercano del **current** mes.</br></br>Además, puede combinar `L` y `W` para `LW`, que especificaría el último día laborable del mes. |
-| `#` | Este valor se utiliza para especificar el nésimo día de la semana de un mes. El valor colocado antes de la variable `#` representa el día de la semana, mientras que el valor colocado después de la variable `#` representa qué ocurrencia está ocurriendo en el mes en que está. Por ejemplo, si pone `1#3`, el evento se celebraría en déclencheur el tercer domingo del mes. Tenga en cuenta que si pone `X#5` y no hay una quinta incidencia de ese día de la semana en ese mes, el evento **not** se activará. Por ejemplo, si pone `1#5`, y no hay quinto domingo en ese mes, el evento **not** se activará. |
+| `*` | Este valor se utiliza para seleccionar **todo** valores en un campo. Por ejemplo, poner `*` en el campo de horas significaría **cada** hora. |
+| `?` | Este valor significa que no se requiere ningún valor específico. Esto se utiliza generalmente para especificar algo en un campo donde el carácter está permitido, pero no para especificarlo en el otro. Por ejemplo, si desea que un evento se active cada tres días del mes, pero no le importa qué día de la semana sea, debe poner `3` en el campo día del mes y `?` en el campo día de la semana. |
+| `-` | Este valor se utiliza para especificar **inclusivo** intervalos para el campo. Por ejemplo, si pone `9-15` en el campo horas, esto significaría que las horas incluirían 9, 10, 11, 12, 13, 14 y 15. |
+| `,` | Este valor se utiliza para especificar valores adicionales. Por ejemplo, si pone `MON, FRI, SAT` en el campo día de la semana, significaría que los días de la semana incluirían lunes, viernes y sábado. |
+| `/` | Este valor se utiliza para especificar incrementos. El valor colocado antes de `/` determina desde dónde aumenta, mientras que el valor colocado después de `/` determina en qué medida se incrementa. Por ejemplo, si pone `1/7` en el campo minutos, esto significaría que los minutos incluirían 1, 8, 15, 22, 29, 36, 43, 50 y 57. |
+| `L` | Este valor se utiliza para especificar `Last`y tiene un significado diferente según el campo por el que se utilice. Si se utiliza con el campo de día del mes, representa el último día del mes. Si se utiliza con el campo de día de la semana por sí solo, representa el último día de la semana, que es sábado (`SAT`). Si se utiliza con el campo de día de la semana, junto con otro valor, representa el último día de ese tipo para el mes. Por ejemplo, si pone `5L` en el campo día de la semana, sería **solamente** incluir el último viernes del mes. |
+| `W` | Este valor se utiliza para especificar el día de semana más cercano al día determinado. Por ejemplo, si pone `18W` en el campo de día del mes, y el 18 de ese mes era sábado, déclencheur el viernes 17, que es el día más cercano entre semana. Si el 18 de ese mes fuera domingo, déclencheur el lunes 19, que es el día más cercano entre semana. Tenga en cuenta que si pone `1W` en el campo de día del mes, y el día de semana más cercano sería el mes anterior, el evento seguirá déclencheur el día de semana más cercano del mes **corriente** mes.</br></br>Además, puede combinar lo siguiente `L` y `W` para realizar `LW`, que especificaría el último día de la semana del mes. |
+| `#` | Este valor se utiliza para especificar el enésimo día de la semana de un mes. El valor colocado antes de `#` representa el día de la semana, mientras que el valor colocado después de `#` representa la incidencia en el mes que es. Por ejemplo, si pone `1#3`, el evento tendría déclencheur el tercer domingo del mes. Tenga en cuenta que si pone `X#5` y no hay quinta incidencia de ese día de la semana en ese mes, el evento **no** se activará. Por ejemplo, si pone `1#5`, y no hay quinto domingo en ese mes, el evento **no** se activará. |
 
 ### Ejemplos
 
-En la tabla siguiente se muestran las cadenas de expresión cron de ejemplo y se explica su significado.
+La siguiente tabla muestra cadenas de expresión cron de muestra y explica qué significan.
 
 | Expresión | Explicación |
 | ---------- | ----------- |
-| `0 0 13 * * ?` | El evento se activará a la 1 PM todos los días. |
-| `0 30 9 * * ? 2022` | El evento se activará todos los días a las 9:30 AM del año 2022. |
-| `0 * 18 * * ?` | El evento se activará cada minuto, a partir de las 6 p. m. y terminará a las 6:59 p. m. todos los días. |
-| `0 0/10 17 * * ?` | El evento se activará cada 10 minutos, a partir de las 5 pm y terminará a las 6 pm, cada día. |
-| `0 13,38 5 ? 6 WED` | El evento se activará a las 5:13 am y 5:38 am cada miércoles en junio. |
-| `0 30 12 ? * 4#3` | El evento se activará cada mes a las 12:30 pm del tercer miércoles. |
-| `0 30 12 ? * 6L` | El evento se activará a las 12:30 pm del último viernes de cada mes. |
-| `0 45 11 ? * MON-THU` | El evento se activará a las 11:45 todos los lunes, martes, miércoles y jueves. |
+| `0 0 13 * * ?` | El evento se activará a la 1 p. m. todos los días. |
+| `0 30 9 * * ? 2022` | El evento se activará todos los días a las 9:30 a. m. en el año 2022. |
+| `0 * 18 * * ?` | El evento se activará cada minuto, empezando a las 6 PM y terminando a las 6:59 PM, todos los días. |
+| `0 0/10 17 * * ?` | El evento se activará cada 10 minutos, comenzando a las 5 PM y terminando a las 6 PM, todos los días. |
+| `0 13,38 5 ? 6 WED` | El evento se activará a las 5:13AM y a las 5:38AM todos los miércoles en junio. |
+| `0 30 12 ? * 4#3` | El evento se activará a las 12:30 p.m. el tercer miércoles de cada mes. |
+| `0 30 12 ? * 6L` | El evento se activará a las 12:30 p.m. del último viernes de cada mes. |
+| `0 45 11 ? * MON-THU` | El evento se activará a las 11:45 a.m. todos los lunes, martes, miércoles y jueves. |

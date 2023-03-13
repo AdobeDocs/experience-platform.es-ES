@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api de conjunto de datos;administrar uso de datos;api de uso de datos
+keywords: Experience Platform;inicio;temas populares;api de conjuntos de datos;administrar uso de datos;api de uso de datos
 solution: Experience Platform
 title: Administrar etiquetas de uso de datos para conjuntos de datos mediante API
-description: La API del servicio de conjunto de datos le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funcionalidades del catálogo de datos de Adobe Experience Platform, pero está separado de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
+description: La API del servicio de conjuntos de datos permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero es independiente de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -13,23 +13,23 @@ ht-degree: 2%
 
 # Administrar etiquetas de uso de datos para conjuntos de datos mediante API
 
-La variable [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la función [!DNL Catalog Service] API que administra metadatos de conjuntos de datos.
+El [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero es independiente del [!DNL Catalog Service] API que administra los metadatos del conjunto de datos.
 
 >[!IMPORTANT]
 >
->La aplicación de etiquetas en el nivel de conjunto de datos solo se admite para casos de uso de control de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la descripción general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
+>La aplicación de etiquetas en el nivel de conjunto de datos solo es compatible con casos de uso de gobernanza de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
 
-Este documento explica cómo administrar etiquetas para conjuntos de datos y campos mediante el uso de [!DNL Dataset Service API]. Para ver los pasos sobre cómo administrar las etiquetas de uso de datos mediante llamadas a la API, consulte la [guía de extremo de etiquetas](../api/labels.md) para el [!DNL Policy Service API].
+Este documento explica cómo administrar etiquetas para conjuntos de datos y campos mediante [!DNL Dataset Service API]. Para ver los pasos sobre cómo administrar las propias etiquetas de uso de datos mediante llamadas a la API, consulte la [guía de extremo de etiquetas](../api/labels.md) para el [!DNL Policy Service API].
 
 ## Primeros pasos
 
-Antes de leer esta guía, siga los pasos descritos en la sección [sección introducción](../../catalog/api/getting-started.md) en la guía para desarrolladores de Catálogo para recopilar las credenciales necesarias para realizar llamadas a [!DNL Platform] API.
+Antes de leer esta guía, siga los pasos descritos en la [sección de introducción](../../catalog/api/getting-started.md) en la Guía para desarrolladores de catálogos para recopilar las credenciales necesarias para realizar llamadas a [!DNL Platform] API.
 
-Para realizar llamadas a los extremos descritos en este documento, debe tener la variable `id` para un conjunto de datos específico. Si no tiene este valor, consulte la guía de [listado de objetos del catálogo](../../catalog/api/list-objects.md) para buscar los ID de sus conjuntos de datos existentes.
+Para realizar llamadas a los extremos descritos en este documento, debe tener el `id` para un conjunto de datos específico. Si no tiene este valor, consulte la guía de [enumeración de objetos de catálogo](../../catalog/api/list-objects.md) para buscar los ID de los conjuntos de datos existentes.
 
-## Buscar etiquetas para un conjunto de datos {#look-up}
+## Búsqueda de etiquetas para un conjunto de datos {#look-up}
 
-Puede consultar las etiquetas de uso de datos que se han aplicado a un conjunto de datos existente realizando una solicitud de GET al [!DNL Dataset Service] API.
+Puede buscar las etiquetas de uso de datos que se han aplicado a un conjunto de datos existente realizando una solicitud de GET al [!DNL Dataset Service] API.
 
 **Formato de API**
 
@@ -39,7 +39,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{DATASET_ID}` | El único `id` del conjunto de datos cuyas etiquetas desea buscar. |
+| `{DATASET_ID}` | La exclusiva `id` valor del conjunto de datos cuyas etiquetas desea buscar. |
 
 **Solicitud**
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve las etiquetas de uso de datos que se han aplicado al conjunto de datos.
+Una respuesta correcta devuelve las etiquetas de uso de datos aplicadas al conjunto de datos.
 
 ```json
 {
@@ -78,11 +78,11 @@ Una respuesta correcta devuelve las etiquetas de uso de datos que se han aplicad
 | Propiedad | Descripción |
 | --- | --- |
 | `labels` | Una lista de etiquetas de uso de datos que se han aplicado al conjunto de datos. |
-| `optionalLabels` | Una lista de campos individuales dentro del conjunto de datos que tienen etiquetas de uso de datos aplicadas a ellos. |
+| `optionalLabels` | Una lista de campos individuales dentro del conjunto de datos a los que se les han aplicado etiquetas de uso de datos. |
 
 ## Aplicar etiquetas a un conjunto de datos {#apply}
 
-Puede crear un conjunto de etiquetas para un conjunto de datos proporcionándolas en la carga útil de una solicitud de POST o PUT al [!DNL Dataset Service] API. El uso de cualquiera de estos métodos sobrescribe cualquier etiqueta existente y la sustituye por las que se proporcionan en la carga útil.
+Puede crear un conjunto de etiquetas para un conjunto de datos proporcionándolas en la carga útil de una solicitud de POST o PUT a [!DNL Dataset Service] API. El uso de cualquiera de estos métodos sobrescribe las etiquetas existentes y las reemplaza por las proporcionadas en la carga útil.
 
 **Formato de API**
 
@@ -93,19 +93,19 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{DATASET_ID}` | El único `id` del conjunto de datos para el que está creando etiquetas. |
+| `{DATASET_ID}` | La exclusiva `id` valor del conjunto de datos para el que está creando etiquetas. |
 
 **Solicitud**
 
-La solicitud de PUT de ejemplo siguiente actualiza las etiquetas existentes para un conjunto de datos, así como un campo específico dentro de ese conjunto de datos. Los campos proporcionados en la carga útil son los mismos que se requerirían para una solicitud del POST.
+La solicitud del PUT de ejemplo siguiente actualiza las etiquetas existentes para un conjunto de datos, así como un campo específico dentro de ese conjunto de datos. Los campos proporcionados en la carga útil son los mismos que se requerirían para una solicitud de POST.
 
-Al realizar llamadas de API que actualizan las etiquetas existentes de un conjunto de datos (PUT), una variable `If-Match` que indica la versión actual de la entidad de etiqueta de conjunto de datos en el servicio de conjunto de datos debe estar incluida. Para evitar conflictos de datos, el servicio solo actualizará la entidad del conjunto de datos si se incluye el `If-Match` coincide con la última etiqueta de versión generada por el sistema para ese conjunto de datos.
+Cuando se realizan llamadas de API que actualizan las etiquetas existentes de un conjunto de datos (PUT), una `If-Match` que indica la versión actual de la entidad dataset-label en el servicio Dataset debe estar incluido. Para evitar conflictos de datos, el servicio solo actualizará la entidad del conjunto de datos si el incluye `If-Match` cadena coincide con la última etiqueta de versión generada por el sistema para ese conjunto de datos.
 
 >[!NOTE]
 >
->Si actualmente no existen etiquetas para el conjunto de datos en cuestión, solo se pueden agregar nuevas etiquetas a través de una solicitud del POST, que no requiere una `If-Match` encabezado. Una vez que las etiquetas se han agregado a un conjunto de datos, una `etag` se asigna el valor que puede utilizarse para actualizar o eliminar las etiquetas más adelante.
+>Si actualmente no existen etiquetas para el conjunto de datos en cuestión, solo se pueden añadir nuevas etiquetas mediante una solicitud de POST, que no requiere un `If-Match` encabezado. Una vez añadidas las etiquetas a un conjunto de datos, se puede `etag` se asigna un valor que puede utilizarse para actualizar o quitar las etiquetas más adelante.
 
-Para recuperar la versión más reciente de la entidad de etiqueta del conjunto de datos, realice una [solicitud de GET](#look-up) a `/datasets/{DATASET_ID}/labels` punto final. El valor actual se devuelve en la respuesta en una `etag` encabezado. Al actualizar las etiquetas de conjuntos de datos existentes, se recomienda realizar primero una solicitud de consulta para el conjunto de datos con el fin de obtener la última `etag` antes de usar ese valor en la variable `If-Match` encabezado de la solicitud de PUT posterior.
+Para recuperar la versión más reciente de la entidad dataset-label, cree un [petición de GET](#look-up) a la `/datasets/{DATASET_ID}/labels` punto final. El valor actual se devuelve en la respuesta en un `etag` encabezado. Al actualizar las etiquetas de conjuntos de datos existentes, la práctica recomendada es realizar primero una solicitud de búsqueda para el conjunto de datos para recuperar su última versión `etag` antes de usar ese valor en `If-Match` encabezado de la solicitud de PUT posterior.
 
 ```shell
 curl -X PUT \
@@ -133,8 +133,8 @@ curl -X PUT \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `labels` | Una lista de etiquetas de uso de datos que desea agregar al conjunto de datos. |
-| `optionalLabels` | Una lista de los campos individuales dentro del conjunto de datos a los que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades: <br/><br/>`option`: Un objeto que contiene la variable [!DNL Experience Data Model] (XDM) atributos del campo. Se requieren las tres propiedades siguientes:<ul><li>id</code>: El URI $id</code> del esquema asociado al campo.</li><li>contentType</code>: Tipo de contenido y número de versión del esquema. Esto debería adoptar la forma de uno de los <a href="../../xdm/api/getting-started.md#accept">Aceptar encabezados</a> para una solicitud de búsqueda XDM.</li><li>schemaPath</code>: Ruta al campo dentro del esquema del conjunto de datos.</li></ul>`labels`: Una lista de etiquetas de uso de datos que desea agregar al campo. |
+| `labels` | Una lista de etiquetas de uso de datos que desee agregar al conjunto de datos. |
+| `optionalLabels` | Una lista de cualquier campo individual dentro del conjunto de datos al que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades: <br/><br/>`option`: Un objeto que contiene la variable [!DNL Experience Data Model] Atributos (XDM) del campo. Se requieren las tres propiedades siguientes:<ul><li>id</code>: URI $id</code> valor del esquema asociado al campo.</li><li>contentType</code>: el tipo de contenido y el número de versión del esquema. Debe adoptar la forma de una de las <a href="../../xdm/api/getting-started.md#accept">Aceptar encabezados</a> para una solicitud de búsqueda XDM.</li><li>schemaPath</code>: Ruta al campo dentro del esquema del conjunto de datos.</li></ul>`labels`: una lista de etiquetas de uso de datos que desea agregar al campo. |
 
 **Respuesta**
 
@@ -158,6 +158,6 @@ Una respuesta correcta devuelve el conjunto actualizado de etiquetas para el con
 
 ## Pasos siguientes
 
-Al leer este documento, ha aprendido a administrar las etiquetas de uso de datos para conjuntos de datos y campos usando la variable [!DNL Dataset Service] API. Ahora puede definir [políticas de uso de datos](../policies/overview.md) y [directivas de control de acceso](../../access-control/abac/ui/policies.md) en función de las etiquetas aplicadas.
+Al leer este documento, ha aprendido a administrar las etiquetas de uso de datos para conjuntos de datos y campos mediante [!DNL Dataset Service] API. Ahora puede definir [políticas de uso de datos](../policies/overview.md) y [directivas de control de acceso](../../access-control/abac/ui/policies.md) en función de las etiquetas aplicadas.
 
 Para obtener más información sobre la administración de conjuntos de datos en [!DNL Experience Platform], consulte la [información general sobre conjuntos de datos](../../catalog/datasets/overview.md).

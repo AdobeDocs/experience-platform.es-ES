@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;mlinstances;api sensei de aprendizaje automático
+keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;mlinstances;api de aprendizaje automático de sensei
 solution: Experience Platform
-title: Punto final de API de instancias MLI
-description: Una instancia MLI es un emparejamiento de un motor existente con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetro de puntuación o configuración de recursos de hardware.
+title: Extremo de API de MLInstances
+description: Una MLInstance es un emparejamiento de un motor existente con un conjunto adecuado de configuraciones que define cualquier parámetro de formación, parámetro de puntuación o configuración de recursos de hardware.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 4%
 
 ---
 
-# Extremo MLInstances
+# Extremo de MLInstances
 
-Una instancia MLI es un emparejamiento de una instancia existente [Motor](./engines.md) con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetro de puntuación o configuración de recursos de hardware.
+Una MLInstance es un emparejamiento de una instancia de [Motor](./engines.md) con un conjunto adecuado de configuraciones que define cualquier parámetro de formación, parámetro de puntuación o configuración de recursos de hardware.
 
-## Crear una instancia MLI {#create-an-mlinstance}
+## Crear una instancia de MLI {#create-an-mlinstance}
 
-Puede crear una instancia MLI realizando una solicitud de POST mientras proporciona una carga útil de solicitud que consiste en un ID de motor válido (`{ENGINE_ID}`) y un conjunto apropiado de configuraciones predeterminadas.
+Puede crear una MLInstance realizando una solicitud de POST mientras proporciona una carga útil de solicitud que consista en un ID de motor válido (`{ENGINE_ID}`) y un conjunto adecuado de configuraciones predeterminadas.
 
-Si el ID del motor hace referencia a un motor PySpark o Spark, puede configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre utilizar una CPU o una GPU con fines de formación y puntuación. Consulte las secciones del apéndice sobre [Configuraciones de recursos PySpark y Spark](./appendix.md#resource-config) y [Configuraciones de CPU y GPU de Python](./appendix.md#cpu-gpu-config) para obtener más información.
+Si el ID del motor hace referencia a un motor PySpark o Spark, puede configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre usar una CPU o una GPU con fines de formación y puntuación. Consulte las secciones del apéndice sobre [Configuraciones de recursos de PySpark y Spark](./appendix.md#resource-config) y [Configuraciones de CPU y GPU en Python](./appendix.md#cpu-gpu-config) para obtener más información.
 
 **Formato de API**
 
@@ -75,14 +75,14 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | Nombre deseado para la instancia MLI. El modelo correspondiente a esta instancia MLI heredará este valor que se mostrará en la interfaz de usuario como nombre del modelo. |
-| `description` | Una descripción opcional de la instancia MLI. El modelo correspondiente a esta instancia MLI heredará este valor que se mostrará en la interfaz de usuario como la descripción del modelo. Esta es una propiedad obligatoria. Si no desea proporcionar una descripción, establezca su valor en una cadena vacía. |
+| `name` | El nombre deseado para la MLInstance. El modelo correspondiente a esta MLInstance heredará este valor para que se muestre en la interfaz de usuario como el nombre del modelo. |
+| `description` | Una descripción opcional para la instancia de MLI. El modelo correspondiente a esta MLInstance heredará este valor para que se muestre en la interfaz de usuario como la descripción del modelo. Esta es una propiedad obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
 | `engineId` | El ID de un motor existente. |
-| `tasks` | Conjunto de configuraciones para canalizaciones de capacitación, puntuación o características. |
+| `tasks` | Un conjunto de configuraciones para aprendizaje, puntuación o canalizaciones de funciones. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles de la instancia MLI recién creada, incluido su identificador único (`id`).
+Una respuesta correcta devuelve una carga útil que contiene los detalles de la MLInstance recién creada, incluido su identificador único (`id`).
 
 ```json
 {
@@ -127,9 +127,9 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 }
 ```
 
-## Recuperar una lista de instancias MLI
+## Recuperación de una lista de instancias de MLI
 
-Puede recuperar una lista de instancias MLI realizando una única solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice de [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de instancias de MLI realizando una única solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -157,7 +157,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de instancias MLI y sus detalles.
+Una respuesta correcta devuelve una lista de instancias de MLI y sus detalles.
 
 ```json
 {
@@ -195,9 +195,9 @@ Una respuesta correcta devuelve una lista de instancias MLI y sus detalles.
 }
 ```
 
-## Recuperar una instancia MLI específica {#retrieve-specific}
+## Recuperar una MLInstance específica {#retrieve-specific}
 
-Puede recuperar los detalles de una instancia MLI específica realizando una solicitud de GET que incluya el ID de la instancia MLI deseada en la ruta de solicitud.
+Puede recuperar los detalles de una MLInstance específica realizando una solicitud de GET que incluya el ID de la MLInstance deseada en la ruta de solicitud.
 
 **Formato de API**
 
@@ -207,7 +207,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MLINSTANCE_ID}` | ID de la instancia MLI deseada. |
+| `{MLINSTANCE_ID}` | El ID de la instancia de MLI deseada. |
 
 **Solicitud**
 
@@ -268,15 +268,15 @@ Una respuesta correcta devuelve los detalles de la instancia MLI.
 }
 ```
 
-## Actualizar una instancia MLI
+## Actualizar una instancia de MLI
 
-Puede actualizar una instancia MLI existente sobrescribiendo sus propiedades mediante una solicitud de PUT que incluya el ID de instancia MLI de destino en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
+Puede actualizar una MLInstance existente sobrescribiendo sus propiedades a través de una solicitud de PUT que incluya el ID de la MLInstance de destino en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud del PUT, se sugiere que primero realice una solicitud de GET a [recuperar la instancia MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique todo el objeto JSON modificado como carga útil para la solicitud del PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se recomienda que realice primero una solicitud de GET a [recuperar la instancia de MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud del PUT.
 
-La siguiente llamada de API de ejemplo actualizará los parámetros de capacitación y puntuación de una instancia MLI al tener inicialmente estas propiedades:
+La siguiente llamada de API de ejemplo actualizará los parámetros de formación y puntuación de una MLInstance aunque tenga estas propiedades inicialmente:
 
 ```json
 {
@@ -319,7 +319,7 @@ PUT /mlInstances/{MLINSTANCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Un ID de instancia MLI válido. |
+| `{MLINSTANCE_ID}` | ID de MLInstance válido. |
 
 **Solicitud**
 
@@ -402,9 +402,9 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 }
 ```
 
-## Eliminar instancias MLI por ID de motor
+## Eliminar MLInstances por ID de motor
 
-Puede eliminar todas las instancias MLI que compartan el mismo motor realizando una solicitud de DELETE que incluya el ID del motor como parámetro de consulta.
+Puede eliminar todas las instancias de MLI que compartan el mismo motor realizando una solicitud de DELETE que incluya el ID del motor como parámetro de consulta.
 
 **Formato de API**
 
@@ -414,7 +414,7 @@ DELETE /mlInstances?engineId={ENGINE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{ENGINE_ID}` | Un ID de motor válido. |
+| `{ENGINE_ID}` | ID de motor válido. |
 
 **Solicitud**
 
@@ -437,9 +437,9 @@ curl -X DELETE \
 }
 ```
 
-## Eliminar una instancia MLI
+## Eliminar una instancia de MLI
 
-Puede eliminar una sola instancia MLI realizando una solicitud de DELETE que incluya el ID de la instancia MLI de destino en la ruta de solicitud.
+Puede eliminar una sola MLInstance realizando una solicitud de DELETE que incluya el ID de la MLInstance de destino en la ruta de solicitud.
 
 **Formato de API**
 
@@ -449,7 +449,7 @@ DELETE /mlInstances/{MLINSTANCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Un ID de instancia MLI válido. |
+| `{MLINSTANCE_ID}` | ID de MLInstance válido. |
 
 **Solicitud**
 

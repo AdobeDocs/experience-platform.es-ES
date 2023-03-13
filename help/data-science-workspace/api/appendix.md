@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;
+keywords: Experience Platform;guía para desarrolladores;extremo;Data Science Workspace;temas populares;
 solution: Experience Platform
-title: Apéndice de la API de aprendizaje automático de Sensei
-description: Las secciones siguientes proporcionan información de referencia sobre varias funciones de la API de aprendizaje automático de Sensei.
+title: Apéndice de la guía de API de aprendizaje automático de Sensei
+description: Las secciones siguientes proporcionan información de referencia sobre diversas funciones de la API de aprendizaje automático de Sensei.
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,30 +11,30 @@ ht-degree: 3%
 
 ---
 
-# [!DNL Sensei Machine Learning] apéndice de la guía de API
+# [!DNL Sensei Machine Learning] Apéndice de guía de API
 
-Las secciones siguientes proporcionan información de referencia sobre diversas funciones de la variable [!DNL Sensei Machine Learning] API.
+Las secciones siguientes proporcionan información de referencia sobre diversas funciones de [!DNL Sensei Machine Learning] API.
 
-## Parámetros de consulta para la recuperación de recursos {#query}
+## Parámetros de consulta para recuperación de recursos {#query}
 
-La variable [!DNL Sensei Machine Learning] La API de proporciona compatibilidad para parámetros de consulta al recuperar recursos. En la tabla siguiente se describen los parámetros de consulta disponibles y sus usos:
+El [!DNL Sensei Machine Learning] La API proporciona compatibilidad con parámetros de consulta para recuperar recursos. En la tabla siguiente se describen los parámetros de consulta disponibles y sus usos:
 
 | Parámetro de consulta | Descripción | Valor predeterminado |
 | --------------- | ----------- | ------- |
 | `start` | Indica el índice de inicio de la paginación. | `start=0` |
 | `limit` | Indica el número máximo de resultados que se van a devolver. | `limit=25` |
-| `orderby` | Indica las propiedades que se utilizarán para la ordenación en orden de prioridad. Incluir un guión (**-**) delante de un nombre de propiedad para ordenarlo en orden descendente; de lo contrario, los resultados se ordenan en orden ascendente. | `orderby=created` |
+| `orderby` | Indica las propiedades que se van a utilizar para ordenar en orden de prioridad. Incluya un guión (**-**) antes del nombre de una propiedad para ordenar en orden descendente; de lo contrario, los resultados se ordenan en orden ascendente. | `orderby=created` |
 | `property` | Indica la expresión de comparación que un objeto debe satisfacer para ser devuelto. | `property=deleted==false` |
 
 >[!NOTE]
 >
->Cuando se combinan varios parámetros de consulta, deben separarse con el símbolo &amp; (**&amp;**).
+>Al combinar varios parámetros de consulta, deben separarse con el símbolo et (**&amp;**).
 
-## Configuraciones de CPU y GPU de Python {#cpu-gpu-config}
+## Configuraciones de CPU y GPU en Python {#cpu-gpu-config}
 
-Los motores Python tienen la capacidad de elegir entre una CPU o una GPU para sus fines de entrenamiento o puntuación, y se define en una [Instancia MLI](./mlinstances.md) como especificación de tarea (`tasks.specification`).
+Los motores Python tienen la capacidad de elegir entre una CPU o una GPU para sus fines de entrenamiento o puntuación, y se define en una [MLInstance](./mlinstances.md) como especificación de tarea (`tasks.specification`).
 
-A continuación se muestra un ejemplo de configuración que especifica el uso de una CPU para formación y una GPU para puntuación:
+A continuación se muestra un ejemplo de configuración que especifica el uso de una CPU para el aprendizaje y una GPU para la puntuación:
 
 ```json
 [
@@ -69,21 +69,21 @@ A continuación se muestra un ejemplo de configuración que especifica el uso de
 
 >[!NOTE]
 >
->Los valores de `cpus` y `gpus` no significa el número de CPU o GPU, sino el número de máquinas físicas. Estos valores son permisibles `"1"` y generará una excepción en caso contrario.
+>Los valores de `cpus` y `gpus` no significa el número de CPU o GPU, sino el número de máquinas físicas. Estos valores están permitidos `"1"` y generará una excepción en caso contrario.
 
-## Configuraciones de recursos PySpark y Spark {#resource-config}
+## Configuraciones de recursos de PySpark y Spark {#resource-config}
 
-Los motores de encendido (Spark Engines) tienen la capacidad de modificar los recursos computacionales con fines de entrenamiento y puntuación. Estos recursos se describen en la siguiente tabla:
+Los motores Spark tienen la capacidad de modificar los recursos computacionales con fines de entrenamiento y puntuación. Estos recursos se describen en la siguiente tabla:
 
 | Recurso | Descripción | Tipo |
 | -------- | ----------- | ---- |
-| driverMemory | Memoria para el controlador en megabytes | int |
+| driverMemory | Memoria para controlador en megabytes | int |
 | driverCores | Número de núcleos utilizados por el controlador | int |
-| ejecutorMemory | Memoria para el ejecutor en megabytes | int |
-| ejecutorCores | Número de núcleos utilizados por el ejecutor | int |
-| numEjecutors | Número de ejecutores | int |
+| executeMemory | Memoria para ejecutor en megabytes | int |
+| executeCores | Número de núcleos utilizados por el ejecutor | int |
+| numExecutors | Número de ejecutores | int |
 
-Los recursos se pueden especificar en una [Instancia MLI](./mlinstances.md) como (A) parámetros individuales de formación o puntuación, o (B) dentro de un objeto de especificaciones adicional (`specification`). Por ejemplo, las siguientes configuraciones de recursos son las mismas para la formación y la puntuación:
+Los recursos se pueden especificar en un [MLInstance](./mlinstances.md) como (A) parámetros de entrenamiento o puntuación individuales, o (B) dentro de un objeto de especificaciones adicional (`specification`). Por ejemplo, las siguientes configuraciones de recursos son las mismas para la formación y la puntuación:
 
 ```json
 [

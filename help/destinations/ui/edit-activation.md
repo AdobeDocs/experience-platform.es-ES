@@ -13,17 +13,17 @@ ht-degree: 0%
 
 # Editar flujos de datos de activación {#edit-activation-flows}
 
-En Adobe Experience Platform, puede editar varios componentes de flujos de datos de activación existentes en destinos, como los segmentos exportados y los atributos de perfil, la frecuencia de exportación, si el flujo de datos de activación está habilitado o deshabilitado, etc.
+En Adobe Experience Platform, puede editar varios componentes de flujos de datos de activación existentes en destinos, como los segmentos exportados y los atributos de perfil, la frecuencia de exportación, si el flujo de datos de activación está habilitado o deshabilitado, y más.
 
 ## Editar flujos de datos {#edit-dataflows}
 
 Siga los pasos a continuación para editar los flujos de datos de activación existentes:
 
-1. Inicie sesión en la [IU de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Select **[!UICONTROL Examinar]** del encabezado superior para ver los flujos de datos de destino existentes.
+1. Inicie sesión en [IU de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccionar **[!UICONTROL Examinar]** en el encabezado superior para ver los flujos de datos de destino existentes.
 
-   ![Examinar destinos](../assets/ui/edit-activation/browse-destinations.png)
+   ![Explorar destinos](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Seleccione el icono de filtro ![Icono de filtro](../assets/ui/edit-activation/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
+2. Seleccione el icono de filtro ![Icono de filtro](../assets/ui/edit-activation/filter.png) en la parte superior izquierda para iniciar el panel ordenar. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
 
    ![Filtrar destinos](../assets/ui/edit-activation/filter-destinations.png)
 
@@ -31,19 +31,19 @@ Siga los pasos a continuación para editar los flujos de datos de activación ex
 
    ![Seleccionar destino](../assets/ui/edit-activation/destination-select.png)
 
-4. La variable **[!UICONTROL Ejecuciones de flujo de datos]** para el destino, mostrando sus controles disponibles. En este punto, puede editar varios componentes del flujo de datos de destino:
+4. El **[!UICONTROL Ejecuciones de flujo de datos]** para el destino, mostrando sus controles disponibles. En este punto, puede editar varios componentes del flujo de datos de destino:
 
-   * Select **[!UICONTROL Activar segmentos]** en el carril derecho para cambiar qué segmentos o atributos de perfil se envían al destino. Esta acción le lleva al flujo de trabajo de activación, que difiere según el tipo de destino. Para obtener más información, consulte las guías sobre:
-      * [activación de datos de audiencia en destinos de flujo continuo de segmento](./activate-segment-streaming-destinations.md) (por ejemplo, Facebook o Twitter);
+   * Seleccionar **[!UICONTROL Activar segmentos]** en el carril derecho para cambiar qué segmentos o atributos de perfil enviar al destino. Esta acción le lleva al flujo de trabajo de activación, que difiere según el tipo de destino. Para obtener más información, consulte las guías sobre:
+      * [activación de datos de audiencia en destinos de flujo de segmentos](./activate-segment-streaming-destinations.md) (por ejemplo, Facebook o Twitter);
       * [activación de datos de audiencia en destinos basados en perfiles por lotes](./activate-batch-profile-destinations.md) (por ejemplo, Amazon S3 o Oracle Eloqua);
-      * [activación de datos de audiencia en destinos basados en perfiles de flujo continuo](./activate-streaming-profile-destinations.md) (por ejemplo, API HTTP o Amazon Kinesis).
+      * [activación de datos de audiencia a destinos basados en perfiles de streaming](./activate-streaming-profile-destinations.md) (por ejemplo, la API HTTP o Amazon Kinesis).
    * Además, puede editar el nombre y la descripción del flujo de datos de destino.
-   * Puede usar la variable **[!UICONTROL Habilitado]/[!UICONTROL Desactivado]** para iniciar y pausar todas las exportaciones de datos al destino.
+   * Puede usar el complemento **[!UICONTROL Habilitado]/[!UICONTROL Desactivado]** conmutar para iniciar y pausar todas las exportaciones de datos al destino.
 
-   ![Detalles de destino](../assets/ui/edit-activation/destination-details.png)
+   ![Detalles del destino](../assets/ui/edit-activation/destination-details.png)
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha utilizado correctamente la variable **[!UICONTROL destinos]** espacio de trabajo para actualizar los flujos de datos de destino existentes.
+Al seguir este tutorial, ha utilizado correctamente la variable **[!UICONTROL destinos]** workspace para actualizar los flujos de datos de destino existentes.
 
-Para obtener más información sobre los destinos, consulte [información general sobre destinos](../catalog/overview.md).
+Para obtener más información sobre los destinos, consulte la [información general sobre destinos](../catalog/overview.md).

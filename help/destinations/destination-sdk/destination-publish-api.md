@@ -1,11 +1,11 @@
 ---
-description: Esta página enumera y describe todas las operaciones de API que puede realizar con el extremo de API `/authoring/Destinations/publish`.
-title: Operaciones de extremo de la API de Publish Destinations
+description: Esta página enumera y describe todas las operaciones de API que puede realizar mediante el punto final de API /authoring/targets/publish.
+title: Operaciones de extremo de API de destinos de publicación
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
 source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 5%
+source-wordcount: '773'
+ht-degree: 4%
 
 ---
 
@@ -13,30 +13,30 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Solo debe utilizar este extremo de API si está enviando un destino producido (público) para que lo utilicen otros clientes Experience Platform. Si está creando un destino privado para su propio uso, no necesita enviar formalmente el destino mediante la API de publicación.
+>Solo debe utilizar este punto final de API si envía un destino productizado (público) para que lo utilicen otros clientes de Experience Platform. Si está creando un destino privado para su propio uso, no necesita enviar formalmente el destino mediante la API de publicación.
 
 >[!IMPORTANT]
 >
->**Punto de conexión de API**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
+>**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-En esta página se enumeran y describen todas las operaciones de API que puede realizar mediante la `/authoring/destinations/publish` extremo de API.
+Esta página enumera y describe todas las operaciones de API que puede realizar con la variable `/authoring/destinations/publish` Extremo de API.
 
-Después de configurar y probar el destino, puede enviarlo a Adobe para su revisión y publicación. Lectura [Enviar para revisión un destino creado en Destination SDK](./submit-destination.md) para todos los demás pasos que debe realizar como parte del proceso de envío de destino.
+Después de configurar y probar el destino, puede enviarlo al Adobe para que lo revise y publique. Leer [Enviar para revisión un destino creado en Destination SDK](./submit-destination.md) para todos los demás pasos, debe realizar como parte del proceso de envío de destino.
 
-Utilice el extremo de la API de destinos de publicación para enviar una solicitud de publicación cuando:
+Utilice el punto final de la API de destinos de publicación para enviar una solicitud de publicación cuando:
 
-* Como socio Destination SDK, desea que el destino productivo esté disponible en todas las organizaciones de Experience Platform para que lo utilicen todos los clientes Experience Platform;
-* Usted hace *cualquier actualización* a sus configuraciones. Las actualizaciones de configuración se reflejan en el destino solo después de enviar una nueva solicitud de publicación, que el equipo del Experience Platform aprueba.
+* Como socio Destination SDK, desea que el destino de productos esté disponible en todas las organizaciones de Experience Platform para que lo utilicen todos los clientes Experience Platform;
+* Usted hace *cualquier actualización* a sus configuraciones de. Las actualizaciones de configuración se reflejan en el destino solo después de enviar una nueva solicitud de publicación, que es aprobada por el equipo de Experience Platform.
 
 <!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
 ## Introducción a las operaciones de API de publicación de destino {#get-started}
 
-Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API de , incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
 
-## Enviar una configuración de destino para su publicación {#create}
+## Enviar una configuración de destino para publicarla {#create}
 
-Puede enviar una configuración de destino para su publicación realizando una solicitud de POST al `/authoring/destinations/publish` punto final.
+Puede enviar una configuración de destino para publicarla realizando una solicitud de POST a `/authoring/destinations/publish` punto final.
 
 **Formato de API**
 
@@ -46,7 +46,7 @@ POST /authoring/destinations/publish
 
 **Solicitud**
 
-La siguiente solicitud envía un destino para su publicación en todas las organizaciones configuradas por los parámetros proporcionados en la carga útil. La carga útil siguiente incluye todos los parámetros aceptados por la variable `/authoring/destinations/publish` punto final.
+La siguiente solicitud envía un destino para la publicación, entre las organizaciones configuradas por los parámetros proporcionados en la carga útil. La carga útil siguiente incluye todos los parámetros aceptados por el `/authoring/destinations/publish` punto final.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -64,10 +64,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
-| `destinationId` | Cadena | El ID de destino de la configuración de destino que envía para su publicación. Obtenga el ID de destino de una configuración de destino utilizando la variable [referencia de la API de configuración de destino](./destination-configuration-api.md#retrieve-list). |
-| `destinationAccess` | Cadena | Uso `ALL` para que su destino aparezca en el catálogo para todos los clientes Experience Platform. |
+| `destinationId` | Cadena | El ID de destino de la configuración de destino que envía para su publicación. Obtenga el ID de destino de una configuración de destino utilizando [referencia de API de configuración de destino](./destination-configuration-api.md#retrieve-list). |
+| `destinationAccess` | Cadena | Uso `ALL` para que el destino aparezca en el catálogo para todos los clientes de Experience Platform. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -75,7 +75,7 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la solicitud 
 
 ## Enumerar solicitudes de publicación de destino {#retrieve-list}
 
-Puede recuperar una lista de todos los destinos enviados para su publicación en la organización IMS realizando una solicitud de GET al `/authoring/destinations/publish` punto final.
+Puede recuperar una lista de todos los destinos enviados para su publicación para su organización IMS realizando una solicitud de GET a `/authoring/destinations/publish` punto final.
 
 **Formato de API**
 
@@ -85,7 +85,7 @@ GET /authoring/destinations/publish
 
 **Solicitud**
 
-La siguiente solicitud recupera la lista de destinos enviados para la publicación a los que tiene acceso, según la configuración de la organización y el simulador de pruebas de IMS.
+La siguiente solicitud recupera la lista de destinos enviados para la publicación a los que tiene acceso, según la organización de IMS y la configuración de la zona protegida.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Respuesta**
 
-La siguiente respuesta devuelve el estado HTTP 200 con una lista de destinos enviados para publicación a la que tiene acceso, según el ID de organización de IMS y el nombre del simulador de pruebas que ha utilizado. One `configId` corresponde a la solicitud de publicación de un destino.
+La siguiente respuesta devuelve el estado HTTP 200 con una lista de destinos enviados para la publicación a los que tiene acceso, en función del ID de organización de IMS y el nombre de la zona protegida que ha utilizado. Uno `configId` corresponde a la solicitud de publicación de un destino.
 
 ```json
 {
@@ -119,17 +119,17 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de destinos env
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
 | `destinationId` | Cadena | El ID de destino de la configuración de destino que ha enviado para su publicación. |
-| `publishDetailsList.configId` | Cadena | El ID exclusivo de la solicitud de publicación de destino para el destino enviado. |
-| `publishDetailsList.allowedOrgs` | Cadena | Devuelve las organizaciones de Experience Platform para las que está disponible el destino. <br> <ul><li> Para `"destinationType": "PUBLIC"`, este parámetro devuelve `"*"`, lo que significa que el destino está disponible para todas las organizaciones de Experience Platform.</li><li> Para `"destinationType": "DEV"`, este parámetro devuelve el ID de organización de la organización que utilizó para crear y probar el destino.</li></ul> |
-| `publishDetailsList.status` | Cadena | El estado de la solicitud de publicación de destino. Los valores posibles son `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinos con valor `PUBLISHED` están activas y pueden utilizarlas los clientes Experience Platform. |
-| `publishDetailsList.destinationType` | Cadena | Tipo de destino. Los valores pueden `DEV` y `PUBLIC`. `DEV` corresponde al destino de su organización de Experience Platform. `PUBLIC` corresponde al destino que ha enviado para su publicación. Piense en estas dos opciones en términos de Git, donde la variable `DEV` representa su rama de creación local y la `PUBLIC` representa la rama principal remota. |
-| `publishDetailsList.publishedDate` | Cadena | La fecha en la que se envió el destino para su publicación, en tiempo de época. |
+| `publishDetailsList.configId` | Cadena | El ID único de la solicitud de publicación de destino del destino enviado. |
+| `publishDetailsList.allowedOrgs` | Cadena | Devuelve las organizaciones Experience Platform para las que está disponible el destino. <br> <ul><li> Para `"destinationType": "PUBLIC"`, este parámetro devuelve `"*"`, lo que significa que el destino está disponible para todas las organizaciones Experience Platform.</li><li> Para `"destinationType": "DEV"`, este parámetro devuelve el ID de organización de la organización que utilizó para crear y probar el destino.</li></ul> |
+| `publishDetailsList.status` | Cadena | El estado de la solicitud de publicación de destino. Los valores posibles son `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinos con el valor `PUBLISHED` están activas y pueden utilizarlas los clientes Experience Platform. |
+| `publishDetailsList.destinationType` | Cadena | El tipo de destino. Los valores pueden ser `DEV` y `PUBLIC`. `DEV` corresponde al destino en su organización Experience Platform. `PUBLIC` corresponde al destino que ha enviado para su publicación. Piense en estas dos opciones en términos de Git, donde la variable `DEV` representa su rama de creación local y la `PUBLIC` representa la rama principal remota. |
+| `publishDetailsList.publishedDate` | Cadena | La fecha en la que se envió el destino para su publicación, en tiempo récord. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Obtener el estado de una solicitud de publicación de destino específica {#get}
 
-Puede recuperar información detallada sobre una solicitud de publicación de destino específica realizando una solicitud de GET al `/authoring/destinations/publish` y proporcionando el ID del destino para el que desea recuperar el estado de publicación.
+Puede recuperar información detallada sobre una solicitud de publicación de destino específica realizando una solicitud de GET a `/authoring/destinations/publish` y proporciona el ID del destino para el que desea recuperar el estado de publicación.
 
 **Formato de API**
 
@@ -189,10 +189,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 }
 ```
 
-## Gestión de errores de API
+## Administración de errores de API
 
-Los extremos de la API del Destination SDK siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cómo enviar una solicitud de publicación para su destino. El equipo de Adobe Experience Platform revisará su solicitud de publicación y le responderá con cinco días hábiles.
+Después de leer este documento, ahora sabe cómo enviar una solicitud de publicación para su destino. El equipo de Adobe Experience Platform revisará su solicitud de publicación y se pondrá en contacto con usted en un plazo de cinco días laborables.

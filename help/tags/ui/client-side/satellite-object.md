@@ -1,6 +1,6 @@
 ---
-title: Referencia de objeto satelital
-description: Obtenga información sobre el objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
+title: Referencia de objeto satélite
+description: Obtenga información acerca del objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
@@ -51,9 +51,9 @@ En el ejemplo proporcionado, si existe un elemento de datos con un nombre que co
 
 >[!NOTE]
 >
->Puede utilizar el porcentaje (`%`) para hacer referencia a variables para muchos campos de formulario en la implementación de etiquetas, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, al usar `%product%` accederá al valor del elemento de datos del producto o de la variable personalizada.
+>Puede usar el porcentaje (`%`) sintaxis para hacer referencia a variables para muchos campos de formulario en la implementación de etiquetas, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, con `%product%` accederá al valor del elemento de datos del producto o de la variable personalizada.
 
-Cuando un evento déclencheur una regla, puede pasar la regla correspondiente `event` a `_satellite.getVar()` así:
+Cuando un evento déclencheur una regla, puede pasar la regla correspondiente `event` objeto en `_satellite.getVar()` como se muestra:
 
 ```javascript
 // event refers to the calling rule's event
@@ -142,11 +142,11 @@ Registra una advertencia en la consola del explorador. El mensaje aparece indepe
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contiene funciones para leer y escribir cookies. Es una copia expuesta de la biblioteca de terceros js-cookie. Para obtener más información sobre el uso avanzado de esta biblioteca, consulte la [documentación de js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contiene funciones para leer y escribir cookies. Es una copia expuesta de la biblioteca de terceros js-cookie. Para obtener más información sobre un uso más avanzado de esta biblioteca, consulte la [documentación de js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
-### Configurar una cookie {#cookie-set}
+### Establecer una cookie {#cookie-set}
 
-Para configurar una cookie, use `_satellite.cookie.set()`.
+Para establecer una cookie, utilice `_satellite.cookie.set()`.
 
 **Código**
 
@@ -156,17 +156,17 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->En el [`setCookie`](#setCookie) para configurar cookies, el tercer argumento (opcional) de esta llamada a la función era un entero que indicaba el tiempo de caducidad de la cookie en días. En este nuevo método, se acepta un objeto &quot;attributes&quot; como tercer argumento. Para establecer una caducidad para una cookie mediante el nuevo método, debe proporcionar una variable `expires` en el objeto attributes y establézcalo en el valor deseado. Esto se muestra en el siguiente ejemplo.
+>En el viejo [`setCookie`](#setCookie) método para configurar cookies, el tercer argumento (opcional) de esta llamada a la función era un entero que indicaba el tiempo de caducidad de la cookie en días. En este nuevo método, se acepta un objeto &quot;attributes&quot; como tercer argumento. Para establecer una caducidad para una cookie mediante el nuevo método, debe proporcionar un `expires` en el objeto attributes y establézcalo en el valor deseado. Esto se muestra en el ejemplo siguiente.
 
 **Ejemplo**
 
-La siguiente llamada de función escribe una cookie que caduca en una semana.
+La siguiente llamada a la función escribe una cookie que caduca en una semana.
 
 ```javascript
 _satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
 ```
 
-### Recuperar una cookie {#cookie-get}
+### Recuperación de una cookie {#cookie-get}
 
 Para recuperar una cookie, utilice `_satellite.cookie.get()`.
 
@@ -178,13 +178,13 @@ _satellite.cookie.get(name: string) => string
 
 **Ejemplo**
 
-La siguiente llamada de función lee una cookie previamente establecida.
+La siguiente llamada a la función lee una cookie configurada anteriormente.
 
 ```javascript
 var product = _satellite.cookie.get('product');
 ```
 
-### Eliminar una cookie {#cookie-remove}
+### Eliminación de una cookie {#cookie-remove}
 
 Para eliminar una cookie, utilice `_satellite.cookie.remove()`.
 
@@ -196,7 +196,7 @@ _satellite.cookie.remove(name: string)
 
 **Ejemplo**
 
-La siguiente llamada de función elimina una cookie previamente establecida.
+La siguiente llamada a la función elimina una cookie configurada anteriormente.
 
 ```javascript
 _satellite.cookie.remove('product');
@@ -236,7 +236,7 @@ Este ejemplo muestra los valores de los objetos:
 
 ## `environment`
 
-Este objeto contiene información sobre el entorno en el que se implementa la biblioteca de tiempo de ejecución de etiquetas actual.
+Este objeto contiene información sobre el entorno en el que está implementada la biblioteca de tiempo de ejecución de etiquetas actual.
 
 **Código**
 
@@ -255,8 +255,8 @@ El objeto contiene las siguientes propiedades:
 
 | Propiedad | Descripción |
 | --- | --- |
-| `id` | ID del entorno. |
-| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging`y `production`. |
+| `id` | El ID del entorno. |
+| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging`, y `production`. |
 
 ## `notify`
 

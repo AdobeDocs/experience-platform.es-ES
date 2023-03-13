@@ -1,6 +1,6 @@
 ---
 title: Interactuar con Adobe Analytics
-description: Aprenda a utilizar la API de servidor de red perimetral para interactuar con Adobe Analytics.
+description: Aprenda a utilizar la API del servidor de red perimetral para interactuar con Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-La recopilación de datos de Adobe Analytics funciona traduciendo los datos XDM a un formato que Adobe Analytics pueda comprender. Varios campos XDM son [asignado automáticamente](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) a variables de Analytics.
+La recopilación de datos de Adobe Analytics funciona traduciendo datos XDM a un formato que Adobe Analytics puede comprender. Varios campos XDM son [asignado automáticamente](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) a variables de Analytics.
 
-También puede [asignación manual de valores XDM](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) a variables de Analytics heredadas.
+También puede [asignar valores XDM manualmente](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) a variables de Analytics heredadas.
 
-Para permitir que Adobe Analytics reciba datos de la API del servidor, debe [configurar el conjunto de datos](../edge/datastreams/overview.md#adobe-analytics-settings) para reenviar eventos a Adobe Analytics, introduzca la ID del grupo de informes en la página de configuración del conjunto de datos.
+Para permitir que Adobe Analytics reciba datos de la API del servidor, debe [configuración de la secuencia de datos](../edge/datastreams/overview.md#adobe-analytics-settings) para reenviar eventos a Adobe Analytics, introduzca el ID del grupo de informes en la página de configuración del conjunto de datos.
 
-![Configuración del almacén de datos de Adobe Analytics](assets/analytics-datastream.png)
+![Configuración de flujo de datos Adobe Analytics](assets/analytics-datastream.png)
 
 ## Interactuar con Adobe Analytics {#interacting-analytics}
 
@@ -31,9 +31,9 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Solicitud {#request}
 
-El ejemplo siguiente incluye varios valores asignados automáticamente desde la variable `_experience.analytics` grupo de campos. También incluye capas de datos basadas en JSON. Aunque estas capas de datos no se pueden asignar automáticamente, es posible utilizar [Preparación de datos para la recopilación de datos](../edge/datastreams/data-prep.md) para asignar estos valores a un esquema que contenga grupos de campos a los que se hace referencia anteriormente.
+El ejemplo siguiente incluye varios valores asignados automáticamente del `_experience.analytics` grupo de campos. También incluye capas de datos basadas en JSON. Aunque estas capas de datos no se pueden asignar automáticamente, es posible utilizar [Preparación de datos para la recopilación de datos](../edge/datastreams/data-prep.md) para asignar estos valores a un esquema que contenga los grupos de campos a los que se hace referencia anteriormente.
 
-Todos los valores que los usuarios asignen a esos campos se asignarán automáticamente a los valores correspondientes de Analytics, como si se incluyeran en la solicitud de API.
+Todos los valores que los usuarios asignen a esos campos se asignarán automáticamente a los valores de Analytics adecuados, como si se incluyeran en la solicitud de API.
 
 ```shell
 curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" \

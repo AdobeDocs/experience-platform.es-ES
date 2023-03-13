@@ -1,10 +1,11 @@
 ---
 title: Eliminación de recursos de una biblioteca
-description: Obtenga información sobre cómo eliminar recursos de una biblioteca de etiquetas.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información sobre cómo quitar recursos de una biblioteca de etiquetas.
+exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 87%
+ht-degree: 94%
 
 ---
 

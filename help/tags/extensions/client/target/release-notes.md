@@ -19,8 +19,8 @@ ht-degree: 94%
 
 ### Extensión de Adobe Target 0.11.4
 
-* Actualizado a at.js v1.8.3
-* Se ha añadido `SameSite=None` y `Secure` atributos al configurar cookies
+* Actualización a at.js v1.8.3
+* Añadido `SameSite=None` y `Secure` atributos al configurar cookies
 
 ## 24 de julio de 2020
 

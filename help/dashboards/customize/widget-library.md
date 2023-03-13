@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;interfaz de usuario;IU;paneles;tablero;perfiles;segmentos;destinos;uso de licencias
-title: Información general de la biblioteca de utilidades del panel
-description: Esta guía proporciona instrucciones paso a paso para acceder a la biblioteca de utilidades en Adobe Experience Platform.
+keywords: Experience Platform;interfaz de usuario;IU;tableros;tablero;perfiles;segmentos;destinos;uso de licencias
+title: Resumen de biblioteca de widgets del panel
+description: Esta guía proporciona instrucciones paso a paso para acceder a la biblioteca de widgets en Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
 source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
@@ -10,55 +10,55 @@ ht-degree: 0%
 
 ---
 
-# Información general de la biblioteca de utilidades
+# Resumen de biblioteca de widgets
 
-En la interfaz de usuario de Adobe Experience Platform, puede ver e interactuar con los datos de su organización mediante varios tableros. También puede actualizar ciertos tableros agregando utilidades a la vista del tablero.
+En la interfaz de usuario de Adobe Experience Platform, puede ver los datos de su organización e interactuar con ellos mediante varios paneles. También puede actualizar ciertos paneles si agrega widgets a la vista de panel.
 
-Esta guía proporciona instrucciones paso a paso para acceder al [!UICONTROL Biblioteca de utilidades] en Experience Platform, donde puede seleccionar utilidades estándar y crear utilidades personalizadas para personalizar la información que se muestra en los tableros.
+Esta guía proporciona instrucciones paso a paso para acceder a [!UICONTROL Biblioteca de widgets] en Experience Platform, donde puede seleccionar widgets estándar y crear widgets personalizados para personalizar la información que se muestra en los paneles.
 
-Para obtener información sobre cómo modificar la ubicación y el tamaño de las utilidades que ya se muestran en los paneles, consulte la [guía de modificación de tableros](modify.md).
+Para obtener información sobre cómo modificar la ubicación y el tamaño de los widgets que ya se muestran en los paneles, consulte la [guía de modificación de paneles](modify.md).
 
 >[!NOTE]
 >
->Los widgets mostrados en la variable [!UICONTROL Uso de licencias] tablero no se puede personalizar. Para obtener más información sobre este tablero único, lea la [documentación del panel de uso de licencias](../guides/license-usage.md).
+>Los widgets que se muestran en la [!UICONTROL Uso de licencias] el tablero no se puede personalizar. Para obtener más información sobre este tablero único, lea la [documentación del tablero de uso de licencias](../guides/license-usage.md).
 
 ## Acceso a la biblioteca de widgets {#access}
 
-Desde cualquier tablero (por ejemplo, el tablero Perfiles ), seleccione **[!UICONTROL Agregar utilidad]** para desplazarse directamente a la biblioteca de widgets donde puede [agregar widgets](#add-widgets) al tablero.
+En cualquier panel (por ejemplo, el panel Perfiles ), seleccione **[!UICONTROL Agregar widget]** para navegar directamente a la biblioteca de widgets donde puede [añadir widgets](#add-widgets) a su tablero.
 
-![La pestaña Información general del panel Perfiles con el botón Agregar utilidad resaltado.](../images/customization/profiles-overview-add-widget.png)
+![La pestaña Información general del panel Perfiles con el botón Añadir widget resaltado.](../images/customization/profiles-overview-add-widget.png)
 
-Select **[!UICONTROL Modificar tablero]** para mover, cambiar el tamaño o quitar widgets del tablero. Desde esta pantalla también puede seleccionar **[!UICONTROL Biblioteca de utilidades]** para navegar y [agregar widgets](#add-widgets). Para obtener información sobre cómo editar el tamaño y el diseño de los widgets, consulte la [Modificación de la documentación de los paneles](./modify.md).
+Seleccionar **[!UICONTROL Modificar tablero]** para mover, cambiar el tamaño o quitar widgets del tablero. En esta pantalla también puede seleccionar **[!UICONTROL Biblioteca de widgets]** para examinar y [añadir widgets](#add-widgets). Para aprender a editar el tamaño y el diseño de los widgets, consulte la [Modificación de la documentación de paneles](./modify.md).
 
 ![Información general del panel Perfiles con el panel Modificar resaltado.](../images/customization/modify-dashboard.png)
 
-Select **[!UICONTROL Biblioteca de utilidades]** para abrir la biblioteca de utilidades y ver todas las métricas estándar disponibles o empezar a crear utilidades personalizadas.
+Seleccionar **[!UICONTROL Biblioteca de widgets]** para abrir la biblioteca de widgets y ver todas las métricas estándar disponibles o empezar a crear widgets personalizados.
 
-![La vista del panel de modificación con la biblioteca de widgets resaltada.](../images/customization/widget-library-button.png)
+![La vista del panel de modificación con la biblioteca del widget resaltada.](../images/customization/widget-library-button.png)
 
-## Agregar widgets {#add-widgets}
+## Añadir widgets {#add-widgets}
 
-En el [!UICONTROL Biblioteca de utilidades], seleccione cualquier utilidad de la lista de widgets estándar o personalizados disponibles. Una marca de verificación en la esquina del widget indica su selección.
+Desde el [!UICONTROL Biblioteca de widgets], seleccione cualquier widget de la lista de widgets estándar o personalizados disponibles. Una marca de verificación en la esquina del widget indica su selección.
 
-![Biblioteca de widgets con un widget seleccionado y marca de verificación resaltada.](../images/customization/confirm-selected-widget-to-add.png)
+![La biblioteca de widgets con un widget seleccionado y una marca de verificación resaltadas.](../images/customization/confirm-selected-widget-to-add.png)
 
 ### Etiqueta en uso {#in-use-label}
 
-Las utilidades ya agregadas a un tablero tienen un [!UICONTROL En uso] se adjuntan a ellos cuando se visualizan en la biblioteca de utilidades. Esta etiqueta resalta los widgets que ya se han agregado al tablero para evitar la duplicación. Aunque, aún puede agregar la misma utilidad más de una vez si lo desea.
+Los widgets ya añadidos a un tablero tienen un [!UICONTROL En uso] etiqueta adjunta a ellos cuando se visualiza en la biblioteca de widgets. Esta etiqueta resalta los widgets que ya se han añadido al panel para evitar duplicaciones. Aunque, todavía puede añadir el mismo widget más de una vez si lo desea.
 
-![La biblioteca de utilidades con la etiqueta en uso resaltada.](../images/customization/in-use-label.png)
+![La biblioteca de widgets con la etiqueta en uso resaltada.](../images/customization/in-use-label.png)
 
-Una vez seleccionados todos los widgets necesarios, seleccione **[!UICONTROL Agregar widgets]** para confirmar la elección y añadir las utilidades al tablero.
+Una vez seleccionados todos los widgets necesarios, seleccione **[!UICONTROL Añadir widgets]** para confirmar su elección y añadir los widgets al panel.
 
 ## Widgets estándar y personalizados {#standard-and-custom}
 
-La variable [!UICONTROL Biblioteca de utilidades] contiene dos pestañas:
+El [!UICONTROL Biblioteca de widgets] contiene dos pestañas:
 
-* **[!UICONTROL Estándar]:** La pestaña estándar contiene las utilidades proporcionadas por Adobe. Puede actualizar los tableros utilizando cualquiera de estas métricas estándar. Para obtener más información sobre la adición de utilidades estándar al tablero, consulte la guía de [uso de widgets estándar en tableros](standard-widgets.md).
-* **[!UICONTROL Personalizado]:** La pestaña personalizada le permite crear y compartir widgets dentro de su organización. Para ver los pasos completos para crear sus propias utilidades, consulte la [guía de widgets personalizados para tableros](custom-widgets.md).
+* **[!UICONTROL Standard]:** La pestaña estándar contiene los widgets proporcionados por el Adobe. Puede actualizar los paneles mediante cualquiera de estas métricas estándar. Para obtener más información sobre cómo añadir widgets estándar al panel, consulte la guía de [uso de widgets estándar en paneles](standard-widgets.md).
+* **[!UICONTROL Personalizado]:** La pestaña personalizada permite crear y compartir widgets dentro de la organización. Para ver los pasos completos para crear sus propios widgets, consulte la [guía de widgets personalizados para paneles](custom-widgets.md).
 
-![Biblioteca de widgets con las pestañas estándar y personalizadas resaltadas.](../images/customization/widget-library.png)
+![La biblioteca de widgets con las pestañas estándar y personalizadas resaltadas.](../images/customization/widget-library.png)
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora puede acceder a la biblioteca de widgets dentro de la interfaz de usuario del Experience Platform. Para modificar el tamaño y la ubicación de las utilidades que aparecen en el panel, consulte la [guía de modificación de tableros](modify.md).
+Después de leer este documento, ahora puede acceder a la biblioteca de widgets en la interfaz de usuario de Experience Platform. Para modificar el tamaño y la ubicación de los widgets que aparecen en el panel, consulte la [guía de modificación de paneles](modify.md).

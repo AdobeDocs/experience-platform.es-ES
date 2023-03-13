@@ -1,30 +1,31 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Vantage de Teradata
-title: Crear una conexión de origen de la ventaja de Teradata en la interfaz de usuario
-description: Obtenga información sobre cómo crear una conexión de origen de Vantage de Teradata mediante la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: f140dac67ccd09ec1e6cab794f53e0090af55442
+keywords: Experience Platform;inicio;temas populares;Teradata Vantage
+title: Creación de una conexión de origen de Teradata Vantage en la interfaz de usuario
+description: Aprenda a crear una conexión de origen de Teradata Vantage mediante la interfaz de usuario de Adobe Experience Platform.
+exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
+source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 1%
 
 ---
 
-# (Beta) Cree un [!DNL Teradata Vantage] conexión de origen en la interfaz de usuario
+# (Beta) Cree una [!DNL Teradata Vantage] conexión de origen en la interfaz de usuario
 
 >[!NOTE]
 >
-> La variable [!DNL Teradata Vantage] el origen está en versión beta. Consulte la [Resumen de fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes con etiquetas beta.
+> El [!DNL Teradata Vantage] el origen está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
-Este tutorial proporciona los pasos para crear un [!DNL Teradata Vantage] conector de origen mediante la interfaz de usuario de Adobe Experience Platform.
+Este tutorial proporciona los pasos para crear una [!DNL Teradata Vantage] conector de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Recopilar las credenciales necesarias
+### Recopilar credenciales necesarias
 
 Para acceder a su [!DNL Teradata Vantage] en Platform, debe proporcionar el siguiente valor de autenticación:
 
@@ -36,28 +37,28 @@ Para obtener más información sobre cómo empezar, consulte esta [[!DNL Teradat
 
 ## Conecte su [!DNL Teradata Vantage] account
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Fuentes]** desde el panel de navegación izquierdo para acceder a la [!UICONTROL Fuentes] espacio de trabajo. La variable [!UICONTROL Catálogo] muestra una variedad de fuentes con las que puede crear una cuenta.
+En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la barra de búsqueda.
+Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar en la barra de búsqueda.
 
-En el [!UICONTROL Bases de datos] categoría, seleccione **[!UICONTROL Teradata Vantage]** y, a continuación, seleccione **[!UICONTROL Añadir datos]**.
+En el [!UICONTROL Bases de datos] categoría, seleccionar **[!UICONTROL Teradata Vantage]** y luego seleccione **[!UICONTROL Añadir datos]**.
 
 ![](../../../../images/tutorials/create/teradata/catalog.png)
 
-La variable **[!UICONTROL Conectarse al Teradata Vantage]** se abre. En esta página, puede usar credenciales nuevas o existentes.
+El **[!UICONTROL Conectar con Teradata Vantage]** página. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la opción [!DNL Teradata Vantage] cuenta con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+Para conectar una cuenta existente, seleccione la [!DNL Teradata Vantage] cuenta con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![](../../../../images/tutorials/create/teradata/existing.png)
 
 ### Nueva cuenta
 
-Si está utilizando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, indique un nombre, una descripción opcional y su [!DNL Teradata Vantage] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, permita que la nueva conexión se establezca durante algún tiempo.
+Si está usando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione un nombre, una descripción opcional y su [!DNL Teradata Vantage] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco para que se establezca la nueva conexión.
 
 ![](../../../../images/tutorials/create/teradata/new.png)
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de Vantage de Teradata. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Platform](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de Teradata Vantage. Ahora puede continuar con el siguiente tutorial y [configuración de un flujo de datos para introducir datos en Platform](../../dataflow/databases.md).

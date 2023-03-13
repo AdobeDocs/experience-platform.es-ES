@@ -8,7 +8,7 @@ ht-degree: 23%
 
 ---
 
-# Notas de la versión de la extensión Meta Pixel
+# Notas de la versión de Meta Pixel Extension
 
 >[!NOTE]
 >
@@ -18,11 +18,11 @@ ht-degree: 23%
 
 Versión 1.3.1
 
-* Se ha corregido un error de esquema de JSON que impedía que el campo de tipo de contenido se guardara correctamente.
+* Se ha corregido un error de esquema JSON que impedía que el campo de tipo de contenido se guardara correctamente.
 
 ## 10 de febrero de 2023
 
 Versión 1.3.0
 
 * Añada acciones para todos los eventos estándar enumerados aquí: [https://developers.facebook.com/docs/meta-pixel/reference#standard-events](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
-* Saque el ID de evento de la vista de configuración de la extensión y agregue campos de ID de evento a todas las acciones.
+* Mueva el ID de evento fuera de la vista de configuración de la extensión y añada campos de ID de evento a todas las acciones.

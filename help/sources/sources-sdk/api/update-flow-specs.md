@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
-title: Actualización de especificaciones de flujo mediante la API de servicio de flujo
-description: En el siguiente documento se proporcionan pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante la API de servicio de flujo para fuentes de autoservicio (SDK por lotes).
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+title: Actualización de especificaciones de flujo mediante la API de Flow Service
+description: El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante la API de Flow Service para orígenes de autoservicio (SDK por lotes).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -10,21 +10,21 @@ ht-degree: 2%
 
 ---
 
-# Actualización de las especificaciones de flujo mediante [!DNL Flow Service] API
+# Actualice las especificaciones de flujo utilizando [!DNL Flow Service] API
 
-Una vez que haya generado un nuevo ID de especificación de conexión, debe añadir este ID a una especificación de flujo para crear un flujo de datos.
+Una vez que haya generado un nuevo ID de especificación de conexión, debe agregar este ID a una especificación de flujo para crear un flujo de datos.
 
-Las especificaciones de flujo contienen información que define un flujo, incluidos los ID de conexión de origen y destino que admite, las especificaciones de transformación que deben aplicarse a los datos y los parámetros de programación necesarios para generar un flujo. Puede editar las especificaciones de flujo mediante el uso de `/flowSpecs` punto final.
+Las especificaciones de flujo contienen información que define un flujo, incluidos los ID de conexión de origen y destino que admite, las especificaciones de transformación que se deben aplicar a los datos y los parámetros de programación necesarios para generar un flujo. Puede editar las especificaciones de flujo mediante el `/flowSpecs` punto final.
 
-El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante el [!DNL Flow Service] API para fuentes de autoservicio (SDK por lotes).
+El siguiente documento proporciona pasos sobre cómo recuperar y actualizar especificaciones de flujo mediante el [!DNL Flow Service] API para orígenes de autoservicio (SDK por lotes).
 
 ## Primeros pasos
 
-Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
-## Buscar una especificación de flujo {#lookup}
+## Búsqueda de una especificación de flujo {#lookup}
 
-Fuentes creadas con `generic-rest-extension` todas utilizan la variable `RestStorageToAEP` especificación de flujo. Esta especificación de flujo se puede recuperar realizando una solicitud de GET al `/flowSpecs/` y proporcionando la variable `flowSpec.id` de `6499120c-0b15-42dc-936e-847ea3c24d72`.
+Fuentes creadas con `generic-rest-extension` todas las plantillas utilizan el `RestStorageToAEP` especificación de flujo. Esta especificación de flujo se puede recuperar realizando una solicitud de GET al `/flowSpecs/` extremo y proporciona el `flowSpec.id` de `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 **Formato de API**
 
@@ -233,11 +233,11 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo cons
 
 ## Actualización de una especificación de flujo {#update}
 
-Puede actualizar los campos de una especificación de conexión mediante una operación de PUT. Al actualizar una especificación de conexión mediante una solicitud del PUT, el cuerpo debe incluir todos los campos necesarios al crear una nueva especificación de conexión en una solicitud del POST.
+Puede actualizar los campos de una especificación de conexión mediante una operación de PUT. Al actualizar una especificación de conexión mediante una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al crear una nueva especificación de conexión en una solicitud de POST.
 
 >[!IMPORTANT]
 >
->Debe actualizar la lista de `sourceConnectionSpecIds` de la especificación de flujo que corresponde a un nuevo origen cada vez que se crea un nuevo origen. Esto garantiza que la nueva fuente sea compatible con una especificación de flujo existente, lo que le permite completar el proceso de creación de flujo de datos con la nueva fuente.
+>Debe actualizar la lista de `sourceConnectionSpecIds` de la especificación de flujo que corresponde a un nuevo origen cada vez que se crea un nuevo origen. Esto garantiza que la nueva fuente sea compatible con una especificación de flujo existente, lo que le permite completar el proceso de creación del flujo de datos con la nueva fuente.
 
 **Formato de API**
 
@@ -610,4 +610,4 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo cons
 
 ## Pasos siguientes
 
-Con la nueva especificación de conexión agregada a la especificación de flujo adecuada, ahora puede continuar probando y enviando el nuevo origen. Consulte la guía de [prueba y envío de una nueva fuente](./submit.md) para obtener más información.
+Con la nueva especificación de conexión añadida a la especificación de flujo adecuada, ahora puede continuar con la prueba y el envío del nuevo origen. Consulte la guía de [prueba y envío de un nuevo origen](./submit.md) para obtener más información.

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;identidad;identidad
 solution: Experience Platform
 title: Enumerar asignaciones de identidad
-description: Una asignación es una colección de todas las identidades de un clúster, para un espacio de nombres especificado.
+description: Una asignación es una colección de todas las identidades de un clúster para un área de nombres especificada.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 4%
 
 # Enumerar asignaciones de identidad
 
-Una asignación es una colección de todas las identidades de un clúster, para un espacio de nombres especificado.
+Una asignación es una colección de todas las identidades de un clúster para un área de nombres especificada.
 
 ## Obtener una asignación de identidad para una sola identidad
 
-Dada una identidad, recupere todas las identidades relacionadas del mismo espacio de nombres que el representado por la identidad en la solicitud.
+Dada una identidad, recupere todas las identidades relacionadas del mismo área de nombres que la representada por la identidad en la solicitud.
 
 **Formato de API**
 
@@ -27,7 +27,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Solicitud**
 
-Opción 1: Proporcione la identidad como área de nombres (`nsId`, por ID) y valor de ID (`id`).
+Opción 1: Proporcione la identidad como área de nombres (`nsId`, por ID) y el valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -38,7 +38,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 2: Proporcione la identidad como área de nombres (`ns`, por nombre) y valor de ID (`id`).
+Opción 2: Proporcione la identidad como área de nombres (`ns`, por nombre) y el valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -49,7 +49,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 3: Proporcione la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que cubre [obtención del XID para una identidad](./list-native-id.md).
+Opción 3: proporcionar la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata [obtención del XID de una identidad](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -62,11 +62,11 @@ curl -X GET \
 
 ### Obtener asignaciones de identidad para varias identidades
 
-Utilice la variable `POST` como equivalente de lote de `GET` método descrito anteriormente para recuperar asignaciones para varias identidades.
+Utilice el `POST` como equivalente de lote del método `GET` método descrito anteriormente para recuperar asignaciones para varias identidades.
 
 >[!NOTE]
 >
->La solicitud no debe indicar más de un máximo de 1000 identidades. Las solicitudes que superen las 1000 identidades resultarán en un código de estado de 400.
+>La solicitud no debe indicar más de 1000 identidades. Las solicitudes que superen las 1000 identidades resultarán en 400 códigos de estado.
 
 **Formato de API**
 
@@ -85,7 +85,7 @@ Opción 1: Proporcione una lista de XID para los que recuperar asignaciones.
 }
 ```
 
-Opción 2: Proporcione una lista de identidades como ID compuestos, donde cada una asigna un nombre al valor de ID y al área de nombres por ID de área de nombres. Este ejemplo demuestra el uso de este método al sobrescribir el valor predeterminado `graph-type` de &quot;Private Graph&quot;.
+Opción 2: Proporcione una lista de identidades como ID compuestos, donde cada una de ellas nombra el valor de ID y el área de nombres por ID de área de nombres. En este ejemplo se muestra cómo utilizar este método al sobrescribir el predeterminado `graph-type` de &quot;Private Graph&quot;.
 
 ```shell
 {
@@ -144,7 +144,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Si no se encontraron identidades relacionadas con la entrada proporcionada, se muestra una `HTTP 204` el código de respuesta se devuelve sin contenido.
+Si no se encontraron identidades relacionadas con la entrada proporcionada, una `HTTP 204` el código de respuesta se devuelve sin contenido.
 
 **Respuesta**
 
@@ -182,9 +182,9 @@ Si no se encontraron identidades relacionadas con la entrada proporcionada, se m
 }
 ```
 
-- `lastAssociationTime`: Marca de fecha y hora en la que la identidad de entrada se asoció por última vez a esta identidad.
-- `regions`: Proporciona la variable `regionId` y `lastAssociationTime` por dónde se vio la identidad.
+- `lastAssociationTime`: Marca de tiempo en la que la identidad de entrada se asoció por última vez a esta identidad.
+- `regions`: proporciona el `regionId` y `lastAssociationTime` para ver dónde se vio la identidad.
 
 ## Pasos siguientes
 
-Continúe con el siguiente tutorial a [listar espacios de nombres disponibles](./list-namespaces.md).
+Continúe con el siguiente tutorial para [enumerar áreas de nombres disponibles](./list-namespaces.md).

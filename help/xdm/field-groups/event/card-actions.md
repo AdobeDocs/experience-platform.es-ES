@@ -1,33 +1,34 @@
 ---
-title: Card Actions Schema Field Group
-description: This document provides an overview of the Card Actions schema field group.
-source-git-commit: eaea904ddda6b7ffee6f52cd4af897c2a8885714
+title: Grupo de campos de esquema de acciones de tarjeta
+description: Este documento proporciona información general sobre el grupo de campos de esquema Acciones de tarjeta.
+exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 8%
+source-wordcount: '190'
+ht-degree: 6%
 
 ---
 
-# 
+# [!UICONTROL Acciones de tarjeta] grupo de campos de esquema
 
-[[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) `personalFinances.cardActions`
+[!UICONTROL Acciones de tarjeta] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). El grupo de campos proporciona un solo `personalFinances.cardActions` a un esquema, que captura detalles sobre una acción de tarjeta, como el tipo de tarjeta, el estado de activación y el estado de bloqueo.
 
 ![](../../images/field-groups/card-actions.png)
 
-| Propiedad | Data type | Descripción |
+| Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `cardActivated` | Número entero | Tracks when the card has been successfully activated. |
-| `cardActivationStart` | Número entero | Tracks when the card activation process has been started. |
-| `cardCancelled` | Número entero | Tracks when a card has been cancelled. |
-| `cardControlsLocked` | Número entero | Tracks when a card&#39;s controls have been locked. |
-| `cardControlsUnlocked` | Número entero | Tracks when a card&#39;s controls have been unlocked. |
-| `cardID` | Cadena | The identifier for the card being activated. This value might be different from the card number. |
-| `cardLocked` | Número entero | Tracks when a card has been locked. |
-| `cardOrderNew` | Número entero | Tracks when a card has been requested. |
-| `cardOrderType` | Cadena | The type of card order associated with a card order event. |
-| `cardType` | Cadena | The type of card. |
-| `cardUnlocked` | Número entero | Tracks when a card has been unlocked. |
+| `cardActivated` | Número entero | Registra cuándo se ha activado correctamente la tarjeta. |
+| `cardActivationStart` | Número entero | Registra cuándo se ha iniciado el proceso de activación de la tarjeta. |
+| `cardCancelled` | Número entero | Registra cuándo se ha cancelado una tarjeta. |
+| `cardControlsLocked` | Número entero | Registra cuándo se han bloqueado los controles de una tarjeta. |
+| `cardControlsUnlocked` | Número entero | Registra cuándo se han desbloqueado los controles de una tarjeta. |
+| `cardID` | Cadena | El identificador de la tarjeta que se está activando. Este valor puede ser diferente del número de tarjeta. |
+| `cardLocked` | Número entero | Registra cuándo se ha bloqueado una tarjeta. |
+| `cardOrderNew` | Número entero | Registra cuándo se ha solicitado una tarjeta. |
+| `cardOrderType` | Cadena | El tipo de pedido de tarjeta asociado con un evento de pedido de tarjeta. |
+| `cardType` | Cadena | El tipo de tarjeta. |
+| `cardUnlocked` | Número entero | Registra cuándo se ha desbloqueado una tarjeta. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-[](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json)
+Para obtener más información sobre el grupo de campos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).

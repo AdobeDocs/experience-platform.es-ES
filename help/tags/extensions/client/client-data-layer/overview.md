@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Instalación
 
-Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario del Experience Platform o la interfaz de usuario de recopilación de datos y seleccione Capa de datos del cliente de Adobe.
+Para instalar la extensión, vaya al catálogo de extensiones en la IU del Experience Platform o en la IU de recopilación de datos y seleccione Capa de datos del cliente de Adobe.
 
 ![Vista de extensión ACDL en el catálogo](./images/catalog.png)
 

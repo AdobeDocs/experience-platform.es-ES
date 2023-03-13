@@ -1,63 +1,63 @@
 ---
-keywords: publicidad; la oficina de comercio; oficina de publicidad
-title: La conexión con el mostrador de comercio
-description: Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de redireccionamiento y segmentación de audiencia en distintas fuentes de inventario de dispositivos móviles, vídeo y visualización.
+keywords: publicidad; mostrador comercial; mostrador comercial de publicidad
+title: La conexión con la Oficina de Comercio
+description: Trade Desk es una plataforma de autoservicio para que los compradores de anuncios puedan ejecutar campañas digitales de retargeting y segmentación de audiencia en pantallas, vídeos y fuentes de inventario móviles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 3%
+source-wordcount: '670'
+ht-degree: 2%
 
 ---
 
-# [!DNL The Trade Desk] connection
+# [!DNL The Trade Desk] conexión
 
 ## Información general {#overview}
 
-[!DNL The Trade Desk] destination le ayuda a enviar datos de perfil a [!DNL The Trade Desk].
+[!DNL The Trade Desk] El destino le ayuda a enviar datos de perfil a [!DNL The Trade Desk].
 
-[!DNL The Trade Desk] es una plataforma de autoservicio para que los compradores de publicidades ejecuten campañas digitales con objetivo de audiencia y redireccionamiento a través de las fuentes de inventario de dispositivos móviles, vídeo y visualización.
+[!DNL The Trade Desk] es una plataforma de autoservicio para que los compradores de anuncios puedan ejecutar campañas digitales de retargeting y segmentación de audiencia en pantallas, vídeos y fuentes de inventario móviles.
 
 Para enviar datos de perfil a [!DNL Trade Desk], primero debe conectarse al destino.
 
 ## Casos de uso {#use-cases}
 
-Como especialista en marketing, quiero poder usar segmentos creados a partir de [!DNL Trade Desk IDs] o ID de dispositivo para crear campañas digitales con objetivo de audiencia o redireccionamiento.
+Como experto en marketing, quiero poder utilizar segmentos creados a partir de [!DNL Trade Desk IDs] o ID de dispositivo para crear campañas digitales de retargeting o segmentación de audiencia.
 
-## Identidades compatibles {#supported-identities}
+## Identidades admitidas {#supported-identities}
 
 [!DNL The Trade Desk] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
-| Identidad de Target | Descripción |
+| Identidad de destino | Descripción |
 |---|---|
 | GAID | [!DNL Google Advertising ID] |
 | IDFA | [!DNL Apple ID for Advertisers] |
-| El identificador del servicio de asistencia al cliente | ID del anunciante en la plataforma de asistencia técnica |
+| ID de la oficina de comercio | ID del anunciante en la plataforma de Trade Desk |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Tipo de exportación y frecuencia {#export-type-frequency}
+## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) al destino. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) al destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Requisitos previos {#prerequisites}
 
 >[!IMPORTANT]
 >
->Si desea crear su primer destino con [!DNL The Trade Desk] y no han habilitado [Funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si ha configurado anteriormente [!DNL The Trade Desk] integraciones en Audience Manager, las sincronizaciones de ID que ha configurado se transfieren a Platform.
+>Si quiere crear su primer destino con [!DNL The Trade Desk] y no han habilitado el [Funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el Servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el Servicio de consultoría de Adobe o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si había configurado anteriormente [!DNL The Trade Desk] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
 
-## Conectarse al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -65,20 +65,20 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 
-* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: Su [!DNL Trade Desk] [!UICONTROL ID de cuenta].
-* **[!UICONTROL Ubicación del servidor]**: Pregunte a su [!DNL Trade Desk] representa qué servidor regional debe utilizar. Estos son los servidores regionales disponibles entre los que puede elegir:
+* **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
+* **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL ID de cuenta]**: su [!DNL Trade Desk] [!UICONTROL ID de cuenta].
+* **[!UICONTROL Ubicación del servidor]**: pregunte a su [!DNL Trade Desk] representa qué servidor regional debe utilizar. Estos son los servidores regionales disponibles entre los que puede elegir:
    * **[!UICONTROL Europa]**
    * **[!UICONTROL Singapur]**
    * **[!UICONTROL Tokio]**
-   * **[!UICONTROL Norteamérica Oriental]**
-   * **[!UICONTROL Norteamérica oeste]**
+   * **[!UICONTROL Este de Norteamérica]**
+   * **[!UICONTROL Oeste de Norteamérica]**
    * **[!UICONTROL América Latina]**
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
@@ -86,18 +86,18 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
-En el [Programación de segmentos](../../ui/activate-segment-streaming-destinations.md#scheduling) , debe asignar manualmente los segmentos a su ID correspondiente o a su nombre descriptivo en la plataforma de destino.
+En el [Programación de segmentos](../../ui/activate-segment-streaming-destinations.md#scheduling) , debe asignar manualmente los segmentos a su ID correspondiente o nombre descriptivo en la plataforma de destino.
 
-Al asignar segmentos, le recomendamos que utilice el nombre del segmento de Platform o una forma más corta de él, para facilitar su uso. Sin embargo, el ID de segmento o el nombre de su destino no necesitan coincidir con el de su cuenta de Platform. El destino reflejará cualquier valor que inserte en el campo de asignación.
+Al asignar segmentos, le recomendamos que utilice el nombre del segmento de Platform o una forma más corta de él, para facilitar el uso. Sin embargo, el ID o el nombre del segmento en su destino no tienen por qué coincidir con el de su cuenta de Platform. El destino reflejará cualquier valor que inserte en el campo de asignación.
 
-Si utiliza varias asignaciones de dispositivo (ID de cookie, [!DNL IDFA], [!DNL GAID]), asegúrese de utilizar el mismo valor de asignación para las tres asignaciones. [!DNL The Trade Desk] agregarán todos ellos en un solo segmento, con un desglose a nivel de dispositivo.
+Si utiliza varias asignaciones de dispositivos (ID de cookie, [!DNL IDFA], [!DNL GAID]), asegúrese de utilizar el mismo valor de asignación para las tres asignaciones. [!DNL The Trade Desk] Los agregará todos en un solo segmento, con un desglose por dispositivo.
 
 ![ID de asignación de segmentos](../../assets/common/segment-mapping-id.png)
 
 ## Datos exportados {#exported-data}
 
-Para verificar si los datos se han exportado correctamente a [!DNL The Trade Desk] destino, compruebe su [!DNL Trade Desk] cuenta. Si la activación se ha realizado correctamente, las audiencias se rellenan en la cuenta.
+Para comprobar si los datos se han exportado correctamente a [!DNL The Trade Desk] destino, compruebe su [!DNL Trade Desk] cuenta. Si la activación se ha realizado correctamente, las audiencias se rellenan en la cuenta.

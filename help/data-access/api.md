@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;acceso a datos;python sdk;spark sdk;api de acceso a datos;exportar;Exportar
+keywords: Experience Platform;inicio;temas populares;acceso a datos;sdk de python;spark sdk;api de acceso a datos;exportar;Exportar
 solution: Experience Platform
 title: Guía de API de acceso a datos
-description: La API de acceso a datos admite Adobe Experience Platform al proporcionar a los desarrolladores una interfaz RESTful centrada en la capacidad de detección y accesibilidad de conjuntos de datos ingestados dentro de Experience Platform.
+description: La API de acceso a datos es compatible con Adobe Experience Platform al proporcionar a los desarrolladores una interfaz RESTful centrada en la detección y accesibilidad de conjuntos de datos ingeridos dentro de Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,17 +13,17 @@ ht-degree: 6%
 
 # Guía de API de acceso a datos
 
-La API de acceso a datos admite Adobe Experience Platform al proporcionar a los usuarios una interfaz RESTful centrada en la capacidad de detección y accesibilidad de conjuntos de datos ingestados dentro de [!DNL Experience Platform].
+La API de acceso a datos es compatible con Adobe Experience Platform al proporcionar a los usuarios una interfaz RESTful centrada en la detección y accesibilidad de conjuntos de datos ingeridos en [!DNL Experience Platform].
 
 ![Acceso a datos en el Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## Referencia de especificación de API
 
-La documentación de referencia de la API Swagger se puede encontrar [here](https://www.adobe.io/experience-platform-apis/references/data-access/).
+La documentación de referencia de la API de Swagger se encuentra aquí [aquí](https://www.adobe.io/experience-platform-apis/references/data-access/).
 
 ## Terminología
 
-Descripción de algunos términos de uso común en este documento.
+Descripción de algunos términos de uso común de este documento.
 
 | Término | Descripción |
 | ----- | ------------ |
@@ -32,7 +32,7 @@ Descripción de algunos términos de uso común en este documento.
 
 ## Recuperar lista de archivos dentro de un lote
 
-Mediante el uso de un identificador de lote (batchID), la API de acceso a datos puede recuperar una lista de archivos pertenecientes a ese lote en particular.
+Mediante un identificador de lote (batchID), la API de acceso a datos puede recuperar una lista de archivos que pertenecen a ese lote en particular.
 
 **Formato de API**
 
@@ -93,18 +93,18 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-La variable `"data"` contiene una lista de todos los archivos dentro del lote especificado. Cada archivo devuelto tiene su propio ID único (`{FILE_ID}`) incluido dentro de la variable `"dataSetFileId"` campo . Este ID único se puede utilizar para acceder al archivo o descargarlo.
+El `"data"` contiene una lista de todos los archivos del lote especificado. Cada archivo devuelto tiene su propio ID único (`{FILE_ID}`) incluido en `"dataSetFileId"` field. A continuación, este ID único se puede utilizar para acceder al archivo o descargarlo.
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `data.dataSetFileId` | El ID de archivo de cada archivo del lote especificado. |
-| `data._links.self.href` | La dirección URL para acceder al archivo. |
+| `data.dataSetFileId` | Id. de archivo para cada archivo del lote especificado. |
+| `data._links.self.href` | URL para acceder al archivo. |
 
 ## Acceso y descarga de archivos dentro de un lote
 
-Mediante el uso de un identificador de archivo (`{FILE_ID}`), la API de acceso a datos se puede utilizar para acceder a detalles específicos de un archivo, como su nombre, tamaño en bytes y un vínculo para descargar.
+Utilizando un identificador de archivo (`{FILE_ID}`), la API de acceso a datos se puede utilizar para acceder a detalles específicos de un archivo, incluido su nombre, tamaño en bytes y un vínculo para descargar.
 
-La respuesta contendrá una matriz de datos. Dependiendo de si el archivo señalado por el ID es un archivo individual o un directorio, la matriz de datos devuelta puede contener una sola entrada o una lista de archivos pertenecientes a ese directorio. Cada elemento de archivo incluirá los detalles del archivo.
+La respuesta contendrá una matriz de datos. Dependiendo de si el archivo al que apunta el ID es un archivo individual o un directorio, la matriz de datos devuelta puede contener una sola entrada o una lista de archivos pertenecientes a ese directorio. Cada elemento de archivo incluye los detalles del archivo.
 
 **Formato de API**
 
@@ -114,7 +114,7 @@ GET /files/{FILE_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{FILE_ID}` | Igual a la variable `"dataSetFileId"`, el ID del archivo al que se va a acceder. |
+| `{FILE_ID}` | Igual a `"dataSetFileId"`, el ID del archivo al que se va a acceder. |
 
 **Solicitud**
 
@@ -150,9 +150,9 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `data.name` | Nombre del archivo (por ejemplo, profiles.csv). |
+| `data.name` | Nombre del archivo (p. ej. profiles.csv). |
 | `data.length` | Tamaño del archivo (en bytes). |
-| `data._links.self.href` | La URL para descargar el archivo. |
+| `data._links.self.href` | Dirección URL para descargar el archivo. |
 
 **Respuesta de directorio**
 
@@ -193,16 +193,16 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 }
 ```
 
-Cuando se devuelve un directorio, contiene una matriz de todos los archivos dentro del directorio.
+Cuando se devuelve un directorio, contiene una matriz de todos los archivos del directorio.
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `data.name` | Nombre del archivo (por ejemplo, profiles.csv). |
-| `data._links.self.href` | La URL para descargar el archivo. |
+| `data.name` | Nombre del archivo (p. ej. profiles.csv). |
+| `data._links.self.href` | Dirección URL para descargar el archivo. |
 
-## Acceso al contenido de un archivo
+## Acceder al contenido de un archivo
 
-La variable [!DNL Data Access] La API también se puede utilizar para acceder al contenido de un archivo. Esto se puede utilizar para descargar el contenido en una fuente externa.
+El [!DNL Data Access] API también se puede utilizar para acceder al contenido de un archivo. A continuación, se puede utilizar para descargar el contenido en una fuente externa.
 
 **Formato de API**
 
@@ -212,7 +212,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{FILE_NAME}` | Nombre del archivo al que está intentando acceder. |
+| `{FILE_NAME}` | El nombre del archivo al que intenta acceder. |
 
 **Solicitud**
 
@@ -227,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `{FILE_ID}` | ID del archivo dentro de un conjunto de datos. |
-| `{FILE_NAME}` | El nombre completo del archivo (por ejemplo, profiles.csv). |
+| `{FILE_NAME}` | El nombre completo del archivo (por ejemplo profiles.csv). |
 
 **Respuesta**
 
@@ -239,4 +239,4 @@ Para obtener más ejemplos, consulte la [tutorial de acceso a datos](tutorials/d
 
 ## Suscripción a eventos de ingesta de datos
 
-[!DNL Platform] permite la suscripción de eventos específicos de alto valor mediante la variable [Consola de Adobe Developer](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a los eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial en [suscripción a notificaciones de ingesta de datos](../ingestion/quality/subscribe-events.md) para obtener más información.
+[!DNL Platform] ofrece la posibilidad de suscribirse a eventos específicos de alto valor a través del [Consola de Adobe Developer](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a notificaciones de ingesta de datos](../ingestion/quality/subscribe-events.md) para obtener más información.

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;servicio de consulta;servicio de consulta;consulta
-title: Caso de uso de ejemplo para el servicio de consulta de Adobe Experience Platform
-description: Un ejemplo completo para demostrar la versatilidad y las ventajas del servicio de consulta de Adobe Experience Platform.
+keywords: Experience Platform;servicio de consultas;servicio de consultas;consulta
+title: Ejemplo de caso de uso para el servicio de consultas de Adobe Experience Platform
+description: Un ejemplo completo para demostrar la versatilidad y las ventajas del servicio de consultas de Adobe Experience Platform.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
@@ -12,27 +12,27 @@ ht-degree: 2%
 
 # Ejemplo de caso de uso para Adobe Experience Platform [!DNL Query Service]
 
-Este documento y la presentación de vídeo adjunta proporcionan un flujo de trabajo completo que muestra cómo Adobe Experience Platform [!DNL Query Service] beneficia las perspectivas empresariales estratégicas de su organización. Con un caso de uso de abandono de exploración como ejemplo, esta guía ilustra los siguientes conceptos clave:
+Este documento y el vídeo que lo acompaña proporcionan un flujo de trabajo completo de alto nivel que muestra cómo Adobe Experience Platform [!DNL Query Service] beneficia las perspectivas empresariales estratégicas de su organización. Utilizando un caso de uso de abandono del explorador como ejemplo, esta guía ilustra los siguientes conceptos clave:
 
 * La importancia clave del procesamiento de datos para maximizar el potencial de Adobe Experience Platform.
-* Formas de crear la consulta en función de la arquitectura de datos existente.
-* Garantizar la calidad de los datos que satisfaga sus necesidades y métodos para mitigar cualquier déficit.
-* Proceso para programar una consulta para que se ejecute con una frecuencia establecida para su uso descendente en segmentación y destinos para personalización.
-* La facilidad con la que los especialistas en marketing incluyen atributos derivados en sus segmentos a través del poder de [!DNL Query Service].
+* Formas de generar la consulta en función de la arquitectura de datos existente.
+* Garantice una calidad de datos que satisfaga sus necesidades y métodos para mitigar cualquier déficit.
+* Proceso para programar una consulta de modo que se ejecute con una frecuencia determinada para su uso descendente en la segmentación y en los destinos de personalización.
+* La facilidad con la que los especialistas en marketing pueden incluir atributos derivados en sus segmentos a través del poder de [!DNL Query Service].
 
 ## Objetivos {#objectives}
 
-Esta demostración de flujo de trabajo se basa en varios servicios de Adobe Experience Platform. Si desea continuar, se recomienda comprender bien las siguientes funciones y servicios:
+Esta demostración del flujo de trabajo se basa en varios servicios de Adobe Experience Platform. Si desea realizar el seguimiento, se recomienda tener una buena comprensión de las siguientes funciones y servicios:
 
-* La variable [conceptos básicos de la composición de esquema del Modelo de datos de experiencia (XDM)](../../xdm/schema/composition.md)
-* Cómo [crear conjuntos de datos e ingerir datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es)
-* Cómo [ingesta de datos mediante el conector de origen de Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=es)
+* El [Conceptos básicos de la composición de esquemas del Modelo de datos de experiencia (XDM)](../../xdm/schema/composition.md)
+* Cómo: [creación de conjuntos de datos e ingesta de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es)
+* Cómo: [ingesta de datos mediante el conector de origen de Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=es)
 * [Segmentación](../../segmentation/home.md)
 * [Destinos](../../destinations/home.md)
 
-El ejemplo de abandono de exploración se centra en el uso del Adobe [!DNL Analytics] datos para crear una audiencia procesable concreta. La audiencia se refina para incluir a todos los clientes que han explorado el sitio web en los últimos cuatro días pero no han realizado una compra. A continuación, cada perfil de la audiencia se segmenta con el SKU de precio más alto que resulta del patrón de comportamiento del cliente.
+El ejemplo de abandono de exploración se centra en el uso del Adobe [!DNL Analytics] datos para crear una audiencia procesable concreta. La audiencia se refina para incluir a todos los clientes que navegaron por el sitio web en los últimos cuatro días, pero que no realizaron una compra. A continuación, cada perfil de la audiencia se segmenta con el SKU de precio más alto resultante del patrón de comportamiento del cliente.
 
-La consulta en sí es muy prescriptiva y solo incluye datos que cumplan los criterios de caso de uso para la definición del segmento. Esto mejora el rendimiento al minimizar la cantidad de [!DNL Analytics] datos que se están procesando. También ordena los datos por precio de más alto a más bajo y elige el SKU de mayor precio que estaba explorando el usuario.
+La propia consulta es muy prescriptiva y solo incluye datos que cumplen los criterios del caso de uso para la definición del segmento. Esto mejora el rendimiento al minimizar la cantidad de [!DNL Analytics] datos en proceso. También ordena los datos por precio de mayor a menor y elige el SKU con precio más alto que el usuario estaba explorando.
 
 La consulta utilizada en la presentación se puede ver a continuación:
 
@@ -57,25 +57,25 @@ order by price desc)D;
 
 ## [!DNL Query Service] ejemplo de abandono de exploración con adobe analytics {#video-example}
 
-La presentación de vídeo que se muestra a continuación ofrece un caso de uso holístico y real para sus datos de Experience Platform centrados en [!DNL Query Service] e integraciones de análisis de Adobe.
+La presentación de vídeo que se muestra a continuación proporciona un caso de uso integral en el mundo real para los datos de sus Experience Platform centrados en [!DNL Query Service] y integraciones de análisis de Adobe.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
 ## Ventajas de [!DNL Query Service] {#benefits}
 
-Las funciones proporcionadas por [!DNL Query Service] sirve para muchos fines. Puede utilizarlo para dar cabida a la lógica compleja de la segmentación, para calcular varios atributos personalizados para utilizarlos de forma descendente o para simplificar en gran medida la forma en que genera sus segmentos.
+Las funciones que proporciona [!DNL Query Service] tiene muchos propósitos. Puede utilizarla para dar cabida a una lógica compleja para la segmentación, para calcular varios atributos personalizados para usarlos en fases posteriores o para simplificar en gran medida la forma de crear los segmentos.
 
-[!DNL Query Service] le permite incluir restricciones en sus consultas para simplificar el proceso de creación de segmentos. Esto mejora la calidad de los datos al garantizar que los datos adecuados se califiquen para los segmentos y crea audiencias más precisas. Mantener la calidad de la consulta resulta en una audiencia precisa y ayuda con la fiabilidad de los datos. También puede guardar la audiencia creando esquemas y tablas personalizadas basadas en atributos derivados de la consulta. Se puede habilitar una tabla personalizada para Perfil y se pueden usar estos puntos de datos para la segmentación y personalización. Esta función ayuda a los especialistas en marketing que desean crear una audiencia clara de personas.
+[!DNL Query Service] permite incluir restricciones en las consultas para simplificar el proceso de creación de segmentos. Esto mejora la calidad de los datos al garantizar que los datos adecuados cumplen los requisitos de sus segmentos y crea audiencias más precisas. Mantener la calidad de la consulta resulta en una audiencia precisa y ayuda con la fiabilidad de los datos. También puede guardar la audiencia creando esquemas y tablas personalizadas basadas en atributos derivados de la consulta. Se puede habilitar una tabla personalizada para el perfil y puede utilizar estos puntos de datos para la segmentación y personalización. Esta función ayuda a los especialistas en marketing que desean crear una audiencia nítida de personas.
 
-Además, al incluir en la consulta lógica que cumpla cualquier condición recurrente o estática, [!DNL Query Service] extrae la carga de la segmentación detallada.
+Además, al incluir en la consulta lógica que cumpla cualquier condición recurrente o estática, [!DNL Query Service] extrae la carga de una segmentación detallada.
 
-Adobe Experience Platform proporciona un repositorio de datos y las herramientas necesarias para activar los datos de una manera eficiente y fiable. Al mantener los datos dentro de Platform, le permite derivar atributos mientras ejecuta otros procesos y elimina la necesidad de exportar datos a herramientas de terceros para la manipulación y el procesamiento. Estos gastos generales de procesamiento pueden afectar en gran medida a la cronología de un proyecto cuando se trata de cientos de atributos o campañas. Esto proporciona a los especialistas en marketing una sola ubicación para acceder a sus datos y crear campañas, así como un medio muy dinámico de segmentar y personalizar sus mensajes.
+Adobe Experience Platform proporciona un repositorio de datos y las herramientas necesarias para activar los datos de una manera eficiente y fiable. Al mantener los datos dentro de Platform, le permite derivar atributos mientras ejecuta otros procesos y elimina la necesidad de exportar datos a herramientas de terceros para su manipulación y procesamiento. Estos gastos generales de procesamiento pueden afectar en gran medida a la cronología de un proyecto al tratar con cientos de atributos o campañas. Esto proporciona a los especialistas en marketing una ubicación única para acceder a sus datos y crear campañas, así como un medio muy dinámico de segmentar y personalizar sus mensajes.
 
 ## Pasos siguientes
 
-Al leer este documento, ahora debe comprender cómo [!DNL Query Service] afecta no solo a la calidad de sus datos y a la facilidad de segmentación, sino también a su importancia dentro de la arquitectura de datos para todo el flujo de trabajo de principio a fin. Para ejemplos SQL más aplicables, utilice Adobe Analytics con [!DNL Query Service], consulte la [Caso de uso de variables de comercialización de Adobe Analytics](./merchandising-variables.md).
+Al leer este documento, debería saber cómo [!DNL Query Service] afecta no solo a la calidad de los datos y a la facilidad de segmentación, sino también a su importancia dentro de la arquitectura de datos para todo el flujo de trabajo de extremo a extremo. Para ver ejemplos de SQL más aplicables que utilicen Adobe Analytics con [!DNL Query Service], consulte la [Caso de uso de variables de comercialización Adobe Analytics](./merchandising-variables.md).
 
-Otros documentos que demuestren los beneficios de [!DNL Query Service] para la información estratégica comercial de su organización, se usa la variable [caso de uso de filtrado de bots](./bot-filtering.md) ejemplo.
+Otros documentos que demuestran los beneficios de [!DNL Query Service] para conocer las perspectivas empresariales estratégicas de su organización, consulte [caso de uso de filtrado de bots](./bot-filtering.md) ejemplo.
 
 Alternativamente, estos documentos pueden beneficiar a su comprensión de [!DNL Query Service] características:
 

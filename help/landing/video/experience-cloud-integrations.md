@@ -1,6 +1,6 @@
 ---
-title: Integraciones con aplicaciones Experience Cloud
-description: Este vídeo ofrece información general sobre cómo Adobe Experience Platform se integra con las aplicaciones y capacidades de Experience Cloud, como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Atributos del cliente, Biblioteca de audiencias y etiquetas.
+title: Integraciones con aplicaciones de Experience Cloud
+description: Este vídeo ofrece información general sobre cómo Adobe Experience Platform se integra con aplicaciones y funciones de Experience Cloud como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, atributos del cliente, biblioteca de audiencias y etiquetas.
 kt: 4334
 audience: all
 doc-type: video
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# Integraciones con aplicaciones de Experience Cloud
+# Integraciones con aplicaciones Experience Cloud
 
-En este vídeo se describe cómo Adobe Experience Platform se integra con las aplicaciones y capacidades de Adobe Experience Cloud, como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Atributos del cliente, Biblioteca de audiencias y etiquetas.
+Este vídeo proporciona información general sobre cómo Adobe Experience Platform se integra con las aplicaciones y funciones de Adobe Experience Cloud, como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, los atributos del cliente, la biblioteca de audiencias y las etiquetas.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)

@@ -14,7 +14,7 @@ ht-degree: 92%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Implementación asíncrona"
->abstract="Si esta opción está habilitada, cuando se analiza esta etiqueta de script, el explorador empezará a cargar el archivo JavaScript, pero en lugar de esperar a que se cargue y ejecute la biblioteca, seguirá analizando y procesando el resto del documento. Esto puede mejorar el rendimiento de la página web, pero tiene implicaciones importantes en cuanto a cómo se ejecutan determinadas reglas. Consulte la documentación para obtener más detalles."
+>abstract="Si esta opción está habilitada, cuando se analice esta etiqueta de script, el explorador empezará a cargar el archivo JavaScript, pero en lugar de esperar a que se cargue y ejecute la biblioteca, seguirá analizando y procesando el resto del documento. Esto puede mejorar el rendimiento de la página web, pero tiene importantes implicaciones en cuanto a cómo se ejecutan determinadas reglas. Consulte la documentación para obtener más detalles."
 
 >[!NOTE]
 >
@@ -72,8 +72,8 @@ Regla A → Regla B → Regla C → Regla D
 Aunque siempre se aplica ese orden, algunas reglas se pueden ejecutar inmediatamente cuando la biblioteca de etiqueta termina de cargarse, mientras que otras pueden ejecutarse posteriormente. Lo siguiente ocurre cuando termina de cargarse la biblioteca de etiquetas:
 
 1. La Regla A se ejecuta inmediatamente.
-1. Si el evento de explorador `DOMContentLoaded` (DOM Ready) ya ha ocurrido, la Regla B y la Regla C se ejecutan inmediatamente. De lo contrario, la Regla B y la Regla C se ejecutan más adelante cuando se produce el evento [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded).
-1. Si el evento [`load`](https://developer.mozilla.org/es-ES/docs/Web/Events/load) del explorador (Window Loaded) ya se ha producido, la Regla D se ejecuta inmediatamente. De lo contrario, la regla D se ejecuta más adelante cuando se produce el evento [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load). Tenga en cuenta que, si ha instalado la biblioteca de etiqueta según las instrucciones, la biblioteca de etiqueta *siempre* termina de cargarse antes de que se produzca el evento [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) del explorador.
+1. Si el evento de explorador `DOMContentLoaded` (DOM Ready) ya ha ocurrido, la Regla B y la Regla C se ejecutan inmediatamente. De lo contrario, la Regla B y la Regla C se ejecutan más adelante cuando se produce el evento [`DOMContentLoaded`](https://developer.mozilla.org/es-ES/docs/Web/Events/DOMContentLoaded).
+1. Si el evento [`load`](https://developer.mozilla.org/es-ES/docs/Web/Events/load) del explorador (Window Loaded) ya se ha producido, la Regla D se ejecuta inmediatamente. De lo contrario, la regla D se ejecuta más adelante cuando se produce el evento [`load`](https://developer.mozilla.org/es-ES/docs/Web/Events/load). Tenga en cuenta que, si ha instalado la biblioteca de etiqueta según las instrucciones, la biblioteca de etiqueta *siempre* termina de cargarse antes de que se produzca el evento [`load`](https://developer.mozilla.org/es-ES/docs/Web/Events/load) del explorador.
 
 Al aplicar estos principios a su propio sitio web, tenga en cuenta lo siguiente:
 

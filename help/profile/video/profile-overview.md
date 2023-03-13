@@ -1,6 +1,6 @@
 ---
-title: Información general del vídeo del perfil del cliente en tiempo real
-description: Este vídeo proporciona información básica sobre el perfil del cliente en tiempo real en Adobe Experience Platform y describe cómo examinar perfiles en la interfaz de usuario de Platform.
+title: Vídeo introductorio del perfil del cliente en tiempo real
+description: Este vídeo proporciona información básica sobre el Perfil del cliente en tiempo real de Adobe Experience Platform y describe cómo examinar los perfiles en la interfaz de usuario de Platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -18,10 +18,10 @@ ht-degree: 0%
 
 # Resumen del perfil del cliente en tiempo real
 
-Este vídeo proporciona información básica sobre el perfil del cliente en tiempo real en Adobe Experience Platform y describe cómo se reúnen los datos de varias fuentes para formar un perfil centralizado para cada uno de sus clientes. Para obtener más información sobre las características y la funcionalidad del perfil del cliente en tiempo real, comience por leer la [Resumen del perfil del cliente en tiempo real](../home.md).
+Este vídeo proporciona información básica sobre el perfil del cliente en tiempo real de Adobe Experience Platform y describe cómo se unen los datos de varias fuentes para formar un perfil centralizado para cada uno de sus clientes individuales. Para obtener más información acerca de las funciones y características de Real-Time Customer Profile, lea la [Resumen del perfil del cliente en tiempo real](../home.md).
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte la [Guía de la interfaz de usuario del perfil](../ui/user-guide.md).
+>La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [Guía de IU de perfil](../ui/user-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

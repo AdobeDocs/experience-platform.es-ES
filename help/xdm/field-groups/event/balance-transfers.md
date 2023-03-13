@@ -1,25 +1,26 @@
 ---
-title: Balance Transfers Schema Field Group
-description: This document provides an overview of the Balance Transfers schema field group.
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+title: Grupo de campos de esquema de transferencias de saldo
+description: Este documento proporciona información general sobre el grupo de campos de esquema Transferencias de saldo.
+exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 4%
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
-# 
+# [!UICONTROL Transferencias de saldo] grupo de campos de esquema
 
-[[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) `personalFinances.balanceTransfers`
+[!UICONTROL Transferencias de saldo] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). El grupo de campos proporciona un solo `personalFinances.balanceTransfers` objeto a un esquema, que captura detalles sobre una transferencia de saldo financiero entre cuentas.
 
 ![](../../images/field-groups/balance-transfers.png)
 
-| Propiedad | Data type | Descripción |
+| Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `accountFrom` | [](../../data-types/financial-account.md) | Describes the financial account that balance is being transferred from. |
-| `accountTo` | [](../../data-types/financial-account.md) | Describes the financial account that balance is being transferred to. |
-| `transaction` | [](../../data-types/transaction.md) | Describes the financial transaction associated with the balance transfer. |
+| `accountFrom` | [[!UICONTROL Cuenta financiera]](../../data-types/financial-account.md) | Describe la cuenta financiera desde la que se transfiere el saldo. |
+| `accountTo` | [[!UICONTROL Cuenta financiera]](../../data-types/financial-account.md) | Describe la cuenta financiera a la que se transfiere el saldo. |
+| `transaction` | [[!UICONTROL Transacción]](../../data-types/transaction.md) | Describe la transacción financiera asociada con la transferencia de saldo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-[](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json)
+Para obtener más información sobre el grupo de campos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).

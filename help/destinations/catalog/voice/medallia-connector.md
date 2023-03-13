@@ -1,19 +1,19 @@
 ---
-title: Conexión con Medallia
-description: Active perfiles para encuestas de Medallia dirigidas y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes.
+title: Conexión de Medallia
+description: Active perfiles para encuestas de Medallia y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
 
-# Conexión con Medallia
+# Conexión de Medallia
 
 ## Información general {#overview}
 
-Active perfiles para encuestas de Medallia dirigidas y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes.
+Active perfiles para encuestas de Medallia y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes.
 
 >[!IMPORTANT]
 >
@@ -21,81 +21,81 @@ Active perfiles para encuestas de Medallia dirigidas y recopilación de comentar
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Medallia, estos son ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver utilizando este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino Medallia, aquí tiene algunos casos de uso que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
 
-### Caso de uso número 1
+### Caso de uso #1
 
-Una marca B2B quiere evaluar y racionalizar su programa de incorporación. Les gustaría enviar encuestas personalizadas en tiempo real a los clientes que acaban de completar el proceso de incorporación.
+Una marca B2B quiere evaluar y optimizar su programa de incorporación. Les gustaría enviar encuestas personalizadas en tiempo real a los clientes que acaban de completar el proceso de incorporación.
 
-### Caso de uso n.º 2
+### Caso de uso #2
 
 Un minorista busca comprender mejor las preferencias de los clientes para la realización de pedidos. Quieren enviar una breve encuesta SMS de 1 pregunta a los clientes que han realizado compras en línea y en la tienda durante el mes pasado.
 
 ## Requisitos previos {#prerequisites}
 
 Se requiere la siguiente información para establecer la conexión con Medallia:
-* **URL de extremo de tokens de OAuth**
+* **URL de extremo de token de OAuth**
 * **ID del cliente**
-* **Secreto del cliente**
-* **URL de puerta de enlace de API**
+* **Secreto de cliente**
+* **URL de puerta API**
 * **Importar nombre de API**
 
-Trabaje con su equipo de envío de Medallia para obtener estos detalles.
+Trabaje con su equipo de entrega de Medallia para obtener estos detalles.
 
-## Identidades compatibles {#supported-identities}
+## Identidades admitidas {#supported-identities}
 
-Medallia apoya la activación de las identidades descritas en la siguiente tabla. Más información sobre [identidades](/help/identity-service/namespaces.md).
+Medallia apoya la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
-| Identidad de Target | Descripción | Consideraciones |
+| Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| email | Correo electrónico Dirección | Seleccione la identidad del destinatario de correo electrónico cuando desee enviar encuestas de invitación por correo electrónico. Cuando un perfil está asociado con varias direcciones de correo electrónico, Medallia envía la invitación únicamente por déclencheur al primer correo electrónico. |
-| phone | Números de teléfono con hash en formato E.164 | Seleccione la identidad de destino del teléfono cuando desee enviar encuestas basadas en SMS. El número de teléfono debe tener el formato E.164, que incluye un signo más (+), un código de país internacional, un código de área local y un número de teléfono. Por ejemplo: (+) (código de país) (código de área) (número de teléfono). Cuando un perfil está asociado con varios números de teléfono, Medallia sólo dará el déclencheur de la invitación al primer número de teléfono. |
+| email | Correo electrónico Dirección | Seleccione la identidad del destinatario del correo electrónico cuando desee enviar encuestas de invitación por correo electrónico. Cuando un perfil está asociado con varias direcciones de correo electrónico, Medallia enviará en déclencheur la invitación solo al primer correo electrónico. |
+| phone | Números de teléfono con hash en formato E.164 | Seleccione la identidad del destinatario del teléfono cuando desee enviar encuestas basadas en SMS. El número de teléfono debe tener el formato E.164, que incluye un signo más (+), un código de llamada de país internacional, un código de área local y un número de teléfono. Por ejemplo: (+)(código de país)(código de área)(número de teléfono). Cuando un perfil está asociado con varios números de teléfono, Medallia enviará la invitación al primer número de teléfono únicamente en déclencheur. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Tipo de exportación y frecuencia {#export-type-frequency}
+## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Está exportando todos los miembros recién cualificados de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Va a exportar todos los miembros recién cualificados de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Conectarse al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos que aparecen en las dos secciones siguientes.
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticar en destino {#authenticate}
+### Autenticar en el destino {#authenticate}
 
-Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectarse al destino]**.
+Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
 
-* **[!UICONTROL URL de extremo de tokens de OAuth]**: Normalmente adopta la forma de https://instance.medallia.tld/oauth/tenant/token.
-* **[!UICONTROL ID de cliente]**: Obtenga información de su equipo de envío de Medallia.
-* **[!UICONTROL Secreto del cliente]**: Obtenga información de su equipo de envío de Medallia.
+* **[!UICONTROL URL de extremo de token de OAuth]**: Normalmente adopta la forma de https://instance.medallia.tld/oauth/tenant/token.
+* **[!UICONTROL ID de cliente]**: Obtenga de su equipo de entrega de Medallia.
+* **[!UICONTROL Secreto del cliente]**: Obtenga de su equipo de entrega de Medallia.
 
 ![Imagen que muestra la pantalla de autenticación de este destino.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
 ### Rellenar detalles de destino {#destination-details}
 
-Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
+Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL URL de puerta de enlace de API]**: Obtenga información de su equipo de envío de Medallia. Normalmente adopta la forma de https://instance-tenant.apis.medallia.com.
-* **[!UICONTROL Importar nombre de API]**: Obtenga información de su equipo de envío de Medallia. Nombre de la API de importación de Medallia (también conocida como Fuente web) que se utilizará en esta conexión. Puede activar diferentes segmentos en diferentes API de importación para almacenar en déclencheur diferentes programas de encuestas.
+* **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
+* **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL URL de puerta API]**: Obtenga de su equipo de entrega de Medallia. Normalmente adopta la forma de https://instance-tenant.apis.medallia.com.
+* **[!UICONTROL Importar nombre de API]**: Obtenga de su equipo de entrega de Medallia. Nombre de la API de importación de Medallia (también conocida como fuente web) que se utilizará en esta conexión. Puede activar distintos segmentos en diferentes API de importación para almacenar en déclencheur diferentes programas de encuestas.
 
-![Imagen que muestra la pantalla de detalles de destino para este destino.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+![Imagen que muestra la pantalla de detalles de destino de este destino.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
@@ -103,34 +103,34 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+Leer [Activación de perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
-### Asignación de atributos e identidades {#map}
+### Asignar atributos e identidades {#map}
 
-Los siguientes espacios de nombres de identidad de destino deben asignarse según el caso de uso:
+Las siguientes áreas de nombres de identidad de destino deben asignarse según el caso de uso:
 * Para encuestas basadas en correo electrónico, **email** debe asignarse como campo de destino mediante **Campo de destino** > **Seleccionar área de nombres de identidad** > **email**
-* Para encuestas basadas en SMS, **phone** debe asignarse como campo de destino mediante **Campo de destino** > **Seleccionar área de nombres de identidad** > **phone**. Los números de teléfono deben tener el formato E.164, que incluye un signo más (+), un código de país internacional, un código de área local y un número de teléfono
+* Para encuestas basadas en SMS, **phone** debe asignarse como campo de destino mediante **Campo de destino** > **Seleccionar área de nombres de identidad** > **phone**. Los números de teléfono deben tener el formato E.164, que incluye un signo más (+), un código de llamada de país internacional, un código de área local y un número de teléfono
 
-Se recomienda encarecidamente que también asigne atributos personalizados de objetivo adicionales para crear encuestas personalizadas y anexe información adicional sobre el cliente al registro de encuesta:
+Se recomienda asignar también atributos personalizados de destinatario adicionales para crear encuestas personalizadas y anexar información adicional sobre el cliente al registro de encuesta:
 
 * Las encuestas personalizadas suelen dirigirse al cliente por su nombre
-   * Asigne el nombre del cliente a **Campo de destino** > **Seleccionar atributos personalizados** > **Nombre del atributo** > **firstname**
-   * Asigne el apellido del cliente a **Campo de destino** > **Seleccionar atributos personalizados** > **Nombre del atributo** > **lastname**
-* Agregue asignaciones para cualquier otro atributo personalizado de destino como desee
+   * Asigne el nombre del cliente a **Campo de destino** > **Seleccionar atributos personalizados** > **Nombre de atributo** > **firstname**
+   * Asigne el apellido del cliente a **Campo de destino** > **Seleccionar atributos personalizados** > **Nombre de atributo** > **apellido**
+* Añada asignaciones para cualquier otro atributo personalizado de destino que desee
 
 ![Imagen que muestra una asignación de muestra para identidades y atributos.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
 > 
-> Comparta con su equipo de entrega de Medallia la información exacta **Nombres de atributos** para cada atributo personalizado de destino que asigne con **Campo de destino** > **Seleccionar atributos personalizados** > **Nombre del atributo**. Puede que desee realizar una captura de pantalla de la página de asignación para compartirla directamente.
+> Comparta con su equipo de entrega de Medallia la información exacta **Nombres de atributo** para cada atributo personalizado de destino asignado mediante **Campo de destino** > **Seleccionar atributos personalizados** > **Nombre de atributo**. Es posible que desee realizar una captura de pantalla de la página de asignación para compartirla directamente.
 
 ## Datos exportados {#exported-data}
 
-Una vez que haya activado los segmentos en el destino, informe a su equipo de entrega de Medallia, que podrá validar los datos exportados de Adobe Experience Platform a Medallia. Tenga en cuenta que los estudios solo se pueden activar en Medallia después de verificar correctamente los datos; antes de esto, los datos se exportarán a Medallia, pero no se déclencheur las encuestas a los clientes.
+Una vez que haya activado sus segmentos en el destino, informe a su equipo de entrega de Medallia, que podrá validar los datos exportados de Adobe Experience Platform a Medallia. Tenga en cuenta que las encuestas solo pueden activarse dentro de Medallia después de una verificación de datos correcta; antes de esto, los datos se exportarán a Medallia, pero no se almacenarán en déclencheur las encuestas a los clientes.
 
-A continuación se proporciona un JSON de muestra de los datos exportados, que utiliza la asignación de ejemplo de la captura de pantalla anterior en la **Asignación de atributos e identidades** sección:
+A continuación se proporciona un JSON de muestra de los datos exportados, que utiliza la asignación de ejemplo de la captura de pantalla anterior en la **Asignar atributos e identidades** sección:
 
 ```json
 [
@@ -147,6 +147,6 @@ A continuación se proporciona un JSON de muestra de los datos exportados, que u
 ]
 ```
 
-## Uso y gobernanza de los datos {#data-usage-governance}
+## Uso de datos y gobernanza {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] exige el control de datos; consulte [Información general sobre la administración de datos](/help/data-governance/home.md).
+Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos. Consulte la [Resumen de gobernanza de datos](/help/data-governance/home.md).

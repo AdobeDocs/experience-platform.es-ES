@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;deduplicación de datos;deduplicación;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;desduplicación de datos;desduplicación;
 solution: Experience Platform
-title: Deduplicación de datos en el servicio de consulta
+title: Deduplicación de datos en el servicio de consultas
 type: Tutorial
-description: 'Este documento describe ejemplos de consultas de muestra completa y subselección para deduplicar tres casos de uso comunes: eventos de experiencias, compras y métricas.'
+description: 'Este documento describe ejemplos de consultas de subselección y de muestra completa para deduplicar tres casos de uso comunes: eventos de experiencia, compras y métricas.'
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
@@ -14,31 +14,31 @@ ht-degree: 0%
 
 # Deduplicación de datos en [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] admite la deduplicación de datos. La deduplicación de datos se puede realizar cuando sea necesario eliminar una fila entera de un cálculo o ignorar un conjunto específico de campos, ya que solo parte de los datos de la fila es información duplicada.
+Adobe Experience Platform [!DNL Query Service] admite la deduplicación de datos. La deduplicación de datos se puede realizar cuando es necesario quitar una fila completa de un cálculo o ignorar un conjunto específico de campos porque solo parte de los datos de la fila es información duplicada.
 
-La deduplicación suele implicar el uso de `ROW_NUMBER()` en una ventana para un ID (o un par de ID) a lo largo del tiempo ordenado, que devuelve un nuevo campo que representa el número de veces que se ha detectado un duplicado. La hora a menudo se representa usando la variable [!DNL Experience Data Model] (XDM) `timestamp` campo .
+La deduplicación suele implicar el uso de `ROW_NUMBER()` función en una ventana para un ID (o un par de ID) a lo largo del tiempo, lo que devuelve un nuevo campo que representa el número de veces que se ha detectado un duplicado. El tiempo suele representarse mediante el uso de la variable [!DNL Experience Data Model] (XDM) `timestamp` field.
 
-Cuando el valor de la variable `ROW_NUMBER()` es `1`, hace referencia a la instancia original. Por lo general, ese es el caso que desea utilizar. Esto se hará generalmente dentro de una subselección donde la deduplicación se realiza en un nivel superior `SELECT` como realizar un recuento acumulado.
+Cuando el valor de la variable `ROW_NUMBER()` es `1`, hace referencia a la instancia original. Por lo general, esa es la instancia que desea utilizar. Esto se suele hacer dentro de una subselección en la que la deduplicación se realiza en un nivel superior `SELECT` como realizar un recuento acumulado.
 
-Los casos de uso de deduplicación pueden ser globales o estar limitados a un único usuario o ID de usuario final dentro del `identityMap`.
+Los casos de uso de deduplicación pueden ser globales o restringirse a un único ID de usuario o de usuario final dentro de la `identityMap`.
 
-Este documento describe cómo realizar la deduplicación en tres casos de uso comunes: Eventos de experiencias, compras y métricas.
+Este documento describe cómo realizar la anulación de duplicación para tres casos de uso comunes: Eventos de experiencia, compras y métricas.
 
-Cada ejemplo incluye el ámbito, la clave de ventana y un esquema del método de deduplicación, así como la consulta SQL completa.
+Cada ejemplo incluye el ámbito, la clave de la ventana, una descripción del método de deduplicación, así como la consulta SQL completa.
 
-## Eventos de experiencias {#experience-events}
+## Eventos de experiencia {#experience-events}
 
-En el caso de los eventos de experiencia duplicados, es probable que desee ignorar toda la fila.
+En el caso de eventos de experiencia duplicados, es probable que desee ignorar toda la fila.
 
 >[!CAUTION]
 >
->Muchos conjuntos de datos en [!DNL Experience Platform], incluidas las producidas por el conector de datos de Adobe Analytics, ya tienen aplicada la deduplicación en el nivel de evento de experiencia. Por lo tanto, volver a aplicar este nivel de deduplicación es innecesario y ralentizará la consulta.
+>Muchos conjuntos de datos en [!DNL Experience Platform], incluidas las que produce Adobe Analytics Data Connector, ya tienen aplicada la deduplicación a nivel de evento de experiencia. Por lo tanto, la reaplicación de este nivel de deduplicación es innecesaria y ralentiza la consulta.
 >
->Es importante comprender la fuente de sus conjuntos de datos y saber si ya se ha aplicado la deduplicación en el nivel de Experience-Event. Para cualquier conjunto de datos que se transmita (por ejemplo, los de Adobe Target), puede **will** debe aplicar deduplicación en el nivel de evento de experiencia, ya que esas fuentes de datos tienen semántica &quot;al menos una vez&quot;.
+>Es importante comprender el origen de los conjuntos de datos y saber si ya se ha aplicado la anulación de duplicación a nivel de Experience-Event. Para cualquier conjunto de datos que se transmita por secuencias (por ejemplo, los de Adobe Target), debe **testamento** Es necesario aplicar la deduplicación en el nivel de evento de experiencia, ya que esas fuentes de datos tienen una semántica de &quot;al menos una vez&quot;.
 
 **Ámbito:** Global
 
-**Tecla de ventana:** `id`
+**Clave de ventana:** `id`
 
 ### Ejemplo de deduplicación
 
@@ -66,13 +66,13 @@ SELECT COUNT(*) AS num_events FROM (
 
 ## Compras {#purchases}
 
-Si tiene compras duplicadas, es probable que desee conservar la mayor parte de la variable [!DNL Experience Event] , pero omita los campos vinculados a la compra (como el `commerce.orders` métrica). Las compras contienen un campo especial para el ID de compra, que es `commerce.order.purchaseID`.
+Si tiene compras duplicadas, es probable que desee conservar la mayoría de las [!DNL Experience Event] fila, pero ignore los campos vinculados a la compra (como los `commerce.orders` métrica). Las compras contienen un campo especial para el ID de compra, que es `commerce.order.purchaseID`.
 
-Se recomienda utilizar `purchaseID` dentro del ámbito del visitante, ya que es el campo semántico estándar para los ID de compra dentro de XDM. Se recomienda el ámbito del visitante para eliminar los datos de compra duplicados, ya que la consulta es más rápida que el uso del ámbito global y es poco probable que se duplique un ID de compra en varios ID de visitante.
+Se recomienda utilizar `purchaseID` dentro del ámbito del visitante, ya que es el campo semántico estándar para los ID de compra dentro de XDM. Se recomienda el ámbito del visitante para eliminar los datos de compra duplicados porque la consulta es más rápida que el ámbito global y es poco probable que un ID de compra se duplique en varios ID de visitante.
 
 **Ámbito:** Visitante
 
-**Tecla de ventana:** identityMap[$NAMESPACE].id y commerce.order.purchaseID
+**Clave de ventana:** identityMap[$NAMESPACE].id y commerce.order.purchaseID
 
 ### Ejemplo de deduplicación
 
@@ -89,11 +89,11 @@ FROM experience_events
 
 >[!NOTE]
 >
->En algunos casos en los que los datos originales de Analytics tienen ID de compra duplicados en los ID de visitante, puede **may** es necesario ejecutar el recuento de duplicados del ID de compra en todos los visitantes. Cuando el ID de compra no está presente, este método requiere que incluya una condición que, en su lugar, utilice el ID de evento para mantener la consulta lo más rápido posible.
+>En algunos casos en los que los datos originales de Analytics tienen ID de compra duplicados en los ID de visitante, puede **mayo** Debe ejecutar el recuento de duplicados del ID de compra en todos los visitantes. Cuando el ID de compra no está presente, este método requiere que incluya una condición que, en su lugar, utilice el ID de evento para mantener la consulta lo más rápido posible.
 
 ### Ejemplo completo
 
-El ejemplo siguiente utiliza una cláusula de condición para utilizar el ID de evento en caso de que el ID de compra no esté presente.
+El ejemplo siguiente utiliza una cláusula de condición para utilizar el ID de evento en el caso de que el ID de compra no esté presente.
 
 ```sql
 SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
@@ -114,13 +114,13 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 
 ## Métricas {#metrics}
 
-Si tiene una métrica que utiliza el ID único opcional y aparece un duplicado de ese ID, es probable que desee ignorar ese valor de métrica y mantener el resto del Evento de experiencia.
+Si tiene una métrica que utiliza el ID único opcional y aparece un duplicado de ese ID, probablemente quiera ignorar ese valor de métrica y mantener el resto del Evento de experiencia.
 
-En XDM, casi todas las métricas utilizan la variable `Measure` tipo de datos que incluye una `id` que puede utilizar para la deduplicación.
+En XDM, casi todas las métricas utilizan el `Measure` tipo de datos que incluye un `id` que puede utilizar para la deduplicación.
 
 **Ámbito:** Visitante
 
-**Tecla de ventana:** identityMap[$NAMESPACE].id e id del objeto Measure
+**Clave de ventana:** identityMap[$NAMESPACE].id e id del objeto Measure
 
 ### Ejemplo de deduplicación
 
@@ -156,4 +156,4 @@ SELECT SUM(application.launches.value) AS num_launches FROM (
 
 ## Pasos siguientes
 
-En este documento se proporcionan ejemplos de deduplicación de datos y se describe cómo realizar la deduplicación de datos dentro de Query Service. Para conocer las prácticas recomendadas al escribir consultas mediante el servicio de consulta, lea la [guía de escritura de consultas](../best-practices/writing-queries.md).
+Este documento proporciona ejemplos de deduplicación de datos y describe cómo realizar la deduplicación de datos dentro del servicio de consultas. Para conocer las prácticas recomendadas al escribir consultas mediante el servicio de consultas, lea la [guía de escritura de consultas](../best-practices/writing-queries.md).

@@ -1,7 +1,7 @@
 ---
-keywords: segmentos rtcdp;creador de segmentos rtcdp;segmento rtcdp;rtcdp de ai de cliente
-title: Customer AI en Real-time Customer Data Platform
-description: Información general sobre la IA del cliente y cómo puede ayudarle a generar puntuaciones para resultados específicos, como conversiones o pérdida.
+keywords: segmentos de rtcdp;generador de segmentos rtcdp;segmento de rtcdp;rtcdp de inteligencia artificial aplicada al cliente
+title: Inteligencia artificial aplicada al cliente en Real-time Customer Data Platform
+description: Información general sobre la inteligencia artificial aplicada al cliente y cómo puede ayudar a generar puntuaciones para resultados específicos como conversiones o pérdidas.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,27 +10,27 @@ ht-degree: 6%
 
 ---
 
-# Customer AI en Real-time Customer Data Platform
+# Inteligencia artificial aplicada al cliente en Real-time Customer Data Platform
 
-Customer AI, una función de IA integrada en Adobe Real-time Customer Data Platform, permite a los especialistas en marketing generar puntuaciones de nivel individuales para un resultado específico, como conversiones o pérdida.
+La inteligencia artificial aplicada al cliente, una función de IA integrada en Adobe Real-time Customer Data Platform, permite a los especialistas en marketing generar puntuaciones de nivel individuales para un resultado específico, como conversiones o pérdidas.
 
-Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cliente puede indicarle qué es lo más probable que haga un cliente y por qué. Además, puede beneficiarse de las predicciones y perspectivas de Customer AI para personalizar las experiencias de los clientes al ofrecer las ofertas y los mensajes más adecuados. Customer AI puede ayudarle con:
+Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cliente puede indicarle qué es lo más probable que haga un cliente y por qué. Además, puede beneficiarse de las predicciones y perspectivas de la inteligencia artificial aplicada al cliente para personalizar las experiencias de los clientes y ofrecerles las ofertas y los mensajes más adecuados. La inteligencia artificial aplicada al cliente puede ayudarle con:
 
-* Ofrecer modelos de propensión del cliente de alta precisión para lograr una segmentación y una segmentación más sólidas.
-* Comprender los factores influyentes y la probabilidad detrás de ciertos comportamientos del cliente.
-* Proporcionar opciones personalizables para casos de uso y datos únicos de su empresa.
-* Mejora del perfil del cliente en tiempo real con puntuaciones de inclinación del cliente como la pérdida y la conversión.
+* Proporcionar modelos de tendencia de los clientes de alta precisión para una segmentación y una segmentación más sólidas.
+* Comprender los factores influyentes y la probabilidad detrás de ciertos comportamientos de los clientes.
+* Proporciona opciones personalizables para los casos de uso y los datos únicos de su empresa.
+* Mejora del perfil del cliente en tiempo real con puntuaciones de tendencia de los clientes, como la pérdida y la conversión.
 * Mejora de los perfiles de los clientes con factores influyentes para las puntuaciones de tendencia.
-* Creación de segmentos de clientes basados en factores influyentes y puntuaciones de tendencia.
+* Creación de segmentos de clientes en función de factores influyentes y puntuaciones de tendencia.
 
-La AI del cliente se encuentra en la variable **[!UICONTROL Servicios]** ficha **[!UICONTROL Servicios de Adobe]**.
+Customer AI se encuentra en **[!UICONTROL Servicios]** pestaña debajo de **[!UICONTROL Servicios de Adobe]**.
 
 ![Ubicación de Customer AI](../assets/overview/rtcdp-customer-ai.png)
 
 ## Introducción a Customer AI
 
-Para comenzar con Customer AI, debe seguir la [tutorial de preparación de datos](../../intelligent-services/data-preparation.md) y configure el esquema de entrada en función de su caso de uso. A continuación, tendrá que [configuración de una instancia de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). Después de configurar una instancia, se genera un modelo en el que puede [ver sus perspectivas y puntuaciones](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Con los datos generados a partir del modelo, puede crear segmentos para la activación controlada por datos.
+Para empezar a usar la inteligencia artificial aplicada al cliente, debe seguir las [tutorial de preparación de datos](../../intelligent-services/data-preparation.md) y configure el esquema de entrada en función de su caso de uso. A continuación, deberá hacer lo siguiente [configuración de una instancia de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). Después de configurar una instancia, se genera un modelo donde puede [vea sus perspectivas y puntuaciones](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Con los datos generados a partir del modelo, puede crear segmentos para la activación controlada por datos.
 
-Para obtener más información sobre Customer AI, comience por visitar la [Información general sobre Customer AI](../../intelligent-services/customer-ai/overview.md). Además, el siguiente vídeo muestra cómo la Customer AI enriquece los perfiles de los clientes con las tendencias basadas en AI y potencia la segmentación de clientes y los esfuerzos de determinación de objetivos.
+Para obtener más información sobre la inteligencia artificial aplicada al cliente, comience visitando la [Información general sobre Customer AI](../../intelligent-services/customer-ai/overview.md). Además, el siguiente vídeo muestra cómo la inteligencia artificial aplicada al cliente enriquece los perfiles de los clientes con las tendencias basadas en IA y potencia la segmentación de clientes y los esfuerzos de segmentación.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)

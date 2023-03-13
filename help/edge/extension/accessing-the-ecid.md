@@ -1,13 +1,13 @@
 ---
-title: 'Acceso al ECID '
-description: Extensión del SDK web de Adobe Experience Platform que aprovecha el ECID en las etiquetas
-source-git-commit: befe1efa884706165b8d65803d06f6370a8a60f2
+title: Acceso al ECID
+description: Extensión de SDK web de Adobe Experience Platform que aprovecha ECID en etiquetas
+exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 5%
 
 ---
-
 
 # Acceso al ECID
 
@@ -15,10 +15,10 @@ El [!DNL Experience Cloud Identity (ECID)] es un identificador persistente para 
 
 Para acceder al ECID dentro de las etiquetas, Adobe recomienda lo siguiente:
 
-1. Asegúrese de que la propiedad esté configurada con [secuenciación de componentes de regla](../../tags/ui/managing-resources/rules.md#sequencing) habilitada.
+1. Asegúrese de que la propiedad esté configurada con [Secuencia de componentes de regla](../../tags/ui/managing-resources/rules.md#sequencing) activado.
 1. Crear una regla nueva.
-1. Agregue un evento [!UICONTROL Library Loaded] a la regla.
-1. Agregue una acción [!UICONTROL Condición personalizada] a la regla con el siguiente código (suponiendo que el nombre que ha configurado para la instancia del SDK sea `alloy`):
+1. Añadir un [!UICONTROL Library Loaded] a la regla.
+1. Añadir un [!UICONTROL Condición personalizada] acción a la regla con el siguiente código (suponiendo que el nombre configurado para la instancia del SDK sea `alloy`):
 
    ```javascript
     return alloy("getIdentity")
@@ -29,4 +29,4 @@ Para acceder al ECID dentro de las etiquetas, Adobe recomienda lo siguiente:
 
 1. Guarde la regla.
 
-A continuación, debe poder acceder al ECID en reglas posteriores que utilicen `%ECID%` o `_satellite.getVar("ECID")` como lo haría con cualquier otro elemento de datos.
+A continuación, debe poder acceder al ECID en reglas posteriores utilizando `%ECID%` o `_satellite.getVar("ECID")` como lo haría con cualquier otro elemento de datos.

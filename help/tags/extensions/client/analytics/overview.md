@@ -293,7 +293,7 @@ Importante: Usar una acción “set variables” no enviará la señal. Debe uti
 
 #### eVars
 
-Configure una o más [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html).
+Configure una o más [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=es).
 
 1. Seleccione una eVar en la lista desplegable.
 1. Especifique si desea configurar la eVar como valor (Set As) o Copiar (Duplicate From) otra eVar.
@@ -328,15 +328,15 @@ Especifique cada nivel en la jerarquía.
 
 Si lo desea, configure jerarquías adicionales.
 
-#### Nombre de la página
+#### Nombre de página
 
 Este valor hace referencia al nombre de una página determinada y corresponde a la variable [`pageName` variable](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) en Analytics.
 
 >[!IMPORTANT]
 >
->En las implementaciones de Adobe Experience Manager, esta variable indica AEM dónde almacenar el informe de Analytics recuperado. Para garantizar que los informes se mantengan correctamente, la cadena del nombre de la página debe tener el formato de una ruta al sitio separada por dos puntos.
+>En implementaciones de Adobe Experience Manager AEM, esta variable indica a los usuarios dónde almacenar el informe de Analytics recuperado. Para garantizar que los informes se conserven correctamente, la cadena del nombre de página debe tener el formato de una ruta al sitio separada por dos puntos.
 >
->Por ejemplo, una página web en `content/we-retail/language-masters/en/men.html` debe tener el valor de nombre de página de `content:we-retail:language-masters:en:men`.
+>Por ejemplo, una página web en `content/we-retail/language-masters/en/men.html` debe tener el valor nombre de página de `content:we-retail:language-masters:en:men`.
 
 #### Otra información
 

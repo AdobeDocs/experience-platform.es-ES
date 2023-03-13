@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consultas de eventos de experiencias;consulta de eventos de experiencias;consulta de eventos de experiencias;consulta de eventos de experiencias;
-title: Crear un informe de tendencias de eventos
-description: Obtenga información sobre cómo escribir consultas que utilicen eventos de experiencias para crear un informe de tendencias de eventos en un intervalo de fechas específico, agrupados por fecha.
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consultas de experienceevent;consulta de experienceevent;consulta de Experience Event;
+title: Creación de un informe de tendencias de eventos
+description: Obtenga información sobre cómo escribir consultas que utilizan eventos de experiencia para crear un informe de tendencias de eventos en un intervalo de fechas especificado, agrupados por fecha.
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '379'
@@ -9,19 +9,19 @@ ht-degree: 0%
 
 ---
 
-# Crear un informe de tendencias de eventos
+# Creación de un informe de tendencias de eventos
 
-Este documento proporciona un ejemplo del SQL requerido para crear un informe de tendencias de eventos por día en un intervalo de fechas específico. Con el servicio de consulta de Adobe Experience Platform, puede escribir consultas que utilicen [!DNL Experience Events] para capturar una variedad de casos de uso. Los eventos de experiencia están representados por la clase ExperienceEvent del Modelo de datos de experiencia (XDM), que captura una instantánea inmutable y no agregada del sistema cuando un usuario interactúa con un sitio web o servicio. Los eventos de experiencia pueden incluso utilizarse para el análisis del dominio de tiempo. Consulte la [sección pasos siguientes](#next-steps) para más casos de uso que impliquen [!DNL Experience Events] para generar informes de visitantes.
+Este documento proporciona un ejemplo del SQL necesario para crear un informe de tendencias de eventos por día en un intervalo de fechas específico. Con Adobe Experience Platform Query Service, puede escribir consultas que utilicen [!DNL Experience Events] para recopilar una variedad de casos de uso. Los eventos de experiencia se representan mediante la clase ExperienceEvent del Modelo de datos de experiencia (XDM), que captura una instantánea del sistema inmutable y no agregada cuando un usuario interactúa con un sitio web o servicio. Los Eventos de experiencia incluso se pueden utilizar para el análisis de dominio de tiempo. Consulte la [sección de pasos siguientes](#next-steps) para ver más casos de uso que impliquen [!DNL Experience Events] para generar informes de visitantes.
 
-Los informes le proporcionan acceso a los datos de su plataforma para beneficiarse de las perspectivas empresariales estratégicas de su organización. Con estos informes, puede examinar los datos de su plataforma de diversas maneras, mostrar métricas clave en formatos fáciles de entender y compartir las perspectivas resultantes.
+Los informes le permiten acceder a los datos de su plataforma para beneficiarse de las perspectivas comerciales estratégicas de su organización. Con estos informes, puede examinar los datos de Platform de varias formas, mostrar métricas clave en formatos fáciles de entender y compartir las perspectivas resultantes.
 
-Más información sobre XDM y [!DNL Experience Events] se encuentra en la variable [[!DNL XDM System] información general](../../xdm/home.md). Combinando el servicio de consulta con [!DNL Experience Events], puede realizar un seguimiento eficaz de las tendencias de comportamiento entre los usuarios. El siguiente documento proporciona ejemplos de consultas que involucran [!DNL Experience Events].
+Más información sobre XDM y [!DNL Experience Events] se puede encontrar en la [[!DNL XDM System] descripción general](../../xdm/home.md). Combinando el servicio de consultas con [!DNL Experience Events], puede rastrear de manera eficaz las tendencias de comportamiento entre sus usuarios. El siguiente documento proporciona ejemplos de consultas que implican [!DNL Experience Events].
 
 ## Objetivos
 
-En el siguiente ejemplo se crea un informe de tendencias de eventos en un intervalo de fechas especificado, agrupado por fecha. En concreto, este ejemplo SQL resume varios valores de análisis como `A`, `B`y `C`y, a continuación, resume el número de veces que se han visto parkas durante el período de un mes.
+En el ejemplo siguiente se crea un informe de tendencias de los eventos de un intervalo de fechas especificado, agrupados por fecha. En concreto, este ejemplo de SQL resume varios valores de análisis como `A`, `B`, y `C`y luego resume la cantidad de veces que se han visto los parkas durante el periodo de un mes.
 
-La columna de marca de tiempo que se encuentra en [!DNL Experience Event] los conjuntos de datos están en formato UTC. El ejemplo utiliza la variable `from_utc_timestamp()` para transformar la marca de tiempo de UTC a EDT y, a continuación, utiliza la función `date_format()` para aislar la fecha del resto de la marca de tiempo.
+La columna de marca de tiempo se encuentra en [!DNL Experience Event] conjuntos de datos está en formato UTC. El ejemplo utiliza el `from_utc_timestamp()` para transformar la marca de tiempo de UTC a EDT y, a continuación, utiliza la función `date_format()` para aislar la fecha del resto de la marca de tiempo.
 
 ```sql
 SELECT 
@@ -87,6 +87,6 @@ Al leer este documento, tiene una mejor comprensión de cómo utilizar el servic
 
 Para obtener más información sobre otros casos de uso basados en visitantes que utilizan [!DNL Experience Events], lea los siguientes documentos:
 
-- [Recupere una lista de visitantes organizada por número de vistas de página.](./visitors-by-number-of-page-views.md)
+- [Recupere una lista de visitantes organizados por número de vistas de página.](./visitors-by-number-of-page-views.md)
 - [Enumerar las sesiones anteriores de un visitante.](./list-visitor-sessions.md)
 - [Ver un informe de resumen de un visitante.](./roll-up-report-of-a-visitor.md)

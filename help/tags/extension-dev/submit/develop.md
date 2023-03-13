@@ -37,7 +37,7 @@ Una vez establecido el plan, las directrices que se muestran a continuación pue
 También encontrará una serie de herramientas npm para ayudarle con el desarrollo de su paquete de extensión:
 
 * La [herramienta de andamiaje de extensiones](https://www.npmjs.com/package/@adobe/reactor-scaffold) le ayuda a crear con facilidad un proyecto de inicio en su equipo.
-* El [entorno de pruebas de extensiones](https://www.npmjs.com/package/@adobe/reactor-sandbox) le ayuda a validar sus módulos y vistas de extensión en su equipo local.
+* La [zona protegida de extensiones de etiquetas](https://www.npmjs.com/package/@adobe/reactor-sandbox) le ayuda a validar sus módulos y vistas de extensión en su equipo local.
 * El [empaquetador de extensiones](https://www.npmjs.com/package/@adobe/reactor-packager) es una utilidad de línea de comandos que permite empaquetar extensiones de etiqueta en archivos zip.
 * El [cargador de extensiones de etiquetas](https://www.npmjs.com/package/@adobe/reactor-uploader) es una herramienta interactiva de línea de comandos que le ayudará a introducir las credenciales de su cuenta técnica y a cargar el paquete de extensión en las etiquetas.
 * La [herramienta de lanzamiento de etiquetas](https://www.npmjs.com/package/@adobe/reactor-releaser) es una herramienta interactiva de línea de comandos que le ayudará con el lanzamiento privado de su extensión.

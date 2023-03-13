@@ -141,7 +141,7 @@ A continuación se indican algunos aspectos que se deben tener en cuenta al util
    * Cuando se recibe la respuesta del mbox global
    * Cuando se agota el tiempo de espera de la solicitud del mbox global
    * Cuando se agota el tiempo de espera del propio fragmento
-* La acción &quot;Fire Global Mbox&quot; debe usarse en todas las páginas utilizando el fragmento de ocultamiento previo para minimizar su duración.
+* La acción &quot;Fire Global Mbox&quot; debe usarse en todas las páginas utilizando el fragmento de preocultamiento para minimizar la duración de la preocultación.
 
 El fragmento de código de preocultamiento es el siguiente y se puede minimizar. Las opciones configurables se encuentran al final:
 

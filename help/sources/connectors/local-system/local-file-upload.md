@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;inicio;temas populares;local;carga de archivo local;sistema local
+keywords: Experience Platform;inicio;temas populares;local;carga local de archivos;sistema local
 solution: Experience Platform
 title: Información general sobre el conector de origen de carga de archivos locales
 description: Obtenga información sobre cómo conectar el sistema local a Adobe Experience Platform mediante la interfaz de usuario
@@ -13,12 +13,12 @@ ht-degree: 0%
 
 # Conector de carga de archivos locales
 
-Adobe Experience Platform permite la ingesta de datos de fuentes externas y sistemas locales, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas y sistemas locales, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-Experience Platform proporciona asistencia para la ingesta de datos desde el sistema local, lo que le permite transferir los archivos locales al Experience Platform mediante el uso de conectores de origen.
+Experience Platform es compatible con la ingesta de datos desde el sistema local, lo que permite llevar los archivos locales a Experience Platform mediante el uso de conectores de origen.
 
-La documentación siguiente proporciona información sobre cómo conectar el sistema local a Platform mediante la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectar el sistema local a Platform mediante la interfaz de usuario de:
 
-## Conectar carga de archivo local [!DNL Platform] uso de la interfaz de usuario
+## Conectar carga de archivo local [!DNL Platform] uso de la IU
 
-- [Crear una conexión de origen de carga de archivos local en la interfaz de usuario](../../tutorials/ui/create/local-system/local-file-upload.md)
+- [Crear una conexión de origen de carga de archivos locales en la interfaz de usuario](../../tutorials/ui/create/local-system/local-file-upload.md)

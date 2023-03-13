@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;segmentación;servicio de segmentación;solución de problemas;API;seg;segmento;búsqueda;búsqueda;búsqueda de segmentos;
-title: Punto final de la API de búsqueda de segmentos
-description: En la API del servicio de segmentación de Adobe Experience Platform, la búsqueda de segmentos se utiliza para buscar campos contenidos en varias fuentes de datos y devolverlos en tiempo casi real. Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye ejemplos de llamadas API para realizar acciones básicas con la API.
+keywords: Experience Platform;segmentación;servicio de segmentación;solución de problemas;API;seg;segmento;segmento;búsqueda;búsqueda de segmentos;
+title: Extremo de API de búsqueda de segmentos
+description: En la API del servicio de segmentación de Adobe Experience Platform, la búsqueda de segmentos se utiliza para buscar campos contenidos en varias fuentes de datos y devolvérselos en tiempo casi real. Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye llamadas de API de ejemplo para realizar acciones básicas mediante la API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -10,23 +10,23 @@ ht-degree: 2%
 
 ---
 
-# Punto final de búsqueda de segmentos
+# Extremo de búsqueda de segmentos
 
-La búsqueda de segmentos se utiliza para buscar campos contenidos en varias fuentes de datos y devolverlos casi en tiempo real.
+La búsqueda de segmentos se utiliza para buscar campos contenidos en varias fuentes de datos y devolverlos en tiempo casi real.
 
-Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye ejemplos de llamadas API para realizar acciones básicas con la API.
+Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye llamadas de API de ejemplo para realizar acciones básicas mediante la API.
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar correctamente llamadas a la API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 
-Además de los encabezados requeridos descritos en la sección Introducción , todas las solicitudes al extremo Búsqueda de segmentos requieren el siguiente encabezado adicional:
+Además de los encabezados requeridos descritos en la sección de introducción, todas las solicitudes al extremo de búsqueda de segmentos requieren el siguiente encabezado adicional:
 
 - x-ups-search-version: &quot;1.0&quot;
 
 ### Buscar en varias áreas de nombres
 
-Este extremo de búsqueda se puede usar para buscar en varias áreas de nombres, devolviendo una lista de resultados de recuento de búsqueda. Se pueden usar varios parámetros, separados por el símbolo &amp;.
+Este extremo de búsqueda se puede utilizar para buscar en varias áreas de nombres y devolver una lista de resultados de recuento de búsqueda. Se pueden utilizar varios parámetros separados por el símbolo &quot;et&quot; (&amp;).
 
 **Formato de API**
 
@@ -38,7 +38,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Parámetros | Descripción |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} representa el valor de clase de esquema asociado con los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` es compatible. |
-| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} representa una consulta que se ajusta a la implementación de Microsoft de [Sintaxis de búsqueda de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si no se especifica ningún término de búsqueda, entonces todos los registros asociados con `schema.name` se devuelve. Puede encontrar una explicación más detallada en la [apéndice](#appendix) de este documento. |
+| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} representa una consulta que se ajusta a la implementación de Microsoft de [Sintaxis de búsqueda de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si no se especifica ningún término de búsqueda, todos los registros asociados con `schema.name` se devolverán. Puede encontrar una explicación más detallada en la [apéndice](#appendix) de este documento. |
 
 **Solicitud**
 
@@ -85,7 +85,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con la siguiente información
 
 ### Buscar entidades individuales
 
-Este extremo de búsqueda se puede usar para recuperar una lista de todos los objetos indexados de texto completo dentro del espacio de nombres especificado. Se pueden usar varios parámetros, separados por el símbolo &amp;.
+Este extremo de búsqueda se puede utilizar para recuperar una lista de todos los objetos indizados de texto completo dentro del área de nombres especificada. Se pueden utilizar varios parámetros separados por el símbolo &quot;et&quot; (&amp;).
 
 **Formato de API**
 
@@ -98,11 +98,11 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | Parámetros | Descripción |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} contiene el valor de clase de esquema asociado con los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` es compatible. |
-| `namespace={NAMESPACE}` | **(Obligatorio)** Donde {NAMESPACE} contiene el espacio de nombres en el que desea buscar. |
-| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} contiene una consulta que se ajusta a la implementación de Microsoft de [Sintaxis de búsqueda de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si no se especifica ningún término de búsqueda, entonces todos los registros asociados con `schema.name` se devuelve. Puede encontrar una explicación más detallada en la [apéndice](#appendix) de este documento. |
-| `entityId={ENTITY_ID}` | *(Opcional)* Limita la búsqueda a dentro de la carpeta designada, especificada con {ENTITY_ID}. |
+| `namespace={NAMESPACE}` | **(Obligatorio)** Donde {NAMESPACE} contiene el área de nombres en la que desea buscar. |
+| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} contiene una consulta que se ajusta a la implementación de Microsoft de [Sintaxis de búsqueda de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si no se especifica ningún término de búsqueda, todos los registros asociados con `schema.name` se devolverán. Puede encontrar una explicación más detallada en la [apéndice](#appendix) de este documento. |
+| `entityId={ENTITY_ID}` | *(Opcional)* Limita la búsqueda a la carpeta designada, especificada con {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Opcional)* Donde {LIMIT} representa el número de resultados de búsqueda que se van a devolver. El valor predeterminado es 50. |
-| `page={PAGE}` | *(Opcional)* Donde {PAGE} representa el número de página utilizado para paginar los resultados de la consulta buscada. Tenga en cuenta que el número de página empieza en **0**. |
+| `page={PAGE}` | *(Opcional)* Donde {PAGE} representa el número de página utilizado para paginar los resultados de la consulta buscada. El número de página empieza en **0**. |
 
 
 **Solicitud**
@@ -158,7 +158,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con resultados que coinciden 
 
 ### Obtener información estructural sobre un objeto de búsqueda
 
-Este extremo de búsqueda se puede usar para obtener la información estructural sobre el objeto de búsqueda solicitado.
+Este extremo de búsqueda se puede utilizar para obtener la información estructural sobre el objeto de búsqueda solicitado.
 
 **Formato de API**
 
@@ -169,8 +169,8 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | Parámetros | Descripción |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} contiene el valor de clase de esquema asociado con los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` es compatible. |
-| `namespace={NAMESPACE}` | **(Obligatorio)** Donde {NAMESPACE} contiene el espacio de nombres en el que desea buscar. |
-| `entityId={ENTITY_ID}` | **(Obligatorio)** El ID del objeto de búsqueda del que desea obtener la información estructural, especificado con {ENTITY_ID}. |
+| `namespace={NAMESPACE}` | **(Obligatorio)** Donde {NAMESPACE} contiene el área de nombres en la que desea buscar. |
+| `entityId={ENTITY_ID}` | **(Obligatorio)** El ID del objeto de búsqueda sobre el que desea obtener la información estructural, especificado con {ENTITY_ID}. |
 
 **Solicitud**
 
@@ -219,45 +219,45 @@ Una respuesta correcta devuelve el estado HTTP 200 con información estructural 
 
 ## Pasos siguientes
 
-Después de leer esta guía, ahora puede comprender mejor cómo funciona la búsqueda de segmentos.
+Después de leer esta guía, ahora comprende mejor cómo funciona la búsqueda de segmentos.
 
 ## Apéndice {#appendix}
 
-Las secciones siguientes proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. Por ejemplo, para buscar un segmento denominado AAM o [!DNL Platform], utilizaría la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
+Las secciones siguientes proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. AAM Por lo tanto, por ejemplo, para buscar un segmento llamado o, haga lo siguiente [!DNL Platform], se utilizaría la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Para prácticas recomendadas, la expresión de búsqueda debe tener codificación HTML, como en el ejemplo mostrado arriba.
+> !![NOTE] Para prácticas recomendadas, la expresión de búsqueda debe estar codificada con el HTML, como en el ejemplo anterior.
 
 ### Campos de búsqueda {#search-fields}
 
-La tabla siguiente enumera los campos que se pueden buscar dentro del parámetro de consulta de búsqueda.
+En la tabla siguiente se enumeran los campos en los que se puede buscar dentro del parámetro de consulta de búsqueda.
 
 | Nombre del campo | Descripción |
 | ---------- | ----------- |
-| folderId | La carpeta o carpetas que tienen el ID de la carpeta de la búsqueda especificada. |
-| folderLocation | La ubicación o ubicaciones que tienen la ubicación de la carpeta de la búsqueda especificada. |
-| parentFolderId | El segmento o la carpeta que tienen el ID de la carpeta principal de la búsqueda especificada. |
+| folderId | Carpeta o carpetas que tienen el ID de carpeta de la búsqueda especificada. |
+| folderLocation | La ubicación o ubicaciones que tienen la ubicación de carpeta de la búsqueda especificada. |
+| parentFolderId | El segmento o la carpeta que tienen el ID de carpeta principal de la búsqueda especificada. |
 | segmentId | El segmento coincide con el ID de segmento de la búsqueda especificada. |
 | segmentName | El segmento coincide con el nombre del segmento de la búsqueda especificada. |
 | segmentDescription | El segmento coincide con la descripción del segmento de la búsqueda especificada. |
 
 ### Expresión de búsqueda {#search-expression}
 
-En la tabla siguiente se detallan los aspectos específicos del funcionamiento de las consultas de búsqueda al utilizar la API de búsqueda de segmentos.
+En la tabla siguiente se enumeran los aspectos específicos del funcionamiento de las consultas de búsqueda al utilizar la API de búsqueda de segmentos.
 
->!![NOTE] Los siguientes ejemplos se muestran en un formato codificado no HTML para una mejor claridad. Para prácticas recomendadas, el HTML codifica la expresión de búsqueda.
+>!![NOTE] Los siguientes ejemplos se muestran en un formato no codificado en el HTML para una mejor claridad. Para obtener prácticas recomendadas, el HTML de codifica la expresión de búsqueda.
 
 | Ejemplo de expresión de búsqueda | Descripción |
 | ------------------------- | ----------- |
 | foo | Busque cualquier palabra. Esto devolverá resultados si la palabra &quot;foo&quot; se encuentra en cualquiera de los campos en los que se puede buscar. |
-| foo AND bar | Una búsqueda booleana. Esto devolverá resultados si **both** las palabras &quot;foo&quot; y &quot;bar&quot; se encuentran en cualquiera de los campos en los que se pueden buscar. |
-| barra de foo | Una búsqueda booleana. Esto devolverá resultados si **o** la palabra &quot;foo&quot; o la palabra &quot;bar&quot; se encuentran en cualquiera de los campos en los que se puede buscar. |
-| foo NOT bar | Una búsqueda booleana. Esto devolverá resultados si se encuentra la palabra &quot;foo&quot;, pero la palabra &quot;bar&quot; no se encuentra en ninguno de los campos en los que se puede buscar. |
-| nombre: foo AND bar | Una búsqueda booleana. Esto devolverá resultados si **both** las palabras &quot;foo&quot; y &quot;bar&quot; se encuentran en el campo &quot;name&quot;. |
-| run* | Una búsqueda comodín. El uso de un asterisco (*) coincide con 0 o más caracteres, lo que significa que devolverá resultados si el contenido de cualquiera de los campos en los que se puede buscar contiene una palabra que empieza por &quot;ejecutar&quot;. Por ejemplo, esto devolverá resultados si aparecen las palabras &quot;se ejecuta&quot;, &quot;se ejecuta&quot;, &quot;se ejecuta&quot; o &quot;se ejecuta&quot;. |
-| cam? | Una búsqueda comodín. Uso de un signo de interrogación (?) coincide exactamente con un carácter, lo que significa que devolverá resultados si el contenido de cualquiera de los campos en los que se puede buscar comienza con &quot;cam&quot; y una letra adicional. Por ejemplo, esto devolverá resultados si aparecen las palabras &quot;camp&quot; o &quot;cams&quot;, pero no devolverá resultados si aparecen las palabras &quot;cámara&quot; o &quot;fogata&quot;. |
+| foo AND bar | Una búsqueda booleana. Devolverá resultados si **ambos** las palabras &quot;foo&quot; y &quot;bar&quot; se encuentran en cualquiera de los campos en los que se puede buscar. |
+| foo OR bar | Una búsqueda booleana. Devolverá resultados si **o bien** la palabra &quot;foo&quot; o la palabra &quot;bar&quot; se encuentran en cualquiera de los campos en los que se puede buscar. |
+| foo NOT bar | Una búsqueda booleana. Esto devolverá resultados si se encuentra la palabra &quot;foo&quot; pero la palabra &quot;bar&quot; no se encuentra en ninguno de los campos en los que se puede buscar. |
+| nombre: foo AND bar | Una búsqueda booleana. Devolverá resultados si **ambos** las palabras &quot;foo&quot; y &quot;bar&quot; se encuentran en el campo &quot;nombre&quot;. |
+| ejecutar* | Una búsqueda con comodines. El uso de un asterisco (*) coincide con 0 o más caracteres, lo que significa que devolverá resultados si el contenido de cualquiera de los campos en los que se puede buscar contiene una palabra que comience por &quot;ejecutar&quot;. Por ejemplo, esto devolverá resultados si aparecen las palabras &quot;run&quot;, &quot;running&quot;, &quot;runner&quot; o &quot;runt&quot;. |
+| ¿cam? | Una búsqueda con comodines. Utilizando un signo de interrogación (?) coincide solo exactamente con un carácter, lo que significa que devolverá resultados si el contenido de cualquiera de los campos en los que se puede buscar comienza con &quot;cam&quot; y una letra adicional. Por ejemplo, devolverá resultados si aparecen las palabras &quot;camp&quot; o &quot;cams&quot;, pero no devolverá resultados si aparecen las palabras &quot;camera&quot; o &quot;campfire&quot;. |
 | &quot;paraguas azul&quot; | Una búsqueda de frases. Esto devolverá resultados si el contenido de cualquiera de los campos en los que se puede buscar contiene la frase completa &quot;paraguas azul&quot;. |
-| blue\~ | Una búsqueda difusa. De forma opcional, puede colocar un número entre 0 y 2 después de la virgulilla (~) para especificar la distancia de edición. Por ejemplo, &quot;blue\~1&quot; devolvería &quot;blue&quot;, &quot;blues&quot; o &quot;glue&quot;. La búsqueda difusa puede **only** se aplicará a los términos, no a las frases. Sin embargo, puede añadir tildes al final de cada palabra de una frase. Por lo tanto, por ejemplo, &quot;camping\~ in\~ the\~ verano\~&quot; coincidiría con &quot;camping in the Summer&quot;. |
-| &quot;aeropuerto del hotel&quot;\~5 | Búsqueda por proximidad. Este tipo de búsqueda se utiliza para encontrar términos que estén próximos entre sí en un documento. Por ejemplo, la frase `"hotel airport"~5` encontrará los términos &quot;hotel&quot; y &quot;aeropuerto&quot; dentro de 5 palabras entre ellos en un documento. |
-| `/a[0-9]+b$/` | Búsqueda de expresiones regulares. Este tipo de búsqueda encuentra una coincidencia basada en el contenido entre las barras diagonales &quot;/&quot;, como se documenta en la clase RegExp. Por ejemplo, para buscar documentos que contengan &quot;motel&quot; o &quot;hotel&quot;, especifique `/[mh]otel/`. Las búsquedas de expresiones regulares se comparan con las palabras simples. |
+| azul\~ | Una búsqueda difusa. De forma opcional, puede colocar un número entre 0 y 2 después de la tilde (~) para especificar la distancia de edición. Por ejemplo, &quot;blue\~1&quot; devolverá &quot;blue&quot;, &quot;blues&quot; o &quot;glue&quot;. La búsqueda difusa puede **solamente** se aplicará a términos, no a frases. Sin embargo, puede anexar tildes al final de cada palabra en una frase. Así, por ejemplo, &quot;camping\~ en\~ el\~ verano\~&quot; coincidiría con &quot;camping en verano&quot;. |
+| &quot;aeropuerto del hotel&quot;\~5 | Una búsqueda de proximidad. Este tipo de búsqueda se utiliza para buscar términos que están cerca entre sí en un documento. Por ejemplo, la frase `"hotel airport"~5` encontrará los términos &quot;hotel&quot; y &quot;aeropuerto&quot; en un documento con un máximo de cinco palabras. |
+| `/a[0-9]+b$/` | Una búsqueda de expresiones regulares. Este tipo de búsqueda encuentra una coincidencia basada en el contenido entre barras diagonales &quot;/&quot;, como se documenta en la clase RegExp. Por ejemplo, para buscar documentos que contengan &quot;motel&quot; o &quot;hotel&quot;, especifique `/[mh]otel/`. Las búsquedas de expresiones regulares se comparan con palabras únicas. |
 
 Para obtener documentación más detallada sobre la sintaxis de la consulta, lea la [Documentación de sintaxis de consulta de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).

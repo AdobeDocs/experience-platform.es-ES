@@ -58,7 +58,7 @@ Estas acciones inicializan el complemento específico que se va a utilizar indiv
 
 ## Elementos de datos de la extensión Common Analytics Plugins
 
-Los siguientes elementos de datos están disponibles en la extensión de complementos de Analytics comunes, que aprovechan las capacidades de etiquetas para configurar y configurar los complementos correspondientes en Analytics:
+Los siguientes elementos de datos están disponibles en la extensión de complementos de Analytics comunes, que aprovechan las capacidades de etiquetas para configurar sus complementos correspondientes en Analytics:
 
 * `getGeoCoordinates`
 * `getNewRepeat`

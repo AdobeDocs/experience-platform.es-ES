@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;couchbase;Couchbase
 solution: Experience Platform
-title: Creación de una conexión base de Couchbase mediante la API de servicio de flujo
+title: Creación de una conexión base de Couchbase mediante la API de Flow Service
 type: Tutorial
-description: Obtenga información sobre cómo conectar Couchbase a Adobe Experience Platform mediante la API de servicio de flujo.
+description: Aprenda a conectar Couchbase a Adobe Experience Platform mediante la API de Flow Service.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
@@ -12,41 +12,41 @@ ht-degree: 2%
 
 ---
 
-# Cree un [!DNL Couchbase] conexión base utilizando [!DNL Flow Service] API
+# Crear un [!DNL Couchbase] conexión base mediante el [!DNL Flow Service] API
 
 >[!NOTE]
 >
->La variable [!DNL Couchbase] El conector está en versión beta. Consulte la [Resumen de fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+>El [!DNL Couchbase] el conector está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial le guía por los pasos para crear una conexión base para [!DNL Couchbase] usando la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL Couchbase] uso del [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 
-Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL Couchbase] usando la variable [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL Couchbase] uso del [!DNL Flow Service] API.
 
-### Recopilar las credenciales necesarias
+### Recopilar credenciales necesarias
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión utilizada para conectarse a su [!DNL Couchbase] instancia. El patrón de cadena de conexión para [!DNL Couchbase] es `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Para obtener más información sobre la adquisición de una cadena de conexión, consulte [este documento de Couchbase](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL Couchbase] es `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionString` | La cadena de conexión utilizada para conectarse a su [!DNL Couchbase] ejemplo. El patrón de cadena de conexión para [!DNL Couchbase] es `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Para obtener más información sobre la adquisición de una cadena de conexión, consulte [este documento de Couchbase](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Couchbase] es `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
-### Uso de las API de plataforma
+### Uso de API de Platform
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Creación de una conexión base
+## Crear una conexión base
 
-Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar su [!DNL Couchbase] credenciales de autenticación como parte de los parámetros de solicitud.
+Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL Couchbase] credenciales de autenticación como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -85,11 +85,11 @@ curl -X POST \
 | Propiedad | Descripción |
 | --------- | ----------- |
 | `auth.params.connectionString` | La cadena de conexión utilizada para conectarse a un [!DNL Couchbase] cuenta. El patrón de cadena de conexión es: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | La variable [!DNL Couchbase] id. de especificación de conexión: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionSpec.id` | El [!DNL Couchbase] identificador de especificación de conexión: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la conexión recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar sus datos en el siguiente tutorial.
+Una respuesta correcta devuelve los detalles de la conexión recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar los datos en el siguiente tutorial.
 
 ```json
 {
@@ -100,7 +100,7 @@ Una respuesta correcta devuelve los detalles de la conexión recién creada, inc
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL Couchbase] conexión base utilizando [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
+Al seguir este tutorial, ha creado un [!DNL Couchbase] conexión base mediante el [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
-* [Explorar la estructura y el contenido de las tablas de datos mediante el [!DNL Flow Service] API](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de la base de datos a Platform mediante el [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Explorar la estructura y el contenido de las tablas de datos mediante [!DNL Flow Service] API](../../explore/tabular.md)
+* [Cree un flujo de datos para llevar los datos de la base de datos a Platform mediante [!DNL Flow Service] API](../../collect/database-nosql.md)

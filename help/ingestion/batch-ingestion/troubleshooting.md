@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;datos ingestados;solución de problemas;preguntas frecuentes;ingesta por lotes;ingesta por lotes;
+keywords: Experience Platform;inicio;temas populares;datos ingeridos;solución de problemas;faq;Ingesta;Ingesta por lotes;ingesta por lotes;
 solution: Experience Platform
-title: Guía de solución de problemas de ingesta de lotes
-description: Esta documentación ayudará a responder a las preguntas más frecuentes sobre las API de ingesta de datos por lotes de Adobe Experience Platform.
+title: Guía de resolución de problemas de ingesta por lotes
+description: Esta documentación le ayudará a responder a las preguntas más frecuentes sobre las API de ingesta de datos por lotes de Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
@@ -13,35 +13,35 @@ ht-degree: 1%
 
 # Guía de solución de problemas de ingesta por lotes
 
-Esta documentación ayudará a responder a las preguntas más frecuentes sobre Adobe Experience Platform [!DNL Batch Data Ingestion] API.
+Esta documentación le ayudará a responder a las preguntas más frecuentes sobre Adobe Experience Platform [!DNL Batch Data Ingestion] API.
 
-## Llamadas de API por lotes
+## Llamadas API por lotes
 
-### ¿Los lotes están activos inmediatamente después de recibir HTTP 200 OK de la API CompleteBatch?
+### ¿Los lotes se activan inmediatamente después de recibir HTTP 200 OK del API CompleteBatch?
 
-La variable `200 OK` La respuesta de la API significa que el lote se ha aceptado para su procesamiento; no está activo hasta que pasa a su estado final, como Activo o Fallo.
+El `200 OK` La respuesta de la API significa que el lote se ha aceptado para el procesamiento; no estará activo hasta que pase a su estado final, como Activo o Fallo.
 
-### ¿Es seguro volver a intentar la llamada de API CompleteBatch después de que falle?
+### ¿Es seguro reintentar la llamada a la API CompleteBatch después de un error?
 
-Sí: es seguro volver a intentar la llamada de API. A pesar del fallo, es posible que la operación haya tenido éxito y que el lote haya sido aceptado con éxito. Sin embargo, se espera que los clientes tengan mecanismos de reintento en caso de que falle la API y, de hecho, se les recomienda que lo vuelvan a intentar. Si la operación se realiza correctamente, la API devolverá un error, incluso después de volver a intentarlo.
+Sí, es seguro volver a intentar la llamada de API. A pesar del error, es posible que la operación se haya realizado correctamente y que el lote se haya aceptado correctamente. Sin embargo, se espera que los clientes tengan mecanismos de reintento en caso de que falle la API y, de hecho, se les anima a volver a intentarlo. Si la operación se realiza correctamente, la API devolverá el resultado correcto, incluso después de volver a intentarlo.
 
 ### ¿Cuándo se debe utilizar la API de carga de archivos grandes?
 
-El tamaño de archivo recomendado para usar la API de carga de archivos grandes es de 256 MB o más. Encontrará más información sobre cómo utilizar la API de carga de archivos grande [here](./api-overview.md#ingest-large-parquet-files).
+El tamaño de archivo recomendado para utilizar la API de carga de archivos grandes es de 256 MB o más. Puede encontrar más información sobre cómo utilizar la API de carga de archivos grandes [aquí](./api-overview.md#ingest-large-parquet-files).
 
-### ¿Por qué falla la llamada a la API Large File Complete?
+### ¿Por qué falla la llamada API de finalización de archivo grande?
 
-Si se encuentran fragmentos de un archivo grande superpuestos o que faltan, el servidor responde con una solicitud incorrecta HTTP 400. Esto puede ocurrir porque es posible cargar fragmentos superpuestos, ya que las validaciones de rango se realizan en el momento de la finalización del archivo, cuando los fragmentos del archivo se unen.
+Si se encuentran fragmentos de un archivo grande superpuestos o no se encuentran, el servidor responde con una petición HTTP 400 incorrecta. Esto puede ocurrir porque es posible cargar fragmentos superpuestos, ya que las validaciones de rango se realizan en el momento de finalizar el archivo, cuando los fragmentos del archivo se vinculan entre sí.
 
-## Compatibilidad con Ingesta
+## Compatibilidad con ingesta
 
-### ¿Cuáles son los formatos de ingesta compatibles?
+### ¿Cuáles son los formatos de ingesta admitidos?
 
-Actualmente, tanto Parquet como JSON son compatibles. El CSV se admite en base a elementos heredados. Aunque los datos se promocionarán para realizar comprobaciones maestras y preliminares, no se admitirán funciones modernas, como conversión, partición o validación de filas.
+Actualmente, se admiten tanto Parquet como JSON. El CSV se admite en versiones anteriores: aunque los datos se promocionarán a formato principal y se realizarán comprobaciones preliminares, no se admitirán funciones modernas, como conversión, partición o validación de filas.
 
 ### ¿Dónde se debe especificar el formato de entrada por lotes?
 
-El formato de entrada debe especificarse en el momento de creación del lote dentro de la carga útil. A continuación se muestra un ejemplo de cómo especificar el formato de entrada por lotes:
+El formato de entrada debe especificarse en el momento de la creación del lote dentro de la carga útil. A continuación se muestra un ejemplo de cómo especificar el formato de entrada por lotes:
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
@@ -59,7 +59,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### ¿Por qué los datos cargados no aparecen en el conjunto de datos?
 
-Para que los datos aparezcan en el conjunto de datos, el lote debe marcarse como completado. Todos los archivos que desee introducir deben cargarse antes de marcar el lote como completo. A continuación se muestra un ejemplo de marca de un lote como completo:
+Para que los datos aparezcan en el conjunto de datos, el lote debe marcarse como completado. Todos los archivos que desee introducir deben cargarse antes de marcar el lote como completado. A continuación puede ver un ejemplo de cómo marcar un lote como completado:
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -69,9 +69,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-### ¿Cómo se incorpora JSON multilínea?
+### ¿Cómo se ingiere JSON multilínea?
 
-Para ingerir JSON multilínea, la variable `isMultiLineJson` el indicador debe establecerse en el momento de la creación del lote. A continuación se puede ver un ejemplo de esto:
+Para ingerir JSON de varias líneas, la variable `isMultiLineJson` debe establecerse el indicador en el momento de la creación del lote. A continuación puede ver un ejemplo de esto:
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
@@ -98,7 +98,7 @@ Para las líneas JSON, hay un objeto JSON por línea. Por ejemplo:
 {"string":"string3","int":3,"array":[3,6,9],"dict": {"key": "value3", "extra_key": "extra_value3"}}
 ```
 
-Para el JSON multilínea, un objeto puede ocupar varias líneas, mientras que todos los objetos están ajustados en una matriz JSON. Por ejemplo:
+Para JSON de varias líneas, un objeto puede ocupar varias líneas, mientras que todos los objetos se agrupan en una matriz JSON. Por ejemplo:
 
 ```json
 [
@@ -124,25 +124,25 @@ De forma predeterminada, [!DNL Batch Data Ingestion] utiliza JSON de una sola l�
 
 ### ¿Se admite la ingesta de CSV?
 
-La ingesta de CSV solo es compatible con esquemas planos. Actualmente, no se admite la ingesta de datos jerárquicos en CSV.
+La ingesta de CSV solo se admite para esquemas planos. Actualmente no se admite la ingesta de datos jerárquicos en CSV.
 
 Para obtener todas las funciones de ingesta de datos, es necesario utilizar los formatos JSON o Parquet.
 
 ### ¿Qué tipos de validación se realizan en los datos?
 
-Existen tres niveles de validación realizados en los datos:
+Se realizan tres niveles de validación en los datos:
 
-- Schema - Batch Ingestion garantiza que el esquema del de los datos introducidos coincida con el esquema del conjunto de datos.
+- Esquema: la ingesta por lotes garantiza que el esquema del de los datos introducidos coincida con el esquema del conjunto de datos.
 - Tipo de datos: la ingesta por lotes garantiza que el tipo de cada campo ingerido coincida con el tipo definido en el esquema del conjunto de datos.
-- Restricciones - La Ingesta de lotes garantiza que las restricciones, como &quot;Requerido&quot;, &quot;enumeración&quot; y &quot;formato&quot;, se definan correctamente en la definición del esquema.
+- Restricciones: la ingesta por lotes garantiza que las restricciones, como &quot;Obligatorio&quot;, &quot;enumeración&quot; y &quot;formato&quot;, se definan correctamente en la definición del esquema.
 
-### ¿Cómo se puede reemplazar un lote ingerido?
+### ¿Cómo se puede reemplazar un lote ya ingerido?
 
-Un lote ya ingerido se puede reemplazar mediante la función Reproducción por lotes. Encontrará más información sobre la reproducción por lotes [here](./api-overview.md#replay-a-batch).
+Un lote ya introducido se puede reemplazar mediante la función Reproducción por lotes. Puede encontrar más información sobre la reproducción por lotes [aquí](./api-overview.md#replay-a-batch).
 
-### ¿Cómo se controla la ingestión por lotes?
+### ¿Cómo se monitoriza la ingesta por lotes?
 
-Una vez que se ha señalado un lote para la promoción por lotes, el progreso de la ingesta por lotes puede monitorizarse con la siguiente solicitud:
+Una vez que se ha indicado un lote para la promoción por lotes, el progreso de la ingesta por lotes se puede monitorizar con la siguiente solicitud:
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
@@ -151,7 +151,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
   -H "x-api-key: {API_KEY}"
 ```
 
-Con esta solicitud, obtendrá una respuesta similar a esta:
+Con esta solicitud, obtendrá una respuesta similar a la siguiente:
 
 ```http
 200 OK
@@ -175,48 +175,48 @@ Con esta solicitud, obtendrá una respuesta similar a esta:
 
 ## Estados de lotes
 
-### ¿Cuáles son los posibles estados de lote?
+### ¿Cuáles son los estados de lote posibles?
 
-Un lote puede, en su ciclo vital, pasar por los siguientes estados:
+Un lote puede, en su ciclo de vida, pasar por los siguientes estados:
 
-| Estado | Datos escritos en Master | Descripción |
+| Estado | Datos escritos en Principal | Descripción |
 | ------ | ---------------------- | ----------- |
-| Abandonado |  | El cliente no pudo completar el lote en el intervalo de tiempo esperado. |
-| Anulado |  | El cliente ha invocado explícitamente, a través de la variable [!DNL Batch Data Ingestion] API, una operación de anulación para el lote especificado. Una vez que un lote está en el estado Loaded, el lote no se puede anular. |
-| Activo/Correcto | x | El lote se ha promocionado correctamente de escenario a maestro y ahora está disponible para el consumo descendente. **Nota:** Active y Success se utilizan de forma intercambiable. |
+| Abandonado |  | El cliente no ha podido completar el lote en el periodo de tiempo esperado. |
+| Anulado |  | El cliente ha llamado explícitamente a través de [!DNL Batch Data Ingestion] API, una operación de anulación para el lote especificado. Una vez que un lote se encuentra en el estado Cargado, el lote no se puede cancelar. |
+| Activo/Con éxito | x | El lote se ha promocionado correctamente de fase a maestro y ahora está disponible para el consumo descendente. **Nota:** Activo y de éxito se utilizan indistintamente. |
 | Archivado |  | El lote se ha archivado en almacenamiento en frío. |
-| Error/error |  | Estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Se registra un error procesable, junto con el lote, que permite a los clientes corregir y volver a enviar los datos. **Nota:** Los errores y los errores se utilizan de forma intercambiable. |
-| Inactivo | x | El lote se promocionó correctamente, pero se ha revertido o ha caducado. El lote ya no estará disponible para el consumo descendente, pero los datos subyacentes permanecerán en Master hasta que se hayan retenido, archivado o eliminado de otro modo. |
-| Carga |  | El cliente está escribiendo datos para el lote. El lote es **not** listo para la promoción, en este momento. |
+| Fallido/Fallo |  | Un estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Se registra un error procesable, junto con el lote, para permitir a los clientes corregir y volver a enviar los datos. **Nota:** Error y Error se utilizan indistintamente. |
+| Inactivo | x | El lote se ha promocionado correctamente, pero se ha revertido o ha caducado. El lote ya no estará disponible para el consumo descendente, pero los datos subyacentes permanecerán en Principal hasta que se hayan retenido, archivado o eliminado de otra forma. |
+| Cargando |  | El cliente está escribiendo datos para el lote. El lote es **no** listo para la promoción, en este momento. |
 | Cargado |  | El cliente ha completado la escritura de datos para el lote. El lote está listo para la promoción. |
-| Conservado |  | Los datos se han extraído de Master y de un archivo designado en Adobe Data Lake. |
-| Ensayo |  | El cliente ha señalado correctamente el lote para su promoción y los datos se están montando para su consumo descendente. |
-| Reintentando |  | El cliente ha señalado el lote para su promoción, pero debido a un error, el servicio de supervisión de lotes está reintentando el lote. Este estado se puede utilizar para informar a los clientes de que puede haber un retraso en la ingesta de los datos. |
-| Estancado |  | El cliente ha señalado el lote para su promoción, pero después de `n` reintentos por parte de un servicio de supervisión por lotes, la promoción por lotes se ha estancado. |
+| Retenido |  | Los datos se han sacado de Principal y en un archivo designado en el lago de datos de Adobe. |
+| Ensayo |  | El cliente ha indicado correctamente el lote para la promoción y los datos se están almacenando en zona intermedia para su consumo descendente. |
+| Reintentando |  | El cliente ha indicado el lote para su promoción, pero debido a un error, un servicio de monitorización de lotes está reintentando el lote. Este estado se puede utilizar para indicar a los clientes que puede haber un retraso en la ingesta de los datos. |
+| Parado |  | El cliente ha indicado el lote para la promoción, pero después de `n` reintentos de un servicio de Monitorización por lotes, la promoción por lotes se ha detenido. |
 
 ### ¿Qué significa &quot;Ensayo&quot; para los lotes?
 
-Cuando un lote se encuentra en &quot;Ensayo&quot;, significa que el lote se ha señalado correctamente para su promoción y que los datos se están montando para su consumo descendente.
+Cuando un lote está en &quot;Ensayo&quot;, significa que el lote se marcó correctamente para su promoción y que los datos se están almacenando en zona intermedia para su consumo descendente.
 
-### ¿Qué significa cuando un lote está &quot;reintentando&quot;?
+### ¿Qué significa cuando un lote se está &quot;reintentando&quot;?
 
-Cuando un lote se está &quot;reintentando&quot;, significa que la ingesta de datos del lote se ha detenido temporalmente debido a problemas intermitentes. Cuando esto sucede, no requiere la intervención del cliente.
+Cuando un lote está en &quot;Reintentando&quot;, significa que la ingesta de datos del lote se ha detenido temporalmente debido a problemas intermitentes. Cuando esto sucede, no requiere la intervención del cliente.
 
-### ¿Qué significa cuando un lote está &quot;Paralizado&quot;?
+### ¿Qué significa cuando un lote está &quot;bloqueado&quot;?
 
-Cuando un lote está en &quot;Estancado&quot;, significa que [!DNL Data Ingestion Services] está experimentando dificultades para ingerir el lote y todos los reintentos se han agotado.
+Cuando un lote está en &quot;Parado&quot;, significa que [!DNL Data Ingestion Services] tiene dificultades para ingerir el lote y se han agotado todos los reintentos.
 
-### ¿Qué significa si un lote sigue siendo &quot;Cargando&quot;?
+### ¿Qué significa si un lote sigue &quot;Cargando&quot;?
 
-Cuando un lote se encuentra en &quot;Carga&quot;, significa que no se ha llamado a la API CompleteBatch para promocionar el lote.
+Cuando un lote está en &quot;Cargando&quot;, significa que no se ha llamado al API CompleteBatch para promocionar el lote.
 
-### ¿Existe alguna forma de saber si un lote se ha introducido correctamente?
+### ¿Existe alguna manera de saber si un lote se ha ingerido correctamente?
 
-Una vez que el estado del lote es &quot;Activo&quot;, el lote se ha introducido correctamente. Para averiguar el estado del lote, siga los pasos detallados [previous](#how-is-batch-ingestion-monitored).
+Una vez que el estado del lote es &quot;Activo&quot;, el lote se ha introducido correctamente. Para averiguar el estado del lote, siga los pasos detallados [anterior](#how-is-batch-ingestion-monitored).
 
 ### ¿Qué sucede después de que falla un lote?
 
-Cuando falla un lote, el motivo del error se puede identificar en la variable `errors` de la carga útil. A continuación se pueden ver ejemplos de errores:
+Cuando falla un lote, el motivo por el que falla se puede identificar en la variable `errors` de la carga útil. A continuación se muestran ejemplos de errores:
 
 ```json
     "errors":[
@@ -239,22 +239,22 @@ Una vez corregidos los errores, se puede volver a cargar el lote.
 
 ### ¿Cómo se deben eliminar los lotes?
 
-En lugar de eliminar directamente de [!DNL Catalog], los lotes deben eliminarse utilizando cualquiera de los métodos que se indican a continuación:
+En lugar de eliminar directamente de [!DNL Catalog], los lotes deben eliminarse utilizando cualquiera de los métodos siguientes:
 
-1. Si el lote está en curso, se debe anular el lote.
-2. Si el lote se administra correctamente, el lote debe revertirse.
+1. Si el lote está en curso, se debe cancelar.
+2. Si el lote se domina correctamente, el lote debe revertirse.
 
-### ¿Qué métricas a nivel de lote están disponibles?
+### ¿Qué métricas de nivel de lote están disponibles?
 
-Las siguientes métricas a nivel de lote están disponibles para lotes en el estado Activo/Correcto:
+Las siguientes métricas de nivel de lote están disponibles para lotes en el estado Activo/Correcto:
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| inputByteSize | El número total de bytes configurados para [!DNL Data Ingestion Services] para procesar. |
-| inputRecordSize | El número total de filas organizadas para [!DNL Data Ingestion Services] para procesar. |
-| outputByteSize | El número total de bytes exportados por [!DNL Data Ingestion Services] a [!DNL Data Lake]. |
-| outputRecordSize | El número total de filas resultante de [!DNL Data Ingestion Services] a [!DNL Data Lake]. |
-| particiónCount | El número total de particiones escritas en [!DNL Data Lake]. |
+| inputByteSize | Número total de bytes clasificados para [!DNL Data Ingestion Services] para procesar. |
+| inputRecordSize | Número total de filas organizadas para [!DNL Data Ingestion Services] para procesar. |
+| outputByteSize | Número total de bytes generados por [!DNL Data Ingestion Services] hasta [!DNL Data Lake]. |
+| outputRecordSize | Número total de filas generadas por [!DNL Data Ingestion Services] hasta [!DNL Data Lake]. |
+| partitionCount | Número total de particiones escritas en [!DNL Data Lake]. |
 
 ### ¿Por qué las métricas no están disponibles en algunos lotes?
 
@@ -263,13 +263,13 @@ Existen dos razones por las que las métricas pueden no estar disponibles en el 
 1. El lote nunca llegó correctamente al estado Activo/Correcto.
 2. El lote se promocionó mediante una ruta de promoción heredada, como la ingesta de CSV.
 
-### ¿Qué significan los diferentes códigos de estado?
+### ¿Qué significan los distintos códigos de estado?
 
 | Código de estado | Descripción |
 | ----------- | ----------- |
 | 106 | El archivo del conjunto de datos está vacío. |
 | 118 | El archivo CSV contiene una fila de encabezado vacía. |
-| 200 | El lote se ha aceptado para su procesamiento y pasará a un estado final, como Activo o Fallo. Una vez enviado, el lote puede monitorizarse utilizando la variable `GetBatch` punto final. |
-| 400 | Solicitud incorrecta. Se devuelve si faltan fragmentos o si se superponen en un lote. |
+| 200 | El lote se ha aceptado para su procesamiento y pasará a un estado final, como Activo o Error. Una vez enviado, el lote se puede monitorizar utilizando `GetBatch` punto final. |
+| 400 | Solicitud incorrecta. Se devuelve si faltan fragmentos o si hay trozos superpuestos en un lote. |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files

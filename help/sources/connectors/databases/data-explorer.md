@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Data Explorer de Azure;explorador de datos azure
+keywords: Experience Platform;inicio;temas populares;Data Explorer de Azure;explorador de datos de Azure
 solution: Experience Platform
-title: Información general del origen de Data Explorer de Azure
+title: Información general sobre Azure Data Explorer Source
 description: Obtenga información sobre cómo conectar la Data Explorer de Azure a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -11,25 +11,25 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Azure Data Explorer] source
+# [!DNL Azure Data Explorer] origen
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como [!DNL Microsoft], MySQL y [!DNL Azure]. Puede incorporar los datos de estos sistemas a [!DNL Platform].
+Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como [!DNL Microsoft], MySQL y [!DNL Azure]. Puede introducir los datos de estos sistemas en [!DNL Platform].
 
-Se admiten diferentes tipos de bases de datos de terceros, incluidos los almacenes de datos relacionales, NoSQL o NoSQL. Compatibilidad con proveedores de bases de datos incluye [!DNL Azure Data Explorer].
+Se admiten distintos tipos de bases de datos de terceros, como relacionales, NoSQL o almacenes de datos. La compatibilidad con proveedores de bases de datos incluye [!DNL Azure Data Explorer].
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
-La siguiente documentación proporciona información sobre cómo conectar [!DNL Azure Data Explorer] a [!DNL Platform] mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectarse [!DNL Azure Data Explorer] hasta [!DNL Platform] mediante las API de o la interfaz de usuario de:
 
-## Connect [!DNL Azure Data Explorer] a [!DNL Platform] uso de API
+## Connect [!DNL Azure Data Explorer] hasta [!DNL Platform] uso de API
 
-- [Creación de una conexión base de Data Explorer de Azure mediante la API de servicio de flujo](../../tutorials/api/create/databases/data-explorer.md)
-- [Exploración de tablas de datos mediante la API de servicio de flujo](../../tutorials/api/explore/tabular.md)
-- [Creación de un flujo de datos para un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
+- [Crear una conexión base de Azure Data Explorer mediante la API de Flow Service](../../tutorials/api/create/databases/data-explorer.md)
+- [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
+- [Crear un flujo de datos para un origen de base de datos mediante la API de Flow Service](../../tutorials/api/collect/database-nosql.md)
 
-## Connect [!DNL Azure Data Explorer] a [!DNL Platform] uso de la interfaz de usuario
+## Connect [!DNL Azure Data Explorer] hasta [!DNL Platform] uso de la IU
 
-- [Crear una conexión de origen de Data Explorer de Azure en la interfaz de usuario](../../tutorials/ui/create/databases/data-explorer.md)
-- [Crear un flujo de datos para una conexión de origen de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
+- [Crear una conexión de origen de Data Explorer de Azure en la IU](../../tutorials/ui/create/databases/data-explorer.md)
+- [Crear un flujo de datos para una conexión de origen de base de datos en la IU](../../tutorials/ui/dataflow/databases.md)

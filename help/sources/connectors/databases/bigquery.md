@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;inicio;temas populares;BigQuery;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
-title: Descripción general del conector de origen BigQuery de Google
+title: Información general sobre el conector de origen de Google BigQuery
 description: Obtenga información sobre cómo conectar Google BigQuery a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -13,43 +13,43 @@ ht-degree: 0%
 
 # [!DNL Google BigQuery]
 
-Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[!DNL Experience Platform] permite la ingesta de datos desde una base de datos de terceros. Platform puede conectarse a diferentes tipos de bases de datos, como relacional, sinSQL o data warehouse. La compatibilidad con los proveedores de bases de datos incluye [!DNL Google BigQuery].
+[!DNL Experience Platform] proporciona compatibilidad con la ingesta de datos de una base de datos de terceros. Platform puede conectarse a diferentes tipos de bases de datos, como relacionales, NoSQL o almacenes de datos. Los proveedores de bases de datos admiten [!DNL Google BigQuery].
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 ## Requisitos previos
 
-En la siguiente sección se proporciona más información sobre la configuración de requisitos previos necesaria para poder crear una [!DNL Google BigQuery] conexión de origen.
+La siguiente sección proporciona más información sobre la configuración de requisitos previos necesaria para crear una [!DNL Google BigQuery] conexión de origen.
 
 ### Genere su [!DNL Google BigQuery] credenciales
 
-Para conectar [!DNL Google BigQuery] para Platform, debe generar valores para las siguientes credenciales:
+Para conectar [!DNL Google BigQuery] En Platform, debe generar valores para las siguientes credenciales:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
 | `project` | El proyecto es la entidad organizadora de nivel base para su [!DNL Google Cloud] recursos, incluidos [!DNL Google BigQuery]. |
-| `clientID` | El ID de cliente es la mitad de su [!DNL Google BigQuery] Credenciales de OAuth 2.0. |
-| `clientSecret` | El secreto del cliente es la otra mitad de su [!DNL Google BigQuery] Credenciales de OAuth 2.0. |
-| `refreshToken` | El token de actualización le permite obtener nuevos tokens de acceso para su API. Los tokens de acceso tienen una duración limitada y pueden caducar durante el curso del proyecto. Puede utilizar el token de actualización para autenticarse y solicitar los tokens de acceso subsiguientes para su proyecto cuando sea necesario. |
-| `largeResultsDataSetId` | El  [!DNL Google BigQuery] ID del conjunto de datos necesario para habilitar la compatibilidad con grandes conjuntos de resultados. |
+| `clientID` | El ID de cliente es la mitad de [!DNL Google BigQuery] Credenciales de OAuth 2.0 |
+| `clientSecret` | El secreto del cliente es la otra mitad de su [!DNL Google BigQuery] Credenciales de OAuth 2.0 |
+| `refreshToken` | El token de actualización le permite obtener nuevos tokens de acceso para su API. Los tokens de acceso tienen una duración limitada y pueden caducar durante el transcurso del proyecto. Puede utilizar el token de actualización para autenticar y solicitar tokens de acceso posteriores para su proyecto cuando sea necesario. |
+| `largeResultsDataSetId` | El elemento creado previamente  [!DNL Google BigQuery] ID del conjunto de datos necesario para habilitar la compatibilidad con grandes conjuntos de resultados. |
 
 Para obtener instrucciones detalladas sobre cómo generar credenciales de OAuth 2.0 para [!DNL Google] API, consulte lo siguiente [[!DNL Google] Guía de autenticación de OAuth 2.0](https://developers.google.com/identity/protocols/oauth2).
 
 ## Connect [!DNL Google BigQuery] a Platform
 
-La siguiente documentación proporciona información sobre cómo conectar [!DNL Google BigQuery] a Platform mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectarse [!DNL Google BigQuery] Vaya a Platform mediante las API o la interfaz de usuario de:
 
 ### Uso de API
 
-- [Creación de una conexión base de Google BigQuery mediante la API de servicio de flujo](../../tutorials/api/create/databases/bigquery.md)
-- [Exploración de tablas de datos mediante la API de servicio de flujo](../../tutorials/api/explore/tabular.md)
-- [Creación de un flujo de datos para un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
+- [Creación de una conexión base de Google BigQuery mediante la API de Flow Service](../../tutorials/api/create/databases/bigquery.md)
+- [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
+- [Crear un flujo de datos para un origen de base de datos mediante la API de Flow Service](../../tutorials/api/collect/database-nosql.md)
 
-### Uso de la interfaz de usuario
+### Uso de la IU
 
-- [Crear una conexión de origen Google BigQuery en la interfaz de usuario](../../tutorials/ui/create/databases/bigquery.md)
-- [Crear un flujo de datos para una conexión de origen de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
+- [Creación de una conexión de origen de Google BigQuery en la IU](../../tutorials/ui/create/databases/bigquery.md)
+- [Crear un flujo de datos para una conexión de origen de base de datos en la IU](../../tutorials/ui/dataflow/databases.md)

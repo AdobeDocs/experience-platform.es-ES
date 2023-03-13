@@ -42,7 +42,7 @@ En cuanto al flujo de publicación, hay cuatro estados básicos en los que puede
 * [[!UICONTROL Aprobado]](#approved)
 * [[!UICONTROL Publicado]](#published)
 
-Estos cuatro estados se representan como columnas dentro de la variable **[!UICONTROL Flujo de publicación]** pestaña .
+Estos cuatro estados se representan como columnas dentro de la variable **[!UICONTROL Flujo de publicación]** pestaña.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Lo que se incluye en el flujo ascendente depende de la fase actual en que se enc
 
 ![](./images/approval-workflow/upstream.png)
 
-Al editar una biblioteca en la interfaz de usuario, todos los recursos heredados del flujo ascendente se representan en la variable **[!UICONTROL Recursos Upstream]** para obtener más información. Para ver estos recursos, seleccione la pestaña Expandir debajo del encabezado de la sección.
+Al editar una biblioteca en la IU de, todos los recursos heredados del flujo ascendente se representan en la variable **[!UICONTROL Recursos ascendentes]** sección. Para ver estos recursos, seleccione la pestaña Expandir debajo del encabezado de la sección.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

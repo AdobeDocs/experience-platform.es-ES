@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;lista de área de nombres;área de nombres de la lista
+keywords: Experience Platform;inicio;temas populares;lista de área de nombres;área de nombres de lista
 solution: Experience Platform
-title: Enumerar espacios de nombres de identidad disponibles
-description: Enumere todos los espacios de nombres disponibles.
+title: Enumerar áreas de nombres de identidad disponibles
+description: Enumerar todas las áreas de nombres disponibles.
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
 source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
@@ -32,7 +32,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye una matriz de objetos, cada uno de los cuales representa un espacio de nombres disponible. Espacios de nombres con un &quot;[!UICONTROL custom]&quot; valor de &quot;[!UICONTROL false]&quot; son espacios de nombres estándar, mientras que aquellos con un &quot;[!UICONTROL custom]&quot; valor de &quot;[!UICONTROL true]&quot; son áreas de nombres que su organización ha creado.
+La respuesta incluye una matriz de objetos, cada uno de los cuales representa un área de nombres disponible. Áreas de nombres con un &quot;[!UICONTROL personalizado]&quot; valor de &quot;[!UICONTROL false]&quot; son áreas de nombres estándar, mientras que las que tienen un &quot;[!UICONTROL personalizado]&quot; valor de &quot;[!UICONTROL true]&quot; son áreas de nombres que su organización ha creado.
 
 >[!NOTE]
 >
@@ -78,4 +78,4 @@ La respuesta incluye una matriz de objetos, cada uno de los cuales representa un
 
 ## Pasos siguientes
 
-Continúe con el siguiente tutorial a [crear un espacio de nombres personalizado](./create-custom-namespace.md)
+Continúe con el siguiente tutorial para [crear un área de nombres personalizada](./create-custom-namespace.md)

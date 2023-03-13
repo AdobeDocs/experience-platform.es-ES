@@ -1,10 +1,11 @@
 ---
 title: Notas
-description: Aprenda a añadir anotaciones a determinados recursos de etiquetas en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información sobre cómo añadir anotaciones de texto a determinados recursos de etiquetas en Adobe Experience Platform.
+exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 73%
+ht-degree: 94%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 73%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Las notas son anotaciones que se pueden agregar a determinados recursos de etiquetas en Adobe Experience Platform. Las notas se pueden adjuntar a los siguientes recursos:
+Las notas son anotaciones de texto que se pueden añadir a determinados recursos de etiquetas en Adobe Experience Platform. Las notas se pueden adjuntar a los siguientes recursos:
 
 * Extensiones
 * Elementos de datos
@@ -42,6 +43,6 @@ Seleccione **[!UICONTROL Notas]** para expandir el carril derecho y mostrar las 
 
 ## Otras
 
-* Las notas sobre los recursos de etiquetas coinciden con el comportamiento de las notas en la DTM, ya que son inmutables y no se pueden editar ni eliminar.
+* Las notas en los recursos de etiquetas se comportan de la misma manera que las notas en DTM, ya que son inmutables y no se pueden editar ni eliminar.
 * Al examinar las revisiones anteriores de un recurso, solo se muestran las notas que se crearon antes de la fecha de `created_at` de esa revisión.
 * Al eliminar un recurso, también se eliminan todas las notas adjuntas al recurso.

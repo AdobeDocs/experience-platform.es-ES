@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;inicio;temas populares; notificaciones
-description: Al suscribirse a los eventos de Adobe I/O, puede utilizar webhooks para recibir notificaciones sobre los estados de ejecución de flujo de sus conexiones de origen. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que han contribuido al error de una ejecución.
+description: Al suscribirse a los Eventos de Adobe I/O, puede utilizar los webhooks para recibir notificaciones sobre los estados de ejecución de flujo de sus conexiones de origen. Estas notificaciones contienen información sobre el éxito de la ejecución de flujo o los errores que contribuyeron al error de una ejecución.
 solution: Experience Platform
 title: Notificaciones de ejecución de flujo
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
@@ -13,47 +13,47 @@ ht-degree: 1%
 
 # Notificaciones de ejecución de flujo
 
-Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes de datos admitidas.
 
-Con Eventos de Adobe I/O, puede suscribirse a eventos y utilizar webhooks para recibir notificaciones sobre el estado de sus ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que han contribuido al error de una ejecución.
+Con Eventos de Adobe I/O, puede suscribirse a eventos y utilizar webhooks para recibir notificaciones sobre el estado de las ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución de flujo o los errores que contribuyeron al error de una ejecución.
 
-Este documento proporciona pasos sobre cómo suscribirse a eventos, registrar enlaces web y recibir notificaciones que contengan información sobre el estado de las ejecuciones de flujo.
+Este documento proporciona pasos sobre cómo suscribirse a eventos, registrar webhooks y recibir notificaciones que contengan información sobre el estado de las ejecuciones del flujo.
 
 ## Primeros pasos
 
-Este tutorial supone que ya ha creado al menos una conexión de origen cuyo flujo desea monitorizar. Si todavía no ha configurado una conexión de origen, comience por visitar la [información general sobre fuentes](./home.md) para configurar el origen que elija antes de volver a esta guía.
+En este tutorial se da por hecho que ya ha creado al menos una conexión de origen cuyo flujo de trabajo se ejecuta y que desea supervisar. Si aún no ha configurado una conexión de origen, comience visitando la [información general de orígenes](./home.md) para configurar el origen que elija antes de volver a esta guía.
 
-Este documento también requiere una comprensión práctica de los webhooks y cómo conectar un weblock de una aplicación a otra. Consulte la [[!DNL I/O Events] documentación](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para una introducción a los webhooks.
+Este documento también requiere una comprensión práctica de los webhooks y cómo conectar un webhook de una aplicación a otra. Consulte la [[!DNL I/O Events] documentación](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para ver una introducción a los webhooks.
 
-## Registro de un enlace web para notificaciones de ejecución de flujo
+## Registrar un webhook para notificaciones de ejecución de flujo
 
-Para recibir notificaciones de ejecución de flujo, debe utilizar la consola de Adobe Developer para registrar un enlace web en su [!DNL Experience Platform] integración.
+Para recibir notificaciones de ejecución de flujo, debe utilizar la consola de Adobe Developer para registrar un webhook en su [!DNL Experience Platform] integración.
 
-Siga el tutorial en [suscripción a notificaciones de [!DNL I/O Event]](../observability/alerts/subscribe.md) para ver los pasos detallados sobre cómo hacerlo.
+Siga el tutorial de [suscribirse a notificaciones de [!DNL I/O Event]](../observability/alerts/subscribe.md) para ver los pasos detallados sobre cómo hacerlo.
 
 >[!IMPORTANT]
 >
->Durante el proceso de suscripción, asegúrese de seleccionar **[!UICONTROL Notificaciones de la plataforma]** como proveedor de eventos y seleccione las siguientes suscripciones de eventos:
+>Durante el proceso de suscripción, asegúrese de seleccionar **[!UICONTROL Notificaciones de Platform]** como proveedor de eventos y seleccione las siguientes suscripciones a eventos:
 >
->* **[!UICONTROL Ejecución de flujo de fuente de Experience Platform correcta]**
->* **[!UICONTROL Error en la ejecución del flujo del origen del Experience Platform]**
+>* **[!UICONTROL Ejecución correcta del flujo del origen del Experience Platform]**
+>* **[!UICONTROL Error al ejecutar flujo en origen de Experience Platform]**
 
 
 ## Recibir notificaciones de ejecución de flujo
 
-Con el enlace web conectado y la suscripción del evento completada, puede empezar a recibir notificaciones de ejecución de flujo a través del panel de weblock.
+Con el webhook conectado y la suscripción al evento completada, puede empezar a recibir notificaciones de ejecución de flujo a través del panel del webhook.
 
-Una notificación devuelve información como el número de trabajos de ingesta ejecutados, el tamaño del archivo y los errores. Una notificación también devuelve una carga útil asociada con su ejecución de flujo en formato JSON. La carga útil de respuesta se puede clasificar como `sources_flow_run_success` o `sources_flow_run_failure`.
+Una notificación devuelve información como el número de trabajos de ingesta ejecutados, el tamaño del archivo y los errores. Una notificación también devuelve una carga útil asociada con la ejecución del flujo en formato JSON. La carga útil de respuesta se puede clasificar como `sources_flow_run_success` o `sources_flow_run_failure`.
 
 >[!IMPORTANT]
 >
->Si la ingesta parcial está habilitada durante el proceso de creación del flujo, un flujo que contenga tanto la ingesta correcta como la fallida se marcará como `sources_flow_run_success` solo si el número de errores está por debajo del porcentaje de umbral de error establecido durante el proceso de creación del flujo. Si una ejecución de flujo correcta contiene errores, estos se incluirán como parte de la carga útil de retorno.
+>Si la ingesta parcial está habilitada durante el proceso de creación de flujo, un flujo que contenga ingestas correctas y fallidas se marcará como `sources_flow_run_success` solo si el número de errores está por debajo del porcentaje de umbral de error establecido durante el proceso de creación de flujo. Si una ejecución de flujo correcta contiene errores, estos se incluirán como parte de la carga útil de retorno.
 
 ### Correcto
 
-Una respuesta correcta devuelve un conjunto de `metrics` que definen las características de un flujo de trabajo específico y `activities` esto describe cómo se transforman los datos.
+Una respuesta correcta devuelve un conjunto de `metrics` que definen las características de una ejecución de flujo específica y `activities` que describen cómo se transforman los datos.
 
 ```json
 {
@@ -184,18 +184,18 @@ Una respuesta correcta devuelve un conjunto de `metrics` que definen las caracte
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `metrics` | Define características de los datos en la ejecución de flujo. |
+| `metrics` | Define las características de los datos en la ejecución de flujo. |
 | `activities` | Define los diferentes pasos y actividades que se realizan para transformar los datos. |
 | `durationSummary` | Define la hora de inicio y finalización de la ejecución del flujo. |
 | `sizeSummary` | Define el volumen de los datos en bytes. |
 | `recordSummary` | Define el recuento de registros de los datos. |
-| `fileSummary` | Define el número de archivos de los datos. |
-| `fileInfo` | Dirección URL que proporciona información general sobre los archivos ingestados correctamente. |
+| `fileSummary` | Define el recuento de archivos de los datos. |
+| `fileInfo` | Una URL que lleva a una descripción general de los archivos ingeridos correctamente. |
 | `statusSummary` | Define si la ejecución del flujo es un éxito o un error. |
 
 ### Fallo
 
-La siguiente respuesta es un ejemplo de una ejecución de flujo fallida, con un error que se produce cuando se procesan los datos copiados. También pueden producirse errores mientras se copian los datos del origen. Una ejecución de flujo fallida incluye información sobre los errores que contribuyeron al error de la ejecución, incluido su error y descripción.
+La siguiente respuesta es un ejemplo de una ejecución de flujo fallida, con un error que se produce cuando se procesan los datos copiados. También pueden producirse errores mientras se copian los datos desde el origen. Una ejecución de flujo fallida incluye información sobre los errores que contribuyeron al fallo de la ejecución, incluido su error y descripción.
 
 ```json
 [
@@ -308,7 +308,7 @@ La siguiente respuesta es un ejemplo de una ejecución de flujo fallida, con un 
 
 | Propiedad | Descripción |
 | ---------- | ----------- |
-| `fileInfo` | Dirección URL que proporciona información general sobre los archivos que se han introducido correctamente y no correctamente. |
+| `fileInfo` | Una dirección URL que proporciona una descripción general de los archivos que se han ingerido correctamente y no correctamente. |
 
 >[!NOTE]
 >
@@ -316,17 +316,17 @@ La siguiente respuesta es un ejemplo de una ejecución de flujo fallida, con un 
 
 ## Pasos siguientes
 
-Ahora puede suscribirse a eventos que le permitan recibir notificaciones en tiempo real sobre sus estados de ejecución de flujo. Para obtener más información sobre las ejecuciones y fuentes de flujo, consulte la [información general sobre fuentes](./home.md).
+Ahora puede suscribirse a eventos que le permiten recibir notificaciones en tiempo real sobre los estados de ejecución de flujo. Para obtener más información sobre las ejecuciones de flujo y las fuentes, consulte la [información general de orígenes](./home.md).
 
 ## Apéndice
 
 Las secciones siguientes proporcionan información adicional para trabajar con notificaciones de ejecución de flujo.
 
-### Comprensión de los mensajes de error {#errors}
+### Explicación de los mensajes de error {#errors}
 
-Pueden producirse errores de ingesta cuando los datos se copian del origen o cuando los datos copiados se procesan en [!DNL Platform]. Consulte la siguiente tabla para obtener más información sobre errores específicos.
+Los errores de ingesta pueden producirse cuando los datos se copian del origen o cuando los datos copiados se procesan en [!DNL Platform]. Consulte la tabla siguiente para obtener más información sobre errores específicos.
 
 | Error | Descripción |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | Error al copiar datos de un origen. |
-| `CONNECTOR-2001-500` | Error al procesar los datos copiados en [!DNL Platform]. Este error podría deberse a análisis, validación o transformación. |
+| `CONNECTOR-1001-500` | Error al copiar los datos desde un origen. |
+| `CONNECTOR-2001-500` | Error al procesar los datos copiados en [!DNL Platform]. Este error puede estar relacionado con el análisis, la validación o la transformación. |

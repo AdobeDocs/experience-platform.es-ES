@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conexión de flujo autenticada;conexión de flujo continuo;crear conexión de flujo continuo autenticada;creación de conexión de flujo continuo autenticada;ingesta de flujo;ingesta;
+keywords: Experience Platform;inicio;temas populares;conexión de transmisión autenticada;conexión de transmisión;crear conexión de transmisión;crear conexión de transmisión autenticada;ingesta de transmisión;ingesta;
 solution: Experience Platform
-title: Crear una conexión de flujo autenticada
+title: Creación de una conexión de flujo continuo autenticada
 type: Tutorial
-description: La recopilación de datos autenticados permite que los servicios de Adobe Experience Platform, como el Perfil del cliente en tiempo real y la identidad, diferencien entre registros procedentes de fuentes de confianza y fuentes de confianza.
+description: La recopilación de datos autenticados permite a los servicios de Adobe Experience Platform, como Perfil del cliente en tiempo real e Identidad, diferenciar entre registros procedentes de fuentes de confianza y no fiables.
 exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Creación de una conexión de flujo continuo autenticada
 
-La recopilación de datos autenticados permite servicios de Adobe Experience Platform, como [!DNL Real-Time Customer Profile] y [!DNL Identity], para diferenciar entre registros procedentes de fuentes de confianza y fuentes de no confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando tokens de acceso como parte de la solicitud del POST.
+La recopilación de datos autenticados permite servicios de Adobe Experience Platform, como [!DNL Real-Time Customer Profile] y [!DNL Identity], para diferenciar entre registros procedentes de fuentes de confianza y no fiables. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando tokens de acceso como parte de la solicitud del POST.
 
-Para aprender a crear una conexión de flujo continuo autenticada, lea la [Guía de API de origen de API HTTP](../../sources/tutorials/api/create/streaming/http.md).
+Para obtener información sobre cómo crear una conexión de flujo continuo autenticada, lea la [Guía de API de origen de HTTP API](../../sources/tutorials/api/create/streaming/http.md).

@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ### Recopilar credenciales necesarias
 
-Para poder conectarse *SU FUENTE* para acceder a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para poder conectarse *SU ORIGEN* para acceder a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
@@ -43,15 +43,15 @@ Para poder conectarse *SU FUENTE* para acceder a Experience Platform, debe propo
 | *credencial dos* | *Agregue una breve descripción a la credencial de autenticación de su fuente aquí* | *Agregue un ejemplo de la credencial de autenticación de su origen aquí* |
 | *credencial tres* | *Agregue una breve descripción a la credencial de autenticación de su fuente aquí* | *Agregue un ejemplo de la credencial de autenticación de su origen aquí* |
 
-Para obtener más información sobre estas credenciales, consulte la *SU ORIGEN* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
+Para obtener más información sobre estas credenciales, consulte la *SU FUENTE* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
 
-### Integrar *SU ORIGEN* con su webhook
+### Integrar *SU FUENTE* con su webhook
 
 *El SDK de streaming requiere que su fuente admita los webhooks para poder comunicarse con el Experience Platform. En esta sección, debe proporcionar los pasos que los usuarios deberán seguir para integrar YOURSOURCE con un webhook.*
 
-## Connect *SU FUENTE* a Platform mediante el [!DNL Flow Service] API
+## Connect *SU ORIGEN* a Platform mediante el [!DNL Flow Service] API
 
-El siguiente tutorial le guiará para crear una *SU ORIGEN* conexión de origen y cree un flujo de datos para *SU FUENTE* a Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+El siguiente tutorial le guiará para crear una *SU FUENTE* conexión de origen y cree un flujo de datos para *SU ORIGEN* a Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Crear una conexión de origen {#source-connection}
 
@@ -65,7 +65,7 @@ POST /sourceConnections
 
 **Solicitud**
 
-La siguiente solicitud crea una conexión de origen para *SU ORIGEN*:
+La siguiente solicitud crea una conexión de origen para *SU FUENTE*:
 
 ```shell
 curl -X POST \
@@ -94,7 +94,7 @@ curl -X POST \
 | `name` | Nombre de la conexión de origen. Asegúrese de que el nombre de la conexión de origen sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de origen. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de origen. |
 | `connectionSpec.id` | El ID de especificación de conexión que corresponde a su origen. |
-| `data.format` | El formato del *SU FUENTE* datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
+| `data.format` | El formato del *SU ORIGEN* datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
 
 **Respuesta**
 
@@ -172,7 +172,7 @@ curl -X POST \
 | `name` | Nombre de la conexión de destino. Asegúrese de que el nombre de la conexión de destino sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de destino. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de destino. |
 | `connectionSpec.id` | ID de especificación de conexión que corresponde al lago de datos. Este ID fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | El formato del *SU ORIGEN* datos que desee llevar a Platform. |
+| `data.format` | El formato del *SU FUENTE* datos que desee llevar a Platform. |
 | `params.dataSetId` | ID del conjunto de datos de destino recuperado en un paso anterior. |
 
 

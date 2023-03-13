@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /app_configurations en la AP
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '565'
 ht-degree: 96%
 
 ---
@@ -33,7 +33,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | El `id` de la [compañía](./companies.md) que posee las configuraciones de la aplicación. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ GET /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | El `id` de la configuración de la aplicación que desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -178,7 +178,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | El `id` de la [compañía](./companies.md) en la que define la configuración de la aplicación. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -217,7 +217,7 @@ curl -X POST \
 | `key_type` | Representa el protocolo que admite un proveedor de servicios push y determina el formato del objeto `push_credential`. A medida que evolucionan los protocolos para los servicios de mensajería, se crean nuevos valores `key_type` para admitir los protocolos actualizados. |
 | `push_credential` | El valor de credencial real, que se cifra en reposo. Normalmente, este campo no se descifra ni se incluye en las respuestas de API. Solo ciertos servicios de Adobe pueden obtener una respuesta que contenga una credencial push descifrada. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -258,7 +258,7 @@ Una respuesta correcta devuelve los detalles de la configuración de la aplicaci
 
 ## Actualización de la configuración de una aplicación
 
-Puede actualizar una configuración de aplicación incluyendo su ID en la ruta de una solicitud del PATCH.
+Puede actualizar una configuración de aplicación incluyendo su ID en la ruta de una petición del PATCH.
 
 **Formato de API**
 
@@ -270,7 +270,7 @@ PATCH /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | El `id` de la configuración de la aplicación que desea actualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -301,7 +301,7 @@ curl -X PATCH \
 | `id` | El `id` de la configuración de la aplicación que desea actualizar. Debe coincidir con el valor `{APP_CONFIGURATION_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `app_configurations`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -354,7 +354,7 @@ DELETE /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | El `id` de la configuración de la aplicación que desea eliminar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 

@@ -1,10 +1,11 @@
 ---
 title: Propiedades
 description: Conozca cómo las extensiones, los entornos y las bibliotecas están organizados y agrupados para su organización en Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1178'
-ht-degree: 69%
+ht-degree: 98%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 69%
 
 ## Propiedades web
 
-Una propiedad web es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Cada propiedad web tiene su propio conjunto de códigos incrustados y se puede implementar en cualquier número de sitios web diferentes (dominios diferentes).
+Una propiedad web es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Cada propiedad web tiene su propio conjunto de códigos incrustados y se puede implementar en cualquier cantidad de sitios web distintos (dominios diferentes).
 
 ## Propiedades móviles
 
@@ -24,7 +25,7 @@ Un tipo de propiedad móvil puede contener varias aplicaciones. Por ejemplo, en 
 
 ## Prácticas recomendadas para la planificación de propiedades {#best-practices-for-planning-properties}
 
-Cada implementación de etiquetas en Adobe Experience Platform puede ser muy diferente. Tienen una amplia variedad de necesidades de recopilación de datos, uso de variables, extensiones, etiquetas de terceros, otros sistemas y tecnologías, personas, equipos y regiones geográficas, entre otros. Debe estructurar las propiedades de forma que coincidan con el flujo de trabajo y los procesos de la organización IMS.
+Cada implementación de etiquetas en Adobe Experience Platform puede ser muy diferente. Cuentan con una amplia variedad de necesidades de recopilación de datos, uso de variables, extensiones, etiquetas de terceros, otros sistemas y tecnologías, personas, equipos y zonas geográficas, entre otros. Debe estructurar las propiedades de forma que coincidan con el flujo de trabajo y los procesos de la organización IMS.
 
 Considerar lo siguiente a la hora de planificar las propiedades
 
@@ -44,7 +45,7 @@ Para todos los sitios web o aplicaciones, ¿los datos que va a recopilar son muy
 
 Si los datos que necesita recopilar son similares en distintos sitios, puede que sea recomendable agrupar los sitios o aplicaciones en una propiedad web para evitar la duplicación de reglas o la necesidad de copiar las reglas de una propiedad a otra.
 
-Si la recopilación de datos debe ser única para cada sitio o aplicación, puede que sea recomendable separarlos de sus propias propiedades. Este método permite controlar las recopilaciones de datos de una forma más específica, sin necesidad de utilizar una gran cantidad de lógica condicional en los scripts personalizados.
+Si la recopilación de datos debe ser única para cada sitio, puede ser recomendable separar los sitios según sus respectivas propiedades. Este método permite controlar las recopilaciones de datos de una forma más específica, sin necesidad de utilizar una gran cantidad de lógica condicional en los scripts personalizados.
 
 ### Variables
 
@@ -54,7 +55,7 @@ Por ejemplo, si se utiliza eVar27 para el mismo valor de fuente en todos los sit
 
 ### Extensiones, etiquetas y sistemas
 
-¿Las extensiones, etiquetas y sistemas que va a implementar son muy similares, son parecidos o son únicos?
+¿Las herramientas, las etiquetas y los sistemas que va a implementar son muy similares, son parecidos o son únicos?
 
 Si las extensiones, etiquetas y sistemas que va a implementar son muy similares en sus sitios o aplicaciones, es posible que desee incluirlos en la misma propiedad.
 
@@ -64,13 +65,13 @@ Por ejemplo, si está implementando [!DNL Adobe Analytics], [!DNL Target] y las 
 
 ### Personas
 
-Para las personas, los equipos y las organizaciones que trabajan en Adobe Experience Platform, ¿necesitarán acceso a todos sus sitios web y aplicaciones, a algunos o solo a uno?
+En el caso de las personas, los equipos y las organizaciones que trabajan en Adobe Experience Platform, ¿necesitan tener acceso a todos sus sitios web y aplicaciones, a algunos o solo a uno?
 
-Las funciones de administración de usuarios le permiten asignar diferentes funciones a distintas personas para todas las propiedades, o en función de cada propiedad. Si alguien tiene derechos suficientes, esa persona puede realizar acciones administrativas en todas las propiedades de esa organización IMS de Platform. El resto de las funciones se podrán asignar en función de cada propiedad. Incluso puede ocultar una propiedad para determinados usuarios (que no sean administradores). Para ello, no debe otorgarles ninguna función en dicha propiedad.
+Las funciones de administración de usuarios le permiten asignar diferentes funciones a distintas personas para todas las propiedades, o en función de cada propiedad. Si alguien tiene derechos suficientes, esa persona puede realizar acciones administrativas en todas las propiedades de la organización IMS de esa plataforma. El resto de las funciones se podrán asignar en función de cada propiedad. Incluso puede ocultar una propiedad para determinados usuarios (que no sean administradores). Para ello, no debe otorgarles ninguna función en dicha propiedad.
 
 ## Página de Properties
 
-Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Para la web, solo hay un código incrustado de publicación por propiedad. Para móviles, hay un ID de aplicación de configuración por propiedad.
+Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. En la web, solo hay un código incrustado de publicación por propiedad. En móviles, hay un ID de aplicación de configuración por propiedad.
 
 Una propiedad puede ser cualquier conjunto de uno o varios dominios y subdominios. Puede administrar y rastrear estos recursos de manera similar. Por ejemplo, supongamos que tiene varios sitios web basados en una plantilla y quiere rastrear los mismos recursos en todos. Puede aplicar una propiedad a varios dominios.
 
@@ -122,7 +123,7 @@ Siga las instrucciones para crear una propiedad móvil.
 1. Rellene los campos:
 
    * **Nombre:** el nombre de su propiedad.
-   * **Privacy:** de forma predeterminada, la configuración de privacidad se configura en “Opted in”, lo que significa que desea que el SDK recopile y envíe datos a las soluciones. Si selecciona “Opted out”, el SDK de forma predeterminada NO envía datos a las soluciones. Si elige Desconocido como configuración, el SDK requerirá que la aplicación solicite primero al usuario que permita la recopilación y el uso compartido de datos.
+   * **Privacy:** de forma predeterminada, la configuración de privacidad se configura en “Opted in”, lo que significa que desea que el SDK recopile y envíe datos a las soluciones. Si selecciona “Opted out”, el SDK de forma predeterminada NO envía datos a las soluciones. Si elige configurarlo en Unknown, el SDK exige que la aplicación pregunte al usuario si permite la recopilación y el uso compartido de datos.
 
       >[!NOTE]
       >
@@ -132,7 +133,7 @@ Siga las instrucciones para crear una propiedad móvil.
 
 1. Seleccione **[!UICONTROL Guardar]**.
 
-Una vez creada la propiedad, Platform agrega automáticamente un host predeterminado, un conjunto de entornos (Desarrollo, Ensayo y Producción) y las extensiones predeterminadas.
+Una vez creada la propiedad, Platform añade automáticamente un host predeterminado, un conjunto de entornos (Desarrollo, Ensayo y Producción) y las extensiones predeterminadas.
 
 ## Eliminar una propiedad
 

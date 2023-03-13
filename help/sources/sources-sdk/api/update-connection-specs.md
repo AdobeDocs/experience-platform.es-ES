@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
-title: Actualización de una especificación de conexión mediante la API de servicio de flujo
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+title: Actualización de una especificación de conexión mediante la API de Flow Service
 description: Puede actualizar las propiedades de una especificación de conexión mediante una operación de PUT.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -10,9 +10,9 @@ ht-degree: 3%
 
 ---
 
-# Actualización de una especificación de conexión mediante la API de servicio de flujo
+# Actualización de una especificación de conexión mediante la API de Flow Service
 
-Puede actualizar las propiedades de una especificación de conexión mediante una operación de PUT. Al actualizar una especificación de conexión mediante una solicitud del PUT, el cuerpo debe incluir todos los campos necesarios al crear una nueva especificación de conexión en una solicitud del POST.
+Puede actualizar las propiedades de una especificación de conexión mediante una operación de PUT. Al actualizar una especificación de conexión mediante una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al crear una nueva especificación de conexión en una solicitud de POST.
 
 **Formato de API**
 
@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Solicitud**
 
-La siguiente solicitud actualiza el `name` del [!DNL MailChimp] fuente creada en el paso anterior.
+La siguiente solicitud actualiza el `name` de la [!DNL MailChimp] origen creado en el paso anterior.
 
 ```shell
 PUT -X GET \

@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /callbacks en la API de Reac
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '600'
 ht-degree: 96%
 
 ---
@@ -51,7 +51,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | El `id` de la propiedad cuyas llamadas de retorno desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ GET /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | El `id` de la llamada de retorno que desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -194,7 +194,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `PROPERTY_ID` | El `id` de la [propiedad](./properties.md) en la que está definiendo la llamada de retorno. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -223,7 +223,7 @@ curl -X POST \
 | `url` | El destino URL del mensaje de llamada de retorno. La URL debe utilizar la extensión de protocolo HTTPS. |
 | `subscriptions` | Matriz de cadenas que indica los tipos de eventos de auditoría que desencadenarán la llamada de retorno. Consulte la [guía de extremos de eventos de auditoría](./audit-events.md) para obtener una lista de posibles tipos de eventos. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -263,7 +263,7 @@ Una respuesta correcta devolverá los detalles de la llamada de retorno recién 
 
 ## Actualización de una llamada de retorno
 
-Puede actualizar una llamada de retorno incluyendo su ID en la ruta de una solicitud del PATCH.
+Puede actualizar una llamada de retorno incluyendo su ID en la ruta de una petición del PATCH.
 
 **Formato de API**
 
@@ -275,7 +275,7 @@ PATCH /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | El `id` de la llamada de retorno que desea actualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -310,7 +310,7 @@ curl -X PATCH \
 | `id` | El `id` de la llamada de retorno que desea actualizar. Debe coincidir con el valor `{CALLBACK_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `callbacks`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -363,7 +363,7 @@ DELETE /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | El `id` de la llamada de retorno que desea eliminar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 

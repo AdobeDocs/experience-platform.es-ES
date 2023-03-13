@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;eliminar un objeto;servicio de catálogo;api
 solution: Experience Platform
 title: Eliminar un objeto en la API
-description: Puede eliminar un objeto Catalog proporcionando su ID en la ruta de una solicitud del DELETE.
+description: Puede eliminar un objeto Catalog proporcionando su ID en la ruta de una petición del DELETE.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Eliminación de un objeto en la API
 
-Puede eliminar un [!DNL Catalog] al proporcionar su ID en la ruta de una solicitud de DELETE.
+Puede eliminar un [!DNL Catalog] proporcionando su ID en la ruta de una petición de DELETE.
 
 >[!WARNING]
 >
->Tenga especial cuidado al eliminar objetos, ya que esto no se puede deshacer y puede producir cambios de ruptura en otras partes de [!DNL Experience Platform].
+>Tenga especial cuidado al eliminar objetos, ya que esta acción no se puede deshacer y puede producir cambios importantes en cualquier otra parte de [!DNL Experience Platform].
 
 **Formato de API**
 
@@ -27,16 +27,16 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->La variable `DELETE /batches/{ID}` se ha desaprobado. Para eliminar un lote, debe utilizar la variable [API de ingesta de lotes](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>El `DELETE /batches/{ID}` el extremo se ha desaprobado. Para eliminar un lote, debe utilizar la variable [API de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parámetro | Descripción |
 | --- | --- |
 | `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a eliminar. Los objetos válidos son: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identificador del objeto específico que desea actualizar. |
+| `{OBJECT_ID}` | El identificador del objeto específico que desea actualizar. |
 
 **Solicitud**
 
-La siguiente solicitud elimina un conjunto de datos cuyo ID se especifique en la ruta de solicitud.
+La siguiente solicitud elimina un conjunto de datos cuyo ID se especifica en la ruta de solicitud.
 
 ```shell
 curl -X DELETE \
@@ -59,4 +59,4 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y una matriz que contien
 
 >[!NOTE]
 >
->Si no [!DNL Catalog] Los objetos coinciden con el ID proporcionado en la solicitud, puede seguir recibiendo un Código de estado HTTP 200, pero la matriz de respuesta estará vacía.
+>Si no [!DNL Catalog] coincide con el ID proporcionado en la solicitud. Puede que reciba un código de estado HTTP 200, pero la matriz de respuesta estará vacía.

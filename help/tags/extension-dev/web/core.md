@@ -1,10 +1,11 @@
 ---
 title: Módulos de biblioteca principales para extensiones web
-description: Obtenga información sobre los módulos de biblioteca principales que puede utilizar en las extensiones web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información acerca de los módulos de biblioteca principales que puede utilizar en las extensiones web.
+exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 87%
+ht-degree: 94%
 
 ---
 

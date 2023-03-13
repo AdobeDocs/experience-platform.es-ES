@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;guía de api;servicio de consulta;cuentas de servicio de consulta;cuentas;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;guía de api;servicio de consultas;cuentas de servicio de consultas;cuentas;
 solution: Experience Platform
-title: Punto final de API de cuentas
-description: Puede crear una cuenta de servicio de consulta para persistente .
+title: Extremo de API de cuentas
+description: Puede crear una cuenta de servicio de consultas para persistentes
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 5%
 
 ---
 
-# Punto de conexión de cuentas
+# Extremo de cuentas
 
-En Adobe Experience Platform Query Service, las cuentas se utilizan para crear credenciales que no caducan y que puede utilizar con clientes SQL externos. Puede usar la variable `/accounts` en la API del servicio de consulta, que le permite crear, recuperar, editar y eliminar mediante programación sus cuentas de integración del servicio de consulta (también conocidas como cuenta técnica).
+En Adobe Experience Platform Query Service, las cuentas se utilizan para crear credenciales que no caducan y las puede utilizar con clientes SQL externos. Puede usar el complemento `/accounts` en la API del servicio de consultas, lo que le permite crear, recuperar, editar y eliminar mediante programación sus cuentas de integración del servicio de consultas (también conocidas como cuentas técnicas).
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte de la API del servicio de consulta. Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar correctamente llamadas a la API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte de la API del servicio de consultas. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 
 ## Crear una cuenta
 
-Puede crear una cuenta de integración del servicio de consulta realizando una solicitud de POST al `/accounts` punto final.
+Puede crear una cuenta de integración de Query Service realizando una solicitud de POST a `/accounts` punto final.
 
 **Formato de API**
 
@@ -31,7 +31,7 @@ POST /accounts
 
 **Solicitud**
 
-La siguiente solicitud creará una nueva cuenta de integración del servicio de consulta para su organización IMS.
+La siguiente solicitud creará una nueva cuenta de integración del servicio de consultas para su organización IMS.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
@@ -51,14 +51,14 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `accountName` | **Requerido** Nombre de la cuenta de integración del servicio de consulta. |
-| `assignedToUser` | **Requerido** Adobe ID para el que se creará la cuenta de integración del servicio de consulta. |
-| `credential` | *(Opcional)* Credenciales que se utilizan para la integración del servicio de consulta. Si no se especifica, el sistema generará automáticamente una credencial. |
-| `description` | *(Opcional)* Descripción de la cuenta de integración del servicio de consulta. |
+| `accountName` | **Requerido** Nombre de la cuenta de integración del servicio de consultas. |
+| `assignedToUser` | **Requerido** La Adobe ID para la que se creará la cuenta de integración del servicio de consultas. |
+| `credential` | *(Opcional)* La credencial utilizada para la integración del servicio de consultas. Si no se especifica, el sistema generará automáticamente una credencial. |
+| `description` | *(Opcional)* Descripción de la cuenta de integración del servicio de consultas. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200, con detalles de la cuenta de integración del servicio de consulta recién creada. Puede utilizar estos detalles de la cuenta para conectar el servicio de consulta con clientes externos.
+Una respuesta correcta devuelve el estado HTTP 200, con detalles de la cuenta de integración del servicio de consultas recién creada. Puede utilizar estos detalles de la cuenta para conectar el servicio de consulta con clientes externos.
 
 ```json
 {
@@ -70,13 +70,13 @@ Una respuesta correcta devuelve el estado HTTP 200, con detalles de la cuenta de
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `technicalAccountName` | El nombre de su cuenta de integración del servicio de consulta. |
-| `technicalAccountId` | El ID de su cuenta de integración del servicio de consulta. Esto, junto con la variable `credential`, configura la contraseña de su cuenta. |
-| `credential` | La credencial de su cuenta de integración del servicio de consulta. Esto, junto con la variable `technicalAccountId`, configura la contraseña de su cuenta. |
+| `technicalAccountName` | El nombre de su cuenta de integración del servicio de consultas. |
+| `technicalAccountId` | El ID de su cuenta de integración del servicio de consultas. Esto, junto con la `credential`, redacta la contraseña de la cuenta. |
+| `credential` | Las credenciales de su cuenta de integración del servicio de consultas. Esto, junto con la `technicalAccountId`, redacta la contraseña de la cuenta. |
 
 ## Actualizar una cuenta
 
-Puede actualizar su cuenta de integración del servicio de consulta realizando una solicitud de PUT al `/accounts` punto final.
+Puede actualizar su cuenta de integración de Query Service realizando una solicitud de PUT a `/accounts` punto final.
 
 **Formato de API**
 
@@ -86,7 +86,7 @@ POST /accounts/{ACCOUNT_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | El ID de la cuenta de integración del servicio de consulta que desea actualizar. |
+| `{ACCOUNT_ID}` | El ID de la cuenta de integración del servicio de consultas que desea actualizar. |
 
 **Solicitud**
 
@@ -108,14 +108,14 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `accountName` | *(Opcional)* El nombre actualizado de la cuenta de integración del servicio de consulta. |
-| `assignedToUser` | *(Opcional)* El Adobe ID actualizado al que está vinculada la cuenta de integración del servicio de consulta. |
-| `credential` | *(Opcional)* La credencial actualizada para su cuenta del servicio de consultas. |
-| `description` | *(Opcional)* La descripción actualizada de la cuenta de integración del servicio de consulta. |
+| `accountName` | *(Opcional)* Nombre actualizado de la cuenta de integración del servicio de consultas. |
+| `assignedToUser` | *(Opcional)* Adobe ID actualizado al que está vinculada la cuenta de integración de Query Service. |
+| `credential` | *(Opcional)* Credencial actualizada para su cuenta del servicio de consultas. |
+| `description` | *(Opcional)* Descripción actualizada de la cuenta de integración del servicio de consultas. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con información sobre la cuenta de integración del servicio de consulta recién actualizada.
+Una respuesta correcta devuelve el estado HTTP 200 con información sobre la cuenta de integración del servicio de consultas recién actualizada.
 
 ```json
 {
@@ -134,7 +134,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la cue
 
 ## Enumerar todas las cuentas
 
-Puede recuperar una lista de todas las cuentas de integración del servicio de consulta realizando una solicitud de GET al `/accounts` punto final.
+Puede recuperar una lista de todas las cuentas de integración de Query Service realizando una solicitud de GET a `/accounts` punto final.
 
 **Formato de API**
 
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las cuentas de integración del servicio de consulta.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las cuentas de integración del servicio de consultas.
 
 ```json
 {
@@ -203,9 +203,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las cu
 }
 ```
 
-## Eliminar una cuenta
+## Eliminación de una cuenta
 
-Puede eliminar su cuenta de integración del servicio de consulta realizando una solicitud de DELETE al `/accounts` punto final.
+Puede eliminar su cuenta de integración de Query Service realizando una solicitud de DELETE a `/accounts` punto final.
 
 **Formato de API**
 
@@ -215,7 +215,7 @@ DELETE /accounts/{ACCOUNT_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | El ID de la cuenta de integración del servicio de consulta que desea eliminar. |
+| `{ACCOUNT_ID}` | El ID de la cuenta de integración del servicio de consultas que desea eliminar. |
 
 **Solicitud**
 

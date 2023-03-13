@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquema;registro de esquema;esquema;esquema;esquemas;esquemas;crear esquemas
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;registro de esquemas;esquema;esquemas;esquemas;crear
 solution: Experience Platform
-title: Punto final de API de Esquemas
-description: El extremo /schemas de la API del Registro de esquemas le permite administrar mediante programación esquemas XDM dentro de la aplicación de experiencia.
+title: Extremo de API de esquemas
+description: El extremo /schemas de la API de Registro de esquemas le permite administrar mediante programación esquemas XDM dentro de la aplicación de experiencia.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1468'
-ht-degree: 5%
+source-wordcount: '1441'
+ht-degree: 3%
 
 ---
 
-# Punto final de esquemas
+# Extremo de esquemas
 
-Un esquema se puede considerar como el modelo para los datos que desea introducir en Adobe Experience Platform. Cada esquema está compuesto por una clase y cero o más grupos de campos de esquema. La variable `/schemas` en la variable [!DNL Schema Registry] La API de le permite administrar mediante programación esquemas dentro de la aplicación de experiencia.
+Un esquema se puede considerar como el modelo para los datos que desea introducir en Adobe Experience Platform. Cada esquema está compuesto por una clase y cero o más grupos de campos de esquema. El `/schemas` punto final en la [!DNL Schema Registry] La API permite administrar esquemas mediante programación dentro de la aplicación de experiencia.
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
-## Recuperar una lista de esquemas {#list}
+## Recuperación de una lista de esquemas {#list}
 
-Puede enumerar todos los esquemas en la `global` o `tenant` contenedor realizando una solicitud de GET a `/global/schemas` o `/tenant/schemas`, respectivamente.
+Puede enumerar todos los esquemas en `global` o `tenant` al realizar una solicitud de GET a `/global/schemas` o `/tenant/schemas`, respectivamente.
 
 >[!NOTE]
 >
->Al enumerar recursos, el Registro de esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros de paginación. También se recomienda utilizar parámetros de consulta adicionales para filtrar los resultados y reducir el número de recursos devueltos. Consulte la sección sobre [parámetros de consulta](./appendix.md#query) en el documento del apéndice para obtener más información.
+>Al enumerar recursos, el Registro de esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos que superen este límite, debe utilizar parámetros de paginación. También se recomienda utilizar parámetros de consulta adicionales para filtrar los resultados y reducir el número de recursos devueltos. Consulte la sección sobre [parámetros de consulta](./appendix.md#query) en el documento del apéndice para obtener más información.
 
 **Formato de API**
 
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{CONTAINER_ID}` | El contenedor que alberga los esquemas que desea recuperar: `global` para esquemas creados por Adobe o `tenant` para esquemas propiedad de su organización. |
-| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados por. Consulte la [documento apéndice](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
+| `{CONTAINER_ID}` | El contenedor que contiene los esquemas que desea recuperar: `global` para esquemas creados por Adobe o `tenant` para esquemas propiedad de su organización. |
+| `{QUERY_PARAMS}` | Parámetros de consulta opcionales por los que filtrar los resultados. Consulte la [documento anexo](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
-La siguiente solicitud recupera una lista de esquemas de la `tenant` contenedor, utilizando un `orderby` parámetro de consulta para ordenar los resultados por sus `title` atributo.
+La siguiente solicitud recupera una lista de esquemas de la `tenant` contenedor, usar un `orderby` parámetro de consulta para ordenar los resultados por su `title` atributo.
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Lo siguiente `Accept` los encabezados están disponibles para enumerar esquemas:
+El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Lo siguiente `Accept` Los encabezados de están disponibles para enumerar esquemas:
 
 | `Accept` header | Descripción |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
+| `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para enumerar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve el esquema JSON completo para cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
-La solicitud anterior utilizaba la variable `application/vnd.adobe.xed-id+json` `Accept` encabezado, por lo tanto, la respuesta solo incluye la variable `title`, `$id`, `meta:altId`y `version` atributos para cada esquema. Uso del otro `Accept` encabezado (`application/vnd.adobe.xed+json`) devuelve todos los atributos de cada esquema. Seleccione el `Accept` según la información que necesite en su respuesta.
+La solicitud anterior utilizaba el `application/vnd.adobe.xed-id+json` `Accept` encabezado, por lo tanto la respuesta incluye solo el `title`, `$id`, `meta:altId`, y `version` atributos para cada esquema. Uso del otro `Accept` encabezado (`application/vnd.adobe.xed+json`) devuelve todos los atributos de cada esquema. Seleccione el adecuado `Accept` encabezado en función de la información que requiera en su respuesta.
 
 ```json
 {
@@ -97,7 +97,7 @@ La solicitud anterior utilizaba la variable `application/vnd.adobe.xed-id+json` 
 }
 ```
 
-## Buscar un esquema {#lookup}
+## Búsqueda de un esquema {#lookup}
 
 Puede buscar un esquema específico realizando una solicitud de GET que incluya el ID del esquema en la ruta.
 
@@ -109,10 +109,10 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{CONTAINER_ID}` | El contenedor que alberga el esquema que desea recuperar: `global` para un esquema creado por el Adobe o `tenant` para un esquema propiedad de su organización. |
-| `{SCHEMA_ID}` | La variable `meta:altId` o con codificación de URL `$id` del esquema que desea buscar. |
+| `{CONTAINER_ID}` | El contenedor que aloja el esquema que desea recuperar: `global` para un esquema creado con Adobe o `tenant` para un esquema propiedad de su organización. |
+| `{SCHEMA_ID}` | El `meta:altId` o con codificación URL `$id` del esquema que desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -128,7 +128,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Todas las solicitudes de búsqueda requieren un `version` se incluya en el `Accept` encabezado. Lo siguiente `Accept` los encabezados están disponibles:
+El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Todas las solicitudes de búsqueda requieren un `version` se incluirá en la `Accept` encabezado. Lo siguiente `Accept` Los encabezados de están disponibles:
 
 | `Accept` header | Descripción |
 | ------- | ------------ |
@@ -136,14 +136,14 @@ El formato de respuesta depende de la variable `Accept` encabezado enviado en la
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` y `allOf` resuelto, tiene títulos y descripciones. |
 | `application/vnd.adobe.xed-notext+json; version=1` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` y `allOf` resuelto, sin títulos ni descripciones. |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y `allOf` resuelto, incluidos los descriptores. |
-| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` y `allOf` resuelto, tiene títulos y descripciones. Los campos obsoletos se indican con un `meta:status` atributo de `deprecated`. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y `allOf` resuelto, se incluyen descriptores. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` y `allOf` resuelto, tiene títulos y descripciones. Los campos obsoletos se indican con una `meta:status` atributo de `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del esquema. Los campos devueltos dependen de la variable `Accept` encabezado enviado en la solicitud. Experimento con diferentes `Accept` para comparar las respuestas y determinar qué encabezado es el mejor para su caso de uso.
+Una respuesta correcta devuelve los detalles del esquema. Los campos que se devuelven dependen del `Accept` encabezado enviado en la solicitud. Experimente con diferentes `Accept` para comparar las respuestas y determinar qué encabezado es el mejor para su caso de uso.
 
 ```json
 {
@@ -196,11 +196,11 @@ Una respuesta correcta devuelve los detalles del esquema. Los campos devueltos d
 
 ## Creación de un esquema {#create}
 
-El proceso de composición del esquema comienza asignando una clase. La clase define los aspectos de comportamiento clave de los datos (registro o serie temporal), así como los campos mínimos necesarios para describir los datos que se van a introducir.
+El proceso de composición del esquema comienza asignando una clase. La clase define los aspectos clave de comportamiento de los datos (registro o serie temporal), así como los campos mínimos necesarios para describir los datos que se van a introducir.
 
 >[!NOTE]
 >
->La llamada de ejemplo siguiente es solo un ejemplo de línea de base de cómo crear un esquema en la API, con los requisitos de composición mínimos de una clase y sin grupos de campos. Para ver los pasos completos sobre cómo crear un esquema en la API, incluido cómo asignar campos mediante grupos de campos y tipos de datos, consulte la [tutorial de creación de esquemas](../tutorials/create-schema-api.md).
+>La llamada de ejemplo siguiente es solo un ejemplo de línea de base de cómo crear un esquema en la API, con los requisitos mínimos de composición de una clase y sin grupos de campos. Para ver los pasos completos sobre cómo crear un esquema en la API, incluido cómo asignar campos mediante grupos de campos y tipos de datos, consulte la [tutorial de creación de esquemas](../tutorials/create-schema-api.md).
 
 **Formato de API**
 
@@ -210,7 +210,7 @@ POST /tenant/schemas
 
 **Solicitud**
 
-La solicitud debe incluir un `allOf` que hace referencia a la variable `$id` de una clase. Este atributo define la &quot;clase base&quot; que implementará el esquema. En este ejemplo, la clase base es una clase &quot;Información de propiedad&quot; que se creó anteriormente.
+La solicitud debe incluir un `allOf` atributo que hace referencia a `$id` de una clase. Este atributo define la &quot;clase base&quot; que implementará el esquema. En este ejemplo, la clase base es una clase &quot;Información de propiedad&quot; creada anteriormente.
 
 ```SHELL
 curl -X POST \
@@ -234,13 +234,13 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `allOf` | Matriz de objetos, con cada objeto haciendo referencia a una clase o grupo de campos cuyos campos implementa el esquema. Cada objeto contiene una sola propiedad (`$ref`) cuyo valor representa la variable `$id` del grupo de clases o campos que implementará el nuevo esquema. Se debe proporcionar una clase, con cero o más grupos de campos adicionales. En el ejemplo anterior, el objeto único de la variable `allOf` array es la clase del esquema. |
+| `allOf` | Matriz de objetos, cada uno de los cuales hace referencia a una clase o grupo de campos cuyos campos implementa el esquema. Cada objeto contiene una sola propiedad (`$ref`) cuyo valor representa el `$id` del grupo de campos o clase que implementará el nuevo esquema. Se debe proporcionar una clase con cero o más grupos de campos adicionales. En el ejemplo anterior, el objeto único del `allOf` array es la clase del esquema. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluido el `$id`, `meta:altId`y `version`. Estos valores son de solo lectura y los asigna la variable [!DNL Schema Registry].
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluido el `$id`, `meta:altId`, y `version`. Estos valores son de solo lectura y los asigna el [!DNL Schema Registry].
 
 ```JSON
 {
@@ -275,17 +275,17 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 }
 ```
 
-Realización de una solicitud de GET a [enumerar todos los esquemas](#list) en el contenedor de inquilino ahora incluiría el nuevo esquema . Puede realizar una [solicitud de búsqueda (GET)](#lookup) uso de la codificación URL `$id` URI para ver el nuevo esquema directamente.
+Realización de una solicitud de GET a [enumerar todos los esquemas](#list) en el contenedor de usuario ahora incluiría el nuevo esquema. Puede realizar una [solicitud de búsqueda (GET)](#lookup) uso de la codificación URL `$id` URI para ver el nuevo esquema directamente.
 
-Para añadir campos adicionales a un esquema, puede realizar una [operación del PATCH](#patch) agregar grupos de campos al `allOf` y `meta:extends` matrices.
+Para agregar campos adicionales a un esquema, puede realizar una [operación del PATCH](#patch) para agregar grupos de campos al esquema `allOf` y `meta:extends` matrices.
 
-## Actualizar un esquema {#put}
+## Actualización de un esquema {#put}
 
-Puede reemplazar un esquema completo mediante una operación de PUT, lo que básicamente es volver a escribir el recurso. Al actualizar un esquema mediante una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios cuando [creación de un nuevo esquema](#create) en una solicitud del POST.
+Puede reemplazar un esquema completo mediante una operación de PUT, básicamente reescribiendo el recurso. Al actualizar un esquema mediante una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al [creación de un nuevo esquema](#create) en una solicitud de POST.
 
 >[!NOTE]
 >
->Si solo desea actualizar parte de un esquema en lugar de reemplazarlo por completo, consulte la sección de [actualización de una parte de un esquema](#patch).
+>Si solo desea actualizar parte de un esquema en lugar de reemplazarlo por completo, consulte la sección sobre [actualización de una parte de un esquema](#patch).
 
 **Formato de API**
 
@@ -295,13 +295,13 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | La variable `meta:altId` o con codificación de URL `$id` del esquema que desea reescribir. |
+| `{SCHEMA_ID}` | El `meta:altId` o con codificación URL `$id` del esquema que desea volver a escribir. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
-La siguiente solicitud reemplaza un esquema existente y cambia su `title`, `description`y `allOf` atributos.
+La siguiente solicitud reemplaza un esquema existente, cambiando su `title`, `description`, y `allOf` atributos.
 
 ```SHELL
 curl -X PUT \
@@ -362,11 +362,11 @@ Una respuesta correcta devuelve los detalles del esquema actualizado.
 
 ## Actualizar una parte de un esquema {#patch}
 
-Puede actualizar una parte de un esquema mediante una solicitud de PATCH. La variable [!DNL Schema Registry] admite todas las operaciones estándar de parches de JSON, incluidas `add`, `remove`y `replace`. Para obtener más información sobre el parche JSON, consulte la [Guía de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
+Puede actualizar una parte de un esquema mediante una solicitud de PATCH. El [!DNL Schema Registry] admite todas las operaciones de parche de JSON estándar, incluidas las siguientes `add`, `remove`, y `replace`. Para obtener más información sobre el parche JSON, consulte la [Guía de aspectos básicos de API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Si desea reemplazar un recurso completo con valores nuevos en lugar de actualizar campos individuales, consulte la sección de [reemplazo de un esquema mediante una operación de PUT](#put).
+>Si desea reemplazar un recurso completo con valores nuevos en lugar de actualizar campos individuales, consulte la sección sobre [reemplazo de un esquema mediante una operación de PUT](#put).
 
 Una de las operaciones de PATCH más comunes implica agregar grupos de campos definidos anteriormente a un esquema, como se muestra en el ejemplo siguiente.
 
@@ -378,15 +378,15 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | La dirección URL codificada `$id` URI o `meta:altId` del esquema que desea actualizar. |
+| `{SCHEMA_ID}` | La codificación URL `$id` URI o `meta:altId` del esquema que desea actualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
-La solicitud de ejemplo siguiente agrega un nuevo grupo de campos a un esquema añadiendo el `$id` a ambos `meta:extends` y `allOf` matrices.
+La solicitud de ejemplo siguiente agrega un nuevo grupo de campos a un esquema agregando el de ese grupo de campos `$id` valor para ambos `meta:extends` y `allOf` matrices.
 
-El cuerpo de la solicitud adopta la forma de una matriz, y cada objeto de la lista representa un cambio específico en un campo individual. Cada objeto incluye la operación que se va a realizar (`op`), que campo debe realizarse en (`path`) y qué información debe incluirse en esa operación (`value`).
+El cuerpo de la solicitud adopta la forma de una matriz, y cada objeto de la lista representa un cambio específico en un campo individual. Cada objeto incluye la operación que se va a realizar (`op`), en qué campo se debe realizar la operación (`path`) y qué información debe incluirse en esa operación (`value`).
 
 ```SHELL
 curl -X PATCH\
@@ -414,7 +414,7 @@ curl -X PATCH\
 
 **Respuesta**
 
-La respuesta muestra que ambas operaciones se realizaron correctamente. El grupo de campos `$id` se ha añadido a la variable `meta:extends` matriz y una referencia (`$ref`) al grupo de campos `$id` ahora aparece en el `allOf` matriz.
+La respuesta muestra que ambas operaciones se realizaron correctamente. El grupo de campos `$id` se ha añadido a `meta:extends` matriz y una referencia (`$ref`) al grupo de campos `$id` ahora aparece en la `allOf` matriz.
 
 ```JSON
 {
@@ -453,13 +453,13 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. El grupo
 }
 ```
 
-## Activación de un esquema para su uso en el perfil de cliente en tiempo real {#union}
+## Habilitar un esquema para utilizarlo en el perfil del cliente en tiempo real {#union}
 
-Para que un esquema participe en [Perfil del cliente en tiempo real](../../profile/home.md), debe agregar una `union` a la etiqueta del esquema `meta:immutableTags` matriz. Puede hacerlo realizando una solicitud de PATCH para el esquema en cuestión.
+Para que un esquema participe en [Perfil del cliente en tiempo real](../../profile/home.md), debe agregar un `union` a la etiqueta del esquema `meta:immutableTags` matriz. Puede hacerlo realizando una solicitud de PATCH para el esquema en cuestión.
 
 >[!IMPORTANT]
 >
->Las etiquetas inmutables son etiquetas que se pretende establecer, pero que nunca se eliminan.
+>Las etiquetas inmutables son etiquetas que se van a configurar, pero que nunca se quitan.
 
 **Formato de API**
 
@@ -469,13 +469,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | La dirección URL codificada `$id` URI o `meta:altId` del esquema que desea habilitar. |
+| `{SCHEMA_ID}` | La codificación URL `$id` URI o `meta:altId` del esquema que desea activar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
-La solicitud de ejemplo siguiente agrega un `meta:immutableTags` matriz a un esquema existente, dando a la matriz un valor de cadena único de `union` para habilitarlo para su uso en Perfil.
+La solicitud de ejemplo siguiente agrega un `meta:immutableTags` a un esquema existente, dando a la matriz un valor de cadena único de `union` para habilitarlo y utilizarlo en el perfil.
 
 ```SHELL
 curl -X PATCH\
@@ -496,7 +496,7 @@ curl -X PATCH\
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del esquema actualizado, lo que muestra que la variable `meta:immutableTags` se ha agregado la matriz.
+Una respuesta correcta devuelve los detalles del esquema actualizado, que muestran que la variable `meta:immutableTags` se ha añadido la matriz.
 
 ```JSON
 {
@@ -538,11 +538,11 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, lo que mue
 }
 ```
 
-Ahora puede ver la unión de la clase de este esquema para confirmar que se representan los campos del esquema. Consulte la [guía de extremo de unión](./unions.md) para obtener más información.
+Ahora puede ver la unión de la clase de este esquema para confirmar que se representan los campos del esquema. Consulte la [guía de extremo de union](./unions.md) para obtener más información.
 
-## Eliminar un esquema {#delete}
+## Eliminación de un esquema {#delete}
 
-Ocasionalmente puede ser necesario eliminar un esquema del Registro de esquemas. Esto se realiza realizando una solicitud de DELETE con el ID de esquema proporcionado en la ruta.
+En ocasiones puede ser necesario quitar un esquema del Registro de esquemas. Para ello, realice una solicitud de DELETE con el ID de esquema proporcionado en la ruta.
 
 **Formato de API**
 
@@ -552,9 +552,9 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | La dirección URL codificada `$id` URI o `meta:altId` del esquema que desea eliminar. |
+| `{SCHEMA_ID}` | La codificación URL `$id` URI o `meta:altId` del esquema que desea eliminar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -571,4 +571,4 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
 
-Puede confirmar la eliminación intentando realizar una solicitud de búsqueda (GET) al esquema. Deberá incluir un `Accept` en la solicitud, pero debe recibir un estado HTTP 404 (no encontrado) porque el esquema se ha eliminado del Registro de esquemas.
+Puede confirmar la eliminación intentando una solicitud de consulta (GET) al esquema. Deberá incluir un `Accept` en la solicitud, pero debe recibir un estado HTTP 404 (no encontrado) porque el esquema se ha eliminado del Registro de esquemas.

@@ -137,7 +137,7 @@ Puede utilizar esto en los scripts personalizados con la sintaxis del objeto `_s
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Cuando se usa un porcentaje (`%`), solo es necesario especificar el nombre del elemento de datos. No necesita especificar `event`.
+Al utilizar el porcentaje (`%`), solo es necesario especificar el nombre del elemento de datos. No necesita especificar `event`.
 
 ```text
 %data element name%
@@ -161,7 +161,7 @@ Obtener el valor de:
 
 Es posible hacer referencia a cualquier objeto JavaScript o variable mediante el campo de ruta.
 
-Si desea recopilar variables de JavaScript o propiedades de objeto en el marcado y utilizarlas con cualquiera de las extensiones o reglas, se pueden utilizar elementos de datos para capturar estos valores. De este modo, puede hacer referencia al elemento de datos mediante las reglas y, en caso de que la fuente de datos cambie en algún momento, solo deberá cambiar la referencia a la fuente (el elemento de datos) en el mismo lugar.
+Si desea recopilar variables de JavaScript o propiedades de objeto en el marcado y utilizarlas con cualquiera de las extensiones o reglas, se pueden utilizar elementos de datos para capturar estos valores. De este modo, puede hacer referencia al elemento de datos mediante las reglas y, en caso de que la fuente de datos cambie en algún momento, solo deberá cambiar la referencia a la fuente (el elemento de datos) en un lugar.
 
 Por ejemplo, supongamos que el marcado contiene una variable de JavaScript llamada “`Page_Name`” similar a la que se muestra a continuación:
 
@@ -260,5 +260,5 @@ Algunos casos de uso común son:
 Debe crear elementos de datos personalizados adicionales si anteriormente ha utilizado cualquiera de los siguientes elementos de datos:
 
 * URI
-* Protocolo
-* Nombre del host
+* Protocol
+* Hostname

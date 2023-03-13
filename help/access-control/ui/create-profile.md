@@ -11,30 +11,30 @@ ht-degree: 1%
 
 ---
 
-# Crear un nuevo perfil de producto en Adobe Admin Console
+# Creación de un nuevo perfil de producto en Adobe Admin Console
 
-Para empezar a crear un perfil nuevo, vaya a la **[!UICONTROL Perfiles de producto]** y seleccione **[!UICONTROL Nuevo perfil]**.
+Para empezar a crear un nuevo perfil, vaya a **[!UICONTROL Perfiles de producto]** y seleccione **[!UICONTROL Nuevo perfil]**.
 
-![nuevo perfil](../images/new-profile.png)
+![new-profile](../images/new-profile.png)
 
-La variable **[!UICONTROL Crear un nuevo perfil de producto]** , solicitándole que introduzca un perfil, un nombre para mostrar opcional y una descripción opcional. En **[!UICONTROL Notificaciones del usuario]**, puede alternar si se notificará por correo electrónico a los usuarios cuando se agreguen o eliminen del perfil.
+El **[!UICONTROL Crear un nuevo perfil de producto]** aparece un cuadro de diálogo que le solicita que introduzca un perfil, un nombre para mostrar opcional y una descripción opcional. En **[!UICONTROL Notificaciones de usuario]**, puede alternar si se notificará por correo electrónico a los usuarios cuando se añadan o se eliminen del perfil.
 
 Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 ![create-new-product-profile](../images/create-new-product-profile.png)
 
-La siguiente pantalla le solicita que elija qué servicios de plataforma incluir en el perfil. Seleccione el botón de alternancia situado junto a un servicio para desactivarlo. Si un servicio está deshabilitado, todas las funciones asociadas con ese servicio no estarán disponibles para los usuarios asignados a este perfil de producto. Cuando termine, seleccione **[!UICONTROL Guardar]**.
+La siguiente pantalla le solicita que elija qué servicios de Platform Services incluir en el perfil. Seleccione el botón de alternancia situado junto a un servicio para desactivarlo. Si se deshabilita un servicio, todas las funciones asociadas con ese servicio no estarán disponibles para los usuarios asignados a este perfil de producto. Cuando termine, seleccione **[!UICONTROL Guardar]**.
 
 ![enable-services](../images/enable-services.png)
 
-Los clientes con derecho a la edición B2B o B2P tienen acceso a la IU B2B. La interfaz de usuario B2B se puede aprovisionar para los usuarios a través del [!UICONTROL Habilitar menú de servicios]. Seleccione la opción que aparece junto a [!UICONTROL IU B2B] para habilitar el servicio para un perfil de producto determinado y, a continuación, seleccione **[!UICONTROL Guardar]**.
+Los clientes con derecho a B2B o B2P Edition tienen acceso a la interfaz de usuario de B2B. La interfaz de usuario B2B se puede aprovisionar para los usuarios a través del [!UICONTROL Habilitar menú de servicios]. Seleccione la opción junto a [!UICONTROL IU B2B] para habilitar el servicio para un perfil de producto en particular, y luego seleccione **[!UICONTROL Guardar]**.
 
-La opción B2B UI permite a los usuarios ver flujos de trabajo B2B sobre la administración de cuentas y oportunidades, así como crear segmentos relacionados con B2B. Para obtener más información, consulte la documentación de [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
+La opción de IU B2B permite a los usuarios ver flujos de trabajo B2B en torno a la administración de cuentas y oportunidades, así como crear segmentos relacionados con B2B. Para obtener más información, consulte la documentación sobre [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)
 
-El nuevo perfil de producto se crea correctamente y se le redirige al perfil de [editar página de permisos](#edit-permissions). Consulte las secciones de [administración de permisos](#manage-permissions-for-a-product-profile) y [administración de usuarios](#manage-users-for-a-product-profile) para obtener más información sobre cómo administrar los perfiles de producto una vez creados.
+El nuevo perfil de producto se ha creado correctamente y se le redirigirá al [página editar permisos](#edit-permissions). Consulte las secciones sobre [administración de permisos](#manage-permissions-for-a-product-profile) y [administrar usuarios](#manage-users-for-a-product-profile) para obtener más información sobre cómo administrar perfiles de producto una vez creados.
 
 ## Pasos siguientes
 
-Con la creación de un nuevo perfil de producto, puede continuar con el paso siguiente a [administrar permisos para un perfil de producto](permissions.md)
+Con un nuevo perfil de producto creado, puede continuar con el siguiente paso para [administración de permisos para un perfil de producto](permissions.md)

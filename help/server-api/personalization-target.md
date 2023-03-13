@@ -1,6 +1,6 @@
 ---
-title: Personalización a través de Adobe Target
-description: Aprenda a utilizar la API del servidor para ofrecer y procesar experiencias personalizadas creadas en Adobe Target.
+title: Personalización mediante Adobe Target
+description: Aprenda a utilizar la API de servidor para ofrecer y procesar experiencias personalizadas creadas en Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
 source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
 workflow-type: tm+mt
@@ -9,35 +9,35 @@ ht-degree: 2%
 
 ---
 
-# Personalización a través de Adobe Target
+# Personalización mediante Adobe Target
 
 ## Información general {#overview}
 
-La API de servidor de red perimetral puede ofrecer y procesar experiencias personalizadas creadas en Adobe Target, con la ayuda del [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+La API del servidor de red perimetral puede ofrecer y procesar experiencias personalizadas creadas en Adobe Target con la ayuda del [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
 
 >[!IMPORTANT]
 >
->Experiencias de personalización creadas a través de la variable [Compositor de experiencias visuales (VEC) de Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) no son totalmente compatibles con la API del servidor. La API del servidor puede **retrieve** actividades creadas por VEC, pero la API del servidor no puede **render** actividades creadas por VEC. Si desea procesar actividades creadas por VEC, implemente [personalización híbrida](../edge/personalization/hybrid-personalization.md) uso del SDK web y la API de servidor de red perimetral.
+>Experiencias de personalización creadas mediante [Compositor de experiencias visuales (VEC) de Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) no son totalmente compatibles con la API de servidor. La API de servidor puede **recuperar** actividades creadas por VEC, pero la API de servidor no puede **render** actividades creadas por VEC. Si desea procesar actividades creadas por VEC, implemente [personalización híbrida](../edge/personalization/hybrid-personalization.md) mediante el SDK web y la API del servidor de red perimetral.
 
-## Configurar el conjunto de datos {#configure-your-datastream}
+## Configuración de la secuencia de datos {#configure-your-datastream}
 
-Antes de poder usar la API de servidor junto con Adobe Target, debe activar la personalización de Adobe Target en la configuración del conjunto de datos.
+Antes de poder usar la API de servidor junto con Adobe Target, debe habilitar la personalización de Adobe Target en la configuración del conjunto de datos.
 
-Consulte la [guía sobre la adición de servicios a un conjunto de datos](../edge/datastreams/overview.md#adobe-target-settings), para obtener información detallada sobre cómo habilitar Adobe Target.
+Consulte la [guía sobre cómo agregar servicios a un conjunto de datos](../edge/datastreams/overview.md#adobe-target-settings), para obtener información detallada sobre cómo habilitar Adobe Target.
 
-Al configurar el conjunto de datos, puede (opcionalmente) proporcionar valores para [!DNL Property Token], [!DNL Target Environment ID]y [!DNL Target Third Party ID Namespace].
+Al configurar la secuencia de datos, puede (opcionalmente) proporcionar valores para [!DNL Property Token], [!DNL Target Environment ID], y [!DNL Target Third Party ID Namespace].
 
-![La imagen de la interfaz de usuario muestra la pantalla de configuración del servicio datastream, con Adobe Target seleccionado](assets/target-datastream.png)
+![Imagen de la interfaz de usuario que muestra la pantalla de configuración del servicio de flujo de datos, con Adobe Target seleccionado](assets/target-datastream.png)
 
 
 ## Parámetros personalizados {#custom-parameters}
 
-La mayoría de los campos de la [!DNL XDM] parte de cada solicitud se serializa en notación de puntos y luego se envía a Target como personalizado o [!DNL mbox] parámetros.
+La mayoría de los campos de la [!DNL XDM] Una parte de cada solicitud se serializa en notación de puntos y luego se envía a Target como personalizada o [!DNL mbox] parámetros.
 
 
 ### Ejemplo {#custom-parameters-example}
 
-Dadas las siguientes muestras XDM:
+Dado el siguiente ejemplo de XDM:
 
 ```json
 "xdm":{
@@ -57,7 +57,7 @@ Al crear audiencias en Target, los siguientes valores estarán disponibles como 
 
 ## Actualizaciones de perfil de Target {#profile-update}
 
-La variable [!DNL Server API] permite actualizar el perfil de Target. Para actualizar un perfil de Target, asegúrese de que los datos de perfil se pasen en la variable `data` de la solicitud con el siguiente formato:
+El [!DNL Server API] permite realizar actualizaciones en el perfil de Target. Para actualizar un perfil de Target, asegúrese de que los datos de perfil se pasan en la variable `data` parte de la solicitud en el siguiente formato:
 
 ```json
 "data":  {
@@ -74,7 +74,7 @@ La variable [!DNL Server API] permite actualizar el perfil de Target. Para actua
 
 La parte de consulta de la solicitud determina qué contenido devuelve Target. En el `personalization` objeto, `schemas` determina el tipo de contenido que Target devolverá.
 
-En situaciones en las que no esté seguro de qué tipo de ofertas va a recuperar, debe incluir los cuatro esquemas en la consulta de personalización a la red perimetral:
+En situaciones en las que no esté seguro del tipo de ofertas que va a recuperar, debe incluir los cuatro esquemas en la consulta de personalización a la red perimetral:
 
 * **Ofertas basadas en HTML:**
 https://ns.adobe.com/personalization/html-content-item
@@ -82,16 +82,16 @@ https://ns.adobe.com/personalization/html-content-item
 https://ns.adobe.com/personalization/json-content-item
 * **Ofertas de redireccionamiento de Target**
 https://ns.adobe.com/personalization/redirect-item
-* **Ofertas de manipulación DOM de Target**
+* **Ofertas de manipulación de DOM de Target**
 https://ns.adobe.com/personalization/dom-action
 
 ### Ámbitos de decisión {#decision-scopes}
 
-Adobe Target [!DNL mbox] los nombres deben incluirse en la variable `decisionScopes` para devolver el contenido adecuado.
+Adobe Target [!DNL mbox] nombres deben incluirse en la `decisionScopes` para devolver el contenido adecuado.
 
 #### Ejemplo {#decision-scopes-example}
 
-En el ejemplo siguiente, se solicitan los cuatro tipos de oferta junto con una actividad de Target llamada `serverapimbox`.
+En el ejemplo siguiente, los cuatro tipos de oferta se solicitan junto con una actividad de Target llamada `serverapimbox`.
 
 ```json
 "query":{
@@ -109,7 +109,7 @@ En el ejemplo siguiente, se solicitan los cuatro tipos de oferta junto con una a
 }
 ```
 
-## Ejemplo de llamada a la API {#api-example}
+## Ejemplo de llamada de API {#api-example}
 
 **Formato de API**
 
@@ -119,7 +119,7 @@ POST /ee/v2/interact
 
 ### Solicitud {#request}
 
-A continuación se describe una solicitud completa que incluye un objeto XDM completo, parámetros de perfil y la consulta de Target apropiada.
+A continuación, se describe una solicitud completa que incluye un objeto XDM completo, parámetros de perfil, junto con la consulta de Target adecuada.
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -271,20 +271,20 @@ La red perimetral devolverá una respuesta similar a la que se muestra a continu
 }
 ```
 
-Si el visitante cumple los requisitos para una actividad de personalización basada en los datos enviados a Adobe Target, el contenido de la actividad relevante se encuentra en la sección `handle` objeto, donde el tipo es `personalization:decisions`.
+Si el visitante cumple los requisitos para una actividad de personalización basada en los datos enviados a Adobe Target, el contenido de la actividad correspondiente se encuentra en `handle` objeto, donde el tipo es `personalization:decisions`.
 
-En ocasiones, se devuelve otro contenido en `handle` también. Otros tipos de contenido no son relevantes para la personalización de Target. Si el visitante cumple los requisitos para varias actividades, cada actividad será independiente `personalization` en la matriz.
+Otros contenidos a veces se devuelven en `handle` y también. Otros tipos de contenido no son relevantes para la personalización de Target. Si el visitante cumple los requisitos para varias actividades, cada actividad será una actividad independiente `personalization` en la matriz.
 
 En la tabla siguiente se explican los elementos clave de esa parte de la respuesta.
 
 | Propiedad | Descripción | Ejemplo |
 |---|---|---|
-| `scope` | El nombre de mbox de Target que generó las ofertas propuestas. | `"scope": "serverapimbox"` |
-| `items[].schema` | Esquema del contenido asociado con la oferta propuesta. Esto está relacionado con el tipo de actividad que seleccionó al crear la actividad de personalización. | `"schema": "https://ns.adobe.com/personalization/json-content-item",` |
-| `items[].meta.activity.id` | ID exclusivo de la actividad de oferta. Normalmente es un número de 6 dígitos. | `"activity.id": "140281"` |
+| `scope` | El nombre del mbox de Target que resultó en las ofertas propuestas. | `"scope": "serverapimbox"` |
+| `items[].schema` | El esquema del contenido asociado con la oferta propuesta. Esto se relacionará con el tipo de actividad que seleccionó al crear la actividad de personalización. | `"schema": "https://ns.adobe.com/personalization/json-content-item",` |
+| `items[].meta.activity.id` | ID único de la actividad de oferta. Normalmente es un número de 6 dígitos. | `"activity.id": "140281"` |
 | `items[].meta.activity.name` | Nombre de la actividad de oferta especificada por el usuario. Esto se proporciona durante el paso de creación de la actividad. | `"activity.name": "Server API Form"` |
-| `items[].meta.experience.id` | ID exclusivo de la experiencia de personalización. | `"experience.id": "0"` |
-| `items[].meta.experience.name` | Nombre exclusivo de la experiencia de personalización. | `"experience.name": "Experience A"` |
+| `items[].meta.experience.id` | El ID único de la experiencia de personalización. | `"experience.id": "0"` |
+| `items[].meta.experience.name` | El nombre único de la experiencia de personalización. | `"experience.name": "Experience A"` |
 | `items[].data.id` | El ID de la oferta propuesta. | `"id": "282484"` |
 | `items[].data.format` | El formato del contenido asociado con la oferta propuesta. | `"format: "application/json` |
-| `items[].data.content` | Contenido asociado con la oferta propuesta. Se utilizará para la personalización del contenido de la aplicación que realiza la llamada. | `"content": "<CONTENT CONFIGURED IN TARGET>"` |
+| `items[].data.content` | Contenido asociado con la oferta propuesta. Se utilizará para personalizar el contenido de la aplicación que realiza la llamada. | `"content": "<CONTENT CONFIGURED IN TARGET>"` |

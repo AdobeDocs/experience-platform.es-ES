@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /rules en la API de Reactor.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '898'
 ht-degree: 97%
 
 ---
@@ -15,7 +15,7 @@ En el contexto de las etiquetas de recopilación de datos, las reglas controlan 
 
 >[!NOTE]
 >
->Este documento explica cómo administrar las reglas en la API de Reactor. Para obtener información sobre cómo interactuar con reglas en la interfaz de usuario, consulte la [Guía de la interfaz de usuario](../../ui/managing-resources/rules.md).
+>Este documento explica cómo administrar las reglas en la API de Reactor. Para obtener información sobre cómo interactuar con reglas en la interfaz de usuario, consulte [Guía de IU](../../ui/managing-resources/rules.md).
 
 Una regla pertenece a exactamente una [propiedad](./properties.md). Una propiedad puede tener muchas reglas.
 
@@ -37,7 +37,7 @@ GET /properties/{PROPERTY_ID}/rules
 | --- | --- |
 | `PROPERTY_ID` | El `id` de la propiedad cuyos componentes desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ GET /rules/{RULE_ID}
 | --- | --- |
 | `RULE_ID` | El `id` de la regla que desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -260,7 +260,7 @@ POST /properties/{PROPERTY_ID}/rules
 | --- | --- |
 | `PROPERTY_ID` | El `id` de la propiedad en la que está definiendo una regla. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -288,7 +288,7 @@ curl -X POST \
 | `attributes.enabled` | Un valor booleano que indica si la regla está habilitada. |
 | `type` | El tipo de recurso que se crea. Para este extremo, el valor debe ser `rules`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -382,7 +382,7 @@ PATCH /rules/{RULE_ID}
 | --- | --- |
 | `RULE_ID` | El `id` de la regla que desea actualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -412,7 +412,7 @@ curl -X PATCH \
 | `id` | El `id` de la regla que desea actualizar. Debe coincidir con el valor `{RULE_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `rules`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -502,7 +502,7 @@ DELETE /rules/{RULE_ID}
 | --- | --- |
 | `RULE_ID` | El `id` de la regla que desea eliminar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -542,7 +542,7 @@ GET  /rules/{RULE_ID}/libraries
 | --- | --- |
 | `{RULE_ID}` | El `id` de la regla cuyas bibliotecas desee enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -664,7 +664,7 @@ GET  /rules/{RULE_ID}/revisions
 | --- | --- |
 | `{RULE_ID}` | El `id` de la regla cuyas revisiones desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -842,7 +842,7 @@ GET /rules/{RULE_ID}/origin
 | --- | --- |
 | `{RULE_ID}` | El `id` de la regla cuyo origen desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -944,7 +944,7 @@ GET /rules/{RULE_ID}/property
 | --- | --- |
 | `{RULE_ID}` | El `id` de la regla cuya propiedad desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 

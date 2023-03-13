@@ -1,29 +1,30 @@
 ---
-title: Actualizar grupo de campos de esquema
-description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles de la actualización .
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+title: Grupo de campos de esquema de detalles de actualización
+description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles de actualización.
+exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
+source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 3%
+source-wordcount: '151'
+ht-degree: 1%
 
 ---
 
-# [!UICONTROL Actualizar ] grupo de campos Detailsschema
+# [!UICONTROL Detalles de actualización] grupo de campos de esquema
 
-[!UICONTROL Actualizar ] Detalla un grupo de campos de esquema estándar para el  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) cliente para capturar información relacionada con un evento de marketing de actualización, incluidos detalles sobre la transacción y las diferentes formas en que se mostró la oferta a un cliente.
+[!UICONTROL Detalles de actualización] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md) se utiliza para recopilar información sobre un evento de marketing de actualización, incluidos detalles sobre la transacción y las diferentes formas en que se mostró la oferta a un cliente.
 
 El grupo de campos proporciona un único campo de tipo de objeto, `upgrades`. Las propiedades contenidas en este objeto se explican a continuación.
 
-![Estructura de detalles de la actualización](../../images/field-groups/upgrade-details.png)
+![Estructura de detalles de actualización](../../images/field-groups/upgrade-details.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `upgradeImpressions` | Matriz de [Impresiones](../../data-types/impressions.md) | Matriz que enumera las impresiones registradas (vistas digitales o participaciones con la oferta de actualización) para el cliente. |
+| `upgradeImpressions` | Matriz de [Impresiones](../../data-types/impressions.md) | Una matriz que enumera las impresiones registradas (vistas digitales o participaciones con la oferta de actualización) para el cliente. |
 | `upgradeTransaction` | [Transacción](../../data-types/transaction.md) | Describe la transacción de moneda para la actualización. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obtener más información sobre el grupo de campos, consulte el repositorio XDM público:
 
-* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upgrade-details.example.1.json)
+* [Ejemplo completado](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upgrade-details.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upgrade-details.schema.json)

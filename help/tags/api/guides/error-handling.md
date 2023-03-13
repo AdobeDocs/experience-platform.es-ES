@@ -4,7 +4,7 @@ description: Descubra cómo se gestionan los errores en la API de Reactor.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 99%
 
 ---
@@ -49,7 +49,7 @@ Las respuestas de error pretenden ajustarse a la [especificación de errores JSO
 | `source` | Un objeto que contiene referencias al origen del error, incluyendo opcionalmente cualquiera de los siguientes miembros:<ul><li>`pointer`: una cadena de puntero [JSON (RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) que hace referencia a la entidad asociada en el documento de solicitud (por ejemplo, `/data` para un objeto de datos principal o `/data/attributes/title` para un atributo específico).</li></ul> |
 | `meta` | Un objeto que contiene metadatos no estándar sobre el error. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Referencia de error
 
@@ -86,7 +86,7 @@ En la tabla siguiente se enumeran los diferentes errores que puede devolver la A
 | `invalid-rule` | No se puede añadir una regla no válida a una biblioteca. |
 | `invalid-settings-syntax` | Se encontró un error de sintaxis al analizar la configuración JSON. |
 | `library-file-not-found` | No se encontró un archivo requerido definido en extension.json dentro del paquete zip. |
-| `minification-error` | No se pudo compilar el código debido a un código no válido. |
+| `minification-error` | No se pudo compilar el código porque no es válido. |
 | `multiple-revisions` | En una biblioteca solo se puede incluir una revisión de cada recurso. |
 | `no-available-orgs` | Esta cuenta de usuario no pertenece a ningún perfil de producto que tenga acceso a etiquetas. Utilice Admin Console para añadir a este usuario a un perfil de producto con derechos de etiquetas. |
 | `not-authorized` | Esta cuenta de usuario no tiene los permisos necesarios para realizar esta acción. |
@@ -107,4 +107,4 @@ En la tabla siguiente se enumeran los diferentes errores que puede devolver la A
 | `upgraded-extension-required` | Una vez que haya instalado una actualización de extensión, debe incluirla en todas las bibliotecas hasta que la actualización llegue a Producción. La única excepción es que la extensión aún no se haya publicado. |
 | `upstream-build-required` | Se requiere una compilación correcta para la biblioteca de flujo ascendente antes de poder crearla. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -1,10 +1,11 @@
 ---
 title: Bibliotecas
-description: Obtenga información sobre el concepto de bibliotecas de etiquetas y cómo funcionan dentro de Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información acerca del concepto de bibliotecas de etiquetas y su funcionamiento en Adobe Experience Platform.
+exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '791'
-ht-degree: 76%
+ht-degree: 97%
 
 ---
 
@@ -58,7 +59,7 @@ Una vez creada la biblioteca, utilice el menú desplegable de la biblioteca para
 
 * **Editar**: Esta opción le permite cambiar la configuración de la biblioteca.
 
-* **Generar para desarrollo**: Esta opción compila una compilación y la implementa en el entorno asignado.
+* **Compilar para desarrollo**: Esta opción compila una compilación y la implementa en el entorno asignado.
 
 * **Enviar para aprobación**: Esta opción hace que la biblioteca esté disponible para que un aprobador la mueva al siguiente paso del proceso de publicación.
 
@@ -68,7 +69,7 @@ Una vez creada la biblioteca, utilice el menú desplegable de la biblioteca para
 
 ## Añadir a una biblioteca {#add-to-a-library}
 
-Para agregar a una biblioteca, complete los siguientes pasos.
+Para añadir a una biblioteca, complete los siguientes pasos.
 
 1. Instala las [extensiones](../managing-resources/extensions/overview.md) que desee añadir.
 1. Crea los [elementos de datos](../managing-resources/data-elements.md) y las reglas que desee añadir.
@@ -106,7 +107,7 @@ Para editar las opciones de la biblioteca, complete los siguientes pasos.
 
    ![](../../images/library-contents-revision.jpg)
 
-1. Seleccione si desea mostrar **Todos** elementos o **Elementos modificados**.
+1. Seleccione si desea mostrar **todos** los elementos o los elementos **modificados**.
 1. Seleccione la revisión y, a continuación, seleccione **[!UICONTROL Seleccionar revisión]**.
 1. Seleccione **[!UICONTROL Añadir un cambio]** o **[!UICONTROL Añadir todos los recursos modificados]**.
 
@@ -114,7 +115,7 @@ Para editar las opciones de la biblioteca, complete los siguientes pasos.
 
 Las bibliotecas reúnen un conjunto de cambios que desea realizar en el código implementado. La biblioteca activa facilita el proceso, lo que le permite iterar rápidamente los cambios y ver sus efectos.
 
-Ahora, las extensiones, las reglas y los elementos de datos se pueden guardar directamente en la biblioteca en la que esté trabajando. Si es necesario, también se puede crear una nueva compilación o incluso una nueva biblioteca desde la lista desplegable [!UICONTROL Active Library].
+Ahora, las extensiones, las reglas y los elementos de datos se pueden guardar directamente en la biblioteca en la que esté trabajando. Si es necesario, también se puede crear una nueva compilación o incluso una nueva biblioteca desde la lista desplegable [!UICONTROL Biblioteca principal].
 
 La siguiente lista proporciona más información sobre la administración de una biblioteca activa.
 

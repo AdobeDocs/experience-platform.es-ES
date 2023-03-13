@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;permisos de control de acceso;tipos de recursos de control de acceso;api de control de acceso
 solution: Experience Platform
 title: Punto final de API de referencia
-description: El punto final de referencia en la API de control de acceso le permite ver los nombres de los permisos disponibles y los tipos de recursos, que se pueden utilizar para ver políticas de control de acceso efectivas para el usuario actual.
+description: El extremo de referencia de la API de control de acceso le permite ver los nombres de los permisos y tipos de recursos disponibles, que luego se pueden usar para ver las directivas de control de acceso efectivas para el usuario actual.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 2%
 
 ---
 
-# Punto de referencia
+# Extremo de referencia
 
 >[!NOTE]
 >
->Si se pasa un token de usuario, el usuario del token debe tener una función &quot;administrador de organización&quot; para la organización solicitada.
+>Si se pasa un token de usuario, el usuario del token debe tener un rol de &quot;administrador de organización&quot; para la organización solicitada.
 
-Puede enumerar los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET al `/acl/reference` punto final. Estos nombres se pueden utilizar en llamadas de API a [ver directivas de control de acceso efectivas](./effective-policies.md) para el usuario actual.
+Puede enumerar los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET al `/acl/reference` punto final. Estos nombres se pueden usar en llamadas de API a [ver directivas de control de acceso efectivas](./effective-policies.md) para el usuario actual.
 
-Un permiso es una directiva que se administra a través de Adobe Admin Console y que se asigna a cero o más directivas de tipo de recurso. Un tipo de recurso es una directiva que habilita las capacidades de lectura, escritura o eliminación para un tipo específico [!DNL Platform] recurso (como conjuntos de datos o esquemas).
+Un permiso es una directiva que se administra mediante Adobe Admin Console y que se asigna a cero o más directivas de tipo de recurso. Un tipo de recurso es una directiva que habilita las capacidades de lectura, escritura o eliminación para un tipo específico de [!DNL Platform] recurso (como conjuntos de datos o esquemas).
 
 **Formato de API**
 
@@ -39,7 +39,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve un valor `permissions` y `resource-types` , cada uno con una lista completa de nombres para permisos de acceso o tipos de recursos, respectivamente.
+Una respuesta correcta devuelve un valor `permissions` objeto y un `resource-types` objeto, cada uno de los cuales contiene una lista completa de nombres para los permisos de acceso o tipos de recursos, respectivamente.
 
 ```json
 {

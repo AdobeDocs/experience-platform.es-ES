@@ -4,7 +4,7 @@ description: Obtenga información sobre cómo empezar a usar la API de Reactor, 
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1057'
 ht-degree: 97%
 
 ---
@@ -61,7 +61,7 @@ La siguiente pantalla le solicita que seleccione uno o más perfiles de producto
 
 >[!NOTE]
 >
->Su organización gestiona los perfiles de producto a través de Adobe Admin Console y contienen conjuntos específicos de permisos para funciones granulares. Los perfiles de producto y sus permisos solo los pueden administrar usuarios con privilegios de administrador en su organización. Si no está seguro de qué perfiles de producto desea seleccionar para la API, póngase en contacto con su administrador.
+>Su organización gestiona los perfiles de producto a través de Adobe Admin Console y contiene conjuntos específicos de permisos para funciones granulares. Los perfiles de producto y sus permisos solo los pueden administrar usuarios con privilegios de administrador en su organización. Si no está seguro de qué perfiles de producto desea seleccionar para la API, póngase en contacto con su administrador.
 
 Seleccione los perfiles de producto que desee en la lista y, a continuación, seleccione **Guardar API configurada** para completar el registro de la API.
 
@@ -149,7 +149,7 @@ Una respuesta correcta devuelve un nuevo token de acceso, así como el número d
 | `access_token` | El valor del token de acceso recién generado. Este valor se utiliza para el encabezado `Authorization` requerido y debe proporcionarse con el formato `Bearer {ACCESS_TOKEN}`. |
 | `expires_in` | Tiempo restante hasta que caduque el token, en milisegundos. Una vez que expira un token, se debe generar uno nuevo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Pasos siguientes
 

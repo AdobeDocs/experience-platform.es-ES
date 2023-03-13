@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform;inicio;temas populares;esquema;esquema;grupo de campos;grupo de campos;grupos de campos;grupos de campos;tipo de datos;tipos de datos;tipo de datos;diseño de esquema;tipo de datos;tipo de datos;tipo de datos;esquemas;esquemas;diseño de esquema;mapa;mapa;
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;grupo de campos;grupos de campos;grupos de campos;grupos de campos;tipo de datos;tipos de datos;Tipos de datos;Tipo de datos;Diseño de esquema;tipo de datos;Tipo de datos;Esquemas;Diseño de esquema;Mapa;Tipo de datos;Tipo de datos;Esquemas;
 solution: Experience Platform
 title: Restricciones de tipo de campo XDM
-description: Una referencia para restricciones de tipo de campo en Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
+description: Una referencia para las restricciones de tipo de campo en el Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 7%
+source-wordcount: '654'
+ht-degree: 6%
 
 ---
 
 # Restricciones de tipo de campo XDM
 
-En los esquemas del Modelo de datos de experiencia (XDM), el tipo de campo limita qué tipo de datos puede contener el campo. Este documento proporciona información general sobre cada tipo de campo principal, incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API para aplicar diferentes restricciones.
+En esquemas XDM (Experience Data Model), el tipo de campo restringe el tipo de datos que puede contener el campo. Este documento proporciona información general de cada tipo de campo principal, incluidos los demás formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API para aplicar diferentes restricciones.
 
 ## Primeros pasos
 
-Antes de usar esta guía, revise la [conceptos básicos de la composición del esquema](./composition.md) para obtener una introducción a los esquemas XDM, las clases y los grupos de campos de esquema.
+Antes de utilizar esta guía, consulte la [conceptos básicos de composición de esquemas](./composition.md) para obtener una introducción a los esquemas XDM, las clases y los grupos de campos de esquema.
 
-Si planea definir sus propios tipos de campo en la API, se recomienda encarecidamente que comience con la variable [Guía para desarrolladores de Schema Registry](../api/getting-started.md) para aprender a crear grupos de campos y tipos de datos para incluir sus campos personalizados en. Si utiliza la interfaz de usuario del Experience Platform para crear sus esquemas, consulte la guía de [definición de campos en la interfaz de usuario](../ui/fields/overview.md) para aprender a implementar restricciones en campos definidos dentro de grupos de campos personalizados y tipos de datos.
+Si planea definir sus propios tipos de campo en la API, se recomienda comenzar con [Guía para desarrolladores de Schema Registry](../api/getting-started.md) para aprender a crear grupos de campos y tipos de datos para incluir los campos personalizados en. Si utiliza la interfaz de usuario del Experience Platform para crear los esquemas, consulte la guía de [definición de campos en la IU](../ui/fields/overview.md) para obtener información sobre cómo implementar restricciones en campos definidos dentro de grupos de campos personalizados y tipos de datos.
 
 ## Estructura base y ejemplos {#basic-types}
 
-XDM se basa en el esquema JSON y, por lo tanto, los campos XDM heredan una sintaxis similar al definir su tipo. Comprender cómo se representan los distintos tipos de campos en el esquema JSON puede ayudar a indicar las restricciones de base de cada tipo.
+XDM se basa en el esquema JSON y, por lo tanto, los campos XDM heredan una sintaxis similar al definir su tipo. Comprender cómo se representan los distintos tipos de campo en el esquema JSON puede ayudar a indicar las restricciones base de cada tipo.
 
 >[!NOTE]
 >
->Consulte la [Guía de fundamentos de API](../../landing/api-fundamentals.md#json-schema) para obtener más información sobre el esquema JSON y otras tecnologías subyacentes en las API de plataforma.
+>Consulte la [Guía de aspectos básicos de API](../../landing/api-fundamentals.md#json-schema) para obtener más información sobre el esquema JSON y otras tecnologías subyacentes en las API de Platform.
 
-La siguiente tabla describe cómo se representa cada tipo XDM en el esquema JSON, junto con un valor de ejemplo que se ajusta al tipo:
+En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquema JSON, junto con un valor de ejemplo que se ajusta al tipo:
 
 <table style="table-layout:auto">
   <thead>
     <tr>
-      <th>Tipo XDM</th>
+      <th>Tipo de XDM</th>
       <th>Esquema JSON</th>
       <th>Ejemplo</th>
     </tr>
@@ -52,7 +52,7 @@ La siguiente tabla describe cómo se representa cada tipo XDM en el esquema JSON
       <td>[!UICONTROL Doble]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type": "número"}</pre>
+{"type": "number"}</pre>
       </td>
       <td><code>12925.49</code></td>
     </tr>
@@ -60,23 +60,23 @@ La siguiente tabla describe cómo se representa cada tipo XDM en el esquema JSON
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 9007199254740991, "mínimo": -9007199254740991 }</pre>
+{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Integer]</td>
+      <td>[!UICONTROL Entero]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 2147483648, "mínimo": -2147483648 }</pre>
+{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Cortocircuito]</td>
+      <td>[!UICONTROL Corto]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 32768, "mínimo": -32768 }</pre>
+{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -84,12 +84,12 @@ La siguiente tabla describe cómo se representa cada tipo XDM en el esquema JSON
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 128, "mínimo": -128 }</pre>
+{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
       </td>
       <td><code>90</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Date]*</td>
+      <td>[!UICONTROL Fecha]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
 { "type": "string", "format": "date" }</pre>
@@ -105,7 +105,7 @@ La siguiente tabla describe cómo se representa cada tipo XDM en el esquema JSON
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Boolean]</td>
+      <td>[!UICONTROL Booleano]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "string"}</pre>
@@ -115,7 +115,7 @@ La siguiente tabla describe cómo se representa cada tipo XDM en el esquema JSON
   </tbody>
 </table>
 
-**Todas las cadenas con formato de fecha deben cumplir la norma ISO 8601 ([RFC 3339, sección 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+**Todas las cadenas con formato de fecha deben cumplir con la norma ISO 8601 ([RFC 3339, sección 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
 
 ## Asignación de tipos XDM a otros formatos
 
@@ -127,13 +127,13 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 
 >[!NOTE]
 >
->Entre los tipos XDM estándar que se enumeran en las tablas siguientes, la variable [!UICONTROL Mapa] también se incluye. Los mapas se utilizan en esquemas estándar cuando los datos se representan como claves que se asignan a determinados valores o cuando las claves no se pueden incluir razonablemente en un esquema estático y deben tratarse como valores de datos.
+>Entre los tipos XDM estándar enumerados en las tablas siguientes, el [!UICONTROL Mapa] también se incluye el tipo. Los mapas se utilizan en esquemas estándar cuando los datos se representan como claves que se asignan a determinados valores o cuando las claves no se pueden incluir razonablemente en un esquema estático y deben tratarse como valores de datos.
 >
->Muchos componentes XDM estándar utilizan tipos de asignación y también puede [definir campos de asignación personalizados](../tutorials/custom-fields-api.md#custom-maps) si lo desea. La inclusión del tipo de mapa en las tablas siguientes pretende ayudarle a determinar cómo asignar los datos existentes a XDM si actualmente se almacenan en cualquiera de los formatos que se enumeran a continuación.
+>Muchos componentes XDM estándar utilizan tipos de asignación y también puede [definir campos de asignación personalizados](../tutorials/custom-fields-api.md#custom-maps) si lo desea. La inclusión del tipo de mapa en las tablas siguientes pretende ayudarle a determinar cómo asignar los datos existentes a XDM si actualmente están almacenados en cualquiera de los formatos enumerados a continuación.
 
 ### Parquet, Spark SQL y Java {#parquet}
 
-| Tipo XDM | Parqué | Spark SQL | Java |
+| Tipo de XDM | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL Cadena] | Tipo: `BYTE_ARRAY`<br>Anotación: `UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL Doble] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
@@ -144,13 +144,13 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 | [!UICONTROL Fecha] | Tipo: `INT32`<br>Anotación: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Tipo: `INT64`<br>Anotación: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Booleana] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Mapa] | `MAP`-grupo anotado<br><br>(`<key-type>` debe `STRING`) | `MapType`<br><br>(`keyType` debe `StringType`) | `java.util.Map` |
+| [!UICONTROL Mapa] | `MAP`Grupo con anotaciones<br><br>(`<key-type>` debe ser `STRING`) | `MapType`<br><br>(`keyType` debe ser `StringType`) | `java.util.Map` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Scala, .NET y CosmosDB {#scala}
 
-| Tipo XDM | Scala | .NET | CosmosDB |
+| Tipo de XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL Cadena] | `String` | `System.String` | `String` |
 | [!UICONTROL Doble] | `Double` | `System.Double` | `Number` |
@@ -163,11 +163,11 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 | [!UICONTROL Booleana] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Mapa] | `Map` | (N/A) | `object` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### MongoDB, Aerospike y Protobuf 2 {#mongo}
 
-| Tipo XDM | MongoDB | Aerospike | Protobuf 2 |
+| Tipo de XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL Cadena] | `string` | `String` | `string` |
 | [!UICONTROL Doble] | `double` | `Double` | `double` |
@@ -177,11 +177,11 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
 | [!UICONTROL Fecha] | `date` | `Integer`<br>(milisegundos de Unix) | `int64`<br>(milisegundos de Unix) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(milisegundos de Unix) | `int64`<br>(milisegundos de Unix) |
-| [!UICONTROL Booleana] | `bool` | `Integer`<br>(0/1 binario) | `bool` |
+| [!UICONTROL Booleana] | `bool` | `Integer`<br>(binario 0/1) | `bool` |
 | [!UICONTROL Mapa] | `object` | `map` | `map<key_type, value_type>` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Definición de tipos de campo XDM en la API {#define-fields}
 
-La API del Registro de esquemas permite definir campos personalizados mediante el uso de formatos y restricciones opcionales. Consulte la guía de [definición de campos personalizados en la API del Registro de esquemas](../tutorials/custom-fields-api.md) para obtener más información.
+La API de Registro de esquemas permite definir campos personalizados mediante el uso de formatos y restricciones opcionales. Consulte la guía de [definición de campos personalizados en la API de Registro de esquemas](../tutorials/custom-fields-api.md) para obtener más información.

@@ -1,6 +1,6 @@
 ---
 description: Uso de las pestañas de solución en Adobe Experience Platform Debugger
-keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;resumen;borrar;solicitudes;soluciones;solución;información;analytics;target;audience manager;media optimizer;amo;servicio de id
+keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;resumen;borrar;solicitudes;soluciones;solución;información;analytics;target;audience manager;media optimizer;amo;servicio de ID
 seo-description: Using the Solution tabs in Adobe Experience Platform Debugger
 seo-title: Solution Tabs in Adobe Experience Platform Debugger
 title: Pestañas de solución
@@ -15,36 +15,36 @@ ht-degree: 29%
 
 # Soluciones
 
-Adobe Experience Platform Debugger proporciona una lista de **Soluciones** en el panel de navegación izquierdo. Seleccione una solución para ver los resultados de tecnologías específicas de Adobe Experience Cloud.
+Adobe Experience Platform Debugger proporciona una lista de **Soluciones** en el panel de navegación izquierdo. Seleccione una solución para ver los resultados de tecnologías de Adobe Experience Cloud específicas.
 
 ![La lista de soluciones disponibles que se muestra en la interfaz de usuario de Debugger](../images/solutions/overview/left-nav.png)
 
 ## SDK web de Adobe Experience Platform {#aep}
 
-La pantalla del SDK web de Adobe Experience Platform muestra información sobre el SDK web de Adobe Experience Platform. Select **[!UICONTROL Configurar]** para activar o desactivar el inicio de sesión en la consola.
+La pantalla del SDK web de Adobe Experience Platform muestra información sobre el SDK web de Adobe Experience Platform. Seleccionar **[!UICONTROL Configurar]** para activar o desactivar el registro en la consola.
 
 ## [!UICONTROL Analytics] {#section-f71dfcc22bb44c86bec328491606a482}
 
-La variable [!UICONTROL Analytics] proporciona información sobre su [Implementación de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=es).
+El [!UICONTROL Analytics] proporciona información sobre su [Implementación de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=es).
 
 ## [!UICONTROL Target] {#section-988873ba5ede4317953193bd7ac5474c}
 
-Utilice la variable [!UICONTROL Target] pantalla para ver [Adobe Target](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) solicitudes o [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) detalles de la respuesta.
+Utilice el [!UICONTROL Target] pantalla para ver [Adobe Target](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) solicitudes o [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) detalles de respuesta.
 
-Consulte la guía de [uso de Debugger para implementaciones de Target](./target.md) para obtener más información.
+Consulte la guía de [Uso de Debugger para implementaciones de Target](./target.md) para obtener más información.
 
 ## [!UICONTROL Audience Manager] {#section-1d4484f8b46f457f859ba88039a9a585}
 
-Utilice la variable [[!UICONTROL Audience Manager]](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) para ver los detalles de [events](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html) en Adobe Audience Manager. Seleccione la organización para expandirla y mostrar la información.
+Utilice el [[!UICONTROL Audience Manager]](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) para ver los detalles de [eventos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html) en Adobe Audience Manager. Seleccione la organización para expandirla y mostrar la información.
 
 ## [!UICONTROL Etiquetas de Adobe Experience Platform] {#section-ee80a9c509f2462c89c1e5bd8d05d7c8}
 
-Utilice la variable [!UICONTROL Etiquetas de Adobe Experience Platform] para ver las solicitudes de etiquetas. También puede seleccionar **[!UICONTROL Configuración]** para configurar [códigos incrustados](../../tags/ui/publishing/environments.md#embed-code). Puede editar, reemplazar o agregar más códigos incrustados desde Experience Platform Debugger. Si inicia sesión, puede seleccionar una propiedad alternativa mediante los menús desplegables.
+Utilice el [!UICONTROL Etiquetas de Adobe Experience Platform] para ver las solicitudes de etiquetas. También puede seleccionar **[!UICONTROL Configuración]** para configurar [incrustar códigos](../../tags/ui/publishing/environments.md#embed-code). Puede editar, reemplazar o agregar más códigos incrustados desde Experience Platform Debugger. Si inicia sesión, puede seleccionar una propiedad alternativa mediante los menús desplegables.
 
 ## [!UICONTROL Experience Cloud ID] {#section-a96c32f8e63a4991abb296f6e8ea01cf}
 
-Utilice la variable [!UICONTROL ID de Experience Cloud] ficha para ver [Servicio de ID de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es) solicitudes.
+Utilice el [!UICONTROL ID de Experience Cloud] pestaña para ver [Servicio de ID de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es) solicitudes.
 
 ## [!UICONTROL Dynamic Tag Management]
 
-Si ha implementado anteriormente la versión antigua de las etiquetas en Experience Platform (denominada [!DNL Dynamic Tag Management (DTM)]), puede utilizar esta pestaña para configurar los códigos incrustados y ver los detalles de las solicitudes de red.
+Si ya ha implementado la versión antigua de las etiquetas en Experience Platform (denominada [!DNL Dynamic Tag Management (DTM)]), puede utilizar esta pestaña para configurar los códigos incrustados y ver los detalles de la solicitud de red.

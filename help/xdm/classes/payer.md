@@ -1,23 +1,24 @@
 ---
 title: Clase de pagador
-description: Este documento proporciona información general sobre la clase Payer en el Modelo de datos de experiencia (XDM).
-source-git-commit: 3937963ceee8502b0669a3f007fd38ecf2824e9b
+description: Este documento proporciona información general sobre la clase de reproductor en el modelo de datos de experiencia (XDM).
+exl-id: 8d3e0a6d-41eb-4ffe-81dd-c7b7d532a531
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 5%
+source-wordcount: '133'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Pagador] class
+# [!UICONTROL Pagador] clase
 
-En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Pagador] captura el conjunto mínimo de propiedades que definen una entidad empresarial pagadora que recopila datos pertenecientes a compañías de seguros (como seguro de enfermedad).
+En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Pagador] La clase registra el conjunto mínimo de propiedades que definen una entidad comercial pagadora que recopila datos pertenecientes a compañías de seguros (como el seguro de enfermedad).
 
-![Estructura de la clase](../images/classes/payer.png)
+![Estructura de clase](../images/classes/payer.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `_id` | [!UICONTROL Cadena] | Identificador de cadena único generado por el sistema para el registro. Este campo se utiliza para rastrear la exclusividad de un registro individual, evitar la duplicación de datos y buscar ese registro en servicios descendentes.<br><br>Dado que este campo se genera a partir del sistema, no se proporciona un valor explícito durante el consumo de datos. Sin embargo, puede optar por proporcionar sus propios valores de ID únicos si lo desea. |
-| `payerId` | [!UICONTROL Cadena] | Identificador único del ordenante. |
-| `payerName` | [!UICONTROL Cadena] | Nombre del ordenante. |
+| `_id` | [!UICONTROL Cadena] | Un identificador de cadena único generado por el sistema para el registro. Este campo se utiliza para realizar un seguimiento de la exclusividad de un registro individual, evitar la duplicación de datos y buscar ese registro en servicios descendentes.<br><br>Dado que este campo es generado por el sistema, no se le proporciona un valor explícito durante la ingesta de datos. Sin embargo, puede optar por proporcionar sus propios valores de ID únicos si lo desea. |
+| `payerId` | [!UICONTROL Cadena] | Un identificador único del pagador. |
+| `payerName` | [!UICONTROL Cadena] | El nombre del pagador. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

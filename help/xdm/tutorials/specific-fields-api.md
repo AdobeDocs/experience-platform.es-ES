@@ -1,6 +1,6 @@
 ---
-title: Añadir campos específicos a un esquema mediante la API del Registro de esquemas
-description: Aprenda a añadir campos individuales de grupos de campos preexistentes a un esquema del Modelo de datos de experiencia (XDM) mediante la API del Registro de esquemas.
+title: Agregar campos específicos a un esquema mediante la API de Registro de esquemas
+description: Aprenda a añadir campos individuales de grupos de campos preexistentes a un esquema del Modelo de datos de experiencia (XDM) mediante la API de Registro de esquemas.
 source-git-commit: 4bcd949e901c11bb933000f7ae76f17134dda496
 workflow-type: tm+mt
 source-wordcount: '629'
@@ -8,23 +8,23 @@ ht-degree: 2%
 
 ---
 
-# Añadir campos específicos a un esquema mediante la API del Registro de esquemas
+# Añadir campos específicos a un esquema mediante la API de Registro de esquemas
 
-Los esquemas del Modelo de datos de experiencia (XDM) están compuestos por una clase base, con campos adicionales incluidos mediante el uso de grupos de campos estándar definidos por grupos de campos personalizados y de Adobe definidos por su organización.
+Los esquemas XDM (Experience Data Model) están compuestos por una clase base, con campos adicionales incluidos mediante el uso de grupos de campos estándar definidos por grupos de campos personalizados y de Adobe definidos por su organización.
 
-Al crear un esquema, es posible que desee utilizar algunos campos de un grupo de campos dado y excluir otros del mismo grupo que no necesite. Este tutorial muestra cómo añadir campos individuales de un grupo de campos a un esquema mediante la API del Registro de esquemas.
+Al crear un esquema, es posible que desee utilizar algunos campos de un grupo de campos determinado excluyendo otros del mismo grupo que no necesite. Este tutorial muestra cómo añadir campos individuales de un grupo de campos a un esquema mediante la API de Registro de esquemas.
 
 >[!NOTE]
 >
->Para obtener información sobre cómo añadir y quitar campos de esquema individuales en la interfaz de usuario de Adobe Experience Platform, consulte la guía de [flujos de trabajo basados en el campo](../ui/field-based-workflows.md) (actualmente en versión beta).
+>Para obtener información sobre cómo añadir y quitar campos de esquema individuales en la interfaz de usuario de Adobe Experience Platform, consulte la guía de [flujos de trabajo basados en el campo](../ui/field-based-workflows.md) (actualmente en fase beta).
 
 ## Requisitos previos
 
-Este tutorial implica realizar llamadas a la función [API del Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de empezar, revise la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesita conocer para realizar correctamente llamadas a la API de , incluido su `{TENANT_ID}`, el concepto de contenedores y los encabezados necesarios para realizar solicitudes.
+Este tutorial implica realizar llamadas a [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de empezar, revise las [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluida su `{TENANT_ID}`, el concepto de contenedores y los encabezados necesarios para realizar solicitudes.
 
-## Información sobre `meta:refProperty` field
+## Explicación de la `meta:refProperty` campo
 
-Para cualquier esquema determinado, los grupos de clases y campos que componen su estructura se encuentran bajo su `allOf` matriz. Cada componente se representa como un objeto que contiene un `$ref` propiedad que hace referencia al URI del componente `$id`.
+Para cualquier esquema determinado, se hace referencia a la clase y a los grupos de campos que componen su estructura en su `allOf` matriz. Cada componente se representa como un objeto que contiene un `$ref` que hace referencia al URI del componente `$id`.
 
 El siguiente JSON representa un esquema simplificado que utiliza una sola clase (`experienceevent`) y grupo de campos (`experienceevent-all`):
 
@@ -44,13 +44,13 @@ El siguiente JSON representa un esquema simplificado que utiliza una sola clase 
 }
 ```
 
-Para cualquier objeto del `allOf` matriz que hace referencia a un grupo de campos, puede agregar un elemento secundario `meta:refProperty` para especificar los campos del grupo que deben incluirse en el esquema.
+Para cualquier objeto de `allOf` matriz que hace referencia a un grupo de campos, puede agregar un elemento secundario `meta:refProperty` para especificar qué campos del grupo deben incluirse en el esquema.
 
 >[!NOTE]
 >
 >Cada campo se especifica mediante una cadena de puntero JSON, que representa la ruta al campo dentro de su grupo de campos respectivo. La cadena debe comenzar con una barra diagonal (`/`) y no debe incluir ninguno `properties` áreas de nombres. Por ejemplo: `/_experience/campaign/message/id`.
 
-Cuando se incluye como una cadena, `meta:refProperty` puede hacer referencia a un solo campo de un grupo. Se pueden incluir otros campos del mismo grupo utilizando el mismo `$ref` en otro objeto con un `meta:refProperty` valor.
+Cuando se incluye como cadena, `meta:refProperty` puede hacer referencia a un solo campo de un grupo. Se pueden incluir otros campos del mismo grupo utilizando el mismo `$ref` en otro objeto con un valor diferente `meta:refProperty` valor.
 
 ```json
 {
@@ -73,7 +73,7 @@ Cuando se incluye como una cadena, `meta:refProperty` puede hacer referencia a u
 }
 ```
 
-Alternativamente, `meta:refProperty` se puede proporcionar como una matriz, lo que permite especificar varios campos para incluir de un grupo determinado en un único `allOf` elemento de lista:
+Alternativamente, `meta:refProperty` se puede proporcionar como una matriz, lo que permite especificar varios campos que se incluirán de un grupo determinado dentro de un único `allOf` elemento de la lista:
 
 ```json
 {
@@ -96,9 +96,9 @@ Alternativamente, `meta:refProperty` se puede proporcionar como una matriz, lo q
 }
 ```
 
-## Adición de campos mediante una operación de PUT
+## Añadir campos mediante una operación de PUT
 
-Puede utilizar una solicitud de PUT para reescribir todo un esquema y configurar los campos que desea incluir en `allOf`.
+Puede utilizar una solicitud del PUT para reescribir un esquema completo y configurar los campos que desea incluir en `allOf`.
 
 **Formato de API**
 
@@ -108,11 +108,11 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | La variable `meta:altId` o con codificación de URL `$id` del esquema que desea reescribir. |
+| `{SCHEMA_ID}` | El `meta:altId` o con codificación URL `$id` del esquema que desea reescribir. |
 
 **Solicitud**
 
-La siguiente solicitud actualiza los campos específicos incluidos en el grupo de campos en el `allOf` matriz.
+La siguiente solicitud actualiza los campos específicos incluidos en el grupo de campos en `allOf` matriz.
 
 ```shell
 curl -X PUT \
@@ -191,9 +191,9 @@ Una respuesta correcta devuelve los detalles del esquema actualizado.
 >
 >Para obtener información más detallada sobre las solicitudes de PUT para esquemas, consulte la [guía de extremo de esquemas](../api/schemas.md#put).
 
-## Adición de campos mediante una operación de PATCH
+## Añadir campos mediante una operación de PATCH
 
-Puede utilizar una solicitud de PATCH para añadir campos individuales a un esquema sin sobrescribir otros. El Registro de esquemas admite todas las operaciones de parches de JSON estándar, incluidas las `add`, `remove`y `replace`. Para obtener más información sobre el parche JSON, consulte la [Guía de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
+Puede utilizar una solicitud del PATCH para agregar campos individuales a un esquema sin sobrescribir otros. El Registro de esquemas admite todas las operaciones de parches de JSON estándar, incluidas las siguientes `add`, `remove`, y `replace`. Para obtener más información sobre el parche JSON, consulte la [Guía de aspectos básicos de API](../../landing/api-fundamentals.md#json-patch).
 
 **Formato de API**
 
@@ -203,11 +203,11 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | La variable `meta:altId` o con codificación de URL `$id` del esquema que desea reescribir. |
+| `{SCHEMA_ID}` | El `meta:altId` o con codificación URL `$id` del esquema que desea reescribir. |
 
 **Solicitud**
 
-La siguiente solicitud agrega un nuevo objeto al `allOf` matriz, especificando los campos que se van a añadir.
+La siguiente solicitud agrega un nuevo objeto al esquema `allOf` matriz, especificando los campos que se van a agregar.
 
 ```shell
 curl -X PATCH \
@@ -284,6 +284,6 @@ Una respuesta correcta devuelve los detalles del esquema actualizado.
 
 ## Pasos siguientes
 
-Esta guía explica cómo utilizar las llamadas API para añadir campos individuales de un grupo de campos existente a un esquema. Para obtener más información sobre cómo realizar tareas similares basadas en campos en la interfaz de usuario de Platform, consulte la guía de [flujos de trabajo basados en el campo](../ui/field-based-workflows.md).
+En esta guía se explica cómo utilizar las llamadas de API para añadir campos individuales de un grupo de campos existente a un esquema. Para obtener más información sobre cómo realizar tareas similares basadas en campos en la IU de Platform, consulte la guía de [flujos de trabajo basados en el campo](../ui/field-based-workflows.md).
 
-Para obtener más información sobre las capacidades de la API del Registro de esquemas, consulte la [Información general de API](../api/overview.md) para obtener una lista completa de endpoints y procesos.
+Para obtener más información sobre las funcionalidades de la API de Registro de esquemas, consulte la [Resumen de API](../api/overview.md) para obtener una lista completa de los extremos y los procesos.

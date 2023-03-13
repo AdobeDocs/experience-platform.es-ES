@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;inicio;temas populares;preparación de datos;guía de api;conjuntos de asignaciones;
 solution: Experience Platform
-title: Punto final de API de conjuntos de asignaciones
+title: Asignación de conjuntos de extremos de API
 description: Puede utilizar el extremo `/mappingSets` en la API de Adobe Experience Platform para recuperar, crear, actualizar y validar conjuntos de asignaciones mediante programación.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
@@ -11,17 +11,17 @@ ht-degree: 5%
 
 ---
 
-# Punto de conexión de conjuntos de asignaciones
+# Extremo de conjuntos de asignaciones
 
-Los conjuntos de asignaciones se pueden utilizar para definir cómo se asignan los datos de un esquema de origen al de un esquema de destino. Puede usar la variable `/mappingSets` en la API de preparación de datos para recuperar, crear, actualizar y validar conjuntos de asignación mediante programación.
+Los conjuntos de asignaciones se pueden utilizar para definir cómo se asignan los datos de un esquema de origen al de un esquema de destino. Puede usar el complemento `/mappingSets` en la API de preparación de datos para recuperar, crear, actualizar y validar conjuntos de asignaciones mediante programación.
 
-## Conjuntos de asignación de lista
+## Enumerar conjuntos de asignaciones
 
-Puede recuperar una lista de todos los conjuntos de asignaciones para su organización IMS realizando una solicitud de GET al `/mappingSets` punto final.
+Puede recuperar una lista de todos los conjuntos de asignaciones para su organización IMS realizando una solicitud de GET a `/mappingSets` punto final.
 
 **Formato de API**
 
-La variable `/mappingSets` el extremo admite varios parámetros de consulta para ayudar a filtrar los resultados. Aunque la mayoría de estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Sin embargo, debe incluir ambas variables `start` y `limit` como parte de la solicitud. Se pueden incluir varios parámetros separados por el símbolo &quot;et&quot; (`&`).
+El `/mappingSets` el punto de conexión admite varios parámetros de consulta para filtrar los resultados. Aunque la mayoría de estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Sin embargo, debe incluir ambos `start` y `limit` parámetros como parte de la solicitud de. Se pueden incluir varios parámetros separados por el símbolo et (`&`).
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -33,14 +33,14 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{LIMIT}` | (**Requerido**) Especifica el número de conjuntos de asignaciones devueltos. |
-| `{START}` | (**Requerido**) Especifica el desplazamiento de las páginas de los resultados. Para obtener la primera página de resultados, establezca el valor en `start=0`. |
+| `{START}` | (**Requerido**) Especifica el desplazamiento de las páginas de resultados. Para obtener la primera página de resultados, establezca el valor en `start=0`. |
 | `{NAME}` | Filtra los conjuntos de asignaciones por nombre. |
-| `{ORDER_BY}` | Ordena el orden de los resultados. Los únicos campos admitidos son `createdDate` y `updatedDate`. Puede anteponer la propiedad con `+` o `-` para ordenarla en orden ascendente o descendente, respectivamente. |
+| `{ORDER_BY}` | Ordena el orden de los resultados. Los únicos campos admitidos son `createdDate` y `updatedDate`. Puede anteponer la propiedad con `+` o `-` para ordenarlo en orden ascendente o descendente, respectivamente. |
 | `{EXPAND_SCHEMA}` | Un booleano que determina si se devuelve el esquema de salida completo como parte de la respuesta. |
 
 **Solicitud**
 
-La siguiente solicitud recuperará los dos últimos conjuntos de asignación dentro de su organización IMS.
+La siguiente solicitud recuperará los dos últimos conjuntos de asignaciones dentro de su organización IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
@@ -165,7 +165,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## Creación de un conjunto de asignaciones
 
-Puede crear un nuevo conjunto de asignaciones realizando una solicitud de POST al `/mappingSets` punto final.
+Puede crear un nuevo conjunto de asignaciones realizando una solicitud de POST a `/mappingSets` punto final.
 
 **Formato de API**
 
@@ -217,14 +217,14 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | El ID del esquema XDM al que hace referencia. |
-| `outputSchema.schemaRef.contentType` | Determina el formato de respuesta del esquema de referencia. Puede encontrar más información sobre este campo en la sección [Guía para desarrolladores de Schema Registry](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | El tipo de origen describe cómo se extraerá el valor del origen al destino. El tipo de origen admite dos valores posibles: <ul><li>`ATTRIBUTE`: El tipo de origen `ATTRIBUTE` se utiliza cuando el atributo de entrada procede de un esquema de origen.</li><li>`EXPRESSION`: El tipo de origen `EXPRESSION` se utiliza cuando la asignación se completa con un campo calculado.</li></ul> **ADVERTENCIA**: Si se configuran incorrectamente los valores de tipo de origen, los conjuntos de asignaciones no se pueden editar. |
-| `mappings.source` | Ubicación desde la que desea asignar los datos. |
-| `mappings.destination` | Ubicación a la que desea asignar los datos. |
+| `outputSchema.schemaRef.contentType` | Determina el formato de respuesta del esquema referenciado. Encontrará más información sobre este campo en la [Guía para desarrolladores de Schema Registry](../../xdm/api/schemas.md#lookup). |
+| `mappings.sourceType` | El tipo de origen describe cómo se extraerá el valor del origen al destino. El tipo de origen admite dos valores posibles: <ul><li>`ATTRIBUTE`: el tipo de origen `ATTRIBUTE` se utiliza cuando el atributo de entrada es de un esquema de origen.</li><li>`EXPRESSION`: el tipo de origen `EXPRESSION` se utiliza cuando la asignación se completa mediante un campo calculado.</li></ul> **ADVERTENCIA**: La configuración incorrecta de los valores de tipo de origen puede hacer que los conjuntos de asignación no se puedan editar. |
+| `mappings.source` | La ubicación desde la que desea asignar los datos. |
+| `mappings.destination` | La ubicación a la que desea asignar los datos. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con información sobre el conjunto de asignación recién creado.
+Una respuesta correcta devuelve el estado HTTP 200 con información sobre el conjunto de asignaciones recién creado.
 
 ```json
 {
@@ -239,7 +239,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el con
 
 ## Validar asignaciones
 
-Puede validar que las asignaciones funcionen correctamente realizando una solicitud de POST al `/mappingSets/validate` punto final.
+Puede validar que las asignaciones funcionan correctamente realizando una solicitud de POST a `/mappingSets/validate` punto final.
 
 **Formato de API**
 
@@ -313,7 +313,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información de validaci�
 
 ## Vista previa de datos para asignaciones
 
-Puede obtener una vista previa de a qué datos se asignarán realizando una solicitud de POST al `/mappingSets/preview` punto final.
+Puede obtener una vista previa de a qué se asignarán los datos realizando una solicitud de POST a `/mappingSets/preview` punto final.
 
 **Formato de API**
 
@@ -390,9 +390,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con una vista previa de los d
 ]
 ```
 
-## Buscar un conjunto de asignaciones
+## Búsqueda de un conjunto de asignaciones
 
-Puede recuperar un conjunto de asignaciones específico proporcionando su ID en la ruta de una solicitud de GET al `/mappingSets` punto final. Este extremo también admite varios parámetros de consulta para ayudarle a recuperar detalles sobre la versión del conjunto de asignaciones especificado.
+Puede recuperar un conjunto de asignaciones específico proporcionando su ID en la ruta de una petición GET a `/mappingSets` punto final. Este extremo también admite varios parámetros de consulta para ayudarle a recuperar detalles acerca de la versión del conjunto de asignaciones especificada.
 
 **Formato de API**
 
@@ -404,9 +404,9 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | (**Requerido**) El ID del conjunto de asignación que desea recuperar. |
-| `{EXPAND_SCHEMA}` | Un parámetro de consulta booleano que determina si se devolverá el esquema de salida como parte de la respuesta. |
-| `{VERSION}` | Un parámetro de consulta entero que determina qué versión del conjunto de asignación se va a recuperar. |
+| `{MAPPING_SET_ID}` | (**Requerido**) El ID del conjunto de asignaciones que desea recuperar. |
+| `{EXPAND_SCHEMA}` | Un parámetro de consulta booleano que determina si se devuelve el esquema de salida como parte de la respuesta. |
+| `{VERSION}` | Parámetro de consulta entero que determina qué versión del conjunto de asignaciones se va a recuperar. |
 
 **Solicitud**
 
@@ -422,7 +422,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre el conjunto de asignación que desea recuperar.
+Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre el conjunto de asignaciones que desea recuperar.
 
 >[!NOTE]
 >
@@ -581,9 +581,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 }
 ```
 
-## Actualizar un conjunto de asignaciones
+## Actualización de un conjunto de asignaciones
 
-Puede actualizar un conjunto de asignaciones proporcionando su ID en la ruta de un `PUT` solicitud al `mappingSets` punto final.
+Puede actualizar un conjunto de asignaciones proporcionando su ID en la ruta de una `PUT` solicitud a la `mappingSets` punto final.
 
 **Formato de API**
 
@@ -808,7 +808,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 }
 ```
 
-## Lista de asignaciones para un conjunto de asignaciones
+## Enumeración de las asignaciones para un conjunto de asignaciones
 
 Puede ver todas las asignaciones que pertenecen a un conjunto de asignaciones específico proporcionando su ID en la ruta de una solicitud de GET al siguiente extremo.
 
@@ -911,7 +911,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 ]
 ```
 
-## Buscar una asignación dentro de un conjunto de asignaciones
+## Búsqueda de una asignación dentro de un conjunto de asignaciones
 
 Puede recuperar una asignación específica para un conjunto de asignaciones proporcionando sus ID en la ruta de una solicitud de GET al siguiente extremo.
 
@@ -923,7 +923,7 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | El ID del conjunto de asignaciones del que desea buscar información de asignación. |
+| `{MAPPING_SET_ID}` | El ID del conjunto de asignaciones sobre el que desea buscar información de asignación. |
 | `{MAPPING_ID}` | El ID de la asignación que desea buscar. |
 
 **Solicitud**

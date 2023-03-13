@@ -1,6 +1,6 @@
 ---
-title: Creación de una conexión base SFTP mediante la API de servicio de flujo
-description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos) mediante la API de servicio de flujo.
+title: Creación de una conexión base SFTP mediante la API de Flow Service
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos) mediante la API de Flow Service.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
 workflow-type: tm+mt
@@ -9,56 +9,56 @@ ht-degree: 1%
 
 ---
 
-# Cree una conexión base SFTP usando la variable [!DNL Flow Service] API
+# Cree una conexión base SFTP con el [!DNL Flow Service] API
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial le guía por los pasos para crear una conexión base para [!DNL SFTP] (Protocolo seguro de transferencia de archivos) utilizando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL SFTP] (Protocolo seguro de transferencia de archivos) utilizando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 
-Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes, al mismo tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 >[!IMPORTANT]
 >
->Se recomienda evitar nuevas líneas o retornos de carro al introducir objetos JSON con un [!DNL SFTP] conexión de origen. Para solucionar la limitación, utilice un único objeto JSON por línea y utilice líneas múltiples para los archivos posteriores.
+>Se recomienda evitar líneas nuevas o retornos de carro al ingerir objetos JSON con un [!DNL SFTP] conexión de origen. Para solucionar la limitación, utilice un solo objeto JSON por línea y utilice varias líneas para los archivos siguientes.
 
-Las secciones siguientes proporcionan información adicional que debe conocer para conectarse correctamente a un [!DNL SFTP] servidor que utiliza la variable [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un [!DNL SFTP] servidor que utiliza el [!DNL Flow Service] API.
 
-### Recopilar las credenciales necesarias
+### Recopilar credenciales necesarias
 
-Para [!DNL Flow Service] para conectarse a [!DNL SFTP], debe proporcionar valores para las siguientes propiedades de conexión:
+Para que [!DNL Flow Service] para conectarse a [!DNL SFTP], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
 | `host` | El nombre o la dirección IP asociados con su [!DNL SFTP] servidor. |
-| `port` | Puerto del servidor SFTP al que se está conectando. Si no se proporciona, el valor predeterminado es `22`. |
+| `port` | El puerto del servidor SFTP al que se está conectando. Si no se proporciona, el valor predeterminado es `22`. |
 | `username` | El nombre de usuario con acceso a su [!DNL SFTP] servidor. |
 | `password` | La contraseña de su [!DNL SFTP] servidor. |
-| `privateKeyContent` | El contenido de clave privada SSH codificada Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
-| `passPhrase` | La frase de contraseña o contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si la variable `privateKeyContent` está protegido con contraseña, este parámetro debe utilizarse con la frase de contraseña del contenido de clave privada como valor. |
-| `maxConcurrentConnections` | Este parámetro le permite especificar un límite máximo para el número de conexiones simultáneas que Platform creará al conectarse al servidor SFTP. Debe configurar este valor para que sea menor que el límite establecido por SFTP. **Nota**: Cuando esta configuración está habilitada para una cuenta SFTP existente, solo afecta a flujos de datos futuros y no a flujos de datos existentes. |
-| `folderPath` | Ruta a la carpeta a la que desea proporcionar acceso. [!DNL SFTP] , puede proporcionar la ruta de la carpeta para especificar el acceso del usuario a la subcarpeta que desee. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El ID de especificación de conexión para [!DNL SFTP] es: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+| `privateKeyContent` | El contenido de clave privada SSH codificado en Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
+| `passPhrase` | La contraseña o frase de paso para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de paso. Si la variable `privateKeyContent` Si está protegido con contraseña, este parámetro debe utilizarse con la frase de contraseña del contenido de la clave privada como valor. |
+| `maxConcurrentConnections` | Este parámetro le permite especificar un límite máximo para el número de conexiones simultáneas que Platform creará al conectarse al servidor SFTP. Debe configurar este valor para que sea inferior al límite establecido por SFTP. **Nota**: Cuando esta configuración está habilitada para una cuenta SFTP existente, solo afectará a flujos de datos futuros y no a flujos de datos existentes. |
+| `folderPath` | La ruta a la carpeta a la que desea proporcionar acceso. [!DNL SFTP] origen, puede proporcionar la ruta de la carpeta para especificar el acceso del usuario a la subcarpeta que elija. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL SFTP] es: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
-### Uso de las API de plataforma
+### Uso de API de Platform
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Creación de una conexión base
+## Crear una conexión base
 
-Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-La variable [!DNL SFTP] source admite autenticación básica y autenticación mediante clave pública SSH. Durante este paso, también puede designar la ruta a la subcarpeta a la que desea proporcionar acceso.
+El [!DNL SFTP] source admite la autenticación básica y la autenticación mediante clave pública SSH. Durante este paso, también puede designar la ruta a la subcarpeta a la que desea proporcionar acceso.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar su [!DNL SFTP] credenciales de autenticación como parte de los parámetros de solicitud.
+Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL SFTP] credenciales de autenticación como parte de los parámetros de solicitud.
 
 >[!IMPORTANT]
 >
->La variable [!DNL SFTP] El conector admite una clave OpenSSH de tipo RSA o DSA. Asegúrese de que el contenido del archivo clave comience por `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` y termina con `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si el archivo de clave privada es un archivo en formato PPK, utilice la herramienta PuTTY para convertir del formato PPK al formato OpenSSH.
+>El [!DNL SFTP] El conector admite una clave OpenSSH de tipo RSA o DSA. Asegúrese de que el contenido del archivo de claves comience por `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` y termina por `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si el archivo de clave privada es un archivo en formato PPK, utilice la herramienta PuTTY para convertir de formato PPK a formato OpenSSH.
 
 **Formato de API**
 
@@ -106,12 +106,12 @@ curl -X POST \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `auth.params.host` | El nombre de host del servidor SFTP. |
-| `auth.params.port` | Puerto del servidor SFTP. El valor predeterminado de este valor entero es 22. |
-| `auth.params.username` | El nombre de usuario asociado al servidor SFTP. |
-| `auth.params.password` | La contraseña asociada al servidor SFTP. |
+| `auth.params.port` | El puerto del servidor SFTP. El valor predeterminado de este entero es 22. |
+| `auth.params.username` | El nombre de usuario asociado con el servidor SFTP. |
+| `auth.params.password` | La contraseña asociada a su servidor SFTP. |
 | `auth.params.maxConcurrentConnections` | Número máximo de conexiones simultáneas especificadas al conectar Platform a SFTP. Cuando está habilitado, este valor debe establecerse en al menos 1. |
-| `auth.params.folderPath` | Ruta a la carpeta a la que desea proporcionar acceso. |
-| `connectionSpec.id` | El ID de especificación de conexión del servidor SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `auth.params.folderPath` | La ruta a la carpeta a la que desea proporcionar acceso. |
+| `connectionSpec.id` | ID de especificación de conexión del servidor SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!TAB Autenticación de clave pública SSH]
 
@@ -148,13 +148,13 @@ curl -X POST \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `auth.params.host` | El nombre de host de su [!DNL SFTP] servidor. |
-| `auth.params.port` | Puerto del servidor SFTP. El valor predeterminado de este valor entero es 22. |
+| `auth.params.port` | El puerto del servidor SFTP. El valor predeterminado de este entero es 22. |
 | `auth.params.username` | El nombre de usuario asociado con su [!DNL SFTP] servidor. |
-| `auth.params.privateKeyContent` | El contenido de clave privada SSH codificada Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
-| `auth.params.passPhrase` | La frase de contraseña o contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si PrivateKeyContent está protegido por contraseña, este parámetro debe utilizarse con la frase de contraseña de PrivateKeyContent como valor. |
+| `auth.params.privateKeyContent` | El contenido de clave privada SSH codificado en Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
+| `auth.params.passPhrase` | La contraseña o frase de paso para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de paso. Si PrivateKeyContent está protegido con contraseña, este parámetro debe utilizarse con la frase de contraseña de PrivateKeyContent como valor. |
 | `auth.params.maxConcurrentConnections` | Número máximo de conexiones simultáneas especificadas al conectar Platform a SFTP. Cuando está habilitado, este valor debe establecerse en al menos 1. |
-| `auth.params.folderPath` | Ruta a la carpeta a la que desea proporcionar acceso. |
-| `connectionSpec.id` | La variable [!DNL SFTP] ID de especificación de conexión del servidor: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `auth.params.folderPath` | La ruta a la carpeta a la que desea proporcionar acceso. |
+| `connectionSpec.id` | El [!DNL SFTP] Id. de especificación de conexión de servidor: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!ENDTABS]
 
@@ -171,4 +171,4 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión r
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL SFTP] conexión mediante la función [!DNL Flow Service] y han obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión para [explorar las tiendas en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md).
+Al seguir este tutorial, ha creado un [!DNL SFTP] conexión mediante el [!DNL Flow Service] API y han obtenido el valor de ID único de la conexión. Puede usar este ID de conexión para lo siguiente [explore los almacenes en la nube mediante la API de Flow Service](../../explore/cloud-storage.md).

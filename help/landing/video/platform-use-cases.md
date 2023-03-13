@@ -1,6 +1,6 @@
 ---
-title: Casos de uso clave del Experience Platform
-description: 'Este vídeo ofrece información general sobre los cuatro casos de uso clave de Adobe Experience Platform&mdash: plataforma de datos de clientes en tiempo real, inteligencia de recorrido de clientes, experiencia de entrega y canales cruzados y desarrollo de aplicaciones de experiencias de clientes.'
+title: Casos de uso clave de Experience Platform
+description: 'Este vídeo ofrece información general sobre los cuatro casos de uso clave de Adobe Experience Platform: Real-time customer data platform, conocimiento del recorrido del cliente, entrega y experiencia en canales múltiples, y desarrollo de aplicaciones de experiencia del cliente.'
 kt: 4337
 audience: all
 doc-type: video
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 ---
 
-# Casos de uso clave del Experience Platform
+# Casos de uso clave de Experience Platform
 
-Este vídeo ofrece información general sobre cuatro casos de uso clave de Experience Platform:
+Este vídeo proporciona información general sobre cuatro casos de uso clave de Experience Platform:
 
 * Adobe Real-time Customer Data Platform
 * Inteligencia de recorrido del cliente

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;instrucciones preparadas;preparado;sql;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;instrucciones preparadas;preparado;sql;
 solution: Experience Platform
 title: Instrucciones preparadas en el servicio de consultas
 description: En SQL, las instrucciones preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. El servicio de consulta de Adobe Experience Platform admite instrucciones preparadas mediante una consulta parametrizada.
@@ -11,9 +11,9 @@ ht-degree: 11%
 
 ---
 
-# Declaraciones preparadas
+# Instrucciones preparadas
 
-En SQL, las instrucciones preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. Adobe Experience Platform [!DNL Query Service] admite instrucciones preparadas mediante una consulta parametrizada. Esto puede optimizar el rendimiento, ya que ya no es necesario volver a analizar una consulta de forma repetida.
+En SQL, las instrucciones preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. Adobe Experience Platform [!DNL Query Service] admite instrucciones preparadas mediante una consulta parametrizada. Esto puede optimizar el rendimiento, ya que ya no necesita volver a analizar repetidamente una consulta.
 
 ## Uso de instrucciones preparadas
 
@@ -23,9 +23,9 @@ Cuando se utilizan instrucciones preparadas, se admiten las siguientes sintaxis:
 - [EJECUTAR](#execute)
 - [DESASIGNAR](#deallocate)
 
-### Preparar una declaración preparada {#prepare}
+### Preparar una instrucción preparada {#prepare}
 
-Esta consulta SQL guarda la consulta SELECT escrita con el nombre dado como `PLAN_NAME`. Puede utilizar variables como `$1` en lugar de valores reales. Esta declaración preparada se guardará durante la sesión actual. Tenga en cuenta que los nombres de plan son **not** distingue entre mayúsculas y minúsculas.
+Esta consulta SQL guarda la consulta SELECT escrita con el nombre dado como `PLAN_NAME`. Puede utilizar variables, como `$1` en lugar de los valores reales. Esta instrucción preparada se guardará durante la sesión actual. Tenga en cuenta que los nombres de plan son **no** distingue mayúsculas de minúsculas.
 
 #### Formato SQL
 
@@ -33,7 +33,7 @@ Esta consulta SQL guarda la consulta SELECT escrita con el nombre dado como `PLA
 PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 ```
 
-#### SQL de muestra
+#### SQL de ejemplo
 
 ```sql
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
@@ -49,13 +49,13 @@ Esta consulta SQL utiliza la instrucción preparada que se creó anteriormente.
 EXECUTE {PLAN_NAME}('{PARAMETERS}')
 ```
 
-#### SQL de muestra
+#### SQL de ejemplo
 
 ```sql
 EXECUTE test('canada', 'vancouver');
 ```
 
-### Desasignar una declaración preparada {#deallocate}
+### Anular la asignación de una instrucción preparada {#deallocate}
 
 Esta consulta SQL se utiliza para eliminar la instrucción preparada con nombre.
 
@@ -65,15 +65,15 @@ Esta consulta SQL se utiliza para eliminar la instrucción preparada con nombre.
 DEALLOCATE {PLAN_NAME}
 ```
 
-#### SQL de muestra
+#### SQL de ejemplo
 
 ```sql
 DEALLOCATE test;
 ```
 
-## Flujo de ejemplo utilizando instrucciones preparadas
+## Flujo de ejemplo con instrucciones preparadas
 
-Inicialmente, puede tener una consulta SQL, como la que se muestra a continuación:
+Inicialmente, puede tener una consulta SQL, como la siguiente:
 
 ```sql
 SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
@@ -81,39 +81,39 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 
 La consulta SQL anterior devolverá la siguiente respuesta:
 
-| id | firstname | lastname | cumpleaños | email | city | country |
+| id | firstname | apellido | fecha de nacimiento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10 000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
+| 10 000 | alejandro | Davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
 | 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
+| 10003 | lino | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
-| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10005 | Fernando | ríos | 2002-07-30 | example6@example.com | Santiago | Chile |
 
-Esta consulta SQL se puede parametrizar utilizando la siguiente instrucción preparada:
+Esta consulta SQL se puede parametrizar mediante la siguiente instrucción preparada:
 
 ```sql
 PREPARE getIdRange AS SELECT * FROM table WHERE id >= $1 AND id <= $2; 
 ```
 
-Ahora, la instrucción preparada se puede ejecutar utilizando la siguiente llamada:
+Ahora, la instrucción preparada se puede ejecutar utilizando la llamada siguiente:
 
 ```sql
 EXECUTE getIdRange(10000, 10005);
 ```
 
-Cuando se llame a esto, verá exactamente los mismos resultados que antes:
+Cuando se realice esta llamada, verá exactamente los mismos resultados que antes:
 
-| id | firstname | lastname | cumpleaños | email | city | country |
+| id | firstname | apellido | fecha de nacimiento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10 000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
+| 10 000 | alejandro | Davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
 | 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
+| 10003 | lino | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
-| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10005 | Fernando | ríos | 2002-07-30 | example6@example.com | Santiago | Chile |
 
-Una vez que haya terminado de usar la instrucción preparada, puede desasignarla usando la siguiente llamada:
+Una vez que haya terminado de utilizar la instrucción preparada, puede desasignarla mediante la llamada siguiente:
 
 ```sql
 DEALLOCATE getIdRange;

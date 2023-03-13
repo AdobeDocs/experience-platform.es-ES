@@ -21,17 +21,17 @@ Adobe Experience Platform tiene un único catálogo en el que los usuarios puede
 1. **Extensiones privadas**: Se trata de extensiones completas y diseñadas para la producción, pero que fueron desarrolladas por otros usuarios de su empresa y solo están disponibles para los usuarios de su empresa.
 1. **Extensiones de desarrollo**: Estas extensiones están en desarrollo activo y solo están disponibles dentro de su empresa y solo en una propiedad que está específicamente designada como propiedad de desarrollo.
 
-Independientemente de las extensiones del catálogo de productos, las extensiones públicas también tienen listados en la variable [Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec).
+Independientemente de las extensiones del catálogo de productos, las extensiones públicas también tienen listados en [Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec).
 
 Estas listas permiten a los desarrolladores de extensiones publicar descripciones de la funcionalidad, proporcionar vínculos a documentación o asistencia adicional y comercializar extensiones a posibles usuarios que pueden no conocer su empresa o la funcionalidad de su extensión. En este mercado, su extensión tendrá un anuncio público que se podrá consultar sin que el usuario tenga que autenticarse en Platform. Para las extensiones públicas, la creación de esta lista de Exchange es un paso obligatorio.
 
 >[!TIP]
 >
->Cuando se publica la lista de Exchange, se agrega automáticamente un vínculo al contenido de la lista que permite a sus clientes y posibles clientes hacer clic en y `Connect with publisher` para obtener más información sobre sus productos y servicios. Su dirección de correo electrónico de contacto no se muestra, ya que el sistema de Exchange le reenviará estos mensajes.
+>Cuando se publica el anuncio de Exchange, se agrega automáticamente un vínculo al contenido del anuncio que permite a los clientes y clientes potenciales hacer clic en y `Connect with publisher` para obtener más información sobre sus productos y servicios. No se muestra su dirección de correo electrónico de contacto, ya que el sistema de Exchange le reenviará estos mensajes.
 
 Si no tiene una empresa donde cargar y probar su paquete de extensión, debe registrarse en el programa Exchange y comenzar una lista. Esto activa la creación de una cuenta de empresa (este proceso tarda un poco; recibirá un correo electrónico cuando se complete) que puede utilizar para cargar y probar la extensión. De nuevo, los listados de Exchange solo son necesarios para extensiones públicas.
 
-Si ya tiene una cuenta de empresa o si no necesita una lista de Exchange (solo extensiones privadas), puede omitir el resto de este paso y continuar con [carga y prueba de la extensión](./upload-and-test.md).
+Si ya tiene una cuenta de empresa o si no necesita un listado de Exchange (solo extensiones privadas), puede omitir el resto de este paso y continuar a [carga y prueba de la extensión](./upload-and-test.md).
 
 ## Crear un anuncio
 
@@ -43,14 +43,14 @@ Si ya tiene una cuenta de empresa o si no necesita una lista de Exchange (solo e
 
 1. Inicie sesión en el [sitio de socios de Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud). Cuando haya iniciado sesión, seleccione el vínculo del **Administrador de aplicaciones** junto a su nombre.
 1. Seleccione la pestaña **Crear nueva aplicación** y, a continuación, seleccione **Crear nueva aplicación** para una solución personalizada, o seleccione una plantilla.
-1. Proporcione la información de su anuncio. Para obtener información detallada sobre el Administrador de aplicaciones, consulte la [article](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). La información de la lista debería aclarar qué hace la extensión y por qué resulta útil. La lista funciona como un espacio de marketing para la aplicación. Promocione la extensión aquí con descripciones claras, vínculos a páginas de destino del sitio, vínculos a documentos de ayuda o direcciones de correo electrónico de asistencia, etc. Aunque el espacio en las vistas de extensión es limitado, la lista de Exchange ofrece la oportunidad de promocionar tanto la extensión como la compañía. A continuación, se presentan sugerencias para mejorar la promoción de la extensión:
-   - **Icono de aplicación** - Asegúrese de que el icono de la lista de Exchange tenga las dimensiones adecuadas, 512 x 512 para png o 1:1 relación de aspecto para jpg.
+1. Proporcione la información de su anuncio. Para obtener información detallada sobre App Manager, consulte la [artículo](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). La información de la lista debería aclarar qué hace la extensión y por qué resulta útil. La lista funciona como un espacio de marketing para la aplicación. Promocione la extensión aquí con descripciones claras, vínculos a páginas de destino del sitio, vínculos a documentos de ayuda o direcciones de correo electrónico de asistencia, etc. Aunque el espacio en las vistas de extensión es limitado, la lista de Exchange ofrece la oportunidad de promocionar tanto la extensión como la compañía. A continuación, se presentan sugerencias para mejorar la promoción de la extensión:
+   - **Icono de aplicación** - Asegúrese de que el icono de la lista de Exchange tenga las dimensiones adecuadas de 512 x 512 para archivos png o una relación de aspecto de 1:1 para jpg.
 
       >[!NOTE]
       >
       >Nota: Este es un formato de archivo diferente del que utilizará en el código de la extensión. La extensión contendrá un archivo svg como [icono](../manifest.md).
 
-   - **Imagen destacada** - Preste atención mediante el uso de una imagen independiente que mostrará su marca y resaltará su aplicación. La imagen destacada es la que se muestra cuando alguien comparte un vínculo a su lista de Exchange o publica sobre ella en medios sociales. Por lo tanto, debe ser una representación modelo de su marca.
+   - **Imagen destacada** - Llama la atención con una imagen que puede ser independiente y mostrará su marca y resaltará su aplicación. La imagen destacada es la que se muestra cuando alguien comparte un vínculo a su lista de Exchange o publica sobre ella en medios sociales. Por lo tanto, debe ser una representación modelo de su marca.
    - **Logotipo del editor de la aplicación**: se trata del logotipo de su empresa. Asegúrese de que el icono tenga las dimensiones adecuadas de 1280 x 720 o de 2560 x 1440 (16:9) en formato png o jpg, respectivamente.
    - **Instrucciones de configuración**: Informe a los clientes sobre cómo configurar la extensión de Adobe Experience Platform. Asegúrese de que comprendan la configuración que deben realizar, así como los pasos siguientes que deben seguir cuando la [vista de la configuración](../configuration.md) aparezca inmediatamente después de instalar la extensión en una propiedad.
    - **Etiquetas**: en la primera página de edición del anuncio, asegúrese de incluir la palabra &quot;Launch&quot; en el campo &quot;Etiquetas personalizadas&quot;. Esto hará que su anuncio aparezca en las búsquedas de etiquetas en Exchange Marketplace:
@@ -74,4 +74,4 @@ Cuando actualice la extensión o solo necesite actualizar el listado de Exchange
 
 ## Vinculación del paquete de extensión al listado
 
-Una vez aprobado el listado y disponible públicamente, le recomendamos que proporcione un enlace al listado público en el campo `exchange_url` del archivo `extension.json` dentro del paquete de extensión.  Esto creará un vínculo &quot;Más información&quot; dentro del catálogo de extensiones de etiqueta para que los usuarios dentro del producto puedan encontrar su lista y su información adicional.
+Una vez aprobado el listado y disponible públicamente, le recomendamos que proporcione un enlace al listado público en el campo `exchange_url` del archivo `extension.json` dentro del paquete de extensión.  Esto creará un vínculo de Más información dentro del catálogo de extensiones de etiquetas para que los usuarios dentro del producto puedan encontrar el anuncio y su información adicional.

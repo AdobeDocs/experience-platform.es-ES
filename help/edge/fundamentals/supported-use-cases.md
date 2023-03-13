@@ -12,6 +12,6 @@ ht-degree: 0%
 
 # Casos de uso admitidos
 
-El SDK web de Adobe Experience Platform admite una amplia variedad de casos de uso personalizados, junto con otras soluciones de Adobe, como Adobe Analytics, Audience Manager, Target y Experience Platform.
+El SDK web de Adobe Experience Platform permite una amplia variedad de casos de uso de personalización, junto con otras soluciones de Adobe, como Adobe Analytics, Audience Manager, Target y Experience Platform.
 
-Para obtener información detallada sobre la implementación de casos de uso compatibles, consulte su documentación correspondiente en la sección [Página de proyecto de casos de uso de SDK web](https://github.com/orgs/adobe/projects/18/views/1).
+Para obtener información detallada sobre la implementación de casos de uso admitidos, consulte su documentación correspondiente en la [Página de proyecto de casos de uso del SDK web](https://github.com/orgs/adobe/projects/18/views/1).

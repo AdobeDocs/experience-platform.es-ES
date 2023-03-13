@@ -1,6 +1,6 @@
 ---
-title: Poner en desuso un campo XDM en la API
-description: Obtenga información sobre cómo eliminar los campos del Modelo de datos de experiencia (XDM) en la API del Registro de esquemas.
+title: Dejar de utilizar un campo XDM en la API
+description: Obtenga información sobre cómo dejar de utilizar los campos de Modelo de datos de experiencia (XDM) en la API de Registro de esquemas.
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
 workflow-type: tm+mt
@@ -9,30 +9,30 @@ ht-degree: 6%
 
 ---
 
-# Poner en desuso un campo XDM en la API
+# Dejar de utilizar un campo XDM en la API
 
-En el Modelo de datos de Experience (XDM), puede eliminar de la memoria intermedia un campo dentro de un esquema o recurso personalizado utilizando la variable [API del Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). El hecho de que un campo quede obsoleto hace que se oculte de las IU posteriores, como la [!UICONTROL Perfiles] espacio de trabajo y Customer Journey Analytics, pero por lo demás es un cambio no irruptivo y no afecta negativamente a los flujos de datos existentes.
+En el Modelo de datos de experiencia (XDM), puede dejar de utilizar un campo de un esquema o recurso personalizado mediante [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Si un campo queda obsoleto, se oculta de las interfaces de usuario descendentes, como las [!UICONTROL Perfiles] espacio de trabajo y Customer Journey Analytics, pero por lo demás es un cambio sin saltos y no afecta negativamente a los flujos de datos existentes.
 
-Este documento explica cómo desactivar campos para distintos recursos XDM. Para ver los pasos sobre la desaprobación de un campo XDM mediante el Editor de esquemas en la interfaz de usuario del Experience Platform, consulte el tutorial sobre [Obsolescencia de un campo XDM en la interfaz de usuario](./field-deprecation-ui.md).
+Este documento explica cómo dejar de utilizar los campos para diferentes recursos XDM. Para ver los pasos sobre cómo dejar de utilizar un campo XDM mediante el Editor de esquemas en la interfaz de usuario de Experience Platform, consulte el tutorial sobre [dejar de utilizar un campo XDM en la IU](./field-deprecation-ui.md).
 
 ## Primeros pasos
 
-Este tutorial requiere realizar llamadas a la API del Registro de esquemas. Revise el [guía para desarrolladores](../api/getting-started.md) para obtener información importante que debe conocer para realizar estas llamadas de API. Esto incluye el `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al `Accept` y sus posibles valores).
+Este tutorial requiere realizar llamadas a la API de Registro de esquemas. Consulte la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesita conocer para realizar estas llamadas a la API. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados necesarios para realizar solicitudes (con especial atención a la variable `Accept` y sus posibles valores).
 
-## Poner en desuso un campo personalizado {#custom}
+## Dejar obsoleto un campo personalizado {#custom}
 
-Para eliminar un campo de una clase, un grupo de campos o un tipo de datos personalizados, actualice el recurso personalizado mediante una solicitud del PUT o del PATCH y añada el atributo `meta:status: deprecated` al campo en cuestión.
+Para dejar de utilizar un campo de una clase, grupo de campos o tipo de datos personalizado, actualice el recurso personalizado mediante una solicitud de PUT o PATCH y agregue el atributo `meta:status: deprecated` al campo en cuestión.
 
 >[!NOTE]
 >
 >Para obtener información general sobre la actualización de recursos personalizados en XDM, consulte la siguiente documentación:
 >
->* [Actualizar una clase](../api/classes.md#patch)
->* [Actualizar un grupo de campos](../api/field-groups.md#patch)
->* [Actualizar un tipo de datos](../api/data-types.md#patch)
+>* [Actualización de una clase](../api/classes.md#patch)
+>* [Actualización de un grupo de campos](../api/field-groups.md#patch)
+>* [Actualización de un tipo de datos](../api/data-types.md#patch)
 
 
-La llamada de API de ejemplo que se muestra a continuación desaprueba un campo de un tipo de datos personalizado.
+La llamada de API de ejemplo siguiente anula la compatibilidad de un campo en un tipo de datos personalizado.
 
 **Formato de API**
 
@@ -42,7 +42,7 @@ PATCH /tenant/datatypes/{DATA_TYPE_ID}
 
 **Solicitud**
 
-La siguiente solicitud desaprueba el `expansionArea` campo para un tipo de datos que describe una propiedad inmobiliaria.
+La siguiente solicitud anula el uso de `expansionArea` para un tipo de datos que describe una propiedad inmobiliaria.
 
 ```shell
 curl -X PATCH \
@@ -163,13 +163,13 @@ Una respuesta correcta devuelve los detalles de actualización del recurso perso
 }
 ```
 
-## Poner en desuso un campo estándar en un esquema {#standard}
+## Dejar obsoleto un campo estándar en un esquema {#standard}
 
-Los campos de clases estándar, grupos de campos y tipos de datos no se pueden retirar directamente. En su lugar, puede eliminar su uso en los esquemas individuales que emplean estos recursos estándar utilizando un descriptor.
+Los campos de clases estándar, grupos de campos y tipos de datos no pueden quedar directamente obsoletos. En su lugar, puede descontinuar su uso en los esquemas individuales que emplean estos recursos estándar mediante un descriptor.
 
-### Creación de un descriptor de desaprobación de campo {#create-descriptor}
+### Creación de un descriptor de obsolescencia de campo {#create-descriptor}
 
-Para crear un descriptor para los campos de esquema que desea eliminar, realice una solicitud de POST al `/tenant/descriptors` punto final.
+Para crear un descriptor para los campos de esquema que desea dejar de utilizar, realice una solicitud de POST a `/tenant/descriptors` punto final.
 
 **Formato de API**
 
@@ -197,9 +197,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `@type` | Tipo de descriptor. Para un descriptor de desaprobación de campos, este valor debe establecerse en `xdm:descriptorDeprecated`. |
+| `@type` | El tipo de descriptor. Para un descriptor de obsolescencia de campo, este valor debe configurarse como `xdm:descriptorDeprecated`. |
 | `xdm:sourceSchema` | El URI `$id` del esquema al que está aplicando el descriptor. |
-| `xdm:sourceVersion` | Versión del esquema al que está aplicando el descriptor. Debe configurarse como `1`. |
+| `xdm:sourceVersion` | La versión del esquema al que está aplicando el descriptor. Debe configurarse como `1`. |
 | `xdm:sourceProperty` | Ruta a la propiedad dentro del esquema al que está aplicando el descriptor. Si desea aplicar el descriptor a varias propiedades, puede proporcionar una lista de rutas en forma de matriz (por ejemplo, `["/firstName", "/lastName"]`). |
 
 **Respuesta**
@@ -219,13 +219,13 @@ curl -X POST \
 }
 ```
 
-### Comprobar el campo obsoleto {#verify-deprecation}
+### Compruebe el campo obsoleto {#verify-deprecation}
 
-Una vez aplicado el descriptor, puede verificar si el campo ha quedado obsoleto buscando el esquema en cuestión mientras utiliza el `Accept` encabezado.
+Una vez aplicado el descriptor, puede verificar si el campo ha quedado obsoleto buscando el esquema en cuestión mientras utiliza el adecuado `Accept` encabezado.
 
 >[!NOTE]
 >
->Actualmente no se admite la visualización de campos obsoletos cuando se enumeran esquemas.
+>Actualmente no se admite mostrar los campos obsoletos cuando se enumeran esquemas.
 
 **Formato de API**
 
@@ -235,7 +235,7 @@ GET /tenant/schemas
 
 **Solicitud**
 
-Para incluir información sobre campos obsoletos en la respuesta de API, debe establecer la variable `Accept` Encabezado a `application/vnd.adobe.xed-deprecatefield+json; version=1`.
+Para incluir información sobre campos obsoletos en la respuesta de la API, debe establecer la variable `Accept` encabezado a `application/vnd.adobe.xed-deprecatefield+json; version=1`.
 
 ```shell
 curl -X GET \
@@ -266,4 +266,4 @@ Una respuesta correcta devuelve los detalles del esquema, con el campo obsoleto 
 
 ## Pasos siguientes
 
-Este documento abarcaba cómo eliminar los campos XDM mediante la API del Registro de esquemas. Para obtener más información sobre la configuración de campos para los recursos personalizados, consulte la guía de [definición de campos XDM en la API](./custom-fields-api.md). Para obtener más información sobre la administración de descriptores, consulte la [guía de extremo de descriptores](../api/descriptors.md).
+En este documento se explica cómo dejar de utilizar los campos XDM mediante la API de Registro de esquemas. Para obtener más información sobre la configuración de campos para recursos personalizados, consulte la guía de [definición de campos XDM en la API](./custom-fields-api.md). Para obtener más información sobre la administración de descriptores, consulte la [guía de extremo de descriptores](../api/descriptors.md).

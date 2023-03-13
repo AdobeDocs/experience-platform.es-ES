@@ -1,23 +1,22 @@
 ---
 title: Envío de datos a Adobe Analytics mediante el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo enviar datos a Adobe Analytics mediante el SDK web de Adobe Experience Platform.
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;vistas de página;seguimiento de vínculos;vínculos;seguimiento de vínculos;clickCollection;colección de clics;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;interacción web;vistas de página;seguimiento de vínculos;vínculos de seguimiento;clickCollection;colección de clics;
+exl-id: cec4a9eb-2079-4386-88da-9b995e0673e6
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
-
 # Envío de datos a Adobe Analytics
 
-Mientras que en el pasado había diferentes funciones para distinguir entre una vista de página y un vínculo (por ejemplo, `s.t(), s.tl()`), en el SDK web sólo hay el comando `sendEvent`. Los datos que envía con un evento determinan si deben ser una vista de página o un vínculo. [Obtenga más información sobre los vínculos](../track-links.md) de seguimiento.
+Mientras que en el pasado existían diferentes funciones para distinguir entre una vista de página y un vínculo (por ejemplo, `s.t(), s.tl()`), en el SDK web solo está el `sendEvent` comando. Los datos que envía con un evento determinan si debe ser una vista de página o un vínculo. [Más información sobre los vínculos de seguimiento](../track-links.md).
 
 ## Envío de una vista de página
 
-Puede especificar una vista de página estableciendo la variable `web.webPageDetails.pageViews.value=1`.
+Puede especificar una vista de página configurando la variable `web.webPageDetails.pageViews.value=1` variable.
 
 ```javascript
 alloy("sendEvent", {
@@ -33,4 +32,4 @@ alloy("sendEvent", {
 });
 ```
 
-Aunque Analytics registra técnicamente una vista de página aunque esta variable no esté configurada, se recomienda configurar esta variable siempre que se desee registrar una vista de página para que sea explícita en los datos y para futuras pruebas en la implementación.
+Aunque técnicamente Analytics registra una vista de página aunque no se haya configurado esta variable, se recomienda configurarla siempre que desee registrar una vista de página para que sea explícita en los datos y para futuras pruebas de la implementación.

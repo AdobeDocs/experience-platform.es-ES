@@ -1,6 +1,6 @@
 ---
-title: Identificación de visitantes mediante FPID
-description: Aprenda a identificar de forma consistente a los visitantes a través de la API del servidor, utilizando FPID
+title: Identificación de visitante mediante FPID
+description: Aprenda a identificar visitantes de forma coherente mediante la API de servidor mediante el FPID
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: red perimetral;puerta de enlace;api;visitante;identificación;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 ---
 
-# Identificación de visitantes mediante FPID
+# Identificación de visitante mediante FPID
 
-[!DNL First-party IDs] (`FPIDs`) son ID de dispositivo generados, administrados y almacenados por los clientes. Esto proporciona a los clientes control sobre la identificación de dispositivos de usuario. Enviando `FPIDs`, la red perimetral no genera una red completamente nueva `ECID` para una solicitud que no contenga una.
+[!DNL First-party IDs] (`FPIDs`) son ID de dispositivo generados, administrados y almacenados por los clientes. Esto proporciona a los clientes control sobre la identificación de dispositivos de usuario. Mediante envío `FPIDs`, la red perimetral no genera una nueva `ECID` para una solicitud que no contiene uno.
 
-La variable `FPID` se puede incluir en el cuerpo de la solicitud de API como parte del `identityMap` o se puede enviar como una cookie.
+El `FPID` se puede incluir en el cuerpo de la solicitud de API como parte de `identityMap` o se puede enviar como una cookie.
 
-Un `FPID` se puede traducir determinísticamente en un `ECID` por la red perimetral, así que `FPID` las identidades son totalmente compatibles con las soluciones de Experience Cloud. Obtención de un `ECID` de un `FPID` siempre arroja el mismo resultado, por lo que los usuarios tendrán una experiencia coherente.
+Un `FPID` puede traducirse de forma determinista en un `ECID` por Edge Network, por lo que `FPID` Las identidades son totalmente compatibles con las soluciones de Experience Cloud. Obtención de un `ECID` de un específico `FPID` siempre produce el mismo resultado, por lo que los usuarios tendrán una experiencia coherente.
 
-La variable `ECID` obtenido de esta forma se puede recuperar mediante un `identity.fetch` consulta:
+El `ECID` obtenido de esta forma se puede recuperar mediante una `identity.fetch` consulta:
 
 ```json
 {
@@ -33,15 +33,15 @@ La variable `ECID` obtenido de esta forma se puede recuperar mediante un `identi
 }
 ```
 
-Para solicitudes que contienen un `FPID` y `ECID`, el `ECID` ya presente en la solicitud tendrá prioridad sobre el que se podría generar a partir de la variable `FPID`. En otras palabras, la red perimetral utiliza la variable `ECID` ya se han proporcionado y `FPID` se ignora. Un nuevo `ECID` solo se genera cuando `FPID` se proporciona por su cuenta.
+Para solicitudes que contienen un `FPID` y un `ECID`, el `ECID` ya presente en la solicitud tendrá prioridad sobre la que se podría generar a partir de `FPID`. En otras palabras, la red perimetral utiliza el `ECID` ya se ha proporcionado y el `FPID` se ignora. Un nuevo `ECID` solo se genera cuando un `FPID` se proporciona por sí solo.
 
-En términos de ID de dispositivo, la variable `server` los conjuntos de datos deben utilizar `FPID` como ID de dispositivo. Otras identidades (p. ej. `EMAIL`) también se puede proporcionar dentro del cuerpo de la solicitud, pero la red perimetral requiere que se proporcione explícitamente una identidad principal. La identidad principal es la identidad base en la que se almacenan los datos de perfil.
+En términos de ID de dispositivo, la variable `server` las secuencias de datos deben utilizar `FPID` como ID de dispositivo. Otras identidades (por ejemplo, `EMAIL`) también se puede proporcionar dentro del cuerpo de la solicitud, pero la red perimetral requiere que se proporcione explícitamente una identidad principal. La identidad principal es la identidad base en la que se almacenan los datos de perfil.
 
 >[!NOTE]
 >
->Las solicitudes que no tengan identidad, respectivamente, ni identidad principal establecida explícitamente dentro del cuerpo de la solicitud, fallarán.
+>Las solicitudes que no tengan identidad, ni identidad principal establecida explícitamente en el cuerpo de la solicitud, fallarán.
 
-Lo siguiente `identityMap` el grupo de campos está formado correctamente para un `server` solicitud de flujo de datos:
+Lo siguiente `identityMap` el grupo de campos está correctamente formado para una `server` solicitud de secuencia de datos:
 
 ```json
 {
@@ -63,7 +63,7 @@ Lo siguiente `identityMap` el grupo de campos está formado correctamente para u
 }
 ```
 
-Lo siguiente `identityMap` grupo de campos dará como resultado una respuesta de error cuando se establezca en un `server` solicitud de flujo de datos:
+Lo siguiente `identityMap` grupo de campos generará una respuesta de error cuando se configure en una `server` solicitud de secuencia de datos:
 
 ```json
 {
@@ -84,7 +84,7 @@ Lo siguiente `identityMap` grupo de campos dará como resultado una respuesta de
 }
 ```
 
-La respuesta de error devuelta por la red perimetral en este caso es similar a la siguiente:
+La respuesta de error devuelta por Edge Network en este caso es similar a la siguiente:
 
 ```json
 {
@@ -100,9 +100,9 @@ La respuesta de error devuelta por la red perimetral en este caso es similar a l
 }
 ```
 
-## Identificación de visitante con `FPID`
+## Identificación del visitante con `FPID`
 
-Para identificar a los usuarios mediante `FPID`, asegúrese de que `FPID` se ha enviado antes de realizar cualquier solicitud a la red perimetral. La variable `FPID` se puede pasar en una cookie o como parte del `identityMap` en el cuerpo de la solicitud.
+Para identificar a los usuarios mediante `FPID`, asegúrese de que las variables `FPID` se ha enviado antes de realizar cualquier solicitud a la red perimetral. El `FPID` se puede pasar en una cookie o como parte de `identityMap` en el cuerpo de la solicitud.
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## Solicitar con `FPID` pasó como `identityMap` field
+## Solicitud con `FPID` pasado como `identityMap` campo
 
-El ejemplo siguiente pasa el [!DNL FPID] como `identityMap` parámetro.
+El ejemplo siguiente pasa el [!DNL FPID] como un `identityMap` parámetro.
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"

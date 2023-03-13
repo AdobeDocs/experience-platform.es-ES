@@ -1,10 +1,11 @@
 ---
 title: Ayuda sobre Integridad de los subrecursos (SRI)
 description: Conozca cómo se admite la Integridad de los subrecursos (SRI) en Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '601'
-ht-degree: 78%
+ht-degree: 97%
 
 ---
 
@@ -37,7 +38,7 @@ Como sistema de administración de etiquetas (TMS), las etiquetas de Adobe Exper
 
 Sin embargo, cuando cambia el contenido de la secuencia de comandos, también cambia el hash criptográfico de dicho contenido. Por lo tanto, la única manera de hacer que la SRI funcione con un sistema de administración de etiquetas es actualizar el código incrustado al mismo tiempo que se publica una nueva compilación. Para muchos, esto es contrario al objetivo principal de usar un sistema de administración de etiquetas.
 
-La siguiente mejor opción de seguridad para las etiquetas es implementar una Política de seguridad de contenido. Para obtener más información, consulte la guía sobre [CSPs and tags](./content-security-policy.md).
+La siguiente mejor opción de seguridad para las etiquetas es implementar una política de seguridad de contenido. Para obtener más información, consulte la guía de [CSP y etiquetas](./content-security-policy.md).
 
 ## Integración de la SRI en la implementación de la compilación
 
@@ -55,4 +56,4 @@ La automatización del proceso de actualización del código incrustado variará
 
 ## Pasos siguientes
 
-Este documento abarcaba las limitaciones de usar la SRI con etiquetas y los pasos necesarios para integrarla en las implementaciones de la compilación de la biblioteca a pesar de esas limitaciones. Si aún no lo ha hecho, se recomienda que lea la guía de [CSPs and tags](./content-security-policy.md) para ver una opción de seguridad alternativa.
+Este documento abarcaba las limitaciones de usar la SRI con etiquetas y los pasos necesarios para integrarla en las implementaciones de la compilación de la biblioteca a pesar de esas limitaciones. Si aún no lo ha hecho, se recomienda que lea la guía de [CSP y etiquetas](./content-security-policy.md) para ver una opción de seguridad alternativa.

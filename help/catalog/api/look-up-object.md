@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;inicio;temas populares;catálogo;búsqueda de objetos;api
 solution: Experience Platform
-title: Buscar un objeto de catálogo
+title: Búsqueda de un objeto de catálogo
 description: Si conoce el identificador único de un objeto Catalog específico, puede realizar una solicitud de GET para ver los detalles de ese objeto.
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
@@ -11,13 +11,13 @@ ht-degree: 3%
 
 ---
 
-# Buscar un objeto Catálogo
+# Búsqueda de un objeto Catalog
 
-Si conoce el identificador único de un [!DNL Catalog] , puede realizar una solicitud de GET para ver los detalles de ese objeto.
+Si conoce el identificador único de un [!DNL Catalog] objeto, puede realizar una solicitud de GET para ver los detalles de ese objeto.
 
 >[!NOTE]
 >
->Cuando se ven objetos específicos, sigue siendo recomendable realizar [filtrar por propiedades](filter-data.md) y devuelven solo las propiedades que le interesen.
+>Cuando se visualizan objetos específicos, sigue siendo recomendable [filtrar por propiedades](filter-data.md) y devuelva únicamente las propiedades que le interesen.
 
 **Formato de API**
 
@@ -29,11 +29,11 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 | Parámetro | Descripción |
 | --- | --- |
 | `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identificador del objeto específico que desea recuperar. |
+| `{OBJECT_ID}` | El identificador del objeto específico que desea recuperar. |
 
 **Solicitud**
 
-La siguiente solicitud recupera un conjunto de datos por su ID y devuelve su valor `name`, `description`, `state`, `tags`y `files` propiedades.
+La siguiente solicitud recupera un conjunto de datos por su ID, devolviendo su `name`, `description`, `state`, `tags`, y `files` propiedades.
 
 ```shell
 curl -X GET \
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el conjunto de datos especificado con solo el `properties` en el cuerpo.
+Una respuesta correcta devuelve el conjunto de datos especificado con solo el solicitado `properties` en el cuerpo.
 
 ```json
 {
@@ -66,4 +66,4 @@ Una respuesta correcta devuelve el conjunto de datos especificado con solo el `p
 
 >[!NOTE]
 >
->Propiedades cuyos valores tienen el prefijo `@` representan objetos interrelacionados. Consulte la sección del apéndice sobre [visualización de objetos interrelacionados](appendix.md#view-interrelated-objects) para ver los detalles de estos objetos.
+>Propiedades cuyos valores tienen el prefijo `@` representar objetos interrelacionados. Consulte la sección del apéndice sobre [visualización de objetos interrelacionados](appendix.md#view-interrelated-objects) para ver los pasos de cómo ver los detalles de estos objetos.

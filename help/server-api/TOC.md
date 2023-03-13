@@ -16,8 +16,8 @@ ht-degree: 52%
 # Documentación de la API del servidor de red perimetral {#edge-network-server-api}
 
 
-* [Información general sobre la API de Edge Network Server](overview.md)
-* [Protecciones de rendimiento para la API de servidor de red perimetral](guardrails.md)
+* [Información general de API de servidor de red perimetral](overview.md)
+* [Protecciones de rendimiento para la API del servidor de red perimetral](guardrails.md)
 * [Autenticación](authentication.md)
 * Recopilación de datos {#data-collection}
    * [Recopilación de datos de un solo evento](interactive-data-collection.md)
@@ -25,8 +25,8 @@ ht-degree: 52%
 * Interactuar con otras soluciones de Adobe {#interacting-other-adobe-solutions}
    * [Interactuar con Adobe Analytics](interacting-adobe-analytics.md)
 * Personalización {#personalization}
-   * [Información general sobre personalización](personalization-overview.md)
-   * [Personalización a través de Adobe Target](personalization-target.md)
+   * [Resumen de personalización](personalization-overview.md)
+   * [Personalización mediante Adobe Target](personalization-target.md)
    * [Personalización mediante Offer decisioning](personalization-offer-decisioning.md)
 * [Sugerencias de ubicación](location-hints.md)
 * [Control de errores](error-handling.md)

@@ -1,10 +1,11 @@
 ---
 title: Estándar de compatibilidad con versiones anteriores
 description: Obtenga información sobre el estándar de compatibilidad con versiones anteriores en Adobe Experience Platform que garantiza que las versiones actualizadas de las extensiones de etiquetas sean compatibles con versiones anteriores.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
-ht-degree: 84%
+ht-degree: 97%
 
 ---
 
@@ -18,7 +19,7 @@ Las actualizaciones de una extensión de etiqueta en Adobe Experience Platform d
 
 * Cualquier modificación de los componentes principales de las extensiones debe ser compatible con las versiones anteriores. Esto incluye la configuración de las extensiones, tipos de evento, tipos de condición, tipos de acciones, tipos de elementos de datos y módulos compartidos.
 * Los componentes que un usuario ha creado con la versión de extensión anterior deben poder aprobar la validación con los esquemas que ofrece la versión más reciente.
-* Un usuario de Adobe Experience Platform debe poder instalar una versión actualizada de la extensión y hacer que todo lo que haya hecho siga funcionando exactamente como está hasta que realice cambios deliberados.
+* Un usuario de Adobe Experience Platform debe poder instalar una versión actualizada de la extensión y hacer que todo lo que haya hecho siga funcionando tal cual hasta que realice cambios deliberados.
 
 ## Cambios permitidos
 
@@ -56,7 +57,7 @@ Puede haber casos en los que hay una razón empresarial válida y cree que realm
 1. Deseo cambiar un campo opcional para que sea obligatorio => Cree un nuevo componente que requiera el campo deseado y elimine el anterior.
 1. Deseo cambiar la API de un módulo compartido => Cree un nuevo módulo compartido y elimine el antiguo.
 
-Puede que elija un hilo común. Eso es bueno. Al desaprobar un componente antiguo, debe notificar a los usuarios de la extensión que ha quedado obsoleta y que deben cambiar a uno nuevo.  Algunas sugerencias para comunicarse con los usuarios:
+Puede que elija un hilo común. Eso es bueno. Al dejar de utilizar un componente antiguo, deberá notificar a los usuarios de su extensión que ha quedado obsoleto y que necesitan cambiar a uno nuevo.  Algunas sugerencias para comunicarse con los usuarios:
 
 * Actualice el nombre para mostrar del componente antiguo para incluir &quot;(obsoleto)&quot;.
 * Actualice la vista del componente antiguo para que tenga un texto de advertencia de color rojo y en formato grande que indique que este componente está obsoleto y que el usuario debe cambiar al nuevo componente.

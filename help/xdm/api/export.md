@@ -1,26 +1,27 @@
 ---
 title: Exportar extremo de API
-description: El extremo /export de la API del Registro de esquemas permite compartir recursos XDM entre entornos limitados.
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+description: El extremo /export de la API de Registro de esquemas permite compartir recursos XDM entre entornos limitados.
+exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
+source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 2%
+source-wordcount: '411'
+ht-degree: 1%
 
 ---
 
 # Exportar extremo
 
-Todos los recursos de [!DNL Schema Library] se encuentran en un entorno limitado específico de Adobe Experience Platform. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones. La variable `/rpc/export` en la variable [!DNL Schema Registry] La API permite generar una carga útil de exportación para cualquier esquema, grupo de campos de esquema o tipo de datos en la variable [!DNL Schema Library]y, a continuación, utilice esa carga útil para importar ese recurso (y todos los recursos dependientes) en un entorno limitado de destino y en una organización a través del [`/rpc/import` extremo](./import.md).
+Todos los recursos dentro de [!DNL Schema Library] están contenidos en una zona protegida específica dentro de Adobe Experience Platform. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones. El `/rpc/export` punto final en la [!DNL Schema Registry] La API permite generar una carga útil de exportación para cualquier esquema, grupo de campos de esquema o tipo de datos en [!DNL Schema Library]y, a continuación, utilice esa carga útil para importar ese recurso (y todos los recursos dependientes) en una zona protegida de destino y en la organización a través de [`/rpc/import` punto final](./import.md).
 
 ## Primeros pasos
 
-La variable `/rpc/export` es parte de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El `/rpc/export` El punto final forma parte de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
-La variable `/rpc/export` el extremo es parte de las llamadas a procedimientos remotos (RPC) que son compatibles con la variable [!DNL Schema Registry]. A diferencia de otros extremos en la variable [!DNL Schema Registry] Los extremos de API y RPC no requieren encabezados adicionales como `Accept` o `Content-Type`y no use un `CONTAINER_ID`. En su lugar, deben usar la variable `/rpc` como se muestra en las llamadas de API a continuación.
+El `/rpc/export` El extremo forma parte de las llamadas a procedimientos remotos (RPC) compatibles con [!DNL Schema Registry]. A diferencia de otros extremos de [!DNL Schema Registry] API, los extremos RPC no requieren encabezados adicionales como `Accept` o `Content-Type`, y no use un `CONTAINER_ID`. En su lugar, deben utilizar la variable `/rpc` , como se muestra en las llamadas de API siguientes.
 
-## Generar una carga útil de exportación para un recurso {#export}
+## Generación de una carga útil de exportación para un recurso {#export}
 
-Para cualquier esquema, grupo de campos o tipo de datos existente en la variable [!DNL Schema Library], puede generar una carga útil de exportación realizando una solicitud de GET al `/export` , proporcionando el ID del recurso en la ruta.
+Para cualquier esquema, grupo de campos o tipo de datos existente en la [!DNL Schema Library], puede generar una carga útil de exportación realizando una solicitud de GET a `/export` extremo, que proporciona el ID del recurso en la ruta.
 
 **Formato de API**
 
@@ -30,9 +31,9 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{RESOURCE_ID}` | La variable `meta:altId` o con codificación de URL `$id` del recurso XDM que desea exportar. |
+| `{RESOURCE_ID}` | El `meta:altId` o con codificación URL `$id` del recurso XDM que desea exportar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -50,9 +51,9 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de objetos, que representan el recurso XDM de destino y todos sus recursos dependientes. En este ejemplo, el primer objeto de la matriz es un `Property` tipo de datos que el `Restaurant` el grupo de campos emplea, mientras que el segundo objeto es el `Restaurant` grupo de campos. Esta carga útil se puede utilizar para [importar el recurso](#import) en un entorno limitado diferente o en una organización de IMS.
+Una respuesta correcta devuelve una matriz de objetos, que representan el recurso XDM de destino y todos sus recursos dependientes. En este ejemplo, el primer objeto de la matriz es un objeto creado por el inquilino `Property` tipo de datos que el `Restaurant` El grupo de campos emplea, mientras que el segundo objeto es el `Restaurant` grupo de campos en sí. Esta carga útil se puede utilizar para [importar el recurso](#import) en una zona protegida u organización de IMS diferente.
 
-Tenga en cuenta que todas las instancias del ID de inquilino del recurso se sustituyen por `<XDM_TENANTID_PLACEHOLDER>`. Esto permite que el Registro de esquemas aplique automáticamente el ID de inquilino correcto a los recursos en función de dónde se envíen en la llamada de importación posterior.
+Tenga en cuenta que todas las instancias del ID de inquilino del recurso se reemplazan por `<XDM_TENANTID_PLACEHOLDER>`. Esto permite al Registro de esquemas aplicar automáticamente el ID de inquilino correcto a los recursos, según el lugar al que se envíen en la llamada de importación posterior.
 
 ```json
 [
@@ -192,8 +193,8 @@ Tenga en cuenta que todas las instancias del ID de inquilino del recurso se sust
 ]
 ```
 
-## Importación del recurso {#import}
+## Importar el recurso {#import}
 
-Después de generar la carga útil de exportación desde el archivo CSV, puede enviar esa carga útil a la variable `/rpc/import` para generar el esquema.
+Después de generar la carga útil de exportación desde el archivo CSV, puede enviar esa carga útil a `/rpc/import` extremo para generar el esquema.
 
-Consulte la [guía de extremo de importación](./import.md) para obtener más información sobre cómo generar esquemas a partir de cargas de exportación.
+Consulte la [guía de importar extremo](./import.md) para obtener más información sobre cómo generar esquemas a partir de cargas útiles de exportación.

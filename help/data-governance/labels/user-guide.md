@@ -91,7 +91,7 @@ El **[!UICONTROL Mostrar etiquetas heredadas]** alternar está activado de forma
 
 >[!IMPORTANT]
 >
->La aplicación de etiquetas en el nivel de campo del conjunto de datos solo se admite en los casos de uso del control de datos. Si está intentando crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
+>La aplicación de etiquetas en el nivel de campo del conjunto de datos solo se admite en los casos de uso del control de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
 
 Continuación del flujo de trabajo para [adición y edición de etiquetas de uso de datos en el nivel de conjunto de datos](#add-labels), también puede administrar etiquetas de nivel de campo dentro del **[!UICONTROL Gobernanza de datos]** espacio de trabajo de ese conjunto de datos.
 

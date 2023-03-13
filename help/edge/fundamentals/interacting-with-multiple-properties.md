@@ -1,25 +1,24 @@
 ---
-title: Interaccione con varias propiedades en el SDK web de Adobe Experience Platform
+title: Interacción con varias propiedades en el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo interactuar con varias propiedades del SDK web de Experience Platform.
 keywords: varias propiedades;configurar;sendEvent;edgeConfigId;orgId;
-translation-type: tm+mt
-source-git-commit: b865b7fb940ca2d5f8b44f71eb58e62e3473f52d
+exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
+# Interactuar con varias propiedades
 
-# Interaccione con varias propiedades
+Hay ciertos casos en los que es posible que desee interactuar con dos propiedades diferentes en la misma página. Estos casos incluyen:
 
-En algunos casos, es posible que desee interactuar con dos propiedades diferentes en la misma página. Estos casos incluyen:
+* Compañías que han sido adquiridas y están trabajando en la integración de sus sitios web juntos
+* Relaciones de uso compartido de datos entre varias empresas
+* Clientes que están probando nuevas soluciones de Adobe y no desean interrumpir la implementación existente
 
-* Empresas que han adquirido y están trabajando en la integración de sus sitios web
-* Relaciones de intercambio de datos entre varias empresas
-* Clientes que están probando nuevas soluciones de Adobe y que no desean interrumpir su implementación existente
-
-El SDK permite crear una instancia independiente para cada propiedad añadiendo otro nombre a la matriz en el código base. El siguiente ejemplo proporciona dos nombres, `mycustomname1` y `mycustomname2`.
+El SDK permite crear una instancia independiente para cada propiedad añadiendo otro nombre a la matriz en el código base. El ejemplo siguiente proporciona dos nombres, `mycustomname1` y `mycustomname2`.
 
 ```markup
 <script>
@@ -31,11 +30,11 @@ El SDK permite crear una instancia independiente para cada propiedad añadiendo 
 <script src="alloy.js" async></script>
 ```
 
-Como resultado, la secuencia de comandos crea dos instancias del SDK. La función global para interactuar con la primera instancia se llama `mycustomname1` y la función global para interactuar con la segunda instancia se llama `mycustomname2`.
+Como resultado, el script crea dos instancias del SDK. La función global para interactuar con la primera instancia se denomina `mycustomname1` y la función global para interactuar con la segunda instancia se denomina `mycustomname2`.
 
-Al crear dos instancias independientes, cada una se puede configurar para una propiedad diferente. Cualquier comunicación o persistencia de datos que se produzca debido a la interacción con `mycustomname1` se mantiene aislada de `mycustomname2`.
+Al crear dos instancias independientes, cada una se puede configurar para una propiedad diferente. Cualquier comunicación o persistencia de datos que se produzca debido a la interacción con `mycustomname1` se mantiene aislado de `mycustomname2`.
 
-Siguiendo el ejemplo anterior, puede ejecutar comandos utilizando cada una de las instancias, de la siguiente manera:
+Después del ejemplo anterior, puede ejecutar comandos utilizando cada una de las instancias de la siguiente manera:
 
 ```javascript
 mycustomname1("configure", {
@@ -61,8 +60,8 @@ mycustomname2("sendEvent", {
 });
 ```
 
-Asegúrese de ejecutar el comando `configure` para cada instancia antes de ejecutar otros comandos en la misma instancia.
+Asegúrese de ejecutar el `configure` antes de ejecutar otros comandos en la misma instancia.
 
 ## Limitaciones
 
-Para evitar conflictos con las cookies, solo una instancia de Adobe Experience Platform [!DNL Web SDK] dentro de una página puede tener un `edgeConfigId` en particular. Del mismo modo, solo una instancia de Adobe Experience Platform [!DNL Web SDK] puede tener un `orgId` concreto.
+Para evitar conflictos con las cookies, solo se necesita una instancia de Adobe Experience Platform [!DNL Web SDK] dentro de una página puede tener un `edgeConfigId`. Del mismo modo, solo se permite una instancia de Adobe Experience Platform [!DNL Web SDK] puede tener un `orgId`.

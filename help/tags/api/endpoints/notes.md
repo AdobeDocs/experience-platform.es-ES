@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /notes en la API de Reactor.
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '515'
 ht-degree: 98%
 
 ---
@@ -58,7 +58,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | El tipo de recurso para el que recupera notas. Debe tener uno de los siguientes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | El `id` del recurso específico cuyas notas desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -133,7 +133,7 @@ GET /notes/{NOTE_ID}
 | --- | --- |
 | `NOTE_ID` | El `id` de la nota que desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -200,7 +200,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | El tipo de recurso para el que crea una nota. Debe tener uno de los siguientes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | El `id` del recurso específico para el que desea crear una nota. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -228,7 +228,7 @@ curl -X POST \
 | `type` | **(Obligatorio)** El tipo de recurso que se actualiza. Para este extremo, el valor debe ser `notes`. |
 | `attributes.text` | **(Obligatorio)** El texto que contiene la nota. Cada nota está limitada a 512 caracteres Unicode. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 

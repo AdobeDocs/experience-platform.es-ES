@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo de la búsqueda en la API de
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '655'
 ht-degree: 97%
 
 ---
@@ -100,7 +100,7 @@ curl -X POST \
 | `sort` | Matriz de objetos que indica el orden en que se ordenarán los resultados. Cada objeto debe contener una sola propiedad: la clave representa la ruta del campo por la que ordenar y el valor representa el criterio de ordenación (`asc` para ascendente, `desc` para descendente). |
 | `resource_types` | Matriz de cadenas que indica los tipos de recurso específicos que se van a buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 

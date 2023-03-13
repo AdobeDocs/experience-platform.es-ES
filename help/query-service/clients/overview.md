@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;conexión;servicio de consulta;estudio de datos acuáticos;estudio de datos Aqua;buscador;buscador;postico;postico;Power BI;power bi;psql;estudio;PSQL;RStudio;Tableau;tableau;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;conectar;conectar con servicio de consultas;aqua data studio;Aqua Data Studio;Buscador;mirador;póstico;póstico;póstico;Power BI;poder;psql;rstudio;PSQL;RStudio;Tableau;tableau;
 solution: Experience Platform
-title: Conectar clientes con el servicio de consulta
-description: En este documento se explica cómo conectar con el servicio de consulta desde diversas aplicaciones cliente de escritorio y cómo verificar esas conexiones.
+title: Conectar clientes al servicio de consultas
+description: En este documento se explica cómo conectarse al servicio de consultas desde diversas aplicaciones cliente de escritorio y cómo comprobar esas conexiones.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Conectar clientes a [!DNL Query Service]
 
-En esta sección se explica cómo conectar con [!DNL Query Service] desde una variedad de aplicaciones cliente de escritorio y cómo verificar esas conexiones. [!DNL Query Service] utiliza la variable [!DNL PostgreSQL] protocolo, así que las instrucciones de esta sección explican cómo usar [!DNL PostgreSQL] herramientas y controladores para conectar y escribir consultas.
+En esta sección se explica cómo conectarse a [!DNL Query Service] desde una variedad de aplicaciones cliente de escritorio y cómo comprobar esas conexiones. [!DNL Query Service] utiliza el [!DNL PostgreSQL] , por lo que las instrucciones de esta sección explican cómo utilizar [!DNL PostgreSQL] herramientas y controladores para conectarse y escribir consultas.
 
 Se proporcionan instrucciones para los siguientes clientes:
 

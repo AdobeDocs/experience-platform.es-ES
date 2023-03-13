@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;actualizar flujos de datos
 solution: Experience Platform
-title: Actualización de flujos de datos mediante la API del servicio de flujo
+title: Actualización de flujos de datos mediante la API de Flow Service
 type: Tutorial
-description: Este tutorial trata los pasos para actualizar un flujo de datos, incluido su nombre, descripción y programación, mediante la API de servicio de flujo.
+description: Este tutorial cubre los pasos para actualizar un flujo de datos, incluido su nombre, descripción y programación, mediante la API de Flow Service.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,26 +12,26 @@ ht-degree: 3%
 
 ---
 
-# Actualización de flujos de datos mediante la API del servicio de flujo
+# Actualización de flujos de datos mediante la API de Flow Service
 
-Este tutorial trata los pasos para actualizar un flujo de datos, incluida su información básica, programación y conjuntos de asignación mediante el uso de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial trata los pasos para actualizar un flujo de datos, incluida su información básica, programación y conjuntos de asignaciones mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de flujo válido, seleccione el conector que desee en el [información general sobre fuentes](../../home.md) y siga los pasos descritos antes de intentar este tutorial.
+Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de flujo válido, seleccione el conector que desee en el [información general de orígenes](../../home.md) y siga los pasos descritos antes de intentar realizar este tutorial.
 
-Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes, al mismo tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de las API de plataforma
+### Uso de API de Platform
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
 
-## Buscar detalles de flujo de datos
+## Búsqueda de detalles de flujo de datos
 
-El primer paso para actualizar el flujo de datos es recuperar los detalles del flujo de datos mediante su ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una solicitud de GET al `/flows` punto final.
+El primer paso para actualizar el flujo de datos es recuperar los detalles del flujo de datos con el ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una solicitud de GET a `/flows` punto final.
 
 **Formato de API**
 
@@ -41,11 +41,11 @@ GET /flows/{FLOW_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FLOW_ID}` | El único `id` para el flujo de datos que desea recuperar. |
+| `{FLOW_ID}` | La exclusiva `id` para el flujo de datos que desea recuperar. |
 
 **Solicitud**
 
-La siguiente solicitud recupera información actualizada sobre su ID de flujo.
+La siguiente solicitud recupera información actualizada sobre el ID de flujo.
 
 ```shell
 curl -X GET \
@@ -172,11 +172,11 @@ Una respuesta correcta devuelve los detalles actuales del flujo de datos, inclui
 
 ## Actualizar flujo de datos
 
-Para actualizar la programación, el nombre y la descripción de ejecución del flujo de datos, realice una solicitud de PATCH al [!DNL Flow Service] mientras proporciona su ID de flujo, versión y la nueva programación que desea utilizar.
+Para actualizar la programación de ejecución, el nombre y la descripción del flujo de datos, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y la nueva programación que desee utilizar.
 
 >[!IMPORTANT]
 >
->La variable `If-Match` es obligatorio cuando se realiza una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar. El valor de etiqueta se actualiza con cada actualización correcta de un flujo de datos.
+>El `If-Match` es necesario para realizar una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de un flujo de datos.
 
 **Formato de API**
 
@@ -186,7 +186,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitud**
 
-La siguiente solicitud actualiza la programación de la ejecución del flujo, así como el nombre y la descripción del flujo de datos.
+La siguiente solicitud actualiza la programación de ejecución del flujo, así como el nombre y la descripción del flujo de datos.
 
 ```shell
 curl -X PATCH \
@@ -217,13 +217,13 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. |
 | `path` | Define la parte del flujo que se va a actualizar. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a [!DNL Flow Service] API, mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -234,7 +234,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Actualizar asignación
 
-Puede actualizar el conjunto de asignaciones de un flujo de datos existente realizando una solicitud de PATCH al [!DNL Flow Service] API y proporcionar valores actualizados para su `mappingId` y `mappingVersion`.
+Puede actualizar el conjunto de asignaciones de un flujo de datos existente realizando una solicitud del PATCH a la variable [!DNL Flow Service] y proporcionar valores actualizados para su `mappingId` y `mappingVersion`.
 
 **Formato de API**
 
@@ -244,7 +244,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitud**
 
-La siguiente solicitud actualiza el conjunto de asignaciones de su flujo de datos.
+La siguiente solicitud actualiza el conjunto de asignaciones del flujo de datos.
 
 ```shell
 curl -X PATCH \
@@ -271,7 +271,7 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. |
 | `path` | Define la parte del flujo que se va a actualizar. En este ejemplo, `transformations` se está actualizando. |
 | `value.name` | Nombre de la propiedad que se va a actualizar. |
 | `value.params.mappingId` | El nuevo ID de asignación que se utilizará para actualizar el conjunto de asignación del flujo de datos. |
@@ -279,7 +279,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a [!DNL Flow Service] API, mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -290,4 +290,4 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha actualizado los conjuntos básicos de información, programación y asignación del flujo de datos mediante la variable [!DNL Flow Service] API. Para obtener más información sobre el uso de conectores de origen, consulte la [información general sobre fuentes](../../home.md).
+Al seguir este tutorial, ha actualizado la información básica, la programación y los conjuntos de asignaciones del flujo de datos utilizando [!DNL Flow Service] API. Para obtener más información sobre el uso de conectores de origen, consulte la [información general de orígenes](../../home.md).

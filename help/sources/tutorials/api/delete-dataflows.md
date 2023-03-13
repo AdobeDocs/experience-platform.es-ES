@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;API;api;eliminar;eliminar flujos de datos
 solution: Experience Platform
-title: Eliminación de un flujo de datos mediante la API de servicio de flujo
+title: Eliminar un flujo de datos mediante la API de Flow Service
 type: Tutorial
-description: Obtenga información sobre cómo eliminar flujos de datos de flujo y por lotes mediante la API de servicio de flujo.
+description: Obtenga información sobre cómo eliminar flujos de datos por lotes y de flujo continuo mediante la API de Flow Service.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,28 +12,28 @@ ht-degree: 3%
 
 ---
 
-# Eliminación de un flujo de datos mediante la API de servicio de flujo
+# Eliminar un flujo de datos mediante la API de Flow Service
 
-Puede eliminar flujos de datos de flujo continuo y por lotes que contengan errores o que se hayan vuelto obsoletos mediante la función [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Puede eliminar los flujos de datos por lotes y de flujo continuo que contengan errores o que hayan quedado obsoletos mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-Este tutorial trata los pasos para eliminar flujos de datos realizados tanto con orígenes de lote como de flujo continuo mediante [!DNL Flow Service].
+Este tutorial cubre los pasos para eliminar flujos de datos realizados con fuentes por lotes y de flujo continuo mediante [!DNL Flow Service].
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de flujo válido, seleccione el conector que desee en el [información general sobre fuentes](../../home.md) y siga los pasos descritos antes de intentar este tutorial.
+Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de flujo válido, seleccione el conector que desee en el [información general de orígenes](../../home.md) y siga los pasos descritos antes de intentar realizar este tutorial.
 
-Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de las API de plataforma
+### Uso de API de Platform
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
 
-## Eliminar un flujo de datos
+## Eliminación de un flujo de datos
 
-Con un ID de flujo existente, puede eliminar un flujo de datos realizando una solicitud de DELETE al [!DNL Flow Service] API.
+Con un ID de flujo existente, puede eliminar un flujo de datos realizando una solicitud al DELETE para que [!DNL Flow Service] API.
 
 **Formato de API**
 
@@ -43,7 +43,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FLOW_ID}` | El único `id` para el flujo de datos que desea eliminar. |
+| `{FLOW_ID}` | La exclusiva `id` para el flujo de datos que desea eliminar. |
 
 **Solicitud**
 
@@ -58,10 +58,10 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco. Puede confirmar la eliminación intentando realizar una solicitud de búsqueda (GET) al flujo de datos. La API devolverá un error HTTP 404 (no encontrado), que indica que se ha eliminado el flujo de datos.
+Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco. Puede confirmar la eliminación intentando una solicitud de búsqueda (GET) al flujo de datos. La API devolverá un error HTTP 404 (no encontrado), que indica que el flujo de datos se ha eliminado.
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha utilizado correctamente la variable [!DNL Flow Service] para eliminar un flujo de datos existente.
+Al seguir este tutorial, ha utilizado correctamente la variable [!DNL Flow Service] API a para eliminar un flujo de datos existente.
 
-Para ver los pasos sobre cómo realizar estas operaciones mediante la interfaz de usuario, consulte el tutorial sobre [eliminación de flujos de datos en la interfaz de usuario](../../tutorials/ui/delete.md)
+Para ver los pasos sobre cómo realizar estas operaciones mediante la interfaz de usuario, consulte el tutorial sobre [eliminación de flujos de datos en la IU](../../tutorials/ui/delete.md)

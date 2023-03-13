@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
-title: Puntos finales de la API de proyección de Edge
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
+title: Extremos de API de proyección de Edge
 type: Documentation
-description: Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, haciendo que los datos adecuados estén disponibles y se actualicen continuamente a medida que se produzcan cambios. Esto se hace mediante el uso de bordes, un servidor ubicado geográficamente que almacena datos y lo hace fácilmente accesible para las aplicaciones.
+description: Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y personalizadas para sus clientes en varios canales en tiempo real, haciendo que los datos adecuados estén disponibles y se actualicen continuamente a medida que se produzcan cambios. Esto se lleva a cabo mediante el uso de perímetros, un servidor colocado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
@@ -13,23 +13,23 @@ ht-degree: 2%
 
 # Configuraciones de proyección de Edge y extremos de destinos
 
-Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante lo que se conoce como bordes. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan perímetros para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde. Esta guía proporciona instrucciones detalladas para usar la variable [!DNL Real-Time Customer Profile] API para trabajar con proyecciones avanzadas, incluidos destinos y configuraciones.
+Para impulsar experiencias coordinadas, coherentes y personalizadas para sus clientes en varios canales en tiempo real, los datos adecuados deben estar disponibles y actualizarse continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como perímetros. Un perímetro es un servidor ubicado geográficamente que almacena datos y hace que sea fácilmente accesible para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan Edge de para ofrecer experiencias del cliente personalizadas en tiempo real. Los datos se enrutan a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Esta guía proporciona instrucciones detalladas para utilizar el [!DNL Real-Time Customer Profile] API para trabajar con proyecciones de Edge, incluidos destinos y configuraciones.
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la variable [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revise la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte del [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
 
 >[!NOTE]
 >
->Las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un `Content-Type` encabezado. Más de uno `Content-Type` se utiliza en este documento. Preste especial atención a los encabezados de las llamadas de ejemplo para asegurarse de que está utilizando la `Content-Type` para cada solicitud.
+>Las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un `Content-Type` encabezado. Más de uno `Content-Type` en este documento. Preste especial atención a los encabezados de las llamadas de ejemplo para asegurarse de que está utilizando el `Content-Type` para cada solicitud.
 
 ## Destinos de proyección
 
-Una proyección se puede dirigir a uno o varios bordes especificando las ubicaciones a las que se enviarán los datos. Cada destino de proyección que se crea tiene un ID único que se utiliza para crear la configuración de la proyección.
+Una proyección se puede enrutar a uno o más bordes especificando las ubicaciones a las que se enviarán los datos. Cada destino de proyección que se crea tiene un ID único que se utiliza para crear la configuración de proyección.
 
 ### Enumerar todos los destinos
 
-Puede enumerar los destinos perimetrales que ya se han creado para su organización realizando una solicitud de GET al `/config/destinations` punto final.
+Puede enumerar los destinos de Edge que ya se han creado para su organización realizando una solicitud de GET a `/config/destinations` punto final.
 
 **Formato de API**
 
@@ -50,7 +50,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye un `projectionDestinations` matriz con los detalles de cada destino mostrados como un objeto individual dentro de la matriz. Si no se han configurado proyecciones, la variable `projectionDestinations` array devuelve empty.
+La respuesta incluye una `projectionDestinations` matriz con los detalles de cada destino mostrado como un objeto individual dentro de la matriz. Si no se han configurado proyecciones, la variable `projectionDestinations` la matriz devuelve empty.
 
 >[!NOTE]
 >
@@ -104,13 +104,13 @@ La respuesta incluye un `projectionDestinations` matriz con los detalles de cada
 | Propiedad | Descripción |
 |---|---|
 | `_links.self.href` | En el nivel superior, coincide con la ruta utilizada para realizar la solicitud de GET. Dentro de cada objeto de destino individual, esta ruta se puede utilizar en una solicitud de GET para buscar directamente los detalles de un destino específico. |
-| `id` | Dentro de cada objeto de destino, la variable `"id"` muestra el ID exclusivo de solo lectura generado por el sistema para el destino. Este ID se utiliza al hacer referencia a un destino específico y al crear configuraciones de proyección. |
+| `id` | Dentro de cada objeto de destino, la variable `"id"` muestra el ID único de solo lectura generado por el sistema para el destino. Este ID se utiliza al hacer referencia a un destino específico y al crear configuraciones de proyección. |
 
-Para obtener más información sobre los atributos de un destino individual, consulte la sección sobre [creación de un destino](#create-a-destination) esto sigue.
+Para obtener más información sobre los atributos de un destino individual, consulte la sección sobre [creación de un destino](#create-a-destination) que sigue.
 
 ### Crear un destino {#create-a-destination}
 
-Si el destino que necesita no existe, puede crear un nuevo destino de proyección realizando una solicitud de POST al `/config/destinations` punto final.
+Si el destino que necesita no existe todavía, puede crear un nuevo destino de proyección realizando una solicitud de POST al `/config/destinations` punto final.
 
 **Formato de API**
 
@@ -120,11 +120,11 @@ POST /config/destinations
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo destino perimetral.
+La siguiente solicitud crea un nuevo destino de Edge.
 
 >[!NOTE]
 >
->La solicitud del POST para crear un destino requiere un `Content-Type` como se muestra a continuación. Uso de un error `Content-Type` genera un error de estado HTTP 415 (tipo de medio no compatible).
+>La solicitud del POST para crear un destino requiere un específico `Content-Type` encabezado, como se muestra a continuación. Uso de un incorrecto `Content-Type` da como resultado un error de estado HTTP 415 (Tipo de medio no compatible).
 
 ```shell
 curl -X POST \
@@ -146,14 +146,14 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| `type` **(Obligatorio)** | Tipo de destino que se va a crear. El único valor aceptado, &quot;EDGE&quot;, crea un destino de borde. |
-| `dataCenters` **(Obligatorio)** | Matriz de cadenas que enumera los bordes hacia los que se deben enrutar las proyecciones. Puede contener uno o más de los siguientes valores: &quot;OR1&quot; - Estados Unidos Occidental, &quot;VA5&quot; - Estados Unidos Oriental, &quot;NLD1&quot; - EMEA. |
-| `ttl` **(Obligatorio)** | Especifica la caducidad de la proyección. Intervalo de valores aceptado: 600 a 604800. Valor predeterminado: 3600. |
-| `replicationPolicy` **(Obligatorio)** | Define el comportamiento de la replicación de datos desde el concentrador hasta los bordes.  Valores compatibles: PROACTIVO, REACTIVO. Valor predeterminado: REACTIVO. |
+| `type` **(Obligatorio)** | Tipo de destino que se va a crear. El único valor aceptado, &quot;EDGE&quot;, crea un destino de Edge. |
+| `dataCenters` **(Obligatorio)** | Matriz de cadenas que enumera los bordes hacia los que se deben enrutar las proyecciones. Puede contener uno o más de los siguientes valores: &quot;OR1&quot; (oeste de Estados Unidos), &quot;VA5&quot; (este de Estados Unidos), &quot;NLD1&quot; (EMEA). |
+| `ttl` **(Obligatorio)** | Especifica la caducidad de la proyección. Intervalo de valores aceptado: de 600 a 604800. Valor predeterminado: 3600. |
+| `replicationPolicy` **(Obligatorio)** | Define el comportamiento de la duplicación de datos desde el concentrador hasta los extremos.  Valores admitidos: PROACTIVO, REACTIVO. Valor predeterminado: REACTIVE. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del destino perimetral recién creado, incluido el ID exclusivo generado por el sistema de solo lectura (`id`).
+Una respuesta correcta devuelve los detalles del destino perimetral recién creado, incluido el ID único de solo lectura generado por el sistema (`id`).
 
 ```json
 {
@@ -174,12 +174,12 @@ Una respuesta correcta devuelve los detalles del destino perimetral recién crea
 | Propiedad | Descripción |
 |---|---|
 | `self.href` | Esta ruta se utiliza para buscar (GET) el destino directamente y también se puede utilizar para actualizar (PUT) o eliminar (DELETE) el destino. |
-| `id` | ID único de solo lectura generado por el sistema para el destino. Este ID se utiliza para hacer referencia al destino directamente y al crear configuraciones de proyección. |
-| `version` | Este valor de solo lectura muestra la versión actual del destino. Cuando se actualiza un destino, el número de versión aumenta automáticamente. |
+| `id` | El ID único de solo lectura generado por el sistema para el destino. Este ID se utiliza para hacer referencia al destino directamente y al crear configuraciones de proyección. |
+| `version` | Este valor de solo lectura muestra la versión actual del destino. Cuando se actualiza un destino, el número de versión se incrementa automáticamente. |
 
 ### Ver un destino
 
-Si conoce el ID exclusivo de un destino de proyección, puede realizar una solicitud de consulta para ver sus detalles. Para ello, realice una solicitud de GET al `/config/destinations` y incluyendo el ID del destino en la ruta de solicitud.
+Si conoce el ID único de un destino de proyección, puede realizar una solicitud de consulta para ver sus detalles. Esto se hace realizando una solicitud de GET a la `/config/destinations` e incluir el ID del destino en la ruta de solicitud.
 
 **Formato de API**
 
@@ -189,7 +189,7 @@ GET /config/destinations/{DESTINATION_ID}
 
 | Parámetro | Descripción |
 |---|---|
-| `{DESTINATION_ID}` | ID exclusivo del destino de la proyección que desea ver. |
+| `{DESTINATION_ID}` | El ID único del destino de proyección que desea ver. |
 
 **Solicitud**
 
@@ -206,7 +206,7 @@ curl -X GET \
 
 **Respuesta**
 
-El objeto response muestra los detalles del destino de la proyección. La variable `id` debe coincidir con el ID del destino de la proyección que se proporcionó en la solicitud.
+El objeto response muestra los detalles del destino de la proyección. El `id` debe coincidir con el ID del destino de proyección proporcionado en la solicitud.
 
 ```json
 {
@@ -224,13 +224,13 @@ El objeto response muestra los detalles del destino de la proyección. La variab
 }
 ```
 
-### Actualizar un destino
+### Actualización de un destino
 
-Un destino existente se puede actualizar realizando una solicitud de PUT al `/config/destinations` y incluyendo el ID del destino a actualizar en la ruta de solicitud. Esta operación está reescribiendo el destino, por lo que se deben proporcionar los mismos atributos en el cuerpo de la solicitud que se proporcionan al crear un nuevo destino.
+Se puede actualizar un destino existente realizando una solicitud de PUT a `/config/destinations` punto final e incluye el ID del destino que se va a actualizar en la ruta de solicitud. Esta operación esencialmente reescribe el destino, por lo tanto, se deben proporcionar los mismos atributos en el cuerpo de la solicitud que se proporcionan al crear un nuevo destino.
 
 >[!CAUTION]
 >
->La respuesta de la API a la solicitud de actualización es inmediata, pero los cambios en las proyecciones se aplican asincrónicamente. En otras palabras, hay una diferencia de tiempo entre el momento en que se realiza la actualización a la definición del destino y el momento en que se aplica.
+>La respuesta de la API a la solicitud de actualización es inmediata, pero los cambios en las proyecciones se aplican de forma asíncrona. En otras palabras, existe una diferencia horaria entre el momento en que se realiza la actualización de la definición del destino y el momento en que se aplica.
 
 **Formato de API**
 
@@ -240,7 +240,7 @@ PUT /config/destinations/{DESTINATION_ID}
 
 | Parámetro | Descripción |
 |---|---|
-| `{DESTINATION_ID}` | ID exclusivo del destino de la proyección que desea actualizar. |
+| `{DESTINATION_ID}` | El ID único del destino de la proyección que desea actualizar. |
 
 **Solicitud**
 
@@ -248,7 +248,7 @@ La siguiente solicitud actualiza el destino existente para incluir una segunda u
 
 >[!IMPORTANT]
 >
->La solicitud del PUT requiere un `Content-Type` como se muestra a continuación. Uso de un error `Content-Type` genera un error de estado HTTP 415 (tipo de medio no compatible).
+>La solicitud del PUT requiere un específico `Content-Type` encabezado, como se muestra a continuación. Uso de un incorrecto `Content-Type` da como resultado un error de estado HTTP 415 (Tipo de medio no compatible).
 
 ```shell
 curl -X PUT \
@@ -271,11 +271,11 @@ curl -X PUT \
 
 | Propiedad | Descripción |
 |---|---|
-| `currentVersion` | La versión actual del destino existente. El valor de la variable `version` al realizar una solicitud de búsqueda para el destino. |
+| `currentVersion` | La versión actual del destino existente. El valor del `version` al realizar una solicitud de consulta para el destino. |
 
 **Respuesta**
 
-La respuesta incluye los detalles actualizados para el destino, incluido su ID y el nuevo `version` del destino.
+La respuesta incluye los detalles actualizados del destino, incluido su ID y el nuevo `version` del destino.
 
 ```json
 {
@@ -296,11 +296,11 @@ La respuesta incluye los detalles actualizados para el destino, incluido su ID y
 
 ### Eliminar un destino
 
-Si su organización ya no requiere un destino de proyección, se puede eliminar realizando una solicitud de DELETE al `/config/destinations` e incluye el ID del destino que desea eliminar en la ruta de solicitud.
+Si su organización ya no requiere un destino de proyección, se puede eliminar realizando una solicitud de DELETE a `/config/destinations` e incluir el ID del destino que desea eliminar en la ruta de solicitud.
 
 >[!CAUTION]
 >
->La respuesta de la API a la solicitud de eliminación es inmediata, pero los cambios reales en los datos de los bordes se producen de forma asíncrona. En otras palabras, los datos de perfil se eliminarán de todos los bordes (la variable `dataCenters` especificado en el destino de la proyección), pero el proceso tardará un tiempo en completarse.
+>La respuesta de la API a la solicitud de eliminación es inmediata, pero los cambios reales en los datos de los extremos se producen de forma asíncrona. En otras palabras, los datos de perfil se eliminan de todos los extremos (la variable `dataCenters` especificado en la proyección (destino), pero el proceso tardará en completarse.
 
 **Formato de API**
 
@@ -310,7 +310,7 @@ DELETE /config/destinations/{DESTINATION_ID}
 
 | Parámetro | Descripción |
 |---|---|
-| `{DESTINATION_ID}` | ID exclusivo del destino de la proyección que desea eliminar. |
+| `{DESTINATION_ID}` | El ID único del destino de la proyección que desea eliminar. |
 
 
 **Solicitud**
@@ -326,15 +326,15 @@ curl -X DELETE \
 
 **Respuesta**
 
-La solicitud de eliminación devuelve el estado HTTP 204 (sin contenido) y un cuerpo de respuesta vacío. Puede confirmar que la eliminación se haya realizado correctamente realizando una solicitud de búsqueda del destino por su ID. La búsqueda debe devolver el estado HTTP 404 (no encontrado).
+La solicitud de eliminación devuelve el estado HTTP 204 (sin contenido) y un cuerpo de respuesta vacío. Puede confirmar que la eliminación se ha realizado correctamente realizando una solicitud de búsqueda para el destino por su ID. La búsqueda debe devolver el estado HTTP 404 (no encontrado).
 
 ## Configuraciones de proyección
 
-Las configuraciones de proyección proporcionan información sobre qué datos deben estar disponibles en cada Edge. En lugar de proyectar una finalización [!DNL Experience Data Model] (XDM) al borde, una proyección solo proporciona datos o campos específicos del esquema. Su organización puede definir más de una configuración de proyección para cada esquema XDM.
+Las configuraciones de proyección proporcionan información sobre qué datos deben estar disponibles en cada perímetro. En lugar de proyectar una [!DNL Experience Data Model] (XDM) al perímetro, una proyección solo proporciona datos específicos, o campos, del esquema. Su organización puede definir varias configuraciones de proyección para cada esquema XDM.
 
 ### Enumerar todas las configuraciones de proyección
 
-Puede enumerar todas las configuraciones de proyección creadas para su organización realizando una solicitud de GET al `/config/projections` punto final. También puede agregar parámetros opcionales a la ruta de solicitud para acceder a las configuraciones de proyección de un esquema en particular o buscar una proyección individual por su nombre.
+Puede enumerar todas las configuraciones de proyección que se han creado para su organización realizando una solicitud de GET a `/config/projections` punto final. También se pueden añadir parámetros opcionales a la ruta de solicitud para acceder a las configuraciones de proyección de un esquema determinado o buscar una proyección individual por su nombre.
 
 **Formato de API**
 
@@ -346,16 +346,16 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 | Parámetro | Descripción |
 |---|---|
-| `{SCHEMA_NAME}` | Nombre de la clase de esquema asociada con la configuración de proyección a la que desea acceder. |
+| `{SCHEMA_NAME}` | El nombre de la clase de esquema asociada con la configuración de proyección a la que desea acceder. |
 | `{PROJECTION_NAME}` | Nombre de la configuración de proyección a la que desea acceder. |
 
 >[!NOTE]
 >
->`schemaName` es obligatorio cuando se usa la variable `name` , como nombre de configuración de proyección solo es único en el contexto de una clase de esquema.
+>`schemaName` es necesario al utilizar el `name` , ya que un nombre de configuración de proyección solo es único en el contexto de una clase de esquema.
 
 **Solicitud**
 
-La siguiente solicitud enumera todas las configuraciones de proyección asociadas con la variable [!DNL Experience Data Model] clase schema, [!DNL XDM Individual Profile]. Para obtener más información sobre XDM y su función en [!DNL Platform], comience leyendo el [Información general del sistema XDM](../../xdm/home.md).
+La siguiente solicitud enumera todas las configuraciones de proyección asociadas con la variable [!DNL Experience Data Model] clase de esquema, [!DNL XDM Individual Profile]. Para obtener más información sobre XDM y su función dentro de [!DNL Platform], empiece por leer el [Información general del sistema XDM](../../xdm/home.md).
 
 ```shell
 curl -X GET \
@@ -368,7 +368,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de configuraciones de proyección dentro de la raíz `_embedded` , incluido dentro de la variable `projectionConfigs` matriz. Si no se han realizado configuraciones de proyección para su organización, la variable `projectionConfigs` la matriz estará vacía.
+Una respuesta correcta devuelve una lista de configuraciones de proyección dentro de la raíz `_embedded` atributo, contenido en `projectionConfigs` matriz. Si no se han realizado configuraciones de proyección para su organización, la variable `projectionConfigs` la matriz estará vacía.
 
 ```json
 {
@@ -418,9 +418,9 @@ Una respuesta correcta devuelve una lista de configuraciones de proyección dent
 }
 ```
 
-### Crear una configuración de proyección
+### Creación de una configuración de proyección
 
-Puede crear (POST) una nueva configuración de proyección que dicte qué campos XDM están disponibles en los bordes.
+Puede crear (POST) una nueva configuración de proyección que dictará qué campos XDM están disponibles en los bordes.
 
 **Formato de API**
 
@@ -430,13 +430,13 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 | Parámetro | Descripción |
 |---|---|
-| `{SCHEMA_NAME}` | Nombre de la clase de esquema asociada con la configuración de proyección a la que desea acceder. |
+| `{SCHEMA_NAME}` | El nombre de la clase de esquema asociada con la configuración de proyección a la que desea acceder. |
 
 **Solicitud**
 
 >[!NOTE]
 >
->La solicitud del POST para crear una configuración requiere una `Content-Type` como se muestra a continuación. Uso de un error `Content-Type` genera un error de estado HTTP 415 (tipo de medio no compatible).
+>La solicitud del POST para crear una configuración de requiere un específico `Content-Type` encabezado, como se muestra a continuación. Uso de un incorrecto `Content-Type` da como resultado un error de estado HTTP 415 (Tipo de medio no compatible).
 
 ```shell
 curl -X POST \
@@ -455,9 +455,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| `selector` | Cadena que contiene una lista de propiedades dentro del esquema que se van a replicar en los bordes. Las prácticas recomendadas para trabajar con selectores están disponibles en la sección [Selectores](#selectors) de este documento. |
+| `selector` | Cadena que contiene una lista de propiedades dentro del esquema que se van a replicar en los extremos. Las prácticas recomendadas para trabajar con selectores están disponibles en la [Selectores](#selectors) de este documento. |
 | `name` | Un nombre descriptivo para la nueva configuración de proyección. |
-| `destinationId` | Identificador del destino de borde al que se proyectarán los datos. |
+| `destinationId` | El identificador del destino de Edge al que se proyectarán los datos. |
 
 **Respuesta**
 
@@ -501,33 +501,33 @@ Una respuesta correcta devuelve los detalles de la configuración de proyección
 
 ## Selectores {#selectors}
 
-Un selector es una lista de nombres de campo XDM separados por comas. En una configuración de proyección, el selector designa las propiedades que se incluyen en las proyecciones. El formato de la variable `selector` El valor del parámetro se basa de forma flexible en la sintaxis XPath. La sintaxis admitida se resume a continuación y se proporcionan ejemplos adicionales como referencia.
+Un selector es una lista de nombres de campo XDM separados por comas. En una configuración de proyección, el selector designa las propiedades que se deben incluir en las proyecciones. El formato del `selector` El valor del parámetro se basa de forma flexible en la sintaxis XPath. A continuación se resume la sintaxis admitida, con ejemplos adicionales que se proporcionan como referencia.
 
-### Sintaxis compatible
+### Sintaxis admitida
 
 * Utilice comas para seleccionar varios campos. No utilice espacios.
 * Utilice la notación de puntos para seleccionar campos anidados.
-   * Por ejemplo, para seleccionar un campo denominado `field` que está anidado dentro de un campo denominado `foo`, utilice el selector `foo.field`.
+   * Por ejemplo, para seleccionar un campo denominado `field` que se anida dentro de un campo denominado `foo`, utilice el selector `foo.field`.
 * Al incluir un campo que contiene subcampos, todos los subcampos también se proyectan de forma predeterminada. Sin embargo, puede filtrar los subcampos devueltos mediante paréntesis `"( )"`.
-   * Por ejemplo, `addresses(type,city.country)` solo devuelve el tipo de dirección y el país en el que se ubica la ciudad de dirección para cada `addresses` elemento de matriz.
+   * Por ejemplo, `addresses(type,city.country)` devuelve únicamente el tipo de dirección y el país en el que se encuentra la ciudad de la dirección para cada uno `addresses` elemento de matriz.
    * El ejemplo anterior es equivalente a `addresses.type,addresses.city.country`.
 
 >[!NOTE]
 >
->Tanto la notación de puntos como la notación entre paréntesis son compatibles para hacer referencia a subcampos. Sin embargo, se recomienda utilizar la notación de puntos porque es más concisa y proporciona una mejor ilustración de la jerarquía de campos.
+>La notación con puntos y la notación entre paréntesis son compatibles con los subcampos de referencia. Sin embargo, se recomienda utilizar la notación de puntos porque es más concisa y proporciona una mejor ilustración de la jerarquía de campos.
 
-* Cada campo de un selector se especifica en relación con la raíz de la respuesta.
+* Cada campo del selector se especifica en relación con la raíz de la respuesta.
    * Si los datos son una colección de recursos, la proyección incluirá una matriz de recursos.
    * Si los datos son un solo recurso, la proyección incluirá campos relativos a ese recurso.
-   * Si el campo seleccionado es (o forma parte de) una matriz, la proyección incluirá la parte seleccionada de todos los elementos de la matriz.
+   * Si el campo seleccionado es (o forma parte) de una matriz, la proyección incluirá la parte seleccionada de todos los elementos de la matriz.
 
-### Ejemplos del parámetro del selector
+### Ejemplos del parámetro selector
 
-Los siguientes ejemplos muestran ejemplos `selector` , seguido de los valores estructurados que representan.
+Los siguientes ejemplos muestran un ejemplo `selector` parámetros, seguidos de los valores estructurados que representan.
 
 **person.lastName**
 
-Devuelve la variable `lastName` subcampo de la variable `person` en el recurso solicitado.
+Devuelve el `lastName` subcampo de la variable `person` en el recurso solicitado.
 
 ```json
 {
@@ -539,7 +539,7 @@ Devuelve la variable `lastName` subcampo de la variable `person` en el recurso s
 
 **direcciones**
 
-Devuelve todos los elementos del `addresses` , incluidos todos los campos de cada elemento, pero no otros campos.
+Devuelve todos los elementos del `addresses` matriz, incluidos todos los campos de cada elemento, pero ningún otro campo.
 
 ```json
 {
@@ -566,7 +566,7 @@ Devuelve todos los elementos del `addresses` , incluidos todos los campos de cad
 
 **person.lastName,addresses**
 
-Devuelve la variable `person.lastName` y todos los elementos del `addresses` matriz.
+Devuelve el `person.lastName` y todos los elementos del campo `addresses` matriz.
 
 ```json
 {
@@ -596,7 +596,7 @@ Devuelve la variable `person.lastName` y todos los elementos del `addresses` mat
 
 **addresses.city**
 
-Devuelve solo el campo de ciudad para todos los elementos de la matriz de direcciones.
+Devuelve únicamente el campo de ciudad de todos los elementos de la matriz de direcciones.
 
 ```json
 {
@@ -619,11 +619,11 @@ Devuelve solo el campo de ciudad para todos los elementos de la matriz de direcc
 
 >[!NOTE]
 >
->Siempre que se devuelve un campo anidado, la proyección incluye los objetos principales que lo rodean. Los campos principales no incluyen ningún otro campo secundario a menos que también estén seleccionados explícitamente.
+>Siempre que se devuelve un campo anidado, la proyección incluye los objetos principales envolventes. Los campos principales no incluyen ningún otro campo secundario a menos que también se seleccionen explícitamente.
 
-**addresses(type,city)**
+**direcciones(tipo,ciudad)**
 
-Devuelve solo los valores de la variable `type` y `city` campos para cada elemento del `addresses` matriz. Todos los demás subcampos contenidos en cada `addresses` se filtran hacia fuera.
+Devuelve solo los valores de `type` y `city` campos para cada elemento de la `addresses` matriz. Todos los demás subcampos incluidos en cada `addresses` Los elementos de se filtran.
 
 ```json
 {
@@ -648,4 +648,4 @@ Devuelve solo los valores de la variable `type` y `city` campos para cada elemen
 
 ## Pasos siguientes
 
-Esta guía le muestra los pasos necesarios para configurar las proyecciones y los destinos, incluido cómo dar un formato adecuado a la variable `selector` parámetro. Ahora puede crear nuevos destinos de proyección y configuraciones específicas de las necesidades de su organización.
+Esta guía muestra los pasos necesarios para configurar las proyecciones y los destinos, incluido cómo dar formato correctamente a la variable `selector` parámetro. Ahora puede crear nuevos destinos de proyección y configuraciones específicas para las necesidades de su organización.

@@ -12,20 +12,20 @@ ht-degree: 0%
 
 # Generar datos de ejemplo para un esquema XDM en la interfaz de usuario
 
-Para poder introducir datos en Adobe Experience Platform, el formato y la estructura de los datos deben cumplir con un esquema del Modelo de datos de experiencia (XDM) existente. Dependiendo de la complejidad del esquema para un conjunto de datos en particular, puede ser difícil determinar la forma exacta de los datos que el conjunto de datos espera al ingerirlos.
+Para introducir datos en Adobe Experience Platform, el formato y la estructura de los datos deben cumplir con un esquema de modelo de datos de experiencia (XDM) existente. Según la complejidad del esquema de un conjunto de datos concreto, puede resultar difícil determinar la forma exacta de los datos que el conjunto de datos espera tras la ingesta.
 
-Para cualquier esquema que defina en la interfaz de usuario del Experience Platform, puede generar un objeto JSON de muestra que se ajuste a la estructura del esquema. Este objeto puede servir de plantilla para cualquier dato que se incorpore en conjuntos de datos que empleen el esquema en cuestión.
+Para cualquier esquema que defina en la interfaz de usuario de Experience Platform, puede generar un objeto JSON de muestra que se ajuste a la estructura del esquema. Este objeto puede servir como plantilla para cualquier dato que se ingrese en conjuntos de datos que emplean el esquema en cuestión.
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. En el **[!UICONTROL Examinar]** , busque el esquema para el que desea generar datos de ejemplo. Selecciónela en la lista y el carril derecho se actualiza para mostrar detalles sobre el esquema. Desde aquí, seleccione **[!UICONTROL Descargar archivo de muestra]**.
+En la IU de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. En el **[!UICONTROL Examinar]** , busque el esquema para el que desee generar datos de ejemplo. Selecciónelo en la lista y el carril derecho se actualiza para mostrar detalles sobre el esquema. Desde aquí, seleccione **[!UICONTROL Descargar archivo de muestra]**.
 
 ![](../images/ui/sample/sample-data.png)
 
-El explorador descarga un archivo JSON de muestra. Ahora puede utilizar este archivo como referencia para estructurar los datos al ingerirlos en conjuntos de datos que empleen este esquema.
+El explorador descarga un archivo JSON de muestra. Ahora puede utilizar este archivo como referencia para estructurar los datos al ingerirlos en conjuntos de datos que emplean este esquema.
 
 ## Pasos siguientes
 
-Esta guía explica cómo generar un archivo JSON de muestra a partir de un esquema XDM en la interfaz de usuario de Platform. Para obtener información sobre cómo generar datos de ejemplo mediante la API del Registro de esquemas, consulte la [guía de extremo de datos de ejemplo](../api/sample-data.md).
+En esta guía se explica cómo generar un archivo JSON de muestra a partir de un esquema XDM en la interfaz de usuario de Platform. Para obtener información sobre cómo generar datos de ejemplo mediante la API de Registro de esquemas, consulte la [guía de extremo de datos de ejemplo](../api/sample-data.md).
 
-Una vez que esté listo para empezar a introducir datos, consulte el tutorial en [asignación de un archivo CSV a XDM](../../ingestion/tutorials/map-csv/overview.md) para obtener información sobre cómo asignar un archivo de datos plano (como un CSV) a un esquema XDM e incorporarlo en Platform. También puede establecer un [conexión de origen](../../sources/home.md) para introducir los datos de un origen externo y asignarlos a XDM.
+Una vez que esté listo para empezar a ingerir datos, consulte el tutorial sobre [asignación de un archivo CSV a XDM](../../ingestion/tutorials/map-csv/overview.md) para obtener información sobre cómo asignar un archivo de datos planos (como un CSV) a un esquema XDM e introducirlo en Platform. Como alternativa, puede establecer un [conexión de origen](../../sources/home.md) para introducir los datos de una fuente externa y asignarlos a XDM.
 
-Para obtener más información sobre las capacidades de la variable [!UICONTROL Esquemas] en la interfaz de usuario, consulte [[!UICONTROL Esquemas] información general del espacio de trabajo](./overview.md).
+Para obtener más información sobre las capacidades de [!UICONTROL Esquemas] en la interfaz de usuario de, consulte la [[!UICONTROL Esquemas] información general de workspace](./overview.md).

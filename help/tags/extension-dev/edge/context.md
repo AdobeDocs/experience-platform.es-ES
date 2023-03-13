@@ -1,10 +1,11 @@
 ---
 title: Módulos de extensión de Edge en contexto
-description: Obtenga información sobre el objeto de contexto y la función que desempeña en la interacción con los módulos de biblioteca en las extensiones de etiqueta de las propiedades edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información acerca del objeto de contexto y la función que desempeña en la interacción con los módulos de biblioteca en las extensiones de las propiedades de Edge.
+exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 82%
+ht-degree: 97%
 
 ---
 
@@ -95,15 +96,15 @@ La primera vez que se ejecuta esta acción, `ruleStash` comienza como `undefined
 
 >[!NOTE]
 >
->Tenga cuidado de devolver siempre el conjunto de reglas de extensión completa al utilizar esta estrategia. Si en su lugar solo devuelve un valor, sobrescribirá cualquier otra propiedad que haya establecido.
+>Debe tener cuidado de devolver siempre la cadena de regla de extensión completa al utilizar esta estrategia. Si, en su lugar, solo devolviese un valor, se sobrescribirían las demás propiedades que haya establecido.
 
 ## Utilidades
 
-La propiedad `utils` representa un objeto que proporciona utilidades específicas del tiempo de ejecución de etiquetas.
+La propiedad `utils` representa un objeto que proporciona utilidades específicas del tiempo de ejecución de la etiqueta.
 
 ### [!DNL logger]
 
-La utilidad `logger` le permite registrar mensajes que se mostrarán durante las sesiones de depuración al utilizar [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+La utilidad `logger` permite registrar los mensajes que se mostrarán durante las sesiones de depuración al utilizar [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');
@@ -130,7 +131,7 @@ context.utils.fetch('http://example.com/movies.json')
 
 ### [!DNL getBuildInfo]
 
-Esta utilidad devuelve un objeto que contiene información sobre la compilación de la biblioteca de tiempo de ejecución de etiquetas actual.
+Esta utilidad devuelve un objeto que contiene información sobre la compilación de la biblioteca de tiempo de ejecución de la etiqueta actual.
 
 ```js
 logger.log(context.utils.getBuildInfo().turbineBuildDate);

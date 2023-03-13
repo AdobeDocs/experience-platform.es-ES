@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;Control de acceso basado en atributos;control de acceso basado en atributos
 solution: Experience Platform
-title: Punto final de la API de productos
+title: Extremo de API de productos
 description: El extremo /products de la API de control de acceso basado en atributos le permite administrar productos mediante programación en Adobe Experience Platform.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
@@ -11,21 +11,21 @@ ht-degree: 4%
 
 ---
 
-# Punto final del producto
+# Extremo de productos
 
 >[!NOTE]
 >
->Si se pasa un token de usuario, el usuario del token debe tener una función &quot;administrador de organización&quot; para la organización solicitada.
+>Si se pasa un token de usuario, el usuario del token debe tener un rol de &quot;administrador de organización&quot; para la organización solicitada.
 
-La variable `/products` en la API de control de acceso basada en atributos le permite administrar mediante programación productos, así como categorías de permisos y conjuntos de permisos asociados con productos de su organización.
+El `/products` Este extremo de la API de control de acceso basado en atributos le permite administrar mediante programación productos, así como categorías de permisos y conjuntos de permisos asociados a productos de su organización.
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
-## Recuperar una lista de productos autorizados {#list}
+## Recuperación de una lista de productos con derechos {#list}
 
-Puede recuperar una lista de productos con derecho realizando una solicitud de GET al `/products` punto final.
+Puede recuperar una lista de productos autorizados realizando una solicitud de GET a `/products` punto final.
 
 **Formato de API**
 
@@ -35,7 +35,7 @@ GET /products/
 
 **Solicitud**
 
-La siguiente solicitud recupera una lista de productos con derecho que pertenecen a su organización.
+La siguiente solicitud recupera una lista de productos autorizados que pertenecen a su organización.
 
 ```shell
 curl -X GET \
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de los productos con derecho que pertenecen a su organización.
+Una respuesta correcta devuelve una lista de productos con derechos que pertenecen a su organización.
 
 ```json
 {
@@ -64,12 +64,12 @@ Una respuesta correcta devuelve una lista de los productos con derecho que perte
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID correspondiente del producto consultado. |
-| `name` | Nombre del producto consultado. |
+| `name` | El nombre del producto consultado. |
 | `serviceCode` | El código de servicio correspondiente del producto consultado. |
 
-## Buscar categorías de permisos por ID de producto
+## Búsqueda de categorías de permisos por ID de producto
 
-Puede buscar categorías de permisos para un producto determinado realizando una solicitud de GET al `/products/{PRODUCT_ID}/categories` al especificar el ID del producto.
+Puede buscar las categorías de permisos de un producto determinado realizando una solicitud de GET a `/products/{PRODUCT_ID}/categories` al especificar su ID de producto.
 
 **Formato de API**
 
@@ -83,7 +83,7 @@ GET /products/{PRODUCT_ID}/categories
 
 **Solicitud**
 
-La siguiente solicitud recupera categorías de permisos asociadas con `{PRODUCT_ID}`.
+La siguiente solicitud recupera las categorías de permisos asociadas con `{PRODUCT_ID}`.
 
 ```shell
 curl -X GET \
@@ -139,12 +139,12 @@ Una respuesta correcta devuelve las categorías de permisos asociadas con el ID 
 
 | Propiedad | Descripción |
 | --- | --- |
-| `category` | Categorías de permisos disponibles dentro del ID de producto consultado. |
+| `category` | Las categorías de permisos disponibles dentro del ID de producto consultado. |
 | `name` | Nombre de la categoría de permisos. |
 
-## Buscar conjuntos de permisos por ID de producto
+## Búsqueda de conjuntos de permisos por ID de producto
 
-Puede buscar conjuntos de permisos para un producto determinado realizando una solicitud de GET al `/products/{PRODUCT_ID}/permission-sets` al especificar el ID del producto.
+Puede buscar conjuntos de permisos para un producto determinado realizando una solicitud de GET a `/products/{PRODUCT_ID}/permission-sets` al especificar su ID de producto.
 
 **Formato de API**
 
@@ -158,7 +158,7 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 **Solicitud**
 
-La siguiente solicitud recupera conjuntos de permisos asociados con `{PRODUCT_ID}`.
+La siguiente solicitud recupera los conjuntos de permisos asociados a `{PRODUCT_ID}`.
 
 ```shell
 curl -X GET \
@@ -170,7 +170,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los conjuntos de permisos asociados con el ID de producto que ha consultado.
+Una respuesta correcta devuelve los conjuntos de permisos asociados al ID de producto que ha consultado.
 
 ```json
 {
@@ -235,10 +235,10 @@ Una respuesta correcta devuelve los conjuntos de permisos asociados con el ID de
 
 | Propiedad | Descripción |
 | --- | --- |
-| `permission-sets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contenga un grupo de permisos. |
+| `permission-sets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
 | `id` | El ID correspondiente del conjunto de permisos consultado. |
 | `name` | El nombre correspondiente del conjunto de permisos consultado. |
-| `category` | La categoría de permisos disponibles. |
-| `permissions` | Los permisos incluyen la capacidad de ver o usar funciones de Platform, como la creación de entornos limitados, la definición de esquemas y la administración de conjuntos de datos. |
-| `permissions.resource` | Recurso u objeto al que puede acceder o no un sujeto. Los recursos pueden ser archivos, aplicaciones, servidores o incluso API. |
-| `permissions.actions` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `view`, `read`, `create`, `edit`y `delete` |
+| `category` | La categoría de permisos disponible. |
+| `permissions` | Los permisos incluyen la capacidad de ver o utilizar funciones de Platform, como crear entornos limitados, definir esquemas y administrar conjuntos de datos. |
+| `permissions.resource` | Recurso u objeto al que puede tener acceso o al que no puede tener acceso un sujeto. Los recursos pueden ser archivos, aplicaciones, servidores o incluso API. |
+| `permissions.actions` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `view`, `read`, `create`, `edit`, y `delete` |

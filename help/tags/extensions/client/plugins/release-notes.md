@@ -25,7 +25,7 @@ ht-degree: 93%
 
 #### Correcciones de errores
 
-* Se ha corregido un problema en el cual getPercentPageViewed se dañaba al usar caracteres especiales
+* Se ha corregido un problema en el cual getPercentPageViewed se dañaba al utilizar caracteres especiales
 
 ## 20 de mayo de 2021
 

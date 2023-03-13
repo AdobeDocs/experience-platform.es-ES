@@ -1,8 +1,8 @@
 ---
 solution: Experience Platform
-title: Información general sobre los paneles
+title: Información general de paneles
 type: Documentation
-description: Explore varios tableros en Adobe Experience Platform para ver información importante sobre los datos de su organización, tal como se capturan en las instantáneas diarias.
+description: Explore varios paneles en Adobe Experience Platform para ver información importante acerca de los datos de su organización, tal y como se capturan durante las instantáneas diarias.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
@@ -12,32 +12,32 @@ ht-degree: 0%
 ---
 
 
-# Información general sobre los paneles {#dashboards}
+# Información general de paneles {#dashboards}
 
-Adobe Experience Platform proporciona varios tableros a través de los cuales puede ver información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias.
-
-## Introducción a los tableros
-
-Los tableros proporcionan informes integrados sobre los datos de su organización y están integrados directamente en el flujo de trabajo de los especialistas en marketing dentro de Platform. Estos tableros están disponibles sin necesidad de soporte de TI adicional o sin el tiempo y esfuerzo que de otro modo se necesitarían para exportar y procesar datos con diseño e implementación adicionales de almacenamiento de datos.
+Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
 
 ## Introducción a los paneles
 
-Para ver y administrar los tableros, vaya a **[!UICONTROL Tableros]** en la interfaz de usuario (IU) del Experience Platform y seleccione la **[!UICONTROL Examinar]** para acceder al inventario del tablero.
+Los paneles proporcionan informes listos para usar sobre los datos de su organización y están integrados directamente en el flujo de trabajo del experto en marketing dentro de Platform. Estos paneles están disponibles sin necesidad de soporte de TI adicional ni el tiempo y esfuerzo que, de lo contrario, tomaría exportar y procesar los datos con el diseño y la implementación de almacenamiento de datos adicional.
 
-También puede acceder a los tableros navegando a la sección correspondiente dentro de la interfaz de usuario del tablero que desee ver. Para ver el tablero de los perfiles, por ejemplo, vaya a la **[!UICONTROL Perfiles]** espacio de trabajo y seleccione **[!UICONTROL Información general]** pestaña .
+## Introducción a los paneles
 
-Los datos de la instantánea muestran los datos exactamente como aparecen en el momento concreto en que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos y los tableros no se actualizan en tiempo real.
+Para ver y administrar los paneles, vaya a **[!UICONTROL Paneles]** en la interfaz de usuario (IU) de Experience Platform y seleccione la opción **[!UICONTROL Examinar]** para acceder al inventario del tablero.
+
+También puede acceder a los paneles navegando a la sección adecuada dentro de la interfaz de usuario del panel que desee ver. Para ver el tablero de los perfiles, por ejemplo, vaya a **[!UICONTROL Perfiles]** Workspace y seleccione **[!UICONTROL Información general]** pestaña.
+
+Los datos de la instantánea muestran los datos exactamente como aparecen en el momento específico en el que se tomó. En otras palabras, la instantánea no es una aproximación o una muestra de los datos y los paneles no se actualizan en tiempo real.
 
 >[!NOTE]
 >
->Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el panel hasta que se tome la siguiente instantánea.
+>Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el tablero hasta que se tome la siguiente instantánea.
 
-## Inventario de tableros
+## Inventario del panel
 
-Para ver los pasos detallados sobre cómo usar la variable **[!UICONTROL Tableros]** espacio de trabajo para ver todos los tableros disponibles, consulte [guía de inventario del tablero](./inventory.md).
+Para ver los pasos detallados sobre cómo usar la variable **[!UICONTROL Paneles]** espacio de trabajo para ver todos los paneles disponibles, consulte la [guía de inventario de panel](./inventory.md).
 
-## Tableros disponibles
+## Paneles disponibles
 
-Actualmente hay varios paneles disponibles en Experience Platform, cada uno de los cuales proporciona transparencia en los datos de clientes de su organización.
+Actualmente, hay varios paneles disponibles en Experience Platform, cada uno de los cuales proporciona transparencia a los datos de clientes de su organización.
 
-Para obtener más información sobre estos tableros y sus métricas, seleccione un tablero de la lista de tableros disponibles en la navegación de documentación.
+Para obtener más información acerca de estos paneles y sus métricas, seleccione un panel de la lista de paneles disponibles en la navegación de la documentación.

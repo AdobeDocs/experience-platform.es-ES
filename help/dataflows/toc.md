@@ -13,16 +13,16 @@ ht-degree: 22%
 
 # Flujos de datos {#dataflows}
 
-- [Información general de flujos de datos](./home.md)
+- [Resumen de flujos de datos](./home.md)
 - Guías de API {#api}
-   - [Monitorizar flujos de datos](./api/monitor.md)
+   - [Monitorización de flujos de datos](./api/monitor.md)
    - [Ordenar y filtrar respuestas de API](./api/sort-and-filter.md)
-- Guías de la interfaz de usuario {#ui}
-   - [Monitorización de flujos de datos en orígenes](./ui/monitor-sources.md)
-   - [Monitorizar flujos de datos en identidades](./ui/monitor-identities.md)
+- Guías de IU {#ui}
+   - [Monitorización de flujos de datos en fuentes](./ui/monitor-sources.md)
+   - [Supervisión de flujos de datos en identidades](./ui/monitor-identities.md)
    - [Monitorización de flujos de datos en perfiles](./ui/monitor-profiles.md)
    - [Monitorización de flujos de datos en segmentos](./ui/monitor-segments.md)
    - [Monitorización de flujos de datos en destinos](./ui/monitor-destinations.md)
-   - Supervisión B2B {#b2b}
-      - [Monitorización de trabajos de enriquecimiento de perfiles](./ui/b2b/monitor-profile-enrichment.md)
-- [API del servicio de flujo](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+   - Monitorización B2B {#b2b}
+      - [Supervisión de trabajos de enriquecimiento de perfil](./ui/b2b/monitor-profile-enrichment.md)
+- [API de Flow Service](https://www.adobe.io/experience-platform-apis/references/flow-service/)

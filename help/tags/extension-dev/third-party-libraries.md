@@ -1,10 +1,11 @@
 ---
 title: Implementación de bibliotecas de terceros
-description: Obtenga información sobre los distintos métodos para alojar bibliotecas de terceros en las extensiones de etiquetas de Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Obtenga información acerca de los diferentes métodos para alojar bibliotecas de terceros dentro de sus extensiones de etiquetas de Adobe Experience Platform.
+exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1330'
-ht-degree: 67%
+ht-degree: 98%
 
 ---
 
@@ -14,17 +15,17 @@ ht-degree: 67%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Uno de los objetivos principales de las extensiones de etiquetas en Adobe Experience Platform es permitirle implementar fácilmente las tecnologías de marketing (bibliotecas) existentes en el sitio web. Con las extensiones, puede implementar bibliotecas proporcionadas por redes de envío de contenido de terceros (CDN) sin tener que editar manualmente el HTML del sitio web.
+Uno de los principales objetivos de las extensiones de etiquetas en Adobe Experience Platform es permitir la implementación sencilla de las tecnologías de marketing (bibliotecas) existentes en su sitio web. Con las extensiones, puede implementar bibliotecas proporcionadas por redes de envío de contenido de terceros (CDN) sin tener que editar manualmente el HTML del sitio web.
 
-Existen varios métodos para alojar bibliotecas de terceros (proveedores) dentro de las extensiones. Este documento proporciona información general de estos distintos métodos de implementación y detalla los pros y los contras de cada uno.
+Existen varios métodos para alojar bibliotecas de terceros (proveedores) en sus extensiones. Este documento proporciona información general de estos distintos métodos de implementación y detalla los pros y los contras de cada uno.
 
 ## Requisitos previos
 
-Este documento requiere comprender bien las extensiones dentro de las etiquetas, lo que incluye lo que pueden hacer y cómo están compuestas. Consulte la [información general sobre el desarrollo de extensiones](./overview.md) para obtener más información.
+Este documento requiere una comprensión práctica de las extensiones de etiquetas, incluido lo que pueden hacer y cómo están compuestas. Consulte la [información general sobre el desarrollo de extensiones](./overview.md) para obtener más información.
 
 ## Proceso de carga de código base
 
-Fuera del contexto de las etiquetas, es importante comprender cómo las tecnologías de marketing se cargan normalmente en un sitio web. Los proveedores de bibliotecas de terceros proporcionan un fragmento de código (denominado código base) que debe incrustarse en el HTML del sitio web para poder cargar las funcionalidades de la biblioteca.
+Fuera del contexto de las etiquetas, es importante comprender cómo se suelen cargar las tecnologías de marketing en un sitio web. Los proveedores de bibliotecas de terceros proporcionan un fragmento de código (denominado código base) que debe incrustarse en el HTML del sitio web para poder cargar las funcionalidades de la biblioteca.
 
 En general, los códigos base para las tecnologías de marketing ejecutan alguna variante del siguiente proceso al cargarse en el sitio:
 
@@ -32,13 +33,13 @@ En general, los códigos base para las tecnologías de marketing ejecutan alguna
 1. Cargue la biblioteca del proveedor.
 1. Realice una serie de llamadas iniciales en cola a la función global para la configuración y el seguimiento.
 
-Cuando la función global se haya configurado inicialmente, aún podrá realizar llamadas a la función antes de que finalice la carga de la biblioteca. Las llamadas que realice se añaden al mecanismo de cola del código base y se ejecutan en orden secuencial una vez que se carga la biblioteca.
+Cuando la función global se haya configurado inicialmente, aún podrá realizar llamadas a la función antes de que finalice la carga de la biblioteca. Todas las llamadas que realice se añadirán al mecanismo de colocación en cola del código base y se ejecutarán en orden secuencial una vez que se cargue la biblioteca.
 
 Una vez que la biblioteca termina de cargarse, la función global se sustituye por una nueva que evita la cola y, en su lugar, procesa inmediatamente cualquier llamada futura a la función.
 
 ### Ejemplo de código base
 
-El siguiente JavaScript es un ejemplo de código base no minificado para la [Pinterest conversion tag](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?), al que se hará referencia más adelante en este documento para demostrar cómo se adapta el código base a las diferentes estrategias de implementación con etiquetas:
+El siguiente código de JavaScript es un ejemplo de código base sin reducir para la [etiqueta de conversión de Pinterest](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?), a la que se hará referencia más adelante en este documento para demostrar cómo se adapta el código base a las distintas estrategias de implementación con etiquetas:
 
 ```js
 !function(scriptUrl) {
@@ -83,11 +84,11 @@ El código base crea un elemento de secuencia de comandos, lo configura para que
 
 ## Opciones de implementación de etiquetas
 
-Las secciones siguientes muestran las diferentes maneras de cargar bibliotecas de proveedores en sus extensiones utilizando el código base de Pinterest que se mostró anteriormente como ejemplo. Cada uno de estos ejemplos implica crear un tipo de acción [para una extensión web](./web/action-types.md) que cargue la biblioteca en el sitio web.
+Las secciones siguientes muestran las diferentes maneras de cargar bibliotecas de proveedores en sus extensiones utilizando el código base de Pinterest que se mostró anteriormente como ejemplo. Cada uno de estos ejemplos implica crear un [tipo de acción para una extensión web](./web/action-types.md) que cargue la biblioteca en el sitio web.
 
 >[!NOTE]
 >
->Aunque los ejemplos siguientes utilizan tipos de acción con fines de demostración, puede aplicar los mismos principios a cualquier función que cargue la biblioteca de etiquetas en el sitio.
+>Aunque los ejemplos siguientes utilizan tipos de acción para fines de demostración, puede aplicar los mismos principios a cualquier función que cargue la biblioteca de etiquetas en su sitio web.
 
 
 Los métodos disponibles son los siguientes:
@@ -98,7 +99,7 @@ Los métodos disponibles son los siguientes:
       - [Ejemplo de código base](#base-code-example)
    - [Opciones de implementación de etiquetas](#tags-implementation-options)
       - [Cargar en tiempo de ejecución desde el host de proveedor {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
-      - [Carga durante la ejecución desde el host de biblioteca de etiquetas](#load-at-runtime-from-the-tag-library-host)
+      - [Cargar en tiempo de ejecución desde el host de biblioteca de etiquetas](#load-at-runtime-from-the-tag-library-host)
       - [Incrustar la biblioteca directamente](#embed-the-library-directly)
    - [Pasos siguientes](#next-steps)
 
@@ -106,7 +107,7 @@ Los métodos disponibles son los siguientes:
 
 El método más común para alojar la biblioteca de proveedores es utilizar la CDN del proveedor. Como el código base de la mayoría de las bibliotecas de proveedores ya está configurado para cargar la biblioteca desde la CDN del proveedor, puede configurar la extensión para cargar la biblioteca desde la misma ubicación.
 
-Este método suele ser el más fácil de mantener, ya que la extensión cargará automáticamente cualquier actualización realizada en el archivo en la CDN.
+Este método es generalmente el más fácil de mantener, ya que las actualizaciones que se realicen en el archivo en la CDN se cargarán automáticamente mediante la extensión.
 
 Al utilizar este método, simplemente puede pegar todo el código base directamente en un tipo de acción como se muestra a continuación:
 
@@ -159,11 +160,11 @@ module.exports = function() {
 };
 ```
 
-### Carga durante la ejecución desde el host de biblioteca de etiquetas
+### Cargar en tiempo de ejecución desde el host de biblioteca de etiquetas
 
 Utilizar una CDN de un proveedor para el alojamiento de bibliotecas plantea varios riesgos: la CDN puede fallar, el archivo puede actualizarse con un error crítico en cualquier momento o puede verse comprometido por acciones malintencionadas.
 
-Para resolver estos problemas, puede optar por incluir la biblioteca del proveedor como un archivo independiente dentro de la extensión. La extensión se puede configurar para que el archivo se aloje junto a la biblioteca de etiquetas principal. En tiempo de ejecución, la extensión carga la biblioteca del proveedor desde el mismo servidor que entregó la biblioteca principal al sitio web.
+Para resolver estos problemas, puede optar por incluir la biblioteca del proveedor como un archivo independiente dentro de la extensión. La extensión se puede configurar para que el archivo se aloje junto con la biblioteca principal de etiquetas. En tiempo de ejecución, la extensión carga la biblioteca del proveedor desde el mismo servidor que entregó la biblioteca principal al sitio web.
 
 >[!IMPORTANT]
 >
@@ -171,7 +172,7 @@ Para resolver estos problemas, puede optar por incluir la biblioteca del proveed
 
 Para implementar esto, primero debe descargar la biblioteca del proveedor en el equipo. En el caso de Pinterest, la biblioteca del proveedor se encuentra en [https://s.pinimg.com/ct/core.js](https://s.pinimg.com/ct/core.js). Una vez descargado el archivo, debe colocarlo dentro del proyecto de extensión. En el ejemplo siguiente, el archivo se denomina `pinterest.js` y se encuentra dentro de una carpeta `vendor` en el directorio del proyecto.
 
-Una vez que el archivo de biblioteca está en el proyecto, debe actualizar el [manifiesto de extensión](./manifest.md) (`extension.json`) para indicar que la biblioteca del proveedor debe entregarse junto con la biblioteca de etiquetas principal. Esto se realiza añadiendo la ruta al archivo de biblioteca dentro de una matriz `hostedLibFiles`:
+Una vez que el archivo de biblioteca esté en el proyecto, debe actualizar el [manifiesto de extensión](./manifest.md) (`extension.json`) para indicar que la biblioteca del proveedor debe entregarse junto con la biblioteca principal de etiquetas. Esto se realiza añadiendo la ruta al archivo de biblioteca dentro de una matriz `hostedLibFiles`:
 
 ```json
 {
@@ -200,11 +201,11 @@ module.exports = function() {
 };
 ```
 
-Es importante tener en cuenta que al utilizar este método, debe actualizar manualmente el archivo de proveedor descargado cada vez que la biblioteca se actualice en su CDN y liberar los cambios a una nueva versión de la extensión.
+Es importante tener en cuenta que, al utilizar este método, debe actualizar manualmente el archivo de proveedor descargado cada vez que se actualice la biblioteca en su CDN y lanzar los cambios en una nueva versión de la extensión.
 
 ### Incrustar la biblioteca directamente
 
-Puede evitar tener que cargar la biblioteca del proveedor por completo incrustando directamente el código de biblioteca en el propio código de acción, lo que lo convierte en parte de la biblioteca de etiquetas principal. Utilizar este método aumenta el tamaño de la biblioteca principal, pero evita la necesidad de realizar una solicitud HTTP adicional para recuperar un archivo independiente.
+Puede evitar tener que cargar la biblioteca del proveedor por completo incrustando directamente el código de la biblioteca en el propio código de acción, lo que lo convierte en parte de la biblioteca principal de etiquetas. Utilizar este método aumenta el tamaño de la biblioteca principal, pero evita la necesidad de realizar una solicitud HTTP adicional para recuperar un archivo independiente.
 
 Utilizando el código de acción integrado en la [sección anterior](#vendor-host) como punto de partida, puede reemplazar la línea donde se carga la secuencia de comandos con el contenido de la propia secuencia de comandos:
 
@@ -227,6 +228,6 @@ module.exports = function() {
 
 ## Pasos siguientes
 
-Este documento proporciona información general sobre los distintos métodos para alojar bibliotecas de terceros en las extensiones de etiquetas. Aunque los ejemplos proporcionados se centraban en las bibliotecas, estas técnicas se aplican a cualquier parte de código que su extensión pueda utilizar.
+Este documento proporciona una visión general de los diferentes métodos para alojar bibliotecas de terceros en las extensiones de etiquetas. Aunque los ejemplos proporcionados se centraban en las bibliotecas, estas técnicas se aplican a cualquier parte de código que su extensión pueda utilizar.
 
 Consulte la documentación relacionada en esta guía para obtener más información sobre las herramientas que puede utilizar para configurar las extensiones, incluidos los tipos de acciones, el manifiesto de extensión, los módulos principales y el objeto de turbina.

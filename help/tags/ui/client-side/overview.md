@@ -1,10 +1,11 @@
 ---
 title: Información del lado del cliente
 description: Obtenga información sobre cómo administrar las operaciones de etiquetas en el lado del cliente de la aplicación web o móvil.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 54c66066-93f7-4311-a255-0825055d0dec
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '198'
-ht-degree: 40%
+ht-degree: 90%
 
 ---
 
@@ -22,6 +23,6 @@ Esta sección contiene información que resulta útil al administrar las operaci
 
 * [**Implementación asíncrona de JavaScript de Experience Cloud**](asynchronous-deployment.md)
 
-   El rendimiento y la implementación sin bloqueo de las bibliotecas JavaScript requeridas por nuestros productos son cada vez más importantes para los usuarios de Adobe Experience Cloud. Las herramientas como [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recomiendan a los usuarios cambiar su forma de implementar las bibliotecas de [!DNL Adobe] en el sitio. Este artículo explica cómo utilizar las bibliotecas JavaScript de Adobe de forma asíncrona.
+   El rendimiento y la implementación sin bloqueo de las bibliotecas de JavaScript requeridas por nuestros productos es cada vez más importante para los usuarios de Adobe Experience Cloud. Las herramientas como [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recomiendan a los usuarios cambiar su forma de implementar las bibliotecas de [!DNL Adobe] en el sitio. Este artículo explica cómo utilizar las bibliotecas de JavaScript de Adobe de forma asíncrona.
 
-* Una [**Política de seguridad de contenido**](content-security-policy.md) (CSP) es una herramienta que se utiliza para detectar y mitigar ciertos tipos de ataques basados en el explorador, como scripts entre sitios (XSS). Este artículo describe el impacto de CSP en las implementaciones de etiquetas y lo que puede hacer al respecto.
+* Una [**Política de seguridad de contenido**](content-security-policy.md) (CSP) es una herramienta que se utiliza para detectar y mitigar ciertos tipos de ataques basados en el explorador, como scripts entre sitios (XSS). Este artículo describe cómo afectan las CSP a las implementaciones de etiqueta y lo que puede hacer al respecto.

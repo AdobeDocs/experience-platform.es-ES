@@ -15,32 +15,32 @@ ht-degree: 74%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Este documento cubre las notas de la versión de la extensión de etiqueta del servicio de Adobe Experience Cloud ID. Para obtener las notas de la versión del propio servicio de identidad de Experience Cloud, consulte la [Documentación del servicio de identidad](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es).
+Este documento describe las notas de la versión de la extensión de Adobe Experience Cloud Identity Service. Para obtener las notas de la versión del propio servicio de ID de Experience Cloud, consulte la [Documentación del servicio de identidad](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es).
 
 ## 17 de octubre de 2022
 
 ### Extensión de Experience Cloud ID 5.5.0
 
-* La extensión ahora es compatible con la versión 5.5.0 del [Cliente JS de visitante](https://github.com/Adobe-Marketing-Cloud/id-service). Consulte la [Notas de la versión del visitante](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) para actualizaciones específicas.
+* La extensión ahora es compatible con la versión 5.5.0 de [Cliente JS de visitante](https://github.com/Adobe-Marketing-Cloud/id-service). Consulte la [Notas de la versión del visitante](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) para actualizaciones específicas.
 
 ## 9 de marzo de 2022
 
 ### Extensión de Experience Cloud ID 5.4.0
 
-* Esta versión contiene la última versión de Visitante 5.4.0, que tiene las siguientes actualizaciones:
+* Esta versión contiene la última versión, Visitor 5.4.0, que tiene las siguientes actualizaciones:
 
-   * Capacidad para configurar la duración de la `s_ecid` cookie mediante cookieLifetime config
-   * Actualización de un problema del explorador Firefox que se produce cuando una página se carga en un iFrame secundario
+   * Capacidad para configurar la duración del `s_ecid` cookie con la configuración de cookieLifetime
+   * Actualización de un problema con el navegador Firefox que se produce cuando una página se carga en un iFrame secundario
 
 ## 10 de octubre de 2021
 
 ### Extensión de Experience Cloud ID 5.3.1
 
-* Esta versión contiene la última versión de Visitante 5.3.0, que tiene las siguientes nuevas actualizaciones:
+* Esta versión contiene la última versión, Visitor 5.3.0, que tiene las siguientes actualizaciones nuevas:
 
    * Algoritmo actualizado para generar ECID local
-   * Última inclusión con `Secure` y `SameSite` indicadores para la cookie de privacidad
-   * Corrección de un problema con el explorador Firefox cuando una página se carga en un iFrame secundario
+   * Última inclusión con `Secure` y `SameSite` indicadores de la cookie de privacidad
+   * Se ha corregido un problema con el navegador Firefox cuando una página se carga en un iFrame secundario
 
 ## 12 de enero de 2021
 

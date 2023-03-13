@@ -1,5 +1,5 @@
 ---
-description: En esta página se enumeran y describen los pasos para configurar un destino basado en archivos mediante Destination SDK.
+description: En esta página se muestran y describen los pasos para configurar un destino basado en archivos mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino basado en archivos
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
 source-git-commit: 04e4b0f6b6d84d04d0a24a462383420ebd9a2daf
@@ -13,21 +13,21 @@ ht-degree: 1%
 
 ## Información general {#overview}
 
-Esta página describe cómo utilizar la información de [Opciones de configuración en el SDK de Destinations](./configuration-options.md) y en otros documentos de referencia de API y funcionalidad de Destination SDK para configurar un [destino basado en archivos](../../destinations/destination-types.md#file-based). Los pasos se muestran en orden secuencial a continuación.
+Esta página describe cómo utilizar la información de [Opciones de configuración en el SDK de destinos](./configuration-options.md) y en otros documentos de referencia de la API y la funcionalidad de Destination SDK para configurar un [destino basado en archivos](../../destinations/destination-types.md#file-based). Los pasos se presentan en orden secuencial a continuación.
 
 ## Requisitos previos {#prerequisites}
 
-Antes de avanzar a los pasos que se ilustran a continuación, lea la [introducción al Destination SDK](./getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
+Antes de avanzar a los pasos que se ilustran a continuación, lea la [Introducción al Destination SDK](./getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
 
-## Pasos para utilizar las opciones de configuración en Destination SDK para configurar el destino {#steps}
+## Pasos para utilizar las opciones de configuración de Destination SDK para configurar el destino {#steps}
 
-![Pasos ilustrados para utilizar extremos de Destination SDK](./assets/destination-sdk-steps-batch.png)
+![Pasos ilustrados del uso de extremos de Destination SDK](./assets/destination-sdk-steps-batch.png)
 
-## Paso 1: Creación de una configuración de servidor y archivo {#create-server-file-configuration}
+## Paso 1: Crear un servidor y una configuración de archivo {#create-server-file-configuration}
 
-Comience creando un servidor y una configuración de archivo utilizando `/destinations-server` punto final (leer [Referencia de API](./destination-server-api.md)).
+Comience creando un servidor y una configuración de archivo utilizando `/destinations-server` extremo (leer) [Referencia de API](./destination-server-api.md)).
 
-A continuación se muestra un ejemplo de configuración para un [!DNL Amazon S3] destino. Para configurar otros tipos de destinos basados en archivos, consulte sus [configuraciones del servidor](server-and-file-configuration.md).
+A continuación se muestra un ejemplo de configuración para una [!DNL Amazon S3] destino. Para configurar otros tipos de destinos basados en archivos, consulte sus correspondientes [configuraciones del servidor](server-and-file-configuration.md).
 
 **Formato de API**
 
@@ -112,11 +112,11 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 }
 ```
 
-## Paso 2: Crear configuración de destino {#create-destination-configuration}
+## Paso 2: Crear la configuración de destino {#create-destination-configuration}
 
-A continuación se muestra un ejemplo de una configuración de destino creada mediante el uso de la variable `/destinations` extremo de API. Para obtener más información sobre esta configuración, consulte [Configuración de destino](./file-based-destination-configuration.md).
+A continuación se muestra un ejemplo de una configuración de destino creada con la variable `/destinations` Extremo de API. Para obtener más información sobre esta configuración, consulte [Configuración de destino](./file-based-destination-configuration.md).
 
-Para conectar el servidor y la configuración de archivo en el paso 1 a esta configuración de destino, añada el ID de instancia del servidor y la configuración de plantilla como `destinationServerId` aquí.
+Para conectar el servidor y la configuración de archivo del paso 1 a esta configuración de destino, agregue el ID de instancia del servidor y la configuración de plantilla como `destinationServerId` aquí.
 
 **Formato de API**
 
@@ -240,44 +240,44 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 }
 ```
 
-## Paso 3: Crear configuración de metadatos de audiencia {#create-audience-metadata-configuration}
+## Paso 3: Crear la configuración de metadatos de audiencia {#create-audience-metadata-configuration}
 
-Para algunos destinos, Destination SDK requiere que configure una configuración de metadatos de audiencia para crear, actualizar o eliminar audiencias de forma programada en el destino. Consulte [Gestión de metadatos de audiencia](./audience-metadata-management.md) para obtener información sobre cuándo debe configurar esta configuración y cómo hacerlo.
+Para algunos destinos, Destination SDK requiere que configure los metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Consulte [Gestión de metadatos de audiencia](./audience-metadata-management.md) para obtener información sobre cuándo debe configurar esta configuración y cómo hacerlo.
 
-Si utiliza una configuración de metadatos de audiencia, debe conectarla a la configuración de destino que creó en el paso 2. Añada el ID de instancia de la configuración de metadatos de audiencia a la configuración de destino como `audienceTemplateId`.
+Si utiliza una configuración de metadatos de audiencia, debe conectarla a la configuración de destino creada en el paso 2. Añada el ID de instancia de la configuración de metadatos de audiencia a la configuración de destino como `audienceTemplateId`.
 
-## Paso 4: Configuración de la autenticación {#set-up-authentication}
+## Paso 4: Configurar la autenticación {#set-up-authentication}
 
-Dependiendo de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` en la configuración de destino anterior, puede configurar la autenticación para el destino utilizando la variable `/destination` o `/credentials` punto final.
+En función de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` en la configuración de destino anterior, puede configurar la autenticación para su destino mediante el `/destination` o el `/credentials` punto final.
 
-* Si ha seleccionado `"authenticationRule": "CUSTOMER_AUTHENTICATION"` en la configuración de destino, consulte las secciones siguientes para ver los tipos de autenticación admitidos por el Destination SDK para destinos basados en archivos:
+* Si ha seleccionado `"authenticationRule": "CUSTOMER_AUTHENTICATION"` en la configuración de destino, consulte las siguientes secciones sobre los tipos de autenticación admitidos por Destination SDK para destinos basados en archivos:
 
    * [Autenticación de Amazon S3](authentication-configuration.md#s3)
    * [Azure Blob](authentication-configuration.md#blob)
-   * [Almacenamiento de Azure Data Lake](authentication-configuration.md#adls)
-   * [Almacenamiento en la nube de Google](authentication-configuration.md#gcs)
+   * [Azure Data Lake Storage](authentication-configuration.md#adls)
+   * [Almacenamiento de Google Cloud](authentication-configuration.md#gcs)
    * [Autenticación SFTP con clave SSH](authentication-configuration.md#sftp-ssh)
    * [Autenticación SFTP con contraseña](authentication-configuration.md#sftp-password)
 
-* Si ha seleccionado `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulte [Configuración de autenticación](./authentication-configuration.md#when-to-use).
+* Si ha seleccionado `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulte la [Configuración de autenticación](./authentication-configuration.md#when-to-use).
 
 
-## Paso 5: Probar el destino {#test-destination}
+## Paso 5: Prueba del destino {#test-destination}
 
-Después de configurar el destino utilizando los extremos de configuración de los pasos anteriores, puede usar la variable [herramienta de prueba de destino](./file-based-destination-testing-overview.md) para probar la integración entre Adobe Experience Platform y el destino.
+Después de configurar el destino mediante los extremos de configuración de los pasos anteriores, puede utilizar el [herramienta de prueba de destino](./file-based-destination-testing-overview.md) para probar la integración entre Adobe Experience Platform y el destino.
 
-Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario del Experience Platform para crear segmentos, que activará en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear segmentos en Experience Platform:
+Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear segmentos que activará en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear segmentos en Experience Platform:
 
-* [Creación de una página de documentación de segmentos](/help/segmentation/ui/overview.md#create-segment)
-* [Tutorial en vídeo sobre la creación de segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Crear una página de documentación de segmentos](/help/segmentation/ui/overview.md#create-segment)
+* [Tutorial de vídeo sobre Creación de un segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-## Paso 6: Publicar su destino {#publish-destination}
+## Paso 6: Publicación del destino {#publish-destination}
 
 >[!NOTE]
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Después de configurar y probar el destino, use la variable [API de publicación de destino](./destination-publish-api.md) para enviar la configuración a Adobe para su revisión.
+Después de configurar y probar el destino, utilice el [API de publicación de destino](./destination-publish-api.md) para enviar la configuración al Adobe para su revisión.
 
 ## Paso 7: Documentar el destino {#document-destination}
 
@@ -285,12 +285,12 @@ Después de configurar y probar el destino, use la variable [API de publicación
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Si es un proveedor de software independiente (ISV) o un integrador de sistemas (SI) que crea un [integración de productos](./overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](./docs-framework/documentation-instructions.md) para crear una página de documentación de producto para su destino en el [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md).
+Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea un [integración de productos](./overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](./docs-framework/documentation-instructions.md) para crear una página de documentación del producto para el destino en [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md).
 
-## Paso 8: Enviar destino para revisión del Adobe {#submit-for-review}
+## Paso 8: Enviar destino para su revisión por parte del Adobe {#submit-for-review}
 
 >[!NOTE]
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Finalmente, antes de que el destino se pueda publicar en el catálogo del Experience Platform y sea visible para todos los clientes Experience Platform, debe enviar oficialmente el destino para su revisión por parte del Adobe. Buscar información completa sobre cómo [enviar para su revisión un destino producido creado en Destination SDK](/help/destinations/destination-sdk/submit-destination.md).
+Por último, para que el destino se pueda publicar en el catálogo de Experience Platform y sea visible para todos los clientes de Experience Platform, debe enviar oficialmente el destino para que el Adobe lo revise. Encuentre información completa acerca de cómo [enviar para su revisión un destino de productos creado en Destination SDK](/help/destinations/destination-sdk/submit-destination.md).

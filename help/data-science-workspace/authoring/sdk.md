@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;SDK;creación de modelos;Data Science Workspace;temas populares;pruebas
+keywords: Experience Platform;guía para desarrolladores;SDK;Creación de modelos;Espacio de trabajo de ciencia de datos;temas populares;pruebas
 solution: Experience Platform
 title: SDK de creación de modelos
 description: El SDK de creación de modelos le permite desarrollar fórmulas de aprendizaje automático personalizadas y canalizaciones de funciones que se pueden utilizar en Adobe Experience Platform Data Science Workspace, proporcionando plantillas implementables en PySpark y Spark (Scala).
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 El SDK de creación de modelos le permite desarrollar fórmulas de aprendizaje automático personalizadas y canalizaciones de funciones que se pueden utilizar en [!DNL Adobe Experience Platform] Data Science Workspace, que proporciona plantillas implementables en [!DNL PySpark] y [!DNL Spark (Scala)].
 
-Este documento proporciona información sobre las distintas clases que se encuentran en el SDK de creación de modelos.
+Este documento proporciona información sobre las distintas clases que se encuentran dentro del SDK de creación de modelos.
 
 ## DataLoader {#dataloader}
 
-La clase DataLoader encapsula cualquier cosa relacionada con la recuperación, el filtrado y la devolución de datos de entrada sin procesar. Algunos ejemplos de datos de entrada son los de formación, puntuación o ingeniería de características. Los cargadores de datos amplían la clase abstracta `DataLoader` y deben anular el método abstracto `load`.
+La clase DataLoader encapsula todo lo relacionado con la recuperación, el filtrado y la devolución de datos de entrada sin procesar. Algunos ejemplos de datos de entrada son los de formación, puntuación o ingeniería de funciones. Los cargadores de datos amplían la clase abstracta `DataLoader` y debe anular el método abstracto `load`.
 
 **PySpark**
 
@@ -36,13 +36,13 @@ En la tabla siguiente se describen los métodos abstractos de una clase PySpark 
         <tr>
             <td>
                 <p><code>load(self, configProperties, spark)</code></p>
-                <p>Carga y devolución de datos de Platform como DataFrame de Pandas</p>
+                <p>Carga y devolución de datos de Platform como un DataFrame de Pandas</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Mapa de propiedades de configuración</li>
-                    <li><code>spark</code>: Spark session</li>
+                    <li><code>configProperties</code>: asignación de propiedades de configuración</li>
+                    <li><code>spark</code>: sesión de Spark</li>
                 </ul>
             </td>
         </tr>
@@ -51,7 +51,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase PySpark 
 
 **Spark**
 
-La tabla siguiente describe los métodos abstractos de una [!DNL Spark] Clase del cargador de datos:
+En la tabla siguiente se describen los métodos abstractos de una [!DNL Spark] Clase del cargador de datos:
 
 <table>
     <thead>
@@ -68,8 +68,8 @@ La tabla siguiente describe los métodos abstractos de una [!DNL Spark] Clase de
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Mapa de propiedades de configuración</li>
-                    <li><code>sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: asignación de propiedades de configuración</li>
+                    <li><code>sparkSession</code>: sesión de Spark</li>
                 </ul>
             </td>
         </tr>
@@ -78,7 +78,7 @@ La tabla siguiente describe los métodos abstractos de una [!DNL Spark] Clase de
 
 ### Carga de datos desde un [!DNL Platform] conjunto de datos {#load-data-from-a-platform-dataset}
 
-El siguiente ejemplo recupera [!DNL Platform] datos por ID y devuelve un DataFrame, donde el ID del conjunto de datos (`datasetId`) es una propiedad definida en el archivo de configuración.
+El siguiente ejemplo recupera [!DNL Platform] y devuelve un DataFrame, donde el ID del conjunto de datos (`datasetId`) es una propiedad definida en el archivo de configuración.
 
 **PySpark**
 
@@ -193,11 +193,11 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-La clase DataSaver encapsula todo lo relacionado con el almacenamiento de datos de salida, incluidos los procedentes de la puntuación o la ingeniería de características. Los ahorradores de datos amplían la clase abstracta `DataSaver` y deben anular el método abstracto `save`.
+La clase DataSaver encapsula todo lo relacionado con el almacenamiento de datos de salida, incluidos los de la puntuación o la ingeniería de características. Los protectores de datos amplían la clase abstracta `DataSaver` y debe anular el método abstracto `save`.
 
 **PySpark**
 
-La tabla siguiente describe los métodos abstractos de una [!DNL PySpark] Clase de Data Saver:
+En la tabla siguiente se describen los métodos abstractos de una [!DNL PySpark] Clase del Data Saver:
 
 <table>
     <thead>
@@ -210,13 +210,13 @@ La tabla siguiente describe los métodos abstractos de una [!DNL PySpark] Clase 
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>Recibir datos de salida como DataFrame y almacenarlos en un conjunto de datos de Platform</p>
+                <p>Recibir datos de salida como un DataFrame y almacenarlos en un conjunto de datos de Platform</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Mapa de propiedades de configuración</li>
-                    <li><code>dataframe</code>: Datos que se van a almacenar en forma de DataFrame</li>
+                    <li><code>configProperties</code>: asignación de propiedades de configuración</li>
+                    <li><code>dataframe</code>: datos que se van a almacenar en forma de DataFrame</li>
                 </ul>
             </td>
         </tr>
@@ -225,7 +225,7 @@ La tabla siguiente describe los métodos abstractos de una [!DNL PySpark] Clase 
 
 **Spark (Scala)**
 
-La tabla siguiente describe los métodos abstractos de una [!DNL Spark] Clase de Data Saver:
+En la tabla siguiente se describen los métodos abstractos de una [!DNL Spark] Clase del Data Saver:
 
 <table>
     <thead>
@@ -238,12 +238,12 @@ La tabla siguiente describe los métodos abstractos de una [!DNL Spark] Clase de
         <tr>
             <td>
                 <p><code>save(configProperties, dataFrame)</code></p>
-                <p>Recibir datos de salida como DataFrame y almacenarlos en un conjunto de datos de Platform</p>
+                <p>Recibir datos de salida como un DataFrame y almacenarlos en un conjunto de datos de Platform</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Mapa de propiedades de configuración</li>
-                    <li><code>dataFrame</code>: Datos que se van a almacenar en forma de DataFrame</li>
+                    <li><code>configProperties</code>: asignación de propiedades de configuración</li>
+                    <li><code>dataFrame</code>: datos que se van a almacenar en forma de DataFrame</li>
                 </ul>
             </td>
         </tr>
@@ -254,10 +254,10 @@ La tabla siguiente describe los métodos abstractos de una [!DNL Spark] Clase de
 
 Para almacenar datos en un [!DNL Platform] conjunto de datos, las propiedades deben proporcionarse o definirse en el archivo de configuración:
 
-- Un [!DNL Platform] ID del conjunto de datos en el que se almacenarán los datos
+- Un válido [!DNL Platform] ID del conjunto de datos en el que se almacenarán los datos
 - El ID de inquilino que pertenece a su organización
 
-Los siguientes ejemplos almacenan datos (`prediction`) a una [!DNL Platform] conjunto de datos, donde el ID del conjunto de datos (`datasetId`) e ID del inquilino (`tenantId`) son propiedades definidas dentro del archivo de configuración.
+Los siguientes ejemplos almacenan datos (`prediction`) en un [!DNL Platform] conjunto de datos, donde el ID del conjunto de datos (`datasetId`) e ID de inquilino (`tenantId`) son propiedades definidas dentro del archivo de configuración.
 
 
 **PySpark**
@@ -393,13 +393,13 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-La clase DatasetTransformer modifica y transforma la estructura de un conjunto de datos. La variable [!DNL Sensei Machine Learning Runtime] no requiere que se defina este componente y se implementa según sus necesidades.
+La clase DatasetTransformer modifica y transforma la estructura de un conjunto de datos. El [!DNL Sensei Machine Learning Runtime] no requiere que se defina este componente y se implementa según sus necesidades.
 
-En cuanto a una canalización de funciones, los transformadores de conjuntos de datos se pueden utilizar de forma conjunta con una fábrica de canalización de características para preparar los datos para la ingeniería de características.
+Con respecto a una canalización de funciones, los transformadores de conjuntos de datos se pueden utilizar de forma conjunta con una fábrica de canalizaciones de funciones para preparar los datos para la ingeniería de funciones.
 
 **PySpark**
 
-La siguiente tabla describe los métodos de clase de una clase de transformador de conjuntos de datos PySpark:
+En la tabla siguiente se describen los métodos de clase de una clase de transformador de conjuntos de datos PySpark:
 
 <table>
     <thead>
@@ -411,14 +411,14 @@ La siguiente tabla describe los métodos de clase de una clase de transformador 
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>transform(self, configProperties, dataset)</code></p>
-                <p>Toma un conjunto de datos como entrada y salida de un nuevo conjunto de datos derivado</p>
+                <p><i>compendio</i><br/><code>transform(self, configProperties, dataset)</code></p>
+                <p>Toma un conjunto de datos como entrada y como salida un nuevo conjunto de datos derivado</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Mapa de propiedades de configuración</li>
-                    <li><code>dataset</code>: El conjunto de datos de entrada para la transformación</li>
+                    <li><code>configProperties</code>: asignación de propiedades de configuración</li>
+                    <li><code>dataset</code>: el conjunto de datos de entrada para la transformación</li>
                 </ul>
             </td>
         </tr>
@@ -427,7 +427,7 @@ La siguiente tabla describe los métodos de clase de una clase de transformador 
 
 **Spark (Scala)**
 
-La tabla siguiente describe los métodos abstractos de una [!DNL Spark] clase transformadora de conjuntos de datos:
+En la tabla siguiente se describen los métodos abstractos de una [!DNL Spark] clase del transformador del conjunto de datos:
 
 <table>
     <thead>
@@ -440,12 +440,12 @@ La tabla siguiente describe los métodos abstractos de una [!DNL Spark] clase tr
         <tr>
             <td>
                 <p><code>transform(configProperties, dataset)</code></p>
-                <p>Toma un conjunto de datos como entrada y salida de un nuevo conjunto de datos derivado</p>
+                <p>Toma un conjunto de datos como entrada y como salida un nuevo conjunto de datos derivado</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Mapa de propiedades de configuración</li>
-                    <li><code>dataset</code>: El conjunto de datos de entrada para la transformación</li>
+                    <li><code>configProperties</code>: asignación de propiedades de configuración</li>
+                    <li><code>dataset</code>: el conjunto de datos de entrada para la transformación</li>
                 </ul>
             </td>
         </tr>
@@ -454,11 +454,11 @@ La tabla siguiente describe los métodos abstractos de una [!DNL Spark] clase tr
 
 ## FeaturePipelineFactory {#featurepipelinefactory}
 
-La clase FeaturePipelineFactory contiene algoritmos de extracción de características y define las etapas de una Canalización de funciones de principio a fin.
+La clase FeaturePipelineFactory contiene algoritmos de extracción de características y define las etapas de una canalización de características de principio a fin.
 
 **PySpark**
 
-En la tabla siguiente se describen los métodos de clase de PySpark FeaturePipelineFactory:
+En la tabla siguiente se describen los métodos de clase de una FeaturePipelineFactory de PySpark:
 
 <table>
     <thead>
@@ -470,26 +470,26 @@ En la tabla siguiente se describen los métodos de clase de PySpark FeaturePipel
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>create_pipeline(self, configProperties)</code></p>
-                <p>Crear y devolver una Canalización de Spark que contenga una serie de Transformadores de Spark</p>
+                <p><i>compendio</i><br/><code>create_pipeline(self, configProperties)</code></p>
+                <p>Crear y devolver una canalización de Spark que contenga una serie de transformadores de Spark</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Mapa de propiedades de configuración</li>
+                    <li><code>configProperties</code>: asignación de propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>Recuperar y devolver el mapa de parámetros desde las propiedades de configuración</p>
+                <p><i>compendio</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
+                <p>Recuperar y devolver el mapa del parámetro desde las propiedades de configuración</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
-                    <li><code>sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
+                    <li><code>sparkSession</code>: sesión de Spark</li>
                 </ul>
             </td>
         </tr>
@@ -498,7 +498,7 @@ En la tabla siguiente se describen los métodos de clase de PySpark FeaturePipel
 
 **Spark (Scala)**
 
-La tabla siguiente describe los métodos de clase de un [!DNL Spark] FeaturePipelineFactory:
+En la tabla siguiente se describen los métodos de clase de un [!DNL Spark] FeaturePipelineFactory:
 
 <table>
     <thead>
@@ -510,24 +510,24 @@ La tabla siguiente describe los métodos de clase de un [!DNL Spark] FeaturePipe
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>createPipeline(configProperties)</code></p>
+                <p><i>compendio</i><br/><code>createPipeline(configProperties)</code></p>
                 <p>Crear y devolver una canalización que contenga una serie de transformadores</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Mapa de propiedades de configuración</li>
+                    <li><code>configProperties</code>: asignación de propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
-                <p>Recuperar y devolver el mapa de parámetros desde las propiedades de configuración</p>
+                <p><i>compendio</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
+                <p>Recuperar y devolver el mapa del parámetro desde las propiedades de configuración</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
-                    <li><code>sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
+                    <li><code>sparkSession</code>: sesión de Spark</li>
                 </ul>
             </td>
         </tr>
@@ -536,11 +536,11 @@ La tabla siguiente describe los métodos de clase de un [!DNL Spark] FeaturePipe
 
 ## PipelineFactory {#pipelinefactory}
 
-La clase PipelineFactory encapsula métodos y definiciones para la formación y puntuación del modelo, donde la lógica y los algoritmos de capacitación se definen en forma de [!DNL Spark] Canalización.
+La clase PipelineFactory encapsula métodos y definiciones para la formación y puntuación de modelos, donde la lógica y los algoritmos de formación se definen en forma de [!DNL Spark] Canalización.
 
 **PySpark**
 
-En la tabla siguiente se describen los métodos de clase de PySpark PipelineFactory:
+En la tabla siguiente se describen los métodos de clase de una PipelineFactory de PySpark:
 
 <table>
     <thead>
@@ -552,53 +552,53 @@ En la tabla siguiente se describen los métodos de clase de PySpark PipelineFact
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>apply(self, configProperties)</code></p>
-                <p>Crear y devolver una canalización de Spark que contenga la lógica y el algoritmo para la formación y puntuación del modelo</p>
+                <p><i>compendio</i><br/><code>apply(self, configProperties)</code></p>
+                <p>Crear y devolver una canalización de Spark que contenga la lógica y el algoritmo para la formación y puntuación de modelos.</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>train(self, configProperties, dataframe)</code></p>
-                <p>Devolver una canalización personalizada que contiene la lógica y el algoritmo para entrenar un modelo. Este método no es obligatorio si se utiliza una Canalización de Spark</p>
+                <p><i>compendio</i><br/><code>train(self, configProperties, dataframe)</code></p>
+                <p>Devuelva una canalización personalizada que contenga la lógica y el algoritmo para entrenar un modelo. Este método no es necesario si se utiliza una canalización de Spark</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
                     <li><code>dataframe</code>: Conjunto de datos de funciones para la entrada de formación</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
-                <p>Puntuación mediante el modelo entrenado y devolución de los resultados</p>
+                <p><i>compendio</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
+                <p>Puntúe utilizando el modelo entrenado y devuelva los resultados</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
-                    <li><code>dataframe</code>: Conjunto de datos de entrada para la puntuación</li>
-                    <li><code>model</code>: Modelo entrenado utilizado para la puntuación</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
+                    <li><code>dataframe</code>: conjunto de datos de entrada para puntuación</li>
+                    <li><code>model</code>: un modelo entrenado utilizado para la puntuación</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>Recuperar y devolver el mapa de parámetros desde las propiedades de configuración</p>
+                <p><i>compendio</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
+                <p>Recuperar y devolver el mapa del parámetro desde las propiedades de configuración</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
-                    <li><code>sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
+                    <li><code>sparkSession</code>: sesión de Spark</li>
                 </ul>
             </td>
         </tr>
@@ -607,7 +607,7 @@ En la tabla siguiente se describen los métodos de clase de PySpark PipelineFact
 
 **Spark (Scala)**
 
-La tabla siguiente describe los métodos de clase de un [!DNL Spark] PipelineFactory:
+En la tabla siguiente se describen los métodos de clase de un [!DNL Spark] PipelineFactory:
 
 <table>
     <thead>
@@ -619,24 +619,24 @@ La tabla siguiente describe los métodos de clase de un [!DNL Spark] PipelineFac
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>apply(configProperties)</code></p>
-                <p>Crear y devolver una canalización que contenga la lógica y el algoritmo para la formación y puntuación del modelo</p>
+                <p><i>compendio</i><br/><code>apply(configProperties)</code></p>
+                <p>Crear y devolver una canalización que contenga la lógica y el algoritmo para la formación y la puntuación del modelo</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
-                <p>Recuperar y devolver el mapa de parámetros desde las propiedades de configuración</p>
+                <p><i>compendio</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
+                <p>Recuperar y devolver el mapa del parámetro desde las propiedades de configuración</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
-                    <li><code>sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
+                    <li><code>sparkSession</code>: sesión de Spark</li>
                 </ul>
             </td>
         </tr>
@@ -645,11 +645,11 @@ La tabla siguiente describe los métodos de clase de un [!DNL Spark] PipelineFac
 
 ## MLEvaluator {#mlevaluator}
 
-La clase MLEvaluator proporciona métodos para definir métricas de evaluación y determinar conjuntos de datos de prueba y capacitación.
+La clase MLEvaluator proporciona métodos para definir métricas de evaluación y determinar conjuntos de datos de prueba y aprendizaje.
 
 **PySpark**
 
-En la tabla siguiente se describen los métodos de clase de un valor MLEvaluator de PySpark:
+En la tabla siguiente se describen los métodos de clase de un MLEvaluator de PySpark:
 
 <table>
     <thead>
@@ -661,28 +661,28 @@ En la tabla siguiente se describen los métodos de clase de un valor MLEvaluator
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>split(self, configProperties, dataframe)</code></p>
-                <p>Divide el conjunto de datos de entrada en subconjuntos de prueba y capacitación</p>
+                <p><i>compendio</i><br/><code>split(self, configProperties, dataframe)</code></p>
+                <p>Divide el conjunto de datos de entrada en subconjuntos de prueba y aprendizaje</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
-                    <li><code>dataframe</code>: Conjunto de datos de entrada que se va a dividir</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
+                    <li><code>dataframe</code>: conjunto de datos de entrada que se va a dividir</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
+                <p><i>compendio</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
                 <p>Evalúa un modelo entrenado y devuelve los resultados de la evaluación</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Referencia automática</li>
-                    <li><code>dataframe</code>: Un DataFrame que consiste en datos de prueba y formación</li>
-                    <li><code>model</code>: Un modelo entrenado</li>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
+                    <li><code>dataframe</code>: DataFrame que consiste en datos de formación y prueba</li>
+                    <li><code>model</code>: un modelo entrenado</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
@@ -691,7 +691,7 @@ En la tabla siguiente se describen los métodos de clase de un valor MLEvaluator
 
 **Spark (Scala)**
 
-La tabla siguiente describe los métodos de clase de un [!DNL Spark] MLEvaluator:
+En la tabla siguiente se describen los métodos de clase de un [!DNL Spark] MLEvaluator:
 
 <table>
     <thead>
@@ -703,26 +703,26 @@ La tabla siguiente describe los métodos de clase de un [!DNL Spark] MLEvaluator
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>split(configProperties, data)</code></p>
-                <p>Divide el conjunto de datos de entrada en subconjuntos de prueba y capacitación</p>
+                <p><i>compendio</i><br/><code>split(configProperties, data)</code></p>
+                <p>Divide el conjunto de datos de entrada en subconjuntos de prueba y aprendizaje</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
-                    <li><code>data</code>: Conjunto de datos de entrada que se va a dividir</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
+                    <li><code>data</code>: conjunto de datos de entrada que se va a dividir</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>evaluate(configProperties, model, data)</code></p>
+                <p><i>compendio</i><br/><code>evaluate(configProperties, model, data)</code></p>
                 <p>Evalúa un modelo entrenado y devuelve los resultados de la evaluación</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Propiedades de configuración</li>
-                    <li><code>model</code>: Un modelo entrenado</li>
-                    <li><code>data</code>: Un DataFrame que consiste en datos de prueba y formación</li>
+                    <li><code>configProperties</code>: propiedades de configuración</li>
+                    <li><code>model</code>: un modelo entrenado</li>
+                    <li><code>data</code>: DataFrame que consiste en datos de formación y prueba</li>
                 </ul>
             </td>
         </tr>

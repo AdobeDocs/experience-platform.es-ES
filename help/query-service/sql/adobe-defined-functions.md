@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;funciones definidas de adobe;sql;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;funciones definidas por adobe;sql;
 solution: Experience Platform
-title: Funciones SQL definidas por Adobe en Query Service
+title: Funciones SQL definidas por Adobe en el servicio de consultas
 description: Este documento proporciona información sobre las funciones definidas por el Adobe disponibles en Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
@@ -11,25 +11,25 @@ ht-degree: 3%
 
 ---
 
-# Funciones SQL definidas por Adobe en Query Service
+# Funciones SQL definidas por el Adobe en el servicio de consultas
 
-Las funciones definidas por el Adobe, en este caso denominadas ADF, son funciones creadas previamente en el servicio de consulta de Adobe Experience Platform que ayudan a realizar tareas comunes relacionadas con el negocio en [!DNL Experience Event] datos. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) y [Atribución](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=es) como los que se encuentran en Adobe Analytics.
+Las funciones definidas por el Adobe, en lo sucesivo denominadas ADF, son funciones predefinidas en Adobe Experience Platform Query Service que ayudan a realizar tareas comunes relacionadas con la empresa en [!DNL Experience Event] datos. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) y [Atribución](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=es) como los que se encuentran en Adobe Analytics.
 
 Este documento proporciona información sobre las funciones definidas por el Adobe disponibles en [!DNL Query Service].
 
 >[!NOTE]
 >
->El ID de Experience Cloud (ECID) también se conoce como MCID y se sigue utilizando en áreas de nombres.
+>El ID del Experience Cloud (ECID) también se conoce como MCID y sigue utilizándose en áreas de nombres.
 
 ## Funciones de ventana {#window-functions}
 
-La mayoría de la lógica empresarial requiere la recopilación de los puntos de contacto de un cliente y su pedido por tiempo. Este soporte es proporcionado por [!DNL Spark] SQL en forma de funciones de ventana. Las funciones Window son parte de SQL estándar y son compatibles con muchos otros motores SQL.
+La mayor parte de la lógica empresarial requiere recopilar los puntos de contacto de un cliente y pedirlos por tiempo. Este soporte es proporcionado por [!DNL Spark] SQL en forma de funciones de ventana. Las funciones de ventana forman parte de SQL estándar y son compatibles con muchos otros motores SQL.
 
-Una función window actualiza una agregación y devuelve un solo elemento para cada fila del subconjunto ordenado. La función de agregación más básica es `SUM()`. `SUM()` toma las filas y le da un total. Si lo prefiere, debe aplicar `SUM()` en una ventana, convirtiéndola en una función de ventana, recibirá una suma acumulativa con cada fila.
+Una función de ventana actualiza una agregación y devuelve un solo elemento para cada fila del subconjunto ordenado. La función de agregación más básica es `SUM()`. `SUM()` toma las filas y le proporciona un total. Si, en su lugar, solicita `SUM()` a una ventana, convirtiéndola en una función de ventana, se recibe una suma acumulativa con cada fila.
 
-La mayoría de [!DNL Spark] Los asistentes SQL son funciones de ventana que actualizan cada fila de la ventana, con el estado de esa fila añadido.
+La mayoría de los [!DNL Spark] Los ayudantes de SQL son funciones de ventana que actualizan cada fila de la ventana, con el estado de esa fila agregado.
 
-**Sintaxis de la consulta**
+**Sintaxis de consulta**
 
 ```sql
 OVER ({PARTITION} {ORDER} {FRAME})
@@ -37,19 +37,19 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 | Parámetro | Descripción | Ejemplo |
 | --------- | ----------- | ------- |
-| `{PARTITION}` | Un subgrupo de filas basadas en una columna o en un campo disponible. | `PARTITION BY endUserIds._experience.mcid.id` |
-| `{ORDER}` | Columna o campo disponible utilizado para ordenar el subconjunto o las filas. | `ORDER BY timestamp` |
+| `{PARTITION}` | Subgrupo de filas basado en una columna o campo disponible. | `PARTITION BY endUserIds._experience.mcid.id` |
+| `{ORDER}` | Columna o campo disponible que se utiliza para ordenar el subconjunto o las filas. | `ORDER BY timestamp` |
 | `{FRAME}` | Un subgrupo de las filas de una partición. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## Sessionization
 
-Cuando trabaje con [!DNL Experience Event] datos procedentes de un sitio web, una aplicación móvil, un sistema de respuesta de voz interactivo o cualquier otro canal de interacción con el cliente, ayuda a que los eventos se puedan agrupar en torno a un periodo de actividad relacionado. Normalmente, tiene una intención específica de impulsar su actividad como investigar un producto, pagar una factura, comprobar el saldo de la cuenta, rellenar una solicitud, etc.
+Cuando está trabajando con [!DNL Experience Event] los datos procedentes de un sitio web, una aplicación móvil, un sistema de respuesta de voz interactivo o cualquier otro canal de interacción de clientes ayudan si los eventos se pueden agrupar en torno a un periodo de actividad relacionado. Normalmente, tiene una intención específica que impulsa su actividad como investigar un producto, pagar una factura, comprobar el saldo de la cuenta, rellenar una solicitud, etc.
 
 Esta agrupación, o sesionización de datos, ayuda a asociar los eventos para descubrir más contexto sobre la experiencia del cliente.
 
-Para obtener más información sobre la sesionización en Adobe Analytics, consulte la documentación de [sesiones según el contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Para obtener más información sobre la creación de sesiones en Adobe Analytics, consulte la documentación sobre [sesiones según el contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
-**Sintaxis de la consulta**
+**Sintaxis de consulta**
 
 ```sql
 SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -57,10 +57,10 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Campo de marca de tiempo encontrado en el conjunto de datos. |
-| `{EXPIRATION_IN_SECONDS}` | Número de segundos necesarios entre eventos para clasificar el final de la sesión actual y el inicio de una nueva sesión. |
+| `{TIMESTAMP}` | El campo de marca de tiempo se encuentra en el conjunto de datos. |
+| `{EXPIRATION_IN_SECONDS}` | La cantidad de segundos necesarios entre los eventos para calificar el final de la sesión actual y el inicio de una nueva sesión. |
 
-Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la [sección de funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -96,7 +96,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `session` para abrir el Navegador. La variable `session` se compone de los siguientes componentes:
+Para la consulta de muestra proporcionada, los resultados se muestran en la variable `session` columna. El `session` está formada por los siguientes componentes:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -104,16 +104,16 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la variable 
 
 | Parámetros | Descripción |
 | ---------- | ------------- |
-| `{TIMESTAMP_DIFF}` | La diferencia en tiempo, en segundos, entre el registro actual y el registro anterior. |
-| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la variable `PARTITION BY` de la función window. |
-| `{IS_NEW}` | Un booleano que se utiliza para identificar si un registro es el primero de una sesión. |
+| `{TIMESTAMP_DIFF}` | Diferencia de tiempo, en segundos, entre el registro actual y el anterior. |
+| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la variable `PARTITION BY` de la función de ventana. |
+| `{IS_NEW}` | Un booleano utilizado para identificar si un registro es el primero de una sesión. |
 | `{DEPTH}` | Profundidad del registro actual dentro de la sesión. |
 
 ### SESS_START_IF
 
-Esta consulta devuelve el estado de la sesión de la fila actual, en función de la marca de tiempo actual y la expresión dada e inicia una nueva sesión con la fila actual.
+Esta consulta devuelve el estado de la sesión de la fila actual, en función de la marca de tiempo actual y la expresión dada, e inicia una nueva sesión con la fila actual.
 
-**Sintaxis de la consulta**
+**Sintaxis de consulta**
 
 ```sql
 SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -121,10 +121,10 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Campo de marca de tiempo encontrado en el conjunto de datos. |
-| `{TEST_EXPRESSION}` | Expresión con la que desea comprobar los campos de los datos. Por ejemplo, `application.launches > 0`. |
+| `{TIMESTAMP}` | El campo de marca de tiempo se encuentra en el conjunto de datos. |
+| `{TEST_EXPRESSION}` | Expresión con la que se desea comprobar los campos de los datos. Por ejemplo, `application.launches > 0`. |
 
-Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la [sección de funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -161,7 +161,7 @@ SELECT
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `session` para abrir el Navegador. La variable `session` se compone de los siguientes componentes:
+Para la consulta de muestra proporcionada, los resultados se muestran en la variable `session` columna. El `session` está formada por los siguientes componentes:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -169,16 +169,16 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la variable 
 
 | Parámetros | Descripción |
 | ---------- | ------------- |
-| `{TIMESTAMP_DIFF}` | La diferencia en tiempo, en segundos, entre el registro actual y el registro anterior. |
-| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la variable `PARTITION BY` de la función window. |
-| `{IS_NEW}` | Un booleano que se utiliza para identificar si un registro es el primero de una sesión. |
+| `{TIMESTAMP_DIFF}` | Diferencia de tiempo, en segundos, entre el registro actual y el anterior. |
+| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la variable `PARTITION BY` de la función de ventana. |
+| `{IS_NEW}` | Un booleano utilizado para identificar si un registro es el primero de una sesión. |
 | `{DEPTH}` | Profundidad del registro actual dentro de la sesión. |
 
 ### SESS_END_IF
 
 Esta consulta devuelve el estado de la sesión de la fila actual, en función de la marca de tiempo actual y la expresión dada, finaliza la sesión actual e inicia una nueva sesión en la fila siguiente.
 
-**Sintaxis de la consulta**
+**Sintaxis de consulta**
 
 ```sql
 SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -186,10 +186,10 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Campo de marca de tiempo encontrado en el conjunto de datos. |
-| `{TEST_EXPRESSION}` | Expresión con la que desea comprobar los campos de los datos. Por ejemplo, `application.launches > 0`. |
+| `{TIMESTAMP}` | El campo de marca de tiempo se encuentra en el conjunto de datos. |
+| `{TEST_EXPRESSION}` | Expresión con la que se desea comprobar los campos de los datos. Por ejemplo, `application.launches > 0`. |
 
-Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la [sección de funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -226,7 +226,7 @@ SELECT
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `session` para abrir el Navegador. La variable `session` se compone de los siguientes componentes:
+Para la consulta de muestra proporcionada, los resultados se muestran en la variable `session` columna. El `session` está formada por los siguientes componentes:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -234,23 +234,23 @@ Para la consulta de ejemplo dada, los resultados se proporcionan en la variable 
 
 | Parámetros | Descripción |
 | ---------- | ------------- |
-| `{TIMESTAMP_DIFF}` | La diferencia en tiempo, en segundos, entre el registro actual y el registro anterior. |
-| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la variable `PARTITION BY` de la función window. |
-| `{IS_NEW}` | Un booleano que se utiliza para identificar si un registro es el primero de una sesión. |
+| `{TIMESTAMP_DIFF}` | Diferencia de tiempo, en segundos, entre el registro actual y el anterior. |
+| `{NUM}` | Un número de sesión único, que comienza en 1, para la clave definida en la variable `PARTITION BY` de la función de ventana. |
+| `{IS_NEW}` | Un booleano utilizado para identificar si un registro es el primero de una sesión. |
 | `{DEPTH}` | Profundidad del registro actual dentro de la sesión. |
 
 
 ## Control de rutas
 
-El control de rutas se puede utilizar para comprender la profundidad de participación del cliente, confirmar que los pasos que se pretenden dar a una experiencia están funcionando según lo previsto e identificar posibles puntos problemáticos que puedan afectar al cliente.
+Las rutas se pueden utilizar para comprender la profundidad de la participación del cliente, confirmar que los pasos previstos de una experiencia funcionan según lo diseñado e identificar los posibles puntos problemáticos que afectan al cliente.
 
-Los siguientes ADF admiten el establecimiento de vistas de rutas desde sus relaciones anteriores y siguientes. Podrá crear páginas anteriores y páginas siguientes, o pasar por varios eventos para crear rutas.
+Los siguientes ADF admiten el establecimiento de vistas de rutas desde sus relaciones anteriores y siguientes. Podrá crear páginas anteriores y páginas siguientes, o recorrer varios eventos para crear rutas.
 
 ### Página anterior
 
-Determina el valor anterior de un campo concreto a un número definido de pasos dentro de la ventana. Observe en el ejemplo que la variable `WINDOW` se configura con un fotograma de `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` configurar el ADF para que observe la fila actual y todas las filas posteriores.
+Determina el valor anterior de un campo concreto a una cantidad definida de pasos de distancia dentro de la ventana. Observe en el ejemplo que la variable `WINDOW` se configura con un marco de `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` configurar el ADF para que observe la fila actual y todas las filas subsiguientes.
 
-**Sintaxis de la consulta**
+**Sintaxis de consulta**
 
 ```sql
 PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -259,10 +259,10 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{KEY}` | La columna o campo del evento. |
-| `{SHIFT}` | (Opcional) El número de eventos fuera del evento actual. De forma predeterminada, el valor es 1. |
+| `{SHIFT}` | (Opcional) El número de eventos que no están en el evento actual. El valor predeterminado es 1. |
 | `{IGNORE_NULLS}` | (Opcional) Un booleano que indica si es nulo `{KEY}` Los valores de deben ignorarse. El valor predeterminado es `false`. |
 
-Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la [sección de funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -295,13 +295,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `previous_page` para abrir el Navegador. El valor dentro de la variable `previous_page` se basa en la variable `{KEY}` se utiliza en el ADF.
+Para la consulta de muestra proporcionada, los resultados se muestran en la variable `previous_page` columna. El valor dentro de `previous_page` se basa en la variable `{KEY}` se utiliza en el ADF.
 
 ### Página siguiente
 
-Determina el siguiente valor de un campo concreto a un número definido de pasos de la ventana. Observe en el ejemplo que la variable `WINDOW` se configura con un fotograma de `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` configurar el ADF para que observe la fila actual y todas las filas posteriores.
+Determina el siguiente valor de un campo concreto a un número definido de pasos de distancia dentro de la ventana. Observe en el ejemplo que la variable `WINDOW` se configura con un marco de `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` configurar el ADF para que observe la fila actual y todas las filas subsiguientes.
 
-**Sintaxis de la consulta**
+**Sintaxis de consulta**
 
 ```sql
 NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -310,10 +310,10 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{KEY}` | La columna o campo del evento. |
-| `{SHIFT}` | (Opcional) El número de eventos fuera del evento actual. De forma predeterminada, el valor es 1. |
+| `{SHIFT}` | (Opcional) El número de eventos que no están en el evento actual. El valor predeterminado es 1. |
 | `{IGNORE_NULLS}` | (Opcional) Un booleano que indica si es nulo `{KEY}` Los valores de deben ignorarse. El valor predeterminado es `false`. |
 
-Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la [sección de funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -347,17 +347,17 @@ LIMIT 10
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `previous_page` para abrir el Navegador. El valor dentro de la variable `previous_page` se basa en la variable `{KEY}` se utiliza en el ADF.
+Para la consulta de muestra proporcionada, los resultados se muestran en la variable `previous_page` columna. El valor dentro de `previous_page` se basa en la variable `{KEY}` se utiliza en el ADF.
 
-## Tiempo intermedio
+## Tiempo-entre
 
-El intervalo de tiempo le permite explorar el comportamiento latente del cliente en un periodo determinado antes o después de que se produzca un evento.
+El intervalo de tiempo permite explorar el comportamiento latente del cliente en un período de tiempo determinado antes o después de que se produzca un evento.
 
-### Coincidencia anterior entre el tiempo
+### Tiempo entre la coincidencia anterior
 
-Esta consulta devuelve un número que representa la unidad de tiempo desde que se vio el evento coincidente anterior. Si no se encontró ningún evento coincidente, devuelve nulo.
+Esta consulta devuelve un número que representa la unidad de tiempo desde que se vio el evento coincidente anterior. Si no se encuentra ningún evento coincidente, devuelve nulo.
 
-**Sintaxis de la consulta**
+**Sintaxis de consulta**
 
 ```sql
 TIME_BETWEEN_PREVIOUS_MATCH(
@@ -367,11 +367,11 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Campo de marca de hora que se encuentra en el conjunto de datos rellenado en todos los eventos. |
-| `{EVENT_DEFINITION}` | La expresión para clasificar el evento anterior. |
-| `{TIME_UNIT}` | Unidad de salida. El valor posible incluye días, horas, minutos y segundos. De forma predeterminada, el valor es seconds. |
+| `{TIMESTAMP}` | Se ha encontrado un campo de marca de tiempo en el conjunto de datos rellenado en todos los eventos. |
+| `{EVENT_DEFINITION}` | La expresión para calificar el evento anterior. |
+| `{TIME_UNIT}` | La unidad de salida. Los valores posibles incluyen días, horas, minutos y segundos. De forma predeterminada, el valor es segundos. |
 
-Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la [sección de funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -415,13 +415,13 @@ LIMIT 10
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `average_minutes_since_registration` para abrir el Navegador. El valor dentro de la variable `average_minutes_since_registration` es la diferencia en tiempo entre los eventos actual y anterior. La unidad de tiempo se definió anteriormente en la variable `{TIME_UNIT}`.
+Para la consulta de muestra proporcionada, los resultados se muestran en la variable `average_minutes_since_registration` columna. El valor dentro de `average_minutes_since_registration` es la diferencia de tiempo entre los eventos actuales y anteriores. La unidad de tiempo se definió anteriormente en el `{TIME_UNIT}`.
 
-### Intervalo de tiempo entre la siguiente coincidencia
+### Tiempo entre la siguiente coincidencia
 
-Esta consulta devuelve un número negativo que representa la unidad de tiempo detrás del siguiente evento coincidente. Si no se encuentra un evento coincidente, se devuelve null.
+Esta consulta devuelve un número negativo que representa la unidad de tiempo detrás del siguiente evento coincidente. Si no se encuentra un evento coincidente, se devuelve nulo.
 
-**Sintaxis de la consulta**
+**Sintaxis de consulta**
 
 ```sql
 TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -429,11 +429,11 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Campo de marca de hora que se encuentra en el conjunto de datos rellenado en todos los eventos. |
-| `{EVENT_DEFINITION}` | La expresión para clasificar el siguiente evento. |
-| `{TIME_UNIT}` | (Opcional) Unidad de salida. El valor posible incluye días, horas, minutos y segundos. De forma predeterminada, el valor es seconds. |
+| `{TIMESTAMP}` | Se ha encontrado un campo de marca de tiempo en el conjunto de datos rellenado en todos los eventos. |
+| `{EVENT_DEFINITION}` | La expresión para calificar el siguiente evento. |
+| `{TIME_UNIT}` | (Opcional) La unidad de salida. Los valores posibles incluyen días, horas, minutos y segundos. De forma predeterminada, el valor es segundos. |
 
-Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la variable [sección funciones de ventana](#window-functions).
+Una explicación de los parámetros dentro de la variable `OVER()` se puede encontrar en la [sección de funciones de ventana](#window-functions).
 
 **Consulta de ejemplo**
 
@@ -477,14 +477,14 @@ LIMIT 10
 (10 rows)
 ```
 
-Para la consulta de ejemplo dada, los resultados se proporcionan en la variable `average_minutes_until_order_confirmation` para abrir el Navegador. El valor dentro de la variable `average_minutes_until_order_confirmation` es la diferencia en tiempo entre los eventos actual y siguiente. La unidad de tiempo se definió anteriormente en la variable `{TIME_UNIT}`.
+Para la consulta de muestra proporcionada, los resultados se muestran en la variable `average_minutes_until_order_confirmation` columna. El valor dentro de `average_minutes_until_order_confirmation` es la diferencia de tiempo entre el evento actual y el siguiente. La unidad de tiempo se definió anteriormente en el `{TIME_UNIT}`.
 
 ## Pasos siguientes
 
-Con las funciones descritas aquí, puede escribir consultas para acceder a las suyas [!DNL Experience Event] conjuntos de datos mediante [!DNL Query Service]. Para obtener más información sobre la creación de consultas en [!DNL Query Service], consulte la documentación de [creación de consultas](../best-practices/writing-queries.md).
+Con las funciones descritas aquí, puede escribir consultas para acceder a las suyas [!DNL Experience Event] conjuntos de datos que utilizan [!DNL Query Service]. Para obtener más información sobre la creación de consultas en [!DNL Query Service], consulte la documentación de [creación de consultas](../best-practices/writing-queries.md).
 
 ## Recursos adicionales
 
-El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente PSQL. Además, el vídeo también utiliza ejemplos que implican propiedades individuales en un objeto XDM, utilizando funciones definidas por Adobe y utilizando CREATE TABLE AS SELECT (CTAS).
+El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente SQL. Además, el vídeo también utiliza ejemplos que implican propiedades individuales en un objeto XDM, utilizando funciones definidas por el Adobe y utilizando CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)

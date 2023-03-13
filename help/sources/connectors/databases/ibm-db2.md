@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;inicio;temas populares;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
-title: Información general del conector de origen de IBM DB2
+title: Información general sobre el conector de origen IBM DB2
 description: Obtenga información sobre cómo conectar IBM DB2 a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -11,29 +11,29 @@ ht-degree: 0%
 
 ---
 
-# Conector (Beta) IBM DB2
+# (Beta) Conector de IBM DB2
 
 >[!NOTE]
 >
->El conector IBM DB2 está en versión beta. Consulte la [Resumen de fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+>El conector IBM DB2 está en versión beta. Consulte la [Resumen de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como [!DNL Microsoft], MySQL y [!DNL Azure]. Puede incorporar los datos de estos sistemas a [!DNL Platform].
+Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como [!DNL Microsoft], MySQL y [!DNL Azure]. Puede introducir los datos de estos sistemas en [!DNL Platform].
 
-Se admiten diferentes tipos de bases de datos de terceros, incluidos los almacenes de datos relacionales, NoSQL o NoSQL. La compatibilidad con proveedores de bases de datos incluye IBM DB2.
+Se admiten distintos tipos de bases de datos de terceros, como relacionales, NoSQL o almacenes de datos. La compatibilidad con proveedores de bases de datos incluye IBM DB2.
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
-La siguiente documentación proporciona información sobre cómo conectar IBM DB2 a [!DNL Platform] mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectar IBM DB2 a [!DNL Platform] mediante las API de o la interfaz de usuario de:
 
 ## Conectar IBM DB2 a [!DNL Platform] uso de API
 
-- [Creación de una conexión base de IBM DB2 mediante la API de servicio de flujo](../../tutorials/api/create/databases/ibm-db2.md)
-- [Exploración de tablas de datos mediante la API de servicio de flujo](../../tutorials/api/explore/tabular.md)
-- [Creación de un flujo de datos para un origen de base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
+- [Crear una conexión base de IBM DB2 mediante la API de Flow Service](../../tutorials/api/create/databases/ibm-db2.md)
+- [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
+- [Crear un flujo de datos para un origen de base de datos mediante la API de Flow Service](../../tutorials/api/collect/database-nosql.md)
 
-## Conectar IBM DB2 a [!DNL Platform] uso de la interfaz de usuario
+## Conectar IBM DB2 a [!DNL Platform] uso de la IU
 
 - [Crear una conexión de origen de IBM DB2 en la interfaz de usuario](../../tutorials/ui/create/databases/ibm-db2.md)
-- [Crear un flujo de datos para una conexión de origen de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
+- [Crear un flujo de datos para una conexión de origen de base de datos en la IU](../../tutorials/ui/dataflow/databases.md)

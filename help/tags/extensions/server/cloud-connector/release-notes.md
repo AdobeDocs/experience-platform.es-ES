@@ -1,5 +1,5 @@
 ---
-title: Notas de la versión de la extensión de Adobe Experience Platform Cloud Connector
+title: Notas de la versión de la extensión Adobe Experience Platform Cloud Connector
 description: Últimas notas de la versión de la extensión Cloud Connector en Adobe Experience Platform.
 source-git-commit: e232ad7a9b581e65f7f4240bbc06155aec409eb7
 workflow-type: tm+mt
@@ -8,7 +8,7 @@ ht-degree: 22%
 
 ---
 
-# Notas de la versión de la extensión del conector de Adobe Experience Platform Cloud
+# Notas de la versión de Adobe Experience Platform Cloud Connector Extension
 
 >[!NOTE]
 >
@@ -18,7 +18,7 @@ ht-degree: 22%
 
 Versión 1.0.1
 
-* Se ha corregido un problema por el que un JSON válido pegado en el área de texto de Body Raw se guardaba como una cadena en lugar de como un JSON.
-* No permita que el Cuerpo se configure en solicitudes de GET o HEAD.
-* Se ha corregido un error por el que, al guardar una respuesta mayor que 5 kb, se producía un error en la ejecución de la regla.
+* Se ha corregido un problema por el cual un JSON válido pegado en el área de texto sin procesar del cuerpo se guardaba como una cadena en lugar de como un JSON.
+* No permitir que el cuerpo se establezca en solicitudes de GET o HEAD.
+* Se ha corregido un error por el cual al guardar una respuesta de más de 5 KB se producía un error en la ejecución de la regla.
 

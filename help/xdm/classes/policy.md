@@ -1,36 +1,37 @@
 ---
-title: Policy Class
-description: This document provides an overview of the Policy class in Experience Data Model (XDM).
-source-git-commit: c0437b8f9d93c46dbec991a33a893a5b9e0cdf2c
+title: Clase de directiva
+description: Este documento proporciona información general sobre la clase de directiva en el modelo de datos de Experience (XDM).
+exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '241'
 ht-degree: 6%
 
 ---
 
-# 
+# [!UICONTROL Política] clase
 
-
+En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Política] La clase captura el conjunto mínimo de propiedades que definen una póliza de seguro.
 
 ![](../images/classes/policy.png)
 
-| Propiedad | Data type | Descripción |
+| Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `assignedBeneficiary` | [](../data-types/person.md) | Captures the beneficiary (or beneficiaries) assigned to the policy. |
-| `benefitAmount` | [[!UICONTROL Moneda]](../data-types/currency.md) | The amount to be paid as per the policy terms. |
-| `location` | [](../data-types/postal-address.md) | The location in which the insurance policy is issued. |
-| `owner` |  | Captures the policy holder&#39;s profile information. |
-| `owner.faxPhone` | [[!UICONTROL Número de teléfono]](../data-types/phone-number.md) | The owner&#39;s fax phone number. |
-| `owner.homeAddress` | [](../data-types/postal-address.md) | The owner&#39;s home address. |
-| `owner.homePhone` | [[!UICONTROL Número de teléfono]](../data-types/phone-number.md) | The owner&#39;s home phone number. |
-| `owner.mobilePhone` | [[!UICONTROL Número de teléfono]](../data-types/phone-number.md) | The owner&#39;s mobile phone number. |
-| `owner.personalEmail` | [](../data-types/email-address.md) | The owner&#39;s personal email address. |
-| `ID` | [!UICONTROL Cadena] | An identifier for the insurance policy. |
-| `_id` | [!UICONTROL Cadena] | A unique, system-generated string identifier for the record. This field is used to track the uniqueness of an individual record, prevent duplication of data, and to look up that record in downstream services.<br><br> However, you can still opt to supply your own unique ID values if you wish. |
-| `endDate` |  | The date when the insurance policy coverage ends (or ended). |
-| `hasAssignedBeneficiary` | [!UICONTROL Boolean] | Indicates whether the policy has a beneficiary assigned. |
-| `name` | [!UICONTROL Cadena] | The name of the insurance policy. |
-| `startDate` |  | The date when the insurance policy coverage starts (or started). |
-| `type` | [!UICONTROL Cadena] | The type of insurance policy, such as home, automobile, renter, or boat. |
+| `assignedBeneficiary` | Matriz de [[!UICONTROL Persona]](../data-types/person.md) tipos de datos | Registra el beneficiario (o beneficiarios) asignado a la póliza. |
+| `benefitAmount` | [[!UICONTROL Moneda]](../data-types/currency.md) | El importe que se pagará según los términos de la póliza. |
+| `location` | [[!UICONTROL Dirección postal]](../data-types/postal-address.md) | La ubicación en la que se emite la póliza de seguro. |
+| `owner` | [!UICONTROL Objeto] | Registra la información de perfil del asegurado. |
+| `owner.faxPhone` | [[!UICONTROL Número de teléfono]](../data-types/phone-number.md) | Número de teléfono del fax del propietario. |
+| `owner.homeAddress` | [[!UICONTROL Dirección postal]](../data-types/postal-address.md) | La dirección de la casa del propietario. |
+| `owner.homePhone` | [[!UICONTROL Número de teléfono]](../data-types/phone-number.md) | Número de teléfono de la casa del propietario. |
+| `owner.mobilePhone` | [[!UICONTROL Número de teléfono]](../data-types/phone-number.md) | Número de teléfono móvil del propietario. |
+| `owner.personalEmail` | [[!UICONTROL Correo electrónico]](../data-types/email-address.md) | La dirección de correo electrónico personal del propietario. |
+| `ID` | [!UICONTROL Cadena] | Un identificador de la póliza de seguro. |
+| `_id` | [!UICONTROL Cadena] | Un identificador de cadena único generado por el sistema para el registro. Este campo se utiliza para realizar un seguimiento de la exclusividad de un registro individual, evitar la duplicación de datos y buscar ese registro en servicios descendentes.<br><br>Dado que este campo es generado por el sistema, no se le proporciona un valor explícito durante la ingesta de datos. Sin embargo, puede optar por proporcionar sus propios valores de ID únicos si lo desea. |
+| `endDate` | [!UICONTROL DateTime] | La fecha en la que finaliza (o finaliza) la cobertura de la póliza de seguro. |
+| `hasAssignedBeneficiary` | [!UICONTROL Booleana] | Indica si la póliza tiene un beneficiario asignado. |
+| `name` | [!UICONTROL Cadena] | El nombre de la póliza de seguro. |
+| `startDate` | [!UICONTROL DateTime] | La fecha en la que comienza (o comienza) la cobertura de la póliza de seguro. |
+| `type` | [!UICONTROL Cadena] | El tipo de póliza de seguro, como de vivienda, automóvil, alquiler o barco. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

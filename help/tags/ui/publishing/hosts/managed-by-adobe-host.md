@@ -54,7 +54,7 @@ Una vez que la versión se ha implementado en el host administrado por Adobe, la
 >
 >Para los hosts administrados por Adobe, la primera biblioteca publicada en cualquier entorno nuevo puede tardar hasta cinco minutos en propagarse a toda la CDN.
 
-Cuando un nodo perimetral recibe una solicitud para un archivo específico (como la compilación de su biblioteca), el nodo comprueba primero la hora de caducidad del archivo. Si la hora no ha caducado, el nodo perimetral sirve a la versión en caché. Si la hora ha caducado, el nodo perimetral solicita una copia nueva desde el origen más cercano, proporciona esa copia actualizada y, a continuación, la almacena en caché con una nueva hora de caducidad.
+Cuando un nodo perimetral recibe una solicitud para un archivo específico (como la compilación de su biblioteca), el nodo comprueba primero la hora de caducidad del archivo. Si el tiempo no ha caducado, el nodo perimetral proporciona la versión en caché. Si la hora ha caducado, el nodo perimetral solicita una copia nueva desde el origen más cercano, proporciona esa copia actualizada y, a continuación, la almacena en caché con una nueva hora de caducidad.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Estas anulaciones de caché escalonadas dan tiempo a los grupos de servidores de
 
 Las compilaciones de biblioteca también se almacenan en caché en el explorador mediante el uso del encabezado `cache-control` HTTP. Al utilizar hosts administrados por Adobe, no controla los encabezados que aparecen en las respuestas de API, por lo que se utiliza el Adobe predeterminado para el almacenamiento en caché. En otras palabras, no puede utilizar encabezados personalizados para hosts administrados por Adobe. Si necesita un `cache-control` encabezado personalizado, puede considerar [el alojamiento propio](self-hosting-libraries.md).
 
-El tiempo de caducidad de la versión de la biblioteca en caché del explorador (determinado por el valor de `cache-control` ) variarán según el entorno de etiquetas que utilice:
+El tiempo de caducidad de la compilación de la biblioteca en caché del explorador (determinado por la variable `cache-control` encabezado) variarán según el entorno de etiquetas que utilice:
 
 | Entorno | `cache-control` valor |
 | --- | --- |
@@ -90,7 +90,7 @@ Los encabezados de control de caché solo se aplican a la compilación de la bib
 
 ## Uso del hosting gestionado por Adobe en la interfaz de usuario de 
 
-La primera vez que se crea una propiedad en la interfaz de usuario de Platform o de la recopilación de datos, se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
+La primera vez que se crea una propiedad en la IU de Platform o en la IU de recopilación de datos, se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
 
 >[!NOTE]
 >

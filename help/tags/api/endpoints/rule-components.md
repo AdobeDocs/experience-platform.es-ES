@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /rule_components en la API d
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1157'
 ht-degree: 94%
 
 ---
@@ -15,7 +15,7 @@ En las etiquetas de recopilación de datos, [las reglas](./rules.md) controlan e
 
 >[!NOTE]
 >
->Este documento explica cómo administrar los componentes de regla en la API de Reactor. Para obtener más información sobre cómo interactuar con reglas y componentes de reglas en la interfaz de usuario, consulte la [Guía de la interfaz de usuario](../../ui/managing-resources/rules.md).
+>Este documento explica cómo administrar los componentes de regla en la API de Reactor. Para obtener más información sobre cómo interactuar con reglas y componentes de reglas en la interfaz de usuario, consulte [Guía de IU](../../ui/managing-resources/rules.md).
 
 Los componentes de regla tienen tres tipos básicos:
 
@@ -25,7 +25,7 @@ Los componentes de regla tienen tres tipos básicos:
 | Condiciones | Una condición es una evaluación de si se cumplen ciertos criterios antes de ejecutar cualquier acción. Una vez que se produce un evento, se evalúan las condiciones. Las acciones de la regla solo se ejecutan si se cumplen todas las condiciones. |
 | Acciones | Estas son las acciones que desea que realice la regla, como enviar una señalización de Adobe Analytics, recuperar un ID de visitante personalizado o activar un mbox concreto. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Un componente de regla pertenece exactamente a una regla. Una regla puede (y debe) tener muchos componentes de regla.
 
@@ -49,7 +49,7 @@ GET /rules/{RULE_ID}/rule_components
 | --- | --- |
 | `RULE_ID` | El `id` de la regla cuyos componentes desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | El `id` del componente de regla que desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -310,13 +310,13 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 | Parámetro | Descripción |
 | --- | --- |
-| `PROPERTY_ID` | La variable `id` de la propiedad en la que está definiendo el componente de regla. |
+| `PROPERTY_ID` | El `id` de la propiedad en la que está definiendo el componente de regla. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo componente de regla. En la carga útil, la variable `relationships` asocia el componente con reglas específicas y una extensión existente. Consulte la guía de [relaciones](../guides/relationships.md) para obtener más información.
+La siguiente solicitud crea un nuevo componente de regla. En la carga útil, `relationships` La propiedad asocia el componente con reglas específicas y una extensión existente. Consulte la guía de [relaciones](../guides/relationships.md) para obtener más información.
 
 ```shell
 curl -X POST \
@@ -369,7 +369,7 @@ curl -X POST \
 | `relationships` | Un objeto que establece las relaciones necesarias para el componente de regla. Deben establecerse dos relaciones: <ol><li>`extension`: Extensión que define este componente de regla. Debe ser la misma extensión cuyo paquete de extensión esté indicado por `delegate_descriptor_id`.</li><li>`rules`: Regla en la que se define este componente.</li></ol>Para obtener información más general sobre las relaciones, consulte la [guía de relaciones](../guides/relationships.md). |
 | `type` | El tipo de recurso que se crea. Para este extremo, el valor debe ser `rule_components`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -485,7 +485,7 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | El `id` del componente de regla que desea actualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -516,7 +516,7 @@ curl -X PATCH \
 | `id` | El `id` del componente de regla que desea actualizar. Debe coincidir con el valor `{RULE_COMPONENT_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `rule_components`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -628,7 +628,7 @@ DELETE /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | El `id` del componente de regla que desea eliminar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -668,7 +668,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | El `id` del componente de regla cuyas reglas desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -772,7 +772,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | El `id` del componente de regla cuya extensión desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -892,7 +892,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | El `id` del componente de regla cuyo origen desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 

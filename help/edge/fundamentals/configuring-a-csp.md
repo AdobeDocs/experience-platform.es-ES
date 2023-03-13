@@ -1,25 +1,24 @@
 ---
 title: Configuración de un CSP
-seo-title: Configuración de un CSP para Adobe Experience Platform Web SDK
+seo-title: Configuring a CSP for Adobe Experience Platform Web SDK
 description: Obtenga información sobre cómo configurar un CSP para el SDK web de Experience Platform
-seo-description: Obtenga información sobre cómo configurar un CSP para el SDK web de Experience Platform
-keywords: configurar;configuración;SDK;edge;Web SDK;configurar;contexto;web;dispositivo;entorno;configuración de Web sdk;directiva de seguridad de contenido;
-translation-type: tm+mt
-source-git-commit: 4f07d41197add406fbdd82caee5177a1ddaa7d7e
+seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
+keywords: configurar;configuración;SDK;edge;SDK web;configurar;contexto;web;dispositivo;entorno;configuración de sdk web;directiva de seguridad de contenido;
+exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '333'
 ht-degree: 2%
 
 ---
 
-
 # Configuración de un CSP
 
-Se utiliza una [Política de seguridad de contenido](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) para restringir los recursos que un explorador puede utilizar. El CSP también puede limitar la funcionalidad de los recursos de script y estilo. El SDK web de Adobe Experience Platform no requiere un CSP, pero si se agrega uno puede reducir la superficie de ataque para evitar ataques malintencionados.
+A [Política de seguridad de contenido](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) se utiliza para restringir los recursos que un explorador puede utilizar. El CSP también puede limitar la funcionalidad de los recursos de script y estilo. El SDK web de Adobe Experience Platform no requiere un CSP, pero añadir uno puede reducir la superficie de ataque para evitar ataques malintencionados.
 
-El CSP debe reflejar cómo [!DNL Platform Web SDK] se implementa y se configura. El siguiente CSP muestra los cambios que pueden ser necesarios para que el SDK funcione correctamente. Es probable que se requiera una configuración CSP adicional, según el entorno específico.
+El CSP debe reflejar cómo [!DNL Platform Web SDK] se implementa y configura. El siguiente CSP muestra qué cambios pueden ser necesarios para que el SDK funcione correctamente. Es probable que se requiera una configuración CSP adicional, según el entorno específico.
 
-## Ejemplo de directiva de seguridad de contenido
+## Ejemplo de política de seguridad de contenido
 
 Los siguientes ejemplos muestran cómo configurar un CSP.
 
@@ -30,17 +29,17 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-En el ejemplo anterior, `EDGE-DOMAIN` debe reemplazarse por el dominio de origen. El dominio de origen está configurado para la configuración [edgeDomain](configuring-the-sdk.md#edge-domain). Si no se ha configurado ningún dominio de origen, `EDGE-DOMAIN` debe reemplazarse por `*.adobedc.net`. Si se activa la migración de visitantes mediante [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled), la directiva `connect-src` también debe incluir `*.demdex.net`.
+En el ejemplo anterior, `EDGE-DOMAIN` debe reemplazarse por el dominio de origen. El dominio de origen está configurado para [edgeDomain](configuring-the-sdk.md#edge-domain) configuración. Si no se ha configurado ningún dominio de origen, `EDGE-DOMAIN` debe reemplazarse por `*.adobedc.net`. Si la migración de visitantes está activada mediante [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled), el `connect-src` la directiva también debe incluir `*.demdex.net`.
 
-### Utilice NONCE para permitir elementos de estilo y secuencia de comandos en línea
+### Utilice NONCE para permitir elementos de estilo y scripts en línea
 
-[!DNL Platform Web SDK] puede modificar el contenido de la página y debe aprobarse para crear etiquetas de estilo y script en línea. Para lograrlo, Adobe recomienda utilizar un valor nonce para la directiva [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP. Una cadena nonce es un token aleatorio cifrado y seguro generado por el servidor que se genera una vez por cada vista de página única.
+[!DNL Platform Web SDK] Puede modificar el contenido de la página y debe aprobarse para crear etiquetas de estilo y script en línea. Para ello, Adobe recomienda utilizar un nonce para [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) Directiva CSP. Un nonce es un token aleatorio criptográficamente fuerte generado por el servidor que se genera una vez por cada vista de página única.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Además, la cadena nonce CSP debe agregarse como un atributo a la etiqueta de script [!DNL Platform Web SDK] [base code](installing-the-sdk.md#adding-the-code). [!DNL Platform Web SDK] a continuación, utilizará esa cadena nonce al agregar etiquetas de estilo o script en línea a la página:
+Además, el nonce de CSP debe agregarse como atributo al [!DNL Platform Web SDK] [código base](installing-the-sdk.md#adding-the-code) etiqueta de script. [!DNL Platform Web SDK] utilizará ese nonce cuando añada scripts en línea o etiquetas de estilo a la página:
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -51,7 +50,7 @@ Además, la cadena nonce CSP debe agregarse como un atributo a la etiqueta de sc
 </script>
 ```
 
-Si no se utiliza una cadena nonce, la otra opción es agregar `unsafe-inline` a las directivas `script-src` y `style-src` CSP:
+Si no se utiliza un nonce, la otra opción es añadir `unsafe-inline` a la `script-src` y `style-src` Directivas CSP:
 
 ```
 script-src 'unsafe-inline'
@@ -60,4 +59,4 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobe **no** recomienda especificar `unsafe-inline` porque permite que se ejecute cualquier script en la página, lo que limita los beneficios del CSP.
+>El Adobe sí **no** se recomienda especificar `unsafe-inline` porque permite que cualquier script se ejecute en la página, lo que limita las ventajas del CSP.

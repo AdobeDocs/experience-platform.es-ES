@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;inicio;temas populares;sistema de publicidad;sistema de publicidad
 solution: Experience Platform
-title: Explorar un sistema publicitario mediante la API de servicio de flujo
-description: El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas. Este tutorial utiliza la API de servicio de flujo para explorar los sistemas publicitarios.
+title: Exploración de un sistema de publicidad mediante la API de Flow Service
+description: Flow Service se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes de datos admitidas. Este tutorial utiliza la API de Flow Service para explorar los sistemas publicitarios.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -11,32 +11,32 @@ ht-degree: 3%
 
 ---
 
-# Explorar un sistema publicitario usando la variable [!DNL Flow Service] API
+# Explorar un sistema de publicidad con [!DNL Flow Service] API
 
-Con la creación de una conexión de base, ahora puede utilizar el ID de conexión de base único para desplazarse por la estructura de datos y el contenido de la fuente y explorarlos. Esto le permite identificar los elementos específicos, así como sus respectivos tipos de datos y formatos, antes de crear un flujo de datos y llevarlos a Adobe Experience Platform.
+Con una conexión base creada, ahora puede utilizar el ID único de conexión base para navegar y explorar la estructura de datos y el contenido de origen. Esto le permite identificar los elementos específicos, y sus respectivos tipos de datos y formatos, antes de crear un flujo de datos y llevarlos a Adobe Experience Platform.
 
-Este tutorial utiliza la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para explorar los sistemas publicitarios.
+Este tutorial utiliza el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para explorar sistemas publicitarios.
 
 ## Primeros pasos
 
 >[!IMPORTANT]
 >
->Este tutorial requiere que tenga el ID de conexión base único para la fuente de publicidad. Si no tiene este ID, consulte el tutorial sobre [conexión de una fuente de publicidad a Platform](../../api/create/advertising/ads.md) tutorial.
+>Este tutorial requiere que tenga el ID de conexión base único para el origen de publicidad. Si no tiene este ID, consulte el tutorial sobre [conexión de una fuente de publicidad a Platform](../../api/create/advertising/ads.md) tutorial.
 
-Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Zonas protegidas](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que debe conocer para conectarse correctamente a un sistema publicitario mediante el [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema de publicidad mediante [!DNL Flow Service] API.
 
-### Uso de las API de plataforma
+### Uso de API de Platform
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../landing/api-guide.md).
 
-## Explorar las tablas de datos
+## Exploración de las tablas de datos
 
-Con la conexión base para el sistema de publicidad, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de la tabla en la que desea inspeccionar o introducir [!DNL Platform].
+Con la conexión base del sistema de publicidad, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o introducir en [!DNL Platform].
 
 **Formato de API**
 
@@ -46,7 +46,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | El ID de la conexión base para su sistema publicitario. |
+| `{BASE_CONNECTION_ID}` | El ID de la conexión base para su sistema de publicidad. |
 
 **Solicitud**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta es una matriz de tablas desde a su sistema de publicidad. Encuentre la tabla en la que desea traer [!DNL Platform] y tome nota de su `path` , tal y como se le pedirá en el siguiente paso para inspeccionar su estructura.
+Una respuesta correcta es una matriz de tablas desde hasta el sistema de publicidad. Encuentre la tabla que desea introducir en [!DNL Platform] y tome nota de su `path` , ya que es necesario proporcionarla en el siguiente paso para inspeccionar su estructura.
 
 ```json
 [
@@ -96,9 +96,9 @@ Una respuesta correcta es una matriz de tablas desde a su sistema de publicidad.
 ]
 ```
 
-## Inspect de la estructura de una tabla
+## Inspect la estructura de una tabla
 
-Para inspeccionar la estructura de una tabla desde el sistema de publicidad, realice una solicitud de GET al especificar la ruta de una tabla como parámetro de consulta.
+Para inspeccionar la estructura de una tabla desde el sistema de publicidad, realice una solicitud de GET y especifique la ruta de una tabla como parámetro de consulta.
 
 **Formato de API**
 
@@ -108,8 +108,8 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | El ID de conexión de su sistema de publicidad. |
-| `{TABLE_PATH}` | Ruta de una tabla dentro del sistema de publicidad. |
+| `{BASE_CONNECTION_ID}` | El ID de conexión para su sistema de publicidad. |
+| `{TABLE_PATH}` | La ruta de una tabla dentro del sistema de publicidad. |
 
 **Solicitud**
 
@@ -170,4 +170,4 @@ Una respuesta correcta devuelve la estructura de una tabla. Los detalles sobre c
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha explorado su sistema de publicidad y ha encontrado la ruta de la tabla a la que desea traer [!DNL Platform]y obtuvo información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de su sistema publicitario e introducirlos en Platform](../collect/advertising.md).
+Al seguir este tutorial, ha explorado su sistema de publicidad, ha encontrado la ruta de la tabla que desea introducir en [!DNL Platform]y obtuvo información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para lo siguiente [recopilar datos de su sistema de publicidad e introducirlos en Platform](../collect/advertising.md).

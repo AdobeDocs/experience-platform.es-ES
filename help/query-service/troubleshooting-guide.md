@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;guía de solución de problemas;preguntas frecuentes;solución de problemas;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;guía de solución de problemas;faq;solución de problemas;
 solution: Experience Platform
 title: Preguntas frecuentes
-description: Este documento contiene preguntas y respuestas comunes relacionadas con el servicio de consulta. Los temas incluyen, exportación de datos, herramientas de terceros y errores de PSQL.
+description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
@@ -13,51 +13,51 @@ ht-degree: 1%
 
 # Preguntas frecuentes
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de consultas y proporciona una lista de códigos de error que se ven con más frecuencia al utilizar el servicio de consultas. Para preguntas y solución de problemas relacionados con otros servicios de Adobe Experience Platform, consulte la [Guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de consultas y proporciona una lista de los códigos de error más frecuentes al utilizar el servicio de consultas. Si tiene alguna pregunta o solución de problemas relacionados con otros servicios de Adobe Experience Platform, consulte la [guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
 
 La siguiente lista de respuestas a las preguntas más frecuentes se divide en las siguientes categorías:
 
 - [General](#general)
 - [Exportación de datos](#exporting-data)
 - [Herramientas de terceros](#third-party-tools)
-- [Errores de API PostgreSQL](#postgresql-api-errors)
+- [Errores de API de PostgreSQL](#postgresql-api-errors)
 - [Errores de API de REST](#rest-api-errors)
 
 ## Preguntas generales del servicio de consultas {#general}
 
-Esta sección incluye información sobre rendimiento, límites y procesos.
+Esta sección incluye información sobre el rendimiento, los límites y los procesos.
 
 ### ¿Puedo desactivar la función de autocompletar en el Editor del servicio de consultas?
 
-+++Nº respuesta El editor no admite actualmente la desactivación de la función de autocompletar.
++++Nº de respuesta El editor no admite actualmente la desactivación de la característica de autocompletar.
 +++
 
-### ¿Por qué el Editor de consultas a veces se vuelve lento cuando escribo una consulta?
+### ¿Por qué el Editor de consultas a veces se vuelve lento cuando escribo en una consulta?
 
-+++Respuesta Una posible causa es la función de autocompletar. La función procesa ciertos comandos de metadatos que ocasionalmente pueden ralentizar el editor durante la edición de consultas.
++++Responder Una causa potencial es la función de autocompletar. La función procesa ciertos comandos de metadatos que ocasionalmente pueden ralentizar el editor durante la edición de consultas.
 +++
 
-### ¿Puedo usar [!DNL Postman] para la API del servicio de consulta?
+### ¿Puedo usar [!DNL Postman] para la API del servicio de consultas?
 
-+++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Observe el [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en la consola de Adobe Developer y adquirir todas las credenciales necesarias para su uso con [!DNL Postman]. Consulte la documentación oficial para [directrices sobre inicio, ejecución y uso compartido [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Respuesta Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en la consola de Adobe Developer y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial de [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
-### ¿Hay un límite en el número máximo de filas devueltas desde una consulta a través de la interfaz de usuario?
+### ¿Hay un límite en el número máximo de filas devueltas por una consulta a través de la interfaz de usuario?
 
-+++Respuesta Sí, el servicio de consulta aplica internamente un límite de 50 000 filas a menos que se especifique un límite explícito externamente. Consulte las directrices sobre [ejecución de consulta interactiva](./best-practices/writing-queries.md#interactive-query-execution) para obtener más información.
++++Responda Sí, el servicio de consultas aplica internamente un límite de 50 000 filas a menos que se especifique un límite explícito externamente. Consulte las directrices sobre [ejecución de consulta interactiva](./best-practices/writing-queries.md#interactive-query-execution) para obtener más información.
 +++
 
-### ¿Puedo utilizar consultas para actualizar filas?
+### ¿Puedo utilizar las consultas para actualizar filas?
 
-+++Respuesta En consultas por lotes, no se admite la actualización de una fila dentro del conjunto de datos.
++++Respuesta: En consultas por lotes no se admite la actualización de una fila dentro del conjunto de datos.
 +++
 
-### ¿Existe un límite de tamaño de datos para el resultado resultante de una consulta?
+### ¿Existe un límite de tamaño de datos para el resultado de una consulta?
 
-+++Nº respuesta No hay límite en el tamaño de los datos, pero hay un límite de tiempo de espera de consulta de 10 minutos desde una sesión interactiva. Si la consulta se ejecuta como una CTAS por lotes, no se aplica un tiempo de espera de 10 minutos. Consulte las directrices sobre [ejecución de consulta interactiva](./best-practices/writing-queries.md#interactive-query-execution) para obtener más información.
++++Nº de respuesta No hay límite en el tamaño de los datos, pero hay un límite de tiempo de espera de consulta de 10 minutos desde una sesión interactiva. Si la consulta se ejecuta como un CTAS por lotes, no se aplica un tiempo de espera de 10 minutos. Consulte las directrices sobre [ejecución de consulta interactiva](./best-practices/writing-queries.md#interactive-query-execution) para obtener más información.
 +++
 
-### ¿Cómo puedo evitar el límite en el número de salida de filas de una consulta SELECT?
+### ¿Cómo puedo evitar el límite en el número de filas de salida de una consulta SELECT?
 
 +++Respuesta Para evitar el límite de filas de salida, aplique &quot;LIMIT 0&quot; en la consulta. Por ejemplo:
 
@@ -67,60 +67,60 @@ SELECT * FROM customers LIMIT 0;
 
 +++
 
-### ¿Cómo puedo evitar que mis consultas se agoten en 10 minutos?
+### ¿Cómo evito que mis consultas agoten el tiempo de espera en 10 minutos?
 
 +++Respuesta Se recomiendan una o más de las siguientes soluciones en caso de que se agote el tiempo de espera de las consultas.
 
-- [Convertir la consulta en una consulta CTAS](./sql/syntax.md#create-table-as-select) y programe la ejecución. La programación de una ejecución puede realizarse [a través de la interfaz de usuario](./ui/user-guide.md#scheduled-queries) o [API](./api/scheduled-queries.md#create).
-- Ejecute la consulta en un fragmento de datos más pequeño aplicando [condiciones de filtro](https://spark.apache.org/docs/latest/api/sql/index.html#filter).
-- [Ejecutar el comando EXPLAIN](./sql/syntax.md#explain) para recopilar más detalles.
+- [Conversión de la consulta en una consulta CTAS](./sql/syntax.md#create-table-as-select) y programe la ejecución. La programación de una ejecución se puede realizar [a través de la IU](./ui/user-guide.md#scheduled-queries) o el [API](./api/scheduled-queries.md#create).
+- Ejecute la consulta en un fragmento de datos más pequeño aplicando parámetros adicionales [condiciones de filtro](https://spark.apache.org/docs/latest/api/sql/index.html#filter).
+- [Ejecute el comando EXPLAIN](./sql/syntax.md#explain) para recopilar más detalles.
 - Revise las estadísticas de los datos dentro del conjunto de datos.
-- Convierta la consulta en un formulario simplificado y vuelva a ejecutarse utilizando [declaraciones preparadas](./sql/prepared-statements.md).
+- Convierta la consulta en un formulario simplificado y vuelva a ejecutarla mediante [declaraciones preparadas](./sql/prepared-statements.md).
 +++
 
-### ¿Hay algún problema o impacto en el rendimiento del servicio de consulta si se ejecutan varias consultas simultáneamente?
+### ¿Hay algún problema o impacto en el rendimiento del servicio de consultas si se ejecutan varias consultas simultáneamente?
 
-+++Nº respuesta El servicio de consulta tiene una capacidad de escalado automático que garantiza que las consultas simultáneas no tengan ningún impacto significativo en el rendimiento del servicio.
++++Nº de respuesta El servicio de consultas tiene una capacidad de escalado automático que garantiza que las consultas simultáneas no tengan ningún impacto notable en el rendimiento del servicio.
 +++
 
-### ¿Puedo usar palabras clave reservadas como nombre de columna?
+### ¿Puedo utilizar palabras clave reservadas como nombre de columna?
 
-+++Respuesta Hay ciertas palabras clave reservadas que no se pueden usar como nombres de columna, como, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Si desea utilizar estas palabras clave, debe omitir estas columnas.
++++Respuesta Hay ciertas palabras clave reservadas que no se pueden usar como nombre de columna, como `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Si desea utilizar estas palabras clave, debe omitir estas columnas.
 +++
 
 ### ¿Cómo encuentro un nombre de columna de un conjunto de datos jerárquico?
 
-+++Respuesta Los siguientes pasos describen cómo mostrar una vista tabular de un conjunto de datos a través de la interfaz de usuario, incluidos todos los campos y columnas anidados en un formulario acoplado.
++++Respuesta Los siguientes pasos describen cómo mostrar una vista tabular de un conjunto de datos a través de la interfaz de usuario, incluidos todos los campos y columnas anidados en un formulario aplanado.
 
-- Después de iniciar sesión en el Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en la navegación izquierda de la interfaz de usuario a la que navegar [!UICONTROL Conjuntos de datos] tablero.
+- Después de iniciar sesión en el Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en la navegación izquierda de la interfaz de usuario para desplazarse a [!UICONTROL Conjuntos de datos] panel.
 - Los conjuntos de datos [!UICONTROL Examinar] se abre. Puede utilizar la barra de búsqueda para restringir las opciones disponibles. Seleccione un conjunto de datos de la lista mostrada.
 
-![El tablero Conjuntos de datos en la interfaz de usuario de Platform con la barra de búsqueda y un conjunto de datos resaltados.](./images/troubleshooting/dataset-selection.png)
+![El panel Conjuntos de datos de la IU de Platform con la barra de búsqueda y un conjunto de datos resaltados.](./images/troubleshooting/dataset-selection.png)
 
-- La variable [!UICONTROL Actividad de conjuntos de datos] se abre. Select **[!UICONTROL Vista previa del conjunto de datos]** para abrir un cuadro de diálogo del esquema XDM y la vista tabular de los datos acoplados del conjunto de datos seleccionado. Encontrará más detalles en la [vista previa de la documentación de un conjunto de datos](../catalog/datasets/user-guide.md#preview-a-dataset)
+- El [!UICONTROL Actividad de conjuntos de datos] aparece la pantalla. Seleccionar **[!UICONTROL Previsualizar conjunto de datos]** para abrir un cuadro de diálogo del esquema XDM y la vista tabular de los datos aplanados del conjunto de datos seleccionado. Puede encontrar más información en la [previsualización de documentación de un conjunto de datos](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![La pestaña Actividad del conjunto de datos del tablero Conjuntos de datos con la vista previa del conjunto de datos resaltada.](./images/troubleshooting/dataset-preview.png)
+![La pestaña Actividad de conjunto de datos del panel Conjuntos de datos con el conjunto de datos de vista previa resaltado.](./images/troubleshooting/dataset-preview.png)
 
-- Seleccione cualquier campo del esquema para mostrar su contenido en una columna plana. El nombre de la columna se muestra encima de su contenido en el lado derecho de la página. Debe copiar este nombre para utilizarlo para consultar este conjunto de datos.
+- Seleccione cualquier campo del esquema para mostrar su contenido en una columna aplanada. El nombre de la columna se muestra encima de su contenido en el lado derecho de la página. Debe copiar este nombre para utilizarlo para consultar este conjunto de datos.
 
-![Esquema XDM y vista tabular de los datos acoplados. El nombre de columna de un conjunto de datos anidado se resalta en la interfaz de usuario.](./images/troubleshooting/column-name.png)
+![El esquema XDM y la vista tabular de los datos aplanados. El nombre de columna de un conjunto de datos anidado se resalta en la interfaz de usuario.](./images/troubleshooting/column-name.png)
 
-Consulte la documentación para obtener una guía completa sobre [cómo trabajar con estructuras de datos anidadas](./essential-concepts/nested-data-structures.md) con el Editor de consultas o un cliente de terceros.
+Consulte la documentación para obtener instrucciones completas sobre [cómo trabajar con estructuras de datos anidadas](./essential-concepts/nested-data-structures.md) mediante el Editor de consultas o un cliente de terceros.
 +++
 
 ### ¿Cómo acelero una consulta en un conjunto de datos que contiene matrices?
 
-+++Respuesta Para mejorar el rendimiento de las consultas en conjuntos de datos que contienen matrices, debe [explotar la matriz](https://spark.apache.org/docs/latest/api/sql/index.html#explode) como [Consulta CTAS](./sql/syntax.md#create-table-as-select) en tiempo de ejecución y, a continuación, explorarlo para obtener más información sobre las oportunidades de mejorar su tiempo de procesamiento.
++++Respuesta Para mejorar el rendimiento de las consultas en conjuntos de datos que contienen matrices, debe [explosionar la matriz](https://spark.apache.org/docs/latest/api/sql/index.html#explode) as a [Consulta CTAS](./sql/syntax.md#create-table-as-select) en tiempo de ejecución y, a continuación, explórela para buscar oportunidades que mejoren su tiempo de procesamiento.
 +++
 
-### ¿Por qué mi consulta CTAS sigue procesándose después de muchas horas solo para un pequeño número de filas?
+### ¿Por qué mi consulta CTAS sigue procesándose después de muchas horas para un pequeño número de filas?
 
 +++Respuesta Si la consulta ha tardado mucho tiempo en un conjunto de datos muy pequeño, póngase en contacto con el servicio de atención al cliente.
 
-Puede haber varios motivos para que una consulta se bloquee durante el procesamiento. Para determinar la causa exacta se requiere un análisis en profundidad caso por caso. [Contacto con el servicio de atención al cliente de Adobe](#customer-support) a ser este proceso.
+Puede haber varias razones para que una consulta se bloquee durante el procesamiento. Para determinar la causa exacta se requiere un análisis en profundidad caso por caso. [Contactar con Atención al cliente de Adobe](#customer-support) por ser este proceso.
 +++
 
-### ¿Cómo puedo ponerme en contacto con el servicio de atención al cliente de Adobe? {#customer-support}
+### ¿Cómo puedo contactar con Atención al cliente de Adobe? {#customer-support}
 
 +++Respuesta
 [Una lista completa de los números de teléfono de asistencia al cliente de Adobe](https://helpx.adobe.com/ca/contact/phone.html) está disponible en la página de ayuda de Adobe. También puede encontrar ayuda en línea si completa los siguientes pasos:
@@ -128,45 +128,45 @@ Puede haber varios motivos para que una consulta se bloquee durante el procesami
 - Vaya a [https://www.adobe.com/](https://www.adobe.com/) en el explorador web.
 - En el lado derecho de la barra de navegación superior, seleccione **[!UICONTROL Iniciar sesión]**.
 
-![El sitio web de Adobe con el inicio de sesión resaltado.](./images/troubleshooting/adobe-sign-in.png)
+![El sitio web de Adobe con la opción Iniciar sesión resaltada.](./images/troubleshooting/adobe-sign-in.png)
 
 - Utilice su Adobe ID y contraseña registrados con su licencia de Adobe.
-- Select **[!UICONTROL Ayuda y asistencia]** en la barra de navegación superior.
+- Seleccionar **[!UICONTROL Ayuda y asistencia]** en la barra de navegación superior.
 
-![Menú desplegable superior de la barra de navegación con Ayuda y asistencia, Soporte empresarial y Contacto resaltado.](./images/troubleshooting/help-and-support.png)
+![Menú desplegable de la barra de navegación superior con ayuda y asistencia, asistencia técnica para empresas y contacto resaltado.](./images/troubleshooting/help-and-support.png)
 
-Aparece un banner desplegable que contiene un [!UICONTROL Ayuda y asistencia] para obtener más información. Select **[!UICONTROL Contáctenos]** para abrir el asistente virtual del servicio de atención al cliente de Adobe, o seleccione **[!UICONTROL Asistencia para empresas]** para obtener ayuda dedicada para organizaciones grandes.
+Aparece un banner desplegable que contiene una [!UICONTROL Ayuda y asistencia] sección. Seleccionar **[!UICONTROL Contáctenos.]** para abrir el Asistente virtual del Servicio de atención al cliente de Adobe, o seleccione **[!UICONTROL Soporte Enterprise]** para obtener ayuda específica para grandes organizaciones.
 +++
 
-### ¿Cómo implemento una serie secuencial de trabajos, sin ejecutar los trabajos posteriores si el trabajo anterior no se completa correctamente?
+### ¿Cómo implemento una serie secuencial de trabajos, sin ejecutar trabajos subsiguientes si el trabajo anterior no se completa correctamente?
 
-+++Answer La función de bloque anónimo permite encadenar una o más sentencias SQL que se ejecutan en secuencia. También permiten la opción de la gestión de excepciones.
++++Respuesta La función de bloque anónimo permite encadenar una o más sentencias SQL que se ejecutan en secuencia. También permiten la opción de la gestión de excepciones.
 
 Consulte la [documentación de bloque anónimo](./essential-concepts/anonymous-block.md) para obtener más información.
 +++
 
-### ¿Cómo implemento la atribución personalizada en el servicio de consulta?
+### ¿Cómo implemento la atribución personalizada en el servicio de consultas?
 
-+++Respuesta Existen dos formas de implementar la atribución personalizada:
++++Respuesta: Existen dos formas de implementar la atribución personalizada:
 
-1. Usar una combinación de [Funciones definidas por Adobe](./sql/adobe-defined-functions.md) para identificar si se satisfacen las necesidades de casos de uso.
-1. Si la sugerencia anterior no satisface su caso de uso, debe utilizar una combinación de [funciones de ventana](./sql/adobe-defined-functions.md#window-functions). Las funciones de ventana observan todos los eventos de una secuencia. También le permiten revisar los datos históricos y se pueden utilizar en cualquier combinación.
+1. Usar una combinación de los [Funciones definidas por el Adobe](./sql/adobe-defined-functions.md) para identificar si se cumplen las necesidades del caso de uso.
+1. Si la sugerencia anterior no cumple con su caso de uso, debe utilizar una combinación de [funciones de ventana](./sql/adobe-defined-functions.md#window-functions). Las funciones de ventana buscan todos los eventos en una secuencia. También le permiten revisar los datos históricos y se pueden utilizar en cualquier combinación.
 +++
 
-### ¿Puedo crear plantillas de mis consultas para que pueda reutilizarlas fácilmente?
+### ¿Puedo crear una plantilla de mis consultas para poder reutilizarlas fácilmente?
 
-+++Respuesta Sí, puede crear plantillas de consultas mediante el uso de instrucciones preparadas. Las instrucciones preparadas pueden optimizar el rendimiento y evitar el reanálisis repetido de una consulta. Consulte la [documentación sobre declaraciones preparadas](./sql/prepared-statements.md) para obtener más información.
++++Responda Sí, puede crear plantillas de consultas mediante el uso de instrucciones preparadas. Las instrucciones preparadas pueden optimizar el rendimiento y evitar volver a analizar una consulta de forma repetida. Consulte la [documentación de declaraciones preparadas](./sql/prepared-statements.md) para obtener más información.
 +++
 
-### ¿Cómo puedo recuperar los registros de errores para una consulta? {#error-logs}
+### ¿Cómo se recuperan los registros de errores de una consulta? {#error-logs}
 
-+++Respuesta Para recuperar los registros de errores de una consulta específica, primero debe utilizar la API del servicio de consulta para recuperar los detalles del registro de consultas. La respuesta HTTP contiene los ID de consulta necesarios para investigar un error de consulta.
++++Respuesta Para recuperar los registros de errores de una consulta específica, primero debe utilizar la API del servicio de consultas para recuperar los detalles del registro de consultas. La respuesta HTTP contiene los ID de consulta necesarios para investigar un error de consulta.
 
-Utilice el comando GET para recuperar varias consultas. Puede encontrar información sobre cómo realizar una llamada a la API en la [documentación de llamadas de API de muestra](./api/queries.md#sample-api-calls).
+Utilice el comando GET para recuperar varias consultas. Encontrará información sobre cómo realizar una llamada a la API en la [ejemplo de documentación de llamadas de API](./api/queries.md#sample-api-calls).
 
-Desde la respuesta, identifique la consulta que desea investigar y realice otra solicitud de GET utilizando su `id` valor. Las instrucciones completas se encuentran en la sección [recuperar una consulta por documentación de ID](./api/queries.md#retrieve-a-query-by-id).
+En la respuesta, identifique la GET que desee investigar y realice otra solicitud utilizando `id` valor. Puede encontrar las instrucciones completas en la [Recuperación de una consulta por documentación de ID](./api/queries.md#retrieve-a-query-by-id).
 
-Una respuesta correcta devuelve el estado HTTP 200 y contiene la variable `errors` matriz. La respuesta se ha abreviado para su brevedad.
+Una respuesta correcta devuelve el estado HTTP 200 y contiene el `errors` matriz. La respuesta se ha abreviado para ser más breve.
 
 ```json
 {
@@ -189,14 +189,14 @@ Una respuesta correcta devuelve el estado HTTP 200 y contiene la variable `error
 }
 ```
 
-La variable [Documentación de referencia de la API del servicio de consulta](https://www.adobe.io/experience-platform-apis/references/query-service/) proporciona más información sobre todos los extremos disponibles.
+El [Documentación de referencia de API del servicio de consultas](https://www.adobe.io/experience-platform-apis/references/query-service/) proporciona más información sobre todos los extremos disponibles.
 +++
 
-### ¿Qué significa &quot;Error validando esquema&quot;?
+### ¿Qué significa &quot;Error al validar el esquema&quot;?
 
-+++Respuesta El mensaje &quot;Error al validar esquema&quot; significa que el sistema no puede localizar un campo dentro del esquema. Debe leer el documento de prácticas recomendadas para [organización de recursos de datos en Query Service](./best-practices/organize-data-assets.md) seguido de [Crear tabla como documentación seleccionada](./sql/syntax.md#create-table-as-select).
++++Respuesta El mensaje &quot;Error al validar el esquema&quot; significa que el sistema no puede localizar un campo dentro del esquema. Debe leer el documento de prácticas recomendadas para [organización de recursos de datos en el servicio de consultas](./best-practices/organize-data-assets.md) seguido del [Crear tabla como, seleccione la documentación](./sql/syntax.md#create-table-as-select).
 
-El siguiente ejemplo demuestra el uso de una sintaxis CTAS y un tipo de datos de estructura:
+En el ejemplo siguiente se muestra el uso de una sintaxis CTAS y un tipo de datos struct:
 
 ```sql
 CREATE TABLE table_name WITH (SCHEMA='schema_name')
@@ -224,26 +224,26 @@ AS SELECT '1' as _id,
 
 +++
 
-### ¿Cómo proceso rápidamente los nuevos datos que llegan al sistema todos los días?
+### ¿Cómo proceso rápidamente los nuevos datos que entran en el sistema todos los días?
 
-+++Responder A La [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) se puede utilizar para leer datos de forma incremental en una tabla basada en un ID de instantánea. Es ideal para usar con la variable [carga incremental](./essential-concepts/incremental-load.md) patrón de diseño que solo procesa la información en el conjunto de datos que se ha creado o modificado desde la última ejecución de carga. Como resultado, aumenta la eficacia del procesamiento y se puede utilizar tanto con el procesamiento de flujo continuo como por lotes.
++++Responda Al [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) La cláusula se puede utilizar para leer de forma incremental los datos de una tabla en función de un ID de instantánea. Esto es ideal para su uso con el [carga incremental](./essential-concepts/incremental-load.md) patrón de diseño que solo procesa la información en el conjunto de datos que se ha creado o modificado desde la última ejecución de carga. Como resultado, aumenta la eficacia del procesamiento y se puede utilizar tanto con el procesamiento de datos por lotes como con el streaming.
 +++
 
-### ¿Por qué hay una diferencia entre los números mostrados en la interfaz de usuario del perfil y los números calculados a partir del conjunto de datos de exportación del perfil?
+### ¿Por qué hay una diferencia entre los números que se muestran en la interfaz de usuario del perfil y los números calculados a partir del conjunto de datos de exportación de perfiles?
 
-+++Respuesta Los números mostrados en el panel de perfiles son precisos desde la última instantánea. Los números generados en la tabla de exportación de perfiles dependen totalmente de la consulta de exportación. Como resultado, la consulta del número de perfiles que cumplen los requisitos para un segmento en particular es una causa común de esta discrepancia.
++++Respuesta Los números mostrados en el panel de perfiles son precisos a partir de la última instantánea. Los números generados en la tabla de exportación de perfiles dependen totalmente de la consulta de exportación. Como resultado, una causa común de esta discrepancia es consultar el número de perfiles que cumplen los requisitos para un segmento en particular.
 
 >[!NOTE]
 >
->Las consultas incluyen datos históricos, mientras que la interfaz de usuario solo muestra los datos del perfil actual.
+>La consulta incluye datos históricos, mientras que la interfaz de usuario solo muestra los datos de perfil actuales.
 
 +++
 
-### ¿Por qué devolvía mi consulta un subconjunto vacío y qué debería hacer?
+### ¿Por qué mi consulta devolvió un subconjunto vacío y qué debo hacer?
 
-+++Respuesta La causa más probable es que la consulta sea demasiado estrecha en cuanto al ámbito. Debe eliminar sistemáticamente una sección de la sección `WHERE` hasta que empiece a ver algunos datos.
++++Respuesta La causa más probable es que la consulta tenga un ámbito demasiado limitado. Debe eliminar sistemáticamente una sección del `WHERE` hasta que empiece a ver algunos datos.
 
-También puede confirmar que el conjunto de datos contiene datos utilizando una consulta pequeña como:
+También puede confirmar que el conjunto de datos contiene datos mediante una pequeña consulta como:
 
 ```sql
 SELECT count(1) FROM myTableName
@@ -251,48 +251,48 @@ SELECT count(1) FROM myTableName
 
 +++
 
-### ¿Puedo realizar una muestra de mis datos?
+### ¿Puedo tomar muestras de mis datos?
 
-+++Respuesta Esta función es actualmente un trabajo en curso. Los detalles estarán disponibles en [notas de la versión](../release-notes/latest/latest.md) y a través de los cuadros de diálogo de la interfaz de usuario de Platform una vez que la función esté lista para su lanzamiento.
++++Respuesta Actualmente, esta función está en curso. Los detalles estarán disponibles en [notas de la versión](../release-notes/latest/latest.md) y a través de los cuadros de diálogo de IU de Platform una vez que la función esté lista para su lanzamiento.
 +++
 
-### ¿Qué funciones de ayuda admite el servicio de consulta?
+### ¿Qué funciones de ayuda admite el servicio de consultas?
 
-+++Answer Query Service proporciona varias funciones de ayuda SQL integradas para ampliar la funcionalidad SQL. Consulte el documento para obtener una lista completa de [Funciones SQL admitidas por el servicio de consultas](./sql/spark-sql-functions.md).
++++El servicio de consulta de respuesta proporciona varias funciones de ayuda SQL integradas para ampliar la funcionalidad SQL. Consulte el documento para obtener una lista completa de los [Funciones SQL admitidas por el servicio de consultas](./sql/spark-sql-functions.md).
 +++
 
-### Son nativos [!DNL Spark SQL] funciones compatibles o son usuarios restringidos únicamente al envolvente [!DNL Spark SQL] funciones proporcionadas por Adobe?
+### Son todos nativos [!DNL Spark SQL] funciones admitidas o son usuarios restringidos solo al envoltorio [!DNL Spark SQL] funciones proporcionadas por el Adobe?
 
-+++Respuesta Hasta ahora, no todas las fuentes abiertas [!DNL Spark SQL] se han probado las funciones en los datos del lago de datos. Una vez probados y confirmados, se añadirán a la lista de admitidos. Consulte la [lista de admitidos [!DNL Spark SQL] funciones](./sql/spark-sql-functions.md) para comprobar la existencia de una función específica.
++++Responder Hasta ahora, no todo es de código abierto [!DNL Spark SQL] Las funciones de se han probado en los datos del lago de datos. Una vez probadas y confirmadas, se añadirán a la lista de admitidas. Consulte la [lista de admitidos [!DNL Spark SQL] Funciones](./sql/spark-sql-functions.md) para buscar una función específica.
 +++
 
-### ¿Pueden los usuarios definir sus propias funciones definidas por el usuario (UDF) que se pueden usar en otras consultas?
+### ¿Pueden los usuarios definir sus propias funciones definidas por el usuario (UDF) que se pueden utilizar en otras consultas?
 
-+++Respuesta Debido a consideraciones de seguridad de los datos, no se permite la definición personalizada de campos definidos por el usuario.
++++Respuesta Debido a consideraciones de seguridad de los datos, no se permite la definición personalizada de FDU.
 +++
 
 ### ¿Qué debo hacer si falla mi consulta programada?
 
-+++Respuesta Primero, compruebe los registros para averiguar los detalles del error. La sección Preguntas frecuentes de [búsqueda de errores dentro de los registros](#error-logs) proporciona más información sobre cómo hacerlo.
++++Responda primero, compruebe los registros para averiguar los detalles del error. La sección de preguntas frecuentes sobre [búsqueda de errores en registros](#error-logs) proporciona más información sobre cómo hacerlo.
 
-También debe consultar la documentación para obtener instrucciones sobre cómo realizar [consultas programadas en la interfaz de usuario](./ui/user-guide.md#scheduled-queries) y [la API](./api/scheduled-queries.md).
+También debe consultar la documentación para obtener instrucciones sobre cómo realizar [consultas programadas en la interfaz de usuario](./ui/user-guide.md#scheduled-queries) y mediante [la API](./api/scheduled-queries.md).
 
-A continuación se muestra una lista de consideraciones para las consultas programadas al usar la variable [!DNL Query Editor]. No se aplican al [!DNL Query Service] API:<br/>Solo puede añadir una programación a una consulta que ya se haya creado, guardado y ejecutado.<br/>You **cannot** agregue una programación a una consulta parametrizada.<br/>Consultas programadas **cannot** contiene un bloque anónimo.<br/>Solo se puede programar **one** plantilla de consulta mediante la interfaz de usuario. Si desea agregar programaciones adicionales a una plantilla de consulta, deberá utilizar la API . Si ya se ha agregado una programación mediante la API , no podrá agregar más programaciones mediante la interfaz de usuario de .
+A continuación se ofrece una lista de consideraciones para las consultas programadas al utilizar el [!DNL Query Editor]. No se aplican al [!DNL Query Service] API:<br/>Solo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado.<br/>Usted **no puede** añada una programación a una consulta parametrizada.<br/>Consultas programadas **no puede** contiene un bloque anónimo.<br/>Solo puede programar **uno** plantilla de consulta mediante la interfaz de usuario. Si desea agregar programaciones adicionales a una plantilla de consulta, deberá utilizar la API. Si ya se ha agregado una programación mediante la API, no podrá agregar programaciones adicionales mediante la interfaz de usuario.
 +++
 
 ### ¿Qué significa el error &quot;Límite de sesión alcanzado&quot;?
 
-+++Respuesta &quot;Límite de sesión alcanzado&quot; significa que se ha alcanzado el número máximo de sesiones del servicio de consulta permitidas para su organización. Conéctese con el administrador de Adobe Experience Platform de su organización.
++++La respuesta &quot;Se ha alcanzado el límite de sesiones&quot; significa que se ha alcanzado el número máximo de sesiones del Servicio de consultas permitidas para su organización. Conéctese con el administrador de Adobe Experience Platform de su organización.
 +++
 
 ### ¿Cómo gestiona el registro de consultas las consultas relacionadas con un conjunto de datos eliminado?
 
-+++Answer Query Service nunca elimina el historial de consultas. Esto significa que cualquier consulta que haga referencia a un conjunto de datos eliminado devolverá &quot;Ningún conjunto de datos válido&quot; como resultado.
++++El servicio de consulta de respuesta nunca elimina el historial de consultas. Esto significa que cualquier consulta que haga referencia a un conjunto de datos eliminado devolverá &quot;Ningún conjunto de datos válido&quot; como resultado.
 +++
 
 ### ¿Cómo puedo obtener solo los metadatos de una consulta?
 
-+++Respuesta Puede ejecutar una consulta que devuelva cero filas para obtener solo los metadatos como respuesta. Esta consulta de ejemplo devuelve solo los metadatos de la tabla especificada.
++++Respuesta Puede ejecutar una consulta que devuelva cero filas para obtener únicamente los metadatos como respuesta. Esta consulta de ejemplo devuelve sólo los metadatos de la tabla especificada.
 
 ```sql
 SELECT * FROM <table> WHERE 1=0
@@ -302,7 +302,7 @@ SELECT * FROM <table> WHERE 1=0
 
 ### ¿Cómo puedo iterar rápidamente en una consulta CTAS (Crear tabla como selección) sin materializarla?
 
-+++Respuesta Puede crear tablas temporales para iterar y experimentar rápidamente en una consulta antes de materializarla para su uso. También puede utilizar tablas temporales para validar si una consulta funciona.
++++Respuesta Puede crear tablas temporales para repetir y experimentar rápidamente una consulta antes de materializarla para su uso. También puede utilizar tablas temporales para validar si una consulta funciona.
 
 Por ejemplo, puede crear una tabla temporal:
 
@@ -328,34 +328,34 @@ LIMIT 100;
 
 +++
 
-### ¿Cómo puedo cambiar la zona horaria a y desde una marca de tiempo UTC?
+### ¿Cómo cambio la zona horaria a y desde una marca de tiempo UTC?
 
-+++Answer Adobe Experience Platform mantiene los datos en formato UTC (hora universal coordinada). Un ejemplo del formato UTC es `2021-12-22T19:52:05Z`
++++Responder Adobe Experience Platform conserva los datos en formato UTC (hora universal coordinada). Un ejemplo del formato UTC es `2021-12-22T19:52:05Z`
 
-El servicio de consulta admite funciones SQL integradas para convertir una marca de tiempo determinada a formato UTC y desde él. Ambas `to_utc_timestamp()` y `from_utc_timestamp()` Los métodos emplean dos parámetros: marca de tiempo y zona horaria.
+El servicio de consultas admite funciones SQL integradas para convertir una marca de tiempo determinada al formato UTC y desde este. Tanto la `to_utc_timestamp()` y el `from_utc_timestamp()` Los métodos de toman dos parámetros: marca de tiempo y zona horaria.
 
 | Parámetro | Descripción |
 |-----------|---------------|
-| Marca de tiempo | La marca de tiempo puede escribirse en formato UTC o en formato simple `{year-month-day}` formato. Si no se proporciona ninguna hora, el valor predeterminado es la medianoche de la mañana de un día determinado. |
-| Zona horaria | La zona horaria se escribe en un `{continent/city})` formato. Debe ser uno de los códigos de zona horaria reconocidos, tal como se encuentran en la variable [base de datos TZ de dominio público](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+| Marca de tiempo | La marca de tiempo puede escribirse en formato UTC o simple `{year-month-day}` formato. Si no se proporciona ninguna hora, el valor predeterminado es medianoche en la mañana del día determinado. |
+| Zona horaria | La zona horaria está escrita en un `{continent/city})` formato. Debe ser uno de los códigos de zona horaria reconocidos, tal como se encuentran en la [base de datos TZ de dominio público](https://data.iana.org/time-zones/tz-link.html#tzdb). |
 
 #### Convertir a la marca de tiempo UTC
 
-La variable `to_utc_timestamp()` interpreta los parámetros dados y los convierte **a la marca de tiempo de su zona horaria local** en formato UTC. Por ejemplo, la zona horaria de Seúl, Corea del Sur, es UTC/GMT +9 horas. Al proporcionar una marca de hora de solo fecha, el método utiliza un valor predeterminado de medianoche por la mañana. La marca de tiempo y la zona horaria se convierten al formato UTC desde la hora de esa región hasta la marca de tiempo UTC de su región local.
+El `to_utc_timestamp()` El método interpreta los parámetros dados y los convierte **a la marca de tiempo de su zona horaria local** en formato UTC. Por ejemplo, la zona horaria de Seúl, Corea del Sur, es UTC/GMT +9 horas. Al proporcionar una marca de tiempo de solo fecha, el método utiliza un valor predeterminado de medianoche en la mañana. La marca de tiempo y la zona horaria se convierten al formato UTC desde el momento de esa región a una marca de tiempo UTC de su región local.
 
 ```SQL
 SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
 ```
 
-La consulta devuelve una marca de tiempo en la hora local del usuario. En este caso, las 3 pm del día anterior, ya que Seúl tiene nueve horas de anticipación.
+La consulta devuelve una marca de tiempo en la hora local del usuario. En este caso, a las 3 p. m. del día anterior, ya que Seúl está nueve horas por delante.
 
 ```
 2021-08-30 15:00:00
 ```
 
-Otro ejemplo: si la marca de tiempo dada era `2021-07-14 12:40:00.0` para el `Asia/Seoul` zona horaria, la marca de tiempo UTC devuelta sería `2021-07-14 03:40:00.0`
+Otro ejemplo: si la marca de tiempo dada era `2021-07-14 12:40:00.0` para el `Asia/Seoul` timezone, la marca de tiempo UTC devuelta sería `2021-07-14 03:40:00.0`
 
-El resultado de la consola que se proporciona en la interfaz de usuario del servicio de consulta es un formato más legible por el ser humano:
+El resultado de la consola proporcionado en la interfaz de usuario del servicio de consultas tiene un formato más legible en lenguaje natural:
 
 ```
 8/30/2021, 3:00 PM
@@ -363,27 +363,27 @@ El resultado de la consola que se proporciona en la interfaz de usuario del serv
 
 #### Convertir desde la marca de tiempo UTC
 
-La variable `from_utc_timestamp()` interpreta los parámetros dados **desde la marca de tiempo de su zona horaria local** y proporciona la marca de tiempo equivalente de la región deseada en formato UTC. En el siguiente ejemplo, la hora es las 2:40 p.m. en la zona horaria local del usuario. La zona horaria de Seúl que se pasa como variable supera las nueve horas de la zona horaria local.
+El `from_utc_timestamp()` El método interpreta los parámetros dados **de la marca de tiempo de su zona horaria local** y proporciona la marca de tiempo equivalente de la región deseada en formato UTC. En el ejemplo siguiente, la hora es las 2:40 p.m. en la zona horaria local del usuario. La zona horaria de Seúl que se pasa como variable está nueve horas por delante de la zona horaria local.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
 ```
 
-La consulta devuelve una marca de tiempo en formato UTC para la zona horaria transferida como parámetro. El resultado es nueve horas antes de la zona horaria que ejecutó la consulta.
+La consulta devuelve una marca de tiempo en formato UTC para la zona horaria pasada como parámetro. El resultado es nueve horas antes de la zona horaria que ejecutó la consulta.
 
 ```
 8/31/2021, 11:40 PM
 ```
 
-### ¿Cómo debo filtrar mis datos de series temporales?
+### ¿Cómo debo filtrar los datos de las series temporales?
 
-+++Respuesta Al consultar con datos de series temporales, debe utilizar el filtro de marcas de hora siempre que sea posible para realizar un análisis más preciso.
++++Respuesta: Cuando consulte con datos de series temporales, debe utilizar el filtro de marcas de hora siempre que sea posible para realizar un análisis más preciso.
 
 >[!NOTE]
 >
-> La cadena de fecha **must** estar en formato `yyyy-mm-ddTHH24:MM:SS`.
+> La cadena de fecha **debe** estar en el formato `yyyy-mm-ddTHH24:MM:SS`.
 
-A continuación se puede ver un ejemplo del uso del filtro de marca de tiempo:
+A continuación se puede ver un ejemplo de uso del filtro de marca de tiempo:
 
 ```sql
 SELECT a._company  AS _company,
@@ -396,9 +396,9 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 
 +++
 
-### ¿Cómo utilizo correctamente el `CAST` operador para convertir mis marcas de hora en consultas SQL?
+### ¿Cómo utilizo correctamente el `CAST` para convertir mis marcas de tiempo en consultas SQL?
 
-+++Respuesta Al usar la variable `CAST` para convertir una marca de tiempo, debe incluir ambas fechas **y** tiempo.
++++Responda al usar el `CAST` para convertir una marca de tiempo, debe incluir la fecha y **y** hora.
 
 Por ejemplo, si falta el componente de tiempo, como se muestra a continuación, se producirá un error:
 
@@ -407,7 +407,7 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021' AS timestamp)
 ```
 
-El uso correcto de la variable `CAST` se muestra a continuación:
+El uso correcto del `CAST` operador se muestra a continuación:
 
 ```sql
 SELECT * FROM ABC
@@ -416,18 +416,18 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 
 +++
 
-### ¿Debo usar caracteres comodín, como *, para obtener todas las filas de mis conjuntos de datos?
+### ¿Debería utilizar caracteres comodín, como *, para obtener todas las filas de mis conjuntos de datos?
 
-+++Respuesta No puede utilizar caracteres comodín para obtener todos los datos de las filas, ya que el servicio de consultas debe tratarse como un **almacén de columnas** en lugar de un sistema de tienda tradicional basado en filas.
++++Respuesta No puede utilizar caracteres comodín para obtener todos los datos de las filas, ya que el servicio de consultas debe tratarse como una **almacén en columnas** en lugar de un sistema de almacén tradicional basado en filas.
 +++
 
 ### ¿Debería usar `NOT IN` en mi consulta SQL?
 
-+++Responder A La `NOT IN` se utiliza a menudo para recuperar filas que no se encuentran en otra tabla o instrucción SQL. Este operador puede ralentizar el rendimiento y devolver resultados inesperados si las columnas que se comparan aceptan `NOT NULL`o tiene un gran número de registros.
++++Responda Al `NOT IN` El operador se utiliza a menudo para recuperar filas que no se encuentran en otra tabla o instrucción SQL. Este operador puede ralentizar el rendimiento y devolver resultados inesperados si las columnas que se comparan aceptan `NOT NULL`o tiene un gran número de registros.
 
-En lugar de usar `NOT IN`, puede usar una de las opciones siguientes: `NOT EXISTS` o `LEFT OUTER JOIN`.
+En lugar de usar `NOT IN`, puede utilizar cualquiera de las siguientes opciones `NOT EXISTS` o `LEFT OUTER JOIN`.
 
-Por ejemplo, si tiene creadas las tablas siguientes:
+Por ejemplo, si ha creado las siguientes tablas:
 
 ```sql
 CREATE TABLE T1 (ID INT)
@@ -439,7 +439,7 @@ INSERT INTO T2 VALUES (1)
 INSERT INTO T2 VALUES (2)
 ```
 
-Si está utilizando la variable `NOT EXISTS` operador, puede replicar utilizando la variable `NOT IN` mediante la siguiente consulta:
+Si utiliza el complemento `NOT EXISTS` , puede replicar utilizando el operador `NOT IN` mediante la siguiente consulta:
 
 ```sql
 SELECT ID FROM T1
@@ -447,7 +447,7 @@ WHERE NOT EXISTS
 (SELECT ID FROM T2 WHERE T1.ID = T2.ID)
 ```
 
-Alternativamente, si está utilizando la variable `LEFT OUTER JOIN` operador, puede replicar utilizando la variable `NOT IN` mediante la siguiente consulta:
+Alternativamente, si utiliza el `LEFT OUTER JOIN` , puede replicar utilizando el operador `NOT IN` mediante la siguiente consulta:
 
 ```sql
 SELECT T1.ID FROM T1
@@ -457,9 +457,9 @@ WHERE T2.ID IS NULL
 
 +++
 
-### ¿Puedo crear un conjunto de datos utilizando una consulta CTAS con un nombre de guión bajo doble como los que se muestran en la interfaz de usuario? Por ejemplo: `test_table_001`.
+### ¿Puedo crear un conjunto de datos utilizando una consulta CTAS con un nombre de guion bajo doble como los que se muestran en la interfaz de usuario? Por ejemplo: `test_table_001`.
 
-+++Respuesta No, se trata de una limitación intencional en todo el Experience Platform que se aplica a todos los servicios de Adobe, incluido el servicio de consulta. Un nombre con dos guiones bajos es aceptable como esquema y como nombre de conjunto de datos, pero el nombre de tabla para el conjunto de datos solo puede contener un solo guión bajo.
++++Respuesta no, se trata de una limitación intencionada entre Experience Platform que se aplica a todos los servicios de Adobe, incluido el servicio de consultas. Se acepta un nombre con dos guiones bajos como esquema y nombre de conjunto de datos, pero el nombre de tabla del conjunto de datos solo puede contener un guion bajo.
 +++
 
 ### ¿Cuántas consultas simultáneas se pueden ejecutar a la vez?
@@ -467,74 +467,74 @@ WHERE T2.ID IS NULL
 +++Respuesta No hay límite de concurrencia de consultas, ya que las consultas por lotes se ejecutan como trabajos back-end. Sin embargo, hay un límite de tiempo de espera de consulta establecido en 24 horas.
 +++
 
-### ¿Hay un panel de actividades en el que se puedan ver las actividades de consulta y el estado?
+### ¿Hay un panel de actividad en el que pueda ver las actividades de consulta y el estado?
 
-+++Respuesta Existen funciones de supervisión y alerta para comprobar las actividades y los estados de las consultas. Consulte la [Integración del registro de auditoría del servicio de consultas](./data-governance/audit-log-guide.md) y [registros de consultas](./ui/overview.md#log) documentos para obtener más información.
++++Respuesta Existen capacidades de monitorización y alertas para comprobar las actividades de consulta y los estados. Consulte la [Integración del registro de auditoría del servicio de consultas](./data-governance/audit-log-guide.md) y el [registros de consultas](./ui/overview.md#log) documentos para obtener más información.
 +++
 
-### ¿Hay alguna forma de revertir las actualizaciones? Por ejemplo, si hay un error o es necesario reconfigurar algunos cálculos al escribir datos en Platform, ¿cómo se debe gestionar ese escenario?
+### ¿Hay alguna forma de revertir las actualizaciones? Por ejemplo, si hay un error o es necesario volver a configurar algunos cálculos al escribir datos en Platform, ¿cómo se debe gestionar ese escenario?
 
-+++Respuesta Actualmente, no se admiten devoluciones o actualizaciones de esta manera.
++++Responder Actualmente, no se admiten reversiones ni actualizaciones de esta manera.
 +++
 
 ### ¿Cómo se pueden optimizar las consultas en Adobe Experience Platform?
 
-+++Respuesta El sistema no tiene índices, ya que no es una base de datos, pero sí tiene otras optimizaciones asociadas al almacén de datos. Las siguientes opciones están disponibles para ajustar las consultas:
++++Respuesta El sistema no tiene índices, ya que no es una base de datos, pero tiene otras optimizaciones asociadas al almacén de datos. Las siguientes opciones están disponibles para ajustar las consultas:
 
-- Filtro basado en el tiempo en datos de temporización.
-- Optimización del push para el tipo de datos de estructura.
-- Optimización del coste y la memoria para matrices y tipos de datos de asignación.
+- Un filtro basado en el tiempo en datos de series temporales.
+- Inserción optimizada para el tipo de datos struct.
+- Inserción optimizada de coste y memoria para cabinas y tipos de datos de asignación.
 - Procesamiento incremental mediante instantáneas.
-- Formato de datos persistente.
+- Un formato de datos persistente.
 +++
 
-### ¿Pueden restringirse los inicios de sesión a ciertos aspectos del servicio de consulta o es una solución &quot;todo o nada&quot;?
+### ¿Pueden los inicios de sesión restringirse a determinados aspectos del servicio de consultas o es una solución de &quot;todo o nada&quot;?
 
-+++Answer Query Service es una solución &quot;todo o nada&quot;. No se puede proporcionar acceso parcial.
++++El servicio de consulta de respuestas es una solución de &quot;todo o nada&quot;. No se puede proporcionar acceso parcial.
 +++
 
-### ¿Puedo restringir qué datos puede utilizar el servicio de consulta o simplemente acceder a todo el lago de datos de Adobe Experience Platform?
+### ¿Puedo restringir qué datos puede utilizar el servicio de consulta de datos o simplemente accede a todo el lago de datos de Adobe Experience Platform?
 
 +++Respuesta Sí, puede restringir la consulta a conjuntos de datos con acceso de solo lectura.
 +++
 
 ### ¿Qué otras opciones hay para restringir los datos a los que puede acceder el servicio de consulta?
 
-+++Respuesta Existen tres métodos para restringir el acceso. Son los siguientes:
++++Respuesta Existen tres métodos para restringir el acceso. Son las siguientes:
 
-- Utilice instrucciones SELECT only y conceda acceso de solo lectura a los conjuntos de datos. Además, asigne el permiso administrar consulta.
-- Utilice las instrucciones SELECT/INSERT/CREATE y conceda acceso de escritura a los conjuntos de datos. Además, asigne el permiso de gestión de consultas.
+- Utilice instrucciones SELECT únicamente y proporcione acceso de solo lectura a los conjuntos de datos. Además, asigne el permiso de administración de consultas.
+- Utilice las instrucciones SELECT/INSERT/CREATE y proporcione acceso de escritura a los conjuntos de datos. Además, asigne el permiso de administración de consultas.
 - Utilice una cuenta de integración con las sugerencias anteriores y asigne el permiso de integración de consultas.
 
 +++
 
-### Una vez que el servicio de consulta devuelve los datos, ¿Platform puede realizar alguna comprobación para asegurarse de que no ha devuelto ningún dato protegido?
+### Una vez que el servicio de consulta devuelve los datos, ¿Platform puede ejecutar alguna comprobación para asegurarse de que no ha devuelto datos protegidos?
 
-- El servicio de consultas admite el control de acceso basado en atributos. Puede restringir el acceso a los datos en el nivel de columna/hoja o en el nivel de estructura. Consulte la documentación para obtener más información sobre el control de acceso basado en atributos.
+- El servicio de consultas admite el control de acceso basado en atributos. Puede restringir el acceso a los datos en el nivel de columna/hoja y/o en el nivel de estructura. Consulte la documentación para obtener más información sobre el control de acceso basado en atributos.
 
 ### ¿Puedo especificar un modo SSL para la conexión a un cliente de terceros? Por ejemplo, ¿puedo usar &#39;verify-full&#39; con Power BI?
 
-+++Respuesta Sí, se admiten los modos SSL. Consulte la [Documentación de modos SSL](./clients/ssl-modes.md) para obtener un desglose de los distintos modos SSL disponibles y el nivel de protección que proporcionan.
++++Responda que sí, se admiten los modos SSL. Consulte la [Documentación de modos SSL](./clients/ssl-modes.md) para obtener un desglose de los diferentes modos SSL disponibles y el nivel de protección que proporcionan.
 +++
 
-### ¿Utilizamos TLS 1.2 para todas las conexiones de clientes de Power BI al servicio de consulta?
+### ¿Utilizamos TLS 1.2 para todas las conexiones de clientes de Power BI al servicio de consultas?
 
-+ ++Respuesta Sí. Los datos en tránsito siempre son compatibles con HTTPS. La versión admitida actualmente es TLS1.2.
++++Conteste Sí. Los datos en tránsito siempre son compatibles con HTTPS. La versión admitida actualmente es TLS1.2.
 +++
 
-### ¿Sigue usando https una conexión hecha en el puerto 80?
+### ¿Sigue usando https una conexión realizada en el puerto 80?
 
 +++Respuesta Sí, una conexión realizada en el puerto 80 sigue utilizando SSL. También puede utilizar el puerto 5432.
 +++
 
-### ¿Puedo controlar el acceso a conjuntos de datos y columnas específicos para una conexión determinada? ¿Cómo se configura esto?
+### ¿Puedo controlar el acceso a conjuntos de datos y columnas específicos para una conexión en particular? ¿Cómo se configura?
 
-+++Respuesta Sí, el control de acceso basado en atributos se aplica si está configurado. Consulte la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md) para obtener más información.
++++Respuesta Sí, el control de acceso basado en atributos se aplica si se configura. Consulte la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md) para obtener más información.
 +++
 
-### ¿Admite el servicio de consulta el comando &quot;INSERTAR SOBREESCRITURA EN&quot;?
+### ¿Query Service admite el comando &quot;INSERT OVERWRITE INTO&quot;?
 
-+++Respuesta No, el servicio de consulta no admite el comando &quot;INSERTAR SOBREESCRITURA EN&quot;.
++++Respuesta no, el servicio de consultas no admite el comando &quot;INSERTAR SOBRESCRITURA EN&quot;.
 +++
 
 ## Exportación de datos {#exporting-data}
@@ -543,9 +543,9 @@ Esta sección proporciona información sobre la exportación de datos y límites
 
 ### ¿Existe alguna forma de extraer datos del servicio de consulta después del procesamiento de la consulta y guardar los resultados en un archivo CSV? {#export-csv}
 
-+ ++Respuesta Sí. Los datos se pueden extraer del servicio de consulta y también existe la opción de almacenar los resultados en formato CSV mediante un comando SQL.
++++Conteste Sí. Los datos se pueden extraer del servicio de consulta y también existe la opción de almacenar los resultados en formato CSV a través de un comando SQL.
 
-Existen dos maneras de guardar los resultados de una consulta al utilizar un cliente PSQL. Puede usar la variable `COPY TO` o cree una instrucción con el siguiente formato:
+Existen dos maneras de guardar los resultados de una consulta al utilizar un cliente SQL. Puede usar el complemento `COPY TO` o cree una instrucción con el siguiente formato:
 
 ```sql
 SELECT column1, column2 
@@ -553,17 +553,17 @@ FROM <table_name>
 \g <table_name>.out
 ```
 
-[Directrices sobre el uso de la `COPY TO` command](./sql/syntax.md#copy) se puede encontrar en la documentación de referencia de sintaxis SQL.
+[Directrices sobre el uso del `COPY TO` mando](./sql/syntax.md#copy) se puede encontrar en la documentación de referencia de sintaxis SQL.
 +++
 
-### ¿Puedo extraer el contenido del conjunto de datos final que se ha introducido a través de consultas CTAS (suponiendo que estas son grandes cantidades de datos como Terabytes)?
+### ¿Puedo extraer el contenido del conjunto de datos final que se ha introducido a través de consultas CTAS (suponiendo que sean cantidades mayores de datos, como terabytes)?
 
-+++Nº respuesta Actualmente no hay ninguna función disponible para la extracción de datos ingestados.
++++Nº de respuesta Actualmente no hay ninguna función disponible para la extracción de datos ingeridos.
 +++
 
 ### ¿Por qué el conector de datos de Analytics no devuelve datos?
 
-+++Respuesta Una causa común de este problema es consultar datos de series temporales sin un filtro de tiempo. Por ejemplo:
++++Respuesta Una causa común de este problema es la consulta de datos de series temporales sin un filtro de tiempo. Por ejemplo:
 
 ```sql
 SELECT * FROM prod_table LIMIT 1;
@@ -584,77 +584,77 @@ and timestamp < to_timestamp('2022-07-23');
 
 Esta sección incluye información sobre el uso de herramientas de terceros como PSQL y Power BI.
 
-### ¿Puedo conectar el servicio de consulta a una herramienta de terceros?
+### ¿Puedo conectar el servicio de consultas a una herramienta de terceros?
 
-+++Respuesta Sí, puede conectar varios clientes de escritorio de terceros al servicio de consulta. Consulte la documentación para [detalles completos sobre los clientes disponibles y cómo conectarlos al servicio de Consulta](./clients/overview.md).
++++Responda Sí, puede conectar varios clientes de escritorio de terceros al servicio de consultas. Consulte la documentación de [detalles completos sobre los clientes disponibles y cómo conectarlos al servicio de consultas](./clients/overview.md).
 +++
 
 ### ¿Existe alguna forma de conectar el servicio de consulta una vez para utilizarlo de forma continua con una herramienta de terceros?
 
-+++Respuesta Sí, los clientes de escritorio de terceros pueden conectarse al servicio de consulta mediante una configuración única de credenciales que no caducan. Un usuario autorizado puede generar credenciales que no caduquen y recibirlas en un archivo JSON que se descarga automáticamente a su equipo local. Completa [instrucciones sobre cómo crear y descargar credenciales que no caduquen](./ui/credentials.md#non-expiring-credentials) en la documentación.
++++Responda Sí, los clientes de escritorio de terceros se pueden conectar al servicio de consultas mediante una configuración única de credenciales que no caducan. Las credenciales que no caducan las puede generar un usuario autorizado y recibirlas en un archivo JSON que se descarga automáticamente en su equipo local. Completo [instrucciones sobre cómo crear y descargar credenciales que no caducan](./ui/credentials.md#non-expiring-credentials) se puede encontrar en la documentación.
 +++
 
-### ¿Por qué no funcionan mis credenciales que no caducan?
+### ¿Por qué las credenciales que no caducan no funcionan?
 
-+++Respuesta El valor de las credenciales que no caducan son los argumentos concatenados del `technicalAccountID` y `credential` tomado del archivo JSON de configuración. El valor de la contraseña adopta la forma: `{{technicalAccountId}:{credential}}`.
++++Respuesta El valor de las credenciales que no caducan son los argumentos concatenados del `technicalAccountID` y el `credential` tomado del archivo JSON de configuración. El valor de la contraseña adopta la forma siguiente: `{{technicalAccountId}:{credential}}`.
 Consulte la documentación para obtener más información sobre cómo [conectarse a clientes externos con credenciales](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
-### ¿Qué tipo de editores SQL de terceros puedo conectar con el Editor de servicios de consulta?
+### ¿Qué tipo de editores SQL de terceros puedo conectar al Editor de servicios de consulta?
 
-+++Respuesta Cualquier editor SQL de terceros que sea PSQL o [!DNL Postgres] el cliente compatible se puede conectar al Editor del servicio de consultas. Consulte la documentación para [conexión de clientes al servicio de consulta](./clients/overview.md) para obtener una lista de las instrucciones disponibles.
++++Responda Cualquier editor SQL de terceros que sea PSQL o [!DNL Postgres] Los clientes compatibles se pueden conectar al Editor del servicio de consultas. Consulte la documentación de [conectar clientes al servicio de consultas](./clients/overview.md) para obtener una lista de las instrucciones disponibles.
 +++
 
-### ¿Puedo conectar la herramienta de Power BI al servicio de consulta?
+### ¿Puedo conectar la herramienta de Power BI al servicio de consultas?
 
-+++Respuesta Sí, puede conectar la Power BI al servicio de consulta. Consulte la documentación para [instrucciones sobre la conexión de la aplicación de escritorio de Power BI a Query Service](./clients/power-bi.md).
++++Responda Sí, puede conectar Power BI al servicio de consultas. Consulte la documentación de [instrucciones para conectar la aplicación de escritorio de Power BI al servicio de consultas](./clients/power-bi.md).
 +++
 
-### ¿Por qué los tableros tardan mucho en cargarse cuando están conectados al servicio de consulta?
+### ¿Por qué tardan mucho tiempo en cargarse los paneles al conectarse al servicio de consultas?
 
-+++Respuesta Cuando el sistema está conectado al servicio de consulta, está conectado a un motor de procesamiento interactivo o por lotes. Esto puede provocar que los tiempos de carga sean más largos para reflejar los datos procesados.
++++Respuesta Cuando el sistema está conectado al servicio de consultas, está conectado a un motor de procesamiento interactivo o por lotes. Esto puede conllevar un mayor tiempo de carga para reflejar los datos procesados.
 
-Si desea mejorar los tiempos de respuesta de los paneles, debe implementar un servidor de Business Intelligence (BI) como capa de almacenamiento en caché entre las herramientas de Query Service y BI. Por lo general, la mayoría de las herramientas de BI tienen una oferta adicional para un servidor.
+Si desea mejorar los tiempos de respuesta de sus paneles, debe implementar un servidor de Business Intelligence (BI) como capa de almacenamiento en caché entre el servicio de consultas y las herramientas de BI. Por lo general, la mayoría de las herramientas de BI tienen una oferta adicional para un servidor.
 
-El propósito de añadir la capa de servidor de caché es almacenar en caché los datos del servicio de consulta y utilizarlos para que los paneles aceleren la respuesta. Esto es posible, ya que los resultados de las consultas que se ejecutan se almacenan en caché en el servidor BI cada día. A continuación, el servidor en caché proporciona estos resultados a cualquier usuario con la misma consulta para reducir la latencia. Consulte la documentación de la utilidad o herramienta de terceros que está utilizando para obtener aclaraciones sobre esta configuración.
+El propósito de añadir la capa del servidor de caché es almacenar en caché los datos del servicio de consulta y utilizar el mismo para los paneles a fin de acelerar la respuesta. Esto es posible ya que los resultados de las consultas que se ejecutan se almacenarían en caché en el servidor de BI todos los días. A continuación, el servidor de almacenamiento en caché proporciona estos resultados a cualquier usuario con la misma consulta para reducir la latencia. Consulte la documentación de la utilidad o herramienta de terceros que está utilizando para obtener más información sobre esta configuración.
 +++
 
-### ¿Es posible acceder al servicio de consulta mediante la herramienta de conexión pgAdmin?
+### ¿Es posible acceder al servicio de consultas mediante la herramienta de conexión pgAdmin?
 
-+++Respuesta No, la conectividad pgAdmin no es compatible. A [lista de clientes de terceros disponibles e instrucciones sobre cómo conectarlos al servicio de consulta](./clients/overview.md) en la documentación.
++++Respuesta No, no se admite la conectividad con pgAdmin. A [lista de clientes de terceros disponibles e instrucciones sobre cómo conectarlos al servicio de consultas](./clients/overview.md) se puede encontrar en la documentación.
 +++
 
-## Errores de API PostgreSQL {#postgresql-api-errors}
+## Errores de API de PostgreSQL {#postgresql-api-errors}
 
 La siguiente tabla proporciona códigos de error PSQL y sus posibles causas.
 
-| Código de error | Estado de la conexión | Descripción | Posible causa |
+| Código de error | Estado de conexión | Descripción | Posible causa |
 |------------|---------------------------|-------------|----------------|
-| **08P01** | N/A | Tipo de mensaje no admitido | Tipo de mensaje no admitido |
+| **08P01** | N/A | Tipo de mensaje no compatible | Tipo de mensaje no compatible |
 | **28P01** | Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
 | **28000** | Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
-| **42P12** | Inicio: autenticación | No se encontraron tablas | No se encontraron tablas para su uso |
-| **42601** | Consulta | Error de sintaxis | Error de sintaxis o comando no válido |
+| **42P12** | Inicio: autenticación | No se han encontrado tablas | No se han encontrado tablas para su uso |
+| **42601** | Consulta | Error de sintaxis | Error de comando o sintaxis no válido |
 | **42P01** | Consulta | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
 | **42P07** | Consulta | La tabla existe | Ya existe una tabla con el mismo nombre (CREATE TABLE) |
-| **53400** | Consulta | El LÍMITE supera el valor máximo | El usuario especificó una cláusula LIMIT superior a 100.000 |
-| **53400** | Consulta | Tiempo de espera de la instrucción | La declaración en directo presentada tardó más de 10 minutos |
+| **53400** | Consulta | El LÍMITE supera el valor máximo | El usuario especificó una cláusula LIMIT superior a 100 000 |
+| **53400** | Consulta | Tiempo de espera de instrucción | La declaración en directo enviada ha tardado más de 10 minutos como máximo |
 | **58000** | Consulta | Error del sistema | Fallo interno del sistema |
-| **0A000** | Consulta/Comando | No admitido | La función/funcionalidad de la consulta/comando no es compatible |
-| **42501** | Consulta de TABLA DE COLOCACIÓN | El servicio de consulta no crea la tabla de pérdidas | El servicio de consultas no creó la tabla que se está soltando mediante el `CREATE TABLE` statement |
-| **42501** | Consulta de TABLA DE COLOCACIÓN | Tabla no creada por el usuario autenticado | El usuario que ha iniciado sesión actualmente no ha creado la tabla que se está quitando |
-| **42P01** | Consulta de TABLA DE COLOCACIÓN | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
-| **42P12** | Consulta de TABLA DE COLOCACIÓN | No se encontró ninguna tabla para `dbName`: compruebe el `dbName` | No se encontraron tablas en la base de datos actual |
+| **0A000** | Consulta/Comando | No admitido | No se admite la función/funcionalidad de la consulta/comando |
+| **42501** | DROP TABLE Query | El servicio de consultas no crea la tabla de colocación | El servicio de consultas no creó la tabla que se está quitando mediante el `CREATE TABLE` declaración |
+| **42501** | DROP TABLE Query | Tabla no creada por el usuario autenticado | El usuario que ha iniciado sesión actualmente no ha creado la tabla que se está quitando |
+| **42P01** | DROP TABLE Query | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
+| **42P12** | DROP TABLE Query | No se ha encontrado ninguna tabla para `dbName`: compruebe la `dbName` | No se encontraron tablas en la base de datos actual |
 
 ### ¿Por qué recibí un código de error 58000 al usar el método history_meta() en mi tabla?
 
-+++Responder A La `history_meta()` se utiliza para acceder a una instantánea desde un conjunto de datos. Anteriormente, si se ejecutaba una consulta en un conjunto de datos vacío en Azure Data Lake Storage (ADLS), se recibía un código de error 58000 que indicaba que el conjunto de datos no existe. A continuación se muestra un ejemplo del antiguo error del sistema.
++++Responda Al `history_meta()` se utiliza para acceder a una instantánea de un conjunto de datos. Anteriormente, si ejecutaba una consulta en un conjunto de datos vacío en Azure Data Lake Storage (ADLS), recibía un código de error 58000 que indicaba que el conjunto de datos no existe. A continuación se muestra un ejemplo del error del sistema antiguo.
 
 ```shell
 ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
 ```
 
-Este error se producía porque no había ningún valor devuelto para la consulta. Este comportamiento se ha corregido para que devuelva el siguiente mensaje:
+Este error se produjo porque no había ningún valor devuelto para la consulta. Este comportamiento se ha corregido para devolver el siguiente mensaje:
 
 ```text
 Query complete in {timeframe}. 0 rows returned. 
@@ -668,6 +668,6 @@ La siguiente tabla proporciona códigos de error HTTP y sus posibles causas.
 
 | Código de estado HTTP | Descripción | Posibles causas |
 |------------------|-----------------------|----------------------------|
-| 400 | Solicitud incorrecta | Consulta no formada o no válida |
+| 400 | Solicitud incorrecta | Consulta incorrecta o no válida |
 | 401 | Error de autenticación | Token de autenticación no válido |
 | 500 | Error interno del servidor | Fallo interno del sistema |

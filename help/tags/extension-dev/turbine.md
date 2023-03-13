@@ -4,7 +4,7 @@ description: Obtenga información acerca del objeto turbine, una variable gratui
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '619'
 ht-degree: 86%
 
 ---
@@ -39,7 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | La fecha ISO 8601 en que se creó la versión de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilizada dentro del contenedor. |
 | `buildDate` | La fecha ISO 8601 en que se creó la biblioteca actual. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `environment`
 
@@ -47,7 +47,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 console.log(turbine.environment.stage);
 ```
 
-`turbine.environment` es un objeto que contiene información sobre el entorno en el que se implementa la biblioteca.
+`turbine.environment` es un objeto que contiene información sobre el entorno en el que está implementada la biblioteca.
 
 ```js
 {
@@ -58,10 +58,10 @@ console.log(turbine.environment.stage);
 
 | Propiedad | Descripción |
 | --- | --- |
-| `id` | ID del entorno. |
-| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging` y `production`. |
+| `id` | El ID del entorno. |
+| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging`, y `production`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `debugEnabled`
 
@@ -119,7 +119,7 @@ Utilidad de registro utilizada para registrar mensajes en la consola. Los mensaj
 * `logger.warn(message: string)`: Registra un mensaje de advertencia en la consola.
 * `logger.error(message: string)`: Registra un mensaje de error en la consola.
 * `logger.debug(message: string)`: Registra un mensaje de depuración en la consola. (Solo visible cuando el registro `verbose` está habilitado en la consola del explorador.)
-* `logger.deprecation(message: string)`: Registra un mensaje de advertencia a la consola si el usuario ha habilitado o no la depuración de etiquetas.
+* `logger.deprecation(message: string)`: Registra un mensaje de advertencia en la consola, independientemente de si el usuario ha habilitado o no la depuración de etiquetas.
 
 ## `onDebugChanged`
 

@@ -1,34 +1,34 @@
 ---
-title: Punto final de la API del pedido de trabajo
-description: El extremo /workorder de la API de higiene de datos permite administrar mediante programación las tareas de eliminación de identidades.
+title: Punto final de API de orden de trabajo
+description: El extremo /workorder de la API de higiene de datos le permite administrar mediante programación las tareas de eliminación de identidades.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 5%
+source-wordcount: '1011'
+ht-degree: 3%
 
 ---
 
-# Punto final del pedido de trabajo
+# Punto final de orden de trabajo
 
-La variable `/workorder` en la API de higiene de datos le permite administrar mediante programación solicitudes de eliminación de registros en Adobe Experience Platform.
+El `/workorder` Este extremo de la API de higiene de datos le permite administrar mediante programación las solicitudes de eliminación de registros en Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Las solicitudes de eliminación de registros solo están disponibles para las organizaciones que han comprado **Adobe Escudo Sanitario**.
+>Las solicitudes de eliminación de registros solo están disponibles para organizaciones que han realizado compras **Adobe Healthcare Shield**.
 >
 >
->Las eliminaciones de registros están pensadas para utilizarse en la limpieza de datos, la eliminación de datos anónimos o la minimización de datos. Son **not** para su uso en solicitudes de derechos de interesados (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento de normas, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
+>Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Lo son **no** para su uso en solicitudes de derechos de titulares de los datos (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de conformidad, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
 ## Primeros pasos
 
-El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, revise la [información general](./overview.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, consulte la [descripción general](./overview.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ## Crear una solicitud de eliminación de registro {#create}
 
-Puede eliminar una o más identidades de un único conjunto de datos o de todos los conjuntos de datos realizando una solicitud de POST al `/workorder` punto final.
+Puede eliminar una o más identidades de un único conjunto de datos o de todos ellos realizando una solicitud del POST a `/workorder` punto final.
 
 **Formato de API**
 
@@ -38,7 +38,7 @@ POST /workorder
 
 **Solicitud**
 
-Según el valor de la variable `datasetId` proporcionado en la carga útil de la solicitud, la llamada de API eliminará identidades de todos los conjuntos de datos o de un único conjunto de datos que especifique. La siguiente solicitud elimina tres identidades de un conjunto de datos específico.
+Según el valor de la variable `datasetId` proporcionada en la carga útil de la solicitud, la llamada de API eliminará las identidades de todos los conjuntos de datos o de un único conjunto de datos que especifique. La siguiente solicitud elimina tres identidades de un conjunto de datos específico.
 
 ```shell
 curl -X POST \
@@ -78,13 +78,13 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `action` | La acción que se va a realizar. El valor debe establecerse en `delete_identity` para eliminaciones de registros. |
-| `datasetId` | Si va a eliminar de un único conjunto de datos, este valor debe ser el ID del conjunto de datos en cuestión. Si va a eliminar de todos los conjuntos de datos, establezca el valor en `ALL`.<br><br>Si especifica un único conjunto de datos, el esquema del Modelo de datos de experiencia (XDM) asociado al conjunto de datos debe tener definida una identidad principal. |
-| `displayName` | El nombre para mostrar de la solicitud de eliminación de registros. |
-| `description` | Descripción de la solicitud de eliminación de registros. |
-| `identities` | Matriz que contiene las identidades de al menos un usuario cuya información desea eliminar. Cada identidad consta de un [área de nombres de identidad](../../identity-service/namespaces.md) y un valor:<ul><li>`namespace`: Contiene una propiedad de cadena única, `code`, que representa el área de nombres de identidad. </li><li>`id`: El valor de identidad.</ul>If `datasetId` especifica un conjunto de datos único, cada entidad de `identities` debe utilizar el mismo área de nombres de identidad que la identidad principal del esquema.<br><br>If `datasetId` está configurado como `ALL`, el `identities` matriz no está restringida a un solo espacio de nombres, ya que cada conjunto de datos puede ser diferente. Sin embargo, las solicitudes siguen restringiendo los espacios de nombres disponibles para su organización, tal y como informa [Servicio de identidad](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `action` | Acción que se va a realizar. El valor debe establecerse en `delete_identity` para eliminaciones de registros. |
+| `datasetId` | Si está eliminando de un único conjunto de datos, este valor debe ser el ID del conjunto de datos en cuestión. Si está eliminando de todos los conjuntos de datos, establezca el valor en `ALL`.<br><br>Si especifica un único conjunto de datos, el esquema del modelo de datos de experiencia (XDM) asociado al conjunto de datos debe tener definida una identidad principal. |
+| `displayName` | El nombre para mostrar de la solicitud de eliminación de registro. |
+| `description` | Descripción de la solicitud de eliminación de registro. |
+| `identities` | Matriz que contiene las identidades de al menos un usuario cuya información desea eliminar. Cada identidad consta de un [área de nombres de identidad](../../identity-service/namespaces.md) y un valor:<ul><li>`namespace`: contiene una sola propiedad de cadena, `code`, que representa el área de nombres de identidad. </li><li>`id`: El valor de identidad.</ul>If `datasetId` especifica un único conjunto de datos, cada entidad en `identities` debe utilizar el mismo área de nombres de identidad que la identidad principal del esquema.<br><br>If `datasetId` se establece en `ALL`, el `identities` La matriz no está restringida a un área de nombres única, ya que cada conjunto de datos puede ser diferente. Sin embargo, las solicitudes siguen restringiendo las áreas de nombres disponibles para su organización, tal como indica [Servicio de identidad](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -110,17 +110,17 @@ Una respuesta correcta devuelve los detalles de la eliminación del registro.
 | --- | --- |
 | `workorderId` | El ID del orden de eliminación. Se puede utilizar para buscar el estado de la eliminación más adelante. |
 | `orgId` | Su ID de organización. |
-| `bundleId` | El ID del paquete al que está asociada esta orden de eliminación, utilizado para la depuración. Los servicios descendentes agrupan varios pedidos de eliminación para procesarlos. |
-| `action` | Acción que realiza la orden de trabajo. Para eliminaciones de registros, el valor es `identity-delete`. |
-| `createdAt` | Marca de tiempo del momento en que se creó el pedido de eliminación. |
-| `updatedAt` | Marca de fecha y hora de la última actualización del pedido de eliminación. |
-| `status` | Estado actual del orden de eliminación. |
+| `bundleId` | El ID del paquete al que está asociado este orden de eliminación, que se utiliza con fines de depuración. Los servicios descendentes agrupan varios pedidos de eliminación para procesarlos. |
+| `action` | Acción que está realizando la orden de trabajo. Para eliminaciones de registros, el valor es `identity-delete`. |
+| `createdAt` | Una marca de tiempo del momento en el que se creó el pedido de eliminación. |
+| `updatedAt` | Una marca de tiempo de la última vez que se actualizó el orden de eliminación. |
+| `status` | El estado actual del orden de eliminación. |
 | `createdBy` | El usuario que creó el orden de eliminación. |
-| `datasetId` | El ID del conjunto de datos que está sujeto a la solicitud. Si la solicitud es para todos los conjuntos de datos, el valor se establecerá en `ALL`. |
+| `datasetId` | El ID del conjunto de datos sujeto a la solicitud. Si la solicitud es para todos los conjuntos de datos, el valor se establecerá en `ALL`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Recuperar el estado de una eliminación de registro (#lookup)
+## Recuperar el estado de eliminación de un registro (#lookup)
 
 Después [creación de una solicitud de eliminación de registro](#create), puede comprobar su estado mediante una solicitud de GET.
 
@@ -132,9 +132,9 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{WORK_ORDER_ID}` | La variable `workorderId` de la eliminación de registro que está buscando. |
+| `{WORK_ORDER_ID}` | El `workorderId` de la eliminación de registro que está buscando. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -188,18 +188,18 @@ Una respuesta correcta devuelve los detalles de la operación de eliminación, i
 | --- | --- |
 | `workorderId` | El ID del orden de eliminación. Se puede utilizar para buscar el estado de la eliminación más adelante. |
 | `orgId` | Su ID de organización. |
-| `bundleId` | El ID del paquete al que está asociada esta orden de eliminación, utilizado para la depuración. Los servicios descendentes agrupan varios pedidos de eliminación para procesarlos. |
-| `action` | Acción que realiza la orden de trabajo. Para eliminaciones de registros, el valor es `identity-delete`. |
-| `createdAt` | Marca de tiempo del momento en que se creó el pedido de eliminación. |
-| `updatedAt` | Marca de fecha y hora de la última actualización del pedido de eliminación. |
-| `status` | Estado actual del orden de eliminación. |
+| `bundleId` | El ID del paquete al que está asociado este orden de eliminación, que se utiliza con fines de depuración. Los servicios descendentes agrupan varios pedidos de eliminación para procesarlos. |
+| `action` | Acción que está realizando la orden de trabajo. Para eliminaciones de registros, el valor es `identity-delete`. |
+| `createdAt` | Una marca de tiempo del momento en el que se creó el pedido de eliminación. |
+| `updatedAt` | Una marca de tiempo de la última vez que se actualizó el orden de eliminación. |
+| `status` | El estado actual del orden de eliminación. |
 | `createdBy` | El usuario que creó el orden de eliminación. |
-| `datasetId` | El ID del conjunto de datos que está sujeto a la solicitud. Si la solicitud es para todos los conjuntos de datos, el valor se establecerá en `ALL`. |
-| `productStatusDetails` | Matriz que enumera el estado actual de los procesos descendentes relacionados con la solicitud. Cada objeto de matriz contiene las siguientes propiedades:<ul><li>`productName`: Nombre del servicio descendente.</li><li>`productStatus`: Estado de procesamiento actual de la solicitud desde el servicio descendente.</li><li>`createdAt`: Marca de fecha y hora en la que el servicio anunció el estado más reciente.</li></ul> |
+| `datasetId` | El ID del conjunto de datos sujeto a la solicitud. Si la solicitud es para todos los conjuntos de datos, el valor se establecerá en `ALL`. |
+| `productStatusDetails` | Una matriz que enumera el estado actual de los procesos descendentes relacionados con la solicitud. Cada objeto de matriz contiene las siguientes propiedades:<ul><li>`productName`: Nombre del servicio descendente.</li><li>`productStatus`: el estado de procesamiento actual de la solicitud del servicio descendente.</li><li>`createdAt`: Una marca de tiempo del momento en el que el servicio publicó el estado más reciente.</li></ul> |
 
 ## Actualizar una solicitud de eliminación de registro
 
-Puede actualizar el `displayName` y `description` para eliminar un registro realizando una solicitud de PUT.
+Puede actualizar el `displayName` y `description` para eliminar un registro realizando una solicitud al PUT.
 
 **Formato de API**
 
@@ -209,9 +209,9 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{WORK_ORDER_ID}` | La variable `workorderId` de la eliminación de registro que está buscando. |
+| `{WORK_ORDER_ID}` | El `workorderId` de la eliminación de registro que está buscando. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -230,10 +230,10 @@ curl -X GET \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `displayName` | Un nombre para mostrar actualizado para la solicitud de eliminación de registros. |
-| `description` | Descripción actualizada de la solicitud de eliminación de registros. |
+| `displayName` | Un nombre para mostrar actualizado para la solicitud de eliminación de registro. |
+| `description` | Una descripción actualizada para la solicitud de eliminación de registro. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -276,13 +276,13 @@ Una respuesta correcta devuelve los detalles de la eliminación del registro.
 | --- | --- |
 | `workorderId` | El ID del orden de eliminación. Se puede utilizar para buscar el estado de la eliminación más adelante. |
 | `orgId` | Su ID de organización. |
-| `bundleId` | El ID del paquete al que está asociada esta orden de eliminación, utilizado para la depuración. Los servicios descendentes agrupan varios pedidos de eliminación para procesarlos. |
-| `action` | Acción que realiza la orden de trabajo. Para eliminaciones de registros, el valor es `identity-delete`. |
-| `createdAt` | Marca de tiempo del momento en que se creó el pedido de eliminación. |
-| `updatedAt` | Marca de fecha y hora de la última actualización del pedido de eliminación. |
-| `status` | Estado actual del orden de eliminación. |
+| `bundleId` | El ID del paquete al que está asociado este orden de eliminación, que se utiliza con fines de depuración. Los servicios descendentes agrupan varios pedidos de eliminación para procesarlos. |
+| `action` | Acción que está realizando la orden de trabajo. Para eliminaciones de registros, el valor es `identity-delete`. |
+| `createdAt` | Una marca de tiempo del momento en el que se creó el pedido de eliminación. |
+| `updatedAt` | Una marca de tiempo de la última vez que se actualizó el orden de eliminación. |
+| `status` | El estado actual del orden de eliminación. |
 | `createdBy` | El usuario que creó el orden de eliminación. |
-| `datasetId` | El ID del conjunto de datos que está sujeto a la solicitud. Si la solicitud es para todos los conjuntos de datos, el valor se establecerá en `ALL`. |
-| `productStatusDetails` | Matriz que enumera el estado actual de los procesos descendentes relacionados con la solicitud. Cada objeto de matriz contiene las siguientes propiedades:<ul><li>`productName`: Nombre del servicio descendente.</li><li>`productStatus`: Estado de procesamiento actual de la solicitud desde el servicio descendente.</li><li>`createdAt`: Marca de fecha y hora en la que el servicio anunció el estado más reciente.</li></ul> |
+| `datasetId` | El ID del conjunto de datos sujeto a la solicitud. Si la solicitud es para todos los conjuntos de datos, el valor se establecerá en `ALL`. |
+| `productStatusDetails` | Una matriz que enumera el estado actual de los procesos descendentes relacionados con la solicitud. Cada objeto de matriz contiene las siguientes propiedades:<ul><li>`productName`: Nombre del servicio descendente.</li><li>`productStatus`: el estado de procesamiento actual de la solicitud del servicio descendente.</li><li>`createdAt`: Una marca de tiempo del momento en el que el servicio publicó el estado más reciente.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

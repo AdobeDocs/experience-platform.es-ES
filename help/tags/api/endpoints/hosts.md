@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /hosts en la API de Reactor.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '797'
 ht-degree: 92%
 
 ---
@@ -41,7 +41,7 @@ GET /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `PROPERTY_ID` | El `id` de la propiedad que posee los hosts. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ GET /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | El `id` del host que desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -190,7 +190,7 @@ POST /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `PROPERTY_ID` | El `id` de la [propiedad](./properties.md) en la que está definiendo el host. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -228,11 +228,11 @@ curl -X POST \
 | `attributes.path` | Ruta de acceso que se anexará a la dirección URL `server`. |
 | `attributes.port` | Un entero que indica el puerto de servidor específico que se va a utilizar. |
 | `attributes.server` | La URL de host del servidor. |
-| `attributes.skip_symlinks`<br><br>(Solo para hosts SFTP) | De forma predeterminada, todos los hosts SFTP utilizan vínculos simbólicos (enlaces simbólicos) para hacer referencia a compilaciones de biblioteca guardadas en el servidor. Sin embargo, no todos los servidores admiten el uso de enlaces simbólicos. Cuando este atributo se incluye y se establece en `true`, el host utiliza una operación de copia para actualizar los recursos de compilación directamente en lugar de utilizar enlaces simbólicos. |
+| `attributes.skip_symlinks`<br><br>(solo para hosts SFTP) | De forma predeterminada, todos los hosts SFTP utilizan vínculos simbólicos (enlaces simbólicos) para hacer referencia a las compilaciones de biblioteca guardadas en el servidor. Sin embargo, no todos los servidores admiten el uso de enlaces simbólicos. Cuando este atributo se incluye y se establece en `true`Además, el host utiliza una operación de copia para actualizar los recursos de compilación directamente en lugar de utilizar enlaces simbólicos. |
 | `attributes.username` | Un nombre de usuario opcional para la autenticación. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `hosts`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -292,7 +292,7 @@ PATCH /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | El `id` del host que desea actualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -322,7 +322,7 @@ curl -X PATCH \
 | `id` | El `id` del host que desea actualizar. Debe coincidir con el valor `{HOST_ID}` proporcionado en la ruta de solicitud. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `hosts`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -378,7 +378,7 @@ DELETE /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | El `id` del host que desea eliminar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -414,7 +414,7 @@ GET /hosts/{HOST_ID}/property
 | --- | --- |
 | `{HOST_ID}` | El `id` del host cuya propiedad desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 

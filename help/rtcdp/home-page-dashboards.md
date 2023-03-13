@@ -1,6 +1,6 @@
 ---
-keywords: información general sobre las métricas; información general sobre las métricas de rtcdp
-title: Página principal de Real-time Customer Data Platform y tableros
+keywords: resumen de métricas; resumen de métricas de rtcdp
+title: Página de inicio y paneles de Real-time Customer Data Platform
 description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
@@ -10,46 +10,46 @@ ht-degree: 2%
 
 ---
 
-# [!DNL Real-Time Customer Data Platform] página de inicio y tableros
+# [!DNL Real-Time Customer Data Platform] página de inicio y paneles
 
-La página de inicio de Adobe Real-time Customer Data Platform (Real-Time CDP), que incluye un tablero de métricas, aparece cuando inicia sesión en Real-Time CDP.
+La página de inicio de Adobe Real-time Customer Data Platform (Real-Time CDP), que incluye un panel de métricas, aparece al iniciar sesión en Real-Time CDP.
 
-La página de inicio es solo uno de los lugares en los que aparecen las tarjetas de métricas. Real-Time CDP proporciona tarjetas de métricas a lo largo de toda la experiencia. Estas métricas le informan sobre los datos, el perfil y las audiencias de segmento del sistema.
+La página de inicio es solo uno de los lugares en los que aparecen las tarjetas de métricas. Real-Time CDP proporciona tarjetas de métricas en toda la experiencia. Estas métricas le informan sobre los datos, el perfil y las audiencias de segmentos en el sistema.
 
 ![imagen](assets/home.png)
 
-Si no hay datos en el sistema cuando inicia sesión en Real-Time CDP, no aparece el tablero de la página principal. En este caso, la página principal proporciona material de aprendizaje para una primera experiencia de usuario. A medida que se recopilan los datos, es decir, como <!--sources-->se crean conjuntos de datos, perfiles, segmentos y destinos, y los flujos de datos se actualizan en el sistema; el tablero se actualiza automáticamente para mostrar información sobre esos datos<!-- in metric cards-->.
+Si no hay datos en el sistema cuando inicia sesión en Real-Time CDP, el panel de la página principal no aparece. En este caso, la página de inicio proporciona material de aprendizaje por primera vez para la experiencia del usuario. A medida que se recopilan los datos, es decir, como <!--sources-->se crean conjuntos de datos, perfiles, segmentos y destinos y los datos fluyen al sistema; el tablero se actualiza automáticamente para mostrar información sobre esos datos<!-- in metric cards-->.
 
-## Vista del tablero de la página de inicio
+## Vista del panel de página principal
 
 <!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
 
 El tablero se divide en<!-- two areas.-->:
 
-* **El panel de control** en la parte superior del tablero. El panel de control muestra la cantidad de conjuntos de datos, perfiles, segmentos y destinos del sistema.
+* **La tabla de clasificación** está en la parte superior del panel. La tabla de clasificación muestra el número de conjuntos de datos, perfiles, segmentos y destinos del sistema.
 
    ![imagen](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
-* **Artículos recientes** enumera los cinco conjuntos de datos, fuentes, segmentos y destinos más recientes agregados al sistema.
+* **Elementos recientes** enumera los cinco conjuntos de datos, fuentes, segmentos y destinos más recientes agregados al sistema.
 
    ![imagen](assets/recent.png)
 
-En otras partes de Real-time Customer Data Platform hay disponibles métricas adicionales, por ejemplo para perfiles y segmentos.
+Hay métricas adicionales disponibles en otras partes de Real-time Customer Data Platform, por ejemplo, para perfiles y segmentos.
 
 ### Conjuntos de datos
 
-La variable **[!UICONTROL Conjuntos de datos]** counter muestra la cantidad de conjuntos de datos en el sistema y la cantidad de datos en [!DNL Platform]. Este contador se actualiza cuando se crea un conjunto de datos.
+El **[!UICONTROL Conjuntos de datos]** muestra el número de conjuntos de datos del sistema y la cantidad de datos en [!DNL Platform]. Este contador se actualiza cuando se crea un conjunto de datos.
 
 Para obtener más información sobre los conjuntos de datos, consulte la [información general sobre conjuntos de datos](../catalog/datasets/overview.md).
 
 ### Perfiles
 
-La variable **[!UICONTROL Perfiles]** count muestra el número total de personas con perfiles en la variable [!DNL Real-Time Customer Profile]. No incluye fragmentos de perfil. Esta es su audiencia total a la que puede dirigirse.
+El **[!UICONTROL Perfiles]** El recuento muestra el número total de personas con perfiles en la [!DNL Real-Time Customer Profile]. No incluye fragmentos de perfil. Esta es su audiencia total a la que puede dirigirse.
 
-Este recuento utiliza el valor predeterminado [combinar directiva](profile/merge-policies.md) tal y como se establece en la configuración de directiva de combinación en Perfil unificado.
+Este recuento utiliza el valor predeterminado [política de combinación](profile/merge-policies.md) tal como se establece en la configuración de la política de combinación en Perfil unificado.
 
 El número de perfiles se actualiza una vez cada 24 horas.
 
@@ -59,13 +59,13 @@ Para obtener más información sobre los perfiles, consulte [Una vista unificada
 
 **[!UICONTROL Segmentos]** muestra el número total de segmentos creados para la organización. Este número se actualiza cuando se crean nuevos segmentos.
 
-Para obtener más información sobre los segmentos, consulte [Información general del servicio de segmentación](segmentation/segmentation-overview.md).
+Para obtener más información sobre los segmentos, consulte [Resumen del servicio de segmentación](segmentation/segmentation-overview.md).
 
 ### Destinos
 
 **[!UICONTROL Destinos]** muestra el número total de destinos creados para la organización. Este número se actualiza cuando se crean nuevos destinos.
 
-Para obtener más información sobre los destinos, consulte [Información general sobre destinos](destinations/overview.md).
+Para obtener más información sobre los destinos, consulte [Resumen de destinos](destinations/overview.md).
 
 <!-- ### Successful profile records
 
@@ -103,32 +103,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Conjuntos de datos recientes
 
-La variable **[!UICONTROL Conjuntos de datos recientes]** la tarjeta muestra los cinco conjuntos de datos más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo conjunto de datos.
+El **[!UICONTROL Conjuntos de datos recientes]** muestra los cinco conjuntos de datos creados más recientemente dentro de la organización. Esta lista se actualiza cuando se crea un nuevo conjunto de datos.
 
-Seleccione un conjunto de datos para ver los detalles de ese elemento, o **[!UICONTROL Ver todo]** para ver la lista de conjuntos de datos. Desde allí, puede seleccionar una fuente específica para obtener más información.
+Seleccione un conjunto de datos para ver los detalles de ese elemento o **[!UICONTROL Ver todo]** para ver la lista de conjuntos de datos. Desde allí, puede seleccionar una fuente específica para obtener más información.
 
 Para obtener más información sobre los conjuntos de datos, consulte la [información general sobre conjuntos de datos](../catalog/datasets/overview.md).
 
 ### Fuentes recientes
 
-La variable **[!UICONTROL Fuentes recientes]** tarjeta de métrica muestra las cinco fuentes más recientes creadas dentro de la organización. Esta lista se actualiza cuando se crea un nuevo origen.
+El **[!UICONTROL Fuentes recientes]** La tarjeta de métrica de muestra los cinco orígenes más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo origen.
 
-Seleccione un origen para ver los detalles de ese elemento, o bien **[!UICONTROL Ver todo]** para ver la lista de fuentes. Desde allí, puede seleccionar una fuente específica para obtener más información.
+Seleccione un origen para ver los detalles de ese elemento o **[!UICONTROL Ver todo]** para ver la lista de fuentes. Desde allí, puede seleccionar una fuente específica para obtener más información.
 
-Para obtener más información sobre las fuentes, consulte [Resumen de fuentes](sources/sources-overview.md).
+Para obtener más información sobre las fuentes, consulte [Resumen de orígenes](sources/sources-overview.md).
 
 ### Segmentos recientes
 
-La variable **[!UICONTROL Segmentos recientes]** tarjeta de métrica muestra los cinco segmentos más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo segmento.
+El **[!UICONTROL Segmentos recientes]** La tarjeta de métrica de muestra los cinco segmentos creados más recientemente dentro de la organización. Esta lista se actualiza cuando se crea un nuevo segmento.
 
-Seleccione un segmento para ver los detalles de ese elemento, o bien **[!UICONTROL Ver todo]** para ver información sobre más segmentos.
+Seleccione un segmento para ver los detalles de ese elemento o **[!UICONTROL Ver todo]** para ver información sobre más segmentos.
 
-Para obtener más información sobre los segmentos, consulte [Información general del servicio de segmentación](segmentation/segmentation-overview.md).
+Para obtener más información sobre los segmentos, consulte [Resumen del servicio de segmentación](segmentation/segmentation-overview.md).
 
 ### Destinos recientes
 
-La variable **[!UICONTROL Destinos recientes]** tarjeta de métrica muestra los cinco destinos más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo destino.
+El **[!UICONTROL Destinos recientes]** La tarjeta de métrica de muestra los cinco destinos más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo destino.
 
-Seleccione un destino para ver los detalles de ese elemento, o bien **[!UICONTROL Ver todo]** para ver información sobre más destinos.
+Seleccione un destino para ver los detalles de ese elemento o **[!UICONTROL Ver todo]** para ver información sobre más destinos.
 
-Para obtener más información sobre los destinos, consulte [Información general sobre destinos](destinations/overview.md).
+Para obtener más información sobre los destinos, consulte [Resumen de destinos](destinations/overview.md).

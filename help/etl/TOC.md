@@ -6,14 +6,14 @@ user-guide-description: Descubra los pasos generales para crear conectores segur
 source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '43'
-ht-degree: 48%
+ht-degree: 58%
 
 ---
 
 
-# Extraer, transformar y cargar procedimientos en el Experience Platform {#etl}
+# Extracción, transformación y carga de procedimientos en Experience Platform {#etl}
 
 - [Desarrollo de integraciones de ETL](home.md)
 - [Transformación de ETL](transformations.md)
 - [Flujo de trabajo de ETL](workflow.md)
-- [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)

@@ -1,43 +1,43 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquema;registro de esquema;unión;unión;uniones;sindicatos;segmentación;pertenencia a segmentos;eventos de series temporales;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;registro de esquemas;unión;uniones;uniones;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
-title: Punto final de la API de Unions
-description: El extremo /union de la API del Registro de esquemas permite administrar mediante programación esquemas de unión XDM en la aplicación de experiencia.
+title: Extremo de API de uniones
+description: El extremo /union de la API de Registro de esquemas le permite administrar mediante programación esquemas de unión XDM en la aplicación de experiencia.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 3%
+source-wordcount: '896'
+ht-degree: 2%
 
 ---
 
-# Punto final de unión
+# Extremo de uniones
 
-Los sindicatos (o vistas de unión) son esquemas generados por el sistema, de solo lectura que acumulan los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) y están activados para [[!DNL Real-Time Customer Profile]](../../profile/home.md).
+Las uniones (o vistas de unión) son esquemas de solo lectura generados por el sistema que agregan los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) y están habilitadas para [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
-Este documento cubre conceptos esenciales para trabajar con sindicatos en la API del Registro de esquemas, incluidas llamadas de ejemplo para diversas operaciones. Para obtener información más general sobre los sindicatos en XDM, consulte la sección sobre los sindicatos en la [conceptos básicos de la composición del esquema](../schema/composition.md#union).
+Este documento cubre conceptos esenciales para trabajar con uniones en la API del Registro de esquemas, incluidas llamadas de ejemplo para varias operaciones. Para obtener información más general sobre las uniones en XDM, consulte la sección sobre uniones en [conceptos básicos de composición de esquemas](../schema/composition.md#union).
 
 ## Campos de esquema de unión
 
-La variable [!DNL Schema Registry] incluye automáticamente tres campos clave dentro de un esquema de unión: `identityMap`, `timeSeriesEvents`y `segmentMembership`.
+El [!DNL Schema Registry] incluye automáticamente tres campos clave dentro de un esquema de unión: `identityMap`, `timeSeriesEvents`, y `segmentMembership`.
 
 ### Mapa de identidad
 
-Un esquema de unión `identityMap` es una representación de las identidades conocidas dentro de los esquemas de registros asociados a la unión. El mapa de identidad separa las identidades en diferentes matrices tecleadas por el área de nombres. Cada identidad enumerada es en sí mismo un objeto que contiene un `id` valor. Consulte la [Documentación del servicio de identidad](../../identity-service/home.md) para obtener más información.
+El esquema de unión es `identityMap` es una representación de las identidades conocidas dentro de los esquemas de registros asociados a la unión. El mapa de identidad separa las identidades en diferentes matrices marcadas por el área de nombres. Cada identidad enumerada es en sí misma un objeto que contiene un único `id` valor. Consulte la [Documentación del servicio de identidad](../../identity-service/home.md) para obtener más información.
 
-### Eventos de series temporales
+### Eventos de series de tiempo
 
-La variable `timeSeriesEvents` matriz es una lista de eventos de series temporales relacionados con los esquemas de registros asociados a la unión. Cuando se exportan datos de perfil a conjuntos de datos, esta matriz se incluye para cada registro. Esto resulta útil en varios casos de uso, como el aprendizaje automático en el que los modelos necesitan todo el historial de comportamiento de un perfil, además de sus atributos de registro.
+El `timeSeriesEvents` matriz es una lista de eventos de series temporales relacionados con los esquemas de registros asociados a la unión. Cuando los datos de perfil se exportan a conjuntos de datos, esta matriz se incluye para cada registro. Esto resulta útil para varios casos de uso, como el aprendizaje automático, en el que los modelos necesitan todo el historial de comportamiento de un perfil, además de sus atributos de registro.
 
-### Mapa de pertenencia a segmentos
+### Asignación de abono de segmento
 
-La variable `segmentMembership` map almacena los resultados de las evaluaciones de segmentos. Cuando los trabajos de segmentos se ejecutan correctamente usando la variable [API de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/), se actualiza el mapa. `segmentMembership` también almacena todos los segmentos de audiencia preevaluados que se incorporan a Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager. Consulte el tutorial en [creación de segmentos mediante API](../../segmentation/tutorials/create-a-segment.md) para obtener más información.
+El `segmentMembership` map almacena los resultados de las evaluaciones de segmentos. Cuando los trabajos de segmentos se ejecutan correctamente utilizando [API de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/), el mapa se actualiza. `segmentMembership` también almacena cualquier segmento de audiencia evaluado previamente que se incorpora en Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager. Consulte el tutorial sobre [creación de segmentos mediante API](../../segmentation/tutorials/create-a-segment.md) para obtener más información.
 
-## Recuperar una lista de uniones {#list}
+## Recuperación de una lista de uniones {#list}
 
-Al configurar la variable `union` en un esquema, la variable [!DNL Schema Registry] agrega automáticamente el esquema a la unión para la clase en la que se basa el esquema. Si no existe unión para la clase en cuestión, se crea automáticamente una nueva unión. La variable `$id` para la unión es similar al estándar `$id` de otro [!DNL Schema Registry] recursos, con la única diferencia que se añade es con dos guiones bajos y la palabra &quot;unión&quot; (`__union`).
+Cuando se establece la variable `union` en un esquema, la variable [!DNL Schema Registry] agrega automáticamente el esquema a la unión para la clase en la que se basa el esquema. Si no existe ninguna unión para la clase en cuestión, se crea automáticamente una nueva unión. El `$id` para la unión es similar al estándar `$id` de otros [!DNL Schema Registry] recursos, con la única diferencia de que se anexa con dos guiones bajos y la palabra &quot;union&quot; (`__union`).
 
-Puede ver una lista de los sindicatos disponibles realizando una solicitud de GET a la `/tenant/unions` punto final.
+Puede ver una lista de uniones disponibles realizando una solicitud de GET a la `/tenant/unions` punto final.
 
 **Formato de API**
 
@@ -57,18 +57,18 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Lo siguiente `Accept` los encabezados están disponibles para listar uniones:
+El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Lo siguiente `Accept` Los encabezados de están disponibles para enumerar uniones:
 
 | `Accept` header | Descripción |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
+| `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para enumerar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve la clase JSON completa para cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 (OK) y un `results` en el cuerpo de respuesta. Si se han definido uniones, los detalles de cada unión se proporcionan como objetos dentro de la matriz. Si no se ha definido ninguna unión, el estado HTTP 200 (OK) sigue siendo devuelto, pero la variable `results` la matriz estará vacía.
+Una respuesta correcta devuelve el estado HTTP 200 (OK) y un `results` matriz en el cuerpo de respuesta. Si se han definido uniones, los detalles de cada unión se proporcionan como objetos dentro de la matriz. Si no se han definido uniones, se sigue devolviendo el estado HTTP 200 (OK) pero la variable `results` la matriz estará vacía.
 
 ```JSON
 {
@@ -89,13 +89,13 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y un `results` en el cue
 }
 ```
 
-## Buscar un sindicato {#lookup}
+## Búsqueda de un sindicato {#lookup}
 
-Para ver una unión específica, realice una solicitud de GET que incluya la variable `$id` y, según el encabezado Accept, algunos o todos los detalles de la unión.
+Para ver una unión específica, realice una solicitud de GET que incluya `$id` y, según el encabezado Aceptar, algunos o todos los detalles de la unión.
 
 >[!NOTE]
 >
->Las búsquedas de unión están disponibles mediante el `/unions` y `/schemas` para habilitarlos para su uso en [!DNL Profile] exporta a un conjunto de datos.
+>Las búsquedas de unión están disponibles mediante la variable `/unions` y `/schemas` extremo para habilitarlas para usarlas en [!DNL Profile] exporta a un conjunto de datos.
 
 **Formato de API**
 
@@ -106,9 +106,9 @@ GET /tenant/schemas/{UNION_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{UNION_ID}` | La dirección URL codificada `$id` URI de la unión que desea buscar. Los URI de los esquemas de unión se añaden a &quot;__union&quot;. |
+| `{UNION_ID}` | La codificación URL `$id` URI de la unión que desea buscar. Los URI de los esquemas de unión se anexan con &quot;__union&quot;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -122,22 +122,22 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-Las solicitudes de búsqueda de unión requieren un `version` se incluya en el encabezado Accept .
+Las solicitudes de búsqueda de unión requieren un `version` se incluirá en el encabezado Aceptar.
 
-Los siguientes encabezados Accept están disponibles para las búsquedas de esquema de unión:
+Los siguientes encabezados Aceptar están disponibles para las búsquedas de esquema de unión:
 
 | Accept | Descripción |
 | -------|------------ |
 | `application/vnd.adobe.xed+json; version=1` | Sin procesar con `$ref` y `allOf`. Incluye títulos y descripciones. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` atributos y `allOf` resuelto. Incluye títulos y descripciones. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
-Una respuesta correcta devuelve la vista de unión de todos los esquemas que implementan la clase cuyo `$id` se proporcionó en la ruta de solicitud.
+Una respuesta correcta devuelve la vista de unión de todos los esquemas que implementan la clase cuya `$id` se ha proporcionado en la ruta de solicitud.
 
-El formato de respuesta depende del encabezado Accept enviado en la solicitud. Experimente con diferentes encabezados Accept para comparar las respuestas y determinar qué encabezado es el mejor para su caso de uso.
+El formato de respuesta depende del encabezado Aceptar enviado en la solicitud. Experimente con diferentes encabezados Aceptar para comparar las respuestas y determinar qué encabezado es el mejor para su caso de uso.
 
 ```JSON
 {
@@ -178,13 +178,13 @@ El formato de respuesta depende del encabezado Accept enviado en la solicitud. E
 }
 ```
 
-## Habilitar un esquema para la pertenencia a una unión {#enable}
+## Habilitar un esquema para la afiliación a una unión {#enable}
 
-Para que un esquema se incluya en la unión de su clase, se debe establecer una `union` se debe agregar a la `meta:immutableTags` atributo. Para ello, puede realizar una solicitud de PATCH para agregar un `meta:immutableTags` matriz con un valor de cadena único de `union` al esquema en cuestión. Consulte la [guía de extremo de esquemas](./schemas.md#union) para ver un ejemplo detallado.
+Para que un esquema se incluya en la unión de su clase, se debe `union` se debe añadir a la etiqueta del esquema `meta:immutableTags` atributo. Puede hacerlo realizando una solicitud al PATCH para agregar un `meta:immutableTags` matriz con un solo valor de cadena de `union` al esquema en cuestión. Consulte la [guía de extremo de esquemas](./schemas.md#union) para ver un ejemplo detallado.
 
-## Enumerar esquemas en una unión {#list-schemas}
+## Enumeración de esquemas en una unión {#list-schemas}
 
-Para ver qué esquemas forman parte de una unión específica, se puede realizar una solicitud de GET al `/tenant/schemas` punto final. Al usar la variable `property` parámetro de consulta, puede configurar la respuesta para que solo devuelva esquemas que contengan un `meta:immutableTags` campo y `meta:class` igual a la clase a la que accede la unión.
+Para ver qué esquemas forman parte de una unión específica, puede realizar una solicitud de GET a `/tenant/schemas` punto final. Uso del `property` parámetro de consulta, puede configurar la respuesta para que solo devuelva esquemas que contengan un parámetro de consulta `meta:immutableTags` field y a `meta:class` igual a la clase a cuya unión está accediendo.
 
 **Formato de API**
 
@@ -194,13 +194,13 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{CLASS_ID}` | La variable `$id` de la clase cuyos esquemas habilitados para la unión desea enumerar. |
+| `{CLASS_ID}` | El `$id` de la clase cuyos esquemas habilitados para unión desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
-La siguiente solicitud recupera una lista de todos los esquemas que forman parte de la unión para la [!DNL XDM Individual Profile] Clase .
+La siguiente solicitud recupera una lista de todos los esquemas que forman parte de la unión para [!DNL XDM Individual Profile] clase.
 
 ```SHELL
 curl -X GET \
@@ -212,18 +212,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Lo siguiente `Accept` los encabezados están disponibles para enumerar esquemas:
+El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Lo siguiente `Accept` Los encabezados de están disponibles para enumerar esquemas:
 
 | `Accept` header | Descripción |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
+| `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para enumerar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve el esquema JSON completo para cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista filtrada de esquemas, que contienen solo aquellos que pertenecen a la clase especificada y que han sido habilitados para la pertenencia a la unión. Recuerde que cuando se utilizan varios parámetros de consulta, se asume una relación AND.
+Una respuesta correcta devuelve una lista filtrada de esquemas, que contiene solo los que pertenecen a la clase especificada que se han habilitado para la pertenencia a la unión. Recuerde que cuando se utilizan varios parámetros de consulta, se asume una relación Y.
 
 ```JSON
 {

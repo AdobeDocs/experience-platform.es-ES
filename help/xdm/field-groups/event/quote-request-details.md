@@ -1,27 +1,28 @@
 ---
-title: Quote Request Details Schema Field Group
-description: This document provides an overview of the Quote Request Details schema field group.
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+title: Grupo de campos de esquema de detalles de solicitud de oferta
+description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles de la solicitud de oferta.
+exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 6%
+source-wordcount: '147'
+ht-degree: 4%
 
 ---
 
-# 
+# [!UICONTROL Detalles de solicitud de presupuesto] grupo de campos de esquema
 
-[[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) `quotes`
+[!UICONTROL Detalles de solicitud de presupuesto] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). El grupo de campos proporciona un solo `quotes` objeto a un esquema, que captura los detalles del proceso de solicitud para varios tipos de presupuestos, incluidas pólizas de seguro, seguros médicos, pedidos de fabricación y pedidos de alta tecnología.
 
 ![](../../images/field-groups/quote-request-details.png)
 
-| Propiedad | Data type | Descripción |
+| Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `discount` | [[!UICONTROL Moneda]](../../data-types/currency.md) | The discount amount for a quote displayed to a visitor. |
-| `premium` | [[!UICONTROL Moneda]](../../data-types/currency.md) | The premium amount for a quote displayed to a visitor. |
-| `location` | [!UICONTROL Cadena] | The postal code used for finding retailers near the visitor&#39;s location. |
-| `requestID` | [!UICONTROL Cadena] | A unique identifier for the quote request. |
-| `selectedRetailer` | [!UICONTROL Cadena] | The selected retailer for the quote request, if applicable. |
+| `discount` | [[!UICONTROL Moneda]](../../data-types/currency.md) | El importe de descuento de una cotización que se muestra a un visitante. |
+| `premium` | [[!UICONTROL Moneda]](../../data-types/currency.md) | La cantidad de la prima de una cotización que se muestra a un visitante. |
+| `location` | [!UICONTROL Cadena] | El código postal utilizado para encontrar minoristas cerca de la ubicación del visitante. |
+| `requestID` | [!UICONTROL Cadena] | Un identificador único para la solicitud de presupuesto. |
+| `selectedRetailer` | [!UICONTROL Cadena] | El minorista seleccionado para la solicitud de presupuesto, si corresponde. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-[](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json)
+Para obtener más información sobre el grupo de campos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).

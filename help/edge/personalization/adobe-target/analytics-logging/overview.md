@@ -1,5 +1,5 @@
 ---
-title: Inicio de sesión en Adobe Analytics for Target (A4T) en el SDK web de Platform
+title: Registro de Adobe Analytics for Target (A4T) en el SDK web de Platform
 description: Obtenga información sobre cómo controlar la recopilación de datos de Adobe Analytics for Target (A4T) mediante el SDK web de Experience Platform.
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
@@ -12,13 +12,13 @@ ht-degree: 2%
 
 ---
 
-# Inicio de sesión en Adobe Analytics for Target (A4T) en el SDK web de Platform
+# Inicio de sesión de Adobe Analytics for Target (A4T) en el SDK web de Platform
 
-Al utilizar Adobe Target para la personalización, puede elegir el sistema que desea utilizar para la medición de rendimiento. Cada [Actividad de Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) le permite seleccionar entre informes de Target y informes de Adobe Analytics.
+Al utilizar Adobe Target para la personalización, puede elegir qué sistema desea utilizar para la medición del rendimiento. Cada [Actividad de Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) le permite seleccionar entre los informes de Target y Adobe Analytics.
 
 Si utiliza los informes de Analytics, Adobe Target debe comunicar lo siguiente a Analytics:
 
-* La actividad de Adobe Target en la que han participado los visitantes
+* Qué actividad de Adobe Target han ingresado los visitantes
 * Qué experiencia han visto
 * Qué conversión se ha alcanzado
 
@@ -26,16 +26,16 @@ El SDK web de Adobe Experience Platform admite dos tipos de registro de Analytic
 
 | Método de registro | Descripción |
 | --- | --- |
-| Registro de Analytics en el lado del servidor | Todas las visitas de Analytics enviadas a través de la red perimetral se suman con los detalles de Target en el servidor, sin tener que pasar por el proceso de vinculación de visitas. |
-| Registro de Analytics en el lado del cliente | Los datos de Target se devuelven en el lado del cliente, lo que le permite aumentar y enviar datos manualmente a Analytics mediante el complemento [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
+| Registro de Analytics en el lado del servidor | Todas las visitas de Analytics enviadas a través de la red perimetral se aumentan con los detalles de Target en el servidor, sin tener que pasar por el proceso de vinculación de visitas. |
+| Registro de Analytics en el lado del cliente | Los datos de Target se devuelven en el lado del cliente, lo que le permite aumentar y enviar datos manualmente a Analytics mediante [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-El método de registro viene determinado por si tiene Adobe Analytics habilitado en la configuración [datastream](../../../datastreams/overview.md):
+El método de registro viene determinado por si tiene Adobe Analytics habilitado en la configuración [secuencia de datos](../../../datastreams/overview.md):
 
 ![Flujo de decisión del método de registro](../assets/analytics-logging.png)
 
 ## Pasos siguientes
 
-En este documento se presenta una breve introducción a los distintos métodos de registro para los datos de A4T en el SDK web. Para obtener información más detallada sobre cada uno de estos métodos, consulte la siguiente documentación:
+Este documento proporciona una breve introducción a los diferentes métodos de registro para datos de A4T en el SDK web. Para obtener información más detallada sobre cada uno de estos métodos, consulte la siguiente documentación:
 
 * [Registro del lado del servidor para datos de A4T en el SDK web de Platform](./server-side.md)
 * [Registro del lado del cliente para datos de A4T en el SDK web de Platform](./client-side.md)

@@ -7,24 +7,24 @@ feature: Sandboxes
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '60'
-ht-degree: 46%
+ht-degree: 53%
 
 ---
 
 
 # Zonas protegidas {#sandbox}
 
-* [Información general sobre Sandboxes](home.md)
-* IU de Sandbox {#ui}
-   * [Información general sobre la interfaz de usuario del Simulador para pruebas](ui/overview.md)
+* [Resumen de zonas protegidas](home.md)
+* IU de zona protegida {#ui}
+   * [Información general de IU de Sandbox](ui/overview.md)
    * [Guía del usuario de Sandbox](ui/user-guide.md)
-* API de Sandbox {#api}
+* API de zona protegida {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
-   * [Entornos aislados disponibles](api/available.md)
-   * [Administración de Simuladores para pruebas](api/sandboxes.md)
-   * [Tipos de Simulador para pruebas](api/types.md)
+   * [Zonas protegidas disponibles](api/available.md)
+   * [Administración de zona protegida](api/sandboxes.md)
+   * [Tipos de zonas protegidas](api/types.md)
    * [Apéndice](api/appendix.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)

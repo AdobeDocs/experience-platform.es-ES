@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /extension_packages en la AP
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '939'
 ht-degree: 70%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 70%
 
 Un paquete de extensiones representa una [extensión](./extensions.md) creada por un desarrollador de extensiones. Un paquete de extensiones define capacidades adicionales que se pueden poner a disposición de los usuarios de etiquetas. Normalmente, estas capacidades se presentan en forma de [componentes de regla](./rule-components.md) (eventos, condiciones y acciones) y [elementos de datos](./data-elements.md), pero también pueden incluir módulos principales y módulos compartidos.
 
-Los paquetes de extensión se muestran en el catálogo de extensiones dentro de la interfaz de usuario de recopilación de datos y la interfaz de usuario de Adobe Experience Platform para que los usuarios los instalen. Para añadir un paquete de extensiones a una propiedad, se crea una extensión con un vínculo al paquete de extensiones.
+Los paquetes de extensiones se muestran en el catálogo de extensiones dentro de la IU de recopilación de datos y la IU de Adobe Experience Platform para que los usuarios los instalen. Para añadir un paquete de extensiones a una propiedad, se crea una extensión con un vínculo al paquete de extensiones.
 
 Un paquete de extensiones pertenece a la [empresa](./companies.md) del desarrollador que lo creó.
 
@@ -25,31 +25,31 @@ Un paquete de extensiones pertenece a la [empresa](./companies.md) del desarroll
 
 El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-Además de comprender cómo realizar llamadas a la API de Reactor, también es importante comprender cómo funciona el paquete de extensión `status` y `availability` los atributos afectan a las acciones que se pueden realizar en él. Estas se explican en las secciones siguientes.
+Además de comprender cómo se realizan llamadas a la API de Reactor, también es importante comprender cómo se ejecuta un paquete de extensión `status` y `availability` Los atributos de afectan a las acciones que puede realizar en ellos. Estas se explican en las secciones siguientes.
 
 ### Estado
 
-Los paquetes de extensión tienen tres estados posibles: `pending`, `succeeded`y `failed`.
+Los paquetes de extensión tienen tres estados potenciales: `pending`, `succeeded`, y `failed`.
 
 | Estado | Descripción |
 | --- | --- |
-| `pending` | Cuando se crea un paquete de extensión, su `status` está configurado como `pending`. Esto indica que el sistema recibió la información del paquete de extensión y que empezará a procesarse. Paquetes de extensión con estado de `pending` no están disponibles para su uso. |
-| `succeeded` | El estado de un paquete de extensión se actualiza a `succeeded` si completa correctamente el procesamiento. |
-| `failed` | El estado de un paquete de extensión se actualiza a `failed` si el procesamiento finaliza correctamente. Un paquete de extensión con el estado de `failed` se puede actualizar hasta que el procesamiento se realice correctamente. Paquetes de extensión con estado de `failed` no están disponibles para su uso. |
+| `pending` | Cuando se crea un paquete de extensiones, su `status` se establece en `pending`. Esto indica que el sistema recibió la información del paquete de extensión y que comenzará a procesarse. Paquetes de extensión con un estado de `pending` no están disponibles para su uso. |
+| `succeeded` | El estado de un paquete de extensiones se actualiza a `succeeded` si completa correctamente el procesamiento. |
+| `failed` | El estado de un paquete de extensiones se actualiza a `failed` si finaliza el procesamiento sin éxito. Un paquete de extensiones con un estado de `failed` puede actualizarse hasta que el procesamiento se realice correctamente. Paquetes de extensión con un estado de `failed` no están disponibles para su uso. |
 
 ### Disponibilidad
 
-Hay niveles de disponibilidad para un paquete de extensión: `development`, `private`y `public`.
+Hay niveles de disponibilidad para un paquete de extensión: `development`, `private`, y `public`.
 
 | Disponibilidad | Descripción |
 | --- | --- |
-| `development` | Un paquete de extensión en `development` solo es visible para la empresa que la posee y está disponible dentro de ella. Además, solo se puede utilizar en propiedades configuradas para el desarrollo de extensiones. |
-| `private` | A `private` el paquete de extensión solo es visible para la empresa que lo posee y solo puede instalarse en las propiedades que posee la empresa. |
-| `public` | A `public` el paquete de extensión es visible y está disponible para todas las empresas y propiedades. |
+| `development` | Un paquete de extensiones en `development` solo está visible para la compañía que lo posee y está disponible dentro de ella. Además, solo se puede utilizar en propiedades configuradas para el desarrollo de extensiones. |
+| `private` | A `private` El paquete de extensión solo es visible para la compañía que lo posee y solo se puede instalar en propiedades que posee la compañía. |
+| `public` | A `public` el paquete de extensiones es visible y está disponible para todas las empresas y propiedades. |
 
 >[!NOTE]
 >
->Cuando se crea un paquete de extensión, `availability` está configurado como `development`. Una vez finalizada la prueba, puede realizar la transición del paquete de extensión a `private` o `public`.
+>Cuando se crea un paquete de extensiones, `availability` se establece en `development`. Una vez finalizada la prueba, puede realizar la transición del paquete de extensión a `private` o `public`.
 
 ## Recuperación de una lista de paquetes de extensión {#list}
 
@@ -249,7 +249,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones que desea buscar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -470,7 +470,7 @@ Una respuesta correcta devuelve los detalles del paquete de extensiones, incluid
 }
 ```
 
-## Creación de un paquete de extensión {#create}
+## Creación de un paquete de extensiones {#create}
 
 Los paquetes de extensiones se crean mediante una herramienta de andamiaje de Node.js y se guardan en el equipo local antes de enviarse a la API de Reactor. Para obtener más información sobre la configuración de un paquete de extensiones, consulte la guía sobre [introducción al desarrollo de extensiones](../../extension-dev/getting-started.md).
 
@@ -705,7 +705,7 @@ Una respuesta correcta devuelve los detalles del paquete de extensiones recién 
 
 ## Actualización de un paquete de extensiones {#update}
 
-Puede actualizar un paquete de extensión incluyendo su ID en la ruta de una solicitud de PATCH.
+Puede actualizar un paquete de extensiones incluyendo su ID en la ruta de una petición del PATCH.
 
 **Formato de API**
 
@@ -717,7 +717,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones que desea actualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -956,7 +956,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones que desea publicar de forma privada. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -1201,7 +1201,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones que desea suspender. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -1294,7 +1294,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | El `id` del paquete de extensiones cuyas versiones desea enumerar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 

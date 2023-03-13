@@ -17,13 +17,13 @@ ht-degree: 48%
 * [Información general de Platform Debugger](./home.md)
 * [Instalación de la extensión](./install-debugger.md)
 * [Configurar la extensión de](./configure-debugger.md)
-* [Ficha Resumen](./summary.md)
-* Ficha Soluciones {#solutions}
+* [Pestaña Resumen](./summary.md)
+* Pestaña Soluciones {#solutions}
    * [Información general](./solutions/overview.md)
    * [Adobe Target](./solutions/target.md)
-* [Ficha Registros](./logs.md)
-* [Ficha Red](./network.md)
-* [Ficha Eventos](./events.md)
+* [Pestaña Registros](./logs.md)
+* [Pestaña Red](./network.md)
+* [Pestaña Eventos](./events.md)
 * Pestaña Auditor {#auditor}
    * [Información general](./auditor/overview.md)
    * [Pruebas de coherencia de etiquetas](./auditor/tag-consistency.md)

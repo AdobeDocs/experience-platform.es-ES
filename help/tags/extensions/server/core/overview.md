@@ -167,7 +167,7 @@ Para acceder al valor de un elemento de datos en el código personalizado, utili
 getDataElementValue('productName') 
 ```
 
-Las acciones de reenvío de eventos se ejecutan secuencialmente. También es posible que el código personalizado de una acción arroje un valor que se pueda utilizar en una acción posterior. El valor devuelto puede provenir del código dentro de esa acción o del cuerpo de respuesta de una llamada realizada a un origen externo. Para hacer referencia a datos de una acción ejecutada anteriormente en una sola regla en la que se utiliza la extensión Core, cree un elemento de datos de tipo `Path` y utilice la siguiente ruta para hacer referencia al valor de una variable denominada `productCategory` definida en el código personalizado dentro de la extensión Core:
+Las acciones del reenvío de eventos se ejecutan secuencialmente. También es posible que el código personalizado de una acción arroje un valor que se pueda utilizar en una acción posterior. El valor devuelto puede provenir del código dentro de esa acción o del cuerpo de respuesta de una llamada realizada a un origen externo. Para hacer referencia a datos de una acción ejecutada anteriormente en una sola regla en la que se utiliza la extensión Core, cree un elemento de datos de tipo `Path` y utilice la siguiente ruta para hacer referencia al valor de una variable denominada `productCategory` definida en el código personalizado dentro de la extensión Core:
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 

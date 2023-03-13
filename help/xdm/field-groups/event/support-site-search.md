@@ -1,23 +1,24 @@
 ---
-title: Support Site Search Schema Field Group
-description: This document provides an overview of the Support Site Search schema field group.
-source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
+title: Grupo de campos de esquema de búsqueda del sitio de soporte
+description: Este documento proporciona información general sobre el grupo de campos de esquema Búsqueda del sitio de soporte.
+exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 8%
+source-wordcount: '91'
+ht-degree: 5%
 
 ---
 
-# 
+# [!UICONTROL Búsqueda del sitio de soporte] grupo de campos de esquema
 
-[[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) `siteKnowledge.supportSiteSearch`
+[!UICONTROL Búsqueda del sitio de soporte] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). Proporciona una sola `siteKnowledge.supportSiteSearch` objeto a un esquema que captura información sobre una búsqueda en el sitio de asistencia.
 
 ![](../../images/field-groups/support-site-search.png)
 
-| Propiedad | Data type | Descripción |
+| Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `supportSiteSearch` | [[!UICONTROL Búsqueda interna del sitio]](../../data-types/internal-site-search.md) | Captures the details about the search event. |
+| `supportSiteSearch` | [[!UICONTROL Búsqueda interna del sitio]](../../data-types/internal-site-search.md) | Registra los detalles del evento de búsqueda. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-[](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json)
+Para obtener más información sobre el grupo de campos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).

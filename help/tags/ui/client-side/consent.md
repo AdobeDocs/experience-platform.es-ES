@@ -15,7 +15,7 @@ ht-degree: 93%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Las regulaciones legales de privacidad como el Reglamento General de Protección de Datos (RGPD) requieren que las empresas puedan administrar el consentimiento de los usuarios. Es posible que los clientes de Adobe exijan a los visitantes que acepten su inclusión antes de que se ejecuten las soluciones de Adobe para un visitante determinado. Los visitantes deben tener la capacidad de gestionar su estado de inclusión y exclusión.
+Las regulaciones legales de privacidad, como el Reglamento General de Protección de Datos (RGPD), requieren que las compañías puedan administrar el consentimiento de los usuarios. Es posible que los clientes de Adobe exijan a los visitantes que acepten su inclusión antes de que se ejecuten las soluciones de Adobe para un visitante determinado. Los visitantes deben tener la capacidad de gestionar su estado de inclusión y exclusión.
 
 Los clientes de Adobe Experience Cloud requieren diversas implementaciones de estos requisitos. Algunos utilizan gestores de consentimiento a nivel empresarial, mientras que otros crean los suyos propios.
 

@@ -4,7 +4,7 @@ description: Descubra cómo se establecen las relaciones de recursos en la API d
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '762'
 ht-degree: 99%
 
 ---
@@ -40,7 +40,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 | `{PROPERTY_ID}` | El ID de la propiedad a la que pertenece el recurso. |
 | `{RESOURCE_TYPE}` | El tipo de recurso que se va a crear. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `id` | El ID único de un recurso. Cada `id` debe acompañarse de una propiedad `type` del mismo nivel, que indique el tipo de recurso en cuestión. |
 | `type` | El tipo de recurso al que hace referencia un campo `id` del mismo nivel. Los valores aceptados incluyen `data_elements`, `rules`, `extensions` y `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Creación de una relación por dirección URL {#url}
 
@@ -136,7 +136,7 @@ curl -X POST \
 | `id` | El ID único de un recurso. Cada `id` debe acompañarse de una propiedad `type` del mismo nivel, que indique el tipo de recurso en cuestión. |
 | `type` | El tipo de recurso al que hace referencia un campo `id` del mismo nivel. Los valores aceptados incluyen `data_elements`, `rules`, `extensions` y `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Requisitos de relación por recurso {#requirements}
 
@@ -153,7 +153,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | `property` | ✓ |  |  |
 | `entity` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Versiones
 
@@ -166,7 +166,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | `library` | ✓ |  |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Llamadas
 
@@ -174,7 +174,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Compañías
 
@@ -182,7 +182,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Elementos de datos
 
@@ -197,7 +197,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | `updated_with_extension` | ✓ |  |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Entornos
 
@@ -208,7 +208,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | `host` | ✓ | ✓ |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Extensiones
 
@@ -222,7 +222,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | `extension_package` | ✓ | ✓ |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Hosts
 
@@ -230,7 +230,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Bibliotecas
 
@@ -246,7 +246,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Notas
 
@@ -254,7 +254,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | :--- | :---: | :---: | :---: |
 | `resource` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Propiedades
 
@@ -268,7 +268,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | `extensions` |  |  |  |
 | `extensions` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Regla componentes
 
@@ -283,7 +283,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 | `rules` | ✓ | ✓ |  |
 | `revisions` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Reglas
 

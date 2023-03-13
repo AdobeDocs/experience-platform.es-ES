@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;experimentos;api sensei de aprendizaje automático
+keywords: Experience Platform;guía para desarrolladores;extremo;espacio de trabajo de ciencia de datos;temas populares;experimentos;api de aprendizaje automático de sensei
 solution: Experience Platform
-title: Punto final de API de experimentos
-description: El desarrollo de modelos y la formación se realizan a nivel de Experimento, donde un Experimento consiste en una instancia MLI, ejecuciones de capacitación y ejecuciones de puntuación.
+title: Extremo de API de experimentos
+description: El desarrollo y el aprendizaje de modelos se producen en el nivel de Experimento, donde un Experimento consta de una instancia MIL, ejecuciones de formación y ejecuciones de puntuación.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 4%
 
 ---
 
-# Punto final de experimentos
+# Extremo de experimentos
 
-El desarrollo de modelos y la formación se realizan a nivel de Experimento, donde un Experimento consiste en una instancia MLI, ejecuciones de capacitación y ejecuciones de puntuación.
+El desarrollo y el aprendizaje de modelos se producen en el nivel de Experimento, donde un Experimento consta de una instancia MIL, ejecuciones de formación y ejecuciones de puntuación.
 
 ## Crear un experimento {#create-an-experiment}
 
-Puede crear un experimento realizando una solicitud de POST mientras proporciona un nombre y un ID de instancia MLI válido en la carga útil de la solicitud.
+Puede crear un Experimento realizando una solicitud de POST mientras proporciona un nombre y un ID de instancia MIL válido en la carga útil de la solicitud.
 
 >[!NOTE]
 >
->A diferencia de la formación de modelos en la interfaz de usuario, la creación de un experimento mediante una llamada API explícita no crea y ejecuta automáticamente una ejecución de formación.
+>A diferencia del aprendizaje de modelos en la IU de, la creación de un experimento a través de una llamada de API explícita no crea ni ejecuta automáticamente una ejecución de formación.
 
 **Formato de API**
 
@@ -47,12 +47,12 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | El nombre deseado para el experimento. La ejecución de formación correspondiente a este experimento heredará este valor que se mostrará en la interfaz de usuario como nombre de la ejecución de la formación. |
-| `mlInstanceId` | Un ID de instancia MLI válido. |
+| `name` | El nombre que desee para el experimento. La ejecución de formación correspondiente a este experimento heredará este valor para que se muestre en la interfaz de usuario como nombre de la ejecución de formación. |
+| `mlInstanceId` | ID de MLInstance válido. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento recién creado, incluido su identificador único (`id`).
+Una respuesta correcta devuelve una carga útil que contiene los detalles del Experimento recién creado, incluido su identificador único (`id`).
 
 ```json
 {
@@ -68,9 +68,9 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ex
 }
 ```
 
-## Creación y ejecución de una ejecución de formación o puntuación {#experiment-training-scoring}
+## Crear y ejecutar una ejecución de formación o puntuación {#experiment-training-scoring}
 
-Puede crear ejecuciones de formación o puntuación realizando una solicitud de POST, proporcionando un ID de experimento válido y especificando la tarea de ejecución. Las ejecuciones de puntuación solo se pueden crear si el experimento tiene una ejecución de formación existente y correcta. La creación exitosa de una ejecución de capacitación inicializará el procedimiento de capacitación modelo y su finalización exitosa generará un modelo entrenado. La generación de modelos formados reemplazará a los ya existentes, de modo que un Experimento solo puede utilizar un modelo entrenado en un momento dado.
+Puede crear ejecuciones de formación o puntuación realizando una solicitud de POST, proporcionando un ID de experimento válido y especificando la tarea de ejecución. Las ejecuciones de puntuación solo se pueden crear si el experimento tiene una ejecución de formación existente y correcta. Si se crea correctamente una ejecución de formación, se inicializará el procedimiento de formación del modelo y su finalización correcta generará un modelo formado. La generación de modelos formados reemplazará a los existentes anteriormente, de modo que un experimento solo puede utilizar un único modelo entrenado en un momento determinado.
 
 **Formato de API**
 
@@ -80,7 +80,7 @@ POST /experiments/{EXPERIMENT_ID}/runs
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID de experimento válido. |
+| `{EXPERIMENT_ID}` | ID de experimento válido. |
 
 **Solicitud**
 
@@ -99,11 +99,11 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `{TASK}` | Especifica la tarea de ejecución. Establezca este valor como: `train` para formación, `score` para la puntuación, o `featurePipeline` para la canalización de funciones. |
+| `{TASK}` | Especifica la tarea de la ejecución. Establezca este valor como `train` para formación, `score` para puntuación, o `featurePipeline` para la canalización de funciones. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles de la ejecución recién creada, incluidos los parámetros de puntuación o formación predeterminados heredados y el ID exclusivo de la ejecución (`{RUN_ID}`).
+Una respuesta correcta devuelve una carga útil que contiene los detalles de la ejecución recién creada, incluidos los parámetros de formación o puntuación predeterminados heredados y el ID único de la ejecución (`{RUN_ID}`).
 
 ```json
 {
@@ -130,9 +130,9 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 }
 ```
 
-## Recuperar una lista de experimentos
+## Recuperación de una lista de experimentos
 
-Puede recuperar una lista de Experimentos pertenecientes a una instancia MLI concreta realizando una única solicitud de GET y proporcionando un ID de instancia MLI válido como parámetro de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice de [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de experimentos que pertenezcan a una MLInstance determinada realizando una única solicitud de GET y proporcionando un ID de MLInstance válido como parámetro de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
 
 
 **Formato de API**
@@ -144,7 +144,7 @@ GET /experiments?property=mlInstanceId=={MLINSTANCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Proporcione un ID de instancia MLI válido para recuperar una lista de experimentos pertenecientes a esa instancia MLI concreta. |
+| `{MLINSTANCE_ID}` | Proporcione un ID de MLInstance válido para recuperar una lista de Experimentos que pertenezcan a esa MLInstance en particular. |
 
 **Solicitud**
 
@@ -159,7 +159,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de experimentos que comparten el mismo ID de instancia MLI (`{MLINSTANCE_ID}`).
+Una respuesta correcta devuelve una lista de Experimentos que comparten el mismo ID de instancia de MLI (`{MLINSTANCE_ID}`).
 
 ```json
 {
@@ -196,9 +196,9 @@ Una respuesta correcta devuelve una lista de experimentos que comparten el mismo
 }
 ```
 
-## Recuperar un experimento específico {#retrieve-specific}
+## Recuperación de un experimento específico {#retrieve-specific}
 
-Puede recuperar los detalles de un experimento específico realizando una solicitud de GET que incluya el ID del experimento deseado en la ruta de solicitud.
+GET Puede recuperar los detalles de un experimento específico realizando una solicitud que incluya el ID del experimento deseado en la ruta de solicitud.
 
 **Formato de API**
 
@@ -208,7 +208,7 @@ GET /experiments/{EXPERIMENT_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID de experimento válido. |
+| `{EXPERIMENT_ID}` | ID de experimento válido. |
 
 **Solicitud**
 
@@ -239,13 +239,13 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ex
 }
 ```
 
-## Recuperar una lista de ejecuciones de Experimento
+## Recuperación de una lista de ejecuciones de experimentos
 
-Puede recuperar una lista de ejecuciones de capacitación o puntuación que pertenezcan a un experimento concreto realizando una única solicitud de GET y proporcionando un ID de experimento válido. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista completa de los parámetros de consulta disponibles, consulte la sección del apéndice de [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de ejecuciones de formación o puntuación que pertenezcan a un Experimento concreto realizando una única solicitud de GET y proporcionando un ID de experimento válido. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista completa de los parámetros de consulta disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
 
 >[!NOTE]
 >
->Cuando se combinan varios parámetros de consulta, deben separarse con el signo &amp;.
+>Al combinar varios parámetros de consulta, deben separarse con el símbolo &quot;et&quot; (&amp;).
 
 **Formato de API**
 
@@ -257,7 +257,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID de experimento válido. |
+| `{EXPERIMENT_ID}` | ID de experimento válido. |
 | `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) se utiliza para filtrar los resultados. |
 | `{VALUE}` | El valor del parámetro de consulta anterior. |
 
@@ -276,7 +276,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene una lista de ejecuciones y cada uno de sus detalles, incluido su ID de ejecución del experimento (`{RUN_ID}`).
+Una respuesta correcta devuelve una carga útil que contiene una lista de ejecuciones y cada uno de sus detalles, incluido su ID de ejecución de experimento (`{RUN_ID}`).
 
 ```json
 {
@@ -300,15 +300,15 @@ Una respuesta correcta devuelve una carga útil que contiene una lista de ejecuc
 }
 ```
 
-## Actualizar un experimento
+## Actualización de un experimento
 
-Puede actualizar un experimento existente sobrescribiendo sus propiedades mediante una solicitud de PUT que incluya el ID del experimento de destino en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
+Puede actualizar un experimento existente sobrescribiendo sus propiedades a través de una solicitud del PUT que incluya el ID del experimento de destinatario en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud del PUT, se sugiere que primero realice una solicitud de GET a [recuperar el experimento por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique todo el objeto JSON modificado como carga útil para la solicitud del PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se recomienda que realice primero una solicitud de GET a [Recuperación del experimento por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud del PUT.
 
-La siguiente llamada de API de ejemplo actualiza el nombre de un Experimento mientras que inicialmente tiene estas propiedades:
+La siguiente llamada de API de ejemplo actualiza el nombre de un experimento al tener estas propiedades inicialmente:
 
 ```json
 {
@@ -330,7 +330,7 @@ PUT /experiments/{EXPERIMENT_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID de experimento válido. |
+| `{EXPERIMENT_ID}` | ID de experimento válido. |
 
 **Solicitud**
 
@@ -373,7 +373,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ## Eliminar un experimento
 
-Puede eliminar un solo experimento realizando una solicitud de DELETE que incluya el ID del experimento de destino en la ruta de solicitud.
+Puede eliminar un solo experimento realizando una solicitud de DELETE que incluya el ID del experimento de destinatario en la ruta de solicitud.
 
 **Formato de API**
 
@@ -383,7 +383,7 @@ DELETE /experiments/{EXPERIMENT_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID de experimento válido. |
+| `{EXPERIMENT_ID}` | ID de experimento válido. |
 
 **Solicitud**
 
@@ -406,9 +406,9 @@ curl -X DELETE \
 }
 ```
 
-## Eliminar experimentos por ID de instancia MLI
+## Eliminar experimentos por ID de instancia múltiple
 
-Puede eliminar todos los experimentos pertenecientes a una instancia MLI concreta realizando una solicitud de DELETE que incluya el ID de instancia MLI como parámetro de consulta.
+Puede eliminar todos los experimentos que pertenezcan a una MLInstance determinada realizando una solicitud de DELETE que incluya el ID de la MLInstance como parámetro de consulta.
 
 **Formato de API**
 
@@ -418,7 +418,7 @@ DELETE /experiments?mlInstanceId={MLINSTANCE_ID}
 
 | Parámetro | Descripción |
 | --- | ---|
-| `{MLINSTANCE_ID}` | Un ID de instancia MLI válido. |
+| `{MLINSTANCE_ID}` | ID de MLInstance válido. |
 
 **Solicitud**
 

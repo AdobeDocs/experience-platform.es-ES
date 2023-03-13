@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;orígenes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 solution: Experience Platform
-title: Utilizar un editor de texto en el entorno local para crear una página de documentación de fuentes
+title: Utilizar un editor de texto en el entorno local para crear una página de documentación de orígenes
 description: Este documento proporciona pasos sobre cómo utilizar el entorno local para crear documentación para el origen y enviar una solicitud de extracción (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -21,15 +21,15 @@ Este documento proporciona pasos sobre cómo utilizar el entorno local para crea
 
 ## Requisitos previos
 
-El siguiente tutorial requiere que tenga GitHub Desktop instalado en el equipo local. Si no tiene GitHub Desktop, puede descargar la aplicación [here](https://desktop.github.com/).
+El siguiente tutorial requiere que tenga GitHub Desktop instalado en el equipo local. Si no tiene GitHub Desktop, puede descargar la aplicación [aquí](https://desktop.github.com/).
 
 ## Conéctese a GitHub y configure su entorno de creación local
 
-El primer paso para configurar el entorno de creación local es ir al [Repositorio de Adobe Experience Platform GitHub](https://github.com/AdobeDocs/experience-platform.en).
+El primer paso para configurar el entorno de creación local es ir a [Repositorio de GitHub de Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
 
 ![platform-repo](../assets/platform-repo.png)
 
-En la página principal del repositorio de Platform GitHub, seleccione **Bifurcación (Fork)**.
+En la página principal del repositorio de Platform GitHub, seleccione **Tenedor**.
 
 ![Fork (Ramificación)](../assets/fork.png)
 
@@ -45,58 +45,58 @@ A continuación, espere unos momentos para que GitHub Desktop clone el `experien
 
 ![clonación](../assets/cloning.png)
 
-Una vez completado el proceso de clonación, vaya a GitHub Desktop para crear una rama nueva. Select **Maestro** en la barra de navegación superior y, a continuación, seleccione **Nueva rama**
+Una vez completado el proceso de clonación, vaya a GitHub Desktop para crear una nueva rama. Seleccionar **Principal** en la barra de navegación superior y, a continuación, seleccione **Nueva rama**
 
-![rama nueva](../assets/new-branch.png)
+![new-branch](../assets/new-branch.png)
 
-En el panel emergente que aparece, introduzca un nombre descriptivo para la rama y, a continuación, seleccione **Crear rama**.
+En el panel emergente que aparece, escriba un nombre descriptivo para la rama y, a continuación, seleccione **Crear rama**.
 
 ![create-branch-vs](../assets/create-branch-vs.png)
 
-A continuación, seleccione **Rama de publicación**.
+A continuación, seleccione **Publicar rama**.
 
 ![publish-branch](../assets/publish-branch.png)
 
-## Cree la página de documentación para el origen
+## Crear la página de documentación para el origen
 
-Con el repositorio clonado en el equipo local y una rama nueva creada, ahora puede empezar a crear la página de documentación para el nuevo origen a través del [editor de texto de su elección](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
+Con el repositorio clonado en el equipo local y una nueva rama creada, ahora puede empezar a crear la página de documentación para el nuevo origen a través de la [editor de texto de su elección](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
 
-Adobe recomienda usar [Código de Visual Studio](https://code.visualstudio.com/) y que instale la extensión de creación de Adobe Markdown. Para instalar la extensión, inicie Visual Studio Code y, a continuación, seleccione la variable **Extensiones** de la barra de navegación izquierda.
+El Adobe recomienda que utilice [Código de Visual Studio](https://code.visualstudio.com/) y que instale la extensión de creación de Adobe Markdown. Para instalar la extensión, inicie Visual Studio Code y, a continuación, seleccione **Extensiones** de la barra de navegación izquierda.
 
 ![ Extensión](../assets/extension.png)
 
-A continuación, introduzca `Adobe Markdown Authoring` en la barra de búsqueda y, a continuación, seleccione **Instalar** de la página que aparece.
+A continuación, introduzca `Adobe Markdown Authoring` en la barra de búsqueda y seleccione **Instalar** de la página que aparece.
 
 ![instalar](../assets/install.png)
 
-Con el equipo local listo, descargue el [plantilla de documentación de fuentes](../assets/api-template.zip) y extraer el archivo a `experience-platform.en/help/sources/tutorials/api/create/...` con [`...`] que representan la categoría que elija. Por ejemplo, si está creando un origen de base de datos, seleccione la carpeta de la base de datos.
+Con el equipo local listo, descargue el [plantilla de documentación de orígenes](../assets/api-template.zip) y extraiga el archivo en `experience-platform.en/help/sources/tutorials/api/create/...` con [`...`] que representa la categoría que elija. Por ejemplo, si está creando un origen de base de datos, seleccione la carpeta de base de datos.
 
-Finalmente, siga las instrucciones descritas en la plantilla y edite la plantilla con la información relevante relacionada con su fuente.
+Finalmente, siga las instrucciones descritas en la plantilla y edite la plantilla con la información relevante perteneciente a su fuente.
 
 ![edit-template](../assets/edit-template.png)
 
 ## Envíe su documentación para su revisión
 
-Para crear una solicitud de extracción (PR) y enviar la documentación para su revisión, guarde primero su trabajo en [!DNL Visual Studio Code] (o el editor de texto elegido). A continuación, con GitHub Desktop, introduzca un mensaje de confirmación y seleccione **Confirmar para create-source-documentation**.
+Para crear una solicitud de extracción (PR) y enviar la documentación para su revisión, guarde primero su trabajo en [!DNL Visual Studio Code] (o el editor de texto que haya elegido). A continuación, con GitHub Desktop, introduzca un mensaje de confirmación y seleccione **Compromiso con create-source-documentation**.
 
 ![commit-vs](../assets/commit-vs.png)
 
-A continuación, seleccione **Origen push** para cargar el trabajo en la rama remota.
+A continuación, seleccione **Origen push** para cargar su trabajo en la rama remota.
 
-![push-origin](../assets/push-origin.png)
+![de origen push](../assets/push-origin.png)
 
 Para crear una solicitud de extracción, seleccione **Crear solicitud de extracción**.
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-Asegúrese de que la base y las ramas comparadas sean correctas. Agregue una nota a la PR, describa su actualización y, a continuación, seleccione **Crear solicitud de extracción**. Esto abre una PR para fusionar la rama de trabajo del trabajo en la rama maestra del repositorio de Adobe.
+Asegúrese de que las ramas base y de comparación son correctas. Añada una nota al PR, describiendo la actualización y, a continuación, seleccione **Crear solicitud de extracción**. Se abrirá una PR para fusionar la rama de trabajo del trabajo en la rama maestra del repositorio de Adobe.
 
 >[!TIP]
 >
->Deje el **Permitir ediciones por parte de los administradores** casilla de verificación seleccionada para garantizar que el equipo de documentación de Adobe pueda realizar modificaciones en PR.
+>Deje el **Permitir ediciones por responsables** casilla de verificación seleccionada para garantizar que el equipo de documentación de Adobe pueda realizar ediciones en el PR.
 
 ![create-pr](../assets/create-pr.png)
 
-Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la pestaña de solicitudes de extracción en https://github.com/AdobeDocs/experience-platform.en.
+Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la pestaña solicitudes de extracción en https://github.com/AdobeDocs/experience-platform.en.
 
 ![confirm-pr](../assets/confirm-pr.png)

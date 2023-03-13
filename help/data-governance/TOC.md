@@ -2,29 +2,29 @@
 audience: user
 user-guide-title: Ayuda de Administración de datos de Adobe Experience Platform
 breadcrumb-title: Guía de administración de datos
-user-guide-description: Aplicar restricciones de uso de datos mediante el uso de etiquetas, acciones de marketing y políticas de control.
+user-guide-description: Haga cumplir las restricciones del uso de datos mediante el uso de etiquetas, acciones de marketing y políticas de gobernanza.
 feature: Data Governance
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '97'
-ht-degree: 23%
+ht-degree: 42%
 
 ---
 
 
-# Administración de datos de Adobe Experience Platform {#data-governance}
+# Gobernanza de datos de Adobe Experience Platform {#data-governance}
 
-* [Información general sobre la administración de datos](home.md)
-* [Guía completa](./e2e.md)
+* [Resumen de gobernanza de datos](home.md)
+* [Guía de extremo a extremo](./e2e.md)
 * Etiquetas de uso de datos {#labels}
    * [Información general](labels/overview.md)
    * [Glosario de etiquetas](labels/reference.md)
-   * [Administrar etiquetas en la interfaz de usuario](labels/user-guide.md)
+   * [Administración de etiquetas en la IU](labels/user-guide.md)
    * [Administrar etiquetas para conjuntos de datos mediante API](labels/dataset-api.md)
 * Políticas de uso de datos {#policies}
    * [Información general](policies/overview.md)
-   * [Administrar políticas en la interfaz de usuario](policies/user-guide.md)
-   * [Crear una directiva en la API](policies/create.md)
+   * [Administración de directivas en la IU](policies/user-guide.md)
+   * [Crear una política en la API](policies/create.md)
 * Aplicación de políticas {#enforcement}
    * [Información general](enforcement/overview.md)
    * [Aplicación automática](enforcement/auto-enforcement.md)
@@ -37,4 +37,4 @@ ht-degree: 23%
    * [Acciones de marketing](api/marketing-actions.md)
    * [Evaluación](api/evaluation.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)

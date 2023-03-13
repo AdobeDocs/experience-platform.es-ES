@@ -1,36 +1,36 @@
 ---
-description: En esta página se explica cómo utilizar el extremo /authoring/testing/template/render para visualizar el aspecto que tendrían los campos de datos del cliente con plantilla definidos en la configuración de destino.
-title: Validación de campos de cliente con plantilla
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+description: En esta página se explica cómo utilizar el extremo /authoring/testing/template/render para visualizar el aspecto que tendrían los campos de datos del cliente con plantillas definidos en la configuración de destino.
+title: Validar campos de cliente con plantilla
+exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 3%
 
 ---
 
-
-# Validación de campos de cliente con plantilla
+# Validar campos de cliente con plantilla
 
 ## Información general {#overview}
 
-La variable `/authoring/testing/template/render` el extremo le ayuda a visualizar cómo se le aplica la plantilla [campos de datos del cliente](file-based-destination-configuration.md#customer-data-fields) definido en la configuración de destino tendría el aspecto siguiente.
+El `/authoring/testing/template/render` El punto de conexión le ayuda a visualizar cómo se personalizan las plantillas [campos de datos del cliente](file-based-destination-configuration.md#customer-data-fields) definido en la configuración de destino tendría el siguiente aspecto:.
 
-El extremo genera valores aleatorios para los campos de datos del cliente y los devuelve en la respuesta. Esto le ayuda a validar la estructura semántica de los campos de datos del cliente, como los nombres de bloque o las rutas de carpeta.
+El extremo genera valores aleatorios para los campos de datos del cliente y los devuelve en la respuesta. Esto le ayuda a validar la estructura semántica de los campos de datos del cliente, como los nombres de los bloques o las rutas de carpetas.
 
 ## Primeros pasos {#getting-started}
 
-Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API de , incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
 
 ## Requisitos previos {#prerequisites}
 
-Antes de usar la variable `/template/render` , asegúrese de cumplir las siguientes condiciones:
+Antes de usar el `/template/render` extremo, asegúrese de cumplir las siguientes condiciones:
 
-* Tiene un destino basado en archivos creado mediante el Destination SDK y puede verlo en su [catálogo de destinos](../ui/destinations-workspace.md).
-* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debería usar en la llamada de API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
+* Tiene un destino basado en archivos existente creado mediante el Destination SDK y puede verlo en su [catálogo de destinos](../ui/destinations-workspace.md).
+* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
 
-   ![Imagen de la interfaz de usuario que muestra cómo obtener el ID de instancia de destino desde la dirección URL.](assets/get-destination-instance-id.png)
+   ![Imagen de la interfaz de usuario que muestra cómo obtener el ID de instancia de destino desde la URL.](assets/get-destination-instance-id.png)
 
-## Procesar campos de cliente con plantilla {#render-customer-fields}
+## Procesar campos de cliente con plantillas {#render-customer-fields}
 
 **Formato de API**
 
@@ -38,7 +38,7 @@ Antes de usar la variable `/template/render` , asegúrese de cumplir las siguien
 POST /authoring/testing/template/render/destination
 ```
 
-Para ilustrar el comportamiento de este extremo de API, consideremos un destino basado en archivos con la siguiente configuración de campos de datos de clientes:
+Para ilustrar el comportamiento de este extremo de API, consideremos un destino basado en archivos con la siguiente configuración de campos de datos del cliente:
 
 ```json
 "fileBasedS3Destination":{
@@ -55,7 +55,7 @@ Para ilustrar el comportamiento de este extremo de API, consideremos un destino 
 
 **Solicitud**
 
-La siguiente solicitud llama a la función `/authoring/testing/template/render` , que devuelve una respuesta con valores generados aleatoriamente para los dos campos de datos de cliente mencionados anteriormente.
+La solicitud siguiente llama a `/authoring/testing/template/render` extremo, que devuelve una respuesta con valores generados aleatoriamente para los dos campos de datos del cliente mencionados anteriormente.
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination' \
@@ -76,14 +76,14 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 | Parámetros | Descripción |
 | -------- | ----------- |
-| `destinationId` | El ID de la variable [configuración de destino](file-based-destination-configuration.md) que está probando. |
-| `templates` | Los nombres de campo con plantilla definidos en el [configuración del servidor de destino](server-and-file-configuration.md). |
+| `destinationId` | El ID del [configuración de destino](file-based-destination-configuration.md) que está probando. |
+| `templates` | Los nombres de los campos con plantillas definidos en su [configuración del servidor de destino](server-and-file-configuration.md). |
 
 **Respuesta**
 
-Una respuesta correcta devuelve un valor `HTTP 200 OK` y el cuerpo incluye valores generados aleatoriamente para los campos con plantilla.
+Una respuesta correcta devuelve un `HTTP 200 OK` estado y el cuerpo incluye valores generados aleatoriamente para los campos con plantilla.
 
-Esta respuesta puede ayudarle a validar la estructura correcta de los campos de datos del cliente, como los nombres de bloque o las rutas de carpeta.
+Esta respuesta puede ayudarle a validar la estructura correcta de los campos de datos del cliente, como los nombres de los bloques o las rutas de carpetas.
 
 
 ```json
@@ -95,9 +95,9 @@ Esta respuesta puede ayudarle a validar la estructura correcta de los campos de 
 }
 ```
 
-## Gestión de errores de API {#api-error-handling}
+## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API del Destination SDK siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
 ## Pasos siguientes {#next-steps}
 

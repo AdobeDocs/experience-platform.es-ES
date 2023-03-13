@@ -1,6 +1,6 @@
 ---
-title: Segmentación por flujo continuo en Adobe Experience Platform
-description: Este vídeo proporciona una comprensión básica de la segmentación de flujo continuo en Adobe Experience Platform y describe cómo realizar la segmentación de flujo mediante la interfaz de usuario de la plataforma.
+title: Segmentación de streaming en Adobe Experience Platform
+description: Este vídeo proporciona información básica sobre la segmentación de flujo continuo en Adobe Experience Platform y describe cómo realizar la segmentación de flujo continuo mediante la IU de Platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,23 +9,22 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
+exl-id: 8092a614-4888-43e3-a02c-b1cf0eb45256
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
+# Segmentación de streaming en la IU de Experience Platform
 
-# Segmentación por flujo continuo en la interfaz de usuario del Experience Platform
+El siguiente vídeo pretende ayudarle a comprender la segmentación de flujo continuo. Muestra un ejemplo de experiencia del cliente seguido de un rápido recorrido por las funciones clave de [!DNL Platform] interfaz. Para obtener más información acerca de la segmentación por transmisión y cómo realizar la segmentación por transmisión en la interfaz de usuario, lea la [guía de IU de segmentación de streaming](../ui/streaming-segmentation.md).
 
-El siguiente vídeo está diseñado para admitir su comprensión de la segmentación de flujo continuo. Muestra un ejemplo de la experiencia del cliente seguido de una visita rápida de las funciones clave en la interfaz [!DNL Platform]. Para obtener más información sobre la segmentación de flujo continuo y cómo realizar la segmentación de flujo continuo en la interfaz de usuario, lea la [guía de la interfaz de usuario de segmentación de flujo](../ui/streaming-segmentation.md).
-
-Si le interesa la segmentación de flujo mediante la API de segmentación, lea la [guía de la API de segmentación de flujo](../api/streaming-segmentation.md).
+Si está interesado en la segmentación por streaming mediante la API de segmentación, lea la [guía de API de segmentación de streaming](../api/streaming-segmentation.md).
 
 >[!NOTE]
 >
->La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte la [guía de la interfaz de usuario de segmentación de flujo](../ui/streaming-segmentation.md).
+>La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía de IU de segmentación de streaming](../ui/streaming-segmentation.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

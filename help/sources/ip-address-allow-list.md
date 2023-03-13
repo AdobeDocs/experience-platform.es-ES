@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # LISTA DE PERMITIDOS de direcciones IP
 
-Puede definir los controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango IP de origen adecuado, puede permitir el tráfico para el servicio de transferencia de datos. Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes.
+Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP de origen adecuado, puede permitir el tráfico para el servicio de transferencia de datos. Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes.
 
-## VA7: América del Norte
+## VA7: Norteamérica
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`

@@ -16,9 +16,9 @@ ht-degree: 60%
 # Recopilación de datos {#collection}
 
 - [Información general sobre la recopilación de datos](home.md)
-- [Información general integral](e2e.md)
+- [Información general de extremo a extremo](e2e.md)
 - [Administración de permisos](permissions.md)
-- [Administración del estado del cliente](client-state.md)
+- [Administración de estado del cliente](client-state.md)
 - Identificación de visitantes {#visitor-identification}
    - [Información general](visitor-identification.md)
-   - [Identificación de visitantes mediante FPID](visitor-identification-fpid.md)
+   - [Identificación de visitante mediante FPID](visitor-identification-fpid.md)

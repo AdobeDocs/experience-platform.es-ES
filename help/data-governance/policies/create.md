@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de datos;política de uso de datos
 solution: Experience Platform
-title: Crear una directiva de administración de datos en la API
+title: Creación de una política de gobernanza de datos en la API
 type: Tutorial
-description: Obtenga información sobre cómo crear una directiva de control de datos mediante la API del servicio de directivas.
+description: Obtenga información sobre cómo crear una política de gobernanza de datos mediante la API del servicio de políticas.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -12,43 +12,43 @@ ht-degree: 3%
 
 ---
 
-# Crear una directiva de control de datos en la API
+# Creación de una política de gobernanza de datos en la API
 
-La variable [API del servicio de directivas](https://www.adobe.io/experience-platform-apis/references/policy-service/) le permite crear y administrar políticas de control de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos.
+El [API del servicio de directivas](https://www.adobe.io/experience-platform-apis/references/policy-service/) le permite crear y administrar políticas de gobernanza de datos para determinar qué acciones de marketing se pueden realizar con datos que contengan determinadas etiquetas de uso de datos.
 
-Este documento proporciona un tutorial paso a paso para crear una política de gobernanza mediante el [!DNL Policy Service] API.
+Este documento proporciona un tutorial paso a paso para crear una directiva de gobernanza utilizando [!DNL Policy Service] API.
 
 >[!NOTE]
 >
->Para ver los pasos sobre cómo crear una directiva de control de acceso, consulte la `/policies` guía de extremo para la variable [API de control de acceso](../../access-control/abac/api/policies.md). Para obtener información sobre cómo crear una directiva de consentimiento, consulte la [guía de la interfaz de usuario de directivas](./user-guide.md#consent-policy).
+>Para ver los pasos sobre cómo crear una directiva de control de acceso, consulte la `/policies` guía de extremo para [API de control de acceso](../../access-control/abac/api/policies.md). Para obtener información sobre cómo crear una directiva de consentimiento, consulte la [Guía de IU de directivas](./user-guide.md#consent-policy).
 
 ## Primeros pasos
 
-Este tutorial requiere una comprensión práctica de los siguientes conceptos clave involucrados en la creación y evaluación de políticas:
+Este tutorial requiere una comprensión práctica de los siguientes conceptos clave implicados en la creación y evaluación de directivas:
 
-* [Administración de datos de Adobe Experience Platform](../home.md): El marco por el cual [!DNL Platform] exige el cumplimiento de las normas de uso de datos.
-   * [Etiquetas de uso de datos](../labels/overview.md): Las etiquetas de uso de datos se aplican a los campos de datos XDM, especificando restricciones para el acceso a esos datos.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Gobernanza de datos de Adobe Experience Platform](../home.md): el marco mediante el cual [!DNL Platform] aplica el cumplimiento de uso de datos.
+   * [Etiquetas de uso de datos](../labels/overview.md): las etiquetas de uso de datos se aplican a campos de datos XDM, especificando restricciones sobre cómo se puede acceder a esos datos.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Antes de iniciar este tutorial, revise la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesita conocer para realizar correctamente llamadas a la función [!DNL Policy Service] API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Antes de iniciar este tutorial, consulte la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesita conocer para poder realizar llamadas correctamente a [!DNL Policy Service] API, incluidos los encabezados obligatorios y cómo leer las llamadas de API de ejemplo.
 
 ## Definir una acción de marketing {#define-action}
 
-En el marco de control de datos, una acción de marketing es una acción que [!DNL Experience Platform] toma del consumidor de datos, para lo cual es necesario comprobar si hay infracciones de las políticas de uso de datos.
+En el marco de trabajo de control de datos, una acción de marketing es una acción que [!DNL Experience Platform] toma el consumidor de datos, para lo cual es necesario comprobar si se han infringido las políticas de uso de datos.
 
-El primer paso para crear una política de uso de datos es determinar qué acción de marketing evaluará la política. Esto se puede hacer con una de las siguientes opciones:
+El primer paso para crear una política de uso de datos es determinar qué acción de marketing evaluará la política. Esto se puede hacer mediante una de las siguientes opciones:
 
-* [Buscar una acción de marketing existente](#look-up)
+* [Búsqueda de una acción de marketing existente](#look-up)
 * [Crear una nueva acción de marketing](#create-new)
 
-### Buscar una acción de marketing existente {#look-up}
+### Búsqueda de una acción de marketing existente {#look-up}
 
-Puede consultar las acciones de marketing existentes que su directiva debe evaluar realizando una solicitud de GET a uno de los `/marketingActions` extremos.
+Puede buscar acciones de marketing existentes para que las evalúe la directiva realizando una solicitud de GET a uno de los `/marketingActions` puntos finales.
 
 **Formato de API**
 
-Dependiendo de si está buscando una acción de marketing proporcionada por [!DNL Experience Platform] o una acción de marketing personalizada creada por su organización, use la variable `marketingActions/core` o `marketingActions/custom` endpoints, respectivamente.
+Dependiendo de si está buscando una acción de marketing proporcionada por [!DNL Experience Platform] Para una acción de marketing personalizada creada por su organización, utilice el `marketingActions/core` o `marketingActions/custom` puntos finales, respectivamente.
 
 ```http
 GET /marketingActions/core
@@ -57,7 +57,7 @@ GET /marketingActions/custom
 
 **Solicitud**
 
-La siguiente solicitud utiliza la variable `marketingActions/custom` , que obtiene una lista de todas las acciones de marketing definidas por su organización de IMS.
+La siguiente solicitud utiliza el `marketingActions/custom` extremo de, que obtiene una lista de todas las acciones de marketing definidas por su organización IMS.
 
 ```shell
 curl -X GET \
@@ -70,7 +70,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el número total de acciones de marketing encontradas (`count`) y enumera los detalles de las propias acciones de marketing dentro de la variable `children` matriz.
+Una respuesta correcta devuelve el número total de acciones de marketing encontradas (`count`) y enumera los detalles de las propias acciones de marketing dentro de la `children` matriz.
 
 ```json
 {
@@ -123,13 +123,13 @@ Una respuesta correcta devuelve el número total de acciones de marketing encont
 
 | Propiedad | Descripción |
 | --- | --- |
-| `_links.self.href` | Cada elemento dentro de la variable `children` matriz contiene un ID de URI para la acción de marketing enumerada. |
+| `_links.self.href` | Cada elemento dentro de `children` La matriz contiene un ID de URI para la acción de marketing enumerada. |
 
 Cuando encuentre la acción de marketing que desea utilizar, registre el valor de su `href` propiedad. Este valor se utiliza durante el siguiente paso de [creación de una directiva](#create-policy).
 
 ### Crear una nueva acción de marketing {#create-new}
 
-Puede crear una nueva acción de marketing realizando una solicitud de PUT al `/marketingActions/custom/` y proporcionando un nombre para la acción de marketing al final de la ruta de solicitud.
+Puede crear una nueva acción de marketing realizando una solicitud de PUT a `/marketingActions/custom/` y proporciona un nombre para la acción de marketing al final de la ruta de solicitud.
 
 **Formato de API**
 
@@ -139,11 +139,11 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la nueva acción de marketing que desea crear. Este nombre actúa como identificador principal de la acción de marketing y, por lo tanto, debe ser único. Una práctica recomendada es dar a la acción de marketing un nombre descriptivo pero conciso. |
+| `{MARKETING_ACTION_NAME}` | Nombre de la nueva acción de marketing que desea crear. Este nombre actúa como identificador principal de la acción de marketing y, por lo tanto, debe ser único. Una práctica recomendada es asignar a la acción de marketing un nombre descriptivo pero conciso. |
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva acción de marketing personalizada llamada &quot;exportToThirdParty&quot;. Observe que la variable `name` en la carga útil de solicitud es el mismo que el nombre proporcionado en la ruta de solicitud.
+La siguiente solicitud crea una nueva acción de marketing personalizada llamada &quot;exportToThirdParty&quot;. Observe que la variable `name` en la carga útil de la solicitud es el mismo que el nombre proporcionado en la ruta de solicitud.
 
 ```shell
 curl -X PUT \  
@@ -161,8 +161,8 @@ curl -X PUT \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | Nombre de la acción de marketing que desea crear. Este nombre debe coincidir con el nombre proporcionado en la ruta de solicitud o se producirá un error 400 (solicitud incorrecta). |
-| `description` | Descripción legible por el usuario de la acción de marketing. |
+| `name` | Nombre de la acción de marketing que desea crear. Este nombre debe coincidir con el nombre proporcionado en la ruta de solicitud o se producirá un error 400 (Solicitud incorrecta). |
+| `description` | Una descripción legible en lenguaje natural de la acción de marketing. |
 
 **Respuesta**
 
@@ -189,15 +189,15 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles de la
 
 | Propiedad | Descripción |
 | --- | --- |
-| `_links.self.href` | ID de URI de la acción de marketing. |
+| `_links.self.href` | El ID de URI de la acción de marketing. |
 
-Registre el ID de URI de la acción de marketing recién creada, tal como se utilizará en el siguiente paso de creación de una política.
+Registre el ID de URI de la acción de marketing recién creada, tal como se utilizará en el siguiente paso de creación de una directiva.
 
 ## Crear una directiva {#create-policy}
 
 La creación de una nueva directiva requiere que proporcione el ID de URI de una acción de marketing con una expresión de las etiquetas de uso que prohíben esa acción de marketing.
 
-Esta expresión se denomina expresión de política y es un objeto que contiene (A) una etiqueta o (B) un operador y operandos, pero no ambos. A su vez, cada operando también es un objeto de expresión de política. Por ejemplo, podría prohibirse una política relativa a la exportación de datos a terceros si `C1 OR (C3 AND C7)` las etiquetas están presentes. Esta expresión se especificaría como:
+Esta expresión se denomina expresión de directiva y es un objeto que contiene (A) una etiqueta o (B) un operador y operandos, pero no ambos. A su vez, cada operando también es un objeto de expresión de directiva. Por ejemplo, una política relativa a la exportación de datos a un tercero podría estar prohibida si `C1 OR (C3 AND C7)` Hay etiquetas presentes. Esta expresión se especificaría como:
 
 ```json
 "deny": {
@@ -225,7 +225,7 @@ Esta expresión se denomina expresión de política y es un objeto que contiene 
 >
 >Solo se admiten los operadores OR y AND.
 
-Una vez configurada la expresión de directiva, puede crear una nueva directiva realizando una solicitud de POST al `/policies/custom` punto final.
+Una vez que haya configurado la expresión de directiva, puede crear una nueva directiva realizando una solicitud del POST a `/policies/custom` punto final.
 
 **Formato de API**
 
@@ -235,7 +235,7 @@ POST /policies/custom
 
 **Solicitud**
 
-La siguiente solicitud crea una directiva denominada &quot;Exportar datos a terceros&quot; al proporcionar una acción de marketing y una expresión de política en la carga útil de la solicitud.
+La siguiente solicitud crea una directiva denominada &quot;Exportar datos a terceros&quot; al proporcionar una acción de marketing y una expresión de directiva en la carga útil de la solicitud.
 
 ```shell
 curl -X POST \
@@ -270,8 +270,8 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `marketingActionRefs` | Una matriz que contiene la variable `href` valor de una acción de marketing, obtenido en la variable [paso anterior](#define-action). Aunque en el ejemplo anterior solo se muestra una acción de marketing, también se pueden proporcionar varias acciones. |
-| `deny` | El objeto de expresión de directiva. Define las etiquetas de uso y las condiciones que harían que la directiva rechazara la acción de marketing a la que se hace referencia en `marketingActionRefs`. |
+| `marketingActionRefs` | Matriz que contiene el `href` valor de una acción de marketing, obtenido en la variable [paso anterior](#define-action). Aunque el ejemplo anterior solo enumera una acción de marketing, también se pueden proporcionar varias acciones. |
+| `deny` | El objeto de expresión de directiva. Define las etiquetas y condiciones de uso que harían que la directiva rechazara la acción de marketing a la que se hace referencia en `marketingActionRefs`. |
 
 **Respuesta**
 
@@ -322,17 +322,17 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles de la
 
 | Propiedad | Descripción |
 | --- | --- |
-| `id` | Valor generado por el sistema de solo lectura que identifica de forma exclusiva la política. |
+| `id` | Un valor generado por el sistema de solo lectura que identifica de forma exclusiva la directiva. |
 
-Registre el ID de URI de la política recién creada, tal como se utiliza en el paso siguiente para habilitar la directiva.
+Registre el ID de URI de la directiva recién creada, tal como se utiliza en el siguiente paso para habilitarla.
 
 ## Habilitar la directiva
 
 >[!NOTE]
 >
->Aunque este paso es opcional si desea dejar la directiva en `DRAFT` Tenga en cuenta que, de forma predeterminada, una directiva debe tener su estado establecido en `ENABLED` para participar en la evaluación. Consulte la guía de [aplicación de políticas](../enforcement/api-enforcement.md) para obtener información sobre cómo hacer excepciones para directivas en `DRAFT` estado.
+>Aunque este paso es opcional si desea dejar la directiva en `DRAFT` estado, tenga en cuenta que, de forma predeterminada, una directiva debe tener su estado establecido en `ENABLED` para participar en la evaluación. Consulte la guía de [aplicación de políticas](../enforcement/api-enforcement.md) para obtener información sobre cómo establecer excepciones para directivas en `DRAFT` estado.
 
-De forma predeterminada, las directivas que tienen `status` propiedad establecida en `DRAFT` no participen en la evaluación. Puede habilitar la directiva para la evaluación realizando una solicitud de PATCH al `/policies/custom/` y proporcionando el identificador único para la directiva al final de la ruta de solicitud.
+De forma predeterminada, las directivas que tienen su `status` propiedad establecida en `DRAFT` no participar en la evaluación. Puede habilitar la directiva para la evaluación realizando una solicitud de PATCH a `/policies/custom/` y proporciona el identificador único de la política al final de la ruta de solicitud.
 
 **Formato de API**
 
@@ -342,11 +342,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{POLICY_ID}` | La variable `id` de la directiva que desea habilitar. |
+| `{POLICY_ID}` | El `id` valor de la directiva que desea habilitar. |
 
 **Solicitud**
 
-La siguiente solicitud realiza una operación de PATCH en la variable `status` propiedad de la directiva, cambiar su valor de `DRAFT` a `ENABLED`.
+La siguiente solicitud realiza una operación de PATCH en `status` propiedad de la directiva, cambiando su valor de `DRAFT` hasta `ENABLED`.
 
 ```shell
 curl -X PATCH \
@@ -367,13 +367,13 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `op` | Tipo de operación de PATCH que se va a realizar. Esta solicitud realiza una operación &quot;replace&quot;. |
-| `path` | Ruta al campo que se va a actualizar. Al habilitar una directiva, el valor debe establecerse en &quot;/status&quot;. |
-| `value` | El nuevo valor que se asignará a la propiedad especificada en `path`. Esta solicitud establece el `status` en &quot;ENABLED&quot;. |
+| `op` | Tipo de operación del PATCH que se va a realizar. Esta solicitud realiza una operación &quot;replace&quot;. |
+| `path` | Ruta de acceso al campo que se va a actualizar. Al habilitar una directiva, el valor debe establecerse en &quot;/status&quot;. |
+| `value` | El nuevo valor que se va a asignar a la propiedad especificada en `path`. Esta solicitud establece el `status` a &quot;ENABLED&quot;. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 (OK) y los detalles de la directiva actualizada, con su `status` ahora se configura como `ENABLED`.
+Una respuesta correcta devuelve el estado HTTP 200 (OK) y los detalles de la directiva actualizada, con su `status` ahora se establece en `ENABLED`.
 
 ```json
 {
@@ -420,8 +420,8 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y los detalles de la dir
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente una directiva de uso de datos para una acción de marketing. Ahora puede continuar con el tutorial en [aplicación de políticas de uso de datos](../enforcement/api-enforcement.md) para obtener información sobre cómo comprobar infracciones de directivas y administrarlas en la aplicación de experiencia.
+Al seguir este tutorial, ha creado correctamente una política de uso de datos para una acción de marketing. Ahora puede continuar con el tutorial sobre [aplicación de políticas de uso de datos](../enforcement/api-enforcement.md) para obtener información sobre cómo comprobar violaciones de directivas y gestionarlas en la aplicación de experiencia.
 
-Para obtener más información sobre las diferentes operaciones disponibles en la [!DNL Policy Service] API, consulte la [Guía para desarrolladores de Policy Service](../api/getting-started.md). Para obtener información sobre cómo aplicar políticas para [!DNL Real-Time Customer Profile] datos, consulte el tutorial en [cumplimiento del uso de datos para segmentos de audiencia](../../segmentation/tutorials/governance.md).
+Para obtener más información sobre las diferentes operaciones disponibles en la [!DNL Policy Service] API, consulte la [Guía para desarrolladores de Policy Service](../api/getting-started.md). Para obtener información sobre cómo aplicar directivas para [!DNL Real-Time Customer Profile] para obtener más información, consulte el tutorial sobre [aplicación del cumplimiento del uso de datos para segmentos de audiencia](../../segmentation/tutorials/governance.md).
 
-Para aprender a administrar las políticas de uso en la [!DNL Experience Platform] interfaz de usuario, consulte la [guía del usuario de directivas](user-guide.md).
+Para obtener información sobre cómo administrar las políticas de uso en [!DNL Experience Platform] interfaz de usuario, consulte la [guía del usuario de directivas](user-guide.md).

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;Aplicación automática;aplicación basada en API;control de datos
+keywords: Experience Platform;inicio;temas populares;aplicación de políticas;aplicación automática;aplicación basada en API;gobernanza de datos
 solution: Experience Platform
-title: Puntos finales de API de evaluación de políticas
-description: Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API del servicio de directivas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
+title: Extremos de API de evaluación de directiva
+description: Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API del servicio de políticas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -11,25 +11,25 @@ ht-degree: 2%
 
 ---
 
-# Puntos finales de la evaluación de políticas
+# Extremos de evaluación de directiva
 
-Una vez creadas las acciones de marketing y definidas las políticas de uso de datos, puede usar la variable [!DNL Policy Service] API para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
+Una vez creadas las acciones de marketing y definidas las políticas de uso de datos, puede utilizar el complemento [!DNL Policy Service] API para evaluar si ciertas acciones violan alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 
-De forma predeterminada, solo las directivas cuyo estado está establecido en `ENABLED` participar en la evaluación. Sin embargo, puede utilizar el parámetro de consulta `?includeDraft=true` para incluir `DRAFT` políticas de evaluación.
+De forma predeterminada, solo las directivas cuyo estado está establecido en `ENABLED` participar en la evaluación. Sin embargo, puede utilizar el parámetro de consulta `?includeDraft=true` para incluir `DRAFT` políticas en evaluación.
 
 Las solicitudes de evaluación se pueden realizar de una de las tres maneras siguientes:
 
 1. Dada una acción de marketing y un conjunto de etiquetas de uso de datos, ¿la acción infringe alguna política?
 1. Dada una acción de marketing y uno o más conjuntos de datos, ¿la acción infringe alguna política?
-1. Si se considera una acción de marketing, uno o más conjuntos de datos y un subconjunto de uno o más campos dentro de cada uno de esos conjuntos de datos, ¿la acción infringe alguna política?
+1. Dada una acción de marketing, uno o más conjuntos de datos y un subconjunto de uno o más campos dentro de cada uno de esos conjuntos de datos, ¿la acción infringe alguna política?
 
 ## Primeros pasos
 
-Los extremos de API utilizados en esta guía forman parte del [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, revise la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier [!DNL Experience Platform] API.
+Los extremos de API utilizados en esta guía forman parte de la variable [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
 
-## Evaluar para infracciones de directiva usando etiquetas de uso de datos {#labels}
+## Evaluar infracciones de directivas mediante etiquetas de uso de datos {#labels}
 
-Puede evaluar las infracciones de directiva en función de la presencia de un conjunto específico de etiquetas de uso de datos mediante el uso de la variable `duleLabels` parámetro de consulta en una solicitud de GET.
+Puede evaluar las infracciones de directivas en función de la presencia de un conjunto específico de etiquetas de uso de datos utilizando `duleLabels` parámetro de consulta en una solicitud de GET.
 
 **Formato de API**
 
@@ -40,16 +40,16 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con un conjunto de etiquetas de uso de datos. Puede recuperar una lista de las acciones de marketing disponibles realizando una [solicitud de GET al extremo de acciones de marketing](./marketing-actions.md#list). |
-| `{LABELS_LIST}` | Lista de nombres de etiquetas de uso de datos separados por coma para probar la acción de marketing. Por ejemplo: `duleLabels=C1,C2,C3`<br><br>Tenga en cuenta que los nombres de las etiquetas distinguen entre mayúsculas y minúsculas. Asegúrese de que está utilizando las mayúsculas y minúsculas correctas al enumerarlas en la variable `duleLabels` parámetro. |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con un conjunto de etiquetas de uso de datos. Puede recuperar una lista de las acciones de marketing disponibles realizando una [Solicitud de GET al extremo de acciones de marketing](./marketing-actions.md#list). |
+| `{LABELS_LIST}` | Una lista de nombres de etiquetas de uso de datos separados por comas con los que probar la acción de marketing. Por ejemplo: `duleLabels=C1,C2,C3`<br><br>Tenga en cuenta que los nombres de etiqueta distinguen entre mayúsculas y minúsculas. Asegúrese de que utiliza las mayúsculas y minúsculas correctas al incluirlas en la lista de `duleLabels` parámetro. |
 
 **Solicitud**
 
-La solicitud de ejemplo siguiente evalúa una acción de marketing en relación con las etiquetas C1 y C3.
+La solicitud de ejemplo siguiente evalúa una acción de marketing con respecto a las etiquetas C1 y C3.
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que `AND` y `OR` en las expresiones de directiva. En el ejemplo siguiente, si alguna etiqueta (`C1` o `C3`) había aparecido solo en la solicitud, la acción de marketing no habría violado esta política. Toma ambas etiquetas (`C1` y `C3`) para devolver la directiva violada. Asegúrese de que está evaluando las políticas cuidadosamente y definiendo las expresiones de políticas con el mismo cuidado.
+>Tenga en cuenta lo siguiente `AND` y `OR` operadores en las expresiones de directiva. En el ejemplo siguiente, si alguna de las etiquetas (`C1` o `C3`) hubiera aparecido solo en la solicitud, la acción de marketing no habría violado esta política. Toma ambas etiquetas (`C1` y `C3`) para devolver la directiva infringida. Asegúrese de evaluar las directivas cuidadosamente y de definir las expresiones de directiva con igual cuidado.
 
 ```shell
 curl -X GET \
@@ -62,7 +62,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta incluye una `violatedPolicies` matriz, que contiene los detalles de las políticas que se violaron como resultado de realizar la acción de marketing con las etiquetas proporcionadas. Si no se infringen políticas, la variable `violatedPolicies` la matriz estará vacía.
+Una respuesta correcta incluye una `violatedPolicies` matriz, que contiene los detalles de las directivas que se violaron como resultado de realizar la acción de marketing contra las etiquetas proporcionadas. Si no se infringe ninguna directiva, la variable `violatedPolicies` la matriz estará vacía.
 
 ```JSON
 {
@@ -120,9 +120,9 @@ Una respuesta correcta incluye una `violatedPolicies` matriz, que contiene los d
 }
 ```
 
-## Evaluar para infracciones de directiva usando conjuntos de datos {#datasets}
+## Evaluar infracciones de directivas mediante conjuntos de datos {#datasets}
 
-Puede evaluar las infracciones de políticas en función de un conjunto de uno o más conjuntos de datos desde los que se pueden recopilar las etiquetas de uso de datos. Para ello, realiza una solicitud de POST al `/constraints` para una acción de marketing específica y que proporciona una lista de ID de conjuntos de datos dentro del cuerpo de la solicitud.
+Puede evaluar las infracciones de directivas en función de un conjunto de uno o más conjuntos de datos de los que se pueden recopilar etiquetas de uso de datos. Esto se hace realizando una solicitud de POST a `/constraints` extremo para una acción de marketing específica y que proporciona una lista de ID de conjuntos de datos dentro del cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -133,11 +133,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con uno o más conjuntos de datos. Puede recuperar una lista de las acciones de marketing disponibles realizando una [solicitud de GET al extremo de acciones de marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con uno o varios conjuntos de datos. Puede recuperar una lista de las acciones de marketing disponibles realizando una [Solicitud de GET al extremo de acciones de marketing](./marketing-actions.md#list). |
 
 **Solicitud**
 
-La solicitud siguiente realiza la función `crossSiteTargeting` acción de marketing frente a un conjunto de tres conjuntos de datos para evaluar si hay alguna infracción de directiva.
+La siguiente solicitud realiza la `crossSiteTargeting` acción de marketing contra un conjunto de tres conjuntos de datos a evaluar para cualquier infracción de política.
 
 ```shell
 curl -X POST \
@@ -166,11 +166,11 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `entityType` | El tipo de entidad cuyo ID se indica en el elemento del mismo nivel `entityId` propiedad. Actualmente, el único valor aceptado es `dataSet`. |
-| `entityId` | El ID de un conjunto de datos con el que probar la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una solicitud de GET al `/dataSets` en la variable [!DNL Catalog Service] API. Consulte la guía de [lista [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
+| `entityId` | El ID de un conjunto de datos con el que probar la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una solicitud de GET a `/dataSets` punto final en la [!DNL Catalog Service] API. Consulte la guía de [listado [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
 
 **Respuesta**
 
-Una respuesta correcta incluye una `violatedPolicies` matriz, que contiene los detalles de las políticas que se violaron como resultado de realizar la acción de marketing con los conjuntos de datos proporcionados. Si no se infringen políticas, la variable `violatedPolicies` la matriz estará vacía.
+Una respuesta correcta incluye una `violatedPolicies` matriz, que contiene los detalles de las directivas que se violaron como resultado de realizar la acción de marketing contra los conjuntos de datos proporcionados. Si no se infringe ninguna directiva, la variable `violatedPolicies` la matriz estará vacía.
 
 ```JSON
 {
@@ -343,17 +343,17 @@ Una respuesta correcta incluye una `violatedPolicies` matriz, que contiene los d
 
 | Propiedad | Descripción |
 | --- | --- |
-| `duleLabels` | El objeto response incluye un `duleLabels` matriz que contiene una lista consolidada de todas las etiquetas encontradas dentro de los conjuntos de datos especificados. Esta lista incluye etiquetas de nivel de conjunto de datos y campo en todos los campos dentro del conjunto de datos. |
-| `discoveredLabels` | La respuesta también incluye un `discoveredLabels` matriz que contiene objetos para cada conjunto de datos, que muestra `datasetLabels` desglosado en etiquetas a nivel de conjunto de datos y campo. Cada etiqueta de nivel de campo muestra la ruta al campo específico con esa etiqueta. |
+| `duleLabels` | El objeto response incluye un `duleLabels` matriz que contiene una lista consolidada de todas las etiquetas encontradas dentro de los conjuntos de datos especificados. Esta lista incluye etiquetas de nivel de campo y conjunto de datos en todos los campos del conjunto de datos. |
+| `discoveredLabels` | La respuesta también incluye una `discoveredLabels` matriz que contiene objetos para cada conjunto de datos, que muestra `datasetLabels` se desglosan en etiquetas de nivel de conjunto de datos y de campo. Cada etiqueta de nivel de campo muestra la ruta al campo específico con esa etiqueta. |
 
-## Evaluar para infracciones de directiva usando campos específicos del conjunto de datos {#fields}
+## Evaluar infracciones de directivas mediante campos de conjuntos de datos específicos {#fields}
 
-Puede evaluar infracciones de directiva basadas en un subconjunto de campos desde uno o varios conjuntos de datos, de modo que solo se evalúen las etiquetas de uso de datos aplicadas a esos campos.
+Puede evaluar infracciones de directivas basadas en un subconjunto de campos desde uno o varios conjuntos de datos, de modo que solo se evalúen las etiquetas de uso de datos aplicadas a esos campos.
 
-Al evaluar políticas mediante campos de conjuntos de datos, tenga en cuenta lo siguiente:
+Al evaluar directivas mediante campos de conjuntos de datos, tenga en cuenta lo siguiente:
 
 * **Los nombres de campo distinguen entre mayúsculas y minúsculas**: Al proporcionar campos, deben escribirse exactamente como aparecen en el conjunto de datos (por ejemplo, `firstName` vs `firstname`).
-* **Herencia de etiquetas de conjunto de datos**: Los campos individuales de un conjunto de datos heredan cualquier etiqueta que se haya aplicado en el nivel del conjunto de datos. Si las evaluaciones de políticas no regresan según lo esperado, asegúrese de comprobar si hay etiquetas que puedan haberse heredado del nivel de conjunto de datos hasta los campos, además de las aplicadas en el nivel de campo.
+* **Herencia de etiqueta de conjunto de datos**: los campos individuales de un conjunto de datos heredan cualquier etiqueta que se haya aplicado en el nivel del conjunto de datos. Si las evaluaciones de directivas no se devuelven según lo esperado, asegúrese de comprobar si hay alguna etiqueta que se haya heredado del nivel de conjunto de datos hasta los campos, además de las aplicadas al nivel de campo.
 
 **Formato de API**
 
@@ -364,11 +364,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con un subconjunto de campos de conjuntos de datos. Puede recuperar una lista de las acciones de marketing disponibles realizando una [solicitud de GET al extremo de acciones de marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con un subconjunto de campos de conjuntos de datos. Puede recuperar una lista de las acciones de marketing disponibles realizando una [Solicitud de GET al extremo de acciones de marketing](./marketing-actions.md#list). |
 
 **Solicitud**
 
-La siguiente solicitud prueba la acción de marketing `crossSiteTargeting` en un conjunto específico de campos que pertenecen a tres conjuntos de datos. La carga útil es similar a una [solicitud de evaluación que solo incluye conjuntos de datos](#datasets), agregando campos específicos para cada conjunto de datos desde los que recopilar etiquetas.
+La siguiente solicitud prueba la acción de marketing `crossSiteTargeting` en un conjunto específico de campos que pertenecen a tres conjuntos de datos. La carga útil es similar a un [solicitud de evaluación que implica solo conjuntos de datos](#datasets), agregando campos específicos para cada conjunto de datos para recopilar etiquetas de.
 
 ```shell
 curl -X POST \
@@ -414,14 +414,14 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `entityType` | El tipo de entidad cuyo ID se indica en el elemento del mismo nivel `entityId` propiedad. Actualmente, el único valor aceptado es `dataSet`. |
-| `entityId` | ID de un conjunto de datos cuyos campos se van a evaluar con la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una solicitud de GET al `/dataSets` en la variable [!DNL Catalog Service] API. Consulte la guía de [lista [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
-| `entityMeta.fields` | Matriz de rutas a campos específicos dentro del esquema del conjunto de datos, proporcionada en forma de cadenas de puntero JSON. Consulte la sección sobre [Puntero JSON](../../landing/api-fundamentals.md#json-pointer) en la guía de fundamentos de API para obtener más información sobre la sintaxis aceptada para estas cadenas. |
+| `entityId` | El ID de un conjunto de datos cuyos campos se deben evaluar con la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una solicitud de GET a `/dataSets` punto final en la [!DNL Catalog Service] API. Consulte la guía de [listado [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
+| `entityMeta.fields` | Una matriz de rutas a campos específicos dentro del esquema del conjunto de datos, proporcionadas en forma de cadenas de puntero JSON. Consulte la sección sobre [Puntero JSON](../../landing/api-fundamentals.md#json-pointer) en la guía de aspectos básicos de la API para obtener más información sobre la sintaxis aceptada para estas cadenas. |
 
 **Respuesta**
 
-Una respuesta correcta incluye una `violatedPolicies` matriz, que contiene los detalles de las políticas que se violaron como resultado de realizar la acción de marketing con los campos del conjunto de datos proporcionados. Si no se infringen políticas, la variable `violatedPolicies` la matriz estará vacía.
+Una respuesta correcta incluye una `violatedPolicies` matriz, que contiene los detalles de las directivas que se violaron como resultado de realizar la acción de marketing en los campos del conjunto de datos proporcionados. Si no se infringe ninguna directiva, la variable `violatedPolicies` la matriz estará vacía.
 
-Comparación de la respuesta de ejemplo siguiente con la variable [respuesta que solo incluye conjuntos de datos](#datasets), tenga en cuenta que la lista de etiquetas recopiladas es más corta. La variable `discoveredLabels` también se han reducido para cada conjunto de datos, ya que solo incluyen los campos especificados en el cuerpo de la solicitud. Además, la política anteriormente violada `Targeting Ads or Content` requiere ambos `C4 AND C6` etiquetas que se van a presentar y, por lo tanto, ya no se infringe como indica el vacío `violatedPolicies` matriz.
+Comparando la respuesta de ejemplo siguiente con la [respuesta que solo implica conjuntos de datos](#datasets), tenga en cuenta que la lista de etiquetas recopiladas es más corta. El `discoveredLabels` para cada conjunto de datos también se han reducido, ya que solo incluyen los campos especificados en el cuerpo de la solicitud. Además, la política violada anteriormente `Targeting Ads or Content` requiere ambos `C4 AND C6` etiquetas para presentar, y por lo tanto ya no se viola como indica el vacío `violatedPolicies` matriz.
 
 ```JSON
 {
@@ -523,7 +523,7 @@ Comparación de la respuesta de ejemplo siguiente con la variable [respuesta que
 
 ## Evaluar directivas de forma masiva {#bulk}
 
-La variable `/bulk-eval` El extremo de le permite ejecutar varios trabajos de evaluación en una sola llamada de API.
+El `/bulk-eval` Este punto de conexión le permite ejecutar varios trabajos de evaluación en una sola llamada de API.
 
 **Formato de API**
 
@@ -533,11 +533,11 @@ POST /bulk-eval
 
 **Solicitud**
 
-La carga útil de una solicitud de evaluación masiva debe ser una matriz de objetos; uno para cada trabajo de evaluación que se va a realizar. Para los trabajos que se evalúan en función de conjuntos de datos y campos, una `entityList` debe proporcionarse la matriz. Para los trabajos que se evalúan en función de etiquetas de uso de datos, una `labels` debe proporcionarse la matriz.
+La carga útil de una solicitud de evaluación masiva debe ser una matriz de objetos; uno para cada trabajo de evaluación que se realice. Para trabajos que evalúan en función de conjuntos de datos y campos, una variable `entityList` se debe proporcionar la matriz. Para los trabajos que evalúan en función de las etiquetas de uso de datos, una `labels` se debe proporcionar la matriz.
 
 >[!WARNING]
 >
->Si algún trabajo de evaluación enumerado contiene `entityList` y `labels` , se producirá un error. Si desea evaluar la misma acción de marketing basada en conjuntos de datos y etiquetas, debe incluir trabajos de evaluación independientes para esa acción de marketing.
+>Si algún trabajo de evaluación de la lista contiene un `entityList` y una `labels` matriz, se producirá un error. Si desea evaluar la misma acción de marketing en función de conjuntos de datos y etiquetas, debe incluir trabajos de evaluación independientes para esa acción de marketing.
 
 ```shell
 curl -X POST \
@@ -577,17 +577,17 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `evalRef` | El URI de la acción de marketing que se va a probar con etiquetas o conjuntos de datos para detectar infracciones de directivas. |
-| `includeDraft` | De forma predeterminada, solo participan en la evaluación las directivas habilitadas. If `includeDraft` está configurado como `true`, directivas que se encuentran en `DRAFT` también participará. |
-| `labels` | Matriz de etiquetas de uso de datos con las que probar la acción de marketing.<br><br>**IMPORTANTE**: Al utilizar esta propiedad, una `entityList` NO debe incluirse en el mismo objeto. Para evaluar la misma acción de marketing mediante conjuntos de datos o campos, debe incluir un objeto independiente en la carga útil de la solicitud que contenga un `entityList` matriz. |
-| `entityList` | Una matriz de conjuntos de datos y campos (opcionalmente) específicos dentro de esos conjuntos de datos para probar la acción de marketing.<br><br>**IMPORTANTE**: Al utilizar esta propiedad, una `labels` NO debe incluirse en el mismo objeto. Para evaluar la misma acción de marketing mediante etiquetas de uso de datos específicas, debe incluir un objeto independiente en la carga útil de la solicitud que contenga una `labels` matriz. |
+| `evalRef` | URI de la acción de marketing que se va a probar con etiquetas o conjuntos de datos para detectar infracciones de directivas. |
+| `includeDraft` | De forma predeterminada, solo las directivas habilitadas participan en la evaluación. If `includeDraft` se establece en `true`, directivas incluidas en `DRAFT` El estado también participará. |
+| `labels` | Matriz de etiquetas de uso de datos con las que probar la acción de marketing.<br><br>**IMPORTANTE**: Al utilizar esta propiedad, un `entityList` La propiedad NO se debe incluir en el mismo objeto. Para evaluar la misma acción de marketing mediante conjuntos de datos o campos, debe incluir un objeto independiente en la carga útil de la solicitud que contenga un `entityList` matriz. |
+| `entityList` | Una matriz de conjuntos de datos y (opcionalmente) campos específicos dentro de esos conjuntos de datos con los que probar la acción de marketing.<br><br>**IMPORTANTE**: Al utilizar esta propiedad, un `labels` La propiedad NO se debe incluir en el mismo objeto. Para evaluar la misma acción de marketing mediante etiquetas de uso de datos específicas, debe incluir un objeto independiente en la carga útil de la solicitud que contenga un `labels` matriz. |
 | `entityType` | Tipo de entidad con la que probar la acción de marketing. Actualmente, solo `dataSet` es compatible. |
 | `entityId` | El ID de un conjunto de datos con el que probar la acción de marketing. |
-| `entityMeta.fields` | (Opcional) Una lista de campos específicos dentro del conjunto de datos para probar la acción de marketing. |
+| `entityMeta.fields` | (Opcional) Una lista de campos específicos dentro del conjunto de datos con los que probar la acción de marketing. |
 
 **Respuesta**
 
-Una respuesta satisfactoria devuelve una serie de resultados de evaluación; uno para cada trabajo de evaluación de directivas enviado en la solicitud.
+Una respuesta correcta devuelve una matriz de resultados de evaluación, uno para cada trabajo de evaluación de directivas enviado en la solicitud.
 
 ```json
 [
@@ -681,6 +681,6 @@ Una respuesta satisfactoria devuelve una serie de resultados de evaluación; uno
 ]
 ```
 
-## Evaluación de políticas para [!DNL Real-Time Customer Profile]
+## Evaluación de directivas para [!DNL Real-Time Customer Profile]
 
-La variable [!DNL Policy Service] La API también se puede utilizar para comprobar las infracciones de directiva que implican el uso de [!DNL Real-Time Customer Profile] segmentos. Consulte el tutorial en [cumplimiento del uso de datos para segmentos de audiencia](../../segmentation/tutorials/governance.md) para obtener más información.
+El [!DNL Policy Service] La API también se puede utilizar para comprobar violaciones de directivas que impliquen el uso de [!DNL Real-Time Customer Profile] segmentos. Consulte el tutorial sobre [aplicación del cumplimiento del uso de datos para segmentos de audiencia](../../segmentation/tutorials/governance.md) para obtener más información.

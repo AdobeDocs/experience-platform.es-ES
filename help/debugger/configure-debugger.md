@@ -14,21 +14,21 @@ ht-degree: 45%
 
 # Configurar Platform Debugger
 
-Puede configurar ciertos aspectos del aspecto y el funcionamiento de Adobe Experience Platform Debugger.
+Puede configurar ciertos aspectos de la apariencia y el funcionamiento de Adobe Experience Platform Debugger.
 
 ![](images/settings.jpg)
 
 ## Modo claro u oscuro
 
-Después de abrir Platform Debugger, puede seleccionar el aspecto que prefiera desde la página de **[!UICONTROL Configuración]** y seleccionando **Modo oscuro** (predeterminado) o **Modo de luz**.
+Después de abrir Platform Debugger, puede seleccionar el aspecto que prefiera desde el **[!UICONTROL Configuración]** y seleccionando una de estas opciones **Modo oscuro** (predeterminado) o **Modo claro**.
 
 ## Restablecer
 
-Select **[!UICONTROL Restablecer todos los datos y la configuración]** para volver a borrar todos los datos y volver a la configuración predeterminada.
+Seleccionar **[!UICONTROL Restablecer todos los datos y la configuración]** para volver a borrar todos los datos y volver a la configuración predeterminada.
 
 ## Bloquear el Experience Platform Debugger en una página
 
-A medida que cambia de página en el sitio, la ventana de Experience Platform Debugger se actualiza para mostrar información de la página correspondiente. El nombre de la página actual se muestra en la parte inferior de la pantalla. Para mantener Experience Platform Debugger bloqueado en una página, seleccione **[!UICONTROL Bloqueo]** en la esquina inferior derecha de la ventana de Platform Debugger.
+A medida que cambia de página en el sitio, la ventana de Experience Platform Debugger se actualiza para mostrar información de la página correspondiente. El nombre de la página actual se muestra en la parte inferior de la pantalla. Para mantener Experience Platform Debugger bloqueado en una página, seleccione **[!UICONTROL Bloquear]** en la esquina inferior derecha de la ventana de Platform Debugger.
 
 ![](images/lock.jpg)
 

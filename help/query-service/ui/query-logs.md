@@ -1,6 +1,6 @@
 ---
 title: Registros de consultas
-description: Los registros de consulta se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudarle a solucionar el problema. Este documento describe cómo utilizar y desplazarse por la sección Registros del servicio de consulta de la interfaz de usuario.
+description: Los registros de consultas se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudar a solucionar problemas. Este documento describe cómo utilizar y navegar por la sección Registros del servicio de consulta de la interfaz de usuario.
 source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
 source-wordcount: '585'
@@ -12,33 +12,33 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Algunas funciones de registros de consulta están actualmente en una versión limitada y no están disponibles para todos los clientes. La interfaz de usuario puede aparecer de forma ligeramente diferente sin un icono de edición. Además, el proceso de selección de un nombre de consulta puede ir al Editor de consultas en lugar de a la [!UICONTROL Detalles del registro de consultas] vista.
+>Ciertas funciones de registros de consultas están actualmente en una versión limitada y no están disponibles para todos los clientes. La interfaz de usuario puede aparecer de forma ligeramente diferente sin un icono de edición. Además, el proceso de selección de un nombre de consulta puede llevar al Editor de consultas en lugar de al Editor de consultas [!UICONTROL Detalles del registro de consultas] vista.
 
-Adobe Experience Platform mantiene un registro de todos los eventos de consulta que se producen a través de la API y la IU. Esta información está disponible en la interfaz de usuario del servicio de consultas desde el [!UICONTROL Registros] pestaña .
+Adobe Experience Platform mantiene un registro de todos los eventos de consulta que se producen a través de la API y la interfaz de usuario. Esta información está disponible en la interfaz de usuario del servicio de consultas desde [!UICONTROL Registros] pestaña.
 
-Los archivos de registro se generan automáticamente por cualquier evento de consulta y contienen información, incluido el SQL utilizado, el estado de la consulta, cuánto tiempo tardó y el último tiempo de ejecución. Los datos de registro de consultas se pueden usar como herramienta potente para solucionar problemas o consultas ineficientes. La información de registro más completa se conserva como parte de la función de registro de auditoría y se puede encontrar en la [documentación del registro de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md).
+Los archivos de registro se generan automáticamente mediante cualquier evento de consulta y contienen información como el SQL utilizado, el estado de la consulta, cuánto tiempo tardó y el último tiempo de ejecución. Puede utilizar los datos de registro de consultas como una herramienta potente para solucionar consultas ineficientes o problemáticas. La información de registro más completa se conserva como parte de la función de registro de auditoría y se puede encontrar en la [documentación del registro de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Comprobar registros de consultas
 
-Para comprobar los registros de consulta, seleccione [!UICONTROL Consultas] para desplazarse al espacio de trabajo del servicio de consulta y seleccione [!UICONTROL Registro] de las opciones disponibles.
+Para comprobar los registros de consultas, seleccione [!UICONTROL Consultas] para navegar al espacio de trabajo del servicio de consultas y seleccionar [!UICONTROL Registro] en las opciones disponibles.
 
-![Interfaz de usuario de Platform con Consultas y Registro resaltados.](../images/ui/query-log/logs.png)
+![La interfaz de usuario de Platform con las consultas y el registro resaltados.](../images/ui/query-log/logs.png)
 
 ## Personalizar y buscar {#customize-and-search}
 
-Los registros del servicio de consulta se presentan en un formato de tabla personalizable. Para personalizar las columnas de la tabla, seleccione el icono de configuración (![Un icono de configuración.](../images/ui/query-log/settings-icon.png)) a la derecha de la pantalla. A [!UICONTROL Personalizar tabla] aparece el cuadro de diálogo donde se puede anular la selección de cada columna.
+Los registros del servicio de consultas se presentan en un formato de tabla personalizable. Para personalizar las columnas de la tabla, seleccione el icono de configuración (![Un icono de configuración.](../images/ui/query-log/settings-icon.png)) a la derecha de la pantalla. A [!UICONTROL Personalizar tabla] aparece un cuadro de diálogo donde se puede anular la selección de cada columna.
 
 También puede buscar registros relacionados con plantillas de consulta específicas escribiendo el nombre de la plantilla en el campo de búsqueda.
 
-![El espacio de trabajo Registro de consultas con la barra de búsqueda y la lista desplegable administrar tabla de columnas resaltadas.](../images/ui/query-log/customize-logs.png)
+![El espacio de trabajo Registro de consultas con la barra de búsqueda y la lista desplegable Administrar tabla de columnas resaltadas.](../images/ui/query-log/customize-logs.png)
 
-A [descripción de cada una de las columnas de la tabla de registro](./overview.md#log) se encuentra en la sección Registro de la descripción general del servicio de consulta.
+A [descripción de cada una de las columnas de la tabla de registro](./overview.md#log) se encuentra en la sección Registro de la descripción general del servicio de consultas.
 
-## Datos de registro de Discover
+## Detectar datos de registro
 
-Cada fila representa los datos de registro de una ejecución de consulta asociada a una plantilla de consulta. Seleccione cualquier fila de la tabla para rellenar la barra lateral derecha con los datos de registro para esa ejecución.
+Cada fila representa los datos de registro de una ejecución de consulta asociada a una plantilla de consulta. Seleccione cualquier fila de la tabla para rellenar la barra lateral derecha con los datos de registro de esa ejecución.
 
-![El espacio de trabajo Registro de consultas con una fila seleccionada y los datos de registro en la barra lateral derecha resaltados.](../images/ui/query-log/log-details.png)
+![El espacio de trabajo Registro de consultas con una fila seleccionada y los datos de registro resaltados en la barra lateral derecha.](../images/ui/query-log/log-details.png)
 
 En el panel de detalles del registro, puede seleccionar un nuevo conjunto de datos de salida y ver o copiar la consulta SQL completa que se utilizó en la ejecución.
 
@@ -46,24 +46,24 @@ En el panel de detalles del registro, puede seleccionar un nuevo conjunto de dat
 
 >[!IMPORTANT]
 >
->Algunas funciones de registros de consulta están actualmente en una versión limitada y no están disponibles para todos los clientes.
+>Ciertas funciones de registros de consultas están actualmente en una versión limitada y no están disponibles para todos los clientes.
 
-También puede seleccionar un nombre de plantilla de consulta en la [!UICONTROL Nombre] para navegar directamente a la [!UICONTROL Detalles del registro de consultas] vista.
+También puede seleccionar un nombre de plantilla de consulta en la [!UICONTROL Nombre] para ir directamente a la columna [!UICONTROL Detalles del registro de consultas] vista.
 
 >[!NOTE]
 >
->Si la consulta se creó con la API y no se proporcionó ningún nombre de plantilla durante la inicialización, se muestran las primeras decenas de caracteres de la consulta SQL.
+>Si la consulta se creó con la API y no se proporcionó ningún nombre de plantilla durante la inicialización, se muestran las primeras docenas de caracteres de la consulta SQL en su lugar.
 
-![La vista Detalles del registro de consultas .](../images/ui/query-log/query-log-details.png)
+![Vista de detalles del registro de consultas.](../images/ui/query-log/query-log-details.png)
 
-Al lado del nombre de plantilla de cada fila o del fragmento SQL hay un icono de lápiz (![Un icono de lápiz.](../images/ui/query-log/edit-icon.png)) que puede utilizar para ir al Editor de consultas. A continuación, la consulta se rellena previamente en el editor para su edición.
+Junto al nombre de plantilla o fragmento SQL de cada fila hay un icono de lápiz (![Un icono de lápiz.](../images/ui/query-log/edit-icon.png)) que puede utilizar para desplazarse al Editor de consultas. A continuación, la consulta se rellena previamente en el editor para su edición.
 
 ![El espacio de trabajo Registro de consultas con un icono de lápiz resaltado.](../images/ui/query-log/edit-query.png)
 
 ## Pasos siguientes
 
-Al leer este documento, ahora tiene una mejor comprensión de cómo se accede y utiliza a los registros de consulta en la interfaz de usuario del servicio de consultas.
+Al leer este documento, ahora comprende mejor cómo se accede a los registros de consulta y cómo se utilizan en la interfaz de usuario del servicio de consultas.
 
-Consulte la [Información general sobre la IU](./overview.md)o [Guía de API del servicio de consulta](../api/getting-started.md) para obtener más información sobre las funcionalidades del servicio de consulta.
+Consulte la [Información general de IU](./overview.md), o el [Guía de API del servicio de consultas](../api/getting-started.md) para obtener más información sobre las funcionalidades del servicio de consultas.
 
-Consulte la [documento de consultas de monitor](./monitor-queries.md) para conocer cómo el servicio de consulta mejora la visibilidad de las ejecuciones de consultas programadas.
+Consulte la [documento de monitorización de consultas](./monitor-queries.md) para conocer cómo el servicio de consultas mejora la visibilidad de las ejecuciones de consultas programadas.

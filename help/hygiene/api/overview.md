@@ -13,17 +13,17 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Actualmente, las funciones de higiene de datos en Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**.
+>Actualmente, las funciones de higiene de los datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**.
 
-La API de higiene de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform, así como programar fechas de caducidad para conjuntos de datos. Esta guía trata los pasos previos para utilizar la API y proporciona vínculos a documentación más específica del extremo.
+La API de higiene de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform, así como programar fechas de caducidad para conjuntos de datos. Esta guía describe los pasos previos para utilizar la API y proporciona vínculos a documentación más específica del extremo.
 
 ## Primeros pasos
 
 Puede acceder a la API de higiene de datos a través de la siguiente ruta raíz: `https://platform.adobe.io/data/core/hygiene/`
 
-Estas secciones describen los conceptos principales que debe conocer antes de intentar realizar llamadas a la API.
+Las secciones siguientes describen los conceptos principales que debe conocer antes de intentar realizar llamadas a la API.
 
-### Recopilar valores para encabezados necesarios
+### Recopilar valores para los encabezados obligatorios
 
 Para realizar llamadas a la API de higiene de datos, primero debe recopilar sus credenciales de autenticación. Siga las [Guía de autenticación de API](../../landing/api-authentication.md) para generar valores para cada uno de los encabezados requeridos para la API de higiene de datos, como se muestra a continuación:
 
@@ -35,29 +35,29 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 * `Content-Type: application/json`
 
-### Leer llamadas de API de ejemplo
+### Leer llamadas de API de muestra
 
-Este documento proporciona una llamada API de ejemplo para demostrar cómo dar formato a las solicitudes. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción para las API de Experience Platform.
+Este documento proporciona una llamada de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción para las API de Experience Platform.
 
 ## Caducidad de conjuntos de datos
 
-Una caducidad del conjunto de datos es una acción &quot;eliminar un conjunto de datos&quot; con retraso temporal. Al crear una caducidad del conjunto de datos, se especifica un momento futuro en el que ese conjunto de datos debe eliminarse. Consulte la [guía de extremo de caducidad del conjunto de datos](./dataset-expiration.md) para obtener más información sobre la programación de caducidades de conjuntos de datos en la API.
+Una caducidad del conjunto de datos es una acción &quot;eliminar un conjunto de datos&quot; con tiempo de espera. Al crear una caducidad del conjunto de datos, está especificando un momento futuro en el que se debe eliminar ese conjunto de datos. Consulte la [guía de extremo de caducidad del conjunto de datos](./dataset-expiration.md) para obtener más información sobre la programación de caducidades del conjunto de datos en la API.
 
-## Eliminar registros
+## Eliminaciones de registros
 
 >[!IMPORTANT]
 >
->Las solicitudes de eliminación de registros solo están disponibles para las organizaciones que han comprado **Adobe Escudo Sanitario**.
+>Las solicitudes de eliminación de registros solo están disponibles para organizaciones que han realizado compras **Adobe Healthcare Shield**.
 >
 >
->Las eliminaciones de registros están pensadas para utilizarse en la limpieza de datos, la eliminación de datos anónimos o la minimización de datos. Son **not** para su uso en solicitudes de derechos de interesados (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento de normas, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
+>Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Lo son **no** para su uso en solicitudes de derechos de titulares de los datos (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de conformidad, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
-La API de higiene de datos permite eliminar todos los registros asociados a una identidad en uno o todos los conjuntos de datos. Todas las tareas de higiene de datos que eliminan identidades se representan mediante una construcción denominada orden de trabajo. Consulte la [guía de extremo del orden de trabajo](./workorder.md) para obtener más información sobre cómo trabajar con eliminaciones de registros en la API.
+La API de higiene de datos permite eliminar todos los registros asociados con una identidad en uno o todos los conjuntos de datos. Todas las tareas de higiene de datos que eliminan identidades están representadas por una construcción denominada orden de trabajo. Consulte la [guía de extremo de pedido de trabajo](./workorder.md) para obtener más información sobre cómo trabajar con las eliminaciones de registros en la API.
 
 ## Cuota
 
-Su organización está limitada a una cuota de trabajo mensual predeterminada para cada tipo de operación de higiene de datos, que puede variar según la licencia. Consulte la [guía de extremo de cuota](./quota.md) para obtener más información sobre la visualización del estado de cuota actual de sus procesos de higiene de datos.
+Su organización se limita a una cuota de trabajo mensual predeterminada para cada tipo de operación de higiene de datos, que puede variar según la licencia. Consulte la [guía de extremo de cuota](./quota.md) para obtener más información sobre la visualización del estado de cuota actual de los procesos de higiene de datos.
 
 ## Pasos siguientes
 
-Esta guía describe cómo administrar las solicitudes de higiene de datos mediante llamadas API. Para obtener información sobre cómo realizar estas acciones en la interfaz de usuario de Platform, consulte la [guía de interfaz de usuario sobre higiene de datos](../ui/overview.md).
+En esta guía se explica cómo administrar las solicitudes de higiene de datos mediante llamadas a la API. Para obtener información sobre cómo realizar estas acciones en la interfaz de usuario de Platform, consulte [guía de IU de higiene de datos](../ui/overview.md).

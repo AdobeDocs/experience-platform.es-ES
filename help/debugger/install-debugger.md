@@ -1,5 +1,5 @@
 ---
-title: Instalación de Platform Debugger
+title: Instalar Platform Debugger
 description: Obtenga información sobre cómo instalar Adobe Experience Platform Debugger.
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;instalar
 seo-description: How to Install Experience Platform Debugger
@@ -13,11 +13,11 @@ ht-degree: 16%
 
 ---
 
-# Instalación de Platform Debugger
+# Instalar Platform Debugger
 
-Adobe Experience Platform Debugger se puede instalar en los navegadores Google Chrome o Mozilla Firefox. Siga el vínculo correspondiente que aparece a continuación para instalar la extensión en el explorador que prefiera:
+Adobe Experience Platform Debugger se puede instalar en navegadores Google Chrome o Mozilla Firefox Siga el vínculo adecuado a continuación para instalar la extensión en su navegador preferido:
 
 * [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 * [Firefox](https://addons.mozilla.org/es/firefox/addon/adobe-experience-platform-dbg/)
 
-Después de instalar la extensión de Chrome o el complemento de Firefox, aparece un icono (![](images/start-icon.jpg)) se agrega a la barra de extensiones. Seleccione este icono para abrir la extensión.
+Después de instalar la extensión de Chrome o el complemento de Firefox, un icono (![](images/start-icon.jpg)) se añade a la barra de extensiones. Seleccione este icono para abrir la extensión de.

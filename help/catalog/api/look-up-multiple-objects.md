@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;catálogo;búsqueda de varios objetos;api
+keywords: Experience Platform;inicio;temas populares;catálogo;búsqueda de objetos múltiples;api
 solution: Experience Platform
 title: Buscar varios objetos de catálogo
-description: Si desea ver varios objetos específicos, en lugar de realizar una solicitud por objeto, Catálogo proporciona un método abreviado sencillo para solicitar varios objetos del mismo tipo. Puede utilizar una sola solicitud de GET para devolver varios objetos específicos incluyendo una lista de ID separados por coma.
+description: Si desea ver varios objetos específicos, en lugar de realizar una solicitud por cada objeto, Catalog proporciona un método abreviado sencillo para solicitar varios objetos del mismo tipo. Puede utilizar una sola solicitud de GET para devolver varios objetos específicos incluyendo una lista de ID separados por comas.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Buscar varios objetos de catálogo
 
-Si desea ver varios objetos específicos, en lugar de realizar una solicitud por objeto, [!DNL Catalog] proporciona un método abreviado sencillo para solicitar varios objetos del mismo tipo. Puede utilizar una sola solicitud de GET para devolver varios objetos específicos incluyendo una lista de ID separados por coma.
+Si desea ver varios objetos específicos, en lugar de realizar una solicitud por objeto, [!DNL Catalog] proporciona un acceso directo simple para solicitar varios objetos del mismo tipo. Puede utilizar una sola solicitud de GET para devolver varios objetos específicos incluyendo una lista de ID separados por comas.
 
 >[!NOTE]
 >
->Incluso cuando se solicite un [!DNL Catalog] sigue siendo una práctica recomendada para `properties` parámetro de consulta para devolver solo las propiedades que necesite.
+>Incluso cuando se solicitan datos específicos [!DNL Catalog] objetos, sigue siendo recomendable `properties` parámetro de consulta para devolver solo las propiedades que necesite.
 
 **Formato de API**
 
@@ -33,7 +33,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 **Solicitud**
 
-La siguiente solicitud incluye una lista de ID de conjuntos de datos separados por coma, así como una lista de propiedades separadas por coma que se devolverán para cada conjunto de datos.
+La siguiente solicitud incluye una lista de ID de conjuntos de datos separados por comas, así como una lista de propiedades separadas por comas que se devolverán para cada conjunto de datos.
 
 ```shell
 curl -X GET \
@@ -46,11 +46,11 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de los conjuntos de datos especificados, que solo contienen las propiedades solicitadas (`name`, `description`y `files`) para cada uno.
+Una respuesta correcta devuelve una lista de los conjuntos de datos especificados, que contienen solo las propiedades solicitadas (`name`, `description`, y `files`) para cada uno.
 
 >[!NOTE]
 >
->Si un objeto devuelto no contiene más de las propiedades solicitadas indicadas por la variable `properties` consulta, la respuesta devuelve solo las propiedades solicitadas que incluye, como se muestra en ***`Sample Dataset 3`*** y ***`Sample Dataset 4`*** más abajo.
+>Si un objeto devuelto no contiene una o más de las propiedades solicitadas indicadas por la variable `properties` consulta, la respuesta devuelve solo las propiedades solicitadas que sí incluye, como se muestra en ***`Sample Dataset 3`*** y ***`Sample Dataset 4`*** más abajo.
 
 ```json
 {

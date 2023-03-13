@@ -13,9 +13,9 @@ ht-degree: 58%
 
 ---
 
-# Ficha Red
+# Pestaña Red
 
-La variable **Red** agrega todas las llamadas de solución de Adobe Experience Cloud realizadas en la página y las muestra en orden de izquierda a derecha. Los parámetros estándar se etiquetan automáticamente con nombres descriptivos y se organizan para agrupar parámetros comunes en la misma función.
+El **Red** agrega todas las llamadas de la solución Adobe Experience Cloud realizadas en la página y las muestra en orden de izquierda a derecha. Los parámetros estándar se etiquetan automáticamente con nombres descriptivos y se organizan para agrupar parámetros comunes en la misma función.
 
 ![](images/network.jpg)
 
@@ -31,7 +31,7 @@ Para cambiar la información por solución, seleccione la solución que desee ve
 
 Para volver a mostrar todas las soluciones, seleccione **[!UICONTROL Red]**
 
-Seleccione un elemento en la vista Red para ver una vista ampliada. Desde la ventana de vista expandida, puede copiar la información mostrada en el portapapeles.
+Seleccione en un elemento de la vista Red para ver una vista expandida. Desde la ventana de vista expandida, puede copiar la información mostrada en el portapapeles.
 
 ![](images/network-expand.jpg)
 

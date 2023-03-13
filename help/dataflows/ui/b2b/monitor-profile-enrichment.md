@@ -1,7 +1,7 @@
 ---
-description: Utilice la variable [!UICONTROL Enriquecimiento de perfiles] tablero para comprender si los trabajos de enriquecimiento de perfiles se ejecutaron y completaron correctamente, y para ver las métricas básicas para medir la eficacia de los enriquecimientos.
+description: Utilice el [!UICONTROL Enriquecimiento de perfil] panel para comprender si los trabajos de enriquecimiento de perfiles se ejecutaron y completaron correctamente, y para ver las métricas básicas y medir la eficacia de los enriquecimientos.
 solution: Experience Platform
-title: Monitorización de trabajos de enriquecimiento de perfiles
+title: Supervisión de trabajos de enriquecimiento de perfil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
@@ -11,89 +11,89 @@ ht-degree: 2%
 
 ---
 
-# Supervisar los trabajos de enriquecimiento de perfiles en la interfaz de usuario {#monitor-profile-enrichment}
+# Supervisión de trabajos de enriquecimiento de perfiles en la IU de {#monitor-profile-enrichment}
 
-Utilice la variable [!UICONTROL Enriquecimiento de perfiles] tablero para comprender si los trabajos de enriquecimiento de perfiles se ejecutaron y completaron correctamente, y para ver las métricas básicas para medir la eficacia de los enriquecimientos.
+Utilice el [!UICONTROL Enriquecimiento de perfil] panel para comprender si los trabajos de enriquecimiento de perfiles se ejecutaron y completaron correctamente, y para ver las métricas básicas y medir la eficacia de los enriquecimientos.
 
-En el [Interfaz de usuario de Platform](https://platform.adobe.com), seleccione **[!UICONTROL Monitorización]** desde el panel de navegación izquierdo para acceder a la [!UICONTROL Monitorización] tablero. En el selector de vista, seleccione **Flujo B2B** para ver los elementos de tablero específicos de [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  La variable [!UICONTROL Monitorización] tablero incluye las métricas básicas de la última ejecución correcta y el estado diario del trabajo de hasta 90 días en el pasado.
+En el [IU de Platform](https://platform.adobe.com), seleccione **[!UICONTROL Monitorización]** desde la navegación izquierda para acceder a [!UICONTROL Monitorización] panel. En el selector de vistas, seleccione **Flujo B2B** para ver los elementos de panel específicos de [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  El [!UICONTROL Monitorización] el tablero incluye las métricas básicas de la última ejecución correcta y el estado diario del trabajo hasta 90 días antes.
 
-## Enriquecimiento de perfiles de cuentas relacionadas {#related-accounts}
+## Enriquecimiento de perfil de cuentas relacionadas {#related-accounts}
 
-La variable [!UICONTROL Cuentas relacionadas] tablero muestra las métricas básicas y el estado del trabajo diario específico del [Cuentas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) enriquecimiento de perfiles.
+El [!UICONTROL Cuentas relacionadas] el panel muestra las métricas básicas y el estado del trabajo diario específico del [Cuentas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) enriquecimiento de perfiles.
 
-![Indicación visual de cómo llegar a la pantalla de monitorización de trabajos de enriquecimiento de perfil en la interfaz de usuario del Experience Platform.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
+![Indicación visual de cómo llegar a la pantalla de monitorización de trabajos de enriquecimiento de perfil en la interfaz de usuario de Experience Platform.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
-Los datos de la variable **[!UICONTROL Métricas]** incluye las métricas básicas de la última ejecución exitosa del trabajo Cuentas relacionadas .
+Los datos de la **[!UICONTROL Métricas]** incluye las métricas básicas de la última ejecución correcta del trabajo Cuentas relacionadas.
 
-Las siguientes métricas están disponibles para trabajos de enriquecimiento de perfiles de cuentas relacionadas:
+Las siguientes métricas están disponibles para trabajos de enriquecimiento de perfil de cuentas relacionadas:
 
 | Métrica | Descripción |
 | --------- | ---------- |
 | **[!UICONTROL Perfiles totales de la cuenta]** | Indica el total de perfiles de cuenta a los que tiene acceso su organización. |
-| **[!UICONTROL Grupos de cuentas]** | Indica el número de grupos de cuentas agrupados por el trabajo de aprendizaje automático de cuentas relacionadas. |
-| **[!UICONTROL Grupos de una sola cuenta]** | Indica el número de cuentas que no se agrupan con otras cuentas. |
-| **[!UICONTROL Tamaño de grupo más grande]** | Indica el tamaño del grupo de cuentas relacionadas más grande. El tamaño máximo permitido del grupo es 30. |
-| **[!UICONTROL Tamaño medio del grupo]** | Indica la mediana del tamaño de los grupos de cuentas relacionadas en su organización. |
+| **[!UICONTROL Grupos de cuentas]** | Indica el número de grupos de cuentas agrupados por el trabajo de aprendizaje automático de cuentas relacionado. |
+| **[!UICONTROL Grupos de una sola cuenta]** | Indica el número de cuentas que no están agrupadas con otras cuentas. |
+| **[!UICONTROL Tamaño de grupo más grande]** | Indica el tamaño del grupo de cuentas relacionadas más grande. El tamaño máximo de grupo permitido es 30. |
+| **[!UICONTROL Mediana del tamaño del grupo]** | Indica la mediana del tamaño de los grupos de cuentas relacionadas de su organización. |
 | **[!UICONTROL Última ejecución correcta]** | Indica la fecha y la hora de la última ejecución correcta del trabajo de cuentas relacionadas. |
-| **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o procesado) del trabajo de cuentas relacionado. |
-| **[!UICONTROL Mensaje]** | Indica un mensaje de error o advertencia para un trabajo en particular ejecutado. |
+| **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o procesando) del trabajo de cuentas relacionado. |
+| **[!UICONTROL Mensaje]** | Indica un mensaje de error o advertencia para una ejecución de trabajo determinada. |
 
-## Enriquecimiento de perfil coincidente entre cuentas {#lead-to-account-matching}
+## Enriquecimiento del perfil de coincidencia de cliente potencial con cuenta {#lead-to-account-matching}
 
-La variable [!UICONTROL Confrontación de posibles clientes con cuentas] tablero muestra las métricas básicas y el estado diario de ejecución del trabajo específico del [Confrontación de posibles clientes con cuentas](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) enriquecimiento de perfiles.
+El [!UICONTROL Coincidencia de cliente potencial con cuenta] El panel muestra las métricas básicas y el estado diario de ejecución del trabajo específico de [Coincidencia de cliente potencial con cuenta](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) enriquecimiento de perfiles.
 
-![Enriquecimiento de perfil coincidente entre cuentas](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
+![Enriquecimiento del perfil de coincidencia de cliente potencial con cuenta](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
 
-Las siguientes métricas están disponibles para trabajos de enriquecimiento de perfiles que coinciden con las cuentas:
+Las siguientes métricas están disponibles para los trabajos de enriquecimiento de perfil de coincidencia de cuenta de posibles clientes:
 
 | Métrica | Descripción |
 | --------- | ---------- |
 | **[!UICONTROL Total de personas con cuentas]** | Indica el número total de personas asociadas a una cuenta. |
-| **[!UICONTROL Total de cuentas]** | Indica el número total de cuentas. |
-| **[!UICONTROL Personas existentes con cuentas]** | Indica el número de personas que ya están asociadas a una cuenta de las fuentes de datos. |
+| **[!UICONTROL Cuentas totales]** | Indica el número total de cuentas. |
+| **[!UICONTROL Personas existentes con cuentas]** | Indica el número de personas que ya están asociadas a una cuenta desde las fuentes de datos. |
 | **[!UICONTROL Personas coincidentes]** | Indica el número de personas que coincidieron con una cuenta. |
-| **[!UICONTROL Personas sin correspondencia]** | Indica el número de personas que no coinciden con una cuenta. |
-| **[!UICONTROL Última ejecución correcta]** | Indica la fecha y la hora del último posible cliente correcto en la ejecución del trabajo coincidente de la cuenta. |
-| **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o procesado) del trabajo de coincidencia de cuentas del posible cliente. |
+| **[!UICONTROL Personas sin coincidencias]** | Indica el número de personas que no coinciden con una cuenta. |
+| **[!UICONTROL Última ejecución correcta]** | Indica la fecha y la hora de la última ejecución correcta del trabajo de conciliación de cuentas. |
+| **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o de procesamiento) del trabajo de coincidencia de cliente potencial con cuenta. |
 
-## Enriquecimiento del perfil de puntuación de cuentas y posibles clientes predictivos {#predictive-lead-to-account-scoring}
+## Enriquecimiento predictivo del perfil de puntuación de clientes potenciales y cuentas {#predictive-lead-to-account-scoring}
 
-La variable [!UICONTROL Puntuación de posible cliente y cuenta predictiva] tablero muestra las métricas básicas y el estado diario de ejecución del trabajo específico del [Puntuación de posible cliente y cuenta predictiva](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) enriquecimiento de perfiles.
+El [!UICONTROL Puntuación predictiva de posibles clientes y cuentas] El panel muestra las métricas básicas y el estado diario de ejecución del trabajo específico de [Puntuación predictiva de posibles clientes y cuentas](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) enriquecimiento de perfiles.
 
-![Enriquecimiento del perfil de puntuación de cuentas y posibles clientes predictivos](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+![Enriquecimiento predictivo del perfil de puntuación de clientes potenciales y cuentas](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
 
-Las siguientes métricas están disponibles para trabajos predictivos de enriquecimiento de perfiles de puntuación de cuentas y posibles clientes:
+Las siguientes métricas están disponibles para trabajos predictivos de enriquecimiento de perfil de puntuación de cuenta y posible cliente:
 
 | Métrica | Descripción |
 | --------- | ---------- |
-| **[!UICONTROL Inicio del trabajo]** | Indica la fecha y hora de inicio de la ejecución del trabajo de puntuación de cuenta y posible cliente predictivo. |
+| **[!UICONTROL Inicio del trabajo]** | Indica la fecha y hora de inicio de la ejecución predictiva del trabajo de puntuación de clientes potenciales y cuentas. |
 | **[!UICONTROL Tiempo de procesamiento]** | Tiempo total que tarda el trabajo en completarse. |
-| **[!UICONTROL Nombre de la puntuación]** | El nombre de puntuación del trabajo. |
-| **[!UICONTROL Tipo de perfil]** | Tipo de puntuación: <ul><li>Persona</li><li>Cuenta</li></ul>. |
-| **[!UICONTROL Tipo de trabajo]** | Tipo de trabajo:<ul><li>Puntuación</li><li>Formación</li>. |
-| **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o procesado) del trabajo de puntuación de cliente potencial y cuenta predictivo. |
+| **[!UICONTROL Nombre de puntuación]** | El nombre de puntuación del trabajo. |
+| **[!UICONTROL Tipo de perfil]** | El tipo de puntuación: <ul><li>Persona</li><li>Cuenta</li></ul>. |
+| **[!UICONTROL Tipo de trabajo]** | El tipo de trabajo:<ul><li>Puntuación</li><li>Formación</li>. |
+| **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o de procesamiento) del trabajo predictivo de puntuación de cuenta y posible cliente. |
 
 ## Controles de IU {#ui-controls}
 
-En esta sección se describen varias opciones de la interfaz de usuario (IU) de la interfaz de monitorización, que permiten filtrar las métricas que se muestran en la página.
+En esta sección se describen varias opciones de la interfaz de usuario (IU) de la interfaz de monitorización, que le permiten filtrar las métricas que se muestran en la página.
 
 Utilice el icono de flecha (![icono de flecha](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) para expandir o descartar la tarjeta en la parte superior de la pantalla, que muestra información rápida sobre los trabajos de enriquecimiento de perfiles.
 
-![Grabación de pantalla que muestra el control de la IU con el icono de flecha.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
+![Grabación de pantalla que muestra el icono de flecha del control de interfaz de usuario.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 
-Utilice la variable **[!UICONTROL Métricas y gráficos]** para rechazar la vista que muestra las métricas más recientes.
+Utilice el **[!UICONTROL Métricas y gráficos]** cambie para descartar la vista que muestra las métricas más recientes.
 
-![Grabación de pantalla que muestra la opción de alternancia de métricas y gráficos.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
+![Grabación de pantalla que muestra la alternancia de métricas y gráficos.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
 
-Utilice la variable **[!UICONTROL Mostrar solo errores]** alterne para mostrar solo los trabajos de enriquecimiento de perfiles fallidos.
+Utilice el **[!UICONTROL Mostrar solo errores]** active esta opción para mostrar solo los trabajos de enriquecimiento de perfiles con errores.
 
-![La grabación de pantalla muestra la opción Mostrar errores solo .](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
+![Grabación de pantalla que muestra la opción Mostrar solo errores.](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ahora puede supervisar y comprender correctamente las métricas de trabajos de enriquecimiento de perfiles. Consulte los siguientes documentos para obtener más información:
+Al seguir este tutorial, ahora puede monitorizar y comprender correctamente las métricas de los trabajos de enriquecimiento de perfiles. Consulte los siguientes documentos para obtener más información:
 
 * [Cuentas relacionadas en Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
-* [Ficha Cuentas relacionadas en la guía de la interfaz de usuario del perfil de la cuenta](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [Confrontación de posibles clientes con cuentas en Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [Puntuación predictiva de posibles clientes y cuentas en Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Pestaña Cuentas relacionadas en la guía de la IU del perfil de cuenta](/help/rtcdp/accounts/account-profile-ui-guide.md)
+* [Coincidencia de clientes potenciales con cuentas en Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Puntuación predictiva de clientes potenciales y cuentas en Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

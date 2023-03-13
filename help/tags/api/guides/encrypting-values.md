@@ -1,28 +1,29 @@
 ---
-title: Cifrar valores
+title: Cifrado de valores
 description: Aprenda a cifrar valores confidenciales al utilizar la API de Reactor.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 1%
+source-wordcount: '392'
+ht-degree: 100%
 
 ---
 
-# Cifrar valores
+# Cifrado de valores
 
 Al utilizar etiquetas en Adobe Experience Platform, algunos flujos de trabajo requieren la provisión de valores confidenciales (por ejemplo, la provisión de una clave privada al enviar bibliotecas a entornos mediante hosts). El carácter delicado de esas credenciales requiere
 transferencia y almacenamiento seguros.
 
 Este documento describe cómo cifrar valores confidenciales utilizando [GnuPG encryption](https://www.gnupg.org/gph/en/manual/x110.html) (también conocido como GPG) para que solo el sistema de etiquetas pueda leerlos.
 
-## Obtenga la clave GPG pública y la suma de comprobación
+## Obtención de la clave GPG pública y suma de comprobación
 
 Después de [descargar](https://gnupg.org/download/) e instalar la última versión de GPG, debe obtener la clave GPG pública para el entorno de producción de etiquetas:
 
 * [Clave GPG](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
 * [Suma de comprobación](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
 
-## Importar la clave al llavero
+## Importación de la clave al llavero
 
 Una vez guardada la clave en el equipo, el siguiente paso es agregarla al llavero GPG.
 
@@ -36,7 +37,7 @@ gpg --import {KEY_NAME}
 | --- | --- |
 | `{KEY_NAME}` | Nombre del archivo de clave pública. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Ejemplo**
 
@@ -44,9 +45,9 @@ gpg --import {KEY_NAME}
 gpg --import launch@adobe.com_pub.gpg
 ```
 
-## Codificar valores
+## Cifrado de valores
 
-Después de agregar la clave al llavero, puede empezar a cifrar valores utilizando el indicador `--encrypt`. La siguiente secuencia de comandos muestra cómo funciona este comando:
+Después de agregar la clave al llavero, puede empezar a cifrar valores utilizando el indicador `--encrypt`. La siguiente secuencia de scripts muestra cómo funciona este comando:
 
 ```shell
 echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch@adobe.com>"
@@ -55,8 +56,8 @@ echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch
 Este comando se puede desglosar de la siguiente manera:
 
 * La entrada se suministra al comando `gpg`.
-* `--armor` crea resultados armados con ASCII en lugar de binarios. Esto simplifica la transferencia del valor a través de JSON.
-* `--encrypt` indica a GPG que codifique los datos.
+* `--armor` crea resultados blindados con ASCII en lugar de binarios. Esto simplifica la transferencia del valor a través de JSON.
+* `--encrypt` indica a GPG que cifre los datos.
 * `-r` establece el destinatario de los datos. Solo el destinatario (el titular de la clave privada que corresponde a la clave pública) puede descifrar los datos. El nombre del destinatario de la clave deseada se puede encontrar examinando el resultado de `gpg --list-keys`.
 
 El comando anterior utiliza la clave pública para `Tags Data Encryption <launch@adobe.com>` cifrar el valor, `Example value`, en formato ASCII blindado.
@@ -83,10 +84,10 @@ OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 -----END PGP MESSAGE-----
 ```
 
-Esta salida solo puede ser descifrada por sistemas que tengan la clave privada que
+Este resultado solo puede ser descifrado por sistemas que tengan la clave privada que
 corresponde a la clave pública `Tags Data Encryption <launch@adobe.com>`.
 
-Este resultado es el valor que debe suministrarse en un al enviar datos a la API de Reactor. El sistema almacena esta salida cifrada y la descifra temporalmente según sea necesario. Por ejemplo, el sistema descifra las credenciales del host el tiempo suficiente para iniciar una conexión con el servidor y, a continuación, elimina inmediatamente todos los rastros del valor descifrado.
+Este resultado es el valor que debe suministrarse en un al enviar datos a la API de Reactor. El sistema almacena este resultado cifrado y lo descifra temporalmente según sea necesario. Por ejemplo, el sistema descifra las credenciales del host el tiempo suficiente para iniciar una conexión con el servidor y, a continuación, elimina inmediatamente todos los rastros del valor descifrado.
 
 >[!NOTE]
 >

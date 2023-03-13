@@ -1,34 +1,34 @@
 ---
 title: Tipo de datos de origen B2B
-description: Este documento proporciona información general sobre el tipo de datos del Modelo de datos de experiencias de origen B2B (XDM).
+description: Este documento proporciona información general sobre el tipo de datos del modelo de datos de experiencia de origen (XDM) B2B.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 3%
+source-wordcount: '270'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Fuente B2B] tipo de datos
+# [!UICONTROL Origen B2B] tipo de datos
 
-[!UICONTROL Fuente B2B] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que representa un identificador compuesto para una entidad B2B (como un [account](../classes/b2b/business-account.md), un [oportunidad](../classes/b2b/business-opportunity.md)o [campaign](../classes/b2b/business-campaign.md)).
+[!UICONTROL Origen B2B] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que representa un identificador compuesto para una entidad B2B (como un [account](../classes/b2b/business-account.md), un [oportunidad](../classes/b2b/business-opportunity.md), o a [campaña](../classes/b2b/business-campaign.md)).
 
-Al depender únicamente de identificadores basados en cadenas, puede haber superposiciones entre ID en varios sistemas (por ejemplo, se podría dar un ID de cadena en un sistema CRM, pero ese mismo ID podría referirse a una oportunidad completamente diferente). Esto puede provocar conflictos de datos al combinar datos en [Perfil del cliente en tiempo real](../../profile/home.md).
+Al basarse únicamente en identificadores basados en cadenas, puede haber superposiciones entre ID de en varios sistemas (por ejemplo, se podría dar una oportunidad a un ID de cadena en un sistema CRM, pero ese mismo ID podría hacer referencia a una oportunidad completamente diferente). Esto puede provocar conflictos de datos al combinar datos en [Perfil del cliente en tiempo real](../../profile/home.md).
 
-La variable [!UICONTROL Fuente B2B] el tipo de datos le permite utilizar el ID de cadena original de una entidad y combinarlo con información contextual específica del origen para garantizar que siga siendo completamente único en el sistema de Platform independientemente del origen desde el que se originó.
+El [!UICONTROL Origen B2B] El tipo de datos permite utilizar el ID de cadena original de una entidad y combinarla con información contextual específica de la fuente para garantizar que siga siendo totalmente único en el sistema de Platform, independientemente de la fuente de la que se originó.
 
 ![Estructura de origen B2B](../images/data-types/b2b-source.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `sourceID` | Cadena | Un ID exclusivo para el registro de origen. |
-| `sourceInstanceID` | Cadena | ID de instancia u organización de los datos de origen. |
-| `sourceKey` | Cadena | Un identificador único compuesto por la variable `sourceId`, `sourceInstanceId`y `sourceType` se concatenan en el siguiente formato: `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Algunos conectores de origen como Marketo concatenan este valor automáticamente para determinados identificadores. Los demás deben concatenarse manualmente mediante la variable [Preparación de datos `concat` function](../../data-prep/functions.md#string), por ejemplo: `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceID` | Cadena | ID único del registro de origen. |
+| `sourceInstanceID` | Cadena | El ID de instancia u organización de los datos de origen. |
+| `sourceKey` | Cadena | Un identificador único compuesto por `sourceId`, `sourceInstanceId`, y `sourceType` concatenados juntos en el siguiente formato: `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Algunos conectores de origen, como Marketo, concatenan este valor automáticamente para determinados identificadores. Otros deben concatenarse manualmente utilizando [Preparación de datos `concat` función](../../data-prep/functions.md#string), por ejemplo: `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | Cadena | Nombre de la plataforma que proporciona los datos de origen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
-* [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.example.1.json)
+* [Ejemplo completado](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.schema.json)

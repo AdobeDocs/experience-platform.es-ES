@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
-title: Guía de solución de problemas del perfil del cliente en tiempo real
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
+title: Guía de resolución de problemas del perfil del cliente en tiempo real
 type: Documentation
-description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes al trabajar con datos de perfil mediante Adobe Experience Platform.
+description: Este documento proporciona respuestas a las preguntas frecuentes acerca del Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes al trabajar con datos de perfil mediante Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
@@ -11,53 +11,53 @@ ht-degree: 0%
 
 ---
 
-# Guía de solución de problemas del perfil del cliente en tiempo real
+# Guía de solución de problemas del Perfil del cliente en tiempo real
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre el Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes. Para preguntas y solución de problemas relacionados con otros servicios de Adobe Experience Platform, consulte la [Guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas frecuentes acerca del Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes. Si tiene alguna pregunta o solución de problemas relacionados con otros servicios de Adobe Experience Platform, consulte la [guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
 
-con [!DNL Real-Time Customer Profile], puede ver una vista holística de cada cliente individual combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Esto permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes para los clientes en varios canales.
+Con [!DNL Real-Time Customer Profile], puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Esto permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes para los clientes en varios canales.
 
 ## Preguntas frecuentes
 
-A continuación encontrará una lista de las respuestas a las preguntas más frecuentes sobre el Perfil del cliente en tiempo real.
+A continuación se muestra una lista de respuestas a las preguntas frecuentes acerca del Perfil del cliente en tiempo real.
 
-### ¿Qué tipo de datos se aceptan para el perfil del cliente en tiempo real?
+### ¿Qué tipos de datos se aceptan para el perfil del cliente en tiempo real?
 
-El perfil acepta ambas **record** y **serie temporal** siempre que los datos en cuestión contengan al menos un valor de identidad que asocie los datos a una persona individual única.
+El perfil acepta ambos **registro** y **serie temporal** datos, siempre que los datos en cuestión contengan al menos un valor de identidad que asocie los datos con una persona individual única.
 
-Al igual que todos los servicios de plataforma, Profile requiere que sus datos se estructuren semánticamente en un esquema del Modelo de datos de experiencia (XDM). A su vez, este esquema debe tener un **identidad principal** se definen y se habilitan para su uso en Perfil.
+Al igual que todos los servicios de Platform, Profile requiere que sus datos estén estructurados semánticamente bajo un esquema de Experience Data Model (XDM). A su vez, este esquema debe tener un **identidad principal** se definirán y se habilitarán para su uso en el perfil.
 
-Si no está familiarizado con XDM, comience con la [Información general de XDM](../xdm/home.md) para obtener más información. A continuación, consulte la guía del usuario de XDM para ver los pasos sobre cómo [definir campos de identidad](../xdm/tutorials/create-schema-ui.md#identity-field) y [habilitar un esquema para Perfil](../xdm/tutorials/create-schema-ui.md#profile).
+Si no está familiarizado con XDM, comience con el [Información general de XDM](../xdm/home.md) para obtener más información. A continuación, consulte la guía del usuario de XDM para ver los pasos sobre cómo [definir campos de identidad](../xdm/tutorials/create-schema-ui.md#identity-field) y [habilitar un esquema para el perfil](../xdm/tutorials/create-schema-ui.md#profile).
 
-### ¿Dónde se almacenan los datos de perfil?
+### ¿Dónde se almacenan los datos del perfil?
 
-El perfil del cliente en tiempo real mantiene su propio almacén de datos (denominado &quot;almacén de perfiles&quot;), independiente del lago de datos que contiene otros datos de la plataforma ingerida.
+El perfil del cliente en tiempo real mantiene su propio almacén de datos (denominado &quot;almacén de perfiles&quot;), independiente del lago de datos que contiene otros datos de Platform introducidos.
 
-### Si ya he introducido datos en Platform, ¿puedo hacer que esté disponible en el Almacenamiento de perfiles?
+### Si ya he introducido datos en Platform, ¿puedo ponerlos a disposición en el almacén de perfiles?
 
-Si los datos se han ingerido en un conjunto de datos que no sea de Perfil, debe volver a ingerirlos en un conjunto de datos habilitado para Perfil para que estén disponibles en el almacén de perfiles. Es posible habilitar un conjunto de datos existente para Perfil, pero cualquier dato que se haya introducido antes de esa configuración aún no aparecerá en el almacén de perfiles.
+Si los datos se han introducido en un conjunto de datos que no es de perfil, debe volver a introducirlos en un conjunto de datos con perfil habilitado para que estén disponibles en el almacén de perfiles. Es posible habilitar un conjunto de datos existente para el perfil, pero los datos que se hayan introducido antes de esa configuración aún no aparecerán en el almacén de perfiles.
 
-Si desea agregar datos ingestados anteriormente al almacén de perfiles, siga las instrucciones de [tutorial de configuración del conjunto de datos](./tutorials/dataset-configuration.md) para crear un nuevo conjunto de datos o convertir un conjunto de datos existente para habilitarlo para Perfil y, a continuación, volver a introducir los datos deseados en ese conjunto de datos.
+Si desea agregar datos ingeridos anteriormente al almacén de perfiles, siga el [tutorial de configuración de conjuntos de datos](./tutorials/dataset-configuration.md) para crear un nuevo conjunto de datos o convertir un conjunto de datos existente para habilitarlo para el perfil y, a continuación, volver a introducir los datos deseados en ese conjunto de datos.
 
-### ¿Cómo puedo ver mis datos de perfil ingestados?
+### ¿Cómo puedo ver los datos de perfil ingeridos?
 
-Existen varios métodos para ver los datos del perfil, en función de si utiliza la API o la IU.
+Existen varios métodos para ver los datos de perfil, en función de si utiliza la API o la interfaz de usuario.
 
 #### Uso de la API
 
-Si conoce los ID de las entidades de perfil a las que desea acceder, puede usar la variable `/entities` (Acceso a perfil) en la API de perfil para buscar esas entidades. Consulte la sección sobre [entities](./api/entities.md) en la guía para desarrolladores para obtener más información.
+Si conoce los ID de las entidades de Perfil a las que desea acceder, puede utilizar el `/entities` (Acceso al perfil) en la API de perfil para buscar esas entidades. Consulte la sección sobre [entidades](./api/entities.md) en la guía para desarrolladores para obtener más información.
 
-También puede utilizar la API del servicio de segmentación de Adobe Experience Platform para acceder a los perfiles individuales de los clientes que cumplen los requisitos para pertenecer a un segmento. Consulte la [Información general del servicio de segmentación](../segmentation/home.md) para obtener más información.
+También puede utilizar la API del servicio de segmentación de Adobe Experience Platform para acceder a los perfiles individuales de los clientes que cumplen los requisitos para un abono a un segmento. Consulte la [Resumen del servicio de segmentación](../segmentation/home.md) para obtener más información.
 
-#### Uso de la interfaz de usuario
+#### Uso de la IU
 
-En la interfaz de usuario del Experience Platform, la variable **[!UICONTROL Examinar]** en la ficha **[!UICONTROL Perfiles]** workspace le permite ver el recuento total de perfiles y buscar perfiles individuales por su valor de identidad. Consulte la [Guía del usuario del perfil](./ui/user-guide.md) para obtener más información.
+En la interfaz de usuario de Experience Platform, la variable **[!UICONTROL Examinar]** en la pestaña **[!UICONTROL Perfiles]** workspace le permite ver el recuento total de perfiles y buscar perfiles individuales por su valor de identidad. Consulte la [Guía del usuario del perfil](./ui/user-guide.md) para obtener más información.
 
-También puede ver una lista de sus segmentos en la sección **[!UICONTROL Examinar]** en la ficha **[!UICONTROL Segmentos]** espacio de trabajo. Después de seleccionar un segmento, se muestra una muestra de perfiles cualificados para ese segmento. A continuación, puede seleccionar cualquiera de estos perfiles enumerados para ver sus detalles. Consulte la [Información general sobre la interfaz de usuario de segmentación](../segmentation/ui/overview.md) para obtener más información.
+También puede ver una lista de sus segmentos en el **[!UICONTROL Examinar]** en la pestaña **[!UICONTROL Segmentos]** workspace. Después de seleccionar un segmento, se muestra una muestra de perfiles cualificados para ese segmento. A continuación, puede seleccionar cualquiera de estos perfiles para ver sus detalles. Consulte la [Resumen de IU de segmentación](../segmentation/ui/overview.md) para obtener más información.
 
 ## Códigos de error
 
-A continuación se muestra una lista de mensajes de error que puede encontrar al trabajar con la API de perfil del cliente en tiempo real. Si el error que encuentra no aparece en la lista, puede que lo encuentre en general [Guía de solución de problemas de plataforma](../landing/troubleshooting.md) en su lugar.
+A continuación se muestra una lista de mensajes de error que pueden surgir al trabajar con la API del perfil del cliente en tiempo real. Si el error que encuentra no aparece en la lista aquí, puede que lo encuentre en la lista general [Guía de solución de problemas de Platform](../landing/troubleshooting.md) en su lugar.
 
 ### No se pudo buscar el esquema del atributo calculado para la ruta proporcionada
 
@@ -68,9 +68,9 @@ A continuación se muestra una lista de mensajes de error que puede encontrar al
 }
 ```
 
-Al crear un nuevo atributo calculado, este error se produce cuando el sistema no puede encontrar el esquema proporcionado en la carga útil de la solicitud. Asegúrese de proporcionar el ID de inquilino correcto en la carga útil `path` y que los valores de `schema.name` es un nombre de esquema válido.
+Al crear un nuevo atributo calculado, este error se produce cuando el sistema no encuentra el esquema proporcionado en la carga útil de la solicitud. Asegúrese de haber proporcionado el ID de inquilino correcto en el `path` y que los valores de `schema.name` es un nombre de esquema válido.
 
-Si no conoce su ID de inquilino, puede recuperarlo siguiendo los pasos del [Guía para desarrolladores de Schema Registry](../xdm/api/getting-started.md).
+Si no conoce su ID de inquilino, puede recuperarlo siguiendo los pasos de la sección [Guía para desarrolladores de Schema Registry](../xdm/api/getting-started.md).
 
 ### Ya existe una función con el mismo nombre para el esquema especificado o definedOn
 
@@ -81,9 +81,9 @@ Si no conoce su ID de inquilino, puede recuperarlo siguiendo los pasos del [Guí
 }
 ```
 
-Al crear un nuevo atributo calculado, este error se produce cuando se proporciona el valor `name` la propiedad ya se está utilizando para el esquema indicado en `schema.name`. Sustituya el valor por un nombre único antes de volver a intentarlo.
+Al crear un nuevo atributo calculado, este error se produce cuando el `name` ya se está utilizando la propiedad para el esquema indicado en `schema.name`. Reemplace el valor por un nombre único antes de intentarlo de nuevo.
 
-### El esquema de devolución de la expresión no es el mismo que el esquema del atributo calculado en el esquema XDM
+### El esquema de devolución de la expresión no es lo mismo que el esquema del atributo calculado en el esquema XDM
 
 ```json
 {
@@ -92,7 +92,7 @@ Al crear un nuevo atributo calculado, este error se produce cuando se proporcion
 }
 ```
 
-Al crear un nuevo atributo calculado, este error se produce cuando se proporciona el valor `name` la propiedad ya se está utilizando para el esquema indicado en `schema.name`. Sustituya el valor por un nombre único antes de volver a intentarlo.
+Al crear un nuevo atributo calculado, este error se produce cuando el `name` ya se está utilizando la propiedad para el esquema indicado en `schema.name`. Reemplace el valor por un nombre único antes de intentarlo de nuevo.
 
 ### Solicitud de eliminación no válida (trabajo del sistema de perfiles)
 
@@ -103,9 +103,9 @@ Al crear un nuevo atributo calculado, este error se produce cuando se proporcion
 }
 ```
 
-Este error se produce cuando se proporciona una carga útil no válida para un trabajo del sistema de eliminación. Asegúrese de que proporciona un conjunto de datos o ID de lote válidos en la variable de carga útil `dataSetID` o `batchID` propiedad, respectivamente. Consulte la sección sobre [creación de una solicitud de eliminación](./api/profile-system-jobs.md#create-a-delete-request) en la guía para desarrolladores de perfiles para obtener más información.
+Este error se produce cuando se proporciona una carga útil no válida para un trabajo de eliminación del sistema. Asegúrese de proporcionar un conjunto de datos o ID de lote válido en el `dataSetID` o `batchID` respectivamente. Consulte la sección sobre [creación de una solicitud de eliminación](./api/profile-system-jobs.md#create-a-delete-request) en la Guía para desarrolladores de perfiles para obtener más información.
 
-### Lote no encontrado para el conjunto de datos de perfil
+### No se ha encontrado ningún lote para el conjunto de datos de perfil
 
 ```json
 {
@@ -121,9 +121,9 @@ Este error se produce cuando se proporciona una carga útil no válida para un t
 }
 ```
 
-Este error se produce cuando no se encontró un lote válido al intentar crear una solicitud de eliminación para datos de perfil. Compruebe que ha introducido el ID correcto para un conjunto de datos habilitado para perfil antes de intentarlo de nuevo.
+Este error se produce cuando no se encuentra un lote válido al intentar crear una solicitud de eliminación de datos de perfil. Compruebe que ha introducido el ID correcto para un conjunto de datos con perfil habilitado antes de intentarlo de nuevo.
 
-### Todavía no se ha creado el destino de la proyección
+### Aún no se ha creado el destino de la proyección.
 
 ```json
 {
@@ -133,9 +133,9 @@ Este error se produce cuando no se encontró un lote válido al intentar crear u
 }
 ```
 
-Este error se produce cuando la variable `destinationId` proporcionado en un `POST /config/projections` no es válida. Compruebe que ha proporcionado un ID de destino válido antes de intentarlo de nuevo. Para crear un nuevo destino, siga los pasos descritos en la sección [Guía para desarrolladores de perfiles](./api/edge-projections.md#create-a-destination).
+Este error se produce cuando la variable `destinationId` se proporciona en un `POST /config/projections` la solicitud no es válida. Compruebe que ha proporcionado un ID de destino válido antes de intentarlo de nuevo. Para crear un nuevo destino, siga los pasos descritos en la sección [Guía para desarrolladores de perfiles](./api/edge-projections.md#create-a-destination).
 
-### Tipo de medio no admitido
+### Tipo de medio no compatible
 
 ```json
 {
@@ -145,11 +145,11 @@ Este error se produce cuando la variable `destinationId` proporcionado en un `PO
 }
 ```
 
-Este error se produce al enviar una solicitud de POST o PUT con un encabezado de tipo de contenido no válido. Compruebe que está proporcionando un valor de tipo de contenido válido para el punto final que está utilizando.
+Este error se produce al enviar una solicitud de POST o PUT con un encabezado de tipo de contenido no válido. Compruebe que está proporcionando un valor de Content-Type válido para el extremo que está utilizando.
 
-La mayoría de los extremos de perfil aceptan &quot;application/json&quot; para el encabezado Content-Type, con las siguientes excepciones:
+La mayoría de los extremos del perfil aceptan &quot;application/json&quot; para el encabezado Content-Type, con las siguientes excepciones:
 
-| Punto final | Content-Type |
+| Extremo | Content-Type |
 | --- | --- |
 | `/config/projections` | application/vnd.adobe.platform.projectionConfig+json; version=1 |
 | `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json; version=1 |

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conjunto de datos;conjunto de datos;tiempo de vida;ttl;tiempo de vida;
+keywords: Experience Platform;inicio;temas populares;conjunto de datos;Conjunto de datos;tiempo de vida;ttl;tiempo de vida;
 solution: Experience Platform
-title: Caducidad del evento de experiencia
-description: Este documento proporciona una guía general sobre cómo configurar los tiempos de caducidad para eventos de experiencia individuales dentro de un conjunto de datos de Adobe Experience Platform.
+title: Caducidad de evento de experiencia
+description: Este documento proporciona instrucciones generales para configurar los tiempos de caducidad de los eventos de experiencia individuales dentro de un conjunto de datos de Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
 source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
 workflow-type: tm+mt
@@ -11,35 +11,35 @@ ht-degree: 0%
 
 ---
 
-# Caducidad de eventos de experiencia
+# Caducidad de Experience Event
 
-En Adobe Experience Platform, puede configurar los tiempos de caducidad de todos los eventos de experiencia que se incorporan en un conjunto de datos habilitado para [Perfil del cliente en tiempo real](./home.md). Esto le permite eliminar automáticamente los datos del Almacenamiento de perfiles que ya no son válidos ni útiles para sus casos de uso.
+En Adobe Experience Platform, puede configurar los tiempos de caducidad para todos los eventos de experiencia que se incorporan a un conjunto de datos habilitado para [Perfil del cliente en tiempo real](./home.md). Esto permite eliminar automáticamente del almacén de perfiles los datos que ya no son válidos o útiles para sus casos de uso.
 
-Las caducidades de los eventos de experiencia no se pueden configurar mediante la interfaz de usuario de Platform ni las API. En su lugar, debe ponerse en contacto con el servicio de asistencia para habilitar las caducidades de los eventos de experiencia en los conjuntos de datos necesarios.
+Las caducidades de Experience Event no se pueden configurar a través de la IU o las API de Platform. En su lugar, debe ponerse en contacto con el servicio de asistencia para habilitar la caducidad de los eventos de experiencia en los conjuntos de datos necesarios.
 
 >[!IMPORTANT]
 >
->Las caducidades de los eventos de experiencia no se deben confundir con las caducidades de los conjuntos de datos, que eliminan todo el conjunto de datos una vez que se alcanza la fecha de caducidad. Estos se configuran manualmente mediante [Higiene de los datos de Adobe Experience Platform](../hygiene/home.md).
+>Las caducidades de eventos de experiencia no se deben confundir con las caducidades de conjuntos de datos, que eliminan todo el conjunto de datos después de alcanzar la fecha de caducidad. Se configuran manualmente mediante [Higiene de datos de Adobe Experience Platform](../hygiene/home.md).
 
-## Proceso de caducidad automatizada
+## Proceso de caducidad automatizado
 
-Una vez que las caducidades de los eventos de experiencia se han habilitado en un conjunto de datos habilitado para el perfil, Platform aplica automáticamente los valores de caducidad de cada evento capturado en un proceso de dos pasos:
+Una vez habilitadas las caducidades de los eventos de experiencia en un conjunto de datos con perfil habilitado, Platform aplica automáticamente los valores de caducidad de cada evento capturado en un proceso de dos pasos:
 
 1. Todos los datos nuevos que se incorporan al conjunto de datos tienen el valor de caducidad aplicado en el momento de la ingesta en función de la marca de tiempo del evento.
-1. Todos los datos existentes en el conjunto de datos tienen el valor de caducidad aplicado retroactivamente como un trabajo único del sistema de relleno. Una vez que el valor de caducidad se haya colocado en el conjunto de datos, los eventos anteriores al valor de caducidad se perderán inmediatamente en cuanto se ejecute el trabajo del sistema. Todos los demás eventos se eliminarán en cuanto alcancen sus valores de caducidad desde la marca de tiempo del evento. Cuando se hayan eliminado todos los eventos de experiencia, si el perfil ya no tiene atributos de perfil, el perfil dejará de existir.
+1. Todos los datos existentes en el conjunto de datos tienen el valor de caducidad aplicado de forma retroactiva como un trabajo de sistema de relleno único. Una vez que el valor de caducidad se haya colocado en el conjunto de datos, los eventos anteriores al valor de caducidad se perderán inmediatamente en cuanto se ejecute el trabajo del sistema. Todos los demás eventos se eliminarán en cuanto alcancen sus valores de caducidad desde la marca de tiempo del evento. Cuando se hayan eliminado todos los eventos de experiencia, si el perfil ya no tiene atributos de perfil, este ya no existirá.
 
 >[!WARNING]
 >
->Una vez aplicados, cualquier dato anterior al número de días asignado por el valor de caducidad es **eliminado permanentemente** y no se pueden restaurar.
+>Una vez aplicados, cualquier dato que sea anterior a la cantidad de días asignados por el valor de caducidad es **eliminado permanentemente** y no se pueden restaurar.
 
-Por ejemplo, si aplicara un valor de caducidad de 30 días el 15 de mayo, se producirían los siguientes pasos:
+Por ejemplo, si aplica un valor de caducidad de 30 días el 15 de mayo, se producirían los siguientes pasos:
 
-1. Todos los eventos nuevos obtienen un valor de caducidad de 30 días que se aplica a medida que se incorporan.
-1. Todos los eventos existentes con una marca de tiempo anterior al 15 de abril se eliminan inmediatamente con el trabajo del sistema.
-1. Todos los eventos existentes con una marca de tiempo más reciente que el 15 de abril tienen un valor de caducidad de 30 días después de la marca de tiempo del evento. Por lo tanto, si un evento tiene una marca de tiempo del 18 de abril, se elimina 30 días después de la fecha de la marca de tiempo, que sería el 18 de mayo.
+1. Todos los eventos nuevos obtienen un valor de caducidad de 30 días aplicados a medida que se incorporan.
+1. Todos los eventos existentes que tengan una marca de tiempo anterior al 15 de abril se eliminarán inmediatamente con el trabajo del sistema.
+1. Todos los eventos existentes que tienen una marca de tiempo posterior al 15 de abril tienen un valor de caducidad 30 días después de su marca de tiempo de evento. Por lo tanto, si un evento tiene la marca de tiempo del 18 de abril, se elimina 30 días después de la fecha de dicha marca de tiempo, que sería el 18 de mayo.
 
 ## Efectos en la segmentación
 
-Debe asegurarse de que las ventanas retrospectivas de sus segmentos se encuentran dentro de los límites de caducidad de sus conjuntos de datos dependientes para mantener los resultados precisos. Por ejemplo, si aplica un valor de caducidad de 30 días y tiene un segmento que intenta ver datos de hace hasta 45 días, es probable que la audiencia resultante no sea precisa.
+Debe asegurarse de que las ventanas retrospectivas de sus segmentos se encuentren dentro de los límites de caducidad de sus conjuntos de datos dependientes para mantener la precisión de los resultados. Por ejemplo, si aplica un valor de caducidad de 30 días y tiene un segmento que intenta ver datos de hace hasta 45 días, la audiencia resultante probablemente sea inexacta.
 
-Por lo tanto, debe mantener el mismo valor de caducidad del evento de experiencia para todos los conjuntos de datos, si es posible, para evitar el impacto de diferentes valores de caducidad en diferentes conjuntos de datos en la lógica de segmentación.
+Por lo tanto, si es posible, debe mantener el mismo valor de caducidad del Evento de experiencia para todos los conjuntos de datos para evitar el impacto de valores de caducidad diferentes en conjuntos de datos diferentes en la lógica de segmentación.

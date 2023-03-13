@@ -117,7 +117,7 @@ El extremo `/search` proporciona una forma de encontrar recursos que coincidan c
 
 ## Secretos
 
-Un secreto contiene credenciales que permiten que el reenvío de eventos se autentique en otro sistema para el intercambio seguro de datos. Consulte la [guía de secretos](./guides/secrets.md) para obtener información general sobre cómo funcionan los secretos en el reenvío de eventos, y la variable [guía de extremo secret](./endpoints/secrets.md) para aprender a administrarlas en la API de Reactor.
+Un secreto contiene credenciales que permiten al reenvío de eventos autenticarse en otro sistema para un intercambio de datos seguro. Consulte la [guía de secretos](./guides/secrets.md) para obtener información general sobre cómo funcionan los secretos en el reenvío de eventos, y la [guía de extremo de secretos](./endpoints/secrets.md) para obtener información sobre cómo administrarlos en la API de Reactor.
 
 ## Pasos siguientes
 

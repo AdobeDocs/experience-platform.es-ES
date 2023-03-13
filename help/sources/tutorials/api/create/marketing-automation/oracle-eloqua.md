@@ -1,6 +1,6 @@
 ---
-title: Creación de una conexión base de Eloqua de Oracle mediante la API de servicio de flujo
-description: Obtenga información sobre cómo conectar Adobe Experience Platform a Oracle Eloqua mediante la API de servicio de flujo.
+title: Creación de una conexión base de Eloqua de Oracle mediante la API de Flow Service
+description: Aprenda a conectar Adobe Experience Platform a Oracle Eloqua mediante la API de Flow Service.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
@@ -9,43 +9,43 @@ ht-degree: 1%
 
 ---
 
-# Cree un [!DNL Oracle Eloqua] conexión base utilizando [!DNL Flow Service] API
+# Crear un [!DNL Oracle Eloqua] conexión base mediante el [!DNL Flow Service] API
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial le guía por los pasos para crear una conexión base para [!DNL Oracle Eloqua] usando la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL Oracle Eloqua] uso del [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Platform:
 
-* [Fuentes](../../../../home.md): Platform permite la ingesta de datos de varias fuentes, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Platform permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Zonas protegidas](../../../../../sandboxes/home.md): Platform proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que debe conocer para conectarse correctamente a [!DNL Oracle Eloqua] usando la variable [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que necesita conocer para conectarse correctamente a [!DNL Oracle Eloqua] uso del [!DNL Flow Service] API.
 
-### Recopilar las credenciales necesarias
+### Recopilar credenciales necesarias
 
-Para [!DNL Flow Service] para conectarse con [!DNL Oracle Eloqua], debe proporcionar valores para las siguientes propiedades de conexión:
+Para que [!DNL Flow Service] para conectar con [!DNL Oracle Eloqua], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | --- | --- |
 | `endpoint` | El punto final de su [!DNL Oracle Eloqua]. |
-| `username` | El nombre de usuario de su [!DNL Oracle Eloqua] cuenta. El nombre de usuario debe tener el formato `siteName + \\ + username`, donde `siteName` es el nombre de empresa que utilizó para iniciar sesión en [!DNL Oracle Eloqua] y `username` es su nombre de usuario. Por ejemplo, el nombre de usuario de inicio de sesión puede ser: `adobe\\emily`. |
+| `username` | El nombre de usuario de su [!DNL Oracle Eloqua] cuenta. El nombre de usuario debe tener el formato `siteName + \\ + username`, donde `siteName` es el nombre de empresa que utilizó para iniciar sesión en [!DNL Oracle Eloqua] y `username` es su nombre de usuario. Por ejemplo, el nombre de usuario para iniciar sesión puede ser: `adobe\\emily`. |
 | `password` | La contraseña correspondiente a su [!DNL Oracle Eloqua] nombre de usuario. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de un origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y de origen. El valor del ID de especificación de conexión de la variable [!DNL Oracle Eloqua] el origen se fija como: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El valor de la ID de especificación de conexión del [!DNL Oracle Eloqua] el origen está fijo como: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
-Para obtener más información sobre las credenciales de autenticación para [!DNL Oracle Eloqua], consulte la [[!DNL Oracle Eloqua] guía de autenticación](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
+Para obtener más información sobre las credenciales de autenticación de [!DNL Oracle Eloqua], consulte la [[!DNL Oracle Eloqua] guía de autenticación](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
-### Uso de las API de plataforma
+### Uso de API de Platform
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Creación de una conexión base
+## Crear una conexión base
 
-Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar su [!DNL Oracle Eloqua] credenciales de autenticación como parte de los parámetros de solicitud.
+Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL Oracle Eloqua] credenciales de autenticación como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -87,15 +87,15 @@ curl -X POST \
 | --- | --- |
 | `name` | El nombre de su [!DNL Oracle Eloqua] conexión base. Se recomienda proporcionar un nombre descriptivo, ya que puede utilizar este valor para buscar la conexión base. |
 | `description` | (Opcional) Una propiedad que puede incluir para proporcionar información adicional sobre la conexión base. |
-| `auth.specName` | El tipo de autenticación utilizado para la conexión. |
+| `auth.specName` | Tipo de autenticación utilizado para la conexión. |
 | `auth.params.endpoint` | El punto final de su [!DNL Oracle Eloqua] servidor. |
-| `auth.params.username` | La credencial concatenada que incluye el nombre de sitio y el nombre de usuario que se corresponden con su [!DNL Oracle Eloqua] cuenta. |
-| `auth.params.password` | La contraseña que corresponde a su [!DNL Oracle Eloqua] cuenta. |
-| `connectionSpec.id` | El valor del ID de especificación de conexión de la variable [!DNL Oracle Eloqua] el origen se fija como: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
+| `auth.params.username` | La credencial concatenada que incluye el nombre de sitio y el nombre de usuario que corresponde con su [!DNL Oracle Eloqua] cuenta. |
+| `auth.params.password` | La contraseña que corresponde con su [!DNL Oracle Eloqua] cuenta. |
+| `connectionSpec.id` | El valor de la ID de especificación de conexión del [!DNL Oracle Eloqua] el origen está fijo como: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles de la conexión base recién creada, incluido su identificador único (`id`). Este ID es necesario en el paso siguiente para crear una conexión de origen.
+Una respuesta correcta devuelve detalles de la conexión base recién creada, incluido su identificador único (`id`). Este ID es necesario en el siguiente paso para crear una conexión de origen.
 
 ```json
 {
@@ -106,7 +106,7 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL Oracle Eloqua] conexión base utilizando [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
+Al seguir este tutorial, ha creado un [!DNL Oracle Eloqua] conexión base mediante el [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
-* [Explorar la estructura y el contenido de las tablas de datos mediante el [!DNL Flow Service] API](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de automatización de marketing a Platform mediante la variable [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [Explorar la estructura y el contenido de las tablas de datos mediante [!DNL Flow Service] API](../../explore/tabular.md)
+* [Cree un flujo de datos para llevar los datos de automatización de marketing a Platform mediante [!DNL Flow Service] API](../../collect/marketing-automation.md)

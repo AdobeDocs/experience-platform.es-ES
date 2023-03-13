@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;actualizar flujos de datos de destino
 solution: Experience Platform
-title: Actualización de flujos de datos de destino mediante la API de servicio de flujo
+title: Actualización de flujos de datos de destino mediante la API de Flow Service
 type: Tutorial
-description: Este tutorial trata los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y eliminar segmentos y atributos mediante la API de servicio de flujo.
+description: Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar segmentos y atributos mediante la API de Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
@@ -12,52 +12,52 @@ ht-degree: 2%
 
 ---
 
-# Actualización de flujos de datos de destino mediante la API de servicio de flujo
+# Actualización de flujos de datos de destino mediante la API de Flow Service
 
-Este tutorial trata los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y eliminar segmentos y atributos mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Para obtener información sobre la edición de flujos de datos de destino mediante la interfaz de usuario del Experience Platform, lea [Editar flujos de activación](/help/destinations/ui/edit-activation.md).
+Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar segmentos y atributos mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Para obtener información sobre la edición de flujos de datos de destino mediante la IU de Experience Platform, lea [Editar flujos de activación](/help/destinations/ui/edit-activation.md).
 
 ## Primeros pasos {#get-started}
 
-Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de flujo válido, seleccione el destino que desee en el [catálogo de destinos](../catalog/overview.md) y siga los pasos descritos para [conectarse al destino](../ui/connect-destination.md) y [activar datos](../ui/activation-overview.md) antes de intentar este tutorial.
+Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de flujo válido, seleccione el destino que desee en la [catálogo de destinos](../catalog/overview.md) y siga los pasos descritos para [conectar con el destino](../ui/connect-destination.md) y [activar datos](../ui/activation-overview.md) antes de intentar realizar este tutorial.
 
 >[!NOTE]
 >
-> Los términos *flujo* y *dataflow* se utilizan de forma intercambiable en este tutorial. En el contexto de este tutorial, tienen el mismo significado.
+> Los términos *fluir* y *flujo de datos* se utilizan indistintamente en este tutorial. En el contexto de este tutorial, tienen el mismo significado.
 
-Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Destinos](../home.md): [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Destinos](../home.md): [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+* [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para actualizar correctamente el flujo de datos mediante el [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para actualizar correctamente el flujo de datos mediante [!DNL Flow Service] API.
 
-### Leer llamadas de API de ejemplo {#reading-sample-api-calls}
+### Leer llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
-### Recopilar valores para encabezados necesarios {#gather-values-for-required-headers}
+### Recopilar valores para los encabezados obligatorios {#gather-values-for-required-headers}
 
-Para realizar llamadas a las API de Platform, primero debe completar la variable [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos del Experience Platform, incluidos los que pertenecen a [!DNL Flow Service], están aisladas para entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos de Experience Platform, incluidos los que pertenecen a [!DNL Flow Service], están aisladas para zonas protegidas virtuales específicas. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Si la variable `x-sandbox-name` no se ha especificado, las solicitudes se resuelven en la sección `prod` simulador de pruebas.
+>Si la variable `x-sandbox-name` encabezado no especificado, las solicitudes se resuelven en el `prod` zona protegida.
 
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
+Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medios adicional:
 
 * `Content-Type: application/json`
 
-## Buscar detalles de flujo de datos {#look-up-dataflow-details}
+## Búsqueda de detalles de flujo de datos {#look-up-dataflow-details}
 
-El primer paso para actualizar el flujo de datos de destino es recuperar los detalles del flujo de datos mediante su ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una solicitud de GET al `/flows` punto final.
+El primer paso para actualizar el flujo de datos de destino es recuperar los detalles del flujo de datos con el ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una solicitud de GET a `/flows` punto final.
 
 **Formato de API**
 
@@ -67,11 +67,11 @@ GET /flows/{FLOW_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FLOW_ID}` | El único `id` para el flujo de datos de destino que desea recuperar. |
+| `{FLOW_ID}` | La exclusiva `id` para el flujo de datos de destino que desea recuperar. |
 
 **Solicitud**
 
-La siguiente solicitud recupera información sobre su ID de flujo.
+La siguiente solicitud recupera información sobre el ID de flujo.
 
 ```shell
 curl -X GET \
@@ -84,7 +84,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles actuales del flujo de datos, incluida su versión, el identificador único (`id`) y otra información pertinente.
+Una respuesta correcta devuelve los detalles actuales del flujo de datos, incluida su versión, identificador único (`id`) y otra información relevante.
 
 ```json
 {
@@ -345,11 +345,11 @@ Una respuesta correcta devuelve los detalles actuales del flujo de datos, inclui
 
 ## Actualizar nombre y descripción del flujo de datos {#update-dataflow}
 
-Para actualizar el nombre y la descripción del flujo de datos, realice una solicitud de PATCH a la variable [!DNL Flow Service] al proporcionar su ID de flujo, su versión y los nuevos valores que desea utilizar.
+Para actualizar el nombre y la descripción del flujo de datos, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y los nuevos valores que desea utilizar.
 
 >[!IMPORTANT]
 >
->La variable `If-Match` es obligatorio cuando se realiza una solicitud de PATCH. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de etiqueta se actualiza con cada actualización correcta de un flujo de datos.
+>El `If-Match` es necesario para realizar una solicitud de PATCH. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de un flujo de datos.
 
 **Formato de API**
 
@@ -359,7 +359,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitud**
 
-La siguiente solicitud actualiza el nombre y la descripción de su flujo de datos.
+La siguiente solicitud actualiza el nombre y la descripción del flujo de datos.
 
 ```shell
 curl -X PATCH \
@@ -385,13 +385,13 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. |
 | `path` | Define la parte del flujo que se va a actualizar. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a [!DNL Flow Service] API, mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -400,11 +400,11 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 }
 ```
 
-## Habilitar o deshabilitar el flujo de datos {#enable-disable-dataflow}
+## Habilitar o deshabilitar flujo de datos {#enable-disable-dataflow}
 
-Cuando está habilitado, un flujo de datos exporta perfiles al destino. Los flujos de datos están habilitados de forma predeterminada, pero se pueden deshabilitar para pausar las exportaciones de perfiles.
+Cuando se habilita, un flujo de datos exporta perfiles al destino. Los flujos de datos están habilitados de forma predeterminada, pero se pueden deshabilitar para pausar las exportaciones de perfil.
 
-Puede habilitar o deshabilitar un flujo de datos de destino existente realizando una solicitud de POST al [!DNL Flow Service] y proporcione el estado al que desea actualizar el flujo.
+Puede habilitar o deshabilitar un flujo de datos de destino existente realizando una solicitud del POST al [!DNL Flow Service] API y proporciona el estado al que desea actualizar el flujo.
 
 **Formato de API**
 
@@ -414,7 +414,7 @@ POST /flows/{FLOW_ID}/action?op=enable or disable
 
 **Solicitud**
 
-La siguiente solicitud actualiza el estado de su flujo de datos a habilitado.
+La siguiente solicitud actualiza el estado del flujo de datos a habilitado.
 
 ```shell
 curl -X POST \
@@ -425,7 +425,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-La siguiente solicitud actualiza el estado de su flujo de datos a desactivado.
+La siguiente solicitud actualiza el estado del flujo de datos a deshabilitado.
 
 ```shell
 curl -X POST \
@@ -438,7 +438,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a [!DNL Flow Service] API, mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -449,7 +449,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Añadir un segmento a un flujo de datos {#add-segment}
 
-Para agregar un segmento al flujo de datos de destino, realice una solicitud de PATCH a la variable [!DNL Flow Service] al proporcionar su ID de flujo, versión y el segmento que desea añadir.
+Para añadir un segmento al flujo de datos de destino, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el segmento que desea añadir.
 
 **Formato de API**
 
@@ -494,22 +494,22 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. Para agregar un segmento a un flujo de datos, utilice la variable `add` operación. |
-| `path` | Define la parte del flujo que se va a actualizar. Cuando agregue un segmento a un flujo de datos, utilice la ruta especificada en el ejemplo. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para añadir un segmento a un flujo de datos, utilice el `add` operación. |
+| `path` | Define la parte del flujo que se va a actualizar. Al añadir un segmento a un flujo de datos, utilice la ruta especificada en el ejemplo. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 | `id` | Especifique el ID del segmento que está agregando al flujo de datos de destino. |
-| `name` | **(Opcional)**. Especifique el nombre del segmento que está agregando al flujo de datos de destino. Tenga en cuenta que este campo no es obligatorio y que puede agregar correctamente un segmento al flujo de datos de destino sin proporcionar su nombre. |
-| `filenameTemplate` | Para *destinos de lote* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Este campo determina el formato del nombre de archivo de los archivos que se exportan al destino. <br> Las opciones disponibles son las siguientes: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: Obligatorio. Los archivos exportados contienen el ID del segmento exportado.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Los archivos exportados contienen el nombre del segmento exportado.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(Opcional)**. Seleccione una de estas dos opciones para que los archivos incluyan el tiempo en el que los genera el Experience Platform.</li><li>`custom-text`: **(Opcional)**. Reemplace este marcador de posición con cualquier texto personalizado que desee anexar al final de sus nombres de archivo.</li></ul> <br> Para obtener más información sobre la configuración de los nombres de archivo, consulte la [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) en el tutorial de activación de destinos de lote. |
-| `exportMode` | Para *destinos de lote* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccione `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Para obtener más información sobre las dos opciones, consulte [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) en el tutorial de activación de destinos por lotes. |
+| `name` | **(Opcional)**. Especifique el nombre del segmento que está agregando al flujo de datos de destino. Tenga en cuenta que este campo no es obligatorio y puede agregar correctamente un segmento al flujo de datos de destino sin proporcionar su nombre. |
+| `filenameTemplate` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Este campo determina el formato del nombre de archivo de los archivos que se exportan al destino. <br> Las opciones disponibles son las siguientes: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: Obligatorio. Los archivos exportados contienen el ID del segmento exportado.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Los archivos exportados contienen el nombre del segmento exportado.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(Opcional)**. Seleccione una de estas dos opciones para que los archivos incluyan el momento en que los genera el Experience Platform.</li><li>`custom-text`: **(Opcional)**. Reemplace este marcador de posición por cualquier texto personalizado que desee anexar al final de los nombres de archivo.</li></ul> <br> Para obtener más información sobre la configuración de nombres de archivo, consulte la [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) en el tutorial de activación de destinos por lotes. |
+| `exportMode` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccione `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Para obtener más información sobre las dos opciones, consulte [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) en el tutorial de activación de destinos por lotes. |
 | `startDate` | Seleccione la fecha en la que el segmento debe comenzar a exportar perfiles a su destino. |
-| `frequency` | Para *destinos de lote* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. <br> <ul><li>Para la variable `"DAILY_FULL_EXPORT"` modo de exportación, puede seleccionar `ONCE` o `DAILY`.</li><li>Para la variable `"FIRST_FULL_THEN_INCREMENTAL"` modo de exportación, puede seleccionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `triggerType` | Para *destinos de lote* solo. Este campo solo es necesario al seleccionar la variable `"DAILY_FULL_EXPORT"` en el `frequency` selector. <br> Obligatorio. <br> <ul><li>Select `"AFTER_SEGMENT_EVAL"` para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Platform. Esto garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten a su destino.</li><li>Select `"SCHEDULED"` para que el trabajo de activación se ejecute en un tiempo fijo. Esto garantiza que los datos de perfil del Experience Platform se exporten a la misma hora cada día, pero es posible que los perfiles que exporta no estén más actualizados, dependiendo de si el trabajo de segmentación por lotes se ha completado antes de que se inicie el trabajo de activación. Al seleccionar esta opción, también debe añadir una `startTime` para indicar en qué momento de UTC deben producirse las exportaciones diarias.</li></ul> |
-| `endDate` | Para *destinos de lote* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> No aplicable al seleccionar `"exportMode":"DAILY_FULL_EXPORT"` y `"frequency":"ONCE"`. <br> Establece la fecha en la que los miembros del segmento dejan de exportarse al destino. |
-| `startTime` | Para *destinos de lote* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccione el momento en que los archivos que contienen miembros del segmento deben generarse y exportarse al destino. |
+| `frequency` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. <br> <ul><li>Para el `"DAILY_FULL_EXPORT"` modo de exportación, puede seleccionar `ONCE` o `DAILY`.</li><li>Para el `"FIRST_FULL_THEN_INCREMENTAL"` modo de exportación, puede seleccionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
+| `triggerType` | Para *destinos por lotes* solo. Este campo solo es necesario al seleccionar la variable `"DAILY_FULL_EXPORT"` en el `frequency` selector. <br> Obligatorio. <br> <ul><li>Seleccionar `"AFTER_SEGMENT_EVAL"` para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Platform. Esto garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino.</li><li>Seleccionar `"SCHEDULED"` para que el trabajo de activación se ejecute a una hora fija. Esto garantiza que los datos de perfil del Experience Platform se exporten a la misma hora cada día, pero es posible que los perfiles exportados no estén los más actualizados, en función de si el trabajo de segmentación por lotes se ha completado antes de que se inicie el trabajo de activación. Al seleccionar esta opción, también debe añadir una `startTime` para indicar a qué hora en UTC deben producirse las exportaciones diarias.</li></ul> |
+| `endDate` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> No aplicable al seleccionar `"exportMode":"DAILY_FULL_EXPORT"` y `"frequency":"ONCE"`. <br> Establece la fecha en la que los miembros del segmento dejan de exportarse al destino. |
+| `startTime` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccione el momento en que se deben generar y exportar al destino los archivos que contienen miembros del segmento. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a [!DNL Flow Service] API, mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -518,9 +518,9 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 }
 ```
 
-## Eliminar un segmento de un flujo de datos {#remove-segment}
+## Eliminación de segmentos de un flujo de datos {#remove-segment}
 
-Para eliminar un segmento de un flujo de datos de destino existente, realice una solicitud de PATCH al [!DNL Flow Service] mientras proporciona su ID de flujo, versión y el selector de índice del segmento que desea eliminar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que se muestra a continuación elimina los segmentos primero y segundo del flujo de datos.
+Para eliminar un segmento de un flujo de datos de destino existente, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el selector de índice del segmento que desea eliminar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que aparece más abajo elimina el primer y el segundo segmento del flujo de datos.
 
 **Formato de API**
 
@@ -564,13 +564,13 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. Para eliminar un segmento de un flujo de datos, utilice la variable `remove` operación. |
-| `path` | Especifica qué segmento existente debe eliminarse del flujo de datos de destino, en función del índice del selector de segmentos. Para recuperar el orden de los segmentos en un flujo de datos, realice una llamada de GET a la variable `/flows` e inspeccione el `transformations.segmentSelectors` propiedad. Para eliminar el primer segmento del flujo de datos, utilice `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para eliminar un segmento de un flujo de datos, utilice el `remove` operación. |
+| `path` | Especifica qué segmento existente debe eliminarse del flujo de datos de destino, según el índice del selector de segmentos. Para recuperar el orden de los segmentos en un flujo de datos, realice una llamada de GET a `/flows` e inspeccione el `transformations.segmentSelectors` propiedad. Para eliminar el primer segmento del flujo de datos, utilice `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a [!DNL Flow Service] API, mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -579,9 +579,9 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 }
 ```
 
-## Actualizar componentes de un segmento en un flujo de datos {#update-segment}
+## Actualización de componentes de un segmento en un flujo de datos {#update-segment}
 
-Puede actualizar componentes de un segmento en un flujo de datos de destino existente. Por ejemplo, puede cambiar la frecuencia de exportación o editar la plantilla de nombre de archivo. Para ello, realice una solicitud de PATCH al [!DNL Flow Service] al proporcionar su ID de flujo, versión y el selector de índice del segmento que desea actualizar. La indexación comienza en `0`. Por ejemplo, la siguiente solicitud actualiza el noveno segmento de un flujo de datos.
+Puede actualizar los componentes de un segmento en un flujo de datos de destino existente. Por ejemplo, puede cambiar la frecuencia de exportación o editar la plantilla de nombre de archivo. Para ello, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el selector de índice del segmento que desea actualizar. La indexación comienza en `0`. Por ejemplo, la solicitud siguiente actualiza el noveno segmento de un flujo de datos.
 
 **Formato de API**
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitud**
 
-Al actualizar un segmento en un flujo de datos de destino existente, primero debe realizar una operación de GET para recuperar los detalles del segmento que desee actualizar. A continuación, proporcione toda la información del segmento en la carga útil, no solo los campos que desea actualizar. En el siguiente ejemplo, se agrega texto personalizado al final de la plantilla de nombre de archivo y la frecuencia de programación de exportación se actualiza de 6 horas a 12 horas.
+Al actualizar un segmento en un flujo de datos de destino existente, primero debe realizar una operación de GET para recuperar los detalles del segmento que desea actualizar. A continuación, proporcione toda la información del segmento en la carga útil, no solo los campos que desee actualizar. En el ejemplo siguiente, se agrega texto personalizado al final de la plantilla de nombre de archivo y la frecuencia de programación de exportación se actualiza de 6 horas a 12 horas.
 
 ```shell
 curl -X PATCH \
@@ -631,7 +631,7 @@ Para obtener descripciones de las propiedades de la carga útil, consulte la sec
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a [!DNL Flow Service] API, mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -644,7 +644,7 @@ Consulte los ejemplos siguientes para ver más ejemplos de componentes de segmen
 
 ## Actualizar el modo de exportación de un segmento de programado a después de la evaluación del segmento {#update-export-mode}
 
-+++ Haga clic en para ver un ejemplo en el que una exportación de segmentos se actualiza de ser activada todos los días a una hora específica a ser activada todos los días después de que se complete el trabajo de segmentación por lotes de Platform.
++++ Haga clic para ver un ejemplo en el que una exportación de segmentos se actualiza de ser activada todos los días a una hora especificada a ser activada todos los días después de que se complete el trabajo de segmentación por lotes de Platform.
 
 El segmento se exporta todos los días a las 16:00 UTC.
 
@@ -669,7 +669,7 @@ El segmento se exporta todos los días a las 16:00 UTC.
 }
 ```
 
-El segmento se exporta todos los días después de que se complete el trabajo diario de segmentación por lotes.
+El segmento se exporta cada día después de que se complete el trabajo de segmentación por lotes.
 
 ```json
 {
@@ -695,9 +695,9 @@ El segmento se exporta todos los días después de que se complete el trabajo di
 
 ## Actualice la plantilla de nombre de archivo para incluir campos adicionales en el nombre del archivo {#update-filename-template}
 
-+++ Haga clic en para ver un ejemplo en el que la plantilla de nombre de archivo se actualiza para incluir campos adicionales en el nombre de archivo
++++ Haga clic para ver un ejemplo en el que la plantilla de nombre de archivo se actualiza para incluir campos adicionales en el nombre del archivo
 
-Los archivos exportados contienen el nombre de destino y el ID de segmento del Experience Platform
+Los archivos exportados contienen el nombre de destino y el ID del segmento del Experience Platform
 
 ```json
 {
@@ -720,7 +720,7 @@ Los archivos exportados contienen el nombre de destino y el ID de segmento del E
 }
 ```
 
-Los archivos exportados contienen el nombre de destino, el ID de segmento del Experience Platform, la fecha y hora en que el Experience Platform generó el archivo y el texto personalizado anexado al final de los archivos.
+Los archivos exportados contienen el nombre de destino, el ID del segmento del Experience Platform, la fecha y la hora en que el Experience Platform generó el archivo y el texto personalizado anexado al final de los archivos.
 
 
 ```json
@@ -748,7 +748,7 @@ Los archivos exportados contienen el nombre de destino, el ID de segmento del Ex
 
 ## Añadir un atributo de perfil a un flujo de datos {#add-profile-attribute}
 
-Para añadir un atributo de perfil al flujo de datos de destino, realice una solicitud de PATCH al [!DNL Flow Service] al proporcionar su ID de flujo, versión y el atributo de perfil que desea añadir.
+Para añadir un atributo de perfil al flujo de datos de destino, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el atributo de perfil que desea añadir.
 
 **Formato de API**
 
@@ -784,13 +784,13 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. Para añadir un atributo de perfil a un flujo de datos, utilice el `add` operación. |
-| `path` | Define la parte del flujo que se va a actualizar. Cuando agregue un atributo de perfil a un flujo de datos, utilice la ruta especificada en el ejemplo. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para añadir un atributo de perfil a un flujo de datos, utilice el `add` operación. |
+| `path` | Define la parte del flujo que se va a actualizar. Al añadir un atributo de perfil a un flujo de datos, utilice la ruta especificada en el ejemplo. |
 | `value.path` | El valor del atributo de perfil que está agregando al flujo de datos. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a [!DNL Flow Service] API, mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -801,7 +801,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Eliminación de un atributo de perfil de un flujo de datos {#remove-profile-attribute}
 
-Para eliminar un atributo de perfil de un flujo de datos de destino existente, realice una solicitud de PATCH al [!DNL Flow Service] mientras proporciona su ID de flujo, versión y el selector de índice del atributo de perfil que desea eliminar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que se muestra a continuación elimina el quinto atributo de perfil del flujo de datos.
+Para eliminar un atributo de perfil de un flujo de datos de destino existente, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el selector de índice del atributo de perfil que desea eliminar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que se muestra más abajo elimina el quinto atributo de perfil del flujo de datos.
 
 
 **Formato de API**
@@ -838,13 +838,13 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`y `remove`. Para eliminar un segmento de un flujo de datos, utilice la variable `remove` operación. |
-| `path` | Especifica qué atributo de perfil existente debe eliminarse del flujo de datos de destino, en función del índice del selector de segmentos. Para recuperar el orden de los atributos de perfil en un flujo de datos, realice una llamada de GET a la variable `/flows` e inspeccione el `transformations.profileSelectors` propiedad. Para eliminar el primer segmento del flujo de datos, utilice `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para eliminar un segmento de un flujo de datos, utilice el `remove` operación. |
+| `path` | Especifica qué atributo de perfil existente debe eliminarse del flujo de datos de destino, según el índice del selector de segmentos. Para recuperar el orden de los atributos de perfil en un flujo de datos, realice una llamada de GET a `/flows` e inspeccione el `transformations.profileSelectors` propiedad. Para eliminar el primer segmento del flujo de datos, utilice `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la variable [!DNL Flow Service] al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a [!DNL Flow Service] API, mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -853,9 +853,9 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 }
 ```
 
-## Gestión de errores de API {#api-error-handling}
+## Administración de errores de API {#api-error-handling}
 
-Los extremos de API de este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform para obtener más información sobre la interpretación de las respuestas de error.
+Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la Guía de solución de problemas de Platform para obtener más información sobre cómo interpretar las respuestas de error.
 
 ## Pasos siguientes {#next-steps}
 

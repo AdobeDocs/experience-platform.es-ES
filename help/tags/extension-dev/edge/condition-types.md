@@ -15,22 +15,22 @@ ht-degree: 68%
 >
 > Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-En una regla de etiqueta, se evalúa una condición después de que se haya producido un evento. Todas las condiciones deben devolver el valor verdadero para que la regla pueda continuar el procesamiento. Las extensiones proporcionan los tipos de condición y evalúan si algo es verdadero o falso, lo que devuelve un valor booleano.
+En una regla de etiqueta, una condición se evalúa después de que se haya producido un evento. Todas las condiciones deben devolver el valor verdadero para que la regla pueda continuar el procesamiento. Las extensiones proporcionan los tipos de condición y evalúan si algo es verdadero o falso, devolviendo un valor booleano.
 
 Por ejemplo, una extensión podría proporcionar un tipo de condición &quot;la ventanilla contiene&quot; en la que el usuario de podría especificar un selector CSS. Cuando la condición se evalúa en el sitio web del cliente, la extensión puede encontrar elementos que coincidan con el selector de CSS y devolver si alguno de ellos se incluye en la ventanilla del usuario.
 
-Este documento explica cómo definir tipos de condiciones para una extensión edge en Adobe Experience Platform.
+Este documento explica cómo definir tipos de condición para una extensión de Edge en Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
 >Si está desarrollando una extensión web, consulte la guía sobre [tipos de condición para extensiones web](../web/condition-types.md) en su lugar.
 >
->Este documento también supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones Edge. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
+>Este documento supone que ya está familiarizado con los módulos de la biblioteca y con la forma en que se integran con las extensiones de Edge. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
 
 Los tipos de condición suelen consistir en lo siguiente:
 
-1. Vista que se muestra en la interfaz de usuario del Experience Platform y en la de la recopilación de datos y que permite a los usuarios modificar la configuración de la condición.
-2. Módulo de biblioteca emitido en la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y evaluar una condición.
+1. Vista que se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos, y que permite a los usuarios modificar la configuración de la condición.
+2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y evaluar una condición.
 
 Por ejemplo, si desea evaluar si el usuario está en el host `example.com`, el módulo puede tener un aspecto similar al siguiente.
 

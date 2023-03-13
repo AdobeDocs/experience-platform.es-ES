@@ -134,7 +134,20 @@ Una definición de tipo es un objeto que se utiliza para describir un evento, un
       <td><code>schema</code></td>
       <td>Un objeto de <a href="https://json-schema.org/">esquema JSON</a> que describe el formato de un objeto de configuración válido que el usuario puede guardar. Por lo general, el usuario configura y guarda la configuración a través de la interfaz de usuario de recopilación de datos. En estos casos, la vista de la extensión puede realizar los pasos necesarios para validar la configuración proporcionada por el usuario. Por otro lado, algunos usuarios eligen utilizar API de etiquetas directamente sin la ayuda de ninguna interfaz de usuario. El propósito de este esquema es permitir que Platform valide correctamente que los objetos de configuración guardados por los usuarios, independientemente de si se utiliza una interfaz de usuario, están en un formato compatible con el módulo de biblioteca que actuará en el objeto de configuración durante la ejecución.<br><br>A continuación, se muestra un objeto de esquema de ejemplo:<br>
 <pre class="JSON language-JSON hljs">
-{ "$schema": "http://json-schema.org/draft-04/schema#", "type": "object", "properties": { "delay": { "type": "número", "mínimo": 1 } }, "obligatorio": [ "delay" ], "additionalProperties": false }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "delay"
+  ],
+  "additionalProperties": false
+}
 </pre>
       Recomendamos utilizar una herramienta como <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> para probar manualmente el esquema.</td>
     </tr>

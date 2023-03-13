@@ -1,67 +1,67 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Apéndice de la guía de API del Privacy Service
+title: Apéndice de Guía de API de Privacy Service
 description: Este documento contiene información adicional para trabajar con la API de Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 7%
+source-wordcount: '476'
+ht-degree: 5%
 
 ---
 
-# apéndice de la guía de API del Privacy Service
+# apéndice de la guía de API de Privacy Service
 
 Las secciones siguientes contienen información adicional para trabajar con la API de Adobe Experience Platform Privacy Service.
 
-## Espacios de nombres de identidad estándar {#standard-namespaces}
+## Áreas de nombres de identidad estándar {#standard-namespaces}
 
-Todas las identidades que se envían a [!DNL Privacy Service] debe proporcionarse en un área de nombres de identidad específica. Las áreas de nombres de identidad son un componente de [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md) que indican el contexto al que se relaciona una identidad.
+Todas las identidades enviadas a [!DNL Privacy Service] debe proporcionarse en un área de nombres de identidad específica. Las áreas de nombres de identidad son un componente de [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md) que indican el contexto al que se relaciona una identidad.
 
-La siguiente tabla describe varios tipos de identidad predefinidos utilizados que se utilizan con más frecuencia y que están disponibles en [!DNL Experience Platform], junto con sus `namespace` valores:
+En la tabla siguiente se describen varios tipos de identidad predefinidos de uso común que pone a disposición [!DNL Experience Platform], junto con sus asociados `namespace` valores:
 
 | Tipo de identidad | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | Correo electrónico | `Email` | `6` |
 | Phone | `Phone` | `7` |
-| Adobe Advertising Cloud ID | `AdCloud` | `411` |
-| UUID de Adobe Audience Manager | `CORE` | `0` |
+| ADOBE ADVERTISING CLOUD ID | `AdCloud` | `411` |
+| UUID DE ADOBE AUDIENCE MANAGER | `CORE` | `0` |
 | Adobe Experience Cloud ID | `ECID` | `4` |
-| Adobe Target ID | `TNTID` | `9` |
+| ADOBE TARGET ID | `TNTID` | `9` |
 | [!DNL Apple] ID para anunciantes | `IDFA` | `20915` |
 | [!DNL Google] ID de anuncio | `GAID` | `20914` |
-| [!DNL Windows] AID | `WAID` | `8` |
+| [!DNL Windows] AYUDA | `WAID` | `8` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->Cada tipo de identidad también tiene un `namespaceId` valor entero, que puede utilizarse en lugar de la variable `namespace` cadena al configurar la variable `type` a &quot;namespaceId&quot;. Consulte la sección sobre [calificadores de área de nombres](#namespace-qualifiers) para obtener más información.
+>Cada tipo de identidad también tiene un `namespaceId` valor entero, que puede utilizarse en lugar del valor `namespace` cadena al configurar el de identidad `type` propiedad a &quot;namespaceId&quot;. Consulte la sección sobre [calificadores de área de nombres](#namespace-qualifiers) para obtener más información.
 
-Puede recuperar una lista de áreas de nombres de identidad en uso por su organización realizando una solicitud de GET al `idnamespace/identities` en la variable [!DNL Identity Service] API. Consulte la [Guía para desarrolladores del servicio de identidad](../../identity-service/api/getting-started.md) para obtener más información.
+Puede recuperar una lista de áreas de nombres de identidad que utiliza su organización realizando una solicitud de GET a `idnamespace/identities` punto final en la [!DNL Identity Service] API. Consulte la [Guía para desarrolladores de Identity Service](../../identity-service/api/getting-started.md) para obtener más información.
 
 ## Calificadores de área de nombres
 
-Al especificar un `namespace` en la variable [!DNL Privacy Service] API, un **calificador de área de nombres** debe incluirse en un `type` parámetro. La siguiente tabla describe los diferentes calificadores de área de nombres aceptados.
+Al especificar un `namespace` valor en [!DNL Privacy Service] API, a **calificador de área de nombres** debe incluirse en una `type` parámetro. En la tabla siguiente se describen los diferentes calificadores de área de nombres aceptados.
 
-| Cualificador | Definición |
+| Calificador | Definición |
 | --------- | ---------- |
-| `standard` | Una de las áreas de nombres estándar definidas globalmente, no está vinculada a un conjunto de datos de organización individual (por ejemplo, correo electrónico, número de teléfono, etc.). Se proporciona el ID de área de nombres. |
-| `custom` | Un área de nombres única creada en el contexto de una organización, no compartida entre [!DNL Experience Cloud]. El valor representa el nombre descriptivo (campo &quot;nombre&quot;) que se va a buscar. Se proporciona el ID de área de nombres. |
-| `integrationCode` | Código de integración : similar a &quot;personalizado&quot;, pero definido específicamente como el código de integración de una fuente de datos que se va a buscar. Se proporciona el ID de área de nombres. |
-| `namespaceId` | Indica que el valor es el ID real del área de nombres que se creó o asignó a través del servicio de área de nombres. |
-| `unregistered` | Cadena de forma libre que no está definida en el servicio de área de nombres y se toma &quot;tal cual&quot;. Cualquier aplicación que gestione este tipo de áreas de nombres comprueba su existencia y gestiona, si corresponde, el contexto de la empresa y el conjunto de datos. No se proporciona ningún ID de área de nombres. |
-| `analytics` | Un espacio de nombres personalizado que se asigna internamente en [!DNL Analytics], no en el servicio de área de nombres. Esto se transfiere directamente según lo especificado por la solicitud original, sin un ID de área de nombres |
-| `target` | Un espacio de nombres personalizado que entienda internamente [!DNL Target], no en el servicio de área de nombres. Esto se transfiere directamente según lo especificado por la solicitud original, sin un ID de área de nombres |
+| `standard` | Una de las áreas de nombres estándar definidas globalmente, no vinculadas a un conjunto de datos de organización individual (por ejemplo, correo electrónico, número de teléfono, etc.). Se ha proporcionado el ID de área de nombres. |
+| `custom` | Un área de nombres única creada en el contexto de una organización, no compartida en el [!DNL Experience Cloud]. El valor representa el nombre descriptivo (campo &quot;nombre&quot;) que se va a buscar. Se ha proporcionado el ID de área de nombres. |
+| `integrationCode` | Código de integración: similar a &quot;personalizado&quot;, pero definido específicamente como el código de integración de una fuente de datos que se va a buscar. Se ha proporcionado el ID de área de nombres. |
+| `namespaceId` | Indica que el valor es el ID real del área de nombres que se creó o asignó mediante el servicio de área de nombres. |
+| `unregistered` | Una cadena de forma libre que no está definida en el servicio de área de nombres y que se toma &quot;tal cual&quot;. Cualquier aplicación que administre este tipo de áreas de nombres las compara con ellas y las gestiona si es adecuado para el contexto de la empresa y el conjunto de datos. No se ha proporcionado ningún ID de área de nombres. |
+| `analytics` | Un área de nombres personalizada que se asigna internamente en [!DNL Analytics], no en el servicio de área de nombres. Se transfiere directamente como se especifica en la solicitud original, sin un ID de área de nombres |
+| `target` | Un área de nombres personalizada entendida internamente por [!DNL Target], no en el servicio de área de nombres. Se transfiere directamente como se especifica en la solicitud original, sin un ID de área de nombres |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Valores de producto aceptados
 
-La siguiente tabla describe los valores aceptados para especificar un producto de Adobe en la variable `include` de una solicitud de creación de trabajo.
+En la tabla siguiente se describen los valores aceptados para especificar un producto de Adobe en `include` atributo de una solicitud de creación de trabajo.
 
-| Producto | Valor que se utilizará en la variable `include` attribute |
+| Producto | Valor para usar en `include` atributo |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
@@ -75,4 +75,4 @@ La siguiente tabla describe los valores aceptados para especificar un producto d
 | Servicio de identidad | `identity` |
 | Marketo Engage | `marketo` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

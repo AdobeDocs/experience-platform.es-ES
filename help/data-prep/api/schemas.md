@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;inicio;temas populares;preparación de datos;guía de api;esquemas;
 solution: Experience Platform
-title: Punto final de API de Esquemas
-description: Puede utilizar el extremo `/schemas` en la API de Adobe Experience Platform para recuperar, crear y actualizar esquemas mediante programación para utilizarlo con Mapper en Platform.
+title: Extremo de API de esquemas
+description: Puede utilizar el extremo /schemas en la API de Adobe Experience Platform para recuperar, crear y actualizar esquemas mediante programación para utilizarlos con Mapper en Platform.
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '613'
@@ -12,21 +12,21 @@ ht-degree: 5%
 
 
 
-# Punto final de esquemas
+# Extremo de esquemas
 
-Se pueden usar esquemas con Mapper para garantizar que los datos que ha introducido en Adobe Experience Platform coincidan con los que desea ingerir. Puede usar la variable `/schemas` para crear, listar y obtener esquemas personalizados mediante programación para usarlos con Mapper en Platform.
+Los esquemas se pueden utilizar con Mapper para asegurarse de que los datos que ha introducido en Adobe Experience Platform coinciden con los que desea introducir. Puede usar el complemento `/schemas` extremo para crear, enumerar y obtener esquemas personalizados mediante programación para utilizarlos con Mapper en Platform.
 
 >[!NOTE]
 >
->Los esquemas creados con este extremo se utilizan exclusivamente con Mapper y conjuntos de asignación. Para crear esquemas accesibles para otros servicios de Platform, lea la [Guía para desarrolladores de Schema Registry](../../xdm/api/schemas.md).
+>Los esquemas creados con este extremo se utilizan exclusivamente con conjuntos de asignaciones y asignadores. Para crear esquemas accesibles por otros servicios de Platform, lea la [Guía para desarrolladores de Schema Registry](../../xdm/api/schemas.md).
 
 ## Obtener todos los esquemas
 
-Puede recuperar una lista de todos los esquemas de Mapper disponibles para su organización IMS realizando una solicitud de GET al `/schemas` punto final.
+Puede recuperar una lista de todos los esquemas de asignador disponibles para su organización IMS realizando una solicitud de GET a la `/schemas` punto final.
 
 **Formato de API**
 
-La variable `/schemas` el extremo admite varios parámetros de consulta para ayudarle a filtrar los resultados. Aunque la mayoría de estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Sin embargo, debe incluir ambas variables `start` y `limit` como parte de la solicitud. Se pueden incluir varios parámetros separados por el símbolo &quot;et&quot; (`&`).
+El `/schemas` el punto de conexión admite varios parámetros de consulta para ayudarle a filtrar los resultados. Aunque la mayoría de estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Sin embargo, debe incluir ambos `start` y `limit` parámetros como parte de la solicitud de. Se pueden incluir varios parámetros separados por el símbolo et (`&`).
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -38,8 +38,8 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 | --------- | ----------- |
 | `{LIMIT}` | **Requerido**. Especifica el número de esquemas devueltos. |
 | `{START}` | **Requerido**. Especifica el desplazamiento de las páginas de resultados. Para obtener la primera página de resultados, establezca el valor en `start=0`. |
-| `{NAME}` | Filtra el esquema según el nombre. |
-| `{ORDER_BY}` | Ordena el orden de los resultados. Los campos admitidos son `modifiedDate` y `createdDate`. Puede anteponer la propiedad con `+` o `-` para ordenarla en orden ascendente o descendente, respectivamente. |
+| `{NAME}` | Filtra el esquema en función del nombre. |
+| `{ORDER_BY}` | Ordena el orden de los resultados. Los campos admitidos son `modifiedDate` y `createdDate`. Puede anteponer la propiedad con `+` o `-` para ordenarlo en orden ascendente o descendente, respectivamente. |
 
 **Solicitud**
 
@@ -132,7 +132,7 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de los esquemas
 
 ## Creación de un esquema
 
-Puede crear un esquema para validar realizando una solicitud de POST al `/schemas` punto final. Existen tres formas de crear un esquema: envío de un [Esquema JSON](https://json-schema.org/), utilizando datos de ejemplo o haciendo referencia a un esquema XDM existente.
+Puede crear un esquema para validarlo realizando una solicitud del POST al `/schemas` punto final. Existen tres formas de crear un esquema: enviar un esquema [Esquema JSON](https://json-schema.org/), utilizando datos de ejemplo o haciendo referencia a un esquema XDM existente.
 
 ```http
 POST /schemas
@@ -181,7 +181,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el esq
 
 **Solicitud**
 
-La siguiente solicitud permite crear un esquema utilizando datos de ejemplo que ha cargado anteriormente.
+La siguiente solicitud permite crear un esquema con los datos de ejemplo que ha cargado anteriormente.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -198,7 +198,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `sampleId` | ID de los datos de ejemplo de los que está basando el esquema. |
+| `sampleId` | El ID de los datos de ejemplo en los que basa el esquema. |
 
 **Respuesta**
 
@@ -269,7 +269,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `name` | El nombre del esquema que desea crear. |
 | `schemaRef.id` | El ID del esquema al que hace referencia. |
-| `schemaRef.contentType` | Determina el formato de respuesta del esquema de referencia. Más información sobre este campo en la [guía para desarrolladores del registro de esquemas](../../xdm/api/schemas.md#lookup) |
+| `schemaRef.contentType` | Determina el formato de respuesta del esquema referenciado. Encontrará más información sobre este campo en la [guía para desarrolladores de schema registry](../../xdm/api/schemas.md#lookup) |
 
 **Respuesta**
 
@@ -294,7 +294,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el esq
 
 ## Creación de un esquema mediante la carga de archivos
 
-Puede crear un esquema cargando un archivo JSON desde el que convertirlo.
+Puede crear un esquema cargando un archivo JSON desde el que convertir.
 
 **Formato de API**
 
@@ -304,7 +304,7 @@ POST /schemas/upload
 
 **Solicitud**
 
-La siguiente solicitud le permite crear un esquema a partir de un archivo JSON cargado.
+La siguiente solicitud permite crear un esquema a partir de un archivo JSON cargado.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
@@ -332,9 +332,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el esq
 }
 ```
 
-## Recuperar un esquema específico
+## Recuperación de un esquema específico
 
-Puede recuperar información sobre un esquema específico realizando una solicitud de GET al `/schemas` y proporcionando el ID del esquema que desea recuperar en la ruta de solicitud.
+Puede recuperar información sobre un esquema específico realizando una solicitud de GET a `/schemas` y proporciona el ID del esquema que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 

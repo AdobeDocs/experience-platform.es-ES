@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;modelos;api sensei de aprendizaje automático
+keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;modelos;api de aprendizaje automático de sensei
 solution: Experience Platform
-title: Punto final de API de modelos
-description: Un modelo es una instancia de una fórmula de aprendizaje automático que se enseña mediante datos y configuraciones históricos para resolver un caso de uso empresarial.
+title: Extremo de API de modelos
+description: Un modelo es una instancia de una fórmula de aprendizaje automático que se forma con datos históricos y configuraciones para resolver un caso de uso empresarial.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 4%
 
 # Extremo de modelos
 
-Un modelo es una instancia de una fórmula de aprendizaje automático que se enseña mediante datos y configuraciones históricos para resolver un caso de uso empresarial.
+Un modelo es una instancia de una fórmula de aprendizaje automático que se forma con datos históricos y configuraciones para resolver un caso de uso empresarial.
 
-## Recuperar una lista de modelos
+## Recuperación de una lista de modelos
 
-Puede recuperar una lista de detalles del modelo pertenecientes a todos los modelos realizando una única solicitud de GET a /modelos. De forma predeterminada, esta lista se solicitará a partir del modelo creado más antiguo y limitará los resultados a 25. Puede elegir filtrar los resultados especificando algunos parámetros de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice de [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de detalles de modelo que pertenezcan a todos los modelos realizando una única solicitud de GET a /models. De forma predeterminada, esta lista se ordenará a partir del modelo creado más antiguo y limitará los resultados a 25. Puede filtrar los resultados especificando algunos parámetros de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -38,7 +38,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles de los modelos, incluido el identificador único de cada modelo (`id`).
+Una respuesta correcta devuelve una carga útil que contiene los detalles de los modelos, incluido cada identificador único de modelos (`id`).
 
 ```json
 {
@@ -92,14 +92,14 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de los
 
 | Propiedad | Descripción |
 | --- | --- |
-| `id` | ID correspondiente al modelo. |
-| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con la variable `name` para el modelo. |
-| `experimentId` | Un ID de experimento válido. |
-| `experimentRunId` | Un ID de ejecución de experimento válido. |
+| `id` | El ID correspondiente al modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con `name` valor del modelo. |
+| `experimentId` | ID de experimento válido. |
+| `experimentRunId` | ID de ejecución de experimento válido. |
 
 ## Recuperar un modelo específico
 
-Puede recuperar una lista de detalles del modelo que pertenezca a un modelo concreto realizando una única solicitud de GET y proporcionando un ID de modelo válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice de [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de detalles de modelo que pertenezcan a un modelo concreto realizando una única solicitud de GET y proporcionando un ID de modelo válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -110,12 +110,12 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MODEL_ID}` | Identificador del modelo preparado o publicado. |
-| `{EXPERIMENT_RUN_ID}` | Identificador de la ejecución del experimento. |
+| `{MODEL_ID}` | El identificador del modelo entrenado o publicado. |
+| `{EXPERIMENT_RUN_ID}` | El identificador de la ejecución del experimento. |
 
 **Solicitud**
 
-La siguiente solicitud contiene una consulta y recupera una lista de modelos formados que comparten el mismo experienceRunID ({EXPERIMENT_RUN_ID}).
+La siguiente solicitud contiene una consulta y recupera una lista de modelos formados que comparten el mismo experimentRunID ({EXPERIMENT_RUN_ID}).
 
 ```shell
 curl -X GET \
@@ -128,7 +128,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del Modelo, incluido el identificador único de los Modelos (`id`).
+Una respuesta correcta devuelve una carga útil que contiene los detalles del modelo, incluido el identificador único de modelos (`id`).
 
 ```json
 {
@@ -156,14 +156,14 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del Mo
 
 | Propiedad | Descripción |
 | --- | --- |
-| `id` | ID correspondiente al modelo. |
-| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con la variable `name` para el modelo. |
-| `experimentId` | Un ID de experimento válido. |
-| `experimentRunId` | Un ID de ejecución de experimento válido. |
+| `id` | El ID correspondiente al modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con `name` valor del modelo. |
+| `experimentId` | ID de experimento válido. |
+| `experimentRunId` | ID de ejecución de experimento válido. |
 
 ## Registro de un modelo generado previamente {#register-a-model}
 
-Puede registrar un modelo pregenerado realizando una solicitud de POST al `/models` punto final. Para registrar el modelo, la variable `modelArtifact` y `model` los valores de propiedad deben incluirse en el cuerpo de la solicitud.
+Puede registrar un modelo generado previamente realizando una solicitud de POST a la variable `/models` punto final. Para registrar su modelo, la variable `modelArtifact` archivo y `model` los valores de propiedad deben incluirse en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -173,7 +173,7 @@ POST /models
 
 **Solicitud**
 
-El siguiente POST contiene la variable `modelArtifact` y `model` valores de propiedad necesarios. Consulte la siguiente tabla para obtener más información sobre estos valores.
+El siguiente POST contiene el `modelArtifact` archivo y `model` valores de propiedad necesarios. Consulte la tabla siguiente para obtener más información sobre estos valores.
 
 ```shell
 curl -X POST \
@@ -191,12 +191,12 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --- | --- |
-| `modelArtifact` | La ubicación del artefacto del modelo completo que desea incluir. |
-| `model` | Los datos de formulario del objeto Model que deben crearse. |
+| `modelArtifact` | La ubicación del artefacto de modelo completo que desea incluir. |
+| `model` | Los datos de formulario del objeto de modelo que deben crearse. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del Modelo, incluido el identificador único de los Modelos (`id`).
+Una respuesta correcta devuelve una carga útil que contiene los detalles del modelo, incluido el identificador único de modelos (`id`).
 
 ```json
 {
@@ -212,16 +212,16 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del Mo
 
 | Propiedad | Descripción |
 | --- | --- |
-| `id` | ID correspondiente al modelo. |
-| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con la variable `id` para su modelo. |
+| `id` | El ID correspondiente al modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con `id` valor para el modelo. |
 
-## Actualizar un modelo por ID
+## Actualización de un modelo por ID
 
-Puede actualizar un modelo existente sobrescribiendo sus propiedades mediante una solicitud de PUT que incluya el ID del modelo de destino en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
+Puede actualizar un modelo existente sobrescribiendo sus propiedades a través de una solicitud de PUT que incluya el ID del modelo de destino en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud de PUT, se sugiere que primero realice una solicitud de GET para recuperar el modelo por ID. A continuación, modifique y actualice el objeto JSON devuelto y aplique todo el objeto JSON modificado como carga útil para la solicitud del PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se recomienda que primero realice una solicitud de GET para recuperar el modelo por ID. A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud del PUT.
 
 **Formato de API**
 
@@ -231,7 +231,7 @@ PUT /models/{MODEL_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MODEL_ID}` | Identificador del modelo preparado o publicado. |
+| `{MODEL_ID}` | El identificador del modelo entrenado o publicado. |
 
 **Solicitud**
 
@@ -278,9 +278,9 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
     }
 ```
 
-## Eliminar un modelo por ID
+## Eliminación de un modelo por ID
 
-Puede eliminar un modelo único realizando una solicitud de DELETE que incluya el ID del modelo de destino en la ruta de solicitud.
+Puede eliminar un solo modelo realizando una solicitud de DELETE que incluya el ID del modelo de destino en la ruta de solicitud.
 
 **Formato de API**
 
@@ -290,7 +290,7 @@ DELETE /models/{MODEL_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MODEL_ID}` | Identificador del modelo preparado o publicado. |
+| `{MODEL_ID}` | El identificador del modelo entrenado o publicado. |
 
 **Solicitud**
 
@@ -305,7 +305,7 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un estado de 200 que confirma la eliminación del modelo.
+Una respuesta correcta devuelve una carga útil que contiene un estado 200 que confirma la eliminación del modelo.
 
 ```json
 {
@@ -315,9 +315,9 @@ Una respuesta correcta devuelve una carga útil que contiene un estado de 200 qu
 }
 ```
 
-## Crear una nueva transcodificación para un modelo {#create-transcoded-model}
+## Creación de una nueva transcodificación para un modelo {#create-transcoded-model}
 
-La transcodificación es la conversión digital a digital directa de una codificación a otra. Para crear una nueva transcodificación para un modelo, proporcione la variable `{MODEL_ID}` y `targetFormat` desea que aparezca el nuevo resultado.
+La transcodificación es la conversión digital a digital directa de una codificación a otra. Para crear una nueva transcodificación para un modelo, proporcione el `{MODEL_ID}` y una `targetFormat` desea que el nuevo resultado esté en.
 
 **Formato de API**
 
@@ -327,7 +327,7 @@ POST /models/{MODEL_ID}/transcodings
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MODEL_ID}` | Identificador del modelo preparado o publicado. |
+| `{MODEL_ID}` | El identificador del modelo entrenado o publicado. |
 
 **Solicitud**
 
@@ -354,7 +354,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con la información de su transcodificación. Esto incluye el identificador único de transcodificaciones (`id`) se usa en [recuperación de un modelo transcodificado específico](#retrieve-transcoded-model).
+Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con la información de la transcodificación. Esto incluye el identificador único de transcodificaciones (`id`) utilizado en [Recuperación de un modelo transcodificado específico](#retrieve-transcoded-model).
 
 ```json
 {
@@ -370,9 +370,9 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con 
 }
 ```
 
-## Recuperar una lista de transcodificaciones para un modelo {#retrieve-transcoded-model-list}
+## Recuperación de una lista de transcodificaciones para un modelo {#retrieve-transcoded-model-list}
 
-Puede recuperar una lista de transcodificaciones que se han realizado en un modelo realizando una solicitud de GET con el `{MODEL_ID}`.
+Puede recuperar una lista de transcodificaciones que se han realizado en un modelo realizando una solicitud de GET con su `{MODEL_ID}`.
 
 **Formato de API**
 
@@ -382,7 +382,7 @@ GET /models/{MODEL_ID}/transcodings
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MODEL_ID}` | Identificador del modelo preparado o publicado. |
+| `{MODEL_ID}` | El identificador del modelo entrenado o publicado. |
 
 **Solicitud**
 
@@ -397,7 +397,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un objeto json con una lista de cada transcodificación realizada en el Modelo. Cada modelo transcodificado recibe un identificador único (`id`).
+Una respuesta correcta devuelve una carga útil que contiene un objeto json con una lista de cada transcodificación realizada en el modelo. Cada modelo transcodificado recibe un identificador único (`id`).
 
 ```json
 {
@@ -430,9 +430,9 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto json con 
 }
 ```
 
-## Recuperar un modelo específico transcodificado {#retrieve-transcoded-model}
+## Recuperación de un modelo transcodificado específico {#retrieve-transcoded-model}
 
-Puede recuperar un modelo transcodificado específico realizando una solicitud de GET con el `{MODEL_ID}` y el id de un modelo transcodificado.
+Puede recuperar un modelo transcodificado específico realizando una solicitud de GET con su `{MODEL_ID}` y el id de un modelo transcodificado.
 
 **Formato de API**
 
@@ -442,8 +442,8 @@ GET /models/{MODEL_ID}/transcodings/{TRANSCODING_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MODEL_ID}` | Identificador único de un modelo con formación o publicado. |
-| `{TRANSCODING_ID}` | Identificador único de un modelo transcodificado. |
+| `{MODEL_ID}` | El identificador único de un modelo entrenado o publicado. |
+| `{TRANSCODING_ID}` | El identificador único de un modelo transcodificado. |
 
 **Solicitud**
 
@@ -458,7 +458,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con los datos del Modelo transcodificado.
+Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con los datos del modelo transcodificado.
 
 ```json
 {

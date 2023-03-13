@@ -15,7 +15,7 @@ ht-degree: 90%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-La eliminación de un recurso es la eliminación permanente de ese recurso de Adobe Experience Platform. Si desea eliminar un recurso de una biblioteca de etiquetas específica, pero desea que dicho recurso esté disponible para su uso en otras bibliotecas, consulte la guía de [eliminación de recursos de una biblioteca](remove-resources-from-library.md).
+La eliminación de un recurso es la eliminación permanente de ese recurso de Adobe Experience Platform. Si desea eliminar un recurso de una biblioteca de etiquetas específica, pero desea que ese recurso esté disponible para su uso en otras bibliotecas, consulte la guía de [eliminación de recursos de una biblioteca](remove-resources-from-library.md).
 
 Puede eliminar elementos, reglas, extensiones, hosts, entornos y propiedades de datos. Una vez eliminados, estos recursos no se pueden recuperar.
 

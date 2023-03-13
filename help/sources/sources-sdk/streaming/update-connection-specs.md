@@ -1,6 +1,6 @@
 ---
-title: Actualización de una especificación de conexión para el SDK de flujo mediante la API de servicio de flujo
-description: En el siguiente documento se proporcionan pasos sobre cómo especificar una conexión mediante la API de servicio de flujo para fuentes de autoservicio (SDK de transmisión).
+title: Actualización de una especificación de conexión para el SDK de streaming mediante la API de Flow Service
+description: El siguiente documento proporciona pasos sobre cómo crear una especificación de conexión mediante la API de Flow Service para fuentes de autoservicio (SDK de streaming).
 hide: true
 hidefromtoc: true
 source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
@@ -10,9 +10,9 @@ ht-degree: 4%
 
 ---
 
-# Actualización de una especificación de conexión mediante la API de servicio de flujo
+# Actualización de una especificación de conexión mediante la API de Flow Service
 
-Puede actualizar las propiedades de una especificación de conexión mediante una operación de PUT. Al actualizar una especificación de conexión mediante una solicitud del PUT, el cuerpo debe incluir todos los campos necesarios al crear una nueva especificación de conexión en una solicitud del POST.
+Puede actualizar las propiedades de una especificación de conexión mediante una operación de PUT. Al actualizar una especificación de conexión mediante una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al crear una nueva especificación de conexión en una solicitud de POST.
 
 **Formato de API**
 
@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Solicitud**
 
-La siguiente solicitud añade una descripción a la especificación de conexión de flujo continuo creada en el tutorial anterior.
+La siguiente solicitud agrega una descripción a la especificación de conexión de flujo continuo creada en el tutorial anterior.
 
 ```shell
 PUT -X GET \
@@ -192,4 +192,4 @@ Una llamada correcta devuelve los detalles actualizados de la especificación de
 
 ## Pasos siguientes
 
-Una vez que haya completado las actualizaciones de la especificación de conexión, puede continuar con [probar y enviar la fuente para la integración](./submit.md).
+Una vez que haya completado las actualizaciones de la especificación de conexión, puede continuar con [prueba y envío del origen para la integración](./submit.md).

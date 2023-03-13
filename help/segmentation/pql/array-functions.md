@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;servicio de segmentación;pql;PQL;lenguaje de consulta de perfil;funciones de matriz;matriz;matriz
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de consulta de perfil;funciones de matriz;matriz;
 solution: Experience Platform
-title: Matriz, lista y definir funciones PQL
+title: Funciones de matriz, lista y conjunto de PQL
 description: El lenguaje de consulta de perfil (PQL) ofrece funciones para facilitar la interacción con matrices, listas y cadenas.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -13,11 +13,11 @@ ht-degree: 5%
 
 # Funciones de matriz, lista y conjunto
 
-[!DNL Profile Query Language] (PQL) ofrece funciones para facilitar la interacción con matrices, listas y cadenas. Puede encontrar más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] información general](./overview.md).
+[!DNL Profile Query Language] (PQL) ofrece funciones para facilitar la interacción con matrices, listas y cadenas. Puede encontrar más información sobre otras funciones PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
 
 ## En
 
-La variable `in` para determinar si un elemento es miembro de una matriz o lista.
+El `in` se utiliza para determinar si un elemento es miembro de una matriz o lista.
 
 **Formato**
 
@@ -27,19 +27,19 @@ La variable `in` para determinar si un elemento es miembro de una matriz o lista
 
 **Ejemplo**
 
-La siguiente consulta PQL define las personas con cumpleaños en marzo, junio o septiembre.
+La siguiente consulta PQL define a las personas con cumpleaños en marzo, junio o septiembre.
 
 ```sql
 person.birthMonth in [3, 6, 9]
 ```
 
-## Not in
+## No en
 
-La variable `notIn` para determinar si un elemento no es miembro de una matriz o lista.
+El `notIn` se utiliza para determinar si un elemento no es miembro de una matriz o lista.
 
 >[!NOTE]
 >
->La variable `notIn` function *also* garantiza que ninguno de los dos valores sea igual a nulo. Por lo tanto, los resultados no son una negación exacta del `in` función.
+>El `notIn` función *también* garantiza que ninguno de los valores sea igual a nulo. Por lo tanto, los resultados no son una negación exacta de la `in` función.
 
 **Formato**
 
@@ -49,7 +49,7 @@ La variable `notIn` para determinar si un elemento no es miembro de una matriz o
 
 **Ejemplo**
 
-La siguiente consulta PQL define las personas con cumpleaños que no están en marzo, junio o septiembre.
+La siguiente consulta PQL define a las personas con cumpleaños que no son en marzo, junio o septiembre.
 
 ```sql
 person.birthMonth notIn [3, 6, 9]
@@ -57,7 +57,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Intersecciones
 
-La variable `intersects` se utiliza para determinar si dos matrices o listas tienen al menos un miembro común.
+El `intersects` se utiliza para determinar si dos matrices o listas tienen al menos un miembro común.
 
 **Formato**
 
@@ -67,7 +67,7 @@ La variable `intersects` se utiliza para determinar si dos matrices o listas tie
 
 **Ejemplo**
 
-La siguiente consulta PQL define las personas cuyos colores favoritos incluyen al menos uno de rojo, azul o verde.
+La siguiente consulta PQL define a las personas cuyos colores favoritos incluyen al menos uno de rojo, azul o verde.
 
 ```sql
 person.favoriteColors.intersects(["red", "blue", "green"])
@@ -75,7 +75,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Intersección
 
-La variable `intersection` se utiliza para determinar los miembros comunes de dos matrices o listas.
+El `intersection` se utiliza para determinar los miembros comunes de dos matrices o listas.
 
 **Formato**
 
@@ -85,7 +85,7 @@ La variable `intersection` se utiliza para determinar los miembros comunes de do
 
 **Ejemplo**
 
-La siguiente consulta PQL define si la persona 1 y la persona 2 tienen los colores favoritos de rojo, azul y verde.
+La siguiente consulta PQL define si la persona 1 y la persona 2 tienen ambos colores favoritos de rojo, azul y verde.
 
 ```sql
 person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "green"]
@@ -93,7 +93,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subconjunto de
 
-La variable `subsetOf` para determinar si una matriz específica (matriz A) es un subconjunto de otra matriz (matriz B). En otras palabras, que todos los elementos de la matriz A son elementos de la matriz B.
+El `subsetOf` se utiliza para determinar si una matriz específica (matriz A) es un subconjunto de otra matriz (matriz B). En otras palabras, que todos los elementos de la matriz A son elementos de la matriz B.
 
 **Formato**
 
@@ -103,7 +103,7 @@ La variable `subsetOf` para determinar si una matriz específica (matriz A) es u
 
 **Ejemplo**
 
-La siguiente consulta PQL define las personas que han visitado todas sus ciudades favoritas.
+La siguiente consulta PQL define a las personas que han visitado todas sus ciudades favoritas.
 
 ```sql
 person.favoriteCities.subsetOf(person.visitedCities)
@@ -111,7 +111,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superconjunto de
 
-La variable `supersetOf` para determinar si una matriz específica (matriz A) es un superconjunto de otra matriz (matriz B). En otras palabras, la matriz A contiene todos los elementos de la matriz B.
+El `supersetOf` se utiliza para determinar si una matriz específica (matriz A) es un superconjunto de otra matriz (matriz B). En otras palabras, esa matriz A contiene todos los elementos de la matriz B.
 
 **Formato**
 
@@ -129,7 +129,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Incluye
 
-La variable `includes` para determinar si una matriz o lista contiene un elemento determinado.
+El `includes` se utiliza para determinar si una matriz o lista contiene un elemento determinado.
 
 **Formato**
 
@@ -139,15 +139,15 @@ La variable `includes` para determinar si una matriz o lista contiene un element
 
 **Ejemplo**
 
-La siguiente consulta PQL define las personas cuyo color favorito incluye el rojo.
+La siguiente consulta PQL define a las personas cuyo color favorito incluye el rojo.
 
 ```sql
 person.favoriteColors.includes("red")
 ```
 
-## Distinct
+## Distinto
 
-La variable `distinct` se utiliza para eliminar valores duplicados de una matriz o lista.
+El `distinct` se utiliza para eliminar valores duplicados de una matriz o lista.
 
 **Formato**
 
@@ -165,7 +165,7 @@ person.orders.storeId.distinct().count() > 1
 
 ## Agrupar por
 
-La variable `groupBy` se utiliza para particionar los valores de una matriz o lista en un grupo en función del valor de la expresión.
+El `groupBy` se utiliza para dividir los valores de una matriz o lista en un grupo en función del valor de la expresión.
 
 **Formato**
 
@@ -180,7 +180,7 @@ La variable `groupBy` se utiliza para particionar los valores de una matriz o li
 
 **Ejemplo**
 
-La siguiente consulta PQL agrupa todos los pedidos en los que se ha colocado el pedido.
+La siguiente consulta PQL agrupa todos los pedidos en los que se almacena el pedido.
 
 ```sql
 orders.groupBy(storeId)
@@ -188,7 +188,7 @@ orders.groupBy(storeId)
 
 ## Filtro
 
-La variable `filter` se utiliza para filtrar una matriz o lista basada en una expresión.
+El `filter` se utiliza para filtrar una matriz o lista en función de una expresión.
 
 **Formato**
 
@@ -199,11 +199,11 @@ La variable `filter` se utiliza para filtrar una matriz o lista basada en una ex
 | Argumento | Descripción |
 | --------- | ----------- |
 | `{ARRAY}` | La matriz o lista que se va a filtrar. |
-| `{EXPRESSION}` | Expresión por la que filtrar. |
+| `{EXPRESSION}` | Una expresión por la que filtrar. |
 
 **Ejemplo**
 
-La siguiente consulta PQL define todas las personas mayores de 21 años.
+La siguiente consulta PQL define todas las personas de 21 años o más.
 
 ```sql
 person.filter(age >= 21)
@@ -211,7 +211,7 @@ person.filter(age >= 21)
 
 ## Mapa
 
-La variable `map` se utiliza para crear una nueva matriz aplicando una expresión a cada elemento de una matriz determinada.
+El `map` se utiliza para crear una nueva matriz aplicando una expresión a cada elemento de una matriz determinada.
 
 **Formato**
 
@@ -221,15 +221,15 @@ array.map(expression)
 
 **Ejemplo**
 
-La siguiente consulta PQL crea una nueva matriz de números y cuadrados el valor de los números originales.
+La siguiente consulta PQL crea una nueva matriz de números y ajusta al cuadrado el valor de los números originales.
 
 ```sql
 numbers.map(square)
 ```
 
-## First `n` en matriz {#first-n}
+## Primero `n` en matriz {#first-n}
 
-La variable `topN` se utiliza para devolver la primera función `N` elementos de una matriz, cuando se ordenan en orden ascendente según la expresión numérica dada.
+El `topN` se utiliza para devolver la primera función `N` elementos de una matriz, cuando se ordenan en orden ascendente según la expresión numérica dada.
 
 **Formato**
 
@@ -239,8 +239,8 @@ La variable `topN` se utiliza para devolver la primera función `N` elementos de
 
 | Argumento | Descripción |
 | --------- | ----------- |
-| `{ARRAY}` | Matriz o lista que se va a ordenar. |
-| `{VALUE}` | La propiedad en la que se va a ordenar la matriz o la lista. |
+| `{ARRAY}` | La matriz o lista que se va a ordenar. |
+| `{VALUE}` | Propiedad en la que se ordena la matriz o lista. |
 | `{AMOUNT}` | Número de elementos que se van a devolver. |
 
 **Ejemplo**
@@ -251,9 +251,9 @@ La siguiente consulta PQL devuelve los cinco pedidos principales con el precio m
 orders.topN(price, 5)
 ```
 
-## Última `n` en matriz
+## Último `n` en matriz
 
-La variable `bottomN` se utiliza para devolver el último `N` elementos de una matriz, cuando se ordenan en orden ascendente según la expresión numérica dada.
+El `bottomN` se utiliza para devolver el último `N` elementos de una matriz, cuando se ordenan en orden ascendente según la expresión numérica dada.
 
 **Formato**
 
@@ -263,8 +263,8 @@ La variable `bottomN` se utiliza para devolver el último `N` elementos de una m
 
 | Argumento | Descripción |
 | --------- | ----------- | 
-| `{ARRAY}` | Matriz o lista que se va a ordenar. |
-| `{VALUE}` | La propiedad en la que se va a ordenar la matriz o la lista. |
+| `{ARRAY}` | La matriz o lista que se va a ordenar. |
+| `{VALUE}` | Propiedad en la que se ordena la matriz o lista. |
 | `{AMOUNT}` | Número de elementos que se van a devolver. |
 
 **Ejemplo**
@@ -277,7 +277,7 @@ orders.bottomN(price, 5)
 
 ## Primer elemento
 
-La variable `head` se utiliza para devolver el primer elemento de la matriz o lista.
+El `head` se utiliza para devolver el primer elemento de la matriz o lista.
 
 **Formato**
 
@@ -287,7 +287,7 @@ La variable `head` se utiliza para devolver el primer elemento de la matriz o li
 
 **Ejemplo**
 
-La siguiente consulta PQL devuelve el primero de los cinco pedidos principales con el precio más alto. Más información sobre `topN` se puede encontrar en la variable [first `n` en matriz](#first-n) para obtener más información.
+La siguiente consulta PQL devuelve el primero de los cinco pedidos principales con el precio más alto. Más información sobre la `topN` se puede encontrar en la [primero `n` en matriz](#first-n) sección.
 
 ```sql
 orders.topN(price, 5).head()
@@ -295,4 +295,4 @@ orders.topN(price, 5).head()
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre la matriz, la lista y las funciones definidas, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [Información general sobre el lenguaje de consulta de perfil](./overview.md).
+Ahora que ha aprendido acerca de las funciones de matriz, lista y conjunto, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones PQL, lea la [Introducción al lenguaje de consulta de perfil](./overview.md).

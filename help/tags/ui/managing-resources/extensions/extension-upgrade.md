@@ -1,10 +1,11 @@
 ---
 title: Actualizaciones de extensiones
 description: Descubra cómo las actualizaciones de extensión se empaquetan y representan en el catálogo de extensiones.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 90%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Los desarrolladores de extensiones añaden continuamente nuevas funciones a sus extensiones y suelen corregir errores. Estas actualizaciones se empaquetan en nuevas versiones de una extensión y se ponen a disposición en el catálogo de extensiones como actualizaciones.
+Los desarrolladores de extensiones añaden continuamente nuevas funciones a sus extensiones y suelen corregir errores. Estas actualizaciones se incluyen en las versiones nuevas de una extensión y se pueden descargar en el catálogo de extensiones como actualizaciones.
 
 ## Catálogo de extensiones
 

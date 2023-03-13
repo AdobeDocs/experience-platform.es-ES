@@ -1,5 +1,5 @@
 ---
-keywords: personalización; target; destino; personalización de destinos; configurar destinos de personalización; la misma página; página siguiente;
+keywords: personalización; target; destino; destinos de personalización; configurar destinos de personalización; misma página; página siguiente;
 title: Configurar destinos de personalización para la personalización de la misma página y de la página siguiente
 type: Tutorial
 description: Obtenga información sobre cómo configurar destinos de personalización para la personalización de la misma página y de la página siguiente.
@@ -17,61 +17,61 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->When [configuración de la conexión de Adobe Target](../catalog/personalization/adobe-target-connection.md) sin usar un ID de conjunto de datos, no se admiten los casos de uso descritos en este artículo.
+>Cuándo [configuración de la conexión de Adobe Target](../catalog/personalization/adobe-target-connection.md) sin usar un ID de flujo de datos, no se admiten los casos de uso descritos en este artículo.
 
-Uso de Adobe Experience Platform [segmentación de arista](../../segmentation/ui/edge-segmentation.md) para permitir a los clientes crear y segmentar segmentos de audiencia a gran escala, en tiempo real.
+Adobe Experience Platform utiliza [segmentación de borde](../../segmentation/ui/edge-segmentation.md) para permitir a los clientes crear y segmentar audiencias a gran escala, en tiempo real.
 
-Esta capacidad le ayuda a configurar casos de uso de personalización de la misma página y de la siguiente página.
+Esta capacidad le ayuda a configurar casos de uso de personalización de la misma página y de la siguiente.
 
-Este artículo proporciona instrucciones paso a paso sobre cómo configurar los destinos de Experience Platform y personalización para estos casos de uso.
+Este artículo proporciona instrucciones paso a paso sobre cómo configurar Experience Platform y los destinos de personalización para estos casos de uso.
 
-Además, vea el siguiente vídeo para obtener información general sobre el proceso de configuración de extremo a extremo.
+Además, vea el siguiente vídeo para obtener una descripción general del proceso de configuración de extremo a extremo.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340091/)
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde la grabación de este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
+>La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
 
-## Paso 1: Configuración de un conjunto de datos en la interfaz de usuario de la recopilación de datos {#configure-datastream}
+## Paso 1: Configurar un flujo de datos en la IU de recopilación de datos {#configure-datastream}
 
-El primer paso para configurar el destino de personalización es configurar un conjunto de datos para el SDK web del Experience Platform. Esto se realiza en la interfaz de usuario de la recopilación de datos.
+El primer paso para configurar el destino de personalización es configurar una secuencia de datos para el SDK web de Experience Platform. Esto se realiza en la IU de recopilación de datos.
 
-Al configurar el conjunto de datos, en **[!UICONTROL Adobe Experience Platform]** asegúrese de que ambas **[!UICONTROL Segmentación de Edge]** y **[!UICONTROL Destinos de personalización]** están seleccionados.
+Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]** asegúrese de que ambas **[!UICONTROL Segmentación de Edge]** y **[!UICONTROL Destinos de personalización]** están seleccionados.
 
-![Configuración del almacén de datos](../assets/ui/configure-personalization-destinations/datastream-config.png)
+![Configuración de flujo de datos](../assets/ui/configure-personalization-destinations/datastream-config.png)
 
-Para obtener más información sobre cómo configurar un conjunto de datos, siga las instrucciones descritas en la sección [Documentación del SDK web de plataforma](../../edge/datastreams/overview.md).
+Para obtener más información sobre cómo configurar un conjunto de datos, siga las instrucciones que se describen en la [Documentación del SDK web de Platform](../../edge/datastreams/overview.md).
 
-## Paso 2: Configurar el destino personalizado {#configure-destination}
+## Paso 2: Configuración del destino de personalización {#configure-destination}
 
-Una vez configurado el conjunto de datos, puede empezar a configurar el destino de personalización.
+Una vez configurada la secuencia de datos, puede empezar a configurar el destino de personalización.
 
 Siga las [tutorial de creación de conexión de destino](../ui/connect-destination.md) para obtener instrucciones detalladas sobre cómo crear una nueva conexión de destino.
 
-Según el destino que esté configurando, consulte los siguientes artículos para conocer los requisitos previos específicos de destino y la información relacionada:
+Según el destino que esté configurando, consulte los siguientes artículos para conocer los requisitos previos específicos del destino y la información relacionada:
 
-* [Conexión Adobe Target](../catalog/personalization/adobe-target-connection.md)
-* [Conexión personalizada personalizada](../catalog/personalization/custom-personalization.md)
+* [Conexión de Adobe Target](../catalog/personalization/adobe-target-connection.md)
+* [Conexión de personalización personalizada](../catalog/personalization/custom-personalization.md)
 
-## Paso 3: Cree un [!DNL Active-On-Edge] combinar directiva {#create-merge-policy}
+## Paso 3: Crear un [!DNL Active-On-Edge] política de combinación {#create-merge-policy}
 
-Después de crear la conexión de destino, debe crear una [!DNL Active-On-Edge] directiva de combinación.
+Después de crear la conexión de destino, debe crear un [!DNL Active-On-Edge] política de combinación.
 
-Siga las instrucciones indicadas en [creación de una directiva de combinación](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)y asegúrese de habilitar la variable **[!UICONTROL Política de combinación activa/perimetral]** alternar.
+Siga las instrucciones de [creación de una política de combinación](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)y asegúrese de habilitar la variable **[!UICONTROL Política de combinación activa en Edge]** alternar.
 
 ## Paso 4: Crear un nuevo segmento en Platform {#create-segment}
 
-Una vez creado el [!DNL Active-On-Edge] política de combinación, debe crear un nuevo segmento en Platform.
+Después de crear el [!DNL Active-On-Edge] política de combinación, debe crear un nuevo segmento en Platform.
 
-Siga las [generador de segmentos](../../segmentation/ui/segment-builder.md) guía para crear el nuevo segmento y asegúrese de [asignarlo](../../segmentation/ui/segment-builder.md#merge-policies) el [!DNL Active-On-Edge] política de combinación que ha creado en el paso 3.
+Siga las [generador de segmentos](../../segmentation/ui/segment-builder.md) para crear su nuevo segmento, y asegúrese de lo siguiente [asignarlo](../../segmentation/ui/segment-builder.md#merge-policies) el [!DNL Active-On-Edge] política de combinación creada en el paso 3.
 
-## Paso 5: Activar el segmento en el destino
+## Paso 5: Activar el segmento en su destino
 
-El último paso del proceso de configuración es activar el segmento que ha creado en el paso 4 al destino que ha creado en el paso 2.
+El último paso del proceso de configuración es activar el segmento que ha creado en el paso 4 en el destino que ha creado en el paso 2.
 
-Para ello, siga esta [tutorial de activación](../ui/activate-profile-request-destinations.md).
+Para ello, siga este [tutorial de activación](../ui/activate-profile-request-destinations.md).
 
 ## Validación de la configuración {#validate-configuration}
 
-Después de seguir correctamente los pasos anteriores, debería ver los nuevos segmentos en su destino de personalización.
+Después de seguir correctamente los pasos anteriores, debería ver los nuevos segmentos en el destino de personalización.

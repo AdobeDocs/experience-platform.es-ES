@@ -13,93 +13,93 @@ ht-degree: 0%
 
 # Importación y uso de audiencias externas
 
-Adobe Experience Platform admite la posibilidad de importar audiencias externas, que posteriormente pueden utilizarse como componentes para una nueva definición de segmento. Este documento proporciona un tutorial para configurar un Experience Platform para importar y utilizar audiencias externas.
+Adobe Experience Platform admite la capacidad de importar audiencias externas, que posteriormente pueden utilizarse como componentes para una nueva definición de segmento. Este documento proporciona un tutorial para configurar Experience Platform para importar y utilizar audiencias externas.
 
 ## Primeros pasos
 
-Este tutorial requiere una comprensión práctica de las distintas [!DNL Adobe Experience Platform] servicios relacionados con la creación de segmentos de audiencia. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de segmentos de audiencia. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
-- [Servicio de segmentación](../home.md): Permite generar segmentos de audiencia a partir de datos del perfil del cliente en tiempo real.
-- [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
-- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que los datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
-- [Conjuntos de datos](../../catalog/datasets/overview.md): La construcción de almacenamiento y administración para la persistencia de datos en el Experience Platform.
-- [ingesta por transmisión](../../ingestion/streaming-ingestion/overview.md): El modo en que el Experience Platform ingesta y almacena datos de dispositivos del lado del cliente y del servidor en tiempo real.
+- [Servicio de segmentación](../home.md): Permite crear segmentos de audiencia a partir de datos del perfil del cliente en tiempo real.
+- [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
+- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): el marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
+- [Conjuntos de datos](../../catalog/datasets/overview.md): La construcción de almacenamiento y administración para la persistencia de datos en Experience Platform.
+- [Ingesta por streaming](../../ingestion/streaming-ingestion/overview.md): el modo en que el Experience Platform ingiere y almacena datos de dispositivos del lado del cliente y del servidor en tiempo real.
 
 ### Datos de segmentos frente a metadatos de segmentos
 
-Antes de empezar a importar y usar audiencias externas, es importante comprender la diferencia entre los datos de segmentos y los metadatos de segmentos.
+Antes de empezar a importar y usar audiencias externas, es importante comprender la diferencia entre los datos de los segmentos y los metadatos de los segmentos.
 
-Los datos de segmentos hacen referencia a perfiles que cumplen los criterios de calificación de segmentos y, por lo tanto, forman parte de la audiencia.
+Los datos de segmentos hacen referencia a los perfiles que cumplen los criterios de calificación de segmentos y, por lo tanto, forman parte de la audiencia.
 
-Los metadatos del segmento son información sobre el propio segmento, que incluye el nombre, la descripción, la expresión (si corresponde), la fecha de creación, la última fecha de modificación y un ID. El ID vincula los metadatos del segmento con perfiles individuales que cumplen la calificación del segmento y forman parte de la audiencia resultante.
+Los metadatos del segmento son información sobre el propio segmento, que incluye el nombre, la descripción, la expresión (si corresponde), la fecha de creación, la última fecha de modificación y un ID. El ID vincula los metadatos del segmento con los perfiles individuales que cumplen con la calificación del segmento y forman parte de la audiencia resultante.
 
-| Datos de segmentos | Metadatos del segmento |
+| Datos de segmentos | Metadatos de segmentos |
 | ------------ | ---------------- |
-| Perfiles que cumplen la calificación de segmentos | Información sobre el propio segmento |
+| Perfiles que cumplen los requisitos de calificación de segmentos | Información sobre el propio segmento |
 
-## Creación de un área de nombres de identidad para la audiencia externa
+## Crear un área de nombres de identidad para la audiencia externa
 
-El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Las áreas de nombres de identidad permiten a Platform asociar desde dónde se origina un segmento.
+El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Las áreas de nombres de identidad permiten que Platform asocie el lugar desde el que se origina un segmento.
 
-Para crear un área de nombres de identidad, siga las instrucciones de la sección [guía del área de nombres de identidad](../../identity-service/namespaces.md#manage-namespaces). Al crear el área de nombres de identidad, agregue los detalles de origen al área de nombres de identidad y marque su [!UICONTROL Tipo] como **[!UICONTROL Identificador de no personas]**.
+Para crear un área de nombres de identidad, siga las instrucciones de la [guía del área de nombres de identidad](../../identity-service/namespaces.md#manage-namespaces). Al crear el área de nombres de identidad, agregue los detalles de origen al área de nombres de identidad y marque su [!UICONTROL Tipo] as a **[!UICONTROL Identificador de no personas]**.
 
-![El identificador de no persona se resalta en el modal Crear área de nombres de identidad .](../images/tutorials/external-audiences/identity-namespace-info.png)
+![El identificador de no persona aparece resaltado en el modal Crear área de nombres de identidad.](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 ## Creación de un esquema para los metadatos del segmento
 
 Después de crear un área de nombres de identidad, debe crear un nuevo esquema para el segmento que va a crear.
 
-Para empezar a componer un esquema, seleccione primero **[!UICONTROL Esquemas]** en la barra de navegación izquierda, seguida de la **[!UICONTROL Crear esquema]** en la esquina superior derecha del espacio de trabajo Esquemas . Desde aquí, seleccione **[!UICONTROL Examinar]** para ver una selección completa de los tipos de esquema disponibles.
+Para empezar a maquetar un esquema, seleccione primero **[!UICONTROL Esquemas]** en la barra de navegación izquierda, seguido de **[!UICONTROL Crear esquema]** en la esquina superior derecha del espacio de trabajo Esquemas. Desde aquí, seleccione **[!UICONTROL Examinar]** para ver una selección completa de los tipos de esquema disponibles.
 
-![Tanto Create schema como Browse quedan resaltados.](../images/tutorials/external-audiences/create-schema-browse.png)
+![Se resaltan tanto Crear esquema como Examinar.](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Como está creando una definición de segmento, que es una clase predefinida, seleccione **[!UICONTROL Usar clase existente]**. Ahora, seleccione la opción **[!UICONTROL Definición del segmento]** clase, seguido de **[!UICONTROL Asignar clase]**.
+Dado que está creando una definición de segmento, que es una clase predefinida, seleccione **[!UICONTROL Utilizar clase existente]**. Ahora, seleccione la **[!UICONTROL Definición del segmento]** clase, seguida de **[!UICONTROL Asignar clase]**.
 
-![Se resalta la clase de definición del segmento.](../images/tutorials/external-audiences/assign-class.png)
+![La clase de definición del segmento aparece resaltada.](../images/tutorials/external-audiences/assign-class.png)
 
-Ahora que se ha creado el esquema, debe especificar qué campo contendrá el ID de segmento. Este campo debe marcarse como identidad principal y asignarse a los espacios de nombres creados anteriormente.
+Ahora que se ha creado el esquema, debe especificar qué campo contendrá el ID del segmento. Este campo debe marcarse como identidad principal y asignarse a las áreas de nombres creadas anteriormente.
 
-![Las casillas de verificación para marcar el campo seleccionado como identidad principal se resaltan en el Editor de esquemas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![Las casillas de verificación para marcar el campo seleccionado como la identidad principal se resaltan en el Editor de esquemas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Después de marcar la variable `_id` como identidad principal, seleccione el título del esquema seguido de la opción etiquetada **[!UICONTROL Perfil]**. Select **[!UICONTROL Habilitar]** para habilitar el esquema para [!DNL Real-Time Customer Profile].
+Después de marcar la variable `_id` como identidad principal, seleccione el título del esquema, seguido de la opción denominada **[!UICONTROL Perfil]**. Seleccionar **[!UICONTROL Activar]** para habilitar el esquema para [!DNL Real-Time Customer Profile].
 
-![La opción para habilitar el esquema para Perfil se resalta en el Editor de esquemas.](../images/tutorials/external-audiences/schema-profile.png)
+![El conmutador para habilitar el esquema para el perfil se resalta en el Editor de esquemas.](../images/tutorials/external-audiences/schema-profile.png)
 
-Ahora, este esquema está habilitado para Perfil, con la identificación principal asignada al espacio de nombres de identidad no personal que ha creado. Como resultado, esto significa que los metadatos de segmento importados a Platform mediante este esquema se incorporarán en Perfil sin combinarse con otros datos de Perfil relacionados con las personas.
+Ahora, este esquema está habilitado para el perfil, con la identificación principal asignada al área de nombres de identidad de no persona que ha creado. Como resultado, esto significa que los metadatos de segmento importados en Platform mediante este esquema se incorporarán en el perfil sin combinarse con otros datos de perfil relacionados con personas.
 
-## Creación de un conjunto de datos para el esquema
+## Crear un conjunto de datos para el esquema
 
 Después de configurar el esquema, deberá crear un conjunto de datos para los metadatos del segmento.
 
-Para crear un conjunto de datos, siga las instrucciones de la sección [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#create). Debe seguir el **[!UICONTROL Crear conjunto de datos a partir del esquema]** utilizando el esquema creado anteriormente.
+Para crear un conjunto de datos, siga las instrucciones de la [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#create). Debe seguir las **[!UICONTROL Crear conjunto de datos a partir de esquema]** , utilizando el esquema creado anteriormente.
 
-![Se resalta el esquema en el que desea basar el conjunto de datos.](../images/tutorials/external-audiences/select-schema.png)
+![Se resaltará el esquema en el que desee basar el conjunto de datos.](../images/tutorials/external-audiences/select-schema.png)
 
-Después de crear el conjunto de datos, siga las instrucciones de la sección [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#enable-profile) para habilitar este conjunto de datos para el perfil del cliente en tiempo real.
+Después de crear el conjunto de datos, siga las instrucciones del [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#enable-profile) para habilitar este conjunto de datos para el perfil del cliente en tiempo real.
 
-![La opción para habilitar el esquema para Perfil se resalta en la página de actividad Conjunto de datos .](../images/tutorials/external-audiences/dataset-profile.png)
+![El conmutador para habilitar el esquema para el perfil se resalta en la página de actividad del conjunto de datos.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Configuración e importación de datos de audiencia
 
-Con el conjunto de datos habilitado, ahora se pueden enviar datos a Platform a través de la interfaz de usuario o mediante las API de Experience Platform. Puede introducir estos datos mediante una conexión por lotes o de flujo continuo.
+Con el conjunto de datos habilitado, ahora los datos se pueden enviar a Platform a través de la interfaz de usuario o mediante las API de Experience Platform. Puede introducir estos datos mediante una conexión por lotes o de flujo continuo.
 
 ### Ingesta de datos mediante una conexión por lotes
 
-Para crear una conexión por lotes, puede seguir las instrucciones del genérico [guía de la interfaz de usuario de carga de archivos locales](../../sources/tutorials/ui/create/local-system/local-file-upload.md). Para obtener una lista completa de las fuentes disponibles con las que puede utilizar la ingesta de datos, lea la [información general sobre fuentes](../../sources/home.md).
+Para crear una conexión por lotes, puede seguir las instrucciones del genérico [guía de IU de carga de archivos locales](../../sources/tutorials/ui/create/local-system/local-file-upload.md). Para obtener una lista completa de las fuentes disponibles con las que puede utilizar la ingesta de datos, lea la [información general de orígenes](../../sources/home.md).
 
 ### Ingesta de datos mediante una conexión de flujo continuo
 
-Para crear una conexión de flujo continuo, puede seguir las instrucciones de la sección [Tutorial de API](../../sources/tutorials/api/create/streaming/http.md) o [Tutorial de la interfaz de usuario](../../sources/tutorials/ui/create/streaming/http.md).
+Para crear una conexión de flujo continuo, puede seguir las instrucciones de la [Tutorial de API](../../sources/tutorials/api/create/streaming/http.md) o el [Tutorial de IU](../../sources/tutorials/ui/create/streaming/http.md).
 
-Una vez que haya creado la conexión de flujo continuo, tendrá acceso a su punto final de flujo único al que podrá enviar los datos. Para obtener información sobre cómo enviar datos a estos extremos, lea la [tutorial sobre datos de registro de flujo continuo](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+Una vez que haya creado su conexión de flujo continuo, tendrá acceso a su punto final de flujo único al que puede enviar sus datos. Para obtener información sobre cómo enviar datos a estos extremos, lea la [tutorial sobre streaming de datos de registro](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![El extremo de flujo continuo de la conexión de flujo continuo se resalta en la página de detalles del origen.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![El extremo de flujo continuo para la conexión de flujo continuo se resalta en la página de detalles de origen.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Estructura de metadatos de audiencia
 
 Después de crear una conexión, ahora puede introducir los datos en Platform.
 
-A continuación se puede ver una muestra de los metadatos de la carga útil de audiencia externa:
+A continuación se muestra una muestra de los metadatos de la carga útil de audiencia externa:
 
 ```json
 {
@@ -139,70 +139,70 @@ A continuación se puede ver una muestra de los metadatos de la carga útil de a
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `schemaRef` | El esquema **must** consulte el esquema creado anteriormente para los metadatos del segmento. |
-| `datasetId` | El ID del conjunto de datos **must** consulte el conjunto de datos creado anteriormente para el esquema que acaba de crear. |
-| `xdmEntity._id` | El ID **must** consulte el mismo ID de segmento que utiliza como audiencia externa. |
-| `xdmEntity.identityMap` | Esta sección **must** contiene la etiqueta de identidad utilizada al crear el área de nombres creada anteriormente. |
-| `{IDENTITY_NAMESPACE}` | Esta es la etiqueta del área de nombres de identidad creada anteriormente. Por lo tanto, si, por ejemplo, llamara a su área de nombres de identidad &quot;externalAudience&quot;, la utilizaría como clave de la matriz. |
-| `segmentName` | Nombre del segmento por el que desea segmentar la audiencia externa. |
+| `schemaRef` | El esquema **debe** consulte el esquema creado anteriormente para los metadatos del segmento. |
+| `datasetId` | ID del conjunto de datos **debe** consulte el conjunto de datos creado anteriormente para el esquema que acaba de crear. |
+| `xdmEntity._id` | El ID **debe** consulte el mismo ID de segmento que utiliza como audiencia externa. |
+| `xdmEntity.identityMap` | Esta sección **debe** contienen la etiqueta de identidad utilizada al crear el área de nombres creada anteriormente. |
+| `{IDENTITY_NAMESPACE}` | Esta es la etiqueta del área de nombres de identidad creada anteriormente. Por lo tanto, si llamara al área de nombres de identidad &quot;externalAudience&quot;, la usaría como clave de la matriz. |
+| `segmentName` | El nombre del segmento por el que desea segmentar la audiencia externa. |
 
 ## Generación de segmentos con audiencias importadas
 
-Una vez configuradas las audiencias importadas, se pueden utilizar como parte del proceso de segmentación. Para buscar audiencias externas, vaya al Generador de segmentos y seleccione **[!UICONTROL Audiencias]** en la ficha **[!UICONTROL Campos]** para obtener más información.
+Una vez configuradas las audiencias importadas, pueden utilizarse como parte del proceso de segmentación. Para buscar audiencias externas, vaya al Generador de segmentos y seleccione **[!UICONTROL Audiencias]** en la pestaña **[!UICONTROL Campos]** sección.
 
-![Se resalta el selector de audiencias externas en el Generador de segmentos.](../images/tutorials/external-audiences/external-audiences.png)
+![Se resaltará el selector de audiencias externas del Generador de segmentos.](../images/tutorials/external-audiences/external-audiences.png)
 
 ## Pasos siguientes
 
-Ahora que puede utilizar audiencias externas en sus segmentos, puede utilizar el Generador de segmentos para crear segmentos. Para aprender a crear segmentos, lea la [tutorial sobre la creación de segmentos](./create-a-segment.md).
+Ahora que puede usar audiencias externas en los segmentos, puede usar el Generador de segmentos para crear segmentos. Para aprender a crear segmentos, lea la [tutorial sobre creación de segmentos](./create-a-segment.md).
 
 ## Apéndice
 
-Además de usar metadatos de audiencia externos importados y usarlos para crear segmentos, también puede importar miembros de segmentos externos a Platform.
+Además de utilizar metadatos de audiencia externos importados y utilizarlos para crear segmentos, también puede importar suscripciones a segmentos externos a Platform.
 
-### Configurar un esquema de destino de pertenencia a segmentos externos
+### Configurar un esquema de destino de pertenencia a segmento externo
 
-Para empezar a componer un esquema, seleccione primero **[!UICONTROL Esquemas]** en la barra de navegación izquierda, seguida de la **[!UICONTROL Crear esquema]** en la esquina superior derecha del espacio de trabajo Esquemas . Desde aquí, seleccione **[!UICONTROL Perfil individual XDM]**.
+Para empezar a maquetar un esquema, seleccione primero **[!UICONTROL Esquemas]** en la barra de navegación izquierda, seguido de **[!UICONTROL Crear esquema]** en la esquina superior derecha del espacio de trabajo Esquemas. Desde aquí, seleccione **[!UICONTROL Perfil individual de XDM]**.
 
-![Se resalta el área de Perfil individual XDM.](../images/tutorials/external-audiences/create-schema-profile.png)
+![Se resalta el área Perfil individual de XDM.](../images/tutorials/external-audiences/create-schema-profile.png)
 
-Ahora que se ha creado el esquema, debe añadir el grupo de campos de pertenencia al segmento como parte del esquema. Para ello, seleccione [!UICONTROL Detalles de pertenencia a segmentos], seguido de [!UICONTROL Agregar grupos de campos].
+Ahora que se ha creado el esquema, deberá agregar el grupo de campos de pertenencia al segmento como parte del esquema. Para ello, seleccione [!UICONTROL Detalles de abono de segmento], seguido de [!UICONTROL Adición de grupos de campos].
 
-![Se resalta el grupo de campos Detalles de pertenencia a segmentos .](../images/tutorials/external-audiences/segment-membership-details.png)
+![El grupo de campos Detalles de abono del segmento aparece resaltado.](../images/tutorials/external-audiences/segment-membership-details.png)
 
-Además, asegúrese de que el esquema esté marcado para **[!UICONTROL Perfil]**. Para ello, debe marcar un campo como identidad principal.
+Además, asegúrese de que el esquema esté marcado para **[!UICONTROL Perfil]**. Para ello, debe marcar un campo como la identidad principal.
 
-![La opción para habilitar el esquema para Perfil se resalta en el Editor de esquemas.](../images/tutorials/external-audiences/external-segment-profile.png)
+![El conmutador para habilitar el esquema para el perfil se resalta en el Editor de esquemas.](../images/tutorials/external-audiences/external-segment-profile.png)
 
-### Configuración del conjunto de datos
+### Configurar el conjunto de datos
 
-Después de crear el esquema, debe crear un conjunto de datos.
+Después de crear el esquema, deberá crear un conjunto de datos.
 
-Para crear un conjunto de datos, siga las instrucciones de la sección [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#create). Debe seguir el **[!UICONTROL Crear conjunto de datos a partir del esquema]** utilizando el esquema creado anteriormente.
+Para crear un conjunto de datos, siga las instrucciones de la [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#create). Debe seguir las **[!UICONTROL Crear conjunto de datos a partir de esquema]** , utilizando el esquema creado anteriormente.
 
-![Se resalta el esquema que se utiliza para crear la base de datos.](../images/tutorials/external-audiences/select-schema.png)
+![Se resaltará el esquema que está utilizando para crear la base de datos.](../images/tutorials/external-audiences/select-schema.png)
 
-Después de crear el conjunto de datos, siga las instrucciones de la sección [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#enable-profile) para habilitar este conjunto de datos para el perfil del cliente en tiempo real.
+Después de crear el conjunto de datos, siga las instrucciones del [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#enable-profile) para habilitar este conjunto de datos para el perfil del cliente en tiempo real.
 
-![La opción para habilitar el esquema para Perfil se resalta en el flujo de trabajo crear conjuntos de datos .](../images/tutorials/external-audiences/dataset-profile.png)
+![El conmutador para habilitar el esquema para el perfil se resalta en el flujo de trabajo Crear conjuntos de datos.](../images/tutorials/external-audiences/dataset-profile.png)
 
-## Configurar e importar datos de pertenencia a audiencias externas
+## Configuración e importación de datos de pertenencia a audiencias externas
 
-Con el conjunto de datos habilitado, ahora se pueden enviar datos a Platform a través de la interfaz de usuario o mediante las API de Experience Platform. Puede introducir estos datos mediante una conexión por lotes o de flujo continuo.
+Con el conjunto de datos habilitado, ahora los datos se pueden enviar a Platform a través de la interfaz de usuario o mediante las API de Experience Platform. Puede introducir estos datos mediante una conexión por lotes o de flujo continuo.
 
 ### Ingesta de datos mediante una conexión por lotes
 
-Para crear una conexión por lotes, puede seguir las instrucciones del genérico [guía de la interfaz de usuario de carga de archivos locales](../../sources/tutorials/ui/create/local-system/local-file-upload.md). Para obtener una lista completa de las fuentes disponibles con las que puede utilizar la ingesta de datos, lea la [información general sobre fuentes](../../sources/home.md).
+Para crear una conexión por lotes, puede seguir las instrucciones del genérico [guía de IU de carga de archivos locales](../../sources/tutorials/ui/create/local-system/local-file-upload.md). Para obtener una lista completa de las fuentes disponibles con las que puede utilizar la ingesta de datos, lea la [información general de orígenes](../../sources/home.md).
 
 ### Ingesta de datos mediante una conexión de flujo continuo
 
-Para crear una conexión de flujo continuo, puede seguir las instrucciones de la sección [Tutorial de API](../../sources/tutorials/api/create/streaming/http.md) o [Tutorial de la interfaz de usuario](../../sources/tutorials/ui/create/streaming/http.md).
+Para crear una conexión de flujo continuo, puede seguir las instrucciones de la [Tutorial de API](../../sources/tutorials/api/create/streaming/http.md) o el [Tutorial de IU](../../sources/tutorials/ui/create/streaming/http.md).
 
-Una vez que haya creado la conexión de flujo continuo, tendrá acceso a su punto final de flujo único al que podrá enviar los datos. Para obtener información sobre cómo enviar datos a estos extremos, lea la [tutorial sobre datos de registro de flujo continuo](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+Una vez que haya creado su conexión de flujo continuo, tendrá acceso a su punto final de flujo único al que puede enviar sus datos. Para obtener información sobre cómo enviar datos a estos extremos, lea la [tutorial sobre streaming de datos de registro](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![El extremo de flujo continuo de la conexión de flujo continuo se resalta en la página de detalles del origen.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![El extremo de flujo continuo para la conexión de flujo continuo se resalta en la página de detalles de origen.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
-## Estructura de pertenencia a segmentos
+## Estructura del abono de segmentos
 
 Después de crear una conexión, ahora puede introducir los datos en Platform.
 
@@ -252,12 +252,12 @@ A continuación se puede ver una muestra de la carga útil de pertenencia a audi
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `schemaRef` | El esquema **must** consulte el esquema creado anteriormente para los datos de pertenencia al segmento. |
-| `datasetId` | El ID del conjunto de datos **must** consulte el conjunto de datos creado anteriormente para el esquema de pertenencia que acaba de crear. |
+| `schemaRef` | El esquema **debe** consulte el esquema creado anteriormente para los datos de abono del segmento. |
+| `datasetId` | ID del conjunto de datos **debe** consulte el conjunto de datos creado anteriormente para el esquema de pertenencia que acaba de crear. |
 | `xdmEntity._id` | Un ID adecuado que se utiliza para identificar de forma exclusiva el registro dentro del conjunto de datos. |
-| `{TENANT_NAME}.identities` | Esta sección se utiliza para conectar el grupo de campos de las identidades personalizadas con los usuarios que ha importado anteriormente. |
-| `segmentMembership.{IDENTITY_NAMESPACE}` | Esta es la etiqueta del área de nombres de identidad personalizada creada anteriormente. Por lo tanto, si, por ejemplo, llamara a su área de nombres de identidad &quot;externalAudience&quot;, la utilizaría como clave de la matriz. |
+| `{TENANT_NAME}.identities` | Esta sección se utiliza para conectar el grupo de campos de las identidades personalizadas con los usuarios importados anteriormente. |
+| `segmentMembership.{IDENTITY_NAMESPACE}` | Esta es la etiqueta del área de nombres de identidad personalizada creada anteriormente. Por lo tanto, si llamara al área de nombres de identidad &quot;externalAudience&quot;, la usaría como clave de la matriz. |
 
 >[!NOTE]
 >
->De forma predeterminada, las suscripciones a audiencias externas solo se conservan durante 30 días. Para conservarlos durante más de 30 días, utilice el `validUntil` al introducir los datos de audiencia. Para obtener más información sobre este campo, consulte la guía de [Grupos de campos de esquema de detalles de pertenencia a segmentos](../../xdm/field-groups/profile/segmentation.md).
+>De forma predeterminada, las suscripciones a audiencias externas solo se conservan durante 30 días. Para conservarlos durante más de 30 días, utilice el `validUntil` al introducir los datos de audiencia. Para obtener más información sobre este campo, lea la guía de [Grupos de campos de esquema Detalles de abono de segmento](../../xdm/field-groups/profile/segmentation.md).

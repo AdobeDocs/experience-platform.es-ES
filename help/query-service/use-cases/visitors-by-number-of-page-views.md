@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consultas de eventos de experiencias;consulta de eventos de experiencias;consulta de eventos de experiencias;consulta de eventos de experiencias;
-title: Enumerar visitantes por su número de vistas de página
-description: Aprenda a escribir consultas que utilicen eventos de experiencias para recuperar una lista de visitantes organizada por el número de vistas de página.
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consultas de experienceevent;consulta de experienceevent;consulta de Experience Event;
+title: Enumeración de visitantes por número de vistas de página
+description: Obtenga información sobre cómo escribir consultas que utilizan eventos de experiencia para recuperar una lista de visitantes organizada por el número de vistas de página.
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '272'
@@ -9,15 +9,15 @@ ht-degree: 1%
 
 ---
 
-# Enumerar visitantes según el número de vistas de página
+# Enumerar visitantes por número de vistas de página
 
-Este documento proporciona un ejemplo del SQL requerido para recuperar una lista de visitantes organizada por el número de vistas de página. Con el servicio de consulta de Adobe Experience Platform, puede escribir consultas que utilicen [!DNL Experience Events] para capturar una variedad de casos de uso. Los eventos de experiencia están representados por la clase ExperienceEvent del Modelo de datos de experiencia (XDM), que captura una instantánea inmutable y no agregada del sistema cuando un usuario interactúa con un sitio web o servicio. Los eventos de experiencia pueden incluso utilizarse para el análisis del dominio de tiempo. Consulte la [sección pasos siguientes](#next-steps) para más casos de uso que impliquen [!DNL Experience Events] para generar informes de visitantes.
+Este documento proporciona un ejemplo del SQL necesario para recuperar una lista de visitantes organizados por el número de vistas de página. Con Adobe Experience Platform Query Service, puede escribir consultas que utilicen [!DNL Experience Events] para recopilar una variedad de casos de uso. Los eventos de experiencia se representan mediante la clase ExperienceEvent del Modelo de datos de experiencia (XDM), que captura una instantánea del sistema inmutable y no agregada cuando un usuario interactúa con un sitio web o servicio. Los Eventos de experiencia incluso se pueden utilizar para el análisis de dominio de tiempo. Consulte la [sección de pasos siguientes](#next-steps) para ver más casos de uso que impliquen [!DNL Experience Events] para generar informes de visitantes.
 
-Más información sobre XDM y [!DNL Experience Events] se encuentra en la variable [[!DNL XDM System] información general](../../xdm/home.md). Combinando el servicio de consulta con [!DNL Experience Events], puede realizar un seguimiento eficaz de las tendencias de comportamiento entre los usuarios. El siguiente documento proporciona ejemplos de consultas que involucran [!DNL Experience Events].
+Más información sobre XDM y [!DNL Experience Events] se puede encontrar en la [[!DNL XDM System] descripción general](../../xdm/home.md). Combinando el servicio de consultas con [!DNL Experience Events], puede rastrear de manera eficaz las tendencias de comportamiento entre sus usuarios. El siguiente documento proporciona ejemplos de consultas que implican [!DNL Experience Events].
 
 ## Objetivo
 
-En el siguiente ejemplo se crea un informe que enumera los 10 ID de los usuarios que vieron la mayoría de las páginas.
+En el siguiente ejemplo se crea un informe que enumera los 10 ID de los usuarios que más páginas han visto.
 
 ```sql
 SELECT 
@@ -49,10 +49,10 @@ Los resultados de la consulta se muestran en la siguiente tabla.
 
 ## Pasos siguientes {#next-steps}
 
-Al leer este documento, tiene una mejor comprensión de cómo utilizar el servicio de consulta con [!DNL Experience Events] para enumerar los usuarios que vieron la mayoría de las páginas.
+Al leer este documento, tiene una mejor comprensión de cómo utilizar el servicio de consulta con [!DNL Experience Events] para enumerar los usuarios que han visto la mayoría de las páginas.
 
-Consulte los siguientes casos de uso para conocer otros casos utilizados basados en visitantes:
+Consulte los siguientes casos de uso para obtener más información sobre otros casos de uso basados en visitantes:
 
 - [Enumerar las sesiones anteriores de un visitante.](./list-visitor-sessions.md)
 - [Ver un informe de resumen de un visitante.](./roll-up-report-of-a-visitor.md)
-- [Cree un informe de tendencias de eventos por día.](./trended-report-of-events.md)
+- [Crea un informe de tendencias de los eventos por día.](./trended-report-of-events.md)

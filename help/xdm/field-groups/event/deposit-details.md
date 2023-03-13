@@ -1,25 +1,26 @@
 ---
-title: Deposit Details Schema Field Group
-description: This document provides an overview of the Deposit Details schema field group.
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+title: Grupo de campos de esquema de detalles de depósito
+description: Este documento proporciona información general del grupo de campos de esquema Detalles de depósito.
+exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 5%
+source-wordcount: '109'
+ht-degree: 2%
 
 ---
 
-# 
+# [!UICONTROL Detalles de depósito] grupo de campos de esquema
 
-[[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) `personalFinances.deposits`
+[!UICONTROL Detalles de depósito] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). El grupo de campos proporciona un solo `personalFinances.deposits` a un esquema, que captura detalles sobre un depósito financiero.
 
 ![](../../images/field-groups/deposit-details.png)
 
-| Propiedad | Data type | Descripción |
+| Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `account` | [](../../data-types/financial-account.md) | Describes the financial account associated with the deposit. |
-| `transaction` | [](../../data-types/transaction.md) | Describes the financial transaction associated with the deposit. |
-| `mobileDeposit` | [!UICONTROL Boolean] | Indicates whether the deposit was done through a mobile platform. |
+| `account` | [[!UICONTROL Cuenta financiera]](../../data-types/financial-account.md) | Describe la cuenta financiera asociada con el depósito. |
+| `transaction` | [[!UICONTROL Transacción]](../../data-types/transaction.md) | Describe la transacción financiera asociada con el depósito. |
+| `mobileDeposit` | [!UICONTROL Booleana] | Indica si el depósito se realizó a través de una plataforma móvil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-[](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json)
+Para obtener más información sobre el grupo de campos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).

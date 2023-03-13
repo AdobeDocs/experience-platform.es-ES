@@ -1,6 +1,6 @@
 ---
-title: Guía del tablero Perfiles de la cuenta
-description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los perfiles de cuenta B2B de su organización.
+title: Guía del panel de perfiles de cuenta
+description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los perfiles de cuenta B2B de su organización.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
@@ -9,103 +9,103 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL Perfiles de la cuenta] tablero
+# [!UICONTROL Perfiles de cuenta] tablero
 
-La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los perfiles de su cuenta, tal como se captura durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el [!UICONTROL Perfiles de la cuenta] tablero en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el tablero.
+La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los perfiles de la cuenta, tal como se capturan durante una instantánea diaria. Esta guía describe cómo acceder a y trabajar con [!UICONTROL Perfiles de cuenta] en la interfaz de usuario de y proporciona más información sobre las visualizaciones que se muestran en el panel.
 
-Para obtener una descripción general de todas las funciones de la interfaz de usuario del perfil de la cuenta, visite la [guía de interfaz de usuario del perfil de cuenta](../../rtcdp/accounts/account-profile-ui-guide.md).
+Para obtener una descripción general de todas las funciones de la interfaz de usuario del perfil de la cuenta, visite la [guía de IU del perfil de cuenta](../../rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Primeros pasos
 
-Debe tener derecho a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para acceder al B2B [!UICONTROL Perfiles de la cuenta] tablero.
+Debe tener derecho a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para acceder al B2B [!UICONTROL Perfiles de cuenta] panel.
 
 ## Datos de perfiles de cuenta
 
-La variable [!UICONTROL Perfiles de la cuenta] tablero muestra una instantánea de la información de cuenta unificada de las múltiples fuentes de sus canales de marketing y de los diversos sistemas que su organización utiliza actualmente para almacenar información de cuentas de clientes.
+El [!UICONTROL Perfiles de cuenta] el tablero muestra una instantánea de la información de cuentas unificadas de las distintas fuentes de los canales de marketing y los distintos sistemas que utiliza su organización actualmente para almacenar la información de cuentas de clientes.
 
-Los datos de perfil de la instantánea muestran los datos exactamente como aparecen en el momento concreto en que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos, y la variable [!UICONTROL Perfiles de la cuenta] el tablero no se actualiza en tiempo real.
+Los datos de perfil de la instantánea muestran los datos exactamente como aparecen en el momento específico en el que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o una muestra de los datos y la variable [!UICONTROL Perfiles de cuenta] el tablero no se actualiza en tiempo real.
 
 >[!NOTE]
 >
->Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el panel hasta que se tome la siguiente instantánea.
+>Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el tablero hasta que se tome la siguiente instantánea.
 
-## Explorar el [!UICONTROL Perfiles de la cuenta] tablero
+## Explore la [!UICONTROL Perfiles de cuenta] tablero
 
-Para ir a la [!UICONTROL Perfiles de la cuenta] tablero en la interfaz de usuario de Platform, seleccione **[!UICONTROL Perfiles]** under [!UICONTROL Cuentas] en el panel de navegación izquierdo.
+Para ir a [!UICONTROL Perfiles de cuenta] en la IU de Platform, seleccione **[!UICONTROL Perfiles]** bajo [!UICONTROL Cuentas] en el panel de navegación izquierdo.
 
-![La interfaz de usuario de Platform con Perfiles de cuenta en el panel de navegación izquierdo resaltado y se muestra la pestaña Información general .](../images/account-profiles/account-profiles-dashboard.png)
+![La interfaz de usuario de Platform con perfiles de cuenta en la navegación izquierda resaltada y se muestra la pestaña de información general.](../images/account-profiles/account-profiles-dashboard.png)
 
-En el [!UICONTROL Perfiles de la cuenta] tablero, puede: [examinar los perfiles de cuenta introducidos en su organización](#browse-account-profiles)o [ver la totalidad de los datos de perfil de su cuenta de un vistazo mediante widgets](#standard-widgets) que visualizan aspectos de los datos.
+Desde el [!UICONTROL Perfiles de cuenta] tablero puede hacer lo siguiente [examine los perfiles de cuenta introducidos en su organización](#browse-account-profiles), o [vea la totalidad de los datos de perfil de la cuenta de un vistazo mediante widgets](#standard-widgets) que visualizan aspectos de los datos.
 
-## Explorar perfiles de cuenta {#browse-account-profiles}
+## Examinar perfiles de cuenta {#browse-account-profiles}
 
-La variable [!UICONTROL Examinar] permite buscar y ver los perfiles de cuenta de solo lectura introducidos en la organización mediante un ID de cuenta de un origen empresarial conectado o introduciendo directamente los detalles del origen. Desde aquí puede ver información importante que pertenece al perfil de la cuenta, como su nombre, sector, ingresos y segmento, entre otros.
+El [!UICONTROL Examinar] permite buscar y ver los perfiles de cuenta de solo lectura introducidos en su organización mediante un ID de cuenta de una fuente empresarial conectada o introduciendo directamente los detalles de la fuente. Desde aquí puede ver información importante que pertenece al perfil de cuenta, como, por ejemplo, su nombre, sector, ingresos y segmento, entre otros.
 
-Seleccione el [!UICONTROL ID de perfil] de los resultados mostrados en la [!UICONTROL Examinar] para abrir la pestaña [!UICONTROL Detalles] para el perfil de cuenta.
+Seleccione el [!UICONTROL ID de perfil] de los resultados mostrados en la [!UICONTROL Examinar] para abrir el [!UICONTROL Detalles] para el perfil de cuenta.
 
-![La ficha Examinar Perfiles de cuenta muestra los resultados y el ID de perfil resaltado.](../images/account-profiles/account-profiles-browse-tab.png)
+![La pestaña de exploración Perfiles de cuenta muestra los resultados y el ID de perfil se resalta.](../images/account-profiles/account-profiles-browse-tab.png)
 
-La información de perfil de cuenta que se muestra en la variable [!UICONTROL Detalles] se ha combinado desde varios fragmentos de perfil para formar una sola vista de la cuenta individual. Consulte la documentación sobre [exploración de perfiles de cuenta en Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para obtener más información sobre las capacidades de visualización de perfiles de cuenta en la interfaz de usuario de Platform.
+La información de perfil de cuenta mostrada en la [!UICONTROL Detalles] se ha combinado desde varios fragmentos de perfil para formar una sola vista de la cuenta individual. Consulte la documentación sobre [exploración de perfiles de cuenta en Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para obtener más información acerca de las funcionalidades de visualización de perfiles de cuenta en la IU de Platform.
 
-## La variable [!UICONTROL Perfiles de la cuenta] [!UICONTROL Información general] {#overview}
+## El [!UICONTROL Perfiles de cuenta] [!UICONTROL Información general] {#overview}
 
-La variable [!UICONTROL Información general] está compuesta por utilidades que proporcionan métricas de solo lectura para transmitir información importante sobre los perfiles de su cuenta. Select **[!UICONTROL Modificar tablero]** para cambiar el aspecto del [!UICONTROL Información general] moviendo y cambiando el tamaño de las utilidades.
+El [!UICONTROL Información general] está compuesta por widgets que proporcionan métricas de solo lectura para transmitir información importante sobre los perfiles de la cuenta. Seleccionar **[!UICONTROL Modificar tablero]** para cambiar el aspecto del [!UICONTROL Información general] moviendo y cambiando el tamaño de los widgets.
 
-![La ficha Información general de perfiles de cuenta con el panel Modificar resaltado.](../images/account-profiles/modify-dashboard.png)
+![La pestaña Información general de perfiles de cuenta con el panel Modificar resaltado.](../images/account-profiles/modify-dashboard.png)
 
-Consulte el documento de [modificación de tableros](../customize/modify.md) y [Información general de la biblioteca de utilidades](../customize/widget-library.md) para obtener más información.
+Consulte el documento sobre [modificación de paneles](../customize/modify.md) y el [Resumen de biblioteca de widgets](../customize/widget-library.md) para obtener más información.
 
 ## Widgets estándar {#standard-widgets}
 
-Adobe proporciona utilidades estándar que puede utilizar para visualizar distintas métricas relacionadas con los perfiles de su cuenta.
+Adobe proporciona widgets estándar que puede utilizar para visualizar diferentes métricas relacionadas con los perfiles de la cuenta.
 
 Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
-* [Total de cuentas por sector](#total-accounts-by-industry)
-* [Perfiles de cuenta agregados](#account-profiles-added)
+* [Cuentas totales por sector](#total-accounts-by-industry)
+* [Perfiles de cuenta añadidos](#account-profiles-added)
 * [Distribución de puntuación predictiva](#predictive-scoring-distribution)
-* [Puntuación predictiva factores de mayor influencia](#predictive-scoring-top-influential-factors)
+* [Factores más influyentes de la puntuación predictiva](#predictive-scoring-top-influential-factors)
 
-### Total de cuentas por sector {#total-accounts-by-industry}
+### Cuentas totales por sector {#total-accounts-by-industry}
 
-Este widget muestra el número total de cuentas en una única métrica y utiliza un gráfico circular para ilustrar los tamaños proporcionales de los recuentos para las industrias que conforman el número total. La clave proporciona información de codificación de color para las diferentes industrias que conforman el gráfico circular.
+Este widget muestra el número total de cuentas en una sola métrica y utiliza un gráfico de anillo para ilustrar los tamaños proporcionales de los recuentos de las industrias que conforman el número total. La clave proporciona información de codificación de color para las diferentes industrias que conforman el gráfico circular.
 
-Los recuentos individuales de las diferentes industrias se muestran en un cuadro de diálogo cuando el cursor pasa el ratón sobre la sección correspondiente del gráfico circular.
+Los recuentos individuales de las diferentes industrias se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
 
-![Total de cuentas por widget de sector.](../images/account-profiles/total-accounts-by-industry-widget.png)
+![El total de cuentas por widget de sector.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
-### Perfiles de cuenta agregados {#account-profiles-added}
+### Perfiles de cuenta añadidos {#account-profiles-added}
 
-Esta utilidad utiliza un gráfico de barras con códigos de color para ilustrar el recuento de perfiles agregados a una cuenta durante un período de tiempo determinado y la proporción de diferentes industrias que constituyen estos perfiles añadidos. Las industrias están codificadas por colores y una clave proporciona la información de codificación de color para las diferentes industrias que conforman el gráfico de barras. El periodo de análisis se selecciona en el menú desplegable de la utilidad. El gráfico de barras se puede visualizar a lo largo de 30 días, 90 días y un período de 12 meses.
+Este widget utiliza un gráfico de barras con códigos de color para ilustrar el recuento de perfiles agregados a una cuenta durante un período de tiempo determinado y la proporción de diferentes industrias que constituyen estos perfiles agregados. Las industrias están codificadas por colores, y una clave proporciona la información de codificación por colores para las diferentes industrias que conforman el gráfico de barras. El periodo de análisis se selecciona en el menú desplegable de widgets. El gráfico de barras se puede visualizar durante un periodo de 30 días, 90 días y 12 meses.
 
 >[!NOTE]
 >
->Como los perfiles solo se agregan a una cuenta y nunca se eliminan, el número más bajo posible de perfiles agregados durante un período de tiempo es cero.
+>Como los perfiles solo se añaden a una cuenta y nunca se eliminan, el número más bajo posible de perfiles añadidos durante un periodo de tiempo es cero.
 
-![Se ha agregado la utilidad Perfiles de cuenta .](../images/account-profiles/accounts-profiles-added-widget.png)
+![El widget Perfiles de cuenta agregados.](../images/account-profiles/accounts-profiles-added-widget.png)
 
 ### Distribución de puntuación predictiva {#predictive-scoring-distribution}
 
-La variable [!UICONTROL Distribución de puntuación predictiva] La utilidad muestra la distribución de puntuación de todos los perfiles de cuenta para ayudarle a comprender el estado de la canalización de ventas de un vistazo. Los datos de puntuación se transmiten a través de un gráfico circular y un gráfico de columnas.
+El [!UICONTROL Distribución de puntuación predictiva] Este widget muestra la distribución de puntuación de todos los perfiles de cuenta para ayudarle a comprender el estado de su canal de ventas de un vistazo. Los datos de puntuación se transmiten mediante un gráfico circular y un gráfico de columnas.
 
-El gráfico circular ilustra la proporción del total de perfiles de cuenta en cada uno de los grupos de mayor, medio y baja tendencia a comprar bloques. La clave proporciona más detalles sobre las secciones con códigos de color, incluidos los rangos de bloque de puntuación y el número de perfiles de cuenta en ese rango.
+El gráfico de anillo ilustra la proporción de los perfiles totales de la cuenta en cada uno de los bloques de compra alta, media y baja. La clave proporciona más detalles sobre las secciones con códigos de color, incluidos los intervalos del bloque de puntuación y el número de perfiles de cuenta en ese intervalo.
 
 El gráfico de columnas proporciona un desglose de puntuación más granular. Cada columna muestra el número de perfiles de cuenta en cada uno de los 20 bloques de incremento de cinco puntos.
 
-El menú desplegable del widget permite seleccionar el modelo de puntuación de cuenta.
+El menú desplegable dentro del widget permite seleccionar el modelo de puntuación de la cuenta.
 
 ![El widget de distribución de puntuación predictiva.](../images/account-profiles/predictive-scoring-distribution.png)
 
-### Puntuación predictiva factores de mayor influencia {#predictive-scoring-top-influential-factors}
+### Factores más influyentes de la puntuación predictiva {#predictive-scoring-top-influential-factors}
 
-La variable [!UICONTROL Puntuación predictiva factores de mayor influencia] ayuda a comprender los factores más significativos que dirigen las puntuaciones para cada grupo de propensión.
+El [!UICONTROL Factores más influyentes de la puntuación predictiva] Este widget le ayuda a comprender los factores más significativos que impulsan las puntuaciones de cada bloque de tendencia.
 
-Este widget muestra los factores de mayor influencia para cada uno de los bloques de alta, media y baja propensión. Una barra para cada factor influyente indica el porcentaje de perfiles de cuenta en ese bloque de inclinación que contiene el factor influyente específico.
+Este widget muestra los principales factores influyentes para cada uno de los bloques de alta, media y baja tendencia. Una barra para cada factor influyente indica el porcentaje de los perfiles de cuenta en ese bloque de tendencia que contiene el factor influyente específico.
 
-El menú desplegable del widget permite seleccionar el modelo de puntuación de cuenta.
+El menú desplegable dentro del widget permite seleccionar el modelo de puntuación de la cuenta.
 
-![La utilidad Puntuación predictiva de factores de mayor influencia.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+![El widget de factores influyentes principales de puntuación predictiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
 ## Pasos siguientes
 
-Al seguir este documento, ahora debe saber cómo localizar la variable [!UICONTROL Perfiles de la cuenta] tablero. También debe comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con perfiles de cuenta como parte de los datos B2B en la interfaz de usuario del Experience Platform, consulte la [información general sobre perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) para Adobe Real-Time CDP, B2B Edition.
+Si sigue este documento, debería saber cómo localizar el [!UICONTROL Perfiles de cuenta] panel. También debe comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con perfiles de cuenta como parte de los datos B2B en la IU de Experience Platform, consulte la [resumen de perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) para Adobe Real-Time CDP, edición B2B.

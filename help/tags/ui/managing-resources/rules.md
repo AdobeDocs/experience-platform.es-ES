@@ -121,18 +121,18 @@ Al crear o editar reglas, puede guardar y compilar en su [biblioteca activa](../
 
 ## Ordenación de reglas {#rule-ordering}
 
-La ordenación de reglas permite controlar el orden de ejecución de las reglas que comparten un evento. Cada regla contiene un número entero que determina su prioridad de pedido (el valor predeterminado es 50). Las reglas que contienen valores más bajos para su orden se ejecutan antes que las que tienen valores más altos.
+La ordenación de reglas permite controlar el orden de ejecución de las reglas que comparten un evento. Cada regla contiene un entero que determina su prioridad de orden (el valor predeterminado es 50). Las reglas que contienen valores más bajos para su orden se ejecutan antes que las que tienen valores más altos.
 
 Considere un conjunto de cinco reglas que comparten un evento y todas tienen prioridad predeterminada:
 
-* Si hay una regla que desea ejecutar en último lugar, puede editar ese componente de regla y darle un número mayor que 50 (por ejemplo, 60).
-* Si hay una regla que desea ejecutar primero, puede editar ese componente de regla y darle un número inferior a 50 (por ejemplo, 40).
+* Si hay una regla que desea ejecutar en último lugar, puede editar ese componente de regla y asignarle un número superior a 50 (por ejemplo, 60).
+* Si hay una regla que desea ejecutar primero, puede editar ese componente de regla y asignarle un número inferior a 50 (por ejemplo, 40).
 
 >[!NOTE]
 >
->En última instancia, la responsabilidad de ejecutar las acciones en orden recae en el desarrollador de la extensión del tipo de evento que está utilizando. Los desarrolladores de extensiones de Adobe se aseguran de que sus extensiones funcionan según lo previsto. Adobe proporciona directrices a los desarrolladores de extensiones de terceros para que lo hagan correctamente, pero no puede garantizar cómo se siguen estas directrices.
+>En última instancia, la responsabilidad de ejecutar las acciones en orden recae en el desarrollador de la extensión del tipo de evento que está utilizando. Los desarrolladores de extensiones de Adobe se aseguran de que sus extensiones funcionan según lo previsto. Adobe orienta a los desarrolladores de extensiones de terceros para que lo hagan correctamente, pero no puede garantizar cómo se siguen estas directrices.
 
-Se recomienda encarecidamente que ordene las reglas con números positivos entre 1 y 100 (el valor predeterminado es 50). Dado que el orden de las reglas debe mantenerse manualmente, se recomienda mantener el esquema de pedidos lo más sencillo posible. Si hay casos extremos en los que esta restricción es demasiado restrictiva, las etiquetas admiten números de orden de reglas entre +/- 2.147.483.648.
+Es muy recomendable que ordene las reglas con números positivos entre 1 y 100 (el valor predeterminado es 50). Dado que el orden de las reglas debe mantenerse manualmente, es recomendable mantener un esquema de pedidos lo más sencillo posible. Si hay casos extremos en los que esta restricción es demasiado restrictiva, las etiquetas admiten números de orden de regla entre +/- 2 147 483 648.
 
 ### Administración de reglas del lado del cliente
 
@@ -142,7 +142,7 @@ Puede usar `document.write` en los scripts personalizados independientemente de 
 
 Puede ordenar distintos tipos de código personalizado combinándolos entre sí. Por ejemplo, puede tener una acción de código personalizado de JavaScript, luego una acción de código personalizado HTML y luego otra acción de código personalizado de JavaScript. Las etiquetas garantizan que se ejecuten en ese orden.
 
-## Agrupamiento de reglas
+## Agrupación de reglas
 
 Los eventos y las condiciones de las reglas siempre se incluyen en la biblioteca de etiquetas principal. Las acciones pueden agruparse en la biblioteca principal o cargarse tarde como recursos secundarios según sea necesario. El tipo de evento de la regla determina si las acciones están agrupadas o no.
 
@@ -163,17 +163,17 @@ Adobe no puede garantizar que se activen otras reglas y que se necesite el códi
 
 ## Secuencia de componentes de regla {#sequencing}
 
-El comportamiento del entorno de tiempo de ejecución de depende de si **[!UICONTROL Ejecutar componentes de regla en secuencia]** está activado o desactivado en la propiedad. Esta configuración determina si los componentes de una regla se pueden evaluar en paralelo (asincrónicamente) o si deben evaluarse en secuencia.
+El comportamiento del entorno de tiempo de ejecución de depende de si **[!UICONTROL Ejecutar componentes de regla en secuencia]** está activado o desactivado en la propiedad. Esta configuración determina si los componentes de una regla se pueden evaluar en paralelo (asincrónicamente) o en secuencia.
 
 >[!IMPORTANT]
 >
->Esta configuración solo determina cómo se evalúan las condiciones y las acciones dentro de cada regla y no afecta a la secuencia en la que se ejecutan las reglas en su propiedad. Consulte la sección anterior de [orden de reglas](#rule-ordering) para obtener más información sobre cómo determinar el orden de ejecución de varias reglas.
+>Esta configuración solo determina cómo se evalúan las condiciones y las acciones dentro de cada regla y no afecta a la secuencia en que se ejecutan las reglas en la propiedad. Consulte la sección anterior sobre [orden de reglas](#rule-ordering) para obtener más información sobre cómo determinar el orden de ejecución de varias reglas.
 >
->En [reenvío de eventos](../event-forwarding/overview.md) , las acciones de regla siempre se ejecutan secuencialmente y esta configuración no está disponible. Asegúrese de que el pedido sea correcto cuando cree la regla.
+>Entrada [reenvío de eventos](../event-forwarding/overview.md) propiedades, las acciones de regla siempre se ejecutan secuencialmente y esta configuración no está disponible. Asegúrese de que el pedido sea correcto cuando cree la regla.
 
 ### Habilitado
 
-Si la configuración está habilitada cuando se activa un evento en tiempo de ejecución, las condiciones y acciones de la regla se añaden a una cola de procesamiento (según el orden que haya definido) y se procesan de a una en una en base a &quot;primero en, primero en salir&quot; (FIFO). La regla espera a que finalice el componente antes de pasar al siguiente.
+Si la configuración está habilitada cuando se activa un evento en tiempo de ejecución, las condiciones y acciones de la regla se agregan a una cola de procesamiento (según el orden definido) y se procesan de uno en uno según el criterio &quot;primero en entrar, primero en salir&quot; (FIFO). La regla espera la finalización del componente antes de pasar al siguiente.
 
 Si una condición se evalúa como falsa o alcanza el tiempo de espera definido, las siguientes condiciones y acciones de esa regla se eliminan de la cola.
 

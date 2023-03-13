@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;área de nombres;área de nombres;áreas de nombres;área de nombres;área de nombres de identidad;área de nombres de identidad;identidad;identidad
+keywords: Experience Platform;inicio;temas populares;área de nombres;áreas de nombres;áreas de nombres;área de nombres de identidad;área de nombres de identidad;área de nombres de identidad;identidad;identidad;identidad
 solution: Experience Platform
-title: Creación de un área de nombres personalizada en la API del servicio de identidad
+title: Crear un área de nombres personalizada en la API del servicio de identidad
 description: Con la API de área de nombres de identidad, puede crear un área de nombres de identidad personalizada que solo estará disponible para su organización.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
@@ -11,15 +11,15 @@ ht-degree: 5%
 
 ---
 
-# Creación de un área de nombres personalizada en la API del servicio de identidad
+# Crear un área de nombres personalizada en la API del servicio de identidad
 
-Al usar la variable [!DNL Identity Namespace] , puede crear un área de nombres de identidad personalizada que solo esté disponible para su organización.
+Uso del [!DNL Identity Namespace] API, puede crear un área de nombres de identidad personalizada que estará disponible solo para su organización.
 
-Para obtener recomendaciones sobre la creación de áreas de nombres personalizadas, consulte [la documentación de preguntas frecuentes del servicio de ID](../troubleshooting-guide.md).
+Para obtener recomendaciones sobre la creación de áreas de nombres personalizadas, consulte [la documentación de preguntas frecuentes sobre Identity Service](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
->Los espacios de nombres son un calificador para identidades. Como tal, una vez que se ha creado un área de nombres, no se puede eliminar.
+>Las áreas de nombres son un calificador para identidades. Como tal, una vez creada una Área de nombres, no se puede eliminar.
 
 **Formato de API**
 
@@ -63,4 +63,4 @@ curl -X POST \
 
 ## Pasos siguientes
 
-Continúe con el siguiente tutorial a [listar el ID nativo de una identidad](./list-native-id.md)
+Continúe con el siguiente tutorial para [Enumerar el ID nativo de una identidad](./list-native-id.md)
