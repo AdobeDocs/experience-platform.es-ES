@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 0dbd050a9057f491537777ab539bfc687f8c89cb
+source-git-commit: 09f7a3f4c1fde5d12f91308342f2c44f67ff961b
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1039'
 ht-degree: 6%
 
 ---
@@ -122,6 +122,7 @@ ht-degree: 6%
       * [Conexión de Salesforce CRM](./catalog/crm/salesforce.md)
       * [Conexión de Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Conexión de divulgación](catalog/crm/outreach.md)
+      * [Conexión de Zendesk](catalog/crm/zendesk.md)
    * Destinos de Data Management Platform {#data-management}
       * [Información general sobre los destinos de Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extensión de DIL de Audience Manager](./catalog/data-management/aam-dil-extension.md)
