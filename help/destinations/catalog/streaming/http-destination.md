@@ -3,9 +3,9 @@ keywords: streaming; destino HTTP
 title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
+source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
 workflow-type: tm+mt
-source-wordcount: '2535'
+source-wordcount: '2436'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ Si selecciona la opción **[!UICONTROL Credenciales del cliente de OAuth 2]** ti
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Incluir marcas de tiempo de segmentos"
->abstract="Cambie si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada.<p>contenido de la primera viñeta</p><p>contenido de la segunda viñeta</p><ul><li>Elemento de lista uno.</li><li>Elemento de lista dos.</li></ul> - Más líneas de texto. - Aún más líneas de texto. Prueba de formato para ver si podemos: <br>Usar formato de HTML</p><p>O incluso utilice etiquetas de párrafo. Esta es la línea uno.</p><p>Y más etiquetas de párrafo, para la línea dos.</p><p>Todas las etiquetas de párrafo. Para la línea tres.</p>Finalmente, una prueba para incluir vínculos con markdown [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html](vínculo absoluto) y HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=es">texto de vínculo</a> sintaxis. Por último, una prueba para incluir vínculos con markdown [../overview.md](vínculos relativos) y HTML <a href="../overview.md">texto de vínculo relativo</a> sintaxis."
+>abstract="Cambie si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
