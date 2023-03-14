@@ -23,7 +23,7 @@ ht-degree: 64%
 
 - Esta extensión está pensada para utilizarse con AEM Asset Insights.
 - Más específicamente, reemplaza el proceso ***pageTracker*** y el código de página.
-- AEM Cuando se configura y activa, esta extensión envía métricas de impresión y clics de recursos a Adobe Analytics AEM, que luego se importarán de nuevo de forma automática en los informes de Asset Insights en la.
+- Cuando se configura y activa, esta extensión envía AEM métricas de impresión y clics de recursos a Adobe Analytics, que se importará automáticamente de nuevo en los informes de Asset Insights en AEM.
 
 **Correcciones de errores**
 

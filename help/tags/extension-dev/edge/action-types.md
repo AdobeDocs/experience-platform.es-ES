@@ -15,22 +15,22 @@ ht-degree: 66%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-En una regla de etiqueta, una acción es algo que se realiza después de que las condiciones de las reglas hayan superado la evaluación. Las extensiones proporcionan los tipos de acción y su efecto lo define completamente el autor de la extensión.
+En una regla de etiqueta, una acción es algo que se realiza después de que las condiciones de la regla hayan pasado la evaluación. Los tipos de acción los proporcionan las extensiones y el autor de la extensión los define por completo.
 
 Por ejemplo, una extensión podría proporcionar un tipo de acción &quot;mostrar chat de asistencia&quot; que puede mostrar un cuadro de diálogo de chat de asistencia técnica para ayudar a los usuarios con problemas para efectuar sus pagos.
 
-Este documento explica cómo definir tipos de acción para una extensión de Edge en Adobe Experience Platform.
+Este documento explica cómo definir tipos de acción para una extensión edge en Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
 >Si va a desarrollar una extensión web, consulte la guía sobre [tipos de acciones para extensiones web](../web/action-types.md) en su lugar.
 >
->Este documento supone que ya está familiarizado con los módulos de la biblioteca y con la forma en que se integran con las extensiones de Edge. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
+>Este documento también supone que está familiarizado con los módulos de biblioteca y cómo se integran en las extensiones Edge. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
 
 Los tipos de acción suelen consistir en lo siguiente:
 
-1. Vista que se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos, y que permite a los usuarios modificar la configuración de la acción.
-2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y realizar una acción.
+1. Vista que se muestra en la interfaz de usuario del Experience Platform y en la de la recopilación de datos y que permite a los usuarios modificar la configuración de la acción.
+2. Un módulo de biblioteca emitido dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y realizar una acción.
 
 Por ejemplo, un módulo para reenviar algunos datos a un extremo de terceros puede tener este aspecto.
 

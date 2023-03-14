@@ -1,5 +1,5 @@
 ---
-title: Información general sobre la extensión de Adobe Medium Analytics (3.x SDK) para audio y vídeo
+title: Información general sobre la extensión de audio y vídeo de Adobe Medium Analytics (3.x SDK) for Audio and Video
 description: Obtenga información acerca de la extensión de etiqueta de Adobe Media Analytics (SDK 3.x) para audio y vídeo en Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
@@ -24,7 +24,7 @@ La extensión Media Analytics (MA) agrega el SDK principal de JavaScript Media S
 
 >[!IMPORTANT]
 >
->Esta extensión se implementa con Media SDK 3.x, que no es compatible con Media SDK 2.x. Dado que 2.x se ha desaprobado, actualice a 3.x.
+>Esta extensión se implementa con Media SDK 3.x, que no es compatible con Media SDK 2.x. Dado que 2.x ha quedado obsoleto, actualice a 3.x.
 
 Después de incluir las tres extensiones mencionadas arriba en su proyecto de etiquetas, puede continuar de una de las dos maneras siguientes:
 

@@ -29,7 +29,7 @@ Seleccione el vínculo correspondiente para obtener más información sobre cada
 
 ## Asistencia
 
-La compatibilidad está disponible a través del espacio de trabajo de Slack de la comunidad de desarrolladores de etiquetas mientras crea y prueba la extensión. El espacio de trabajo de Slack es una comunidad en línea en la que los autores de extensiones colaboran. Puede solicitar acceso mediante los siguientes métodos [formulario en línea](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+La compatibilidad está disponible a través del espacio de trabajo de Slack de la comunidad de desarrolladores de etiquetas mientras crea y prueba la extensión. El espacio de trabajo de Slack es una comunidad en línea en la que los autores de extensiones colaboran. Puede solicitar el acceso mediante lo siguiente [formulario en línea](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >

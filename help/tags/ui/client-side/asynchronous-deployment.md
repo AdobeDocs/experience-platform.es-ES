@@ -14,7 +14,7 @@ ht-degree: 92%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Implementación asíncrona"
->abstract="Si esta opción está habilitada, cuando se analice esta etiqueta de script, el explorador empezará a cargar el archivo JavaScript, pero en lugar de esperar a que se cargue y ejecute la biblioteca, seguirá analizando y procesando el resto del documento. Esto puede mejorar el rendimiento de la página web, pero tiene importantes implicaciones en cuanto a cómo se ejecutan determinadas reglas. Consulte la documentación para obtener más detalles."
+>abstract="Si esta opción está habilitada, cuando se analiza esta etiqueta de script, el explorador empezará a cargar el archivo JavaScript, pero en lugar de esperar a que se cargue y ejecute la biblioteca, seguirá analizando y procesando el resto del documento. Esto puede mejorar el rendimiento de la página web, pero tiene implicaciones importantes en cuanto a cómo se ejecutan determinadas reglas. Consulte la documentación para obtener más detalles."
 
 >[!NOTE]
 >
