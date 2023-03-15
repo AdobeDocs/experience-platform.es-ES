@@ -5,9 +5,9 @@ title: Pseudónimo Caducidad de datos de perfil
 description: Este documento proporciona una guía general sobre la configuración de la caducidad de los datos para los perfiles seudónimos dentro de Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
+source-git-commit: 6ba219162f6fde37d8bd258c43ed1bdbbbcdf569
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ La caducidad de los datos del perfil pseudoanónima no se puede configurar a tra
 - Los espacios de nombres de identidad que se deben tener en cuenta para las eliminaciones de perfiles seudónimos.
    - Por ejemplo: `ECID` solo, `AAID` solo, o una combinación de `ECID` y `AAID`.
 - Cantidad de tiempo de espera antes de eliminar un perfil seudónomo. La recomendación predeterminada para los clientes es de 14 días. Sin embargo, este valor puede variar en función del caso de uso.
-- El recuento de perfiles actual comparado con el recuento de perfiles de licencia.
 
 ## Preguntas frecuentes {#faq}
 
