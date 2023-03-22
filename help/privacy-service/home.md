@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Información general del Privacy Service
 description: Privacy Service le permite facilitar el cumplimiento automatizado de las normas legales de privacidad en sus operaciones de datos de Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1608'
 ht-degree: 5%
 
 ---
 
 # Información general del [!DNL Privacy Service]
+
+>[!IMPORTANT]
+>
+>Se han mejorado los permisos de Adobe Experience Platform Privacy Service para aumentar su nivel de granularidad. Estos cambios permiten a los administradores de la organización conceder acceso a más usuarios con la función y el nivel de permiso deseados. Los usuarios de cuentas técnicas deben actualizar sus permisos de Privacy Service, ya que esta actualización inminente constituye un cambio radical para ellos. La aplicación de este cambio de permisos tendrá lugar en **28 de marzo de 2023**.
+>
+>Las cuentas técnicas están disponibles para los clientes empresariales y se crean mediante la consola de desarrolladores de Adobe. La Adobe ID de un titular de cuenta técnica finaliza en `@techacct.adobe.com`. Si no está seguro de si es titular de una cuenta técnica, póngase en contacto con el administrador de su organización.
 
 Para ofrecer mejores experiencias de cliente, debe recopilar y almacenar los datos personales de sus clientes. Al utilizar estos datos, es importante comprender y respetar la privacidad de sus clientes. Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derecho de acceder o eliminar sus datos personales de sus almacenes de datos si así lo solicitan.
 
