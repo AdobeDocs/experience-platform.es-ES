@@ -3,9 +3,9 @@ keywords: flujo continuo; Destino HTTP
 title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que necesite en datos de perfil exportados fuera del Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
+source-git-commit: e22472443eef8aa053aeb0eb35488de581e4b2bd
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2648'
 ht-degree: 0%
 
 ---
@@ -158,12 +158,12 @@ Si selecciona la opción **[!UICONTROL Credenciales de cliente de OAuth 2]** tip
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Incluir marcas de hora de segmentos"
->abstract="Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
+>abstract="Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada.**Monitorizar las actividades de los usuarios en Platform**<h2>Descripción</h2><p>Puede controlar la actividad de los usuarios para los distintos servicios y capacidades de Platform en forma de registros de auditoría. Estos registros forman una pista de auditoría que registra <b>who</b> performed <b>what</b> acción y <b>when</b>. Los registros de auditoría pueden ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de manera eficaz con las políticas corporativas de administración de datos y los requisitos regulatorios.</p><h2>Instrucciones</h2><ul><li>Select <b>Auditorías</b> en el panel de navegación izquierdo. El espacio de trabajo de Audits muestra una lista de registros registrados, ordenados de forma predeterminada de los más recientes a los menos recientes.</li>   <li> NOTA: Los registros de auditoría se conservan durante 365 días después de los cuales se eliminarán del sistema. Por lo tanto, solo puede volver durante un periodo máximo de 365 días. Si necesita volver la vista atrás en los datos de más de 365 días, debe exportar los registros en una cadencia normal para satisfacer los requisitos de política interna. </li><li>Seleccione un evento de la lista para ver sus detalles en el carril derecho. </li><li>Seleccione el icono de canal para mostrar una Lista de controles de filtro para ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los filtros seleccionados. </li><li>Para exportar la lista actual de registros de auditoría, seleccione **Descargar registro**.</li><li>Para obtener más ayuda sobre esta función, consulte la <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=es">información general sobre registros de auditoría</a> en Experience League.</li></ul>"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_queryparameters"
->title="Parámetros de consulta"
->abstract="De forma opcional, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Dé este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`."
+[!CONTEXTUALHELP]
+id="platform_destinations_connect_http_queryparameters"
+title="Parámetros de consulta"
+abstract="De forma opcional, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Dé este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`."
 
 Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
@@ -186,8 +186,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 ## Activar segmentos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfil de flujo continuo](../../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
