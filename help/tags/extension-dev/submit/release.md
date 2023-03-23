@@ -2,9 +2,9 @@
 title: Lanzamiento de una extensión
 description: Obtenga información sobre cómo publicar de forma privada o pública una extensión de etiqueta en Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '311'
 ht-degree: 92%
 
 ---
@@ -30,7 +30,7 @@ Debe realizar el lanzamiento de su extensión como extensión privada para poder
 
 La manera más fácil de realizar el lanzamiento de la extensión con disponibilidad privada consiste en utilizar el [publicador de extensiones de etiqueta](https://www.npmjs.com/package/@adobe/reactor-releaser). Encontrará más instrucciones en su documentación.
 
-Si desea realizar el lanzamiento de su extensión de manera privada directamente mediante la API, consulte la llamada de ejemplo de [lanzamiento privado de un paquete de extensión](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/) en los documentos de la API para obtener más información.
+Si desea realizar el lanzamiento de su extensión de manera privada directamente mediante la API, consulte la llamada de ejemplo de [lanzamiento privado de un paquete de extensión](../../api/endpoints/extension-packages.md/#private-release) en los documentos de la API para obtener más información.
 
 ## Lanzamiento público
 

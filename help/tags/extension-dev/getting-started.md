@@ -2,10 +2,10 @@
 title: Introducción al desarrollo de extensiones
 description: Empiece a desarrollar sus propias extensiones de etiqueta en Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 95%
+source-wordcount: '451'
+ht-degree: 91%
 
 ---
 
@@ -61,3 +61,7 @@ Por ejemplo, esto puede devolver si el explorador del usuario es Chrome, si est�
 >* Se puede añadir más de un evento, condición o acción.
 >* Solo puede existir una vista de configuración.
 
+
+## Pasos siguientes
+
+* Siga las [Información general del proceso de envío](./submit/overview.md) y prepararse para [validate](./submit/upload-and-test.md#validate) y [cargar](./submit/upload-and-test.md#integration) la extensión para realizar pruebas dentro del ecosistema de etiquetas.

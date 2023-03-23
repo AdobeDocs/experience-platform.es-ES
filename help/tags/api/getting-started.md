@@ -2,10 +2,10 @@
 title: Introducción a la API de Reactor
 description: Obtenga información sobre cómo empezar a usar la API de Reactor, incluidos los pasos para generar las credenciales de acceso necesarias.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 97%
+source-wordcount: '1050'
+ht-degree: 94%
 
 ---
 
@@ -21,7 +21,7 @@ Esta guía explica cómo utilizar la consola de desarrollador de Adobe para reco
 
 ## Obtener acceso de desarrollador a Adobe Experience Platform
 
-Para poder generar valores de autenticación para la API de Reactor, debe tener acceso de desarrollador a Experience Platform. Para obtener acceso de desarrollador, siga los pasos iniciales en el [tutorial de autenticación de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Una vez que llegue al paso Generar credenciales de acceso en Adobe Developer Console, vuelva a este tutorial para generar las credenciales específicas de la API de Reactor.
+Para poder generar valores de autenticación para la API de Reactor, debe tener acceso de desarrollador a Experience Platform. Para obtener acceso de desarrollador, siga los pasos iniciales en el [tutorial de autenticación de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Una vez que haya completado el paso &quot;Obtener acceso de usuario&quot;, vuelva a este tutorial para generar las credenciales específicas de la API de Reactor.
 
 ## Generar credenciales de acceso
 
@@ -37,7 +37,7 @@ Los pasos para generar estos valores se tratan en detalle a continuación.
 
 ### Configuración única
 
-Vaya a la [consola de desarrollador de Adobe](https://www.adobe.com/go/devs_console_ui) e inicie sesión con su Adobe ID. A continuación, siga los pasos descritos en el tutorial sobre la [creación de un proyecto vacío](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) en la documentación de la consola de desarrollador.
+Vaya a la [consola de desarrollador de Adobe](https://www.adobe.com/go/devs_console_ui) e inicie sesión con su Adobe ID. A continuación, siga los pasos descritos en el tutorial sobre la [creación de un proyecto vacío](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) en la documentación de la consola de desarrollador.
 
 Una vez creado un proyecto, seleccione **Agregar API** en la pantalla **Información general del proyecto**.
 
@@ -61,7 +61,7 @@ La siguiente pantalla le solicita que seleccione uno o más perfiles de producto
 
 >[!NOTE]
 >
->Su organización gestiona los perfiles de producto a través de Adobe Admin Console y contiene conjuntos específicos de permisos para funciones granulares. Los perfiles de producto y sus permisos solo los pueden administrar usuarios con privilegios de administrador en su organización. Si no está seguro de qué perfiles de producto desea seleccionar para la API, póngase en contacto con su administrador.
+>Su organización gestiona los perfiles de producto a través de Adobe Admin Console y contienen conjuntos específicos de permisos para funciones granulares. Los perfiles de producto y sus permisos solo los pueden administrar usuarios con privilegios de administrador en su organización. Si no está seguro de qué perfiles de producto desea seleccionar para la API, póngase en contacto con su administrador.
 
 Seleccione los perfiles de producto que desee en la lista y, a continuación, seleccione **Guardar API configurada** para completar el registro de la API.
 

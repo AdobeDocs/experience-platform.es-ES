@@ -1,11 +1,11 @@
 ---
-title: Guía de resolución de problemas de etiquetas
+title: Guía de solución de problemas de etiquetas
 description: Obtenga respuestas a las preguntas frecuentes sobre Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: b0cc02478273c0b6035488a5d21191ce5cc0e268
+source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 80%
+source-wordcount: '1044'
+ht-degree: 78%
 
 ---
 
@@ -45,6 +45,8 @@ Las etiquetas han abierto su portal de autoservicio virtual, que los desarrollad
 
 Tenemos muchos clientes que también eligen construir sus propias extensiones privadas para usarlas solo dentro de sus propias compañías con los mismos métodos de desarrollo de extensiones.
 
+Para desarrollar una extensión, consulte la [Información general sobre desarrollo de extensiones](./extension-dev/overview.md) página.
+
 ## ¿Cumplen las etiquetas con los estándares de seguridad de mi compañía?
 
 Las etiquetas están listas para SOC-2 y la Ley GLBA. Las etiquetas también permiten el alojamiento propio. Las bibliotecas de JavaScript y las configuraciones móviles se pueden reparar desde sus propios servidores o desde la red de distribución de contenido (CDN) que elija. Para los equipos de seguridad y de TI, esto le permite ejecutar pruebas automatizadas, comprobar los archivos en su propio sistema de control de versiones y cumplir todos los procesos de migración de producción interna, ya sean relacionados con la seguridad o de cualquier otro tipo.
@@ -71,22 +73,7 @@ Las etiquetas están diseñadas para proporcionar y ejecutar tecnologías de mar
 
 ## ¿Con qué exploradores son compatibles las etiquetas?
 
-Compatibilidad del explorador con etiquetas:
-
-- [!DNL Chrome] (última versión)
-- [!DNL Safari] (última versión)
-- [!DNL Firefox] (última versión)
-- [!DNL Microsoft Edge] (última versión)
-- [!DNL Internet Explorer] (10 y posterior)
-- [!DNL iOS Safari] (última versión)
-- [!DNL Android Chrome] (última versión)
-
-Compatibilidad del explorador con la interfaz de la aplicación de etiquetas:
-
-- [!DNL Chrome] (última versión)
-- [!DNL Safari] (última versión)
-- [!DNL Firefox] (última versión)
-- [!DNL Microsoft Edge] (última versión)
+Consulte los navegadores admitidos [here](./extension-dev/browsers.md).
 
 La mayoría de clientes de Adobe ahora aprovecha las funciones más modernas de plataforma web en los exploradores actuales y crean mejores experiencias de usuario, incluidas las aplicaciones de una sola página y las páginas y los sitios web con gran presencia de Ajax. A medida que la mayoría de los clientes avanzan hacia enfoques más modernos con sus sitios, exigen soluciones como etiquetas, que permiten dichos enfoques.
 
@@ -94,16 +81,16 @@ La mayoría de clientes de Adobe ahora aprovecha las funciones más modernas de 
 
 ¡Sí! Las etiquetas ahora admiten propiedades y configuración móviles para los nuevos [SDK de dispositivos móviles](https://sdkdocs.com) de Adobe Experience Platform para implementar la recopilación y entrega de datos en un entorno de aplicación móvil nativa. Acceda a [la documentación](https://sdkdocs.com) para obtener más información.
 
-## ¿Por qué la interfaz de usuario indica que se ha producido un error al cargar mi cuenta?
+## ¿Por qué la interfaz de usuario indica que hubo un error al cargar mi cuenta?
 
-Si recibe un mensaje que indica que se ha producido un error al cargar la cuenta, significa que la cuenta no pertenece a ningún perfil de producto para etiquetas. Consulte la guía de [administración de permisos](../collection/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para conceder acceso a las funciones de recopilación de datos en la interfaz de usuario.
+Si recibe un mensaje que indica que se ha producido un error al cargar su cuenta, significa que su cuenta no pertenece a ningún perfil de producto para etiquetas. Consulte la guía de [administración de permisos](../collection/permissions.md) para aprender a configurar un perfil de producto en Adobe Admin Console para conceder acceso a las funciones de recopilación de datos en la interfaz de usuario.
 
-## ¿Por qué no se puede agregar ninguna propiedad en la interfaz de usuario?
+## ¿Por qué no puedo añadir ninguna propiedad en la interfaz de usuario?
 
-Si no puede crear ninguna propiedad nueva al iniciar sesión en la interfaz de usuario, significa que su cuenta no pertenece a un perfil de producto que tenga derechos de administración de propiedades.
+Si no puede crear ninguna propiedad nueva cuando ha iniciado sesión en la interfaz de usuario, significa que su cuenta no pertenece a un perfil de producto que tenga derechos de gestión de propiedades.
 
-Consulte la guía de [administración de permisos](../collection/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para conceder el derecho Administrar propiedades. Para obtener más información sobre los distintos derechos de las etiquetas, consulte la información general sobre [permisos de usuario para etiquetas](./ui/administration/user-permissions.md).
+Consulte la guía de [administración de permisos](../collection/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para otorgar derechos de gestión de propiedades. Para obtener más información sobre los distintos derechos de las etiquetas, consulte la descripción general de [permisos de usuario para etiquetas](./ui/administration/user-permissions.md).
 
 ## ¿Y si tengo más preguntas?
 
-Si tiene otras preguntas, puede preguntar en la [Página de la comunidad de recopilación de datos Adobe Experience Platform](https://adobe.com/go/launchme) en el Experience League o únase al [espacio de trabajo de Slack de comunidad](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) para desarrolladores y temas de implementación técnica.
+Si tiene otras preguntas, puede preguntar en la [Página de comunidad de recopilación de datos de Adobe Experience Platform](https://adobe.com/go/launchme) en el Experience League, o únase al [espacio de trabajo del Slack de la comunidad](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) para desarrolladores y temas de implementación técnica.

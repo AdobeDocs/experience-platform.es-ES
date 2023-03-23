@@ -2,9 +2,9 @@
 title: Guía de inicio rápido
 description: Aprenda a empezar rápidamente a usar etiquetas con Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1525'
 ht-degree: 90%
 
 ---
@@ -135,5 +135,5 @@ Para obtener más información sobre los distintos estados y opciones disponible
 Para obtener más información sobre las etiquetas, consulte los siguientes recursos:
 
 * **[La comunidad de recopilación de datos](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Formule y responda preguntas, aporte ideas, y vote las ideas de otros. Inicie sesión con su ID de Adobe.
-* **[Documentos de desarrolladores](https://developer.adobelaunch.com/)**: Participe en la comunidad de desarrolladores de etiquetas para desarrollar extensiones o utilizar las API de etiquetas.
+* **[Documentos de desarrolladores](../api/overview.md)**: Participe en la comunidad de desarrolladores de etiquetas para desarrollar extensiones o utilizar las API de etiquetas.
 * **[Información general sobre tutoriales](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=es)**: Estos documentos le presentan conceptos de etiquetas, incluidos el reenvío de eventos y SDK móvil en aplicaciones Android.
