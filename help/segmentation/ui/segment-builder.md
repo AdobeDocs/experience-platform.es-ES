@@ -116,7 +116,7 @@ Para agregar una regla nueva a la definición del segmento, arrastre un mosaico 
 
 >[!IMPORTANT]
 >
->Los últimos cambios realizados en Adobe Experience Platform han actualizado el uso de la variable `OR` y `AND` operadores lógicos entre eventos. Estas actualizaciones no afectarán a los segmentos existentes. Sin embargo, estos cambios afectarán a todas las actualizaciones posteriores de segmentos existentes y nuevas creaciones de segmentos. Lea el [actualización de constantes temporales](./segment-refactoring.md) para obtener más información.
+>Los últimos cambios realizados en Adobe Experience Platform han actualizado el uso de la variable `OR` y `AND` operadores lógicos entre eventos. Estas actualizaciones no afectarán a los segmentos existentes. Sin embargo, estos cambios afectarán a todas las actualizaciones subsiguientes de segmentos existentes y nuevas creaciones de segmentos. Lea el [actualización de constantes temporales](./segment-refactoring.md) para obtener más información.
 
 Al seleccionar un valor para el atributo, verá una lista de valores de enumeración que puede ser el atributo.
 
@@ -204,7 +204,7 @@ Las reglas de segmentos se evalúan en el orden en que aparecen en la lista. Los
 
 Una vez que haya agregado al menos un mosaico al lienzo del generador de reglas, puede empezar a agregar contenedores. Para crear un contenedor nuevo, seleccione los puntos suspensivos (...) en la esquina superior derecha del mosaico y, a continuación, seleccione **[!UICONTROL Agregar contenedor]**.
 
-![El botón Agregar contenedor está resaltado, lo que permite agregar un contenedor como secundario del primer contenedor.](../images/ui/segment-builder/add-container.png)
+![El botón Agregar contenedor se resalta, lo que permite agregar un contenedor como secundario del primer contenedor.](../images/ui/segment-builder/add-container.png)
 
 Un nuevo contenedor aparece como secundario del primer contenedor, pero puede ajustar la jerarquía arrastrando y moviendo los contenedores. El comportamiento predeterminado de un contenedor es &quot;[!UICONTROL Incluir]&quot; el atributo, evento o audiencia proporcionados. Puede establecer la regla en &quot;[!UICONTROL Excluir]&quot; perfiles que coinciden con los criterios del contenedor seleccionando **[!UICONTROL Incluir]** en la esquina superior izquierda del mosaico y seleccione &quot;[!UICONTROL Excluir]&quot;.
 
