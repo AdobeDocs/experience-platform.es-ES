@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Etiquetas unificadas en la ayuda de Adobe Experience Platform
+user-guide-title: Ayuda sobre etiquetas unificadas en Adobe Experience Platform
 breadcrumb-title: Guía de etiquetas unificadas
-user-guide-description: Utilice etiquetas unificadas para administrar las taxonomías de metadatos. Obtenga información sobre cómo crear categorías y etiquetas de etiquetas.
+user-guide-description: Utilice etiquetas unificadas para administrar taxonomías de metadatos. Aprenda a crear etiquetas y categorías de etiquetas.
 source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '39'
-ht-degree: 0%
+ht-degree: 64%
 
 ---
 
