@@ -1,7 +1,7 @@
 ---
 keywords: personalización personalizada; destino; destino personalizado de experience platform;
-title: Conexión de personalización personalizada
-description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real en función del abono a segmentos del perfil del usuario.
+title: Conexión personalizada personalizada
+description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de segmentos de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a segmentos de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
@@ -10,78 +10,78 @@ ht-degree: 0%
 
 ---
 
-# Conexión de personalización personalizada {#custom-personalization-connection}
+# Conexión personalizada personalizada {#custom-personalization-connection}
 
-## Registro de cambios de destino {#changelog}
+## Registro de cambios del destino {#changelog}
 
-Con la versión beta del **[!UICONTROL Personalización personalizada]** conector de destino, podría estar viendo dos **[!UICONTROL Personalización personalizada]** tarjetas en el catálogo de destinos.
+Con la versión beta de la **[!UICONTROL Personalización personalizada]** conector de destino, es posible que vea dos **[!UICONTROL Personalización personalizada]** en el catálogo de destinos.
 
-El **[!UICONTROL Personalización personalizada con atributos]** El conector de está actualmente en versión beta y solo está disponible para un número selecto de clientes. Además de la funcionalidad proporcionada por **[!UICONTROL Personalización personalizada]**, el **[!UICONTROL Personalización personalizada con atributos]** El conector añade un [paso de asignación](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a su destino de personalización personalizado, lo que permite la personalización de la misma página y de la página siguiente basada en atributos.
+La variable **[!UICONTROL Personalización Personalizada Con Atributos]** actualmente, connector está en versión beta y solo está disponible para un número determinado de clientes. Además de la funcionalidad proporcionada por el **[!UICONTROL Personalización personalizada]**, el **[!UICONTROL Personalización Personalizada Con Atributos]** El conector agrega un [paso de asignación](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a su destino de personalización personalizado, habilitando la personalización de la misma página y de la página siguiente basada en atributos.
 
 >[!IMPORTANT]
 >
->Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, la variable **[!UICONTROL Personalización personalizada con atributos]** El destino requiere que utilice el [API del servidor de red perimetral](/help/server-api/overview.md) para la recopilación de datos. Además, todas las llamadas a la API de servidor deben realizarse en un [contexto autenticado](../../../server-api/authentication.md).
+>Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, la variable **[!UICONTROL Personalización Personalizada Con Atributos]** El destino requiere que use el [API de servidor de red perimetral](/help/server-api/overview.md) para la recopilación de datos. Además, todas las llamadas de API de servidor deben realizarse en un [contexto autenticado](../../../server-api/authentication.md).
 >
->Si ya utiliza el SDK web o el SDK móvil para la integración, puede recuperar atributos mediante la API de servidor de dos formas:
+>Si ya utiliza el SDK web o el SDK móvil para la integración, puede recuperar atributos a través de la API del servidor de dos formas:
 >
 > * Añada una integración del lado del servidor que recupere atributos a través de la API del servidor.
 > * Actualice la configuración del lado del cliente con un código Javascript personalizado para recuperar atributos mediante la API del servidor.
 >
-> Si no cumple los requisitos anteriores, la personalización se basará únicamente en la pertenencia a segmentos, idéntica a la experiencia ofrecida por el **[!UICONTROL Personalización personalizada]** conector.
+> Si no sigue los requisitos anteriores, la personalización se basará únicamente en la pertenencia a los segmentos, idéntica a la experiencia ofrecida por la variable **[!UICONTROL Personalización personalizada]** conector.
 
-![Imagen de las dos tarjetas de destino de personalización personalizadas en una vista en paralelo.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
+![Imagen de las dos tarjetas de destino de personalización personalizada en una vista en paralelo.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## Información general {#overview}
 
-Este destino proporciona una forma de recuperar información de segmentos de Adobe Experience Platform para plataformas de personalización externas, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en los sitios web de los clientes.
+Este destino proporciona una forma de recuperar información de segmentos de Adobe Experience Platform a plataformas de personalización externas, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en sitios web de clientes.
 
 ## Requisitos previos {#prerequisites}
 
-Esta integración funciona con el [SDK web de Adobe Experience Platform](../../../edge/home.md) o el [SDK de Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/). Debe utilizar uno de estos SDK para utilizar este destino.
+Esta integración cuenta con la tecnología [SDK web de Adobe Experience Platform](../../../edge/home.md) o [SDK de Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/). Debe utilizar uno de estos SDK para utilizar este destino.
 
 >[!IMPORTANT]
 >
->Antes de crear una conexión de personalización personalizada, lea la guía sobre cómo [configuración de destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para los casos de uso de personalización de la misma página y de la página siguiente, en varios componentes de Experience Platform.
+>Antes de crear una conexión de personalización personalizada, lea la guía sobre cómo [configurar destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para casos de uso de personalización de la misma página y de la siguiente página, en varios componentes de Experience Platform.
 
-## Tipo y frecuencia de exportación {#export-type-frequency}
+## Tipo de exportación y frecuencia {#export-type-frequency}
 
-**Solicitud de perfil** : está solicitando todos los segmentos asignados en el destino de personalización personalizado para un solo perfil. Se pueden configurar diferentes destinos de personalización personalizados para diferentes [Adobe de flujos de datos de recopilación](../../../edge/datastreams/overview.md).
+**Solicitud de perfil** : está solicitando todos los segmentos asignados en el destino de personalización personalizado para un solo perfil. Se pueden configurar diferentes destinos de personalización personalizados para diferentes [Almacenes de datos de recopilación de datos de Adobe](../../../edge/datastreams/overview.md).
 
 ## Casos de uso {#use-cases}
 
-El [!DNL Custom Personalization Connection] le permite utilizar sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno), a la vez que aprovecha las capacidades de segmentación y recopilación de datos de Experience Platform Edge Network para impulsar una experiencia de personalización más profunda para los clientes.
+La variable [!DNL Custom Personalization Connection] permite utilizar sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno), y también aprovechar las capacidades de recopilación y segmentación de datos de Experience Platform Edge Network para ofrecer una experiencia de personalización más profunda para los clientes.
 
-Los casos de uso que se describen a continuación incluyen personalización del sitio y publicidad en el sitio segmentada.
+Los casos de uso que se describen a continuación incluyen tanto la personalización del sitio como la publicidad dirigida en el sitio.
 
-Para habilitar estos casos de uso, los clientes necesitan una forma rápida y optimizada de recuperar la información de segmentos de Experience Platform y enviarla a sus sistemas designados que configuraron como conexiones de personalización personalizadas en la interfaz de usuario de Experience Platform.
+Para habilitar estos casos de uso, los clientes necesitan una forma rápida y optimizada de recuperar la información del segmento de Experience Platform y enviar esta información a los sistemas designados que configuraron como conexiones de personalización personalizadas en la interfaz de usuario del Experience Platform.
 
-Estos sistemas pueden ser plataformas de personalización externas, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecuten en las propiedades web y móviles de los clientes.
+Estos sistemas pueden ser plataformas de personalización externas, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en las propiedades web y móviles de los clientes.
 
-### Personalización en la misma página {#same-page}
+### Personalización de la misma página {#same-page}
 
-Un usuario visita una página del sitio web. El cliente puede utilizar la información de visita de la página actual (por ejemplo, la dirección URL de referencia, el idioma del explorador, la información de producto incrustada) para seleccionar la siguiente acción/decisión (por ejemplo, personalización), utilizando la conexión de personalización personalizada para plataformas que no sean de Adobe (por ejemplo, [!DNL Pega], [!DNL Optimizely], etc.).
+Un usuario visita una página del sitio web. El cliente puede utilizar la información de visita a la página actual (por ejemplo, la dirección URL de referencia, el idioma del explorador o la información del producto incrustada) para seleccionar la siguiente acción o decisión (por ejemplo, personalización), mediante la conexión de personalización personalizada para plataformas que no sean de Adobe (por ejemplo, [!DNL Pega], [!DNL Optimizely], etc.).
 
-### Personalización de la página siguiente {#next-page}
+### Personalización de página siguiente {#next-page}
 
-Un usuario visita la página A del sitio web. En función de esta interacción, el usuario cumple los requisitos para un conjunto de segmentos. A continuación, el usuario hace clic en un vínculo que le lleva de la página A a la B. Los segmentos para los que el usuario estaba cualificado durante la interacción anterior en la página A, junto con las actualizaciones de perfil determinadas por la visita actual al sitio web, se utilizan para activar la siguiente acción/decisión (por ejemplo, qué banner publicitario mostrar al visitante o, en el caso de las pruebas A/B, qué versión de la página mostrar).
+Un usuario visita la Página A de su sitio web. En función de esta interacción, el usuario cumple los requisitos para un conjunto de segmentos. A continuación, el usuario hace clic en un vínculo que los lleva de la página A a la página B. Los segmentos para los que el usuario había cumplido los requisitos durante la interacción anterior en la página A, junto con las actualizaciones de perfil determinadas por la visita actual al sitio web, se utilizarán para activar la siguiente acción o decisión (por ejemplo, qué banner publicitario se mostrará al visitante o, en el caso de pruebas A/B, qué versión de la página se mostrará).
 
-### Personalización de la sesión siguiente {#next-session}
+### Personalización de próxima sesión {#next-session}
 
-Un usuario visita varias páginas del sitio web. En función de estas interacciones, el usuario cumple los requisitos para un conjunto de segmentos. A continuación, el usuario finaliza la sesión de exploración actual.
+Un usuario visita varias páginas del sitio web. En función de estas interacciones, el usuario cumple los requisitos para un conjunto de segmentos. A continuación, el usuario finaliza la sesión de navegación actual.
 
-Al día siguiente, el usuario vuelve al mismo sitio web del cliente. Los segmentos para los que se habían clasificado durante la interacción anterior con todas las páginas del sitio web visitado, junto con las actualizaciones de perfil determinadas por la visita del sitio web actual, se utilizan para seleccionar la siguiente acción/decisión (por ejemplo, qué titular de publicidad mostrar al visitante o, en el caso de las pruebas A/B, qué versión de la página mostrar).
+Al día siguiente, el usuario vuelve al mismo sitio web del cliente. Los segmentos para los que se habían clasificado durante la interacción anterior con todas las páginas del sitio web visitadas, junto con las actualizaciones de perfil determinadas por la visita del sitio web actual, se utilizarán para seleccionar la siguiente acción o decisión (por ejemplo, para qué banner publicitario se mostrará al visitante o, en el caso de pruebas A/B, qué versión de la página mostrar).
 
-## Conectar con el destino {#connect}
+## Conectarse al destino {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Acerca de los ID de flujo"
->abstract="Esta opción determina en qué secuencia de datos de recopilación de datos se incluirán los segmentos en la respuesta a la página. El menú desplegable solo muestra las secuencias de datos que tienen la configuración de destino habilitada. Debe configurar una secuencia de datos para poder configurar el destino."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Obtenga información sobre cómo configurar una secuencia de datos"
+>title="Acerca de los ID de conjunto de datos"
+>abstract="Esta opción determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Debe configurar un conjunto de datos para poder configurar el destino."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Obtenga información sobre cómo configurar un conjunto de datos"
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -89,14 +89,14 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 
-* **[!UICONTROL Nombre]**: complete el nombre preferido para este destino.
-* **[!UICONTROL Descripción]**: introduzca una descripción para el destino. Por ejemplo, puede mencionar para qué campaña está usando este destino. Este campo es opcional.
-* **[!UICONTROL Alias de integración]**: este valor se envía al SDK web de Experience Platform como nombre de objeto JSON.
-* **[!UICONTROL ID de flujo de datos]**: Determina en qué flujo de datos de recopilación de datos se incluirán los segmentos en la respuesta a la página. El menú desplegable solo muestra las secuencias de datos que tienen la configuración de destino habilitada. Consulte [Configuración de una secuencia de datos](../../../edge/datastreams/overview.md) para obtener más información.
+* **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
+* **[!UICONTROL Descripción]**: Escriba una descripción para el destino. Por ejemplo, puede mencionar para qué campaña utiliza este destino. Este campo es opcional.
+* **[!UICONTROL Alias de integración]**: Este valor se envía al SDK web del Experience Platform como nombre de objeto JSON.
+* **[!UICONTROL ID de almacén de datos]**: Esto determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Consulte [Configuración de un conjunto de datos](../../../edge/datastreams/overview.md) para obtener más información.
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
@@ -104,15 +104,15 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activación de perfiles y segmentos en destinos de solicitud de perfil](../../ui/activate-profile-request-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lectura [Activar perfiles y segmentos en destinos de solicitud de perfil](../../ui/activate-profile-request-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
 ## Datos exportados {#exported-data}
 
-Si está utilizando [Etiquetas en Adobe Experience Platform](../../../tags/home.md) para implementar el SDK web de Experience Platform, utilice el [enviar evento completado](../../../edge/extension/event-types.md) y la acción de Custom Code tendrá un `event.destinations` que puede utilizar para ver los datos exportados.
+Si está utilizando [Etiquetas en Adobe Experience Platform](../../../tags/home.md) para implementar el SDK web de Experience Platform, utilice el [enviar evento finalizado](../../../edge/extension/event-types.md) y su acción de Custom Code tendrá una `event.destinations` que puede utilizar para ver los datos exportados.
 
-Este es un valor de muestra para `event.destinations` variable:
+Este es un valor de muestra para la variable `event.destinations` variable:
 
 ```
 [
@@ -132,9 +132,9 @@ Este es un valor de muestra para `event.destinations` variable:
 ]
 ```
 
-Si no está utilizando [Etiquetas](../../../tags/home.md) para implementar el SDK web de Experience Platform, utilice el [gestión de respuestas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) para ver los datos exportados.
+Si no usa [Etiquetas](../../../tags/home.md) para implementar el SDK web de Experience Platform, utilice el [gestión de respuestas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) para ver los datos exportados.
 
-La respuesta JSON de Adobe Experience Platform se puede analizar para encontrar el alias de integración correspondiente de la aplicación que está integrando con Adobe Experience Platform. Los ID de segmento se pueden pasar al código de la aplicación como parámetros de segmentación. A continuación se muestra un ejemplo de cómo sería esto específico de la respuesta de destino.
+La respuesta JSON de Adobe Experience Platform se puede analizar para encontrar el alias de integración correspondiente de la aplicación que está integrando con Adobe Experience Platform. Los ID de segmento se pueden pasar al código de la aplicación como parámetros de objetivo. A continuación se muestra un ejemplo de cómo se vería esto específico para la respuesta de destino.
 
 ```
 alloy("sendEvent", {
@@ -168,11 +168,11 @@ alloy("sendEvent", {
   });
 ```
 
-### Respuesta de ejemplo para [!UICONTROL Personalización personalizada con atributos]
+### Respuesta de ejemplo para [!UICONTROL Personalización Personalizada Con Atributos]
 
-Al utilizar **[!UICONTROL Personalización personalizada con atributos]** Sin embargo, la respuesta de la API tendrá un aspecto similar al ejemplo siguiente.
+Al usar **[!UICONTROL Personalización Personalizada Con Atributos]**, la respuesta de API será similar al ejemplo siguiente.
 
-La diferencia entre **[!UICONTROL Personalización personalizada con atributos]** y **[!UICONTROL Personalización personalizada]** es la inclusión de `attributes` de la respuesta de la API.
+La diferencia entre **[!UICONTROL Personalización Personalizada Con Atributos]** y **[!UICONTROL Personalización personalizada]** es la inclusión de la variable `attributes` en la respuesta de API.
 
 ```json
 [
@@ -200,6 +200,6 @@ La diferencia entre **[!UICONTROL Personalización personalizada con atributos]*
 ]
 ```
 
-## Uso de datos y gobernanza {#data-usage-governance}
+## Uso y gobernanza de los datos {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos, lea la [Resumen de gobernanza de datos](../../../data-governance/home.md).
+Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] exige la administración de datos, lea la [Información general sobre la administración de datos](../../../data-governance/home.md).
