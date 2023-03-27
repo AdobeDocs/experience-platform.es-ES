@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
+source-git-commit: 80864c67bc80f3c2ef12e9571adc2c065512e61f
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1065'
 ht-degree: 6%
 
 ---
@@ -22,12 +22,14 @@ ht-degree: 6%
    * [Comportamiento de exportación de perfil para diferentes tipos de destino](./how-destinations-work/profile-export-behavior.md)
    * [Gestión de identidades en el flujo de trabajo de activación de destinos](./how-destinations-work/identity-handling.md)
 * Tutoriales de API {#api}
+   * [Guía de migración de API para destinos de almacenamiento en la nube](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Conectarse a destinos de flujo continuo y activar datos mediante la API de servicio de flujo](./api/streaming-destinations.md)
    * [Conéctese a destinos de almacenamiento en la nube por lotes y marketing por correo electrónico y active los datos mediante la API de servicio de flujo](./api/connect-activate-batch-destinations.md)
    * [(Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc](./api/ad-hoc-activation-api.md)
    * [Actualizar flujos de datos de destino](./api/update-destination-dataflows.md)
    * [Eliminar cuentas de destino](./api/delete-destination-account.md)
    * [Eliminar flujos de datos de destino](./api/delete-destination-dataflow.md)
+   * [(Beta) Activar datos en destinos basados en archivos utilizando la API de servicio de flujo](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Beta) Exportar conjuntos de datos](/help/destinations/api/export-datasets.md)
 * Guías de la interfaz de usuario {#ui}
    * [Espacio de trabajo de destinos](./ui/destinations-workspace.md)
