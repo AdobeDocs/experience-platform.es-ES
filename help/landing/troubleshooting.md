@@ -7,9 +7,9 @@ landing-page-description: Encuentre respuestas a las preguntas más frecuentes y
 short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1861'
 ht-degree: 4%
 
 ---
@@ -209,7 +209,8 @@ A continuación se muestra una lista de guías de solución de problemas y docum
 | Service | Referencia de API | Resolución de problemas |
 | --- | --- | --- |
 | Control de acceso | [API de control de acceso](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guía de solución de problemas del control de acceso](../access-control/troubleshooting-guide.md) |
-| Incorporación de datos de Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Guía de solución de problemas de ingesta por lotes](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guía de solución de problemas de ingesta de transmisión](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Incorporación de datos de Adobe Experience Platform | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guía de solución de problemas de ingesta por lotes](../ingestion/batch-ingestion/troubleshooting.md) |
+| Incorporación de datos de Adobe Experience Platform | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Guía de solución de problemas de ingesta de transmisión](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guía de solución de problemas](../data-science-workspace/troubleshooting-guide.md) |
 | Administración de datos de Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Servicio de ID de Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] guía de solución de problemas](../identity-service/troubleshooting-guide.md) |
