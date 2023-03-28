@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Activar segmentos en destinos basados en archivos mediante la API de servicio de flujo
 description: Aprenda a utilizar la API de servicio de flujo para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 2%
@@ -3645,6 +3645,8 @@ El ID de la respuesta representa el identificador único del esquema de entrada 
 
 A continuación, debe configurar el esquema de salida para la exportación. En primer lugar, debe buscar e inspeccionar el esquema de socio existente.
 
+>[!BEGINSHADEBOX]
+
 **Solicitud**
 
 +++Request to get partner schema for the output schema
@@ -3957,7 +3959,7 @@ A continuación, debe crear un esquema de salida. Copie la respuesta JSON que ob
 
 **Solicitud**
 
-+++ Crear un esquema de salida: Solicitud
++++Crear un esquema de salida: Solicitud
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -3977,7 +3979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Respuesta**
 
-+++ Crear esquema de salida: Respuesta
++++Crear esquema de salida: Respuesta
 
 ```json
 {
@@ -4287,7 +4289,7 @@ El ID de la respuesta representa el identificador único del esquema de entrada 
 
 >[!ENDSHADEBOX]
 
-### Creación de conjuntos de asignaciones
+### Crear conjunto de asignaciones {#create-mapping-set}
 
 A continuación, utilice el [API de preparación de datos](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) para crear el conjunto de asignaciones utilizando el ID del esquema de entrada, el ID del esquema de salida y las asignaciones de campo deseadas.
 
@@ -4295,7 +4297,7 @@ A continuación, utilice el [API de preparación de datos](https://developer.ado
 
 **Solicitud**
 
-+++ Crear conjunto de asignaciones: Solicitud
++++Crear conjunto de asignaciones - Solicitud
 
 >[!IMPORTANT]
 >
@@ -4304,7 +4306,7 @@ A continuación, utilice el [API de preparación de datos](https://developer.ado
 >* Tenga en cuenta también que, aunque la configuración de ejemplo siguiente incluye: `Email` y `Phone_E.164`, solo puede exportar un atributo de identidad por flujo de datos.
 
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
