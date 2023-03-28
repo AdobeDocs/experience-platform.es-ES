@@ -1,26 +1,26 @@
 ---
-title: User-Agent Client Hints
-description: Descubra cómo funcionan las sugerencias del cliente agente de usuario en el SDK web
-keywords: user-agent;sugerencias del cliente; cadena; cadena de user-agent; baja entropía; alta entropía
+title: Sugerencias del cliente de User-Agent
+description: Descubra cómo funcionan las sugerencias de cliente de agente de usuario en el SDK web. Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la cadena User-Agent, pero de una manera más preservada de la privacidad.
+keywords: user-agent;sugerencias del cliente; string; cadena user-agent; baja entropía; alta entropía
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
+source-git-commit: 29679e85943f16bcb02064cc60a249a3de61e022
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1155'
 ht-degree: 7%
 
 ---
 
-# User-Agent Client Hints
+# Sugerencias del cliente de User-Agent
 
 ## Información general {#overview}
 
-Cada vez que un explorador web realiza una solicitud a un servidor web, el encabezado de la solicitud incluye información sobre el explorador y el entorno en el que se está ejecutando el explorador. Todos estos datos se acumulan en una cadena, denominada [!DNL User-Agent] cadena.
+Cada vez que un explorador web realiza una solicitud a un servidor web, el encabezado de la solicitud incluye información sobre el explorador y el entorno en el que se ejecuta el explorador. Todos estos datos se acumulan en una cadena denominada [!DNL User-Agent] cadena.
 
-Este es un ejemplo de lo que es [!DNL User-Agent] Este tipo de cadena aparece en una solicitud procedente de un explorador Chrome que se ejecuta en un [!DNL Mac OS] dispositivo.
+A continuación, se muestra un ejemplo de lo que puede ser [!DNL User-Agent] tiene el aspecto de una solicitud procedente de un explorador Chrome que se ejecuta en una [!DNL Mac OS] dispositivo.
 
 >[!NOTE]
 >
->A lo largo de los años, la cantidad de información del explorador y del dispositivo incluida en la [!DNL User-Agent] la cadena ha crecido y se ha modificado varias veces. El ejemplo siguiente muestra una selección de los más comunes [!DNL User-Agent] información.
+>A lo largo de los años, la cantidad de información del explorador y del dispositivo incluida en la variable [!DNL User-Agent] La cadena ha crecido y se ha modificado varias veces. El ejemplo siguiente muestra una selección de los más comunes [!DNL User-Agent] información.
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36`
@@ -35,38 +35,38 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Versión del motor de diseño | 537.36 |
 | Sistema operativo | Mac OS X |
 | Versión del sistema operativo | 10.15.7 |
-| Device | Sistema operativo Mac X 10_15_7 |
+| Device | Intel Mac OS X 10_15_7 |
 
 ## Casos de uso {#use-cases}
 
-[!DNL User-Agent] las cadenas se han utilizado durante mucho tiempo para proporcionar a los equipos de marketing y desarrollo información importante sobre cómo los exploradores, sistemas operativos y dispositivos muestran el contenido del sitio, así como la forma en que los usuarios interactúan con los sitios web.
+[!DNL User-Agent] Las cadenas se han utilizado durante mucho tiempo para proporcionar a los equipos de marketing y desarrollo información importante sobre cómo los navegadores, sistemas operativos y dispositivos muestran el contenido del sitio, así como sobre cómo interactúan los usuarios con los sitios web.
 
-[!DNL User-Agent] las cadenas también se utilizan para bloquear el correo no deseado y filtrar bots que rastrean sitios por distintos motivos adicionales.
+[!DNL User-Agent] las cadenas también se utilizan para bloquear el correo no deseado y filtrar bots que rastrean sitios para diversos fines adicionales.
 
 ## [!DNL User-Agent] cadenas en Adobe Experience Cloud {#user-agent-in-adobe}
 
-Las soluciones de Adobe Experience Cloud utilizan [!DNL User-Agent] cadenas de varias formas.
+Las soluciones de Adobe Experience Cloud utilizan la variable [!DNL User-Agent] cadenas de varias formas.
 
-* Adobe Analytics utiliza el [!DNL User-Agent] cadena para aumentar y obtener información adicional relacionada con los sistemas operativos, exploradores y dispositivos utilizados para visitar un sitio web.
-* Adobe Audience Manager y Adobe Target califican a los usuarios finales para campañas de segmentación y personalización, según la información proporcionada por [!DNL User-Agent] cadena.
+* Adobe Analytics utiliza el [!DNL User-Agent] para aumentar y obtener información adicional relacionada con los sistemas operativos, navegadores y dispositivos utilizados para visitar un sitio web.
+* Adobe Audience Manager y Adobe Target califican a los usuarios finales para campañas de segmentación y personalización, según la información proporcionada por la [!DNL User-Agent] cadena.
 
-## Introducción a User-Agent Client Hints {#ua-ch}
+## Introducción a las sugerencias del cliente User-Agent {#ua-ch}
 
-En los últimos años, los propietarios de sitios y los proveedores de marketing han utilizado [!DNL User-Agent] cadenas junto con otra información incluida en los encabezados de solicitud para crear huellas digitales. Estas huellas digitales pueden utilizarse como medio para identificar a usuarios sin su conocimiento.
+En los últimos años, los propietarios de sitios y los proveedores de marketing han utilizado [!DNL User-Agent] cadenas junto con otra información incluida en los encabezados de solicitud para crear huellas digitales. Estas huellas dactilares pueden utilizarse como medio para identificar a los usuarios sin su conocimiento.
 
-A pesar del importante propósito de que [!DNL User-Agent] las cadenas sirven para los propietarios del sitio, los desarrolladores de navegadores han decidido cambiar cómo [!DNL User-Agent] Las cadenas de caracteres operan para limitar los posibles problemas de privacidad de los usuarios finales.
+A pesar del importante propósito que [!DNL User-Agent] Las cadenas sirven para los propietarios del sitio, los desarrolladores de exploradores han decidido cambiar la forma en que [!DNL User-Agent] las cadenas funcionan, para limitar los posibles problemas de privacidad para los usuarios finales.
 
-La solución que desarrollaron se llama [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las sugerencias del cliente siguen permitiendo que los sitios web recopilen la información necesaria sobre el explorador, el sistema operativo y el dispositivo, a la vez que brindan una mayor protección contra los métodos de seguimiento encubiertos, como la huella digital.
+La solución que desarrollaron se llama [Sugerencias del cliente de User-Agent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las sugerencias del cliente siguen permitiendo que los sitios web recopilen la información necesaria sobre el explorador, el sistema operativo y el dispositivo, a la vez que brindan una mayor protección contra los métodos de seguimiento encubiertos, como la huella digital.
 
-Las Client Hints permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en el [!DNL User-Agent] cadena, pero de una manera que preserva la privacidad.
+Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la [!DNL User-Agent] cadena, pero de una forma más preservada de la privacidad.
 
-Cuando los exploradores modernos envían a un usuario a un servidor web, todo el [!DNL User-Agent] se envía en cada solicitud, independientemente de si es necesaria o no. Las sugerencias del cliente, por otro lado, aplican un modelo en el que el servidor debe solicitar al explorador la información adicional que desea conocer sobre el cliente. Al recibir esta solicitud, el explorador puede aplicar sus propias directivas o configuración de usuario para determinar qué datos se devuelven. En lugar de exponer la totalidad [!DNL User-Agent] cadena de forma predeterminada en todas las solicitudes, el acceso ahora se administra de forma explícita y auditable.
+Cuando los navegadores modernos envían un usuario a un servidor web, todo el [!DNL User-Agent] se envía en cada solicitud, independientemente de si es necesaria. Por otro lado, las sugerencias del cliente refuerzan un modelo en el que el servidor debe solicitar al explorador la información adicional que desea conocer sobre el cliente. Al recibir esta solicitud, el explorador puede aplicar sus propias políticas o configuración de usuario para determinar qué datos se devuelven. En lugar de exponer todo [!DNL User-Agent] de forma predeterminada en todas las solicitudes, el acceso ahora se administra de forma explícita y auditable.
 
 ## Compatibilidad con exploradores {#browser-support}
 
-[User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) se introdujeron con [!DNL Google Chrome ]versión 89.
+[Sugerencias del cliente de User-Agent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) se han introducido con [!DNL Google Chrome ]versión 89.
 
-Otros exploradores basados en Chromium admiten la API de Client Hints, como:
+Los exploradores adicionales basados en Chromium admiten la API de sugerencias del cliente, como:
 
 * [!DNL Microsoft Edge]
 * [!DNL Opera]
@@ -77,28 +77,28 @@ Otros exploradores basados en Chromium admiten la API de Client Hints, como:
 
 ## Categorías {#categories}
 
-Existen dos categorías de User-Agent Client Hints:
+Existen dos categorías de sugerencias del cliente User-Agent:
 
 * [Sugerencias de cliente de baja entropía](#low-entropy)
-* [Sugerencias de cliente de alta entropía](#high-entropy)
+* [Sugerencias de cliente de entropía alta](#high-entropy)
 
 ### Sugerencias de cliente de baja entropía {#low-entropy}
 
-Las sugerencias de cliente de baja entropía incluyen información básica que no se puede usar para tomar huellas digitales de los usuarios. Información como la marca del explorador, la plataforma y si la solicitud proviene de un dispositivo móvil.
+Las sugerencias de cliente de baja entropía incluyen información básica que no se puede usar para los usuarios de huellas digitales. Información como la marca del explorador, la plataforma y si la solicitud procede de un dispositivo móvil.
 
 Las sugerencias de cliente de baja entropía están habilitadas de forma predeterminada en el SDK web y se pasan en cada solicitud.
 
-| Encabezado HTTP | JavaScript | Incluido en el agente de usuario de forma predeterminada | Incluido en las sugerencias del cliente de forma predeterminada |
+| Encabezado HTTP | JavaScript | Incluido en User-Agent de forma predeterminada | Incluido en las sugerencias del cliente de forma predeterminada |
 |---|---|---|---|
 | `Sec-CH-UA` | `brands` | Sí | Sí |
 | `Sec-CH-UA-Platform` | `platform` | Sí | Sí |
 | `Sec-CH-UA-Mobile` | `mobile` | Sí | Sí |
 
-### Sugerencias de cliente de alta entropía {#high-entropy}
+### Sugerencias de cliente de entropía alta {#high-entropy}
 
-Las sugerencias de cliente de alta entropía son información más detallada sobre el dispositivo cliente, como la versión de plataforma, la arquitectura, el modelo, los bits (plataformas de 64 o 32 bits) o la versión completa del sistema operativo. Esta información podría utilizarse potencialmente en la toma de huellas digitales.
+Las sugerencias de cliente de alta entropía son información más detallada sobre el dispositivo cliente, como la versión de la plataforma, la arquitectura, el modelo, la integridad (plataformas de 64 o 32 bits) o la versión completa del sistema operativo. Esta información podría utilizarse en la toma de huellas digitales.
 
-| Encabezado HTTP | JavaScript | Incluido en el agente de usuario de forma predeterminada | Incluido en Client Hints de forma predeterminada |
+| Encabezado HTTP | JavaScript | Incluido en User-Agent de forma predeterminada | Incluido en las sugerencias del cliente de forma predeterminada |
 |---|---|---|---|
 | `Sec-CH-UA-Platform-Version` | `platformVersion` | Sí | No |
 | `Sec-CH-UA-Arc` | `architecture` | Sí | No |
@@ -106,29 +106,29 @@ Las sugerencias de cliente de alta entropía son información más detallada sob
 | `Sec-CH-UA-Bitness` | `Bitness` | Sí | No |
 | `Sec-CH-UA-Full-Version-List` | `fullVersionList` | Sí | No |
 
-Las sugerencias de cliente de alta entropía están deshabilitadas de forma predeterminada en el SDK web. Para habilitarlas, debe configurar manualmente el SDK web para solicitar sugerencias de cliente de alta entropía.
+Las sugerencias de cliente de alta entropía están deshabilitadas de forma predeterminada en el SDK web. Para habilitarlos, debe configurar manualmente el SDK web para solicitar sugerencias de cliente de alta entropía.
 
-## Impacto de las sugerencias de cliente de alta entropía en las soluciones de Experience Cloud {#impact-in-experience-cloud-solutions}
+## Las sugerencias de cliente de alta entropía afectan a las soluciones de Experience Cloud {#impact-in-experience-cloud-solutions}
 
-Algunas soluciones de Adobe Experience Cloud dependen de la información incluida en las sugerencias del cliente de alta entropía al generar informes.
+Algunas soluciones de Adobe Experience Cloud dependen de la información incluida en las sugerencias de cliente de alta entropía al generar informes.
 
-Si no habilita sugerencias de cliente de alta entropía en su entorno, los informes y características de Adobe Analytics y Audience Manager que se describen a continuación no funcionarán.
+Si no habilita las sugerencias de cliente de alta entropía en su entorno, los informes y características de Adobe Analytics y Audience Manager que se describen a continuación no funcionarán.
 
-### Informes de Adobe Analytics que dependen de sugerencias del cliente de alta entropía {#analytics}
+### Informes de Adobe Analytics basados en sugerencias de cliente de alta entropía {#analytics}
 
-El [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=es) la dimensión incluye la versión del sistema operativo que se almacena como una sugerencia de cliente de alta entropía. Si no está habilitada la opción sugerencias de clientes de alta entropía, la versión del sistema operativo puede ser inexacta para las visitas recopiladas de los exploradores Chromium.
+La variable [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=es) incluye la versión del sistema operativo que se almacena como una sugerencia de cliente de alta entropía. Si las sugerencias de clientes de alta entropía no están habilitadas, la versión del sistema operativo puede ser inexacta para las visitas recopiladas en los exploradores Chromium.
 
-### Características de Audience Manager que dependen de sugerencias de cliente de alta entropía {#aam}
+### Características del Audience Manager que dependen de sugerencias de cliente de alta entropía {#aam}
 
-[!DNL Google] ha actualizado el [!DNL Chrome] funcionalidad del explorador para minimizar la información recopilada mediante el `User-Agent` encabezado. Como resultado, los clientes de Audience Manager que utilizan [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) ya no recibirá información fiable sobre los rasgos según [claves a nivel de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=es).
+[!DNL Google] ha actualizado la variable [!DNL Chrome] funcionalidad del explorador para minimizar la información recopilada mediante la variable `User-Agent` encabezado. Como resultado, los clientes Audience Manager utilizan [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) ya no recibirá información fiable para rasgos basados en [claves a nivel de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=es).
 
-Los clientes de Audience Manager que utilicen claves de nivel de plataforma para la segmentación deben cambiar a [SDK web de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=es) en lugar de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)y habilite [Sugerencias de cliente de alta entropía](#enabling-high-entropy-client-hints) para seguir recibiendo datos fiables de rasgos.
+Los clientes Audience Manager que utilizan claves de nivel de plataforma para la segmentación deben cambiar a [SDK web de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=es) en lugar de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)y habilitar [Sugerencias de cliente de alta entropía](#enabling-high-entropy-client-hints) para seguir recibiendo datos de rasgos fiables.
 
 ## Habilitar sugerencias de cliente de alta entropía {#enabling-high-entropy-client-hints}
 
-Para habilitar sugerencias de cliente de alta entropía en la implementación del SDK web, debe incluir lo siguiente `highEntropyUserAgentHints` opción de contexto, tal como se describe en la [documentación de configuración](configuring-the-sdk.md#context), junto con la configuración existente.
+Para habilitar las sugerencias de cliente de alta entropía en la implementación del SDK web, debe incluir el complemento `highEntropyUserAgentHints` contexto, tal como se describe en la sección [documentación de configuración](configuring-the-sdk.md#context), junto con la configuración existente.
 
-Por ejemplo, para recuperar sugerencias de cliente de alta entropía de las propiedades web, la configuración tendría este aspecto:
+Por ejemplo, para recuperar sugerencias de cliente de alta entropía de propiedades web, la configuración tendría este aspecto:
 
 `context: ["highEntropyUserAgentHints", "web"]`
 
@@ -150,9 +150,9 @@ El equivalente [!DNL User-Agent] para el mismo explorador tendría este aspecto:
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
 ```
 
-Aunque la información es similar, la primera solicitud al servidor contiene sugerencias del cliente. Estas solo incluyen un subconjunto de lo que está disponible en la variable [!DNL User-Agent] cadena. Falta en la solicitud la arquitectura del sistema operativo, la versión completa del sistema operativo, el nombre del motor de diseño, la versión del motor de diseño y la versión completa del explorador.
+Aunque la información es similar, la primera solicitud al servidor contiene sugerencias del cliente. Solo incluyen un subconjunto de lo que está disponible en la variable [!DNL User-Agent] cadena. Falta en la solicitud la arquitectura del sistema operativo, la versión completa del sistema operativo, el nombre del motor de diseño, la versión del motor de diseño y la versión completa del explorador.
 
-Sin embargo, en solicitudes posteriores, la variable [!DNL Client Hints API] permite a los servidores web solicitar detalles adicionales sobre el dispositivo. Cuando se solicitan estos valores, según la directiva del explorador o la configuración del usuario, la respuesta del explorador puede incluir esa información.
+Sin embargo, en solicitudes posteriores, la variable [!DNL Client Hints API] permite a los servidores web solicitar detalles adicionales sobre el dispositivo. Cuando se solicitan estos valores, según la política del explorador o la configuración del usuario, la respuesta del explorador puede incluir esa información.
 
 A continuación se muestra un ejemplo del objeto JSON devuelto por el [!DNL Client Hints API] cuando se solicitan valores de entropía altos:
 
