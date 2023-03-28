@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: c19982ad18b04a8fe039f90ff4ada1fbf5a2dee1
+source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '952'
 ht-degree: 14%
 
 ---
@@ -37,6 +37,7 @@ ht-degree: 14%
          - [Esquemas y áreas de nombres B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Conector de Google Ads](connectors/advertising/ads.md)
+      - [Publicidades de pinterest](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Conector de panel mixto](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -112,6 +113,7 @@ ht-degree: 14%
    - Creación de una conexión base {#create}
       - Advertising {#advertising}
          - [Publicidades de Google](tutorials/api/create/advertising/ads.md)
+         - [Publicidades de pinterest](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Panel de mezcla](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
@@ -227,6 +229,7 @@ ht-degree: 14%
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Publicidades de Google](tutorials/ui/create/advertising/ads.md)
+         - [Publicidades de pinterest](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Panel de mezcla](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
