@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de exportación de segmentos de fl
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de flujo continuo de segmento.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '972'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,10 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+> * Para activar los datos y habilitar la variable [paso de asignación](#mapping) del flujo de trabajo, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+> * Para activar los datos sin tener que pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+> 
+> Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 ## Información general {#overview}
 

@@ -4,9 +4,9 @@ title: Activar datos de audiencia en destinos de exportación de perfiles en lot
 type: Tutorial
 description: Aprenda a activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '3592'
+source-wordcount: '3629'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,12 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+> * Para activar los datos y habilitar la variable [paso de asignación](#mapping) del flujo de trabajo, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+> * Para activar los datos sin tener que pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+> 
+> Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >
->Algunos clientes que participan en el programa beta de funcionalidad mejorada de exportación de archivos están viendo la nueva **[!UICONTROL Asignación]** como parte de su flujo de trabajo de activación para [nuevos destinos de almacenamiento en la nube beta](/help/release-notes/2022/october-2022.md#destinations). Tenga en cuenta también que [limitaciones conocidas](#known-limitations) como parte de la versión.
+> Algunos clientes que participan en el programa beta de funcionalidad mejorada de exportación de archivos están viendo la nueva **[!UICONTROL Asignación]** como parte de su flujo de trabajo de activación para [nuevos destinos de almacenamiento en la nube beta](/help/release-notes/2022/october-2022.md#destinations). Tenga en cuenta también que [limitaciones conocidas](#known-limitations) como parte de la versión.
 
 ## Información general {#overview}
 
