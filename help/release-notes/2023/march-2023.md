@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, marzo de 2023
 description: Notas de la versión de marzo de 2023 para Adobe Experience Platform.
-source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
+source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 4%
+source-wordcount: '1110'
+ht-degree: 3%
 
 ---
 
@@ -43,6 +43,7 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 
 | Función | Descripción |
 | --- | --- |
+| Disponibilidad general del filtrado para los datos de Adobe Analytics | Ahora puede utilizar las funcionalidades de preparación de datos para aplicar reglas y condiciones para filtrar los datos de Analytics antes de ingerirlos en el perfil del cliente en tiempo real. Para obtener más información, consulte la guía de [filtrado de datos de Analytics para la ingesta de perfiles](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
 | Nuevas funciones para codificar y descodificar cadenas URL | <ul><li>La variable `get_url_encoded` toma una URL como entrada y reemplaza o codifica caracteres especiales con caracteres ASCII.</li><li>La variable `get_url_decoded` toma una URL como entrada y descodifica los caracteres ASCII en caracteres especiales.</li></ul> Para obtener más información, lea la [Guía de funciones de preparación de datos](../../data-prep/functions.md). Para obtener una lista completa de los caracteres reservados y sus correspondientes caracteres codificados, lea la guía de [caracteres especiales](../../data-prep/functions.md#special-characters). |
 
 Para obtener más información sobre la preparación de datos, lea la [Resumen de la preparación de datos](../../data-prep/home.md).
