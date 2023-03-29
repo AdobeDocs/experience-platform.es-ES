@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
-source-git-commit: 695675aed5a1de4bb6869b733769f8e7e86a0d5b
+source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 28%
+source-wordcount: '258'
+ht-degree: 27%
 
 ---
 
@@ -16,45 +16,46 @@ ht-degree: 28%
 * [Información general de plataforma](home.md)
 * [Información general de la plataforma (vídeo)](video/platform-overview.md)
 * [Tutoriales de Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=es)
-* [Una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience.md)
-* [En segundo plano, una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience-bts.md)
+* [Una experiencia de cliente ofrecida por Platform (vídeo)](video/customer-experience.md)
+* [Entre bastidores de una experiencia de cliente ofrecida por Platform (vídeo)](video/customer-experience-bts.md)
 * Primeros pasos {#getting-started}
-   * [Flujo de trabajo de ejemplo de extremo a extremo](end-to-end-tutorial.md)
-   * [Funciones clave (vídeo)](video/key-capabilities.md)
+   * [Flujo de trabajo de ejemplo completo](end-to-end-tutorial.md)
+   * [Funciones principales (vídeo)](video/key-capabilities.md)
    * [Casos de uso clave (vídeo)](video/platform-use-cases.md)
-   * [Arquitectura de la plataforma (vídeo)](video/platform-architecture.md)
+   * [Arquitectura de plataforma (vídeo)](video/platform-architecture.md)
    * [Funciones y fases del proyecto (vídeo)](video/roles-project-phases.md)
 * IU de Experience Platform {#platform-ui}
-   * [Guía de IU de Platform](ui-guide.md)
-   * [Recorrido por la IU de Platform (vídeo)](video/platform-ui.md)
-   * [Guía de IU de flujos de trabajo](workflows.md)
+   * [Guía de la interfaz de usuario de Platform](ui-guide.md)
+   * [Visita a la interfaz de usuario de Platform (vídeo)](video/platform-ui.md)
+   * [Guía de la interfaz de usuario de flujos de trabajo](workflows.md)
    * [Compatibilidad con exploradores e idiomas](browser-language-support.md)
+   * [Encuesta de autoidentificación](self-identification.md)
 * API de Experience Platform {#platform-apis}
    * [Introducción a las API de Platform](api-guide.md)
    * [Autenticación y acceso a las API de Platform](api-authentication.md)
-   * [Aspectos básicos de API](api-fundamentals.md)
-   * [Uso de Postman con las API de Platform](postman.md)
+   * [Aspectos básicos de la API](api-fundamentals.md)
+   * [Uso de Postman con API de plataforma](postman.md)
    * [Documentos de referencia de API](https://www.adobe.com/go/platform-api-reference-en)
-* Documentación de Platform {#documentation}
+* Documentación de plataforma {#documentation}
    * [Información general](documentation/overview.md)
    * [Compatibilidad de idiomas](documentation/language-support.md)
-* Servicios de aplicación creados en Platform {#ecosystem}
+* Servicios de aplicaciones creados en Platform {#ecosystem}
    * [Información general](application-services.md)
    * [Adobe Real-time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
-   * [Servicios inteligentes y de aplicaciones (vídeo)](video/application-intelligent-services.md)
+   * [Aplicaciones y servicios inteligentes (vídeo)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=es)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-   * [Integraciones de Platform con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
+   * [Integraciones de plataforma con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
 * Gobernanza, privacidad y seguridad {#governance-privacy-security}
    * [Información general](./governance-privacy-security/overview.md)
    * Gestión de consentimiento {#consent}
       * Adobe estándar {#adobe}
          * [Información general](./governance-privacy-security/consent/adobe/overview.md)
-         * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencia](./governance-privacy-security/consent/adobe/dataset.md)
+         * [Configuración de un conjunto de datos para capturar datos de consentimiento y preferencias](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
          * [Información general](./governance-privacy-security/consent/iab/overview.md)
-         * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencia](./governance-privacy-security/consent/iab/dataset.md)
+         * [Configuración de un conjunto de datos para capturar datos de consentimiento y preferencias](./governance-privacy-security/consent/iab/dataset.md)
       * [Integración del SDK web de Platform para procesar datos de consentimiento y preferencias](./governance-privacy-security/consent/sdk.md)
    * Registros de auditoría {#audit-logs}
       * [Información general](./governance-privacy-security/audit-logs/overview.md)
@@ -64,10 +65,10 @@ ht-degree: 28%
          * [Eventos](./governance-privacy-security/audit-logs/api/events.md)
          * [Exportar](./governance-privacy-security/audit-logs/api/export.md)
    * [Cifrado de datos](./governance-privacy-security/encryption.md)
-   * [Claves administradas por el cliente](./governance-privacy-security/customer-managed-keys.md)
-* Uso de licencias y protecciones {#license}
-   * [Prácticas recomendadas de asignación de licencias de administración de datos](./license-usage-and-guardrails/data-management-best-practices.md)
-   * [Tablero de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Claves gestionadas por el cliente](./governance-privacy-security/customer-managed-keys.md)
+* Uso de licencias y barreras {#license}
+   * [Prácticas recomendadas para las licencias de gestión de datos](./license-usage-and-guardrails/data-management-best-practices.md)
+   * [Panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Migración de lago de datos Gen2](adls2-gen2-migration.md)
 * [Glosario](glossary.md)
