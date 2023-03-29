@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, marzo de 2023
 description: Notas de la versión de marzo de 2023 para Adobe Experience Platform.
-source-git-commit: 48cd7f670ab7d42d2b0c54bb549d37aa3b9ebe66
+source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '716'
 ht-degree: 5%
 
 ---
@@ -54,7 +54,7 @@ Para obtener más información sobre la preparación de datos, lea la [Resumen d
 
 | Función | Descripción |
 | --- | --- |
-| Métricas de perfil | Para proporcionar una representación más precisa de las métricas de perfil, el desglose de miembros y las métricas de pérdida se están combinando y ahora se calculan en un período de 24 horas. Más información disponible en [Guía de la interfaz de usuario de segmentación](../../segmentation/ui/overview.md) |
+| Métricas de perfil | Para proporcionar una representación más precisa de las métricas de perfil, el desglose de miembros y las métricas de pérdida se están combinando y ahora se calculan en un período de 24 horas. Encontrará más información en la [Guía de la interfaz de usuario de segmentación](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 

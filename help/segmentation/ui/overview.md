@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del servicio de segmentación
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 11a4bb90b5d88f86ac14d702a213f56432a30c24
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2686'
 ht-degree: 1%
 
 ---
@@ -67,17 +67,15 @@ Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las definici
 
 Esta vista muestra información sobre la definición del segmento, incluido el recuento de perfiles, la fecha de creación y la fecha de la última modificación.
 
-Para añadir campos adicionales a esta pantalla, seleccione ![el icono de atributo filter](../images/ui/overview/filter-attribute.png). Estos campos adicionales incluyen desglose, pérdida, método de evaluación e ID de trabajo.
+Para añadir campos adicionales a esta pantalla, seleccione ![el icono de atributo filter](../images/ui/overview/filter-attribute.png). Estos campos adicionales incluyen desglose, método de evaluación e ID de trabajo.
 
-Si se selecciona el desglose, la visualización muestra un gráfico de barras en el que se describe el porcentaje de perfiles que pertenecen a cada uno de los estados siguientes: [!UICONTROL Realizado], [!UICONTROL Existente]y [!UICONTROL Saliendo]. Además, el desglose mostrado en la variable [!UICONTROL Examinar] es el desglose más preciso del estado del segmento. Si este número difiere con el indicado en la variable [!UICONTROL Información general] , utilice los números de la pestaña [!UICONTROL Examinar] como la fuente de información correcta, ya que la variable [!UICONTROL Información general] los números de tabulación solo se actualizan una vez al día.
+Si se selecciona el desglose, la visualización muestra un gráfico de barras que resume el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados de perfil calculados: [!UICONTROL Realizado], [!UICONTROL Existente]y [!UICONTROL Saliendo]. Además, el desglose mostrado en la variable [!UICONTROL Examinar] es el desglose más preciso del estado del segmento. Si este número difiere con el indicado en la variable [!UICONTROL Información general] , utilice los números de la pestaña [!UICONTROL Examinar] como la fuente de información correcta, ya que la variable [!UICONTROL Información general] los números de tabulación solo se actualizan una vez al día.
 
 | Estado | Descripción |
 | ------ | ----------- |
-| Realizado | Un nuevo perfil dentro del segmento. |
-| Existente | Un perfil existente que se ha mantenido dentro del segmento. |
-| Saliendo | Un perfil existente que abandona el segmento. |
-
-La pérdida representa el porcentaje de perfiles que cambian dentro de una definición de segmento en comparación con la última vez que se ejecutó el trabajo del segmento, mientras que el recuento de perfiles representa el número total de perfiles que califican para el segmento.
+| Realizado | Recuento de perfiles que cumplen los requisitos para el segmento en las últimas 24 horas. Por lo tanto, el número de perfiles que cumplen los requisitos para el segmento desde la última vez que se ejecutó el trabajo del segmento por lotes. |
+| Existente | Recuento de perfiles que han permanecido cualificados para el segmento en las últimas 24 horas. Por lo tanto, el número de perfiles que siguen estando cualificados para el segmento desde la última vez que se ejecutó el trabajo del segmento por lotes. |
+| Saliendo | Recuento de perfiles que salieron del segmento en las últimas 24 horas. Por lo tanto, el número de perfiles que ya no cumplen los requisitos para el segmento desde la última vez que se ejecutó el trabajo del segmento por lotes. |
 
 El método de evaluación puede ser flujo continuo, por lotes o edge. Los segmentos de transmisión se evalúan constantemente a medida que los datos entran en el sistema. Los segmentos por lotes se evalúan según una programación establecida. Los segmentos de Edge se evalúan en tiempo real, lo que permite casos de uso de personalización de la misma página y de la siguiente página.
 
