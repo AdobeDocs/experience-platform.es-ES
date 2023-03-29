@@ -1,10 +1,12 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
+keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Punto final de API de atributos calculados
 type: Documentation
-description: En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización. Esta guía muestra cómo crear, ver, actualizar y eliminar atributos calculados mediante la API de perfil del cliente en tiempo real.
+description: En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Esta guía muestra cómo crear, ver, actualizar y eliminar atributos calculados mediante la API de perfil del cliente en tiempo real.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 3%
@@ -17,31 +19,31 @@ ht-degree: 3%
 >
 >La funcionalidad de atributo calculada que se describe en este documento está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-Los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización. Esta guía incluye llamadas de API de ejemplo para realizar operaciones básicas de CRUD mediante `/computedAttributes` punto final.
+Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Esta guía incluye ejemplos de llamadas de API para realizar operaciones básicas de CRUD usando la variable `/computedAttributes` punto final.
 
-Para obtener más información acerca de los atributos calculados, comience por leer el [información general sobre atributos calculados](overview.md).
+Para obtener más información sobre los atributos calculados, comience por leer el [información general sobre atributos calculados](overview.md).
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte del [API de perfil del cliente en tiempo real](https://www.adobe.com/go/profile-apis-en).
+El extremo de API utilizado en esta guía forma parte de la variable [API de perfil de cliente en tiempo real](https://www.adobe.com/go/profile-apis-en).
 
-Antes de continuar, consulte la [Guía de introducción a la API de perfil](../api/getting-started.md) para obtener vínculos a la documentación recomendada, una guía para leer las llamadas de API de ejemplo que aparecen en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+Antes de continuar, revise la [Guía de introducción a la API de perfil](../api/getting-started.md) para ver vínculos a la documentación recomendada, una guía para leer las llamadas de API de ejemplo que aparecen en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Configuración de un campo de atributo calculado
 
-Para crear un atributo calculado, primero debe identificar el campo en un esquema que contenga el valor del atributo calculado.
+Para crear un atributo calculado, primero debe identificar el campo en un esquema que contendrá el valor del atributo calculado.
 
-Consulte la documentación sobre [configuración de un atributo calculado](configure-api.md) para obtener una guía completa de extremo a extremo sobre la creación de un campo de atributo calculado en un esquema.
+Consulte la documentación de [configuración de un atributo calculado](configure-api.md) para obtener una guía completa de extremo a extremo sobre la creación de un campo de atributo calculado en un esquema.
 
 >[!WARNING]
 >
->Para continuar con la guía de la API, debe tener configurado un campo de atributo calculado.
+>Para continuar con la guía de API, debe tener configurado un campo de atributo calculado.
 
-## Creación de un atributo calculado {#create-a-computed-attribute}
+## Crear un atributo calculado {#create-a-computed-attribute}
 
-Con el campo de atributo calculado definido en el esquema Perfil habilitado, ahora puede configurar un atributo calculado. Si aún no lo ha hecho, siga el flujo de trabajo descrito en la [configuración de un atributo calculado](configure-api.md) documentación.
+Con el campo de atributo calculado definido en el esquema de perfil habilitado, ahora puede configurar un atributo calculado. Si aún no lo ha hecho, siga el flujo de trabajo descrito en la sección [configuración de un atributo calculado](configure-api.md) documentación.
 
-Para crear un atributo calculado, comience por realizar una solicitud de POST a `/config/computedAttributes` extremo con un cuerpo de solicitud que contiene los detalles del atributo calculado que desea crear.
+Para crear un atributo calculado, comience por realizar una solicitud de POST al `/config/computedAttributes` con un cuerpo de solicitud que contiene los detalles del atributo calculado que desea crear.
 
 **Formato de API**
 
@@ -78,16 +80,16 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| `name` | Nombre del campo de atributo calculado, como cadena. |
-| `path` | Ruta al campo que contiene el atributo calculado. Esta ruta se encuentra dentro de `properties` del esquema y NO debe incluir el nombre del campo en la ruta. Al escribir la ruta, omita los varios niveles de `properties` atributos. |
-| `{TENANT_ID}` | Si no conoce su ID de inquilino, consulte los pasos para encontrar su ID de inquilino en la [Guía para desarrolladores de Schema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
-| `description` | Una descripción del atributo calculado. Esto resulta especialmente útil una vez que se han definido varios atributos calculados, ya que ayudará a otros usuarios de la organización IMS a determinar el atributo calculado correcto que se debe utilizar. |
-| `expression.value` | Un válido [!DNL Profile Query Language] Expresión (PQL). Actualmente, los atributos calculados admiten las siguientes funciones: suma, recuento, mínimo, máximo y booleano. Para obtener una lista de expresiones de ejemplo, consulte la [expresiones PQL de ejemplo](expressions.md) documentación. |
-| `schema.name` | La clase en la que se basa el esquema que contiene el campo de atributo calculado. Ejemplo: `_xdm.context.experienceevent` para un esquema basado en la clase XDM ExperienceEvent. |
+| `name` | Nombre del campo de atributo calculado como una cadena. |
+| `path` | Ruta al campo que contiene el atributo calculado. Esta ruta se encuentra dentro de la variable `properties` del esquema y NO debe incluir el nombre del campo en la ruta. Al escribir la ruta, omita los múltiples niveles de `properties` atributos. |
+| `{TENANT_ID}` | Si no está familiarizado con su ID de inquilino, consulte los pasos para encontrar su ID de inquilino en la [Guía para desarrolladores de Schema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
+| `description` | Descripción del atributo calculado. Esto resulta especialmente útil una vez que se han definido varios atributos calculados, ya que ayudará a otros miembros de su organización de IMS a determinar el atributo calculado correcto que deben utilizar. |
+| `expression.value` | Un [!DNL Profile Query Language] (PQL). Actualmente, los atributos calculados admiten las siguientes funciones: sum, count, min, max y booleano. Para obtener una lista de expresiones de ejemplo, consulte la [muestras de expresiones PQL](expressions.md) documentación. |
+| `schema.name` | La clase en la que se basa el esquema que contiene el campo de atributo calculado. Ejemplo: `_xdm.context.experienceevent` para un esquema basado en la clase XDM ExperienceEvent . |
 
 **Respuesta**
 
-Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta que contiene los detalles del atributo calculado recién creado. Estos detalles incluyen un único, de solo lectura, generado por el sistema `id` que se puede utilizar para hacer referencia al atributo calculado durante otras operaciones de API.
+Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta que contiene los detalles del atributo calculado recién creado. Estos detalles incluyen una variable única, de solo lectura, generada por el sistema `id` que se puede usar para hacer referencia al atributo calculado durante otras operaciones de API.
 
 ```json
 {
@@ -135,19 +137,19 @@ Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un
 
 | Propiedad | Descripción |
 |---|---|
-| `id` | ID único, de solo lectura y generado por el sistema que se puede utilizar para hacer referencia al atributo calculado durante otras operaciones de la API. |
-| `imsOrgId` | La organización de IMS relacionada con el atributo calculado debe coincidir con el valor enviado en la solicitud. |
-| `sandbox` | El objeto de zona protegida contiene detalles de la zona protegida en la que se configuró el atributo calculado. Esta información se obtiene del encabezado de la zona protegida enviado en la solicitud. Para obtener más información, consulte la [información general sobre zonas protegidas](../../sandboxes/home.md). |
-| `positionPath` | Matriz que contiene el elemento deconstruido `path` al campo que se envió en la solicitud. |
-| `returnSchema.meta:xdmType` | El tipo de campo donde se almacenará el atributo calculado. |
-| `definedOn` | Matriz que muestra los esquemas de unión en los que se ha definido el atributo calculado. Contiene un objeto por esquema de unión, lo que significa que puede haber varios objetos dentro de la matriz si el atributo calculado se ha agregado a varios esquemas basados en diferentes clases. |
+| `id` | ID único, de solo lectura, generado por el sistema que se puede usar para hacer referencia al atributo calculado durante otras operaciones de API. |
+| `imsOrgId` | La organización IMS relacionada con el atributo calculado debe coincidir con el valor enviado en la solicitud. |
+| `sandbox` | El objeto sandbox contiene detalles del simulador de pruebas en el que se configuró el atributo calculado. Esta información se extrae del encabezado del simulador de pruebas enviado en la solicitud. Para obtener más información, consulte la [información general sobre los entornos limitados](../../sandboxes/home.md). |
+| `positionPath` | Matriz que contiene la matriz desconstruida `path` al campo enviado en la solicitud. |
+| `returnSchema.meta:xdmType` | Tipo del campo en el que se almacenará el atributo calculado. |
+| `definedOn` | Matriz que muestra los esquemas de unión en los que se ha definido el atributo calculado. Contiene un objeto por esquema de unión, lo que significa que puede haber varios objetos dentro de la matriz si el atributo calculado se ha añadido a varios esquemas basados en clases diferentes. |
 | `active` | Un valor booleano que muestra si el atributo calculado está activo o no. El valor predeterminado es `true`. |
 | `type` | El tipo de recurso creado, en este caso &quot;ComputedAttribute&quot; es el valor predeterminado. |
-| `createEpoch` y `updateEpoch` | La hora a la que se creó el atributo calculado y la última actualización, respectivamente. |
+| `createEpoch` y `updateEpoch` | Hora a la que se creó y actualizó por última vez el atributo calculado, respectivamente. |
 
 ## Crear un atributo calculado que haga referencia a atributos calculados existentes
 
-También es posible crear un atributo calculado que haga referencia a atributos calculados existentes. Para ello, comience por realizar una solicitud de POST a la `/config/computedAttributes` punto final. El cuerpo de la solicitud contendrá referencias a los atributos calculados en la variable `expression.value` como se muestra en el ejemplo siguiente.
+También es posible crear un atributo calculado que haga referencia a atributos calculados existentes. Para ello, comience por realizar una solicitud de POST al `/config/computedAttributes` punto final. El cuerpo de la solicitud contiene referencias a los atributos calculados en la variable `expression.value` como se muestra en el ejemplo siguiente.
 
 **Formato de API**
 
@@ -159,10 +161,10 @@ POST /config/computedAttributes
 
 En este ejemplo, ya se han creado dos atributos calculados que se utilizarán para definir un tercero. Los atributos calculados existentes son:
 
-* **`totalSpend`:** Registra la cantidad total en dólares que ha gastado un cliente.
+* **`totalSpend`:** Captura la cantidad total en dólares que ha gastado un cliente.
 * **`countPurchases`:** Cuenta el número de compras que ha realizado un cliente.
 
-La solicitud siguiente hace referencia a los dos atributos calculados existentes, utilizando un PQL válido para dividir a fin de calcular el nuevo `averageSpend` atributo calculado.
+La siguiente solicitud hace referencia a los dos atributos calculados existentes, utilizando un PQL válido para dividir para calcular el nuevo `averageSpend` atributo calculado.
 
 ```shell
 curl -X POST \
@@ -191,16 +193,16 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| `name` | Nombre del campo de atributo calculado, como cadena. |
-| `path` | Ruta al campo que contiene el atributo calculado. Esta ruta se encuentra dentro de `properties` del esquema y NO debe incluir el nombre del campo en la ruta. Al escribir la ruta, omita los varios niveles de `properties` atributos. |
-| `{TENANT_ID}` | Si no conoce su ID de inquilino, consulte los pasos para encontrar su ID de inquilino en la [Guía para desarrolladores de Schema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
-| `description` | Una descripción del atributo calculado. Esto resulta especialmente útil una vez que se han definido varios atributos calculados, ya que ayudará a otros usuarios de la organización IMS a determinar el atributo calculado correcto que se debe utilizar. |
-| `expression.value` | Una expresión PQL válida. Actualmente, los atributos calculados admiten las siguientes funciones: suma, recuento, mínimo, máximo y booleano. Para obtener una lista de expresiones de ejemplo, consulte la [expresiones PQL de ejemplo](expressions.md) documentación.<br/><br/>En este ejemplo, la expresión hace referencia a dos atributos calculados existentes. Se hace referencia a los atributos mediante la variable `path` y el `name` del atributo calculado tal como aparece en el esquema en el que se definieron los atributos calculados. Por ejemplo, la variable `path` del primer atributo calculado al que se hace referencia es `_{TENANT_ID}.purchaseSummary` y el `name` es `totalSpend`. |
-| `schema.name` | La clase en la que se basa el esquema que contiene el campo de atributo calculado. Ejemplo: `_xdm.context.experienceevent` para un esquema basado en la clase XDM ExperienceEvent. |
+| `name` | Nombre del campo de atributo calculado como una cadena. |
+| `path` | Ruta al campo que contiene el atributo calculado. Esta ruta se encuentra dentro de la variable `properties` del esquema y NO debe incluir el nombre del campo en la ruta. Al escribir la ruta, omita los múltiples niveles de `properties` atributos. |
+| `{TENANT_ID}` | Si no está familiarizado con su ID de inquilino, consulte los pasos para encontrar su ID de inquilino en la [Guía para desarrolladores de Schema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
+| `description` | Descripción del atributo calculado. Esto resulta especialmente útil una vez que se han definido varios atributos calculados, ya que ayudará a otros miembros de su organización de IMS a determinar el atributo calculado correcto que deben utilizar. |
+| `expression.value` | Una expresión PQL válida. Actualmente, los atributos calculados admiten las siguientes funciones: sum, count, min, max y booleano. Para obtener una lista de expresiones de ejemplo, consulte la [muestras de expresiones PQL](expressions.md) documentación.<br/><br/>En este ejemplo, la expresión hace referencia a dos atributos calculados existentes. Se hace referencia a los atributos mediante la variable `path` y `name` del atributo calculado tal como aparecen en el esquema en el que se definieron los atributos calculados. Por ejemplo, la variable `path` del primer atributo calculado al que se hace referencia es `_{TENANT_ID}.purchaseSummary` y `name` es `totalSpend`. |
+| `schema.name` | La clase en la que se basa el esquema que contiene el campo de atributo calculado. Ejemplo: `_xdm.context.experienceevent` para un esquema basado en la clase XDM ExperienceEvent . |
 
 **Respuesta**
 
-Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta que contiene los detalles del atributo calculado recién creado. Estos detalles incluyen un único, de solo lectura, generado por el sistema `id` que se puede utilizar para hacer referencia al atributo calculado durante otras operaciones de API.
+Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta que contiene los detalles del atributo calculado recién creado. Estos detalles incluyen una variable única, de solo lectura, generada por el sistema `id` que se puede usar para hacer referencia al atributo calculado durante otras operaciones de API.
 
 ```json
 {
@@ -263,28 +265,28 @@ Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un
 
 | Propiedad | Descripción |
 |---|---|
-| `id` | ID único, de solo lectura y generado por el sistema que se puede utilizar para hacer referencia al atributo calculado durante otras operaciones de la API. |
-| `imsOrgId` | La organización de IMS relacionada con el atributo calculado debe coincidir con el valor enviado en la solicitud. |
-| `sandbox` | El objeto de zona protegida contiene detalles de la zona protegida en la que se configuró el atributo calculado. Esta información se obtiene del encabezado de la zona protegida enviado en la solicitud. Para obtener más información, consulte la [información general sobre zonas protegidas](../../sandboxes/home.md). |
-| `positionPath` | Matriz que contiene el elemento deconstruido `path` al campo que se envió en la solicitud. |
-| `returnSchema.meta:xdmType` | El tipo de campo donde se almacenará el atributo calculado. |
-| `definedOn` | Matriz que muestra los esquemas de unión en los que se ha definido el atributo calculado. Contiene un objeto por esquema de unión, lo que significa que puede haber varios objetos dentro de la matriz si el atributo calculado se ha agregado a varios esquemas basados en diferentes clases. |
+| `id` | ID único, de solo lectura, generado por el sistema que se puede usar para hacer referencia al atributo calculado durante otras operaciones de API. |
+| `imsOrgId` | La organización IMS relacionada con el atributo calculado debe coincidir con el valor enviado en la solicitud. |
+| `sandbox` | El objeto sandbox contiene detalles del simulador de pruebas en el que se configuró el atributo calculado. Esta información se extrae del encabezado del simulador de pruebas enviado en la solicitud. Para obtener más información, consulte la [información general sobre los entornos limitados](../../sandboxes/home.md). |
+| `positionPath` | Matriz que contiene la matriz desconstruida `path` al campo enviado en la solicitud. |
+| `returnSchema.meta:xdmType` | Tipo del campo en el que se almacenará el atributo calculado. |
+| `definedOn` | Matriz que muestra los esquemas de unión en los que se ha definido el atributo calculado. Contiene un objeto por esquema de unión, lo que significa que puede haber varios objetos dentro de la matriz si el atributo calculado se ha añadido a varios esquemas basados en clases diferentes. |
 | `active` | Un valor booleano que muestra si el atributo calculado está activo o no. El valor predeterminado es `true`. |
 | `type` | El tipo de recurso creado, en este caso &quot;ComputedAttribute&quot; es el valor predeterminado. |
-| `createEpoch` y `updateEpoch` | La hora a la que se creó el atributo calculado y la última actualización, respectivamente. |
+| `createEpoch` y `updateEpoch` | Hora a la que se creó y actualizó por última vez el atributo calculado, respectivamente. |
 
 ## Acceso a atributos calculados
 
-Al trabajar con atributos calculados mediante la API, existen dos opciones para acceder a los atributos calculados definidos por su organización. El primero es enumerar todos los atributos calculados, el segundo es ver un atributo calculado específico por su único `id`.
+Al trabajar con atributos calculados mediante la API, hay dos opciones para acceder a atributos calculados que han sido definidas por su organización. El primero es enumerar todos los atributos calculados, el segundo es ver un atributo calculado específico por su único `id`.
 
-Los pasos para ambos patrones de acceso se describen en este documento. Seleccione una de las siguientes opciones para empezar:
+En este documento se describen los pasos para ambos patrones de acceso. Seleccione una de las siguientes opciones para comenzar:
 
 * **[Enumerar todos los atributos calculados existentes](#list-all-computed-attributes):** Devuelve una lista de todos los atributos calculados existentes que ha creado su organización.
-* **[Ver un atributo calculado específico](#view-a-computed-attribute):** Devuelva los detalles de un único atributo calculado especificando su ID durante la solicitud.
+* **[Ver un atributo calculado específico](#view-a-computed-attribute):** Devuelven los detalles de un único atributo calculado especificando su ID durante la solicitud.
 
 ### Enumerar todos los atributos calculados {#list-all-computed-attributes}
 
-GET Su organización de IMS puede crear varios atributos calculados y realizar una solicitud a la `/config/computedAttributes` el punto de conexión le permite enumerar todos los atributos calculados existentes para su organización.
+Su organización IMS puede crear varios atributos calculados y realizar una solicitud de GET al `/config/computedAttributes` El extremo de le permite enumerar todos los atributos calculados existentes para su organización.
 
 **Formato de API**
 
@@ -307,7 +309,7 @@ curl -X GET \
 
 Una respuesta correcta incluye una `_page` que proporciona el número total de atributos calculados (`totalCount`) y el número de atributos calculados en la página (`pageSize`).
 
-La respuesta también incluye una `children` matriz compuesta por uno o más objetos, cada uno de los cuales contiene los detalles de un atributo calculado. Si su organización no tiene ningún atributo calculado, la variable `totalCount` y `pageSize` será 0 (cero) y el `children` la matriz estará vacía.
+La respuesta también incluye un `children` matriz compuesta por uno o más objetos, cada uno de los cuales contiene los detalles de un atributo calculado. Si su organización no tiene atributos calculados, la variable `totalCount` y `pageSize` será 0 (cero) y la variable `children` la matriz estará vacía.
 
 ```json
 {
@@ -414,15 +416,15 @@ La respuesta también incluye una `children` matriz compuesta por uno o más obj
 
 | Propiedad | Descripción |
 |---|---|
-| `_page.totalCount` | Número total de atributos calculados definidos por su organización de IMS. |
-| `_page.pageSize` | El número de atributos calculados devueltos en esta página de resultados. If `pageSize` is equal to `totalCount`, esto significa que solo hay una página de resultados y que se han devuelto todos los atributos calculados. Si no son iguales, se puede acceder a otras páginas de resultados. Consulte `_links.next` para obtener más información. |
+| `_page.totalCount` | El número total de atributos calculados definidos por su organización de IMS. |
+| `_page.pageSize` | Número de atributos calculados devueltos en esta página de resultados. If `pageSize` es igual a `totalCount`, esto significa que solo hay una página de resultados y que se han devuelto todos los atributos calculados. Si no son iguales, hay páginas adicionales de resultados a las que se puede acceder. Consulte `_links.next` para obtener más información. |
 | `children` | Matriz compuesta por uno o más objetos, cada uno de los cuales contiene los detalles de un único atributo calculado. Si no se han definido atributos calculados, la variable `children` la matriz está vacía. |
-| `id` | Valor único, de sólo lectura y generado por el sistema que se asigna automáticamente a un atributo calculado cuando se crea. Para obtener más información sobre los componentes de un objeto de atributo calculado, consulte la sección sobre [creación de un atributo calculado](#create-a-computed-attribute) anteriormente en este tutorial. |
-| `_links.next` | Si se devuelve una sola página de atributos calculados, `_links.next` es un objeto vacío, como se muestra en la respuesta de ejemplo anterior. Si su organización tiene muchos atributos calculados, estos se devolverán en varias páginas a las que puede acceder realizando una solicitud de GET a `_links.next` valor. |
+| `id` | Valor único, de solo lectura, generado por el sistema y asignado automáticamente a un atributo calculado cuando se crea. Para obtener más información sobre los componentes de un objeto de atributo calculado, consulte la sección de [creación de un atributo calculado](#create-a-computed-attribute) más temprano en este tutorial. |
+| `_links.next` | Si se devuelve una sola página de atributos calculados, `_links.next` es un objeto vacío, como se muestra en la respuesta de ejemplo anterior. Si su organización tiene muchos atributos calculados, se devolverán en varias páginas a las que puede acceder realizando una solicitud de GET a la variable `_links.next` valor. |
 
 ### Ver un atributo calculado {#view-a-computed-attribute}
 
-Puede ver un atributo calculado específico realizando una solicitud de GET a la variable `/config/computedAttributes` extremo e inclusión del ID de atributo calculado en la ruta de solicitud.
+Puede ver un atributo calculado específico realizando una solicitud de GET al `/config/computedAttributes` e incluir el ID de atributo calculado en la ruta de solicitud.
 
 **Formato de API**
 
@@ -491,9 +493,9 @@ curl -X GET \
 }
 ```
 
-## Actualización de un atributo calculado
+## Actualizar un atributo calculado
 
-Si necesita actualizar un atributo calculado existente, puede hacerlo realizando una solicitud de PATCH a la variable `/config/computedAttributes` y que incluye el ID del atributo calculado que desea actualizar en la ruta de solicitud.
+Si encuentra que necesita actualizar un atributo calculado existente, esto se puede hacer realizando una solicitud del PATCH al `/config/computedAttributes` e incluye el ID del atributo calculado que desea actualizar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -507,7 +509,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Solicitud**
 
-Esta solicitud utiliza [Formato de parche de JSON](https://datatracker.ietf.org/doc/html/rfc6902) para actualizar el &quot;valor&quot; del campo &quot;expresión&quot;.
+Esta solicitud utiliza [Formato de parche JSON](https://datatracker.ietf.org/doc/html/rfc6902) para actualizar el &quot;valor&quot; del campo &quot;expresión&quot;.
 
 ```shell
 curl -X PATCH \
@@ -533,15 +535,15 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | Un válido [!DNL Profile Query Language] Expresión (PQL). Actualmente, los atributos calculados admiten las siguientes funciones: suma, recuento, mínimo, máximo y booleano. Para obtener una lista de expresiones de ejemplo, consulte la [expresiones PQL de ejemplo](expressions.md) documentación. |
+| `{NEW_EXPRESSION_VALUE}` | Un [!DNL Profile Query Language] (PQL). Actualmente, los atributos calculados admiten las siguientes funciones: sum, count, min, max y booleano. Para obtener una lista de expresiones de ejemplo, consulte la [muestras de expresiones PQL](expressions.md) documentación. |
 
 **Respuesta**
 
 Una actualización correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo de respuesta vacío. Si desea confirmar que la actualización se ha realizado correctamente, puede realizar una solicitud de GET para ver el atributo calculado por su ID.
 
-## Eliminación de un atributo calculado
+## Eliminar un atributo calculado
 
-También es posible eliminar un atributo calculado mediante la API. Esto se hace realizando una solicitud de DELETE a la `/config/computedAttributes` punto final e incluir el ID del atributo calculado que desea eliminar en la ruta de solicitud.
+También es posible eliminar un atributo calculado mediante la API. Para ello, realice una solicitud de DELETE al `/config/computedAttributes` e incluye el ID del atributo calculado que desea eliminar en la ruta de solicitud.
 
 >[!NOTE]
 >
@@ -570,15 +572,15 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta vacío. Para confirmar que la eliminación se ha realizado correctamente, puede realizar una solicitud de GET para buscar el atributo calculado por su ID. Si se ha eliminado el atributo, recibirá un error de estado HTTP 404 (no encontrado).
+Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta vacío. Para confirmar que la eliminación se ha realizado correctamente, puede realizar una solicitud de GET para buscar el atributo calculado por su ID. Si se eliminó el atributo, recibirá un error de estado HTTP 404 (no encontrado).
 
-## Creación de una definición de segmento que haga referencia a un atributo calculado
+## Crear una definición de segmento que haga referencia a un atributo calculado
 
-Adobe Experience Platform le permite crear segmentos que definen un grupo de atributos o comportamientos específicos a partir de un grupo de perfiles. Una definición de segmento incluye una expresión que encapsula una consulta escrita en PQL. Estas expresiones también pueden hacer referencia a atributos calculados.
+Adobe Experience Platform le permite crear segmentos que definen un grupo de atributos o comportamientos específicos de un grupo de perfiles. Una definición de segmento incluye una expresión que encapsula una consulta escrita en PQL. Estas expresiones también pueden hacer referencia a atributos calculados.
 
-En el ejemplo siguiente se crea una definición de segmento que hace referencia a un atributo calculado existente. Para obtener más información sobre las definiciones de segmentos y cómo trabajar con ellas en la API del servicio de segmentación, consulte la [guía de extremo de API de definiciones de segmento](../../segmentation/api/segment-definitions.md).
+En el siguiente ejemplo se crea una definición de segmento que hace referencia a un atributo calculado existente. Para obtener más información sobre las definiciones de segmentos y cómo trabajar con ellas en la API del servicio de segmentación, consulte la [guía de extremo de API de definiciones de segmentos](../../segmentation/api/segment-definitions.md).
 
-Para empezar, realice una solicitud de POST a `/segment/definitions` extremo, que proporciona el atributo calculado en el cuerpo de la solicitud.
+Para empezar, realice una solicitud de POST al `/segment/definitions` , proporcionando el atributo calculado en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -627,19 +629,19 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `name` | Un nombre único para el segmento, en forma de cadena. |
-| `description` | Una descripción legible en lenguaje natural de la definición. |
-| `schema.name` | El esquema asociado a las entidades del segmento. Consta de un `id` o `name` field. |
-| `expression` | Objeto que contiene campos con información sobre la definición del segmento. |
+| `name` | Un nombre único para el segmento, como una cadena. |
+| `description` | Una descripción de la definición legible en lenguaje natural. |
+| `schema.name` | El esquema asociado a las entidades del segmento. Consiste en una `id` o `name` campo . |
+| `expression` | Un objeto que contiene campos con información sobre la definición del segmento. |
 | `expression.type` | Especifica el tipo de expresión. Actualmente, solo se admite &quot;PQL&quot;. |
-| `expression.format` | Indica la estructura de la expresión en el valor. Actualmente, solo `pql/text` es compatible. |
-| `expression.value` | Una expresión PQL válida, en este ejemplo incluye una referencia a un atributo calculado existente. |
+| `expression.format` | Indica la estructura de la expresión en valor. Actualmente, solo `pql/text` es compatible. |
+| `expression.value` | Una expresión PQL válida, en este ejemplo incluye una referencia a un atributo computado existente. |
 
-Para obtener más información sobre los atributos de definición de esquema, consulte los ejemplos proporcionados en la [guía de extremo de API de definiciones de segmento](../../segmentation/api/segment-definitions.md).
+Para obtener más información sobre los atributos de definición de esquema, consulte los ejemplos proporcionados en la [guía de extremo de API de definiciones de segmentos](../../segmentation/api/segment-definitions.md).
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definición del segmento recién creada. Para obtener más información sobre los objetos de respuesta de definición de segmento, consulte la [guía de extremo de API de definiciones de segmento](../../segmentation/api/segment-definitions.md).
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definición del segmento recién creada. Para obtener más información sobre los objetos de respuesta de definición de segmento, consulte [guía de extremo de API de definiciones de segmentos](../../segmentation/api/segment-definitions.md).
 
 ```json
 {

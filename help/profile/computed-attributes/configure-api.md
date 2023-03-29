@@ -1,29 +1,31 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
-title: Cómo configurar un campo de atributo calculado
+keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
+title: Configuración de un campo de atributo calculado
 type: Documentation
-description: Los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor del atributo calculado. Este campo se puede crear con la API de Registro de esquemas para definir un esquema y un grupo de campos personalizados que albergarán el campo de atributo calculado.
+description: Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando la API del Registro de esquemas para definir un esquema y un grupo de campos personalizados que alojarán el campo de atributos calculados.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 2%
 
 ---
 
-# (Alpha) Configure un campo de atributo calculado usando la API de Registro de Esquemas
+# (Alpha) Configuración de un campo de atributo calculado mediante la API del Registro de esquemas
 
 >[!IMPORTANT]
 >
->Actualmente, la funcionalidad de atributos calculados está en formato alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>La funcionalidad de atributo computado está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor del atributo calculado. Este campo se puede crear con la API de Registro de esquemas para definir un esquema y un grupo de campos de esquema personalizado que contendrá el campo de atributo calculado. Se recomienda crear un esquema &quot;Atributos calculados&quot; y un grupo de campos independientes a los que su organización pueda agregar atributos para utilizarlos como atributos calculados. Esto permite a su organización separar claramente el esquema de atributos calculado de otros esquemas que se utilizan para la ingesta de datos.
+Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando la API del Registro de esquemas para definir un esquema y un grupo de campos de esquema personalizado que alojará el campo de atributos calculados. Se recomienda crear un esquema de &quot;Atributos calculados&quot; y un grupo de campos independientes en los que su organización pueda añadir atributos para utilizarlos como atributos calculados. Esto permite que la organización separe limpiamente el esquema de atributos calculados de otros esquemas que se están utilizando para la ingesta de datos.
 
-El flujo de trabajo de este documento describe cómo utilizar la API de Registro de esquemas para crear un esquema de &quot;atributo calculado&quot; habilitado para perfiles que haga referencia a un grupo de campos personalizados. Este documento contiene un ejemplo de código específico para los atributos calculados; sin embargo, consulte la [Guía de API de Registro de esquemas](../../xdm/api/overview.md) para obtener información detallada sobre la definición de grupos de campos y esquemas mediante la API.
+El flujo de trabajo de este documento describe cómo utilizar la API del Registro de esquemas para crear un esquema de &quot;Atributo calculado&quot; habilitado para el perfil que haga referencia a un grupo de campos personalizados. Este documento contiene un código de muestra específico para los atributos calculados. Sin embargo, consulte la [Guía de API del Registro de Esquemas](../../xdm/api/overview.md) para obtener información detallada sobre la definición de grupos de campos y esquemas con la API.
 
-## Crear un grupo de campos de atributos calculados
+## Creación de un grupo de campos de atributos calculados
 
-Para crear un grupo de campos mediante la API de Registro de esquemas, comience realizando una solicitud de POST a la variable `/tenant/fieldgroups` y proporciona los detalles del grupo de campos en el cuerpo de la solicitud. Para obtener más información sobre cómo trabajar con grupos de campos mediante la API de Registro de esquemas, consulte la [guía de extremo de API de grupos de campos](../../xdm/api/field-groups.md).
+Para crear un grupo de campos mediante la API del Registro de esquemas, comience por realizar una solicitud del POST al `/tenant/fieldgroups` y proporcionar los detalles del grupo de campos en el cuerpo de la solicitud. Para obtener más información sobre cómo trabajar con grupos de campos mediante la API del Registro de esquemas, consulte la [guía de extremo de API de grupos de campos](../../xdm/api/field-groups.md).
 
 **Formato de API**
 
@@ -83,7 +85,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles del grupo de campos recién creado, incluido el `$id`, `meta:altIt`, y `version`. Estos valores son de sólo lectura y los asigna el Registro de esquemas.
+Una solicitud correcta devuelve el Estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles del grupo de campos recién creado, incluido el `$id`, `meta:altIt`y `version`. Estos valores son de solo lectura y son asignados por el Registro de esquemas.
 
 ```json
 {
@@ -143,11 +145,11 @@ Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un 
 }
 ```
 
-## Actualizar grupo de campos con atributos calculados adicionales
+## Actualizar el grupo de campos con atributos calculados adicionales
 
-A medida que se necesiten más atributos calculados, puede actualizar el grupo de campos atributos calculados con atributos adicionales realizando una solicitud del PUT a `/tenant/fieldgroups` punto final. Esta solicitud requiere que incluya el ID único del grupo de campos que creó en la ruta y todos los campos nuevos que desee agregar en el cuerpo.
+A medida que se necesiten atributos más calculados, puede actualizar el grupo de campos de atributos calculados con atributos adicionales realizando una solicitud de PUT al `/tenant/fieldgroups` punto final. Esta solicitud requiere que incluya el ID exclusivo del grupo de campos que ha creado en la ruta y todos los campos nuevos que desea agregar en el cuerpo.
 
-Para obtener más información sobre la actualización de un grupo de campos mediante la API de Registro de esquemas, consulte la [guía de extremo de API de grupos de campos](../../xdm/api/field-groups.md).
+Para obtener más información sobre la actualización de un grupo de campos mediante la API del Registro de esquemas, consulte la [guía de extremo de API de grupos de campos](../../xdm/api/field-groups.md).
 
 **Formato de API**
 
@@ -161,7 +163,7 @@ Esta solicitud agrega nuevos campos relacionados con `purchaseSummary` informaci
 
 >[!NOTE]
 >
->Al actualizar un grupo de campos mediante una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al crear un nuevo grupo de campos en una solicitud de POST.
+>Al actualizar un grupo de campos mediante una solicitud de PUT, el cuerpo debe incluir todos los campos necesarios al crear un nuevo grupo de campos en una solicitud de POST.
 
 ```shell
 curl -X PUT \
@@ -308,11 +310,11 @@ Una respuesta correcta devuelve los detalles del grupo de campos actualizado.
 }
 ```
 
-## Creación de un esquema habilitado para el perfil
+## Crear un esquema habilitado para perfil
 
-Para crear un esquema con la API de Registro de esquemas, comience por realizar una solicitud del POST a la variable `/tenant/schemas` y proporciona los detalles del esquema en el cuerpo de la solicitud. El esquema también debe estar habilitado para [!DNL Profile] y aparecen como parte del esquema de unión para la clase de esquema.
+Para crear un esquema con la API del Registro de esquemas, comience por realizar una solicitud del POST al `/tenant/schemas` y proporcionar los detalles del esquema en el cuerpo de la solicitud. El esquema también debe estar habilitado para [!DNL Profile] y aparecen como parte del esquema de unión para la clase schema .
 
-Para obtener más información sobre [!DNL Profile]Esquemas habilitados para y esquemas de unión, revise la [[!DNL Schema Registry] Guía de API](../../xdm/api/overview.md) y el [documentación de conceptos básicos de composición de esquemas](../../xdm/schema/composition.md).
+Para obtener más información, consulte [!DNL Profile]esquemas y esquemas de unión habilitados, revise la [[!DNL Schema Registry] Guía de API](../../xdm/api/overview.md) y [documentación básica de composición de esquema](../../xdm/schema/composition.md).
 
 **Formato de API**
 
@@ -322,7 +324,7 @@ POST /tenants/schemas
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo esquema que hace referencia a `computedAttributesFieldGroup` creado anteriormente en este documento (con su ID único) y está habilitado para el esquema de unión de perfiles (con el `meta:immutableTags` matriz). Para obtener instrucciones detalladas sobre cómo crear un esquema con la API de Registro de esquemas, consulte la [guía de extremo de API de esquemas](../../xdm/api/schemas.md).
+La siguiente solicitud crea un nuevo esquema que hace referencia al `computedAttributesFieldGroup` creado anteriormente en este documento (con su ID único) y está habilitado para el esquema de unión de perfiles (mediante el uso de `meta:immutableTags` matriz). Para obtener instrucciones detalladas sobre cómo crear un esquema con la API del Registro de esquemas, consulte la [guía de extremo de la API schemas](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -365,7 +367,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluido el `$id`, `meta:altId`, y `version`. Estos valores son de sólo lectura y los asigna el Registro de esquemas.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluido el `$id`, `meta:altId`y `version`. Estos valores son de solo lectura y son asignados por el Registro de esquemas.
 
 ```json
 {
@@ -433,4 +435,4 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 
 ## Pasos siguientes
 
-Ahora que ha creado un esquema y un grupo de campos en los que se almacenarán los atributos calculados, puede crear el atributo calculado mediante la variable `/computedattributes` Extremo de API. Para ver los pasos detallados para crear un atributo calculado en la API, siga los pasos que se proporcionan en la [guía de extremo de API de atributos calculados](ca-api.md).
+Ahora que ha creado un esquema y un grupo de campos en los que se almacenarán los atributos calculados, puede crear el atributo calculado utilizando la variable `/computedattributes` extremo de API. Para ver los pasos detallados para crear un atributo calculado en la API, siga los pasos que se proporcionan en la [guía de extremo de API de atributos calculados](ca-api.md).
