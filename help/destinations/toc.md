@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
+source-git-commit: aa915c24dc6d73a5bdd3345cfb0fb7049bdd2679
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1068'
 ht-degree: 6%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 6%
       * [Información general sobre los destinos publicitarios](./catalog/advertising/overview.md)
       * [Conexión Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Extensión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
+      * [(Beta) Conexión de Amazon Ads](./catalog/advertising/amazon-ads.md)
       * [Extensión de la etiqueta de conversión del anunciante de Awin](./catalog/advertising/awin-conversiontag.md)
       * [Extensión Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extensión de seguimiento de eventos universales (UET) de Bing Ads](./catalog/advertising/bing-ads.md)
