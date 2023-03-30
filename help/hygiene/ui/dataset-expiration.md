@@ -2,9 +2,9 @@
 title: Administrar caducidad del conjunto de datos
 description: Obtenga información sobre cómo programar una caducidad de un conjunto de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="Descripción"
->abstract=""
+>title="Eliminar registros de cliente y conjuntos de datos no deseados o caducados"
+>abstract="<h2>Descripción</h2><p>Para administrar el ciclo de vida de los datos del Experience Platform que no están relacionados con el cumplimiento de las normas, puede eliminar los registros del consumidor y programar las fechas de caducidad para los conjuntos de datos. Para crear o administrar solicitudes de interesados, consulte el bloque de casos de uso &quot;Respetar solicitudes de privacidad del interesado&quot;.</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Este documento explica cómo programar y administrar las caducidades de los conj
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instrucciones"
->abstract=""
+>abstract="<ul><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">Higiene de los datos</a> en el panel de navegación izquierdo, seleccione <b>Crear solicitud</b>.</li><li>Si desea eliminar registros:</li>   <li>Select <b>Registro</b>.</li>   <li>Seleccione un conjunto de datos específico del que eliminar registros o elija la opción para eliminarlos de todos los conjuntos de datos.</li>   <li>Proporcione las identidades de los consumidores cuyos registros deban eliminarse. Select <b>Agregar identidad</b> proporcionar las identidades de una en una o seleccionar <b>Elegir archivos</b> para cargar un archivo JSON de identidades en su lugar.</li>   <li>Si es necesario, seleccione <b>Plantilla</b> para ver el formato esperado del archivo JSON.</li><li>Consulte la documentación para obtener instrucciones si desea <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">programar fechas de caducidad para conjuntos de datos</a>.</li></ul>"
 
 Para crear una solicitud nueva, seleccione **[!UICONTROL Crear solicitud]** desde la página principal del espacio de trabajo.
 
@@ -54,8 +54,7 @@ A continuación, en **[!UICONTROL Detalles del conjunto de datos]**, seleccione 
 ![Imagen que muestra un conjunto de datos seleccionado](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
->
->Solo se muestran los conjuntos de datos que pertenecen al entorno limitado actual.
+Solo se muestran los conjuntos de datos que pertenecen al entorno limitado actual.
 
 ### Enviar la solicitud
 
@@ -68,8 +67,7 @@ Se le pedirá que confirme la fecha en la que eliminará el conjunto de datos. S
 Una vez enviada la solicitud, se crea una orden de trabajo que aparece en la pestaña principal del [!UICONTROL Higiene de los datos] espacio de trabajo. Desde aquí, puede controlar el estado de la orden de trabajo a medida que procesa la solicitud.
 
 >[!NOTE]
->
->Consulte la sección Información general de [plazos y transparencia](../home.md#dataset-expiration-transparency) para obtener más información sobre cómo se procesan las caducidades de los conjuntos de datos una vez que se ejecutan.
+Consulte la sección Información general de [plazos y transparencia](../home.md#dataset-expiration-transparency) para obtener más información sobre cómo se procesan las caducidades de los conjuntos de datos una vez que se ejecutan.
 
 ## Editar o cancelar una caducidad del conjunto de datos
 
