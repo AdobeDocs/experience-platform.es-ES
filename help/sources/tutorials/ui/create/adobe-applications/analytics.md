@@ -5,9 +5,9 @@ title: Crear una conexión de origen de Adobe Analytics en la interfaz de usuari
 type: Tutorial
 description: Aprenda a crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir los datos de los consumidores en Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3530c91cd36e9e2729515827978e6115857f2405
+source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
 workflow-type: tm+mt
-source-wordcount: '2390'
+source-wordcount: '2365'
 ht-degree: 2%
 
 ---
@@ -159,16 +159,12 @@ La siguiente documentación proporciona más recursos para comprender la prepara
 * [Funciones de asignación de preparación de datos](../../../../../data-prep/functions.md)
 * [Añadir campos calculados](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtrado para el perfil del cliente en tiempo real (Beta) {#filtering-for-profile}
+### Filtrado para el perfil del cliente en tiempo real {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="Crear reglas de filtro"
 >abstract="Defina las reglas de filtrado de nivel de fila y columna al enviar datos al Perfil del cliente en tiempo real. Utilice el filtrado de nivel de fila para aplicar condiciones y dictar a qué datos **incluir para la ingesta de perfiles**. Utilice el filtrado de nivel de columna para seleccionar las columnas de datos que desea **excluir para la ingesta de perfiles**. Las reglas de filtrado no se aplican a los datos enviados al lago de datos."
-
->[!IMPORTANT]
->
->Compatibilidad con el filtrado [!DNL Analytics] actualmente los datos están en versión beta y no están disponibles para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 Una vez que haya completado las asignaciones para su [!DNL Analytics] datos del grupo de informes, puede aplicar reglas y condiciones de filtrado para incluir o excluir selectivamente los datos de la incorporación al Perfil del cliente en tiempo real. La compatibilidad con el filtrado solo está disponible para [!DNL Analytics] los datos y datos solo se filtran antes de introducirse [!DNL Profile.] Todos los datos se incorporan en el lago de datos.
 

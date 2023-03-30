@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores de origen
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1320'
 ht-degree: 2%
 
 ---
@@ -189,7 +189,7 @@ El control de acceso basado en atributos en Adobe Experience Platform permite a 
 
 Con el control de acceso basado en atributos, puede aplicar configuraciones de asignación a campos a los que tenga permisos. Además, no puede introducir datos en un conjunto de datos si no tiene acceso a todos los campos del conjunto de datos.
 
-#### Compatibilidad con el control de acceso basado en atributos en orígenes [!BADGE Nueva función]
+#### Compatibilidad con el control de acceso basado en atributos en orígenes
 
 >[!TIP]
 >
