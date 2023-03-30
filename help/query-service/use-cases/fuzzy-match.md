@@ -1,26 +1,26 @@
 ---
 title: Coincidencia aproximada en el servicio de consulta
 description: Obtenga información sobre cómo realizar una coincidencia en los datos de Platform que combina resultados de varios conjuntos de datos al hacer coincidir aproximadamente una cadena de su elección.
-source-git-commit: a3a4ca4179610348eba73cf1239861265d2bf887
+source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# Coincidencia borrosa
+# Coincidencia aproximada en el servicio de consulta
 
-Utilice una coincidencia &quot;difusa&quot; en los datos de Platform para devolver las coincidencias más probables y aproximadas sin necesidad de buscar cadenas con caracteres idénticos. Esto permite una búsqueda mucho más flexible de los datos y hace que sean más accesibles ahorrando tiempo y esfuerzo.
+Utilice una coincidencia &quot;difusa&quot; en los datos de Adobe Experience Platform para devolver las coincidencias más probables y aproximadas sin necesidad de buscar cadenas con caracteres idénticos. Esto permite una búsqueda mucho más flexible de los datos y hace que sean más accesibles ahorrando tiempo y esfuerzo.
 
-En lugar de intentar cambiar el formato de las cadenas de búsqueda para que coincidan, la coincidencia difusa analiza la proporción de similitud entre dos secuencias y devuelve el porcentaje de similitud. [!DNL FuzzyWuzzy] se recomienda para este proceso, ya que sus funciones son más adecuadas para ayudar a hacer coincidir cadenas en situaciones más complejas en comparación con [!DNL regex] o [!DNL difflib].
+En lugar de intentar cambiar el formato de las cadenas de búsqueda para que coincidan, la coincidencia difusa analiza la proporción de similitud entre dos secuencias y devuelve el porcentaje de similitud. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) se recomienda para este proceso, ya que sus funciones son más adecuadas para ayudar a hacer coincidir cadenas en situaciones más complejas en comparación con [!DNL regex] o [!DNL difflib].
 
-El ejemplo proporcionado en este caso de uso se centra en la coincidencia de atributos similares de una búsqueda de habitaciones de hotel en dos conjuntos de datos de agencias de viajes diferentes. El documento muestra cómo hacer coincidir cadenas por su grado de similitud con fuentes de datos independientes de gran tamaño. En este ejemplo, la coincidencia difusa compara los resultados de búsqueda para las características de una habitación de las agencias de viajes Luma y Acme.
+El ejemplo proporcionado en este caso de uso se centra en la coincidencia de atributos similares de una búsqueda de salas de hoteles en dos conjuntos de datos de agencias de viajes diferentes. El documento muestra cómo hacer coincidir cadenas por su grado de similitud con fuentes de datos independientes de gran tamaño. En este ejemplo, la coincidencia difusa compara los resultados de búsqueda para las características de una habitación de las agencias de viajes Luma y Acme.
 
 ## Primeros pasos {#getting-started}
 
 Como parte de este proceso requiere que imparta un modelo de aprendizaje automático, este documento asume un conocimiento práctico de uno o más entornos de aprendizaje automático.
 
-Este ejemplo utiliza [!DNL Python] y [!DNL Jupyter Notebook] entorno de desarrollo. Aunque hay muchas opciones disponibles, [!DNL Jupyter Notebook] se recomienda porque es una aplicación web de código abierto que tiene bajos requisitos de cálculo. Puede [descargado del sitio oficial de Jupyter](https://jupyter.org/).
+Este ejemplo utiliza [!DNL Python] y [!DNL Jupyter Notebook] entorno de desarrollo. Aunque hay muchas opciones disponibles, [!DNL Jupyter Notebook] se recomienda porque es una aplicación web de código abierto que tiene bajos requisitos de cálculo. Se puede descargar desde [el sitio oficial de Jupyter](https://jupyter.org/).
 
 Antes de comenzar, debe importar las bibliotecas necesarias. [!DNL FuzzyWuzzy] es de código abierto [!DNL Python] biblioteca creada sobre [!DNL difflib] biblioteca y se usa para buscar coincidencias con cadenas. Utiliza [!DNL Levenshtein Distance] para calcular las diferencias entre secuencias y patrones. [!DNL FuzzyWuzzy] tiene los siguientes requisitos:
 
@@ -43,7 +43,7 @@ Más información técnica sobre [!DNL Fuzzywuzzy] se puede encontrar en su [doc
 
 ### Conectar con el servicio de consulta
 
-Debe conectar el modelo de aprendizaje automático con el servicio de consulta proporcionando las credenciales de conexión. Se pueden proporcionar credenciales que caducan y que no caducan. Consulte la [guía de credenciales](../ui/credentials.md) para obtener más información sobre cómo adquirir las credenciales necesarias. Si está utilizando [!DNL Jupyter Notebook], consulte la guía completa de [cómo conectarse al servicio de consulta](../clients/jupyter-notebook.md).
+Debe conectar el modelo de aprendizaje automático con el servicio de consulta proporcionando las credenciales de conexión. Se pueden proporcionar credenciales que caducan y que no caducan. Consulte la [guía de credenciales](../ui/credentials.md) para obtener más información sobre cómo adquirir las credenciales necesarias. Si está utilizando [!DNL Jupyter Notebook], lea la guía completa de [cómo conectarse al servicio de consulta](../clients/jupyter-notebook.md).
 
 Además, asegúrese de importar la variable [!DNL numpy] paquete en su [!DNL Python] para habilitar álgebra lineal.
 
