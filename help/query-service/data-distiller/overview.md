@@ -1,7 +1,7 @@
 ---
 title: Información general de Data Distiller
 description: Resumen de los límites de uso de Data Distiller para los datos del servicio de consulta en relación con su derecho de licencia.
-source-git-commit: ae4ecd43071a198592193a1a598a064cdc6be2f6
+source-git-commit: c7e753e54f087ee45daabb9094edeb51e54271fc
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 1%
@@ -14,7 +14,7 @@ Data Distiller es una oferta de paquetes que incluye un subconjunto de las funci
 
 ## Uso de licencias {#license-usage}
 
-La variable  [Panel de uso de licencias de Distiller de datos](./license-usage.md) está disponible una vez que haya comprado horas de cálculo de Data Distiller. El panel de uso de licencias le ayuda a supervisar el consumo de las horas de cálculo correspondientes. Consulte la [Documento de uso de licencia de Distiller de datos](./license-usage.md) para ver información importante sobre el uso de licencias del servicio de consulta de su organización.
+La variable [Panel de uso de licencias de Distiller de datos](./license-usage.md) está disponible una vez que haya comprado horas de cálculo de Data Distiller. El panel de uso de licencias le ayuda a supervisar el consumo de las horas de cálculo correspondientes. Consulte la [Documento de uso de licencia de Distiller de datos](./license-usage.md) para ver información importante sobre el uso de licencias del servicio de consulta de su organización.
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
