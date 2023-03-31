@@ -1,32 +1,33 @@
 ---
 title: Acceso al ECID
-description: Extensión de SDK web de Adobe Experience Platform que aprovecha ECID en etiquetas
+description: Obtenga información sobre cómo acceder al ID de Experience Cloud (ECID) en las etiquetas de Adobe Experience Platform
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '132'
 ht-degree: 5%
 
 ---
 
+
 # Acceso al ECID
 
-El [!DNL Experience Cloud Identity (ECID)] es un identificador persistente para un visitante del sitio web. En determinadas circunstancias, es posible que prefiera acceder al ECID (para enviarlo a un tercero, por ejemplo).
+La variable [!DNL Experience Cloud ID (ECID)] es un identificador de Experience Cloud persistente que puede ayudarle a identificar a los visitantes del sitio web. En determinadas circunstancias, como el envío del identificador a una plataforma de terceros, es posible que necesite acceder a la variable [!DNL ECID].
 
-Para acceder al ECID dentro de las etiquetas, Adobe recomienda lo siguiente:
+Para acceder a la [!DNL ECID] dentro de las etiquetas , siga los pasos a continuación:
 
-1. Asegúrese de que la propiedad esté configurada con [Secuencia de componentes de regla](../../tags/ui/managing-resources/rules.md#sequencing) activado.
-1. Crear una regla nueva.
-1. Añadir un [!UICONTROL Library Loaded] a la regla.
-1. Añadir un [!UICONTROL Condición personalizada] acción a la regla con el siguiente código (suponiendo que el nombre configurado para la instancia del SDK sea `alloy`):
+1. Asegúrese de que la propiedad esté configurada con [secuenciación de componentes de regla](../../tags/ui/managing-resources/rules.md#sequencing) activada.
+2. Crear una regla nueva.
+3. Agregue un [!UICONTROL Biblioteca cargada] a la regla.
+4. Agregue un [!UICONTROL Condición personalizada] acción a la regla, con el siguiente código (suponiendo que el nombre que ha configurado para la instancia de SDK sea `alloy`):
 
    ```javascript
-    return alloy("getIdentity")
-      .then(function(result) {
-        _satellite.setVar("ECID", result.identity.ECID);
-      });
+   return alloy("getIdentity")
+       .then(function(result) {
+           _satellite.setVar("ECID", result.identity.ECID);
+       });
    ```
 
-1. Guarde la regla.
+5. Guarde la regla.
 
-A continuación, debe poder acceder al ECID en reglas posteriores utilizando `%ECID%` o `_satellite.getVar("ECID")` como lo haría con cualquier otro elemento de datos.
+Ahora debería poder acceder al [!DNL ECID] en reglas posteriores, usar `%ECID%` o `_satellite.getVar("ECID")`, similar a cómo se accede a cualquier otro elemento de datos.
