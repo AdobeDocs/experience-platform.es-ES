@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de credenciales del servicio de consulta
 description: El servicio de consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a consultas guardadas por los usuarios dentro de la organización de IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+source-git-commit: 879f3eb1f6856470e8e2d87537ca12438ca25d22
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---
@@ -123,13 +123,15 @@ En la tabla siguiente se describen los parámetros que suelen ser necesarios par
 >Cuando se conecta a un host con credenciales que no caducan, sigue siendo necesario utilizar todos los parámetros enumerados en la variable [!UICONTROL CREDENCIALES DE CADUCIDAD] excepto la contraseña y el nombre de usuario.
 >El formato para introducir el nombre de usuario y la contraseña utiliza valores separados por dos puntos, como se muestra en este ejemplo `username:{your_username}` y `password:{password_string}`.
 
-| Parámetro | Descripción |
-|---|---|
-| **Servidor/Host** | Nombre del servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y adopta la forma de `server.adobe.io`. El valor se encuentra en **[!UICONTROL Host]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información.</ul></li> |
-| **Puerto** | Puerto para el servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Puerto]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información. Un valor de ejemplo para el puerto sería `80`.</ul></li> |
-| **Base de datos** | La base de datos a la que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Base de datos]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información. Un valor de ejemplo para la base de datos sería `prod:all`.</ul></li> |
-| **Nombre de usuario** | El nombre de usuario del usuario que se está conectando al cliente externo. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan. Toma la forma de una cadena alfanumérica antes de `@AdobeOrg`. Este valor se encuentra en **[!UICONTROL Nombre de usuario]**.</li></ul> |
-| **Contraseña** | La contraseña del usuario que se está conectando al cliente externo. <ul><li>Si está utilizando credenciales que caducan, esto se encuentra en **[!UICONTROL Contraseña]** dentro de la variable [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información.</li><li>Si utiliza credenciales que no caducan, este valor son los argumentos concatenados de technicalAccountID y las credenciales tomadas del archivo JSON de configuración. El valor de la contraseña adopta la forma: `{technicalAccountId}:{credential}`.</li></ul> |
+| Parámetro | Descripción | Ejemplo |
+|---|---|---|
+| **Servidor/Host** | Nombre del servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y adopta la forma de `server.adobe.io`. El valor se encuentra en **[!UICONTROL Host]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información.</ul></li> | `acme.platform.adobe.io` |
+| **Puerto** | Puerto para el servidor/host al que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Puerto]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información.</ul></li> | `80` |
+| **Base de datos** | La base de datos a la que se está conectando. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan, y se encuentra en **[!UICONTROL Base de datos]** en el [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información. </ul></li> | `prod:all` |
+| **Nombre de usuario** | El nombre de usuario del usuario que se está conectando al cliente externo. <ul><li>Este valor se utiliza tanto para credenciales que caducan como para credenciales que no caducan. Toma la forma de una cadena alfanumérica antes de `@AdobeOrg`. Este valor se encuentra en **[!UICONTROL Nombre de usuario]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
+| **Contraseña** | La contraseña del usuario que se está conectando al cliente externo. <ul><li>Si está utilizando credenciales que caducan, esto se encuentra en **[!UICONTROL Contraseña]** dentro de la variable [!UICONTROL CREDENCIALES DE CADUCIDAD] para obtener más información.</li><li>Si utiliza credenciales que no caducan, este valor son los argumentos concatenados de technicalAccountID y las credenciales tomadas del archivo JSON de configuración. El valor de la contraseña adopta la forma: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Una contraseña de credencial que caduca es una cadena alfanumérica de más de mil caracteres. No se dará un ejemplo.</li><li>Una contraseña de credencial que no caduque es la siguiente:`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+
+{style="table-layout:auto"}
 
 ## Pasos siguientes
 
