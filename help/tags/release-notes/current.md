@@ -2,9 +2,9 @@
 title: Notas de la versión de etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: f2f2f9abc50f2016e41fd23bfbb66553fadf6fce
+source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '720'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,8 @@ Acceda a los nuevos flujos de trabajo de inicio rápido en &quot;Introducción&q
 Se han lanzado nuevas extensiones:
 
 * **[!DNL Braze]extensión de reenvío de eventos**: La variable [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) la extensión de reenvío de eventos permite aprovechar los datos capturados en la red perimetral de Adobe Experience Platform y enviarlos a [!DNL Braze] en forma de eventos del lado del servidor utilizando la variable [!DNL Braze] API de seguimiento de usuarios.
-* **[!DNL Mixpanel]extensión de reenvío de eventos**: La variable [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) permite aprovechar el reenvío de eventos para capturar información de eventos en la red perimetral de Adobe Experience Platform y enviarla a Mixpanel mediante la API de seguimiento de eventos.
+* **[API de eventos de Epsilon] extensión de reenvío de eventos**: La variable [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) permite aprovechar el reenvío de eventos para capturar información de eventos en la red perimetral de Adobe Experience Platform y enviarla a [!DNL Epsilon] usando la variable [!DNL Epsilon] API de evento.
+* **[!DNL Mixpanel]extensión de reenvío de eventos**: La variable [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) permite aprovechar el reenvío de eventos para capturar información de eventos en la red perimetral de Adobe Experience Platform y enviarla a [!DNL Mixpanel] uso de la API de seguimiento de eventos.
 
 ## 25 de enero de 2023
 
