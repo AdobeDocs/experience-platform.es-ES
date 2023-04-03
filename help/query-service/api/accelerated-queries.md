@@ -1,29 +1,33 @@
 ---
 title: Punto final de consultas aceleradas
-description: Obtenga información sobre cómo acceder al almacén acelerado de consultas de forma independiente para devolver rápidamente resultados basados en datos agregados. Este documento proporciona una solicitud y una respuesta HTTP de ejemplo para el extremo de consultas aceleradas del servicio de consultas.
+description: Obtenga información sobre cómo acceder al almacén acelerado de consultas sin estado para devolver rápidamente resultados según los datos agregados. Este documento proporciona un ejemplo de solicitud HTTP y respuesta para el extremo de consultas aceleradas del servicio de consulta.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '566'
 ht-degree: 1%
 
 ---
 
 # Extremo de consultas aceleradas
 
-Como parte del SKU de Data Distiller, la variable [API del servicio de consultas](https://developer.adobe.com/experience-platform-apis/references/query-service/) permite realizar consultas sin estado en el almacén acelerado. Los resultados devueltos se basan en los datos agregados. La disminución de la latencia de los resultados permite un intercambio de información más interactivo. Las API de consultas aceleradas también se utilizan para [paneles definidos por el usuario](../../dashboards/user-defined-dashboards.md).
+Como parte del SKU de Distiller de datos, la variable [API del servicio de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/) permite realizar consultas sin estado en el almacén acelerado. Los resultados devueltos se basan en datos agregados. La disminución de la latencia de los resultados permite un intercambio de información más interactivo. Las API de consultas aceleradas también se utilizan para activar [tableros definidos por el usuario](../../dashboards/user-defined-dashboards.md).
 
-Antes de continuar con esta guía, asegúrese de haber leído y comprendido la [Guía de API del servicio de consultas](./getting-started.md) para utilizar correctamente la API del servicio de consultas.
+Antes de continuar con esta guía, asegúrese de haber leído y entendido el [Guía de API del servicio de consulta](./getting-started.md) para utilizar correctamente la API del servicio de consulta.
 
 ## Primeros pasos
 
-El SKU de Data Distiller es necesario para utilizar el almacén acelerado de consultas. Consulte la [empaquetado](../packages.md), [barandas](../guardrails.md#query-accelerated-store), y [licenciamiento](../data-distiller/license-usage.md) la documentación relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
+El SKU de Distiller de datos es necesario para utilizar el almacén acelerado de consultas. Consulte la [embalaje](../packages.md) y [guardrails](../guardrails.md#query-accelerated-store) documentación relacionada con el SKU de Distiller de datos. Si no tiene el SKU de Distiller de datos, póngase en contacto con su representante del servicio al cliente de Adobe para obtener más información.
 
-Las siguientes secciones detallan las llamadas de API necesarias para acceder al almacén acelerado de consultas de forma independiente a través de la API del servicio de consultas. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+<!-- Document is hidden temporarily
+Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
+-->
+
+Las siguientes secciones detallan las llamadas de API necesarias para acceder al almacén acelerado de consultas de forma apátrida a través de la API del servicio de consultas. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ## Ejecutar una consulta acelerada {#run-accelerated-query}
 
-Realizar una solicitud de POST a `/accelerated-queries` extremo para ejecutar una consulta acelerada. La consulta está contenida directamente en la carga útil de la solicitud o se hace referencia a ella con un ID de plantilla.
+Realice una solicitud de POST al `/accelerated-queries` para ejecutar una consulta acelerada. La consulta se encuentra directamente en la carga útil de la solicitud o se hace referencia a ella con un ID de plantilla.
 
 **Formato de API**
 
@@ -35,7 +39,7 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->Solicitudes a `/accelerated-queries` El punto de conexión requiere una instrucción SQL O un ID de plantilla, pero no ambos. Enviar ambos en una solicitud provoca un error.
+>Solicitudes al `/accelerated-queries` El extremo requiere una instrucción SQL O un ID de plantilla, pero no ambos. El envío de ambos en una solicitud causa un error.
 
 La siguiente solicitud envía una consulta SQL en el cuerpo de la solicitud al almacén acelerado.
 
@@ -79,10 +83,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | Propiedad | Descripción |
 |---|---|
-| `dbName` | El nombre de la base de datos a la que está realizando una consulta acelerada. El valor de `dbName` debe tener el formato de `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de datos proporcionada debe existir dentro del almacén acelerado o la solicitud producirá un error. También debe asegurarse de que la variable `x-sandbox-name` encabezado y nombre de zona protegida en `dbName` consulte misma zona protegida. |
-| `sql` | Una cadena de instrucción SQL. El tamaño máximo permitido es de 1000000 caracteres. |
+| `dbName` | Nombre de la base de datos a la que está realizando una consulta acelerada. El valor de `dbName` debe adoptar el formato de `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de datos proporcionada debe existir en el almacén acelerado; de lo contrario, la solicitud generará un error. También debe asegurarse de que la variable `x-sandbox-name` encabezado y nombre del simulador de pruebas en `dbName` consulte el mismo simulador de pruebas. |
+| `sql` | Una cadena de instrucción SQL. El tamaño máximo permitido es de 100000 caracteres. |
 | `templateId` | El identificador único de una consulta creada y guardada como plantilla cuando se realiza una solicitud de POST al `/templates` punto final. |
-| `name` | Un nombre descriptivo y sencillo opcional para la consulta acelerada. |
+| `name` | Un nombre descriptivo y reconocible opcional para la consulta acelerada. |
 | `description` | Un comentario opcional sobre la intención de la consulta para ayudar a otros usuarios a comprender su propósito. El tamaño máximo permitido es de 1000 bytes. |
 
 **Respuesta**
@@ -91,7 +95,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con el esquema ad hoc creado 
 
 >[!NOTE]
 >
->La siguiente respuesta se ha truncado para ser más breve.
+>La siguiente respuesta se ha truncado para su brevedad.
 
 ```json
 {
@@ -206,8 +210,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con el esquema ad hoc creado 
 |---|---|
 | `queryId` | El valor de ID de la consulta creada. |
 | `resultsMeta` | Este objeto contiene los metadatos de cada columna devuelta en los resultados para que los usuarios conozcan el nombre y el tipo de cada columna. |
-| `resultsMeta._adhoc` | Esquema de modelo de datos de experiencia (XDM) ad hoc con campos de espacio de nombres para su uso exclusivo en un único conjunto de datos. |
-| `resultsMeta._adhoc.type` | El tipo de datos del esquema ad hoc. |
-| `resultsMeta._adhoc.meta:xdmType` | Es un valor generado por el sistema para el tipo de campo XDM. Para obtener más información sobre los tipos disponibles, consulte la documentación de [tipos XDM disponibles](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
-| `resultsMeta._adhoc.properties` | Estos son los nombres de columna del conjunto de datos consultado. |
-| `resultsMeta._adhoc.results` | Estos son los nombres de fila del conjunto de datos consultado. Reflejan cada una de las columnas devueltas. |
+| `resultsMeta._adhoc` | Un esquema del Modelo de datos de experiencia (XDM) ad-hoc con campos a los que solo se asigna un nombre para su uso mediante un único conjunto de datos. |
+| `resultsMeta._adhoc.type` | Tipo de datos del esquema ad hoc. |
+| `resultsMeta._adhoc.meta:xdmType` | Se trata de un valor generado por el sistema para el tipo de campo XDM. Para obtener más información sobre los tipos disponibles, consulte la documentación sobre [tipos XDM disponibles](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.properties` | Son los nombres de columna del conjunto de datos consultado. |
+| `resultsMeta._adhoc.results` | Son los nombres de fila del conjunto de datos consultado. Reflejan cada una de las columnas devueltas. |
