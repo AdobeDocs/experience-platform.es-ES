@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;administración de datos;de
 title: Prácticas recomendadas del derecho de licencia de gestión de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
+source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
 workflow-type: tm+mt
-source-wordcount: '2125'
+source-wordcount: '2130'
 ht-degree: 2%
 
 ---
@@ -20,9 +20,9 @@ Este documento describe las prácticas recomendadas a seguir y las herramientas 
 
 ## Comprensión del almacenamiento de datos de Adobe Experience Platform
 
-El Experience Platform está compuesto principalmente por dos repositorios de datos: el [!DNL Data Lake] y el Almacenamiento de perfiles.
+El Experience Platform está compuesto principalmente por dos repositorios de datos: el [!DNL data lake] y el Almacenamiento de perfiles.
 
-La variable **[!DNL Data Lake]** sirve principalmente para los siguientes fines:
+La variable **[!DNL data lake]** sirve principalmente para los siguientes fines:
 
 * Actúa como zona de ensayo para incorporar datos en el Experience Platform;
 * Actúa como el almacenamiento de datos a largo plazo para todos los datos del Experience Platform;
@@ -35,7 +35,7 @@ La variable **Almacenamiento de perfiles** es donde se crean los perfiles de cli
 
 >[!NOTE]
 >
->Su acceso a la variable [!DNL Data Lake] puede depender del SKU del producto que haya comprado. Para obtener más información sobre los SKU de producto, póngase en contacto con su representante de Adobe.
+>Su acceso a la variable [!DNL data lake] puede depender del SKU del producto que haya comprado. Para obtener más información sobre los SKU de producto, póngase en contacto con su representante de Adobe.
 
 ## Uso de licencias {#license-usage}
 
@@ -47,8 +47,8 @@ Al Experience Platform de licencias, se le proporcionan derechos de uso de licen
 
 La variable [!DNL Profile Richness] varía en función de la licencia que haya adquirido. Hay dos cálculos para [!DNL Profile Richness] disponible:
 
-* La suma de todos los datos de producción almacenados en Adobe Real-time Customer Data Platform (es decir, el servicio de perfil y el servicio de identidad) en cualquier momento, dividida por la variable [!DNL Addressable Audience];
-* La suma de todos los datos almacenados dentro de Platform (incluido, entre otros, el [!DNL Data Lake], servicio de perfil y servicio de identidad) en cualquier momento y cualquier dato que haya transmitido a través (en lugar de almacenarlo en) de Platform en los últimos 12 meses, dividido por el [!DNL Addressable Audience].
+* La suma de todos los datos de producción almacenados en Adobe Real-time Customer Data Platform (es decir, el perfil del cliente en tiempo real y el servicio de identidad) en cualquier momento, dividido por la variable [!DNL Addressable Audience];
+* La suma de todos los datos almacenados dentro de Platform (incluido, entre otros, el [!DNL data lake], Perfil del cliente en tiempo real y servicio de identidad) en cualquier momento y cualquier dato que haya transmitido (en lugar de almacenar en) Platform en los últimos 12 meses, dividido por el [!DNL Addressable Audience].
 
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían en función de las licencias que haya adquirido su organización.
 
@@ -80,11 +80,11 @@ Hay dos escenarios centrales a tener en cuenta al garantizar que el uso de los d
 
 ### ¿Qué datos se van a incluir en Platform?
 
-Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL Data Lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir los datos históricos en la variable [!DNL Data Lake], pero no en el Almacenamiento de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
+Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL data lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir los datos históricos en la variable [!DNL data lake], pero no en el almacén de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
 
 >[!NOTE]
 >
->Su acceso a la variable [!DNL Data Lake] puede depender del SKU del producto que haya comprado. Para obtener más información sobre los SKU de producto, póngase en contacto con su representante de Adobe.
+>Su acceso a la variable [!DNL data lake] puede depender del SKU del producto que haya comprado. Para obtener más información sobre los SKU de producto, póngase en contacto con su representante de Adobe.
 
 ### ¿Qué datos se deben conservar?
 
@@ -101,9 +101,9 @@ Los filtros de ingesta permiten introducir únicamente los datos necesarios para
 
 | Filtro de ingesta | Descripción |
 | --- | --- |
-| Filtrado de fuentes de Adobe Audience Manager | Al crear una conexión de origen de Adobe Audience Manager, puede elegir qué segmentos y rasgos incluir en la [!DNL Data Lake] y servicio de perfil, en lugar de incorporar los datos del Audience Manager en su totalidad. Consulte la guía de [creación de una conexión de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
-| Preparación de datos de Adobe Analytics | Puede usar [!DNL Data Prep] al crear una conexión de origen de Analytics para filtrar los datos que no son necesarios para sus casos de uso. Hasta [!DNL Data Prep], puede definir qué atributos/columnas deben publicarse en Perfil. También puede proporcionar afirmaciones condicionales para informar a Platform de si se espera que los datos se publiquen en el perfil o solo en el [!DNL Data Lake]. Consulte la guía de [creación de una conexión de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
-| Compatibilidad para habilitar/deshabilitar conjuntos de datos para Perfil | Para introducir datos en el servicio de perfil, debe habilitar un conjunto de datos para utilizarlo en el almacén de perfiles. Al hacerlo, agrega a su [!DNL Addressable Audience] y [!DNL Profile Richness] derechos. Una vez que ya no se necesita un conjunto de datos para los casos de uso de perfiles de clientes, puede deshabilitar la integración de ese conjunto de datos en Perfil para garantizar que sus datos sigan siendo compatibles con la licencia. Consulte la guía de [activación y desactivación de conjuntos de datos para Perfil](../../catalog/datasets/enable-for-profile.md) para obtener más información. |
+| Filtrado de fuentes de Adobe Audience Manager | Al crear una conexión de origen de Adobe Audience Manager, puede elegir qué segmentos y rasgos incluir en la [!DNL data lake] y Perfil del cliente en tiempo real, en lugar de incorporar los datos del Audience Manager en su totalidad. Consulte la guía de [creación de una conexión de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
+| Preparación de datos de Adobe Analytics | Puede usar [!DNL Data Prep] al crear una conexión de origen de Analytics para filtrar los datos que no son necesarios para sus casos de uso. Hasta [!DNL Data Prep], puede definir qué atributos/columnas deben publicarse en Perfil. También puede proporcionar afirmaciones condicionales para informar a Platform de si se espera que los datos se publiquen en el perfil o solo en el [!DNL data lake]. Consulte la guía de [creación de una conexión de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
+| Compatibilidad para habilitar/deshabilitar conjuntos de datos para Perfil | Para introducir datos en el perfil del cliente en tiempo real, debe habilitar un conjunto de datos para utilizarlo en el almacén de perfiles. Al hacerlo, agrega a su [!DNL Addressable Audience] y [!DNL Profile Richness] derechos. Una vez que ya no se necesita un conjunto de datos para los casos de uso de perfiles de clientes, puede deshabilitar la integración de ese conjunto de datos en Perfil para garantizar que sus datos sigan siendo compatibles con la licencia. Consulte la guía de [activación y desactivación de conjuntos de datos para Perfil](../../catalog/datasets/enable-for-profile.md) para obtener más información. |
 | Exclusión de datos del SDK web y del SDK móvil | Existen dos tipos de datos recopilados por el SDK web y móvil: datos que se recopilan automáticamente y datos que el desarrollador recopila explícitamente. Para administrar mejor el cumplimiento de las licencias, puede deshabilitar la recopilación automática de datos en la configuración del SDK mediante la configuración de contexto. El desarrollador también puede eliminar o no establecer los datos personalizados. Consulte la guía de [configuración de los aspectos básicos del SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) para obtener más información. |
 | Exclusión de datos de reenvío del lado del servidor | Si está enviando datos a Platform mediante el reenvío del lado del servidor, puede excluir qué datos se envían eliminando la asignación en una acción de regla para excluirla en todos los eventos o agregando condiciones a la regla para que los datos solo se activen para ciertos eventos. Consulte la documentación sobre [eventos y condiciones](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) para obtener más información. |
 
@@ -113,7 +113,7 @@ Los filtros de ingesta permiten introducir únicamente los datos necesarios para
 
 El Almacenamiento de perfiles está compuesto por los siguientes componentes:
 
-| Componente de Almacenamiento de perfiles | Descripción |
+| Componente de tienda de perfiles | Descripción |
 | --- | --- |
 | Fragmentos de perfil | Cada perfil de cliente está compuesto por varios **fragmentos de perfil** que se han combinado para formar una sola vista de ese cliente. Por ejemplo, si un cliente interactúa con la marca a través de varios canales, la organización tendrá varios **fragmentos de perfil** relacionado con ese único cliente que aparece en varios conjuntos de datos. Cuando estos fragmentos se incorporan a Platform, se vinculan mediante el gráfico de identidad para crear un único perfil para ese cliente. **Fragmentos de perfil** constan de un área de nombres de identidad como identificador, con datos de registro asociados o datos de series temporales. |
 | Registrar datos (atributos) | Un perfil es una representación de un sujeto, una organización o un individuo, compuesto por muchos **Atributos** (también conocido como **datos de registro**). Por ejemplo, el perfil de un producto puede incluir un SKU y una descripción, mientras que el perfil de una persona contiene información como nombre, apellido y dirección de correo electrónico. **Registrar datos** por lo general es de volumen bajo/moderado, pero valioso durante largos períodos de tiempo. |
@@ -126,7 +126,7 @@ El Almacenamiento de perfiles está compuesto por los siguientes componentes:
 
 #### Informes de composición del almacén de perfiles
 
-Hay varios informes disponibles para ayudarle a comprender la composición del Almacenamiento de perfiles. Estos informes le ayudan a tomar decisiones informadas sobre cómo y dónde configurar las caducidades de los eventos de experiencia para optimizar mejor el uso de las licencias:
+Hay varios informes disponibles para ayudarle a comprender la composición del almacén de perfiles. Estos informes le ayudan a tomar decisiones informadas sobre cómo y dónde configurar las caducidades de los eventos de experiencia para optimizar mejor el uso de las licencias:
 
 * **API de informe de superposición de conjunto de datos**: Expone los conjuntos de datos que contribuyen en mayor medida a la audiencia direccionable. Puede utilizar este informe para identificar qué [!DNL ExperienceEvent] conjuntos de datos para establecer una caducidad para . Consulte el tutorial en [generación del informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md) para obtener más información.
 * **API de informe de superposición de identidad**: Expone los espacios de nombres de identidad que contribuyen en mayor medida a la audiencia direccionable. Consulte el tutorial en [generación del informe de superposición de identidad](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) para obtener más información.
@@ -145,7 +145,7 @@ A continuación se ofrece una lista de algunas prácticas recomendadas que puede
 * Configurar [filtros de ingesta](#ingestion-filters) identificando los eventos necesarios para sus casos de uso de segmentación y personalización. Esto le permite enviar solo los eventos importantes necesarios para sus casos de uso.
 * Asegúrese de que solo tiene [conjuntos de datos habilitados para perfil](#ingestion-filters) que son necesarios para los casos de uso de segmentación y personalización.
 * Configure un [Caducidad del evento de experiencia](#event-expirations) para datos de alta frecuencia como datos web.
-* Compruebe periódicamente el [Informes de composición de perfil](#profile-store-composition-reports) para comprender la composición de la tienda de perfiles. Esto le permite comprender las fuentes de datos que más contribuyen al consumo de licencias.
+* Compruebe periódicamente el [Informes de composición de perfil](#profile-store-composition-reports) para comprender la composición del almacén de perfiles. Esto le permite comprender las fuentes de datos que más contribuyen al consumo de licencias.
 
 ## Resumen de características y disponibilidad {#feature-summary}
 
@@ -155,7 +155,7 @@ La siguiente tabla describe la lista de funciones disponibles actualmente a su d
 
 | Función | Descripción |
 | --- | --- |
-| [Habilitar/deshabilitar conjuntos de datos para perfil](../../catalog/datasets/user-guide.md) | Habilitar o deshabilitar la incorporación de conjuntos de datos en el servicio de perfil |
+| [Habilitar/deshabilitar conjuntos de datos para perfil](../../catalog/datasets/user-guide.md) | Habilite o deshabilite la ingesta de conjuntos de datos en el perfil del cliente en tiempo real. |
 | [Caducidad de eventos de experiencia](../../profile/event-expirations.md) | Aplique una hora de caducidad para todos los eventos incorporados en un conjunto de datos habilitado para el perfil. Póngase en contacto con el representante de asistencia de Adobe para habilitar esta función. |
 | [Filtros de preparación de datos de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Aplicar [!DNL Kafka] filtros para excluir los datos innecesarios de la ingesta |
 | [Filtros del conector de origen de Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplicar filtros de conexión de origen de Audience Manager para excluir de la ingesta datos innecesarios |
