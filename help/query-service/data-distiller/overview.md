@@ -1,10 +1,10 @@
 ---
 title: Información general de Data Distiller
 description: Resumen de los límites de uso de Data Distiller para los datos del servicio de consulta en relación con su derecho de licencia.
-source-git-commit: e4337dcebaf313365ed9e403a5891f49decb29e9
+source-git-commit: 5958a9764ebe749a6c945c984a6e9979c444d4dc
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -12,13 +12,14 @@ ht-degree: 2%
 
 Data Distiller es una oferta de paquetes que incluye un subconjunto de las funcionalidades de Adobe Experience Platform. Con Data Distiller, puede realizar la preparación de datos posteriores a la ingesta (como la limpieza, la formación y la manipulación) para perfiles de clientes en tiempo real o casos de uso analítico mediante la ejecución de consultas por lotes en Query Service. El uso de Data Distiller depende de la asignación de derechos para aplicaciones basadas en plataforma.
 
-## Uso de licencias {#license-usage}
-
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
-The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
--->
+## License usage {#license-usage}
 
-El panel de uso de licencias de Data Distiller está disponible una vez que haya comprado las horas de cálculo de Data Distiller. El panel de uso de licencias le ayuda a supervisar el consumo de las horas de cálculo correspondientes.
+
+The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
+
+The Data Distiller license usage dashboard is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours.
+-->
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
