@@ -5,9 +5,9 @@ title: Procesamiento de solicitudes de privacidad en perfil del cliente en tiemp
 type: Documentation
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes de acceso, exclusión de la venta o eliminación de sus datos personales, según lo establecido en numerosas normas de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el perfil del cliente en tiempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 4cb6280ea646f813a064eb08fef4ab29126ec3ea
+source-git-commit: e5ea0672ba8e9b5951464396a75decc5d8508ff4
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -187,10 +187,6 @@ Para garantizar que sus solicitudes de privacidad procesen todos los atributos d
 
 When [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Privacy Service], [!DNL Platform] envía confirmación a [!DNL Privacy Service] que la solicitud se ha recibido y los datos afectados se han marcado para su eliminación. Los registros se eliminan una vez que se haya completado el trabajo de privacidad.
 
->[!IMPORTANT]
->
->Las solicitudes de eliminación de privacidad no son instantáneas y pueden variar según los servicios involucrados y otros factores que afectan a la ubicación geográfica. El periodo para completar los trabajos de privacidad puede aumentar de 15 a 45 días, pero no está garantizado.
-
 Dependiendo de si también ha incluido el servicio de identidad (`identity`) y el lago de datos (`aepDataLake`) como productos en su solicitud de privacidad para Perfil (`ProfileService`), diferentes conjuntos de datos relacionados con el perfil se eliminan del sistema en momentos potencialmente diferentes:
 
 | Productos incluidos | Efectos |
@@ -206,7 +202,7 @@ Consulte la [[!DNL Privacy Service] documentación](../privacy-service/home.md#m
 
 Si se realiza una solicitud de eliminación para el perfil (`ProfileService`) pero no el servicio de identidad (`identity`), el trabajo resultante elimina los datos de atributo recopilados para un cliente (o conjunto de clientes), pero no elimina las asociaciones establecidas en el gráfico de identidad.
 
-Por ejemplo, una solicitud de eliminación que utiliza el `email_id` y `customer_id` elimina todos los datos de atributos almacenados bajo esos ID. Sin embargo, cualquier dato que posteriormente se incorpore en el mismo `customer_id` seguirá estando asociado con el `email_id`, ya que la asociación sigue existiendo.
+Por ejemplo, una solicitud de eliminación que utilice el `email_id` y `customer_id` elimina todos los datos de atributos almacenados bajo esos ID. Sin embargo, cualquier dato que posteriormente se incorpore en el mismo `customer_id` seguirá estando asociado con el `email_id`, ya que la asociación sigue existiendo.
 
 Para eliminar el perfil y todas las asociaciones de identidad de un cliente determinado, asegúrese de incluir tanto el perfil como el servicio de identidad como productos de destino en las solicitudes de eliminación.
 
