@@ -1,24 +1,24 @@
 ---
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
-description: Utilice esta plantilla para crear documentación pública para su destino en el catálogo de Adobe Experience Platform. // Reemplace con el párrafo en la sección Información general
+description: Utilice esta plantilla para crear documentación pública para el destino en el catálogo de Adobe Experience Platform. // Reemplazar por el párrafo de la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
 
 ---
 
-# Su conexión de destino {#your-destination}
+# Conexión YourDestination {#your-destination}
 
-*A medida que avanza por esta plantilla, reemplace o elimine todos los párrafos en cursiva (empezando por esta).*
+*A medida que recorre esta plantilla, reemplace o elimine todos los párrafos en cursiva (a partir de este).*
 
-*Comience por actualizar los metadatos (título y descripción) en la parte superior de la página. Ignore todas las instancias de UICONTROL en esta página. Esta es una etiqueta que ayuda a nuestros procesos de traducción automática a traducir correctamente la página a los múltiples idiomas que admitimos. Agregaremos etiquetas a su documentación después de que la envíe.*
+*Comience por actualizar los metadatos (título y descripción) en la parte superior de la página. Ignore todas las instancias de UICONTROL en esta página. Esta es una etiqueta que ayuda a nuestros procesos de traducción automática a traducir correctamente la página a los múltiples idiomas compatibles. Añadiremos etiquetas a su documentación después de enviarla.*
 
 >[!IMPORTANT]
 >
->* Rellene todas las secciones de esta plantilla, en el orden en que se destacan en la plantilla.
->* Esta plantilla se actualiza con poca frecuencia, según los comentarios del socio. Antes de empezar a crear documentación para el destino, asegúrese de haber descargado el [última versión de la plantilla](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* Rellene todas las secciones de esta plantilla, en el orden en que aparecen delineadas en la plantilla.
+>* Esta plantilla se actualiza con poca frecuencia, en función de los comentarios de los socios. Antes de empezar a crear documentación para su destino, asegúrese de haber descargado la variable [versión más reciente de la plantilla](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
 
 
 ## Información general {#overview}
@@ -27,101 +27,101 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por el *Su destino* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Inserte un vínculo o una dirección de correo electrónico donde pueda ponerse en contacto con usted para obtener actualizaciones, por ejemplo `support@YourDestination.com`.*
+>Esta página de documentación la creó el *YourDestination* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en *Inserte un vínculo o una dirección de correo electrónico donde se pueda acceder a las actualizaciones, por ejemplo `support@YourDestination.com`.*
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el *Su destino* Destino. Estos son ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe usar la variable *YourDestination* destino, aquí hay ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver utilizando este destino.
 
-### Caso de uso #1 {#use-case-1}
+### Caso de uso número 1 {#use-case-1}
 
 *Para plataformas de mensajería móvil:*
 
-*Una plataforma de venta y alquiler de viviendas quiere enviar notificaciones móviles a los dispositivos Android y iOS de los clientes para informarles de que hay 100 listados actualizados en la zona en la que anteriormente buscaron un alquiler.*
+*Una plataforma de ventas y alquiler de casas quiere enviar notificaciones móviles a los dispositivos Android y iOS de los clientes para informarles de que hay 100 anuncios actualizados en el área donde previamente buscaron un alquiler.*
 
-### Caso de uso #2 {#use-case-2}
+### Caso de uso n.º 2 {#use-case-2}
 
 *Para plataformas de redes sociales:*
 
-*Una marca de ropa deportiva quiere llegar a los clientes existentes a través de sus cuentas en las redes sociales. La marca de ropa puede ingerir direcciones de correo electrónico de su propio CRM a Adobe Experience Platform, crear segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a su destino para mostrar anuncios en las fuentes de medios sociales de sus clientes.*
+*Una marca de ropa deportiva quiere llegar a los clientes existentes a través de sus cuentas de medios sociales. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM a Adobe Experience Platform, generar segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a YourDestination para mostrar anuncios en las fuentes de medios sociales de sus clientes.*
 
 ## Requisitos previos {#prerequisites}
 
-*Agregue información en esta sección sobre todo lo que los clientes deben tener en cuenta antes de comenzar a configurar el destino en la interfaz de usuario de Adobe Experience Platform. Puede tratarse de lo siguiente:*
+*Agregue información en esta sección sobre cualquier cosa que los clientes deban tener en cuenta antes de comenzar a configurar el destino en la interfaz de usuario de Adobe Experience Platform. Esto puede tratarse de:*
 
-* *necesidad de añadirse a una lista de permitidos*
+* *necesidad de añadirlo a una lista de permitidos*
 * *requisitos para el hash de correo electrónico*
-* *cualquier detalle de la cuenta de su parte*
-* *Cómo obtener una clave API para conectarse a la plataforma*
+* *cualquier información específica de la cuenta de su parte*
+* *cómo obtener una clave de API para conectarse a la plataforma*
 
-*Puede vincular a la documentación relevante si esto resulta útil para los clientes.*
+*Puede vincular a su documentación relevante si esto resulta útil para los clientes.*
 
-## Identidades admitidas {#supported-identities}
+## Identidades compatibles {#supported-identities}
 
-*Añada información en esta sección acerca de las identidades admitidas en el destino. Hemos rellenado previamente la tabla con algunos valores estándar. Elimine los valores que no se apliquen al destino y los valores que no estén rellenados previamente.*
+*Agregue información en esta sección sobre las identidades admitidas por el destino. Hemos rellenado previamente la tabla con algunos valores estándar. Elimine los valores que no se apliquen al destino y los que no estén precompletados.*
 
-*Su destino* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+*YourDestination* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
-| Identidad de destino | Descripción | Consideraciones |
+| Identidad de Target | Descripción | Consideraciones |
 |---|---|---|
-| GAID | ID de publicidad de Google | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
+| GAID | Google Advertising ID | Seleccione la identidad objetivo GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
-| ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Lea el siguiente documento el [ECID](/help/identity-service/ecid.md) para obtener más información. |
-| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación. |
+| ECID | Experience Cloud ID | Un espacio de nombres que representa ECID. Este espacio de nombres también puede ser referenciado por los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Lea el siguiente documento en [ECID](/help/identity-service/ecid.md) para obtener más información. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Adobe Experience Platform admite los números de teléfono con texto sin formato y con hash SHA256. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos. |
+| email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Si el campo de origen contiene atributos sin hash, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** para [!DNL Platform] hash automático de los datos al activarlos. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
 
 {style="table-layout:auto"}
 
-## Tipo y frecuencia de exportación {#export-type-frequency}
+## Tipo de exportación y frecuencia {#export-type-frequency}
 
-*En la tabla, conserve solo las líneas que correspondan a su destino. Debe tener una línea para el tipo de exportación y otra para la frecuencia de exportación. Elimine los valores que no se apliquen a su destino.*
+*En la tabla, mantenga solo las líneas que correspondan a su destino. Debe tener una línea para Export type y otra para Export frequency. Elimine los valores que no se apliquen al destino.*
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en *Su destino* destino. |
-| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Tipo de exportación | **[!UICONTROL Exportación de conjuntos de datos]** | Va a exportar conjuntos de datos sin procesar que no se agrupan ni estructuran por intereses o cualificaciones de audiencia. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
-| Frecuencia de exportación | **[!UICONTROL Lote]** | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en la variable *YourDestination* destino. |
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Tipo de exportación | **[!UICONTROL Exportación de conjuntos de datos]** | Está exportando conjuntos de datos sin procesar, que no se agrupan ni estructuran por intereses o cualificaciones de audiencia. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Lote]** | Los destinos de lote exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
-## Conectar con el destino {#connect}
+## Conectarse al destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos que aparecen en las dos secciones siguientes.
 
-### Autenticar en el destino {#authenticate}
+### Autenticar en destino {#authenticate}
 
-*Añada los campos que los clientes deben rellenar al autenticarse en el destino. Estos campos son específicos del destino y dependen de la configuración de en Destination SDK. Es posible que los campos de su destino no sean los mismos que los que se enumeran a continuación. Por favor incluya también una captura de pantalla similar a la captura de pantalla de muestra que se muestra abajo.*
+*Agregue los campos que los clientes deben rellenar al autenticarse en el destino. Estos campos son específicos de destino y dependen de la configuración en Destination SDK. Es posible que los campos del destino no sean los mismos que los que se enumeran a continuación. Por favor, incluya también una captura de pantalla similar a la captura de pantalla de muestra que se muestra a continuación.*
 
-Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
+Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectarse al destino]**.
 
 ![Captura de pantalla de ejemplo que muestra cómo autenticarse en el destino](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
-* **[!UICONTROL Token de portador]**: complete el token de portador para autenticarse en el destino.
+* **[!UICONTROL Token portador]**: Rellene el token al portador para autenticarse en el destino.
 
 ### Rellenar detalles de destino {#destination-details}
 
-*Añada los campos que los clientes deben rellenar al configurar un nuevo destino. Estos campos son específicos del destino y dependen de la configuración de en Destination SDK. Es posible que los campos de su destino no sean los mismos que los que se enumeran a continuación. Por favor incluya también una captura de pantalla similar a la captura de pantalla de muestra que se muestra abajo.*
+*Agregue los campos que los clientes deben rellenar al configurar un nuevo destino. Estos campos son específicos de destino y dependen de la configuración en Destination SDK. Es posible que los campos del destino no sean los mismos que los que se enumeran a continuación. Por favor, incluya también una captura de pantalla similar a la captura de pantalla de muestra que se muestra a continuación.*
 
-Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
+Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-![Captura de pantalla de muestra que muestra cómo rellenar los detalles del destino.](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Captura de pantalla de ejemplo que muestra cómo rellenar los detalles para el destino](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
-* **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
-* **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: su *Su destino* ID de cuenta.
+* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
+* **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL ID de cuenta]**: Su *YourDestination* ID de cuenta.
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, lea la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
+Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
@@ -129,26 +129,26 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-*Eliminar según corresponda: si está documentando un nuevo destino de flujo continuo, mantenga el primer párrafo a continuación. Si está documentando un nuevo destino basado en archivos, mantenga el segundo párrafo. Si está documentando un destino que exporta conjuntos de datos, conserve el tercer párrafo.*
+*Eliminar según corresponda : si está documentando un nuevo destino de flujo continuo, mantenga el primer párrafo a continuación. Si está documentando un nuevo destino basado en archivos, mantenga el segundo párrafo. Si está documentando un destino que exporta conjuntos de datos, mantenga el tercer párrafo.*
 
-Leer [Activación de perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
-Leer [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lectura [Activar datos de audiencia en destinos de exportación de perfiles en lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
 
-Leer [(Beta) Exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) para obtener instrucciones detalladas sobre la exportación de conjuntos de datos a este destino.
+Lectura [(Beta) Exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) para obtener instrucciones detalladas sobre la exportación de conjuntos de datos a este destino.
 
-### Asignar atributos e identidades {#map}
+### Asignación de atributos e identidades {#map}
 
-*Agregue información sobre las asignaciones compatibles entre los campos de origen y destino en el paso Asignación del flujo de trabajo de activación. El destino puede admitir la exportación de atributos de perfil, áreas de nombres de identidad o ambos. Algunos campos pueden ser obligatorios. Los atributos de destino pueden ser predefinidos o personalizados. Indique las advertencias importantes y use ejemplos, preferiblemente con capturas de pantalla. Dos ejemplos de páginas de destino que puede utilizar como referencia son:*
+*Agregue información sobre las asignaciones admitidas entre los campos de origen y destino en el paso Asignación del flujo de trabajo de activación. Su destino puede admitir la exportación de atributos de perfil, áreas de nombres de identidad o ambos. Algunos campos pueden ser obligatorios. Los atributos de destino pueden estar predefinidos o personalizados. Llame a las advertencias importantes y utilice ejemplos, preferiblemente con capturas de pantalla. Dos ejemplos de páginas de destino que puede utilizar como referencia son:*
 
 * *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
 * *[Medallia](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
-*Agregue un párrafo sobre cómo se exportan los datos al destino. Esto ayudaría al cliente a asegurarse de que se ha integrado correctamente con su destino. Por ejemplo, puede proporcionar un JSON de muestra como el de abajo. O bien, puede proporcionar capturas de pantalla e información de la interfaz de su destino que muestren cómo los clientes deberían esperar que los segmentos se rellenen en la plataforma de destino.*
+*Agregue un párrafo sobre cómo se exportan los datos al destino. Esto ayudaría al cliente a asegurarse de que se ha integrado correctamente con su destino. Por ejemplo, puede proporcionar un JSON de muestra como el que se muestra a continuación. O bien, podría proporcionar capturas de pantalla e información de la interfaz de su destino que muestre cómo los clientes deberían esperar que los segmentos se rellenen en la plataforma de destino.*
 
 ```
 {
@@ -163,7 +163,7 @@ Leer [(Beta) Exportar conjuntos de datos](/help/destinations/ui/export-datasets.
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -188,9 +188,9 @@ Leer [(Beta) Exportar conjuntos de datos](/help/destinations/ui/export-datasets.
 }
 ```
 
-## Uso de datos y gobernanza {#data-usage-governance}
+## Uso y gobernanza de los datos {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos, lea la [Resumen de gobernanza de datos](/help/data-governance/home.md).
+Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] exige la administración de datos, lea la [Información general sobre la administración de datos](/help/data-governance/home.md).
 
 ## Recursos adicionales {#additional-resources}
 

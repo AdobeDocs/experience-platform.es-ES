@@ -1,14 +1,18 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de marzo de 2023 para Adobe Experience Platform.
-source-git-commit: e597656949ba81b4a07c2962a02ddd94c6dc23e3
+source-git-commit: 1aeaf832f6cb2acf65c25199693b06669682883b
 workflow-type: tm+mt
-source-wordcount: '2153'
+source-wordcount: '2345'
 ht-degree: 4%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>A partir del 5 de abril de 2023, la variable `Existing` se eliminará del mapa de pertenencia a segmentos para eliminar la redundancia en el ciclo de vida de pertenencia a segmentos. Después de este cambio, los perfiles cualificados en un segmento se representarán como `Realized` y los perfiles no calificados se seguirán representando como `Exited`. Para obtener más información sobre este cambio, lea la [Sección Servicio de segmentación](#segmentation).
 
 **Fecha de la versión: 29 de marzo de 2023**
 
@@ -182,8 +186,9 @@ Para obtener más información sobre Real-Time CDP B2B Edition, lea la [Informac
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
-| --- | --- |
+| ------- | ----------- |
 | Métricas de perfil | Para proporcionar una representación más precisa de las métricas de perfil, el desglose de miembros y las métricas de pérdida se están combinando y ahora se calculan en un período de 24 horas. Encontrará más información en la [Guía de la interfaz de usuario de segmentación](../../segmentation/ui/overview.md#browse) |
+| Mapa de pertenencia a segmentos | Como seguimiento al anuncio anterior en febrero, el 5 de abril de 2023, la variable `Existing` se eliminará del mapa de pertenencia a segmentos para eliminar la redundancia en el ciclo de vida de pertenencia a segmentos. Después de este cambio, los perfiles cualificados en un segmento se representarán como `Realized` y los perfiles no calificados se seguirán representando como `Exited`.<br/><br/> Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) y pueden tener procesos descendentes automatizados en su lugar según la variable `Existing` estado. Revise sus integraciones descendentes si este es el caso. Si le interesa identificar perfiles recién calificados más allá de un cierto tiempo, considere la posibilidad de usar una combinación de `Realized` y `lastQualificationTime` en el mapa de pertenencia a segmentos. Para obtener más información, póngase en contacto con su representante del Adobe. |
 
 {style="table-layout:auto"}
 

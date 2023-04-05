@@ -1,35 +1,35 @@
 ---
-description: Esta página enumera y describe todas las operaciones de API que puede realizar mediante el punto final de la API "/authoring/testing/template/render" para procesar los datos exportados para su destino según la plantilla de transformación de mensajes.
-title: Procesar operaciones de API de plantilla
+description: En esta página se enumeran y describen todas las operaciones de API que puede realizar con el extremo API `/authoring/testing/template/render` para procesar datos exportados para su destino, en función de la plantilla de transformación de mensajes.
+title: Operaciones de API de plantilla de procesamiento
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 1%
 
 ---
 
-# Procesar operaciones de API de plantilla {#render-template-api-operations}
+# Operaciones de API de plantilla de procesamiento {#render-template-api-operations}
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**Punto de conexión de API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-Esta página enumera y describe todas las operaciones de API que puede realizar con la variable `/authoring/testing/template/render` Punto final de API, para procesar perfiles exportados que coincidan con el formato esperado del destino, en función de su [plantilla de transformación de mensaje](./message-format.md#using-templating). Para obtener una descripción de la funcionalidad admitida por este extremo, lea [crear plantilla](./create-template.md).
+En esta página se enumeran y describen todas las operaciones de API que puede realizar mediante la `/authoring/testing/template/render` extremo de API, para procesar perfiles exportados que coincidan con el formato esperado de su destino, en función de su [plantilla de transformación de mensaje](./message-format.md#using-templating). Para obtener una descripción de la funcionalidad admitida por este extremo, lea [crear plantilla](./create-template.md).
 
-## Introducción a las operaciones de API de plantilla de procesamiento {#get-started}
+## Introducción a las operaciones de API de plantilla de renderización {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API de , incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
 
-## Procesar perfiles exportados basados en la plantilla de transformación de mensajes {#render-exported-data}
+## Representar perfiles exportados basados en la plantilla de transformación de mensajes {#render-exported-data}
 
-Puede procesar perfiles exportados realizando una solicitud de POST a `authoring/testing/template/render` y proporciona el ID de destino de la configuración de destino y la plantilla que ha creado con la variable [extremo de API de plantilla de muestra](./sample-template-api.md).
+Puede procesar perfiles exportados realizando una solicitud de POST al `authoring/testing/template/render` y proporcionando el ID de destino de la configuración de destino y la plantilla que ha creado utilizando la variable [punto final de la API de plantilla de ejemplo](./sample-template-api.md).
 
-Puede empezar por utilizar una plantilla sencilla que exporte los perfiles sin procesar sin aplicar ninguna transformación y, a continuación, pasar a una plantilla más compleja que aplique transformaciones a los perfiles. La sintaxis de la plantilla simple es: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+Puede empezar utilizando una plantilla sencilla que exporta sus perfiles sin procesar sin aplicar ninguna transformación y luego pasar a una plantilla más compleja que aplique transformaciones a los perfiles. La sintaxis de la plantilla simple es: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
->* El ID de destino que debe utilizar aquí es el `instanceId` que corresponde a una configuración de destino, creada con la variable `/destinations` punto final. Consulte la [operaciones de API de configuración de destino](./destination-configuration-api.md#retrieve-list).
+>* El ID de destino que debe usar aquí es el `instanceId` que corresponde a una configuración de destino, creada con el `/destinations` punto final. Consulte la [operaciones de API de configuración de destino](./destination-configuration-api.md#retrieve-list).
 
 
 **Formato de API**
@@ -41,30 +41,30 @@ POST authoring/testing/template/render
 
 | Parámetro de solicitud | Descripción |
 | -------- | ----------- |
-| `destinationId` | El ID de la configuración de destino para la que está representando perfiles exportados. |
-| `template` | La versión con caracteres de escape de la plantilla en función de la cual se están representando los perfiles exportados. |
-| `profiles` | *Opcional*. Puede añadir perfiles al cuerpo de la solicitud. Si no agrega ningún perfil, Experience Platform generará y agregará automáticamente perfiles a la solicitud. <br> Si desea agregar perfiles al cuerpo de la llamada, puede generar algunos utilizando el [API de generación de perfiles de muestra](./sample-profile-generation-api.md). |
+| `destinationId` | El ID de la configuración de destino para la que se procesan perfiles exportados. |
+| `template` | Versión de la plantilla con caracteres de escape en función de la cual se están procesando perfiles exportados. |
+| `profiles` | *Opcional*. Puede añadir perfiles al cuerpo de la solicitud. Si no agrega ningún perfil, el Experience Platform generará y agregará perfiles automáticamente a la solicitud. <br> Si desea añadir perfiles al cuerpo de la llamada a , puede generarlos utilizando la variable [API de generación de perfiles de muestra](./sample-profile-generation-api.md). |
 
 {style="table-layout:auto"}
 
-Tenga en cuenta que la respuesta devuelta por el extremo de la API de plantilla de procesamiento difiere según la política de agregación de destino. Si el destino tiene una política de agregación configurable, la clave de agregación que determina cómo se agregan los perfiles también se devuelve en la respuesta. Más información sobre [políticas de agregación](./destination-configuration.md#aggregation) en el documento de configuración de destino.
+Tenga en cuenta que la respuesta devuelta por el extremo de la API de plantilla de renderización difiere según la política de agregación de destino. Si el destino tiene una política de agregación configurable, la clave de agregación que determina cómo se agregan los perfiles también se devuelve en la respuesta. Más información sobre [políticas de agregación](./destination-configuration.md#aggregation) en el documento de configuración de destino.
 
 | Parámetro de respuesta | Descripción |
 | -------- | ----------- |
-| `aggregationKey` | Representa la directiva mediante la cual se agregan perfiles en las exportaciones a su destino. Este parámetro es opcional y sólo estará presente si la directiva de agregación de destino se establece en `CONFIGURABLE_AGGREGATION`. |
+| `aggregationKey` | Representa la política mediante la cual se agregan perfiles en las exportaciones a su destino. Este parámetro es opcional y solo está presente si la política de agregación de destino está configurada en `CONFIGURABLE_AGGREGATION`. |
 | `profiles` | Muestra los perfiles proporcionados en la solicitud o los perfiles generados automáticamente si no se proporcionaron perfiles en la solicitud. |
-| `output` | Perfil o perfiles procesados, como una cadena con escape, basados en la plantilla de transformación de mensajes proporcionada |
+| `output` | Perfil o perfiles procesados, como cadena de escape, según la plantilla de transformación de mensaje proporcionada |
 
-En las secciones siguientes se proporcionan solicitudes y respuestas detalladas para los dos casos descritos anteriormente.
+En las secciones que figuran a continuación se proporcionan solicitudes y respuestas detalladas para los dos casos antes descritos.
 
-* [Agregación del mejor esfuerzo y un perfil incluido en el cuerpo de la solicitud](#best-effort)
-* [Agregación y perfiles configurables incluidos en el cuerpo de la solicitud](#configurable-aggregation)
+* [Mejor agregación de esfuerzo y un perfil incluido en el cuerpo de la solicitud](#best-effort)
+* [Agregación configurable y perfiles incluidos en el cuerpo de la solicitud](#configurable-aggregation)
 
-### Procesar perfiles exportados con agregación de mejor esfuerzo y un solo perfil incluido en el cuerpo de la solicitud {#best-effort}
+### Representar perfiles exportados con la mejor agregación de esfuerzo y un solo perfil incluido en el cuerpo de la solicitud {#best-effort}
 
 **Solicitud**
 
-La siguiente solicitud procesa un perfil exportado que coincide con el formato esperado por el destino. En este ejemplo, el ID de destino corresponde a una configuración de destino con agregación de esfuerzo máximo y se incluye un perfil de muestra en el cuerpo de la solicitud.
+La siguiente solicitud procesa un perfil exportado que coincide con el formato esperado por el destino. En este ejemplo, el ID de destino corresponde a una configuración de destino con el mejor esfuerzo de agregación y se incluye un perfil de muestra en el cuerpo de la solicitud.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -84,7 +84,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
@@ -126,8 +126,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Respuesta**
 
 La respuesta devuelve el resultado de procesar la plantilla o cualquier error encontrado.
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de los datos exportados. Busque el perfil exportado en la `output` , como una cadena de escape.
-Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones de los errores encontrados.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de los datos exportados. Busque el perfil exportado en la variable `output` como cadena de escape.
+Una respuesta incorrecta devolverá el estado HTTP 400 junto con las descripciones de los errores encontrados.
 
 ```json
 {
@@ -139,7 +139,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
-                                "status": "existing"
+                                "status": "realized"
                             },
                             "segmentid3": {
                                 "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
@@ -181,12 +181,12 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
 }    
 ```
 
-### Procesar perfiles exportados con agregación y perfiles configurables incluidos en el cuerpo de la solicitud {#configurable-aggregation}
+### Representar perfiles exportados con agregación configurable y perfiles incluidos en el cuerpo de la solicitud {#configurable-aggregation}
 
 **Solicitud**
 
 
-La siguiente solicitud procesa varios perfiles exportados que coinciden con el formato esperado por el destino. En este ejemplo, el ID de destino corresponde a una configuración de destino con agregación configurable. En el cuerpo de la solicitud se incluyen dos perfiles, cada uno con tres cualificaciones de segmento y cinco identidades. Puede generar perfiles para enviar en la llamada utilizando [API de generación de perfiles de muestra](./sample-profile-generation-api.md).
+La siguiente solicitud procesa varios perfiles exportados que coinciden con el formato esperado por el destino. En este ejemplo, el ID de destino corresponde a una configuración de destino con agregación configurable. En el cuerpo de la solicitud se incluyen dos perfiles, cada uno con tres clasificaciones de segmentos y cinco identidades. Puede generar perfiles para enviarlos en la llamada utilizando la variable [API de generación de perfiles de muestra](./sample-profile-generation-api.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -205,7 +205,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T17:41:55.947859Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T17:41:55.947860Z",
@@ -255,7 +255,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T17:41:55.948187Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T17:41:55.948188Z",
@@ -307,8 +307,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Respuesta**
 
 La respuesta devuelve el resultado de procesar la plantilla o cualquier error encontrado.
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de los datos exportados. Observe en la respuesta cómo se agregan los perfiles en función de la pertenencia y las identidades del segmento. Busque los perfiles exportados en la `output` , como una cadena de escape.
-Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones de los errores encontrados.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de los datos exportados. Observe en la respuesta cómo se agregan los perfiles en función de la pertenencia y las identidades del segmento. Busque los perfiles exportados en la `output` como cadena de escape.
+Una respuesta incorrecta devolverá el estado HTTP 400 junto con las descripciones de los errores encontrados.
 
 ```json
 {
@@ -509,7 +509,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
             "aggregationKey": {
                 "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
                 "segmentId": "segmentid1",
-                "segmentStatus": "existing",
+                "segmentStatus": "realized",
                 "identityNamespaces": [
                     "android_channel",
                     "amazon_channel",
@@ -523,7 +523,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -545,7 +545,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -567,7 +567,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -589,7 +589,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -611,7 +611,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -633,7 +633,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -655,7 +655,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -677,7 +677,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -950,7 +950,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
             "aggregationKey": {
                 "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
                 "segmentId": "segmentid1",
-                "segmentStatus": "existing",
+                "segmentStatus": "realized",
                 "identityNamespaces": [
                     "named_user_id"
                 ]
@@ -961,7 +961,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -983,7 +983,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -1064,10 +1064,10 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
 }
 ```
 
-## Administración de errores de API {#api-error-handling}
+## Gestión de errores de API {#api-error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API del Destination SDK siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo utilizar la plantilla de transformación de mensajes para generar perfiles exportados que coincidan con el formato de datos esperado del destino. Leer [cómo utilizar Destination SDK para configurar el destino](./configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración del destino.
+Después de leer este documento, ahora sabe cómo utilizar la plantilla de transformación de mensajes para generar perfiles exportados que coincidan con el formato de datos esperado del destino. Lectura [cómo usar Destination SDK para configurar el destino](./configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración de su destino.

@@ -3,9 +3,9 @@ keywords: Destino del centro de eventos de Azure;centro de eventos de azure;azur
 title: Conexión de los centros de eventos de Azure
 description: Cree una conexión saliente en tiempo real con su [!DNL Azure Event Hubs] almacenamiento para transmitir datos desde el Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
+source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2062'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ En cuanto a los datos exportados para un perfil determinado, es importante compr
 
 | Qué determina una exportación de destino | Qué se incluye en la exportación de destino |
 |---------|----------|
-| <ul><li>Los atributos y segmentos asignados sirven como señal para una exportación de destino. Esto significa que si cualquier segmento asignado cambia de estado (de nulo a realizado o de realizado/existente a existente) o si se actualiza cualquier atributo asignado, se inicia una exportación de destino.</li><li>Dado que actualmente las identidades no se pueden asignar a [!DNL Azure Event Hubs] destinos, los cambios en cualquier identidad en un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es o no el mismo valor. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>La variable `segmentMembership` incluye el segmento asignado en el flujo de datos de activación, para el cual el estado del perfil ha cambiado tras un evento de calificación o salida de segmento. Tenga en cuenta que otros segmentos sin asignar para los que el perfil cumpla los requisitos pueden formar parte de la exportación de destino, si pertenecen al mismo [combinar directiva](/help/profile/merge-policies/overview.md) como segmento asignado en el flujo de datos de activación. </li><li>Todas las identidades del `identityMap` también se incluyen (el Experience Platform no admite actualmente la asignación de identidades en la variable [!DNL Azure Event Hubs] destino).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
+| <ul><li>Los atributos y segmentos asignados sirven como señal para una exportación de destino. Esto significa que si algún segmento asignado cambia de estado (de `null` a `realized` o `realized` a `exiting`) o cualquier atributo asignado se actualiza, se iniciaría una exportación de destino.</li><li>Dado que actualmente las identidades no se pueden asignar a [!DNL Azure Event Hubs] destinos, los cambios en cualquier identidad en un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es o no el mismo valor. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>La variable `segmentMembership` incluye el segmento asignado en el flujo de datos de activación, para el cual el estado del perfil ha cambiado tras un evento de calificación o salida de segmento. Tenga en cuenta que otros segmentos sin asignar para los que el perfil cumpla los requisitos pueden formar parte de la exportación de destino, si pertenecen al mismo [combinar directiva](/help/profile/merge-policies/overview.md) como segmento asignado en el flujo de datos de activación. </li><li>Todas las identidades del `identityMap` también se incluyen (el Experience Platform no admite actualmente la asignación de identidades en la variable [!DNL Azure Event Hubs] destino).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -174,11 +174,11 @@ Su exportación [!DNL Experience Platform] los datos llegan a su [!DNL Azure Eve
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
          "lastQualificationTime":"2022-01-02T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
          "lastQualificationTime":"2021-08-25T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
          "lastQualificationTime":"2022-01-11T23:37:33Z",
@@ -216,7 +216,7 @@ A continuación se muestran más ejemplos de datos exportados, según la configu
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
@@ -236,7 +236,7 @@ A continuación se muestran más ejemplos de datos exportados, según la configu
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
