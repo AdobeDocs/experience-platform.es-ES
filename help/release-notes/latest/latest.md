@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de marzo de 2023 para Adobe Experience Platform.
-source-git-commit: 1aeaf832f6cb2acf65c25199693b06669682883b
+source-git-commit: 5f7cc08d48b7cf7d057fe199882be011607e51e6
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2397'
 ht-degree: 4%
 
 ---
@@ -51,6 +51,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Función | Descripción |
 | --- | --- |
 | Nuevo flujo de trabajo de inicio rápido para la API de Meta Conversions (Beta) | Acceda a los nuevos flujos de trabajo de inicio rápido en &quot;Introducción&quot; desde la pantalla de inicio de la recopilación de datos. La variable [flujo de trabajo de inicio rápido para la API de Meta Conversions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) permite a los clientes recopilar y reenviar rápidamente datos de eventos, del lado del servidor a Meta para conversiones de anuncios en solo unos pasos sencillos. |
+| Nuevo flujo de trabajo de inicio rápido para el SDK de Mobile (Beta) | Acceda a los nuevos flujos de trabajo de inicio rápido en &quot;Introducción&quot; desde la pantalla de inicio de la recopilación de datos. La variable [flujo de trabajo de inicio rápido para el SDK de Mobile](https://developer.adobe.com/client-sdks/documentation/) le permite implementar rápidamente el SDK móvil y validar eventos móviles básicos en solo unos pasos sencillos. |
 | [!DNL Braze] extensión de reenvío de eventos | La variable [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) la extensión de reenvío de eventos permite aprovechar los datos capturados en la red perimetral de Adobe Experience Platform y enviarlos a [!DNL Braze] en forma de eventos del lado del servidor utilizando la variable [!DNL Braze] API de seguimiento de usuarios. |
 | [!DNL Epsilon] extensión de reenvío de eventos | La variable [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) permite aprovechar el reenvío de eventos para capturar información de eventos en la red perimetral de Adobe Experience Platform y enviarla a [!DNL Epsilon] usando la variable [!DNL Epsilon] API de evento. |
 | [!DNL Mixpanel] extensión de reenvío de eventos | La variable [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) permite a los clientes aprovechar el reenvío de eventos para capturar información de eventos en la red perimetral de Adobe Experience Platform y enviarla a Mixpanel mediante la API de seguimiento de eventos. |
