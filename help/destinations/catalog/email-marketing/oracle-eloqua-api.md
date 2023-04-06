@@ -2,24 +2,25 @@
 title: Conexión (API) Eloqua de Oracle
 description: El destino Eloqua de Oracle (API) le permite exportar los datos de su cuenta y activarlos en Oracle Eloqua para sus necesidades comerciales.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: e8aa09545c95595e98b4730188bd8a528ca299a9
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1642'
 ht-degree: 0%
 
 ---
+
 
 # [!DNL (API) Oracle Eloqua] connection
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) permite a los especialistas en marketing planificar y ejecutar campañas al mismo tiempo que ofrecen una experiencia de cliente personalizada para sus clientes potenciales. Gracias a la administración integrada de posibles clientes y a la sencilla creación de campañas, ayuda a los especialistas en marketing a atraer a la audiencia adecuada en el momento adecuado en el recorrido de su comprador y escala elegantemente para llegar a las audiencias en todos los canales, incluidos el correo electrónico, la búsqueda en pantalla, el vídeo y el móvil. Los equipos de ventas pueden cerrar más ofertas a una velocidad más rápida, lo que aumenta el ROI de marketing a través de la perspectiva en tiempo real.
 
-Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [Actualizar un contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operación desde el [!DNL Oracle Eloqua] API de REST, que le permite actualizar identidades dentro de un segmento en [!DNL Oracle Eloqua].
+Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [Actualizar un contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operación desde el [!DNL Oracle Eloqua] API de REST, que le permite **actualizar identidades** dentro de un segmento [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] uses [Autenticación básica](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) para comunicarse con el [!DNL Oracle Eloqua] API de REST. Instrucciones para autenticarse en su [!DNL Oracle Eloqua] más abajo, en la [Autenticar en destino](#authenticate) para obtener más información.
 
 ## Casos de uso {#use-cases}
 
-Como especialista en marketing, puede ofrecer experiencias personalizadas a los usuarios en función de los atributos de sus perfiles de Adobe Experience Platform. Puede generar segmentos a partir de los datos sin conexión y enviarlos a [!DNL Oracle Eloqua], para que se muestren en las fuentes de los usuarios en cuanto los segmentos y perfiles se actualicen en Adobe Experience Platform.
+El departamento de marketing de una plataforma en línea quiere transmitir una campaña de marketing basada en correo electrónico a una audiencia seleccionada de posibles clientes. El equipo de marketing de la plataforma puede actualizar la información de posibles clientes existente a través de Adobe Experience Platform, crear segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a [!DNL Oracle Eloqua], que se puede utilizar para enviar el correo electrónico de la campaña de marketing.
 
 ## Requisitos previos {#prerequisites}
 
@@ -54,15 +55,26 @@ Tenga en cuenta los elementos siguientes antes de autenticarse en la variable [!
 * Si se supera este límite, se producirá un error en el Experience Platform. Esto se debe a que la variable [!DNL Oracle Eloqua] La API no valida la solicitud y responde con - *400: Error de validación* - mensaje de error que describe el problema.
 * Si ha alcanzado el límite especificado anteriormente, debe eliminar las asignaciones existentes de su destino y los campos de contacto personalizados correspondientes de su [!DNL Oracle Eloqua] para poder exportar más segmentos.
 
-* Consulte la [Oracle Eloqua Creación de Campos de Contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) para obtener más información sobre los límites adicionales.
+* Consulte la [[!DNL Oracle Eloqua] Creación de campos de contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) para obtener más información sobre los límites adicionales.
 
 ## Identidades compatibles {#supported-identities}
 
 [!DNL Oracle Eloqua] admite la actualización de identidades descritas en la siguiente tabla. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
-| Identidad de Target | Ejemplo | Descripción | Obligatorio |
-|---|---|---|---|
-| `EloquaId` | `111111` | Identificador único del contacto. | Sí |
+| Identidad de Target | Descripción | Obligatorio |
+|---|---|---|
+| `EloquaId` | Identificador único del contacto. | Sí |
+
+## Tipo de exportación y frecuencia {#export-type-frequency}
+
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | <ul><li>Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Para cada segmento seleccionado en Platform, el [!DNL Oracle Eloqua] el estado del segmento se actualiza con su estado del segmento desde Platform.</li></ul> |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+
+{style="table-layout:auto"}
 
 ## Conectarse al destino {#connect}
 
@@ -111,42 +123,37 @@ Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos d
 
 Para enviar correctamente los datos de audiencia de Adobe Experience Platform a [!DNL Oracle Eloqua] destino, debe pasar por el paso de asignación de campos. La asignación consiste en la creación de un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino.
 
-`EloquaID` es necesario para actualizar los atributos correspondientes a Identity. La variable `emailAddress` también es necesario, ya que sin ella la API genera un error como se indica a continuación:
-
-```json
-{
-   "type":"ObjectValidationError",
-   "container":{
-      "type":"ObjectKey",
-      "objectType":"Contact"
-   },
-   "property":"emailAddress",
-   "requirement":{
-      "type":"EmailAddressRequirement"
-   },
-   "value":"<null>"
-}
-```
-
-Los atributos especificados en la variable **[!UICONTROL Campo de destino]** debe llamarse exactamente como se describe en la tabla de asignaciones de atributos, ya que estos atributos formarán el cuerpo de la solicitud.
-
-Los atributos especificados en la variable **[!UICONTROL Campo de origen]** no seguir ninguna restricción de este tipo. Puede asignarlo en función de sus necesidades, pero si el formato de los datos no es correcto al insertarlo en [!DNL Oracle Eloqua] resultará en un error.
-
-Por ejemplo, puede asignar **[!UICONTROL Campo de origen]** área de nombres de identidad `contact key`, `ABC ID` etc. a **[!UICONTROL Campo de destino]** : `EloquaID` después de asegurarse de que los valores de ID cumplen el formato aceptado por [!DNL Oracle Eloqua].
-
-Para asignar correctamente los campos XDM a la variable [!DNL Oracle Eloqua] campos de destino, siga estos pasos:
+Para asignar los campos XDM a la variable [!DNL Oracle Eloqua] campos de destino, siga estos pasos:
 
 1. En el **[!UICONTROL Asignación]** paso, seleccione **[!UICONTROL Añadir nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
 1. En el **[!UICONTROL Seleccionar campo de origen]** , seleccione **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM o elija el **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad.
-1. En el **[!UICONTROL Seleccionar campo de destino]** , seleccione **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad o elija **[!UICONTROL Seleccionar atributos personalizados]** y seleccione un atributo según sea necesario.
-   * Repita estos pasos para añadir las siguientes asignaciones entre el esquema de perfil XDM y el [!DNL Oracle Eloqua] instancia: |Campo de origen|Campo de destino| Obligatorio| |—|—|—| |`xdm: personalEmail.address`|`Attribute: emailAddress`| Sí | |`IdentityMap: Eid`|`Identity: EloquaId`| Sí |
+1. En el **[!UICONTROL Seleccionar campo de destino]** ventana, elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad o elija **[!UICONTROL Seleccionar atributos personalizados]** y escriba el nombre de atributo deseado en la **[!UICONTROL Nombre del atributo]** campo . El nombre de atributo que proporcione debe coincidir con un atributo de contacto existente en [!DNL Oracle Eloqua]. Consulte [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) para los nombres de atributos exactos que puede usar en [!DNL Oracle Eloqua].
+   * Repita estos pasos para agregar las asignaciones de atributos necesarias y deseadas entre el esquema de perfil XDM y [!DNL Oracle Eloqua]: | Campo de origen | Campo Target | Obligatorio | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`| Sí | |`xdm: personalEmail.address`|`Attribute: emailAddress`| Sí | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
-   * A continuación se muestra un ejemplo con estas asignaciones:
+   * A continuación se muestra un ejemplo con las asignaciones anteriores:
       ![Ejemplo de captura de pantalla de la interfaz de usuario de Platform con asignaciones de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >Ambas `emailAddress` y `EloquaId` las asignaciones de atributos de target son obligatorias.
+>[!IMPORTANT]
+>
+>* Los atributos especificados en la variable **[!UICONTROL Campo de destino]** debe tener el mismo nombre que el especificado en la variable [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) ya que estos atributos formarán el cuerpo de la solicitud.
+>* Los atributos especificados en la variable **[!UICONTROL Campo de origen]** no seguir ninguna restricción de este tipo. Puede asignarlo en función de sus necesidades, pero si el formato de los datos no es correcto al insertarlo en [!DNL Oracle Eloqua] resultará en un error. Por ejemplo, puede asignar la variable **[!UICONTROL Campo de origen]** área de nombres de identidad `contact key`, `ABC ID` etc. a **[!UICONTROL Campo de destino]** : `EloquaId` después de asegurarse de que los valores de ID coinciden con el formato aceptado por [!DNL Oracle Eloqua].
+>* La variable `EloquaID` la asignación es obligatoria para actualizar los atributos correspondientes a la identidad.
+>* La variable `emailAddress` se requiere la asignación. Sin ella, la API genera un error como se muestra a continuación:
+>
+>```json
+>{
+>     "type":"ObjectValidationError",
+>     "container":{
+>           "type":"ObjectKey",
+>           "objectType":"Contact"
+>     },
+>     "property":"emailAddress",
+>     "requirement":{
+>           "type":"EmailAddressRequirement"
+>     },
+>     "value":"<null>"
+>}
+>```
 
 Cuando haya terminado de proporcionar las asignaciones para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
@@ -182,6 +189,7 @@ Consulte la [[!DNL Oracle Eloqua] Códigos de estado HTTP](https://docs.oracle.c
 
 ## Recursos adicionales {#additional-resources}
 
-Información útil adicional de [!DNL Oracle ELoqua] la siguiente es la documentación:
+Para obtener más información, consulte la [!DNL Oracle Eloqua] documentación:
+
 * [Automatización de mercadotecnia Eloqua de oracle](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [API de REST para el servicio de Marketing Cloud de Oracle Eloqua](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
