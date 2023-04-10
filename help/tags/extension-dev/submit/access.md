@@ -2,10 +2,10 @@
 title: Conceder acceso al usuario
 description: Configure las cuentas de usuario y los permisos de etiquetas de los integrantes del equipo en Adobe Experience Platform.
 exl-id: c7235e50-13b3-4487-b171-873063875621
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b0615a2fd2bd9d9dd729d506f71ce4a91c64a4fd
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 28%
+source-wordcount: '218'
+ht-degree: 27%
 
 ---
 
@@ -19,8 +19,8 @@ Antes de comenzar con su `extension_package`, debe configurar los integrantes de
 
 ## Configuración de permisos de usuario para Experience Platform y recopilación de datos
 
-Para que un usuario pueda acceder a las funciones de las etiquetas, un administrador debe añadir sus cuentas a un perfil de producto en Adobe Admin Console, que concede al usuario acceso a propiedades específicas y funciones de recopilación de datos. Para obtener más información sobre cómo conceder permisos de para la recopilación de datos, consulte la [Guía de permisos de recopilación de datos](../../../collection/permissions.md).
+Para que un usuario pueda acceder a las funciones de etiquetas, un administrador debe agregar sus cuentas a un perfil de producto en Adobe Admin Console, lo que concede al usuario acceso a propiedades específicas y a las funciones de recopilación de datos. Para obtener más información sobre cómo conceder permisos para la recopilación de datos, consulte la [Guía de permisos de recopilación de datos](../../../collection/permissions.md).
 
 ## Confirmación de aprovisionamiento
 
-Una vez que se haya proporcionado a su empresa acceso a las etiquetas y se hayan configurado los usuarios tal como se ha descrito anteriormente, deberá poder acceder a la IU de recopilación de datos y a la IU del Experience Platform desde el [Panel de Adobe Experience Cloud](https://experience.adobe.com/). Si sigue sin poder acceder a ninguna de las interfaces después de completar los pasos anteriores, póngase en contacto con los representantes de asistencia técnica de Adobe.
+Una vez que su empresa esté aprovisionada con acceso a las etiquetas y los usuarios estén configurados tal y como se ha descrito anteriormente, debe poder acceder a la IU de recopilación de datos y a la IU del Experience Platform desde la interfaz de usuario de [Panel de Adobe Experience Cloud](https://experience.adobe.com/). Si sigue sin poder acceder a ninguna de las IU después de completar los pasos anteriores, póngase en contacto con el equipo de la cuenta de Adobe o con el Servicio de atención al cliente.

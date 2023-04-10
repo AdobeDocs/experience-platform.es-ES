@@ -2,9 +2,9 @@
 title: (Beta) Audiencias de Experience Cloud
 description: Aprenda a compartir segmentos de Experience Platform a varias soluciones de Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1509'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 ### Para clientes que utilizan la solución heredada de uso compartido de segmentos
 
-Si ya está compartiendo segmentos de Experience Platform a Audience Manager y otras soluciones de Experience Cloud a través del [integración de uso compartido de segmentos heredados](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), debe ponerse en contacto con el Servicio de atención al cliente o con el Administrador de éxito de los clientes para deshabilitar la integración heredada. Los equipos de Servicio de atención al cliente y de Administración de asistencia al cliente deben presentar un ticket de Jira (consulte el ticket de plantilla AAM-52354) para deshabilitar la integración.
+Si ya está compartiendo segmentos de Experience Platform a Audience Manager y otras soluciones de Experience Cloud a través del [integración de uso compartido de segmentos heredados](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), debe ponerse en contacto con el Servicio de atención al cliente o con el equipo de la cuenta de Adobe para deshabilitar la integración heredada. Los equipos de atención al cliente y cuenta de Adobe deben presentar un ticket de Jira (consulte el ticket de plantilla AAM-52354) para desactivar la integración.
 
 El tiempo de respuesta para resolver el ticket de desaprovisionamiento para los clientes beta es de seis días hábiles o menos. Una vez deshabilitada la integración heredada existente, puede continuar con [creación de una conexión](#connect) mediante la tarjeta de destino de autoservicio.
 

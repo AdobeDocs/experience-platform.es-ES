@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;administración de datos;de
 title: Prácticas recomendadas del derecho de licencia de gestión de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
+source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2133'
 ht-degree: 2%
 
 ---
@@ -80,7 +80,7 @@ Hay dos escenarios centrales a tener en cuenta al garantizar que el uso de los d
 
 ### ¿Qué datos se van a incluir en Platform?
 
-Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL data lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir los datos históricos en la variable [!DNL data lake], pero no en el almacén de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
+Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL data lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir datos históricos en la variable [!DNL data lake], pero no en el almacén de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
 
 >[!NOTE]
 >
@@ -156,7 +156,7 @@ La siguiente tabla describe la lista de funciones disponibles actualmente a su d
 | Función | Descripción |
 | --- | --- |
 | [Habilitar/deshabilitar conjuntos de datos para perfil](../../catalog/datasets/user-guide.md) | Habilite o deshabilite la ingesta de conjuntos de datos en el perfil del cliente en tiempo real. |
-| [Caducidad de eventos de experiencia](../../profile/event-expirations.md) | Aplique una hora de caducidad para todos los eventos incorporados en un conjunto de datos habilitado para el perfil. Póngase en contacto con el representante de asistencia de Adobe para habilitar esta función. |
+| [Caducidad de eventos de experiencia](../../profile/event-expirations.md) | Aplique una hora de caducidad para todos los eventos incorporados en un conjunto de datos habilitado para el perfil. Póngase en contacto con el equipo de la cuenta de Adobe o con el Servicio de atención al cliente para habilitar esta función. |
 | [Filtros de preparación de datos de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Aplicar [!DNL Kafka] filtros para excluir los datos innecesarios de la ingesta |
 | [Filtros del conector de origen de Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplicar filtros de conexión de origen de Audience Manager para excluir de la ingesta datos innecesarios |
 | [Aplicar filtros de datos SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Aplicar filtros de aleación para excluir los datos innecesarios de la ingesta |
