@@ -2,7 +2,7 @@
 title: Información general sobre la extensión de la API de conversión de metadatos
 description: Obtenga información sobre la extensión de la API de Meta conversiones para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: fcc8e794bdfc3c6287d12c35e7d837d2f697239c
+source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
 workflow-type: tm+mt
 source-wordcount: '2256'
 ht-degree: 0%
@@ -165,7 +165,7 @@ A continuación, seleccione la lista desplegable junto a **[!UICONTROL Guardar e
 
 Repita estos pasos para cualquier otro evento de metaconversión que desee configurar.
 
-#### Configuración de la capa de datos
+#### Configuración de la capa de datos {#configuration}
 
 >[!IMPORTANT]
 >
