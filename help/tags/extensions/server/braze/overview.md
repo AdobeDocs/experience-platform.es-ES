@@ -2,9 +2,9 @@
 keywords: extensión de reenvío de eventos;brase;extensión de reenvío de eventos de brasil
 title: Extensión de reenvío de eventos de Braze
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de Adobe Experience Edge Network a Braze.
-source-git-commit: 88e589eb17c249a8bdc82fe7a041a5581a60c7e6
+source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1863'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 - Diríjase a usuarios específicos para campañas de marketing y promocionales a fin de aumentar el número de clientes que repiten.
 - Estudie el comportamiento y los patrones del usuario para dirigirse a audiencias específicas con mensajes personalizados, lo que podría ayudar a aumentar los ingresos.
 
-La variable [!DNL Braze Track Events API] [reenvío de eventos](../../../ui/event-forwarding/overview.md) permite aprovechar los datos capturados en la red perimetral de Adobe Experience Platform y enviarlos a [!DNL Braze] en forma de eventos del lado del servidor utilizando la variable [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) y [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
+La variable [!DNL Braze Track Events API] [reenvío de eventos](../../../ui/event-forwarding/overview.md) permite aprovechar los datos capturados en la red perimetral de Adobe Experience Platform y enviarlos a [!DNL Braze] en forma de eventos del lado del servidor utilizando la variable [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
 
 Este documento cubre los casos de uso de la extensión, cómo instalarla en las bibliotecas de reenvío de eventos y cómo utilizar sus capacidades en un reenvío de eventos [regla](../../../ui/managing-resources/rules.md).
 
