@@ -2,14 +2,18 @@
 title: Información general sobre etiquetas
 description: Las etiquetas de Adobe Experience Platform son la próxima generación de funcionalidades de administración de etiquetas de Adobe. Las etiquetas ofrecen a los clientes una alternativa sencilla para implementar y administrar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 4f31c77fd3efe06797055ca04a30ae5ff4872b4e
+source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 96%
+source-wordcount: '585'
+ht-degree: 92%
 
 ---
 
 # Información general sobre etiquetas
+
+>[!NOTE]
+>
+>El reenvío de eventos es una función de pago que se incluye como parte de las ofertas Adobe Real-time Customer Data Platform Connections, Prime o Ultimate.
 
 >[!NOTE]
 >

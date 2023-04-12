@@ -2,26 +2,26 @@
 keywords: Experience Platform;inicio;temas populares;recopilación de datos;launch;sdk web
 solution: Experience Platform
 title: Información general sobre la recopilación de datos
-description: Obtenga información acerca de las distintas tecnologías relacionadas con la recopilación de datos sobre experiencias de los clientes en Adobe Experience Platform.
+description: Obtenga información sobre las distintas tecnologías que intervienen en la recopilación de datos sobre las experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '516'
 ht-degree: 9%
 
 ---
 
 # Información general sobre la recopilación de datos
 
-Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente de fuentes del lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe en segundos.
+Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente de fuentes del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe en segundos.
 
 La recopilación de datos es compatible con las siguientes fuentes del lado del cliente:
 
-* Aplicaciones basadas en web
+* Aplicaciones basadas en la Web
 * Aplicaciones móviles nativas
-* Aplicaciones OTT (Over-the-top)
+* Aplicaciones OTT
 
-La recopilación de datos se centra en la detección y accesibilidad de conjuntos de datos ingeridos, e incluye lo siguiente:
+La recopilación de datos se centra en la capacidad de detección y accesibilidad de los conjuntos de datos ingestados, y abarca lo siguiente:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Etiquetas](../tags/home.md)
@@ -33,42 +33,42 @@ La recopilación de datos se centra en la detección y accesibilidad de conjunto
 * [Modelo de datos de experiencia (XDM)](../xdm/home.md)
 * [Servicio de ID de Adobe Experience Platform](../identity-service/home.md)
 
-Esta guía proporciona una introducción general a la recopilación de datos y a cómo funciona para enviar datos a productos de Adobe Experience Cloud y aplicaciones que no son de Adobe a través de Platform Edge Network.
+Esta guía proporciona una introducción de alto nivel a la recopilación de datos y cómo funciona para enviar datos a productos de Adobe Experience Cloud y aplicaciones que no son de Adobe a través de Platform Edge Network.
 
 ## Etiquetas, SDK web y SDK móvil
 
-El SDK web de Platform y el SDK móvil de Platform contraen y comprimen todas las bibliotecas de productos de Adobe en un único kit de desarrollo para plataformas web y móviles, respectivamente. Pueden implementarse mediante código sin procesar o utilizando [etiquetas](../tags/home.md) mediante la IU de recopilación de datos o la IU de Adobe Experience Platform.
+El SDK web de Platform y el SDK de Platform Mobile contraen y comprimen todas las bibliotecas de productos de Adobe en un único kit de desarrollo para plataformas web y móviles, respectivamente. Se pueden implementar utilizando código sin procesar o utilizando [etiquetas](../tags/home.md) a través de la interfaz de usuario de recopilación de datos o la interfaz de usuario de Adobe Experience Platform.
 
-La compresión de estas bibliotecas acelera la recopilación de datos y consolida las operaciones en un único flujo desde dispositivos del lado del cliente a la red perimetral de Platform.
+La compresión de estas bibliotecas acelera la recopilación de datos y consolida las operaciones en un único flujo desde dispositivos del lado del cliente a Platform Edge Network.
 
 ![Etiquetas, SDK web, SDK móvil](./images/home/tags-sdks.png)
 
-## Red perimetral de plataforma y flujos de datos {#edge}
+## Red perimetral de plataforma y conjuntos de datos {#edge}
 
-Platform Edge Network es una red de servidores distribuidos globalmente, rápidos y fiables capaces de recibir y procesar datos a una escala tremenda. Con las etiquetas, puede configurar lo siguiente [flujos de datos](../edge/datastreams/overview.md) para productos como Adobe Target, Adobe Audience Manager y Adobe Analytics, que le permiten activar estos productos en el servidor sin cambiar el código del lado del cliente.
+Platform Edge Network es una red global de servidores distribuidos, rápidos y confiables que pueden recibir y procesar datos a una escala tremenda. Con las etiquetas, puede configurar [datastreams](../edge/datastreams/overview.md) para productos como Adobe Target, Adobe Audience Manager y Adobe Analytics, que permiten activar estos productos en el servidor sin cambiar el código del lado del cliente.
 
-Además, los flujos de datos están integrados con varias funciones de Platform que ayudan a garantizar que los datos confidenciales que envía se gestionen correctamente con respecto a las políticas organizativas y las regulaciones legales. Consulte la sección sobre [gestión de datos confidenciales](../edge/datastreams/overview.md#sensitive) en la documentación de flujos de datos para obtener más información.
+Además, los conjuntos de datos de se integran con varias funciones de Platform que ayudan a garantizar que cualquier dato confidencial que envía se gestione adecuadamente con respecto a las políticas organizativas y las normativas legales. Consulte la sección sobre [gestión de datos confidenciales](../edge/datastreams/overview.md#sensitive) en la documentación de datastreams para obtener más información.
 
-![Flujos de datos y soluciones de Adobe](./images/home/adobe-solutions.png)
+![Datastreams y soluciones de Adobe](./images/home/adobe-solutions.png)
 
 >[!NOTE]
 >
->Para obtener una introducción de alto nivel a Platform Edge Network, consulte lo siguiente [recorrido interactivo del producto](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
+>Para obtener una introducción de alto nivel a la red perimetral de plataforma, consulte lo siguiente [recorrido interactivo del producto](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## Reenvío de eventos
 
-[Reenvío de eventos](../tags/ui/event-forwarding/overview.md) puede aprovechar cualquier conjunto de datos de Experience Platform, lo que le permite transformar, enriquecer y enviar datos a cualquier destino que no sea de Adobe con latencia baja extrema y sin agregar código de terceros al dispositivo cliente.
+[Reenvío de eventos](../tags/ui/event-forwarding/overview.md) puede aprovechar cualquier conjunto de datos del Experience Platform, lo que le permite transformar, enriquecer y enviar datos a cualquier destino que no sea de Adobe con latencia extrema baja y sin añadir ningún código de terceros al dispositivo cliente.
 
 ![Reenvío de eventos](./images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->El reenvío de eventos es una función de pago que solo se incluye como parte de la oferta Conexiones de Adobe Real-time Customer Data Platform.
+>El reenvío de eventos es una función de pago que se incluye como parte de las ofertas Adobe Real-time Customer Data Platform Connections, Prime o Ultimate.
 
 ## Pasos siguientes
 
-Este documento proporciona una amplia descripción general de cómo funciona la recopilación de datos para automatizar el proceso de envío de los datos recopilados sobre la experiencia del cliente a productos de Adobe y destinos de terceros.
+Este documento proporciona información general de alto nivel sobre cómo funciona la recopilación de datos para automatizar el proceso de envío de los datos de experiencia del cliente recopilados a productos de Adobe y destinos de terceros.
 
 ![Marco de recopilación de datos](./images/home/collection.png)
 
-Para obtener más información sobre el flujo de trabajo general involucrado en el envío de datos de evento a través de la red perimetral, consulte la [información general de extremo a extremo](./e2e.md).
+Para obtener más información sobre el flujo de trabajo general implicado en el envío de datos de evento a través de la red perimetral, consulte [información general integral](./e2e.md).
