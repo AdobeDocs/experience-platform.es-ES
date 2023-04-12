@@ -5,9 +5,9 @@ title: API de Experience Platform de autenticación y acceso
 type: Tutorial
 description: Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1267'
 ht-degree: 8%
 
 ---
@@ -31,7 +31,7 @@ Este tutorial explica cómo recopilar las credenciales necesarias para autentica
 
 Para realizar correctamente llamadas a las API de Experience Platform, debe tener lo siguiente:
 
-* Una organización de IMS con acceso a Adobe Experience Platform.
+* Una organización con acceso a Adobe Experience Platform.
 * Un administrador de Admin Console que puede agregarle como desarrollador y un usuario para un perfil de producto.
 
 También debe tener un Adobe ID para completar este tutorial. Si no tiene un Adobe ID, puede crearlo siguiendo estos pasos:
@@ -54,7 +54,7 @@ Una vez que esté asignado como desarrollador, puede empezar a crear integracion
 
 Su [!DNL Admin Console] El administrador también debe agregarle como usuario al mismo perfil de producto. Consulte la guía de [administración de grupos de usuarios en [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) para obtener más información.
 
-## Generar una clave de API, el ID de organización de IMS y el secreto del cliente {#api-ims-secret}
+## Generar una clave de API, un ID de organización y un secreto de cliente {#api-ims-secret}
 
 >[!NOTE]
 >

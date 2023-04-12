@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de solución de problemas del Privacy Service
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el Privacy Service, así como información sobre los errores encontrados con frecuencia en la API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '916'
 ht-degree: 1%
 
 ---
@@ -107,7 +107,7 @@ La siguiente tabla describe algunos errores comunes en [!DNL Privacy Service], c
 | Espacio de nombres no válido | Un espacio de nombres de identidad proporcionado para un ID de usuario no era válido. Consulte la sección sobre [áreas de nombres de identidad estándar](./api/appendix.md#standard-namespaces) en el [!DNL Privacy Service] apéndice de la guía de API para obtener una lista de áreas de nombres aceptadas. Si utiliza un área de nombres personalizada, asegúrese de que está configurando el ID de `type` en &quot;custom&quot;. |
 | Finalizado parcialmente | El trabajo se completó correctamente, pero algunos datos no eran aplicables para la solicitud dada y se omitieron. |
 | Los datos no tienen el formato requerido. | Uno o más de los valores de datos de la aplicación especificada tenían un formato incorrecto. Consulte los detalles del trabajo para obtener más información. |
-| La organización IMS no se ha aprovisionado. | Este mensaje se produce cuando la organización de IMS no se ha aprovisionado para [!DNL Privacy Service]. Póngase en contacto con su administrador para obtener más información. |
+| La organización IMS no se ha aprovisionado. | Este mensaje se produce cuando su organización no está aprovisionada para [!DNL Privacy Service]. Póngase en contacto con su administrador para obtener más información. |
 | Se necesitan permisos y acceso. | Se necesitan permisos y acceso para poder usar [!DNL Privacy Service]. Póngase en contacto con el administrador para obtener acceso. |
 | Hubo un problema al cargar y archivar los datos de acceso. | Cuando se produzca este error, vuelva a cargar los datos de acceso e inténtelo de nuevo. |
 | Se superó la carga de trabajo para el límite actual de la tasa de documentos. | Cuando se produzca este error, reduzca la tasa de envío e inténtelo de nuevo. |

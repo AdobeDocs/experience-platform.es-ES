@@ -2,10 +2,10 @@
 title: Guía de la API de Reactor
 description: La API de Reactor permite a los desarrolladores administrar mediante programación todos los recursos para etiquetas en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 95%
+source-wordcount: '1081'
+ht-degree: 94%
 
 ---
 
@@ -19,7 +19,7 @@ Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [Re
 
 ## Compañías
 
-Una compañía representa la organización de un usuario de etiquetas, normalmente un negocio. Estas compañías coinciden 1:1 con los ID de organización de IMS. Los usuarios de API solo tendrán visibilidad de las empresas a las que tienen acceso.
+Una compañía representa la organización de un usuario de etiquetas, normalmente un negocio. Estas empresas coinciden 1:1 con los ID de organización. Los usuarios de API solo tendrán visibilidad de las empresas a las que tienen acceso.
 
 Consulte la [guía de extremo de compañías](./endpoints/companies.md) para obtener información sobre cómo ver las empresas disponibles en la API.
 
@@ -117,7 +117,7 @@ El extremo `/search` proporciona una forma de encontrar recursos que coincidan c
 
 ## Secretos
 
-Un secreto contiene credenciales que permiten al reenvío de eventos autenticarse en otro sistema para un intercambio de datos seguro. Consulte la [guía de secretos](./guides/secrets.md) para obtener información general sobre cómo funcionan los secretos en el reenvío de eventos, y la [guía de extremo de secretos](./endpoints/secrets.md) para obtener información sobre cómo administrarlos en la API de Reactor.
+Un secreto contiene credenciales que permiten que el reenvío de eventos se autentique en otro sistema para el intercambio seguro de datos. Consulte la [guía de secretos](./guides/secrets.md) para obtener información general sobre cómo funcionan los secretos en el reenvío de eventos, y la variable [guía de extremo secret](./endpoints/secrets.md) para aprender a administrarlas en la API de Reactor.
 
 ## Pasos siguientes
 

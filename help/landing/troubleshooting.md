@@ -7,9 +7,9 @@ landing-page-description: Encuentre respuestas a las preguntas más frecuentes y
 short-description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1868'
 ht-degree: 5%
 
 ---
@@ -32,9 +32,9 @@ Los formatos de solicitud varían según la variable [!DNL Platform] API que se 
 
 Para obtener más información sobre el formato de las solicitudes de API, consulte la guía de introducción a la API de plataforma . [leer llamadas de API de ejemplo](./api-guide.md#sample-api) para obtener más información.
 
-## ¿Qué es mi organización IMS? {#what-is-my-ims-organization}
+## ¿Cuál es mi organización? {#what-is-my-ims-organization}
 
-Una organización IMS es una representación de Adobe de un cliente. Las soluciones de Adobe con licencia se integran con esta organización de clientes. Cuando una organización de IMS tiene derecho a [!DNL Experience Platform], puede asignar acceso a los desarrolladores. El ID de organización de IMS (`x-gw-ims-org-id`) representa la organización para la que se debe ejecutar una llamada de API y, por lo tanto, se requiere como encabezado en todas las solicitudes de API. Este ID se puede encontrar a través de la variable [Consola de Adobe Developer](https://www.adobe.com/go/devs_console_ui): en el **Integraciones** , vaya a la pestaña **Información general** para cualquier integración en particular para encontrar el ID en **Credenciales del cliente**. Para obtener una guía paso a paso de cómo autenticarse en [!DNL Platform], consulte la [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
+Una organización es una representación de Adobe de un cliente. Las soluciones de Adobe con licencia se integran con esta organización de clientes. Cuando una organización tiene derecho a [!DNL Experience Platform], puede asignar acceso a los desarrolladores. El ID de organización (`x-gw-ims-org-id`) representa la organización para la que se debe ejecutar una llamada de API y, por lo tanto, se requiere como encabezado en todas las solicitudes de API. Este ID se puede encontrar a través de la variable [Consola de Adobe Developer](https://www.adobe.com/go/devs_console_ui): en el **Integraciones** , vaya a la pestaña **Información general** para cualquier integración en particular para encontrar el ID en **Credenciales del cliente**. Para obtener una guía paso a paso de cómo autenticarse en [!DNL Platform], consulte la [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## ¿Dónde puedo encontrar mi clave de API? {#where-can-i-find-my-api-key}
 
@@ -42,7 +42,7 @@ Se requiere una clave de API como encabezado en todas las solicitudes de API. Se
 
 ## ¿Cómo obtengo un token de acceso? {#how-do-i-get-an-access-token}
 
-Los tokens de acceso son necesarios en el encabezado Autorización de todas las llamadas a la API. Pueden generarse mediante un `curl` siempre que tenga acceso a una integración para una organización de IMS. Los tokens de acceso solo son válidos durante 24 horas, tras lo cual debe generarse un nuevo token para continuar usando la API. Para obtener más información sobre la generación de tokens de acceso, consulte la [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
+Los tokens de acceso son necesarios en el encabezado Autorización de todas las llamadas a la API. Pueden generarse mediante un comando CURL, siempre que tenga acceso a una integración para una organización. Los tokens de acceso solo son válidos durante 24 horas, tras lo cual debe generarse un nuevo token para continuar usando la API. Para obtener más información sobre la generación de tokens de acceso, consulte la [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## ¿Cómo utilizo los parámetros de consulta? {#how-do-i-user-query-parameters}
 
@@ -151,7 +151,7 @@ Este mensaje de error se muestra cuando el valor del encabezado de clave de API 
 }
 ```
 
-Este mensaje de error aparece cuando hay un encabezado de organización de IMS (`x-gw-ims-org-id`) no aparece en una solicitud de API. Asegúrese de que el encabezado esté incluido con el ID de su organización IMS antes de intentarlo de nuevo.
+Este mensaje de error se muestra cuando un encabezado de organización (`x-gw-ims-org-id`) no aparece en una solicitud de API. Asegúrese de que el encabezado esté incluido con el ID de su organización antes de intentarlo de nuevo.
 
 ### El perfil no es válido {#profile-is-not-valid}
 
@@ -162,7 +162,7 @@ Este mensaje de error aparece cuando hay un encabezado de organización de IMS (
 }
 ```
 
-Este mensaje de error se muestra cuando se integra el usuario o el Adobe I/O (identificado mediante la función [token de acceso](#how-do-i-get-an-access-token) en el `Authorization` header) no tiene derecho a realizar llamadas a [!DNL Experience Platform] API para la organización IMS proporcionada en la `x-gw-ims-org-id` encabezado. Asegúrese de proporcionar el ID correcto para su organización IMS en el encabezado antes de volver a intentarlo. Si no conoce su ID de organización, puede encontrarlo en la [Consola Adobe I/O](https://console.adobe.io): en el **Integraciones** , vaya a la pestaña **Información general** para una integración específica para encontrar el ID en **Credenciales del cliente**.
+Este mensaje de error se muestra cuando se integra el usuario o el Adobe I/O (identificado mediante la función [token de acceso](#how-do-i-get-an-access-token) en el `Authorization` header) no tiene derecho a realizar llamadas a [!DNL Experience Platform] API para la organización proporcionada en la `x-gw-ims-org-id` encabezado. Asegúrese de proporcionar el ID correcto para su organización en el encabezado antes de volver a intentarlo. Si no conoce su ID de organización, puede encontrarlo en la [Consola Adobe I/O](https://console.adobe.io): en el **Integraciones** , vaya a la pestaña **Información general** para una integración específica para encontrar el ID en **Credenciales del cliente**.
 
 ### Actualizar error de etiqueta {#refresh-etag-error}
 
@@ -199,7 +199,7 @@ Este mensaje de error se muestra cuando una solicitud de POST, PUT o PATCH no es
 ```
 
 Este mensaje de error se muestra en cualquiera de los dos casos siguientes:
-- Cuando el encabezado de organización de IMS es incorrecto o está mal formado (`x-gw-ims-org-id`) se pasa en una solicitud de API. Asegúrese de incluir el ID correcto de su organización de IMS antes de intentarlo de nuevo.
+- Cuando hay un encabezado de ID de organización incorrecto o mal formado (`x-gw-ims-org-id`) se pasa en una solicitud de API. Asegúrese de incluir el ID correcto de su organización antes de volver a intentarlo.
 - Cuando su cuenta (representada por las credenciales de autenticación proporcionadas) no está asociada con un perfil de producto para Experience Platform. Siga los pasos de [generación de credenciales de acceso](./api-authentication.md#authentication-for-each-session) en el tutorial de autenticación de la API de plataforma para agregar Platform a su cuenta y actualizar las credenciales de autenticación en consecuencia.
 
 ## Directorio de solución de problemas del servicio {#service-troubleshooting-directory}

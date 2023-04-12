@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;Puntuar un modelo;Espacio de trabajo de ciencia de datos;temas populares;api de aprendizaje automático de sensei
+keywords: Experience Platform;Puntuación de un modelo;Data Science Workspace;temas populares;api sensei de aprendizaje automático
 solution: Experience Platform
 title: Puntuación de un modelo mediante la API de aprendizaje automático de Sensei
 type: Tutorial
-description: Este tutorial muestra cómo aprovechar las API de aprendizaje automático de Sensei para crear un experimento y una ejecución de experimento.
+description: Este tutorial le muestra cómo aprovechar las API de aprendizaje automático de Sensei para crear un experimento y una ejecución de experimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '550'
 ht-degree: 1%
 
 ---
 
-# Puntuación de un modelo con [!DNL Sensei Machine Learning API]
+# Puntuación de un modelo mediante la variable [!DNL Sensei Machine Learning API]
 
-Este tutorial muestra cómo aprovechar las API para crear un experimento y una ejecución de experimento. Para obtener una lista de todos los puntos finales de la API de aprendizaje automático de Sensei, consulte [este documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+Este tutorial le muestra cómo aprovechar las API para crear un experimento y una ejecución de experimento. Para obtener una lista de todos los extremos de la API de aprendizaje automático de Sensei, consulte [este documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Crear un experimento programado para la puntuación
 
-De forma similar a los Experimentos programados para formación, la creación de un Experimento programado para puntuación también se realiza incluyendo una `template` al parámetro body. Además, la variable `name` campo debajo de `tasks` en el cuerpo se establece como `score`.
+De forma similar a los experimentos programados para formación, la creación de un experimento programado para la puntuación también se realiza incluyendo un `template` al parámetro body. Además, la variable `name` campo bajo `tasks` en el cuerpo se establece como `score`.
 
 A continuación se muestra un ejemplo de creación de un experimento que se ejecutará cada 20 minutos a partir de `startTime` y se ejecutará hasta `endTime`.
 
@@ -34,10 +34,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Las credenciales de su organización de IMS se encuentran en la integración única de Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: el valor del token de portador específico proporcionado después de la autenticación.\
-`{API_KEY}`: El valor de clave de API específico que se encuentra en la integración única de Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: objeto de ejecución de experimento que se enviará. El ejemplo que utilizamos en nuestro tutorial se muestra aquí:
+`{ORG_ID}`: Sus credenciales de organización se encuentran en su integración única de Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: Su valor de token al portador específico proporcionado después de la autenticación.\
+`{API_KEY}`: El valor clave de API específico que se encuentra en su integración única de Adobe Experience Platform.\
+`{JSON_PAYLOAD}`: Objeto de ejecución del experimento que se va a enviar. El ejemplo que utilizamos en nuestro tutorial se muestra aquí:
 
 ```JSON
 {
@@ -67,10 +67,10 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`: ID que representa la instancia de MLI.\
-`{MODEL_ID}`: ID que representa el modelo entrenado.
+`{INSTANCE_ID}`: ID que representa la instancia MLI.\
+`{MODEL_ID}`: El ID que representa el modelo entrenado.
 
-La siguiente es la respuesta después de crear el experimento programado.
+A continuación se muestra la respuesta después de crear el experimento programado.
 
 **Respuesta**
 
@@ -102,13 +102,13 @@ La siguiente es la respuesta después de crear el experimento programado.
 }
 ```
 
-`{EXPERIMENT_ID}`: el ID que representa el experimento.\
-`{INSTANCE_ID}`: ID que representa la instancia de MLI.
+`{EXPERIMENT_ID}`: El ID que representa el experimento.\
+`{INSTANCE_ID}`: ID que representa la instancia MLI.
 
 
-### Crear una ejecución de experimento para puntuación
+### Crear una ejecución de experimento para la puntuación
 
-Ahora, con el modelo entrenado, podemos crear una Ejecución de experimento para la puntuación. El valor del `modelId` El parámetro es el `id` parámetro devuelto en la solicitud del modelo de GET anterior.
+Ahora, con el modelo entrenado, podemos crear una Carrera de Experimento para la puntuación. El valor de la variable `modelId` es el parámetro `id` parámetro devuelto en la solicitud del modelo de GET anterior.
 
 **Solicitud**
 
@@ -122,11 +122,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Las credenciales de su organización de IMS se encuentran en la integración única de Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: el valor del token de portador específico proporcionado después de la autenticación.\
-`{API_KEY}`: El valor de clave de API específico que se encuentra en la integración única de Adobe Experience Platform.\
-`{EXPERIMENT_ID}`: el ID correspondiente al experimento al que desea dirigirse. Esto se puede encontrar en la respuesta al crear el experimento.\
-`{JSON_PAYLOAD}`: datos que se van a publicar. El ejemplo que utilizamos en nuestro tutorial es el siguiente:
+`{ORG_ID}`: Sus credenciales de organización se encuentran en su integración única de Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: Su valor de token al portador específico proporcionado después de la autenticación.\
+`{API_KEY}`: El valor clave de API específico que se encuentra en su integración única de Adobe Experience Platform.\
+`{EXPERIMENT_ID}`: El ID correspondiente al experimento al que desea dirigirse. Esto se encuentra en la respuesta al crear el experimento.\
+`{JSON_PAYLOAD}`: Datos que se van a publicar. El ejemplo que utilizamos en nuestro tutorial es este:
 
 ```JSON
 {
@@ -147,7 +147,7 @@ curl -X POST \
 
 `{MODEL_ID}`: ID correspondiente al modelo.
 
-A continuación, se muestra la respuesta de la creación de la ejecución del experimento:
+La respuesta de la creación de la ejecución del experimento se muestra a continuación:
 
 **Respuesta**
 
@@ -168,13 +168,13 @@ A continuación, se muestra la respuesta de la creación de la ejecución del ex
 }
 ```
 
-`{EXPERIMENT_ID}`: el ID correspondiente al experimento en el que se encuentra la ejecución.\
-`{EXPERIMENT_RUN_ID}`: el ID correspondiente a la ejecución del experimento que acaba de crear.
+`{EXPERIMENT_ID}`: El ID correspondiente al experimento en el que se encuentra la ejecución.\
+`{EXPERIMENT_RUN_ID}`: El ID correspondiente a la ejecución del experimento que acaba de crear.
 
 
-### Recuperar un estado de ejecución de experimento para una ejecución de experimento programada
+### Recuperar el estado de ejecución de un experimento para la ejecución programada de un experimento
 
-Para obtener las ejecuciones de experimentos para experimentos programados, la consulta se muestra a continuación:
+Para obtener ejecuciones de experimento para experimentos programados, la consulta se muestra a continuación:
 
 **Solicitud**
 
@@ -185,9 +185,9 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-`{EXPERIMENT_ID}`: el ID correspondiente al experimento en el que se encuentra la ejecución.\
-`{ACCESS_TOKEN}`: el valor del token de portador específico proporcionado después de la autenticación.\
-`{ORG_ID}`: Las credenciales de su organización de IMS se encuentran en la integración única de Adobe Experience Platform.
+`{EXPERIMENT_ID}`: El ID correspondiente al experimento en el que se encuentra la ejecución.\
+`{ACCESS_TOKEN}`: Su valor de token al portador específico proporcionado después de la autenticación.\
+`{ORG_ID}`: Sus credenciales de organización se encuentran en su integración única de Adobe Experience Platform.
 
 Dado que hay varias ejecuciones de experimento para un experimento específico, la respuesta devuelta tendrá una matriz de ID de ejecución.
 
@@ -213,11 +213,11 @@ Dado que hay varias ejecuciones de experimento para un experimento específico, 
 ```
 
 `{EXPERIMENT_RUN_ID}`: ID correspondiente a la ejecución del experimento.\
-`{EXPERIMENT_ID}`: el ID correspondiente al experimento en el que se encuentra la ejecución.
+`{EXPERIMENT_ID}`: El ID correspondiente al experimento en el que se encuentra la ejecución.
 
 ### Detener y eliminar un experimento programado
 
-Si desea detener la ejecución de un experimento programado antes de su `endTime`, esto se puede hacer consultando una solicitud del DELETE a `{EXPERIMENT_ID}`
+Si desea detener la ejecución de un experimento programado antes de su `endTime`, esto se puede hacer consultando una solicitud del DELETE al `{EXPERIMENT_ID}`
 
 **Solicitud**
 
@@ -229,12 +229,12 @@ curl -X DELETE \
 ```
 
 `{EXPERIMENT_ID}`: ID correspondiente al experimento.\
-`{ACCESS_TOKEN}`: el valor del token de portador específico proporcionado después de la autenticación.\
-`{ORG_ID}`: Las credenciales de su organización de IMS se encuentran en la integración única de Adobe Experience Platform.
+`{ACCESS_TOKEN}`: Su valor de token al portador específico proporcionado después de la autenticación.\
+`{ORG_ID}`: Sus credenciales de organización se encuentran en su integración única de Adobe Experience Platform.
 
 >[!NOTE]
 >
->La llamada de API deshabilita la creación de nuevas ejecuciones de experimentos. Sin embargo, no detendrá la ejecución de ejecuciones de experimentos que ya se estén ejecutando.
+>La llamada de API deshabilitará la creación de nuevas ejecuciones de Experimento. Sin embargo, no detendrá la ejecución de ejecuciones de experimento que ya se estén ejecutando.
 
 A continuación se muestra la respuesta que notifica que el experimento se ha eliminado correctamente.
 

@@ -1,10 +1,10 @@
 ---
-description: Esta página describe todas las operaciones de API que puede realizar mediante el punto final de API /authoring/credentials.
+description: En esta página se describen todas las operaciones de API que se pueden realizar con el extremo de API `/authoring/credentials`.
 title: Operaciones de API de extremo de credenciales
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '791'
 ht-degree: 5%
 
 ---
@@ -13,26 +13,26 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/credentials`
+>**Punto de conexión de API**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Esta página enumera y describe todas las operaciones de API que puede realizar con la variable `/authoring/credentials` Extremo de API.
+En esta página se enumeran y describen todas las operaciones de API que puede realizar mediante la `/authoring/credentials` extremo de API.
 
-Para obtener una descripción de la funcionalidad admitida por este extremo, lea:
+Para obtener una descripción de la funcionalidad admitida por este punto final, lea:
 
-* [Configuración de destino de streaming](destination-configuration.md) para la funcionalidad, puede configurar para destinos de flujo continuo.
-* [Configuración de destino basada en archivos](file-based-destination-configuration.md) para la funcionalidad, puede configurar para destinos basados en archivos.
+* [Configuración de destino de transmisión](destination-configuration.md) para la funcionalidad que puede configurar para los destinos de flujo continuo.
+* [Configuración de destino basada en archivos](file-based-destination-configuration.md) para la funcionalidad que puede configurar para destinos basados en archivos.
 
-## Cuándo usar el `/credentials` Extremo de API {#when-to-use}
+## Cuándo usar la variable `/credentials` Punto de conexión de API {#when-to-use}
 
 >[!IMPORTANT]
 >
->En la mayoría de los casos, *no* necesita usar el `/credentials` Extremo de API. En su lugar, puede configurar la información de autenticación para su destino mediante el `customerAuthenticationConfigurations` parámetros del `/destinations` punto final. Leer [Configuración de autenticación](./authentication-configuration.md#when-to-use) para obtener más información.
+>En la mayoría de los casos, usted *no* es necesario usar la variable `/credentials` extremo de API. En su lugar, puede configurar la información de autenticación de su destino mediante la variable `customerAuthenticationConfigurations` parámetros de la variable `/destinations` punto final. Lectura [Configuración de autenticación](./authentication-configuration.md#when-to-use) para obtener más información.
 
-Utilice este extremo de API y seleccione `PLATFORM_AUTHENTICATION` en el [configuración de destino](./destination-configuration.md#destination-delivery) si existe un sistema de autenticación global entre el Adobe y el destino y el [!DNL Platform] el cliente no necesita proporcionar credenciales de autenticación para conectarse a su destino. En este caso, debe crear un objeto de credenciales utilizando la variable `/credentials` Extremo de API.
+Utilice este extremo de API y seleccione `PLATFORM_AUTHENTICATION` en el [configuración de destino](./destination-configuration.md#destination-delivery) si hay un sistema de autenticación global entre el Adobe y el destino y la variable [!DNL Platform] El cliente no necesita proporcionar credenciales de autenticación para conectarse al destino. En este caso, debe crear un objeto credentials utilizando la variable `/credentials` extremo de API.
 
-## Introducción a las operaciones de la API de configuración de credenciales {#get-started}
+## Introducción a las operaciones de API de configuración de credenciales {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API de , incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
 
 ## Crear una configuración de credenciales {#create}
 
@@ -46,7 +46,7 @@ POST /authoring/credentials
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva configuración de credenciales, configurada por los parámetros proporcionados en la carga útil. La carga útil siguiente incluye todos los parámetros aceptados por el `/authoring/credentials` punto final. Tenga en cuenta que no tiene que añadir todos los parámetros en la llamada de y que la plantilla se puede personalizar, según los requisitos de la API.
+La siguiente solicitud crea una nueva configuración de credenciales, configurada por los parámetros proporcionados en la carga útil. La carga útil siguiente incluye todos los parámetros aceptados por la variable `/authoring/credentials` punto final. Tenga en cuenta que no es necesario agregar todos los parámetros en la llamada de y que la plantilla se puede personalizar, según los requisitos de la API.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -115,22 +115,22 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Parámetro | Tipo | Descripción |
 | -------- | ----------- | ----------- |
-| `username` | Cadena | Nombre de usuario de inicio de sesión de configuración |
-| `password` | Cadena | Contraseña de inicio de sesión de configuración de credenciales |
+| `username` | Cadena | Credenciales configuración nombre de usuario inicio de sesión |
+| `password` | Cadena | Credenciales configuración contraseña de inicio de sesión |
 | `url` | Cadena | URL del proveedor de autorización |
-| `clientId` | Cadena | ID de cliente de la credencial de cliente/aplicación |
-| `clientSecret` | Cadena | Secreto de cliente de credenciales de cliente/aplicación |
+| `clientId` | Cadena | ID de cliente de credenciales de cliente/aplicación |
+| `clientSecret` | Cadena | Secreto de cliente de las credenciales de cliente/aplicación |
 | `accessToken` | Cadena | Token de acceso proporcionado por el proveedor de autorización |
-| `expiration` | Cadena | Tiempo de vida del token de acceso |
+| `expiration` | Cadena | El tiempo de vida del token de acceso |
 | `refreshToken` | Cadena | Actualizar token proporcionado por el proveedor de autorización |
-| `header` | Cadena | Cualquier encabezado necesario para la autorización. |
+| `header` | Cadena | Cualquier encabezado necesario para la autorización |
 | `accessId` | Cadena | ID de acceso de Amazon S3 |
 | `secretKey` | Cadena | Clave secreta de Amazon S3 |
 | `sshKey` | Cadena | Clave SSH para SFTP con autenticación SSH |
-| `tenant` | Cadena | inquilino de Azure Data Lake Storage |
-| `servicePrincipalId` | Cadena | ID principal del servicio de Azure para el almacenamiento de Azure Data Lake |
-| `servicePrincipalKey` | Cadena | Clave principal del servicio de Azure para el almacenamiento de Azure Data Lake |
-| `connectionString` | Cadena | Cadena de conexión de Azure Blob Storage |
+| `tenant` | Cadena | Inquilino de almacenamiento de Azure Data Lake |
+| `servicePrincipalId` | Cadena | ID principal de Azure Service para el almacenamiento de Azure Data Lake |
+| `servicePrincipalKey` | Cadena | Clave principal de Azure Service para el almacenamiento de Azure Data Lake |
+| `connectionString` | Cadena | Cadena de conexión de almacenamiento del blob de Azure |
 
 {style="table-layout:auto"}
 
@@ -140,7 +140,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 ## Enumerar configuraciones de credenciales {#retrieve-list}
 
-Puede recuperar una lista de todas las configuraciones de credenciales de su organización IMS realizando una solicitud de GET a la `/authoring/credentials` punto final.
+Puede recuperar una lista de todas las configuraciones de credenciales de su organización realizando una solicitud de GET al `/authoring/credentials` punto final.
 
 **Formato de API**
 
@@ -151,7 +151,7 @@ GET /authoring/credentials
 
 **Solicitud**
 
-La siguiente solicitud recuperará la lista de configuraciones de credenciales a las que tiene acceso, en función de la organización de IMS y la configuración de la zona protegida.
+La siguiente solicitud recuperará la lista de configuraciones de credenciales a las que tiene acceso, según la organización y la configuración del entorno limitado.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -163,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **Respuesta**
 
-La siguiente respuesta devuelve el estado HTTP 200 con una lista de configuraciones de credenciales a las que tiene acceso, en función del ID de organización de IMS y el nombre de la zona protegida que ha utilizado. Uno `instanceId` corresponde a la plantilla de una configuración de credenciales. La respuesta se trunca por su brevedad.
+La siguiente respuesta devuelve el estado HTTP 200 con una lista de configuraciones de credenciales a las que tiene acceso, según el ID de organización y el nombre de entorno limitado que haya utilizado. One `instanceId` corresponde a la plantilla para una configuración de credenciales. La respuesta se trunca para su brevedad.
 
 ```json
 {
@@ -190,7 +190,7 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de configuracio
 
 ## Actualizar una configuración de credenciales existente {#update}
 
-Puede actualizar una configuración de credenciales existente realizando una solicitud de PUT al `/authoring/credentials` y proporciona el ID de instancia de la configuración de credenciales que desea actualizar. En el cuerpo de la llamada, proporcione la configuración de credenciales actualizada.
+Puede actualizar una configuración de credenciales existente realizando una solicitud de PUT al `/authoring/credentials` y proporcionando el ID de instancia de la configuración de credenciales que desea actualizar. En el cuerpo de la llamada, proporcione la configuración de credenciales actualizada.
 
 **Formato de API**
 
@@ -234,7 +234,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## Recuperar una configuración de credenciales específica {#get}
 
-Puede recuperar información detallada sobre una configuración de credenciales específica realizando una solicitud de GET al `/authoring/credentials` y proporciona el ID de instancia de la configuración de credenciales que desea actualizar.
+Puede recuperar información detallada sobre una configuración de credenciales específica realizando una solicitud de GET al `/authoring/credentials` y proporcionando el ID de instancia de la configuración de credenciales que desea actualizar.
 
 **Formato de API**
 
@@ -280,7 +280,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Eliminar una configuración de credenciales específica {#delete}
 
-Puede eliminar la configuración de credenciales especificada realizando una solicitud de DELETE al `/authoring/credentials` y proporciona el ID de la configuración de credenciales que desea eliminar en la ruta de solicitud.
+Puede eliminar la configuración de credenciales especificada realizando una solicitud de DELETE al `/authoring/credentials` y proporcionando el ID de la configuración de credenciales que desea eliminar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -290,7 +290,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | El `id` de la configuración de credenciales que desea eliminar. |
+| `{INSTANCE_ID}` | La variable `id` de la configuración de credenciales que desea eliminar. |
 
 **Solicitud**
 
@@ -306,10 +306,10 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credenti
 
 Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta HTTP vacía.
 
-## Administración de errores de API
+## Gestión de errores de API
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API del Destination SDK siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cuándo usar el punto de conexión de credenciales y cómo establecer una configuración de credenciales mediante `/authoring/credentials` Punto final de API para `/authoring/destinations` punto final. Leer [cómo utilizar Destination SDK para configurar el destino](./configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración del destino.
+Después de leer este documento, ahora sabe cuándo utilizar el extremo de credenciales y cómo configurar una configuración de credenciales utilizando la variable `/authoring/credentials` Punto final de API o `/authoring/destinations` punto final. Lectura [cómo usar Destination SDK para configurar el destino](./configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración de su destino.

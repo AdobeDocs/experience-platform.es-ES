@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de solución de problemas del servicio de identidad
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de identidad de Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2176'
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ Este mensaje de error se muestra cuando `graph-type` se ha dado un valor no vál
 }
 ```
 
-Este mensaje de error se muestra cuando la organización de IMS no se ha aprovisionado con los permisos adecuados para [!DNL Identity Service]. Póngase en contacto con el administrador del sistema para resolver este problema.
+Este mensaje de error se muestra cuando su organización no está aprovisionada con los permisos adecuados para [!DNL Identity Service]. Póngase en contacto con el administrador del sistema para resolver este problema.
 
 ### El token de servicio de puerta de enlace no es válido
 
@@ -264,7 +264,7 @@ When [!DNL Identity Service] persiste en una identidad, el ID de la identidad y 
 }
 ```
 
-Este mensaje de error se muestra cuando la organización de IMS no se ha aprovisionado con los permisos adecuados para [!DNL Identity Service]. Póngase en contacto con el administrador del sistema para resolver este problema.
+Este mensaje de error se muestra cuando su organización no está aprovisionada con los permisos adecuados para [!DNL Identity Service]. Póngase en contacto con el administrador del sistema para resolver este problema.
 
 ### Error interno del servidor
 
@@ -330,7 +330,7 @@ Este error se muestra cuando las primeras 100 filas de un lote no presentaban id
 }
 ```
 
-Este error se muestra cuando un registro ingerido presenta una identidad cuyo espacio de nombres asociado no existe o no es accesible para su organización IMS.
+Este error se muestra cuando un registro ingerido presenta una identidad cuyo área de nombres asociada no existe o su organización no puede acceder a ella.
 
 ### Omitir la ingesta de lotes como organización de IMS no está aprovisionada para Private Identity Graph
 
@@ -342,7 +342,7 @@ Este error se muestra cuando un registro ingerido presenta una identidad cuyo es
 }
 ```
 
-Al ingerir datos por lotes, este mensaje de error se muestra cuando la organización de IMS no se ha aprovisionado con los permisos adecuados para [!DNL Identity Service]. Póngase en contacto con el administrador del sistema para resolver este problema.
+Al ingerir datos por lotes, este mensaje de error se muestra cuando su organización no se ha aprovisionado con los permisos adecuados para [!DNL Identity Service]. Póngase en contacto con el administrador del sistema para resolver este problema.
 
 ### Error interno
 

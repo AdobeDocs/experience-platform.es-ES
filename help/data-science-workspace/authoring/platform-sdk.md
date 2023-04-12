@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Creación de modelos mediante el SDK de la plataforma Adobe Experience Platform
 description: Este tutorial le proporciona información sobre la conversión de data_access_sdk_python al nuevo Python platform_sdk en Python y R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '489'
 ht-degree: 5%
 
 ---
 
 # Creación de modelos con Adobe Experience Platform [!DNL Platform] SDK
 
-Este tutorial proporciona información sobre la conversión `data_access_sdk_python` al nuevo Python `platform_sdk` tanto en Python como en R. Este tutorial proporciona información sobre las siguientes operaciones:
+Este tutorial le proporciona información sobre la conversión `data_access_sdk_python` al nuevo Python `platform_sdk` en Python y R. Este tutorial proporciona información sobre las siguientes operaciones:
 
-- [Autenticación de compilación](#build-authentication)
+- [Generar autenticación](#build-authentication)
 - [Lectura básica de los datos](#basic-reading-of-data)
 - [Escritura básica de datos](#basic-writing-of-data)
 
-## Autenticación de compilación {#build-authentication}
+## Generar autenticación {#build-authentication}
 
-Se requiere autenticación para realizar llamadas a [!DNL Adobe Experience Platform]y se compone de una clave de API, un ID de organización de IMS, un token de usuario y un token de servicio.
+La autenticación es necesaria para realizar llamadas a [!DNL Adobe Experience Platform], y se compone de clave de API, ID de organización, un token de usuario y un token de servicio.
 
 ### Python
 
@@ -31,7 +31,7 @@ Si está utilizando Jupyter Notebook, utilice el siguiente código para crear el
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si no utiliza Jupyter Notebook o necesita cambiar la organización de IMS, utilice el siguiente ejemplo de código:
+Si no utiliza Jupyter Notebook o necesita cambiar la organización, utilice el siguiente ejemplo de código:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -54,7 +54,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si no utiliza Jupyter Notebook o necesita cambiar la organización de IMS, utilice el siguiente ejemplo de código:
+Si no utiliza Jupyter Notebook o necesita cambiar la organización, utilice el siguiente ejemplo de código:
 
 ```r
 library(reticulate)
@@ -75,15 +75,15 @@ Si el tiempo de lectura está tardando demasiado, puede intentar utilizar una de
 - [Filtrado de datos por desplazamiento y límite](#filter-by-offset-and-limit)
 - [Filtrado de datos por fecha](#filter-by-date)
 - [Filtrado de datos por columna](#filter-by-selected-columns)
-- [Obteniendo resultados ordenados](#get-sorted-results)
+- [Obtención de resultados ordenados](#get-sorted-results)
 
 >[!NOTE]
 >
->La organización de IMS se configura dentro de la variable `client_context`.
+>La organización se establece dentro de la variable `client_context`.
 
 ### Python
 
-Para leer datos en Python, utilice el ejemplo de código siguiente:
+Para leer datos en Python, utilice el siguiente ejemplo de código:
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -94,7 +94,7 @@ df.head()
 
 ### R
 
-Para leer datos en R, utilice el siguiente ejemplo de código:
+Para leer los datos en R, utilice el siguiente ejemplo de código:
 
 ```r
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -123,7 +123,7 @@ df
 
 ## Filtrar por fecha {#filter-by-date}
 
-La granularidad del filtrado de fechas ahora se define mediante la marca de tiempo, no por el día.
+La granularidad del filtrado de fechas ahora se define mediante la marca de tiempo, en lugar de configurarse por día.
 
 ### Python
 
@@ -145,7 +145,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-El nuevo [!DNL Platform] SDK admite las siguientes operaciones:
+El nuevo [!DNL Platform] El SDK admite las siguientes operaciones:
 
 | Operación | Función |
 | --------- | -------- |
@@ -159,7 +159,7 @@ El nuevo [!DNL Platform] SDK admite las siguientes operaciones:
 
 ## Filtrar por columnas seleccionadas {#filter-by-selected-columns}
 
-Para restringir aún más la lectura de datos, también puede filtrar por nombre de columna.
+Para restringir aún más la lectura de los datos, también puede filtrar por nombre de columna.
 
 ### Python
 
@@ -175,9 +175,9 @@ df <- dataset_reader$select(c('column-a','column-b'))$read()
 
 ## Obtener resultados ordenados {#get-sorted-results}
 
-Los resultados recibidos se pueden ordenar por columnas especificadas del conjunto de datos de destinatario y en su orden (asc/desc) respectivamente.
+Los resultados recibidos se pueden ordenar por columnas especificadas del conjunto de datos de destino y en su orden (asc/desc) respectivamente.
 
-En el ejemplo siguiente, dataframe se ordena por &quot;column-a&quot; primero en orden ascendente. Las filas que tienen los mismos valores para la columna a se ordenan por la columna b en orden descendente.
+En el siguiente ejemplo, dataframe se ordena primero por &quot;column-a&quot; en orden ascendente. Las filas que tienen los mismos valores para la &quot;columna-a&quot; se ordenan por &quot;columna-b&quot; en orden descendente.
 
 ### Python
 
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->La organización de IMS se configura dentro de la variable `client_context`.
+>La organización se establece dentro de la variable `client_context`.
 
 Para escribir datos en Python y R, utilice uno de los siguientes ejemplos:
 
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Pasos siguientes
 
-Una vez que haya configurado el `platform_sdk` cargador de datos, los datos se preparan y se dividen en el `train` y `val` conjuntos de datos. Para obtener más información acerca de la preparación de datos y la ingeniería de funciones, visite la sección sobre [preparación de datos e ingeniería de funciones](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula con [!DNL JupyterLab] cuadernos.
+Una vez que haya configurado la variable `platform_sdk` cargador de datos, los datos se preparan y luego se dividen en el `train` y `val` conjuntos de datos. Para obtener más información sobre la preparación de datos y la ingeniería de características, visite la sección de [preparación de datos e ingeniería de características](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula con [!DNL JupyterLab] portátiles.

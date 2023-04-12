@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la interfaz de usuario
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3227'
 ht-degree: 10%
 
 ---
@@ -289,7 +289,7 @@ Para ver más detalles sobre una ejecución de flujo de datos específica, selec
 La página de detalles de ejecución del flujo de datos, además de los detalles mostrados en la lista de ejecuciones del flujo de datos, muestra información más específica sobre el flujo de datos:
 
 - **[!UICONTROL ID de ejecución de flujo de datos]**: ID del flujo de datos.
-- **[!UICONTROL ID de organización de IMS]**: La organización IMS a la que pertenece el flujo de datos.
+- **[!UICONTROL ID de organización de IMS]**: La organización a la que pertenece el flujo de datos.
 - **[!UICONTROL Última actualización]**: La última vez que se actualizó la ejecución del flujo de datos.
 
 La página de detalles también tiene un interruptor para cambiar entre los errores de ejecución del flujo de datos y los segmentos. Esta opción solo está disponible para ejecuciones de flujo de datos en destinos por lotes.

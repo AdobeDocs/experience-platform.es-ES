@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre la coincidencia de segmentos
 description: Coincidencia de segmentos es un servicio para compartir segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, regulada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '1997'
 ht-degree: 1%
 
 ---
@@ -76,7 +76,7 @@ Hay dos permisos asociados con [!DNL Segment Match]:
 
 | Permiso | Descripción |
 | --- | --- |
-| Administrar conexiones de uso compartido de audiencias | Este permiso le permite completar el proceso de protocolo de enlace con el socio, que conecta dos organizaciones IMS para habilitar [!DNL Segment Match] flujos. |
+| Administrar conexiones de uso compartido de audiencias | Este permiso le permite completar el proceso de protocolo de enlace con el socio, que conecta dos organizaciones para habilitar [!DNL Segment Match] flujos. |
 | Administrar audiencias compartidas | Este permiso le permite crear, editar y publicar fuentes (el paquete de datos utilizado para [!DNL Segment Match]) con socios activos (socios que el usuario administrador ha conectado con **[!UICONTROL Conexiones de uso compartido de audiencias]** acceso). |
 
 Consulte la [información general sobre el control de acceso](../../../access-control/home.md) para obtener más información sobre control de acceso y permisos.

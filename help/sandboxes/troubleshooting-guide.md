@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de solución de problemas de entornos limitados
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre los entornos limitados de Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Los entornos limitados son particiones aisladas de una sola instancia de Platfor
 
 ## ¿Cuál es el entorno limitado de producción predeterminado?
 
-El entorno limitado de producción predeterminado es el primer simulador de pruebas de producción que se crea al aprovisionar por primera vez una organización de IMS. El entorno limitado de producción predeterminado le permite ingerir o consumir datos de Platform, así como aceptar solicitudes que no incluyan valores para un nombre de entorno limitado o un ID de simulador de pruebas. El simulador para pruebas de producción predeterminado se puede restablecer, pero no eliminar.
+El entorno limitado de producción predeterminado es el primer entorno limitado de producción que se crea cuando se aprovisiona por primera vez una organización. El entorno limitado de producción predeterminado le permite ingerir o consumir datos de Platform, así como aceptar solicitudes que no incluyan valores para un nombre de entorno limitado o un ID de simulador de pruebas. El simulador para pruebas de producción predeterminado se puede restablecer, pero no eliminar.
 
 ## ¿Cuántos entornos limitados de producción puedo tener?
 
@@ -63,7 +63,7 @@ Puede actualizar el título de un simulador para pruebas de producción. Sin emb
 
 ## ¿Cuántos entornos limitados de desarrollo puedo tener?
 
-Actualmente, el Experience Platform permite que un máximo de 75 entornos limitados (producción y desarrollo) estén activos dentro de una única organización de IMS.
+Actualmente, el Experience Platform permite que un máximo de 75 entornos limitados (producción y desarrollo) estén activos dentro de una sola organización.
 
 Los entornos limitados de desarrollo admiten las funciones de restablecimiento y eliminación.
 

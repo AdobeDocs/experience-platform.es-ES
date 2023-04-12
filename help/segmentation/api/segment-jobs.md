@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de la API de trabajos de segmento
 description: El extremo de trabajos de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación los trabajos de segmentos de su organización.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1497'
 ht-degree: 3%
 
 ---
@@ -56,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de segmento para la organización IMS especificada como JSON. Sin embargo, la respuesta será diferente, dependiendo del número de segmentos dentro del trabajo del segmento.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de segmento para la organización especificada como JSON. Sin embargo, la respuesta será diferente, dependiendo del número de segmentos dentro del trabajo del segmento.
 
 **Menor o igual que 1500 segmentos en el trabajo del segmento**
 

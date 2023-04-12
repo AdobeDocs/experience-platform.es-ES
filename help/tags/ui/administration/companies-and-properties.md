@@ -2,10 +2,10 @@
 title: Propiedades
 description: Conozca cómo las extensiones, los entornos y las bibliotecas están organizados y agrupados para su organización en Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 98%
+source-wordcount: '1176'
+ht-degree: 95%
 
 ---
 
@@ -25,7 +25,7 @@ Un tipo de propiedad móvil puede contener varias aplicaciones. Por ejemplo, en 
 
 ## Prácticas recomendadas para la planificación de propiedades {#best-practices-for-planning-properties}
 
-Cada implementación de etiquetas en Adobe Experience Platform puede ser muy diferente. Cuentan con una amplia variedad de necesidades de recopilación de datos, uso de variables, extensiones, etiquetas de terceros, otros sistemas y tecnologías, personas, equipos y zonas geográficas, entre otros. Debe estructurar las propiedades de forma que coincidan con el flujo de trabajo y los procesos de la organización IMS.
+Cada implementación de etiquetas en Adobe Experience Platform puede ser muy diferente. Cuentan con una amplia variedad de necesidades de recopilación de datos, uso de variables, extensiones, etiquetas de terceros, otros sistemas y tecnologías, personas, equipos y zonas geográficas, entre otros. Debe estructurar las propiedades de forma que coincidan con el flujo de trabajo y los procesos de su organización.
 
 Considerar lo siguiente a la hora de planificar las propiedades
 
@@ -67,7 +67,7 @@ Por ejemplo, si está implementando [!DNL Adobe Analytics], [!DNL Target] y las 
 
 En el caso de las personas, los equipos y las organizaciones que trabajan en Adobe Experience Platform, ¿necesitan tener acceso a todos sus sitios web y aplicaciones, a algunos o solo a uno?
 
-Las funciones de administración de usuarios le permiten asignar diferentes funciones a distintas personas para todas las propiedades, o en función de cada propiedad. Si alguien tiene derechos suficientes, esa persona puede realizar acciones administrativas en todas las propiedades de la organización IMS de esa plataforma. El resto de las funciones se podrán asignar en función de cada propiedad. Incluso puede ocultar una propiedad para determinados usuarios (que no sean administradores). Para ello, no debe otorgarles ninguna función en dicha propiedad.
+Las funciones de administración de usuarios le permiten asignar diferentes funciones a distintas personas para todas las propiedades, o en función de cada propiedad. Si alguien tiene derechos suficientes, esa persona puede realizar acciones administrativas en todas las propiedades de esa organización de Platform. El resto de las funciones se podrán asignar en función de cada propiedad. Incluso puede ocultar una propiedad para determinados usuarios (que no sean administradores). Para ello, no debe otorgarles ninguna función en dicha propiedad.
 
 ## Página de Properties
 

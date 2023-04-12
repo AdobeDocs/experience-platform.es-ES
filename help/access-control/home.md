@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto del Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1540'
 ht-degree: 3%
 
 ---
@@ -55,7 +55,7 @@ En el [!DNL Admin Console], los permisos se asignan a los usuarios mediante el u
 
 ## Sandboxes y permisos
 
-Los entornos limitados que no son de producción son una forma de virtualización de datos que le permite aislar los datos de otros entornos limitados y que normalmente se utilizan para experimentos de desarrollo, pruebas o pruebas. Los permisos de un perfil de producto proporcionan a los usuarios del perfil acceso a [!DNL Platform] funciones dentro de los entornos de entorno limitado a los que se les ha concedido acceso. Una licencia de Experience Platform predeterminada le otorga cinco entornos limitados (una producción y cuatro no producción). Puede agregar paquetes de diez entornos limitados que no sean de producción hasta un máximo de 75 entornos limitados en total. Póngase en contacto con su administrador de organización de IMS o con su representante de ventas de Adobe para obtener más información.
+Los entornos limitados que no son de producción son una forma de virtualización de datos que le permite aislar los datos de otros entornos limitados y que normalmente se utilizan para experimentos de desarrollo, pruebas o pruebas. Los permisos de un perfil de producto proporcionan a los usuarios del perfil acceso a [!DNL Platform] funciones dentro de los entornos de entorno limitado a los que se les ha concedido acceso. Una licencia de Experience Platform predeterminada le otorga cinco entornos limitados (una producción y cuatro no producción). Puede agregar paquetes de diez entornos limitados que no sean de producción hasta un máximo de 75 entornos limitados en total. Póngase en contacto con el administrador de su organización o con su representante de ventas de Adobe para obtener más información.
 
 Para obtener más información sobre los entornos limitados en [!DNL Experience Platform], consulte la [información general sobre los entornos limitados](../sandboxes/home.md).
 
@@ -114,7 +114,7 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 | [!DNL Destinations] | [!UICONTROL Creación de destinos] | Capacidad para crear destinos mediante [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Administrar fuentes] | Acceso para leer, crear, editar y deshabilitar orígenes. |
 | [!DNL Data Ingestion] | [!UICONTROL Ver fuentes] | Acceso de solo lectura a los orígenes disponibles en la **[!UICONTROL Catálogo]** y fuentes autenticadas en la **[!UICONTROL Examinar]** pestaña . |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acceso para crear, aceptar y rechazar apretadores de manos de socios para conectar dos organizaciones IMS y habilitar [!DNL Segment Match] flujos. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acceso para crear, aceptar y rechazar apretadores de manos de socios para conectar dos organizaciones y habilitar [!DNL Segment Match] flujos. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Acceso para leer, crear, editar y publicar [!DNL Segment Match] fuentes con socios activos. |
 | [!DNL Data Science Workspace] | [!UICONTROL Administrar Data Science Workspace] | Acceso para leer, crear, editar y eliminar en [!DNL Data Science Workspace]. |
 | Control de datos | [!UICONTROL Aplicar etiquetas de uso de datos] | Acceso para leer, crear y eliminar etiquetas de uso. |

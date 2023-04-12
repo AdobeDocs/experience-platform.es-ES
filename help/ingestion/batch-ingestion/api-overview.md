@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de API de ingesta de lotes
 description: Este documento proporciona una guía completa para los desarrolladores que trabajan con API de ingesta por lotes para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2412'
+source-wordcount: '2411'
 ht-degree: 5%
 
 ---
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{TENANT_ID}` | Este ID se utiliza para garantizar que los recursos que crea tengan un espacio de nombres adecuado y estén contenidos dentro de su organización de IMS. |
+| `{TENANT_ID}` | Este ID se utiliza para garantizar que los recursos que crea tengan un espacio de nombres adecuado y que estén contenidos dentro de su organización. |
 | `{SCHEMA_ID}` | El ID del esquema que ha creado. |
 
 ### Crear lote
