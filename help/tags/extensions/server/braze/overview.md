@@ -2,7 +2,8 @@
 keywords: extensión de reenvío de eventos;brase;extensión de reenvío de eventos de brasil
 title: Extensión de reenvío de eventos de Braze
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de Adobe Experience Edge Network a Braze.
-source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 4%
@@ -132,7 +133,7 @@ Los atributos de usuario pueden ser un objeto JSON que contenga campos que vayan
 | [!UICONTROL País] | País como cadena en [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Idioma] | Idioma como cadena en [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Fecha de nacimiento] | Cadena con el formato &quot;AAAA-MM-DD&quot; (por ejemplo, 1980-12-21). |
-| [!UICONTROL Zona horaria] | Nombre de zona horaria desde [Base de datos de zona horaria IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por ejemplo, ’América/Nueva York’ o ’Hora del Este (EE.UU. y Canadá)’). |
+| [!UICONTROL Zona horaria] | Nombre de zona horaria desde [Base de datos de zona horaria IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por ejemplo, &quot;América/Nueva York&quot; o &quot;Hora del Este (EE.UU. y Canadá)&quot;). |
 | [!UICONTROL Facebook] | Hash que contiene cualquiera de id (cadena), me gusta (matriz de cadenas), num_friends (entero). |
 | [!UICONTROL Twitter] | Hash que contiene cualquiera de id (entero), screen_name (cadena, control de Twitter), seguidores_count (entero), friends_count (entero), statuses_count(integer). |
 
@@ -191,7 +192,7 @@ Los atributos de usuario pueden ser un objeto JSON que contenga campos que vayan
 | [!UICONTROL País] | País como cadena en [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Idioma] | Idioma como cadena en [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Fecha de nacimiento] | Cadena con el formato &quot;AAAA-MM-DD&quot; (por ejemplo, 1980-12-21). |
-| [!UICONTROL Zona horaria] | Nombre de zona horaria desde [Base de datos de zona horaria IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por ejemplo, ’América/Nueva York’ o ’Hora del Este (EE.UU. y Canadá)’). |
+| [!UICONTROL Zona horaria] | Nombre de zona horaria desde [Base de datos de zona horaria IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por ejemplo, &quot;América/Nueva York&quot; o &quot;Hora del Este (EE.UU. y Canadá)&quot;). |
 | [!UICONTROL Facebook] | Hash que contiene cualquiera de id (cadena), me gusta (matriz de cadenas), num_friends (entero). |
 | [!UICONTROL Twitter] | Hash que contiene cualquiera de id (entero), screen_name (cadena, control de Twitter), seguidores_count (entero), friends_count (entero), statuses_count(integer). |
 

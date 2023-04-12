@@ -2,7 +2,8 @@
 keywords: extensión de reenvío de eventos;mixpanel;extensión de reenvío de eventos de panel mixto
 title: Extensión de reenvío de eventos de API de seguimiento de eventos de Mixpanel
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de Adobe Experience Edge Network a Mixpanel.
-source-git-commit: 8538e3a2899c3e2451519996cabeffc4b42d706c
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 1%
