@@ -192,7 +192,7 @@ Consulte la sección de requisitos previos para [definiciones de los términos u
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="Segmentos asignados por identidad"
->abstract="Esta utilidad proporciona una lista de los cinco principales **asignado** segmentos. La lista se ordena de mayor a menor según el número de ID de origen contenidos en los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable de utilidades dependen del destino elegido en la parte superior del panel de información general."
+>abstract="Esta utilidad proporciona una lista de los cinco principales **asignado** segmentos. La lista se ordena de mayor a menor según el número de ID de origen contenidos en los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable de la utilidad dependen del destino elegido en la parte superior del panel de información general."
 
 Esta utilidad proporciona una lista de los cinco principales **asignado** segmentos. La lista se ordena de mayor a menor según el número de ID de origen contenidos en los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable del widget cambiarán según el filtro de cuenta de destino elegido en la parte superior del panel de información general.
 

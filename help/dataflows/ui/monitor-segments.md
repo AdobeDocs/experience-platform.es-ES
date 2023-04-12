@@ -4,9 +4,9 @@ description: La segmentación le permite crear segmentos y audiencias a partir d
 title: Monitorizar flujos de datos para segmentos en la interfaz de usuario
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1923'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmentos"
->abstract="La vista de segmentos contiene información sobre todos los segmentos de la organización de IMS, con más información sobre sus trabajos de activación y evaluación."
+>abstract="La vista de segmentos contiene información sobre todos los segmentos de su organización, con más información sobre sus trabajos de activación y evaluación."
 
 Para acceder a la **[!UICONTROL Segmentos]** tablero, seleccione **[!UICONTROL Monitorización]** en el panel de navegación izquierdo. Una vez en el **[!UICONTROL Monitorización]** seleccione **[!UICONTROL Segmentos]** tarjeta.
 
@@ -48,7 +48,7 @@ El tablero mismo contiene métricas tanto para segmentos como para trabajos de s
 >
 >Actualmente, solo los segmentos activados en [destinos por lotes (basados en archivos)](../../destinations/destination-types.md#file-based) son compatibles con el panel de segmentos de monitorización.
 
-![El tablero de segmentos. Se muestra información sobre los distintos segmentos de la organización de IMS y el simulador de pruebas.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![El tablero de segmentos. Se muestra información sobre los diferentes segmentos de su organización y del simulador de pruebas.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 Las siguientes métricas están disponibles para esta vista de tablero:
 
@@ -109,7 +109,7 @@ Las siguientes métricas están disponibles para esta vista de tablero:
 | **[!UICONTROL Inicio de la ejecución del flujo de datos]** | La fecha y hora en que se inició el trabajo de activación. |
 | **[!UICONTROL Fin de la ejecución del flujo de datos]** | La fecha y hora en que finalizó el trabajo de activación. |
 | **[!UICONTROL ID de ejecución de flujo de datos]** | El ID del trabajo de activación actual. |
-| **[!UICONTROL ID de organización de IMS]** | ID de la organización IMS a la que pertenece el trabajo de activación. |
+| **[!UICONTROL ID de organización de IMS]** | El ID de la organización a la que pertenece el trabajo de activación. |
 | **[!UICONTROL Nombre de destino]** | Nombre del destino al que se activan los datos. |
 
 Debajo de las métricas, se muestra un interruptor para seleccionar entre los errores de ejecución del flujo de datos y los segmentos.
@@ -151,7 +151,7 @@ Las siguientes métricas están disponibles para esta vista de tablero:
 | **[!UICONTROL Tipo de trabajo]** | Tipo de trabajo del segmento. En este caso, siempre será un trabajo de evaluación de segmentos. |
 | **[!UICONTROL Tipo de evaluación]** | Tipo de evaluación que se está realizando. Esto puede ser **[!UICONTROL Lote]** o **[!UICONTROL Transmisión]**. |
 | **[!UICONTROL ID de trabajo]** | El ID del trabajo de evaluación. |
-| **[!UICONTROL ID de organización de IMS]** | ID de la organización IMS a la que pertenece el trabajo de evaluación. |
+| **[!UICONTROL ID de organización de IMS]** | ID de la organización a la que pertenece el trabajo de evaluación. |
 | **[!UICONTROL Nombre del segmento]** | Nombre del segmento que se está evaluando. |
 | **[!UICONTROL ID de segmento]** | ID del segmento que se está evaluando. |
 
