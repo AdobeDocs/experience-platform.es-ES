@@ -3,9 +3,9 @@ title: (Alpha) [!DNL LiveRamp SFTP] connection
 description: Aprenda a utilizar el conector LiveRamp para incorporar audiencias de Adobe Real-time Customer Data Platform a LiveRamp Connect.
 hidefromtoc: true
 hide: true
-source-git-commit: 875610178449ddade78462dc74ea4e3dbadb2907
+source-git-commit: b308def0e9b9643cfc1dcc8ac7db19eb733750ea
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1738'
 ht-degree: 0%
 
 ---
@@ -224,7 +224,7 @@ Como consecuencia de que se generan ejecuciones de flujo de datos para un grupo 
 
 Una vez exportados correctamente los datos a la variable [!DNL LiveRamp - SFTP] , debe cargar los datos en la variable [!DNL LiveRamp] plataforma.
 
-Consulte la **Pasos siguientes** en la sección [introducción de sus datos en LiveRamp](https://docs.liveramp.com/connect/en/getting-your-data-into-liveramp.html) documentación para obtener más instrucciones.
+Para obtener más información sobre cómo cargar los archivos desde la variable [!DNL LiveRamp - SFTP] almacenamiento en un [!DNL LiveRamp] , consulte la siguiente documentación: [Consideraciones al cargar el primer archivo en una audiencia](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
 
 ## Uso y gobernanza de los datos {#data-usage-governance}
 
