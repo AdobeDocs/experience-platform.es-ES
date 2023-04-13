@@ -35,7 +35,7 @@ Este documento requiere una comprensión práctica de los siguientes componentes
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="Suscripción a las alertas de fuentes"
->abstract="Las alertas le permiten recibir notificaciones en función del estado de sus flujos de datos de origen. Puede establecer notificaciones de alerta para obtener actualizaciones si el flujo de datos se ha iniciado, se ha realizado correctamente, ha fallado o no ha introducido datos."
+>abstract="Las alertas le permiten recibir notificaciones en función del estado de sus flujos de datos de origen. Puede establecer notificaciones de alerta para obtener actualizaciones si el flujo de datos se ha iniciado, se ha realizado correctamente, ha fallado o no ha introducido ningún dato."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]
