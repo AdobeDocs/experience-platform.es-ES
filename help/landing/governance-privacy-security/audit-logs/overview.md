@@ -2,7 +2,7 @@
 title: Información general sobre registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 29%
@@ -43,7 +43,7 @@ La siguiente tabla indica qué acciones sobre qué recursos de se registran en l
 | [instancia de Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li></ul> |
 | [Registros de auditoría](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportar</li></ul> |
 | [Clase](../../../xdm/schema/composition.md#class) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Atributo calculado](../../../profile/computed-attributes/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| Atributo calculado | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Instancia de Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li></ul> |
 | [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li><li>Deshabilitar para perfil</li><li>Adición de datos</li><li>Eliminar lote</li></ul> |
 | [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>[Editar asignación](../../../edge/datastreams/data-prep.md)</li></ul> |

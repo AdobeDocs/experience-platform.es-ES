@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de la API de definiciones de segmentos
 description: El extremo de definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación definiciones de segmentos para su organización.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1216'
 ht-degree: 4%
 
 ---
@@ -209,11 +209,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.value` | Expresión que se ajusta al tipo indicado en `expression.format`. |
 | `description` | Una descripción de la definición legible en lenguaje natural. |
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->Una expresión de definición de segmento también puede hacer referencia a un atributo calculado. Para obtener más información, consulte la [guía de extremo de API de atributo calculado](../../profile/computed-attributes/ca-api.md)
+>A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
 >
->La funcionalidad de atributo calculada está en alfa y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
 
 **Respuesta**
 
