@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre conectores de origen
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 2%
@@ -18,6 +18,13 @@ Adobe Experience Platform permite la ingesta de datos de fuentes externas, al ti
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen con varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 Con Experience Platform, puede centralizar los datos que recopila de fuentes diferentes y utilizar las perspectivas obtenidas de ellas para hacer más.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## Tipos de fuentes
 

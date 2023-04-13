@@ -2,7 +2,7 @@
 title: Referencia de extensiones de reenvío de eventos
 description: Busque documentación para extensiones de reenvío de eventos en Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 30ac89d9af3e1d69c464650879d239a8c3edb525
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 17%
@@ -14,6 +14,13 @@ ht-degree: 17%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 La siguiente es una lista de documentación para extensiones de reenvío de eventos del lado del servidor. Para obtener una lista de las extensiones de cliente disponibles, consulte la [referencia de extensiones de etiqueta](../client/overview.md) en su lugar.
 
