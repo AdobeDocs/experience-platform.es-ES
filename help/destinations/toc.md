@@ -4,7 +4,7 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 12bae2f5b3dd04eaf72e736cb1ddca4bdd0a9d52
+source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 6%
@@ -144,6 +144,7 @@ ht-degree: 6%
       * [Conexión de Responsys de oracle](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Conexión de Marketing Cloud de Salesforce](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(Archivos) Conexión de Marketing Cloud de Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Conexión SendGrid](./catalog/email-marketing/sendgrid.md)
    * Extensiones de etiquetas {#launch-extensions}
       * [Información general de la extensión de etiquetas](./catalog/launch-extensions/overview.md)
