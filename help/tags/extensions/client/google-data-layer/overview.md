@@ -1,65 +1,66 @@
 ---
-title: Extensión de capa de datos de Google
-description: Obtenga información acerca de la extensión de etiqueta de capa de datos del cliente de Google en Adobe Experience Platform.
+title: Extensión de la capa de datos de Google
+description: Obtenga información sobre la extensión de la etiqueta de capa de datos del cliente de Google en Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 6%
+source-wordcount: '867'
+ht-degree: 13%
 
 ---
 
-# Extensión de la capa de datos de Google (Beta)
+# Extensión de la capa de datos de Google
 
->[!IMPORTANT]
->
->Esta extensión se encuentra actualmente en fase beta y no se ha probado completamente en producción.
+La extensión de capa de datos de Google le permite utilizar una capa de datos de Google en la implementación de etiquetas. La extensión se puede utilizar de forma independiente o simultánea con las soluciones de Google y con el código abierto de Google [Biblioteca de ayuda de capa de datos](https://github.com/google/data-layer-helper).
 
-La extensión de capa de datos de Google le permite utilizar una capa de datos de Google en la implementación de etiquetas. La extensión se puede utilizar de forma independiente o simultánea con las soluciones de Google y con el código abierto de Google [Biblioteca auxiliar de capa de datos](https://github.com/google/data-layer-helper).
-
-La biblioteca de ayuda proporciona una funcionalidad impulsada por eventos similar a la del Adobe de datos del cliente (ACDL). Los elementos de datos, las reglas y las acciones de la extensión de capa de datos de Google proporcionan una funcionalidad similar a las del [Extensión ACDL](../client-data-layer/overview.md).
+La biblioteca Helper proporciona una funcionalidad similar impulsada por eventos al Adobe Client Data Dayer (ACDL). Los elementos de datos, las reglas y las acciones de la extensión de capa de datos de Google proporcionan una funcionalidad similar a la de la [Extensión ACDL](../client-data-layer/overview.md).
 
 ## Vencimiento
 
-La versión 1.0.x de la extensión es una versión beta. Esta extensión no se ha probado completamente en producción.
+La versión 1.2.x es una versión beta tardía que se está utilizando en la producción.
 
 ## Instalación
 
-Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos y seleccione **Capa de datos de Google**.
+Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario de la recopilación de datos y seleccione **[!UICONTROL Capa de datos de Google]**.
 
-Una vez instalada, la extensión crea o accede a una capa de datos cada vez que la biblioteca de etiquetas se carga en el sitio web.
+Una vez instalada, la extensión crea o accede a una capa de datos en cada carga de la biblioteca de etiquetas de Adobe Experience Platform.
 
 ## Vista de extensión
 
-Al configurar la extensión de (durante la instalación de la extensión o al seleccionar **[!UICONTROL Configurar]** en el catálogo de extensiones) debe definir el nombre de la capa de datos que consume la extensión. Si no hay ninguna capa de datos con el nombre configurado cuando se carga la biblioteca, la extensión crea una en su lugar.
+La configuración de la extensión se puede utilizar para definir el nombre de la capa de datos que consume la extensión. Si no hay ninguna capa de datos con el nombre configurado cuando se cargan las etiquetas de Adobe Experience Platform, la extensión crea una.
+
+El nombre predeterminado de la capa de datos es el nombre predeterminado de Google `dataLayer`.
 
 >[!NOTE]
 >
->No importa si el código de Adobe o Google se carga primero y crea la capa de datos. Ambos sistemas crearán la capa de datos si no está presente, o utilizarán la capa de datos existente.
-
-De forma predeterminada, la capa de datos utiliza el nombre predeterminado de Google `dataLayer`.
+>No importa si Google o el código de Adobe se cargan primero y crean la capa de datos. Ambos sistemas se comportan del mismo modo: cree la capa de datos si no está presente o utilice la capa de datos existente.
 
 ## Eventos
 
-La extensión de permite escuchar cambios (eventos) dentro de la capa de datos. Un evento puede ser cualquiera de los siguientes:
+>[!NOTE]
+>
+>La palabra _evento_ se sobrecarga cuando se utiliza una capa de datos basada en eventos en Adobe Experience Platform Tags. _Eventos_ puede ser:
+> - Eventos de Adobe Experience Platform Tags (biblioteca cargada, etc.).
+> - Eventos de JavaScript.
+> - Datos insertados en la capa de datos con la variable _evento_ palabra clave.
 
-* Etiquetar eventos (como una biblioteca que se está cargando)
-* Eventos de JavaScript
-* Datos insertados en la capa de datos con el `event` palabra clave.
 
-Es importante comprender el uso del complemento [`event` palabra clave](https://developers.google.com/tag-platform/devguides/datalayer#use_a_data_layer_with_event_handlers) al insertar datos en una capa de datos de Google, de forma similar a la capa de datos del cliente de Adobe. El `event` La palabra clave cambia el comportamiento de la capa de datos de Google y, por lo tanto, el comportamiento de la extensión se actualiza en consecuencia.
+La extensión le ofrece la posibilidad de detectar cambios en la capa de datos.
 
-Las secciones siguientes describen los diferentes tipos de eventos que la extensión puede detectar.
+>[!NOTE]
+>
+>Es importante comprender el uso de la variable _evento_ palabra clave cuando se insertan datos en una capa de datos de Google, de forma similar a la capa de datos del cliente de Adobe. La variable _evento_ palabra clave cambia el comportamiento de la capa de datos de Google y, por lo tanto, esta extensión.\
+> Lea la documentación de Google o realice una investigación si no está seguro sobre este punto.
 
-### Escuchar todas las inserciones en la capa de datos
+### Escuche todos los empujones a la capa de datos
 
-Si selecciona esta opción, la extensión escucha cualquier cambio realizado en la capa de datos.
+Si selecciona esta opción, el oyente de eventos escucha cualquier cambio realizado en la capa de datos.
 
-### Escuchar eventos push excluyendo eventos
+### Escuchar pulsaciones excluyendo eventos
 
-Si selecciona esta opción, la extensión escucha todo lo que se inserte en la capa de datos, excepto los eventos.
+Si selecciona esta opción, el detector de eventos escucha cualquier inserción de datos en la capa de datos, excluyendo eventos.
 
-El siguiente ejemplo de evento push lo rastrearía el oyente:
+El oyente rastrearía los siguientes eventos push de ejemplo:
 
 ```js
 dataLayer.push({"data":"something"})
@@ -74,7 +75,7 @@ dataLayer.push({"event":"myevent","data":"something"})
 
 ### Escuchar todos los eventos
 
-Si selecciona esta opción, la extensión escucha cualquier evento insertado en la capa de datos.
+Si selecciona esta opción, el oyente de eventos escucha cualquier evento insertado en la capa de datos.
 
 El oyente rastrearía los siguientes eventos push de ejemplo:
 
@@ -91,7 +92,7 @@ dataLayer.push({"data":"something"})
 
 ### Escuchar un evento específico
 
-Si desea detectar un evento específico, seleccione esta opción para que el detector de eventos rastree cualquier evento que coincida con una cadena específica.
+En el caso de que especifique un evento, el oyente de eventos rastrea cualquier evento que coincida con una cadena específica.
 
 Por ejemplo, si se establece `myEvent` al usar esta configuración, el oyente solo rastreará el siguiente evento push:
 
@@ -99,7 +100,9 @@ Por ejemplo, si se establece `myEvent` al usar esta configuración, el oyente so
 dataLayer.push({"event":"myEvent"})
 ```
 
-También puede utilizar una cadena regex para hacer coincidir los nombres de evento. Por ejemplo, configurar `myEvent\d` rastrearía eventos que comienzan por `myEvent` seguido de un dígito:
+Se puede utilizar una regex (ECMAScript / JavaScript) para hacer coincidir los nombres de evento.
+
+Por ejemplo, configurar &#39;myEvent\d&#39; rastrearía `myEvent` con un dígito (\d):
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -108,11 +111,13 @@ dataLayer.push({"event":"myEvent2"})
 
 ## Acciones
 
-Las secciones siguientes describen las diferentes acciones que la extensión puede realizar cuando se incluye en una [regla](../../../ui/managing-resources/rules.md).
-
 ### Insertar en la capa de datos {#push-to-data-layer}
 
-Esta acción inserta contenido JSON en la propia capa de datos, lo que permite utilizar elementos de datos directamente en cargas JSON. En el editor JSON proporcionado, puede hacer referencia a elementos de datos usando notación de porcentaje (por ejemplo, `%dataElementName%`).
+La extensión de le proporciona dos acciones para insertar JSON en la capa de datos. un campo de texto libre para crear manualmente el JSON que se va a insertar y, a partir de la versión 1.2.0, un cuadro de diálogo multicampo de valor clave.
+
+#### Texto libre JSON
+
+La acción de texto libre permite utilizar elementos de datos directamente en el JSON. Dentro del editor JSON, se debe hacer referencia a los elementos de datos mediante la notación de porcentaje. Por ejemplo, `%dataElementName%`.
 
 ```json
 {
@@ -124,27 +129,27 @@ Esta acción inserta contenido JSON en la propia capa de datos, lo que permite u
 }
 ```
 
-### Restablecimiento del estado calculado de Google DL
+#### Campo múltiple Clave-Valor
 
->[!NOTE]
->
->Esta acción está disponible a partir de la versión 1.0.5.
+El nuevo cuadro de diálogo multicampo clave-valor es una interfaz más fácil de usar que permite configurar una notificación push sin escribir JSON manualmente.
 
-Esta acción restablece la capa de datos. Si se utiliza en una regla que procesa un cambio de capa de datos de Google, la capa de datos se restablece al estado calculado de la capa de datos en el momento en que se activó la regla. Si la acción se utiliza en una regla que no procesa un cambio en la capa de datos de Google, la acción vacía la capa de datos.
+### Restablecimiento de Google DL a estado calculado
+
+La extensión proporciona una acción para restablecer la capa de datos. Si se utiliza en una regla que procesa un cambio en la capa de datos de Google, la capa de datos se restablece al estado calculado de la capa de datos en el momento en que se activó la regla. Si la acción se utiliza en una regla que no procesa un cambio en la capa de datos de Google, la acción vacía la capa de datos.
 
 ## Elementos de datos
 
-La extensión proporciona un elemento de datos único que accede a la capa de datos mediante una clave (por ejemplo, `page.url` en el [fragmento superior](#push-to-data-layer)).
+El elemento de datos proporcionado se puede utilizar durante la ejecución de una regla activada por un cambio en la capa de datos de Google (evento push) o en una regla no relacionada como Library Loaded. En el primer caso, el elemento de datos devuelve un valor tomado del estado calculado en el momento del cambio de la capa de datos. En este último caso, se utiliza el estado calculado en el momento de la ejecución de la regla.
 
-El elemento de datos puede proporcionar cualquiera de las siguientes opciones:
+Un conmutador le permite seleccionar si el elemento de datos debe devolver valores del estado calculado completo o solo a partir de la información de evento (si se utiliza en una regla activada por un cambio en la capa de datos).
 
-* Un valor específico de la capa de datos (por ejemplo, `page.url`)
-* Toda la matriz de capas de datos (campo de clave vacío)
-* Valores de un evento de capa de datos utilizando la clave (si la variable `event` palabra clave utilizada)
-* Todo el objeto de evento (campo de clave vacío)
+Por lo tanto, el elemento de datos puede devolver:
 
-La extensión de siempre da prioridad a la información de evento. Si una capa de datos `event` se está procesando, los valores siempre se leen desde ese evento. Si un `event` no está presente, los valores se leen directamente desde la capa de datos.
+- Campo vacío: estado calculado de la capa de datos.
+- Campo con clave (como page.previous_url en el ejemplo anterior): valor de la clave en el objeto de evento o en el estado calculado.
 
 ## Información adicional
 
-Encontrará más información en la [LÉAME del proyecto](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md) y en los cuadros de diálogo de elementos de datos y eventos de la extensión.
+Los cuadros de diálogo de evento y elemento de datos de la extensión contienen información de uso detallada y ejemplos.
+
+La información general adicional se encuentra en la sección [README DEL PROYECTO](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
