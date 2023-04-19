@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;introducción;contenido;IA de etiquetado de contenido;etiquetado de palabras clave;Etiquetado de palabras clave
+keywords: Experience Platform;introducción;contenido;ai de etiquetado de contenido;etiquetado de palabras clave;etiquetado de palabras clave
 solution: Experience Platform
 title: Etiquetado de palabras clave en la API de etiquetado de contenido
-description: Cuando se proporciona un documento de texto, el servicio de etiquetado de palabras clave extrae automáticamente palabras clave o frases clave que describen mejor el asunto del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de etiquetado de palabras clave no supervisados y de reconocimiento de entidades con nombre (NER).
+description: El servicio Etiquetado de palabras clave, cuando se le da un documento de texto, extrae automáticamente palabras clave o jerarquías que describan mejor el asunto del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de etiquetado de palabras clave sin supervisión y reconocimiento de entidades con nombre (NER).
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '447'
 ht-degree: 6%
 
 ---
 
 # Etiquetado de palabras clave
 
-Cuando se proporciona un documento de texto, el servicio de etiquetado de palabras clave extrae automáticamente palabras clave o frases clave que describen mejor el asunto del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de etiquetado de palabras clave no supervisados y de reconocimiento de entidades con nombre (NER).
+Cuando se da un documento de texto, el servicio de etiquetado de palabras clave extrae automáticamente palabras clave o frases clave que describan mejor el asunto del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de etiquetado de palabras clave sin supervisión y reconocimiento de entidades con nombre (NER).
 
-En la tabla siguiente se enumeran las entidades con nombre que [!DNL Content Tagging] ha identificado:
+En la tabla siguiente se enumeran las entidades con nombre que [!DNL Content Tagging] puede identificar:
 
-| Nombre de entidad | Descripción |
+| Nombre de la entidad | Descripción |
 | --- | --- |
-| PERSONA | Gente, incluyendo ficticios. |
+| PERSONA | Personas, incluidas las ficticias. |
 | GPE | Países, ciudades y estados. |
-| LOC | Ubicaciones que no son GPE, cordilleras y masas de agua. |
-| CARA | Edificios, aeropuertos, autopistas, puentes, etc. |
+| LOC | Lugares no GPE, cordilleras y masas de agua. |
+| FAC | Edificios, aeropuertos, autopistas, puentes, etc. |
 | ORG | Empresas, agencias, instituciones, etc. |
-| PRODUCTO | Objetos, vehículos, alimentos, etc. (No son servicios). |
-| EVENTO | Huracanes con nombre, batallas, guerras, eventos deportivos, etc. |
-| OBRA_DE_ARTE | Títulos de libros, canciones, etc. |
-| DERECHO | Documentos con nombre convertidos en leyes. |
+| PRODUCTO | Objetos, vehículos, alimentos, etc. (No servicios). |
+| EVENT | Nombrados huracanes, batallas, guerras, eventos deportivos, etc. |
+| WORK_OF_ART | Títulos de libros, canciones, etc. |
+| LEY | Documentos con nombre convertidos en leyes. |
 | IDIOMA | Cualquier idioma con nombre. |
 
 **Formato de API**
@@ -40,9 +40,9 @@ POST /services/v2/predict
 
 La siguiente solicitud extrae palabras clave de un documento en función de los parámetros de entrada proporcionados en la carga útil.
 
-Consulte la tabla debajo de la carga útil de ejemplo para obtener más información sobre los parámetros de entrada que se muestran.
+Consulte la tabla siguiente a la carga útil de ejemplo para obtener más información sobre los parámetros de entrada que se muestran.
 
-Esta [pdf de muestra](../pdf-files/simple-text.pdf) se utilizó en el ejemplo mostrado en este documento.
+Esta [ejemplo de pdf](../pdf-files/simple-text.pdf) se ha utilizado en el ejemplo mostrado en este documento.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -86,26 +86,29 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@simple-text.pdf'
 ```
 
+**Parámetros de entrada**
+
 | Propiedad | Descripción | Obligatorio |
 | --- | --- | --- |
-| `application-id` | El ID de la aplicación creada. | Sí |
-| `top_n` | Número de resultados que se van a devolver. 0, para devolver todos los resultados. Cuando se utiliza junto con Umbral, el número de resultados devueltos será inferior a cualquiera de los límites. | No |
-| `min_relevance` | Umbral de puntuación por debajo del cual se deben devolver los resultados. Excluya el parámetro para devolver todos los resultados. | No |
-| `min_key_phrase_length` | Número mínimo de palabras requeridas en las frases clave. | No |
-| `max_key_phrase_length` | Número máximo de palabras requeridas en las frases clave. | No |
-| `last_semantic_unit_type` | Devolver únicamente unidades semánticas hasta el nivel determinado en la respuesta jerárquica. &quot;key_phrase&quot; devuelve solo frases clave, &quot;linked_entity&quot; devuelve solo frases clave y sus entidades vinculadas correspondientes y &quot;concept&quot; devuelve frases clave, entidades vinculadas y conceptos. | No |
+| `top_n` | Número de resultados que se van a devolver. 0, para devolver todos los resultados. Cuando se utiliza junto con el umbral, el número de resultados devueltos es menor que cualquiera de los límites. | No |
+| `min_relevance` | Umbral de puntuación por debajo del cual deben devolverse los resultados. Excluya el parámetro para devolver todos los resultados. | No |
+| `min_key_phrase_length` | Número mínimo de palabras necesarias en las frases clave. | No |
+| `max_key_phrase_length` | Número máximo de palabras necesarias en las frases clave. | No |
+| `last_semantic_unit_type` | Devuelve solo unidades semánticas hasta el nivel determinado en la respuesta jerárquica. &quot;key_rase&quot; devuelve solo frases clave, &quot;linked_entity&quot; devuelve solo frases clave y sus correspondientes entidades vinculadas, y &quot;concept&quot; devuelve frases clave, entidades vinculadas y conceptos. | No |
 | `entity_types` | Tipos de entidades que se devolverán como frases clave. | No |
+
+**Objeto de documento**
 
 | Nombre | Tipo de datos | Requerido | Predeterminado | Valores | Descripción |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Dirección URL del documento del que se extraerán las frases clave. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositorio donde se almacena el documento. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilice esto al pasar el documento como un argumento de varias partes en lugar de utilizar direcciones URL prefirmadas. |
-| `dc:format` | string | Sí | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | La codificación del documento se comprueba con los tipos de codificación de entrada permitidos antes de procesarse. |
+| `repo:path` | string | - | - | - | Dirección url prefirmada del documento del que se extraerán las frases clave. |
+| `sensei:repoType` | string | - | - | HTTPS | Tipo de cesión temporal en la que se almacena el documento. |
+| `sensei:multipart_field_name` | string | - | - | - | Utilice esto cuando pase el documento como un argumento multiparte en lugar de utilizar direcciones url prefirmadas. |
+| `dc:format` | string | Sí | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | La codificación del documento se compara con los tipos de codificación de entrada permitidos antes de procesarse. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve un objeto JSON que contiene palabras clave extraídas en `response` matriz.
+Una respuesta correcta devuelve un objeto JSON que contiene palabras clave extraídas en la variable `response` matriz.
 
 ```json
 {
