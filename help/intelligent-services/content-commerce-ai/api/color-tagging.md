@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Etiquetado de colores en la API de etiquetado de contenido
 description: El servicio Etiquetado de colores, cuando se proporciona una imagen, puede calcular el histograma de colores de píxeles y ordenarlos mediante colores dominantes en bloques.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
+source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '653'
 ht-degree: 6%
 
 ---
@@ -21,11 +21,11 @@ Este método extrae un histograma de color en toda la imagen.
 
 **Etiquetado de colores (con máscara)**
 
-Este método utiliza un extractor en primer plano basado en el aprendizaje profundo para identificar los objetos en primer plano. Una vez extraídos los objetos en primer plano, un histograma se calcula sobre los colores dominantes tanto para las regiones en primer plano como para las de fondo, junto con toda la imagen.
+Este método utiliza un extractor en primer plano basado en el aprendizaje profundo para identificar los objetos en primer plano. Una vez extraídos los objetos en primer plano, se calcula un histograma sobre los colores dominantes tanto para las regiones en primer plano como para las de fondo, junto con toda la imagen.
 
 **Extracción de tono**
 
-Además de las variantes mencionadas anteriormente, se puede configurar el servicio para recuperar un histograma de tonos para:
+Además de las variantes mencionadas anteriormente, puede configurar el servicio para recuperar un histograma de tonos para:
 
 - La imagen general (cuando se utiliza la variante de imagen completa)
 - La imagen general y las regiones de primer y segundo plano (al usar la variante con máscara)
@@ -161,7 +161,7 @@ Observe que el resultado aquí tiene un color extraído en la región de imagen 
 
 **Solicitud: variante de imagen enmascarada**
 
-La siguiente solicitud de ejemplo utiliza el método de máscara para el etiquetado de color. Lo habilitamos configurando la variable `enable_mask` parámetro a `true` en la solicitud.
+La siguiente solicitud de ejemplo utiliza el método de máscara para el etiquetado de color. Esto se habilita configurando la variable `enable_mask` parámetro a `true` en la solicitud.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -202,7 +202,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->Nota: Además, también configuramos la variable `retrieve_tone` parámetro a `true` en la solicitud anterior. Esto nos permite recuperar un histograma de distribución de tono sobre tonos cálidos, neutros y fríos en las regiones generales, en primer plano y de fondo de la imagen.
+>[!NOTE]
+>
+>Además, la variable `retrieve_tone` parámetro también se establece en `true` en la solicitud anterior. Esto nos permite recuperar un histograma de distribución de tono sobre tonos cálidos, neutros y frescos en las regiones generales, frontales y de fondo de la imagen.
 
 **Respuesta: variante de imagen enmascarada**
 
@@ -352,16 +354,16 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-Además de los colores de la imagen general, ahora también puede ver los colores de las regiones de primer y segundo plano. Dado que habilitamos la recuperación de tono para cada una de las regiones anteriores, también podemos recuperar un histograma de tonos.
+Además de los colores de la imagen general, ahora también puede ver los colores de las regiones de primer y segundo plano. Dado que la recuperación de tono está habilitada para cada una de las regiones anteriores, también puede recuperar el histograma de un tono.
 
 **Parámetros de entrada**
 
 | Nombre | Tipo de datos | Requerido | Predeterminado | Valores | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | array (Document-Object) | Sí | - | Vea lo siguiente | Lista de elementos json con cada elemento en la lista que representa un documento. |
+| `documents` | array (Document-Object) | Sí | - | Vea lo siguiente | Lista de elementos JSON con cada elemento en la lista que representa un documento. |
 | `top_n` | number | No | 0 | Entero no negativo | Número de resultados que se van a devolver. 0, para devolver todos los resultados. Cuando se utiliza junto con el umbral, el número de resultados devueltos es menor que cualquiera de los límites. |
 | `min_coverage` | number | No | 0.05 | Número real | Umbral de la cobertura por encima del cual deben devolverse los resultados. Exclude parameter para devolver todos los resultados. |
-| `resize_image` | number | No | True | True/False | Indica si se debe cambiar el tamaño de la imagen de entrada o no. De forma predeterminada, el tamaño de las imágenes es de 320*320 píxeles antes de realizar la extracción de color. Para fines de depuración, también podemos permitir que el código se ejecute en una imagen completa, estableciendo esto en False. |
+| `resize_image` | number | No | True | True/False | Indica si se debe cambiar el tamaño de la imagen de entrada o no. De forma predeterminada, el tamaño de las imágenes cambia a 320*320 píxeles antes de realizar la extracción de color. Para fines de depuración, también podemos permitir que el código se ejecute en una imagen completa, configurándolo en `False`. |
 | `enable_mask` | number | No | False | True/False | Activa/desactiva la extracción de color |
 | `retrieve_tone` | number | No | False | True/False | Activa/desactiva la extracción de tono |
 
@@ -369,7 +371,7 @@ Además de los colores de la imagen general, ahora también puede ver los colore
 
 | Nombre | Tipo de datos | Requerido | Predeterminado | Valores | Descripción |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Dirección url prefirmada del documento del que se extraerán las frases clave. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de cesión temporal en la que se almacena el documento. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilice esto cuando pase el documento como un argumento multiparte en lugar de utilizar direcciones url prefirmadas. |
-| `dc:format` | string | Sí | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | La codificación del documento se compara con los tipos de codificación de entrada permitidos antes de procesarse. |
+| `repo:path` | string | - | - | - | URL prefirmada del documento. |
+| `sensei:repoType` | string | - | - | HTTPS | Tipo de cesión temporal en la que se almacena la imagen. |
+| `sensei:multipart_field_name` | string | - | - | - | Utilice esto cuando pase el archivo de imagen como un argumento de varias partes en lugar de usar direcciones URL prefirmadas. |
+| `dc:format` | string | Sí | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | La codificación de imagen se comprueba para los tipos de codificación de entrada permitidos antes de procesarse. |
