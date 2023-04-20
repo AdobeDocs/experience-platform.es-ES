@@ -7,7 +7,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
 >title="Tipos de etiquetas"
->abstract="Existen varias categorías de etiquetas de uso de datos. Las etiquetas definidas por el Adobe incluyen etiquetas de contrato, de identidad y confidenciales. Las etiquetas definidas por su organización se clasifican como etiquetas personalizadas."
+>abstract="Existen varias categorías de etiquetas de uso de datos. Las etiquetas definidas por Adobe incluyen etiquetas de contrato, de identidad y confidenciales. Las etiquetas definidas por su organización se clasifican como etiquetas personalizadas."
 >text="See the data usage labels glossary for more information on these label types."
 
 Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según [políticas de gobernanza](../policies/overview.md) y [directivas de control de acceso](../../access-control/abac/overview.md) que se aplican a esos datos. Adobe Experience Platform proporciona varias etiquetas de uso de datos principales listas para usar que puede usar para empezar a categorizar los datos.
