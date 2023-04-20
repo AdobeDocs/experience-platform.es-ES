@@ -28,7 +28,7 @@ Los campos de identidad son un componente crucial de la forma en que se construy
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
 >title="Restricciones a la identidad principal"
->abstract="Este esquema usa un grupo de campos diseñado para utilizarse en una conexión de origen específica. La conexión requiere que identityMap se emplee como identidad principal y la ha establecido automáticamente."
+>abstract="Este esquema utiliza un grupo de campos destinado a utilizarse en una conexión de origen específica. La conexión requiere que identityMap se utilice como identidad principal y la ha establecido automáticamente."
 
 When [definición de un nuevo campo](./overview.md#define) en la interfaz de usuario, puede definirlo como un campo de identidad seleccionando la **[!UICONTROL Identidad]** en el carril derecho.
 
