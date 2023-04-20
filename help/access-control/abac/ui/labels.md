@@ -6,7 +6,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -19,7 +19,7 @@ Las etiquetas permiten categorizar los conjuntos de datos y campos según las po
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
 >title="Uso de etiquetas"
->abstract="Puede utilizar etiquetas personalizadas para aplicar el control de datos y las configuraciones de control de acceso a sus datos."
+>abstract="Puede utilizar etiquetas personalizadas para aplicar a los datos configuraciones de control de acceso y de gobernanza de datos."
 
 >[!NOTE]
 >
