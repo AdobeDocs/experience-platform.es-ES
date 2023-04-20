@@ -5,7 +5,7 @@ exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 92%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Implementación asíncrona"
->abstract="Si esta opción está habilitada, cuando se analiza esta etiqueta de script, el explorador empezará a cargar el archivo JavaScript, pero en lugar de esperar a que se cargue y ejecute la biblioteca, seguirá analizando y procesando el resto del documento. Esto puede mejorar el rendimiento de la página web, pero tiene implicaciones importantes en cuanto a cómo se ejecutan determinadas reglas. Consulte la documentación para obtener más detalles."
+>abstract="Si esta opción está habilitada, cuando se analiza esta etiqueta de script, el explorador debe comenzar a cargar el archivo JavaScript, pero en lugar de esperar a que se cargue y ejecute la biblioteca, continuará analizando y procesando el resto del documento. Esto puede mejorar el rendimiento de la página web, pero tiene implicaciones importantes en cuanto a cómo se ejecutan determinadas reglas. Consulte la documentación para obtener más detalles."
 
 >[!NOTE]
 >
