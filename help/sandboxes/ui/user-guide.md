@@ -7,7 +7,7 @@ exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '816'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -39,13 +39,13 @@ Una vez seleccionado un simulador para pruebas, la pantalla se actualiza y actua
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxname"
->title="Nombre del Simulador para pruebas"
->abstract="El nombre del simulador para pruebas es el texto que se utiliza en el back-end para crear un ID único para este simulador para pruebas."
+>title="Nombre de la zona protegida"
+>abstract="El nombre de la zona protegida es el texto que se utiliza en el back-end para crear un ID único para esta zona protegida."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtitle"
->title="Título de espacio aislado"
->abstract="El título del simulador de pruebas es el nombre para mostrar que representa el simulador de pruebas en menús y desplegables en toda la interfaz de usuario del Experience Platform."
+>title="Título de la zona protegida"
+>abstract="El título de la zona protegida es el nombre para mostrar que representa la zona protegida en menús y listas desplegables en toda la interfaz de usuario de Experience Platform."
 
 >[!NOTE]
 >
@@ -103,7 +103,7 @@ Al eliminar un entorno limitado de producción o desarrollo, se eliminan permane
 
 Seleccione el simulador de pruebas que desee eliminar de la lista de entornos limitados. En el panel de navegación derecho que aparece, seleccione **[!UICONTROL Eliminar]**.
 
-![eliminar](../images/ui/delete.png)
+![delete](../images/ui/delete.png)
 
 Aparece un cuadro de diálogo que le solicita que confirme su elección. Select **[!UICONTROL Continuar]** para continuar.
 
