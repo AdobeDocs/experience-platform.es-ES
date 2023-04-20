@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2105'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -79,9 +79,9 @@ Adobe proporciona varios widgets estándar que puede utilizar para visualizar di
 
 Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
-* [[!UICONTROL Tamaño de la audiencia]](#audience-size)
+* [[!UICONTROL Tamaño de audiencia]](#audience-size)
 * [[!UICONTROL Orden de activación de la audiencia]](#audience-activation-order)
-* [[!UICONTROL Tendencia del tamaño de la audiencia]](#audience-size-trend)
+* [[!UICONTROL Tendencia de tamaño de audiencia]](#audience-size-trend)
 * [[!UICONTROL Tendencia del cambio de tamaño de la audiencia]](#audience-size-change-trend)
 * [[!UICONTROL Tendencia del tamaño de la audiencia por identidad]](#audience-size-trend-by-identity)
 * [[!UICONTROL Superposición de audiencia]](#audience-overlap)
@@ -90,12 +90,12 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Perfiles por identidad]](#profiles-by-identity)
 * [[!UICONTROL Activaciones programadas]](#scheduled-activations)
 
-### [!UICONTROL Tamaño de la audiencia] {#audience-size}
+### [!UICONTROL Tamaño de audiencia] {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
->title="Tamaño de la audiencia"
->abstract="Esta utilidad muestra el número total de perfiles combinados dentro del segmento seleccionado. Este número depende de la política de combinación aplicada a los datos y es correcto en el momento de la instantánea más reciente."
+>title="Tamaño de audiencia"
+>abstract="Este widget muestra el número total de perfiles combinados dentro del segmento seleccionado. Este número depende de las políticas de combinación aplicadas a los datos y es correcto en el momento de la instantánea más reciente."
 
 La variable **[!UICONTROL Tamaño de la audiencia]** muestra el número total de perfiles combinados dentro del segmento seleccionado en el momento en que se tomó la instantánea. Este número es el resultado de aplicar la política de combinación de segmentos a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo en el segmento.
 
@@ -103,12 +103,12 @@ Para obtener más información sobre los fragmentos y los perfiles combinados, c
 
 ![Información general del tablero Segmentos con el widget Tamaño de audiencia resaltado.](../images/segments/audience-size.png)
 
-### [!UICONTROL Tendencia del tamaño de la audiencia] {#audience-size-trend}
+### [!UICONTROL Tendencia de tamaño de audiencia] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
->title="Tendencia del tamaño de la audiencia"
->abstract="Esta utilidad proporciona información sobre el número total de perfiles que cumplen los criterios de **any** definición de segmento, según se captura durante la instantánea diaria, para los últimos 30 días, 90 días o 12 meses."
+>title="Tendencia de tamaño de audiencia"
+>abstract="Este widget proporciona información sobre el número total de perfiles que cumplen los criterios de **cualquier** definición de segmentos, según lo capturado durante la instantánea diaria, los últimos 30 días, 90 días o 12 meses."
 
 La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** proporciona una ilustración de gráfico de líneas para el número total de perfiles que cumplen los criterios de **any** definición de segmento durante un período de tiempo determinado. La tendencia del tamaño de la audiencia se puede visualizar en periodos de 30 días, 90 días y 12 meses. El periodo de tiempo se elige en un menú desplegable del widget. El tamaño de la audiencia se refleja en el eje y y en el tiempo en el eje x.
 
@@ -181,7 +181,7 @@ Select **[!UICONTROL Cerrar]** para volver a la [!UICONTROL Segmentos] tablero.
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="Superposición de identidad"
->abstract="Esta utilidad muestra la superposición de perfiles en el segmento que contienen ambas identidades seleccionadas. Los círculos muestran el tamaño relativo de cada identidad. El número de perfiles que contienen ambos espacios de nombres se representa mediante la superposición entre los círculos."
+>abstract="Este widget muestra la superposición de perfiles en el segmento que contienen ambas identidades seleccionadas. Los círculos muestran el tamaño relativo de cada identidad. El número de perfiles que contienen ambas áreas de nombres se representa mediante la superposición entre los círculos."
 
 La variable **[!UICONTROL Superposición de identidad]** La utilidad muestra un diagrama de Venn o un diagrama de conjunto que muestra la superposición de perfiles en el segmento que contiene varias identidades.
 
@@ -198,7 +198,7 @@ Para obtener más información sobre las identidades, visite [Documentación del
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Perfiles por identidad"
->abstract="Esta utilidad muestra el desglose de identidades en cada perfil combinado del segmento seleccionado."
+>abstract="Este widget muestra el desglose de identidades en cada perfil combinado del segmento seleccionado."
 
 La variable **[!UICONTROL Perfiles por identidad]** muestra el desglose de identidades en cada perfil combinado del segmento seleccionado. El número total de perfiles por identidad puede ser mayor que el número total de perfiles en el segmento porque un perfil podría tener varias identidades asociadas a él. En otras palabras, sumar los valores mostrados para cada identidad puede totalizar más que el tamaño total de audiencia en el segmento porque si un cliente interactúa con su marca en más de un canal, se pueden asociar varias identidades con ese cliente individual.
 
