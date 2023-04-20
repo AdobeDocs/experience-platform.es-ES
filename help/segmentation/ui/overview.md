@@ -7,7 +7,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
 source-wordcount: '2650'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -49,12 +49,12 @@ Para obtener más información, visite [guía del tablero de segmentos](../../da
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Pérdida"
->abstract="La pérdida representa el porcentaje de perfiles que cambian dentro de una definición de segmento en comparación con la última vez que se ejecutó el trabajo de segmento."
+>abstract="La pérdida representa el porcentaje de perfiles que cambian dentro de una definición de segmento en comparación con la última vez que se ejecutó el trabajo del segmento."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Método de evaluación"
->abstract="Los métodos de evaluación para segmentos incluyen el lote, la transmisión y el borde."
+>abstract="Los métodos de evaluación de segmentos incluyen lote, streaming y Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
