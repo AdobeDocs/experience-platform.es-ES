@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
 source-wordcount: '1856'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -145,13 +145,13 @@ El siguiente vídeo muestra también los pasos para configurar un [!DNL Facebook
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_facebook_accountid"
 >title="ID de cuenta"
->abstract="Su ID de cuenta de Facebook Ad. Puede encontrar este ID en su cuenta de Facebook Ads Manager . Al introducir este ID, anteponga siempre con `act_`."
+>abstract="Su ID de cuenta de Facebook Ad. Puede encontrar este ID en su cuenta de Facebook Ads Manager. Al introducir este ID, utilice siempre como prefijo `act_`."
 
 Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: Su [!DNL Facebook Ad Account ID]. Puede encontrar este ID en su [!DNL Facebook Ads Manager] cuenta. Al introducir este ID, anteponga siempre con `act_`.
+* **[!UICONTROL ID de cuenta]**: Su [!DNL Facebook Ad Account ID]. Puede encontrar este ID en su [!DNL Facebook Ads Manager] cuenta. Al introducir este ID, utilice siempre como prefijo `act_`.
 
 ### Habilitar alertas {#enable-alerts}
 
