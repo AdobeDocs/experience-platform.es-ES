@@ -6,7 +6,7 @@ exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -71,20 +71,20 @@ La mitad inferior de la página muestra información sobre el número de registr
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_ingested"
->title="Registros ingestados"
->abstract="La métrica Registros ingestados indica el recuento total de registros ingeridos en el lago de datos."
+>title="Registros ingeridos"
+>abstract="La métrica Registros ingeridos indica el recuento total de registros ingeridos en el lago de datos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_failed"
 >title="Error de registros"
->abstract="La métrica Registros fallidos indica el recuento total de registros que no se incorporaron al lago de datos debido a errores en los datos."
+>abstract="La métrica Error de registros indica el recuento total de registros que no se ingirieron en el lago de datos debido a errores en los datos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
 >title="Registros con advertencias"
->abstract="Los registros con advertencias indican el recuento total de registros ingeridos con advertencias de transformación del asignador. Todos los errores de transformación del asignador se notifican como advertencias y las filas parcialmente incorporadas se consideran correctas con una advertencia"
+>abstract="Los registros con advertencias indican el recuento total de registros ingeridos con advertencias de transformación del asignador. Todos los errores de transformación del asignador se notifican como advertencias y las filas parcialmente ingeridas se consideran correctas con una advertencia"
 >text="Learn more in documentation"
 
 Cada ejecución de flujo de datos individual muestra los siguientes detalles:
