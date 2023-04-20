@@ -7,7 +7,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -31,7 +31,7 @@ Antes de sumergirse en los detalles de [!DNL Identity Service], aquí tiene un b
 | --- | --- |
 | Identidad | Una identidad es datos que son exclusivos de una entidad, normalmente de una persona individual. Una identidad, como un ID de inicio de sesión, un ECID o un ID de lealtad, también se denomina &quot;identidad conocida&quot;. |
 | ECID | El ID de Experience Cloud (ECID) es un área de nombres de identidad compartida que se utiliza en las aplicaciones de Experience Platform y Adobe Experience Cloud. ECID proporciona una base para la identidad del cliente y se utiliza como ID principal para dispositivos y como nodo base para gráficos de identidad. Consulte la [Información general de ECID](./ecid.md) para obtener más información. |
-| Área de nombres de identidad | Un área de nombres de identidad sirve para distinguir el contexto o el tipo de una identidad. Por ejemplo, una identidad distingue &quot;name&quot;<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID de CRM numérico. Las áreas de nombres de identidad se utilizan para buscar identidades individuales y proporcionar el contexto para los valores de identidad. Esto le permite determinar que dos [!DNL Profile] fragmentos que contienen ID principales diferentes, pero que comparten el mismo valor para `email` área de nombres de identidad, de hecho, son la misma persona. Consulte la [información general del área de nombres de identidad](./namespaces.md) para obtener más información. |
+| Área de nombres de identidad | Un área de nombres de identidad sirve para distinguir el contexto o el tipo de una identidad. Por ejemplo, una identidad distingue “name<span>@email.com” como dirección de correo electrónico o “443522” como ID de CRM numérico. Las áreas de nombres de identidad se utilizan para buscar identidades individuales y proporcionar el contexto para los valores de identidad. Esto le permite determinar que dos [!DNL Profile] fragmentos que contienen ID principales diferentes, pero que comparten el mismo valor para `email` área de nombres de identidad, de hecho, son la misma persona. Consulte la [información general del área de nombres de identidad](./namespaces.md) para obtener más información. |
 | Gráfico de identidad | Un gráfico de identidad es un mapa de relaciones entre distintas identidades, que le permite visualizar y comprender mejor qué identidades de cliente se vinculan entre sí y cómo. Consulte el tutorial en [uso del visor de gráficos de identidad](./ui/identity-graph-viewer.md) para obtener más información. |
 | Información de identificación personal (PII) | PII es información que puede identificar directamente a un cliente, como una dirección de correo electrónico o un número de teléfono. Los valores PII suelen utilizarse para hacer coincidir. múltiples identidades de un cliente en diferentes sistemas. |
 | Identidades desconocidas o anónimas | Las identidades desconocidas o anónimas son indicadores que aíslan los dispositivos sin identificar a la persona real que utiliza el dispositivo. Las identidades desconocidas y anónimas incluyen información como la dirección IP y el ID de cookie de un visitante. Aunque las identidades anónimas y desconocidas pueden proporcionar datos de comportamiento, están limitadas hasta que un cliente proporcione su PII. |
@@ -66,14 +66,14 @@ Ejemplos de [!DNL Identity Service] las implementaciones incluyen:
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
->title="Espacios de nombres de identidad"
->abstract="Un área de nombres de identidad sirve para distinguir el contexto o el tipo de una identidad. Por ejemplo, una identidad distingue &quot;name&quot;<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID de CRM numérico."
+>title="Áreas de nombres de identidad"
+>abstract="Un área de nombres de identidad sirve para distinguir el contexto o el tipo de una identidad. Por ejemplo, una identidad distingue “name<span>@email.com” como dirección de correo electrónico o “443522” como ID de CRM numérico."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="Valores de identidad"
->abstract="Un valor de identidad es un identificador que representa a un individuo, organización o recurso únicos. El contexto o tipo de identidad que representa el valor se define mediante un área de nombres de identidad correspondiente. Al hacer coincidir los datos de registro en los fragmentos de perfil, el área de nombres y el valor de identidad deben coincidir. Al hacer coincidir los datos de registro en los fragmentos de perfil, el área de nombres y el valor de identidad deben coincidir."
+>abstract="Un valor de identidad es un identificador que representa a un particular, organización o recurso únicos. El contexto o tipo de identidad que representa el valor se define mediante un área de nombres de identidad correspondiente. Al hacer coincidir los datos de registro en los fragmentos de perfil, el área de nombres y el valor de identidad deben coincidir."
 >text="Learn more in documentation"
 
 Si le preguntaste a una persona &quot;¿Cuál es tu ID?&quot; sin más contexto, les resultaría difícil dar una respuesta útil. Con la misma lógica, un valor de cadena que representa un valor de identidad, ya sea un ID generado por el sistema o una dirección de correo electrónico, solo se completa cuando se proporciona con un calificador que proporciona el contexto del valor de cadena: el área de nombres de identidad.
