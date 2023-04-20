@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
 source-wordcount: '972'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -85,7 +85,7 @@ Algunos destinos de flujo continuo de segmentos requieren que seleccione atribut
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformación"
->abstract="Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform los hash automáticamente en la activación."
+>abstract="Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform aplique un algoritmo hash en ellos automáticamente en la activación."
 
 Cuando asigna atributos de origen sin hash a atributos de destino que el destino espera que tengan un hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la casilla **Aplicar transformación** para que Adobe Experience Platform hash automáticamente los atributos de origen al activarlos.
 
@@ -132,7 +132,7 @@ En el **[!UICONTROL Consulte]** , puede ver un resumen de su selección. Select 
 
 ### Evaluación de la directiva de consentimiento {#consent-policy-evaluation}
 
-Si su organización ha adquirido **Adobe Escudo Sanitario** o **Protección de seguridad y privacidad de Adobe**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Más información [evaluación de la política de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
+Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué directivas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Más información [evaluación de la política de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
