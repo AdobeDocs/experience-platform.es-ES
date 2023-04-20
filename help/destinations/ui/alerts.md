@@ -6,7 +6,7 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -31,7 +31,7 @@ Este documento requiere una comprensión práctica de los siguientes componentes
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"
 >title="Suscripción a alertas de destino"
->abstract="Las alertas le permiten recibir notificaciones en función del estado de sus flujos de datos de destino. Puede configurar notificaciones de alerta para obtener actualizaciones si el flujo de datos se ha iniciado, ha fallado o no ha enviado datos a su destino."
+>abstract="Las alertas permiten recibir notificaciones en función del estado de sus flujos de datos de destino. Puede configurar notificaciones de alerta para obtener actualizaciones si el flujo de datos se ha iniciado, ha fallado o no ha enviado datos a su destino."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]
