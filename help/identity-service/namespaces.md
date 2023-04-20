@@ -35,8 +35,8 @@ Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes,
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
->title="Especificación del tipo de identidad"
->abstract="El tipo de identidad controla si los datos se almacenan en el gráfico de identidad. Los identificadores que no sean personas no se almacenarán, y el resto de tipos de identidad sí."
+>title="Especificar el tipo de identidad"
+>abstract="El tipo de identidad controla si los datos se almacenan o no en el gráfico de identidad. Se almacenarán todos los tipos de identidad, excepto los identificadores que no correspondan a personas."
 >text="Learn more in documentation"
 
 Los datos se pueden identificar mediante varios tipos de identidad diferentes. El tipo de identidad se especifica en el momento en que se crea el área de nombres de identidad y controla si los datos se mantienen en el gráfico de identidad y cualquier instrucción especial para cómo se deben administrar esos datos. Todos los tipos de identidad excepto **Identificador de no personas** siga el mismo comportamiento de vincular un área de nombres y su valor de ID correspondiente a un clúster de gráficos de identidad. Los datos no se unen al usar **Identificador de no personas**.
@@ -82,8 +82,8 @@ Las siguientes áreas de nombres estándar se proporcionan para su uso por todas
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
->title="Vista de identidades de integración"
->abstract="Las identidades de integración son áreas de nombres que se utilizan para conectar con otros sistemas y no se emplean para resolver ni para vincular identidades. <br> Estas identidades están ocultas de forma predeterminada. Utilice el conmutador para ver las áreas de nombres de integración."
+>title="Ver identidades de integración"
+>abstract="Las identidades de integración son áreas de nombres que se utilizan para conectarse con otros sistemas y que no se utilizan en la resolución de identidades ni para unir identidades. <br> Estas identidades están ocultas de forma predeterminada. Utilice el conmutador para ver las áreas de nombres de integración."
 
 Para ver los áreas de nombres de identidad en la interfaz de usuario, seleccione **[!UICONTROL Identidades]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Examinar]**.
 
