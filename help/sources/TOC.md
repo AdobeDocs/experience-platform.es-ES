@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
+source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '968'
 ht-degree: 14%
 
 ---
@@ -90,7 +90,8 @@ ht-degree: 14%
       - [Conector del Snowflake](connectors/databases/snowflake.md)
       - [Conector de Vantage del teradata](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
-      - [Conector Shopify](connectors/ecommerce/shopify.md)
+      - [Shopify](connectors/ecommerce/shopify.md)
+      - [Transmisión de Shopify](connectors/ecommerce/shopify-streaming.md)
    - Sistema local {#local-system}
       - [Conector de carga de archivos locales](connectors/local-system/local-file-upload.md)
    - Automatización de marketing {#marketing-automation}
@@ -167,6 +168,7 @@ ht-degree: 14%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+         - [Transmisión de Shopify](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Automatización de marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -284,6 +286,7 @@ ht-degree: 14%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+         - [Transmisión de Shopify](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema local {#local-system}
          - [Carga de archivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Automatización de marketing {#marketing-automation}
