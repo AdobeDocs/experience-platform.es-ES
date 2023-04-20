@@ -7,7 +7,7 @@ exl-id: 6a34a796-24a1-450a-af39-60113928873e
 source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
-ht-degree: 0%
+ht-degree: 21%
 
 ---
 
@@ -71,12 +71,12 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Destinos creados recientemente]](#recently-created-destinations)
 * [[!UICONTROL Segmentos activados recientemente]](#recently-activated-segments)
 * [[!UICONTROL Segmentos activados recientemente por destino]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Tendencia del tamaño de la audiencia]](#audience-size-trend)
+* [[!UICONTROL Tendencia de tamaño de audiencia]](#audience-size-trend)
 * [[!UICONTROL Segmentos no asignados por identidad]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmentos asignados por identidad]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiencias comunes]](#common-audiences)
 * [[!UICONTROL Audiencias asignadas]](#mapped-audiences)
-* [[!UICONTROL Estado de la audiencia asignada]](#mapped-audience-health)
+* [[!UICONTROL Estado de audiencia asignado]](#mapped-audience-health)
 * [[!UICONTROL Recuento de destinos]](#destinations-count)
 * [[!UICONTROL Estado del destino]](#destination-status)
 * [[!UICONTROL Destinos activos por plataforma de destino]](#active-destinations-by-destination-platform)
@@ -88,7 +88,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="Destinos más utilizados"
->abstract="Esta utilidad muestra los destinos más activos de su organización según el número de segmentos asignados. Estos números son precisos en el momento de la última instantánea. Esta clasificación proporciona una perspectiva sobre los destinos que se utilizan más actualmente, al tiempo que resalta los que pueden estar infrautilizados."
+>abstract="Este widget muestra los destinos más activos de su organización según el número de segmentos asignados. Estos números son precisos en el momento de la última instantánea. Esta clasificación proporciona una perspectiva sobre los destinos que se utilizan más actualmente, al tiempo que resalta los que pueden estar infrautilizados."
 
 La variable **[!UICONTROL Destinos más utilizados]** muestra los principales destinos de su organización según el número de segmentos asignados, a partir de la última instantánea. Esta clasificación proporciona una perspectiva sobre los destinos que se utilizan, al tiempo que muestra los que pueden estar infrautilizados.
 
@@ -122,7 +122,7 @@ Para obtener más información sobre cómo configurar tipos de destinos específ
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
 >title="Segmentos activados recientemente"
->abstract="Esta utilidad proporciona una lista de los segmentos que se han asignado más recientemente a un destino. Esta lista proporciona una instantánea de los segmentos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea."
+>abstract="Este widget proporciona una lista de los segmentos que se han asignado más recientemente a un destino. Esta lista proporciona una instantánea de los segmentos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea."
 
 La variable **[!UICONTROL Segmentos activados recientemente]** proporciona una lista de los segmentos que se han asignado más recientemente a un destino. Esta lista proporciona una instantánea de los segmentos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea.
 
@@ -139,7 +139,7 @@ Para obtener más información sobre el trabajo con segmentos en Experience Plat
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
 >title="Segmentos activados recientemente por destino"
->abstract="Esta utilidad muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido en la lista desplegable Información general ."
+>abstract="Este widget muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido en el menú desplegable Información general."
 
 La variable **[!UICONTROL Segmentos activados recientemente por destino]** muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido en la lista desplegable Información general . Es similar a la variable [!UICONTROL Segmentos activados recientemente] , pero los datos mostrados **only** se aplica al destino seleccionado.
 
@@ -151,12 +151,12 @@ Puede ver los detalles de un segmento seleccionando el nombre de un segmento en 
 
 Consulte la sección de requisitos previos para [definiciones de los términos utilizados](#prerequisites) en esta descripción.
 
-### [!UICONTROL Tendencia del tamaño de la audiencia] {#audience-size-trend}
+### [!UICONTROL Tendencia de tamaño de audiencia] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
->title="Tendencia del tamaño de la audiencia"
->abstract="Esta utilidad ilustra el número de perfiles contenidos en el segmento que se envían diariamente a la cuenta de destino. El primer menú desplegable ajusta el período de tiempo de la tendencia de audiencia. El segundo menú desplegable de utilidades selecciona el segmento para su análisis. El destino se elige en la lista desplegable Información general ."
+>title="Tendencia de tamaño de audiencia"
+>abstract="Este widget ilustra la cantidad de perfiles contenidos en el segmento que se envía diariamente a la cuenta de destino. El primer menú desplegable ajusta el período de tiempo de la tendencia de audiencia. El segundo menú desplegable de widgets selecciona el segmento para su análisis. El destino se elige en el menú desplegable Información general."
 
 La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** La utilidad representa la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino. La utilidad utiliza un gráfico de líneas para ilustrar el número de perfiles contenidos en el segmento que se envían diariamente a la cuenta de destino.
 
@@ -175,11 +175,11 @@ La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** La utilidad p
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
 >title="Segmentos no asignados por identidad"
->abstract="Esta utilidad enumera las cinco principales **sin asignar** los segmentos clasificados por identidad descendente cuentan para un destino e identidad determinados. Los ID de filtro enumerados en la lista desplegable de utilidades cambian según la cuenta de destino seleccionada en la parte superior de la página de información general."
+>abstract="Este widget enumera los cinco segmentos principales **sin asignar** clasificados por recuento de identidad descendente para un destino e identidad determinados. Los ID de filtro enumerados en el menú desplegable del widget cambian según la cuenta de destino seleccionada en la parte superior de la página de información general."
 
 La variable **[!UICONTROL Segmentos no asignados por identidad]** La utilidad enumera las cinco principales **sin asignar** los segmentos clasificados por identidad descendente cuentan para un destino e identidad determinados. Destaca los segmentos que son los más beneficiosos de asignar a la cuenta de destino elegida en función del ID elegido.
 
-La lista desplegable ID de destino filtra los segmentos disponibles. Los ID de filtro enumerados en la lista desplegable cambian según la cuenta de destino seleccionada en la parte superior de la página de información general.
+La lista desplegable ID de destino filtra los segmentos disponibles. Los ID de filtro enumerados en el menú desplegable del cambian según la cuenta de destino seleccionada en la parte superior de la página de información general.
 
 La columna identidades cuenta el número de ID de origen dentro del segmento que podrían asignarse al ID elegido en la lista desplegable ID de la utilidad.
 
@@ -192,9 +192,9 @@ Consulte la sección de requisitos previos para [definiciones de los términos u
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="Segmentos asignados por identidad"
->abstract="Esta utilidad proporciona una lista de los cinco principales **asignado** segmentos. La lista se ordena de mayor a menor según el número de ID de origen contenidos en los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable de la utilidad dependen del destino elegido en la parte superior del panel de información general."
+>abstract="Este widget proporciona una lista de los cinco segmentos principales **asignados**. La lista se ordena de mayor a menor según el número de ID de origen que contienen los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en el menú desplegable del widget dependen del destino elegido en la parte superior del panel de información general."
 
-Esta utilidad proporciona una lista de los cinco principales **asignado** segmentos. La lista se ordena de mayor a menor según el número de ID de origen contenidos en los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable del widget cambiarán según el filtro de cuenta de destino elegido en la parte superior del panel de información general.
+Este widget proporciona una lista de los cinco segmentos principales **asignados**. La lista se ordena de mayor a menor según el número de ID de origen que contienen los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable del widget cambiarán según el filtro de cuenta de destino elegido en la parte superior del panel de información general.
 
 ![Segmentos asignados por el widget de identidad.](../images/destinations/mapped-segments-by-identity.png)
 
@@ -205,7 +205,7 @@ La variable **[!UICONTROL Segmentos asignados por identidad]** La utilidad resal
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
 >title="Audiencias comunes"
->abstract="Esta utilidad proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable de la utilidad. La lista de segmentos se ordena según la fecha de activación. El segmento activado más recientemente se muestra en la parte superior."
+>abstract="Este widget proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en el menú desplegable del widget. La lista de segmentos se ordena según la fecha de activación. El segmento activado más recientemente se muestra en la parte superior."
 
 La variable **[!UICONTROL Audiencias comunes]** proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable de la utilidad. La lista de segmentos se ordena según la fecha de activación. El segmento activado más recientemente se muestra en la parte superior.
 
@@ -221,12 +221,12 @@ Select **[!UICONTROL Segmentos]** para navegar al panel Segmentos [!UICONTROL Ex
 
 ![El widget Audiencias asignadas .](../images/destinations/mapped-audiences.png)
 
-### Estado de la audiencia asignada {#mapped-audience-health}
+### Estado de audiencia asignado {#mapped-audience-health}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
->title="Estado de la audiencia asignada"
->abstract="Esta utilidad proporciona una lista de hasta 20 segmentos asignados cuyos recuentos totales de perfiles se desvían por un factor de al menos una desviación estándar del tamaño de audiencia medio de 30 días asignado a ese destino. Proporciona una métrica calculada para la dispersión de los tamaños de audiencia de la media a lo largo de los últimos 30 días. Los tamaños de audiencia se ordenan de mayor a menor."
+>title="Estado de audiencia asignado"
+>abstract="Este widget proporciona una lista de hasta 20 segmentos asignados cuyos recuentos totales de perfiles se desvían por un factor de al menos una desviación estándar del tamaño de audiencia medio de 30 días asignado a ese destino. Proporciona una métrica calculada para la dispersión de los tamaños de audiencia de la media durante los últimos 30 días. Los tamaños de audiencia se ordenan de mayor a menor."
 
 El widget proporciona una lista de hasta 20 segmentos asignados cuyos recuentos totales de perfiles, desde la última instantánea diaria, se desvían por un factor de al menos una desviación estándar del tamaño de audiencia medio asignado a ese destino de 30 días.
 
@@ -249,7 +249,7 @@ Si un segmento dentro de la variable [!UICONTROL Estado de la audiencia asignada
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_destinationscount"
 >title="Recuento de destinos"
->abstract="Esta utilidad proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos."
+>abstract="Este widget proporciona el número total de puntos finales disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos."
 
 La variable [!UICONTROL Recuento de destinos] proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos.
 
