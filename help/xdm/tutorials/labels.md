@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '737'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -37,8 +37,8 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"
->title="Editar etiquetas de control"
->abstract="Aplique una etiqueta a un campo de esquema para indicar las políticas de uso que se aplican a los datos contenidos en ese campo específico."
+>title="Editar etiquetas de gobernanza"
+>abstract="Añada una etiqueta a un campo de esquema para indicar las directivas de uso que se aplican a los datos contenidos en ese campo específico."
 
 Para empezar a añadir etiquetas, primero debe [seleccionar un esquema existente para editar](../ui/resources/schemas.md#edit) o [crear un nuevo esquema](../ui/resources/schemas.md#create) para ver su estructura en el Editor de esquemas.
 
