@@ -5,7 +5,7 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
-ht-degree: 0%
+ht-degree: 14%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Esquema de referencia"
->abstract="Seleccione el esquema con el que desea establecer una relación. Según la clase del esquema, también puede tener relaciones existentes con otras entidades en el contexto B2B. Consulte la documentación para conocer cómo se relacionan las clases de esquema B2B entre sí."
+>abstract="Seleccione el esquema con el que desea establecer una relación. Según la clase del esquema, también puede tener relaciones existentes con otras entidades en el contexto B2B. Consulte la documentación para obtener más información acerca de cómo se relacionan las clases de esquema B2B entre sí."
 
 Adobe Real-time Customer Data Platform B2B Edition proporciona varias clases de Experience Data Model (XDM) que capturan entidades de datos B2B fundamentales, incluidas [cuentas](../classes/b2b/business-account.md), [oportunidades](../classes/b2b/business-opportunity.md), [campañas](../classes/b2b/business-campaign.md), y más. Crear esquemas basados en estas clases y permitirles usarlos en [Perfil del cliente en tiempo real](../../profile/home.md), puede combinar datos de orígenes diferentes en una representación unificada denominada esquema de unión.
 
@@ -51,7 +51,7 @@ Las relaciones de esquema se representan mediante un campo dedicado dentro de un
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="Referencia al Área de nombres de identidad"
->abstract="El espacio de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación. Consulte la documentación para obtener más información sobre las identidades en las relaciones B2B."
+>abstract="El área de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación. Consulte la documentación para obtener más información sobre las identidades en las relaciones B2B."
 
 Para establecer una relación, el esquema de referencia debe tener una identidad principal definida. Al configurar una identidad principal para una entidad B2B, tenga en cuenta que los ID de entidad basados en cadenas pueden superponerse si los recopila en diferentes sistemas o ubicaciones, lo que podría provocar conflictos de datos en Platform.
 
@@ -84,12 +84,12 @@ El esquema de referencia &quot;[!DNL Accounts]&quot; se basa en la variable [!UI
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="Nombre de relación del esquema actual"
->abstract="Etiqueta que describe la relación entre el esquema actual y el esquema de referencia (por ejemplo, &quot;Cuenta relacionada&quot;). Esta etiqueta se utiliza en Perfil y Segmentación para dar contexto a los datos de entidades B2B relacionadas. Consulte la documentación para obtener más información sobre la creación de relaciones de esquema B2B."
+>abstract="Etiqueta que describe la relación entre el esquema actual y el esquema de referencia (por ejemplo, “Cuenta relacionada”). Esta etiqueta se utiliza en Perfil y Segmentación para dar contexto a los datos de entidades B2B relacionadas. Consulte la documentación para obtener más información sobre la creación de relaciones de esquemas B2B."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="Nombre de relación del esquema de referencia"
->abstract="Etiqueta que describe la relación entre el esquema de referencia y el esquema actual (por ejemplo, &quot;Oportunidades relacionadas&quot;). Esta etiqueta se utiliza en Perfil y Segmentación para dar contexto a los datos de entidades B2B relacionadas. Consulte la documentación para obtener más información sobre la creación de relaciones de esquema B2B."
+>abstract="Etiqueta que describe la relación entre el esquema de referencia y el esquema actual (por ejemplo, “Oportunidades relacionadas”). Esta etiqueta se utiliza en Perfil y Segmentación para dar contexto a los datos de entidades B2B relacionadas. Consulte la documentación para obtener más información sobre la creación de relaciones de esquemas B2B."
 
 Para definir una relación entre dos esquemas, el esquema de origen debe tener un campo dedicado que indique la identidad principal del esquema de referencia. Las clases B2B estándar incluyen campos clave de origen específicos para entidades comerciales relacionadas de forma habitual. Por ejemplo, la variable [!UICONTROL Oportunidad comercial XDM] la clase contiene campos de clave de origen para una cuenta relacionada (`accountKey`) y una campaña relacionada (`campaignKey`). Sin embargo, también puede agregar otras [!UICONTROL Fuente B2B] campos al esquema utilizando grupos de campos personalizados si necesita más de los componentes predeterminados.
 
