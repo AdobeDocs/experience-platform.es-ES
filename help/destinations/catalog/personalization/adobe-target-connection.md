@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -69,9 +69,9 @@ Una empresa de ventas y alquiler de casa quiere personalizar su página principa
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
->title="Acerca de los ID de conjunto de datos"
->abstract="Esta opción determina en qué almacén de datos de recopilación de datos se incluirán los segmentos. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de Target. Para utilizar la segmentación perimetral, debe seleccionar un ID de conjunto de datos. Al seleccionar Ninguno se desactivan todos los casos de uso que utilizan segmentación perimetral."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Obtenga más información sobre la selección de conjuntos de datos"
+>title="Acerca de los ID de secuencia de datos"
+>abstract="Esta opción determina en qué secuencia de datos de recopilación de datos se incluirán los segmentos. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Para utilizar la segmentación de Edge, debe seleccionar un ID de la secuencia de datos. Al seleccionar Ninguno, se desactivan todos los casos de uso que utilizan segmentación de Edge."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=es#parameters" text="Obtenga más información sobre la selección de secuencias de datos"
 
 >[!IMPORTANT]
 > 
