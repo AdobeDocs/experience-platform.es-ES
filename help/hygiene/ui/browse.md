@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 1%
+ht-degree: 25%
 
 ---
 
@@ -74,7 +74,7 @@ Los filtros siguientes se aplican a las solicitudes de caducidad del conjunto de
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Número de identidades"
->abstract="Número de identidades cuyos registros se solicitaron que se actualizaran o eliminaran como parte de esta orden de trabajo. Las identidades incluidas en el recuento pueden no existir necesariamente en los conjuntos de datos afectados. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
+>abstract="Número de identidades cuyos registros se solicitó actualizar o eliminar como parte de esta orden de trabajo. Las identidades incluidas en el recuento pueden no existir necesariamente en los conjuntos de datos afectados. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
