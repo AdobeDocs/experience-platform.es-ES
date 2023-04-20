@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -35,7 +35,7 @@ Este documento requiere una comprensión práctica de los siguientes componentes
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="Suscripción a las alertas de fuentes"
->abstract="Las alertas le permiten recibir notificaciones en función del estado de sus flujos de datos de origen. Puede establecer notificaciones de alerta para obtener actualizaciones si el flujo de datos se ha iniciado, se ha realizado correctamente, ha fallado o no ha introducido ningún dato."
+>abstract="Las alertas permiten recibir notificaciones en función del estado de sus flujos de datos de origen. Puede configurar notificaciones de alerta para obtener actualizaciones si el flujo de datos se ha iniciado, ha fallado o no ha ingerido datos."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]
