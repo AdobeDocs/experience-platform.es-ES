@@ -7,7 +7,7 @@ exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
@@ -15,19 +15,19 @@ ht-degree: 1%
 
 Este documento proporciona respuestas a las preguntas más frecuentes sobre los entornos limitados de Adobe Experience Platform. Para preguntas y solución de problemas relacionados con otros servicios de Platform, consulte la [Guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
 
-Los entornos limitados dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital. Consulte la [información general sobre los entornos limitados](home.md) para obtener más información.
+Los entornos limitados dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
 
 ## ¿Qué es un simulador de pruebas?
 
-Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform. Cada simulador para pruebas mantiene su propia biblioteca independiente de recursos de Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.). Todo el contenido y las acciones realizadas dentro de un simulador de pruebas solo se limitan a ese simulador de pruebas y no afectan a ningún otro simulador de pruebas. Consulte la [información general sobre los entornos limitados](home.md) para obtener más información.
+Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform. Cada simulador para pruebas mantiene su propia biblioteca independiente de recursos de Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.). Todo el contenido y las acciones realizadas dentro de un simulador de pruebas solo se limitan a ese simulador de pruebas y no afectan a ningún otro simulador de pruebas. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
 
 ## ¿Qué tipos de entornos limitados están disponibles y cuáles son sus diferencias? {#sandbox-types}
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtypes"
->title="Tipo de Simulador para pruebas"
->abstract="El tipo de entorno limitado indica si se trata de un entorno limitado de producción o desarrollo. Los entornos limitados de producción incluyen datos activos y los entornos limitados de desarrollo se utilizan para pruebas y desarrollo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Creación de un simulador para pruebas en la interfaz de usuario"
+>title="Tipo de zona protegida"
+>abstract="El tipo de zona protegida indica si se trata de una zona protegida de producción o desarrollo. Las zonas protegidas de producción incluyen datos activos y las zonas protegidas de desarrollo se utilizan para pruebas y desarrollo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=es#create" text="Creación de una zona protegida en la interfaz de usuario"
 
 Hay dos tipos de entornos limitados disponibles en el Experience Platform:
 
@@ -37,7 +37,7 @@ Hay dos tipos de entornos limitados disponibles en el Experience Platform:
    * Un trabajo de segmentación por lotes al día, por simulador de pruebas de desarrollo;
    * Un promedio de 120 [!DNL Profile] llamadas de API, por [!DNL Profile], por año (se mide acumulativamente en todos los entornos limitados de desarrollo autorizados.
 
-Consulte la [información general sobre los entornos limitados](./home.md) para obtener más información.
+Consulte la [información general sobre las zonas protegidas](./home.md) para obtener más detalles.
 
 ## ¿Puedo acceder a un recurso desde más de un simulador para pruebas?
 
