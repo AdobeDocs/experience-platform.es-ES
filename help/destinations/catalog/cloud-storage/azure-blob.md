@@ -6,7 +6,7 @@ exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '920'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -75,7 +75,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_blob_rsa"
 >title="Clave pública RSA"
->abstract="Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave con formato correcto en el vínculo de documentación siguiente."
+>abstract="Opcionalmente, puede adjuntar su clave pública con formato RSA para añadir cifrado a los archivos exportados. Vea un ejemplo de una clave con formato correcto en el vínculo de documentación siguiente."
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectarse al destino]**.
 
