@@ -7,7 +7,7 @@ exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 1%
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
 >title="Solicitudes del sujeto de datos"
->abstract="Esta utilidad muestra el número de solicitudes de interesados enviadas y completadas procesadas por el Privacy Service durante un día determinado. Para obtener más información sobre los procesos del Privacy Service, seleccione **Solicitudes** en el panel de navegación izquierdo."
+>abstract="Este widget muestra el número de solicitudes de interesados enviadas y completadas procesadas por Privacy Service durante un día determinado. Para obtener más información sobre los procesos de Privacy Service, seleccione **Solicitudes** en el panel de navegación situado a la izquierda."
 
 La interfaz de usuario del Privacy Service [!DNL Privacy Service] le permite coordinar las solicitudes de privacidad y cumplimiento de normas en varias aplicaciones de Adobe Experience Cloud.
 
