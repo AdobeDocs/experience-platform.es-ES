@@ -53,7 +53,7 @@ Los esquemas de registros y series temporales contienen un mapa de identidades (
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identidades en esquemas"
->abstract="Las identidades son campos clave dentro de un esquema que se pueden aprovechar para identificar a un sujeto, como una dirección de correo electrónico o un ID de marketing. Estos campos se utilizan para construir el gráfico de identidad de cada individuo y generar perfiles de clientes. Consulte la documentación para obtener más información sobre las identidades en los esquemas."
+>abstract="Las identidades son campos clave dentro de un esquema que pueden utilizarse para identificar un asunto, como una dirección de correo electrónico o un ID de marketing. Estos campos se utilizan para construir el gráfico de identidad para cada particular y crear perfiles de cliente. Consulte la documentación para obtener más información sobre las identidades en los esquemas."
 
 Los esquemas se utilizan para introducir datos en [!DNL Experience Platform]. Estos datos se pueden utilizar en varios servicios para crear una única vista unificada de una entidad individual. Por lo tanto, es importante, al pensar en esquemas, pensar en las identidades de los clientes y en qué campos se pueden utilizar para identificar un sujeto independientemente de su origen.
 
@@ -170,7 +170,7 @@ Los esquemas se componen con la siguiente fórmula:
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Clase"
->abstract="Cada esquema se basa en una sola clase. La clase define el comportamiento del esquema y las propiedades comunes que todos los esquemas basados en ella deben contener. Consulte la documentación para obtener más información acerca de cómo las clases participan en la composición de esquemas."
+>abstract="Cada esquema se basa en una sola clase. La clase define el comportamiento del esquema y las propiedades comunes que deben contener todos los esquemas basados en esa clase. Consulte la documentación para obtener más información sobre cómo participan las clases en la composición de esquemas."
 
 La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). Además de esto, las clases describen el menor número de propiedades comunes que todos los esquemas basados en esa clase necesitarían para incluir y proporcionar una forma de combinar varios conjuntos de datos compatibles.
 
@@ -189,12 +189,12 @@ Para obtener la lista más actualizada de las clases XDM estándar disponibles, 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Grupo de campos"
->abstract="Los grupos de campos son componentes reutilizables que permiten ampliar esquemas con atributos adicionales. La mayoría de los grupos de campos solo son compatibles con determinadas clases. Puede utilizar grupos de campos estándar definidos por Adobe o puede especificar manualmente sus propios grupos de campos personalizados. Consulte la documentación para obtener más información acerca de cómo los grupos de campos participan en la composición del esquema."
+>abstract="Los grupos de campos son componentes reutilizables que permiten ampliar esquemas con atributos adicionales. La mayoría de los grupos de campos solo son compatibles con ciertas clases. Puede utilizar grupos de campos estándar definidos por Adobe o puede definir manualmente sus propios grupos de campos personalizados. Consulte la documentación para obtener más información sobre cómo participan los grupos de campos en la composición de esquemas."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="Grupo de campos obligatorio"
->abstract="La fuente que utiliza requiere este grupo de campos. Por este motivo, no puede eliminarlo del esquema."
+>abstract="El origen que utiliza requiere este grupo de campos. Por este motivo, no puede eliminarlo del esquema."
 
 Un grupo de campos es un componente reutilizable que define uno o más campos que implementan ciertas funciones, como detalles personales, preferencias de hotel o dirección. Los grupos de campos están pensados para incluirse como parte de un esquema que implemente una clase compatible.
 
