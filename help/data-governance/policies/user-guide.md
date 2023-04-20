@@ -113,8 +113,8 @@ Las políticas de consentimiento constan de dos componentes lógicos:
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
->title="Condición “if”"
->abstract="Empiece por definir las condiciones que activarán la comprobación de la directiva. Las condiciones pueden incluir ciertas acciones de marketing que se están realizando, ciertas etiquetas de gobernanza de datos que están presentes o una combinación de ambas."
+>title="Condición “If”"
+>abstract="Comience definiendo las condiciones que activarán la comprobación de directivas. Las condiciones pueden incluir la realización de determinadas acciones de marketing, la presencia de ciertas etiquetas de gobernanza de datos o una combinación de ambas."
 
 En el **[!UICONTROL If]** , seleccione las acciones de marketing o las etiquetas de uso de datos que deben almacenar en déclencheur esta directiva. Select **[!UICONTROL Ver todo]** y **[!UICONTROL Seleccionar etiquetas]** para ver las listas completas de las etiquetas y acciones de marketing disponibles, respectivamente.
 
@@ -130,10 +130,10 @@ Si selecciona varias condiciones, puede utilizar el icono que aparece entre ella
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
->title="Condición “then”"
->abstract="Una vez definida la condición “if”, utilice la sección “then” para seleccionar al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regida por esta directiva."
+>title="Condición “Then”"
+>abstract="Una vez definida la condición “If”, utilice la sección “Then” para seleccionar al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regulada por esta directiva."
 
-En el **[!UICONTROL Entonces]** , seleccione al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regida por esta directiva. Puede elegir una de las opciones proporcionadas en la lista o seleccionar **[!UICONTROL Ver todo]** para elegir el atributo directamente desde el esquema de unión.
+En el **[!UICONTROL Entonces]** , seleccione al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regulada por esta directiva. Puede elegir una de las opciones proporcionadas en la lista o seleccionar **[!UICONTROL Ver todo]** para elegir el atributo directamente desde el esquema de unión.
 
 Al seleccionar el atributo de consentimiento, elija los valores del atributo que desea que compruebe esta directiva.
 
