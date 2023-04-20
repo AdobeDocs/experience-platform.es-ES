@@ -7,7 +7,7 @@ exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1997'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -118,7 +118,7 @@ Para conectar un socio con su [!UICONTROL id de conexión], introduzca su valor 
 >[!CONTEXTUALHELP]
 >id="platform_segment_match_marketing"
 >title="Casos de uso de marketing restringidos"
->abstract="Los casos de uso de marketing restringidos ayudan a proporcionar orientación a sus socios para garantizar que los segmentos compartidos se utilizan correctamente según las restricciones de control de datos."
+>abstract="Los casos de uso de marketing restringidos ayudan a proporcionar orientación a sus socios para garantizar que los segmentos compartidos se utilizan correctamente según las restricciones de gobernanza de datos."
 >text="Learn more in documentation"
 
 A **fuente** es una agrupación de datos (segmentos), las reglas para exponer o utilizar esos datos y las configuraciones que determinan cómo se comparan los datos con los datos de sus socios. Una fuente se puede administrar de forma independiente e intercambiar con otros usuarios de Platform a través de [!DNL Segment Match].
@@ -183,7 +183,7 @@ Para agregar o quitar segmentos, seleccione **[!UICONTROL Crear fuente]** de la 
 
 Aparecerá la lista de segmentos. Desde aquí, puede añadir nuevos segmentos a la fuente y utilizar el carril derecho para eliminar los segmentos que ya no necesite. Una vez que haya terminado de administrar los segmentos en la fuente, seleccione **[!UICONTROL Siguiente]** y siga los pasos descritos anteriormente para completar la fuente actualizada.
 
-![actualizar](./images/update.png)
+![update](./images/update.png)
 
 >[!NOTE]
 >
