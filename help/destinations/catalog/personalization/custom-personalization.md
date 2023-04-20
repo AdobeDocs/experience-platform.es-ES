@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -75,9 +75,9 @@ Al día siguiente, el usuario vuelve al mismo sitio web del cliente. Los segment
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Acerca de los ID de conjunto de datos"
->abstract="Esta opción determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Debe configurar un conjunto de datos para poder configurar el destino."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Obtenga información sobre cómo configurar un conjunto de datos"
+>title="Acerca de los ID de secuencia de datos"
+>abstract="Esta opción determina en qué secuencia de datos de recopilación de datos se incluirán los segmentos en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Debe configurar una secuencia de datos para poder configurar el destino."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=es" text="Obtenga información sobre cómo configurar una secuencia de datos"
 
 >[!IMPORTANT]
 > 
@@ -92,7 +92,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 * **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
 * **[!UICONTROL Descripción]**: Escriba una descripción para el destino. Por ejemplo, puede mencionar para qué campaña utiliza este destino. Este campo es opcional.
 * **[!UICONTROL Alias de integración]**: Este valor se envía al SDK web del Experience Platform como nombre de objeto JSON.
-* **[!UICONTROL ID de almacén de datos]**: Esto determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo los conjuntos de datos que tienen habilitada la configuración de destino. Consulte [Configuración de un conjunto de datos](../../../edge/datastreams/overview.md) para obtener más información.
+* **[!UICONTROL ID de almacén de datos]**: Esto determina en qué almacén de datos de recopilación de datos se incluyen los segmentos en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Consulte [Configuración de un conjunto de datos](../../../edge/datastreams/overview.md) para obtener más información.
 
 ### Habilitar alertas {#enable-alerts}
 
