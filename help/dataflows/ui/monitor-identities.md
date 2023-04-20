@@ -7,7 +7,7 @@ exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -29,13 +29,13 @@ El panel de monitorización proporciona una representación visual de la activid
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Procesamiento de identidad"
->abstract="La vista de procesamiento de identidad contiene información sobre los registros ingestados al servicio de identidad, incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
+>abstract="La vista Procesamiento de identidad contiene información sobre los registros ingeridos en el servicio de identidad, incluido el número de identidades añadidas, los gráficos creados y los gráficos actualizados. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
 >title="Detalles de ejecución del flujo de datos"
->abstract="La página de detalles de ejecución del flujo de datos muestra más información sobre la ejecución del flujo de datos de identidad, incluido su ID de organización y el ID de ejecución del flujo de datos."
+>abstract="La página Detalles de ejecución del flujo de datos muestra más información sobre la ejecución del flujo de datos de identidad, incluido su ID de organización y el ID de ejecución del flujo de datos."
 
 Para acceder a la **[!UICONTROL Identidades]** tablero, seleccione **[!UICONTROL Monitorización]** en el panel de navegación izquierdo. Una vez en el **[!UICONTROL Monitorización]** seleccione **[!UICONTROL Identidades]** tarjeta.
 
@@ -56,7 +56,7 @@ Las siguientes métricas están disponibles para esta vista de tablero:
 | **[!UICONTROL Registros recibidos]** | Número de registros recibidos del lago de datos. |
 | **[!UICONTROL Error de registros]** | Número de registros que no se incorporaron en Platform debido a errores en los datos. |
 | **[!UICONTROL Registros omitidos]** | El número de registros introducidos, pero no en [!DNL Identity Service] porque solo había un identificador en la fila de registros. |
-| **[!UICONTROL Registros ingestados]** | El número de registros ingestados en [!DNL Identity Service]. |
+| **[!UICONTROL Registros ingeridos]** | El número de registros ingestados en [!DNL Identity Service]. |
 | **[!UICONTROL Identidades agregadas]** | El número de identificadores nuevos netos agregados a [!DNL Identity Service]. |
 | **[!UICONTROL Gráficos creados]** | El número de nuevos gráficos de identidad netos creados en [!DNL Identity Service]. |
 | **[!UICONTROL Gráficos actualizados]** | Número de gráficos de identidad existentes actualizados con bordes nuevos. |
@@ -80,7 +80,7 @@ Las siguientes métricas están disponibles para esta vista de tablero:
 | **[!UICONTROL Registros recibidos]** | Número de registros recibidos del lago de datos. |
 | **[!UICONTROL Error de registros]** | Número de registros que no se incorporaron en Platform debido a errores en los datos. |
 | **[!UICONTROL Registros omitidos]** | El número de registros introducidos, pero no en [!DNL Identity Service] porque solo había un identificador en la fila de registros. |
-| **[!UICONTROL Registros ingestados]** | El número de registros ingestados en [!DNL Identity Service]. |
+| **[!UICONTROL Registros ingeridos]** | El número de registros ingestados en [!DNL Identity Service]. |
 | **[!UICONTROL Registros totales]** | Recuento total de todos los registros, incluidos los registros con errores, los registros omitidos, las identidades agregadas y los registros duplicados. |
 | **[!UICONTROL Identidades agregadas]** | El número de identificadores nuevos netos agregados a [!DNL Identity Service]. |
 | **[!UICONTROL Gráficos creados]** | El número de nuevos gráficos de identidad netos creados en [!DNL Identity Service]. |
@@ -102,7 +102,7 @@ Las siguientes métricas están disponibles para esta vista de tablero:
 | **[!UICONTROL Registros recibidos]** | Número de registros recibidos del lago de datos. |
 | **[!UICONTROL Error de registros]** | Número de registros que no se incorporaron en Platform debido a errores en los datos. |
 | **[!UICONTROL Registros omitidos]** | El número de registros introducidos, pero no en [!DNL Identity Service] porque solo había un identificador en la fila de registros. |
-| **[!UICONTROL Registros ingestados]** | El número de registros ingestados en [!DNL Identity Service]. |
+| **[!UICONTROL Registros ingeridos]** | El número de registros ingestados en [!DNL Identity Service]. |
 | **[!UICONTROL Identidades agregadas]** | El número de identificadores nuevos netos agregados a [!DNL Identity Service]. |
 | **[!UICONTROL Gráficos creados]** | El número de nuevos gráficos de identidad netos creados en [!DNL Identity Service]. |
 | **[!UICONTROL Gráficos actualizados]** | Número de gráficos de identidad existentes actualizados con bordes nuevos. |
