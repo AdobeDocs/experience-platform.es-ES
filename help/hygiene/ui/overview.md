@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 0%
+ht-degree: 37%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Estado de las solicitudes de higiene de datos"
->abstract="Este widget muestra los recuentos totales de trabajos de eliminación de registros de higiene de datos creados, fallidos y completados. Para obtener más información sobre los procesos de higiene de datos, seleccione **Higiene de los datos** en el panel de navegación izquierdo."
+>abstract="Este widget muestra los recuentos totales de trabajos de eliminación de registros de higiene de datos creados, con errores y completados. Para obtener más información sobre los procesos de higiene de datos, seleccione **Higiene de datos** en el panel de navegación situado a la izquierda."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="Órdenes de trabajo recientes sobre higiene de datos"
->abstract="Esta utilidad muestra las cinco órdenes de trabajo de Higiene de los datos creadas o actualizadas más recientemente, según la opción seleccionada en la parte superior derecha. Para obtener más información sobre los procesos de higiene de datos, seleccione **Higiene de los datos** en el panel de navegación izquierdo."
+>abstract="Este widget muestra las cinco órdenes de trabajo sobre higiene de datos creadas o actualizadas más recientemente, según la opción seleccionada en la parte superior derecha. Para obtener más información sobre los procesos de higiene de datos, seleccione **Higiene de datos** en el panel de navegación situado a la izquierda."
 
 La variable **[!UICONTROL Higiene de los datos]** El espacio de trabajo de la interfaz de usuario de Adobe Experience Platform le permite crear y supervisar varias tareas de higiene de los datos, como la eliminación de registros y la programación de caducidades de conjuntos de datos.
 
