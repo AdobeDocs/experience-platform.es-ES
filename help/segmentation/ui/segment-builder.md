@@ -7,7 +7,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
 source-wordcount: '3258'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -235,13 +235,13 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propiedades del segmento"
->abstract="La sección de propiedades del segmento muestra una estimación del tamaño del segmento resultante, mostrando el número de perfiles cualificados en comparación con el número total de perfiles. Esto le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia."
+>abstract="La sección Propiedades del segmento muestra una estimación del tamaño del segmento resultante, mostrando el número de perfiles cualificados en comparación con el número total de perfiles. Esto permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualizar estimaciones"
->abstract="Puede actualizar las estimaciones de su segmento para ver inmediatamente una vista previa de cuántos perfiles calificarían para el segmento propuesto. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
+>abstract="Puede actualizar las estimaciones de su segmento para ver inmediatamente una vista previa de cuántos perfiles cumplirían los requisitos para el segmento propuesto. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
 
 Al crear una definición de segmento, la variable **[!UICONTROL Propiedades del segmento]** a la derecha del espacio de trabajo muestra una estimación del tamaño del segmento resultante, lo que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
