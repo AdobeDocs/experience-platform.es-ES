@@ -123,12 +123,12 @@ Puede añadir etiquetas directamente a un esquema o campos dentro de él. Cualqu
 
 Consulte el tutorial en [administración de etiquetas de nivel de esquema](../../xdm/tutorials/labels.md) para obtener más información.
 
-## Administración de etiquetas personalizadas {#manage-custom-labels}
+## Administrar etiquetas personalizadas {#manage-custom-labels}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Creación de etiquetas"
->abstract="Las etiquetas permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Platform proporciona un conjunto estándar de etiquetas que puede utilizar, pero también puede crear etiquetas personalizadas específicas de su organización."
+>abstract="Las etiquetas permiten clasificar los conjuntos de datos y campos según las directivas de uso que se aplican a esos datos. Platform proporciona un conjunto estándar de etiquetas para su uso, pero también puede crear etiquetas personalizadas específicas de su organización."
 
 Puede crear sus propias etiquetas de uso personalizadas en la **[!UICONTROL Políticas]** espacio de trabajo [!DNL Experience Platform] IU. Select **[!UICONTROL Políticas]** en el panel de navegación izquierdo, seleccione **[!UICONTROL Etiquetas]** para ver una lista de etiquetas existentes. Desde aquí, seleccione **[!UICONTROL Crear etiqueta]**.
 
