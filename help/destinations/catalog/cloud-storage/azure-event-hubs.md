@@ -6,7 +6,7 @@ exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
 source-wordcount: '2062'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -89,7 +89,7 @@ Si selecciona la opción **[!UICONTROL Autenticación estándar]** escriba para 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
->title="Incluir marcas de hora de segmentos"
+>title="Incluir marcas de tiempo de segmentos"
 >abstract="Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los segmentos, así como la marca de tiempo UNIX cuando los segmentos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
 
 Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
