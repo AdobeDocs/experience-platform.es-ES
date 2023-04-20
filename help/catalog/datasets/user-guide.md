@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ Esta guía del usuario requiere conocer los siguientes componentes de Adobe Expe
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
 >title="Números negativos en la actividad del conjunto de datos"
->abstract="Los números negativos de los registros ingestados significan que un usuario ha eliminado determinados lotes en un intervalo de tiempo seleccionado."
+>abstract="Los números negativos de los registros ingeridos implican que un usuario ha eliminado determinados lotes en un intervalo de tiempo seleccionado."
 >text="Learn more in documentation"
 
 En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir el **[!UICONTROL Conjuntos de datos]** tablero. El tablero enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere el conjunto de datos y el estado de la ejecución de ingesta más reciente.
