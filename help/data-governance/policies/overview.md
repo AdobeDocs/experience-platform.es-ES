@@ -7,7 +7,7 @@ exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_restrictusage"
 >title="Restringir el uso de datos"
->abstract="El tipo de directiva de uso de datos evalúa las acciones de marketing específicas aplicadas a las etiquetas de control de datos para restringir el uso de datos para actividades de marketing."
+>abstract="El tipo de directiva de uso de datos evalúa las acciones de marketing específicas aplicadas a las etiquetas de gobernanza de datos para restringir el uso de datos para actividades de marketing."
 
 Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de [!DNL Experience Platform].
 
