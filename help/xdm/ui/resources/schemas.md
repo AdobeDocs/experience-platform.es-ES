@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -251,8 +251,8 @@ Después de aplicar los cambios, el nuevo campo aparece debajo del espacio de no
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
->title="Habilitar un esquema para Perfil"
->abstract="Cuando un esquema está habilitado para Perfil, cualquier conjunto de datos creado a partir de este esquema participa en el Perfil del cliente en tiempo real, que combina datos de fuentes diferentes para construir una vista completa de cada cliente. Una vez que se utiliza un esquema para introducir datos en Perfil, no se puede deshabilitar. Consulte la Documentación para obtener más información."
+>title="Habilitar un esquema para perfil"
+>abstract="Cuando se habilita un esquema para el perfil, cualquier conjunto de datos creado a partir de este esquema participa en el perfil del cliente en tiempo real, que combina datos de fuentes diferentes para construir una vista completa de cada cliente. Una vez que se utiliza un esquema para ingerir datos en el perfil, no se puede deshabilitar. Consulte la Documentación para obtener más información."
 
 [Perfil del cliente en tiempo real](../../../profile/home.md) combina datos de fuentes diferentes para construir una vista completa de cada cliente individual. Si desea que los datos capturados por un esquema participen en este proceso, debe activar el esquema para utilizarlo en [!DNL Profile].
 
