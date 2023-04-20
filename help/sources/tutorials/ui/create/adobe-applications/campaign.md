@@ -6,7 +6,7 @@ exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -45,7 +45,7 @@ En el **[!UICONTROL aplicaciones de Adobe]** categoría, seleccione **[!UICONTRO
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
 >title="Asignación de destino"
->abstract="Las asignaciones de destino son objetos técnicos que Campaign utiliza para enviar mensajes y contienen toda la configuración técnica necesaria para realizar envíos (direcciones, números de teléfono, indicadores de inclusión, identificadores adicionales..)."
+>abstract="Las asignaciones de destino son objetos técnicos que Campaign utiliza para enviar mensajes y contienen toda la configuración técnica necesaria para realizar envíos (direcciones, números de teléfono, indicadores de inclusión, identificadores adicionales…)."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
