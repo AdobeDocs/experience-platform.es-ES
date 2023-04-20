@@ -44,12 +44,12 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 | Procesamiento | La variable `Processing` indica que un flujo de datos aún no está activo. Este estado se encuentra a menudo inmediatamente después de crear un nuevo flujo de datos. |
 | Error | La variable `Error` indica que se ha interrumpido el proceso de activación de un flujo de datos. |
 
-### Ejecuciones de flujo de datos para destinos de streaming {#dataflow-runs-for-streaming-destinations}
+### El flujo de datos se ejecuta para destinos de streaming {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Detalles de ejecución del flujo de datos"
->abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación del segmento y métricas tomadas del perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas."
+>abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación del segmento y las métricas tomadas del perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -59,17 +59,17 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identidades activadas"
->abstract="El recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de segmentos exportados."
+>abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de segmentos exportados."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="Identidades excluidas"
->abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de la falta de atributos y la infracción de consentimiento."
+>abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
->title="Identidades con errores"
->abstract="El recuento de identidades de perfil individuales con errores en el destino seleccionado. Consulte los diagnósticos de error para obtener más detalles."
+>title="Error de identidades"
+>abstract="Recuento de identidades de perfiles individuales que fallaron para el destino seleccionado. Consulte los diagnósticos de errores para obtener más información."
 
 Para los destinos de flujo continuo, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona una actualización por hora para los datos de métricas en las ejecuciones de flujo de datos. Las estadísticas más destacadas etiquetadas son para identidades.
 
@@ -112,8 +112,8 @@ La página de detalles también muestra una lista de identidades que han fallado
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Detalles de ejecución del flujo de datos"
->abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación del segmento y métricas tomadas del perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=es#dataflow-runs-for-streaming-destinations" text="Ejecuciones de flujo de datos para destinos de streaming"
+>abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación del segmento y las métricas tomadas del perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=es#dataflow-runs-for-streaming-destinations" text="El flujo de datos se ejecuta para destinos de streaming"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -123,12 +123,12 @@ La página de detalles también muestra una lista de identidades que han fallado
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identidades activadas"
->abstract="El recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de segmentos exportados."
+>abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de segmentos exportados."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Identidades excluidas"
->abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de la falta de atributos y la infracción de consentimiento."
+>abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
 
 Para los destinos de lote, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona datos de métricas sobre las ejecuciones de flujo de datos. Se muestra una lista de ejecuciones individuales y sus métricas particulares, junto con los siguientes totales de identidades:
 
@@ -176,7 +176,7 @@ La página de detalles también muestra una lista de identidades que han fallado
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="La vista de activación de destino contiene información sobre el estado de activación del segmento y métricas tomadas del perfil del cliente en tiempo real para generar identidades únicas."
+>abstract="La vista de activación de destino contiene información sobre el estado de activación del segmento y las métricas tomadas del perfil del cliente en tiempo real para generar identidades únicas."
 
 Para acceder a la [!UICONTROL Monitorización] tablero, seleccione **[!UICONTROL Monitorización]** (![icono de monitorización](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en el [!UICONTROL Monitorización] página, seleccione [!UICONTROL Destinos]. La variable [!UICONTROL Monitorización] tablero contiene métricas e información sobre los trabajos de ejecución de destino.
 
@@ -210,7 +210,7 @@ La variable **[!UICONTROL Activation]** muestra una lista de destinos que contie
 ---------|----------|
 | **[!UICONTROL Perfiles recibidos]** | Transmisión por lotes |
 | **[!UICONTROL Identidades activadas]** | Transmisión por lotes |
-| **[!UICONTROL Identidades con errores]** | Transmisión |
+| **[!UICONTROL Error de identidades]** | Transmisión |
 | **[!UICONTROL Identidades excluidas]** | Transmisión por lotes |
 | **[!UICONTROL Tasa de activación]** | Transmisión |
 | **[!UICONTROL Total de flujos de datos fallidos]** | Lote |
