@@ -130,7 +130,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="Recuento de perfiles"
->abstract="Este widget muestra el número total de perfiles combinados dentro del almacén de perfiles en el momento en que se tomó la instantánea. El número depende de la política de combinación seleccionada que se aplique a los datos del perfil."
+>abstract="Este widget muestra el número total de perfiles combinados en el almacén de perfiles en el momento en que se tomó la instantánea. El número depende de las políticas de combinación seleccionadas que se apliquen a los datos de perfil."
 
 La variable **[!UICONTROL Recuento de perfiles]** muestra el número total de perfiles combinados dentro del Almacenamiento de perfiles en el momento en que se tomó la instantánea. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
 
@@ -155,7 +155,7 @@ La variable [!UICONTROL Tendencia del recuento de perfiles] La utilidad utiliza 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Cambio de recuento de perfiles"
->abstract="Este widget muestra el número total de perfiles combinados **añadido** al almacén de perfiles en el momento de la última instantánea. El número depende de la política de combinación seleccionada que se aplique a los datos del perfil."
+>abstract="Este widget muestra el número total de perfiles combinados **añadidos** al almacén de perfiles en el momento de la última instantánea. El número depende de las políticas de combinación seleccionadas que se apliquen a los datos de perfil."
 
 La variable **[!UICONTROL Cambio de recuento de perfiles]** muestra el número de perfiles combinados agregados al Almacenamiento de perfiles desde la instantánea anterior. Este número es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo. Puede utilizar el selector desplegable para ver el número de perfiles agregados en los últimos 30 días, 90 días o 12 meses.
 
@@ -170,7 +170,7 @@ La variable **[!UICONTROL Cambio de recuento de perfiles]** muestra el número d
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="Tendencia de cambio de recuento de perfiles"
->abstract="Este widget muestra el número de perfiles combinados que se han agregado al almacén de perfiles diariamente en los últimos 30 días, 90 días o 12 meses. El número también depende de la política de combinación seleccionada que se aplique a los datos del perfil."
+>abstract="Este widget muestra el número de perfiles combinados que se han añadido al almacén de perfiles diariamente durante los últimos 30 días, 90 días o 12 meses. El número también depende de las políticas de combinación seleccionadas que se apliquen a los datos de perfil."
 
 La variable **[!UICONTROL Tendencia del cambio en el recuento de perfiles]** muestra el número total de perfiles combinados que se han agregado al Almacenamiento de perfiles diariamente durante los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si ingeryera perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se aplica a los datos de perfil para combinar fragmentos de perfil para formar un único perfil para cada individuo.
 
@@ -199,7 +199,7 @@ Esta utilidad le ayuda a administrar sus necesidades de activación de destino d
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Perfiles por identidad"
->abstract="Este widget muestra el desglose de todos los perfiles combinados del almacén de perfiles por identidades."
+>abstract="Este widget muestra el desglose de todos los perfiles combinados en su almacén de perfiles por identidades."
 
 La variable **[!UICONTROL Perfiles por identidad]** muestra el desglose de identidades en todos los perfiles combinados del Almacenamiento de perfiles. El número total de perfiles por identidad (es decir, sumando los valores mostrados para cada área de nombres) puede ser mayor que el número total de perfiles combinados, ya que un perfil podría tener varias áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con la marca en más de un canal, se asociarán varias áreas de nombres con ese cliente individual.
 
@@ -220,7 +220,7 @@ Para obtener más información sobre las identidades, visite [Documentación del
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Superposición de identidad"
->abstract="Este widget utiliza un diagrama de Venn para mostrar la superposición de perfiles en el almacén de perfiles que contienen las dos identidades seleccionadas."
+>abstract="Este widget utiliza un diagrama de Venn para mostrar la superposición de perfiles en su almacén de perfiles que contienen las dos identidades seleccionadas."
 
 La variable **[!UICONTROL Superposición de identidad]** La utilidad utiliza un diagrama de Venn, o un diagrama de conjunto, para mostrar la superposición de perfiles en el Almacenamiento de perfiles que contienen las dos identidades seleccionadas.
 
@@ -256,7 +256,7 @@ Pase el ratón sobre las barras individuales para ver un cuadro de diálogo que 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfiles no segmentados"
->abstract="Este widget proporciona el número total de perfiles no adjuntos a ningún segmento y representa la oportunidad de activar perfiles en toda la organización."
+>abstract="Este widget proporciona el número total de perfiles que no están adjuntos a ningún segmento y representa la oportunidad de activar perfiles en toda la organización."
 
 La variable [!UICONTROL Perfiles sin segmentar] proporciona el número total de perfiles que no están adjuntos a ningún segmento. El número generado es preciso a partir de la última instantánea y representa la oportunidad de activar perfiles en toda la organización. También indica la oportunidad de eliminar perfiles que no proporcionan un ROI adecuado.
 
@@ -267,7 +267,7 @@ La variable [!UICONTROL Perfiles sin segmentar] proporciona el número total de 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendencia de perfiles no segmentados"
->abstract="Este widget proporciona una ilustración de gráfico de líneas para el número de perfiles que no están adjuntos a ningún segmento durante un período de tiempo determinado. La tendencia de los perfiles no adjuntos a ningún segmento se puede visualizar en períodos de 30 días, 90 días y 12 meses."
+>abstract="Este widget proporciona una ilustración gráfica de líneas del número de perfiles que no están adjuntos a ningún segmento durante un período de tiempo determinado. La tendencia de perfiles no adjuntos a ningún segmento se puede visualizar en periodos de 30 días, 90 días y 12 meses."
 
 La variable [!UICONTROL Los perfiles no segmentados cambian de tendencia] utiliza un gráfico de líneas para ilustrar el número de perfiles agregados desde la última instantánea diaria que no están adjuntos a ningún segmento. La tendencia al cambio de perfiles no adjuntos a ningún segmento se puede visualizar en periodos de 30 días, 90 días y 12 meses. El periodo de tiempo se elige en un menú desplegable del widget. El recuento de perfiles se refleja en el eje y y en el tiempo en el eje x.
 
