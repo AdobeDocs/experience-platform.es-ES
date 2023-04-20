@@ -7,7 +7,7 @@ exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
@@ -31,13 +31,13 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Procesamiento de perfiles"
->abstract="La vista de procesamiento de perfil contiene información sobre los registros ingestados al servicio de perfil, incluido el número de fragmentos de perfil creados, los fragmentos de perfil actualizados y el número total de fragmentos de perfil."
+>abstract="La vista Procesamiento de perfiles contiene información sobre los registros ingeridos en el servicio de perfil, incluido el número de fragmentos de perfil creados, los fragmentos de perfil actualizados y el número total de fragmentos de perfil."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_profile"
 >title="Detalles de ejecución del flujo de datos"
->abstract="La página de detalles de ejecución del flujo de datos muestra más información sobre la ejecución del flujo de datos de perfil, incluido su ID de organización y el ID de ejecución del flujo de datos."
+>abstract="La página Detalles de ejecución del flujo de datos muestra más información sobre la ejecución del flujo de datos de perfil, incluido su ID de organización y el ID de ejecución del flujo de datos."
 
 Para acceder a la **[!UICONTROL Perfiles]** tablero, seleccione **[!UICONTROL Monitorización]** en el panel de navegación izquierdo. Una vez en el **[!UICONTROL Monitorización]** seleccione **[!UICONTROL Perfiles]** tarjeta.
 
