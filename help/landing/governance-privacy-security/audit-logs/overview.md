@@ -14,12 +14,12 @@ ht-degree: 29%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Acciones principales"
->abstract="Este widget muestra los principales tipos de acciones que se han ejecutado en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
+>abstract="Este widget muestra los principales tipos de acciones que se han realizado en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación situado a la izquierda."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
->title="Principales usuarios"
->abstract="Este widget muestra los usuarios que han ejecutado la mayoría de las acciones en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
+>title="Usuarios principales"
+>abstract="Este widget muestra los usuarios que ejecutaron la mayoría de las acciones en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación situado a la izquierda."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
