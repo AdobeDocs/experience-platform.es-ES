@@ -7,7 +7,7 @@ exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
 source-wordcount: '1257'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
->title="enumeraciones y valores sugeridos"
->abstract="Un **Enum** restringe un campo de cadena para que solo permita la ingesta de datos que coincidan con un conjunto predefinido de valores. A cada restricción de enumeración se le puede asignar una **Nombre para mostrar** que rellena listas desplegables de atributos en la interfaz de usuario de segmentación. **Valores sugeridos** para un campo no restrinja la ingesta y solo determine los nombres para mostrar que se muestran en Segmentación. Si tiene varios esquemas que comparten un campo que pertenece a una clase o grupo de campos común y define diferentes enumeraciones o valores sugeridos para ese campo entre cada esquema, esos valores se combinan y se añaden al esquema de unión."
+>title="Enumeraciones y valores sugeridos"
+>abstract="Una **enumeración** restringe un campo de cadena para que solo permita la ingesta de datos que coincidan con un conjunto predefinido de valores. A cada restricción de enumeración se le puede asignar un **Nombre para mostrar** que rellena listas desplegables de atributos en la interfaz de usuario de segmentación. Los **valores sugeridos** para un campo no restringen la ingesta y solo determinan los nombres para mostrar que aparecen en la segmentación. Si tiene varios esquemas que comparten un campo que pertenece a una clase o grupo de campos común y define diferentes enumeraciones o valores sugeridos para ese campo entre cada esquema, esos valores se combinan y se añaden al esquema de unión."
 
 En Experience Data Model (XDM), se puede dar a un campo de cadena un conjunto predefinido de valores aceptados o sugeridos para controlar mejor qué valores se introducen en ese campo o cómo se comportarán en la segmentación.
 
