@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1337'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ El servicio de consulta de Adobe Experience Platform le permite conectarse con c
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"
 >title="Modo SSL del cliente"
->abstract="SSL debe estar habilitado en los clientes conectados al servicio de consulta. Asegúrese de que el modo SSL esté configurado en &quot;Requisito&quot;."
+>abstract="SSL debe estar habilitado en los clientes conectados al servicio de consultas. Asegúrese de que el modo SSL esté configurado en “requisito”."
 
 Puede utilizar las credenciales caducadas para configurar rápidamente una conexión con un cliente externo.
 
