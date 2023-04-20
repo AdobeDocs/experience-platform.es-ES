@@ -7,7 +7,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -50,19 +50,19 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Métodos de evaluación"
->abstract="Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de flujo continuo, segmentación por lotes y segmentación perimetral."
+>abstract="Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de streaming, segmentación por lotes y segmentación de Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
->title="Evaluación de flujos"
->abstract="La segmentación por transmisión es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evaluar eventos en tiempo casi real con segmentación de flujo continuo"
+>title="Evaluación de streaming"
+>abstract="La segmentación de streaming es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=es" text="Evaluar eventos en tiempo casi real con segmentación de streaming"
 
-Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de flujo continuo, segmentación por lotes y segmentación perimetral.
+Actualmente, Platform admite tres métodos de evaluación de segmentos: segmentación de streaming, segmentación por lotes y segmentación de Edge.
 
 ### Segmentación por transmisión {#streaming}
 
-La segmentación por transmisión es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario. Una vez que se ha creado y guardado un segmento, la definición del segmento se aplica a los datos entrantes a [!DNL Real-Time Customer Profile]. Las adiciones y eliminaciones de segmentos se procesan con regularidad, lo que garantiza que la audiencia de destino siga siendo relevante.
+La segmentación de streaming es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario. Una vez que se ha creado y guardado un segmento, la definición del segmento se aplica a los datos entrantes a [!DNL Real-Time Customer Profile]. Las adiciones y eliminaciones de segmentos se procesan con regularidad, lo que garantiza que la audiencia de destino siga siendo relevante.
 
 Para obtener más información sobre la segmentación de flujo continuo, lea la [documentación de segmentación por secuencias](./api/streaming-segmentation.md).
 
@@ -83,7 +83,7 @@ Los segmentos por lotes se evalúan automáticamente cada 24 horas. Si desea eva
 >id="platform_segments_evaluation_edge"
 >title="Evaluación de Edge"
 >abstract="La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en Experience Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente página."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Guía de la interfaz de usuario de segmentación de Edge"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=es" text="Guía de la interfaz de usuario de segmentación de Edge"
 
 La segmentación de Edge es la capacidad de evaluar segmentos en Platform de forma instantánea [en Experience Edge](../edge/home.md), habilitando casos de uso de personalización de la misma página y de la siguiente página.
 
