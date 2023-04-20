@@ -8,7 +8,7 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -40,7 +40,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Ingesta de origen"
->abstract="La vista de consumo de origen contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
+>abstract="La vista Ingesta de origen contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -69,7 +69,7 @@ Los gráficos están habilitados de forma predeterminada y puede deshabilitarlos
 
 | Ingesta de origen | Descripción |
 | ---------------- | ----------- |
-| [!UICONTROL Registros ingestados ] | El número total de registros introducidos. |
+| [!UICONTROL Registros ingeridos ] | El número total de registros introducidos. |
 | [!UICONTROL Error de registros] | El número total de registros que no se incorporaron debido a errores en los datos. |
 | [!UICONTROL Total de flujos de datos fallidos] | El número total de flujos de datos con un `failed` estado. |
 
