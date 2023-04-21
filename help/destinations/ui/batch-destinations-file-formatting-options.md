@@ -2,10 +2,10 @@
 description: Obtenga información sobre cómo configurar las opciones de formato de archivo al activar datos en destinos basados en archivos
 title: (Beta) Configurar opciones de formato de archivo para destinos basados en archivos
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
+source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 1%
+source-wordcount: '1214'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ Puede configurar varias opciones de formato de archivo para los archivos exporta
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## Configuración de formato de archivo {#file-configuration}
+## Configuración del formato de archivo para archivos CSV {#file-configuration}
 
 Para mostrar las opciones de formato del archivo, inicie el [conectar con destino](/help/destinations/ui/connect-destination.md) flujo de trabajo. Select **Tipo de datos: Segmentos** y **Tipo de archivo: CSV** para mostrar la configuración de formato de archivo disponible para la exportación `CSV` archivos.
 
@@ -41,7 +41,12 @@ Para mostrar las opciones de formato del archivo, inicie el [conectar con destin
 
 ### Delimitador {#delimiter}
 
-Define un separador para cada campo y valor. Entre las opciones disponibles se encuentran:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_delimiter"
+>title="Delimitador"
+>abstract="Utilice este control para establecer un separador para cada campo y valor. Vea la documentación para ver ejemplos de cada selección."
+
+Utilice este control para establecer un separador para cada campo y valor de los archivos CSV exportados. Entre las opciones disponibles se encuentran:
 
 * Dos puntos `(:)`
 * Coma `(,)`
@@ -49,29 +54,108 @@ Define un separador para cada campo y valor. Entre las opciones disponibles se e
 * Punto y coma `(;)`
 * Tabulación `(\t)`
 
-### Carácter de comillas
+#### Ejemplos
 
-Define un carácter único que se utiliza para escapar los valores entre comillas, donde el separador puede formar parte del valor.
+Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
 
-### Carácter de escape
+* Ejemplo de salida con **[!UICONTROL Dos puntos`(:)`]** seleccionados: `male:John:Doe`
+* Ejemplo de salida con **[!UICONTROL Coma`(,)`]** seleccionados: `male,John,Doe`
+* Ejemplo de salida con **[!UICONTROL Tubería`(|)`]** seleccionados: `male|John|Doe`
+* Ejemplo de salida con **[!UICONTROL Punto y coma`(;)`]** seleccionados: `male;John;Doe`
+* Ejemplo de salida con **[!UICONTROL Tabulación`(\t)`]** seleccionados: `male \t John \t Doe`
 
-Define un carácter único que se utiliza para las comillas de escape dentro de un valor ya citado.
+### Carácter de comillas {#quote-character}
 
-### Salida de valor vacío
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_quoteCharacter"
+>title="Carácter de comillas"
+>abstract="Utilice esta opción si desea eliminar las comillas dobles de las cadenas exportadas. Vea la documentación para ver ejemplos de cada selección."
 
-Define la representación de cadena de un valor vacío.
+Utilice esta opción si desea eliminar las comillas dobles de las cadenas exportadas. Entre las opciones disponibles se encuentran:
 
-### Salida de valor nulo
+* **[!UICONTROL Carácter nulo (\0000)]**. Utilice esta opción para eliminar las comillas dobles de los archivos CSV exportados.
+* **[!UICONTROL Comillas dobles (&quot;)]**. Utilice esta opción para mantener comillas dobles en los archivos CSV exportados.
 
-Define la representación de cadena de un valor nulo dentro de los archivos exportados.
+#### Ejemplos
 
-Ejemplo de salida con **[!UICONTROL null]** seleccionados: `male,NULL,TestLastName`
-Ejemplo de salida con **&quot;&quot;** seleccionados: `male,"",TestLastName`
-Ejemplo de salida con **[!UICONTROL Cadena vacía]** seleccionados: `male,,TestLastName`
+Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
 
-### Formato de compresión
+* Ejemplo de salida con **[!UICONTROL Carácter nulo (\0000)]** seleccionados: `Test,John,LastName`
+* Ejemplo de salida con **[!UICONTROL Comillas dobles (&quot;)]** seleccionados: `"Test","John","LastName"`
 
-Define qué códec de compresión se utilizará al guardar datos en un archivo. Las opciones compatibles son GZIP y NONE .
+### Carácter de escape {#escape-character}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_escapeCharacter"
+>title="Carácter de escape"
+>abstract="Define un carácter único que se utiliza para las comillas de escape dentro de un valor ya citado. Vea la documentación para ver ejemplos de cada selección."
+
+Utilice esta opción para definir un carácter único para comillas de escape dentro de un valor ya citado. Por ejemplo, esta opción es útil cuando tiene una cadena entre comillas dobles donde parte de la cadena ya está entre comillas dobles. Esta opción determina con qué carácter se reemplazarán las comillas dobles interiores. Entre las opciones disponibles se encuentran:
+
+* Barra invertida `(\)`
+* Comilla simple `(')`
+
+#### Ejemplos
+
+Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
+
+* Ejemplo de salida con **[!UICONTROL Barra invertida`(\)`]** seleccionados: `"Test,\"John\",LastName"`
+* Ejemplo de salida con **[!UICONTROL Comilla simple`(')`]** seleccionados: `"Test,'"John'",LastName"`
+
+### Salida de valor vacío {#empty-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_emptyValueOutput"
+>title="Salida de valor vacío"
+>abstract="Utilice esta opción para establecer cómo se deben representar los valores vacíos en los archivos CSV exportados. Vea la documentación para ver ejemplos de cada selección."
+
+Utilice este control para establecer la representación de cadena de un valor vacío. Esta opción determina cómo se representan los valores vacíos en los archivos CSV exportados. Entre las opciones disponibles se encuentran:
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL Cadena vacía]**
+
+#### Ejemplos
+
+Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
+
+* Ejemplo de salida con **[!UICONTROL null]** seleccionados: `male,NULL,TestLastName`. En este caso, el Experience Platform transforma el valor vacío en un valor nulo.
+* Ejemplo de salida con **&quot;&quot;** seleccionados: `male,"",TestLastName`. En este caso, el Experience Platform transforma el valor vacío en un par de comillas dobles.
+* Ejemplo de salida con **[!UICONTROL Cadena vacía]** seleccionados: `male,,TestLastName`. En este caso, el Experience Platform mantiene el valor vacío y lo exporta tal cual (sin comillas dobles).
+
+>[!TIP]
+>
+>La diferencia entre el resultado del valor vacío y el resultado del valor nulo en la sección siguiente es que un valor vacío tiene un valor real que está vacío. El valor NULL no tiene ningún valor. Considere el valor vacío como un vaso vacío en la tabla y el valor nulo como si no tuviera el vidrio en la mesa.
+
+### Salida de valor nulo {#null-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_nullValueOutput"
+>title="Salida de valor nulo"
+>abstract="Utilice este control para establecer la representación de cadena de un valor nulo dentro de los archivos exportados. Vea la documentación para ver ejemplos de cada selección."
+
+Utilice este control para establecer la representación de cadena de un valor nulo dentro de los archivos exportados. Esta opción determina cómo se representan los valores nulos en los archivos CSV exportados. Entre las opciones disponibles se encuentran:
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL Cadena vacía]**
+
+#### Ejemplos
+
+Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
+
+* Ejemplo de salida con **[!UICONTROL null]** seleccionados: `male,NULL,TestLastName`. En este caso, no se produce ninguna transformación y el archivo CSV contiene el valor nulo.
+* Ejemplo de salida con **&quot;&quot;** seleccionados: `male,"",TestLastName`. En este caso, Experience Platform reemplaza el valor nulo con comillas dobles alrededor de una cadena vacía.
+* Ejemplo de salida con **[!UICONTROL Cadena vacía]** seleccionados: `male,,TestLastName`. En este caso, Experience Platform reemplaza el valor nulo por una cadena vacía (sin comillas dobles).
+
+### Formato de compresión {#compression-format}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_compressionFormat"
+>title="Formato de compresión"
+>abstract="Define qué tipo de compresión se utilizará al guardar datos en un archivo. Las opciones compatibles son GZIP y NONE . Vea la documentación para ver ejemplos de cada selección."
+
+Define qué tipo de compresión se utilizará al guardar datos en un archivo. Las opciones compatibles son GZIP y NONE . Esta opción determina si se exportarán o no archivos comprimidos.
 
 ### Codificación
 
