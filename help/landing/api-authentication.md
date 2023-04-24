@@ -5,9 +5,9 @@ title: API de Experience Platform de autenticación y acceso
 type: Tutorial
 description: Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1581'
 ht-degree: 8%
 
 ---
@@ -198,8 +198,70 @@ Si su respuesta es similar a la que se muestra a continuación, sus credenciales
 
 [Postman](https://www.postman.com/) es una herramienta popular que permite a los desarrolladores explorar y probar las API de RESTful. Esta [Publicación media](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describe cómo configurar Postman para que realice automáticamente la autenticación JWT y la utilice para consumir las API de Platform.
 
+## Control de acceso de programadores y API con permisos de Experience Platform
+
+>[!NOTE]
+>
+>Solo los administradores del sistema pueden ver y administrar las credenciales de API en Permisos.
+
+Antes de crear integraciones en Adobe Developer Console, la cuenta debe tener permisos de desarrollador y usuario para un perfil de producto de Experience Platform en Adobe Admin Console.
+
+### Agregar desarrolladores al perfil de producto
+
+Vaya a [[!DNL Admin Console]](https://adminconsole.adobe.com/) e inicie sesión con su Adobe ID.
+
+Select **[!UICONTROL Productos]** y, a continuación, seleccione **[!UICONTROL Adobe Experience Platform]** de la lista de productos.
+
+![Lista de productos en el Admin Console](././images/api-authentication/products.png)
+
+En el **[!UICONTROL Perfiles de producto]** , seleccione **[!UICONTROL AEP-Default-All-Users]**. También puede utilizar la barra de búsqueda para buscar el perfil del producto introduciendo el nombre.
+
+![Buscar el perfil de producto](././images/api-authentication/select-product-profile.png)
+
+Seleccione el **[!UICONTROL Desarrolladores]** y, a continuación, seleccione **[!UICONTROL Agregar desarrollador]**.
+
+![Agregar desarrollador desde la ficha Desarrolladores](././images/api-authentication/add-developer1.png)
+
+Introduzca el **[!UICONTROL Correo electrónico o nombre de usuario]**. Un [!UICONTROL Correo electrónico o nombre de usuario] mostrará los detalles del desarrollador. Seleccione **[!UICONTROL Guardar]**.
+
+![Agregar desarrollador con su correo electrónico o nombre de usuario](././images/api-authentication/add-developer-email.png)
+
+El desarrollador se ha agregado correctamente y aparece en el informe [!UICONTROL Desarrolladores] pestaña .
+
+![Desarrolladores enumerados en la ficha Desarrolladores](././images/api-authentication/developer-added.png)
+
+### Configuración de una API
+
+Un desarrollador puede agregar y configurar una API dentro de un proyecto en la consola de Adobe Developer.
+
+Seleccione el proyecto y, a continuación, seleccione **[!UICONTROL Añadir API]**.
+
+![Añadir API a un proyecto](././images/api-authentication/add-api-project.png)
+
+En el **[!UICONTROL Añadir una API]** cuadro de diálogo seleccionar **[!UICONTROL Adobe Experience Platform]** y, a continuación, seleccione **[!UICONTROL API de Experience Platform]**.
+
+![Añadir una API en el Experience Platform](././images/api-authentication/add-api-platform.png)
+
+En el **[!UICONTROL Configuración de API]** pantalla, seleccionar **[!UICONTROL AEP-Default-All-Users]**.
+
+### Asignación de API a una función
+
+Un administrador del sistema puede asignar API a funciones en la interfaz de usuario del Experience Platform.
+
+Select **[!UICONTROL Permisos]** y la función a la que desea añadir la API. Seleccione el **[!UICONTROL Credenciales de API]** y, a continuación, seleccione **[!UICONTROL Agregar credenciales de API]**.
+
+![ficha Credenciales de API en la función seleccionada](././images/api-authentication/api-credentials.png)
+
+Seleccione la API que desee añadir a la función y, a continuación, seleccione **[!UICONTROL Guardar]**.
+
+![Lista de API disponibles para selección](././images/api-authentication/select-api.png)
+
+Volverá a la [!UICONTROL Credenciales de API] , donde se muestra la API recién añadida.
+
+![Ficha de credenciales de API con la API recién añadida](././images/api-authentication/api-credentials-with-added-api.png)
+
 ## Pasos siguientes
 
 Al leer este documento, ha recopilado y probado correctamente sus credenciales de acceso para las API de Platform. Ahora puede seguir el ejemplo de llamadas de API que se proporcionan a través de la [documentación](../landing/documentation/overview.md).
 
-Además de los valores de autenticación recopilados en este tutorial, muchas API de plataforma también requieren una `{SANDBOX_NAME}` que se proporcionará como encabezado. Consulte la [información general sobre los entornos limitados](../sandboxes/home.md) para obtener más información.
+Además de los valores de autenticación recopilados en este tutorial, muchas API de plataforma también requieren una `{SANDBOX_NAME}` que se proporcionará como encabezado. Consulte la [información general sobre las zonas protegidas](../sandboxes/home.md) para obtener más detalles.
