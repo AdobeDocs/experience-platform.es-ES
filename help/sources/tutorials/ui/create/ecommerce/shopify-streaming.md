@@ -1,10 +1,9 @@
 ---
 title: Crear Una Conexión De Flujo De Datos Y Una Conexión De Flujo De Flujo De Navegación Shopify En La Interfaz De Usuario
 description: Aprenda a crear una conexión de origen de Shopify Streaming y un flujo de datos mediante la interfaz de usuario de Platform
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -95,4 +94,3 @@ Para recuperar el extremo de flujo continuo, vaya a la [!UICONTROL Actividad de 
 ## Pasos siguientes
 
 Siguiendo este tutorial, ha establecido una conexión de origen y un flujo de datos para su [!DNL Shopify Streaming] cuenta. Para obtener instrucciones sobre cómo conectar su [!DNL Shopify Streaming] cuenta con la API de , lea el tutorial en [creación de una conexión de origen y flujo de datos a flujo [!DNL Shopify] datos mediante la API de servicio de flujo](../../../api/create/ecommerce/shopify-streaming.md).
-

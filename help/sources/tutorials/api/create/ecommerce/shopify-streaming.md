@@ -1,10 +1,9 @@
 ---
 title: Crear una conexión de origen de flujo y un flujo de datos para obtener datos de shopify mediante la API de servicio de flujo
 description: Aprenda a crear una conexión de origen de flujo continuo y un flujo de datos para los datos de Shopify mediante la API de servicio de flujo.
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 2%

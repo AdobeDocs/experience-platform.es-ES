@@ -1,38 +1,34 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Nube de servicios de Oracle;Nube de servicios de oracle
-title: Información general sobre el conector de origen de Oracle Service Cloud
+keywords: Experience Platform;inicio;temas populares;nube de servicio de Oracle;nube de servicio de oracle
+title: Información general sobre el conector de origen de nube de oracle Service
 description: Obtenga información sobre cómo conectar Oracle Service Cloud a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
-# (Beta) Fuente de nube de Oracle Service
+# Origen de nube de servicio de oracle
 
->[!NOTE]
->
->La fuente de Oracle Service Cloud está en la versión beta. Consulte la [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
-
-Experience Platform proporciona asistencia para la ingesta de datos desde un sistema de éxito de clientes de terceros. La compatibilidad con proveedores de éxito de clientes incluye Oracle Service Cloud.
+Experience Platform proporciona asistencia para la ingesta de datos desde un sistema de éxito de clientes de terceros. La compatibilidad con los proveedores de éxito de los clientes incluye Oracle Service Cloud.
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
-La siguiente documentación proporciona información sobre cómo conectar Oracle Service Cloud a Platform mediante API o la interfaz de usuario de:
+La siguiente documentación proporciona información sobre cómo conectar Oracle Service Cloud a Platform mediante API o la interfaz de usuario:
 
 ## Conexión de Oracle Service Cloud a Platform mediante API
 
-- [Cree una conexión base de Oracle Service Cloud mediante la API de Flow Service](../../tutorials/api/create/customer-success/oracle-service-cloud.md)
-- [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
-- [Crear un flujo de datos para una fuente de éxito de clientes mediante la API de Flow Service](../../tutorials/api/collect/customer-success.md)
+- [Creación de una conexión base de nube de servicio de Oracle mediante la API de servicio de flujo](../../tutorials/api/create/customer-success/oracle-service-cloud.md)
+- [Exploración de tablas de datos mediante la API de servicio de flujo](../../tutorials/api/explore/tabular.md)
+- [Crear un flujo de datos para un origen de éxito de cliente mediante la API de servicio de flujo](../../tutorials/api/collect/customer-success.md)
 
 ## Conexión de Oracle Service Cloud a Platform mediante la interfaz de usuario
 
-- [Crear una conexión de origen de nube de Oracle Service en la interfaz de usuario](../../tutorials/ui/create/customer-success/oracle-service-cloud.md)
-- [Crear un flujo de datos para una conexión de origen de éxito del cliente en la IU](../../tutorials/ui/dataflow/customer-success.md)
+- [Creación de una conexión de origen de nube de Oracle Service en la interfaz de usuario](../../tutorials/ui/create/customer-success/oracle-service-cloud.md)
+- [Crear un flujo de datos para una conexión de origen de éxito de cliente en la interfaz de usuario](../../tutorials/ui/dataflow/customer-success.md)

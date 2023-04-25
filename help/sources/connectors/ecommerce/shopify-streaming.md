@@ -1,10 +1,9 @@
 ---
 title: Origen de flujo de Shopify
 description: Aprenda a crear una conexión de origen y un flujo de datos para ingerir datos de flujo continuo de la instancia de Shopify a Adobe Experience Platform
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 97e6cda8fa7a40542de5a34a9f4dfcaeb715edbf
+badge: Beta
+exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 2%

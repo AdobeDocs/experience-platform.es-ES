@@ -2,9 +2,9 @@
 title: Conector de origen de Adobe Analytics para datos de grupos de informes
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 35298fc6b3e272c1b7b14cfa17713d18427ba2ce
+source-git-commit: 83ce7d46e4e64fbe961c964ed5a17ec12a7ec15f
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1112'
 ht-degree: 7%
 
 ---
@@ -54,7 +54,12 @@ La latencia esperada para los datos de Analytics en la plataforma se describe en
 | Nuevos datos en Data Lake | &lt; 90 minutos |
 | Relleno de menos de 10 mil millones de eventos | &lt; 4 semanas |
 
-Los rellenos de Analytics tienen un valor predeterminado de 13 meses. El límite de 10.000 millones de acontecimientos mencionado en el cuadro anterior es estrictamente con respecto a la latencia esperada.
+El relleno de Analytics para entornos limitados de producción tiene un valor predeterminado de 13 meses. Para los datos de Analytics en entornos limitados que no sean de producción, el relleno se establece en tres meses. El límite de 10.000 millones de acontecimientos mencionado en el cuadro anterior es estrictamente con respecto a la latencia esperada.
+
+Cuando se crea un flujo de datos de origen de Analytics en un simulador para pruebas de producción, se crean dos flujos de datos:
+
+* Flujo de datos que realiza un relleno de 13 meses de datos del grupo de informes históricos en el lago de datos. Este flujo de datos finaliza cuando se completa el relleno.
+* Flujo de datos que envía datos en vivo a un lago de datos y a [!DNL Real-Time Customer Profile]. Este flujo de datos se ejecuta continuamente.
 
 >[!NOTE]
 >
