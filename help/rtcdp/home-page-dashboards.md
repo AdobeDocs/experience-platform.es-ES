@@ -2,20 +2,15 @@
 keywords: información general sobre las métricas; información general sobre las métricas de rtcdp
 title: Página principal de Real-time Customer Data Platform y tableros
 description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
-badge: "Beta"
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: cc6d962e1c4a9afe1b608dfa06e9812b33dc7e6d
+source-git-commit: 8ea657e379248616d3140bc0a7b0c25a918bc857
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '802'
 ht-degree: 1%
 
 ---
 
 # [!DNL Real-Time Customer Data Platform] página principal
-
->[!NOTE]
->
->La variable [!DNL Real-Time Customer Data Platform] la página de inicio está en versión beta. Sus características y documentación están sujetas a cambios.
 
 La página de inicio de Adobe Real-time Customer Data Platform (Real-Time CDP) es la primera página que aparece después de iniciar sesión en Real-Time CDP.
 
