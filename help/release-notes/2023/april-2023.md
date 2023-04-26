@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, abril de 2023
 description: Notas de la versión de abril de 2023 para Adobe Experience Platform.
-source-git-commit: 9f50ca4b2a4c576af5ce8ee5c085a7603fed2560
+source-git-commit: 938b4ba7affadc7ad0eca086d7cc2c9ce1a54a83
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 6%
+source-wordcount: '780'
+ht-degree: 5%
 
 ---
 
@@ -14,8 +14,25 @@ ht-degree: 6%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [Tableros](#dashboards)
 - [Preparación de datos](#data-prep)
+- [Modelo de datos de experiencia](#xdm)
+- [Perfil del cliente en tiempo real](#profile)
 - [Fuentes](#sources)
+
+## Tableros {#dashboards}
+
+Adobe Experience Platform proporciona varios tableros a través de los cuales puede ver perspectivas importantes sobre los datos de su organización, tal como se capturan durante las instantáneas diarias.
+
+**Funciones nuevas o actualizadas** {#dashboards-new-updated-features}
+
+| Función | Descripción |
+| --- | --- |
+| Tableros definidos por el usuario | Ahora puede **filtrar datos históricos** desde la información del widget, y utilice datos recientes o un período de análisis personalizado.<br>Ahora también puede **duplicar las utilidades existentes**. Al personalizar un duplicado y editar sus atributos, puede evitar reiniciar desde el principio al crear un nuevo widget único. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre los tableros, incluido cómo conceder permisos de acceso y crear utilidades personalizadas, comience por leer [información general sobre los paneles](../../dashboards/home.md).
 
 ## Preparación de datos {#data-prep}
 
@@ -31,6 +48,30 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 {style="table-layout:auto"}
 
 Para obtener más información sobre la preparación de datos, lea la [Resumen de la preparación de datos](../../data-prep/home.md).
+
+## Modelo de datos de experiencia (XDM) {#xdm}
+
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se introducen en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Mostrar nombres, alternador | El Editor de esquemas ahora proporciona un interruptor para cambiar entre los nombres de campo originales y los nombres para mostrar más legibles. Esta flexibilidad permite mejorar la capacidad de detección de campos y la edición de los esquemas. Los nombres para mostrar de los grupos de campos estándar se generan a partir del sistema, pero también se pueden personalizar a través de la interfaz de usuario si es necesario. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre XDM en Platform, lea la [Información general del sistema XDM](../../xdm/home.md).
+
+## Perfil del cliente en tiempo real {#profile}
+
+Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de los clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Caducidad de datos de perfil seudónimos | Ya está disponible la caducidad de los datos del perfil seudónimos. Esta versión eliminará continuamente perfiles seudónimos antiguos de la instancia de Experience Platform una vez que se haya activado. Para obtener más información sobre esta función y los perfiles seudónimos, lea la [Guía de caducidad de datos del perfil seudónimo](../../profile/pseudonymous-profiles.md). |
 
 ## Fuentes {#sources}
 
