@@ -4,9 +4,9 @@ title: Exportar esquemas XDM en la interfaz de usuario
 description: Obtenga información sobre cómo exportar un esquema existente a un entorno limitado u organización diferente en la interfaz de usuario de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ Para hacer frente a esta necesidad, la variable [!UICONTROL Esquemas] El espacio
 
 Aunque la interfaz de usuario de Platform le permite exportar recursos XDM, debe utilizar la API del Registro de esquemas para importar esos recursos en otros entornos limitados u organizaciones para completar el flujo de trabajo. Consulte la guía de [introducción a la API del Registro de esquemas](../api/getting-started.md) para obtener información importante sobre los encabezados de autenticación necesarios antes de seguir esta guía.
 
-## Generar una carga útil de exportación
+## Generar una carga útil de exportación {#generate-export-payload}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. Dentro de [!UICONTROL Esquemas] espacio de trabajo, busque el esquema que desea exportar y ábralo en el [!DNL Schema Editor].
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. Dentro de [!UICONTROL Esquemas] en el espacio de trabajo, seleccione la fila del esquema que desea exportar para mostrar los detalles del esquema en la barra lateral derecha.
 
 >[!TIP]
 >
 >Consulte la guía de [exploración de recursos XDM](./explore.md) para obtener más información sobre cómo encontrar el recurso XDM que está buscando.
 
-Una vez que haya abierto el esquema, seleccione la opción **[!UICONTROL Copiar JSON]** icono (![Icono Copiar](../images/ui/export/icon.png)) en la parte superior derecha del lienzo.
+A continuación, seleccione la **[!UICONTROL Copiar JSON]** icono (![Icono Copiar](../images/ui/export/icon.png)) desde las opciones disponibles.
 
-![](../images/ui/export/copy-json.png)
+![El espacio de trabajo Esquemas con una fila de esquema y [!UICONTROL Copiar en JSON] resaltado.](../images/ui/export/copy-json.png)
 
 Esto copia una carga útil JSON en el portapapeles, generada según la estructura del esquema. Para el[!DNL Loyalty Members]&quot; esquema mostrado arriba, se genera el siguiente JSON:
 
