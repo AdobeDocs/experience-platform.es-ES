@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, abril de 2023
 description: Notas de la versión de abril de 2023 para Adobe Experience Platform.
-source-git-commit: 938b4ba7affadc7ad0eca086d7cc2c9ce1a54a83
+source-git-commit: f8ef0c6fb949cb5c9071e84d88a9151a5558848f
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 5%
+source-wordcount: '1275'
+ht-degree: 4%
 
 ---
 
@@ -16,6 +16,8 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [Tableros](#dashboards)
 - [Preparación de datos](#data-prep)
+- [Recopilación de datos](#data-collection)
+- [Destinos](#destinations)
 - [Modelo de datos de experiencia](#xdm)
 - [Perfil del cliente en tiempo real](#profile)
 - [Fuentes](#sources)
@@ -48,6 +50,60 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 {style="table-layout:auto"}
 
 Para obtener más información sobre la preparación de datos, lea la [Resumen de la preparación de datos](../../data-prep/home.md).
+
+## Recopilación de datos {#data-collection}
+
+Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente en el lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Confusión de direcciones IP para conjuntos de datos | Ahora puede definir opciones de confusión de IP a nivel de conjunto de datos parciales o completas en la sección [interfaz de configuración del almacén de datos](../../edge/datastreams/configure.md). <br><br>La configuración de confusión de IP a nivel de almacén de datos tiene prioridad sobre cualquier confusión de IP configurada en Adobe Target y Audience Manager. <br><br>Los datos enviados a Adobe Analytics no se ven afectados por el nivel del conjunto de datos [!UICONTROL Confusión de IP] configuración. Actualmente, Adobe Analytics recibe direcciones IP sin confusión. Para que Analytics reciba direcciones IP ofuscadas, debe configurar la confusión de IP por separado en Adobe Analytics. Este comportamiento se actualizará en futuras versiones.<br><br> Para obtener más información sobre la confusión de IP e instrucciones sobre cómo configurarla, consulte la [documentación de configuración de datastream](../../edge/datastreams/configure.md#advanced-options). |
+| Anulaciones de configuración del almacén de datos | Ahora puede definir opciones de configuración adicionales para conjuntos de datos, que puede utilizar para anular configuraciones específicas, como conjuntos de datos de evento, tokens de propiedad de Target, contenedores de sincronización de ID y grupos de informes de Analytics. <br><br>La anulación de las configuraciones del conjunto de datos es un proceso de dos pasos. En primer lugar, debe definir las anulaciones de configuración del conjunto de datos en la interfaz de usuario de los conjuntos de datos. A continuación, debe enviar las anulaciones a la red perimetral mediante un comando Web SDK. |
+
+{style="table-layout:auto"}
+
+## Destinos {#destinations}
+
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
+
+**Nuevos destinos** {#new-destinations}
+
+| Destino | Descripción |
+| ----------- | ----------- |
+| [[!DNL Salesforce Marketing Cloud Account Engagement] connection](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Utilice el destino Participación de cuenta de Marketing Cloud de Salesforce (anteriormente conocido como Pardot) para capturar, rastrear, puntuar y clasificar posibles clientes. Utilice este destino para casos de uso B2B que involucren múltiples departamentos y responsables de la toma de decisiones que requieren ciclos de decisión y ventas más largos. |
+
+{style="table-layout:auto"}
+
+**Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
+
+| Funcionalidad | Descripción |
+| ----------- | ----------- |
+| Supervisión de flujo de datos para [!DNL Custom Personalization] y [!DNL Adobe Commerce] destinos | <p> Ahora puede ver las métricas de activación para la variable [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md) y [Personalización Personalizada Con Atributos](../../destinations/catalog/personalization/custom-personalization.md) conexiones. </p> <p>![Imagen de Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Métricas de Adobe Commerce"){width="100" zoomable="yes"}</p>  Consulte [Monitorización de flujos de datos en el espacio de trabajo Destinations](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) para obtener más información. |
+| Nuevo **[!UICONTROL Anexar ID de segmento al nombre del segmento]** para la variable [!DNL Google Ad Manager] y [!DNL Google Ad Manager 360] destinos | Ahora puede tener el nombre del segmento en [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) y [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluya el ID de segmento de Experience Platform, de esta manera: `Segment Name (Segment ID)`. |
+
+{style="table-layout:auto"}
+
+<!--
+
+| New **[!UICONTROL Append segment ID to segment name]** field for the [!DNL Google Ad Manager] and [!DNL Google Ad Manager 360] destinations | You can now have the segment name in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) and [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`. |
+| Scheduled audience backfills | <p>For the [!DNL Google Display & Video 360] destination, the activation of audience backfills to the destination is scheduled to occur 24-48 hours after a segment is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and will improve match rates between Real-time CDP and [!DNL Google Display & Video 360].</p> <p>Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.</p> |
+
+-->
+
+
+**Correcciones y mejoras** {#destinations-fixes-and-enhancements}
+
+- Se ha corregido un problema en la variable **Identidades excluidas** métricas de informes para exportaciones de destino basadas en archivos. Los clientes recibían todos los ID exportados desde la exportación activada según lo esperado. Sin embargo, la variable **Identidades excluidas** la métrica de creación de informes en la interfaz de usuario mostraba incorrectamente un número elevado de identidades excluidas debido a un recuento incorrecto de identidades que no se suponía que nunca se exportarían. (PLAT-149774)
+- Se ha corregido un problema en el paso Programación del flujo de trabajo de activación. En el caso de los destinos que requieren un ID de asignación, los clientes no podían agregar un ID de asignación para los segmentos añadidos a conexiones de destino existentes. (PLAT-148808)
+
+<!--
+- We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
+
+-->
+
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
