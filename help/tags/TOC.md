@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
+source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '983'
 ht-degree: 37%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 37%
          * [Información general](./extensions/client/product-string/overview.md)
          * [Notas de la versión](./extensions/client/product-string/release-notes.md)
       * [Generador de cadenas de producto de Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)
+      * [Adobe Analytics mediante el SDK web de Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Información general](./extensions/client/audience-manager/overview.md)
       * Capa de datos del cliente de Adobe {#client-data-layer}
