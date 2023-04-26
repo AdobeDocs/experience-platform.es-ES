@@ -1,8 +1,8 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión de marzo de 2023 para Adobe Experience Platform.
+description: Notas de la versión de abril de 2023 para Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 938b4ba7affadc7ad0eca086d7cc2c9ce1a54a83
+source-git-commit: e29bff2b8c576f92d239bb6c855710142df8db57
 workflow-type: tm+mt
 source-wordcount: '779'
 ht-degree: 6%
