@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 009475c8bab3eb29a5d8a97763967d49ccf0999d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1517'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 3%
 
 Este documento cubre las notas de la versión del SDK web de Adobe Experience Platform.
 Para ver las últimas notas de la versión de la extensión de etiqueta del SDK web, consulte la [Notas de la versión de la extensión de etiqueta del SDK web](extension/web-sdk-ext-release-notes.md).
+
+## Versión 2.16.0: 25 de abril de 2023
+
+**Nuevas funciones**
+
+* Se ha agregado compatibilidad con las anulaciones de configuración del conjunto de datos.
 
 ## Versión 2.15.0: 30 de marzo de 2023
 
