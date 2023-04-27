@@ -3,7 +3,7 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Para ver las últimas notas de la versión de la extensión de etiqueta del SDK 
 
 **Nuevas funciones**
 
-* Se ha agregado compatibilidad con las anulaciones de configuración del conjunto de datos.
+* Se ha agregado compatibilidad con [anulaciones de la configuración de datastream](datastreams/overrides.md).
 
 ## Versión 2.15.0: 30 de marzo de 2023
 

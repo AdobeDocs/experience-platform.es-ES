@@ -2,7 +2,7 @@
 title: Notas de la versión de la extensión del SDK web de Adobe Experience Platform
 description: Extensión de etiquetas de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 38%
@@ -18,7 +18,7 @@ Este documento cubre las notas de la versión de la extensión de etiqueta del S
 
 **Nuevas funciones**
 
-* Se ha agregado compatibilidad con las anulaciones de configuración del conjunto de datos.
+* Se ha agregado compatibilidad con [anulaciones de la configuración de datastream](../datastreams/overrides.md).
 * Agregue un aviso de desaprobación al `datasetId` en la `sendEvent` comando.
 
 **Correcciones y mejoras**
