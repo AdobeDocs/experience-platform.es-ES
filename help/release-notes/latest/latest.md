@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de abril de 2023 para Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1296'
 ht-degree: 4%
 
 ---
@@ -82,7 +82,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
 | Supervisión de flujo de datos para [!DNL Custom Personalization] y [!DNL Adobe Commerce] destinos | <p> Ahora puede ver las métricas de activación para la variable [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md) y [Personalización Personalizada Con Atributos](../../destinations/catalog/personalization/custom-personalization.md) conexiones. </p> <p>![Imagen de Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Métricas de Adobe Commerce"){width="100" zoomable="yes"}</p>  Consulte [Monitorización de flujos de datos en el espacio de trabajo Destinations](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) para obtener más información. |
-| Nuevo **[!UICONTROL Anexar ID de segmento al nombre del segmento]** para la variable [!DNL Google Ad Manager] y [!DNL Google Ad Manager 360] destinos | Ahora puede tener el nombre del segmento en [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) y [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluya el ID de segmento de Experience Platform, de esta manera: `Segment Name (Segment ID)`. |
+| Nuevo **[!UICONTROL Anexar ID de segmento al nombre del segmento]** para la variable [!DNL Google Ad Manager] y [!DNL Google Ad Manager 360] destinos | <p>Ahora puede tener el nombre del segmento en [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) y [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluya el ID de segmento de Experience Platform, de esta manera: `Segment Name (Segment ID)`.</p><p>![Anexar imagen de ID de segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nuevo campo Anexar ID de segmento al nombre del segmento "){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 **Correcciones y mejoras** {#destinations-fixes-and-enhancements}
 
 - Se ha corregido un problema en la variable **Identidades excluidas** métricas de informes para exportaciones de destino basadas en archivos. Los clientes recibían todos los ID exportados desde la exportación activada según lo esperado. Sin embargo, la variable **Identidades excluidas** la métrica de creación de informes en la interfaz de usuario mostraba incorrectamente un número elevado de identidades excluidas debido a un recuento incorrecto de identidades que no se suponía que nunca se exportarían. (PLAT-149774)
-- Se ha corregido un problema en el paso Programación del flujo de trabajo de activación. En el caso de los destinos que requieren un ID de asignación, los clientes no podían agregar un ID de asignación para los segmentos añadidos a conexiones de destino existentes. (PLAT-148808)
+- Se ha corregido un problema en la variable **Programación** del flujo de trabajo de activación. En el caso de los destinos que requieren un ID de asignación, los clientes no podían agregar un ID de asignación para los segmentos añadidos a conexiones de destino existentes. (PLAT-148808)
 
 <!--
 - We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
