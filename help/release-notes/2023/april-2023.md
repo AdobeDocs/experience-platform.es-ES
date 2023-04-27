@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform, abril de 2023
 description: Notas de la versión de abril de 2023 para Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
+source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
 workflow-type: tm+mt
-source-wordcount: '1373'
+source-wordcount: '1422'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform proporciona varios tableros a través de los cuales pu
 
 | Función | Descripción |
 | --- | --- |
-| Tableros definidos por el usuario | Ahora puede **filtrar datos históricos** desde la información del widget, y utilice datos recientes o un período de análisis personalizado.<br>Ahora también puede **duplicar las utilidades existentes**. Al personalizar un duplicado y editar sus atributos, puede evitar reiniciar desde el principio al crear un nuevo widget único. |
+| Tableros definidos por el usuario | Ahora puede **filtrar datos históricos** desde la información del widget, y utilice datos recientes o un período de análisis personalizado. Consulte la [guía de paneles definidos por el usuario](../../dashboards/user-defined-dashboards.md#filter-historical-data) para obtener más información.<br>Ahora también puede **duplicar las utilidades existentes**. Al personalizar un duplicado y editar sus atributos, puede evitar reiniciar desde el principio al crear un nuevo widget único. Lea el [guía de duplicación de utilidades](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) para obtener más información. |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Función | Descripción |
 | --- | --- |
-| Mostrar nombres, alternador | El Editor de esquemas ahora proporciona un interruptor para cambiar entre los nombres de campo originales y los nombres para mostrar más legibles. Esta flexibilidad permite mejorar la capacidad de detección de campos y la edición de los esquemas. Los nombres para mostrar de los grupos de campos estándar se generan a partir del sistema, pero también se pueden personalizar a través de la interfaz de usuario si es necesario. |
+| Mostrar nombres, alternador | El Editor de esquemas ahora proporciona un interruptor para cambiar entre los nombres de campo originales y los nombres para mostrar más legibles.<br>![El Editor de esquemas con el nombre para mostrar resaltado.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Alternador de nombre para mostrar del Editor de esquemas"){width="100" zoomable="yes"}<br>Esta flexibilidad permite mejorar la capacidad de detección de campos y la edición de los esquemas. Los nombres para mostrar de los grupos de campos estándar se generan a partir del sistema, pero también se pueden personalizar a través de la interfaz de usuario si es necesario. Lea el [documentación de alternancia de nombre para mostrar](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) para obtener más información. |
 
 {style="table-layout:auto"}
 
