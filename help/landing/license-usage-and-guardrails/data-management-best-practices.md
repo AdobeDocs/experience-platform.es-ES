@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;administración de datos;de
 title: Prácticas recomendadas del derecho de licencia de gestión de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
+source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2169'
 ht-degree: 2%
 
 ---
@@ -80,7 +80,7 @@ Hay dos escenarios centrales a tener en cuenta al garantizar que el uso de los d
 
 ### ¿Qué datos se van a incluir en Platform?
 
-Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL data lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir datos históricos en la variable [!DNL data lake], pero no en el almacén de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
+Los datos se pueden ingerir en uno o varios sistemas de Platform, concretamente la variable [!DNL data lake] o el Almacenamiento de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee incluir los datos históricos en la variable [!DNL data lake], pero no en el almacén de perfiles. Puede seleccionar qué datos desea enviar al Almacenamiento de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
 
 >[!NOTE]
 >
@@ -122,8 +122,6 @@ El Almacenamiento de perfiles está compuesto por los siguientes componentes:
 
 {style="table-layout:auto"}
 
-
-
 #### Informes de composición del almacén de perfiles
 
 Hay varios informes disponibles para ayudarle a comprender la composición del almacén de perfiles. Estos informes le ayudan a tomar decisiones informadas sobre cómo y dónde configurar las caducidades de los eventos de experiencia para optimizar mejor el uso de las licencias:
@@ -132,6 +130,10 @@ Hay varios informes disponibles para ayudarle a comprender la composición del a
 * **API de informe de superposición de identidad**: Expone los espacios de nombres de identidad que contribuyen en mayor medida a la audiencia direccionable. Consulte el tutorial en [generación del informe de superposición de identidad](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) para obtener más información.
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### Pseudónimos Caducidad de datos de perfil {#pseudonymous-profile-expirations}
+
+Esta capacidad le permite eliminar automáticamente perfiles seudónimos antiguos del Almacenamiento de perfiles. Para obtener más información sobre esta función, lea la [Resumen de caducidad de datos del perfil seudónimo](../../profile/pseudonymous-profiles.md).
 
 #### Caducidad de eventos de experiencia {#event-expirations}
 
@@ -144,7 +146,7 @@ A continuación se ofrece una lista de algunas prácticas recomendadas que puede
 * Utilice la variable [panel de uso de licencias](../../dashboards/guides/license-usage.md) para realizar un seguimiento y monitorizar las tendencias de uso de los clientes. Esto le permite adelantarse a cualquier posible sobrecarga que pueda incurrir.
 * Configurar [filtros de ingesta](#ingestion-filters) identificando los eventos necesarios para sus casos de uso de segmentación y personalización. Esto le permite enviar solo los eventos importantes necesarios para sus casos de uso.
 * Asegúrese de que solo tiene [conjuntos de datos habilitados para perfil](#ingestion-filters) que son necesarios para los casos de uso de segmentación y personalización.
-* Configure un [Caducidad del evento de experiencia](#event-expirations) para datos de alta frecuencia como datos web.
+* Configurar [Caducidad de eventos de experiencia](#event-expirations) y [Pseudónimos Caducidad de datos de perfil](#pseudonymous-profile-expirations) para datos de alta frecuencia como datos web.
 * Compruebe periódicamente el [Informes de composición de perfil](#profile-store-composition-reports) para comprender la composición del almacén de perfiles. Esto le permite comprender las fuentes de datos que más contribuyen al consumo de licencias.
 
 ## Resumen de características y disponibilidad {#feature-summary}
