@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de abril de 2023 para Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: f8ef0c6fb949cb5c9071e84d88a9151a5558848f
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1284'
 ht-degree: 4%
 
 ---
@@ -61,7 +61,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Función | Descripción |
 | --- | --- |
 | Confusión de direcciones IP para conjuntos de datos | Ahora puede definir opciones de confusión de IP a nivel de conjunto de datos parciales o completas en la sección [interfaz de configuración del almacén de datos](../../edge/datastreams/configure.md). <br><br>La configuración de confusión de IP a nivel de almacén de datos tiene prioridad sobre cualquier confusión de IP configurada en Adobe Target y Audience Manager. <br><br>Los datos enviados a Adobe Analytics no se ven afectados por el nivel del conjunto de datos [!UICONTROL Confusión de IP] configuración. Actualmente, Adobe Analytics recibe direcciones IP sin confusión. Para que Analytics reciba direcciones IP ofuscadas, debe configurar la confusión de IP por separado en Adobe Analytics. Este comportamiento se actualizará en futuras versiones.<br><br> Para obtener más información sobre la confusión de IP e instrucciones sobre cómo configurarla, consulte la [documentación de configuración de datastream](../../edge/datastreams/configure.md#advanced-options). |
-| Anulaciones de configuración del almacén de datos | Ahora puede definir opciones de configuración adicionales para conjuntos de datos, que puede utilizar para anular configuraciones específicas, como conjuntos de datos de evento, tokens de propiedad de Target, contenedores de sincronización de ID y grupos de informes de Analytics. <br><br>La anulación de las configuraciones del conjunto de datos es un proceso de dos pasos. En primer lugar, debe definir las anulaciones de configuración del conjunto de datos en la interfaz de usuario de los conjuntos de datos. A continuación, debe enviar las anulaciones a la red perimetral mediante un comando Web SDK. |
+| [Anulaciones de configuración del almacén de datos](../../edge/datastreams/overrides.md) | Ahora puede definir opciones de configuración adicionales para conjuntos de datos, que puede utilizar para anular configuraciones específicas, como conjuntos de datos de evento, tokens de propiedad de Target, contenedores de sincronización de ID y grupos de informes de Analytics. <br><br>La anulación de las configuraciones del conjunto de datos es un proceso de dos pasos: <ol><li>En primer lugar, debe definir las anulaciones de configuración del conjunto de datos en la variable [página de configuración del almacén de datos](../../edge/datastreams/configure.md).</li><li>A continuación, debe enviar las anulaciones a la red perimetral a través de un comando Web SDK o utilizando el SDK web [extensión de etiqueta](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
 
 {style="table-layout:auto"}
 
