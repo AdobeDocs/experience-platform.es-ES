@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, abril de 2023
 description: Notas de la versión de abril de 2023 para Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 4%
+source-wordcount: '1492'
+ht-degree: 3%
 
 ---
 
@@ -62,6 +62,8 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | --- | --- |
 | Confusión de direcciones IP para conjuntos de datos | Ahora puede definir opciones de confusión de IP a nivel de conjunto de datos parciales o completas en la sección [interfaz de configuración del almacén de datos](../../edge/datastreams/configure.md). <br><br>La configuración de confusión de IP a nivel de almacén de datos tiene prioridad sobre cualquier confusión de IP configurada en Adobe Target y Audience Manager. <br><br>Los datos enviados a Adobe Analytics no se ven afectados por el nivel del conjunto de datos [!UICONTROL Confusión de IP] configuración. Actualmente, Adobe Analytics recibe direcciones IP sin confusión. Para que Analytics reciba direcciones IP ofuscadas, debe configurar la confusión de IP por separado en Adobe Analytics. Este comportamiento se actualizará en futuras versiones.<br><br> Para obtener más información sobre la confusión de IP e instrucciones sobre cómo configurarla, consulte la [documentación de configuración de datastream](../../edge/datastreams/configure.md#advanced-options). |
 | [Anulaciones de configuración del almacén de datos](../../edge/datastreams/overrides.md) | Ahora puede definir opciones de configuración adicionales para conjuntos de datos, que puede utilizar para anular configuraciones específicas, como conjuntos de datos de evento, tokens de propiedad de Target, contenedores de sincronización de ID y grupos de informes de Analytics. <br><br>La anulación de las configuraciones del conjunto de datos es un proceso de dos pasos: <ol><li>En primer lugar, debe definir las anulaciones de configuración del conjunto de datos en la variable [página de configuración del almacén de datos](../../edge/datastreams/configure.md).</li><li>A continuación, debe enviar las anulaciones a la red perimetral a través de un comando Web SDK o utilizando el SDK web [extensión de etiqueta](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
+| Secreto JWT de OAuth | La variable [Secreto JWT de OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) permite a los clientes utilizar tokens de Adobe y de servicio de Google para admitir interacciones de servidor a servidor en el reenvío de eventos. |
+| [!DNL Pinterest Conversions API] Extensión | La variable [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) la extensión de reenvío de eventos permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Pinterest] en forma de eventos del lado del servidor utilizando la variable [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 

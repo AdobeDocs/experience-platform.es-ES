@@ -2,14 +2,22 @@
 title: Notas de la versión de etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '798'
 ht-degree: 4%
 
 ---
 
 # Notas de la versión para etiquetas y reenvío de eventos
+
+## 26 de abril de 2023
+
+* **Secreto JWT de OAuth**: La variable [Secreto JWT de OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) permite a los clientes utilizar tokens de Adobe y de servicio de Google para admitir interacciones de servidor a servidor en el reenvío de eventos.
+
+Se ha lanzado la siguiente nueva extensión:
+
+* **[!DNL Pinterest Conversions API]Extensión**: La variable [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) la extensión de reenvío de eventos permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Pinterest] en forma de eventos del lado del servidor utilizando la variable [!DNL Pinterest Conversions API].
 
 ## 29 de marzo de 2023
 
