@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, abril de 2023
 description: Notas de la versión de abril de 2023 para Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
+source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 4%
@@ -122,6 +122,8 @@ Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherente
 | Función | Descripción |
 | ------- | ----------- |
 | Caducidad de datos de perfil seudónimos | Ya está disponible la caducidad de los datos del perfil seudónimos. Esta versión eliminará continuamente perfiles seudónimos antiguos de la instancia de Experience Platform una vez que se haya activado. Para obtener más información sobre esta función y los perfiles seudónimos, lea la [Guía de caducidad de datos del perfil seudónimo](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## Fuentes {#sources}
 
