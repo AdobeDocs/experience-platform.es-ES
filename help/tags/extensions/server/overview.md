@@ -2,7 +2,7 @@
 title: Referencia de extensiones de reenvío de eventos
 description: Busque documentación para extensiones de reenvío de eventos en Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 17%
@@ -39,6 +39,7 @@ La siguiente es una lista de documentación para extensiones de reenvío de even
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
 * [Centro de decisión de clientes Pega](https://exchange.adobe.com/apps/ec/107597)*
+* [[!DNL Pinterest]](./pinterest/overview.md)
 * [API de conversión de instantáneas](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Zendesk] API de eventos](./zendesk/overview.md)

@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '984'
 ht-degree: 37%
 
 ---
@@ -229,6 +229,8 @@ ht-degree: 37%
       * [!DNL Mixpanel] {#mixpanel}
          * [Información general](./extensions/server/mixpanel/overview.md)
       * [Centro de decisión de clientes Pega](https://exchange.adobe.com/apps/ec/107597)
+      * [!DNL Pinterest] {#pinterest}
+         * [Información general](./extensions/server/pinterest/overview.md)
       * [API de conversión de instantáneas](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [Información general](./extensions/server/splunk/overview.md)
