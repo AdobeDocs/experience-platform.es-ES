@@ -1,9 +1,9 @@
 ---
 title: Comparación de at.js con el SDK web de Experience Platform
 description: Descubra cómo se comparan las funciones de at.js con el SDK web de Experience Platform
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;preocultando fragmento;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
+keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 519d77ca7bfb910b03fea3567e08824e6f852eb4
+source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
 workflow-type: tm+mt
 source-wordcount: '2286'
 ht-degree: 6%
@@ -14,19 +14,19 @@ ht-degree: 6%
 
 ## Información general
 
-Este artículo ofrece una descripción general de las diferencias entre las variables `at.js` y el SDK web de Experience Platform.
+Este artículo proporciona una visión general de las diferencias entre las `at.js` biblioteca y el SDK web de Experience Platform.
 
 ## Instalación de las bibliotecas
 
 ### Instalación de at.js
 
-Permitimos a nuestros clientes descargar la biblioteca directamente desde Adobe Experience Cloud, pestaña Implementación. La biblioteca at.js se personaliza con opciones que el cliente tiene como: clientCode, imsOrgId, etc.
+Permiten a nuestros clientes descargar la biblioteca directamente desde la pestaña Implementación de Adobe Experience Cloud. La biblioteca at.js se personaliza con la configuración que el cliente tiene como: clientCode, imsOrgId, etc.
 
 ### Instalación del SDK web
 
-La versión prediseñada está disponible en una CDN. Puede hacer referencia a la biblioteca en la CDN directamente en la página o descargarla y alojarla en su propia infraestructura. Está disponible en formatos minificado y no minificado. La versión no minificada es útil para la depuración.
+La versión prediseñada está disponible en una CDN. Puede hacer referencia a la biblioteca en la CDN directamente en la página, o descargarla y alojarla en su propia infraestructura. Está disponible en formatos minificados y no minificados. La versión no minificada es útil para fines de depuración.
 
-Estructura de la URL: https://cdn1.adoberesources.net/alloy/[VERSIÓN]/alloy.min.js o alloy.js para la versión no minificada.
+Estructura de la URL: https://cdn1.adoberesources.net/alloy/[VERSIÓN]/alloy.min.js O alloy.js para la versión no minificada.
 
 Por ejemplo:
 
@@ -39,7 +39,7 @@ Por ejemplo:
 
 ### Configuración de at.js
 
-Al final de cada archivo at.js encontrará una sección en la que creamos una instancia y pasamos un objeto de configuración. Es personalizable, en la descarga rellenamos esa sección con la configuración actual del cliente.
+Al final de cada archivo at.js, encontrará una sección en la que creamos instancias de y pasamos un objeto de configuración . Es personalizable, al descargar rellenamos esa sección con la configuración actual del cliente.
 
 ```javascript
 window.adobe.target.init(window, document, {
@@ -80,11 +80,11 @@ window.adobe.target.init(window, document, {
 
 ### Configuración del SDK web
 
-La configuración del SDK se realiza con `configure` comando.
+La configuración del SDK se realiza con la variable `configure` comando.
 
 >[!IMPORTANT]
 >
->`configure` es *siempre* el primer comando llamado.
+>`configure` es *always* el primer comando llamado.
 
 Por ejemplo:
 
@@ -100,17 +100,17 @@ Hay muchas opciones que se pueden configurar durante la configuración. Todas la
 [Más información](../../fundamentals/configuring-the-sdk.md)
 
 
-## Cómo solicitar y procesar automáticamente ofertas de Page Load Target
+## Solicitud y representación automática de ofertas de Target de carga de página
 
 ### Uso de at.js
 
-Si utiliza at.js 2.x y habilita la configuración `pageLoadEnabled`, la biblioteca almacenará en déclencheur una llamada a Target Edge con `execute -> pageLoad`. Si todos los ajustes se establecen en los valores predeterminados, no es necesaria ninguna codificación personalizada. Una vez que at.js se añade a la página y el explorador lo carga, se ejecuta una llamada de Target Edge.
+Si utiliza at.js 2.x, si habilita la configuración `pageLoadEnabled`, la biblioteca déclencheur una llamada a Target Edge con `execute -> pageLoad`. Si todos los ajustes están establecidos en los valores predeterminados, no se necesitará ningún código personalizado. Una vez que at.js se añada a la página y el explorador la cargue, se ejecutará una llamada de Target Edge.
 
 ### Uso del SDK web
 
-Contenido creado en el de Adobe Target [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) El SDK puede recuperarlo y procesarlo automáticamente.
+Contenido creado en Adobe Target [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) el SDK puede recuperarlo y procesarlo automáticamente.
 
-Para solicitar y procesar automáticamente ofertas de Target, utilice el `sendEvent` y establezca el `renderDecisions` opción para `true`. Al hacerlo, el SDK se ve obligado a procesar automáticamente cualquier contenido personalizado que sea apto para el procesamiento automático.
+Para solicitar y procesar automáticamente ofertas de Target, use el `sendEvent` y configure la variable `renderDecisions` a `true`. De este modo, el SDK debe procesar automáticamente cualquier contenido personalizado que sea apto para el procesamiento automático.
 
 Por ejemplo:
 
@@ -130,7 +130,7 @@ alloy("sendEvent", {
 });
 ```
 
-El SDK web de Experience Platform envía automáticamente una notificación con las ofertas ejecutadas por el SDK web. Este es un ejemplo del aspecto de una carga útil de solicitud de notificación:
+El SDK web de Experience Platform envía automáticamente una notificación con las ofertas ejecutadas por el SDK WEB. Este es un ejemplo del aspecto de una carga útil de solicitud de notificación:
 
 ```json
 {
@@ -210,11 +210,11 @@ El SDK web de Experience Platform envía automáticamente una notificación con 
 
 [Más información](../rendering-personalization-content.md)
 
-## Cómo solicitar y NO procesar automáticamente ofertas de Page Load Target
+## Solicitud y NO representación automática de ofertas de Target de carga de página
 
 ### Uso de at.js
 
-Hay dos maneras de activar una llamada a Target Edge que recuperará ofertas para la carga de página.
+Existen dos maneras de activar una llamada a Target Edge que recupere ofertas para la carga de página.
 
 Ejemplo 1:
 
@@ -244,9 +244,9 @@ adobe.target.getOffers({
 
 ### Uso del SDK web
 
-Ejecutar un `sendEvent` comando con un ámbito especial en `decisionScopes`: `__view__`. Utilizamos este ámbito como señal para recuperar todas las actividades de carga de página de Target y recuperar previamente todas las vistas. El SDK web también intentará evaluar todas las actividades basadas en vistas del VEC. Actualmente, el SDK web no admite la desactivación de la recuperación previa de vistas.
+Ejecutar un `sendEvent` con un ámbito especial en `decisionScopes`: `__view__`. Utilizamos este ámbito como señal para recuperar todas las actividades de carga de página de Target y recuperar previamente todas las vistas. El SDK web también intentará evaluar todas las actividades basadas en vistas del VEC. Actualmente, el SDK web no admite la desactivación de la recuperación previa de vistas.
 
-Para acceder a cualquier contenido de personalización, puede proporcionar una función de llamada de retorno a la que se llamará después de que el SDK reciba una respuesta correcta del servidor. La llamada de retorno se proporciona como un objeto result, que puede contener la propiedad propositions que contiene cualquier contenido de personalización devuelto.
+Para acceder a cualquier contenido de personalización, puede proporcionar una función de llamada de retorno que se llamará después de que el SDK reciba una respuesta correcta del servidor. Se proporciona una llamada de retorno a un objeto de resultado, que puede contener una propiedad propositions que contiene cualquier contenido de personalización devuelto.
 
 Por ejemplo:
 
@@ -290,12 +290,12 @@ alloy("sendEvent", {
 [Más información](../rendering-personalization-content.md#manually-rendering-content)
 
 
-## Cómo solicitar mboxes específicos de Form Based Target
+## Cómo solicitar mboxes de objetivo basados en formularios específicos
 
 
 ### Uso de at.js
 
-Puede recuperar actividades del Compositor basado en formularios utilizando `getOffer` función:
+Puede recuperar las actividades del Compositor basado en formularios utilizando la variable `getOffer` función:
 
 Ejemplo 1:
 
@@ -330,7 +330,7 @@ adobe.target.getOffers({
 
 ### Uso del SDK web
 
-Puede recuperar actividades basadas en el Compositor basado en formularios utilizando `sendEvent` y pasando los nombres de mbox bajo el comando `decisionScopes` opción. El `sendEvent` El comando devolverá una promesa que se resuelve con un objeto que contiene las actividades/propuestas solicitadas: así es como se define la variable `propositions` la matriz tiene este aspecto:
+Puede recuperar actividades basadas en el Compositor basado en formularios utilizando la variable `sendEvent` y pasando los nombres de mbox bajo el `decisionScopes` . La variable `sendEvent` devolverá una promesa que se resuelve con un objeto que contiene las actividades / propuestas solicitadas: Así es como la variable `propositions` la matriz tiene el siguiente aspecto:
 
 ```javascript
 [
@@ -447,11 +447,11 @@ alloy("sendEvent", {
 
 [Más información](../rendering-personalization-content.md#manually-rendering-content)
 
-## Aplicación de las actividades de Target
+## Cómo aplicar las actividades de Target
 
 ### Uso de at.js
 
-Puede aplicar las actividades de Target usando la variable `applyOffers` función: `adobe.target.applyOffer(options)`
+Puede aplicar las actividades de Target utilizando la variable `applyOffers` función: `adobe.target.applyOffer(options)`
 
 Por ejemplo:
 
@@ -462,12 +462,12 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-Obtenga más información acerca de `applyOffers` desde el [documentación dedicada](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+Obtenga más información sobre `applyOffers` desde el [documentación dedicada](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
 
 
 ### Uso del SDK web
 
-Puede aplicar las actividades de Target usando la variable `applyPropositions` comando.
+Puede aplicar las actividades de Target utilizando la variable `applyPropositions` comando.
 
 Por ejemplo:
 
@@ -477,15 +477,15 @@ alloy("applyPropositions", {
 });
 ```
 
-Obtenga más información acerca de `applyPropositions` desde el [documentación dedicada](../../personalization/rendering-personalization-content.md#applypropositions).
+Obtenga más información sobre `applyPropositions` desde el [documentación dedicada](../../personalization/rendering-personalization-content.md#applypropositions).
 
-## Seguimiento de eventos
+## Cómo rastrear eventos
 
 ### Uso de at.js
 
-Puede realizar un seguimiento de eventos utilizando `trackEvent` función o uso `sendNotifications`.
+Puede rastrear eventos usando la variable `trackEvent` o utilizando `sendNotifications`.
 
-Esta función activa una solicitud para informar de las acciones del usuario, como clics y conversiones. No ofrece actividades en la respuesta.
+Esta función activa una solicitud para informar sobre las acciones del usuario, como clics y conversiones. No proporciona actividades en la respuesta.
 
 
 **Ejemplo 1**
@@ -518,14 +518,14 @@ adobe.target.sendNotifications({
 
 ### Uso del SDK web
 
-Puede realizar un seguimiento de eventos y acciones del usuario llamando a la función `sendEvent` , rellenando el `_experience.decisioning.propositions` grupo de campos XDM y configuración de `eventType` a uno de los dos valores:
+Para realizar el seguimiento de eventos y acciones del usuario, llame a la función `sendEvent` rellenando la variable `_experience.decisioning.propositions` Grupo de campos XDM y configuración del `eventType` a uno de los dos valores:
 
-* `decisioning.propositionDisplay`: indica la renderización de la actividad de Target.
-* `decisioning.propositionInteract`: indica la interacción de un usuario con la actividad, como un clic del ratón.
+* `decisioning.propositionDisplay`: Indica la renderización de la actividad de Target.
+* `decisioning.propositionInteract`: Indica la interacción del usuario con la actividad, como un clic del ratón.
 
-El `_experience.decisioning.propositions` El grupo de campos XDM es una matriz de objetos. Las propiedades de cada objeto se derivan del `result.propositions` que se devuelve en el `sendEvent` comando: `{ id, scope, scopeDetails }`
+La variable `_experience.decisioning.propositions` XDM field group es una matriz de objetos. Las propiedades de cada objeto se derivan de la variable `result.propositions` que se devuelve en la variable `sendEvent` comando: `{ id, scope, scopeDetails }`
 
-**Ejemplo 1 - Pista a `decisioning.propositionDisplay` evento después de procesar una actividad**
+**Ejemplo 1 - Seguimiento a `decisioning.propositionDisplay` después de renderizar una actividad**
 
 ```javascript
 alloy("sendEvent", {
@@ -584,7 +584,7 @@ alloy("sendEvent", {
 });
 ```
 
-**Ejemplo 2 - Pista a `decisioning.propositionInteract` evento después de que se produzca una métrica de clic**
+**Ejemplo 2 - Seguimiento a `decisioning.propositionInteract` después de que se produzca una métrica de clic**
 
 ```javascript
 alloy("sendEvent", {
@@ -597,7 +597,7 @@ alloy("sendEvent", {
     // Find the discount proposition, if it exists.
     for (var i = 0; i < propositions.length; i++) {
       var proposition = propositions[i];
-      for (var j = 0; j < proposition.items; j++) {
+      for (var j = 0; j < proposition.items.length; j++) {
         var item = proposition.items[j];
 
         if (item.schema === "https://ns.adobe.com/personalization/measurement") {
@@ -633,11 +633,11 @@ alloy("sendEvent", {
 
 [Más información](../rendering-personalization-content.md#manually-rendering-content)
 
-## Cómo almacenar en déclencheur un cambio de vista en una aplicación de una sola página
+## Déclencheur de un cambio de vista en una aplicación de una sola página
 
 ### Uso de at.js
 
-Utilice el `adobe.target.triggerView` función. Se puede llamar a esta función cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página. SPA adobe.target.triggerView() debe implementarse para aplicaciones de una sola página () a fin de utilizar el Compositor de experiencias visuales (VEC) para crear pruebas A/B y actividades de segmentación de experiencias (XT). SPA Si adobe.target.triggerView() no se implementa en el sitio, el VEC no se puede utilizar para la segmentación de datos (VEC) en el sitio de.
+Utilice la variable `adobe.target.triggerView` función. Se puede llamar a esta función cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página. adobe.target.triggerView() debe implementarse para aplicaciones de una sola página (SPA) a fin de usar el Compositor de experiencias visuales (VEC) para crear pruebas A/B y actividades de segmentación de experiencias (XT). Si adobe.target.triggerView() no está implementado en el sitio, el VEC no se puede utilizar para SPA.
 
 **Ejemplo**
 
@@ -650,7 +650,7 @@ adobe.target.triggerView("homeView")
 
 ### Uso del SDK web
 
-Para almacenar en déclencheur o señalar un cambio de vista de aplicación de una sola página, establezca el `web.webPageDetails.viewName` propiedad bajo el `xdm` de la opción `sendEvent` comando. El SDK web comprobará la caché de vistas si hay ofertas para `viewName` especificado en `sendEvent` los ejecutará y enviará un evento de notificación de visualización.
+Para realizar el déclencheur o la señal de un cambio de vista de una aplicación de una sola página, establezca la variable `web.webPageDetails.viewName` en el `xdm` de `sendEvent` comando. El SDK web comprobará la caché de la vista si hay ofertas para el `viewName` especificado en `sendEvent` se ejecutarán y se enviará un evento de notificación de visualización.
 
 **Ejemplo**
 
@@ -671,7 +671,7 @@ alloy("sendEvent", {
 
 ## Cómo aprovechar los tokens de respuesta
 
-El contenido de personalización devuelto desde Adobe Target incluye [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), que son detalles sobre la actividad, oferta, experiencia, perfil de usuario, información geográfica y más. Estos detalles se pueden compartir con herramientas de terceros o utilizar para la depuración. Los tokens de respuesta se pueden configurar en la interfaz de usuario de Adobe Target.
+El contenido personalizado devuelto por Adobe Target incluye [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), que son detalles sobre la actividad, oferta, experiencia, perfil de usuario, información geográfica, etc. Estos detalles se pueden compartir con herramientas de terceros o utilizar para la depuración. Los tokens de respuesta se pueden configurar en la interfaz de usuario de Adobe Target.
 
 ### Uso de at.js
 
@@ -692,9 +692,9 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 
 >[!IMPORTANT]
 >
->Compruebe que está utilizando la versión 2.6.0 o posterior del SDK web de Platform.
+>Compruebe que está utilizando Platform Web SDK versión 2.6.0 o posterior.
 
-Los tokens de respuesta se devuelven como parte de `propositions` que se exponen en el resultado de la `sendEvent` comando. Cada propuesta contiene una matriz de `items`y cada elemento tendrá un `meta` objeto rellenado con tokens de respuesta si están habilitados en la interfaz de usuario de administración de Target. [Más información](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+Los tokens de respuesta se devuelven como parte del `propositions` que están expuestos como resultado del `sendEvent` comando. Cada propuesta contiene una matriz de `items`y cada elemento tendrá un `meta` objeto rellenado con tokens de respuesta si están activados en la interfaz de usuario de administración de Target. [Más información](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
 
 **Ejemplo**
 
@@ -737,14 +737,14 @@ alloy("sendEvent", {
 
 ### Uso de at.js
 
-Con at.js puede administrar el parpadeo configurando `bodyHidingEnabled: true` de modo que at.js es el que se encargaría de ocultar previamente los contenedores personalizados antes de recuperar y aplicar los cambios del DOM.
-Las secciones de la página que contienen contenido personalizado se pueden ocultar previamente anulando at.js `bodyHiddenStyle`.
-De forma predeterminada `bodyHiddenStyle` oculta todo el HTML `body`.
-Ambas configuraciones se pueden sobrescribir mediante `window.targetGlobalSettings`. `window.targetGlobalSettings` antes de cargar at.js.
+Con at.js puede administrar el parpadeo configurando `bodyHidingEnabled: true` de modo que at.js es el que se encargaría de ocultar previamente los contenedores personalizados antes de que recupere y aplique los cambios de DOM.
+Las secciones de página que contienen contenido personalizado se pueden ocultar previamente anulando at.js `bodyHiddenStyle`.
+De forma predeterminada `bodyHiddenStyle` oculta a todo el HTML `body`.
+Ambas opciones de configuración se pueden anular utilizando `window.targetGlobalSettings`. `window.targetGlobalSettings` debe colocarse antes de cargar at.js.
 
 ### Uso del SDK web
 
-Mediante el SDK web, el cliente puede configurar su estilo de ocultamiento previo en el comando configure, como en el ejemplo siguiente:
+Con el SDK web, el cliente puede configurar su estilo de ocultamiento previo en el comando configure , como en el ejemplo siguiente:
 
 ```javascript
 alloy("configure", {
@@ -755,7 +755,7 @@ alloy("configure", {
 });
 ```
 
-Al cargar el SDK web de forma asíncrona, se recomienda que el siguiente fragmento se inserte en la página antes de que se inserte el SDK web:
+Al cargar el SDK web async, recomendamos que se inserte el siguiente fragmento en la página antes de que se inserte el SDK web:
 
 ```html
 <script>
@@ -776,13 +776,13 @@ Al cargar el SDK web de forma asíncrona, se recomienda que el siguiente fragmen
 Existen dos tipos de registro de A4T compatibles con at.js:
 
 * Registro del lado del cliente de Analytics
-* Registro en el servidor de Analytics
+* Registro del servidor de Analytics
 
 #### Registro del lado del cliente de Analytics
 
 **Ejemplo 1: Uso de la configuración global de Target**
 
-El registro en el lado del cliente de Analytics se puede habilitar configurando `analyticsLogging: client_side` en la configuración de at.js o anulando el `window.targetglobalSettings` objeto.
+El registro del cliente de Analytics se puede habilitar configurando `analyticsLogging: client_side` en la configuración de at.js o anulando la variable `window.targetglobalSettings` objeto.
 Cuando se configura esta opción, el formato de la carga útil que se devuelve es el siguiente:
 
 ```json
@@ -796,9 +796,9 @@ Cuando se configura esta opción, el formato de la carga útil que se devuelve e
 }
 ```
 
-La carga útil se puede reenviar a Analytics mediante la API de inserción de datos.
+La carga útil se puede reenviar a Analytics a través de la API de inserción de datos.
 
-Ejemplo 2: configurarlo en cada `getOffers` función:
+Ejemplo 2: Configurándolo en cada `getOffers` función:
 
 ```javascript
 adobe.target.getOffers({
@@ -819,7 +819,7 @@ adobe.target.getOffers({
     .then(console.log)
 ```
 
-Este es el aspecto de la carga útil de respuesta:
+Así es como se ve la carga útil de respuesta:
 
 ```json
 {
@@ -850,11 +850,11 @@ Este es el aspecto de la carga útil de respuesta:
 }
 ```
 
-La carga útil de Analytics (`tnta` token) debe incluirse en la visita de Analytics mediante [API de inserción de datos](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+La carga útil de Analytics (`tnta` (token) debe incluirse en la visita de Analytics mediante [API de inserción de datos](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
-#### Registro en el servidor de Analytics
+#### Registro del servidor de Analytics
 
-El registro en el lado del servidor de Analytics se puede habilitar configurando `analyticsLogging: server_side` en la configuración de at.js o anulando el `window.targetglobalSettings` objeto.
+El registro del servidor de Analytics se puede habilitar estableciendo `analyticsLogging: server_side` en la configuración de at.js o anulando la variable `window.targetglobalSettings` objeto.
 A continuación, los datos fluyen de la siguiente manera:
 
 ![](assets/a4t-server-side-atjs.png)
@@ -865,17 +865,17 @@ A continuación, los datos fluyen de la siguiente manera:
 
 El SDK web también admite:
 
-* Registro en el lado del cliente de Analytics
-* Registro en el servidor de Analytics
+* Registro del lado del cliente de Analytics
+* Registro del servidor de Analytics
 
 #### Registro del lado del cliente de Analytics
 
-El registro del lado del cliente de Analytics está habilitado cuando Adobe Analytics está deshabilitado para esa configuración de DataStream.
+El registro de cliente de Analytics está habilitado cuando Adobe Analytics está deshabilitado para esa configuración de flujo de datos.
 
 ![](assets/analytics-disabled-datastream-config.png)
 
 El cliente tiene acceso al token de Analytics (`tnta`) que debe compartirse con Analytics mediante [API de inserción de datos](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
-en encadenando el `sendEvent` e iterar a través de la matriz de propuestas resultante.
+al encadenar la variable `sendEvent` y se repite a través de la matriz de propuestas resultante.
 
 **Ejemplo**
 
@@ -908,19 +908,19 @@ alloy("sendEvent", {
 });
 ```
 
-Este diagrama muestra cómo fluyen los datos cuando Analytics Client Side está habilitado:
+A continuación se muestra un diagrama que muestra cómo fluyen los datos cuando Analytics Client Side está habilitado:
 
 ![](assets/analytics-client-side-logging.png)
 
-#### Registro en el servidor de Analytics
+#### Registro del servidor de Analytics
 
-El registro del lado del servidor de Analytics está habilitado cuando Analytics está habilitado para esa configuración de DataStream.
+El registro del servidor de Analytics está habilitado cuando Analytics está habilitado para esa configuración de flujo de datos.
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-Cuando el registro de Analytics en el servidor está habilitado, la carga útil de A4T que debe compartirse con Analytics para que los informes de Analytics muestren impresiones y conversiones correctas se compartan en el nivel de Experience Edge, de modo que el cliente no tenga que realizar ningún procesamiento adicional.
+Cuando el registro de Analytics del servidor está habilitado, la carga útil de A4T que debe compartirse con Analytics para que los informes de Analytics muestren las impresiones y conversiones correctas se compartan en el nivel de Experience Edge, de modo que el cliente no tenga que realizar ningún procesamiento adicional.
 
-Así es como los datos fluyen a nuestros sistemas cuando el registro de Analytics en el servidor está habilitado:
+Así es como los datos fluyen a nuestros sistemas cuando el registro de Analytics del servidor está habilitado:
 
 ![](assets/analytics-server-side-logging.png)
 
@@ -946,7 +946,7 @@ window.targetGlobalSettings = {
 
 ### Uso del SDK web
 
-Esta función no se admite en el SDK web.
+Esta función no es compatible con el SDK web.
 
 ## Actualización de los atributos de perfil de Target
 
@@ -987,7 +987,7 @@ adobe.target.getOffers({
 
 ### Uso del SDK web
 
-Para actualizar un perfil de Target, utilice el `sendEvent` y establezca el `data.__adobe.target` , prefijando los nombres de clave mediante `profile`.
+Para actualizar un perfil de Target, use el `sendEvent` y configure la variable `data.__adobe.target` propiedad, anteponer los nombres de claves usando `profile`.
 
 **Ejemplo**
 
@@ -1047,7 +1047,7 @@ adobe.target.getOffers({
 
 ### Uso del SDK web
 
-Para enviar datos de Recommendations, utilice el `sendEvent` y establezca el `data.__adobe.target` , prefijando los nombres de clave mediante `entity`.
+Para enviar datos de Recommendations, use la variable `sendEvent` y configure la variable `data.__adobe.target` propiedad, anteponer los nombres de claves usando `entity`.
 
 **Ejemplo**
 
@@ -1069,7 +1069,7 @@ alloy("sendEvent", {
 
 ### Uso de at.js
 
-Con at.js hay varias formas de enviar `mbox3rdPartyId`, usando `getOffer` o `getOffers`:
+Uso de at.js : existen varias formas de enviar `mbox3rdPartyId`, usando `getOffer` o `getOffers`:
 
 **Ejemplo 1**
 
@@ -1101,10 +1101,10 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-O existe una forma de configurar el `mbox3rdPartyId` en `targetPageParams` o `targetPageParamsAll`.
-Al establecerlo en `targetPageParams`, se enviará en las solicitudes de `target-global-mbox` también conocido como `pag-lLoad`.
-La recomendación se debe establecer utilizando `targetPageParamsAll` ya que se envía en cada solicitud de target.
-La ventaja de utilizar `targetPageParamsAll` es que puede definir el `mbox3rdPartyId` en la página una vez, lo que garantiza que todas las solicitudes de target tengan el derecho de `mbox3rdPartyId`.
+O hay una forma de configurar la variable `mbox3rdPartyId` en `targetPageParams` o `targetPageParamsAll`.
+Al configurarlo en `targetPageParams`, se envía en las solicitudes de `target-global-mbox` también conocido como `pag-lLoad`.
+La recomendación se debe configurar usando `targetPageParamsAll` tal como se enviará en cada solicitud de target.
+La ventaja de utilizar `targetPageParamsAll` es que puede definir la variable `mbox3rdPartyId` en la página una vez y esto garantizará que todas las solicitudes de destino tengan el derecho `mbox3rdPartyId`.
 
 ```javascript
 window.targetPageParamsAll = function() {
@@ -1126,15 +1126,15 @@ window.targetPageParams = function() {
 
 ### Uso del SDK web
 
-El SDK web admite el ID de terceros de Target. Sin embargo, se requieren algunos pasos más. Antes de sumergirse en la solución, deberíamos hablar un poco sobre `identityMap`.
-El mapa de identidad permite a los clientes enviar varias identidades. Todas las identidades tienen un espacio de nombres. Cada área de nombres puede tener una o más identidades. Una identidad en particular se puede marcar como principal.
+El SDK web es compatible con el ID de terceros de Target. Sin embargo, requiere algunos pasos más. Antes de sumergirnos en la solución, deberíamos hablar un poco sobre `identityMap`.
+El mapa de identidad permite a los clientes enviar varias identidades. Todas las identidades tienen un espacio de nombres. Cada área de nombres puede tener una o más identidades. Una identidad en particular puede marcarse como principal.
 Con este conocimiento en mente, podemos ver cuáles son los pasos necesarios para configurar el sdk web para utilizar el ID de terceros de Target.
 
 1. Configure el área de nombres que contendrá el ID de terceros de Target en la vista Configuración del flujo de datos:
 
 ![](assets/mbox-3-party-id-setup.png)
 
-1. Envíe ese área de nombres de identidad en cada comando sendEvent como se muestra a continuación:
+1. Envíe ese área de nombres de identidad en cada comando sendEvent de esta manera:
 
 ```javascript
 alloy("sendEvent", {
@@ -1152,11 +1152,11 @@ alloy("sendEvent", {
 });
 ```
 
-## ¿Cómo se establecen los tokens de propiedad?
+## ¿Cómo establezco tokens de propiedad?
 
 ### Uso de at.js
 
-Con at.js, hay dos formas de configurar los tokens de propiedad: mediante `targetPageParams` o `targetPageParamsAll`. Uso de `targetPageParams` agrega el token de propiedad a `target-global-mbox` llamada a, pero con `targetPageParamsAll` añade el token a todas las llamadas de target:
+Uso de at.js : existen dos formas de configurar los tokens de propiedad, ya sea mediante `targetPageParams` o `targetPageParamsAll`. Uso `targetPageParams` agrega el token de propiedad a la variable `target-global-mbox` llamada, pero utilizando `targetPageParamsAll` agrega el token a todas las llamadas de destino:
 
 **Ejemplo 1**
 
@@ -1180,15 +1180,15 @@ window.targetPageParams = function() {
 
 ### Uso del SDK web
 
-Mediante el SDK web, los clientes pueden configurar la propiedad en un nivel superior, al configurar la secuencia de datos, en el área de nombres de Adobe Target:
+Mediante el SDK web, los clientes pueden configurar la propiedad en un nivel superior, al configurar la configuración del flujo de datos, en el espacio de nombres de Adobe Target:
 ![](assets/at-property-setup.png)
-Esto significa que cada llamada de Target para esa configuración de flujo de datos específica va a contener ese token de propiedad.
+Esto significa que cada llamada de Target para esa configuración de flujo de datos específica contendrá ese token de propiedad.
 
-## ¿Cómo puedo recuperar previamente los mboxes?
+## ¿Cómo puedo recuperar previamente mboxes?
 
 ### Uso de at.js
 
-Esta funcionalidad solo está disponible en at.js 2.x. at.js 2.x tiene una nueva función denominada `getOffers`. `getOffers` permite a los clientes recuperar previamente contenido para uno o más mboxes. Vea el siguiente ejemplo:
+Esta funcionalidad solo está disponible en at.js 2.x. at.js 2.x tiene una nueva función denominada `getOffers`. `getOffers` permite a los clientes recuperar previamente contenido para uno o varios mboxes. Vea el siguiente ejemplo:
 
 ```javascript
 adobe.target.getOffers({
@@ -1211,11 +1211,11 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-NOTA: Se recomienda encarecidamente asegurarse de que cada `mbox` en el `mboxes` la matriz tiene su propio índice. Normalmente, el primer mbox tiene `index=0`, el siguiente `index=1`, etc.
+NOTA: Es muy aconsejable asegurarse de que todas las `mbox` en el `mboxes` tiene su propio índice. Normalmente, el primer mbox tiene `index=0`, el siguiente `index=1`, etc.
 
 ### Uso del SDK web
 
-Actualmente, esta funcionalidad no se admite en el SDK web.
+Actualmente, esta funcionalidad no es compatible con el SDK web.
 
 ## Cómo depuro mi implementación de Target
 
@@ -1223,18 +1223,18 @@ Actualmente, esta funcionalidad no se admite en el SDK web.
 
 At.js expone estas funciones de depuración:
 
-* Deshabilitar mbox: deshabilitar Target para que no recupere ni procese para comprobar si la página está rota sin interacciones de Target
-* Depuración de mbox: at.js registra todas las acciones
-* Seguimiento de Target: Con un token de seguimiento de mbox generado en Bullseye, hay disponible un objeto de seguimiento con detalles que participaron en el proceso de toma de decisiones en `window.___target_trace` objeto
+* Desactivación de mbox: desactive Target de la recuperación y el procesamiento para comprobar si la página está rota sin interacciones de Target
+* Depuración de mbox: at.js registra cada acción
+* Seguimiento de Target: con un token de seguimiento de mbox generado en Bullseye, un objeto de seguimiento con detalles que participaron en el proceso de toma de decisiones está disponible en `window.___target_trace` object
 
 Nota: Todas estas funciones de depuración están disponibles con funciones mejoradas en [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ### Uso del SDK web
 
-Dispone de varias funciones de depuración al utilizar el SDK web:
+Tiene varias funciones de depuración al utilizar el SDK web:
 
-* Uso de [Grifón](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
-* [Depuración del SDK web habilitada](../../../edge/fundamentals/debugging.md)
+* Uso [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* [Depuración de SDK web habilitada](../../../edge/fundamentals/debugging.md)
 * Uso [Enlaces de monitorización del SDK web](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Uso [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * Seguimiento de destino
