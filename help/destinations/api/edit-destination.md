@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Edición de conexiones de destino mediante la API de servicio de flujo
 type: Tutorial
 description: Obtenga información sobre cómo editar varios componentes de una conexión de destino mediante la API de servicio de flujo.
-source-git-commit: 52fe0ef2ab195756c381b3ef0a5792dffe459b8d
+source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1565'
 ht-degree: 2%
 
 ---
@@ -196,9 +196,6 @@ Obtenga el ID de flujo de datos de la conexión > obtenga el ID de conexión de 
 PATCH /targetConnections/{TARGET_CONNECTION_ID}
 ```
 
->[!ENDSHADEBOX]
-
-
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
@@ -244,11 +241,11 @@ Una respuesta correcta devuelve su ID de conexión de destino y una etiqueta Eta
 }
 ```
 
->[!TAB Google Ad Manager 360]
+>[!TAB Google Ad Manager y Google Ad Manager 360]
 
 **Solicitud**
 
-La siguiente solicitud actualiza los parámetros de un [[!DNL Google Ad Manager 360] destino](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) conexión para agregar el nuevo ID de segmento anexado al campo de nombre del segmento.
+La siguiente solicitud actualiza los parámetros de un [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) o [[!DNL Google Ad Manager 360] destino](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) conexión para agregar la nueva [**[!UICONTROL Anexar ID de segmento al nombre del segmento]**](/help/release-notes/2023/april-2023.md#destinations) campo .
 
 ```shell
 curl -X PATCH \
@@ -328,6 +325,8 @@ Una respuesta correcta devuelve su ID de conexión de destino y una etiqueta act
 
 >[!ENDTABS]
 
+>[!ENDSHADEBOX]
+
 ## Editar componentes de conexión base (parámetros de autenticación y otros componentes) {#patch-base-connection}
 
 Los componentes de una conexión base difieren según el destino. Por ejemplo, para [!DNL Amazon S3] destinos, puede actualizar la clave de acceso y la clave secreta a su [!DNL Amazon S3] ubicación.
@@ -340,11 +339,13 @@ Recuerde que obtuvo su ID de conexión base en un paso anterior, cuando inspecci
 >
 >La variable `If-Match` es obligatorio cuando se realiza una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión base que desea actualizar. El valor de etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como el flujo de datos, la conexión base y otros.
 >
-> Para obtener la versión más reciente del valor de etiqueta, realice una solicitud de GET a la variable `/connections/{BASE_CONNECTION_ID}` punto final, donde `{BASE_CONNECTION_ID}` es el ID de conexión base que desea actualizar.
+> Para obtener la versión más reciente del valor Etag , realice una solicitud de GET a la variable `/connections/{BASE_CONNECTION_ID}` punto final, donde `{BASE_CONNECTION_ID}` es el ID de conexión base que desea actualizar.
 
 A continuación se presentan algunos ejemplos de actualización de parámetros en la especificación de conexión base para diferentes tipos de destinos. Sin embargo, la regla general para actualizar parámetros para cualquier destino es la siguiente:
 
 Obtenga el ID de flujo de datos de la conexión > obtenga el ID de conexión base > PATCH de la conexión base con valores actualizados para los parámetros deseados.
+
+>[!BEGINSHADEBOX]
 
 **Formato de API**
 
@@ -440,6 +441,8 @@ Una respuesta correcta devuelve su ID de conexión base y una etiqueta actualiza
 ```
 
 >[!ENDTABS]
+
+>[!ENDSHADEBOX]
 
 ## Gestión de errores de API {#api-error-handling}
 
