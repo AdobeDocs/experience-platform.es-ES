@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
+source-git-commit: eb261675ffbd131a00aaa5d526d03e966b94c7c7
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1074'
 ht-degree: 6%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 6%
    * [Conectarse a destinos de flujo continuo y activar datos mediante la API de servicio de flujo](./api/streaming-destinations.md)
    * [Conéctese a destinos de almacenamiento en la nube por lotes y marketing por correo electrónico y active los datos mediante la API de servicio de flujo](./api/connect-activate-batch-destinations.md)
    * [(Beta) Activar segmentos de audiencia en destinos por lotes mediante la API de activación ad hoc](./api/ad-hoc-activation-api.md)
+   * [Editar destino](./api/edit-destination.md)
    * [Actualizar flujos de datos de destino](./api/update-destination-dataflows.md)
    * [Eliminar cuentas de destino](./api/delete-destination-account.md)
    * [Eliminar flujos de datos de destino](./api/delete-destination-dataflow.md)
