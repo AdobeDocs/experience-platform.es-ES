@@ -7,7 +7,7 @@ exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '794'
-ht-degree: 1%
+ht-degree: 15%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
->title="Control del acceso a datos confidenciales y protegidos"
->abstract="<h2>Descripción</h2><p>Controle el acceso a atributos de datos o segmentos específicos, lo que le permite diseñar flujos de trabajo flexibles para las distintas personas y equipos que operan en los casos de uso de los Experience Platform.</p>"
+>title="Control de acceso a datos confidenciales y protegidos"
+>abstract="<h2>Descripción</h2><p>Controle el acceso a atributos de datos o segmentos específicos, lo que le permite diseñar flujos de trabajo flexibles para las distintas personas y equipos que operan en los casos de uso de Experience Platform.</p>"
 
 Adobe Experience Platform le permite aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada uno según los relacionados [políticas de control de datos](../policies/overview.md) y [directivas de control de acceso](../../access-control/abac/ui/policies.md).
 
@@ -51,7 +51,7 @@ Para obtener una referencia sobre cómo los controles de exportación de datos e
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Instrucciones"
->abstract="<ul><li>Etiquete los campos y segmentos XDM para clasificar los campos y los segmentos a los que desea restringir el acceso.</li><li>Funciones de etiqueta, la adición de etiquetas a una función permite definir las etiquetas en las que los miembros de esta función deben tener restricciones.</li><li>Crear políticas, una política crea una relación entre las etiquetas de los objetos etiquetados como campos XDM y Segmentos y las etiquetas de las funciones. Si las etiquetas coinciden, se puede definir un permiso o un acceso restringido.</li></ul>"
+>abstract="<ul><li>Etiquete los campos y segmentos XDM para clasificar aquellos a los que desea restringir el acceso.</li><li>Funciones de etiqueta, añadir etiquetas a una función permite definir aquellas para las que los integrantes deben tener restricciones.</li><li>Crear directivas, una directiva genera una relación entre las etiquetas de los objetos etiquetados como campos XDM y segmentos y las etiquetas de las funciones. Si las etiquetas coinciden, se puede definir un permiso o un acceso restringido.</li></ul>"
 
 Puede administrar las etiquetas de uso de datos mediante [!DNL Experience Platform] API o la interfaz de usuario. Consulte las subsecciones siguientes para obtener más información sobre cada una.
 

@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -34,7 +34,7 @@ Esta guía requiere conocer los siguientes componentes de Adobe Experience Platf
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmentos"
->abstract="La vista de segmentos contiene información sobre todos los segmentos de su organización, con más información sobre sus trabajos de activación y evaluación."
+>abstract="La vista Segmentos contiene información sobre todos los segmentos de su organización, con más detalles acerca de sus trabajos de activación y evaluación."
 
 Para acceder a la **[!UICONTROL Segmentos]** tablero, seleccione **[!UICONTROL Monitorización]** en el panel de navegación izquierdo. Una vez en el **[!UICONTROL Monitorización]** seleccione **[!UICONTROL Segmentos]** tarjeta.
 

@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
 source-wordcount: '974'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -85,8 +85,8 @@ Para obtener más información sobre estos valores, consulte la [Claves HMAC de 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Anexar ID de segmento al nombre del segmento"
->abstract="Seleccione esta opción para que el nombre del segmento en Google Ad Manager 360 incluya el ID del segmento del Experience Platform, de esta manera: `Segment Name (Segment ID)`"
+>title="Adición de ID de segmento al nombre del segmento"
+>abstract="Seleccione esta opción para que el nombre del segmento en Google Ad Manager 360 incluya el ID del segmento de Experience Platform, de esta manera: `Segment Name (Segment ID)`"
 
 Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 

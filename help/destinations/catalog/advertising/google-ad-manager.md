@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
 source-wordcount: '938'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -75,8 +75,8 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Anexar ID de segmento al nombre del segmento"
->abstract="Seleccione esta opción para que el nombre del segmento en el Administrador de publicidad de Google incluya el ID de segmento del Experience Platform, de esta manera: `Segment Name (Segment ID)`"
+>title="Adición de ID de segmento al nombre del segmento"
+>abstract="Seleccione esta opción para que el nombre del segmento en Google Ad Manager incluya el ID de segmento de Experience Platform, de esta manera: `Segment Name (Segment ID)`"
 
 While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 

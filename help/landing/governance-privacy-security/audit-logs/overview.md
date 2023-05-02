@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
-ht-degree: 29%
+ht-degree: 50%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 29%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitorizar las actividades de los usuarios en Platform"
->abstract="<h2>Descripción</h2><p>Puede controlar la actividad de los usuarios para los distintos servicios y capacidades de Platform en forma de registros de auditoría. Estos registros forman una pista de auditoría que registra <b>who</b> performed <b>what</b> acción y <b>when</b>. Los registros de auditoría pueden ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de manera eficaz con las políticas corporativas de administración de datos y los requisitos regulatorios.</p>"
+>title="Monitorización de actividades de usuarios en Platform"
+>abstract="<h2>Descripción</h2><p>Puede monitorizar la actividad de los usuarios para los distintos servicios y capacidades de Platform en forma de registros de auditoría. Estos registros forman una pista de auditoría que registra <b>quién</b> realizó <b>qué</b> acción y <b>cuándo</b>. Los registros de auditoría pueden ayudar a solucionar problemas en Platform y a que su empresa cumpla de manera eficaz con las políticas corporativas de administración de datos y los requisitos regulatorios.</p>"
 
 Para aumentar la transparencia y visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform permite auditar la actividad de los usuarios para diversos servicios y capacidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de manera eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
 
@@ -75,15 +75,15 @@ Para ver y exportar los registros de auditoría, debe tener la variable **[!UICO
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="Instrucciones"
->abstract="<ul><li>Select <b>Auditorías</b> en el panel de navegación izquierdo. El espacio de trabajo de Audits muestra una lista de registros registrados, ordenados de forma predeterminada de los más recientes a los menos recientes.</li>   <li> NOTA: Los registros de auditoría se conservan durante 365 días después de los cuales se eliminarán del sistema. Por lo tanto, solo puede volver durante un periodo máximo de 365 días. Si necesita volver la vista atrás en los datos de más de 365 días, debe exportar los registros en una cadencia normal para satisfacer los requisitos de política interna. </li><li>Seleccione un evento de la lista para ver sus detalles en el carril derecho. </li><li>Seleccione el icono de canal para mostrar una Lista de controles de filtro para ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los filtros seleccionados. </li><li>Para exportar la lista actual de registros de auditoría, seleccione **Descargar registro**.</li><li>Para obtener más ayuda sobre esta función, consulte la <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=es">información general sobre registros de auditoría</a> en Experience League.</li></ul>"
+>abstract="<ul><li>Seleccione <b>Auditorías</b> en la navegación izquierda. El espacio de trabajo Auditorías muestra una lista de los registros grabados, ordenados por defecto del más al menos reciente.</li>   <li> NOTA: Los registros de auditoría se conservan durante 365 días, después de los cuales se eliminarán del sistema. Por lo tanto, solo podrá retroceder un máximo de 365 días. Si necesita consultar datos con más de 365 días de antigüedad, deberá exportar los registros con regularidad para cumplir los requisitos de su directiva interna. </li><li>Seleccione un evento de la lista para ver los detalles en el carril derecho. </li><li>Seleccione el icono de canal para mostrar una lista de controles de filtro y ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los filtros seleccionados. </li><li>Para exportar la lista actual de registros de auditoría, seleccione **Descargar registro**.</li><li>Para obtener más ayuda sobre esta función, consulte la <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=es">información general sobre registros de auditoría</a> en Experience League.</li></ul>"
 
 Puede ver los registros de auditoría de las distintas funciones del Experience Platform en el **[!UICONTROL Auditorías]** en la interfaz de usuario de Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de los más recientes a los menos recientes.
 
 ![Panel de registros de auditoría](../../images/audit-logs/audits.png)
 
-Los registros de auditoría se conservan durante 365 días después de los cuales se eliminarán del sistema. Por lo tanto, solo puede volver durante un periodo máximo de 365 días. Si necesita datos de más de 365 días, debe exportar los registros en una cadencia normal para satisfacer los requisitos de políticas internas.
+Los registros de auditoría se conservan durante 365 días después de los cuales se eliminarán del sistema. Por lo tanto, solo podrá retroceder un máximo de 365 días. Si necesita datos de más de 365 días, debe exportar los registros en una cadencia normal para satisfacer los requisitos de políticas internas.
 
-Seleccione un evento de la lista para ver sus detalles en el carril derecho.
+Seleccione un evento de la lista para ver los detalles en el carril derecho.
 
 ![Detalles del evento](../../images/audit-logs/select-event.png)
 

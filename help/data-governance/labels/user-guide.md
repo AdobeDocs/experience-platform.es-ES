@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
 workflow-type: tm+mt
 source-wordcount: '1529'
-ht-degree: 3%
+ht-degree: 17%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Administración del uso de datos en Platform"
->abstract="<h2>Descripción</h2><p>El marco de control de datos en Experience Platform le permite etiquetar atributos y conjuntos de datos según las restricciones de uso de datos y configurar políticas que identifiquen y cumplan estas restricciones para acciones de marketing específicas.</p>"
+>title="Gobernanza del uso de datos en Platform"
+>abstract="<h2>Descripción</h2><p>El marco de Gobernanza de datos de Experience Platform le permite etiquetar atributos y conjuntos de datos según las restricciones de uso de datos, así como establecer directivas que identifiquen y apliquen estas limitaciones para acciones de marketing específicas.</p>"
 
 Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos dentro de la variable [!DNL Experience Platform] interfaz de usuario.
 
@@ -87,7 +87,7 @@ La variable **[!UICONTROL Mostrar etiquetas heredadas]** está activada de forma
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Instrucciones"
->abstract="<ol><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">Conjuntos de datos</a> en la navegación de la izquierda, seleccione el conjunto de datos cuyos datos desee restringir.</li><li>En la vista de detalles del conjunto de datos, seleccione el <b>Administración de datos</b> pestaña .</li><li>Seleccione los campos del conjunto de datos que desea restringir y, a continuación, seleccione <b>Editar etiquetas de control</b> para etiquetar los datos según las restricciones de uso.</li><li>Después de etiquetar los datos, seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=es">Políticas</a> en el panel de navegación izquierdo, seleccione <b>Crear directiva</b>.</li><li>Elija crear un <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Política de gobernanza de datos</a>y, a continuación, seleccione las etiquetas de uso de datos que la directiva aplicará a la directiva.</li><li>Seleccione las acciones de marketing que la directiva denegará para los datos que contengan esas etiquetas. Una vez creada la política, selecciónela en la lista y actívela con el botón de alternancia en el carril derecho.</li><li>Para cada directiva habilitada, Platform evita que los datos que contienen las etiquetas especificadas se utilicen para las acciones de marketing definidas. Esta aplicación se realiza automáticamente cuando intenta activar datos etiquetados en un destino con acciones de marketing asociadas (casos de uso).</li></ol>"
+>abstract="<ol><li>Seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=es">Conjuntos de datos</a> en la navegación de la izquierda y el conjunto de datos cuyos datos desee restringir.</li><li>En la vista de detalles del conjunto de datos, seleccione la pestaña <b>Gobernanza de datos</b>.</li><li>Seleccione los campos del conjunto de datos que desea limitar y, a continuación, <b>Editar etiquetas de gobernanza</b> para etiquetar los datos según las restricciones de uso.</li><li>Después de etiquetar los datos, seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=es">Directivas</a> en la navegación izquierda y <b>Crear directiva</b>.</li><li>Elija crear una <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=es#create-governance-policy">Directiva de gobernanza de datos</a> y, a continuación, las etiquetas de uso de datos que le aplicará.</li><li>Seleccione las acciones de marketing que denegará la directiva para los datos que contengan esas etiquetas. Una vez creada la directiva, selecciónela en la lista y habilítela con el botón de alternancia del carril derecho.</li><li>Para cada directiva habilitada, Platform evita que los datos que contienen las etiquetas especificadas se utilicen para las acciones de marketing definidas. Esta aplicación tiene lugar automáticamente cuando intenta activar datos etiquetados en un destino con acciones de marketing asociadas (casos de uso).</li></ol>"
 
 >[!IMPORTANT]
 >
