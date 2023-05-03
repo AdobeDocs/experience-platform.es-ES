@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, octubre de 2022
 description: Notas de la versión de octubre de 2022 para Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
+source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 3%
+source-wordcount: '1328'
+ht-degree: 2%
 
 ---
 
@@ -14,16 +14,11 @@ ht-degree: 3%
 **Fecha de la versión: 26 de octubre de 2022**
 
 - [Claves gestionadas por el cliente](#cmk)
-
-Actualizaciones de funciones existentes en Adobe Experience Platform:
-
-- [Notas de la versión de Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Claves gestionadas por el cliente {#cmk}](#customer-managed-keys-cmk)
-   - [Recopilación de datos {#data-collection}](#data-collection-data-collection)
-   - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
-   - [Modelo de datos de experiencia (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Servicio de consultas {#query-service}](#query-service-query-service)
-   - [Fuentes {#sources}](#sources-sources)
+- [Recopilación de datos](#data-collection)
+- [Destinos](#destinations)
+- [Modelo de datos de experiencia](#xdm)
+- [Servicio de consultas](#query-service)
+- [Fuentes](#sources-sources)
 
 ## Claves gestionadas por el cliente {#cmk}
 
