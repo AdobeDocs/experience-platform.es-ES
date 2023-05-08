@@ -3,9 +3,9 @@ keywords: Experience Platform;solución de problemas;protecciones;directrices;
 title: Protecciones para la ingesta de datos
 description: Este documento proporciona instrucciones sobre protecciones para la ingesta de datos en Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 96ab28f9f909cedd1148d6b27610aebb7cf61b29
+source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ La tabla siguiente describe las barreras que se deben tener en cuenta al usar la
 
 | Tipo de ingesta | Directrices | Notas |
 | --- | --- | --- |
-| Ingesta de streaming | <ul><li>El tamaño máximo del registro es 1 MB, siendo el tamaño recomendado 10 KB.</li><li>Puede procesar 20 000 solicitudes por segundo en Perfil en menos de un minuto.</li><li>Puede procesar hasta 20 000 solicitudes por segundo a laca de datos en menos de 15 minutos.</li></ul> | Utilice la API de ingesta por lotes si necesita un mayor rendimiento de los datos. |
+| Ingesta de streaming | <ul><li>El tamaño máximo del registro es 1 MB, siendo el tamaño recomendado 10 KB.</li><li>Puede procesar hasta 2500 solicitudes por segundo en Perfil.</li><li>Puede procesar hasta 20 000 solicitudes por segundo a laca de datos en menos de 15 minutos.</li></ul> | Utilice la API de ingesta por lotes si necesita un mayor rendimiento de los datos. |
 | Fuentes de transmisión | <ul><li>El tamaño máximo del registro es 1 MB, siendo el tamaño recomendado 10 KB.</li><li>Las fuentes de transmisión admiten entre 4000 y 5000 solicitudes por segundo tras la creación de una nueva conexión de origen. **Nota**: Puede tardar hasta 30 minutos en procesarse por completo la transmisión de datos en el lago de datos.</li><li>Se pueden procesar entre 4000 y 5000 solicitudes por segundo en el lago de datos. **Nota**: Puede tardar hasta 30 minutos en procesarse por completo la transmisión de datos en el lago de datos.</li></ul> | Fuentes de transmisión como [!DNL Kafka], [!DNL Azure Event Hubs]y [!DNL Amazon Kinesis] no use el [!DNL Data Collection Core Service] (DCCS) y puede tener diferentes límites de rendimiento. Consulte la [información general sobre fuentes](../sources/home.md) para un catálogo de fuentes, puede utilizar para la ingesta de datos. |
 
 ## Pasos siguientes
