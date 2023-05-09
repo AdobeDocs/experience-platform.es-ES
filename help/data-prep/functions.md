@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones de asignación de preparación de datos
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: cce2d7b4f950248807bd700bae5e371418df634d
+source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
 workflow-type: tm+mt
-source-wordcount: '4591'
+source-wordcount: '4916'
 ht-degree: 4%
 
 ---
@@ -119,7 +119,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Recupera la hora actual. |  | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Recupera la hora Unix actual. |  | timestamp() | timestamp() | 1571850624571 |
-| format | Da formato a la fecha de entrada según un formato especificado. | <ul><li>FECHA: **Requerido** La fecha de entrada, como objeto ZonianDateTime, a la que desea dar formato.</li><li>FORMATO: **Requerido** El formato al que desea cambiar la fecha.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
+| formato | Da formato a la fecha de entrada según un formato especificado. | <ul><li>FECHA: **Requerido** La fecha de entrada, como objeto ZonianDateTime, a la que desea dar formato.</li><li>FORMATO: **Requerido** El formato al que desea cambiar la fecha.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | Convierte una marca de hora en una cadena de fecha según el formato especificado. | <ul><li>MARCA DE TIEMPO: **Requerido** Marca de tiempo a la que desee dar formato. Esto se escribe en milisegundos.</li><li>FORMATO: **Requerido** El formato en el que desea que se convierta la marca de tiempo.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | date | Convierte una cadena de fecha en un objeto ZonianDateTime (formato ISO 8601). | <ul><li>FECHA: **Requerido** La cadena que representa la fecha.</li><li>FORMATO: **Requerido** La cadena que representa el formato de la fecha de origen.**Nota:** Esto hace que **not** representan el formato en el que desea convertir la cadena de fecha. </li><li>DEFAULT_DATE: **Requerido** La fecha predeterminada devuelta, si la fecha proporcionada es nula.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
 | date | Convierte una cadena de fecha en un objeto ZonianDateTime (formato ISO 8601). | <ul><li>FECHA: **Requerido** La cadena que representa la fecha.</li><li>FORMATO: **Requerido** La cadena que representa el formato de la fecha de origen.**Nota:** Esto hace que **not** representan el formato en el que desea convertir la cadena de fecha. </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
@@ -246,6 +246,8 @@ Cualquiera de las funciones de agente de usuario contenidas en la siguiente tabl
 * Teléfono: un dispositivo móvil con una pantalla pequeña (normalmente &lt; 7&quot;)
 * Mobile : un dispositivo móvil que aún no se ha identificado. Este dispositivo móvil puede ser un eReader, una tableta, un teléfono, un reloj, etc.
 
+Para obtener más información sobre los valores de los campos del dispositivo, lea la [lista de valores de campo del dispositivo](#device-field-values) en el apéndice del presente documento.
+
 >[!NOTE]
 >
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
@@ -343,5 +345,36 @@ La siguiente tabla describe una lista de caracteres reservados y sus correspondi
 | ^ | %5E |
 | ` | %60 |
 | ~ | %7E |
+
+{style="table-layout:auto"}
+
+### Valores de los campos del dispositivo {#device-field-values}
+
+La siguiente tabla describe una lista de valores de campo de dispositivo y sus descripciones correspondientes.
+
+| Device | Descripción |
+| --- | --- |
+| Escritorio | Un tipo de dispositivo de escritorio o portátil. |
+| Anonimizado | Un dispositivo anónimo. En algunos casos, se trata de `useragents` que han sido alterados por un software de anonimización. |
+| Desconocido | Un dispositivo desconocido. Normalmente son `useragents` que no contienen información sobre el dispositivo. |
+| Dispositivo móvil | Dispositivo móvil que aún no se ha identificado. Este dispositivo móvil puede ser un eReader, una tableta, un teléfono, un reloj, etc. |
+| Tablet | Un dispositivo móvil con una pantalla grande (normalmente > 7&quot;). |
+| Phone | Dispositivo móvil con una pantalla pequeña (normalmente &lt; 7&quot;). |
+| Watch | Un dispositivo móvil con una pantalla pequeña (normalmente &lt; 2&quot;). Estos dispositivos funcionan normalmente como una pantalla adicional para un tipo de dispositivo de teléfono o tableta. |
+| Realidad aumentada | Un dispositivo móvil con capacidades AR. |
+| Realidad virtual | Un dispositivo móvil con capacidades de VR. |
+| eReader | Un dispositivo similar a una tableta, pero normalmente con una [!DNL eInk] en el Navegador. |
+| Cuadro superior | Dispositivo conectado que permite la interacción a través de una pantalla del tamaño de un televisor. |
+| TV | Un dispositivo similar al cuadro en la parte superior, pero está integrado en el televisor. |
+| Equipo doméstico | Un aparato doméstico (normalmente grande), como un refrigerador. |
+| Consola de juegos | Un sistema de juegos fijo como un [!DNL Playstation] o [!DNL XBox]. |
+| Consola de juego de mano | Un sistema de juegos móvil como un [!DNL Nintendo Switch]. |
+| Voz | Un dispositivo impulsado por voz como un [!DNL Amazon Alexa] o [!DNL Google Home]. |
+| Coche | Un navegador basado en vehículos. |
+| Robot | Robots que visitan un sitio web. |
+| Robot móvil | Robots que visitan un sitio web pero que indican que desean ser vistos como visitantes móviles. |
+| Imitador de robots | Robots que visitan un sitio web, fingiendo que son robots como [!DNL Google], pero no lo son. **Nota**: En la mayoría de los casos, los imitadores de robots son en efecto robots. |
+| Cloud | Una aplicación basada en la nube. Estos no son robots ni hackers, sino aplicaciones que necesitan conectarse. Esto incluye [!DNL Mastodon] servidores. |
+| Hacker | Este valor del dispositivo se utiliza en caso de que se detecte una secuencia de comandos en la variable `useragent` cadena. |
 
 {style="table-layout:auto"}
