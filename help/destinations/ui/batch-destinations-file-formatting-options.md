@@ -5,7 +5,7 @@ exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 2%
+ht-degree: 19%
 
 ---
 
@@ -69,9 +69,9 @@ Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cad
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_quoteCharacter"
 >title="Carácter de comillas"
->abstract="Utilice esta opción si desea eliminar las comillas dobles de las cadenas exportadas. Vea la documentación para ver ejemplos de cada selección."
+>abstract="Utilice esta opción si desea quitar las comillas dobles de las cadenas exportadas. Vea la documentación para ver ejemplos de cada selección."
 
-Utilice esta opción si desea eliminar las comillas dobles de las cadenas exportadas. Entre las opciones disponibles se encuentran:
+Utilice esta opción si desea quitar las comillas dobles de las cadenas exportadas. Entre las opciones disponibles se encuentran:
 
 * **[!UICONTROL Carácter nulo (\0000)]**. Utilice esta opción para eliminar las comillas dobles de los archivos CSV exportados.
 * **[!UICONTROL Comillas dobles (&quot;)]**. Utilice esta opción para mantener comillas dobles en los archivos CSV exportados.
@@ -88,7 +88,7 @@ Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cad
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_escapeCharacter"
 >title="Carácter de escape"
->abstract="Define un carácter único que se utiliza para las comillas de escape dentro de un valor ya citado. Vea la documentación para ver ejemplos de cada selección."
+>abstract="Define un carácter único que se utiliza para las comillas de escape dentro de un valor ya entrecomillado. Vea la documentación para ver ejemplos de cada selección."
 
 Utilice esta opción para definir un carácter único para comillas de escape dentro de un valor ya citado. Por ejemplo, esta opción es útil cuando tiene una cadena entre comillas dobles donde parte de la cadena ya está entre comillas dobles. Esta opción determina con qué carácter se reemplazarán las comillas dobles interiores. Entre las opciones disponibles se encuentran:
 
@@ -153,9 +153,9 @@ Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cad
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_compressionFormat"
 >title="Formato de compresión"
->abstract="Define qué tipo de compresión se utilizará al guardar datos en un archivo. Las opciones compatibles son GZIP y NONE . Vea la documentación para ver ejemplos de cada selección."
+>abstract="Define qué tipo de compresión se utilizará al guardar datos en un archivo. Las opciones compatibles son GZIP y NONE. Vea la documentación para ver ejemplos de cada selección."
 
-Define qué tipo de compresión se utilizará al guardar datos en un archivo. Las opciones compatibles son GZIP y NONE . Esta opción determina si se exportarán o no archivos comprimidos.
+Define qué tipo de compresión se utilizará al guardar datos en un archivo. Las opciones compatibles son GZIP y NONE. Esta opción determina si se exportarán o no archivos comprimidos.
 
 ### Codificación
 

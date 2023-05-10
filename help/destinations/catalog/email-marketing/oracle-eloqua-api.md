@@ -6,7 +6,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
 source-wordcount: '2125'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -97,8 +97,8 @@ Within **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** buscar [!DNL (API)
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
->title="Nombre de la empresa\Nombre de usuario"
->abstract="Rellene este campo con el nombre de su empresa y el nombre de usuario de Oracle Eloqua en el formulario `{COMPANY_NAME}\{USERNAME}`"
+>title="Nombre de la compañía\Nombre de usuario"
+>abstract="Rellene este campo con el nombre de la compañía y el nombre de usuario de Oracle Eloqua en el formulario `{COMPANY_NAME}\{USERNAME}`"
 
 Complete los campos obligatorios a continuación. Consulte la [Recopilar [!DNL Oracle Eloqua] credenciales](#gather-credentials) para obtener más información.
 * **[!UICONTROL Contraseña]**: La contraseña de su [!DNL Oracle Eloqua] cuenta.
@@ -114,8 +114,8 @@ Si los detalles proporcionados son válidos, la interfaz de usuario muestra un *
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="Para encontrar su número de pod, inicie sesión en el Oracle Eloqua. Tenga en cuenta la dirección URL en el explorador después de iniciar sesión correctamente. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Base de conocimiento de oracle: Averigüe su número de secuencia"
+>abstract="Para encontrar su número de pod, inicie sesión en Oracle Eloqua. Tenga en cuenta la dirección URL en el explorador después de iniciar sesión correctamente. "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html?lang=es" text="Base de conocimiento de Oracle: averigüe su número de pod"
 
 Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 ![Captura de pantalla de la interfaz de usuario de Platform que muestra los detalles del destino.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
