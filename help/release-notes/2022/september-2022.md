@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, septiembre de 2022
 description: Notas de la versión de septiembre de 2022 para Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
+source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 5%
@@ -126,7 +126,7 @@ Para obtener más información sobre la recopilación de datos en Platform, cons
 
 | Función | Descripción |
 | ----------- | ----------- |
-| SDK de destino | Ahora, Destination SDK ofrece compatibilidad total con socios y clientes que crean destinos productivos o privados por lotes (o basados en archivos). Lea las siguientes páginas de documentación para obtener más información: <ul><li>[Información general del Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Configuración de un destino basado en archivos](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configurar las opciones de formato de archivo para destinos basados en archivos](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Probar los destinos basados en archivos](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+| SDK de destino | Ahora, Destination SDK ofrece compatibilidad total con socios y clientes que crean destinos productivos o privados por lotes (o basados en archivos). Lea las siguientes páginas de documentación para obtener más información: <ul><li>[Información general del Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Configuración de un destino basado en archivos](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Configurar las opciones de formato de archivo para destinos basados en archivos](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Probar los destinos basados en archivos](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 

@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Obtenga más información sobre el uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 1132c5166f1271f1b8eb0c618b83d028b413b991
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 3%
@@ -102,7 +102,7 @@ Las protecciones siguientes se aplican a la activación mediante [destinos de pe
 | Seguridad | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
 | Número máximo de [destinos personalizados privados](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Leve | Puede crear un máximo de 5 destinos de flujo continuo o por lotes personalizados y privados mediante Destination SDK. Póngase en contacto con un representante de atención personalizada si necesita crear más de 5 de estos destinos. |
-| Política de exportación de perfiles para el Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1 800 y máximo 3 600)</li><li>`maxNumEventsInBatch` (mínimo 1 000, máximo 10 000)</li></ul> | Grave | Al usar la variable [agregación configurable](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) para el destino, tenga en cuenta los valores mínimo y máximo que determinan la frecuencia con la que se envían los mensajes HTTP a su destino basado en API y cuántos perfiles deben incluir los mensajes. |
+| Política de exportación de perfiles para el Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1 800 y máximo 3 600)</li><li>`maxNumEventsInBatch` (mínimo 1 000, máximo 10 000)</li></ul> | Grave | Al usar la variable [agregación configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para el destino, tenga en cuenta los valores mínimo y máximo que determinan la frecuencia con la que se envían los mensajes HTTP a su destino basado en API y cuántos perfiles deben incluir los mensajes. |
 
 {style="table-layout:auto"}
 

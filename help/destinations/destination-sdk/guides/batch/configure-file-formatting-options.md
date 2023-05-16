@@ -1,40 +1,36 @@
 ---
-description: Configurar las opciones de formato de archivo para los destinos basados en archivos
-title: Aprenda a utilizar Destination SDK para configurar las opciones de formato de archivo de los destinos basados en archivos.
+description: Configurar las opciones de formato de archivo para destinos basados en archivos
+title: Aprenda a utilizar Destination SDK para configurar las opciones de formato de archivo para los destinos basados en archivos.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
 
-# Configurar las opciones de formato de archivo para los destinos basados en archivos
+# Configurar las opciones de formato de archivo para destinos basados en archivos
 
 ## Información general {#overview}
 
-Destination SDK permite ajustar ampliamente las opciones de formato y compresión de los archivos exportados para que coincidan con los requisitos posteriores de la ubicación de almacenamiento.
+El Destination SDK le permite ajustar de forma extensiva las opciones de formato y compresión de los archivos exportados, para que coincidan con los requisitos descendentes de su ubicación de almacenamiento.
 
 En esta página se describe cómo utilizar Destination SDK para configurar las opciones de formato de archivo para los destinos basados en archivos.
 
 ## Requisitos previos {#prerequisites}
 
-Antes de avanzar a los pasos descritos a continuación, lea la [Introducción al Destination SDK](../../getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
+Antes de avanzar a los pasos descritos a continuación, lea la [introducción al Destination SDK](../../getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
 
-El Adobe también recomienda que lea y se familiarice con la siguiente documentación antes de continuar:
+Adobe también recomienda leer y familiarizarse con la siguiente documentación antes de continuar:
 
-* Todas las opciones de formato de archivo disponibles están documentadas en profundidad en la [configuración de formato de archivo](../../server-and-file-configuration.md#file-configuration) sección.
-* Complete los pasos para [configuración de un destino basado en archivos](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) con el Destination SDK.
+* Todas las opciones de formato de archivo disponibles se documentan por completo en la variable [configuración de formato de archivo](../../functionality/destination-server/file-formatting.md) para obtener más información.
+* Complete los pasos para [configurar un destino basado en archivos](../../guides/configure-file-based-destination-instructions.md) usando Destination SDK.
 
-## Creación de un servidor y configuración de archivo {#create-server-file-configuration}
+## Creación de una configuración de servidor y archivo {#create-server-file-configuration}
 
-Comience por usar la variable `/destination-server` extremo para determinar qué opciones de configuración de formato de archivo desea configurar para los archivos exportados.
+Comience por usar la variable `/destination-server` para determinar qué opciones de configuración de formato de archivo desea configurar para los archivos exportados.
 
-A continuación se muestra un ejemplo de configuración de servidor de destino para un [!DNL Amazon S3] destino, con varias opciones de formato de archivo seleccionadas.
-
->[!TIP]
->
->Como recordatorio, todas las opciones de formato de archivo disponibles se documentan en la [configuración de formato de archivo](../../server-and-file-configuration.md#file-configuration) sección.
+A continuación se muestra un ejemplo de la configuración de un servidor de destino para un [!DNL Amazon S3] destino, con varias opciones de formato de archivo seleccionadas.
 
 **Formato de API**
 
@@ -106,23 +102,23 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**Comprobación de la IU del Experience Platform**. A medida que configure las opciones de formato de archivo con las configuraciones mostradas en las secciones siguientes, debe comprobar la interfaz de usuario de Experience Platform de cómo se representan estas opciones.
+>**Verificación de la interfaz de usuario del Experience Platform**. Al configurar las opciones de formato de archivo con las configuraciones que se muestran en las secciones siguientes, debe comprobar en la interfaz de usuario del Experience Platform cómo se representan estas opciones.
 
-Después de agregar las opciones de formato de archivo deseadas al servidor de destino y a la configuración de formato de archivo en el paso anterior, ahora puede utilizar el `/destinations` Punto final de API para agregar los campos deseados como campos de datos del cliente a la configuración de destino.
+Después de agregar las opciones de formato de archivo deseadas al servidor de destino y a la configuración de formato de archivo del paso anterior, ahora puede usar la variable `/destinations` Punto final de API para agregar los campos deseados como campos de datos del cliente a la configuración de destino.
 
 >[!IMPORTANT]
 >
->Este paso es opcional y solo determina qué opciones de formato de archivo deben mostrarse a los usuarios en la interfaz de usuario de Experience Platform. Si no configura opciones de formato de archivo como campos de datos del cliente, las exportaciones de archivos se realizarán con los valores predeterminados configurados en la variable [configuración de servidor y archivo](#create-server-file-configuration).
+>Este paso es opcional y solo determina cuál de las opciones de formato de archivo debe mostrarse a los usuarios en la interfaz de usuario del Experience Platform. Si no configura las opciones de formato de archivo como campos de datos del cliente, las exportaciones de archivos continuarán con los valores predeterminados configurados en la variable [configuración de servidor y archivo](#create-server-file-configuration).
 
-En este paso, puede agrupar las opciones mostradas en el orden que desee, puede crear agrupaciones personalizadas, campos desplegables y agrupaciones condicionales basadas en los tipos de archivo seleccionados. Todos estos ajustes se muestran en la grabación y en las secciones posteriores.
+En este paso, puede agrupar las opciones mostradas en el orden que desee y crear agrupaciones personalizadas, campos desplegables y agrupaciones condicionales basadas en los tipos de archivo seleccionados. Todos estos ajustes se muestran en la grabación y en las secciones siguientes.
 
-![Grabación de pantalla que muestra varias opciones de formato de archivo para archivos por lotes.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-options.gif)
+![La grabación de pantalla muestra varias opciones de formato de archivo para archivos por lotes.](../../assets/guides/batch/file-formatting-options.gif)
 
 ### Ordenar las opciones de formato de archivo {#ordering}
 
-El orden en que se agregan las opciones de formato de archivo como campos de datos del cliente en la configuración de destino se refleja en la interfaz de usuario. Por ejemplo, la configuración siguiente se refleja en consecuencia en la interfaz de usuario, y las opciones se muestran en el orden **[!UICONTROL Delimitador]**, **[!UICONTROL Carácter comillas]**, **[!UICONTROL Carácter de escape]**, **[!UICONTROL Valor vacío]**, **[!UICONTROL Valor nulo]**.
+El orden en que se agregan las opciones de formato de archivo como campos de datos de cliente en la configuración de destino se refleja en la interfaz de usuario. Por ejemplo, la configuración siguiente se refleja en consecuencia en la interfaz de usuario, con las opciones que se muestran en el orden **[!UICONTROL Delimitador]**, **[!UICONTROL Carácter de comillas]**, **[!UICONTROL Carácter de escape]**, **[!UICONTROL Valor vacío]**, **[!UICONTROL Valor nulo]**.
 
-![Imagen que muestra el orden de las opciones de formato de archivo en la interfaz de usuario de Experience Platform.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-order.png)
+![Imagen que muestra el orden de las opciones de formato de archivo en la interfaz de usuario del Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -243,76 +239,98 @@ El orden en que se agregan las opciones de formato de archivo como campos de dat
 
 ### Agrupar las opciones de formato de archivo {#grouping}
 
-Puede agrupar varias opciones de formato de archivo en una sección. Al configurar la conexión con el destino en la interfaz de usuario de, el usuario puede ver y beneficiarse de una agrupación visual de campos similares.
+Puede agrupar varias opciones de formato de archivo en una sección. Al configurar la conexión con el destino en la interfaz de usuario, el usuario puede ver y beneficiarse de una agrupación visual de campos similares.
 
-Para ello, utilice `"type": "object"` para crear el grupo y recopilar las opciones de formato de archivo deseadas dentro de un `properties` , como se muestra en el ejemplo siguiente, donde la agrupación **[!UICONTROL Opciones de CSV]** está resaltado.
+Para ello, utilice `"type": "object"` para crear el grupo y recopilar las opciones de formato de archivo deseadas en un `properties` , como se muestra en el ejemplo siguiente, donde la agrupación **[!UICONTROL Opciones de CSV]** está resaltado.
 
-```json
-        {
-            "name": "csvOptions",
-            "title": "CSV Options",
-            "description": "Select your CSV options",
-            "type": "object",
-            "properties": [
-                {
-                    "name": "delimiter",
-                    "title": "Delimiter",
-                    "description": "Select your Delimiter",
-                    "type": "string",
-                    "isRequired": false,
-                    "default": ",",
-                    "namedEnum": [
-                        {
-                            "name": "Comma (,)",
-                            "value": ","
-                        },
-                        {
-                            "name": "Tab (\\t)",
-                            "value": "\t"
-                        }
-                    ],
-                    "readOnly": false,
-                    "hidden": false
-                },
-
+```json {line-numbers="true" start-number="100" highlight="106-128"}
+"customerDataFields":[
 [...]
-```
-
-![Imagen que muestra la agrupación de opciones de CSV en la IU.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-grouping.png)
-
-### Cree selectores desplegables para las opciones de formato de archivo {#dropdown-selectors}
-
-En situaciones en las que desee permitir que los usuarios seleccionen entre varias opciones, como qué carácter debe utilizarse para delimitar los campos en archivos CSV, puede añadir campos desplegables a la interfaz de usuario.
-
-Para ello, utilice el `namedEnum` como se muestra a continuación y configure un `default` valor de las opciones que puede seleccionar el usuario.
-
-```json
 {
-   "name": "delimiter",
-   "type": "string",
-   "title": "Delimiter",
-   "description": "Select your Delimiter",
-   "namedEnum": [
-   {
-      "name": "Comma (,)",
-      "value": ","
-   },
-   {
-      "name": "Tab (\\t)",
-      "value": "\t"
-   }
-   ],
-   "default": ","
-},
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![Grabación de pantalla que muestra un ejemplo de selectores desplegables creados con la configuración que se muestra arriba.](/help/destinations/destination-sdk/assets/guides/batch/dropdown-options-file-formatting.gif)
+![Imagen que muestra la agrupación de opciones de CSV en la interfaz de usuario.](../../assets/guides/batch/file-formatting-grouping.png)
+
+### Creación de selectores desplegables para las opciones de formato de archivo {#dropdown-selectors}
+
+En los casos en los que desee permitir que los usuarios seleccionen entre varias opciones, por ejemplo, qué carácter debe utilizarse para delimitar los campos de los archivos CSV, puede agregar campos desplegables a la interfaz de usuario.
+
+Para ello, utilice el `namedEnum` como se muestra a continuación y configure un `default` para las opciones que el usuario puede seleccionar.
+
+```json {line-numbers="true" start-number="100" highlight="114-124"}
+[...]
+"customerDataFields":[
+[...]
+{
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
+```
+
+![La grabación de pantalla muestra un ejemplo de selectores desplegables creados con la configuración que se muestra arriba.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### Crear opciones de formato de archivo condicional {#conditional-options}
 
-Puede crear opciones de formato de archivo condicional, que se muestran en el flujo de trabajo de activación solo cuando el usuario selecciona un determinado tipo de archivo para la exportación. Por ejemplo, la configuración siguiente crea una agrupación condicional para las opciones de archivo CSV. Las opciones del archivo CSV solo se muestran cuando el usuario selecciona CSV como tipo de archivo deseado para la exportación.
+Puede crear opciones de formato de archivo condicionales, que se muestran en el flujo de trabajo de activación solo cuando el usuario selecciona un determinado tipo de archivo para la exportación. Por ejemplo, la configuración siguiente crea una agrupación condicional para las opciones de archivo CSV. Las opciones del archivo CSV solo se muestran cuando el usuario selecciona el CSV como tipo de archivo deseado para la exportación.
 
-Para establecer un campo como condicional, utilice el `conditional` como se muestra a continuación:
+Para definir un campo como condicional, utilice la variable `conditional` como se muestra a continuación:
 
 ```json
             "conditional": {
@@ -322,7 +340,7 @@ Para establecer un campo como condicional, utilice el `conditional` como se mues
             }
 ```
 
-En un contexto más amplio, puede ver el `conditional` que se utiliza en la configuración de destino siguiente, junto con el campo `fileType` cadena y el `csvOptions` objeto en el que se define.
+En un contexto más amplio, puede ver la variable `conditional` campo que se utiliza en la configuración de destino a continuación, junto con la variable `fileType` y `csvOptions` objeto en el que está definido.
 
 ```json
         {
@@ -465,11 +483,11 @@ En un contexto más amplio, puede ver el `conditional` que se utiliza en la conf
         }
 ```
 
-A continuación, puede ver la pantalla de la interfaz de usuario resultante, en función de la configuración anterior. Cuando el usuario selecciona el tipo de archivo CSV, en la interfaz de usuario se muestran opciones de formato de archivo adicionales que hacen referencia al tipo de archivo CSV.
+A continuación, puede ver la pantalla de IU resultante, según la configuración anterior. Cuando el usuario selecciona el CSV de tipo de archivo, en la interfaz de usuario se muestran opciones adicionales de formato de archivo que hacen referencia al tipo de archivo CSV.
 
-![Grabación de pantalla que muestra la opción de formato de archivo condicional para archivos CSV.](/help/destinations/destination-sdk/assets/guides/batch/conditional-file-formatting.gif)
+![La grabación de pantalla muestra la opción de formato de archivo condicional para archivos CSV.](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### Solicitud de API completa que incluye todas las opciones arriba indicadas
+### Solicitud de API completa que incluye todas las opciones que se muestran arriba
 
 La siguiente solicitud de API combina en una configuración todas las opciones descritas en las secciones anteriores.
 
@@ -486,7 +504,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
   "name": "My S3 Destination",
   "description": "Test destination",
-  "releaseNotes": "Test destination",
   "status": "TEST",
   "sources": [
     "UNIFIED_PROFILE"
@@ -698,8 +715,8 @@ Una respuesta correcta devuelve la configuración de destino, incluido el identi
 
 ## Limitaciones conocidas {#known-limitations}
 
-Una cierta combinación de opciones de formato de archivo puede provocar resultados no deseados en la exportación de archivos.
-El Adobe recomienda no seleccionar la siguiente combinación de opciones de CSV:
+Una cierta combinación de opciones de formato de archivo puede dar lugar a resultados de exportación de archivos no deseados.
+Adobe recomienda no seleccionar la siguiente combinación de opciones de CSV:
 
 ```
 nullValue -> ""
@@ -709,14 +726,14 @@ emptyValue -> ""
 
 Para ejemplificar la limitación, considere la exportación de un archivo con los valores siguientes:
 
-| firstname | apellido | país | estado |
+| firstname | lastname | country | estado |
 |---------|----------|---------|--------|
 | Michael | Rose | EE. UU. | NY |
 | James | Smith |  | null |
 
 {style="table-layout:auto"}
 
-Esto resultaría en un resultado como se muestra a continuación. Observe cómo el valor nulo de la tabla se exporta incorrectamente como una comilla de escape.
+Esto resultaría en un resultado como se muestra a continuación. Observe que el valor nulo de la tabla se exporta incorrectamente como una comilla con escape.
 
 ```csv
 Michael,Rose,USA,NY 
@@ -725,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Pasos siguientes {#next-steps}
 
-Al leer este artículo, ahora sabe cómo configurar las opciones de formato de archivo personalizadas para los archivos exportados mediante Destination SDK. A continuación, su equipo puede utilizar el [flujo de trabajo de activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) para exportar datos al destino.
+Al leer este artículo, ahora sabe cómo configurar las opciones de formato de archivo personalizadas para los archivos exportados mediante el uso de Destination SDK. A continuación, su equipo puede usar la variable [flujo de trabajo de activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) para exportar datos al destino.

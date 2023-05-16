@@ -2,7 +2,7 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para el destino en el catálogo de Adobe Experience Platform. // Reemplazar por el párrafo de la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* Rellene todas las secciones de esta plantilla, en el orden en que aparecen delineadas en la plantilla.
->* Esta plantilla se actualiza con poca frecuencia, en función de los comentarios de los socios. Antes de empezar a crear documentación para su destino, asegúrese de haber descargado la variable [versión más reciente de la plantilla](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* Esta plantilla se actualiza con poca frecuencia, en función de los comentarios de los socios. Antes de empezar a crear documentación para su destino, asegúrese de haber descargado la variable [versión más reciente de la plantilla](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## Información general {#overview}
@@ -103,7 +103,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectarse al destino]**.
 
-![Captura de pantalla de ejemplo que muestra cómo autenticarse en el destino](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Captura de pantalla de ejemplo que muestra cómo autenticarse en el destino](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL Token portador]**: Rellene el token al portador para autenticarse en el destino.
 
@@ -113,7 +113,7 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 Para configurar los detalles del destino, rellene los campos opcionales y requeridos a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-![Captura de pantalla de ejemplo que muestra cómo rellenar los detalles para el destino](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Captura de pantalla de ejemplo que muestra cómo rellenar los detalles para el destino](../assets/docs-framework/configure-destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
