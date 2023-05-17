@@ -3,9 +3,10 @@ solution: Experience Platform
 title: Guía de migración de API para destinos de almacenamiento en la nube
 description: Obtenga información sobre los cambios en el flujo de trabajo para activar destinos de almacenamiento en la nube como parte de la migración a las nuevas tarjetas de destino de almacenamiento en la nube con funciones adicionales.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
+source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
 workflow-type: tm+mt
-source-wordcount: '1446'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
@@ -82,7 +83,7 @@ Los cambios incompatibles con las versiones anteriores para los usuarios de la A
 
 | [!DNL Amazon S3] | Heredado | Nuevo |
 |---------|----------|---------|
-| Especificación de flujo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
+| Especificación de flujo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
 | Especificación de conexión | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
 Vea todos los ejemplos de conexión base y conexión base heredada y nueva para [!DNL Amazon S3] en las pestañas siguientes. Los parámetros necesarios para crear conexiones base para [!DNL Amazon S3] los destinos no cambian.
@@ -254,7 +255,7 @@ Los cambios incompatibles con las versiones anteriores para los usuarios de la A
 
 | [!DNL Azure Blob] | Heredado | Nuevo |
 |---------|----------|---------|
-| Especificación de flujo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Especificación de flujo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | Especificación de conexión | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
 Vea todos los ejemplos de conexión base y conexión base heredada y nueva para [!DNL Azure Blob] en las pestañas siguientes. Los parámetros necesarios para crear conexiones base para destinos de Azure Blob no cambian.
@@ -426,7 +427,7 @@ Los cambios incompatibles con las versiones anteriores para los usuarios de la A
 
 | SFTP | Heredado | Nuevo |
 |---------|----------|---------|
-| Especificación de flujo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
+| Especificación de flujo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeb799 |
 | Especificación de conexión | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 Además de las especificaciones de flujo y conexión actualizadas anteriores, existen cambios en los parámetros necesarios al crear conexiones base SFTP.
