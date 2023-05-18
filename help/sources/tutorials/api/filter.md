@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;servicio de flujo;API de se
 title: Filtrado De Datos De Nivel De Fila Para Una Fuente Mediante La API De Servicio De Flujo
 description: Este tutorial trata los pasos sobre cómo filtrar datos en el nivel de origen mediante la API de servicio de flujo
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: da6f5a79b1ee16fb0d44a5c2990ed1b8be1f99e2
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '780'
 ht-degree: 3%
 
 ---
@@ -17,9 +17,7 @@ ht-degree: 3%
 >Actualmente, la compatibilidad con el filtrado de datos de nivel de fila solo está disponible para las siguientes fuentes:
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
->* [Microsoft Dynamics ](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
->* [Marketing Cloud de Salesforce](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 
 

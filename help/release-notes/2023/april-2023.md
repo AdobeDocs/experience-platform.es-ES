@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform, abril de 2023
 description: Notas de la versión de abril de 2023 para Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2084'
 ht-degree: 4%
 
 ---
@@ -190,7 +190,7 @@ Experience Platform proporciona una API de RESTful y una interfaz de usuario int
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad de API para filtrar datos de nivel de fila para Microsoft Dynamics, Salesforce CRM y el Marketing Cloud de Salesforce | Utilice operadores lógicos y de comparación para filtrar los datos de nivel de fila para los orígenes de Marketing Cloud de Microsoft Dynamics, Salesforce CRM y Salesforce. Lea la guía de [filtrado de datos para una fuente mediante la API](../../sources/tutorials/api/filter.md) para obtener más información. |
+| Compatibilidad de API para filtrar datos de nivel de fila para el origen de Salesforce CRM. | Utilice operadores lógicos y de comparación para filtrar los datos de nivel de fila para el origen de Salesforce CRM. Lea la guía de [filtrado de datos para una fuente mediante la API](../../sources/tutorials/api/filter.md) para obtener más información. |
 | Disponibilidad beta de Shopify Streaming | La variable [Origen de flujo de Shopify](../../sources/connectors/ecommerce/shopify-streaming.md) ya está disponible en versión beta. Utilice la fuente de Shopify Streaming para transmitir los datos de su cuenta de socios de Shopify al Experience Platform. |
 | Disponibilidad general de OneTrust Integration | La variable [Origen de integración de OneTrust](../../sources/connectors/consent-and-preferences/onetrust.md) es ahora GA. Utilice la fuente de integración de OneTrust para llevar los datos de consentimiento y preferencias de su cuenta de integración de OneTrust al Experience Platform. |
 | Disponibilidad general de Oracle Service Cloud | La variable [Origen de nube de servicio de oracle](../../sources/connectors/customer-success/oracle-service-cloud.md) es ahora GA. Utilice el origen de nube de servicio de Oracle para llevar los datos de nube de servicio de Oracle al Experience Platform. |
