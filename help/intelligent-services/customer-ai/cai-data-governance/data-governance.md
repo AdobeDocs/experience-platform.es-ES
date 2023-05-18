@@ -5,10 +5,10 @@ feature: Customer AI
 title: Control de datos en Customer AI
 description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados para cumplir con sus prácticas comerciales, obligaciones legales y procesos de desarrollo.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: f0bd35d8fb592900c61ed4a1a74d05901bc32810
+source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 6%
+source-wordcount: '302'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ Esta integración le permite administrar el cumplimiento de normas de forma más
 
 ## Política de consentimiento {#consent-policy}
 
-Customer AI respeta sus preferencias de consentimiento. Una vez que haya configurado su directiva de consentimiento y la haya habilitado como se documenta aquí, Customer AI respetará los datos de consentimiento que haya recopilado de usted. Solo se utilizan datos consentidos para puntuar el modelo en ejecuciones posteriores del modelo. Las nuevas puntuaciones reemplazarán a las anteriores y se podrán utilizar en la segmentación. Esta función solo está disponible para los clientes de HealthCare Shield y para los clientes de Privacy and Security shield.
+Customer AI respeta sus preferencias de consentimiento. Una vez que haya [configurar y activar la directiva de consentimiento](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=es#consent-policy), Customer AI respetará los datos de consentimiento recopilados por usted. Solo se utilizan datos consentidos para puntuar el modelo en ejecuciones posteriores del modelo. Las nuevas puntuaciones reemplazarán a las anteriores y se podrán utilizar en la segmentación. Actualmente, esta función solo está disponible para clientes de HealthCare Shield y clientes de Privacy and Security Shield.
 
 Puede obtener más información sobre esta función aquí:
 
