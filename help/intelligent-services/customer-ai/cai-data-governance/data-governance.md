@@ -1,27 +1,32 @@
 ---
-keywords: Experience Platform;control de datos;inteligencia artificial aplicada al cliente;temas populares
+keywords: Experience Platform;control de datos;ayuda al cliente;temas populares
 solution: Experience Platform
 feature: Customer AI
-title: Administración de datos en Customer AI
-description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados para cumplir con las prácticas comerciales, las obligaciones legales y el proceso de desarrollo.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+title: Control de datos en Customer AI
+description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados para cumplir con sus prácticas comerciales, obligaciones legales y procesos de desarrollo.
+exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
+source-git-commit: f0bd35d8fb592900c61ed4a1a74d05901bc32810
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 9%
+source-wordcount: '295'
+ht-degree: 6%
 
 ---
 
-# Inteligencia artificial aplicada al cliente y gobernanza de datos
+# AI del cliente y control de datos
 
-Cualquier configuración relacionada con la gobernanza de datos en la inteligencia artificial aplicada al cliente se hereda de Adobe Experience Platform.
+Cualquier configuración relacionada con el control de datos en Customer AI se hereda de Adobe Experience Platform.
 
 ## Control de datos {#governance}
 
-La integración entre la inteligencia artificial aplicada al cliente y la gobernanza de datos de Adobe Experience Platform le permite controlar y comprender los datos a través de su recorrido mediante Platform. Esto implica mantener la calidad de los datos, el linaje, la catalogación y mucho más.
+La integración entre Customer AI y Adobe Experience Platform Data Governance le permite controlar y comprender sus datos en todo su recorrido a través de Platform. Esto implica mantener la calidad de los datos, el linaje de datos, la catalogación de datos y mucho más.
 
-Las etiquetas y políticas de uso de datos creadas en conjuntos de datos consumidos por Platform se pueden ver en el flujo de trabajo de configuración de la inteligencia artificial aplicada al cliente. Estas etiquetas detienen o advierten a los usuarios que utilizan campos etiquetados.
+Las etiquetas y políticas de uso de datos que se crearon en conjuntos de datos consumidos por Platform se pueden ver en el flujo de trabajo de configuración de Customer AI . Estas etiquetas detienen o advierten a los usuarios que utilizan campos etiquetados.
 
-Esta integración le permite administrar el cumplimiento de normas de forma más eficiente. Los administradores de datos de su organización pueden establecer políticas para restringir el uso. Como resultado, puede utilizar datos que cumplan con las directivas definidas por los administradores de datos. Lea la documentación sobre [Etiquetas y políticas](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=es) para obtener más información.
+Esta integración le permite administrar el cumplimiento de normas de forma más eficiente. Los administradores de datos de su organización pueden establecer políticas para restringir el uso. Como resultado, puede utilizar datos que cumplan las políticas definidas por los administradores de datos. Lea la documentación de [Etiquetas y políticas](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=es) para obtener más información.
+
+## Política de consentimiento {#consent-policy}
+
+Customer AI respeta sus preferencias de consentimiento. Una vez que haya configurado su directiva de consentimiento y la haya habilitado como se documenta aquí, Customer AI respetará los datos de consentimiento que haya recopilado de usted. Solo se utilizan datos consentidos para puntuar el modelo en ejecuciones posteriores del modelo. Las nuevas puntuaciones reemplazarán a las anteriores y se podrán utilizar en la segmentación. Esta función solo está disponible para los clientes de HealthCare Shield y para los clientes de Privacy and Security shield.
 
 Puede obtener más información sobre esta función aquí:
 
